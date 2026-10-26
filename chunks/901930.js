@@ -1,65 +1,72 @@
-n.d(t, { A: () => A, j: () => y });
+n.d(t, { A: () => N, j: () => A });
 var l = n(477900),
     o = n(582128),
     r = n(192308),
-    i = n(28863),
-    a = n(683071),
-    u = n(308528),
+    i = n(858899),
+    a = n(28863),
+    u = n(683071),
     s = n(913122),
     c = n(136857),
     d = n(211083),
     C = n(655857),
     h = n(123816),
     p = n(834981),
-    m = n(975571),
-    E = n(166532),
-    _ = n(652215),
-    f = n(105292);
-function y(e) {
+    m = n(327919),
+    E = n(975571),
+    _ = n(166532),
+    f = n(652215),
+    y = n(105292),
+    g = n(513687);
+function A(e) {
     let { planError: t, hasSelectedPaymentElementSourceType: n } = e,
-        { paymentError: a } = (0, d.o)(),
-        { dropdownCurrencies: y } = (0, C.Jn)(),
-        { purchaseError: A, purchasePreviewError: g } = (0, h.t4)((e) => ({
+        { paymentError: u } = (0, d.o)(),
+        { dropdownCurrencies: A } = (0, C.Jn)(),
+        { purchaseError: N, purchasePreviewError: S } = (0, h.t4)((e) => ({
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
-        N = null;
-    null != g ? (N = g) : null != a && (0, E.h5)(a, n) ? (N = a) : null != A ? (N = A) : null != t && (N = t);
-    let S = (0, p.vx)(),
-        T = o.useCallback(() => {
-            ((0, r.closeAllModals)(), u.A.openPrivateChannel({ recipientIds: S }));
-        }, [S]),
-        I = y.length > 1,
-        O = null != N ? N.message : "";
+        T = null;
+    null != S ? (T = S) : null != u && (0, _.h5)(u, n) ? (T = u) : null != N ? (T = N) : null != t && (T = t);
+    let I = (0, p.vx)(),
+        O = o.useCallback(() => {
+            (0, m.A)(I, r.closeAllModals, () =>
+                (0, i.P0)({
+                    text: y.intl.formatToPlainString(g.default.D1BwNC, { count: I.length }),
+                    variant: "critical",
+                }),
+            );
+        }, [I]),
+        k = A.length > 1,
+        x = null != T ? T.message : "";
     return (
-        null != N &&
-            N instanceof s.Ey &&
-            (N.code === c.tG.CARD_DECLINED && I && (O = `${N.message} ${f.intl.string(f.t.iWvwQS)}`),
-            N.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (O = f.intl.string(f.t.ypuSd8)),
-            N.code === _.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (O = f.intl.string(f.t.mXMmWE)),
-            N.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (O = f.intl.string(f.t.mC1Fjz)),
-            (N.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || N.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
-                (O = f.intl.format(f.t["mv/fF2"], {
+        null != T &&
+            T instanceof s.Ey &&
+            (T.code === c.tG.CARD_DECLINED && k && (x = `${T.message} ${y.intl.string(y.t.iWvwQS)}`),
+            T.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (x = y.intl.string(y.t.ypuSd8)),
+            T.code === f.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (x = y.intl.string(y.t.mXMmWE)),
+            T.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (x = y.intl.string(y.t.mC1Fjz)),
+            (T.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || T.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
+                (x = y.intl.format(y.t["mv/fF2"], {
                     guardianHook: (e, t) =>
-                        S.length > 0
-                            ? (0, l.jsx)(i.Anchor, { onClick: T, children: e }, t)
+                        I.length > 0
+                            ? (0, l.jsx)(a.Anchor, { onClick: O, children: e }, t)
                             : (0, l.jsx)(o.Fragment, { children: e }, t),
                 })),
-            N.code === c.tG.INVALID_BILLING_ADDRESS &&
-                (O = f.intl.format(f.t.KXodvL, {
-                    helpdeskArticle: m.A.getArticleURL(_.MVz.BILLING).concat(_.bNI.INVALID_BILLING_ADDRESS),
+            T.code === c.tG.INVALID_BILLING_ADDRESS &&
+                (x = y.intl.format(y.t.KXodvL, {
+                    helpdeskArticle: E.A.getArticleURL(f.MVz.BILLING).concat(f.bNI.INVALID_BILLING_ADDRESS),
                 }))),
-        { error: N, errorMessage: O }
+        { error: T, errorMessage: x }
     );
 }
-function A(e) {
+function N(e) {
     let { planError: t, purchaseErrorBlockRef: n, hasSelectedPaymentElementSourceType: o, className: r } = e,
-        { error: i, errorMessage: u } = y({ planError: t, hasSelectedPaymentElementSourceType: o });
+        { error: i, errorMessage: a } = A({ planError: t, hasSelectedPaymentElementSourceType: o });
     return null == i
         ? null
         : (0, l.jsx)("div", {
               ref: n,
               className: r,
-              children: (0, l.jsx)(a.w, { type: "critical", message: u, role: "alert" }),
+              children: (0, l.jsx)(u.w, { type: "critical", message: a, role: "alert" }),
           });
 }

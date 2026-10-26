@@ -2837,6 +2837,7 @@
   "e5iHmZ": "Cancel",
   "bBDeNI": "Decline",
   "l20ZZp": "Disconnect",
+  "D1BwNC": "{count, plural,one {Couldn’t message your guardian. Please try again later.}other {Couldn’t message your guardians. Please try again later.}",
   "Mi60fm": "Have your guardian scan this code",
   "Q8XnAa": "PENDING REQUESTS — {count}",
   "dPMo19": "Pending Requests — {count}",

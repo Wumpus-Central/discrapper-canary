@@ -403,8 +403,8 @@ let e$ = function (e) {
     });
 };
 var e0 = n(683063),
-    e3 = n(372777);
-let e1 = function (e) {
+    e1 = n(372777);
+let e3 = function (e) {
     let { userId: t, dmsSent: n, callCount: i } = e,
         r = (0, d.bG)([eZ.default], () => eZ.default.getUser(t));
     return void 0 === r
@@ -414,7 +414,7 @@ let e1 = function (e) {
               body: (0, et.fq)(n, i),
               asContainer: !0,
               children: (0, l.jsx)("div", {
-                  className: e3.k,
+                  className: e1.k,
                   children: (0, l.jsx)(eq.H, { user: r, avatarSize: P._3.SIZE_40 }),
               }),
           });
@@ -448,7 +448,7 @@ let e8 = function () {
                                             })
                                           : e.map((e) =>
                                                 (0, l.jsx)(
-                                                    e1,
+                                                    e3,
                                                     { userId: e.user_id, dmsSent: e.dms_sent, callCount: e.call_count },
                                                     e.user_id,
                                                 ),
@@ -1263,17 +1263,17 @@ let t0 = function () {
         ],
     });
 };
-var t3 = n(299628),
-    t1 = n(324149);
+var t1 = n(299628),
+    t3 = n(324149);
 let t2 = function (e) {
     let { icon: t, iconClassName: n, header: i, description: r } = e;
     return (0, l.jsxs)("div", {
-        className: s()(t1.kL, e5.a),
+        className: s()(t3.kL, e5.a),
         children: [
             (0, l.jsx)("div", {
-                className: t1.n1,
+                className: t3.n1,
                 children: (0, l.jsx)(t, {
-                    className: s()(t1.Kk, n),
+                    className: s()(t3.Kk, n),
                     size: "custom",
                     width: 20,
                     height: 20,
@@ -1284,7 +1284,7 @@ let t2 = function (e) {
                 children: [
                     (0, l.jsx)(V.D, {
                         variant: "heading-md/bold",
-                        className: t1.wx,
+                        className: t3.wx,
                         children: (0, l.jsx)(es.F, { children: i }),
                     }),
                     (0, l.jsx)(G.E, { variant: "text-sm/medium", color: "text-muted", children: r }),
@@ -1327,16 +1327,15 @@ function t4() {
     });
 }
 var t6 = n(847374),
-    ne = n(308528),
-    nt = n(922529),
-    nn = n(780964),
-    nl = n(830543),
-    ni = n(766075),
-    nr = n(219893),
-    ns = n(465323),
-    na = n(617617),
-    nd = n(361157);
-function nc(e) {
+    ne = n(922529),
+    nt = n(780964),
+    nn = n(830543),
+    nl = n(766075),
+    ni = n(219893),
+    nr = n(465323),
+    ns = n(617617),
+    na = n(361157);
+function nd(e) {
     let t = (0, tB.bG)([y.A], () => y.A.getMonthlyPurchases());
     return (function (e, t) {
         if (null == e) return { kind: "off" };
@@ -1344,7 +1343,7 @@ function nc(e) {
         let n = e.currency,
             l = (0, Q.CE)((0, Q.$g)(e.amount, n), ef.WT.MONTH, 1);
         if (t >= e.amount) return { kind: "spent", monthlyText: l };
-        let i = ns.yR[e.currency] ?? 2,
+        let i = nr.yR[e.currency] ?? 2,
             r = e.amount - t;
         return r <= 10 * 10 ** i
             ? {
@@ -1355,7 +1354,8 @@ function nc(e) {
             : { kind: "on", monthlyText: l };
     })(e, t?.total_amount ?? 0);
 }
-var nu = n(534654),
+var nc = n(534654),
+    nu = n(327919),
     no = n(980707),
     nx = n(477782),
     nm = n(943255),
@@ -1383,8 +1383,8 @@ function np(e) {
     let { rule: t, teenId: r, readOnly: s = !1 } = e,
         a = i.useRef(null),
         d = t?.enabled ?? !0,
-        u = (0, nr.li)(t),
-        o = (0, nr.n1)(t.days);
+        u = (0, ni.li)(t),
+        o = (0, ni.n1)(t.days);
     function x() {
         (0, Y.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("58008"), n.e("777848"), n.e("639231")]).then(
@@ -1540,15 +1540,15 @@ function nI(e) {
     let { teenId: t } = e;
     return nS(
         t,
-        nc(
+        nd(
             (0, tB.bG)(
-                [na.A],
+                [ns.A],
                 () => {
-                    let e = na.A.settings.safetySettings?.spendingLimitSettings?.oneTimePurchaseLimit;
+                    let e = ns.A.settings.safetySettings?.spendingLimitSettings?.oneTimePurchaseLimit;
                     return null == e ? null : { amount: Number(e.amount), currency: e.currency };
                 },
                 void 0,
-                nd.Ky,
+                na.Ky,
             ),
         ),
         !0,
@@ -1557,13 +1557,13 @@ function nI(e) {
 function ny(e) {
     let { teenId: t } = e,
         n = tx.fD.useControlledSetting(t);
-    return nS(t, nc(n));
+    return nS(t, nd(n));
 }
 function nb(e) {
     let { teenId: t, readOnly: r = !1 } = e,
         s = (0, z.y3)(),
         a = s?.restrictedSchedule?.rules ?? [],
-        d = (0, nr.I2)(a),
+        d = (0, ni.I2)(a),
         [u, o] = i.useState(d.length > 0);
     function x() {
         (0, Y.openModalLazy)(async () => {
@@ -1647,7 +1647,7 @@ function n_() {
     let e = (0, D.vx)(),
         t = (0, z.y3)();
     function n() {
-        (0, ni.openUserSettings)(nn.X.MESSAGING_PERMISSIONS_PANEL);
+        (0, nl.openUserSettings)(nt.X.MESSAGING_PERMISSIONS_PANEL);
     }
     return (0, l.jsxs)(c.B, {
         direction: "vertical",
@@ -1677,7 +1677,12 @@ function n_() {
                     (0, l.jsx)(tH.$, {
                         text: $.intl.formatToPlainString(J.default.ggcjPR, { count: e.length }),
                         onClick: function () {
-                            ((0, nl.default)(), ne.A.openPrivateChannel({ recipientIds: e }));
+                            (0, nu.A)(e, nn.default, () =>
+                                (0, q.P0)({
+                                    text: $.intl.formatToPlainString(J.default.D1BwNC, { count: e.length }),
+                                    variant: "critical",
+                                }),
+                            );
                         },
                         variant: "secondary",
                         size: "sm",
@@ -1687,9 +1692,9 @@ function n_() {
             t?.id != null &&
                 (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(nt.A, { className: nN.yF }),
+                        (0, l.jsx)(ne.A, { className: nN.yF }),
                         (0, l.jsx)(nI, { teenId: t.id }),
-                        (0, l.jsx)(nt.A, { className: nN.yF }),
+                        (0, l.jsx)(ne.A, { className: nN.yF }),
                         (0, l.jsx)(nb, { teenId: t.id, readOnly: !0 }),
                     ],
                 }),
@@ -1725,7 +1730,7 @@ function nC() {
                         n(C.u9.CONTENT_AND_SOCIAL);
                     },
                 }),
-                (0, l.jsx)(nt.A, { className: nN.yF }),
+                (0, l.jsx)(ne.A, { className: nN.yF }),
                 (0, l.jsx)(nT, {
                     title: $.intl.string($.t.OAuOHD),
                     buttonText: $.intl.string($.t.bt75uw),
@@ -1736,9 +1741,9 @@ function nC() {
                 e?.id != null &&
                     (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)(nt.A, { className: nN.yF }),
+                            (0, l.jsx)(ne.A, { className: nN.yF }),
                             (0, l.jsx)(ny, { teenId: e.id }),
-                            (0, l.jsx)(nt.A, { className: nN.yF }),
+                            (0, l.jsx)(ne.A, { className: nN.yF }),
                             (0, l.jsx)(nb, { teenId: e.id }),
                         ],
                     }),
@@ -1747,7 +1752,7 @@ function nC() {
     );
 }
 function nL() {
-    let e = (0, nu.A)();
+    let e = (0, nc.A)();
     return 0 === (0, D.vx)().length
         ? null
         : (0, l.jsx)("div", { className: nN.kL, children: e ? (0, l.jsx)(n_, {}) : (0, l.jsx)(nC, {}) });
@@ -1792,7 +1797,7 @@ let nk = function () {
                                 }),
                             ],
                         }),
-                  e ? (0, l.jsx)(tl, {}) : (0, l.jsx)(t3.A, { showSectionDescriptions: !0 }),
+                  e ? (0, l.jsx)(tl, {}) : (0, l.jsx)(t1.A, { showSectionDescriptions: !0 }),
                   (0, l.jsx)(nL, {}),
               ],
           });
@@ -1952,15 +1957,15 @@ function n$(e) {
     });
 }
 var n0 = n(615300),
-    n3 = n(559106),
-    n1 = n(402860),
+    n1 = n(559106),
+    n3 = n(402860),
     n2 = n(487565);
 let n8 = function (e) {
     let { userId: t, children: n, isLast: r, className: a } = e,
         [d, c] = i.useState(!1),
         { analyticsLocations: u } = (0, v.Ay)(),
         o = i.useCallback(() => {
-            (0, n1.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: u });
+            (0, n3.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: u });
         }, [t, u]);
     function x() {
         c(!0);
@@ -1971,7 +1976,7 @@ let n8 = function (e) {
     return (0, l.jsx)(nU.tG, {
         id: t,
         children: (e) =>
-            (0, l.jsx)(n3.vN, {
+            (0, l.jsx)(n1.vN, {
                 offset: { left: -8, right: -8 },
                 children: (0, l.jsx)(n0.A.div, {
                     style: { opacity: 1 },
@@ -2284,7 +2289,7 @@ let lf = function () {
                                       }),
                                       (0, l.jsx)(M.D, {
                                           children: (0, l.jsx)(ls.N_, {
-                                              onClick: nl.default,
+                                              onClick: nn.default,
                                               to: { pathname: L.BVt.FAMILY_CENTER, state: { scrollRestoration: !1 } },
                                               children: $.intl.string(J.default.cUIXFY),
                                           }),

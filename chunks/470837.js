@@ -19706,17 +19706,21 @@ var Cm = n(254138),
     CA = n(290595);
 let CE = [];
 var Ch = n(153488),
-    Cx = n(308528),
-    CS = n(171316),
+    Cx = n(171316),
+    CS = n(327919),
     Cp = n(558001);
 n(866945);
 var CT = n(835002);
 function Cf() {
-    let e = (0, CS.uM)(),
+    let e = (0, Cx.uM)(),
         t = (0, Nb.vx)(),
         n = f.useCallback(() => {
-            ((0, tX.default)(),
-                Cx.A.openPrivateChannel({ recipientIds: t }),
+            ((0, CS.A)(t, tX.default, () =>
+                (0, lg.P0)({
+                    text: V.intl.formatToPlainString(NR.default.D1BwNC, { count: t.length }),
+                    variant: "critical",
+                }),
+            ),
                 (0, Cp.N)(CT.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, CT.YX.LEARN_MORE));
         }, [t]),
         i = f.useCallback(() => {
@@ -19890,7 +19894,7 @@ function CP(e) {
 function CG() {
     let e = CR(),
         t = U.H1.useSetting(),
-        n = (0, CS.uM)();
+        n = (0, Cx.uM)();
     return e || t || n;
 }
 let CM = (0, h.zD)(x.X.DATA_USAGE_QUESTS_3P_SETTING, {
@@ -19921,7 +19925,7 @@ function Ck(e) {
 }
 function Cw() {
     let e = CR(),
-        t = (0, CS.uM)();
+        t = (0, Cx.uM)();
     return e || t;
 }
 let CF = (0, h.zD)(x.X.DATA_USAGE_QUESTS_SETTING, {
@@ -19977,7 +19981,7 @@ let CH = (0, h.zD)(x.X.DATA_USAGE_STATISTICS_SETTING, {
                   });
         },
         useSearchTerms: () => [V.intl.string(V.t.XuADY2)],
-        useDisabled: CS.uM,
+        useDisabled: Cx.uM,
     }),
     CW = (0, h.zZ)(x.X.DATA_USAGE_CATEGORY, {
         useTitle: () => V.intl.string(V.t.QDAriI),
@@ -20459,7 +20463,7 @@ function yP(e, t) {
 }
 function yG() {
     let e,
-        t = (0, CS.uM)(),
+        t = (0, Cx.uM)(),
         n = (0, I$.fk)(),
         i = (0, IQ.b8)(),
         s = (0, NO.Z)();
@@ -20544,8 +20548,8 @@ var yW = n(390248),
 function y$() {
     let e,
         t = (0, yZ.A)() ?? !0,
-        n = (0, CS.uM)(),
-        i = (0, CS.uM)(),
+        n = (0, Cx.uM)(),
+        i = (0, Cx.uM)(),
         {
             explicitContentGuilds: s,
             explicitContentFriendDm: l,
@@ -20601,8 +20605,8 @@ function y$() {
 function yJ() {
     let e,
         t = (0, yZ.A)() ?? !0,
-        n = (0, CS.uM)(),
-        i = (0, CS.uM)(),
+        n = (0, Cx.uM)(),
+        i = (0, Cx.uM)(),
         {
             goreContentGuilds: s,
             goreContentFriendDm: l,
@@ -20743,7 +20747,7 @@ let y7 = (0, h.zD)(x.X.DM_SAFETY_ALERTS_SETTING, {
                 h,
                 x = Cf(),
                 S =
-                    ((s = (0, CS.uM)()),
+                    ((s = (0, Cx.uM)()),
                     (l = (0, I$.fk)()),
                     (r = (0, IQ.b8)()),
                     (a = (0, NO.Z)()),
@@ -20868,7 +20872,7 @@ let bs = (0, h.zD)(x.X.FRIEND_REQUESTS_EVERYONE_SETTING, {
         U.FA.updateSetting(e ? _.yKI : _.yKI & ~_.dzt.NO_RELATION);
     },
     useDisabled: function () {
-        return (0, CS.uM)();
+        return (0, Cx.uM)();
     },
 });
 var bl = n(665260);
@@ -20884,7 +20888,7 @@ let br = (0, h.zD)(x.X.FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING, {
             U.FA.updateSetting(e ? bl.UI(t, _.dzt.MUTUAL_FRIENDS) : bl.iE(t, _.dzt.MUTUAL_FRIENDS, _.dzt.NO_RELATION));
         },
         useDisabled: function () {
-            return (0, CS.uM)();
+            return (0, Cx.uM)();
         },
     }),
     ba = (0, h.zD)(x.X.FRIEND_REQUESTS_MUTUAL_GUILDS_SETTING, {
@@ -20900,7 +20904,7 @@ let br = (0, h.zD)(x.X.FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING, {
             U.FA.updateSetting(e ? bl.UI(t, _.dzt.MUTUAL_GUILDS) : bl.iE(t, _.dzt.MUTUAL_GUILDS, _.dzt.NO_RELATION));
         },
         useDisabled: function () {
-            return (0, CS.uM)();
+            return (0, Cx.uM)();
         },
     }),
     bo = (0, h.FW)(x.X.FRIEND_REQUESTS_FIELDSET, {
@@ -21112,7 +21116,7 @@ let bP = (0, h.zD)(x.X.PERMISSIONS_DMS_SETTING, {
         return e === b_.YG ? !n : !t;
     },
     useDisabled: function () {
-        let e = (0, CS.uM)();
+        let e = (0, Cx.uM)();
         return (0, bN.Tx)() === b_.YG && e;
     },
     setValue: function (e) {
@@ -21170,14 +21174,14 @@ let bk = (0, h.zD)(x.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
                 t = (0, bb.K)(),
                 n = U.$s.useSetting().includes(e),
                 i = (0, bG.s)(),
-                s = (0, CS.uM)(),
+                s = (0, Cx.uM)(),
                 l = U.YX.useSetting(),
                 r = U.Zr.useSetting().includes(e);
             return !!i || (e === b_.YG && s ? !l : e === b_.YG ? !t && !l : !n && !r);
         },
         useDisabled: function () {
             let e = (0, bN.Tx)(),
-                t = (0, CS.uM)(),
+                t = (0, Cx.uM)(),
                 n = (0, bb.K)(),
                 i = U.$s.useSetting().includes(e),
                 s = (0, bG.s)();
