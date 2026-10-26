@@ -1,4 +1,4 @@
-n.d(t, { Bx: () => eN, Ay: () => eS, Gm: () => eg, Q_: () => e_, zF: () => eI, zR: () => ep });
+n.d(t, { Bx: () => ef, Ay: () => eO, Gm: () => eT, Q_: () => eI, zF: () => ep, zR: () => eS });
 var i,
     l = n(192308),
     r = n(793322),
@@ -28,38 +28,40 @@ let L = (0, T.throttle)(() => (0, N.P0)({ text: O.intl.string(O.t["+5kSoW"]), va
 var m = n(265422),
     b = n(625494),
     R = n(652215),
-    v = n(272613),
-    U = n(819638),
-    D = n(723702),
-    y = n(763827),
-    G = n(64460),
-    M = n(92960),
-    P = n(477672),
-    x = n(314519),
-    V = n(837057),
-    w = n(310419),
-    j = n(488995),
-    H = n(675704),
-    k = n(74477),
-    B = n(680671);
-let F = (0, D.isMac)() || (0, D.isMacWeb)();
-function W() {
-    return (0, B.t)() && k.A.getConfig({ location: k.R }).enabled;
+    v = n(630685),
+    U = n(272613),
+    D = n(398884),
+    y = n(819638),
+    G = n(723702),
+    M = n(763827),
+    P = n(64460),
+    x = n(92960),
+    V = n(477672),
+    w = n(314519),
+    j = n(837057),
+    H = n(310419),
+    k = n(488995),
+    B = n(675704),
+    F = n(74477),
+    W = n(680671);
+let K = (0, G.isMac)() || (0, G.isMacWeb)();
+function Y() {
+    return (0, W.t)() && F.A.getConfig({ location: F.R }).enabled;
 }
-var K = n(806964),
-    Y = n(552049),
-    Z = n(877991),
-    z = n(332779),
-    X = n(274794),
-    J = n(928531),
-    q = n(251494),
-    Q = n(82038),
-    $ = n(14214),
-    ee = n(151199),
-    et = n(975571),
-    en = n(28647),
-    ei = n(851109);
-let el = {
+var Z = n(806964),
+    z = n(552049),
+    X = n(877991),
+    J = n(332779),
+    q = n(274794),
+    Q = n(928531),
+    $ = n(251494),
+    ee = n(82038),
+    et = n(14214),
+    en = n(151199),
+    ei = n(975571),
+    el = n(28647),
+    er = n(851109);
+let es = {
     binds: ["mod+shift+e"],
     comboKeysBindGlobal: !0,
     action: p().debounce(
@@ -71,18 +73,18 @@ let el = {
         { leading: !0 },
     ),
 };
-var er = n(478437),
-    es = n(367513),
-    ea = n(604681),
-    eo = n(198052),
-    ed = n(47675),
-    ec = n(999291),
-    eu = n(358047),
-    eA = n(467691),
-    eE = n(674272),
-    eh = n(431804),
-    eC = n(406975),
-    e_ =
+var ea = n(478437),
+    eo = n(367513),
+    ed = n(604681),
+    ec = n(198052),
+    eu = n(47675),
+    eA = n(999291),
+    eE = n(358047),
+    eh = n(467691),
+    eC = n(674272),
+    e_ = n(431804),
+    eg = n(406975),
+    eI =
         (((i = {}).NAVIGATION = "NAVIGATION"),
         (i.CHAT = "CHAT"),
         (i.VOICE_AND_VIDEO = "VOICE_AND_VIDEO"),
@@ -90,7 +92,7 @@ var er = n(478437),
         (i.MESSAGE = "MESSAGE"),
         (i.DND = "DND"),
         i);
-function eg(e) {
+function eT(e) {
     switch (e) {
         case "NAVIGATION":
             return O.intl.string(O.t["yGE+jg"]);
@@ -106,7 +108,7 @@ function eg(e) {
             return O.intl.string(O.t["69j6+4"]);
     }
 }
-function eI(e) {
+function ep(e) {
     switch (e) {
         case "MESSAGE":
             return O.intl.string(O.t.iepGDn);
@@ -116,31 +118,31 @@ function eI(e) {
             return;
     }
 }
-function eT() {
+function eN() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = ep[e];
+        let t = eS[e];
         if (null == t) throw Error(`getBindsFor(...): No bind for ${t}`);
         return t.binds[0];
     });
 }
-let ep = {
-    [R.IWg.SERVER_NEXT]: J.yx,
-    [R.IWg.SERVER_PREV]: J.yv,
+let eS = {
+    [R.IWg.SERVER_NEXT]: Q.yx,
+    [R.IWg.SERVER_PREV]: Q.yv,
     [R.IWg.CHANNEL_NEXT]: I.kF,
     [R.IWg.CHANNEL_PREV]: I.Oc,
     [R.IWg.NAVIGATE_BACK]: I.GY,
     [R.IWg.NAVIGATE_FORWARD]: I.M$,
-    [R.IWg.UNREAD_NEXT]: eA.mH,
-    [R.IWg.UNREAD_PREV]: eA.US,
-    [R.IWg.MENTION_CHANNEL_NEXT]: eA.BD,
-    [R.IWg.MENTION_CHANNEL_PREV]: eA.X8,
+    [R.IWg.UNREAD_NEXT]: eh.mH,
+    [R.IWg.UNREAD_PREV]: eh.US,
+    [R.IWg.MENTION_CHANNEL_NEXT]: eh.BD,
+    [R.IWg.MENTION_CHANNEL_PREV]: eh.X8,
     [R.IWg.TOGGLE_PREVIOUS_GUILD]: I.Fv,
-    [R.IWg.JUMP_TO_GUILD]: G.J,
-    [R.IWg.SUBMIT]: q.X,
-    [R.IWg.TEXTAREA_FOCUS]: Q.c,
-    [R.IWg.MARK_CHANNEL_READ]: M.Df,
-    [R.IWg.MARK_SERVER_READ]: P.P,
+    [R.IWg.JUMP_TO_GUILD]: P.J,
+    [R.IWg.SUBMIT]: $.X,
+    [R.IWg.TEXTAREA_FOCUS]: ee.c,
+    [R.IWg.MARK_CHANNEL_READ]: x.Df,
+    [R.IWg.MARK_SERVER_READ]: V.P,
     [R.IWg.TOGGLE_CHANNEL_PINS]: {
         binds: ["mod+p"],
         comboKeysBindGlobal: !0,
@@ -152,7 +154,7 @@ let ep = {
         action: () =>
             !(a.A.getLayers().length > 0 || (0, l.hasAnyModalOpen)()) &&
             (!(function () {
-                let { notificationCenterVariant: e } = (0, ei.GE)({ location: "TOGGLE_INBOX" });
+                let { notificationCenterVariant: e } = (0, er.GE)({ location: "TOGGLE_INBOX" });
                 if ("sidebar" !== e) return;
                 let t = o.Ay.getChannelId(),
                     n = h.A.getChannel(t);
@@ -163,7 +165,7 @@ let ep = {
             b._.dispatch(R.jej.TOGGLE_INBOX),
             !1),
     },
-    [R.IWg.MARK_TOP_INBOX_CHANNEL_READ]: el,
+    [R.IWg.MARK_TOP_INBOX_CHANNEL_READ]: es,
     [R.IWg.TOGGLE_USERS]: {
         binds: ["mod+u"],
         comboKeysBindGlobal: !0,
@@ -171,41 +173,41 @@ let ep = {
             let e = d.A.getGuildId(),
                 t = o.Ay.getChannelId(e),
                 n = h.A.getChannel(t),
-                i = null != t && n?.isVocalThread() === !0 && eo.A.getUserParticipantCount(t) > 0;
-            if (null != t && null != n && (n.type === er.r.GUILD_VOICE || i))
-                return (es.A.updateChatOpen(t, !eo.A.getChatOpen(t)), !1);
-            if (null != t && null != n && n.type === er.r.DM) {
-                let e = eu.Ay.getSection(t, n?.isDM()),
-                    i = (0, ec.AP)(n.getRecipientId()),
+                i = null != t && n?.isVocalThread() === !0 && ec.A.getUserParticipantCount(t) > 0;
+            if (null != t && null != n && (n.type === ea.r.GUILD_VOICE || i))
+                return (eo.A.updateChatOpen(t, !ec.A.getChatOpen(t)), !1);
+            if (null != t && null != n && n.type === ea.r.DM) {
+                let e = eE.Ay.getSection(t, n?.isDM()),
+                    i = (0, eA.AP)(n.getRecipientId()),
                     l = e === R.YvQ.PROFILE;
                 return (
-                    (0, ed.am)({ displayProfile: i, isProfileOpen: !l }), ea.A.toggleUserProfileSidebarSection(), !1
+                    (0, eu.am)({ displayProfile: i, isProfileOpen: !l }), ed.A.toggleUserProfileSidebarSection(), !1
                 );
             }
-            return (ea.A.toggleMembersSection(), !1);
+            return (ed.A.toggleMembersSection(), !1);
         },
     },
     [R.IWg.TOGGLE_HELP]: {
         binds: ["mod+shift+h", "f1"],
         comboKeysBindGlobal: !0,
-        action: () => (window.open(et.C), !1),
+        action: () => (window.open(ei.C), !1),
     },
     [R.IWg.VIBE_WITH_WUMPUS]: {
         binds: ["mod+alt+shift+w"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, eE.A)({ source: eh.y.KEYBIND }), !1),
+        action: () => ((0, eC.A)({ source: e_.y.KEYBIND }), !1),
     },
-    [R.IWg.TOGGLE_MUTE]: $.VT,
-    [R.IWg.TOGGLE_DEAFEN]: $.rR,
-    [R.IWg.TOGGLE_CATEGORY_COLLAPSED]: ee.y,
+    [R.IWg.TOGGLE_MUTE]: et.VT,
+    [R.IWg.TOGGLE_DEAFEN]: et.rR,
+    [R.IWg.TOGGLE_CATEGORY_COLLAPSED]: en.y,
     [R.IWg.SEARCH_SOUNDBOARD]: {
         binds: ["mod+shift+b"],
         comboKeysBindGlobal: !0,
         action: () => (b._.dispatch(R.jej.TOGGLE_SOUNDBOARD), !1),
     },
-    [R.IWg.SCROLL_UP]: Y.U5,
-    [R.IWg.SCROLL_DOWN]: Y.fz,
-    [R.IWg.QUICKSWITCHER_SHOW]: H.R,
+    [R.IWg.SCROLL_UP]: z.U5,
+    [R.IWg.SCROLL_DOWN]: z.fz,
+    [R.IWg.QUICKSWITCHER_SHOW]: B.R,
     [R.IWg.CREATE_DM_GROUP]: {
         binds: ["mod+shift+t"],
         comboKeysBindGlobal: !0,
@@ -251,18 +253,21 @@ let ep = {
             if (null != e) return ((0, c.RL)(e.id, !e.pinned), !1);
         },
     },
-    [R.IWg.SEARCH_EMOJIS]: Z.L,
-    [R.IWg.SEARCH_GIFS]: z.T,
-    [R.IWg.SEARCH_STICKERS]: X.w,
-    [R.IWg.TOGGLE_HOTKEYS]: en.z,
-    [R.IWg.JUMP_TO_FIRST_UNREAD]: x.s,
+    [R.IWg.SEARCH_EMOJIS]: X.L,
+    [R.IWg.SEARCH_GIFS]: J.T,
+    [R.IWg.SEARCH_STICKERS]: q.w,
+    [R.IWg.TOGGLE_HOTKEYS]: el.z,
+    [R.IWg.JUMP_TO_FIRST_UNREAD]: w.s,
     [R.IWg.CREATE_GUILD]: {
         binds: ["mod+shift+n"],
         comboKeysBindGlobal: !0,
         action() {
-            (0, l.hasModalOpen)(U.fc)
-                ? v.A.updateCreateGuildModal({ slide: U.oS.JOIN_GUILD, location: "Keyboard Shortcut" })
-                : v.A.openCreateGuildModal({ location: "Keyboard Shortcut" });
+            if ((0, l.hasModalOpen)(y.fc))
+                U.A.updateCreateGuildModal({ slide: y.oS.JOIN_GUILD, location: "Keyboard Shortcut" });
+            else {
+                let e = !(0, D.Sn)() && (0, v.i)("guild_list_add_server");
+                U.A.openCreateGuildModal({ location: "Keyboard Shortcut", joinFirst: e });
+            }
         },
     },
     [R.IWg.UPLOAD_FILE]: {
@@ -274,7 +279,7 @@ let ep = {
         },
     },
     [R.IWg.RECORD_VOICE_MESSAGE]: {
-        binds: F ? ["ctrl+shift+d"] : ["alt+r"],
+        binds: K ? ["ctrl+shift+d"] : ["alt+r"],
         comboKeysBindGlobal: !0,
         action(e) {
             if (
@@ -284,7 +289,7 @@ let ep = {
                 return (b._.dispatchToLastSubscribed(R.jej.RECORD_VOICE_MESSAGE), !1);
         },
     },
-    [R.IWg.RETURN_TO_AUDIO_CHANNEL]: K.u,
+    [R.IWg.RETURN_TO_AUDIO_CHANNEL]: Z.u,
     [R.IWg.CALL_ACCEPT]: g.Yo,
     [R.IWg.CALL_START]: g.OX,
     [R.IWg.FOCUS_SEARCH]: {
@@ -301,22 +306,22 @@ let ep = {
         comboKeysBindGlobal: !0,
         action(e) {
             (e.preventDefault(), e.stopPropagation());
-            let t = y.A.getGuildId(),
-                n = y.A.getChannelId();
+            let t = M.A.getGuildId(),
+                n = M.A.getChannelId();
             return (null != n && (0, m.i)(t ?? R.ME, n), !1);
         },
     },
-    [R.IWg.ZOOM_IN]: eC.Ur,
-    [R.IWg.ZOOM_OUT]: eC.hU,
-    [R.IWg.ZOOM_RESET]: eC.O$,
+    [R.IWg.ZOOM_IN]: eg.Ur,
+    [R.IWg.ZOOM_OUT]: eg.hU,
+    [R.IWg.ZOOM_RESET]: eg.O$,
     [R.IWg.OPEN_APP_DIRECTORY]: {
         binds: ["mod+ctrl+a"],
         comboKeysBindGlobal: !0,
         action() {
             let e = d.A.getGuildId() ?? void 0;
-            (0, V.transitionToGlobalDiscovery)({
-                tab: j.GlobalDiscoveryTab.APPS,
-                newSessionState: { guildId: e ?? null, entrypoint: { name: w.sW.KEYBOARD_SHORTCUT } },
+            (0, j.transitionToGlobalDiscovery)({
+                tab: k.GlobalDiscoveryTab.APPS,
+                newSessionState: { guildId: e ?? null, entrypoint: { name: H.sW.KEYBOARD_SHORTCUT } },
             });
         },
     },
@@ -324,7 +329,7 @@ let ep = {
         binds: ["mod+alt+i"],
         comboKeysBindGlobal: !0,
         action(e) {
-            if ((0, D.isWeb)() && "discord.com" === location.host) return (e.preventDefault(), e.stopPropagation(), !1);
+            if ((0, G.isWeb)() && "discord.com" === location.host) return (e.preventDefault(), e.stopPropagation(), !1);
         },
     },
     [R.IWg.OPEN_CONTEXT_MENU]: {
@@ -362,67 +367,67 @@ let ep = {
         },
     },
 };
-function eN() {
+function ef() {
     return [
         {
             description: O.intl.string(O.t.bx4Uyz),
-            binds: eT(R.IWg.SERVER_PREV, R.IWg.SERVER_NEXT),
+            binds: eN(R.IWg.SERVER_PREV, R.IWg.SERVER_NEXT),
             group: "NAVIGATION",
         },
         {
             description: O.intl.string(O.t["+Wem6h"]),
-            binds: eT(R.IWg.CHANNEL_PREV, R.IWg.CHANNEL_NEXT),
+            binds: eN(R.IWg.CHANNEL_PREV, R.IWg.CHANNEL_NEXT),
             group: "NAVIGATION",
         },
         {
             description: O.intl.string(O.t["+2fcdz"]),
-            binds: eT(R.IWg.NAVIGATE_BACK, R.IWg.NAVIGATE_FORWARD),
+            binds: eN(R.IWg.NAVIGATE_BACK, R.IWg.NAVIGATE_FORWARD),
             group: "NAVIGATION",
         },
         {
             description: O.intl.string(O.t.eVmj1H),
-            binds: eT(R.IWg.UNREAD_PREV, R.IWg.UNREAD_NEXT),
+            binds: eN(R.IWg.UNREAD_PREV, R.IWg.UNREAD_NEXT),
             group: "NAVIGATION",
         },
         {
             description: O.intl.string(O.t.EcqS7Y),
-            binds: eT(R.IWg.MENTION_CHANNEL_PREV, R.IWg.MENTION_CHANNEL_NEXT),
+            binds: eN(R.IWg.MENTION_CHANNEL_PREV, R.IWg.MENTION_CHANNEL_NEXT),
             group: "NAVIGATION",
         },
-        { description: O.intl.string(O.t["4I3pwW"]), binds: eT(R.IWg.JUMP_TO_CURRENT_CALL), group: "NAVIGATION" },
-        { description: O.intl.string(O.t.Bqss72), binds: eT(R.IWg.TOGGLE_PREVIOUS_GUILD), group: "NAVIGATION" },
-        { description: O.intl.string(O.t.yYsRlD), binds: eT(R.IWg.QUICKSWITCHER_SHOW), group: "NAVIGATION" },
-        { description: O.intl.string(O.t.O7ouXO), binds: eT(R.IWg.CREATE_GUILD), group: "NAVIGATION", groupEnd: !0 },
+        { description: O.intl.string(O.t["4I3pwW"]), binds: eN(R.IWg.JUMP_TO_CURRENT_CALL), group: "NAVIGATION" },
+        { description: O.intl.string(O.t.Bqss72), binds: eN(R.IWg.TOGGLE_PREVIOUS_GUILD), group: "NAVIGATION" },
+        { description: O.intl.string(O.t.yYsRlD), binds: eN(R.IWg.QUICKSWITCHER_SHOW), group: "NAVIGATION" },
+        { description: O.intl.string(O.t.O7ouXO), binds: eN(R.IWg.CREATE_GUILD), group: "NAVIGATION", groupEnd: !0 },
         { description: O.intl.string(O.t.Lns0Fc), binds: ["mod+d"], group: "DND" },
         { description: O.intl.string(O.t.dmMqay), binds: ["up", "down"], group: "DND" },
         { description: O.intl.string(O.t["cs/HVH"]), binds: ["spacebar", "enter"], group: "DND" },
         { description: O.intl.string(O.t["1ioMJQ"]), binds: ["esc"], group: "DND", groupEnd: !0 },
-        { description: O.intl.string(O.t.UaXAPx), binds: eT(R.IWg.MARK_SERVER_READ), group: "CHAT" },
-        { description: O.intl.string(O.t["5X9vFj"]), binds: eT(R.IWg.MARK_CHANNEL_READ), group: "CHAT" },
-        { description: O.intl.string(O.t.wxQFsl), binds: eT(R.IWg.CREATE_DM_GROUP), group: "CHAT" },
-        { description: O.intl.string(O.t["ZxGD+G"]), binds: eT(R.IWg.CREATE_THREAD), group: "CHAT" },
-        { description: O.intl.string(O.t["C+XV7f"]), binds: eT(R.IWg.TOGGLE_CHANNEL_PINS), group: "CHAT" },
-        { description: O.intl.string(O.t["Q+YV/T"]), binds: eT(R.IWg.TOGGLE_INBOX), group: "CHAT" },
-        { description: O.intl.string(O.t["YEjV+W"]), binds: eT(R.IWg.MARK_TOP_INBOX_CHANNEL_READ), group: "CHAT" },
-        { description: O.intl.string(O.t.AcBI9S), binds: eT(R.IWg.TOGGLE_USERS), group: "CHAT" },
-        { description: O.intl.string(O.t.JoxNnl), binds: eT(R.IWg.SEARCH_EMOJIS), group: "CHAT" },
-        { description: O.intl.string(O.t["3PHxo8"]), binds: eT(R.IWg.SEARCH_GIFS), group: "CHAT" },
-        { description: O.intl.string(O.t.YFl7eb), binds: eT(R.IWg.SEARCH_STICKERS), group: "CHAT" },
-        { description: O.intl.string(O.t.L3RYYJ), binds: eT(R.IWg.SCROLL_UP, R.IWg.SCROLL_DOWN), group: "CHAT" },
-        { description: O.intl.string(O.t["3HAurM"]), binds: eT(R.IWg.JUMP_TO_FIRST_UNREAD), group: "CHAT" },
-        { description: O.intl.string(O.t.rrYBEu), binds: eT(R.IWg.TEXTAREA_FOCUS), group: "CHAT" },
-        { description: O.intl.string(O.t.Wknt9M), binds: eT(R.IWg.RECORD_VOICE_MESSAGE), group: "CHAT", predicate: W },
-        { description: O.intl.string(O.t.sUJlPL), binds: eT(R.IWg.UPLOAD_FILE), group: "CHAT" },
-        { description: O.intl.string(O.t["A+Fv0R"]), binds: eT(R.IWg.COPY_CHANNEL_LINK), group: "CHAT", groupEnd: !0 },
-        { description: O.intl.string(O.t.tL6eVW), binds: eT(R.IWg.TOGGLE_MUTE), group: "VOICE_AND_VIDEO" },
-        { description: O.intl.string(O.t["QXe/7T"]), binds: eT(R.IWg.TOGGLE_DEAFEN), group: "VOICE_AND_VIDEO" },
-        { description: O.intl.string(O.t.d6UIii), binds: eT(R.IWg.CALL_ACCEPT), group: "VOICE_AND_VIDEO" },
-        { description: O.intl.string(O.t.IcEW06), binds: eT(R.IWg.MARK_CHANNEL_READ), group: "VOICE_AND_VIDEO" },
-        { description: O.intl.string(O.t.WN2dsS), binds: eT(R.IWg.CALL_START), group: "VOICE_AND_VIDEO", groupEnd: !0 },
-        { description: O.intl.string(O.t.rUK0kk), binds: eT(R.IWg.SEARCH_SOUNDBOARD), group: "VOICE_AND_VIDEO" },
-        { description: O.intl.string(O.t.vkGkSn), binds: eT(R.IWg.TOGGLE_HELP), group: "MISCELLANEOUS" },
-        { description: O.intl.string(O.t.FJvZ87), binds: eT(R.IWg.FOCUS_SEARCH), group: "MISCELLANEOUS" },
-        { description: O.intl.string(O.t["FiWl/T"]), binds: eT(R.IWg.OPEN_CONTEXT_MENU), group: "MISCELLANEOUS" },
+        { description: O.intl.string(O.t.UaXAPx), binds: eN(R.IWg.MARK_SERVER_READ), group: "CHAT" },
+        { description: O.intl.string(O.t["5X9vFj"]), binds: eN(R.IWg.MARK_CHANNEL_READ), group: "CHAT" },
+        { description: O.intl.string(O.t.wxQFsl), binds: eN(R.IWg.CREATE_DM_GROUP), group: "CHAT" },
+        { description: O.intl.string(O.t["ZxGD+G"]), binds: eN(R.IWg.CREATE_THREAD), group: "CHAT" },
+        { description: O.intl.string(O.t["C+XV7f"]), binds: eN(R.IWg.TOGGLE_CHANNEL_PINS), group: "CHAT" },
+        { description: O.intl.string(O.t["Q+YV/T"]), binds: eN(R.IWg.TOGGLE_INBOX), group: "CHAT" },
+        { description: O.intl.string(O.t["YEjV+W"]), binds: eN(R.IWg.MARK_TOP_INBOX_CHANNEL_READ), group: "CHAT" },
+        { description: O.intl.string(O.t.AcBI9S), binds: eN(R.IWg.TOGGLE_USERS), group: "CHAT" },
+        { description: O.intl.string(O.t.JoxNnl), binds: eN(R.IWg.SEARCH_EMOJIS), group: "CHAT" },
+        { description: O.intl.string(O.t["3PHxo8"]), binds: eN(R.IWg.SEARCH_GIFS), group: "CHAT" },
+        { description: O.intl.string(O.t.YFl7eb), binds: eN(R.IWg.SEARCH_STICKERS), group: "CHAT" },
+        { description: O.intl.string(O.t.L3RYYJ), binds: eN(R.IWg.SCROLL_UP, R.IWg.SCROLL_DOWN), group: "CHAT" },
+        { description: O.intl.string(O.t["3HAurM"]), binds: eN(R.IWg.JUMP_TO_FIRST_UNREAD), group: "CHAT" },
+        { description: O.intl.string(O.t.rrYBEu), binds: eN(R.IWg.TEXTAREA_FOCUS), group: "CHAT" },
+        { description: O.intl.string(O.t.Wknt9M), binds: eN(R.IWg.RECORD_VOICE_MESSAGE), group: "CHAT", predicate: Y },
+        { description: O.intl.string(O.t.sUJlPL), binds: eN(R.IWg.UPLOAD_FILE), group: "CHAT" },
+        { description: O.intl.string(O.t["A+Fv0R"]), binds: eN(R.IWg.COPY_CHANNEL_LINK), group: "CHAT", groupEnd: !0 },
+        { description: O.intl.string(O.t.tL6eVW), binds: eN(R.IWg.TOGGLE_MUTE), group: "VOICE_AND_VIDEO" },
+        { description: O.intl.string(O.t["QXe/7T"]), binds: eN(R.IWg.TOGGLE_DEAFEN), group: "VOICE_AND_VIDEO" },
+        { description: O.intl.string(O.t.d6UIii), binds: eN(R.IWg.CALL_ACCEPT), group: "VOICE_AND_VIDEO" },
+        { description: O.intl.string(O.t.IcEW06), binds: eN(R.IWg.MARK_CHANNEL_READ), group: "VOICE_AND_VIDEO" },
+        { description: O.intl.string(O.t.WN2dsS), binds: eN(R.IWg.CALL_START), group: "VOICE_AND_VIDEO", groupEnd: !0 },
+        { description: O.intl.string(O.t.rUK0kk), binds: eN(R.IWg.SEARCH_SOUNDBOARD), group: "VOICE_AND_VIDEO" },
+        { description: O.intl.string(O.t.vkGkSn), binds: eN(R.IWg.TOGGLE_HELP), group: "MISCELLANEOUS" },
+        { description: O.intl.string(O.t.FJvZ87), binds: eN(R.IWg.FOCUS_SEARCH), group: "MISCELLANEOUS" },
+        { description: O.intl.string(O.t["FiWl/T"]), binds: eN(R.IWg.OPEN_CONTEXT_MENU), group: "MISCELLANEOUS" },
         { description: O.intl.string(O.t.HnNtEI), binds: ["h+h+right+n+k"], group: "MISCELLANEOUS", groupEnd: !0 },
         { description: O.intl.string(O.t.fsBWmS), binds: ["e"], group: "MESSAGE" },
         { description: O.intl.string(O.t.xwMqD7), binds: ["backspace"], group: "MESSAGE" },
@@ -434,7 +439,7 @@ function eN() {
         { description: O.intl.string(O.t.JrGD7E), binds: ["mod+c"], group: "MESSAGE" },
         { description: O.intl.string(O.t.RpE9k7), binds: ["alt+enter"], group: "MESSAGE" },
         { description: O.intl.string(O.t.rrYBEu), binds: ["escape"], group: "MESSAGE", groupEnd: !0 },
-        { description: O.intl.string(O.t.z9c6mt), binds: eT(R.IWg.VIBE_WITH_WUMPUS), group: "MISCELLANEOUS" },
+        { description: O.intl.string(O.t.z9c6mt), binds: eN(R.IWg.VIBE_WITH_WUMPUS), group: "MISCELLANEOUS" },
     ];
 }
-let eS = 221552 == n.j ? ep : null;
+let eO = 221552 == n.j ? eS : null;

@@ -27,15 +27,15 @@ var E = e(878314),
     T = e(105292),
     b = e(497292);
 function G(t) {
-    let { guildTemplate: n, onClick: e, autoFocus: r } = t,
-        l = a.useCallback(() => {
+    let { guildTemplate: n, onClick: e, autoFocus: r, isSlideReady: l } = t,
+        s = a.useCallback(() => {
             e(n);
         }, [n, e]);
-    return (0, i.jsx)(E.A, { icon: o[n.id], message: n.label, onClick: l, autoFocus: r });
+    return (0, i.jsx)(E.A, { icon: o[n.id], message: n.label, onClick: s, autoFocus: r, isSlideReady: l });
 }
 function I(t) {
-    let { className: n, isNewUser: e, onClose: a, onChooseTemplate: r, onJoin: _ } = t,
-        g = (0, C.p)();
+    let { className: n, isNewUser: e, onClose: a, onChooseTemplate: r, onJoin: _, isSlideReady: g } = t,
+        o = (0, C.p)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(s.rQ, {
@@ -63,19 +63,19 @@ function I(t) {
                 className: l()(b.KA, n),
                 scrollbarGutter: !1,
                 children: [
-                    (0, i.jsx)(G, { guildTemplate: g[C.v.CREATE], onClick: r, autoFocus: !0 }),
+                    (0, i.jsx)(G, { guildTemplate: o[C.v.CREATE], onClick: r, autoFocus: !0, isSlideReady: g }),
                     (0, i.jsx)(c.E, {
                         className: b.l8,
                         color: "text-default",
                         variant: "text-xs/bold",
                         children: T.intl.string(T.t.JGDkfg),
                     }),
-                    (0, i.jsx)(G, { guildTemplate: g[C.v.GAMING], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: g[C.v.FRIENDS], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: g[C.v.STUDY], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: g[C.v.SCHOOL_CLUB], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: g[C.v.LOCAL_COMMUNITY], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: g[C.v.CREATORS], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[C.v.GAMING], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[C.v.FRIENDS], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[C.v.STUDY], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[C.v.SCHOOL_CLUB], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[C.v.LOCAL_COMMUNITY], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[C.v.CREATORS], onClick: r }),
                 ],
             }),
             null != _ &&
