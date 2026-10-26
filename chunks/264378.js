@@ -44,7 +44,7 @@ function S(e) {
         children: (0, i.jsx)(o.$, {
             variant: "overlay-primary",
             size: "sm",
-            text: E.intl.string(E.t.JSSBzo),
+            text: E.intl.string(E.t["n/a182"]),
             icon: u.t,
             onClick: function (e) {
                 (e.stopPropagation(),
