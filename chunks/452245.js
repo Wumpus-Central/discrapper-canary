@@ -3,7 +3,7 @@
 var r,
     i,
     u = n(582128),
-    a = n(793480);
+    a = n(97005);
 let l = (0, n(945810).mj)({
     name: "2026-09-automod-application-rules",
     kind: "guild",
