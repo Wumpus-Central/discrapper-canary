@@ -48,8 +48,8 @@ async function r(e) {
                         n.e("424265"),
                         n.e("258427"),
                         n.e("182045"),
-                        n.e("464370"),
-                    ]).then(n.bind(n, 442660));
+                        n.e("572934"),
+                    ]).then(n.bind(n, 752805));
                     return (n) => (0, o.jsx)(e, { ...n, bounty: t, sourceQuestContent: a });
                 },
                 { modalKey: "BOUNTY_VIDEO_MODAL" },
