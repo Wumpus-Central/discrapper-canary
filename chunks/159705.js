@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "651366";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "651395";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 651366, Version Hash: 469c9e6f6dda68d1fb4b1118fa9f57ec7a91f87e`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 651395, Version Hash: 26e29348471b24b6e3dbc7c8d80a81874f11403d`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25499,7 +25499,7 @@ let yr = "isHideDevBanner",
                     className: tf()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "651366" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "651395" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -52759,9 +52759,9 @@ let WD = [
                             n.e("842775"),
                             n.e("21814"),
                             n.e("238672"),
-                            n.e("146955"),
+                            n.e("967351"),
                             n.e("714078"),
-                        ]).then(n.bind(n, 948486));
+                        ]).then(n.bind(n, 120490));
                         return (t) => (0, b.jsx)(e, { gameId: i, source: u4.GameProfileSources.Deeplink, ...t });
                     });
                 }),

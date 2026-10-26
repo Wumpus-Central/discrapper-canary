@@ -5529,20 +5529,6 @@
     }
   },
   {
-    "name": "2026-10-game-profile-mobile-reviews",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-10-gdm-duration-timer",
     "kind": "user",
     "defaultConfig": {
