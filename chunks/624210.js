@@ -24,6 +24,8 @@ async function a(e) {
         s = {};
     ("paymentSourceId" in n && (s.billing_facet = { ...s.billing_facet, payment_source_id: n.paymentSourceId }),
         "currency" in n && (s.billing_facet = { ...s.billing_facet, currency: n.currency }),
+        "applyWalletBalance" in n &&
+            (s.billing_facet = { ...s.billing_facet, apply_wallet_balance: n.applyWalletBalance }),
         null != r && (s.expected_revision = r));
     let a = (await l.Bo.patch({ url: i.Rsh.ORDER_UPDATE(t), body: s, rejectWithError: !0 })).body;
     if (null == a || null == a.id || "" === a.id) throw Error("Invalid order response");

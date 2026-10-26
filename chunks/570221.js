@@ -112,7 +112,16 @@ class l extends s {
                           };
                 })
                 .filter((e) => null != e),
-            r = n.line_items.reduce((e, t) => e + (t.orbs_reward ?? 0), 0);
+            r = n.line_items.reduce((e, t) => e + (t.orbs_reward ?? 0), 0),
+            a = (n.payment_legs ?? []).map((e) => ({
+                amount: e.amount,
+                currency: n.currency,
+                payment_id: null,
+                payment_gateway: e.payment_gateway,
+                payment_source_id: e.payment_source_id ?? null,
+                available_balance: e.available_balance ?? void 0,
+                amount_short: e.amount_short,
+            }));
         return new l({
             id: "",
             invoiceItems: i,
@@ -125,6 +134,8 @@ class l extends s {
             subscriptionPeriodEnd: new Date(0),
             orbsReward: r > 0 ? r : void 0,
             checkoutContext: e.checkout_context ?? void 0,
+            applyWalletBalance: t?.apply_wallet_balance ?? void 0,
+            paymentLegs: a,
         });
     }
     static createFromOTPPreview(e) {
