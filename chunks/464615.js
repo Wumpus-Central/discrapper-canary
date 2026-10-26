@@ -47,9 +47,8 @@ function C(e, t, n, i, T) {
     let m = !o.A.isSoundDisabled(R),
         g = c.A.getGuildId();
     if (
-        null != g &&
-        _.Ay.getSelectedProjectId(g) === e &&
-        d.Ay.getChannelId() === p.VV.CONJURE &&
+        (_.Ay.getGlobalSelectedProjectId() === e ||
+            (null != g && _.Ay.getSelectedProjectId(g) === e && d.Ay.getChannelId() === p.VV.CONJURE)) &&
         A.A.isWindowFocused()
     ) {
         m && (0, a.Ak)(O, y);

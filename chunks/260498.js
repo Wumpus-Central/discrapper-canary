@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => C, H_: () => c, PV: () => l, jf: () => d }), n(321073));
+(n.d(t, { Ay: () => R, H_: () => c, PV: () => l, jf: () => d }), n(321073));
 var i = n(17928),
     r = n(73153),
     a = n(287809),
@@ -18,15 +18,17 @@ function c(e) {
 let u = new Map(),
     _ = new Map(),
     E = new Map(),
-    A = new Set(),
-    h = !1,
-    f = null,
+    A = null,
+    h = new Map(),
+    f = new Set(),
     I = !1,
     p = null,
-    T = new Set(),
-    m = new Map(),
-    g = "unattempted";
-class S extends i.Ay.Store {
+    T = !1,
+    m = null,
+    g = new Set(),
+    S = new Map(),
+    N = "unattempted";
+class C extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -34,13 +36,13 @@ class S extends i.Ay.Store {
         return Array.from(u.values()).filter(l);
     }
     hasFetchedOwnedProjects() {
-        return h;
+        return I;
     }
     getMaxProjects() {
-        return f;
+        return p;
     }
     hasFetchedProjectLimit() {
-        return I;
+        return T;
     }
     getProject(e) {
         return u.get(e) ?? null;
@@ -58,98 +60,124 @@ class S extends i.Ay.Store {
         return _.get(e) ?? null;
     }
     isProjectDeleting(e) {
-        return A.has(e);
+        return f.has(e);
     }
     getSelectedProjectId(e) {
         return E.get(e) ?? null;
     }
+    getGlobalSelectedProjectId() {
+        return A;
+    }
+    getProjectLoadStatus(e) {
+        return h.get(e) ?? null;
+    }
     getProjectsFetchState() {
-        return p;
+        return m;
     }
     hasFetchedGuildProjects(e) {
-        return T.has(e);
+        return g.has(e);
     }
     getGuildProjectsFetchState(e) {
-        return m.get(e) ?? "unattempted";
+        return S.get(e) ?? "unattempted";
     }
     getOwnedProjectsFetchState() {
-        return g;
+        return N;
     }
     isConjureProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function N(e) {
+function O(e) {
     let { project: t } = e;
     u.set(t.id, t);
 }
-let C = new S(r.h, {
+let R = new C(r.h, {
     LOGOUT: function () {
         if (
             0 === u.size &&
             0 === _.size &&
             0 === E.size &&
-            0 === A.size &&
-            0 === T.size &&
+            null == A &&
+            0 === h.size &&
+            0 === f.size &&
+            0 === g.size &&
+            null == m &&
             null == p &&
-            null == f &&
-            !I
+            !T
         )
             return !1;
         (u.clear(),
             _.clear(),
             E.clear(),
-            A.clear(),
-            T.clear(),
-            m.clear(),
+            (A = null),
+            h.clear(),
+            f.clear(),
+            g.clear(),
+            S.clear(),
+            (m = null),
+            (I = !1),
+            (N = "unattempted"),
             (p = null),
-            (h = !1),
-            (g = "unattempted"),
-            (f = null),
-            (I = !1));
+            (T = !1));
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t ? m.set(t, "loading") : (g = "loading"), (p = { type: "loading" }));
+        (null != t ? S.set(t, "loading") : (N = "loading"), (m = { type: "loading" }));
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
             i = new Set(t.map((e) => e.id));
         for (let [e, t] of u) !i.has(e) && (l(t) || (null != n && t.guild_id === n)) && u.delete(e);
         for (let e of t) u.set(e.id, e);
-        for (let e of (null != n && (T.add(n), m.set(n, "success")), _.keys())) u.has(e) || _.delete(e);
+        for (let e of (null != n && (g.add(n), S.set(n, "success")), _.keys())) u.has(e) || _.delete(e);
         for (let [e, t] of E) u.has(t) || E.delete(e);
-        ((h = !0), (g = "success"), (p = { type: "success", fetchedAt: Date.now() }));
+        ((I = !0), (N = "success"), (m = { type: "success", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t ? m.set(t, "error") : (g = "error"), (p = { type: "error", fetchedAt: Date.now() }));
+        (null != t ? S.set(t, "error") : (N = "error"), (m = { type: "error", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;
-        ((f = t), (I = !0));
+        ((p = t), (T = !0));
     },
-    CONJURE_PROJECT_CREATE_SUCCESS: N,
-    CONJURE_PROJECT_UPDATE_SUCCESS: N,
+    CONJURE_PROJECT_CREATE_SUCCESS: O,
+    CONJURE_PROJECT_UPDATE_SUCCESS: O,
     CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         _.set(t, n);
     },
     CONJURE_PROJECT_DELETE_START: function (e) {
         let { projectId: t } = e;
-        A.add(t);
+        f.add(t);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        for (let [e, n] of (A.delete(t), u.delete(t), _.delete(t), E)) n === t && E.delete(e);
+        for (let [e, n] of (f.delete(t), u.delete(t), _.delete(t), E)) n === t && E.delete(e);
+        (A === t && (A = null), h.delete(t));
     },
     CONJURE_PROJECT_DELETE_FAIL: function (e) {
         let { projectId: t } = e;
-        return A.delete(t);
+        return f.delete(t);
     },
     CONJURE_PROJECT_SELECT: function (e) {
         let { guildId: t, projectId: n } = e;
         if ((E.get(t) ?? null) === n) return !1;
         null == n ? E.delete(t) : E.set(t, n);
+    },
+    CONJURE_PROJECT_GLOBAL_SELECT: function (e) {
+        let { projectId: t } = e;
+        if (A === t) return !1;
+        A = t;
+    },
+    CONJURE_PROJECT_GLOBAL_CLEAR: function (e) {
+        let { projectId: t } = e;
+        if (A !== t) return !1;
+        A = null;
+    },
+    CONJURE_PROJECT_LOAD_STATUS: function (e) {
+        let { projectId: t, status: n } = e;
+        if ((h.get(t) ?? null) === n) return !1;
+        null == n ? h.delete(t) : h.set(t, n);
     },
 });

@@ -29,17 +29,21 @@ function S() {
     return (T(), g(), (A = null), null != h && ((h = null), !0));
 }
 function N(e) {
-    let { withGracePeriod: t } = e;
+    let t,
+        n,
+        { withGracePeriod: i } = e;
     if (s.A.isIdle() || (null != A && null == c.Ay.getProject(A))) return S();
-    let n = (function () {
-        if (l.Ay.getChannelId() !== E.VV.CONJURE) return null;
-        let e = o.A.getGuildId();
-        if (null == e) return null;
-        let t = c.Ay.getSelectedProjectId(e);
-        return null == t || null == c.Ay.getProject(t) ? null : t;
-    })();
-    return null == n
-        ? null != h && t
+    let r =
+        ((t = o.A.getGuildId()),
+        null ==
+            (n =
+                c.Ay.getGlobalSelectedProjectId() ??
+                (null != t && l.Ay.getChannelId() === E.VV.CONJURE ? c.Ay.getSelectedProjectId(t) : null)) ||
+        null == c.Ay.getProject(n)
+            ? null
+            : n);
+    return null == r
+        ? null != h && i
             ? (null == f &&
                   (f = setTimeout(() => {
                       ((f = null), S() && R.emitChange());
@@ -47,8 +51,8 @@ function N(e) {
               !1)
             : S()
         : (T(),
-          (n !== A || null == h) &&
-              ((A = n),
+          (r !== A || null == h) &&
+              ((A = r),
               (h = { type: _.$pd.PLAYING, name: u.Vb, details: m(), timestamps: { start: Date.now() } }),
               !(function e() {
                   (g(),

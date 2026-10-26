@@ -1,4 +1,4 @@
-(n.d(t, { qh: () => v, rX: () => b, z9: () => _ }), n(321073));
+(n.d(t, { qh: () => k, rX: () => _, z9: () => v }), n(321073));
 var l = n(582128),
     a = n(17928),
     r = n(587895),
@@ -12,9 +12,8 @@ var l = n(582128),
     f = n(793480),
     h = n(246338),
     x = n(434279),
-    g = n(260498),
-    p = n(426035);
-function j(e, t) {
+    g = n(260498);
+function p(e, t) {
     return (
         e.nextExpiry === t.nextExpiry &&
         e.entries.length === t.entries.length &&
@@ -28,17 +27,16 @@ function j(e, t) {
                 e.project.updated_at === l.project.updated_at &&
                 e.guildId === l.guildId &&
                 e.guildName === l.guildName &&
-                e.notInServer === l.notInServer &&
                 e.owned === l.owned &&
                 e.guild === l.guild
             );
         })
     );
 }
-function k(e, t) {
+function j(e, t) {
     return e.length === t.length && e.every((e, n) => e === t[n]);
 }
-function v(e) {
+function k(e) {
     let [t, n] = l.useState(0),
         { entries: o, nextExpiry: c } = (0, a.bG)(
             [g.Ay, m.A, d.A, u.Ay, s.A, r.A, i.Bt],
@@ -75,7 +73,6 @@ function v(e) {
                             guildId: s,
                             guild: f,
                             guildName: f?.name ?? null,
-                            notInServer: "not_in_server" === (0, p.kF)(e),
                             owned: n,
                             activity: c,
                             sortTime: (function (e, t) {
@@ -93,7 +90,7 @@ function v(e) {
                     return { entries: (0, x.Ng)(r), nextExpiry: i };
                 })(e),
             [e, t],
-            j,
+            p,
         );
     return (
         l.useEffect(() => {
@@ -104,7 +101,7 @@ function v(e) {
         o
     );
 }
-function _(e) {
+function v(e) {
     return (0, a.bG)(
         [d.A, i.Bt, o.A],
         () =>
@@ -112,10 +109,10 @@ function _(e) {
                 .filter((t) => (0, h.sM)(t, e))
                 .sort((e, t) => e.name.localeCompare(t.name)),
         [e],
-        k,
+        j,
     );
 }
-function b(e) {
+function _(e) {
     return (0, a.bG)(
         [d.A, c.A, i.Bt],
         () => {
@@ -129,4 +126,3 @@ function b(e) {
         [e],
     );
 }
-(n(248675), n(105292));

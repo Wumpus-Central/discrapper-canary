@@ -1,11 +1,11 @@
 n.d(t, { A: () => T });
 var l = n(477900),
     a = n(582128),
-    r = n(17928),
-    i = n(834730),
-    s = n(821609),
-    u = n(289873),
-    d = n(371169),
+    r = n(834730),
+    i = n(821609),
+    s = n(289873),
+    u = n(371169),
+    d = n(17928),
     o = n(260498),
     c = n(281091),
     m = n(503698),
@@ -19,8 +19,8 @@ var l = n(477900),
     v = n(219956),
     _ = n(731084),
     b = n(104317),
-    A = n(245179),
-    y = n(886540),
+    y = n(245179),
+    A = n(886540),
     N = n(248675),
     w = n(105292),
     S = n(162052),
@@ -30,22 +30,22 @@ function C() {
 }
 function I(e) {
     let { projectId: t } = e,
-        n = (0, r.bG)(
-            [A.A],
+        n = (0, d.bG)(
+            [y.A],
             () => {
-                let e = (0, y.Ji)(A.A.getMessages(t));
+                let e = (0, A.Ji)(y.A.getMessages(t));
                 return null == e
                     ? null
                     : ((0, b.w)(e.steps) ??
                           (0, _.Dy)({
-                              activity: A.A.getThinkingActivity(t),
-                              compacting: A.A.isCompacting(t),
-                              saving: A.A.isSaving(t),
+                              activity: y.A.getThinkingActivity(t),
+                              compacting: y.A.isCompacting(t),
+                              saving: y.A.isSaving(t),
                           }));
             },
             [t],
         );
-    return (0, l.jsx)(i.E, {
+    return (0, l.jsx)(r.E, {
         variant: "text-sm/normal",
         color: "none",
         className: f()(E.pG, S.Hz),
@@ -53,13 +53,13 @@ function I(e) {
     });
 }
 let M = a.memo(function (e) {
-    let { project: t, onSelect: n, renderActions: a, onContextMenu: s } = e,
+    let { project: t, onSelect: n, renderActions: a, onContextMenu: i } = e,
         o = (0, v.ZA)(t.id),
         c = "deleting" === o,
-        m = (0, r.bG)([k.A], () => k.A.getPublishStatus(t.id)?.publishState ?? null, [t.id]),
+        m = (0, d.bG)([k.A], () => k.A.getPublishStatus(t.id)?.publishState ?? null, [t.id]),
         _ = (0, v.s9)(o, m),
         b = (0, v.yy)(t),
-        A = null == s || c ? void 0 : (e) => s(e, t);
+        y = null == i || c ? void 0 : (e) => i(e, t);
     return (0, l.jsxs)("li", {
         className: f()(E.dc, { [E.V7]: !c, [E.BI]: c }),
         "aria-busy": c,
@@ -71,23 +71,23 @@ let M = a.memo(function (e) {
                 onMouseDown: c
                     ? void 0
                     : (e) => {
-                          0 === e.button && (0, d.tf)(t.id);
+                          0 === e.button && (0, u.tf)(t.id);
                       },
                 onClick: c ? void 0 : () => n(t),
-                onContextMenu: A,
+                onContextMenu: y,
                 children: [
                     (0, l.jsx)(j.A, { project: t, size: "card" }),
                     (0, l.jsxs)("div", {
                         className: E.rf,
                         children: [
-                            (0, l.jsx)(i.E, {
+                            (0, l.jsx)(r.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 className: E.UU,
                                 children: t.name,
                             }),
                             c
-                                ? (0, l.jsx)(i.E, {
+                                ? (0, l.jsx)(r.E, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: E.pG,
@@ -99,7 +99,7 @@ let M = a.memo(function (e) {
                                         className: E.VJ,
                                         children: [
                                             null != b
-                                                ? (0, l.jsx)(i.E, {
+                                                ? (0, l.jsx)(r.E, {
                                                       variant: "text-sm/normal",
                                                       color: "text-subtle",
                                                       className: E.pG,
@@ -110,7 +110,7 @@ let M = a.memo(function (e) {
                                                 ? (0, l.jsxs)(l.Fragment, {
                                                       children: [
                                                           null != b ? (0, l.jsx)(C, {}) : null,
-                                                          (0, l.jsx)(i.E, {
+                                                          (0, l.jsx)(r.E, {
                                                               variant: "text-sm/medium",
                                                               color: "text-brand",
                                                               children: w.intl.string(N.default.CSAaT0),
@@ -135,7 +135,7 @@ let M = a.memo(function (e) {
             null != a
                 ? (0, l.jsx)("div", {
                       className: f()(E.XI, { [E.Rn]: c }),
-                      children: c ? (0, l.jsx)(u.y, { type: u.t.SPINNING_CIRCLE_SIMPLE }) : a(t),
+                      children: c ? (0, l.jsx)(s.y, { type: s.t.SPINNING_CIRCLE_SIMPLE }) : a(t),
                   })
                 : null,
         ],
@@ -143,49 +143,63 @@ let M = a.memo(function (e) {
 });
 var P = n(655074);
 function T(e) {
-    let { onSelect: t, query: n = "", guildId: m, renderProjectActions: f, onProjectContextMenu: h } = e,
-        x = (0, c.A)(m),
-        g = (0, r.bG)(
-            [o.Ay],
-            () => (null != m ? o.Ay.getGuildProjectsFetchState(m) : o.Ay.getOwnedProjectsFetchState()),
-            [m],
-        ),
-        p = n.trim().toLocaleLowerCase(),
-        j = a.useMemo(() => ("" === p ? x : x.filter((e) => e.name.toLocaleLowerCase().includes(p))), [x, p]);
-    return j.length > 0
+    let t,
+        n,
+        m,
+        f,
+        { onSelect: h, query: x = "", guildId: g, renderProjectActions: p, onProjectContextMenu: j } = e,
+        k =
+            ((t = (0, c.A)(g)),
+            (n = (0, d.bG)(
+                [o.Ay],
+                () => (null != g ? o.Ay.getGuildProjectsFetchState(g) : o.Ay.getOwnedProjectsFetchState()),
+                [g],
+            )),
+            (m = x.trim().toLocaleLowerCase()),
+            (f = a.useMemo(() => ("" === m ? t : t.filter((e) => e.name.toLocaleLowerCase().includes(m))), [t, m]))
+                .length > 0
+                ? { kind: "projects", projects: f }
+                : t.length > 0
+                  ? { kind: "no_match" }
+                  : "error" === n
+                    ? { kind: "error" }
+                    : "success" !== n
+                      ? { kind: "loading" }
+                      : { kind: "empty" });
+    return "projects" === k.kind
         ? (0, l.jsx)("ul", {
               className: P.p_,
-              children: j.map((e) =>
-                  (0, l.jsx)(M, { project: e, onSelect: t, renderActions: f, onContextMenu: h }, e.id),
+              children: k.projects.map((e) =>
+                  (0, l.jsx)(M, { project: e, onSelect: h, renderActions: p, onContextMenu: j }, e.id),
               ),
           })
-        : x.length > 0
-          ? (0, l.jsx)(i.E, {
+        : "no_match" === k.kind
+          ? (0, l.jsx)(r.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 className: P.Ie,
                 children: w.intl.string(N.default.X37fkR),
             })
-          : "error" === g
+          : "error" === k.kind
             ? (0, l.jsxs)("div", {
                   className: P.E8,
                   children: [
-                      (0, l.jsx)(i.E, {
+                      (0, l.jsx)(r.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: w.intl.string(N.default.DJAPMO),
                       }),
-                      (0, l.jsx)(s.$, {
+                      (0, l.jsx)(i.$, {
                           variant: "secondary",
                           size: "sm",
                           text: w.intl.string(N.default["WFJ/vb"]),
-                          onClick: () => (0, d.hF)(m),
+                          onClick: () => (0, u.hF)(g),
                       }),
                   ],
               })
-            : "success" !== g
-              ? (0, l.jsx)("div", { className: P.E8, children: (0, l.jsx)(u.y, {}) })
-              : (0, l.jsx)(i.E, {
+            : "loading" === k.kind
+              ? (0, l.jsx)("div", { className: P.E8, children: (0, l.jsx)(s.y, {}) })
+              : (0, l.jsx)(r.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
                     className: P.Ie,
