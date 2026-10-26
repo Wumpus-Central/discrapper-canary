@@ -126,7 +126,6 @@ function q(t) {
                   message: f.intl.string(f.t["2Qe65J"]),
                   role: "status",
                   action: { text: f.intl.string(f.t["2jvQ6K"]), onClick: R },
-                  iconAlign: "center",
               })
             : e === j.qN.VERIFIED_OTHER_VIOLATIONS_REMAIN
               ? (0, n.jsx)(o.w, { type: "success", message: f.intl.string(f.t.Ie7p1Q), role: "status" })

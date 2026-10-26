@@ -19257,7 +19257,6 @@ let NA = (0, E.E2)(h.X.ACCOUNT_STANDING_SETTING, {
                       type: S.lT.INLINE_NOTICE,
                       noticeType: "info",
                       role: "none",
-                      iconAlign: "start",
                       text: U.intl.format(Na[t], { handleOnBlogHook: Nd }),
                       onDismiss: () => i(mL.i.USER_DISMISS),
                   }
@@ -20393,12 +20392,12 @@ function yN() {
 n(839272);
 var yC = n(306537);
 function yy(e) {
-    let { body: t, buttonText: n, onButtonClick: i, noticeType: s, iconAlign: l } = e;
+    let { body: t, buttonText: n, onButtonClick: i, noticeType: s } = e;
     return (
         (0, eI.Ay)(() => {
             (0, Cg.N)(s, Cm.YX.VIEWED);
         }),
-        (0, p.jsx)(iH.w, { type: "info", iconAlign: l, message: t, action: { text: n, onClick: i }, role: "none" })
+        (0, p.jsx)(iH.w, { type: "info", message: t, action: { text: n, onClick: i }, role: "none" })
     );
 }
 function yb(e, t) {
@@ -20717,7 +20716,6 @@ let y1 = (0, E.zD)(h.X.DM_SAFETY_ALERTS_SETTING, {
                                     type: S.lT.INLINE_NOTICE,
                                     noticeType: "info",
                                     role: "none",
-                                    iconAlign: "center",
                                     trackView: d,
                                     text: U.intl.format(ID.default.HGJo1F, {
                                         handleOnAgeGatedContentHook: o.handleLearnMore,
@@ -20729,7 +20727,6 @@ let y1 = (0, E.zD)(h.X.DM_SAFETY_ALERTS_SETTING, {
                                     type: S.lT.INLINE_NOTICE,
                                     noticeType: "info",
                                     role: "none",
-                                    iconAlign: "start",
                                     trackView: c,
                                     text: U.intl.format(ID.default.qbBkFI, {
                                         handleOnConfirmAgeHook: u.handleConfirmAge,
@@ -21291,7 +21288,6 @@ let bR = (0, E.zD)(h.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
                 case "unconfirmed":
                     return (0, p.jsx)(yy, {
                         noticeType: Cm.YA.AGE_CONFIRMATION_NOTICE,
-                        iconAlign: "center",
                         body: U.intl.format(ID.default.tGsCdS, { handleOnAgeGatedContentHook: t.handleLearnMore }),
                         buttonText: U.intl.string(ID.default["cI+bc/"]),
                         onButtonClick: t.handleConfirmAge,
@@ -21299,7 +21295,6 @@ let bR = (0, E.zD)(h.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
                 case "teen":
                     return (0, p.jsx)(yy, {
                         noticeType: Cm.YA.CONTENT_AND_SOCIAL_NOTICE,
-                        iconAlign: "start",
                         body: U.intl.format(ID.default["l+jt8J"], { handleOnConfirmAgeHook: n.handleConfirmAge }),
                         buttonText: U.intl.string(U.t.hvVgAZ),
                         onButtonClick: n.handleLearnMore,

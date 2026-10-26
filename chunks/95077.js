@@ -1849,12 +1849,11 @@ function t7(e) {
     return n <= l
         ? null
         : (0, i.jsx)("div", {
-              role: "alert",
               className: t2.l,
               children: (0, i.jsx)(t1.w, {
                   type: "warning",
                   message: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
-                  role: "none",
+                  role: "alert",
               }),
           });
 }

@@ -770,14 +770,14 @@ var eA = t(964486),
     eI = t(864043);
 function eO(e) {
     let { notice: n } = e,
-        { noticeType: t, title: i, text: s, button: a, iconAlign: o, onDismiss: c, role: u } = n,
-        [d, x] = l.useState(!1);
-    async function j() {
-        x(!0);
+        { noticeType: t, title: i, text: s, button: a, onDismiss: o, role: c } = n,
+        [u, d] = l.useState(!1);
+    async function x() {
+        d(!0);
         try {
             await a?.onClick();
         } finally {
-            x(!1);
+            d(!1);
         }
     }
     return (
@@ -786,12 +786,11 @@ function eO(e) {
         }),
         (0, r.jsx)(en.w, {
             type: t,
-            iconAlign: o,
             title: i,
             message: s,
-            action: null != a ? { text: a.text, onClick: j, loading: d } : void 0,
-            onDismiss: c,
-            role: u,
+            action: null != a ? { text: a.text, onClick: x, loading: u } : void 0,
+            onDismiss: o,
+            role: c,
         })
     );
 }
