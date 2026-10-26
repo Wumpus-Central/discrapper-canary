@@ -1205,6 +1205,14 @@
     gap: var(--space-4)
 }
 
+.content__9c1ea {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    max-width: 686px
+}
+
 .icon__44598 {
     align-items: center;
     display: flex;
@@ -1853,4 +1861,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=142033.ac74c8c88da93d41.css.map*/
+/*# sourceMappingURL=50324.3b8bb6ffcd152150.css.map*/
