@@ -13253,8 +13253,9 @@ function mk(e) {
     let { project: t } = e,
         n = (0, mj.wU)(t.compaction),
         l = (0, mj.wU)(t.classifier),
-        r = (0, mj.wV)(t.orchestrator, t.codegen),
-        i = (0, mj.wV)(r, n);
+        r = (0, mj.wU)(t.image),
+        i = (0, mj.wV)(t.orchestrator, t.codegen),
+        s = (0, mj.wV)(i, n);
     return (0, a.jsxs)("div", {
         className: mb.si,
         role: "dialog",
@@ -13278,9 +13279,10 @@ function mk(e) {
                     ],
                 }),
             }),
-            (0, a.jsx)(mw, { label: E.intl.string(A.default["9Sj3SX"]), usage: r }),
+            (0, a.jsx)(mw, { label: E.intl.string(A.default["9Sj3SX"]), usage: i }),
             (0, a.jsx)(mw, { label: E.intl.string(A.default.ANCEo3), usage: n }),
             (0, a.jsx)(mw, { label: E.intl.string(A.default.ugL6D4), usage: l, cached: !1 }),
+            (0, a.jsx)(mw, { label: E.intl.string(A.default.DHr5On), usage: r, cached: !1 }),
             (0, a.jsxs)("div", {
                 className: mb.mf,
                 children: [
@@ -13292,7 +13294,7 @@ function mk(e) {
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: 0 === (0, mj.sj)(i) ? "\u2014" : `${Math.round(100 * (0, mj.CA)(i))}%`,
+                        children: 0 === (0, mj.sj)(s) ? "\u2014" : `${Math.round(100 * (0, mj.CA)(s))}%`,
                     }),
                 ],
             }),
