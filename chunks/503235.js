@@ -94,7 +94,10 @@ function S(e) {
 }
 function N(e) {
     let { trait: t, rarity: n } = e;
-    if (null == n) return S(e) ? _.intl.string(T[t]) : void 0;
+    if (null == n) {
+        let n = T[t];
+        return S(e) && null != n ? _.intl.string(n) : void 0;
+    }
     if (n === s.K.DEFAULT) return _.intl.string(u.default["4aaADG"]);
     if (n === s.K.NITRO)
         return e.status === l.eP.NITRO_LOCKED

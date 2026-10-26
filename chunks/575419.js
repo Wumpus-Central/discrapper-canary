@@ -15469,7 +15469,7 @@ function mY(e) {
                     d = 0,
                     u = 0;
                 for (let t of l ?? mW.Nc[e]) {
-                    let l = mW.Q8[e][t],
+                    let l = (0, mW.$C)(e, t),
                         i = mL.eP.UNLOCKED;
                     (null == l || o.has(l) || a === t
                         ? l !== mk.K.NITRO || s || (i = mL.eP.NITRO_LOCKED)
