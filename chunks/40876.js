@@ -894,7 +894,7 @@ let r = {
     },
     RequestToStreamManager: {
         actions: ["VOICE_STATE_UPDATES"],
-        inlineRequire: () => n(553366).A,
+        inlineRequire: () => n(844755).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     UserApplicationIdentityManager: {

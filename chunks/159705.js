@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "651216";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "651229";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 651216, Version Hash: 940ead7cafeb2452dc138a382955ce9361a8e90e`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 651229, Version Hash: 70e252d970200451740c2222a36786841e073d58`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -4881,8 +4881,8 @@ let sr = (0, rl.Fe)({
                 n.e("65393"),
                 n.e("593020"),
                 n.e("36877"),
-                n.e("711617"),
                 n.e("228850"),
+                n.e("78247"),
                 n.e("338601"),
                 n.e("908081"),
                 n.e("368530"),
@@ -25502,7 +25502,7 @@ let yi = "isHideDevBanner",
                     className: tf()(yn.Wz, yn.mr),
                     children: [
                         (0, b.jsx)(yt, { className: yn.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "651216" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "651229" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -26788,13 +26788,13 @@ function vC(e) {
                       n.e("449145"),
                       n.e("174192"),
                       n.e("343116"),
-                      n.e("711617"),
+                      n.e("78247"),
                       n.e("470314"),
                       n.e("70515"),
                       n.e("404524"),
                       n.e("654148"),
                       n.e("666939"),
-                      n.e("717334"),
+                      n.e("281165"),
                       n.e("184841"),
                   ]).then(n.bind(n, 107632));
                   return (t) =>
@@ -31349,7 +31349,7 @@ let b_ = (0, tZ.Fe)({
                 n.e("437961"),
                 n.e("890480"),
                 n.e("593020"),
-                n.e("711617"),
+                n.e("78247"),
                 n.e("440963"),
                 n.e("275859"),
                 n.e("766031"),
@@ -38407,8 +38407,8 @@ let ws = (0, rl.Fe)({
                 n.e("201243"),
                 n.e("573330"),
                 n.e("65393"),
-                n.e("711617"),
                 n.e("228850"),
+                n.e("78247"),
                 n.e("908081"),
                 n.e("368530"),
                 n.e("275859"),
@@ -39846,8 +39846,8 @@ let ws = (0, rl.Fe)({
                 n.e("201243"),
                 n.e("573330"),
                 n.e("65393"),
-                n.e("711617"),
                 n.e("228850"),
+                n.e("78247"),
                 n.e("908081"),
                 n.e("368530"),
                 n.e("275859"),
@@ -46887,13 +46887,13 @@ let FN = {
                               n.e("449145"),
                               n.e("174192"),
                               n.e("343116"),
-                              n.e("711617"),
+                              n.e("78247"),
                               n.e("470314"),
                               n.e("70515"),
                               n.e("404524"),
                               n.e("654148"),
                               n.e("666939"),
-                              n.e("717334"),
+                              n.e("281165"),
                               n.e("184841"),
                           ]).then(n.bind(n, 107632));
                           return (t) => (0, b.jsx)(e, { ...t, user: C, guildId: R, channel: O });
@@ -54319,8 +54319,8 @@ let W4 = (0, tZ.Fe)({
             n.e("593020"),
             n.e("600607"),
             n.e("36877"),
-            n.e("711617"),
             n.e("228850"),
+            n.e("78247"),
             n.e("338601"),
             n.e("165211"),
             n.e("908081"),
@@ -56737,8 +56737,8 @@ let K_ = (0, rl.Fe)({
                 n.e("890480"),
                 n.e("65393"),
                 n.e("593020"),
-                n.e("711617"),
                 n.e("228850"),
+                n.e("78247"),
                 n.e("440963"),
                 n.e("908081"),
                 n.e("368530"),

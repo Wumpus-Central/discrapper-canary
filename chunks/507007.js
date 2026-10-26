@@ -304,13 +304,13 @@ let eD = s.memo(function (e) {
                             n.e("307059"),
                             n.e("449145"),
                             n.e("343116"),
-                            n.e("711617"),
+                            n.e("78247"),
                             n.e("470314"),
                             n.e("70515"),
                             n.e("404524"),
                             n.e("654148"),
                             n.e("666939"),
-                            n.e("717334"),
+                            n.e("281165"),
                             n.e("184841"),
                         ]).then(n.bind(n, 107632));
                         return (t) =>
@@ -391,19 +391,19 @@ function e6(e) {
         }),
     });
 }
-var e7 = n(866665),
-    e5 = n(786889),
-    e3 = n(90075);
+var e5 = n(866665),
+    e7 = n(786889),
+    e8 = n(90075);
 let e9 = function () {
-    return (0, l.jsx)(e7.m, {
+    return (0, l.jsx)(e5.m, {
         text: es.intl.string(es.t.GMZqSi),
         children: (0, l.jsx)("div", {
-            className: e3.k,
-            children: (0, l.jsx)(e5.A, { color: F.A.unsafe_rawColors.WHITE.css }),
+            className: e8.k,
+            children: (0, l.jsx)(e7.A, { color: F.A.unsafe_rawColors.WHITE.css }),
         }),
     });
 };
-var e8 = n(145131);
+var e3 = n(145131);
 let te = 16 / 9;
 function tt(e) {
     let {
@@ -439,7 +439,7 @@ function tt(e) {
                         blocked: A,
                         ignored: m,
                         channel: i,
-                        className: e8.V,
+                        className: e3.V,
                         inCall: !0,
                         popoutType: u,
                         pulseSpeakingIndicator: !h.enabled,
@@ -495,7 +495,7 @@ function tn(e) {
             blocked: A,
             ignored: x,
             channel: i,
-            className: e8.V,
+            className: e3.V,
             inCall: !0,
             popoutType: u,
             onClick: f,
@@ -589,13 +589,13 @@ let tl = s.memo(function (e) {
                                 n.e("307059"),
                                 n.e("449145"),
                                 n.e("343116"),
-                                n.e("711617"),
+                                n.e("78247"),
                                 n.e("470314"),
                                 n.e("70515"),
                                 n.e("404524"),
                                 n.e("654148"),
                                 n.e("666939"),
-                                n.e("717334"),
+                                n.e("281165"),
                                 n.e("184841"),
                             ]).then(n.bind(n, 107632));
                             return (t) =>
@@ -687,13 +687,13 @@ function tA(e) {
                     n.e("307059"),
                     n.e("449145"),
                     n.e("343116"),
-                    n.e("711617"),
+                    n.e("78247"),
                     n.e("470314"),
                     n.e("70515"),
                     n.e("404524"),
                     n.e("654148"),
                     n.e("666939"),
-                    n.e("717334"),
+                    n.e("281165"),
                     n.e("184841"),
                 ]).then(n.bind(n, 107632));
                 return (n) =>
@@ -718,7 +718,7 @@ function tA(e) {
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
-            (0, l.jsx)(e7.m, {
+            (0, l.jsx)(e5.m, {
                 targetElementRef: o,
                 __unsupportedReactNodeAsText: i.userNick,
                 position: "bottom",

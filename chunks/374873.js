@@ -119,13 +119,13 @@ let Y = l.memo(function (e) {
                         t.e("307059"),
                         t.e("449145"),
                         t.e("343116"),
-                        t.e("711617"),
+                        t.e("78247"),
                         t.e("470314"),
                         t.e("70515"),
                         t.e("404524"),
                         t.e("654148"),
                         t.e("666939"),
-                        t.e("717334"),
+                        t.e("281165"),
                         t.e("184841"),
                     ]).then(t.bind(t, 107632));
                     return (t) => (0, i.jsx)(e, { ...t, user: s.user, guildId: r, channel: n, showMediaItems: !0 });

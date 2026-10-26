@@ -2,14 +2,14 @@ l.d(t, { B: () => d });
 var n = l(477900),
     i = l(866665),
     a = l(821609),
-    s = l(756977),
-    r = l(559256),
+    s = l(382028),
+    r = l(756977),
     c = l(905322),
     o = l(105292);
 function d(e) {
     let { userId: t, channel: l, onAction: d, variant: u = "primary" } = e,
-        m = (0, r.u)(t, l),
-        [A, p] = (0, s.A)(t, l.id);
+        m = (0, s.u)(t, l),
+        [A, p] = (0, r.A)(t, l.id);
     return null == m
         ? null
         : (0, n.jsx)(i.m, {
@@ -22,7 +22,7 @@ function d(e) {
                   variant: u,
                   size: "sm",
                   onClick: () => {
-                      (m.handleRequestToStream("request to stream button"), d?.());
+                      (m.handleRequestToStream({ analyticsLocation: "request to stream button" }), d?.());
                   },
                   fullWidth: !0,
                   disabled: A,

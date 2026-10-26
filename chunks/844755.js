@@ -3,8 +3,14 @@ var i = n(401843),
     r = n(439372),
     a = n(616356),
     s = n(232835),
-    l = n(935208),
-    o = n(626798),
+    l = n(935208);
+(0, n(240921).Ay)({
+    kind: "guild",
+    name: "2026-09-mobile-request-to-stream",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+var o = n(626798),
     d = n(25528),
     c = n(820672),
     u = n(652215);
