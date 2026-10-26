@@ -1,20 +1,19 @@
 n.d(t, {
-    DX: () => F,
-    DZ: () => B,
+    DX: () => k,
+    DZ: () => F,
     Dq: () => R,
     LW: () => v,
-    OQ: () => U,
+    OQ: () => P,
     Qg: () => D,
-    Wc: () => k,
-    XH: () => w,
+    Wc: () => x,
+    XH: () => U,
     Y5: () => b,
     YE: () => y,
-    Zu: () => x,
+    Zu: () => G,
     av: () => O,
     eA: () => L,
-    gr: () => G,
-    kO: () => P,
-    vK: () => M,
+    gr: () => w,
+    kO: () => M,
 });
 var i = n(132500),
     r = n(323889),
@@ -290,37 +289,7 @@ async function b(e) {
         sourceQuestContent: d,
     });
 }
-async function M(e) {
-    let {
-        adContentId: t,
-        relatedQuestId: n,
-        adCreativeType: i,
-        questContent: r,
-        questContentCTA: a,
-        questContentPosition: s,
-        questContentRowIndex: l,
-        impressionId: o,
-        trackGuildAndChannelMetadata: d,
-        sourceQuestContent: c,
-    } = e;
-    D({
-        adContentId: t,
-        relatedQuestId: n,
-        adCreativeType: i,
-        event: m.HAw.QUEST_CONTENT_CLICKED,
-        properties: await v({
-            questContent: r,
-            questContentPosition: s,
-            questContentRowIndex: l,
-            questContentCTA: a,
-            impressionId: o,
-        }),
-        trackGuildAndChannelMetadata: d,
-        shouldExtendSession: (0, h.xn)(r),
-        sourceQuestContent: c,
-    });
-}
-function P(e) {
+function M(e) {
     let {
             scrollingType: t,
             scrollingDirection: n,
@@ -344,7 +313,7 @@ function P(e) {
         carousel_size: o,
     });
 }
-function U(e) {
+function P(e) {
     let { searchSessionId: t } = e,
         n = (0, s.sN)().uuid;
     _.default.track(m.HAw.QUEST_HOME_SEARCH_ENTERED, {
@@ -353,7 +322,7 @@ function U(e) {
         search_session_id: t,
     });
 }
-function w(e) {
+function U(e) {
     let { searchSessionId: t, searchSessionDurationMs: n } = e,
         i = (0, s.sN)().uuid;
     _.default.track(m.HAw.QUEST_HOME_SEARCH_CLOSED, {
@@ -363,7 +332,7 @@ function w(e) {
         search_session_duration_ms: n,
     });
 }
-function G(e) {
+function w(e) {
     let { searchSessionId: t, searchQuery: n, searchQueryLength: i, resultsCount: r, hasResults: a } = e,
         l = (0, s.sN)().uuid;
     _.default.track(m.HAw.QUEST_HOME_SEARCH_QUERY_SUBMITTED, {
@@ -376,7 +345,7 @@ function G(e) {
         has_results: a,
     });
 }
-function x(e) {
+function G(e) {
     let { questContent: t, sourceQuestContent: n, questId: i, mode: r, prevMode: a } = e,
         s = (0, p.fF)(t);
     O({
@@ -386,7 +355,7 @@ function x(e) {
         sourceQuestContent: n,
     });
 }
-function k(e) {
+function x(e) {
     let { adContentId: t, adCreativeType: n, questContent: i, sourceQuestContent: r, mode: a, prevMode: s } = e,
         l = (0, p.fF)(i);
     D({
@@ -397,7 +366,7 @@ function k(e) {
         sourceQuestContent: r,
     });
 }
-function F(e) {
+function k(e) {
     let { questId: t, questContent: n, sourceQuestContent: i, reason: r, impressionId: a } = e,
         s = (0, p.fF)(n);
     O({
@@ -407,6 +376,6 @@ function F(e) {
         sourceQuestContent: i,
     });
 }
-function B(e, t) {
+function F(e, t) {
     o.Ay.trackWithMetadata(m.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
 }

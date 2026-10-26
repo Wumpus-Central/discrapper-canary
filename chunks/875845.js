@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { QuestBarQuestContent: () => t8, default: () => t5 }));
+(n.r(t), n.d(t, { QuestBarQuestContent: () => t9, default: () => t5 }));
 var s = n(477900),
     r = n(582128),
     l = n(323889),
@@ -726,7 +726,7 @@ var em = n(821609),
     ep = n(3738),
     eC = n(971649),
     ef = n(651892),
-    eE = n(684693),
+    eE = n(620954),
     eh = n(814793),
     eg = n(753386),
     ej = n(608935),
@@ -1261,8 +1261,8 @@ let e3 = function (e) {
 n(801541);
 var e7 = n(889137),
     e6 = n(417270),
-    e8 = n(782134),
-    e9 = n(297264),
+    e9 = n(782134),
+    e8 = n(297264),
     e5 = n(825484),
     e4 = n(408278),
     te = n(921853),
@@ -1501,7 +1501,7 @@ function tU(e) {
                         width: 16,
                         height: 16,
                     }),
-                    (0, s.jsx)(e9.D, { color: "text-default", variant: "heading-sm/medium", children: t }),
+                    (0, s.jsx)(e8.D, { color: "text-default", variant: "heading-sm/medium", children: t }),
                 ],
             }),
             (0, s.jsx)(eV.E, { color: "text-muted", variant: "text-xs/normal", className: tN.r2, children: n }),
@@ -1616,7 +1616,7 @@ function tM(e) {
                 className: tO.LT,
                 children: x
                     ? (0, s.jsx)(e6.RetryIcon, { color: eK.A.colors.WHITE, className: tO.t })
-                    : (0, s.jsx)(e8.PlayIcon, { color: eK.A.colors.WHITE, className: tO.t }),
+                    : (0, s.jsx)(e9.PlayIcon, { color: eK.A.colors.WHITE, className: tO.t }),
             }),
         ],
     });
@@ -1670,7 +1670,7 @@ function tw(e) {
                             className: tO.zH,
                             children: [
                                 (0, s.jsx)(tk, { quest: a }),
-                                (0, s.jsx)(e9.D, {
+                                (0, s.jsx)(e8.D, {
                                     className: tO.DD,
                                     color: "text-strong",
                                     variant: "heading-md/medium",
@@ -2079,7 +2079,7 @@ function t6(e) {
         children: t,
     });
 }
-function t8(e) {
+function t9(e) {
     let { quest: t } = e,
         n = r.useMemo(() => (0, C.vv)(t), [t]),
         i = t.userStatus?.completedAt != null,
@@ -2104,7 +2104,7 @@ function t8(e) {
         })
     );
 }
-function t9(e) {
+function t8(e) {
     let { noFillDecision: t } = e,
         n = (0, i.bG)([c.A], () => c.A.hasLayers());
     function r(e) {
@@ -2136,7 +2136,7 @@ let t5 =
                               source: K.rE.QUESTS_BAR,
                               adCreativeId: t.id,
                               adCreativeType: l.p.QUEST,
-                              children: (0, s.jsx)(t8, { quest: t }),
+                              children: (0, s.jsx)(t9, { quest: t }),
                           },
                           t.id,
                       );
@@ -2144,7 +2144,7 @@ let t5 =
                   case l.p.BOUNTY:
                       return null;
                   case l.p.NO_FILL:
-                      return null != t ? (0, s.jsx)(t9, { noFillDecision: t }, t.decisionId) : null;
+                      return null != t ? (0, s.jsx)(t8, { noFillDecision: t }, t.decisionId) : null;
               }
           }
         : null;
