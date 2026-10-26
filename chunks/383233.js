@@ -89,7 +89,6 @@ let E = class extends c {
     premiumGroupInviteId;
     giftInfo;
     giftingPrompt;
-    boostingPrompt;
     messageSnapshots;
     isUnsupported;
     changelogId;
@@ -142,7 +141,6 @@ let E = class extends c {
             (this.premiumGroupInviteId = e.premiumGroupInviteId || null),
             (this.giftInfo = e.gift_info ?? e.giftInfo),
             (this.giftingPrompt = e.giftingPrompt || null),
-            (this.boostingPrompt = e.boostingPrompt || null),
             (this.messageSnapshots = e.messageSnapshots || []),
             (this.isUnsupported = e.isUnsupported || !1),
             (this.changelogId = e.changelog_id ?? (e.changelogId || null)),

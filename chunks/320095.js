@@ -109,7 +109,6 @@ function C(e) {
             sharedClientTheme: e.shared_client_theme,
             giftInfo: null == C ? void 0 : C,
             giftingPrompt: O,
-            boostingPrompt: e.boosting_prompt,
             guildSpaceData: e.guild_space_data,
         })
     );

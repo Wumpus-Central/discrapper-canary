@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => t2 }));
+(n.r(t), n.d(t, { default: () => t3 }));
 var i,
     a = n(477900),
     s = n(582128),
@@ -539,7 +539,7 @@ function e5(e, t) {
 function e6(e, t) {
     ea(t) === en.MUTED && ((ep = e5(ep, e)), (eL = e5(eL, e)), (eO = e5(eO, e)), (eE = e5(eE, e)), (ey = e5(ey, e)));
 }
-function e2(e) {
+function e3(e) {
     let { type: t, messageId: n, userId: i, emoji: a, reactionType: s } = e,
         d = eS[n];
     if (null == d || d.type !== Y.Mm.MESSAGE) return !1;
@@ -548,7 +548,7 @@ function e2(e) {
         ? (d.message = d.message.addReaction(a, r, { colors: e.colors, reactionType: s }))
         : (d.message = d.message.removeReaction(a, r, s));
 }
-function e3(e) {
+function e2(e) {
     let { channelId: t } = e,
         n = [],
         i = [];
@@ -876,7 +876,7 @@ let e4 = new e9(A.h, {
         ICYMI_FEEDBACK_GIVEN: function () {
             eb = 6;
         },
-        MESSAGE_REACTION_ADD: e2,
+        MESSAGE_REACTION_ADD: e3,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { messageId: t, reactions: n } = e,
                 i = eS[t];
@@ -884,7 +884,7 @@ let e4 = new e9(A.h, {
             let a = w.default.getId();
             i.message = i.message.addReactionBatch(n, a);
         },
-        MESSAGE_REACTION_REMOVE: e2,
+        MESSAGE_REACTION_REMOVE: e3,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { messageId: t } = e,
                 n = eS[t];
@@ -897,8 +897,8 @@ let e4 = new e9(A.h, {
             if (null == i || i.type !== Y.Mm.MESSAGE) return !1;
             i.message = i.message.removeReactionsForEmoji(n);
         },
-        CHANNEL_ACK: e3,
-        MESSAGE_ACK: e3,
+        CHANNEL_ACK: e2,
+        MESSAGE_ACK: e2,
         ICYMI_JOINED_RECOMMENDED_GUILD: function () {
             eU = Date.now();
         },
@@ -1467,7 +1467,7 @@ var tG = n(837381),
     tj = n(699352),
     tU = n(715628),
     tF = n(752636),
-    tY = n(547110),
+    tY = n(64369),
     tH = n(268719),
     tV = n(69282),
     tP = n(862161),
@@ -2284,7 +2284,7 @@ let t1 = function (e) {
 };
 var t5 = n(534515),
     t6 = n(999900);
-let t2 = (0, g.A)(function (e) {
+let t3 = (0, g.A)(function (e) {
     let { width: t } = e,
         n = (0, y.c)("ICYMIPage");
     (s.useEffect(() => {

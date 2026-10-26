@@ -398,23 +398,6 @@ let ez = {
             });
             eX.receiveMessage(e, { ...n, state: D.cmJ.SENT }, !0);
         },
-        sendGuildBoostUpsellSystemMessage(e, t) {
-            let n = (0, en.Ay)({
-                channelId: e,
-                type: D.lAJ.GUILD_BOOST_UPSELL,
-                content: "",
-                flags: D.pr7.EPHEMERAL,
-                author: {
-                    id: D.oIV,
-                    username: "Guild Boost Upsell",
-                    discriminator: D.h3J,
-                    avatar: "guild_boost_upsell",
-                    bot: !0,
-                },
-                boostingPrompt: t,
-            });
-            eX.receiveMessage(e, { ...n, state: D.cmJ.SENT }, !0);
-        },
         sendClydeError(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
                 n = $.A.getChannel(e);

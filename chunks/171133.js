@@ -44,7 +44,7 @@ var Q = n(336590),
     O = n(138298),
     V = n(358047),
     q = n(47167),
-    D = n(688438),
+    D = n(688606),
     F = n(105292),
     K = n(172039),
     L = n(612960);
@@ -247,11 +247,11 @@ var eL = n(707539),
     e0 = n(521981),
     e7 = n(448368),
     e9 = n(302031),
-    e3 = n(885386),
-    e8 = n(576705),
-    e1 = n(652215),
-    e4 = n(838541),
-    e6 = n(282573),
+    e1 = n(885386),
+    e3 = n(576705),
+    e8 = n(652215),
+    e6 = n(838541),
+    e4 = n(282573),
     e5 = n(165648);
 let e2 = s.memo(function (e) {
     let { channel: t } = e,
@@ -264,8 +264,8 @@ let e2 = s.memo(function (e) {
             }),
             [r],
         ),
-        d = (0, o.bG)([e8.A], () => e8.A.can(e1.xBc.MANAGE_MESSAGES, t)),
-        h = e3.gs.useSetting(),
+        d = (0, o.bG)([e3.A], () => e3.A.can(e8.xBc.MANAGE_MESSAGES, t)),
+        h = e1.gs.useSetting(),
         { content: x } = s.useMemo(
             () =>
                 r?.content != null && "" !== r.content
@@ -276,7 +276,7 @@ let e2 = s.memo(function (e) {
         g = null;
     if (i)
         g = (0, l.jsx)(m.E, {
-            className: e6.G4,
+            className: e4.G4,
             variant: "text-sm/normal",
             color: "text-muted",
             children: F.intl.string(F.t.BZHld2),
@@ -284,44 +284,44 @@ let e2 = s.memo(function (e) {
     else if (n)
         if (null != r && c)
             g = (0, l.jsx)(m.E, {
-                className: e6.G4,
+                className: e4.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t["WPe+xL"]),
             });
         else if (null != r && u)
             g = (0, l.jsx)(m.E, {
-                className: e6.G4,
+                className: e4.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e7.o)(r, x, c, u, a()(e6.BK, e5.tZ), {
-                leadingIconClass: e6.AF,
-                trailingIconClass: e6.AF,
-                iconSize: e4.eJ,
+            let { contentPlaceholder: e, renderedContent: t } = (0, e7.o)(r, x, c, u, a()(e4.BK, e5.tZ), {
+                leadingIconClass: e4.AF,
+                trailingIconClass: e4.AF,
+                iconSize: e6.eJ,
             });
             g =
                 null != t
-                    ? (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", className: e6.BK, children: t })
+                    ? (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", className: e4.BK, children: t })
                     : (0, l.jsx)(m.E, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: e6.G4,
+                          className: e4.G4,
                           children: e,
                       });
         } else
             g = (0, l.jsx)(m.E, {
-                className: e6.G4,
+                className: e4.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t["0KfDxM"]),
             });
     else g = null;
     let A = (0, e$.A)(h, d);
-    return (0, l.jsx)(e9.Bs.Provider, { value: A, children: (0, l.jsx)(eY.M, { className: e6.JY, children: g }) });
+    return (0, l.jsx)(e9.Bs.Provider, { value: A, children: (0, l.jsx)(eY.M, { className: e4.JY, children: g }) });
 });
 var te = n(599036);
 function tt(e) {
@@ -508,13 +508,13 @@ function ta(e) {
         onClick: function (e) {
             (e.stopPropagation(),
                 O.A.openPrivateChannelAsSidebar({ channelId: s.id, baseChannelId: V.fe, hasSingleMessageRequest: a }),
-                ec.default.track(e1.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                ec.default.track(e8.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: s.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eR._.dispatch(e1.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
+                    eR._.dispatch(e8.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
                 }, 0));
         },
         children: (e) => (0, l.jsx)(ti, { active: e, user: i, channel: s, isRestricted: r }),
@@ -599,13 +599,13 @@ function th(e) {
         onClick: function (e) {
             (e.stopPropagation(),
                 O.A.openPrivateChannelAsSidebar({ channelId: s.id, baseChannelId: V.fe, hasSingleMessageRequest: a }),
-                ec.default.track(e1.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                ec.default.track(e8.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
                     channel_id: s.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eR._.dispatch(e1.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
+                    eR._.dispatch(e8.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
                 }, 0));
         },
         children: (e) => (0, l.jsx)(td, { active: e, user: i, channel: s }),
@@ -659,7 +659,7 @@ function tx() {
             p(u.map((e) => e.channel.id));
         }, [u, p]);
     (0, v.Ay)(() => {
-        (ec.default.track(e1.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: d }),
+        (ec.default.track(e8.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: d }),
             ee.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW }));
     });
     let _ = s.useCallback(
@@ -888,7 +888,7 @@ function tS() {
 }
 function tf(e) {
     let { channel: t, pageWidth: n, onSidebarResize: s } = e,
-        i = n - e1.ItT;
+        i = n - e8.ItT;
     return (0, l.jsx)(b.A, {
         sidebarType: b.X.MessageRequestSidebar,
         maxWidth: i,
@@ -963,9 +963,9 @@ let tv = (0, p.A)(function (e) {
     let { width: t } = e,
         n = (0, eA.W)();
     (0, v.Ay)(() => {
-        (j.I(e1.BVt.MESSAGE_REQUESTS),
+        (j.I(e8.BVt.MESSAGE_REQUESTS),
             (0, en.d0)("message-requests"),
-            ec.default.track(e1.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            ec.default.track(e8.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             ee.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW }));
     });
     let i = (0, o.bG)([el.A], () => el.A.theme),

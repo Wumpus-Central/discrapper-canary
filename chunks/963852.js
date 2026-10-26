@@ -25,14 +25,13 @@ function u(e) {
             sharedCustomTheme: p,
             changelogId: T,
             giftingPrompt: m,
-            boostingPrompt: g,
-            state: S,
-            mediaMention: N,
+            state: g,
+            mediaMention: S,
         } = e,
-        C = [];
+        N = [];
     if (u === d.lAJ.REPLY && (r()(null != _, "Replies must have a message reference"), null == E || E.replied_user)) {
         let e = a.A.getMessageByReference(_);
-        e?.state === a.a.LOADED && C.push(c(e.message.author));
+        e?.state === a.a.LOADED && N.push(c(e.message.author));
     }
     return (
         null == A && (A = l.default.getCurrentUser()),
@@ -47,12 +46,12 @@ function u(e) {
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: C,
+            mentions: N,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
             timestamp: new Date().toISOString(),
-            state: S ?? d.cmJ.SENDING,
+            state: g ?? d.cmJ.SENDING,
             tts: i,
             message_reference: _,
             message_snapshots: [],
@@ -62,8 +61,7 @@ function u(e) {
             shared_client_theme: p,
             changelog_id: T,
             gifting_prompt: m,
-            boosting_prompt: g,
-            media_mention: N,
+            media_mention: S,
         }
     );
 }

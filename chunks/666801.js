@@ -1,65 +1,68 @@
-l.d(t, { default: () => D });
-var e = l(477900);
-l(582128);
-var i = l(980707),
-    r = l(477782),
-    a = l(442433),
-    u = l(793574),
-    s = l(688810),
-    o = l(964355),
-    c = l(824744),
-    d = l(796774),
-    b = l(813564),
-    p = l(105292),
-    A = l(17928),
-    h = l(468689),
-    x = l(931991),
-    f = l(71393),
-    g = l(652215);
-function j(n) {
-    let { guildId: t, onSelect: l, onPickerClose: u, onInteraction: j } = n,
+e.d(t, { default: () => D });
+var l = e(477900),
+    i = e(582128),
+    r = e(980707),
+    u = e(477782),
+    a = e(442433),
+    s = e(793574),
+    o = e(688810),
+    c = e(964355),
+    d = e(824744),
+    b = e(796774),
+    p = e(813564),
+    h = e(340368),
+    A = e(105292),
+    x = e(17928),
+    f = e(468689),
+    g = e(931991),
+    j = e(71393),
+    m = e(652215);
+function w(n) {
+    let { guildId: t, onSelect: e, onPickerClose: s, onInteraction: w } = n,
         D = (function (n, t) {
-            let l = (0, A.bG)([f.A], () => (null != n ? f.A.getGuild(n) : null)),
-                { canCreateExpressions: i, canManageAllExpressions: a } = (0, x.nr)(l);
-            return null != n && i && a
-                ? (0, e.jsx)(r.Dr, {
-                      id: p.intl.string(p.t["154/bL"]),
-                      label: p.intl.string(p.t["154/bL"]),
+            let e = (0, x.bG)([j.A], () => (null != n ? j.A.getGuild(n) : null)),
+                { canCreateExpressions: i, canManageAllExpressions: r } = (0, g.nr)(e);
+            return null != n && i && r
+                ? (0, l.jsx)(u.Dr, {
+                      id: A.intl.string(A.t["154/bL"]),
+                      label: A.intl.string(A.t["154/bL"]),
                       action: function () {
-                          null != n && (h.A.open(n, g.BEX.SOUNDBOARD), t?.());
+                          null != n && (f.A.open(n, m.BEX.SOUNDBOARD), t?.());
                       },
                   })
                 : null;
-        })(t, u),
-        k = (function () {
-            let n = (0, b.wH)(),
-                { analyticsLocations: t } = (0, s.Ay)();
-            return (0, e.jsx)(r.aK, {
+        })(t, s),
+        O = (function () {
+            let n = (0, p.wH)(),
+                { analyticsLocations: t } = (0, o.Ay)(),
+                e = (0, h._)("useEditVolumeItem"),
+                r = i.useMemo(() => (e ? A.intl.string(A.t.wQKOBb) : A.intl.string(A.t.kbFsAD)), [e]);
+            return (0, l.jsx)(u.aK, {
                 id: "user-volume",
                 "aria-haspopup": !0,
-                label: p.intl.string(p.t.kbFsAD),
-                control: (l, i) =>
-                    (0, e.jsx)(o.i, {
-                        ...l,
+                label: r,
+                control: (e, i) =>
+                    (0, l.jsx)(c.i, {
+                        ...e,
                         ref: i,
-                        value: (0, c.M)(n),
+                        value: (0, d.M)(n),
                         maxValue: 100,
-                        onChange: (n) => (0, d.iy)((0, c.w)(n), t),
-                        "aria-label": p.intl.string(p.t.kbFsAD),
+                        onChange: (n) => (0, b.iy)((0, d.w)(n), t),
+                        "aria-label": r,
                     }),
             });
         })();
-    return (0, e.jsx)(i.W, {
+    return (0, l.jsx)(r.W, {
         "data-menu-migrated-auto": !0,
         navId: "user-context",
         onClose: a.Z_,
-        "aria-label": p.intl.string(p.t.liqwPJ),
-        onSelect: l,
-        onInteraction: j,
-        children: (0, e.jsxs)(r.rX, { children: [k, D] }),
+        "aria-label": A.intl.string(A.t.liqwPJ),
+        onSelect: e,
+        onInteraction: w,
+        children: (0, l.jsxs)(u.rX, { children: [O, D] }),
     });
 }
 function D(n) {
-    let { analyticsLocations: t } = (0, s.Ay)(n.sourceAnalyticsLocations, u.A.SOUNDBOARD_CONTEXT_MENU);
-    return (0, e.jsx)(s.f5, { value: t, children: (0, e.jsx)(j, { ...n }) });
+    let { analyticsLocations: t } = (0, o.Ay)(n.sourceAnalyticsLocations, s.A.SOUNDBOARD_CONTEXT_MENU);
+    return (0, l.jsx)(o.f5, { value: t, children: (0, l.jsx)(w, { ...n }) });
 }
