@@ -1,5 +1,5 @@
-n.d(t, { fG: () => a, xT: () => s, u8: () => l, b8: () => r });
-let i = "OVERLAY_GAMES";
+n.d(t, { b8: () => r, fG: () => a, u8: () => l, xT: () => s });
+var i = n(782973);
 function l(e, t) {
     return null == e || "all" === e.mode
         ? "match"
@@ -20,6 +20,6 @@ function s(e) {
     return null != n && "hide" !== i && ("show" === i || "match" === l(t, n));
 }
 function a(e) {
-    let t = !0 === e?.schema.some((e) => e.key === i && "game" === e.type) ? e?.values[i] : void 0;
+    let t = !0 === e?.schema.some((e) => e.key === i.B && "game" === e.type) ? e?.values[i.B] : void 0;
     return Array.isArray(t) && t.length > 0 ? { mode: "specific", application_ids: t } : null;
 }

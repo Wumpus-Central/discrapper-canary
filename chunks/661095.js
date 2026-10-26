@@ -7,19 +7,19 @@ function i(e, t) {
         return Number.isFinite(n) ? n : void 0;
     }
     if (!0 === e.multiple) {
-        let e = Array.isArray(t)
+        let n = Array.isArray(t)
             ? t
             : String(t)
                   .split(/[\s,]+/)
                   .filter((e) => "" !== e);
-        return 0 === e.length ? null : e;
+        return 0 === n.length ? ("game" === e.type && Array.isArray(t) ? [] : null) : n;
     }
     return "string" == typeof t && "" === t.trim() ? null : t;
 }
-function s(e, t) {
+function r(e, t) {
     return JSON.stringify(e) === JSON.stringify(t);
 }
-function r(e, t) {
+function s(e, t) {
     return t ?? ("checkbox" !== e.type && null);
 }
 function l(e, t) {
@@ -36,4 +36,4 @@ function a(e, t) {
     for (let [e, i] of Object.entries(t ?? {})) null == i ? delete n[e] : (n[e] = i);
     return n;
 }
-n.d(t, { KZ: () => r, Nc: () => s, Ui: () => i, mU: () => l, yj: () => a });
+n.d(t, { KZ: () => s, Nc: () => r, Ui: () => i, mU: () => l, yj: () => a });
