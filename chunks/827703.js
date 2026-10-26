@@ -3813,6 +3813,7 @@ let at = {
                         relocationCountry: t,
                         relocationCurrencyCode: l,
                         willForfeitGiftCardBalance: a,
+                        role: "status",
                     });
                 },
                 controls: {

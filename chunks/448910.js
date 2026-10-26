@@ -34,7 +34,10 @@ function P() {
 function v() {
     let { error: e, errorMessage: t } = (0, E.j)({});
     return null != e
-        ? (0, l.jsx)("div", { className: x.l, children: (0, l.jsx)(h.w, { type: "critical", children: t }) })
+        ? (0, l.jsx)("div", {
+              className: x.l,
+              children: (0, l.jsx)(h.w, { type: "critical", message: t, role: "alert" }),
+          })
         : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(P, {})] });
 }
 function _() {

@@ -8,16 +8,16 @@ var a = l(683071),
     o = l(105292),
     c = l(135734);
 function d(e) {
-    let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: d = !1 } = e,
-        u = (0, r.j7)(t),
-        m = d ? i.default["DE+C4G"] : i.default.vcs3zU,
-        x = o.intl.formatToMarkdownString(m, {
-            country: u,
+    let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: d = !1, role: u } = e,
+        m = (0, r.j7)(t),
+        x = d ? i.default["DE+C4G"] : i.default.vcs3zU,
+        f = o.intl.formatToMarkdownString(x, {
+            country: m,
             currency: l?.toUpperCase() ?? "",
             willForfeitGiftCardBalance: d ? "true" : "false",
-        });
-    return (0, n.jsx)(a.w, {
-        type: "warning",
-        children: (0, n.jsx)("div", { className: c.Q, children: s.A.parse(x, !1, { allowList: !0 }) }),
-    });
+        }),
+        p = s.A.parse(f, !1, { allowList: !0 });
+    return null == p
+        ? null
+        : (0, n.jsx)("div", { className: c.Q, children: (0, n.jsx)(a.w, { type: "warning", message: p, role: u }) });
 }

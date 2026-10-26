@@ -1,4 +1,4 @@
-n.d(t, { T_: () => I, Ed: () => f });
+n.d(t, { T_: () => T, Ed: () => f });
 var l = n(477900),
     o = n(582128),
     r = n(503698),
@@ -63,6 +63,7 @@ function g(e) {
                                           relocationCountry: n,
                                           relocationCurrencyCode: r,
                                           willForfeitGiftCardBalance: i,
+                                          role: "status",
                                       }),
                                       key: "store-relocation-notice",
                                   },
@@ -85,7 +86,7 @@ function g(e) {
         o.useMemo(() => {
             if (!(!A(r) || i.length > 0 || null != t)) return null;
             let e = (0, l.jsxs)(l.Fragment, {
-                children: [A(r) ? null : (0, l.jsx)(a.w, { type: "critical", children: r }), i.map(y)],
+                children: [A(r) ? null : (0, l.jsx)(a.w, { type: "critical", message: r, role: "alert" }), i.map(y)],
             });
             return (0, l.jsx)("div", {
                 ref: u,
@@ -127,7 +128,7 @@ function S(e) {
         [n, i, r],
     );
 }
-function I(e) {
+function T(e) {
     let {
             upperInlineNoticeProps: t,
             planSelectContent: n,
@@ -141,12 +142,12 @@ function I(e) {
             invoiceTotalDueLabel: y = E.intl.string(m.default.R0cZsM),
             invoiceTotalDueValue: A,
             shouldShowGlobalNotices: g,
-            showUpperNoticesAboveGlobalNotices: I,
-            footerInlineNoticeProps: T,
+            showUpperNoticesAboveGlobalNotices: T,
+            footerInlineNoticeProps: I,
             headerBadgeConfig: O,
             className: k,
         } = e,
-        x = N(T),
+        x = N(I),
         { setCheckoutFooterLineItemNode: v } = (0, u.ck)();
     return a
         ? (0, l.jsx)(f, { className: k, shouldShowUnifiedHeader: !0 })
@@ -158,7 +159,7 @@ function I(e) {
                           (0, l.jsx)(S, {
                               upperInlineNoticeProps: t,
                               shouldShowGlobalNotices: g,
-                              showUpperNoticesAboveGlobalNotices: I,
+                              showUpperNoticesAboveGlobalNotices: T,
                           }),
                           n,
                           null != n && null != o && (0, l.jsx)("div", { className: _.ls }),
