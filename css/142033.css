@@ -1302,6 +1302,14 @@
     color: var(--custom-checkpoint-white)
 }
 
+.content_b7849c {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    max-width: 686px
+}
+
 .summary_a29799 {
     align-items: center;
     display: flex;
@@ -1845,4 +1853,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=234382.685965f8f120a164.css.map*/
+/*# sourceMappingURL=142033.ac74c8c88da93d41.css.map*/
