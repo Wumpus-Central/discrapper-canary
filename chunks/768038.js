@@ -41,14 +41,8 @@ var f = n(626584),
     R = n(750385),
     L = n(194004),
     y = n(863005),
-    D = n(152007);
-(0, n(945810).mj)({
-    name: "2026-08-timestamp-autocomplete-mobile",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
-var v = n(885386),
+    D = n(152007),
+    v = n(885386),
     b = n(594061),
     M = n(95701),
     P = n(34457),

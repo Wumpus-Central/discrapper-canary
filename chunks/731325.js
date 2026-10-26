@@ -471,8 +471,8 @@ var eQ = n(404778),
     e2 = n(369163),
     e5 = n(123292),
     e6 = n(631305),
-    e8 = n(468689),
-    e3 = n(931991),
+    e3 = n(468689),
+    e8 = n(931991),
     e7 = n(473145),
     e4 = n(625633),
     e9 = n(136123);
@@ -481,7 +481,7 @@ let te = function (e) {
         { location: u } = (0, D.p)(),
         { analyticsLocations: c } = (0, V.Ay)(),
         h = (0, d.bG)([ef.A], () => ef.A.getGuild(n)),
-        { canManageAllExpressions: m } = (0, e3.nr)(h),
+        { canManageAllExpressions: m } = (0, e8.nr)(h),
         f = null != h && 0 === (0, e7.aG)(h.premiumTier) && !h.features.has(ey.GuildFeatures.MORE_STICKERS);
     return (i.useEffect(() => {
         m &&
@@ -545,7 +545,7 @@ let te = function (e) {
                           variant: "primary",
                           text: eC.intl.string(eC.t.bwNjug),
                           onClick: function () {
-                              ((0, F.v8)(), e8.A.open(n, ey.BEX.STICKERS, u));
+                              ((0, F.v8)(), e3.A.open(n, ey.BEX.STICKERS, u));
                           },
                       }),
                   ],
@@ -1502,7 +1502,7 @@ let tq = function (e) {
     );
 };
 n(321073);
-var t$ = n(802842),
+var t$ = n(768038),
     tQ = n(330422),
     tZ = n(609178);
 function tX(e) {
@@ -1600,8 +1600,8 @@ function t5(e) {
     });
 }
 var t6 = n(970099);
-let t8 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    t3 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+let t3 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    t8 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     t7 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     t4 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     t9 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
@@ -1632,7 +1632,7 @@ function ns(e) {
             gridWrapperRef: p,
             containerWidth: t,
             showingEmptyState: v,
-            listPaddingLeft: t3,
+            listPaddingLeft: t8,
             listScrollbarWidth: 8,
         }),
         T = q.tP.useSetting(),
@@ -1669,7 +1669,7 @@ function ns(e) {
             },
             [s, S, Z],
         ),
-        J = null != N && N > t8,
+        J = null != N && N > t3,
         {
             rowCount: Y,
             rowCountBySection: es,
