@@ -45,10 +45,11 @@ async function I(e) {
             appContext: g,
             customStatusPrompt: S = null,
             onModalOpen: N,
+            onModalClose: C,
         } = e,
-        C = Date.now(),
-        O = u.default.getUser(t);
-    if ((f(t), null == O))
+        O = Date.now(),
+        R = u.default.getUser(t);
+    if ((f(t), null == R))
         try {
             await (0, a.eO)(t, {
                 type: "modal",
@@ -73,10 +74,10 @@ async function I(e) {
                 }
         }
     else
-        (0, E.A)(O.id, O.getAvatarURL(void 0, A), {
+        (0, E.A)(R.id, R.getAvatarURL(void 0, A), {
             type: "modal",
             guildId: n ?? void 0,
-            withMutualFriendsCount: !O.bot,
+            withMutualFriendsCount: !R.bot,
             withMutualFriends: !1,
             withMutualGuilds: !0,
             joinRequestId: c,
@@ -92,7 +93,7 @@ async function I(e) {
         messageId: l ?? void 0,
         roleId: o ?? void 0,
         sessionId: d ?? void 0,
-        openedAt: C,
+        openedAt: O,
         customStatusPrompt: S,
         tabSection: I,
         scrollTarget: p,
@@ -100,5 +101,6 @@ async function I(e) {
         sourceAnalyticsLocations: m,
         appContext: g,
         onModalOpen: N,
+        onModalClose: C,
     });
 }
