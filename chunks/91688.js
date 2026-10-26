@@ -906,32 +906,32 @@ function tT(e) {
           });
 }
 function tS(e) {
-    var t, n, i;
-    let { message: l } = e,
-        { sharedClientTheme: a } = l,
-        o = (0, tI.Ay)(l),
-        d = r.useMemo(
+    var t, n, i, l;
+    let { message: a } = e,
+        { sharedClientTheme: o } = a,
+        d = (0, tI.Ay)(a),
+        c = r.useMemo(
             () =>
                 (0, tu.once)(() => {
                     (0, e2.x)({ type: e1.ImpressionTypes.VIEW, name: th.IJ.CUSTOM_THEME_SHARE, properties: {} });
                 }),
             [],
         ),
-        c = (0, tx.A)({
+        u = (0, tx.A)({
             onVisible: () => {
-                d();
+                c();
             },
             threshold: 1,
             minTimeVisibleMs: 200,
         }),
-        u = r.useMemo(() => (void 0 === a ? "" : (0, t_.V9)(ty(a.colors), a.gradient_angle ?? 0)), [a]);
-    return void 0 === a
+        m = r.useMemo(() => (void 0 === o ? "" : (0, t_.V9)(ty(o.colors), o.gradient_angle ?? 0)), [o]);
+    return void 0 === o
         ? null
         : (0, s.jsxs)("div", {
               className: tN.pS,
-              ref: c,
+              ref: u,
               children: [
-                  (0, s.jsx)("div", { className: tN.sl, style: { background: `${u}` } }),
+                  (0, s.jsx)("div", { className: tN.sl, style: { background: `${m}` } }),
                   (0, s.jsxs)("div", {
                       className: tN.Ix,
                       children: [
@@ -946,8 +946,9 @@ function tS(e) {
                               className: tN.Tb,
                               children:
                                   ((t = `${K.intl.format(tj.default.fQPSEf, { username: "__USERNAME__" })}`),
-                                  (n = l.author),
-                                  (i = o.nick),
+                                  (n = a.author),
+                                  (i = d.nick),
+                                  (l = d.guildId),
                                   t
                                       .split(" ")
                                       .map((e, t) =>
@@ -960,7 +961,7 @@ function tS(e) {
                                                         children: [
                                                             (0, s.jsx)(tp.eu, {
                                                                 "aria-label": i,
-                                                                src: n.getAvatarURL(null, 20),
+                                                                src: n.getAvatarURL(l, 20),
                                                                 size: tA._3.SIZE_20,
                                                             }),
                                                             " ",
