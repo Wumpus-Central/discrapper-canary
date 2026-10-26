@@ -215,21 +215,6 @@
     opacity: .8
 }
 
-.contentContainer__8820a {
-    gap: 8px
-}
-
-.container__8820a,
-.contentContainer__8820a {
-    display: flex;
-    flex-direction: column
-}
-
-.container__8820a {
-    gap: 32px;
-    margin: 16px 8px
-}
-
 .panel_fb48ea {
     display: flex;
     flex-direction: column
@@ -905,4 +890,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=7488fb812139050e.css.map*/
+/*# sourceMappingURL=38f0c642c143a821.css.map*/

@@ -268,7 +268,6 @@
   "MENTIONS_MESSAGE_ID": "/users/@me/mentions/:param",
   "CAPTCHA": "/users/@me/captcha/verify",
   "CAPTCHA_TEST": "/captcha/decider",
-  "AGE_ASSURANCE_TEST": "/age-verification/test",
   "VERIFY_AGE": "/age-verification/verify",
   "VERIFY_AGE_V2": "/age-verification/verify/v2",
   "AGE_VERIFICATION_MANUAL_REVIEW": "/age-verification/manual-review",
