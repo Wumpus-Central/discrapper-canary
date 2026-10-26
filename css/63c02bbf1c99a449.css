@@ -111,6 +111,7 @@
     display: flex;
     flex: none;
     height: var(--custom-conjure-overlay-widget-height);
+    outline: 1px solid var(--border-subtle);
     overflow: hidden;
     transform: scale(var(--custom-conjure-overlay-widget-scale));
     transform-origin: top right;
@@ -720,4 +721,4 @@ svg.selectModeIcon_eb0c63 {
     text-align: center
 }
 
-/*# sourceMappingURL=986bd53f7a0d3c8d.css.map*/
+/*# sourceMappingURL=63c02bbf1c99a449.css.map*/
