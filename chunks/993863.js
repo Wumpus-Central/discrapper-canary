@@ -1,4 +1,4 @@
-(a.r(l), a.d(l, { manaCollection: () => tp, playgroundConfig: () => tm }));
+(a.r(l), a.d(l, { manaCollection: () => tb, playgroundConfig: () => tp }));
 var t = a(477900),
     o = a(582128),
     n = a(17928),
@@ -4906,12 +4906,9 @@ function aW(e, l, a, t) {
             : o;
     }, [e, l, a, t]);
 }
-var aX = a(310592);
-function aZ(e) {
-    return (0, t.jsx)(aX.j, { ...e });
-}
-let aK = [0.5, 0.75, 1, 1.25, 1.5, 2],
-    aY = {
+var aX = a(893007);
+let aZ = [0.5, 0.75, 1, 1.25, 1.5, 2],
+    aK = {
         title: "Slider",
         stories: [
             {
@@ -4924,7 +4921,7 @@ let aK = [0.5, 0.75, 1, 1.25, 1.5, 2],
                     return (0, t.jsxs)(h.B, {
                         gap: 8,
                         children: [
-                            (0, t.jsx)(aZ, {
+                            (0, t.jsx)(aX.A, {
                                 label: l,
                                 description: a,
                                 disabled: n,
@@ -4955,10 +4952,10 @@ let aK = [0.5, 0.75, 1, 1.25, 1.5, 2],
                 component: function (e) {
                     let { label: l, disabled: a, snapToMarks: n } = e,
                         [i, s] = o.useState(1);
-                    return (0, t.jsx)(aZ, {
+                    return (0, t.jsx)(aX.A, {
                         label: l,
                         disabled: a,
-                        marks: aK,
+                        marks: aZ,
                         snapToMarks: n,
                         defaultMark: 1,
                         minValue: 0.5,
@@ -4977,7 +4974,7 @@ let aK = [0.5, 0.75, 1, 1.25, 1.5, 2],
             },
         ],
     },
-    aJ = {
+    aY = {
         title: "Switch",
         stories: [
             {
@@ -5013,19 +5010,19 @@ let aK = [0.5, 0.75, 1, 1.25, 1.5, 2],
             },
         ],
     };
-var aQ = a(11779),
-    a0 = a(872162);
-let a1 = [
-        { id: "strength", label: "Strength", icon: aQ.r },
+var aJ = a(11779),
+    aQ = a(872162);
+let a0 = [
+        { id: "strength", label: "Strength", icon: aJ.r },
         { id: "dexterity", label: "Dexterity" },
         { id: "wisdom", label: "Wisdom" },
         { id: "charisma", label: "Charisma" },
     ],
-    a2 = [
+    a1 = [
         { id: "safety", label: "Safety Center", href: "https://discord.com/safety" },
         { id: "support", label: "Support", href: "https://support.discord.com" },
     ],
-    a4 = {
+    a2 = {
         title: "TagGroup",
         stories: [
             {
@@ -5036,7 +5033,7 @@ let a1 = [
                         d = (0, n.bG)([i.default], () => i.default.getCurrentUser()),
                         u = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: aQ.r },
+                                { id: "strength", label: "Strength", icon: aJ.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
@@ -5057,7 +5054,7 @@ let a1 = [
                         m = o.useCallback(() => {
                             b(u);
                         }, [u]),
-                        x = (0, t.jsx)(a0.C, {
+                        x = (0, t.jsx)(aQ.C, {
                             label: "Character attributes",
                             disabled: l,
                             layout: s,
@@ -5103,7 +5100,7 @@ let a1 = [
                 id: "tag-group-links",
                 component: function (e) {
                     let { disabled: l } = e;
-                    return (0, t.jsx)(a0.C, { mode: "link", label: "Discord resources", disabled: l, items: a2 });
+                    return (0, t.jsx)(aQ.C, { mode: "link", label: "Discord resources", disabled: l, items: a1 });
                 },
                 controls: { disabled: { label: "Disabled", type: "boolean", defaultValue: !1 } },
             },
@@ -5119,11 +5116,11 @@ let a1 = [
                         }, []);
                     return (0, t.jsx)(h.B, {
                         gap: 24,
-                        children: (0, t.jsx)(a0.C, {
+                        children: (0, t.jsx)(aQ.C, {
                             variant: "filter",
                             label: "Character attributes",
                             disabled: l,
-                            items: a1,
+                            items: a0,
                             selectionMode: n,
                             selectedKeys: s,
                             onSelectionChange: u,
@@ -5160,8 +5157,8 @@ let a1 = [
             },
         ],
     };
-var a3 = a(364522);
-let a6 = [
+var a4 = a(364522);
+let a3 = [
     "heading-sm/normal",
     "heading-sm/medium",
     "heading-sm/semibold",
@@ -5270,8 +5267,8 @@ let a6 = [
     "experimental/mono-md/normal",
     "experimental/mono-md/bold",
 ];
-var a8 = a(404544);
-let a5 = {
+var a6 = a(404544);
+let a8 = {
     name: "Text",
     id: "text",
     component: eZ.E,
@@ -5280,7 +5277,7 @@ let a5 = {
             label: "Variant",
             type: "select",
             defaultValue: "text-sm/normal",
-            options: Object.values(a6).map((e) => ({ label: e, value: e })),
+            options: Object.values(a3).map((e) => ({ label: e, value: e })),
         },
         color: {
             label: "Color",
@@ -5303,22 +5300,22 @@ let a5 = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var a9 = a(252392),
-    a7 = a(260509),
-    te = a(711014),
-    tl = a(690521);
-let ta = ["Wumpus", "Discord Staff", "Design Systems Team"],
-    tt = { label: "Text", type: "text", defaultValue: "This is a toast message" };
-var to = a(782641),
-    tn = a(381275);
-let ti = Object.assign(
+var a5 = a(252392),
+    a9 = a(260509),
+    a7 = a(711014),
+    te = a(690521);
+let tl = ["Wumpus", "Discord Staff", "Design Systems Team"],
+    ta = { label: "Text", type: "text", defaultValue: "This is a toast message" };
+var tt = a(782641),
+    to = a(381275);
+let tn = Object.assign(
     function (e) {
         let { children: l, "aria-label": a, "aria-labelledby": o } = e;
-        return (0, t.jsx)(to.M, {
+        return (0, t.jsx)(tt.M, {
             "data-mana-component": "toolbar",
             "aria-label": a,
             "aria-labelledby": o,
-            className: tn.KE,
+            className: to.KE,
             children: l,
         });
     },
@@ -5330,7 +5327,7 @@ let ti = Object.assign(
                 "data-mana-component": "toolbar-group",
                 "aria-label": a,
                 "aria-labelledby": o,
-                className: tn.Os,
+                className: to.Os,
                 children: l,
             });
         },
@@ -5339,15 +5336,15 @@ let ti = Object.assign(
                 role: "separator",
                 "aria-orientation": "vertical",
                 "data-mana-component": "toolbar-separator",
-                className: tn.me,
+                className: to.me,
             });
         },
     },
 );
-var ts = a(866665),
-    tr = a(683063),
-    td = a(557464);
-let tu = {
+var ti = a(866665),
+    ts = a(683063),
+    tr = a(557464);
+let td = {
     title: "Tooltip",
     stories: [
         {
@@ -5370,7 +5367,7 @@ let tu = {
                         if ("center" !== i && null != i)
                             return "custom" === i ? { align: i, customOffset: s } : { align: i };
                     }, [i, s]);
-                return (0, t.jsx)(ts.m, {
+                return (0, t.jsx)(ti.m, {
                     text: l,
                     position: a,
                     align: n,
@@ -5449,8 +5446,8 @@ let tu = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    h = o.useMemo(() => (n ? { type: "image", src: td.A, aspectRatio: "1/1" } : void 0), [n]);
-                return (0, t.jsx)(tr.u, {
+                    h = o.useMemo(() => (n ? { type: "image", src: tr.A, aspectRatio: "1/1" } : void 0), [n]);
+                return (0, t.jsx)(ts.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -5534,27 +5531,27 @@ let tu = {
         },
     ],
 };
-var tc = a(508382),
-    tb = a(393743);
-let tp = {
+var tu = a(508382),
+    tc = a(393743);
+let tb = {
         id: "mana",
         name: "Mana",
         groups: [
             {
                 title: "Text",
                 stories: [
-                    a5,
+                    a8,
                     {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
-                            return (0, t.jsx)(a3.Ar, {
-                                className: a8.H,
-                                children: Object.values(a6).map((l) =>
+                            return (0, t.jsx)(a4.Ar, {
+                                className: a6.H,
+                                children: Object.values(a3).map((l) =>
                                     (0, t.jsxs)(
                                         E.Z,
                                         {
-                                            className: a8.N,
+                                            className: a6.N,
                                             children: [
                                                 (0, t.jsx)(eZ.E, { ...e, variant: l, children: e.children }),
                                                 (0, t.jsx)(eZ.E, {
@@ -5586,14 +5583,14 @@ let tp = {
                             let [e, l] = o.useState(!1),
                                 [a, n] = o.useState(!1),
                                 i = e ? "Unmute microphone" : "Mute microphone";
-                            return (0, t.jsxs)(ti, {
+                            return (0, t.jsxs)(tn, {
                                 "aria-label": "Message actions",
                                 children: [
-                                    (0, t.jsxs)(ti.Group, {
+                                    (0, t.jsxs)(tn.Group, {
                                         "aria-label": "Response actions",
                                         children: [
                                             (0, t.jsx)(L.$, { variant: "secondary", text: "Reply" }),
-                                            (0, t.jsx)(ts.m, {
+                                            (0, t.jsx)(ti.m, {
                                                 text: "More options",
                                                 children: (0, t.jsx)(eB.K, {
                                                     variant: "secondary",
@@ -5603,11 +5600,11 @@ let tp = {
                                             }),
                                         ],
                                     }),
-                                    (0, t.jsx)(ti.Separator, {}),
-                                    (0, t.jsxs)(ti.Group, {
+                                    (0, t.jsx)(tn.Separator, {}),
+                                    (0, t.jsxs)(tn.Group, {
                                         "aria-label": "Message options",
                                         children: [
-                                            (0, t.jsx)(ts.m, {
+                                            (0, t.jsx)(ti.m, {
                                                 text: i,
                                                 children: (0, t.jsx)(eP.k, {
                                                     icon: ez.MicrophoneIcon,
@@ -5634,7 +5631,7 @@ let tp = {
             lL,
             aL,
             aA,
-            aJ,
+            aY,
             ay,
             {
                 title: "InlineNotice",
@@ -5684,7 +5681,7 @@ let tp = {
             },
             l9,
             aq,
-            aY,
+            aK,
             aI,
             aE,
             {
@@ -5698,58 +5695,58 @@ let tp = {
                             return (0, t.jsxs)(h.B, {
                                 gap: 12,
                                 children: [
-                                    (0, t.jsx)(a9.y, { text: l, variant: "default" }),
-                                    (0, t.jsx)(a9.y, { text: l, variant: "default", icon: ln.CircleInformationIcon }),
-                                    (0, t.jsx)(a9.y, {
+                                    (0, t.jsx)(a5.y, { text: l, variant: "default" }),
+                                    (0, t.jsx)(a5.y, { text: l, variant: "default", icon: ln.CircleInformationIcon }),
+                                    (0, t.jsx)(a5.y, {
                                         text: l,
                                         variant: "default",
                                         icon: ln.CircleInformationIcon,
                                         iconColor: l6.A.colors.ICON_BRAND,
                                         secondaryIconColor: l6.A.colors.ICON_DEFAULT,
                                     }),
-                                    (0, t.jsx)(a9.y, {
+                                    (0, t.jsx)(a5.y, {
                                         text: l,
                                         variant: "default",
                                         icon: p.StarIcon,
                                         iconColor: l6.A.colors.ICON_BRAND,
                                     }),
-                                    (0, t.jsx)(a9.y, { text: l, variant: "success" }),
-                                    (0, t.jsx)(a9.y, { text: l, variant: "critical" }),
+                                    (0, t.jsx)(a5.y, { text: l, variant: "success" }),
+                                    (0, t.jsx)(a5.y, { text: l, variant: "critical" }),
                                 ],
                             });
                         },
-                        controls: { text: tt },
+                        controls: { text: ta },
                     },
                     {
                         name: "Toasts with entities",
                         id: "toast-entities",
                         component: function (e) {
                             let { text: l } = e,
-                                a = (0, n.bG)([te.Ay, es.A], () =>
-                                    te.Ay.getFlattenedGuildIds()
+                                a = (0, n.bG)([a7.Ay, es.A], () =>
+                                    a7.Ay.getFlattenedGuildIds()
                                         .map((e) => es.A.getGuild(e))
                                         .find((e) => e?.icon != null),
                                 ),
-                                o = tl.Ay.getURL("\uD83D\uDC4B"),
-                                i = tl.Ay.getURL("\uD83D\uDD25");
+                                o = te.Ay.getURL("\uD83D\uDC4B"),
+                                i = te.Ay.getURL("\uD83D\uDD25");
                             return (0, t.jsxs)(h.B, {
                                 gap: 12,
                                 children: [
-                                    (0, t.jsx)(a9.y, {
+                                    (0, t.jsx)(a5.y, {
                                         text: l,
                                         icon:
                                             "" !== o
                                                 ? { type: "emoji", src: o, alt: "\uD83D\uDC4B" }
                                                 : { type: "emoji", unicode: "\uD83D\uDC4B" },
                                     }),
-                                    (0, t.jsx)(a9.y, {
+                                    (0, t.jsx)(a5.y, {
                                         text: l,
                                         icon:
                                             "" !== i
                                                 ? { type: "emoji", src: i, alt: "\uD83D\uDD25" }
                                                 : { type: "emoji", unicode: "\uD83D\uDD25" },
                                     }),
-                                    (0, t.jsx)(a9.y, {
+                                    (0, t.jsx)(a5.y, {
                                         text: l,
                                         icon: {
                                             type: "avatar",
@@ -5758,23 +5755,23 @@ let tp = {
                                         },
                                     }),
                                     null != a &&
-                                        (0, t.jsx)(a9.y, {
+                                        (0, t.jsx)(a5.y, {
                                             text: a.name,
-                                            icon: { type: "guild", src: (0, a7.Iv)(a, 48), name: a.name },
+                                            icon: { type: "guild", src: (0, a9.Iv)(a, 48), name: a.name },
                                         }),
-                                    ta.map((e) =>
-                                        (0, t.jsx)(a9.y, { text: e, icon: { type: "guild", src: null, name: e } }, e),
+                                    tl.map((e) =>
+                                        (0, t.jsx)(a5.y, { text: e, icon: { type: "guild", src: null, name: e } }, e),
                                     ),
                                 ],
                             });
                         },
-                        controls: { text: tt },
+                        controls: { text: ta },
                     },
                 ],
             },
-            tu,
+            td,
             e8,
-            a4,
+            a2,
             lF,
             {
                 title: "FloatingLayer",
@@ -5793,7 +5790,7 @@ let tp = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(tc.Ow, {
+                            return (0, t.jsx)(tu.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -5805,7 +5802,7 @@ let tp = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: tb.q,
+                                        className: tc.q,
                                         children: (0, t.jsx)(eZ.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -5934,4 +5931,4 @@ let tp = {
             },
         ],
     },
-    tm = { collections: [tp, eC] };
+    tp = { collections: [tb, eC] };

@@ -7,7 +7,7 @@ var i,
     o = n(17928),
     c = n(939249),
     d = n(834730),
-    u = n(205513),
+    u = n(893007),
     m = n(62010),
     x = n(403581),
     h = n(7807),
@@ -217,7 +217,16 @@ function K() {
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, s.jsx)(d.E, { variant: "text-sm/normal", children: D.intl.string(D.t["2JbvKw"]) }),
-            (0, s.jsx)(u.G, { onValueChange: t, className: z.aw, initialValue: (0, f.M)(e), maxValue: 100 }),
+            (0, s.jsx)("div", {
+                className: z.aw,
+                children: (0, s.jsx)(u.A, {
+                    "aria-label": D.intl.string(D.t["2JbvKw"]),
+                    onChangeEnd: t,
+                    defaultValue: (0, f.M)(e),
+                    maxValue: 100,
+                    formatValue: (e) => `${e.toFixed(0)}%`,
+                }),
+            }),
         ],
     });
 }

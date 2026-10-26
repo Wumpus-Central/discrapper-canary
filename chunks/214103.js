@@ -14,28 +14,28 @@ var a = t(477900),
     h = t(364522),
     x = t(297264),
     b = t(834730),
-    v = t(205513),
+    v = t(893007),
     p = t(926321),
-    N = t(908803),
-    A = t(661531),
-    E = t(793574),
+    A = t(908803),
+    E = t(661531),
+    N = t(793574),
     G = t(688810),
     y = t(793943),
     C = t(468689),
     I = t(378292),
-    k = t(868652),
-    j = t(645619),
+    j = t(868652),
+    k = t(645619),
     S = t(972829),
     L = t(828162),
     T = t(439156),
     _ = t(973654),
     w = t(363195),
     P = t(71393),
-    R = t(967198),
-    U = t(476931),
-    V = t(673642),
-    M = t(759532),
-    W = t(875317),
+    U = t(967198),
+    M = t(476931),
+    R = t(673642),
+    W = t(759532),
+    V = t(875317),
     D = t(42119),
     H = t(652215),
     J = t(818348),
@@ -47,7 +47,7 @@ function F(e) {
     return P.A.getGuild(e)?.features.has(H.GuildFeatures.GUILD_THEME) === !0;
 }
 function q(e) {
-    return M.Ay.guildId === e && R.A.getGuildId() === e;
+    return W.Ay.guildId === e && U.A.getGuildId() === e;
 }
 function K(e) {
     return e.body?.message ?? e.message ?? O.intl.string(O.t.fEptJP);
@@ -60,7 +60,7 @@ function B(e) {
     return Math.round(100 * s()(e).get("hsl.l"));
 }
 function Z(e) {
-    return U.wS + U.iq - B(e);
+    return M.wS + M.iq - B(e);
 }
 function Q(e) {
     let [l, t] = n.useState(0),
@@ -181,39 +181,39 @@ function ea(e) {
             saveError: es,
             previewGuildId: er,
             origin: eu,
-        } = (0, c.cf)([M.Ay], () => ({
-            draft: M.Ay.draft,
-            isSaving: M.Ay.isSaving,
-            hasChanges: M.Ay.hasChanges(),
-            saveError: M.Ay.saveError,
-            previewGuildId: M.Ay.guildId,
-            origin: M.Ay.origin,
+        } = (0, c.cf)([W.Ay], () => ({
+            draft: W.Ay.draft,
+            isSaving: W.Ay.isSaving,
+            hasChanges: W.Ay.hasChanges(),
+            saveError: W.Ay.saveError,
+            previewGuildId: W.Ay.guildId,
+            origin: W.Ay.origin,
         })),
-        ed = eu === M.v5.PERK_MODAL ? E.A.GUILD_POWERUPS_OVERVIEW : E.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME,
+        ed = eu === W.v5.PERK_MODAL ? N.A.GUILD_POWERUPS_OVERVIEW : N.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME,
         { analyticsLocations: ec } = (0, G.Ay)(ed),
-        eo = (0, c.bG)([j.A], () => (null == er ? void 0 : j.A.getStateForGuild(er)?.allPowerups[r.d0]), [er]),
+        eo = (0, c.bG)([k.A], () => (null == er ? void 0 : k.A.getStateForGuild(er)?.allPowerups[r.d0]), [er]),
         em = (0, S.A)(er),
-        ef = (0, c.bG)([j.A], () => null == er || j.A.hasFetchedPowerupCatalog(er), [er]),
+        ef = (0, c.bG)([k.A], () => null == er || k.A.hasFetchedPowerupCatalog(er), [er]),
         eg = (function (e) {
             let l = e?.customUserThemeSettings?.colors?.[0];
             if (null != l) return l;
-            let t = (0, U.Yt)(e?.presetId),
-                a = null != t ? (0, U.oE)(t).color : U.a0;
-            return (0, U.w3)((0, U._k)(a, B(a)));
+            let t = (0, M.Yt)(e?.presetId),
+                a = null != t ? (0, M.oE)(t).color : M.a0;
+            return (0, M.w3)((0, M._k)(a, B(a)));
         })(ea),
         eh = (function (e) {
             let l = e?.customUserThemeSettings?.baseMix;
             if (null != l) return l;
-            let t = (0, U.Yt)(e?.presetId);
-            return null != t ? (0, U.oE)(t).baseMix : U.BC;
+            let t = (0, M.Yt)(e?.presetId);
+            return null != t ? (0, M.oE)(t).baseMix : M.BC;
         })(ea),
         ex = Y(eg),
         eb = Z(eg),
-        ev = n.useMemo(() => (0, U.z3)(eg, J), [eg, J]),
+        ev = n.useMemo(() => (0, M.z3)(eg, J), [eg, J]),
         ep = n.useMemo(
             () =>
                 (function (e, l) {
-                    let { minTone: t, maxTone: a } = (0, U.It)(l),
+                    let { minTone: t, maxTone: a } = (0, M.It)(l),
                         n = s()(e),
                         i = Y(e),
                         r = n.get("hsl.s"),
@@ -231,38 +231,38 @@ function ea(e) {
                 })(eg, J),
             [eg, J],
         ),
-        { key: eN, handleInternalChange: eA } = Q(ex),
-        { key: eE, handleInternalChange: eG } = Q(eb),
+        { key: eA, handleInternalChange: eE } = Q(ex),
+        { key: eN, handleInternalChange: eG } = Q(eb),
         { key: ey, handleInternalChange: eC } = Q(eh),
         eI = n.useCallback((e, l) => {
-            (0, V.t$)({ colors: [e], gradientAngle: 0, baseMix: l });
+            (0, R.t$)({ colors: [e], gradientAngle: 0, baseMix: l });
         }, []),
-        ek = n.useCallback((e) => {
-            (0, V.GC)(e.id);
+        ej = n.useCallback((e) => {
+            (0, R.GC)(e.id);
         }, []),
-        ej = n.useCallback(() => {
-            let e = (0, U.XY)();
+        ek = n.useCallback(() => {
+            let e = (0, M.XY)();
             eI(e.color, e.baseMix);
         }, [eI]),
         eS = n.useCallback(() => {
-            let { guildId: e, original: l, originalEnabled: t, origin: a } = M.Ay;
+            let { guildId: e, original: l, originalEnabled: t, origin: a } = W.Ay;
             null != e &&
                 null != a &&
-                (0, V.tA)({ guildId: e, draft: l, original: l, draftEnabled: t, originalEnabled: t, origin: a });
+                (0, R.tA)({ guildId: e, draft: l, original: l, draftEnabled: t, originalEnabled: t, origin: a });
         }, []),
         eL = n.useCallback(() => {
-            let { guildId: e, origin: l } = M.Ay;
+            let { guildId: e, origin: l } = W.Ay;
             ((i.current = !0),
-                (0, V.WV)(),
+                (0, R.WV)(),
                 (0, _.XG)(),
                 (0, y.Jp)(),
                 null != e &&
-                    (l === M.v5.GUILD_SETTINGS
-                        ? C.A.open(e, H.BEX.GUILD_THEME, E.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME)
-                        : l === M.v5.PERK_MODAL && (0, L.A)(e, E.A.GUILD_POWERUPS_OVERVIEW, r.d0)));
+                    (l === W.v5.GUILD_SETTINGS
+                        ? C.A.open(e, H.BEX.GUILD_THEME, N.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME)
+                        : l === W.v5.PERK_MODAL && (0, L.A)(e, N.A.GUILD_POWERUPS_OVERVIEW, r.d0)));
         }, []),
         eT = n.useCallback(async () => {
-            (await (0, V.HN)(), (i.current = !0), (0, _.XG)(), (0, y.Jp)());
+            (await (0, R.HN)(), (i.current = !0), (0, _.XG)(), (0, y.Jp)());
         }, []),
         e_ = n.useCallback(() => {
             (0, m.A)({
@@ -317,40 +317,40 @@ function ea(e) {
         eP = n.useCallback((e) => {
             D(e ?? null);
         }, []),
-        eR = (0, c.bG)([R.A], () => R.A.getGuildId()),
-        eU = null != er && eR !== er;
+        eU = (0, c.bG)([U.A], () => U.A.getGuildId()),
+        eM = null != er && eU !== er;
     (n.useEffect(() => {
         null != er &&
-            (j.A.shouldFetchCatalogForGuild(er) && (0, k.AK)(er), j.A.shouldFetchPowerupsForGuild(er) && (0, k.Xd)(er));
+            (k.A.shouldFetchCatalogForGuild(er) && (0, j.AK)(er), k.A.shouldFetchPowerupsForGuild(er) && (0, j.Xd)(er));
     }, [er]),
         n.useEffect(() => {
-            eU && ((i.current = !0), (0, V.WV)(), (0, _.XG)(), (0, y.Jp)());
-        }, [eU]),
+            eM && ((i.current = !0), (0, R.WV)(), (0, _.XG)(), (0, y.Jp)());
+        }, [eM]),
         n.useEffect(() => {
             if (null == er) return;
-            let { draft: e, draftEnabled: l } = M.Ay;
-            (l && (0, W.Om)(e)) || (0, V.GC)(U.Zq["0"].id);
+            let { draft: e, draftEnabled: l } = W.Ay;
+            (l && (0, V.Om)(e)) || (0, R.GC)(M.Zq["0"].id);
         }, [er]),
         n.useEffect(() => {
             null == er && ((0, _.XG)(), (0, y.Jp)());
         }, [er]),
         n.useEffect(
             () => () => {
-                ((0, _.XG)(), i.current || M.Ay.isAwaitingGuildUpdate || (0, V.WV)());
+                ((0, _.XG)(), i.current || W.Ay.isAwaitingGuildUpdate || (0, R.WV)());
             },
             [],
         ));
-    let eV = en || d,
-        eM = !em && null == eo,
-        eW = eV || (!em && !ef),
-        eD = null != er && ef && eM,
-        eH = eV || !ei || null == ea || null == er || eM,
+    let eR = en || d,
+        eW = !em && null == eo,
+        eV = eR || (!em && !ef),
+        eD = null != er && ef && eW,
+        eH = eR || !ei || null == ea || null == er || eW,
         eJ = I ?? es ?? (eD ? O.intl.string(O.t.fEptJP) : null),
         eO = (0, a.jsx)(g.$, {
             variant: "secondary",
             size: "md",
             fullWidth: !0,
-            disabled: eV,
+            disabled: eR,
             onClick: eL,
             text: O.intl.string(O.t["13/7kX"]),
         });
@@ -399,28 +399,28 @@ function ea(e) {
                                     background:
                                         "linear-gradient(90deg, rgb(255 0 0) 0%, rgb(255 255 0) 16.66%, rgb(0 255 0) 33.33%, rgb(0 255 255) 50%, rgb(0 0 255) 66.66%, rgb(255 0 255) 83.33%, rgb(255 0 0) 100%)",
                                     color: ev,
-                                    controlKey: eN,
+                                    controlKey: eA,
                                     min: 0,
                                     max: 359,
                                     defaultValue: ex,
                                     ariaLabel: O.intl.string(X.default.uSL2Gy),
-                                    onValuePreview: eA,
+                                    onValuePreview: eE,
                                     onValueCommit: (e) => {
-                                        let l = (0, U.w3)((0, U.sR)(eg, e));
-                                        (eA(Y(l)), eI(l, eh));
+                                        let l = (0, M.w3)((0, M.sR)(eg, e));
+                                        (eE(Y(l)), eI(l, eh));
                                     },
                                 }),
                                 (0, a.jsx)(ee, {
                                     background: ep,
                                     color: ev,
-                                    controlKey: eE,
-                                    min: U.wS,
-                                    max: U.iq,
+                                    controlKey: eN,
+                                    min: M.wS,
+                                    max: M.iq,
                                     defaultValue: eb,
                                     ariaLabel: O.intl.string(X.default.uSL2Gy),
                                     onValuePreview: eG,
                                     onValueCommit: (e) => {
-                                        let l = (0, U.w3)((0, U._k)(eg, U.wS + U.iq - e));
+                                        let l = (0, M.w3)((0, M._k)(eg, M.wS + M.iq - e));
                                         (eG(Z(l)), eI(l, eh));
                                     },
                                 }),
@@ -450,16 +450,14 @@ function ea(e) {
                                         ],
                                     }),
                                     (0, a.jsx)(
-                                        v.G,
+                                        v.A,
                                         {
                                             "aria-labelledby": u,
                                             minValue: 0,
                                             maxValue: 100,
-                                            keyboardStep: 1,
-                                            initialValue: eh,
                                             defaultValue: eh,
-                                            onValueRender: (e) => `${Math.round(e)}%`,
-                                            onValueChange: (e) => {
+                                            formatValue: (e) => `${Math.round(e)}%`,
+                                            onChangeEnd: (e) => {
                                                 let l = Math.round(e);
                                                 (l !== eh || ea?.customUserThemeSettings != null) && (eC(l), eI(eg, l));
                                             },
@@ -480,14 +478,14 @@ function ea(e) {
                                 }),
                                 (0, a.jsx)("div", {
                                     className: z.$k,
-                                    children: U.Zq.map((e) =>
+                                    children: M.Zq.map((e) =>
                                         (0, a.jsx)(
                                             el,
                                             {
                                                 preset: e,
                                                 selected: ea?.presetId === e.id,
-                                                disabled: eV,
-                                                onSelect: () => ek(e),
+                                                disabled: eR,
+                                                onSelect: () => ej(e),
                                                 theme: J,
                                             },
                                             e.id,
@@ -504,16 +502,16 @@ function ea(e) {
                                     variant: "secondary",
                                     size: "md",
                                     fullWidth: !0,
-                                    disabled: eV,
-                                    onClick: ej,
+                                    disabled: eR,
+                                    onClick: ek,
                                     text: O.intl.string(X.default.c9MBEH),
                                     icon: l
                                         ? { type: "icon", asset: p.DiceIcon }
                                         : {
                                               type: "rive",
-                                              asset: N.m,
+                                              asset: A.m,
                                               riveProps: {
-                                                  dataBinding: { fill: A.A.colors.ICON_STRONG },
+                                                  dataBinding: { fill: E.A.colors.ICON_STRONG },
                                                   eventTargetRef: t,
                                               },
                                           },
@@ -522,7 +520,7 @@ function ea(e) {
                                     variant: "secondary",
                                     size: "md",
                                     fullWidth: !0,
-                                    disabled: eV || !ei,
+                                    disabled: eR || !ei,
                                     onClick: eS,
                                     text: O.intl.string(O.t.yBZMsQ),
                                 }),
@@ -555,7 +553,7 @@ function ea(e) {
                                           variant: "primary",
                                           size: "md",
                                           fullWidth: !0,
-                                          loading: eW,
+                                          loading: eV,
                                           disabled: eH,
                                           onClick: ew,
                                           text: O.intl.string(O.t["1Qm822"]),
