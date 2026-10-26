@@ -903,6 +903,7 @@ function tR(e) {
                                       (0, l.jsxs)(E.B, {
                                           ref: f,
                                           direction: "horizontal",
+                                          justify: "center",
                                           align: "center",
                                           className: r()(tE.Qs, h && tE.WK),
                                           children: [

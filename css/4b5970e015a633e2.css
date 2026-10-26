@@ -489,6 +489,10 @@
     min-height: 0
 }
 
+html:not(.has-webkit-scrollbar) .list__90b31 {
+    padding-inline: 8px
+}
+
 .container__4d08f {
     display: flex;
     width: var(--custom-group-config-popout-width)
@@ -2636,4 +2640,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=af0d5226b997617e.css.map*/
+/*# sourceMappingURL=4b5970e015a633e2.css.map*/
