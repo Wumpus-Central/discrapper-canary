@@ -1,4 +1,4 @@
-t.d(n, { Ay: () => x, NV: () => E, Se: () => f });
+t.d(n, { Ay: () => x, NV: () => I, Se: () => f });
 var i = t(582128),
     l = t(462180),
     s = t(465532),
@@ -23,7 +23,7 @@ function x(e) {
             onThreadCreated: x,
             useDefaultThreadName: f,
         } = e,
-        E = i.useCallback((e, n, t, i) => {
+        I = i.useCallback((e, n, t, i) => {
             r.A.sendMessage(e.id, u.Ay.parse(e, t), void 0, {
                 eagerDispatch: !1,
                 location: p.Hx.THREAD_CREATION,
@@ -50,7 +50,7 @@ function x(e) {
         location: c,
         onThreadCreated: x,
         useDefaultThreadName: f,
-        uploadHandler: E,
+        uploadHandler: I,
     });
 }
 async function f(e) {
@@ -58,7 +58,7 @@ async function f(e) {
         t = await n.uploadFiles(e);
     return { uploaderFile: n._file, files: t };
 }
-function E(e) {
+function I(e) {
     let { parentChannel: n } = e,
         { name: t, appliedTags: i } = (0, c.kU)((e) => {
             let { name: n, appliedTags: t } = e;

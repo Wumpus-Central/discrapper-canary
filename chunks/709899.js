@@ -27,8 +27,8 @@ var i = l(503698),
     P = l(821609),
     E = l(968309),
     b = l(30370),
-    _ = l(105292);
-function L(e) {
+    L = l(105292);
+function _(e) {
     let { platform: t, variant: l = "secondary", size: i = "sm", onAction: a, icon: s, ...r } = e;
     return (0, c.bG)([b.A], () => b.A.getAccounts().some((e) => e.type === t.type))
         ? null
@@ -39,7 +39,7 @@ function L(e) {
               variant: l,
               size: i,
               icon: s,
-              text: _.intl.format(_.t.XWSHTb, { platform: t.name }),
+              text: L.intl.format(L.t.XWSHTb, { platform: t.name }),
               fullWidth: !0,
               ...r,
           });
@@ -89,7 +89,7 @@ let U = function (e) {
     return (0, n.jsx)(P.$, {
         variant: i,
         size: a,
-        text: _.intl.string(_.t.ZYO5OK),
+        text: L.intl.string(L.t.ZYO5OK),
         disabled: o,
         onClick: function () {
             (s?.(), V.CH(t, l));
@@ -105,7 +105,7 @@ function $(e) {
     let { activity: t, user: l, variant: i = "secondary", onAction: a, ...s } = e;
     return (0, D.A)(t, R.jUm.INSTANCE)
         ? (0, n.jsx)(P.$, {
-              text: _.intl.string(_.t.vwl1PK),
+              text: L.intl.string(L.t.vwl1PK),
               variant: i,
               size: "sm",
               onClick: function () {
@@ -251,12 +251,12 @@ function em(e) {
                   }),
                   a && !o
                       ? (0, n.jsx)(Y.m, {
-                            text: _.intl.string(_.t.wCrzut),
+                            text: L.intl.string(L.t.wCrzut),
                             children: (0, n.jsx)(Q.K, {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: en.v,
-                                "aria-label": _.intl.string(_.t.wCrzut),
+                                "aria-label": L.intl.string(L.t.wCrzut),
                                 onClick: () => {
                                     u(!0);
                                 },
@@ -277,7 +277,7 @@ let ep = (0, m.A)((e) => {
             guildId: P,
             channelId: E,
             source: b,
-            buttonVariant: _,
+            buttonVariant: L,
             type: O,
             onAction: G,
         } = e,
@@ -303,9 +303,9 @@ let ep = (0, m.A)((e) => {
         children: (function () {
             if (!(0, N.Ay)(t)) {
                 if ((0, S.A)(t))
-                    return (0, n.jsx)(L, { platform: A.A.get(R.fg2.XBOX), variant: _, onAction: G, icon: o.Y });
+                    return (0, n.jsx)(_, { platform: A.A.get(R.fg2.XBOX), variant: L, onAction: G, icon: o.Y });
                 if (t?.platform === R.yTV.PS4 || t?.platform === R.yTV.PS5)
-                    return (0, n.jsx)(L, { variant: _, platform: A.A.get(R.fg2.PLAYSTATION), onAction: G, icon: d.X });
+                    return (0, n.jsx)(_, { variant: L, platform: A.A.get(R.fg2.PLAYSTATION), onAction: G, icon: d.X });
             }
             if (W) {
                 let e = (0, n.jsx)(ee, { activity: t, user: i, guildId: P, channelId: E, source: b, onAction: G }),
@@ -316,7 +316,7 @@ let ep = (0, m.A)((e) => {
                 let e = (0, f.UW)(t);
                 return null == e
                     ? null
-                    : (0, n.jsx)(U, { guildId: e.guildId, channelId: e.channelId, variant: _, onAction: G });
+                    : (0, n.jsx)(U, { guildId: e.guildId, channelId: e.channelId, variant: L, onAction: G });
             }
             return V
                 ? (0, n.jsxs)(n.Fragment, {
@@ -335,16 +335,16 @@ let ep = (0, m.A)((e) => {
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
                           Y && (0, n.jsx)(y.B, { userId: i.id, channel: D, onAction: G }),
-                          (0, n.jsx)(et.A, { activity: t, variant: Y ? "secondary" : _, onAction: G }),
+                          (0, n.jsx)(et.A, { activity: t, variant: Y ? "secondary" : L, onAction: G }),
                           (0, n.jsx)(M.A, {
                               activity: t,
                               embeddedActivity: l,
                               user: i,
-                              variant: Y ? "secondary" : _,
+                              variant: Y ? "secondary" : L,
                               onAction: G,
                           }),
-                          (0, n.jsx)($, { activity: t, user: i, variant: Y ? "secondary" : _, onAction: G }),
-                          (0, n.jsx)(z, { user: i, activity: t, variant: Y ? "secondary" : _, onAction: G }),
+                          (0, n.jsx)($, { activity: t, user: i, variant: Y ? "secondary" : L, onAction: G }),
+                          (0, n.jsx)(z, { user: i, activity: t, variant: Y ? "secondary" : L, onAction: G }),
                           F.length > 0
                               ? (0, n.jsx)(H.A, {
                                     distributorCTAConfigs: F,

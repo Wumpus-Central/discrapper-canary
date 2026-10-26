@@ -1,4 +1,4 @@
-e.exports = {
+b.exports = {
     vR: "tabs_b292bc",
     q3: "indicator_b292bc",
     bB: "strip_b292bc",

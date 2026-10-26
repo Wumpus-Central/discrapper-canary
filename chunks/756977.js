@@ -1,15 +1,15 @@
-n.d(e, { A: () => r });
-var i = n(17928),
-    l = n(309010),
-    a = n(626798),
-    u = n(905322),
-    d = n(105292);
-function r(t, e) {
-    let n = (0, i.bG)([a.A], () => a.A.isRequestOnCooldown(t)),
-        r = (0, i.bG)([l.Ay], () => l.Ay.getVoiceChannelId() === e, [e]);
+n.d(t, { A: () => r });
+var l = n(17928),
+    i = n(309010),
+    u = n(626798),
+    d = n(905322),
+    a = n(105292);
+function r(e, t) {
+    let n = (0, l.bG)([u.A], () => u.A.isRequestOnCooldown(e)),
+        r = (0, l.bG)([i.Ay], () => i.Ay.getVoiceChannelId() === t, [t]);
     return n
-        ? [!0, d.intl.string(u.default.mVFTUg)]
+        ? [!0, a.intl.string(d.default.mVFTUg)]
         : r
-          ? [!1, d.intl.string(u.default.qRXats)]
-          : [!0, d.intl.string(u.default.qRXats)];
+          ? [!1, a.intl.string(d.default.qRXats)]
+          : [!0, a.intl.string(d.default.qRXats)];
 }

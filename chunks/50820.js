@@ -26,8 +26,8 @@ var n,
     P = l(769015),
     E = l(409626),
     b = l(692969),
-    _ = l(548118),
-    L = l(804630),
+    L = l(548118),
+    _ = l(804630),
     O = l(529433),
     G = l(763758),
     k = l(82149),
@@ -363,7 +363,7 @@ class ei extends a.PureComponent {
                 : (0, i.jsxs)("div", {
                       className: r()((0, B.A)(e) || (0, H.A)(e) ? q.detailsWrap : q.details, q.guildDetails),
                       children: [
-                          (0, i.jsx)(_.Ay, { guild: t, size: _.Ay.Sizes.SMOL, className: q.guildIcon }),
+                          (0, i.jsx)(L.Ay, { guild: t, size: L.Ay.Sizes.SMOL, className: q.guildIcon }),
                           (0, i.jsx)(f._, { size: "xxs", color: "currentColor" }),
                           (0, i.jsxs)("div", {
                               className: q.voiceChannelInfo,
@@ -464,8 +464,8 @@ class ei extends a.PureComponent {
             m = !1;
         if ((0, Y.A)(o)) ((e = this.renderXboxImage()), (m = !0));
         else {
-            let t = (0, L.Gf)(this.props.user.id, o ?? void 0);
-            (t.isSpotify || (e = (0, i.jsx)(L.Tf, { resolvedActivity: t })),
+            let t = (0, _.Gf)(this.props.user.id, o ?? void 0);
+            (t.isSpotify || (e = (0, i.jsx)(_.Tf, { resolvedActivity: t })),
                 null == e && (m = null != (e = this.renderGameImage(o))));
         }
         let A = this.renderName(o),

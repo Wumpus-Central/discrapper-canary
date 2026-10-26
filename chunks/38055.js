@@ -1,4 +1,4 @@
-t.d(n, { A: () => I, MemberListContentSettingsMenu: () => E });
+t.d(n, { A: () => E, MemberListContentSettingsMenu: () => I });
 var i = t(477900),
     l = t(582128),
     s = t(17928),
@@ -15,7 +15,7 @@ var i = t(477900),
     g = t(652215),
     x = t(105292),
     f = t(569709);
-function E(e) {
+function I(e) {
     let { closePopout: n } = e,
         l = (0, s.bG)([p.A], () => p.A.hidden);
     return (0, i.jsx)(r.W, {
@@ -54,7 +54,7 @@ function E(e) {
         }),
     });
 }
-let I = function (e) {
+let E = function (e) {
     let n = l.useRef(null);
     return (0, i.jsx)(u.Y, {
         targetElementRef: n,
@@ -63,7 +63,7 @@ let I = function (e) {
         align: "right",
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(E, { closePopout: n });
+            return (0, i.jsx)(I, { closePopout: n });
         },
         children: (t) =>
             (0, i.jsx)(h.D, {
