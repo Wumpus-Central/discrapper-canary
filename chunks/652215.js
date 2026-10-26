@@ -4868,7 +4868,6 @@ var rC =
         (eM.UPDATE_SOUNDBOARD_SETTINGS = "update_soundboard_settings"),
         (eM.SOUNDBOARD_ECHO_VIEWED = "soundboard_echo_viewed"),
         (eM.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED = "soundboard_echo_sound_details_viewed"),
-        (eM.SOUNDBOARD_ECHO_COMBO_VIEWED = "soundboard_echo_combo_viewed"),
         (eM.SYNC_ACROSS_CLIENTS_TOGGLED = "sync_across_clients_toggled"),
         (eM.CHANNEL_INFORMATION_OPENED = "channel_information_opened"),
         (eM.CHANNEL_INFORMATION_TAB_CLICKED = "channel_information_tab_clicked"),

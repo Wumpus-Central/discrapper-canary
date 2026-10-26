@@ -412,72 +412,57 @@ var ed = n(559949),
     em = n(889053);
 let ef = [100, 200, 366, 513, 789, 1e3, 5e3, 1e4, 1e5, 1 / 0];
 function ep(e) {
-    let { guildId: t, channelId: n, echo: l } = e,
-        { count: s, sound: u, startedAt: c } = l,
-        [d, h] = r.useState(!1),
-        [m, f] = r.useState(null),
-        [p, x] = r.useState({}),
-        E = r.useRef(null),
-        A = r.useRef(null),
-        { analyticsLocations: C } = (0, y.Ay)(S.A.SOUNDBOARD_ECHO),
-        b = (0, g.p)(d, {
+    let { count: t } = e,
+        [n, l] = r.useState(!1),
+        [s, u] = r.useState(null),
+        [c, d] = r.useState({}),
+        h = r.useRef(null),
+        m = r.useRef(null),
+        f = (0, g.p)(n, {
             from: { scale: 0, opacity: 0 },
             enter: { scale: 1, opacity: 1 },
             leave: { scale: 1, opacity: 0 },
             config: o.config.stiff,
         });
     (r.useEffect(() => {
-        let e = ef.findIndex((e) => s < e) - 1;
-        if (null != A.current && null != e && e > A.current) {
-            let l, i;
-            (null != E.current && clearTimeout(E.current),
-                f(ef[e]),
-                h(!0),
-                x(
-                    ((l = Math.floor(200 * Math.random()) + -100),
-                    (i = 5 * e + 40),
+        let e = ef.findIndex((e) => t < e) - 1;
+        if (null != m.current && null != e && e > m.current) {
+            let t, n;
+            (null != h.current && clearTimeout(h.current),
+                u(ef[e]),
+                l(!0),
+                d(
+                    ((t = Math.floor(200 * Math.random()) + -100),
+                    (n = 5 * e + 40),
                     {
                         transform: `rotate(${Math.floor(25 * Math.random()) - 12.5}deg)`,
                         top: -(Math.floor(80 * Math.random()) + 20),
-                        left: `calc(50% - 300px + ${l}px)`,
-                        fontSize: `${i}px`,
-                        lineHeight: `${i}px`,
+                        left: `calc(50% - 300px + ${t}px)`,
+                        fontSize: `${n}px`,
+                        lineHeight: `${n}px`,
                     }),
                 ),
-                (A.current = e),
-                (function (e) {
-                    let { guildId: t, channelId: n, echo: l, combo: i, analyticsLocations: r } = e;
-                    if (!en(`${J.HAw.SOUNDBOARD_ECHO_COMBO_VIEWED}:${i}`, l)) return;
-                    let { sound: s } = l;
-                    X.default.track(J.HAw.SOUNDBOARD_ECHO_COMBO_VIEWED, {
-                        voice_guild_id: t,
-                        channel_id: n,
-                        sound_id: s.soundId,
-                        source_guild_id: s.guildId,
-                        combo: i,
-                        location_stack: r,
-                    });
-                })({ guildId: t, channelId: n, echo: { sound: u, startedAt: c }, combo: ef[e], analyticsLocations: C }),
-                (E.current = setTimeout(() => {
-                    h(!1);
+                (m.current = e),
+                (h.current = setTimeout(() => {
+                    l(!1);
                 }, 1500)));
         }
-        A.current = e;
-    }, [C, n, s, t, u, c]),
+        m.current = e;
+    }, [t]),
         r.useEffect(
             () => () => {
-                null != E.current && clearTimeout(E.current);
+                null != h.current && clearTimeout(h.current);
             },
             [],
         ));
-    let { className: I } = (0, eh.p)(ed.x.PIXELIFY);
-    return b((e, t) =>
+    let { className: p } = (0, eh.p)(ed.x.PIXELIFY);
+    return f((e, t) =>
         t
             ? (0, i.jsx)(o.animated.div, {
                   className: em.G,
-                  style: { "--custom-echo-text-width": "600px", ...p, ...e },
+                  style: { "--custom-echo-text-width": "600px", ...c, ...e },
                   children: (0, i.jsx)("div", {
-                      className: a()(em._, I),
+                      className: a()(em._, p),
                       children: (function (e) {
                           switch (e) {
                               case 100:
@@ -501,7 +486,7 @@ function ep(e) {
                               default:
                                   return "";
                           }
-                      })(m),
+                      })(s),
                   }),
               })
             : null,
@@ -732,7 +717,7 @@ function eS(e) {
                             showDetails: S === l.echo.sound.soundId,
                         }),
                     }),
-                    (0, i.jsx)(ep, { guildId: t, channelId: n, echo: l.echo }),
+                    (0, i.jsx)(ep, { count: l.echo.count }),
                 ],
             }),
         ),
