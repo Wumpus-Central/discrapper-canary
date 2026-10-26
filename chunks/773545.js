@@ -1,4 +1,4 @@
-n.d(e, { Dp: () => E, kW: () => p, r8: () => g });
+n.d(t, { Dp: () => p, kW: () => E, r8: () => g });
 var r = n(582128),
     i = n(323889),
     s = n(17928),
@@ -6,53 +6,56 @@ var r = n(582128),
     u = n(107195),
     a = n(183636),
     o = n(927813),
-    c = n(396813),
+    c = n(427495),
     d = n(859703),
-    f = n(971276),
-    C = n(977416);
-let A = 30 * o.A.Millis.SECOND;
-function T(t, e, n) {
-    if (!(!(0, f.s)() || (null != t && t.fetchedAt + t.ttlMillis >= Date.now()))) {
+    A = n(971276),
+    f = n(977416);
+let C = 30 * o.A.Millis.SECOND;
+function T(e, t, n) {
+    if (!(!(0, A.s)() || (null != e && e.fetchedAt + e.ttlMillis >= Date.now()))) {
         if ("focused" !== a.A.getState()) {
-            null != t && (0, c.Fr)(e, t.ttlMillis);
+            null != e && (0, c.Fr)(t, e.ttlMillis);
             return;
         }
-        l.A.isFetchingAdToDeliverByPlacement(e) || (l.A.canRefreshAd(e) && ((0, c.N1)(), (0, c.r8)(e, n)));
+        l.A.isFetchingAdToDeliverByPlacement(t) || (l.A.canRefreshAd(t) && ((0, c.N1)(), (0, c.r8)(t, n)));
     }
 }
-function E(t) {
-    return (0, s.bG)([l.A], () => l.A.deliveryAdDecisionByPlacement.get(t) ?? null, [t]);
+function p(e) {
+    return (0, s.bG)([l.A], () => l.A.deliveryAdDecisionByPlacement.get(e) ?? null, [e]);
 }
-function p(t) {
-    let e = (0, r.useRef)(null),
-        n = E(t);
+function E(e) {
+    let t = (0, r.useRef)(null),
+        n = p(e);
     (0, r.useEffect)(() => {
-        (null != e.current && clearInterval(e.current),
-            T(n, t, "questBar-open"),
-            (e.current = setInterval(() => {
-                T(l.A.deliveryAdDecisionByPlacement.get(t) ?? null, t, "questBar-interval");
-            }, A)));
-        let r = e.current;
+        (null != t.current && clearInterval(t.current),
+            T(n, e, "questBar-open"),
+            (t.current = setInterval(() => {
+                T(l.A.deliveryAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
+            }, C)));
+        let r = t.current;
         return () => {
             null != r && clearInterval(r);
         };
-    }, [n, t]);
+    }, [n, e]);
 }
-function g(t, e) {
-    let n = (0, s.bG)([d.A], () => d.A.getQuestPreviewOverride(e), [e]),
-        l = E(t),
+function g(e, t) {
+    let n = (0, s.bG)([d.A], () => d.A.getQuestPreviewOverride(t), [t]),
+        l = p(e),
         a = (0, u.Yz)(l?.creative),
         o = (0, s.bG)([d.A], () => (null != a ? (d.A.quests.get(a) ?? null) : null), [a]),
-        c = null == o || (0, C.Ic)(o) ? null : o,
-        f = n ?? c,
-        A = (0, u.I4)(l?.creative);
+        c = null == o || (0, f.Ic)(o) ? null : o,
+        A = n ?? c,
+        C = (0, u.I4)(l?.creative),
+        T = (0, u.Hc)(l?.creative);
     return (0, r.useMemo)(
         () =>
-            null != f
-                ? { type: i.p.QUEST, quest: f }
-                : null != A
-                  ? { type: i.p.BOUNTY, bounty: A }
-                  : { type: i.p.NO_FILL },
-        [f, A],
+            null != A
+                ? { type: i.p.QUEST, quest: A }
+                : null != C
+                  ? { type: i.p.BOUNTY, bounty: C }
+                  : null != T
+                    ? { type: i.p.PLAYABLE, playable: T }
+                    : { type: i.p.NO_FILL },
+        [A, C, T],
     );
 }

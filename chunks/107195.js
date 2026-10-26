@@ -1,4 +1,4 @@
-n.d(t, { Ce: () => o, I4: () => l, K2: () => a, Yz: () => s });
+n.d(t, { Ce: () => d, Hc: () => o, I4: () => l, K2: () => a, Yz: () => s });
 var i = n(323889);
 let r = 6 * n(927813).A.Millis.HOUR;
 function a(e) {
@@ -8,6 +8,8 @@ function a(e) {
             return e.questId;
         case i.p.BOUNTY:
             return e.bounty.id;
+        case i.p.PLAYABLE:
+            return e.playable.id;
         case i.p.QUEST_HOME_HERO:
             return e.questHomeHero.id;
     }
@@ -19,6 +21,9 @@ function l(e) {
     return e?.type === i.p.BOUNTY ? e.bounty : null;
 }
 function o(e) {
+    return e?.type === i.p.PLAYABLE ? e.playable : null;
+}
+function d(e) {
     if (null == e) return r;
     let t = 1e3 * e;
     return t < r && t > 0 ? t : r;

@@ -28,7 +28,7 @@ var r = n(477900),
     N = n(544180),
     k = n(723702),
     P = n(475815),
-    b = n(396813),
+    b = n(427495),
     x = n(738822),
     y = n(405670),
     V = n(291749),
@@ -202,13 +202,13 @@ function ei(e) {
         e0 = (0, y.Kr)((e) => e.videoProgress[es.id] ?? y.yc, a.x),
         e1 = (0, y.Kr)((e) => e.setVideoProgress),
         e2 = (0, y.Kr)((e) => e.muted),
-        e6 = (0, y.Kr)((e) => e.setMuted),
-        e7 = (0, y.Kr)((e) => e.volume),
-        e8 = (0, y.Kr)((e) => e.setVolume),
-        e5 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
+        e7 = (0, y.Kr)((e) => e.setMuted),
+        e6 = (0, y.Kr)((e) => e.volume),
+        e5 = (0, y.Kr)((e) => e.setVolume),
+        e8 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
         e9 = (0, l.useRef)(null),
-        e3 = (0, l.useRef)(null),
         e4 = (0, l.useRef)(null),
+        e3 = (0, l.useRef)(null),
         te = l.useRef(!0),
         tt = es.userStatus?.completedAt != null,
         tn = l.useMemo(() => es.config.features.includes(et.Li.FULL_EPISODE_VIDEO_QUEST), [es.config.features]),
@@ -380,7 +380,7 @@ function ei(e) {
         if (null == e9.current) return;
         let e = Math.max(e9.current.currentTime - 10, 0);
         (tE.info(`[QV] | handleSeekBackIncrement | newTime: ${e}`),
-            t8(e),
+            t5(e),
             eh === j.Q6.ENDED && tG(j.Q6.PAUSED),
             tL(x.uF.VIDEO_MODAL, U.Cy.SEEK_BACKWARD));
     }
@@ -388,7 +388,7 @@ function ei(e) {
         if (null == e9.current || !nc) return;
         let e = Math.min(e9.current.currentTime + 10, td);
         (tE.info(`[QV] | handleSeekForwardIncrement | newTime: ${e}`),
-            t8(e),
+            t5(e),
             eh !== j.Q6.ENDED && e >= e9.current.duration && tG(j.Q6.ENDED),
             tL(x.uF.VIDEO_MODAL, U.Cy.SEEK_FORWARD));
     }
@@ -401,23 +401,23 @@ function ei(e) {
     }, [t0]),
         l.useEffect(() => {
             function e(e) {
-                return e4.current?.(e);
+                return e3.current?.(e);
             }
             return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
         }, []));
-    let t6 = l.useCallback(
+    let t7 = l.useCallback(
             (e) => {
-                (e8(e), tV(e));
+                (e5(e), tV(e));
             },
-            [e8, tV],
+            [e5, tV],
         ),
-        t7 = l.useCallback(
+        t6 = l.useCallback(
             (e) => {
-                e6(e);
+                e7(e);
             },
-            [e6],
+            [e7],
         ),
-        t8 = l.useCallback(
+        t5 = l.useCallback(
             (e) => {
                 null != e9.current &&
                     (tE.info(`[QV] | seekTimeline | timeSec: ${e}`),
@@ -461,12 +461,12 @@ function ei(e) {
                 (tG(j.Q6.PAUSED), tu(x.Yg.LOST_FOCUS));
             },
         }));
-    let t5 = l.useRef(!1);
+    let t8 = l.useRef(!1);
     function t9() {
         if (null != e9.current)
             switch ((tE.info(`[QV] | handlePlaybackBtnClick | playerState: ${eh}`), tM(), eh)) {
                 case j.Q6.ENDED:
-                    (t8(0), tG(j.Q6.PLAYING));
+                    (t5(0), tG(j.Q6.PLAYING));
                     break;
                 case j.Q6.PLAYING:
                     (tG(j.Q6.PAUSED), tu(x.Yg.PAUSE_BUTTON));
@@ -475,7 +475,7 @@ function ei(e) {
                     tG(j.Q6.PLAYING);
             }
     }
-    let t3 = l.useCallback(() => {
+    let t4 = l.useCallback(() => {
         if (
             null == e9.current ||
             (tE.info(`[QV] | handleTracksLoaded: textTracks.length: ${e9.current.textTracks.length}`),
@@ -498,16 +498,16 @@ function ei(e) {
             }
     }, [e9, tE]);
     l.useEffect(() => {
-        if (null == e3.current) return;
-        let e = e3.current;
+        if (null == e4.current) return;
+        let e = e4.current;
         return (
-            e.addEventListener("load", t3),
+            e.addEventListener("load", t4),
             () => {
-                null != e && e.removeEventListener("load", t3);
+                null != e && e.removeEventListener("load", t4);
             }
         );
-    }, [e3, t3]);
-    let t4 = l.useCallback(
+    }, [e4, t4]);
+    let t3 = l.useCallback(
             (e) => {
                 (tE.info(
                     `[QV] | logVideoError: errorType: ${e}, videoProgress: ${e9.current?.currentTime}, videoAssetId: ${tv}, connectionSpeed: ${ew}`,
@@ -554,21 +554,21 @@ function ei(e) {
         [{ captionHeightSpring: nu }, ni] = (0, f.z)(() => ({ from: { captionHeightSpring: 0 }, config: eu }));
     (l.useEffect(
         () => (
-            ni({ captionHeightSpring: ef && null != ta ? (nl.current?.clientHeight ?? 0) : 0, immediate: e5 }),
+            ni({ captionHeightSpring: ef && null != ta ? (nl.current?.clientHeight ?? 0) : 0, immediate: e8 }),
             () => {
                 nu.stop();
             }
         ),
-        [ef, ni, e5, ta, nu],
+        [ef, ni, e8, ta, nu],
     ),
         l.useEffect(
             () => (
-                nr({ controlBarAnimSpring: tJ || eG ? 1 : 0, immediate: e5 }),
+                nr({ controlBarAnimSpring: tJ || eG ? 1 : 0, immediate: e8 }),
                 () => {
                     nn.stop();
                 }
             ),
-            [tJ, nr, e5, eG, nn],
+            [tJ, nr, e8, eG, nn],
         ));
     let ns = eh === j.Q6.ENDED,
         na = l.useMemo(() => (0, V.tW)(es, V.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [es]),
@@ -661,12 +661,12 @@ function ei(e) {
                                     null != e9.current &&
                                         (tE.info(`[QV] | handleLoadedMetadata | videoAssetId: ${tv}`),
                                         tF(null),
-                                        tv !== V.fY.VIDEO_PLAYER_VIDEO_HLS && t8(t_),
-                                        e2 ? (e9.current.volume = 0) : (e9.current.volume = e7));
+                                        tv !== V.fY.VIDEO_PLAYER_VIDEO_HLS && t5(t_),
+                                        e2 ? (e9.current.volume = 0) : (e9.current.volume = e6));
                                 },
                                 onLoadStart: function () {
                                     ((eZ.current = performance.now()),
-                                        (t5.current = !1),
+                                        (t8.current = !1),
                                         tg(ew),
                                         tE.info(`[QV] | handleLoadStart | loadingStartTime: ${eZ.current}`));
                                 },
@@ -701,19 +701,19 @@ function ei(e) {
                                 onCanPlay: nt,
                                 onCanPlayThrough: nt,
                                 onSeeked: function () {
-                                    (tE.info("[QV] | handleSeeked"), t5.current || ((t5.current = !0), tY(0)));
+                                    (tE.info("[QV] | handleSeeked"), t8.current || ((t8.current = !0), tY(0)));
                                 },
                                 onAbort: function () {
-                                    return t4(j.SB.ABORT);
+                                    return t3(j.SB.ABORT);
                                 },
                                 onError: function () {
-                                    return t4(j.SB.ERROR);
+                                    return t3(j.SB.ERROR);
                                 },
                                 onEmptied: function () {
-                                    return t4(j.SB.EMPTIED);
+                                    return t3(j.SB.EMPTIED);
                                 },
                                 onStalled: function () {
-                                    return t4(j.SB.STALLED);
+                                    return t3(j.SB.STALLED);
                                 },
                                 onClick: function () {
                                     (tE.info("[QV] | handleVideoClick"), t9());
@@ -722,7 +722,7 @@ function ei(e) {
                                 children: [
                                     null != no &&
                                         (0, r.jsx)("track", {
-                                            ref: e3,
+                                            ref: e4,
                                             src: no.url,
                                             label: "English",
                                             kind: "captions",
@@ -734,7 +734,7 @@ function ei(e) {
                                         null != tS.mimetype &&
                                         (0, r.jsx)("source", {
                                             onError: function () {
-                                                return t4(j.SB.SOURCE_ERROR);
+                                                return t3(j.SB.SOURCE_ERROR);
                                             },
                                             src: tS.url,
                                             type: tS.mimetype,
@@ -883,7 +883,7 @@ function ei(e) {
                                             isFullyVisible: tJ && e$,
                                             maxSeekableTime: tJ && e$ ? td : void 0,
                                             onClick: function (e) {
-                                                nE && (t8(e), eh === j.Q6.ENDED && tG(j.Q6.PLAYING));
+                                                nE && (t5(e), eh === j.Q6.ENDED && tG(j.Q6.PLAYING));
                                             },
                                             onScrubBack: t1,
                                             onScrubForward: t2,
@@ -925,8 +925,8 @@ function ei(e) {
                                             hidePlaybackSpeedBtn: !0,
                                             size: tf,
                                             autoFocus: $,
-                                            keyDownHandlerRef: e4,
-                                            volume: e7,
+                                            keyDownHandlerRef: e3,
+                                            volume: e6,
                                             muted: e2,
                                             transcriptEnabled: eE,
                                             captionEnabled: ef,
@@ -964,8 +964,8 @@ function ei(e) {
                                             handleSeekBackBtnClick: t1,
                                             handleSeekForwardBtnClick: t2,
                                             handleControlBarPendingInteraction: eK,
-                                            onVolumeChange: t6,
-                                            onMutedChange: t7,
+                                            onVolumeChange: t7,
+                                            onMutedChange: t6,
                                             onVolumeExpandedChange: en.FXj,
                                         }),
                                     }),

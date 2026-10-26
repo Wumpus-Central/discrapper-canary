@@ -1,39 +1,39 @@
-n.d(t, { J$: () => T, WM: () => s.WM, cZ: () => C, eG: () => f, vd: () => I, vm: () => A, zh: () => _, zv: () => E });
+n.d(t, { J$: () => C, WM: () => s.WM, cZ: () => _, eG: () => A, vd: () => I, vm: () => T, zh: () => E, zv: () => f });
 var r = n(544180),
-    u = n(396813),
-    i = n(859703),
-    o = n(405670),
-    l = n(561844),
+    u = n(427495),
+    l = n(859703),
+    i = n(405670),
+    o = n(561844),
     s = n(546121),
     a = n(977416),
     c = n(792620),
     d = n(652215);
-function E(e, t) {
+function f(e, t) {
     (0, a.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, u.uI)(e.id, t);
 }
 n(105292);
-function f(e) {
+function A(e) {
     let t = e.assets.video;
     return null == t || null == t.width || null == t.height || t.width > t.height ? "landscape" : "portrait";
 }
-function _(e, t) {
+function E(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function A(e) {
+function T(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: u } = e;
-    o.Ay.getState().setTranscriptEnabled(!1);
-    let s = o.Ay.getState().getVideoProgress(t);
+    i.Ay.getState().setTranscriptEnabled(!1);
+    let s = i.Ay.getState().getVideoProgress(t);
     if (null == s) return;
-    let a = i.A.getQuest(t);
-    null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && E(a, s.maxTimestampSec);
-    let c = _(s.maxTimestampSec, s.duration);
-    ((0, l.av)({
+    let a = l.A.getQuest(t);
+    null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && f(a, s.maxTimestampSec);
+    let c = E(s.maxTimestampSec, s.duration);
+    ((0, o.av)({
         questId: t,
         event: d.HAw.QUEST_VIDEO_PROGRESSED,
         properties: { progress: c, video_timestamp_seconds: s.maxTimestampSec, video_session_id: u },
         sourceQuestContent: n,
     }),
-        (0, l.av)({
+        (0, o.av)({
             questId: t,
             event: d.HAw.QUEST_VIDEO_MODAL_CLOSED,
             properties: {
@@ -44,12 +44,12 @@ function A(e) {
             sourceQuestContent: n,
         }));
 }
-function C(e) {
+function _(e) {
     return `VIDEO-QUEST-${e}`;
 }
 function I(e, t) {
     return e >= t - 1 ? Math.max(e, t) : e;
 }
-function T(e) {
-    return !!(0, c.vv)(e) && (0, n(192308).hasModalOpen)(C(e.id));
+function C(e) {
+    return !!(0, c.vv)(e) && (0, n(192308).hasModalOpen)(_(e.id));
 }
