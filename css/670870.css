@@ -101,37 +101,4 @@
     margin: -17px -17px 16px
 }
 
-.tabBar__4efb4 {
-    margin-bottom: -2px;
-    padding-top: 1px
-}
-
-.tabBarItem__4efb4 {
-    border-bottom: 2px solid transparent;
-    font-size: 14px;
-    margin-inline-end: 40px;
-    padding-bottom: 16px
-}
-
-.container__4efb4 {
-    border-bottom: 1px solid var(--border-subtle);
-    display: flex;
-    margin-inline: calc(var(--space-24)*-1);
-    padding-bottom: 1px;
-    padding-top: 16px;
-    padding-inline-start: var(--space-24)
-}
-
-&.full-motion .closeIconBanner__4efb4 {
-    transition: background-color .2s ease
-}
-
-.enable-forced-colors .tabBar__4efb4 {
-    margin-bottom: 0
-}
-
-.enable-forced-colors .tabBarItem__4efb4 {
-    margin-inline-end: 32px
-}
-
-/*# sourceMappingURL=489565.7a703e82b85a08e7.css.map*/
+/*# sourceMappingURL=670870.fba13a98b9e8c82e.css.map*/
