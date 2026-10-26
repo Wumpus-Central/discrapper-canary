@@ -21550,7 +21550,7 @@ function jV() {
           });
 }
 var jz = n(305866),
-    jY = n(375484),
+    jY = n(342073),
     jW = n(983851),
     jK = n(191023),
     jX = n(878678),
@@ -21809,7 +21809,7 @@ function fr(e) {
         h = null != d || null != c,
         [E, j] = R.useState(!1),
         f = (0, j0.v)(t, s.id),
-        N = (0, j$._)("GuildSettingsSoundboard") ? jY.G : jW.H;
+        N = (0, j$._)("GuildSettingsSoundboard") ? jY.L : jW.H;
     async function A() {
         if (!E) {
             j(!0);

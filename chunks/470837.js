@@ -4078,7 +4078,7 @@ var aa = n(403581),
     aE = n(265872),
     ah = n(305866),
     ax = n(22231),
-    aS = n(375484),
+    aS = n(342073),
     ap = n(927578),
     aT = n(792348),
     af = n(674168),
@@ -4131,7 +4131,7 @@ function ab(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, aT.A)(t, null),
         i = (0, am.wH)(),
-        s = (0, aI._)("SoundPreviewButton") ? aS.G : ao.H,
+        s = (0, aI._)("SoundPreviewButton") ? aS.L : ao.H,
         l =
             0 === i
                 ? V.intl.string(V.t.OASXjt)
@@ -4148,7 +4148,7 @@ function av(e) {
         l = t?.emojiId,
         r = t?.emojiName,
         a = s && (null != r || null != l),
-        o = (0, aI._)("SoundboardCustomCallSoundSettingsPreview") ? aS.G : ao.H;
+        o = (0, aI._)("SoundboardCustomCallSoundSettingsPreview") ? aS.L : ao.H;
     return (0, T.jsxs)("div", {
         className: aC.D6,
         children: [
