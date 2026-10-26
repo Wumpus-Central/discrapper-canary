@@ -5,4 +5,5 @@ var i,
         (i[(i.DESIGN_IA = 1)] = "DESIGN_IA"),
         (i[(i.DESIGN_TABS_IA = 2)] = "DESIGN_TABS_IA"),
         (i[(i.YOU_BAR_IA = 3)] = "YOU_BAR_IA"),
+        (i[(i.PHOENIX = 4)] = "PHOENIX"),
         i);
