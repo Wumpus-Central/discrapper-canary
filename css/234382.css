@@ -778,6 +778,36 @@
     width: 100%
 }
 
+.stat__1fc03 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.number__1fc03 {
+    min-width: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.text__1fc03 {
+    font-family: Munro, sans-serif;
+    font-size: 179.2px;
+    line-height: 200px;
+    white-space: nowrap
+}
+
+.measure__1fc03 {
+    position: absolute;
+    visibility: hidden
+}
+
+.globe__1fc03 {
+    flex-shrink: 0;
+    height: 112px;
+    width: 150px
+}
+
 .visibleCanvas__0b8f7 {
     width: 100%
 }
@@ -1800,4 +1830,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=418880.7412741d0613db61.css.map*/
+/*# sourceMappingURL=234382.343308bc2f788a2c.css.map*/
