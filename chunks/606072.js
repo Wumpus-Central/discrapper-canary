@@ -6,8 +6,8 @@ var n,
     r = l(419954),
     d = l(885386),
     c = l(533440),
-    u = l(641216),
-    o = l(153488),
+    o = l(641216),
+    u = l(153488),
     m = l(71393),
     x = l(115063),
     f = l(652215);
@@ -29,16 +29,16 @@ function p() {
     h = null;
 }
 function j() {
-    o.A.fetchedConsents || null != h || (h = (0, a.Q)().then(p, p));
+    u.A.fetchedConsents || null != h || (h = (0, a.Q)().then(p, p));
 }
 var v = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
 function _(e) {
     i.useEffect(j, []);
     let t = d.tz.useSetting(),
         l = !d.JG.useSetting().includes(e),
-        { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([o.A], () => ({
-            hasFetchedConsents: o.A.fetchedConsents,
-            hasPersonalizationConsent: o.A.hasConsented(f.YAq.PERSONALIZATION),
+        { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([u.A], () => ({
+            hasFetchedConsents: u.A.fetchedConsents,
+            hasPersonalizationConsent: u.A.hasConsented(f.YAq.PERSONALIZATION),
         })),
         r = null,
         c = !t || !l;
@@ -59,7 +59,7 @@ function A(e) {
     return (
         ("activity_sharing" === n || "all" === n) &&
             (i.push(c._), i.push(g(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
-        ("personalization" === n || "all" === n) && i.push(u._),
+        ("personalization" === n || "all" === n) && i.push(o._),
         i
     );
 }

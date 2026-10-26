@@ -1,24 +1,24 @@
-n.d(t, { L4: () => d, O0: () => o, sF: () => a });
-var i = n(636537),
-    l = n(73153),
-    s = n(913122),
-    r = n(652215);
-function a(e) {
-    l.h.dispatch({ type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId: e });
+_.d(E, { L4: () => i, O0: () => e, sF: () => a });
+var c = _(636537),
+    h = _(73153),
+    r = _(913122),
+    s = _(652215);
+function a(t) {
+    h.h.dispatch({ type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId: t });
 }
-async function o(e) {
-    l.h.dispatch({ type: "MEDIA_POST_EMBED_FETCH", threadId: e });
+async function e(t) {
+    h.h.dispatch({ type: "MEDIA_POST_EMBED_FETCH", threadId: t });
     try {
-        let t = (await i.Bo.get({ url: r.Rsh.MEDIA_POST_RESHARE_GET_PREVIEW(e), rejectWithError: !0 })).body;
-        l.h.dispatch({ type: "MEDIA_POST_EMBED_FETCH_SUCCESS", threadId: e, mediaPostEmbed: t });
-    } catch (t) {
-        l.h.dispatch({ type: "MEDIA_POST_EMBED_FETCH_FAILURE", threadId: e });
+        let E = (await c.Bo.get({ url: s.Rsh.MEDIA_POST_RESHARE_GET_PREVIEW(t), rejectWithError: !0 })).body;
+        h.h.dispatch({ type: "MEDIA_POST_EMBED_FETCH_SUCCESS", threadId: t, mediaPostEmbed: E });
+    } catch (E) {
+        h.h.dispatch({ type: "MEDIA_POST_EMBED_FETCH_FAILURE", threadId: t });
     }
 }
-async function d(e) {
+async function i(t) {
     try {
-        return (await i.Bo.post({ url: r.Rsh.UNFURL_EMBED_URLS, body: { urls: e }, rejectWithError: !1 })).body;
-    } catch (e) {
-        throw new s.LG(e);
+        return (await c.Bo.post({ url: s.Rsh.UNFURL_EMBED_URLS, body: { urls: t }, rejectWithError: !1 })).body;
+    } catch (t) {
+        throw new r.LG(t);
     }
 }

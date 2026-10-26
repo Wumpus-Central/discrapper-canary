@@ -27,10 +27,10 @@ function A(e) {
     r.useEffect(() => {
         I && (0, p.A)(t);
     }, [I, t]);
-    let P = r.useCallback(() => {
+    let k = r.useCallback(() => {
             ((L.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), x(), c(!1), C(!1));
         }, [x, c]),
-        k = r.useCallback(
+        N = r.useCallback(
             (e, t) => {
                 let n = L.current;
                 ((n[e] = t),
@@ -45,36 +45,36 @@ function A(e) {
             return (
                 e.addEventListener("mouseenter", t),
                 e.addEventListener("mouseleave", n),
-                e.addEventListener("mousedown", P),
+                e.addEventListener("mousedown", k),
                 u && (e.addEventListener("focus", l), e.addEventListener("blur", r)),
                 () => {
                     (e.removeEventListener("mouseenter", t),
                         e.removeEventListener("mouseleave", n),
-                        e.removeEventListener("mousedown", P),
+                        e.removeEventListener("mousedown", k),
                         e.removeEventListener("focus", l),
                         e.removeEventListener("blur", r),
-                        P());
+                        k());
                 }
             );
         function t() {
-            (j(!0), k("targetHovered", !0));
+            (j(!0), N("targetHovered", !0));
         }
         function n(e) {
             if ((0, s.vq)(e.relatedTarget, Node) && H.current?.contains(e.relatedTarget) === !0) {
                 L.current.targetHovered = !1;
                 return;
             }
-            k("targetHovered", !1);
+            N("targetHovered", !1);
         }
         function l() {
-            e?.matches(":focus-visible") === !0 && (j(!0), k("targetFocused", !0));
+            e?.matches(":focus-visible") === !0 && (j(!0), N("targetFocused", !0));
         }
         function r() {
-            k("targetFocused", !1);
+            N("targetFocused", !1);
         }
-    }, [a, u, o, k, P]);
-    let N = r.useCallback(() => k("cardHovered", !0), [k]),
-        b = r.useCallback(() => k("cardHovered", !1), [k]);
+    }, [a, u, o, N, k]);
+    let P = r.useCallback(() => N("cardHovered", !0), [N]),
+        b = r.useCallback(() => N("cardHovered", !1), [N]);
     return h
         ? (0, l.jsx)(E, {
               ...i,
@@ -84,9 +84,9 @@ function A(e) {
               isHovered: d,
               isPointerOver: A,
               cardRef: H,
-              onCardEnter: N,
+              onCardEnter: P,
               onCardLeave: b,
-              onClose: P,
+              onClose: k,
           })
         : null;
 }

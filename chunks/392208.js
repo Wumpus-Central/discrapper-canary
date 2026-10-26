@@ -1,2 +1,2 @@
-l.d(t, { P: () => n });
-let n = ["simple", "balanced", "complex"];
+n.d(t, { P: () => l });
+let l = ["simple", "balanced", "complex"];

@@ -1,20 +1,20 @@
-l.d(t, { QP: () => s, dv: () => u, h_: () => o, oV: () => d });
-var n = l(248675),
-    a = l(105292);
+n.d(t, { QP: () => s, dv: () => u, h_: () => o, oV: () => d });
+var l = n(248675),
+    a = n(105292);
 let i = {
         enable: ["sandbox", "files", "packages", "prepare", "build", "server", "reload"],
         disable: ["snapshot", "stopping", "reload"],
     },
     r = {
-        sandbox: n.default.wYBwzU,
-        files: n.default["5hvVF1"],
-        packages: n.default.DKR23W,
-        prepare: n.default.qc4VkW,
-        build: n.default.ZcJIE6,
-        server: n.default.mAXkyS,
-        stopping: n.default.dI8HGD,
-        snapshot: n.default.E3ZRQo,
-        reload: n.default.ZWcCXh,
+        sandbox: l.default.wYBwzU,
+        files: l.default["5hvVF1"],
+        packages: l.default.DKR23W,
+        prepare: l.default.qc4VkW,
+        build: l.default.ZcJIE6,
+        server: l.default.mAXkyS,
+        stopping: l.default.dI8HGD,
+        snapshot: l.default.E3ZRQo,
+        reload: l.default.ZWcCXh,
     };
 function u(e) {
     return "starting" === e ? "enable" : "stopping" === e || "building" === e ? "disable" : null;
@@ -23,31 +23,31 @@ function s(e, t) {
     return "live" === e ? "enable" : "idle" === e || ("error" === e && "disable" === t) ? "disable" : null;
 }
 function o(e, t) {
-    let l,
+    let n,
         s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         o = u(e),
         d = o ?? s;
     if (null == d) return null;
-    l = null == o ? "reload" : "starting" === e ? t : "stopping" === e ? "stopping" : "snapshot";
+    n = null == o ? "reload" : "starting" === e ? t : "stopping" === e ? "stopping" : "snapshot";
     let c = i[d];
     return {
         direction: d,
-        title: a.intl.string("enable" === d ? n.default.NeoP8L : n.default["3+DCLs"]),
-        stepLabel: null == l ? null : a.intl.string(r[l]),
-        stepIndex: null == l ? 0 : Math.max(0, c.indexOf(l)),
+        title: a.intl.string("enable" === d ? l.default.NeoP8L : l.default["3+DCLs"]),
+        stepLabel: null == n ? null : a.intl.string(r[n]),
+        stepIndex: null == n ? 0 : Math.max(0, c.indexOf(n)),
         stepCount: c.length,
     };
 }
 function d(e) {
-    let t = a.intl.string(n.default.xjblZt);
+    let t = a.intl.string(l.default.xjblZt);
     if ("error" === e.phase || (null == e.phase && null != e.error))
-        return a.intl.formatToPlainString(e.enabled ? n.default["9YJAIN"] : n.default.JUqlqE, { error: e.error ?? "" });
-    let l = o(e.phase, e.step);
-    return null != l
-        ? null == l.stepLabel
-            ? l.title
-            : `${l.title} \xb7 ${l.stepLabel}`
+        return a.intl.formatToPlainString(e.enabled ? l.default["9YJAIN"] : l.default.JUqlqE, { error: e.error ?? "" });
+    let n = o(e.phase, e.step);
+    return null != n
+        ? null == n.stepLabel
+            ? n.title
+            : `${n.title} \xb7 ${n.stepLabel}`
         : "idle" === e.phase && e.enabled
-          ? `${a.intl.string(n.default.gCey7s)} \xb7 ${t}`
+          ? `${a.intl.string(l.default.gCey7s)} \xb7 ${t}`
           : t;
 }

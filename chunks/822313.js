@@ -1,13 +1,13 @@
-l.d(t, { A: () => a });
-var n = l(582128);
+n.d(t, { A: () => a });
+var l = n(582128);
 function a(e, t) {
-    let [l, a] = n.useState(null),
-        [i, r] = n.useState(e);
+    let [n, a] = l.useState(null),
+        [i, r] = l.useState(e);
     return (
         e !== i && (r(e), a(null)),
         [
-            l ?? e,
-            n.useCallback(
+            n ?? e,
+            l.useCallback(
                 (e) => {
                     (a(e), t(e));
                 },

@@ -3,8 +3,8 @@ var r = n(17928),
     s = n(73153),
     o = n(242779);
 (n(134528), n(947204));
-let i = { pending: !1, info: null, error: null, observedAt: null },
-    l = { phase: "idle" },
+let l = { pending: !1, info: null, error: null, observedAt: null },
+    i = { phase: "idle" },
     a = [],
     c = new Map(),
     d = new Map(),
@@ -14,10 +14,10 @@ let i = { pending: !1, info: null, error: null, observedAt: null },
     _ = new Map(),
     f = new Map(),
     g = new Map(),
-    S = new Map(),
     E = new Map(),
+    S = new Map(),
     m = new Map();
-class O extends r.Ay.Store {
+class y extends r.Ay.Store {
     getStatus(e) {
         return c.get(e) ?? null;
     }
@@ -28,10 +28,10 @@ class O extends r.Ay.Store {
         return g.get(e) ?? null;
     }
     getLastTurnUsage(e) {
-        return E.get(e) ?? null;
+        return S.get(e) ?? null;
     }
     getLastCompactionDecline(e) {
-        return S.get(e) ?? null;
+        return E.get(e) ?? null;
     }
     getForceCompactionState(e) {
         return u.get(e) ?? "idle";
@@ -40,10 +40,10 @@ class O extends r.Ay.Store {
         return p.get(e) ?? "idle";
     }
     getGitInfoState(e) {
-        return h.get(e) ?? i;
+        return h.get(e) ?? l;
     }
     getRestartAgentState(e) {
-        return _.get(e) ?? l;
+        return _.get(e) ?? i;
     }
     getInstancePollRequestedAt(e) {
         return f.get(e) ?? null;
@@ -55,14 +55,14 @@ class O extends r.Ay.Store {
         return m.get(e)?.find((e) => e.id === t) ?? null;
     }
 }
-function y(e, t, n) {
+function O(e, t, n) {
     let r = _.get(e);
     r?.phase === "restarting" &&
         null != t &&
         t !== r.instanceSince &&
         _.set(e, { phase: "restarted", instanceSince: t, observedAt: n });
 }
-let b = new O(s.h, {
+let b = new y(s.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
@@ -73,8 +73,8 @@ let b = new O(s.h, {
             0 === _.size &&
             0 === f.size &&
             0 === g.size &&
-            0 === S.size &&
             0 === E.size &&
+            0 === S.size &&
             0 === m.size
         )
             return !1;
@@ -86,8 +86,8 @@ let b = new O(s.h, {
             _.clear(),
             f.clear(),
             g.clear(),
-            S.clear(),
             E.clear(),
+            S.clear(),
             m.clear());
     },
     CONJURE_DEBUG_STATUS_REQUESTED: function (e) {
@@ -113,9 +113,9 @@ let b = new O(s.h, {
             });
         let o = "loading" === d.get(t);
         o && d.set(t, "failed");
-        let i = h.get(t),
-            l = i?.pending === !0;
-        (l && h.set(t, { ...i, pending: !1, error: "Connection lost before the worker answered" }), f.delete(t));
+        let l = h.get(t),
+            i = l?.pending === !0;
+        (i && h.set(t, { ...l, pending: !1, error: "Connection lost before the worker answered" }), f.delete(t));
         let a = _.get(t)?.phase === "pending";
         if (
             (a &&
@@ -124,7 +124,7 @@ let b = new O(s.h, {
                     reason: "Connection lost before the worker answered",
                     observedAt: new Date().toISOString(),
                 }),
-            !r && !s && !o && !l && !a)
+            !r && !s && !o && !i && !a)
         )
             return !1;
     },
@@ -142,7 +142,7 @@ let b = new O(s.h, {
         });
     },
     CONJURE_DEBUG_COMPACTION_DECLINED: function (e) {
-        S.set(e.projectId, {
+        E.set(e.projectId, {
             promptCeiling: e.promptCeiling,
             threshold: e.threshold,
             projected: e.projected,
@@ -173,18 +173,18 @@ let b = new O(s.h, {
     },
     CONJURE_DEBUG_GIT_INFO_REQUESTED: function (e) {
         let { projectId: t } = e;
-        h.set(t, { ...(h.get(t) ?? i), pending: !0 });
+        h.set(t, { ...(h.get(t) ?? l), pending: !0 });
     },
     CONJURE_DEBUG_GIT_INFO_RESULT: function (e) {
         let { projectId: t, info: n, error: r, instanceSince: s, observedAt: o } = e,
-            l = h.get(t) ?? i;
+            i = h.get(t) ?? l;
         (h.set(
             t,
             null != n
                 ? { pending: !1, info: n, error: null, observedAt: o }
-                : { ...l, pending: !1, error: r ?? "No answer", observedAt: o },
+                : { ...i, pending: !1, error: r ?? "No answer", observedAt: o },
         ),
-            y(t, s, o));
+            O(t, s, o));
     },
     CONJURE_DEBUG_INSTANCE_POLL_REQUESTED: function (e) {
         let { projectId: t, requestedAt: n } = e;
@@ -192,7 +192,7 @@ let b = new O(s.h, {
     },
     CONJURE_DEBUG_INSTANCE_SEEN: function (e) {
         let { projectId: t, instanceSince: n, observedAt: r } = e;
-        (f.delete(t), y(t, n, r));
+        (f.delete(t), O(t, n, r));
     },
     CONJURE_RESTART_AGENT_REQUESTED: function (e) {
         let { projectId: t } = e;
@@ -200,12 +200,12 @@ let b = new O(s.h, {
     },
     CONJURE_RESTART_AGENT_RESULT: function (e) {
         let { projectId: t, outcome: n, reason: r, instanceSince: s, observedAt: o } = e,
-            i = _.get(t)?.phase;
+            l = _.get(t)?.phase;
         if ("restarting" === n) {
-            if ("pending" !== i) return !1;
+            if ("pending" !== l) return !1;
             _.set(t, { phase: "restarting", instanceSince: s ?? null, startedAt: Date.parse(o) });
         } else if ("timed_out" === n) {
-            if ("restarting" !== i) return !1;
+            if ("restarting" !== l) return !1;
             _.set(t, { phase: "failed", reason: r ?? "No new agent instance answered in time", observedAt: o });
         } else _.set(t, { phase: "failed", reason: r ?? "no reason given", observedAt: o });
     },
@@ -213,7 +213,7 @@ let b = new O(s.h, {
         let { projectId: t, batch: n, live: r } = e,
             s = m.get(t) ?? [],
             o = s.find((e) => e.id === n.trace_id) ?? null,
-            i = s
+            l = s
                 .filter((e) => e !== o)
                 .concat(
                     (function (e, t, n) {
@@ -255,12 +255,12 @@ let b = new O(s.h, {
                 .sort((e, t) => t.started_at + t.as_of - (e.started_at + e.as_of))
                 .slice(0, 100)
                 .sort((e, t) => e.started_at - t.started_at);
-        m.set(t, i);
+        m.set(t, l);
     },
     CONJURE_CHAT_USAGE_SET: function (e) {
         let { projectId: t, turn: n } = e;
         if (0 === (0, o.aM)(n.total)) return !1;
-        E.set(t, n);
+        S.set(t, n);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
@@ -272,8 +272,8 @@ let b = new O(s.h, {
             _.delete(t),
             f.delete(t),
             g.delete(t),
-            S.delete(t),
             E.delete(t),
+            S.delete(t),
             m.delete(t));
     },
 });

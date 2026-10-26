@@ -19,15 +19,15 @@ var l = n(477900),
     v = n(730134),
     _ = n(287809),
     b = n(427262),
-    A = n(248675),
-    y = n(105292),
+    y = n(248675),
+    A = n(105292),
     N = n(59678);
 function w(e) {
     let { userId: t } = e,
         n = (0, j.bG)([_.default], () => _.default.getUser(t), [t]),
         a = (0, b.tx)(n);
     if (null == n || null == a) return null;
-    let r = y.intl.formatToPlainString(A.default["664n2O"], { name: a });
+    let r = A.intl.formatToPlainString(y.default["664n2O"], { name: a });
     return (0, l.jsx)(c.m, {
         text: r,
         ariaHidden: !0,
@@ -54,9 +54,9 @@ function C(e) {
         P = i()(N.iq, { [E.Hz]: f && C }),
         T = "detail" === r ? "text-md/normal" : "text-sm/normal",
         D = "detail" === r ? "text-sm/normal" : "text-xs/normal",
-        F = null != t ? n.screenshots : [],
-        G = null != t ? n.attachments : [];
-    if (0 === _.length && 0 === F.length && 0 === G.length)
+        G = null != t ? n.screenshots : [],
+        F = null != t ? n.attachments : [];
+    if (0 === _.length && 0 === G.length && 0 === F.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
@@ -81,7 +81,7 @@ function C(e) {
                 className: N.kG,
                 "aria-expanded": h,
                 "aria-controls": j,
-                "aria-label": y.intl.formatToPlainString(A.default["KE1KI+"], { step: v }),
+                "aria-label": A.intl.formatToPlainString(y.default["KE1KI+"], { step: v }),
                 onClick: k,
                 children: [
                     (0, l.jsx)(s.E, {
@@ -137,13 +137,13 @@ function C(e) {
                             t,
                         );
                     }),
-                    null != t && F.length > 0
+                    null != t && G.length > 0
                         ? (0, l.jsx)("div", {
                               className: N.y8,
-                              children: F.map((e) => (0, l.jsx)(M, { projectId: t, screenshotId: e }, e)),
+                              children: G.map((e) => (0, l.jsx)(M, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
-                    null != t && G.length > 0 ? (0, l.jsx)(x.A, { projectId: t, attachments: G }) : null,
+                    null != t && F.length > 0 ? (0, l.jsx)(x.A, { projectId: t, attachments: F }) : null,
                 ],
             }),
         ],
@@ -170,7 +170,7 @@ function M(e) {
             }
         );
     }, [t, n]);
-    let d = y.intl.string(A.default["5kjnI/"]),
+    let d = A.intl.string(y.default["5kjnI/"]),
         o = a.useCallback(() => {
             (0, g.aF)(t, n).then((e) => {
                 (0, f.R)({

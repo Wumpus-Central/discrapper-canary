@@ -6,8 +6,8 @@ var n = l(477900),
     r = l(834730),
     d = l(821609),
     c = l(61567),
-    u = l(105292),
-    o = l(146108);
+    o = l(105292),
+    u = l(146108);
 function m(e) {
     let { onPublish: t } = e,
         [l, m] = i.useState(!1),
@@ -15,7 +15,7 @@ function m(e) {
         g = i.useCallback(async () => {
             (m(!0), f(!1));
             try {
-                (await t(), s.O.announce(u.intl.string(c.default.pDzipI)));
+                (await t(), s.O.announce(o.intl.string(c.default.pDzipI)));
             } catch {
                 f(!0);
             } finally {
@@ -23,27 +23,27 @@ function m(e) {
             }
         }, [t]);
     return (0, n.jsxs)("div", {
-        className: o.lm,
+        className: u.lm,
         children: [
-            (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: o.Kk }),
+            (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
             x
                 ? (0, n.jsx)(r.E, {
                       variant: "text-sm/medium",
                       color: "text-feedback-critical",
-                      className: o.iU,
+                      className: u.iU,
                       role: "alert",
-                      children: u.intl.string(u.t.F8FvUy),
+                      children: o.intl.string(o.t.F8FvUy),
                   })
                 : (0, n.jsx)(r.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
-                      className: o.iU,
-                      children: u.intl.string(c.default.Z2z85q),
+                      className: u.iU,
+                      children: o.intl.string(c.default.Z2z85q),
                   }),
             (0, n.jsx)(d.$, {
                 variant: "secondary",
                 size: "sm",
-                text: u.intl.string(c.default["yul+0g"]),
+                text: o.intl.string(c.default["yul+0g"]),
                 loading: l,
                 onClick: g,
             }),

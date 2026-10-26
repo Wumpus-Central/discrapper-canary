@@ -17,9 +17,9 @@ function u(e) {
             drawWidth: m,
             className: f,
             "aria-label": h,
-            onStateChange: p,
+            onStateChange: g,
         } = e,
-        g = r.useRef(null),
+        p = r.useRef(null),
         x = r.useRef(null),
         v = r.useRef(null),
         [j, b] = r.useState(!1),
@@ -28,7 +28,7 @@ function u(e) {
             async (e) => {
                 let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
-                    let r = g.current,
+                    let r = p.current,
                         a = r?.getContext("2d");
                     if (null == r || null == a || !(0, i.j_)(t, n, e)) return;
                     ((r.width !== l.width || r.height !== l.height) && ((r.width = l.width), (r.height = l.height)),
@@ -49,14 +49,14 @@ function u(e) {
     (r.useEffect(() => {
         if (S.current === A) return;
         ((S.current = A), (x.current = null), b(!1));
-        let e = g.current;
+        let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [A]),
         r.useEffect(() => {
-            p?.(C, j);
-        }, [C, j, p]),
+            g?.(C, j);
+        }, [C, j, g]),
         r.useEffect(() => {
-            c && g.current?.focus();
+            c && p.current?.focus();
         }, [c]));
     let E = r.useRef(new Map());
     function I(e) {
@@ -116,7 +116,7 @@ function u(e) {
         };
     }
     return (0, l.jsx)("canvas", {
-        ref: g,
+        ref: p,
         className: f,
         role: c ? "application" : "img",
         "aria-label": h,

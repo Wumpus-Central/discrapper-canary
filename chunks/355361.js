@@ -1,1 +1,1 @@
-_.exports = { p: "iframe__8c55d" };
+p.exports = { p: "iframe__8c55d" };

@@ -33,8 +33,8 @@ function g(e) {
         v = (0, s.SY)(n),
         _ = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), k),
         b = x ? void 0 : g,
-        A = null != b ? (0, i.nY)(b) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
-        y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+        y = null != b ? (0, i.nY)(b) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
+        A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
             asset: (0, l.jsx)(o.A, { size: 32 }),
@@ -44,12 +44,12 @@ function g(e) {
             position: "left",
             children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.A, {}) }),
         }),
-        line: A,
+        line: y,
         anchor: !0,
         live: x,
         settled: null != b || (!x && j),
         connectsDown: p,
-        detail: y
+        detail: A
             ? (0, l.jsx)("ol", {
                   className: f.dO,
                   children: n.map((e) =>

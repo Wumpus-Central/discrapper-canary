@@ -86,7 +86,7 @@ function m(e, t) {
         let a = {
             projectId: e,
             sessionId: t,
-            startedAt: p(e, t),
+            startedAt: g(e, t),
             subscribers: new Set(),
             socket: null,
             socketKey: null,
@@ -113,10 +113,10 @@ function f(e, t) {
 function h(e, t) {
     if (e.controlState !== t) for (let n of ((e.controlState = t), e.controlListeners)) n(t);
 }
-function p(e, t) {
+function g(e, t) {
     return i.A.getSessions(e).find((e) => e.id === t)?.started_at ?? null;
 }
-function g(e) {
+function p(e) {
     (e.backoff.cancel(),
         e.socket?.close(),
         (e.socket = null),
@@ -125,7 +125,7 @@ function g(e) {
 }
 function x(e) {
     if (0 === e.subscribers.size || null == e.startedAt || c.has(e.projectId)) {
-        (g(e), f(e, "connecting"));
+        (p(e), f(e, "connecting"));
         return;
     }
     let t = [...e.subscribers],
@@ -134,7 +134,7 @@ function x(e) {
         r = e.control ? "control" : "view",
         a = `${r}:${n}:${l}`;
     if (e.socketKey === a && (null != e.socket || e.backoff.pending)) return;
-    (g(e), (e.socketKey = a));
+    (p(e), (e.socketKey = a));
     let i = new u({
         projectId: e.projectId,
         sessionId: e.sessionId,
@@ -155,9 +155,9 @@ function x(e) {
         },
         onClosed: (t) => {
             if (e.socket !== i) return;
-            if ((g(e), 4403 === t))
+            if ((p(e), 4403 === t))
                 return void (function (e) {
-                    for (let t of (c.add(e), d.values())) t.projectId === e && (g(t), v(t), f(t, "connecting"));
+                    for (let t of (c.add(e), d.values())) t.projectId === e && (p(t), v(t), f(t, "connecting"));
                 })(e.projectId);
             let n = 4409 === t && e.control;
             (n && ((e.control = !1), e.backoff.succeed(), h(e, "denied")),
@@ -249,9 +249,9 @@ function C(e, t, n) {
 }
 (i.A.addChangeListener(function () {
     for (let e of d.values()) {
-        let t = p(e.projectId, e.sessionId);
+        let t = g(e.projectId, e.sessionId);
         if (t !== e.startedAt) {
-            if (((e.startedAt = t), g(e), null == t)) {
+            if (((e.startedAt = t), p(e), null == t)) {
                 v(e);
                 continue;
             }

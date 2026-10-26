@@ -1,30 +1,30 @@
-n.d(t, { Du: () => u, Fc: () => l, MN: () => d, Rd: () => i, fi: () => c });
+n.d(t, { Du: () => u, Fc: () => i, MN: () => d, Rd: () => l, fi: () => c });
 var r = n(975189),
     s = n(303345);
 let o = new Map(),
-    i = {
+    l = {
         publish_schedule(e, t) {
             let { schedule: n, error: r } = e,
-                { projectId: i } = t,
-                l = o.get(i);
-            null != l && (o.delete(i), clearTimeout(l.timeout), null != r ? l.reject(new s.A(r)) : l.resolve(n));
+                { projectId: l } = t,
+                i = o.get(l);
+            null != i && (o.delete(l), clearTimeout(i.timeout), null != r ? i.reject(new s.A(r)) : i.resolve(n));
         },
     };
-function l(e) {
+function i(e) {
     let t = o.get(e);
     null != t && (o.delete(e), clearTimeout(t.timeout), t.reject(Error("Publishing schedule response unavailable")));
 }
 function a(e, t) {
     return new Promise((n, s) => {
         if (o.has(e)) return void s(Error("Publishing schedule request already pending"));
-        let i = setTimeout(() => l(e), 15e3);
-        o.set(e, { resolve: n, reject: s, timeout: i });
+        let l = setTimeout(() => i(e), 15e3);
+        o.set(e, { resolve: n, reject: s, timeout: l });
         try {
             let n = (0, r.KY)(e);
             if (null == n) throw Error("Not connected");
             n.sendPublishScheduleMessage(t);
         } catch {
-            l(e);
+            i(e);
         }
     });
 }

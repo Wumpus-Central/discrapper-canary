@@ -24,11 +24,11 @@ function x(e) {
             anchor: v = !1,
         } = e,
         [_, b] = a.useState(!1),
-        A = a.useRef(null);
+        y = a.useRef(null);
     a.useLayoutEffect(() => {
-        r && A.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
+        r && y.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [r]);
-    let y = a.useId(),
+    let A = a.useId(),
         N = a.useCallback(() => b((e) => !e), []),
         { text: w, phase: S } = (0, c.Q)(n),
         E = _ ? s.a : u._,
@@ -59,7 +59,7 @@ function x(e) {
             ],
         });
     return (0, l.jsxs)("li", {
-        ref: A,
+        ref: y,
         className: h.K1,
         "data-live": r,
         "data-settled": x,
@@ -73,13 +73,13 @@ function x(e) {
                       tag: "div",
                       className: i()(h.ep, h.EK),
                       "aria-expanded": _,
-                      "aria-controls": y,
+                      "aria-controls": A,
                       "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: w }),
                       onClick: N,
                       children: M,
                   })
                 : (0, l.jsx)("div", { className: h.ep, children: M }),
-            (0, l.jsx)("div", { id: y, hidden: !_, "data-conjure-entrance": !0, className: h.BA, children: p }),
+            (0, l.jsx)("div", { id: A, hidden: !_, "data-conjure-entrance": !0, className: h.BA, children: p }),
         ],
     });
 }

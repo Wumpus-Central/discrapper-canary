@@ -1,9 +1,9 @@
-n.d(t, { PI: () => E, WT: () => S, _t: () => m, kA: () => f, t6: () => g, x9: () => _ });
+n.d(t, { PI: () => S, WT: () => E, _t: () => m, kA: () => f, t6: () => g, x9: () => _ });
 var r = n(582128),
     s = n(17928),
     o = n(73153),
-    i = n(975189),
-    l = n(569319);
+    l = n(975189),
+    i = n(569319);
 let a = [],
     c = new Map(),
     d = new Map();
@@ -49,18 +49,18 @@ let h = new p(o.h, {
         },
     };
 function f(e, t, n) {
-    if ((0, i.b4)(e, "host approval", (e) => e.sendHostAccess({ type: "host_approval_answer", id: t, answer: n }))) {
+    if ((0, l.b4)(e, "host approval", (e) => e.sendHostAccess({ type: "host_approval_answer", id: t, answer: n }))) {
         let n = h.getApprovals(e).filter((e) => e.id !== t);
         o.h.dispatch({ type: "CONJURE_HOST_APPROVALS_SET", projectId: e, asks: n });
     }
 }
 function g(e, t) {
-    return (0, i.b4)(e, "allowed hosts", (e) => e.sendHostAccess({ type: "set_host_access", remove_host: t }));
-}
-function S(e) {
-    return (0, s.bG)([h], () => h.getApprovals(e), [e]);
+    return (0, l.b4)(e, "allowed hosts", (e) => e.sendHostAccess({ type: "set_host_access", remove_host: t }));
 }
 function E(e) {
+    return (0, s.bG)([h], () => h.getApprovals(e), [e]);
+}
+function S(e) {
     return (0, s.bG)(
         [h],
         () => {
@@ -74,10 +74,10 @@ function m(e) {
     let t = (0, s.bG)([h], () => h.getAccess(e)?.requireApproval ?? null, [e]),
         n = r.useCallback(
             (t) =>
-                (0, i.b4)(e, "host approval setting", (e) =>
+                (0, l.b4)(e, "host approval setting", (e) =>
                     e.sendHostAccess({ type: "set_host_access", require_approval: t }),
                 ),
             [e],
         );
-    return (0, l.V)(t, n);
+    return (0, i.V)(t, n);
 }

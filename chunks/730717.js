@@ -12,12 +12,12 @@ var n = l(477900),
     h = l(587895),
     m = l(456709),
     p = l(827656),
-    g = l(793480),
-    x = l(730201);
-let A = x.I;
+    x = l(793480),
+    g = l(730201);
+let A = g.I;
 function j(e) {
     let { user: t, guildId: l, onClose: o } = e,
-        a = (0, g.TW)("ConjureBotProfileFooter", { autoTrackExposure: t.bot }),
+        a = (0, x.TW)("ConjureBotProfileFooter", { autoTrackExposure: t.bot }),
         s = (0, i.bG)([h.A], () => (a && t.bot ? (h.A.getAppIdForBotUserId(t.id) ?? t.id) : null), [a, t.bot, t.id]),
         u = (0, f.YY)(s).data,
         d = u?.conjureProjectId != null ? u : null,
@@ -26,7 +26,7 @@ function j(e) {
     return null == d || (null == c && j)
         ? null
         : (0, n.jsx)("div", {
-              className: x.q,
+              className: g.q,
               children: (0, n.jsx)(p.A, { creator: c, remixProject: A, guildId: l ?? null, onClose: v }),
           });
 }
@@ -139,8 +139,8 @@ function eu(e) {
             channelId: h,
             messageId: m,
             roleId: p,
-            openedAt: g,
-            closePopout: x,
+            openedAt: x,
+            closePopout: g,
             setPopoutRef: F,
             disableUserProfileLink: S = __OVERLAY__,
             newAnalyticsLocations: L = [],
@@ -156,7 +156,7 @@ function eu(e) {
         B = r.useRef(null),
         { isHoveringOrFocusing: X } = (0, b.A)(B);
     function Y(e) {
-        (x?.(),
+        (g?.(),
             W.dispatch(ea.jej.POPOUT_CLOSE),
             (0, R.openUserProfileModal)({ sourceAnalyticsLocations: q, hideRestrictedProfile: !0, ...z, ...e }));
     }
@@ -170,7 +170,7 @@ function eu(e) {
         value: q,
         children: (0, n.jsx)(w.of, {
             value: z,
-            openedAt: g,
+            openedAt: x,
             fetchStartedAt: D?.fetchStartedAt,
             fetchEndedAt: D?.fetchEndedAt,
             isLoaded: D?.isLoaded,
@@ -225,7 +225,7 @@ function eu(e) {
                                         guildId: f,
                                         channelId: h,
                                         themeType: ee.d.POPOUT,
-                                        onCloseProfile: x,
+                                        onCloseProfile: g,
                                         disableToolbar: !0,
                                     }),
                                 ],
@@ -238,10 +238,10 @@ function eu(e) {
                                 isHoveringOrFocusing: X,
                                 onOpenProfile: S ? void 0 : Y,
                                 channelId: h,
-                                onClose: x,
+                                onClose: g,
                             }),
-                            (0, n.jsx)(ei.A, { user: t, guildId: f, channelId: h, onClose: x, disableAutoFocus: _ }),
-                            (0, n.jsx)(j, { user: t, guildId: f, onClose: x }),
+                            (0, n.jsx)(ei.A, { user: t, guildId: f, channelId: h, onClose: g, disableAutoFocus: _ }),
+                            (0, n.jsx)(j, { user: t, guildId: f, onClose: g }),
                         ],
                     }),
                 ],
