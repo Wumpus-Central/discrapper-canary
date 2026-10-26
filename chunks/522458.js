@@ -443,9 +443,9 @@ function e1(e) {
 var e2 = n(652215),
     e6 = n(628049),
     e8 = n(49999),
-    e4 = n(684644);
-let e5 = [ek.M.STARTUP_FAILED, ek.M.MISSING_STOCK, ek.M.PROVIDER_ERRORED, ek.M.DELETED];
-function e7(e) {
+    e5 = n(684644);
+let e7 = [ek.M.STARTUP_FAILED, ek.M.MISSING_STOCK, ek.M.PROVIDER_ERRORED, ek.M.DELETED];
+function e4(e) {
     return `game-server-owned-card-${e}`;
 }
 function e9(e) {
@@ -454,7 +454,7 @@ function e9(e) {
             (0, eW.Kz)(t).catch(() => {});
         }, [t]);
     return (0, a.jsx)("div", {
-        className: e4.y7,
+        className: e5.y7,
         children: (0, a.jsx)(Z.$, {
             fullWidth: !0,
             text: et.intl.string(ee.default.TMzy7d),
@@ -472,7 +472,7 @@ function e3() {
                     .finally(() => t(!1)));
         }, []);
     return (0, a.jsx)("div", {
-        className: e4.y7,
+        className: e5.y7,
         children: (0, a.jsx)(Z.$, {
             fullWidth: !0,
             text: et.intl.string(ee.default.BLEx3k),
@@ -533,9 +533,8 @@ let te = i.memo(function (e) {
                             n.e("725134"),
                             n.e("921611"),
                             n.e("592000"),
-                            n.e("524434"),
-                            n.e("933947"),
-                            n.e("866475"),
+                            n.e("949256"),
+                            n.e("851677"),
                             n.e("279926"),
                             n.e("481647"),
                             n.e("776602"),
@@ -564,7 +563,7 @@ let te = i.memo(function (e) {
         }, [t]),
         A = (0, eZ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e6.qb[x],
         I = null != t.instance.gameServerPanelUrl,
-        N = null != t.instance.status && e5.includes(t.instance.status),
+        N = null != t.instance.status && e7.includes(t.instance.status),
         L = i.useCallback(() => {
             (0, H.h)({ href: A });
         }, [A]),
@@ -594,7 +593,7 @@ let te = i.memo(function (e) {
         T = i.useMemo(
             () =>
                 (0, a.jsx)(eP.D, {
-                    className: c()(e4.wC, e4.QV),
+                    className: c()(e5.wC, e5.QV),
                     onClick: S,
                     "aria-label": et.intl.string(ee.default["fQCcM/"]),
                     children: (0, a.jsx)($.E, {
@@ -608,7 +607,7 @@ let te = i.memo(function (e) {
         R = i.useMemo(
             () =>
                 (0, a.jsxs)(eP.D, {
-                    className: c()(e4.wC, e4.y2, { [e4.Gz]: !I }),
+                    className: c()(e5.wC, e5.y2, { [e5.Gz]: !I }),
                     onClick: I ? j : void 0,
                     "aria-disabled": !I,
                     "aria-label": et.intl.string(ee.default.tkbVdf),
@@ -630,7 +629,7 @@ let te = i.memo(function (e) {
                 case ek.M.STARTUP_FAILED:
                 case ek.M.MISSING_STOCK:
                     return (0, a.jsx)("div", {
-                        className: e4.y7,
+                        className: e5.y7,
                         children: (0, a.jsx)(Z.$, {
                             fullWidth: !0,
                             text: et.intl.string(ee.default.gWMqnI),
@@ -645,7 +644,7 @@ let te = i.memo(function (e) {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)("div", {
-                                className: e4.y7,
+                                className: e5.y7,
                                 children: (0, a.jsx)(Z.$, {
                                     fullWidth: !0,
                                     text: et.intl.string(ee.default.bBkeMs),
@@ -663,20 +662,20 @@ let te = i.memo(function (e) {
             }
         }, [t.instance.status, t.id, I, T, R, j, L]);
     return (0, a.jsxs)("div", {
-        id: e7(t.id),
-        className: c()(e4.Nr, { [e4.mr]: o }),
+        id: e4(t.id),
+        className: c()(e5.Nr, { [e5.mr]: o }),
         children: [
-            o && (0, a.jsx)("div", { className: e4._8, "aria-hidden": !0 }),
+            o && (0, a.jsx)("div", { className: e5._8, "aria-hidden": !0 }),
             (0, a.jsxs)("div", {
-                className: e4.Nk,
+                className: e5.Nk,
                 "aria-hidden": !0,
                 children: [
-                    null != d && (0, a.jsx)("img", { className: e4.QC, src: d, alt: "" }),
-                    (0, a.jsx)("div", { className: e4.jc }),
+                    null != d && (0, a.jsx)("img", { className: e5.QC, src: d, alt: "" }),
+                    (0, a.jsx)("div", { className: e5.jc }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: e4.AQ,
+                className: e5.AQ,
                 children: [
                     (0, a.jsx)(ez, {
                         color: ew.SECONDARY,
@@ -689,29 +688,29 @@ let te = i.memo(function (e) {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: e4.rf,
+                className: e5.rf,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: e4.U1,
+                        className: e5.U1,
                         children: [
                             (0, a.jsxs)("div", {
-                                className: e4.oL,
+                                className: e5.oL,
                                 children: [
                                     null != d
-                                        ? (0, a.jsx)("img", { className: e4.vT, src: d, alt: "" })
+                                        ? (0, a.jsx)("img", { className: e5.vT, src: d, alt: "" })
                                         : (0, a.jsx)("div", {
-                                              className: e4.iv,
+                                              className: e5.iv,
                                               children: (0, a.jsx)($.E, {
                                                   variant: "text-xs/semibold",
                                                   color: "text-muted",
                                                   children: t.gameName,
                                               }),
                                           }),
-                                    (0, a.jsx)("div", { className: e4.iB, "aria-hidden": !0 }),
+                                    (0, a.jsx)("div", { className: e5.iB, "aria-hidden": !0 }),
                                 ],
                             }),
                             (0, a.jsxs)("div", {
-                                className: e4.VQ,
+                                className: e5.VQ,
                                 children: [
                                     (0, a.jsx)($.E, {
                                         variant: "text-md/semibold",
@@ -737,13 +736,13 @@ let te = i.memo(function (e) {
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: e4.M1,
+                        className: e5.M1,
                         children: [
                             (0, a.jsxs)("div", {
-                                className: e4.N8,
+                                className: e5.N8,
                                 children: [
                                     (0, a.jsxs)("div", {
-                                        className: e4.bi,
+                                        className: e5.bi,
                                         children: [
                                             (0, a.jsx)($.E, {
                                                 variant: "text-xs/semibold",
@@ -760,7 +759,7 @@ let te = i.memo(function (e) {
                                         ],
                                     }),
                                     (0, a.jsxs)("div", {
-                                        className: e4.gv,
+                                        className: e5.gv,
                                         children: [
                                             (0, a.jsx)($.E, {
                                                 variant: "text-xs/semibold",
@@ -770,7 +769,7 @@ let te = i.memo(function (e) {
                                             }),
                                             E
                                                 ? (0, a.jsxs)("div", {
-                                                      className: e4.Yb,
+                                                      className: e5.Yb,
                                                       children: [
                                                           (0, a.jsx)($.E, {
                                                               variant: "text-sm/medium",
@@ -780,7 +779,7 @@ let te = i.memo(function (e) {
                                                           }),
                                                           "" !== t.serverIp &&
                                                               (0, a.jsx)(eP.D, {
-                                                                  className: e4.cL,
+                                                                  className: e5.cL,
                                                                   onClick: C,
                                                                   "aria-label": et.intl.string(et.t.OpuAlK),
                                                                   children: p
@@ -808,10 +807,10 @@ let te = i.memo(function (e) {
                                 ],
                             }),
                             (0, a.jsxs)("div", {
-                                className: e4.N8,
+                                className: e5.N8,
                                 children: [
                                     (0, a.jsxs)("div", {
-                                        className: e4.bi,
+                                        className: e5.bi,
                                         children: [
                                             (0, a.jsx)($.E, {
                                                 variant: "text-xs/semibold",
@@ -820,11 +819,11 @@ let te = i.memo(function (e) {
                                                 children: et.intl.string(ee.default["n+ZX7y"]),
                                             }),
                                             (0, a.jsxs)("div", {
-                                                className: e4.Yb,
+                                                className: e5.Yb,
                                                 children: [
                                                     (t.isOnline || N) &&
                                                         (0, a.jsx)("span", {
-                                                            className: c()(e4.kg, { [e4.rU]: N }),
+                                                            className: c()(e5.kg, { [e5.rU]: N }),
                                                             "aria-hidden": !0,
                                                         }),
                                                     (0, a.jsx)($.E, {
@@ -838,7 +837,7 @@ let te = i.memo(function (e) {
                                         ],
                                     }),
                                     (0, a.jsxs)("div", {
-                                        className: e4.gv,
+                                        className: e5.gv,
                                         children: [
                                             (0, a.jsx)($.E, {
                                                 variant: "text-xs/semibold",
@@ -860,7 +859,7 @@ let te = i.memo(function (e) {
                     }),
                 ],
             }),
-            (0, a.jsx)("div", { className: e4.qr, children: k }),
+            (0, a.jsx)("div", { className: e5.qr, children: k }),
         ],
     });
 });
@@ -909,7 +908,7 @@ function tn(e) {
     return (
         i.useEffect(() => {
             if (d <= 0) return;
-            let e = null != o ? document.getElementById(e7(o)) : m.current;
+            let e = null != o ? document.getElementById(e4(o)) : m.current;
             e?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
             let t = 0,
                 n = requestAnimationFrame(() => {
@@ -1522,9 +1521,9 @@ var tX =
     t2 = n(278416),
     t6 = n(602853),
     t8 = n(661531),
-    t4 = n(947641),
-    t5 = n(604338),
-    t7 = n(785866),
+    t5 = n(947641),
+    t7 = n(604338),
+    t4 = n(785866),
     t9 = n(373846),
     t3 = n(308323),
     ne = n(608599),
@@ -1712,7 +1711,7 @@ function nh(e) {
                         l &&
                         (0, a.jsx)("div", {
                             className: no.oE,
-                            children: (0, a.jsx)(t4.r, {
+                            children: (0, a.jsx)(t5.r, {
                                 size: "xs",
                                 color: (0, nc.j)({ backgroundColor: t, colors: [o, d] }),
                             }),
@@ -1744,12 +1743,12 @@ function nx(e) {
             () => [
                 {
                     name: et.intl.string(et.t.aVBOKh),
-                    icon: (0, a.jsx)(t5.E, { size: "xs", color: o(tJ.ANIME) }),
+                    icon: (0, a.jsx)(t7.E, { size: "xs", color: o(tJ.ANIME) }),
                     enum: tJ.ANIME,
                 },
                 {
                     name: et.intl.string(et.t["3WoZBc"]),
-                    icon: (0, a.jsx)(t7._, { size: "xs", color: o(tJ.GAMING) }),
+                    icon: (0, a.jsx)(t4._, { size: "xs", color: o(tJ.GAMING) }),
                     enum: tJ.GAMING,
                 },
                 {
@@ -1827,8 +1826,8 @@ function nf(e) {
         { themeFilters: n, onToggleTheme: s } = (0, T.v)(),
         l = i.useMemo(
             () => [
-                { name: et.intl.string(et.t.aVBOKh), icon: t5.E, enum: tJ.ANIME },
-                { name: et.intl.string(et.t["3WoZBc"]), icon: t7._, enum: tJ.GAMING },
+                { name: et.intl.string(et.t.aVBOKh), icon: t7.E, enum: tJ.ANIME },
+                { name: et.intl.string(et.t["3WoZBc"]), icon: t4._, enum: tJ.GAMING },
                 { name: et.intl.string(et.t.yuEmLj), icon: t9.C, enum: tJ.CUTE_COZY },
                 { name: et.intl.string(et.t.mMvCHo), icon: t3.L, enum: tJ.SCI_FI },
                 { name: et.intl.string(et.t.TlhOQC), icon: ne.L, enum: tJ.FOOD_DRINKS },

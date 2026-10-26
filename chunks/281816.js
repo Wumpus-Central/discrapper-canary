@@ -9624,7 +9624,7 @@ let ov = {
     },
     FavoritesGuildAddChannelModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("866475"),
+            a.e("851677"),
             a.e("267732"),
             a.e("850979"),
             a.e("236946"),
@@ -9640,7 +9640,7 @@ let ov = {
     },
     ActivityShareMomentModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("866475"),
+            a.e("851677"),
             a.e("267732"),
             a.e("58243"),
             a.e("236946"),
