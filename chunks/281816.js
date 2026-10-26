@@ -24459,7 +24459,7 @@ function b2() {
     });
 }
 var b5 = a(963935),
-    b3 = a(470837),
+    b3 = a(476296),
     b6 = a(555738);
 function b4(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,
