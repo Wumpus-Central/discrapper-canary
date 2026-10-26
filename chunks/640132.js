@@ -531,7 +531,7 @@ let eM = function (e) {
                 }
                 return (t.forEach(u), l.forEach(u), r);
             }, [n, i])),
-        H = null != D ? (0, b.A)(D) : null,
+        H = null != D ? (0, b.A)(D, 2048) : null,
         q = s.useCallback(
             (e) => {
                 null != H &&

@@ -182,7 +182,7 @@ function X(e) {
                 channel: m,
                 name: t.name,
                 description: t.description ?? void 0,
-                imageSource: (0, O.A)(t),
+                imageSource: (0, O.A)(t, 1024),
                 isActive: !1,
                 isUserLurking: S,
                 speakers: [],

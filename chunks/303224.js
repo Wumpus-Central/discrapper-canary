@@ -584,7 +584,7 @@ function eF(e) {
                 description: m,
                 imageSource:
                     ((t = (0, M.hQ)(l, n, a)),
-                    null == h && null == t.image ? null : null != h && /^data:/.test(h) ? h : (0, eV.A)(t)),
+                    null == h && null == t.image ? null : null != h && /^data:/.test(h) ? h : (0, eV.A)(t, 1024)),
                 isActive: !1,
                 isUserLurking: y,
                 speakers: [],
@@ -839,7 +839,7 @@ function eK(e) {
                                                               null == e
                                                                   ? null
                                                                   : null != a
-                                                                    ? ((0, eV.A)((0, M.hQ)(t, a, l)) ?? null)
+                                                                    ? ((0, eV.A)((0, M.hQ)(t, a, l), 1024) ?? null)
                                                                     : void 0,
                                                           onChange: k,
                                                           hint: eo.intl.string(eo.t.G44Xml),

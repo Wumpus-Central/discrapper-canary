@@ -199,7 +199,7 @@ let U = a.memo(function (e) {
             children: (0, i.jsxs)(d.D, {
                 onClick: p,
                 children: [
-                    null != n.image && (0, i.jsx)(B.A, { source: (0, G.A)(n), className: z.vK }),
+                    null != n.image && (0, i.jsx)(B.A, { source: (0, G.A)(n, 1024), className: z.vK }),
                     (0, i.jsx)(D.Ay, {
                         name: n.name,
                         description: n.description ?? void 0,

@@ -77,7 +77,7 @@ function _(e) {
         entityType: x,
         description: R ?? void 0,
         location: (0, b.oF)(n) ?? void 0,
-        imageSource: null != T ? (0, I.A)(n) : void 0,
+        imageSource: null != T ? (0, I.A)(n, 2048) : void 0,
         imageLocation: k.c.THUMBNAIL,
         isActive: V,
         isUserLurking: O,
