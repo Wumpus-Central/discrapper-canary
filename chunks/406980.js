@@ -1,4 +1,4 @@
-(a.d(e, { K: () => g }), a(321073));
+(a.d(e, { K: () => f }), a(321073));
 var n = a(477900);
 a(582128);
 var t = a(192308),
@@ -9,15 +9,16 @@ var t = a(192308),
     s = a(232835),
     c = a(518960),
     u = a(614584),
-    h = a(589553),
-    m = a(696016);
-async function g(l, e) {
-    let { channelId: g, analyticsLocations: f, messageReference: C, povTargetInformation: p } = e,
-        v = o.A.getChannel(g);
-    if (null != v) {
-        if (null != C) {
-            let l = s.A.getMessage(C.channel_id, C.message_id);
-            null != l && (0, d.Yf)({ message: l, channel: v, shouldMention: !1, showMentionToggle: !1 });
+    h = a(132319),
+    m = a(589553),
+    g = a(696016);
+async function f(l, e) {
+    let { channelId: f, analyticsLocations: C, messageReference: p, povTargetInformation: v } = e,
+        _ = o.A.getChannel(f);
+    if (null != _) {
+        if (null != p) {
+            let l = s.A.getMessage(p.channel_id, p.message_id);
+            null != l && (0, d.Yf)({ message: l, channel: _, shouldMention: !1, showMentionToggle: !1 });
         }
         try {
             let e = [],
@@ -43,25 +44,25 @@ async function g(l, e) {
                                   },
                               }
                             : l;
-                    })(n, p),
-                    t = await (0, u.VO)(l, { analyticsLocations: f, isTemporaryEdit: l !== n }),
-                    i = (0, h.A)(l, l.type === m.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                    })(n, v),
+                    t = await (0, u.VO)(l, { analyticsLocations: C, isTemporaryEdit: l !== n }),
+                    i = (0, m.A)(l, l.type === g.nQ.SCREENSHOT ? "jpeg" : "mp4");
                 switch (n.type) {
-                    case m.nQ.CLIP:
-                    case m.nQ.VOICE_CLIP:
-                        (e.push(new File([t], i, { type: "video/mp4" })), a.push({ clip: l }));
+                    case g.nQ.CLIP:
+                    case g.nQ.VOICE_CLIP:
+                        (e.push(new File([t], i, { type: "video/mp4" })), a.push({ clip: (0, h.J)(l) }));
                         break;
-                    case m.nQ.SCREENSHOT:
+                    case g.nQ.SCREENSHOT:
                         (e.push(new File([t], i, { type: "image/jpeg" })), a.push({}));
                         break;
                     default:
                         n.type;
                 }
             }
-            ((0, c.R)(e, v, r.C.ChannelMessage, { filesMetadata: a, origin: "unknown:clip_share" }),
+            ((0, c.R)(e, _, r.C.ChannelMessage, { filesMetadata: a, origin: "unknown:clip_share" }),
                 t.closeAllModals());
         } catch (l) {
-            throw (m.nx.error(l), l);
+            throw (g.nx.error(l), l);
         }
     } else
         (0, t.openModalLazy)(
@@ -222,7 +223,7 @@ async function g(l, e) {
                     a.e("895008"),
                     a.e("92871"),
                 ]).then(a.bind(a, 243258));
-                return (a) => (0, n.jsx)(e, { ...a, clips: l, analyticsLocations: f });
+                return (a) => (0, n.jsx)(e, { ...a, clips: l, analyticsLocations: C });
             },
             { stackingBehavior: "stack", modalKey: i.aU },
         );

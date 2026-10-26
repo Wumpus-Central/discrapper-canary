@@ -1,8 +1,8 @@
-(i.d(t, { default: () => F }), i(321073));
+(i.d(t, { default: () => L }), i(321073));
 var l = i(477900),
     s = i(582128),
-    n = i(503698),
-    a = i.n(n),
+    a = i(503698),
+    n = i.n(a),
     r = i(192308),
     c = i(834730),
     o = i(176781),
@@ -12,8 +12,8 @@ var l = i(477900),
     m = i(793574),
     p = i(688810),
     x = i(573435),
-    g = i(228427),
-    f = i(619517),
+    f = i(228427),
+    g = i(619517),
     A = i(451909),
     C = i(378570),
     y = i(446244),
@@ -24,36 +24,37 @@ var l = i(477900),
     w = i(518960),
     N = i(614584),
     v = i(74847),
-    T = i(589553),
-    _ = i(280483),
-    O = i(696016),
-    P = i(381941),
-    R = i(105292),
-    S = i(954646),
-    I = i(739126);
-function M(e) {
+    T = i(132319),
+    _ = i(589553),
+    O = i(280483),
+    P = i(696016),
+    R = i(381941),
+    S = i(105292),
+    I = i(954646),
+    M = i(739126);
+function F(e) {
     let { clips: t } = e,
         i = t[0],
         s = i.thumbnail,
-        n = null;
+        a = null;
     return (
         "" !== s &&
-            ((n = (0, l.jsx)("div", {
-                className: a()(I.cR, I.JZ),
-                children: (0, l.jsx)(f.Ay, { className: I.xn, src: s, width: 56, height: 56 }),
+            ((a = (0, l.jsx)("div", {
+                className: n()(M.cR, M.JZ),
+                children: (0, l.jsx)(g.Ay, { className: M.xn, src: s, width: 56, height: 56 }),
             })),
             t.length > 1 &&
-                (n = (0, l.jsxs)("div", {
-                    className: I.EW,
+                (a = (0, l.jsxs)("div", {
+                    className: M.EW,
                     children: [
                         (0, l.jsx)(x.Ay, {
                             mask: x.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
-                            children: n,
+                            children: a,
                         }),
                         (0, l.jsxs)(c.E, {
-                            className: I.mB,
+                            className: M.mB,
                             variant: "text-xs/semibold",
                             color: "text-default",
                             children: ["+", t.length - 1],
@@ -61,50 +62,50 @@ function M(e) {
                     ],
                 }))),
         (0, l.jsxs)("div", {
-            className: I.sq,
+            className: M.sq,
             children: [
                 (0, l.jsx)("div", {
-                    className: I.FG,
+                    className: M.FG,
                     children: (0, l.jsxs)("div", {
-                        className: I.kp,
+                        className: M.kp,
                         children: [
-                            (0, l.jsx)(o.x, { className: S.$, size: "refresh_sm", color: d.A.colors.TEXT_MUTED }),
+                            (0, l.jsx)(o.x, { className: I.$, size: "refresh_sm", color: d.A.colors.TEXT_MUTED }),
                             (0, l.jsx)(c.E, {
                                 variant: "text-md/medium",
                                 color: "text-muted",
                                 children:
                                     1 === t.length
-                                        ? (i.name ?? R.intl.string(R.t.Cyxddp))
-                                        : R.intl.formatToPlainString(R.t.SJ6pPX, { count: t.length }),
+                                        ? (0, T.l)(i)
+                                        : S.intl.formatToPlainString(S.t.SJ6pPX, { count: t.length }),
                             }),
                         ],
                     }),
                 }),
-                n,
+                a,
             ],
         })
     );
 }
-function F(e) {
-    let { clips: t, onClose: i, analyticsLocations: n, ...a } = e;
-    (0, _.A)();
-    let { analyticsLocations: c } = (0, p.Ay)(...n, m.A.CLIPS_SHARE_MODAL),
+function L(e) {
+    let { clips: t, onClose: i, analyticsLocations: a, ...n } = e;
+    (0, O.A)();
+    let { analyticsLocations: c } = (0, p.Ay)(...a, m.A.CLIPS_SHARE_MODAL),
         o = s.useCallback(
             async (e, l, s) => {
-                let { withMessage: n, transitionToDestination: a, closeAfterSend: o } = l;
+                let { withMessage: a, transitionToDestination: n, closeAfterSend: o } = l;
                 s(!0);
                 try {
                     let l = [],
                         d = [];
                     for (let e of t) {
                         let t = await (0, N.VO)(e, { analyticsLocations: c }),
-                            i = (0, T.A)(e, e.type === O.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                            i = (0, _.A)(e, e.type === P.nQ.SCREENSHOT ? "jpeg" : "mp4");
                         switch (e.type) {
-                            case O.nQ.CLIP:
-                            case O.nQ.VOICE_CLIP:
-                                (l.push(new File([t], i, { type: "video/mp4" })), d.push({ clip: e }));
+                            case P.nQ.CLIP:
+                            case P.nQ.VOICE_CLIP:
+                                (l.push(new File([t], i, { type: "video/mp4" })), d.push({ clip: (0, T.J)(e) }));
                                 break;
-                            case O.nQ.SCREENSHOT:
+                            case P.nQ.SCREENSHOT:
                                 (l.push(new File([t], i, { type: "image/jpeg" })), d.push({}));
                                 break;
                             default:
@@ -113,7 +114,7 @@ function F(e) {
                     }
                     let m = (await Promise.all(e.map(y.pk))).filter(k.Vq).filter((e) => (0, v.t)(e));
                     if (0 === m.length) {
-                        ((0, h.P0)({ text: R.intl.string(R.t.iufib1), variant: "critical" }), s(!1));
+                        ((0, h.P0)({ text: S.intl.string(S.t.iufib1), variant: "critical" }), s(!1));
                         return;
                     }
                     for (let e of (o && i(), m)) {
@@ -124,13 +125,13 @@ function F(e) {
                                 origin: "unknown:clip_share",
                                 requireConfirm: !1,
                             }),
-                            null != n &&
-                                "" !== n.trim() &&
-                                (await u.A.sendMessage(t.id, A.Ay.parse(t, n), !1, { location: P.Hx.FORWARDING })));
+                            null != a &&
+                                "" !== a.trim() &&
+                                (await u.A.sendMessage(t.id, A.Ay.parse(t, a), !1, { location: R.Hx.FORWARDING })));
                     }
-                    a && 1 === m.length && ((0, C.iN)(m[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals());
+                    n && 1 === m.length && ((0, C.iN)(m[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals());
                 } catch (e) {
-                    (0, h.P0)({ text: R.intl.string(R.t.iufib1), variant: "critical" });
+                    (0, h.P0)({ text: S.intl.string(S.t.iufib1), variant: "critical" });
                 } finally {
                     s(!1);
                 }
@@ -138,14 +139,14 @@ function F(e) {
             [t, i, c],
         ),
         d = s.useCallback((e) => {
-            if (e instanceof E.YB && !(0, v.t)(e.id)) return { label: R.intl.string(R.t.iufib1) };
+            if (e instanceof E.YB && !(0, v.t)(e.id)) return { label: S.intl.string(S.t.iufib1) };
         }, []);
-    return (0, l.jsx)(g.ForwardModal, {
-        ...a,
+    return (0, l.jsx)(f.ForwardModal, {
+        ...n,
         onClose: i,
-        customTitle: R.intl.string(R.t.I8lglT),
-        customSubtitle: R.intl.string(R.t.Ey7mOU),
-        customPreview: (0, l.jsx)(M, { clips: t }),
+        customTitle: S.intl.string(S.t.I8lglT),
+        customSubtitle: S.intl.string(S.t.Ey7mOU),
+        customPreview: (0, l.jsx)(F, { clips: t }),
         customSendHandler: o,
         customValidateDestination: d,
     });
