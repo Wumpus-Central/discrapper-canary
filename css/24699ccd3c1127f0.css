@@ -49,6 +49,10 @@
     transition-timing-function: ease-in-out
 }
 
+.clickable__014df {
+    cursor: pointer
+}
+
 .avatar__014df {
     pointer-events: auto
 }
@@ -61,4 +65,4 @@
     background: #a8a9aa
 }
 
-/*# sourceMappingURL=08801e2e8beaee46.css.map*/
+/*# sourceMappingURL=24699ccd3c1127f0.css.map*/

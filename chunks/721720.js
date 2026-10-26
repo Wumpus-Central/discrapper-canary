@@ -1280,6 +1280,7 @@ function tL(e) {
         children: (0, i.jsx)(ek.D, {
             onClick: x,
             "aria-label": (0, tS.s7)(a),
+            className: ty.vk,
             children: (0, i.jsx)(tI.i, { item: o, className: ty.my, user: u, isHighlighted: d }),
         }),
     });
