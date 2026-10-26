@@ -1036,6 +1036,12 @@
     gap: var(--space-4)
 }
 
+.display__43459 {
+    font-size: 84px;
+    line-height: 84px;
+    text-transform: uppercase
+}
+
 .rank__336fc {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--space-12)), calc(100% - var(--space-12)) 100%, 0 100%);
     font-size: 20px;
@@ -1115,9 +1121,10 @@
     color: var(--custom-checkpoint-white)
 }
 
-.sessions__99e00 {
+.label__99e00 {
     font-size: 24px;
-    line-height: 24px
+    line-height: 24px;
+    text-transform: uppercase
 }
 
 .container__8fead {
@@ -1143,6 +1150,11 @@
     gap: var(--space-4)
 }
 
+.globe__8fead {
+    height: 84px;
+    width: 112px
+}
+
 .description__8fead {
     flex: 1 1 280px;
     max-width: 433px;
@@ -1154,6 +1166,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-40)
+}
+
+.globalGames__8fead {
+    align-items: flex-start
 }
 
 .container__92421 {
@@ -1187,12 +1203,6 @@
 
 .stat__92421 {
     gap: var(--space-4)
-}
-
-.display__43459 {
-    font-size: 84px;
-    line-height: 84px;
-    text-transform: uppercase
 }
 
 .icon__44598 {
@@ -1246,6 +1256,11 @@
 
 .heading_bc3e36 {
     gap: var(--space-4)
+}
+
+.globe_bc3e36 {
+    height: 84px;
+    width: 112px
 }
 
 .guilds_bc3e36 {
@@ -1830,4 +1845,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=234382.343308bc2f788a2c.css.map*/
+/*# sourceMappingURL=234382.685965f8f120a164.css.map*/

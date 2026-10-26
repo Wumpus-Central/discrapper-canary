@@ -1,19 +1,20 @@
 n.d(t, {
-    Ei: () => h,
-    FG: () => S,
+    Ei: () => f,
+    FG: () => N,
+    Jb: () => h,
     Kr: () => l,
     LM: () => _,
-    Qq: () => p,
-    VG: () => f,
+    Qq: () => T,
+    VG: () => I,
     Ve: () => o,
     bI: () => E,
-    bo: () => g,
-    e6: () => m,
+    bo: () => S,
+    e6: () => g,
     ow: () => c,
     qn: () => d,
-    sh: () => T,
+    sh: () => m,
     uz: () => A,
-    w0: () => I,
+    w0: () => p,
     wk: () => s,
     zj: () => u,
 });
@@ -28,14 +29,20 @@ let l = "#34E2F1",
     u = "#3FC7D2",
     _ = "#04363ABF",
     E = "#3BD4F2",
-    A = ["#DFDFDF", "#5E5E5E"];
-(a.default.b4s18j, a.default.DcxpNj, a.default.OAUTki, a.default.ioC4Qg, a.default.M1L00s);
-let h = 72,
-    f = 80,
-    I = 6,
-    p = 1,
-    T = 5,
-    m = {
+    A = ["#DFDFDF", "#5E5E5E"],
+    h = [
+        { list: "gamesByPlayers", label: a.default.b4s18j },
+        { list: "newGamesByPlayers", label: a.default.DcxpNj },
+        { list: "indieGamesByPlayers", label: a.default.OAUTki },
+        { list: "gamesByCoplayUsers", label: a.default.ioC4Qg },
+        { list: "gamesByStreamWatchMinutes", label: a.default.M1L00s },
+    ],
+    f = 72,
+    I = 80,
+    p = 6,
+    T = 1,
+    m = 5,
+    g = {
         [r.K.DEFAULT]: "#FFE047",
         [r.K.COMMON]: "#35ED7E",
         [r.K.RARE]: "#EF3054",
@@ -43,7 +50,7 @@ let h = 72,
         [r.K.ULTRA]: "#FC7A1E",
         [r.K.NITRO]: "url(#checkpointRarityBadgeNitroGradient)",
     },
-    g = {
+    S = {
         [r.K.DEFAULT]: a.default.bP4GV1,
         [r.K.COMMON]: a.default.QwkKWr,
         [r.K.RARE]: a.default.KLmNgL,
@@ -52,4 +59,4 @@ let h = 72,
         [r.K.NITRO]: a.default["0ModIv"],
     };
 (r.K.ULTRA, r.K.EPIC, r.K.RARE, r.K.COMMON, r.K.DEFAULT, r.K.NITRO);
-let S = [r.K.DEFAULT, r.K.COMMON, r.K.RARE, r.K.EPIC, r.K.ULTRA, r.K.NITRO];
+let N = [r.K.DEFAULT, r.K.COMMON, r.K.RARE, r.K.EPIC, r.K.ULTRA, r.K.NITRO];

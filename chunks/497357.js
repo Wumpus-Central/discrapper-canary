@@ -8,5 +8,5 @@ _.exports = {
     Tm: "rank__99e00",
     zH: "details__99e00",
     UU: "name__99e00",
-    Mf: "sessions__99e00",
+    Pf: "label__99e00",
 };
