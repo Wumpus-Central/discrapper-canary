@@ -68,14 +68,14 @@ function y(e) {
 }
 var E = t(174459),
     b = t(324593),
-    T = t(652215);
-function S(e) {
+    S = t(652215);
+function T(e) {
     return l.useCallback(() => {
         let n = e;
         for (; "parent" in n && null != n.parent;) n = n.parent;
         let t = "analyticsKey" in e ? e.analyticsKey : e.key;
         null != t &&
-            E.default.track(T.HAw.UI_SETTING_INTERACTED, {
+            E.default.track(S.HAw.UI_SETTING_INTERACTED, {
                 key: t,
                 setting_type: n.analyticsKey ?? n.key,
                 search_session_id: b.A.getSearchSessionId(),
@@ -130,12 +130,12 @@ function O(e) {
     if (n.type === h.hp.ICON)
         return (0, r.jsx)(p.A, { icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
 }
-function R(e) {
+function B(e) {
     let { decoration: n } = e,
         { StronglyDiscouragedCustomComponent: t } = n;
     return (0, r.jsx)(t, {});
 }
-function B(e) {
+function R(e) {
     let { decoration: n } = e;
     return (0, r.jsx)(f.E, { variant: "text-md/medium", children: n.text });
 }
@@ -143,9 +143,9 @@ function L(e) {
     let { decoration: n } = e;
     switch (n.type) {
         case h.fq.TEXT:
-            return (0, r.jsx)(B, { decoration: n });
-        case h.fq.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(R, { decoration: n });
+        case h.fq.STRONGLY_DISCOURAGED_CUSTOM:
+            return (0, r.jsx)(B, { decoration: n });
     }
 }
 function _(e) {
@@ -163,30 +163,30 @@ function _(e) {
             getDismissibleBadges: m,
             onClick: f,
         } = n,
-        h = S(n),
+        h = T(n),
         p = u?.() ?? !1,
         [v, E] = l.useState(!1),
         b = i(),
-        T = a?.(),
+        S = a?.(),
         N = t(),
         k = s?.(),
         C = o?.(),
         A = c?.(),
-        R = d?.(),
-        B = j?.(),
+        B = d?.(),
+        R = j?.(),
         _ = y({ persistentBadge: void 0, dismissibleBadges: m?.() });
     return (0, r.jsx)(I, {
         title: b,
         badge: _,
-        description: T,
-        leadingElement: null != R ? (0, r.jsx)(O, { decoration: R }) : null,
+        description: S,
+        leadingElement: null != B ? (0, r.jsx)(O, { decoration: B }) : null,
         trailingElement: (0, r.jsxs)(x.B, {
             direction: "horizontal",
             align: "center",
             justify: "end",
             gap: "md",
             children: [
-                null != B && (0, r.jsx)(L, { decoration: B }),
+                null != R && (0, r.jsx)(L, { decoration: R }),
                 (0, r.jsx)(g.$, {
                     onClick: function () {
                         h();
@@ -205,23 +205,23 @@ function _(e) {
 }
 var D = t(881636),
     w = t(272053),
-    G = t(199966);
-function Z(e) {
-    let { accessibleDirectory: n } = (0, G._)(),
+    Z = t(199966);
+function F(e) {
+    let { accessibleDirectory: n } = (0, Z._)(),
         t = n.entry(e);
     return {
         parentPanelNode: t?.parentPanelKey != null ? n.get(t.parentPanelKey) : void 0,
         parentSidebarItemNode: t?.parentSidebarItemKey != null ? n.get(t.parentSidebarItemKey) : void 0,
     };
 }
-var P = t(751075);
-function F(e) {
+var G = t(751075);
+function P(e) {
     let { decoration: n } = e;
-    return null == n.icons ? null : (0, r.jsx)(P.qP, { icons: n.icons });
+    return null == n.icons ? null : (0, r.jsx)(G.qP, { icons: n.icons });
 }
 function K(e) {
     let { decoration: n } = e;
-    if (n.type === h.wF.STACKED_ICONS) return (0, r.jsx)(F, { decoration: n });
+    if (n.type === h.wF.STACKED_ICONS) return (0, r.jsx)(P, { decoration: n });
 }
 var M = t(321557);
 function U(e) {
@@ -229,11 +229,11 @@ function U(e) {
         { destinationKey: t, useTrailingDecoration: l, useTitle: i, useSubtitle: s } = n,
         a = l?.(),
         o = s?.(),
-        { parentPanelNode: c, parentSidebarItemNode: u } = Z(t),
+        { parentPanelNode: c, parentSidebarItemNode: u } = F(t),
         d = i?.(),
         x = c?.useTitle?.(),
         j = d ?? x,
-        m = S(n);
+        m = T(n);
     if (null == c || null == j) return null;
     let f = null != u ? u.icon : void 0;
     return (0, r.jsx)(I, {
@@ -251,8 +251,8 @@ function U(e) {
         },
     });
 }
-var V = t(144228);
-function z(e) {
+var X = t(144228);
+function q(e) {
     let { node: n } = e,
         {
             useValue: t,
@@ -271,10 +271,10 @@ function z(e) {
         g = o(),
         h = y({ persistentBadge: c?.(), dismissibleBadges: u?.() }),
         p = a?.(),
-        v = S(n),
+        v = T(n),
         E = d?.();
     return (0, r.jsx)(m, {
-        children: (0, r.jsx)(V.z, {
+        children: (0, r.jsx)(X.z, {
             label: x,
             description: j,
             options: g,
@@ -288,8 +288,8 @@ function z(e) {
         }),
     });
 }
-var X = t(691885);
-function q(e) {
+var z = t(691885);
+function V(e) {
     let { node: n } = e,
         {
             useTitle: t,
@@ -310,8 +310,8 @@ function q(e) {
         v = s(),
         E = o(),
         b = c?.(),
-        T = y({ persistentBadge: f?.(), dismissibleBadges: g?.() }),
-        N = S(n),
+        S = y({ persistentBadge: f?.(), dismissibleBadges: g?.() }),
+        N = T(n),
         k = l.useMemo(() => {
             var e, n;
             return {
@@ -326,7 +326,7 @@ function q(e) {
             };
         }, [j, v, a, N]);
     return (0, r.jsx)(m, {
-        children: (0, r.jsx)(X.l, {
+        children: (0, r.jsx)(z.l, {
             ...k,
             label: h,
             description: p,
@@ -338,11 +338,11 @@ function q(e) {
             layout: "horizontal-responsive",
             fullWidth: !0,
             fitContent: !0,
-            badge: T,
+            badge: S,
         }),
     });
 }
-var W = t(205513);
+var W = t(893007);
 function Y(e) {
     let { node: n } = e,
         {
@@ -363,54 +363,61 @@ function Y(e) {
             fieldLayout: v,
             usePersistentBadge: E,
             getDismissibleBadges: b,
-            useHelperText: T,
+            useHelperText: S,
         } = n,
-        [N] = l.useState(() => i()),
-        k = x?.(),
-        C = c(),
-        A = u?.(),
-        I = d?.(),
-        O = o?.(),
-        R = y({ persistentBadge: E?.(), dismissibleBadges: b?.() }),
-        B = T?.(),
-        L = S(n);
+        N = x?.(),
+        [k, C] = l.useState(() => N ?? i()),
+        [A, I] = l.useState(N);
+    N !== A && (I(N), null != N && C(N));
+    let O = c(),
+        B = u?.(),
+        R = d?.(),
+        L = o?.(),
+        _ = y({ persistentBadge: E?.(), dismissibleBadges: b?.() }),
+        D = S?.(),
+        w = T(n),
+        Z = g?.map((e) => {
+            let n = null != h ? h(e) : e;
+            return { value: e, label: null != n ? `${n}` : void 0 };
+        });
     return (0, r.jsx)(m, {
-        children: (0, r.jsx)(W.G, {
-            label: C,
-            description: A,
-            disabled: I,
-            initialValue: N,
+        children: (0, r.jsx)(W.A, {
+            label: O,
+            description: B,
+            disabled: R,
             value: k,
             minValue: s,
             maxValue: a,
-            defaultValue: O,
-            onValueRender: j,
-            asValueChanges: f,
-            onValueChange: function (e) {
-                (L(), t?.(e));
+            defaultMark: L,
+            formatValue: function (e) {
+                return null != j ? j(e) : `${((100 * (e - s)) / (a - s)).toFixed(0)}%`;
             },
-            orientation: "horizontal",
-            markers: g,
-            onMarkerRender: h,
-            stickToMarkers: p,
+            onChange: function (e) {
+                (C(e), f?.(e));
+            },
+            onChangeEnd: function (e) {
+                (w(), t?.(e));
+            },
+            marks: Z,
+            snapToMarks: p,
             layout: v,
-            badge: R,
-            helperText: B,
+            badge: _,
+            helperText: D,
         }),
     });
 }
-function H(e) {
+function $(e) {
     let { decoration: n } = e;
     if (n.type === h.$d.ICON)
         return (0, r.jsx)(p.A, { icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
 }
-function $(e) {
+function H(e) {
     let { decoration: n } = e;
     return (0, r.jsx)(f.E, { variant: "text-md/medium", children: n.text });
 }
 function J(e) {
     let { decoration: n } = e;
-    if (n.type === h.Ln.TEXT) return (0, r.jsx)($, { decoration: n });
+    if (n.type === h.Ln.TEXT) return (0, r.jsx)(H, { decoration: n });
 }
 function Q(e) {
     let { node: n } = e,
@@ -424,7 +431,7 @@ function Q(e) {
         title: o,
         badge: x,
         description: c,
-        leadingElement: null != u ? (0, r.jsx)(H, { decoration: u }) : null,
+        leadingElement: null != u ? (0, r.jsx)($, { decoration: u }) : null,
         trailingElement: null != d ? (0, r.jsx)(J, { decoration: d }) : null,
     });
 }
@@ -450,7 +457,7 @@ function et(e) {
         p = a?.() ?? !1,
         v = o?.(),
         E = y({ persistentBadge: u?.(), dismissibleBadges: j?.() }),
-        b = S(n);
+        b = T(n);
     return (0, r.jsx)(m, {
         children: (0, r.jsxs)(x.B, {
             gap: 12,
@@ -566,7 +573,7 @@ let ej = l.memo(function (e) {
         h = (0, el.w)(g),
         p = i?.(d),
         v = a?.(),
-        y = S(n);
+        y = T(n);
     return (0, r.jsx)(ed, {
         ref: h,
         title: p,
@@ -694,12 +701,12 @@ function eb(e) {
         { type: t, id: l, ...i } = n;
     return (0, r.jsx)(g.$, { variant: "secondary", ...i });
 }
-function eT(e) {
+function eS(e) {
     let { decoration: n } = e,
         t = n.button;
     return (0, r.jsx)(t, {});
 }
-function eS(e) {
+function eT(e) {
     let { decoration: n } = e;
     return (0, r.jsx)(x.B, {
         direction: "horizontal",
@@ -710,21 +717,21 @@ function eS(e) {
                 case h.UV.BUTTON:
                     return (0, r.jsx)(eb, { decoration: e }, e.id);
                 case h.UV.STRONGLY_DISCOURAGED_CUSTOM:
-                    return (0, r.jsx)(eT, { decoration: e }, e.id);
+                    return (0, r.jsx)(eS, { decoration: e }, e.id);
             }
         }),
     });
 }
 function eN(e) {
     let { decoration: n } = e;
-    return null == n.icons ? null : (0, r.jsx)(P.qP, { icons: n.icons });
+    return null == n.icons ? null : (0, r.jsx)(G.qP, { icons: n.icons });
 }
 function ek(e) {
     let { decoration: n } = e;
     if (null == n) return null;
     switch (n.type) {
         case h.WX.BUTTON_GROUP:
-            return (0, r.jsx)(eS, { decoration: n });
+            return (0, r.jsx)(eT, { decoration: n });
         case h.WX.STACKED_ICONS:
             return (0, r.jsx)(eN, { decoration: n });
     }
@@ -794,23 +801,23 @@ function eO(e) {
         })
     );
 }
-function eR(e) {
+function eB(e) {
     let { notice: n } = e,
         { notice: t } = n;
     return (0, r.jsx)(t, {});
 }
-function eB(e) {
+function eR(e) {
     let { notice: n } = e;
     switch (n.type) {
         case h.lT.INLINE_NOTICE:
             return (0, r.jsx)(eO, { notice: n });
         case h.lT.STRONGLY_DISCOURAGED_CUSTOM:
-            return (0, r.jsx)(eR, { notice: n });
+            return (0, r.jsx)(eB, { notice: n });
     }
 }
 function eL(e) {
     let { notice: n } = e;
-    return (0, r.jsx)("div", { className: eI.E, children: (0, r.jsx)(eB, { notice: n }) });
+    return (0, r.jsx)("div", { className: eI.E, children: (0, r.jsx)(eR, { notice: n }) });
 }
 let e_ = l.memo(function (e) {
     let { node: n, renderSetting: t } = e,
@@ -846,7 +853,7 @@ let e_ = l.memo(function (e) {
 });
 var eD = t(140735),
     ew = t(517759);
-function eG(e) {
+function eZ(e) {
     let { title: n, subtitle: t, isHiddenVisually: l } = e;
     return null == n || "" === n
         ? null
@@ -860,7 +867,7 @@ function eG(e) {
                 children: n,
             });
 }
-let eZ = l.memo(function (e) {
+let eF = l.memo(function (e) {
     let { node: n, renderSetting: t } = e,
         { useTitle: i, useSubtitle: s, layout: a, variant: o = "default", isTitleHiddenVisually: c } = n,
         u = i(),
@@ -879,14 +886,14 @@ let eZ = l.memo(function (e) {
     return (0, r.jsxs)("fieldset", {
         "aria-describedby": g ? j : void 0,
         children: [
-            (0, r.jsx)(eG, { title: u, subtitle: d, isHiddenVisually: c }),
+            (0, r.jsx)(eZ, { title: u, subtitle: d, isHiddenVisually: c }),
             g ? (0, r.jsx)(f.E, { variant: "text-sm/normal", color: "text-default", id: j, children: d }) : null,
             (0, r.jsx)(x.B, { gap: h, padding: { top: m && !c ? 16 : 0 }, children: a.map(t) }),
         ],
     });
 });
-var eP = t(404778),
-    eF = t(105292),
+var eG = t(404778),
+    eP = t(105292),
     eK = t(777919);
 function eM(e) {
     var n;
@@ -899,20 +906,20 @@ function eM(e) {
             u?.(s, m.length) ??
             ((n = m.length),
             s
-                ? eF.intl.formatToPlainString(eF.t["3SHL+d"], { count: n })
-                : eF.intl.formatToPlainString(eF.t["8JRFyZ"], { count: n })),
+                ? eP.intl.formatToPlainString(eP.t["3SHL+d"], { count: n })
+                : eP.intl.formatToPlainString(eP.t["8JRFyZ"], { count: n })),
         g = d?.();
     return (0, r.jsxs)(x.B, {
         gap: 8,
         children: [
             j.map((e, n) =>
-                (0, r.jsxs)(l.Fragment, { children: [i(e), n !== j.length - 1 && (0, r.jsx)(eP.c, {})] }, e.key),
+                (0, r.jsxs)(l.Fragment, { children: [i(e), n !== j.length - 1 && (0, r.jsx)(eG.c, {})] }, e.key),
             ),
             m.length > 0 &&
                 (0, r.jsxs)("div", {
                     className: eK.CT,
                     children: [
-                        (0, r.jsx)(eP.c, { className: eK.mn }),
+                        (0, r.jsx)(eG.c, { className: eK.mn }),
                         (0, r.jsx)(ed, {
                             title: f,
                             collapsedSubtitle: g,
@@ -923,7 +930,7 @@ function eM(e) {
                                 children: m.map((e, n) =>
                                     (0, r.jsxs)(
                                         l.Fragment,
-                                        { children: [i(e), n !== m.length - 1 && (0, r.jsx)(eP.c, {})] },
+                                        { children: [i(e), n !== m.length - 1 && (0, r.jsx)(eG.c, {})] },
                                         e.key,
                                     ),
                                 ),
@@ -939,16 +946,16 @@ function eU(e) {
     if (n.type === h.Xy.ICON)
         return (0, r.jsx)(p.A, { icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
 }
-var eV = t(552585);
+var eX = t(552585);
+function eq(e) {
+    let { decoration: n } = e;
+    return null == n.text ? null : (0, r.jsx)(f.E, { variant: "text-md/medium", className: eX.q, children: n.text });
+}
 function ez(e) {
     let { decoration: n } = e;
-    return null == n.text ? null : (0, r.jsx)(f.E, { variant: "text-md/medium", className: eV.q, children: n.text });
+    if (n.type === h.xn.TEXT) return (0, r.jsx)(eq, { decoration: n });
 }
-function eX(e) {
-    let { decoration: n } = e;
-    if (n.type === h.xn.TEXT) return (0, r.jsx)(ez, { decoration: n });
-}
-function eq(e) {
+function eV(e) {
     let { node: n } = e,
         { useTitle: t, useSubtitle: l, useLeadingDecoration: i, useTrailingDecoration: s } = n,
         a = t?.(),
@@ -956,7 +963,7 @@ function eq(e) {
         c = i?.(),
         u = s?.(),
         d = n.layout[0].key,
-        { parentPanelNode: j } = Z(d),
+        { parentPanelNode: j } = F(d),
         m = j?.useTitle?.(),
         f = a ?? m;
     return null == j || null == f
@@ -972,15 +979,15 @@ function eq(e) {
                   align: "center",
                   justify: "end",
                   gap: "sm",
-                  children: [null != u && (0, r.jsx)(eX, { decoration: u }), (0, r.jsx)(D.u, {})],
+                  children: [null != u && (0, r.jsx)(ez, { decoration: u }), (0, r.jsx)(D.u, {})],
               }),
               onClick: () => w.A.navigate(d),
           });
 }
 var eW = t(17928),
     eY = t(868285),
-    eH = t(871682),
-    e$ = t(689175),
+    e$ = t(871682),
+    eH = t(689175),
     eJ = t(707554),
     eQ = t(823092),
     e0 = t(397274),
@@ -1006,11 +1013,11 @@ function e6(e) {
     let o = l.useMemo(() => {
         if (null == n || !i) return null;
         let { element: e } = n;
-        return (0, r.jsx)(eH.F, { className: e1.lm, children: (0, r.jsx)(e, {}) });
+        return (0, r.jsx)(e$.F, { className: e1.lm, children: (0, r.jsx)(e, {}) });
     }, [n, i]);
     return (0, r.jsxs)(r.Fragment, { children: [t, (0, r.jsx)(eY.F, { component: "div", children: o })] });
 }
-function e5(e) {
+function e8(e) {
     let { decoration: n } = e,
         t = n.component;
     return (0, r.jsx)("div", {
@@ -1019,7 +1026,7 @@ function e5(e) {
         children: (0, r.jsx)(t, {}),
     });
 }
-function e8(e) {
+function e5(e) {
     let { notice: n, children: t, useObscuredNotice: i } = e,
         s = l.useRef(null),
         a = i?.();
@@ -1027,7 +1034,7 @@ function e8(e) {
         ? (0, r.jsx)(a, {})
         : (0, r.jsx)(e6, {
               notice: n,
-              children: (0, r.jsxs)(e$.Gt, {
+              children: (0, r.jsxs)(eH.Gt, {
                   className: e1.XG,
                   scrollbarGutter: "both-edges",
                   ref: (e) => {
@@ -1049,13 +1056,13 @@ function e7(e) {
     return (0, r.jsxs)("div", {
         className: e1.LZ,
         children: [
-            null != t && (0, r.jsx)(e5, { decoration: t }),
+            null != t && (0, r.jsx)(e8, { decoration: t }),
             (0, r.jsx)(eJ.F, {
                 forceLevel: 2,
                 children: n.map((e, t) =>
                     (0, r.jsxs)(
                         l.Fragment,
-                        { children: [i(e), t !== n.length - 1 && (0, r.jsx)(eP.c, { className: e1.yF })] },
+                        { children: [i(e), t !== n.length - 1 && (0, r.jsx)(eG.c, { className: e1.yF })] },
                         e.key,
                     ),
                 ),
@@ -1068,7 +1075,7 @@ function e2(e) {
         { layout: l } = n;
     if ((0, i.zS)(l))
         return (0, r.jsx)(
-            e8,
+            e5,
             {
                 notice: n.notice,
                 useObscuredNotice: n.useObscuredNotice,
@@ -1089,7 +1096,7 @@ function e3(e) {
                 variant: "heading-md/semibold",
                 color: "text-muted",
                 className: e9.D,
-                children: eF.intl.string(eF.t.rPREPG),
+                children: eP.intl.string(eP.t.rPREPG),
             }),
             n.layout.map(t),
         ],
@@ -1122,7 +1129,7 @@ function nn(e) {
         case i.Z6.LIST:
             return (0, r.jsx)(eM, { node: t, renderSetting: nr });
         case i.Z6.FIELD_SET:
-            return (0, r.jsx)(eZ, { node: t, renderSetting: nr });
+            return (0, r.jsx)(eF, { node: t, renderSetting: nr });
         case i.Z6.RELATED:
             return (0, r.jsx)(e3, { node: t, renderSetting: nr });
         case i.Z6.CARD:
@@ -1140,15 +1147,15 @@ function nn(e) {
         case i.Z6.BUTTON:
             return (0, r.jsx)(_, { node: t });
         case i.Z6.SELECT:
-            return (0, r.jsx)(q, { node: t });
+            return (0, r.jsx)(V, { node: t });
         case i.Z6.RADIO:
-            return (0, r.jsx)(z, { node: t });
+            return (0, r.jsx)(q, { node: t });
         case i.Z6.SLIDER:
             return (0, r.jsx)(Y, { node: t });
         case i.Z6.NAVIGATOR:
             return (0, r.jsx)(U, { node: t });
         case i.Z6.NESTED_PANEL_NAVIGATOR:
-            return (0, r.jsx)(eq, { node: t });
+            return (0, r.jsx)(eV, { node: t });
         case i.Z6.CUSTOM:
             return (0, r.jsx)(m, { children: (0, r.jsx)(t.Component, {}) });
     }

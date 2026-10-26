@@ -69,37 +69,48 @@ function C(e) {
         W = k ?? j,
         [Y, K] = r.useState(!1),
         { keyboardModeEnabled: $ } = r.useContext(f.C),
-        z = r.useMemo(() => (null != P ? [...P].sort((e, t) => e - t) : []), [P]),
-        X = U && z.length > 1;
-    function q(e) {
-        return null != e && X ? S(z, e) : e;
-    }
+        z = r.useMemo(
+            () =>
+                (P ?? [])
+                    .map((e) =>
+                        "number" == typeof e
+                            ? { value: e, label: void 0, usesFormatValue: !0 }
+                            : { value: e.value, label: e.label, usesFormatValue: !1 },
+                    )
+                    .sort((e, t) => e.value - t.value),
+            [P],
+        ),
+        X = r.useMemo(() => z.map((e) => e.value), [z]),
+        q = U && X.length > 1;
     function Z(e) {
+        return null != e && q ? S(X, e) : e;
+    }
+    function Q(e) {
         return Math.min(Math.max(((e - L) / (y - L)) * 100, 0), 100);
     }
-    let Q = (0, l.J)();
-    function J(e) {
-        return null != M ? M(e) : Q.format(e);
+    let J = (0, l.J)();
+    function ee(e) {
+        return null != M ? M(e) : J.format(e);
     }
-    let ee = (0, A.S)({
-            value: q(O),
-            defaultValue: q(R),
-            minValue: X ? 0 : L,
-            maxValue: X ? z.length - 1 : y,
-            step: X ? 1 : D,
+    let et = (0, A.S)({
+            value: Z(O),
+            defaultValue: Z(R),
+            minValue: q ? 0 : L,
+            maxValue: q ? X.length - 1 : y,
+            step: q ? 1 : D,
             isDisabled: a,
-            numberFormatter: Q,
-            onChange: (e) => v?.(X ? z[e] : e),
-            onChangeEnd: (e) => b?.(X ? z[e] : e),
+            numberFormatter: J,
+            onChange: (e) => v?.(q ? X[e] : e),
+            onChangeEnd: (e) => b?.(q ? X[e] : e),
         }),
-        { groupProps: et, trackProps: en } = (0, o.P)({ "aria-label": G, "aria-labelledby": p, isDisabled: a }, ee, V),
+        { groupProps: en, trackProps: ei } = (0, o.P)({ "aria-label": G, "aria-labelledby": p, isDisabled: a }, et, V),
         {
-            thumbProps: ei,
-            inputProps: er,
-            isDragging: ea,
-            isFocused: es,
-        } = (0, d.x)({ index: 0, trackRef: V, inputRef: W, isDisabled: a, "aria-label": G }, ee),
-        el = (function (e) {
+            thumbProps: er,
+            inputProps: ea,
+            isDragging: es,
+            isFocused: el,
+        } = (0, d.x)({ index: 0, trackRef: V, inputRef: W, isDisabled: a, "aria-label": G }, et),
+        eo = (function (e) {
             let { state: t, trackRef: n, inputRef: i, sortedMarks: r, minValue: a, maxValue: s, disabled: l } = e,
                 { direction: o } = (0, _.Y)();
             function d(e) {
@@ -131,86 +142,87 @@ function C(e) {
                     t.isThumbDragging(0) && t.setThumbDragging(0, !1);
                 },
             };
-        })({ state: ee, trackRef: V, inputRef: W, sortedMarks: z, minValue: L, maxValue: y, disabled: a }),
-        eo = ((t = ee.getThumbValue(0)), X ? z[t] : t),
-        ed = J(eo),
-        ec = `${Z(eo)}%`,
-        eu = es && $,
-        e_ = !a && (eu || ea || Y);
-    function eE(e) {
+        })({ state: et, trackRef: V, inputRef: W, sortedMarks: X, minValue: L, maxValue: y, disabled: a }),
+        ed = ((t = et.getThumbValue(0)), q ? X[t] : t),
+        ec = ee(ed),
+        eu = `${Q(ed)}%`,
+        e_ = el && $,
+        eE = !a && (e_ || es || Y);
+    function eA(e) {
         return (t) => {
             x && g.has(t.key) ? t.preventDefault() : e?.(t);
         };
     }
-    let eA = (0, c.v)(et, X ? el : en),
-        eh = (0, h.z)({
-            "--grabber-size": e_ ? "20px" : "16px",
-            "--bar-size": e_ ? "6px" : "4px",
+    let eh = (0, c.v)(en, q ? eo : ei),
+        ef = (0, h.z)({
+            "--grabber-size": eE ? "20px" : "16px",
+            "--bar-size": eE ? "6px" : "4px",
             config: { ...E.config.stiff, duration: 100 },
         });
     return (0, i.jsx)(I.vN, {
         focusTarget: W,
         ringTarget: H,
         children: (0, i.jsxs)(E.animated.div, {
-            ...eA,
-            onKeyDown: eE(eA.onKeyDown),
+            ...eh,
+            onKeyDown: eA(eh.onKeyDown),
             ref: B,
-            className: s()(m.aw, { [m.ZF]: z.length > 0, [m.r9]: a }),
-            style: { ...eh, touchAction: "none" },
+            className: s()(m.aw, { [m.ZF]: X.length > 0, [m.r9]: a }),
+            style: { ...ef, touchAction: "none" },
             onMouseEnter: () => K(!0),
             onMouseLeave: () => K(!1),
             children: [
                 (0, i.jsx)("div", {
                     className: m.u4,
-                    children: z.map((e) =>
-                        (0, i.jsxs)(
+                    children: z.map((e) => {
+                        let t = e.usesFormatValue ? ee(e.value) : e.label;
+                        return (0, i.jsxs)(
                             "div",
                             {
                                 "aria-hidden": !0,
-                                className: s()(m.Gy, m.zt, { [m.Jh]: e === w }),
-                                style: { insetInlineStart: `${Z(e)}%` },
+                                className: s()(m.Gy, m.zt, { [m.Jh]: e.value === w }),
+                                style: { insetInlineStart: `${Q(e.value)}%` },
                                 children: [
-                                    (0, i.jsx)("div", { className: m.nj, children: J(e) }),
-                                    (0, i.jsx)("div", { className: m.gf }),
+                                    (0, i.jsx)("div", { className: m.nj, children: t }),
+                                    null != t ? (0, i.jsx)("div", { className: m.gf }) : null,
                                 ],
                             },
-                            e,
-                        ),
-                    ),
+                            e.value,
+                        );
+                    }),
                 }),
                 (0, i.jsx)("div", {
                     className: m.M0,
-                    children: (0, i.jsx)("div", { className: m.pP, style: { width: ec } }),
+                    children: (0, i.jsx)("div", { className: m.pP, style: { width: eu } }),
                 }),
                 (0, i.jsx)("div", {
                     className: m.u4,
                     ref: V,
                     children: (0, i.jsx)(T.m, {
-                        text: X ? null : ed,
-                        forceOpen: ea || eu,
-                        positionKey: ec,
+                        text: q ? null : ec,
+                        forceOpen: es || e_,
+                        positionKey: eu,
                         ariaHidden: !0,
                         children: (0, i.jsx)("div", {
-                            ...ei,
-                            ...(X ? { onPointerDown: void 0, onMouseDown: void 0, onTouchStart: void 0 } : null),
-                            onKeyDown: eE(ei.onKeyDown),
+                            ...er,
+                            ...(q ? { onPointerDown: void 0, onMouseDown: void 0, onTouchStart: void 0 } : null),
+                            onKeyDown: eA(er.onKeyDown),
                             ref: H,
                             className: m.Ub,
-                            style: { insetInlineStart: ec, touchAction: "none" },
+                            style: { insetInlineStart: eu, touchAction: "none" },
                             children: (0, i.jsx)(u.s, {
                                 children: (0, i.jsx)("input", {
                                     ref: W,
-                                    ...er,
-                                    tabIndex: F ?? er.tabIndex,
+                                    ...ea,
+                                    tabIndex: F ?? ea.tabIndex,
                                     id: n,
                                     "aria-labelledby": p,
                                     "aria-describedby": N,
                                     "aria-errormessage": C,
                                     "aria-invalid": null != C,
-                                    "aria-valuetext": ed,
-                                    "aria-valuemin": X ? z[0] : L,
-                                    "aria-valuemax": X ? z[z.length - 1] : y,
-                                    "aria-valuenow": eo,
+                                    "aria-valuetext": ec,
+                                    "aria-valuemin": q ? X[0] : L,
+                                    "aria-valuemax": q ? X[X.length - 1] : y,
+                                    "aria-valuenow": ed,
                                 }),
                             }),
                         }),
