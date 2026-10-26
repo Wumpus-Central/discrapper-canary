@@ -510,7 +510,7 @@ function eL(e) {
                                       n.e("32781"),
                                       n.e("488990"),
                                       n.e("332470"),
-                                      n.e("696374"),
+                                      n.e("776545"),
                                       n.e("35403"),
                                       n.e("203589"),
                                       n.e("662355"),
@@ -909,11 +909,11 @@ var e0 = n(789645),
     e7 = n(21599),
     e2 = n(279208),
     e4 = n(747007),
-    e9 = n(489673),
-    e8 = n(958590),
-    e6 = n(174459),
-    e3 = n(957565),
-    e5 = n(673707);
+    e8 = n(489673),
+    e9 = n(958590),
+    e5 = n(174459),
+    e6 = n(957565),
+    e3 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
     let { onClose: t, event: n } = e,
@@ -922,10 +922,10 @@ function tn(e) {
         a = (0, s.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
         o = (0, s.bG)(
-            [e8.A],
+            [e9.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e8.A.getInvite(e);
+                return null == e ? null : e9.A.getInvite(e);
             },
             [d, r],
         );
@@ -937,49 +937,49 @@ function tn(e) {
         v = o?.maxAge ?? te.value,
         f = o?.maxUses ?? tt.value;
     return (0, i.jsxs)("div", {
-        className: e5.kL,
+        className: e3.kL,
         children: [
             (0, i.jsx)(y.D, {
                 onClick: t,
-                className: e5.VN,
+                className: e3.VN,
                 "aria-label": eo.intl.string(eo.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e9.A, {
+            (0, i.jsx)(e8.A, {
                 children: (0, i.jsx)("div", {
-                    className: e5.zc,
+                    className: e3.zc,
                     children: (0, i.jsx)(e1.CalendarIcon, {
                         size: "custom",
                         color: "currentColor",
                         height: 30,
                         width: 30,
-                        className: e5.Kk,
+                        className: e3.Kk,
                         "aria-label": eo.intl.string(eo.t.uxFcqu),
                     }),
                 }),
             }),
             (0, i.jsx)(K.D, {
                 variant: "heading-xl/semibold",
-                className: e5.wx,
+                className: e3.wx,
                 children: eo.intl.string(eo.t.UzNv7u),
             }),
             (0, i.jsx)(g.E, {
                 variant: "text-md/normal",
                 color: "text-default",
-                className: e5.rf,
+                className: e3.rf,
                 children: eo.intl.string(eo.t.UetJjH),
             }),
             (0, i.jsxs)("div", {
-                className: e5.EZ,
+                className: e3.EZ,
                 children: [
                     (0, i.jsx)(e4.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e3.C)(e);
+                            (0, e6.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e6.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e5.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,
@@ -993,7 +993,7 @@ function tn(e) {
                         (0, i.jsx)(g.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            className: e5.x6,
+                            className: e3.x6,
                             children: (0, I.Be)(v, f),
                         }),
                 ],

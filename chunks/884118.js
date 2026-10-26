@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "650639";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "650640";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 650639, Version Hash: 4417d9c40b8188dc0bea5191096e99a21d571a55`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 650640, Version Hash: 3418b238789d368f76a4434d3b7feac3f988a004`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25498,7 +25498,7 @@ let yi = "isHideDevBanner",
                     className: tf()(yn.Wz, yn.mr),
                     children: [
                         (0, b.jsx)(yt, { className: yn.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "650639" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "650640" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -53762,6 +53762,7 @@ let W5 = (0, tZ.Fe)({
             n.e("959880"),
             n.e("174016"),
             n.e("907167"),
+            n.e("188941"),
             n.e("910471"),
             n.e("11301"),
             n.e("811133"),
@@ -53774,7 +53775,6 @@ let W5 = (0, tZ.Fe)({
             n.e("960235"),
             n.e("585968"),
             n.e("910486"),
-            n.e("188941"),
             n.e("198329"),
             n.e("678157"),
             n.e("942374"),
@@ -54009,7 +54009,7 @@ let W5 = (0, tZ.Fe)({
             n.e("577084"),
             n.e("720590"),
             n.e("709640"),
-            n.e("696374"),
+            n.e("776545"),
             n.e("235313"),
             n.e("147626"),
             n.e("710638"),
@@ -55959,10 +55959,10 @@ let Kc = (0, rl.Fe)({
                 n.e("731336"),
                 n.e("454048"),
                 n.e("993103"),
+                n.e("188941"),
                 n.e("910471"),
                 n.e("477175"),
                 n.e("960235"),
-                n.e("188941"),
                 n.e("373122"),
                 n.e("300699"),
                 n.e("349619"),

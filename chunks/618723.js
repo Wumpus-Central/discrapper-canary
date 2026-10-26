@@ -8,6 +8,7 @@ e.exports = {
     T5: "categorySectionNitroDivider_c656ac",
     cW: "categorySectionNitroLocked_c656ac",
     wx: "header_c656ac",
+    uE: "packRemove_c656ac",
     RA: "inactiveNitroHeader_c656ac",
     sp: "activeNitroHeader_c656ac",
     Lu: "premiumUpsell_c656ac",
