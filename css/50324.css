@@ -1503,6 +1503,7 @@
     color: var(--custom-checkpoint-primary);
     height: var(--space-24);
     justify-content: center;
+    position: relative;
     width: var(--space-24)
 }
 
@@ -1510,11 +1511,37 @@
     background-color: var(--border-normal);
     border-radius: 50%;
     height: var(--space-8);
+    transition: opacity .1s ease-out;
     width: var(--space-8)
 }
 
-.completed_f81261 {
+.clickable_f81261 {
+    cursor: pointer
+}
+
+.unlockedDot_f81261 {
     background-color: var(--custom-checkpoint-primary)
+}
+
+.unlockedIcon_f81261 {
+    opacity: 0;
+    position: absolute;
+    transition: opacity .1s ease-out
+}
+
+.unlockedStep_f81261:focus-visible .unlockedDot_f81261,
+.unlockedStep_f81261:hover .unlockedDot_f81261 {
+    opacity: 0
+}
+
+.unlockedStep_f81261:focus-visible .unlockedIcon_f81261,
+.unlockedStep_f81261:hover .unlockedIcon_f81261 {
+    opacity: 1
+}
+
+.full-motion .unlockedStep_f81261:active {
+    transform: scale(.96);
+    transition: transform .12s ease-out
 }
 
 .container__6b0e6 {
@@ -1861,4 +1888,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=50324.3b8bb6ffcd152150.css.map*/
+/*# sourceMappingURL=50324.47434eb413abe5e5.css.map*/
