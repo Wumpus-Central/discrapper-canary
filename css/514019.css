@@ -763,6 +763,16 @@
     width: 100%
 }
 
+.width__9d6ab {
+    font-family: Munro, sans-serif;
+    font-size: 179.2px;
+    height: 0;
+    overflow: hidden;
+    padding-inline-end: var(--space-24);
+    visibility: hidden;
+    word-break: break-all
+}
+
 .rive__9d6ab {
     height: 100%;
     width: 100%
@@ -1103,16 +1113,6 @@
     gap: var(--space-4)
 }
 
-.numberAnimationWidth__8fead {
-    font-family: Munro, sans-serif;
-    font-size: 179.2px;
-    height: 0;
-    overflow: hidden;
-    padding-inline-end: var(--space-24);
-    visibility: hidden;
-    word-break: break-all
-}
-
 .description__8fead {
     flex: 1 1 280px;
     max-width: 433px;
@@ -1157,6 +1157,12 @@
 
 .stat__92421 {
     gap: var(--space-4)
+}
+
+.display__43459 {
+    font-size: 84px;
+    line-height: 84px;
+    text-transform: uppercase
 }
 
 .icon__44598 {
@@ -1210,12 +1216,6 @@
 
 .heading_bc3e36 {
     gap: var(--space-4)
-}
-
-.display_bc3e36 {
-    font-size: 84px;
-    line-height: 84px;
-    text-transform: uppercase
 }
 
 .guilds_bc3e36 {
@@ -1765,4 +1765,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=780348.61c82d46707d7782.css.map*/
+/*# sourceMappingURL=514019.23bf5862308b1a7b.css.map*/

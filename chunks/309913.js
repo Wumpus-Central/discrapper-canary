@@ -28,8 +28,9 @@ let l = "#34E2F1",
     u = "#3FC7D2",
     _ = "#04363ABF",
     E = "#3BD4F2",
-    A = ["#DFDFDF", "#5E5E5E"],
-    h = 72,
+    A = ["#DFDFDF", "#5E5E5E"];
+(a.default.b4s18j, a.default.DcxpNj, a.default.OAUTki, a.default.ioC4Qg, a.default.M1L00s);
+let h = 72,
     f = 80,
     I = 6,
     p = 1,
