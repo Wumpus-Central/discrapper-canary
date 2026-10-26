@@ -1,4 +1,4 @@
-l.d(t, { B6: () => m, MX: () => f, WK: () => x, XG: () => u, qL: () => g });
+l.d(t, { B6: () => m, MX: () => f, WK: () => x, XG: () => o, qL: () => g });
 var n = l(582128),
     i = l(17928),
     s = l(885386),
@@ -6,19 +6,19 @@ var n = l(582128),
     r = l(287809),
     d = l(606072),
     c = l(652215);
-function o(e) {
+function u(e) {
     return e.type === c.fg2.SPOTIFY && !e.revoked;
 }
-function u() {
-    return a.A.getAccounts().filter(o);
+function o() {
+    return a.A.getAccounts().filter(u);
 }
 function m() {
-    return (0, i.bG)([a.A], () => a.A.getAccounts().filter(o).length > 0);
+    return (0, i.bG)([a.A], () => a.A.getAccounts().filter(u).length > 0);
 }
 function x() {
     return (0, i.bG)([a.A], () =>
         a.A.getAccounts()
-            .filter(o)
+            .filter(u)
             .some((e) => e.showActivity),
     );
 }
@@ -29,19 +29,19 @@ function f(e) {
 function g(e, t) {
     let l = (0, i.bG)([r.default], () => r.default.getCurrentUser()?.id),
         { isContributing: a, hasFetchedConsents: d } = f(e),
-        o = s.jP.useSetting(),
-        u = !a || o === c.clD.OFFLINE || o === c.clD.INVISIBLE;
+        u = s.jP.useSetting(),
+        o = !a || u === c.clD.OFFLINE || u === c.clD.INVISIBLE;
     return {
         data: n.useMemo(() => {
             if (!d) return;
-            if (null == t || !u || null == l) return t;
+            if (null == t || !o || null == l) return t;
             let e = t.top_listeners.filter((e) => e.user_id !== l),
                 n = t.ranked_songs.map((e) => {
                     let t = e.facepile_user_ids;
                     return null != t && t.includes(l) ? { ...e, facepile_user_ids: t.filter((e) => e !== l) } : e;
                 });
             return { ...t, top_listeners: e, ranked_songs: n };
-        }, [t, u, l, d]),
-        shouldHideCurrentUser: u,
+        }, [t, o, l, d]),
+        shouldHideCurrentUser: o,
     };
 }

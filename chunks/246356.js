@@ -1,8 +1,8 @@
-n.d(e, { A: () => a });
+n.d(e, { A: () => l });
 var i = n(582128),
-    s = n(447404);
-function a(t) {
+    a = n(447404);
+function l(t) {
     let { children: e } = t,
-        { preventIdle: n, allowIdle: a } = (0, s.o)("popup");
-    return (i.useEffect(() => (n(), () => a()), [a, n]), e);
+        { preventIdle: n, allowIdle: l } = (0, a.o)("popup");
+    return (i.useEffect(() => (n(), () => l()), [l, n]), e);
 }

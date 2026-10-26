@@ -41,7 +41,7 @@ function b(e) {
             l.id !== a && (n -= s.current.get(l.id)?.getBoundingClientRect().width ?? 0) < 0 && e.add(l.id);
         b(e);
     }, [t, E, y, a]);
-    let A = l.useCallback(
+    let N = l.useCallback(
         (e) => {
             let { closePopout: t } = e;
             return (0, n.jsxs)(c.W, {
@@ -102,7 +102,7 @@ function b(e) {
                     (0, n.jsx)(u.Y, {
                         targetElementRef: S,
                         layerContext: g.He,
-                        renderPopout: A,
+                        renderPopout: N,
                         position: "bottom",
                         align: "right",
                         autoInvert: !1,

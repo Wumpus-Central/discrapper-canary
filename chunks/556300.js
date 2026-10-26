@@ -20,7 +20,7 @@ function m(e) {
                               (0, c.o)(n.guildId, n.channelId, n.messageId, n.conversationId),
                               e.shouldCloseDefaultModals && (0, a.closeAllModals)());
                       },
-                x =
+                f =
                     h.noStyleAndInteraction || null == n.channelId || (null == p && null == n.originalLink)
                         ? d.tEg
                         : (e) => {
@@ -45,7 +45,7 @@ function m(e) {
                 {
                     role: "link",
                     onClick: g,
-                    onContextMenu: x,
+                    onContextMenu: f,
                     className: "channelMention",
                     children: [
                         null != n.inContent ? m(n.inContent, h) : null,

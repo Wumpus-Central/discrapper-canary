@@ -2,8 +2,8 @@ n.d(e, { C0: () => d, CK: () => A, Dd: () => x, UK: () => c, pv: () => C, vj: ()
 var s,
     i = n(927813),
     r = n(792620),
-    o = n(814793),
-    a = n(79545),
+    a = n(814793),
+    o = n(79545),
     l = n(190107),
     u = n(105292),
     c =
@@ -17,7 +17,7 @@ var s,
             : null;
 function C(t) {
     return (0, r.GL)(t)
-        ? 4 * !!(0, o.ui)(t)
+        ? 4 * !!(0, a.ui)(t)
         : (0, r.vv)(t)
           ? 1
           : (0, r.Ki)(t)
@@ -55,18 +55,18 @@ function E(t) {
 function x(t, e, n) {
     let s = new Date(t.startsAt).getTime(),
         r = Date.now(),
-        o = s <= r && r - s < 2 * i.A.Millis.DAY;
+        a = s <= r && r - s < 2 * i.A.Millis.DAY;
     if (n) return null;
     switch (e) {
-        case a.UA.UNENROLLED:
-            if (o) return u.intl.string(u.t.X6ziWN);
+        case o.UA.UNENROLLED:
+            if (a) return u.intl.string(u.t.X6ziWN);
             return null;
-        case a.UA.COMPLETED:
-        case a.UA.EXPIRED_CLAIMABLE:
-        case a.UA.CLAIMED:
+        case o.UA.COMPLETED:
+        case o.UA.EXPIRED_CLAIMABLE:
+        case o.UA.CLAIMED:
             return u.intl.string(u.t.uOGFB6);
-        case a.UA.EXPIRED:
-        case a.UA.EXPIRED_CLAIMED:
+        case o.UA.EXPIRED:
+        case o.UA.EXPIRED_CLAIMED:
             return u.intl.string(u.t["zX/gnV"]);
         default:
             return null;
@@ -74,17 +74,17 @@ function x(t, e, n) {
 }
 function A(t, e, n, s) {
     switch (t) {
-        case a.UA.UNENROLLED:
+        case o.UA.UNENROLLED:
             if (s) return u.intl.string(u.t.G6np6x);
-        case a.UA.ENROLLED:
-        case a.UA.INCOMPLETE:
+        case o.UA.ENROLLED:
+        case o.UA.INCOMPLETE:
             if (null != n) return `${n.progress}/${n.target}`;
             return (0, r.xm)(e);
-        case a.UA.COMPLETED:
-        case a.UA.CLAIMED:
-        case a.UA.EXPIRED:
-        case a.UA.EXPIRED_CLAIMABLE:
-        case a.UA.EXPIRED_CLAIMED:
+        case o.UA.COMPLETED:
+        case o.UA.CLAIMED:
+        case o.UA.EXPIRED:
+        case o.UA.EXPIRED_CLAIMABLE:
+        case o.UA.EXPIRED_CLAIMED:
             return null;
     }
 }

@@ -1,9 +1,9 @@
-(n.d(t, { FW: () => m, bg: () => O, RH: () => T }), n(134528), n(947204));
+(n.d(t, { FW: () => O, bg: () => m, RH: () => C }), n(134528), n(947204));
 var r,
     u = (((r = {}).AD_ATTRIBUTION_KIT = "aak"), r),
-    i = n(626584),
-    o = n(692184),
-    l = n(929482),
+    l = n(626584),
+    i = n(692184),
+    o = n(929482),
     s = n(636537),
     a = n(38405),
     c = n(652215);
@@ -26,68 +26,68 @@ async function d(e) {
         return (a.A.captureException(e, { tags: { app_context: "ios_attribution" } }), null);
     }
 }
-let E = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KIT } } },
-    f = new i.A("IosAttribution"),
-    _ = new Map();
-function A(e, t) {
-    return _.get(e) === t;
+let f = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KIT } } },
+    A = new l.A("IosAttribution"),
+    E = new Map();
+function T(e, t) {
+    return E.get(e) === t;
 }
-function C(e, t) {
-    A(e, t) && _.delete(e);
+function _(e, t) {
+    T(e, t) && E.delete(e);
 }
 function I(e) {
-    null != e && (0, l.bg)(e).catch(() => {});
+    null != e && (0, o.bg)(e).catch(() => {});
 }
-function T(e) {
+function C(e) {
     let { impressionId: t, metadataSealed: n, framework: r } = e,
         u = { framework: r, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
-    (_.set(t, u),
+    (E.set(t, u),
         (u.registration = p({ impressionId: t, metadataSealed: n, framework: r, impression: u }).catch(() => {
-            C(t, u);
+            _(t, u);
         })));
 }
 async function p(e) {
     let { impressionId: t, metadataSealed: n, framework: r, impression: u } = e,
-        i = E[r]?.viewThroughSpec;
-    if (null == i) {
-        (f.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, o.$8)(o.vI.NO_FRAMEWORK, r), C(t, u));
+        l = f[r]?.viewThroughSpec;
+    if (null == l) {
+        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, i.$8)(i.vI.NO_FRAMEWORK, r), _(t, u));
         return;
     }
-    let s = await d({ metadataSealed: n, impressionId: t, specs: [i], signal: u.signAbort.signal });
-    if (!A(t, u)) return;
+    let s = await d({ metadataSealed: n, impressionId: t, specs: [l], signal: u.signAbort.signal });
+    if (!T(t, u)) return;
     let a = null != s ? (s.at(0)?.payload ?? null) : null;
     if (null == a) {
-        ((0, o.$8)(o.vI.SIGN_FAILED, r, t), _.delete(t));
+        ((0, i.$8)(i.vI.SIGN_FAILED, r, t), E.delete(t));
         return;
     }
-    let c = await (0, l.EO)(t, r, JSON.stringify(a));
-    if (!A(t, u)) return void I(c);
+    let c = await (0, o.EO)(t, r, JSON.stringify(a));
+    if (!T(t, u)) return void I(c);
     if (null == c) {
-        ((0, o.$8)(o.vI.NO_TOKEN, r, t), _.delete(t));
+        ((0, i.$8)(i.vI.NO_TOKEN, r, t), E.delete(t));
         return;
     }
-    ((0, o.$8)(o.vI.REGISTERED, r, t), (u.token = c));
+    ((0, i.$8)(i.vI.REGISTERED, r, t), (u.token = c));
 }
 async function S(e) {
-    let t = _.get(e);
+    let t = E.get(e);
     return null == t
-        ? (f.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
-          (0, o.y9)(o.s5.NO_IMPRESSION, (0, l.BU)(), e),
+        ? (A.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
+          (0, i.y9)(i.s5.NO_IMPRESSION, (0, o.BU)(), e),
           null)
-        : (null == t.token && (await t.registration), A(e, t) && null != t.token)
-          ? ((0, o.y9)(o.s5.ATTRIBUTED, t.framework, e), t.token)
-          : (f.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
-            (0, o.y9)(o.s5.NOT_READY, t.framework, e),
+        : (null == t.token && (await t.registration), T(e, t) && null != t.token)
+          ? ((0, i.y9)(i.s5.ATTRIBUTED, t.framework, e), t.token)
+          : (A.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
+            (0, i.y9)(i.s5.NOT_READY, t.framework, e),
             null);
 }
-async function m(e) {
+async function O(e) {
     let { impressionId: t } = e,
-        n = (0, l.BU)();
-    if (null == n || null == E[n]) return;
+        n = (0, o.BU)();
+    if (null == n || null == f[n]) return;
     let r = await S(t);
     return null != r ? { impressionToken: r } : void 0;
 }
-function O(e) {
-    let t = _.get(e);
-    null != t && (_.delete(e), t.signAbort.abort(), I(t.token));
+function m(e) {
+    let t = E.get(e);
+    null != t && (E.delete(e), t.signAbort.abort(), I(t.token));
 }

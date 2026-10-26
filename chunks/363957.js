@@ -6,8 +6,8 @@ var n = l(158390),
 let r = a.A.Millis.SECOND,
     d = 10 * a.A.Millis.SECOND,
     c = { status: "idle" },
-    o = { status: "loading" },
-    u = { status: "error" },
+    u = { status: "loading" },
+    o = { status: "error" },
     m = {};
 function x(e, t) {
     let l = e.entriesByWidgetId.get(t);
@@ -22,7 +22,7 @@ function f(e, t, l, i) {
     let c = [];
     (a.forEach((t) => {
         let l = x(e, t);
-        i && l.attempts < 3 ? c.push(t) : (l.state = u);
+        i && l.attempts < 3 ? c.push(t) : (l.state = o);
     }),
         0 !== c.length &&
             ((e.backoff ??= new n.A(r, d, !0)),
@@ -58,7 +58,7 @@ let h = new g(s.h, {
             (s.activeWidgetIds = i),
             i.forEach((e) => {
                 let t = x(s, e);
-                "success" !== t.state.status && ((t.state = o), (t.attempts += 1));
+                "success" !== t.state.status && ((t.state = u), (t.attempts += 1));
             }));
     },
     GUILD_SPACE_HYDRATE_SUCCESS: function (e) {

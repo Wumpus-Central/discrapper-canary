@@ -1,4 +1,4 @@
-s.d(e, { A: () => g });
+s.d(t, { A: () => f });
 var n = s(477900),
     i = s(582128),
     a = s(289873),
@@ -9,43 +9,43 @@ var n = s(477900),
     u = s(160185),
     d = s(190107),
     m = s(105292);
-function x(t) {
-    let { questId: e } = t;
+function x(e) {
+    let { questId: t } = e;
     return (0, n.jsx)(u.i, {
-        questId: e,
+        questId: t,
         fallbackReason: d.eA.EXCLUDED_QUEST,
         bodyText: m.intl.string(m.t.NIliWX),
         questContent: l.uF.EXCLUDED_QUEST_EMBED,
     });
 }
 var h = s(127219);
-function E(t) {
-    let { questId: e } = t;
+function E(e) {
+    let { questId: t } = e;
     return (0, n.jsx)(u.i, {
-        questId: e,
+        questId: t,
         fallbackReason: d.eA.NOT_SHAREABLE_QUEST,
         bodyText: m.intl.string(m.t.Rw9rwW),
         questContent: l.uF.NOT_SHAREABLE_QUEST_EMBED,
     });
 }
-var C = s(262514),
-    f = s(980322);
-function g(t) {
-    let { questId: e } = t,
+var j = s(262514),
+    g = s(980322);
+function f(e) {
+    let { questId: t } = e,
         {
             quests: s,
             excludedQuests: u,
             isFetchingCurrentQuests: d,
         } = (0, r.mL)({ fetchPolicy: "cache-or-network", callerSource: "embed" }),
-        m = i.useMemo(() => (0, o.vc)(e, s, u), [e, s, u]),
-        g = i.useMemo(() => u.find((t) => t.id === e), [e, u]);
+        m = i.useMemo(() => (0, o.vc)(t, s, u), [t, s, u]),
+        f = i.useMemo(() => u.find((e) => e.id === t), [t, u]);
     return d
-        ? (0, n.jsx)(a.y, { className: f.u })
+        ? (0, n.jsx)(a.y, { className: g.u })
         : null == m
-          ? null != g
-              ? (0, n.jsx)(x, { questId: e })
-              : (0, n.jsx)(h.l, { questId: e, reason: h.o.NOT_FOUND })
+          ? null != f
+              ? (0, n.jsx)(x, { questId: t })
+              : (0, n.jsx)(h.l, { questId: t, reason: h.o.NOT_FOUND })
           : (0, c.E0)(m.config)
-            ? (0, n.jsx)(C.M, { quest: m, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED }, m.id)
-            : (0, n.jsx)(E, { questId: e });
+            ? (0, n.jsx)(j.M, { quest: m, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED }, m.id)
+            : (0, n.jsx)(E, { questId: t });
 }

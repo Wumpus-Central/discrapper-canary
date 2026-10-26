@@ -96,7 +96,7 @@ function H(e) {
 }
 let B = { bottom: 40, left: 32, right: 32, top: 32 };
 var W = n(588900);
-function Z(e) {
+function z(e) {
     let { children: t, actions: n, footerInput: i, title: l, variant: r = "default" } = e,
         s = "app_store_lockdown" === r;
     return (0, a.jsxs)(u.B, {
@@ -112,7 +112,7 @@ function Z(e) {
         ],
     });
 }
-var z = n(509434),
+var Z = n(509434),
     K = n(858899),
     q = n(224640),
     Y = n(921853),
@@ -399,7 +399,7 @@ let eT = {
         age_verification: function (e) {
             let { onSubmit: t } = e,
                 n = (0, w.bG)([k.default], () => k.default.getCurrentUser());
-            return (0, a.jsx)(Z, {
+            return (0, a.jsx)(z, {
                 title: "Lorem ipsum dolor",
                 actions: [
                     {
@@ -573,14 +573,14 @@ let eT = {
                         "noopener,noreferrer",
                     );
                 }, []);
-            return (0, a.jsx)(Z, {
+            return (0, a.jsx)(z, {
                 title: S.intl.string(I.default.Z87TFb),
                 variant: "app_store_lockdown",
                 actions: [
                     {
                         text: S.intl.string(I.default["6FXIU6"]),
                         variant: "primary",
-                        icon: z.I,
+                        icon: Z.I,
                         iconPosition: "end",
                         onClick: n,
                         disabled: t,

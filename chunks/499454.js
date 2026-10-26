@@ -1,21 +1,21 @@
 n.d(e, { h: () => E });
 var i = n(477900);
 n(582128);
-var s = n(192308),
-    a = n(287809),
-    l = n(166403),
-    o = n(625494),
-    r = n(927578),
+var a = n(192308),
+    l = n(287809),
+    s = n(166403),
+    r = n(625494),
+    o = n(927578),
     u = n(598653),
     d = n(202541),
     c = n(652215);
 function E(t) {
     let { processedCode: e, channelContext: E, customGiftMessage: _, giftInfo: C } = t,
-        T = !1,
-        g = null,
-        p = a.default.getCurrentUser(),
-        h = (0, r.CC)(p?.premiumType, d.PremiumTypes.TIER_0);
-    (0, s.openModalLazy)(
+        g = !1,
+        h = null,
+        f = l.default.getCurrentUser(),
+        p = (0, o.CC)(f?.premiumType, d.PremiumTypes.TIER_0);
+    (0, a.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
                 n.e("489020"),
@@ -44,20 +44,20 @@ function E(t) {
                     emojiName: C?.emoji?.name,
                     soundId: C?.sound?.id,
                     onComplete: (t, e) => {
-                        ((g = t),
-                            e && ((T = e), t.isSubscription && null == l.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
+                        ((h = t),
+                            e && ((g = e), t.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
                     },
                     ...n,
                 });
         },
         {
             onCloseCallback: () => {
-                T &&
-                    null != g &&
-                    !h &&
-                    g.isSubscription &&
-                    g?.subscriptionPlan?.premiumSubscriptionType === d.PremiumTypes.TIER_2 &&
-                    o._.dispatch(c.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                g &&
+                    null != h &&
+                    !p &&
+                    h.isSubscription &&
+                    h?.subscriptionPlan?.premiumSubscriptionType === d.PremiumTypes.TIER_2 &&
+                    r._.dispatch(c.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },
     );

@@ -4,7 +4,7 @@ function r() {
 function u(e, t, n) {
     return Promise.resolve(null);
 }
-function i(e) {
+function l(e) {
     return Promise.resolve();
 }
-n.d(t, { BU: () => r, EO: () => u, bg: () => i });
+n.d(t, { BU: () => r, EO: () => u, bg: () => l });

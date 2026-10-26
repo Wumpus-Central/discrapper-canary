@@ -1,18 +1,18 @@
 n.d(e, { X: () => c, i: () => d });
 var i = n(477900);
 n(582128);
-var s = n(17928),
-    a = n(192308),
-    l = n(952818),
-    o = n(560595),
-    r = n(760751),
+var a = n(17928),
+    l = n(192308),
+    s = n(952818),
+    r = n(560595),
+    o = n(760751),
     u = n(723702);
 function d(t) {
-    let e = (0, s.bG)([r.A], () => (null != t ? r.A.getGameByApplication(t)?.id : void 0), [t]);
-    return (0, s.bG)(
-        [l.Ay, r.A],
+    let e = (0, a.bG)([o.A], () => (null != t ? o.A.getGameByApplication(t)?.id : void 0), [t]);
+    return (0, a.bG)(
+        [s.Ay, o.A],
         () => {
-            let n = l.Ay.getVisibleRunningGames();
+            let n = s.Ay.getVisibleRunningGames();
             function i(n) {
                 return null != t && null != n && (n === t.id || (null != e && n === e));
             }
@@ -20,7 +20,7 @@ function d(t) {
                 n.find((t) => {
                     let { id: e } = t;
                     return i(e);
-                }) ?? n.find((t) => null == t.id && i(r.A.findGame(t)?.id))
+                }) ?? n.find((t) => null == t.id && i(o.A.findGame(t)?.id))
             );
         },
         [t, e],
@@ -28,8 +28,8 @@ function d(t) {
 }
 function c(t, e) {
     (0, u.isWindows)()
-        ? (0, o.A)(t.pid)
-        : (0, a.openModalLazy)(async () => {
+        ? (0, r.A)(t.pid)
+        : (0, l.openModalLazy)(async () => {
               let { default: t } = await Promise.all([
                   n.e("249169"),
                   n.e("473782"),

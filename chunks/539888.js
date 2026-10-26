@@ -6,8 +6,8 @@ var n = l(477900),
     r = l(17928),
     d = l(866665),
     c = l(408278),
-    o = l(22231),
-    u = l(241326),
+    u = l(22231),
+    o = l(241326),
     m = l(331322),
     x = l(834730),
     f = l(104510),
@@ -118,7 +118,7 @@ function U(e) {
                             children: (0, n.jsx)(c.K, {
                                 variant: "icon-only",
                                 size: "sm",
-                                icon: o.PencilIcon,
+                                icon: u.PencilIcon,
                                 "aria-label": L.intl.string(L.t.bt75uw),
                                 disabled: r,
                                 onClick: f,
@@ -130,7 +130,7 @@ function U(e) {
                             children: (0, n.jsx)(c.K, {
                                 variant: "icon-only",
                                 size: "sm",
-                                icon: u.TrashIcon,
+                                icon: o.TrashIcon,
                                 "aria-label":
                                     "" === l
                                         ? L.intl.string(L.t.Mm07Yc)
@@ -236,14 +236,14 @@ function O(e) {
             onRemove: r,
             onCommitConfig: d,
             dragHandleRef: c,
-            disabled: o = !1,
-            lock: u,
+            disabled: u = !1,
+            lock: o,
         } = e,
         m = R.m[l.type],
         x = i.useCallback(() => {
             m?.Edit != null &&
                 null != d &&
-                null == u &&
+                null == o &&
                 ((0, _.Nv)(t, l.type, l.id),
                 (function (e) {
                     let { widget: t, Edit: l, onCommit: i } = e,
@@ -264,17 +264,17 @@ function O(e) {
                             });
                     (0, w.openModalLazy)(() => Promise.resolve(s), { modalKey: "guild-space-widget-edit" });
                 })({ widget: l, Edit: m.Edit, onCommit: d }));
-        }, [l, m, d, u, t]);
+        }, [l, m, d, o, t]);
     if (null == m) return null;
     let { View: f, Edit: g, HeaderAccessory: h, HeaderActions: p, Title: j, TitleIcon: v, ViewHeaderTrailing: A } = m,
         b = "edit" === s,
-        E = null != g && null != d && null == u,
+        E = null != g && null != d && null == o,
         I = null != h ? (0, n.jsx)(h, { hydration: a, guildId: t }) : null,
         N = null != v ? (0, n.jsx)(v, { hydration: a }) : null,
-        C = null == u && null != p ? (0, n.jsx)(p, { hydration: a, guildId: t, column: l.position.column }) : null,
+        C = null == o && null != p ? (0, n.jsx)(p, { hydration: a, guildId: t, column: l.position.column }) : null,
         S = l.default_title ?? "",
         y =
-            null != j && null == u
+            null != j && null == o
                 ? (0, n.jsx)(j, { widget: l, hydration: a, guildSpaceMode: s, guildId: t })
                 : (0, n.jsx)(k.q, { children: S });
     return (0, n.jsxs)("div", {
@@ -287,7 +287,7 @@ function O(e) {
                       widgetName: S,
                       titleIcon: N,
                       accessory: I,
-                      disabled: o,
+                      disabled: u,
                       dragHandleRef: c,
                       canEdit: E,
                       onEdit: x,
@@ -298,7 +298,7 @@ function O(e) {
                       titleIcon: N,
                       accessory: I,
                       trailing:
-                          null != A && null == u
+                          null != A && null == o
                               ? (0, n.jsx)(A, { widget: l, hydration: a, title: S, guildId: t })
                               : null,
                       actions: C,
@@ -306,11 +306,11 @@ function O(e) {
             (0, n.jsx)("div", {
                 className: M.rf,
                 children:
-                    null != u
+                    null != o
                         ? (0, n.jsx)(P, {
                               title: S,
-                              boostPrice: u.boostPrice,
-                              powerupSkuId: u.powerupSkuId,
+                              boostPrice: o.boostPrice,
+                              powerupSkuId: o.powerupSkuId,
                               LockedPreview: m.LockedPreview,
                               guildId: t,
                           })

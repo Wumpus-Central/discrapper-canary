@@ -29,12 +29,12 @@ async function g(e, n, t, g) {
                 return;
             } catch {}
     }
-    let x = s.A.getChannel(n);
-    if (null != x && null == t && x.isGuildVocal() && (0, i.nc)(x)) {
+    let f = s.A.getChannel(n);
+    if (null != f && null == t && f.isGuildVocal() && (0, i.nc)(f)) {
         let { navigateOnly: e } = m.getConfig({ location: "channel_mention" });
-        if (!e) return void l.default.selectVoiceChannel(x.id);
+        if (!e) return void l.default.selectVoiceChannel(f.id);
     }
-    let f = new URLSearchParams();
-    (null != g && d.default.isProbablyAValidSnowflake(g) && f.append(p.Nl, g),
-        (0, r.A)(h.BVt.CHANNEL(e, n, t), { search: f.toString() }));
+    let x = new URLSearchParams();
+    (null != g && d.default.isProbablyAValidSnowflake(g) && x.append(p.Nl, g),
+        (0, r.A)(h.BVt.CHANNEL(e, n, t), { search: x.toString() }));
 }

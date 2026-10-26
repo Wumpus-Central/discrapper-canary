@@ -12,32 +12,32 @@ var l = t(477900),
     h = t(236285),
     p = t(232042),
     g = t(906754),
-    x = t(332173),
-    f = t(37632),
+    f = t(332173),
+    x = t(37632),
     j = t(534890),
-    y = t(105292),
-    A = t(879386);
+    A = t(105292),
+    y = t(879386);
 let C = function () {
     return (0, l.jsx)(j.ChatIcon, {
         size: "md",
         color: "currentColor",
-        className: A.K,
-        "aria-label": y.intl.string(y.t.BAB0yK),
+        className: y.K,
+        "aria-label": A.intl.string(A.t.BAB0yK),
     });
 };
-var k = t(112107),
-    E = t(930101),
-    I = t(302031),
+var E = t(112107),
+    I = t(930101),
+    k = t(302031),
     N = t(441136),
     v = t(71393),
     b = t(957565),
     S = t(143145),
-    L = t(392605),
-    T = t(785562),
-    M = t(192308),
+    M = t(392605),
+    L = t(785562),
+    T = t(192308),
     _ = t(588975),
-    P = t(442433),
-    O = t(975807),
+    O = t(442433),
+    P = t(975807),
     w = t(235393),
     D = t(679164),
     U = t(652215),
@@ -46,25 +46,25 @@ var k = t(112107),
     H = t(556300),
     $ = t(990474);
 t(938796);
-var K = t(380610),
-    B = t(435954),
+var B = t(380610),
+    K = t(435954),
     V = t(721779),
     z = t(333421),
     W = t(100392),
     F = t(950980),
     X = t(836156);
-let q = a.lazy(async () => ({
+let Z = a.lazy(async () => ({
         default: (
             await Promise.all([t.e("503634"), t.e("761764"), t.e("218126"), t.e("60800"), t.e("467696")]).then(
                 t.bind(t, 881267),
             )
         ).PlaygroundEmbed,
     })),
-    Y = a.lazy(async () => ({
+    q = a.lazy(async () => ({
         default: (await Promise.all([t.e("378100"), t.e("886456"), t.e("278078")]).then(t.bind(t, 909261)))
             .DevToolsLinkEmbed,
     })),
-    Z = RegExp("^" + V.st.source, V.st.flags);
+    Y = RegExp("^" + V.st.source, V.st.flags);
 var J = t(454908),
     Q = t(266645);
 function ee(e) {
@@ -157,9 +157,9 @@ let eu = {
     spoiler: {
         react: (e, n, t) =>
             (0, l.jsx)(
-                I.Ay,
+                k.Ay,
                 {
-                    type: I.Ay.Types.TEXT,
+                    type: k.Ay.Types.TEXT,
                     inline: t.formatInline,
                     renderTextElement: (e, n) =>
                         null == e || e.type !== m.A || n ? e : a.cloneElement(e, { tabIndex: -1 }),
@@ -170,7 +170,7 @@ let eu = {
     },
     soundboard: {
         react: (e, n, t) =>
-            (0, l.jsx)(k.Ay, {
+            (0, l.jsx)(E.Ay, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -182,17 +182,17 @@ let eu = {
         react: (e, n, t) =>
             (0, S.dq)(e.id)
                 ? (0, l.jsxs)(
-                      x.A,
+                      f.A,
                       {
                           role: "link",
                           onClick: function () {
-                              (0, L.i)(e.guildId, e.id, e.itemId);
+                              (0, M.i)(e.guildId, e.id, e.itemId);
                           },
                           className: "channelMention",
                           iconType: e.id,
                           children: [
                               n(e.mainContent, t),
-                              null != e.itemContent ? (0, l.jsx)(f.A, {}) : null,
+                              null != e.itemContent ? (0, l.jsx)(x.A, {}) : null,
                               null != e.itemContent ? n(e.itemContent, t) : null,
                           ],
                       },
@@ -200,7 +200,7 @@ let eu = {
                   )
                 : null,
     },
-    timestamp: { react: (e, n, t) => (0, l.jsx)(T.A, { node: e }, t.key) },
+    timestamp: { react: (e, n, t) => (0, l.jsx)(L.A, { node: e }, t.key) },
     list: {
         react: (e, n, t) => {
             let a = e.ordered ? "ol" : "ul",
@@ -260,14 +260,14 @@ function ed(e) {
         ...eu,
         link: (0, et.A)(e),
         devLink: {
-            match: (e, n) => (n.allowLinks && n.allowDevLinks ? Z.exec(e) : null),
+            match: (e, n) => (n.allowLinks && n.allowDevLinks ? Y.exec(e) : null),
             parse: (e, n) => ({ target: e, type: "devLink" }),
             react: (e, n, t) => {
                 let i = e.target[0];
-                return (0, K.h4)(i)
+                return (0, B.h4)(i)
                     ? (0, l.jsxs)(
                           a.Fragment,
-                          { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(B.default, { url: i }, i)] },
+                          { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(K.default, { url: i }, i)] },
                           t.key,
                       )
                     : (0, W.W0)(i)
@@ -287,7 +287,7 @@ function ed(e) {
                               {
                                   children: (0, l.jsxs)(a.Suspense, {
                                       fallback: null,
-                                      children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(q, { url: i })],
+                                      children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(Z, { url: i })],
                                   }),
                               },
                               t.key,
@@ -298,7 +298,7 @@ function ed(e) {
                                 {
                                     children: (0, l.jsxs)(a.Suspense, {
                                         fallback: null,
-                                        children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(Y, { url: i })],
+                                        children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(q, { url: i })],
                                     }),
                                 },
                                 t.key,
@@ -315,7 +315,7 @@ function ed(e) {
                         let { key: s, channelId: o, messageId: c } = r;
                         return e.src
                             ? (0, l.jsx)(
-                                  E.H,
+                                  I.H,
                                   {
                                       node: e,
                                       tooltipPosition: n,
@@ -343,7 +343,7 @@ function ed(e) {
                             e = { ...e, name: n ? `:${d.name}:` : d.name };
                         }
                         return (0, l.jsx)(
-                            E.X,
+                            I.X,
                             { node: e, tooltipPosition: n, enableClick: t, focusable: a, channelId: c, messageId: u },
                             s,
                         );
@@ -361,13 +361,13 @@ function ed(e) {
                               let l = await D.AN(n.attachmentUrl);
                               (e.shouldStopPropagation && t?.stopPropagation(),
                                   w.A.trackLinkClicked(l),
-                                  e.shouldCloseDefaultModals && (0, M.closeAllModals)(),
-                                  (0, O.A)(l));
+                                  e.shouldCloseDefaultModals && (0, T.closeAllModals)(),
+                                  (0, P.A)(l));
                           },
                     o = i.noStyleAndInteraction
                         ? U.tEg
                         : (e) => {
-                              (0, P.L3)(e, async () => {
+                              (0, O.L3)(e, async () => {
                                   let { default: e } = await t.e("762529").then(t.bind(t, 740024));
                                   return (t) =>
                                       (0, l.jsx)(e, {
@@ -378,7 +378,7 @@ function ed(e) {
                               });
                           };
                 return (0, l.jsxs)(
-                    x.A,
+                    f.A,
                     {
                         role: "link",
                         href: n.attachmentUrl,

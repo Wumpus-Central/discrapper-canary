@@ -1,10 +1,10 @@
-n.d(e, { Ay: () => T, C8: () => I });
+n.d(e, { Ay: () => I, C8: () => f });
 var s,
     i = n(477900);
 n(582128);
 var r = n(503698),
-    o = n.n(r),
-    a = n(941143),
+    a = n.n(r),
+    o = n(941143),
     l = n(661531),
     u = n(462887),
     c = n(401432),
@@ -13,25 +13,25 @@ var r = n(503698),
     E = n(557637),
     x = n(652215),
     A = n(935250),
-    I = (((s = {})[(s.SMALL = 2)] = "SMALL"), (s[(s.MEDIUM = 8)] = "MEDIUM"), s);
-let T = function (t) {
+    f = (((s = {})[(s.SMALL = 2)] = "SMALL"), (s[(s.MEDIUM = 8)] = "MEDIUM"), s);
+let I = function (t) {
     let {
             className: e,
             logotypeClassName: n,
             gameTileSize: s = 24,
             quest: r,
-            separatorSpacing: I = 2,
-            theme: T = x.NJ8.DARK,
-            withCosponsor: f = !0,
+            separatorSpacing: f = 2,
+            theme: I = x.NJ8.DARK,
+            withCosponsor: T = !0,
             withGameTile: O = !0,
-            logotypeStyle: _,
-            onLoadComplete: L,
+            logotypeStyle: L,
+            onLoadComplete: g,
         } = t,
-        N = (0, u.M)(T) ? x.NJ8.DARK : x.NJ8.LIGHT,
-        y = (0, C.a5)(r.id, N),
-        g = f && null != r.config.cosponsorMetadata && null != y;
+        y = (0, u.M)(I) ? x.NJ8.DARK : x.NJ8.LIGHT,
+        N = (0, C.a5)(r.id, y),
+        _ = T && null != r.config.cosponsorMetadata && null != N;
     return (0, i.jsxs)("div", {
-        className: o()(A.Iu, e),
+        className: a()(A.Iu, e),
         children: [
             O &&
                 (0, i.jsx)(E._M, {
@@ -41,7 +41,7 @@ let T = function (t) {
                             ref: t,
                             className: A._Y,
                             alt: "",
-                            src: (0, d.tW)(r, d.fY.GAME_TILE, N).url,
+                            src: (0, d.tW)(r, d.fY.GAME_TILE, y).url,
                             style: {
                                 borderRadius: (function (t) {
                                     switch (t) {
@@ -54,39 +54,39 @@ let T = function (t) {
                                 width: s,
                                 height: s,
                             },
-                            onLoad: L,
+                            onLoad: g,
                         }),
                 }),
             (0, i.jsx)(E._M, {
                 id: "QuestPartnerBranding_gameLogotype",
                 children: (t) =>
-                    (0, i.jsx)(a.animated.img, {
+                    (0, i.jsx)(o.animated.img, {
                         ref: t,
-                        className: o()(A.lW, n, { [A.TO]: g }),
-                        style: _,
+                        className: a()(A.lW, n, { [A.TO]: _ }),
+                        style: L,
                         alt: r.config.messages.gameTitle,
-                        src: (0, d.tW)(r, d.fY.LOGO_TYPE, N).url,
-                        onLoad: L,
+                        src: (0, d.tW)(r, d.fY.LOGO_TYPE, y).url,
+                        onLoad: g,
                     }),
             }),
-            g &&
+            _ &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)("div", {
                             className: A.ub,
-                            style: { margin: `0 ${I}px` },
+                            style: { margin: `0 ${f}px` },
                             children: (0, i.jsx)(c.a, { className: A.JB, color: l.A.colors.WHITE }),
                         }),
                         (0, i.jsx)(E._M, {
                             id: "QuestPartnerBranding_cosponsorLogotype",
                             children: (t) =>
-                                (0, i.jsx)(a.animated.img, {
+                                (0, i.jsx)(o.animated.img, {
                                     ref: t,
-                                    className: o()(A.lW, A.TO, n),
-                                    style: _,
+                                    className: a()(A.lW, A.TO, n),
+                                    style: L,
                                     alt: r.config.cosponsorMetadata?.name ?? "",
-                                    src: y.url,
-                                    onLoad: L,
+                                    src: N.url,
+                                    onLoad: g,
                                 }),
                         }),
                     ],

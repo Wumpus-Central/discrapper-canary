@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Nr: "card_fa0187",
     Q9: "characterAndStats_fa0187",
     Ss: "wordmark_fa0187",

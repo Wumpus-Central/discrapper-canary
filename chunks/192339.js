@@ -1,15 +1,15 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var l = n(477900),
-    a = n(503698),
-    r = n.n(a),
-    s = n(661531),
-    i = n(111159),
+    r = n(503698),
+    a = n.n(r),
+    i = n(661531),
+    s = n(111159),
     o = n(343053),
     c = n(479017);
-function d() {
+function u() {
     let { size: e } = (0, o.Z)();
     return (0, l.jsx)("div", {
-        className: r()(c.logo, c[e]),
-        children: (0, l.jsx)(i.p, { color: s.A.colors.ICON_OVERLAY_DARK, size: "custom", className: c.icon }),
+        className: a()(c.logo, c[e]),
+        children: (0, l.jsx)(s.p, { color: i.A.colors.ICON_OVERLAY_DARK, size: "custom", className: c.icon }),
     });
 }

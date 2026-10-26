@@ -1,27 +1,27 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => p });
 var l = n(477900),
-    a = n(17928),
-    r = n(364522),
-    s = n(86182),
-    i = n(265872),
+    r = n(17928),
+    a = n(364522),
+    i = n(86182),
+    s = n(265872),
     o = n(442433),
     c = n(538451),
-    d = n(342296),
-    u = n(363195),
+    u = n(342296),
+    d = n(363195),
     m = n(562153),
-    p = n(462117);
-function h(e) {
-    let { participants: t, channel: a } = e;
-    return (0, l.jsx)(r.Ip, {
-        className: p.S,
+    h = n(462117);
+function x(e) {
+    let { participants: t, channel: r } = e;
+    return (0, l.jsx)(a.Ip, {
+        className: h.S,
         children: t.map((e) =>
             (0, l.jsx)(
                 c.A,
                 {
                     user: e,
-                    guildId: a?.guild_id,
-                    channelId: a?.id,
-                    nick: m.Ay.getNickname(a?.guild_id, a?.id, e),
+                    guildId: r?.guild_id,
+                    channelId: r?.id,
+                    nick: m.Ay.getNickname(r?.guild_id, r?.id, e),
                     onContextMenu: (t) => {
                         (0, o.L3)(t, async () => {
                             let { default: t } = await Promise.all([
@@ -64,28 +64,28 @@ function h(e) {
         ),
     });
 }
-function x(e) {
-    let { children: t, participants: n, channel: r, onPopoutClosed: o, targetElementRef: c } = e,
-        m = (0, a.bG)([u.A], () => u.A.theme),
-        p = 1 === n.length ? n[0] : null;
-    return null != p
-        ? (0, l.jsx)(s.w, {
+function p(e) {
+    let { children: t, participants: n, channel: a, onPopoutClosed: o, targetElementRef: c } = e,
+        m = (0, r.bG)([d.A], () => d.A.theme),
+        h = 1 === n.length ? n[0] : null;
+    return null != h
+        ? (0, l.jsx)(i.w, {
               theme: m,
-              children: (0, l.jsx)(d.A, {
+              children: (0, l.jsx)(u.A, {
                   targetElementRef: c,
-                  user: p,
-                  guildId: r?.guild_id,
-                  channelId: r?.id,
+                  user: h,
+                  guildId: a?.guild_id,
+                  channelId: a?.id,
                   onClosePopout: o,
                   children: t,
               }),
           })
-        : (0, l.jsx)(s.w, {
+        : (0, l.jsx)(i.w, {
               theme: m,
-              children: (0, l.jsx)(i.Y, {
+              children: (0, l.jsx)(s.Y, {
                   targetElementRef: c,
                   renderPopout: () => {
-                      if (null != n) return (0, l.jsx)(h, { participants: n, channel: r });
+                      if (null != n) return (0, l.jsx)(x, { participants: n, channel: a });
                       throw Error("One of participant or participants is required");
                   },
                   children: t,

@@ -3,22 +3,22 @@ var i = n(477900),
     r = n(582128),
     l = n(192308),
     s = n(858899),
-    u = n(475743),
+    a = n(475743),
     o = n(942370),
-    a = n(211850),
+    u = n(211850),
     c = n(105292);
 let d = "in-game-auth-check-modal";
 function f(e, t) {
     let { showInGameModal: f = !0, showToastOnSuccess: m = !0 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        [g, E] = r.useState(!1),
-        A = r.useCallback(
+        [g, A] = r.useState(!1),
+        E = r.useCallback(
             function () {
                 for (var t = arguments.length, r = Array(t), s = 0; s < t; s++) r[s] = arguments[s];
-                E(!0);
-                let u = e(...r);
+                A(!0);
+                let a = e(...r);
                 return (
-                    u === o._.RPC &&
+                    a === o._.RPC &&
                         f &&
                         (0, l.openModalLazy)(
                             async () => {
@@ -27,20 +27,20 @@ function f(e, t) {
                             },
                             { modalKey: d },
                         ),
-                    u
+                    a
                 );
             },
-            [e, E, f],
+            [e, A, f],
         ),
-        C = (0, u.Ay)(t);
+        C = (0, a.Ay)(t);
     return (
         r.useEffect(() => {
             if (g && !1 === C && !0 === t) {
                 function e() {
-                    (0, s.P0)({ text: c.intl.string(a.default.uG6teD), variant: "success" });
+                    (0, s.P0)({ text: c.intl.string(u.default.uG6teD), variant: "success" });
                 }
                 ((0, l.closeModal)(d),
-                    E(!1),
+                    A(!1),
                     m &&
                         ("visible" === document.visibilityState
                             ? e()
@@ -50,6 +50,6 @@ function f(e, t) {
                               })));
             }
         }, [g, t, C, m]),
-        A
+        E
     );
 }
