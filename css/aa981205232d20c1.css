@@ -16,11 +16,19 @@
 }
 
 .textContainer__898a6 {
-    gap: var(--space-4)
+    gap: var(--space-4);
+    text-align: start
+}
+
+.endContainer__898a6 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12)
 }
 
 .icon__898a6 {
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=75f7091673ec2318.css.map*/
+/*# sourceMappingURL=aa981205232d20c1.css.map*/

@@ -1,8 +1,8 @@
-n.d(e, { A: () => k, e: () => N });
+n.d(e, { A: () => k, S: () => N });
 var r = n(477900),
     s = n(582128),
-    l = n(503698),
-    c = n.n(l),
+    c = n(503698),
+    l = n.n(c),
     o = n(317097),
     i = n(52133),
     a = n(417098),
@@ -15,7 +15,7 @@ var r = n(477900),
     v = n(105292),
     f = n(395822);
 function k(t) {
-    let { className: e, color: n = "default", sticky: s = !1, children: l } = t,
+    let { className: e, color: n = "default", sticky: s = !1, children: c } = t,
         i = s ? f.qf : void 0;
     function d() {
         let {
@@ -23,11 +23,11 @@ function k(t) {
             noticeColor: e,
             customStyle: n,
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return (0, r.jsx)(a.$T, { className: t, color: e, style: n, children: l });
+        return (0, r.jsx)(a.$T, { className: t, color: e, style: n, children: c });
     }
     if ("nitro-pink" === n)
         return d({
-            className: c()(f.cI, f.p3, i, e),
+            className: l()(f.cI, f.p3, i, e),
             customStyle: {
                 "--custom-notice-background": "var(--background-surface-highest)",
                 "--custom-notice-text": "var(--text-strong)",
@@ -40,7 +40,7 @@ function k(t) {
             theme: t,
             children: (t) =>
                 d({
-                    className: c()(t, f.cI, i, e),
+                    className: l()(t, f.cI, i, e),
                     customStyle: {
                         "--custom-notice-background": n,
                         "--custom-notice-text": "var(--text-strong)",
@@ -51,29 +51,21 @@ function k(t) {
     }
     return (0, r.jsx)(u.N, {
         theme: j.NJ.DARK,
-        children: (t) => d({ className: c()(t, f.cI, i, e), noticeColor: a.Hv.BRAND }),
+        children: (t) => d({ className: l()(t, f.cI, i, e), noticeColor: a.Hv.BRAND }),
     });
 }
 function N(t) {
-    let { Icon: e, children: n, contentClassName: l, endDatetime: o, ...a } = t,
-        [u, d] = s.useState(() => (0, h.ZH)(o));
-    function m() {
-        return (0, r.jsxs)("div", {
-            className: c()(f.lt, l),
-            children: [null != e && (0, r.jsx)(e, { size: "xs", color: "currentColor", className: f.Kk }), n],
-        });
-    }
+    let { endDatetime: e } = t,
+        [n, c] = s.useState(() => (0, h.ZH)(e));
     return ((0, x.A)(() => {
-        let t = (0, h.ZH)(o);
-        d((e) => (null == t ? null : null != e && (0, i.A)(e, t) ? e : t));
+        let t = (0, h.ZH)(e);
+        c((e) => (null == t ? null : null != e && (0, i.A)(e, t) ? e : t));
     }, 1e3),
-    null != u)
-        ? u.days > 0
-            ? (0, r.jsxs)(k, { ...a, children: [m(), (0, r.jsx)(p, { days: u.days })] })
-            : (0, r.jsxs)(k, { ...a, children: [m(), (0, r.jsx)(g, { timeLeft: u })] })
-        : null != o
-          ? null
-          : (0, r.jsx)(k, { ...a, children: m() });
+    null == n)
+        ? null
+        : n.days > 0
+          ? (0, r.jsx)(p, { days: n.days })
+          : (0, r.jsx)(g, { timeLeft: n });
 }
 function p(t) {
     let { days: e } = t;
@@ -91,7 +83,7 @@ function p(t) {
 }
 function g(t) {
     let {
-        timeLeft: { days: e, hours: n, minutes: s, seconds: l },
+        timeLeft: { days: e, hours: n, minutes: s, seconds: c },
     } = t;
     function o(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -101,7 +93,7 @@ function g(t) {
                 (0, r.jsx)(
                     m.E,
                     {
-                        className: c()(f.g2, { [f.$2]: e }),
+                        className: l()(f.g2, { [f.$2]: e }),
                         variant: "text-sm/bold",
                         color: "currentColor",
                         children: t,
@@ -116,6 +108,6 @@ function g(t) {
     }
     return (0, r.jsxs)("div", {
         className: f.kz,
-        children: [e > 0 && o(e), e > 0 && i(), o(n), i(), o(s), i(), o(l, !0)],
+        children: [e > 0 && o(e), e > 0 && i(), o(n), i(), o(s), i(), o(c, !0)],
     });
 }

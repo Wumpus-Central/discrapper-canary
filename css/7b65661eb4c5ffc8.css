@@ -88,18 +88,6 @@
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
-.bannerTextContainer__2fc34 {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-4);
-    text-align: start
-}
-
-.icon__2fc34 {
-    flex-shrink: 0
-}
-
 .countdownDaysContainer__2fc34 {
     gap: var(--space-4)
 }
@@ -2443,4 +2431,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=3ce4942d5a99798f.css.map*/
+/*# sourceMappingURL=7b65661eb4c5ffc8.css.map*/
