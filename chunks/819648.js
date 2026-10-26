@@ -108,7 +108,7 @@ function p(e, t) {
     return (
         (0, o.fA)(e.wearable).forEach((i) => {
             let r = e[i],
-                a = o.If[i][r]?.layer;
+                a = o.qM[i][r]?.layer;
             null != a && "" !== a && n.push(`${a}?height=${t}&width=${t}`);
         }),
         n

@@ -1,9 +1,9 @@
 (n.d(t, {
     C5: () => S,
-    Gh: () => f,
     Ux: () => I,
     cq: () => h,
     hC: () => N,
+    hw: () => f,
     nb: () => g,
     p8: () => p,
     v2: () => C,
@@ -87,7 +87,7 @@ let T = {
         [r.V.AURA]: { commonMessage: u.default.m9gYwn, topMessage: u.default.mCmdPk },
     };
 function g(e, t) {
-    return o.kb[e] === t;
+    return o._g[e] === t;
 }
 function S(e) {
     return g(e.trait, e.optionId);
@@ -105,12 +105,12 @@ function N(e) {
             : _.intl.string(u.default.sQ1bDT);
     if (t === r.V.BASE) return;
     let { commonMessage: i, topMessage: o } = m[t];
-    return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(o, { percent: 100 - a.og[n] });
+    return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(o, { percent: 100 - a.ei[n] });
 }
 function C(e, t) {
     let n = [e.getName()];
     if (!t) {
-        null != e.rarity && n.push(_.intl.string(c.bo[e.rarity]));
+        null != e.rarity && n.push(_.intl.string(c.iG[e.rarity]));
         let t = N(e);
         null != t && n.push(t);
     }

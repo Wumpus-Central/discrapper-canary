@@ -9,13 +9,13 @@ function d(e) {
     let t = [];
     return (
         o.forEach((n) => {
-            let o = e[r.Gh[n]],
+            let o = e[r.hw[n]],
                 d =
                     null != o
                         ? (function (e, t) {
-                              let n = r.Gh[e];
+                              let n = r.hw[e];
                               if ((0, r.nb)(n, t)) return;
-                              let s = a.x[n];
+                              let s = a.$[n];
                               switch (e) {
                                   case r.v7.OUTFIT: {
                                       let e = (0, i.FA)(t);
@@ -23,7 +23,7 @@ function d(e) {
                                   }
                                   case r.v7.OUTFIT_COLOR:
                                       if ((0, i.FA)(t) === t) return;
-                                      return a.m[t];
+                                      return a.x[t];
                                   default:
                                       return s[t];
                               }
