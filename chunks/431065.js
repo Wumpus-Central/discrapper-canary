@@ -54,7 +54,7 @@ let a = {
     ]),
     Math: r("Math", ["abs"]),
     Reflect: r("Reflect", ["construct", "defineProperty", "get"]),
-    Symbol: r("Symbol", ["asyncIterator", "iterator"]),
+    Symbol: r("Symbol", ["asyncIterator", "iterator", "toStringTag"]),
     Crypto: r("crypto", ["getRandomValues"]),
     Constructor: globalThis,
 };
