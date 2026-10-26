@@ -6,8 +6,8 @@ var s = n(503698),
     a = n(983851),
     r = n(194261),
     o = n(512474),
-    c = n(445567),
-    d = n(451394),
+    d = n(445567),
+    c = n(451394),
     u = n(163328),
     m = n(276293),
     x = n(11779),
@@ -15,8 +15,8 @@ var s = n(503698),
     j = n(778492),
     g = n(922288),
     p = n(986226),
-    I = n(56059),
-    N = n(781481),
+    N = n(56059),
+    I = n(781481),
     b = n(760911),
     f = n(534890),
     v = n(855473),
@@ -25,8 +25,8 @@ var s = n(503698),
     C = n(87221),
     S = n(173936),
     O = n(323384),
-    y = n(367332),
-    T = n(91166),
+    T = n(367332),
+    y = n(91166),
     k = n(936755),
     P = n(105292),
     _ = n(147190);
@@ -59,7 +59,7 @@ let G = function (e) {
             });
             break;
         case "voice-spoiler":
-            s = (0, i.jsx)(c.P, {
+            s = (0, i.jsx)(d.P, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -67,7 +67,7 @@ let G = function (e) {
             });
             break;
         case "stage":
-            s = (0, i.jsx)(d.q, {
+            s = (0, i.jsx)(c.q, {
                 size: "lg",
                 color: "currentColor",
                 className: _.Kk,
@@ -139,7 +139,7 @@ let G = function (e) {
             });
             break;
         case "forum":
-            s = (0, i.jsx)(I.b, {
+            s = (0, i.jsx)(N.b, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -147,7 +147,7 @@ let G = function (e) {
             });
             break;
         case "forum-nsfw":
-            s = (0, i.jsx)(N.f, {
+            s = (0, i.jsx)(I.f, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -237,7 +237,7 @@ let G = function (e) {
             });
             break;
         case "app-nsfw":
-            s = (0, i.jsx)(y.c, {
+            s = (0, i.jsx)(T.c, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -245,7 +245,7 @@ let G = function (e) {
             });
             break;
         case "app-spoiler":
-            s = (0, i.jsx)(T.W, {
+            s = (0, i.jsx)(y.W, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,

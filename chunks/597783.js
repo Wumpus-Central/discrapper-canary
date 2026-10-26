@@ -14,7 +14,7 @@ function p(e, t) {
         m = (0, l.bG)([i.A], () => i.A.getProduct(e)),
         g = (0, c.o)(),
         h = a.Ay.canUseShopDiscounts(g),
-        f = r.useRef(null),
+        E = r.useRef(null),
         C = r.useCallback(() => {
             let r = null != m ? (0, u.Br)(m, h, !1) : null,
                 l = null != m ? (0, u.c7)(m, h, !1) : void 0;
@@ -32,24 +32,24 @@ function p(e, t) {
                 category_position: p?.categoryPosition,
             });
         }, [p?.sessionId, p?.categoryPosition, p?.pageCategory, p?.pageSection, p?.tilePosition, h, t, m, e, n]),
-        E = r.useCallback(
+        f = r.useCallback(
             (e) => {
                 e
-                    ? null === f.current &&
-                      (f.current = setTimeout(() => {
-                          (C(), (f.current = null));
+                    ? null === E.current &&
+                      (E.current = setTimeout(() => {
+                          (C(), (E.current = null));
                       }, 1e3))
-                    : null !== f.current && (clearTimeout(f.current), (f.current = null));
+                    : null !== E.current && (clearTimeout(E.current), (E.current = null));
             },
             [C],
         );
     return (
         r.useEffect(
             () => () => {
-                null !== f.current && (clearTimeout(f.current), (f.current = null));
+                null !== E.current && (clearTimeout(E.current), (E.current = null));
             },
             [e],
         ),
-        { handleCardVisibilityChange: E }
+        { handleCardVisibilityChange: f }
     );
 }

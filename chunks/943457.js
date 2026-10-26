@@ -1,14 +1,14 @@
-s.d(t, { A: () => l });
-var a = s(562708),
-    n = s(913122),
+s.d(t, { A: () => r });
+var n = s(562708),
+    a = s(913122),
     i = s(499785),
-    r = s(652215);
-let l = {
-    createGuildFromTemplate: async function (e, t, s, l, c) {
+    l = s(652215);
+let r = {
+    createGuildFromTemplate: async function (e, t, s, r, c) {
         try {
             return (
                 await i.A.post({
-                    url: r.Rsh.GUILDS,
+                    url: l.Rsh.GUILDS,
                     body: {
                         name: e,
                         icon: t,
@@ -19,14 +19,14 @@ let l = {
                         staff_only: !!c || void 0,
                     },
                     trackedActionData: {
-                        event: a.NetworkActionNames.GUILD_CREATE,
-                        properties: { template_name: s.id, is_community_intent: l },
+                        event: n.NetworkActionNames.GUILD_CREATE,
+                        properties: { template_name: s.id, is_community_intent: r },
                     },
                     rejectWithError: !1,
                 })
             ).body;
         } catch (e) {
-            throw new n.LG(e);
+            throw new a.LG(e);
         }
     },
 };

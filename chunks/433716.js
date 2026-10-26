@@ -5,8 +5,8 @@ var i = n(477900),
     a = n(661531),
     r = n(834730),
     o = n(62010),
-    c = n(821609),
-    d = n(565645),
+    d = n(821609),
+    c = n(565645),
     u = n(178653),
     m = n(465794),
     x = n(202541),
@@ -15,7 +15,7 @@ var i = n(477900),
     g = n(23236);
 function p(e) {
     let { pack: t, isNitroTier2: n, onClose: p } = e,
-        I = s.useContext(u.A);
+        N = s.useContext(u.A);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { className: g.yF }),
@@ -37,19 +37,19 @@ function p(e) {
                 role: "group",
                 "aria-label": t.name,
                 children: t.previewEmojis.map((e) =>
-                    (0, i.jsx)(d.A, { className: g.Zg, emojiId: e.id, emojiName: e.name, animated: e.animated }, e.id),
+                    (0, i.jsx)(c.A, { className: g.Zg, emojiId: e.id, emojiName: e.name, animated: e.animated }, e.id),
                 ),
             }),
-            (!n || null != I) &&
+            (!n || null != N) &&
                 (0, i.jsx)("div", {
                     className: g.XI,
                     children: n
-                        ? (0, i.jsx)(c.$, {
+                        ? (0, i.jsx)(d.$, {
                               text: j.intl.string(h.default.DtK5IG),
                               variant: "primary",
                               fullWidth: !0,
                               onClick: function () {
-                                  null != I && (p(), I());
+                                  null != N && (p(), N());
                               },
                           })
                         : (0, i.jsx)(m.A, {

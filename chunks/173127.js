@@ -12,9 +12,9 @@ var r = n(477900),
     m = n(265872),
     g = n(980707),
     h = n(955572),
-    f = n(775602),
+    E = n(775602),
     C = n(421773),
-    E = n(361779);
+    f = n(361779);
 function v(e) {
     return !e.defaultPrevented && 0 === e.button && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
 }
@@ -36,14 +36,14 @@ function y(e) {
         ),
         p = n.icon;
     return (0, r.jsx)("li", {
-        className: E.I,
+        className: f.I,
         children: (0, r.jsxs)(u.D, {
             tag: "a",
             role: "link",
             href: n.route,
             onClick: d,
             "aria-current": o ? "page" : void 0,
-            className: a()(E.ie, E.LA, { [E.wH]: o, [E.C3]: null != n.badge }),
+            className: a()(f.ie, f.LA, { [f.wH]: o, [f.C3]: null != n.badge }),
             children: [
                 null != p && (0, r.jsx)(p, { size: "sm", color: "currentColor" }),
                 (0, r.jsx)(c.E, { variant: "text-md/medium", color: "none", children: n.text }),
@@ -66,26 +66,26 @@ function _(e) {
         y = l.useRef(null),
         _ = l.useRef(null),
         I = l.useRef(!1),
-        { isHovered: A, setIsHovered: L, onMouseEnter: k, onMouseLeave: S, cancelTimers: b } = (0, C.A)(100, 100),
+        { isHovered: L, setIsHovered: A, onMouseEnter: k, onMouseLeave: S, cancelTimers: b } = (0, C.A)(100, 100),
         O = l.useCallback(() => {
-            ((I.current = f.Ay.keyboardModeEnabled), k());
+            ((I.current = E.Ay.keyboardModeEnabled), k());
         }, [k]),
         j = l.useCallback(() => {
-            (b(), L(!0), (I.current = f.Ay.keyboardModeEnabled));
-        }, [b, L]),
+            (b(), A(!0), (I.current = E.Ay.keyboardModeEnabled));
+        }, [b, A]),
         N = l.useCallback(
             (e) => {
                 (b(),
-                    I.current && !f.Ay.keyboardModeEnabled && (0, h.uS)(),
-                    L(!1),
+                    I.current && !E.Ay.keyboardModeEnabled && (0, h.uS)(),
+                    A(!1),
                     e && requestAnimationFrame(() => (null != _.current ? _.current.focus() : y.current?.focus())));
             },
-            [b, L],
+            [b, A],
         ),
-        w = l.useCallback(() => {
-            A ? N(!1) : j();
-        }, [A, j, N]),
-        T = l.useCallback(
+        T = l.useCallback(() => {
+            L ? N(!1) : j();
+        }, [L, j, N]),
+        w = l.useCallback(
             (e) => {
                 (N(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
             },
@@ -94,17 +94,17 @@ function _(e) {
         B = l.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), A ? (N(!1), requestAnimationFrame(j)) : j());
+                    (e.preventDefault(), e.stopPropagation(), L ? (N(!1), requestAnimationFrame(j)) : j());
             },
-            [A, j, N],
+            [L, j, N],
         ),
         R = (0, r.jsx)(c.E, { variant: "text-md/medium", color: "none", children: n.text }),
-        P = (0, r.jsx)(p.a, { size: "sm", color: "currentColor", className: a()(E.OW, { [E.g3]: A }) });
+        P = (0, r.jsx)(p.a, { size: "sm", color: "currentColor", className: a()(f.OW, { [f.g3]: L }) });
     return (0, r.jsx)("li", {
-        className: E.I,
+        className: f.I,
         children: (0, r.jsx)(m.Y, {
             targetElementRef: y,
-            shouldShow: A,
+            shouldShow: L,
             position: "bottom",
             align: "left",
             spacing: 4,
@@ -149,18 +149,18 @@ function _(e) {
                 null != o
                     ? (0, r.jsxs)("span", {
                           ref: y,
-                          className: a()(E.ie, E.iL, { [E.wH]: x }),
+                          className: a()(f.ie, f.iL, { [f.wH]: x }),
                           children: [
                               (0, r.jsx)(u.D, {
                                   tag: "a",
                                   role: "link",
                                   href: o,
-                                  onClick: T,
+                                  onClick: w,
                                   onMouseEnter: O,
                                   onMouseLeave: S,
                                   "aria-current": n.key === s ? "page" : void 0,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
-                                  className: a()(E.LA, E.tH),
+                                  className: a()(f.LA, f.tH),
                                   children: R,
                               }),
                               (0, r.jsx)(u.D, {
@@ -169,12 +169,12 @@ function _(e) {
                                   role: "button",
                                   "aria-haspopup": "true",
                                   "aria-label": n.expandLabel,
-                                  onClick: w,
+                                  onClick: T,
                                   onKeyDown: B,
                                   onMouseEnter: O,
                                   onMouseLeave: S,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
-                                  className: a()(E.LA, E.nE),
+                                  className: a()(f.LA, f.nE),
                                   children: P,
                               }),
                           ],
@@ -184,37 +184,37 @@ function _(e) {
                           innerRef: y,
                           role: "button",
                           "aria-haspopup": "true",
-                          onClick: w,
+                          onClick: T,
                           onKeyDown: B,
                           onMouseEnter: O,
                           onMouseLeave: S,
-                          className: a()(E.ie, E.LA, { [E.wH]: x }),
+                          className: a()(f.ie, f.LA, { [f.wH]: x }),
                           children: [R, P],
                       }),
         }),
     });
 }
 var I = n(765671);
-let A = 'a[href], [role="button"]';
-function L(e, t) {
-    let n = Array.from(e.querySelectorAll(A)),
+let L = 'a[href], [role="button"]';
+function A(e, t) {
+    let n = Array.from(e.querySelectorAll(L)),
         r = n.indexOf(document.activeElement);
     -1 !== r && n[r + t]?.focus();
 }
 function k(e) {
     switch (e.key) {
         case "ArrowRight":
-            (e.preventDefault(), L(e.currentTarget, 1));
+            (e.preventDefault(), A(e.currentTarget, 1));
             return;
         case "ArrowLeft":
-            (e.preventDefault(), L(e.currentTarget, -1));
+            (e.preventDefault(), A(e.currentTarget, -1));
             return;
         case "Home":
-            (e.preventDefault(), e.currentTarget.querySelector(A)?.focus());
+            (e.preventDefault(), e.currentTarget.querySelector(L)?.focus());
             return;
         case "End": {
             e.preventDefault();
-            let t = e.currentTarget.querySelectorAll(A);
+            let t = e.currentTarget.querySelectorAll(L);
             t[t.length - 1]?.focus();
         }
     }
@@ -227,7 +227,7 @@ function S(e) {
             containerRef: m,
             isMeasured: g,
             visibleOptions: h,
-            onItemLayout: f,
+            onItemLayout: E,
             overflowItemsRef: C,
         } = (function (e, t, n, r) {
             let { ref: s, width: a } = (0, I.Ay)(),
@@ -250,7 +250,7 @@ function S(e) {
         })(t, `${p}-more`, s, i);
     return (0, r.jsxs)("nav", {
         "aria-label": c["aria-label"],
-        className: a()(E.C$, u),
+        className: a()(f.C$, u),
         ref: m,
         children: [
             (0, r.jsx)(b, {
@@ -258,13 +258,13 @@ function S(e) {
                 options: t,
                 overflowLabel: s,
                 overflowExpandLabel: i,
-                onItemLayout: f,
+                onItemLayout: E,
                 overflowItemsRef: C,
             }),
             g &&
                 (0, r.jsx)("ul", {
                     onKeyDown: k,
-                    className: E.P_,
+                    className: f.P_,
                     children: h.map((e) => (0, r.jsx)(x, { navId: p, option: e, selectedKey: n }, e.key)),
                 }),
         ],
@@ -275,7 +275,7 @@ function b(e) {
         u = `${n}-measure`;
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
-        className: E.Zb,
+        className: f.Zb,
         children: [
             t.map((e, t) =>
                 (0, r.jsx)(

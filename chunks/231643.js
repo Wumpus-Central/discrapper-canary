@@ -14,11 +14,11 @@ var n = a(477900),
     p = a(403362),
     g = a(867041),
     v = a(786574),
-    j = a(730441);
-function f(e) {
+    f = a(730441);
+function j(e) {
     let { id: t, selected: a, onClick: l, children: i, ref: r } = e;
     return (0, n.jsx)(o.D, {
-        className: s()(j.V3, { [j.wH]: a }),
+        className: s()(f.V3, { [f.wH]: a }),
         "data-tab-id": t,
         innerRef: r,
         onClick: l,
@@ -57,10 +57,10 @@ function b(e) {
         [C, _],
     );
     return (0, n.jsxs)("div", {
-        className: j.Mv,
+        className: f.Mv,
         children: [
             (0, n.jsxs)("div", {
-                className: j.$H,
+                className: f.$H,
                 ref: y,
                 children: [
                     t
@@ -68,18 +68,18 @@ function b(e) {
                             let { id: t, name: l } = e;
                             if (!o.has(t))
                                 return (0, n.jsx)(
-                                    f,
+                                    j,
                                     { id: t, selected: a === t, onClick: a !== t ? () => i(t) : void 0, children: l },
                                     t,
                                 );
                         })
                         .filter(p.Vq),
                     (0, n.jsx)("div", {
-                        className: j.g,
+                        className: f.g,
                         children: t.map((e) => {
                             let { id: t, name: l } = e;
                             return (0, n.jsx)(
-                                f,
+                                j,
                                 {
                                     id: t,
                                     selected: a === t,
@@ -96,7 +96,7 @@ function b(e) {
                 ],
             }),
             (0, n.jsx)("div", {
-                className: j.MK,
+                className: f.MK,
                 children:
                     (o.size > 0 || null != _) &&
                     (0, n.jsx)(u.Y, {
@@ -111,11 +111,11 @@ function b(e) {
                             (0, n.jsx)(r.$n, {
                                 ...e,
                                 buttonRef: S,
-                                className: j.Iq,
+                                className: f.Iq,
                                 size: r.$n.Sizes.ICON,
                                 look: r.$n.Looks.BLANK,
                                 children: (0, n.jsx)(x.A, {
-                                    className: j.__invalid_overflowIcon,
+                                    className: f.__invalid_overflowIcon,
                                     width: 16,
                                     height: 16,
                                 }),

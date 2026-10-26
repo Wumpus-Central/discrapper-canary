@@ -1,4 +1,4 @@
-n.d(t, { N0: () => C, lC: () => h, uS: () => f });
+n.d(t, { N0: () => C, lC: () => h, uS: () => E });
 var r = n(582128),
     l = n(17928),
     s = n(793574),
@@ -45,7 +45,7 @@ function h(e) {
         { analyticsLocations: o, newestAnalyticsLocation: i } = (0, a.Ay)([...n, s.A.COLLECTIBLES_SHOP, r]);
     return { analyticsSource: t, analyticsLocations: o, newestAnalyticsLocation: i, currentTabLocation: r };
 }
-function f(e, t, n, l) {
+function E(e, t, n, l) {
     let { sourceButton: s, enabled: a = !0 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         { analyticsLocations: o, analyticsSource: i, currentTabLocation: c, newestAnalyticsLocation: d } = h(t);
     r.useEffect(() => {

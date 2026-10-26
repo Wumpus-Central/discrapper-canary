@@ -35,14 +35,14 @@ var r = n(477900),
     B = n(782134),
     F = n(417270),
     U = n(939249),
-    _ = n(866665),
-    G = n(105292),
+    G = n(866665),
+    _ = n(105292),
     K = n(862649);
 let $ = "-:--",
     O = {
-        [d.Q6.PLAYING]: { icon: I.PauseIcon, label: G.intl.string(G.t.ZcgDJX) },
-        [d.Q6.PAUSED]: { icon: B.PlayIcon, label: G.intl.string(G.t.RscU7I) },
-        [d.Q6.ENDED]: { icon: F.RetryIcon, label: G.intl.string(G.t.hsvh0i) },
+        [d.Q6.PLAYING]: { icon: I.PauseIcon, label: _.intl.string(_.t.ZcgDJX) },
+        [d.Q6.PAUSED]: { icon: B.PlayIcon, label: _.intl.string(_.t.RscU7I) },
+        [d.Q6.ENDED]: { icon: F.RetryIcon, label: _.intl.string(_.t.hsvh0i) },
     },
     Q = { [d.oA.SM]: d.n4.SM, [d.oA.MD]: d.n4.MD, [d.oA.LG]: d.n4.LG },
     H = { [d.n4.SM]: "sm", [d.n4.MD]: "md", [d.n4.LG]: "lg" },
@@ -114,7 +114,7 @@ function X(e) {
             ref: y,
         } = e,
         S = "" !== (v ?? "").trim();
-    return (0, r.jsx)(_.m, {
+    return (0, r.jsx)(G.m, {
         text: l ? f : void 0,
         keyboardShortcut: S ? v : void 0,
         ariaHidden: !0,
@@ -184,7 +184,7 @@ function el(e) {
             autoFocus: B = !1,
             keyDownHandlerRef: F,
             volume: U,
-            muted: _,
+            muted: G,
             transcriptEnabled: $,
             captionEnabled: H,
             handlePlaybackBtnClick: Y,
@@ -205,7 +205,7 @@ function el(e) {
         ev = (0, s.bG)([k.Ay], () => k.Ay.keyboardModeEnabled),
         { isFullscreen: ex, videoRef: eE, activeLayer: eg } = (0, j.X$)(),
         eb = es && !ex,
-        [ey, eS] = l.useState(_ ? 0 : U),
+        [ey, eS] = l.useState(G ? 0 : U),
         [eC, eP] = l.useState(!1),
         [ew, eA] = l.useState(!1),
         [eR, eN] = l.useState(!1),
@@ -220,13 +220,13 @@ function el(e) {
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
         eF = l.useRef(null),
-        [eU, e_] = l.useState(1),
-        [eG, eK] = l.useState(U),
-        [e$, eO] = l.useState(_);
-    (U !== eG || _ !== e$) && (eK(U), eO(_), eS(_ ? 0 : U));
+        [eU, eG] = l.useState(1),
+        [e_, eK] = l.useState(U),
+        [e$, eO] = l.useState(G);
+    (U !== e_ || G !== e$) && (eK(U), eO(G), eS(G ? 0 : U));
     let eQ = l.useCallback(
             (e) => {
-                (e_(e), null != eE.current && (eE.current.playbackRate = e));
+                (eG(e), null != eE.current && (eE.current.playbackRate = e));
             },
             [eE],
         ),
@@ -246,7 +246,7 @@ function el(e) {
             [eE, ey],
         );
     function eV(e) {
-        (eY(e), em(e), ew && (eA(!1), eb || ed(!1)), _ && e > 0 ? ef(!1) : _ || 0 !== e || ef(!0));
+        (eY(e), em(e), ew && (eA(!1), eb || ed(!1)), G && e > 0 ? ef(!1) : G || 0 !== e || ef(!0));
     }
     let eX = l.useCallback(() => {
         if (null != eE.current)
@@ -338,7 +338,7 @@ function el(e) {
             [eo, ew, eC, eB, eh, eI],
         ));
     let e2 = 0 === ey ? f._ : ey < 0.5 ? p.S : h.H,
-        e6 = G.intl.string(0 === ey ? G.t.YqAjXy : G.t.w4m945),
+        e6 = _.intl.string(0 === ey ? _.t.YqAjXy : _.t.w4m945),
         { icon: e4, label: e8 } = O[t],
         e9 = (0, r.jsx)(X, {
             iconComponent: e2,
@@ -371,8 +371,8 @@ function el(e) {
             },
             fillStyles: eb ? void 0 : { backgroundColor: c.A.colors.WHITE.css },
             orientation: "horizontal",
-            "aria-label": G.intl.string(J.default.XiLvuG),
-            getAriaValueText: (e) => G.intl.formatToPlainString(J.default["5L6uDs"], { percent: Math.round(100 * e) }),
+            "aria-label": _.intl.string(J.default.XiLvuG),
+            getAriaValueText: (e) => _.intl.formatToPlainString(J.default["5L6uDs"], { percent: Math.round(100 * e) }),
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -399,8 +399,8 @@ function el(e) {
                                     animationTime: n,
                                     visible: a,
                                     onClick: el,
-                                    ariaLabel: G.intl.string(J.default["dRVF+Z"]),
-                                    tooltipLabel: G.intl.string(J.default["dRVF+Z"]),
+                                    ariaLabel: _.intl.string(J.default["dRVF+Z"]),
+                                    tooltipLabel: _.intl.string(J.default["dRVF+Z"]),
                                     shortcut: d.TJ.SEEK_BACK,
                                     buttonSize: Q[N],
                                     "data-testid": "discord-web-video-player-seek-backward-btn",
@@ -411,8 +411,8 @@ function el(e) {
                                     visible: a,
                                     onClick: ei,
                                     disabled: !S,
-                                    ariaLabel: S ? G.intl.string(J.default.yV2FLL) : G.intl.string(J.default.YWbiPw),
-                                    tooltipLabel: S ? G.intl.string(J.default.yV2FLL) : G.intl.string(J.default.YWbiPw),
+                                    ariaLabel: S ? _.intl.string(J.default.yV2FLL) : _.intl.string(J.default.YWbiPw),
+                                    tooltipLabel: S ? _.intl.string(J.default.yV2FLL) : _.intl.string(J.default.YWbiPw),
                                     tooltipDelayMs: 1500 * !!S,
                                     shortcut: d.TJ.SEEK_FORWARD,
                                     buttonSize: Q[N],
@@ -517,7 +517,7 @@ function el(e) {
                                     m.push({
                                         id: "transcript",
                                         iconComponent: b.u,
-                                        label: G.intl.string(J.default["6EjGUv"]),
+                                        label: _.intl.string(J.default["6EjGUv"]),
                                         onClick: i,
                                         active: r && a !== d.Q6.ENDED,
                                         disabled: a === d.Q6.ENDED,
@@ -527,7 +527,7 @@ function el(e) {
                                     m.push({
                                         id: "caption",
                                         iconComponent: z.I,
-                                        label: G.intl.string(J.default["0DbPcL"]),
+                                        label: _.intl.string(J.default["0DbPcL"]),
                                         onClick: u,
                                         active: l,
                                         shortcut: d.TJ.CAPTION,
@@ -537,7 +537,7 @@ function el(e) {
                                     m.push({
                                         id: "download",
                                         iconComponent: y.DownloadIcon,
-                                        label: G.intl.string(G.t["1WjMbC"]),
+                                        label: _.intl.string(_.t["1WjMbC"]),
                                         onClick: s,
                                         "data-testid": "discord-web-video-player-download-btn",
                                     }),
@@ -575,8 +575,8 @@ function el(e) {
                             animationTime: n,
                             visible: a,
                             onClick: er,
-                            ariaLabel: G.intl.string(J.default.z9Cnzv),
-                            tooltipLabel: G.intl.string(J.default.z9Cnzv),
+                            ariaLabel: _.intl.string(J.default.z9Cnzv),
+                            tooltipLabel: _.intl.string(J.default.z9Cnzv),
                             shortcut: d.TJ.FULLSCREEN,
                             buttonSize: Q[N],
                             "data-testid": "discord-web-video-player-fullscreen-btn",
@@ -619,7 +619,7 @@ function ea(e) {
 function ei(e) {
     let { buttons: t, animSpring: n, visible: a, size: i } = e,
         u = l.useRef(null),
-        o = G.intl.string(G.t.PdRCRg),
+        o = _.intl.string(_.t.PdRCRg),
         { activeLayer: s } = (0, j.X$)();
     return (0, r.jsx)(x.Y, {
         targetElementRef: u,
@@ -687,7 +687,7 @@ function eu(e) {
             handleControlBarPendingInteraction: o,
         } = e,
         s = l.useRef(null),
-        c = G.intl.string(J.default.ZwPhbB),
+        c = _.intl.string(J.default.ZwPhbB),
         { activeLayer: d } = (0, j.X$)();
     return (0, r.jsx)(x.Y, {
         targetElementRef: s,

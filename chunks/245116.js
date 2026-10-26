@@ -113,14 +113,14 @@ function v(e) {
             let e = await g();
             null != e && b(c(e));
         }, [c]),
-        w = n.useCallback(
+        E = n.useCallback(
             async (e) => {
                 let t = await g();
                 null != t && f(e, (e) => ({ ...e, ...t }));
             },
             [f],
         ),
-        E = n.useCallback(
+        w = n.useCallback(
             (e) => {
                 (u(e), b((t) => (t === e ? null : t)));
             },
@@ -134,14 +134,14 @@ function v(e) {
                 setSelectedTrackId: y,
                 addTextTrack: C,
                 pickAndAddImageTrack: N,
-                pickAndReplaceImage: w,
-                removeTrack: E,
+                pickAndReplaceImage: E,
+                removeTrack: w,
                 updateTrackRange: d,
                 updateTextTrackData: m,
                 updateImageTrackData: f,
                 editorFeatures: k,
             }),
-            [r, j, y, C, N, w, E, d, m, f, k],
+            [r, j, y, C, N, E, w, d, m, f, k],
         );
     return (0, a.jsx)(x.Provider, { value: A, children: t });
 }

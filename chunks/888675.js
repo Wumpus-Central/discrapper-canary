@@ -1,8 +1,8 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(477900);
 n(582128);
-var l = n(503698),
-    s = n.n(l),
+var s = n(503698),
+    l = n.n(s),
     a = n(28863),
     r = n(606049),
     o = n(224929);
@@ -10,35 +10,35 @@ function c(e) {
     let {
         icon: t,
         iconNode: n,
-        timestamp: l,
+        timestamp: s,
         timestampFormat: a,
         className: c,
-        children: d,
-        contentClassName: u,
+        children: u,
+        contentClassName: d,
         iconClassName: m,
         iconContainerClassName: x,
-        timestampClassName: g,
-        compact: h = !1,
+        timestampClassName: h,
+        compact: g = !1,
         additionalContent: f,
     } = e;
     return (0, i.jsxs)("div", {
-        className: s()(c, { [o.kL]: !0, [o.oE]: h, [o.E]: !h }),
+        className: l()(c, { [o.kL]: !0, [o.oE]: g, [o.E]: !g }),
         children: [
-            null != n && (0, i.jsx)("div", { className: s()(o.zc, x), children: n }),
+            null != n && (0, i.jsx)("div", { className: l()(o.zc, x), children: n }),
             null != t &&
                 (0, i.jsx)("div", {
                     className: o.zc,
                     children: (0, i.jsx)("div", {
                         "data-accessibility": "desaturate",
-                        className: s()(o.Kk, o.RK, m),
+                        className: l()(o.Kk, o.RK, m),
                         style: { backgroundImage: `url('${t}')` },
                     }),
                 }),
             (0, i.jsxs)("div", {
-                className: s()(u, o.Qs),
+                className: l()(d, o.Qs),
                 children: [
                     (0, i.jsxs)("div", {
-                        children: [d, null != l && (0, i.jsx)(r.A, { timestamp: l, timestampFormat: a, className: g })],
+                        children: [u, null != s && (0, i.jsx)(r.A, { timestamp: s, timestampFormat: a, className: h })],
                     }),
                     f,
                 ],
@@ -53,4 +53,4 @@ c.Action = function (e) {
         children: ["\u2014", (0, i.jsx)(a.Anchor, { onClick: t, className: o.si, children: n })],
     });
 };
-let d = c;
+let u = c;

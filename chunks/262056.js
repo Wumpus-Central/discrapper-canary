@@ -15,24 +15,24 @@ function g(e) {
     return `${60 + 57 * Math.cos(e)} ${60 + 57 * Math.sin(e)}`;
 }
 let h = function (e) {
-    let { current: t, target: n, progressColor: l = d, segmentGap: h = 4, children: f } = e,
+    let { current: t, target: n, progressColor: l = d, segmentGap: h = 4, children: E } = e,
         C = (0, o.bG)([i.Ay], () => i.Ay.useReducedMotion),
-        E = Math.round(n);
-    if (E > 1 && E <= 12) {
+        f = Math.round(n);
+    if (f > 1 && f <= 12) {
         let e, n, o;
         return (0, r.jsxs)("div", {
             className: u.iE,
             children: [
-                f,
+                E,
                 (0, r.jsx)("svg", {
                     className: u.hN,
                     viewBox: "0 0 120 120",
                     children: ((e = h / 60),
-                    (n = (0, a.clamp)(Math.floor(t), 0, E)),
-                    (o = (2 * Math.PI) / E),
-                    Array.from({ length: E }, (t, r) => {
+                    (n = (0, a.clamp)(Math.floor(t), 0, f)),
+                    (o = (2 * Math.PI) / f),
+                    Array.from({ length: f }, (t, r) => {
                         let l = m + r * o + e / 2;
-                        return { key: `${E}-${r}`, d: `M ${g(l)} A 57 57 0 0 1 ${g(l + o - e)}`, isFilled: r < n };
+                        return { key: `${f}-${r}`, d: `M ${g(l)} A 57 57 0 0 1 ${g(l + o - e)}`, isFilled: r < n };
                     })).map((e) =>
                         (0, r.jsxs)(
                             "g",
@@ -61,7 +61,7 @@ let h = function (e) {
     return (0, r.jsxs)("div", {
         className: u.iE,
         children: [
-            f,
+            E,
             (0, r.jsxs)("svg", {
                 className: u.hN,
                 viewBox: "0 0 120 120",

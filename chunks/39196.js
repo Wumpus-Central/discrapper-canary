@@ -15,15 +15,15 @@ function c(e, t, n, s) {
         g = u(e, t);
     if (null == e || null == g) return t;
     let h = (0, i.Q7)(g, n),
-        f = {
+        E = {
             locale: s,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
             helpCenterId: g.shared.helpCenter?.id,
         },
-        C = h?.title != null && "" !== h.title ? (0, r.U)((0, a.wJ)(h.title, f)) : t.title,
-        E = h?.description != null && "" !== h.description ? (0, r.U)((0, a.wJ)(h.description, f)) : t.summary;
-    if (g.subtype === l.h5.BASIC) return { ...t, title: C, summary: E };
+        C = h?.title != null && "" !== h.title ? (0, r.U)((0, a.wJ)(h.title, E)) : t.title,
+        f = h?.description != null && "" !== h.description ? (0, r.U)((0, a.wJ)(h.description, E)) : t.summary;
+    if (g.subtype === l.h5.BASIC) return { ...t, title: C, summary: f };
     let v =
         h?.rewardStates != null
             ? ((c = h.rewardStates),
@@ -34,7 +34,7 @@ function c(e, t, n, s) {
     return {
         ...t,
         title: C,
-        summary: E,
+        summary: f,
         heroBannerUrl: v ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,
         heroRiveUrl: void 0,

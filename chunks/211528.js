@@ -1,4 +1,4 @@
-n.d(t, { KS: () => N, Wf: () => y, ZB: () => g });
+n.d(t, { KS: () => N, Wf: () => y, ZB: () => A });
 var l = n(477900),
     o = n(582128),
     r = n(643909),
@@ -30,11 +30,11 @@ let y = o.memo(function (e) {
             let e = s.default.getCurrentUser();
             return null != e ? e.email : null;
         }),
-        A = (0, i.bG)([s.default], () => {
+        g = (0, i.bG)([s.default], () => {
             let e = s.default.getCurrentUser();
             return null != e ? e.globalName : null;
         }),
-        g = o.useCallback(
+        A = o.useCallback(
             (e) => {
                 if (p !== u.pn.PAYMENT_ELEMENT) return;
                 let t = (0, m.Wn)(e.value.type, a);
@@ -63,21 +63,21 @@ let y = o.memo(function (e) {
             [n],
         ),
         S = o.useMemo(
-            () => ({ billingDetails: { ...(null != y && { email: y }), ...(null != A && { name: A }) } }),
-            [y, A],
+            () => ({ billingDetails: { ...(null != y && { email: y }), ...(null != g && { name: g }) } }),
+            [y, g],
         ),
         T = o.useMemo(
             () => ({
                 id: "stripe-payment-element",
                 options: { layout: { type: "tabs" }, wallets: N, defaultValues: S, paymentMethodOrder: t, ...C },
-                onChange: g,
+                onChange: A,
                 ...f,
             }),
-            [N, S, C, f, g, t],
+            [N, S, C, f, A, t],
         );
     return (0, l.jsx)(r.PaymentElement, { ...T });
 });
-function A(e) {
+function g(e) {
     let { children: t } = e,
         n = (0, a.S)(),
         { elementsAppearance: o } = (0, p.E)(),
@@ -88,7 +88,7 @@ function A(e) {
         children: t,
     });
 }
-function g(e) {
+function A(e) {
     return null != e && null != e && (!(0, d.uJ)(e.line1) || !(0, d.uJ)(e.city));
 }
 let N = o.memo(function (e) {
@@ -104,7 +104,7 @@ let N = o.memo(function (e) {
         p = null != c && c.length > 0 ? c[0] : (0, d.uJ)(a.country) ? "" : a.country,
         m = o.useMemo(() => {
             let { name: e, address: t } = (0, C._Z)({ ...a, country: p });
-            return null != t && g(t)
+            return null != t && A(t)
                 ? {
                       ...(null != e && "" !== e && { name: e }),
                       address: Object.fromEntries(
@@ -131,7 +131,7 @@ let N = o.memo(function (e) {
             [m, E, t, s, u],
         );
     return n
-        ? (0, l.jsxs)(A, {
+        ? (0, l.jsxs)(g, {
               children: [
                   (0, l.jsx)("div", {
                       className: f.R,

@@ -30,10 +30,10 @@ function y(e) {
         ? (0, l.jsx)(a.w, { type: e.type, hidden: e.hidden, message: e.message, role: e.role }, e.key)
         : (0, l.jsx)(o.Fragment, { children: e.directContent }, e.key);
 }
-function A(e) {
+function g(e) {
     return null == e || "" === e;
 }
-function g(e) {
+function A(e) {
     let { children: t, showUpperNoticesAboveGlobalNotices: n = !1 } = e,
         { errorMessage: r, richNotices: i } = (function () {
             let { errorMessage: e } = (0, s.j)({}),
@@ -81,12 +81,12 @@ function g(e) {
         u = o.useRef(null);
     return (
         o.useEffect(() => {
-            A(r) || null == u.current || u.current.scrollIntoView({ behavior: "smooth" });
+            g(r) || null == u.current || u.current.scrollIntoView({ behavior: "smooth" });
         }, [r]),
         o.useMemo(() => {
-            if (!(!A(r) || i.length > 0 || null != t)) return null;
+            if (!(!g(r) || i.length > 0 || null != t)) return null;
             let e = (0, l.jsxs)(l.Fragment, {
-                children: [A(r) ? null : (0, l.jsx)(a.w, { type: "critical", message: r, role: "alert" }), i.map(y)],
+                children: [g(r) ? null : (0, l.jsx)(a.w, { type: "critical", message: r, role: "alert" }), i.map(y)],
             });
             return (0, l.jsx)("div", {
                 ref: u,
@@ -121,8 +121,8 @@ function S(e) {
             null != i || n
                 ? n
                     ? null != i
-                        ? (0, l.jsx)(g, { showUpperNoticesAboveGlobalNotices: r, children: i })
-                        : (0, l.jsx)(g, {})
+                        ? (0, l.jsx)(A, { showUpperNoticesAboveGlobalNotices: r, children: i })
+                        : (0, l.jsx)(A, {})
                     : (0, l.jsx)("div", { className: _.dD, children: i })
                 : null,
         [n, i, r],
@@ -140,8 +140,8 @@ function T(e) {
             promotionalNoticeContent: d,
             legalContent: h,
             invoiceTotalDueLabel: y = E.intl.string(m.default.R0cZsM),
-            invoiceTotalDueValue: A,
-            shouldShowGlobalNotices: g,
+            invoiceTotalDueValue: g,
+            shouldShowGlobalNotices: A,
             showUpperNoticesAboveGlobalNotices: T,
             footerInlineNoticeProps: I,
             headerBadgeConfig: O,
@@ -158,7 +158,7 @@ function T(e) {
                       children: [
                           (0, l.jsx)(S, {
                               upperInlineNoticeProps: t,
-                              shouldShowGlobalNotices: g,
+                              shouldShowGlobalNotices: A,
                               showUpperNoticesAboveGlobalNotices: T,
                           }),
                           n,
@@ -173,7 +173,7 @@ function T(e) {
                   (0, l.jsxs)(u.bx, {
                       children: [
                           (0, l.jsx)("div", { ref: v }),
-                          null != y && null != A && (0, l.jsx)(p.Qf, { className: _.NR, label: y, value: A }),
+                          null != y && null != g && (0, l.jsx)(p.Qf, { className: _.NR, label: y, value: g }),
                           null != d ? (0, l.jsx)("div", { className: _.uh, children: d }) : null,
                           h,
                           null != x ? (0, l.jsx)("div", { className: _.Uu, children: x }) : null,

@@ -1,9 +1,9 @@
 s.d(t, { A: () => y, D: () => A });
-var a = s(477900),
-    n = s(582128),
+var n = s(477900),
+    a = s(582128),
     i = s(935462),
-    r = s(331322),
-    l = s(123292),
+    l = s(331322),
+    r = s(123292),
     c = s(821609),
     d = s(297264),
     o = s(834730),
@@ -12,8 +12,8 @@ var a = s(477900),
     x = s(66834),
     g = s(356343),
     h = s(235986),
-    p = s(915089),
-    f = s(287809),
+    f = s(915089),
+    p = s(287809),
     j = s(695184),
     v = s(943457),
     b = s(652215),
@@ -25,90 +25,90 @@ function A(e) {
             onClose: s,
             onBack: A,
             onHubGuildInfoSet: y,
-            onGuildCreated: C,
-            isSlideReady: E,
+            onGuildCreated: E,
+            isSlideReady: C,
             hasFooter: _ = !0,
             isCommunity: S = !1,
         } = e,
-        [D, G] = n.useState(j.A.getGuildNameSuggestion()),
-        [w, L] = n.useState(null),
-        [F, R] = n.useState(!1),
-        [T, I] = n.useState(null),
-        U = !!f.default.getCurrentUser()?.isStaff(),
-        [Q, V] = n.useState(U),
-        q = (0, p.GV)(),
-        B = n.useRef(null);
-    n.useEffect(() => {
-        E && B.current?.focus();
-    }, [E]);
-    let W = n.useCallback(
+        [D, G] = a.useState(j.A.getGuildNameSuggestion()),
+        [w, L] = a.useState(null),
+        [R, F] = a.useState(!1),
+        [T, I] = a.useState(null),
+        U = !!p.default.getCurrentUser()?.isStaff(),
+        [Q, V] = a.useState(U),
+        q = (0, f.GV)(),
+        B = a.useRef(null);
+    a.useEffect(() => {
+        C && B.current?.focus();
+    }, [C]);
+    let W = a.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != t)) {
-                    (R(!0), I(null));
+                    (F(!0), I(null));
                     try {
                         if (null != y) y(D, w);
                         else {
                             let e = await v.A.createGuildFromTemplate(D, w, t, S, Q);
-                            (x.A.transitionToGuildSync(e.id), C?.(e.id));
+                            (x.A.transitionToGuildSync(e.id), E?.(e.id));
                         }
                     } catch (e) {
                         I(e);
                     }
-                    R(!1);
+                    F(!1);
                 }
             },
-            [t, y, D, w, S, Q, C],
+            [t, y, D, w, S, Q, E],
         ),
-        X = (0, a.jsxs)(r.B, {
+        X = (0, n.jsxs)(l.B, {
             fullWidth: !0,
             align: "center",
             justify: "space-between",
             direction: "horizontal",
             children: [
-                (0, a.jsx)(l.Q, { size: "sm", variant: "secondary", text: N.intl.string(N.t["13/7kX"]), onClick: A }),
-                (0, a.jsx)(c.$, {
+                (0, n.jsx)(r.Q, { size: "sm", variant: "secondary", text: N.intl.string(N.t["13/7kX"]), onClick: A }),
+                (0, n.jsx)(c.$, {
                     variant: "primary",
                     text: null != y ? N.intl.string(N.t.PDTjLN) : N.intl.string(N.t.CumH4u),
                     onClick: W,
                     disabled: 0 === D.length,
-                    loading: F,
+                    loading: R,
                 }),
             ],
         });
     return {
-        content: (0, a.jsxs)(a.Fragment, {
+        content: (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, a.jsxs)(i.rQ, {
+                (0, n.jsxs)(i.rQ, {
                     "data-migration-pending": !0,
                     direction: h.A.Direction.VERTICAL,
                     className: k.wx,
                     separator: !1,
                     children: [
-                        (0, a.jsx)(d.D, {
+                        (0, n.jsx)(d.D, {
                             className: k.DD,
                             variant: "heading-xl/semibold",
                             children: N.intl.string(N.t["2H6Nij"]),
                         }),
-                        (0, a.jsx)(o.E, {
+                        (0, n.jsx)(o.E, {
                             className: k.VA,
                             color: "text-default",
                             variant: "text-md/normal",
                             children: N.intl.string(N.t.AAfVqR),
                         }),
-                        null != s && (0, a.jsx)(i.s_, { "data-migration-pending": !0, className: k.b, onClick: s }),
+                        null != s && (0, n.jsx)(i.s_, { "data-migration-pending": !0, className: k.b, onClick: s }),
                     ],
                 }),
-                (0, a.jsxs)(i.$m, {
+                (0, n.jsxs)(i.$m, {
                     "data-migration-pending": !0,
                     className: k.iW,
                     children: [
-                        (0, a.jsx)("div", { className: k.T3, children: (0, a.jsx)(g.A, { icon: w, onChange: L }) }),
-                        (0, a.jsx)("form", {
+                        (0, n.jsx)("div", { className: k.T3, children: (0, n.jsx)(g.A, { icon: w, onChange: L }) }),
+                        (0, n.jsx)("form", {
                             onSubmit: W,
-                            children: (0, a.jsxs)(r.B, {
+                            children: (0, n.jsxs)(l.B, {
                                 gap: 16,
                                 children: [
-                                    (0, a.jsx)(u.k, {
+                                    (0, n.jsx)(u.k, {
                                         label: N.intl.string(N.t.dBih7e),
                                         required: !0,
                                         error: T?.getFirstFieldErrorMessage("name"),
@@ -119,13 +119,13 @@ function A(e) {
                                         id: q,
                                     }),
                                     U &&
-                                        (0, a.jsx)(m.d, {
+                                        (0, n.jsx)(m.d, {
                                             label: "Staff Only",
                                             description: N.intl.string(N.t.edQ5va),
                                             checked: Q,
                                             onChange: (e) => V(e),
                                         }),
-                                    (0, a.jsx)(o.E, {
+                                    (0, n.jsx)(o.E, {
                                         className: k.I4,
                                         variant: "text-xs/normal",
                                         color: "text-muted",
@@ -136,14 +136,14 @@ function A(e) {
                         }),
                         null == T || T.hasFieldErrors()
                             ? null
-                            : (0, a.jsx)(o.E, {
+                            : (0, n.jsx)(o.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
                                   children: T.message,
                               }),
                     ],
                 }),
-                _ && (0, a.jsx)(i.jl, { "data-migration-pending": !0, children: X }),
+                _ && (0, n.jsx)(i.jl, { "data-migration-pending": !0, children: X }),
             ],
         }),
         footer: X,
