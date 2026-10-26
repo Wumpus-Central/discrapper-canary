@@ -139,6 +139,7 @@ let L = {
             return null;
         }
     },
+    toOriginSafe: (e) => (null == e ? null : (d.A.toURLSafe(e)?.origin ?? null)),
     safeDecodeURIComponent(e) {
         try {
             return decodeURIComponent(e);

@@ -44,8 +44,8 @@ var i = n(567243),
     C = n(574165),
     w = n(448875),
     S = n(639621),
-    b = n(613057),
-    O = n(652215);
+    O = n(613057),
+    b = n(652215);
 let T = v.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)?.host ?? "localhost",
     L = (function () {
         let e = T.split(":")[0];
@@ -101,10 +101,10 @@ function j(e, t) {
     let n = [],
         i = e.getGuildId();
     return (
-        [O.rbe.GUILD_CATEGORY, ...d.OU].includes(e.type) ||
+        [b.rbe.GUILD_CATEGORY, ...d.OU].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    (m.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: O.EMb }));
+                    (m.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: b.EMb }));
                 }),
             ),
         Promise.all(n).then(() => {
@@ -170,40 +170,42 @@ function $(e, t, n) {
 }
 function B(e) {
     switch (e) {
-        case O.S7L.RTC_CONNECTED:
-        case O.S7L.RTC_CONNECTING:
-        case O.S7L.RTC_DISCONNECTED:
+        case b.S7L.RTC_CONNECTED:
+        case b.S7L.RTC_CONNECTING:
+        case b.S7L.RTC_DISCONNECTED:
             return e.replace(/^RTC_/, "VOICE_");
         default:
             return e;
     }
 }
 function F(e, t, n) {
-    return e === O.xL.JOIN && null != t && null != t.id && null != n.join;
+    return e === b.xL.JOIN && null != t && null != t.id && null != n.join;
 }
 function z(e) {
-    return r.Bo.get({ url: O.Rsh.APPLICATION_RPC(e), oldFormErrors: !0, retries: 3, rejectWithError: !0 }).then(
+    return r.Bo.get({ url: b.Rsh.APPLICATION_RPC(e), oldFormErrors: !0, retries: 3, rejectWithError: !0 }).then(
         (e) => {
             let { body: t } = e;
             return t;
         },
         () => {
-            throw new E.A({ closeCode: O.YI$.INVALID_CLIENTID }, "Invalid Client ID");
+            throw new E.A({ closeCode: b.YI$.INVALID_CLIENTID }, "Invalid Client ID");
         },
     );
 }
 async function Y(e, t, n) {
     let i = c.A.getApplication(t);
     if ("string" == typeof n)
-        if (e.transport === b.z4.POST_MESSAGE) {
-            let e = (0, s.Ay)(t);
-            if (null == e || !k(n, [e])) throw new E.A({ closeCode: O.YI$.INVALID_ORIGIN }, "Invalid Origin");
+        if (e.transport === O.z4.POST_MESSAGE) {
+            let e = v.A.toOriginSafe((0, s.Ay)(t)),
+                i = v.A.toOriginSafe(n);
+            if (null == e || null == i || !k(i, [e]))
+                throw new E.A({ closeCode: b.YI$.INVALID_ORIGIN }, "Invalid Origin");
         } else {
             let e = await z(t);
             if (((i = u.Ay.createFromServer(e)), !k(n, e.rpc_origins)))
-                throw new E.A({ closeCode: O.YI$.INVALID_ORIGIN }, "Invalid Origin");
+                throw new E.A({ closeCode: b.YI$.INVALID_ORIGIN }, "Invalid Origin");
         }
-    let o = e.transport === b.z4.POST_MESSAGE && !c.A.isHydrated(t);
+    let o = e.transport === O.z4.POST_MESSAGE && !c.A.isHydrated(t);
     (null == i || o) && (i = u.Ay.createFromServer(await z(t)));
     let { id: r, name: a, icon: l, coverImage: d, flags: p, parentId: _, bot: m, embeddedSurfaces: h } = i;
     e.application = { id: r, parentId: _, name: a, icon: l, coverImage: d, flags: p, bot: m, embeddedSurfaces: h };
@@ -214,11 +216,11 @@ async function H(e, t, n) {
     try {
         await i.process(n);
     } catch (e) {
-        throw new E.A({ closeCode: O.YI$.CLOSE_ABNORMAL }, "Socket closed during throttle");
+        throw new E.A({ closeCode: b.YI$.CLOSE_ABNORMAL }, "Socket closed during throttle");
     }
 }
 function Q(e, t) {
-    null == t && (e.authorization.scopes = new Set([b.hj]));
+    null == t && (e.authorization.scopes = new Set([O.hj]));
 }
 function X(e) {
     let t = _.Ay.getSettings();
@@ -259,10 +261,10 @@ function K(e, t) {
     };
 }
 function W(e) {
-    if (e !== b.z4.POST_MESSAGE)
-        throw new E.A({ errorCode: O.Lw6.INVALID_COMMAND }, `command not available from "${e} transport`);
+    if (e !== O.z4.POST_MESSAGE)
+        throw new E.A({ errorCode: b.Lw6.INVALID_COMMAND }, `command not available from "${e} transport`);
 }
 function Z(e) {
-    if (null == e.id) throw new E.A({ errorCode: O.Lw6.INVALID_COMMAND }, "Invalid application");
+    if (null == e.id) throw new E.A({ errorCode: b.Lw6.INVALID_COMMAND }, "Invalid application");
     return e.id;
 }
