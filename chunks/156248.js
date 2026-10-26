@@ -21,6 +21,7 @@ function g(e) {
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("267732"),
+                            n.e("921611"),
                             n.e("933947"),
                             n.e("866475"),
                             n.e("241697"),
@@ -33,7 +34,8 @@ function g(e) {
                             n.e("766031"),
                             n.e("394317"),
                             n.e("304329"),
-                            n.e("84755"),
+                            n.e("207960"),
+                            n.e("599889"),
                             n.e("2617"),
                         ]).then(n.bind(n, 32672));
                         return (n) => (0, i.jsx)(e, { ...n, skuId: t, product: l, productName: s, tab: r, source: a });

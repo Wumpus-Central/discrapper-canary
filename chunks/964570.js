@@ -52,8 +52,8 @@ var R = n(29160),
     H = n(198052),
     B = n(18235),
     W = n(183184),
-    Z = n(384059),
-    z = n(480890),
+    z = n(384059),
+    Z = n(480890),
     K = n(601255),
     q = n(562819),
     Y = n(449582),
@@ -220,8 +220,8 @@ var eD = n(780964),
     eH = n(271597),
     eB = n(297264),
     eW = n(475358),
-    eZ = n(866665),
-    ez = n(408278),
+    ez = n(866665),
+    eZ = n(408278),
     eK = n(625903),
     eq = n(404778),
     eY = n(689175),
@@ -362,9 +362,9 @@ function td(e) {
                         (0, i.jsxs)("div", {
                             className: tu.$s,
                             children: [
-                                (0, i.jsx)(eZ.m, {
+                                (0, i.jsx)(ez.m, {
                                     text: eO.intl.string(eO.t["3D5yo/"]),
-                                    children: (0, i.jsx)(ez.K, {
+                                    children: (0, i.jsx)(eZ.K, {
                                         onClick: () => n(),
                                         icon: eK.SettingsIcon,
                                         size: "sm",
@@ -372,9 +372,9 @@ function td(e) {
                                         "aria-label": eO.intl.string(eO.t["3D5yo/"]),
                                     }),
                                 }),
-                                (0, i.jsx)(eZ.m, {
+                                (0, i.jsx)(ez.m, {
                                     text: eO.intl.string(to.default["55C2MH"]),
-                                    children: (0, i.jsx)(ez.K, {
+                                    children: (0, i.jsx)(eZ.K, {
                                         onClick: () => t(),
                                         icon: eN.x,
                                         size: "sm",
@@ -634,9 +634,9 @@ function tD(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: tL.b,
-                    children: (0, i.jsx)(eZ.m, {
+                    children: (0, i.jsx)(ez.m, {
                         text: eO.intl.string(eO.t.cpT0Cq),
-                        children: (0, i.jsx)(ez.K, {
+                        children: (0, i.jsx)(eZ.K, {
                             icon: t_.P,
                             variant: "secondary",
                             size: "sm",
@@ -657,8 +657,8 @@ var tU = n(397562),
     tH = n(999291),
     tB = n(402860),
     tW = n(718019),
-    tZ = n(977059),
-    tz = n(915614),
+    tz = n(977059),
+    tZ = n(915614),
     tK = n(744753),
     tq = n(559506),
     tY = n(646986),
@@ -1323,7 +1323,7 @@ function nW() {
             t,
             t.length > 0 &&
                 n &&
-                (0, i.jsx)(eZ.m, {
+                (0, i.jsx)(ez.m, {
                     text: eO.intl.string(eO.t.L99HQm),
                     children: (0, i.jsx)(nA.E, {
                         size: "xs",
@@ -1334,8 +1334,8 @@ function nW() {
         ],
     });
 }
-var nZ = n(146901),
-    nz = n(827827);
+var nz = n(146901),
+    nZ = n(827827);
 let nK = [
         { duration: 15 * P.A.Millis.MINUTE, label: () => eO.intl.string(eO.t["8ot6gv"]) },
         { duration: P.A.Millis.HOUR, label: () => eO.intl.string(eO.t.UMWBZr) },
@@ -1356,7 +1356,7 @@ function nY(e) {
                     {
                         id: `${t}-${l}`,
                         label: a(),
-                        action: () => (0, nz.A)({ nextStatus: t, prevStatus: n, durationMillis: l }),
+                        action: () => (0, nZ.A)({ nextStatus: t, prevStatus: n, durationMillis: l }),
                         dontCloseOnAction: !0,
                     },
                     l ?? nq,
@@ -1372,7 +1372,7 @@ function nY(e) {
         iconLeft: () => (0, i.jsx)(ev.nW, { status: t, size: 10 }),
         leadingAccessory: { type: "status", status: t },
         action: () => {
-            (0, nz.A)({ nextStatus: t, prevStatus: n });
+            (0, nZ.A)({ nextStatus: t, prevStatus: n });
         },
         dontCloseOnAction: !0,
         children: a ? r : void 0,
@@ -1380,7 +1380,7 @@ function nY(e) {
 }
 function n$(e) {
     if (null == e || "0" === e) return;
-    let { kind: t, dateString: n, timeString: i } = (0, nZ._)(e);
+    let { kind: t, dateString: n, timeString: i } = (0, nz._)(e);
     return "today" === t
         ? eO.intl.formatToPlainString(eO.t.ZxxHIO, { timeString: i })
         : eO.intl.formatToPlainString(eO.t["9OFjSe"], { dateString: n, timeString: i });
@@ -1613,7 +1613,7 @@ function n0(e) {
     let V = l.useRef((0, tI.A)((e) => e.shouldRenderTenureLevelUp)),
         H = l.useMemo(() => (0, tv.A)(), []),
         [B, W] = l.useState(() => tI.A.getState().shouldRenderTenureLevelUp);
-    function Z(e) {
+    function z(e) {
         (n?.(), (0, tB.openUserProfileModal)({ customStatusPrompt: H, sourceAnalyticsLocations: A, ...E, ...e }));
     }
     l.useEffect(() => {
@@ -1622,7 +1622,7 @@ function n0(e) {
         }, 500);
         return () => clearTimeout(e);
     }, []);
-    let z = p?.widgets != null && p.widgets.length > 0,
+    let Z = p?.widgets != null && p.widgets.length > 0,
         K = l.useCallback(() => {
             n();
         }, [n]),
@@ -1669,12 +1669,12 @@ function n0(e) {
                                     (0, i.jsxs)("div", {
                                         className: nJ.wx,
                                         children: [
-                                            (0, i.jsx)(tz.A, { user: t, displayProfile: p, themeType: nX.d.POPOUT }),
+                                            (0, i.jsx)(tZ.A, { user: t, displayProfile: p, themeType: nX.d.POPOUT }),
                                             (0, i.jsx)(tW.A, {
                                                 user: t,
                                                 displayProfile: p,
                                                 avatarSize: nQ.T[nX.d.POPOUT].avatarSize,
-                                                onOpenProfile: f ? void 0 : Z,
+                                                onOpenProfile: f ? void 0 : z,
                                             }),
                                             (0, i.jsx)(t6.A, {
                                                 ref: k,
@@ -1695,10 +1695,10 @@ function n0(e) {
                                                 className: ew.eF,
                                                 user: t,
                                                 displayName: nh.Ay.getName(void 0, null, t),
-                                                onClickName: f ? void 0 : Z,
+                                                onClickName: f ? void 0 : z,
                                                 displayNameTrailing: (0, i.jsx)(t5, { user: t, isVisible: C }),
                                                 pronouns: p?.pronouns,
-                                                trailing: (0, i.jsx)(tZ.A, {
+                                                trailing: (0, i.jsx)(tz.A, {
                                                     displayProfile: p,
                                                     themeType: nX.d.POPOUT,
                                                     onClose: n,
@@ -1713,16 +1713,16 @@ function n0(e) {
                                                 hidePersonalInformation: S,
                                                 onClose: n,
                                             }),
-                                            z &&
+                                            Z &&
                                                 (0, i.jsx)(t$.A, {
                                                     user: t,
                                                     widgets: p?.widgets,
-                                                    onOpenUserProfileModal: Z,
+                                                    onOpenUserProfileModal: z,
                                                 }),
                                             (0, i.jsx)(tY.A, {
                                                 user: t,
                                                 currentUser: t,
-                                                onOpenUserProfileModal: Z,
+                                                onOpenUserProfileModal: z,
                                                 onClose: n,
                                             }),
                                             (0, i.jsxs)("div", {
@@ -2166,8 +2166,8 @@ function iB(e) {
     });
 }
 var iW = n(843010),
-    iZ = n(764231),
-    iz = n(425713);
+    iz = n(764231),
+    iZ = n(425713);
 function iK(e) {
     let { groupName: t, targetElementRef: n } = e,
         l = tM(),
@@ -2194,7 +2194,7 @@ function iK(e) {
 function iq(e) {
     let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: a, shouldShow: r } = e,
         s = tR.sp.indexOf(t),
-        o = (0, iz.I)(tR.sp[s > 0 ? s - 1 : s]).ambient,
+        o = (0, iZ.I)(tR.sp[s > 0 ? s - 1 : s]).ambient,
         u = (0, l.useCallback)(() => {
             (n(nU.i.TAKE_ACTION),
                 tI.A.setState({ shouldRenderTenureLevelUp: !0 }),
@@ -2205,7 +2205,7 @@ function iq(e) {
         }, [n]),
         c = tR.VD[t],
         m = eO.intl.formatToPlainString(eO.t.ewkaVR, {
-            timeMilestone: (0, iZ.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
+            timeMilestone: (0, iz.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
         }),
         h = [{ text: eO.intl.string(eO.t.RzWDqY), variant: "primary", onClick: u }];
     return (0, i.jsx)(nb.A, {
@@ -2395,7 +2395,7 @@ function i4(e) {
                         (0, i.jsx)(O.f5, {
                             value: C,
                             children: (0, i.jsx)(i3.A, {
-                                onInteraction: (0, z.s)("AudioDeviceMenu", M.A.ACCOUNT),
+                                onInteraction: (0, Z.s)("AudioDeviceMenu", M.A.ACCOUNT),
                                 onClose: t,
                                 renderOutputDevices: !0,
                                 renderOutputVolume: !0,
@@ -2558,7 +2558,7 @@ function ld(e) {
                         (0, i.jsx)(O.f5, {
                             value: w,
                             children: (0, i.jsx)(i3.A, {
-                                onInteraction: (0, z.s)("AudioDeviceMenu", M.A.ACCOUNT),
+                                onInteraction: (0, Z.s)("AudioDeviceMenu", M.A.ACCOUNT),
                                 onClose: t,
                                 maybeRenderPTTCheckbox: !0,
                                 renderInputProfiles: N.length > 0,
@@ -2798,7 +2798,7 @@ function lb(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lN.A)("1793017900829", !0);
+        let e = (0, lN.A)("1793018037278", !0);
         t =
             null != e
                 ? eO.intl.formatToPlainString(eO.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -2992,11 +2992,11 @@ class lP extends l.PureComponent {
     }
     handleToggleSelfMute = () => {
         let { serverMute: e, suppress: t, selfMute: n } = this.props;
-        ((0, W.A)(e, t, tr.JJy.ACCOUNT_PANEL), (0, Z.X)(M.A.ACCOUNT, Z.O.MIC, n));
+        ((0, W.A)(e, t, tr.JJy.ACCOUNT_PANEL), (0, z.X)(M.A.ACCOUNT, z.O.MIC, n));
     };
     handleToggleSelfDeaf = () => {
         let { serverDeaf: e, selfDeaf: t } = this.props;
-        ((0, B.A)(e, tr.JJy.ACCOUNT_PANEL), (0, Z.X)(M.A.ACCOUNT, Z.O.DEAFEN, !t));
+        ((0, B.A)(e, tr.JJy.ACCOUNT_PANEL), (0, z.X)(M.A.ACCOUNT, z.O.DEAFEN, !t));
     };
     handleOpenAccountSettings = () => {
         (this.dismissTooltips(),
@@ -3129,7 +3129,9 @@ class lP extends l.PureComponent {
                     n.e("274461"),
                     n.e("830560"),
                     n.e("526575"),
-                    n.e("355703"),
+                    n.e("764601"),
+                    n.e("725134"),
+                    n.e("841152"),
                     n.e("165291"),
                     n.e("109383"),
                     n.e("818291"),
@@ -3429,9 +3431,9 @@ class lP extends l.PureComponent {
                     n.e("913823"),
                     n.e("166495"),
                     n.e("307575"),
+                    n.e("718667"),
                     n.e("88342"),
                     n.e("187110"),
-                    n.e("854461"),
                     n.e("942724"),
                     n.e("139970"),
                     n.e("393766"),
@@ -3782,10 +3784,10 @@ class lP extends l.PureComponent {
                     n.e("44491"),
                 ]).then(n.bind(n, 907206));
                 return (t) =>
-                    (0, i.jsx)(e, { ...t, onClose: E.Z_, onInteraction: (0, z.s)("UserSettingsMenu", M.A.ACCOUNT) });
+                    (0, i.jsx)(e, { ...t, onClose: E.Z_, onInteraction: (0, Z.s)("UserSettingsMenu", M.A.ACCOUNT) });
             });
     };
-    audioOnInteractionHandler = (0, z.s)("AudioDeviceMenu", M.A.ACCOUNT);
+    audioOnInteractionHandler = (0, Z.s)("AudioDeviceMenu", M.A.ACCOUNT);
     handleInputAudioContextMenu = (e, t) => {
         (this.dismissTooltips(),
             (0, E.L3)(e, async () => {
@@ -4149,9 +4151,9 @@ function lU() {
         R = (0, u.bG)([il.A], () => il.A.hasLayers()),
         B = (0, v.useModalsStore)(v.hasAnyModalOpenSelector) || R || ic.P.isDisallowPopupsSet() || j,
         W = (0, u.bG)([el.default], () => null != el.default.getAwaitingRemoteSessionInfo()),
-        Z = (0, u.bG)([is.A], () => is.A.getGuildId()),
-        z = r?.avatarDecoration,
-        q = (0, K.A)(z),
+        z = (0, u.bG)([is.A], () => is.A.getGuildId()),
+        Z = r?.avatarDecoration,
+        q = (0, K.A)(Z),
         $ = t2.Ay.useName(r) ?? "",
         { analyticsLocations: X } = (0, O.Ay)(M.A.ACCOUNT),
         Q = (0, Y.r)({ user: r, guildId: void 0 }),
@@ -4266,7 +4268,7 @@ function lU() {
             webBuildOverride: N,
             awaitingRemote: W,
             nameplate: Q,
-            selectedGuildId: Z,
+            selectedGuildId: z,
             avatarDecoration: q,
             isQuestBarEmpty: J,
             isListenAlongVisible: et,
