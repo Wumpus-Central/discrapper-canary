@@ -1,7 +1,7 @@
-n.d(t, { Hi: () => r, Ol: () => c, Vq: () => o, hU: () => s, pc: () => f, vk: () => d });
-var l = n(688954),
-    a = n(248675),
-    i = n(105292);
+l.d(t, { Hi: () => r, Ol: () => c, Vq: () => o, hU: () => s, pc: () => f, vk: () => d });
+var n = l(688954),
+    a = l(248675),
+    i = l(105292);
 let r = ["auto", "preview", "published"],
     u = {
         auto: { label: a.default["2TTprm"], description: a.default["1ck6o0"] },
@@ -15,16 +15,16 @@ function o(e) {
     return i.intl.string(u[e].description);
 }
 async function d(e) {
-    let t = await (0, l.h)(e, "/agent/linked-apps");
+    let t = await (0, n.h)(e, "/agent/linked-apps");
     if (!t.ok) throw Error(`Linked apps request failed: ${t.status}`);
-    let { callers: n } = await t.json();
-    return n;
+    let { callers: l } = await t.json();
+    return l;
 }
-async function c(e, t, n) {
-    let a = await (0, l.h)(e, "/agent/linked-apps", { method: "PUT", json: { caller_project_id: t, build: n } });
+async function c(e, t, l) {
+    let a = await (0, n.h)(e, "/agent/linked-apps", { method: "PUT", json: { caller_project_id: t, build: l } });
     if (!a.ok) throw Error(`Linking apps failed: ${a.status}`);
 }
 async function f(e, t) {
-    let n = await (0, l.h)(e, "/agent/linked-apps", { method: "DELETE", json: { caller_project_id: t } });
-    if (!n.ok) throw Error(`Unlinking apps failed: ${n.status}`);
+    let l = await (0, n.h)(e, "/agent/linked-apps", { method: "DELETE", json: { caller_project_id: t } });
+    if (!l.ok) throw Error(`Unlinking apps failed: ${l.status}`);
 }

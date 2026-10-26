@@ -1,31 +1,31 @@
-n.d(t, { _: () => i });
-var l = n(582128),
-    a = n(989145);
+l.d(t, { _: () => i });
+var n = l(582128),
+    a = l(989145);
 function i(e, t) {
-    let [n, i] = l.useState(null),
-        [r, u] = l.useState(!1),
-        [s, o] = l.useState(0);
+    let [l, i] = n.useState(null),
+        [r, u] = n.useState(!1),
+        [s, o] = n.useState(0);
     return (
-        l.useEffect(() => {
-            let n = !1;
+        n.useEffect(() => {
+            let l = !1;
             return (
                 (0, a.PK)(e, t).then(
                     (e) => {
-                        n || i(e);
+                        l || i(e);
                     },
                     () => {
-                        n || (0 === s ? o(1) : u(!0));
+                        l || (0 === s ? o(1) : u(!0));
                     },
                 ),
                 () => {
-                    n = !0;
+                    l = !0;
                 }
             );
         }, [e, t, s]),
         {
-            src: n,
+            src: l,
             gone: r,
-            handleError: l.useCallback(() => {
+            handleError: n.useCallback(() => {
                 (i(null),
                     (0, a.n6)(e, t).then(
                         (e) => {

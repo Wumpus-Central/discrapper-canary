@@ -1,4 +1,4 @@
-n.d(t, { DJ: () => M, Jg: () => T, KT: () => L, lo: () => R, oH: () => j, s3: () => A });
+n.d(t, { DJ: () => M, Jg: () => T, KT: () => L, lo: () => R, oH: () => b, s3: () => A });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -124,7 +124,7 @@ function T(e) {
 function L() {
     return (0, l.jsx)(T, { transitionState: d.ip.ENTERED, onClose: x.tEg, size: "md", isModalContentLoading: !0 });
 }
-function j(e) {
+function b(e) {
     let {
         title: t,
         gradientColor: n = "purple",

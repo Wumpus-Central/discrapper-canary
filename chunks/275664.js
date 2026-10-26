@@ -154,19 +154,19 @@ function C(e) {
             onDragStateChange: B,
             indicatorConfig: F,
             scrubPreviewCues: U,
-            onIndicatorSeek: G,
-            getCurrentTimeSec: _,
-            "data-testid": $,
+            onIndicatorSeek: _,
+            getCurrentTimeSec: G,
+            "data-testid": K,
         } = e,
         {
-            contRef: K,
+            contRef: $,
             boundingRect: O,
             handleMouseEnter: Q,
             handleMouseLeave: H,
-            handleMouseMove: V,
-            handleKeyDown: Y,
-            hoveredAtX: z,
-            maxSeekableX: X,
+            handleMouseMove: Y,
+            handleKeyDown: V,
+            hoveredAtX: X,
+            maxSeekableX: z,
             isHovering: W,
             isDragging: Z,
             dragX: q,
@@ -314,7 +314,7 @@ function C(e) {
             onDragStateChange: B,
             onDragXChange: (e) => eo.set(e),
         }),
-        er = l.useMemo(() => (null == z || null == O ? null : (0, u.hc)(z, O, w)), [z, O, w]),
+        er = l.useMemo(() => (null == X || null == O ? null : (0, u.hc)(X, O, w)), [X, O, w]),
         el = l.useMemo(() => (null == er ? null : (0, u.rB)(er)), [er]),
         ea = l.useMemo(() => (null == U || null == er ? null : (0, v.B8)(U, er)), [U, er]),
         ei = l.useMemo(() => {
@@ -331,25 +331,25 @@ function C(e) {
         em = l.useRef(null),
         ef = l.useRef(null);
     l.useEffect(() => {
-        if (!a || null == _ || w <= 0 || eu <= 0) return;
-        ((em.current = ed.current ?? _()), (ef.current = performance.now()));
+        if (!a || null == G || w <= 0 || eu <= 0) return;
+        ((em.current = ed.current ?? G()), (ef.current = performance.now()));
         let e = 0,
             t = !1;
         return (
             (e = requestAnimationFrame(function n() {
-                if (t || null == _) return;
+                if (t || null == G) return;
                 let r = performance.now(),
                     l = ef.current;
                 ef.current = r;
                 let a = em.current;
                 if (null != a) {
                     a += null != l ? (r - l) / 1e3 : 0;
-                    let e = _();
+                    let e = G();
                     if (null != e && Number.isFinite(e)) {
                         let t = e - a;
                         a = Math.abs(t) > 0.5 ? e : a + 0.1 * t;
                     }
-                } else a = _() ?? null;
+                } else a = G() ?? null;
                 if (null != a && Number.isFinite(a)) {
                     ((em.current = a), (ed.current = a));
                     let e = Math.min(Math.max(0, (a / w) * eu), eu);
@@ -361,18 +361,18 @@ function C(e) {
                 ((t = !0), cancelAnimationFrame(e), (em.current = null), (ef.current = null));
             }
         );
-    }, [a, _, w, eu, eo]);
-    let ep = a && null != _ && w > 0;
+    }, [a, G, w, eu, eo]);
+    let ep = a && null != G && w > 0;
     l.useEffect(() => {
         let e;
         if (!ep) {
-            if (null != _ && w > 0 && eu > 0) {
-                let t = _();
+            if (null != G && w > 0 && eu > 0) {
+                let t = G();
                 null != t && Number.isFinite(t) && ((ed.current = t), (e = Math.min(Math.max(0, (t / w) * eu), eu)));
             }
             (null == e && (e = null == ei || Number.isNaN(ei) ? 0 : ei), es({ playbackPxSpring: e, immediate: !0 }));
         }
-    }, [ei, ep, es, _, w, eu]);
+    }, [ei, ep, es, G, w, eu]);
     let eh = w > 1,
         ev = F?.indicators,
         ex = l.useMemo(() => {
@@ -429,8 +429,8 @@ function C(e) {
         );
     return (0, r.jsx)("div", {
         className: E.jD,
-        ref: K,
-        "data-testid": $,
+        ref: $,
+        "data-testid": K,
         style: {
             "--custom-timeline-height": `${null != T && W ? T : N}px`,
             "--custom-initial-timeline-height": `${k}px`,
@@ -443,8 +443,8 @@ function C(e) {
             onMouseDown: et,
             onMouseEnter: Q,
             onMouseLeave: H,
-            onMouseMove: V,
-            onKeyDown: Y,
+            onMouseMove: Y,
+            onKeyDown: V,
             tabIndex: c ? void 0 : -1,
             children: [
                 (0, r.jsx)("div", {
@@ -466,7 +466,7 @@ function C(e) {
                                     expansionSpring: F?.expansionSpring,
                                     timelineWidth: eu,
                                     preloadedBuffers: C,
-                                    maxSeekableX: X,
+                                    maxSeekableX: z,
                                     segmentBorderRadius: L,
                                     progressClassName: R,
                                 },
@@ -479,12 +479,12 @@ function C(e) {
                         F?.renderIndicator(
                             e,
                             null != ei && !Number.isNaN(ei) ? ei : 0,
-                            !0 === e.source.clickable && null != G ? () => G(e.source.timeSec) : void 0,
+                            !0 === e.source.clickable && null != _ ? () => _(e.source.timeSec) : void 0,
                         ),
                     ),
                 (0, r.jsx)(P, {
                     isHovering: W,
-                    hoveredAtX: z,
+                    hoveredAtX: X,
                     hoveredTimeSec: er,
                     formattedTime: el,
                     isFullyVisible: t,

@@ -29,8 +29,8 @@ function j(e) {
         y,
         C,
         N,
-        E,
-        { children: w, clip: k, modalContainerRef: A, editOnly: L = !1 } = e,
+        w,
+        { children: E, clip: k, modalContainerRef: A, editOnly: L = !1 } = e,
         R = k.type === h.nQ.SCREENSHOT,
         {
             initialDuration: I,
@@ -69,8 +69,8 @@ function j(e) {
             cropEnd: G,
             voiceAudioEnabled: B,
             applicationAudioEnabled: H,
-            soundboardAudioEnabled: V,
-            cropPreset: X,
+            soundboardAudioEnabled: X,
+            cropPreset: V,
         } = O,
         F = n.useRef(null),
         W = n.useRef(D),
@@ -109,7 +109,7 @@ function j(e) {
                 };
             return (ev((e) => [...e, t]), z(f.Y.NONE), e);
         }, [ej, z]),
-        ey = (0, h.QY)(X) ?? (null != eh ? eh.width / eh.height : null),
+        ey = (0, h.QY)(V) ?? (null != eh ? eh.width / eh.height : null),
         eC = n.useCallback(
             (e) => {
                 let t = crypto.randomUUID(),
@@ -133,10 +133,10 @@ function j(e) {
         eN = n.useCallback((e) => {
             ev((t) => t.filter((t) => t.id !== e));
         }, []),
-        eE = n.useCallback((e, t, l) => {
+        ew = n.useCallback((e, t, l) => {
             ev((a) => a.map((a) => (a.id === e ? { ...a, startSec: t, endSec: l } : a)));
         }, []),
-        ew = n.useCallback((e, t) => {
+        eE = n.useCallback((e, t) => {
             ev((l) => l.map((l) => (l.id === e && l.type === h.Me.TEXT ? { ...l, data: t(l.data) } : l)));
         }, []),
         ek = n.useCallback((e, t) => {
@@ -152,11 +152,11 @@ function j(e) {
                     end: G,
                     applicationAudio: H,
                     voiceAudio: B,
-                    soundboardAudio: V,
-                    crop: { preset: X },
+                    soundboardAudio: X,
+                    crop: { preset: V },
                 },
             }),
-            [k, $, U, G, H, B, V, X],
+            [k, $, U, G, H, B, X, V],
         ),
         eL = n.useCallback((e) => {
             ((F.current = e), ea(e.videoElement));
@@ -292,8 +292,8 @@ function j(e) {
                         end: G,
                         voiceAudio: B,
                         applicationAudio: H,
-                        soundboardAudio: V,
-                        crop: { preset: X },
+                        soundboardAudio: X,
+                        crop: { preset: V },
                     },
                 },
             },
@@ -343,11 +343,11 @@ function j(e) {
             play: eP,
             pause: e_,
             seek: ez,
-        } = ((E = n.useCallback(() => {
+        } = ((w = n.useCallback(() => {
             F?.current?.play();
         }, [F])),
         {
-            play: E,
+            play: w,
             pause: n.useCallback(() => {
                 F?.current?.pause();
             }, [F]),
@@ -415,7 +415,7 @@ function j(e) {
         eH = n.useCallback((e) => {
             P((t) => ({ ...t, soundboardAudioEnabled: e }));
         }, []),
-        eV = n.useMemo(
+        eX = n.useMemo(
             () =>
                 function () {
                     let [e, t] = n.useState(W.current);
@@ -438,9 +438,9 @@ function j(e) {
                 },
             [W, ee],
         ),
-        eX = n.useMemo(
+        eV = n.useMemo(
             () => ({
-                useCurrentTime: eV,
+                useCurrentTime: eX,
                 duration: Z,
                 isPlaying: Y,
                 isLoaded: J,
@@ -450,7 +450,7 @@ function j(e) {
                 setCropStart: eD,
                 setCropEnd: eS,
                 setCrop: eO,
-                cropPreset: X,
+                cropPreset: V,
                 setCropPreset: eU,
                 activeTool: _,
                 setActiveTool: z,
@@ -467,15 +467,15 @@ function j(e) {
                 setApplicationAudioEnabled: eG,
                 voiceAudioEnabled: B,
                 setVoiceAudioEnabled: eB,
-                soundboardAudioEnabled: V,
+                soundboardAudioEnabled: X,
                 setSoundboardAudioEnabled: eH,
                 getEditedClip: eA,
                 tracks: ex,
                 addTextTrack: eb,
                 addImageTrack: eC,
                 removeTrack: eN,
-                updateTrackRange: eE,
-                updateTextTrackData: ew,
+                updateTrackRange: ew,
+                updateTextTrackData: eE,
                 updateImageTrackData: ek,
                 clipName: $,
                 setClipName: e$,
@@ -487,7 +487,7 @@ function j(e) {
             }),
             [
                 L,
-                eV,
+                eX,
                 Z,
                 Y,
                 J,
@@ -497,7 +497,7 @@ function j(e) {
                 eD,
                 eS,
                 eO,
-                X,
+                V,
                 eU,
                 _,
                 z,
@@ -514,15 +514,15 @@ function j(e) {
                 eG,
                 B,
                 eB,
-                V,
+                X,
                 eH,
                 eA,
                 ex,
                 eb,
                 eC,
                 eN,
-                eE,
                 ew,
+                eE,
                 ek,
                 $,
                 e$,
@@ -531,7 +531,7 @@ function j(e) {
                 eh,
             ],
         );
-    return (0, a.jsx)(g.Provider, { value: eX, children: w });
+    return (0, a.jsx)(g.Provider, { value: eV, children: E });
 }
 function b() {
     let e = n.useContext(g);

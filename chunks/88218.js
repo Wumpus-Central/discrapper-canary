@@ -47,9 +47,9 @@ let A = function (e) {
             className: N,
             listPadding: C,
             rowCount: x,
-            getScrollOffsetForIndex: T,
-            categoryHeight: y,
-            onScroll: j,
+            getScrollOffsetForIndex: y,
+            categoryHeight: j,
+            onScroll: T,
             renderCategoryListItem: O,
             rowCountBySection: S,
             renderSection: b,
@@ -57,8 +57,8 @@ let A = function (e) {
             itemIdPrefix: v,
         } = e,
         L = d.useStore((e) => e.activeCategoryIndex),
-        M = null != R && null != v,
-        { itemIdForIndex: P, parseIndex: D } = s.useMemo(() => g(v ?? "expression-category-"), [v]),
+        P = null != R && null != v,
+        { itemIdForIndex: M, parseIndex: D } = s.useMemo(() => g(v ?? "expression-category-"), [v]),
         w = (function (e) {
             let {
                     navId: t,
@@ -130,24 +130,24 @@ let A = function (e) {
                         }),
                     [n],
                 ),
-                T = s.useCallback(() => {
+                y = s.useCallback(() => {
                     let e = E(l) ?? g.current;
                     null == e || e >= r - 1 || N(e + 1, !0);
                 }, [N, l, r]),
-                y = s.useCallback(() => {
+                j = s.useCallback(() => {
                     let e = E(l) ?? g.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, l]),
-                j = (0, u.Ay)({
+                T = (0, u.Ay)({
                     id: t,
                     isEnabled: p,
                     setFocus: _,
                     scrollToStart: C,
                     scrollToEnd: x,
-                    onNavigateNextAtEnd: T,
-                    onNavigatePreviousAtStart: y,
+                    onNavigateNextAtEnd: y,
+                    onNavigatePreviousAtStart: j,
                 }),
-                O = j.setFocus;
+                O = T.setFocus;
             return (
                 s.useEffect(() => {
                     if (!c || a < 0 || a >= r) return;
@@ -163,17 +163,17 @@ let A = function (e) {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
                 }, [a, n, c, i, O, r]),
-                j
+                T
             );
         })({
             navId: R ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: P,
+            itemIdForIndex: M,
             parseIndex: D,
             rowCount: x,
             activeIndex: L,
-            getScrollOffsetForIndex: T,
-            enabled: M,
+            getScrollOffsetForIndex: y,
+            enabled: P,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
@@ -190,7 +190,7 @@ let A = function (e) {
                     (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
                 })));
         }, [t, n, i]);
-    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: T });
+    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: y });
     let k = s.useCallback(
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
@@ -199,10 +199,10 @@ let A = function (e) {
             [n, d],
         ),
         U = s.useCallback((e) => O(l[e], e, () => k(e), L === e), [L, l, k, O]),
-        G = s.useMemo(() => ("function" == typeof y ? (e) => y(l[e], e) : y), [l, y]),
+        G = s.useMemo(() => ("function" == typeof j ? (e) => j(l[e], e) : j), [l, j]),
         F = (0, i.jsx)(o.A, {
             listPadding: C,
-            onScroll: j,
+            onScroll: T,
             ref: t,
             renderRow: U,
             rowCount: x,
@@ -210,13 +210,13 @@ let A = function (e) {
             hideScrollbar: !0,
             rowCountBySection: S,
             renderSection: b,
-            role: M ? "none presentation" : void 0,
+            role: P ? "none presentation" : void 0,
         }),
         J = (0, i.jsxs)("div", {
             className: r()(p.iE, { [p.bx]: null != _ }, N),
             children: [
                 _,
-                M
+                P
                     ? (0, i.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
@@ -227,5 +227,5 @@ let A = function (e) {
                 A?.(k),
             ],
         });
-    return M ? (0, i.jsx)(a.hD, { navigator: w, children: J }) : J;
+    return P ? (0, i.jsx)(a.hD, { navigator: w, children: J }) : J;
 };

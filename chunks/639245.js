@@ -47,8 +47,8 @@ var i = n(477900),
     X = n(927578),
     q = n(450707),
     Y = n(773669),
-    Z = n(105292),
-    $ = n(188645),
+    $ = n(105292),
+    Z = n(188645),
     Q = n(746080),
     ee = n(202541),
     et = n(844749);
@@ -61,11 +61,11 @@ function en(e) {
     let r =
             ((n = t = a.name),
             (s = (0, o.bG)([Y.default], () => Y.default.locale.startsWith("en-"))),
-            (l = ":pizza:" === n && s ? Z.intl.formatToPlainString(Z.t["1knDPI"], { emojiName: n }) : n),
+            (l = ":pizza:" === n && s ? $.intl.formatToPlainString($.t["1knDPI"], { emojiName: n }) : n),
             ":pizza:" === t ? l : t),
         c = r !== a.name;
     return (0, i.jsx)(d.l, {
-        children: (0, i.jsx)($.Uq, {
+        children: (0, i.jsx)(Z.Uq, {
             className: et.Os,
             children: (0, i.jsxs)(v.A, {
                 className: et.gH,
@@ -84,7 +84,7 @@ function en(e) {
                             (0, i.jsx)(u.E, {
                                 variant: "text-sm/normal",
                                 className: et.t,
-                                children: Z.intl.string(Z.t.sXdH8c),
+                                children: $.intl.string($.t.sXdH8c),
                             }),
                         ],
                     }),
@@ -158,7 +158,7 @@ let ei = (e) => {
                                       (0, i.jsx)(u.E, {
                                           variant: "text-xs/normal",
                                           color: "text-default",
-                                          children: Z.intl.format(Z.t["LC+S+m"], { membersOnline: n.presenceCount }),
+                                          children: $.intl.format($.t["LC+S+m"], { membersOnline: n.presenceCount }),
                                       }),
                                       (0, i.jsx)("div", { className: et.zk }),
                                       t
@@ -168,20 +168,20 @@ let ei = (e) => {
                                                 children: (0, i.jsx)(u.E, {
                                                     variant: "text-xs/normal",
                                                     color: "text-link",
-                                                    children: Z.intl.string(Z.t.riu2R5),
+                                                    children: $.intl.string($.t.riu2R5),
                                                 }),
                                             })
                                           : (0, i.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
-                                                children: Z.intl.string(Z.t.inyJqO),
+                                                children: $.intl.string($.t.inyJqO),
                                             }),
                                   ],
                               }))
                             : (0, i.jsx)(u.E, {
                                   variant: "text-xs/normal",
                                   color: "text-default",
-                                  children: Z.intl.string(Z.t.H29mx4),
+                                  children: $.intl.string($.t.H29mx4),
                               }),
                     }),
                 ],
@@ -258,7 +258,7 @@ function es(e) {
             );
         })({ emojiId: t.emojiId, refreshPositionKey: l });
     return h
-        ? (0, i.jsx)($.Y0, {})
+        ? (0, i.jsx)(Z.Y0, {})
         : (0, i.jsx)(d.l, {
               "aria-label": t.name,
               children: (0, i.jsx)(el, {
@@ -365,7 +365,7 @@ function el(e) {
         eI = em.type === q.u.GET_PREMIUM,
         [eN, eb] = s.useState(!1),
         ef = en || (Y && !W) || null != g;
-    return (0, i.jsxs)($.Uq, {
+    return (0, i.jsxs)(Z.Uq, {
         className: a()(et.Bm, et.Os, { [et.x1]: eh }),
         children: [
             (function () {
@@ -440,7 +440,7 @@ function el(e) {
                               : void 0,
                         ex &&
                             (0, i.jsx)(w.A, {
-                                text: eo ? Z.intl.string(Z.t.yma8Vp) : Z.intl.string(Z.t.nN2DIo),
+                                text: eo ? $.intl.string($.t.yma8Vp) : $.intl.string($.t.nN2DIo),
                                 size: "sm",
                                 fullWidth: !0,
                                 onClick: function () {
@@ -470,7 +470,7 @@ function el(e) {
                             className: et.YW,
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: Y ? Z.intl.string(Z.t.ohTzZH) : Z.intl.string(Z.t["eLfh+a"]),
+                            children: Y ? $.intl.string($.t.ohTzZH) : $.intl.string($.t["eLfh+a"]),
                         }),
                         (0, i.jsx)(ei, {
                             expressionSourceGuild: g ?? P.GO.createFromGuildRecord(A),
@@ -481,7 +481,7 @@ function el(e) {
                         n &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    ((t = Z.intl.string(Z.t.pnsAS2)),
+                                    ((t = $.intl.string($.t.pnsAS2)),
                                     (0, i.jsx)(m.D, {
                                         onClick: function () {
                                             n &&
@@ -550,7 +550,7 @@ function ea(e) {
                           g.m,
                           {
                               text: e.require_colons ? `:${e.name}:` : e.name,
-                              ...$.Uk,
+                              ...Z.Uk,
                               children: (0, i.jsx)(I.A, { className: et.Th, emojiId: e.id, animated: e.animated }),
                           },
                           e.id,

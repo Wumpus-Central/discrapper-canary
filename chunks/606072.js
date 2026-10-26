@@ -1,4 +1,4 @@
-(l.d(t, { F6: () => g, T4: () => _, UF: () => A, kG: () => v, zE: () => j }), l(321073));
+(l.d(t, { F6: () => g, T4: () => _, UF: () => b, kG: () => v, zE: () => j }), l(321073));
 var n,
     i = l(582128),
     s = l(17928),
@@ -53,7 +53,7 @@ function _(e) {
         }
     );
 }
-function A(e) {
+function b(e) {
     let { guildId: t, useGuildSharingTitle: l, requirement: n } = e,
         i = [];
     return (

@@ -20,8 +20,8 @@ var a = l(477900),
     y = l(428610),
     C = l(48507),
     N = l(750943),
-    E = l(342073),
-    w = l(831544),
+    w = l(342073),
+    E = l(831544),
     k = l(7807),
     A = l(663341),
     L = l(442433),
@@ -40,8 +40,8 @@ var a = l(477900),
     G = l(352527),
     B = l(635793),
     H = l(362081),
-    V = l(503698),
-    X = l.n(V),
+    X = l(503698),
+    V = l.n(X),
     F = l(31300),
     W = l(646270),
     Z = l(748562),
@@ -99,7 +99,7 @@ function en() {
                                         Y.D,
                                         {
                                             "aria-pressed": o,
-                                            className: X()(el.is, o && el.j5),
+                                            className: V()(el.is, o && el.j5),
                                             onClick: () => t(n),
                                             children: [
                                                 (0, a.jsx)(i, { size: "md" }),
@@ -216,7 +216,7 @@ function ef(e) {
                                         Y.D,
                                         {
                                             "aria-pressed": r,
-                                            className: X()(el.is, r && el.j5),
+                                            className: V()(el.is, r && el.j5),
                                             onClick: () => l(t.id, (e) => ({ ...e, shadow: n })),
                                             children: (0, a.jsx)(s.E, {
                                                 variant: "text-sm/medium",
@@ -338,7 +338,7 @@ function eg(e) {
                                         Y.D,
                                         {
                                             "aria-pressed": r,
-                                            className: X()(el.is, r && el.j5),
+                                            className: V()(el.is, r && el.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, fontSize: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -389,7 +389,7 @@ function eg(e) {
                                         Y.D,
                                         {
                                             "aria-pressed": r,
-                                            className: X()(el.is, r && el.j5),
+                                            className: V()(el.is, r && el.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, strokeWidth: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -493,8 +493,8 @@ function eC(e) {
     let { channelId: t, onEdit: o, onClose: c } = e,
         {
             getEditedClip: P,
-            voiceAudioEnabled: V,
-            setVoiceAudioEnabled: X,
+            voiceAudioEnabled: X,
+            setVoiceAudioEnabled: V,
             applicationAudioEnabled: F,
             setApplicationAudioEnabled: W,
             soundboardAudioEnabled: Z,
@@ -515,8 +515,8 @@ function eC(e) {
         { onShareClick: ey } = (0, G.A)(t),
         { picker: eC } = n.useContext(_.$),
         eN = (0, z.$)(eC?.action),
-        eE = (0, i.bG)([D.A], () => D.A.isDeveloper),
-        ew = n.useMemo(() => es.filter((e) => e.trackName.includes(J.gC.VOICE)).length, [es]),
+        ew = (0, i.bG)([D.A], () => D.A.isDeveloper),
+        eE = n.useMemo(() => es.filter((e) => e.trackName.includes(J.gC.VOICE)).length, [es]),
         ek = n.useMemo(() => es.filter((e) => e.trackName.includes(J.gC.SOUNDBOARD)).length, [es]),
         eA = ev?.name ?? Q.applicationName ?? ee.intl.string(ee.t.GnQui9);
     async function eL() {
@@ -595,7 +595,7 @@ function eC(e) {
                                 icon: x.MoreHorizontalIcon,
                             }),
                         }),
-                        eE &&
+                        ew &&
                             (0, a.jsx)(m.m, {
                                 text: "Clip Debug",
                                 children: (0, a.jsx)(r.K, {
@@ -714,18 +714,18 @@ function eC(e) {
                                             icon:
                                                 null != ev
                                                     ? (0, a.jsx)(T.A, { game: ev, size: T.M.XXSMALL })
-                                                    : (0, a.jsx)(E.L, { size: "sm", color: "currentColor" }),
+                                                    : (0, a.jsx)(w.L, { size: "sm", color: "currentColor" }),
                                             label: eA,
                                             enabled: F,
                                             onToggle: W,
                                         }),
                                         (0, a.jsx)(eb, {
-                                            icon: (0, a.jsx)(w.MicrophoneIcon, { size: "sm", color: "currentColor" }),
+                                            icon: (0, a.jsx)(E.MicrophoneIcon, { size: "sm", color: "currentColor" }),
                                             label: ee.intl.string(q.default.ai9fWO),
-                                            count: ew,
-                                            enabled: V,
-                                            disabled: 0 === ew,
-                                            onToggle: X,
+                                            count: eE,
+                                            enabled: X,
+                                            disabled: 0 === eE,
+                                            onToggle: V,
                                         }),
                                         (0, a.jsx)(eb, {
                                             icon: (0, a.jsx)(k.J, { size: "sm", color: "currentColor" }),

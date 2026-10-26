@@ -33,8 +33,8 @@ function u(e) {
             [h],
         ),
         [N, C] = i.useReducer(_, { focusedX: u, focusedY: d, columnCounts: n }),
-        { columnCounts: x, focusedX: T, focusedY: y } = N,
-        [j] = i.useState(() => (0, r.nF)(C, 16));
+        { columnCounts: x, focusedX: y, focusedY: j } = N,
+        [T] = i.useState(() => (0, r.nF)(C, 16));
     return (
         i.useEffect(() => {
             C({ type: s.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
@@ -57,8 +57,8 @@ function u(e) {
                 _ = i.useRef(h),
                 N = c(o(t, u, d)),
                 [C, x] = i.useState(!1),
-                [T, y] = i.useState(!1),
-                [j, O] = i.useState(!1),
+                [y, j] = i.useState(!1),
+                [T, O] = i.useState(!1),
                 [S] = i.useState(
                     () =>
                         new r.Lp((e) => {
@@ -81,7 +81,7 @@ function u(e) {
                         let i = o(t, e, n);
                         (null != f ? f(e, n, i) : Promise.resolve()).then(() => {
                             let e = c(i);
-                            null != e ? (b(e), y(!1)) : requestAnimationFrame(() => y(!0));
+                            null != e ? (b(e), j(!1)) : requestAnimationFrame(() => j(!0));
                         });
                     },
                     [t, f, b],
@@ -97,24 +97,24 @@ function u(e) {
                     },
                     [I, u, d, E, t, b],
                 ),
-                [L, M] = i.useState(!1);
+                [L, P] = i.useState(!1);
             i.useEffect(() => {
                 if (!L || !C) return;
-                M(!1);
+                P(!1);
                 let e = c(o(t, u, d));
                 if (null != e) return void b(e);
                 x(!1);
                 let n = c(o(t));
                 null != n && b(n);
             }, [t, L, C, b, u, d]);
-            let P = i.useCallback((e) => {
-                _.current && null == e && M(!0);
+            let M = i.useCallback((e) => {
+                _.current && null == e && P(!0);
             }, []);
             (i.useEffect(() => {
-                C && T && null != N && (b(N), y(!1));
-            }, [T, N]),
+                C && y && null != N && (b(N), j(!1));
+            }, [y, N]),
                 i.useEffect(() => {
-                    C && (j || R(u, d), O(!1));
+                    C && (T || R(u, d), O(!1));
                 }, [u, d]));
             let D = i.useCallback(
                     (e) => {
@@ -211,9 +211,9 @@ function u(e) {
                             tabIndex: g && e === u && n === d ? 0 : -1,
                             onFocus: S.get(`${e},${n}`),
                         };
-                        return (e === u && n === d && (i.ref = P), i);
+                        return (e === u && n === d && (i.ref = M), i);
                     },
-                    [t, g, u, d, S, P],
+                    [t, g, u, d, S, M],
                 ),
                 J = i.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
             return i.useMemo(
@@ -223,9 +223,9 @@ function u(e) {
         })({
             navId: t,
             columnCounts: x,
-            focusedX: T,
-            focusedY: y,
-            dispatch: j,
+            focusedX: y,
+            focusedY: j,
+            dispatch: T,
             onSelect: m,
             prepareFocus: f,
             getNewFocusPosition: E,

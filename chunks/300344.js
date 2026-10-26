@@ -1,24 +1,24 @@
-n.d(t, { A: () => c });
-var l = n(582128),
-    a = n(17928),
-    i = n(47167),
-    r = n(713654),
-    u = n(808728),
-    s = n(994500),
-    o = n(287809),
-    d = n(246338);
+l.d(t, { A: () => c });
+var n = l(582128),
+    a = l(17928),
+    i = l(47167),
+    r = l(713654),
+    u = l(808728),
+    s = l(994500),
+    o = l(287809),
+    d = l(246338);
 function c(e, t) {
-    let n = (0, a.bG)([u.Ay], () => (null == e ? null : u.Ay.getChannels(e)), [e]);
-    return l.useMemo(
+    let l = (0, a.bG)([u.Ay], () => (null == e ? null : u.Ay.getChannels(e)), [e]);
+    return n.useMemo(
         () =>
-            null == n
+            null == l
                 ? null
-                : (0, d.Lp)(n, t).map((e) => ({
+                : (0, d.Lp)(l, t).map((e) => ({
                       id: e.id,
                       value: e.id,
                       label: (0, i.m1)(e, o.default, s.A),
                       leading: (0, r.gU)(e),
                   })),
-        [n, t],
+        [l, t],
     );
 }

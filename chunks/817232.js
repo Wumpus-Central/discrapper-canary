@@ -95,8 +95,8 @@ function W(e) {
 var X = n(496502),
     q = n(652215),
     Y = n(536283),
-    Z = n(257645),
-    $ = n(105292),
+    $ = n(257645),
+    Z = n(105292),
     Q = n(948611);
 function ee(e) {
     let { disabled: t = !1, onClick: n, text: s, children: l, tooltipPosition: r = "top", ref: o } = e;
@@ -129,7 +129,7 @@ function et(e) {
                 e.currentTarget.blur(),
                 n());
         },
-        text: $.intl.formatToPlainString($.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
+        text: Z.intl.formatToPlainString(Z.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
         children: (0, i.jsx)(h.H, { size: "md", color: "currentColor", className: Q.Wo }),
     });
 }
@@ -151,7 +151,7 @@ function en(e) {
     return (0, i.jsx)(ee, {
         disabled: n,
         onClick: o,
-        text: $.intl.formatToPlainString(r ? $.t.lQLsjc : $.t.Y5DOs4, { emojiName: t.emojiName, soundName: t.name }),
+        text: Z.intl.formatToPlainString(r ? Z.t.lQLsjc : Z.t.Y5DOs4, { emojiName: t.emojiName, soundName: t.name }),
         children: r
             ? (0, i.jsx)(j.StarIcon, {
                   size: "xs",
@@ -203,7 +203,7 @@ function ei(e) {
             x,
             h?.id ?? null,
             (q ? D.HO.getSetting() : D.dG.getSetting()?.volume) ?? 100,
-            !q && h?.isVocal() ? Z.a.VOICE : Z.a.DEFAULT,
+            !q && h?.isVocal() ? $.a.VOICE : $.a.DEFAULT,
         ),
         { createMultipleConfettiAt: eN } = s.useContext(C.x),
         eb = s.useRef(null),
@@ -312,7 +312,7 @@ function ei(e) {
                 children: (0, i.jsxs)(f.s, {
                     ...ed,
                     buttonProps: { ...eO, id: eS, role: "button" },
-                    "aria-label": $.intl.formatToPlainString($.t.tuMUJ2, { emojiName: x.emojiName, soundName: x.name }),
+                    "aria-label": Z.intl.formatToPlainString(Z.t.tuMUJ2, { emojiName: x.emojiName, soundName: x.name }),
                     className: a()(
                         Q.aG,
                         {
@@ -369,7 +369,7 @@ function ei(e) {
                                                             (0, i.jsx)(b.E, {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-strong",
-                                                                children: $.intl.string($.t.QqqXLY),
+                                                                children: Z.intl.string(Z.t.QqqXLY),
                                                             }),
                                                         ],
                                                     }),
@@ -424,7 +424,7 @@ function ei(e) {
             }),
             !x.available &&
                 (0, i.jsx)(m.m, {
-                    text: $.intl.string($.t.MDOXJR),
+                    text: Z.intl.string(Z.t.MDOXJR),
                     shouldShow: !eD,
                     children: (0, i.jsx)("div", {
                         className: Q.ET,
