@@ -1,8 +1,8 @@
 n.d(e, { R: () => V, Z: () => M });
 var i = n(477900),
     s = n(582128),
-    a = n(172218),
-    o = n(323889),
+    o = n(172218),
+    a = n(323889),
     d = n(17928),
     r = n(475743),
     u = n(531685),
@@ -53,7 +53,7 @@ class f {
             adCreativeType: n,
             relatedQuestId: i,
             noFillDecision: s,
-            questContent: a,
+            questContent: o,
             triggeredByStatusChange: d,
             trackGuildAndChannelMetadata: r,
             questContentPosition: u,
@@ -64,7 +64,7 @@ class f {
             sourceQuestContent: I,
         } = t;
         ((this.id = (0, l.A)()),
-            (this.questContent = a),
+            (this.questContent = o),
             (this.questContentPosition = u),
             (this.minViewTimeSeconds = C),
             (this.minViewportPercentage = 0.5),
@@ -74,7 +74,7 @@ class f {
             (this.isQuestEnrollmentBlocked = c),
             (this.onImpressionCallback = m),
             (this.sourceQuestContent = I),
-            n === o.p.QUEST
+            n === a.p.QUEST
                 ? (this.entity = { adContentIds: e, adCreativeType: n })
                 : (this.entity = { adContentIds: e, adCreativeType: n, relatedQuestId: i, noFillDecision: s }));
     }
@@ -108,15 +108,15 @@ class f {
         let t = await (0, v.N)((0, _.jO)(this.questContent));
         (this.entity.adContentIds.forEach((e, n) => {
             let i = this.shouldExtendSession(e);
-            if ((this.trackViewedPlacement(e), this.entity.adCreativeType === o.p.QUEST)) {
+            if ((this.trackViewedPlacement(e), this.entity.adCreativeType === a.p.QUEST)) {
                 let t = this.entity.adContentIds[n],
                     e = w.A.getQuest(t);
-                null == e || (0, Q.Ic)(e) || (0, g.zh)(o.p.QUEST, [t]);
+                null == e || (0, Q.Ic)(e) || (0, g.zh)(a.p.QUEST, [t]);
             }
             let s = {
-                type: (0, q.xn)(this.questContent, this.entity.adCreativeType)
-                    ? m.F.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION
-                    : m.F.VIEW_INTERNAL_SURFACE_IMPRESSION,
+                ...((0, q.xn)(this.questContent, this.entity.adCreativeType)
+                    ? { type: m.F.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION }
+                    : { type: m.F.VIEW_INTERNAL_SURFACE_IMPRESSION }),
                 surfaceId: this.questContent,
                 sourceQuestContent: this.sourceQuestContent,
                 impressionId: this.id,
@@ -130,7 +130,7 @@ class f {
                 questContentRowIndex: this.questContentRowIndex,
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
             };
-            (this.entity.adCreativeType === o.p.QUEST || this.entity.adCreativeType === o.p.PLAYABLE
+            (this.entity.adCreativeType === a.p.QUEST
                 ? (0, c.r)({
                       ...s,
                       adCreativeType: this.entity.adCreativeType,
@@ -171,29 +171,29 @@ class f {
                         viewed_time_ms: n,
                         triggered_by_status_change: t.triggeredByStatusChange,
                     };
-                t.entity.adContentIds.forEach((a, d) => {
-                    if (t.entity.adCreativeType === o.p.QUEST) {
-                        let a = t.entity.adContentIds[d],
-                            o = w.A.getQuest(a);
+                t.entity.adContentIds.forEach((o, d) => {
+                    if (t.entity.adCreativeType === a.p.QUEST) {
+                        let o = t.entity.adContentIds[d],
+                            a = w.A.getQuest(o);
                         ((0, A.L)().info(
-                            `${o?.config.messages.questName ?? a} Quest impression ${e ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
+                            `${a?.config.messages.questName ?? o} Quest impression ${e ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: t.id },
                         ),
                             (0, S.av)({
                                 ...i,
-                                questId: a,
+                                questId: o,
                                 event: b.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...s, ...t.commonProperties() },
                             }));
                     } else {
-                        let a = t.entity.adContentIds[d];
+                        let o = t.entity.adContentIds[d];
                         ((0, A.L)().info(
-                            `${a} ad content impression ${e ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
+                            `${o} ad content impression ${e ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: t.id },
                         ),
                             (0, S.Qg)({
                                 ...i,
-                                adContentId: a,
+                                adContentId: o,
                                 relatedQuestId: t.entity.relatedQuestId,
                                 noFillDecision: t.entity.noFillDecision,
                                 adCreativeType: t.entity.adCreativeType,
@@ -240,7 +240,7 @@ class f {
                 let n = (0, q.s9)(this.sourceQuestContent, t);
                 this.maybeRegisterIosAttributionImpression(t, n);
                 let i =
-                    this.entity.adCreativeType === o.p.QUEST
+                    this.entity.adCreativeType === a.p.QUEST
                         ? { adCreativeType: this.entity.adCreativeType, adCreativeId: this.entity.adContentIds[e] }
                         : {
                               adCreativeType: this.entity.adCreativeType,
@@ -280,10 +280,10 @@ class f {
     })();
 }
 function B(t) {
-    let { visible: e, visibleChanged: n, focused: a, reference: r, focusedChanged: u, sourceQuestContent: l } = t,
+    let { visible: e, visibleChanged: n, focused: o, reference: r, focusedChanged: u, sourceQuestContent: l } = t,
         h = (0, R.iY)(t),
-        c = t.adCreativeType === o.p.QUEST ? void 0 : t.relatedQuestId,
-        m = t.adCreativeType === o.p.QUEST ? void 0 : t.noFillDecision,
+        c = t.adCreativeType === a.p.QUEST ? void 0 : t.relatedQuestId,
+        m = t.adCreativeType === a.p.QUEST ? void 0 : t.noFillDecision,
         I = s.useRef(null),
         y = (0, d.bG)([w.A], () => null != w.A.questEnrollmentBlockedUntil, []);
     return (
@@ -291,7 +291,7 @@ function B(t) {
             null != I.current && I.current.stop();
         }),
         s.useEffect(() => {
-            let i = a && e,
+            let i = o && e,
                 s = (n || u || h) && i,
                 d = ((n || u) && !i) || h;
             if (((s || d) && null != I.current && I.current.stop(), s)) {
@@ -306,7 +306,7 @@ function B(t) {
                     trackGuildAndChannelMetadata: t.trackGuildAndChannelMetadata,
                     triggeredByStatusChange: h,
                 };
-                (t.adCreativeType === o.p.QUEST
+                (t.adCreativeType === a.p.QUEST
                     ? (I.current = new f({ ...e, adContentIds: t.adContentIds, adCreativeType: t.adCreativeType }))
                     : (I.current = new f({
                           ...e,
@@ -318,7 +318,7 @@ function B(t) {
                     I.current.start());
             }
         }, [
-            a,
+            o,
             e,
             u,
             n,
@@ -355,13 +355,13 @@ let N = s.memo(function (t) {
         } = (function (t) {
             let [e, n] = s.useState(!1),
                 i = t ?? e,
-                o = i !== (0, r.Ay)(i);
-            return { visible: i, visibleChanged: o, reference: (0, a.K)((t) => n(t), 0.5) };
+                a = i !== (0, r.Ay)(i);
+            return { visible: i, visibleChanged: a, reference: (0, o.K)((t) => n(t), 0.5) };
         })(t.overrideVisibility),
         { key: I, adContentIds: y } = (0, R.RC)(t),
         T = { ...t, focused: l, focusedChanged: h, visible: C, visibleChanged: c, reference: m };
     return "questOrQuests" in t
-        ? (0, s.createElement)(B, { ...T, key: I, adContentIds: y, adCreativeType: o.p.QUEST })
+        ? (0, s.createElement)(B, { ...T, key: I, adContentIds: y, adCreativeType: a.p.QUEST })
         : (0, s.createElement)(B, { ...T, key: I, adContentIds: y, adCreativeType: t.adCreativeType });
 });
 function V(t) {
