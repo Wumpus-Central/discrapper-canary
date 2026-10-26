@@ -56,7 +56,7 @@ function S(e) {
             (0, i.jsx)(s.D, {
                 className: N.b,
                 onClick: t,
-                "aria-label": "Close",
+                "aria-label": I.intl.string(I.t.cpT0Cq),
                 children: (0, i.jsx)(o.P, { size: "sm", color: "currentColor" }),
             }),
         ],
@@ -72,7 +72,7 @@ function _(e) {
             (0, i.jsx)(s.D, {
                 className: N.b,
                 onClick: n,
-                "aria-label": "Close",
+                "aria-label": I.intl.string(I.t.cpT0Cq),
                 children: (0, i.jsx)(o.P, { size: "sm", color: "currentColor" }),
             }),
             (0, i.jsx)("img", { className: N.Qw, src: v, alt: "" }),
