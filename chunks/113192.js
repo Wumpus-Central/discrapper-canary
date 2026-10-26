@@ -2,19 +2,19 @@ n.d(t, { v: () => N });
 var i = n(477900);
 n(582128);
 var r = n(646865),
-    a = n(795816),
-    s = n(277344),
-    l = n(47294),
-    o = n(688810),
-    d = n(429913),
-    c = n(384059),
-    u = n(235986),
-    _ = n(267102),
-    E = n(447404),
-    A = n(271195),
-    h = n(128286),
-    f = n(625180),
-    I = n(262579),
+    a = n(277344),
+    s = n(47294),
+    l = n(688810),
+    o = n(429913),
+    d = n(384059),
+    c = n(235986),
+    u = n(267102),
+    _ = n(447404),
+    E = n(271195),
+    A = n(128286),
+    h = n(625180),
+    f = n(262579),
+    I = n(241696),
     p = n(746726),
     T = n(165610),
     m = n(652215),
@@ -22,13 +22,13 @@ var r = n(646865),
     S = n(967481);
 function N(e) {
     let { frame: t, idle: N, onMouseDown: C, onMouseMove: O, onMouseLeave: R } = e,
-        L = (0, d.h)(t.applicationId),
+        L = (0, o.h)(t.applicationId),
         y = (0, p.A)(t),
-        D = (0, _.Us)() === m.BRT.POPOUT,
-        { parentAnalyticsLocation: v } = (0, o.Ay)();
+        D = (0, u.Us)() === m.BRT.POPOUT,
+        { parentAnalyticsLocation: v } = (0, l.Ay)();
     function b() {
-        (y.isShownInCall && null != y.channelId && null != y.participantId && (0, s.A)(y.channelId, y.participantId),
-            f.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: T.y0.FOCUSED }));
+        (y.isShownInCall && null != y.channelId && null != y.participantId && (0, a.A)(y.channelId, y.participantId),
+            h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: T.y0.FOCUSED }));
     }
     async function M() {
         if (t.intent !== T.sV.INLINE) return void b();
@@ -141,37 +141,32 @@ function N(e) {
         children: [
             (0, i.jsx)("div", {
                 className: S.K1,
-                children: (0, i.jsx)(A.X, {
+                children: (0, i.jsx)(E.X, {
                     idle: N,
                     title: L?.name ?? "",
                     onJumpToChannel: M,
-                    preventIdleComponent: E.A,
+                    preventIdleComponent: _.A,
                 }),
             }),
             (0, i.jsx)("div", {
                 className: S.q6,
-                children: (0, i.jsxs)(u.A, {
+                children: (0, i.jsxs)(c.A, {
                     grow: 1,
                     shrink: 1,
-                    justify: u.A.Justify.END,
-                    align: u.A.Align.CENTER,
+                    justify: c.A.Justify.END,
+                    align: c.A.Align.CENTER,
                     children: [
                         D || (0, r.f)()
                             ? null
-                            : (0, i.jsx)(h.A, {
+                            : (0, i.jsx)(A.A, {
                                   className: g.BD,
                                   popoutOpen: !1,
                                   onOpenPopout: function () {
-                                      ((0, c.X)(v, c.O.POPOUT, !0),
-                                          (0, l.A)({
-                                              onConfirm: async () => {
-                                                  (await f.A.refreshProxyTicket(t.id), (0, a.jp)());
-                                              },
-                                          }));
+                                      ((0, d.X)(v, d.O.POPOUT, !0), (0, s.A)({ onConfirm: () => (0, I.A)(t.id) }));
                                   },
                                   onClosePopout: m.FXj,
                               }),
-                        (0, i.jsx)(I.A, { frameId: t.id, className: g.BD }),
+                        (0, i.jsx)(f.A, { frameId: t.id, className: g.BD }),
                     ],
                 }),
             }),
