@@ -726,7 +726,7 @@ var em = n(821609),
     ep = n(3738),
     eC = n(971649),
     ef = n(651892),
-    eE = n(620954),
+    eE = n(684693),
     eh = n(814793),
     eg = n(753386),
     ej = n(608935),
@@ -1242,7 +1242,7 @@ let e0 = (0, A.animated)(eY.Ay),
         });
     };
 var e2 = n(506500);
-let e7 = function (e) {
+let e3 = function (e) {
     let { children: t, header: n, layoutVariant: l } = e,
         { collapsedHeight: i, isExpanded: a } = P(),
         { expansionSpring: o } = r.useContext(b);
@@ -1259,7 +1259,7 @@ let e7 = function (e) {
     });
 };
 n(801541);
-var e3 = n(889137),
+var e7 = n(889137),
     e6 = n(417270),
     e8 = n(782134),
     e9 = n(297264),
@@ -1279,7 +1279,7 @@ var e3 = n(889137),
     td = n(139384),
     tx = n(114046),
     tm = n(695366),
-    tp = n(274670),
+    tp = n(507395),
     tC = n(144779),
     tf = n(30370),
     tE = n(178540),
@@ -1752,7 +1752,7 @@ function tL(e) {
 function tP(e) {
     let { activeScreen: t, selectPlatform: n } = e,
         { quest: l, taskDetails: i } = r.useContext(et);
-    return (0, e3.YW)(t)
+    return (0, e7.YW)(t)
         .with(d.X0.SELECT, () => (0, s.jsx)(tV, { onConsole: () => n(K.fO.CONSOLE), onDesktop: () => n(K.fO.DESKTOP) }))
         .with(d.X0.DESKTOP, () => ((0, C.I6)(l) ? (0, s.jsx)(tL, { quest: l }) : (0, s.jsx)(tF, { quest: l })))
         .with(d.X0.CONSOLE, () => (0, s.jsx)(tQ, { quest: l, taskDetails: i }))
@@ -1969,7 +1969,7 @@ function tY() {
 function tX() {
     let { quest: e } = r.useContext(et),
         t = e.userStatus?.enrolledAt != null;
-    return (0, s.jsx)(e7, {
+    return (0, s.jsx)(e3, {
         layoutVariant: t ? "inset" : "flush",
         header: (0, s.jsxs)(s.Fragment, { children: [(0, s.jsx)(tY, {}), !t && (0, s.jsx)(e1, {})] }),
         children: (0, s.jsx)(tK, {}),
@@ -1998,7 +1998,7 @@ function t2() {
         null
     );
 }
-function t7(e) {
+function t3(e) {
     let { quest: t } = r.useContext(et),
         { isQuestBarVisible: n, reason: s } = (0, h.TQ)({ quest: t }),
         { impressionRef: i } = e;
@@ -2059,7 +2059,7 @@ function t7(e) {
         null
     );
 }
-function t3(e) {
+function t7(e) {
     let { isExpanded: t } = e,
         { quest: n } = r.useContext(et);
     return (0, s.jsxs)(s.Fragment, {
@@ -2097,8 +2097,8 @@ function t8(e) {
                 collapsedContent: (0, s.jsx)(e$, {}, i ? "collapsed-with-rewards" : "collapsed-without-rewards"),
                 expandedContent: (0, s.jsx)(tX, {}),
                 renderCreativeContext: (e) => (0, s.jsx)(el, { quest: t, children: e }),
-                StateTrackers: t7,
-                ModeChangeTracker: t3,
+                StateTrackers: t3,
+                ModeChangeTracker: t7,
                 ImpressionTracker: t6,
             }),
         })
