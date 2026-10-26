@@ -29,8 +29,8 @@ var j = n(503698),
     P = n(331322),
     R = n(668953),
     w = n(972213),
-    M = n(97469),
-    k = n(963935),
+    k = n(97469),
+    M = n(963935),
     L = n(894858),
     _ = n(272053),
     D = n(377980),
@@ -98,13 +98,13 @@ function H(e) {
 }
 function z(e) {
     let { setting: t, onClose: n } = e,
-        s = (0, M.NC)(),
+        s = (0, k.NC)(),
         r =
             null != t
                 ? (function (e) {
                       let t = [e];
-                      for (let n = e.parent; null != n && n.type !== k.Z6.SIDEBAR_ITEM; n = n.parent)
-                          n.type === k.Z6.PANEL && t.unshift(n);
+                      for (let n = e.parent; null != n && n.type !== M.Z6.SIDEBAR_ITEM; n = n.parent)
+                          n.type === M.Z6.PANEL && t.unshift(n);
                       return t;
                   })(t)
                 : [],
@@ -515,8 +515,8 @@ function ey(e) {
             return e?.parentSidebarItemKey === t.key;
         }, [c, t.key, o]),
         m = s.useMemo(() => {
-            if (null == a || !(0, k.zS)(a.layout)) return null;
-            let e = a.layout.filter(k.bJ);
+            if (null == a || !(0, M.zS)(a.layout)) return null;
+            let e = a.layout.filter(M.bJ);
             return e.length > 1 ? e : null;
         }, [a]),
         h =
@@ -580,7 +580,7 @@ function eb(e) {
                 (n = new Map()),
                 (i = new Map()),
                 !(function e(t, n) {
-                    if ((n(t), (0, k.nW)(t))) for (let i of t.layout) e(i, n);
+                    if ((n(t), (0, M.nW)(t))) for (let i of t.layout) e(i, n);
                 })(d, (s) => {
                     if (!("getDismissibleBadges" in s)) return;
                     let r = s.getDismissibleBadges?.();
@@ -590,7 +590,7 @@ function eb(e) {
                     let a = null;
                     if (null != l.parentCategoryKey) {
                         let e = m.get(l.parentCategoryKey);
-                        e?.type === k.Z6.CATEGORY && (0, k.bJ)(e) && (a = l.parentCategoryKey);
+                        e?.type === M.Z6.CATEGORY && (0, M.bJ)(e) && (a = l.parentCategoryKey);
                     }
                     let c = { sidebarItemKey: l.parentSidebarItemKey, categoryKey: a };
                     r.forEach((s) =>
@@ -627,7 +627,7 @@ function eb(e) {
                 [e, t]
             );
         }, [n.layout]),
-        p = (0, M.NC)(),
+        p = (0, k.NC)(),
         A = (0, $.A)("settings-sidebar", u, { orientation: Y.Gl.VERTICAL, defaultFocused: t }),
         [b, j] = s.useState(!1),
         C = s.useCallback(() => {
@@ -890,8 +890,8 @@ function ew(e) {
         })
     );
 }
-var eM = n(280450),
-    ek = n(287809),
+var ek = n(280450),
+    eM = n(287809),
     eL = n(152056),
     e_ = n(780964),
     eD = n(476296),
@@ -914,13 +914,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "651357",
-        s = "b2117d8d1b5352dd16e7d929c68544882a71b932".substring(0, 7),
+        n = "651362",
+        s = "e10e5c6e3ff76e23b87a3b427acd624f277fda6f".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1793054467711", !1) : null,
+        u = null != o ? (0, eq.A)("1793054551025", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1010,7 +1010,7 @@ function e1(e) {
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},
-        "aria-label": "More options",
+        "aria-label": K.intl.string(K.t["6Ic4Ev"]),
         children: (0, i.jsxs)(eB.rX, {
             children: [
                 (0, i.jsx)(eB.Dr, { id: "changelog", label: K.intl.string(K.t.LRmNAl), action: () => (0, eU.j)(!0) }),
@@ -1100,12 +1100,12 @@ function e8(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == ek.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == eM.default.getCurrentUser() && (g(!0), (0, e7.default)());
         }
         return (
-            eM.default.addChangeListener(e),
+            ek.default.addChangeListener(e),
             () => {
-                (eM.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
+                (ek.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
             }
         );
     }, []),
