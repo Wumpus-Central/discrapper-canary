@@ -2642,6 +2642,7 @@ class tT extends C.G {
                 ],
             },
             { no: 48, name: "lifecycle_plan", kind: "message", T: () => tb },
+            { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
@@ -2680,6 +2681,7 @@ class tT extends C.G {
             allocateRightToLeft: !1,
             isManaged: !1,
             eligibilityPersistence: 0,
+            isFeatureFlag: !1,
         };
         return (
             globalThis.Object.defineProperty(t, N.$, { enumerable: !1, value: this }),
@@ -2839,6 +2841,9 @@ class tT extends C.G {
                 case 48:
                     r.lifecyclePlan = tb.internalBinaryRead(e, e.uint32(), n, r.lifecyclePlan);
                     break;
+                case 49:
+                    r.isFeatureFlag = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2920,7 +2925,8 @@ class tT extends C.G {
                 tg.internalBinaryWrite(e.numberLineSettings, t.tag(43, g.O0.LengthDelimited).fork(), n).join(),
             0 !== e.eligibilityPersistence && t.tag(42, g.O0.Varint).int32(e.eligibilityPersistence),
             e.lifecyclePlan &&
-                tb.internalBinaryWrite(e.lifecyclePlan, t.tag(48, g.O0.LengthDelimited).fork(), n).join());
+                tb.internalBinaryWrite(e.lifecyclePlan, t.tag(48, g.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.isFeatureFlag && t.tag(49, g.O0.Varint).bool(e.isFeatureFlag));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
