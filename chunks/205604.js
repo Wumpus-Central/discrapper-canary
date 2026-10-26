@@ -1,169 +1,145 @@
-n.d(e, { default: () => k });
+n.d(e, { default: () => q });
 var i = n(477900),
-    _ = n(582128),
-    E = n(738822),
-    C = n(77870),
-    l = n(717200),
-    s = n(323889),
-    a = n(412703),
-    I = n(928264),
-    r = n(141628),
-    u = n(975807),
-    o = n(274670),
+    l = n(582128),
+    r = n(738822),
+    s = n(77870),
+    a = n(717200),
+    o = n(323889),
+    C = n(412703),
+    u = n(928264),
+    E = n(141628),
+    d = n(975807),
+    I = n(274670),
     A = n(144779),
-    T = n(793574),
-    N = n(409626),
-    d = n(692969),
-    c = n(123917),
-    M = n(104886),
-    L = n(18437),
-    h = n(590202),
-    p = n(971649),
-    q = n(792620),
+    _ = n(793574),
+    T = n(409626),
+    c = n(692969),
+    N = n(123917),
+    M = n(590202),
+    h = n(971649),
+    p = n(792620),
     f = n(108811),
-    O = n(284846),
+    L = n(284846),
     g = n(976019),
-    S = n(190107),
-    m = n(105292),
-    G = n(189955);
-function U(t) {
+    G = n(190107),
+    O = n(105292),
+    S = n(189955);
+function m(t) {
     let { quest: e, sourceQuestContent: n } = t,
-        { hasAlreadyLinked: C, canStartAuthorization: l, startAuthorization: U, fetched: k } = (0, O.U)(e),
-        v = (0, L.Ut)(),
-        D = (0, p.wW)(),
-        y = (0, q.xc)(e),
-        H = (0, d.A)({
-            applicationId: y,
-            location: S.rE.QUEST_INSTRUCTIONS,
-            source: N.GameProfileSources.QuestInGameModal,
+        { hasAlreadyLinked: s, canStartAuthorization: a, startAuthorization: m, fetched: q } = (0, L.U)(e),
+        U = (0, h.wW)(),
+        k = (0, p.xc)(e),
+        v = (0, c.A)({
+            applicationId: k,
+            location: G.rE.QUEST_INSTRUCTIONS,
+            source: T.GameProfileSources.QuestInGameModal,
         }),
-        [R, F] = _.useState(null),
-        P = k && !C && l,
-        b = P ? R : S.qh.IN_GAME,
-        B = k && (null != b || C),
-        K = m.intl.string(!0 === C ? m.t["2+opCy"] : m.t.dp0CUb),
-        V = (function () {
-            if (!0 !== C) return m.intl.string(m.t.Z1T4zl);
+        [y, H] = l.useState(null),
+        D = q && !s && a,
+        b = D ? y : G.qh.IN_GAME,
+        x = q && (null != b || s),
+        B = O.intl.string(!0 === s ? O.t["2+opCy"] : O.t.dp0CUb),
+        Q = (function () {
+            if (!0 !== s) return O.intl.string(O.t.Z1T4zl);
             let t = e.config.messages.gameTitle;
-            return null != H
-                ? m.intl.format(m.t.X8hBDz, { gameTitle: t, onClickGameTitle: H })
-                : m.intl.format(m.t.u3mdpP, { gameTitle: t });
+            return null != v
+                ? O.intl.format(O.t.X8hBDz, { gameTitle: t, onClickGameTitle: v })
+                : O.intl.format(O.t.u3mdpP, { gameTitle: t });
         })(),
         W = {
-            label: m.intl.string(m.t.okJIPY),
-            placeholder: m.intl.string(m.t.okJIPY),
+            label: O.intl.string(O.t.okJIPY),
+            placeholder: O.intl.string(O.t.okJIPY),
             options: [
-                { id: S.qh.IN_GAME, value: S.qh.IN_GAME, label: m.intl.string(m.t["4PWzD7"]), leading: r.A },
-                { id: S.qh.WEB, value: S.qh.WEB, label: m.intl.string(m.t.CM8LUl), leading: I.I },
+                { id: G.qh.IN_GAME, value: G.qh.IN_GAME, label: O.intl.string(O.t["4PWzD7"]), leading: E.A },
+                { id: G.qh.WEB, value: G.qh.WEB, label: O.intl.string(O.t.CM8LUl), leading: u.I },
             ],
-            value: R,
+            value: y,
             onSelectionChange: (t) => {
-                if (t !== S.qh.IN_GAME && t !== S.qh.WEB) return void F(null);
-                F(t);
-                let i = t === S.qh.IN_GAME ? h.Cy.SELECT_IN_GAME_AUTH_METHOD : h.Cy.SELECT_WEB_AUTH_METHOD;
-                (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
-                    ? (0, o.r)({
-                          type: A.F.CLICK_INTERNAL,
-                          adCreativeType: s.p.QUEST,
-                          adCreativeId: e.id,
-                          questContentCTA: i,
-                          surfaceId: E.uF.ACHIEVEMENT_IN_GAME_MODAL,
-                          sourceQuestContent: n,
-                          impressionId: D(),
-                      })
-                    : v({
-                          questId: e.id,
-                          questContent: E.uF.ACHIEVEMENT_IN_GAME_MODAL,
-                          questContentCTA: i,
-                          sourceQuestContent: n,
-                      });
+                if (t !== G.qh.IN_GAME && t !== G.qh.WEB) return void H(null);
+                H(t);
+                let i = t === G.qh.IN_GAME ? M.Cy.SELECT_IN_GAME_AUTH_METHOD : M.Cy.SELECT_WEB_AUTH_METHOD;
+                (0, I.r)({
+                    type: A.F.CLICK_INTERNAL,
+                    adCreativeType: o.p.QUEST,
+                    adCreativeId: e.id,
+                    questContentCTA: i,
+                    surfaceId: r.uF.ACHIEVEMENT_IN_GAME_MODAL,
+                    sourceQuestContent: n,
+                    impressionId: U(),
+                });
             },
         };
     return (0, i.jsx)(f.A, {
-        heading: K,
-        subtitle: V,
-        methodSelect: P ? [W] : void 0,
+        heading: B,
+        subtitle: Q,
+        methodSelect: D ? [W] : void 0,
         ctaButton: (function () {
-            if (!k || !0 === C || null == b) return;
-            if (b === S.qh.WEB)
+            if (!q || !0 === s || null == b) return;
+            if (b === G.qh.WEB)
                 return {
-                    text: m.intl.string(m.t.T0zC77),
+                    text: O.intl.string(O.t.T0zC77),
                     onClick: () => {
-                        ((0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
-                            ? (0, o.r)({
-                                  type: A.F.CLICK_INTERNAL,
-                                  adCreativeType: s.p.QUEST,
-                                  adCreativeId: e.id,
-                                  questContentCTA: h.Cy.START_WEB_AUTHORIZATION,
-                                  surfaceId: E.uF.ACHIEVEMENT_IN_GAME_MODAL,
-                                  sourceQuestContent: n,
-                                  impressionId: D(),
-                              })
-                            : v({
-                                  questId: e.id,
-                                  questContent: E.uF.ACHIEVEMENT_IN_GAME_MODAL,
-                                  questContentCTA: h.Cy.START_WEB_AUTHORIZATION,
-                                  sourceQuestContent: n,
-                              }),
-                            U({ analyticsLocations: [T.A.QUEST_IN_GAME_MODAL_CONNECT] }));
+                        ((0, I.r)({
+                            type: A.F.CLICK_INTERNAL,
+                            adCreativeType: o.p.QUEST,
+                            adCreativeId: e.id,
+                            questContentCTA: M.Cy.START_WEB_AUTHORIZATION,
+                            surfaceId: r.uF.ACHIEVEMENT_IN_GAME_MODAL,
+                            sourceQuestContent: n,
+                            impressionId: U(),
+                        }),
+                            m({ analyticsLocations: [_.A.QUEST_IN_GAME_MODAL_CONNECT] }));
                     },
                 };
-            let t = e.config.taskConfigV2.tasks[a.n.ACHIEVEMENT_IN_GAME];
+            let t = e.config.taskConfigV2.tasks[C.n.ACHIEVEMENT_IN_GAME];
             if (null == t) return;
             let i = t.accountLinkInstructions;
             return {
-                text: m.intl.string(m.t.KgYvrZ),
+                text: O.intl.string(O.t.KgYvrZ),
                 onClick: () =>
-                    (0, c.h)({
+                    (0, N.h)({
                         href: i,
                         onConfirm: () => {
-                            ((0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
-                                ? (0, o.r)({
-                                      type: A.F.CLICK_INTERNAL,
-                                      adCreativeType: s.p.QUEST,
-                                      adCreativeId: e.id,
-                                      questContentCTA: h.Cy.OPEN_ACCOUNT_LINK_INSTRUCTIONS,
-                                      surfaceId: E.uF.ACHIEVEMENT_IN_GAME_MODAL,
-                                      sourceQuestContent: n,
-                                      impressionId: D(),
-                                  })
-                                : v({
-                                      questId: e.id,
-                                      questContent: E.uF.ACHIEVEMENT_IN_GAME_MODAL,
-                                      questContentCTA: h.Cy.OPEN_ACCOUNT_LINK_INSTRUCTIONS,
-                                      sourceQuestContent: n,
-                                  }),
-                                (0, u.A)(i));
+                            ((0, I.r)({
+                                type: A.F.CLICK_INTERNAL,
+                                adCreativeType: o.p.QUEST,
+                                adCreativeId: e.id,
+                                questContentCTA: M.Cy.OPEN_ACCOUNT_LINK_INSTRUCTIONS,
+                                surfaceId: r.uF.ACHIEVEMENT_IN_GAME_MODAL,
+                                sourceQuestContent: n,
+                                impressionId: U(),
+                            }),
+                                (0, d.A)(i));
                         },
                     }),
             };
         })(),
         children:
-            !0 === B &&
+            !0 === x &&
             (0, i.jsx)("div", {
-                className: G.X,
+                className: S.X,
                 children: (0, i.jsx)(g.A, {
                     quest: e,
-                    hasAlreadyLinked: C,
-                    onClickGameTitle: H,
+                    hasAlreadyLinked: s,
+                    onClickGameTitle: v,
                     selectedAuthMethod: b,
                 }),
             }),
     });
 }
-let k = function (t) {
-    let { initialQuest: e, sourceQuestContent: n, transitionState: _, onClose: s } = t,
-        a = (0, C.C5)(e.id) ?? e;
-    return (0, i.jsx)(l.A, {
-        quest: a,
-        questContent: E.uF.ACHIEVEMENT_IN_GAME_MODAL,
+let q = function (t) {
+    let { initialQuest: e, sourceQuestContent: n, transitionState: l, onClose: o } = t,
+        C = (0, s.C5)(e.id) ?? e;
+    return (0, i.jsx)(a.A, {
+        quest: C,
+        questContent: r.uF.ACHIEVEMENT_IN_GAME_MODAL,
         sourceQuestContent: n,
-        ariaLabel: m.intl.string(m.t.dp0CUb),
-        transitionState: _,
-        onClose: s,
+        ariaLabel: O.intl.string(O.t.dp0CUb),
+        transitionState: l,
+        onClose: o,
         isContentLoading: !1,
         contentHasError: !1,
-        leftContent: (0, i.jsx)(U, { quest: a, sourceQuestContent: n }),
-        location: S.rE.INGAME_CONNECTION_MODAL,
+        leftContent: (0, i.jsx)(m, { quest: C, sourceQuestContent: n }),
+        location: G.rE.INGAME_CONNECTION_MODAL,
     });
 };
