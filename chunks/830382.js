@@ -1,4 +1,4 @@
-n.d(t, { Aj: () => S, EX: () => p, NY: () => m, O1: () => T, T3: () => O, XU: () => N, lo: () => C });
+n.d(t, { Aj: () => N, EX: () => T, NY: () => g, O1: () => m, T3: () => R, XU: () => C, fM: () => p, lo: () => O });
 var i = n(635358),
     r = n(636537),
     a = n(73153),
@@ -14,7 +14,18 @@ var i = n(635358),
     h = n(107351),
     f = n(371794),
     I = n(652215);
-async function p(e, t, n, s) {
+async function p(e) {
+    if (null == _.A.get(e)) {
+        a.h.dispatch({ type: "SKU_FETCH_START", skuId: e });
+        try {
+            let t = await (0, f.aP)({ url: I.Rsh.STORE_SKU_PUBLIC(e), rejectWithError: (0, r.fT)() });
+            a.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: t.body.sku });
+        } catch (t) {
+            throw (a.h.dispatch({ type: "SKU_FETCH_FAIL", skuId: e }), new o.A(`Failed to fetch public SKU ${e}`));
+        }
+    }
+}
+async function T(e, t, n, s) {
     if (null == _.A.get(t)) {
         a.h.dispatch({ type: "SKU_FETCH_START", skuId: t });
         try {
@@ -35,13 +46,13 @@ async function p(e, t, n, s) {
         }
     }
 }
-async function T(e) {
+async function m(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (!(0, c.Fs)(e) && t) throw Error("this should only be used in test mode");
     let n = (await (0, f.aP)({ url: I.Rsh.APPLICATION_SKUS(e), rejectWithError: (0, r.fT)() })).body;
     return (a.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: n }), n);
 }
-async function m(e) {
+async function g(e) {
     let {
             applicationId: t,
             skuId: n,
@@ -77,8 +88,8 @@ async function m(e) {
         return null;
     }
 }
-let g = { isGift: !1 };
-async function S(e, t, n, i, l) {
+let S = { isGift: !1 };
+async function N(e, t, n, i, l) {
     a.h.dispatch({ type: "ORDER_CREATE_START" });
     try {
         let s = {
@@ -107,7 +118,7 @@ async function S(e, t, n, i, l) {
         throw (a.h.dispatch({ type: "ORDER_CREATE_FAIL" }), new s.Ey(e));
     }
 }
-async function N(e, t, n) {
+async function C(e, t, n) {
     let {
         paymentSource: i,
         expectedAmount: o,
@@ -116,19 +127,19 @@ async function N(e, t, n) {
         isGift: p,
         giftInfoOptions: T,
         subscriptionPlanId: m,
-        loadId: S,
+        loadId: g,
         countryCode: N,
         quantity: C,
         applyWalletBalance: O,
-    } = { ...g, ...n };
-    a.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t, isGift: p, loadId: S });
+    } = { ...S, ...n };
+    a.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t, isGift: p, loadId: g });
     let R = (0, c.Fs)(e);
     try {
         let e = {
                 gift: p,
                 sku_subscription_plan_id: m,
                 gateway_checkout_context: await (0, E.ob)(i),
-                load_id: S,
+                load_id: g,
                 gift_info_options: T,
             },
             n = u.A.getPromotionIdOverride();
@@ -164,7 +175,7 @@ async function N(e, t, n) {
                     null != s.body.library_applications ? s.body.library_applications.filter(A.Vq) : [],
                 entitlements: s.body.entitlements,
                 giftCode: s.body.gift_code,
-                loadId: S,
+                loadId: g,
             }),
             { ...s.body, appliedUserDiscounts: s.body.applied_user_discounts, redirectConfirmation: !1 }
         );
@@ -181,7 +192,7 @@ async function N(e, t, n) {
         return (0, d.Oj)(r.body, i);
     }
 }
-async function C() {
+async function O() {
     try {
         let e = { purchase_token: (0, h.r)() };
         return {
@@ -198,6 +209,6 @@ async function C() {
         throw e instanceof s.Ey ? e : new s.Ey(e);
     }
 }
-function O() {
+function R() {
     a.h.dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
 }
