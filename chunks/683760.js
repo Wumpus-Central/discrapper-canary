@@ -1,77 +1,73 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => _ });
 var i = n(17928),
     r = n(73153),
     a = n(572009),
-    s = n(280450),
-    l = n(349871),
-    o = n(202541);
-let d = "OverridePremiumTypeStore",
-    c = { premiumTypeOverride: o.$I, premiumTypeActual: o.$I, createdAtOverride: o.lk, perksActual: null };
-function u(e) {
+    s = n(349871),
+    l = n(202541);
+let o = "OverridePremiumTypeStore",
+    d = { premiumTypeOverride: l.$I, premiumTypeActual: l.$I, createdAtOverride: l.lk, perksActual: null };
+function c(e) {
     let t = (function (e) {
             let { user: t, type: n } = e;
             if ("CURRENT_USER_UPDATE" === n && void 0 === t.premium_type) return !1;
-            c.premiumTypeActual = (0, a.nq)(t.premium_type);
+            d.premiumTypeActual = (0, a.nq)(t.premium_type);
         })(e),
         n = (function (e) {
             var t;
             let { user: n, type: i } = e;
             if ("CURRENT_USER_UPDATE" === i && void 0 === n.perks) return !1;
-            c.perksActual = null == (t = n.perks) ? null : "activePerksBitmask" in t ? t : (0, l.c$)(t);
+            d.perksActual = null == (t = n.perks) ? null : "activePerksBitmask" in t ? t : (0, s.c$)(t);
         })(e);
     if (!1 === t && !1 === n) return !1;
 }
-class _ extends i.Ay.PersistedStore {
-    static displayName = d;
-    static persistKey = d;
+class u extends i.Ay.PersistedStore {
+    static displayName = o;
+    static persistKey = o;
     static migrations = [
         (e) => {
-            if (e?.createdAtOverride == null) return { ...e, createdAtOverride: o.lk };
+            if (e?.createdAtOverride == null) return { ...e, createdAtOverride: l.lk };
         },
     ];
     initialize(e) {
-        if ((this.waitFor(s.default), null != e)) {
-            ((c.premiumTypeActual = e?.premiumTypeActual),
-                (c.premiumTypeOverride = e?.premiumTypeOverride),
-                (c.perksActual = e?.perksActual ?? null),
+        if (null != e) {
+            ((d.premiumTypeActual = e?.premiumTypeActual),
+                (d.premiumTypeOverride = e?.premiumTypeOverride),
+                (d.perksActual = e?.perksActual ?? null),
                 null != e.createdAtOverride
-                    ? (c.createdAtOverride = new Date(e.createdAtOverride))
-                    : (c.createdAtOverride = o.lk));
+                    ? (d.createdAtOverride = new Date(e.createdAtOverride))
+                    : (d.createdAtOverride = l.lk));
             return;
         }
-        ((c.premiumTypeOverride = o.$I), (c.createdAtOverride = o.lk));
+        ((d.premiumTypeOverride = l.$I), (d.createdAtOverride = l.lk));
     }
     getPremiumTypeOverride() {
-        return c.premiumTypeOverride;
-    }
-    hasPremiumTypeOverride(e) {
-        return c.premiumTypeOverride !== o.$I && null != e && e.id === s.default.getId() && (0, a.I9)(e);
+        return d.premiumTypeOverride;
     }
     getPremiumTypeActual() {
-        return c.premiumTypeActual;
+        return d.premiumTypeActual;
     }
     getPerksActual() {
-        return c.perksActual;
+        return d.perksActual;
     }
     getCreatedAtOverride() {
-        return c.createdAtOverride;
+        return d.createdAtOverride;
     }
     getState() {
-        return c;
+        return d;
     }
     get premiumType() {
-        return c.premiumTypeOverride;
+        return d.premiumTypeOverride;
     }
 }
-let E = new _(r.h, {
+let _ = new u(r.h, {
     SET_PREMIUM_TYPE_OVERRIDE: function (e) {
         let { premiumType: t } = e;
-        c.premiumTypeOverride = t;
+        d.premiumTypeOverride = t;
     },
     SET_CREATED_AT_OVERRIDE: function (e) {
         let { createdAt: t } = e;
-        c.createdAtOverride = t;
+        d.createdAtOverride = t;
     },
-    CURRENT_USER_UPDATE: u,
-    CONNECTION_OPEN: u,
+    CURRENT_USER_UPDATE: c,
+    CONNECTION_OPEN: c,
 });
