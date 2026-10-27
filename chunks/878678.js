@@ -1,4 +1,4 @@
-i.d(t, { Zt: () => e0, K4: () => e2 });
+i.d(t, { K4: () => e1 });
 var s = i(477900),
     n = i(582128),
     r = i(17928),
@@ -974,8 +974,7 @@ function eX(e) {
         })
     );
 }
-let e0 = "BoostedGuildPerksModalConnected";
-function e1(e) {
+function e0(e) {
     let { guildId: t, close: i, location: c, registerDismissModalHandler: g, scrollToPowerupCards: T } = e,
         E = (0, r.bG)([u.default], () => u.default.getCurrentUser()),
         _ = (0, r.bG)([d.A], () => d.A.getGuild(t), [t]),
@@ -1004,7 +1003,7 @@ function e1(e) {
               children: (0, s.jsx)(eX, { analyticsLocation: c, onClose: A, guild: _, scrollToPowerupCards: T }),
           });
 }
-function e2(e) {
+function e1(e) {
     let { guildId: t, location: i, scrollToPowerupCards: n } = e,
         r = { current: null };
     (0, c.B8)(
@@ -1012,7 +1011,7 @@ function e2(e) {
             let { closeLayer: a } = e;
             return (
                 null == r.current && (r.current = a),
-                (0, s.jsx)(e1, {
+                (0, s.jsx)(e0, {
                     close: a,
                     guildId: t,
                     location: i,
@@ -1024,7 +1023,7 @@ function e2(e) {
             );
         },
         {
-            layerKey: e0,
+            layerKey: "BoostedGuildPerksModalConnected",
             onEscape: () =>
                 g._.hasSubscribers(q.jej.MODAL_CLOSE)
                     ? (g._.dispatch(q.jej.MODAL_CLOSE), !0)

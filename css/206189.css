@@ -265,27 +265,6 @@
     margin-top: var(--space-12)
 }
 
-.container__33980 {
-    display: flex;
-    gap: 8px;
-    margin-top: 20px
-}
-
-.iconBackground__33980 {
-    align-items: center;
-    background-color: var(--background-mod-muted);
-    border-radius: var(--radius-round);
-    display: flex;
-    justify-content: center;
-    padding: 8px
-}
-
-.link__33980 {
-    cursor: pointer;
-    display: inline;
-    text-decoration: underline
-}
-
 .durationOptions__5f539,
 .quantityOptions__5f539 {
     display: grid;
@@ -459,4 +438,4 @@
     border-color: Highlight
 }
 
-/*# sourceMappingURL=700181.4e9e7c2dc017514a.css.map*/
+/*# sourceMappingURL=206189.62bbe4b903244251.css.map*/
