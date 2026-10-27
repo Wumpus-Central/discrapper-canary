@@ -48,8 +48,8 @@ let O = "x-science-test",
     D = 0,
     v = 0,
     b = 0,
-    M = 0,
     P = 0,
+    M = 0,
     U = null,
     w = 0,
     G = Number.MAX_SAFE_INTEGER,
@@ -113,7 +113,7 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             (b = j(b)));
                     },
                     (t) => {
-                        ($.unshift(...e), (M = j(M)));
+                        ($.unshift(...e), (P = j(P)));
                         let { message: n } = t.body || t;
                         console.warn("[AnalyticsTrackingStore] Track:", n);
                     },
@@ -153,8 +153,8 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 properties: {
                     client_track_timestamp: Date.now(),
                     rpc_success_count: b,
-                    rpc_failure_count: M,
-                    first_seen_event_sequence_number: P,
+                    rpc_failure_count: P,
+                    first_seen_event_sequence_number: M,
                     last_seen_event_sequence_number: D,
                     telemetry_period_start_timestamp: U,
                     telemetry_period_end_timestamp: Date.now(),
@@ -171,13 +171,13 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             return (
                 (v = 0),
                 (b = 0),
-                (M = 0),
+                (P = 0),
                 (w = 0),
                 (G = Number.MAX_SAFE_INTEGER),
                 (x = 0),
                 (k = 0),
                 (U = Date.now()),
-                (P = D),
+                (M = D),
                 I([e], C.mX.CLIENT_TELEMETRY).catch((e) => {
                     R.trace(`client telemetry flush failed (status ${e?.status ?? "unknown"})`);
                 })
@@ -518,7 +518,7 @@ eT(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("652519", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("652556", 10))) || (l.client_build_number = d),
     null == (c = eu?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

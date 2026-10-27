@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => N, YL: () => I, oN: () => S });
+n.d(t, { Ay: () => T, oN: () => C });
 var i,
     l,
     r = n(477900),
@@ -11,21 +11,21 @@ var i,
     h = n(821609),
     f = n(43990),
     g = n(265872),
-    C = n(235986),
-    A = n(174459),
-    p = n(652215),
-    m = n(105292),
+    A = n(235986),
+    p = n(174459),
+    m = n(652215),
+    I = n(105292),
     E = n(51377),
-    I = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
-    S = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
+    S = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
+    C = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
 class _ extends s.PureComponent {
     state = { confirmed: !1 };
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        A.default.track(p.HAw.SHOW_TUTORIAL, { tutorial: e });
+        p.default.track(m.HAw.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        A.default.track(p.HAw.CLOSE_TUTORIAL, { tutorial: this.props.uniqueId, acknowledged: this.state.confirmed });
+        p.default.track(m.HAw.CLOSE_TUTORIAL, { tutorial: this.props.uniqueId, acknowledged: this.state.confirmed });
     }
     handleDismiss = () => {
         let { onClickComplete: e } = this.props;
@@ -47,9 +47,9 @@ class _ extends s.PureComponent {
             className: o()(E.Sy, s),
             children: [
                 null != e &&
-                    (0, r.jsx)(C.A, {
+                    (0, r.jsx)(A.A, {
                         className: E.il,
-                        justify: f ? C.A.Justify.START : C.A.Justify.CENTER,
+                        justify: f ? A.A.Justify.START : A.A.Justify.CENTER,
                         children: e(),
                     }),
                 (0, r.jsx)(d.H, { className: o()({ [E.Av]: g, [E.gH]: f }), children: i }),
@@ -65,13 +65,13 @@ class _ extends s.PureComponent {
                             fullWidth: !0,
                             variant: "primary",
                             onClick: this.handleDismiss,
-                            text: m.intl.string(m.t["+IrDzN"]),
+                            text: I.intl.string(I.t["+IrDzN"]),
                         }),
                         (0, r.jsx)(h.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             onClick: a,
-                            text: m.intl.string(m.t["33wtxt"]),
+                            text: I.intl.string(I.t["33wtxt"]),
                         }),
                     ],
                 }),
@@ -79,15 +79,15 @@ class _ extends s.PureComponent {
         });
     }
 }
-class N extends s.PureComponent {
-    static TextAlignments = I;
+class T extends s.PureComponent {
+    static TextAlignments = S;
     static defaultProps = { textAlign: "left" };
     onClickComplete = (e) => {
         (e(), this.props.onComplete());
     };
     onClickSkipAll = (e) => {
         let { onSkipAll: t, uniqueId: n } = this.props;
-        (e(), t(), A.default.track(p.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n }));
+        (e(), t(), p.default.track(m.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n }));
     };
     renderPopoutContent = (e) => {
         let { closePopout: t, position: n } = e,

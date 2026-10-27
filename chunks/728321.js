@@ -5,7 +5,7 @@ var i = n(477900),
     s = n(17928),
     a = n(531685),
     o = n(787541),
-    u = n(159730),
+    u = n(558086),
     d = n(79858);
 class c extends l.Component {
     static defaultProps = { position: "top", offsetX: 0, offsetY: 0, autoInvert: !0 };
