@@ -2097,11 +2097,7 @@ function lj(e) {
                                         let o = e.state.visibleRange.start
                                             .add({ months: a })
                                             .toDate(e.state.timeZone)
-                                            .toLocaleDateString(p, {
-                                                month: "long",
-                                                year: "numeric",
-                                                timeZone: e.state.timeZone,
-                                            });
+                                            .toLocaleDateString(p, { month: "long", year: "numeric" });
                                         return (0, t.jsx)(
                                             e6.E,
                                             { variant: "text-md/medium", color: "text-strong", children: o },

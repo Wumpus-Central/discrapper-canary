@@ -5431,22 +5431,6 @@
     }
   },
   {
-    "name": "2026-10-embedded-app-storage-access",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-10-express-checkout",
     "kind": "user",
     "defaultConfig": {
