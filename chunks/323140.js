@@ -1,6 +1,7 @@
 e.exports = {
     nj: "screen_eb0c63",
     JX: "chatBody_eb0c63",
+    i3: "inOverlay_eb0c63",
     FO: "projectHeaderIconActions_eb0c63",
     As: "publishAction_eb0c63",
     Hv: "publishingSpinner_eb0c63",

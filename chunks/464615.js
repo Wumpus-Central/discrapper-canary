@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(439372),
     r = n(695515),
     a = n(400492),
@@ -8,65 +8,67 @@ var i = n(439372),
     d = n(309010),
     c = n(967198),
     u = n(461213),
-    _ = n(260498),
-    E = n(189714),
-    A = n(1371),
-    h = n(246338),
-    f = n(901173),
-    I = n(652215),
-    p = n(746080);
-class T extends i.A {
-    actions = { CONJURE_TURN_SETTLED: g, CONJURE_TURN_NOTIFICATION: S, LOGOUT: N };
+    _ = n(735769),
+    E = n(260498),
+    A = n(189714),
+    h = n(1371),
+    f = n(246338),
+    I = n(901173),
+    p = n(652215),
+    T = n(746080);
+class m extends i.A {
+    actions = { CONJURE_TURN_SETTLED: S, CONJURE_TURN_NOTIFICATION: N, LOGOUT: C };
 }
-let m = new T();
-function g(e) {
-    let { projectId: t, guildId: n, title: i, body: r, nonce: a } = e;
-    C(t, n, i, r, a);
-}
+let g = new m();
 function S(e) {
+    let { projectId: t, guildId: n, title: i, body: r, nonce: a } = e;
+    O(t, n, i, r, a);
+}
+function N(e) {
     let { projectId: t, body: n, nonce: i } = e,
-        r = _.Ay.getProject(t);
-    null != r && C(t, r.guild_id ?? r.preview_guild_id ?? null, r.name, n, i);
+        r = E.Ay.getProject(t);
+    null != r && O(t, r.guild_id ?? r.preview_guild_id ?? null, r.name, n, i);
 }
-function N() {
-    D.clear();
+function C() {
+    v.clear();
 }
-function C(e, t, n, i, T) {
-    if (null != T) {
-        if (T <= (D.get(e) ?? 0)) return;
-        D.set(e, T);
+function O(e, t, n, i, m) {
+    if (null != m) {
+        if (m <= (v.get(e) ?? 0)) return;
+        v.set(e, m);
     }
     if (
-        A.A.areTurnNotificationsDisabled() ||
-        u.A.getStatus() === I.clD.DND ||
+        h.A.areTurnNotificationsDisabled() ||
+        u.A.getStatus() === p.clD.DND ||
         s.NO.getSetting() ||
         r.A.isCurrentUserInRestrictedHours() ||
-        (0, E.j)(l.A.settings, e)
+        (0, A.j)(l.A.settings, e)
     )
         return;
-    let m = !o.A.isSoundDisabled(R),
-        g = c.A.getGuildId();
+    let g = !o.A.isSoundDisabled(L),
+        S = c.A.getGuildId();
     if (
-        (_.Ay.getGlobalSelectedProjectId() === e ||
-            (null != g && _.Ay.getSelectedProjectId(g) === e && d.Ay.getChannelId() === p.VV.CONJURE)) &&
-        A.A.isWindowFocused()
+        (_.A.getShownProjectId() === e ||
+            E.Ay.getGlobalSelectedProjectId() === e ||
+            (null != S && E.Ay.getSelectedProjectId(S) === e && d.Ay.getChannelId() === T.VV.CONJURE)) &&
+        h.A.isWindowFocused()
     ) {
-        m && (0, a.Ak)(O, y);
+        g && (0, a.Ak)(R, D);
         return;
     }
-    let S = t ?? (0, h.oX)(L);
-    A.A.presentTurnNotification({
+    let N = t ?? (0, f.oX)(y);
+    h.A.presentTurnNotification({
         projectId: e,
-        guildId: S,
+        guildId: N,
         title: n,
-        body: (0, f.Lj)(i),
-        route: null == S ? null : I.BVt.CHANNEL(S, p.VV.CONJURE, e),
-        sound: m ? O : void 0,
-        volume: y,
+        body: (0, I.Lj)(i),
+        route: null == N ? null : p.BVt.CHANNEL(N, T.VV.CONJURE, e),
+        sound: g ? R : void 0,
+        volume: D,
     });
 }
-let O = "bit_message1",
-    R = "message1",
-    L = "ConjureChatStore",
-    y = 0.4,
-    D = new Map();
+let R = "bit_message1",
+    L = "message1",
+    y = "ConjureChatStore",
+    D = 0.4,
+    v = new Map();

@@ -28,6 +28,8 @@ let s = new Set([
     a.BV.GUILD_DISCOVERY,
     a.BV.QUEST_HOME_DEPRECATED,
     a.BV.QUEST_HOME,
+    a.BV.CONJURE,
+    a.BV.CONJURE_PROJECT(":projectId"),
     a.BV.ICYMI,
     a.BV.GLOBAL_DISCOVERY,
     a.BV.GUILD_MEMBER_VERIFICATION(i.p.guildId()),

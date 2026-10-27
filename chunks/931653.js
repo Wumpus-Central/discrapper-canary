@@ -1,4 +1,4 @@
-(i.d(t, { default: () => O }), i(321073));
+(i.d(t, { default: () => G }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(17928),
@@ -14,8 +14,8 @@ var n = i(477900),
     v = i(642785),
     _ = i(371169),
     g = i(525530),
-    C = i(248675),
-    m = i(105292);
+    m = i(248675),
+    C = i(105292);
 let w = " (Remix)",
     k = new Map();
 p.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
@@ -25,15 +25,15 @@ p.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
 var x = i(625180),
     A = i(457827),
     j = i(373677),
-    E = i(754027),
-    R = i(939398),
-    b = i(165610);
-function y(e) {
+    y = i(754027),
+    b = i(939398),
+    R = i(165610);
+function E(e) {
     let t = e.preview_application_id;
     if (null == t) return () => void 0;
     let i = (0, j.PH)(null, (0, j.hR)(e.preview_supported_surfaces)),
-        n = (0, R.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
-        l = (0, E.Op)((0, E.jS)(e), i);
+        n = (0, b.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
+        l = (0, y.Op)((0, y.jS)(e), i);
     return (
         x.A.launchFrame({
             applicationId: t,
@@ -41,33 +41,26 @@ function y(e) {
             launch: null == n ? void 0 : { customId: n },
             showErrorModal: !1,
         }).catch(() => void 0),
-        () => (0, A.r)((0, b.VA)(t, l))
+        () => (0, A.r)((0, R.VA)(t, l))
     );
 }
 var I = i(858899),
-    S = i(976860),
-    M = i(652215),
-    G = i(746080);
-async function N(e, t) {
+    S = i(381991);
+async function M(e, t) {
     let i = await e.open(t);
-    return (
-        i.ok
-            ? (0, S.pX)(M.BVt.CHANNEL(i.guildId, G.VV.CONJURE, i.projectId))
-            : (0, I.P0)({ text: i.message, variant: "critical" }),
-        i
-    );
+    return (i.ok ? (0, S.Ay)(i.projectId) : (0, I.P0)({ text: i.message, variant: "critical" }), i);
 }
-function O(e) {
+function G(e) {
     let { project: t, currentGuildId: i, transitionState: p, onClose: x } = e,
         [A, j] = l.useState(i),
-        [E, R] = l.useState(!1),
-        [b, I] = l.useState(0),
+        [y, b] = l.useState(!1),
+        [R, I] = l.useState(0),
         S = l.useRef(null);
     l.useEffect(() => {
         let e = (function (e, t, i) {
             var n;
             let l,
-                a = m.intl.string(C.default.Cn8H0Y),
+                a = C.intl.string(m.default.Cn8H0Y),
                 r = (0, v.gA)(e.id);
             r.catch(() => void 0);
             let d = null,
@@ -130,10 +123,10 @@ function O(e) {
                         }));
                 },
             };
-        })(t, i, y);
+        })(t, i, E);
         return ((S.current = e), () => e.dismiss());
-    }, [t, i, b]);
-    let M = (0, a.yK)([s.Ay, o.A], () => {
+    }, [t, i, R]);
+    let G = (0, a.yK)([s.Ay, o.A], () => {
             let e = [];
             for (let t of s.Ay.getFlattenedGuildIds()) {
                 let i = o.A.getGuild(t);
@@ -141,38 +134,38 @@ function O(e) {
             }
             return e;
         }),
-        G = l.useMemo(
+        O = l.useMemo(
             () =>
-                M.map((e) => ({
+                G.map((e) => ({
                     id: e.id,
                     label: e.name,
                     value: e.id,
                     leading: (0, n.jsx)(u.Ay, { guild: e, size: u.Ay.Sizes.MINI, active: !0 }),
                 })),
-            [M],
+            [G],
         ),
-        O = l.useCallback(async () => {
-            if (E || null == S.current) return;
-            R(!0);
-            let e = await N(S.current, A);
-            e.ok ? await x() : (e.kept || I((e) => e + 1), R(!1));
-        }, [E, A, x]);
+        P = l.useCallback(async () => {
+            if (y || null == S.current) return;
+            b(!0);
+            let e = await M(S.current, A);
+            e.ok ? await x() : (e.kept || I((e) => e + 1), b(!1));
+        }, [y, A, x]);
     return (0, n.jsx)(r.a, {
         transitionState: p,
         onClose: x,
-        title: m.intl.string(C.default["9wQTdG"]),
+        title: C.intl.string(m.default["9wQTdG"]),
         size: "md",
         actions: [
-            { text: m.intl.string(m.t["ETE/oC"]), variant: "secondary", onClick: x, disabled: E },
-            { text: m.intl.string(C.default.XWgAfc), variant: "primary", onClick: O, loading: E },
+            { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: x, disabled: y },
+            { text: C.intl.string(m.default.XWgAfc), variant: "primary", onClick: P, loading: y },
         ],
         children: (0, n.jsx)(d.Z, {
             selectionMode: "single",
-            label: m.intl.string(C.default["maL0+X"]),
-            options: G,
+            label: C.intl.string(m.default["maL0+X"]),
+            options: O,
             value: A,
             onSelectionChange: j,
-            disabled: E,
+            disabled: y,
             fullWidth: !0,
         }),
     });

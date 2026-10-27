@@ -2,7 +2,7 @@ _.exports = {
     NI: "slot__8306d",
     f_: "entry__8306d",
     h5: "status__8306d",
-    ho: "open__8306d",
+    wH: "selected__8306d",
     oT: "entryContent__8306d",
     Er: "statusName__8306d",
     WK: "mentionBadge__8306d",

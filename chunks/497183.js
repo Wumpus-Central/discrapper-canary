@@ -1,40 +1,41 @@
-a.d(n, { A: () => d });
-var e = a(477900);
-a(582128);
-var r = a(503698),
-    i = a.n(r),
-    l = a(323384),
-    o = a(661531),
-    u = a(627363),
-    s = a(486020),
-    c = a(470613);
-let f = {
-    header: { pixels: 20, className: c.wx },
-    card: { pixels: 40, className: c.Nr },
-    list: { pixels: 44, className: c.p_ },
-    dialog: { pixels: 48, className: c.r3 },
+n.d(l, { A: () => p });
+var e = n(477900);
+n(582128);
+var i = n(503698),
+    a = n.n(i),
+    u = n(323384),
+    r = n(661531),
+    s = n(627363),
+    o = n(486020),
+    d = n(470613);
+let c = {
+    header: { pixels: 20, className: d.wx },
+    sidebar: { pixels: 32, className: d.pz },
+    card: { pixels: 40, className: d.Nr },
+    list: { pixels: 44, className: d.p_ },
+    dialog: { pixels: 48, className: d.r3 },
 };
-function d(t) {
-    let { project: n, size: a, className: r } = t,
-        { pixels: d, className: h } = f[a],
-        { url: m, glyphSize: p } = (function (t, n) {
-            let a = t.preview_application_id ?? t.application_id,
-                { data: e } = (0, u.YY)(a);
+function p(t) {
+    let { project: l, size: n, className: i } = t,
+        { pixels: p, className: h } = c[n],
+        { url: f, glyphSize: g } = (function (t, l) {
+            let n = t.preview_application_id ?? t.application_id,
+                { data: e } = (0, s.YY)(n);
             return {
-                url: e?.icon != null ? s.Ay.getApplicationIconURL({ id: a, icon: e.icon, size: n }) : void 0,
-                ...{ glyphSize: Math.round(0.6 * n), radius: n / 4 },
+                url: e?.icon != null ? o.Ay.getApplicationIconURL({ id: n, icon: e.icon, size: l }) : void 0,
+                ...{ glyphSize: Math.round(0.6 * l), radius: l / 4 },
             };
-        })(n, d);
-    return null == m
+        })(l, p);
+    return null == f
         ? (0, e.jsx)("div", {
-              className: i()(c.Gt, c.qf, h, r),
+              className: a()(d.Gt, d.qf, h, i),
               "aria-hidden": !0,
-              children: (0, e.jsx)(l.k, {
+              children: (0, e.jsx)(u.k, {
                   size: "custom",
-                  width: p,
-                  height: p,
-                  color: o.A.colors.INTERACTIVE_ICON_DEFAULT,
+                  width: g,
+                  height: g,
+                  color: r.A.colors.INTERACTIVE_ICON_DEFAULT,
               }),
           })
-        : (0, e.jsx)("img", { alt: "", src: m, className: i()(c.Gt, c.Sl, h, r) });
+        : (0, e.jsx)("img", { alt: "", src: f, className: a()(d.Gt, d.Sl, h, i) });
 }

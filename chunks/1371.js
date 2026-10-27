@@ -2,10 +2,10 @@ n.d(t, { A: () => X });
 var i = n(264686),
     r = n(625180),
     a = n(91242),
-    s = n(976860),
-    l = n(803224),
-    o = n(531685),
-    d = n(479975);
+    s = n(803224),
+    l = n(531685),
+    o = n(479975),
+    d = n(381991);
 n(884868);
 var c = n(573083);
 function u(e, t) {
@@ -309,7 +309,7 @@ async function K(e, t, i) {
             n.e("471043"),
             n.e("352456"),
             n.e("422037"),
-            n.e("903320"),
+            n.e("825632"),
             n.e("70690"),
             n.e("587618"),
             n.e("424199"),
@@ -379,19 +379,20 @@ async function K(e, t, i) {
             n.e("306306"),
             n.e("617823"),
             n.e("509856"),
-            n.e("165211"),
             n.e("908081"),
-            n.e("80077"),
-            n.e("829260"),
-            n.e("254973"),
             n.e("327198"),
+            n.e("824126"),
+            n.e("165211"),
+            n.e("829260"),
+            n.e("80077"),
             n.e("504098"),
+            n.e("254973"),
             n.e("920593"),
             n.e("664430"),
             n.e("375234"),
             n.e("916519"),
-            n.e("192847"),
             n.e("815341"),
+            n.e("192847"),
             n.e("407327"),
         ]).then(n.bind(n, 399503));
         return await i(e, { captureId: t, build: s, onAccepted: l, resolveUploadUrl: o });
@@ -504,23 +505,23 @@ let z = (function (e) {
 let X = {
     openConjureAppInstallModal: Y,
     isWindowFocused: function () {
-        return o.A.isFocused();
+        return l.A.isFocused();
     },
     areTurnNotificationsDisabled: function () {
-        return l.A.getDesktopType() === j.nRU.NEVER;
+        return s.A.getDesktopType() === j.nRU.NEVER;
     },
     presentTurnNotification: function (e) {
-        let { title: t, body: r, route: a, sound: l, volume: o } = e;
+        let { projectId: t, title: r, body: a, route: s, sound: l, volume: c } = e;
         i.default.showNotification(
             n(608598),
-            t,
             r,
+            a,
             { notif_type: "CONJURE_ASSISTANT_FINISHED" },
             {
                 sound: l,
-                volume: o,
-                fallbackDeepLink: null == a ? void 0 : (0, d.Id)(a),
-                onClick: null == a ? void 0 : () => (0, s.pX)(a),
+                volume: c,
+                fallbackDeepLink: null == s ? void 0 : (0, o.Id)(s),
+                onClick: () => (0, d.Ay)(t),
                 isUserAvatar: !1,
             },
         );

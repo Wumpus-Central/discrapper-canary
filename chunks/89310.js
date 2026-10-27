@@ -1,23 +1,22 @@
-n.d(t, { J: () => d, p: () => o });
-var l = n(582128),
-    a = n(941985);
+n.d(t, { f: () => o, p: () => d });
+var i = n(582128);
 let r = 0,
-    i = 0,
+    a = 0,
     s = new Set();
-function u(e) {
+function l(e) {
     return (s.add(e), () => s.delete(e));
 }
-function d(e, t) {
-    let { forMe: n } = t;
-    ((r += 1), s.forEach((e) => e()), n ? (0, a.YN)(e) : (0, a.g7)(e));
+function o() {
+    ((r += 1), s.forEach((e) => e()));
 }
-function o(e) {
-    let t = l.useSyncExternalStore(u, () => r);
-    l.useEffect(() => {
-        if (t <= i) return;
-        let n = window.setTimeout(() => {
-            ((i = t), e.current?.focus());
+function d(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = i.useSyncExternalStore(l, () => r);
+    i.useEffect(() => {
+        if (!t || n <= a) return;
+        let i = window.setTimeout(() => {
+            ((a = n), e.current?.focus());
         }, 100);
-        return () => window.clearTimeout(n);
-    }, [t, e]);
+        return () => window.clearTimeout(i);
+    }, [n, e, t]);
 }

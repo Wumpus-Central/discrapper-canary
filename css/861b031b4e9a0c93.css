@@ -1,0 +1,107 @@
+.sidebar_ba1341 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding-block-start: var(--space-8);
+    width: 100%
+}
+
+.header_ba1341 {
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding-block: var(--space-8) var(--space-12);
+    padding-inline: var(--space-16)
+}
+
+.header_ba1341,
+.title_ba1341 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.title_ba1341 {
+    min-width: 0
+}
+
+.alphaTag_ba1341 {
+    display: flex
+}
+
+.wordmark_ba1341 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: none;
+    white-space: nowrap
+}
+
+.headerActions_ba1341 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: var(--space-8)
+}
+
+.scroller_ba1341 {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding-block: 0 var(--space-16);
+    padding-inline: var(--space-8) 0
+}
+
+.search_ba1341 {
+    padding: var(--space-4) 0 var(--space-8)
+}
+
+.navRow_ba1341 {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--text-subtle);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-12);
+    padding: var(--space-8);
+    text-align: start;
+    width: 100%
+}
+
+.navRow_ba1341:hover {
+    background: var(--interactive-background-hover)
+}
+
+.navRow_ba1341:active,
+.navRowSelected_ba1341 {
+    background: var(--interactive-background-selected);
+    color: var(--text-strong)
+}
+
+.navRowSelected_ba1341 .navIcon_ba1341 {
+    color: var(--icon-strong)
+}
+
+.homeRow_ba1341 {
+    margin-top: var(--space-4)
+}
+
+.navIcon_ba1341 {
+    align-items: center;
+    color: var(--icon-muted);
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    width: var(--space-32)
+}
+
+.section_ba1341 {
+    margin-top: var(--space-20)
+}
+
+.sectionTitle_ba1341 {
+    display: block;
+    padding: 0 var(--space-8) var(--space-4)
+}
+
+/*# sourceMappingURL=861b031b4e9a0c93.css.map*/

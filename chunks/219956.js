@@ -1,35 +1,56 @@
-n.d(t, { A2: () => x, ZA: () => g, eN: () => h, s9: () => m, yy: () => f });
-var l = n(17928),
-    a = n(617617),
-    r = n(573163),
-    i = n(245179),
-    s = n(404373),
-    u = n(260498),
-    d = n(189714),
-    o = n(722701);
-function c(e) {
-    return "nothing_built" === e || "not_live" === e || "live_outdated" === e;
+n.d(e, { A2: () => A, B$: () => f, eN: () => h, yy: () => c });
+var i = n(17928),
+    r = n(617617),
+    u = n(573163),
+    l = n(245179),
+    a = n(404373),
+    d = n(260498),
+    s = n(189714),
+    p = n(722701),
+    g = n(811587);
+function o(t) {
+    return "nothing_built" === t || "not_live" === t || "live_outdated" === t;
 }
-function m(e, t) {
-    return "in_progress" !== e && "deleting" !== e && c(t);
+function c(t) {
+    if (null == t.updated_at) return null;
+    let e = Date.parse(t.updated_at);
+    return Number.isNaN(e) ? null : e;
 }
-function f(e) {
-    if (null == e.updated_at) return null;
-    let t = Date.parse(e.updated_at);
-    return Number.isNaN(t) ? null : t;
-}
-let h = [u.Ay, i.A, r.Ay, a.A, o.A];
-function x(e) {
-    return (function (e) {
-        let { deleting: t = !1, thinking: n, unread: l, publishState: a } = e;
-        return t ? "deleting" : n ? "in_progress" : l ? "unread" : c(a) ? "draft" : "default";
+let h = [d.Ay, l.A, u.Ay, r.A, p.A];
+function A(t) {
+    return (function (t) {
+        let { deleting: e = !1, thinking: n, unread: i, publishState: r } = t;
+        return e ? "deleting" : n ? "in_progress" : i ? "unread" : o(r) ? "draft" : "default";
     })({
-        deleting: u.Ay.isProjectDeleting(e),
-        thinking: i.A.isThinking(e),
-        unread: (0, s.tz)(e) && !(0, d.j)(a.A.settings, e),
-        publishState: o.A.getPublishStatus(e)?.publishState ?? null,
+        deleting: d.Ay.isProjectDeleting(t),
+        thinking: l.A.isThinking(t),
+        unread: (0, a.tz)(t) && !(0, s.j)(r.A.settings, t),
+        publishState: p.A.getPublishStatus(t)?.publishState ?? null,
     });
 }
-function g(e) {
-    return (0, l.bG)(h, () => x(e), [e]);
+function f(t) {
+    let e = t.id,
+        n = (t.supported_surfaces?.length ?? 0) > 0;
+    return (0, i.cf)(
+        h,
+        () => ({
+            status: (function (t) {
+                let { thinking: e, publishState: n, everPublished: i } = t;
+                return e
+                    ? "in_progress"
+                    : null != n && o(n)
+                      ? "draft"
+                      : (null != n && (0, g.lE)(n)) || i
+                        ? "published"
+                        : "draft";
+            })({
+                thinking: l.A.isThinking(e),
+                publishState: p.A.getPublishStatus(e)?.publishState ?? null,
+                everPublished: n,
+            }),
+            unread: (0, a.tz)(e) && !(0, s.j)(r.A.settings, e),
+            deleting: d.Ay.isProjectDeleting(e),
+        }),
+        [e, n],
+    );
 }

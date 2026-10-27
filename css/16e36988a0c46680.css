@@ -1,0 +1,95 @@
+.page__1b1de {
+    background: var(--background-gradient-low, var(--background-base-lower));
+    border-top: 1px solid var(--app-frame-border);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    width: 100%
+}
+
+.theme-dark .main__1b1de {
+    --custom-conjure-home-sweep-start: #2a2d53;
+    --custom-conjure-home-sweep-end: #53274b;
+    background: radial-gradient(ellipse 100% 104% at 50% 100%, var(--background-base-lowest) 39%, transparent 100%), linear-gradient(to right, var(--custom-conjure-home-sweep-start), var(--custom-conjure-home-sweep-end))
+}
+
+.layout__1b1de,
+.main__1b1de {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    min-width: 0
+}
+
+.main__1b1de {
+    flex-direction: column
+}
+
+.scroller__1b1de {
+    flex: 1;
+    min-height: 0
+}
+
+.content__1b1de {
+    --custom-conjure-home-carousel-space-above: var(--space-80);
+    --custom-conjure-home-carousel-space-below: var(--space-80);
+    --custom-conjure-home-content-max-width: 976px;
+    --custom-conjure-home-content-gutter: var(--space-48);
+    padding-block-end: var(--space-64)
+}
+
+.content__1b1de,
+.intro__1b1de {
+    display: flex;
+    flex-direction: column
+}
+
+.intro__1b1de {
+    gap: var(--space-40);
+    padding: var(--space-48) var(--custom-conjure-home-content-gutter) 0
+}
+
+.introOnConjurePage__1b1de {
+    padding-block-start: var(--space-80)
+}
+
+.hero__1b1de {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin: 0 auto;
+    max-width: var(--custom-conjure-home-content-max-width);
+    width: 100%
+}
+
+.subtitle__1b1de {
+    max-width: 640px;
+    opacity: .8
+}
+
+.title__1b1de {
+    text-transform: uppercase;
+    white-space: pre-line
+}
+
+.headerIconButton__1b1de {
+    border-radius: var(--radius-sm);
+    transition: background-color .2s ease
+}
+
+.headerIconButton__1b1de:hover {
+    background: var(--interactive-background-hover)
+}
+
+.projectLoading__1b1de {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center
+}
+
+/*# sourceMappingURL=16e36988a0c46680.css.map*/

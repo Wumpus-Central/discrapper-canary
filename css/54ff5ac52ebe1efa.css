@@ -1,0 +1,147 @@
+.carousel__3ebc0,
+.carouselManual__3ebc0 {
+    --custom-conjure-home-carousel-item-width: 288px;
+    --custom-conjure-home-carousel-gap: var(--space-48);
+    --custom-conjure-home-carousel-edge-fade: var(--space-80);
+    --custom-conjure-home-carousel-room-above: var(--space-48);
+    --custom-conjure-home-carousel-room-below: var(--space-160);
+    --custom-conjure-home-carousel-layout-below: var(--custom-conjure-home-carousel-space-below, var(--space-80));
+    box-sizing: border-box;
+    margin-block: calc(var(--custom-conjure-home-carousel-room-above)*-1) calc(var(--custom-conjure-home-carousel-layout-below) - var(--custom-conjure-home-carousel-room-below));
+    margin-inline: auto;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--custom-conjure-home-carousel-edge-fade), #000 calc(100% - var(--custom-conjure-home-carousel-edge-fade)), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 var(--custom-conjure-home-carousel-edge-fade), #000 calc(100% - var(--custom-conjure-home-carousel-edge-fade)), transparent);
+    max-width: 1600px;
+    overflow: hidden;
+    padding-block: calc(var(--custom-conjure-home-carousel-space-above, var(--space-32)) + var(--custom-conjure-home-carousel-room-above)) var(--custom-conjure-home-carousel-room-below);
+    position: relative;
+    scrollbar-width: none;
+    width: 100%
+}
+
+.carousel__3ebc0 {
+    pointer-events: none
+}
+
+.carousel__3ebc0 .item__3ebc0 {
+    pointer-events: auto
+}
+
+.carouselManual__3ebc0 {
+    margin-block-start: 0;
+    overflow-x: auto;
+    padding-block-start: var(--custom-conjure-home-carousel-space-above, var(--space-32));
+    scrollbar-width: thin
+}
+
+.track__3ebc0 {
+    display: flex;
+    gap: var(--custom-conjure-home-carousel-gap);
+    list-style: none;
+    margin: 0;
+    padding: 0 var(--custom-conjure-home-carousel-gap);
+    width: -moz-max-content;
+    width: max-content
+}
+
+.item__3ebc0 {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: var(--space-16);
+    transform: translateX(var(--custom-conjure-home-carousel-shift, 0)) translateY(var(--custom-conjure-home-carousel-drop, 0)) rotate(var(--custom-conjure-home-carousel-angle, 0deg));
+    width: var(--custom-conjure-home-carousel-item-width)
+}
+
+.promptRow__3ebc0 {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.avatar__3ebc0 {
+    border-radius: 50%;
+    flex: 0 0 auto;
+    height: var(--space-32);
+    width: var(--space-32)
+}
+
+.bubble__3ebc0 {
+    display: -webkit-box;
+    flex: 1;
+    min-width: 0;
+    padding: var(--space-8) var(--space-12);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.bubble__3ebc0,
+.card__3ebc0 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.thumbnail__3ebc0 {
+    aspect-ratio: 16/9;
+    background: var(--background-mod-strong);
+    position: relative
+}
+
+.thumbnailImage__3ebc0 {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.actions__3ebc0 {
+    align-items: center;
+    background: var(--background-scrim);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.full-motion .actions__3ebc0 {
+    transition: opacity .15s ease-out
+}
+
+.item__3ebc0:focus-within .actions__3ebc0,
+.item__3ebc0:hover .actions__3ebc0 {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.footer__3ebc0 {
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.categoryIcon__3ebc0,
+.footer__3ebc0 {
+    align-items: center;
+    display: flex
+}
+
+.categoryIcon__3ebc0 {
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    flex: 0 0 auto;
+    height: var(--space-40);
+    justify-content: center;
+    width: var(--space-40)
+}
+
+.footerText__3ebc0 {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+/*# sourceMappingURL=54ff5ac52ebe1efa.css.map*/

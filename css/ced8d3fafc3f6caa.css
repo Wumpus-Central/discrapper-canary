@@ -1,0 +1,48 @@
+.badge_b59e43 {
+    align-items: center;
+    border-radius: 50%;
+    bottom: calc(var(--space-4)*-1);
+    display: flex;
+    height: calc(var(--space-16) + 2px);
+    inset-inline-end: calc(var(--space-6)*-1);
+    justify-content: center;
+    position: absolute;
+    width: calc(var(--space-16) + 2px)
+}
+
+.iconCutout_b59e43 {
+    -webkit-mask-image: radial-gradient(circle at calc(100% - 3px) calc(100% - 5px), transparent 9px, #000 9.5px);
+    mask-image: radial-gradient(circle at calc(100% - 3px) calc(100% - 5px), transparent 9px, #000 9.5px)
+}
+
+.iconCutout_b59e43:dir(rtl) {
+    -webkit-mask-image: radial-gradient(circle at 3px calc(100% - 5px), transparent 9px, #000 9.5px);
+    mask-image: radial-gradient(circle at 3px calc(100% - 5px), transparent 9px, #000 9.5px)
+}
+
+.draft_b59e43 {
+    border: 2px dotted var(--status-warning);
+    box-sizing: border-box
+}
+
+.draft_b59e43,
+.published_b59e43 {
+    border-radius: 50%;
+    height: var(--space-12);
+    width: var(--space-12)
+}
+
+.published_b59e43 {
+    background: var(--status-positive)
+}
+
+.spinner_b59e43 {
+    height: var(--space-12);
+    width: var(--space-12)
+}
+
+.spinnerPath_b59e43 {
+    stroke: var(--icon-strong)
+}
+
+/*# sourceMappingURL=ced8d3fafc3f6caa.css.map*/

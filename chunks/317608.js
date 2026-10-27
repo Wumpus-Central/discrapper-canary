@@ -2,7 +2,7 @@ a.d(t, { A: () => i });
 var l = a(477900),
     s = a(582128),
     n = a(333007),
-    r = a(271982);
+    r = a(667811);
 function i(e) {
     let { frameId: t, level: a, className: i, overlay: d } = e,
         o = s.useRef(null);

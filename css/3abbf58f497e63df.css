@@ -1,0 +1,31 @@
+.textShimmer__9d7ed {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, var(--text-subtle) 0, var(--text-subtle) 40%, var(--text-default) 50%, var(--text-subtle) 60%, var(--text-subtle) 100%);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 400% 100%;
+    color: transparent
+}
+
+.full-motion .textShimmer__9d7ed {
+    animation: conjure-text-shimmer__9d7ed 2s linear infinite
+}
+
+@keyframes conjure-text-shimmer__9d7ed {
+    0% {
+        background-position: 100% 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+.chatMessageSurface__9d7ed {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md)
+}
+
+/*# sourceMappingURL=3abbf58f497e63df.css.map*/

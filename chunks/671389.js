@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => L });
+n.d(t, { Ay: () => y });
 var i = n(17928),
     r = n(636537),
     a = n(73153),
@@ -6,79 +6,76 @@ var i = n(17928),
     l = n(309010),
     o = n(967198),
     d = n(97005),
-    c = n(260498),
-    u = n(189117),
-    _ = n(652215),
-    E = n(746080);
-let A = null,
-    h = null,
+    c = n(735769),
+    u = n(260498),
+    _ = n(189117),
+    E = n(652215),
+    A = n(746080);
+let h = null,
     f = null,
     I = null,
-    p = !1;
-function T() {
-    null != f && (clearTimeout(f), (f = null));
-}
-function m(e) {
-    let t = u.ZR.filter((t) => t !== e);
-    return t[Math.floor(Math.random() * t.length)];
-}
-function g() {
+    p = null,
+    T = !1;
+function m() {
     null != I && (clearTimeout(I), (I = null));
 }
-function S() {
-    return (T(), g(), (A = null), null != h && ((h = null), !0));
+function g(e) {
+    let t = _.ZR.filter((t) => t !== e);
+    return t[Math.floor(Math.random() * t.length)];
 }
-function N(e) {
-    let t,
-        n,
-        { withGracePeriod: i } = e;
-    if (s.A.isIdle() || (null != A && null == c.Ay.getProject(A))) return S();
-    let r =
-        ((t = o.A.getGuildId()),
-        null ==
-            (n =
-                c.Ay.getGlobalSelectedProjectId() ??
-                (null != t && l.Ay.getChannelId() === E.VV.CONJURE ? c.Ay.getSelectedProjectId(t) : null)) ||
-        null == c.Ay.getProject(n)
-            ? null
-            : n);
-    return null == r
-        ? null != h && i
-            ? (null == f &&
-                  (f = setTimeout(() => {
-                      ((f = null), S() && R.emitChange());
+function S() {
+    null != p && (clearTimeout(p), (p = null));
+}
+function N() {
+    return (m(), S(), (h = null), null != f && ((f = null), !0));
+}
+function C(e) {
+    let { withGracePeriod: t } = e;
+    if (s.A.isIdle() || (null != h && null == u.Ay.getProject(h))) return N();
+    let n = (function () {
+        let e = c.A.getShownProjectId();
+        if (null != e) return null != u.Ay.getProject(e) ? e : null;
+        let t = o.A.getGuildId(),
+            n =
+                u.Ay.getGlobalSelectedProjectId() ??
+                (null != t && l.Ay.getChannelId() === A.VV.CONJURE ? u.Ay.getSelectedProjectId(t) : null);
+        return null == n || null == u.Ay.getProject(n) ? null : n;
+    })();
+    return null == n
+        ? null != f && t
+            ? (null == I &&
+                  (I = setTimeout(() => {
+                      ((I = null), N() && L.emitChange());
                   }, 3e4)),
               !1)
-            : S()
-        : (T(),
-          (r !== A || null == h) &&
-              ((A = r),
-              (h = { type: _.$pd.PLAYING, name: u.Vb, details: m(), timestamps: { start: Date.now() } }),
+            : N()
+        : (m(),
+          (n !== h || null == f) &&
+              ((h = n),
+              (f = { type: E.$pd.PLAYING, name: _.Vb, details: g(), timestamps: { start: Date.now() } }),
               !(function e() {
-                  (g(),
-                      (I = setTimeout(() => {
-                          ((I = null), null != h && ((h = { ...h, details: m(h.details) }), e(), R.emitChange()));
+                  (S(),
+                      (p = setTimeout(() => {
+                          ((p = null), null != f && ((f = { ...f, details: g(f.details) }), e(), L.emitChange()));
                       }, 3e5)));
               })(),
               !0));
 }
-async function C() {
-    if (!p && ((p = !0), (0, d.zN)("conjure_resume")))
+async function O() {
+    if (!T && ((T = !0), (0, d.zN)("conjure_resume")))
         try {
             let [{ body: e }, { ensureConnection: t }] = await Promise.all([
-                r.Bo.get({ url: _.Rsh.CONJURE_PROJECTS, rejectWithError: !0 }),
+                r.Bo.get({ url: E.Rsh.CONJURE_PROJECTS, rejectWithError: !0 }),
                 Promise.all([
                     n.e("661008"),
                     n.e("916758"),
                     n.e("356664"),
-                    n.e("929792"),
-                    n.e("295175"),
+                    n.e("473380"),
                     n.e("741111"),
                     n.e("722440"),
-                    n.e("763096"),
-                    n.e("967874"),
-                    n.e("337341"),
                     n.e("333730"),
+                    n.e("763096"),
+                    n.e("627487"),
                     n.e("736621"),
                     n.e("992166"),
                     n.e("534485"),
@@ -89,21 +86,21 @@ async function C() {
                 .slice(0, 5)
                 .forEach((e) => t(e.id));
         } catch {
-            p = !1;
+            T = !1;
         }
 }
-class O extends i.Ay.Store {
+class R extends i.Ay.Store {
     static displayName = "ConjureRichPresenceStore";
     initialize() {
-        this.syncWith([s.A, l.Ay, o.A, c.Ay], () => N({ withGracePeriod: !0 }));
+        this.syncWith([s.A, l.Ay, o.A, u.Ay, c.A], () => C({ withGracePeriod: !0 }));
     }
     getActivity() {
-        return h;
+        return f;
     }
 }
-let R = new O(a.h, {
-        CONNECTION_OPEN: () => N({ withGracePeriod: !1 }),
-        POST_CONNECTION_OPEN: () => (C(), !1),
-        LOGOUT: () => ((p = !1), S()),
+let L = new R(a.h, {
+        CONNECTION_OPEN: () => C({ withGracePeriod: !1 }),
+        POST_CONNECTION_OPEN: () => (O(), !1),
+        LOGOUT: () => ((T = !1), N()),
     }),
-    L = R;
+    y = L;
