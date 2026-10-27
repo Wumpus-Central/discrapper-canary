@@ -1548,7 +1548,7 @@ function t8(e) {
         o = (0, P.cf)([eE.Ay], () => (0, tk.A)(eE.Ay)),
         d = (0, P.bG)([H.A], () => H.A.getCurrentUserActiveStream()),
         u = (0, P.bG)([tQ.A], () => tQ.A.getTargetPID()),
-        c = (0, tJ.y)({ pid: u, allowOneClickGoLive: !0, analyticsLocation: ej.ThZ.UNLOCKED_OVERLAY });
+        c = (0, tJ.y)({ pid: u, allowOneClickGoLive: !0 });
     function h() {
         (c(), (0, $.YX)(ej.uss.QUICK_ACTIONS, { type: $.Z5.GO_LIVE, value: $.IP.ENABLED, userId: Z.default.getId() }));
     }

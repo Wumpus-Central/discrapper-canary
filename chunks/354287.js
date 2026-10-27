@@ -20,7 +20,16 @@ var i,
         (i.CONNECT_ACCOUNT = "connect_account"),
         i);
 function c(e) {
-    let { applicationId: t, linkType: n, area: i, referrerId: r, customId: a, isDeadEnd: l, messageId: d } = e;
+    let {
+        applicationId: t,
+        linkType: n,
+        area: i,
+        referrerId: r,
+        customId: a,
+        isDeadEnd: l,
+        messageId: d,
+        analyticsLocations: c,
+    } = e;
     s.default.track(o.HAw.APP_EMBED_CLICKED, {
         application_id: t,
         link_type: n,
@@ -29,6 +38,7 @@ function c(e) {
         custom_id: a,
         is_dead_end: l,
         message_id: d,
+        location_stack: c,
     });
 }
 function u(e) {

@@ -68,6 +68,7 @@ function _(e) {
                             customId: S.activityCustomId,
                             isDeadEnd: S.isDeadEnd,
                             messageId: S.messageId,
+                            analyticsLocations: S.analyticsLocations,
                         }));
                 };
         }, [b, S]),
@@ -83,6 +84,7 @@ function _(e) {
                             customId: S.activityCustomId,
                             isDeadEnd: S.isDeadEnd,
                             messageId: S.messageId,
+                            analyticsLocations: S.analyticsLocations,
                         }));
                 };
         }, [k, S]);
@@ -188,6 +190,7 @@ function _(e) {
                                                                       customId: S.activityCustomId,
                                                                       isDeadEnd: c,
                                                                       messageId: S.messageId,
+                                                                      analyticsLocations: S.analyticsLocations,
                                                                   }));
                                                           },
                                                       }),
@@ -216,6 +219,7 @@ function _(e) {
                                                                           customId: S.activityCustomId,
                                                                           isDeadEnd: c,
                                                                           messageId: S.messageId,
+                                                                          analyticsLocations: S.analyticsLocations,
                                                                       }));
                                                               },
                                                               fullWidth: !0,

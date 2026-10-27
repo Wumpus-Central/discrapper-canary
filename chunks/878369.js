@@ -14,5 +14,6 @@ function a(e) {
         messageId: e?.messageId,
         isDeadEnd: e?.isDeadEnd ?? !1,
         appEmbedState: e?.appEmbedState,
+        analyticsLocations: e?.analyticsLocations,
     };
 }

@@ -1,4 +1,4 @@
-i.d(e, { H: () => N, y: () => _ });
+i.d(e, { H: () => N, y: () => S });
 var n = i(477900),
     l = i(582128),
     a = i(17928),
@@ -16,40 +16,32 @@ var n = i(477900),
     g = i(309010),
     I = i(287809),
     E = i(753070),
-    S = i(105292);
-function _(t) {
-    let {
-            pid: e,
-            analyticsLocation: i,
-            allowOneClickGoLive: n = !1,
-            onBeforeShowModal: r,
-            onOneClickGoLive: s,
-            appContext: o,
-        } = t,
-        d = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
-        A = (0, a.bG)([f.A], () => f.A.getChannel(d), [d]),
-        E = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
-        S = (0, a.bG)([y.Ay], () => (0, c.A)(y.Ay)),
-        _ = (0, a.bG)([p.A, m.A], () => null != A && (0, u.vz)(A, p.A, m.A));
+    _ = i(105292);
+function S(t) {
+    let { pid: e, allowOneClickGoLive: i = !1, onBeforeShowModal: n, onOneClickGoLive: r, appContext: s } = t,
+        o = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
+        d = (0, a.bG)([f.A], () => f.A.getChannel(o), [o]),
+        A = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
+        E = (0, a.bG)([y.Ay], () => (0, c.A)(y.Ay)),
+        _ = (0, a.bG)([p.A, m.A], () => null != d && (0, u.vz)(d, p.A, m.A));
     return l.useCallback(async () => {
         await C({
             pid: e,
-            voiceChannelId: d,
-            user: E,
-            canGoLive: S,
+            voiceChannelId: o,
+            user: A,
+            canGoLive: E,
             canStream: _,
-            analyticsLocation: i,
-            allowOneClickGoLive: n,
-            onBeforeShowModal: r,
-            onOneClickGoLive: s,
-            appContext: o,
+            allowOneClickGoLive: i,
+            onBeforeShowModal: n,
+            onOneClickGoLive: r,
+            appContext: s,
         });
-    }, [e, d, E, S, _, i, n, r, s, o]);
+    }, [e, o, A, E, _, i, n, r, s]);
 }
 async function N(t) {
     let {
             pid: e,
-            analyticsLocation: i,
+            analyticsLocations: i,
             allowOneClickGoLive: n = !1,
             onBeforeShowModal: l,
             onModalStreamStart: a,
@@ -60,15 +52,15 @@ async function N(t) {
         d = g.Ay.getVoiceChannelId(),
         A = f.A.getChannel(d),
         E = I.default.getCurrentUser(),
-        S = null != A && (0, u.vz)(A, p.A, m.A),
-        _ = (0, c.A)(y.Ay);
+        _ = null != A && (0, u.vz)(A, p.A, m.A),
+        S = (0, c.A)(y.Ay);
     await C({
         pid: e,
         voiceChannelId: d,
         user: E,
-        canGoLive: _,
-        canStream: S,
-        analyticsLocation: i,
+        canGoLive: S,
+        canStream: _,
+        analyticsLocations: i,
         allowOneClickGoLive: n,
         onBeforeShowModal: l,
         onModalStreamStart: a,
@@ -84,26 +76,27 @@ async function C(t) {
         user: a,
         canGoLive: u,
         canStream: c,
-        allowOneClickGoLive: f,
-        onBeforeShowModal: p,
-        onModalStreamStart: y,
-        onOneClickGoLive: m,
-        appContext: g,
-        selectSource: I = !1,
+        analyticsLocations: f,
+        allowOneClickGoLive: p,
+        onBeforeShowModal: y,
+        onModalStreamStart: m,
+        onOneClickGoLive: g,
+        appContext: I,
+        selectSource: S = !1,
     } = t;
     if (u && c) {
-        if (f && null !== l) {
+        if (p && null !== l) {
             let t = A.A.getState().preset;
             if (t === E.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, o.eO)({ location: "overlay _goLive" });
                 t = e ? E.jQ.PRESET_AUTO : E.jQ.PRESET_VIDEO;
             }
-            let [i] = await (0, d.A)(e, { preset: t });
-            if (i) return void m?.();
+            let [i] = await (0, d.A)(e, { preset: t, analyticsLocations: f });
+            if (i) return void g?.();
         }
         if (null == a)
-            return void (0, r.P0)({ text: S.intl.string(S.t.OKnWyb), variant: "critical", surface: "overlay" });
-        (p?.(),
+            return void (0, r.P0)({ text: _.intl.string(_.t.OKnWyb), variant: "critical", surface: "overlay" });
+        (y?.(),
             (0, s.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
@@ -126,9 +119,10 @@ async function C(t) {
                         i.e("191782"),
                         i.e("190088"),
                     ]).then(i.bind(i, 266536));
-                    return (i) => (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: I, onStreamStart: y });
+                    return (i) =>
+                        (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: S, onStreamStart: m, analyticsLocations: f });
                 },
-                { contextKey: null != g ? (0, s.modalContextFromAppContext)(g) : void 0 },
+                { contextKey: null != I ? (0, s.modalContextFromAppContext)(I) : void 0 },
             ));
     }
 }

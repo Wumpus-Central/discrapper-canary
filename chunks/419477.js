@@ -96,6 +96,7 @@ function N(e) {
                 messageId: l.id,
                 onView: y,
                 isDeadEnd: P,
+                analyticsLocations: O,
             },
         })
     );
