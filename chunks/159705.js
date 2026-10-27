@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652471";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652484";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652471, Version Hash: 18d9100b9c52a9d30ca357277fab144785902294`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652484, Version Hash: 616388942938cfcd93e535b53c16e65c0ead0b0c`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25507,7 +25507,7 @@ let yr = "isHideDevBanner",
                     className: tf()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652471" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652484" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -53302,8 +53302,8 @@ let W5 = (0, tZ.Fe)({
             n.e("168248"),
             n.e("490743"),
             n.e("245420"),
-            n.e("32925"),
-            n.e("880286"),
+            n.e("216870"),
+            n.e("89100"),
             n.e("459086"),
             n.e("720210"),
             n.e("601152"),
@@ -53337,7 +53337,7 @@ let W5 = (0, tZ.Fe)({
             n.e("535308"),
             n.e("711590"),
             n.e("340341"),
-            n.e("450998"),
+            n.e("174777"),
             n.e("40271"),
             n.e("324732"),
             n.e("634225"),
@@ -54255,6 +54255,7 @@ let W5 = (0, tZ.Fe)({
             n.e("723244"),
             n.e("122990"),
             n.e("276177"),
+            n.e("653849"),
             n.e("856753"),
             n.e("154630"),
             n.e("860177"),
@@ -54276,7 +54277,6 @@ let W5 = (0, tZ.Fe)({
             n.e("484189"),
             n.e("703166"),
             n.e("753589"),
-            n.e("653849"),
             n.e("628752"),
             n.e("331203"),
             n.e("883952"),
@@ -55964,7 +55964,7 @@ let Kc = (0, rl.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("324732"),
-                n.e("880286"),
+                n.e("89100"),
                 n.e("144909"),
                 n.e("25300"),
                 n.e("352456"),
