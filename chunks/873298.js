@@ -2353,7 +2353,6 @@ class eW extends b.G {
                 T: () => ["discord_protos.discord_users.v1.AdTopic", z, "AD_TOPIC_"],
             },
             { no: 35, name: "swp_message_promotion_opted_out", kind: "message", T: () => P._t },
-            { no: 36, name: "personal_access_opted_out", kind: "message", T: () => P._t },
         ]);
     }
     create(e) {
@@ -2530,9 +2529,6 @@ class eW extends b.G {
                         r.swpMessagePromotionOptedOut,
                     );
                     break;
-                case 36:
-                    r.personalAccessOptedOut = P._t.internalBinaryRead(e, e.uint32(), n, r.personalAccessOptedOut);
-                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2640,10 +2636,8 @@ class eW extends b.G {
             for (let n = 0; n < e.adTopicOptOuts.length; n++) t.int32(e.adTopicOptOuts[n]);
             t.join();
         }
-        (e.swpMessagePromotionOptedOut &&
-            P._t.internalBinaryWrite(e.swpMessagePromotionOptedOut, t.tag(35, y.O0.LengthDelimited).fork(), n).join(),
-            e.personalAccessOptedOut &&
-                P._t.internalBinaryWrite(e.personalAccessOptedOut, t.tag(36, y.O0.LengthDelimited).fork(), n).join());
+        e.swpMessagePromotionOptedOut &&
+            P._t.internalBinaryWrite(e.swpMessagePromotionOptedOut, t.tag(35, y.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
