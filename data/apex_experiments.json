@@ -5874,6 +5874,32 @@
     }
   },
   {
+    "name": "2026-10-sfp-bloons-orb-split-tender",
+    "kind": "user",
+    "defaultConfig": {
+      "discountPercent": null,
+      "offerSkuId": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "discountPercent": 10,
+        "offerSkuId": "1560340689907089505"
+      },
+      "2": {
+        "discountPercent": 15,
+        "offerSkuId": "1560711732412940429"
+      },
+      "3": {
+        "discountPercent": 20,
+        "offerSkuId": "1560711810007699506"
+      }
+    }
+  },
+  {
     "name": "2026-10-shop-marketing-fatigue",
     "kind": "user",
     "defaultConfig": {

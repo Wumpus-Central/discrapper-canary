@@ -35,7 +35,7 @@ var C = n(319437),
     U = n(478996),
     W = n(97352),
     F = n(45938),
-    H = n(927578),
+    H = n(24482),
     Y = n(951305),
     j = n(566980),
     G = n(800471),
@@ -192,11 +192,11 @@ function ee(e) {
             if (null != e1) return e1.options;
         }, [e1]),
         e8 = (0, f.qv)(),
-        e6 = "sm";
-    ef ? (e6 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
-    let e9 = null != e5 ? e5.modalSizeGetter : void 0,
-        e4 = (0, b.O)(),
-        e3 = null != X && !eB && (0, w.U9)(e4, X),
+        e4 = "sm";
+    ef ? (e4 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e4 = "md");
+    let e6 = null != e5 ? e5.modalSizeGetter : void 0,
+        e9 = (0, b.O)(),
+        e3 = null != X && !eB && (0, w.U9)(e9, X),
         [e7, te] = l.useState({
             load_id: ew.loadId,
             discovery_session_id: ew.discoverySessionId,
@@ -252,7 +252,7 @@ function ee(e) {
                 continue_session_initial_step: ev,
                 custom_checkout_flow: ej,
                 has_saved_payment_source: eM,
-                discount_id: null != e4 ? e4.discountId : ta,
+                discount_id: null != e9 ? e9.discountId : ta,
             });
         }),
         l.useEffect(() => {
@@ -339,9 +339,9 @@ function ee(e) {
                 isGift: eB,
                 giftRecipient: eQ,
                 returnRef: eI,
-                manaModalSize: e6,
+                manaModalSize: e4,
                 modalSizeOverride: eT,
-                modalSizeGetter: e9,
+                modalSizeGetter: e6,
                 handleClose: tr,
                 children: (0, i.jsx)(K.Ay, {
                     disableDefaultSlideTransformStyling: em,

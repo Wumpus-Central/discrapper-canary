@@ -406,7 +406,7 @@ var er = a(45837),
     ei = a(967198),
     ec = a(174459),
     eo = a(473145),
-    eu = a(927578);
+    eu = a(24482);
 function ed(e, t) {
     let { isGIF: a } = t;
     if (e === ee.HL.GUILD_BANNER) return a ? q.GuildFeatures.ANIMATED_BANNER : q.GuildFeatures.BANNER;

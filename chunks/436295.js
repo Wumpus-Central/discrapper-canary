@@ -334,7 +334,7 @@ var eA =
     eL = n(763754),
     eP = n(20851),
     eS = n(986687),
-    eD = n(927578),
+    eD = n(24482),
     eb = n(780898),
     ew = n(158008);
 function eB(e) {
@@ -719,8 +719,8 @@ function e2(e) {
 }
 var e8 = n(347478),
     e6 = n(268959),
-    e5 = n(325802),
-    e3 = n(252125);
+    e3 = n(325802),
+    e5 = n(252125);
 function e9(e) {
     let t,
         { productRecord: n, selectedProduct: i, selectedBundleSlide: r } = e,
@@ -735,11 +735,11 @@ function e9(e) {
             (0, L.JQ)({ skuId: c.skuId, type: c.type, items: [c] })
                 ? (0, s.jsx)(e6.s, {})
                 : (0, s.jsx)(e6.A, { skuId: n.skuId })),
-        (0, s.jsxs)("div", { className: e3.N, children: [t, null != l && a && (0, s.jsx)(e5.A, { promotion: l })] })
+        (0, s.jsxs)("div", { className: e5.N, children: [t, null != l && a && (0, s.jsx)(e3.A, { promotion: l })] })
     );
 }
-var e7 = n(462887),
-    e4 = n(278416),
+var e4 = n(462887),
+    e7 = n(278416),
     te = n(866665),
     tt = n(821609),
     tn = n(318254),
@@ -981,7 +981,7 @@ function tV(e) {
             (0, s.jsxs)("div", {
                 className: tz.fZ,
                 children: [
-                    (0, s.jsx)(e4.TagIcon, { size: "xs", color: "currentColor", className: tz.CE }),
+                    (0, s.jsx)(e7.TagIcon, { size: "xs", color: "currentColor", className: tz.CE }),
                     (0, s.jsx)(G.E, { variant: "text-xs/medium", color: "none", children: t }),
                 ],
             }),
@@ -1045,7 +1045,7 @@ function tX(e) {
         w = (0, _.Zu)({ product: i, isPartiallyOwnedBundle: D, isPurchased: S }),
         B = (0, o.bG)([tu.A], () => tu.A.isClaiming === i?.skuId),
         M = (0, tr.Ay)(),
-        U = (0, e7.M)(M),
+        U = (0, e4.M)(M),
         H = (0, _.G0)(i),
         z = (0, _.yt)(i, O.lid.DEFAULT),
         Z = z?.amount === 0,
@@ -1315,13 +1315,13 @@ var t$ = n(529756),
     t2 = n(365491),
     t8 = n(668953),
     t6 = n(881636),
-    t5 = n(807562);
-function t3(e) {
+    t3 = n(807562);
+function t5(e) {
     let { goPrev: t, goNext: n } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("div", {
-                className: t5.Y,
+                className: t3.Y,
                 children: (0, s.jsx)(tY.K, {
                     "aria-label": $.intl.string($.t["3NdvMK"]),
                     onClick: t,
@@ -1331,7 +1331,7 @@ function t3(e) {
                 }),
             }),
             (0, s.jsx)("div", {
-                className: t5.K,
+                className: t3.K,
                 children: (0, s.jsx)(tY.K, {
                     "aria-label": $.intl.string($.t.RYIeOX),
                     onClick: n,
@@ -1344,7 +1344,7 @@ function t3(e) {
     });
 }
 var t9 = n(48062);
-function t7(e) {
+function t4(e) {
     let {
             user: t,
             pendingProfile: n,
@@ -1456,7 +1456,7 @@ function t7(e) {
                         isOrbCheckoutModalOpen: m,
                     }),
                 }),
-                v && N > 1 && (0, s.jsx)(t3, { goPrev: R, goNext: y }),
+                v && N > 1 && (0, s.jsx)(t5, { goPrev: R, goNext: y }),
                 (0, s.jsxs)("div", {
                     className: t9.VG,
                     children: [
@@ -1487,7 +1487,7 @@ function t7(e) {
         })
     );
 }
-var t4 = n(80801);
+var t7 = n(80801);
 let ne = (0, u.FT)(u._3.SIZE_152),
     nt = function (e) {
         let {
@@ -1608,12 +1608,12 @@ let ne = (0, u.FT)(u._3.SIZE_152),
                 paddingSize: "sm",
                 "aria-label": eo,
                 children: (0, s.jsx)("div", {
-                    className: t4.C,
+                    className: t7.C,
                     children: (0, s.jsxs)("div", {
-                        className: t4.j,
+                        className: t7.j,
                         children: [
                             (0, s.jsx)(tZ, { ...eu }),
-                            (0, s.jsx)(t7, { ...eu, isClosing: ea, isOrbCheckoutModalOpen: el, pdpBackground: J }),
+                            (0, s.jsx)(t4, { ...eu, isClosing: ea, isOrbCheckoutModalOpen: el, pdpBackground: J }),
                         ],
                     }),
                 }),

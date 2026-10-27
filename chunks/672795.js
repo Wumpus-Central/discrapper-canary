@@ -3909,7 +3909,7 @@ let n9 = {
                             "aria-label": N ? void 0 : lo(f),
                             "aria-labelledby": N ? lm(c.id, f) : void 0,
                             children: (function () {
-                                if (E) return (0, i.jsx)(nE, { isCompact: x });
+                                if (E && u?.status !== "success") return (0, i.jsx)(nE, { isCompact: x });
                                 if (null == u || "idle" === u.status || "loading" === u.status)
                                     return (0, i.jsx)(C, {});
                                 if ("error" === u.status) return (0, i.jsx)(S, {});

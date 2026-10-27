@@ -3,7 +3,7 @@ var i,
     r,
     a = n(441574),
     s = n(349871),
-    l = n(927578),
+    l = n(24482),
     o =
         (((i = {}).UPSELL = "UPSELL"),
         (i.NITRO = "NITRO"),

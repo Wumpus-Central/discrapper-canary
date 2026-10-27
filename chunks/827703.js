@@ -991,7 +991,7 @@ let eY = {
 };
 var ez = l(773882),
     eK = l(809029),
-    eq = l(927578),
+    eq = l(24482),
     eJ = l(492518),
     eX = l(758836);
 function eZ() {
@@ -1083,7 +1083,7 @@ let e3 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
             ...e3,
         },
     },
-    e9 = {
+    e4 = {
         name: "Premium Review Step",
         id: "premium-checkout-review-step",
         component: (e) => {
@@ -1149,7 +1149,7 @@ let e3 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
             ...e3,
         },
     };
-var e4 = l(993077),
+var e9 = l(993077),
     e7 = l(939249),
     e5 = l(658675),
     te = l(478531),
@@ -1194,9 +1194,9 @@ let to = {
                         parentTransitionState: v.ip.ENTERED,
                     }),
                 }),
-                (0, s.jsxs)(e4.Z, {
+                (0, s.jsxs)(e9.Z, {
                     className: tr.nd,
-                    type: e4.s.PRIMARY,
+                    type: e9.s.PRIMARY,
                     style: { width: m },
                     children: [
                         (0, s.jsxs)("div", {
@@ -1555,7 +1555,7 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                                 glowAmount: e.glowAmount,
                                 blurAmount: e.blurAmount,
                                 hueRotate: e.hueRotate,
-                                cardType: e4.s.PRIMARY,
+                                cardType: e9.s.PRIMARY,
                                 glowing: !0,
                                 children: (0, s.jsxs)("div", {
                                     style: { padding: 16, display: "flex", flexDirection: "column", gap: 8 },
@@ -2263,8 +2263,8 @@ let t2 = [
         { id: "avatar", label: "Avatar", value: t1.HL.AVATAR },
         { id: "banner", label: "Banner", value: t1.HL.BANNER },
     ];
-var t9 = l(652165);
-let t4 = "1271174907081789524",
+var t4 = l(652165);
+let t9 = "1271174907081789524",
     t7 = {
         name: "Orb Checkout Modals",
         id: "orb-checkout-modal",
@@ -2274,7 +2274,7 @@ let t4 = "1271174907081789524",
                 className: q.YG,
                 children: (0, s.jsx)(O.$, {
                     onClick: () => {
-                        (0, t9.B4)({
+                        (0, t4.B4)({
                             skuId: t,
                             onComplete: (e) => {
                                 console.log(
@@ -2300,12 +2300,12 @@ let t4 = "1271174907081789524",
                     { skuId: "1342211853484429445", skuName: "Orb Profile Badge" },
                     { skuId: "1427463138634109026", skuName: "Magic Mists (Deco)" },
                     { skuId: "1332505467980873728", skuName: "Pondering Portal (Deco)" },
-                    { skuId: t4, skuName: "Oni's Curse (Deco)" },
+                    { skuId: t9, skuName: "Oni's Curse (Deco)" },
                 ].map((e) => {
                     let { skuId: t, skuName: l } = e;
                     return { label: l, value: t };
                 }),
-                defaultValue: t4,
+                defaultValue: t9,
             },
         },
     };
@@ -3279,8 +3279,8 @@ let l3 = {
 l(321073);
 var l6 = l(96337),
     l8 = l(997101),
-    l9 = l(597770),
-    l4 = l(278416),
+    l4 = l(597770),
+    l9 = l(278416),
     l7 = l(169797),
     l5 = l(25149),
     ae = l(812745);
@@ -3476,14 +3476,14 @@ let at = {
             discountAmount: { label: "Discount - Amount (minor units)", type: "number", defaultValue: -100 },
         },
     },
-    aa = { "nitro-wheel": r.t, gift: l9.GiftIcon, orbs: i.C },
+    aa = { "nitro-wheel": r.t, gift: l4.GiftIcon, orbs: i.C },
     an = l6.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
     ai = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: a, ...n } = e,
-                i = a ? l4.TagIcon : void 0;
+                i = a ? l9.TagIcon : void 0;
             return (0, s.jsxs)(ec.B, {
                 gap: 16,
                 align: "center",
@@ -3961,7 +3961,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Checkout Review Step", stories: [e8, e9] },
+            { title: "Checkout Review Step", stories: [e8, e4] },
             {
                 title: "Miscellaneous",
                 stories: [
