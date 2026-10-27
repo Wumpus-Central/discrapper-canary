@@ -980,7 +980,9 @@ function n$(e) {
                                             ],
                                         })
                                       : null,
-                                  C || p ? (0, l.jsxs)(nO.rX, { children: [A.edit, b(), y()] }) : null,
+                                  C || p
+                                      ? (0, l.jsxs)(nO.rX, { children: [A.edit, A.devicePermissions, b(), y()] })
+                                      : null,
                               ],
                           })
                         : C

@@ -1,100 +1,103 @@
-t.d(n, { A: () => C });
-var e = t(477900),
-    i = t(582128),
-    u = t(17928),
-    c = t(477782),
-    r = t(624479),
-    o = t(22231),
-    a = t(625903),
-    d = t(615606),
-    s = t(911040),
-    A = t(64656),
-    p = t(976860),
-    g = t(919417),
-    y = t(319481),
-    f = t(260498),
-    I = t(95264),
-    v = t(442331),
-    b = t(616334),
-    h = t(246338),
-    j = t(913396),
-    x = t(914315),
-    G = t(652215),
-    _ = t(746080),
-    w = t(248675),
-    P = t(105292);
-let m = { remix: null, edit: null, settings: null, showOverlay: null };
-function C(l, n) {
-    let { includeSettings: t = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        C = (0, h.w$)(l, n),
-        D = (0, j.A)(C ? l : null),
-        E = D?.id ?? null,
-        F = l.guild_id ?? null,
-        V = (0, x.A)(l, n);
+e.d(n, { A: () => D });
+var t = e(477900),
+    i = e(582128),
+    u = e(17928),
+    c = e(477782),
+    r = e(624479),
+    o = e(22231),
+    a = e(625903),
+    d = e(615606),
+    s = e(911040),
+    A = e(64656),
+    p = e(976860),
+    g = e(919417),
+    y = e(319481),
+    f = e(136968),
+    I = e(260498),
+    v = e(95264),
+    b = e(442331),
+    h = e(616334),
+    j = e(246338),
+    x = e(913396),
+    G = e(914315),
+    _ = e(652215),
+    w = e(746080),
+    P = e(248675),
+    m = e(105292);
+let C = { remix: null, edit: null, settings: null, showOverlay: null, devicePermissions: null };
+function D(l, n) {
+    let { includeSettings: e = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        D = (0, j.w$)(l, n),
+        E = (0, x.A)(D ? l : null),
+        F = E?.id ?? null,
+        V = l.guild_id ?? null,
+        k = (0, G.A)(l, n);
     i.useEffect(() => {
-        null != E && (0, y.ensureConnection)(E);
-    }, [E]);
-    let k = (0, u.bG)([v.A], () => null != E && null != v.A.getSettings(E), [E]),
-        L = (0, A.A)((0, s.A)(l).frameId),
-        M = (0, d.q)(l)?.id ?? null,
-        N = (0, g.V5)(M);
-    return C && null != F
+        null != F && (0, y.ensureConnection)(F);
+    }, [F]);
+    let L = (0, u.bG)([b.A], () => null != F && null != b.A.getSettings(F), [F]),
+        M = (0, A.A)((0, s.A)(l).frameId),
+        N = (0, d.q)(l)?.id ?? null,
+        S = (0, g.V5)(N),
+        U = (0, f.A)(N);
+    return D && null != V
         ? {
               remix:
-                  null != V
-                      ? (0, e.jsx)(
+                  null != k
+                      ? (0, t.jsx)(
                             c.Dr,
                             {
                                 id: "conjure-remix",
                                 icon: r.CopyIcon,
                                 leadingAccessory: { type: "icon", icon: r.CopyIcon },
-                                label: P.intl.string(w.default["9wQTdG"]),
-                                action: () => (0, I.A)(V, F),
+                                label: m.intl.string(P.default["9wQTdG"]),
+                                action: () => (0, v.A)(k, V),
                             },
                             "remix",
                         )
                       : null,
               edit:
-                  null != D
-                      ? (0, e.jsx)(
+                  null != E
+                      ? (0, t.jsx)(
                             c.Dr,
                             {
                                 id: "conjure-edit",
                                 icon: o.PencilIcon,
                                 leadingAccessory: { type: "icon", icon: o.PencilIcon },
-                                label: P.intl.string(w.default.jMMrDM),
-                                action: () => (0, p.pX)(G.BVt.CHANNEL(F, _.VV.CONJURE, D.id)),
+                                label: m.intl.string(P.default.jMMrDM),
+                                action: () => (0, p.pX)(_.BVt.CHANNEL(V, w.VV.CONJURE, E.id)),
                             },
                             "edit",
                         )
                       : null,
               settings:
-                  null != D && t && (k || (0, f.PV)(D))
-                      ? (0, e.jsx)(
+                  null != E && e && (L || (0, I.PV)(E))
+                      ? (0, t.jsx)(
                             c.Dr,
                             {
                                 id: "conjure-settings",
                                 icon: a.SettingsIcon,
                                 leadingAccessory: { type: "icon", icon: a.SettingsIcon },
-                                label: P.intl.string(w.default.I2XSKe),
-                                action: () => (0, b.A)(D.id, { guildId: F, initialTab: "app" }),
+                                label: m.intl.string(P.default.I2XSKe),
+                                action: () => (0, h.A)(E.id, { guildId: V, initialTab: "app" }),
                             },
                             "settings",
                         )
                       : null,
               showOverlay:
-                  L && null != M
-                      ? (0, e.jsx)(
+                  M && null != N
+                      ? (0, t.jsx)(
                             c.sL,
                             {
                                 id: "conjure-show-overlay",
-                                label: P.intl.string(w.default.FQb5Z3),
-                                checked: N,
-                                action: () => (0, g.Gt)(M, !N),
+                                label: m.intl.string(P.default.FQb5Z3),
+                                checked: S,
+                                action: () => (0, g.Gt)(N, !S),
                             },
                             "show-overlay",
                         )
                       : null,
+              devicePermissions: U,
           }
-        : m;
+        : C;
 }

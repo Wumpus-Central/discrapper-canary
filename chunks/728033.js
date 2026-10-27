@@ -1,43 +1,45 @@
-n.d(i, { default: () => s });
-var a = n(477900),
-    o = n(980707),
-    e = n(17928),
-    l = n(477782),
-    c = n(138134),
-    p = n(928658),
-    r = n(734057),
-    d = n(105292),
-    u = n(652215);
-function s(t) {
-    var i;
-    let n,
-        s,
-        { onClose: g, onSelect: h, application: v, channelId: I } = t,
+i.d(n, { default: () => g });
+var a = i(477900),
+    e = i(980707),
+    l = i(477782),
+    o = i(136968),
+    r = i(17928),
+    c = i(138134),
+    d = i(928658),
+    p = i(734057),
+    u = i(105292),
+    s = i(652215);
+function g(t) {
+    var n;
+    let i,
+        g,
+        { onClose: h, onSelect: v, application: x, channelId: I } = t,
         b =
-            ((i = u.BRT.POPOUT),
-            (n = (0, e.bG)([r.A], () => r.A.getChannel(I))),
-            (s = n?.getGuildId()),
+            ((n = s.BRT.POPOUT),
+            (i = (0, r.bG)([p.A], () => p.A.getChannel(I))),
+            (g = i?.getGuildId()),
             (0, a.jsx)(l.Dr, {
                 id: "report-app",
                 color: "danger",
-                label: d.intl.string(d.t.NgA5vp),
+                label: u.intl.string(u.t.NgA5vp),
                 action: () =>
-                    (0, p.r3)({
-                        application: v,
+                    (0, d.r3)({
+                        application: x,
                         entrypoint: "activity_ui_popout",
-                        contextualGuildId: s ?? void 0,
-                        contextualChannelId: n?.id,
-                        appContext: i,
+                        contextualGuildId: g ?? void 0,
+                        contextualChannelId: i?.id,
+                        appContext: n,
                     }),
                 icon: c.FlagIcon,
                 leadingAccessory: { type: "icon", icon: c.FlagIcon },
-            }));
-    return (0, a.jsx)(o.W, {
+            })),
+        y = (0, o.A)(x.id);
+    return (0, a.jsxs)(e.W, {
         "data-menu-migrated": !0,
         navId: "activity-popout-overflow-popout",
-        onClose: g,
-        onSelect: h,
-        "aria-label": d.intl.string(d.t.SS9Y6P),
-        children: b,
+        onClose: h,
+        onSelect: v,
+        "aria-label": u.intl.string(u.t.SS9Y6P),
+        children: [null != y ? (0, a.jsx)(l.rX, { children: y }) : null, (0, a.jsx)(l.rX, { children: b })],
     });
 }

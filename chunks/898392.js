@@ -8369,7 +8369,7 @@ let rJ = {
             return (t) => (0, r.jsx)(e, { ...t });
         },
         ActivityPopoutHeaderOverflowMenu: async () => {
-            let { default: e } = await a.e("832986").then(a.bind(a, 728033)),
+            let { default: e } = await Promise.all([a.e("477233"), a.e("832986")]).then(a.bind(a, 728033)),
                 t = new rq.kJ({
                     id: "123456789",
                     name: "Test Activity",
