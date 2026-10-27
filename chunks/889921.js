@@ -35,11 +35,11 @@ var r = n(158390),
     m = n(463660),
     y = n(260498),
     O = n(371169),
-    b = n(962998),
-    T = n(416473),
+    T = n(962998),
+    b = n(416473),
     C = n(525530),
-    k = n(743082),
-    N = n(385081),
+    N = n(743082),
+    k = n(385081),
     w = n(1371),
     R = n(736553),
     A = n(642785);
@@ -83,6 +83,7 @@ let U = {
     restore_proposal: !0,
     saving: !0,
     segment_settled: !0,
+    spend_limit: !0,
     terminal_error: !0,
     thinking: !0,
     thinking_lifecycle: !0,
@@ -92,7 +93,7 @@ let U = {
 };
 var v = n(649121),
     P = n(975189);
-(n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331));
+(n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331), n(427123));
 let J = new Map(),
     I = new Map(),
     M = new Set();
@@ -121,7 +122,7 @@ function j(e, t, n) {
     let r = t.pendingSends;
     for (let s of ((t.pendingSends = []), r)) (x(e, s), (0, d.Gu)(e, n));
 }
-let G = { ...a.m, ...d.NW, ..._.eI, ...f.x9, ...g.U, ...E.p, ...m.VY, ...b.qy, ...T.Rd, ...C.ow, ...k.WO, ...p.V5 },
+let G = { ...a.m, ...d.NW, ..._.eI, ...f.x9, ...g.U, ...E.p, ...m.VY, ...T.qy, ...b.Rd, ...C.ow, ...N.WO, ...p.V5 },
     B = {
         app_build_request(e, t) {
             let { projectId: n } = t;
@@ -148,7 +149,15 @@ let G = { ...a.m, ...d.NW, ..._.eI, ...f.x9, ...g.U, ...E.p, ...m.VY, ...b.qy, .
             let { projectId: n } = t;
             (0, O._b)(n).catch(() => {});
         },
-        ...b.rS,
+        ...T.rS,
+        spend_limit(e, t) {
+            let { projectId: n } = t;
+            o.h.dispatch({
+                type: "CONJURE_SPEND_LIMIT_SET",
+                projectId: n,
+                spendLimit: "ok" === e.state ? null : { state: e.state, spentUsd: e.spent_usd, limitUsd: e.limit_usd },
+            });
+        },
     },
     W = new Set([
         "hello",
@@ -258,7 +267,7 @@ async function q(e, t) {
                             !(function (e, t) {
                                 let { projectId: n } = t;
                                 if ("turn_result" === e.kind) {
-                                    ((0, N.hV)(n, e),
+                                    ((0, k.hV)(n, e),
                                         "deployed" === e.result &&
                                             o.h.dispatch({
                                                 type: "CONJURE_CHAT_TURN_PATCH",
@@ -286,9 +295,9 @@ async function q(e, t) {
                     }
                 })(e, t, n),
             onClose: () => {
-                ((0, b.Mz)(e, "Connection closed before the publish result arrived"),
-                (0, T.Fc)(e),
-                (0, b.BC)(e, "Connection closed before the draft arrived"),
+                ((0, T.Mz)(e, "Connection closed before the publish result arrived"),
+                (0, b.Fc)(e),
+                (0, T.BC)(e, "Connection closed before the draft arrived"),
                 (0, S.RP)(e),
                 t.disposed)
                     ? D(e, "closed")
@@ -309,12 +318,12 @@ async function q(e, t) {
             j(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             (t.pendingTemplatePrep = null),
-            (0, b.Mz)(e, "Connection failed before the publish result arrived"),
-            (0, T.Fc)(e),
-            (0, b.BC)(e, "Connection failed before the draft arrived"),
-            (0, N.Hy)(e, {
+            (0, T.Mz)(e, "Connection failed before the publish result arrived"),
+            (0, b.Fc)(e),
+            (0, T.BC)(e, "Connection failed before the draft arrived"),
+            (0, k.Hy)(e, {
                 location: "connection",
-                code: N.xf.WS_OPEN_FAILED,
+                code: k.xf.WS_OPEN_FAILED,
                 message: n instanceof Error ? n.message : "ws open failed",
             }));
     }
@@ -370,9 +379,9 @@ function V(e) {
         null != t &&
         ((t.disposed = !0),
         t.backoff.cancel(),
-        (0, b.Mz)(e, "Connection closed before the publish result arrived"),
-        (0, T.Fc)(e),
-        (0, b.BC)(e, "Connection closed before the draft arrived"),
+        (0, T.Mz)(e, "Connection closed before the publish result arrived"),
+        (0, b.Fc)(e),
+        (0, T.BC)(e, "Connection closed before the draft arrived"),
         t.ws.close(),
         J.delete(e),
         (0, P.ng)(e),
