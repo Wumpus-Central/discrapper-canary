@@ -1,27 +1,19 @@
-r.d(n, { A: () => A });
+r.d(e, { A: () => d });
 var t = r(17928),
     u = r(91242),
     a = r(64656),
-    l = r(652215),
-    i = r(165610),
-    d = r(105292);
-function A(e) {
-    let n = (0, t.bG)(
+    i = r(652215),
+    l = r(165610),
+    A = r(105292);
+function d(n) {
+    let e = (0, t.bG)(
             [u.A],
             () => {
-                let n = e.type === l.rbe.GUILD_APP ? (0, i.HD)(e) : null;
-                return (null != n ? u.A.getFramesForSurface(n)[0]?.id : void 0) ?? null;
-            },
-            [e],
-        ),
-        r = (0, a.A)(n),
-        { audible: A, userMuted: s } = (0, t.cf)(
-            [u.A],
-            () => {
-                let e = (0, i.ny)(u.A.getFrame(n))?.data;
-                return { audible: e?.audible === !0, userMuted: e?.userMuted === !0 };
+                let e = n.type === i.rbe.GUILD_APP ? (0, l.HD)(n) : null;
+                return (null != e ? u.A.getFramesForSurface(e)[0]?.id : void 0) ?? null;
             },
             [n],
-        );
-    return { frameId: n, runningLabel: r ? d.intl.string(d.t["1yCkJY"]) : null, audible: A, userMuted: s };
+        ),
+        r = (0, a.A)(e);
+    return { frameId: e, runningLabel: r ? A.intl.string(A.t["1yCkJY"]) : null };
 }
