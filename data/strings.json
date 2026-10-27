@@ -1731,7 +1731,6 @@
   "i5Xp1l": "Could not delete the publishing schedule. Try again.",
   "Tw/KaB": "Delete this publishing schedule?",
   "ubcNP7": "Publishes run as the project owner. If the agent is working, publishing waits for it to finish. Runs with no new changes are skipped.",
-  "sg8WIV": "Ask the agent to set a publish schedule.",
   "x/G8tD": "{count, plural,one {Every # day}other {Every # days}",
   "q4AgE/": "{count, plural,one {Every # hour}other {Every # hours}",
   "+y7hwg": "{count, plural,one {Every # minute}other {Every # minutes}",

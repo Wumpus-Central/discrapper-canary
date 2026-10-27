@@ -188,7 +188,7 @@ var w = t(557744),
     H = t(44255),
     O = t(303345),
     G = t(416473);
-function V(e) {
+function q(e) {
     let { projectId: l, canEdit: t } = e,
         s = (function (e, l) {
             let t = (0, i.bG)([x.default], () => "open" === x.default.getConnState(e), [e]);
@@ -242,8 +242,9 @@ function V(e) {
             return { saved: n, loading: s, loaded: c, deleting: o, error: p, status: g, retry: y, remove: E };
         })(l, t),
         u = a.useId();
-    return t
-        ? (0, n.jsxs)(o.B, {
+    return !t || (s.loaded && null == s.saved && null == s.error && null == s.status)
+        ? null
+        : (0, n.jsxs)(o.B, {
               as: "section",
               gap: 16,
               "aria-labelledby": u,
@@ -256,45 +257,37 @@ function V(e) {
                             children: b.intl.string(j.default["71yzD9"]),
                         })
                       : null,
-                  s.loaded
+                  s.loaded && null != s.saved
                       ? (0, n.jsxs)(n.Fragment, {
                             children: [
-                                null == s.saved
-                                    ? (0, n.jsx)(f.E, {
-                                          variant: "text-sm/normal",
-                                          color: "text-subtle",
-                                          children: b.intl.string(j.default.sg8WIV),
-                                      })
-                                    : (0, n.jsx)(f.E, {
-                                          variant: "text-sm/normal",
-                                          color: "text-subtle",
-                                          children: b.intl.string(j.default.ubcNP7),
-                                      }),
-                                null != s.saved
-                                    ? (0, n.jsxs)(o.B, {
-                                          gap: 8,
-                                          children: [
-                                              (0, H.Dt)(s.saved).map((e, l) =>
-                                                  (0, n.jsx)(f.E, { variant: "text-sm/normal", children: e }, l),
-                                              ),
-                                              (0, n.jsx)(Z.$, {
-                                                  type: "button",
-                                                  variant: "secondary",
-                                                  text: b.intl.string(j.default.J7ZMMf),
-                                                  disabled: s.deleting,
-                                                  onClick: function () {
-                                                      (0, r.A)({
-                                                          title: b.intl.string(j.default["Tw/KaB"]),
-                                                          subtitle: b.intl.string(j.default.qr1iIe),
-                                                          confirmText: b.intl.string(j.default.J7ZMMf),
-                                                          variant: "critical",
-                                                          onConfirm: s.remove,
-                                                      });
-                                                  },
-                                              }),
-                                          ],
-                                      })
-                                    : null,
+                                (0, n.jsx)(f.E, {
+                                    variant: "text-sm/normal",
+                                    color: "text-subtle",
+                                    children: b.intl.string(j.default.ubcNP7),
+                                }),
+                                (0, n.jsxs)(o.B, {
+                                    gap: 8,
+                                    children: [
+                                        (0, H.Dt)(s.saved).map((e, l) =>
+                                            (0, n.jsx)(f.E, { variant: "text-sm/normal", children: e }, l),
+                                        ),
+                                        (0, n.jsx)(Z.$, {
+                                            type: "button",
+                                            variant: "secondary",
+                                            text: b.intl.string(j.default.J7ZMMf),
+                                            disabled: s.deleting,
+                                            onClick: function () {
+                                                (0, r.A)({
+                                                    title: b.intl.string(j.default["Tw/KaB"]),
+                                                    subtitle: b.intl.string(j.default.qr1iIe),
+                                                    confirmText: b.intl.string(j.default.J7ZMMf),
+                                                    variant: "critical",
+                                                    onConfirm: s.remove,
+                                                });
+                                            },
+                                        }),
+                                    ],
+                                }),
                             ],
                         })
                       : null,
@@ -318,10 +311,9 @@ function V(e) {
                             onClick: s.retry,
                         }),
               ],
-          })
-        : null;
+          });
 }
-var q = t(11120);
+var V = t(11120);
 async function X(e) {
     let { appInvalid: l, submitApp: t, submitProject: n } = e;
     if (l) return { saved: !1, failedTab: "app" };
@@ -591,13 +583,13 @@ function ek(e) {
                         Z = null != r && (0, ei.IU)(r),
                         H = null != r && "user" !== r.install_scope,
                         O = H && null != l && (0, ei.RX)(r),
-                        { isPublic: G, isGuildCollaboration: V } = (0, eb.n5)(A),
-                        q = null != r && D !== v,
+                        { isPublic: G, isGuildCollaboration: q } = (0, eb.n5)(A),
+                        V = null != r && D !== v,
                         X = Z && A !== (S?.flags ?? r?.flags ?? 0),
                         J =
                             O &&
                             ((t = S?.roleIds ?? h), !((n = new Set(P)).size === t.length && t.every((e) => n.has(e)))),
-                        Q = q || X || J || c.changed,
+                        Q = V || X || J || c.changed,
                         K = Q || s.changed || f.changed || m.changed,
                         { setIcon: W, setDescription: $ } = c,
                         Y = s.setChecked,
@@ -646,13 +638,13 @@ function ek(e) {
                         ),
                         eC = a.useCallback(async () => {
                             if (null == r || !K || N) return null;
-                            let t = q ? (0, ev.p)(D) : null;
+                            let t = V ? (0, ev.p)(D) : null;
                             if (null != t) return (w(t), "project");
                             let n = { ...d };
-                            (q && (n.name = D),
+                            (V && (n.name = D),
                                 X && (n.flags = A),
                                 J && (n.collaborator_role_ids = [...P].sort()),
-                                null == r.guild_id && null != l && (J || (X && V)) && (n.guild_id = l),
+                                null == r.guild_id && null != l && (J || (X && q)) && (n.guild_id = l),
                                 _(!0),
                                 L(null),
                                 M(null));
@@ -666,7 +658,7 @@ function ek(e) {
                             } finally {
                                 _(!1);
                             }
-                        }, [o, A, X, l, K, d, V, q, r, e, Q, J, x, u, p, N, P, D]);
+                        }, [o, A, X, l, K, d, q, V, r, e, Q, J, x, u, p, N, P, D]);
                     return {
                         iconURL: c.iconURL,
                         description: c.description,
@@ -675,9 +667,9 @@ function ek(e) {
                         hostApproval: m,
                         name: y,
                         nameError: R,
-                        nameChanged: q,
+                        nameChanged: V,
                         isPublic: G,
-                        isGuildCollaboration: V,
+                        isGuildCollaboration: q,
                         selectedRoleIds: P,
                         supportsVisibility: Z,
                         supportsCollaboration: H,
@@ -908,7 +900,7 @@ function ek(e) {
             };
         })(l, B),
         [Z, H] = a.useState(null);
-    return (0, n.jsx)(q.A, {
+    return (0, n.jsx)(V.A, {
         projectId: l,
         scopeKeys: S,
         note: k,
@@ -997,7 +989,7 @@ function ek(e) {
                                           className: eC.f,
                                           children: [
                                               z ? F.fields : null,
-                                              (0, n.jsx)(V, { projectId: l, canEdit: B }, l),
+                                              (0, n.jsx)(q, { projectId: l, canEdit: B }, l),
                                           ],
                                       }),
                                 i || "linked" !== a ? null : (0, n.jsx)(_, { linkedApps: D }),
