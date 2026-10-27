@@ -992,17 +992,18 @@
     pointer-events: auto
 }
 
-.messageAccessoriesUnderProse_a9077e {
-    margin-top: var(--space-8)
-}
-
 .messageAccessories_a9077e {
-    margin-bottom: 2px
+    margin-bottom: 2px;
+    margin-top: .125rem
 }
 
 .messageAccessories_a9077e:has(>:empty:only-child) {
     margin-bottom: 0;
     margin-top: 0
+}
+
+.messageAccessoriesUnderProse_a9077e {
+    margin-top: var(--space-8)
 }
 
 .conjurMessage_a9077e>[class*=wrapper_]>[class*=contents_]>[class*=avatar]:not([class*=ecoration]),
@@ -1085,4 +1086,4 @@
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=8be7623f4330b81e.css.map*/
+/*# sourceMappingURL=cef27a075810f1f2.css.map*/
