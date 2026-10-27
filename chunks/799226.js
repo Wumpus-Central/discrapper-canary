@@ -1,4 +1,4 @@
-n.d(t, { BW: () => d, CE: () => h, DS: () => f, Gy: () => I, m2: () => p });
+n.d(t, { BW: () => d, CE: () => f, DS: () => I, Gy: () => p, m2: () => T });
 var i,
     r = n(582128),
     a = n(971940),
@@ -16,14 +16,24 @@ function E(e, t) {
     console.error("Rive file load error", e, t);
 }
 async function A(e) {
+    let t;
+    try {
+        t = await h(e);
+    } catch (t) {
+        (u.delete(e), E(e, t));
+        return;
+    }
+    (u.delete(e), _(e, t));
+}
+async function h(e) {
     let t = await fetch(new Request(e));
     if (!t.ok) throw Error(`Failed to fetch the Rive file: HTTP ${t.status}`);
     return t.arrayBuffer();
 }
-function h(e) {
+function f(e) {
     let t = e instanceof ArrayBuffer ? e.byteLength.toString() : e?.toString(),
         n = "object" == typeof e && e instanceof ArrayBuffer,
-        i = I(t),
+        i = p(t),
         s = (function () {
             let e = (0, o.G9)().experiments?.enabledExperiments,
                 [t] = (0, r.useState)(() => e?.includes("rive-web-perf") ?? !1);
@@ -36,14 +46,7 @@ function h(e) {
             if (u.has(t)) return;
             (u.add(t),
                 (0, l.O)(() => {
-                    A(t).then(
-                        (e) => {
-                            (u.delete(t), _(t, e));
-                        },
-                        (e) => {
-                            (u.delete(t), E(t, e));
-                        },
-                    );
+                    A(t);
                 }));
             return;
         }
@@ -62,14 +65,14 @@ function h(e) {
           ? { status: "loaded", buffer: e }
           : (d ?? { status: "loading", buffer: null });
 }
-function f(e, t) {
+function I(e, t) {
     let n = c.getState().riveOverrideCache;
     c.setState({ riveOverrideCache: { ...n, [e]: t } });
 }
-function I(e) {
+function p(e) {
     let t = c((e) => e.riveOverrideCache);
     return null == e ? null : t[e];
 }
-function p(e) {
+function T(e) {
     return null != c((e) => e.riveOverrideCache)[e];
 }

@@ -16,8 +16,13 @@ function i(e) {
         );
     };
 }
-(n.d(t, { L_: () => i, Zy: () => r }), n(321073));
-class r {
+async function r(e) {
+    try {
+        await e;
+    } catch {}
+}
+(n.d(t, { L_: () => i, Zy: () => a, yO: () => r }), n(321073));
+class a {
     #e = new Map();
     one(e, t) {
         let { force: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},

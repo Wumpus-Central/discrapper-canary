@@ -1,4 +1,4 @@
-n.d(t, { w: () => C });
+n.d(t, { w: () => O });
 var i,
     r = n(477900),
     a = n(582128),
@@ -18,25 +18,26 @@ function A(e) {
 let h = A(o.Fit),
     f = A(o.Alignment);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073));
-var I = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
-let p = new Map();
-function T(e) {
+var I = n(51906),
+    p = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
+let T = new Map();
+function m(e) {
     e.listeners.forEach((e) => e());
 }
-function m(e, t) {
+function g(e, t) {
     (null != t.removalTimer && clearTimeout(t.removalTimer),
         (t.removalTimer = setTimeout(() => {
             var n, i;
             return (
                 (n = e),
                 void (((i = t).removalTimer = null),
-                i.consumers > 0 || p.get(n) !== i || (p.delete(n), i.riveFile.cleanup()))
+                i.consumers > 0 || T.get(n) !== i || (T.delete(n), i.riveFile.cleanup()))
             );
         }, 3e4)));
 }
-let g = { status: "disabled", riveFile: null },
-    S = { status: "loading", riveFile: null };
-function N(e) {
+let S = { status: "disabled", riveFile: null },
+    N = { status: "loading", riveFile: null };
+function C(e) {
     let { className: t, style: n } = e;
     return (0, r.jsx)("div", {
         className: t,
@@ -44,7 +45,7 @@ function N(e) {
         "aria-hidden": !0,
     });
 }
-function C(e) {
+function O(e) {
     let t = (function () {
             let e = (0, u.G9)().experiments?.enabledExperiments,
                 [t] = a.useState(() => e?.includes("rive-web-perf") ?? !1);
@@ -55,19 +56,19 @@ function C(e) {
             return (a.useLayoutEffect(() => {
                 if (null == e) return;
                 let t = (function (e) {
-                    let t = p.get(e);
+                    let t = T.get(e);
                     if (null != t) return t;
                     let n = new o.RiveFile({ buffer: e }),
                         i = { riveFile: n, status: "loading", consumers: 0, removalTimer: null, listeners: new Set() };
                     return (
                         n.on(o.EventType.Load, () => {
-                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && m(e, i), T(i));
+                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && g(e, i), m(i));
                         }),
                         n.on(o.EventType.LoadError, () => {
-                            ((i.status = "error"), p.get(e) === i && p.delete(e), T(i));
+                            ((i.status = "error"), T.get(e) === i && T.delete(e), m(i));
                         }),
-                        p.set(e, i),
-                        n.init().catch(() => {}),
+                        T.set(e, i),
+                        (0, I.yO)(n.init()),
                         i
                     );
                 })(e);
@@ -88,21 +89,21 @@ function C(e) {
                     () => {
                         (t.listeners.delete(i),
                             (t.consumers -= 1),
-                            0 === t.consumers && "loaded" === t.status && m(e, t));
+                            0 === t.consumers && "loaded" === t.status && g(e, t));
                     }
                 );
             }, [e]),
             null == e)
-                ? g
+                ? S
                 : null == t || t.buffer !== e
-                  ? S
+                  ? N
                   : t.value;
         })(t && null == e.assetLoader ? e.buffer : null);
-    return n.status === I.Loading
-        ? (0, r.jsx)(N, { className: e.className, style: e.style })
-        : (0, r.jsx)(O, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
+    return n.status === p.Loading
+        ? (0, r.jsx)(C, { className: e.className, style: e.style })
+        : (0, r.jsx)(R, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
 }
-function O(e) {
+function R(e) {
     let {
             isRiveWebPerfEnabled: t,
             sharedRiveFile: n,
@@ -236,12 +237,15 @@ function O(e) {
                     a.useCallback(async (e, n) => {
                         if ("string" != typeof e) return Promise.resolve(e);
                         {
+                            let i;
                             if (null != t.current[e]) return Promise.resolve(t.current[e]);
-                            let i = await fetch(e, { signal: n }).catch((e) => {
-                                if (n?.aborted) return Promise.resolve(null);
+                            try {
+                                i = await fetch(e, { signal: n });
+                            } catch (e) {
+                                if (n?.aborted) return null;
                                 throw e;
-                            });
-                            if (null == i || n?.aborted) return Promise.resolve(null);
+                            }
+                            if (n?.aborted) return Promise.resolve(null);
                             let r = await i.arrayBuffer(),
                                 a = await (0, o.decodeImage)(new Uint8Array(r));
                             return ((t.current[e] = a), a);
@@ -284,73 +288,77 @@ function O(e) {
             }),
                 a.useEffect(() => {
                     let e = new AbortController();
+                    async function t() {
+                        if (null == n || null == n.viewModelInstance || null == _) return;
+                        let t = r[i ?? ""];
+                        for (let i of Object.entries(_)) {
+                            if (e.signal.aborted) return;
+                            let r = i[0],
+                                a = i[1],
+                                s = null != a && "object" == typeof a && "type" in a,
+                                l = s ? a.type : t[r],
+                                o = s ? a.value : a;
+                            switch (l) {
+                                case "color":
+                                    if ("number" == typeof o) {
+                                        let e = n.viewModelInstance?.color(r);
+                                        null != e && (e.value = o);
+                                    } else if ("object" == typeof o)
+                                        if ("resolve" in o) {
+                                            let [e, t, i, a] = o
+                                                .resolve({ theme: A, saturation: h, highContrastModeEnabled: f })
+                                                .rgba();
+                                            n.viewModelInstance?.color(r)?.rgba(e, t, i, 255 * a);
+                                        } else n.viewModelInstance?.color(r)?.rgba(o.r, o.g, o.b, (o.a ?? 1) * 255);
+                                    break;
+                                case "number":
+                                    let d = n.viewModelInstance?.number(r);
+                                    null != d && (d.value = o);
+                                    break;
+                                case "boolean":
+                                    let c = n.viewModelInstance?.boolean(r);
+                                    null != c && (c.value = o);
+                                    break;
+                                case "trigger":
+                                    let u = null != o && ("boolean" == typeof o ? o : 0 !== o),
+                                        _ = T(I.current, r);
+                                    (u && _ !== o && n.viewModelInstance?.trigger(r)?.trigger(), (I.current[r] = o));
+                                    break;
+                                case "string":
+                                    let E = n.viewModelInstance?.string(r);
+                                    null != E && (E.value = o);
+                                    break;
+                                case "enum":
+                                    let m = n.viewModelInstance?.enum(r);
+                                    null != m && "string" == typeof o && (m.value = o);
+                                    break;
+                                case "image":
+                                    if (null != o) {
+                                        let t = await p(o, e.signal);
+                                        if (e.signal.aborted) return;
+                                        let i = n.viewModelInstance?.image(r);
+                                        null != i && (i.value = t);
+                                    }
+                                    break;
+                                case "artboard":
+                                    let g = n.viewModelInstance?.artboard(r),
+                                        S = n.getBindableArtboard(o);
+                                    null != g && null != S && (g.value = S);
+                                    break;
+                                default:
+                                    console.warn(`Unknown property type: ${l}`);
+                            }
+                        }
+                        (n.wakeFromAutoSleep?.(), n.isPlaying || (n.artboard?.advance(0), n.drawFrame()));
+                    }
                     return (
                         (async function () {
-                            if (null == n || null == n.viewModelInstance || null == _) return;
-                            let t = r[i ?? ""];
-                            for (let i of Object.entries(_)) {
-                                if (e.signal.aborted) return;
-                                let r = i[0],
-                                    a = i[1],
-                                    s = null != a && "object" == typeof a && "type" in a,
-                                    l = s ? a.type : t[r],
-                                    o = s ? a.value : a;
-                                switch (l) {
-                                    case "color":
-                                        if ("number" == typeof o) {
-                                            let e = n.viewModelInstance?.color(r);
-                                            null != e && (e.value = o);
-                                        } else if ("object" == typeof o)
-                                            if ("resolve" in o) {
-                                                let [e, t, i, a] = o
-                                                    .resolve({ theme: A, saturation: h, highContrastModeEnabled: f })
-                                                    .rgba();
-                                                n.viewModelInstance?.color(r)?.rgba(e, t, i, 255 * a);
-                                            } else n.viewModelInstance?.color(r)?.rgba(o.r, o.g, o.b, (o.a ?? 1) * 255);
-                                        break;
-                                    case "number":
-                                        let d = n.viewModelInstance?.number(r);
-                                        null != d && (d.value = o);
-                                        break;
-                                    case "boolean":
-                                        let c = n.viewModelInstance?.boolean(r);
-                                        null != c && (c.value = o);
-                                        break;
-                                    case "trigger":
-                                        let u = null != o && ("boolean" == typeof o ? o : 0 !== o),
-                                            _ = T(I.current, r);
-                                        (u && _ !== o && n.viewModelInstance?.trigger(r)?.trigger(),
-                                            (I.current[r] = o));
-                                        break;
-                                    case "string":
-                                        let E = n.viewModelInstance?.string(r);
-                                        null != E && (E.value = o);
-                                        break;
-                                    case "enum":
-                                        let m = n.viewModelInstance?.enum(r);
-                                        null != m && "string" == typeof o && (m.value = o);
-                                        break;
-                                    case "image":
-                                        if (null != o) {
-                                            let t = await p(o, e.signal);
-                                            if (e.signal.aborted) return;
-                                            let i = n.viewModelInstance?.image(r);
-                                            null != i && (i.value = t);
-                                        }
-                                        break;
-                                    case "artboard":
-                                        let g = n.viewModelInstance?.artboard(r),
-                                            S = n.getBindableArtboard(o);
-                                        null != g && null != S && (g.value = S);
-                                        break;
-                                    default:
-                                        console.warn(`Unknown property type: ${l}`);
-                                }
+                            try {
+                                await t();
+                            } catch (e) {
+                                if (!(e instanceof Error && "AbortError" === e.name)) throw e;
                             }
-                            (n.wakeFromAutoSleep?.(), n.isPlaying || (n.artboard?.advance(0), n.drawFrame()));
-                        })().catch((e) => {
-                            if ("AbortError" !== e.name) throw e;
-                        }),
+                        })(),
                         () => {
                             e.abort("New data binding applied - aborting previous image fetches.");
                         }

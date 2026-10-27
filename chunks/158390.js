@@ -43,6 +43,11 @@ class i {
         }
         return i;
     }
+    failAsync(e) {
+        return new Promise((t) => {
+            this.fail(() => t(), e);
+        });
+    }
     cancel() {
         ((this._callback = null), null != this._timeoutId && (clearTimeout(this._timeoutId), (this._timeoutId = null)));
     }

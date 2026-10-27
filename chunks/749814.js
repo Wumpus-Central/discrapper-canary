@@ -16,51 +16,67 @@ var i,
     f = (((u = {})[(u.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), u),
     p = t(214958),
     y = t.n(p);
-let C = parseInt(y().version ?? "0", 10),
-    S = null != y().ua && y().ua.indexOf("OculusBrowser") > -1;
+let S = parseInt(y().version ?? "0", 10),
+    C = null != y().ua && y().ua.indexOf("OculusBrowser") > -1;
 ((() => {
     if (!("u" > typeof window) || null != window.WebSocket) return y().name;
 })(),
-    S ||
-        ("Firefox" === y().name && C >= 80) ||
-        ("Chrome" === y().name && C >= 37) ||
-        ("Opera" === y().name && C >= 66) ||
-        ("Node.js" === y().name && C >= 6) ||
-        ("Electron" === y().name && C >= 1) ||
-        ("Safari" === y().name && C >= 13) ||
+    C ||
+        ("Firefox" === y().name && S >= 80) ||
+        ("Chrome" === y().name && S >= 37) ||
+        ("Opera" === y().name && S >= 66) ||
+        ("Node.js" === y().name && S >= 6) ||
+        ("Electron" === y().name && S >= 1) ||
+        ("Safari" === y().name && S >= 13) ||
         y().name,
     "Chrome" === y().name ||
         "Safari" === y().name ||
-        ("Firefox" === y().name && C >= 80) ||
+        ("Firefox" === y().name && S >= 80) ||
         "Opera" === y().name ||
         y().name,
     "u" > typeof RTCPeerConnection && RTCPeerConnection.prototype.addTransceiver,
     "u" > typeof RTCRtpSender && ("transform" in RTCRtpSender.prototype || RTCRtpSender.prototype),
-    ("Chrome" === y().name && C >= 58) || ("Safari" === y().name && C >= 15) || y().name,
-    ("Chrome" === y().name && C >= 72) ||
-        ("Safari" === y().name && C >= 11) ||
-        ("Opera" === y().name && C >= 60) ||
+    ("Chrome" === y().name && S >= 58) || ("Safari" === y().name && S >= 15) || y().name,
+    ("Chrome" === y().name && S >= 72) ||
+        ("Safari" === y().name && S >= 11) ||
+        ("Opera" === y().name && S >= 60) ||
         y().name);
 let T = new d.Vy("LibDaveManager"),
     R = null,
-    E = {
+    b = {
         onRuntimeInitialized: () => {
             T.info("DAVE loaded");
         },
-    },
-    m = new d.Vy("EncryptionWorker");
+    };
+async function m() {
+    let e;
+    try {
+        e = await Promise.all([t.e("95625"), t.e("174086"), t.e("563197"), t.e("218269"), t.e("116566")]).then(
+            t.bind(t, 22389),
+        );
+    } catch (e) {
+        throw (T.error("Failed to load DAVE module", e), e);
+    }
+    try {
+        let r = await e.DaveModuleFactory(b);
+        return (T.info("Successfully initialized DAVE"), r);
+    } catch (e) {
+        throw (T.error("Failed to initialize DAVE", e), e);
+    }
+}
+let E = new d.Vy("EncryptionWorker");
 (0, d.$o)(d.gZ);
-let b = "uninitialized",
-    h = null,
-    w = new Map(),
+let h = "uninitialized",
+    w = null,
+    g = new Map(),
     A = new Map(),
-    g = [];
-function O(e) {
+    O = [];
+function P(e) {
     let { data: r } = e;
-    if ("initialized" !== b && r.type !== c.INITIALIZE) return void g.push(e);
+    if ("initialized" !== h && r.type !== c.INITIALIZE) return void O.push(e);
     switch (r.type) {
         case c.INITIALIZE:
-            P();
+            v();
             break;
         case c.RTC_TRANSFORM:
             _(r);
@@ -71,15 +87,15 @@ function O(e) {
                     i = !a && o === n.kDisabledVersion;
                 if (t === s.ENCRYPT) {
                     let e = (function () {
-                        if (null == h) {
+                        if (null == w) {
                             let e = new n.Encryptor();
                             (e.SetProtocolVersionChangedCallback(() => {
-                                v(e.GetProtocolVersion());
+                                D(e.GetProtocolVersion());
                             }),
-                                v(e.GetProtocolVersion()),
-                                (h = e));
+                                D(e.GetProtocolVersion()),
+                                (w = e));
                         }
-                        return h;
+                        return w;
                     })();
                     (e.SetPassthroughMode(i), e.SetKeyRatchet(a));
                 } else {
@@ -98,22 +114,22 @@ function O(e) {
                 let { userId: r, audioSsrc: t, videoSsrcs: n } = e,
                     o = [t, ...n];
                 for (let e of o) {
-                    let t = w.get(e);
+                    let t = g.get(e);
                     if (e > 0 && null != t && t !== r)
-                        return void m.error(`DAVE worker refusing SSRC update for ${r}, SSRC ${e} is owned by ${t}`);
+                        return void E.error(`DAVE worker refusing SSRC update for ${r}, SSRC ${e} is owned by ${t}`);
                 }
                 let a = A.get(r);
                 for (let e of (null == a && ((a = { audioSSRC: t, videoSSRCs: n, decryptor: null }), A.set(r, a)),
                 [a.audioSSRC, ...a.videoSSRCs]))
-                    o.includes(e) || w.get(e) !== r || w.delete(e);
-                for (let e of o) e > 0 && w.set(e, r);
+                    o.includes(e) || g.get(e) !== r || g.delete(e);
+                for (let e of o) e > 0 && g.set(e, r);
                 ((a.audioSSRC = t), (a.videoSSRCs = n));
             })(r);
             break;
         case c.UPDATE_CODECS:
             !(function (e) {
                 let { audioCodec: r, videoCodec: t } = e;
-                ((o = V(r)), (a = V(t)));
+                ((o = I(r)), (a = I(t)));
             })(r);
             break;
         case c.DESTROY_USER:
@@ -123,64 +139,42 @@ function O(e) {
                 if (null == t) return;
                 A.delete(r);
                 let { audioSSRC: n, videoSSRCs: o } = t;
-                for (let e of [n, ...o]) w.get(e) === r && w.delete(e);
+                for (let e of [n, ...o]) g.get(e) === r && g.delete(e);
             })(r);
             break;
         default:
-            throw (m.error("DAVE worker unknown message type"), Error("Unsupported message type"));
+            throw (E.error("DAVE worker unknown message type"), Error("Unsupported message type"));
     }
 }
-async function P() {
-    if ("uninitialized" === b)
-        for (let e of ((b = "initializing"),
-        (n = await (null != R
-            ? R
-            : (R = new Promise((e, r) => {
-                  Promise.all([t.e("95625"), t.e("174086"), t.e("563197"), t.e("218269"), t.e("116566")])
-                      .then(t.bind(t, 22389))
-                      .then((t) => {
-                          let { DaveModuleFactory: n } = t;
-                          n(E)
-                              .then((r) => {
-                                  (T.info("Successfully initialized DAVE"), e(r));
-                              })
-                              .catch((e) => {
-                                  (T.error("Failed to initialize DAVE", e), r(e));
-                              });
-                      })
-                      .catch((e) => {
-                          (T.error("Failed to load DAVE module", e), r(e));
-                      });
-              })))),
-        (b = "initialized"),
-        g))
-            O(e);
+async function v() {
+    if ("uninitialized" === h)
+        for (let e of ((h = "initializing"), (n = await (null != R ? R : (R = m()))), (h = "initialized"), O)) P(e);
 }
 function _(e) {
     let r,
         { operation: t, readable: n, writable: o } = e;
     switch (t) {
         case s.ENCRYPT:
-            r = D;
-            break;
-        case s.DECRYPT:
             r = k;
             break;
+        case s.DECRYPT:
+            r = V;
+            break;
         default:
-            (m.error("DAVE worker transform with unknown operation", t), (r = () => {}));
+            (E.error("DAVE worker transform with unknown operation", t), (r = () => {}));
     }
     let a = new TransformStream({ transform: r });
     n.pipeThrough(a).pipeTo(o);
 }
-function v(e) {
+function D(e) {
     postMessage({ type: f.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
 }
-function D(e, r) {
+function k(e, r) {
     try {
-        let t = h;
+        let t = w;
         if (null == t) return;
         let i = e.getMetadata().synchronizationSource;
-        if (null == i) return void m.warn("no ssrc found in frame metadata");
+        if (null == i) return void E.warn("no ssrc found in frame metadata");
         let l = (function (e, r, t) {
             if (0 === e.data.byteLength) return e;
             let i = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
@@ -204,19 +198,19 @@ function D(e, r) {
         if (null == l) return;
         r.enqueue(l);
     } catch (e) {
-        m.warn("error encrypting frame", e);
+        E.warn("error encrypting frame", e);
     }
 }
-function k(e, r) {
+function V(e, r) {
     try {
         let t = e.getMetadata().synchronizationSource;
-        if (null == t) return void m.warn("no ssrc found in frame metadata");
-        let o = w.get(t);
-        if (null == o) return void m.warn("no userId found for ssrc", t);
+        if (null == t) return void E.warn("no ssrc found in frame metadata");
+        let o = g.get(t);
+        if (null == o) return void E.warn("no userId found for ssrc", t);
         let a = A.get(o);
-        if (null == a) return void m.warn("no user found for userId", o);
+        if (null == a) return void E.warn("no user found for userId", o);
         let i = a.decryptor;
-        if (null == i) return void m.warn("no decryptor found for userId", o);
+        if (null == i) return void E.warn("no decryptor found for userId", o);
         let l = (function (e, r) {
             if (0 === e.data.byteLength) return e;
             let t = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
@@ -237,10 +231,10 @@ function k(e, r) {
         if (null == l) return;
         r.enqueue(l);
     } catch (e) {
-        m.warn("error decrypting frame", e);
+        E.warn("error decrypting frame", e);
     }
 }
-function V(e) {
+function I(e) {
     switch (e) {
         case "opus":
             return n.Codec.Opus;
@@ -259,7 +253,7 @@ function V(e) {
     }
 }
 ((self.onmessage = (e) => {
-    O(e);
+    P(e);
 }),
     (self.onrtctransform = (e) => {
         let r = e.transformer.options;

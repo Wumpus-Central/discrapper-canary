@@ -3,7 +3,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(664354),
+    l = n(51906),
     o = n(941861),
     d = n(844222),
     c = n(604121),
@@ -51,7 +51,7 @@ function I(e) {
         }
     }, [s, o, c]),
     r.useEffect(() => {
-        null != h.current && (!_.enabled && u ? h.current?.play().catch(l.tE) : h.current?.pause());
+        null != h.current && (!_.enabled && u ? (0, l.yO)(h.current?.play()) : h.current?.pause());
     }, [u, _.enabled]),
     _.enabled && null != a)
         ? (0, i.jsx)(A, { type: "image", src: a })

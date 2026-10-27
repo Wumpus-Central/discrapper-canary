@@ -712,18 +712,11 @@ function $(e, t) {
                     }
                     return Error(String(e));
                 })(i);
-                (o.setState({ error: e, isLoading: !1 }),
-                    d(e) && l > _.fails
-                        ? await new Promise((i, r) => {
-                              let a;
-                              _.fail(
-                                  () => {
-                                      A({ queryId: t, args: n, useStoreState: o, refetch: s }).then(i, r);
-                                  },
-                                  null == (a = H(e.retryAfter)) ? 0 : 1e3 * a,
-                              );
-                          })
-                        : null != u && o.setState({ failureLockedUntil: Date.now() + 1e3 * u }));
+                if ((o.setState({ error: e, isLoading: !1 }), d(e) && l > _.fails)) {
+                    let i;
+                    (await _.failAsync(null == (i = H(e.retryAfter)) ? 0 : 1e3 * i),
+                        await A({ queryId: t, args: n, useStoreState: o, refetch: s }));
+                } else null != u && o.setState({ failureLockedUntil: Date.now() + 1e3 * u });
             }
         }
     }

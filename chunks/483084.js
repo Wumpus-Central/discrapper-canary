@@ -26,11 +26,12 @@ function a(e) {
         }, [s, u, E]),
         i.useEffect(() => {
             let e = !1;
+            async function i() {
+                let t = await ("function" == typeof n ? n(_) : Promise.resolve(n));
+                e || (null != a && (t = t.map(a)), o((e) => ({ ...e, options: t, loading: !1 })));
+            }
             return (
-                ((t && null !== _ && s) || !s) &&
-                    ("function" == typeof n ? n(_) : Promise.resolve(n)).then((t) => {
-                        e || (null != a && (t = t.map(a)), o((e) => ({ ...e, options: t, loading: !1 })));
-                    }),
+                ((t && null !== _ && s) || !s) && i(),
                 () => {
                     e = !0;
                 }
