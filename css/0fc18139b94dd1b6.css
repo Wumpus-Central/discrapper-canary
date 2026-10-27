@@ -77,6 +77,59 @@
     width: fit-content
 }
 
+.body__6891d {
+    align-items: center;
+    background-color: color-mix(in srgb, var(--background-brand) 23%, #000);
+    border-start-end-radius: var(--radius-sm);
+    border-start-start-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--space-12);
+    height: 100%;
+    overflow: hidden;
+    padding-inline: var(--space-12) var(--space-16)
+}
+
+.productIcon__6891d {
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    flex: 0 0 auto;
+    height: 32px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 32px
+}
+
+.body__8b1f1 {
+    background-color: color-mix(in srgb, var(--background-brand) 23%, #000);
+    border-start-end-radius: var(--radius-sm);
+    border-start-start-radius: var(--radius-sm);
+    box-sizing: border-box;
+    margin-inline: calc(var(--space-8)*-1);
+    overflow: hidden;
+    position: relative
+}
+
+.media__8b1f1 {
+    aspect-ratio: 16/9;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.video__8b1f1 {
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s
+}
+
+.videoVisible__8b1f1 {
+    opacity: 1
+}
+
 .noFillPlaceholder__0d616 {
     inset-inline: 0;
     bottom: 100%;
@@ -154,6 +207,46 @@
     top: 0
 }
 
+.contentCollapsed__7004f {
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    z-index: 2
+}
+
+.contentCollapsedWrapper__7004f {
+    flex: 1 1 auto;
+    position: relative;
+    z-index: 2
+}
+
+.contentCollapsedInset__7004f {
+    padding: 14px 12px
+}
+
+.contentCollapsedExpanded__7004f {
+    pointer-events: none
+}
+
+.contentExpanded__24e2c {
+    box-sizing: border-box;
+    height: auto;
+    inset-inline-start: 0;
+    overflow: hidden;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.contentExpandedInset__24e2c {
+    padding: 12px
+}
+
 .wrapper_c4293b {
     overflow: hidden;
     pointer-events: none;
@@ -214,28 +307,4 @@
     border-radius: 8px 8px 0 0
 }
 
-.contentCollapsed__7004f {
-    box-sizing: border-box;
-    display: flex;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-    width: 100%;
-    z-index: 2
-}
-
-.contentCollapsedWrapper__7004f {
-    flex: 1 1 auto;
-    position: relative;
-    z-index: 2
-}
-
-.contentCollapsedInset__7004f {
-    padding: 14px 12px
-}
-
-.contentCollapsedExpanded__7004f {
-    pointer-events: none
-}
-
-/*# sourceMappingURL=e5a62e98a7d47040.css.map*/
+/*# sourceMappingURL=0fc18139b94dd1b6.css.map*/

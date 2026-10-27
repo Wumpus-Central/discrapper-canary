@@ -1,6 +1,6 @@
 n.d(t, {
     DX: () => k,
-    DZ: () => F,
+    DZ: () => B,
     Dq: () => R,
     LW: () => v,
     OQ: () => P,
@@ -13,6 +13,7 @@ n.d(t, {
     av: () => O,
     eA: () => L,
     gr: () => w,
+    iE: () => F,
     kO: () => M,
 });
 var i = n(132500),
@@ -376,6 +377,17 @@ function k(e) {
         sourceQuestContent: i,
     });
 }
-function F(e, t) {
+function F(e) {
+    let { adContentId: t, adCreativeType: n, questContent: i, sourceQuestContent: r, reason: a, impressionId: s } = e,
+        l = (0, p.fF)(i);
+    D({
+        adContentId: t,
+        adCreativeType: n,
+        event: m.HAw.QUEST_CONTENT_RENDERING_FAILURE,
+        properties: { content_id: l.content_id, content_name: l.content_name, reason: a, impression_id: s },
+        sourceQuestContent: r,
+    });
+}
+function B(e, t) {
     o.Ay.trackWithMetadata(m.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
 }
