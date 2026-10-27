@@ -3011,7 +3011,7 @@ let ig = u()(eF.bo, 200),
                     children: [
                         R || q ? null : th,
                         (0, l.jsx)("div", {
-                            className: o()(nm.Fb, D),
+                            className: o()(nm.Fb, D, { [nm.eW]: q && !R }),
                             onScroll: iE,
                             children: q ? (0, l.jsx)(en, { onBack: () => Q?.(!1), onSelectEmoji: tg }) : tT,
                         }),
