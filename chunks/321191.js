@@ -1,4 +1,4 @@
-(n.d(t, { A: () => e_ }), n(321073), n(938796));
+(n.d(t, { A: () => eu }), n(321073), n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(575593),
@@ -146,7 +146,7 @@ function H(e, t) {
                     delete P[e]?.[t ?? L]?.[i.skuId]);
             }),
             "guildId" in n ? b.get(e)?.set(n.guildId, n) : v.set(e, n),
-            eu.emitChange()));
+            ec.emitChange()));
 }
 function j() {
     (y.clear(), D.clear(), v.clear(), b.clear(), M.clear(), U.clear(), w.clear(), (B = !1));
@@ -256,7 +256,7 @@ function z(e) {
             badges: d,
             widgets: t.widgets?.map(k).filter(I.Vq),
             wishlistSettings: t.wishlist_settings,
-            profileReadState: (0, p.R8)(v.get(t.user.id)?.profileReadState, (0, p.CJ)(t.profile_read_state)),
+            profileReadState: (0, p.CJ)(t.profile_read_state),
             private: t.private,
         }),
         H(t.user.id),
@@ -399,12 +399,6 @@ function et(e) {
     v.set(t, { ...i, widgets: n.map(k).filter(I.Vq) });
 }
 function en(e) {
-    let { ownerId: t, ackedAt: n } = e,
-        i = v.get(t);
-    if (null == i) return !1;
-    v.set(t, { ...i, profileReadState: (0, p.R8)(i.profileReadState, n) });
-}
-function ei(e) {
     let { badges: t, ttlInSeconds: n, userId: i } = e;
     V = { userId: i, badges: t, expiresAtMs: Date.now() + 1e3 * n };
     let r = v.get(i);
@@ -413,23 +407,23 @@ function ei(e) {
         (X(e, V), v.set(i, { ...r, badges: e }));
     }
 }
-function er(e) {
+function ei(e) {
     let t = e.user.id;
-    return !((y.get(t)?.size ?? 0) > 0) && ed(t);
+    return !((y.get(t)?.size ?? 0) > 0) && eo(t);
+}
+function er(e) {
+    return [...v.keys()].reduce((e, t) => eo(t) || e, !1);
 }
 function ea(e) {
-    return [...v.keys()].reduce((e, t) => ed(t) || e, !1);
+    return eo(e.user.id);
 }
 function es(e) {
-    return ed(e.user.id);
+    return eo(e.relationship.id);
 }
-function el(e) {
-    return ed(e.relationship.id);
-}
-function eo() {
+function el() {
     (y.clear(), D.clear(), v.clear(), b.clear());
 }
-function ed(e) {
+function eo(e) {
     if (null == e) return !1;
     let t = v.get(e);
     if (null == t) return !1;
@@ -437,7 +431,7 @@ function ed(e) {
     let n = b.get(e);
     if (null != n) for (let e of n.values()) ((e.fetchStartedAt = 0), (e.fetchEndedAt = 0), (e.fetchError = void 0));
 }
-class ec extends A.A {
+class ed extends A.A {
     static displayName = "UserProfileStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -450,26 +444,25 @@ class ec extends A.A {
             USER_PROFILE_UPDATE_SUCCESS: J,
             USER_PROFILE_UPDATE_FAILURE: ee,
             WIDGET_PENDING_SAVE_SUCCESS: et,
-            PROFILE_READ_STATE_ACK: en,
-            USER_PROFILE_PIN_BADGES_ON_CLIENT: ei,
+            USER_PROFILE_PIN_BADGES_ON_CLIENT: en,
             MUTUAL_FRIENDS_FETCH_START: W,
             MUTUAL_FRIENDS_FETCH_SUCCESS: $,
             MUTUAL_FRIENDS_FETCH_FAILURE: Y,
-            USER_UPDATE: er,
-            GUILD_MEMBER_UPDATE: er,
-            GUILD_JOIN: ea,
-            GUILD_DELETE: ea,
-            INVITE_ACCEPT_SUCCESS: ea,
-            GUILD_MEMBER_ADD: es,
-            GUILD_MEMBER_REMOVE: es,
-            RELATIONSHIP_ADD: el,
-            RELATIONSHIP_REMOVE: el,
-            RELATIONSHIP_UPDATE: el,
+            USER_UPDATE: ei,
+            GUILD_MEMBER_UPDATE: ei,
+            GUILD_JOIN: er,
+            GUILD_DELETE: er,
+            INVITE_ACCEPT_SUCCESS: er,
+            GUILD_MEMBER_ADD: ea,
+            GUILD_MEMBER_REMOVE: ea,
+            RELATIONSHIP_ADD: es,
+            RELATIONSHIP_REMOVE: es,
+            RELATIONSHIP_UPDATE: es,
             LOGOUT: j,
         });
     }
     initialize() {
-        (this.waitFor(f.Ay), this.syncWith([c.default], eo));
+        (this.waitFor(f.Ay), this.syncWith([c.default], el));
     }
     isFetchingProfile(e, t) {
         let n = y.get(e);
@@ -516,7 +509,7 @@ class ec extends A.A {
         return v.get(e)?.profileReadState?.[t] ?? null;
     }
     loadCache = () => {
-        let e = this.readSnapshot(ec.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(ed.LATEST_SNAPSHOT_VERSION);
         null != e &&
             e.forEach((e) => {
                 let { userId: t, profile: n } = e;
@@ -527,9 +520,9 @@ class ec extends A.A {
         let e = _.default.getId(),
             t = v.get(e);
         return null != t
-            ? { version: ec.LATEST_SNAPSHOT_VERSION, data: [{ userId: e, profile: t }] }
-            : { version: ec.LATEST_SNAPSHOT_VERSION, data: [] };
+            ? { version: ed.LATEST_SNAPSHOT_VERSION, data: [{ userId: e, profile: t }] }
+            : { version: ed.LATEST_SNAPSHOT_VERSION, data: [] };
     }
 }
-let eu = new ec(),
-    e_ = eu;
+let ec = new ed(),
+    eu = ec;
