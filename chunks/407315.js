@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => b, Q9: () => O, W: () => w }), n(321073));
+(n.d(t, { Ay: () => b, Q9: () => w, W: () => O }), n(321073));
 var l = n(626551),
     i = n(635377),
     r = n.n(i),
@@ -271,7 +271,7 @@ function k(e) {
     j.reset();
 });
 let R = new (r())(T);
-function w(e, t) {
+function O(e, t) {
     let n = 0;
     for (let l of g.VW.nodes(e, {
         at: { anchor: { path: x.fP, offset: 0 }, focus: t },
@@ -285,8 +285,8 @@ function w(e, t) {
     }
     return n % 2 != 0;
 }
-function O(e) {
+function w(e) {
     if (null == e.selection) return !1;
     let t = g.ZF.start(e.selection);
-    return w(e, t);
+    return O(e, t);
 }

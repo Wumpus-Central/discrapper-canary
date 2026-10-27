@@ -1,7 +1,7 @@
-n.d(t, { A: () => r, R: () => i });
-var l = n(945810);
-let i = "VoiceMessageRecording",
-    r = (0, l.mj)({
+n.d(t, { A: () => a, R: () => r });
+var i = n(945810);
+let r = "VoiceMessageRecording",
+    a = (0, i.mj)({
         name: "2026-09-desktop-voice-message-recording",
         kind: "user",
         defaultConfig: { enabled: !1 },

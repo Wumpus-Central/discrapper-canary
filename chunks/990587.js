@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     b: "closeButton__47998",
     Qw: "art__47998",
     h_: "description__47998",

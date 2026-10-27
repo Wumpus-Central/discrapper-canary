@@ -24,15 +24,15 @@ var i,
     C = n(862482),
     S = n(821609),
     O = n(66834),
-    T = n(624793),
-    y = n(639245),
+    y = n(624793),
+    T = n(639245),
     k = n(188645),
     P = n(796774),
     _ = n(807348),
-    G = n(71393),
+    R = n(71393),
     L = n(725807);
 n(801541);
-var R = n(889137);
+var G = n(889137);
 n(980504);
 var M = n(105292),
     D =
@@ -79,7 +79,7 @@ function V(e) {
         a,
         { sound: r, channel: d, closePopout: u, refreshPosition: x, renderSoundButton: h } = e,
         j = "0" === r.guildId,
-        g = (0, o.bG)([G.A], () => G.A.getGuild(r.guildId)),
+        g = (0, o.bG)([R.A], () => R.A.getGuild(r.guildId)),
         p = !j && null != g,
         [N, I] = l.useState(),
         f = (0, A.t)({ location: "SoundmojiGuildInfo" }),
@@ -105,7 +105,7 @@ function V(e) {
                 buttonType: l.useMemo(() => (t || !i ? 2 : n ? (p || null == N ? 2 : 0) : 1), [t, n, i, p, N]),
                 description: l.useMemo(() => {
                     let e = null != N;
-                    return (0, R.YW)({
+                    return (0, G.YW)({
                         hasSoundmojiPermissions: n,
                         isInGuild: p,
                         isGuildDiscoverable: e,
@@ -146,7 +146,7 @@ function V(e) {
         w = O === D.JOIN_GUILD,
         U = !j && C,
         V = l.useMemo(
-            () => (p ? T.GO.createFromGuildRecord(g) : null != N ? T.GO.createFromDiscoverableGuild(N) : void 0),
+            () => (p ? y.GO.createFromGuildRecord(g) : null != N ? y.GO.createFromDiscoverableGuild(N) : void 0),
             [g, p, N],
         );
     return U
@@ -181,7 +181,7 @@ function V(e) {
                                       }),
                                       (0, s.jsx)("div", {
                                           className: z.Ff,
-                                          children: (0, s.jsx)(y.G7, {
+                                          children: (0, s.jsx)(T.G7, {
                                               expressionSourceGuild: V,
                                               hasJoinedExpressionSourceGuild: p,
                                               isDisplayingJoinGuildButtonInPopout: w,

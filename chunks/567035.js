@@ -1,57 +1,57 @@
-(a.d(t, { A: () => m, q: () => g }), a(321073));
-var n = a(435558),
-    s = a.n(n),
-    d = a(334738),
-    r = a(591552),
-    l = a(863005),
-    u = a(734057),
-    c = a(808728),
-    i = a(573163),
-    o = a(174459),
-    p = a(935208),
-    h = a(652215),
-    A = a(790782);
-function I(e) {
+(n.d(t, { A: () => p, q: () => I }), n(321073));
+var i = n(435558),
+    r = n.n(i),
+    a = n(334738),
+    s = n(591552),
+    l = n(863005),
+    o = n(734057),
+    d = n(808728),
+    c = n(573163),
+    u = n(174459),
+    _ = n(935208),
+    E = n(652215),
+    A = n(790782);
+function h(e) {
     return e.map((e) => ({
         channelId: e,
         readStateType: A.P.CHANNEL,
-        messageId: u.A.getChannel(e)?.isForumLikeChannel()
-            ? p.default.fromTimestamp(Date.now())
-            : i.Ay.lastMessageId(e),
+        messageId: o.A.getChannel(e)?.isForumLikeChannel()
+            ? _.default.fromTimestamp(Date.now())
+            : c.Ay.lastMessageId(e),
     }));
 }
-function f(e, t, a) {
-    return (o.default.track(h.HAw.MARK_AS_READ, { source: t, type: "guild" }), (0, d.Uq)(e, a));
+function f(e, t, n) {
+    return (u.default.track(E.HAw.MARK_AS_READ, { source: t, type: "guild" }), (0, a.Uq)(e, n));
 }
-function g(e, t, a) {
-    return f(I(e), t, a);
+function I(e, t, n) {
+    return f(h(e), t, n);
 }
-function m(e, t, a) {
-    let n = I(
-        s().flatMap(e, (e) => {
-            let t = c.Ay.getSelectableChannelIds(e),
-                a = [...t, ...c.Ay.getVocalChannelIds(e)],
-                n = l.A.getActiveJoinedThreadsForGuild(e);
+function p(e, t, n) {
+    let i = h(
+        r().flatMap(e, (e) => {
+            let t = d.Ay.getSelectableChannelIds(e),
+                n = [...t, ...d.Ay.getVocalChannelIds(e)],
+                i = l.A.getActiveJoinedThreadsForGuild(e);
             for (let e of t) {
-                let t = n[e] ?? {};
-                for (let e in t) a.push(e);
+                let t = i[e] ?? {};
+                for (let e in t) n.push(e);
             }
-            return a;
+            return n;
         }),
     );
     return (
         e.forEach((e) => {
-            (n.push({
-                channelId: p.default.cast(e),
+            (i.push({
+                channelId: _.default.cast(e),
                 readStateType: A.P.GUILD_EVENT,
-                messageId: i.Ay.lastMessageId(e, A.P.GUILD_EVENT),
+                messageId: c.Ay.lastMessageId(e, A.P.GUILD_EVENT),
             }),
-                n.push({
-                    channelId: p.default.cast(e),
+                i.push({
+                    channelId: _.default.cast(e),
                     readStateType: A.P.GUILD_ONBOARDING_QUESTION,
-                    messageId: r.A.ackIdForGuild(e),
+                    messageId: s.A.ackIdForGuild(e),
                 }));
         }),
-        f(n, t, a)
+        f(i, t, n)
     );
 }

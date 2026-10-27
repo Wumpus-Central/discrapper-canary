@@ -1,124 +1,124 @@
-(i.d(e, {
-    $x: () => U,
-    AO: () => R,
-    MO: () => b,
-    YB: () => y,
-    oI: () => k,
-    p9: () => A,
-    sl: () => K,
+(n.d(t, {
+    $x: () => L,
+    AO: () => S,
+    MO: () => R,
+    YB: () => g,
+    oI: () => N,
+    p9: () => O,
+    sl: () => C,
     uK: () => v,
-    vr: () => P,
-    x5: () => m,
-    zk: () => f,
+    vr: () => b,
+    x5: () => y,
+    zk: () => m,
 }),
-    i(321073));
-var r = i(435558),
-    s = i.n(r),
-    a = i(636537),
-    c = i(73153),
-    n = i(157559),
-    d = i(268429),
-    o = i(276602),
-    u = i(773669),
-    l = i(594061),
-    S = i(919638),
-    C = i(287809),
-    E = i(371794),
-    h = i(750385),
-    _ = i(378058),
-    I = i(652215),
-    p = i(355097),
-    T = i(105292);
-async function f(t, e) {
-    let { body: i } = await (0, E.aP)({ url: I.Rsh.STICKER_PACK(t), rejectWithError: (0, a.fT)() });
-    return (c.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: t, pack: i, ingestStickers: e }), i);
+    n(321073));
+var i = n(435558),
+    r = n.n(i),
+    a = n(636537),
+    s = n(73153),
+    l = n(157559),
+    o = n(268429),
+    d = n(276602),
+    c = n(773669),
+    u = n(594061),
+    _ = n(919638),
+    E = n(287809),
+    A = n(371794),
+    h = n(750385),
+    f = n(378058),
+    I = n(652215),
+    p = n(355097),
+    T = n(105292);
+async function m(e, t) {
+    let { body: n } = await (0, A.aP)({ url: I.Rsh.STICKER_PACK(e), rejectWithError: (0, a.fT)() });
+    return (s.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: e, pack: n, ingestStickers: t }), n);
 }
-async function y() {
-    let { locale: t = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+async function g() {
+    let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (h.A.isFetchingStickerPacks || h.A.hasLoadedStickerPacks) return;
-    c.h.dispatch({ type: "STICKER_PACKS_FETCH_START" });
+    s.h.dispatch({ type: "STICKER_PACKS_FETCH_START" });
     let {
-        body: { sticker_packs: e },
-    } = await a.Bo.get({ url: I.Rsh.STICKER_PACKS, query: { locale: t }, rejectWithError: (0, a.fT)() });
-    c.h.dispatch({ type: "STICKER_PACKS_FETCH_SUCCESS", packs: e });
+        body: { sticker_packs: t },
+    } = await a.Bo.get({ url: I.Rsh.STICKER_PACKS, query: { locale: e }, rejectWithError: (0, a.fT)() });
+    s.h.dispatch({ type: "STICKER_PACKS_FETCH_SUCCESS", packs: t });
 }
-async function R(t) {
-    let { body: e } = await a.Bo.get({ url: I.Rsh.STICKER(t), rejectWithError: (0, a.fT)() });
-    if ((0, _.Xw)(e)) c.h.dispatch({ type: "GUILD_STICKER_FETCH_SUCCESS", sticker: e });
-    else if ((0, _.FD)(e)) c.h.dispatch({ type: "PACK_STICKER_FETCH_SUCCESS", sticker: e });
+async function S(e) {
+    let { body: t } = await a.Bo.get({ url: I.Rsh.STICKER(e), rejectWithError: (0, a.fT)() });
+    if ((0, f.Xw)(t)) s.h.dispatch({ type: "GUILD_STICKER_FETCH_SUCCESS", sticker: t });
+    else if ((0, f.FD)(t)) s.h.dispatch({ type: "PACK_STICKER_FETCH_SUCCESS", sticker: t });
     else throw Error("Invalid sticker type");
 }
-async function k(t, e) {
-    let { body: i } = await a.Bo.get({ url: I.Rsh.GUILD_STICKER_PACKS(t), rejectWithError: (0, a.fT)(), signal: e });
-    c.h.dispatch({
+async function N(e, t) {
+    let { body: n } = await a.Bo.get({ url: I.Rsh.GUILD_STICKER_PACKS(e), rejectWithError: (0, a.fT)(), signal: t });
+    s.h.dispatch({
         type: "GUILD_STICKERS_FETCH_SUCCESS",
-        guildId: t,
-        stickers: i.map((t) => (null != t.user ? { ...t, user_id: t.user.id, user: t.user } : t)),
+        guildId: e,
+        stickers: n.map((e) => (null != e.user ? { ...e, user_id: e.user.id, user: e.user } : e)),
     });
 }
-async function K(t) {
-    await a.Bo.del({ url: I.Rsh.GUILD_STICKER(t.guild_id, t.id), rejectWithError: (0, a.fT)() });
+async function C(e) {
+    await a.Bo.del({ url: I.Rsh.GUILD_STICKER(e.guild_id, e.id), rejectWithError: (0, a.fT)() });
 }
-async function A(t) {
-    let { guildId: e } = t,
-        i = await a.Bo.post({
-            url: I.Rsh.GUILD_STICKER_PACKS(e),
-            body: "web" === t.platform ? t.body : void 0,
+async function O(e) {
+    let { guildId: t } = e,
+        n = await a.Bo.post({
+            url: I.Rsh.GUILD_STICKER_PACKS(t),
+            body: "web" === e.platform ? e.body : void 0,
             fields:
-                "mobile" === t.platform
+                "mobile" === e.platform
                     ? [
-                          { name: "name", value: t.name },
-                          { name: "tags", value: t.tags },
-                          { name: "description", value: t.description },
+                          { name: "name", value: e.name },
+                          { name: "tags", value: e.tags },
+                          { name: "description", value: e.description },
                       ]
                     : void 0,
             attachments:
-                "mobile" === t.platform
-                    ? [{ name: "file", file: { uri: t.uri, name: t.name, type: t.mimeType } }]
+                "mobile" === e.platform
+                    ? [{ name: "file", file: { uri: e.uri, name: e.name, type: e.mimeType } }]
                     : void 0,
-            headers: d.A.buildHeadersForMd5(t.originalMd5),
+            headers: o.A.buildHeadersForMd5(e.originalMd5),
             rejectWithError: (0, a.fT)(),
         });
     return (
-        c.h.dispatch({
+        s.h.dispatch({
             type: "GUILD_STICKERS_CREATE_SUCCESS",
-            guildId: e,
-            sticker: { ...i.body, user_id: C.default.getCurrentUser()?.id },
+            guildId: t,
+            sticker: { ...n.body, user_id: E.default.getCurrentUser()?.id },
         }),
-        i.body
+        n.body
     );
 }
-async function b(t, e, i) {
-    return (await a.Bo.patch({ url: I.Rsh.GUILD_STICKER(t, e), body: i, rejectWithError: (0, a.fT)() })).body;
+async function R(e, t, n) {
+    return (await a.Bo.patch({ url: I.Rsh.GUILD_STICKER(e, t), body: n, rejectWithError: (0, a.fT)() })).body;
 }
-function U(t, e, i) {
-    c.h.dispatch({ type: "ADD_STICKER_PREVIEW", channelId: t, sticker: e, draftType: i });
+function L(e, t, n) {
+    s.h.dispatch({ type: "ADD_STICKER_PREVIEW", channelId: e, sticker: t, draftType: n });
 }
-function m(t, e) {
-    c.h.dispatch({ type: "CLEAR_STICKER_PREVIEW", channelId: t, draftType: e });
+function y(e, t) {
+    s.h.dispatch({ type: "CLEAR_STICKER_PREVIEW", channelId: e, draftType: t });
 }
-function g(t) {
-    return S.A.totalUnavailableGuilds > 0 || !o.A.isConnected() ? t : t.filter((t) => null != h.A.getStickerById(t));
+function D(e) {
+    return _.A.totalUnavailableGuilds > 0 || !d.A.isConnected() ? e : e.filter((e) => null != h.A.getStickerById(e));
 }
-function v(t) {
-    l.bW.updateAsync(
+function v(e) {
+    u.bW.updateAsync(
         "favoriteStickers",
-        (e) =>
-            ((e.stickerIds = g(e.stickerIds)), s().size(e.stickerIds) >= 250)
-                ? (n.A.show({
+        (t) =>
+            ((t.stickerIds = D(t.stickerIds)), r().size(t.stickerIds) >= 250)
+                ? (l.A.show({
                       title: T.intl.string(T.t["+XYXtZ"]),
                       body: T.intl.formatToPlainString(T.t.JaIyFi, { count: 250 }),
                   }),
                   !1)
-                : !e.stickerIds.includes(t) && void e.stickerIds.push(t),
+                : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
         p.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function P(t) {
-    l.bW.updateAsync(
+function b(e) {
+    u.bW.updateAsync(
         "favoriteStickers",
-        (e) => {
-            ((e.stickerIds = e.stickerIds.filter((e) => e !== t)), (e.stickerIds = g(e.stickerIds)));
+        (t) => {
+            ((t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = D(t.stickerIds)));
         },
         p.Sb.INFREQUENT_USER_ACTION,
     );

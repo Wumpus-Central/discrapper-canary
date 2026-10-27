@@ -45,8 +45,8 @@ function N(e) {
             toggleRequestToSpeakSidebar: f,
             ...N
         } = e,
-        { parentAnalyticsLocation: _ } = (0, u.Ay)(),
-        { disabled: T } = N,
+        { parentAnalyticsLocation: T } = (0, u.Ay)(),
+        { disabled: _ } = N,
         b = l.useRef(null),
         S = (0, o.bG)([d.A], () => d.A.getChatOpen(t), [t]),
         {
@@ -70,8 +70,8 @@ function N(e) {
             );
         })(t),
         L = l.useCallback(() => {
-            ((0, A.X)(_, A.O.CHAT, !S), h?.(), !S && g && f?.(), c.A.updateChatOpen(t, !S));
-        }, [t, S, h, g, f, _]),
+            ((0, A.X)(T, A.O.CHAT, !S), h?.(), !S && g && f?.(), c.A.updateChatOpen(t, !S));
+        }, [t, S, h, g, f, T]),
         M = l.useCallback(
             (e) => {
                 let { className: n } = e;
@@ -82,7 +82,7 @@ function N(e) {
         D = l.useCallback(() => {
             b.current?.focus();
         }, []);
-    (0, x.Vo)({ event: E.jej.FOCUS_CHAT_BUTTON, handler: T ? null : D });
+    (0, x.Vo)({ event: E.jej.FOCUS_CHAT_BUTTON, handler: _ ? null : D });
     let [G, P] = l.useState(!1),
         k = l.useCallback(() => {
             m && P(!0);
@@ -100,7 +100,7 @@ function N(e) {
                 }
             );
         }, [G]));
-    let U = [(n = m && T ? j.intl.string(j.t.DPgc5h) : S ? j.intl.string(j.t.nthdxB) : j.intl.string(j.t["5KxXrK"]))];
+    let U = [(n = m && _ ? j.intl.string(j.t.DPgc5h) : S ? j.intl.string(j.t.nthdxB) : j.intl.string(j.t["5KxXrK"]))];
     return (
         R > 0 && U.push(j.intl.formatToPlainString(j.t["3l1GOx"], { mentionCount: R })),
         O > 0 && U.push(j.intl.string(j.t.x5zAGZ)),

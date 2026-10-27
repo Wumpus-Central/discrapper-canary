@@ -1,36 +1,36 @@
-n.d(e, { X: () => c, i: () => d });
+n.d(t, { X: () => d, i: () => c });
 var i = n(477900);
 n(582128);
 var a = n(17928),
-    l = n(192308),
-    s = n(952818),
+    s = n(192308),
+    l = n(952818),
     r = n(560595),
     o = n(760751),
     u = n(723702);
-function d(t) {
-    let e = (0, a.bG)([o.A], () => (null != t ? o.A.getGameByApplication(t)?.id : void 0), [t]);
+function c(e) {
+    let t = (0, a.bG)([o.A], () => (null != e ? o.A.getGameByApplication(e)?.id : void 0), [e]);
     return (0, a.bG)(
-        [s.Ay, o.A],
+        [l.Ay, o.A],
         () => {
-            let n = s.Ay.getVisibleRunningGames();
+            let n = l.Ay.getVisibleRunningGames();
             function i(n) {
-                return null != t && null != n && (n === t.id || (null != e && n === e));
+                return null != e && null != n && (n === e.id || (null != t && n === t));
             }
             return (
-                n.find((t) => {
-                    let { id: e } = t;
-                    return i(e);
-                }) ?? n.find((t) => null == t.id && i(o.A.findGame(t)?.id))
+                n.find((e) => {
+                    let { id: t } = e;
+                    return i(t);
+                }) ?? n.find((e) => null == e.id && i(o.A.findGame(e)?.id))
             );
         },
-        [t, e],
+        [e, t],
     );
 }
-function c(t, e) {
+function d(e, t) {
     (0, u.isWindows)()
-        ? (0, r.A)(t.pid)
-        : (0, l.openModalLazy)(async () => {
-              let { default: t } = await Promise.all([
+        ? (0, r.A)(e.pid)
+        : (0, s.openModalLazy)(async () => {
+              let { default: e } = await Promise.all([
                   n.e("249169"),
                   n.e("473782"),
                   n.e("553464"),
@@ -49,6 +49,6 @@ function c(t, e) {
                   n.e("191782"),
                   n.e("190088"),
               ]).then(n.bind(n, 266536));
-              return (n) => (0, i.jsx)(t, { ...n, analyticsLocations: e });
+              return (n) => (0, i.jsx)(e, { ...n, analyticsLocations: t });
           });
 }

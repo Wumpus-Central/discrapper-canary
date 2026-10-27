@@ -21,8 +21,8 @@ var i = t(477900),
     v = t(392054),
     I = t(993748),
     N = t(111042),
-    _ = t(939635),
-    T = t(267102),
+    T = t(939635),
+    _ = t(267102),
     b = t(246356),
     S = t(111162),
     y = t(174459),
@@ -64,7 +64,7 @@ function U(e) {
         ? null
         : (null != g.id &&
               null != g.image_hash &&
-              (t = (0, _.DH)({ itemId: g.id, hash: g.image_hash, containerWidth: 584 })),
+              (t = (0, T.DH)({ itemId: g.id, hash: g.image_hash, containerWidth: 584 })),
           (0, i.jsxs)(u.D, {
               className: G.V8,
               innerRef: x,
@@ -102,9 +102,9 @@ function V(e) {
         l.useEffect(() => {
             s || a();
         }, [a, s]));
-    let _ = (0, T.Us)(),
+    let T = (0, _.Us)(),
         { analyticsLocations: S, newestAnalyticsLocation: P } = (0, f.Ay)(C.A.ACTIVITIES_MINI_SHELF),
-        V = _ === M.BRT.POPOUT,
+        V = T === M.BRT.POPOUT,
         B = ((n = t.getGuildId()), (0, R.A)({ guildId: n }).slice(0, 5));
     l.useEffect(() => {
         let e = setTimeout(() => O.LK(), 1e3);

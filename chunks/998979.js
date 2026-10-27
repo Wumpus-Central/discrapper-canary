@@ -1,37 +1,37 @@
-n.d(t, { A: () => a });
-var l = n(17928),
-    r = n(73153),
-    s = n(280450);
-let i = { users: {} };
-class u extends l.Ay.DeviceSettingsStore {
+n.d(t, { A: () => o });
+var r = n(17928),
+    s = n(73153),
+    i = n(280450);
+let u = { users: {} };
+class l extends r.Ay.DeviceSettingsStore {
     static displayName = "ConjureDevicePermissionStore";
     static persistKey = "ConjureDevicePermissionStore";
     initialize(e) {
-        (this.waitFor(s.default), (i = { users: e?.users ?? {} }));
+        (this.waitFor(i.default), (u = { users: e?.users ?? {} }));
     }
     getDecision(e, t) {
-        let n = s.default.getId();
-        return null == n ? null : (i.users[n]?.[e]?.[t] ?? null);
+        let n = i.default.getId();
+        return null == n ? null : (u.users[n]?.[e]?.[t] ?? null);
     }
     getUserAgnosticState() {
-        return i;
+        return u;
     }
 }
-let a = new u(r.h, {
+let o = new l(s.h, {
     CONJURE_DEVICE_PERMISSIONS_DECIDE: function (e) {
-        let { applicationId: t, permissions: n, allowed: l } = e,
-            r = s.default.getId();
-        if (null == r) return !1;
-        let u = ((i.users[r] ??= {})[t] ??= {});
-        for (let e of n) u[e] = l ? "granted" : "denied";
-        i = { ...i };
+        let { applicationId: t, permissions: n, allowed: r } = e,
+            s = i.default.getId();
+        if (null == s) return !1;
+        let l = ((u.users[s] ??= {})[t] ??= {});
+        for (let e of n) l[e] = r ? "granted" : "denied";
+        u = { ...u };
     },
     CONJURE_DEVICE_PERMISSIONS_RESET: function (e) {
         let { applicationId: t, permissions: n } = e,
-            l = s.default.getId(),
-            r = null != l ? i.users[l]?.[t] : null;
-        if (null == r || !n.some((e) => null != r[e])) return !1;
-        for (let e of n) delete r[e];
-        i = { ...i };
+            r = i.default.getId(),
+            s = null != r ? u.users[r]?.[t] : null;
+        if (null == s || !n.some((e) => null != s[e])) return !1;
+        for (let e of n) delete s[e];
+        u = { ...u };
     },
 });

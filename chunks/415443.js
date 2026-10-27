@@ -1,6 +1,6 @@
 n.d(t, { A: () => r });
 var i = n(58703),
-    l = n(105292);
+    s = n(105292);
 function r(e, t) {
     if (null == e || "" === e.trim()) return null;
     let n = Number(e);
@@ -8,10 +8,10 @@ function r(e, t) {
     let r = new Date(n);
     if (Number.isNaN(r.getTime())) return null;
     if (t) return (0, i.mk)(r, !0);
-    let s = { dateStyle: "short", timeStyle: "short" };
+    let l = { dateStyle: "short", timeStyle: "short" };
     try {
-        return r.toLocaleString(l.intl.currentLocale, s);
+        return r.toLocaleString(s.intl.currentLocale, l);
     } catch {
-        return r.toLocaleString(void 0, s);
+        return r.toLocaleString(void 0, l);
     }
 }

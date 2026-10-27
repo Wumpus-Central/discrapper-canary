@@ -31,8 +31,8 @@ function _(e) {
 }
 var k = n(826745),
     R = n(442433),
-    w = n(721768),
-    O = n(555424),
+    O = n(721768),
+    w = n(555424),
     M = n(723702),
     L = n(677134),
     P = n(652215),
@@ -47,7 +47,7 @@ class V extends i.PureComponent {
             this._ref?.setSelection(e.length, e.length);
         }),
             null != f.A.getActiveCommand(this.props.channel.id) &&
-                w.Gf({ channelId: this.props.channel.id, command: null, section: null }));
+                O.Gf({ channelId: this.props.channel.id, command: null, section: null }));
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection &&
@@ -64,7 +64,7 @@ class V extends i.PureComponent {
         for (; n > 0 && !U.test(t[n - 1]);) n--;
         let i = e.selectionEnd;
         for (; i < t.length && !U.test(t[i]);) i++;
-        let r = (0, O.h3)(t.slice(n, l), t.slice(n, i));
+        let r = (0, w.h3)(t.slice(n, l), t.slice(n, i));
         return { word: r.word, fullWord: r.fullWord, isAtStart: 0 === n && !r.didTrimPrefix };
     }
     focus = () => {
@@ -416,7 +416,7 @@ function eS(e) {
             onResize: _,
             onFocus: k,
             onBlur: R,
-            onKeyDown: w,
+            onKeyDown: O,
             onKeyUp: M,
             onTab: L,
             onEnter: U,
@@ -438,8 +438,8 @@ function eS(e) {
             "aria-controls": e_,
             "aria-invalid": ek,
             "aria-describedby": eR,
-            "aria-labelledby": ew,
-            "aria-autocomplete": eO,
+            "aria-labelledby": eO,
+            "aria-autocomplete": ew,
         } = d,
         eM = i.useRef(null),
         eL = i.useRef(null),
@@ -590,7 +590,7 @@ function eS(e) {
                     if (en.ug.test(e)) break;
                     ((o += e), u++);
                 }
-                let d = (0, O.h3)(s, o);
+                let d = (0, w.h3)(s, o);
                 return {
                     word: d.word,
                     fullWord: d.fullWord,
@@ -799,7 +799,7 @@ function eS(e) {
             editor: eB,
             channel: g,
             disableEnterToSubmit: eb,
-            onKeyDown: w,
+            onKeyDown: O,
             onKeyUp: M,
             onTab: L,
             onEnter: U,
@@ -969,10 +969,10 @@ function eS(e) {
                     "aria-expanded": eN,
                     "aria-activedescendant": ej,
                     "aria-controls": e_,
-                    "aria-labelledby": ew,
+                    "aria-labelledby": eO,
                     "aria-describedby": eR,
                     "aria-invalid": ek,
-                    "aria-autocomplete": eO,
+                    "aria-autocomplete": ew,
                     "aria-required": v,
                 }),
             }),

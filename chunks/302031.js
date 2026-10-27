@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => P, Bs: () => T });
+n.d(t, { Ay: () => P, Bs: () => y });
 var i,
     s = n(477900),
     l = n(582128),
@@ -75,8 +75,8 @@ function O(e) {
               }),
           });
 }
-let T = l.createContext(!1);
-class y extends l.PureComponent {
+let y = l.createContext(!1);
+class T extends l.PureComponent {
     state = { visible: !1 };
     removeObscurity = (e) => {
         let { visible: t } = this.state;
@@ -116,7 +116,7 @@ class y extends l.PureComponent {
                 isVerifiedTeen: c,
             } = this.props,
             { visible: m } = this.state,
-            x = (0, s.jsx)(T.Consumer, {
+            x = (0, s.jsx)(y.Consumer, {
                 children: (x) => {
                     let h = x || m || !l;
                     return I._K.has(a) && !t
@@ -168,7 +168,7 @@ class y extends l.PureComponent {
                 isVerifiedTeen: o,
             } = this.props,
             { visible: d } = this.state;
-        return (0, s.jsx)(T.Consumer, {
+        return (0, s.jsx)(y.Consumer, {
             children: (c) => {
                 let m = c || d;
                 return I._K.has(a)
@@ -219,7 +219,7 @@ class y extends l.PureComponent {
                 onMouseLeave: d,
             } = this.props,
             { visible: c } = this.state,
-            m = (0, s.jsx)(T.Consumer, {
+            m = (0, s.jsx)(y.Consumer, {
                 children: (m) => {
                     let x = m || c || !i,
                         h = l.Children.toArray(e(x)),
@@ -290,7 +290,7 @@ class y extends l.PureComponent {
 function k(e) {
     let t = (0, N._R)() && null != e.reason && I.tY.has(e.reason),
         n = (0, p.yM)();
-    return (0, s.jsx)(y, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
+    return (0, s.jsx)(T, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
 }
 ((k.Types = A), (k.Reasons = I.Oc));
 let P = k;

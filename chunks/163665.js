@@ -1,20 +1,20 @@
-n.d(t, { I: () => s });
+n.d(t, { I: () => l });
 var i = n(477900),
-    l = n(582128),
+    s = n(582128),
     r = n(62617);
-function s(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: s, role: a, width: o, height: d, className: c, style: u } = e,
-        A = l.useMemo(
-            () => (0, r.H)({ width: o, height: d, intrinsicWidth: 288, intrinsicHeight: 192, style: u }),
-            [o, d, u],
+function l(e) {
+    let { alt: t, ariaLabel: n, ariaHidden: l, role: a, width: o, height: c, className: d, style: u } = e,
+        h = s.useMemo(
+            () => (0, r.H)({ width: o, height: c, intrinsicWidth: 288, intrinsicHeight: 192, style: u }),
+            [o, c, u],
         );
     return (0, i.jsx)("img", {
-        style: A,
+        style: h,
         src: "https://cdn.discordapp.com/assets/content/804d87fc1c1330e6413159eaacc359de89bdfbec7b4602532b1bd074868783c8.svg",
-        className: (0, r.Z)(c),
+        className: (0, r.Z)(d),
         alt: t,
         "aria-label": n,
-        "aria-hidden": s,
+        "aria-hidden": l,
         role: a ?? "img",
     });
 }

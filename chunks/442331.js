@@ -1,29 +1,29 @@
 n.d(t, { A: () => o });
 var l = n(17928),
-    r = n(73153);
-let s = new Map(),
-    i = new Map(),
-    u = [];
-class a extends l.Ay.Store {
+    a = n(73153);
+let r = new Map(),
+    s = new Map(),
+    i = [];
+class u extends l.Ay.Store {
     getSettings(e) {
-        return s.get(e) ?? null;
+        return r.get(e) ?? null;
     }
     getLoadState(e) {
-        return i.get(e) ?? null;
+        return s.get(e) ?? null;
     }
     getDeclaredConnections(e) {
-        return s.get(e)?.connections ?? u;
+        return r.get(e)?.connections ?? i;
     }
 }
-let o = new a(r.h, {
+let o = new u(a.h, {
     CONJURE_SETTINGS_SET: function (e) {
         let { projectId: t, settings: n } = e;
-        (s.set(t, n), i.set(t, "loaded"));
+        (r.set(t, n), s.set(t, "loaded"));
     },
     CONJURE_SETTINGS_LOAD_STATE_SET: function (e) {
         let { projectId: t, state: n } = e,
-            l = i.get(t);
+            l = s.get(t);
         if (l === n || ("loaded" === l && "loaded" !== n)) return !1;
-        i.set(t, n);
+        s.set(t, n);
     },
 });

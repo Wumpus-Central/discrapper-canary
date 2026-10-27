@@ -1,13 +1,13 @@
-t.d(n, { A: () => y, _: () => g });
-var e = t(477900);
-t(582128);
-var i = t(477782),
-    u = t(138134),
-    c = t(627363),
-    r = t(587895),
-    o = t(928658),
-    a = t(858899),
-    d = t(105292);
+e.d(n, { A: () => y, _: () => g });
+var t = e(477900);
+e(582128);
+var i = e(477782),
+    u = e(138134),
+    c = e(627363),
+    r = e(587895),
+    o = e(928658),
+    a = e(858899),
+    d = e(105292);
 async function s(l) {
     let n = r.A.getApplication(l);
     if (null != n && r.A.isHydrated(l)) return n;
@@ -18,27 +18,27 @@ async function s(l) {
     }
     return r.A.getApplication(l);
 }
-async function A(l, n, t) {
-    let e = await s(l);
-    null == e
+async function A(l, n, e) {
+    let t = await s(l);
+    null == t
         ? (0, a.P0)({ text: d.intl.string(d.t.F8FvUy), variant: "critical" })
         : (0, o.r3)({
-              application: e,
-              entrypoint: t,
+              application: t,
+              entrypoint: e,
               contextualGuildId: n.getGuildId() ?? void 0,
               contextualChannelId: n.id,
           });
 }
-var p = t(652215);
+var p = e(652215);
 let g = "app_channel_context_menu";
 function y(l, n) {
-    let t = l.type === p.rbe.GUILD_APP ? l.getApplicationId() : null;
-    return null == t
+    let e = l.type === p.rbe.GUILD_APP ? l.getApplicationId() : null;
+    return null == e
         ? null
-        : (0, e.jsx)(i.Dr, {
+        : (0, t.jsx)(i.Dr, {
               id: "report-app",
               label: d.intl.string(d.t.NgA5vp),
-              action: () => A(t, l, n),
+              action: () => A(e, l, n),
               icon: u.FlagIcon,
               leadingAccessory: { type: "icon", icon: u.FlagIcon },
               color: "danger",

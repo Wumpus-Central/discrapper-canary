@@ -1,4 +1,4 @@
-n.d(t, { A: () => G });
+n.d(t, { A: () => R });
 var i = n(477900);
 n(582128);
 var s = n(503698),
@@ -25,12 +25,12 @@ var s = n(503698),
     C = n(87221),
     S = n(173936),
     O = n(323384),
-    T = n(367332),
-    y = n(91166),
+    y = n(367332),
+    T = n(91166),
     k = n(936755),
     P = n(105292),
     _ = n(147190);
-let G = function (e) {
+let R = function (e) {
     let { iconType: t, children: n } = e,
         s = null;
     switch (t) {
@@ -237,7 +237,7 @@ let G = function (e) {
             });
             break;
         case "app-nsfw":
-            s = (0, i.jsx)(T.c, {
+            s = (0, i.jsx)(y.c, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -245,7 +245,7 @@ let G = function (e) {
             });
             break;
         case "app-spoiler":
-            s = (0, i.jsx)(y.W, {
+            s = (0, i.jsx)(T.W, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,

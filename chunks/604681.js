@@ -1,25 +1,25 @@
-a.d(t, { A: () => l });
-var s = a(73153);
-let l = {
+n.d(t, { A: () => r });
+var i = n(73153);
+let r = {
     toggleMembersSection() {
-        s.h.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+        i.h.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
     },
     toggleUserProfileSidebarSection() {
-        s.h.dispatch({ type: "USER_PROFILE_SIDEBAR_TOGGLE_SECTION" });
+        i.h.dispatch({ type: "USER_PROFILE_SIDEBAR_TOGGLE_SECTION" });
     },
     toggleSummariesSection() {
-        s.h.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+        i.h.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
     },
     toggleConversationsSection() {
-        s.h.dispatch({ type: "CHANNEL_TOGGLE_CONVERSATIONS_SECTION" });
+        i.h.dispatch({ type: "CHANNEL_TOGGLE_CONVERSATIONS_SECTION" });
     },
     openConversationsSection() {
-        s.h.dispatch({ type: "CHANNEL_OPEN_CONVERSATIONS_SECTION" });
+        i.h.dispatch({ type: "CHANNEL_OPEN_CONVERSATIONS_SECTION" });
     },
     setFriendsSidebarCollapsed(e) {
-        s.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_COLLAPSED", collapsed: e });
+        i.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_COLLAPSED", collapsed: e });
     },
     setFriendsSidebarAvailable(e) {
-        s.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_AVAILABLE", available: e });
+        i.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_AVAILABLE", available: e });
     },
 };

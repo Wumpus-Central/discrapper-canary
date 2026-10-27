@@ -1,23 +1,23 @@
-n.d(e, { h: () => E });
+n.d(t, { h: () => E });
 var i = n(477900);
 n(582128);
 var a = n(192308),
-    l = n(287809),
-    s = n(166403),
+    s = n(287809),
+    l = n(166403),
     r = n(625494),
     o = n(927578),
     u = n(598653),
-    d = n(202541),
-    c = n(652215);
-function E(t) {
-    let { processedCode: e, channelContext: E, customGiftMessage: _, giftInfo: C } = t,
-        g = !1,
-        h = null,
-        f = l.default.getCurrentUser(),
-        p = (0, o.CC)(f?.premiumType, d.PremiumTypes.TIER_0);
+    c = n(202541),
+    d = n(652215);
+function E(e) {
+    let { processedCode: t, channelContext: E, customGiftMessage: _, giftInfo: C } = e,
+        f = !1,
+        g = null,
+        T = s.default.getCurrentUser(),
+        p = (0, o.CC)(T?.premiumType, c.PremiumTypes.TIER_0);
     (0, a.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([
+            let { default: e } = await Promise.all([
                 n.e("489020"),
                 n.e("419121"),
                 n.e("149697"),
@@ -37,27 +37,27 @@ function E(t) {
                 n.e("307200"),
             ]).then(n.bind(n, 361845));
             return (n) =>
-                (0, i.jsx)(t, {
-                    code: e,
+                (0, i.jsx)(e, {
+                    code: t,
                     channelContext: E,
                     customGiftMessage: _,
                     emojiName: C?.emoji?.name,
                     soundId: C?.sound?.id,
-                    onComplete: (t, e) => {
-                        ((h = t),
-                            e && ((g = e), t.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
+                    onComplete: (e, t) => {
+                        ((g = e),
+                            t && ((f = t), e.isSubscription && null == l.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
                     },
                     ...n,
                 });
         },
         {
             onCloseCallback: () => {
-                g &&
-                    null != h &&
+                f &&
+                    null != g &&
                     !p &&
-                    h.isSubscription &&
-                    h?.subscriptionPlan?.premiumSubscriptionType === d.PremiumTypes.TIER_2 &&
-                    r._.dispatch(c.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                    g.isSubscription &&
+                    g?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
+                    r._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },
     );

@@ -21,8 +21,8 @@ var i = t(477900),
     v = t(173660),
     I = t(665252),
     N = t(360906),
-    _ = t(607567),
-    T = t(246356),
+    T = t(607567),
+    _ = t(246356),
     b = t(204651);
 t(980504);
 var S = t(376086),
@@ -80,7 +80,7 @@ function O(e) {
             null == R && L?.(S.P.SOUNDBOARD);
         }, [R, L]),
         ec = l.useRef(null),
-        { usersInChannel: eu } = (0, s.cf)([_.Ay], () => ({ usersInChannel: _.Ay.countVoiceStatesForChannel(n.id) }), [
+        { usersInChannel: eu } = (0, s.cf)([T.Ay], () => ({ usersInChannel: T.Ay.countVoiceStatesForChannel(n.id) }), [
             n,
         ]),
         [ed, eA] = l.useState(!1);
@@ -108,7 +108,7 @@ function O(e) {
                         let { closePopout: t } = e;
                         return Y
                             ? null
-                            : (0, i.jsx)(T.A, {
+                            : (0, i.jsx)(_.A, {
                                   children: (0, i.jsx)("div", {
                                       onMouseEnter: et,
                                       onMouseLeave: ei,

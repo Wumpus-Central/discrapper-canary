@@ -1,48 +1,48 @@
-n.d(t, { d: () => m, t: () => h });
-var l = n(723702),
-    i = n(205693),
-    r = n(77729),
+n.d(t, { d: () => E, t: () => _ });
+var i = n(723702),
+    r = n(205693),
+    a = n(77729),
     s = n(626584),
-    a = n(360906);
+    l = n(360906);
 n(518950);
 let o = new s.A("VoiceMessageMediaEngineCapture");
-function u(e, t, n) {
-    return new Promise((l, i) => {
-        let r = window.setTimeout(() => {
-            i(Error(`Voice message ${n} timed out after ${t}ms`));
+function d(e, t, n) {
+    return new Promise((i, r) => {
+        let a = window.setTimeout(() => {
+            r(Error(`Voice message ${n} timed out after ${t}ms`));
         }, t);
         e.then(
             (e) => {
-                (window.clearTimeout(r), l(e));
+                (window.clearTimeout(a), i(e));
             },
             (e) => {
-                (window.clearTimeout(r), i(e));
+                (window.clearTimeout(a), r(e));
             },
         );
     });
 }
 function c(e) {
     if (null == e) return;
-    let t = r.A.fileManager.deleteVoiceMessageRecording?.(e);
+    let t = a.A.fileManager.deleteVoiceMessageRecording?.(e);
     t?.catch((e) => o.warn("Failed to delete voice message recording temp file", e));
 }
-class d {
+class u {
     onSample = null;
     handleVoiceActivity = (e) => {
         this.onSample?.(Math.round(((Math.max(-100, Math.min(0, e)) - -100) / 100) * 255));
     };
     async start(e) {
         this.onSample = e;
-        let t = a.Ay.getMediaEngine();
-        t.on(i.bg.VoiceActivity, this.handleVoiceActivity);
+        let t = l.Ay.getMediaEngine();
+        t.on(r.bg.VoiceActivity, this.handleVoiceActivity);
         try {
-            await u(
+            await d(
                 t.startLocalAudioRecording({
-                    echoCancellation: a.Ay.getEchoCancellation(),
+                    echoCancellation: l.Ay.getEchoCancellation(),
                     echoCancellationPreEcho: !1,
-                    noiseSuppression: a.Ay.getNoiseSuppression(),
-                    automaticGainControlConfig: { enabled: a.Ay.getAutomaticGainControl() },
-                    noiseCancellation: a.Ay.getNoiseCancellation(),
+                    noiseSuppression: l.Ay.getNoiseSuppression(),
+                    automaticGainControlConfig: { enabled: l.Ay.getAutomaticGainControl() },
+                    noiseCancellation: l.Ay.getNoiseCancellation(),
                 }),
                 1e4,
                 "startup",
@@ -55,22 +55,22 @@ class d {
         let e,
             t = !0,
             n = new Promise((e) => {
-                a.Ay.getMediaEngine().stopLocalAudioRecording((n, l) => {
+                l.Ay.getMediaEngine().stopLocalAudioRecording((n, i) => {
                     if (!t) {
                         (o.warn("Ignoring late voice message stop callback"), c(n));
                         return;
                     }
-                    e({ fileName: n, durationMs: l });
+                    e({ fileName: n, durationMs: i });
                 });
             });
         try {
-            e = await u(n, 12e4, "native stop");
+            e = await d(n, 12e4, "native stop");
         } finally {
             ((t = !1), this.teardown());
         }
-        let { fileName: l, durationMs: i } = e;
+        let { fileName: i, durationMs: r } = e;
         try {
-            let e = await u(r.A.fileManager.readVoiceMessageRecording(l), 12e4, "file preparation");
+            let e = await d(a.A.fileManager.readVoiceMessageRecording(i), 12e4, "file preparation");
             return {
                 file: new File([e.data], e.filename, {
                     type: (function (e) {
@@ -89,16 +89,16 @@ class d {
                         }
                     })(e.filename),
                 }),
-                durationSecs: i / 1e3,
-                cleanup: () => c(l),
+                durationSecs: r / 1e3,
+                cleanup: () => c(i),
             };
         } catch (e) {
-            throw (c(l), e);
+            throw (c(i), e);
         }
     }
     cancel() {
         try {
-            a.Ay.getMediaEngine().stopLocalAudioRecording((e) => {
+            l.Ay.getMediaEngine().stopLocalAudioRecording((e) => {
                 c(e);
             });
         } catch (e) {
@@ -107,14 +107,14 @@ class d {
         this.teardown();
     }
     teardown() {
-        (a.Ay.getMediaEngine().removeListener(i.bg.VoiceActivity, this.handleVoiceActivity), (this.onSample = null));
+        (l.Ay.getMediaEngine().removeListener(r.bg.VoiceActivity, this.handleVoiceActivity), (this.onSample = null));
     }
 }
-function h() {
+function _() {
     let e = window.DiscordNative?.fileManager;
-    return (0, l.isDesktop)() && e?.readVoiceMessageRecording != null;
+    return (0, i.isDesktop)() && e?.readVoiceMessageRecording != null;
 }
-function m() {
-    if (!h()) throw Error("Voice message recording requires the supported desktop native bridge");
-    return new d();
+function E() {
+    if (!_()) throw Error("Voice message recording requires the supported desktop native bridge");
+    return new u();
 }

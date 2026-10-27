@@ -1,4 +1,4 @@
-t.d(n, { K: () => T });
+t.d(n, { K: () => _ });
 var i = t(477900),
     l = t(582128),
     s = t(17928),
@@ -21,9 +21,9 @@ var i = t(477900),
     v = t(376086),
     I = t(652215),
     N = t(49999),
-    _ = t(105292);
-function T(e) {
-    let { channel: n, idle: t, whichPopoutIsOpen: T, setWhichPopoutIsOpen: b } = e,
+    T = t(105292);
+function _(e) {
+    let { channel: n, idle: t, whichPopoutIsOpen: _, setWhichPopoutIsOpen: b } = e,
         S = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
         y = (0, A.et)(n.id),
         O = (0, A.dL)(y),
@@ -65,7 +65,7 @@ function T(e) {
                 (0, i.jsx)(r.Y, {
                     targetElementRef: F,
                     fixed: !0,
-                    shouldShow: L && (T === v.P.ACTIVITY || null == T),
+                    shouldShow: L && (_ === v.P.ACTIVITY || null == _),
                     animation: r.Y.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
@@ -99,7 +99,7 @@ function T(e) {
                                 return (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsx)(o.m, {
-                                            text: _.intl.string(_.t.P8vmUv),
+                                            text: T.intl.string(T.t.P8vmUv),
                                             forceOpen: !0,
                                             shouldShow: c,
                                             children: (0, i.jsx)("div", {

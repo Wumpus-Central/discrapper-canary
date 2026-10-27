@@ -28,8 +28,8 @@ var l = n(477900),
     _ = n(47167),
     k = n(442247),
     R = n(454908),
-    w = n(106191),
-    O = n(545868),
+    O = n(106191),
+    w = n(545868),
     M = n(376943),
     L = n(465365),
     P = n(78390),
@@ -127,7 +127,7 @@ function en(e) {
         : (0, l.jsx)(v.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, O.a)(n, t);
+                  await (0, w.a)(n, t);
               },
               renderPopout: (e) => (0, l.jsx)(W.Y, { guildId: n, channelId: r, roleId: t, popoutProps: e }),
               position: "top",
@@ -168,7 +168,7 @@ function ea(e) {
         i = null != n;
     return ((0, R.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(w.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
+              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", Z.intl.string(Z.t["11pdXZ"])] });
 }

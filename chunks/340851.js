@@ -1,4 +1,4 @@
-t.d(i, { Ay: () => U, LR: () => R, aI: () => M });
+t.d(i, { Ay: () => M, LR: () => R, aI: () => U });
 var n = t(477900),
     l = t(582128),
     s = t(503698),
@@ -40,7 +40,7 @@ function R(e) {
         children: (0, n.jsxs)(r.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", i] }),
     });
 }
-function M(e) {
+function U(e) {
     let { numAudience: i, collapsed: t } = e,
         l = t ? i : w.intl.formatToPlainString(w.t["+v2pN2"], { count: i });
     return (0, n.jsxs)("div", {
@@ -54,7 +54,7 @@ function M(e) {
         ],
     });
 }
-let U = (0, h.J)(function (e) {
+let M = (0, h.J)(function (e) {
     let {
             collapsed: i,
             user: s,
@@ -62,8 +62,8 @@ let U = (0, h.J)(function (e) {
             mute: d,
             localMute: h,
             localVideoDisabled: R,
-            deaf: M,
-            video: U,
+            deaf: U,
+            video: M,
             embeddedApplication: D,
             serverMute: L,
             serverDeaf: F,
@@ -223,10 +223,10 @@ let U = (0, h.J)(function (e) {
                         localVideoDisabled: R,
                         isStreaming: Z,
                         isGuest: X,
-                        video: U,
+                        video: M,
                         priority: Q,
                         ringing: B,
-                        deaf: M,
+                        deaf: U,
                         nick: z,
                         collapsed: i,
                         overlap: i,

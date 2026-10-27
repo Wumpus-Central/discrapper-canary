@@ -1,23 +1,23 @@
 n.d(t, { MS: () => o, OE: () => d, Qb: () => c });
 var i = n(73153),
-    l = n(976860),
-    r = n(114129),
+    r = n(976860),
+    a = n(114129),
     s = n(174459),
-    a = n(652215);
+    l = n(652215);
 function o() {
     i.h.dispatch({ type: "ROUTE_CHANGED" });
 }
 function d(e) {
-    if (!(0, l.TX)()) return;
-    let t = (0, r.a2)();
-    t === r.ug.Noop ||
-        (s.default.track(a.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: -1, nav_trigger: e }),
-        t !== r.ug.Navigated && (0, l.aX)());
+    if (!(0, r.TX)()) return;
+    let t = (0, a.a2)();
+    t === a.ug.Noop ||
+        (s.default.track(l.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: -1, nav_trigger: e }),
+        t !== a.ug.Navigated && (0, r.aX)());
 }
 function c(e) {
-    if (!(0, l.TX)()) return;
-    let t = (0, r.qu)();
-    t === r.ug.Noop ||
-        (s.default.track(a.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: 1, nav_trigger: e }),
-        t !== r.ug.Navigated && (0, l.sY)());
+    if (!(0, r.TX)()) return;
+    let t = (0, a.qu)();
+    t === a.ug.Noop ||
+        (s.default.track(l.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: 1, nav_trigger: e }),
+        t !== a.ug.Navigated && (0, r.sY)());
 }

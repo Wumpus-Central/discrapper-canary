@@ -1,15 +1,15 @@
-l.d(e, { A: () => o });
-var t = l(60465),
-    a = l(921138);
-function o(n) {
+t.d(e, { A: () => u });
+var l = t(60465),
+    a = t(921138);
+function u(n) {
     let { onOpened: e } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        l = (0, a.Ay)(n),
-        { gameId: o } = l;
-    return l.shouldOpenGameProfile && null != o
+        t = (0, a.Ay)(n),
+        { gameId: u } = t;
+    return t.shouldOpenGameProfile && null != u
         ? (a) => {
               (a?.stopPropagation(),
                   a?.preventDefault(),
-                  t.default.openGameProfileModal({ ...n, gameId: o, gameProfileModalChecks: l }),
+                  l.default.openGameProfileModal({ ...n, gameId: u, gameProfileModalChecks: t }),
                   e?.());
           }
         : void 0;

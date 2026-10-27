@@ -1,18 +1,18 @@
-n.d(t, { $j: () => l, _X: () => a, aW: () => r, wz: () => s });
+n.d(t, { $j: () => s, _X: () => a, aW: () => r, wz: () => l });
 var i = n(8880);
-let l = null != window.speechSynthesis;
+let s = null != window.speechSynthesis;
 function r(e, t) {
     let n = e.replace(/(https?:\/\/[^\s]+)/g, (e) => {
         let t = e.match(/^https?:\/\/(?:www\.)?([^/?#]+)(?:[/?#]|$)/i);
         return null != t ? t[1] : "";
     });
     null != t && n.length > t && (n = (n = n.substring(0, t)).substring(0, Math.min(n.length, n.lastIndexOf(" "))));
-    let l = new SpeechSynthesisUtterance(n);
-    return ((l.rate = i.A.speechRate), l);
+    let s = new SpeechSynthesisUtterance(n);
+    return ((s.rate = i.A.speechRate), s);
 }
-function s(e, t) {
-    l && ((e.voice = t), speechSynthesis.speak(e));
+function l(e, t) {
+    s && ((e.voice = t), speechSynthesis.speak(e));
 }
 function a() {
-    l && speechSynthesis.cancel();
+    s && speechSynthesis.cancel();
 }

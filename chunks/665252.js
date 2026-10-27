@@ -43,7 +43,7 @@ class R extends u.Ay.Store {
         return j.get(e);
     }
 }
-let w = new R(b.h, {
+let O = new R(b.h, {
     VOICE_CHANNEL_EFFECT_SEND: function (e) {
         let {
             soundId: t,
@@ -125,7 +125,7 @@ let w = new R(b.h, {
         (l.delete(t), (j = l));
     },
 });
-var O = n(994500),
+var w = n(994500),
     M = n(287809),
     L = n(562153),
     P = n(427262),
@@ -338,9 +338,9 @@ function ec(e) {
         m = (function (e) {
             let { playedByUserIds: t, guildId: n, channelId: l } = e,
                 i = t.size,
-                r = (0, u.yK)([M.default, O.A], () =>
+                r = (0, u.yK)([M.default, w.A], () =>
                     U()(Array.from(t))
-                        .reject((e) => O.A.isBlockedOrIgnored(e))
+                        .reject((e) => w.A.isBlockedOrIgnored(e))
                         .take(3)
                         .map((e) => {
                             let t = M.default.getUser(e);
@@ -547,8 +547,8 @@ function eE(e) {
             onDetailsMouseEnter: v,
             onDetailsMouseLeave: N,
         } = e,
-        { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([M.default, O.A], () => {
-            let e = O.A.isBlockedOrIgnored(o ?? void 0);
+        { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([M.default, w.A], () => {
+            let e = w.A.isBlockedOrIgnored(o ?? void 0);
             return {
                 authorUser: M.default.getUser(s),
                 mostRecentPlayedUser: e || s === o ? null : M.default.getUser(o),
@@ -578,7 +578,7 @@ function eE(e) {
     let R = r.useCallback(() => {
             v(l.soundId);
         }, [v, l.soundId]),
-        w = r.useCallback(() => {
+        O = r.useCallback(() => {
             (0, C.CZ)(l, n, k);
         }, [k, n, l]),
         L = (0, u.bG)([A.A], () => A.A.isPlayingSound(l.soundId), [l]),
@@ -634,7 +634,7 @@ function eE(e) {
                     innerRef: P,
                     style: { marginInlineEnd: U },
                     className: a()(eg.nG, { [eg.Tz]: L, [eg.Jx]: d }),
-                    onClick: d ? () => null : w,
+                    onClick: d ? () => null : O,
                     "aria-label": ei.intl.formatToPlainString(ei.t.VOmeSq, { name: K }),
                     children: [
                         (null != F || null != W) &&
@@ -661,9 +661,9 @@ function eE(e) {
 }
 function eS(e) {
     let { guildId: t, channelId: n } = e,
-        { activeEchoes: l, expiredEchoes: s } = (0, u.cf)([w], () => ({
-            activeEchoes: w.getActiveSoundboardEchoes(),
-            expiredEchoes: w.getExpiredSoundboardEchoes(),
+        { activeEchoes: l, expiredEchoes: s } = (0, u.cf)([O], () => ({
+            activeEchoes: O.getActiveSoundboardEchoes(),
+            expiredEchoes: O.getExpiredSoundboardEchoes(),
         })),
         [a, c] = r.useState(new Map()),
         [d, h] = r.useState(!1),

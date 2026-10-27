@@ -39,8 +39,8 @@ var l = n(477900),
     _ = n(834730),
     k = n(47167),
     R = n(713654),
-    w = n(598104),
-    O = n(145497),
+    O = n(598104),
+    w = n(145497),
     M = n(71393),
     L = n(994500),
     P = n(287809),
@@ -70,14 +70,14 @@ function K(e) {
                           n = M.A.getGuild(e.getGuildId());
                       if (null != n)
                           return {
-                              icon: (0, l.jsx)(O.Ay, { guild: n, iconSize: 32, className: W.sm }),
+                              icon: (0, l.jsx)(w.Ay, { guild: n, iconSize: 32, className: W.sm }),
                               primary: n.name,
                               secondary: (0, k.m1)(t, P.default, L.A),
                           };
                       let i = (e.recipients ?? []).map((e) => P.default.getUser(e)).filter(Boolean);
                       if (e.type === U.rbe.GROUP_DM)
                           return {
-                              icon: (0, l.jsx)(w.A, {
+                              icon: (0, l.jsx)(O.A, {
                                   channel: e,
                                   size: b._3.SIZE_32,
                                   className: W.sm,

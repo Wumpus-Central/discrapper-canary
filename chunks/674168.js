@@ -1,75 +1,75 @@
-n.d(t, { m: () => f });
+n.d(t, { m: () => N });
 var i = n(477900);
 n(582128);
-var l = n(17928),
+var s = n(17928),
     r = n(862482),
-    s = n(939249),
+    l = n(939249),
     a = n(789645),
     o = n(403581),
-    d = n(297264),
-    c = n(834730),
+    c = n(297264),
+    d = n(834730),
     u = n(821609),
-    A = n(725807),
-    E = n(212168),
-    h = n(780964),
-    C = n(766075),
-    _ = n(287809),
-    g = n(927578),
-    I = n(652215),
-    T = n(49999),
-    p = n(202541),
-    N = n(105292),
-    S = n(316632);
-function f(e) {
+    h = n(725807),
+    C = n(212168),
+    A = n(780964),
+    g = n(766075),
+    E = n(287809),
+    p = n(927578),
+    _ = n(652215),
+    f = n(49999),
+    m = n(202541),
+    T = n(105292),
+    v = n(316632);
+function N(e) {
     var t;
-    let { onClose: n, markAsDismissed: f } = e,
-        O = (0, l.bG)([_.default], () => _.default.getCurrentUser()),
-        L =
-            (t = O?.premiumType) === p.PremiumTypes.TIER_2
-                ? N.intl.string(N.t.jqO5Qn)
+    let { onClose: n, markAsDismissed: N } = e,
+        x = (0, s.bG)([E.default], () => E.default.getCurrentUser()),
+        I =
+            (t = x?.premiumType) === m.PremiumTypes.TIER_2
+                ? T.intl.string(T.t.jqO5Qn)
                 : null == t
-                  ? N.intl.string(N.t.f2qjw5)
-                  : N.intl.string(N.t.SblICW),
-        m = g.Ay.canUseCustomCallSounds(O);
-    return (0, i.jsxs)(E.A, {
+                  ? T.intl.string(T.t.f2qjw5)
+                  : T.intl.string(T.t.SblICW),
+        O = p.Ay.canUseCustomCallSounds(x);
+    return (0, i.jsxs)(C.A, {
         isShown: !0,
-        type: E.i.PREMIUM,
-        className: S.ne,
-        backgroundClassName: S.u4,
+        type: C.i.PREMIUM,
+        className: v.ne,
+        backgroundClassName: v.u4,
         children: [
-            null != f
-                ? (0, i.jsx)(s.D, {
-                      className: S.VN,
-                      onClick: () => f?.(T.i.DISMISS),
-                      "aria-label": N.intl.string(N.t.cpT0Cq),
-                      children: (0, i.jsx)(a.P, { size: "xs", color: "currentColor", className: S.ut }),
+            null != N
+                ? (0, i.jsx)(l.D, {
+                      className: v.VN,
+                      onClick: () => N?.(f.i.DISMISS),
+                      "aria-label": T.intl.string(T.t.cpT0Cq),
+                      children: (0, i.jsx)(a.P, { size: "xs", color: "currentColor", className: v.ut }),
                   })
                 : null,
             (0, i.jsxs)("div", {
-                className: S.ex,
+                className: v.ex,
                 children: [
-                    (0, i.jsx)(o.t, { size: "sm", color: "currentColor", className: S.ax }),
-                    (0, i.jsx)(d.D, { variant: "heading-sm/bold", children: N.intl.string(N.t.dTbAxx) }),
+                    (0, i.jsx)(o.t, { size: "sm", color: "currentColor", className: v.ax }),
+                    (0, i.jsx)(c.D, { variant: "heading-sm/bold", children: T.intl.string(T.t.dTbAxx) }),
                 ],
             }),
-            (0, i.jsx)(c.E, { variant: "text-sm/normal", children: L }),
-            m
+            (0, i.jsx)(d.E, { variant: "text-sm/normal", children: I }),
+            O
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
-                          ((0, C.openUserSettings)(h.X.SOUNDBOARD_CATEGORY), n?.(), f?.(T.i.PRIMARY));
+                          ((0, g.openUserSettings)(A.X.SOUNDBOARD_CATEGORY), n?.(), N?.(f.i.PRIMARY));
                       },
-                      text: N.intl.string(N.t.RzWDqY),
+                      text: T.intl.string(T.t.RzWDqY),
                       fullWidth: !0,
                   })
-                : (0, i.jsx)(A.A, {
-                      textOptions: { textOverride: N.intl.string(N.t.pj0XBN) },
-                      subscriptionTier: p.pe.TIER_2,
+                : (0, i.jsx)(h.A, {
+                      textOptions: { textOverride: T.intl.string(T.t.pj0XBN) },
+                      subscriptionTier: m.pe.TIER_2,
                       premiumModalAnalyticsLocation: {
-                          section: I.JJy.SOUNDBOARD_SOUND_PICKER,
-                          object: I.ZSU.BUTTON_CTA,
+                          section: _.JJy.SOUNDBOARD_SOUND_PICKER,
+                          object: _.ZSU.BUTTON_CTA,
                       },
                       color: r.$n.Colors.GREEN,
-                      onSubscribeModalClose: () => f?.(T.i.PRIMARY),
+                      onSubscribeModalClose: () => N?.(f.i.PRIMARY),
                   }),
         ],
     });

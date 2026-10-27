@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     e1: "clipContainer__841c8",
     kL: "container__841c8",
     eU: "replyBar__841c8",

@@ -1,143 +1,143 @@
-(n.d(t, { FV: () => y, M3: () => f, O7: () => g, SQ: () => x, cd: () => v, ke: () => E, n$: () => h, pY: () => N }),
+(n.d(t, { FV: () => E, M3: () => m, O7: () => g, SQ: () => y, cd: () => v, ke: () => x, n$: () => h, pY: () => L }),
     n(321073));
 var l = n(155718),
-    i = n(721768),
-    a = n(861382),
-    r = n(203779),
-    s = n(31717),
+    r = n(721768),
+    i = n(861382),
+    a = n(203779),
+    u = n(31717),
     o = n(522602),
-    u = n(408018),
+    s = n(408018),
     c = n(323350),
-    d = n(820066),
-    m = n(551483);
-let p = /([\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}_-]+):/gu;
+    f = n(820066),
+    p = n(551483);
+let d = /([\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}_-]+):/gu;
 function h(e) {
-    let t = d.VW.richValue(e)[0];
-    return null == t || "applicationCommand" !== t.type ? null : [t, m.Xg];
+    let t = f.VW.richValue(e)[0];
+    return null == t || "applicationCommand" !== t.type ? null : [t, p.Xg];
 }
-function f(e) {
+function m(e) {
     if (null == e.selection) return null;
-    let t = d.VW.above(e, { at: e.selection.focus, match: (e) => d.AS.isType(e, "applicationCommandOption") }) ?? null;
-    return null != t || d.ZF.isCollapsed(e.selection)
+    let t = f.VW.above(e, { at: e.selection.focus, match: (e) => f.AS.isType(e, "applicationCommandOption") }) ?? null;
+    return null != t || f.ZF.isCollapsed(e.selection)
         ? t
-        : (d.VW.above(e, { at: e.selection.anchor, match: (e) => d.AS.isType(e, "applicationCommandOption") }) ?? null);
+        : (f.VW.above(e, { at: e.selection.anchor, match: (e) => f.AS.isType(e, "applicationCommandOption") }) ?? null);
 }
 function g(e) {
     let t = h(e),
         n = [],
         l = t?.[0].children;
-    if (null != l) for (let e of l) d.AS.isType(e, "applicationCommandOption") && n.push(e.optionName);
+    if (null != l) for (let e of l) f.AS.isType(e, "applicationCommandOption") && n.push(e.optionName);
     return n;
 }
-function x(e, t, n) {
+function y(e, t, n) {
     let l = {};
     if (null == t.options) return {};
-    let i = h(e),
-        a = Object.fromEntries(t.options.map((e) => [e.name, e])),
-        r = i?.[0].children;
-    if (null != r) {
-        for (let t of r)
-            if (d.AS.isType(t, "applicationCommandOption")) {
-                let i = a[t.optionName];
-                null != i && (l[t.optionName] = y(e, i, t, n));
+    let r = h(e),
+        i = Object.fromEntries(t.options.map((e) => [e.name, e])),
+        a = r?.[0].children;
+    if (null != a) {
+        for (let t of a)
+            if (f.AS.isType(t, "applicationCommandOption")) {
+                let r = i[t.optionName];
+                null != r && (l[t.optionName] = E(e, r, t, n));
             }
     }
     return l;
 }
-function y(e, t, n, i) {
-    let a = n.children.map((n) => {
+function E(e, t, n, r) {
+    let i = n.children.map((n) => {
         if (t.type === l.n4.ATTACHMENT) {
-            let e = o.A.getUpload(i, t.name, s.C.SlashCommand);
+            let e = o.A.getUpload(r, t.name, u.C.SlashCommand);
             if (null != e) return { type: "text", text: e.filename ?? "" };
         }
-        if (d.l5.isText(n)) return { type: "text", text: n.text };
-        if (d.VW.isVoid(e, n)) {
-            let e = (0, u.QR)(n);
+        if (f.l5.isText(n)) return { type: "text", text: n.text };
+        if (f.VW.isVoid(e, n)) {
+            let e = (0, s.QR)(n);
             if (null != e) return e;
         }
         return { type: "text", text: (0, c.IQ)(n, { mode: "raw" }) };
     });
     if (t.type !== l.n4.STRING) {
-        for (; a.length > 0 && "text" === a[0].type && "" === a[0].text.trim();) a.shift();
-        for (; a.length > 0 && "text" === a[a.length - 1].type && "" === a[a.length - 1].text.trim();) a.pop();
+        for (; i.length > 0 && "text" === i[0].type && "" === i[0].text.trim();) i.shift();
+        for (; i.length > 0 && "text" === i[i.length - 1].type && "" === i[i.length - 1].text.trim();) i.pop();
     }
-    return a;
+    return i;
 }
-function v(e, t, n, l, a) {
+function v(e, t, n, l, i) {
     if (null == e.options) return {};
-    let s = Object.fromEntries(
+    let u = Object.fromEntries(
         e.options.map((e) => [
             e.name,
-            r.J({ option: e, content: l[e.name] ?? null, guildId: t, channelId: n, allowEmptyValues: a }),
+            a.J({ option: e, content: l[e.name] ?? null, guildId: t, channelId: n, allowEmptyValues: i }),
         ]),
     );
-    return (i._y(n, s), s);
+    return (r._y(n, u), u);
 }
-function E(e, t, n, l, s) {
+function x(e, t, n, l, u) {
     let [o] = l,
-        u = a.A.getActiveCommand(n),
-        c = u?.options?.find((e) => e.name === o.optionName);
+        s = i.A.getActiveCommand(n),
+        c = s?.options?.find((e) => e.name === o.optionName);
     if (null == c) return;
-    let d = y(e, c, o, n),
-        m = r.J({ option: c, content: d, guildId: t, channelId: n, allowEmptyValues: s });
-    return (i.H2(n, { [o.optionName]: { lastValidationResult: m } }), m);
+    let f = E(e, c, o, n),
+        p = a.J({ option: c, content: f, guildId: t, channelId: n, allowEmptyValues: u });
+    return (r.H2(n, { [o.optionName]: { lastValidationResult: p } }), p);
 }
-function N(e, t) {
+function L(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
-    let n = d.VW.richValue(e),
+    let n = f.VW.richValue(e),
         l = [],
-        i = new Set(g(e)),
-        a = {},
-        r = new Set();
-    for (let e of t.options) ((a[e.displayName] = e), i.has(e.name) || r.add(e.displayName));
-    let s = null;
+        r = new Set(g(e)),
+        i = {},
+        a = new Set();
+    for (let e of t.options) ((i[e.displayName] = e), r.has(e.name) || a.add(e.displayName));
+    let u = null;
     for (let t = 0; t < n.length; t++) {
-        let i = n[t];
-        if ("line" === i.type || "applicationCommand" === i.type)
-            for (let o = 0; o < i.children.length; o++) {
-                let u,
-                    m = i.children[o],
+        let r = n[t];
+        if ("line" === r.type || "applicationCommand" === r.type)
+            for (let o = 0; o < r.children.length; o++) {
+                let s,
+                    p = r.children[o],
                     h = [t, o];
-                if (d.AS.isType(m, "applicationCommandOption")) {
-                    null != s &&
-                        ((s.valueRange.focus = d.VW.before(e, h) ?? d.VW.start(e, [])),
-                        (s.text = (0, c.WO)(n, { mode: "raw", range: s.valueRange }).trim()),
-                        l.push(s),
-                        (s = null));
+                if (f.AS.isType(p, "applicationCommandOption")) {
+                    null != u &&
+                        ((u.valueRange.focus = f.VW.before(e, h) ?? f.VW.start(e, [])),
+                        (u.text = (0, c.WO)(n, { mode: "raw", range: u.valueRange }).trim()),
+                        l.push(u),
+                        (u = null));
                     continue;
                 }
-                if (d.l5.isText(m))
-                    for (p.lastIndex = 0; null != (u = p.exec(m.text));) {
-                        if (0 !== u.index && null == m.text.charAt(u.index - 1).match(/(\t|\s)/)) continue;
-                        let e = u[1];
-                        if (!r.has(e)) continue;
-                        r.delete(e);
-                        let t = a[e];
+                if (f.l5.isText(p))
+                    for (d.lastIndex = 0; null != (s = d.exec(p.text));) {
+                        if (0 !== s.index && null == p.text.charAt(s.index - 1).match(/(\t|\s)/)) continue;
+                        let e = s[1];
+                        if (!a.has(e)) continue;
+                        a.delete(e);
+                        let t = i[e];
                         if (null == t) continue;
-                        let i = { path: h, offset: u.index },
-                            o = { path: h, offset: i.offset + u[0].length },
-                            d = { path: h, offset: o.offset },
-                            p = {
+                        let r = { path: h, offset: s.index },
+                            o = { path: h, offset: r.offset + s[0].length },
+                            f = { path: h, offset: o.offset },
+                            d = {
                                 name: t.name,
                                 displayName: t.displayName,
                                 type: t.type,
-                                keyRange: { anchor: i, focus: o },
-                                valueRange: { anchor: d, focus: d },
+                                keyRange: { anchor: r, focus: o },
+                                valueRange: { anchor: f, focus: f },
                                 text: "",
                             };
-                        (null != s &&
-                            ((s.valueRange.focus = p.keyRange.anchor),
-                            (s.text = (0, c.WO)(n, { mode: "raw", range: s.valueRange }).trim()),
-                            l.push(s)),
-                            (s = p));
+                        (null != u &&
+                            ((u.valueRange.focus = d.keyRange.anchor),
+                            (u.text = (0, c.WO)(n, { mode: "raw", range: u.valueRange }).trim()),
+                            l.push(u)),
+                            (u = d));
                     }
             }
     }
     return (
-        null != s &&
-            ((s.valueRange.focus = d.VW.end(e, [])),
-            (s.text = (0, c.WO)(n, { mode: "raw", range: s.valueRange }).trim()),
-            l.push(s)),
+        null != u &&
+            ((u.valueRange.focus = f.VW.end(e, [])),
+            (u.text = (0, c.WO)(n, { mode: "raw", range: u.valueRange }).trim()),
+            l.push(u)),
         l
     );
 }

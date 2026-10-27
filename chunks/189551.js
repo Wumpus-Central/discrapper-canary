@@ -1,8 +1,8 @@
-n.d(t, { G: () => s, K: () => l });
+n.d(t, { G: () => r, K: () => a });
 var i = n(73153);
-function s(e) {
+function r(e) {
     i.h.dispatch({ type: "TOGGLE_GUILD_EXPANDED_STATE", guildId: e });
 }
-function l(e) {
+function a(e) {
     i.h.dispatch({ type: "EMOJI_INTERACTION_INITIATED", interaction: e });
 }

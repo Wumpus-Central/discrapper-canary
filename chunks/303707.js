@@ -1,4 +1,4 @@
-r.r(
+a.r(
     (e.exports = {
         slider: "slider_ec237e",
         mini: "mini_ec237e",

@@ -1,8 +1,8 @@
 n.d(t, { xR: () => a, xb: () => r });
 var i,
-    l = n(945810),
+    s = n(945810),
     r = (((i = {}).ORBS = "orbs"), (i.DISCOUNT = "discount"), i);
-let s = (0, l.mj)({
+let l = (0, s.mj)({
     name: "2026-07-premium-referral-incentives",
     kind: "user",
     defaultConfig: { referralRewardType: null, useAltReferralCardArt: !1 },
@@ -15,7 +15,7 @@ let s = (0, l.mj)({
     },
 });
 function a(e) {
-    let t = s.useConfig({ location: e });
+    let t = l.useConfig({ location: e });
     return {
         referralRewardType: t.referralRewardType,
         useAltReferralCardArt: t.useAltReferralCardArt,

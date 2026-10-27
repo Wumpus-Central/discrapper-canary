@@ -33,8 +33,8 @@ var n = t(477900),
     w = t(10862),
     k = t(696451),
     R = t(71393),
-    M = t(958590),
-    U = t(576705),
+    U = t(958590),
+    M = t(576705),
     D = t(290863),
     L = t(427262),
     F = t(582904),
@@ -146,15 +146,15 @@ function q(e) {
         H = l.useCallback(async () => {
             if ($) return;
             async function e() {
-                let e = M.A.getInvite(i.id, {}) ?? null;
+                let e = U.A.getInvite(i.id, {}) ?? null;
                 if (null == e) {
-                    if (!U.A.can(f.xBc.CREATE_INSTANT_INVITE, i)) return null;
+                    if (!M.A.can(f.xBc.CREATE_INSTANT_INVITE, i)) return null;
                     try {
                         await _.Ay.createInvite(i.id, {}, K);
                     } catch (e) {
                         return null;
                     }
-                    e = M.A.getInvite(i.id, {}) ?? null;
+                    e = U.A.getInvite(i.id, {}) ?? null;
                 }
                 return e?.code ?? null;
             }

@@ -213,13 +213,13 @@ function k(e, t) {
                                                       ? (b.b.selectCommandOption(e, f.optionName, !1),
                                                         (g = f.optionName))
                                                       : b.b.resetSelectionToEditorEnd(e),
-                                                null == f && w(e, r),
+                                                null == f && O(e, r),
                                                 g
                                             );
                                         })(t, a, n),
                                         l = y.SQ(t, E, a.id);
                                     return (
-                                        O({
+                                        w({
                                             guildId: a.guild_id,
                                             channelId: a.id,
                                             command: E,
@@ -301,7 +301,7 @@ function k(e, t) {
                                         }),
                                         !0)
                                     );
-                                })(t, E) && w(t, E);
+                                })(t, E) && O(t, E);
                                 let e = y.SQ(t, E, a.id),
                                     n = I.VW.above(t, {
                                         match: (e) => I.VW.isInline(t, e) && "applicationCommandOption" === e.type,
@@ -309,7 +309,7 @@ function k(e, t) {
                                     }),
                                     l = n?.[0].optionName ?? null;
                                 return (
-                                    O({
+                                    w({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: E,
@@ -353,7 +353,7 @@ function R(e, t, n, l) {
         I.PW.isAfter(t, a) && b.b.removeNodes(e, { at: t, voids: !0 });
     null != n && s.Gf({ channelId: t, command: null, section: null });
 }
-function w(e, t) {
+function O(e, t) {
     if (
         null == t.options ||
         1 !== t.options.length ||
@@ -384,7 +384,7 @@ function w(e, t) {
         !0)
     );
 }
-function O(e) {
+function w(e) {
     let {
         guildId: t,
         channelId: n,

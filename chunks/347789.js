@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     UO: "premiumSubscribeButton_d723f6",
     PC: "premiumIcon_d723f6",
     _d: "buttonText_d723f6",

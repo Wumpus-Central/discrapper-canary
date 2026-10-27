@@ -1,8 +1,8 @@
 n.d(t, { A: () => o });
 var i = n(17928),
-    l = n(73153);
+    s = n(73153);
 let r = !1;
-function s() {
+function l() {
     r = !1;
 }
 class a extends i.Ay.Store {
@@ -10,10 +10,10 @@ class a extends i.Ay.Store {
         return r;
     }
 }
-let o = new a(l.h, {
+let o = new a(s.h, {
     AD_PERSONALIZATION_TOGGLES_RESTRICTED: function (e) {
         r = e.disabled ?? !1;
     },
-    CONNECTION_OPEN: s,
-    LOGOUT: s,
+    CONNECTION_OPEN: l,
+    LOGOUT: l,
 });

@@ -1,4 +1,4 @@
-t.r(
+c.r(
     (e.exports = {
         icon: "icon_f34534",
         guildIconBadge: "guildIconBadge_f34534",

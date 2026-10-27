@@ -23,9 +23,9 @@ function E(e) {
         v = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
         { canManageGuildEvent: I } = (0, d.nr)(v),
         N = I(j),
-        _ = l.useRef(null);
+        T = l.useRef(null);
     if (null == j) return null;
-    function T() {
+    function _() {
         null != v && (0, C.A)(v) ? (0, g.Py)(v, E) : t();
     }
     function b() {
@@ -33,7 +33,7 @@ function E(e) {
     }
     return N
         ? (0, i.jsx)(a.Y, {
-              targetElementRef: _,
+              targetElementRef: T,
               renderPopout: (e) => {
                   let { closePopout: n } = e;
                   return (0, i.jsx)(A.A, {
@@ -60,9 +60,9 @@ function E(e) {
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, i.jsx)(h.A, {
-                      buttonRef: _,
+                      buttonRef: T,
                       label: p.intl.string(p.t["6vrfgt"]),
-                      onClick: T,
+                      onClick: _,
                       onPopoutClick: n,
                   });
               },

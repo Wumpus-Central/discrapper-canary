@@ -21,7 +21,7 @@ var i = t(477900),
     v = t(505543),
     I = t(105292),
     N = t(269341);
-function _(e) {
+function T(e) {
     let { onClick: n, className: t } = e,
         l = c.MicrophoneIcon;
     return (0, i.jsx)(h.A, {
@@ -34,7 +34,7 @@ function _(e) {
         className: t,
     });
 }
-function T(e) {
+function _(e) {
     let { channel: n } = e,
         { participants: t, usersInSummary: l } = (0, j.A)(n.id);
     return (0, i.jsxs)("div", {
@@ -94,8 +94,8 @@ function b(e) {
                     A ? null : (0, i.jsx)(g.A, { channelId: n.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(x.A, { className: N.fN, channel: n }) : null,
                     c ? (0, i.jsx)(m.A, { className: N.fN, guildId: o }) : null,
-                    s ? (0, i.jsx)(_, { className: a()({ [N.fN]: !0 }), onClick: t }) : null,
-                    (0, i.jsx)(T, { channel: n }),
+                    s ? (0, i.jsx)(T, { className: a()({ [N.fN]: !0 }), onClick: t }) : null,
+                    (0, i.jsx)(_, { channel: n }),
                 ],
             }),
         ],

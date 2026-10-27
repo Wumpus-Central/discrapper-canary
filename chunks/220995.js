@@ -37,7 +37,7 @@ function P(e) {
         P = l.useRef(null),
         w = l.useRef(null),
         [k, R] = l.useState(!1),
-        [M, U] = l.useState(0),
+        [U, M] = l.useState(0),
         { analyticsLocations: D } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
     (0, _.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
@@ -114,7 +114,7 @@ function P(e) {
             null != el.current ? Math.max(1e4 - (Date.now() - el.current), 0) : 1e4,
         );
         return (
-            null == el.current && (U((e) => e + 1), (el.current = Date.now())),
+            null == el.current && (M((e) => e + 1), (el.current = Date.now())),
             () => {
                 clearTimeout(e);
             }
@@ -173,7 +173,7 @@ function P(e) {
                                                             (0, n.jsx)("circle", { className: O.hN }),
                                                         ],
                                                     },
-                                                    `voice-invite-suggestions-timer-${M}`,
+                                                    `voice-invite-suggestions-timer-${U}`,
                                                 ),
                                           (0, n.jsx)(g.R, {
                                               size: "custom",

@@ -1,46 +1,46 @@
-a.d(t, { w: () => c });
-var i = a(477900),
-    n = a(582128),
-    d = a(265872),
-    l = a(866665),
-    s = a(939249),
-    r = a(834730),
-    h = a(7834);
-let u = n.lazy(() =>
-    Promise.all([a.e("126301"), a.e("201074"), a.e("353604"), a.e("124006"), a.e("177104"), a.e("446054")])
-        .then(a.bind(a, 680901))
+l.d(a, { w: () => u });
+var n = l(477900),
+    t = l(582128),
+    i = l(265872),
+    r = l(866665),
+    s = l(939249),
+    d = l(834730),
+    o = l(7834);
+let c = t.lazy(() =>
+    Promise.all([l.e("126301"), l.e("201074"), l.e("353604"), l.e("124006"), l.e("177104"), l.e("446054")])
+        .then(l.bind(l, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
-function c(e) {
-    let { participants: t, maxVisibleParticipants: a, overflowLabel: c, guildId: o, layerContext: p } = e,
-        C = n.useRef(null),
-        _ = t.length - a,
-        A = (0, n.useCallback)(
-            () => (0, i.jsx)(n.Suspense, { fallback: null, children: (0, i.jsx)(u, { users: t, guildId: o }) }),
-            [t, o],
+function u(e) {
+    let { participants: a, maxVisibleParticipants: l, overflowLabel: u, guildId: h, layerContext: x } = e,
+        p = t.useRef(null),
+        g = a.length - l,
+        m = (0, t.useCallback)(
+            () => (0, n.jsx)(t.Suspense, { fallback: null, children: (0, n.jsx)(c, { users: a, guildId: h }) }),
+            [a, h],
         );
-    return (0, i.jsx)(d.Y, {
-        renderPopout: A,
-        layerContext: p,
-        targetElementRef: C,
+    return (0, n.jsx)(i.Y, {
+        renderPopout: m,
+        layerContext: x,
+        targetElementRef: p,
         position: "right",
         children: (e) =>
-            (0, i.jsx)(l.m, {
-                text: c,
+            (0, n.jsx)(r.m, {
+                text: u,
                 ariaHidden: !0,
-                children: (0, i.jsx)(s.D, {
+                children: (0, n.jsx)(s.D, {
                     ...e,
-                    innerRef: C,
-                    className: h.x,
-                    "aria-label": c,
-                    onClick: (t) => {
-                        (t.stopPropagation(), e.onClick?.(t));
+                    innerRef: p,
+                    className: o.x,
+                    "aria-label": u,
+                    onClick: (a) => {
+                        (a.stopPropagation(), e.onClick?.(a));
                     },
-                    children: (0, i.jsxs)(r.E, {
-                        className: h.s,
+                    children: (0, n.jsxs)(d.E, {
+                        className: o.s,
                         variant: "text-xs/medium",
                         color: "interactive-text-default",
-                        children: ["+", _],
+                        children: ["+", g],
                     }),
                 }),
             }),

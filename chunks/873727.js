@@ -1,4 +1,4 @@
-n.d(t, { Lq: () => c, U0: () => h, _n: () => A, mB: () => m, x4: () => u });
+n.d(t, { Lq: () => c, U0: () => m, _n: () => g, mB: () => h, x4: () => u });
 var i = n(775602),
     r = n(363195),
     l = n(885386),
@@ -49,17 +49,17 @@ function d() {
             : s.fS;
     return (0, s.dV)(l.Xi.getSetting(), e);
 }
-function h() {
+function m() {
     let e = i.Ay.fontScale;
     return Number.isFinite(e) ? Math.round(100 * e) / 100 : a.fontScale;
 }
-function m(e) {
+function h(e) {
     return {
         baseTheme: u(r.A.theme),
         customTheme: c(),
         uiDensity: d(),
         messageDisplayCompact: l.hH.getSetting(),
-        fontScale: h(),
+        fontScale: m(),
         reducedMotion: e,
         highContrast: i.Ay.isHighContrastModeEnabled,
         forcedColors: i.Ay.useForcedColors,
@@ -67,12 +67,12 @@ function m(e) {
         formFactor: "desktop",
     };
 }
-function A() {
+function g() {
     return {
         theme: u(r.A.theme),
         ui_density: d(),
         message_display_compact: String(l.hH.getSetting()),
-        font_scale: String(h()),
+        font_scale: String(m()),
         reduced_motion: String(i.Ay.useReducedMotion),
         high_contrast: String(i.Ay.isHighContrastModeEnabled),
         forced_colors: String(i.Ay.useForcedColors),

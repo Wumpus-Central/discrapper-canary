@@ -1,14 +1,14 @@
-a.d(s, { z: () => e });
-var i = a(192308),
-    o = a(73153),
-    t = a(946974);
-let e = {
+n.d(t, { z: () => s });
+var i = n(192308),
+    r = n(73153),
+    a = n(946974);
+let s = {
     binds: ["mod+/", "mod+shift+/"],
     comboKeysBindGlobal: !0,
     action: () => (
-        (0, i.hasModalOpen)(t.P)
-            ? o.h.dispatch({ type: "HIDE_KEYBOARD_SHORTCUTS" })
-            : o.h.dispatch({ type: "SHOW_KEYBOARD_SHORTCUTS" }),
+        (0, i.hasModalOpen)(a.P)
+            ? r.h.dispatch({ type: "HIDE_KEYBOARD_SHORTCUTS" })
+            : r.h.dispatch({ type: "SHOW_KEYBOARD_SHORTCUTS" }),
         !1
     ),
 };

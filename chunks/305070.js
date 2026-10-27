@@ -28,8 +28,8 @@ var l = n(477900),
     _ = n(351906),
     k = n(287809),
     R = n(31498),
-    w = n(887129),
-    O = n(741918),
+    O = n(887129),
+    w = n(741918),
     M = n(267102),
     L = n(652215),
     P = n(307731);
@@ -90,10 +90,10 @@ function W(e) {
                             (u.setFocus(e.toString()), r?.(e));
                         }
                     }
-                    let u = (0, w.Ay)({
+                    let u = (0, O.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
-                            orientation: O.Gl.VERTICAL,
+                            orientation: w.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = s.document.querySelector(e);

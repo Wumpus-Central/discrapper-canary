@@ -1,9 +1,9 @@
-n.d(t, { P: () => s });
+n.d(t, { P: () => l });
 var i = n(582128),
-    l = n(17928),
+    s = n(17928),
     r = n(736056);
-function s(e) {
-    let [t, n] = (0, l.yK)([r.A], () => [r.A.getAllUserExperimentDescriptors(), r.A.getGuildExperiments()]);
+function l(e) {
+    let [t, n] = (0, s.yK)([r.A], () => [r.A.getAllUserExperimentDescriptors(), r.A.getGuildExperiments()]);
     i.useEffect(() => {
         e.trigger();
     }, [e, t, n]);

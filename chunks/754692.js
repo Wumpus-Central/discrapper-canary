@@ -1,17 +1,17 @@
-n.d(t, { _: () => I, U: () => T });
+n.d(t, { _: () => _, U: () => f });
 var i = n(477900),
-    l = n(582128),
+    s = n(582128),
     r = n(858899),
-    s = n(73153),
+    l = n(73153),
     a = n(927018),
     o = n(503698),
-    d = n.n(o),
-    c = n(939249),
+    c = n.n(o),
+    d = n(939249),
     u = n(834730),
-    A = n(64585),
-    E = n(906688),
-    h = n(857015);
-function C(e) {
+    h = n(64585),
+    C = n(906688),
+    A = n(857015);
+function g(e) {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
         width: "48",
@@ -26,7 +26,7 @@ function C(e) {
                 width: "14.4203",
                 height: "14.4203",
                 transform: "rotate(45 10.1968 7)",
-                className: h.__invalid_toastBG,
+                className: A.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "27.3936",
@@ -34,7 +34,7 @@ function C(e) {
                 width: "23.4851",
                 height: "23.4851",
                 transform: "rotate(45 27.3936 0.59021)",
-                className: h.__invalid_toastBG,
+                className: A.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "44.5903",
@@ -42,7 +42,7 @@ function C(e) {
                 width: "14.4203",
                 height: "14.4203",
                 transform: "rotate(45 44.5903 7)",
-                className: h.__invalid_toastBG,
+                className: A.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "10.1968",
@@ -67,56 +67,56 @@ function C(e) {
         ],
     });
 }
-function _(e) {
+function E(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: r, description: s, rarity: o, hideDescriptionUntilUnlock: _, onAction: g } = t,
-        { color: I } = (0, a.ag)(o);
-    l.useEffect(() => {
+        { name: r, description: l, rarity: o, hideDescriptionUntilUnlock: E, onAction: p } = t,
+        { color: _ } = (0, a.ag)(o);
+    s.useEffect(() => {
         let e = setTimeout(() => {
-            A.A.playAchievementUnlockSound();
+            h.A.playAchievementUnlockSound();
         }, 50);
         return () => {
             clearTimeout(e);
         };
     }, []);
-    let T = null != g && n,
-        p = T ? c.D : "div";
-    return (0, i.jsxs)(p, {
-        className: d()(h.kL, T && h.b),
+    let f = null != p && n,
+        m = f ? d.D : "div";
+    return (0, i.jsxs)(m, {
+        className: c()(A.kL, f && A.b),
         onClick: function () {
-            T && g();
+            f && p();
         },
         children: [
             (0, i.jsx)("div", {
-                className: h.zc,
-                children: (0, i.jsx)(E.A, { achievementId: t.id, size: E.A.Sizes.SIZE_40, unlocked: n }),
+                className: A.zc,
+                children: (0, i.jsx)(C.A, { achievementId: t.id, size: C.A.Sizes.SIZE_40, unlocked: n }),
             }),
             (0, i.jsxs)("div", {
-                className: h.__invalid_nameContainer,
+                className: A.__invalid_nameContainer,
                 children: [
                     (0, i.jsx)(u.E, { variant: "text-md/semibold", color: "text-strong", children: r() }),
                     (0, i.jsx)(u.E, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: _ && !n ? "?????" : s(),
+                        children: E && !n ? "?????" : l(),
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: h.Db, children: (0, i.jsx)(C, { color: I }) }),
+            (0, i.jsx)("div", { className: A.Db, children: (0, i.jsx)(g, { color: _ }) }),
         ],
     });
 }
-var g = n(105292);
-function I(e) {
-    s.h.dispatch({ type: "POGGERMODE_ACHIEVEMENT_UNLOCK", achievementId: e });
+var p = n(105292);
+function _(e) {
+    l.h.dispatch({ type: "POGGERMODE_ACHIEVEMENT_UNLOCK", achievementId: e });
 }
-function T(e, t) {
+function f(e, t) {
     let n = (0, a.vM)(e);
     null != n &&
         (0, r.P0)({
-            text: g.intl.string(g.t.MPpEUA),
+            text: p.intl.string(p.t.MPpEUA),
             position: "bottom",
             duration: 6e3,
-            __dangerouslyRenderContent: () => (0, i.jsx)(_, { achievement: n, unlocked: t }),
+            __dangerouslyRenderContent: () => (0, i.jsx)(E, { achievement: n, unlocked: t }),
         });
 }

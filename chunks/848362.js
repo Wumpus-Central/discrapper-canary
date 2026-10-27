@@ -1,4 +1,4 @@
-n.d(t, { A: () => _, T: () => C });
+n.d(t, { A: () => b, T: () => C });
 var i = n(477900),
     r = n(582128),
     l = n(17928),
@@ -8,17 +8,17 @@ var i = n(477900),
     u = n(820284),
     c = n(198052),
     d = n(74329),
-    h = n(405916),
-    m = n(338771),
-    A = n(616356),
-    E = n(287809),
-    g = n(562153),
-    f = n(652215),
-    p = n(105292);
+    m = n(405916),
+    h = n(338771),
+    g = n(616356),
+    f = n(287809),
+    A = n(562153),
+    p = n(652215),
+    E = n(105292);
 function C(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
-        s = (0, l.bG)([A.A], () => (null != i ? A.A.getActiveStreamForStreamKey(i) : null), [i]),
-        a = (0, l.cf)([E.default], () => n.reduce((e, t) => ((e[t.ownerId] = E.default.getUser(t.ownerId)), e), {}), [
+        s = (0, l.bG)([g.A], () => (null != i ? g.A.getActiveStreamForStreamKey(i) : null), [i]),
+        a = (0, l.cf)([f.default], () => n.reduce((e, t) => ((e[t.ownerId] = f.default.getUser(t.ownerId)), e), {}), [
             n,
         ]);
     return r.useMemo(() => {
@@ -26,43 +26,43 @@ function C(e, t, n) {
         let i = n.filter((e) => e.ownerId !== t?.id);
         return 1 === i.length && i[0].ownerId === s?.ownerId
             ? []
-            : i.map((t) => ({ stream: t, username: g.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
+            : i.map((t) => ({ stream: t, username: A.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
     }, [a, n, e, s, t?.id]);
 }
-function _(e) {
+function b(e) {
     let {
             channel: t,
             currentUser: n,
             activeStreams: r,
             hideSelfOptions: l = !1,
             showReportOption: c = !1,
-            handleGoLive: A,
-            onClose: E,
-            onSelect: g,
-            appContext: _ = f.BRT.APP,
-            disableChangeWindows: b = !1,
-            onInteraction: S,
+            handleGoLive: g,
+            onClose: f,
+            onSelect: A,
+            appContext: b = p.BRT.APP,
+            disableChangeWindows: T = !1,
+            onInteraction: v,
         } = e,
-        T = r.find((e) => e.ownerId === n?.id) ?? null,
+        _ = r.find((e) => e.ownerId === n?.id) ?? null,
         I = C(t, n, r),
-        v = (0, d.A)(T, _),
-        O = (0, h.E)({
-            disableChangeWindows: b,
-            stream: T,
+        y = (0, d.A)(_, b),
+        S = (0, m.E)({
+            disableChangeWindows: T,
+            stream: _,
             showReportOption: c,
-            handleGoLive: A,
+            handleGoLive: g,
             minimal: !0,
-            appContext: _,
+            appContext: b,
         });
     return (0, i.jsx)(u.A, {
-        section: f.JJy.CONTEXT_MENU,
+        section: p.JJy.CONTEXT_MENU,
         children: (0, i.jsxs)(s.W, {
             "data-menu-migrated": !0,
-            onSelect: g,
+            onSelect: A,
             navId: "manage-streams",
-            onClose: E,
-            onInteraction: S,
-            "aria-label": null != T ? p.intl.string(p.t.S5anIc) : p.intl.string(p.t.fjBNo1),
+            onClose: f,
+            onInteraction: v,
+            "aria-label": null != _ ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
             children: [
                 (0, i.jsx)(a.rX, {
                     children: I.map((e) => {
@@ -71,17 +71,17 @@ function _(e) {
                             a.Dr,
                             {
                                 id: t.ownerId,
-                                label: p.intl.formatToPlainString(p.t["7rkg+/"], { username: n }),
+                                label: E.intl.formatToPlainString(E.t["7rkg+/"], { username: n }),
                                 icon: o.G,
                                 leadingAccessory: { type: "icon", icon: o.G },
-                                action: () => (0, m.A)(t),
+                                action: () => (0, h.A)(t),
                             },
                             `manage-stream-menu${t.ownerId}`,
                         );
                     }),
                 }),
-                l ? null : O,
-                l ? null : (0, i.jsx)(a.rX, { children: v }),
+                l ? null : S,
+                l ? null : (0, i.jsx)(a.rX, { children: y }),
             ],
         }),
     });

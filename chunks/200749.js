@@ -17,22 +17,22 @@ function d(e) {
         header: r,
         description: c,
         errorCodeMessage: d,
-        size: h,
-        className: m,
-        artURL: A,
-        noArt: E = !1,
-        selected: g = !1,
+        size: m,
+        className: h,
+        artURL: g,
+        noArt: f = !1,
+        selected: A = !1,
     } = e;
     return (0, i.jsxs)(o.A, {
-        className: m,
+        className: h,
         justify: o.A.Justify.CENTER,
         align: o.A.Align.CENTER,
         direction: o.A.Direction.VERTICAL,
         style: { padding: 4 },
         children: [
-            !E &&
-                null != A &&
-                (0, i.jsx)("div", { className: l()(u.art, u[h]), style: { backgroundImage: `url(${A})` } }),
+            !f &&
+                null != g &&
+                (0, i.jsx)("div", { className: l()(u.art, u[m]), style: { backgroundImage: `url(${g})` } }),
             null != r
                 ? (0, i.jsx)(s.E, { color: "none", variant: "text-md/semibold", className: u.header, children: r })
                 : null,
@@ -45,15 +45,15 @@ function d(e) {
                       children: d,
                   })
                 : null,
-            null != c && (null == d || "small" !== h)
+            null != c && (null == d || "small" !== m)
                 ? (0, i.jsx)(s.E, { color: "none", className: u.description, variant: "text-sm/medium", children: c })
                 : null,
-            g || null == n
+            A || null == n
                 ? null
                 : (0, i.jsx)("div", {
                       className: u.outerButton,
                       children: (0, i.jsx)(a.$, {
-                          size: "small" === h ? "sm" : "md",
+                          size: "small" === m ? "sm" : "md",
                           variant: "secondary",
                           onClick: (e) => {
                               (e.stopPropagation(), t?.(e));

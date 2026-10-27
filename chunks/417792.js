@@ -1,48 +1,48 @@
-n.d(t, { y: () => C });
+n.d(t, { y: () => g });
 var i = n(582128),
-    l = n(17928),
+    s = n(17928),
     r = n(277984),
-    s = n(280450),
+    l = n(280450),
     a = n(615405),
     o = n(295405),
-    d = n(652215),
-    c = n(92202),
+    c = n(652215),
+    d = n(92202),
     u = n(534284),
-    A = n(425565);
-let E = null,
-    h = null;
-function C(e) {
-    let { location: t, countGiftCardWallet: n, canFetchPaymentSources: C = !0 } = e,
-        { enabled: _ } = (0, c.K)({ location: t }),
-        g = (0, l.bG)([s.default], () => s.default.getId()),
-        I = (0, u.P)(),
-        T = (0, l.bG)([a.A], () => a.A.ipCountryCode),
-        { hasFetchedPaymentSources: p, hasValidPaymentMethod: N } = (0, l.cf)(
+    h = n(425565);
+let C = null,
+    A = null;
+function g(e) {
+    let { location: t, countGiftCardWallet: n, canFetchPaymentSources: g = !0 } = e,
+        { enabled: E } = (0, d.K)({ location: t }),
+        p = (0, s.bG)([l.default], () => l.default.getId()),
+        _ = (0, u.P)(),
+        f = (0, s.bG)([a.A], () => a.A.ipCountryCode),
+        { hasFetchedPaymentSources: m, hasValidPaymentMethod: T } = (0, s.cf)(
             [o.A],
             () => ({
                 hasFetchedPaymentSources: o.A.hasFetchedPaymentSources,
                 hasValidPaymentMethod: (function (e, t) {
                     let { countGiftCardWallet: n } = t;
                     return Object.values(e).some(
-                        (e) => !e.invalid && e.type !== d.hes.UNKNOWN && (n || e.type !== d.hes.TDS_WALLET),
+                        (e) => !e.invalid && e.type !== c.hes.UNKNOWN && (n || e.type !== c.hes.TDS_WALLET),
                     );
                 })(o.A.paymentSources, { countGiftCardWallet: n }),
             }),
             [n],
         ),
-        S = _ && I && null != T && A.ob.has(T),
-        f = S && C;
+        v = E && _ && null != f && h.ob.has(f),
+        N = v && g;
     return (
         i.useEffect(() => {
-            !f ||
-                E === g ||
+            !N ||
+                C === p ||
                 o.A.hasFetchedPaymentSources ||
                 a.A.isPaymentSourceFetching ||
-                ((E = g),
+                ((C = p),
                 r.$o().then((e) => {
-                    null == e && (h = g);
+                    null == e && (A = p);
                 }));
-        }, [f, g]),
-        S && h !== g && p && !N
+        }, [N, p]),
+        v && A !== p && m && !T
     );
 }

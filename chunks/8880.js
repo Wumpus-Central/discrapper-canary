@@ -1,18 +1,18 @@
-a.d(t, { A: () => c });
-var s = a(17928),
-    l = a(73153);
+e.d(t, { A: () => h });
+var s = e(17928),
+    l = e(73153);
 let i = { speechRate: 1, currentMessage: null },
     n = i;
-class h extends s.Ay.DeviceSettingsStore {
+class c extends s.Ay.DeviceSettingsStore {
     static displayName = "TTSStore";
     static persistKey = "TTSStore";
     static migrations = [];
-    initialize(e) {
-        n = { ...i, ...(e ?? null) };
+    initialize(a) {
+        n = { ...i, ...(a ?? null) };
     }
-    isSpeakingMessage(e, t) {
-        let { currentMessage: a } = n;
-        return null !== a && a.channelId === e && a.messageId === t;
+    isSpeakingMessage(a, t) {
+        let { currentMessage: e } = n;
+        return null !== e && e.channelId === a && e.messageId === t;
     }
     get currentMessage() {
         return n.currentMessage;
@@ -24,20 +24,20 @@ class h extends s.Ay.DeviceSettingsStore {
         return n;
     }
 }
-let c = new h(
+let h = new c(
     l.h,
     __OVERLAY__
         ? {}
         : {
-              SPEAKING_MESSAGE: function (e) {
-                  let { messageId: t, channelId: a } = e;
-                  n = { ...n, currentMessage: { messageId: t, channelId: a } };
+              SPEAKING_MESSAGE: function (a) {
+                  let { messageId: t, channelId: e } = a;
+                  n = { ...n, currentMessage: { messageId: t, channelId: e } };
               },
               STOP_SPEAKING: function () {
                   n = { ...n, currentMessage: null };
               },
-              SET_TTS_SPEECH_RATE: function (e) {
-                  n = { ...n, speechRate: e.speechRate };
+              SET_TTS_SPEECH_RATE: function (a) {
+                  n = { ...n, speechRate: a.speechRate };
               },
           },
 );

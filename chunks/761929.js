@@ -44,31 +44,31 @@ let o = function (e) {
             }
             let r = null != o ? (0, i.throttle)(o, f) : null,
                 L = 1 === u(p) ? "width" : "height",
-                T =
+                w =
                     m ??
                     ((e) => {
                         null != n.current && (n.current.style[L] = `${e}px`);
                     });
-            function C(l) {
+            function T(l) {
                 if (null == n.current) return null;
                 let i = e(l),
                     a = t(i);
-                (T(a), v.current || ((v.current = !0), s?.(a)), r?.(a, i));
+                (w(a), v.current || ((v.current = !0), s?.(a)), r?.(a, i));
             }
-            function w(n) {
+            function C(n) {
                 y(!1);
                 let l = e(n),
                     r = t(l);
-                (T(r), o?.(r, l), c?.(r), (v.current = !1));
+                (w(r), o?.(r, l), c?.(r), (v.current = !1));
             }
             let R = d ? "pointerup" : "mouseup",
-                S = d ? "pointermove" : "mousemove",
-                A = n.current.ownerDocument;
+                N = d ? "pointermove" : "mousemove",
+                S = n.current.ownerDocument;
             return (
-                A.addEventListener(R, w),
-                A.addEventListener(S, C),
+                S.addEventListener(R, C),
+                S.addEventListener(N, T),
                 () => {
-                    (A.removeEventListener(R, w), A.removeEventListener(S, C), r?.cancel());
+                    (S.removeEventListener(R, C), S.removeEventListener(N, T), r?.cancel());
                 }
             );
         }, [g, o, a, l, p, n, f, c, d, h, s, m]),

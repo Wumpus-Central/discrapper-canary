@@ -1,14 +1,14 @@
 let i, r, l;
-n.d(t, { A: () => E });
+n.d(t, { A: () => f });
 var s = n(17928),
     a = n(73153),
     o = n(652215),
     u = n(806931);
 let c = new Map(),
     d = {},
-    h = o.CUs.BOTTOM_RIGHT,
-    m = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] };
-class A extends s.Ay.PersistedStore {
+    m = o.CUs.BOTTOM_RIGHT,
+    h = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] };
+class g extends s.Ay.PersistedStore {
     static displayName = "PictureInPictureStore";
     static persistKey = "PictureInPictureStore";
     static migrations = [
@@ -22,11 +22,11 @@ class A extends s.Ay.PersistedStore {
     ];
     initialize(e) {
         if (null == e) {
-            ((h = o.CUs.BOTTOM_RIGHT),
-                (m = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] }));
+            ((m = o.CUs.BOTTOM_RIGHT),
+                (h = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] }));
             return;
         }
-        ((h = e.openPosition), (m = e.pipWidths));
+        ((m = e.openPosition), (h = e.pipWidths));
     }
     get pipWindow() {
         return null == i && null == r && null == l ? null : c.get(i ?? r ?? l ?? "");
@@ -44,7 +44,7 @@ class A extends s.Ay.PersistedStore {
         return c;
     }
     pipWidth(e) {
-        return m[e];
+        return h[e];
     }
     isEmbeddedActivityHidden() {
         return null == r;
@@ -59,14 +59,14 @@ class A extends s.Ay.PersistedStore {
         return null != e && c.has(e);
     }
     getState() {
-        return { openPosition: h, pipWidths: m };
+        return { openPosition: m, pipWidths: h };
     }
 }
-let E = new A(a.h, {
+let f = new g(a.h, {
     PICTURE_IN_PICTURE_OPEN: function (e) {
         let { id: t, component: n, props: s } = e;
         if (null != c.get(t)) return;
-        let a = { id: t, component: n, position: s.position ?? h, props: s, docked: s.docked ?? !1 };
+        let a = { id: t, component: n, position: s.position ?? m, props: s, docked: s.docked ?? !1 };
         switch ((c.set(t, a), n)) {
             case o.o1q.VIDEO:
                 null == i && (i = t);
@@ -110,12 +110,12 @@ let E = new A(a.h, {
                 e.set(i, { ...t, position: n });
             }),
                 (c = e),
-                (h = n));
+                (m = n));
         }
     },
     PICTURE_IN_PICTURE_RESIZE: function (e) {
         let { width: t, pipType: n } = e;
-        m[n] = t;
+        h[n] = t;
     },
     PICTURE_IN_PICTURE_HIDE: function (e) {
         let { id: t } = e;
