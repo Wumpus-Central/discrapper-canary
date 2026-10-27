@@ -319,21 +319,27 @@ function eN(e) {
         e.length > 0 &&
         (((J = document.createElement("style")).textContent = X), document.head.appendChild(J));
     let t = new Map(),
-        n = new Set();
-    function r(e, n) {
+        n = new Set(),
+        r = new Set();
+    function a(e, n) {
         !(!(0, i.vq)(e, HTMLElement) || t.has(e)) && (Z.has(e) || Q.has(e) || et(getComputedStyle(e))) && t.set(e, n);
     }
     for (let { iframe: t, clip: i } of e) {
-        for (let e = t.parentElement; null != e; e = e.parentElement) r(e, i);
+        for (let e = t.parentElement; null != e; e = e.parentElement) a(e, i);
         for (let e of (em(() => {
-            for (let [e, a] of eo(i)) {
-                let s = document.elementsFromPoint(e, a),
-                    l = s.findIndex((e) => e.contains(t));
-                if (!(l < 0)) for (let e of s.slice(l + 1)) (n.add(e), r(e, i));
+            for (let [e, s] of eo(i)) {
+                let l = document.elementsFromPoint(e, s),
+                    o = l.findIndex((e) => e.contains(t));
+                if (!(o < 0)) {
+                    for (let e of l.slice(0, o)) r.add(e);
+                    for (let e of l.slice(o + 1)) (n.add(e), a(e, i));
+                }
             }
         }, eT(t)),
         [...O]))
-            e.isConnected ? ef(e) && (n.add(e), r(e, i)) : O.delete(e);
+            !e.isConnected || r.has(e) || "none" !== getComputedStyle(e).pointerEvents
+                ? O.delete(e)
+                : ef(e) && (n.add(e), a(e, i));
     }
     for (let [e, n] of ((function (e) {
         let t = [...e.keys()],
@@ -395,20 +401,20 @@ function eN(e) {
             let n = "static" === t.position;
             (n && (e.style.position = "relative"), e.setAttribute(W, ""), Z.set(e, n), (h = !0));
         })(e);
-    let a = new Map([...t.keys()].map((e) => [e, es(e)]));
-    for (let [e, n] of t) el(e, n, a.get(e));
-    let s = { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight };
-    for (let e of a.values())
-        s = {
-            left: Math.max(s.left, e.left),
-            top: Math.max(s.top, e.top),
-            right: Math.min(s.right, e.right),
-            bottom: Math.min(s.bottom, e.bottom),
+    let s = new Map([...t.keys()].map((e) => [e, es(e)]));
+    for (let [e, n] of t) el(e, n, s.get(e));
+    let l = { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight };
+    for (let e of s.values())
+        l = {
+            left: Math.max(l.left, e.left),
+            top: Math.max(l.top, e.top),
+            right: Math.min(l.right, e.right),
+            bottom: Math.min(l.bottom, e.bottom),
         };
-    p = t.size > 0 && 1 === e.length ? s : null;
-    let l = new WeakSet([...t.keys(), ...n]);
-    for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) l.add(e);
-    ((g = l),
+    p = t.size > 0 && 1 === e.length ? l : null;
+    let o = new WeakSet([...t.keys(), ...n]);
+    for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) o.add(e);
+    ((g = o),
         (function (e, t) {
             if (null == P) return;
             let n = "";
@@ -701,6 +707,8 @@ function eK(e) {
                                             v.add(i);
                                             continue;
                                         }
+                                        let e = i.parentElement;
+                                        if (null != e && "none" === getComputedStyle(e).pointerEvents) continue;
                                         (O.add(i), (n = !0));
                                     }
                                 }
