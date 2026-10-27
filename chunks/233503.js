@@ -14,45 +14,46 @@ var i = n(477900),
     k = n(60587),
     m = n(105292);
 function A(t) {
-    let { target: e, onSelect: n } = t,
-        A = e.getAttribute("data-type"),
-        C = e.getAttribute("data-id"),
-        I = e.getAttribute("data-name"),
-        f = e.getAttribute("data-surrogates"),
-        h = "true" === e.getAttribute("data-animated"),
-        x = e.getAttribute("data-format-type"),
-        y = A === k.g.EMOJI,
-        E = A === k.g.STICKER,
-        S = g.Q_.useSetting(),
-        _ = (0, c.A)({ type: A, id: C, name: I, isInExpressionPicker: !0 }),
-        j =
-            null != f
-                ? (0, i.jsx)(a.Dr, { id: "copy", label: m.intl.string(m.t.ad58UB), action: () => (0, p.C)(f) })
+    let { target: e, onSelect: n, showFavoriteOnly: A = !1 } = t,
+        C = e.getAttribute("data-type"),
+        I = e.getAttribute("data-id"),
+        f = e.getAttribute("data-name"),
+        h = e.getAttribute("data-surrogates"),
+        x = "true" === e.getAttribute("data-animated"),
+        y = e.getAttribute("data-format-type"),
+        E = C === k.g.EMOJI,
+        S = C === k.g.STICKER,
+        _ = g.Q_.useSetting(),
+        j = (0, c.A)({ type: C, id: I, name: f, isInExpressionPicker: !0 }),
+        v =
+            null != h
+                ? (0, i.jsx)(a.Dr, { id: "copy", label: m.intl.string(m.t.ad58UB), action: () => (0, p.C)(h) })
                 : null,
-        v = (0, d.A)({
-            id: C,
-            shiftId: A === k.g.EMOJI ? `<${h ? "a" : ""}:${I?.split("~")[0]}:${C}>` : void 0,
-            label: A === k.g.STICKER ? m.intl.string(m.t.SJ3249) : m.intl.string(m.t.Ap2oVy),
+        J = (0, d.A)({
+            id: I,
+            shiftId: C === k.g.EMOJI ? `<${x ? "a" : ""}:${f?.split("~")[0]}:${I}>` : void 0,
+            label: C === k.g.STICKER ? m.intl.string(m.t.SJ3249) : m.intl.string(m.t.Ap2oVy),
         }),
-        J = l.useCallback(() => {
-            if (null != C && null != I) {
-                if (y) (0, p.C)((0, b.Ez)({ id: C, name: I, animated: h }));
-                else if (E && null != x) {
-                    let t = (0, o.zg)({ id: C, name: I, format_type: Number(x) });
+        $ = l.useCallback(() => {
+            if (null != I && null != f) {
+                if (E) (0, p.C)((0, b.Ez)({ id: I, name: f, animated: x }));
+                else if (S && null != y) {
+                    let t = (0, o.zg)({ id: I, name: f, format_type: Number(y) });
                     null != t && (0, p.C)(t);
                 }
             }
-        }, [C, I, h, y, E, x]),
-        $ =
-            null != C && null != I && ((y && null == f) || (E && null != x))
+        }, [I, f, x, E, S, y]),
+        w =
+            null != I && null != f && ((E && null == h) || (S && null != y))
                 ? (0, i.jsx)(a.Dr, {
                       id: "copy-image-link",
-                      label: m.intl.string(E ? m.t.B1ubHx : m.t.cIoudn),
-                      action: J,
+                      label: m.intl.string(S ? m.t.B1ubHx : m.t.cIoudn),
+                      action: $,
                       icon: r.LinkIcon,
                       leadingAccessory: { type: "icon", icon: r.LinkIcon },
                   })
-                : null;
+                : null,
+        z = p.p5 && _ && !A;
     return (0, i.jsx)(s.W, {
         "data-menu-migrated": !0,
         navId: "expression-picker",
@@ -60,6 +61,6 @@ function A(t) {
         "aria-label": m.intl.string(m.t.XoasSC),
         onSelect: n,
         className: "context-menu",
-        children: (0, i.jsxs)(a.rX, { children: [_, p.p5 && S ? (j ?? v) : null, p.p5 && S ? $ : null] }),
+        children: (0, i.jsxs)(a.rX, { children: [j, z ? (v ?? J) : null, z ? w : null] }),
     });
 }

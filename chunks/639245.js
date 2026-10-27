@@ -398,7 +398,7 @@ function el(e) {
                                         (0, i.jsx)(u.E, {
                                             variant: "text-md/semibold",
                                             className: et.cC,
-                                            children: eh ? `:${l.name}:` : l.name,
+                                            children: l.name,
                                         }),
                                         !eh &&
                                             null != ej &&
