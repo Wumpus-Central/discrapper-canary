@@ -1,21 +1,24 @@
-(n.d(t, { Go: () => I, Le: () => T, R8: () => S, _S: () => N, b5: () => C, q6: () => A, sX: () => m, vF: () => p }),
-    n(321073));
+(n.d(t, { Go: () => p, Le: () => m, R8: () => S, _S: () => N, b5: () => C, q6: () => h, sX: () => g, vF: () => T }),
+    n(321073),
+    n(134528),
+    n(947204));
 var i = n(675970),
     r = n(155718),
     a = n(7584),
-    s = n(935208);
+    s = n(935208),
+    l = n(240248);
 n(835517);
-var l = n(957806);
+var o = n(957806);
 n(399667);
-var o = n(817379),
-    d = n(142617),
-    c = n(309913),
-    u = n(922704),
-    _ = n(763166),
-    E = n(105292);
-function A(e) {
+var d = n(817379),
+    c = n(142617),
+    u = n(309913),
+    _ = n(922704),
+    E = n(763166),
+    A = n(105292);
+function h(e) {
     var t, n;
-    return (0, d.wV)("transformCheckpoint2026CardComponent") && (null != e.character || null != e.stats)
+    return (0, c.wV)("transformCheckpoint2026CardComponent") && (null != e.character || null != e.stats)
         ? {
               version: e.version,
               character:
@@ -70,15 +73,15 @@ function A(e) {
           }
         : null;
 }
-let h = new Set([i.Q.DEFAULT, i.Q.CHARACTER_ONLY]),
-    f = new Set([i.Q.DEFAULT, i.Q.STATS_ONLY]);
-function I(e, t, n) {
+let f = new Set([i.Q.DEFAULT, i.Q.CHARACTER_ONLY]),
+    I = new Set([i.Q.DEFAULT, i.Q.STATS_ONLY]);
+function p(e, t, n) {
     let i, r, a;
     return {
-        version: c.wk.V2026,
-        character: h.has(e) ? (t ?? void 0) : void 0,
+        version: u.wk.V2026,
+        character: f.has(e) ? (t ?? void 0) : void 0,
         stats:
-            f.has(e) && null != n
+            I.has(e) && null != n
                 ? ((i = n.guilds?.guilds[0]),
                   (r = n.emojis?.emojis[0]),
                   (a = n.games?.games[0]?.game),
@@ -103,100 +106,106 @@ function I(e, t, n) {
                 : void 0,
     };
 }
-function p(e, t) {
+function T(e, t) {
     let n = [];
     return (
-        (0, o.fA)(e.wearable).forEach((i) => {
+        (0, d.fA)(e.wearable).forEach((i) => {
             let r = e[i],
-                a = o.qM[i][r]?.layer;
+                a = d.qM[i][r]?.layer;
             null != a && "" !== a && n.push(`${a}?height=${t}&width=${t}`);
         }),
         n
     );
 }
-function T(e) {
-    return new Intl.NumberFormat(E.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
-}
 function m(e) {
-    return Math.min(Math.max(Math.round((e / 100) * c.w0), c.Qq), c.sh);
+    return new Intl.NumberFormat(A.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
 }
 function g(e) {
-    return { text: e, accessibilityLabel: e };
+    return Math.min(Math.max(Math.round((e / 100) * u.w0), u.Qq), u.sh);
 }
 function S(e) {
-    let t;
+    var t;
+    let n;
     return {
-        powerLevel: T(e.powerLevel),
-        powerLevelUnits: m(e.powerLevelPercentile),
+        powerLevel: m(e.powerLevel),
+        powerLevelUnits: g(e.powerLevelPercentile),
         voice: {
             text:
-                (t = Math.round(e.totalVoiceMinutes)) > 0
-                    ? (0, l.oO)(t)
-                    : E.intl.formatToPlainString(E.t.iXLF9W, { minutes: t }),
-            accessibilityLabel: E.intl.formatToPlainString(_.default.lw35aH, { duration: (0, l.GM)(t) }),
+                (n = Math.round(e.totalVoiceMinutes)) > 0
+                    ? (0, o.oO)(n)
+                    : A.intl.formatToPlainString(A.t.iXLF9W, { minutes: n }),
+            accessibilityLabel: A.intl.formatToPlainString(E.default.lw35aH, { duration: (0, o.GM)(n) }),
         },
         messages: {
             text:
                 e.numMessagesSent > 0
-                    ? e.numMessagesSent.toLocaleString(E.intl.currentLocale)
-                    : E.intl.formatToPlainString(_.default.foKBCN, { count: e.numMessagesSent }),
-            accessibilityLabel: E.intl.formatToPlainString(_.default.IdRUAC, { count: e.numMessagesSent }),
+                    ? e.numMessagesSent.toLocaleString(A.intl.currentLocale)
+                    : A.intl.formatToPlainString(E.default.foKBCN, { count: e.numMessagesSent }),
+            accessibilityLabel: A.intl.formatToPlainString(E.default.IdRUAC, { count: e.numMessagesSent }),
         },
-        topGuildDaysInteracted:
-            null == e.topGuild
-                ? g(E.intl.string(_.default.GultYJ))
-                : {
-                      text: E.intl.formatToPlainString(E.t.GBLpQ8, { days: e.topGuildNumDaysInteracted }),
-                      accessibilityLabel: E.intl.formatToPlainString(_.default.MpSH8v, {
-                          days: e.topGuildNumDaysInteracted,
-                      }),
-                  },
-        topGuildName:
-            null == e.topGuild
-                ? g(E.intl.string(E.t["52UOf9"]))
-                : {
-                      text: e.topGuild.guildName,
-                      accessibilityLabel: E.intl.formatToPlainString(_.default["9UTJ+t"], {
-                          guildName: e.topGuild.guildName,
-                      }),
-                  },
+        topGuildDaysInteracted: (function (e) {
+            if (null == e.topGuild) {
+                var t;
+                return { text: (t = A.intl.string(E.default.GultYJ)), accessibilityLabel: t };
+            }
+            return {
+                text: A.intl.formatToPlainString(A.t.GBLpQ8, { days: e.topGuildNumDaysInteracted }),
+                accessibilityLabel: A.intl.formatToPlainString(E.default.MpSH8v, { days: e.topGuildNumDaysInteracted }),
+            };
+        })(e),
+        topGuildName: (function (e) {
+            if (null != e.topGuild)
+                return {
+                    text: e.topGuild.guildName,
+                    accessibilityLabel: A.intl.formatToPlainString(E.default["9UTJ+t"], {
+                        guildName: e.topGuild.guildName,
+                    }),
+                };
+        })(e),
         reactions: {
             text:
                 e.numEmojisSent > 0
-                    ? e.numEmojisSent.toLocaleString(E.intl.currentLocale)
-                    : E.intl.formatToPlainString(_.default.RHYx1k, { count: e.numEmojisSent }),
-            accessibilityLabel: E.intl.formatToPlainString(_.default["36qpUG"], { count: e.numEmojisSent }),
+                    ? e.numEmojisSent.toLocaleString(A.intl.currentLocale)
+                    : A.intl.formatToPlainString(E.default.RHYx1k, { count: e.numEmojisSent }),
+            accessibilityLabel: A.intl.formatToPlainString(E.default["36qpUG"], { count: e.numEmojisSent }),
         },
-        topEmojiName:
-            null == e.topEmoji
-                ? g(E.intl.string(E.t.lxsmBd))
-                : {
-                      text:
-                          null == e.topEmoji.emojiId
-                              ? a.Ay.convertSurrogateToName(e.topEmoji.emojiName)
-                              : `:${e.topEmoji.emojiName}:`,
-                      accessibilityLabel: E.intl.formatToPlainString(_.default.CcBo8C, {
-                          emojiName: e.topEmoji.emojiName,
-                      }),
-                  },
+        topEmojiName: (function (e) {
+            if (!(e.numEmojisSent <= 0) && null != e.topEmoji)
+                return {
+                    text:
+                        null == e.topEmoji.emojiId
+                            ? a.Ay.convertSurrogateToName(e.topEmoji.emojiName)
+                            : `:${e.topEmoji.emojiName}:`,
+                    accessibilityLabel: A.intl.formatToPlainString(E.default.CcBo8C, {
+                        emojiName: e.topEmoji.emojiName,
+                    }),
+                };
+        })(e),
         daysPlayed: {
             text:
                 e.totalDaysPlayed > 0
-                    ? E.intl.formatToPlainString(E.t.GBLpQ8, { days: e.totalDaysPlayed })
-                    : E.intl.string(_.default.mg1NPe),
-            accessibilityLabel: E.intl.formatToPlainString(_.default.LYcKX7, { days: e.totalDaysPlayed }),
+                    ? A.intl.formatToPlainString(A.t.GBLpQ8, { days: e.totalDaysPlayed })
+                    : A.intl.string(E.default.mg1NPe),
+            accessibilityLabel: A.intl.formatToPlainString(E.default.LYcKX7, { days: e.totalDaysPlayed }),
         },
-        topGameName:
-            null == e.topGame
-                ? g(E.intl.string(E.t["5eYZiW"]))
-                : {
-                      text: e.topGame.applicationName,
-                      accessibilityLabel: E.intl.formatToPlainString(_.default.kLqpNC, {
-                          gameName: e.topGame.applicationName,
-                      }),
-                  },
+        topGameName: (function (e) {
+            if (!(e.totalDaysPlayed <= 0) && null != e.topGame)
+                return {
+                    text: e.topGame.applicationName,
+                    accessibilityLabel: A.intl.formatToPlainString(E.default.kLqpNC, {
+                        gameName: e.topGame.applicationName,
+                    }),
+                };
+        })(e),
         topEmoji: e.topEmoji,
         topGuild: e.topGuild,
+        topGuildAcronymCharacter:
+            null != e.topGuild
+                ? ((t = e.topGuild.guildName),
+                  Array.from((0, l.oN)(t))
+                      .at(0)
+                      ?.toLocaleUpperCase(A.intl.currentLocale))
+                : void 0,
         topGame: e.topGame,
     };
 }
@@ -206,9 +215,9 @@ function N(e) {
 }
 function C(e) {
     switch (e.version) {
-        case c.wk.V2025:
-            return E.intl.string(u.default.goiR2u);
-        case c.wk.V2026:
+        case u.wk.V2025:
+            return A.intl.string(_.default.goiR2u);
+        case u.wk.V2026:
         default:
             return null;
     }

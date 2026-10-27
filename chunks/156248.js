@@ -28,13 +28,11 @@ function g(e) {
                             n.e("236946"),
                             n.e("692639"),
                             n.e("890480"),
-                            n.e("593020"),
                             n.e("440963"),
                             n.e("766031"),
                             n.e("394317"),
                             n.e("304329"),
                             n.e("207960"),
-                            n.e("599889"),
                             n.e("2617"),
                         ]).then(n.bind(n, 32672));
                         return (n) => (0, i.jsx)(e, { ...n, skuId: t, product: l, productName: s, tab: r, source: a });
