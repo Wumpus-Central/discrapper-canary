@@ -2661,7 +2661,7 @@ let n = async function () {
                 destructorFunction: null,
             });
         },
-        o: (e, r, t, n, o, a, s, i, l, u, d, c, h) => {
+        n: (e, r, t, n, o, a, s, i, l, u, d, c, h) => {
             ((d = e$(d)), (a = e3(o, a)), (i &&= e3(s, i)), (u &&= e3(l, u)), (h = e3(c, h)));
             var f,
                 p,
@@ -2694,7 +2694,7 @@ let n = async function () {
                     return ((eB[e] = { pointerType: p, constPointerType: v }), e2(m, s), [f, p, v]);
                 }));
         },
-        r: (e, r, t, n, o, a) => {
+        q: (e, r, t, n, o, a) => {
             var s = e7(r, t);
             ((o = e3(n, o)),
                 e9([], [e], (e) => {
@@ -3024,18 +3024,18 @@ ${n}
             );
         },
         b: ri,
-        m: (e, r) => ((e = rl.toValue(e)), (r = rl.toValue(r)), rl.toHandle(e[r])),
+        r: (e, r) => ((e = rl.toValue(e)), (r = rl.toValue(r)), rl.toHandle(e[r])),
         i: (e) => {
             e > 9 && (rs[e + 1] += 1);
         },
         f: (e, r, t, n, o) => ry[e](r, t, n, o),
         l: () => rl.toHandle([]),
         k: (e) => rl.toHandle(rk(e)),
-        p: () => rl.toHandle({}),
+        o: () => rl.toHandle({}),
         e: (e) => {
             (re(rl.toValue(e)), ri(e));
         },
-        n: (e, r, t) => {
+        m: (e, r, t) => {
             ((e = rl.toValue(e)), (r = rl.toValue(r)), (t = rl.toValue(t)), (e[r] = t));
         },
         H: function (e, r) {
@@ -3126,7 +3126,7 @@ ${n}
             for (var o of t) n += er(o) + 1;
             return ((u[r >> 2] = n), 0);
         },
-        q: function (e) {
+        p: function (e) {
             try {
                 var r = eb.getStreamFromFD(e);
                 return (ey.close(r), 0);
