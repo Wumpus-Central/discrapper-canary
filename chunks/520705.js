@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => q }));
+(n.r(t), n.d(t, { default: () => W }));
 var r = n(477900),
     a = n(582128),
     l = n(503698),
@@ -19,8 +19,8 @@ var r = n(477900),
     C = n(343030),
     k = n(91242),
     j = n(545691),
-    A = n(317608),
-    I = n(241696),
+    I = n(317608),
+    A = n(241696),
     E = n(548118),
     L = n(956790),
     y = n(699426),
@@ -32,15 +32,16 @@ var r = n(477900),
     M = n(983851),
     F = n(625180),
     P = n(620999),
-    O = n(105292);
-function R(e) {
+    O = n(248675),
+    R = n(105292);
+function G(e) {
     e.stopPropagation();
 }
-function G(e) {
+function B(e) {
     let { frame: t, className: n } = e;
     if (!(0, P.v)(t)) return null;
     let { userMuted: a } = t.data,
-        l = O.intl.string(a ? O.t.YqAjXy : O.t.w4m945);
+        l = R.intl.string(a ? O.default.bd0Ufh : O.default.dxBzpe);
     return (0, r.jsx)("div", {
         className: n,
         children: (0, r.jsx)(u.m, {
@@ -50,7 +51,7 @@ function G(e) {
                 variant: "overlay-secondary",
                 "aria-label": l,
                 icon: a ? D._ : M.H,
-                onMouseDown: R,
+                onMouseDown: G,
                 onClick: (e) => {
                     (e.stopPropagation(), F.A.setFrameUserMuted(t.id, !a));
                 },
@@ -59,13 +60,12 @@ function G(e) {
     });
 }
 var H = n(506868),
-    _ = n(652215),
-    B = n(165610),
-    K = n(248675),
-    U = n(715803),
-    X = n(155819),
-    z = n(969426);
-function Y(e) {
+    U = n(652215),
+    _ = n(165610),
+    K = n(715803),
+    z = n(155819),
+    X = n(969426);
+function J(e) {
     let { label: t, icon: n, onClick: a } = e;
     return (0, r.jsx)(u.m, {
         text: t,
@@ -74,41 +74,41 @@ function Y(e) {
         children: (0, r.jsx)(c.K, { variant: "icon-only", size: "sm", "aria-label": t, icon: n, onClick: a }),
     });
 }
-function J(e) {
+function V(e) {
     let { frame: t, applicationName: n } = e,
         a = (0, x.A)(t.surface),
         l = (0, i.bG)([N.A], () => N.A.getGuild(a), [a]),
         s = (0, h.G)();
     return (0, r.jsx)("div", {
-        className: U.Q,
+        className: K.Q,
         children: (0, r.jsxs)("div", {
-            className: U.KE,
+            className: K.KE,
             children: [
-                null != l ? (0, r.jsx)(E.Ay, { guild: l, size: E.Ay.Sizes.MINI, className: U.$f }) : null,
+                null != l ? (0, r.jsx)(E.Ay, { guild: l, size: E.Ay.Sizes.MINI, className: K.$f }) : null,
                 (0, r.jsx)(d.E, {
                     variant: "text-sm/medium",
                     color: "text-strong",
                     lineClamp: 1,
-                    className: U.JB,
+                    className: K.JB,
                     children: n,
                 }),
                 (0, r.jsxs)("div", {
-                    className: U.FS,
+                    className: K.FS,
                     children: [
-                        (0, r.jsx)(Y, {
-                            label: O.intl.string(K.default.tfKtLw),
+                        (0, r.jsx)(J, {
+                            label: R.intl.string(O.default.tfKtLw),
                             icon: m.MinusIcon,
                             onClick: () => (0, T.Gt)(t.applicationId, !1),
                         }),
                         s
-                            ? (0, r.jsx)(Y, {
-                                  label: O.intl.string(O.t["3Zypbv"]),
+                            ? (0, r.jsx)(J, {
+                                  label: R.intl.string(R.t["3Zypbv"]),
                                   icon: f.t,
-                                  onClick: () => (0, g.A)({ onConfirm: () => (0, I.A)(t.id) }),
+                                  onClick: () => (0, g.A)({ onConfirm: () => (0, A.A)(t.id) }),
                               })
                             : null,
-                        (0, r.jsx)(Y, {
-                            label: O.intl.string(O.t.VkMnR2),
+                        (0, r.jsx)(J, {
+                            label: R.intl.string(R.t.VkMnR2),
                             icon: p.DoorExitIcon,
                             onClick: () => (0, j.A)(t.id),
                         }),
@@ -118,9 +118,9 @@ function J(e) {
         }),
     });
 }
-function V(e) {
+function Y(e) {
     let { frameId: t, onHoverChange: n, onPress: l, onUnmount: u, shouldIgnoreClick: c } = e,
-        d = (0, i.bG)([k.A], () => (0, B.ny)(k.A.getFrame(t)), [t]),
+        d = (0, i.bG)([k.A], () => (0, _.ny)(k.A.getFrame(t)), [t]),
         m = (0, b.h)(d?.applicationId)?.name ?? "";
     return (a.useEffect(
         () => () => {
@@ -131,10 +131,10 @@ function V(e) {
     null == d)
         ? null
         : (0, r.jsx)(v.N, {
-              theme: _.NJ8.DARK,
+              theme: U.NJ8.DARK,
               children: (e) =>
                   (0, r.jsxs)("div", {
-                      className: s()(U.Nr, e),
+                      className: s()(K.Nr, e),
                       onMouseEnter: () => n(t, !0),
                       onMouseLeave: () => n(t, !1),
                       onMouseDown: (e) => {
@@ -147,12 +147,12 @@ function V(e) {
                           e.currentTarget.contains(e.relatedTarget) || n(t, !1);
                       },
                       children: [
-                          (0, r.jsx)(J, { frame: d, applicationName: m }),
+                          (0, r.jsx)(V, { frame: d, applicationName: m }),
                           (0, r.jsx)("div", {
                               role: "button",
                               tabIndex: 0,
-                              "aria-label": O.intl.formatToPlainString(K.default.dPf03z, { appName: m }),
-                              className: s()(U.VH, z.a8),
+                              "aria-label": R.intl.formatToPlainString(O.default.dPf03z, { appName: m }),
+                              className: s()(K.VH, X.a8),
                               onClick: () => {
                                   c() || (0, w.returnToConjureFrameSurface)(d);
                               },
@@ -161,11 +161,11 @@ function V(e) {
                                       ("Enter" === e.key || " " === e.key) &&
                                       (e.preventDefault(), (0, w.returnToConjureFrameSurface)(d));
                               },
-                              children: (0, r.jsx)(A.A, {
+                              children: (0, r.jsx)(I.A, {
                                   frameId: d.id,
                                   level: C.A.AboveAppContent,
-                                  className: U.Z7,
-                                  overlay: (0, r.jsx)(G, { frame: d, className: s()(U.Lu, e) }),
+                                  className: K.Z7,
+                                  overlay: (0, r.jsx)(B, { frame: d, className: s()(K.Lu, e) }),
                               }),
                           }),
                       ],
@@ -175,12 +175,12 @@ function V(e) {
 function Z(e) {
     let { frameId: t } = e;
     return (0, r.jsx)("div", {
-        className: U.tF,
+        className: K.tF,
         "aria-hidden": !0,
-        children: (0, r.jsx)(A.A, { frameId: t, level: C.A.Backstage, className: U.Z7 }),
+        children: (0, r.jsx)(I.A, { frameId: t, level: C.A.Backstage, className: K.Z7 }),
     });
 }
-function q(e) {
+function W(e) {
     var t;
     let n,
         l,
@@ -203,10 +203,10 @@ function q(e) {
         [h, b] = a.useState(() => new Map()),
         [x, C] = a.useState(!1),
         j = a.useRef(!1),
-        A = a.useCallback((e, t) => {
+        I = a.useCallback((e, t) => {
             g((n) => new Map(n).set(e, t));
         }, []),
-        I = a.useCallback((e, t) => {
+        A = a.useCallback((e, t) => {
             b((n) => (n.get(e) === t ? n : new Map(n).set(e, t)));
         }, []),
         E = (function () {
@@ -340,18 +340,18 @@ function q(e) {
             children: [
                 (0, r.jsx)(y.Ay, {
                     children: (0, r.jsx)("div", {
-                        className: s()(X._I, { [X.cB]: x }),
+                        className: s()(z._I, { [z.cB]: x }),
                         children: m.map((e) => {
-                            let t = v.get(e) ?? _.CUs.BOTTOM_RIGHT,
+                            let t = v.get(e) ?? U.CUs.BOTTOM_RIGHT,
                                 n = F.get(t) ?? 0,
                                 a = h.get(e) ?? 0;
                             a > 0 && F.set(t, n + a + 8);
-                            let l = t === _.CUs.TOP_LEFT || t === _.CUs.TOP_RIGHT;
+                            let l = t === U.CUs.TOP_LEFT || t === U.CUs.TOP_RIGHT;
                             return (0, r.jsx)(
                                 L.S8,
                                 {
                                     id: e,
-                                    className: s()(U.x, { [U.yo]: E.isToolbarShown(e), [U.HJ]: E.isSnapping(e) }),
+                                    className: s()(K.x, { [K.yo]: E.isToolbarShown(e), [K.HJ]: E.isSnapping(e) }),
                                     position: t,
                                     hidden: p,
                                     appContext: c,
@@ -361,14 +361,14 @@ function q(e) {
                                     edgeOffsetBottom: L.X8.bottom + (l ? 0 : n),
                                     edgeOffsetLeft: L.X8.left,
                                     edgeOffsetRight: L.X8.right,
-                                    onMove: A,
-                                    onHeightChange: I,
+                                    onMove: I,
+                                    onHeightChange: A,
                                     onDragStart: w,
                                     onDragEnd: D,
                                     onDragRelease: E.handleDragRelease,
                                     onDragSettle: E.handleDragSettle,
                                     dragInsetTop: 40,
-                                    children: (0, r.jsx)(V, {
+                                    children: (0, r.jsx)(Y, {
                                         frameId: e,
                                         onHoverChange: E.handleHoverChange,
                                         onPress: E.handlePress,
