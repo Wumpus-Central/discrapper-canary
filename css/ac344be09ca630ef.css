@@ -98,48 +98,6 @@
     --custom-timeline-glow-shadow: -2px 0 14px 3px transparent, -5px 0 22px 0 transparent, 0 0 27.8px 1px #fff
 }
 
-.productIcon__4c629 {
-    background-color: var(--background-surface-high);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-md);
-    box-sizing: border-box;
-    flex-shrink: 0;
-    height: 48px;
-    width: 48px
-}
-
-.productIcon__4c629,
-.rewardIcon__4c629 {
-    -o-object-fit: cover;
-    object-fit: cover
-}
-
-.rewardIcon__4c629 {
-    height: 100%;
-    width: 100%
-}
-
-.videoOverlay__4c629 {
-    flex: 1;
-    justify-content: space-between;
-    padding: var(--space-16)
-}
-
-.rewardStatus__4c629,
-.videoOverlay__4c629 {
-    align-items: center;
-    display: flex;
-    gap: var(--space-8)
-}
-
-.rewardStatus__4c629 {
-    min-width: 0
-}
-
-.videoActions__4c629 {
-    pointer-events: auto
-}
-
 .overlayPadding__58e02 {
     align-items: center;
     display: flex;
@@ -153,4 +111,4 @@
     --custom-transcript-bottom: 36px
 }
 
-/*# sourceMappingURL=c47c799c762b62a4.css.map*/
+/*# sourceMappingURL=ac344be09ca630ef.css.map*/

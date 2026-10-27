@@ -16,14 +16,14 @@ async function r(e) {
                         n.e("974119"),
                         n.e("734818"),
                         n.e("651585"),
-                        n.e("216870"),
+                        n.e("32925"),
                         n.e("450998"),
                         n.e("340363"),
                         n.e("125043"),
                         n.e("955628"),
-                        n.e("814306"),
                         n.e("324732"),
                         n.e("634225"),
+                        n.e("255563"),
                         n.e("60955"),
                         n.e("264236"),
                         n.e("110116"),
@@ -55,8 +55,8 @@ async function r(e) {
                         n.e("954180"),
                         n.e("258427"),
                         n.e("182045"),
-                        n.e("572934"),
-                    ]).then(n.bind(n, 752805));
+                        n.e("157153"),
+                    ]).then(n.bind(n, 589451));
                     return (n) => (0, o.jsx)(e, { ...n, bounty: t, sourceQuestContent: a });
                 },
                 { modalKey: "BOUNTY_VIDEO_MODAL" },
