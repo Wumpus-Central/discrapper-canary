@@ -685,14 +685,15 @@ function eQ(e) {
                                                         n.e("373122"),
                                                         n.e("217951"),
                                                         n.e("221856"),
+                                                        n.e("186212"),
                                                         n.e("755936"),
                                                         n.e("147662"),
                                                         n.e("46322"),
                                                         n.e("899843"),
                                                         n.e("904448"),
                                                         n.e("833703"),
-                                                        n.e("256274"),
                                                         n.e("544571"),
+                                                        n.e("55252"),
                                                         n.e("692990"),
                                                         n.e("362931"),
                                                         n.e("745959"),
@@ -967,8 +968,8 @@ var e2 = n(34188),
     e7 = n(177953),
     e3 = n(825484),
     e6 = n(683071),
-    e4 = n(900797),
-    e5 = n(847374),
+    e5 = n(900797),
+    e4 = n(847374),
     e9 = n(10716),
     te = n(702841),
     tt = n(150934),
@@ -1415,8 +1416,8 @@ function tb(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e4.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e4.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1569,8 +1570,8 @@ function t3(e, t) {
     }, [s, l, n, t]);
 }
 var t6 = n(785728),
-    t4 = n(712440),
-    t5 = n(733110),
+    t5 = n(712440),
+    t4 = n(733110),
     t9 = n(73153);
 let ne = 10 * Y.A.Millis.MINUTE,
     nt = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -2246,11 +2247,11 @@ function n6(e, t) {
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n4(e, t) {
+function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n5 = n(562708),
+var n4 = n(562708),
     n9 = n(139286),
     le = n(520117);
 function lt(e) {
@@ -2260,8 +2261,8 @@ function lt(e) {
         trackSearchResultsItemImpressionRef: (0, le.A)({
             onVisible: function () {
                 (0, n9.x)({
-                    type: n5.ImpressionTypes.VIEW,
-                    name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                    type: n4.ImpressionTypes.VIEW,
+                    name: n4.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -2580,7 +2581,7 @@ function lu(e) {
                                 let n = z.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return z.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n4,
+                            n5,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -3156,13 +3157,13 @@ function ly(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t5.default], () => t5.default.getFetchState());
+                        s = (0, A.bG)([t4.default], () => t4.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t5.FetchState.NOT_FETCHED && t4.A.fetch();
+                        i && s === t4.FetchState.NOT_FETCHED && t5.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t5.default], () =>
+                    let a = (0, A.yK)([t4.default], () =>
                             i
-                                ? t5.default
+                                ? t4.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(tJ.F.APPLICATIONS_COMMANDS))
                                 : [],

@@ -17,8 +17,9 @@ let s = function (e) {
             overrideGraphic: A,
             overrideGradientColor: h,
             rentalExpiresAt: f,
+            completesCollectAndClaimPromotion: I,
         } = e,
-        I = null != s && s.length > 0;
+        p = null != s && s.length > 0;
     (0, r.openModalLazy)(
         async () => {
             if ((0, a.EZ)(t.skuId) || t.skuId === a.Dp.ORB_PROFILE_BADGE) {
@@ -84,6 +85,7 @@ let s = function (e) {
                 n.e("454048"),
                 n.e("364827"),
                 n.e("10866"),
+                n.e("186212"),
                 n.e("362931"),
                 n.e("349619"),
                 n.e("264236"),
@@ -109,6 +111,7 @@ let s = function (e) {
                 n.e("186546"),
                 n.e("443256"),
                 n.e("254103"),
+                n.e("154663"),
                 n.e("152454"),
                 n.e("625265"),
                 n.e("192643"),
@@ -125,10 +128,11 @@ let s = function (e) {
                     overrideGraphic: A,
                     overrideGradientColor: h,
                     rentalExpiresAt: f,
+                    completesCollectAndClaimPromotion: I,
                     onCloseCallback: u,
                     ...n,
                 });
         },
-        { onCloseCallback: I ? void 0 : u },
+        { onCloseCallback: p ? void 0 : u },
     );
 };

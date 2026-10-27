@@ -2376,48 +2376,50 @@ function n0(e) {
             collectedModalOverrideTitle: l,
             collectedModalOverrideDescription: i,
             collectedModalGradientColor: a,
+            completesCollectAndClaimPromotion: s,
         } = e,
         {
-            selectedSkuId: s,
-            purchaseError: o,
-            purchasePreviewError: u,
-            appliedUserDiscounts: d,
+            selectedSkuId: o,
+            purchaseError: u,
+            purchasePreviewError: d,
+            appliedUserDiscounts: m,
         } = (0, S.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
             appliedUserDiscounts: e.appliedUserDiscounts,
         })),
-        { paymentError: m } = (0, er.o)(),
-        { application: p } = (0, nY.V)(),
-        h = (0, nK.gU)(),
-        C = (0, nW.bG)([nZ.A], () => nZ.A.getProduct(s)),
-        f = c.useRef(!1);
-    (eY()(null != s, "Expected selectedSkuId"), eY()(null != p, "Expected application"));
-    let E = h[s];
-    eY()(null != E, "Expected sku");
-    let g = null != m || null != o || null != u,
-        I =
+        { paymentError: p } = (0, er.o)(),
+        { application: h } = (0, nY.V)(),
+        C = (0, nK.gU)(),
+        f = (0, nW.bG)([nZ.A], () => nZ.A.getProduct(o)),
+        E = c.useRef(!1);
+    (eY()(null != o, "Expected selectedSkuId"), eY()(null != h, "Expected application"));
+    let g = C[o];
+    eY()(null != g, "Expected sku");
+    let I = null != p || null != u || null != d,
+        A =
             l ??
-            (d.length > 0
-                ? H.intl.formatToPlainString(H.t.VuV3Td, { discountOfferAmount: d[0].discount.amount })
+            (m.length > 0
+                ? H.intl.formatToPlainString(H.t.VuV3Td, { discountOfferAmount: m[0].discount.amount })
                 : void 0);
     return (c.useEffect(() => {
-        null == C ||
-            g ||
-            f.current ||
-            ((f.current = !0),
+        null == f ||
+            I ||
+            E.current ||
+            ((E.current = !0),
             (0, nQ.A)({
-                product: C,
-                overrideTitle: I,
+                product: f,
+                overrideTitle: A,
                 overrideDescription: i,
                 overrideGradientColor: a,
                 analyticsLocations: n,
                 onCloseCallback: t,
                 purchaseType: nG.gs.FIAT,
+                completesCollectAndClaimPromotion: s,
             }));
-    }, [C, n, t, g, I, i, a]),
-    g)
+    }, [f, n, t, I, A, i, a, s]),
+    I)
         ? (0, r.jsx)(eW.dZ, { children: (0, r.jsx)(nX.A, {}) })
         : null;
 }
@@ -2763,15 +2765,17 @@ function lL(e) {
             collectedModalOverrideTitle: l,
             collectedModalOverrideDescription: i,
             collectedModalGradientColor: a,
+            completesCollectAndClaimPromotion: s,
         } = (0, nL.z)(),
-        { analyticsLocations: s } = (0, tm.Ay)();
+        { analyticsLocations: o } = (0, tm.Ay)();
     return (0, r.jsx)(n2, {
-        analyticsLocations: s,
+        analyticsLocations: o,
         hideConfetti: t,
         confettiCanvas: n,
         collectedModalOverrideTitle: l,
         collectedModalOverrideDescription: i,
         collectedModalGradientColor: a,
+        completesCollectAndClaimPromotion: s,
         ...e,
     });
 }
@@ -2961,7 +2965,8 @@ let lD = {
                 [h, C] = (0, c.useState)(void 0),
                 [f, E] = (0, c.useState)(void 0),
                 [S, g] = (0, c.useState)(void 0),
-                I = (0, c.useMemo)(
+                [I, A] = (0, c.useState)(!1),
+                y = (0, c.useMemo)(
                     () => ({
                         skuIDs: p,
                         setCustomConfettiVisible: u,
@@ -2973,8 +2978,10 @@ let lD = {
                         setCollectedModalOverrideDescription: E,
                         collectedModalGradientColor: S,
                         setCollectedModalGradientColor: g,
+                        completesCollectAndClaimPromotion: I,
+                        setCompletesCollectAndClaimPromotion: A,
                     }),
-                    [p, u, m, a, h, f, S],
+                    [p, u, m, a, h, f, S, I],
                 );
             return (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -2991,7 +2998,7 @@ let lD = {
                         activeSubscription: null,
                         purchaseType: e2.VV.ONE_TIME,
                         excludeSubscriptionPlansBySKU: !0,
-                        children: (0, r.jsx)(nL.i.Provider, { value: I, children: n }),
+                        children: (0, r.jsx)(nL.i.Provider, { value: y, children: n }),
                     }),
                 ],
             });

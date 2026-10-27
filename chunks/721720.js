@@ -844,14 +844,14 @@ var eJ = l(946052),
     eq = l(331322),
     eX = l(773669),
     eZ = l(480750),
-    eQ = l(135517),
+    eQ = l(192943),
     e0 = l(442036),
     e1 = l(212407),
-    e5 = l(815280),
-    e2 = l(60140),
+    e2 = l(815280),
+    e5 = l(60140),
     e3 = l(602051),
     e6 = l(268270);
-function e8(e) {
+function e9(e) {
     let { promotion: t, heroBlockRecord: l, heroLogo: n, logoDisplayConfig: s, collectionId: r, isLoading: a } = e;
     return a
         ? (0, i.jsx)("div", { className: e6.Hw })
@@ -882,7 +882,7 @@ function e8(e) {
               ],
           });
 }
-let e9 = function (e) {
+let e8 = function (e) {
     let { promotion: t, heroBlock: l, isLoading: n, handleTransition: s, tab: a } = e,
         u = (0, Z.bG)([et.default], () => et.default.getCurrentUser()),
         c = (0, Z.bG)([eX.default], () => eX.default.locale),
@@ -921,7 +921,7 @@ let e9 = function (e) {
                       (0, i.jsx)("div", {
                           className: o()(e6.vK, { [e6.no]: v }),
                           style: null != S ? { background: S } : void 0,
-                          children: null != b && (0, i.jsx)(e5.A, { bannerStatic: b, isResponsive: v }),
+                          children: null != b && (0, i.jsx)(e2.A, { bannerStatic: b, isResponsive: v }),
                       }),
                       (0, i.jsxs)("div", {
                           className: e6.xX,
@@ -931,7 +931,7 @@ let e9 = function (e) {
                                   style: null != S ? { background: S } : void 0,
                                   children:
                                       null != b &&
-                                      (0, i.jsx)(e5.A, { bannerStatic: b, bannerAnimated: j, isResponsive: v }),
+                                      (0, i.jsx)(e2.A, { bannerStatic: b, bannerAnimated: j, isResponsive: v }),
                               }),
                               (0, i.jsxs)("div", {
                                   className: e6.mz,
@@ -944,7 +944,7 @@ let e9 = function (e) {
                                                   children: [
                                                       (0, i.jsx)("div", {
                                                           className: e6.bC,
-                                                          children: (0, i.jsx)(e8, {
+                                                          children: (0, i.jsx)(e9, {
                                                               promotion: t,
                                                               heroBlockRecord: h,
                                                               heroLogo: _,
@@ -957,7 +957,7 @@ let e9 = function (e) {
                                                   ],
                                               }),
                                       }),
-                                      (0, i.jsx)(e2.A, {
+                                      (0, i.jsx)(e5.A, {
                                           heroBlockRecord: h,
                                           tab: a,
                                           isBlockLoading: n,
@@ -993,7 +993,7 @@ let tt = function (e) {
         children: [
             (0, i.jsx)("div", {
                 className: te.vK,
-                children: null != s && (0, i.jsx)(e5.A, { bannerStatic: s, bannerAnimated: r }),
+                children: null != s && (0, i.jsx)(e2.A, { bannerStatic: s, bannerAnimated: r }),
             }),
             (0, i.jsx)("div", {
                 className: te.HQ,
@@ -1581,7 +1581,7 @@ let tB = function (e) {
                                         (null == R.endsAt || null != (0, I.X)(R.endsAt))
                                     ) {
                                         d = (0, i.jsx)(
-                                            e9,
+                                            e8,
                                             { promotion: R, isLoading: A, handleTransition: t, heroBlock: e, tab: s },
                                             a,
                                         );

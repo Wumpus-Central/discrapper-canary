@@ -43,38 +43,40 @@ function U(e) {
                     setCollectedModalOverrideTitle: l,
                     setCollectedModalOverrideDescription: r,
                     setCollectedModalGradientColor: a,
+                    setCompletesCollectAndClaimPromotion: s,
                 } = (0, A.z)(),
-                s = (0, P.A)(b.FYj),
-                o = null != n ? (0, _.L)(n, s) : null,
-                u = o?.tenantMetadata?.collectibles;
+                o = (0, P.A)(b.FYj),
+                u = null != n ? (0, _.L)(n, o) : null,
+                c = u?.tenantMetadata?.collectibles;
             (0, i.useEffect)(() => {
-                switch (u?.type) {
+                switch (c?.type) {
                     case x.hE.COLLECT_AND_CLAIM: {
-                        let e = o?.progress;
+                        let e = u?.progress;
                         if (null == n || null == e) break;
-                        let t = Math.min(e.current + (0, v.oO)(n, u.collectionId), e.target);
-                        (o?.rewardStatus === y.GM.IN_PROGRESS
+                        let t = Math.min(e.current + (0, v.oO)(n, c.collectionId), e.target);
+                        u?.rewardStatus === y.GM.IN_PROGRESS
                             ? l(j.intl.formatToPlainString(j.t.Jkxtln, { current: t, target: e.target }))
-                            : l(void 0),
-                            r(
-                                j.intl.formatToPlainString(
-                                    o?.rewardStatus === y.GM.IN_PROGRESS && t >= e.target ? j.t.OUIULI : j.t["8yvdPi"],
-                                    { collectibleTitle: (0, N.VG)(n) },
-                                ),
-                            ),
-                            a(void 0));
+                            : l(void 0);
+                        let i = u?.rewardStatus === y.GM.IN_PROGRESS && t >= e.target;
+                        (r(
+                            j.intl.formatToPlainString(i ? j.t.OUIULI : j.t["8yvdPi"], {
+                                collectibleTitle: (0, N.VG)(n),
+                            }),
+                        ),
+                            a(void 0),
+                            s(i));
                         return;
                     }
                     case x.hE.TARGETED_OFFER: {
-                        let e = u.reward,
-                            n = null != e ? o?.rewardConfig?.discount?.id : null,
+                        let e = c.reward,
+                            n = null != e ? u?.rewardConfig?.discount?.id : null,
                             i = null != n && t?.getDiscountIdIfExists() === String(n) ? e : null;
-                        (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, T.lG)(i.flavor) : void 0));
+                        (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, T.lG)(i.flavor) : void 0), s(!1));
                         return;
                     }
                 }
-                (l(void 0), r(void 0), a(void 0));
-            }, [u, o, n, t, l, r, a]);
+                (l(void 0), r(void 0), a(void 0), s(!1));
+            }, [c, u, n, t, l, r, a, s]);
         })({ invoicePreview: n, product: l }),
         null
     );

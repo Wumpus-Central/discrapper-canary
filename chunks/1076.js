@@ -11,6 +11,8 @@ let i = (0, l.createContext)({
     setCollectedModalOverrideDescription: () => {},
     collectedModalGradientColor: void 0,
     setCollectedModalGradientColor: () => {},
+    completesCollectAndClaimPromotion: !1,
+    setCompletesCollectAndClaimPromotion: () => {},
 });
 function r() {
     return (0, l.useContext)(i);
