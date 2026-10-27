@@ -1879,7 +1879,7 @@ class ej extends p.A {
     destroyed = !1;
     userId;
     currentEncryptorProtocolVersion = 0;
-    recognizedUserIds = new Set();
+    remoteUserIds = new Set();
     secureFramesTransitions = new Map();
     latestPreparedTransitionVersion = 0;
     lastSecureFramesStateUpdate = null;
@@ -1907,11 +1907,14 @@ class ej extends p.A {
     createUser(e) {
         e === this.userId
             ? this.logger.error("Refusing to create a decryptor for the local user ID")
-            : (this.recognizedUserIds.add(e),
+            : (this.remoteUserIds.add(e),
+              this.mlsSession.AddRecognizedUser(e),
               this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, eB.DECRYPT));
     }
     destroyUser(e) {
-        (this.recognizedUserIds.delete(e), this.encryptionWorker.postMessage({ type: eF.DESTROY_USER, userId: e }));
+        (this.remoteUserIds.delete(e),
+            this.mlsSession.RemoveRecognizedUser(e),
+            this.encryptionWorker.postMessage({ type: eF.DESTROY_USER, userId: e }));
     }
     updateLocalUserCodecs(e, t) {
         this.encryptionWorker.postMessage({ type: eF.UPDATE_CODECS, audioCodec: e, videoCodec: t });
@@ -1949,7 +1952,7 @@ class ej extends p.A {
         this.mlsSession.SetExternalSender(e);
     }
     processMLSProposals(e, t) {
-        let n = this.mlsSession.ProcessProposals(e, this.getRecognizedUserIDs());
+        let n = this.mlsSession.ProcessProposals(e);
         n && t(n);
     }
     prepareMLSCommitTransition(e, t, n) {
@@ -1959,7 +1962,7 @@ class ej extends p.A {
             i.ignored || n(r, this.mlsSession.GetProtocolVersion(), i.rosterUpdate));
     }
     processMLSWelcome(e, t, n) {
-        let i = this.mlsSession.ProcessWelcome(t, this.getRecognizedUserIDs());
+        let i = this.mlsSession.ProcessWelcome(t);
         (i && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()),
             n(null != i, this.mlsSession.GetProtocolVersion(), i));
     }
@@ -1985,9 +1988,6 @@ class ej extends p.A {
             e
         );
     }
-    getRecognizedUserIDs() {
-        return Array.from(this.recognizedUserIds).concat([this.userId]);
-    }
     makeUserKeyRatchet(e, t) {
         return t === this.dave.kDisabledVersion ? null : this.mlsSession.GetKeyRatchet(e);
     }
@@ -2012,7 +2012,7 @@ class ej extends p.A {
         });
     }
     prepareSecureFramesRatchets(e, t) {
-        for (let e of this.getRecognizedUserIDs()) e !== this.userId && this.setupKeyRatchetForUser(e, t, eB.DECRYPT);
+        for (let e of this.remoteUserIds) this.setupKeyRatchetForUser(e, t, eB.DECRYPT);
         (e === this.dave.kInitTransitionId
             ? (this.setupKeyRatchetForUser(this.userId, t, eB.ENCRYPT), this.onSecureFramesStateChanged())
             : this.secureFramesTransitions.set(e, t),
