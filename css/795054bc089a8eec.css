@@ -1,0 +1,53 @@
+.rewardTileContainer_d8917e {
+    position: relative;
+    transform-origin: left top
+}
+
+.rewardTileSpacer_d8917e {
+    width: 56px
+}
+
+.rewardTile_d8917e {
+    margin-inline-end: 12px
+}
+
+.rewardHighlightLogoCTA_d8917e {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2
+}
+
+.rewardHighlightLogoCTALabel_d8917e {
+    align-items: center;
+    flex: 1;
+    flex-direction: row;
+    gap: 8px;
+    min-width: 0;
+    width: 100%
+}
+
+.partnerBranding_d8917e {
+    margin-bottom: 4px
+}
+
+.rewardHighlightCTA_d8917e {
+    pointer-events: none
+}
+
+.rewardHighlightCTALabel_d8917e {
+    background-color: rgba(0, 0, 0, .329);
+    border-radius: var(--radius-xl);
+    max-width: 100%;
+    min-width: 0;
+    padding: 7px 12px;
+    pointer-events: none
+}
+
+.isExpanded_d8917e {
+    flex-direction: row;
+    height: 24px
+}
+
+/*# sourceMappingURL=795054bc089a8eec.css.map*/

@@ -15,15 +15,15 @@ var a = n(477900),
     h = n(834730),
     M = n(290136),
     m = n(661531),
-    I = n(730852),
-    A = n(401843),
-    p = n(765671),
+    p = n(730852),
+    I = n(401843),
+    A = n(765671),
     L = n(775602),
     f = n(507395),
     g = n(144779),
     x = n(267102),
-    _ = n(363195),
-    y = n(734057),
+    y = n(363195),
+    _ = n(734057),
     R = n(738822),
     N = n(3738),
     v = n(291749),
@@ -32,8 +32,8 @@ var a = n(477900),
     k = n(814793),
     j = n(657792),
     b = n(62405),
-    P = n(398025),
-    Q = n(617986),
+    Q = n(398025),
+    P = n(617986),
     G = n(630037),
     O = n(190107),
     q = n(652215),
@@ -52,15 +52,15 @@ function z(e) {
             impressionRef: X,
             name: Y,
         } = e,
-        J = (0, u.bG)([y.A], () => y.A.getChannel(z?.channelId) ?? null),
+        J = (0, u.bG)([_.A], () => _.A.getChannel(z?.channelId) ?? null),
         Z = (0, G.D)({ quest: t, questContent: R.uF.MEMBERS_LIST, sourceQuestContent: R.uF.MEMBERS_LIST }),
         $ = t?.userStatus?.claimedAt != null,
         ee = t?.userStatus?.enrolledAt != null,
         et = t?.userStatus?.completedAt != null,
-        en = (0, u.bG)([_.A], () => _.A.getState().theme),
+        en = (0, u.bG)([y.A], () => y.A.getState().theme),
         ea = (0, d.M)(en) ? w.NJ.DARK : w.NJ.LIGHT,
         es = (0, u.bG)([L.Ay], () => L.Ay.useReducedMotion),
-        { ref: ei, height: er } = (0, p.Ay)(),
+        { ref: ei, height: er } = (0, A.Ay)(),
         [el, eu] = s.useState(es),
         ec = (0, x.aL)(),
         ed = (0, r.KF)();
@@ -106,7 +106,7 @@ function z(e) {
             sourceQuestContent: R.uF.MEMBERS_LIST,
             trackGuildAndChannelMetadata: !0,
         }),
-            (0, Q.mA)({ fromContent: R.uF.MEMBERS_LIST, questId: t.id }));
+            (0, P.mA)({ fromContent: R.uF.MEMBERS_LIST, questId: t.id }));
     }
     function eh() {
         (0, k.Ll)(z, J) && null != J
@@ -134,8 +134,8 @@ function z(e) {
                                   sourceQuestContent: R.uF.MEMBERS_LIST,
                                   trackGuildAndChannelMetadata: !0,
                               }),
-                              I.default.selectVoiceChannel(J.id),
-                              (0, A.Nl)(z)
+                              p.default.selectVoiceChannel(J.id),
+                              (0, I.Nl)(z)
                           ),
                           ...n,
                       });
@@ -216,11 +216,14 @@ function z(e) {
                                                 sourceQuestContent: R.uF.MEMBERS_LIST,
                                                 trackGuildAndChannelMetadata: !0,
                                             }),
-                                            (0, Q.Zc)(t, {
-                                                content: R.uF.MEMBERS_LIST,
-                                                ctaContent: F.Cy.OPEN_DISCLOSURE,
-                                                sourceQuestContent: R.uF.MEMBERS_LIST,
-                                            }));
+                                            (0, P.Zc)(
+                                                { type: l.p.QUEST, quest: t },
+                                                {
+                                                    content: R.uF.MEMBERS_LIST,
+                                                    ctaContent: F.Cy.OPEN_DISCLOSURE,
+                                                    sourceQuestContent: R.uF.MEMBERS_LIST,
+                                                },
+                                            ));
                                     },
                                     children: [
                                         (0, a.jsx)(h.E, {
@@ -251,7 +254,7 @@ function z(e) {
                                         (e, t) =>
                                             t &&
                                             (0, a.jsx)(i.animated.div, {
-                                                style: { opacity: (0, P.a)(e.opacity), scale: (0, P.a)(e.scale) },
+                                                style: { opacity: (0, Q.a)(e.opacity), scale: (0, Q.a)(e.scale) },
                                                 className: D.ae,
                                             }),
                                     ),

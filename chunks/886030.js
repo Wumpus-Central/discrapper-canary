@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     iE: "wrapper__8c034",
     Tu: "opaqueExpandedBackground__8c034",
     Ht: "rewardHighlightWrapper__8c034",
@@ -13,4 +13,11 @@ e.exports = {
     y8: "promotedBadge__8c034",
     P$: "promotedBadgeIcon__8c034",
     Iu: "partnerBranding__8c034",
+    bU: "bountyHeader__8c034",
+    W2: "bountyLeading__8c034",
+    jd: "bountyMenu__8c034",
+    iY: "bountyProductIconButton__8c034",
+    Q1: "bountyProductIcon__8c034",
+    RK: "bountyPromotedBadge__8c034",
+    oz: "bountyMenuTarget__8c034",
 };

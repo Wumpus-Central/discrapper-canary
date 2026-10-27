@@ -1,94 +1,102 @@
-s.d(e, { default: () => p });
-var i = s(477900),
-    n = s(582128),
-    r = s(323889),
-    a = s(189213),
-    c = s(834730),
-    l = s(664121),
-    o = s(998445),
-    u = s(950305),
-    d = s(687966),
-    m = s(253932),
-    g = s(975571),
-    x = s(738822),
-    h = s(651892),
-    T = s(792620),
-    E = s(652215),
-    f = s(105292),
-    S = s(738541);
-function p(t) {
-    let { transitionState: e, onClose: s, questContent: l, quest: o, returnRef: u } = t,
-        d = m.H1.useSetting(),
+i.d(e, { default: () => T });
+var n = i(477900),
+    s = i(582128),
+    r = i(189213),
+    l = i(834730),
+    c = i(664121),
+    a = i(998445),
+    u = i(950305),
+    o = i(687966),
+    d = i(253932),
+    x = i(975571),
+    h = i(738822),
+    m = i(651892),
+    g = i(652215),
+    E = i(105292),
+    S = i(738541);
+function T(t) {
+    let {
+            transitionState: e,
+            onClose: i,
+            questContent: c,
+            adCreativeType: a,
+            gamePublisher: u,
+            gameTitle: o,
+            cosponsorName: T,
+            isVideoQuest: f,
+            returnRef: C,
+        } = t,
+        _ = d.H1.useSetting(),
         p = (function (t) {
             switch (t) {
-                case x.uF.QUEST_BAR:
-                case x.uF.QUEST_BAR_V2:
+                case h.uF.QUEST_BAR:
+                case h.uF.QUEST_BAR_V2:
                     return { location: !0, age: !0, activity: !0 };
-                case x.uF.ACTIVITY_PANEL:
-                case x.uF.QUESTS_EMBED:
-                case x.uF.QUEST_LIVE_STREAM:
+                case h.uF.ACTIVITY_PANEL:
+                case h.uF.QUESTS_EMBED:
+                case h.uF.QUEST_LIVE_STREAM:
                     return { activity: !0 };
                 default:
                     return;
             }
-        })(l),
-        C = n.useMemo(
+        })(c),
+        A = s.useMemo(
             () =>
-                (0, h.JM)({
-                    adCreativeType: r.p.QUEST,
+                (0, m.JM)({
+                    adCreativeType: a,
                     isTargetedDisclosure: null != p,
-                    isContextualDisclosure: d,
-                    gamePublisher: o.config.messages.gamePublisher,
-                    gameTitle: o.config.messages.gameTitle,
-                    cosponsorName: o.config.cosponsorMetadata?.name,
-                    isVideoQuest: (0, T.vv)(o),
+                    isContextualDisclosure: _,
+                    gamePublisher: u,
+                    gameTitle: o,
+                    cosponsorName: T,
+                    isVideoQuest: f,
                 }),
-            [o, p, d],
+            [a, u, o, T, f, p, _],
         );
-    return (0, i.jsxs)(a.a, {
+    return (0, n.jsxs)(r.a, {
         size: "sm",
         transitionState: e,
-        onClose: s,
-        returnRef: u,
-        title: f.intl.string(f.t.GcsZKJ),
-        actions: [{ onClick: () => s(), text: f.intl.string(f.t.cpT0Cq) }],
+        onClose: i,
+        returnRef: C,
+        title: E.intl.string(E.t.GcsZKJ),
+        actions: [{ onClick: () => i(), text: E.intl.string(E.t.cpT0Cq) }],
         children: [
-            (0, i.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", className: S.gt, children: C }),
-            (0, i.jsx)(j, { targetedTraits: p, isContextualDisclosure: d }),
-            (0, i.jsx)(c.E, {
+            (0, n.jsx)(l.E, { variant: "text-sm/medium", color: "text-default", className: S.gt, children: A }),
+            (0, n.jsx)(j, { targetedTraits: p, isContextualDisclosure: _ }),
+            (0, n.jsx)(l.E, {
                 variant: "text-xs/medium",
                 color: "text-muted",
-                children: f.intl.format(f.t.tzq9Wa, {
-                    privacySettingsUrl: g.A.getArticleURL(E.MVz.QUESTS_PRIVACY_CONTROLS),
+                children: E.intl.format(E.t.tzq9Wa, {
+                    privacySettingsUrl: x.A.getArticleURL(g.MVz.QUESTS_PRIVACY_CONTROLS),
                 }),
             }),
         ],
     });
 }
 function j(t) {
-    let { targetedTraits: e, isContextualDisclosure: s } = t;
+    let { targetedTraits: e, isContextualDisclosure: i } = t;
     if (null == e) return null;
-    if (s)
-        return (0, i.jsx)("ul", {
+    if (i)
+        return (0, n.jsx)("ul", {
             className: S.OK,
-            children: (0, i.jsx)(C, { icon: l.R, children: f.intl.string(f.t["2bL0wT"]) }),
+            children: (0, n.jsx)(f, { icon: c.R, children: E.intl.string(E.t["2bL0wT"]) }),
         });
-    let { location: n, age: r, activity: a } = e;
-    return (0, i.jsxs)("ul", {
+    let { location: s, age: r, activity: l } = e;
+    return (0, n.jsxs)("ul", {
         className: S.OK,
         children: [
-            n && (0, i.jsx)(C, { icon: o.GlobeEarthIcon, children: f.intl.string(f.t.xQSdPv) }),
-            r && (0, i.jsx)(C, { icon: u.UserIcon, children: f.intl.string(f.t.mYt7hQ) }),
-            a && (0, i.jsx)(C, { icon: d.GameControllerIcon, children: f.intl.string(f.t.XAsWxQ) }),
+            s && (0, n.jsx)(f, { icon: a.GlobeEarthIcon, children: E.intl.string(E.t.xQSdPv) }),
+            r && (0, n.jsx)(f, { icon: u.UserIcon, children: E.intl.string(E.t.mYt7hQ) }),
+            l && (0, n.jsx)(f, { icon: o.GameControllerIcon, children: E.intl.string(E.t.XAsWxQ) }),
         ],
     });
 }
-function C(t) {
-    let { icon: e, children: s } = t;
-    return (0, i.jsxs)(c.E, {
+function f(t) {
+    let { icon: e, children: i } = t;
+    return (0, n.jsxs)(l.E, {
         variant: "text-sm/medium",
         tag: "li",
         className: S.hD,
-        children: [(0, i.jsx)(e, { size: "xs", color: "currentColor" }), s],
+        children: [(0, n.jsx)(e, { size: "xs", color: "currentColor" }), i],
     });
 }

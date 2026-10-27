@@ -1,8 +1,8 @@
 t.d(i, { default: () => I });
 var s = t(477900),
     a = t(582128),
-    n = t(935462),
-    l = t(761508),
+    l = t(935462),
+    n = t(761508),
     r = t(750943),
     o = t(834730),
     c = t(444927),
@@ -11,14 +11,14 @@ var s = t(477900),
     u = t(770335),
     p = t(405810),
     h = t(808728),
-    x = t(486020),
-    g = t(515718),
-    j = t(652215),
+    g = t(486020),
+    j = t(515718),
+    x = t(652215),
     f = t(307731);
 async function b(e) {
-    let i = await fetch((0, x._O)({ id: e, animated: !1, size: f.EMOJI_URL_BASE_SIZE, forcePNG: !0 })),
-        t = await (0, g.We)(await i.blob());
-    return j.Pt0 + t.slice(t.indexOf(",") + 1);
+    let i = await fetch((0, g._O)({ id: e, animated: !1, size: f.EMOJI_URL_BASE_SIZE, forcePNG: !0 })),
+        t = await (0, j.We)(await i.blob());
+    return x.Pt0 + t.slice(t.indexOf(",") + 1);
 }
 var N = t(105292),
     C = t(347570);
@@ -26,46 +26,46 @@ function y() {
     return [{ name: N.intl.string(N.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "png"] }];
 }
 let I = function (e) {
-    let { guildId: i, onUploadIcon: t, onSelectUnicodeEmoji: x, onClose: g, transitionState: j } = e,
+    let { guildId: i, onUploadIcon: t, onSelectUnicodeEmoji: g, onClose: j, transitionState: x } = e,
         I = (0, d.GV)(),
-        E = h.Ay.getDefaultChannel(i),
-        [v, S] = a.useState("tab-id-role-icon-file-upload"),
-        [k, w] = a.useState(!1),
+        v = h.Ay.getDefaultChannel(i),
+        [E, S] = a.useState("tab-id-role-icon-file-upload"),
+        [w, k] = a.useState(!1),
         z = (0, c.A)(y);
     return (
         a.useEffect(() => {
-            w(!1);
-        }, [v]),
-        (0, s.jsx)(n.EO, {
-            transitionState: j,
+            k(!1);
+        }, [E]),
+        (0, s.jsx)(l.EO, {
+            transitionState: x,
             "aria-labelledby": I,
-            size: n.rI.MEDIUM,
+            size: l.rI.MEDIUM,
             className: C.CR,
             parentComponent: "CustomRoleIconUploadModal",
             "data-migration-pending": !0,
             children: (0, s.jsxs)("div", {
                 className: C.FG,
                 children: [
-                    (0, s.jsxs)(l.V, {
-                        selectedItem: v,
+                    (0, s.jsxs)(n.V, {
+                        selectedItem: E,
                         onItemSelect: S,
                         type: "top",
                         look: "grey",
-                        "aria-label": "Expression Picker",
+                        "aria-label": N.intl.string(N.t.Utlwvi),
                         className: C.C$,
                         children: [
-                            (0, s.jsx)(l.V.Item, {
+                            (0, s.jsx)(n.V.Item, {
                                 id: "tab-id-role-icon-file-upload",
                                 children: N.intl.string(N.t.royWSB),
                             }),
-                            (0, s.jsx)(l.V.Item, {
+                            (0, s.jsx)(n.V.Item, {
                                 id: "tab-id-role-icon-emoji",
                                 children: N.intl.string(N.t["/Ny2wZ"]),
                             }),
                         ],
                     }),
-                    "tab-id-role-icon-file-upload" === v
-                        ? (0, s.jsx)(n.$m, {
+                    "tab-id-role-icon-file-upload" === E
+                        ? (0, s.jsx)(l.$m, {
                               "data-migration-pending": !0,
                               children: (0, s.jsxs)("div", {
                                   className: C.PO,
@@ -90,10 +90,10 @@ let I = function (e) {
                                       (0, s.jsx)("div", { className: C.WG, children: N.intl.string(N.t["mz++Qq"]) }),
                                       (0, s.jsx)(p.A, {
                                           onChange: (e) => {
-                                              (w(!1), t(e), g());
+                                              (k(!1), t(e), j());
                                           },
                                           onFileSizeError: () => {
-                                              w(!0);
+                                              k(!0);
                                           },
                                           maxFileSizeBytes: 256e3,
                                           filters: z,
@@ -101,7 +101,7 @@ let I = function (e) {
                                           size: "md",
                                           variant: "primary",
                                       }),
-                                      k
+                                      w
                                           ? (0, s.jsx)(o.E, {
                                                 className: C.Qw,
                                                 color: "text-feedback-critical",
@@ -113,10 +113,10 @@ let I = function (e) {
                               }),
                           })
                         : null,
-                    "tab-id-role-icon-emoji" === v
+                    "tab-id-role-icon-emoji" === E
                         ? (0, s.jsx)(m.A, {
                               hasTabWrapper: !0,
-                              closePopout: () => g(),
+                              closePopout: () => j(),
                               onSelectEmoji: async (e) => {
                                   let { emoji: i } = e;
                                   if (i?.id != null)
@@ -125,11 +125,11 @@ let I = function (e) {
                                               t(await b(i.id));
                                           case u.i.PACK:
                                       }
-                                  else i?.surrogates != null && x(i.defaultDiversityChild?.surrogates ?? i.surrogates);
-                                  g();
+                                  else i?.surrogates != null && g(i.defaultDiversityChild?.surrogates ?? i.surrogates);
+                                  j();
                               },
                               pickerIntention: f.EmojiIntention.COMMUNITY_CONTENT,
-                              channel: E,
+                              channel: v,
                           })
                         : null,
                 ],

@@ -20,8 +20,8 @@ var i = n(477900),
     m = n(427495),
     I = n(859703),
     N = n(738822),
-    v = n(77870),
-    S = n(590202),
+    S = n(77870),
+    v = n(590202),
     w = n(971649),
     R = n(651892),
     x = n(710969),
@@ -49,11 +49,11 @@ function j(e) {
             handleResetDismissibilityClick: Q,
             handleResetStatusClick: B,
             handleOverridePreviewClick: Z,
-        } = (0, v.j$)(e.quest.id),
-        J = (0, v.do)({
+        } = (0, S.j$)(e.quest.id),
+        J = (0, S.do)({
             quest: e.quest,
             content: e.questContent,
-            ctaContent: S.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
+            ctaContent: v.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
             sourceQuestContent: e.sourceQuestContent,
         }),
         K = (0, O.Lk)({
@@ -63,7 +63,7 @@ function j(e) {
                 () => ({
                     content: e.questContent,
                     position: e.questContentPosition,
-                    ctaContent: S.Cy.CONTEXT_MENU_COPY_LINK,
+                    ctaContent: v.Cy.CONTEXT_MENU_COPY_LINK,
                     sourceQuestContent: e.sourceQuestContent,
                 }),
                 [e.questContent, e.questContentPosition, e.sourceQuestContent],
@@ -75,7 +75,7 @@ function j(e) {
     function X() {
         return (0, m.CV)(e.quest.id).catch(W);
     }
-    let Y = (0, v.Ns)(e.quest),
+    let Y = (0, S.Ns)(e.quest),
         z = a.useMemo(
             () =>
                 (0, i.jsx)(o.sL, {
@@ -170,7 +170,7 @@ function j(e) {
                                         type: T.F.CLICK_INTERNAL,
                                         adCreativeType: s.p.QUEST,
                                         adCreativeId: e.quest.id,
-                                        questContentCTA: S.Cy.CONTEXT_MENU_LEARN_MORE,
+                                        questContentCTA: v.Cy.CONTEXT_MENU_LEARN_MORE,
                                         surfaceId: e.questContent,
                                         sourceQuestContent: e.sourceQuestContent,
                                         impressionId: F(),
@@ -187,11 +187,11 @@ function j(e) {
                                 label: D.intl.string(D.t.GcsZKJ),
                                 action: function () {
                                     (0, P.Zc)(
-                                        e.quest,
+                                        { type: s.p.QUEST, quest: e.quest },
                                         {
                                             content: e.questContent,
                                             position: e.questContentPosition,
-                                            ctaContent: S.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
+                                            ctaContent: v.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
                                             impressionId: F(),
                                             sourceQuestContent: e.sourceQuestContent,
                                         },
@@ -208,7 +208,7 @@ function j(e) {
                                         type: T.F.CLICK_INTERNAL,
                                         adCreativeType: s.p.QUEST,
                                         adCreativeId: e.quest.id,
-                                        questContentCTA: S.Cy.CONTEXT_MENU_HIDE_CONTENT,
+                                        questContentCTA: v.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                         surfaceId: e.questContent,
                                         sourceQuestContent: e.sourceQuestContent,
                                         impressionId: F(),
@@ -299,7 +299,7 @@ function U(e) {
                 type: T.F.CLICK_INTERNAL,
                 adCreativeType: s.p.QUEST,
                 adCreativeId: o.id,
-                questContentCTA: S.Cy.OPEN_CONTEXT_MENU,
+                questContentCTA: v.Cy.OPEN_CONTEXT_MENU,
                 surfaceId: u,
                 sourceQuestContent: d,
                 impressionId: C(),
