@@ -223,14 +223,14 @@ function P(e, t, n, l, r) {
         case "link":
         case "subtext": {
             l = K(t, l);
-            let { before: n, after: i } = (function (e, t, n, l) {
-                    if ("inlineCode" === t) return { before: l[1], after: l[1] };
-                    if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
-                    if ("subtext" === t) return { before: j.exec(l.input)[1], after: "" };
-                    let i = S["link" === t ? "url" : t];
-                    if ("inlineStyle" === i.type) return i;
+            let { before: n, after: i } = (function (e, t) {
+                    if ("inlineCode" === e) return { before: t[1], after: t[1] };
+                    if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
+                    if ("subtext" === e) return { before: j.exec(t.input)[1], after: "" };
+                    let n = S["link" === e ? "url" : e];
+                    if ("inlineStyle" === n.type) return n;
                     throw Error("Slate: rule must be an inlineStyle");
-                })(t, a, l, u),
+                })(a, u),
                 o = D({
                     attribute: "syntaxBefore",
                     content: s,
