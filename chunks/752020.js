@@ -71,9 +71,9 @@ function _(e) {
 }
 var z = t(588975),
     T = t(442433),
-    G = t(9578),
-    H = t(975807),
-    $ = t(380610),
+    $ = t(9578),
+    G = t(975807),
+    H = t(380610),
     D = t(235393),
     F = t(258072),
     J = t(332173),
@@ -109,7 +109,7 @@ let Q = /^dev:\/\//i,
 function ee(e) {
     let { url: n } = e,
         t =
-            (0, $.vS)(n) || (0, $.h4)(n)
+            (0, H.vS)(n) || (0, H.h4)(n)
                 ? (0, l.jsx)(W, { url: n })
                 : (0, R.W0)(n)
                   ? (0, l.jsx)(V, { url: n })
@@ -279,7 +279,7 @@ function e_(e) {
     let { url: n, name: s } = e,
         i = r.useCallback(async () => {
             let e = await q.AN(n);
-            (D.A.trackLinkClicked(e), (0, H.A)(e));
+            (D.A.trackLinkClicked(e), (0, G.A)(e));
         }, [n]),
         a = r.useCallback(
             (e) => {
@@ -301,8 +301,8 @@ function e_(e) {
 }
 var ez = t(196765),
     eT = t(976245),
-    eG = t(302031);
-function eH() {
+    e$ = t(302031);
+function eG() {
     return (0, eT.y)()((e) => ({
         revealedIds: new Set(),
         hoveredId: null,
@@ -314,11 +314,11 @@ function eH() {
         },
     }));
 }
-let e$ = (0, eT.y)()(() => ({ revealedIds: new Set(), hoveredId: null, reveal() {}, setHovered() {} })),
-    eD = r.createContext(e$);
+let eH = (0, eT.y)()(() => ({ revealedIds: new Set(), hoveredId: null, reveal() {}, setHovered() {} })),
+    eD = r.createContext(eH);
 function eF(e) {
     let { children: n } = e,
-        [t] = r.useState(eH);
+        [t] = r.useState(eG);
     return (0, l.jsx)(eD.Provider, { value: t, children: n });
 }
 var eJ = t(785562),
@@ -378,18 +378,27 @@ let eO = {
                 let n = (0, F.h)(t);
                 if (null != n) return (0, l.jsx)(e_, { url: t, name: n.name });
             }
-            return (0, $.vS)(t)
-                ? (0, l.jsx)(ee, { url: t })
-                : Q.test(t)
-                  ? (0, l.jsxs)(l.Fragment, {
-                        children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(ee, { url: t })],
-                    })
-                  : (0, l.jsx)(G.A, {
-                        title: r,
-                        href: t,
-                        trusted: i ? () => (0, U.m)(t, t) : void 0,
-                        children: (0, l.jsx)("span", { children: s }),
-                    });
+            if ((0, H.vS)(t)) return (0, l.jsx)(ee, { url: t });
+            if (Q.test(t))
+                return (0, l.jsxs)(l.Fragment, {
+                    children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(ee, { url: t })],
+                });
+            let a = r;
+            return (
+                i ||
+                    (a =
+                        null != r && r.length > 0
+                            ? `${r}
+
+(${t})`
+                            : t),
+                (0, l.jsx)($.A, {
+                    title: a,
+                    href: t,
+                    trusted: i ? () => (0, U.m)(t, t) : void 0,
+                    children: (0, l.jsx)("span", { children: s }),
+                })
+            );
         },
         list: function (e) {
             let { type: n, children: t, value: r, items: s } = e;
@@ -492,8 +501,8 @@ let eO = {
                 r.useEffect(() => {
                     u?.setHasSpoilerEmbeds?.(a);
                 }, [u, a]),
-                (0, l.jsx)(eG.Ay, {
-                    type: eG.Ay.Types.TEXT,
+                (0, l.jsx)(e$.Ay, {
+                    type: e$.Ay.Types.TEXT,
                     obscured: !c,
                     hovered: d,
                     onReveal: h,
