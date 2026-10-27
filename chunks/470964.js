@@ -25,7 +25,7 @@ function b(e, t) {
             viewingChannelId: _,
             postProcessor: y,
         } = t,
-        j = (0, a.I)({ location: "useMessageRenderedContent" }),
+        j = (0, a.I2)({ location: "useMessageRenderedContent" }),
         [v, G] = i.useState(!1),
         w = i.useCallback((e) => {
             e && G(!0);

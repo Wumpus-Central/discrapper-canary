@@ -21287,7 +21287,7 @@ function gF() {
     });
 }
 var g$ = a(963935),
-    gV = a(746020),
+    gV = a(877416),
     gW = a(555738);
 function gz(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,

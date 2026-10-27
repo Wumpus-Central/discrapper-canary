@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652507";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652514";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652507, Version Hash: c2ae918c98f751f25806561230ff7b3b01a98e66`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652514, Version Hash: e2f2a162612d6a8d207e5a508d21698607d81c89`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -5099,7 +5099,7 @@ let sr = (0, rl.Fe)({
                 n.e("993720"),
                 n.e("725246"),
                 n.e("654658"),
-                n.e("950009"),
+                n.e("492125"),
                 n.e("666198"),
                 n.e("169987"),
                 n.e("504787"),
@@ -23671,7 +23671,7 @@ function O1(e) {
         : (0, b.jsx)(OK, { ...u });
 }
 var O2 = n(47899),
-    O3 = n(519059),
+    O3 = n(335934),
     O5 = n(957283),
     O6 = n(411976),
     O4 = n(380335),
@@ -25500,7 +25500,7 @@ let yr = "isHideDevBanner",
                     className: tf()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652507" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652514" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -32772,7 +32772,7 @@ let bE = (0, tZ.Fe)({
         renderLoader: ro.rt,
     });
 async function bU() {
-    let e = lE.o.getConfig({ location: "AppView" }, { autoTrackExposure: !1 }).enabled
+    let e = (0, lE.wr)({ location: "AppView" }, { autoTrackExposure: !1 })
             ? Promise.all([n.e("839460"), n.e("891400"), n.e("856437")])
                   .then(n.bind(n, 752020))
                   .then(
@@ -54726,7 +54726,7 @@ let W5 = (0, tZ.Fe)({
             n.e("993720"),
             n.e("725246"),
             n.e("654658"),
-            n.e("950009"),
+            n.e("492125"),
             n.e("666198"),
             n.e("155361"),
             n.e("233049"),
