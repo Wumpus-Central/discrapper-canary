@@ -3,23 +3,23 @@ var l = n(477900);
 n(582128);
 var r = n(503698),
     i = n.n(r),
-    s = n(575593),
-    a = n(17928),
+    a = n(575593),
+    s = n(17928),
     u = n(834730),
     c = n(474012),
     o = n(607123),
     d = n(287809),
     f = n(137504);
 function h(e) {
-    let { title: t, body: n, image: r, badge: s, className: a, textGroupClassName: u } = e;
+    let { title: t, body: n, image: r, badge: a, className: s, textGroupClassName: u } = e;
     return (0, l.jsxs)("div", {
-        className: i()(f.kL, a),
+        className: i()(f.kL, s),
         children: [
             null != r && (0, l.jsx)("div", { className: f.Sl, children: r }),
             (0, l.jsxs)("div", {
                 className: f.Qs,
                 children: [
-                    null != s && (0, l.jsx)("div", { className: f.oL, children: s }),
+                    null != a && (0, l.jsx)("div", { className: f.oL, children: a }),
                     (0, l.jsxs)("div", { className: i()(f.Z, u), children: [t, n] }),
                 ],
             }),
@@ -28,7 +28,7 @@ function h(e) {
 }
 function m(e) {
     let { className: t, product: n, title: r, subtitle: m, badge: p } = e,
-        C = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        C = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
         E = (0, c.tP)(n);
     return null == E
         ? null
@@ -38,11 +38,11 @@ function m(e) {
                   className: f.yn,
                   children: (0, l.jsx)("div", {
                       className: i()(f.ML, {
-                          [f.M]: n?.type === s.R.AVATAR_DECORATION,
-                          [f.Hm]: n?.type === s.R.PROFILE_EFFECT,
-                          [f.hH]: n?.type === s.R.PROFILE_FRAME,
-                          [f.qF]: n?.type === s.R.NAMEPLATE,
-                          [f.l2]: n?.type === s.R.BUNDLE,
+                          [f.M]: n?.type === a.R.AVATAR_DECORATION,
+                          [f.Hm]: n?.type === a.R.PROFILE_EFFECT,
+                          [f.hH]: n?.type === a.R.PROFILE_FRAME,
+                          [f.qF]: n?.type === a.R.NAMEPLATE,
+                          [f.l2]: n?.type === a.R.BUNDLE,
                       }),
                       children: (0, l.jsx)(o.pL, {
                           collectiblesItem: E,

@@ -29,13 +29,13 @@ function d(e) {
         } = e,
         p = (0, r.bG)([i.A], () => i.A.isConnected()),
         m = (0, r.bG)([u.A], () => (null != t ? u.A.getSubscriptionGroupListingsForGuildFetchState(t) : u.e.FETCHED)),
-        [E, _] = o.useState(!0 === c),
-        f = o.useCallback(() => {
+        [E, f] = o.useState(!0 === c),
+        _ = o.useCallback(() => {
             if (null == t || !p || !0 === h) return;
             let e = u.A.getSubscriptionGroupListingsForGuildFetchState(t);
-            (E || e === u.e.NOT_FETCHED) && (_(!1), a.WA(t, { includeSoftDeleted: d, countryCode: C }));
+            (E || e === u.e.NOT_FETCHED) && (f(!1), a.WA(t, { includeSoftDeleted: d, countryCode: C }));
         }, [p, t, d, C, h, E]),
-        y = m === u.e.FETCHED && !E,
-        g = o.useMemo(() => ({ listingsLoaded: y, fetchGroupListingsForGuild: f }), [y, f]);
-    return (0, l.jsx)(s.Provider, { value: g, children: n });
+        g = m === u.e.FETCHED && !E,
+        y = o.useMemo(() => ({ listingsLoaded: g, fetchGroupListingsForGuild: _ }), [g, _]);
+    return (0, l.jsx)(s.Provider, { value: y, children: n });
 }

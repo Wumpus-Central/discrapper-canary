@@ -1,54 +1,54 @@
 (r.r(t),
     r.d(t, {
-        CheckpointNumbersCenterAlignedRive: () => V.m,
-        UnlockRive: () => X.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => T.u,
-        CheckpointKnickKnacksRive: () => f.U,
+        CheckpointNumbersCenterAlignedRive: () => B.m,
+        UnlockRive: () => U.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => j.u,
+        CheckpointKnickKnacksRive: () => k.U,
         AnimatedNitroOrbRewardsRive: () => o.Z,
         ServerHubPerkRive: () => E.f,
-        FistBumpRive: () => I.l,
-        PerfTestRive: () => G.Q,
-        NitroRewardsMouseRive: () => R.C,
-        BoostGemLevelTwoRive: () => l.J,
-        GameServerHostingRive: () => L.E,
-        CheckpointFriendsRive: () => h.m,
+        FistBumpRive: () => P.l,
+        PerfTestRive: () => y.Q,
+        NitroRewardsMouseRive: () => V.C,
+        BoostGemLevelTwoRive: () => d.J,
+        GameServerHostingRive: () => R.E,
+        CheckpointFriendsRive: () => p.m,
         BoostGemLevelOneRive: () => s.t,
-        TabHoverGradientRive: () => x.U,
+        TabHoverGradientRive: () => T.U,
         WandAndSparklesRive: () => z,
-        BoostThisServerRive: () => b.D,
-        NitroQuestOrbsMultiplierRive: () => U.E,
+        BoostThisServerRive: () => l.D,
+        NitroQuestOrbsMultiplierRive: () => A.E,
         BoostGemLevelThreeRive: () => c.z,
-        AVSurveyFacesRive: () => i.i,
-        NitroCoinRive: () => F.s,
-        CheckpointIntroRive: () => C,
+        AVSurveyFacesRive: () => n.i,
+        NitroCoinRive: () => N.s,
+        CheckpointIntroRive: () => I,
         AIVisualIdentitySmallSurfaceRive: () => a.j,
-        DiceRive: () => w.m,
-        CheckpointCardRive: () => M,
-        BadgesCoachmarkRive: () => n.U,
-        CheckpointNumbersLeftAlignedRive: () => y.w,
-        PulseGradientRive: () => D.M,
-        VibingWumpusBackgroundRive: () => H.R,
-        JetpackWumpusWithTrinketsRive: () => P.e,
-        GlowButtonRive: () => B.s,
-        TeenScreenTimeRive: () => j.w,
-        NitroWishlistingWumpusRive: () => W,
-        VibingWumpusRive: () => Q.Z,
+        DiceRive: () => _.m,
+        CheckpointCardRive: () => h,
+        BadgesCoachmarkRive: () => i.U,
+        CheckpointNumbersLeftAlignedRive: () => L.w,
+        PulseGradientRive: () => X.M,
+        VibingWumpusBackgroundRive: () => Q.R,
+        JetpackWumpusWithTrinketsRive: () => O.e,
+        GlowButtonRive: () => w.s,
+        TeenScreenTimeRive: () => x.w,
+        NitroWishlistingWumpusRive: () => G,
+        VibingWumpusRive: () => H.Z,
     }));
 var a = r(402386),
     o = r(567341),
-    i = r(896572),
-    n = r(947984),
+    n = r(896572),
+    i = r(947984),
     s = r(565553),
     c = r(285828),
-    l = r(168900),
-    b = r(527383),
-    d = r(477900);
+    d = r(168900),
+    l = r(527383),
+    u = r(477900);
 r(582128);
-let u =
+let b =
     "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv";
 var m = r(509482),
-    v = r(799226);
-let S = {
+    S = r(799226);
+let M = {
         Main: {
             reducedMotion: "boolean",
             Icon: "artboard",
@@ -258,27 +258,27 @@ let S = {
         Globe: ["State Machine 1"],
         Card: ["State Machine 1"],
     };
-function M(e) {
+function h(e) {
     let { artboard: t = "Main", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(u),
-        n = (0, v.m2)(u);
-    return o === v.BW.Loading
+        { status: o, buffer: n } = (0, S.CE)(b),
+        i = (0, S.m2)(b);
+    return o === S.BW.Loading
         ? null
-        : (0, d.jsx)(m.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: i,
+        : (0, u.jsx)(m.w, {
+              ...(i ? { key: "override" } : {}),
+              buffer: n,
               artboard: t,
               stateMachine: r,
-              artboardProperties: S,
+              artboardProperties: M,
               artboardStateMachines: g,
               ...a,
           });
 }
-M.riveSrc = u;
-var h = r(236177);
-let A =
+h.riveSrc = b;
+var p = r(236177);
+let v =
         "https://cdn.discordapp.com/assets/content/756c8e37a14fc267712502cc0892be86b2e98d9132fe075f9ba75fd9e9a0aa48.riv",
-    k = {
+    f = {
         "Checkpoint Intro Desktop": {
             reducedMotion: "boolean",
             Subtitle: "string",
@@ -307,7 +307,7 @@ let A =
             StartButton: "string",
         },
     },
-    p = {
+    C = {
         "Checkpoint Intro Desktop": ["State Machine 1"],
         Globe: ["State Machine 1"],
         "Globe Single Line": ["State Machine 1"],
@@ -316,77 +316,77 @@ let A =
         Entry: ["State Machine 1"],
         "Start Button": ["State Machine 1"],
     };
-function C(e) {
+function I(e) {
     let { artboard: t = "Checkpoint Intro Desktop", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(A),
-        n = (0, v.m2)(A);
-    return o === v.BW.Loading
+        { status: o, buffer: n } = (0, S.CE)(v),
+        i = (0, S.m2)(v);
+    return o === S.BW.Loading
         ? null
-        : (0, d.jsx)(m.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: i,
+        : (0, u.jsx)(m.w, {
+              ...(i ? { key: "override" } : {}),
+              buffer: n,
               artboard: t,
               stateMachine: r,
-              artboardProperties: k,
-              artboardStateMachines: p,
+              artboardProperties: f,
+              artboardStateMachines: C,
               ...a,
           });
 }
-C.riveSrc = A;
-var f = r(536426),
-    V = r(590642),
-    y = r(362263),
-    w = r(908803),
-    I = r(90517),
-    L = r(289704),
-    B = r(570950),
-    P = r(970002),
-    F = r(149282),
-    U = r(122720),
-    R = r(907581);
-let _ =
+I.riveSrc = v;
+var k = r(536426),
+    B = r(590642),
+    L = r(362263),
+    _ = r(908803),
+    P = r(90517),
+    R = r(289704),
+    w = r(570950),
+    O = r(970002),
+    N = r(149282),
+    A = r(122720),
+    V = r(907581);
+let D =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    O = { "Nitro Wishlist": { reducedMotion: "boolean" } },
-    N = { "Nitro Wishlist": ["State Machine 1"] };
-function W(e) {
+    F = { "Nitro Wishlist": { reducedMotion: "boolean" } },
+    W = { "Nitro Wishlist": ["State Machine 1"] };
+function G(e) {
     let { artboard: t = "Nitro Wishlist", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(_),
-        n = (0, v.m2)(_);
-    return o === v.BW.Loading
+        { status: o, buffer: n } = (0, S.CE)(D),
+        i = (0, S.m2)(D);
+    return o === S.BW.Loading
         ? null
-        : (0, d.jsx)(m.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: i,
+        : (0, u.jsx)(m.w, {
+              ...(i ? { key: "override" } : {}),
+              buffer: n,
               artboard: t,
               stateMachine: r,
-              artboardProperties: O,
-              artboardStateMachines: N,
+              artboardProperties: F,
+              artboardStateMachines: W,
               ...a,
           });
 }
-W.riveSrc = _;
-var G = r(102079),
-    D = r(440166),
+G.riveSrc = D;
+var y = r(102079),
+    X = r(440166),
     E = r(93675),
-    x = r(549254),
-    j = r(632679),
-    T = r(583094),
-    X = r(242644),
-    Q = r(773350),
-    H = r(615429);
+    T = r(549254),
+    x = r(632679),
+    j = r(583094),
+    U = r(242644),
+    H = r(773350),
+    Q = r(615429);
 let J =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
     K = { "Surprise Me": { fill: "color" } },
     Z = { "Surprise Me": ["State Machine 1"] };
 function z(e) {
     let { artboard: t = "Surprise Me", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(J),
-        n = (0, v.m2)(J);
-    return o === v.BW.Loading
+        { status: o, buffer: n } = (0, S.CE)(J),
+        i = (0, S.m2)(J);
+    return o === S.BW.Loading
         ? null
-        : (0, d.jsx)(m.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: i,
+        : (0, u.jsx)(m.w, {
+              ...(i ? { key: "override" } : {}),
+              buffer: n,
               artboard: t,
               stateMachine: r,
               artboardProperties: K,

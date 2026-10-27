@@ -5,8 +5,8 @@ var n = a(477900),
     s = a.n(i),
     r = a(862482),
     o = a(939249),
-    c = a(980707),
-    d = a(477782),
+    d = a(980707),
+    c = a(477782),
     u = a(265872),
     m = a(765671),
     h = a(949091),
@@ -14,11 +14,11 @@ var n = a(477900),
     p = a(403362),
     g = a(867041),
     v = a(786574),
-    f = a(730441);
-function j(e) {
+    j = a(730441);
+function f(e) {
     let { id: t, selected: a, onClick: l, children: i, ref: r } = e;
     return (0, n.jsx)(o.D, {
-        className: s()(f.V3, { [f.wH]: a }),
+        className: s()(j.V3, { [j.wH]: a }),
         "data-tab-id": t,
         innerRef: r,
         onClick: l,
@@ -30,8 +30,8 @@ function b(e) {
         s = l.useRef(new Map()),
         [o, b] = l.useState(() => new Set()),
         { ref: y, width: E } = (0, m.Ay)(),
-        S = l.useRef(null),
-        C = (0, v.N)(t, i),
+        C = l.useRef(null),
+        S = (0, v.N)(t, i),
         _ = (0, h.A)();
     l.useEffect(() => {
         if (null == E) return;
@@ -41,26 +41,26 @@ function b(e) {
             l.id !== a && (n -= s.current.get(l.id)?.getBoundingClientRect().width ?? 0) < 0 && e.add(l.id);
         b(e);
     }, [t, E, y, a]);
-    let A = l.useCallback(
+    let N = l.useCallback(
         (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsxs)(c.W, {
+            return (0, n.jsxs)(d.W, {
                 "data-menu-migrated": !0,
                 navId: "devtools-overflow",
                 variant: "fixed",
                 onClose: t,
                 "aria-label": "Overflowed DevTools Tabs",
                 onSelect: t,
-                children: [C, null != _ && (0, n.jsx)(d.rX, { "aria-label": "Playgrounds", children: _ })],
+                children: [S, null != _ && (0, n.jsx)(c.rX, { "aria-label": "Playgrounds", children: _ })],
             });
         },
-        [C, _],
+        [S, _],
     );
     return (0, n.jsxs)("div", {
-        className: f.Mv,
+        className: j.Mv,
         children: [
             (0, n.jsxs)("div", {
-                className: f.$H,
+                className: j.$H,
                 ref: y,
                 children: [
                     t
@@ -68,18 +68,18 @@ function b(e) {
                             let { id: t, name: l } = e;
                             if (!o.has(t))
                                 return (0, n.jsx)(
-                                    j,
+                                    f,
                                     { id: t, selected: a === t, onClick: a !== t ? () => i(t) : void 0, children: l },
                                     t,
                                 );
                         })
                         .filter(p.Vq),
                     (0, n.jsx)("div", {
-                        className: f.g,
+                        className: j.g,
                         children: t.map((e) => {
                             let { id: t, name: l } = e;
                             return (0, n.jsx)(
-                                j,
+                                f,
                                 {
                                     id: t,
                                     selected: a === t,
@@ -96,13 +96,13 @@ function b(e) {
                 ],
             }),
             (0, n.jsx)("div", {
-                className: f.MK,
+                className: j.MK,
                 children:
                     (o.size > 0 || null != _) &&
                     (0, n.jsx)(u.Y, {
-                        targetElementRef: S,
+                        targetElementRef: C,
                         layerContext: g.He,
-                        renderPopout: A,
+                        renderPopout: N,
                         position: "bottom",
                         align: "right",
                         autoInvert: !1,
@@ -110,12 +110,12 @@ function b(e) {
                         children: (e) =>
                             (0, n.jsx)(r.$n, {
                                 ...e,
-                                buttonRef: S,
-                                className: f.Iq,
+                                buttonRef: C,
+                                className: j.Iq,
                                 size: r.$n.Sizes.ICON,
                                 look: r.$n.Looks.BLANK,
                                 children: (0, n.jsx)(x.A, {
-                                    className: f.__invalid_overflowIcon,
+                                    className: j.__invalid_overflowIcon,
                                     width: 16,
                                     height: 16,
                                 }),

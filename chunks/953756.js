@@ -1,40 +1,40 @@
-n.d(t, { Hq: () => o, O7: () => i, zn: () => c });
+n.d(t, { Hq: () => c, O7: () => s, zn: () => o });
 var l = n(477900),
     r = n(582128);
 let a = r.createContext(null),
-    i = {
+    s = {
         Root(e) {
             let { containerInnerWidth: t, children: n } = e,
-                i = r.useMemo(() => ({ isParentWidthLimited: !0, parentContainerInnerWidth: t }), [t]);
-            return (0, l.jsx)(a.Provider, { value: i, children: n });
+                s = r.useMemo(() => ({ isParentWidthLimited: !0, parentContainerInnerWidth: t }), [t]);
+            return (0, l.jsx)(a.Provider, { value: s, children: n });
         },
         NestedContainer(e) {
-            let { containerOuterWidth: t, containerInnerWidth: n, children: i } = e,
-                { isParentWidthLimited: o, parentContainerInnerWidth: c } = s(),
-                u = o && c === t,
+            let { containerOuterWidth: t, containerInnerWidth: n, children: s } = e,
+                { isParentWidthLimited: c, parentContainerInnerWidth: o } = i(),
+                u = c && o === t,
                 d = r.useMemo(() => ({ isParentWidthLimited: u, parentContainerInnerWidth: n }), [u, n]);
-            return (0, l.jsx)(a.Provider, { value: d, children: i });
+            return (0, l.jsx)(a.Provider, { value: d, children: s });
         },
         AutoMeasuredNestedContainer(e) {
             let { children: t } = e,
-                [n, r, a] = c(!0);
-            return (0, l.jsx)(i.NestedContainer, { containerOuterWidth: r, containerInnerWidth: a, children: t(n) });
+                [n, r, a] = o(!0);
+            return (0, l.jsx)(s.NestedContainer, { containerOuterWidth: r, containerInnerWidth: a, children: t(n) });
         },
     };
-function s() {
+function i() {
     let e = r.useContext(a);
     if (null == e) throw Error("Cannot use the ComponentLayoutLimitContext system when not within the context");
     return e;
 }
-function o(e) {
-    let { isParentWidthLimited: t, parentContainerInnerWidth: n } = s();
+function c(e) {
+    let { isParentWidthLimited: t, parentContainerInnerWidth: n } = i();
     return t && n === e;
 }
-function c() {
+function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = r.useRef(null),
         [n, l] = r.useState(0),
-        [a, i] = r.useState(0);
+        [a, s] = r.useState(0);
     return (
         r.useLayoutEffect(() => {
             if (null == t.current) return;
@@ -43,7 +43,7 @@ function c() {
                     r = getComputedStyle(t.current);
                 (l(n + (parseFloat(r.marginLeft) + parseFloat(r.marginRight))),
                     e &&
-                        i(
+                        s(
                             n -
                                 (parseFloat(r.paddingLeft) +
                                     parseFloat(r.paddingRight) +

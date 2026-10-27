@@ -2,11 +2,11 @@ n.d(t, { Gm: () => u, yv: () => o });
 var l = n(477900),
     r = n(582128),
     i = n(786300),
-    s = n(195269);
-let [a, u, c] = (0, i.A)();
+    a = n(195269);
+let [s, u, c] = (0, i.A)();
 function o(e) {
     let { children: t } = e,
-        { purchaseErrorBlockRef: n } = (0, s.L)(),
+        { purchaseErrorBlockRef: n } = (0, a.L)(),
         [i, u] = r.useState(null),
         [c, o] = r.useState(null),
         [d, f] = r.useState(null),
@@ -22,5 +22,5 @@ function o(e) {
             }),
             [n, i, c, d],
         );
-    return (0, l.jsx)(a, { value: h, children: t });
+    return (0, l.jsx)(s, { value: h, children: t });
 }

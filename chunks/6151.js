@@ -23,8 +23,8 @@ function N(e) {
             options: l,
             onChange: N,
             onNew: T,
-            noticeMessage: A,
-            newPaymentMethodOptionLabel: b,
+            noticeMessage: b,
+            newPaymentMethodOptionLabel: A,
             disabled: I = !1,
             error: C,
         } = e,
@@ -67,13 +67,13 @@ function N(e) {
                 e.push({
                     id: E,
                     value: E,
-                    label: b ?? v.intl.string(j.default.rNF29q),
+                    label: A ?? v.intl.string(j.default.rNF29q),
                     leading: void 0,
                     description: void 0,
                 }),
                 e
             );
-        }, [l, b]),
+        }, [l, A]),
         y = a.useCallback(
             (e) => {
                 e === E ? T() : null != e && N(e);
@@ -95,7 +95,7 @@ function N(e) {
                     fullWidth: !0,
                     variant: "unsupported_payment_modal_card",
                 }),
-                null != A
+                null != b
                     ? (0, n.jsxs)("div", {
                           className: g.T4,
                           children: [
@@ -103,7 +103,7 @@ function N(e) {
                               (0, n.jsx)(x.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-info",
-                                  children: "string" == typeof A ? p.A.parse(A, !1, { allowLinks: !0 }) : A,
+                                  children: "string" == typeof b ? p.A.parse(b, !1, { allowLinks: !0 }) : b,
                               }),
                           ],
                       })

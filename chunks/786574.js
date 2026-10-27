@@ -1,13 +1,13 @@
-(a.d(t, { N: () => c }), a(321073));
+(a.d(t, { N: () => d }), a(321073));
 var n = a(477900),
     l = a(582128),
     i = a(84571),
     s = a(477782),
     r = a(583650),
     o = a(362688);
-function c(e, t) {
-    let [a, c] = l.useState(""),
-        d = l.useMemo(() => {
+function d(e, t) {
+    let [a, d] = l.useState(""),
+        c = l.useMemo(() => {
             if ("" === a.trim()) return e;
             let t = a.toLowerCase().trim();
             return e.filter((e) => {
@@ -30,9 +30,9 @@ function c(e, t) {
                     (e.push(a), t.set(a.group, e));
                 }
                 return t;
-            })(d.filter((e) => e.group !== o.fu.NONE));
+            })(c.filter((e) => e.group !== o.fu.NONE));
             return {
-                ungroupedTabs: d.filter((e) => e.group === o.fu.NONE),
+                ungroupedTabs: c.filter((e) => e.group === o.fu.NONE),
                 sortedGroups: o.BW.flatMap((t) => {
                     let a = e.get(t);
                     return null == a || 0 === a.length
@@ -47,7 +47,7 @@ function c(e, t) {
                           ];
                 }),
             };
-        }, [d]),
+        }, [c]),
         h = "" !== a.trim() ? (u[0] ?? m[0]?.sortedTabs[0])?.id : void 0;
     return [
         l.useMemo(
@@ -60,7 +60,7 @@ function c(e, t) {
                             (0, n.jsx)(r.V, {
                                 ...e,
                                 query: a,
-                                onChange: c,
+                                onChange: d,
                                 onKeyDown: (a) => {
                                     "Enter" === a.key && null != h && (a.preventDefault(), t(h), e.onClose?.());
                                 },
@@ -75,7 +75,7 @@ function c(e, t) {
         ...l.useMemo(() => {
             let e = [];
             return (
-                "" !== a.trim() && 0 === d.length
+                "" !== a.trim() && 0 === c.length
                     ? e.push(
                           (0, n.jsx)(
                               s.Dr,
@@ -136,6 +136,6 @@ function c(e, t) {
                       })),
                 e
             );
-        }, [d, u, m, a, t]),
+        }, [c, u, m, a, t]),
     ];
 }

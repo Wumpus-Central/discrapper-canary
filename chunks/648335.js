@@ -1,4 +1,4 @@
-t.d(a, { Dd: () => h, R8: () => u, Wn: () => d, eI: () => o, eX: () => m, mr: () => c });
+t.d(a, { Dd: () => h, R8: () => c, Wn: () => d, eI: () => o, eX: () => m, mr: () => u });
 var l = t(166532),
     n = t(818348),
     r = t(105292);
@@ -93,7 +93,7 @@ function h(e) {
         },
     }));
 }
-let c = {
+let u = {
     [n.he.CARD]: "card",
     [n.he.IDEAL]: "ideal",
     [n.he.BANCONTACT]: "bancontact",
@@ -110,11 +110,11 @@ let c = {
     [n.he.EPS]: "eps",
     [n.he.PIX]: "pix",
 };
-function u(e) {
+function c(e) {
     return e in i;
 }
 function o(e) {
-    return u(e) ? (i[e].toStep ?? null) : null;
+    return c(e) ? (i[e].toStep ?? null) : null;
 }
 function d(e, a) {
     if ("card" === e || "link_card_brand" === e) return n.he.CARD;

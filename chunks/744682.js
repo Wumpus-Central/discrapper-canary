@@ -1,80 +1,80 @@
-r.d(t, { P: () => h });
+r.d(t, { P: () => g });
 var n = r(477900),
     u = r(582128),
     l = r(503698),
     s = r.n(l),
     a = r(480664),
     i = r.n(a),
-    o = r(844222),
-    c = r(460890),
+    c = r(844222),
+    o = r(460890),
     d = r(260612),
     f = r(964486),
     p = r(354328),
     m = r(162118);
-function h(e) {
+function g(e) {
     let {
             color: t,
             useLottieDefaultColors: l,
             src: a,
-            size: h = "md",
-            width: g,
+            size: g = "md",
+            width: h,
             height: v,
             className: y,
             initialAnimation: b,
-            initialFrame: A,
-            markers: S,
+            initialFrame: S,
+            markers: _,
             onBeforeDismount: C,
-            ref: _,
+            ref: k,
         } = e,
-        [k, M] = u.useState(null),
-        O = u.useRef(null),
-        w = u.useRef(null),
+        [w, F] = u.useState(null),
+        R = u.useRef(null),
+        j = u.useRef(null),
         x = u.useRef(null),
-        F = "custom" === h ? { width: g ?? void 0, height: v ?? void 0 } : (0, d.J)(h),
-        G = !(0, p.A)("lottie_hover_multiple_loop"),
-        I = u.useContext(o.C).reducedMotion.enabled,
-        R = (0, c.G9)().isMainWindowVisible?.() ?? !0,
-        j = I || !R,
-        D = u.useRef(b);
+        D = "custom" === g ? { width: h ?? void 0, height: v ?? void 0 } : (0, d.J)(g),
+        I = !(0, p.A)("lottie_hover_multiple_loop"),
+        P = u.useContext(c.C).reducedMotion.enabled,
+        A = (0, o.G9)().isMainWindowVisible?.() ?? !0,
+        E = P || !A,
+        M = u.useRef(b);
     ((0, f.l0)(() => {
         C?.({ finalFrame: x.current?.currentFrame ?? null });
     }),
         u.useImperativeHandle(
-            _,
+            k,
             () => ({
                 play: (e) => {
                     if (null == x.current) return;
-                    let t = null == w.current;
-                    if (((w.current = e), j)) {
-                        let t = S[e];
+                    let t = null == j.current;
+                    if (((j.current = e), E)) {
+                        let t = _[e];
                         (x.current.resetSegments(!0),
                             x.current.setSegment(t.start + t.duration, t.start + t.duration),
                             x.current.stop());
                     } else {
-                        (x.current.setLoop(!G && e.includes("hover")), x.current.resetSegments(!0));
-                        let r = t && null != A && A >= S[e].start && A <= S[e].start + S[e].duration ? A : S[e].start;
-                        x.current.playSegments([r, S[e].start + S[e].duration], !0);
+                        (x.current.setLoop(!I && e.includes("hover")), x.current.resetSegments(!0));
+                        let r = t && null != S && S >= _[e].start && S <= _[e].start + _[e].duration ? S : _[e].start;
+                        x.current.playSegments([r, _[e].start + _[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == x.current || j) return;
+                    if (null == x.current || E) return;
                 },
                 stopIfPlaying: (e) => {
                     null == x.current ||
-                        j ||
-                        (w.current === e &&
+                        E ||
+                        (j.current === e &&
                             (x.current.resetSegments(!0),
-                            x.current.setSegment(S[e].start, S[e].start),
+                            x.current.setSegment(_[e].start, _[e].start),
                             x.current.stop()));
                 },
                 getDuration: (e) => (null == x.current ? null : x.current.getDuration(e)),
                 getCurrentFrame: () => (null == x.current ? null : x.current.currentFrame),
             }),
-            [j, G, S, A],
+            [E, I, _, S],
         ),
         u.useEffect(() => {
-            null == k && a().then((e) => M(e.default));
-        }, [k, a]),
+            null == w && a().then((e) => F(e.default));
+        }, [w, a]),
         u.useEffect(
             () => (
                 r
@@ -83,19 +83,19 @@ function h(e) {
                     .then((e) => {
                         let t,
                             { default: r } = e;
-                        if (null == O.current) return;
-                        let n = 1 === Object.keys(S).length ? Object.values(S)[0].name : void 0,
-                            u = w.current ?? D.current ?? n;
-                        if (null != u && null != S[u]) {
-                            let e = S[u];
-                            t = null != e ? [A ?? e.start, e.start + e.duration] : void 0;
+                        if (null == R.current) return;
+                        let n = 1 === Object.keys(_).length ? Object.values(_)[0].name : void 0,
+                            u = j.current ?? M.current ?? n;
+                        if (null != u && null != _[u]) {
+                            let e = _[u];
+                            t = null != e ? [S ?? e.start, e.start + e.duration] : void 0;
                         }
                         x.current = r.loadAnimation({
-                            container: O.current,
+                            container: R.current,
                             renderer: "svg",
                             loop: !1,
                             autoplay: !1,
-                            animationData: i()(k),
+                            animationData: i()(w),
                             initialSegment: t,
                         });
                     }),
@@ -103,8 +103,8 @@ function h(e) {
                     x.current?.destroy();
                 }
             ),
-            [k, S, A],
+            [w, _, S],
         ));
-    let L = { "--__lottieIconColor": null != t && "string" == typeof t ? t : t?.css, display: "flex", ...F };
-    return (0, n.jsx)("div", { style: L, className: s()(m.f, l ? void 0 : m.P, y), ref: O });
+    let O = { "--__lottieIconColor": null != t && "string" == typeof t ? t : t?.css, display: "flex", ...D };
+    return (0, n.jsx)("div", { style: O, className: s()(m.f, l ? void 0 : m.P, y), ref: R });
 }

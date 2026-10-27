@@ -3,14 +3,14 @@ l.d(t, {
     DH: () => C.DH,
     Z4: () => U,
     v7: () => _.v,
-    y: () => F,
+    y: () => M,
     _D: () => I._,
     I0: () => y.I,
     s7: () => H,
     Lo: () => p,
     me: () => N,
     Vm: () => n.Vm,
-    ec: () => b,
+    ec: () => A,
     a6: () => C.a6,
     JW: () => C.JW,
     vW: () => B.v,
@@ -168,19 +168,19 @@ function N(e) {
     });
 }
 var T = l(202541),
-    A = l(105292);
-function b(e) {
+    b = l(105292);
+function A(e) {
     let t,
         { premiumType: l, size: n, className: r, tag: s = "span", ...i } = e;
     switch (l) {
         case T.PremiumTypes.TIER_0:
-            t = A.intl.string(A.t["t9uG/o"]);
+            t = b.intl.string(b.t["t9uG/o"]);
             break;
         case T.PremiumTypes.TIER_1:
-            t = A.intl.string(A.t.FSOz78);
+            t = b.intl.string(b.t.FSOz78);
             break;
         case T.PremiumTypes.TIER_2:
-            t = A.intl.string(A.t.lG6a5x);
+            t = b.intl.string(b.t.lG6a5x);
     }
     return (0, a.jsx)(m.E, { tag: s, variant: `nitro-${n}`, className: r, ...i, children: t });
 }
@@ -198,11 +198,11 @@ var y = l(596034),
     k = l(580630),
     G = l(123816),
     w = l(986485),
-    M = l(685254);
-function F(e) {
-    let { text: t = A.intl.string(w.default.iBFPMf), onClick: l, className: n, analytics: r } = e;
+    F = l(685254);
+function M(e) {
+    let { text: t = b.intl.string(w.default.iBFPMf), onClick: l, className: n, analytics: r } = e;
     return (0, a.jsxs)(D.D, {
-        className: i()(M.U, n),
+        className: i()(F.U, n),
         onClick: function () {
             (null != r && (0, L.P6)(r), l());
         },
@@ -218,7 +218,7 @@ function U(e) {
         d = (0, G.t4)((e) => e.contextMetadata),
         u = r.useMemo(() => ({ source: "payment_modal", loadId: d.loadId }), [d.loadId]);
     return c
-        ? (0, a.jsx)(F, {
+        ? (0, a.jsx)(M, {
               text: n,
               onClick: function () {
                   (0, L.HF)({
@@ -226,7 +226,7 @@ function U(e) {
                       onComplete: (e) => {
                           let l = (0, k.$g)(e.amount, e.currency);
                           ((0, R.P0)({
-                              text: A.intl.formatToPlainString(w.default["66Wi6B"], { price: l }),
+                              text: b.intl.formatToPlainString(w.default["66Wi6B"], { price: l }),
                               variant: "success",
                               position: "top",
                           }),

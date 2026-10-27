@@ -1,7 +1,7 @@
-a.d(n, { DF: () => s, p8: () => r, tb: () => e });
-var r = 1e-6,
-    e = "u" > typeof Float32Array ? Float32Array : Array,
-    i = Math.PI / 180;
+a.d(r, { DF: () => s, p8: () => n, tb: () => u });
+var n = 1e-6,
+    u = "u" > typeof Float32Array ? Float32Array : Array,
+    e = Math.PI / 180;
 function s(t) {
-    return t * i;
+    return t * e;
 }

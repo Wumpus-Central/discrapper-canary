@@ -16,9 +16,9 @@ function s() {
             getOrCreateSetupIntent: e.getOrCreateSetupIntent,
         })),
         h = a ?? (1 === t.length ? t[0] : void 0),
-        c = l.useMemo(() => ({ currency: e, sku_id: h, is_gift: s }), [e, h, s]);
+        u = l.useMemo(() => ({ currency: e, sku_id: h, is_gift: s }), [e, h, s]);
     return {
-        createSetupIntent: l.useCallback(() => i(c, { forceRecreate: !0 }), [i, c]),
-        createSetupIntentDeduped: l.useCallback(() => i(c), [i, c]),
+        createSetupIntent: l.useCallback(() => i(u, { forceRecreate: !0 }), [i, u]),
+        createSetupIntentDeduped: l.useCallback(() => i(u), [i, u]),
     };
 }

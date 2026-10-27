@@ -16,16 +16,16 @@ var n = i(477900),
     g = i(297152),
     I = i(834730),
     E = i(821609),
-    S = i(308368),
-    _ = i(298990),
+    _ = i(308368),
+    S = i(298990),
     N = i(308528),
     C = i(730134),
     h = i(964486),
     T = i(55730),
     v = i(429913),
     O = i(878014),
-    b = i(402216),
-    L = i(506326),
+    L = i(402216),
+    b = i(506326),
     x = i(428249),
     D = i(205184),
     R = i(427358),
@@ -75,8 +75,8 @@ var G = i(474397),
     X = i(994500),
     W = i(287809),
     q = i(943577),
-    Z = i(532294),
-    Q = i(562153),
+    Q = i(532294),
+    Z = i(562153),
     tt = i(810412),
     te = i(870373),
     ti = i(243612),
@@ -89,10 +89,10 @@ function ts(t) {
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([W.default], () => W.default.getUser(i.author_id)),
         [g, I] = l.useState("unsent"),
-        [E, _] = l.useState(!1);
+        [E, S] = l.useState(!1);
     l.useEffect(() => {
         if ("sent" === g) {
-            let t = setTimeout(() => _(!0), 2e3);
+            let t = setTimeout(() => S(!0), 2e3);
             return () => clearTimeout(t);
         }
     }, [g]);
@@ -103,7 +103,7 @@ function ts(t) {
             t.stopPropagation();
             try {
                 if ((I("sending"), h && null != C))
-                    await S.A.sendActivityInviteUser({
+                    await _.A.sendActivityInviteUser({
                         type: tn.xL.JOIN,
                         userId: u.id,
                         activity: C,
@@ -182,7 +182,7 @@ function to(t) {
             t.stopPropagation();
             try {
                 (d("sending"),
-                    await S.A.sendActivityInviteUser({
+                    await _.A.sendActivityInviteUser({
                         type: tn.xL.JOIN_REQUEST,
                         userId: r.id,
                         activity: o,
@@ -245,15 +245,15 @@ function tu(t) {
                                       className: tr.Xh,
                                       variant: "text-md/medium",
                                       color: "text-strong",
-                                      children: Q.Ay.getName(void 0, void 0, r),
+                                      children: Z.Ay.getName(void 0, void 0, r),
                                   }),
-                                  null != s && (0, n.jsx)(b.Ay, { className: tr.Ok }),
+                                  null != s && (0, n.jsx)(L.Ay, { className: tr.Ok }),
                               ],
                           }),
-                          (0, n.jsx)(L.mG, {
-                              location: L.N5.OVERLAY,
+                          (0, n.jsx)(b.mG, {
+                              location: b.N5.OVERLAY,
                               className: tr.cV,
-                              children: [L.iq, L.tR, L.K7, L.sp, L.MK].map((t, i) =>
+                              children: [b.iq, b.tR, b.K7, b.sp, b.MK].map((t, i) =>
                                   (0, n.jsx)(t, { entry: e }, `entry-${i}`),
                               ),
                           }),
@@ -298,7 +298,7 @@ function td(t) {
         d = (0, tt.Dk)(() => new Set(e.map((t) => t.id)), [e]);
     return (l.useEffect(() => {
         (0, tt.Y)(tn.uss.ACTIVITY, {
-            locked: Z.default.isInstanceLocked(),
+            locked: Q.default.isInstanceLocked(),
             shownUserIds: Array.from(o),
             liveUserIds: Array.from(c),
             contentInventoryIds: Array.from(d),
@@ -434,7 +434,7 @@ function tp(t) {
                                 size: "sm",
                                 variant: "secondary",
                                 onClick: () => {
-                                    ((0, _.qf)(a, !1, tn.BRT.POPOUT),
+                                    ((0, S.qf)(a, !1, tn.BRT.POPOUT),
                                         (0, tt.YX)(tn.uss.ACTIVITY, { type: tt.Z5.INVITE, value: tt.IP.PANEL_OPENED }));
                                 },
                             }),

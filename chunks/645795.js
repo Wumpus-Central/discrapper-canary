@@ -1,9 +1,9 @@
-n.d(t, { Rs: () => D, fw: () => Z, Ay: () => G });
+n.d(t, { Rs: () => B, fw: () => Z, Ay: () => G });
 var l,
     r = n(477900),
     i = n(582128),
-    s = n(284009),
-    a = n.n(s),
+    a = n(284009),
+    s = n.n(a),
     u = n(17928),
     c = n(834730),
     o = n(38021),
@@ -15,13 +15,13 @@ var l,
     C = n(951305),
     E = n(419212),
     y = n(97352),
-    I = n(67480),
+    _ = n(67480),
     g = n(975571),
-    S = n(927578),
-    _ = n(615396),
-    x = n(573359),
-    P = n(462887),
-    A = n(659746);
+    I = n(927578),
+    S = n(615396),
+    A = n(573359),
+    x = n(462887),
+    P = n(659746);
 function v(e) {
     let { color: t = "white", className: n } = e;
     return (0, r.jsx)("svg", {
@@ -75,13 +75,13 @@ let L = function (e) {
         children: (0, r.jsx)("div", {
             className: T.v9,
             children: (function (e, t) {
-                let n = (0, P.M)(t) ? "white" : "black";
+                let n = (0, x.M)(t) ? "white" : "black";
                 switch (e) {
-                    case A.Or.PREMIUM_UPDATED:
+                    case P.Or.PREMIUM_UPDATED:
                         return (0, r.jsx)(M, { color: n, className: T.gd });
-                    case A.Or.PREMIUM_ACTIVATED:
+                    case P.Or.PREMIUM_ACTIVATED:
                         return (0, r.jsx)(v, { color: n, className: T.gd });
-                    case A.Or.PREMIUM_PAYMENT_STARTED:
+                    case P.Or.PREMIUM_PAYMENT_STARTED:
                         return (0, r.jsx)(R, { color: n, className: T.gd });
                     default:
                         return null;
@@ -99,11 +99,11 @@ var b = n(700546),
     H = n(105292),
     O = n(583741),
     F = n(896554);
-function B(e) {
+function D(e) {
     let t,
         { planId: n, startingPremiumSubscriptionPlanId: l, paymentSourceType: i } = e,
-        [s, o] = (0, u.yK)([y.A], () => [y.A.get(l), y.A.get(n)]);
-    if ((a()(null != s && null != o, "Missing startingPlan or newPlan"), j.LE.indexOf(l) < j.LE.indexOf(n)))
+        [a, o] = (0, u.yK)([y.A], () => [y.A.get(l), y.A.get(n)]);
+    if ((s()(null != a && null != o, "Missing startingPlan or newPlan"), j.LE.indexOf(l) < j.LE.indexOf(n)))
         switch (n) {
             case j.gD.PREMIUM_MONTH_TIER_1:
                 ((t = H.intl.string(H.t.knvOVz)), k.NcF.has(i ?? k.hes.UNKNOWN) && (t = H.intl.format(H.t.o6hBiR, {})));
@@ -136,7 +136,7 @@ function B(e) {
             default:
                 throw new h.v({ message: `Unexpected planId: ${n}`, extraSentryInformation: { planId: n } });
         }
-    else if (s.skuId === j.pe.TIER_2 && o.skuId === j.pe.TIER_1) t = H.intl.string(H.t.PNX4NM);
+    else if (a.skuId === j.pe.TIER_2 && o.skuId === j.pe.TIER_1) t = H.intl.string(H.t.PNX4NM);
     else
         switch (o.skuId) {
             case j.pe.TIER_0:
@@ -146,7 +146,7 @@ function B(e) {
                 t = H.intl.string(H.t.nLI1Kr);
                 break;
             case j.pe.TIER_2:
-                t = 1 !== s.intervalCount ? H.intl.string(H.t.qSZZVA) : H.intl.string(H.t.RNjcNg);
+                t = 1 !== a.intervalCount ? H.intl.string(H.t.qSZZVA) : H.intl.string(H.t.RNjcNg);
                 break;
             default:
                 throw Error(`Unexpected skuId: ${o.skuId}`);
@@ -158,25 +158,25 @@ function B(e) {
         children: t,
     });
 }
-var D = (((l = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), l);
+var B = (((l = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), l);
 function G(e) {
     let t,
         n,
         {
             planId: l,
-            startingPremiumSubscriptionPlanId: s,
+            startingPremiumSubscriptionPlanId: a,
             onClose: h,
             followupSKUInfo: p,
             isDowngrade: C,
             hideClose: E,
-            postSuccessGuild: P,
+            postSuccessGuild: x,
             paymentSourceType: v,
             startingFractionalPremiumEndsAt: R,
             customCTAType: M,
         } = e,
-        T = (0, u.bG)([x.A], () => x.A.isDisplayingWowMomentConfirmation),
+        T = (0, u.bG)([A.A], () => A.A.isDisplayingWowMomentConfirmation),
         {
-            isPremiumGroupPurchase: D,
+            isPremiumGroupPurchase: B,
             customCheckoutFlow: G,
             startingIsInPastDueCheckout: Z,
         } = (0, m.t4)((e) => ({
@@ -185,11 +185,11 @@ function G(e) {
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: K } = (0, o.wR)(),
-        W = (0, u.bG)([I.A], () => (null != p ? I.A.get(p.id) : null)),
-        Y = (0, _.b2)(R),
+        W = (0, u.bG)([_.A], () => (null != p ? _.A.get(p.id) : null)),
+        Y = (0, S.b2)(R),
         q = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function z(e) {
-        return D
+        return B
             ? H.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, N.DP)(), totalSeats: N.LM })
             : e.skuId === j.pe.TIER_0
               ? k.NcF.has(v ?? k.hes.UNKNOWN)
@@ -233,7 +233,7 @@ function G(e) {
         });
     else if (Y && !C) {
         let e = y.A.get(l);
-        (a()(null != e, "Missing plan"),
+        (s()(null != e, "Missing plan"),
             e.skuId === j.pe.TIER_0
                 ? (t = (0, r.jsxs)(c.E, {
                       variant: "text-md/medium",
@@ -262,10 +262,10 @@ function G(e) {
                           }),
                       ],
                   })));
-    } else if (null != s) t = (0, r.jsx)(B, { planId: l, startingPremiumSubscriptionPlanId: s });
-    else if (null != P) {
+    } else if (null != a) t = (0, r.jsx)(D, { planId: l, startingPremiumSubscriptionPlanId: a });
+    else if (null != x) {
         let e = y.A.get(l);
-        (a()(null != e, "Missing plan"),
+        (s()(null != e, "Missing plan"),
             (t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.E, {
@@ -278,13 +278,13 @@ function G(e) {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
-                        children: H.intl.format(H.t["6aZ0NR"], { guildName: P.name }),
+                        children: H.intl.format(H.t["6aZ0NR"], { guildName: x.name }),
                     }),
                 ],
             })));
     } else {
         let e = y.A.get(l);
-        (a()(null != e, "Missing plan"),
+        (s()(null != e, "Missing plan"),
             (t = (0, r.jsx)(c.E, {
                 variant: "text-md/medium",
                 color: "interactive-text-default",
@@ -298,13 +298,13 @@ function G(e) {
         }, [h, G]);
     function $() {
         return k.NcF.has(v ?? k.hes.UNKNOWN)
-            ? A.Ay.Types.PREMIUM_PAYMENT_STARTED
-            : null != s
-              ? A.Ay.Types.PREMIUM_UPDATED
-              : A.Ay.Types.PREMIUM_ACTIVATED;
+            ? P.Ay.Types.PREMIUM_PAYMENT_STARTED
+            : null != a
+              ? P.Ay.Types.PREMIUM_UPDATED
+              : P.Ay.Types.PREMIUM_ACTIVATED;
     }
     if (
-        ((n = D
+        ((n = B
             ? H.intl.string(w.default.clIveA)
             : "deeplink_to_desktop_app" === M || G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT
               ? H.intl.string(H.t.sRApon)
@@ -312,13 +312,13 @@ function G(e) {
                 ? H.intl.formatToPlainString(H.t["1qGgm4"], { skuName: W.name })
                 : C
                   ? H.intl.string(H.t.QJ9EyM)
-                  : null != P
+                  : null != x
                     ? H.intl.string(H.t.ta3cXY)
                     : H.intl.string(H.t.TkTvBz)),
         T)
     )
         return (0, r.jsx)(b.A, { type: $(), text: t, buttonText: n, hideClose: E || q, onClose: X, buttonLoading: Q });
-    let J = (0, S.z4)(l);
+    let J = (0, I.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
@@ -338,28 +338,28 @@ function Z(e) {
     let { planId: t, onClose: n, shouldUsePostPurchaseRecipientDelivery: l = !1 } = e,
         {
             giftRecipient: i,
-            selectedGiftStyle: s,
+            selectedGiftStyle: a,
             hasSentMessage: c,
             giftMessageError: o,
             isSendingMessage: d,
         } = (0, C.Pv)(),
         f = (0, u.bG)([y.A], () => y.A.get(t));
-    a()(null != f, "Missing plan");
+    s()(null != f, "Missing plan");
     let h = (0, u.bG)([E.A], () => E.A.getGiftCode(f.skuId)),
-        { quantity: I, checkoutSessionId: g } = (0, m.t4)((e) => ({
+        { quantity: _, checkoutSessionId: g } = (0, m.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
         })),
-        S = (0, u.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(g), [g]);
+        I = (0, u.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(g), [g]);
     return (0, r.jsx)(p.A, {
         giftCode: h,
-        giftCount: I,
+        giftCount: _,
         checkoutSessionId: g,
-        giftCodeDeliveryReady: S,
+        giftCodeDeliveryReady: I,
         shouldUsePostPurchaseRecipientDelivery: l,
         subscriptionPlan: f,
         onClose: n,
-        selectedGiftStyle: s,
+        selectedGiftStyle: a,
         hasSentMessage: c,
         giftRecipient: i,
         giftMessageError: o,

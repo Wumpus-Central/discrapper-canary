@@ -1,11 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => c });
 var l = n(477900),
     r = n(503698),
     a = n.n(r),
-    i = n(343053),
-    s = n(214847);
-function o(e) {
+    s = n(343053),
+    i = n(214847);
+function c(e) {
     let { variant: t, className: n } = e,
-        { size: r } = (0, i.Z)();
-    return (0, l.jsx)("div", { className: a()(s.wordmark, s[r], "full" === t ? s.full : s.short, n) });
+        { size: r } = (0, s.Z)();
+    return (0, l.jsx)("div", { className: a()(i.wordmark, i[r], "full" === t ? i.full : i.short, n) });
 }

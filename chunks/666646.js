@@ -1,4 +1,4 @@
-n.d(t, { F: () => i, T: () => s });
+n.d(t, { F: () => i, T: () => a });
 var l = n(582128),
     r = n(123816);
 function i(e, t) {
@@ -10,7 +10,7 @@ function i(e, t) {
         n(e, t);
     }, [e, t, n]);
 }
-function s(e, t) {
+function a(e, t) {
     let n = (0, r.t4)((e) => {
         let { setRenewalInvoicePreview: t } = e;
         return t;

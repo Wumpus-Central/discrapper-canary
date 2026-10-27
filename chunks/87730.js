@@ -1,4 +1,4 @@
-n.d(t, { o: () => P });
+n.d(t, { o: () => T });
 var r = n(477900),
     i = n(582128),
     a = n(702841),
@@ -13,98 +13,98 @@ var r = n(477900),
     f = n(176095),
     v = n(580630),
     g = n(123816),
-    I = n(986485),
-    x = n(105292),
-    E = n(7822);
-function T(e) {
+    x = n(986485),
+    I = n(105292),
+    b = n(7822);
+function P(e) {
     return e.stopPropagation();
 }
-function P(e) {
+function T(e) {
     let {
             giftCardWallet: t,
             checked: n,
-            onChange: P,
-            disabled: b = !1,
-            loading: h = !1,
+            onChange: T,
+            disabled: h = !1,
+            loading: E = !1,
             disabledTooltip: A,
             locked: y = !1,
-            showDisabledInfoIcon: R = !0,
+            showDisabledInfoIcon: L = !0,
         } = e,
-        N = (0, a.bG)([f.A], () => f.A.getBalance(t.id), [t.id]),
-        _ = (0, a.bG)([f.A], () => f.A.getIsFetching(t.id), [t.id]),
-        L = (0, a.bG)([f.A], () => f.A.hasSettled(t.id), [t.id]),
-        S = (0, g.t4)((e) => e.getWalletLegBalance());
+        S = (0, a.bG)([f.A], () => f.A.getBalance(t.id), [t.id]),
+        N = (0, a.bG)([f.A], () => f.A.getIsFetching(t.id), [t.id]),
+        C = (0, a.bG)([f.A], () => f.A.hasSettled(t.id), [t.id]),
+        R = (0, g.t4)((e) => e.getWalletLegBalance());
     i.useEffect(() => {
         (0, p.YP)(t.id);
     }, [t.id]);
-    let M = L && null == N && !_,
-        C = i.useMemo(() => {
-            if (null == N) return null;
-            let e = (0, v.$g)(S ?? N.amount, N.currency);
-            return x.intl.format(I.default["9Nb9Bz"], { amount: e });
-        }, [N, S]);
+    let j = C && null == S && !N,
+        _ = i.useMemo(() => {
+            if (null == S) return null;
+            let e = (0, v.$g)(R ?? S.amount, S.currency);
+            return I.intl.format(x.default["9Nb9Bz"], { amount: e });
+        }, [S, R]);
     i.useEffect(() => {
-        !y && M && n && P(!1);
-    }, [y, M, n, P]);
-    let j = b || h || _ || (!y && M),
-        D = j || y,
-        w = i.useCallback(() => {
-            D || P(!n);
-        }, [P, n, D]);
-    if (M && !y) return null;
-    let U = j && null != A && R,
-        k = D && null != A,
-        O = h
+        !y && j && n && T(!1);
+    }, [y, j, n, T]);
+    let w = h || E || N || (!y && j),
+        M = w || y,
+        D = i.useCallback(() => {
+            M || T(!n);
+        }, [T, n, M]);
+    if (j && !y) return null;
+    let k = w && null != A && L,
+        O = M && null != A,
+        U = E
             ? (0, r.jsx)("div", {
-                  className: E.tv,
-                  children: (0, r.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE_SIMPLE, className: E.u1 }),
+                  className: b.tv,
+                  children: (0, r.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE_SIMPLE, className: b.u1 }),
               })
-            : (0, r.jsx)(u.S, { checked: n && (y || !M), onChange: w, disabled: D, label: "" }),
+            : (0, r.jsx)(u.S, { checked: n && (y || !j), onChange: D, disabled: M, label: "" }),
         W = (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(c.E, {
                     variant: "text-md/normal",
                     color: "text-strong",
-                    children: x.intl.string(I.default["febr+T"]),
+                    children: I.intl.string(x.default["febr+T"]),
                 }),
-                !_ &&
-                    null != C &&
+                !N &&
+                    null != _ &&
                     (0, r.jsx)(c.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         style: { marginTop: 4 },
-                        children: C,
+                        children: _,
                     }),
             ],
         }),
-        G = D
+        G = M
             ? (0, r.jsxs)("div", {
-                  className: E.kL,
+                  className: b.kL,
                   role: "checkbox",
-                  "aria-checked": !h && n,
-                  "aria-busy": h || void 0,
-                  "aria-disabled": j || void 0,
+                  "aria-checked": !E && n,
+                  "aria-busy": E || void 0,
+                  "aria-disabled": w || void 0,
                   children: [
-                      (0, r.jsx)("div", { children: O }),
+                      (0, r.jsx)("div", { children: U }),
                       W,
-                      U &&
+                      k &&
                           (0, r.jsx)(o.CircleInformationIcon, {
-                              className: E.G,
+                              className: b.G,
                               size: "xs",
                               color: l.A.colors.TEXT_MUTED,
                           }),
-                      _ && (0, r.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS }),
+                      N && (0, r.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS }),
                   ],
               })
             : (0, r.jsxs)(d.D, {
-                  className: E.kL,
-                  onClick: w,
+                  className: b.kL,
+                  onClick: D,
                   role: "checkbox",
                   "aria-checked": n,
                   tabIndex: 0,
-                  children: [(0, r.jsx)(d.D, { onClick: T, children: O }), W],
+                  children: [(0, r.jsx)(d.D, { onClick: P, children: U }), W],
               });
-    return k
+    return O
         ? (0, r.jsx)(m.m, {
               text: A,
               asContainer: !0,

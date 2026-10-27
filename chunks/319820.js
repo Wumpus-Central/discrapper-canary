@@ -1,4 +1,4 @@
-n.d(t, { AO: () => g, r$: () => v, yh: () => I });
+n.d(t, { AO: () => g, r$: () => v, yh: () => x });
 var r = n(477900);
 n(582128);
 var i = n(503698),
@@ -39,7 +39,7 @@ function g(e) {
         product: i,
     };
 }
-function I(e) {
+function x(e) {
     let { invoicePreview: t } = e;
     (s()(null != t.total, "SKU must have a price set."),
         s()(null != t.invoiceItems && 1 === t.invoiceItems.length, "SKU preview must have single line item"));
