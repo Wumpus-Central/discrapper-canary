@@ -1,4 +1,4 @@
-c.exports = {
+t.exports = {
     iE: "wrapper_fc8177",
     oE: "compact_fc8177",
     E: "cozy_fc8177",

@@ -1,1 +1,1 @@
-a.exports = { b: "collapsedDot__44107" };
+p.exports = { b: "collapsedDot__44107" };

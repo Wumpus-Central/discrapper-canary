@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => C, Mg: () => N, Og: () => k, VY: () => m, Y1: () => b, aF: () => T, uk: () => y }),
+(n.d(t, { M$: () => C, Mg: () => k, Og: () => N, VY: () => m, Y1: () => T, aF: () => b, uk: () => y }),
     n(323874),
     n(14289),
     n(35956));
@@ -90,7 +90,7 @@ async function O() {
             await s.A.fetchUserApplicationIdentitiesWithProfiles(e);
         } catch {}
 }
-function b(e, t) {
+function T(e, t) {
     let n = (0, a.KY)(e);
     if (null == n) return !1;
     try {
@@ -99,7 +99,7 @@ function b(e, t) {
         return !1;
     }
 }
-async function T(e, t) {
+async function b(e, t) {
     let { ticket: n, baseUrl: r } = await (0, l.BK)(e),
         s = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${s}`;
@@ -108,11 +108,11 @@ async function C(e, t) {
     let n = await (0, c.h)(e, "/agent/overlay-background", { method: "PUT", body: t });
     if (!n.ok) throw Error(`overlay background upload failed (${n.status})`);
 }
-async function k(e) {
+async function N(e) {
     let t = await (0, c.h)(e, "/agent/overlay-background", { method: "DELETE" });
     if (!t.ok) throw Error(`overlay background reset failed (${t.status})`);
 }
-async function N(e, t) {
+async function k(e, t) {
     let { ticket: n, baseUrl: r } = await (0, l.BK)(e);
     return `${r}/agent/overlay-background?${new URLSearchParams({ ticket: n, v: t })}`;
 }

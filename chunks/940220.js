@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     QZ: "effect_adebba",
     Xh: "username_adebba",
     $A: "streaming_adebba",

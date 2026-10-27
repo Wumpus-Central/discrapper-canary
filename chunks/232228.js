@@ -1,4 +1,4 @@
-_.r(
+t.r(
     (a.exports = {
         indicatorDot: "indicatorDot__3da4a",
         xs: "xs__3da4a",

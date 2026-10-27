@@ -1,20 +1,20 @@
-E.d(e, { A: () => c });
-var i = E(17928),
-    n = E(73153);
-let _ = new Set();
-class a extends i.Ay.Store {
-    isPaused(t) {
-        return null != t && _.has(t);
+n.d(t, { A: () => a });
+var u = n(17928),
+    r = n(73153);
+let s = new Set();
+class i extends u.Ay.Store {
+    isPaused(e) {
+        return null != e && s.has(e);
     }
 }
-let c = new a(n.h, {
+let a = new i(r.h, {
     LOGOUT: function () {
-        if (0 === _.size) return !1;
-        _.clear();
+        if (0 === s.size) return !1;
+        s.clear();
     },
-    CONJURE_PREVIEW_PAUSED_SET: function (t) {
-        let { projectId: e, paused: E } = t;
-        if (_.has(e) === E) return !1;
-        E ? _.add(e) : _.delete(e);
+    CONJURE_PREVIEW_PAUSED_SET: function (e) {
+        let { projectId: t, paused: n } = e;
+        if (s.has(t) === n) return !1;
+        n ? s.add(t) : s.delete(t);
     },
 });

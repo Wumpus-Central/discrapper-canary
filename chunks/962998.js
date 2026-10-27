@@ -1,6 +1,6 @@
 n.d(t, {
     $C: () => E,
-    BC: () => b,
+    BC: () => T,
     BG: () => S,
     Mz: () => y,
     TV: () => g,
@@ -35,9 +35,9 @@ let h = {
     _ = {
         publish_options(e, t) {
             let { projectId: n } = t,
-                r = N.get(n);
+                r = k.get(n);
             if (null == r || r.nonce !== e.nonce) return;
-            (N.delete(n), clearTimeout(r.timeout));
+            (k.delete(n), clearTimeout(r.timeout));
             let s = e.options;
             !0 !== e.ok ||
             null == s ||
@@ -79,7 +79,7 @@ let h = {
         },
         publish_progress(e, t) {
             let { projectId: n } = t;
-            if (!T.has(e.stage)) return;
+            if (!b.has(e.stage)) return;
             let s = Number.isFinite(e.stage_elapsed_ms) ? Math.max(0, e.stage_elapsed_ms) : 0;
             ("approval" !== e.stage &&
                 r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId: n, approvalUrl: null }),
@@ -98,7 +98,7 @@ let h = {
                     turnId: e.turn_id,
                     patch: {
                         publishCta: {
-                            surface: k(e.publish_cta.surface),
+                            surface: N(e.publish_cta.surface),
                             reason: "new_ui" === e.publish_cta.reason ? "new_ui" : "first_publish",
                         },
                     },
@@ -120,7 +120,7 @@ let h = {
                           : !0 === n.has_unpublished_changes
                             ? "live_outdated"
                             : "live_current",
-                surface: k(e.surface),
+                surface: N(e.surface),
                 previewAppChannels: Array.isArray(e.preview_app_channels)
                     ? e.preview_app_channels.filter((e) => "string" == typeof e)
                     : [],
@@ -209,10 +209,10 @@ function E(e) {
     return new Promise((t, n) => {
         let r = (0, o.KY)(e);
         if (null == r) return void n(Error("Not connected"));
-        b(e, "Superseded by a newer draft request");
+        T(e, "Superseded by a newer draft request");
         let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             i = setTimeout(() => {
-                b(e, "Draft timed out");
+                T(e, "Draft timed out");
             }, 45e3);
         O.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
         try {
@@ -239,19 +239,19 @@ function y(e, t) {
     null != n && (m.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
 let O = new Map();
-function b(e, t) {
+function T(e, t) {
     let n = O.get(e);
     null != n && (O.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let T = new Set(u.n),
+let b = new Set(u.n),
     C = new Set(["activity", "automod", "widget", "bot"]);
-function k(e) {
+function N(e) {
     return null != e && C.has(e) ? e : null;
 }
-let N = new Map();
+let k = new Map();
 function w(e, t) {
-    let n = N.get(e);
-    null != n && (N.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+    let n = k.get(e);
+    null != n && (k.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
 function R(e) {
     return new Promise((t, n) => {
@@ -265,7 +265,7 @@ function R(e) {
         w(e, "Superseded by a newer publish request");
         let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             i = setTimeout(() => w(e, "Could not load publish destinations. Try again."), 15e3);
-        N.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
+        k.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
         try {
             r.sendPublishOptions(s);
         } catch {
