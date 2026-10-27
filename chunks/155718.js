@@ -137,6 +137,7 @@ var i,
         (g[(g.PREMIUM_LEGACY_UPGRADE_PROMOTION = 3)] = "PREMIUM_LEGACY_UPGRADE_PROMOTION"),
         (g[(g.PREMIUM_TRIAL = 4)] = "PREMIUM_TRIAL"),
         (g[(g.DEFAULT = 5)] = "DEFAULT"),
+        (g[(g.QUANTITY_DISCOUNT = 7)] = "QUANTITY_DISCOUNT"),
         g),
     j = (((S = {})[(S.GUILD_PRODUCT = 0)] = "GUILD_PRODUCT"), S),
     W = (((N = {})[(N.WEBAUTHN = 1)] = "WEBAUTHN"), (N[(N.TOTP = 2)] = "TOTP"), (N[(N.SMS = 3)] = "SMS"), N);
