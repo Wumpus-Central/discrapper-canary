@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652564";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652592";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652564, Version Hash: 62b1aab4b6505616b6764965601f045bfc6fd7a8`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652592, Version Hash: 747a0854894c8afbe92a95e1d98d4460f7548bcb`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25500,7 +25500,7 @@ let yr = "isHideDevBanner",
                     className: tf()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652564" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652592" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -54031,8 +54031,8 @@ let W5 = (0, tZ.Fe)({
             n.e("9205"),
             n.e("377766"),
             n.e("334127"),
+            n.e("256255"),
             n.e("696123"),
-            n.e("537894"),
             n.e("128534"),
             n.e("799657"),
             n.e("810034"),
@@ -54184,9 +54184,9 @@ let W5 = (0, tZ.Fe)({
             n.e("250478"),
             n.e("35485"),
             n.e("837687"),
-            n.e("523276"),
             n.e("252229"),
             n.e("868214"),
+            n.e("523276"),
             n.e("77473"),
             n.e("939171"),
             n.e("28561"),
@@ -54731,9 +54731,9 @@ let W5 = (0, tZ.Fe)({
             n.e("274857"),
             n.e("579072"),
             n.e("504787"),
-            n.e("867935"),
             n.e("787763"),
             n.e("312665"),
+            n.e("329164"),
             n.e("655212"),
             n.e("425592"),
             n.e("218307"),
@@ -55457,13 +55457,13 @@ let YQ = (0, rl.Fe)({
                 n.e("988077"),
                 n.e("718573"),
                 n.e("486792"),
-                n.e("537894"),
+                n.e("256255"),
                 n.e("128534"),
                 n.e("831145"),
                 n.e("911521"),
                 n.e("798384"),
                 n.e("214451"),
-                n.e("867935"),
+                n.e("329164"),
                 n.e("366996"),
             ]).then(n.bind(n, 974800)),
         webpackId: 974800,
@@ -55483,7 +55483,7 @@ let YQ = (0, rl.Fe)({
                 n.e("988077"),
                 n.e("718573"),
                 n.e("486792"),
-                n.e("537894"),
+                n.e("256255"),
                 n.e("128534"),
                 n.e("509793"),
                 n.e("831145"),
@@ -55498,7 +55498,7 @@ let YQ = (0, rl.Fe)({
                 n.e("798384"),
                 n.e("49344"),
                 n.e("886492"),
-                n.e("867935"),
+                n.e("329164"),
                 n.e("172158"),
                 n.e("851200"),
             ]).then(n.bind(n, 238234)),

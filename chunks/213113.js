@@ -32,7 +32,7 @@ var s = t(477900),
     D = t(993046),
     L = t(801228),
     P = t(652165),
-    U = t(594832),
+    U = t(561794),
     w = t(280450),
     M = t(67480),
     H = t(174459),
@@ -612,11 +612,11 @@ function eP(e) {
         }, [ei, eW]),
         e4 = ec?.tenantMetadata?.socialLayer;
     if (null == ec || null == e4) return er ? (0, s.jsx)(_.y, {}) : null;
-    let e3 = es?.storefront,
-        e7 = e3?.logoAssetId != null ? (0, Y.YE)(e3.applicationId, e3.logoAssetId, 256) : null,
-        e5 = e3?.lightThemeLogoAssetId != null ? (0, Y.YE)(e3.applicationId, e3.lightThemeLogoAssetId, 256) : null,
+    let e7 = es?.storefront,
+        e3 = e7?.logoAssetId != null ? (0, Y.YE)(e7.applicationId, e7.logoAssetId, 256) : null,
+        e5 = e7?.lightThemeLogoAssetId != null ? (0, Y.YE)(e7.applicationId, e7.lightThemeLogoAssetId, 256) : null,
         e9 = null;
-    e9 = ea ? (e7 ?? e5) : (e5 ?? e7);
+    e9 = ea ? (e3 ?? e5) : (e5 ?? e3);
     let e8 = null;
     null != em ? (e8 = (0, s.jsx)(eg.G, { label: em })) : ec.exclusive && (e8 = (0, s.jsx)(et.I, {}));
     let e6 = (0, s.jsxs)(s.Fragment, {
@@ -723,7 +723,7 @@ function eP(e) {
                             null != e9 &&
                             (0, s.jsx)("div", {
                                 className: eI.mA,
-                                children: (0, s.jsx)("img", { className: eI.wm, src: e9, alt: e3?.title ?? "" }),
+                                children: (0, s.jsx)("img", { className: eI.wm, src: e9, alt: e7?.title ?? "" }),
                             }),
                         e6,
                     ],
@@ -747,7 +747,7 @@ function eP(e) {
                                                     ? (0, s.jsx)("img", {
                                                           className: eI.wm,
                                                           src: e9,
-                                                          alt: e3?.title ?? "",
+                                                          alt: e7?.title ?? "",
                                                       })
                                                     : null,
                                         }),
