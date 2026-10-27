@@ -1,35 +1,35 @@
 i.d(l, { A: () => b });
-var t = i(477900),
-    n = i(582128),
-    a = i(661531),
-    s = i(3026),
+var a = i(477900),
+    s = i(582128),
+    t = i(661531),
+    n = i(3026),
     r = i(462887),
     d = i(778712),
     u = i(939249),
-    c = i(900002),
-    o = i(97808),
+    o = i(900002),
+    c = i(97808),
     m = i(834730),
     f = i(442433),
     A = i(548118),
-    h = i(562153),
-    p = i(939496),
-    x = i(518477),
+    x = i(562153),
+    h = i(939496),
+    p = i(518477),
     v = i(996988),
     g = i(105292),
     j = i(247261);
-let E = (0, d.FT)(d._3.SIZE_16);
+let N = (0, d.FT)(d._3.SIZE_16);
 function b(e) {
-    let { user: l, guild: b, nick: I, onSelect: N } = e,
-        { theme: M, themeType: C } = (0, p.E)(),
-        S = l.hasAvatarForGuild(b.id),
-        y = n.useId(),
-        _ = g.intl.formatToPlainString(g.t.Ce2iXp, { guildName: b.name });
-    return (0, t.jsxs)(u.D, {
-        focusProps: C === v.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+    let { user: l, guild: b, nick: M, onSelect: I } = e,
+        { theme: C, themeType: S } = (0, h.E)(),
+        y = l.hasAvatarForGuild(b.id),
+        E = s.useId(),
+        k = g.intl.formatToPlainString(g.t.Ce2iXp, { guildName: b.name });
+    return (0, a.jsxs)(u.D, {
+        focusProps: S === v.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: j.nM,
-        "aria-label": _,
-        "aria-describedby": S || null != I ? y : void 0,
-        onClick: N,
+        "aria-label": k,
+        "aria-describedby": y || null != M ? E : void 0,
+        onClick: I,
         onContextMenu: function (e) {
             (0, f.L3)(e, async () => {
                 let { default: e } = await Promise.all([
@@ -423,9 +423,9 @@ function b(e) {
                     i.e("273669"),
                     i.e("830221"),
                     i.e("940248"),
+                    i.e("623927"),
                     i.e("271217"),
                     i.e("763096"),
-                    i.e("627487"),
                     i.e("472789"),
                     i.e("507775"),
                     i.e("137937"),
@@ -599,52 +599,52 @@ function b(e) {
                     i.e("415046"),
                     i.e("935277"),
                 ]).then(i.bind(i, 237600));
-                return (l) => (0, t.jsx)(e, { ...l, guild: b });
+                return (l) => (0, a.jsx)(e, { ...l, guild: b });
             });
         },
         children: [
-            (0, t.jsx)(A.Ay, {
+            (0, a.jsx)(A.Ay, {
                 "aria-hidden": !0,
                 tabIndex: -1,
                 guild: b,
                 showBadge: !0,
                 className: null != b.icon ? j.Kk : j.lN,
-                badgeStrokeColor: (0, r.M)(M) ? a.A.unsafe_rawColors.PRIMARY_600.css : a.A.unsafe_rawColors.WHITE.css,
-                badgeTooltipColor: c.oM.PRIMARY,
-                badgeTooltipDelay: x.In,
+                badgeStrokeColor: (0, r.M)(C) ? t.A.unsafe_rawColors.PRIMARY_600.css : t.A.unsafe_rawColors.WHITE.css,
+                badgeTooltipColor: o.oM.PRIMARY,
+                badgeTooltipDelay: p.In,
                 size: A.Ay.Sizes.MEDIUM,
                 active: !0,
             }),
-            (0, t.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: j.zH,
                 children: [
-                    (0, t.jsx)("div", { className: j.UU, children: b.name }),
-                    S &&
-                        (0, t.jsxs)("div", {
-                            id: y,
+                    (0, a.jsx)("div", { className: j.UU, children: b.name }),
+                    y &&
+                        (0, a.jsxs)("div", {
+                            id: E,
                             className: j.C9,
                             children: [
-                                (0, t.jsx)(o.eu, {
-                                    src: l.getAvatarURL(b.id, E),
+                                (0, a.jsx)(c.eu, {
+                                    src: l.getAvatarURL(b.id, N),
                                     size: d._3.SIZE_16,
                                     className: j.my,
                                     "aria-hidden": !0,
                                 }),
-                                (0, t.jsx)(m.E, {
+                                (0, a.jsx)(m.E, {
                                     variant: "text-xs/medium",
-                                    children: (0, t.jsx)(s.A, {
-                                        delay: x.In,
-                                        children: I ?? h.Ay.getName(b.id, void 0, l),
+                                    children: (0, a.jsx)(n.A, {
+                                        delay: p.In,
+                                        children: M ?? x.Ay.getName(b.id, void 0, l),
                                     }),
                                 }),
                             ],
                         }),
-                    !S &&
-                        null != I &&
-                        (0, t.jsx)(m.E, {
-                            id: y,
+                    !y &&
+                        null != M &&
+                        (0, a.jsx)(m.E, {
+                            id: E,
                             variant: "text-xs/medium",
-                            children: (0, t.jsx)(s.A, { delay: x.In, children: I }),
+                            children: (0, a.jsx)(n.A, { delay: p.In, children: M }),
                         }),
                 ],
             }),
