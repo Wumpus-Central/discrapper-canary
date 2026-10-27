@@ -4,7 +4,7 @@ var i,
     s = t(582128),
     a = t(503698),
     r = t.n(a),
-    o = t(941143),
+    o = t(399513),
     c = t(696292),
     u = t(834730),
     d = t(939249),
@@ -26,8 +26,8 @@ var I =
 function N(e) {
     let { context: n, activityItem: t, onClick: i, aspectRatio: a = 0, animatedDivClass: I, commandOrigin: N } = e,
         {
-            onActivityItemSelected: _,
-            imageBackground: T,
+            onActivityItemSelected: T,
+            imageBackground: _,
             activityAction: b,
             labelType: S,
         } = (0, g.Ay)({
@@ -86,7 +86,7 @@ function N(e) {
             }
         }, [b]);
     return (0, l.jsx)(d.D, {
-        onClick: _,
+        onClick: T,
         onFocus: R,
         onBlur: L,
         onMouseEnter: R,
@@ -111,7 +111,7 @@ function N(e) {
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, l.jsx)(x.A, {
-                                            imageBackground: T,
+                                            imageBackground: _,
                                             applicationName: t.application.name,
                                             imageClassName: E.jj,
                                             imageNotFoundClassName: E.v_,

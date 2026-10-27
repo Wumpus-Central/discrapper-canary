@@ -1,7 +1,7 @@
 o.d(t, { c: () => r });
 var i = o(477900),
     n = o(582128),
-    s = o(941143),
+    s = o(399513),
     a = o(844222);
 function r(e) {
     let { shouldAnimate: t = "respect-motion-settings", ...o } = e,
