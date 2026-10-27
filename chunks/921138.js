@@ -1,53 +1,53 @@
-(l.d(e, { T_: () => h, oS: () => A, Ay: () => I, TC: () => m }), l(321073));
-var t,
-    a = l(582128),
-    o = l(284009),
-    u = l.n(o),
-    i = (((t = {})[(t.GAME_DISABLED = 1)] = "GAME_DISABLED"), t),
-    r = l(665260),
-    d = l(501592),
-    c = l(311043),
-    s = l(174459),
-    f = l(738250),
-    g = l(652215);
-function m(n) {
+(t.d(e, { T_: () => h, oS: () => m, Ay: () => _, TC: () => A }), t(321073));
+var l,
+    a = t(582128),
+    u = t(284009),
+    o = t.n(u),
+    i = (((l = {})[(l.GAME_DISABLED = 1)] = "GAME_DISABLED"), l),
+    r = t(665260),
+    d = t(501592),
+    s = t(311043),
+    c = t(980822),
+    f = t(174459),
+    p = t(652215);
+function A(n) {
     return r.Lt(n.gameFlags, i.GAME_DISABLED);
 }
-function p(n) {
+function g(n) {
     if (null == n) return ["no match"];
     let e = [];
-    return (m(n) && e.push("profile disabled"), (0, d.K)(n.contentClassification) && e.push("nsfw"), e);
+    return (A(n) && e.push("profile disabled"), (0, d.K)(n.contentClassification) && e.push("nsfw"), e);
 }
 function h(n) {
-    return 0 === p(n).length;
+    return 0 === g(n).length;
 }
-function A(n) {
-    return h(c.A.getGame(n));
+function m(n) {
+    return h(s.A.getGame(n));
 }
-let I = function (n) {
-    let { applicationId: e = "", gameId: l, source: t, trackEntryPointImpression: o = !0 } = n,
+let _ = function (n) {
+    let { applicationId: e = "", gameId: t, source: l, trackEntryPointImpression: u = !0 } = n,
         i = a.useRef(!1),
-        { gameId: r, gameRecord: d, isLoading: c } = (0, f.A)({ applicationId: e, gameId: l }),
-        h = null != d && !m(d);
+        { gameId: r, gameRecord: d, isLoading: s } = (0, c.A)({ applicationId: e, gameId: t }),
+        h = null != d && !A(d);
     return (
         a.useEffect(() => {
             i.current ||
-                !o ||
-                c ||
+                !u ||
+                s ||
                 null == d ||
-                (u()(null != t, "Cannot track a Game Profile Entry Point Impressions without a source."),
+                (o()(null != l, "Cannot track a Game Profile Entry Point Impressions without a source."),
                 (function (n, e) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-                        t = arguments.length > 3 ? arguments[3] : void 0;
-                    s.default.track(g.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+                    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+                        l = arguments.length > 3 ? arguments[3] : void 0;
+                    f.default.track(p.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
                         game_profile_available: n,
                         application_id: e,
-                        rejection_reason: l,
-                        source: t,
+                        rejection_reason: t,
+                        source: l,
                     });
-                })(h, d.id, p(d), t),
+                })(h, d.id, g(d), l),
                 (i.current = !0));
-        }, [d, h, c, t, o]),
+        }, [d, h, s, l, u]),
         { shouldOpenGameProfile: h, gameId: r }
     );
 };

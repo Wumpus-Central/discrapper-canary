@@ -1706,10 +1706,10 @@ function iA(e) {
 var ix = n(109112),
     iI = n(62010),
     iE = n(369606),
-    iv = n(409626),
-    iC = n(49491),
-    i_ = n(692969),
-    ij = n(738250),
+    iv = n(980822),
+    iC = n(409626),
+    i_ = n(49491),
+    ij = n(692969),
     iN = n(575568);
 function iy(e) {
     let { gameId: t, sourceUserId: n } = e,
@@ -1721,9 +1721,9 @@ function iy(e) {
             shouldRender: o,
         } = (function (e) {
             let { gameId: t, sourceUserId: n } = e,
-                { gameId: i, gameRecord: l, isLoading: s } = (0, ij.A)({ gameId: t }),
-                r = (0, i_.A)({ gameId: t, source: iv.GameProfileSources.GameProfileEmbed, sourceUserId: n }),
-                a = (0, iC.A)(l),
+                { gameId: i, gameRecord: l, isLoading: s } = (0, iv.A)({ gameId: t }),
+                r = (0, ij.A)({ gameId: t, source: iC.GameProfileSources.GameProfileEmbed, sourceUserId: n }),
+                a = (0, i_.A)(l),
                 o = null != l && null != r && !s && !a,
                 d = l?.getIconURL(80) ?? null,
                 c = l?.getBannerURL(300) ?? l?.getScreenshotURL(0, 300) ?? null;
