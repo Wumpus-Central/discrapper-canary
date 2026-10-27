@@ -126,8 +126,8 @@ let O = new R(b.h, {
     },
 });
 var w = n(994500),
-    M = n(287809),
-    L = n(562153),
+    L = n(287809),
+    M = n(562153),
     P = n(427262),
     D = n(435558),
     U = n.n(D),
@@ -269,7 +269,7 @@ function eu(e) {
                 )
             );
         })(l),
-        o = (0, u.bG)([M.default], () => Q.Ay.canUseSoundboardEverywhere(M.default.getCurrentUser())),
+        o = (0, u.bG)([L.default], () => Q.Ay.canUseSoundboardEverywhere(L.default.getCurrentUser())),
         { analyticsLocations: c } = (0, y.Ay)();
     switch (
         (r.useEffect(() => {
@@ -338,13 +338,13 @@ function ec(e) {
         m = (function (e) {
             let { playedByUserIds: t, guildId: n, channelId: l } = e,
                 i = t.size,
-                r = (0, u.yK)([M.default, w.A], () =>
+                r = (0, u.yK)([L.default, w.A], () =>
                     U()(Array.from(t))
                         .reject((e) => w.A.isBlockedOrIgnored(e))
                         .take(3)
                         .map((e) => {
-                            let t = M.default.getUser(e);
-                            return L.Ay.getName(n, l, t);
+                            let t = L.default.getUser(e);
+                            return M.Ay.getName(n, l, t);
                         })
                         .value(),
                 ),
@@ -511,9 +511,9 @@ var eg = n(998812);
 function ex(e) {
     let { guildId: t, channelId: n, authorUser: l, mostRecentPlayedUser: s } = e,
         o = r.useMemo(() => l?.getAvatarURL(t, (0, c.FT)(c._3.SIZE_32)), [l, t]),
-        u = r.useMemo(() => L.Ay.getNickname(t, n, l) ?? P.Ay.getName(l), [l, t, n]),
+        u = r.useMemo(() => M.Ay.getNickname(t, n, l) ?? P.Ay.getName(l), [l, t, n]),
         h = r.useMemo(() => s?.getAvatarURL(t, (0, c.FT)(c._3.SIZE_32)), [s, t]),
-        m = r.useMemo(() => (null != s ? (L.Ay.getNickname(t, n, s) ?? P.Ay.getName(s)) : null), [s, t, n]);
+        m = r.useMemo(() => (null != s ? (M.Ay.getNickname(t, n, s) ?? P.Ay.getName(s)) : null), [s, t, n]);
     return (0, i.jsxs)("div", {
         className: eg.yA,
         children: [
@@ -547,11 +547,11 @@ function eE(e) {
             onDetailsMouseEnter: v,
             onDetailsMouseLeave: N,
         } = e,
-        { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([M.default, w.A], () => {
+        { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([L.default, w.A], () => {
             let e = w.A.isBlockedOrIgnored(o ?? void 0);
             return {
-                authorUser: M.default.getUser(s),
-                mostRecentPlayedUser: e || s === o ? null : M.default.getUser(o),
+                authorUser: L.default.getUser(s),
+                mostRecentPlayedUser: e || s === o ? null : L.default.getUser(o),
             };
         }),
         _ = r.useRef(null),
@@ -570,7 +570,7 @@ function eE(e) {
                     sound_id: r.soundId,
                     source_guild_id: r.guildId,
                     author_id: s,
-                    is_author: s === M.default.getCurrentUser()?.id,
+                    is_author: s === L.default.getCurrentUser()?.id,
                     location_stack: i,
                 });
             })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: b }, analyticsLocations: k });
@@ -581,7 +581,7 @@ function eE(e) {
         O = r.useCallback(() => {
             (0, C.CZ)(l, n, k);
         }, [k, n, l]),
-        L = (0, u.bG)([A.A], () => A.A.isPlayingSound(l.soundId), [l]),
+        M = (0, u.bG)([A.A], () => A.A.isPlayingSound(l.soundId), [l]),
         P = r.useRef(null),
         D = r.useRef(null),
         [U, V] = r.useState(0);
@@ -633,7 +633,7 @@ function eE(e) {
                 children: (0, i.jsxs)(f.D, {
                     innerRef: P,
                     style: { marginInlineEnd: U },
-                    className: a()(eg.nG, { [eg.Tz]: L, [eg.Jx]: d }),
+                    className: a()(eg.nG, { [eg.Tz]: M, [eg.Jx]: d }),
                     onClick: d ? () => null : O,
                     "aria-label": ei.intl.formatToPlainString(ei.t.VOmeSq, { name: K }),
                     children: [

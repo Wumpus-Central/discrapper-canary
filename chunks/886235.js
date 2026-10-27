@@ -82,8 +82,8 @@ var K = n(526132),
     Y = n(734057),
     q = n(317525),
     Q = n(994500),
-    J = n(287809),
-    Z = n(347951),
+    Z = n(287809),
+    J = n(347951),
     X = n(825484),
     $ = n(770178),
     ee = n(970433);
@@ -168,7 +168,7 @@ function ea(e) {
                                 (0, i.jsx)(p.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: (0, w.m1)(s, J.default, Q.A, !0),
+                                    children: (0, w.m1)(s, Z.default, Q.A, !0),
                                 }),
                         ],
                     }),
@@ -259,7 +259,7 @@ function er(e) {
 function eo(e) {
     let { applicationId: t, channel: l, showChannel: s = !1, inviteDisabled: a = !1 } = e,
         r = (0, L.h)(t),
-        o = (0, g.bG)([J.default], () => J.default.getUser(l.linkedLobby?.linked_by)),
+        o = (0, g.bG)([Z.default], () => Z.default.getUser(l.linkedLobby?.linked_by)),
         c = (0, K.e)(l);
     return (0, i.jsx)(ea, {
         isDisabled: a,
@@ -299,8 +299,8 @@ function ec(e) {
         loading: m = !1,
     } = e;
     o()(null != n, "guild is required");
-    let x = (0, Z.Fi)(n),
-        A = (0, Z.Wr)(n),
+    let x = (0, J.Fi)(n),
+        A = (0, J.Wr)(n),
         f = l.useMemo(
             () =>
                 null == t || m

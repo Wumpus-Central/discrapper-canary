@@ -33,8 +33,8 @@ function A(e) {
             blockPointerEvents: D = !1,
             children: v,
             renderLayer: b,
-            viewportPadding: M = 8,
-            shiftPadding: P,
+            viewportPadding: P = 8,
+            shiftPadding: M,
             maxHeight: U,
             trigger: w = "click",
             hoverDelay: G = 100,
@@ -47,13 +47,13 @@ function A(e) {
     let F = r.useMemo(() => {
             let e = [(0, a.cY)({ mainAxis: S, alignmentAxis: N })];
             return (
-                C && e.push((0, a.UU)({ crossAxis: O, padding: M, boundary: A.body })),
-                R && e.push((0, a.BN)({ padding: P ?? M, limiter: (0, a.ER)(), boundary: A.body })),
+                C && e.push((0, a.UU)({ crossAxis: O, padding: P, boundary: A.body })),
+                R && e.push((0, a.BN)({ padding: M ?? P, limiter: (0, a.ER)(), boundary: A.body })),
                 e.push((0, a.jD)({ strategy: "referenceHidden" })),
                 null != U &&
                     e.push(
                         (0, a.Ej)({
-                            padding: M,
+                            padding: P,
                             boundary: A.body,
                             apply(e) {
                                 let { availableHeight: t, elements: n } = e,
@@ -64,7 +64,7 @@ function A(e) {
                     ),
                 e
             );
-        }, [S, N, C, R, M, P, O, A, U]),
+        }, [S, N, C, R, P, M, O, A, U]),
         B = (0, s.fI)(),
         {
             refs: V,

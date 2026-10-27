@@ -5,8 +5,8 @@ var r = n(477900),
     a = n.n(s),
     o = n(269115),
     i = n(62010),
-    u = n(939249),
-    c = n(297264),
+    c = n(939249),
+    u = n(297264),
     d = n(821609),
     p = n(174459),
     m = n(440938),
@@ -58,7 +58,7 @@ function k(e) {
         innerRef: O,
         onChange: S,
         threshold: 0,
-        children: (0, r.jsxs)(u.D, {
+        children: (0, r.jsxs)(c.D, {
             className: a()(L.oT, h),
             innerRef: O,
             style: { ...(null != b && { backgroundImage: `url(${b})` }) },
@@ -87,7 +87,7 @@ function k(e) {
                     className: L.Gh,
                     children:
                         null != j &&
-                        (0, r.jsx)(c.D, {
+                        (0, r.jsx)(u.D, {
                             lineClamp: 4,
                             className: L.BN,
                             style: { color: n?.bannerTextColor ?? "white" },

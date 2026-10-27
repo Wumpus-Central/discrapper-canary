@@ -18,8 +18,8 @@ var i = n(477900),
     p = n(927578),
     T = n(682502),
     f = n(816571),
-    I = n(105292),
-    _ = n(17456);
+    _ = n(105292),
+    I = n(17456);
 async function N(e, t, n, i) {
     let s = (0, p.aE)(e, t);
     (await (0, c.Ey)(n),
@@ -34,21 +34,21 @@ async function N(e, t, n, i) {
 function C(e) {
     let { errorMsg: t } = e;
     return (0, i.jsxs)("div", {
-        className: _.rf,
+        className: I.rf,
         children: [
             null !== t &&
                 (0, i.jsx)("div", {
-                    className: _.z3,
+                    className: I.z3,
                     children: (0, i.jsx)(u.w, { type: "critical", message: t, role: "alert" }),
                 }),
-            (0, i.jsx)("div", { children: I.intl.string(I.t.DY2CXs) }),
+            (0, i.jsx)("div", { children: _.intl.string(_.t.DY2CXs) }),
         ],
     });
 }
 function y() {
     return (0, i.jsxs)("div", {
-        className: _.rf,
-        children: [(0, i.jsx)("div", { className: _.dk }), (0, i.jsx)("div", { children: I.intl.string(I.t.G27uHe) })],
+        className: I.rf,
+        children: [(0, i.jsx)("div", { className: I.dk }), (0, i.jsx)("div", { children: _.intl.string(_.t.G27uHe) })],
     });
 }
 function b(e) {
@@ -71,7 +71,7 @@ function v(e) {
     }, []);
     let d = (0, a.bG)([S.A], () => S.A.getPremiumTypeSubscription()),
         [c, T] = s.useState(1),
-        [_, C] = s.useState(!1),
+        [I, C] = s.useState(!1),
         [y, v] = s.useState(null),
         j = s.useCallback(async () => {
             if (null != d)
@@ -86,7 +86,7 @@ function v(e) {
                         T(2));
                 } catch (t) {
                     let e = t instanceof g.Ey ? t : new g.Ey(t, t.code);
-                    (v(I.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? I.t.dq4vq7 : I.t["5mlOCW"])),
+                    (v(_.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? _.t.dq4vq7 : _.t["5mlOCW"])),
                         C(!1));
                 }
         }, [d, t, u]);
@@ -99,9 +99,9 @@ function v(e) {
             title: (function () {
                 switch (c) {
                     case 1:
-                        return I.intl.string(I.t.l52ih2);
+                        return _.intl.string(_.t.l52ih2);
                     case 2:
-                        return I.intl.string(I.t.H9QUAB);
+                        return _.intl.string(_.t.H9QUAB);
                     default:
                         return "";
                 }
@@ -110,11 +110,11 @@ function v(e) {
                 switch (c) {
                     case 1:
                         return [
-                            { variant: "secondary", text: I.intl.string(I.t.oEAioF), disabled: _, onClick: l },
-                            { variant: "primary", text: I.intl.string(I.t.etZP4B), loading: _, onClick: j },
+                            { variant: "secondary", text: _.intl.string(_.t.oEAioF), disabled: I, onClick: l },
+                            { variant: "primary", text: _.intl.string(_.t.etZP4B), loading: I, onClick: j },
                         ];
                     case 2:
-                        return [{ variant: "primary", text: I.intl.string(I.t.BddRzS), onClick: l }];
+                        return [{ variant: "primary", text: _.intl.string(_.t.BddRzS), onClick: l }];
                     default:
                         return [];
                 }

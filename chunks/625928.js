@@ -90,12 +90,12 @@ function w(e) {
                 : j > 0
                   ? T.intl.formatToPlainString(T.t.qH8uFW, { count: j })
                   : T.intl.string(T.t.YSRIqa),
-        { analyticsLocations: M } = (0, f.Ay)(m.A.CHARACTER_COUNT),
-        { isVisible: L } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
-    if (!L) return null;
+        { analyticsLocations: L } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { isVisible: M } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
+    if (!M) return null;
     let P = j >= 0;
     return (0, l.jsx)(f.f5, {
-        value: M,
+        value: L,
         children: (0, l.jsxs)("div", {
             className: s()(E, O.Dq),
             children: [

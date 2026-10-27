@@ -136,8 +136,8 @@ let T = {
     R = c.X(_),
     O = c.X(k),
     w = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    M = new (o())(w),
-    L = new (o())(w);
+    L = new (o())(w),
+    M = new (o())(w);
 function P(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
@@ -597,7 +597,7 @@ let q = {
                             "" !== o &&
                                 (function (e, t, n) {
                                     let l = [],
-                                        i = n ? L : M,
+                                        i = n ? M : L,
                                         r = i.get(e);
                                     if (null != r) return r;
                                     let s =

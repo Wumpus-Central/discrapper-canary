@@ -5,8 +5,8 @@ var r = n(477900),
     a = n.n(s),
     o = n(3666),
     i = n(62010),
-    u = n(939249),
-    c = n(834730),
+    c = n(939249),
+    u = n(834730),
     d = n(477782),
     p = n(847374),
     m = n(265872),
@@ -37,7 +37,7 @@ function y(e) {
         p = n.icon;
     return (0, r.jsx)("li", {
         className: f.I,
-        children: (0, r.jsxs)(u.D, {
+        children: (0, r.jsxs)(c.D, {
             tag: "a",
             role: "link",
             href: n.route,
@@ -46,7 +46,7 @@ function y(e) {
             className: a()(f.ie, f.LA, { [f.wH]: o, [f.C3]: null != n.badge }),
             children: [
                 null != p && (0, r.jsx)(p, { size: "sm", color: "currentColor" }),
-                (0, r.jsx)(c.E, { variant: "text-md/medium", color: "none", children: n.text }),
+                (0, r.jsx)(u.E, { variant: "text-md/medium", color: "none", children: n.text }),
                 null == (t = n.badge)
                     ? null
                     : "object" == typeof t && "type" in t
@@ -98,7 +98,7 @@ function _(e) {
             },
             [L, j, N],
         ),
-        R = (0, r.jsx)(c.E, { variant: "text-md/medium", color: "none", children: n.text }),
+        R = (0, r.jsx)(u.E, { variant: "text-md/medium", color: "none", children: n.text }),
         P = (0, r.jsx)(p.a, { size: "sm", color: "currentColor", className: a()(f.OW, { [f.g3]: L }) });
     return (0, r.jsx)("li", {
         className: f.I,
@@ -151,7 +151,7 @@ function _(e) {
                           ref: y,
                           className: a()(f.ie, f.iL, { [f.wH]: x }),
                           children: [
-                              (0, r.jsx)(u.D, {
+                              (0, r.jsx)(c.D, {
                                   tag: "a",
                                   role: "link",
                                   href: o,
@@ -163,7 +163,7 @@ function _(e) {
                                   className: a()(f.LA, f.tH),
                                   children: R,
                               }),
-                              (0, r.jsx)(u.D, {
+                              (0, r.jsx)(c.D, {
                                   ...e,
                                   innerRef: _,
                                   role: "button",
@@ -179,7 +179,7 @@ function _(e) {
                               }),
                           ],
                       })
-                    : (0, r.jsxs)(u.D, {
+                    : (0, r.jsxs)(c.D, {
                           ...e,
                           innerRef: y,
                           role: "button",
@@ -220,7 +220,7 @@ function k(e) {
     }
 }
 function S(e) {
-    let { options: t, selectedKey: n, overflowLabel: s, overflowExpandLabel: i, className: u, ...c } = e,
+    let { options: t, selectedKey: n, overflowLabel: s, overflowExpandLabel: i, className: c, ...u } = e,
         d = l.useId(),
         p = `collectibles-shop-navigation-menu-${d}`,
         {
@@ -233,8 +233,8 @@ function S(e) {
             let { ref: s, width: a } = (0, I.Ay)(),
                 {
                     lastVisibleIndex: i,
-                    onItemLayout: u,
-                    overflowItemsRef: c,
+                    onItemLayout: c,
+                    overflowItemsRef: u,
                 } = (0, o.Wv)({ items: e, itemGapPx: 32, maxLines: 1, containerWidth: a ?? 0 });
             return {
                 containerRef: s,
@@ -244,13 +244,13 @@ function S(e) {
                     let l = { type: "menu", key: t, text: n, expandLabel: r, options: e.slice(i + 1) };
                     return [...e.slice(0, i + 1), l];
                 }, [e, i, t, n, r]),
-                onItemLayout: u,
-                overflowItemsRef: c,
+                onItemLayout: c,
+                overflowItemsRef: u,
             };
         })(t, `${p}-more`, s, i);
     return (0, r.jsxs)("nav", {
-        "aria-label": c["aria-label"],
-        className: a()(f.C$, u),
+        "aria-label": u["aria-label"],
+        className: a()(f.C$, c),
         ref: m,
         children: [
             (0, r.jsx)(b, {
@@ -272,7 +272,7 @@ function S(e) {
 }
 function b(e) {
     let { options: t, navId: n, overflowLabel: l, overflowExpandLabel: s, onItemLayout: a, overflowItemsRef: i } = e,
-        u = `${n}-measure`;
+        c = `${n}-measure`;
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
         className: f.Zb,
@@ -280,14 +280,14 @@ function b(e) {
             t.map((e, t) =>
                 (0, r.jsx)(
                     o.Ae,
-                    { index: t, onItemLayout: a, children: (0, r.jsx)(x, { navId: u, option: e }) },
+                    { index: t, onItemLayout: a, children: (0, r.jsx)(x, { navId: c, option: e }) },
                     e.key,
                 ),
             ),
             (0, r.jsx)("div", {
                 ref: i,
                 children: (0, r.jsx)(x, {
-                    navId: u,
+                    navId: c,
                     option: { type: "menu", key: "more-measure", text: l, expandLabel: s, options: [] },
                 }),
             }),

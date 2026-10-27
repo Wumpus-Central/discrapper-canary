@@ -30,8 +30,8 @@ var l = n(477900),
     R = n(31498),
     O = n(887129),
     w = n(741918),
-    M = n(267102),
-    L = n(652215),
+    L = n(267102),
+    M = n(652215),
     P = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
@@ -54,7 +54,7 @@ function W(e) {
                     [j.A, _.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(L.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],
@@ -72,7 +72,7 @@ function W(e) {
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: r } = e,
-                        { renderWindow: s } = i.useContext(M.Ay);
+                        { renderWindow: s } = i.useContext(L.Ay);
                     function a(e, t, i) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,

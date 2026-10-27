@@ -28,8 +28,8 @@ var i,
     D = n(360906),
     v = n(756042),
     b = n(379848),
-    M = n(832248),
-    P = n(201805),
+    P = n(832248),
+    M = n(201805),
     U = n(253932),
     w = n(843010),
     G = n(461213),
@@ -310,11 +310,11 @@ function eo(e) {
         } = e,
         o = (function (e) {
             let { isForceShowSharingPopout: t } = e,
-                { isQuestBarEmpty: n, hasLoadedQuestBar: i } = (0, P.c9)(),
+                { isQuestBarEmpty: n, hasLoadedQuestBar: i } = (0, M.c9)(),
                 r = U.tz.useSetting(),
                 a = (0, w.G)(),
                 s = (0, _.bG)([G.A], () => G.A.getStatus()),
-                { isOpen: l } = (0, M.A)();
+                { isOpen: l } = (0, P.A)();
             if (((n && i) || t) && !a && !l && !__OVERLAY__) {
                 if (!r && s === F.clD.INVISIBLE) return t ? ea.ActivityAndStatus : ea.ActivityAndStatusNux;
                 if (!r) return t ? ea.Activity : ea.ActivityNux;
@@ -366,8 +366,8 @@ var ed = n(688810),
     eD = n(118328),
     ev = n(268378),
     eb = n(253146);
-let eM = 2 * eR.A.Millis.WEEK;
-function eP(e) {
+let eP = 2 * eR.A.Millis.WEEK;
+function eM(e) {
     let { targetElementRef: t, markAsDismissed: n } = e,
         i = (0, _.bG)([eO.A], () => eO.A.getChannelId());
     return (0, r.jsx)(
@@ -535,8 +535,8 @@ var tr = n(976860),
     tD = n(646865),
     tv = n(988534),
     tb = n(55730),
-    tM = n(521588),
-    tP = n(702841),
+    tP = n(521588),
+    tM = n(702841),
     tU = n(176781),
     tw = n(442433),
     tG = n(42473),
@@ -553,7 +553,7 @@ let tV = function (e) {
     let { isActivity: t = !1 } = e,
         { parentAnalyticsLocation: n } = (0, ed.Ay)(),
         i = (0, eL.E)(),
-        a = (0, tP.bG)([tk.Ay], () => tk.Ay.getIsAtMaxSaveClipOperations()),
+        a = (0, tM.bG)([tk.Ay], () => tk.Ay.getIsAtMaxSaveClipOperations()),
         { enableGamePanelEntrypoint: s } = tx.A.useConfig({ location: "ClipsPanelButton" }),
         { tooltip: l, clipsSourceAttached: o } = (0, tF.A)({ isActivity: t });
     return s && i
@@ -667,15 +667,15 @@ let t9 = a.memo(function (e) {
         } = e,
         { parentAnalyticsLocation: D, analyticsLocations: v } = (0, ed.Ay)(),
         b = (0, t1.A)(m?.id),
-        M = t8(m, p, f),
-        { enabled: P } = t$.useConfig({ location: "activity-panel" }),
+        P = t8(m, p, f),
+        { enabled: M } = t$.useConfig({ location: "activity-panel" }),
         U = (0, tY.H)({ location: "activity-panel" }),
         w = (0, tz.Bp)("activity-panel"),
         G = (0, tW.C$)(l ?? void 0, "activity-panel"),
         k = (0, _.bG)([t3.A], () => t3.A.hasConsented(F.YAq.PERSONALIZATION)),
         B = (0, tz.TF)(A?.id, { shouldFetch: w || G }),
         V = U && k && (0, tz.k0)(A?.id),
-        H = P && k && B,
+        H = M && k && B,
         j = H && w,
         W = H && G,
         Y = a.useCallback(() => {
@@ -848,7 +848,7 @@ let t9 = a.memo(function (e) {
             );
         })(),
         ec =
-            M && null == f
+            P && null == f
                 ? (0, r.jsx)(tG.A, { ref: S, tooltipText: Z.intl.string(Z.t["hC/Zey"]), onClick: Y, icon: tC.D })
                 : null,
         eu =
@@ -944,7 +944,7 @@ function nt(e) {
         u.current || ((u.current = !0), i());
     }, [i]);
     let _ = (0, ty.A)(),
-        { isQuestBarEmpty: E, hasLoadedQuestBar: A } = (0, P.c9)(),
+        { isQuestBarEmpty: E, hasLoadedQuestBar: A } = (0, M.c9)(),
         h = d && null != l && null != s && !_ && E && A,
         [f, I] = (0, eS.kn)(h && null != l ? [l] : [], { bypassAutoDismiss: !0 }),
         [p, T] = (0, eS.kn)(d ? [o] : [], { bypassAutoDismiss: !0 }),
@@ -958,7 +958,7 @@ function nt(e) {
                 children: [
                     (0, r.jsx)("div", { className: t7.uD, children: (0, r.jsx)("div", { className: t7.Z9 }) }),
                     (0, r.jsx)(tG.A, { ref: c, tooltipText: t, onClick: m, icon: tR.GameControllerIcon }),
-                    p === o && (0, r.jsx)(tM.a, { top: 2, right: 2, alert: !0 }),
+                    p === o && (0, r.jsx)(tP.a, { top: 2, right: 2, alert: !0 }),
                 ],
             }),
             null != f && null != s && s({ targetElementRef: c, markAsDismissed: I, markBadgeAsDismissed: T }),
@@ -1225,8 +1225,8 @@ let nD = {
 };
 var nv = n(534952),
     nb = n(731854),
-    nM = n(559626),
-    nP = n(821095),
+    nP = n(559626),
+    nM = n(821095),
     nU = n(268920),
     nw = n(633217);
 function nG(e) {
@@ -1265,7 +1265,7 @@ function nG(e) {
         return null;
     let g = Z.intl.formatToPlainString(Z.t.hUbQT2, { gameName: p.name }),
         S = Z.intl.string(Z.t.jynBQ5);
-    s && (S = Z.intl.string(nM.default["2cOIOr"]));
+    s && (S = Z.intl.string(nP.default["2cOIOr"]));
     let N = [
         {
             text: S,
@@ -1277,7 +1277,7 @@ function nG(e) {
     return (
         s &&
             ((t = "beta"),
-            (g = Z.intl.formatToPlainString(nM.default.dPuaZE, { applicationName: p.name })),
+            (g = Z.intl.formatToPlainString(nP.default.dPuaZE, { applicationName: p.name })),
             (n = { text: Z.intl.string(Z.t.hvVgAZ), link: T?.migrationData?.helpCenterLink, external: !0 })),
         (0, r.jsx)(h.A, {
             size: s ? "lg" : void 0,
@@ -1315,8 +1315,8 @@ function nx(e) {
         ];
     return (
         n &&
-            ((s = Z.intl.string(nM.default.ublzTG)),
-            (l = Z.intl.string(nM.default.JgM2xu)),
+            ((s = Z.intl.string(nP.default.ublzTG)),
+            (l = Z.intl.string(nP.default.JgM2xu)),
             (t = { type: "video", src: nw.A, fallbackImageSrc: nU.A, aspectRatio: "2/1", loop: !0 })),
         (0, r.jsx)(h.A, {
             graphic: t,
@@ -1472,7 +1472,7 @@ function nF(e) {
                 })
             );
         case 4:
-            return (0, r.jsx)(eP, { targetElementRef: A, markAsDismissed: n });
+            return (0, r.jsx)(eM, { targetElementRef: A, markAsDismissed: n });
         default:
             return null;
     }
@@ -1513,26 +1513,26 @@ function nV(e) {
         : null != a && (t = F.BVt.CHANNEL(F.ME, a.id));
     let I = (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(eZ.A, { className: nP.n8, game: n, size: eZ.M.SMALL, ref: u }),
+            (0, r.jsx)(eZ.A, { className: nM.n8, game: n, size: eZ.M.SMALL, ref: u }),
             (0, r.jsx)(eo, {
                 popoutTargetRef: _,
                 isForceShowSharingPopout: o,
                 setIsForceShowSharingPopout: c,
                 children: (0, r.jsxs)("div", {
-                    className: nP.pq,
+                    className: nM.pq,
                     children: [
                         (0, r.jsx)(e6.A, {
                             href: t,
                             onClick: function () {
                                 (f(), E && p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
                             },
-                            children: (0, r.jsx)(tT.A, { className: nP._W, children: n.name }),
+                            children: (0, r.jsx)(tT.A, { className: nM._W, children: n.name }),
                         }),
                         null != a && (0, ta.pQ)(a.type)
                             ? (0, r.jsx)(e6.A, {
                                   href: t,
                                   onClick: f,
-                                  children: (0, r.jsx)(tp.A, { className: nP.Ix, children: h }),
+                                  children: (0, r.jsx)(tp.A, { className: nM.Ix, children: h }),
                               })
                             : (0, r.jsx)(nB, { timestamps: A }),
                     ],
@@ -1540,16 +1540,16 @@ function nV(e) {
             }),
         ],
     });
-    return (0, r.jsx)("div", { className: nP.cm, children: I });
+    return (0, r.jsx)("div", { className: nM.cm, children: I });
 }
 function nH(e) {
     let { frame: t, application: n, accountLinkUpsellTargetRef: i, isActivityPopoutOpen: s } = e,
         l = a.useMemo(() => ({ start: t.data.connectedSince }), [t.data.connectedSince]),
         o = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(eZ.A, { className: nP.n8, game: n, size: eZ.M.SMALL, ref: i }),
+                (0, r.jsx)(eZ.A, { className: nM.n8, game: n, size: eZ.M.SMALL, ref: i }),
                 (0, r.jsxs)("div", {
-                    className: nP.pq,
+                    className: nM.pq,
                     children: [
                         (0, r.jsx)(f.D, {
                             onClick: function () {
@@ -1564,34 +1564,34 @@ function nH(e) {
                             onMouseDown: (e) => {
                                 e.stopPropagation();
                             },
-                            className: nP.rB,
-                            children: (0, r.jsx)(tT.A, { className: nP._W, children: n.name }),
+                            className: nM.rB,
+                            children: (0, r.jsx)(tT.A, { className: nM._W, children: n.name }),
                         }),
                         (0, r.jsx)(nB, { timestamps: l }),
                     ],
                 }),
             ],
         });
-    return (0, r.jsx)("div", { className: nP.cm, children: o });
+    return (0, r.jsx)("div", { className: nM.cm, children: o });
 }
 function nj(e) {
     let { streamMetadata: t, accountLinkUpsellTargetRef: n, streamQualityIndicator: i } = e,
         { title: a, sanitizedTitle: s } = (0, e2.A)(t);
     return (0, r.jsxs)("div", {
-        className: nP.cm,
+        className: nM.cm,
         ref: n,
         children: [
             (0, r.jsx)(e3.A, { title: s, icon: t?.sourceIcon }),
             (0, r.jsxs)("div", {
-                className: nP.pq,
+                className: nM.pq,
                 children: [
                     (0, r.jsx)(tT.A, { children: a }),
                     null != i &&
                         (0, r.jsxs)("div", {
-                            className: nP.qi,
+                            className: nM.qi,
                             children: [
                                 (0, r.jsx)(I.t, { size: "xxs", color: eG.k0.PREMIUM_TIER_2 }),
-                                (0, r.jsx)(ti, { className: nP.s, variant: "text-xxs/semibold", children: i }),
+                                (0, r.jsx)(ti, { className: nM.s, variant: "text-xxs/semibold", children: i }),
                             ],
                         }),
                 ],
@@ -1717,7 +1717,7 @@ let nW = (0, N.A)(function (e) {
                     canShowCurrentRunningGamePanel: u,
                     isStreamingCurrentRunningGame: _,
                 } = e,
-                { isQuestBarEmpty: A, hasLoadedQuestBar: h } = (0, P.c9)(),
+                { isQuestBarEmpty: A, hasLoadedQuestBar: h } = (0, M.c9)(),
                 f = !h || !A,
                 I = !f && !o && null == r && l && null != t,
                 { shouldShow: p, markAsDismissed: T } = (0, eQ.D3)({
@@ -1743,11 +1743,11 @@ let nW = (0, N.A)(function (e) {
                     let { disabled: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         t = (0, eD.A)("AutoclippingAccountPanelCoachmark"),
                         n = (0, eL.E)(),
-                        i = (0, M.A)((e) => e.isOpen),
+                        i = (0, P.A)((e) => e.isOpen),
                         r = (0, w.G)(),
                         [a, s] = (0, eS.Wl)(
                             e || !t || n || i || r ? null : E.M.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
-                            { cooldownDurationMs: eM },
+                            { cooldownDurationMs: eP },
                             el.m.ACCOUNT_NAME_ZONE,
                             !0,
                         );
@@ -1844,10 +1844,10 @@ let nW = (0, N.A)(function (e) {
     return null == ey
         ? null
         : (0, r.jsx)("div", {
-              className: l()(nP.nd, i),
+              className: l()(nM.nd, i),
               ref: s,
               children: (0, r.jsxs)("div", {
-                  className: nP.rf,
+                  className: nM.rf,
                   children: [
                       ey,
                       (0, r.jsx)(t9, {

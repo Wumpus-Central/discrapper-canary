@@ -1,4 +1,4 @@
-n.d(t, { Az: () => I, DD: () => g, aG: () => p, ik: () => S, it: () => E, y8: () => m });
+n.d(t, { Az: () => S, DD: () => g, aG: () => m, ik: () => C, it: () => E, y8: () => I });
 var i = n(73153),
     l = n(360906),
     r = n(37595),
@@ -22,21 +22,21 @@ function f(e) {
 function g(e, t) {
     i.h.dispatch({ type: "CONJURE_SNAPSHOT_FAILURE_SET", applicationId: e, reason: t });
 }
-async function C() {
+async function A() {
     let e = performance.now(),
-        t = await I();
+        t = await S();
     if (a && e > o && t?.encodeFailed === !0) {
         let e = d;
-        (S(), null != e && g(e.appId, "encode_failed"));
+        (C(), null != e && g(e.appId, "encode_failed"));
     }
 }
-function A() {
+function p() {
     l.Ay.getMediaEngine().setSnapshotSource(h());
 }
-function p() {
+function m() {
     return null != h();
 }
-function m() {
+function I() {
     return l.Ay.getMediaEngine().supports(s.O5.CONJURE_SNAPSHOT);
 }
 function E(e, t, n) {
@@ -45,7 +45,7 @@ function E(e, t, n) {
         if ("string" != typeof n || "" === n.trim())
             throw Error(`startConjureSnapshots: app.${t} must be a non-empty string`);
     }
-    if (!m()) return !1;
+    if (!I()) return !1;
     if (
         (l.Ay.getMediaEngine().startSnapshotCapture(
             (function (e) {
@@ -56,19 +56,19 @@ function E(e, t, n) {
         ),
         !a)
     ) {
-        for (let e of ((a = !0), (o = performance.now()), r.g)) e.addChangeListener(A);
-        (A(), (u = setInterval(C, 2e3)));
+        for (let e of ((a = !0), (o = performance.now()), r.g)) e.addChangeListener(p);
+        (p(), (u = setInterval(A, 2e3)));
     }
     return ((d = e), f(e), !0);
 }
-function I() {
+function S() {
     return l.Ay.getMediaEngine()
         .getSnapshotStats()
         .catch(() => null);
 }
-function S() {
+function C() {
     if (!a) return;
-    for (let e of ((a = !1), null != u && clearInterval(u), (u = null), r.g)) e.removeChangeListener(A);
+    for (let e of ((a = !1), null != u && clearInterval(u), (u = null), r.g)) e.removeChangeListener(p);
     let e = l.Ay.getMediaEngine();
     (e.setSnapshotSource(null), e.stopSnapshotCapture(), (d = null), f(null));
 }

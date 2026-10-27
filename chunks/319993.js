@@ -5,8 +5,8 @@ var i,
     a = n(503698),
     r = n.n(a),
     o = n(17928),
-    d = n(939249),
-    c = n(834730),
+    c = n(939249),
+    d = n(834730),
     u = n(893007),
     m = n(62010),
     x = n(403581),
@@ -35,12 +35,12 @@ n(801541);
 var G = n(889137);
 n(980504);
 var M = n(105292),
-    D =
+    w =
         (((i = {})[(i.JOIN_GUILD = 0)] = "JOIN_GUILD"),
         (i[(i.GET_NITRO = 1)] = "GET_NITRO"),
         (i[(i.NONE = 2)] = "NONE"),
         i),
-    w = n(202541),
+    D = n(202541),
     U = n(652215),
     z = n(653131);
 function J(e) {
@@ -51,18 +51,18 @@ function J(e) {
                     (await O.A.joinGuild(t), O.A.transitionToGuildSync(t));
                 } catch {}
         }, [n, t]);
-    return i === D.GET_NITRO
+    return i === w.GET_NITRO
         ? (0, s.jsx)(L.A, {
               fullWidth: !0,
               showGradient: !0,
               premiumModalAnalyticsLocation: { section: U.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
-              subscriptionTier: w.pe.TIER_2,
+              subscriptionTier: D.pe.TIER_2,
               size: C.$n.Sizes.SMALL,
               color: C.$n.Colors.CUSTOM,
               onClick: n,
               textOptions: { textOverride: M.intl.string(M.t.pj0XBN) },
           })
-        : i === D.JOIN_GUILD
+        : i === w.JOIN_GUILD
           ? (0, s.jsx)(S.$, {
                 variant: "primary",
                 size: "sm",
@@ -77,7 +77,7 @@ function V(e) {
         n,
         i,
         a,
-        { sound: r, channel: d, closePopout: u, refreshPosition: x, renderSoundButton: h } = e,
+        { sound: r, channel: c, closePopout: u, refreshPosition: x, renderSoundButton: h } = e,
         j = "0" === r.guildId,
         g = (0, o.bG)([R.A], () => R.A.getGuild(r.guildId)),
         p = !j && null != g,
@@ -100,7 +100,7 @@ function V(e) {
             ((t = "0" === r.guildId),
             (n = (0, o.bG)([b.default], () => v.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser()))),
             (i = (0, A.t)({ location: "useSoundmojiGuildInfoData" })),
-            (a = r.guildId !== d?.guild_id),
+            (a = r.guildId !== c?.guild_id),
             {
                 buttonType: l.useMemo(() => (t || !i ? 2 : n ? (p || null == N ? 2 : 0) : 1), [t, n, i, p, N]),
                 description: l.useMemo(() => {
@@ -143,7 +143,7 @@ function V(e) {
                         .exhaustive();
                 }, [t, N, n, p, a, i]),
             }),
-        w = O === D.JOIN_GUILD,
+        D = O === w.JOIN_GUILD,
         U = !j && C,
         V = l.useMemo(
             () => (p ? y.GO.createFromGuildRecord(g) : null != N ? y.GO.createFromDiscoverableGuild(N) : void 0),
@@ -166,14 +166,14 @@ function V(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, s.jsx)(c.E, { variant: "text-sm/normal", children: L }),
+                                  (0, s.jsx)(d.E, { variant: "text-sm/normal", children: L }),
                               ],
                           }),
                           null != V &&
                               (0, s.jsxs)("div", {
                                   className: z.Qe,
                                   children: [
-                                      (0, s.jsx)(c.E, {
+                                      (0, s.jsx)(d.E, {
                                           variant: "eyebrow",
                                           color: "text-muted",
                                           className: z.x$,
@@ -184,7 +184,7 @@ function V(e) {
                                           children: (0, s.jsx)(T.G7, {
                                               expressionSourceGuild: V,
                                               hasJoinedExpressionSourceGuild: p,
-                                              isDisplayingJoinGuildButtonInPopout: w,
+                                              isDisplayingJoinGuildButtonInPopout: D,
                                               closePopout: u,
                                           }),
                                       }),
@@ -212,11 +212,11 @@ function K() {
             }, []),
         };
     })();
-    return (0, s.jsxs)(d.D, {
+    return (0, s.jsxs)(c.D, {
         className: z.xJ,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, s.jsx)(c.E, { variant: "text-sm/normal", children: M.intl.string(M.t["2JbvKw"]) }),
+            (0, s.jsx)(d.E, { variant: "text-sm/normal", children: M.intl.string(M.t["2JbvKw"]) }),
             (0, s.jsx)("div", {
                 className: z.aw,
                 children: (0, s.jsx)(u.A, {
@@ -248,7 +248,7 @@ function F(e) {
                       className: z.Pc,
                       children: [
                           (0, s.jsx)(x.t, { size: "xxs", color: "white", className: z.aJ }),
-                          (0, s.jsx)(c.E, {
+                          (0, s.jsx)(d.E, {
                               variant: "text-xs/medium",
                               color: "text-overlay-light",
                               className: z.sD,
@@ -273,12 +273,12 @@ function H(e) {
                         className: z.tn,
                         children: [
                             (0, s.jsx)(h.J, { size: "sm", className: z.nR }),
-                            (0, s.jsx)(c.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
+                            (0, s.jsx)(d.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
                         ],
                     }),
                     (0, s.jsx)("div", {
                         className: z.tn,
-                        children: (0, s.jsx)(c.E, { variant: "text-sm/normal", children: M.intl.string(M.t.D6eYmf) }),
+                        children: (0, s.jsx)(d.E, { variant: "text-sm/normal", children: M.intl.string(M.t.D6eYmf) }),
                     }),
                 ],
             }),
@@ -287,26 +287,26 @@ function H(e) {
 }
 function W(e) {
     let { renderPopout: t, position: n, tooltipText: i, children: a, setTooltipShowing: r, clickableClassName: o } = e,
-        [c, u] = l.useState(!1),
+        [d, u] = l.useState(!1),
         [m, x] = l.useState(String(Date.now())),
         h = l.useCallback(
             (e) => {
-                (e.stopPropagation(), u(!c));
+                (e.stopPropagation(), u(!d));
             },
-            [c],
+            [d],
         ),
         p = l.useCallback(() => {
             x(String(Date.now()));
         }, []),
         N = l.useRef(null);
     l.useEffect(() => {
-        (c ? N.current?.focus() : N.current?.blur(), r?.(c));
-    }, [c, r]);
-    let I = !c;
+        (d ? N.current?.focus() : N.current?.blur(), r?.(d));
+    }, [d, r]);
+    let I = !d;
     return (0, s.jsx)(j.Y, {
         targetElementRef: N,
         renderPopout: (e) =>
-            (0, s.jsx)(d.D, {
+            (0, s.jsx)(c.D, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
                 children: t({ ...e, refreshPosition: p }),
@@ -314,7 +314,7 @@ function W(e) {
         align: "center",
         nudgeAlignIntoViewport: !0,
         position: n,
-        shouldShow: c,
+        shouldShow: d,
         onRequestClose: () => u(!1),
         animationPosition: "bottom",
         positionKey: m,
@@ -330,7 +330,7 @@ function W(e) {
                 text: i,
                 position: "top",
                 shouldShow: I,
-                children: (0, s.jsx)(d.D, {
+                children: (0, s.jsx)(c.D, {
                     ...e,
                     innerRef: N,
                     "aria-label": i,

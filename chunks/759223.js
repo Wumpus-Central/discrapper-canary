@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     iE: "wrapper_d144f8",
     aC: "target_d144f8",
     NQ: "dragOver_d144f8",

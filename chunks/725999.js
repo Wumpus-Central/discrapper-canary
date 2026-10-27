@@ -57,14 +57,14 @@ var h = n(582128),
     D = n(731854);
 let v = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
     b = v && "setSinkId" in HTMLAudioElement.prototype;
-function M(e) {
+function P(e) {
     return { id: D.dx, type: e, index: 0, name: "Default" };
 }
-function P() {
+function M() {
     return {
-        [D.oh.AUDIO_INPUT]: [M(D.oh.AUDIO_INPUT)],
-        [D.oh.AUDIO_OUTPUT]: [M(D.oh.AUDIO_OUTPUT)],
-        [D.oh.VIDEO_INPUT]: [M(D.oh.VIDEO_INPUT)],
+        [D.oh.AUDIO_INPUT]: [P(D.oh.AUDIO_INPUT)],
+        [D.oh.AUDIO_OUTPUT]: [P(D.oh.AUDIO_OUTPUT)],
+        [D.oh.VIDEO_INPUT]: [P(D.oh.VIDEO_INPUT)],
     };
 }
 function U(e, t) {
@@ -76,14 +76,14 @@ function U(e, t) {
     };
 }
 async function w() {
-    if (!v) return P();
+    if (!v) return M();
     try {
         let e = await navigator.mediaDevices.enumerateDevices(),
             { [D.oh.AUDIO_INPUT]: t = [], [D.oh.AUDIO_OUTPUT]: n = [], [D.oh.VIDEO_INPUT]: i = [] } = y()(e, "kind"),
             [r, a, s] = [t, n, i].map((e) => e.map(U));
-        return { [D.oh.AUDIO_INPUT]: r, [D.oh.AUDIO_OUTPUT]: b ? a : [M(D.oh.AUDIO_OUTPUT)], [D.oh.VIDEO_INPUT]: s };
+        return { [D.oh.AUDIO_INPUT]: r, [D.oh.AUDIO_OUTPUT]: b ? a : [P(D.oh.AUDIO_OUTPUT)], [D.oh.VIDEO_INPUT]: s };
     } catch {
-        return P();
+        return M();
     }
 }
 async function G() {
@@ -1482,7 +1482,7 @@ function eb(e) {
         return { value: parseInt(t[0].split("/")[0].substr(9), 10), uri: t[1] };
     });
 }
-class eM extends R.EventEmitter {
+class eP extends R.EventEmitter {
     audioCodec = null;
     audioPayloadType = null;
     videoCodec = null;
@@ -1691,7 +1691,7 @@ class eM extends R.EventEmitter {
         return (this.emit(e, l), Promise.resolve(l));
     }
 }
-let eP = new g.Vy("PeerConnection");
+let eM = new g.Vy("PeerConnection");
 class eU extends R.EventEmitter {
     bitrate;
     pc;
@@ -1709,13 +1709,13 @@ class eU extends R.EventEmitter {
             (t.onsignalingstatechange = this.handleSignalingStateChange),
             (t.onicegatheringstatechange = this.handleIceGatheringStateChange),
             (t.ontrack = this.handleTrack.bind(this)),
-            eP.info("Constructed RTCPeerConnection"));
+            eM.info("Constructed RTCPeerConnection"));
     }
     setBitRate(e) {
         this.bitrate !== e && ((this.bitrate = e), this.negotiationNeeded());
     }
     close() {
-        (eP.info("Close RTCPeerConnection"),
+        (eM.info("Close RTCPeerConnection"),
             "closed" !== this.signalingState && this.pc.close(),
             this.removeAllListeners());
     }
@@ -1762,7 +1762,7 @@ class eU extends R.EventEmitter {
                 return (this.emit("offer", t), t);
             })
             .catch((t) => {
-                if ("have-remote-offer" === e.signalingState) return (eP.error(t), this.createOffer());
+                if ("have-remote-offer" === e.signalingState) return (eM.error(t), this.createOffer());
                 throw t;
             });
     }
@@ -1778,7 +1778,7 @@ class eU extends R.EventEmitter {
             })
             .catch((t) => {
                 throw (
-                    eP.warn(
+                    eM.warn(
                         `PeerConnection#createAnswer: Attempted to set local description in state: ${e.signalingState}`,
                     ),
                     t
@@ -1821,7 +1821,7 @@ class eU extends R.EventEmitter {
     }
     handlePeerConnectionStateChange = () => {
         let e = this.peerConnectionState;
-        (eP.info("peerConnectionState =>", e),
+        (eM.info("peerConnectionState =>", e),
             "connecting" === e
                 ? "connected" === this.iceConnectionState
                     ? this.emit(e)
@@ -1830,15 +1830,15 @@ class eU extends R.EventEmitter {
     };
     handleIceConnectionStateChange = () => {
         let e = this.iceConnectionState;
-        (eP.info("iceConnectionState =>", e), "completed" === e && (e = "connected"), this.emit(e));
+        (eM.info("iceConnectionState =>", e), "completed" === e && (e = "connected"), this.emit(e));
     };
     handleSignalingStateChange = () => {
-        (eP.info(`signalingState => ${this.signalingState}, negotiation needed: ${this._negotiationNeeded.toString()}`),
+        (eM.info(`signalingState => ${this.signalingState}, negotiation needed: ${this._negotiationNeeded.toString()}`),
             "stable" === this.signalingState &&
                 ((this.negotiating = !1), this._negotiationNeeded && this.negotiationNeeded()));
     };
     handleIceGatheringStateChange = () => {
-        eP.info("iceGatheringState =>", this.iceGatheringState);
+        eM.info("iceGatheringState =>", this.iceGatheringState);
     };
     handleTrack = (e) => {
         this.emitTrack(e.streams[0].id, e.track);
@@ -2828,7 +2828,7 @@ class e2 extends eA {
     logger;
     constructor(e) {
         (super(e), (this.logger = new g.Vy(`Connection(${e.context})`)));
-        const t = new eM();
+        const t = new eP();
         (t.on("answer", (e) =>
             this.pc
                 .setRemoteDescription(e)

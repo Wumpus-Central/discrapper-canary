@@ -1,11 +1,11 @@
-n.d(t, { jP: () => i, gB: () => c, yB: () => d });
+n.d(t, { jP: () => i, gB: () => u, yB: () => d });
 var r = n(582128),
     l = n(17928),
     s = n(775602),
     a = n(652525);
 let o = "custom-cursors-styles",
     i = "custom-cursors",
-    u = `
+    c = `
   :root {
     --custom-cursor: url(https://cdn.discordapp.com/assets/content/a5a35112cf47613450476b245c5ded25838b11a09c30494ad05dd153120f0e33.svg) 0 0, auto;
     --custom-cursor-pointer: url(https://cdn.discordapp.com/assets/content/99d372f82ccdb87439920e8033c22642f7cd74ecb8520c0554003b4fb4c88e49.svg) 0 0, pointer;
@@ -61,14 +61,14 @@ let o = "custom-cursors-styles",
     cursor: var(--custom-cursor-pointer) !important;
   }
 `;
-function c() {
+function u() {
     let e = d("useCustomCursorsCSS");
     r.useLayoutEffect(() => {
         if (!e) return;
         let t = document.getElementById(o);
         return (
             null == t && (((t = document.createElement("style")).id = o), document.head.appendChild(t)),
-            (t.textContent = u),
+            (t.textContent = c),
             () => {
                 t.textContent = "";
             }

@@ -31,8 +31,8 @@ var R = n(265422),
     D = n(630685),
     v = n(272613),
     b = n(398884),
-    M = n(819638),
-    P = n(723702),
+    P = n(819638),
+    M = n(723702),
     U = n(763827),
     w = n(64460),
     G = n(92960),
@@ -44,7 +44,7 @@ var R = n(265422),
     H = n(675704),
     j = n(74477),
     W = n(680671);
-let Y = (0, P.isMac)() || (0, P.isMacWeb)();
+let Y = (0, M.isMac)() || (0, M.isMacWeb)();
 function K() {
     return (0, W.t)() && j.A.getConfig({ location: j.R }).enabled;
 }
@@ -262,8 +262,8 @@ let eS = {
         binds: ["mod+shift+n"],
         comboKeysBindGlobal: !0,
         action() {
-            if ((0, r.hasModalOpen)(M.fc))
-                v.A.updateCreateGuildModal({ slide: M.oS.JOIN_GUILD, location: "Keyboard Shortcut" });
+            if ((0, r.hasModalOpen)(P.fc))
+                v.A.updateCreateGuildModal({ slide: P.oS.JOIN_GUILD, location: "Keyboard Shortcut" });
             else {
                 let e = !(0, b.Sn)() && (0, D.i)("guild_list_add_server");
                 v.A.openCreateGuildModal({ location: "Keyboard Shortcut", joinFirst: e });
@@ -329,7 +329,7 @@ let eS = {
         binds: ["mod+alt+i"],
         comboKeysBindGlobal: !0,
         action(e) {
-            if ((0, P.isWeb)() && "discord.com" === location.host) return (e.preventDefault(), e.stopPropagation(), !1);
+            if ((0, M.isWeb)() && "discord.com" === location.host) return (e.preventDefault(), e.stopPropagation(), !1);
         },
     },
     [y.IWg.OPEN_CONTEXT_MENU]: {

@@ -61,13 +61,13 @@ function b(e) {
     let t = C--;
     return (O.set(t, { callback: e, overlayWindow: null, overlayFrameId: null, mainFrameId: h((e) => R(t, e)) }), t);
 }
-function M() {
+function P() {
     let e = s.A.getWindow(E.f);
     return null == e || "function" != typeof e.requestAnimationFrame ? null : e;
 }
-function P(e) {
+function M(e) {
     try {
-        let t = M();
+        let t = P();
         if (null == t) return ((m = "OverlayNotAvailable"), b(e));
         if (N && !l.A.isVisible()) return ((m = "MainWindowHidden"), v(e, t));
         if (!S) return ((m = "MainWindowFocused"), b(e));
@@ -84,7 +84,7 @@ function P(e) {
 }
 function U() {
     ((N = (0, a.ZT)("overlay_window_raf_manager")),
-        (window.requestAnimationFrame = P),
+        (window.requestAnimationFrame = M),
         (window.cancelAnimationFrame = y));
 }
 function w() {
@@ -96,8 +96,8 @@ function G() {
     });
 }
 function x() {
-    if (!N || l.A.isVisible() || window.requestAnimationFrame !== P) return;
-    let e = M();
+    if (!N || l.A.isVisible() || window.requestAnimationFrame !== M) return;
+    let e = P();
     null != e &&
         O.forEach((t, n) => {
             null != t.mainFrameId && (f(t.mainFrameId), D(n, t, e));

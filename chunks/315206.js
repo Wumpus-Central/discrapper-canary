@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Ay: () => M, bK: () => I, cK: () => S });
+n.d(t, { Ay: () => v, bK: () => S, cK: () => C });
 var l = n(31728),
     r = n(272355),
     s = n(869146),
@@ -11,48 +11,48 @@ var l = n(31728),
     h = n(967198),
     f = n(977997),
     g = n(646865),
-    C = n(933958),
-    A = n(969151),
-    p = n(594007),
-    m = n(227042),
+    A = n(933958),
+    p = n(969151),
+    m = n(594007),
+    I = n(227042),
     E = n(652215);
-function I(e) {
+function S(e) {
     let t = e ?? i;
     null != t && u.A.isOpen(t) && l.jD(t);
 }
-function S(e) {
+function C(e) {
     let t = e ?? i;
     null != t && u.A.isOpen(t) && l.WU(t);
 }
 function _() {
-    let e = C.Ay.getConnectedActivityLocation(),
-        t = null != e ? C.Ay.getSelfEmbeddedActivityForLocation(e) : null,
-        n = (0, A.H)(e),
+    let e = A.Ay.getConnectedActivityLocation(),
+        t = null != e ? A.Ay.getSelfEmbeddedActivityForLocation(e) : null,
+        n = (0, p.H)(e),
         r = a.A.getChannel(n);
     if (null == t || null == r || !0 === t.renderInFramePool) {
         let e;
         return void (null != (e = i) && u.A.isOpen(e) && (l.VN(e), (i = null)));
     }
     {
-        let e = (0, p.A)(t.location.id, t.applicationId);
+        let e = (0, m.A)(t.location.id, t.applicationId);
         return (
             !((0, g.f)() || u.A.isOpen(e)) &&
             (null != i && l.VN(i), l.ho(e, E.o1q.ACTIVITY, { channel: r }), void (i = e))
         );
     }
 }
-function N() {
-    return (0, m.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? I() : S();
+function T() {
+    return (0, I.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
 }
-class T extends r.A {
+class N extends r.A {
     _initialize() {
         (c.Ay.addChangeListener(_),
             h.A.addChangeListener(_),
             d.A.addChangeListener(_),
             f.A.addChangeListener(_),
             s.A.addChangeListener(_),
-            C.Ay.addChangeListener(_),
-            o.A.addChangeListener(N));
+            A.Ay.addChangeListener(_),
+            o.A.addChangeListener(T));
     }
     _terminate() {
         (c.Ay.removeChangeListener(_),
@@ -60,8 +60,8 @@ class T extends r.A {
             d.A.removeChangeListener(_),
             f.A.removeChangeListener(_),
             s.A.removeChangeListener(_),
-            C.Ay.removeChangeListener(_),
-            o.A.removeChangeListener(N));
+            A.Ay.removeChangeListener(_),
+            o.A.removeChangeListener(T));
     }
 }
-let M = new T();
+let v = new N();

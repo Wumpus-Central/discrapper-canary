@@ -6,8 +6,8 @@ var l = n(503698),
     a = n(435558),
     o = n(17928),
     i = n(775602),
-    u = n(577568);
-let c = 2 * Math.PI * 57,
+    c = n(577568);
+let u = 2 * Math.PI * 57,
     d = "var(--status-positive)",
     p = "var(--background-mod-strong)",
     m = -Math.PI / 2;
@@ -21,11 +21,11 @@ let h = function (e) {
     if (f > 1 && f <= 12) {
         let e, n, o;
         return (0, r.jsxs)("div", {
-            className: u.iE,
+            className: c.iE,
             children: [
                 E,
                 (0, r.jsx)("svg", {
-                    className: u.hN,
+                    className: c.hN,
                     viewBox: "0 0 120 120",
                     children: ((e = h / 60),
                     (n = (0, a.clamp)(Math.floor(t), 0, f)),
@@ -38,9 +38,9 @@ let h = function (e) {
                             "g",
                             {
                                 children: [
-                                    (0, r.jsx)("path", { className: u.u4, d: e.d, strokeWidth: 6, stroke: p }),
+                                    (0, r.jsx)("path", { className: c.u4, d: e.d, strokeWidth: 6, stroke: p }),
                                     (0, r.jsx)("path", {
-                                        className: s()(u.mX, { [u.Vr]: !C }),
+                                        className: s()(c.mX, { [c.Vr]: !C }),
                                         d: e.d,
                                         strokeWidth: 6,
                                         stroke: l,
@@ -57,24 +57,24 @@ let h = function (e) {
             ],
         });
     }
-    let v = c * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
+    let v = u * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
     return (0, r.jsxs)("div", {
-        className: u.iE,
+        className: c.iE,
         children: [
             E,
             (0, r.jsxs)("svg", {
-                className: u.hN,
+                className: c.hN,
                 viewBox: "0 0 120 120",
                 children: [
-                    (0, r.jsx)("circle", { className: u.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: p }),
+                    (0, r.jsx)("circle", { className: c.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: p }),
                     (0, r.jsx)("circle", {
-                        className: s()(u.M0, { [u.Vr]: !C }),
+                        className: s()(c.M0, { [c.Vr]: !C }),
                         cx: 60,
                         cy: 60,
                         r: 57,
                         strokeWidth: 6,
                         stroke: l,
-                        strokeDasharray: c,
+                        strokeDasharray: u,
                         strokeDashoffset: v,
                     }),
                 ],

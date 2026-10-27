@@ -28,15 +28,15 @@ async function O(e) {
     let D = s ?? (null != l ? { application_id: y, session_id: l } : null),
         v = null != D && (0, p.m)(y) ? await L(D, n) : void 0,
         b = (0, m.It)(_.A.getApplication(y)),
-        M = !b.has(i.U.MAIN) && b.has(i.U.APP_CHANNEL),
-        P = null != v ? await (0, T.A)(y, { preferredChannelId: v, fallback: M }) : null,
-        U = null == P ? await R(y, n, D?.session_id ?? l) : null;
+        P = !b.has(i.U.MAIN) && b.has(i.U.APP_CHANNEL),
+        M = null != v ? await (0, T.A)(y, { preferredChannelId: v, fallback: P }) : null,
+        U = null == M ? await R(y, n, D?.session_id ?? l) : null;
     function w() {
         return (r.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: y }), !1);
     }
-    if (null == P && null == U && !b.has(i.U.MAIN)) {
-        if (!M) return ((0, u.A)(C.intl.string(C.t["7XR9+7"])), w());
-        null == v && (P = await (0, T.A)(y));
+    if (null == M && null == U && !b.has(i.U.MAIN)) {
+        if (!P) return ((0, u.A)(C.intl.string(C.t["7XR9+7"])), w());
+        null == v && (M = await (0, T.A)(y));
     }
     if (null != U) {
         if (!(await (0, c.A)({ channelId: U }))) return w();
@@ -45,7 +45,7 @@ async function O(e) {
     let G = null;
     if (null != l)
         try {
-            ({ secret: G } = await a.A.getJoinSecret(n, l, y, null != f ? h : (U ?? P?.channelId ?? h), f));
+            ({ secret: G } = await a.A.getJoinSecret(n, l, y, null != f ? h : (U ?? M?.channelId ?? h), f));
         } catch (t) {
             let e = await (0, d.f)(new o.A(t), y);
             return ((0, u.A)(e.errorCode === S.t02.UNKNOWN_SESSION ? C.intl.string(C.t["7XR9+7"]) : e.message), w());
@@ -55,7 +55,7 @@ async function O(e) {
             ? { frameId: (0, g.VA)(y, (0, A.e)(U)), launched: Promise.resolve() }
             : (0, p.A)({
                   applicationId: y,
-                  channel: P,
+                  channel: M,
                   invite: null != h && null != f ? { channelId: h, messageId: f } : void 0,
               });
     if (null == G) return !0;

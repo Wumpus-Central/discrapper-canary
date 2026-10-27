@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => A });
 var i = n(607399),
     l = n(17928),
     r = n(73153),
@@ -50,7 +50,7 @@ class g extends l.Ay.Store {
         return null != t ? t[e] : null;
     }
 }
-let C = new g(r.h, {
+let A = new g(r.h, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         ((h = !0),

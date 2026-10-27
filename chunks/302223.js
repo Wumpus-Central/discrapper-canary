@@ -17,25 +17,25 @@ function u(e) {
             animate: h = !0,
             hideTooltip: f = !1,
             hideEmoji: g = !1,
-            children: C,
+            children: A,
         } = e,
-        A = (0, a.G)(t?.state);
+        p = (0, a.G)(t?.state);
     if (null == t) return null;
-    let { emoji: p } = t,
-        m = null != A && "" !== A ? A : d;
+    let { emoji: m } = t,
+        I = null != p && "" !== p ? p : d;
     return (0, i.jsxs)("div", {
         className: r()(o.__invalid_container, n),
         children: [
-            g || null == p
+            g || null == m
                 ? null
                 : (0, i.jsx)(s.A, {
-                      emoji: p,
-                      className: r()(o.Z, l, null != c ? { [c]: null == m || "" === m } : null),
+                      emoji: m,
+                      className: r()(o.Z, l, null != c ? { [c]: null == I || "" === I } : null),
                       animate: h,
                       hideTooltip: f,
                   }),
-            null != m && m.length > 0 ? (0, i.jsx)("span", { className: u, children: m }) : null,
-            C,
+            null != I && I.length > 0 ? (0, i.jsx)("span", { className: u, children: I }) : null,
+            A,
         ],
     });
 }

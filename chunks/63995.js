@@ -39,23 +39,23 @@ function D(e) {
         s()(E.A.getMutableGuildChannelsForGuild(e))
             .values()
             .forEach((e) => {
-                M(e) && O.set(e.id, e);
+                P(e) && O.set(e.id, e);
             }));
 }
 function v(e) {
     let t = L[e];
     if (null != t) return t;
     let n = E.A.getChannel(e);
-    return null != n && n.isGuildStageVoice() && (D(n.guild_id), M(n)) ? b(e) : null;
+    return null != n && n.isGuildStageVoice() && (D(n.guild_id), P(n)) ? b(e) : null;
 }
 function b(e) {
     let t = L[e];
     return (null == t && ((t = new g.Ay(e)), (L[e] = t), t.rebuild()), t);
 }
-function M(e) {
+function P(e) {
     return null != e && e.isGuildStageVoice() && m.Ay.countVoiceStatesForChannel(e.id) > 0;
 }
-function P(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y();
     return t.reduce((t, n) => {
         let i,
@@ -72,7 +72,7 @@ function P(e) {
 }
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y();
-    return P((t) => t.updateParticipant(e), t);
+    return M((t) => t.updateParticipant(e), t);
 }
 function w(e) {
     return null != e && (delete L[e], O.delete(e), !0);
@@ -180,11 +180,11 @@ let W = new j(d.h, {
                     e
                 );
             }, []);
-        return (P((e) => e.rebuild(), n), n.length > 0);
+        return (M((e) => e.rebuild(), n), n.length > 0);
     },
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t } = e;
-        if (R.has(t)) return P((e) => e.rebuild(), y(t));
+        if (R.has(t)) return M((e) => e.rebuild(), y(t));
     },
     RTC_CONNECTION_VIDEO: function (e) {
         let { channelId: t, guildId: n, userId: i } = e;

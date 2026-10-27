@@ -1,12 +1,12 @@
-a.d(l, { Ay: () => f, CB: () => u, c0: () => v });
-var t = a(477900);
+a.d(l, { Ay: () => g, CB: () => u, c0: () => v });
+var n = a(477900);
 a(582128);
-var n = a(17928),
+var t = a(17928),
     i = a(231723),
     s = a(192308);
 if (221552 == a.j) var r = a(477782);
-if (221552 == a.j) var c = a(173936);
-var d = a(317525),
+if (221552 == a.j) var d = a(173936);
+var c = a(317525),
     o = a(370480),
     h = a(105292);
 let u = "guild-connection-roles";
@@ -20,7 +20,7 @@ function v(e) {
                 a.e("150200"),
                 a.e("292837"),
             ]).then(a.bind(a, 480900));
-            return (a) => (0, t.jsx)(l, { ...a, guildId: e });
+            return (a) => (0, n.jsx)(l, { ...a, guildId: e });
         },
         {
             modalKey: u,
@@ -31,13 +31,13 @@ function v(e) {
         },
     );
 }
-function f(e) {
-    return (0, n.bG)([d.A], () => (0, o.N8)(d.A.getSortedRoles(e.id)), [e])
-        ? (0, t.jsx)(r.Dr, {
+function g(e) {
+    return (0, t.bG)([c.A], () => (0, o.N8)(c.A.getSortedRoles(e.id)), [e])
+        ? (0, n.jsx)(r.Dr, {
               id: "guild-connection-roles",
               label: h.intl.string(h.t.ghtnss),
-              icon: c.LinkIcon,
-              leadingAccessory: { type: "icon", icon: c.LinkIcon },
+              icon: d.LinkIcon,
+              leadingAccessory: { type: "icon", icon: d.LinkIcon },
               action: () => v(e.id),
           })
         : null;

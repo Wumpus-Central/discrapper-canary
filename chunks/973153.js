@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => m });
 var i = n(17928),
     l = n(73153),
     r = n(640631),
@@ -61,8 +61,8 @@ class f {
     }
 }
 let g = -1 / 0,
-    C = new s.A("MessagePreviewStore");
-class A extends i.Ay.Store {
+    A = new s.A("MessagePreviewStore");
+class p extends i.Ay.Store {
     initialize() {
         this.waitFor(a.A, o.A);
     }
@@ -149,12 +149,12 @@ class A extends i.Ay.Store {
         null != t && ((0, r.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, g));
     }
     handleMessagePreviewsLoaded(e) {
-        C.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
+        A.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
         let t = this.data(e.guildId);
         for (let n of e.messages) t.isLatest(n.channel_id, this.generation) || t.put(n.channel_id, n, this.generation);
     }
     handleMessagePreviewsLocallyLoaded(e) {
-        C.verbose(`adding local previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
+        A.verbose(`adding local previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
         let t = this.data(e.guildId);
         for (let [n, i] of e.messages) t.has(n) || t.put(n, i, g);
         t.localNeeded = !1;
@@ -163,4 +163,4 @@ class A extends i.Ay.Store {
         this.guilds.clear();
     }
 }
-let p = new A();
+let m = new p();

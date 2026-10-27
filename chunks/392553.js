@@ -33,8 +33,8 @@ var k = n(826745),
     R = n(442433),
     O = n(721768),
     w = n(555424),
-    M = n(723702),
-    L = n(677134),
+    L = n(723702),
+    M = n(677134),
     P = n(652215),
     D = n(650583);
 let U = /(\t|\s)/;
@@ -235,12 +235,12 @@ class V extends i.PureComponent {
         this.props.maybeShowAutocomplete();
     };
     handleContextMenu = (e) => {
-        M.isPlatformEmbedded &&
+        L.isPlatformEmbedded &&
             (0, R.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([n.e("230803"), n.e("342312")]).then(n.bind(n, 216603));
-                    return (t) => (0, l.jsx)(e, { ...t, text: (0, L.u)() });
+                    return (t) => (0, l.jsx)(e, { ...t, text: (0, M.u)() });
                 },
                 { align: "bottom", enableSpellCheck: !0 },
             );
@@ -417,8 +417,8 @@ function eS(e) {
             onFocus: k,
             onBlur: R,
             onKeyDown: O,
-            onKeyUp: M,
-            onTab: L,
+            onKeyUp: L,
+            onTab: M,
             onEnter: U,
             onSpace: V,
             onSubmit: X,
@@ -441,8 +441,8 @@ function eS(e) {
             "aria-labelledby": eO,
             "aria-autocomplete": ew,
         } = d,
-        eM = i.useRef(null),
         eL = i.useRef(null),
+        eM = i.useRef(null),
         eP = i.useRef(!0),
         eD = i.useRef(!0),
         eU = A || b,
@@ -708,15 +708,15 @@ function eS(e) {
             let e = n.current;
             if (null == e) return;
             let l = e.offsetHeight;
-            t.current !== l && (null != eM.current && (eM.current.style.height = `${l}px`), (t.current = l), _?.(l));
-        }, [eM, _])),
+            t.current !== l && (null != eL.current && (eL.current.style.height = `${l}px`), (t.current = l), _?.(l));
+        }, [eL, _])),
         (0, es.g)(n, a, [a, eB, _], eo),
         i.useLayoutEffect(() => {
             let e = Y.rL.findDocumentOrShadowRoot(eB).defaultView;
             if (e?.ResizeObserver == null) return;
             let n = eu(eB);
             null != n && ((t.current = n.offsetHeight), _?.(t.current));
-        }, [eM, eB, _]));
+        }, [eL, eB, _]));
     let { handleKeyDown: eH, handleKeyUp: ez } = (function (e) {
             let {
                 editor: t,
@@ -800,8 +800,8 @@ function eS(e) {
             channel: g,
             disableEnterToSubmit: eb,
             onKeyDown: O,
-            onKeyUp: M,
-            onTab: L,
+            onKeyUp: L,
+            onTab: M,
             onEnter: U,
             onSpace: V,
             allowNewLines: eI,
@@ -838,12 +838,12 @@ function eS(e) {
         ),
         eZ = i.useCallback(
             (e) => {
-                e !== eL.current ? eD.current && T?.(null, (0, H.WO)(e, { mode: "raw" }), e) : eD.current && ed();
+                e !== eM.current ? eD.current && T?.(null, (0, H.WO)(e, { mode: "raw" }), e) : eD.current && ed();
             },
             [ed, T],
         );
     (i.useLayoutEffect(() => {
-        eP.current && ((eL.current = h), eV(eB, "parent", { value: h }));
+        eP.current && ((eM.current = h), eV(eB, "parent", { value: h }));
     }, [eB, h, eV]),
         i.useEffect(() => {
             function e() {
@@ -941,7 +941,7 @@ function eS(e) {
         children: [
             (0, l.jsx)(S.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: e$ }),
             (0, l.jsx)("div", {
-                ref: eM,
+                ref: eL,
                 className: s()(x, eE.pC),
                 children: (0, l.jsx)(G.A, {
                     id: y,

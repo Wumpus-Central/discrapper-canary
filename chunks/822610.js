@@ -1,4 +1,4 @@
-(n.d(t, { A: () => L }), n(321073));
+(n.d(t, { A: () => M }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -52,7 +52,7 @@ function _(e) {
             },
             [p.length, _, n.name, t, k],
         ),
-        M = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 u(!1);
                 let t = e.dataTransfer?.files[0];
@@ -66,14 +66,14 @@ function _(e) {
             null == c &&
                 (e?.addEventListener("dragover", R, !1),
                 e?.addEventListener("dragleave", O, !1),
-                e?.addEventListener("drop", M, !1)),
+                e?.addEventListener("drop", L, !1)),
             () => {
                 (e?.removeEventListener("dragover", R, !1),
                     e?.removeEventListener("dragleave", O, !1),
-                    e?.removeEventListener("drop", M, !1));
+                    e?.removeEventListener("drop", L, !1));
             }
         );
-    }, [c, R, O, M]),
+    }, [c, R, O, L]),
     null != c)
         ? (0, l.jsx)(v.A, {
               channelId: t,
@@ -140,7 +140,7 @@ var k = n(652215),
     R = n(714731),
     O = n(969490);
 let w = [];
-function M(e) {
+function L(e) {
     let { channelId: t, type: n, ignoreUploadId: r, smallAttachments: S = !1 } = e,
         y = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
         A = (0, f.A)("attachments", o.Gl.HORIZONTAL),
@@ -156,7 +156,7 @@ function M(e) {
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
         T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && N?.[e.name]?.hasValue) ?? [], [I, N]),
-        [j, M] = i.useState([]);
+        [j, L] = i.useState([]);
     i.useEffect(() => {
         function e() {
             d.A.clearAll(t, n.drafts.type);
@@ -166,10 +166,10 @@ function M(e) {
             () => c.h.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
         );
     }, [t, n]);
-    let L = i.useCallback(() => {
+    let M = i.useCallback(() => {
         A.focusFirstVisibleItem();
     }, [A]);
-    (0, x.Vo)({ event: k.jej.FOCUS_ATTACHMENT_AREA, handler: L });
+    (0, x.Vo)({ event: k.jej.FOCUS_ATTACHMENT_AREA, handler: M });
     let P = { isApplicationCommand: b, previousUploadOptions: j, uploadOptions: T },
         D = i.useRef(P);
     (i.useEffect(() => {
@@ -185,7 +185,7 @@ function M(e) {
                     e.forEach((e) => {
                         d.A.remove(t, e.name, n.drafts.type);
                     }),
-                    M(i));
+                    L(i));
             }
         }, [t, T.length, n]));
     let U = C.filter((e) => e.id !== r);
@@ -221,7 +221,7 @@ function M(e) {
               }),
           });
 }
-let L = i.memo(function (e) {
+let M = i.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreUploadId: r, smallAttachments: s = !1 } = e;
-    return i ? (0, l.jsx)(M, { channelId: t, type: n, ignoreUploadId: r, smallAttachments: s }) : null;
+    return i ? (0, l.jsx)(L, { channelId: t, type: n, ignoreUploadId: r, smallAttachments: s }) : null;
 });

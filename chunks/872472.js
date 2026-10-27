@@ -1,8 +1,8 @@
 (r.d(e, { A: () => I }), r(321073));
 var i = r(575593),
-    s = r(898461),
-    n = r(474012),
-    l = r(837015),
+    l = r(898461),
+    s = r(474012),
+    n = r(837015),
     u = r(203632),
     o = r(892118),
     a = r(32731),
@@ -11,11 +11,11 @@ var i = r(575593),
 function S(t) {
     switch (t.type) {
         case i.R.AVATAR_DECORATION:
-            return s.A.fromServer(t);
+            return l.A.fromServer(t);
         case i.R.PROFILE_EFFECT:
             return u.Ay.fromServer(t);
         case i.R.NAMEPLATE:
-            return l.A.fromServer(t);
+            return n.A.fromServer(t);
         case i.R.PROFILE_FRAME:
             return o.A.fromServer(t);
         default:
@@ -45,7 +45,7 @@ class I extends d.A {
         return new I({ ...t, sku: null != t.sku ? a.A.createFromServer(t.sku) : void 0 });
     }
     static fromSKU(t) {
-        let e = (0, n.T7)(t);
+        let e = (0, s.T7)(t);
         if (null == e) return null;
         let r = new I({
             sku_id: t.id,

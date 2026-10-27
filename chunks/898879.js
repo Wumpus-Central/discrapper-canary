@@ -11,33 +11,33 @@ function c(e) {
     let { embedId: t, className: n, style: c, currentWindow: h } = e,
         f = (0, r.bG)([o.A], () => (0, u.ny)(o.A.getMainFrame())),
         g = null != f && f.data.layoutMode === u.y0.FOCUSED ? window : (h ?? window),
-        C = l.useRef(null),
-        A = l.useCallback(() => {
-            if (null == C.current) return;
-            let e = C.current.getBoundingClientRect();
+        A = l.useRef(null),
+        p = l.useCallback(() => {
+            if (null == A.current) return;
+            let e = A.current.getBoundingClientRect();
             (0, s.I_)(t, e);
         }, [t]);
     l.useLayoutEffect(() => {
-        A();
+        p();
     });
-    let p = l.useMemo(
+    let m = l.useMemo(
         () =>
             new ResizeObserver(() => {
-                A();
+                p();
             }),
-        [A],
+        [p],
     );
     return (
         l.useLayoutEffect(() => {
-            let e = C.current;
-            if (null != e) return (p.observe(e), () => p.unobserve(e));
-        }, [p]),
+            let e = A.current;
+            if (null != e) return (m.observe(e), () => m.unobserve(e));
+        }, [m]),
         l.useLayoutEffect(() => {
             function e() {
-                return A();
+                return p();
             }
             function t() {
-                return A();
+                return p();
             }
             return (
                 g.addEventListener("scroll", e, !0),
@@ -46,15 +46,15 @@ function c(e) {
                     (g.removeEventListener("scroll", e, !0), g.removeEventListener("resize", t));
                 }
             );
-        }, [A, g]),
+        }, [p, g]),
         l.useLayoutEffect(
             () => (
-                a._.subscribe(d.jej.MANUAL_IFRAME_RESIZING, A),
+                a._.subscribe(d.jej.MANUAL_IFRAME_RESIZING, p),
                 () => {
-                    a._.unsubscribe(d.jej.MANUAL_IFRAME_RESIZING, A);
+                    a._.unsubscribe(d.jej.MANUAL_IFRAME_RESIZING, p);
                 }
             ),
-            [A],
+            [p],
         ),
         l.useLayoutEffect(
             () => () => {
@@ -62,6 +62,6 @@ function c(e) {
             },
             [t],
         ),
-        (0, i.jsx)("div", { ref: C, className: n, style: c })
+        (0, i.jsx)("div", { ref: A, className: n, style: c })
     );
 }

@@ -18,11 +18,11 @@ var i = n(477900),
     p = n(71393),
     T = n(652215),
     f = n(105292),
-    I = n(460103);
-function _(e) {
+    _ = n(460103);
+function I(e) {
     let { description: t, detail: n } = e;
     return (0, i.jsx)("li", {
-        className: I.Iu,
+        className: _.Iu,
         children: (0, i.jsxs)(u.A, {
             justify: u.A.Justify.BETWEEN,
             children: [(0, i.jsx)("div", { children: t }), (0, i.jsx)("div", { children: n })],
@@ -43,9 +43,9 @@ function N(e) {
         }, [o, t, n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != u && (0, i.jsx)(_, { description: f.intl.string(f.t.lXPbJb), detail: u }),
+            null != u && (0, i.jsx)(I, { description: f.intl.string(f.t.lXPbJb), detail: u }),
             null != o &&
-                (0, i.jsx)(_, {
+                (0, i.jsx)(I, {
                     description: f.intl.string(f.t.Wpn8z8),
                     detail: (0, i.jsx)(h.A, { onClick: c, children: o.name }),
                 }),
@@ -62,10 +62,10 @@ function C(e) {
         x = (s?.attachments?.length ?? 0) > 0,
         p = null != E;
     return u
-        ? (0, i.jsx)("div", { className: I.hT, children: (0, i.jsx)(a.y, {}) })
+        ? (0, i.jsx)("div", { className: _.hT, children: (0, i.jsx)(a.y, {}) })
         : null != s && (x || p)
           ? (0, i.jsxs)("div", {
-                className: I.hT,
+                className: _.hT,
                 children: [
                     x &&
                         (0, i.jsxs)(i.Fragment, {
@@ -73,7 +73,7 @@ function C(e) {
                                 (0, i.jsx)(o.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-default",
-                                    className: I.yE,
+                                    className: _.yE,
                                     children: f.intl.string(f.t.hxawoy),
                                 }),
                                 (0, i.jsx)(r.$, { ...h }),
@@ -82,11 +82,11 @@ function C(e) {
                     p &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                x && (0, i.jsx)("div", { className: I.yF }),
+                                x && (0, i.jsx)("div", { className: _.yF }),
                                 (0, i.jsx)(o.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-default",
-                                    className: I.yE,
+                                    className: _.yE,
                                     children: f.intl.string(f.t.gWBNet),
                                 }),
                                 (0, i.jsx)(m.A, { role: E }),

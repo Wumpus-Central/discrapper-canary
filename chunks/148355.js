@@ -1,4 +1,4 @@
-n.d(t, { A: () => L, h: () => _ });
+n.d(t, { A: () => M, h: () => _ });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -245,7 +245,7 @@ let O = (e) => {
                                     (0, l.jsx)(u.animated.div, {
                                         className: I.tm,
                                         style: e,
-                                        children: (0, l.jsx)(M, {
+                                        children: (0, l.jsx)(L, {
                                             className: I.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -272,7 +272,7 @@ let O = (e) => {
             )
         );
     };
-function M(e) {
+function L(e) {
     let {
             isInteracting: t = !1,
             disableAnimation: n = !1,
@@ -325,4 +325,4 @@ function M(e) {
         `${c.id},${u}`,
     );
 }
-let L = M;
+let M = L;

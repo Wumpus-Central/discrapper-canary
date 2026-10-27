@@ -45,8 +45,8 @@ let C = new Set(),
     D = !1,
     v = new Set(),
     b = new WeakMap(),
-    M = 1,
-    P = null,
+    P = 1,
+    M = null,
     U = new Set(),
     w = new Set(),
     G = "",
@@ -165,7 +165,7 @@ function eo(e) {
 }
 function ed(e) {
     let t = b.get(e);
-    return (null == t && ((t = M++), b.set(e, t)), t);
+    return (null == t && ((t = P++), b.set(e, t)), t);
 }
 function ec() {
     if (null != m) return m;
@@ -416,7 +416,7 @@ function eN(e) {
     for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) o.add(e);
     ((g = o),
         (function (e, t) {
-            if (null == P) return;
+            if (null == M) return;
             let n = "";
             for (let e of t) n += `${ed(e)},`;
             for (let { iframe: t } of e) n += `|${ed(t)}`;
@@ -429,17 +429,17 @@ function eN(e) {
             }
             for (let { iframe: t } of e) r(t);
             for (let e of t) r(e);
-            for (let e of w) i.has(e) || P.containers?.unobserve(e);
-            for (let e of i) w.has(e) || P.containers?.observe(e);
+            for (let e of w) i.has(e) || M.containers?.unobserve(e);
+            for (let e of i) w.has(e) || M.containers?.observe(e);
             for (let e of (w.clear(), i)) w.add(e);
         })(e, n),
-        P?.mutations.takeRecords(),
+        M?.mutations.takeRecords(),
         (R = null),
         (L = !0));
 }
 function eC(e) {
     for (let [t, n] of ((T = e), [...Z.keys()].map((e) => [e, es(e)]))) el(t, e, n);
-    (P?.mutations.takeRecords(), (I = !0));
+    (M?.mutations.takeRecords(), (I = !0));
 }
 let eO = null,
     eR = null,
@@ -448,8 +448,8 @@ let eO = null,
     eD = 0,
     ev = !1,
     eb = !1,
-    eM = new Map(),
-    eP = new Set();
+    eP = new Map(),
+    eM = new Set();
 function eU(e, t) {
     let { x: n, y: i, width: r, height: a } = t;
     for (let t = 0; t < 5; t++)
@@ -486,8 +486,8 @@ function ex() {
     if (null == n || n.iframe !== m || null == i || null == r || n.inputSuspended || !r.idle() || null == T || N())
         return;
     for (let e of C) e.isConnected || C.delete(e);
-    for (let e of eP) eh(e) || eP.delete(e);
-    if (eP.size > 0 || [...C].some((e) => !e.contains(n.iframe) && eh(e)) || [...O].some(eh) || !eU(i, T)) return;
+    for (let e of eM) eh(e) || eM.delete(e);
+    if (eM.size > 0 || [...C].some((e) => !e.contains(n.iframe) && eh(e)) || [...O].some(eh) || !eU(i, T)) return;
     ((eO = e), null != u && (clearTimeout(u), (u = null)));
     let a = ++eD;
     function o(t) {
@@ -512,7 +512,7 @@ function ek() {
         if (
             ((eO = null),
             eD++,
-            eM.clear(),
+            eP.clear(),
             t &&
                 e0()
                     ?.setOnTop?.(n, !1)
@@ -531,8 +531,8 @@ function eF(e) {
             requestAnimationFrame(() => {
                 ev = !1;
                 let e = null != eO ? l.get(eO) : null,
-                    t = new Map(eM);
-                eM.clear();
+                    t = new Map(eP);
+                eP.clear();
                 let n = eb;
                 if (((eb = !1), null != e)) {
                     if (JSON.stringify(e3(e.iframe)) !== e.lastLayout) return void ek();
@@ -541,7 +541,7 @@ function eF(e) {
                             !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || g.has(n)) &&
                             eu(n, t.get(n) ?? 0)
                         ) {
-                            (eP.add(n), ek());
+                            (eM.add(n), ek());
                             return;
                         }
                     n && null != e.inputTarget && null != T && !eU(e.inputTarget, T) && ek();
@@ -665,10 +665,10 @@ function eK(e) {
             if ("childList" === r.type) {
                 for (let e of r.addedNodes)
                     if ((0, i.vq)(e, Element) && !(t <= 0)) {
-                        for (let n of [e, ...e.querySelectorAll("*")].slice(0, t)) (t--, eM.set(n, 0));
+                        for (let n of [e, ...e.querySelectorAll("*")].slice(0, t)) (t--, eP.set(n, 0));
                         ("STYLE" === e.nodeName || "LINK" === e.nodeName) && (n = !0);
                     }
-            } else "attributes" === r.type && (0, i.vq)(r.target, Element) ? eM.set(r.target, 0) : (n = !0);
+            } else "attributes" === r.type && (0, i.vq)(r.target, Element) ? eP.set(r.target, 0) : (n = !0);
         eF(n);
         return;
     }
@@ -735,11 +735,11 @@ function eK(e) {
     }
 }
 function e$() {
-    if (null == P) return;
+    if (null == M) return;
     let e = new Set();
     for (let t of l.values()) for (let n = t.iframe; null != n; n = n.parentElement) e.add(n);
-    for (let t of U) e.has(t) || P.ancestors?.unobserve(t);
-    for (let t of e) U.has(t) || P.ancestors?.observe(t);
+    for (let t of U) e.has(t) || M.ancestors?.unobserve(t);
+    for (let t of e) U.has(t) || M.ancestors?.observe(t);
     for (let t of (U.clear(), e)) U.add(t);
 }
 let ez = ["left", "middle", "right"],
@@ -1132,7 +1132,7 @@ function e9(e, t, n, r, d) {
             eR === t && (eR = null),
             eL === t && (eL = null),
             ey === t && (ey = null),
-            P?.visibility?.unobserve(e),
+            M?.visibility?.unobserve(e),
             e$(),
             h?.abort(),
             T.abort(),
@@ -1140,13 +1140,13 @@ function e9(e, t, n, r, d) {
             Reflect.deleteProperty(e, "contentWindow"),
             Reflect.deleteProperty(e, "src"),
             0 === l.size &&
-                (null != P &&
-                    (P.controller.abort(),
-                    P.mutations.disconnect(),
-                    P.ancestors?.disconnect(),
-                    P.containers?.disconnect(),
-                    P.visibility?.disconnect(),
-                    (P = null),
+                (null != M &&
+                    (M.controller.abort(),
+                    M.mutations.disconnect(),
+                    M.ancestors?.disconnect(),
+                    M.containers?.disconnect(),
+                    M.visibility?.disconnect(),
+                    (M = null),
                     U.clear(),
                     w.clear(),
                     (G = ""),
@@ -1155,12 +1155,12 @@ function e9(e, t, n, r, d) {
                     O.clear(),
                     v.clear(),
                     (D = !1),
-                    eP.clear(),
+                    eM.clear(),
                     (eO = null),
                     (eR = null),
                     (eL = null),
                     (ey = null),
-                    eM.clear(),
+                    eP.clear(),
                     (R = null),
                     (L = !1),
                     (p = null),
@@ -1185,12 +1185,12 @@ function e9(e, t, n, r, d) {
         ),
         l.set(t, I),
         !(function () {
-            if (null != P) return;
+            if (null != M) return;
             let e = new AbortController(),
                 { signal: t } = e,
                 n = { capture: !0, signal: t },
                 r = { capture: !0, passive: !0, signal: t };
-            for (let n of ((P = {
+            for (let n of ((M = {
                 controller: e,
                 mutations: new MutationObserver(eK),
                 ancestors: "u" > typeof ResizeObserver ? new ResizeObserver(eB) : null,
@@ -1205,7 +1205,7 @@ function e9(e, t, n, r, d) {
                 attributes: !0,
                 attributeFilter: ["class", "style", "hidden", "open", "data-theme"],
             }),
-            P.mutations.observe(document.head, { subtree: !0, childList: !0, characterData: !0 }),
+            M.mutations.observe(document.head, { subtree: !0, childList: !0, characterData: !0 }),
             window.addEventListener("resize", () => eV(!1), { signal: t }),
             document.addEventListener(
                 "scroll",
@@ -1223,7 +1223,7 @@ function e9(e, t, n, r, d) {
                         let { target: n } = t;
                         if ((0, i.vq)(n, Element)) {
                             if (null != eO) {
-                                (eM.set(n, 64), eF(!1));
+                                (eP.set(n, 64), eF(!1));
                                 return;
                             }
                             (!(function (e) {
@@ -1251,7 +1251,7 @@ function e9(e, t, n, r, d) {
                     (e) => {
                         let { target: t } = e;
                         if ((0, i.vq)(t, Element)) {
-                            null != eO && (eM.set(t, 0), eF(!1));
+                            null != eO && (eP.set(t, 0), eF(!1));
                             for (let e of [...C])
                                 e.contains(t) &&
                                     ((e.isConnected && "none" === getComputedStyle(e).pointerEvents) ||
@@ -1283,7 +1283,7 @@ function e9(e, t, n, r, d) {
                 r,
             );
         })(),
-        P?.visibility?.observe(e),
+        M?.visibility?.observe(e),
         e$(),
         c.create(t, n).then(
             (e) => {

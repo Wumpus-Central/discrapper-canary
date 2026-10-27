@@ -28,8 +28,8 @@ var i,
     D = n(253932),
     v = n(830543),
     b = n(174459),
-    M = n(823459),
-    P = n(147248),
+    P = n(823459),
+    M = n(147248),
     U = n(650809),
     w = n(554146),
     G = n(661531),
@@ -210,7 +210,7 @@ function ec(e) {
             titleIconClassName: c,
         } = e,
         { type: u } = a.useContext(es),
-        [_] = (0, d.yK)([P.A], () => [P.A.isPreview]),
+        [_] = (0, d.yK)([M.A], () => [M.A.isPreview]),
         E = (0, N.V)()?.subscriptionTrial?.skuId === J.pe.TIER_2;
     return "EDITOR" === u && _ && E
         ? (0, r.jsx)(C.Ay, {
@@ -243,7 +243,7 @@ function eu(e) {
     let { disabled: t, size: i } = e,
         { type: s, delay: l } = a.useContext(es),
         { analyticsLocations: o } = (0, T.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
-        [u, _] = (0, d.yK)([P.A], () => [P.A.isPreview, P.A.gradientPreset?.id]),
+        [u, _] = (0, d.yK)([M.A], () => [M.A.isPreview, M.A.gradientPreset?.id]),
         [h, S] = a.useState(!1),
         [N, C] = a.useState(-1),
         O = (0, d.bG)([I.Ay], () => I.Ay.useReducedMotion),
@@ -254,7 +254,7 @@ function eu(e) {
     function U(e, t) {
         var n;
         if (
-            ((0, M.bc)(e.id),
+            ((0, P.bc)(e.id),
             el({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
                 ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
@@ -332,13 +332,13 @@ function e_(e) {
     let { size: t, systemSelectorFirst: n, hideSystemSelector: i = !1 } = e,
         { delay: s } = a.useContext(es),
         { analyticsLocations: l } = (0, T.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
-        [o, c, u] = (0, d.yK)([L.A, y.Ay, P.A], () => [
+        [o, c, u] = (0, d.yK)([L.A, y.Ay, M.A], () => [
             L.A.theme,
-            null == P.A.gradientPreset && null == D.eh.getSetting().customUserThemeSettings,
+            null == M.A.gradientPreset && null == D.eh.getSetting().customUserThemeSettings,
             y.Ay.useSystemTheme === ee.Q_.ON,
         ]);
     function _(e) {
-        ((0, M.Py)(),
+        ((0, P.Py)(),
             el({ isPersisted: !0, analyticsLocations: l, themeName: `default ${e}` }),
             (0, f.u_)({ theme: e }, s));
     }

@@ -1,8 +1,8 @@
 r.d(e, { Ay: () => d, C3: () => S, Lh: () => c, y9: () => I });
 var i = r(315069),
-    s = r(395671),
-    n = r(520606),
-    l = r(872472),
+    l = r(395671),
+    s = r(520606),
+    n = r(872472),
     u = r(394300),
     o = r(721932),
     a = r(652215);
@@ -23,20 +23,20 @@ class d extends i.A {
             c = r.map((t) => {
                 switch (t.sku_product_line) {
                     case a.EZt.COLLECTIBLES:
-                        return l.A.fromServer(t);
+                        return n.A.fromServer(t);
                     case a.EZt.SOCIAL_LAYER_GAME_ITEM:
                         return o.A.fromServer(t);
                     case a.EZt.PREMIUM:
                         return u.A.fromServer(t);
                     default:
-                        return n.A.fromServer(t);
+                        return s.A.fromServer(t);
                 }
             });
         return new d({
             ...i,
             userId: e,
             items: c,
-            applications: i.applications?.map((t) => s.Ay.createFromServer(t)) ?? void 0,
+            applications: i.applications?.map((t) => l.Ay.createFromServer(t)) ?? void 0,
         });
     }
 }

@@ -1,10 +1,10 @@
 n.d(t, {
     $v: () => y,
     Ay: () => k,
-    CK: () => P,
+    CK: () => M,
     F4: () => D,
     KE: () => x,
-    ME: () => M,
+    ME: () => P,
     R1: () => w,
     _V: () => R,
     eB: () => b,
@@ -107,11 +107,11 @@ function b(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)("div", { className: a()(S.om, t), children: n });
 }
-function M(e) {
+function P(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)(o.E, { variant: "text-xs/normal", className: a()(S.Sv, t), children: n });
 }
-function P(e) {
+function M(e) {
     let { className: t } = e;
     return (0, i.jsx)(h.A, {
         direction: h.A.Direction.VERTICAL,
@@ -198,7 +198,7 @@ function x(e) {
                 fullWidth: !0,
                 onClick: () => window.open((0, p.SU)()),
             }),
-            (0, i.jsx)(M, {
+            (0, i.jsx)(P, {
                 className: S.UM,
                 children: g.intl.format(g.t.wO1VBk, {
                     supportedBrowserURL: T.A.getArticleURL(m.MVz.SUPPORTED_BROWSERS),

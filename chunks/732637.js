@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => A });
 var i = n(477900),
     l = n(582128),
     r = n(17928),
@@ -11,48 +11,48 @@ var i = n(477900),
     h = n(902439),
     f = n(5867),
     g = n(652215);
-function C(e) {
+function A(e) {
     let t,
-        { embedId: n, className: C, style: A } = e,
-        p = (0, r.bG)([a.A], () => a.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
-        m = (0, h.A)(),
+        { embedId: n, className: A, style: p } = e,
+        m = (0, r.bG)([a.A], () => a.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
+        I = (0, h.A)(),
         E = (0, r.bG)([u.Ay], () => u.Ay.getActivityPanelMode());
-    t = null == m || (0, c.A)((0, d.H)(m.location)) || E !== f.Gd.PANEL ? (p?.window ?? window) : window;
-    let I = l.useRef(null),
-        S = l.useMemo(() => {
+    t = null == I || (0, c.A)((0, d.H)(I.location)) || E !== f.Gd.PANEL ? (m?.window ?? window) : window;
+    let S = l.useRef(null),
+        C = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
-                        ((0, s.I_)(n, I.current?.getBoundingClientRect() ?? null), (e = null));
+                        ((0, s.I_)(n, S.current?.getBoundingClientRect() ?? null), (e = null));
                     }));
             };
         }, [n, t]);
     return (
         l.useEffect(
             () => (
-                t.addEventListener("resize", S),
-                o._.subscribe(g.jej.REMEASURE_TARGET, S),
+                t.addEventListener("resize", C),
+                o._.subscribe(g.jej.REMEASURE_TARGET, C),
                 () => {
-                    (t.removeEventListener("resize", S), o._.unsubscribe(g.jej.REMEASURE_TARGET, S));
+                    (t.removeEventListener("resize", C), o._.unsubscribe(g.jej.REMEASURE_TARGET, C));
                 }
             ),
-            [S, t],
+            [C, t],
         ),
         l.useLayoutEffect(() => {
-            let e = I.current;
+            let e = S.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            S();
-            let i = new t.ResizeObserver(S);
+            C();
+            let i = new t.ResizeObserver(C);
             return (
                 i.observe(e),
                 () => {
                     (i.disconnect(), (0, s.I_)(n, null));
                 }
             );
-        }, [n, S]),
-        (0, i.jsx)("div", { ref: I, style: A, className: C })
+        }, [n, C]),
+        (0, i.jsx)("div", { ref: S, style: p, className: A })
     );
 }

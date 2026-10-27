@@ -5,8 +5,8 @@ var r = n(582128),
     a = n(440938),
     o = n(790297),
     i = n(652215),
-    u = n(650583);
-let c = new Set([u.N$.ArrowUp, u.N$.ArrowDown, u.N$.PageUp, u.N$.PageDown, u.N$.Home, u.N$.End, u.N$.Tab]);
+    c = n(650583);
+let u = new Set([c.N$.ArrowUp, c.N$.ArrowDown, c.N$.PageUp, c.N$.PageDown, c.N$.Home, c.N$.End, c.N$.Tab]);
 function d(e, t, n, r) {
     let { scrollTop: l = 0, scrollOffset: a = 0, scrollHeight: o = 0, scrollWidth: i = 0 } = r;
     if (o > 0) {
@@ -24,7 +24,7 @@ function d(e, t, n, r) {
 function p(e, t) {
     let n,
         s,
-        u,
+        c,
         p,
         { analyticsSource: m } = (0, o.lC)(t),
         g = (0, l.I)(d, 5e3, [], { trailing: !0 }),
@@ -33,7 +33,7 @@ function p(e, t) {
         C =
             ((n = r.useRef(0)),
             (s = r.useRef(!1)),
-            (u = r.useRef(!1)),
+            (c = r.useRef(!1)),
             (p = r.useRef(0)),
             r.useEffect(() => {
                 let t = e.current?.getScrollerNode();
@@ -55,7 +55,7 @@ function p(e, t) {
                                 window.removeEventListener("pointerup", i),
                                 window.removeEventListener("pointercancel", i),
                                 (s.current = !1),
-                                (u.current = !1));
+                                (c.current = !1));
                         }
                     );
                 function r() {
@@ -65,17 +65,17 @@ function p(e, t) {
                     s.current = !1;
                 }
                 function a(e) {
-                    c.has(e.key) && r();
+                    u.has(e.key) && r();
                 }
                 function o(e) {
-                    e.target === t && ((u.current = !0), (p.current = Date.now()), r());
+                    e.target === t && ((c.current = !0), (p.current = Date.now()), r());
                 }
                 function i() {
-                    u.current && ((u.current = !1), r());
+                    c.current && ((c.current = !1), r());
                 }
             }, [e]),
             r.useCallback(
-                () => (u.current && Date.now() - p.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
+                () => (c.current && Date.now() - p.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
                 [],
             ));
     return {

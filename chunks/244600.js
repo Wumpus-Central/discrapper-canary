@@ -1,4 +1,4 @@
-(n.d(t, { A: () => tP }), n(321073));
+(n.d(t, { A: () => tM }), n(321073));
 var i,
     r,
     a,
@@ -33,8 +33,8 @@ let D = (0, n(240921).Ay)({
 });
 var v = n(626584),
     b = n(444431),
-    M = n(655087),
-    P = n(680725),
+    P = n(655087),
+    M = n(680725),
     U = n(487329),
     w = n(451988),
     G =
@@ -397,12 +397,12 @@ var eA = n(53857),
     eD = n(77729),
     ev = n(435558),
     eb = n.n(ev);
-let eM = [];
-class eP {
+let eP = [];
+class eM {
     bytes = {};
     static create() {
-        let e = new eP();
-        return (eM.push(e), e.record);
+        let e = new eM();
+        return (eP.push(e), e.record);
     }
     record = (e) => {
         if (null != e) {
@@ -1950,8 +1950,8 @@ class tE extends S.A {
                 pauseCount: D,
                 freezeCount: v,
                 totalPausesDuration: b,
-                totalFreezesDuration: M,
-                totalFramesDuration: P,
+                totalFreezesDuration: P,
+                totalFramesDuration: M,
                 totalDecodeTime: U,
                 keyframes: w,
                 passthroughCount: G,
@@ -1971,12 +1971,12 @@ class tE extends S.A {
         return (
             e instanceof tc.ET
                 ? ((u.sender_freeze_count = v),
-                  (u.sender_total_freezes_duration = M),
-                  (u.sender_total_frames_duration = P),
+                  (u.sender_total_freezes_duration = P),
+                  (u.sender_total_frames_duration = M),
                   (u.consecutive_static_color_frames_max = e.consecutiveStaticColorFramesMax))
                 : ((u.receiver_freeze_count = v),
-                  (u.receiver_total_freezes_duration = M),
-                  (u.receiver_total_frames_duration = P),
+                  (u.receiver_total_freezes_duration = P),
+                  (u.receiver_total_frames_duration = M),
                   (u.receiver_pause_count = D),
                   (u.receiver_total_pauses_duration = b),
                   (u.total_decode_time_ms = U),
@@ -2941,13 +2941,13 @@ function tD(e, t) {
 }
 let tv = 0,
     tb = [];
-function tM() {
+function tP() {
     let e = [],
         t = (0, C.tB)();
     for (let n of tb) e.push({ ...n, t: t - n.t });
     return JSON.stringify(e);
 }
-class tP extends S.A {
+class tM extends S.A {
     context;
     userId;
     sessionId;
@@ -3639,7 +3639,7 @@ class tP extends S.A {
                                 ...t,
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats("sender", this.userId),
-                                device_performance_class: (0, P.A)(),
+                                device_performance_class: (0, M.A)(),
                             });
                     });
                     let t = e.getCameraDurationStats();
@@ -3806,7 +3806,7 @@ class tP extends S.A {
                     voice_input_volume: s.inputVolume,
                     encryption_mode: this._encryptionMode,
                     channel_count: this.channelIds.size,
-                    device_performance_class: (0, P.A)(),
+                    device_performance_class: (0, M.A)(),
                     num_fast_udp_reconnects:
                         null != this._connection ? this._connection?.getNumFastUdpReconnects() : null,
                     parent_media_session_id: this.parentMediaSessionId,
@@ -4176,7 +4176,7 @@ class tP extends S.A {
             u.on(N.yq.PingTimeout, this._handlePingTimeout.bind(this)),
             u.on(N.yq.OutboundLossRate, this._handleOutboundLossRate.bind(this)),
             u.on(N.yq.LocalVideoDisabled, this._handleLocalVideoDisabled.bind(this)),
-            u.on(N.yq.Stats, eP.create()),
+            u.on(N.yq.Stats, eM.create()),
             u.on(N.yq.RemoteStreamsReady, this._handleRemoteStreamsReady.bind(this)),
             u.on(N.yq.UsersMerged, this.handleUsersMerged.bind(this)),
             u.on(N.yq.NoiseCancellationError, (e) => {
@@ -4495,7 +4495,7 @@ class tP extends S.A {
             let e = this._connection;
             null != e && e.setAudioLatencyMeasurement(!0);
         }
-        let t = M.A.getRawThermalState();
+        let t = P.A.getRawThermalState();
         (eS.default.track(ew.HAw.MEDIA_SESSION_JOINED, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),
@@ -4681,7 +4681,7 @@ class tP extends S.A {
                     transition_id: n,
                     protocol_version: t,
                     channel_resolved: null != l,
-                    event_history: tM(),
+                    event_history: tP(),
                     connection_serial: this._connectionSerial,
                 }),
                 this._socket?.disconnectForRefusedDaveDowngrade(e),
@@ -4850,7 +4850,7 @@ class tP extends S.A {
                 countDuringReset: +(null != this._mlsSessionResetStartTime),
                 firstOccurrence: n,
                 timeSinceInit: null != this._mlsInitReceivedTime ? n - this._mlsInitReceivedTime : void 0,
-                eventLog: tM(),
+                eventLog: tP(),
             }),
             e.includes("GetPersistedKeyPair")
                 ? R.A.show({ title: tC.intl.string(tC.t.fJUioH), body: tC.intl.string(tC.t.CQLWvo) })

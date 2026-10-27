@@ -144,9 +144,9 @@ let k = { width: 500, height: T.$V },
             }),
         });
     });
-var M = n(861382),
-    L = n(435558),
-    P = n.n(L),
+var L = n(861382),
+    M = n(435558),
+    P = n.n(M),
     D = n(537652),
     U = n(155718),
     V = n(666860),
@@ -421,9 +421,9 @@ function ed(e) {
             },
             [t, x, k, p, u],
         ),
-        M = (0, K.GV)();
+        L = (0, K.GV)();
     return (
-        (0, F.gf)(M, !0, (0, W.aI)(u)),
+        (0, F.gf)(L, !0, (0, W.aI)(u)),
         i.useEffect(
             () => () => {
                 (0, F.nQ)();
@@ -431,7 +431,7 @@ function ed(e) {
             [],
         ),
         (0, l.jsxs)(W.Ay, {
-            id: M,
+            id: L,
             className: eo.x9,
             innerClassName: eo.iE,
             onMouseDown: eh,
@@ -507,8 +507,8 @@ function eR(e) {
 }
 var eO = n(931664),
     ew = n(631576),
-    eM = n(522602);
-let eL = /(!|\.|;|,|-|\u2014|\u2013|\?|"|')/g,
+    eL = n(522602);
+let eM = /(!|\.|;|,|-|\u2014|\u2013|\?|"|')/g,
     eP = /(\n|\t|\s)/g;
 var eD = n(194004),
     eU = n(406704),
@@ -595,9 +595,9 @@ function eX(e) {
                         R = 2 * r,
                         O = +r,
                         w = 24 * r,
-                        M = 2 * r,
-                        L = d.current && !h.current ? k * (1 - p / 48) : 0,
-                        P = j - s.length * k + L;
+                        L = 2 * r,
+                        M = d.current && !h.current ? k * (1 - p / 48) : 0,
+                        P = j - s.length * k + M;
                     !m.current || h.current ? ((x = null), (E = !1)) : null == x && (x = A);
                     let D = null == x ? null : A - x;
                     (null != D && D >= 100 && !E && ((E = !0), f.current()), n.beginPath());
@@ -606,7 +606,7 @@ function eX(e) {
                             l = h.current ? t.target : Math.max(0, t.animator.getCurrentValue()),
                             i = s.length > 1 ? (e / (s.length - 1)) * 40 : 0,
                             r = null == D ? 0 : Math.max(0, Math.min((D - i) / 60, 1)),
-                            a = l * (1 - r * r) * (w - M) + M,
+                            a = l * (1 - r * r) * (w - L) + L,
                             o = P + e * k,
                             u = (_ - a) / 2;
                         n.roundRect(o, u, R, a, O);
@@ -1125,8 +1125,8 @@ function tO(e) {
     });
 }
 var tw = n(749314),
-    tM = n(148355),
-    tL = n(218782);
+    tL = n(148355),
+    tM = n(218782);
 let tP = i.memo(function (e) {
     let { channelId: t, chatInputType: n } = e,
         [r, s] = i.useState(null),
@@ -1135,31 +1135,31 @@ let tP = i.memo(function (e) {
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)("div", {
-                      className: tL.Tz,
+                      className: tM.Tz,
                       children: a.map((e) =>
                           (0, l.jsxs)(
                               "div",
                               {
-                                  className: tL.dp,
+                                  className: tM.dp,
                                   children: [
                                       (0, l.jsx)(Y.D, {
                                           onFocus: () => s(e.id),
                                           onBlur: () => s(null),
-                                          className: tL.b,
+                                          className: tM.b,
                                           "aria-label": j.intl.formatToPlainString(j.t.BGAQRd, { name: e.name }),
                                           onClick: () => (0, ew.x5)(t, n.drafts.type),
                                           children: (0, l.jsx)("div", {
-                                              className: tL.Nk,
+                                              className: tM.Nk,
                                               children: (0, l.jsx)(tN.a, {
                                                   size: "md",
                                                   color: "currentColor",
-                                                  className: tL.ut,
+                                                  className: tM.ut,
                                               }),
                                           }),
                                       }),
-                                      (0, l.jsx)(tM.A, {
+                                      (0, l.jsx)(tL.A, {
                                           isInteracting: r === e.id,
-                                          className: tL.UV,
+                                          className: tM.UV,
                                           size: 48,
                                           sticker: e,
                                       }),
@@ -1169,7 +1169,7 @@ let tP = i.memo(function (e) {
                           ),
                       ),
                   }),
-                  (0, l.jsx)(tw.A, { className: tL.R }),
+                  (0, l.jsx)(tw.A, { className: tM.R }),
               ],
           })
         : null;
@@ -1442,7 +1442,7 @@ function nd(e, t, r, s, a) {
                 if (o) return;
                 u(!0);
                 let E = eO.A.getStickerPreview(a, t.drafts.type)?.map((e) => e.id) ?? [],
-                    S = eM.A.getUploads(a, t.drafts.type) ?? [];
+                    S = eL.A.getUploads(a, t.drafts.type) ?? [];
                 if (null == d && !m && !p && (0, eS.xz)(S, a)) {
                     (u(!1),
                         (0, f.openModalLazy)(async () => {
@@ -1611,7 +1611,7 @@ function nf(e) {
                 (s === th.oU.CREATE_ANNOUNCEMENT_POST ||
                 s === th.oU.CREATE_FORUM_POST ||
                 (function (e, t, n, l) {
-                    if (eM.A.getUploadCount(n, l) > 0) return !0;
+                    if (eL.A.getUploadCount(n, l) > 0) return !0;
                     let i = eO.A.getStickerPreview(n, l);
                     if (null != i && i.length > 0) return !0;
                     switch (e) {
@@ -1620,7 +1620,7 @@ function nf(e) {
                         case eD.D6.AUTOCOMPLETE:
                             var r;
                             return (
-                                (null == (r = t) ? [] : r.replace(eL, "").replace(eP, " ").trim().split(" ")).length > 1
+                                (null == (r = t) ? [] : r.replace(eM, "").replace(eP, " ").trim().split(" ")).length > 1
                             );
                         case eD.D6.BUILT_IN_INTEGRATION:
                         default:
@@ -1771,7 +1771,7 @@ let nb = i.memo(function (e) {
             error: k,
             renderAttachButton: R,
             renderApplicationCommandIcon: O,
-            renderButtons: L,
+            renderButtons: M,
             pendingReply: P,
             onChange: D,
             onResize: U,
@@ -1823,10 +1823,10 @@ let nb = i.memo(function (e) {
         return eO(!ev && (null == t || t > 450));
     });
     let ew = ej === S.IG.HIDDEN,
-        eM = ej === S.IG.CONDENSED || (ej === S.IG.FLEXIBLE && e_ && !ek),
-        { activeCommand: eL, activeCommandSection: eP } = (0, m.cf)([M.A], () => ({
-            activeCommand: j.commands?.enabled ? M.A.getActiveCommand(T.id) : null,
-            activeCommandSection: j.commands?.enabled ? M.A.getActiveCommandSection(T.id) : null,
+        eL = ej === S.IG.CONDENSED || (ej === S.IG.FLEXIBLE && e_ && !ek),
+        { activeCommand: eM, activeCommandSection: eP } = (0, m.cf)([L.A], () => ({
+            activeCommand: j.commands?.enabled ? L.A.getActiveCommand(T.id) : null,
+            activeCommandSection: j.commands?.enabled ? L.A.getActiveCommandSection(T.id) : null,
         })),
         {
             isLurking: eD,
@@ -1835,7 +1835,7 @@ let nb = i.memo(function (e) {
             canAttachFiles: eB,
             canCreateThreads: eK,
             canEveryoneSendMessages: eG,
-        } = ny(T, j, eL, I),
+        } = ny(T, j, eM, I),
         eH = j.toolbarType === th.O1.STATIC,
         ez = !eV.D_.useSetting() && !(0, tc.isAndroidWeb)() && null != window.ResizeObserver,
         eq = !ez || !j.commands?.enabled || !_ || "/" !== r,
@@ -1946,15 +1946,15 @@ let nb = i.memo(function (e) {
     let t_ = null != P,
         tR = (eF && !((eD || eU) && eG)) || (e5 && j.submit?.useDisabledStylesOnSubmit),
         tw = null;
-    null != eL ? (tw = O?.(eL, eP, e8.g$)) : (!eF || eK) && (tw = R?.(t_, e8.g$));
-    let { isVisible: tM, showsUpsell: tL } = (0, nc.A)({
+    null != eM ? (tw = O?.(eM, eP, e8.g$)) : (!eF || eK) && (tw = R?.(t_, e8.g$));
+    let { isVisible: tL, showsUpsell: tM } = (0, nc.A)({
             type: j,
             textValue: r,
             maxCharacterCount: q,
             showRemainingCharsAfterCount: $,
         }),
-        tD = ez && null != a && !eF && j.showCharacterCount && null == eL,
-        tU = ez && !__OVERLAY__ && null != a && null == eL && j.toolbarType !== th.O1.NONE && !eF,
+        tD = ez && null != a && !eF && j.showCharacterCount && null == eM,
+        tU = ez && !__OVERLAY__ && null != a && null == eM && j.toolbarType !== th.O1.NONE && !eF,
         tV = (function (e) {
             let {
                     channel: t,
@@ -1965,9 +1965,9 @@ let nb = i.memo(function (e) {
                     selectedAutocompleteInputType: o,
                     selectedAutocompleteInputError: u,
                 } = e,
-                { activeCommandOption: c, activeCommandOptionStates: d } = (0, m.cf)([M.A], () => ({
-                    activeCommandOption: M.A.getActiveOption(t.id),
-                    activeCommandOptionStates: M.A.getOptionStates(t.id),
+                { activeCommandOption: c, activeCommandOptionStates: d } = (0, m.cf)([L.A], () => ({
+                    activeCommandOption: L.A.getActiveOption(t.id),
+                    activeCommandOptionStates: L.A.getOptionStates(t.id),
                 })),
                 h = (0, m.bG)([tt.Ay, tr.default, tH], () => {
                     let e = tr.default.getCurrentUser();
@@ -2005,7 +2005,7 @@ let nb = i.memo(function (e) {
         })({
             channel: T,
             type: j,
-            activeCommand: eL,
+            activeCommand: eM,
             pendingReply: P,
             scheduledMessageDraft: er,
             selectedAutocompleteInputType: tI,
@@ -2030,15 +2030,15 @@ let nb = i.memo(function (e) {
         tJ = (0, l.jsx)("div", { ref: eS, className: e8.BW }),
         t1 = tT ? (0, l.jsx)(w, { align: "right", positionTargetRef: eS, channel: T }) : null,
         t2 =
-            null != L
-                ? L()
+            null != M
+                ? M()
                 : (0, l.jsx)(t9.A, {
                       type: j,
                       disabled: eF,
                       channel: T,
                       handleSubmit: e6,
                       isEmpty: tF,
-                      showAllButtons: !eM && !ew,
+                      showAllButtons: !eL && !ew,
                       expressionButtonsHidden: ew,
                   }),
         t5 = tD
@@ -2068,8 +2068,8 @@ let nb = i.memo(function (e) {
                         ref: ec,
                         className: s()(o, {
                             [e8.gM]: !0,
-                            [e8.Bz]: tM && tD,
-                            [e8.Qv]: tL && tD,
+                            [e8.Bz]: tL && tD,
+                            [e8.Qv]: tM && tD,
                             [e8.h9]: tR,
                             [e8.mr]: G,
                             [e8.Wn]: d.Fr,

@@ -6,8 +6,8 @@ var s = n(503698),
     a = n(983851),
     r = n(194261),
     o = n(512474),
-    d = n(445567),
-    c = n(451394),
+    c = n(445567),
+    d = n(451394),
     u = n(163328),
     m = n(276293),
     x = n(11779),
@@ -59,7 +59,7 @@ let R = function (e) {
             });
             break;
         case "voice-spoiler":
-            s = (0, i.jsx)(d.P, {
+            s = (0, i.jsx)(c.P, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -67,7 +67,7 @@ let R = function (e) {
             });
             break;
         case "stage":
-            s = (0, i.jsx)(c.q, {
+            s = (0, i.jsx)(d.q, {
                 size: "lg",
                 color: "currentColor",
                 className: _.Kk,

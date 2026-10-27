@@ -28,8 +28,8 @@ var i = n(435558),
     D = n(153488),
     v = n(629016),
     b = n(71393),
-    M = n(576705),
-    P = n(290863),
+    P = n(576705),
+    M = n(290863),
     U = n(994500),
     w = n(287809),
     G = n(977997),
@@ -58,7 +58,7 @@ function z() {
     );
 }
 function X(e) {
-    return P.A.findActivity(e, (e) => e.type !== k.$pd.CUSTOM_STATUS);
+    return M.A.findActivity(e, (e) => e.type !== k.$pd.CUSTOM_STATUS);
 }
 function q(e) {
     let t = W.get(e);
@@ -81,7 +81,7 @@ function J(e) {
 }
 function ee(e) {
     let t = G.A.getVoiceStateForUser(e);
-    return t?.channelId != null && M.A.canWithPartialContext(k.xBc.VIEW_CHANNEL, { channelId: t.channelId })
+    return t?.channelId != null && P.A.canWithPartialContext(k.xBc.VIEW_CHANNEL, { channelId: t.channelId })
         ? t.channelId
         : null;
 }
@@ -139,7 +139,7 @@ function en(e, t, n) {
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: y.A,
                     VoiceStateStore: G.A,
-                    PermissionStore: M.A,
+                    PermissionStore: P.A,
                     GuildStore: b.A,
                 }) !== o.Gy.CAN_JOIN
             )
@@ -209,7 +209,7 @@ function en(e, t, n) {
         id: n,
         voiceChannels: H,
         isSpotifyActivity: F,
-        priorityMembers: h.map((e) => ({ user: e, status: P.A.getStatus(e.id) })),
+        priorityMembers: h.map((e) => ({ user: e, status: M.A.getStatus(e.id) })),
         partiedMembers: _,
         showPlayingMembers: p,
         guildContext: a,
@@ -317,8 +317,8 @@ function es() {
 class el extends a.Ay.Store {
     static displayName = "NowPlayingViewStore";
     initialize() {
-        (this.syncWith([w.default, f.A, P.A, v.A, G.A, L.A, U.A, D.A, g.A], es),
-            this.waitFor(f.A, L.A, y.A, D.A, v.A, p.A, b.A, M.A, P.A, U.A, g.A, w.default, G.A));
+        (this.syncWith([w.default, f.A, M.A, v.A, G.A, L.A, U.A, D.A, g.A], es),
+            this.waitFor(f.A, L.A, y.A, D.A, v.A, p.A, b.A, P.A, M.A, U.A, g.A, w.default, G.A));
     }
     get currentActivityParties() {
         return H;

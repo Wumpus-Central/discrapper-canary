@@ -1,8 +1,8 @@
 r.d(e, { A: () => c });
 var i = r(582128),
-    s = r(435558),
-    n = r(17928),
-    l = r(633075),
+    l = r(435558),
+    s = r(17928),
+    n = r(633075),
     u = r(289173),
     o = r(999291),
     a = r(832163),
@@ -13,8 +13,8 @@ function c(t) {
         c = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
         S = (0, d.w)({ userIds: c }),
         I = (0, d.mn)({ userIds: c }),
-        _ = (0, d.tR)(c),
-        p = (0, n.yK)(
+        A = (0, d.tR)(c),
+        _ = (0, s.yK)(
             [a.A],
             () => {
                 if (r?.widgets == null) return [];
@@ -25,7 +25,7 @@ function c(t) {
                             let r = a.A.getApplicationIdFromDetectableId(e.gameId);
                             null != r && t.add(r);
                         });
-                    else if (e instanceof l.R) {
+                    else if (e instanceof n.R) {
                         let r = a.A.getApplicationIdFromDetectableId(e.applicationId);
                         null != r && t.add(r);
                     }
@@ -34,7 +34,7 @@ function c(t) {
             [r],
         );
     return i.useMemo(
-        () => (r?.application != null ? [] : (0, s.uniq)([...S, ...I, ..._, ...p])),
-        [r?.application, S, I, _, p],
+        () => (r?.application != null ? [] : (0, l.uniq)([...S, ...I, ...A, ..._])),
+        [r?.application, S, I, A, _],
     );
 }

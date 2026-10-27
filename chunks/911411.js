@@ -1,4 +1,4 @@
-(n.d(t, { A: () => C }), n(321073));
+(n.d(t, { A: () => A }), n(321073));
 var i = n(17928),
     l = n(451988),
     r = n(73153),
@@ -29,7 +29,7 @@ class g extends i.Ay.Store {
         return h(e);
     }
 }
-let C = new g(r.h, {
+let A = new g(r.h, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {
@@ -42,9 +42,9 @@ let C = new g(r.h, {
             { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, inviteTime: f } = t;
         if (h(t) || f + o.dm < Date.now()) return n;
         let g = `${l}:${r}`,
-            C = o.dm + Date.now();
+            A = o.dm + Date.now();
         return (
-            (d[g] = { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, expiresAt: C }),
+            (d[g] = { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, expiresAt: A }),
             c.delay(),
             !0
         );

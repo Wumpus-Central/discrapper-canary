@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => G, Gg: () => P, KU: () => U, Qt: () => M, r4: () => w }), n(321073));
+(n.d(t, { Ay: () => G, Gg: () => M, KU: () => U, Qt: () => P, r4: () => w }), n(321073));
 var i,
     r = n(435558),
     a = n(713402),
@@ -28,12 +28,12 @@ var i,
     D = n(165610),
     v = n(731854);
 let b = "__EMBEDDED_ACTIVITIES__";
-function M(e) {
+function P(e) {
     let { applicationId: t, instanceId: n } = e;
     return null != n ? `activity-${t}-${n}` : `activity-${t}`;
 }
-function P(e) {
-    return M({ applicationId: e.applicationId, instanceId: e.id });
+function M(e) {
+    return P({ applicationId: e.applicationId, instanceId: e.id });
 }
 function U(e) {
     switch (e.type) {
@@ -200,7 +200,7 @@ class G {
         let e = this._getEmbeddedActivities(),
             t = e.map((e, t) => ({
                 type: L.lp.ACTIVITY,
-                id: M({ applicationId: e.applicationId, instanceId: e.compositeInstanceId }),
+                id: P({ applicationId: e.applicationId, instanceId: e.compositeInstanceId }),
                 applicationId: e.applicationId,
                 activityType: y.$pd.PLAYING,
                 activityUrl: e.url,
@@ -216,7 +216,7 @@ class G {
                 !e.some((e) => e.applicationId === n.applicationId) &&
                 t.push({
                     type: L.lp.ACTIVITY,
-                    id: P(n),
+                    id: M(n),
                     applicationId: n.applicationId,
                     activityType: y.$pd.PLAYING,
                     activityUrl: n.data.url,

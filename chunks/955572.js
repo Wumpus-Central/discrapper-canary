@@ -6,7 +6,7 @@ n.d(t, {
     E7: () => v,
     Er: () => f,
     FU: () => U,
-    Gm: () => M,
+    Gm: () => P,
     HU: () => p,
     IX: () => O,
     Jb: () => S,
@@ -18,7 +18,7 @@ n.d(t, {
     Xt: () => y,
     YV: () => h,
     kI: () => N,
-    n8: () => P,
+    n8: () => M,
     qz: () => T,
     ts: () => C,
     uS: () => E,
@@ -112,10 +112,10 @@ function v(e) {
 function b(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST_MODE", contrastMode: e });
 }
-function M(e) {
+function P(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED", switchIconsEnabled: e });
 }
-function P(e) {
+function M(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_CHAT_BAR_SETTINGS", ...e });
 }
 function U(e) {

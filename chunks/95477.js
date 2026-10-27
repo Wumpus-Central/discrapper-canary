@@ -92,8 +92,8 @@ function L(e) {
             trailing: D,
             validateOn: v = "change",
             size: b = "md",
-            fullWidth: M = !1,
-            clearable: P = !1,
+            fullWidth: P = !1,
+            clearable: M = !1,
             showCharacterCount: U = !1,
             ...w
         } = e,
@@ -117,7 +117,7 @@ function L(e) {
         Y = w.readOnly;
     null == Y && !1 === n && (Y = !0);
     let K = null;
-    ("boolean" == typeof P ? P && null != h && "" !== h && !Y : P.show)
+    ("boolean" == typeof M ? M && null != h && "" !== h && !Y : M.show)
         ? (K = (0, i.jsx)(R, {
               inputSize: b,
               onClick: function (e) {
@@ -139,7 +139,7 @@ function L(e) {
             ref: W,
             disabled: t,
             validation: k,
-            fullWidth: M,
+            fullWidth: P,
             readOnly: Y,
             className: s()(N.container, N[b], {
                 [N.hasLeading]: null != $,

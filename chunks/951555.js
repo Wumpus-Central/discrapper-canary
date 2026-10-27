@@ -18,8 +18,8 @@ var i = n(477900),
     p = n(457287),
     T = n(637141),
     f = n(688810),
-    I = n(277984),
-    _ = n(160946),
+    _ = n(277984),
+    I = n(160946),
     N = n(351906),
     C = n(295405),
     y = n(97352),
@@ -76,7 +76,7 @@ function k(e) {
             C.A.hasFetchedPaymentSources,
             C.A.paymentSourceFetchError,
         ]),
-        Y = (0, _.Y)((0, j.MP)(t)),
+        Y = (0, I.Y)((0, j.MP)(t)),
         { analyticsLocations: X } = (0, f.Ay)(),
         H = s.useMemo(() => {
             let e = L.checkoutContext;
@@ -200,7 +200,7 @@ function k(e) {
                 (0, i.jsx)(E.w, { type: "critical", message: M.intl.string(M.t["5mlOCW"]), role: "alert" }),
                 (0, i.jsx)(c.$, {
                     variant: "secondary",
-                    onClick: () => (0, I.$o)(),
+                    onClick: () => (0, _.$o)(),
                     text: M.intl.string(M.t["5911Lb"]),
                 }),
             ],

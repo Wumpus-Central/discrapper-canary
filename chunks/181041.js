@@ -1,4 +1,4 @@
-(n.d(t, { A: () => P }), n(321073));
+(n.d(t, { A: () => M }), n(321073));
 var i = n(635377),
     r = n.n(i),
     a = n(17928),
@@ -92,7 +92,7 @@ function b(e) {
     let n = v(e);
     return t || n;
 }
-class M extends a.Ay.Store {
+class P extends a.Ay.Store {
     static displayName = "ChannelConversationsStore";
     initialize() {
         this.waitFor(o.default, d.A, f.A, c.A, u.Ay, _.default);
@@ -147,7 +147,7 @@ class M extends a.Ay.Store {
         return T.peek(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
     }
 }
-let P = new M(s.h, {
+let M = new P(s.h, {
     CONVERSATION_MESSAGES_FETCH_START: function (e) {
         var t;
         let n,

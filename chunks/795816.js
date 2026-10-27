@@ -40,8 +40,8 @@ var i = n(562708),
     D = n(113267),
     v = n(625180),
     b = n(25451),
-    M = n(451909),
-    P = n(195880),
+    P = n(451909),
+    M = n(195880),
     U = n(567249),
     w = n(192552),
     G = n(280450),
@@ -96,8 +96,8 @@ async function ed(e) {
         C = N?.getGuildId() ?? void 0;
     if (null == C && !N?.isPrivate()) return !1;
     let R = m.A.getApplication(i),
-        M = null != R && (0, b.X)(R),
-        w = (0, P.m)();
+        P = null != R && (0, b.X)(R),
+        w = (0, M.m)();
     try {
         if (U.A.getWindowOpen(ei.MLl.ACTIVITY_POPOUT)) {
             let { close: e } = n(574172);
@@ -105,10 +105,10 @@ async function ed(e) {
         }
         if (
             (!0 !== T && v.A.clearMainFrameSlot(),
-            M && (0, O.A)(t),
+            P && (0, O.A)(t),
             (0, et.y)({ applicationId: i, launch: { customId: I, referrerId: f } }))
         ) {
-            if (!M) return !0;
+            if (!P) return !0;
             return (
                 (0, Q.j)(i, {
                     isStart: s,
@@ -200,7 +200,7 @@ async function ed(e) {
         }
         o.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: w, applicationId: i, channelId: t ?? null });
     } catch (n) {
-        if (M) return !1;
+        if (P) return !1;
         let e = null != C ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
         return (
             o.h.dispatch({
@@ -434,7 +434,7 @@ async function eh(e) {
         d = await c.A.ensurePrivateChannel(r),
         u = x.A.getChannel(d);
     if (null == u) throw Error("Private channel not found");
-    (null != l && (t = M.Ay.parse(u, l).content), E.A.sendInvite(d, o.code, a, s, t));
+    (null != l && (t = P.Ay.parse(u, l).content), E.A.sendInvite(d, o.code, a, s, t));
 }
 function ef() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ea.i.INDIRECT_ACTION;
@@ -476,7 +476,7 @@ async function em(e, t) {
         return (
             o.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: (0, P.m)(),
+                nonce: (0, M.m)(),
                 applicationId: e,
                 channelId: t,
                 guildId: i,

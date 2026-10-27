@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Z2: "productIcon__4c629",
     Ke: "productIconSmall__4c629",
     EX: "productIconLarge__4c629",

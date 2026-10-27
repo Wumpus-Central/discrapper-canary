@@ -1,4 +1,4 @@
-n.d(t, { A: () => e2 });
+n.d(t, { A: () => e8 });
 var a = n(477900),
     l = n(582128),
     r = n(435558),
@@ -1009,14 +1009,14 @@ function e0(e) {
         : ev;
 }
 var e1 = n(996988);
-let e8 = {
+let e2 = {
     [e1.d.POPOUT]: 12,
     [e1.d.MODAL]: 26,
     [e1.d.SIDEBAR]: 13,
     [e1.d.VIDEO_TILE_BACKGROUND]: 12,
     [e1.d.EMBED]: 12,
 };
-function e2(e) {
+function e8(e) {
     let t,
         {
             displayProfile: n,
@@ -1053,7 +1053,7 @@ function e2(e) {
             ? [D.slice(0, d.k9)]
             : g === e1.d.MODAL_V2
               ? [D]
-              : (0, r.chunk)(D, !0 === p && g === e1.d.SIDEBAR ? e8[e1.d.POPOUT] : e8[g])),
+              : (0, r.chunk)(D, !0 === p && g === e1.d.SIDEBAR ? e2[e1.d.POPOUT] : e2[g])),
         (0, a.jsx)(a.Fragment, {
             children: t.map((e, t) =>
                 (0, a.jsx)(

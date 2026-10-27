@@ -1,4 +1,4 @@
-(n.d(t, { A: () => C }), n(667532));
+(n.d(t, { A: () => A }), n(667532));
 var i = n(17928),
     l = n(73153),
     r = n(95701),
@@ -50,7 +50,7 @@ class g extends i.Ay.PersistedStore {
         return c;
     }
 }
-let C = new g(l.h, {
+let A = new g(l.h, {
     POST_CONNECTION_OPEN: function () {
         ((d = new Set([...u])), (h = new Set([...c])));
     },

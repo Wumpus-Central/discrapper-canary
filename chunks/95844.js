@@ -28,10 +28,10 @@ var i = n(858899),
     D = n(572164),
     v = n(696016),
     b = n(652215),
-    M = n(325278),
-    P = n(731854);
+    P = n(325278),
+    M = n(731854);
 function U() {
-    return f.Ay.getMediaEngine().supports(P.O5.UNIFIED_CAPTURE_BROKER);
+    return f.Ay.getMediaEngine().supports(M.O5.UNIFIED_CAPTURE_BROKER);
 }
 class w extends m.A {
     actions = {
@@ -85,7 +85,7 @@ class w extends m.A {
         let { userId: t, channelId: n, guildId: i } = e;
         (this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t));
         let r = O.A.getRTCConnection(
-            u._z({ streamType: null != i ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: n, guildId: i }),
+            u._z({ streamType: null != i ? P.U4.GUILD : P.U4.CALL, ownerId: t, channelId: n, guildId: i }),
         );
         null != r && this.applyStreamRecording(t, r);
     }
@@ -123,7 +123,7 @@ class w extends m.A {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
         if (n !== T.x.STREAM || !(0, p.ri)(f.Ay)) return;
         let a = O.A.getRTCConnection(
-            u._z({ streamType: null != r ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: i, guildId: r }),
+            u._z({ streamType: null != r ? P.U4.GUILD : P.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
         null != a && this.applyStreamRecording(t, a);
     }
@@ -266,7 +266,7 @@ class Y extends w {
                 let n = y.Ay.getSettings(),
                     i = (0, D.T)();
                 t.setClipsRecordingEnabled(i);
-                let r = !i && !t.supports(P.O5.UNIFIED_CAPTURE_BROKER);
+                let r = !i && !t.supports(M.O5.UNIFIED_CAPTURE_BROKER);
                 if (
                     (t.setClipBufferLength(r ? 0 : n.clipsLength / 1e3),
                     e?.settings.clipsEnabled === !0 && this.fireClipsInitEvent(),
@@ -310,7 +310,7 @@ class Y extends w {
         if (
             !(0, D.T)() ||
             (!e &&
-                !f.Ay.getMediaEngine().supports(P.O5.UNIFIED_CAPTURE_BROKER) &&
+                !f.Ay.getMediaEngine().supports(M.O5.UNIFIED_CAPTURE_BROKER) &&
                 null != A.A.getCurrentUserActiveStream())
         )
             return;

@@ -4,7 +4,7 @@
     CD: () => g,
     vP: () => y,
     pT: () => b,
-    nR: () => M,
+    nR: () => P,
     un: () => v,
     wd: () => R,
     Tu: () => L,
@@ -311,7 +311,7 @@ function b(e) {
             is_widget_removed: d,
         }));
 }
-function M(e) {
+function P(e) {
     let { guildId: t, channelId: n, analyticsLocations: r, action: a, wishlistId: s, skuId: l, productLines: o } = e;
     (O({ ...e, action: a }),
         _.default.track(p.HAw.USER_PROFILE_WISHLIST_ACTION, {

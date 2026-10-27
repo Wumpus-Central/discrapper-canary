@@ -1,55 +1,55 @@
-n.d(t, { s: () => o });
-var l = n(927578),
-    i = n(930363),
-    s = n(724651),
-    r = n(732280),
+n.d(i, { s: () => p });
+var r = n(927578),
+    e = n(930363),
+    l = n(724651),
+    u = n(732280),
     a = n(511484),
-    u = n(202541),
-    d = n(105292);
-function o(e) {
-    var t;
-    let { subscriptionTier: n, hasActivePromotion: o = !1, useShorterCTA: c = !1, isPersistentCTA: f = !1 } = e,
-        h = (0, r.V)(),
-        b = h?.subscriptionTrial,
-        g = (0, s.O)(),
-        p = (0, a.U9)(g, u.pe.TIER_2) ? u.pe.TIER_2 : void 0,
-        m = (0, l.tS)({ intervalType: b?.interval, intervalCount: b?.intervalCount }),
-        A = n ?? h?.subscriptionTrial?.skuId ?? p,
-        v = null != b && A === b.skuId,
-        T = null != g && u.U4.includes(g.discountId);
+    s = n(202541),
+    o = n(105292);
+function p(t) {
+    var i;
+    let { subscriptionTier: n, hasActivePromotion: p = !1, useShorterCTA: T = !1, isPersistentCTA: c = !1 } = t,
+        d = (0, u.V)(),
+        v = d?.subscriptionTrial,
+        b = (0, l.O)(),
+        k = (0, a.U9)(b, s.pe.TIER_2) ? s.pe.TIER_2 : void 0,
+        f = (0, r.tS)({ intervalType: v?.interval, intervalCount: v?.intervalCount }),
+        C = n ?? d?.subscriptionTrial?.skuId ?? k,
+        I = null != v && C === v.skuId,
+        h = null != b && s.U4.includes(b.discountId);
     return {
-        buttonText: o
-            ? d.intl.string(d.t.J61px0)
-            : null != g
-              ? ((t = g.discount.amount),
-                c || f
-                    ? d.intl.string(d.t.fkPGat)
-                    : A === u.pe.TIER_2
-                      ? d.intl.formatToPlainString(T ? d.t.ZhPpOu : d.t.bkQ4bH, { percent: t })
+        buttonText: p
+            ? o.intl.string(o.t.J61px0)
+            : null != b
+              ? ((i = b.discount.amount),
+                T || c
+                    ? o.intl.string(o.t.fkPGat)
+                    : C === s.pe.TIER_2
+                      ? o.intl.formatToPlainString(h ? o.t.ZhPpOu : o.t.bkQ4bH, { percent: i })
                       : void 0)
-              : (function (e) {
+              : (function (t) {
                     let {
-                            showTrialCTA: t,
+                            showTrialCTA: i,
                             subscriptionTier: n,
-                            trialDurationCopy: s,
-                            isPersistentCTA: r,
+                            trialDurationCopy: l,
+                            isPersistentCTA: u,
                             userTrialOffer: a,
-                        } = e,
-                        o = a?.subscriptionTrial;
-                    return t && a?.isReferralTrial === !0
-                        ? ((0, i.T)(a, n) ?? d.intl.string(d.t.bXTClc))
-                        : t && (n === u.pe.TIER_2 || r)
-                          ? (0, l.FY)({ intervalType: o?.interval, intervalCount: o?.intervalCount })
-                          : t
-                            ? d.intl.formatToPlainString(d.t.nTmm2v, { freeTrialText: s })
+                        } = t,
+                        p = a?.subscriptionTrial;
+                    return i && a?.isReferralTrial === !0
+                        ? ((0, e.T)(a, n) ?? o.intl.string(o.t.bXTClc))
+                        : i && (n === s.pe.TIER_2 || u)
+                          ? (0, r.FY)({ intervalType: p?.interval, intervalCount: p?.intervalCount })
+                          : i
+                            ? o.intl.formatToPlainString(o.t.nTmm2v, { freeTrialText: l })
                             : void 0;
                 })({
-                    showTrialCTA: v,
-                    subscriptionTier: A,
-                    trialDurationCopy: m,
-                    isPersistentCTA: f,
-                    userTrialOffer: h,
+                    showTrialCTA: I,
+                    subscriptionTier: C,
+                    trialDurationCopy: f,
+                    isPersistentCTA: c,
+                    userTrialOffer: d,
                 }),
-        marketingSubscriptionTierSkuId: A,
+        marketingSubscriptionTierSkuId: C,
     };
 }

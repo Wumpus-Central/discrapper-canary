@@ -4,8 +4,8 @@
     DS: () => W,
     G3: () => k,
     IS: () => A,
-    N5: () => P,
-    Ri: () => M,
+    N5: () => M,
+    Ri: () => P,
     X7: () => G,
     Xx: () => O,
     Xy: () => h,
@@ -122,7 +122,7 @@ function b(e, t) {
         s = i?.endDate != null ? r.clone().add(i.endDate.diff(i.startDate)) : void 0;
     return { startDate: r, endDate: s };
 }
-function M(e, t) {
+function P(e, t) {
     if (null == t) return e;
     let n = t.scheduled_end_time ?? e.endDate;
     return {
@@ -130,7 +130,7 @@ function M(e, t) {
         endDate: null != n ? a()(n) : void 0,
     };
 }
-function P(e) {
+function M(e) {
     return v(e.scheduledStartTime, e.scheduledEndTime);
 }
 function U(e, t) {

@@ -46,8 +46,8 @@ let L = Symbol("NO GUILD ID"),
     D = new Set(),
     v = new Map(),
     b = new Map(),
-    M = {},
-    P = new Map(),
+    P = {},
+    M = new Map(),
     U = new Map(),
     w = new Map(),
     G = [],
@@ -130,10 +130,10 @@ function H(e, t) {
         let r = n.expiresAt.getTime() - Date.now();
         r <= 0
             ? i.push(n)
-            : (null == M[e] && (M[e] = { [L]: {} }),
-              null == M[e][t ?? L] && (M[e][t ?? L] = {}),
-              null == M[e][t ?? L][n.skuId] && (M[e][t ?? L][n.skuId] = new l.Ep()),
-              M[e][t ?? L][n.skuId].start(Math.min(O.mnr, r), () => {
+            : (null == P[e] && (P[e] = { [L]: {} }),
+              null == P[e][t ?? L] && (P[e][t ?? L] = {}),
+              null == P[e][t ?? L][n.skuId] && (P[e][t ?? L][n.skuId] = new l.Ep()),
+              P[e][t ?? L][n.skuId].start(Math.min(O.mnr, r), () => {
                   H(e, t);
               }));
     }),
@@ -143,13 +143,13 @@ function H(e, t) {
                 (i.type === a.R.PROFILE_EFFECT
                     ? (n.profileEffect = void 0)
                     : i.type === a.R.PROFILE_FRAME && (n.profileFrame = void 0),
-                    delete M[e]?.[t ?? L]?.[i.skuId]);
+                    delete P[e]?.[t ?? L]?.[i.skuId]);
             }),
             "guildId" in n ? b.get(e)?.set(n.guildId, n) : v.set(e, n),
             ec.emitChange()));
 }
 function j() {
-    (y.clear(), D.clear(), v.clear(), b.clear(), P.clear(), U.clear(), w.clear(), (B = !1));
+    (y.clear(), D.clear(), v.clear(), b.clear(), M.clear(), U.clear(), w.clear(), (B = !1));
 }
 function W(e) {
     let { userId: t } = e;
@@ -173,7 +173,7 @@ function K(e) {
         .value();
 }
 function $(e) {
-    (D.delete(e.userId), P.set(e.userId, K(e.mutualFriends)), U.set(e.userId, e.mutualFriends.length));
+    (D.delete(e.userId), M.set(e.userId, K(e.mutualFriends)), U.set(e.userId, e.mutualFriends.length));
 }
 function z(e) {
     let { userProfile: t, fetchStartedAt: n, guildId: i } = e,
@@ -194,9 +194,9 @@ function z(e) {
     }
     if (null != t.mutual_friends_count) {
         let e = t.mutual_friends_count;
-        (U.set(t.user.id, e), 0 === e && P.set(t.user.id, G));
+        (U.set(t.user.id, e), 0 === e && M.set(t.user.id, G));
     }
-    null != t.mutual_friends && (P.set(t.user.id, K(t.mutual_friends)), U.set(t.user.id, t.mutual_friends.length));
+    null != t.mutual_friends && (M.set(t.user.id, K(t.mutual_friends)), U.set(t.user.id, t.mutual_friends.length));
     let a = null != t.premium_since ? new Date(t.premium_since) : null,
         s = null != t.premium_guild_since ? new Date(t.premium_guild_since) : null,
         l = t.application,
@@ -327,7 +327,7 @@ function Z(e) {
         let e = b.get(t)?.get(n);
         null != e && ((e.fetchStartedAt = r), (e.fetchEndedAt = s), (e.fetchError = i));
     }
-    i?.status === 404 && (U.set(t, 0), P.set(t, G), w.set(t, x));
+    i?.status === 404 && (U.set(t, 0), M.set(t, G), w.set(t, x));
 }
 function Q(e) {
     B = !0;
@@ -481,7 +481,7 @@ class ed extends A.A {
         return null == t ? null : (b.get(e)?.get(t) ?? null);
     }
     getMutualFriends(e) {
-        return P.get(e);
+        return M.get(e);
     }
     getMutualFriendsCount(e) {
         return U.get(e);

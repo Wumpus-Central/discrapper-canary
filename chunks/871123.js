@@ -3,7 +3,7 @@
     NE: () => C,
     OY: () => F,
     Q6: () => B,
-    S4: () => P,
+    S4: () => M,
     Ww: () => v,
     Ye: () => j,
     aU: () => V,
@@ -105,15 +105,15 @@ function b(e) {
     let t = D(e);
     return null == t || 1 !== t.length ? {} : { initialPlanId: t[0], shouldDisallowPlanSelection: !0 };
 }
-function M(e) {
+function P(e) {
     if (null == e) return null;
     let t = new Date(e);
     return Number.isNaN(t.getTime()) ? null : t;
 }
-function P(e) {
+function M(e) {
     return {
         id: e.id,
-        publishedAt: M(e.published_at),
+        publishedAt: P(e.published_at),
         title: e.title,
         logoAssetId: e.logo_asset_id ?? null,
         lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null,
@@ -122,7 +122,7 @@ function P(e) {
 function U(e) {
     return {
         id: e.id,
-        publishedAt: M(e.published_at),
+        publishedAt: P(e.published_at),
         applicationId: e.application_id,
         title: e.title,
         logoAssetId: e.logo_asset_id,

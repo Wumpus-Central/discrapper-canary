@@ -1,7 +1,7 @@
-e.d(n, { A: () => l });
-var r = e(17928),
-    u = e(918467);
-function l(t) {
-    let n = (0, r.bG)([u.A], () => u.A.getPromotionsForApplication(t));
-    return n?.[0] ?? null;
+p.d(i, { A: () => r });
+var n = p(17928),
+    o = p(918467);
+function r(t) {
+    let i = (0, n.bG)([o.A], () => o.A.getPromotionsForApplication(t));
+    return i?.[0] ?? null;
 }

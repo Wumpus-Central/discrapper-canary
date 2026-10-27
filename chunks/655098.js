@@ -30,8 +30,8 @@ var l = n(477900),
     R = n(454908),
     O = n(106191),
     w = n(545868),
-    M = n(376943),
-    L = n(465365),
+    L = n(376943),
+    M = n(465365),
     P = n(78390),
     D = n(785562),
     U = n(332173),
@@ -141,9 +141,9 @@ function el(e) {
         r = "text",
         s = !0;
     return (null != n &&
-        ((i = (0, M.nc)(n) ? (0, _.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
-        (r = (0, M.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
-        (s = (0, L.Y)(n.type))),
+        ((i = (0, L.nc)(n) ? (0, _.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
+        (r = (0, L.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
+        (s = (0, M.Y)(n.type))),
     s)
         ? (0, l.jsx)(U.A, { iconType: r, children: i })
         : (0, l.jsx)("span", { children: "#" + i });

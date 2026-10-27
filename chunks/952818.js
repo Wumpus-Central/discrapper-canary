@@ -35,8 +35,8 @@ var y = n(871633),
     D = n(760751),
     v = n(189081),
     b = n(287809),
-    M = n(340829),
-    P = n(174459),
+    P = n(340829),
+    M = n(174459),
     U = n(927813),
     w = n(339586),
     G = n(403362),
@@ -164,11 +164,11 @@ function eb() {
     let e = er;
     null != (er = ee.find(eH) ?? null) && (er.start = null != e && e.pid === er.pid ? e.start : Date.now());
 }
-function eM() {
-    let { games: e, changed: t } = ea.resolve(ee);
-    return (e !== ee && ((ee = e), eP()), t);
-}
 function eP() {
+    let { games: e, changed: t } = ea.resolve(ee);
+    return (e !== ee && ((ee = e), eM()), t);
+}
+function eM() {
     if ((ee = ea.resolve(ee).games).length > 0) {
         let e = ei;
         ((ei = ee[0]), null != e && ei.pid === e.pid ? (ei.start = e.start) : (ei.start = Date.now()));
@@ -332,7 +332,7 @@ function eY() {
             .reduce((t, n) => {
                 let i = D.A.getDetectableGame(n.id);
                 if (null == i) return t;
-                for (let r of M.A.getLaunchOptions(n.id, n.branchId)) {
+                for (let r of P.A.getLaunchOptions(n.id, n.branchId)) {
                     let a = `${n.id}:${n.branchId}`;
                     Z.has(a) || ((e = !0), Z.add(a));
                     let { fullExecutablePath: s } = r,
@@ -532,7 +532,7 @@ if (Y) {
                         let e = eu.gameOverrides[eU(t)];
                         e?.add === !0 && t.hidden && ((ec[eU(t)] = !0), (t.hidden = !1));
                     }
-                    ((en = a), (eo = n), (i = r), eP(), (el = en.length > 0 ? en[0] : null));
+                    ((en = a), (eo = n), (i = r), eM(), (el = en.length > 0 ? en[0] : null));
                     let c = [];
                     for (let e of en) e.pid in ep || ((ep[e.pid] = e), c.push(e));
                     let _ = [];
@@ -555,7 +555,7 @@ if (Y) {
                             r = D.A.findGame(i),
                             a = D.A.findGame(e),
                             s = (e?.id !== "4294967293" ? e?.id : a?.id) ?? "";
-                        P.default.track(H.HAw.GAME_DETECTION_COMPARISON, {
+                        M.default.track(H.HAw.GAME_DETECTION_COMPARISON, {
                             game_platform: H.yTV.DESKTOP,
                             detection_method: "process_observer_v2",
                             game_v1: i.name,
@@ -630,10 +630,10 @@ class eq extends d.Ay.Store {
         )
             for (let n of e.gamesSeen)
                 "number" == typeof n.id && ((n.nativeProcessObserverId = n.id), delete n.id, (t = !0));
-        (this.waitFor(D.A, F.A, M.A, f.A, I.A, p.A, v.A, b.default),
+        (this.waitFor(D.A, F.A, P.A, f.A, I.A, p.A, v.A, b.default),
             (K = e.gamesSeen.filter((e) => !(0, y.n1)(e))),
             this.syncWith([I.A], eX),
-            this.syncWith([v.A, D.A, M.A], a().throttle(eY, 1e3)),
+            this.syncWith([v.A, D.A, P.A], a().throttle(eY, 1e3)),
             this.syncWith([p.A], eF),
             t && ej());
     }
@@ -812,7 +812,7 @@ let eZ = new eq(u.h, {
                 e$(ee),
                 eK(),
                 ej(),
-                eP());
+                eM());
         },
         RUNNING_GAME_TOGGLE_OVERLAY: function (e) {
             let { game: t, newLegacyOverlayEnabledValue: n, newOverlayV3EnabledValue: i } = e,
@@ -833,7 +833,7 @@ let eZ = new eq(u.h, {
             ((eu.enableDetection[eU(t)] = !n),
                 ej(),
                 eb(),
-                P.default.track(H.HAw.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n }));
+                M.default.track(H.HAw.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n }));
         },
         RUNNING_GAME_EDIT_NAME: function (e) {
             if (null != e.game.processGame) return !1;
@@ -864,7 +864,7 @@ let eZ = new eq(u.h, {
             }),
                 eK(),
                 ej(),
-                a && eP());
+                a && eM());
         },
         RUNNING_GAME_DELETE_ENTRY: function (e) {
             let t = eU(e.game);
@@ -877,12 +877,12 @@ let eZ = new eq(u.h, {
                         t === eU(e) && (e.hidden = !0);
                     }),
                     delete ec[t]),
-                ee.some((e) => eU(e) === t) && eP(),
+                ee.some((e) => eU(e) === t) && eM(),
                 eK(),
                 ej());
         },
         GAMES_DATABASE_UPDATE: function () {
-            return (e_(), eM());
+            return (e_(), eP());
         },
         GAMES_DATABASE_FETCH_FAIL: e_,
         NON_GAMES_DATABASE_UPDATE: e_,
@@ -913,7 +913,7 @@ let eZ = new eq(u.h, {
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
-                P.default.track(H.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
+                M.default.track(H.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: z,
                     paths: t,
                     debugging_level: eg,
@@ -925,11 +925,11 @@ let eZ = new eq(u.h, {
             for (let e of n) q[e] = t;
         },
         RUNNING_GAME_SET_DEBUG_GAME: function (e) {
-            (null != et && (ee = ee.filter((e) => e !== et)), null != (et = e.game) && (ee = [et, ...ee]), eP());
+            (null != et && (ee = ee.filter((e) => e !== et)), null != (et = e.game) && (ee = [et, ...ee]), eM());
         },
         SOCIAL_SDK_GAMES_UPDATE: function (e) {
             let { canonicalGameIdByPid: t } = e;
-            return (ea.setCanonicalGameIds(t), eM());
+            return (ea.setCanonicalGameIds(t), eP());
         },
     }),
     eQ = eZ;

@@ -126,22 +126,22 @@ let y = function (e) {
         for (let e of t.values()) L(n, { ...e, type: "keyup" });
     },
     b = { muted: !1 },
-    M = new Map(),
-    P = new Map();
+    P = new Map(),
+    M = new Map();
 function U(e) {
     let t = a.A.getFrameByIframeId(e);
-    return null == t ? (P.get(e) ?? b) : { muted: t.data.muted };
+    return null == t ? (M.get(e) ?? b) : { muted: t.data.muted };
 }
 function w(e) {
     let t = U(e);
-    return (P.set(e, t), { type: i.Ii.STATE_UPDATED, state: t });
+    return (M.set(e, t), { type: i.Ii.STATE_UPDATED, state: t });
 }
 function G() {
     return { type: i.Ii.KEYBINDS_UPDATED, keybinds: [...O().values()] };
 }
 function x(e) {
     let { iframeId: t, pipe: n } = e,
-        r = M.get(t);
+        r = P.get(t);
     (null == r &&
         ((r = (function (e) {
             let { onConnect: t, onMessage: n } = e,
@@ -171,21 +171,21 @@ function x(e) {
                       : e.type === i._i.KEYBIND_CAPTURED && D(t, e.keybind);
             },
         })),
-        M.set(t, r),
-        P.set(t, U(t))),
+        P.set(t, r),
+        M.set(t, U(t))),
         r.offer(n));
 }
 function k(e) {
     let { id: t } = e,
-        n = M.get(t);
-    null != n && (M.delete(t), P.delete(t), n.close());
+        n = P.get(t);
+    null != n && (P.delete(t), M.delete(t), n.close());
 }
 function F() {
     let e = G();
-    for (let t of M.values()) t.dispatch(e);
+    for (let t of P.values()) t.dispatch(e);
 }
 function B() {
-    for (let [e, t] of M) t.dispatch(w(e));
+    for (let [e, t] of P) t.dispatch(w(e));
 }
 class V extends r.A {
     actions = { EMBEDDED_APP_SHIM_PIPE_OPEN: x };
@@ -198,9 +198,9 @@ class V extends r.A {
         for (let e of (s._.unsubscribe(T.jej.IFRAME_UNMOUNT, k),
         this._unsubscribeKeybinds?.(),
         (this._unsubscribeKeybinds = null),
-        M.values()))
+        P.values()))
             e.close();
-        M.clear();
+        P.clear();
     }
 }
 let H = new V();

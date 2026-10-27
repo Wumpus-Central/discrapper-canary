@@ -18,23 +18,23 @@ var i = n(477900),
     p = n(235986),
     T = n(39190),
     f = n(73153),
-    I = n(380098);
-let _ = [],
+    _ = n(380098);
+let I = [],
     N = !1;
 function C(e) {
     let { payment: t } = e,
-        n = I.A.createFromServer(t),
-        i = _.findIndex((e) => e.id === t.id);
-    (-1 === i ? (_.push(n), _.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (_[i] = n),
-        (_ = [..._]));
+        n = _.A.createFromServer(t),
+        i = I.findIndex((e) => e.id === t.id);
+    (-1 === i ? (I.push(n), I.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (I[i] = n),
+        (I = [...I]));
 }
 class y extends d.Ay.Store {
     static displayName = "PaymentStore";
     getPayment(e) {
-        return _.find((t) => t.id === e);
+        return I.find((t) => t.id === e);
     }
     getPayments() {
-        return _;
+        return I;
     }
     get hasFetchedPayments() {
         return N;
@@ -44,11 +44,11 @@ let b = new y(f.h, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of ((N = !0), t)) {
-            let t = I.A.createFromServer(e),
-                n = _.findIndex((t) => t.id === e.id);
-            -1 !== n ? (_[n] = t) : _.push(t);
+            let t = _.A.createFromServer(e),
+                n = I.findIndex((t) => t.id === e.id);
+            -1 !== n ? (I[n] = t) : I.push(t);
         }
-        (_.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (_ = [..._]));
+        (I.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (I = [...I]));
     },
     BILLING_PAYMENTS_FETCH_FAIL: function () {
         N = !0;
@@ -56,7 +56,7 @@ let b = new y(f.h, {
     PAYMENT_UPDATE: C,
     BILLING_PAYMENT_FETCH_SUCCESS: C,
     LOGOUT: function () {
-        ((_ = []), (N = !1));
+        ((I = []), (N = !1));
     },
 });
 var v = n(97352),
@@ -108,17 +108,17 @@ var L = n(536637),
     ep = n(58703),
     eT = n(580630),
     ef = n(427262),
-    eI = n(219887),
-    e_ = n(652215),
+    e_ = n(219887),
+    eI = n(652215),
     eN = n(202541),
     eC = n(818348),
     ey = n(105292),
     eb = n(460103);
-let ev = (e) => `https://${e_.XlF}/hc/${e.toLowerCase()}/requests/new?ticket_form_id=360000118612`,
-    ej = [e_.Puh.DURABLE_PRIMARY, e_.Puh.DURABLE, e_.Puh.CONSUMABLE],
-    eO = [e_.__0.FAILED, e_.__0.REVERSED, e_.__0.CANCELED],
+let ev = (e) => `https://${eI.XlF}/hc/${e.toLowerCase()}/requests/new?ticket_form_id=360000118612`,
+    ej = [eI.Puh.DURABLE_PRIMARY, eI.Puh.DURABLE, eI.Puh.CONSUMABLE],
+    eO = [eI.__0.FAILED, eI.__0.REVERSED, eI.__0.CANCELED],
     eL = [eC.kM.APPLE],
-    eR = [e_.hes.PAYSAFE_CARD],
+    eR = [eI.hes.PAYSAFE_CARD],
     eD = new Set([eC.kM.STRIPE, eC.kM.BRAINTREE, eC.kM.ADYEN]);
 function eP(e) {
     return e.find((e) => null != e.paymentGateway && eD.has(e.paymentGateway)) ?? e[0];
@@ -175,7 +175,7 @@ class eV extends s.PureComponent {
             rule: "SKU_TYPE",
             canRefund: () => {
                 let e = this.receiptPayment;
-                return null == e.sku || e.sku.type !== e_.Puh.CONSUMABLE;
+                return null == e.sku || e.sku.type !== eI.Puh.CONSUMABLE;
             },
         },
         { rule: "ALREADY_REFUNDED", canRefund: () => this.purchaseAmountRefunded < this.purchaseAmount },
@@ -204,14 +204,14 @@ class eV extends s.PureComponent {
             rule: "SKU_STICKER_PACK",
             canRefund: () => {
                 let e = this.receiptPayment;
-                return null == e.sku || !(0, P.Lt)(e.sku.flags, e_.d68.STICKER);
+                return null == e.sku || !(0, P.Lt)(e.sku.flags, eI.d68.STICKER);
             },
         },
         {
             rule: "SUBSCRIPTION_TYPE",
             canRefund: () => {
                 let e = this.receiptPayment;
-                return e.subscription?.type !== e_.rzx.GUILD && e.subscription?.type !== e_.rzx.APPLICATION;
+                return e.subscription?.type !== eI.rzx.GUILD && e.subscription?.type !== eI.rzx.APPLICATION;
             },
         },
         {
@@ -260,16 +260,16 @@ class eV extends s.PureComponent {
     }
     renderDefaultStatus() {
         switch (this.receiptPayment.status) {
-            case e_.__0.PENDING:
+            case eI.__0.PENDING:
                 return (0, i.jsx)("span", { className: eb.Xg, children: ey.intl.string(ey.t.y7F0Re) });
-            case e_.__0.FAILED:
+            case eI.__0.FAILED:
                 return (0, i.jsx)("span", { className: eb.ob, children: ey.intl.string(ey.t.Yo4ru6) });
-            case e_.__0.REVERSED:
+            case eI.__0.REVERSED:
                 return (0, i.jsx)("span", { className: eb.ob, children: ey.intl.string(ey.t.YQv9Li) });
-            case e_.__0.CANCELED:
+            case eI.__0.CANCELED:
                 return (0, i.jsx)("span", { className: eb.ob, children: ey.intl.string(ey.t.ttkBhy) });
         }
-        return this.props.payments.some((e) => e.status === e_.__0.REFUNDED)
+        return this.props.payments.some((e) => e.status === eI.__0.REFUNDED)
             ? this.purchaseAmountRefunded !== this.purchaseAmount
                 ? (0, i.jsx)("span", { className: eb.gD, children: ey.intl.string(ey.t.lYbZzz) })
                 : (0, i.jsx)("span", { className: eb.gD, children: ey.intl.string(ey.t.ZBb6NK) })
@@ -278,7 +278,7 @@ class eV extends s.PureComponent {
     renderTenantStatusOverride() {
         let { hasLinkedToApplication: e } = this.props,
             t = this.receiptPayment;
-        if (!(0, es.bF)(t.sku) || t.status !== e_.__0.COMPLETED) return null;
+        if (!(0, es.bF)(t.sku) || t.status !== eI.__0.COMPLETED) return null;
         let n = t.entitlements ?? [];
         return t.isGift
             ? n.some((e) => null != e.gifterId)
@@ -333,7 +333,7 @@ class eV extends s.PureComponent {
             null != e.paymentSource ? e.paymentSource : e.paymentGateway === eC.kM.APPLE_PARTNER ? new ec.Pw({}) : null;
         return null == t
             ? null
-            : (0, i.jsx)(eI.A, {
+            : (0, i.jsx)(e_.A, {
                   paymentSource: t,
                   locale: this.props.locale,
                   descriptionClassName: eb.iL,
@@ -431,7 +431,7 @@ class eV extends s.PureComponent {
             } = this.props,
             a = this.receiptPayment,
             o = a.entitlements?.some((e) => e.isFulfilled());
-        return a.status === e_.__0.REFUNDED
+        return a.status === eI.__0.REFUNDED
             ? (0, i.jsxs)(s.Fragment, {
                   children: [
                       (0, i.jsx)(F.H, { className: eb.mW, children: ey.intl.string(ey.t["gIGB/A"]) }),
@@ -492,7 +492,7 @@ class eV extends s.PureComponent {
                                             null != a.sku &&
                                                 null != n &&
                                                 (ex.default.track(
-                                                    e_.HAw.PAYMENT_HISTORY_CONNECT_ACCOUNT_BUTTON_CLICKED,
+                                                    eI.HAw.PAYMENT_HISTORY_CONNECT_ACCOUNT_BUTTON_CLICKED,
                                                     { sku_id: a.sku.id, application_id: n.id, location_stack: r },
                                                 ),
                                                 (0, el.n)({ sku: a.sku, application: n, analyticsLocations: r }));
@@ -600,11 +600,11 @@ class eV extends s.PureComponent {
             { expanded: d } = this.state,
             c = u.sku,
             g = u.subscription,
-            m = null != u.paymentSource && e_.AD1.has(u.paymentSource.type);
+            m = null != u.paymentSource && eI.AD1.has(u.paymentSource.type);
         if (null != g && 0 !== g.items.length) {
             let s = [],
                 a = null;
-            if (g.type === e_.rzx.PREMIUM) {
+            if (g.type === eI.rzx.PREMIUM) {
                 let t;
                 if (
                     (g.items.forEach((e) => {
@@ -620,18 +620,18 @@ class eV extends s.PureComponent {
                     let s = O.Ay.getPremiumType(t);
                     e = (0, i.jsx)(eU, { withGradient: s === eN.PremiumTypes.TIER_2, compactMode: n });
                 }
-            } else if (g.type === e_.rzx.GUILD) {
+            } else if (g.type === eI.rzx.GUILD) {
                 if (null != o) {
                     let e = o.interval === eN.WT.YEAR ? ey.t.V6UFQM : ey.t["6oq128"];
                     (s.push(ey.intl.format(e, { planName: o.name })), (a = o.skuId));
                 }
             } else
-                g.type === e_.rzx.APPLICATION
+                g.type === eI.rzx.APPLICATION
                     ? (null != o && (a = o.skuId),
                       null != l
                           ? s.push(ey.intl.formatToPlainString(ey.t["0wL/VI"], { tier: c?.name }))
                           : s.push(ey.intl.string(ey.t["9czSYu"])))
-                    : (g.type, e_.rzx.GAME_SERVER, g.type);
+                    : (g.type, eI.rzx.GAME_SERVER, g.type);
             ((t = 0 !== s.length ? s.join(", ") : u.description),
                 null == e &&
                     (e = (0, i.jsx)(et.A, {
@@ -781,7 +781,7 @@ function ek(e) {
         o = null != a.sku && ej.includes(a.sku.type),
         u = null != a.sku && o ? a.sku.applicationId : null,
         c = a.sku?.applicationId,
-        g = a.subscription?.type === e_.rzx.APPLICATION,
+        g = a.subscription?.type === eI.rzx.APPLICATION,
         {
             applicationStatistics: m,
             gameApplication: A,
@@ -799,8 +799,8 @@ function ek(e) {
     let S = (0, d.bG)([eg.A], () => eg.A.getGuild(A?.guildId)),
         p = o ? A : void 0,
         T = a.subscription,
-        f = (0, d.bG)([v.A], () => (null != T && T.type !== e_.rzx.PREMIUM ? v.A.get(T.items[0].planId) : null)),
-        I = (0, d.bG)(
+        f = (0, d.bG)([v.A], () => (null != T && T.type !== eI.rzx.PREMIUM ? v.A.get(T.items[0].planId) : null)),
+        _ = (0, d.bG)(
             [em.default],
             () => {
                 let e = a.isGift ? a.entitlements?.find((e) => e.user?.id != null && null != e.gifterId) : null;
@@ -808,11 +808,11 @@ function ek(e) {
             },
             [a],
         ),
-        { analyticsLocations: _ } = (0, q.Ay)(Z.A.BILLING_SETTINGS_BILLING);
+        { analyticsLocations: I } = (0, q.Ay)(Z.A.BILLING_SETTINGS_BILLING);
     return (0, i.jsx)(eV, {
         applicationStatistics: m,
         application: g ? x : p,
-        analyticsLocations: _,
+        analyticsLocations: I,
         guild: S,
         stickerPack: null,
         paymentSources: E,
@@ -821,12 +821,12 @@ function ek(e) {
         className: r,
         payments: t,
         plan: f,
-        claimedGiftUser: I,
+        claimedGiftUser: _,
         hasLinkedToApplication: h,
     });
 }
 var ew = n(949779);
-let eF = new Set([e_.__0.FAILED, e_.__0.CANCELED]);
+let eF = new Set([eI.__0.FAILED, eI.__0.CANCELED]);
 function eB(e) {
     let { payments: t, paymentGroups: n, locale: l, compactMode: a, numPages: o } = e,
         d = s.useRef(null),

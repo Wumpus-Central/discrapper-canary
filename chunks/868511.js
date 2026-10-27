@@ -25,8 +25,8 @@ function S(e) {
             authorizationError: m.A.error,
             authorizing: m.A.isFetchingAuthorization,
         })),
-        [f, I] = s.useState(S ?? ""),
-        [_, N] = s.useState("8080"),
+        [f, _] = s.useState(S ?? ""),
+        [I, N] = s.useState("8080"),
         [C, y] = s.useState("localhost"),
         b = x.test(f);
     async function v() {
@@ -39,27 +39,27 @@ function S(e) {
                 case "proxy":
                     return (0, c.Ay)(n);
             }
-        })(C, _, f);
+        })(C, I, f);
         null != (await d.q1(f, e)) && t();
     }
     s.useEffect(() => d.SH, []);
     let j = null != S && S === f,
         O = j
             ? function () {
-                  (d.cL(), I(""), y(null));
+                  (d.cL(), _(""), y(null));
               }
             : v,
         L = s.useMemo(
             () => [
                 {
                     loading: T,
-                    disabled: !b || 0 === f.length || ("localhost" === C && 0 === _.length),
+                    disabled: !b || 0 === f.length || ("localhost" === C && 0 === I.length),
                     variant: j ? "critical-primary" : "active",
                     text: j ? A.intl.string(A.t.d6TR3I) : A.intl.string(A.t.qwuK5I),
                     onClick: O,
                 },
             ],
-            [f.length, T, j, b, _.length, O, C],
+            [f.length, T, j, b, I.length, O, C],
         );
     return (0, i.jsxs)(r.a, {
         title: A.intl.string(A.t.f8fzky),
@@ -87,7 +87,7 @@ function S(e) {
                             maxLength: 19,
                             error: b ? null : A.intl.string(A.t.gPNgKO),
                             onChange: function (e) {
-                                I(e);
+                                _(e);
                             },
                             disabled: T,
                         }),
@@ -116,7 +116,7 @@ function S(e) {
                               children: (0, i.jsx)(o.k, {
                                   required: !0,
                                   label: A.intl.string(A.t.fF4zxq),
-                                  value: _,
+                                  value: I,
                                   maxLength: 5,
                                   onChange: (e) => N(e),
                                   disabled: T,

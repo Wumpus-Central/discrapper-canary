@@ -576,8 +576,8 @@ class b extends v {
         return this.getUserAgnosticState();
     }
 }
-var M = n(477900),
-    P = n(582128),
+var P = n(477900),
+    M = n(582128),
     U = n(52133);
 function w(e) {
     return e.displayName ?? e.name ?? "<Unknown>";
@@ -730,7 +730,7 @@ function $(e, t) {
     function h() {
         for (var t = arguments.length, r = Array(t), l = 0; l < t; l++) r[l] = arguments[l];
         let o = (function (e) {
-                let [t, n] = (0, P.useState)(e);
+                let [t, n] = (0, M.useState)(e);
                 return (e === t || (0, U.v)(e, t) || n(e), t);
             })(r),
             d = Array.isArray(e) ? e : [e],
@@ -742,14 +742,14 @@ function $(e, t) {
             I = u((e) => (null == s ? e.error : null)),
             p = (0, F.bG)(d, () => i(...o), [o], j);
         return (
-            (0, P.useEffect)(() => {
+            (0, M.useEffect)(() => {
                 A({ queryId: c, args: o, useStoreState: u });
             }, [c, o, u]),
             {
                 data: p === B ? null : p,
                 error: f ?? I,
                 isLoading: _ ?? h,
-                refetch: (0, P.useCallback)(() => {
+                refetch: (0, M.useCallback)(() => {
                     A({ queryId: c, args: o, useStoreState: u, refetch: !0 });
                 }, [c, o, u]),
             }
@@ -801,7 +801,7 @@ let z = {
             ? (function (e, t) {
                   return (n) => {
                       let i = `FluxContainer(${w(n)})`;
-                      class r extends P.Component {
+                      class r extends M.Component {
                           static displayName = i;
                           memoizedGetStateFromStores = G(t);
                           listener = new a.r(e, () => {
@@ -820,12 +820,12 @@ let z = {
                           render() {
                               let { forwardedConnectStoresRef: e, childProps: t } = this.props,
                                   i = this.memoizedGetStateFromStores(t);
-                              return (0, M.jsx)(n, { ref: e, ...t, ...i });
+                              return (0, P.jsx)(n, { ref: e, ...t, ...i });
                           }
                       }
                       function s(e) {
                           let { ref: t, ...n } = e;
-                          return (0, M.jsx)(r, { childProps: n, forwardedConnectStoresRef: t });
+                          return (0, P.jsx)(r, { childProps: n, forwardedConnectStoresRef: t });
                       }
                       return ((s.displayName = `ForwardRef(${i})`), s);
                   };
@@ -833,7 +833,7 @@ let z = {
             : (function (e, t) {
                   return (n) => {
                       let i = `FluxContainer(${w(n)})`;
-                      class r extends P.Component {
+                      class r extends M.Component {
                           static displayName = i;
                           memoizedGetStateFromStores = G(t);
                           listener = new a.r(e, () => {
@@ -851,7 +851,7 @@ let z = {
                           }
                           render() {
                               let e = this.memoizedGetStateFromStores(this.props);
-                              return (0, M.jsx)(n, { ...this.props, ...e });
+                              return (0, P.jsx)(n, { ...this.props, ...e });
                           }
                       }
                       return r;

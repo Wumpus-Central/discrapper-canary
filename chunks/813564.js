@@ -86,8 +86,8 @@ function b(e) {
         }, 1e3);
     return { abortController: t, onRequestProgress: n };
 }
-var M = n(95701),
-    P = n(576705),
+var P = n(95701),
+    M = n(576705),
     U = n(287809),
     w = n(927578),
     G = n(427262),
@@ -102,7 +102,7 @@ function H() {
 }
 function j(e, t) {
     return (
-        t?.guild_id == null || P.A.can(N.xBc.USE_EXTERNAL_SOUNDS, t) || "0" === e.guildId || e.guildId === t?.guild_id
+        t?.guild_id == null || M.A.can(N.xBc.USE_EXTERNAL_SOUNDS, t) || "0" === e.guildId || e.guildId === t?.guild_id
     );
 }
 function W(e, t, n) {
@@ -159,7 +159,7 @@ async function z(e) {
     let t = U.default.getCurrentUser(),
         n = (0, o.A)(),
         i = (0, B.z0)(e);
-    if (null == n || M.Do.has(n.type) || null == i || !w.Ay.canUseCustomCallSounds(t) || !(0, F.lI)()) return;
+    if (null == n || P.Do.has(n.type) || null == i || !w.Ay.canUseCustomCallSounds(t) || !(0, F.lI)()) return;
     await (0, x.E7)();
     let r = "0" === i.guildId ? "0" : i.guildId,
         a = k.A.getSound(r, i.soundId);

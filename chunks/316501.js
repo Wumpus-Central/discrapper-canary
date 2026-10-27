@@ -1,4 +1,4 @@
-(n.d(t, { AD: () => y, Kh: () => _, Pk: () => M, Q_: () => b, Ze: () => D, pF: () => O, sv: () => v }), n(321073));
+(n.d(t, { AD: () => y, Kh: () => _, Pk: () => P, Q_: () => b, Ze: () => D, pF: () => O, sv: () => v }), n(321073));
 var i = n(695497),
     r = n.n(i),
     a = n(506774),
@@ -395,7 +395,7 @@ function b(e) {
         return null;
     }
 }
-function M(e) {
+function P(e) {
     let t = L()?.findKeyboardEventByKeyCode(e) ?? null;
     if (null != t) return t;
     try {

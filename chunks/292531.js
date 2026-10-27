@@ -171,9 +171,9 @@ var D = n(168543),
     v = n(903209),
     b = n(734057);
 n(299091);
-var M = n(721779);
-function P(e, t) {
-    let n = (0, M.Ay)(e);
+var P = n(721779);
+function M(e, t) {
+    let n = (0, P.Ay)(e);
     null != n &&
         0 !== n.length &&
         n.forEach((e) => {
@@ -256,10 +256,10 @@ function P(e, t) {
         });
 }
 function U(e) {
-    (P(e.content ?? null, e.channel_id),
+    (M(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
-            return P(n.content, e.channel_id);
+            return M(n.content, e.channel_id);
         }));
 }
 n(818348);

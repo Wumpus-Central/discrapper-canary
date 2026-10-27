@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     Mz: "text-md/semibold__22234",
     Qs: "content__22234",
     bQ: "contentNoMedia__22234 content__22234",

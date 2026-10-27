@@ -28,8 +28,8 @@ let R = new _.A("GuildMemberStore"),
     D = {},
     v = {},
     b = {},
-    M = !1,
-    P = 0,
+    P = !1,
+    M = 0,
     U = 0,
     w = {},
     G = {},
@@ -46,7 +46,7 @@ function F(e, t) {
     } else for (let t in b) W(t) === e && (B(t), V(t));
 }
 function B(e) {
-    ((P += 1), (w[e] = P));
+    ((M += 1), (w[e] = M));
 }
 function V(e) {
     (j(e) === g.default.getId() && (0, h.G)(W(e)), delete b[e]);
@@ -477,7 +477,7 @@ class eo extends s.Ay.Store {
         return b;
     }
     getCommunicationDisabledVersion() {
-        return P;
+        return M;
     }
     getPendingRoleUpdates(e) {
         return G[e] ?? x;
@@ -493,7 +493,7 @@ class eo extends s.Ay.Store {
 }
 let ed = new eo(l.h, {
     CONNECTION_OPEN: function (e) {
-        (M ? (M = !1) : ((L = {}), (y = {})),
+        (P ? (P = !1) : ((L = {}), (y = {})),
             (b = {}),
             e.guilds.forEach((e) => {
                 J(e);
@@ -514,7 +514,7 @@ let ed = new eo(l.h, {
     },
     CACHE_LOADED: function (e) {
         let { guildMembers: t, guilds: n } = e;
-        ((M = !0), (L = { ...t }), (y = {}), (v = {}), $(n));
+        ((P = !0), (L = { ...t }), (y = {}), (v = {}), $(n));
     },
     CACHE_LOADED_LAZY: function (e) {
         let { guilds: t } = e;
@@ -665,9 +665,9 @@ let ed = new eo(l.h, {
     },
     LOCAL_MESSAGES_LOADED: function (e) {
         if (null == e.guildId || null == C.A.getGuild(e.guildId)) return !1;
-        ((M = !0), (L[e.guildId] = L[e.guildId] ?? {}));
+        ((P = !0), (L[e.guildId] = L[e.guildId] ?? {}));
         let t = !1;
-        for (let n of ((M = !0), (L[e.guildId] = L[e.guildId] ?? {}), e.members))
+        for (let n of ((P = !0), (L[e.guildId] = L[e.guildId] ?? {}), e.members))
             null == L[e.guildId][n.userId] && ((t = !0), (L[e.guildId][n.userId] = n));
         return t;
     },

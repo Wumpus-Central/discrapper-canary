@@ -1,33 +1,33 @@
 a.d(l, { A: () => N });
-var t = a(477900),
-    n = a(582128),
+var n = a(477900),
+    t = a(582128),
     i = a(503698),
     s = a.n(i),
     r = a(17928),
-    c = a(289873),
-    d = a(834730),
+    d = a(289873),
+    c = a(834730),
     o = a(734057),
     h = a(576705),
     u = a(450149),
     v = a(652215),
-    f = a(105292),
-    g = a(142893);
+    g = a(105292),
+    f = a(142893);
 function A(e) {
-    let { isLoading: l, noText: a, noImage: n, previewText: i, className: r } = e;
-    return (0, t.jsx)("div", {
-        className: s()(g.Hd, r),
+    let { isLoading: l, noText: a, noImage: t, previewText: i, className: r } = e;
+    return (0, n.jsx)("div", {
+        className: s()(f.Hd, r),
         children: l
-            ? (0, t.jsx)(c.y, {})
-            : (0, t.jsxs)(t.Fragment, {
+            ? (0, n.jsx)(d.y, {})
+            : (0, n.jsxs)(n.Fragment, {
                   children: [
-                      n ? null : (0, t.jsx)("div", { className: g.js }),
+                      t ? null : (0, n.jsx)("div", { className: f.js }),
                       a
                           ? null
-                          : (0, t.jsx)(d.E, {
+                          : (0, n.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                className: g.pY,
-                                children: i ?? f.intl.string(f.t.uQZTBV),
+                                className: f.pY,
+                                children: i ?? g.intl.string(g.t.uQZTBV),
                             }),
                   ],
               }),
@@ -35,24 +35,24 @@ function A(e) {
 }
 function N(e) {
     let { stream: l, className: a, noText: i = !1, noImage: s = !1 } = e,
-        c = (0, r.bG)([o.A], () => o.A.getBasicChannel(l.channelId)),
-        d = (0, r.bG)([h.A], () => null != c && h.A.canBasicChannel(v.hVb.CONNECT, c)),
-        { previewUrl: N, isLoading: x } = (0, u.A)(l.guildId, l.channelId, l.ownerId),
-        p = n.useRef(x ? null : N);
-    n.useEffect(() => {
-        x || (p.current = N);
-    }, [N, x]);
-    let C = null == N || x ? p.current : N;
-    return null == C
-        ? (0, t.jsx)(A, {
+        d = (0, r.bG)([o.A], () => o.A.getBasicChannel(l.channelId)),
+        c = (0, r.bG)([h.A], () => null != d && h.A.canBasicChannel(v.hVb.CONNECT, d)),
+        { previewUrl: N, isLoading: C } = (0, u.A)(l.guildId, l.channelId, l.ownerId),
+        m = t.useRef(C ? null : N);
+    t.useEffect(() => {
+        C || (m.current = N);
+    }, [N, C]);
+    let w = null == N || C ? m.current : N;
+    return null == w
+        ? (0, n.jsx)(A, {
               className: a,
-              isLoading: x,
+              isLoading: C,
               noText: i,
               noImage: s,
-              previewText: d ? void 0 : f.intl.string(f.t.pgUTZC),
+              previewText: c ? void 0 : g.intl.string(g.t.pgUTZC),
           })
-        : (0, t.jsx)("div", {
+        : (0, n.jsx)("div", {
               className: a,
-              children: (0, t.jsx)("img", { src: C, alt: "", className: g.Sl, draggable: !1 }),
+              children: (0, n.jsx)("img", { src: w, alt: "", className: f.Sl, draggable: !1 }),
           });
 }

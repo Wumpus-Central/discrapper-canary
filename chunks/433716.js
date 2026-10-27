@@ -5,8 +5,8 @@ var i = n(477900),
     a = n(661531),
     r = n(834730),
     o = n(62010),
-    d = n(821609),
-    c = n(565645),
+    c = n(821609),
+    d = n(565645),
     u = n(178653),
     m = n(465794),
     x = n(202541),
@@ -37,14 +37,14 @@ function p(e) {
                 role: "group",
                 "aria-label": t.name,
                 children: t.previewEmojis.map((e) =>
-                    (0, i.jsx)(c.A, { className: g.Zg, emojiId: e.id, emojiName: e.name, animated: e.animated }, e.id),
+                    (0, i.jsx)(d.A, { className: g.Zg, emojiId: e.id, emojiName: e.name, animated: e.animated }, e.id),
                 ),
             }),
             (!n || null != N) &&
                 (0, i.jsx)("div", {
                     className: g.XI,
                     children: n
-                        ? (0, i.jsx)(d.$, {
+                        ? (0, i.jsx)(c.$, {
                               text: j.intl.string(h.default.DtK5IG),
                               variant: "primary",
                               fullWidth: !0,

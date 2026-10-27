@@ -92,12 +92,12 @@ let N = function () {
         y = null != R && "" !== L,
         [D, v] = (0, u.Cc)(y ? o.M.SHOP_TAB_TOOLTIP : null, L, void 0, !0),
         b = y && null != D,
-        M = (0, l.bG)([E.A], () => E.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
-        [P, U] = (0, u.RF)(b ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, M?.version ?? 0, void 0, !0),
+        P = (0, l.bG)([E.A], () => E.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
+        [M, U] = (0, u.RF)(b ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, P?.version ?? 0, void 0, !0),
         w = (0, d.useHasAnyModalOpen)(),
-        G = (0, g.bv)(M),
+        G = (0, g.bv)(P),
         x =
-            null == P || w
+            null == M || w
                 ? null
                 : (function (e, t) {
                       if (t?.type === a.G.BADGE)
@@ -158,7 +158,7 @@ let N = function () {
                                 version: t.version,
                             }
                           : null;
-                  })(G, M),
+                  })(G, P),
         k = b && !w ? R : null;
     return {
         shopButtonDisplayOptions: k ?? x,
@@ -166,15 +166,15 @@ let N = function () {
             (e) => {
                 if (null != k) {
                     (v(e),
-                        null != M &&
-                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, M.version, {
+                        null != P &&
+                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, P.version, {
                                 dismissAction: S.i.AUTO_DISMISS,
                             }));
                     return;
                 }
                 null != x && U(e);
             },
-            [k, x, v, U, M],
+            [k, x, v, U, P],
         ),
     };
 };

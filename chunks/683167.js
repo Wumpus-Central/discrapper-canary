@@ -1,4 +1,4 @@
-n.d(t, { a: () => M, A: () => w });
+n.d(t, { a: () => L, A: () => w });
 var l = n(582128),
     i = n(143236),
     r = n(719442),
@@ -102,7 +102,7 @@ function w(e) {
             return (
                 (l.children = (0, d.x7)("")),
                 (l.selection = { anchor: O.K, focus: O.K }),
-                M({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
+                L({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
         });
@@ -126,7 +126,7 @@ function w(e) {
         i
     );
 }
-function M(e) {
+function L(e) {
     var t;
     let {
             editor: n,

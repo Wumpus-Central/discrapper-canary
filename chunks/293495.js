@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => p, YY: () => f });
+n.d(t, { Ay: () => m, YY: () => f });
 var i = n(31728),
     l = n(272355),
     r = n(227042),
@@ -21,7 +21,7 @@ function g() {
     }
     null != (e = h) && o.A.isOpen(e) && (i.VN(e), (h = null));
 }
-function C() {
+function A() {
     let e;
     if ((0, r.A)({ LayerStore: a.A, PopoutWindowStore: s.A })) {
         let e;
@@ -29,12 +29,12 @@ function C() {
     }
     null != (e = void 0 ?? h) && o.A.isOpen(e) && i.WU(e);
 }
-class A extends l.A {
+class p extends l.A {
     _initialize() {
-        (u.A.addChangeListener(g), a.A.addChangeListener(C));
+        (u.A.addChangeListener(g), a.A.addChangeListener(A));
     }
     _terminate() {
-        (u.A.removeChangeListener(g), a.A.removeChangeListener(C));
+        (u.A.removeChangeListener(g), a.A.removeChangeListener(A));
     }
 }
-let p = new A();
+let m = new p();

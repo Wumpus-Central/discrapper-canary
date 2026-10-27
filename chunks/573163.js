@@ -41,8 +41,8 @@ async function y(e) {
 var D = n(252431),
     v = n(491001),
     b = n(395504),
-    M = n(206885),
-    P = n(622794);
+    P = n(206885),
+    M = n(622794);
 let U = new Map();
 var w = n(970278),
     G = n(152007),
@@ -174,16 +174,16 @@ async function eb(e) {
     }
     (await (0, c.BK)(1e3), eb(e));
 }
-function eM(e, t) {
+function eP(e, t) {
     return null != i && i.isInstanceFocused() && i.isPinned(er.uss.TEXT)
         ? e
-        : !(null == t || __OVERLAY__) && !!M.O && (0, n(267355).W)(t);
+        : !(null == t || __OVERLAY__) && !!P.O && (0, n(267355).W)(t);
 }
-function eP(e, t) {
+function eM(e, t) {
     en.default.getCurrentUser()?.hasAnyStaffLevel() && ec.log("STAFF-ACK-LOG:", t, e.channelId);
 }
 function eU(e, t) {
-    if ((eP(e, "shouldAutomaticallyAck called"), e.type !== eo.P.CHANNEL)) return (eP(e, "not channel read state"), !1);
+    if ((eM(e, "shouldAutomaticallyAck called"), e.type !== eo.P.CHANNEL)) return (eM(e, "not channel read state"), !1);
     let n = K.A.getChannel(e.channelId),
         i = null != n && n.isForumPost();
     if (
@@ -191,24 +191,24 @@ function eU(e, t) {
         E.Ay.getActivityPanelMode() === ea.Gd.PANEL &&
         E.Ay.getFocusedLayout() === ea.E8.NO_CHAT
     )
-        return (eP(e, "In activity"), !1);
-    if (q.A.isIdle()) return (eP(e, "Is idle"), !1);
-    if (!e.canTrackUnreads()) return (eP(e, "Cannot track unreads"), !1);
-    if (n?.isForumLikeChannel() !== !0 && !eg.isAnyWindowFocused(e.channelId) && !eM(!0, e.channelId)) return !1;
-    if (i && !e._persisted) return (eP(e, "unpersisted forum post"), !0);
-    if (!e.hasUnreadOrMentions()) return (eP(e, "No unread or mentions"), !1);
-    if (n?.isForumLikeChannel() === !0) return (eP(e, "Forum-like channel"), !1);
-    if (!(i && !e._isJoinedThread) && !$.A.isAtBottom(e.channelId)) return (eP(e, "Not at bottom"), !1);
+        return (eM(e, "In activity"), !1);
+    if (q.A.isIdle()) return (eM(e, "Is idle"), !1);
+    if (!e.canTrackUnreads()) return (eM(e, "Cannot track unreads"), !1);
+    if (n?.isForumLikeChannel() !== !0 && !eg.isAnyWindowFocused(e.channelId) && !eP(!0, e.channelId)) return !1;
+    if (i && !e._persisted) return (eM(e, "unpersisted forum post"), !0);
+    if (!e.hasUnreadOrMentions()) return (eM(e, "No unread or mentions"), !1);
+    if (n?.isForumLikeChannel() === !0) return (eM(e, "Forum-like channel"), !1);
+    if (!(i && !e._isJoinedThread) && !$.A.isAtBottom(e.channelId)) return (eM(e, "Not at bottom"), !1);
     let r = h.A.getLayout(e.channelId);
     if (!h.A.getChatOpen(e.channelId) && (r === er.DUB.NO_CHAT || r === er.DUB.FULL_SCREEN))
-        return (eP(e, "Fullscreen video"), !1);
-    if (!eg.isChannelAckable(e.channelId)) return (eP(e, "Not ackable"), !1);
+        return (eM(e, "Fullscreen video"), !1);
+    if (!eg.isChannelAckable(e.channelId)) return (eM(e, "Not ackable"), !1);
     let a = Z.A.getMessages(e.channelId);
     return null == a || !a.ready || a.loadingMore
-        ? (eP(e, "Still loading messages"), !1)
-        : (0, P.oE)(e.channelId, t)
-          ? (eP(e, "Acked"), !0)
-          : (eP(e, "Chat not focused"), !1);
+        ? (eM(e, "Still loading messages"), !1)
+        : (0, M.oE)(e.channelId, t)
+          ? (eM(e, "Acked"), !0)
+          : (eM(e, "Chat not focused"), !1);
 }
 class ew {
     static _guildReadStateSentinels = {};
@@ -1493,7 +1493,7 @@ let e6 = new e5(_.h, {
                 })(r, (e) => ei.A.isFocused(e)) ||
                 eg.isAnyWindowFocused(r);
             if (E && eU(l) && !s) {
-                let e = eM(!0, l.channelId) ? er.JJy.OVERLAY : er.JJy.CHANNEL;
+                let e = eP(!0, l.channelId) ? er.JJy.OVERLAY : er.JJy.CHANNEL;
                 return l.ack({
                     messageId: a.id,
                     trackAnalytics: !0,
@@ -1504,7 +1504,7 @@ let e6 = new e5(_.h, {
                     },
                 });
             }
-            if (eM(E && null != i && i.isInstanceLocked(), r))
+            if (eP(E && null != i && i.isInstanceLocked(), r))
                 return l.ack({
                     messageId: a.id,
                     trackAnalytics: !0,
@@ -1517,7 +1517,7 @@ let e6 = new e5(_.h, {
             if (
                 (null == l.oldestUnreadMessageId || l.oldestUnreadMessageIdStale
                     ? (l.oldestUnreadMessageId = a.id)
-                    : o || (0, P.i$)() === r || (l.oldestUnreadMessageId = a.id),
+                    : o || (0, M.i$)() === r || (l.oldestUnreadMessageId = a.id),
                 !d && l.unreadCount++,
                 !(
                     J.A.isBlockedOrIgnoredForMessage(a) ||

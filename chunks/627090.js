@@ -525,12 +525,12 @@ class D extends l.G {
 }
 let v = new D();
 var b = n(414525),
-    M =
+    P =
         (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (i[(i.FIRST = 1)] = "FIRST"),
         (i[(i.SECOND = 2)] = "SECOND"),
         i);
-class P extends l.G {
+class M extends l.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.AdminEditorTestComponent", [
             { no: 1, name: "deprecated_field", kind: "scalar", T: 9 },
@@ -549,7 +549,7 @@ class P extends l.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.premium_marketing.v1.AdminEditorTestSelectOption",
-                    M,
+                    P,
                     "ADMIN_EDITOR_TEST_SELECT_OPTION_",
                 ],
             },
@@ -633,7 +633,7 @@ class P extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let U = new P();
+let U = new M();
 var w = n(406935);
 class G extends l.G {
     constructor() {
