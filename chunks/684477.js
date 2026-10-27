@@ -1,4 +1,4 @@
-n.d(t, { M: () => m });
+n.d(t, { M: () => p });
 var l = n(477900),
     i = n(582128),
     r = n(166532),
@@ -6,36 +6,40 @@ var l = n(477900),
     s = n(75304),
     o = n(981036),
     u = n(202475),
-    c = n(105292),
-    d = n(338039);
-function m(e) {
+    c = n(123816),
+    d = n(105292),
+    m = n(338039);
+function p(e) {
     let {
             paymentModalStepProps: { handleStepChange: t },
             layout: n,
-            renderStepBody: m,
-            renderLeftColumn: p,
-            renderRightColumn: h,
-            renderBottomContent: C,
-            primaryCTAButtonProps: f,
-            onBackClick: E,
+            renderStepBody: p,
+            renderLeftColumn: h,
+            renderRightColumn: C,
+            renderBottomContent: f,
+            primaryCTAButtonProps: E,
+            onBackClick: S,
         } = e,
-        { hasPaymentSources: S } = (0, u.j)(),
-        g = S ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
-        I = i.useCallback(() => t(g), [t, g]),
-        A = i.useMemo(
+        { hasPaymentSources: g } = (0, u.j)(),
+        { isExpressCheckoutEnabled: I } = (0, c.t4)((e) => ({
+            isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
+        })),
+        A = g || I ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
+        y = i.useCallback(() => t(A), [t, A]),
+        x = i.useMemo(
             () =>
                 n === s.X.CUSTOM_STEP_BODY
-                    ? m()
+                    ? p()
                     : (0, l.jsxs)(l.Fragment, {
-                          children: [(0, l.jsxs)("div", { className: d.D, children: [p(), h()] }), null != C && C()],
+                          children: [(0, l.jsxs)("div", { className: m.D, children: [h(), C()] }), null != f && f()],
                       }),
-            [n, m, p, h, C],
+            [n, p, h, C, f],
         ),
-        y = i.useMemo(() => ({ ...f, onClick: I, text: c.intl.string(c.t.XiOHRX) }), [f, I]);
+        P = i.useMemo(() => ({ ...E, onClick: y, text: d.intl.string(d.t.XiOHRX) }), [E, y]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a.dZ, { children: A }),
-            (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: E, primaryCTAButtonProps: y }) }),
+            (0, l.jsx)(a.dZ, { children: x }),
+            (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: S, primaryCTAButtonProps: P }) }),
         ],
     });
 }

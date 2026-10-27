@@ -49,22 +49,27 @@ function C(e) {
 }
 function f(e) {
     let { paymentSourceType: t } = e,
-        { unifiedCheckoutFlow: n, checkoutReviewButtonLabel: r } = (0, d.t4)((e) => ({
+        {
+            unifiedCheckoutFlow: n,
+            checkoutReviewButtonLabel: r,
+            isExpressCheckoutVisibleInFooter: a,
+        } = (0, d.t4)((e) => ({
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
+            isExpressCheckoutVisibleInFooter: e.getExpressCheckoutVisibilityState().isExpressCheckoutVisibleInFooter,
         })),
-        { isGift: a } = (0, p.Pv)(),
-        { immediateDelivery: s } = (0, u.U)(),
-        m = i.useMemo(
+        { isGift: s } = (0, p.Pv)(),
+        { immediateDelivery: m } = (0, u.U)(),
+        h = i.useMemo(
             () =>
                 n === o.C.PREMIUM_APPS_OTP_CHECKOUT
                     ? { type: c.I0.PremiumAppsOneTimePurchase, purchaseButtonText: r }
                     : n === o.C.GUILD_PRODUCT_CHECKOUT
                       ? { type: c.I0.GuildProductOneTimePurchase, purchaseButtonText: r }
-                      : a
+                      : s
                         ? { type: c.I0.GiftShop, purchaseButtonText: r }
                         : { type: c.I0.Shop, purchaseButtonText: r },
-            [n, r, a],
+            [n, r, s],
         );
-    return (0, l.jsx)(c._P, { variant: m, paymentSourceType: t, immediateDelivery: s });
+    return (0, l.jsx)(c._P, { variant: h, paymentSourceType: t, immediateDelivery: m, isExpressCheckout: a });
 }

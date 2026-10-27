@@ -204,40 +204,38 @@ function J(e) {
                     activeSubscription: e.activeSubscription,
                 })),
                 {
-                    subscriptionPlan: p,
-                    purchaseDisabled: h,
-                    preventInvoiceFetch: C,
-                    newItems: f,
+                    purchaseDisabled: p,
+                    preventInvoiceFetch: h,
+                    newItems: C,
                 } = (0, N.TP)({ selectedPlanId: t, priceOptions: n }),
-                { checkoutInvoiceRequestParams: E, renewalInvoiceRequestParams: g } = (0, N.jq)({
-                    items: r ?? f,
-                    preventFetch: C,
+                { checkoutInvoiceRequestParams: f, renewalInvoiceRequestParams: E } = (0, N.jq)({
+                    items: r ?? C,
+                    preventFetch: h,
                     priceOptions: n,
                     trialId: l,
                     subscriptionMetadata: i,
                 }),
-                I = null != m ? m.id : void 0,
-                A = c.useMemo(
+                g = null != m ? m.id : void 0,
+                I = c.useMemo(
                     () => ({
                         type: "subscription_checkout_invoice",
-                        params: { ...E, subscriptionId: s ? I : void 0, renewal: a ?? !1 },
+                        params: { ...f, subscriptionId: s ? g : void 0, renewal: a ?? !1 },
                     }),
-                    [E, a, s, I],
+                    [f, a, s, g],
                 ),
-                y = c.useMemo(() => ({ type: "subscription_renewal_invoice", params: g }), [g]);
+                A = c.useMemo(() => ({ type: "subscription_renewal_invoice", params: E }), [E]);
             (c.useEffect(() => {
-                o(A);
-            }, [A, o]),
+                o(I);
+            }, [I, o]),
                 c.useEffect(() => {
-                    u(y);
-                }, [y, u]));
-            let { discriminatedInvoicePreview: x } = (0, _.KY)({
+                    u(A);
+                }, [A, u]));
+            let { discriminatedInvoicePreview: y } = (0, _.KY)({
                 invoiceError: d,
-                subscriptionPlan: p,
                 invoiceTypeDiscriminator: _.u$.SUBSCRIPTION_NEW_PURCHASE,
                 shouldSetPurchasePreviewErrorFromInvoice: !0,
             });
-            return { discriminatedInvoicePreview: x, purchaseDisabled: h };
+            return { discriminatedInvoicePreview: y, purchaseDisabled: p };
         })({
             selectedPlanId: t,
             priceOptions: i,

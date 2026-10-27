@@ -592,7 +592,13 @@ function en(e) {
     }, [eh, C, eC]);
     let e9 =
         eh && null == C
-            ? (0, l.jsx)(M.E, { type: "purchase_if_possible", makePurchase: e6, isSubmitting: eW, setIsSubmitting: eV })
+            ? (0, l.jsx)(M.E1, {
+                  type: "purchase_if_possible",
+                  disablePurchase: k,
+                  makePurchase: e6,
+                  isSubmitting: eW,
+                  setIsSubmitting: eV,
+              })
             : null;
     return eS
         ? null

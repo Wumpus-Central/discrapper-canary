@@ -1,19 +1,25 @@
-n.d(t, { U: () => o });
+n.d(t, { U: () => u });
 var l = n(582128),
     i = n(997101),
     r = n(17928),
-    a = n(615405),
-    s = n(123816);
-function o() {
-    let { hasAcceptedTerms: e, setHasAcceptedTerms: t } = (0, s.t4)((e) => ({
+    a = n(566980),
+    s = n(615405),
+    o = n(123816);
+function u() {
+    let {
+            hasAcceptedTerms: e,
+            setHasAcceptedTerms: t,
+            isImmediateDeliveryCheckboxDisabled: n,
+        } = (0, o.t4)((e) => ({
             hasAcceptedTerms: e.hasAcceptedTerms,
             setHasAcceptedTerms: e.setHasAcceptedTerms,
+            isImmediateDeliveryCheckboxDisabled: e.getExpressCheckoutSubmitting() || e.purchaseState === a.h.PURCHASING,
         })),
-        n = (0, r.bG)([a.A], () => i.M.EEA_COUNTRIES.has(a.A.ipCountryCodeWithFallback));
+        u = (0, r.bG)([s.A], () => i.M.EEA_COUNTRIES.has(s.A.ipCountryCodeWithFallback));
     return (
         l.useLayoutEffect(() => {
-            t(!n);
-        }, [n, t]),
-        { immediateDelivery: n ? { value: e, onChange: t } : void 0 }
+            t(!u);
+        }, [u, t]),
+        { immediateDelivery: u ? { value: e, onChange: t, disabled: n } : void 0 }
     );
 }

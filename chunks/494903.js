@@ -7,8 +7,11 @@ var i = n(683071),
 let s = { info: "info", warning: "warning", critical: "critical" },
     u = ["info", "warning", "critical"];
 function c() {
-    let e = (0, a.t4)((e) => e.getPaymentSourceNotices());
-    return 0 === e.length
+    let { notices: e, isExpressCheckoutVisible: t } = (0, a.t4)((e) => ({
+        notices: e.getPaymentSourceNotices(),
+        isExpressCheckoutVisible: e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
+    }));
+    return t || 0 === e.length
         ? null
         : (0, r.jsx)("div", {
               className: l.k,

@@ -37,33 +37,45 @@ function o(e, t) {
                     isSubmitting: !1,
                     isExpressCheckoutEnabledForFooter: !1,
                     isExpressCheckoutEnabledForPaymentSelect: !1,
+                    isExpressCheckoutVisibleInFooter: !1,
                 };
             let i = e.get("hasFiatCheckoutPaymentSources"),
                 r = e.getExpressCheckoutSubmitting(),
                 a = e.getExpressCheckoutLoading(),
-                s = !i || r;
+                s = e.getIsPlanSwitchLoading(),
+                l = !i || r,
+                o = l && !s && "unavailable" !== e.expressCheckoutStatus,
+                d = "review_footer" === n.configurationType;
             return {
-                shouldMountExpressCheckoutElement: s,
-                shouldExpressCheckoutBeVisible: s && "unavailable" !== e.expressCheckoutStatus,
+                shouldMountExpressCheckoutElement: l,
+                shouldExpressCheckoutBeVisible: o,
                 shouldDisablePaymentSelect: i ? r : a,
                 isLoading: a,
                 isSubmitting: r,
-                isExpressCheckoutEnabledForFooter: "review_footer" === n.configurationType,
+                isExpressCheckoutEnabledForFooter: d,
                 isExpressCheckoutEnabledForPaymentSelect: "payment_selector" === n.configurationType,
+                isExpressCheckoutVisibleInFooter: d && o,
             };
         },
         getExpressCheckoutConfig: (e) => {
-            let { unifiedCheckoutFlow: n, isGift: i } = t();
-            if (null == n || !s.has(n) || i) return null;
-            let l = r.I.getConfig(
+            let { unifiedCheckoutFlow: n, isGift: i } = t(),
+                l = (n === a.C.PREMIUM_CHECKOUT || n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) && i;
+            if (null == n || !s.has(n) || l) return null;
+            let o = r.I.getConfig(
                 { location: e ?? "StripeExpressCheckoutStoreSlice" },
                 { autoTrackExposure: null != e },
             );
-            return "review_footer" === l.configurationType && n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT ? null : l;
+            return "review_footer" === o.configurationType && n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT ? null : o;
         },
         getIsExpressCheckoutEnabled: (e) => {
             let n = t().getExpressCheckoutConfig(e);
             return null != n && n.enabled;
+        },
+        getIsPurchaseDisabled: () => {
+            let { hasAcceptedTerms: e, get: n } = t(),
+                i = n("isOrderLocked"),
+                r = n("primaryInvoicesError");
+            return !e || i || null != r;
         },
     };
 }

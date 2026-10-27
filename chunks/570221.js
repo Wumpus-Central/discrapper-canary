@@ -168,6 +168,9 @@ class l extends s {
             (this.applyWalletBalance = e.applyWalletBalance),
             (this.paymentLegs = e.paymentLegs ?? []));
     }
+    get hasGiftCardBalanceApplied() {
+        return this.getWalletAmount() > 0;
+    }
     getWalletAmount() {
         return this.paymentLegs.reduce(
             (e, t) => (t.payment_gateway === a.kM_.TDS ? e + t.amount - (t.amount_short ?? 0) : e),

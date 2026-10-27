@@ -17,11 +17,11 @@ var n = o(477900),
     f = o(982291),
     m = o(852607),
     E = o(331611),
-    T = o(169797),
-    w = o(652215);
+    w = o(169797),
+    T = o(652215);
 o(322076);
-var O = o(202541),
-    g = o(105292);
+var g = o(202541),
+    O = o(105292);
 let y = {
         [h.C.ORB_CHECKOUT]: { allowGiftCustomization: !1, excludePaymentAuthSteps: !0, predicateStepType: "unified" },
         [h.C.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
@@ -104,7 +104,7 @@ class P {
                         checkoutFlow: this.checkoutFlow,
                         paymentModalStepProps: e,
                         returnStep: C.pn.REVIEW,
-                        returnStepIfNoPaymentSources: t && o ? C.pn.GIFT_CUSTOMIZATION : void 0,
+                        isGiftCustomizationEnabled: t && o,
                     }),
                 options: { renderHeader: !0 },
             };
@@ -117,7 +117,7 @@ class P {
             return {
                 key: C.pn.GIFT_CUSTOMIZATION,
                 renderStep: (e) => (0, n.jsx)(i, { ...e }),
-                options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => g.intl.string(g.t["W685+b"]) },
+                options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => O.intl.string(O.t["W685+b"]) },
             };
     }
     getReviewStepConfig() {
@@ -125,7 +125,7 @@ class P {
         return {
             key: C.pn.REVIEW,
             renderStep: (t) => (0, n.jsx)(e, { ...t }),
-            options: { useBreadcrumbLabel: () => g.intl.string(g.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => O.intl.string(O.t.QBnNHq) },
         };
     }
     createDefinedStepConfigsArray(e) {
@@ -146,9 +146,9 @@ class P {
         return this.checkoutFlow === h.C.ORB_CHECKOUT && null != e
             ? (0, c.P)(e)
             : this.checkoutFlow === h.C.COLLECTIBLES_CHECKOUT
-              ? w.FYj
+              ? T.FYj
               : this.checkoutFlow === h.C.PREMIUM_CHECKOUT
-                ? O.tv
+                ? g.tv
                 : void 0;
     }
     trackPaymentFlowCanceled(e) {
@@ -166,10 +166,10 @@ class P {
                 eligibleForTrial: c,
             } = e,
             k = p.A.balance;
-        d.default.track(w.HAw.PAYMENT_FLOW_CANCELED, {
+        d.default.track(T.HAw.PAYMENT_FLOW_CANCELED, {
             load_id: t,
             discovery_session_id: l,
-            payment_type: w.frM[this.checkoutFlowConfiguration.purchaseType],
+            payment_type: T.frM[this.checkoutFlowConfiguration.purchaseType],
             is_gift: u,
             sku_id: o,
             sku_product_line: n,
@@ -182,7 +182,7 @@ class P {
             checkout_design: _.r.UNIFIED,
             checkout_flow: this.checkoutFlow,
             virtual_currency_balance: k,
-            ...(this.checkoutFlow === h.C.PREMIUM_CHECKOUT ? { subscription_type: w.rzx.PREMIUM } : {}),
+            ...(this.checkoutFlow === h.C.PREMIUM_CHECKOUT ? { subscription_type: T.rzx.PREMIUM } : {}),
             ...this.override_analytic_params,
         });
     }
@@ -202,10 +202,10 @@ class P {
                     initialPaymentSourceId: S,
                 },
                 unifiedCheckoutProviderProps: { analyticsLocations: f, analyticsSourceLocation: m },
-                forwardedPaymentModalProps: { analyticsObject: E, ...w } = {},
-                tenantParams: O,
+                forwardedPaymentModalProps: { analyticsObject: E, ...T } = {},
+                tenantParams: g,
             } = e,
-            g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
+            O = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
             y = arguments.length > 2 ? arguments[2] : void 0,
             I = arguments.length > 3 ? arguments[3] : void 0,
             P = { current: I ?? (0, l.A)() },
@@ -216,7 +216,7 @@ class P {
             G = !!(null != t && t.isGift),
             H = !1,
             L = {
-                ...w,
+                ...T,
                 checkoutFlow: this.checkoutFlow,
                 checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                 tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
@@ -227,7 +227,7 @@ class P {
                 onClose: u,
                 renderHeader: R,
                 skuId: c ?? null,
-                tenantParams: O ?? {},
+                tenantParams: g ?? {},
                 loadId: P.current,
                 onOrderCreated: function (e) {
                     ((P.current = e.id), (U.current = e));
@@ -241,7 +241,7 @@ class P {
                 analyticsSourceLocation: m,
                 giftContextProps: t,
             };
-        if ("modal" === g)
+        if ("modal" === O)
             return (0, r.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
@@ -270,12 +270,12 @@ class P {
                                     skuProductLine: p,
                                     applicationId: A,
                                     discoverySessionId: d,
-                                    analyticsLocation: w.analyticsLocation,
+                                    analyticsLocation: T.analyticsLocation,
                                     analyticsLocations: f,
                                     analyticsObject: E,
                                     analyticsSourceLocation: m,
                                     isGift: G,
-                                    eligibleForTrial: null != w.trialId,
+                                    eligibleForTrial: null != T.trialId,
                                 })),
                             null != y.onCloseCallback && y.onCloseCallback(H),
                             null != u && u(H, c));
@@ -284,10 +284,10 @@ class P {
                 },
             );
         {
-            let e = w.paymentModalOnClose ?? u,
+            let e = T.paymentModalOnClose ?? u,
                 t = { transitionState: a.ip.ENTERED, onClose: () => (null != e && e(!1), Promise.resolve()) };
             return (0, n.jsx)(i.Suspense, {
-                fallback: (0, n.jsx)(T.KT, {}),
+                fallback: (0, n.jsx)(w.KT, {}),
                 children: (0, n.jsx)(F, { ...L, paymentModalOnClose: e, renderModalProps: t }),
             });
         }

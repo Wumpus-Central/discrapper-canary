@@ -284,14 +284,14 @@ function R(e) {
         eC = em && es.paymentSources.length > 0,
         ef = i.useMemo(() => {
             if (null != er) return er;
-            let e = $ && z ? g.intl.string(S.default.BLu9EI) : void 0;
+            let e = z ? g.intl.string(S.default.BLu9EI) : void 0;
             return (0, l.jsx)(s.Ay, {
                 ...es,
                 disabled: el || eC,
-                addPaymentSourceVariant: em ? "secondary" : "primary",
+                addPaymentSourceVariant: em || z ? "secondary" : "primary",
                 addPaymentSourceText: e,
             });
-        }, [er, el, eC, em, es, $, z]),
+        }, [er, el, eC, em, es, z]),
         [eE, eS] = i.useState(!1);
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -299,8 +299,8 @@ function R(e) {
                 label: c,
                 children: [
                     $ &&
-                        (0, l.jsx)(m.Z, {
-                            stripeExpressCheckoutComponent: (0, l.jsx)(m.E, {
+                        (0, l.jsx)(m.Zr, {
+                            stripeExpressCheckoutComponent: (0, l.jsx)(m.E1, {
                                 className: b.KV,
                                 type: "vault_only",
                                 isSubmitting: eE,

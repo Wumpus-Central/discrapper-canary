@@ -1,37 +1,32 @@
-n.d(t, { KY: () => c, ME: () => u, u$: () => s });
+n.d(t, { KY: () => u, ME: () => s, u$: () => l });
 var r,
     i = n(582128),
-    a = n(800471),
-    l = n(123816),
-    s =
+    a = n(123816),
+    l =
         (((r = {}).PREMIUM_GIFT = "PREMIUM_GIFT"),
         (r.PREMIUM_WITH_TRIAL = "PREMIUM_WITH_TRIAL"),
         (r.SUBSCRIPTION_NEW_PURCHASE = "SUBSCRIPTION_NEW_PURCHASE"),
         (r.SUBSCRIPTION_SWITCH_PLAN = "SUBSCRIPTION_SWITCH_PLAN"),
         (r.LOADING = "LOADING"),
         r);
-let u = new Set(["SUBSCRIPTION_NEW_PURCHASE", "SUBSCRIPTION_SWITCH_PLAN"]);
-function c(e) {
-    let {
-            invoiceTypeDiscriminator: t,
-            subscriptionPlan: n,
-            invoiceError: r,
-            shouldSetPurchasePreviewErrorFromInvoice: s,
-        } = e,
+let s = new Set(["SUBSCRIPTION_NEW_PURCHASE", "SUBSCRIPTION_SWITCH_PLAN"]);
+function u(e) {
+    let { invoiceTypeDiscriminator: t, invoiceError: n, shouldSetPurchasePreviewErrorFromInvoice: r } = e,
         {
-            checkoutInvoicePreview: u,
-            renewalInvoicePreview: c,
-            setPurchasePreviewError: o,
-        } = (0, l.t4)((e) => ({
+            checkoutInvoicePreview: l,
+            renewalInvoicePreview: s,
+            setPurchasePreviewError: u,
+            isPlanSwitchLoading: c,
+        } = (0, a.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
             renewalInvoicePreview: e.renewalInvoicePreview,
             setPurchasePreviewError: e.setPurchasePreviewError,
-        })),
-        d = i.useMemo(() => (0, a.U)(u, n), [u, n]);
+            isPlanSwitchLoading: e.getIsPlanSwitchLoading(),
+        }));
     return (
         i.useEffect(() => {
-            s && o(r);
-        }, [r, s, o]),
+            r && u(n);
+        }, [n, r, u]),
         {
             discriminatedInvoicePreview: i.useMemo(
                 () =>
@@ -53,12 +48,12 @@ function c(e) {
                         return { type: "LOADING", invoicePreview: null };
                     })({
                         invoiceTypeDiscriminator: t,
-                        error: r,
-                        proratedInvoicePreview: u,
-                        renewalInvoicePreview: c,
-                        planSwitchLoading: d,
+                        error: n,
+                        proratedInvoicePreview: l,
+                        renewalInvoicePreview: s,
+                        planSwitchLoading: c,
                     }),
-                [t, r, u, c, d],
+                [t, n, l, s, c],
             ),
         }
     );

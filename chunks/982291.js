@@ -49,8 +49,12 @@ function f(e) {
     return (0, l.jsx)(C, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: S });
 }
 function E(e) {
-    let { checkoutFlow: t, returnStep: n = a.pn.REVIEW, returnStepIfNoPaymentSources: i, paymentModalStepProps: r } = e;
+    let { checkoutFlow: t, returnStep: n = a.pn.REVIEW, isGiftCustomizationEnabled: r, paymentModalStepProps: s } = e,
+        { isExpressCheckoutEnabled: o } = (0, p.t4)((e) => ({
+            isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
+        })),
+        u = i.useMemo(() => (o ? a.pn.REVIEW : r ? a.pn.GIFT_CUSTOMIZATION : void 0), [r, o]);
     return t === d.C.PREMIUM_CHECKOUT
-        ? (0, l.jsx)(f, { ...r })
-        : (0, l.jsx)(C, { paymentModalStepProps: r, returnStep: n, returnStepIfNoPaymentSources: i });
+        ? (0, l.jsx)(f, { ...s })
+        : (0, l.jsx)(C, { paymentModalStepProps: s, returnStep: n, returnStepIfNoPaymentSources: u });
 }

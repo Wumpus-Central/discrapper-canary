@@ -586,6 +586,10 @@ function es(e) {
                     }
                 }
                 return {
+                    getIsPlanSwitchLoading: () => {
+                        let { checkoutInvoicePreview: t, selectedPlanId: n } = e();
+                        return null != t && null != n && null == t.findInvoiceItemByPlanId(n);
+                    },
                     getShouldDisallowPlanSelection: () => {
                         let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);

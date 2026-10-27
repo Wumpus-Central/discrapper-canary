@@ -669,7 +669,6 @@ function eQ(e) {
                                                         n.e("861060"),
                                                         n.e("364827"),
                                                         n.e("77333"),
-                                                        n.e("56366"),
                                                         n.e("217229"),
                                                         n.e("477175"),
                                                         n.e("960235"),
@@ -689,7 +688,7 @@ function eQ(e) {
                                                         n.e("221856"),
                                                         n.e("755936"),
                                                         n.e("147662"),
-                                                        n.e("609705"),
+                                                        n.e("46322"),
                                                         n.e("899843"),
                                                         n.e("904448"),
                                                         n.e("833703"),
@@ -747,6 +746,7 @@ function eQ(e) {
                                                         n.e("538513"),
                                                         n.e("631573"),
                                                         n.e("147864"),
+                                                        n.e("56366"),
                                                         n.e("644816"),
                                                         n.e("195468"),
                                                         n.e("928662"),
@@ -965,12 +965,12 @@ function e1(e) {
 }
 var e2 = n(34188),
     e8 = n(700623),
-    e7 = n(177953),
-    e3 = n(825484),
+    e3 = n(177953),
+    e7 = n(825484),
     e6 = n(683071),
     e5 = n(900797),
-    e9 = n(847374),
-    e4 = n(10716),
+    e4 = n(847374),
+    e9 = n(10716),
     te = n(702841),
     tt = n(150934),
     tn = n(95477),
@@ -984,11 +984,11 @@ function ta(e) {
             useActivityUrlOverride: i,
             filter: s,
         } = (0, te.cf)(
-            [e4.A],
+            [e9.A],
             () => ({
-                activityUrlOverride: e4.A.getActivityUrlOverride(),
-                useActivityUrlOverride: e4.A.getUseActivityUrlOverride(),
-                filter: e4.A.getFilter(),
+                activityUrlOverride: e9.A.getActivityUrlOverride(),
+                useActivityUrlOverride: e9.A.getUseActivityUrlOverride(),
+                filter: e9.A.getFilter(),
             }),
             [],
         );
@@ -1150,7 +1150,7 @@ var tI = n(576917),
 function ty(e) {
     let { context: t, application: n, videoUrl: l, imageCoverUrl: i, sectionName: s, hasCommands: a } = e,
         c = o.useMemo(() => (0, I.u8)(n) ?? "", [n]),
-        d = (0, A.bG)([e4.A], () => e4.A.inDevModeForApplication(n.id)),
+        d = (0, A.bG)([e9.A], () => e9.A.inDevModeForApplication(n.id)),
         { isSlideReady: u } = (0, h.uM)(),
         [m, p] = o.useState(!1);
     o.useEffect(() => {
@@ -1304,7 +1304,7 @@ function tT(e) {
         className: tI.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1340,7 +1340,7 @@ function tL(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Z$)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e3.e, {
+            ? (0, r.jsxs)(e7.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tg, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1417,7 +1417,7 @@ function tb(e) {
                           }),
                           h
                               ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e9.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              : (0, r.jsx)(e4.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1507,10 +1507,10 @@ var tU = n(724002),
 function tY() {
     let e = (0, tX.z)(),
         t = eY.Q_.getSetting(),
-        n = (0, A.bG)([e4.A], () => e4.A.getFetchState(), []);
+        n = (0, A.bG)([e9.A], () => e9.A.getFetchState(), []);
     return (
         o.useEffect(() => {
-            e && t && n === e4.$.INITIALIZED && (0, tz.S)();
+            e && t && n === e9.$.INITIALIZED && (0, tz.S)();
         }, [e, n, t]),
         null
     );
@@ -1524,10 +1524,10 @@ var tK = n(111042),
     t1 = n(594061),
     t2 = n(935208),
     t8 = n(630248),
-    t7 = n(355097);
-function t3(e, t) {
+    t3 = n(355097);
+function t7(e, t) {
     o.useEffect(() => {
-        t1.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t1.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t8.A], () => t8.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1571,8 +1571,8 @@ function t3(e, t) {
 }
 var t6 = n(785728),
     t5 = n(712440),
-    t9 = n(733110),
-    t4 = n(73153);
+    t4 = n(733110),
+    t9 = n(73153);
 let ne = 10 * Y.A.Millis.MINUTE,
     nt = { lastUsedCommandId: null, lastUsedTimeMs: null };
 class nn extends A.Ay.PersistedStore {
@@ -1592,7 +1592,7 @@ class nn extends A.Ay.PersistedStore {
               nt.lastUsedCommandId);
     }
 }
-new nn(t4.h, {
+new nn(t9.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t } = e;
         ((nt.lastUsedCommandId = t.id), (nt.lastUsedTimeMs = Date.now()));
@@ -2188,7 +2188,7 @@ var nZ = n(984516),
     n1 = n(994369),
     n2 = n(240591),
     n8 = n(46477);
-function n7(e, t) {
+function n3(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2238,7 +2238,7 @@ function n7(e, t) {
         i,
     ).slice(0, i);
 }
-function n3(e, t) {
+function n7(e, t) {
     let n = t8.A.getScoreWithoutLoadingLatest(e.id);
     return t8.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
@@ -2251,8 +2251,8 @@ function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n9 = n(562708),
-    n4 = n(139286),
+var n4 = n(562708),
+    n9 = n(139286),
     le = n(520117);
 function lt(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
@@ -2260,9 +2260,9 @@ function lt(e) {
     return {
         trackSearchResultsItemImpressionRef: (0, le.A)({
             onVisible: function () {
-                (0, n4.x)({
-                    type: n9.ImpressionTypes.VIEW,
-                    name: n9.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                (0, n9.x)({
+                    type: n4.ImpressionTypes.VIEW,
+                    name: n4.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -2486,7 +2486,7 @@ function lu(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n7(c, {
+                    return n3(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2623,7 +2623,7 @@ function lu(e) {
                                     }),
                             ));
                     } else a && (u = m);
-                    return n7(u, {
+                    return n3(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2670,7 +2670,7 @@ function lu(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n6],
+                        sortComparers: [n7, n6],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3015,7 +3015,7 @@ let lN = [],
     lC = tw.K.APP_LAUNCHER_IN_TEXT;
 function l_(e) {
     let { context: t, entrypoint: n, searchQuery: l, setSearchQuery: i, setScroller: s, isScrollCloseToBottom: a } = e,
-        c = (0, A.bG)([e4.A], () => e4.A.getIsEnabled(), []),
+        c = (0, A.bG)([e9.A], () => e9.A.getIsEnabled(), []),
         d = n === _.s4.TEXT && "channel" === t.type && null != t.channel && !t.channel.isPrivate(),
         u = (0, I.sw)(n),
         m = !(0, I.sw)(n),
@@ -3157,13 +3157,13 @@ function ly(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t9.default], () => t9.default.getFetchState());
+                        s = (0, A.bG)([t4.default], () => t4.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t9.FetchState.NOT_FETCHED && t5.A.fetch();
+                        i && s === t4.FetchState.NOT_FETCHED && t5.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t9.default], () =>
+                    let a = (0, A.yK)([t4.default], () =>
                             i
-                                ? t9.default
+                                ? t4.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(tJ.F.APPLICATIONS_COMMANDS))
                                 : [],
@@ -3174,7 +3174,7 @@ function ly(e) {
                             let e = [];
                             return (c && e.push(nl.gq), e);
                         }, [c]),
-                        u = t3(r, a),
+                        u = t7(r, a),
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
@@ -3353,7 +3353,7 @@ function lP(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t3(
+                c = t7(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

@@ -15,7 +15,7 @@ var r = l(834730),
     p = l(105292),
     h = l(484742);
 function j(e) {
-    let { value: t, onChange: l } = e;
+    let { value: t, onChange: l, disabled: n } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(r.E, {
@@ -23,7 +23,7 @@ function j(e) {
                 color: "text-muted",
                 children: p.intl.string(f.default["5dmUS+"]),
             }),
-            (0, a.jsx)(s.S, { label: p.intl.string(f.default.XBtSMa), checked: t, onChange: l }),
+            (0, a.jsx)(s.S, { disabled: n, label: p.intl.string(f.default.XBtSMa), checked: t, onChange: l }),
         ],
     });
 }
@@ -87,83 +87,87 @@ function N(e) {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: (function (e) {
-                    let t = m.X7G.PAID_TERMS,
-                        l = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
-                    switch (e.type) {
+                    let { variant: t, isExpressCheckout: l } = e,
+                        n = m.X7G.PAID_TERMS,
+                        a = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
+                    switch (t.type) {
                         case 0:
                         case 1:
-                            let n = g(e);
-                            if (null != n.multiPeriodDiscountAttributes) {
+                            let r = g(t);
+                            if (null != r.multiPeriodDiscountAttributes) {
                                 let {
-                                    discountEndDate: e,
-                                    discountedRenewalPrice: t,
-                                    priceWithoutDiscount: l,
-                                    trialDuration: a,
-                                } = n.multiPeriodDiscountAttributes;
-                                return p.intl.format(f.default["A+qfZ+"], {
-                                    purchaseButtonText: n.purchaseButtonText,
-                                    totalDue: n.totalDue,
-                                    trialOrDiscountPrice: t,
-                                    trialDuration: a,
-                                    trialOrDiscountEndDate: e,
-                                    fullRenewalPrice: l,
-                                    interval: n.interval,
-                                    subscriptionsFaqUrl: n.subscriptionsFaqUrl,
-                                    paidServicesTermsUrl: n.paidServicesTermsUrl,
-                                    contactUsUrl: n.contactUsUrl,
+                                        discountEndDate: e,
+                                        discountedRenewalPrice: t,
+                                        priceWithoutDiscount: n,
+                                        trialDuration: a,
+                                    } = r.multiPeriodDiscountAttributes,
+                                    s = {
+                                        totalDue: r.totalDue,
+                                        trialOrDiscountPrice: t,
+                                        trialDuration: a,
+                                        trialOrDiscountEndDate: e,
+                                        fullRenewalPrice: n,
+                                        interval: r.interval,
+                                        subscriptionsFaqUrl: r.subscriptionsFaqUrl,
+                                        paidServicesTermsUrl: r.paidServicesTermsUrl,
+                                        contactUsUrl: r.contactUsUrl,
+                                    };
+                                return p.intl.format(l ? f.default.R85gcN : f.default["A+qfZ+"], {
+                                    ...s,
+                                    purchaseButtonText: r.purchaseButtonText,
                                 });
                             }
-                            if (1 === e.type) return p.intl.format(f.default["2pNIbI"], n);
-                            return p.intl.format(f.default.OH1Evm, n);
+                            if (1 === t.type) return p.intl.format(f.default["2pNIbI"], r);
+                            return p.intl.format(l ? f.default.FqlTCu : f.default.OH1Evm, r);
                         case 2:
-                            return p.intl.format(f.default.bbgJdE, g(e));
+                            return p.intl.format(f.default.bbgJdE, g(t));
                         case 4:
                             return p.intl.format(f.default.IP93kX, {
-                                ...e,
-                                paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: l,
+                                ...t,
+                                paidServicesTermsUrl: n,
+                                virtualGoodsTermsUrl: a,
                             });
                         case 5:
-                            return p.intl.format(f.default.ITY3j6, {
-                                ...e,
-                                paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: l,
+                            return p.intl.format(l ? f.default["ztU/1y"] : f.default.ITY3j6, {
+                                ...t,
+                                paidServicesTermsUrl: n,
+                                virtualGoodsTermsUrl: a,
                             });
                         case 3:
-                            return p.intl.format(f.default.EOOWpo, { ...e, paidServicesTermsUrl: t });
+                            return p.intl.format(f.default.EOOWpo, { ...t, paidServicesTermsUrl: n });
                         case 6:
-                            return p.intl.format(f.default.G0nk6B, { ...e, paidServicesTermsUrl: t });
+                            return p.intl.format(f.default.G0nk6B, { ...t, paidServicesTermsUrl: n });
                         case 7:
-                            return p.intl.format(f.default.P5KfYx, { ...e, paidServicesTermsUrl: t });
+                            return p.intl.format(f.default.P5KfYx, { ...t, paidServicesTermsUrl: n });
                         case 8:
-                            return p.intl.format(f.default.BkYev7, {
-                                ...e,
-                                paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: l,
+                            return p.intl.format(l ? f.default["4EZ0L7"] : f.default.BkYev7, {
+                                ...t,
+                                paidServicesTermsUrl: n,
+                                virtualGoodsTermsUrl: a,
                             });
                         case 9:
                         case 10:
-                            let { applicationId: a, applicationName: r, shouldAppendDisclaimer: s } = e,
-                                c = r ?? "",
-                                d = (0, i.k3)(null != a ? { id: a, name: c } : void 0);
-                            if (s)
-                                return p.intl.format(9 === e.type ? f.default["0Zl+Xt"] : f.default["5fbNBX"], {
-                                    ...e,
-                                    applicationName: c,
-                                    paidServicesTermsUrl: t,
-                                    platformInfo: d,
+                            let { applicationId: s, applicationName: c, shouldAppendDisclaimer: d } = t,
+                                u = c ?? "",
+                                x = (0, i.k3)(null != s ? { id: s, name: u } : void 0);
+                            if (d)
+                                return p.intl.format(9 === t.type ? f.default["0Zl+Xt"] : f.default["5fbNBX"], {
+                                    ...t,
+                                    applicationName: u,
+                                    paidServicesTermsUrl: n,
+                                    platformInfo: x,
                                     virtualGoodsTermsUrl: m.X7G.PAID_TERMS_VIRTUAL_GOODS,
                                 });
-                            return p.intl.format(9 === e.type ? f.default.OVhTE7 : f.default.cwuBkH, {
-                                ...e,
-                                applicationName: c,
-                                paidServicesTermsUrl: t,
+                            return p.intl.format(9 === t.type ? f.default.OVhTE7 : f.default.cwuBkH, {
+                                ...t,
+                                applicationName: u,
+                                paidServicesTermsUrl: n,
                                 virtualGoodsTermsUrl: m.X7G.PAID_TERMS_VIRTUAL_GOODS,
                             });
                         default:
-                            (0, o.xb)(e);
+                            (0, o.xb)(t);
                     }
-                })(e.variant),
+                })({ variant: e.variant, isExpressCheckout: e.isExpressCheckout ?? !1 }),
             }),
             e.paymentSourceType === m.hes.PAYSAFE_CARD &&
                 (0, a.jsx)(r.E, {
