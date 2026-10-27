@@ -89,12 +89,19 @@
 }
 
 .background__134f6 {
+    --custom-emoji-packs-gradient-start: var(--illo-pink-40);
+    --custom-emoji-packs-gradient-end: var(--illo-blue-50);
     background-color: var(--background-surface-high);
-    background-image: radial-gradient(411% 145% at 50% 145%, var(--background-surface-high) 60%, transparent 100%), linear-gradient(100.32deg, var(--expressive-gradient-nitro-pink-end) 1.67%, var(--expressive-gradient-nitro-pink-start) 100%);
+    background-image: radial-gradient(411% 145% at 50% 145%, var(--background-surface-high) 60%, transparent 100%), linear-gradient(100.32deg, color-mix(in srgb, var(--custom-emoji-packs-gradient-start) 60%, transparent) 1.67%, color-mix(in srgb, var(--custom-emoji-packs-gradient-end) 60%, transparent) 100%);
     inset: 0;
     opacity: .5;
     pointer-events: none;
     position: absolute
+}
+
+.theme-light .background__134f6 {
+    --custom-emoji-packs-gradient-start: var(--illo-pink-30);
+    --custom-emoji-packs-gradient-end: var(--illo-blue-40)
 }
 
 .header__134f6 {
@@ -192,4 +199,4 @@
     width: 124px
 }
 
-/*# sourceMappingURL=813057.96498de37909bd9e.css.map*/
+/*# sourceMappingURL=813057.c7355dc453c24909.css.map*/

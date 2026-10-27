@@ -10,9 +10,11 @@
 }
 
 .button__02ff5 {
+    --custom-emoji-packs-button-gradient-start-hsl: var(--illo-pink-40-hsl);
+    --custom-emoji-packs-button-gradient-end-hsl: var(--illo-blue-50-hsl);
     align-items: center;
     background-color: var(--background-mod-strong);
-    background-image: radial-gradient(circle 32px at 12% 94%, rgba(45, 53, 173, .63) 0, rgba(45, 53, 173, .28) 45%, rgba(45, 53, 173, 0) 100%), radial-gradient(circle 32px at 97% 94%, rgba(255, 76, 210, .63) 0, rgba(255, 76, 210, .28) 45%, rgba(255, 76, 210, 0) 100%);
+    background-image: radial-gradient(circle 32px at 97% 94%, hsl(var(--custom-emoji-packs-button-gradient-end-hsl)/63%) 0, hsl(var(--custom-emoji-packs-button-gradient-end-hsl)/28%) 45%, hsl(var(--custom-emoji-packs-button-gradient-end-hsl)/0%) 100%), radial-gradient(circle 32px at 12% 94%, hsl(var(--custom-emoji-packs-button-gradient-start-hsl)/63%) 0, hsl(var(--custom-emoji-packs-button-gradient-start-hsl)/28%) 45%, hsl(var(--custom-emoji-packs-button-gradient-start-hsl)/0%) 100%);
     border-radius: var(--radius-sm);
     color: var(--icon-default);
     cursor: pointer;
@@ -21,6 +23,11 @@
     padding: var(--custom-emoji-picker-constants-unicode-category-icon-padding);
     transition: background-color .1s ease-in-out;
     width: var(--custom-emoji-picker-constants-unicode-category-icon-size)
+}
+
+.theme-light .button__02ff5 {
+    --custom-emoji-packs-button-gradient-start-hsl: var(--illo-pink-30-hsl);
+    --custom-emoji-packs-button-gradient-end-hsl: var(--illo-blue-40-hsl)
 }
 
 .button__02ff5:hover {
@@ -43,4 +50,4 @@
     border-color: ButtonText
 }
 
-/*# sourceMappingURL=861973.9f47a69c2fbfa09f.css.map*/
+/*# sourceMappingURL=861973.7c784f84b3072a45.css.map*/
