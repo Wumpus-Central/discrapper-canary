@@ -1,8 +1,5 @@
 e.exports = {
     $P: "upsellHeader_d9161f",
-    tU: "islands_d9161f",
-    $h: "mainIsland_d9161f",
-    Sb: "balloonDog_d9161f",
     KF: "upsellHeaderText_d9161f",
     JO: "upsellButtons_d9161f",
     a7: "valuesContainer_d9161f",

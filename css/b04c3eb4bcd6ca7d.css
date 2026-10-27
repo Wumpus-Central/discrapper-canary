@@ -1,34 +1,15 @@
 .upsellHeader_d9161f {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     gap: 16px
 }
 
-.islands_d9161f {
-    display: flex;
-    justify-content: space-between;
-    width: 100%
-}
-
-.mainIsland_d9161f {
-    bottom: 0;
-    height: 200px;
-    inset-inline-start: 0;
-    width: 400px
-}
-
-.balloonDog_d9161f {
-    bottom: 0;
-    height: 130px;
-    inset-inline-start: -10px;
-    width: 130px
-}
-
+.upsellHeader_d9161f,
 .upsellHeaderText_d9161f {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
+}
+
+.upsellHeaderText_d9161f {
     gap: 8px;
     text-align: center
 }
@@ -161,4 +142,4 @@
     margin-bottom: 16px
 }
 
-/*# sourceMappingURL=3860506c1775446f.css.map*/
+/*# sourceMappingURL=b04c3eb4bcd6ca7d.css.map*/
