@@ -1,3 +1,24 @@
+.container__733ad {
+    align-items: center;
+    background: var(--brand-500);
+    box-sizing: border-box;
+    display: flex;
+    height: var(--custom-mobile-web-handoff-link-mobile-web-handoff-height);
+    justify-content: space-between;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.errorContainer__733ad {
+    background: var(--primary-800)
+}
+
+.buttonText__733ad {
+    color: var(--brand-500)
+}
+
 .list__920b8 {
     align-items: center;
     background-color: var(--background-mod-subtle);
@@ -66,4 +87,4 @@
     margin: 28px 0 12px
 }
 
-/*# sourceMappingURL=376922.639eb62c158e2e9e.css.map*/
+/*# sourceMappingURL=167343.c7126362b7681f14.css.map*/

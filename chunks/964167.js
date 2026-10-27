@@ -1,24 +1,18 @@
-if (
-    (t.d(n, { Dw: () => u, V1: () => s, gu: () => h, qz: () => i, rm: () => a }),
-    t(323874),
-    t(14289),
-    t(35956),
-    221552 == t.j)
-)
-    var c = t(806163);
-var e = t(976860);
-function u(r) {
-    return "chat" === new URLSearchParams(r).get("view");
+(n.d(t, { Dw: () => a, V1: () => d, gu: () => o, qz: () => l, rm: () => s }), n(323874), n(14289), n(35956));
+var i = n(806163),
+    r = n(976860);
+function a(e) {
+    return "chat" === new URLSearchParams(e).get("view");
 }
-function a() {
-    return u((0, e.JK)().location.search);
+function s() {
+    return a((0, r.JK)().location.search);
 }
-function i() {
-    return u((0, c.zy)().search);
+function l() {
+    return a((0, i.zy)().search);
 }
-function h(r) {
-    return `${r}?view=chat`;
+function o(e) {
+    return `${e}?view=chat`;
 }
-function s(r) {
-    return a() ? h(r) : r;
+function d(e) {
+    return s() ? o(e) : e;
 }

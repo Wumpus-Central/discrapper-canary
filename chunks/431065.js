@@ -16,6 +16,7 @@ let a = {
     WeakSet: i,
     Function: i,
     Event: i,
+    KeyboardEvent: i,
     NavigateEvent: i,
     NavigationDestination: i,
     URL: i,

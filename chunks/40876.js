@@ -100,7 +100,7 @@ let r = {
     TopEmojisDataManager: { actions: ["EMOJI_INTERACTION_INITIATED"], inlineRequire: () => n(347209).A },
     EmbeddedAppShimManager: {
         actions: ["EMBEDDED_APP_SHIM_PIPE_OPEN"],
-        inlineRequire: () => n(52580).A,
+        inlineRequire: () => n(627070).A,
         hasStoreChangeListeners: !0,
     },
     EntityVersionsManager: {

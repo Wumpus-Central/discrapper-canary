@@ -311,8 +311,8 @@ function eA(e, t, n) {
                 l.e("264236"),
                 l.e("110116"),
                 l.e("273232"),
-                l.e("240511"),
                 l.e("463095"),
+                l.e("240511"),
                 l.e("959134"),
                 l.e("371482"),
                 l.e("610943"),
@@ -666,14 +666,14 @@ function e6(e) {
         }),
     });
 }
-function e8(e, t) {
+function e4(e, t) {
     let l = e.filter((e) => null != e.iconUrl || e.isLoading).slice(0, t > 3 ? 2 : 3),
         n = Math.max(0, t - l.length);
     return { visibleGames: l, overflowCount: n };
 }
-function e4(e) {
+function e8(e) {
     let { played: t, totalCount: l } = e,
-        { visibleGames: n, overflowCount: s } = e8(t, l);
+        { visibleGames: n, overflowCount: s } = e4(t, l);
     return (0, i.jsxs)("div", {
         className: eX.Nw,
         children: [
@@ -702,7 +702,7 @@ function e4(e) {
 function e7(e) {
     let { played: t, totalCount: l, children: n } = e,
         s = t.filter((e) => null != e.iconUrl || e.isLoading),
-        { visibleGames: a, overflowCount: r } = e8(s, s.length),
+        { visibleGames: a, overflowCount: r } = e4(s, s.length),
         d = Math.max(1, a.length + Number(r > 0));
     return (0, i.jsx)(eW.u, {
         body:
@@ -723,7 +723,7 @@ function e7(e) {
                             secondGame: t[1].name,
                             otherCount: l - 2,
                         }),
-        asset: s.length > 0 ? (0, i.jsx)(e4, { played: s, totalCount: s.length }) : void 0,
+        asset: s.length > 0 ? (0, i.jsx)(e8, { played: s, totalCount: s.length }) : void 0,
         assetSize: 24 * d - 5 * (d - 1),
         children: n,
     });
@@ -740,7 +740,7 @@ function e5(e) {
                 className: j()(eX.Nw, eX.Dz),
                 "aria-label": I.intl.formatToPlainString(Z.default.o6mBdl, { name: t }),
                 onClick: a,
-                children: (0, i.jsx)(e4, { played: r, totalCount: n }),
+                children: (0, i.jsx)(e8, { played: r, totalCount: n }),
             }),
         }),
     });
@@ -1597,7 +1597,7 @@ function t2(e) {
 }
 var t3 = l(57129),
     t6 = l(560328);
-function t8(e) {
+function t4(e) {
     let { guildId: t, requirement: l, onClick: n } = e;
     return (0, i.jsx)(y, {
         className: t6.p$,
@@ -1617,7 +1617,7 @@ function t8(e) {
                 : null,
     });
 }
-function t4(e) {
+function t8(e) {
     let { guildId: t, requirement: l, onClick: n } = e,
         s = X(l, "popular_games");
     return (0, i.jsxs)("div", {
@@ -1760,7 +1760,7 @@ function t9(e) {
         _ = null;
     return (
         (_ = m
-            ? (0, i.jsx)(t8, { guildId: t, requirement: o, onClick: () => v("activity_sharing") })
+            ? (0, i.jsx)(t4, { guildId: t, requirement: o, onClick: () => v("activity_sharing") })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsxs)("div", {
@@ -1793,7 +1793,7 @@ function t9(e) {
                           className: t6.sQ,
                           children: [
                               null != o &&
-                                  (0, i.jsx)(t4, { guildId: t, requirement: o, onClick: () => v("activity_sharing") }),
+                                  (0, i.jsx)(t8, { guildId: t, requirement: o, onClick: () => v("activity_sharing") }),
                               (0, i.jsx)(t5, {
                                   guildId: t,
                                   memberIds: x,
@@ -2079,8 +2079,7 @@ function lR(e) {
                                     l.e("880150"),
                                     l.e("168248"),
                                     l.e("490743"),
-                                    l.e("533240"),
-                                    l.e("734818"),
+                                    l.e("245420"),
                                     l.e("32925"),
                                     l.e("880286"),
                                     l.e("340363"),
@@ -2105,8 +2104,8 @@ function lR(e) {
                                     l.e("851677"),
                                     l.e("56347"),
                                     l.e("70690"),
-                                    l.e("424199"),
                                     l.e("587618"),
+                                    l.e("424199"),
                                     l.e("645499"),
                                     l.e("726391"),
                                     l.e("342551"),
@@ -2118,31 +2117,30 @@ function lR(e) {
                                     l.e("349619"),
                                     l.e("264236"),
                                     l.e("543039"),
-                                    l.e("481647"),
                                     l.e("398125"),
                                     l.e("221825"),
                                     l.e("930758"),
+                                    l.e("481647"),
                                     l.e("244560"),
                                     l.e("253729"),
                                     l.e("593600"),
-                                    l.e("776602"),
                                     l.e("266900"),
                                     l.e("707826"),
                                     l.e("948804"),
                                     l.e("110116"),
                                     l.e("205596"),
+                                    l.e("776602"),
+                                    l.e("809915"),
                                     l.e("199999"),
                                     l.e("828111"),
                                     l.e("890027"),
                                     l.e("140402"),
-                                    l.e("809915"),
-                                    l.e("721690"),
                                     l.e("812310"),
                                     l.e("361626"),
                                     l.e("646506"),
                                     l.e("445124"),
                                     l.e("445421"),
-                                    l.e("136022"),
+                                    l.e("721690"),
                                     l.e("832823"),
                                     l.e("761935"),
                                     l.e("511527"),
@@ -2150,15 +2148,11 @@ function lR(e) {
                                     l.e("776195"),
                                     l.e("87306"),
                                     l.e("502018"),
-                                    l.e("593020"),
                                     l.e("955184"),
-                                    l.e("832817"),
-                                    l.e("425544"),
-                                    l.e("416143"),
                                     l.e("249366"),
                                     l.e("728633"),
-                                    l.e("844695"),
                                     l.e("628439"),
+                                    l.e("136022"),
                                     l.e("756148"),
                                     l.e("539620"),
                                     l.e("225990"),
@@ -2167,78 +2161,82 @@ function lR(e) {
                                     l.e("248329"),
                                     l.e("234236"),
                                     l.e("276863"),
-                                    l.e("92124"),
+                                    l.e("593020"),
+                                    l.e("832817"),
+                                    l.e("425544"),
                                     l.e("165595"),
+                                    l.e("416143"),
                                     l.e("401590"),
                                     l.e("498215"),
+                                    l.e("844695"),
                                     l.e("631608"),
+                                    l.e("92124"),
+                                    l.e("123353"),
+                                    l.e("593176"),
                                     l.e("844780"),
                                     l.e("988077"),
-                                    l.e("776750"),
-                                    l.e("123353"),
-                                    l.e("561216"),
-                                    l.e("313681"),
-                                    l.e("593176"),
-                                    l.e("552712"),
-                                    l.e("829177"),
                                     l.e("592028"),
-                                    l.e("106943"),
+                                    l.e("776750"),
                                     l.e("133902"),
                                     l.e("76705"),
                                     l.e("232551"),
-                                    l.e("892340"),
                                     l.e("425906"),
-                                    l.e("14962"),
                                     l.e("123216"),
-                                    l.e("770291"),
+                                    l.e("561216"),
+                                    l.e("313681"),
                                     l.e("588940"),
+                                    l.e("552712"),
+                                    l.e("829177"),
+                                    l.e("106943"),
+                                    l.e("892340"),
+                                    l.e("836545"),
+                                    l.e("147786"),
+                                    l.e("14962"),
+                                    l.e("770291"),
+                                    l.e("482861"),
                                     l.e("643612"),
                                     l.e("398793"),
-                                    l.e("718667"),
-                                    l.e("836545"),
-                                    l.e("770697"),
-                                    l.e("147786"),
-                                    l.e("790244"),
-                                    l.e("482861"),
-                                    l.e("784103"),
                                     l.e("592731"),
+                                    l.e("718667"),
+                                    l.e("770697"),
+                                    l.e("858514"),
+                                    l.e("790244"),
+                                    l.e("344265"),
+                                    l.e("784103"),
+                                    l.e("121435"),
                                     l.e("53374"),
                                     l.e("256616"),
                                     l.e("273232"),
-                                    l.e("894747"),
-                                    l.e("858514"),
-                                    l.e("344265"),
-                                    l.e("121435"),
-                                    l.e("170653"),
                                     l.e("716092"),
                                     l.e("784041"),
+                                    l.e("894747"),
+                                    l.e("317225"),
+                                    l.e("463095"),
+                                    l.e("170653"),
+                                    l.e("124060"),
+                                    l.e("238412"),
                                     l.e("240511"),
                                     l.e("817852"),
                                     l.e("718573"),
                                     l.e("133179"),
+                                    l.e("146566"),
                                     l.e("614784"),
-                                    l.e("317225"),
+                                    l.e("32661"),
                                     l.e("346102"),
-                                    l.e("96588"),
                                     l.e("486792"),
                                     l.e("377766"),
-                                    l.e("463095"),
                                     l.e("334127"),
+                                    l.e("696123"),
                                     l.e("537894"),
                                     l.e("128534"),
                                     l.e("799657"),
                                     l.e("810034"),
-                                    l.e("124060"),
-                                    l.e("238412"),
-                                    l.e("146566"),
                                     l.e("8563"),
                                     l.e("444376"),
                                     l.e("499941"),
-                                    l.e("32661"),
                                     l.e("509793"),
                                     l.e("831145"),
                                     l.e("187856"),
-                                    l.e("696123"),
                                     l.e("400954"),
                                     l.e("610449"),
                                     l.e("32781"),
@@ -2250,12 +2248,11 @@ function lR(e) {
                                     l.e("710638"),
                                     l.e("193158"),
                                     l.e("318546"),
-                                    l.e("843719"),
+                                    l.e("73500"),
                                     l.e("556967"),
                                     l.e("846523"),
                                     l.e("919307"),
                                     l.e("565617"),
-                                    l.e("73500"),
                                     l.e("662355"),
                                     l.e("418943"),
                                     l.e("455924"),
@@ -2265,22 +2262,22 @@ function lR(e) {
                                     l.e("174347"),
                                     l.e("565065"),
                                     l.e("834386"),
-                                    l.e("784727"),
                                     l.e("976148"),
                                     l.e("130674"),
                                     l.e("622825"),
                                     l.e("959669"),
+                                    l.e("492022"),
                                     l.e("220518"),
                                     l.e("371482"),
                                     l.e("875842"),
                                     l.e("126780"),
                                     l.e("360781"),
+                                    l.e("237834"),
                                     l.e("88160"),
                                     l.e("209518"),
                                     l.e("631825"),
                                     l.e("851243"),
                                     l.e("748015"),
-                                    l.e("237834"),
                                     l.e("952577"),
                                     l.e("807771"),
                                     l.e("338516"),
@@ -2295,14 +2292,13 @@ function lR(e) {
                                     l.e("546745"),
                                     l.e("250478"),
                                     l.e("192440"),
-                                    l.e("863076"),
+                                    l.e("450048"),
                                     l.e("462276"),
                                     l.e("680986"),
                                     l.e("90373"),
                                     l.e("979630"),
                                     l.e("539319"),
-                                    l.e("293697"),
-                                    l.e("568980"),
+                                    l.e("981237"),
                                     l.e("303730"),
                                     l.e("236946"),
                                     l.e("935948"),
@@ -2624,30 +2620,30 @@ function l1(e) {
 var l2 = l(803613),
     l3 = l(682348),
     l6 = l(73152),
-    l8 = l(280911);
-function l4(e) {
+    l4 = l(280911);
+function l8(e) {
     let { guildId: t, isCompact: l } = e,
         n = (0, R.bG)([K.default], () => K.default.getCurrentUser()),
         s = (0, R.bG)([el.Ay], () => (null != n ? el.Ay.getMember(t, n.id) : null)),
         a = (0, et.gn)(t, n?.id, s?.colorStrings ?? null),
         r = en.Ay.useName(t, void 0, n);
     return (0, i.jsxs)("div", {
-        className: l8.D_,
+        className: l4.D_,
         children: [
             (0, i.jsxs)("div", {
-                className: l8.FI,
+                className: l4.FI,
                 "aria-hidden": !0,
                 children: [
                     !l &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)("span", { className: l8.eu, children: (0, i.jsx)(l2.D, { size: "sm" }) }),
+                                (0, i.jsx)("span", { className: l4.eu, children: (0, i.jsx)(l2.D, { size: "sm" }) }),
                                 (0, i.jsxs)("span", {
-                                    className: l8.r$,
+                                    className: l4.r$,
                                     children: [
-                                        (0, i.jsx)("span", { className: l8.Om }),
-                                        (0, i.jsx)("span", { className: l8.Om }),
-                                        (0, i.jsx)("span", { className: l8.Om }),
+                                        (0, i.jsx)("span", { className: l4.Om }),
+                                        (0, i.jsx)("span", { className: l4.Om }),
+                                        (0, i.jsx)("span", { className: l4.Om }),
                                     ],
                                 }),
                             ],
@@ -2660,7 +2656,7 @@ function l4(e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: l8.Qq,
+                className: l4.Qq,
                 children: [
                     (0, i.jsx)(E.D, {
                         variant: "heading-sm/semibold",
@@ -2686,16 +2682,16 @@ function l4(e) {
 function l7(e) {
     let { widgetName: t, isCompact: l } = e;
     return (0, i.jsxs)("div", {
-        className: l8.D_,
+        className: l4.D_,
         children: [
             !l &&
                 (0, i.jsx)("span", {
-                    className: l8.eu,
+                    className: l4.eu,
                     "aria-hidden": !0,
                     children: (0, i.jsx)(l3._, { size: "sm", color: c.A.colors.ICON_DEFAULT, "aria-hidden": !0 }),
                 }),
             (0, i.jsxs)("div", {
-                className: l8.Qq,
+                className: l4.Qq,
                 children: [
                     (0, i.jsx)(E.D, {
                         variant: "heading-sm/semibold",
@@ -2717,9 +2713,9 @@ function l7(e) {
 function l5(e) {
     let { guildId: t, widgetName: n, isCompact: s, isSpotifyConnected: a, onClick: r } = e;
     return (0, i.jsxs)("div", {
-        className: l8.UX,
+        className: l4.UX,
         children: [
-            a ? (0, i.jsx)(l7, { widgetName: n, isCompact: s }) : (0, i.jsx)(l4, { guildId: t, isCompact: s }),
+            a ? (0, i.jsx)(l7, { widgetName: n, isCompact: s }) : (0, i.jsx)(l8, { guildId: t, isCompact: s }),
             (0, i.jsx)(W.$, {
                 variant: "secondary",
                 size: "sm",
@@ -2744,8 +2740,8 @@ function l5(e) {
                                     l.e("264236"),
                                     l.e("110116"),
                                     l.e("273232"),
-                                    l.e("240511"),
                                     l.e("463095"),
+                                    l.e("240511"),
                                     l.e("959134"),
                                     l.e("371482"),
                                     l.e("610943"),
@@ -3439,8 +3435,8 @@ async function n2(e) {
 }
 let n3 = [];
 var n6 = l(344351),
-    n8 = l(256693),
-    n4 = l(343030),
+    n4 = l(256693),
+    n8 = l(343030),
     n7 = l(317608),
     n5 = l(953538);
 let n9 = {
@@ -4050,8 +4046,8 @@ let n9 = {
                         children: [
                             null != d &&
                                 (0, i.jsx)(n7.A, {
-                                    frameId: (0, n8.Ri)(d),
-                                    level: n4.A.WithinAppContent,
+                                    frameId: (0, n4.Ri)(d),
+                                    level: n8.A.WithinAppContent,
                                     className: n5.t$,
                                 }),
                             null == d &&

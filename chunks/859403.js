@@ -23,13 +23,9 @@ function h(e) {
     let { limit: d, isUpgradable: A } = (0, u.ZG)("ScheduledMessagesCreateRoadblock");
     A
         ? (0, s.openModalLazy)(async () => {
-              let { default: e } = await Promise.all([
-                  n.e("454048"),
-                  n.e("300699"),
-                  n.e("534822"),
-                  n.e("536200"),
-                  n.e("178930"),
-              ]).then(n.bind(n, 471177));
+              let { default: e } = await Promise.all([n.e("454048"), n.e("300699"), n.e("534822"), n.e("178930")]).then(
+                  n.bind(n, 471177),
+              );
               return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: [o.A.SCHEDULED_MESSAGES_ROADBLOCK] });
           })
         : l.A.show({

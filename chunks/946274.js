@@ -61,7 +61,6 @@ class d extends a.PureComponent {
             i.e("300699"),
             i.e("599666"),
             i.e("534822"),
-            i.e("536200"),
         ]).then(i.bind(i, 494921));
         e({ title: r.intl.string(r.t["0egKg3"]), help: r.intl.string(r.t["7PnXqu"]) });
     };

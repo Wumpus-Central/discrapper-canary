@@ -33,8 +33,8 @@ var n = t(477900),
     w = t(427262),
     k = t(329554),
     R = t(402313),
-    M = t(699976),
-    U = t(8936);
+    U = t(699976),
+    M = t(8936);
 let D = (0, I.Fe)({
     createPromise: () =>
         Promise.all([
@@ -58,8 +58,7 @@ let D = (0, I.Fe)({
             t.e("202985"),
             t.e("603619"),
             t.e("833292"),
-            t.e("222969"),
-            t.e("515363"),
+            t.e("470126"),
             t.e("128804"),
             t.e("71151"),
             t.e("227853"),
@@ -205,14 +204,14 @@ function L(e) {
               children: [
                   d,
                   (0, n.jsx)(D, {
-                      className: U.L,
+                      className: M.L,
                       applicationId: s,
                       userIds: [i.id],
                       location: "voice_channel",
                       guildId: t.guild_id,
                       channelId: t.id,
                       numWishlistItems: 2,
-                      cardSpec: M.Z.SIZE_110,
+                      cardSpec: U.Z.SIZE_110,
                   }),
               ],
           })
@@ -236,7 +235,7 @@ function F(e) {
         S = (0, s.bG)([G.A], () => G.A.getVoiceStateForChannel(l, i.id)?.connectedAt),
         x = null != S ? new Date(S * P.A.Millis.SECOND).getTime() : null;
     return (0, n.jsxs)("div", {
-        className: U.aq,
+        className: M.aq,
         children: [
             (0, n.jsx)(r.eu, {
                 src: h,
@@ -245,10 +244,10 @@ function F(e) {
                 avatarDecoration: m,
                 status: (0, g.A)(v) ? d.clD.STREAMING : p === d.clD.OFFLINE ? void 0 : p,
                 isMobile: I,
-                className: U.my,
+                className: M.my,
             }),
             (0, n.jsxs)("div", {
-                className: U.Qq,
+                className: M.Qq,
                 children: [
                     (0, n.jsx)(o.E, { variant: "text-sm/medium", lineClamp: 1, children: A }),
                     null != x && (0, n.jsx)(f.z, { textColor: "text-feedback-positive", entry: { start: x } }),
@@ -267,7 +266,7 @@ function z(e) {
         G = (0, s.bG)([j.A], () => j.A.getStreamForUser(r.id, a.getGuildId()), [a, r.id]),
         P = (0, s.bG)([O.A], () => (0, v.nr)(G, O.A), [G]),
         w = (0, p.r)() && (0, h.UK)(a.id),
-        M =
+        U =
             ((i = (0, m.Ay)(a)),
             (t = l.useMemo(() => i.filter((e) => e.embeddedActivity.userIds.has(r.id)), [i, r.id])),
             [...(0, m.Rz)(t).values()]),
@@ -280,7 +279,7 @@ function z(e) {
         $ = (0, E.Ay)(r.id, a.guild_id),
         H = Y && null != q && 0 === $.length,
         W = null != G && null != f && !w,
-        Z = W || K.length > 0 || M.length > 0 || null != q,
+        Z = W || K.length > 0 || U.length > 0 || null != q,
         J = Z || T;
     if (
         (l.useEffect(() => {
@@ -305,7 +304,7 @@ function z(e) {
                     onAction: o,
                     showHeader: !0,
                 }),
-            M.map((e) =>
+            U.map((e) =>
                 (0, n.jsx)(
                     k.A,
                     {
@@ -338,12 +337,12 @@ function z(e) {
     });
     return T || H
         ? (0, n.jsxs)("div", {
-              className: U.Db,
+              className: M.Db,
               ref: I,
               children: [
                   (0, n.jsx)(F, { user: r, guildId: a.guild_id, channelId: a.id }),
-                  Z && (0, n.jsx)(u.Ip, { className: U.XG, children: X }),
+                  Z && (0, n.jsx)(u.Ip, { className: M.XG, children: X }),
               ],
           })
-        : (0, n.jsx)(u.Ip, { className: U.kL, ref: I, children: X });
+        : (0, n.jsx)(u.Ip, { className: M.kL, ref: I, children: X });
 }

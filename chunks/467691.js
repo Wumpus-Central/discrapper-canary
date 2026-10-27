@@ -1,72 +1,214 @@
-(n.d(t, { US: () => G, BD: () => P, X8: () => x, mH: () => y }), n(667532));
+(n.d(t, { US: () => P, BD: () => w, X8: () => G, mH: () => M }), n(667532));
 var i = n(477900);
 n(582128);
-var l = n(435558),
-    r = n.n(l),
+var r = n(435558),
+    a = n.n(r),
     s = n(192308),
-    a = n(310953),
+    l = n(310953),
     o = n(749884),
     d = n(366811),
     c = n(808728),
     u = n(967198),
-    A = n(711014),
+    _ = n(711014),
     E = n(645959),
-    h = n(625494),
-    C = n(265422),
-    _ = n(652215),
-    g = n(790782);
-function I(e, t) {
+    A = n(625494),
+    h = n(265422),
+    f = n(652215),
+    I = n(790782);
+function p(e, t) {
     return [
-        { resourceId: e, type: g.P.GUILD_EVENT },
-        ...(e === _.ME
+        { resourceId: e, type: I.P.GUILD_EVENT },
+        ...(e === f.ME
             ? E.A.getPrivateChannelIds()
-            : (0, a.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
+            : (0, l.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }
-let T = r().throttle(function (e, t) {
-    var l;
-    let r,
-        a,
+let T = a().throttle(function (e, t) {
+    var r;
+    let a,
+        l,
         E,
         {
-            channelPredicate: g = () => !0,
+            channelPredicate: I = () => !0,
             guildPredicate: T = () => !0,
-            guildFeaturePredicate: p = () => !1,
-            ensureChatIsVisible: N = () => !1,
+            guildFeaturePredicate: m = () => !1,
+            ensureChatIsVisible: g = () => !1,
             withVoiceChannels: S = !1,
         } = t,
-        f = d.A.getState().guildId ?? _.ME,
-        O = d.A.getState().channelId,
-        L =
-            ((l = f),
-            (r = [...((0, o.J)() ? [_.YYv] : []), _.ME, ...A.Ay.getFlattenedGuildIds()]).includes(l) || r.unshift(l),
-            (a = r.indexOf(l)),
+        N = d.A.getState().guildId ?? f.ME,
+        C = d.A.getState().channelId,
+        O =
+            ((r = N),
+            (a = [...((0, o.J)() ? [f.YYv] : []), f.ME, ..._.Ay.getFlattenedGuildIds()]).includes(r) || a.unshift(r),
+            (l = a.indexOf(r)),
             e > 0
-                ? r.slice(a).concat(r.slice(0, a), l)
-                : (r.splice(a, 0, l), r.slice(a + 1).concat(r.slice(0, a + 1)))),
-        m = e > 0 ? 0 : L.length - 1,
-        b = I(f, S),
-        R = b.indexOf(O) + e;
-    for (; null != f && "" !== f;) {
-        if (((E = b[R]), T(f)))
+                ? a.slice(l).concat(a.slice(0, l), r)
+                : (a.splice(l, 0, r), a.slice(l + 1).concat(a.slice(0, l + 1)))),
+        R = e > 0 ? 0 : O.length - 1,
+        L = p(N, S),
+        y = L.indexOf(C) + e;
+    for (; null != N && "" !== N;) {
+        if (((E = L[y]), T(N)))
             for (; null != E && "" !== E;) {
                 if ("string" == typeof E) {
-                    if (g(f, E)) return (0, C.i)(f, E, !1, N(f, E));
-                } else if ("object" == typeof E && p(E.resourceId, E.type))
+                    if (I(N, E)) return (0, h.i)(N, E, !1, g(N, E));
+                } else if ("object" == typeof E && m(E.resourceId, E.type))
                     return (
-                        f !== u.A.getGuildId() && (0, C.i)(f, c.Ay.getDefaultChannel(f)?.id),
+                        N !== u.A.getGuildId() && (0, h.i)(N, c.Ay.getDefaultChannel(N)?.id),
                         (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
+                                n.e("352456"),
+                                n.e("644013"),
+                                n.e("896691"),
+                                n.e("971156"),
+                                n.e("260009"),
+                                n.e("779367"),
+                                n.e("552653"),
+                                n.e("85427"),
+                                n.e("698584"),
+                                n.e("967850"),
+                                n.e("915170"),
+                                n.e("64769"),
+                                n.e("329172"),
+                                n.e("992956"),
+                                n.e("880150"),
+                                n.e("490743"),
+                                n.e("457428"),
+                                n.e("7452"),
+                                n.e("205035"),
+                                n.e("529787"),
+                                n.e("60002"),
+                                n.e("189423"),
+                                n.e("415695"),
+                                n.e("828881"),
+                                n.e("691398"),
+                                n.e("266201"),
+                                n.e("752704"),
+                                n.e("56606"),
+                                n.e("206516"),
+                                n.e("327545"),
+                                n.e("163466"),
+                                n.e("940298"),
+                                n.e("738015"),
+                                n.e("234017"),
+                                n.e("621820"),
+                                n.e("40791"),
+                                n.e("358404"),
+                                n.e("996907"),
+                                n.e("831130"),
+                                n.e("398929"),
+                                n.e("377989"),
                                 n.e("670870"),
                                 n.e("684231"),
                                 n.e("570690"),
                                 n.e("886631"),
+                                n.e("144909"),
                                 n.e("884841"),
                                 n.e("998835"),
                                 n.e("435860"),
                                 n.e("694303"),
+                                n.e("70690"),
+                                n.e("587618"),
+                                n.e("828598"),
+                                n.e("645499"),
+                                n.e("726391"),
+                                n.e("615643"),
+                                n.e("454048"),
+                                n.e("188941"),
+                                n.e("300699"),
+                                n.e("349619"),
+                                n.e("599666"),
+                                n.e("543039"),
+                                n.e("398125"),
+                                n.e("221825"),
+                                n.e("930758"),
+                                n.e("244560"),
+                                n.e("901555"),
+                                n.e("253729"),
+                                n.e("593600"),
+                                n.e("827708"),
+                                n.e("266900"),
+                                n.e("707826"),
+                                n.e("948804"),
+                                n.e("110116"),
+                                n.e("205596"),
+                                n.e("611523"),
+                                n.e("809915"),
+                                n.e("199999"),
+                                n.e("828111"),
+                                n.e("890027"),
+                                n.e("851130"),
+                                n.e("672727"),
+                                n.e("417286"),
+                                n.e("812310"),
+                                n.e("534822"),
+                                n.e("361626"),
+                                n.e("646506"),
+                                n.e("445124"),
+                                n.e("445421"),
+                                n.e("832823"),
+                                n.e("761935"),
+                                n.e("511527"),
+                                n.e("763070"),
+                                n.e("776195"),
+                                n.e("87306"),
+                                n.e("502018"),
+                                n.e("955184"),
+                                n.e("249366"),
+                                n.e("728633"),
+                                n.e("628439"),
+                                n.e("756148"),
+                                n.e("570506"),
+                                n.e("539620"),
+                                n.e("225990"),
+                                n.e("183534"),
+                                n.e("935715"),
+                                n.e("248329"),
+                                n.e("398829"),
+                                n.e("276863"),
+                                n.e("165595"),
+                                n.e("401590"),
+                                n.e("498215"),
+                                n.e("27773"),
+                                n.e("631608"),
+                                n.e("123353"),
+                                n.e("231588"),
+                                n.e("593176"),
+                                n.e("621624"),
+                                n.e("592028"),
+                                n.e("133902"),
+                                n.e("76705"),
+                                n.e("425906"),
+                                n.e("123216"),
+                                n.e("588940"),
+                                n.e("401827"),
+                                n.e("836545"),
+                                n.e("147786"),
+                                n.e("489949"),
+                                n.e("858514"),
+                                n.e("344265"),
+                                n.e("637721"),
+                                n.e("121435"),
+                                n.e("716092"),
+                                n.e("784041"),
+                                n.e("317225"),
+                                n.e("463095"),
+                                n.e("124060"),
+                                n.e("238412"),
+                                n.e("146566"),
+                                n.e("32661"),
+                                n.e("696123"),
+                                n.e("231578"),
+                                n.e("288705"),
                                 n.e("147626"),
+                                n.e("661008"),
+                                n.e("73500"),
                                 n.e("632756"),
+                                n.e("237834"),
+                                n.e("858337"),
+                                n.e("349644"),
+                                n.e("940248"),
+                                n.e("459414"),
                                 n.e("256373"),
                                 n.e("901922"),
                                 n.e("970644"),
@@ -80,88 +222,88 @@ let T = r().throttle(function (e, t) {
                                 n.e("188353"),
                                 n.e("886571"),
                             ]).then(n.bind(n, 318104));
-                            return (t) => (0, i.jsx)(e, { ...t, guildId: f });
+                            return (t) => (0, i.jsx)(e, { ...t, guildId: N });
                         })
                     );
-                ((R += e), (E = b[R]));
+                ((y += e), (E = L[y]));
             }
-        if (((m += e), null == (f = L[m]) || "" === f)) break;
-        ((b = I(f, S)), (R = e < 0 ? b.length - 1 : 0));
+        if (((R += e), null == (N = O[R]) || "" === N)) break;
+        ((L = p(N, S)), (y = e < 0 ? L.length - 1 : 0));
     }
-    h._.dispatch(_.jej.SHAKE_APP, { duration: 200, intensity: 2 });
-}, _.ugG);
-var p = n(181079),
-    N = n(5180),
+    A._.dispatch(f.jej.SHAKE_APP, { duration: 200, intensity: 2 });
+}, f.ugG);
+var m = n(181079),
+    g = n(5180),
     S = n(455234),
-    f = n(95701),
-    O = n(734057),
-    L = n(573163),
-    m = n(309010),
-    b = n(543465);
-let R = (e, t) => {
-        let n = O.A.getChannel(t);
+    N = n(95701),
+    C = n(734057),
+    O = n(573163),
+    R = n(309010),
+    L = n(543465);
+let y = (e, t) => {
+        let n = C.A.getChannel(t);
         return (
             null != n &&
-            ((0, f.Gw)(n.type) || _.kvI.GUILD_VOCAL_PRIMARY.has(n.type)
-                ? L.Ay.getMentionCount(t) > 0 || m.Ay.getVoiceChannelId() === t
-                : (!b.Ay.isChannelMuted(e, t) || L.Ay.getMentionCount(t) > 0) && (0, S.Y)(n))
+            ((0, N.Gw)(n.type) || f.kvI.GUILD_VOCAL_PRIMARY.has(n.type)
+                ? O.Ay.getMentionCount(t) > 0 || R.Ay.getVoiceChannelId() === t
+                : (!L.Ay.isChannelMuted(e, t) || O.Ay.getMentionCount(t) > 0) && (0, S.Y)(n))
         );
     },
-    v = (e, t) =>
-        t === g.P.GUILD_EVENT ? !b.Ay.isMuteScheduledEventsEnabled(e) && L.Ay.hasUnread(e, t) : L.Ay.hasUnread(e, t);
-function U(e) {
-    return (0, N.ai)(e) ? p.A.favoriteGuildMuted : b.Ay.isMuted(e);
+    D = (e, t) =>
+        t === I.P.GUILD_EVENT ? !L.Ay.isMuteScheduledEventsEnabled(e) && O.Ay.hasUnread(e, t) : O.Ay.hasUnread(e, t);
+function v(e) {
+    return (0, g.ai)(e) ? m.A.favoriteGuildMuted : L.Ay.isMuted(e);
 }
-let D = (e, t) => {
-        let n = O.A.getChannel(t);
+let b = (e, t) => {
+        let n = C.A.getChannel(t);
         return (
             null != n &&
-            !!_.kvI.GUILD_VOCAL.has(n.type) &&
-            (L.Ay.getMentionCount(t) > 0 || (m.Ay.getVoiceChannelId() === t && L.Ay.getUnreadCount(t) > 0))
+            !!f.kvI.GUILD_VOCAL.has(n.type) &&
+            (O.Ay.getMentionCount(t) > 0 || (R.Ay.getVoiceChannelId() === t && O.Ay.getUnreadCount(t) > 0))
         );
     },
-    y = {
+    M = {
         binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
-            let e = d.A.getState().guildId ?? _.ME;
+            let e = d.A.getState().guildId ?? f.ME;
             return (
                 T(1, {
-                    channelPredicate: R,
-                    guildPredicate: (t) => t === e || !U(t),
-                    guildFeaturePredicate: v,
-                    ensureChatIsVisible: D,
+                    channelPredicate: y,
+                    guildPredicate: (t) => t === e || !v(t),
+                    guildFeaturePredicate: D,
+                    ensureChatIsVisible: b,
                     withVoiceChannels: !0,
                 }),
                 !1
             );
         },
     },
-    G = {
+    P = {
         binds: ["alt+shift+up"],
         comboKeysBindGlobal: !0,
         action() {
-            let e = d.A.getState().guildId ?? _.ME;
+            let e = d.A.getState().guildId ?? f.ME;
             return (
                 T(-1, {
-                    channelPredicate: R,
-                    guildPredicate: (t) => t === e || !U(t),
-                    guildFeaturePredicate: v,
-                    ensureChatIsVisible: D,
+                    channelPredicate: y,
+                    guildPredicate: (t) => t === e || !v(t),
+                    guildFeaturePredicate: D,
+                    ensureChatIsVisible: b,
                     withVoiceChannels: !0,
                 }),
                 !1
             );
         },
     },
-    M = (e, t) => L.Ay.getMentionCount(t) > 0,
-    P = {
+    U = (e, t) => O.Ay.getMentionCount(t) > 0,
+    w = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (T(1, { channelPredicate: M, ensureChatIsVisible: D, withVoiceChannels: !0 }), !1),
+        action: () => (T(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     },
-    x = {
+    G = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (T(-1, { channelPredicate: M, ensureChatIsVisible: D, withVoiceChannels: !0 }), !1),
+        action: () => (T(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     };

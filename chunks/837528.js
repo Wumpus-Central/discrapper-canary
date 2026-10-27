@@ -146,6 +146,7 @@ function G(e, t, s, o) {
                             n.e("661814"),
                             n.e("96680"),
                             n.e("691671"),
+                            n.e("33611"),
                             n.e("612287"),
                             n.e("588070"),
                             n.e("793438"),
@@ -194,7 +195,7 @@ function G(e, t, s, o) {
                             n.e("752516"),
                             n.e("347285"),
                             n.e("812663"),
-                            n.e("227067"),
+                            n.e("787763"),
                         ]).then(n.bind(n, 355682));
                         return (n) =>
                             (0, i.jsx)(e, { ...n, message: r, channel: l, mediaItem: t, shouldHideMediaOptions: o });

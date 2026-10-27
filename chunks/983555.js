@@ -129,8 +129,7 @@ function $(e) {
                           guild_id: l,
                           channel_id: G.Ay.getChannelId(),
                       }),
-                      n
-                          .e("138042")
+                      Promise.resolve()
                           .then(n.bind(n, 837057))
                           .then((e) => {
                               let { transitionToGlobalDiscovery: t } = e,
@@ -296,8 +295,7 @@ function $(e) {
                 ((i = e.get("q") ?? void 0), (s = e.get("category_id") ?? void 0), (l = e.get("page") ?? void 0));
             } else a && (s = e[4]);
             return (
-                n
-                    .e("138042")
+                Promise.resolve()
                     .then(n.bind(n, 837057))
                     .then((e) => {
                         let { transitionToGlobalDiscovery: t } = e,
@@ -419,8 +417,7 @@ function $(e) {
         : U && b?.startsWith("/discovery/servers")
           ? (e) => (
                 e?.preventDefault(),
-                n
-                    .e("138042")
+                Promise.resolve()
                     .then(n.bind(n, 837057))
                     .then((e) => {
                         let { transitionToGlobalDiscovery: t } = e,
