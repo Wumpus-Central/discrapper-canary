@@ -132,7 +132,7 @@ let eG = [ek.lp.ACTIVITY],
             ey = eT?.id ?? null,
             [ej] = (0, w.A)(u.type === ek.lp.ACTIVITY ? [u.applicationId] : []),
             eN = (0, r.bG)([ea.A], () => null != ey && ea.A.isLocalSoundboardMuted(ey)),
-            ef = (0, en.g)("CallTile"),
+            ef = (0, en.g)(eN ? "CallTile" : "Invalid - CallTile"),
             eC = (0, r.bG)([eA.Ay], () => null != ey && eA.Ay.isLocalVideoDisabled(ey, (0, z.A)(u.type)), [ey, u.type]),
             eR = (0, r.bG)(
                 [eA.Ay],

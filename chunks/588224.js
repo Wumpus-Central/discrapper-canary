@@ -33,8 +33,8 @@ var n = t(477900),
     w = t(340851),
     k = t(652215),
     R = t(31408),
-    M = t(616352);
-let U = l.memo((e) => {
+    U = t(616352);
+let M = l.memo((e) => {
     let { mute: i, deaf: t, user: l, channel: s, sessionId: a, nick: d } = e,
         p = l.id,
         f = (0, r.bG)([y.default], () => y.default.getId() === p, [p]),
@@ -46,12 +46,12 @@ let U = l.memo((e) => {
                     : [!C.Ay.isSupported() || C.Ay.isLocalMute(p), !1, C.Ay.isLocalVideoDisabled(p)],
             [f, p],
         ),
-        M = (0, r.bG)([G.A], () => G.A.isPrioritySpeaker(p)),
-        U = (0, o.A)({ userId: p, checkSoundSharing: !0 }),
+        U = (0, r.bG)([G.A], () => G.A.isPrioritySpeaker(p)),
+        M = (0, o.A)({ userId: p, checkSoundSharing: !0 }),
         D = (0, r.bG)([S.A], () => S.A.isUserPlayingSounds(p)),
         L = (0, h.A)(s.guild_id, p),
         F = (0, r.bG)([S.A], () => S.A.isLocalSoundboardMuted(p)),
-        z = (0, v.g)("VoiceUsers"),
+        z = (0, v.g)(F ? "VoiceUser" : "Invalid - VoiceUser"),
         B = (0, r.bG)(
             [u.Ay],
             () =>
@@ -85,7 +85,7 @@ let U = l.memo((e) => {
         );
     return (0, n.jsx)(I.A, {
         shakeLocation: R.uD.VOICE_USER,
-        isShaking: U || D,
+        isShaking: M || D,
         children: (0, n.jsx)(w.Ay, {
             ...e,
             nick: d ?? J,
@@ -98,9 +98,9 @@ let U = l.memo((e) => {
             localVideoDisabled: j,
             mute: i || E,
             deaf: t || b,
-            speaking: U,
+            speaking: M,
             playingSoundboard: D,
-            priority: M,
+            priority: U,
             embeddedApplication: K[0],
             isStreaming: null != H && H.channelId === s.id,
             isWatching: null != W && W.state !== k.XYD.ENDED,
@@ -112,7 +112,7 @@ let U = l.memo((e) => {
         }),
     });
 });
-U.displayName = "ConnectedVoiceUser";
+M.displayName = "ConnectedVoiceUser";
 let D = [],
     L = function (e) {
         let {
@@ -176,7 +176,7 @@ let D = [],
             let e = (u && T.length > c + 1 ? T.slice(0, c) : T).map((e) => {
                 let { user: i, nick: t, voiceState: l } = e;
                 return (0, n.jsx)(
-                    U,
+                    M,
                     {
                         user: i,
                         nick: t,
@@ -209,7 +209,7 @@ let D = [],
         return null == K && null == v
             ? null
             : (0, n.jsxs)(E.Wr, {
-                  className: a()(I, M.p_, { [M.yZ]: u, [M.lY]: h, [M.fT]: S }),
+                  className: a()(I, U.p_, { [U.yZ]: u, [U.lY]: h, [U.fT]: S }),
                   collapsed: u,
                   children: [K, v],
               });

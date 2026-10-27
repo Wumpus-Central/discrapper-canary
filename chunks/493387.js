@@ -104,12 +104,12 @@ function b(e) {
         v = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
         b = (0, o.bG)([x.A], () => x.A.isFocused()),
         S = (0, o.bG)([f.Ay], () => new Map(n.filter(C.Xw).map((e) => [e.user.id, f.Ay.isLocalMute(e.user.id)])), [n]),
-        _ = (0, m.g)("VoiceCallParticipants"),
-        T = (0, o.bG)(
+        _ = (0, o.bG)(
             [A.A],
             () => new Map(n.filter(C.Xw).map((e) => [e.user.id, A.A.isLocalSoundboardMuted(e.user.id)])),
             [n],
         ),
+        T = (0, m.g)(_.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
         R = n.map((e) => {
             if (e.type !== C.lp.USER) return null;
             let { user: t, voiceState: n, speaking: a, ringing: s, playingSoundboard: o } = e,
@@ -120,7 +120,7 @@ function b(e) {
                   ? (c = j.intl.string(j.t.NjmiOL))
                   : n?.isVoiceMuted() === !0
                     ? (c = j.intl.string(j.t.tjtv3P))
-                    : _ && !0 === T.get(t.id) && (c = j.intl.string(j.t["9bJYWN"]));
+                    : T && !0 === _.get(t.id) && (c = j.intl.string(j.t["9bJYWN"]));
             let d =
                 null != c ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: c }) : t.username;
             return (0, i.jsx)(
