@@ -1,6 +1,34 @@
 let r, i;
-n.d(t, { qg: () => R, Ts: () => B });
-let o = new URL(n(239347), n.b);
+n.d(t, {
+    w4: () => S,
+    qg: () => L,
+    tJ: () =>
+        function* e(t) {
+            for (let n of t)
+                switch ((yield n, n.type)) {
+                    case "paragraph":
+                    case "strikethrough":
+                    case "underline":
+                    case "italic":
+                    case "bold":
+                    case "quote":
+                        yield* e(n.value);
+                        break;
+                    case "spoiler":
+                    case "heading":
+                    case "small":
+                        yield* e(n.value.content);
+                        break;
+                    case "list":
+                        for (let t of n.value.items) yield* e(t.content);
+                        break;
+                    case "link":
+                        n.text && (yield* e(n.text));
+                }
+        },
+    Ts: () => M,
+});
+let o = new URL(n(136089), n.b);
 function _() {
     return {
         __proto__: null,
@@ -14,7 +42,7 @@ function _() {
             },
             __wbg_String_8564e559799eccda: function (e, t) {
                 let n = w(String(d[t]), r.__wbindgen_export, r.__wbindgen_export2),
-                    i = x;
+                    i = I;
                 (c().setInt32(e + 4, i, !0), c().setInt32(e + 0, n, !0));
             },
             __wbg___wbindgen_bigint_get_as_i64_a2383202b9353e4c: function (e, t) {
@@ -65,7 +93,7 @@ ${t.stack}`
                         r.__wbindgen_export,
                         r.__wbindgen_export2,
                     ),
-                    i = x;
+                    i = I;
                 (c().setInt32(e + 4, i, !0), c().setInt32(e + 0, n, !0));
             },
             __wbg___wbindgen_in_92f62ee1427d9e49: function (e, t) {
@@ -76,9 +104,6 @@ ${t.stack}`
             },
             __wbg___wbindgen_is_function_1f9d30630b8b1d3d: function (e) {
                 return "function" == typeof d[e];
-            },
-            __wbg___wbindgen_is_null_e343b7d08827ba72: function (e) {
-                return null === d[e];
             },
             __wbg___wbindgen_is_object_3c45d4f2dde4e749: function (e) {
                 let t = d[e];
@@ -105,7 +130,7 @@ ${t.stack}`
                 let n = d[t],
                     i = "string" == typeof n ? n : void 0;
                 var o = g(i) ? 0 : w(i, r.__wbindgen_export, r.__wbindgen_export2),
-                    _ = x;
+                    _ = I;
                 (c().setInt32(e + 4, _, !0), c().setInt32(e + 0, o, !0));
             },
             __wbg___wbindgen_throw_41e9ee4f547fc59a: function (e, t) {
@@ -267,13 +292,13 @@ function g(e) {
 }
 function w(e, t, n) {
     if (void 0 === n) {
-        let n = v.encode(e),
+        let n = E.encode(e),
             r = t(n.length, 1) >>> 0;
         return (
             l()
                 .subarray(r, r + n.length)
                 .set(n),
-            (x = n.length),
+            (I = n.length),
             r
         );
     }
@@ -289,9 +314,9 @@ function w(e, t, n) {
     if (_ !== r) {
         (0 !== _ && (e = e.slice(_)), (i = n(i, r, (r = _ + 3 * e.length), 1) >>> 0));
         let t = l().subarray(i + _, i + r);
-        ((_ += v.encodeInto(e, t).written), (i = n(i, r, _, 1) >>> 0));
+        ((_ += E.encodeInto(e, t).written), (i = n(i, r, _, 1) >>> 0));
     }
-    return ((x = _), i);
+    return ((I = _), i);
 }
 function p(e) {
     let t = d[e];
@@ -306,17 +331,17 @@ function m(e, t) {
         y.decode(l().subarray(e, e + t))
     );
 }
-let v = new TextEncoder();
-"encodeInto" in v ||
-    (v.encodeInto = function (e, t) {
-        let n = v.encode(e);
+let E = new TextEncoder();
+"encodeInto" in E ||
+    (E.encodeInto = function (e, t) {
+        let n = E.encode(e);
         return (t.set(n), { read: e.length, written: n.length });
     });
-let x = 0;
-function j(e, t) {
+let I = 0;
+function v(e, t) {
     return ((r = e.exports), (s = null), (u = null), r);
 }
-async function A(e, t) {
+async function x(e, t) {
     if ("function" == typeof Response && e instanceof Response) {
         if (!e.ok) throw Error(`failed to fetch Wasm: ${e.status} ${e.statusText} fetching '${e.url}'`);
         if ("function" == typeof WebAssembly.instantiateStreaming)
@@ -349,7 +374,7 @@ async function A(e, t) {
         return n instanceof WebAssembly.Instance ? { instance: n, module: e } : n;
     }
 }
-async function E(e) {
+async function O(e) {
     if (void 0 !== r) return r;
     (void 0 !== e &&
         (Object.getPrototypeOf(e) === Object.prototype
@@ -357,43 +382,83 @@ async function E(e) {
             : console.warn(
                   "using deprecated parameters for the initialization function; pass a single object instead",
               )),
-        void 0 === e && (e = new URL(n(239347), n.b)));
+        void 0 === e && (e = new URL(n(136089), n.b)));
     let t = _();
     ("string" == typeof e ||
         ("function" == typeof Request && e instanceof Request) ||
         ("function" == typeof URL && e instanceof URL)) &&
         (e = fetch(e));
-    let { instance: i, module: o } = await A(await e, t);
-    return j(i, o);
+    let { instance: i, module: o } = await x(await e, t);
+    return v(i, o);
 }
-async function I() {
+async function A() {
     return (i || (i = await WebAssembly.compileStreaming(fetch(o))), i);
 }
-async function k() {
-    return E({ module_or_path: await I() });
+async function N() {
+    return O({ module_or_path: await A() });
 }
-let S = !1,
-    O = null;
-function B() {
-    return S
+let S = Object.freeze({
+        CUSTOM_EMOJI: 1,
+        COLON_EMOJI: 2,
+        UNICODE_EMOJI: 4,
+        MASKED_LINK: 8,
+        DETECTED_LINK: 16,
+        AUTO_LINK: 32,
+        CONTACT_LINK: 64,
+        USER_MENTION: 128,
+        CHANNEL_MENTION: 256,
+        ROLE_MENTION: 512,
+        GAME_MENTION: 1024,
+        COMMAND_MENTION: 2048,
+        EVERYONE_MENTION: 4096,
+        HERE_MENTION: 8192,
+        STATIC_MENTION: 16384,
+        TIMESTAMP: 32768,
+        CODE_BLOCK: 65536,
+        CODE: 131072,
+        DOUBLE_CODE: 262144,
+        BOLD: 524288,
+        ASTERISK_ITALIC: 1048576,
+        UNDERSCORE_ITALIC: 2097152,
+        UNDERLINE: 4194304,
+        STRIKETHROUGH: 8388608,
+        SPOILER: 0x1000000,
+        HEADING: 0x2000000,
+        LIST: 0x4000000,
+        QUOTE: 0x8000000,
+        MULTILINE_QUOTE: 0x10000000,
+        SMALL: 0x20000000,
+        DEV_LINKS: 0x40000000,
+        EMOJI: 7,
+        LINKS: 120,
+        MENTIONS: 32640,
+        CODE_SPANS: 393216,
+        ITALIC: 3145728,
+        QUOTES: 0x18000000,
+        ALL: 0x7fffffff,
+    }),
+    T = !1,
+    j = null;
+function M() {
+    return T
         ? Promise.resolve()
-        : (O ??= k().then(
+        : (j ??= N().then(
               () => {
-                  S = !0;
+                  T = !0;
               },
               (e) => {
-                  throw ((O = null), e);
+                  throw ((j = null), e);
               },
           ));
 }
-function R(e, t) {
+function L(e, t) {
     return (
         !(function () {
-            if (S) return;
+            if (T) return;
             let e = (i || (i = null), i);
             if (!e)
                 throw Error(
-                    "@discord/markdown-wasm/sync is not initialised. Await init() once before parsing, or hand already-compiled wasm to initSync().",
+                    "@discord/markdown-wasm is not initialised. Await init() once before parsing, or hand already-compiled wasm to initSync().",
                 );
             (!(function (e) {
                 var t = { module: e };
@@ -404,16 +469,22 @@ function R(e, t) {
                         : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
                 let n = _();
                 (t instanceof WebAssembly.Module || (t = new WebAssembly.Module(t)),
-                    j(new WebAssembly.Instance(t, n), t));
+                    v(new WebAssembly.Instance(t, n), t));
             })(e),
-                (S = !0));
+                (T = !0));
         })(),
         (function (e, t) {
             try {
                 let o = r.__wbindgen_add_to_stack_pointer(-16),
                     _ = w(e, r.__wbindgen_export, r.__wbindgen_export2),
-                    s = x;
-                r.parse(o, _, s, a(t), g(void 0) ? Number.MAX_SAFE_INTEGER : void 0 >>> 0);
+                    a = I;
+                r.parse(
+                    o,
+                    _,
+                    a,
+                    g(t) ? Number.MAX_SAFE_INTEGER : t >>> 0,
+                    g(void 0) ? Number.MAX_SAFE_INTEGER : void 0 >>> 0,
+                );
                 var n = c().getInt32(o + 0, !0),
                     i = c().getInt32(o + 4, !0);
                 if (c().getInt32(o + 8, !0)) throw p(i);
