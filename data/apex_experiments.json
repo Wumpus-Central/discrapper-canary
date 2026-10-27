@@ -3641,17 +3641,6 @@
     }
   },
   {
-    "name": "2026-08-profile-read-state-v1",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      }
-    }
-  },
-  {
     "name": "2026-08-rive-web-perf",
     "kind": "user",
     "defaultConfig": {
@@ -5740,6 +5729,17 @@
   },
   {
     "name": "2026-10-profile-default-tab-with-content",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-10-profile-read-state",
     "kind": "user",
     "defaultConfig": null,
     "variations": {

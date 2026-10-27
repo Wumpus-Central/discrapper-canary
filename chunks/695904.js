@@ -5,7 +5,7 @@ var n = i(17928),
     r = i(287809);
 let a = { enabled: !1 },
     d = { 0: a, 1: { enabled: !0 } },
-    o = (0, l.mj)({ name: "2026-08-profile-read-state-v1", kind: "user", defaultConfig: a, variations: d });
+    o = (0, l.mj)({ name: "2026-10-profile-read-state", kind: "user", defaultConfig: a, variations: d });
 function u() {
     let t = r.default.getCurrentUser()?.id;
     if (null == t) return null;
