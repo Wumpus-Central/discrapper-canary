@@ -273,7 +273,7 @@
 }
 
 .shineBar_fe7668 {
-    background: linear-gradient(115deg, transparent 38%, var(--white-500) 50%, transparent 62%);
+    background: linear-gradient(115deg, transparent 17%, hsl(var(--white-500-hsl)/.02) 28%, hsl(var(--white-500-hsl)/.07) 39%, hsl(var(--white-500-hsl)/.16) 50%, hsl(var(--white-500-hsl)/.07) 61%, hsl(var(--white-500-hsl)/.02) 72%, transparent 83%);
     inset-block: 0;
     inset-inline-start: -50%;
     transform: translateX(-60%);
@@ -449,4 +449,4 @@
     }
 }
 
-/*# sourceMappingURL=d719c095b5f6053d.css.map*/
+/*# sourceMappingURL=7bd7e55d3704d929.css.map*/
