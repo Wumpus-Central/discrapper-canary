@@ -21,8 +21,8 @@ var j = n(944791),
     N = n(363195),
     T = n(885386),
     S = n(669067),
-    I = n(899847),
-    y = n(695515),
+    y = n(899847),
+    I = n(695515),
     b = n(438732),
     _ = n(174459),
     C = n(191627),
@@ -37,9 +37,9 @@ let R = {
     },
     k = function () {
         return {
-            selectedTab: (0, d.bG)([y.A], () => y.A.getSelectedTab()),
+            selectedTab: (0, d.bG)([I.A], () => I.A.getSelectedTab()),
             handleTabChange: function (e) {
-                (I.Ay.selectTab(e), _.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: C.qb.TabChange, tab: e }));
+                (y.Ay.selectTab(e), _.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: C.qb.TabChange, tab: e }));
             },
         };
     };
@@ -70,18 +70,18 @@ function ee(e) {
 var et = n(923531),
     en = n(294433);
 function el(e) {
-    return (0, d.bG)([y.A], () => y.A.getTotalForDisplayType(e));
+    return (0, d.bG)([I.A], () => I.A.getTotalForDisplayType(e));
 }
 function ei(e) {
     let t = el(e) ?? 0;
     if (e === C.NV.TOTAL_VOICE_MINUTES) return (0, et.hO)(t);
     if (e === C.NV.PURCHASES) {
-        let e = y.A.getTotalSpendAmount(),
-            n = y.A.getTotalSpendCurrency();
+        let e = I.A.getTotalSpendAmount(),
+            n = I.A.getTotalSpendCurrency();
         return null != e && null != n ? (0, Q.RS)(e, n) : t;
     }
     if (e === C.NV.GIFTS) {
-        let e = y.A.getTotalGiftValue();
+        let e = I.A.getTotalGiftValue();
         if (null != e) return (0, Q.RS)(e.amount, e.currency);
     }
     return t;
@@ -148,7 +148,7 @@ var eg = n(34188),
     eN = n(372320),
     eT = n(665411),
     eS = n(740523);
-function eI(e) {
+function ey(e) {
     let { displayName: t, product: n } = e,
         i = (function (e) {
             if (0 === e.items.length) return null;
@@ -157,7 +157,7 @@ function eI(e) {
         })(n);
     return null == i ? null : (0, l.jsx)("img", { src: i, alt: t, className: eS._P });
 }
-function ey(e) {
+function eI(e) {
     let { displayName: t, nameplateData: n } = e,
         { staticImageUrl: i } = (0, eE.K)(n);
     return null == i ? null : (0, l.jsx)("img", { src: i, alt: t, className: eS.M4 });
@@ -201,10 +201,10 @@ function eL(e) {
     if (null == n) return (0, l.jsx)("div", { className: eS.T8, children: (0, l.jsx)(eg.U, {}) });
     switch (n.type) {
         case eo.R.AVATAR_DECORATION:
-            return (0, l.jsx)(eI, { displayName: t, product: n });
+            return (0, l.jsx)(ey, { displayName: t, product: n });
         case eo.R.NAMEPLATE:
             let i = (0, ep.EQ)(n);
-            return null != i ? (0, l.jsx)(ey, { displayName: t, nameplateData: i }) : null;
+            return null != i ? (0, l.jsx)(eI, { displayName: t, nameplateData: i }) : null;
         case eo.R.PROFILE_EFFECT:
             return (0, l.jsx)(eb, { displayName: t, product: n });
         case eo.R.PROFILE_FRAME:
@@ -274,7 +274,7 @@ var eU = n(900002),
 let eV = [18, 18, 16, 16, 14, 12, 10],
     ew = function (e) {
         let { guildId: t } = e,
-            n = (0, d.bG)([y.A], () => y.A.getGuild(t));
+            n = (0, d.bG)([I.A], () => I.A.getGuild(t));
         if (void 0 === n) return null;
         let { name: i } = n,
             r = (0, eF.Iv)(n, 40, !0),
@@ -297,7 +297,7 @@ let eV = [18, 18, 16, 16, 14, 12, 10],
 var ez = n(85909);
 let eH = i.memo((e) => {
     let { guildId: t, className: n, customSubtext: i } = e,
-        r = (0, d.bG)([y.A], () => y.A.getGuild(t));
+        r = (0, d.bG)([I.A], () => I.A.getGuild(t));
     if (void 0 === r) return null;
     let a = r.features.has(L.GuildFeatures.VERIFIED) || r.features.has(L.GuildFeatures.PARTNERED),
         { name: c } = r;
@@ -421,8 +421,8 @@ let e3 = function (e) {
 };
 var e2 = n(326851);
 let e8 = function () {
-    let e = (0, d.bG)([y.A], () => y.A.getTopUserActivities()),
-        t = (0, d.bG)([y.A], () => y.A.getTopGuildActivities());
+    let e = (0, d.bG)([I.A], () => I.A.getTopUserActivities()),
+        t = (0, d.bG)([I.A], () => I.A.getTopGuildActivities());
     return 0 === e.length && 0 === t.length
         ? null
         : (0, l.jsxs)("div", {
@@ -474,7 +474,7 @@ let e8 = function () {
                                   : (0, l.jsx)("div", {
                                         className: e2.Ce,
                                         children: t.map((e) => {
-                                            let t = y.A.getGuild(e.guild_id),
+                                            let t = I.A.getGuild(e.guild_id),
                                                 n = t?.name ?? "Unknown Server";
                                             return (0, l.jsx)(
                                                 e0.u,
@@ -520,7 +520,7 @@ function e4(e) {
             (0, q.P0)({ text: $.intl.string(J.default.Wu8BK2), variant: "critical" });
         }, []),
         r = (0, b.A)(),
-        a = (0, d.yK)([y.A], () => y.A.getActionsForDisplayType(t)),
+        a = (0, d.yK)([I.A], () => I.A.getActionsForDisplayType(t)),
         c = el(t),
         o = ei(t),
         { loadMore: x, isMoreLoading: m } = (0, w.A)({ onError: n }),
@@ -542,7 +542,7 @@ function e4(e) {
                 }
                 if ((0, et.Is)(n)) return (0, l.jsx)(eH, { guildId: n.entity_id }, n.event_id);
                 if ((0, et.u7)(n)) {
-                    let e = y.A.getPurchaseInfo(n.entity_id);
+                    let e = I.A.getPurchaseInfo(n.entity_id);
                     return null == e
                         ? null
                         : (0, l.jsx)(
@@ -557,7 +557,7 @@ function e4(e) {
                           );
                 }
                 if ((0, et.FT)(n)) {
-                    let e = y.A.getGiftInfo(n.entity_id);
+                    let e = I.A.getGiftInfo(n.entity_id);
                     if (null == e) return null;
                     let {
                         skuId: t,
@@ -683,7 +683,7 @@ let te = i.memo((e) => {
 });
 function tt() {
     let e = (0, D.GR)(),
-        t = (0, d.bG)([y.A], () => y.A.getSelectedTeenId()),
+        t = (0, d.bG)([I.A], () => I.A.getSelectedTeenId()),
         { selectTeenUser: n } = (0, w.A)({}),
         r = e.map((e) => ({ label: e.id, value: e.id })),
         s = i.useCallback((e) => (0, l.jsx)(te, { userId: e.value, avatarSize: P._3.SIZE_24 }), []);
@@ -714,7 +714,7 @@ function tn() {
 te.displayName = "FamilyCenterActivityCardAccountRow";
 let tl = function () {
     let e = (0, et.Mo)(),
-        t = (0, d.bG)([y.A], () => Object.values(C.NV).some((e) => y.A.getTotalForDisplayType(e) > 0)),
+        t = (0, d.bG)([I.A], () => Object.values(C.NV).some((e) => I.A.getTotalForDisplayType(e) > 0)),
         n = (0, et.jp)(),
         i = (0, D.v4)(n);
     return (0, l.jsxs)("div", {
@@ -954,8 +954,8 @@ function tS() {
               ],
           });
 }
-var tI = n(444802),
-    ty = n(875162),
+var ty = n(444802),
+    tI = n(875162),
     tb = n(873298),
     t_ = n(389737),
     tC = n(566769),
@@ -1022,7 +1022,7 @@ function tk() {
 }
 var tD = n(309318);
 function tU() {
-    let e = (0, tI.WX)(),
+    let e = (0, ty.WX)(),
         t = [
             {
                 id: "explicit-media-redaction",
@@ -1043,7 +1043,7 @@ function tU() {
                 header: $.intl.string($.t["Hj/But"]),
                 description: $.intl.format($.t["H/Icz+"], { learnMoreLink: tE.A.getArticleURL(e) }),
             }),
-            (0, l.jsx)(ty.A, { tabs: t, orientation: "vertical", tabsClassName: tD.v }),
+            (0, l.jsx)(tI.A, { tabs: t, orientation: "vertical", tabsClassName: tD.v }),
         ],
     });
 }
@@ -1154,7 +1154,7 @@ function tQ() {
         }, []),
         { getLinkCode: r } = (0, w.A)(),
         s = (0, D.VE)(),
-        a = (0, tB.bG)([y.A], () => y.A.getLinkCodeExpiresAt());
+        a = (0, tB.bG)([I.A], () => I.A.getLinkCodeExpiresAt());
     ((0, tZ.Ay)(() => {
         r();
     }),
@@ -1336,7 +1336,7 @@ var t6 = n(847374),
     ns = n(617617),
     na = n(361157);
 function nd(e) {
-    let t = (0, tB.bG)([y.A], () => y.A.getMonthlyPurchases());
+    let t = (0, tB.bG)([I.A], () => I.A.getMonthlyPurchases());
     return (function (e, t) {
         if (null == e) return { kind: "off" };
         if (0 === e.amount) return { kind: "blocked" };
@@ -1382,10 +1382,17 @@ function nE(e) {
 function np(e) {
     let { rule: t, teenId: r, readOnly: s = !1 } = e,
         a = i.useRef(null),
-        d = t?.enabled ?? !0,
-        u = (0, ni.li)(t),
-        o = (0, ni.n1)(t.days);
-    function x() {
+        d = t?.enabled ?? !0;
+    async function u() {
+        try {
+            await (0, nv.Um)(r, t.ruleId, { enabled: !d });
+        } catch {
+            (0, q.P0)({ text: $.intl.string(J.default.Wu8BK2), variant: "critical" });
+        }
+    }
+    let o = (0, ni.li)(t),
+        x = (0, ni.n1)(t.days);
+    function m() {
         (0, Y.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("58008"), n.e("777848"), n.e("639231")]).then(
                 n.bind(n, 154434),
@@ -1393,8 +1400,12 @@ function np(e) {
             return (n) => (0, l.jsx)(e, { ...n, teenId: r, rule: t });
         });
     }
-    function m() {
-        (0, nv.CS)(r, t.ruleId);
+    async function h() {
+        try {
+            await (0, nv.CS)(r, t.ruleId);
+        } catch {
+            (0, q.P0)({ text: $.intl.string(J.default.Wu8BK2), variant: "critical" });
+        }
     }
     return (0, l.jsxs)(c.B, {
         direction: "horizontal",
@@ -1407,8 +1418,8 @@ function np(e) {
                 style: { flex: 1, minWidth: 0 },
                 gap: 4,
                 children: [
-                    (0, l.jsx)(G.E, { variant: "text-md/medium", children: u }),
-                    (0, l.jsx)(G.E, { variant: "text-sm/normal", color: "text-muted", children: o }),
+                    (0, l.jsx)(G.E, { variant: "text-md/medium", children: o }),
+                    (0, l.jsx)(G.E, { variant: "text-sm/normal", color: "text-muted", children: x }),
                 ],
             }),
             (0, l.jsxs)(c.B, {
@@ -1420,7 +1431,7 @@ function np(e) {
                     !s &&
                         (0, l.jsx)(nh.Y, {
                             targetElementRef: a,
-                            renderPopout: (e) => (0, l.jsx)(nE, { ...e, onEdit: x, onDelete: m }),
+                            renderPopout: (e) => (0, l.jsx)(nE, { ...e, onEdit: m, onDelete: h }),
                             position: "bottom",
                             align: "right",
                             animation: nh.Y.Animation.NONE,
@@ -1445,9 +1456,7 @@ function np(e) {
                             checked: d,
                             label: $.intl.string(J.default["30Owsd"]),
                             hideLabel: !0,
-                            onChange: function () {
-                                (0, nv.Um)(r, t.ruleId, { enabled: !d });
-                            },
+                            onChange: u,
                             hasIcon: !0,
                             disabled: s,
                         }),
@@ -1536,7 +1545,7 @@ function nS(e, t, i) {
         readOnly: i,
     });
 }
-function nI(e) {
+function ny(e) {
     let { teenId: t } = e;
     return nS(
         t,
@@ -1554,7 +1563,7 @@ function nI(e) {
         !0,
     );
 }
-function ny(e) {
+function nI(e) {
     let { teenId: t } = e,
         n = tx.fD.useControlledSetting(t);
     return nS(t, nd(n));
@@ -1693,7 +1702,7 @@ function n_() {
                 (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(ne.A, { className: nN.yF }),
-                        (0, l.jsx)(nI, { teenId: t.id }),
+                        (0, l.jsx)(ny, { teenId: t.id }),
                         (0, l.jsx)(ne.A, { className: nN.yF }),
                         (0, l.jsx)(nb, { teenId: t.id, readOnly: !0 }),
                     ],
@@ -1707,7 +1716,7 @@ function nC() {
         { handleTabChange: n } = k();
     return (
         i.useEffect(() => {
-            e?.id != null && t && I.Ay.fetchTeenSettingsAndConsents(e?.id);
+            e?.id != null && t && y.Ay.fetchTeenSettingsAndConsents(e?.id);
         }, [e?.id, t]),
         (0, l.jsxs)(l.Fragment, {
             children: [
@@ -1742,7 +1751,7 @@ function nC() {
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(ne.A, { className: nN.yF }),
-                            (0, l.jsx)(ny, { teenId: e.id }),
+                            (0, l.jsx)(nI, { teenId: e.id }),
                             (0, l.jsx)(ne.A, { className: nN.yF }),
                             (0, l.jsx)(nb, { teenId: e.id }),
                         ],
@@ -2322,9 +2331,9 @@ function lN(e) {
     let { location: t, onMountEffect: n } = e,
         l = (0, lE.A)(),
         r = (0, D.W1)(),
-        { familyCenterInitialized: s, isLoading: a } = (0, d.cf)([y.A], () => ({
-            familyCenterInitialized: y.A.getIsInitialized(),
-            isLoading: y.A.isLoading(),
+        { familyCenterInitialized: s, isLoading: a } = (0, d.cf)([I.A], () => ({
+            familyCenterInitialized: I.A.getIsInitialized(),
+            isLoading: I.A.isLoading(),
         })),
         c = (0, er.k)(),
         { selectedTab: u, handleTabChange: o } = k(),
@@ -2354,7 +2363,7 @@ function lN(e) {
             }
         }, [s, m, t]),
         i.useEffect(() => {
-            h && !y.A.isLoading() && (0, lg.yO)(lp.w_.FAMILY_CENTER);
+            h && !I.A.isLoading() && (0, lg.yO)(lp.w_.FAMILY_CENTER);
         }, [h, a]),
         { isLoading: a, selectedTab: u, handleTabChange: o, showAgeGateModal: h }
     );
@@ -2368,8 +2377,8 @@ let lS = {
         [C.u9.DATA_AND_PRIVACY]: tV,
         [C.u9.SCREEN_TIME_CONTROLS]: lf,
     },
-    lI = { [C.u9.REQUESTS]: lr, [C.u9.ACTIVITY]: nk, [C.u9.CONTENT_AND_SOCIAL]: tP, [C.u9.DATA_AND_PRIVACY]: tV };
-function ly() {
+    ly = { [C.u9.REQUESTS]: lr, [C.u9.ACTIVITY]: nk, [C.u9.CONTENT_AND_SOCIAL]: tP, [C.u9.DATA_AND_PRIVACY]: tV };
+function lI() {
     return (0, l.jsx)(c.B, { justify: "center", align: "center", className: lT.g4, children: (0, l.jsx)(u.y, {}) });
 }
 function lb(e) {
@@ -2463,7 +2472,7 @@ function lC() {
         } = lN({
             location: C.MH.SETTINGS,
             onMountEffect: () => {
-                I.Ay.initialPageLoad();
+                y.Ay.initialPageLoad();
             },
         });
     if (
@@ -2489,7 +2498,7 @@ function lC() {
                 id: n,
                 "aria-labelledby": e,
                 className: lT.Us,
-                children: t ? (0, l.jsx)(ly, {}) : (0, l.jsx)(a, {}),
+                children: t ? (0, l.jsx)(lI, {}) : (0, l.jsx)(a, {}),
             }),
         ],
     });
@@ -2497,7 +2506,7 @@ function lC() {
 function lL() {
     let { analyticsLocations: e } = (0, v.Ay)(g.A.FAMILY_CENTER),
         t = (0, b.A)(),
-        n = (0, d.bG)([y.A], () => y.A.getIsInitialized()),
+        n = (0, d.bG)([I.A], () => I.A.getIsInitialized()),
         r = (0, d.bG)([N.A], () => N.A.theme),
         a = (0, E.GV)(),
         {
@@ -2508,7 +2517,7 @@ function lL() {
         } = lN({
             location: C.MH.SIDENAV,
             onMountEffect: () => {
-                (j.I(L.BVt.FAMILY_CENTER), !y.A.isLoading() && y.A.canRefetch() && I.Ay.initialPageLoad());
+                (j.I(L.BVt.FAMILY_CENTER), !I.A.isLoading() && I.A.canRefetch() && y.Ay.initialPageLoad());
             },
         });
     if (
@@ -2520,7 +2529,7 @@ function lL() {
     )
         return null;
     let h = u !== C.u9.SETTINGS && u !== C.u9.SCREEN_TIME_CONTROLS ? u : C.u9.ACTIVITY,
-        p = lI[h];
+        p = ly[h];
     return (0, l.jsx)(v.f5, {
         value: e,
         children: (0, l.jsxs)("main", {
@@ -2542,7 +2551,7 @@ function lL() {
                     children: (0, l.jsx)(f.Ip, {
                         children: (0, l.jsx)("div", {
                             className: lT.O4,
-                            children: c ? (0, l.jsx)(ly, {}) : (0, l.jsx)(p, {}),
+                            children: c ? (0, l.jsx)(lI, {}) : (0, l.jsx)(p, {}),
                         }),
                     }),
                 }),
