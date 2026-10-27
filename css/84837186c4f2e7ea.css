@@ -37,20 +37,21 @@
 }
 
 .title__25dca {
-    text-overflow: ellipsis;
-    white-space: nowrap
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    width: 165px
 }
 
 .body__25dca,
 .title__25dca {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden
 }
 
 .body__25dca {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2
+    -webkit-line-clamp: 3;
+    line-clamp: 3
 }
 
 .buttonRow__25dca {
@@ -86,4 +87,4 @@
     --custom-contextual-referral-icon-size: 44px
 }
 
-/*# sourceMappingURL=ed1799283157e9e8.css.map*/
+/*# sourceMappingURL=84837186c4f2e7ea.css.map*/
