@@ -5,8 +5,8 @@ var i = n(477900),
     a = n.n(l),
     r = n(702841),
     o = n(939249),
-    d = n(983851),
-    c = n(866665),
+    c = n(983851),
+    d = n(866665),
     u = n(565645),
     m = n(864145),
     x = n(926972),
@@ -39,7 +39,7 @@ function v(e, t) {
 }
 var A = n(209932),
     E = n(807348),
-    C = n(817232),
+    C = n(805945),
     S = n(734057),
     O = n(105292),
     y = n(701144);
@@ -51,7 +51,7 @@ function T(e) {
         onClick: t,
         className: y.Ls,
         children: [
-            (0, i.jsx)(d.H, { size: "md", color: "currentColor", className: y.uA }),
+            (0, i.jsx)(c.H, { size: "md", color: "currentColor", className: y.uA }),
             (0, i.jsx)("span", { children: "Unknown" }),
         ],
     });
@@ -70,10 +70,10 @@ function k(e) {
 function P(e) {
     let { className: t, sound: n, playSound: s, isPlaying: l } = e,
         r = n?.emojiId != null || n?.emojiName != null,
-        d = O.intl.formatToPlainString(O.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
+        c = O.intl.formatToPlainString(O.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
     return (0, m.X)({ location: "SoundboardMentionInline" })
         ? (0, i.jsxs)(o.D, {
-              "aria-label": d,
+              "aria-label": c,
               tag: "span",
               onClick: s,
               className: a()(y.Ls, y.oR, { [y.he]: !0 === l }, t),
@@ -86,7 +86,7 @@ function P(e) {
 }
 let _ = function (e) {
     let { channelId: t, messageId: n, soundId: l, messageSounds: a, jumbo: o = !1 } = e,
-        d = I.hH.useSetting(),
+        c = I.hH.useSetting(),
         u = (0, r.bG)([A.A], () => A.A.getSoundById(l), [l]),
         x = s.useMemo(() => (0, h.A)(t, n, l, a) ?? u, [t, n, l, a, u]),
         g = (0, r.bG)([S.A], () => S.A.getChannel(t)),
@@ -99,7 +99,7 @@ let _ = function (e) {
     return p
         ? null == x
             ? (0, i.jsx)(T, { playSound: O })
-            : o && !d
+            : o && !c
               ? (0, i.jsx)(
                     C.Ay,
                     {
@@ -118,7 +118,7 @@ let _ = function (e) {
                     },
                     `${x.soundId}`,
                 )
-              : (0, i.jsx)(c.m, {
+              : (0, i.jsx)(d.m, {
                     "aria-label": x.name,
                     "data-pending-richtooltip-migration": !0,
                     __unsupportedReactNodeAsText: (0, i.jsx)(j.WE, { sound: x }),

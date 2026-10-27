@@ -1,7 +1,6 @@
-n.d(t, { Tj: () => o, c4: () => r, ed: () => a, pD: () => s, xL: () => l });
+n.d(t, { c4: () => r, ed: () => a, pD: () => s, xL: () => l });
 var i,
     r = (((i = {}).FULL_PICKER = "full"), (i.QUICK_ACCESS = "quick access"), (i.WHEEL = "wheel"), i);
 let a = { width: 424, height: 424, padding: 100 },
     s = [],
-    l = [],
-    o = "SOUNDBOARD_FAVORITE_SOUND";
+    l = [];

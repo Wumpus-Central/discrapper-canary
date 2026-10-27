@@ -26,12 +26,12 @@ var l = n(477900),
     T = n(750506),
     j = n(267102),
     _ = n(926972),
-    k = n(476254),
+    k = n(754388),
     R = n(256449),
     O = n(750385),
     w = n(649852),
-    M = n.n(w),
-    L = n(462180),
+    L = n.n(w),
+    M = n(462180),
     P = n(319060),
     D = n(289873),
     U = n(212245),
@@ -129,7 +129,7 @@ let ev = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     eR = [ev, ev, ev, ev],
     eO = (eN + eT) * 2 + ev,
     ew = e_ + 2 * ek;
-function eM(e) {
+function eL(e) {
     let { ariaLabel: t, children: n, className: r, isSelected: s, onClick: a } = e,
         o = i.useRef(null),
         { isHoveringOrFocusing: u } = (0, ed.A)(o);
@@ -147,7 +147,7 @@ function eM(e) {
         ],
     });
 }
-let eL = (e) => {
+let eM = (e) => {
     let { stickersListRef: t, channel: n } = e,
         r = i.useRef(null),
         [a, o] = i.useState(!0),
@@ -206,7 +206,7 @@ let eL = (e) => {
                                     role: "listitem",
                                     "aria-setsize": f,
                                     "aria-posinset": r,
-                                    children: (0, l.jsx)(eM, {
+                                    children: (0, l.jsx)(eL, {
                                         ariaLabel: eb.intl.string(eb.t.y3LQCG),
                                         className: s()(eI._0, eI.dC, { [eI.k1]: e, [eI.ls]: !m }),
                                         isSelected: e,
@@ -231,7 +231,7 @@ let eL = (e) => {
                                     role: "listitem",
                                     "aria-setsize": f,
                                     "aria-posinset": r,
-                                    children: (0, l.jsx)(eM, {
+                                    children: (0, l.jsx)(eL, {
                                         ariaLabel: eb.intl.string(eb.t.RxAmVC),
                                         className: s()(eI._0, eI.dC, eI.ls, { [eI.k1]: e }),
                                         isSelected: e,
@@ -283,7 +283,7 @@ let eL = (e) => {
                                             role: "listitem",
                                             "aria-setsize": f,
                                             "aria-posinset": r,
-                                            children: (0, l.jsx)(eM, {
+                                            children: (0, l.jsx)(eL, {
                                                 ariaLabel: A,
                                                 className: s()(eI._0, { [eI.ND]: y, [eI.Ms]: g && y }),
                                                 isSelected: g,
@@ -682,7 +682,7 @@ let tS = i.memo(function (e) {
             [t, c, R],
         ),
         w = i.useMemo(() => ({ width: C, height: C, padding: A }), [A, C]),
-        [M, L] = (0, tp.A)(null, 300);
+        [L, M] = (0, tp.A)(null, 300);
     return (0, l.jsx)("div", {
         className: tE.nM,
         style: O,
@@ -762,7 +762,7 @@ let tS = i.memo(function (e) {
                         "div",
                         { ...P, key: e.sticker.id },
                         (0, l.jsxs)(f.D, {
-                            className: s()(tE.yI, S, { [tE.PV]: u, [tE.TV]: M === e.sticker.id }),
+                            className: s()(tE.yI, S, { [tE.PV]: u, [tE.TV]: L === e.sticker.id }),
                             innerRef: A,
                             tabIndex: R,
                             onFocus: O ?? y,
@@ -770,7 +770,7 @@ let tS = i.memo(function (e) {
                             onClick: function (t) {
                                 if (h?.current === !0 || p?.current === !0) return;
                                 let n = t.altKey;
-                                (n && e.type === ei.op.STICKER && !(0, eg.o1)(e.sticker.id) && L(e.sticker.id),
+                                (n && e.type === ei.op.STICKER && !(0, eg.o1)(e.sticker.id) && M(e.sticker.id),
                                     x?.(e, n));
                             },
                             onContextMenu: function (e) {
@@ -859,8 +859,8 @@ let tC = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     tR = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
     tO = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
     tw = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    tM = tR + 2 + tw,
-    tL = tO + 2 + tw,
+    tL = tR + 2 + tw,
+    tM = tO + 2 + tw,
     tP = [tI, tN, tT, tj],
     tD = [tv, tN, tT, tj],
     tU = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
@@ -908,7 +908,7 @@ let tG = function (e) {
         } = e,
         y = i.useRef(!1),
         A = i.useRef(null),
-        [C, b] = F.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], L.x),
+        [C, b] = F.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], M.x),
         { analyticsLocations: I } = (0, W.Ay)(V.A.STICKER_PICKER),
         v = (0, B.RQ)((e) => e.searchQuery),
         N = (0, d.bG)([O.A], () => O.A.getPremiumPacks()),
@@ -917,7 +917,7 @@ let tG = function (e) {
         [_, k] = i.useState(0),
         R = z("web.StickerPickerList"),
         w = i.useMemo(() => new Set(N.map((e) => e.id)), [N]),
-        M = ey(g, T, E, R),
+        L = ey(g, T, E, R),
         {
             renderRow: P,
             renderSection: D,
@@ -1183,7 +1183,7 @@ let tG = function (e) {
                     },
                     [S, t, p, f, R, y],
                 ),
-                M = i.useCallback(
+                L = i.useCallback(
                     (e) => {
                         if (null != p) {
                             let { sendable: t, sendableWithPremium: n } = p;
@@ -1201,7 +1201,7 @@ let tG = function (e) {
                 renderRow: T,
                 renderSection: k,
                 renderSectionHeader: w,
-                sectionHeaderHeight: M,
+                sectionHeaderHeight: L,
                 renderSectionFooter: i.useCallback(
                     (e) => {
                         if (null != p)
@@ -1256,7 +1256,7 @@ let tG = function (e) {
         })({
             collapsedStickersCategories: t,
             gridWidth: n,
-            stickersCategories: M,
+            stickersCategories: L,
             stickersGrid: x,
             isScrolling: y,
             isUsingKeyboardNavigation: h,
@@ -1343,7 +1343,7 @@ let tG = function (e) {
             canUseStickersEverywhere: j,
             listRef: A,
             searchQuery: v,
-            categories: M,
+            categories: L,
             sectionHeaderHeight: X,
             sectionFooterHeight: H,
         });
@@ -1435,7 +1435,7 @@ let tG = function (e) {
                                       renderSectionFooter: G,
                                       rowCount: f,
                                       rowCountBySection: p,
-                                      rowHeight: n > tC ? tM : tL,
+                                      rowHeight: n > tC ? tL : tM,
                                       sectionHeaderHeight: X,
                                       sectionFooterHeight: H,
                                       stickyHeaders: !0,
@@ -1459,10 +1459,10 @@ let t$ = function (e) {
         o = i.useRef(null),
         { searchQuery: u, isSearchSuggestion: c } = (0, B.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
-            L.x,
+            M.x,
         ),
         d = F.bM.useStore((e) => e.searchPlaceholder),
-        [h, m] = F.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], L.x),
+        [h, m] = F.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], M.x),
         f = i.useCallback(
             (e) => {
                 (F.bM.setActiveCategoryIndex("" === e ? 0 : -1),
@@ -1610,8 +1610,8 @@ let t8 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     nn = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
     nl = nt + 2,
     ni = nn + 2,
-    nr = M()(el.Qz, 200),
-    ns = M()(el.HA, 200);
+    nr = L()(el.Qz, 200),
+    ns = L()(el.HA, 200);
 function na(e) {
     let { containerWidth: t, channel: r, onSelectSticker: s, closePopout: a, ref: o } = e,
         u = z("web.StickerPicker"),
@@ -1622,7 +1622,7 @@ function na(e) {
         g = i.useRef(null),
         x = i.useRef(null),
         E = et((e) => e.showPremiumUpsell),
-        [S, y] = (0, B.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], L.x),
+        [S, y] = (0, B.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], M.x),
         A = i.useRef("");
     i.useImperativeHandle(o, () => ({ onPickerOpen: ep }));
     let C = (0, R.pD)(r),
@@ -1661,7 +1661,7 @@ function na(e) {
         ),
         k = (0, R.Gc)(),
         w = (0, R.UT)(),
-        M = (0, d.cf)([O.A], () => O.A.getAllGuildStickers()),
+        L = (0, d.cf)([O.A], () => O.A.getAllGuildStickers()),
         { sendable: P = [], sendableWithPremium: D = [] } = _ ?? {},
         H = P.length + D.length,
         X = i.useCallback(
@@ -1797,8 +1797,8 @@ function na(e) {
             n = [];
         null !== e && (n = O.A.getStickersByGuildId(e) ?? []);
         let l = 0;
-        (null != M &&
-            [...M.values()].forEach((e) => {
+        (null != L &&
+            [...L.values()].forEach((e) => {
                 l += e.length;
             }),
             (0, el.p4)({
@@ -1866,7 +1866,7 @@ function na(e) {
                                         })
                                       : null,
                           }),
-                          (0, l.jsx)(eL, { stickersListRef: g, channel: r }),
+                          (0, l.jsx)(eM, { stickersListRef: g, channel: r }),
                       ],
                   }),
             E && (u ? (0, l.jsx)(tJ, { onUpsellClicked: a }) : (0, l.jsx)(t3, { onLearnMore: eg })),
@@ -1916,8 +1916,8 @@ let ng = 498 + nm.as.MEDIUM,
                 onSelectEmoji: a,
                 onSelectSticker: f,
                 onSelectSound: w,
-                channel: M,
-                type: L,
+                channel: L,
+                type: M,
                 position: P,
                 align: D,
                 positionLayerClassName: U,
@@ -1991,7 +1991,7 @@ let ng = 498 + nm.as.MEDIUM,
                 orientation: "left" === D ? S.R.HORIZONTAL_RIGHT : S.R.HORIZONTAL_LEFT,
             }),
             $ = (0, B.RQ)((e) => e.activeView),
-            Q = (0, R.ZO)(M),
+            Q = (0, R.ZO)(L),
             { renderWindow: Z, windowDispatch: X } = i.useContext(j.Ay),
             J = (0, d.bG)([O.A], () => !O.A.hasLoadedStickerPacks),
             Y = (0, _.t)({ location: "expression_picker" }),
@@ -2003,10 +2003,10 @@ let ng = 498 + nm.as.MEDIUM,
             en = (0, d.bG)([nc.A], () => nc.A.isOpen()),
             el = null != W,
             ei = (0, m.useIsModalAtTop)(W ?? ""),
-            er = L.gifs?.allowSending && !u.Fr && null != r,
-            es = L.stickers?.allowSending && null != f,
-            ea = !L.expressionPicker?.onlyEmojis && (er || es),
-            eo = L.expressionPicker?.emojiIntention ?? nf.EmojiIntention.CHAT,
+            er = M.gifs?.allowSending && !u.Fr && null != r,
+            es = M.stickers?.allowSending && null != f,
+            ea = !M.expressionPicker?.onlyEmojis && (er || es),
+            eo = M.expressionPicker?.emojiIntention ?? nf.EmojiIntention.CHAT,
             eu = ee && (0, b.z)(eo),
             ec = eu && et,
             ed = ea && !ec,
@@ -2084,7 +2084,7 @@ let ng = 498 + nm.as.MEDIUM,
                             (K.current = !0)));
             }));
         let eE = i.useCallback((e, t) => w?.(e, "soundboard_picker", t), [w]),
-            eS = L.soundmoji?.allowSending === !0 && null != w,
+            eS = M.soundmoji?.allowSending === !0 && null != w,
             ey = "left" === D ? "right" : "left",
             eI = null != U ? U : "left" === D ? np.sj : np.Jg,
             ev = er
@@ -2181,7 +2181,7 @@ let ng = 498 + nm.as.MEDIUM,
                                               $ === eC.kx.STICKER && es
                                                   ? (0, l.jsx)(no, {
                                                         isLoading: J,
-                                                        channel: M,
+                                                        channel: L,
                                                         containerWidth: z,
                                                         onSelectSticker: f,
                                                         closePopout: em,
@@ -2197,15 +2197,15 @@ let ng = 498 + nm.as.MEDIUM,
                                                         persistSearch: !0,
                                                     })
                                                   : null,
-                                              $ === eC.kx.EMOJI || L.expressionPicker?.onlyEmojis === !0
+                                              $ === eC.kx.EMOJI || M.expressionPicker?.onlyEmojis === !0
                                                   ? (0, l.jsx)(C.A, {
                                                         hasTabWrapper: !0,
                                                         persistSearch: !0,
-                                                        channel: M,
+                                                        channel: L,
                                                         containerWidth: z,
                                                         emojiSize: null != z && z < ng ? nm.as.MEDIUM : nm.as.LARGE,
                                                         pickerIntention: eo,
-                                                        showAddEmojiButton: null == M || null != M.guild_id,
+                                                        showAddEmojiButton: null == L || null != L.guild_id,
                                                         closePopout: em,
                                                         onSelectEmoji: a,
                                                         ref: (e) => {
@@ -2219,8 +2219,8 @@ let ng = 498 + nm.as.MEDIUM,
                                                   ? (0, l.jsx)("div", {
                                                         className: np.z,
                                                         children: (0, l.jsx)(k.A, {
-                                                            guildId: M.guild_id,
-                                                            channel: M,
+                                                            guildId: L.guild_id,
+                                                            channel: L,
                                                             containerWidth: z,
                                                             onClose: em,
                                                             onSelect: eE,

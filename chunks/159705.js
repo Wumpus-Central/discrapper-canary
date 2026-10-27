@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652514";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "652519";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652514, Version Hash: e2f2a162612d6a8d207e5a508d21698607d81c89`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 652519, Version Hash: 5827c137bf7f880e78d2154742495aa358662571`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25500,7 +25500,7 @@ let yr = "isHideDevBanner",
                     className: tf()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652514" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "652519" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -26502,7 +26502,7 @@ var Dw = n(880144),
     D$ = n(813564),
     Dz = n(674168),
     DX = n(662080),
-    Dq = n(476254);
+    Dq = n(754388);
 n(980504);
 var DZ = n(187529);
 function DQ(e) {
@@ -50070,15 +50070,13 @@ let V8 = [
         },
         cleanup() {},
     },
+    { version: 12, run: (e) => !1, cleanup() {} },
     {
-        version: 12,
-        run(e) {
-            if (null == e.favoriteSoundboardSounds) return !1;
-            let { soundIds: t, orderedSoundIds: n } = e.favoriteSoundboardSounds;
-            return (
-                !(0 === iV().size(t) || iV().size(n) > 0) && ((e.favoriteSoundboardSounds.orderedSoundIds = [...t]), !0)
-            );
-        },
+        version: 13,
+        run: (e) =>
+            null != e.favoriteSoundboardSounds &&
+            0 !== iV().size(e.favoriteSoundboardSounds.orderedSoundIds) &&
+            ((e.favoriteSoundboardSounds.orderedSoundIds = []), !0),
         cleanup() {},
     },
 ];
@@ -53254,7 +53252,7 @@ let W5 = (0, tZ.Fe)({
             n.e("967850"),
             n.e("916885"),
             n.e("272804"),
-            n.e("915170"),
+            n.e("291329"),
             n.e("449933"),
             n.e("405714"),
             n.e("360732"),
@@ -53786,7 +53784,6 @@ let W5 = (0, tZ.Fe)({
             n.e("900277"),
             n.e("70690"),
             n.e("587618"),
-            n.e("828598"),
             n.e("424199"),
             n.e("342551"),
             n.e("891400"),
@@ -53794,7 +53791,7 @@ let W5 = (0, tZ.Fe)({
             n.e("887093"),
             n.e("162512"),
             n.e("695765"),
-            n.e("968201"),
+            n.e("815669"),
             n.e("127962"),
             n.e("60955"),
             n.e("273350"),
@@ -55960,7 +55957,7 @@ let Kc = (0, rl.Fe)({
                 n.e("85427"),
                 n.e("698584"),
                 n.e("967850"),
-                n.e("915170"),
+                n.e("291329"),
                 n.e("64769"),
                 n.e("329172"),
                 n.e("992956"),
@@ -56018,7 +56015,6 @@ let Kc = (0, rl.Fe)({
                 n.e("647562"),
                 n.e("70690"),
                 n.e("587618"),
-                n.e("828598"),
                 n.e("595429"),
                 n.e("816075"),
                 n.e("948772"),

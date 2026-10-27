@@ -1,14 +1,13 @@
 (n.d(t, {
     E7: () => S,
-    Lk: () => L,
     Rp: () => R,
-    dZ: () => b,
-    eS: () => y,
-    g0: () => M,
-    iy: () => P,
+    dZ: () => v,
+    eS: () => L,
+    g0: () => b,
+    iy: () => M,
     lT: () => N,
-    nh: () => D,
-    qP: () => v,
+    nh: () => y,
+    qP: () => D,
     ty: () => O,
     xV: () => C,
 }),
@@ -103,33 +102,17 @@ function R(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
         (t) =>
-            r().size(t.soundIds) >= 250 || r().size(t.orderedSoundIds) >= 250
+            r().size(t.soundIds) >= 250
                 ? (l.A.show({
                       title: p.intl.string(p.t["+XYXtZ"]),
                       body: p.intl.formatToPlainString(p.t.JaIyFi, { count: 250 }),
                   }),
                   !1)
-                : !(t.soundIds.includes(e) && t.orderedSoundIds.includes(e)) &&
-                  void (!t.soundIds.includes(e) && t.soundIds.push(e),
-                  !t.orderedSoundIds.includes(e) && t.orderedSoundIds.push(e)),
+                : !t.soundIds.includes(e) && void t.soundIds.push(e),
         I.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function L(e, t) {
-    e !== t &&
-        c.bW.updateAsync(
-            "favoriteSoundboardSounds",
-            (n) => {
-                let i = n.orderedSoundIds.indexOf(e);
-                if (-1 === i) return !1;
-                let r = null == t ? n.orderedSoundIds.length : n.orderedSoundIds.indexOf(t);
-                if (-1 === r || r === i) return !1;
-                (n.orderedSoundIds.splice(i, 1), n.orderedSoundIds.splice(i < r ? r - 1 : r, 0, e));
-            },
-            I.Sb.INFREQUENT_USER_ACTION,
-        );
-}
-function y(e) {
+function L(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
         (t) => {
@@ -139,7 +122,7 @@ function y(e) {
         I.Sb.INFREQUENT_USER_ACTION,
     );
 }
-async function D(e, t) {
+async function y(e, t) {
     try {
         let n = await a.Bo.get({ url: f.Rsh.SOUNDBOARD_SOUND_GUILD_DATA(e, t), rejectWithError: (0, a.fT)() });
         return null != n.body ? (0, _.jE)(n.body) : null;
@@ -147,15 +130,15 @@ async function D(e, t) {
         throw new o.A(e);
     }
 }
-function v(e, t) {
+function D(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", sound: t, channelId: e });
 }
-function b(e, t) {
+function v(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_START", soundId: e, userId: t });
 }
-function M(e, t) {
+function b(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_END", soundId: e, userId: t });
 }
-function P(e, t) {
+function M(e, t) {
     s.h.dispatch({ type: "USER_SOUNDBOARD_SET_VOLUME", volume: e, location: t });
 }

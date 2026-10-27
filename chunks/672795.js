@@ -1,4 +1,4 @@
-l.d(t, { m: () => n9 });
+l.d(t, { m: () => n5 });
 var n,
     i = l(477900),
     s = l(582128),
@@ -510,7 +510,7 @@ function eJ(e) {
         children: [
             (0, i.jsx)(e0, { guildId: t, entry: l, identity: x, lastPlayedGame: g, onClick: o }),
             (0, i.jsx)(e3, { entry: l, stat: n, width: m, onClick: p }),
-            (0, i.jsx)(e5, {
+            (0, i.jsx)(e9, {
                 name: x.name,
                 applicationIds: l.application_ids,
                 applicationCount: l.application_count,
@@ -728,7 +728,7 @@ function e7(e) {
         children: n,
     });
 }
-function e5(e) {
+function e9(e) {
     let { name: t, applicationIds: l, applicationCount: n, games: s, onClick: a } = e,
         r = ex(s, l);
     return (0, i.jsx)("div", {
@@ -745,16 +745,16 @@ function e5(e) {
         }),
     });
 }
-var e9 = l(189043);
+var e5 = l(189043);
 function te(e) {
     let { guildId: t, entries: l, stat: n, games: s, currentUserEntry: a, currentUserPillarRef: r, onClick: d } = e,
         c = {
-            1: { column: e9.HC, pillar: e9.P5 },
-            2: { column: e9.th, pillar: e9.Vk },
-            3: { column: e9.Ou, pillar: e9.el },
+            1: { column: e5.HC, pillar: e5.P5 },
+            2: { column: e5.th, pillar: e5.Vk },
+            3: { column: e5.Ou, pillar: e5.el },
         };
     return (0, i.jsx)("div", {
-        className: e9.pI,
+        className: e5.pI,
         role: "list",
         "aria-label": I.intl.string(Z.default.wKXLfQ),
         children: l.map((e, l) =>
@@ -801,11 +801,11 @@ function tt(e) {
         N = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
-                    className: e9.R3,
+                    className: e5.R3,
                     children: [
                         p
                             ? (0, i.jsx)("span", {
-                                  className: j()(e9.gt, 1 === n && e9.o2),
+                                  className: j()(e5.gt, 1 === n && e5.o2),
                                   children:
                                       "blocked" === h
                                           ? (0, i.jsx)(eR.K, {
@@ -824,17 +824,17 @@ function tt(e) {
                                   src: g.user?.getAvatarURL(t, (0, P.FT)(_)) ?? void 0,
                                   "aria-hidden": !0,
                               }),
-                        (0, i.jsx)(I, { className: e9.dR, alt: "", ariaHidden: !0 }),
+                        (0, i.jsx)(I, { className: e5.dR, alt: "", ariaHidden: !0 }),
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: j()(e9.DX, r),
+                    className: j()(e5.DX, r),
                     children: [
                         (0, i.jsx)(E.D, {
                             variant: "heading-sm/semibold",
                             color: p ? "text-subtle" : "text-default",
                             lineClamp: 1,
-                            className: e9.IY,
+                            className: e5.IY,
                             children:
                                 null != h
                                     ? eV(h)
@@ -870,7 +870,7 @@ function tt(e) {
                       children: (e) =>
                           (0, i.jsx)(L.D, {
                               ...e,
-                              className: e9.fs,
+                              className: e5.fs,
                               innerRef: A,
                               onClick: (t) => {
                                   (x?.(), e.onClick(t));
@@ -878,7 +878,7 @@ function tt(e) {
                               children: N,
                           }),
                   })
-                : (0, i.jsx)("div", { className: e9.fs, children: N }),
+                : (0, i.jsx)("div", { className: e5.fs, children: N }),
     });
 }
 var tl = l(652215),
@@ -1668,7 +1668,7 @@ function t7(e) {
         }),
     });
 }
-function t5(e) {
+function t9(e) {
     let { guildId: t, memberIds: l, totalUsers: n, totalGames: s, isCompact: a } = e,
         r = a ? 2 : 4,
         d = (0, R.yK)(
@@ -1720,7 +1720,7 @@ function t5(e) {
         ],
     });
 }
-function t9(e) {
+function t5(e) {
     let { guildId: t, data: l, title: n, column: a, disabled: r } = e,
         {
             ref: d,
@@ -1794,7 +1794,7 @@ function t9(e) {
                           children: [
                               null != o &&
                                   (0, i.jsx)(t8, { guildId: t, requirement: o, onClick: () => v("activity_sharing") }),
-                              (0, i.jsx)(t5, {
+                              (0, i.jsx)(t9, {
                                   guildId: t,
                                   memberIds: x,
                                   totalUsers: l.total_users,
@@ -2043,7 +2043,7 @@ function lR(e) {
                                     l.e("570385"),
                                     l.e("916885"),
                                     l.e("272804"),
-                                    l.e("915170"),
+                                    l.e("291329"),
                                     l.e("449933"),
                                     l.e("405714"),
                                     l.e("360732"),
@@ -2112,7 +2112,6 @@ function lR(e) {
                                     l.e("125729"),
                                     l.e("162512"),
                                     l.e("695765"),
-                                    l.e("777489"),
                                     l.e("188941"),
                                     l.e("349619"),
                                     l.e("264236"),
@@ -2710,7 +2709,7 @@ function l7(e) {
         ],
     });
 }
-function l5(e) {
+function l9(e) {
     let { guildId: t, widgetName: n, isCompact: s, isSpotifyConnected: a, onClick: r } = e;
     return (0, i.jsxs)("div", {
         className: l4.UX,
@@ -2762,7 +2761,7 @@ function l5(e) {
         ],
     });
 }
-function l9(e) {
+function l5(e) {
     let { alt: t, ariaLabel: l, ariaHidden: n, role: r, width: d, height: c, className: u, style: o } = e,
         m = s.useMemo(
             () => (0, a.H)({ width: d, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: o }),
@@ -2788,7 +2787,7 @@ function ns(e) {
         l = (0, R.bG)([nn.A], () => nn.A.getAccounts().some((e) => e.type === tl.fg2.SPOTIFY && e.showActivity));
     return (0, i.jsx)(y, {
         className: ni.w,
-        illustration: l9,
+        illustration: l5,
         title: I.intl.string(Z.default.ULK65a),
         body: I.intl.format(l ? Z.default.BLuvck : Z.default["Ko3a0+"], { memberCount: 2 }),
         action: l
@@ -2807,7 +2806,7 @@ function ns(e) {
 function na() {
     return (0, i.jsx)(y, {
         className: ni.w,
-        illustration: l9,
+        illustration: l5,
         title: I.intl.string(Z.default.ULK65a),
         body: I.intl.format(Z.default.ZQxU8v, { memberCount: 2 }),
     });
@@ -3438,8 +3437,8 @@ var n6 = l(344351),
     n4 = l(256693),
     n8 = l(343030),
     n7 = l(317608),
-    n5 = l(953538);
-let n9 = {
+    n9 = l(953538);
+let n5 = {
     [d.a.IMAGE_TEXT]: {
         View: function (e) {
             let { widget: t, guildSpaceMode: l, guildId: n } = e,
@@ -3778,7 +3777,7 @@ let n9 = {
                           ? (0, i.jsx)(S, {})
                           : null == n || null == d || "idle" === n.status || "loading" === n.status
                             ? (0, i.jsx)(C, {})
-                            : (0, i.jsx)(t9, {
+                            : (0, i.jsx)(t5, {
                                   guildId: a,
                                   data: d,
                                   title: le(l),
@@ -3872,7 +3871,7 @@ let n9 = {
             lE({ guildId: d, widgetId: c.id, data: b, length: 0, isAtEnd: !1, disabled: E || !I });
             let R =
                     "view" === o && v && !p
-                        ? (0, i.jsx)(l5, {
+                        ? (0, i.jsx)(l9, {
                               guildId: d,
                               widgetName: nG(c),
                               isCompact: x,
@@ -4035,25 +4034,25 @@ let n9 = {
                 f = null != n && u && !o;
             return null == n
                 ? (0, i.jsx)(A.B, {
-                      className: n5.kL,
+                      className: n9.kL,
                       align: "center",
                       justify: "center",
                       children: (0, i.jsx)(r, { alt: "", width: 200, height: 192 }),
                   })
                 : a
                   ? (0, i.jsxs)("div", {
-                        className: n5.kL,
+                        className: n9.kL,
                         children: [
                             null != d &&
                                 (0, i.jsx)(n7.A, {
                                     frameId: (0, n4.Ri)(d),
                                     level: n8.A.WithinAppContent,
-                                    className: n5.t$,
+                                    className: n9.t$,
                                 }),
                             null == d &&
                                 f &&
                                 (0, i.jsx)("div", {
-                                    className: n5.P5,
+                                    className: n9.P5,
                                     children: (0, i.jsx)(W.$, {
                                         variant: "secondary",
                                         text: I.intl.string(Z.default.PSuly6),
@@ -4064,9 +4063,9 @@ let n9 = {
                         ],
                     })
                   : (0, i.jsx)("div", {
-                        className: n5.kL,
+                        className: n9.kL,
                         children: (0, i.jsx)("div", {
-                            className: n5.m0,
+                            className: n9.m0,
                             children: (0, i.jsx)(b.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
