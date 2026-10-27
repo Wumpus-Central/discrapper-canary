@@ -435,8 +435,8 @@ let u = "collectibles shop product details modal",
                     n.e("535874"),
                     n.e("355227"),
                     n.e("496086"),
-                    n.e("157580"),
-                ]).then(n.bind(n, 436295));
+                    n.e("649430"),
+                ]).then(n.bind(n, 610421));
                 return (n) =>
                     (0, r.jsx)(s.R9, {
                         newValue: { cardId: x, sessionId: A, tilePosition: m },
