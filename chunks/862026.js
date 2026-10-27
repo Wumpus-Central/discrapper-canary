@@ -1,47 +1,47 @@
-l.d(t, { L: () => f, Q: () => p });
+l.d(t, { L: () => f, Q: () => m });
 var n = l(582128),
     a = l(17928),
-    i = l(245179),
-    r = l(319481),
-    u = l(569319),
-    s = l(285411),
+    r = l(245179),
+    i = l(319481),
+    s = l(569319),
+    u = l(285411),
     o = l(805330),
     d = l(248675),
     c = l(105292);
 function f(e, t) {
-    let { id: l, status: u, error: s } = t,
-        f = (0, a.bG)([r.default], () => "open" === r.default.getConnState(e), [e]),
-        p = (0, a.bG)([i.A], () => !i.A.isThinking(e) && !i.A.isCompacting(e), [e]),
-        [h, m] = n.useState(null),
-        g = n.useCallback(() => m({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
-        x = h?.frame === t ? h : null,
-        b = x?.ok === !0 && f;
-    if ("undone" === u) return null;
-    if ("reverted" === u)
+    let { id: l, status: s, error: u } = t,
+        f = (0, a.bG)([i.default], () => "open" === i.default.getConnState(e), [e]),
+        m = (0, a.bG)([r.A], () => !r.A.isThinking(e) && !r.A.isCompacting(e), [e]),
+        [g, p] = n.useState(null),
+        h = n.useCallback(() => p({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
+        x = g?.frame === t ? g : null,
+        v = x?.ok === !0 && f;
+    if ("undone" === s) return null;
+    if ("reverted" === s)
         return {
             label: c.intl.string(d.default.uQRAzS),
             body: c.intl.string(d.default["24OcbD"]),
             note: null,
             action: null,
         };
-    let v = "failed" === s || x?.ok === !1;
+    let b = "failed" === u || x?.ok === !1;
     return {
         label: c.intl.string(d.default.iBrh0c),
         body: c.intl.string(d.default.sRY8wn),
-        note: "busy" === s ? c.intl.string(d.default.QoixaY) : v ? c.intl.string(d.default["9fvHNe"]) : null,
+        note: "busy" === u ? c.intl.string(d.default.QoixaY) : b ? c.intl.string(d.default["9fvHNe"]) : null,
         action:
-            "expired" === u
+            "expired" === s
                 ? null
                 : {
-                      text: c.intl.string("active" === u ? d.default["7q2YyD"] : d.default.FzX9h8),
-                      confirm: "committed" === u,
-                      disabled: !f || b || ("committed" === u && !p),
-                      onPress: g,
+                      text: c.intl.string("active" === s ? d.default["7q2YyD"] : d.default.FzX9h8),
+                      confirm: "committed" === s,
+                      disabled: !f || v || ("committed" === s && !m),
+                      onPress: h,
                   },
     };
 }
-function p(e) {
-    let t = (0, a.bG)([s.A], () => s.A.getSmartContext(e), [e]),
+function m(e) {
+    let t = (0, a.bG)([u.A], () => u.A.getSmartContext(e), [e]),
         l = n.useCallback((t) => (0, o.VF)(e, t), [e]);
-    return (0, u.V)(t, l);
+    return (0, s.V)(t, l);
 }

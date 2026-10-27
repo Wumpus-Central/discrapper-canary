@@ -1,41 +1,41 @@
-n.d(t, { RP: () => u, bm: () => l, n1: () => d });
-let i = new Map(),
-    a = new Map(),
-    r = new Map();
-function o(e, t, n) {
-    c(e, t);
-    let i = setTimeout(() => e.delete(t), 1e4);
-    e.set(t, { ...n, timer: i });
+n.d(t, { RP: () => u, bm: () => c, n1: () => d });
+let r = new Map(),
+    s = new Map(),
+    o = new Map();
+function i(e, t, n) {
+    l(e, t);
+    let r = setTimeout(() => e.delete(t), 1e4);
+    e.set(t, { ...n, timer: r });
 }
-function c(e, t) {
+function l(e, t) {
     let n = e.get(t);
     null != n && (clearTimeout(n.timer), e.delete(t));
 }
-function s(e, t) {
-    o(r, t, { projectId: e });
+function a(e, t) {
+    i(o, t, { projectId: e });
 }
-function l(e, t) {
-    let n = i.get(t);
+function c(e, t) {
+    let n = r.get(t);
     null != n && (clearTimeout(n.timer), n.resolve(null));
-    let r = a.get(t);
-    return null != r
-        ? (c(a, t), s(e, t), Promise.resolve({ uploadToken: r.uploadToken }))
+    let o = s.get(t);
+    return null != o
+        ? (l(s, t), a(e, t), Promise.resolve({ uploadToken: o.uploadToken }))
         : new Promise((n) => {
-              let a = setTimeout(() => {
-                  (i.delete(t), n(null));
+              let s = setTimeout(() => {
+                  (r.delete(t), n(null));
               }, 5e3);
-              i.set(t, { resolve: n, timer: a, projectId: e });
+              r.set(t, { resolve: n, timer: s, projectId: e });
           });
 }
 function d(e, t, n) {
-    let c = i.get(t);
-    if (null == c) {
-        r.has(t) || o(a, t, { uploadToken: n, projectId: e });
+    let l = r.get(t);
+    if (null == l) {
+        o.has(t) || i(s, t, { uploadToken: n, projectId: e });
         return;
     }
-    (i.delete(t), clearTimeout(c.timer), s(e, t), c.resolve({ uploadToken: n }));
+    (r.delete(t), clearTimeout(l.timer), a(e, t), l.resolve({ uploadToken: n }));
 }
 function u(e) {
-    for (let [t, n] of [...i]) n.projectId === e && (i.delete(t), clearTimeout(n.timer), n.resolve(null));
-    for (let t of [a, r]) for (let [n, i] of [...t]) i.projectId === e && c(t, n);
+    for (let [t, n] of [...r]) n.projectId === e && (r.delete(t), clearTimeout(n.timer), n.resolve(null));
+    for (let t of [s, o]) for (let [n, r] of [...t]) r.projectId === e && l(t, n);
 }

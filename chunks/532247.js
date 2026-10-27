@@ -1,11 +1,11 @@
-l.d(t, { QP: () => s, dv: () => u, h_: () => o, oV: () => d });
+l.d(t, { QP: () => u, dv: () => s, h_: () => o, oV: () => d });
 var n = l(248675),
     a = l(105292);
-let i = {
+let r = {
         enable: ["sandbox", "files", "packages", "prepare", "build", "server", "reload"],
         disable: ["snapshot", "stopping", "reload"],
     },
-    r = {
+    i = {
         sandbox: n.default.wYBwzU,
         files: n.default["5hvVF1"],
         packages: n.default.DKR23W,
@@ -16,24 +16,24 @@ let i = {
         snapshot: n.default.E3ZRQo,
         reload: n.default.ZWcCXh,
     };
-function u(e) {
+function s(e) {
     return "starting" === e ? "enable" : "stopping" === e || "building" === e ? "disable" : null;
 }
-function s(e, t) {
+function u(e, t) {
     return "live" === e ? "enable" : "idle" === e || ("error" === e && "disable" === t) ? "disable" : null;
 }
 function o(e, t) {
     let l,
-        s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        o = u(e),
-        d = o ?? s;
+        u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        o = s(e),
+        d = o ?? u;
     if (null == d) return null;
     l = null == o ? "reload" : "starting" === e ? t : "stopping" === e ? "stopping" : "snapshot";
-    let c = i[d];
+    let c = r[d];
     return {
         direction: d,
         title: a.intl.string("enable" === d ? n.default.NeoP8L : n.default["3+DCLs"]),
-        stepLabel: null == l ? null : a.intl.string(r[l]),
+        stepLabel: null == l ? null : a.intl.string(i[l]),
         stepIndex: null == l ? 0 : Math.max(0, c.indexOf(l)),
         stepCount: c.length,
     };

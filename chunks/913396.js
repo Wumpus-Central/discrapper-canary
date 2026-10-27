@@ -1,4 +1,4 @@
-e.d(n, { A: () => g });
+e.d(n, { A: () => p });
 var t = e(582128),
     i = e(17928),
     u = e(696451),
@@ -9,35 +9,35 @@ var t = e(582128),
     d = e(260498),
     s = e(951178),
     A = e(246338),
-    p = e(652215);
-function g(l) {
+    g = e(652215);
+function p(l) {
     let n = (0, A.us)(l),
         e = null != n,
-        g = l?.guild_id ?? null,
+        p = l?.guild_id ?? null,
         y = (0, i.bG)(
             [c.A, r.A],
             () => {
-                let l = null != g ? c.A.getGuild(g) : null;
-                return null != l && r.A.can(p.xBc.MANAGE_GUILD, l);
+                let l = null != p ? c.A.getGuild(p) : null;
+                return null != l && r.A.can(g.xBc.MANAGE_GUILD, l);
             },
-            [g],
+            [p],
         ),
-        f = (0, i.yK)([u.Ay], () => (null != g ? (u.Ay.getSelfMember(g)?.roles ?? []) : []), [g]);
+        f = (0, i.yK)([u.Ay], () => (null != p ? (u.Ay.getSelfMember(p)?.roles ?? []) : []), [p]);
     return (
         t.useEffect(() => {
-            e && null != n && (0, a.hF)(g ?? void 0);
-        }, [e, n, g, y, f]),
+            e && null != n && (0, a.hF)(p ?? void 0);
+        }, [e, n, p, y, f]),
         (0, i.bG)(
             [d.Ay],
             () => {
                 if (null == n) return null;
                 let l = d.Ay.findProjectByApplicationId(n);
                 if (null == l || (0, d.PV)(l)) return l;
-                let e = null != g ? o.default.castGuildIdAsEveryoneGuildRoleId(g) : null,
+                let e = null != p ? o.default.castGuildIdAsEveryoneGuildRoleId(p) : null,
                     t = (l.collaborator_role_ids ?? []).some((l) => l === e || f.includes(l));
-                return l.guild_id === g && (0, s.pL)(l) && (y || t) ? l : null;
+                return l.guild_id === p && (0, s.pL)(l) && (y || t) ? l : null;
             },
-            [n, y, f, g],
+            [n, y, f, p],
         )
     );
 }

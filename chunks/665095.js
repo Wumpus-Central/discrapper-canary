@@ -6,8 +6,8 @@ var l = n(477900),
     s = n(636537),
     o = n(192308),
     u = n(830215),
-    d = n(398590),
-    c = n(631670),
+    c = n(398590),
+    d = n(631670),
     m = n(475743),
     h = n(775121),
     p = n(139286),
@@ -21,14 +21,14 @@ var l = n(477900),
     _ = n(607399),
     T = n(821609),
     y = n(331322),
-    I = n(297264),
-    S = n(834730),
-    N = n(700525),
-    j = n(975571),
+    N = n(297264),
+    I = n(834730),
+    j = n(700525),
+    S = n(975571),
     b = n(652215),
     R = n(105292),
     M = n(690807);
-let O = j.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+let O = S.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
 class w extends i.PureComponent {
     static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
     renderFields() {
@@ -36,7 +36,7 @@ class w extends i.PureComponent {
         return (0, l.jsx)(l.Fragment, {
             children: e.map((e) =>
                 e === b.Fz7.CAPTCHA
-                    ? (0, l.jsx)(N.A, { onVerify: i, theme: n }, t)
+                    ? (0, l.jsx)(j.A, { onVerify: i, theme: n }, t)
                     : (0, l.jsx)(T.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
             ),
         });
@@ -71,11 +71,11 @@ class w extends i.PureComponent {
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, l.jsx)(I.D, {
+                                        (0, l.jsx)(N.D, {
                                             variant: "heading-xl/normal",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
-                                        (0, l.jsx)(S.E, {
+                                        (0, l.jsx)(I.E, {
                                             variant: "text-md/normal",
                                             children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
@@ -98,7 +98,7 @@ class w extends i.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsx)(S.E, {
+                        (0, l.jsx)(I.E, {
                             variant: "text-sm/normal",
                             className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
@@ -109,13 +109,13 @@ class w extends i.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, l.jsx)(S.E, {
+                                (0, l.jsx)(I.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
-                                    children: R.intl.format(R.t.WL51ZR, { supportURL: j.A.getSubmitRequestURL() }),
+                                    children: R.intl.format(R.t.WL51ZR, { supportURL: S.A.getSubmitRequestURL() }),
                                 }),
                                 (0, l.jsx)("div", { className: C()(M.qr, M.mf), children: "\u2022" }),
-                                (0, l.jsx)(S.E, {
+                                (0, l.jsx)(I.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -140,7 +140,7 @@ function k() {
         [C, _] = i.useState(0),
         T = (0, m.Ay)(E);
     function y() {
-        ((0, c.Cw)(),
+        ((0, d.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("647999"), n.e("689913"), n.e("25467")]).then(
@@ -196,7 +196,7 @@ function k() {
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
-                }).then(d.jH, () => {
+                }).then(c.jH, () => {
                     _((e) => e + 1);
                 });
             },

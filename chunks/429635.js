@@ -1,14 +1,14 @@
-l.d(t, { A: () => o });
-var e = l(582128),
+l.d(e, { A: () => o });
+var n = l(582128),
     r = l(733391),
     u = l(376680);
-function o(n) {
-    let { applicationId: t, guildId: l } = n,
-        o = (0, u.A)({ applicationId: t, guildId: l });
+function o(t) {
+    let { applicationId: e, guildId: l } = t,
+        o = (0, u.A)({ applicationId: e, guildId: l });
     return (
-        e.useEffect(() => {
-            null != t ? (0, r.ap)(t, { eager: !1 }) : null != l && (0, r.Rw)(l, { eager: !1 });
-        }, [t, l]),
+        n.useEffect(() => {
+            null != e ? (0, r.ap)(e, { eager: !1 }) : null != l && (0, r.Rw)(l, { eager: !1 });
+        }, [e, l]),
         o
     );
 }

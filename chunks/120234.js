@@ -2,8 +2,8 @@
 var r = n(582128),
     s = n(36491),
     o = n(998218);
-let l = new Map(),
-    i = new Set();
+let i = new Map(),
+    l = new Set();
 function a(e) {
     return e.includes("http")
         ? [...new Set((e.match(o.A.URL_REGEX) ?? []).filter((e) => /^https?:\/\//i.test(e)))].slice(0, 4)
@@ -12,14 +12,14 @@ function a(e) {
 async function c(e) {
     let t = a(e),
         n = t.join(" ");
-    if (!(0 === t.length || l.has(n) || i.has(n))) {
-        i.add(n);
+    if (!(0 === t.length || i.has(n) || l.has(n))) {
+        l.add(n);
         try {
             let e = new Map();
             for (let n of (await (0, s.L4)(t)).embeds ?? [])
                 null != n.url && e.set(n.url, [...(e.get(n.url) ?? []), n]);
-            (l.size >= 100 && l.delete(l.keys().next().value ?? ""),
-                l.set(
+            (i.size >= 100 && i.delete(i.keys().next().value ?? ""),
+                i.set(
                     n,
                     [...e].flatMap((e) => {
                         let [t, n] = e;
@@ -52,12 +52,12 @@ async function c(e) {
                 ));
         } catch {
         } finally {
-            i.delete(n);
+            l.delete(n);
         }
     }
 }
 function d(e) {
-    let t = l.get(a(e).join(" "));
+    let t = i.get(a(e).join(" "));
     return null != t && t.length > 0 ? t : void 0;
 }
 function u(e) {

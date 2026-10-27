@@ -1,8 +1,8 @@
-t.d(i, { C: () => d, x: () => o });
-var s = t(17928),
-    n = t(945810),
-    r = t(710195),
-    l = t(287809);
+i.d(t, { C: () => d, x: () => o });
+var s = i(17928),
+    n = i(945810),
+    r = i(710195),
+    l = i(287809);
 let a = { showDefaultBanner: !0, showHeroPlaceholder: !0 },
     c = {
         0: a,
@@ -14,7 +14,7 @@ function o() {
     return (0, s.bG)([l.default, r.A], () => {
         let e = l.default.getCurrentUser()?.id;
         if (null == e) return a;
-        let i = r.A.getAssignment("user", e, d.definition.name);
-        return i?.variantId == null || i.useAsEligibility ? a : (c[i.variantId] ?? a);
+        let t = r.A.getAssignment("user", e, d.definition.name);
+        return t?.variantId == null || t.useAsEligibility ? a : (c[t.variantId] ?? a);
     });
 }

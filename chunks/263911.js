@@ -1,8 +1,8 @@
-r.d(e, { I: () => a });
-var n = r(477900),
-    i = r(62010),
-    o = r(111159),
-    l = r(105292);
+n.d(e, { I: () => a });
+var r = n(477900),
+    i = n(62010),
+    o = n(111159),
+    s = n(105292);
 function a() {
-    return (0, n.jsx)(i.E, { type: { text: l.intl.string(l.t.RiDMFz) }, variant: "primary", icon: o.p });
+    return (0, r.jsx)(i.E, { type: { text: s.intl.string(s.t.RiDMFz) }, variant: "primary", icon: o.p });
 }

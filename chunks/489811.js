@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     iE: "wrapper_c4293b",
     Tp: "background_c4293b",
     sJ: "borders_c4293b",

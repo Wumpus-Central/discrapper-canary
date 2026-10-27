@@ -1,21 +1,21 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => o });
 var l = n(477900),
     r = n(582128),
     a = n(598047),
     i = n(546772);
 let s = ["left", "middle", "right"];
-function o(e) {
+function u(e) {
     return !!e.altKey | (2 * !!e.ctrlKey) | (4 * !!e.metaKey) | (8 * !!e.shiftKey);
 }
-function u(e) {
+function o(e) {
     let {
             projectId: t,
             sessionId: n,
-            fps: u,
+            fps: o,
             interactive: c = !1,
             paused: d = !1,
-            drawWidth: m,
-            className: f,
+            drawWidth: f,
+            className: m,
             "aria-label": h,
             onStateChange: g,
         } = e,
@@ -24,7 +24,7 @@ function u(e) {
         v = r.useRef(null),
         [j, b] = r.useState(!1),
         y = (0, a.A)(),
-        w = r.useCallback(
+        k = r.useCallback(
             async (e) => {
                 let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
@@ -41,9 +41,9 @@ function u(e) {
             },
             [t, n],
         ),
-        k = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        N = null == m ? 0 : Math.round(m * Math.min(k, 2)),
-        C = (0, i.KK)(t, n, { fps: u, onFrame: w, enabled: !d && y, width: N }),
+        w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
+        C = null == f ? 0 : Math.round(f * Math.min(w, 2)),
+        N = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: C }),
         A = (0, i.AV)(t, n),
         S = r.useRef(A);
     (r.useEffect(() => {
@@ -53,13 +53,13 @@ function u(e) {
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [A]),
         r.useEffect(() => {
-            g?.(C, j);
-        }, [C, j, g]),
+            g?.(N, j);
+        }, [N, j, g]),
         r.useEffect(() => {
             c && p.current?.focus();
         }, [c]));
-    let E = r.useRef(new Map());
-    function I(e) {
+    let I = r.useRef(new Map());
+    function E(e) {
         let t = e.currentTarget,
             n = t.getBoundingClientRect(),
             l = Math.min(n.width / t.width, n.height / t.height),
@@ -72,24 +72,24 @@ function u(e) {
             y: Math.round(((e.clientY - a) / (t.height * l)) * s),
         };
     }
-    function _(e) {
+    function M(e) {
         return (l) => {
             if (!c) return;
             if ("mouseMoved" === e) {
-                let e = I(l);
+                let e = E(l);
                 (null == v.current &&
                     requestAnimationFrame(() => {
                         let e = v.current;
                         ((v.current = null),
                             null != e && (0, i.ZL)(t, n, { type: "input_mouse", eventType: "mouseMoved", ...e }));
                     }),
-                    (v.current = { ...e, modifiers: o(l) }));
+                    (v.current = { ...e, modifiers: u(l) }));
                 return;
             }
             let r = s[l.button];
             if (null == r) return;
             v.current = null;
-            let a = I(l);
+            let a = E(l);
             ("mousePressed" === e && l.currentTarget.focus(),
                 (0, i.ZL)(t, n, {
                     type: "input_mouse",
@@ -97,17 +97,17 @@ function u(e) {
                     ...a,
                     button: r,
                     clickCount: l.detail > 0 ? l.detail : 1,
-                    modifiers: o(l),
+                    modifiers: u(l),
                 }));
         };
     }
-    function M(e) {
+    function _(e) {
         return (l) => {
             if (!c || "Escape" === l.key) return;
             l.preventDefault();
-            let r = l.getModifierState("AltGraph") ? -4 & o(l) : o(l);
+            let r = l.getModifierState("AltGraph") ? -4 & u(l) : u(l);
             ((0, i.ZL)(t, n, { type: "input_keyboard", eventType: e, key: l.key, code: l.code, modifiers: r }),
-                "keyDown" === e ? E.current.set(l.code, l.key) : E.current.delete(l.code));
+                "keyDown" === e ? I.current.set(l.code, l.key) : I.current.delete(l.code));
             let a = "Enter" === l.key ? "\r" : l.key;
             "keyDown" === e &&
                 1 === a.length &&
@@ -117,7 +117,7 @@ function u(e) {
     }
     return (0, l.jsx)("canvas", {
         ref: p,
-        className: f,
+        className: m,
         role: c ? "application" : "img",
         "aria-label": h,
         tabIndex: c ? 0 : -1,
@@ -127,26 +127,26 @@ function u(e) {
         onContextMenu: function (e) {
             c && e.preventDefault();
         },
-        onMouseDown: _("mousePressed"),
-        onMouseUp: _("mouseReleased"),
-        onMouseMove: _("mouseMoved"),
+        onMouseDown: M("mousePressed"),
+        onMouseUp: M("mouseReleased"),
+        onMouseMove: M("mouseMoved"),
         onWheel: function (e) {
             c &&
                 (0, i.ZL)(t, n, {
                     type: "input_mouse",
                     eventType: "mouseWheel",
-                    ...I(e),
+                    ...E(e),
                     deltaX: e.deltaX,
                     deltaY: e.deltaY,
-                    modifiers: o(e),
+                    modifiers: u(e),
                 });
         },
-        onKeyDown: M("keyDown"),
-        onKeyUp: M("keyUp"),
+        onKeyDown: _("keyDown"),
+        onKeyUp: _("keyUp"),
         onBlur: function () {
-            for (let [e, l] of E.current)
+            for (let [e, l] of I.current)
                 (0, i.ZL)(t, n, { type: "input_keyboard", eventType: "keyUp", key: l, code: e, modifiers: 0 });
-            E.current.clear();
+            I.current.clear();
         },
     });
 }

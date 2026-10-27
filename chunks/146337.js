@@ -1,4 +1,4 @@
-e.d(n, { A: () => y, _: () => g });
+e.d(n, { A: () => y, _: () => p });
 var t = e(477900);
 e(582128);
 var i = e(477782),
@@ -29,10 +29,10 @@ async function A(l, n, e) {
               contextualChannelId: n.id,
           });
 }
-var p = e(652215);
-let g = "app_channel_context_menu";
+var g = e(652215);
+let p = "app_channel_context_menu";
 function y(l, n) {
-    let e = l.type === p.rbe.GUILD_APP ? l.getApplicationId() : null;
+    let e = l.type === g.rbe.GUILD_APP ? l.getApplicationId() : null;
     return null == e
         ? null
         : (0, t.jsx)(i.Dr, {

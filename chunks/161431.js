@@ -1,17 +1,17 @@
 l.d(t, { IP: () => d, Od: () => f, rU: () => c });
 var n = l(582128),
     a = l(17928),
-    i = l(73153),
-    r = l(183011),
-    u = l(989145);
-let s = 221552 == l.j ? [] : null,
+    r = l(73153),
+    i = l(183011),
+    s = l(989145);
+let u = 221552 == l.j ? [] : null,
     o = new Set();
 function d(e) {
     o.has(e) ||
         (o.add(e),
-        (0, u.Y7)(e)
+        (0, s.Y7)(e)
             .then((t) => {
-                i.h.dispatch({
+                r.h.dispatch({
                     type: "CONJURE_STORED_ATTACHMENTS_FETCHED",
                     projectId: e,
                     attachments: [...t].reverse(),
@@ -23,18 +23,18 @@ function d(e) {
             .finally(() => o.delete(e)));
 }
 function c(e) {
-    return (0, a.bG)([r.A], () => r.A.getAttachments(e) ?? s, [e]);
+    return (0, a.bG)([i.A], () => i.A.getAttachments(e) ?? u, [e]);
 }
 function f(e, t) {
-    let l = (0, a.bG)([r.A], () => r.A.getAttachment(t), [t]),
-        u = null == l;
+    let l = (0, a.bG)([i.A], () => i.A.getAttachment(t), [t]),
+        s = null == l;
     return (
         n.useEffect(() => {
-            !u ||
+            !s ||
                 null == e ||
-                r.A.wasLookedUp(t) ||
-                (i.h.dispatch({ type: "CONJURE_STORED_ATTACHMENT_LOOKUP", attachmentId: t }), d(e));
-        }, [u, e, t]),
+                i.A.wasLookedUp(t) ||
+                (r.h.dispatch({ type: "CONJURE_STORED_ATTACHMENT_LOOKUP", attachmentId: t }), d(e));
+        }, [s, e, t]),
         l
     );
 }

@@ -1,32 +1,32 @@
-n.d(t, { Q: () => r });
+n.d(t, { Q: () => i });
 var l = n(582128),
     a = n(218394);
-function r(e) {
+function i(e) {
     let [t, n] = l.useState(e),
-        [r, i] = l.useState("idle"),
-        [s, u] = l.useState(e),
-        d = (0, a.j)();
+        [i, r] = l.useState("idle"),
+        [s, o] = l.useState(e),
+        u = (0, a.j)();
     return (
         s !== e
-            ? (u(e), i(d && e !== t ? "exit" : "idle"), d || n(e))
-            : d || ("idle" === r && t === s) || (n(s), i("idle")),
+            ? (o(e), r(u && e !== t ? "exit" : "idle"), u || n(e))
+            : u || ("idle" === i && t === s) || (n(s), r("idle")),
         l.useEffect(() => {
-            if ("exit" !== r) return;
+            if ("exit" !== i) return;
             let e = setTimeout(() => {
-                (n(s), i("enter"));
+                (n(s), r("enter"));
             }, 150);
             return () => clearTimeout(e);
-        }, [r, s]),
+        }, [i, s]),
         l.useEffect(() => {
-            if ("enter" !== r) return;
+            if ("enter" !== i) return;
             let e = 0,
                 t = requestAnimationFrame(() => {
-                    e = requestAnimationFrame(() => i("idle"));
+                    e = requestAnimationFrame(() => r("idle"));
                 });
             return () => {
                 (cancelAnimationFrame(t), cancelAnimationFrame(e));
             };
-        }, [r]),
-        { text: t, phase: r }
+        }, [i]),
+        { text: t, phase: i }
     );
 }

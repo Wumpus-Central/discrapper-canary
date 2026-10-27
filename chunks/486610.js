@@ -1,7 +1,7 @@
-n.d(t, { hO: () => m });
+n.d(t, { hO: () => x });
 var i = n(435558),
-    r = n.n(i),
-    l = n(807081),
+    l = n.n(i),
+    r = n(807081),
     a = n(478676),
     s = n.n(a),
     o = n(182490);
@@ -14,12 +14,12 @@ let c = {
 var d = n(247186),
     u = n(999915);
 let g = (0, n(551965).A)([
-        r().pick(u.Ay.RULES, ["text", "link"]),
+        l().pick(u.Ay.RULES, ["text", "link"]),
         { image: c },
         (0, d.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0, enableEmojiClick: !1, emojiFocusable: !1 }),
     ]),
-    f = l.aV(g);
-function m(e, t) {
-    return f(e, !0, { allowLinks: !0, ...t });
+    m = r.aV(g);
+function x(e, t) {
+    return m(e, !0, { allowLinks: !0, ...t });
 }
-l.X(g);
+r.X(g);

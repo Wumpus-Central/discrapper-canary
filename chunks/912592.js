@@ -1,20 +1,20 @@
-(t.r(i), t.d(i, { InboxIcon: () => a }));
-var s = t(477900);
-t(582128);
-var n = t(661531);
-if (221552 == t.j) var r = t(996682);
-if (221552 == t.j) var l = t(27989);
+(i.r(t), i.d(t, { InboxIcon: () => a }));
+var s = i(477900);
+i(582128);
+var n = i(661531);
+if (221552 == i.j) var r = i(996682);
+if (221552 == i.j) var l = i(27989);
 function a(e) {
     let {
-            size: i = "md",
-            width: t,
+            size: t = "md",
+            width: i,
             height: a,
             color: c = n.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: d = "",
             ...o
         } = e,
-        h = (0, l.J)(i),
-        u = h?.width ?? t,
+        h = (0, l.J)(t),
+        u = h?.width ?? i,
         j = h?.height ?? a;
     return (0, s.jsx)("svg", {
         ...(0, r.A)(o),

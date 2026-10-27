@@ -14,7 +14,7 @@ function d(l, n) {
     t.useEffect(() => {
         null != A && (0, c.tF)([A]);
     }, [A]);
-    let p = (0, i.bG)([r.Ay], () => (null != A ? r.Ay.getProject(A) : null), [A]),
-        g = d ?? p ?? null;
-    return null != g && (0, r.H_)(g) ? g : null;
+    let g = (0, i.bG)([r.Ay], () => (null != A ? r.Ay.getProject(A) : null), [A]),
+        p = d ?? g ?? null;
+    return null != p && (0, r.H_)(p) ? p : null;
 }

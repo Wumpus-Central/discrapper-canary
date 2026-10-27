@@ -1,8 +1,8 @@
-function n(t) {
-    return "live_outdated" === t || "live_current" === t || "live_auto_synced" === t;
+function n(e) {
+    return "live_outdated" === e || "live_current" === e || "live_auto_synced" === e;
 }
-function u(t) {
-    return "nothing_built" !== t && "live_auto_synced" !== t;
+function i(e) {
+    return "nothing_built" !== e && "live_auto_synced" !== e;
 }
-e.d(i, { Uh: () => u, lE: () => n, n: () => d });
-let d = ["preparing", "approval", "setup", "build", "deploy", "discord", "activating"];
+l.d(t, { Uh: () => i, lE: () => n, n: () => s });
+let s = ["preparing", "approval", "setup", "build", "deploy", "discord", "activating"];

@@ -1,39 +1,39 @@
-a.d(n, { C7: () => u, MB: () => i, Us: () => s, nY: () => l });
-var e = a(248675),
-    r = a(105292);
-function i(t) {
-    let n = Math.max(1, Math.round(t / 1e3));
-    if (n < 60) return r.intl.formatToPlainString(e.default["Cn+5go"], { count: n });
-    let a = Math.round(n / 60);
-    return a < 60
-        ? r.intl.formatToPlainString(e.default.lUCXD2, { count: a })
-        : r.intl.formatToPlainString(e.default.Y1OsON, { hours: Math.floor(a / 60), minutes: a % 60 });
-}
-function l(t) {
-    let n = Math.max(1, Math.round(t / 1e3));
-    if (n < 60) return r.intl.formatToPlainString(e.default.yUXWd9, { count: n });
-    let a = Math.round(n / 60);
-    return a < 60
-        ? r.intl.formatToPlainString(e.default.v7Gf5b, { count: a })
-        : r.intl.formatToPlainString(e.default.kyqrd4, { hours: Math.floor(a / 60), minutes: a % 60 });
-}
-function o(t) {
-    let n = Number.isFinite(t) ? Math.max(0, Math.floor(t / 1e3)) : 0;
-    return { hours: Math.floor(n / 3600), minutes: Math.floor(n / 60) % 60, seconds: n % 60 };
+n.d(l, { C7: () => s, MB: () => a, Us: () => o, nY: () => u });
+var e = n(248675),
+    i = n(105292);
+function a(t) {
+    let l = Math.max(1, Math.round(t / 1e3));
+    if (l < 60) return i.intl.formatToPlainString(e.default["Cn+5go"], { count: l });
+    let n = Math.round(l / 60);
+    return n < 60
+        ? i.intl.formatToPlainString(e.default.lUCXD2, { count: n })
+        : i.intl.formatToPlainString(e.default.Y1OsON, { hours: Math.floor(n / 60), minutes: n % 60 });
 }
 function u(t) {
-    let { hours: n, minutes: a, seconds: i } = o(t);
-    return n > 0
-        ? r.intl.formatToPlainString(e.default["rIbuN/"], { hours: n, minutes: a, seconds: i })
-        : a > 0
-          ? r.intl.formatToPlainString(e.default["/D79R7"], { minutes: a, seconds: i })
-          : r.intl.formatToPlainString(e.default.KrqS00, { seconds: i });
+    let l = Math.max(1, Math.round(t / 1e3));
+    if (l < 60) return i.intl.formatToPlainString(e.default.yUXWd9, { count: l });
+    let n = Math.round(l / 60);
+    return n < 60
+        ? i.intl.formatToPlainString(e.default.v7Gf5b, { count: n })
+        : i.intl.formatToPlainString(e.default.kyqrd4, { hours: Math.floor(n / 60), minutes: n % 60 });
+}
+function r(t) {
+    let l = Number.isFinite(t) ? Math.max(0, Math.floor(t / 1e3)) : 0;
+    return { hours: Math.floor(l / 3600), minutes: Math.floor(l / 60) % 60, seconds: l % 60 };
 }
 function s(t) {
-    let { hours: n, minutes: a } = o(t);
-    return n > 0
-        ? r.intl.formatToPlainString(e.default.HEBIhT, { hours: n, minutes: a })
-        : a > 0
-          ? r.intl.formatToPlainString(e.default.vvpiqt, { minutes: a })
-          : r.intl.string(e.default.dCg2BH);
+    let { hours: l, minutes: n, seconds: a } = r(t);
+    return l > 0
+        ? i.intl.formatToPlainString(e.default["rIbuN/"], { hours: l, minutes: n, seconds: a })
+        : n > 0
+          ? i.intl.formatToPlainString(e.default["/D79R7"], { minutes: n, seconds: a })
+          : i.intl.formatToPlainString(e.default.KrqS00, { seconds: a });
+}
+function o(t) {
+    let { hours: l, minutes: n } = r(t);
+    return l > 0
+        ? i.intl.formatToPlainString(e.default.HEBIhT, { hours: l, minutes: n })
+        : n > 0
+          ? i.intl.formatToPlainString(e.default.vvpiqt, { minutes: n })
+          : i.intl.string(e.default.dCg2BH);
 }

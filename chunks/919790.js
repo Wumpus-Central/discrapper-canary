@@ -1,53 +1,53 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var l = n(477900),
     a = n(582128),
-    r = n(256905),
-    i = n(666476),
+    i = n(256905),
+    r = n(666476),
     s = n(989145),
-    u = n(922329),
-    d = n(248675),
-    o = n(105292),
+    o = n(922329),
+    u = n(248675),
+    d = n(105292),
     c = n(986109);
-function m(e) {
+function f(e) {
     let { projectId: t, attachments: n } = e,
-        r = n.filter(f),
-        [i, s] = a.useState(() => new Set()),
-        u = a.useCallback((e) => {
+        i = n.filter(m),
+        [r, s] = a.useState(() => new Set()),
+        o = a.useCallback((e) => {
             s((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
     return (0, l.jsx)("div", {
         className: c.KT,
         children: n.map((e, n) =>
             null == e.id
-                ? (0, l.jsx)(h, { name: e.name }, n)
-                : f(e)
+                ? (0, l.jsx)(p, { name: e.name }, n)
+                : m(e)
                   ? (0, l.jsx)(
-                        g,
+                        h,
                         {
                             projectId: t,
-                            viewableImages: r,
-                            viewerIndex: r.indexOf(e),
-                            unavailableIds: i,
-                            markUnavailable: u,
+                            viewableImages: i,
+                            viewerIndex: i.indexOf(e),
+                            unavailableIds: r,
+                            markUnavailable: o,
                         },
                         n,
                     )
-                  : (0, l.jsx)(x, { projectId: t, id: e.id, name: e.name }, n),
+                  : (0, l.jsx)(g, { projectId: t, id: e.id, name: e.name }, n),
         ),
     });
 }
-function f(e) {
-    return null != e.id && i.XB.has(e.content_type);
+function m(e) {
+    return null != e.id && r.XB.has(e.content_type);
 }
-function h(e) {
+function p(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? o.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
-    return (0, l.jsx)(u.p, { name: a, compact: !0 });
+        a = n ? d.intl.formatToPlainString(u.default.nd81jR, { name: t }) : t;
+    return (0, l.jsx)(o.p, { name: a, compact: !0 });
 }
-function x(e) {
-    let { projectId: t, id: n, name: r } = e,
-        [i, c] = a.useState(!1),
-        m = a.useCallback(() => {
+function g(e) {
+    let { projectId: t, id: n, name: i } = e,
+        [r, c] = a.useState(!1),
+        f = a.useCallback(() => {
             (0, s.n6)(t, n)
                 .then(async (e) => {
                     if (!e) return void c(!0);
@@ -59,27 +59,27 @@ function x(e) {
                 })
                 .catch(() => {});
         }, [t, n]);
-    return i
-        ? (0, l.jsx)(h, { name: r, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
-              name: r,
+    return r
+        ? (0, l.jsx)(p, { name: i, unavailable: !0 })
+        : (0, l.jsx)(o.n, {
+              name: i,
               thumbSrc: null,
-              ariaLabel: o.intl.formatToPlainString(d.default["g5+7Vs"], { name: r }),
-              onClick: m,
+              ariaLabel: d.intl.formatToPlainString(u.default["g5+7Vs"], { name: i }),
+              onClick: f,
           });
 }
-function g(e) {
-    let { projectId: t, viewableImages: n, viewerIndex: i, unavailableIds: c, markUnavailable: m } = e,
-        { id: f, name: x } = n[i],
-        [g, p] = a.useState(null),
-        j = c.has(f),
+function h(e) {
+    let { projectId: t, viewableImages: n, viewerIndex: r, unavailableIds: c, markUnavailable: f } = e,
+        { id: m, name: g } = n[r],
+        [h, x] = a.useState(null),
+        j = c.has(m),
         [k, v] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
-            (0, s.PK)(t, f).then(
+            (0, s.PK)(t, m).then(
                 (t) => {
-                    e || p(t);
+                    e || x(t);
                 },
                 () => {},
             ),
@@ -87,35 +87,35 @@ function g(e) {
                 e = !0;
             }
         );
-    }, [t, f, k]);
-    let _ = a.useCallback(() => {
+    }, [t, m, k]);
+    let y = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, s.PK)(t, e.id), alt: e.name })),
         ).then(
             (e) => {
-                null != e[i] &&
-                    (0, r.R)({
+                null != e[r] &&
+                    (0, i.R)({
                         items: e.filter((e) => null != e),
-                        startingIndex: e.slice(0, i).filter((e) => null != e).length,
+                        startingIndex: e.slice(0, r).filter((e) => null != e).length,
                         shouldHideMediaOptions: !0,
                         location: "ConjureChat",
                     });
             },
             () => {},
         );
-    }, [t, n, i, c]);
+    }, [t, n, r, c]);
     return j
-        ? (0, l.jsx)(h, { name: x, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
-              name: x,
-              thumbSrc: g,
-              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: x }),
-              onClick: _,
+        ? (0, l.jsx)(p, { name: g, unavailable: !0 })
+        : (0, l.jsx)(o.n, {
+              name: g,
+              thumbSrc: h,
+              ariaLabel: d.intl.formatToPlainString(u.default.GtNukg, { name: g }),
+              onClick: y,
               onThumbError: () => {
-                  (p(null),
-                      (0, s.n6)(t, f).then(
+                  (x(null),
+                      (0, s.n6)(t, m).then(
                           (e) => {
-                              e ? 0 === k && v(1) : m(f);
+                              e ? 0 === k && v(1) : f(m);
                           },
                           () => {},
                       ));

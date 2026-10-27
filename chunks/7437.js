@@ -1,65 +1,65 @@
-n.d(t, { A: () => g });
-var i = n(582128),
-    r = n(858899),
-    l = n(887725),
-    a = n(105292);
-function s(e) {
-    let { text: t, ok: n } = (function (e) {
-        switch (e) {
+r.d(e, { A: () => f });
+var n = r(582128),
+    i = r(858899),
+    u = r(887725),
+    a = r(105292);
+function s(t) {
+    let { text: e, ok: r } = (function (t) {
+        switch (t) {
             case "dispatched":
-                return { text: a.intl.string(l.default["um/5Kc"]), ok: !0 };
+                return { text: a.intl.string(u.default["um/5Kc"]), ok: !0 };
             case "rate_limited":
-                return { text: a.intl.string(l.default.T1n7hc), ok: !1 };
+                return { text: a.intl.string(u.default.T1n7hc), ok: !1 };
             case "unauthorized":
-                return { text: a.intl.string(l.default["30UxZU"]), ok: !1 };
+                return { text: a.intl.string(u.default["30UxZU"]), ok: !1 };
             case "no_widget_config":
-                return { text: a.intl.string(l.default["1UFWet"]), ok: !1 };
+                return { text: a.intl.string(u.default["1UFWet"]), ok: !1 };
             case "undeliverable":
-                return { text: a.intl.string(l.default.ypKX9A), ok: !1 };
+                return { text: a.intl.string(u.default.ypKX9A), ok: !1 };
             default:
-                return { text: a.intl.string(l.default.BLKD4B), ok: !1 };
+                return { text: a.intl.string(u.default.BLKD4B), ok: !1 };
         }
-    })(e);
-    (0, r.P0)({ text: t, variant: n ? "success" : "critical" });
+    })(t);
+    (0, i.P0)({ text: e, variant: r ? "success" : "critical" });
 }
-var o = n(51906),
-    c = n(636537),
-    d = n(652215);
-let u = new o.Zy();
-function g(e) {
-    let [t, n] = i.useState(!1),
-        r = i.useRef(!0);
-    i.useEffect(
+var c = r(51906),
+    l = r(636537),
+    d = r(652215);
+let o = new c.Zy();
+function f(t) {
+    let [e, r] = n.useState(!1),
+        i = n.useRef(!0);
+    n.useEffect(
         () => (
-            (r.current = !0),
+            (i.current = !0),
             () => {
-                r.current = !1;
+                i.current = !1;
             }
         ),
         [],
     );
-    let l = i.useCallback(() => {
-        !t &&
-            null != e &&
-            (n(!0),
-            u
-                .one(e, async () => {
+    let u = n.useCallback(() => {
+        !e &&
+            null != t &&
+            (r(!0),
+            o
+                .one(t, async () => {
                     try {
                         return (
-                            await c.Bo.post({
-                                url: d.Rsh.APPLICATION_WIDGET_REFRESH(e),
+                            await l.Bo.post({
+                                url: d.Rsh.APPLICATION_WIDGET_REFRESH(t),
                                 rejectWithError: !0,
                                 failImmediatelyWhenRateLimited: !0,
                             }),
                             "dispatched"
                         );
-                    } catch (e) {
+                    } catch (t) {
                         switch (
-                            (function (e) {
-                                if (e instanceof c.oh) return e.status;
-                                let t = e?.status;
-                                return "number" == typeof t ? t : void 0;
-                            })(e)
+                            (function (t) {
+                                if (t instanceof l.oh) return t.status;
+                                let e = t?.status;
+                                return "number" == typeof e ? e : void 0;
+                            })(t)
                         ) {
                             case 403:
                                 return "unauthorized";
@@ -76,8 +76,8 @@ function g(e) {
                 })
                 .then(s)
                 .finally(() => {
-                    r.current && n(!1);
+                    i.current && r(!1);
                 }));
-    }, [e, t]);
-    return { pending: t, refresh: l };
+    }, [t, e]);
+    return { pending: e, refresh: u };
 }

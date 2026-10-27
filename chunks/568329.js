@@ -1,12 +1,12 @@
-(n.d(t, { PW: () => s, dN: () => c, oK: () => d }), n(321073));
+(n.d(t, { PW: () => u, dN: () => c, oK: () => d }), n(321073));
 var l = n(477900),
     r = n(582128),
-    u = n(333007),
-    a = n(399513),
-    o = n(765671),
+    a = n(333007),
+    o = n(399513),
+    s = n(765671),
     i = n(398025);
 n(272111);
-let s = r.createContext({
+let u = r.createContext({
     registerComponent: () => {},
     unregisterComponent: () => {},
     animatedComponents: {},
@@ -15,152 +15,152 @@ let s = r.createContext({
     overlayRef: r.createRef(),
     recalculateAnimationPositions: () => {},
     animatedComponentProps: [],
-    expansionSpring: new a.SpringValue(0),
+    expansionSpring: new o.SpringValue(0),
     mountPoints: new Map(),
 });
 function c(e) {
     let { children: t, id: n, inState: c, isTextTransition: d = !1, ref: p } = e,
         {
-            recalculateAnimationPositions: f,
-            registerComponent: m,
-            unregisterComponent: x,
-            expansionSpring: h,
-            mountPoints: v,
-        } = r.useContext(s),
-        g = r.useRef(null),
-        C = r.useRef(null),
-        y = r.useRef(void 0);
+            recalculateAnimationPositions: m,
+            registerComponent: x,
+            unregisterComponent: h,
+            expansionSpring: C,
+            mountPoints: f,
+        } = r.useContext(u),
+        v = r.useRef(null),
+        N = r.useRef(null),
+        E = r.useRef(void 0);
     (r.useEffect(() => {
-        f();
-    }, [f]),
+        m();
+    }, [m]),
         r.useLayoutEffect(() => {
-            let e = g.current;
+            let e = v.current;
             return (
-                null != e && m(e, n, c),
+                null != e && x(e, n, c),
                 () => {
-                    null != e && x(n, c);
+                    null != e && h(n, c);
                 }
             );
-        }, [n, c, m, x]));
-    let j = r.useCallback(
+        }, [n, c, x, h]));
+    let _ = r.useCallback(
         (e) => {
             let { height: t } = e;
-            y.current !== t && (f(), (y.current = t));
+            E.current !== t && (m(), (E.current = t));
         },
-        [f],
+        [m],
     );
-    (0, o.i4)(g, j);
-    let R = v.get(n)?.current,
-        A = null;
+    (0, s.i4)(v, _);
+    let j = f.get(n)?.current,
+        g = null;
     return (
-        null == R
-            ? (A = null)
-            : d && null != h
-              ? (A = (0, l.jsxs)(l.Fragment, {
+        null == j
+            ? (g = null)
+            : d && null != C
+              ? (g = (0, l.jsxs)(l.Fragment, {
                     children: [
                         "collapsed" === c &&
-                            (0, u.createPortal)(
-                                (0, l.jsx)(a.animated.div, {
+                            (0, a.createPortal)(
+                                (0, l.jsx)(o.animated.div, {
                                     style: {
                                         position: "absolute",
-                                        opacity: (0, i.a)(h.to({ range: [0, 1], output: [1, 0] })),
+                                        opacity: (0, i.a)(C.to({ range: [0, 1], output: [1, 0] })),
                                     },
-                                    children: t(C),
+                                    children: t(N),
                                 }),
-                                R,
+                                j,
                             ),
                         "expanded" === c &&
-                            (0, u.createPortal)(
-                                (0, l.jsx)(a.animated.div, {
+                            (0, a.createPortal)(
+                                (0, l.jsx)(o.animated.div, {
                                     style: {
                                         position: "absolute",
-                                        opacity: (0, i.a)(h.to({ range: [0, 1], output: [0, 1] })),
+                                        opacity: (0, i.a)(C.to({ range: [0, 1], output: [0, 1] })),
                                     },
-                                    children: t(C),
+                                    children: t(N),
                                 }),
-                                R,
+                                j,
                             ),
                     ],
                 }))
-              : "collapsed" === c && (A = (0, u.createPortal)(t(C), R)),
+              : "collapsed" === c && (g = (0, a.createPortal)(t(N), j)),
         (0, l.jsxs)("div", {
-            style: { opacity: +((null == A && "collapsed" === c) || null == R) },
+            style: { opacity: +((null == g && "collapsed" === c) || null == j) },
             ref: p,
-            children: [t(g), A],
+            children: [t(v), g],
         })
     );
 }
 let d = (e) => {
-    let { children: t, expandedContentRef: n, collapsedContentRef: u, overlayRef: a, expansionSpring: o } = e,
+    let { children: t, expandedContentRef: n, collapsedContentRef: a, overlayRef: o, expansionSpring: s } = e,
         [i, c] = r.useState({}),
         [d, p] = r.useState([]),
-        [f, m] = r.useState(() => new Map()),
-        x = r.useCallback((e, t, n) => {
+        [m, x] = r.useState(() => new Map()),
+        h = r.useCallback((e, t, n) => {
             (c((l) => {
                 let r = l[t] ?? { expanded: null, collapsed: null };
                 return { ...l, [t]: { ...r, [n]: e } };
             }),
-                m((e) => {
+                x((e) => {
                     let n = new Map(e);
                     return (n.set(t, r.createRef()), n);
                 }));
         }, []),
-        h = r.useCallback((e, t) => {
+        C = r.useCallback((e, t) => {
             let n = !1;
             (c((l) => {
                 let r = l[e] ?? { expanded: null, collapsed: null };
                 return ((r[t] = null), (n = null == r.expanded && null == r.collapsed), { ...l, [e]: r });
             }),
                 n &&
-                    m((t) => {
+                    x((t) => {
                         let n = new Map(t);
                         return (n.delete(e), n);
                     }));
         }, []),
-        v = r.useCallback(() => {
+        f = r.useCallback(() => {
             let e = [];
             for (let t in i) {
-                if (null == i[t] || null == n.current || null == u.current) continue;
+                if (null == i[t] || null == n.current || null == a.current) continue;
                 let l = i[t].collapsed,
                     r = i[t].expanded;
                 if (null == l || null == r) continue;
-                let a = r.getBoundingClientRect(),
-                    o = n.current.getBoundingClientRect(),
-                    s = l.getBoundingClientRect(),
-                    c = u.current.getBoundingClientRect(),
-                    d = a.top - o.top + 12,
-                    p = s.top - c.top,
-                    f = a.left - o.left + 12,
-                    m = s.left - c.left,
-                    x = -a.right + o.right + 12,
-                    h = -s.right + c.right;
+                let o = r.getBoundingClientRect(),
+                    s = n.current.getBoundingClientRect(),
+                    u = l.getBoundingClientRect(),
+                    c = a.current.getBoundingClientRect(),
+                    d = o.top - s.top + 12,
+                    p = u.top - c.top,
+                    m = o.left - s.left + 12,
+                    x = u.left - c.left,
+                    h = -o.right + s.right + 12,
+                    C = -u.right + c.right;
                 e.push({
                     id: t,
-                    collapsedLeft: m,
-                    expandedLeft: f,
-                    collapsedRight: h,
-                    expandedRight: x,
+                    collapsedLeft: x,
+                    expandedLeft: m,
+                    collapsedRight: C,
+                    expandedRight: h,
                     collapsedTop: p,
                     expandedTop: d,
-                    width: a.width,
+                    width: o.width,
                 });
             }
             p(e);
-        }, [i, n, u, p]),
-        g = r.useMemo(
+        }, [i, n, a, p]),
+        v = r.useMemo(
             () => ({
-                registerComponent: x,
-                unregisterComponent: h,
+                registerComponent: h,
+                unregisterComponent: C,
                 animatedComponents: i,
                 expandedContentRef: n,
-                collapsedContentRef: u,
-                overlayRef: a,
-                recalculateAnimationPositions: v,
+                collapsedContentRef: a,
+                overlayRef: o,
+                recalculateAnimationPositions: f,
                 animatedComponentProps: d,
-                expansionSpring: o,
-                mountPoints: f,
+                expansionSpring: s,
+                mountPoints: m,
             }),
-            [x, h, i, n, u, a, v, d, o, f],
+            [h, C, i, n, a, o, f, d, s, m],
         );
-    return (0, l.jsx)(s.Provider, { value: g, children: t });
+    return (0, l.jsx)(u.Provider, { value: v, children: t });
 };

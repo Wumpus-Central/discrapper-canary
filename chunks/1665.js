@@ -2,30 +2,30 @@ l.d(t, { A: () => c });
 var n = l(477900);
 l(582128);
 var a = l(834730),
-    i = l(908492);
-let r = RegExp(
+    r = l(908492);
+let i = RegExp(
         "^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+(?:com|org|net|gov|edu|io|dev|app|gg|co|ai|me|tv|xyz|info|us|uk|de|fr|jp|ca|au)(?:/[^\\s?#]*)?$",
         "i",
     ),
-    u = /(`[^`]*`|\[[^\]]*\]\([^)]*\)|<[^>\s]+>|\b[a-z][a-z0-9+.-]*:\/\/\S+)/gi,
-    s = /^[("']+/,
+    s = /(`[^`]*`|\[[^\]]*\]\([^)]*\)|<[^>\s]+>|\b[a-z][a-z0-9+.-]*:\/\/\S+)/gi,
+    u = /^[("']+/,
     o = /[.,!?;:)"']+$/;
 function d(e) {
-    let t = s.exec(e)?.[0] ?? "",
+    let t = u.exec(e)?.[0] ?? "",
         l = e.slice(t.length),
         n = o.exec(l)?.[0] ?? "",
         a = l.slice(0, l.length - n.length);
-    return r.test(a) ? `${t}[${a}](https://${a})${n}` : e;
+    return i.test(a) ? `${t}[${a}](https://${a})${n}` : e;
 }
 function c(e) {
-    let { text: t, variant: l, color: r } = e;
+    let { text: t, variant: l, color: i } = e;
     return (0, n.jsx)(a.E, {
         variant: l,
-        color: r,
+        color: i,
         selectable: !0,
-        children: (0, i.U)(
+        children: (0, r.U)(
             t
-                .split(u)
+                .split(s)
                 .map((e, t) => (t % 2 == 1 ? e : e.split(/(\s+)/).map(d).join("")))
                 .join(""),
             !0,

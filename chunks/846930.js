@@ -1,9 +1,9 @@
-t.d(i, { A: () => o });
-var s = t(477900);
-t(582128);
-var n = t(503698),
-    r = t.n(n),
-    l = t(196318);
+i.d(t, { A: () => o });
+var s = i(477900);
+i(582128);
+var n = i(503698),
+    r = i.n(n),
+    l = i(196318);
 function a() {
     return (0, s.jsx)("div", { className: l.jH });
 }
@@ -11,21 +11,21 @@ function c() {
     return (0, s.jsx)("div", { className: l.L1 });
 }
 function d(e) {
-    let { width: i } = e;
+    let { width: t } = e;
     return (0, s.jsxs)("div", {
         className: l.Ix,
         children: [
             (0, s.jsx)("div", { className: l.p }),
-            (0, s.jsx)("div", { className: l.HA, style: { width: `${i}px` } }),
+            (0, s.jsx)("div", { className: l.HA, style: { width: `${t}px` } }),
         ],
     });
 }
 let o =
-    221552 == t.j
+    221552 == i.j
         ? function (e) {
-              let { withBannerPadding: i } = e;
+              let { withBannerPadding: t } = e;
               return (0, s.jsxs)("div", {
-                  className: r()(l.kL, { [l.o5]: i }),
+                  className: r()(l.kL, { [l.o5]: t }),
                   children: [
                       (0, s.jsx)(c, {}),
                       (0, s.jsx)(d, { width: 100 }),

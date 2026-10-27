@@ -1,23 +1,23 @@
-n.d(t, { b: () => r, x: () => o });
-var i = n(582128);
-let a = new Set();
-function r(e, t) {
-    for (let n of a) n(e, t);
-}
+n.d(t, { b: () => o, x: () => i });
+var r = n(582128);
+let s = new Set();
 function o(e, t) {
-    let n = i.useRef(t);
-    (i.useLayoutEffect(() => {
+    for (let n of s) n(e, t);
+}
+function i(e, t) {
+    let n = r.useRef(t);
+    (r.useLayoutEffect(() => {
         n.current = t;
     }),
-        i.useEffect(() => {
+        r.useEffect(() => {
             if (null == e) return;
-            let t = (t, i) => {
-                t === e && n.current(i);
+            let t = (t, r) => {
+                t === e && n.current(r);
             };
             return (
-                a.add(t),
+                s.add(t),
                 () => {
-                    a.delete(t);
+                    s.delete(t);
                 }
             );
         }, [e]));

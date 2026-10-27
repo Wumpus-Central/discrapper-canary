@@ -1,8 +1,8 @@
-l.d(t, { $: () => i, a: () => a });
-var n = l(371169);
-function a(e, t, l) {
-    return t?.integration_installed === !0 && e?.guild_id != null ? e.guild_id : l;
+n.d(l, { $: () => a, a: () => i });
+var e = n(371169);
+function i(t, l, n) {
+    return l?.integration_installed === !0 && t?.guild_id != null ? t.guild_id : n;
 }
-async function i(e, t) {
-    (e.guild_id !== t || e.preview_guild_id !== t) && (await (0, n.M7)(e.id, { guild_id: t, preview_guild_id: t }));
+async function a(t, l) {
+    (t.guild_id !== l || t.preview_guild_id !== l) && (await (0, e.M7)(t.id, { guild_id: l, preview_guild_id: l }));
 }

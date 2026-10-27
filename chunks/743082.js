@@ -1,6 +1,6 @@
-n.d(t, { WO: () => f, fD: () => y, mw: () => p, nU: () => S, ss: () => T });
-var i = n(158390),
-    r = n(73153),
+n.d(t, { WO: () => f, fD: () => p, mw: () => y, nU: () => S, ss: () => T });
+var r = n(158390),
+    i = n(73153),
     s = n(688954),
     l = n(513845),
     a = n(442331),
@@ -13,7 +13,7 @@ let f = {
     settings(e, t) {
         let { projectId: n } = t;
         (o(n),
-            r.h.dispatch({
+            i.h.dispatch({
                 type: "CONJURE_SETTINGS_SET",
                 projectId: n,
                 settings: { schema: e.schema, values: e.values, secrets: e.secrets, connections: e.connections },
@@ -25,18 +25,18 @@ async function h(e) {
     let t = c.get(e) ?? 0,
         n = await (0, s.h)(e, "/agent/settings");
     if (!n.ok) throw Error(`settings fetch failed (${n.status})`);
-    let i = await n.json();
+    let r = await n.json();
     if ((c.get(e) ?? 0) === t || null == a.A.getSettings(e)) {
-        if (!Array.isArray(i?.schema) || 0 === i.schema.length)
-            return void r.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "loaded" });
-        r.h.dispatch({
+        if (!Array.isArray(r?.schema) || 0 === r.schema.length)
+            return void i.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "loaded" });
+        i.h.dispatch({
             type: "CONJURE_SETTINGS_SET",
             projectId: e,
             settings: {
-                schema: i.schema,
-                values: i.values ?? {},
-                secrets: i.secrets ?? [],
-                connections: i.connections,
+                schema: r.schema,
+                values: r.values ?? {},
+                secrets: r.secrets ?? [],
+                connections: r.connections,
             },
         });
     }
@@ -48,21 +48,21 @@ async function g(e, t) {
         await h(e);
     } catch {
         if (((t.inFlight = !1), t.retries >= 5))
-            return void r.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "failed" });
+            return void i.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "failed" });
         ((t.retries += 1), t.backoff.fail(() => g(e, t)));
         return;
     }
     ((t.inFlight = !1), (t.retries = 0), t.backoff.succeed());
 }
-function y(e) {
+function p(e) {
     let t,
         n =
             (null == (t = d.get(e)) &&
-                ((t = { backoff: new i.A(1e3, 6e4), inFlight: !1, retries: 0, lastFetchAt: -1 / 0, deferred: null }),
+                ((t = { backoff: new r.A(1e3, 6e4), inFlight: !1, retries: 0, lastFetchAt: -1 / 0, deferred: null }),
                 d.set(e, t)),
             t);
     if (n.inFlight || n.backoff.pending || null != n.deferred) return;
-    (r.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "loading" }), (n.retries = 0));
+    (i.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "loading" }), (n.retries = 0));
     let s = n.lastFetchAt + 5e3 - Date.now();
     if (s > 0) {
         n.deferred = setTimeout(() => {
@@ -72,27 +72,27 @@ function y(e) {
     }
     g(e, n);
 }
-function p(e) {
-    for (let t of e) "failed" === a.A.getLoadState(t) && y(t);
+function y(e) {
+    for (let t of e) "failed" === a.A.getLoadState(t) && p(t);
 }
 async function S(e, t) {
     let n = await (0, s.h)(e, "/agent/settings", { method: "PUT", json: t });
     if (!n.ok) throw Error(`settings submission failed (${n.status})`);
-    let i = null;
+    let r = null;
     try {
-        i = await n.json();
+        r = await n.json();
     } catch {}
     o(e);
     let l = a.A.getSettings(e);
     return (
         null != l &&
             null != t.values &&
-            r.h.dispatch({
+            i.h.dispatch({
                 type: "CONJURE_SETTINGS_SET",
                 projectId: e,
                 settings: { ...l, values: (0, u.yj)(l.values, t.values) },
             }),
-        { rebuildRequired: i?.rebuild_required === !0 }
+        { rebuildRequired: r?.rebuild_required === !0 }
     );
 }
 function T(e) {

@@ -1,4 +1,4 @@
-n.d(t, { E: () => g, QuestRewardModalUnverified: () => E });
+n.d(e, { E: () => _, QuestRewardModalUnverified: () => g });
 var r = n(477900),
     i = n(582128),
     s = n(17928),
@@ -8,45 +8,45 @@ var r = n(477900),
     o = n(834730),
     c = n(192308),
     d = n(830215),
-    A = n(287809),
-    f = n(710969),
+    f = n(287809),
+    A = n(710969),
     C = n(105292),
-    T = n(674456),
-    p = n(661965);
-function E(e) {
-    let { transitionState: t, onClose: n } = e,
-        c = (0, s.bG)([A.default], () => A.default.getCurrentUser()?.email),
-        [E, g] = i.useState({ status: "unknown" });
+    E = n(674456),
+    T = n(661965);
+function g(t) {
+    let { transitionState: e, onClose: n } = t,
+        c = (0, s.bG)([f.default], () => f.default.getCurrentUser()?.email),
+        [g, _] = i.useState({ status: "unknown" });
     i.useEffect(() => {
-        (g({ status: "loading" }),
+        (_({ status: "loading" }),
             d.A.verifyResend().then(
-                () => g({ status: "success" }),
-                (e) => {
-                    (g({ status: "error" }), (0, f.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } }));
+                () => _({ status: "success" }),
+                (t) => {
+                    (_({ status: "error" }), (0, A.RF)(t, { tags: { location: "QuestsRewardModalUnverified" } }));
                 },
             ));
     }, []);
-    let _ =
-        "error" === E.status
+    let p =
+        "error" === g.status
             ? C.intl.string(C.t.vjying)
-            : "success" === E.status
+            : "success" === g.status
               ? C.intl.format(C.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
               : void 0;
     return (0, r.jsxs)(l.k, {
-        transitionState: t,
+        transitionState: e,
         onClose: n,
-        graphic: "loading" === E.status ? void 0 : { type: "image", src: p },
-        title: "loading" === E.status ? void 0 : C.intl.string(C.t.c8eASM),
-        subtitle: _,
+        graphic: "loading" === g.status ? void 0 : { type: "image", src: T },
+        title: "loading" === g.status ? void 0 : C.intl.string(C.t.c8eASM),
+        subtitle: p,
         actions:
-            "loading" === E.status ? void 0 : [{ variant: "secondary", text: C.intl.string(C.t.cpT0Cq), onClick: n }],
+            "loading" === g.status ? void 0 : [{ variant: "secondary", text: C.intl.string(C.t.cpT0Cq), onClick: n }],
         children: [
-            "loading" === E.status && (0, r.jsx)(u.y, {}),
-            "success" === E.status &&
+            "loading" === g.status && (0, r.jsx)(u.y, {}),
+            "success" === g.status &&
                 (0, r.jsxs)("div", {
-                    className: T.d,
+                    className: E.d,
                     children: [
-                        (0, r.jsx)(a.CircleInformationIcon, { size: "xs", color: "currentColor", className: T.q }),
+                        (0, r.jsx)(a.CircleInformationIcon, { size: "xs", color: "currentColor", className: E.q }),
                         (0, r.jsx)(o.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
@@ -57,9 +57,9 @@ function E(e) {
         ],
     });
 }
-function g() {
+function _() {
     (0, c.openModalLazy)(async () => {
-        let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 175248));
-        return (t) => (0, r.jsx)(e, { ...t });
+        let { QuestRewardModalUnverified: t } = await Promise.resolve().then(n.bind(n, 175248));
+        return (e) => (0, r.jsx)(t, { ...e });
     });
 }

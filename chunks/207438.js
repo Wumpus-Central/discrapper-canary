@@ -2,8 +2,8 @@ n.d(t, { DK: () => _, Lj: () => u, R7: () => d, VW: () => f, bq: () => p, d5: ()
 var r = n(73153),
     s = n(975189),
     o = n(385081),
-    l = n(616e3),
-    i = n(667931);
+    i = n(616e3),
+    l = n(667931);
 let a = {
         log(e, t) {
             let { projectId: n } = t;
@@ -75,8 +75,8 @@ let a = {
             (r.h.dispatch({ type: "CONJURE_DEBUG_TIMING_TRACE", projectId: a, batch: e.batch, live: e.live }),
                 (n = a),
                 (s = e.batch.trace_id),
-                null == (o = l.A.getTimingTrace(n, s)) ||
-                    !(0, i.JQ)(o) ||
+                null == (o = i.A.getTimingTrace(n, s)) ||
+                    !(0, l.JQ)(o) ||
                     S.has(s) ||
                     (S.add(s), console.log("[conjure] timing trace", JSON.stringify(o))));
         },

@@ -1,59 +1,59 @@
-n.d(t, { Ay: () => g, b9: () => x, w: () => h });
+n.d(t, { Ay: () => h, b9: () => g, w: () => p });
 var l = n(477900);
 n(582128);
 var a = n(683063),
-    r = n(56681),
-    i = n(615839),
+    i = n(56681),
+    r = n(615839),
     s = n(115982),
-    u = n(566424),
-    d = n(16634),
-    o = n(308665),
+    o = n(566424),
+    u = n(16634),
+    d = n(308665),
     c = n(248675),
-    m = n(105292),
-    f = n(59678);
-function h(e) {
+    f = n(105292),
+    m = n(59678);
+function p(e) {
     let t = (0, s.Jf)(e, !0),
         n = (0, s.SY)(t.steps);
     return null != n ? (0, s.WQ)(n) : (t.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ?? null);
 }
-function x(e) {
-    return h(e) ?? m.intl.string(c.default.t8skVB);
-}
 function g(e) {
+    return p(e) ?? f.intl.string(c.default.t8skVB);
+}
+function h(e) {
     let {
             projectId: t,
             steps: n,
-            fallbackLabel: h,
-            live: x,
-            durationMs: g,
-            connectsDown: p = !1,
+            fallbackLabel: p,
+            live: g,
+            durationMs: h,
+            connectsDown: x = !1,
             closed: j = !1,
             tier: k,
         } = e,
         v = (0, s.SY)(n),
-        _ = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), k),
-        b = x ? void 0 : g,
-        y = null != b ? (0, i.nY)(b) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
-        A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
-    return (0, l.jsx)(u.A, {
+        y = (0, i.Q7)(f.intl.string(c.default.uk6jhJ), k),
+        b = g ? void 0 : h,
+        _ = null != b ? (0, r.nY)(b) : null != v ? (0, s.WQ)(v) : (p ?? f.intl.string(c.default.t8skVB)),
+        w = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+    return (0, l.jsx)(o.A, {
         glyph: (0, l.jsx)(a.u, {
-            asset: (0, l.jsx)(o.A, { size: 32 }),
+            asset: (0, l.jsx)(d.A, { size: 32 }),
             assetSize: 32,
-            title: _.title,
-            body: _.body,
+            title: y.title,
+            body: y.body,
             position: "left",
-            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.A, {}) }),
+            children: (0, l.jsx)("span", { className: m.nC, children: (0, l.jsx)(d.A, {}) }),
         }),
-        line: y,
+        line: _,
         anchor: !0,
-        live: x,
-        settled: null != b || (!x && j),
-        connectsDown: p,
-        detail: A
+        live: g,
+        settled: null != b || (!g && j),
+        connectsDown: x,
+        detail: w
             ? (0, l.jsx)("ol", {
-                  className: f.dO,
+                  className: m.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(d.A, { projectId: t, node: e, presentation: "detail", active: x && e === v }, e.id),
+                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: g && e === v }, e.id),
                   ),
               })
             : void 0,

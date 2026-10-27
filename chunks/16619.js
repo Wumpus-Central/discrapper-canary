@@ -1,19 +1,19 @@
-(n.d(t, { qh: () => k, rX: () => _, z9: () => v }), n(321073));
+(n.d(t, { qh: () => y, rX: () => G, z9: () => w }), n(321073));
 var l = n(582128),
-    a = n(17928),
-    r = n(587895),
-    i = n(945810),
-    s = n(321191),
-    u = n(808728),
-    d = n(71393),
-    o = n(576705),
+    u = n(17928),
+    i = n(587895),
+    r = n(945810),
+    d = n(321191),
+    a = n(808728),
+    o = n(71393),
+    s = n(576705),
     c = n(967198),
-    m = n(245179),
-    f = n(97005),
-    h = n(246338),
-    x = n(434279),
-    g = n(260498);
-function p(e, t) {
+    f = n(245179),
+    g = n(97005),
+    p = n(246338),
+    A = n(434279),
+    m = n(260498);
+function h(e, t) {
     return (
         e.nextExpiry === t.nextExpiry &&
         e.entries.length === t.entries.length &&
@@ -36,10 +36,10 @@ function p(e, t) {
 function j(e, t) {
     return e.length === t.length && e.every((e, n) => e === t[n]);
 }
-function k(e) {
+function y(e) {
     let [t, n] = l.useState(0),
-        { entries: o, nextExpiry: c } = (0, a.bG)(
-            [g.Ay, m.A, d.A, u.Ay, s.A, r.A, i.Bt],
+        { entries: s, nextExpiry: c } = (0, u.bG)(
+            [m.Ay, f.A, o.A, a.Ay, d.A, i.A, r.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
@@ -47,32 +47,32 @@ function k(e) {
                     function l(t) {
                         let l = n.get(t);
                         if (null != l) return l;
-                        let a = (0, f.L0)({ guildId: t, location: e });
-                        return (n.set(t, a), a);
+                        let u = (0, g.L0)({ guildId: t, location: e });
+                        return (n.set(t, u), u);
                     }
-                    let a = new Set(),
-                        r = [],
-                        i = null;
-                    function s(e, n) {
-                        if (a.has(e.id)) return;
-                        let s = (0, x.wu)(e);
-                        if (null != s && !l(s)) return;
-                        a.add(e.id);
-                        let u = m.A.isThinking(e.id),
-                            o = m.A.getFinishedAt(e.id),
-                            c = (0, x.Uk)({ thinking: u, finishedAt: o, now: t });
-                        if ("done" === c && null != o) {
-                            let e = o + 6e4;
-                            i = null == i ? e : Math.min(i, e);
+                    let u = new Set(),
+                        i = [],
+                        r = null;
+                    function d(e, n) {
+                        if (u.has(e.id)) return;
+                        let d = (0, A.wu)(e);
+                        if (null != d && !l(d)) return;
+                        u.add(e.id);
+                        let a = f.A.isThinking(e.id),
+                            s = f.A.getFinishedAt(e.id),
+                            c = (0, A.Uk)({ thinking: a, finishedAt: s, now: t });
+                        if ("done" === c && null != s) {
+                            let e = s + 6e4;
+                            r = null == r ? e : Math.min(r, e);
                         }
-                        let f = (null == s ? null : d.A.getGuild(s)) ?? null;
-                        r.push({
+                        let g = (null == d ? null : o.A.getGuild(d)) ?? null;
+                        i.push({
                             project: e,
                             projectId: e.id,
                             name: e.name,
-                            guildId: s,
-                            guild: f,
-                            guildName: f?.name ?? null,
+                            guildId: d,
+                            guild: g,
+                            guildName: g?.name ?? null,
                             owned: n,
                             activity: c,
                             sortTime: (function (e, t) {
@@ -80,17 +80,17 @@ function k(e) {
                                 if (null == e.updated_at) return 0;
                                 let n = Date.parse(e.updated_at);
                                 return Number.isNaN(n) ? 0 : n;
-                            })(e, o),
+                            })(e, s),
                         });
                     }
-                    for (let e of g.Ay.getOwnedProjects()) s(e, !0);
-                    for (let e of Object.values(d.A.getGuilds()))
-                        if (g.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
-                            for (let t of g.Ay.getSharedProjects(e.id)) s(t, !1);
-                    return { entries: (0, x.Ng)(r), nextExpiry: i };
+                    for (let e of m.Ay.getOwnedProjects()) d(e, !0);
+                    for (let e of Object.values(o.A.getGuilds()))
+                        if (m.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
+                            for (let t of m.Ay.getSharedProjects(e.id)) d(t, !1);
+                    return { entries: (0, A.Ng)(i), nextExpiry: r };
                 })(e),
             [e, t],
-            p,
+            h,
         );
     return (
         l.useEffect(() => {
@@ -98,30 +98,30 @@ function k(e) {
             let e = setTimeout(() => n((e) => e + 1), Math.max(0, c - Date.now()));
             return () => clearTimeout(e);
         }, [c, n]),
-        o
+        s
     );
 }
-function v(e) {
-    return (0, a.bG)(
-        [d.A, i.Bt, o.A],
+function w(e) {
+    return (0, u.bG)(
+        [o.A, r.Bt, s.A],
         () =>
-            Object.values(d.A.getGuilds())
-                .filter((t) => (0, h.sM)(t, e))
+            Object.values(o.A.getGuilds())
+                .filter((t) => (0, p.sM)(t, e))
                 .sort((e, t) => e.name.localeCompare(t.name)),
         [e],
         j,
     );
 }
-function _(e) {
-    return (0, a.bG)(
-        [d.A, c.A, i.Bt],
+function G(e) {
+    return (0, u.bG)(
+        [o.A, c.A, r.Bt],
         () => {
-            let t = d.A.getGuild(c.A.getGuildId());
-            return null != t && (0, h.N)(t, e)
+            let t = o.A.getGuild(c.A.getGuildId());
+            return null != t && (0, p.N)(t, e)
                 ? t.id
-                : (Object.values(d.A.getGuilds())
+                : (Object.values(o.A.getGuilds())
                       .sort((e, t) => e.name.localeCompare(t.name))
-                      .find((t) => (0, h.N)(t, e))?.id ?? null);
+                      .find((t) => (0, p.N)(t, e))?.id ?? null);
         },
         [e],
     );

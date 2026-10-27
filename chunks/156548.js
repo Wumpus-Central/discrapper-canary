@@ -1,35 +1,35 @@
-t.d(e, { BL: () => o, U8: () => c, cR: () => s, fl: () => i });
+t.d(n, { BL: () => o, U8: () => c, cR: () => f, fl: () => i });
 var l = t(582128),
     u = t(621466),
     r = t(475815);
-function i(n) {
-    return null == n ? null : document.querySelector(`[data-frame-id="${CSS.escape(n)}"]`);
+function i(e) {
+    return null == e ? null : document.querySelector(`[data-frame-id="${CSS.escape(e)}"]`);
 }
-function a(n) {
-    let e, t;
+function a(e) {
+    let n, t;
     return (
-        null != n &&
+        null != e &&
         ((t =
-            (e = document).fullscreenElement ??
-            e.webkitFullscreenElement ??
-            e.mozFullScreenElement ??
-            e.msFullscreenElement ??
+            (n = document).fullscreenElement ??
+            n.webkitFullscreenElement ??
+            n.mozFullScreenElement ??
+            n.msFullscreenElement ??
             null),
-        ((0, u.vq)(t, Element) ? t.getAttribute("data-frame-id") : null) === n)
+        ((0, u.vq)(t, Element) ? t.getAttribute("data-frame-id") : null) === e)
     );
 }
-function c(n) {
-    let e = i(n);
-    null != e && (0, r.Ub)(e) && (a(n) ? (0, r.sP)(e) : (0, r.tl)(e));
+function c(e) {
+    let n = i(e);
+    null != n && (0, r.Ub)(n) && (a(e) ? (0, r.sP)(n) : (0, r.tl)(n));
 }
-function o(n) {
-    if (!a(n)) return;
-    let e = i(n);
-    null != e && (0, r.sP)(e);
+function o(e) {
+    if (!a(e)) return;
+    let n = i(e);
+    null != n && (0, r.sP)(n);
 }
-function d(n) {
-    return (0, r.a3)(document, n);
+function d(e) {
+    return (0, r.a3)(document, e);
 }
-function s(n) {
-    return l.useSyncExternalStore(d, () => a(n));
+function f(e) {
+    return l.useSyncExternalStore(d, () => a(e));
 }

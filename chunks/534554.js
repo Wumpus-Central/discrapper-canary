@@ -1,47 +1,47 @@
-l.d(t, {
-    CM: () => p,
-    D0: () => r,
-    FC: () => m,
+n.d(t, {
+    CM: () => h,
+    D0: () => a,
+    FC: () => p,
     Id: () => o,
-    Tc: () => s,
+    Tc: () => u,
     gz: () => f,
-    hl: () => h,
+    hl: () => m,
     j6: () => d,
     t7: () => c,
 });
-var n = l(56681),
-    a = l(248675),
-    i = l(105292);
-function r(e) {
-    let t = (0, n.bF)(e);
+var r = n(56681),
+    l = n(248675),
+    i = n(105292);
+function a(e) {
+    let t = (0, r.bF)(e);
     return null != t ? i.intl.string(t) : e;
 }
-let u = { simple: a.default.Mqb8mc, balanced: a.default.zCZfA6, complex: a.default["8l2atm"] };
-function s(e) {
-    return i.intl.string(u[e]);
+let s = { simple: l.default.Mqb8mc, balanced: l.default.zCZfA6, complex: l.default["8l2atm"] };
+function u(e) {
+    return i.intl.string(s[e]);
 }
-function o(e, t, l) {
-    return e.models?.[l] ?? t?.[l]?.model ?? null;
+function o(e, t, n) {
+    return e.models?.[n] ?? t?.[n]?.model ?? null;
 }
 function d(e, t) {
     if (t === e.tier) return e;
-    let { thinking: l, ...n } = e;
-    return { ...n, tier: t };
+    let { thinking: n, ...r } = e;
+    return { ...r, tier: t };
 }
-function c(e, t, l) {
-    return { ...e, models: { ...e.models, [t]: l } };
+function c(e, t, n) {
+    return { ...e, models: { ...e.models, [t]: n } };
 }
-function f(e, t, l) {
-    let n = o(e, t, e.tier);
-    return null != n && l.find((e) => e.id === n)?.supports_fast === !0;
-}
-function p(e) {
-    let { fast: t, ...l } = e;
-    return !0 === t ? { ...l, fast: !0 } : l;
+function f(e, t, n) {
+    let r = o(e, t, e.tier);
+    return null != r && n.find((e) => e.id === r)?.supports_fast === !0;
 }
 function h(e) {
-    return e.main.length > 0;
+    let { fast: t, ...n } = e;
+    return !0 === t ? { ...n, fast: !0 } : n;
 }
 function m(e) {
-    return h(e) ? a.default.eGqPbV : a.default.qSViP4;
+    return e.main.length > 0;
+}
+function p(e) {
+    return m(e) ? l.default.eGqPbV : l.default.qSViP4;
 }
