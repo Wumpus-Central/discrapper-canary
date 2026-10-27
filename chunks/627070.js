@@ -1,4 +1,4 @@
-n.d(t, { A: () => H });
+n.d(t, { A: () => j });
 var i = n(535558),
     r = n(439372),
     a = n(91242),
@@ -12,12 +12,13 @@ var c = n(780594),
     _ = n(64460),
     E = n(938812),
     A = n(775121),
-    h = n(484697),
-    f = n(532624),
-    I = n(723702),
-    p = n(350535),
-    T = n(652215);
-let m = new Set([
+    h = n(429582),
+    f = n(484697),
+    I = n(532624),
+    p = n(723702),
+    T = n(350535),
+    m = n(652215);
+let g = new Set([
         "esc",
         "shift+esc",
         "pageup",
@@ -37,19 +38,19 @@ let m = new Set([
         "alt+right",
         ..._.J.binds,
     ]),
-    g = null;
-function S(e) {
+    S = null;
+function N(e) {
     if (e.includes(" ")) return [];
     let { key: t, modifiers: n } = A.A.combokeys.getKeyInfo(e, "keydown");
     return (function (e) {
-        if (null == g) {
-            g = new Map();
+        if (null == S) {
+            S = new Map();
             for (let e = 1; e < 256; e++) {
                 let t = String(u()({ type: "keydown", which: e }));
-                g.set(t, [...(g.get(t) ?? []), e]);
+                S.set(t, [...(S.get(t) ?? []), e]);
             }
         }
-        return g.get(e) ?? [];
+        return S.get(e) ?? [];
     })(t).map((e) => ({
         keyCode: e,
         ctrlKey: n.includes("ctrl"),
@@ -58,36 +59,36 @@ function S(e) {
         metaKey: n.includes("meta"),
     }));
 }
-function N(e) {
+function C(e) {
     let { keyCode: t, ctrlKey: n, altKey: i, shiftKey: r, metaKey: a } = e;
     return `${t} ${n} ${i} ${r} ${a}`;
 }
-let C = null;
-function O() {
+let O = null;
+function R() {
     return (
-        null == C &&
-            (C = new Map(
+        null == O &&
+            (O = new Map(
                 (function () {
                     let e = [];
                     for (let t of Object.values(E.zR))
                         if (t?.comboKeysBindGlobal === !0)
-                            for (let n of A.A.getRegistrableBinds(t)) m.has(n) || e.push(n);
-                    if (!I.isPlatformEmbedded)
-                        for (let t of Object.values(f.Ay.getUserAgnosticState()))
+                            for (let n of A.A.getRegistrableBinds(t)) g.has(n) || e.push(n);
+                    if (!p.isPlatformEmbedded)
+                        for (let t of Object.values(I.Ay.getUserAgnosticState()))
                             t.enabled &&
                                 t.shortcut.length > 0 &&
-                                t.action !== T.hCu.UNASSIGNED &&
-                                e.push((0, p.dI)(t.shortcut));
+                                t.action !== m.hCu.UNASSIGNED &&
+                                e.push((0, T.dI)(t.shortcut));
                     return e;
                 })()
-                    .flatMap(S)
-                    .map((e) => [N(e), e]),
+                    .flatMap(N)
+                    .map((e) => [C(e), e]),
             )),
-        C
+        O
     );
 }
-let R = new Map();
-function L(e, t) {
+let L = new Map();
+function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = e?.isConnected === !0 ? e : document,
         r = new (i.ownerDocument?.defaultView ?? window).KeyboardEvent(t.type, {
@@ -103,45 +104,59 @@ function L(e, t) {
         Object.defineProperty(r, "keyCode", { value: t.keyCode }),
         i.dispatchEvent(r));
 }
-let y = function (e) {
+let D = function (e) {
         function t() {
-            ((C = null), e());
+            ((O = null), e());
         }
-        return (f.Ay.addChangeListener(t), () => f.Ay.removeChangeListener(t));
+        return (I.Ay.addChangeListener(t), () => I.Ay.removeChangeListener(t));
     },
-    D = function (e, t) {
-        let n = (0, h.fl)(e),
-            i = R.get(e),
+    v = function (e, t) {
+        let n = (0, f.fl)(e),
+            i = L.get(e),
             r = !1;
         if ("keydown" === t.type) {
-            if (null == n || !O().has(N(t))) return;
-            (null == i && ((i = new Map()), R.set(e, i)), (r = i.has(t.keyCode)), i.set(t.keyCode, t));
-        } else if (i?.delete(t.keyCode) !== !0) return;
-        L(n, t, r);
+            if (
+                null == n ||
+                ((0, h.t8)(n) ? !(0, h.r8)(n) : !n.ownerDocument.hasFocus() || n.ownerDocument.activeElement !== n) ||
+                !R().has(C(t))
+            )
+                return;
+            (null == i && ((i = new Map()), L.set(e, i)), (r = i.has(t.keyCode)), i.set(t.keyCode, t));
+        } else if (
+            i?.delete(t.keyCode) !== !0 ||
+            ("release" === t.type &&
+                (function (e) {
+                    if (null == e) return !1;
+                    let { ownerDocument: t } = e;
+                    return t.hasFocus() && t.activeElement?.tagName !== "IFRAME";
+                })(n))
+        )
+            return;
+        y(n, { ...t, type: "keydown" === t.type ? "keydown" : "keyup" }, r);
     },
-    v = function (e) {
-        let t = R.get(e);
-        if ((R.delete(e), null == t)) return;
-        let n = (0, h.fl)(e);
-        for (let e of t.values()) L(n, { ...e, type: "keyup" });
+    b = function (e) {
+        let t = L.get(e);
+        if ((L.delete(e), null == t)) return;
+        let n = (0, f.fl)(e);
+        for (let e of t.values()) y(n, { ...e, type: "keyup" });
     },
-    b = { muted: !1 },
-    P = new Map(),
-    M = new Map();
-function U(e) {
-    let t = a.A.getFrameByIframeId(e);
-    return null == t ? (M.get(e) ?? b) : { muted: t.data.muted };
-}
+    P = { muted: !1 },
+    M = new Map(),
+    U = new Map();
 function w(e) {
-    let t = U(e);
-    return (M.set(e, t), { type: i.Ii.STATE_UPDATED, state: t });
+    let t = a.A.getFrameByIframeId(e);
+    return null == t ? (U.get(e) ?? P) : { muted: t.data.muted };
 }
-function G() {
-    return { type: i.Ii.KEYBINDS_UPDATED, keybinds: [...O().values()] };
+function G(e) {
+    let t = w(e);
+    return (U.set(e, t), { type: i.Ii.STATE_UPDATED, state: t });
 }
-function x(e) {
+function x() {
+    return { type: i.Ii.KEYBINDS_UPDATED, keybinds: [...R().values()] };
+}
+function k(e) {
     let { iframeId: t, pipe: n } = e,
-        r = P.get(t);
+        r = M.get(t);
     (null == r &&
         ((r = (function (e) {
             let { onConnect: t, onMessage: n } = e,
@@ -161,46 +176,46 @@ function x(e) {
             return s;
         })({
             onConnect: (e) => {
-                (e.dispatch(w(t)), e.dispatch(G()));
+                (e.dispatch(G(t)), e.dispatch(x()));
             },
             onMessage: (e) => {
                 e.type === i._i.STATE_UPDATED
                     ? (0, l.WR)(t, e.state)
                     : e.type === i._i.DISCONNECTED
-                      ? (v(t), (0, l.QQ)(t))
-                      : e.type === i._i.KEYBIND_CAPTURED && D(t, e.keybind);
+                      ? (b(t), (0, l.QQ)(t))
+                      : e.type === i._i.KEYBIND_CAPTURED && v(t, e.keybind);
             },
         })),
-        P.set(t, r),
-        M.set(t, U(t))),
+        M.set(t, r),
+        U.set(t, w(t))),
         r.offer(n));
 }
-function k(e) {
+function F(e) {
     let { id: t } = e,
-        n = P.get(t);
-    null != n && (P.delete(t), M.delete(t), n.close());
-}
-function F() {
-    let e = G();
-    for (let t of P.values()) t.dispatch(e);
+        n = M.get(t);
+    null != n && (M.delete(t), U.delete(t), n.close());
 }
 function B() {
-    for (let [e, t] of P) t.dispatch(w(e));
+    let e = x();
+    for (let t of M.values()) t.dispatch(e);
 }
-class V extends r.A {
-    actions = { EMBEDDED_APP_SHIM_PIPE_OPEN: x };
-    stores = new Map().set(a.A, B);
+function V() {
+    for (let [e, t] of M) t.dispatch(G(e));
+}
+class H extends r.A {
+    actions = { EMBEDDED_APP_SHIM_PIPE_OPEN: k };
+    stores = new Map().set(a.A, V);
     _unsubscribeKeybinds = null;
     _initialize() {
-        (s._.subscribe(T.jej.IFRAME_UNMOUNT, k), (this._unsubscribeKeybinds = y(F)));
+        (s._.subscribe(m.jej.IFRAME_UNMOUNT, F), (this._unsubscribeKeybinds = D(B)));
     }
     _terminate() {
-        for (let e of (s._.unsubscribe(T.jej.IFRAME_UNMOUNT, k),
+        for (let e of (s._.unsubscribe(m.jej.IFRAME_UNMOUNT, F),
         this._unsubscribeKeybinds?.(),
         (this._unsubscribeKeybinds = null),
-        P.values()))
+        M.values()))
             e.close();
-        P.clear();
+        M.clear();
     }
 }
-let H = new V();
+let j = new H();

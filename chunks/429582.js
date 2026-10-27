@@ -1,4 +1,4 @@
-(n.d(t, { H3: () => e7, H9: () => e1, oe: () => e8, t8: () => e4, xW: () => e9 }), n(321073), n(205816));
+(n.d(t, { H3: () => e8, H9: () => e1, oe: () => e9, r8: () => e7, t8: () => e4, xW: () => te }), n(321073), n(205816));
 var i = n(621466),
     r = n(941426),
     a = n(350723);
@@ -850,6 +850,10 @@ function e4(e) {
     return null != e6(e);
 }
 function e7(e) {
+    let t = e6(e);
+    return null != t && j === t;
+}
+function e8(e) {
     for (let t of l.values())
         if (t.source === e) {
             if (null == t.shell || t.shell.closed) return null;
@@ -866,12 +870,12 @@ function e7(e) {
         }
     return null;
 }
-function e8(e, t) {
+function e9(e, t) {
     let n = e0(),
         i = e6(e);
     return null == n || null == i ? null : n.capture(i, t);
 }
-function e9(e, t, n, r, d) {
+function te(e, t, n, r, d) {
     let c = e0();
     if (null == c || e.ownerDocument !== document) return null;
     (null == k &&
