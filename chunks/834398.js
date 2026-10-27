@@ -2908,7 +2908,8 @@ class nq extends i.PureComponent {
                               section: u.Fq.HEADER,
                               label:
                                   null != t
-                                      ? (0, l.jsxs)(l.Fragment, {
+                                      ? (0, l.jsxs)("div", {
+                                            className: nQ.wx,
                                             children: [
                                                 null != x
                                                     ? (0, l.jsx)(x, {
@@ -2917,14 +2918,20 @@ class nq extends i.PureComponent {
                                                           className: nQ.p,
                                                       })
                                                     : null,
-                                                (0, g.m1)(t, K.default, tf.A),
+                                                (0, l.jsx)(s.E, {
+                                                    tag: "span",
+                                                    variant: "eyebrow",
+                                                    color: "none",
+                                                    lineClamp: 1,
+                                                    children: (0, g.m1)(t, K.default, tf.A),
+                                                }),
                                                 null != n
                                                     ? (0, l.jsx)(s.E, {
                                                           tag: "span",
                                                           variant: "text-xs/semibold",
                                                           color: "text-default",
                                                           lineClamp: 1,
-                                                          className: nQ.L,
+                                                          className: nQ.L1,
                                                           children: (0, g.m1)(n, K.default, tf.A),
                                                       })
                                                     : null,

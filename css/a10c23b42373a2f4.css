@@ -276,16 +276,19 @@
     border: none
 }
 
+.header__3ddc0 {
+    align-items: baseline;
+    display: flex
+}
+
 .category__3ddc0 {
     margin-inline-start: 4px
 }
 
 .channelIcon__3ddc0 {
-    display: inline;
-    margin-inline-end: 2px;
-    position: relative;
-    top: 2px;
-    vertical-align: top
+    align-self: center;
+    flex-shrink: 0;
+    margin-inline-end: 2px
 }
 
-/*# sourceMappingURL=3acbfad22573670a.css.map*/
+/*# sourceMappingURL=a10c23b42373a2f4.css.map*/
