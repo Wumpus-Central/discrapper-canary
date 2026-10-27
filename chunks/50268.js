@@ -5,7 +5,7 @@ var l = i(284009),
     s = i.n(l),
     c = i(477782),
     o = i(473935),
-    d = i(885386),
+    d = i(253932),
     a = i(957565);
 function h(e) {
     let { id: t, label: i, onSuccess: l, shiftId: h, showIconFirst: r, showWithoutDeveloperMode: u } = e,

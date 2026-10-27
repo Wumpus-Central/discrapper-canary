@@ -9389,7 +9389,7 @@ function dy() {
     return (0, p.jsx)(sU.H, { guildId: e?.id, refetchOnMount: !0, children: (0, p.jsx)(db, {}) });
 }
 var dR = n(450510),
-    dL = n(783514),
+    dL = n(659092),
     dG = n(383272),
     dD = n(414133);
 let dO = { description: "", channels: [], enabled: !1 },

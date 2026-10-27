@@ -104,7 +104,7 @@ class P extends M {
 n(938796);
 var U = n(665260),
     w = n(572164),
-    G = n(885386),
+    G = n(253932),
     x = n(652215),
     k = n(469177);
 let F = new c.A("ConnectionStore"),
@@ -247,7 +247,7 @@ var W = n(73825),
 function en(e) {
     return (0, et.ii)(ee.ej, e);
 }
-n(207989);
+(n(207989), n(405018));
 var ei = n(159993),
     er = n(756377),
     ea = n(736130),
@@ -742,7 +742,8 @@ function eX(e) {
                 ? ej({ type: "LOGOUT" })
                 : es.A.ready.measure(() => {
                       a.Ay.Emitter.batched(() => {
-                          let t = (e = es.A.hydrateReady.measure(() =>
+                          var t;
+                          let i = (e = es.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: a, merged_members: s, guilds: l, ...o } = e;
                                       (null != eT.A.database() &&
@@ -774,13 +775,13 @@ function eX(e) {
                                       );
                                   })(e, B.identifyStartTime, n),
                               )).private_channels.map((e) => (0, eo.UE)(e)),
-                              i = e.guilds
+                              a = e.guilds
                                   .filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted)
                                   .map((e) => e.id),
-                              a = e.guilds.filter((e) => !0 !== e.unavailable),
-                              s = e.guilds.filter((e) => !0 === e.geo_restricted),
-                              l = null == e.user_settings_proto ? void 0 : (0, et.Gd)(e.user_settings_proto),
-                              o =
+                              s = e.guilds.filter((e) => !0 !== e.unavailable),
+                              l = e.guilds.filter((e) => !0 === e.geo_restricted),
+                              o = null == e.user_settings_proto ? void 0 : (0, et.Gd)(e.user_settings_proto),
+                              d =
                                   e.notification_settings?.declarative_settings_proto == null
                                       ? void 0
                                       : en(e.notification_settings.declarative_settings_proto);
@@ -792,9 +793,9 @@ function eX(e) {
                                   staticAuthSessionId: e.static_client_session_id,
                                   user: e.user,
                                   users: e.users,
-                                  guilds: a,
-                                  initialPrivateChannels: t,
-                                  unavailableGuilds: i,
+                                  guilds: s,
+                                  initialPrivateChannels: i,
+                                  unavailableGuilds: a,
                                   readState: e.read_state,
                                   userGuildSettings: e.user_guild_settings,
                                   tutorial: e.tutorial,
@@ -812,14 +813,14 @@ function eX(e) {
                                   pendingPayments: e.pending_payments,
                                   countryCode: e.country_code ?? void 0,
                                   guildJoinRequests: e.guild_join_requests ?? [],
-                                  userSettingsProto: l,
+                                  userSettingsProto: o,
                                   apiCodeVersion: e.api_code_version,
                                   auth: e.auth,
                                   notificationSettings: {
                                       flags: e.notification_settings.flags,
-                                      declarativeSettings: o,
+                                      declarativeSettings: d,
                                   },
-                                  geoRestrictedGuilds: s,
+                                  geoRestrictedGuilds: l,
                                   explicitContentScanVersion: e.explicit_content_scan_version,
                                   failedStates: e.failed_states,
                                   linkedUsers: e.linked_users ?? void 0,
@@ -833,9 +834,14 @@ function eX(e) {
                                   ej({
                                       type: "AD_PERSONALIZATION_TOGGLES_RESTRICTED",
                                       disabled: e.ad_personalization_toggles_disabled,
-                                  }));
-                          let d = void 0 ?? null;
-                          (null != d && ej(d), V.update(), H.update());
+                                  }),
+                              ej({
+                                  type: "PINOT_MEMBER_SETTING_STATE",
+                                  locked: (t = e).swp_message_promotion_locked ?? !0,
+                                  defaultOptedOut: t.swp_message_promotion_default_opted_out ?? null,
+                              }),
+                              V.update(),
+                              H.update());
                       });
                   });
         },

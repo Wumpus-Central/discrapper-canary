@@ -58,7 +58,7 @@ var t = s(477900),
     en = s(421768),
     ea = s(209932),
     eo = s(58303),
-    ed = s(885386),
+    ed = s(253932),
     ec = s(461782),
     er = s(614518),
     eu = s(706787),
@@ -211,12 +211,12 @@ let eG = [ek.lp.ACTIVITY],
                 },
                 [T, u],
             ),
-            e6 = null,
+            e2 = null,
             e7 = null,
-            e2 = "";
+            e6 = "";
         switch (u.type) {
             case ek.lp.STREAM:
-                ((e6 = (0, t.jsx)(eb.A, {
+                ((e2 = (0, t.jsx)(eb.A, {
                     participant: u,
                     selected: O,
                     popoutType: x,
@@ -233,10 +233,10 @@ let eG = [ek.lp.ACTIVITY],
                         idle: Q,
                         premiumIndicator: !1,
                     })),
-                    (e2 = eP.intl.formatToPlainString(eP.t.gHPz3Q, { streamerName: u.user.username })));
+                    (e6 = eP.intl.formatToPlainString(eP.t.gHPz3Q, { streamerName: u.user.username })));
                 break;
             case ek.lp.USER:
-                ((e6 = (0, t.jsx)(eO.A, {
+                ((e2 = (0, t.jsx)(eO.A, {
                     channel: S,
                     inCall: b,
                     participant: u,
@@ -257,14 +257,14 @@ let eG = [ek.lp.ACTIVITY],
                             S.isGuildStageVoice() && !V ? (0, t.jsx)(eo.A, { channel: S, userId: u.user.id }) : null,
                         ],
                     })),
-                    (e2 = eP.intl.formatToPlainString(eP.t["iC/x/Q"], { username: u.user.username })));
+                    (e6 = eP.intl.formatToPlainString(eP.t["iC/x/Q"], { username: u.user.username })));
                 break;
             case ek.lp.ACTIVITY:
-                ((e6 = (0, t.jsx)(eS.Ay, { interactible: M, participant: u, selected: O, channel: S, width: v })),
-                    (e2 = eP.intl.formatToPlainString(eP.t.YCvOsO, { activityName: ej?.name })));
+                ((e2 = (0, t.jsx)(eS.Ay, { interactible: M, participant: u, selected: O, channel: S, width: v })),
+                    (e6 = eP.intl.formatToPlainString(eP.t.YCvOsO, { activityName: ej?.name })));
                 break;
             case ek.lp.HIDDEN_STREAM:
-                e6 = (0, t.jsx)(eb.A, {
+                e2 = (0, t.jsx)(eb.A, {
                     participant: u,
                     selected: O,
                     width: v,
@@ -310,7 +310,7 @@ let eG = [ek.lp.ACTIVITY],
                                 style: E,
                                 participantUserId: ey,
                                 children: (0, t.jsxs)(h.s, {
-                                    "aria-label": e2,
+                                    "aria-label": e6,
                                     className: eU.lG,
                                     onDoubleClick: e1,
                                     onContextMenu: (e) => e8(e, u.type === ek.lp.STREAM),
@@ -337,7 +337,7 @@ let eG = [ek.lp.ACTIVITY],
                                                   }),
                                               })
                                             : null,
-                                        e6,
+                                        e2,
                                         R ? null : (0, t.jsx)("div", { className: eU.hD, children: e7 }),
                                         O
                                             ? (0, t.jsx)("div", {

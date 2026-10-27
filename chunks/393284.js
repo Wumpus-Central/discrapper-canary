@@ -27,8 +27,8 @@ var g = n(503698),
     p = n(139286),
     T = n(793943),
     f = n(996254),
-    I = n(830543),
-    _ = n(738419),
+    _ = n(830543),
+    I = n(738419),
     N = n(72191),
     C = n(325600),
     y = n(114149);
@@ -58,9 +58,9 @@ function b(e) {
                     variant: "primary",
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
-                        ((0, _.b0)(_.G8.APPEARANCE_SETTINGS),
+                        ((0, I.b0)(I.G8.APPEARANCE_SETTINGS),
                             (0, T.nf)(T.HP.CUSTOM_THEME, { from: T.xv.SETTING }),
-                            (0, I.default)());
+                            (0, _.default)());
                     },
                 }),
             }),
@@ -83,7 +83,7 @@ var j = n(366010),
     L = n(875317),
     R = n(97469),
     D = n(363195),
-    P = n(885386),
+    P = n(253932),
     G = n(818348);
 let M = (0, i.zD)(s.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => u.intl.string(u.t.EpSHAQ),

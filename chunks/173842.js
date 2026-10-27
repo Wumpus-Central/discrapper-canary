@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => s8 }));
+(n.r(t), n.d(t, { default: () => s2 }));
 var s,
     l,
     a = n(477900),
@@ -204,7 +204,7 @@ function ex(e) {
 }
 var eA = n(642213),
     ef = n(636922),
-    ej = n(885386),
+    ej = n(253932),
     ep = n(576705),
     eN = n(927813),
     ey = n(568467),
@@ -625,12 +625,12 @@ var eZ = n(702841),
     e1 = n(214947),
     e3 = n(711950),
     e7 = n(322387),
-    e8 = n(912309),
-    e2 = n(174459),
+    e2 = n(912309),
+    e8 = n(174459),
     e6 = n(198476);
 function e4(e) {
     let { closePopout: t } = e,
-        n = (0, e8.kX)();
+        n = (0, e2.kX)();
     return (0, a.jsx)(p.m, {
         asContainer: !0,
         text: er.intl.string(er.t["lMR96+"]),
@@ -638,7 +638,7 @@ function e4(e) {
             "aria-label": `${er.intl.string(er.t["lMR96+"])}, ${n}`,
             className: e6.b,
             onClick: () => {
-                (e2.default.track(eO.HAw.NOTIFICATION_CENTER_ACTION, {
+                (e8.default.track(eO.HAw.NOTIFICATION_CENTER_ACTION, {
                     action_type: e7.e1.FRIEND_REQUESTS_BUTTON_CLICK,
                 }),
                     e3.A.transitionToSection(eO.m3P.PENDING, { explicit: !0 }),
@@ -785,7 +785,7 @@ function tv(e) {
         [n, s] = i.useState(!1);
     function l() {
         (t(),
-            e2.default.track(eO.HAw.INBOX_CHANNEL_ACKED, {
+            e8.default.track(eO.HAw.INBOX_CHANNEL_ACKED, {
                 marked_all_channels_as_read: !0,
                 num_unread_channels_remaining: 0,
             }));
@@ -1019,8 +1019,8 @@ var tQ = n(536637),
     t1 = n(123292),
     t3 = n(857069),
     t7 = n(749314),
-    t8 = n(33358),
-    t2 = n(384231),
+    t2 = n(33358),
+    t8 = n(384231),
     t6 = n(207133),
     t4 = n(704413),
     t5 = n(9842),
@@ -1069,7 +1069,7 @@ let ny = i.memo(function e(t) {
         f = ej.hD.useSetting(),
         p = ej.rs.useSetting(),
         N = ej.kt.useSetting(),
-        y = (0, t2.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
+        y = (0, t8.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
         v = (0, t6.A)(s?.id),
         { disableReactionCreates: I } = (0, ns.A)(s),
         { setPopout: C } = (0, nd.A)(l.id, nj.Fd),
@@ -1093,7 +1093,7 @@ let ny = i.memo(function e(t) {
         _ = l.type === eO.lAJ.THREAD_STARTER_MESSAGE && g.state === t5.a.LOADED && null != x,
         T = !_ && void 0 === n,
         D = (0, no.A)({ message: l, channel: s, announcementEnabled: T }),
-        k = (0, t8.P)(l),
+        k = (0, t2.P)(l),
         O = (0, ne._f)(l.id, l.channel_id),
         G = (0, t4.A)(l),
         P = (0, na.fF)(l);
@@ -1668,8 +1668,8 @@ function n7(e) {
         (0, a.jsx)("div", { className: nQ.DZ, children: r })
     );
 }
-var n8 = n(81466),
-    n2 = n(508654),
+var n2 = n(81466),
+    n8 = n(508654),
     n6 = n(29414);
 let n4 = { top: 8, bottom: 8, left: -4, right: -4 };
 function n5(e) {
@@ -1761,7 +1761,7 @@ function se(e) {
     let { channel: t, deleteChannel: s, toggle: l, onJump: r, getNumUnreadChannels: d } = e,
         { guildId: c } = t,
         o = (0, j.bG)([en.A], () => en.A.getGuild(c), [c]),
-        u = (0, n2.Ay)(c),
+        u = (0, n8.Ay)(c),
         m = i.useMemo(
             () =>
                 u
@@ -1798,7 +1798,7 @@ function se(e) {
             component: (0, a.jsxs)(n5, {
                 guild: o,
                 name: er.intl.string(er.t.tlopTM),
-                Icon: n8.CalendarIcon,
+                Icon: n2.CalendarIcon,
                 onClick: function (e) {
                     ((0, to.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
@@ -2862,7 +2862,7 @@ function s3(e) {
     });
 }
 var s7 = n(211550);
-function s8(e) {
+function s2(e) {
     let {
         dialogClassName: t,
         isScheduledMessagesEnabled: n,

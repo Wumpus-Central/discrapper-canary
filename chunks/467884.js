@@ -34,7 +34,7 @@ var n,
     O = l(288106),
     L = l(993046),
     H = l(363195),
-    B = l(885386),
+    B = l(253932),
     w = l(652165),
     G = l(67480),
     F = l(174459),
@@ -228,8 +228,8 @@ function ey(e) {
         {
             priceComponent: e3,
             extendedHeight: e2,
-            displayPrice: e8,
-            shownPriceDetails: e9,
+            displayPrice: e9,
+            shownPriceDetails: e8,
         } = (function (e) {
             let { sku: t, orbsGate: l, orbPriceAmount: n, promotion: i, reward: o, showOrbsOnly: s = !1 } = e,
                 c = (0, L.ou)({ sku: t }),
@@ -350,8 +350,8 @@ function ey(e) {
                       };
             }, [t, i, d, u, m, s, n, l, f, c, x]);
         })({ sku: eI, orbsGate: eQ, orbPriceAmount: eY, promotion: e$, reward: ez, showOrbsOnly: u }),
-        e6 = 2 !== i && eW ? e9 : ej,
-        e5 = a.useCallback((e) => {
+        e5 = 2 !== i && eW ? e8 : ej,
+        e6 = a.useCallback((e) => {
             eF(e);
         }, []),
         e7 = a.useMemo(() => c()(ei.Nr, { [ei.ax]: 0 === i, [ei.GW]: 1 === i, [ei.jz]: 2 === i }), [i]),
@@ -423,7 +423,7 @@ function ey(e) {
             analyticsContext: eH,
             positionInSection: t,
             analyticsLocations: eB,
-            shownPriceDetails: e6,
+            shownPriceDetails: e5,
         }),
         { handleCardVisibilityChange: tt } = (function (e) {
             let {
@@ -510,7 +510,7 @@ function ey(e) {
             analyticsContext: eH,
             positionInSection: t,
             analyticsLocations: eB,
-            shownPriceDetails: e6,
+            shownPriceDetails: e5,
         });
     a.useEffect(() => {
         tt(eG);
@@ -543,14 +543,14 @@ function ey(e) {
                     is_user_guild_member: d,
                     page_has_leaderboard: m,
                     cta_type: e,
-                    price: e6.price,
-                    regular_price: e6.regularPrice,
-                    currency: e6.currency,
-                    orbs_amount: e6.orbsAmount,
+                    price: e5.price,
+                    regular_price: e5.regularPrice,
+                    currency: e5.currency,
+                    orbs_amount: e5.orbsAmount,
                     location_stack: t,
                 });
             },
-            [n, eS, eT, eH, e6],
+            [n, eS, eT, eH, e5],
         ),
         { primaryIconAsset: tn, primaryIconLabel: tr } = a.useMemo(() => (0, W.Cv)(eI, eS), [eI, eS]),
         { viewProductDetails: ta } = (0, $.H)(),
@@ -677,11 +677,11 @@ function ey(e) {
                             variant: "primary",
                             onMouseDown: tc,
                             onClick: th,
-                            text: null != e8 ? eb.intl.format(eb.t.Xp5WTn, { price: e8 }) : eb.intl.string(eb.t.boqtTA),
+                            text: null != e9 ? eb.intl.format(eb.t.Xp5WTn, { price: e9 }) : eb.intl.string(eb.t.boqtTA),
                             fullWidth: !0,
                             tabIndex: eE,
                         }),
-            [eR, tg, eQ, tb, th, tc, eY, e8, eE],
+            [eR, tg, eQ, tb, th, tc, eY, e9, eE],
         );
     if (null == eI) return null;
     let tj = (0, W.fq)(eI),
@@ -700,7 +700,7 @@ function ey(e) {
     let tN = tC ? (0, r.jsx)("div", { className: ei.mN, "aria-hidden": !0 }) : null,
         ty = (0, r.jsx)(x.L, {
             innerRef: ey,
-            onChange: e5,
+            onChange: e6,
             threshold: 0,
             children: (0, r.jsxs)(j.s, {
                 onClick: tp,

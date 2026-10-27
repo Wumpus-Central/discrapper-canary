@@ -408,7 +408,7 @@ var X = n(89366),
     ee = n(414872),
     et = n(285373),
     en = n(609178),
-    el = n(885386),
+    el = n(253932),
     ei = n(763827),
     er = n(287809),
     es = n(977997),
@@ -621,8 +621,8 @@ function e1(e, t, n) {
 }
 var e2 = n(191023),
     e5 = n(192308),
-    e6 = n(28863),
-    e3 = n(695366),
+    e3 = n(28863),
+    e6 = n(695366),
     e8 = n(834730),
     e7 = n(789645),
     e4 = n(565645),
@@ -670,7 +670,7 @@ function ta(e) {
             null != c && (0, ti.isWindows)() && !f
                 ? eP.intl.format(eP.t.udMTth, {
                       keybind: (0, tr.dI)(c.shortcut, !0),
-                      openSettingsHook: (e, t) => (0, l.jsx)(e6.Anchor, { onClick: h, children: e }, t),
+                      openSettingsHook: (e, t) => (0, l.jsx)(e3.Anchor, { onClick: h, children: e }, t),
                   })
                 : null;
     return null == p
@@ -678,7 +678,7 @@ function ta(e) {
         : (0, l.jsxs)("div", {
               className: ts.g,
               children: [
-                  (0, l.jsx)(e3.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: ts.QW }),
+                  (0, l.jsx)(e6.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: ts.QW }),
                   (0, l.jsx)(e8.E, { variant: "text-sm/medium", color: "text-default", className: ts.L5, children: p }),
                   (0, l.jsx)(v.D, {
                       className: ts.b,
@@ -1273,14 +1273,14 @@ function tb(e) {
             },
             [eB, p, B],
         ),
-        e6 = i.useCallback(() => {
+        e3 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
             null != e && W(e);
         }, []),
-        e3 = i.useCallback(() => {
+        e6 = i.useCallback(() => {
             let e = (0, V.Dd)(ej.PremiumTypes.TIER_2);
-            return eP.intl.format(eP.t["tw/SSq"], { nitroTierName: e, onClick: e6 });
-        }, [e6]),
+            return eP.intl.format(eP.t["tw/SSq"], { nitroTierName: e, onClick: e3 });
+        }, [e3]),
         e8 = i.useCallback((e) => (e5(e, t) ? tE : 32), [t, e5]),
         e7 = i.useCallback(
             (e) => {
@@ -1401,7 +1401,7 @@ function tb(e) {
                 ez
                     ? (0, l.jsx)(Y.d, {
                           showUpsell: eF,
-                          text: e3(),
+                          text: e6(),
                           button: ts(),
                           buttonAnalyticsObject: { section: eI.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: (0, l.jsx)(et.l, {
@@ -1412,7 +1412,7 @@ function tb(e) {
                           }),
                       })
                     : null,
-            [e3, ts, ez, eF],
+            [e6, ts, ez, eF],
         ),
         tu = i.useCallback(
             (e) =>

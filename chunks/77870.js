@@ -21,10 +21,10 @@
     FA: () => eJ,
     LS: () => ev,
     p5: () => e0,
-    Ns: () => e8,
+    Ns: () => e4,
     Iq: () => em,
     Qh: () => eO,
-    t9: () => e4,
+    t9: () => e8,
     RR: () => eK,
     XD: () => e7,
     ZP: () => eN,
@@ -70,7 +70,7 @@ var E = n(517846),
 n(674658);
 var g = n(27620),
     N = n(773669),
-    v = n(885386),
+    v = n(253932),
     h = n(734057),
     L = n(30370),
     P = n(287809),
@@ -352,7 +352,7 @@ function eO(e) {
         _ =
             ((t = (function () {
                 let e = (0, I.bG)([S.A], () => S.A.getQuestHomeHero()),
-                    { isShelfEnabled: t } = e4(e),
+                    { isShelfEnabled: t } = e8(e),
                     n = (0, I.bG)([P.default], () => P.default.getCurrentUser()?.id ?? null),
                     { enabled: r } = F.useConfig({ location: er.rE.QUEST_HOME_MOBILE }),
                     { enabled: u } = q.NN.useConfig({ location: er.rE.QUEST_HOME_MOBILE });
@@ -843,14 +843,14 @@ function e9(e) {
                 (l.current = e));
         }, [n, r]));
 }
-function e8(e) {
+function e4(e) {
     return i.useMemo(() => P.default.getCurrentUser()?.isStaff() === !0, []) || e.preview;
 }
 function e6(e, t) {
     let n = e.userStatus?.completedAt != null;
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
-function e4(e) {
+function e8(e) {
     let t = (0, I.bG)([Q.A], () => Q.A.quests),
         n = e?.questIds;
     return i.useMemo(() => {

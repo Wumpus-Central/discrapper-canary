@@ -1,4 +1,4 @@
-n.d(t, { F: () => I });
+n.d(t, { F: () => _ });
 var i = n(419954),
     s = n(780964),
     l = n(477900),
@@ -60,7 +60,7 @@ let S = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
     Component: () => (0, l.jsx)(x, {}),
 });
 var p = n(873298),
-    T = n(885386);
+    T = n(253932);
 let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [A.intl.string(A.t.dyamEI), A.intl.string(A.t.p8NOwi), A.intl.string(A.t["+o/sOo"])],
         useTitle: () => A.intl.string(A.t.dyamEI),
@@ -74,4 +74,4 @@ let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
             ];
         },
     }),
-    I = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, f] });
+    _ = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, f] });

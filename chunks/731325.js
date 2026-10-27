@@ -51,7 +51,7 @@ function z(e) {
     return H.useConfig({ location: e });
 }
 var q = n(732280),
-    $ = n(885386),
+    $ = n(253932),
     Q = n(287809),
     Z = n(174459),
     X = n(240248),
@@ -470,8 +470,8 @@ var eZ = n(404778),
     e1 = n(927578),
     e2 = n(631576),
     e5 = n(369163),
-    e6 = n(123292),
-    e3 = n(631305),
+    e3 = n(123292),
+    e6 = n(631305),
     e8 = n(468689),
     e7 = n(931991),
     e4 = n(473145),
@@ -510,12 +510,12 @@ let tt = function (e) {
                           variant: "text-sm/normal",
                           children: eb.intl.format(eb.t.AXWla1, { count: (0, e4.aG)(eA.TVA.TIER_1) }),
                       }),
-                      (0, l.jsx)(e6.Q, {
+                      (0, l.jsx)(e3.Q, {
                           variant: "primary",
                           text: eb.intl.string(eb.t["Gb+BJD"]),
                           onClick: function () {
                               null != h &&
-                                  (0, e3.A)({
+                                  (0, e6.A)({
                                       analyticsLocations: c,
                                       analyticsSourceLocation: u,
                                       guild: h,
@@ -542,7 +542,7 @@ let tt = function (e) {
                           variant: "text-sm/normal",
                           children: eb.intl.string(eb.t.S83wgh),
                       }),
-                      (0, l.jsx)(e6.Q, {
+                      (0, l.jsx)(e3.Q, {
                           variant: "primary",
                           text: eb.intl.string(eb.t.bwNjug),
                           onClick: function () {
@@ -1535,7 +1535,7 @@ var tY = n(789645),
 function t5() {
     return en(!1);
 }
-function t6(e) {
+function t3(e) {
     let { onLearnMore: t } = e,
         { analyticsLocations: n } = (0, W.Ay)(V.A.PREMIUM_UPSELL);
     (0, i.useEffect)(() => {
@@ -1600,7 +1600,7 @@ function t6(e) {
         ],
     });
 }
-var t3 = n(970099);
+var t6 = n(970099);
 let t8 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     t7 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     t4 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -1834,16 +1834,16 @@ function na(e) {
         children: [
             !(f && v && !u) &&
                 (0, l.jsx)("div", {
-                    className: t3.wx,
+                    className: t6.wx,
                     children: (0, l.jsx)(t$, { ref: x, onKeyDown: em, stickersListRef: g, channel: r }),
                 }),
             v
-                ? (0, l.jsx)(eQ, { className: t3.p$, onClose: a })
+                ? (0, l.jsx)(eQ, { className: t6.p$, onClose: a })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
                               ref: p,
-                              className: t3.AD,
+                              className: t6.AD,
                               id: eH.lq,
                               ...eh,
                               children:
@@ -1869,7 +1869,7 @@ function na(e) {
                           (0, l.jsx)(eL, { stickersListRef: g, channel: r }),
                       ],
                   }),
-            E && (u ? (0, l.jsx)(tJ, { onUpsellClicked: a }) : (0, l.jsx)(t6, { onLearnMore: eg })),
+            E && (u ? (0, l.jsx)(tJ, { onUpsellClicked: a }) : (0, l.jsx)(t3, { onLearnMore: eg })),
         ],
     });
 }
@@ -1878,11 +1878,11 @@ let no = function (e) {
     return (
         (0, R.XQ)(),
         (0, l.jsx)("div", {
-            className: t3.iE,
+            className: t6.iE,
             id: eH.GX,
             "aria-labelledby": eH.LD,
             role: "tabpanel",
-            children: n.isLoading ? (0, l.jsx)(D.y, { className: t3.Mz }) : (0, l.jsx)(na, { ...n, ref: t }),
+            children: n.isLoading ? (0, l.jsx)(D.y, { className: t6.Mz }) : (0, l.jsx)(na, { ...n, ref: t }),
         })
     );
 };

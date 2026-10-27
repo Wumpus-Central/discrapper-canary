@@ -870,7 +870,7 @@ function t4(t, e) {
             return (0, tz.Xq)(t, { useKibibytes: !0 });
     }
 }
-let t6 = {
+let t2 = {
     [w.WTw.INSTALLING]: {
         [tt.pJ.NONE]: (t, e, n, i) => v.intl.formatToPlainString(v.t.JfJt9d, { percent: t, progress: e, total: n }),
         [tt.pJ.SECONDS]: (t, e, n, i) =>
@@ -899,8 +899,8 @@ let t6 = {
             v.intl.formatToPlainString(v.t["3VG9s1"], { percent: t, progress: e, total: n, timeRemaining: i }),
     },
 };
-function t2(t, e, n, i, l) {
-    let s = t6[e],
+function t6(t, e, n, i, l) {
+    let s = t2[e],
         r = null != s ? Object.keys(s) : [],
         { unit: a, time: o } = (0, tt.$l)(null != t ? t / 60 : null, r);
     if (null != s && null != a) {
@@ -922,7 +922,7 @@ function t3(t) {
         case w.OQC.ALLOCATING_DISK:
             return v.intl.formatToPlainString(v.t.XigoJ9, { percent: i });
         case w.OQC.PATCHING:
-            return t2(r, e, i, o, a);
+            return t6(r, e, i, o, a);
         case w.OQC.FINALIZING:
             return v.intl.formatToPlainString(v.t["6PHDUN"], { percent: i });
         case w.OQC.PAUSING:
@@ -932,7 +932,7 @@ function t3(t) {
         case w.OQC.POST_INSTALL_SCRIPTS:
             return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: a });
         case w.OQC.REPAIRING:
-            if (e === w.WTw.REPAIRING) return t2(r, e, i, o, a);
+            if (e === w.WTw.REPAIRING) return t6(r, e, i, o, a);
             return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: a });
     }
     throw Error("Invalid Dispatch stage");
@@ -1356,7 +1356,7 @@ var ec = n(665260),
     eA = n(404778),
     em = n(364522),
     eg = n(59636),
-    ex = n(885386),
+    ex = n(253932),
     ef = n(314116),
     ey = n(821609),
     eI = n(993077),

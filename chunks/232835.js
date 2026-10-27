@@ -372,7 +372,7 @@ let J = new Q(o.h, {
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: i, optimistic: r, isPushNotification: a } = e,
                 s = c.A.getOrCreate(t),
-                l = n(276602).A.isConnected();
+                l = n(403010).A.isConnected();
             return a
                 ? (0, g.K)()
                     ? (j(t, i, l), !1)

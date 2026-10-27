@@ -20,7 +20,7 @@ var i = n(477900),
     j = n(521981),
     C = n(438729),
     N = n(44788),
-    S = n(885386),
+    S = n(253932),
     y = n(28905);
 function D(e) {
     let { previewMessage: t } = e,

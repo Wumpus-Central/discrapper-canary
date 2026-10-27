@@ -65,7 +65,7 @@ function M(e) {
               children: o.map((e) => (0, i.jsx)(_.A, { containerDimensions: n, effect: e, onComplete: h }, e.id)),
           });
 }
-var D = n(885386),
+var D = n(253932),
     w = n(967198),
     U = n(174459),
     z = n(796774),

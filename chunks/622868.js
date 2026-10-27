@@ -496,7 +496,7 @@ function eL() {
 }
 var eU = l(854627),
     eV = l(342296),
-    eH = l(885386),
+    eH = l(253932),
     e$ = l(71393),
     ez = l(576705),
     eB = l(486020),
@@ -512,7 +512,7 @@ var eU = l(854627),
     e0 = l(976860),
     e1 = l(746080),
     e8 = l(829136);
-let e6 = function (e) {
+let e2 = function (e) {
     let { roleIcon: n, guild: l } = e,
         { name: i } = n;
     (0, ep.Ay)(() => {
@@ -579,7 +579,7 @@ let e6 = function (e) {
         }),
     });
 };
-var e2 = l(812299),
+var e6 = l(812299),
     e7 = l(109054),
     e3 = l(318626);
 function e4(e) {
@@ -638,7 +638,7 @@ let e5 = i.memo(function (e) {
         } = e,
         b = (0, eF.Ay)(n, l),
         E = i.useMemo(
-            () => (0, e2.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
+            () => (0, e6.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
             [n, a, r],
         ),
         y = i.useRef(null),
@@ -658,7 +658,7 @@ let e5 = i.memo(function (e) {
                                 autoInvert: !0,
                                 nudgeAlignIntoViewport: !0,
                                 position: "right",
-                                renderPopout: () => (0, t.jsx)(e6, { roleIcon: o, guild: M }),
+                                renderPopout: () => (0, t.jsx)(e2, { roleIcon: o, guild: M }),
                                 clickTrap: !0,
                                 children: (e) => {
                                     let { onClick: n } = e;
@@ -971,7 +971,7 @@ let nl = i.memo(function (e) {
         R = eH.aM.useSetting(),
         T = e.displayCompactAvatars ?? R,
         w = i.useMemo(
-            () => (0, e2.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
+            () => (0, e6.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
             [n, I, a],
         ),
         O = (0, c.bG)([e$.A], () => nn(a, T, j, e$.A.getGuild(e.guildId)), [a, T, j, e.guildId]),

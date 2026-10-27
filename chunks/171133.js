@@ -247,13 +247,13 @@ var eL = n(707539),
     e0 = n(521981),
     e7 = n(448368),
     e9 = n(302031),
-    e1 = n(885386),
-    e3 = n(576705),
+    e3 = n(253932),
+    e1 = n(576705),
     e8 = n(652215),
     e6 = n(838541),
     e4 = n(282573),
-    e5 = n(165648);
-let e2 = s.memo(function (e) {
+    e2 = n(165648);
+let e5 = s.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: i, message: r } = (0, eZ.I)(t),
         { isBlocked: c, isIgnored: u } = (0, o.cf)(
@@ -264,8 +264,8 @@ let e2 = s.memo(function (e) {
             }),
             [r],
         ),
-        d = (0, o.bG)([e3.A], () => e3.A.can(e8.xBc.MANAGE_MESSAGES, t)),
-        h = e1.gs.useSetting(),
+        d = (0, o.bG)([e1.A], () => e1.A.can(e8.xBc.MANAGE_MESSAGES, t)),
+        h = e3.gs.useSetting(),
         { content: x } = s.useMemo(
             () =>
                 r?.content != null && "" !== r.content
@@ -297,7 +297,7 @@ let e2 = s.memo(function (e) {
                 children: F.intl.string(F.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e7.o)(r, x, c, u, a()(e4.BK, e5.tZ), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, e7.o)(r, x, c, u, a()(e4.BK, e2.tZ), {
                 leadingIconClass: e4.AF,
                 trailingIconClass: e4.AF,
                 iconSize: e6.eJ,
@@ -422,7 +422,7 @@ function tl(e) {
                                   color: "text-muted",
                                   children: F.intl.string(F.t.fnduP5),
                               })
-                            : (0, l.jsx)(e2, { channel: s }),
+                            : (0, l.jsx)(e5, { channel: s }),
                         forceHover: a,
                         children: (0, l.jsx)(tt, { userId: i.id }),
                     }),

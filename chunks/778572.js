@@ -357,7 +357,7 @@ var z = n(651188),
     X = n(649079),
     ee = n(778747),
     et = n(439864),
-    en = n(885386);
+    en = n(253932);
 let el = {
     autocompleteInputElementType: "gameMentionInput",
     stores: [J.A],
@@ -868,7 +868,7 @@ function e4(e) {
     }
     return null;
 }
-let e7 = {
+let e2 = {
     ...B,
     sentinel: void 0,
     focusMode: o.e.MANUAL,
@@ -951,7 +951,7 @@ let e7 = {
         return null == u ? null : { ...u, type: o.kc.COMMAND_SUGGESTION };
     },
 };
-function e2(e) {
+function e7(e) {
     let { onClick: t, onHover: n, selected: l, index: i, text: r, description: s } = e;
     return (0, c.jsx)(f.Ay.Generic, {
         onClick: t,
@@ -1032,7 +1032,7 @@ let e5 = {
                     description: u.hideMentionDescription ? null : e.description,
                 };
                 return "gameMentionInput" === e.inlineAutocompleteType
-                    ? (0, d.createElement)(e2, { ...l, key: e.text })
+                    ? (0, d.createElement)(e7, { ...l, key: e.text })
                     : (0, d.createElement)(f.Ay.Generic, { ...l, key: e.text, "aria-label": e.text });
             }),
             h = l.map((e, l) =>
@@ -1384,7 +1384,7 @@ let tr = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
         [o.DB.EMOJIS_AND_STICKERS]: e_,
         [o.DB.STICKERS]: tt,
         [o.DB.GIFS]: eX,
-        [o.DB.LEGACY_COMMANDS]: e7,
+        [o.DB.LEGACY_COMMANDS]: e2,
         [o.DB.MENTIONS]: e5,
         [o.DB.REACTIONS]: {
             sentinel: "+:",

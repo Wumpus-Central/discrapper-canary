@@ -1228,7 +1228,7 @@ var tr = l(665260),
 let th = tl.ogj.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS;
 var tp = l(224640),
     tj = l(20742),
-    tv = l(885386),
+    tv = l(253932),
     t_ = l(515746);
 function tb(e) {
     let { data: t } = e,

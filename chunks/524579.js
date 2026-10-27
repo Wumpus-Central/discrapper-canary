@@ -455,7 +455,7 @@ var eT = n(991690),
     e$ = n(692848),
     ez = n(442433),
     eX = n(700210),
-    eY = n(885386);
+    eY = n(253932);
 function eK(e) {
     let { application: t } = e,
         n = eW.A.getGuildId() ?? void 0;

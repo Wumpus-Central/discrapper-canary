@@ -708,18 +708,6 @@
     opacity: .5
 }
 
-.linkIcon_a4b5f8 {
-    color: var(--interactive-text-default)
-}
-
-.rowContainer_a4b5f8 {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between
-}
-
 .group_f97b59 {
     margin-top: 20px
 }
@@ -775,4 +763,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=1756903559fcd106.css.map*/
+/*# sourceMappingURL=72cfde986b77604d.css.map*/
