@@ -1,22 +1,3 @@
-.icon_bdbb1b {
-    align-self: flex-start;
-    flex-shrink: 0;
-    height: 24px;
-    width: 24px
-}
-
-.wandIcon_bdbb1b {
-    color: var(--status-positive)
-}
-
-.robotIcon_bdbb1b {
-    color: var(--text-link)
-}
-
-.smileIcon_bdbb1b {
-    color: var(--text-feedback-warning)
-}
-
 .listContainer_bdbb1b {
     background-color: var(--background-surface-higher);
     border: 1px solid var(--border-subtle);
@@ -42,4 +23,4 @@
     opacity: .5
 }
 
-/*# sourceMappingURL=bfe6fcb4012ad6ec.css.map*/
+/*# sourceMappingURL=24359b1ad8160110.css.map*/
