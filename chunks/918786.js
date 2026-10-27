@@ -59,12 +59,12 @@ function w(e) {
             () => ({
                 fetchCheckoutInvoicePreviewRequest: {
                     type: "subscription_checkout_invoice_get_request",
-                    params: { subscriptionId: t.id, preventFetch: l },
+                    params: { subscriptionId: t.id, preventFetch: l, selectedPaymentSourceId: n.paymentSourceId },
                 },
                 fetchRenewalInvoicePreviewRequest: null,
                 shouldAllowNullState: !0,
             }),
-            [t.id, l],
+            [t.id, l, n.paymentSourceId],
         );
     (0, _.E)(u);
     let { checkoutInvoicePreview: c, checkoutInvoiceError: d } = (0, m.t4)((e) => ({

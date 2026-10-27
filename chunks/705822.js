@@ -43,29 +43,32 @@ function o(e, t) {
                 r = e.getExpressCheckoutSubmitting(),
                 a = e.getExpressCheckoutLoading(),
                 s = e.getIsPlanSwitchLoading(),
-                l = !i || r,
-                o = l && !s && "unavailable" !== e.expressCheckoutStatus,
-                d = "review_footer" === n.configurationType;
+                l = e.startingIsInPastDueCheckout && !e.hasAddedPaymentSourceThisSession,
+                o = !i || l || r,
+                d = o && !s && "unavailable" !== e.expressCheckoutStatus,
+                c = "review_footer" === n.configurationType;
             return {
-                shouldMountExpressCheckoutElement: l,
-                shouldExpressCheckoutBeVisible: o,
-                shouldDisablePaymentSelect: i ? r : a,
+                shouldMountExpressCheckoutElement: o,
+                shouldExpressCheckoutBeVisible: d,
+                shouldDisablePaymentSelect: (e.startingIsInPastDueCheckout ? e.hasAddedPaymentSourceThisSession : i)
+                    ? r
+                    : a,
                 isLoading: a,
                 isSubmitting: r,
-                isExpressCheckoutEnabledForFooter: d,
+                isExpressCheckoutEnabledForFooter: c,
                 isExpressCheckoutEnabledForPaymentSelect: "payment_selector" === n.configurationType,
-                isExpressCheckoutVisibleInFooter: d && o,
+                isExpressCheckoutVisibleInFooter: c && d,
             };
         },
         getExpressCheckoutConfig: (e) => {
-            let { unifiedCheckoutFlow: n, isGift: i } = t(),
-                l = (n === a.C.PREMIUM_CHECKOUT || n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) && i;
-            if (null == n || !s.has(n) || l) return null;
-            let o = r.I.getConfig(
-                { location: e ?? "StripeExpressCheckoutStoreSlice" },
-                { autoTrackExposure: null != e },
-            );
-            return "review_footer" === o.configurationType && n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT ? null : o;
+            let { unifiedCheckoutFlow: n, isGift: i, startingIsInPastDueCheckout: l } = t(),
+                o = (n === a.C.PREMIUM_CHECKOUT || n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) && i;
+            if (null == n || !s.has(n) || o) return null;
+            let d = r.I.getConfig({ location: e ?? "CheckoutStore" }, { autoTrackExposure: null != e }),
+                c = n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT || l;
+            return d.enabled
+                ? { ...d, configurationType: c ? "payment_selector" : "review_footer" }
+                : { ...d, configurationType: null };
         },
         getIsExpressCheckoutEnabled: (e) => {
             let n = t().getExpressCheckoutConfig(e);

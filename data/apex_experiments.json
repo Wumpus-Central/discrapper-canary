@@ -5450,7 +5450,8 @@
     "name": "2026-10-express-checkout",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "enabled": false,
+      "variation": 0
     },
     "variations": {
       "0": {
@@ -5459,11 +5460,7 @@
       },
       "1": {
         "enabled": true,
-        "configurationType": "review_footer"
-      },
-      "2": {
-        "enabled": true,
-        "configurationType": "payment_selector"
+        "variation": 1
       }
     }
   },

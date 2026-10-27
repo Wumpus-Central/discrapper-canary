@@ -1,4 +1,4 @@
-t.d(a, { E1: () => w, Zr: () => U, rI: () => Z });
+t.d(a, { E1: () => w, Zr: () => Y, rI: () => Z });
 var l = t(477900),
     n = t(582128),
     r = t(643909),
@@ -23,22 +23,22 @@ var l = t(477900),
     I = t(822764),
     _ = t(56763),
     v = t(123816),
-    R = t(783327),
-    f = t(705822),
+    f = t(783327),
+    R = t(705822),
     L = t(652215),
     S = t(202541),
     H = t(818348),
     k = t(583741),
     D = t(105292),
     N = t(969933);
-let O = new E.A("StripeExpressCheckout.tsx"),
-    b = { [S.WT.DAY]: "day", [S.WT.MONTH]: "month", [S.WT.YEAR]: "year" };
-function j(e) {
+let j = new E.A("StripeExpressCheckout.tsx"),
+    O = { [S.WT.DAY]: "day", [S.WT.MONTH]: "month", [S.WT.YEAR]: "year" };
+function b(e) {
     let { type: a, makePurchase: t, isSubmitting: s, setIsSubmitting: c, className: p } = e,
         E = (0, r.useElements)(),
-        g = (0, R.S)(),
+        g = (0, f.S)(),
         L = n.useRef(a),
-        [S, j] = n.useState(null),
+        [S, b] = n.useState(null),
         w = n.useRef(null),
         Z = n.useRef(null),
         {
@@ -81,7 +81,7 @@ function j(e) {
         J = n.useCallback(
             (e) => {
                 let { error: a } = e;
-                O.error("ExpressCheckoutElement failed to load: ", a);
+                j.error("ExpressCheckoutElement failed to load: ", a);
                 let t = (0, I.PD)(
                         {
                             loadId: z,
@@ -99,16 +99,16 @@ function j(e) {
         ),
         q = null != g && null != E && null != U && F;
     n.useEffect(() => {
-        if (q) return () => G(f.i.INITIALIZING);
+        if (q) return () => G(R.i.INITIALIZING);
     }, [q, G]);
     let Q = n.useCallback(
             (e) => {
-                (c(e), G(e ? f.i.SUBMITTING : f.i.READY));
+                (c(e), G(e ? R.i.SUBMITTING : R.i.READY));
             },
             [c, G],
         ),
         ee = n.useCallback(() => {
-            (j(null), (w.current = null), Q(!1));
+            (b(null), (w.current = null), Q(!1));
         }, [Q]),
         ea = n.useCallback(
             async (e) => {
@@ -177,12 +177,12 @@ function j(e) {
                     (Q(!0), W(null), (0, o.ET)(), (Z.current = n));
                     let { error: e } = await l.submit();
                     if (null != e) {
-                        (O.error("elements.submit failed: ", e), r(e));
+                        (j.error("elements.submit failed: ", e), r(e));
                         return;
                     }
                     let { paymentMethod: a, error: s } = await t.createPaymentMethod({ elements: l });
                     if (null == a) {
-                        (O.error("createPaymentMethod failed to return payment method: ", {
+                        (j.error("createPaymentMethod failed to return payment method: ", {
                             paymentMethod: a,
                             error: s,
                         }),
@@ -192,12 +192,12 @@ function j(e) {
                     let { billingAddressInfo: i } = (0, T.uK)(a),
                         h = a.id,
                         u = await (0, A.IC)({ stripePaymentMethodId: h, billingAddress: i });
-                    ((0, I.lO)({ loadId: z, paymentSource: u }, m.A.EXPRESS_CHECKOUT), j(u));
+                    ((0, I.lO)({ loadId: z, paymentSource: u }, m.A.EXPRESS_CHECKOUT), b(u));
                 } catch (e) {
-                    (O.error("handleExpressCheckoutConfirm failed: ", e), r(e instanceof d.Ey ? e : void 0));
+                    (j.error("handleExpressCheckoutConfirm failed: ", e), r(e instanceof d.Ey ? e : void 0));
                 }
             },
-            [Q, j, ee, W, z],
+            [Q, b, ee, W, z],
         ),
         en = n.useCallback(
             (e) => {
@@ -243,7 +243,7 @@ function j(e) {
                         if (null == a) return null;
                         let t = P.A.get(a.subscriptionPlanId);
                         if (null == t) return null;
-                        let l = b[t.interval],
+                        let l = O[t.interval],
                             n = t.intervalCount;
                         return {
                             planDisplayName: (0, y.Mn)(t.id),
@@ -310,7 +310,7 @@ function j(e) {
     });
 }
 function w(e) {
-    let a = (0, R.S)(),
+    let a = (0, f.S)(),
         { elementsAppearance: t } = (0, p.E)(),
         { checkoutInvoicePreview: s, isPurchaseDisabled: i } = (0, v.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
@@ -336,7 +336,7 @@ function w(e) {
         : (0, l.jsx)(r.Elements, {
               stripe: a,
               options: o,
-              children: (0, l.jsx)(j, { ...e, type: u, makePurchase: c, disablePurchase: h }),
+              children: (0, l.jsx)(b, { ...e, type: u, makePurchase: c, disablePurchase: h }),
           });
 }
 function Z() {
@@ -350,12 +350,29 @@ function Z() {
         );
     return (0, l.jsx)(c.E, { variant: "text-sm/normal", color: "text-muted", className: N.OJ, children: a });
 }
-function U(e) {
-    let { stripeExpressCheckoutComponent: a, fallbackComponent: t } = e,
-        { shouldExpressCheckoutBeVisible: n } = (0, v.t4)((e) => ({
+function U() {
+    return (0, l.jsxs)("div", {
+        className: N.ps,
+        children: [
+            (0, l.jsx)("span", { className: N.ao, "aria-hidden": "true" }),
+            (0, l.jsx)(c.E, {
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: D.intl.string(k.default.N4EAHm),
+            }),
+            (0, l.jsx)("span", { className: N.ao, "aria-hidden": "true" }),
+        ],
+    });
+}
+function Y(e) {
+    let { stripeExpressCheckoutComponent: a, fallbackComponent: t, showDividerBelow: n = !1 } = e,
+        { shouldExpressCheckoutBeVisible: r } = (0, v.t4)((e) => ({
             shouldExpressCheckoutBeVisible: e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
         }));
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)("div", { className: i()(N.n2, { [N.lX]: !n }), children: a }), !n && t],
+        children: [
+            (0, l.jsxs)("div", { className: i()(N.n2, { [N.lX]: !r }), children: [a, n ? (0, l.jsx)(U, {}) : null] }),
+            !r && t,
+        ],
     });
 }

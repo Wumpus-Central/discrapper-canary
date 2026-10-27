@@ -22,8 +22,20 @@
     margin-bottom: var(--space-4)
 }
 
+.dividerWithText__7d51c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    margin-bottom: var(--space-8)
+}
+
+.dividerLine__7d51c {
+    border-top: 1px solid var(--border-subtle);
+    flex: 1
+}
+
 .footerNote__7d51c {
     text-align: center
 }
 
-/*# sourceMappingURL=263406.91f51779baa2902c.css.map*/
+/*# sourceMappingURL=263406.a9a3f0c7b68b712f.css.map*/
