@@ -1,13 +1,13 @@
-a.d(t, { default: () => et });
+a.d(t, { default: () => en });
 var n = a(477900),
     i = a(582128),
-    r = a(984827),
-    s = a(821609),
+    s = a(984827),
+    r = a(821609),
     l = a(284009),
     o = a.n(l);
-(r.x.PORTRAIT, r.x.PORTRAIT);
-let c = { preferred: r.x.LANDSCAPE, supported: [r.x.LANDSCAPE, r.x.PORTRAIT] },
-    u = { [r.x.PORTRAIT]: 9 / 16, [r.x.LANDSCAPE]: 16 / 9 };
+(s.x.PORTRAIT, s.x.PORTRAIT);
+let c = { preferred: s.x.LANDSCAPE, supported: [s.x.LANDSCAPE, s.x.PORTRAIT] },
+    u = { [s.x.PORTRAIT]: 9 / 16, [s.x.LANDSCAPE]: 16 / 9 };
 function d(e, t) {
     let a = e[t];
     return null == a || "" === a ? null : { url: a, aspectRatio: t };
@@ -20,97 +20,99 @@ var m = a(738822),
     f = a(503698),
     A = a.n(f),
     R = a(17928),
-    g = a(858899),
+    v = a(858899),
     C = a(43990),
-    T = a(613373),
-    v = a(845890),
-    S = a(265704),
-    N = a(105292);
-let P = new Set([260021]);
-var j = a(491812),
-    k = a(755372),
-    I = a(759182),
-    M = a(236850),
-    O = a(661531),
-    y = a(820081),
-    L = a(834730),
-    w = a(250328);
-let D = 2 * Math.PI * 14.4,
-    E = (180 / Math.PI) * 0.11111111111111112,
-    _ = `rotate(${-90 + E} 16 16)`;
-function F(e) {
+    g = a(613373),
+    T = a(478996),
+    N = a(37402),
+    S = a(845890),
+    j = a(265704),
+    P = a(105292);
+let k = new Set([260021]);
+var I = a(491812),
+    y = a(755372),
+    M = a(759182),
+    O = a(236850),
+    L = a(661531),
+    w = a(820081),
+    D = a(834730),
+    E = a(250328);
+let _ = 2 * Math.PI * 14.4,
+    F = (180 / Math.PI) * 0.11111111111111112,
+    B = `rotate(${-90 + F} 16 16)`;
+function U(e) {
     let { animateIn: t } = e;
     return (0, n.jsxs)("div", {
         "aria-hidden": !0,
-        className: A()(w.z6, { [w.HY]: t }),
+        className: A()(E.z6, { [E.HY]: t }),
         children: [
-            (0, n.jsx)("div", { className: w.AW }),
-            (0, n.jsx)(y.B, {
+            (0, n.jsx)("div", { className: E.AW }),
+            (0, n.jsx)(w.B, {
                 size: "custom",
                 width: 20,
                 height: 20,
-                color: O.A.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
-                className: w.kQ,
+                color: L.A.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
+                className: E.kQ,
             }),
         ],
     });
 }
-function B(e) {
+function V(e) {
     var t;
-    let { totalSeconds: a, remainingSeconds: r } = e,
-        s = r <= 0,
-        [l] = i.useState(s),
-        o = Math.max(1, Math.ceil(r)),
+    let { totalSeconds: a, remainingSeconds: s } = e,
+        r = s <= 0,
+        [l] = i.useState(r),
+        o = Math.max(1, Math.ceil(s)),
         c = 0;
     return (
-        s ? (c = 1) : a > 0 && (c = 1 - r / a),
+        r ? (c = 1) : a > 0 && (c = 1 - s / a),
         (0, n.jsxs)("div", {
             role: "timer",
-            "aria-label": s ? N.intl.string(N.t["0F4Peo"]) : N.intl.formatToPlainString(N.t["45cddS"], { seconds: o }),
-            className: w.O1,
+            "aria-label": r ? P.intl.string(P.t["0F4Peo"]) : P.intl.formatToPlainString(P.t["45cddS"], { seconds: o }),
+            className: E.O1,
             children: [
                 (0, n.jsxs)("svg", {
                     "aria-hidden": !0,
-                    className: w.hN,
+                    className: E.hN,
                     width: 32,
                     height: 32,
                     viewBox: "0 0 32 32",
                     children: [
-                        (0, n.jsx)("circle", { className: w.tB, cx: 16, cy: 16, r: 15.5 }),
+                        (0, n.jsx)("circle", { className: E.tB, cx: 16, cy: 16, r: 15.5 }),
                         (0, n.jsx)("circle", {
-                            className: A()(w.qB, { [w.LQ]: c <= 0 }),
+                            className: A()(E.qB, { [E.LQ]: c <= 0 }),
                             cx: 16,
                             cy: 16,
                             r: 14.4,
                             strokeWidth: 3.2,
-                            strokeDasharray: `${D} ${D}`,
-                            strokeDashoffset: D - ((t = c) >= 1 ? D : Math.max(0.01, t * D - 3.2)),
-                            transform: _,
+                            strokeDasharray: `${_} ${_}`,
+                            strokeDashoffset: _ - ((t = c) >= 1 ? _ : Math.max(0.01, t * _ - 3.2)),
+                            transform: B,
                         }),
                     ],
                 }),
-                s
-                    ? (0, n.jsx)(F, { animateIn: !l })
-                    : (0, n.jsx)(L.E, {
+                r
+                    ? (0, n.jsx)(U, { animateIn: !l })
+                    : (0, n.jsx)(D.E, {
                           "aria-hidden": !0,
                           variant: "text-xs/semibold",
                           color: "text-strong",
-                          className: w.YA,
+                          className: E.YA,
                           children: o,
                       }),
             ],
         })
     );
 }
-function U(e, t) {
+function Y(e, t) {
     return null != t ? Math.min(e, t) : e;
 }
-var V = a(190107);
+var H = a(190107);
 a(500522);
-var Y = a(652215),
-    H = a(879371),
-    Q = a(815714);
-function $() {
+var Q = a(652215),
+    $ = a(879371),
+    q = a(815714);
+function K() {
     let e = i.useMemo(
         () =>
             (0, h.lR)({
@@ -121,24 +123,24 @@ function $() {
             }),
         [],
     );
-    return (0, n.jsx)("img", { src: e, alt: "", className: Q.RN });
+    return (0, n.jsx)("img", { src: e, alt: "", className: q.RN });
 }
-async function K(e, t) {
+async function W(e, t) {
     try {
-        await (0, v.Hq)(e.id, t);
+        await (0, S.Hq)(e.id, t);
     } catch (e) {
-        (0, g.P0)({
-            text: e?.code != null && P.has(e.code) && e?.message != null ? e.message : N.intl.string(N.t.uLjCfn),
+        (0, v.P0)({
+            text: e?.code != null && k.has(e.code) && e?.message != null ? e.message : P.intl.string(P.t.uLjCfn),
             variant: "critical",
         });
     }
 }
-function q(e) {
-    let { bounty: t, sourceQuestContent: a, src: r, orientation: s, parentTransitionState: l, onClose: o } = e,
+function z(e) {
+    let { bounty: t, sourceQuestContent: a, src: s, orientation: r, parentTransitionState: l, onClose: o } = e,
         c = i.useRef(null),
-        u = (0, R.bG)([S.A], () => S.A.isBountyCompleted(t.id)),
+        u = (0, R.bG)([j.A], () => j.A.isBountyCompleted(t.id)),
         d = i.useCallback(() => {
-            K(t, a);
+            W(t, a);
         }, [t, a]),
         {
             rewardTargetSeconds: m,
@@ -147,31 +149,31 @@ function q(e) {
             maxSeekableTimeSeconds: b,
             handleProgressUpdate: p,
             handleSeek: f,
-            handleEnded: g,
+            handleEnded: v,
         } = (function (e) {
             let {
                     rewardTimerSeconds: t,
                     initialDurationSeconds: a,
                     videoRef: n,
-                    isCompleted: r,
-                    onRewardEarned: s,
+                    isCompleted: s,
+                    onRewardEarned: r,
                 } = e,
                 [l, o] = i.useState(0),
                 [c, u] = i.useState(a),
                 d = i.useRef(0),
                 m = i.useRef(a),
-                h = i.useRef(r),
-                x = U(t, c),
-                b = r || l >= x,
+                h = i.useRef(s),
+                x = Y(t, c),
+                b = s || l >= x,
                 p = i.useCallback((e) => {
                     ((m.current = e), u(e));
                 }, []),
                 f = i.useCallback(
                     (e) => {
                         let a = Math.max(d.current, e);
-                        ((d.current = a), o(a), !h.current && a >= U(t, m.current) && ((h.current = !0), s()));
+                        ((d.current = a), o(a), !h.current && a >= Y(t, m.current) && ((h.current = !0), r()));
                     },
-                    [t, s],
+                    [t, r],
                 ),
                 A = i.useCallback(
                     (e, t) => {
@@ -203,72 +205,79 @@ function q(e) {
             isCompleted: u,
             onRewardEarned: d,
         }),
-        { volume: v, muted: P, setVolume: O, setMuted: y } = (0, M.A)(),
-        L = i.useMemo(() => (0, n.jsx)($, {}), []),
-        w = i.useMemo(() => N.intl.formatToPlainString(N.t["nLXlh+"], { orbAmount: V.FA }), []),
-        D = (0, I.A)({ targetSec: m, label: w, isCompleted: h, icon: L, clickable: b >= m }),
-        E = i.useCallback(
+        { volume: S, muted: k, setVolume: L, setMuted: w } = (0, O.A)(),
+        { balance: D } = (0, T.W0)(),
+        E = i.useMemo(() => (0, n.jsx)(K, {}), []),
+        _ = i.useMemo(() => P.intl.formatToPlainString(P.t["nLXlh+"], { orbAmount: H.FA }), []),
+        F = (0, M.A)({ targetSec: m, label: _, isCompleted: h, icon: E, clickable: b >= m }),
+        B = i.useCallback(
             () =>
                 (0, n.jsx)(C.N, {
-                    theme: Y.NJ8.DARK,
+                    theme: Q.NJ8.DARK,
                     disableAdaptiveTheme: !0,
                     children: (e) =>
                         (0, n.jsxs)("div", {
-                            className: A()(e, Q.gP),
+                            className: A()(e, q.gP),
                             children: [
-                                (0, n.jsx)(B, { totalSeconds: m, remainingSeconds: x }),
-                                (0, n.jsx)("div", { className: Q.ne, children: (0, n.jsx)(j.A, { onClose: o }) }),
+                                (0, n.jsxs)("div", {
+                                    className: q.Cq,
+                                    children: [
+                                        (0, n.jsx)(V, { totalSeconds: m, remainingSeconds: x }),
+                                        (0, n.jsx)(N.Ay, { variant: "overlay-secondary", balance: D }),
+                                    ],
+                                }),
+                                (0, n.jsx)("div", { className: q.ne, children: (0, n.jsx)(I.A, { onClose: o }) }),
                             ],
                         }),
                 }),
-            [o, x, m],
+            [o, D, x, m],
         );
-    return (0, n.jsx)(T.Ft, {
+    return (0, n.jsx)(g.Ft, {
         ref: c,
         parentTransitionState: l,
         autoplay: !0,
         autoFocus: !0,
-        orientation: s,
-        src: r,
-        progressClassName: h ? H.s : H.V,
+        orientation: r,
+        src: s,
+        progressClassName: h ? $.s : $.V,
         persistTimeline: !0,
         persistPlayhead: !1,
         pauseOnLostVisibility: !h,
-        getPlaybackBlockedMessage: k.b,
+        getPlaybackBlockedMessage: y.b,
         maxSeekableTimeSec: b,
-        initialVolume: v,
-        initialMuted: P,
-        onVolumeChange: O,
-        onMutedChange: y,
+        initialVolume: S,
+        initialMuted: k,
+        onVolumeChange: L,
+        onMutedChange: w,
         onProgressUpdate: p,
         onSeek: f,
-        onEnded: g,
-        renderPersistentOverlay: E,
-        timelineIndicatorConfig: D,
+        onEnded: v,
+        renderPersistentOverlay: B,
+        timelineIndicatorConfig: F,
         loadingSpinnerPosition: "center",
         autoHideVolumeSlider: !0,
         hidePlaybackSpeedBtn: !0,
     });
 }
-var z = a(323889),
-    G = a(192308),
-    W = a(590202),
-    X = a(971649),
-    Z = a(620954),
-    J = a(617986);
-function ee(e) {
+var G = a(323889),
+    X = a(192308),
+    Z = a(590202),
+    J = a(971649),
+    ee = a(620954),
+    et = a(617986);
+function ea(e) {
     let { iconImageUri: t } = e;
     return null == t
-        ? (0, n.jsx)("div", { "aria-hidden": !0, className: Q.Z2 })
+        ? (0, n.jsx)("div", { "aria-hidden": !0, className: q.Z2 })
         : (0, n.jsx)("img", {
               src: (0, h.lR)({ assetUrl: t, width: 48, height: 48 }),
               alt: "",
               width: 48,
               height: 48,
-              className: Q.Z2,
+              className: q.Z2,
           });
 }
-function et(e) {
+function en(e) {
     let { transitionState: t, onClose: a, bounty: l, sourceQuestContent: h } = e,
         { url: f, orientation: A } = i.useMemo(() => {
             var e, t;
@@ -276,51 +285,51 @@ function et(e) {
                 ((e = l),
                 (t = c),
                 null == e.videoRenditions
-                    ? t.supported.includes(r.x.PORTRAIT)
-                        ? { url: e.videoHls, aspectRatio: r.x.PORTRAIT }
+                    ? t.supported.includes(s.x.PORTRAIT)
+                        ? { url: e.videoHls, aspectRatio: s.x.PORTRAIT }
                         : null
                     : (function (e, t) {
                           let { preferred: a, supported: n } = t;
                           o()(n.includes(a), "Preferred aspect ratio must be in supported renditions list");
                           let i = d(e, a);
                           if (null != i) return i;
-                          let r = u[a],
-                              s = null,
+                          let s = u[a],
+                              r = null,
                               l = 1 / 0;
                           for (let t of n) {
                               if (t === a) continue;
                               let n = d(e, t);
                               if (null == n) continue;
-                              let i = Math.abs(u[t] - r);
-                              i < l && ((l = i), (s = n));
+                              let i = Math.abs(u[t] - s);
+                              i < l && ((l = i), (r = n));
                           }
-                          return s;
+                          return r;
                       })(e.videoRenditions, t));
             return null == a
                 ? { url: l.videoHls, orientation: "portrait" }
-                : { url: a.url, orientation: a.aspectRatio === r.x.PORTRAIT ? "portrait" : "landscape" };
+                : { url: a.url, orientation: a.aspectRatio === s.x.PORTRAIT ? "portrait" : "landscape" };
         }, [l]),
         R = { label: l.productName, buttonLabel: l.cta.buttonLabel, iconImageUri: l.productIcon },
-        g = R.label ?? l.advertiserName,
+        v = R.label ?? l.advertiserName,
         C = (function (e) {
             let { bounty: t, onClose: a, sourceQuestContent: n } = e,
-                r = (0, X.QK)();
+                s = (0, J.QK)();
             return i.useCallback(
                 async (e) => {
-                    ((await (0, J.f7)(t.cta.url)) && (a(), (0, G.closeAllModals)()),
-                        (0, Z._Q)(
-                            { adContentId: t.id, adCreativeType: z.p.BOUNTY, cta: t.cta },
-                            { content: e, ctaContent: W.Cy.OPEN_GAME_LINK, impressionId: r(), sourceQuestContent: n },
+                    ((await (0, et.f7)(t.cta.url)) && (a(), (0, X.closeAllModals)()),
+                        (0, ee._Q)(
+                            { adContentId: t.id, adCreativeType: G.p.BOUNTY, cta: t.cta },
+                            { content: e, ctaContent: Z.Cy.OPEN_GAME_LINK, impressionId: s(), sourceQuestContent: n },
                         ));
                 },
-                [t.id, t.cta, a, n, r],
+                [t.id, t.cta, a, n, s],
             );
         })({ bounty: l, onClose: a, sourceQuestContent: h });
     return (0, n.jsx)(p.A, {
         transitionState: t,
         orientation: A,
-        ariaLabel: g,
-        video: (0, n.jsx)(q, {
+        ariaLabel: v,
+        video: (0, n.jsx)(z, {
             bounty: l,
             sourceQuestContent: h,
             src: f,
@@ -329,13 +338,13 @@ function et(e) {
             onClose: a,
         }),
         footer: (0, n.jsx)(b.A, {
-            prefix: (0, n.jsx)(ee, { iconImageUri: R.iconImageUri }),
+            prefix: (0, n.jsx)(ea, { iconImageUri: R.iconImageUri }),
             advertiserDetails: (0, n.jsx)(x.A, {
-                title: g,
-                subtitle: N.intl.string(N.t.o6FLcF),
+                title: v,
+                subtitle: P.intl.string(P.t.o6FLcF),
                 onClick: () => C(m.uF.VIDEO_MODAL),
             }),
-            primaryAction: (0, n.jsx)(s.$, {
+            primaryAction: (0, n.jsx)(r.$, {
                 variant: "primary",
                 text: R.buttonLabel,
                 onClick: () => C(m.uF.VIDEO_MODAL_PRIMARY_CTA),

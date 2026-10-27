@@ -10,14 +10,18 @@
     pointer-events: none
 }
 
+.container_a3e8db,
+.nonInteractive_a3e8db {
+    box-sizing: border-box;
+    height: 32px
+}
+
 .container_a3e8db {
     align-items: center;
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
-    box-sizing: border-box;
     display: inline-flex;
     flex-shrink: 0;
-    height: 32px;
     justify-content: flex-end;
     opacity: 1 !important;
     padding: 8px 12px;
@@ -108,4 +112,4 @@
     width: 8px
 }
 
-/*# sourceMappingURL=776dd4c568c26af8.css.map*/
+/*# sourceMappingURL=1044dba35f5cf11b.css.map*/

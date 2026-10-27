@@ -509,7 +509,7 @@ function eJ(e) {
         className: j()(eX.nM, { [eX.Bh]: r && !c, [eX.lR]: d }),
         children: [
             (0, i.jsx)(e0, { guildId: t, entry: l, identity: x, lastPlayedGame: g, onClick: o }),
-            (0, i.jsx)(e6, { entry: l, stat: n, width: m, onClick: p }),
+            (0, i.jsx)(e3, { entry: l, stat: n, width: m, onClick: p }),
             (0, i.jsx)(e5, {
                 name: x.name,
                 applicationIds: l.application_ids,
@@ -630,7 +630,7 @@ function e2(e) {
             return null;
     }
 }
-function e6(e) {
+function e3(e) {
     let { entry: t, stat: l, width: n, onClick: s } = e,
         { primary: a, secondary: r } = eU(t, l);
     return (0, i.jsxs)(L.D, {
@@ -650,7 +650,7 @@ function e6(e) {
         ],
     });
 }
-function e3(e) {
+function e6(e) {
     let { game: t, notched: l } = e;
     return (0, i.jsx)("span", {
         className: eX.rO,
@@ -677,7 +677,7 @@ function e4(e) {
     return (0, i.jsxs)("div", {
         className: eX.Nw,
         children: [
-            n.map((e, t) => (0, i.jsx)(e3, { game: e, notched: s > 0 || t !== n.length - 1 }, `${e.id}-${t}`)),
+            n.map((e, t) => (0, i.jsx)(e6, { game: e, notched: s > 0 || t !== n.length - 1 }, `${e.id}-${t}`)),
             s > 0
                 ? (0, i.jsx)("span", {
                       className: eX.rO,
@@ -947,7 +947,7 @@ function ti(e) {
             ref: P,
             className: tn.V$,
             "aria-hidden": !0,
-            children: G.map((e) => (0, i.jsx)(e6, { entry: e, stat: d }, e.user_id)),
+            children: G.map((e) => (0, i.jsx)(e3, { entry: e, stat: d }, e.user_id)),
         });
     !(function (e) {
         let {
@@ -1595,12 +1595,12 @@ function t1(e) {
 function t2(e) {
     return t1(e) ? "empty_state" : "regular";
 }
-var t6 = l(57129),
-    t3 = l(560328);
+var t3 = l(57129),
+    t6 = l(560328);
 function t8(e) {
     let { guildId: t, requirement: l, onClick: n } = e;
     return (0, i.jsx)(y, {
-        className: t3.p$,
+        className: t6.p$,
         illustration: tP,
         title: I.intl.string(Z.default.ULK65a),
         body: I.intl.format(null != l ? Z.default.JDAHQV : Z.default.LeSGal, { memberCount: 3 }),
@@ -1621,16 +1621,16 @@ function t4(e) {
     let { guildId: t, requirement: l, onClick: n } = e,
         s = X(l, "popular_games");
     return (0, i.jsxs)("div", {
-        className: t3.UX,
+        className: t6.UX,
         children: [
             (0, i.jsxs)("div", {
-                className: t3.tD,
+                className: t6.tD,
                 children: [
                     (0, i.jsx)(E.D, {
                         variant: "heading-sm/semibold",
                         color: "text-default",
                         lineClamp: 1,
-                        children: I.intl.string(t6.default.WhdCGP),
+                        children: I.intl.string(t3.default.WhdCGP),
                     }),
                     (0, i.jsx)(b.E, {
                         variant: "text-xs/medium",
@@ -1683,10 +1683,10 @@ function t5(e) {
         ),
         c = n - d.length;
     return (0, i.jsxs)("div", {
-        className: t3.qr,
+        className: t6.qr,
         children: [
             (0, i.jsx)(b.E, {
-                className: t3.z,
+                className: t6.z,
                 variant: "text-xs/normal",
                 color: "text-muted",
                 lineClamp: 1,
@@ -1694,7 +1694,7 @@ function t5(e) {
             }),
             d.length > 0 &&
                 (0, i.jsx)("div", {
-                    className: t3.WM,
+                    className: t6.WM,
                     children: (0, i.jsx)(tB.Ay, {
                         users: d,
                         guildId: t,
@@ -1707,7 +1707,7 @@ function t5(e) {
                         hideMoreUsers: c <= 0,
                         renderMoreUsers: () =>
                             (0, i.jsx)("span", {
-                                className: t3.ju,
+                                className: t6.ju,
                                 children: (0, i.jsx)(b.E, {
                                     tag: "span",
                                     variant: "text-xs/semibold",
@@ -1764,16 +1764,16 @@ function t9(e) {
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: t3.Qs,
+                          className: t6.Qs,
                           children: [
                               null != p
                                   ? (0, i.jsx)("div", {
-                                        className: t3.G,
-                                        children: (0, i.jsx)("img", { className: t3.LZ, src: p, alt: "" }),
+                                        className: t6.G,
+                                        children: (0, i.jsx)("img", { className: t6.LZ, src: p, alt: "" }),
                                     })
                                   : null,
                               (0, i.jsx)("div", {
-                                  className: t3.ag,
+                                  className: t6.ag,
                                   role: "list",
                                   "aria-label": n,
                                   style: j,
@@ -1790,7 +1790,7 @@ function t9(e) {
                           ],
                       }),
                       (0, i.jsxs)("div", {
-                          className: t3.sQ,
+                          className: t6.sQ,
                           children: [
                               null != o &&
                                   (0, i.jsx)(t4, { guildId: t, requirement: o, onClick: () => v("activity_sharing") }),
@@ -1805,7 +1805,7 @@ function t9(e) {
                       }),
                   ],
               })),
-        (0, i.jsx)("div", { className: t3.rf, ref: d, children: _ })
+        (0, i.jsx)("div", { className: t6.rf, ref: d, children: _ })
     );
 }
 function le(e) {
@@ -2300,9 +2300,10 @@ function lR(e) {
                                     l.e("680986"),
                                     l.e("90373"),
                                     l.e("979630"),
+                                    l.e("539319"),
                                     l.e("293697"),
                                     l.e("568980"),
-                                    l.e("168177"),
+                                    l.e("303730"),
                                     l.e("236946"),
                                     l.e("935948"),
                                     l.e("692639"),
@@ -2621,8 +2622,8 @@ function l1(e) {
     });
 }
 var l2 = l(803613),
-    l6 = l(682348),
-    l3 = l(73152),
+    l3 = l(682348),
+    l6 = l(73152),
     l8 = l(280911);
 function l4(e) {
     let { guildId: t, isCompact: l } = e,
@@ -2691,7 +2692,7 @@ function l7(e) {
                 (0, i.jsx)("span", {
                     className: l8.eu,
                     "aria-hidden": !0,
-                    children: (0, i.jsx)(l6._, { size: "sm", color: c.A.colors.ICON_DEFAULT, "aria-hidden": !0 }),
+                    children: (0, i.jsx)(l3._, { size: "sm", color: c.A.colors.ICON_DEFAULT, "aria-hidden": !0 }),
                 }),
             (0, i.jsxs)("div", {
                 className: l8.Qq,
@@ -2700,7 +2701,7 @@ function l7(e) {
                         variant: "heading-sm/semibold",
                         color: "text-strong",
                         lineClamp: 1,
-                        children: I.intl.string(t6.default.WhdCGP),
+                        children: I.intl.string(t3.default.WhdCGP),
                     }),
                     (0, i.jsx)(b.E, {
                         variant: "text-xs/medium",
@@ -2722,7 +2723,7 @@ function l5(e) {
             (0, i.jsx)(W.$, {
                 variant: "secondary",
                 size: "sm",
-                icon: a ? void 0 : l3.E,
+                icon: a ? void 0 : l6.E,
                 text: a ? I.intl.string(I.t.KY0ilj) : I.intl.string(Z.default.jB1fWC),
                 onClick: () => {
                     (r(),
@@ -3436,8 +3437,8 @@ async function n2(e) {
     let i = await (0, nq.RT)(t.id, { permissionOverwrites: n });
     if (!i.ok) throw i;
 }
-let n6 = [];
-var n3 = l(344351),
+let n3 = [];
+var n6 = l(344351),
     n8 = l(256693),
     n4 = l(343030),
     n7 = l(317608),
@@ -3995,7 +3996,7 @@ let n9 = {
                         let e = nV.Ay.getCurrentEmbeddedActivity();
                         return null == e ||
                             e.applicationId !== n0.NW ||
-                            e.location.kind !== n3.T.GUILD_CHANNEL ||
+                            e.location.kind !== n6.T.GUILD_CHANNEL ||
                             e.location.channel_id !== n
                             ? null
                             : e;
@@ -4085,7 +4086,7 @@ let n9 = {
                 a = (0, nH.n)(),
                 r = (0, R.bG)([nO.A], () => (null != a ? nO.A.getChannel(a) : void 0), [a]),
                 d = (0, R.bG)([nW.A], () => null != r && nW.A.can(tl.xBc.MANAGE_ROLES, r), [r]),
-                c = (0, R.bG)([nB.A], () => (null == l ? n6 : nB.A.getSortedRoles(l).filter((e) => e.id !== n)), [
+                c = (0, R.bG)([nB.A], () => (null == l ? n3 : nB.A.getSortedRoles(l).filter((e) => e.id !== n)), [
                     l,
                     n,
                 ]),

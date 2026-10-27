@@ -2,6 +2,7 @@ e.exports = {
     vk: "clickable_a3e8db",
     r9: "disabled_a3e8db",
     kL: "container_a3e8db",
+    Kc: "nonInteractive_a3e8db",
     hr: "orbsLottieContainer_a3e8db",
     E$: "orbsLottie_a3e8db",
     t0: "spin_a3e8db",
