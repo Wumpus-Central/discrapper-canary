@@ -3,11 +3,12 @@ n.d(t, {
     IG: () => d,
     Nh: () => s,
     Nu: () => a,
-    Ny: () => E,
+    Ny: () => A,
     S3: () => l,
+    ZX: () => u,
     e2: () => r,
-    tG: () => u,
-    uy: () => _,
+    tG: () => _,
+    uy: () => E,
     xO: () => c,
 });
 var i = n(115093);
@@ -19,8 +20,9 @@ let r = "Social Layer Claim Purchased Item Modal",
     o = "1346069614634864772",
     d = "1288512934112264234",
     c = new Set(["1560340689907089505", "1560711732412940429", "1560711810007699506"]),
-    u = 14,
-    _ = "https://docs.discord.com/partners/commerce/overview";
-function E(e) {
+    u = "1560319795629527231",
+    _ = 14,
+    E = "https://docs.discord.com/partners/commerce/overview";
+function A(e) {
     return `/channels/${e}/game-shop`;
 }

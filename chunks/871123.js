@@ -79,10 +79,11 @@ function R(e) {
     }
 }
 function L(e) {
+    let t = e.id === p.ZX ? "nitro" : "default";
     return {
         id: e.id,
         endsAt: e.ends_at ?? null,
-        flavor: e.flavor ?? "default",
+        flavor: e.flavor ?? t,
         pdp: O(e.pdp),
         storefront: null != e.storefront ? { headerText: e.storefront.header_text } : null,
         checkout: O(e.checkout),
