@@ -1,3 +1,25 @@
+.button__0f074 {
+    box-sizing: border-box;
+    color: var(--icon-subtle);
+    cursor: pointer;
+    height: 24px;
+    opacity: 0;
+    padding: var(--space-4);
+    transition: color 50ms ease-in;
+    width: 24px
+}
+
+.button__0f074:focus-visible,
+.button__0f074:hover {
+    color: var(--icon-strong);
+    transition: color .15s ease-out
+}
+
+.button__0f074.visible__0f074,
+.button__0f074:focus-visible {
+    opacity: 1
+}
+
 .itemIcon_a647f7 {
     align-items: center;
     display: flex;
@@ -32,4 +54,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=232960.f371ed76bf9dd161.css.map*/
+/*# sourceMappingURL=377109.5e9c36e6be6d3347.css.map*/

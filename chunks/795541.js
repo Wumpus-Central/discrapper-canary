@@ -93,7 +93,7 @@ function Q(e) {
         [o, u] = (0, K.kn)(s && !a ? [F.M.DEFAULT_EMOJIS_POPOVER] : []),
         c = o === F.M.DEFAULT_EMOJIS_POPOVER,
         d = i.useCallback(() => {
-            (u(z.i.TAKE_ACTION), (0, G.bf)(q.kx.EMOJI, n, r));
+            (u(z.i.TAKE_ACTION), (0, G.bf)(q.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
         }, [u, n, r]),
         h = i.useCallback(() => {
             u(z.i.USER_DISMISS);

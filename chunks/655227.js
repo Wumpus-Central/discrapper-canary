@@ -33,6 +33,7 @@ let r = (0, n(945810).mj)({
         i.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
         i.M.SOUNDMOJI_BADGE,
         i.M.TRIAL_NUX_EMOJI_BUTTON,
+        i.M.DEFAULT_EMOJIS_PACKS_DISCOVERY_DOT,
         i.M.TRIAL_NUX_EMOJI_PICKER,
         i.M.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
         i.M.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
@@ -387,6 +388,7 @@ let l = {
     864: { is_server_arbitrated: !1 },
     865: { is_server_arbitrated: !1 },
     866: { is_server_arbitrated: !1 },
+    867: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
