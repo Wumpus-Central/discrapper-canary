@@ -373,12 +373,14 @@ let Q = new B();
 class J extends R.EventEmitter {
     stream = new MediaStream();
     sourceId = D.qe;
+    sourceGeneration = 0;
     streamId = null;
     destroyed = !1;
     destroy() {
-        (null != this.stream && (Q.release(this.stream), (this.stream = null)),
-            null != this.streamId && (0, Z.it)(this.streamId),
-            (this.destroyed = !0));
+        ((this.destroyed = !0),
+            this.sourceGeneration++,
+            null != this.stream && (Q.release(this.stream), (this.stream = null)),
+            null != this.streamId && (0, Z.it)(this.streamId));
     }
     getStreamId() {
         return this.streamId;
@@ -386,16 +388,21 @@ class J extends R.EventEmitter {
     async setSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (this.sourceId === e) return this.stream;
-        ((this.sourceId = e), null != this.stream && (Q.release(this.stream), (this.stream = null)));
-        let n = await k();
-        if (this.sourceId === D.qe) return this.setStream(new MediaStream());
-        let i = { width: 1280, ...t };
-        n.some((e) => e.id === this.sourceId) && (i.deviceId = this.sourceId);
+        this.sourceId = e;
+        let n = ++this.sourceGeneration;
+        if ((null != this.stream && (Q.release(this.stream), (this.stream = null)), e === D.qe))
+            return this.setStream(new MediaStream());
+        let i = await k();
+        if (!this.isCurrentSource(n)) return new MediaStream();
+        let r = { width: 1280, ...t };
+        i.some((t) => t.id === e) && (r.deviceId = e);
         try {
-            let e = await Q.acquire({ audio: !1, video: i });
-            if (this.destroyed) throw (Q.release(e), Error("VideoInput: Already destroyed"));
+            let e = await Q.acquire({ audio: !1, video: r });
+            if (!this.isCurrentSource(n))
+                return (Q.release(e), this.destroyed || this.emit("permission", !0), new MediaStream());
             return (this.emit("permission", !0), this.setStream(e));
         } catch (e) {
+            if (!this.isCurrentSource(n)) return new MediaStream();
             if ("string" != typeof e)
                 switch (e.name) {
                     case "PermissionDeniedError":
@@ -411,6 +418,9 @@ class J extends R.EventEmitter {
                 }
             throw e;
         }
+    }
+    isCurrentSource(e) {
+        return !this.destroyed && e === this.sourceGeneration;
     }
     setStream(e) {
         return (
