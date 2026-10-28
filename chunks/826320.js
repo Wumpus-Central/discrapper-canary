@@ -2,7 +2,7 @@ n.d(t, { A: () => ee });
 var i = n(477900),
     l = n(582128),
     s = n(38021),
-    r = n(476041),
+    r = n(263857),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -116,18 +116,18 @@ var I = n(834730),
     v = n(534890),
     R = n(331322),
     y = n(297264),
-    M = n(17839),
-    T = n(22277),
+    T = n(17839),
+    M = n(22277),
     L = n(105292),
     U = n(27948);
 function D() {
     let e = l.useCallback(() => {
-        (0, M.A)({ source: "favorites_empty_sidebar" });
+        (0, T.A)({ source: "favorites_empty_sidebar" });
     }, []);
     return (0, i.jsx)(I.E, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: L.intl.format(T.default.LyZZLX, { onClick: e }),
+        children: L.intl.format(M.default.LyZZLX, { onClick: e }),
     });
 }
 function O() {
@@ -170,7 +170,7 @@ function P() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(y.D, { variant: "heading-md/semibold", children: L.intl.string(T.default["1n0TGE"]) }),
+                    (0, i.jsx)(y.D, { variant: "heading-md/semibold", children: L.intl.string(M.default["1n0TGE"]) }),
                     (0, i.jsx)(D, {}),
                 ],
             }),
@@ -211,14 +211,14 @@ function $(e) {
                           (0, i.jsxs)("div", {
                               className: Z.wx,
                               children: [
-                                  (0, i.jsx)(F.A, { className: Z.TK, children: L.intl.string(T.default.oHWnLy) }),
+                                  (0, i.jsx)(F.A, { className: Z.TK, children: L.intl.string(M.default.oHWnLy) }),
                                   (0, i.jsx)(w.m, {
                                       text: L.intl.string(L.t.WAI6xu),
                                       children: (0, i.jsx)(V.D, {
                                           className: Z.r,
                                           onClick: l,
                                           role: "button",
-                                          "aria-label": L.intl.string(T.default.F3dWTe),
+                                          "aria-label": L.intl.string(M.default.F3dWTe),
                                           children: (0, i.jsx)(H.P, {
                                               size: "xs",
                                               color: "currentColor",
@@ -240,7 +240,7 @@ function $(e) {
                                               variant: "secondary",
                                               size: "sm",
                                               text: L.intl.string(L.t.OYkgVk),
-                                              "aria-label": L.intl.formatToPlainString(T.default.Hevebj, {
+                                              "aria-label": L.intl.formatToPlainString(M.default.Hevebj, {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? X.Ay.getName(e.record)
