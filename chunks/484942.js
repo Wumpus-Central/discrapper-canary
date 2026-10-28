@@ -1,5 +1,4 @@
 !(function (i) {
-    "use strict";
     var e = {
         ss: "sekund\u0117_sekund\u017Ei\u0173_sekundes",
         m: "minut\u0117_minut\u0117s_minut\u0119",

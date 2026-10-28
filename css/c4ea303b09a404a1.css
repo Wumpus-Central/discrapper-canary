@@ -9,7 +9,7 @@
 
 .card__73abe,
 .container__73abe {
-    border-radius: var(--radius-md)
+    border-radius: var(--radius-sm)
 }
 
 .card__73abe {
@@ -62,7 +62,7 @@
 .suggestedFooter__73abe {
     align-items: center;
     background: var(--brand-500);
-    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
     display: flex;
     inset-block-end: 0;
     inset-inline: 0;
@@ -145,4 +145,4 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=b38f1f79c4e23e94.css.map*/
+/*# sourceMappingURL=c4ea303b09a404a1.css.map*/
