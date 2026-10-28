@@ -111,13 +111,16 @@ function g(e) {
     });
 }
 function E(e) {
-    let { label: t, value: l, className: a } = e;
+    let { label: t, value: l, className: r } = e,
+        i = a.useId();
     return (0, n.jsxs)(c.E, {
         variant: "text-lg/semibold",
         color: "text-strong",
-        className: s()(p.p8, a),
+        className: s()(p.p8, r),
+        role: "group",
+        "aria-labelledby": i,
         children: [
-            (0, n.jsx)("span", { children: t ?? f.intl.string(x.default.Zxav97) }),
+            (0, n.jsx)("span", { id: i, children: t ?? f.intl.string(x.default.Zxav97) }),
             (0, n.jsx)("span", { children: l }),
         ],
     });
