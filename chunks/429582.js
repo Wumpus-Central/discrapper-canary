@@ -581,6 +581,7 @@ function eH() {
     null != eO
         ? eF(!0)
         : 0 === l.size ||
+          null == T ||
           y ||
           ((y = !0),
           requestAnimationFrame(() => {
@@ -728,7 +729,7 @@ function eK(e) {
             )
                 return void eV(!0);
             if ("childList" === t.type) {
-                if (n.some((e) => (0, i.vq)(e, Element))) return void eV(!0);
+                if (n.some((e) => (0, i.vq)(e, Element) && (null != T || eI(e)))) return void eV(!0);
             } else if ((0, i.vq)(e, Element) && (g.has(e) || eI(e))) return void eV(!0);
         }
         e.some((e) => "attributes" === e.type) && eH();

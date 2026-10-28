@@ -11,5 +11,6 @@ e.exports = {
     GV: "selectedMention_a9077e",
     Rj: "selectedMentionIcon_a9077e",
     zq: "selectedMessage_a9077e",
+    dg: "agentHiddenMessage_a9077e",
     WO: "selectedBody_a9077e",
 };

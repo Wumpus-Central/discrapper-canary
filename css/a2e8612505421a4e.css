@@ -1073,6 +1073,10 @@
     display: block
 }
 
+.agentHiddenMessage_a9077e {
+    color: var(--text-muted)
+}
+
 .selectedBody_a9077e,
 .selectedBody_a9077e>* {
     display: inline
@@ -1092,4 +1096,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=a9cc4993b9c82d6c.css.map*/
+/*# sourceMappingURL=a2e8612505421a4e.css.map*/
