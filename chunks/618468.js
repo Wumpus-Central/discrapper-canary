@@ -2643,6 +2643,7 @@ class tT extends C.G {
             },
             { no: 48, name: "lifecycle_plan", kind: "message", T: () => tb },
             { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 },
+            { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
@@ -2682,6 +2683,7 @@ class tT extends C.G {
             isManaged: !1,
             eligibilityPersistence: 0,
             isFeatureFlag: !1,
+            isOfficialHoldout: !1,
         };
         return (
             globalThis.Object.defineProperty(t, N.$, { enumerable: !1, value: this }),
@@ -2844,6 +2846,9 @@ class tT extends C.G {
                 case 49:
                     r.isFeatureFlag = e.bool();
                     break;
+                case 50:
+                    r.isOfficialHoldout = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2926,7 +2931,8 @@ class tT extends C.G {
             0 !== e.eligibilityPersistence && t.tag(42, g.O0.Varint).int32(e.eligibilityPersistence),
             e.lifecyclePlan &&
                 tb.internalBinaryWrite(e.lifecyclePlan, t.tag(48, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.isFeatureFlag && t.tag(49, g.O0.Varint).bool(e.isFeatureFlag));
+            !1 !== e.isFeatureFlag && t.tag(49, g.O0.Varint).bool(e.isFeatureFlag),
+            !1 !== e.isOfficialHoldout && t.tag(50, g.O0.Varint).bool(e.isOfficialHoldout));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
