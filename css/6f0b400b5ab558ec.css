@@ -1,5 +1,6 @@
 .fileMention__24aa8 {
     background: var(--mention-background);
+    border-radius: var(--radius-xs);
     color: var(--mention-foreground);
     display: inline-block;
     max-width: 100%;
@@ -11,12 +12,16 @@
     white-space: nowrap
 }
 
-.fileMention__24aa8,
-.thumbnail__24aa8 {
-    border-radius: var(--radius-xs)
+.fileMentionClickable__24aa8 {
+    cursor: pointer
+}
+
+.fileMentionClickable__24aa8:hover {
+    text-decoration: underline
 }
 
 .thumbnail__24aa8 {
+    border-radius: var(--radius-xs);
     height: 1em;
     margin-inline-end: .25em;
     -o-object-fit: cover;
@@ -59,4 +64,4 @@
     padding-block: var(--space-16)
 }
 
-/*# sourceMappingURL=218600e02a443fde.css.map*/
+/*# sourceMappingURL=6f0b400b5ab558ec.css.map*/

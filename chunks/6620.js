@@ -2779,9 +2779,9 @@ function l3(e) {
         "data-conjure-clarification-option": r.id,
         children: [
             (0, a.jsxs)(nR.D, {
-                className: l1.Up,
+                className: f()(l1.Up, { [l1.XF]: null != r.image }),
                 "data-conjure-image-option-pick": !0,
-                onClick: o ? void 0 : () => m(r),
+                onClick: o ? (null != r.image ? () => h(r) : void 0) : () => m(r),
                 onKeyDown: (e) => {
                     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
                     let t = { ArrowLeft: -1, ArrowUp: -1, ArrowRight: 1, ArrowDown: 1 }[e.key];
@@ -2868,31 +2868,41 @@ function l3(e) {
     });
 }
 function l4(e) {
-    var t;
-    let { projectId: n, question: l, selectedIds: r, disabled: s, reachable: u = !0, onPick: o, own: c } = e,
-        d = !0 === l.multi_select,
-        { options: m } = l,
-        h = m.length > 4 ? "gallery" : "row",
-        g = i.useRef(null),
-        p = i.useRef(new Map()),
-        [x, v] = i.useState(null),
-        j = null != x && m.some((e) => e.id === x) ? x : (m.find((e) => r.includes(e.id)) ?? m[0])?.id,
+    let { projectId: t, question: n, selectedIds: l, disabled: r, reachable: s = !0, onPick: u, own: o } = e,
+        c = !0 === n.multi_select,
+        { options: d } = n,
+        m = d.length > 4 ? "gallery" : "row",
+        h = i.useRef(null),
+        g = i.useRef(new Map()),
+        [p, x] = i.useState(null),
+        v = null != p && d.some((e) => e.id === p) ? p : (d.find((e) => l.includes(e.id)) ?? d[0])?.id,
+        j = i.useMemo(() => {
+            var e;
+            return null == o.image
+                ? null
+                : ((e = o.image),
+                  {
+                      id: `own:${e.attachment.id}`,
+                      label: eb.intl.string(ej.default.SUdqCQ),
+                      image: { attachment_id: e.attachment.id },
+                  });
+        }, [o.image]),
         b = i.useCallback(
             (e) => {
-                let t = m.flatMap((e) => (null != e.image ? [{ ...e, image: e.image }] : [])),
-                    l = t.findIndex((t) => t.id === e.id);
+                let n = (null == j ? d : [...d, j]).flatMap((e) => (null != e.image ? [{ ...e, image: e.image }] : [])),
+                    l = n.findIndex((t) => t.id === e.id);
                 l < 0 ||
-                    Promise.all(t.map((e) => (0, tD.PK)(n, e.image.attachment_id))).then(
+                    Promise.all(n.map((e) => (0, tD.PK)(t, e.image.attachment_id))).then(
                         (e) => {
                             (0, lJ.R)({
-                                items: e.map((e, n) => {
+                                items: e.map((e, t) => {
                                     let l,
-                                        r = p.current.get(t[n].id);
+                                        r = g.current.get(n[t].id);
                                     return {
                                         type: "IMAGE",
                                         url: e,
                                         original: e,
-                                        alt: t[n].label,
+                                        alt: n[t].label,
                                         ...(null != r
                                             ? ((l = Math.max(1, 480 / Math.max(r.width, r.height))),
                                               { width: Math.round(r.width * l), height: Math.round(r.height * l) })
@@ -2907,86 +2917,77 @@ function l4(e) {
                         () => {},
                     );
             },
-            [m, n],
+            [d, j, t],
         ),
         y = i.useCallback(
             (e, t) => {
-                let n = (m.findIndex((t) => t.id === e.id) + t + m.length) % m.length,
-                    l = m[n];
-                (v(l.id), g.current?.querySelectorAll("[data-conjure-image-option-pick]")[n]?.focus(), d || s || o(l));
+                let n = (d.findIndex((t) => t.id === e.id) + t + d.length) % d.length,
+                    l = d[n];
+                (x(l.id), h.current?.querySelectorAll("[data-conjure-image-option-pick]")[n]?.focus(), c || r || u(l));
             },
-            [s, d, o, m],
-        ),
-        k =
-            null == c.image
-                ? null
-                : ((t = c.image),
-                  {
-                      id: `own:${t.attachment.id}`,
-                      label: eb.intl.string(ej.default.SUdqCQ),
-                      image: { attachment_id: t.attachment.id },
-                  });
+            [r, c, u, d],
+        );
     return (0, a.jsxs)("div", {
         className: l1.Nz,
         "data-conjure-image-options": !0,
         children: [
             (0, a.jsxs)("div", {
-                ref: g,
-                className: f()(l1.fF, "gallery" === h ? l1.nV : l1.nM, { [l1.m3]: d }),
-                role: d ? "group" : "radiogroup",
-                "aria-labelledby": `${l.id}-label`,
-                "data-layout": h,
-                "data-count": m.length,
+                ref: h,
+                className: f()(l1.fF, "gallery" === m ? l1.nV : l1.nM, { [l1.m3]: c }),
+                role: c ? "group" : "radiogroup",
+                "aria-labelledby": `${n.id}-label`,
+                "data-layout": m,
+                "data-count": d.length,
                 children: [
-                    m.map((e) =>
+                    d.map((e) =>
                         (0, a.jsx)(
                             l3,
                             {
-                                projectId: n,
+                                projectId: t,
                                 option: e,
-                                multi: d,
-                                selected: r.includes(e.id),
-                                disabled: s,
-                                reachable: u,
-                                tabbable: d || e.id === j,
+                                multi: c,
+                                selected: l.includes(e.id),
+                                disabled: r,
+                                reachable: s,
+                                tabbable: c || e.id === v,
                                 onPick: (e) => {
-                                    (v(e.id), o(e));
+                                    (x(e.id), u(e));
                                 },
                                 onView: b,
                                 onArrow: y,
-                                onMeasured: (t) => p.current.set(e.id, t),
+                                onMeasured: (t) => g.current.set(e.id, t),
                             },
                             e.id,
                         ),
                     ),
-                    null != k
+                    null != j
                         ? (0, a.jsx)(
                               l3,
                               {
-                                  projectId: n,
-                                  option: k,
-                                  multi: d,
-                                  selected: c.selected,
-                                  disabled: s,
-                                  reachable: u,
+                                  projectId: t,
+                                  option: j,
+                                  multi: c,
+                                  selected: o.selected,
+                                  disabled: r,
+                                  reachable: s,
                                   tabbable: !0,
-                                  onPick: c.onPick,
-                                  onView: () => void 0,
+                                  onPick: o.onPick,
+                                  onView: b,
                                   onArrow: () => void 0,
-                                  onMeasured: () => void 0,
-                                  onRemove: c.onRemove,
+                                  onMeasured: (e) => g.current.set(j.id, e),
+                                  onRemove: o.onRemove,
                               },
-                              k.id,
+                              j.id,
                           )
                         : null,
                 ],
             }),
             (0, a.jsx)(l7, {
-                projectId: n,
-                own: c,
-                disabled: s,
-                reachable: u,
-                uploadText: eb.intl.string(/\bicons?\b/i.test(l.question) ? ej.default.qU4WN6 : ej.default.cbMDDB),
+                projectId: t,
+                own: o,
+                disabled: r,
+                reachable: s,
+                uploadText: eb.intl.string(/\bicons?\b/i.test(n.question) ? ej.default.qU4WN6 : ej.default.cbMDDB),
             }),
         ],
     });

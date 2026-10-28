@@ -32,7 +32,8 @@
 
 .design_f3ecdb {
     aspect-ratio: 3/2;
-    background: var(--background-base-lower)
+    background: var(--background-base-lower);
+    cursor: pointer
 }
 
 .design_f3ecdb,
@@ -151,6 +152,7 @@
     background: var(--background-base-lower);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
+    cursor: pointer;
     display: block;
     height: var(--space-64);
     max-width: calc(var(--space-64)*3);
@@ -504,4 +506,4 @@
     }
 }
 
-/*# sourceMappingURL=95b205a9a74f90e1.css.map*/
+/*# sourceMappingURL=a43afbd8481396ec.css.map*/

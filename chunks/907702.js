@@ -14,6 +14,7 @@ _.exports = {
     q3: "indicator__965fb",
     m3: "multi__965fb",
     B4: "view__965fb",
+    XF: "pickViewable__965fb",
     pG: "caption__965fb",
     ar: "conjure-image-option-loading__965fb",
     ZV: "own__965fb",
