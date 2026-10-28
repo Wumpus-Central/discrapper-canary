@@ -11904,7 +11904,7 @@
   "yQGvTx": "{number, plural,one {You must unselect 1 friend.}other {You must unselect # friends.}",
   "kOguHH": "The selected users will fill the group.",
   "1UgGdm": "Invite friends to {groupname}",
-  "ABMKx3": "{members, number} Members",
+  "ABMKx3": "{members, plural,one {# Member}other {# Members}",
   "BXG0Eh": "{users, plural,=1 {{user1}}=2 {{user1} and {user2}}other {{user1}, {user2}, and {extras, plural,one {# other}other {# others}}",
   "yZOtoD": "Add to Group",
   "U3CkDg": "Fit up to {number} people in this GDM with Nitro.",
