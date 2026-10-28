@@ -1,0 +1,110 @@
+.dialog__326c6 {
+    bottom: 0;
+    inset-inline-end: var(--devtools-sidebar-width, 0);
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: fixed;
+    top: var(--custom-app-top-bar-height)
+}
+
+.hidden__326c6 {
+    visibility: hidden
+}
+
+.container_e70b7d,
+.overlay_e70b7d {
+    inset: 0;
+    position: absolute
+}
+
+.interactive_e70b7d .close_e70b7d,
+.interactive_e70b7d .panel_e70b7d {
+    pointer-events: auto
+}
+
+.overlay_e70b7d {
+    --custom-conjure-overlay-enter: 150ms;
+    --custom-conjure-overlay-exit: 100ms;
+    --custom-conjure-overlay-ease: cubic-bezier(0, 0, 0.2, 1)
+}
+
+.close_e70b7d,
+.panel_e70b7d {
+    opacity: 0;
+    transition: opacity var(--custom-conjure-overlay-exit) var(--custom-conjure-overlay-ease)
+}
+
+.shown_e70b7d .close_e70b7d,
+.shown_e70b7d .panel_e70b7d {
+    opacity: 1;
+    transition: opacity var(--custom-conjure-overlay-enter) var(--custom-conjure-overlay-ease);
+
+    @starting-style {
+        opacity: 0
+    }
+}
+
+.full-motion .panel_e70b7d {
+    transform: translateY(-16px);
+    transition: opacity var(--custom-conjure-overlay-exit) var(--custom-conjure-overlay-ease), transform var(--custom-conjure-overlay-exit) var(--custom-conjure-overlay-ease)
+}
+
+.full-motion .shown_e70b7d .panel_e70b7d {
+    transform: none;
+    transition: opacity var(--custom-conjure-overlay-enter) var(--custom-conjure-overlay-ease), transform var(--custom-conjure-overlay-enter) var(--custom-conjure-overlay-ease);
+
+    @starting-style {
+        transform: translateY(-16px)
+    }
+}
+
+.panel_e70b7d {
+    --custom-conjure-overlay-frame-border: var(--app-frame-border);
+    border-radius: var(--radius-md);
+    inset-inline: 64px;
+    bottom: 5%;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    top: 5%;
+    --custom-conjure-overlay-chat-background: var(--background-gradient-app-frame, var(--background-base-lowest))
+}
+
+.close_e70b7d,
+.panel_e70b7d {
+    position: absolute
+}
+
+.close_e70b7d {
+    inset-inline-end: 16px;
+    top: 16px
+}
+
+.sidebar_e70b7d {
+    background: var(--background-base-lowest);
+    border: 1px solid var(--app-frame-border);
+    border-end-start-radius: var(--radius-md);
+    border-inline-end-color: var(--border-subtle);
+    border-start-start-radius: var(--radius-md);
+    flex: 0 0 calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 1px);
+    flex-direction: column;
+    overflow: hidden
+}
+
+.content_e70b7d,
+.sidebar_e70b7d {
+    display: flex;
+    min-width: 0
+}
+
+.content_e70b7d {
+    flex: 1 1 auto;
+    flex-direction: column;
+    position: relative
+}
+
+.panel_e70b7d:focus {
+    outline: none
+}
+
+/*# sourceMappingURL=38a96f37fc22fdae.css.map*/
