@@ -730,6 +730,7 @@ var i,
         (E.SIDEBAR_CHAT = "SIDEBAR_CHAT"),
         (E.PROFILE = "PROFILE"),
         (E.SUMMARIES = "SUMMARIES"),
+        (E.CONVERSATIONS = "CONVERSATIONS"),
         (E.FRIENDS = "FRIENDS"),
         E),
     tJ =

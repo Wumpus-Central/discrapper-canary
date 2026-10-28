@@ -14,8 +14,8 @@ var l,
     p = n(734066),
     A = n(274372),
     f = n(572164),
-    C = n(111994),
-    x = n(352527),
+    x = n(111994),
+    C = n(352527),
     E = n(267102),
     S = n(969632),
     I = n(554146),
@@ -85,8 +85,8 @@ var er = n(661531),
     ep = n(39623),
     eA = n(588190),
     ef = n(831544),
-    eC = n(152367),
-    ex = n(55730),
+    ex = n(152367),
+    eC = n(55730),
     eE = n(47167),
     eS = n(994500),
     eI = n(287809),
@@ -124,8 +124,8 @@ function eb(e) {
         } = e,
         { analyticsLocations: A } = (0, q.Ay)(),
         f = (0, X.s)({ channel: t }),
-        C = (0, o.bG)([ee.A], () => ee.A.isInProgress()),
-        x = (0, en.wX)();
+        x = (0, o.bG)([ee.A], () => ee.A.isInProgress()),
+        C = (0, en.wX)();
     function E() {
         (0, et.Tv)(t, void 0, "Plus Button");
     }
@@ -346,9 +346,9 @@ function eb(e) {
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
                                 action: () => Q.A.summarizeThread(t),
-                                loading: C,
-                                disabled: C,
-                                children: C
+                                loading: x,
+                                disabled: x,
+                                children: x
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
@@ -387,7 +387,7 @@ function eb(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                disabled: x,
+                                disabled: C,
                                 action: () => {
                                     (0, el.K3)(t.id);
                                 },
@@ -426,7 +426,7 @@ let eM = s.memo(function (e) {
             () => (l.type === ey.rbe.DM ? Z.filter((e) => !O.A.getParty(e.party?.id)?.has(l.getRecipientId())) : Z),
             [Z, l],
         ),
-        { onShareClick: Q } = (0, x.A)(l.id),
+        { onShareClick: Q } = (0, C.A)(l.id),
         ee = (0, o.bG)([A.Ay], () => A.Ay.hasClips()),
         [et, en] = s.useState(null),
         el = (0, p.sw)() && (J || ee),
@@ -472,19 +472,20 @@ let eM = s.memo(function (e) {
                     n.e("237715"),
                     n.e("231782"),
                     n.e("895008"),
+                    n.e("352566"),
                     n.e("793784"),
                     n.e("689160"),
                     n.e("520342"),
                     n.e("306270"),
-                    n.e("345627"),
+                    n.e("650676"),
                     n.e("717278"),
-                ]).then(n.bind(n, 279510));
+                ]).then(n.bind(n, 272351));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
                         channelId: l.id,
-                        initialMainLink: C.oH.ALL_CLIPS,
-                        picker: { onPick: (e) => Q({ clips: [e] }), action: C.qh.SHARE, allowMultiSelect: !0 },
+                        initialMainLink: x.oH.ALL_CLIPS,
+                        picker: { onPick: (e) => Q({ clips: [e] }), action: x.qh.SHARE, allowMultiSelect: !0 },
                     });
             },
             { modalKey: eN.nm },
@@ -552,9 +553,9 @@ let eM = s.memo(function (e) {
                         ? p.push({ type: "SLASH_COMMAND", icon: eh.k, display: N.intl.string(N.t.Bbvp6G) })
                         : p.push({ type: "APP_LAUNCHER", icon: eh.k, display: N.intl.string(N.t.hSQgW9) })),
                 r.forEach((e) => {
-                    !(0, ex.A)(e, ey.jUm.EMBEDDED) &&
+                    !(0, eC.A)(e, ey.jUm.EMBEDDED) &&
                         (e.type === ey.$pd.PLAYING &&
-                            (0, ex.A)(e, ey.jUm.JOIN) &&
+                            (0, eC.A)(e, ey.jUm.JOIN) &&
                             p.push({
                                 type: "INVITE_TO_GAME",
                                 icon: em.L,
@@ -565,7 +566,7 @@ let eM = s.memo(function (e) {
                                 activity: e,
                             }),
                         e.type === ey.$pd.LISTENING &&
-                            (0, ex.A)(e, ey.jUm.SYNC) &&
+                            (0, eC.A)(e, ey.jUm.SYNC) &&
                             p.push({
                                 type: "INVITE_TO_LISTEN",
                                 icon: eg.J,
@@ -576,7 +577,7 @@ let eM = s.memo(function (e) {
                                 activity: e,
                             }),
                         e.type === ey.$pd.WATCHING &&
-                            (0, ex.A)(e, ey.jUm.SYNC) &&
+                            (0, eC.A)(e, ey.jUm.SYNC) &&
                             p.push({
                                 type: "INVITE_TO_WATCH",
                                 icon: ep.EyeIcon,
@@ -596,7 +597,7 @@ let eM = s.memo(function (e) {
                     }),
                 a.isThread() &&
                     h &&
-                    p.push({ type: "SUMMARIZE_THREAD", icon: eC.D, display: N.intl.string(N.t.EXfguE) }),
+                    p.push({ type: "SUMMARIZE_THREAD", icon: ex.D, display: N.intl.string(N.t.EXfguE) }),
                 p
             );
         })({

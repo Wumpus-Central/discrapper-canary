@@ -1,9 +1,10 @@
 n.d(t, { a: () => r });
 var i = n(435558);
 function r(e) {
-    let t = e.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
-        n =
-            null != t
+    var t;
+    let n = e.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
+        r =
+            null != n
                 ? (function (e) {
                       try {
                           let t = JSON.parse(e);
@@ -19,15 +20,15 @@ function r(e) {
                       } catch {
                           return null;
                       }
-                  })(t.content_json)
+                  })(n.content_json)
                 : null;
-    return n?.title == null || "" === n.title
+    return r?.title == null || "" === r.title
         ? null
         : {
               id: e.id,
-              title: n.title,
-              briefSummary: n.brief_summary ?? null,
-              keyPoints: n.key_points,
+              title: r.title,
+              briefSummary: r.brief_summary ?? null,
+              keyPoints: r.key_points,
               channelId: e.channel_id,
               guildId: e.guild_id,
               messageIds: e.message_ids,
@@ -49,5 +50,28 @@ function r(e) {
               engagement: e.engagement,
               substance: e.substance,
               dynamics: e.dynamics,
+              moderation:
+                  null != e.moderation
+                      ? {
+                            status: (t = e.moderation).status,
+                            statusReason: t.status_reason,
+                            messageViolationRate: t.message_violation_rate,
+                            flaggedMessageCount: t.flagged_message_count,
+                            totalMessageCount: t.total_message_count,
+                            flaggedMessageIds: t.flagged_message_ids,
+                            flaggedMessageDetails: t.flagged_message_details.map((e) => ({
+                                messageId: e.message_id,
+                                category: e.category,
+                                severity: e.severity,
+                                confidence: e.confidence,
+                                reason: e.reason,
+                            })),
+                            flaggedSummaryDetails: t.flagged_summary_details,
+                            flaggedTitle: t.flagged_title,
+                            flaggedSummary: t.flagged_summary,
+                            flaggedKeyPoints: t.flagged_key_points,
+                            failedMessageIds: t.failed_message_ids,
+                        }
+                      : null,
           };
 }
