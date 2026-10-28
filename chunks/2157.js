@@ -4,7 +4,7 @@ var l = n(582128),
     r = n(561573),
     a = n(240248),
     s = n(936785),
-    o = n(640363),
+    o = n(879043),
     u = n(296045),
     c = n(556766),
     d = n(459005),
@@ -63,6 +63,7 @@ function h(e) {
                         endsAt: e,
                         flavor: S.flavor,
                         rewardRequirements: S.rewardRequirements,
+                        rewardStatus: S.rewardStatus,
                     };
                 }
                 case "sku_purchase_badge":

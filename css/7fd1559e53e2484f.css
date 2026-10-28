@@ -25,6 +25,31 @@
     }
 }
 
+.activationButton__1c9c7 {
+    padding: var(--space-4) 0
+}
+
+@media (max-width:485px) {
+    .notice__1c9c7 {
+        min-width: 0;
+        overflow-wrap: anywhere
+    }
+
+    .notice__1c9c7>svg {
+        flex-shrink: 0
+    }
+
+    .notice__1c9c7>div {
+        flex-wrap: wrap;
+        min-width: 0
+    }
+
+    .notice__1c9c7>div>div {
+        max-width: 100%;
+        min-width: 0
+    }
+}
+
 .modalRoot__38ccf {
     background-color: var(--control-secondary-background-default);
     height: 560px;
@@ -463,4 +488,4 @@
     }
 }
 
-/*# sourceMappingURL=3698922424826bce.css.map*/
+/*# sourceMappingURL=7fd1559e53e2484f.css.map*/

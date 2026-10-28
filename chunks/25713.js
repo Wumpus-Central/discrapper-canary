@@ -369,7 +369,7 @@ let D = {
         isEligible: { label: "Purchase Eligible", type: "boolean", defaultValue: !0 },
     },
 };
-var k = l(213113);
+var k = l(979988);
 (l(323874), l(14289), l(35956));
 var M = l(366523);
 let B = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),

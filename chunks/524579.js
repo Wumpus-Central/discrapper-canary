@@ -709,7 +709,7 @@ function eQ(e) {
                                                         n.e("630267"),
                                                         n.e("576909"),
                                                         n.e("27355"),
-                                                        n.e("377065"),
+                                                        n.e("953665"),
                                                         n.e("406174"),
                                                         n.e("268582"),
                                                         n.e("146070"),
@@ -967,8 +967,8 @@ function e1(e) {
 }
 var e2 = n(34188),
     e8 = n(700623),
-    e7 = n(177953),
-    e3 = n(825484),
+    e3 = n(177953),
+    e7 = n(825484),
     e6 = n(683071),
     e4 = n(900797),
     e9 = n(847374),
@@ -1306,7 +1306,7 @@ function tT(e) {
         className: tI.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1342,7 +1342,7 @@ function tL(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Z$)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e3.e, {
+            ? (0, r.jsxs)(e7.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tg, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1526,10 +1526,10 @@ var tK = n(111042),
     t1 = n(594061),
     t2 = n(935208),
     t8 = n(630248),
-    t7 = n(355097);
-function t3(e, t) {
+    t3 = n(355097);
+function t7(e, t) {
     o.useEffect(() => {
-        t1.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t1.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t8.A], () => t8.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2190,7 +2190,7 @@ var nZ = n(984516),
     n1 = n(994369),
     n2 = n(240591),
     n8 = n(46477);
-function n7(e, t) {
+function n3(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2240,7 +2240,7 @@ function n7(e, t) {
         i,
     ).slice(0, i);
 }
-function n3(e, t) {
+function n7(e, t) {
     let n = t8.A.getScoreWithoutLoadingLatest(e.id);
     return t8.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
@@ -2488,7 +2488,7 @@ function lu(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n7(c, {
+                    return n3(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2625,7 +2625,7 @@ function lu(e) {
                                     }),
                             ));
                     } else a && (u = m);
-                    return n7(u, {
+                    return n3(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2672,7 +2672,7 @@ function lu(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n6],
+                        sortComparers: [n7, n6],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3176,7 +3176,7 @@ function ly(e) {
                             let e = [];
                             return (c && e.push(nl.gq), e);
                         }, [c]),
-                        u = t3(r, a),
+                        u = t7(r, a),
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
@@ -3355,7 +3355,7 @@ function lP(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t3(
+                c = t7(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

@@ -31,7 +31,7 @@ let r = "social-layer-storefront-product-details-modal",
                     n.e("653383"),
                     n.e("501277"),
                     n.e("343298"),
-                    n.e("849560"),
+                    n.e("705358"),
                     n.e("60955"),
                     n.e("692990"),
                     n.e("27355"),
@@ -62,9 +62,10 @@ let r = "social-layer-storefront-product-details-modal",
                     n.e("365074"),
                     n.e("437254"),
                     n.e("963333"),
-                    n.e("302564"),
-                    n.e("653282"),
-                ]).then(n.bind(n, 213113));
+                    n.e("208922"),
+                    n.e("449763"),
+                    n.e("493301"),
+                ]).then(n.bind(n, 979988));
                 return (n) =>
                     (0, l.jsx)(e, {
                         ...n,
