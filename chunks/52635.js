@@ -18,34 +18,27 @@ function C(e) {
             purchaseButtonText: i,
             isGift: o,
             checkoutLegalType: p = c.I0.GiftGameShop,
-            hasSeparateAccountLinkNotice: C = !1,
         } = e,
-        { immediateDelivery: f } = (0, u.U)(),
-        E = (function (e) {
-            let {
-                    skuId: t,
-                    purchaseButtonText: n,
-                    checkoutLegalType: l = c.I0.OrbsGameShop,
-                    isGift: i = !1,
-                    hasSeparateAccountLinkNotice: o = !1,
-                } = e,
-                { checkoutReviewButtonLabel: u } = (0, d.t4)((e) => ({
+        { immediateDelivery: C } = (0, u.U)(),
+        f = (function (e) {
+            let { skuId: t, purchaseButtonText: n, checkoutLegalType: l = c.I0.OrbsGameShop, isGift: i = !1 } = e,
+                { checkoutReviewButtonLabel: o } = (0, d.t4)((e) => ({
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
                 })),
-                p = (0, r.bG)([m.A], () => m.A.get(t), [t]),
-                C = p?.productLine,
-                f = p?.applicationId,
-                E = (0, r.bG)([s.A], () => (C === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(f) : null), [f, C]),
-                { fetched: S, hasAlreadyLinked: g } = (0, a.RD)(E);
+                u = (0, r.bG)([m.A], () => m.A.get(t), [t]),
+                p = u?.productLine,
+                C = u?.applicationId,
+                f = (0, r.bG)([s.A], () => (p === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(C) : null), [C, p]),
+                { fetched: E, hasAlreadyLinked: S } = (0, a.RD)(f);
             return {
                 type: l,
-                purchaseButtonText: n ?? u,
-                applicationName: E?.name,
-                applicationId: f,
-                shouldAppendDisclaimer: i || (S && (o ? g : !g)),
+                purchaseButtonText: n ?? o,
+                applicationName: f?.name,
+                applicationId: C,
+                shouldAppendDisclaimer: i || (E && S),
             };
-        })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: p, hasSeparateAccountLinkNotice: C });
-    return (0, l.jsx)(c._P, { variant: E, paymentSourceType: n, immediateDelivery: f });
+        })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: p });
+    return (0, l.jsx)(c._P, { variant: f, paymentSourceType: n, immediateDelivery: C });
 }
 function f(e) {
     let { paymentSourceType: t } = e,
