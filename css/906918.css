@@ -277,19 +277,6 @@
     width: 16px
 }
 
-.screen__212ba {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-12);
-    height: 100%;
-    justify-content: safe center;
-    overflow-y: auto;
-    padding: var(--space-32);
-    text-align: center
-}
-
 .description__9fbff {
     line-height: 1.2
 }
@@ -916,14 +903,6 @@
     gap: var(--space-4)
 }
 
-.content__9c1ea {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-12);
-    max-width: 686px
-}
-
 .icon__44598 {
     align-items: center;
     display: flex;
@@ -1396,4 +1375,4 @@
     gap: 2px
 }
 
-/*# sourceMappingURL=833621.1028bd86a792db50.css.map*/
+/*# sourceMappingURL=906918.3e5f54ec5cace61f.css.map*/

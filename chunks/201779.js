@@ -7,7 +7,6 @@ var i,
     o =
         (((r = {}).HOME = "home"),
         (r.INTRODUCTION = "introduction"),
-        (r.NO_DATA_INTRO = "no_data_intro"),
         (r.VOICE_INTRO = "voice_intro"),
         (r.VOICE_STATS = "voice_stats"),
         (r.VOICE_GENERAL = "voice_general"),
@@ -67,8 +66,7 @@ var _ =
         (a.SUMMARY = "summary"),
         a),
     E =
-        (((s = {}).NO_DATA_INTRO = "no_data_intro"),
-        (s.VOICE_INTRO = "voice_intro"),
+        (((s = {}).VOICE_INTRO = "voice_intro"),
         (s.VOICE = "voice"),
         (s.MESSAGES_INTRO = "messages_intro"),
         (s.MESSAGES = "messages"),
@@ -88,7 +86,6 @@ var _ =
 let A = {
     home: { characterStage: "idle" },
     introduction: { characterStage: "introduction" },
-    no_data_intro: { characterStage: "introduction", statsScreen: "no_data_intro" },
     voice_intro: { characterStage: "face", statsScreen: "voice_intro" },
     voice_stats: { characterStage: "face", statsScreen: "voice" },
     voice_general: { characterStage: "face", statsScreen: "voice" },

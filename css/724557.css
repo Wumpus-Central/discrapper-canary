@@ -644,4 +644,47 @@
     stroke: currentColor
 }
 
-/*# sourceMappingURL=750277.1ca09c5cfff21f7b.css.map*/
+.screen__212ba {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    height: 100%;
+    justify-content: safe center;
+    overflow-y: auto;
+    padding: var(--space-32);
+    text-align: center
+}
+
+.content_c9bcb8 {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-inline-start: min(8%, calc(var(--space-96) + var(--space-12)));
+    max-width: 400px;
+    text-align: start
+}
+
+.year_c9bcb8 {
+    align-items: center;
+    color: var(--custom-checkpoint-primary);
+    display: flex;
+    font-family: Munro, sans-serif;
+    font-size: 144px;
+    gap: var(--space-8)
+}
+
+.globe_c9bcb8 {
+    flex: 0;
+    height: .75em
+}
+
+.descriptions_c9bcb8 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32)
+}
+
+/*# sourceMappingURL=724557.fd4ef66b6a23f3c2.css.map*/
