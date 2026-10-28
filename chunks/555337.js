@@ -18,8 +18,8 @@ var _ = l(435558),
     y = l(287809),
     O = l(149790),
     R = l(935208),
-    b = l(794967),
-    P = l(557193),
+    P = l(794967),
+    b = l(162113),
     m = l(310527),
     v = l(595818),
     F = l(652215),
@@ -74,8 +74,8 @@ let V = [
     k = !1,
     X = F.XlH.CLOSED,
     W = {},
-    j = null,
-    x = !1,
+    x = null,
+    j = !1,
     J = !1,
     Z = !1,
     q = null,
@@ -125,7 +125,7 @@ function eS(e) {
         (K = Q = I.guildSpaceSettings),
         (X = F.XlH.OPEN),
         (W = {}),
-        (j = null),
+        (x = null),
         (d = R.default.castGuildIdAsEveryoneGuildRoleId(n)),
         (el = o.mfaLevel),
         (eo = eu),
@@ -138,7 +138,7 @@ function eT() {
     ((k = !1),
         (X = F.XlH.CLOSED),
         (u = o = null),
-        (x = !1),
+        (j = !1),
         (Z = !1),
         (z = null),
         (K = null),
@@ -193,17 +193,17 @@ function eG(e) {
 }
 function ef(e) {
     if (null == o || X !== F.XlH.OPEN || ("GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== o.id)) return !1;
-    (0, b.c)(o.id);
+    (0, P.c)(o.id);
 }
 function eD(e) {
     let { guildId: n } = e;
     if (null == o || o.id !== n) return !1;
-    j = null;
+    x = null;
 }
 function eL(e) {
     let { guildId: n, error: l } = e;
     if (null == o || o.id !== n) return !1;
-    j = l;
+    x = l;
 }
 class eU extends G.Ay.Store {
     static displayName = "GuildSettingsStore";
@@ -214,7 +214,7 @@ class eU extends G.Ay.Store {
         return eo;
     }
     widgetHasChanges() {
-        return !1 !== x && (Z !== J || z !== q);
+        return !1 !== j && (Z !== J || z !== q);
     }
     guildSpaceSettingsHasChanges() {
         return Q?.enabled !== K?.enabled;
@@ -274,7 +274,7 @@ class eU extends G.Ay.Store {
         return W[e] ?? null;
     }
     getProfileError() {
-        return j;
+        return x;
     }
     getSelectedRoleId() {
         return d;
@@ -297,7 +297,7 @@ class eU extends G.Ay.Store {
             bansVersion: es,
             invites: eI,
             selectedRoleId: d,
-            fetchedEmbed: x,
+            fetchedEmbed: j,
             embedEnabled: Z,
             embedChannelId: z,
             guildSpaceSettings: Q,
@@ -390,7 +390,7 @@ let eA = new eU(
                   eI = e.invites.reduce((e, n) => ((e[n.code] = eG(n)), e), {});
               },
               GUILD_SETTINGS_SET_WIDGET: function (e) {
-                  ((x = !0), (J = Z = e.enabled), (q = z = e.channelId));
+                  ((j = !0), (J = Z = e.enabled), (q = z = e.channelId));
               },
               GUILD_SETTINGS_SET_VANITY_URL: function (e) {
                   ((ee = e.code ?? null), (en = e.uses));
@@ -454,7 +454,7 @@ let eA = new eU(
                       if (null == e) return !1;
                       if (
                           ((a = A.A.getProfile(o.id)),
-                          t === F.BEX.PROFILE || t === F.BEX.TAG || (0, P.HU)(s, a) || (s = a),
+                          t === F.BEX.PROFILE || t === F.BEX.TAG || (0, b.HU)(s, a) || (s = a),
                           t === F.BEX.PROFILE)
                       ) {
                           ((u = e), (o = e));
@@ -484,21 +484,21 @@ let eA = new eU(
               },
               GUILD_PROFILE_FETCH_SUCCESS: function (e) {
                   let { profile: n } = e;
-                  if (n.id !== o?.id || (0, P.HU)(s, a)) return !1;
+                  if (n.id !== o?.id || (0, b.HU)(s, a)) return !1;
                   a = s = n;
               },
               GUILD_PROFILE_UPDATE: eD,
               GUILD_PROFILE_UPDATE_SUCCESS: function (e) {
                   let { profile: n } = e;
                   if (s?.id == null || !e_(s.id)) return !1;
-                  n.id === o?.id && ((a = s = n), (j = null));
+                  n.id === o?.id && ((a = s = n), (x = null));
               },
               GUILD_PROFILE_UPDATE_FAILURE: eL,
               GUILD_PROFILE_UPDATE_VISIBILITY: eD,
               GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: function (e) {
                   let { guildId: n } = e;
                   if (s?.id == null || !e_(s.id)) return !1;
-                  n === o?.id && ((a = s = A.A.getProfile(n)), (j = null));
+                  n === o?.id && ((a = s = A.A.getProfile(n)), (x = null));
               },
               GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: eL,
               USER_CONNECTIONS_UPDATE: ef,
