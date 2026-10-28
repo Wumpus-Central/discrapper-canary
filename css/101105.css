@@ -31,25 +31,16 @@
 }
 
 .heroCoverArt_f651bf {
+    aspect-ratio: 3/4;
     border-radius: var(--radius-sm);
     flex-shrink: 0;
     height: 114px;
-    max-width: 86px;
-    min-width: 76px;
     overflow: hidden
-}
-
-.heroCoverArt_f651bf.heroCoverArtSquare_f651bf {
-    align-self: flex-start;
-    aspect-ratio: 1/1;
-    height: auto
 }
 
 .heroCoverArtImg_f651bf {
     border-radius: inherit;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
     width: 100%
 }
 
@@ -103,19 +94,13 @@
     max-height: 156px;
     max-width: 117px;
     min-height: 156px;
-    min-width: 117px
-}
-
-.coverArtContainer_f651bf.coverArtSquare_f651bf {
-    max-height: 117px;
-    min-height: 117px
+    min-width: 117px;
+    overflow: hidden
 }
 
 .coverArt_f651bf {
     border-radius: var(--radius-sm);
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
     width: 100%
 }
 
@@ -171,4 +156,4 @@ screen and (max-width:485px) {
     width: 804px
 }
 
-/*# sourceMappingURL=101105.b76a514fe1172e67.css.map*/
+/*# sourceMappingURL=101105.5d70fd8fc0c5dbe5.css.map*/

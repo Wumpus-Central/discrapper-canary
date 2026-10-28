@@ -1358,8 +1358,7 @@ function lr(e) {
     });
 }
 function lc() {
-    let { game: e } = U();
-    return (0, s.jsx)(lo, { className: u()(ln._M, (0, lt.cO)(e) && ln.i3), imageClassName: ln.xe });
+    return (0, s.jsx)(lo, { className: ln._M, imageClassName: ln.xe });
 }
 function lo(e) {
     let { className: t, imageClassName: l } = e,
@@ -1398,7 +1397,7 @@ let ld = function () {
     return (0, s.jsxs)("div", {
         className: ln.ap,
         children: [
-            t && (0, s.jsx)(lo, { className: u()(ln.Tf, (0, lt.cO)(e) && ln.wS), imageClassName: ln.w$ }),
+            t && (0, s.jsx)(lo, { className: ln.Tf, imageClassName: ln.w$ }),
             (0, s.jsxs)("div", {
                 className: ln.lu,
                 children: [

@@ -1,9 +1,8 @@
-r.exports = {
+e.exports = {
     y1: "backgroundArt_f651bf",
     N4: "backgroundGradient_f651bf",
     ap: "heroContent_f651bf",
     Tf: "heroCoverArt_f651bf",
-    wS: "heroCoverArtSquare_f651bf",
     w$: "heroCoverArtImg_f651bf",
     lu: "heroDetails_f651bf",
     $: "titleRow_f651bf",
@@ -11,6 +10,5 @@ r.exports = {
     b3: "surpriseCover_f651bf",
     Qc: "gameRankPill_f651bf",
     _M: "coverArtContainer_f651bf",
-    i3: "coverArtSquare_f651bf",
     xe: "coverArt_f651bf",
 };

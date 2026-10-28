@@ -10,21 +10,20 @@
 .skeletonArtwork__38ddd {
     aspect-ratio: 3/4;
     border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-low);
     flex-shrink: 0;
     min-width: var(--custom-cover-min-width, 0);
     width: var(--custom-cover-width)
 }
 
 .card__38ddd {
-    --game-cover-art-icon-background: transparent;
     cursor: pointer;
+    filter: var(--shadow-low-filter);
     overflow: hidden;
     position: relative
 }
 
-.card__38ddd:has(.coverArt__38ddd>img) {
-    box-shadow: none
+.skeletonArtwork__38ddd {
+    box-shadow: var(--shadow-low)
 }
 
 .cardWrapper__38ddd {
@@ -40,11 +39,7 @@
 
 .coverArt__38ddd {
     border-radius: inherit;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: top;
-    object-position: top
+    height: 100%
 }
 
 .full-motion .coverArt__38ddd {
@@ -214,4 +209,4 @@
     padding-inline: calc(var(--custom-spacing) + var(--custom-spacing))
 }
 
-/*# sourceMappingURL=0972d02f56020d67.css.map*/
+/*# sourceMappingURL=dfbf45cb58922973.css.map*/

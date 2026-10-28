@@ -244,7 +244,12 @@ async function eu() {
 function e_(e) {
     return {
         computeBonus: () => 100,
-        lookupKey: (e) => j.Ay.getByName(e) ?? ed(e),
+        lookupKey: (e) => {
+            let t = j.Ay.getByName(e) ?? ed(e);
+            if (null != t) return t;
+            let n = W.A.getEmoji(e);
+            return null != n && W.A.isPackEmojiUsable(n) ? n : void 0;
+        },
         afterCompute: () => {
             (e(), (ea = [...q]), o().some(es, (e) => e.hasUsableEmoji()) || ea.splice(q.indexOf(z.R2.CUSTOM), 1));
         },
@@ -476,7 +481,7 @@ class eE {
 }
 function eA() {
     let e = W.A.getIndexablePackEmojis();
-    return e !== Q && ((Q = e), eE.reset(), !0);
+    return e !== Q && ((Q = e), eE.reset(), eh.markDirty(), ef.markDirty(), !0);
 }
 let eh = ((i = eE.resetFrequentlyUsed), new A.A({ ...e_(i) })),
     ef =
