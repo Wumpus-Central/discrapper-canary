@@ -18,7 +18,7 @@ var n = l(477900),
     x = l(898985),
     z = l(824994),
     I = l(922301),
-    h = l(945096),
+    h = l(723694),
     L = l(750656);
 let y = "--custom-display-name-styles-main-color";
 l(321073);

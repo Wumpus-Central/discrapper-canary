@@ -9,4 +9,5 @@ var i,
         (i[(i.NINTENDO = 5)] = "NINTENDO"),
         (i[(i.LINUX = 6)] = "LINUX"),
         (i[(i.MACOS = 7)] = "MACOS"),
+        (i[(i.ROBLOX = 8)] = "ROBLOX"),
         i);
