@@ -408,7 +408,6 @@
   "BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS": "/users/@me/billing/payment-sources/validate-billing-address",
   "BILLING_PAYMENT_SOURCE": "/users/@me/billing/payment-sources/:param",
   "BILLING_WALLET_INFORMATION": "/users/@me/billing/wallet/:param/information",
-  "BILLING_PAYMENTS": "/users/@me/billing/payments",
   "BILLING_HISTORY": "/users/@me/billing/history",
   "BILLING_PAYMENT": "/users/@me/billing/payments/:param",
   "BILLING_PAYMENTS_VOID": "/users/@me/billing/payments/:param/void",

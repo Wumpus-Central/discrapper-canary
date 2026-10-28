@@ -197,15 +197,6 @@ let N = new S(r.h, {
     INTEGRATION_CREATE: g,
     INTEGRATION_UPDATE: g,
     INTEGRATION_DELETE: g,
-    BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
-        let { payments: t } = e,
-            n = new Set();
-        for (let e of t) {
-            let t = e.sku?.application;
-            null == t || n.has(t.id) || h(a.Ay.createFromServer(t));
-        }
-        return n.size > 0;
-    },
     PAYMENT_UPDATE: function (e) {
         let { payment: t } = e;
         if (t.sku?.application == null) return !1;

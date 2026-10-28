@@ -1,0 +1,14 @@
+.container_a6c6da {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+    row-gap: var(--space-16)
+}
+
+.notice_a6c6da {
+    align-self: stretch
+}
+
+/*# sourceMappingURL=175927.c564ed3d24883cd4.css.map*/

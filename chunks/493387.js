@@ -1,4 +1,4 @@
-(n.d(t, { A: () => b }), n(321073));
+(n.d(t, { A: () => S }), n(321073));
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -12,15 +12,16 @@ var i = n(477900),
     p = n(736653),
     m = n(421768),
     A = n(209932),
-    f = n(360906),
-    x = n(531685),
-    g = n(85448),
-    C = n(806931),
-    j = n(105292),
-    y = n(836905),
-    I = n(938442),
-    N = n(138267);
-let v = {
+    f = n(541157),
+    x = n(360906),
+    g = n(531685),
+    C = n(85448),
+    j = n(806931),
+    y = n(105292),
+    I = n(836905),
+    N = n(938442),
+    v = n(138267);
+let E = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
     DURATION_IN: 300,
@@ -28,7 +29,7 @@ let v = {
     EASING_IN: r.A.Easing.inOut(r.A.Easing.back()),
     EASING_OUT: r.A.Easing.quad,
 };
-class E extends l.PureComponent {
+class b extends l.PureComponent {
     scaleAnimation = new r.A.Value(0);
     spriteAnimation = new r.A.Value(0);
     spriteOpacity = new r.A.Value(0);
@@ -45,7 +46,7 @@ class E extends l.PureComponent {
         (t.setValue(0),
             n.setValue(0),
             r.A.parallel([
-                r.A.timing(t, { toValue: 1, duration: v.DURATION_IN, easing: v.EASING_IN }),
+                r.A.timing(t, { toValue: 1, duration: E.DURATION_IN, easing: E.EASING_IN }),
                 r.A.timing(n, { toValue: 1, duration: 200 }),
             ]).start(e));
     }
@@ -55,7 +56,7 @@ class E extends l.PureComponent {
         let a = [];
         for (let e = 0; e < 23; e++) a.push(r.A.timing(n, { toValue: -26 * e, duration: 17 }));
         r.A.sequence([
-            r.A.timing(t, { toValue: 0, duration: v.DURATION_OUT, easing: v.EASING_OUT }),
+            r.A.timing(t, { toValue: 0, duration: E.DURATION_OUT, easing: E.EASING_OUT }),
             r.A.sequence(a),
             r.A.timing(l, { toValue: 0, duration: 125 }),
         ]).start(e);
@@ -63,7 +64,7 @@ class E extends l.PureComponent {
     getScaleStyle() {
         let { scaleAnimation: e } = this;
         return r.A.accelerate({
-            transform: [{ scale: e.interpolate({ inputRange: [0, 1], outputRange: [v.SCALE_MIN, v.SCALE_MAX] }) }],
+            transform: [{ scale: e.interpolate({ inputRange: [0, 1], outputRange: [E.SCALE_MIN, E.SCALE_MAX] }) }],
             opacity: e,
         });
     }
@@ -82,14 +83,14 @@ class E extends l.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             l = (0, d.M)(e),
-            a = s()(y._y, { [N.cp]: l, [N.QB]: !l });
+            a = s()(I._y, { [v.cp]: l, [v.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
-            className: s()(y.kY, n),
+            className: s()(I.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: s()(y.XY, I.xM, I.wq, I.Hu),
+                    className: s()(I.XY, N.xM, N.wq, N.Hu),
                     children: (0, i.jsx)(r.A.div, { className: a, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -97,52 +98,54 @@ class E extends l.PureComponent {
         });
     }
 }
-function b(e) {
+function S(e) {
     var t;
-    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: I } = e,
-        N = (0, p.Ay)(),
-        v = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
-        b = (0, o.bG)([x.A], () => x.A.isFocused()),
-        S = (0, o.bG)([f.Ay], () => new Map(n.filter(C.Xw).map((e) => [e.user.id, f.Ay.isLocalMute(e.user.id)])), [n]),
-        _ = (0, o.bG)(
+    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: N } = e,
+        v = (0, p.Ay)(),
+        E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
+        S = (0, o.bG)([g.A], () => g.A.isFocused()),
+        _ = (0, f.oN)(),
+        T = (0, o.bG)([x.Ay], () => new Map(n.filter(j.Xw).map((e) => [e.user.id, x.Ay.isLocalMute(e.user.id)])), [n]),
+        R = (0, o.bG)(
             [A.A],
-            () => new Map(n.filter(C.Xw).map((e) => [e.user.id, A.A.isLocalSoundboardMuted(e.user.id)])),
+            () => new Map(n.filter(j.Xw).map((e) => [e.user.id, A.A.isLocalSoundboardMuted(e.user.id)])),
             [n],
         ),
-        T = (0, m.g)(_.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
-        R = n.map((e) => {
-            if (e.type !== C.lp.USER) return null;
-            let { user: t, voiceState: n, speaking: a, ringing: s, playingSoundboard: o } = e,
+        O = (0, m.g)(R.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
+        L = n.map((e) => {
+            if (e.type !== j.lp.USER) return null;
+            let { user: t, speaking: n, ringing: a, playingSoundboard: s } = e,
+                o = (0, f.Nd)(e.voiceState, _),
                 c = null;
-            !0 === S.get(t.id)
-                ? (c = j.intl.string(j.t.Q8Uzof))
-                : n?.isVoiceDeafened() === !0
-                  ? (c = j.intl.string(j.t.NjmiOL))
-                  : n?.isVoiceMuted() === !0
-                    ? (c = j.intl.string(j.t.tjtv3P))
-                    : T && !0 === _.get(t.id) && (c = j.intl.string(j.t["9bJYWN"]));
+            !0 === T.get(t.id)
+                ? (c = y.intl.string(y.t.Q8Uzof))
+                : o?.isVoiceDeafened() === !0
+                  ? (c = y.intl.string(y.t.NjmiOL))
+                  : o?.isVoiceMuted() === !0
+                    ? (c = y.intl.string(y.t.tjtv3P))
+                    : O && !0 === R.get(t.id) && (c = y.intl.string(y.t["9bJYWN"]));
             let d =
-                null != c ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: c }) : t.username;
+                null != c ? y.intl.formatToPlainString(y.t["1+MVBP"], { userName: t.username, status: c }) : t.username;
             return (0, i.jsx)(
-                E,
+                b,
                 {
-                    className: y.Wp,
-                    width: (0, u.FT)(v),
-                    theme: N,
+                    className: I.Wp,
+                    width: (0, u.FT)(E),
+                    theme: v,
                     children: (0, i.jsx)(h.s, {
                         "aria-label": d,
                         onClick: (t) => r?.(e, t),
                         onContextMenu: (t) => l?.(e, t),
                         children: (0, i.jsx)(
-                            g.Ay,
+                            C.Ay,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(I, (0, u.FT)(v), a && b),
-                                size: v,
-                                muted: n?.isVoiceMuted() ?? !1,
-                                deafen: n?.isVoiceDeafened() ?? !1,
-                                voiceStatus: (0, u.n$)(a, o),
-                                ringing: s,
+                                src: t.getAvatarURL(N, (0, u.FT)(E), n && S),
+                                size: E,
+                                muted: o?.isVoiceMuted() ?? !1,
+                                deafen: o?.isVoiceDeafened() ?? !1,
+                                voiceStatus: (0, u.n$)(n, s),
+                                ringing: a,
                             },
                             e.id,
                         ),
@@ -151,5 +154,5 @@ function b(e) {
                 t.id,
             );
         });
-    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(y.zr, a), children: R });
+    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(I.zr, a), children: L });
 }

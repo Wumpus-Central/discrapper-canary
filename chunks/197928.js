@@ -10,8 +10,8 @@ var S,
     d,
     C,
     p,
-    g = E(214958),
-    D = E.n(g);
+    D = E(214958),
+    g = E.n(D);
 function P() {
     let e = window;
     return (
@@ -76,8 +76,8 @@ if (null != $) {
             has_client_mods: P(),
             client_launch_id: f,
         }),
-        D().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = D().ua || ""), (i.browser_version = D().version || "")),
+        g().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = g().ua || ""), (i.browser_version = g().version || "")),
         "linux" === E)
     ) {
         let e = $.crashReporter.getMetadata();
@@ -223,9 +223,9 @@ if (null == i)
             }
             return {
                 ...E,
-                ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: D().version || "" }),
+                ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: g().version || "" }),
                 (t = w()),
-                null != t ? { ...e, os_version: t.systemVersion || "" } : { ...e, os_version: D()?.os?.version ?? "" }),
+                null != t ? { ...e, os_version: t.systemVersion || "" } : { ...e, os_version: g()?.os?.version ?? "" }),
                 ...i,
                 ..._,
             };
@@ -237,7 +237,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("654358", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("654387", 10))) || (I.client_build_number = s),
     null == (a = $?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -800,7 +800,6 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             BILLING_PAYMENT_SOURCES_CREATE: "/billing/payment-sources/create",
             BILLING_PREMIUM_SWITCH_PLAN: "/billing/premium/switch-plan",
             BILLING_GUILD_SUBSCRIPTIONS_PURCHASE: "/billing/guild-subscriptions/purchase",
-            BILLING_PAYMENTS: "/billing/payments",
             BILLING_PROMOTION_REDEMPTION: (e) => `/billing/promotions/${e}`,
             BILLING_PROMOTION_REDEMPTION_GENERIC: "/billing/promotions",
             BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION: (e, t) => `/billing/partner-promotions/${e}/${t}`,
@@ -1038,7 +1037,7 @@ let eC = {
     },
 };
 var ep = E(806163);
-let eg = new Set([
+let eD = new Set([
     eu.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
     eu.APP_WITH_GIFT_CODE(":giftCode"),
     eu.APP,
@@ -1114,7 +1113,7 @@ let eg = new Set([
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of eg) if (null != (0, ep.B6)(e, { path: t })) return !0;
+                for (let t of eD) if (null != (0, ep.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )

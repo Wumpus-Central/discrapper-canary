@@ -11,13 +11,13 @@ var l = n(477900),
     c = n(942156),
     E = n(574094),
     I = n(736056),
-    B = n(976860),
-    m = n(540747),
+    m = n(976860),
+    B = n(540747),
     _ = n(426660),
     p = n(652215),
     A = n(534373);
-let L = n(843020),
-    V = n(545044),
+let V = n(843020),
+    L = n(545044),
     T = [
         p.BVt.LOGIN,
         p.BVt.LOGIN_HANDOFF,
@@ -31,7 +31,6 @@ let L = n(843020),
         p.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
         p.BVt.BILLING_PREMIUM_SUBSCRIBE,
         p.BVt.BILLING_PAYMENT_SOURCES_CREATE,
-        p.BVt.BILLING_PAYMENTS,
         p.BVt.BILLING_PREMIUM_SWITCH_PLAN,
         p.BVt.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
         p.BVt.GIFT_CARD_REDEEM,
@@ -67,7 +66,7 @@ function x(e) {
                     : "loading";
         })(),
         a = (0, r.zy)(),
-        { hidden: o } = s.useContext(m.F),
+        { hidden: o } = s.useContext(B.F),
         u = N.includes(a.pathname),
         c = f.includes(a.pathname);
     if (u) return t;
@@ -75,8 +74,8 @@ function x(e) {
         case "default":
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    c ? (0, l.jsx)(_.A, {}) : (0, l.jsx)("img", { className: A.xX, src: L, alt: "" }),
-                    o ? null : (0, l.jsx)("img", { className: A.F, src: V, alt: "" }),
+                    c ? (0, l.jsx)(_.A, {}) : (0, l.jsx)("img", { className: A.xX, src: V, alt: "" }),
+                    o ? null : (0, l.jsx)("img", { className: A.F, src: L, alt: "" }),
                     t,
                 ],
             });
@@ -88,7 +87,7 @@ function x(e) {
 function F(e) {
     let { hidden: t, setHidden: n, children: i } = e,
         r = s.useMemo(() => ({ hidden: t, setHidden: n }), [t, n]);
-    return (0, l.jsx)(m.F.Provider, { value: r, children: i });
+    return (0, l.jsx)(B.F.Provider, { value: r, children: i });
 }
 class w extends s.Component {
     constructor(e) {
@@ -107,14 +106,14 @@ class w extends s.Component {
         window.removeEventListener("resize", this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (R(e)) (0, B.pX)(e, t);
+        if (R(e)) (0, m.pX)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location.href = null == n ? e : `${e}?${n}`;
         }
     }
     mobileReplaceWith(e) {
-        R(e) ? (0, B.bG)(e) : (window.location.href = e);
+        R(e) ? (0, m.bG)(e) : (window.location.href = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -122,7 +121,7 @@ class w extends s.Component {
             n = (0, l.jsx)(u.A, {
                 component: s.Fragment,
                 children: s.Children.map(this.props.children, (e) =>
-                    s.cloneElement(e, { transitionTo: B.pX, replaceWith: B.bG }),
+                    s.cloneElement(e, { transitionTo: m.pX, replaceWith: m.bG }),
                 ),
             });
         return (0, l.jsx)(F, {
