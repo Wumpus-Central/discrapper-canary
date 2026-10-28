@@ -11,8 +11,8 @@ var t = n(477900),
     m = n(576705),
     x = n(961553),
     h = n(371169),
-    g = n(951178),
-    p = n(277085),
+    p = n(951178),
+    g = n(277085),
     v = n(811587),
     j = n(587895),
     f = n(808728),
@@ -24,37 +24,37 @@ var E = n(652215),
     y = n(248675),
     P = n(105292);
 let _ = [
-        [g.q7.BOT, y.default.UnoAgo],
-        [g.q7.ACTIVITY, y.default["I88/iG"]],
-        [g.q7.PROFILE_WIDGET, y.default.gXY1x1],
-        [g.q7.AUTOMOD, y.default.Q9ruoM],
+        [p.q7.BOT, y.default.UnoAgo],
+        [p.q7.ACTIVITY, y.default["I88/iG"]],
+        [p.q7.PROFILE_WIDGET, y.default.gXY1x1],
+        [p.q7.AUTOMOD, y.default.Q9ruoM],
     ],
     I = { screen_capture: y.default["8/7kE7"], connect_user_to_voice: y.default.uvDWXa };
 var T = n(503698),
     k = n.n(T),
-    q = n(31300),
-    S = n(983851),
+    S = n(31300),
+    q = n(983851),
     D = n(430392),
     G = n(794083),
     L = n(715641),
     w = n(231483),
     U = n(939249),
-    O = n(750943),
-    z = n(858899),
-    M = n(95477),
+    z = n(750943),
+    M = n(858899),
+    O = n(95477),
     R = n(103557),
     F = n(950305),
     Z = n(901117),
     B = n(323384),
     H = n(193249),
-    V = n(47167),
-    W = n(548118),
-    X = n(946274),
-    Y = n(535466),
-    K = n(497183),
+    W = n(47167),
+    Y = n(548118),
+    K = n(946274),
+    X = n(535466),
+    V = n(497183),
     Q = n(536791);
-let $ = { screen_capture: q.k, connect_user_to_voice: S.H },
-    J = { [g.q7.BOT]: D.RobotIcon, [g.q7.ACTIVITY]: G.b, [g.q7.PROFILE_WIDGET]: L.b, [g.q7.AUTOMOD]: w.ShieldIcon };
+let $ = { screen_capture: S.k, connect_user_to_voice: q.H },
+    J = { [p.q7.BOT]: D.RobotIcon, [p.q7.ACTIVITY]: G.b, [p.q7.PROFILE_WIDGET]: L.b, [p.q7.AUTOMOD]: w.ShieldIcon };
 function ee(e) {
     let { project: l, panel: n } = e,
         { initial: a, editable: s, identity: c, sharing: u } = n,
@@ -94,7 +94,7 @@ function ee(e) {
                                       (0, t.jsx)("span", {
                                           className: Q.E7,
                                           "aria-hidden": !0,
-                                          children: (0, t.jsx)(O.X, { size: "xs", color: "currentColor" }),
+                                          children: (0, t.jsx)(z.X, { size: "xs", color: "currentColor" }),
                                       }),
                                   ],
                               })
@@ -102,19 +102,19 @@ function ee(e) {
                                   className: k()(Q.gb, Q.YX),
                                   "aria-label": P.intl.string(P.t["MsUY/S"]),
                                   onClick: () => o.current?.activateUploadDialogue(),
-                                  children: (0, t.jsx)(O.X, { size: "md", color: "currentColor" }),
+                                  children: (0, t.jsx)(z.X, { size: "md", color: "currentColor" }),
                               })
-                        : (0, t.jsx)(K.A, { project: l, size: "dialog" }),
+                        : (0, t.jsx)(V.A, { project: l, size: "dialog" }),
                     s
-                        ? (0, t.jsx)(X.Ay, {
+                        ? (0, t.jsx)(K.Ay, {
                               ref: o,
                               className: Q.Fg,
                               multiple: !1,
-                              filters: [{ name: P.intl.string(P.t["Sp2NF+"]), extensions: Y.En }],
-                              maxFileSizeBytes: Y.Q0,
+                              filters: [{ name: P.intl.string(P.t["Sp2NF+"]), extensions: X.En }],
+                              maxFileSizeBytes: X.Q0,
                               onChange: c.setIcon,
                               onFileSizeError: () =>
-                                  (0, z.P0)({ text: P.intl.string(y.default.ZTAAMc), variant: "critical" }),
+                                  (0, M.P0)({ text: P.intl.string(y.default.ZTAAMc), variant: "critical" }),
                               "aria-hidden": !0,
                           })
                         : null,
@@ -132,13 +132,13 @@ function ee(e) {
                                       "aria-hidden": !0,
                                       children: P.intl.string(y.default.knevPu),
                                   }),
-                                  (0, t.jsx)(M.k, {
+                                  (0, t.jsx)(O.k, {
                                       label: P.intl.string(y.default.knevPu),
                                       hideLabel: !0,
                                       value: n.name,
                                       onChange: n.setName,
                                       error: n.nameError,
-                                      maxLength: g.eq,
+                                      maxLength: p.eq,
                                       disabled: n.saving,
                                       fullWidth: !0,
                                   }),
@@ -159,7 +159,7 @@ function ee(e) {
                                       placeholder: P.intl.string(y.default["I+3UTL"]),
                                       value: c.description,
                                       onChange: c.setDescription,
-                                      maxLength: g.HR,
+                                      maxLength: p.HR,
                                       disabled: n.saving,
                                       rows: 4,
                                       maxRows: 6,
@@ -206,9 +206,9 @@ function ee(e) {
                               className: Q.Kk,
                               children: [
                                   null != u.guild
-                                      ? (0, t.jsx)(W.Ay, {
+                                      ? (0, t.jsx)(Y.Ay, {
                                             guild: u.guild,
-                                            size: W.Ay.Sizes.MEDIUM,
+                                            size: Y.Ay.Sizes.MEDIUM,
                                             active: !0,
                                             className: Q.$f,
                                             "aria-hidden": !0,
@@ -313,7 +313,7 @@ function et(e) {
 }
 function ei(e) {
     let { channel: l } = e;
-    return (0, t.jsx)(en, { icon: B.k, label: (0, V.Ay)(l) ?? "" });
+    return (0, t.jsx)(en, { icon: B.k, label: (0, W.Ay)(l) ?? "" });
 }
 var ea = n(787032);
 function es(e) {
@@ -329,16 +329,16 @@ function es(e) {
 }
 function er(e) {
     let { project: l, publish: n, entryPoint: u, savingRef: I, transitionState: T, onClose: k } = e,
-        q = (function (e, l) {
+        S = (function (e, l) {
             var n, t, s;
             let r,
                 u,
                 I,
                 T,
                 k,
-                q,
+                S,
                 {
-                    liveName: S,
+                    liveName: q,
                     liveDescription: D,
                     channels: G,
                     guild: L,
@@ -350,7 +350,7 @@ function er(e) {
                 (I = (0, a.bG)([j.A], () => (null == u ? null : (j.A.getApplication(u) ?? null)), [u])),
                 (T = (0, a.bG)([d.A], () => (null == t ? null : (d.A.getGuild(t) ?? null)), [t])),
                 (k = (0, a.bG)([b.A], () => (null == t ? null : (b.A.getMemberCount(t) ?? null)), [t])),
-                (q = (0, a.yK)(
+                (S = (0, a.yK)(
                     [f.Ay],
                     () =>
                         null == t || null == u
@@ -370,24 +370,24 @@ function er(e) {
                     project: r,
                     liveName: I?.name ?? r?.name ?? "",
                     liveDescription: I?.description?.trim() ?? "",
-                    channels: q,
+                    channels: S,
                     guild: T,
                     memberCount: k,
                 }),
                 U = (0, x.A)(e.id),
-                O = ((s = e.id), (0, a.bG)([N.A], () => N.A.getPublishStatus(s)?.previewDevicePermissions ?? C)),
-                [z, M] = i.useState(e.name),
+                z = ((s = e.id), (0, a.bG)([N.A], () => N.A.getPublishStatus(s)?.previewDevicePermissions ?? C)),
+                [M, O] = i.useState(e.name),
                 [R, F] = i.useState(!1),
                 Z = null == l.status || !(0, v.lE)(l.status.publishState),
                 B = Z && (0, c.PV)(e),
                 H = (Z ? e.preview_supported_surfaces : e.supported_surfaces) ?? [],
-                V = z.trim(),
-                W = B ? (0, p.p)(V) : null,
-                X = l.status?.previewAppChannels ?? [],
-                Y = 0 === X.length && H.includes(g.q7.APP_CHANNEL) ? [P.intl.string(y.default.xI4N6Q)] : X,
-                [K, Q] = i.useState(!1),
+                W = M.trim(),
+                Y = B ? (0, g.p)(W) : null,
+                K = l.status?.previewAppChannels ?? [],
+                X = 0 === K.length && H.includes(p.q7.APP_CHANNEL) ? [P.intl.string(y.default.xI4N6Q)] : K,
+                [V, Q] = i.useState(!1),
                 $ =
-                    B && Y.length > 0 && "user" !== e.install_scope && e.guild_id === l.guildId
+                    B && X.length > 0 && "user" !== e.install_scope && e.guild_id === l.guildId
                         ? (e.guild_id ?? null)
                         : null,
                 J = (0, a.bG)(
@@ -403,10 +403,10 @@ function er(e) {
                     [$],
                 );
             async function ee() {
-                if (R || null != W) return !1;
+                if (R || null != Y) return !1;
                 F(!0);
                 try {
-                    return (B && (V !== e.name || U.changed) && (await (0, h.CW)(e.id, { ...U.changes, name: V })), !0);
+                    return (B && (W !== e.name || U.changed) && (await (0, h.CW)(e.id, { ...U.changes, name: W })), !0);
                 } finally {
                     F(!1);
                 }
@@ -415,14 +415,14 @@ function er(e) {
                 initial: Z,
                 editable: B,
                 identity: U,
-                name: z,
-                setName: M,
-                nameError: W,
-                displayName: Z ? e.name : S,
+                name: M,
+                setName: O,
+                nameError: Y,
+                displayName: Z ? e.name : q,
                 description: Z ? U.description : D,
-                initialChannelNames: Y,
+                initialChannelNames: X,
                 channels: G,
-                appChannelsPrivate: J ? { isPrivate: K, setPrivate: Q } : null,
+                appChannelsPrivate: J ? { isPrivate: V, setPrivate: Q } : null,
                 components: _.filter((e) => {
                     let [l] = e;
                     return H.includes(l);
@@ -430,11 +430,11 @@ function er(e) {
                     let [l, n] = e;
                     return { surface: l, label: P.intl.string(n) };
                 }),
-                devicePermissions: Z ? O : [],
+                devicePermissions: Z ? z : [],
                 note:
-                    Z && "user" !== e.install_scope && H.includes(g.q7.AUTOMOD)
-                        ? `${P.intl.string(y.default["+VqXVO"])} ${P.intl.string(y.default.bljqPk)}`
-                        : P.intl.string(y.default["+VqXVO"]),
+                    Z && "user" !== e.install_scope && H.includes(p.q7.AUTOMOD)
+                        ? P.intl.string(y.default.bljqPk)
+                        : null,
                 sharing:
                     null != L
                         ? {
@@ -448,40 +448,43 @@ function er(e) {
                 save: ee,
             };
         })(l, n),
-        [S, D] = i.useState(null);
+        [q, D] = i.useState(null);
     async function G() {
         (D(null), (I.current = !0));
         try {
-            if (!(await q.save())) return;
+            if (!(await S.save())) return;
         } catch {
             D(P.intl.string(y.default.Fi7boI));
             return;
         } finally {
             I.current = !1;
         }
-        (n.run(u, q.appChannelsPrivate?.isPrivate === !0), k());
+        (n.run(u, S.appChannelsPrivate?.isPrivate === !0), k());
     }
     return (0, t.jsx)(s.a, {
         transitionState: T,
         onClose: k,
-        dismissable: !q.saving,
+        dismissable: !S.saving,
         title: P.intl.string(y.default.NEPcoi),
-        notice: null == S ? void 0 : { message: S, type: "critical", role: "alert" },
+        notice: null == q ? void 0 : { message: q, type: "critical", role: "alert" },
         preview: (0, t.jsx)("div", { className: ea.m, role: "presentation" }),
         actionBarInput: (0, t.jsx)("div", {
             className: ea.N,
-            children: (0, t.jsx)(r.E, { variant: "text-sm/normal", color: "text-subtle", children: q.note }),
+            children:
+                null != S.note
+                    ? (0, t.jsx)(r.E, { variant: "text-sm/normal", color: "text-subtle", children: S.note })
+                    : null,
         }),
         actions: [
-            { text: P.intl.string(P.t["ETE/oC"]), variant: "secondary", onClick: k, disabled: q.saving },
+            { text: P.intl.string(P.t["ETE/oC"]), variant: "secondary", onClick: k, disabled: S.saving },
             {
                 text: n.label,
                 variant: "primary",
-                loading: q.saving,
-                disabled: n.disabled || null != q.nameError,
+                loading: S.saving,
+                disabled: n.disabled || null != S.nameError,
                 onClick: G,
             },
         ],
-        children: (0, t.jsx)(ee, { project: l, panel: q }),
+        children: (0, t.jsx)(ee, { project: l, panel: S }),
     });
 }

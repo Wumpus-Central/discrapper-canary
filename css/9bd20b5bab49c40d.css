@@ -152,7 +152,8 @@ div.guildIcon__5b810 {
 }
 
 .footerRule_a70cf0 {
-    border-top: 1px solid var(--border-subtle)
+    border-top: 1px solid var(--border-subtle);
+    margin-bottom: var(--space-8)
 }
 
-/*# sourceMappingURL=d5d1640f8935307b.css.map*/
+/*# sourceMappingURL=9bd20b5bab49c40d.css.map*/
