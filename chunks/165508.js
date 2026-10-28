@@ -1,73 +1,83 @@
-(t.r(a), t.d(a, { default: () => p }));
-var c = t(477900);
-t(582128);
-var n = t(192308),
-    o = t(80556),
-    r = t(888548),
-    s = t(320028);
-let p = {
-    showCaptcha: function (e, a) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: p, captchaService: h, options: i } = e;
-        (0, n.openModalLazy)(
+(a.r(t), a.d(t, { default: () => d }));
+var n = a(477900);
+a(582128);
+var o = a(319400),
+    c = a(192308),
+    r = a(231723),
+    p = a(80556),
+    l = a(267102),
+    s = a(888548),
+    i = a(320028);
+function h(e) {
+    if (e !== o.MS.HCAPTCHA) return;
+    let t = (0, l.zd)();
+    if (null != t) return (0, c.modalContextFromAppContext)(t);
+    let a = (0, l.g5)();
+    return null != a ? (0, c.modalContextFromAppContext)(a.appContext) : r.SY;
+}
+let d = {
+    showCaptcha: function (e, t) {
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { sitekey: r, captchaService: l, options: s } = e;
+        (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    t.e("202976"),
-                    t.e("531279"),
-                    t.e("458790"),
-                    t.e("323895"),
-                    t.e("454048"),
-                    t.e("327774"),
-                    t.e("203213"),
-                ]).then(t.bind(t, 645320));
-                return (t) =>
-                    (0, c.jsx)(e, {
-                        onCaptchaVerify: (e, t) => a({ captcha_key: e, captcha_rqtoken: t }),
-                        captchaService: h,
-                        sitekey: p,
-                        ...r,
-                        ...i,
-                        ...t,
+                    a.e("202976"),
+                    a.e("531279"),
+                    a.e("458790"),
+                    a.e("323895"),
+                    a.e("454048"),
+                    a.e("327774"),
+                    a.e("203213"),
+                ]).then(a.bind(a, 645320));
+                return (a) =>
+                    (0, n.jsx)(e, {
+                        onCaptchaVerify: (e, a) => t({ captcha_key: e, captcha_rqtoken: a }),
+                        captchaService: l,
+                        sitekey: r,
+                        ...o,
+                        ...s,
+                        ...a,
                     });
             },
-            { Layer: o.Ay, modalKey: s.f },
+            { Layer: p.Ay, modalKey: i.f, contextKey: h(l) },
         );
     },
     showCaptchaAsync: function (e) {
-        let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: p, captchaService: h, captchaSessionId: i, options: l } = e;
-        return new Promise((e, d) => {
-            (0, n.openModalLazy)(
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { sitekey: o, captchaService: r, captchaSessionId: l, options: d } = e;
+        return new Promise((e, u) => {
+            (0, c.openModalLazy)(
                 async () => {
-                    let { default: n } = await Promise.all([
-                        t.e("202976"),
-                        t.e("531279"),
-                        t.e("458790"),
-                        t.e("323895"),
-                        t.e("454048"),
-                        t.e("327774"),
-                        t.e("203213"),
-                    ]).then(t.bind(t, 645320));
-                    return (t) =>
-                        (0, c.jsx)(n, {
-                            onCaptchaVerify: (a, t) => e({ captcha_key: a, captcha_rqtoken: t, captcha_session_id: i }),
-                            captchaService: h,
-                            sitekey: p,
+                    let { default: c } = await Promise.all([
+                        a.e("202976"),
+                        a.e("531279"),
+                        a.e("458790"),
+                        a.e("323895"),
+                        a.e("454048"),
+                        a.e("327774"),
+                        a.e("203213"),
+                    ]).then(a.bind(a, 645320));
+                    return (a) =>
+                        (0, n.jsx)(c, {
+                            onCaptchaVerify: (t, a) => e({ captcha_key: t, captcha_rqtoken: a, captcha_session_id: l }),
+                            captchaService: r,
+                            sitekey: o,
                             onReject: (e) => {
-                                e === r.CaptchaError.CANCEL
-                                    ? d(new r.CaptchaCancelError())
-                                    : d(Error("cancel captcha"));
+                                e === s.CaptchaError.CANCEL
+                                    ? u(new s.CaptchaCancelError())
+                                    : u(Error("cancel captcha"));
                             },
-                            ...a,
-                            ...l,
                             ...t,
+                            ...d,
+                            ...a,
                         });
                 },
-                { Layer: o.Ay, modalKey: s.f },
+                { Layer: p.Ay, modalKey: i.f, contextKey: h(r) },
             );
         });
     },
     useIsCaptchaModalOpen: function () {
-        return (0, n.useModalsStore)((e) => (0, n.hasModalOpenSelector)(e, s.f));
+        return (0, c.useModalsStore)((e) => Object.keys(e).some((t) => (0, c.hasModalOpenSelector)(e, i.f, t)));
     },
 };
