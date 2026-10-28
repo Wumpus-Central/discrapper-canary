@@ -4221,7 +4221,15 @@ class tM extends S.A {
               ? this.logger.warn("sfu_update socket does not match READY socket.")
               : this._connectMediaEngineWithEndpoint(i, a);
     }
+    _shouldDropMediaEventForUser(e, t) {
+        return (
+            !this._userIds.has(e) &&
+            !1 === this._latchIsStageChannel() &&
+            (this.logger.warn(`Dropping ${t} for user ${e} before CLIENTS_CONNECT.`), !0)
+        );
+    }
     _handleSpeaking(e, t, n, i) {
+        if (this._shouldDropMediaEventForUser(t, "SPEAKING")) return;
         let r = this._connection;
         null != r &&
             this.userId !== t &&
@@ -4304,7 +4312,11 @@ class tM extends S.A {
         });
     }
     _handleVideo(e, t, n, i, r) {
-        if (eI.Ay.supports(z.O5.VIDEO) && null != this._connection && this.userId !== t) {
+        if (
+            !(!eI.Ay.supports(z.O5.VIDEO) || this._shouldDropMediaEventForUser(t, "VIDEO")) &&
+            null != this._connection &&
+            this.userId !== t
+        ) {
             if (null != this._localMediaSinkWantsManager) {
                 this._localMediaSinkWantsManager.setAudioSSRC(t, n);
                 let e = r.map((e) => ({
