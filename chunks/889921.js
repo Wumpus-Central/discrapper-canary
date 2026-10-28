@@ -1,6 +1,6 @@
 (n.r(t),
     n.d(t, {
-        subscribeDebugBacklog: () => Y,
+        subscribeDebugBacklog: () => V,
         default: () => ed,
         prepareTemplate: () => en,
         resetHistoryPaging: () => ei,
@@ -93,9 +93,19 @@ let U = {
 };
 var v = n(649121),
     P = n(975189);
-(n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331), n(427123));
-let J = new Map(),
-    I = new Map(),
+(n(643210),
+    n(285411),
+    n(933294),
+    n(944142),
+    n(557744),
+    n(714917),
+    n(722701),
+    n(894443),
+    n(442331),
+    n(427123),
+    n(677683));
+let I = new Map(),
+    J = new Map(),
     M = new Set();
 function D(e, t) {
     o.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
@@ -182,7 +192,7 @@ async function q(e, t) {
             templateId: t.warmTemplateId ?? void 0,
             onEvent: (n) =>
                 (function e(t, n, r) {
-                    if ((console.debug("[conjure] ws event", r.type), !W.has(r.type) && "open" !== I.get(t)))
+                    if ((console.debug("[conjure] ws event", r.type), !W.has(r.type) && "open" !== J.get(t)))
                         return void n.pendingEvents.push(r);
                     let s = { projectId: t, ws: n.ws };
                     switch (r.type) {
@@ -330,7 +340,7 @@ async function q(e, t) {
 }
 function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        n = J.get(e);
+        n = I.get(e);
     null == n &&
         ((n = {
             ws: new R.u(),
@@ -345,7 +355,7 @@ function $(e) {
             warmTemplateId: null,
             debugOnDemand: !1,
         }),
-        J.set(e, n),
+        I.set(e, n),
         (0, P.Sm)(e, n.ws));
     let s = n;
     ((s.warmTemplateId = t ?? s.warmTemplateId),
@@ -361,20 +371,20 @@ let F = new Map();
 function K(e, t) {
     t.debugOnDemand && t.ws.sendDebugSubscribe();
 }
-function Y(e) {
+function V(e) {
     let t = F.get(e) ?? 0;
     F.set(e, t + 1);
-    let n = J.get(e);
+    let n = I.get(e);
     return (
-        0 === t && null != n && "open" === I.get(e) && K(e, n),
+        0 === t && null != n && "open" === J.get(e) && K(e, n),
         () => {
             let t = (F.get(e) ?? 1) - 1;
             t > 0 ? F.set(e, t) : F.delete(e);
         }
     );
 }
-function V(e) {
-    let t = J.get(e);
+function Y(e) {
+    let t = I.get(e);
     return (
         null != t &&
         ((t.disposed = !0),
@@ -383,7 +393,7 @@ function V(e) {
         (0, b.Fc)(e),
         (0, T.BC)(e, "Connection closed before the draft arrived"),
         t.ws.close(),
-        J.delete(e),
+        I.delete(e),
         (0, P.ng)(e),
         ei(e),
         w.A.releasePreviewControl(e),
@@ -394,9 +404,9 @@ function V(e) {
 }
 function z(e) {
     let { templateId: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = J.get(e);
+        n = I.get(e);
     if (null == n) return void $(e, t ?? null);
-    let r = I.get(e);
+    let r = J.get(e);
     ("closed" !== r && "failed" !== r) || n.reconnectPending || $(e);
 }
 function Q(e, t, n) {
@@ -419,8 +429,8 @@ function Q(e, t, n) {
             ...(null != o ? { clarificationAnswers: o } : {}),
             ...(null != p ? { linkEmbeds: p } : {}),
         },
-        _ = J.get(e);
-    if (null != _ && ("connecting" === I.get(e) || _.reconnectPending)) return (_.pendingSends.push(h), !0);
+        _ = I.get(e);
+    if (null != _ && ("connecting" === J.get(e) || _.reconnectPending)) return (_.pendingSends.push(h), !0);
     x(e, h);
     try {
         if (null == _) throw Error("Not connected");
@@ -455,7 +465,7 @@ function Z(e, t) {
     (L.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: H(t), withdrawn: !0 }));
 }
 function ee(e) {
-    let t = J.get(e);
+    let t = I.get(e);
     try {
         if (null == t) throw Error("Not connected");
         (t.ws.sendInterrupt(),
@@ -465,16 +475,16 @@ function ee(e) {
     }
 }
 function et(e, t) {
-    let n = J.get(e);
+    let n = I.get(e);
     null == n
         ? console.error("[conjure] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
 function en(e, t) {
-    let n = J.get(e);
+    let n = I.get(e);
     null == n
         ? console.error("[conjure] prepareTemplate with no connection \u2014 call ensureConnection first")
-        : "open" === I.get(e)
+        : "open" === J.get(e)
           ? er(n, t)
           : (n.pendingTemplatePrep = t);
 }
@@ -490,17 +500,17 @@ function eo(e) {
     let t = (0, c.b)(e);
     if (null == t) return !1;
     if (es.get(e) === t) return !0;
-    let n = J.get(e);
-    return null != n && "open" === I.get(e) && (es.set(e, t), n.ws.sendLoadHistory(t), !0);
+    let n = I.get(e);
+    return null != n && "open" === J.get(e) && (es.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
 function ei(e) {
     es.delete(e);
 }
 function el(e) {
-    V(e);
+    Y(e);
 }
 function ea() {
-    for (let e of Array.from(J.keys())) V(e);
+    for (let e of Array.from(I.keys())) Y(e);
     (L.clear(), (0, v.j_)());
 }
 class ec extends s.Ay.Store {
@@ -508,26 +518,26 @@ class ec extends s.Ay.Store {
         this.waitFor(c.A, h.A, y.Ay, l.default);
     }
     getConnState(e) {
-        return I.get(e) ?? "connecting";
+        return J.get(e) ?? "connecting";
     }
 }
 let ed = new ec(o.h, {
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
-        if (I.get(t) === n) return !1;
-        (I.set(t, n), ("closed" === n || "failed" === n) && M.delete(t));
+        if (J.get(t) === n) return !1;
+        (J.set(t, n), ("closed" === n || "failed" === n) && M.delete(t));
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!V(t)) return !1;
+        if (!Y(t)) return !1;
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = !1;
-        for (let e of Array.from(J.keys())) null == y.Ay.getProject(e) && V(e) && (t = !0);
+        for (let e of Array.from(I.keys())) null == y.Ay.getProject(e) && Y(e) && (t = !0);
         if (!t) return !1;
     },
     LOGOUT: function () {
-        if (((0, v.j_)(), 0 === J.size)) return !1;
+        if (((0, v.j_)(), 0 === I.size)) return !1;
         ea();
     },
 });

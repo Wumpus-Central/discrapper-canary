@@ -90,6 +90,16 @@ class r {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "draft_patch_notes", nonce: e }));
     }
+    sendVoiceChannelPinOutcome(e) {
+        if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
+        this.socket.send(
+            JSON.stringify({
+                type: "voice_channel_pin_outcome",
+                status: e.status,
+                ...("pinned" === e.status ? { channel_id: e.channelId } : {}),
+            }),
+        );
+    }
     sendPatchNotesSent(e, t) {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(

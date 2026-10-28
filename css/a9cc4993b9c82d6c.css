@@ -1082,4 +1082,14 @@
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=cbef5aff43d52baa.css.map*/
+.body__0d9d3 {
+    padding: var(--space-12) var(--space-16)
+}
+
+.actions__0d9d3 {
+    display: flex;
+    gap: var(--space-8);
+    justify-content: flex-end
+}
+
+/*# sourceMappingURL=a9cc4993b9c82d6c.css.map*/

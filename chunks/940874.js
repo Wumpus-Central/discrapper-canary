@@ -29,6 +29,7 @@ let d = {
         preview_bot_removed: S,
         app_channel_deleted: S,
         remixed: S,
+        voice_channel_pin: S,
         side_reply(e, t) {
             let { projectId: n } = t;
             r.h.dispatch({
@@ -271,7 +272,7 @@ function E(e, t) {
 function S(e, t) {
     let { projectId: n } = t;
     (r.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: n, event: e }),
-        "app_channel_deleted" !== e.type && "remixed" !== e.type && (0, o.GO)(n));
+        "app_channel_deleted" !== e.type && "remixed" !== e.type && "voice_channel_pin" !== e.type && (0, o.GO)(n));
 }
 let m = {
         build_error: { location: "build", code: i.xf.BUILD_FAILED },
