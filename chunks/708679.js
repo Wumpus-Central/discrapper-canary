@@ -12,34 +12,34 @@ var s = n(636537),
     f = n(371169),
     h = n(260498),
     x = n(652215),
-    g = n(248675),
-    p = n(105292);
-let j = "ConjureHeldPrompts",
-    v = new Map(),
+    p = n(248675),
+    g = n(105292);
+let v = "ConjureHeldPrompts",
+    j = new Map(),
     N = new Map();
 function b(e, t) {
     let n =
-        v.get(e) ??
+        j.get(e) ??
         (async () => {
             try {
                 await t();
             } catch (t) {
-                throw (v.delete(e), t);
+                throw (j.delete(e), t);
             }
         })();
-    return (v.set(e, n), n);
+    return (j.set(e, n), n);
 }
 function y() {
-    return a.w.get(j) ?? {};
+    return a.w.get(v) ?? {};
 }
 function w(e) {
     let { [e]: t, ...n } = y();
-    a.w.set(j, n);
+    a.w.set(v, n);
 }
 function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     if (h.Ay.getProject(e)?.install_scope_setup != null)
-        a.w.set(j, { ...y(), [e]: { message: t, attachments: n, nonce: (0, r.m)() } });
+        a.w.set(v, { ...y(), [e]: { message: t, attachments: n, nonce: (0, r.m)() } });
     else (0, d.sendUserMessage)(e, t, n);
 }
 function A(e, t, n) {
@@ -75,7 +75,7 @@ function E(e, t) {
         return;
     }
     "open" === d.default.getConnState(e) &&
-        (a.w.set(j, { ...y(), [e]: { ...n, sent: !0 } }),
+        (a.w.set(v, { ...y(), [e]: { ...n, sent: !0 } }),
         N.set(e, o.A.getHistoryLoads(e)),
         (0, d.sendUserMessage)(e, n.message, n.attachments, { nonce: n.nonce }) || A(e, n, t));
 }
@@ -84,7 +84,7 @@ function R(e, t) {
     let n = e.find((e) => e.id === t);
     return {
         input: "server",
-        note: p.intl.string(g.default.SU9K9U),
+        note: g.intl.string(p.default.SU9K9U),
         ...(null != n ? { default_entities: [{ id: n.id, name: n.name, kind: "server" }] } : {}),
     };
 }
@@ -97,7 +97,7 @@ function S(e) {
             recommendation_reason: "",
             options: [],
             allow_custom: !1,
-            note: p.intl.string(g.default.ZKPaWY),
+            note: g.intl.string(p.default.ZKPaWY),
         })),
     };
 }
@@ -122,8 +122,8 @@ function k(e, t, n) {
 function L(e, t, n, s) {
     return b(`switch:${e}:${t}`, async () => {
         await I(e, n, s);
-        let t = "guild" === n ? g.default["8+EcCu"] : g.default["U7+Yeh"];
-        if (!(0, d.sendUserMessage)(e, p.intl.string(t))) throw Error("Not connected");
+        let t = "guild" === n ? p.default["8+EcCu"] : p.default["U7+Yeh"];
+        if (!(0, d.sendUserMessage)(e, g.intl.string(t))) throw Error("Not connected");
     });
 }
 function O(e) {

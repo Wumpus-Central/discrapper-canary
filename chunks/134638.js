@@ -56,7 +56,7 @@ function O(e) {
         K = i.useMemo(() => {
             if (Y && null != F) return () => F(x.pn.PLAN_SELECT);
         }, [Y, F]),
-        Z = (function (e) {
+        q = (function (e) {
             let {
                     invoiceSummaryType: t,
                     invoicePreview: n,
@@ -94,7 +94,7 @@ function O(e) {
             isClickPurchaseItemToEdit: Y,
             quantity: H,
         }),
-        q = (function (e) {
+        Z = (function (e) {
             let { guildId: t, invoiceSummaryType: n, giftRecipient: l } = e,
                 i = (0, r.bG)([E.A], () => (null != t ? E.A.getGuild(t) : null), [t]);
             return L(n) && null != l
@@ -221,13 +221,13 @@ function O(e) {
         ),
         ea = ((0, A.ys)(d.id) ? (0, A.m6)(d.id) : void 0) === _.PremiumTypes.TIER_2;
     return (0, l.jsx)(c.f7, {
-        label: Z,
+        label: q,
         description: z,
         price: en,
         priceStrikethroughText: el,
         priceSubText: ei,
         priceSubTextHasStrikethrough: er,
-        target: q,
+        target: Z,
         graphic: (0, l.jsx)(M, { subscriptionPlan: d, storeListing: G }),
         omitDefaultIconBackground: ea,
         header: $,

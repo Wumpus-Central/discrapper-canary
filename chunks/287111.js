@@ -32,7 +32,7 @@ function x(e, t, n) {
     let { draftsByProject: s } = m.getState();
     m.setState({ draftsByProject: { ...s, [e]: { ...s[e], [t]: n } } });
 }
-function g(e, t, n, s) {
+function p(e, t, n, s) {
     let a = h(e, t);
     return (
         !!a.some((e) => e.localId === n) &&
@@ -44,21 +44,21 @@ function g(e, t, n, s) {
         !0)
     );
 }
-function p(e, t) {
+function g(e, t) {
     (0, i.Vm)(e, t).catch((e) => {
         console.error("[conjure] attachment cleanup failed", e);
     });
 }
-function j(e, t) {
-    (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && p(e, t.ref.id));
-}
 function v(e, t) {
+    (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && g(e, t.ref.id));
+}
+function j(e, t) {
     let { deleteFromWorker: n } = t,
         { draftsByProject: s } = m.getState(),
         a = s[e];
     if (null == a) return;
     for (let t of Object.values(a))
-        for (let s of t ?? u) n ? j(e, s) : null != s.previewUrl && URL.revokeObjectURL(s.previewUrl);
+        for (let s of t ?? u) n ? v(e, s) : null != s.previewUrl && URL.revokeObjectURL(s.previewUrl);
     let { [e]: l, ...r } = s;
     m.setState({ draftsByProject: r });
 }
@@ -87,18 +87,18 @@ function w(e, t, n) {
     s))
         a?.().then(
             (s) => {
-                if ("errorText" in s) return void g(e, t, n.localId, { status: "error", errorText: s.errorText });
+                if ("errorText" in s) return void p(e, t, n.localId, { status: "error", errorText: s.errorText });
                 let { converted: a, ...l } = s;
-                g(e, t, n.localId, { ...a, status: "ready", ref: l })
+                p(e, t, n.localId, { ...a, status: "ready", ref: l })
                     ? setTimeout(
-                          () => g(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default.E7dS5n) }),
+                          () => p(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default.E7dS5n) }),
                           r.o2 - 3e5,
                       )
-                    : p(e, l.id);
+                    : g(e, l.id);
             },
             (s) => {
                 (console.error("[conjure] attachment upload failed", s),
-                    g(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
+                    p(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
             },
         );
 }
@@ -106,7 +106,7 @@ function C(e, t, n) {
     let s = h(e, t),
         a = s.find((e) => e.localId === n);
     null != a &&
-        (j(e, a),
+        (v(e, a),
         x(
             e,
             t,
@@ -116,7 +116,7 @@ function C(e, t, n) {
 function A(e, t) {
     let n = h(e, t);
     if (0 !== n.length) {
-        for (let t of n) j(e, t);
+        for (let t of n) v(e, t);
         x(e, t, u);
     }
 }
@@ -134,9 +134,9 @@ function R(e, t) {
     (0, l.sendUserMessage)(e, t, [...s, ...r], { clarificationAnswers: n });
 }
 (s.h.subscribe("LOGOUT", () => {
-    for (let e of Object.keys(m.getState().draftsByProject)) v(e, { deleteFromWorker: !0 });
+    for (let e of Object.keys(m.getState().draftsByProject)) j(e, { deleteFromWorker: !0 });
 }),
     s.h.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (e) => {
         let { projectId: t } = e;
-        v(t, { deleteFromWorker: !1 });
+        j(t, { deleteFromWorker: !1 });
     }));

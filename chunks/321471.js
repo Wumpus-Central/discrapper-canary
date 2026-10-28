@@ -22,8 +22,8 @@ let c = function (e) {
         p = r.useId(),
         v = r.useId(),
         A = g ?? p,
-        E = null != x ? v : void 0,
-        [C, N] = r.useState(void 0),
+        C = null != x ? v : void 0,
+        [E, N] = r.useState(void 0),
         [S, I] = r.useState(void 0),
         b = void 0 !== S;
     return (0, l.jsx)("div", {
@@ -33,9 +33,9 @@ let c = function (e) {
         children: (0, l.jsx)(a.hN, {
             "data-migration-pending": !0,
             titleId: A,
-            errorId: E,
+            errorId: C,
             error: x ?? void 0,
-            isFocused: C,
+            isFocused: E,
             setIsFocused: N,
             hasValue: S,
             setHasValue: I,
@@ -51,7 +51,7 @@ let c = function (e) {
                               error: x,
                               className: o,
                               id: A,
-                              errorId: E,
+                              errorId: C,
                               ...j,
                               children: h,
                           })

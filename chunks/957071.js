@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var s = n(477900),
     a = n(582128),
     l = n(477262),
@@ -12,7 +12,7 @@ var s = n(477900),
     f = n(663341),
     h = n(248675),
     x = n(105292);
-let g = [
+let p = [
     {
         id: "add-images-videos",
         label: h.default["51+9lc"],
@@ -27,21 +27,21 @@ let g = [
     },
     { id: "add-other-files", label: h.default.aotDee, icon: i.H, accept: "" },
 ];
-function p(e) {
+function g(e) {
     let {
             navId: t,
             disabled: n,
             buttonClassName: l,
             iconClassName: r,
             onAddFiles: i,
-            onImport: p,
-            onSendToOtherProjects: j,
+            onImport: g,
+            onSendToOtherProjects: v,
         } = e,
-        v = a.useRef(null),
+        j = a.useRef(null),
         N = a.useRef(null),
         b = x.intl.string(x.t.d56gCa),
         y = a.useCallback((e) => {
-            let t = v.current;
+            let t = j.current;
             null != t && ((t.accept = e), t.click());
         }, []),
         w = a.useCallback(
@@ -53,7 +53,7 @@ function p(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("input", {
-                ref: v,
+                ref: j,
                 type: "file",
                 multiple: !0,
                 hidden: !0,
@@ -76,7 +76,7 @@ function p(e) {
                         onSelect: n,
                         children: (0, s.jsxs)(u.rX, {
                             children: [
-                                g.map((e) =>
+                                p.map((e) =>
                                     (0, s.jsx)(
                                         u.Dr,
                                         {
@@ -89,22 +89,22 @@ function p(e) {
                                         e.id,
                                     ),
                                 ),
-                                null != p
+                                null != g
                                     ? (0, s.jsx)(u.Dr, {
                                           id: "import-project",
                                           label: x.intl.string(h.default["p/k5i7"]),
                                           iconLeft: d.q,
                                           leadingAccessory: { type: "icon", icon: d.q },
-                                          action: p,
+                                          action: g,
                                       })
                                     : null,
-                                null != j
+                                null != v
                                     ? (0, s.jsx)(u.Dr, {
                                           id: "send-to-other-projects",
                                           label: x.intl.string(h.default["5HmLrK"]),
                                           iconLeft: m.t,
                                           leadingAccessory: { type: "icon", icon: m.t },
-                                          action: j,
+                                          action: v,
                                       })
                                     : null,
                             ],

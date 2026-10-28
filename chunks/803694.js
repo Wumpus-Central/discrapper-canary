@@ -261,11 +261,11 @@ function S(e) {
             walletCoversSubtotal: V,
             walletCoversTotal: Y,
             isWalletBalanceLoaded: K,
-            isWalletCoverageLoading: Z,
-            walletBalanceAmount: q,
+            isWalletCoverageLoading: q,
+            walletBalanceAmount: Z,
         } = f({ giftCardsEnabled: S }),
-        z = null != q && q > 0,
-        $ = null != q && q <= 0,
+        z = null != Z && Z > 0,
+        $ = null != Z && Z <= 0,
         Q = (x ?? P) === !0,
         J = null != E && null != R && E === R.id,
         X = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: Y }));
@@ -298,11 +298,11 @@ function S(e) {
                         giftCardWallet: R,
                         checked: k,
                         onChange: H,
-                        loading: Z,
-                        disabled: !Z && !V,
-                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
+                        loading: q,
+                        disabled: !q && !V,
+                        disabledTooltip: q || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
-        [R, j, Q, W, k, H, V, Z, $, z],
+        [R, j, Q, W, k, H, V, q, $, z],
     );
     return {
         giftCardsEnabled: S,
@@ -317,7 +317,7 @@ function S(e) {
         walletCoversSubtotal: V,
         walletCoversTotal: Y,
         isWalletBalanceLoaded: K,
-        isWalletCoverageLoading: Z,
+        isWalletCoverageLoading: q,
         isSplitPaymentMode: j,
     };
 }

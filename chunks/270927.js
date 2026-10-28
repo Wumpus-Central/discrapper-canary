@@ -89,8 +89,8 @@ var G = n(951305),
     V = n(10716),
     Y = n(206828),
     K = n(31823),
-    Z = n(427675),
-    q = n(977445),
+    q = n(427675),
+    Z = n(977445),
     z = n(118982),
     $ = n(566980),
     Q = n(319820),
@@ -192,7 +192,7 @@ function ea(e) {
                     purchaseState: e.purchaseState,
                 })),
                 { application: n } = (0, K.V)(),
-                l = (0, Z.gU)();
+                l = (0, q.gU)();
             B()(null != e, "Expected selectedSkuId");
             let i = l[e],
                 r = i?.eligiblePaymentGateways;
@@ -226,7 +226,7 @@ function ea(e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, W.bG)([V.A], () => V.A.getFetchState()),
                 { fetched: a, hasAlreadyLinked: s } = (0, Y.RD)(n),
-                o = (0, q.uS)(n.id),
+                o = (0, Z.uS)(n.id),
                 u = null != t && t.productLine === b.EZt.SOCIAL_LAYER_GAME_ITEM,
                 c = n.supportsEmbeddedSurface(H.U.MAIN) && r === V.$.ERROR,
                 d = u && a && !s && !l ? (0, z.k3)(n) : null;

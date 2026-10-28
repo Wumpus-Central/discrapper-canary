@@ -220,8 +220,8 @@ class W {
 var V = n(558620),
     Y = n(427675),
     K = n(169797),
-    Z = n(705822);
-function q(e, t) {
+    q = n(705822);
+function Z(e, t) {
     let n = t(e.getState());
     return null != n
         ? Promise.resolve(n)
@@ -233,7 +233,7 @@ function q(e, t) {
           });
 }
 async function z(e) {
-    await q(e, (e) => !e.get("isOrderLocked") || null);
+    await Z(e, (e) => !e.get("isOrderLocked") || null);
 }
 var $ = n(26279);
 function Q(e, t) {
@@ -433,11 +433,11 @@ function en(e) {
         { balance: eH } = (0, N.W0)(),
         [eW, eV] = i.useState(!1),
         [eY, eK] = i.useState(!1),
-        eZ = i.useRef(!0),
-        eq = i.useRef(!1);
+        eq = i.useRef(!0),
+        eZ = i.useRef(!1);
     i.useEffect(
         () => () => {
-            eZ.current = !1;
+            eq.current = !1;
         },
         [],
     );
@@ -520,8 +520,8 @@ function en(e) {
         }
     }
     async function e7(e) {
-        (X(ey, e), ee(ey, e, () => eZ.current));
-        let t = await q(ey, (t) => Q(t, e));
+        (X(ey, e), ee(ey, e, () => eq.current));
+        let t = await Z(ey, (t) => Q(t, e));
         return t.status !== $.Re.SIGNED ? (eJ(new o.Ay(H.intl.string(H.t.khEaRI))), null) : t;
     }
     async function e5() {
@@ -538,7 +538,7 @@ function en(e) {
         if (null != n)
             try {
                 let e = await (0, m.Vw)(n.id);
-                if (!eZ.current) return;
+                if (!eq.current) return;
                 if (0 === e.length) throw new m.j2();
                 (el(x.h.COMPLETED), e3(null, e));
             } catch (e) {
@@ -547,13 +547,13 @@ function en(e) {
     }
     async function e6(e) {
         if (null != ef) {
-            if (eq.current) return;
-            eq.current = !0;
+            if (eZ.current) return;
+            eZ.current = !0;
             try {
-                if ((await z(ey), !eZ.current)) return;
+                if ((await z(ey), !eq.current)) return;
                 await e4();
             } finally {
-                eq.current = !1;
+                eZ.current = !1;
             }
             return;
         }
@@ -588,7 +588,7 @@ function en(e) {
     }
     let e8 = null != S || (eo === g.VVm.ONE_TIME && !e_);
     i.useLayoutEffect(() => {
-        eh && null != C && eC(Z.i.UNAVAILABLE);
+        eh && null != C && eC(q.i.UNAVAILABLE);
     }, [eh, C, eC]);
     let e9 =
         eh && null == C

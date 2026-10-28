@@ -481,13 +481,13 @@ function K(e) {
         })),
         { isPremiumPurchase: B, isPremiumGroupPurchase: H } = (0, m.t4)((e) => e.get("selectedPlanAttributes")),
         W = (0, S.g)(A, _),
-        { showFractionalPremiumBanner: K, fractionalPremiumInfo: Z } = (0, f._V)({
+        { showFractionalPremiumBanner: K, fractionalPremiumInfo: q } = (0, f._V)({
             premiumSubscription: M,
             selectedPlanId: P,
             planGroup: n,
             isGift: !1,
         }),
-        q = v === p.h.PURCHASING || v === p.h.COMPLETED,
+        Z = v === p.h.PURCHASING || v === p.h.COMPLETED,
         z = M?.isPausedAllowsResumeButNotUpdates,
         $ = r.useRef(null),
         [Q, J] = r.useState(null),
@@ -558,11 +558,11 @@ function K(e) {
                   })(
                       { hasOpenInvoice: l, showResumeSubscriptionView: z, planId: P },
                       {
-                          disabled: q,
+                          disabled: Z,
                           premiumSubscription: M,
                           newPlan: x,
                           planGroup: n,
-                          fractionalPremiumInfo: Z,
+                          fractionalPremiumInfo: q,
                           priceOptions: T,
                       },
                       et,
@@ -588,13 +588,13 @@ function K(e) {
                     ? (0, i.jsx)(o.N, {
                           label: h.intl.string(h.t["mmDvV+"]),
                           onPaymentSourceAdd: t,
-                          disabled: q,
+                          disabled: Z,
                           additionalPaymentSourceDropdownProps: es,
                           location: "PremiumSwitchPlanReview",
                           subscriptionPaymentSourceId: T.paymentSourceId,
                       })
                     : null,
-            [eo, T.paymentSourceId, es, t, q],
+            [eo, T.paymentSourceId, es, t, Z],
         ),
         ec = null != M && (0, g.Ge)(M, P, n),
         ed = !z && k && !H && !a && !F,
@@ -604,7 +604,7 @@ function K(e) {
                 null == b || null == N || em
                     ? null
                     : (0, i.jsx)(E.P, {
-                          fractionalPremiumInfo: Z,
+                          fractionalPremiumInfo: q,
                           overrideRenewalDate: X,
                           activeSubscription: M,
                           isTrial: !1,
@@ -618,14 +618,14 @@ function K(e) {
                               renewalInvoicePreview: N,
                           },
                       }),
-            [Z, b, N, em, X, M, x, W, el],
+            [q, b, N, em, X, M, x, W, el],
         );
     return (0, i.jsx)(V, {
         loading: j,
-        disabled: q,
+        disabled: Z,
         isInPastDueCheckout: a,
         showFractionalPremiumBanner: K,
-        fractionalPremiumInfo: Z,
+        fractionalPremiumInfo: q,
         isPremiumGroupPurchase: H,
         paymentRestrictionBannerType: er,
         invoiceError: I,

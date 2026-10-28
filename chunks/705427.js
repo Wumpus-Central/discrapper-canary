@@ -11,11 +11,11 @@ var a = n(152367),
     d = n(105292),
     m = n(631417);
 function f(e) {
-    let { title: t, actions: n, breadcrumb: f, project: h, onOpenProjectSettings: x, transparent: g = !1 } = e,
-        p = d.intl.string(u.default.FzfmQ8);
+    let { title: t, actions: n, breadcrumb: f, project: h, onOpenProjectSettings: x, transparent: p = !1 } = e,
+        g = d.intl.string(u.default.FzfmQ8);
     return (0, s.jsx)(o.A, {
         hideSearch: !0,
-        transparent: g,
+        transparent: p,
         toolbar: n,
         className: m.wx,
         "aria-label": t,
@@ -42,12 +42,12 @@ function f(e) {
                 null != h && null != x
                     ? (0, s.jsx)(r.m, {
                           asContainer: !0,
-                          text: p,
+                          text: g,
                           position: "bottom",
                           children: (0, s.jsx)(i.D, {
                               className: m.FF,
                               onClick: x,
-                              "aria-label": p,
+                              "aria-label": g,
                               children: (0, s.jsx)(c.A, { project: h, size: "header" }),
                           }),
                       })

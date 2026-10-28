@@ -1,4 +1,4 @@
-n.d(t, { A: () => G });
+n.d(t, { A: () => F });
 var l = n(477900),
     r = n(582128),
     a = n(503698),
@@ -17,16 +17,16 @@ var l = n(477900),
     p = n(565645),
     v = n(142617),
     A = n(819648),
-    E = n(33293),
-    C = n(498137),
+    C = n(33293),
+    E = n(498137),
     N = n(192339),
     S = n(144103),
     I = n(834109),
     b = n(486020),
     y = n(48763),
     T = n(105292),
-    _ = n(922704),
-    R = n(763166),
+    R = n(922704),
+    _ = n(763166),
     O = n(241802);
 let M = {
     "--custom-checkpoint-card-logo-size": "44px",
@@ -126,7 +126,7 @@ function U(e) {
                 variant: "experimental/display-xs",
                 color: "text-overlay-dark",
                 className: O.K8,
-                children: T.intl.string(_.default["CdU/PF"]),
+                children: T.intl.string(R.default["CdU/PF"]),
             }),
             t
                 ? (0, l.jsx)("div", {
@@ -138,13 +138,13 @@ function U(e) {
         ],
     });
 }
-function F(e) {
+function G(e) {
     let { isCheckpointEnabled: t, onClick: n } = e;
     return t && null != n
         ? (0, l.jsx)(j.D, {
               className: s()(O.qr, O.vk),
               onClick: n,
-              "aria-label": T.intl.string(_.default.r8GEbK),
+              "aria-label": T.intl.string(R.default.r8GEbK),
               children: (0, l.jsx)(U, { isCheckpointEnabled: t }),
           })
         : (0, l.jsx)("div", {
@@ -153,27 +153,27 @@ function F(e) {
               children: (0, l.jsx)(U, { isCheckpointEnabled: t }),
           });
 }
-function G(e) {
+function F(e) {
     let { checkpointData: t, onFooterClick: n } = e,
         { character: a, stats: i } = t,
         c = null != a && null != i,
         o = (0, v.FX)("Checkpoint2026CardDisplayComponent"),
         d = r.useMemo(() => (null != i ? (0, A.R8)(i) : null), [i]);
-    return (0, l.jsxs)(C.A, {
+    return (0, l.jsxs)(E.A, {
         character: a,
         size: y.W.SM,
         className: s()(O.Nr, { [O.Q9]: c }),
         style: M,
         children: [
-            (0, l.jsx)(u.A, { children: T.intl.string(R.default.Og2R9d) }),
+            (0, l.jsx)(u.A, { children: T.intl.string(_.default.Og2R9d) }),
             (0, l.jsx)(N.A, {}),
             (0, l.jsx)(I.A, { variant: null != a ? "full" : "short", className: O.Ss }),
             null != a && null != d
                 ? (0, l.jsx)(S.A, { powerLevel: d.powerLevel, powerLevelUnits: d.powerLevelUnits })
                 : null,
-            null != a ? (0, l.jsx)(E.A, { character: a }) : null,
+            null != a ? (0, l.jsx)(C.A, { character: a }) : null,
             null != d ? (0, l.jsx)(D, { stats: d }) : null,
-            (0, l.jsx)(F, { isCheckpointEnabled: o, onClick: n }),
+            (0, l.jsx)(G, { isCheckpointEnabled: o, onClick: n }),
         ],
     });
 }
