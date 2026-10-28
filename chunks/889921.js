@@ -44,7 +44,7 @@ var r = n(158390),
     R = n(736553),
     A = n(642785);
 n(205816);
-let U = {
+let v = {
     app_build_request: !0,
     app_profile_updated: !0,
     assistant_delta: !0,
@@ -91,7 +91,7 @@ let U = {
     turn_result: !0,
     usage: !0,
 };
-var v = n(649121),
+var U = n(649121),
     P = n(975189);
 (n(643210),
     n(285411),
@@ -297,7 +297,7 @@ async function q(e, t) {
                                     return;
                                 }
                                 let r = B[e.kind];
-                                null != r ? r(e, t) : Object.hasOwn(U, e.kind) && (0, d.OA)(n, e);
+                                null != r ? r(e, t) : Object.hasOwn(v, e.kind) && (0, d.OA)(n, e);
                             })(r, s);
                             return;
                         default:
@@ -511,7 +511,7 @@ function el(e) {
 }
 function ea() {
     for (let e of Array.from(I.keys())) Y(e);
-    (L.clear(), (0, v.j_)());
+    (L.clear(), (0, U.j_)());
 }
 class ec extends s.Ay.Store {
     initialize() {
@@ -537,7 +537,7 @@ let ed = new ec(o.h, {
         if (!t) return !1;
     },
     LOGOUT: function () {
-        if (((0, v.j_)(), 0 === I.size)) return !1;
+        if (((0, U.j_)(), 0 === I.size)) return !1;
         ea();
     },
 });

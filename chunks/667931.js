@@ -98,7 +98,7 @@ function d(e) {
                     end: d,
                     totalMs: u.reduce((e, t) => e + t, 0),
                     maxMs: Math.max(...u),
-                    selfMs: d - c - U(e, p, c, d),
+                    selfMs: d - c - v(e, p, c, d),
                     running: null == a.end,
                     failed: null != a.error,
                     parallel: s.some((t) =>
@@ -215,7 +215,7 @@ function y(e) {
     return new Map(
         e.spans.map((n) => {
             let r = A(e, n);
-            return [n.id, r - n.start - U(e, t.get(n.id) ?? [], n.start, r)];
+            return [n.id, r - n.start - v(e, t.get(n.id) ?? [], n.start, r)];
         }),
     );
 }
@@ -281,7 +281,7 @@ function R(e) {
 function A(e, t) {
     return t.end ?? e.as_of;
 }
-function U(e, t, n, r) {
+function v(e, t, n, r) {
     let s = t
             .map((t) => [Math.max(t.start, n), Math.min(A(e, t), r)])
             .filter((e) => {
