@@ -1,4 +1,4 @@
-n.d(t, { WM: () => s });
+n.d(t, { WM: () => a, AF: () => c });
 let r = (0, n(945810).mj)({
     name: "2026-08-vq-remaining-time-truncation",
     kind: "user",
@@ -17,12 +17,16 @@ function o(e, t) {
         ? i.intl.formatToPlainString(o ? i.t.XTdnRd : i.t.PHhTXX, { count: Math.round(s / 60) })
         : i.intl.formatToPlainString(o ? i.t["spl/XS"] : i.t.rUfeQx, { count: s });
 }
-function s(e) {
+function s(e, t) {
+    let { truncateMoreThanSeconds: n } = t;
+    return e.percentComplete > 0
+        ? i.intl.formatToPlainString(i.t["pF/deA"], { durationShort: o(e) })
+        : i.intl.formatToPlainString(i.t.CHrvqg, { durationShort: o(e, { truncate: n }) });
+}
+function a(e) {
     let { truncateMoreThanSeconds: t } = r.getConfig({ location: l.rE.QUESTS_CARD });
-    return (function (e, t) {
-        let { truncateMoreThanSeconds: n } = t;
-        return e.percentComplete > 0
-            ? i.intl.formatToPlainString(i.t["pF/deA"], { durationShort: o(e) })
-            : i.intl.formatToPlainString(i.t.CHrvqg, { durationShort: o(e, { truncate: n }) });
-    })(e, { truncateMoreThanSeconds: t });
+    return s(e, { truncateMoreThanSeconds: t });
+}
+function c(e) {
+    return s(e, { truncateMoreThanSeconds: null });
 }

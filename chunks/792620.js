@@ -9,6 +9,7 @@ n.d(t, {
     Ki: () => v,
     Ov: () => T,
     TP: () => h,
+    X3: () => $,
     Xi: () => B,
     YL: () => w,
     Yh: () => V,
@@ -286,4 +287,14 @@ function Y(e) {
 }
 function K(e, t) {
     return `${String(e).padStart(2, "0")}:${String(t).padStart(2, "0")}`;
+}
+function $(e) {
+    let { progressSeconds: t, targetSeconds: n } = e;
+    return {
+        progressSeconds: t,
+        targetSeconds: n,
+        targetMinutes: Math.ceil(n / a.A.Seconds.MINUTE),
+        percentComplete: k(n, t),
+        taskType: r.n.WATCH_VIDEO_ON_MOBILE,
+    };
 }

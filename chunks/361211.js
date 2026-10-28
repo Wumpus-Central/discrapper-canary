@@ -1,4 +1,4 @@
-n.d(t, { default: () => em });
+n.d(t, { default: () => eh });
 var a = n(477900),
     i = n(582128),
     s = n(323889),
@@ -7,23 +7,23 @@ var a = n(477900),
     o = n(284009),
     c = n.n(o);
 (r.x.PORTRAIT, r.x.PORTRAIT);
-let d = { preferred: r.x.LANDSCAPE, supported: [r.x.LANDSCAPE, r.x.PORTRAIT] },
-    u = { [r.x.PORTRAIT]: 9 / 16, [r.x.LANDSCAPE]: 16 / 9 };
+let u = { preferred: r.x.LANDSCAPE, supported: [r.x.LANDSCAPE, r.x.PORTRAIT] },
+    d = { [r.x.PORTRAIT]: 9 / 16, [r.x.LANDSCAPE]: 16 / 9 };
 function m(e, t) {
     let n = e[t];
     return null == n || "" === n ? null : { url: n, aspectRatio: t };
 }
 var h = n(613373),
     x = n(738822);
-function b(e) {
+function p(e) {
     return { label: e.productName, buttonLabel: e.cta.buttonLabel, iconImageUri: e.productIcon };
 }
-var p = n(637691),
-    C = n(738883),
-    f = n(669912),
+var C = n(637691),
+    b = n(738883),
+    A = n(669912),
     v = n(657792),
-    A = n(503698),
-    R = n.n(A),
+    f = n(503698),
+    R = n.n(f),
     N = n(291749),
     g = n(815714);
 let j = { sm: 48, lg: 92 };
@@ -82,9 +82,9 @@ var $ = n(652215);
 let G = { offset: 4 };
 function W(e) {
     let { bounty: t, sourceQuestContent: n, videoRef: r, onClose: l } = e,
-        o = b(t),
+        o = p(t),
         c = K({ bounty: t, onClose: l, sourceQuestContent: n }),
-        d = i.useCallback(() => {
+        u = i.useCallback(() => {
             let e = (0, B.qf)(r.current?.parentNode, r.current);
             (null != e && (0, B.sP)(e), c(x.uF.VIDEO_MODAL_ICON_END_CARD));
         }, [r, c]);
@@ -102,7 +102,7 @@ function W(e) {
                         innerRef: n,
                         className: R()(e, g.hn),
                         focusProps: G,
-                        onClick: d,
+                        onClick: u,
                         children: (0, a.jsxs)("div", {
                             className: g.jT,
                             children: [
@@ -207,21 +207,13 @@ function es(e, t) {
 }
 var er = n(190107);
 n(500522);
-var el = n(879371);
-function eo() {
-    let e = i.useMemo(
-        () =>
-            (0, N.lR)({
-                assetUrl:
-                    "https://cdn.discordapp.com/assets/content/8db8015bf879338028eb3094d2ca5567c70f6ea9a6bb60068b0f00ca712e5bf6.webp",
-                width: 34,
-                height: 34,
-            }),
-        [],
-    );
+var el = n(879371),
+    eo = n(337611);
+function ec() {
+    let e = i.useMemo(() => (0, N.lR)({ assetUrl: eo.A, width: 34, height: 34 }), []);
     return (0, a.jsx)("img", { src: e, alt: "", className: g.RN });
 }
-async function ec(e, t) {
+async function eu(e, t) {
     try {
         await (0, y.Hq)(e.id, t);
     } catch (e) {
@@ -234,17 +226,17 @@ async function ec(e, t) {
 function ed(e) {
     let { bounty: t, sourceQuestContent: n, src: s, orientation: r, parentTransitionState: l, onClose: o } = e,
         c = i.useRef(null),
-        d = (0, S.bG)([D.A], () => D.A.isBountyCompleted(t.id)),
-        u = i.useCallback(() => {
-            ec(t, n);
+        u = (0, S.bG)([D.A], () => D.A.isBountyCompleted(t.id)),
+        d = i.useCallback(() => {
+            eu(t, n);
         }, [t, n]),
         {
             rewardTargetSeconds: m,
             isRewardEarned: x,
-            rewardRemainingSeconds: b,
-            maxSeekableTimeSeconds: p,
-            handleProgressUpdate: C,
-            handleSeek: f,
+            rewardRemainingSeconds: p,
+            maxSeekableTimeSeconds: C,
+            handleProgressUpdate: b,
+            handleSeek: A,
             handleEnded: v,
         } = (function (e) {
             let {
@@ -255,57 +247,57 @@ function ed(e) {
                     onRewardEarned: r,
                 } = e,
                 [l, o] = i.useState(0),
-                [c, d] = i.useState(n),
-                u = i.useRef(0),
+                [c, u] = i.useState(n),
+                d = i.useRef(0),
                 m = i.useRef(n),
                 h = i.useRef(s),
                 x = es(t, c),
-                b = s || l >= x,
-                p = i.useCallback((e) => {
-                    ((m.current = e), d(e));
+                p = s || l >= x,
+                C = i.useCallback((e) => {
+                    ((m.current = e), u(e));
                 }, []),
-                C = i.useCallback(
+                b = i.useCallback(
                     (e) => {
-                        let n = Math.max(u.current, e);
-                        ((u.current = n), o(n), !h.current && n >= es(t, m.current) && ((h.current = !0), r()));
+                        let n = Math.max(d.current, e);
+                        ((d.current = n), o(n), !h.current && n >= es(t, m.current) && ((h.current = !0), r()));
                     },
                     [t, r],
                 ),
-                f = i.useCallback(
+                A = i.useCallback(
                     (e, t) => {
-                        (Number.isFinite(t) && t > 0 && p(t), C(e));
+                        (Number.isFinite(t) && t > 0 && C(t), b(e));
                     },
-                    [p, C],
+                    [C, b],
                 );
             return {
                 rewardTargetSeconds: x,
-                isRewardEarned: b,
-                rewardRemainingSeconds: b ? 0 : x - l,
+                isRewardEarned: p,
+                rewardRemainingSeconds: p ? 0 : x - l,
                 maxSeekableTimeSeconds: l,
-                handleProgressUpdate: f,
+                handleProgressUpdate: A,
                 handleSeek: i.useCallback(
                     (e) => {
-                        C(e);
+                        b(e);
                     },
-                    [C],
+                    [b],
                 ),
                 handleEnded: i.useCallback(() => {
                     let e = a.current?.duration;
-                    null != e && Number.isFinite(e) && e > 0 && (p(e), C(e));
-                }, [a, p, C]),
+                    null != e && Number.isFinite(e) && e > 0 && (C(e), b(e));
+                }, [a, C, b]),
             };
         })({
             rewardTimerSeconds: t.rewardTimerSeconds,
             initialDurationSeconds: t.videoDurationSeconds ?? null,
             videoRef: c,
-            isCompleted: d,
-            onRewardEarned: u,
+            isCompleted: u,
+            onRewardEarned: d,
         }),
-        { volume: A, muted: N, setVolume: j, setMuted: T } = (0, F.A)(),
+        { volume: f, muted: N, setVolume: j, setMuted: T } = (0, F.A)(),
         { balance: k } = (0, P.W0)(),
-        y = i.useMemo(() => (0, a.jsx)(eo, {}), []),
+        y = i.useMemo(() => (0, a.jsx)(ec, {}), []),
         E = i.useMemo(() => M.intl.formatToPlainString(M.t["nLXlh+"], { orbAmount: er.FA }), []),
-        U = (0, w.A)({ targetSec: m, label: E, isCompleted: x, icon: y, clickable: p >= m }),
+        U = (0, w.A)({ targetSec: m, label: E, isCompleted: x, icon: y, clickable: C >= m }),
         V = i.useCallback(
             () =>
                 (0, a.jsx)(I.N, {
@@ -318,7 +310,7 @@ function ed(e) {
                                 (0, a.jsxs)("div", {
                                     className: g.Cq,
                                     children: [
-                                        (0, a.jsx)(ei, { totalSeconds: m, remainingSeconds: b }),
+                                        (0, a.jsx)(ei, { totalSeconds: m, remainingSeconds: p }),
                                         (0, a.jsx)(O.Ay, { variant: "overlay-secondary", balance: k }),
                                     ],
                                 }),
@@ -326,7 +318,7 @@ function ed(e) {
                             ],
                         }),
                 }),
-            [o, k, b, m],
+            [o, k, p, m],
         ),
         B = i.useCallback(
             () => (0, a.jsx)(W, { bounty: t, sourceQuestContent: n, videoRef: c, onClose: o }),
@@ -344,13 +336,13 @@ function ed(e) {
         persistPlayhead: !1,
         pauseOnLostVisibility: !x,
         getPlaybackBlockedMessage: _.b,
-        maxSeekableTimeSec: p,
-        initialVolume: A,
+        maxSeekableTimeSec: C,
+        initialVolume: f,
         initialMuted: N,
         onVolumeChange: j,
         onMutedChange: T,
-        onProgressUpdate: C,
-        onSeek: f,
+        onProgressUpdate: b,
+        onSeek: A,
         onEnded: v,
         renderPersistentOverlay: V,
         renderEndScreen: B,
@@ -360,13 +352,13 @@ function ed(e) {
         hidePlaybackSpeedBtn: !0,
     });
 }
-function eu(e) {
+function em(e) {
     let { transitionState: t, onClose: n, bounty: s, sourceQuestContent: o, impressionRef: h } = e,
-        { url: v, orientation: A } = i.useMemo(() => {
+        { url: v, orientation: f } = i.useMemo(() => {
             var e, t;
             let n =
                 ((e = s),
-                (t = d),
+                (t = u),
                 null == e.videoRenditions
                     ? t.supported.includes(r.x.PORTRAIT)
                         ? { url: e.videoHls, aspectRatio: r.x.PORTRAIT }
@@ -376,14 +368,14 @@ function eu(e) {
                           c()(a.includes(n), "Preferred aspect ratio must be in supported renditions list");
                           let i = m(e, n);
                           if (null != i) return i;
-                          let s = u[n],
+                          let s = d[n],
                               r = null,
                               l = 1 / 0;
                           for (let t of a) {
                               if (t === n) continue;
                               let a = m(e, t);
                               if (null == a) continue;
-                              let i = Math.abs(u[t] - s);
+                              let i = Math.abs(d[t] - s);
                               i < l && ((l = i), (r = a));
                           }
                           return r;
@@ -392,12 +384,12 @@ function eu(e) {
                 ? { url: s.videoHls, orientation: "portrait" }
                 : { url: n.url, orientation: n.aspectRatio === r.x.PORTRAIT ? "portrait" : "landscape" };
         }, [s]),
-        R = b(s),
+        R = p(s),
         N = R.label ?? s.advertiserName,
         g = K({ bounty: s, onClose: n, sourceQuestContent: o });
-    return (0, a.jsx)(f.A, {
+    return (0, a.jsx)(A.A, {
         transitionState: t,
-        orientation: A,
+        orientation: f,
         ariaLabel: N,
         impressionRef: (e) => {
             h.current = e;
@@ -406,13 +398,13 @@ function eu(e) {
             bounty: s,
             sourceQuestContent: o,
             src: v,
-            orientation: A,
+            orientation: f,
             parentTransitionState: t,
             onClose: n,
         }),
-        footer: (0, a.jsx)(C.A, {
+        footer: (0, a.jsx)(b.A, {
             prefix: (0, a.jsx)(T, { iconImageUri: R.iconImageUri, size: "sm" }),
-            advertiserDetails: (0, a.jsx)(p.A, {
+            advertiserDetails: (0, a.jsx)(C.A, {
                 title: N,
                 subtitle: M.intl.string(M.t.o6FLcF),
                 onClick: () => g(x.uF.VIDEO_MODAL),
@@ -425,7 +417,7 @@ function eu(e) {
         }),
     });
 }
-function em(e) {
+function eh(e) {
     return (0, a.jsx)(v.R, {
         adContentId: e.bounty.id,
         adCreativeType: s.p.BOUNTY,
@@ -433,6 +425,6 @@ function em(e) {
         minViewTimeSeconds: h.bq,
         trackGuildAndChannelMetadata: !0,
         sourceQuestContent: e.sourceQuestContent,
-        children: (t) => (0, a.jsx)(eu, { ...e, impressionRef: t }),
+        children: (t) => (0, a.jsx)(em, { ...e, impressionRef: t }),
     });
 }
