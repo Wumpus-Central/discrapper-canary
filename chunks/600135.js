@@ -1151,7 +1151,7 @@ function eJ(e) {
                 try {
                     let n = await w({
                         guildId: t,
-                        installScope: X ? "user" : null,
+                        installScope: null,
                         prompt: e,
                         modelSettings: q,
                         start: async (t) => {
@@ -1175,7 +1175,7 @@ function eJ(e) {
                     (H(e instanceof eB ? R.intl.string(E.default["903H7m"]) : (0, j.mG)(e)), (eh.current = !1), z(!1));
                 }
             }
-        }, [l, X, q, t, Y, ee]),
+        }, [l, q, t, Y, ee]),
         eg = a.useCallback((e) => {
             (U.w.set(F, e), J(e));
         }, []),
