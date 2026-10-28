@@ -1,4 +1,4 @@
-n.d(t, { default: () => e6 });
+n.d(t, { default: () => e8 });
 var i = n(477900),
     s = n(582128),
     r = n(562708),
@@ -914,13 +914,13 @@ var ek = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "653914",
-        s = "76e1a324e483b340a13911c83c8572f083c38d99".substring(0, 7),
+        n = "653926",
+        s = "a1904add26850638a600e19c5ccb68cc0bbe124e".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1793168378913", !1) : null,
+        u = null != o ? (0, eq.A)("1793169655385", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1087,11 +1087,11 @@ function e2() {
 }
 var e5 = n(402651),
     e9 = n(669067),
-    e3 = n(830543),
-    e4 = n(953056);
-let e7 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e8 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e6(e) {
+    e4 = n(830543),
+    e7 = n(953056);
+let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
+    e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e8(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1100,7 +1100,7 @@ function e6(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eM.default.getCurrentUser() && (g(!0), (0, e3.default)());
+            null == eM.default.getCurrentUser() && (g(!0), (0, e4.default)());
         }
         return (
             ek.default.addChangeListener(e),
@@ -1117,8 +1117,8 @@ function e6(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e7.has(e) || (0, e9._)(e);
-                  let t = e8.get(e);
+                  e3.has(e) || (0, e9._)(e);
+                  let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e4.P,
+            className: e7.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e4.t,
+        className: e7.t,
         children: [
             (0, i.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),
