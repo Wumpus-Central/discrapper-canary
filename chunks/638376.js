@@ -1,9 +1,6 @@
-t.d(s, { openQuestBarPreview: () => c });
-var u = t(252313),
-    a = t(845890),
-    n = t(738822),
-    p = t(239526);
-async function c(e) {
-    let s = await (0, a.hh)(e, u.p.DESKTOP_ACCOUNT_PANEL_AREA);
-    null != s && (0, p.g)({ bounty: s, sourceQuestContent: n.uF.QUEST_BAR_V2 });
+p.d(i, { openQuestBarPreview: () => n });
+var s = p(252313),
+    e = p(845890);
+async function n(a) {
+    if (null == (await (0, e.hh)(a, s.p.DESKTOP_ACCOUNT_PANEL_AREA))) return;
 }

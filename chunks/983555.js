@@ -399,7 +399,7 @@ function $(e) {
         if (null != e)
             return (t) => (
                 t?.preventDefault(),
-                Promise.all([n.e("276863"), n.e("55467"), n.e("601169")])
+                Promise.all([n.e("276863"), n.e("601169")])
                     .then(n.bind(n, 638376))
                     .then((t) => {
                         let { openQuestBarPreview: n } = t;

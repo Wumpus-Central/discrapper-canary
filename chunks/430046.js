@@ -229,7 +229,7 @@ var P = n(17928),
     L = n(546121),
     D = n(792620),
     W = n(557637),
-    Y = n(239526),
+    Y = n(192308),
     q = n(415441),
     H = n(783569),
     X = n(333949),
@@ -240,18 +240,18 @@ let $ = { url: K.A, mimetype: "video/webm", isAnimated: !0 },
     Z = { url: z.A, mimetype: "image/webp", isAnimated: !1 };
 function J() {
     let e = (0, Q.o5)(),
-        { imagePreview: t, videoPreview: n, productName: s, videoDurationSeconds: o } = e,
-        { isExpanded: c, isExpansionAnimationComplete: d } = (0, M.H)(),
-        m = (0, f.wW)(),
-        C = (0, P.bG)([k.Ay], () => k.Ay.useReducedMotion),
-        [v, g] = r.useState(!1),
-        N = r.useMemo(() => (null == n ? null : { url: n, mimetype: (0, x.vm)(n), isAnimated: !0 }), [n]),
-        A = !C || v,
-        y = r.useMemo(() => {
-            let e = o ?? 0;
+        { imagePreview: t, videoPreview: s, productName: o, videoDurationSeconds: c } = e,
+        { isExpanded: d, isExpansionAnimationComplete: m } = (0, M.H)(),
+        C = (0, f.wW)(),
+        v = (0, P.bG)([k.Ay], () => k.Ay.useReducedMotion),
+        [g, N] = r.useState(!1),
+        A = r.useMemo(() => (null == s ? null : { url: s, mimetype: (0, x.vm)(s), isAnimated: !0 }), [s]),
+        y = !v || g,
+        j = r.useMemo(() => {
+            let e = c ?? 0;
             return e <= 0 ? S.intl.string(S.t.kfks9Y) : (0, L.AF)((0, D.X3)({ progressSeconds: 0, targetSeconds: e }));
-        }, [o]),
-        j = r.useCallback(() => {
+        }, [c]),
+        E = r.useCallback(() => {
             ((0, _.r)({
                 type: T.F.CLICK_INTERNAL,
                 adCreativeType: i.p.BOUNTY,
@@ -259,18 +259,37 @@ function J() {
                 questContentCTA: h.Cy.START_BOUNTY,
                 surfaceId: p.uF.QUEST_BAR_V2,
                 sourceQuestContent: p.uF.QUEST_BAR_V2,
-                impressionId: m(),
+                impressionId: C(),
             }),
-                (0, Y.g)({ bounty: e, sourceQuestContent: p.uF.QUEST_BAR_V2 }));
-        }, [e, m]),
-        E = !c || d;
+                (function (e) {
+                    let { bounty: t, sourceQuestContent: r } = e;
+                    (0, Y.openModalLazy)(
+                        async () => {
+                            let { default: e } = await Promise.all([
+                                n.e("974119"),
+                                n.e("651585"),
+                                n.e("145010"),
+                                n.e("955628"),
+                                n.e("255563"),
+                                n.e("602078"),
+                                n.e("258427"),
+                                n.e("182045"),
+                                n.e("655624"),
+                            ]).then(n.bind(n, 361211));
+                            return (n) => (0, l.jsx)(e, { ...n, bounty: t, sourceQuestContent: r });
+                        },
+                        { modalKey: "BOUNTY_VIDEO_MODAL" },
+                    );
+                })({ bounty: e, sourceQuestContent: p.uF.QUEST_BAR_V2 }));
+        }, [e, C]),
+        R = !d || m;
     return (0, l.jsxs)("div", {
         className: G.rf,
         onMouseEnter: () => {
-            C && !v && g(!0);
+            v && !g && N(!0);
         },
         onMouseLeave: () => {
-            C && v && g(!1);
+            v && g && N(!1);
         },
         children: [
             (0, l.jsxs)("div", {
@@ -281,16 +300,16 @@ function J() {
                             id: "QuestBarBounty_previewImage",
                             children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: G.$_ }),
                         }),
-                    null != N &&
+                    null != A &&
                         (0, l.jsx)(W._M, {
                             id: "QuestBarBounty_previewVideo",
                             children: (e) =>
                                 (0, l.jsx)(X.X, {
                                     ref: e,
-                                    isHovered: v,
-                                    asset: N,
+                                    isHovered: g,
+                                    asset: A,
                                     poster: t,
-                                    className: a()(G.$_, null != t && G.Ki, { [G.mv]: A || null == t }),
+                                    className: a()(G.$_, null != t && G.Ki, { [G.mv]: y || null == t }),
                                 }),
                         }),
                 ],
@@ -303,7 +322,7 @@ function J() {
                         (0, l.jsx)("div", {
                             className: G.Qq,
                             children: (0, l.jsx)(q.N, {
-                                showVideo: c && d,
+                                showVideo: d && m,
                                 imageAsset: {
                                     asset: Z,
                                     assetId: "QuestBarBounty_rewardTileStatic",
@@ -321,19 +340,19 @@ function J() {
                                     color: "text-strong",
                                     variant: "heading-md/medium",
                                     lineClamp: 2,
-                                    children: s ?? "",
+                                    children: o ?? "",
                                 }),
                                 (0, l.jsx)(u.E, { variant: "text-xs/normal", children: S.intl.string(S.t["1uzE2S"]) }),
                             ],
                         }),
                         (0, l.jsx)("div", {
-                            className: a()({ [G._o]: !E }),
+                            className: a()({ [G._o]: !R }),
                             children: (0, l.jsx)(V.$, {
                                 variant: "primary",
                                 size: "md",
                                 fullWidth: !0,
-                                text: y,
-                                onClick: j,
+                                text: j,
+                                onClick: E,
                             }),
                         }),
                     ],

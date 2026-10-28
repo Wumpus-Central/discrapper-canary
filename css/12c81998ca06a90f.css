@@ -1,3 +1,97 @@
+.productIcon__4c629 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: var(--custom-product-icon-size);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--custom-product-icon-size)
+}
+
+.productIconSmall__4c629 {
+    border-radius: var(--radius-md)
+}
+
+.productIconLarge__4c629 {
+    border-radius: var(--radius-xl)
+}
+
+.rewardIcon__4c629 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.videoOverlay__4c629 {
+    flex: 1;
+    justify-content: space-between;
+    padding: var(--space-16)
+}
+
+.rewardStatus__4c629,
+.videoOverlay__4c629 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.rewardStatus__4c629 {
+    min-width: 0
+}
+
+.videoActions__4c629 {
+    pointer-events: auto
+}
+
+.endScreenContent__4c629 {
+    align-items: center;
+    animation: end-screen-fade-in__4c629 .5s;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: var(--space-16);
+    position: absolute
+}
+
+.endScreenContent__4c629:before {
+    background: linear-gradient(0deg, #070709, rgba(7, 7, 9, .6)), linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), #ffc609;
+    content: "";
+    inset: 0;
+    position: absolute
+}
+
+.endScreenProduct__4c629 {
+    align-items: center;
+    gap: var(--space-20);
+    position: relative;
+    text-align: center
+}
+
+.endScreenProduct__4c629,
+.endScreenProductDetails__4c629 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%
+}
+
+.endScreenProductDetails__4c629 {
+    gap: 2px
+}
+
+@keyframes end-screen-fade-in__4c629 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 .clickable_a3e8db {
     box-sizing: border-box;
     cursor: pointer;
@@ -112,4 +206,23 @@
     width: 8px
 }
 
-/*# sourceMappingURL=1044dba35f5cf11b.css.map*/
+.scroller__44cf4 {
+    padding: var(--space-16)
+}
+
+.formDivider__44cf4 {
+    margin: 10px 0
+}
+
+.loader__44cf4 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.balanceWidgetPillContainer__44cf4 {
+    margin-top: 4px
+}
+
+/*# sourceMappingURL=12c81998ca06a90f.css.map*/

@@ -1,0 +1,59 @@
+.collapseable__2d143 {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    position: relative;
+    transition: background-color .1s ease
+}
+
+.collapseable__2d143:active {
+    background-color: var(--background-mod-subtle)
+}
+
+.collapseable__2d143:before {
+    border-radius: 8px;
+    box-shadow: var(--elevation-stroke), var(--elevation-low);
+    content: "";
+    display: none;
+    inset: 0;
+    opacity: 0;
+    overflow: visible;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    z-index: 0
+}
+
+.collapseable__2d143.toggled__2d143 {
+    cursor: default
+}
+
+.collapseable__2d143.toggled__2d143:active {
+    background-color: var(--background-base-lower)
+}
+
+.collapseable__2d143.toggled__2d143:before {
+    opacity: 1
+}
+
+.collapseable__2d143:not(:last-child) {
+    margin-bottom: 16px
+}
+
+.header__2d143 {
+    cursor: pointer;
+    position: relative
+}
+
+.header__2d143.toggled__2d143 {
+    cursor: default
+}
+
+.contentExpandContainer__2d143 {
+    flex: 1;
+    overflow: hidden
+}
+
+.showOverflow__2d143 {
+    overflow: visible
+}
+
+/*# sourceMappingURL=24312.830c79c54cdc72e0.css.map*/
