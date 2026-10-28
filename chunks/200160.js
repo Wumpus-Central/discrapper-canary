@@ -14,5 +14,4 @@ _.exports = {
     Xv: "addIcon__66346",
     Rc: "toolbarEnd__66346",
     ZO: "attachments__66346",
-    Fg: "fileInput__66346",
 };
