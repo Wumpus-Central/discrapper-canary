@@ -1,8 +1,8 @@
 e.d(n, { Dj: () => o, Jl: () => d, MX: () => s, PY: () => c, aJ: () => f, lG: () => p });
 var r = e(288106),
     u = e(604913),
-    l = e(993408),
-    a = e(623373),
+    a = e(993408),
+    l = e(623373),
     i = e(105292);
 function o(t) {
     return t?.tenantMetadata?.collectibles?.type === u.hE.TARGETED_OFFER;
@@ -10,10 +10,13 @@ function o(t) {
 function c(t, n) {
     if (null == n || n.rewardStatus !== r.GM.EARNED || !o(n)) return null;
     let e = n.rewardConfig?.discount;
-    if (null == e || (0, l.G0)(t) || !t.isFirstParty || ((0, l.aw)(t) && !n.includeBundles)) return null;
-    let u = e.fiatEnabled && (0, a.go)(t),
-        i = e.orbsEnabled && (0, a.Vx)(t);
-    return u || i ? n : null;
+    return null == e ||
+        (0, a.G0)(t) ||
+        !t.isFirstParty ||
+        ((0, a.aw)(t) && !n.includeBundles) ||
+        !(e.fiatEnabled && (0, l.go)(t))
+        ? null
+        : n;
 }
 function s(t) {
     return o(t) && t?.rewardConfig?.discount != null
@@ -25,7 +28,7 @@ function s(t) {
 function d(t) {
     if (!o(t)) return !1;
     let n = t?.rewardConfig?.discount;
-    return null != n && n.fiatEnabled && !n.orbsEnabled;
+    return null != n && n.fiatEnabled;
 }
 function f(t) {
     return t === u.Pz.NITRO ? "nitro-pink" : "collectibles";

@@ -38,7 +38,6 @@ class a extends i.A {
                                             type: t.discount.type,
                                             amount: t.discount.amount,
                                             fiatEnabled: t.discount.fiat_enabled,
-                                            orbsEnabled: t.discount.orbs_enabled,
                                         }
                                       : null,
                               action:
