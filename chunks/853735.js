@@ -12,6 +12,7 @@ var i = n(379197),
 function E(e) {
     switch (e) {
         case r.M.COLLECTIBLES_SHOP_ENTRY_MARKETING:
+        case r.M.COLLECTIBLES_SHOP_ENTRY_MARKETING_COACHMARK:
             return d.A.getMarketingBySurface(i.R.DESKTOP_SHOP_BUTTON)?.version ?? 0;
         case r.M.ACTIVITIES_VOICE_LAUNCHER_BADGE:
             return (0, o.C)({ storeState: l.Ay.getState(), surface: s.YI.VOICE_LAUNCHER });

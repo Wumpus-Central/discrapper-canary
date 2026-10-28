@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "654075";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "654109";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 654075, Version Hash: 728855acbfabd7c666744f17d37b2494697bb197`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 654109, Version Hash: 731fc4fffc5a2b919e21b63b2ad33ae505b927ec`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -24235,12 +24235,28 @@ function O2(e) {
             handleMouseEnter: o,
             handleMouseLeave: d,
         } = Oq(t.entryPointBackgroundAssets, t.entrypointBackgroundStyle),
-        c = eI.useRef(null);
+        [c] = (0, rI.RF)(r$.M.COLLECTIBLES_SHOP_ENTRY_MARKETING_COACHMARK, t.version),
+        u = eI.useCallback(
+            (e) => {
+                (0, dH.$l)(r$.M.COLLECTIBLES_SHOP_ENTRY_MARKETING_COACHMARK, t.version, {
+                    dismissAction: e,
+                    version: t.version,
+                });
+            },
+            [t.version],
+        ),
+        _ = eI.useCallback(
+            (e) => {
+                (u(e), n(e));
+            },
+            [u, n],
+        ),
+        E = eI.useRef(null);
     return (0, b.jsxs)(b.Fragment, {
         children: [
             (0, b.jsxs)(OX, {
                 ...i,
-                listItemRef: c,
+                listItemRef: E,
                 onMouseEnter: o,
                 onMouseLeave: d,
                 ...OQ(t),
@@ -24253,12 +24269,13 @@ function O2(e) {
                     }),
                 ],
             }),
-            (0, b.jsx)(OF, {
-                displayOptions: t,
-                targetElementRef: c,
-                onClick: () => n(rm.i.TAKE_ACTION),
-                onRequestClose: () => n(rm.i.USER_DISMISS),
-            }),
+            c === r$.M.COLLECTIBLES_SHOP_ENTRY_MARKETING_COACHMARK &&
+                (0, b.jsx)(OF, {
+                    displayOptions: t,
+                    targetElementRef: E,
+                    onClick: () => _(rm.i.TAKE_ACTION),
+                    onRequestClose: () => u(rm.i.USER_DISMISS),
+                }),
         ],
     });
 }
@@ -24279,35 +24296,46 @@ function O3(e) {
 function O5(e) {
     let { selected: t, onClick: n, locationState: i, listItemRef: r, onTabTooltipVisibilityChange: a } = e,
         { shopButtonDisplayOptions: s, dismissShopButtonDC: l } = (0, Oj.A)(),
-        o = !(0, tQ.hasAnyModalOpen)(),
-        [d, c] = (0, rI.kn)(o ? [r$.M.WISHLIST_SHOP_BUTTON_POPOVER] : []);
+        o = eI.useCallback(
+            (e) => {
+                (s?.type === Ow.FF.COACHMARK &&
+                    (0, dH.$l)(r$.M.COLLECTIBLES_SHOP_ENTRY_MARKETING_COACHMARK, s.version, {
+                        dismissAction: e,
+                        version: s.version,
+                    }),
+                    l(e));
+            },
+            [s, l],
+        ),
+        d = !(0, tQ.hasAnyModalOpen)(),
+        [c, u] = (0, rI.kn)(d ? [r$.M.WISHLIST_SHOP_BUTTON_POPOVER] : []);
     eI.useEffect(() => {
-        t && l(rm.i.AUTO_DISMISS);
-    }, [t, l]);
-    let u = {
+        t && o(rm.i.AUTO_DISMISS);
+    }, [t, o]);
+    let _ = {
         selected: t,
         locationState: i,
         onClick: () => {
-            (l(rm.i.AUTO_DISMISS), n?.());
+            (o(rm.i.AUTO_DISMISS), n?.());
         },
         listItemRef: r,
     };
     if (null != s) {
-        if (t) return (0, b.jsx)(OX, { ...u });
+        if (t) return (0, b.jsx)(OX, { ..._ });
         switch (s.type) {
             case Ow.FF.TOOLTIP:
-                return (0, b.jsx)(O1, { ...u, displayOptions: s });
+                return (0, b.jsx)(O1, { ..._, displayOptions: s });
             case Ow.FF.TAB_TOOLTIP:
-                return (0, b.jsx)(OJ, { ...u, displayOptions: s, onTabTooltipVisibilityChange: a });
+                return (0, b.jsx)(OJ, { ..._, displayOptions: s, onTabTooltipVisibilityChange: a });
             case Ow.FF.BADGE:
-                return (0, b.jsx)(O0, { ...u, displayOptions: s });
+                return (0, b.jsx)(O0, { ..._, displayOptions: s });
             case Ow.FF.COACHMARK:
-                return (0, b.jsx)(O2, { dismissContent: l, ...u, displayOptions: s });
+                return (0, b.jsx)(O2, { dismissContent: l, ..._, displayOptions: s });
         }
     }
-    return d === r$.M.WISHLIST_SHOP_BUTTON_POPOVER
-        ? (0, b.jsx)(O3, { ...u, dismissContent: c })
-        : (0, b.jsx)(OX, { ...u });
+    return c === r$.M.WISHLIST_SHOP_BUTTON_POPOVER
+        ? (0, b.jsx)(O3, { ..._, dismissContent: u })
+        : (0, b.jsx)(OX, { ..._ });
 }
 var O6 = n(47899),
     O4 = n(335934),
@@ -26139,7 +26167,7 @@ let yl = "isHideDevBanner",
                     className: tf()(ys.Wz, ys.mr),
                     children: [
                         (0, b.jsx)(ya, { className: ys.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "654075" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "654109" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
