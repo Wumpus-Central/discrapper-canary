@@ -245,14 +245,16 @@ async function v(e) {
             impressionId: l,
             clickId: o,
         } = e,
-        c = await (0, a.N)((0, p.jO)(t));
+        c = Date.now(),
+        u = await (0, a.N)((0, p.jO)(t));
     return {
+        client_track_timestamp: c,
         ...(0, p.fF)(t, n, r),
         ...(0, d.A)(),
         cta_name: s,
         impression_id: l,
-        apple_advertising_id: null != c && (0, E.isIOS)() ? c.advertisingId : null,
-        android_advertising_id: null != c && (0, E.isAndroid)() ? c.advertisingId : null,
+        apple_advertising_id: null != u && (0, E.isIOS)() ? u.advertisingId : null,
+        android_advertising_id: null != u && (0, E.isAndroid)() ? u.advertisingId : null,
         click_id: o ?? (0, i.A)(),
     };
 }
