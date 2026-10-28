@@ -1143,11 +1143,15 @@ ${a}`),
                                                     case m.I.SOCIAL_LAYER_STOREFRONT_APP:
                                                         break;
                                                     case m.I.QUESTS_EMBED: {
-                                                        let e = (0, eE.L4)(r.u.QUESTS_EMBED);
+                                                        let e = (0, eE.L4)(r.u.QUESTS_EMBED),
+                                                            t = (0, eE.Gp)(r.u.QUESTS_EMBED, d);
                                                         (0, e_.av)({
                                                             questId: d,
                                                             event: D.HAw.QUEST_LINK_SHARED,
-                                                            properties: { metadata_sealed: null != e ? e : null },
+                                                            properties: {
+                                                                metadata_sealed: null != e ? e : null,
+                                                                traffic_metadata_sealed: t ?? null,
+                                                            },
                                                             trackGuildAndChannelMetadata: !0,
                                                             sourceQuestContent: r.u.QUESTS_EMBED,
                                                         });
