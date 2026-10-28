@@ -31,19 +31,25 @@ function p(e) {
         : (0, r.jsx)("div", { className: c.wx, children: t });
 }
 function f(e) {
-    let { label: t, value: n, className: i } = e;
-    return d()
+    let { label: t, value: n, className: a } = e,
+        s = d(),
+        o = i.useId();
+    return s
         ? (0, r.jsxs)("div", {
-              className: l()(c.nM, i),
+              className: l()(c.nM, a),
+              role: "group",
+              "aria-labelledby": o,
               children: [
-                  (0, r.jsx)(u.E, { variant: "text-sm/medium", color: "currentColor", children: t }),
+                  (0, r.jsx)(u.E, { id: o, variant: "text-sm/medium", color: "currentColor", children: t }),
                   (0, r.jsx)(u.E, { variant: "text-sm/medium", color: "currentColor", className: c.Uu, children: n }),
               ],
           })
         : (0, r.jsxs)("div", {
-              className: l()(c.nM, i),
+              className: l()(c.nM, a),
+              role: "group",
+              "aria-labelledby": o,
               children: [
-                  (0, r.jsx)("div", { className: c.xZ, children: t }),
+                  (0, r.jsx)("div", { id: o, className: c.xZ, children: t }),
                   (0, r.jsx)("div", { className: c.X6, children: n }),
               ],
           });
@@ -53,11 +59,14 @@ function v(e) {
     return (0, r.jsx)("div", { className: l()(c.yF, { [c.hF]: t, [c.P_]: n, [c.vy]: i, [c.Bw]: a }) });
 }
 function g(e) {
-    let { label: t, value: n, className: i } = e;
+    let { label: t, value: n, className: a } = e,
+        s = i.useId();
     return (0, r.jsxs)("div", {
-        className: l()(c.V$, i),
+        className: l()(c.V$, a),
+        role: "group",
+        "aria-labelledby": s,
         children: [
-            (0, r.jsx)("div", { className: c.j5, children: t }),
+            (0, r.jsx)("div", { id: s, className: c.j5, children: t }),
             (0, r.jsx)("div", { className: c.HR, children: n }),
         ],
     });

@@ -99,20 +99,19 @@ function v(e) {
                       ],
                   });
         }, [o, u, p, v, d, j]),
-        E = a.useMemo(
-            () =>
-                null == l
-                    ? t
-                    : (0, n.jsxs)("div", {
-                          children: [
-                              t,
-                              (0, n.jsx)(r.E, { variant: "text-xs/normal", color: "text-subtle", children: l }),
-                          ],
-                      }),
-            [t, l],
-        );
+        E = a.useId(),
+        N = a.useMemo(() => {
+            let e = (0, n.jsx)("span", { id: E, children: t });
+            return null == l
+                ? e
+                : (0, n.jsxs)("div", {
+                      children: [e, (0, n.jsx)(r.E, { variant: "text-xs/normal", color: "text-subtle", children: l })],
+                  });
+        }, [t, l, E]);
     return (0, n.jsxs)("div", {
         className: h.Yn,
+        role: "group",
+        "aria-labelledby": E,
         children: [
             (0, n.jsxs)(r.E, {
                 variant: "text-md/normal",
@@ -120,7 +119,7 @@ function v(e) {
                 className: h.yB,
                 children: [
                     m,
-                    E,
+                    N,
                     null != x &&
                         (0, n.jsx)(s.m, {
                             text: x,
