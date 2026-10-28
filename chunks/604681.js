@@ -10,12 +10,6 @@ let r = {
     toggleSummariesSection() {
         i.h.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
     },
-    toggleConversationsSection() {
-        i.h.dispatch({ type: "CHANNEL_TOGGLE_CONVERSATIONS_SECTION" });
-    },
-    openConversationsSection() {
-        i.h.dispatch({ type: "CHANNEL_OPEN_CONVERSATIONS_SECTION" });
-    },
     setFriendsSidebarCollapsed(e) {
         i.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_COLLAPSED", collapsed: e });
     },

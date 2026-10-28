@@ -19,7 +19,7 @@ class c extends i.Ay.Store {
         let { cacheType: t, conversationId: n } = l;
         switch (t) {
             case "channel":
-                return a.A.getConversationMetadata(e, n)?.conversation ?? null;
+                return a.A.getConversation(e, n);
             case "preview":
                 return s.A.getConversation(n);
             default:

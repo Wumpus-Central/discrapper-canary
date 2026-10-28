@@ -127,22 +127,6 @@
     margin-top: -1px
 }
 
-.moderationTag__2d9ce {
-    align-items: center;
-    background: var(--status-danger);
-    border-radius: 4px;
-    color: var(--white);
-    display: inline-flex;
-    flex-shrink: 0;
-    font-size: .625rem;
-    height: .9375rem;
-    margin-top: .1em;
-    margin-inline-start: .5rem;
-    padding: 0 .275rem;
-    text-indent: 0;
-    text-transform: uppercase
-}
-
 .messagePopoutContent_c00127 {
     max-width: calc(var(--custom-message-helpers-popout-container-width)*1.25);
     min-width: var(--custom-message-helpers-popout-container-width);
@@ -236,4 +220,4 @@
     width: 1rem
 }
 
-/*# sourceMappingURL=444038.08381d66c88b912b.css.map*/
+/*# sourceMappingURL=487834.9af77ec680d89ebb.css.map*/
