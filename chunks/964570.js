@@ -2669,7 +2669,7 @@ function iv(e) {
                     text: eO.intl.string(ig.default["j4n5/K"]),
                     variant: "primary",
                     onClick: () => {
-                        ((0, ih.A)(ip.C1), t(nU.i.TAKE_ACTION));
+                        ((0, ih.A)(ip.C), t(nU.i.TAKE_ACTION));
                     },
                 },
             ],
@@ -2803,7 +2803,7 @@ function iS(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iI.A)("1793215303891", !0);
+        let e = (0, iI.A)("1793216699036", !0);
         t =
             null != e
                 ? eO.intl.formatToPlainString(eO.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -4191,7 +4191,7 @@ function iU() {
             ((e = (0, u.bG)([er.A], () => er.A.hasLoaded(eo.oD.PRELOADED_USER_SETTINGS))),
             (t = (0, ea.HX)(d.M.GIFT_CARDS_MARKETING_COACHMARK)),
             (n = e && !t),
-            (a = (0, es.y)({ location: "AccountCoachmark", countGiftCardWallet: !1, canFetchPaymentSources: n })),
+            (a = (0, es.y)({ location: "AccountCoachmark", countGiftCardWallet: !0, canFetchPaymentSources: n })),
             n && a),
         eg = (function (e) {
             let { currentUserId: t, enabled: n, fetchCatalog: l = !0 } = e,

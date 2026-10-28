@@ -1,4 +1,4 @@
-n.d(t, { y: () => g });
+n.d(t, { y: () => A });
 var i = n(582128),
     s = n(17928),
     r = n(277984),
@@ -7,17 +7,15 @@ var i = n(582128),
     o = n(295405),
     c = n(652215),
     d = n(92202),
-    u = n(534284),
-    h = n(425565);
-let C = null,
-    A = null;
-function g(e) {
-    let { location: t, countGiftCardWallet: n, canFetchPaymentSources: g = !0 } = e,
-        { enabled: E } = (0, d.K)({ location: t }),
-        p = (0, s.bG)([l.default], () => l.default.getId()),
-        _ = (0, u.P)(),
-        f = (0, s.bG)([a.A], () => a.A.ipCountryCode),
-        { hasFetchedPaymentSources: m, hasValidPaymentMethod: T } = (0, s.cf)(
+    u = n(534284);
+let h = null,
+    C = null;
+function A(e) {
+    let { location: t, countGiftCardWallet: n, canFetchPaymentSources: A = !0 } = e,
+        { enabled: g } = (0, d.K)({ location: t }),
+        E = (0, s.bG)([l.default], () => l.default.getId()),
+        p = (0, u.P)(),
+        { hasFetchedPaymentSources: _, hasValidPaymentMethod: f } = (0, s.cf)(
             [o.A],
             () => ({
                 hasFetchedPaymentSources: o.A.hasFetchedPaymentSources,
@@ -30,19 +28,19 @@ function g(e) {
             }),
             [n],
         ),
-        v = E && _ && null != f && h.ob.has(f),
-        N = v && g;
+        m = g && p,
+        T = m && A;
     return (
         i.useEffect(() => {
-            !N ||
-                C === p ||
+            !T ||
+                h === E ||
                 o.A.hasFetchedPaymentSources ||
                 a.A.isPaymentSourceFetching ||
-                ((C = p),
+                ((h = E),
                 r.$o().then((e) => {
-                    null == e && (A = p);
+                    null == e && (C = E);
                 }));
-        }, [N, p]),
-        v && A !== p && m && !T
+        }, [T, E]),
+        m && C !== E && _ && !f
     );
 }

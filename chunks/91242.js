@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => S });
 var i = n(17928),
     r = n(73153),
     a = n(956518),
@@ -9,26 +9,30 @@ var i = n(17928),
     c = n(818348);
 let u = new Map(),
     _ = { audible: !1 },
-    E = null;
-function A(e, t) {
-    return h(e, c.YQ, t);
+    E = null,
+    A = !1;
+function h(e, t) {
+    return "hidden" === e || t || A;
 }
-function h(e, t, n) {
+function f(e, t) {
+    return I(e, c.YQ, t);
+}
+function I(e, t, n) {
     if (null == e) return !1;
     let i = u.get(e);
     return !!(0, o.x1)(i) && !!t(i.data) && (u.set(e, { ...i, data: n(i.data) }), !0);
 }
-function f(e, t) {
+function p(e, t) {
     return null != t && e.launchRequestId !== t;
 }
-function I(e) {
+function T(e) {
     for (let t of u.values()) if ((0, o.x1)(t) && t.data.iframeId === e) return t;
 }
-function p(e, t) {
-    let n = I(e);
-    return null != n && A(n.id, t);
+function m(e, t) {
+    let n = T(e);
+    return null != n && f(n.id, t);
 }
-class T extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "FramesStore";
     getFrame(e) {
         if (null != e) return u.get(e);
@@ -42,7 +46,10 @@ class T extends i.Ay.Store {
         return !(0, o.x1)(t) || "hidden" !== t.data.poolVisibility;
     }
     getFrameByIframeId(e) {
-        return I(e);
+        return T(e);
+    }
+    isDeviceMuted() {
+        return A;
     }
     getMainFrame() {
         return null != E ? (u.get(E) ?? null) : null;
@@ -65,7 +72,7 @@ class T extends i.Ay.Store {
         return Array.from(u.values()).filter((t) => (0, l.A)(t.surface) === e);
     }
 }
-let m = new T(r.h, {
+let S = new g(r.h, {
     FRAME_LAUNCH_START: function (e) {
         let {
                 applicationId: t,
@@ -94,22 +101,22 @@ let m = new T(r.h, {
     FRAME_LAUNCH: function (e) {
         let { frameId: t, proxyTicket: n, launch: i, invite: r, hostWindowKey: s, launchRequestId: l } = e,
             c = u.get(t);
-        if (null == c || f(c, l)) return !1;
-        let A = (0, a.Ay)(c.applicationId);
-        if (null == A) {
+        if (null == c || p(c, l)) return !1;
+        let h = (0, a.Ay)(c.applicationId);
+        if (null == h) {
             (u.delete(t), E === t && (E = null));
             return;
         }
-        let { id: h, applicationId: I, intent: p, surface: T } = c;
+        let { id: f, applicationId: I, intent: T, surface: m } = c;
         u.set(t, {
-            id: h,
+            id: f,
             applicationId: I,
-            intent: p,
-            surface: T,
+            intent: T,
+            surface: m,
             launchRequestId: c.launchRequestId,
             state: "launched",
             data: {
-                url: A,
+                url: h,
                 connectedSince: Date.now(),
                 layoutMode: o.y0.FOCUSED,
                 activityPanelMode: d.Gd.PANEL,
@@ -119,7 +126,7 @@ let m = new T(r.h, {
                 pipOrientationLock: null,
                 runsInBackground: !1,
                 poolVisibility: "unpooled",
-                muted: !1,
+                muted: A,
                 userMuted: !1,
                 ..._,
                 iframeId: null,
@@ -132,12 +139,12 @@ let m = new T(r.h, {
     FRAME_LAUNCH_FAIL: function (e) {
         let { frameId: t, launchRequestId: n } = e,
             i = u.get(t);
-        if (null != i && f(i, n)) return !1;
+        if (null != i && p(i, n)) return !1;
         (u.delete(t), E === t && (E = null));
     },
     FRAME_STOP: function (e) {
         let { frameId: t } = e;
-        (u.delete(t), E === t && (E = null));
+        (u.delete(t), E === t && (E = null), Array.from(u.values()).some(o.x1) || (A = !1));
     },
     FRAME_CLEAR_MAIN_SLOT: function (e) {
         let { frameId: t } = e;
@@ -151,15 +158,15 @@ let m = new T(r.h, {
     },
     FRAME_UPDATE_LAYOUT_MODE: function (e) {
         let { frameId: t, layoutMode: n } = e;
-        return A(t, (e) => ({ ...e, layoutMode: n }));
+        return f(t, (e) => ({ ...e, layoutMode: n }));
     },
     FRAME_SET_PANEL_MODE: function (e) {
         let { frameId: t, activityPanelMode: n } = e;
-        return A(t, (e) => ({ ...e, activityPanelMode: n }));
+        return f(t, (e) => ({ ...e, activityPanelMode: n }));
     },
     FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { frameId: t, lockState: n, pictureInPictureLockState: i } = e;
-        return A(t, (e) => ({
+        return f(t, (e) => ({
             ...e,
             orientationLock: n ?? null,
             pipOrientationLock: void 0 === i ? e.pipOrientationLock : i,
@@ -167,39 +174,46 @@ let m = new T(r.h, {
     },
     FRAME_SET_RUNS_IN_BACKGROUND: function (e) {
         let { frameId: t, enabled: n } = e;
-        return A(t, (e) => ({ ...e, runsInBackground: n }));
+        return f(t, (e) => ({ ...e, runsInBackground: n }));
     },
     FRAME_SET_PROXY_TICKET_REFRESHING: function (e) {
         let { frameId: t, refreshing: n } = e;
-        return A(t, (e) => ({ ...e, proxyTicketRefreshing: n }));
+        return f(t, (e) => ({ ...e, proxyTicketRefreshing: n }));
     },
     FRAME_UPDATE_PROXY_TICKET: function (e) {
         let { frameId: t, proxyTicket: n } = e;
-        return A(t, (e) => ({ ...e, proxyTicket: n }));
+        return f(t, (e) => ({ ...e, proxyTicket: n }));
     },
     FRAME_POOL_VISIBILITY_UPDATE: function (e) {
         let { frameId: t, poolVisibility: n } = e;
-        return A(t, (e) => ({ ...e, poolVisibility: n, muted: "hidden" === n || e.userMuted }));
+        return f(t, (e) => ({ ...e, poolVisibility: n, muted: h(n, e.userMuted) }));
     },
     FRAME_SET_USER_MUTED: function (e) {
         let { frameId: t, muted: n } = e;
-        return h(
+        return I(
             t,
             (e) => e.userMuted !== n,
-            (e) => ({ ...e, userMuted: n, muted: "hidden" === e.poolVisibility || n }),
+            (e) => ({ ...e, userMuted: n, muted: h(e.poolVisibility, n) }),
         );
+    },
+    FRAME_SET_DEVICE_MUTED: function (e) {
+        let { muted: t } = e;
+        if (A === t) return !1;
+        for (let e of ((A = t), u.values()))
+            (0, o.x1)(e) &&
+                u.set(e.id, { ...e, data: { ...e.data, muted: h(e.data.poolVisibility, e.data.userMuted) } });
     },
     EMBEDDED_APP_SHIM_STATE_UPDATE: function (e) {
         let { iframeId: t, state: n } = e;
-        return p(t, (e) => ({ ...e, audible: n.audible }));
+        return m(t, (e) => ({ ...e, audible: n.audible }));
     },
     EMBEDDED_APP_SHIM_DISCONNECT: function (e) {
         let { iframeId: t } = e;
-        return p(t, (e) => ({ ...e, ..._ }));
+        return m(t, (e) => ({ ...e, ..._ }));
     },
     FRAME_IFRAME_MOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;
-        return h(
+        return I(
             t,
             (e) => e.iframeId !== n,
             (e) => ({ ...e, iframeId: n, runsInBackground: !1, ..._ }),
@@ -207,7 +221,7 @@ let m = new T(r.h, {
     },
     FRAME_IFRAME_UNMOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;
-        return h(
+        return I(
             t,
             (e) => e.iframeId === n,
             (e) => ({ ...e, iframeId: null, runsInBackground: !1, ..._ }),
@@ -215,17 +229,17 @@ let m = new T(r.h, {
     },
     FRAME_HOST_WINDOW_MOUNT: function (e) {
         let { frameId: t, windowKey: n } = e;
-        return A(t, (e) => ({ ...e, hostWindowKey: n }));
+        return f(t, (e) => ({ ...e, hostWindowKey: n }));
     },
     FRAME_HOST_WINDOW_UNMOUNT: function (e) {
         let { frameId: t, windowKey: n } = e;
-        return h(
+        return I(
             t,
             (e) => e.hostWindowKey === n,
             (e) => ({ ...e, hostWindowKey: null }),
         );
     },
     CHANNEL_SELECT: function (e) {
-        return A(E, (e) => ({ ...e, layoutMode: o.y0.PIP }));
+        return f(E, (e) => ({ ...e, layoutMode: o.y0.PIP }));
     },
 });
