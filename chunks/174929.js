@@ -39,6 +39,7 @@ class u extends l.G {
             { no: 12, name: "body", kind: "scalar", T: 9 },
             { no: 13, name: "button_label", kind: "scalar", T: 9 },
             { no: 14, name: "badge_text", kind: "scalar", T: 9 },
+            { no: 15, name: "version", kind: "scalar", T: 13 },
         ]);
     }
     create(e) {
@@ -51,6 +52,7 @@ class u extends l.G {
             body: "",
             buttonLabel: "",
             badgeText: "",
+            version: 0,
         };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
@@ -106,6 +108,9 @@ class u extends l.G {
                 case 14:
                     a.badgeText = e.string();
                     break;
+                case 15:
+                    a.version = e.uint32();
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -135,7 +140,8 @@ class u extends l.G {
             "" !== e.header && t.tag(11, r.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(12, r.O0.LengthDelimited).string(e.body),
             "" !== e.buttonLabel && t.tag(13, r.O0.LengthDelimited).string(e.buttonLabel),
-            "" !== e.badgeText && t.tag(14, r.O0.LengthDelimited).string(e.badgeText));
+            "" !== e.badgeText && t.tag(14, r.O0.LengthDelimited).string(e.badgeText),
+            0 !== e.version && t.tag(15, r.O0.Varint).uint32(e.version));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }

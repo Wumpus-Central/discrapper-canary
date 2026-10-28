@@ -59,7 +59,7 @@ let N = function () {
                               showHoverGradient: e.showHoverGradient,
                               displayType: m[e.displayType],
                               entryPointBackgroundAssets: T(e.hoverBackground),
-                              version: 0,
+                              version: e.version,
                           },
                 [n, e],
             )),
