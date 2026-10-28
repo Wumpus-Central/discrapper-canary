@@ -1,0 +1,12 @@
+.layout_ea1cd2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.sheet_ea1cd2 {
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+/*# sourceMappingURL=5cad4b0a65d70b96.css.map*/

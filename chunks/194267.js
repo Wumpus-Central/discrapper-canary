@@ -1,128 +1,129 @@
-n.d(t, { A: () => X });
-var i,
-    r = n(477900),
-    l = n(582128),
-    s = n(323889),
-    a = n(17928),
-    o = n(453903),
-    u = n(462887),
+n.d(t, { A: () => Q, N: () => F });
+var s = n(477900),
+    r = n(582128),
+    i = n(323889),
+    l = n(17928),
+    a = n(453903),
+    o = n(462887),
     c = n(834730),
-    d = n(939249),
-    f = n(789645),
+    u = n(939249),
+    d = n(789645),
     m = n(192308),
-    g = n(866665),
+    E = n(866665),
     A = n(265872),
-    E = n(775602),
-    C = n(507395),
-    _ = n(144779),
-    I = n(429913),
-    T = n(409626),
-    S = n(921138),
-    p = n(459746),
-    h = n(311043),
-    N = n(454908),
-    L = n(363195),
-    R = n(174459),
-    v = n(738822),
-    G = n(291749),
-    x = n(590202),
-    O = n(971649),
-    P = n(657792),
-    M = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
-    y = n(190107),
-    D = n(652215),
-    k = n(105292),
-    w = n(398889);
-function j(e) {
+    C = n(775602),
+    h = n(507395),
+    f = n(144779),
+    g = n(429913),
+    p = n(409626),
+    x = n(611656),
+    _ = n(459746),
+    N = n(311043),
+    R = n(454908),
+    S = n(363195),
+    T = n(174459),
+    I = n(738822),
+    L = n(291749),
+    j = n(590202),
+    v = n(971649),
+    M = n(657792),
+    G = n(811500),
+    O = n(190107),
+    y = n(652215),
+    P = n(105292),
+    k = n(398889);
+function b(e) {
     let t,
         n,
-        i,
-        { quest: l, onClose: s } = e,
-        o = (0, a.bG)([L.A], () => L.A.getState().theme),
-        m = (0, u.M)(o) ? D.NJ8.DARK : D.NJ8.LIGHT;
-    return (0, r.jsxs)("div", {
-        className: w.N1,
+        r,
+        { quest: i, onClose: a } = e,
+        m = (0, l.bG)([S.A], () => S.A.getState().theme),
+        E = (0, o.M)(m) ? y.NJ8.DARK : y.NJ8.LIGHT;
+    return (0, s.jsxs)("div", {
+        className: k.N1,
         children: [
-            (0, r.jsxs)("div", {
-                className: w.VW,
+            (0, s.jsxs)("div", {
+                className: k.VW,
                 children: [
-                    (0, r.jsx)("img", {
-                        className: w.rC,
-                        alt: l.config.messages.gameTitle,
-                        src: (0, G.tW)(l, G.fY.GAME_TILE, m).url,
+                    (0, s.jsx)("img", {
+                        className: k.rC,
+                        alt: i.config.messages.gameTitle,
+                        src: (0, L.tW)(i, L.fY.GAME_TILE, E).url,
                     }),
-                    (0, r.jsxs)("div", {
-                        className: w.if,
+                    (0, s.jsxs)("div", {
+                        className: k.if,
                         children: [
-                            (0, r.jsx)(c.E, {
+                            (0, s.jsx)(c.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-strong",
                                 children:
                                     ((t = {
-                                        [y.Li.PACKAGE_ACTION_ADVENTURE]: k.t.PYFVdf,
-                                        [y.Li.PACKAGE_RPG_MMO]: k.t.rFQo2F,
-                                        [y.Li.PACKAGE_RACING_SPORTS]: k.t.zDRa6g,
-                                        [y.Li.PACKAGE_SANDBOX_CREATIVE]: k.t.vz9U2Q,
-                                        [y.Li.PACKAGE_FAMILY_FRIENDLY]: k.t.IOiAE0,
-                                        [y.Li.PACKAGE_HOLIDAY_SEASON]: k.t.cJPqvD,
-                                        [y.Li.PACKAGE_NEW_YEARS]: k.t.S0w2mv,
+                                        [O.Li.PACKAGE_ACTION_ADVENTURE]: P.t.PYFVdf,
+                                        [O.Li.PACKAGE_RPG_MMO]: P.t.rFQo2F,
+                                        [O.Li.PACKAGE_RACING_SPORTS]: P.t.zDRa6g,
+                                        [O.Li.PACKAGE_SANDBOX_CREATIVE]: P.t.vz9U2Q,
+                                        [O.Li.PACKAGE_FAMILY_FRIENDLY]: P.t.IOiAE0,
+                                        [O.Li.PACKAGE_HOLIDAY_SEASON]: P.t.cJPqvD,
+                                        [O.Li.PACKAGE_NEW_YEARS]: P.t.S0w2mv,
                                     }),
-                                    (i =
-                                        (null != (n = l.config.features.find((e) => e in t)) ? t[n] : null) ??
-                                        k.t["D+DkEH"]),
-                                    k.intl.string(i)),
+                                    (r =
+                                        (null != (n = i.config.features.find((e) => e in t)) ? t[n] : null) ??
+                                        P.t["D+DkEH"]),
+                                    P.intl.string(r)),
                             }),
-                            (0, r.jsx)(c.E, {
+                            (0, s.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: k.intl.string(k.t.VgN1Bn),
+                                children: P.intl.string(P.t.VgN1Bn),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)(d.D, {
-                className: w.b,
-                "aria-label": k.intl.string(k.t.cpT0Cq),
-                onClick: s,
-                children: (0, r.jsx)(f.P, { size: "md", color: "currentColor" }),
+            (0, s.jsx)(u.D, {
+                className: k.b,
+                "aria-label": P.intl.string(P.t.cpT0Cq),
+                onClick: a,
+                children: (0, s.jsx)(d.P, { size: "md", color: "currentColor" }),
             }),
         ],
     });
 }
-function q(e) {
-    let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: u, onGameProfileModalClose: c } = e,
-        f = (0, O.wW)(),
-        A = (0, a.bG)([E.Ay], () => E.Ay.useReducedMotion),
-        I = l.useRef(null),
-        S = null != i.gameRecord;
-    function h() {
-        (0, C.r)({
-            type: _.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-            adCreativeType: s.p.QUEST,
+function w(e) {
+    let { quest: t, game: a, sourceQuestContent: o, onGameProfileModalOpen: c, onGameProfileModalClose: d } = e,
+        A = (0, v.wW)(),
+        g = (0, l.bG)([C.Ay], () => C.Ay.useReducedMotion),
+        x = r.useRef(null),
+        N = null != a.gameRecord;
+    function R() {
+        (0, h.r)({
+            type: f.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+            adCreativeType: i.p.QUEST,
             adCreativeId: t.id,
-            questContentCTA: x.Cy.GAME_STORE_OPEN_GAME_LINK,
-            surfaceId: v.uF.SPONSORED_QUEST_SHEET,
+            questContentCTA: j.Cy.GAME_STORE_OPEN_GAME_LINK,
+            surfaceId: I.uF.SPONSORED_QUEST_SHEET,
             sourceQuestContent: o,
-            impressionId: f(),
+            impressionId: A(),
         });
     }
-    async function N() {
-        S &&
-            ((0, C.r)({
-                type: _.F.CLICK_INTERNAL,
-                adCreativeType: s.p.QUEST,
+    async function S() {
+        N &&
+            ((0, h.r)({
+                type: f.F.CLICK_INTERNAL,
+                adCreativeType: i.p.QUEST,
                 adCreativeId: t.id,
-                questContentCTA: x.Cy.GAME_PROFILE_OPEN,
-                surfaceId: v.uF.SPONSORED_QUEST_SHEET,
+                questContentCTA: j.Cy.GAME_PROFILE_OPEN,
+                surfaceId: I.uF.SPONSORED_QUEST_SHEET,
                 sourceQuestContent: o,
-                impressionId: f(),
+                impressionId: A(),
             }),
             await (0, m.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("459368"),
                         n.e("329172"),
+                        n.e("324732"),
+                        n.e("634225"),
                         n.e("6050"),
                         n.e("417867"),
                         n.e("645393"),
@@ -384,7 +385,9 @@ function q(e) {
                         n.e("615643"),
                         n.e("777489"),
                         n.e("127962"),
+                        n.e("60955"),
                         n.e("161282"),
+                        n.e("454048"),
                         n.e("76428"),
                         n.e("863232"),
                         n.e("517888"),
@@ -435,6 +438,7 @@ function q(e) {
                         n.e("532039"),
                         n.e("719466"),
                         n.e("178565"),
+                        n.e("264236"),
                         n.e("630267"),
                         n.e("576909"),
                         n.e("300699"),
@@ -534,6 +538,7 @@ function q(e) {
                         n.e("836545"),
                         n.e("147786"),
                         n.e("14962"),
+                        n.e("132191"),
                         n.e("936320"),
                         n.e("942724"),
                         n.e("393766"),
@@ -566,6 +571,8 @@ function q(e) {
                         n.e("894747"),
                         n.e("958428"),
                         n.e("317225"),
+                        n.e("538887"),
+                        n.e("466322"),
                         n.e("9205"),
                         n.e("463095"),
                         n.e("170653"),
@@ -577,6 +584,7 @@ function q(e) {
                         n.e("133179"),
                         n.e("146566"),
                         n.e("614784"),
+                        n.e("8563"),
                         n.e("179049"),
                         n.e("32661"),
                         n.e("346102"),
@@ -591,6 +599,7 @@ function q(e) {
                         n.e("799657"),
                         n.e("37977"),
                         n.e("810034"),
+                        n.e("454625"),
                         n.e("444376"),
                         n.e("499941"),
                         n.e("509793"),
@@ -649,6 +658,7 @@ function q(e) {
                         n.e("338516"),
                         n.e("478476"),
                         n.e("496715"),
+                        n.e("35485"),
                         n.e("115754"),
                         n.e("278424"),
                         n.e("744385"),
@@ -706,6 +716,7 @@ function q(e) {
                         n.e("784813"),
                         n.e("831445"),
                         n.e("140557"),
+                        n.e("324761"),
                         n.e("97210"),
                         n.e("235996"),
                         n.e("434691"),
@@ -715,6 +726,7 @@ function q(e) {
                         n.e("753589"),
                         n.e("628752"),
                         n.e("262841"),
+                        n.e("603808"),
                         n.e("881379"),
                         n.e("521574"),
                         n.e("356296"),
@@ -727,6 +739,7 @@ function q(e) {
                         n.e("649520"),
                         n.e("118917"),
                         n.e("562168"),
+                        n.e("424265"),
                         n.e("791824"),
                         n.e("93461"),
                         n.e("126437"),
@@ -801,59 +814,59 @@ function q(e) {
                         n.e("501755"),
                     ]).then(n.bind(n, 120490));
                     return (t) =>
-                        (0, r.jsx)(e, {
-                            gameId: i.gameId,
-                            source: T.GameProfileSources.GameSheet,
-                            trackExternalAction: h,
+                        (0, s.jsx)(e, {
+                            gameId: a.gameId,
+                            source: p.GameProfileSources.GameSheet,
+                            trackExternalAction: R,
                             ...t,
                         });
                 },
-                { onCloseCallback: c },
+                { onCloseCallback: d },
             ),
-            u());
+            c());
     }
-    let L = l.useCallback(
+    let T = r.useCallback(
             (e) => {
-                if (null == I.current || A) return;
-                let t = I.current.getBoundingClientRect(),
+                if (null == x.current || g) return;
+                let t = x.current.getBoundingClientRect(),
                     n = e.clientX - t.left,
-                    i = e.clientY - t.top,
+                    s = e.clientY - t.top,
                     r = t.width / 2,
-                    l = t.height / 2;
-                I.current.style.transform = `rotateX(${-(((i - l) / l) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
+                    i = t.height / 2;
+                x.current.style.transform = `rotateX(${-(((s - i) / i) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
             },
-            [A],
+            [g],
         ),
-        R = l.useCallback(() => {
-            null == I.current || A || (I.current.style.transform = "rotateX(0deg) rotateY(0deg)");
-        }, [A]);
-    return (0, r.jsx)(g.m, {
-        text: i.name,
-        children: (0, r.jsx)(d.D, {
-            className: w.zR,
-            onClick: N,
-            onMouseMove: L,
-            onMouseLeave: R,
-            children: (0, r.jsx)("div", {
-                ref: I,
-                className: w._M,
+        L = r.useCallback(() => {
+            null == x.current || g || (x.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+        }, [g]);
+    return (0, s.jsx)(E.m, {
+        text: a.name,
+        children: (0, s.jsx)(u.D, {
+            className: k.zR,
+            onClick: S,
+            onMouseMove: T,
+            onMouseLeave: L,
+            children: (0, s.jsx)("div", {
+                ref: x,
+                className: k._M,
                 children:
-                    null != i.gameRecord
-                        ? (0, r.jsx)(p.Ay, { game: i.gameRecord, className: w.xe, size: p.wu.SMALL })
+                    null != a.gameRecord
+                        ? (0, s.jsx)(_.Ay, { game: a.gameRecord, className: k.xe, size: _.wu.SMALL })
                         : null,
             }),
         }),
     });
 }
-function b() {
-    return (0, r.jsxs)("svg", {
+function D() {
+    return (0, s.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         width: "75",
         height: "96",
         viewBox: "0 0 75 96",
         fill: "none",
         children: [
-            (0, r.jsx)("rect", {
+            (0, s.jsx)("rect", {
                 x: "1",
                 y: "1",
                 width: "73",
@@ -861,7 +874,7 @@ function b() {
                 rx: "8",
                 fill: "var(--background-surface-high)",
             }),
-            (0, r.jsx)("rect", {
+            (0, s.jsx)("rect", {
                 x: "0.5",
                 y: "0.5",
                 width: "74",
@@ -870,165 +883,164 @@ function b() {
                 stroke: "var(--border-normal)",
                 strokeOpacity: "0.2",
             }),
-            (0, r.jsx)("path", { d: "M2.53418 3L73.0342 93.5", stroke: "var(--border-normal)", strokeOpacity: "0.2" }),
+            (0, s.jsx)("path", { d: "M2.53418 3L73.0342 93.5", stroke: "var(--border-normal)", strokeOpacity: "0.2" }),
         ],
     });
 }
-function U(e) {
+function F(e) {
     let {
         quest: t,
         applications: i,
-        onClose: s,
+        onClose: a,
         sourceQuestContent: o,
-        impressionRef: u,
-        onGameProfileModalOpen: c,
+        impressionRef: c,
+        onGameProfileModalOpen: u,
         onGameProfileModalClose: d,
     } = e;
-    (0, I.A)(i);
-    let f = l.useMemo(() => i, [i]);
-    (0, N.x)(f);
-    let g = (0, a.bG)([h.A], () => f.some((e) => h.A.isFetching(e))),
-        A = (0, a.bG)([h.A], () => f.some((e) => h.A.didFetchingFail(e))),
-        E = (0, a.yK)([h.A], () =>
-            f
-                .map((e) => h.A.getGame(e))
+    (0, g.A)(i);
+    let E = r.useMemo(() => i, [i]);
+    (0, R.x)(E);
+    let A = (0, l.bG)([N.A], () => E.some((e) => N.A.isFetching(e))),
+        C = (0, l.bG)([N.A], () => E.some((e) => N.A.didFetchingFail(e))),
+        h = (0, l.yK)([N.A], () =>
+            E.map((e) => N.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, S.oS)(e.id))
+                .filter((e) => (0, x.oS)(e.id))
                 .slice(0, 10),
         ),
-        C = l.useMemo(() => E.map((e) => ({ gameId: e.id, name: e.name, gameRecord: e })).slice(0, 10), [E]),
-        _ = l.useMemo(() => {
-            let e = C.length;
+        f = r.useMemo(() => h.map((e) => ({ gameId: e.id, name: e.name, gameRecord: e })).slice(0, 10), [h]),
+        p = r.useMemo(() => {
+            let e = f.length;
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
-        }, [C.length]),
-        T = !g && 0 === C.length,
-        p = A || T;
+        }, [f.length]),
+        _ = !A && 0 === f.length,
+        S = C || _;
     if (
-        (l.useEffect(() => {
-            if (p) {
-                let e = A ? M.FETCH_FAILED : M.NO_GAMES_AVAILABLE;
-                (R.default.track(D.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
-                    s(),
+        (r.useEffect(() => {
+            if (S) {
+                let e = C ? G.W.FETCH_FAILED : G.W.NO_GAMES_AVAILABLE;
+                (T.default.track(y.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+                    a(),
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e("791646").then(n.bind(n, 659309));
-                        return (t) => (0, r.jsx)(e, { ...t });
+                        return (t) => (0, s.jsx)(e, { ...t });
                     }));
             }
-        }, [p, A, t.id, s]),
-        g && !p)
+        }, [S, C, t.id, a]),
+        A && !S)
     ) {
         let e = Math.min(i.length, 10);
-        return (0, r.jsxs)("div", {
-            className: w.kL,
+        return (0, s.jsxs)("div", {
+            className: k.kL,
             children: [
-                (0, r.jsx)(j, { quest: t, onClose: s }),
-                (0, r.jsx)("div", {
-                    className: w.LA,
-                    children: i.slice(0, e).map((e) => (0, r.jsx)("div", { className: w.Vj }, e)),
+                (0, s.jsx)(b, { quest: t, onClose: a }),
+                (0, s.jsx)("div", {
+                    className: k.LA,
+                    children: i.slice(0, e).map((e) => (0, s.jsx)("div", { className: k.Vj }, e)),
                 }),
             ],
         });
     }
-    return p
+    return S
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, s.jsxs)("div", {
               ref: (e) => {
-                  u.current = e;
+                  c.current = e;
               },
-              className: w.kL,
+              className: k.kL,
               children: [
-                  (0, r.jsx)(j, { quest: t, onClose: s }),
-                  (0, r.jsxs)("div", {
-                      className: w.LA,
+                  (0, s.jsx)(b, { quest: t, onClose: a }),
+                  (0, s.jsxs)("div", {
+                      className: k.LA,
                       children: [
-                          C.map((e) =>
-                              (0, r.jsx)(
-                                  q,
+                          f.map((e) =>
+                              (0, s.jsx)(
+                                  w,
                                   {
                                       quest: t,
                                       game: e,
                                       sourceQuestContent: o,
-                                      onGameProfileModalOpen: c,
+                                      onGameProfileModalOpen: u,
                                       onGameProfileModalClose: d,
                                   },
                                   e.gameId,
                               ),
                           ),
-                          Array.from({ length: _ }, (e, t) => (0, r.jsx)(b, {}, `placeholder-${t}`)),
+                          Array.from({ length: p }, (e, t) => (0, s.jsx)(D, {}, `placeholder-${t}`)),
                       ],
                   }),
               ],
           });
 }
-function F(e) {
+function q(e) {
     let {
             targetElementRef: t,
             applications: n,
-            children: i,
-            onGameSheetOpened: a,
-            onGameSheetClosed: u,
-            quest: c,
+            children: l,
+            onGameSheetOpened: o,
+            onGameSheetClosed: c,
+            quest: u,
             sourceQuestContent: d,
-            impressionRef: f,
-            getSourceImpressionId: m,
+            impressionRef: m,
+            getSourceImpressionId: E,
         } = e,
-        [g, E] = l.useState(!1),
-        I = l.useRef(null),
-        T = t?.current != null,
-        S = T ? t : I;
-    function p() {
-        E(!0);
+        [C, g] = r.useState(!1),
+        p = r.useRef(null),
+        x = t?.current != null,
+        _ = x ? t : p;
+    function N() {
+        g(!0);
     }
-    function h() {
-        E(!1);
+    function R() {
+        g(!1);
     }
-    return (0, r.jsx)(A.Y, {
-        targetElementRef: S,
+    return (0, s.jsx)(A.Y, {
+        targetElementRef: _,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(U, {
-                quest: c,
+            return (0, s.jsx)(F, {
+                quest: u,
                 applications: n,
                 onClose: t,
                 sourceQuestContent: d,
-                impressionRef: f,
-                onGameProfileModalOpen: p,
-                onGameProfileModalClose: h,
+                impressionRef: m,
+                onGameProfileModalOpen: N,
+                onGameProfileModalClose: R,
             });
         },
         onRequestOpen: function () {
-            (a?.(),
-                (0, C.r)({
-                    type: _.F.CLICK_INTERNAL,
-                    adCreativeType: s.p.QUEST,
-                    adCreativeId: c.id,
-                    questContentCTA: x.Cy.SPONSORED_QUEST_SHEET,
+            (o?.(),
+                (0, h.r)({
+                    type: f.F.CLICK_INTERNAL,
+                    adCreativeType: i.p.QUEST,
+                    adCreativeId: u.id,
+                    questContentCTA: j.Cy.SPONSORED_QUEST_SHEET,
                     surfaceId: d,
                     sourceQuestContent: d,
-                    impressionId: m(),
+                    impressionId: E(),
                 }));
         },
         onRequestClose: function () {
-            if (g) return o.oU;
-            u?.();
+            if (C) return a.oU;
+            c?.();
         },
-        position: T ? "right" : "top",
-        align: T ? "bottom" : void 0,
+        position: x ? "right" : "top",
+        align: x ? "bottom" : void 0,
         spacing: 20,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
-        children: (e) => i(e, I),
+        children: (e) => l(e, p),
     });
 }
-let X = function (e) {
-    let t = (0, O.QK)();
+let Q = function (e) {
+    let t = (0, v.QK)();
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, r.jsx)(P.R, {
+        : (0, s.jsx)(M.R, {
               questOrQuests: e.quest,
-              questContent: v.uF.SPONSORED_QUEST_SHEET,
+              questContent: I.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (n) => (0, r.jsx)(F, { ...e, impressionRef: n, getSourceImpressionId: t }),
+              children: (n) => (0, s.jsx)(q, { ...e, impressionRef: n, getSourceImpressionId: t }),
           });
 };

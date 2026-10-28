@@ -1104,4 +1104,34 @@ header.headerCollapsed__42f4e {
     min-block-size: calc(var(--space-32) + var(--space-8))
 }
 
-/*# sourceMappingURL=f6f12878e2e120a4.css.map*/
+.header_fbf1b8 {
+    align-items: stretch;
+    gap: var(--space-4);
+    padding-inline: var(--space-12)
+}
+
+.content_fbf1b8,
+.header_fbf1b8 {
+    flex-direction: column
+}
+
+.content_fbf1b8 {
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.content_fbf1b8 [data-conjure-clarification-picker] {
+    padding-block: 0
+}
+
+.footer_fbf1b8 {
+    align-items: center;
+    border-top: 1px solid var(--border-muted);
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-16);
+    padding: var(--space-12)
+}
+
+/*# sourceMappingURL=7a10c03b4a6be25a.css.map*/

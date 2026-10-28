@@ -55,7 +55,7 @@ var B = t(380610),
     X = t(836156);
 let Z = a.lazy(async () => ({
         default: (
-            await Promise.all([t.e("503634"), t.e("761764"), t.e("218126"), t.e("60800"), t.e("467696")]).then(
+            await Promise.all([t.e("503634"), t.e("761764"), t.e("60800"), t.e("218126"), t.e("467696")]).then(
                 t.bind(t, 881267),
             )
         ).PlaygroundEmbed,

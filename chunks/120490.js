@@ -655,8 +655,8 @@ var eq = l(435558),
     e1 = l(71393),
     e8 = l(309010),
     e4 = l(449054),
-    e3 = l(60465),
-    e6 = l(311043),
+    e6 = l(60465),
+    e3 = l(311043),
     e2 = l(636537),
     e5 = l(73153);
 let e9 = {};
@@ -739,7 +739,7 @@ async function tn(e) {
 var ti = l(927813);
 let ta = [];
 function ts(e) {
-    return e6.A.getGame(e)?.communityGuildIds ?? ta;
+    return e3.A.getGame(e)?.communityGuildIds ?? ta;
 }
 let tr = (0, m.UT)(te, {
     getQueryId: (e) => (ts(e).length > 0 ? `game-community-guilds/${e}` : null),
@@ -1239,7 +1239,7 @@ function t4(e) {
             }
             let e = e8.Ay.getCurrentlySelectedChannelId(t.id);
             null != e &&
-                e3.default.setGameProfilePendingReturn({
+                e6.default.setGameProfilePendingReturn({
                     gameId: n.id,
                     channelId: e,
                     tab: y.COMMUNITIES,
@@ -1257,7 +1257,7 @@ function t4(e) {
         onClick: u,
     });
 }
-function t3() {
+function t6() {
     var e;
     let t,
         l,
@@ -1306,7 +1306,7 @@ function t3() {
         ],
     });
 }
-var t6 = l(707554),
+var t3 = l(707554),
     t2 = l(369606),
     t5 = l(775602),
     t9 = l(21161),
@@ -1615,13 +1615,13 @@ let l0 = /^#{1,3}\s+(.+)$/,
     l1 = /^https?:\/\/\S+$/;
 var l8 = l(158390),
     l4 = l(103348),
-    l3 = l(371794);
-let l6 = new Set(["700136079562375258", "1402418693958275202", "1402418696126992445", "1417993715611467826"]);
+    l6 = l(371794);
+let l3 = new Set(["700136079562375258", "1402418693958275202", "1402418696126992445", "1417993715611467826"]);
 async function l2(e) {
     e5.h.dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_START", collectionId: e });
     try {
         let t = (
-                await (0, l3.aP)({
+                await (0, l6.aP)({
                     url: eL.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(e),
                     query: { locale: C.default.locale, include_pricing: !0, with_bundled_skus: !0 },
                     rejectWithError: !1,
@@ -1637,7 +1637,7 @@ async function l2(e) {
 }
 async function l5(e) {
     let t = ((await e2.Bo.get({ url: eL.Rsh.SIMILAR_GAMES(e), rejectWithError: !0 })).body.similar_games ?? []).filter(
-        (t) => t !== e && !l6.has(t),
+        (t) => t !== e && !l3.has(t),
     );
     e5.h.dispatch({ type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: e, games: t });
 }
@@ -2146,7 +2146,7 @@ let nj = r.memo(function (e) {
             null != e &&
                 null != h &&
                 (o(T.GameProfileTrackActionActions.Announcements),
-                e3.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
+                e6.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
                 c(),
                 ni({ invite: i, guildId: e, channelId: h, analyticsLocationStack: l }));
         }, [o, c, t, i, x, h, l, u]),
@@ -2156,7 +2156,7 @@ let nj = r.memo(function (e) {
                 null != n &&
                     null != h &&
                     (o(T.GameProfileTrackActionActions.AnnouncementsItem),
-                    e3.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
+                    e6.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
                     c(),
                     ni({ invite: i, guildId: n, channelId: h, messageId: e, analyticsLocationStack: l }));
             },
@@ -2590,7 +2590,7 @@ let n0 = function () {
 var n1 = l(141628),
     n8 = l(289363),
     n4 = l(793919);
-function n3() {
+function n6() {
     return (0, s.jsxs)("div", {
         "aria-hidden": !0,
         className: n4.uW,
@@ -2615,7 +2615,7 @@ function n3() {
         ],
     });
 }
-function n6(e) {
+function n3(e) {
     let { analyticsLocations: t } = e,
         l = (0, tx.c)("GameProfileLinkAccount"),
         {
@@ -2635,7 +2635,7 @@ function n6(e) {
     return !d || x || null == h
         ? null
         : null == u || (c && !i)
-          ? (0, s.jsx)(n3, {})
+          ? (0, s.jsx)(n6, {})
           : !c || a
             ? null
             : (0, s.jsxs)("div", {
@@ -2858,11 +2858,11 @@ function ix() {
     let f = r.useMemo(
             () => [
                 ...(e.trailers ?? []).map((e) => {
-                    let t = (0, l3.YE)(e.application_id, e.id, e.width, "mp4");
+                    let t = (0, l6.YE)(e.application_id, e.id, e.width, "mp4");
                     return {
                         url: t,
                         proxyUrl: t,
-                        poster: (0, l3.YE)(e.application_id, e.id, e.width, "webp"),
+                        poster: (0, l6.YE)(e.application_id, e.id, e.width, "webp"),
                         type: "VIDEO",
                         width: e.width,
                         height: e.height,
@@ -3605,7 +3605,7 @@ function iz() {
                     : (0, s.jsx)(lp.A, { gap: "md", children: n.map((e) => (0, s.jsx)(iB, { product: e }, e.skuId)) }),
             });
 }
-var iX = l(921138),
+var iX = l(611656),
     iK = l(5399);
 let iJ = [],
     i$ = [];
@@ -3650,21 +3650,21 @@ function i1(e) {
 function i8() {
     let { game: e } = U(),
         { isFetching: t, similarGames: l } = (function (e) {
-            let t = !l6.has(e),
+            let t = !l3.has(e),
                 { data: l, isLoading: n, error: i } = l9(e, t),
                 a = t && null != l ? l : iJ;
             (0, N.x)(a);
             let s = (0, m.bG)(
-                    [e6.A],
-                    () => a.some((e) => null == e6.A.getGame(e) && !e6.A.hasNoData(e) && !e6.A.didFetchingFail(e)),
+                    [e3.A],
+                    () => a.some((e) => null == e3.A.getGame(e) && !e3.A.hasNoData(e) && !e3.A.didFetchingFail(e)),
                     [a],
                 ),
                 r = (0, m.yK)(
-                    [e6.A, D.default],
+                    [e3.A, D.default],
                     () => {
                         let e = D.default.getCurrentUser()?.nsfwAllowed;
                         return a
-                            .map((e) => e6.A.getGame(e))
+                            .map((e) => e3.A.getGame(e))
                             .filter((e) => null != e)
                             .filter((t) => (0, iX.T_)(t) && !(0, M.b)(t, e) && (0, iK.zu)(t));
                     },
@@ -3710,8 +3710,8 @@ function i8() {
 }
 l(667532);
 var i4 = l(853022);
-let i3 = new Set(["1402418703554842694", "356877880938070016"]),
-    i6 = [np.V1.EPICGAMES, np.V1.STEAM, np.V1.ROBLOX, np.V1.BATTLENET, np.V1.RIOT, np.V1.MINECRAFT];
+let i6 = new Set(["1402418703554842694", "356877880938070016"]),
+    i3 = [np.V1.EPICGAMES, np.V1.STEAM, np.V1.ROBLOX, np.V1.BATTLENET, np.V1.RIOT, np.V1.MINECRAFT];
 function i2(e) {
     return (0, s.jsx)(K.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
 }
@@ -3802,9 +3802,9 @@ function an(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== np.V1.EPICGAMES || !!i3.has(n)) &&
+                            (e.category !== np.V1.EPICGAMES || !!i6.has(n)) &&
                             (e.category !== np.V1.STEAM || a !== ip.Y.RETIRED_ABANDONED) &&
-                            i6.includes(e.category),
+                            i3.includes(e.category),
                     ) ?? [];
                 null == t ||
                     a === ip.Y.RETIRED_ABANDONED ||
@@ -3924,7 +3924,7 @@ let am = r.memo(function (e) {
                     (0, s.jsxs)("div", { className: au.X, children: [(0, s.jsx)(aa, {}), (0, s.jsx)(ao, {})] }),
                 ],
             }),
-            (0, s.jsx)(n6, { analyticsLocations: t }),
+            (0, s.jsx)(n3, { analyticsLocations: t }),
             (0, s.jsx)(tO, {}),
             (0, s.jsx)(nj, { getScrollOffset: n }),
             (0, s.jsx)(lw, { selectTab: l }),
@@ -4006,7 +4006,7 @@ function aS(e) {
                 className: ad.V,
                 children: [
                     (0, s.jsx)(aa, {}),
-                    (0, s.jsx)(n6, { analyticsLocations: t }),
+                    (0, s.jsx)(n3, { analyticsLocations: t }),
                     (0, s.jsx)(tO, {}),
                     (0, s.jsx)(iR, {}),
                     (0, s.jsx)(n0, {}),
@@ -4045,7 +4045,7 @@ function aT(e) {
                 children: [
                     (0, s.jsx)("div", { className: aC.xY, "aria-hidden": !0 }),
                     (0, s.jsx)(ld, {}),
-                    (0, s.jsx)(t6.F, {
+                    (0, s.jsx)(t3.F, {
                         children: t
                             ? (0, s.jsxs)("div", {
                                   className: aC.jC,
@@ -4327,7 +4327,7 @@ function aM(e) {
                                           isTwoColumn: F,
                                           analyticsLocations: K,
                                       }),
-                                  eI === y.COMMUNITIES && (0, s.jsx)(t3, {}),
+                                  eI === y.COMMUNITIES && (0, s.jsx)(t6, {}),
                                   eI === y.COMMERCE && (0, s.jsx)(ak, { applicationId: eS, selectedPageIndex: eT }),
                               ],
                           }),

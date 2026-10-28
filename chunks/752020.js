@@ -94,8 +94,8 @@ let Q = /^dev:\/\//i,
         let { PlaygroundEmbed: e } = await Promise.all([
             t.e("503634"),
             t.e("761764"),
-            t.e("218126"),
             t.e("60800"),
+            t.e("218126"),
             t.e("467696"),
         ]).then(t.bind(t, 881267));
         return { default: e };

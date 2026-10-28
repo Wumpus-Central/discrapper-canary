@@ -61,8 +61,11 @@
 
 .coverArtContainer_e0f8ae {
     border-radius: 8px;
+    height: 96px;
+    overflow: hidden;
     position: relative;
-    transition: box-shadow .2s ease
+    transition: box-shadow .2s ease;
+    width: 75px
 }
 
 .full-motion .coverArtContainer_e0f8ae {
@@ -89,9 +92,9 @@
 .coverArt_e0f8ae {
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
-    display: block;
-    height: 94px;
-    width: 73px
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%
 }
 
 .closeButton_e0f8ae {
@@ -100,7 +103,9 @@
 }
 
 .placeholderArt_e0f8ae {
-    background-color: var(--background-surface-high)
+    background-color: var(--background-surface-high);
+    height: 96px;
+    width: 75px
 }
 
 .closeButtonContainer_e0f8ae {
@@ -134,4 +139,4 @@
     width: 36px
 }
 
-/*# sourceMappingURL=828178.d4888d0920cefce4.css.map*/
+/*# sourceMappingURL=828178.7f2085cf9368e1ec.css.map*/
