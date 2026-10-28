@@ -163,6 +163,10 @@
     padding: 0 var(--space-12) var(--space-12)
 }
 
+.fileInput__66346 {
+    display: none
+}
+
 .showcase__46069 {
     box-sizing: border-box;
     container: conjure-home-showcase/inline-size;
@@ -707,4 +711,4 @@
     opacity: .6
 }
 
-/*# sourceMappingURL=b84ca78a9cfadbbb.css.map*/
+/*# sourceMappingURL=6e4e21a114ebf2ea.css.map*/
