@@ -19,7 +19,6 @@ e.exports = {
     jj: "conjure-cap-wipe-b__86f16",
     Sz: "composerActions__86f16",
     lN: "composerAttachments__86f16",
-    nY: "composerFileInput__86f16",
     $E: "composerTrailingSlotButton__86f16",
     nu: "composerPlusButton__86f16",
     Qu: "composerPlusIcon__86f16",

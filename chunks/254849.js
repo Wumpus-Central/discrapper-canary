@@ -22,7 +22,6 @@ _.exports = {
     Kk: "icon__07f91",
     G: "iconPriortySpeaker__07f91",
     DU: "iconServer__07f91",
-    of: "strikethrough__07f91",
     wH: "selected__07f91",
     fc: "clanTag__07f91",
     zW: "isOverlay__07f91",

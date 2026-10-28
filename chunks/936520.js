@@ -238,12 +238,7 @@ function ea(e) {
                       m.m,
                       {
                           text: en.intl.string(en.t["PXMZ/+"]),
-                          children: (0, i.jsx)(x.O, {
-                              size: "md",
-                              color: "currentColor",
-                              className: a()(ei.Kk, M),
-                              colorClass: ei.of,
-                          }),
+                          children: (0, i.jsx)(x.O, { size: "md", color: "currentColor", className: a()(ei.Kk, M) }),
                       },
                       "video",
                   ),
