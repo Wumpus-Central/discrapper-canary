@@ -693,8 +693,7 @@ async function er(e, t) {
     o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
     try {
         let n = { locale: A.default.locale };
-        (t?.countryCode !== null && (n.country_code = t?.countryCode),
-            t?.paymentGateway !== null && (n.payment_gateway = t?.paymentGateway),
+        (t?.paymentGateway !== null && (n.payment_gateway = t?.paymentGateway),
             t?.includeBundles !== null && (n.include_bundles = t?.includeBundles));
         let i = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_PRODUCTS(e), rejectWithError: !0, query: n });
         o.h.dispatch({

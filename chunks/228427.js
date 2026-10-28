@@ -1,4 +1,4 @@
-t.d(n, { ForwardModal: () => eN });
+t.d(n, { ForwardModal: () => eE });
 var l = t(477900),
     a = t(582128),
     i = t(435558),
@@ -26,9 +26,9 @@ var l = t(477900),
     _ = t(734057),
     R = t(31717),
     I = t(232835),
-    E = t(403362),
-    N = t(975975),
-    P = t.n(N),
+    P = t(403362),
+    E = t(975975),
+    N = t.n(E),
     M = t(762230),
     F = t(665260),
     D = t(148494),
@@ -74,7 +74,7 @@ let B = {
                 (0, G.lP)(l, L.A) ||
                 (await D.A.sendMessage(l.id, T.Ay.parse(l, u), !1, { location: H.Hx.FORWARDING, flags: o })));
     },
-    sendForwards: (e, n, t) => P()(n.map((n) => B.sendForward(e, n, t))),
+    sendForwards: (e, n, t) => N()(n.map((n) => B.sendForward(e, n, t))),
 };
 var W = t(530912),
     Q = t(71393),
@@ -168,7 +168,7 @@ function ex(e) {
     let { checkpointData: n } = e,
         t = (0, em.Hd)("Checkpoint2026ForwardPreview"),
         { character: a } = n,
-        { secondaryBackgroundColor: i } = (0, eh.j)(a);
+        { secondaryBackgroundColor: i } = (0, eh.j)(n.cardColorPalette);
     return t
         ? (0, l.jsx)("div", {
               className: ef.V,
@@ -340,7 +340,7 @@ function e_(e) {
 }
 var eR = t(61916);
 let eI = (0, v.Ld)();
-function eE() {
+function eP() {
     return (0, l.jsx)("div", {
         className: Z.wV,
         children: (0, l.jsx)(c.E, {
@@ -350,12 +350,12 @@ function eE() {
         }),
     });
 }
-function eN(e) {
+function eE(e) {
     let {
             message: n,
             initialSelectedDestinations: v = [],
-            forwardOptions: N,
-            onClose: P,
+            forwardOptions: E,
+            onClose: N,
             onRequestSent: M,
             customTitle: F,
             customSubtitle: D,
@@ -412,7 +412,7 @@ function eN(e) {
         ek = a.useCallback(() => {
             ey("");
         }, [ey]),
-        eN = a.useCallback(async () => {
+        eE = a.useCallback(async () => {
             (null != Y &&
                 null != z &&
                 (0, W.hH)({
@@ -421,11 +421,11 @@ function eN(e) {
                     numDestinationChanges: er.current,
                     numQueryChanges: eo.current,
                 }),
-                await P());
-        }, [Y, z, P]),
-        eP = a.useRef(null);
+                await N());
+        }, [Y, z, N]),
+        eN = a.useRef(null);
     a.useEffect(() => {
-        "" === ew && eP.current?.focus();
+        "" === ew && eN.current?.focus();
     }, [ew]);
     let eM = a.useMemo(
             () =>
@@ -483,7 +483,7 @@ function eN(e) {
                 let r = I.A.getMessage(Y, z) ?? n;
                 if (null == r) return void (0, d.P0)({ text: q.intl.string(q.t.R0RpRX), variant: "critical" });
                 et(!0);
-                let o = (await Promise.all(e.map(S.pk))).filter(E.Vq);
+                let o = (await Promise.all(e.map(S.pk))).filter(P.Vq);
                 if (
                     (function (e, n) {
                         if (!K.default.getCurrentUser()?.isStaff()) return !1;
@@ -510,7 +510,7 @@ function eN(e) {
                     i &&
                         (await j.A.fetchMessages({ channelId: o[0] }),
                         (0, y.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 })));
-                let u = await B.sendForwards(r, o, { ...N, withMessage: a }),
+                let u = await B.sendForwards(r, o, { ...E, withMessage: a }),
                     c = o.some((e) => {
                         let n = _.A.getChannel(e);
                         return null != n && n.rateLimitPerUser > 0;
@@ -545,9 +545,9 @@ function eN(e) {
                     anyDestinationHasSlowmode: c,
                 });
                 let h = e.filter((e, n) => "rejected" === u[n].status);
-                (0, J.vK)({ message: r, failedDestinations: h, forwardOptions: N });
+                (0, J.vK)({ message: r, failedDestinations: h, forwardOptions: E });
             },
-            [Y, N, z, n, M, eM, T],
+            [Y, E, z, n, M, eM, T],
         ),
         eO = a.useCallback(
             (e) => {
@@ -573,7 +573,7 @@ function eN(e) {
             () =>
                 ej.length > 0
                     ? eV
-                    : { sections: [1], sectionHeight: 0, renderRow: () => (0, l.jsx)(eE, {}), rowHeight: 72 },
+                    : { sections: [1], sectionHeight: 0, renderRow: () => (0, l.jsx)(eP, {}), rowHeight: 72 },
             [ej, eV],
         ),
         eH = ed <= 1 ? q.intl.string(q.t.TXNS7S) : q.intl.formatToPlainString(q.t.jWtYUm, { count: ed });
@@ -584,7 +584,7 @@ function eN(e) {
                 let { ref: n, ...t } = e;
                 return (0, l.jsx)(o.a, {
                     ...Q,
-                    onClose: eN,
+                    onClose: eE,
                     title: F ?? q.intl.string(q.t["+SkRRj"]),
                     subtitle:
                         D ??
@@ -592,7 +592,7 @@ function eN(e) {
                     input: (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(f.I, {
-                                ref: eP,
+                                ref: eN,
                                 query: ew,
                                 onChange: eS,
                                 onClear: ek,
@@ -612,7 +612,7 @@ function eN(e) {
                         (null != el &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, l.jsx)(e_, { message: el, forwardOptions: N, channel: em }),
+                                    (0, l.jsx)(e_, { message: el, forwardOptions: E, channel: em }),
                                     eA.length > 0 &&
                                         ex.textValue.length > 0 &&
                                         (0, l.jsx)(c.E, {

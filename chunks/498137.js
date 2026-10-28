@@ -7,7 +7,7 @@ var l = n(477900),
     c = n(343053),
     o = n(610771);
 function u(e) {
-    let { character: t, size: n, className: a, style: u, children: d } = e,
+    let { cardColorPalette: t, size: n, className: a, style: u, children: d } = e,
         m = r.useMemo(() => {
             let e = (0, i.j)(t);
             return {

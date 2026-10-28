@@ -508,8 +508,9 @@ function ek(e) {
                 switch (t) {
                     case eo.gr.SUMMARY:
                     case eo.gr.SHARE:
-                        let { clydeLogoImage: e, clydeLogoStaticImage: n } = (0, ei.j)($.character);
-                        return { animatedSrc: e, staticSrc: n };
+                        let e = (0, ei.o)($.character),
+                            { clydeLogoImage: n, clydeLogoStaticImage: l } = (0, ei.j)(e);
+                        return { animatedSrc: n, staticSrc: l };
                     default:
                         return eP;
                 }
@@ -2637,9 +2638,10 @@ var lz = n(7584),
     lW = n(834109),
     lq = n(48763);
 function lX(e) {
-    let { character: t, power: n } = e;
+    let { character: t, power: n } = e,
+        l = (0, ei.o)(t);
     return (0, r.jsxs)(lB.A, {
-        character: t,
+        cardColorPalette: l,
         size: lq.W.LG,
         children: [
             (0, r.jsx)(lV.A, {}),
@@ -3117,13 +3119,14 @@ function rs(e) {
                     switch (e) {
                         case eo.gr.SUMMARY:
                         case eo.gr.SHARE:
-                            let { primaryBackgroundColor: n, shadowColor: l } = (0, ei.j)(t);
+                            let n = (0, ei.o)(t),
+                                { primaryBackgroundColor: l, shadowColor: r } = (0, ei.j)(n);
                             return {
                                 ...tg,
-                                "--custom-checkpoint-primary": n,
-                                "--custom-checkpoint-button-border": n,
-                                "--custom-checkpoint-button-shadow": l,
-                                "--custom-checkpoint-background-gradient-start": n,
+                                "--custom-checkpoint-primary": l,
+                                "--custom-checkpoint-button-border": l,
+                                "--custom-checkpoint-button-shadow": r,
+                                "--custom-checkpoint-background-gradient-start": l,
                             };
                         default:
                             return tg;

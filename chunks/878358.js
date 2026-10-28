@@ -155,25 +155,25 @@ function G(e) {
 }
 function F(e) {
     let { checkpointData: t, onFooterClick: n } = e,
-        { character: a, stats: i } = t,
-        c = null != a && null != i,
-        o = (0, v.FX)("Checkpoint2026CardDisplayComponent"),
-        d = r.useMemo(() => (null != i ? (0, A.R8)(i) : null), [i]);
+        { character: a, stats: i, cardColorPalette: c } = t,
+        o = null != a && null != i,
+        d = (0, v.FX)("Checkpoint2026CardDisplayComponent"),
+        m = r.useMemo(() => (null != i ? (0, A.R8)(i) : null), [i]);
     return (0, l.jsxs)(E.A, {
-        character: a,
+        cardColorPalette: c,
         size: y.W.SM,
-        className: s()(O.Nr, { [O.Q9]: c }),
+        className: s()(O.Nr, { [O.Q9]: o }),
         style: M,
         children: [
             (0, l.jsx)(u.A, { children: T.intl.string(_.default.Og2R9d) }),
             (0, l.jsx)(N.A, {}),
             (0, l.jsx)(I.A, { variant: null != a ? "full" : "short", className: O.Ss }),
-            null != a && null != d
-                ? (0, l.jsx)(S.A, { powerLevel: d.powerLevel, powerLevelUnits: d.powerLevelUnits })
+            null != a && null != m
+                ? (0, l.jsx)(S.A, { powerLevel: m.powerLevel, powerLevelUnits: m.powerLevelUnits })
                 : null,
             null != a ? (0, l.jsx)(C.A, { character: a }) : null,
-            null != d ? (0, l.jsx)(D, { stats: d }) : null,
-            (0, l.jsx)(G, { isCheckpointEnabled: o, onClick: n }),
+            null != m ? (0, l.jsx)(D, { stats: m }) : null,
+            (0, l.jsx)(G, { isCheckpointEnabled: d, onClick: n }),
         ],
     });
 }
