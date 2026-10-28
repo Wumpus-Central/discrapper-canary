@@ -1541,26 +1541,27 @@ let n4 = a.memo(function (e) {
         f = g === X.M.GAME_SHOP_NEW_BADGE && null != m,
         p = (0, tF.nY)(t.id),
         C = (0, nq.u)({ surface: "storefront_badge", applicationId: p }),
-        E = null;
-    (f && (E = er.intl.string(er.t.y2b7CA)), null != C && (E = C.text));
-    let [x, N] = (0, ee.x_)(X.M.GAME_SHOP_NEW_DROP_POPOVER, t.id, m?.id ?? ""),
-        _ = x === X.M.GAME_SHOP_NEW_DROP_POPOVER && null != m;
+        E = C?.tooltip,
+        x = null;
+    (f && (x = er.intl.string(er.t.y2b7CA)), null != C && (x = C.text));
+    let [N, _] = (0, ee.x_)(X.M.GAME_SHOP_NEW_DROP_POPOVER, t.id, m?.id ?? ""),
+        S = N === X.M.GAME_SHOP_NEW_DROP_POPOVER && null != m;
     a.useEffect(() => {
-        i && (f && A(el.i.INDIRECT_ACTION), _ && N(el.i.INDIRECT_ACTION));
-    }, [A, N, i, f, _]);
-    let S = a.useCallback(() => {
-            (A(el.i.TAKE_ACTION), N(el.i.TAKE_ACTION));
+        i && (f && A(el.i.INDIRECT_ACTION), S && _(el.i.INDIRECT_ACTION));
+    }, [A, _, i, f, S]);
+    let b = a.useCallback(() => {
+            (A(el.i.TAKE_ACTION), _(el.i.TAKE_ACTION));
             let e = (0, tF.mq)(t.id),
                 n = nX.A.getStorefrontState(e)?.activePage ?? 0;
             (0, en.pX)(H.BVt.CHANNELS_GAME_SHOP(t.id, n));
-        }, [t.id, A, N]),
-        b = a.useCallback(() => {
-            (0, nJ.X)({ guildId: t.id, forceFetch: _ });
-        }, [t.id, _]),
+        }, [t.id, A, _]),
         j = a.useCallback(() => {
-            N(el.i.USER_DISMISS);
-        }, [N]),
-        G = a.useCallback(
+            (0, nJ.X)({ guildId: t.id, forceFetch: S });
+        }, [t.id, S]),
+        G = a.useCallback(() => {
+            _(el.i.USER_DISMISS);
+        }, [_]),
+        v = a.useCallback(
             (e) => {
                 null != t &&
                     (0, e2.L3)(e, async () => {
@@ -1570,10 +1571,15 @@ let n4 = a.memo(function (e) {
             },
             [t],
         ),
-        v = a.useCallback(() => {
+        R = a.useCallback(() => {
             l.current?.onMouseEnter(null, 500);
         }, [l]),
-        R = a.useCallback(
+        y = a.useMemo(() => {
+            if (null == x) return null;
+            let e = (0, r.jsx)($.E, { type: { text: x }, variant: "primary" });
+            return null != E ? (0, r.jsx)(q.m, { asContainer: !0, text: E, children: e }) : e;
+        }, [x, E]),
+        T = a.useCallback(
             (e) =>
                 (0, r.jsx)(et.G, {
                     background: (0, r.jsx)("div", { className: n7.D }),
@@ -1594,16 +1600,14 @@ let n4 = a.memo(function (e) {
                         children: er.intl.string(er.t.vyaWs7),
                     }),
                     selected: i,
-                    onMouseDown: b,
-                    onClick: S,
-                    onContextMenu: G,
-                    trailing: (0, r.jsxs)(r.Fragment, {
-                        children: [null != E && (0, r.jsx)($.E, { type: { text: E }, variant: "primary" }), e],
-                    }),
+                    onMouseDown: j,
+                    onClick: b,
+                    onContextMenu: v,
+                    trailing: (0, r.jsxs)(r.Fragment, { children: [y, e] }),
                 }),
-            [t.id, i, b, S, G, E],
+            [t.id, i, j, b, v, y],
         ),
-        y = a.useMemo(() => {
+        M = a.useMemo(() => {
             if (null == m) return null;
             switch (m.type) {
                 case "guild-application-announcement": {
@@ -1636,21 +1640,21 @@ let n4 = a.memo(function (e) {
                     return null;
             }
         }, [m]),
-        T = a.useCallback(
+        L = a.useCallback(
             () =>
-                _ && null != y
+                S && null != M
                     ? (0, r.jsx)(nZ.A, {
-                          onActionClick: S,
-                          onActionMouseDown: b,
-                          onRender: v,
-                          onRequestClose: j,
+                          onActionClick: b,
+                          onActionMouseDown: j,
+                          onRender: R,
+                          onRequestClose: G,
                           targetElementRef: s,
-                          ...y,
+                          ...M,
                       })
                     : null,
-            [_, y, S, b, v, j],
+            [S, M, b, j, R, G],
         );
-    return (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(n3, { ref: l, children: R }), !o && !d && !c && T()] });
+    return (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(n3, { ref: l, children: T }), !o && !d && !c && L()] });
 });
 var n8 = n(740426),
     ie = n(826673),
