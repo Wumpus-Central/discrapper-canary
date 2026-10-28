@@ -5099,6 +5099,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-10-camp-in-dm",
+    "defaultConfig": {
+      "disableIdleDisconnect": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "disableIdleDisconnect": true
+      }
+    }
+  },
+  {
     "name": "2026-10-clickable-hero-banner",
     "kind": "user",
     "defaultConfig": {

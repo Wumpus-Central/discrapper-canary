@@ -26,7 +26,7 @@ let r = {
     CallDisplaySleepManager: { inlineRequire: () => n(451099).A, hasStoreChangeListeners: !0 },
     CallIdleManager: {
         actions: ["VOICE_STATE_UPDATES", "EMBEDDED_ACTIVITY_CLOSE", "CONNECTION_CLOSED"],
-        inlineRequire: () => n(167132).A,
+        inlineRequire: () => n(323247).A,
     },
     ChangelogManager: {
         actions: ["POST_CONNECTION_OPEN"],
