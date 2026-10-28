@@ -4640,28 +4640,6 @@
     }
   },
   {
-    "name": "2026-09-server-onboarding-setup-progress",
-    "kind": "user",
-    "defaultConfig": {
-      "showSetupProgressRow": false,
-      "boostBeforeAddApp": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showSetupProgressRow": true,
-        "boostBeforeAddApp": false
-      },
-      "2": {
-        "showSetupProgressRow": true,
-        "boostBeforeAddApp": true
-      }
-    }
-  },
-  {
     "name": "2026-09-server-tooltip-notification-context",
     "kind": "user",
     "defaultConfig": {

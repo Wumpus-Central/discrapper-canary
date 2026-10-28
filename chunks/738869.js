@@ -19,7 +19,7 @@ var l = n(477900),
     I = n(580630),
     A = n(371710),
     y = n(529412),
-    x = n(557679),
+    x = n(127981),
     P = n(202541),
     v = n(341535),
     _ = n(105292),
@@ -161,19 +161,19 @@ function D(e) {
         })),
         { giftRecipient: H, setIsRecurringGift: W } = (0, C.Pv)(),
         V = B && (0, S.Ik)(H),
-        { discountOffer: Y, discountAmountOff: K, applicablePlan: Z } = G,
-        q = (0, c.bG)([E.A], () => E.A.get(n));
-    o()(null != q, "Missing subscriptionPlan");
-    let z = (0, g.m6)(q.id),
+        { discountOffer: Y, discountAmountOff: K, applicablePlan: q } = G,
+        Z = (0, c.bG)([E.A], () => E.A.get(n));
+    o()(null != Z, "Missing subscriptionPlan");
+    let z = (0, g.m6)(Z.id),
         $ = V && z === P.PremiumTypes.TIER_2,
         Q = (0, y.qi)({ location: `PremiumSwitchPlanSelectOption${$ ? "" : "-DISABLED"}` }),
         J = V && (!$ || !Q || r),
         X = (0, R.Sq)(),
-        ee = (0, g.L_)({ planId: n, isGift: B, priceOptions: s, subscriptionPlan: q }),
+        ee = (0, g.L_)({ planId: n, isGift: B, priceOptions: s, subscriptionPlan: Z }),
         et = (0, g.y8)(n, !1, B, s),
         en = null != ee && !T,
         el = i.useCallback(() => {
-            let e = w(t, q, {
+            let e = w(t, Z, {
                 userLocale: U,
                 isEligibleForBOGOPromotion: X,
                 shouldShowSavingsPercent: en,
@@ -195,10 +195,10 @@ function D(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [U, X, q, t, en, B, n, ee, s, b]),
+        }, [U, X, Z, t, en, B, n, ee, s, b]),
         ei = i.useMemo(
-            () => (0, g.D8)(q.interval, B, u, q.intervalCount, V, z),
-            [q.interval, q.intervalCount, B, u, V, z],
+            () => (0, g.D8)(Z.interval, B, u, Z.intervalCount, V, z),
+            [Z.interval, Z.intervalCount, B, u, V, z],
         ),
         er = D && V && (0, A.dI)(n),
         ea = (function (e, t, n) {
@@ -211,10 +211,10 @@ function D(e) {
                     : _.intl.formatToPlainString(_.t.ori2Jm, { currencyAmount: (0, I.$g)(t.amount, t.currency) }),
                 priceInterval: i ? _.intl.string(r ? v.default.mqaMxh : v.default.JUUvJw) : null,
             };
-        })(q, et, r),
-        es = null != Z && n === Z;
+        })(Z, et, r),
+        es = null != q && n === q;
     function eo() {
-        (k || r || F(n, { shouldUpdateQuantity: !(0, x.b)(n) }), er || W(!1));
+        (k || r || F(n, { shouldUpdateQuantity: !(0, x.bM)(n) }), er || W(!1));
     }
     let eu = T
             ? _.intl.format(_.t.hXcaLT, {
@@ -326,7 +326,7 @@ function D(e) {
                                       : e.interval === P.WT.YEAR
                                         ? _.intl.formatToPlainString(_.t.rtLTJP, { percent: o ?? "" })
                                         : null;
-                            })(q, {
+                            })(Z, {
                                 price: et,
                                 isEligibleForDiscount: N,
                                 isEligibleForTrial: b,
@@ -342,7 +342,7 @@ function D(e) {
     return er
         ? (0, l.jsx)(j, {
               planId: n,
-              subscriptionPlan: q,
+              subscriptionPlan: Z,
               planLabel: ei,
               priceSubtext: ea.priceSubtext,
               selected: r,

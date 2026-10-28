@@ -11,7 +11,7 @@ var l = n(477900),
     m = n(123816),
     p = n(511484),
     h = n(387278),
-    C = n(462444),
+    C = n(307490),
     f = n(738869),
     E = n(773669),
     S = n(97352),
@@ -56,11 +56,11 @@ function v(e) {
                 premiumSwitchPlanSelectText: e ? (0, C.yq)(H, V) : null,
             };
         }, [H, B, V]),
-        Z = i.useMemo(
+        q = i.useMemo(
             () => (N && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: v, trialPeriodCopy: G }) : b),
             [N, F, U, v, G, b],
         ),
-        q = i.useMemo(() => (r.length > 0 ? A.hd[r[0]].premiumType : void 0), [r]),
+        Z = i.useMemo(() => (r.length > 0 ? A.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, m.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
         $ = i.useCallback(
             (e) => {
@@ -203,15 +203,15 @@ function v(e) {
             showPlanStatusSubText: _,
             isInPlanSelectStep: N,
         });
-    return null == q
+    return null == Z
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   Y &&
                       (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: P.S, children: K }),
                   (0, l.jsx)(d.me, {
-                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),
-                      headingSubText: Z,
+                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: Z }),
+                      headingSubText: q,
                       planRadioOptions: Q,
                       value: R?.id ?? "",
                       onChange: $,

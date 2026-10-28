@@ -52,7 +52,7 @@ let F = {
             { source: i, loadId: r, lurkLocation: l, autoNavigate: d = !0 } = t,
             E = t.lurker ?? !1,
             A = y.default.getCurrentUser();
-        if (A?.hasFlag(M.nhx.QUARANTINED)) return ((0, p.default)(), new Promise((e, t) => t(Error())));
+        if (A?.hasFlag(M.nhx.QUARANTINED)) throw ((0, p.default)(), new u.w());
         s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: E, source: i, loadId: r });
         try {
             let t = L.A.getGuildId(),
@@ -97,17 +97,20 @@ let F = {
             }
             return c;
         } catch (t) {
-            if (
-                (t.body?.code === M.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
-                    (0, o.yO)(U.w_.JOIN_LARGE_GUILD_UNDERAGE),
-                t.body?.code === M.t02.TOO_MANY_USER_GUILDS &&
-                    ((0, I.Om)(y.default.getCurrentUser()) ? G(M.cZu) : G(M.qlD)),
-                t.body?.code === M.t02.GUILD_AT_CAPACITY &&
+            if (t.body?.code === M.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED)
+                throw ((0, o.yO)(U.w_.JOIN_LARGE_GUILD_UNDERAGE), new u.w({ cause: t }));
+            if (t.body?.code === M.t02.TOO_MANY_USER_GUILDS)
+                throw ((0, I.Om)(y.default.getCurrentUser()) ? G(M.cZu) : G(M.qlD), new u.w({ cause: t }));
+            if (t.body?.code === M.t02.GUILD_AT_CAPACITY)
+                throw (
                     P.A.show({ title: w.intl.string(w.t.ZZlox4), body: w.intl.string(w.t.ZUEGFn) }),
-                E && t.body?.code === M.t02.UNKNOWN_GUILD && x(e),
+                    new u.w({ cause: t })
+                );
+            if (
+                (E && t.body?.code === M.t02.UNKNOWN_GUILD && x(e),
                 t.body?.code === M.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED)
             )
-                throw (E && x(e), (0, c.e)(e), new u.w());
+                throw (E && x(e), (0, c.e)(e), new u.w({ cause: t }));
             throw t;
         }
     },
