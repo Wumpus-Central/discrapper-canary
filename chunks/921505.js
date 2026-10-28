@@ -104,8 +104,8 @@ function Y(e) {
     }, [t, e, n]);
 }
 var K = n(394107),
-    Z = n(583741);
-function q(e) {
+    q = n(583741);
+function Z(e) {
     let { fallback: t, invoicePreview: n } = e,
         { gameName: l } = p(),
         i = (0, E.A)(),
@@ -138,7 +138,7 @@ function q(e) {
                 tooltip: H.intl.string(H.t.JmwQJM),
             }),
         d.push({ id: "tax", label: H.intl.string(H.t.jiRvC7), amount: n.tax }),
-        (0, r.jsx)(G.Vm, { label: H.intl.string(Z.default.eoXh7B), lineItems: d, currency: n.currency })
+        (0, r.jsx)(G.Vm, { label: H.intl.string(q.default.eoXh7B), lineItems: d, currency: n.currency })
     );
 }
 var z = n(349085),
@@ -285,7 +285,7 @@ function J(e) {
         et =
             (U?.discount != null && (0, L.Ro)(ee, U.discount.id)) || ee.invoiceItems.some((e) => e.discounts.length > 0)
                 ? X
-                : (0, r.jsx)(q, { fallback: X, invoicePreview: ee }),
+                : (0, r.jsx)(Z, { fallback: X, invoicePreview: ee }),
         en = null;
     if (!V && _.ME.has(h.type) && "renewalInvoicePreview" in h && null != h.renewalInvoicePreview) {
         let e = (0, O.Gj)(h.invoicePreview, h.renewalInvoicePreview, void 0, { isSubscriptionUpdate: null != s });
@@ -323,7 +323,7 @@ function J(e) {
         invoiceSummaryContent: et,
         legalContent: ei,
         invoiceTotalDueValue: er,
-        invoiceTotalDueLabel: H.intl.string(Z.default.R0cZsM),
+        invoiceTotalDueLabel: H.intl.string(q.default.R0cZsM),
     });
 }
 let X = (e, t) => {
@@ -579,8 +579,8 @@ var eW = n(482132),
     eV = n(284009),
     eY = n.n(eV),
     eK = n(364840),
-    eZ = n(331322),
-    eq = n(123292),
+    eq = n(331322),
+    eZ = n(123292),
     ez = n(38021),
     e$ = n(821609),
     eQ = n(997330),
@@ -604,20 +604,20 @@ function e3(e) {
           ? (eY()(null != i, "Missing primaryButtonProps for review step"),
             (0, r.jsx)(eo.lo, { onBackClick: null != n ? () => l(n) : void 0, primaryButtonProps: i }))
           : (0, r.jsx)(eK.j, {
-                children: (0, r.jsxs)(eZ.B, {
+                children: (0, r.jsxs)(eq.B, {
                     direction: "horizontal",
                     align: "center",
                     justify: null != n ? "space-between" : "end",
                     fullWidth: !0,
                     children: [
                         null != n
-                            ? (0, r.jsx)(eq.Q, {
+                            ? (0, r.jsx)(eZ.Q, {
                                   text: H.intl.string(H.t["13/7kX"]),
                                   onClick: () => l(n),
                                   variant: "secondary",
                               })
                             : null,
-                        (0, r.jsxs)(eZ.B, {
+                        (0, r.jsxs)(eq.B, {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
@@ -966,7 +966,7 @@ function tV(e) {
         d = [...u, ...o];
     return (0, r.jsx)(tD.Vm, {
         defaultExpanded: !0,
-        label: H.intl.string(Z.default.eoXh7B),
+        label: H.intl.string(q.default.eoXh7B),
         lineItems: d,
         currency: c,
     });
@@ -1085,7 +1085,7 @@ function tK(e) {
             checkoutInvoicePreview: I,
             renewalInvoicePreview: A,
         } = h,
-        x = (0, tw.A)({ location: "GuildBoostReview", message: H.intl.string(Z.default["tK8A/8"]) });
+        x = (0, tw.A)({ location: "GuildBoostReview", message: H.intl.string(q.default["tK8A/8"]) });
     if (null == I || null == A || null == f) return (0, r.jsx)(P.Ed, { shouldShowUnifiedHeader: !0 });
     let v = (0, r.jsx)(tY, {
             isSubscriptionUpdate: C,
@@ -1209,7 +1209,7 @@ function tK(e) {
                 graphic: (0, r.jsx)(tU.a6, {}),
                 price: s,
                 PriceIcon: c ? U.t : void 0,
-                priceTooltip: c ? H.intl.string(Z.default.YUNJJa) : void 0,
+                priceTooltip: c ? H.intl.string(q.default.YUNJJa) : void 0,
                 priceSubText: c ? o : void 0,
                 bottomSubText: n?.text ?? null,
             };
@@ -1231,11 +1231,11 @@ function tK(e) {
         invoiceSummaryContent: j,
         legalContent: N,
         invoiceTotalDueValue: b.formattedTotal,
-        invoiceTotalDueLabel: H.intl.string(Z.default.R0cZsM),
+        invoiceTotalDueLabel: H.intl.string(q.default.R0cZsM),
     });
 }
-var tZ = n(703176);
-function tq(e) {
+var tq = n(703176);
+function tZ(e) {
     return "" === e || "-" === e;
 }
 function tz(e) {
@@ -1246,10 +1246,10 @@ function tz(e) {
     }, [t]);
     let u = "number" == typeof s;
     function d(e) {
-        (o(e), tq(e) || n(e));
+        (o(e), tZ(e) || n(e));
     }
     return (0, r.jsxs)("div", {
-        className: tZ.U$,
+        className: tq.U$,
         children: [
             (0, r.jsx)(tn.K, {
                 variant: "secondary",
@@ -1262,15 +1262,15 @@ function tz(e) {
                 disabled: !u || s <= l,
             }),
             (0, r.jsx)("div", {
-                className: tZ.WJ,
+                className: tq.WJ,
                 children: (0, r.jsx)("input", {
-                    className: tZ.Zh,
+                    className: tq.Zh,
                     "aria-label": a,
                     inputMode: "numeric",
                     value: `${s}`,
                     onChange: (e) =>
                         (function (e) {
-                            if (tq(e)) return void d(e);
+                            if (tZ(e)) return void d(e);
                             let t = parseInt(e, 10);
                             if (!isNaN(t)) {
                                 if (t <= l) return void d(l);
@@ -1279,7 +1279,7 @@ function tz(e) {
                             }
                         })(e.currentTarget.value),
                     onBlur: function () {
-                        tq(s) && o(t);
+                        tZ(s) && o(t);
                     },
                 }),
             }),
@@ -1298,25 +1298,25 @@ function tz(e) {
 }
 function t$(e) {
     let { message: t } = e;
-    return (0, r.jsx)(g.E, { variant: "text-xs/normal", color: "text-muted", className: tZ.jH, children: t });
+    return (0, r.jsx)(g.E, { variant: "text-xs/normal", color: "text-muted", className: tq.jH, children: t });
 }
 function tQ(e) {
     let { text: t } = e;
     return (0, r.jsxs)("div", {
-        className: tZ.Vk,
+        className: tq.Vk,
         children: [
             (0, r.jsx)("div", {
-                className: tZ.D0,
+                className: tq.D0,
                 children: (0, r.jsx)(U.t, {
                     "aria-hidden": "true",
                     size: "custom",
                     width: 20,
                     height: 20,
-                    className: tZ.ue,
+                    className: tq.ue,
                     color: tC.k0.PREMIUM_TIER_2,
                 }),
             }),
-            (0, r.jsx)("div", { className: tZ.yP, children: t }),
+            (0, r.jsx)("div", { className: tq.yP, children: t }),
         ],
     });
 }
@@ -1337,28 +1337,28 @@ function tJ(e) {
         refreshPricingNotes: C,
     } = e;
     return (0, r.jsxs)("div", {
-        className: tZ.xY,
+        className: tq.xY,
         children: [
             d,
             (0, r.jsxs)("div", {
-                className: tZ.K3,
+                className: tq.K3,
                 children: [
                     (0, r.jsx)(g.E, {
                         variant: "text-md/medium",
-                        className: tZ.bk,
+                        className: tq.bk,
                         children: H.intl.string(H.t["r+SebU"]),
                     }),
-                    (0, r.jsx)(tr._, { className: tZ.bN, color: "currentColor", size: "xs" }),
-                    (0, r.jsx)(g.E, { variant: "text-md/medium", className: tZ.kX, children: i }),
+                    (0, r.jsx)(tr._, { className: tq.bN, color: "currentColor", size: "xs" }),
+                    (0, r.jsx)(g.E, { variant: "text-md/medium", className: tq.kX, children: i }),
                 ],
             }),
             u,
             m,
             (0, r.jsxs)("div", {
-                className: tZ.fh,
+                className: tq.fh,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: tZ.fX,
+                        className: tq.fX,
                         children: [
                             (0, r.jsx)(tz, {
                                 value: n,
@@ -1367,22 +1367,22 @@ function tJ(e) {
                                 minValue: 1,
                                 maxValue: 30,
                             }),
-                            (0, r.jsx)(g.E, { variant: "text-md/medium", className: tZ.ny, children: a }),
+                            (0, r.jsx)(g.E, { variant: "text-md/medium", className: tq.ny, children: a }),
                         ],
                     }),
-                    (0, r.jsx)("div", { className: e9()(tZ.El, { [e1.S]: t }), children: s }),
+                    (0, r.jsx)("div", { className: e9()(tq.El, { [e1.S]: t }), children: s }),
                 ],
             }),
-            (0, r.jsxs)("div", { className: tZ.pw, children: [h, p] }),
+            (0, r.jsxs)("div", { className: tq.pw, children: [h, p] }),
             (0, r.jsxs)("div", {
-                className: tZ.fh,
+                className: tq.fh,
                 children: [
                     (0, r.jsx)(ta.D, {
                         variant: "heading-lg/semibold",
-                        className: tZ.O3,
+                        className: tq.O3,
                         children: H.intl.string(H.t.RtA7nR),
                     }),
-                    (0, r.jsx)("div", { className: e9()(tZ.BU, { [e1.S]: t }), children: o }),
+                    (0, r.jsx)("div", { className: e9()(tq.BU, { [e1.S]: t }), children: o }),
                 ],
             }),
             C.map((e, t) => (0, r.jsx)(c.Fragment, { children: e }, t)),
@@ -1530,14 +1530,14 @@ function t0(e) {
                         : (0, r.jsx)(g.E, {
                               variant: "text-md/medium",
                               color: "text-subtle",
-                              className: tZ._X,
+                              className: tq._X,
                               children: H.intl.string(H.t.jNY1FO),
                           }),
                 K = U.showExistingSlotNotice
                     ? (0, r.jsx)(tX, { existingAvailableSlots: d, canceledCount: G, premiumSubscription: o })
                     : null,
-                Z = U.showFractionalPremiumBanner ? (0, r.jsx)(tA.vi, { fractionalPremiumInfo: S }) : null,
-                q = B
+                q = U.showFractionalPremiumBanner ? (0, r.jsx)(tA.vi, { fractionalPremiumInfo: S }) : null,
+                Z = B
                     ? ((function (e) {
                           let { intervalType: t, intervalCount: n = 1 } = e;
                           return t === eD.WT.YEAR
@@ -1583,12 +1583,12 @@ function t0(e) {
             let X = (0, r.jsx)(tL, {});
             return {
                 isLoading: T,
-                planLabel: q,
+                planLabel: Z,
                 planPriceContent: z,
                 refreshSubtotalContent: $,
                 refreshDescriptionContent: Y,
                 existingSlotNotice: K,
-                fractionalBanner: Z,
+                fractionalBanner: q,
                 refreshPricingNotes: Q,
                 refreshDiscountCallout:
                     "reverse_trial" === U.upsellVariant ? (0, r.jsx)(tx, {}) : (0, r.jsx)(tQ, { text: n }),
@@ -1681,7 +1681,9 @@ function t3(e) {
                   children: [
                       (0, r.jsx)(e5.w, {
                           type: "critical",
-                          message: H.intl.format(H.t["/m3Y3s"], { paymentGatewayName: e2.qm[p.paymentGateway] }),
+                          message: p.isACOM
+                              ? H.intl.string(H.t.nv1IqK)
+                              : H.intl.format(H.t["/m3Y3s"], { paymentGatewayName: e2.qm[p.paymentGateway] }),
                           role: "none",
                       }),
                       b,
@@ -1836,19 +1838,19 @@ function na(e) {
                     ],
                 }),
                 (0, r.jsx)(eK.j, {
-                    children: (0, r.jsxs)(eZ.B, {
+                    children: (0, r.jsxs)(eq.B, {
                         direction: "horizontal",
                         align: "center",
                         justify: "space-between",
                         fullWidth: !0,
                         children: [
-                            (0, r.jsx)(eq.Q, { text: H.intl.string(H.t["13/7kX"]), onClick: l, variant: "secondary" }),
-                            (0, r.jsxs)(eZ.B, {
+                            (0, r.jsx)(eZ.Q, { text: H.intl.string(H.t["13/7kX"]), onClick: l, variant: "secondary" }),
+                            (0, r.jsxs)(eq.B, {
                                 direction: "horizontal",
                                 align: "center",
                                 fullWidth: !1,
                                 children: [
-                                    (0, r.jsx)(eq.Q, {
+                                    (0, r.jsx)(eZ.Q, {
                                         text: H.intl.string(H.t["SI/adm"]),
                                         onClick: i,
                                         variant: "secondary",
@@ -2021,7 +2023,7 @@ let np = [
                             } = eU(),
                             j = (0, tw.A)({
                                 location: "GuildBoostPurchaseModal",
-                                message: H.intl.string(Z.default["tK8A/8"]),
+                                message: H.intl.string(q.default["tK8A/8"]),
                             }),
                             R = (0, tw.iB)({ paymentSourceId: A, location: "GuildBoostPurchaseModal" }),
                             O = (0, nu.gN)(),
@@ -2362,8 +2364,8 @@ var nW = n(702841),
     nV = n(775602),
     nY = n(31823),
     nK = n(427675),
-    nZ = n(590180),
-    nq = n(953150),
+    nq = n(590180),
+    nZ = n(953150),
     nz = n(524246),
     n$ = n(14368),
     nQ = n(61750),
@@ -2392,7 +2394,7 @@ function n0(e) {
         { paymentError: p } = (0, er.o)(),
         { application: h } = (0, nY.V)(),
         C = (0, nK.gU)(),
-        f = (0, nW.bG)([nZ.A], () => nZ.A.getProduct(o)),
+        f = (0, nW.bG)([nq.A], () => nq.A.getProduct(o)),
         E = c.useRef(!1);
     (eY()(null != o, "Expected selectedSkuId"), eY()(null != h, "Expected application"));
     let g = C[o];
@@ -2437,8 +2439,8 @@ function n2(e) {
         d = (0, nW.bG)([nV.Ay], () => nV.Ay.useReducedMotion),
         m = c.useRef(null),
         p = (0, S.t4)((e) => e.selectedSkuId),
-        h = (0, nW.bG)([nZ.A], () => nZ.A.getProduct(p)),
-        { confettiColors: C } = (0, nq.A)(h?.styles);
+        h = (0, nW.bG)([nq.A], () => nq.A.getProduct(p)),
+        { confettiColors: C } = (0, nZ.A)(h?.styles);
     return (
         c.useEffect(() => {
             t &&
@@ -2746,7 +2748,7 @@ var l_ = n(139486),
 function lM(e) {
     let { handleClose: t, selectedSkuId: n } = e,
         { analyticsLocations: l } = (0, tm.Ay)(a.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
-    return (0, r.jsx)(eq.Q, {
+    return (0, r.jsx)(eZ.Q, {
         text: H.intl.string(H.t.J82mpK),
         onClick: function () {
             (t(),
@@ -3047,8 +3049,8 @@ var lU = n(809029),
     lV = n(163074),
     lY = n(810498),
     lK = n(557679),
-    lZ = n(709870),
-    lq = n(37126),
+    lq = n(709870),
+    lZ = n(37126),
     lz = n(412260),
     l$ = n(280761),
     lQ = n(492462),
@@ -3068,7 +3070,7 @@ function l6(e) {
     let { rewardSkuIds: t, onClose: n, onRewardModalClose: l } = e,
         { analyticsLocations: i } = (0, tm.Ay)(),
         a = (0, l5.D)(t),
-        [s, ...o] = (0, D.yK)([nZ.A], () => t.map((e) => nZ.A.getProduct(e)).filter((e) => null != e));
+        [s, ...o] = (0, D.yK)([nq.A], () => t.map((e) => nq.A.getProduct(e)).filter((e) => null != e));
     return (0, r.jsx)(eW.UX, {
         children: (0, r.jsx)(eK.j, {
             children: (0, r.jsx)(e$.$, {
@@ -3145,13 +3147,13 @@ function l9(e) {
         V = W && (0, lK.M)({ isGift: N, giftRecipient: b, selectedPlanId: _?.id }),
         { purchases: Y } = (0, lB.Wg)(!1),
         K = (0, D.bG)([lz.A], () => lz.A.getGiftPromotion()?.id),
-        Z = (0, D.bG)([lz.A], () => {
+        q = (0, D.bG)([lz.A], () => {
             let e = lz.A.getMarketingComponentByType(tv.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        q = (0, M.g)(p, I),
+        Z = (0, M.g)(p, I),
         z = null != P ? P.orbsReward : null,
         $ = null != z && z > 0,
         Q = N && !V && !$ && w.length > 0 && w.every((e) => null != Y.get(e)) && H,
@@ -3214,12 +3216,12 @@ function l9(e) {
                         l4._.dispatch(eG.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED));
             else
                 null != z && z > 0
-                    ? (0, lZ.$)({ orbsAmount: z, openGiftingBadgePostPurchaseModal: N && G ? U : void 0 })
+                    ? (0, lq.$)({ orbsAmount: z, openGiftingBadgePostPurchaseModal: N && G ? U : void 0 })
                     : null != et && l1(N, C)
                       ? (0, lJ.A)(eG.BVt.NITRO_HOME, {
                             search: (0, lQ.stringify)({ perk: lX.RIOT_CREDIT_CAMPAIGN_PERK_CARD_ID }),
                         })
-                      : l1(N, C) && (ee?.id === lq.Ym || ee?.name?.includes(lq.YX)) && (0, lq.tu)();
+                      : l1(N, C) && (ee?.id === lZ.Ym || ee?.name?.includes(lZ.YX)) && (0, lZ.tu)();
         }
         return (
             l4._.subscribe(eG.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
@@ -3233,10 +3235,10 @@ function l9(e) {
         }, [L, N, b, j, R, O, a]),
         c.useEffect(() => {
             B &&
-                null != Z &&
+                null != q &&
                 null != K &&
                 (0, lW.qr)(lF.M.GIFTING_PROMOTION_REMINDER, K, { dismissAction: l8.i.INDIRECT_ACTION });
-        }, [Z, K, B]));
+        }, [q, K, B]));
     let el = null != m ? l3.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
     if (null != s) t = s(_, X, g);
     else if (N) t = (0, r.jsx)(l3.fw, { planId: _.id, onClose: X, shouldUsePostPurchaseRecipientDelivery: V });
@@ -3252,7 +3254,7 @@ function l9(e) {
         t = (0, r.jsx)(l3.Ay, {
             planId: _.id,
             onClose: X,
-            paymentSourceType: q,
+            paymentSourceType: Z,
             hideClose: null != F,
             startingFractionalPremiumEndsAt: x,
             customCTAType: el,
@@ -4233,8 +4235,8 @@ let iY = (e) => {
             ],
         });
     };
-var iZ = n(940223);
-let iq = function (e) {
+var iq = n(940223);
+let iZ = function (e) {
     let { className: t } = e,
         n = (0, iV.A)(),
         { avatarSrc: l, eventHandlers: i } = (0, iW.A)({ userId: n?.id, size: n9._3.SIZE_32, animateOnHover: !0 }),
@@ -4244,18 +4246,18 @@ let iq = function (e) {
     return null == n
         ? null
         : (0, r.jsxs)("div", {
-              className: e9()(iZ.$6, t),
+              className: e9()(iq.$6, t),
               children: [
                   (0, r.jsx)("div", {
-                      className: iZ.H,
+                      className: iq.H,
                       children: (0, r.jsx)(iB.eu, { src: l, "aria-label": n.username, size: n9._3.SIZE_32, ...i }),
                   }),
                   (0, r.jsx)(g.E, {
                       variant: "text-xs/bold",
-                      className: iZ.U_,
+                      className: iq.U_,
                       children: H.intl.format(H.t.oxhCOl, { userName: o }),
                   }),
-                  (0, r.jsx)(s ? iY : iK, { className: iZ.q3 }),
+                  (0, r.jsx)(s ? iY : iK, { className: iq.q3 }),
               ],
           });
 };
@@ -4358,7 +4360,7 @@ function re(e) {
         W = (0, nW.bG)([ek.A], () => ek.A.get(B)),
         V = [{ planId: W?.id, quantity: 1 }],
         [Y, K] = c.useState(U),
-        [Z, q] = (0, tf.YV)({
+        [q, Z] = (0, tf.YV)({
             items: V,
             renewal: !1,
             preventFetch: !F,
@@ -4368,27 +4370,27 @@ function re(e) {
             currency: s.currency,
         });
     (c.useEffect(() => {
-        U && K(Z?.subscriptionPeriodEnd == null);
-    }, [Z, U]),
+        U && K(q?.subscriptionPeriodEnd == null);
+    }, [q, U]),
         (0, ib.A)(
             "Payment Modal Plan Select Step",
             Y,
             5,
-            { proratedInvoicePreview: Z, proratedInvoiceError: q, isEligibleForOffer: U },
+            { proratedInvoicePreview: q, proratedInvoiceError: Z, isEligibleForOffer: U },
             { tags: { app_context: "billing" } },
         ));
-    let z = q?.message ?? H.intl.string(H.t.R0RpRX),
-        $ = U && null == q,
-        Q = U && null != q,
-        J = $ && null == u && Z?.subscriptionPeriodEnd == null;
-    (0, iR.W)({ priceOptions: s, trialId: a, discountInvoicePreview: Z });
-    let X = (0, i8.i)({ planSkuId: W?.skuId, invoice: Z }),
+    let z = Z?.message ?? H.intl.string(H.t.R0RpRX),
+        $ = U && null == Z,
+        Q = U && null != Z,
+        J = $ && null == u && q?.subscriptionPeriodEnd == null;
+    (0, iR.W)({ priceOptions: s, trialId: a, discountInvoicePreview: q });
+    let X = (0, i8.i)({ planSkuId: W?.skuId, invoice: q }),
         { ref: ee, onTransitionEnd: et } = (0, ij.A)({ isExpanded: null != X, minHeightOverride: 0 }),
         en = c.useMemo(
             () =>
                 y || W?.skuId !== eD.pe.TIER_2 || C?.referrerId == null
                     ? (0, r.jsx)("div", { ref: ee, onTransitionEnd: et, style: { overflow: "hidden" }, children: X })
-                    : (0, r.jsx)(iq, { className: i9.ZB }),
+                    : (0, r.jsx)(iZ, { className: i9.ZB }),
             [X, y, W?.skuId, C?.referrerId, ee, et],
         ),
         el = c.useMemo(
@@ -4396,10 +4398,10 @@ function re(e) {
                 planOptions: d,
                 selectedPlanId: I?.id,
                 planGroup: l,
-                subscriptionPeriodEnd: Z?.subscriptionPeriodEnd,
+                subscriptionPeriodEnd: q?.subscriptionPeriodEnd,
                 useCompactGiftComponents: R,
             }),
-            [d, I?.id, l, Z?.subscriptionPeriodEnd, R],
+            [d, I?.id, l, q?.subscriptionPeriodEnd, R],
         );
     if (J) return (0, r.jsx)(P.Ed, { className: i9.QW });
     (eY()(null != A, "Step should be set"), eY()(d.length > 0, "Premium plan options should be set"));
@@ -5222,8 +5224,8 @@ var rW = n(637969),
     rV = n(869038),
     rY = n(852218),
     rK = n(7133),
-    rZ = n(83617);
-let [rq, rz] = (0, d.A)();
+    rq = n(83617);
+let [rZ, rz] = (0, d.A)();
 function r$(e) {
     let { code: t, onClose: n, children: l } = e,
         i = (0, D.bG)([eC.A], () => eC.A.getMostRecentPremiumTypeSubscription()),
@@ -5267,7 +5269,7 @@ function r$(e) {
         k = m?.subscriptionPlan,
         w = m?.promotion,
         U = m?.subscriptionTrial,
-        G = null != k ? (0, rZ._w)(k, x, !1) : [],
+        G = null != k ? (0, rq._w)(k, x, !1) : [],
         F = O?.currency ?? L ?? G[0],
         B = c.useMemo(() => (null != x ? { paymentSourceId: x, currency: F } : { currency: F }), [x, F]),
         H = c.useMemo(
@@ -5324,7 +5326,7 @@ function r$(e) {
                     }));
         }, [V, _]);
     ((0, em.QR)(P), (0, em.b)(T, P, _, N, !0, K));
-    let Z = c.useMemo(
+    let q = c.useMemo(
         () => ({
             code: t,
             giftCode: m,
@@ -5347,7 +5349,7 @@ function r$(e) {
         }),
         [t, m, k, w, U, f, u, h, a, i, s, A, B, H, W, V, g],
     );
-    return (0, r.jsx)(rq.Provider, { value: Z, children: l });
+    return (0, r.jsx)(rZ.Provider, { value: q, children: l });
 }
 var rQ = n(830215),
     rJ = n(264779),
@@ -5589,8 +5591,8 @@ function at(e) {
         [u, d] = c.useMemo(
             () =>
                 null == n
-                    ? [H.intl.string(Z.default.R0cZsM), void 0]
-                    : [H.intl.string(Z.default.R0cZsM), (0, w.$g)(0, n.currency)],
+                    ? [H.intl.string(q.default.R0cZsM), void 0]
+                    : [H.intl.string(q.default.R0cZsM), (0, w.$g)(0, n.currency)],
             [n],
         );
     if (null == n) return (0, r.jsx)(P.Ed, { shouldShowUnifiedHeader: !0 });
@@ -5785,22 +5787,22 @@ let ar = [...eD.oz],
                         hideCurrencySelect: !0,
                     }),
                     Y = (0, L.de)({ renewalInvoice: v, isSubscriptionUpdate: !1 }),
-                    { renewalPrice: K, multiPeriodDiscountAttributes: Z } = (0, O.QM)(v, l, {
+                    { renewalPrice: K, multiPeriodDiscountAttributes: q } = (0, O.QM)(v, l, {
                         discountOffer: null,
                         subscriptionTrial: i,
                     }),
-                    q = H.intl.formatToPlainString(H.t.BQPav6, { planPremiumType: k.Ay.getDisplayName(l.id) }),
+                    Z = H.intl.formatToPlainString(H.t.BQPav6, { planPremiumType: k.Ay.getDisplayName(l.id) }),
                     z = (0, r.jsx)(G._P, {
                         variant: {
                             type: G.I0.SubscriptionTrial,
-                            purchaseButtonText: q,
+                            purchaseButtonText: Z,
                             totalDue: 0,
                             renewalPrice: K,
                             currency: v.currency,
                             interval: l.interval,
                             intervalCount: l.intervalCount,
                             startDate: Y,
-                            multiPeriodDiscountAttributes: Z,
+                            multiPeriodDiscountAttributes: q,
                         },
                         paymentSourceType: (0, M.W)(C, f)?.type ?? null,
                         immediateDelivery: T,
@@ -5828,7 +5830,7 @@ let ar = [...eD.oz],
                                 children: (0, r.jsx)(eo.lo, {
                                     onBackClick: () => t(o.pn.PROMOTION_INFO),
                                     primaryButtonProps: {
-                                        text: q,
+                                        text: Z,
                                         tooltipText: $ ?? void 0,
                                         disabled: null == B || !B.canRedeemTrial() || U || !P,
                                         loading: I,
@@ -6110,7 +6112,7 @@ function aH(e) {
         }, [n.applicationId, n.id, n.slug, t, l]);
     return (0, r.jsx)("div", {
         className: aB.$O,
-        children: (0, r.jsx)(eq.Q, {
+        children: (0, r.jsx)(eZ.Q, {
             text: H.intl.string(H.t.ImioFL),
             onMouseDown: i,
             onClick: a,
@@ -6354,12 +6356,12 @@ let aW = {
 var aV = n(977445),
     aY = n(52635),
     aK = n(211287),
-    aZ = n(132500),
-    aq = n(623373),
+    aq = n(132500),
+    aZ = n(623373),
     az = n(739508),
     a$ = n(310829),
     aQ = n(715054);
-(0, aZ.A)();
+(0, aq.A)();
 var aJ = n(457008),
     aX = n(145659);
 n(322076);
@@ -6373,7 +6375,7 @@ function a5(e) {
     let { sku: t, orbPriceAmount: n } = e,
         { product: l, isSocialLayerGameItem: i } = (0, a4.AO)({ sku: t }),
         a = (0, a3.oO)(l);
-    i ? (a = H.intl.string(Z.default.qwSlCO)) : (0, aq.Ab)(l) && (a = H.intl.string(H.t["0TmQRG"]));
+    i ? (a = H.intl.string(q.default.qwSlCO)) : (0, aZ.Ab)(l) && (a = H.intl.string(H.t["0TmQRG"]));
     let s = (0, a3.dL)(t),
         o = (0, nG.EZ)(t.id) ? a2.m[t.id].render({ className: a7.$ }) : (0, r.jsx)(tU.WH, { sku: t, product: l });
     return (0, r.jsx)(tU.f7, { label: s, description: a, graphic: o, price: null != n ? `${n}` : "", PriceIcon: a0.C });
@@ -6672,7 +6674,7 @@ let sl = { payment_gateway: e2.kM.VIRTUAL_CURRENCY, currency: eG.Yri.DISCORD_ORB
                             p = (0, c.useMemo)(() => {
                                 if (null != d) return { orbPriceAmount: d.amount };
                                 if (null != m) {
-                                    let e = (0, aq.CW)({ product: m, hasShopDiscount: a });
+                                    let e = (0, aZ.CW)({ product: m, hasShopDiscount: a });
                                     return { orbPriceAmount: null !== e ? e.amount : null };
                                 }
                                 return null;
