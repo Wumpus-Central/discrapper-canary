@@ -44,7 +44,7 @@ var T = n(202541),
     V = n(287809),
     Y = n(341535),
     K = n(189399);
-function q(e) {
+function Z(e) {
     let { Icon: t = U.t, iconSize: n, customGraphic: i, gradientColor: r = "nitro-pink", ...a } = e;
     return (0, l.jsx)(F.J, {
         gradientColor: r,
@@ -52,7 +52,7 @@ function q(e) {
         ...a,
     });
 }
-function Z(e) {
+function q(e) {
     let { skuIds: t, text: n, gradientColor: r = "nitro-pink" } = e,
         a = (0, D.bG)([V.default], () => V.default.getCurrentUser()),
         { product: s } = (0, B.q)(t[0]),
@@ -367,23 +367,23 @@ function el(e) {
                 }),
                 D = i.useMemo(() => {
                     if (null != o && o.type === d.u$.PREMIUM_WITH_TRIAL && null != k)
-                        return (0, l.jsx)(q, { text: b.intl.format(z.default.IAsfR5, { daysCount: L }) });
+                        return (0, l.jsx)(Z, { text: b.intl.format(z.default.IAsfR5, { daysCount: L }) });
                     if (null != m && c) {
                         let e = m.discount,
                             t = e.intervalCount;
                         if (e.intervalType === T.Ff.MONTH)
-                            return (0, l.jsx)(q, {
+                            return (0, l.jsx)(Z, {
                                 text: b.intl.format(z.default.wCkwJf, { percentOff: e.amount, intervalCount: t }),
                             });
                         if (e.intervalType === T.Ff.YEAR)
-                            return (0, l.jsx)(q, {
+                            return (0, l.jsx)(Z, {
                                 text: b.intl.format(z.default["tUzT/U"], { percentOff: e.amount }),
                             });
                     }
                     return g && x.length > 0
-                        ? (0, l.jsx)(Z, { skuIds: x, text: b.intl.format(z.default["XWo+Bp"], { count: x.length }) })
+                        ? (0, l.jsx)(q, { skuIds: x, text: b.intl.format(z.default["XWo+Bp"], { count: x.length }) })
                         : r && null != n && !a
-                          ? (0, l.jsx)(q, {
+                          ? (0, l.jsx)(Z, {
                                 text:
                                     A.interval === T.WT.YEAR
                                         ? b.intl.format(z.default["7sYIBL"], { savingsPercent: n })

@@ -56,11 +56,11 @@ function v(e) {
                 premiumSwitchPlanSelectText: e ? (0, C.yq)(H, V) : null,
             };
         }, [H, B, V]),
-        q = i.useMemo(
+        Z = i.useMemo(
             () => (N && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: v, trialPeriodCopy: G }) : b),
             [N, F, U, v, G, b],
         ),
-        Z = i.useMemo(() => (r.length > 0 ? A.hd[r[0]].premiumType : void 0), [r]),
+        q = i.useMemo(() => (r.length > 0 ? A.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, m.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
         $ = i.useCallback(
             (e) => {
@@ -203,15 +203,15 @@ function v(e) {
             showPlanStatusSubText: _,
             isInPlanSelectStep: N,
         });
-    return null == Z
+    return null == q
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   Y &&
                       (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: P.S, children: K }),
                   (0, l.jsx)(d.me, {
-                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: Z }),
-                      headingSubText: q,
+                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),
+                      headingSubText: Z,
                       planRadioOptions: Q,
                       value: R?.id ?? "",
                       onChange: $,

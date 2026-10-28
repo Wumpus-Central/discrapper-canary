@@ -9,8 +9,8 @@ var i = t(582128),
     c = t(218152),
     u = t(451909),
     h = t(31717),
-    m = t(522602),
-    A = t(659617),
+    A = t(522602),
+    m = t(659617),
     p = t(381941),
     g = t(105292);
 function x(e) {
@@ -37,12 +37,12 @@ function x(e) {
                         "" !== t &&
                             "" === h.A.getDraft(e.id, h.C.FirstThreadMessage) &&
                             s.A.saveDraft(e.id, t, h.C.FirstThreadMessage),
-                        0 === m.A.getUploadCount(e.id, h.C.FirstThreadMessage) &&
+                        0 === A.A.getUploadCount(e.id, h.C.FirstThreadMessage) &&
                             a.A.setUploads({ channelId: e.id, uploads: n, draftType: h.C.FirstThreadMessage }));
                 },
             });
         }, []);
-    return (0, A.r$)({
+    return (0, m.r$)({
         parentChannel: n,
         parentMessageId: t,
         threadSettings: l,
@@ -64,5 +64,5 @@ function I(e) {
             let { name: n, appliedTags: t } = e;
             return { name: n, appliedTags: t };
         }, l.x);
-    return (0, A.w0)({ parentChannel: n, name: t, appliedTags: i, upload: f });
+    return (0, m.w0)({ parentChannel: n, name: t, appliedTags: i, upload: f });
 }

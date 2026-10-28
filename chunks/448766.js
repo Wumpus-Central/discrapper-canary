@@ -1,19 +1,19 @@
-t.d(a, { d: () => h, j: () => p });
-var i = t(477900);
-t(582128);
-var n = t(435558),
-    l = t.n(n),
-    s = t(807081),
-    r = t(247186),
-    d = t(999915),
-    c = t(551965),
-    o = t(268246);
+a.d(t, { d: () => h, j: () => g });
+var i = a(477900);
+a(582128);
+var n = a(435558),
+    l = a.n(n),
+    s = a(807081),
+    r = a(247186),
+    c = a(999915),
+    d = a(551965),
+    o = a(268246);
 let u = ["escape", "text", "strong", "em", "u", "url", "autolink"],
-    m = (0, c.A)([l().pick(d.Ay.RULES, u), (0, r.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
+    m = (0, d.A)([l().pick(c.Ay.RULES, u), (0, r.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
     h = s.aV(m),
-    g = (0, c.A)([
-        l().pick(d.Ay.RULES, u),
+    p = (0, d.A)([
+        l().pick(c.Ay.RULES, u),
         (0, r.Ay)({ enableBuildOverrides: !1 }),
-        { link: { react: (e, a, t) => (0, i.jsx)("span", { className: o.p, children: a(e.content, t) }, t.key) } },
+        { link: { react: (e, t, a) => (0, i.jsx)("span", { className: o.p, children: t(e.content, a) }, a.key) } },
     ]),
-    p = s.aV(g);
+    g = s.aV(p);

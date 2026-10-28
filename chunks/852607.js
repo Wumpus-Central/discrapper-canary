@@ -1,4 +1,4 @@
-n.d(t, { kO: () => Z, r3: () => z, PL: () => $ });
+n.d(t, { kO: () => q, r3: () => z, PL: () => $ });
 var l = n(477900),
     i = n(582128),
     r = n(166532),
@@ -136,7 +136,7 @@ function K(e) {
             ? (0, l.jsx)(M, {})
             : null;
 }
-function q(e) {
+function Z(e) {
     let {
             subscriptionTier: t,
             initialPlanId: n,
@@ -202,8 +202,8 @@ function q(e) {
           ? (0, l.jsx)(_.oO, {})
           : null;
 }
-let Z = { key: null, renderStep: (e) => (0, l.jsx)(K, { ...e }), options: { modalSizeGetter: () => "md" } },
-    z = { key: null, renderStep: (e) => (0, l.jsx)(q, { ...e }) },
+let q = { key: null, renderStep: (e) => (0, l.jsx)(K, { ...e }), options: { modalSizeGetter: () => "md" } },
+    z = { key: null, renderStep: (e) => (0, l.jsx)(Z, { ...e }) },
     $ = [
         { key: r.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(A, {}) },
         { key: r.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(c, {}), options: { renderHeader: !0 } },

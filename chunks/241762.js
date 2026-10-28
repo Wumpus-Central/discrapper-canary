@@ -1,36 +1,36 @@
-n.d(t, { H: () => o, R: () => s });
+n.d(t, { H: () => a, R: () => i });
 var l = n(477900),
     r = n(582128);
-let a = r.createContext(null);
-function o() {
-    let e = r.useContext(a);
+let s = r.createContext(null);
+function a() {
+    let e = r.useContext(s);
     if (null == e) throw Error("useQuestBarExpansionContext requires a QuestBarExpansionContextProvider ancestor");
     return e;
 }
-function s(e) {
+function i(e) {
     let {
             children: t,
             isExpanded: n,
-            isExpansionAnimationComplete: o,
-            collapsedHeight: s,
-            onCtxMenuClose: i,
+            isExpansionAnimationComplete: a,
+            collapsedHeight: i,
+            onCtxMenuClose: o,
             onCtxMenuOpen: u,
             onCtxMenuSelect: c,
             onGameSheetOpen: d,
-            onGameSheetClose: p,
+            onGameSheetClose: m,
         } = e,
-        m = r.useMemo(
+        p = r.useMemo(
             () => ({
                 isExpanded: n,
-                isExpansionAnimationComplete: o,
-                collapsedHeight: s,
-                onCtxMenuClose: i,
+                isExpansionAnimationComplete: a,
+                collapsedHeight: i,
+                onCtxMenuClose: o,
                 onCtxMenuOpen: u,
                 onCtxMenuSelect: c,
                 onGameSheetOpen: d,
-                onGameSheetClose: p,
+                onGameSheetClose: m,
             }),
-            [n, o, s, i, u, c, d, p],
+            [n, a, i, o, u, c, d, m],
         );
-    return (0, l.jsx)(a.Provider, { value: m, children: t });
+    return (0, l.jsx)(s.Provider, { value: p, children: t });
 }

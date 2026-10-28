@@ -81,9 +81,9 @@ var k = n(724651),
     V = n(202541),
     Y = n(148155),
     K = n(12260),
-    q = n(658859);
-let Z = new B.A("PremiumGroupPrice.tsx"),
-    z = (0, i.jsx)(F.y, { type: F.y.Type.PULSING_ELLIPSIS, className: q.xB }),
+    Z = n(658859);
+let q = new B.A("PremiumGroupPrice.tsx"),
+    z = (0, i.jsx)(F.y, { type: F.y.Type.PULSING_ELLIPSIS, className: Z.xB }),
     $ = function (e) {
         let t,
             { isGift: n = !1, discountOffer: l, priceOptions: r, isApplicationHome: a = !1 } = e,
@@ -94,7 +94,7 @@ let Z = new B.A("PremiumGroupPrice.tsx"),
         try {
             t = (0, E.sS)(p, r, !1, n, !1);
         } catch {
-            return (Z.warn(`No price available for plan ${p.id} in currency ${r?.currency ?? "unknown"}`), z);
+            return (q.warn(`No price available for plan ${p.id} in currency ${r?.currency ?? "unknown"}`), z);
         }
         let S = V.WT.MONTH;
         if (null != l && null != C) {
@@ -324,8 +324,8 @@ function ed(e) {
         H = ea(a),
         Y = null != O && !a,
         K = !a && null != j && (0, U.hm)(j),
-        q = !a && L && b && F === V.Vk.PREMIUM_DISCOUNT,
-        Z = (0, G.rm)(L, N, a ? null : j, _, T),
+        Z = !a && L && b && F === V.Vk.PREMIUM_DISCOUNT,
+        q = (0, G.rm)(L, N, a ? null : j, _, T),
         z = (0, D.Sq)() && !a && null == F,
         $ = null != t || E ? (0, i.jsxs)(i.Fragment, { children: [t, E && (0, i.jsx)(M, {})] }) : null,
         ee = u && !a,
@@ -334,7 +334,7 @@ function ed(e) {
             children: [
                 A &&
                     !Y &&
-                    !q &&
+                    !Z &&
                     (0, i.jsx)(function () {
                         return (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -362,7 +362,7 @@ function ed(e) {
                     !K &&
                     (0, i.jsx)(W.R, {
                         text:
-                            Z ??
+                            q ??
                             (z
                                 ? R.intl.formatToPlainString(R.t["4SEnCZ"], { months: 1 })
                                 : R.intl.string(R.t["6bEcYr"])),

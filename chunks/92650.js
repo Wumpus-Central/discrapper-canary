@@ -1,4 +1,4 @@
-n.d(t, { t: () => x });
+n.d(t, { t: () => C });
 var l = n(582128),
     i = n(800754),
     s = n.n(i),
@@ -14,8 +14,8 @@ var l = n(582128),
     p = n(687599),
     A = n(652215),
     f = n(166643);
-function x(e) {
-    let { user: t, onAcceptSuccess: i, onRejectSuccess: x, onError: C } = e,
+function C(e) {
+    let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
         E = (0, f.A)(),
         [S, I] = l.useState(!1),
         [y, j] = l.useState(!1),
@@ -31,29 +31,29 @@ function x(e) {
                         (await (0, h.RK)(e), N(!0), i?.());
                     } catch (t) {
                         let e = new a.LG(t);
-                        C?.(e);
+                        x?.(e);
                     } finally {
                         I(!1);
                     }
                 }
             },
-            [R, i, C],
+            [R, i, x],
         ),
         k = l.useCallback(
             async (e) => {
                 if (!R) {
                     j(!0);
                     try {
-                        (await (0, h.UK)(e), M(!0), x?.());
+                        (await (0, h.UK)(e), M(!0), C?.());
                     } catch (t) {
                         let e = new a.LG(t);
-                        C?.(e);
+                        x?.(e);
                     } finally {
                         j(!1);
                     }
                 }
             },
-            [R, x, C],
+            [R, C, x],
         ),
         L = l.useCallback(
             async (e) => {
@@ -62,15 +62,15 @@ function x(e) {
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
-                    (M(!0), x?.());
+                    (M(!0), C?.());
                 } catch (t) {
                     let e = new a.LG(t);
-                    C?.(e);
+                    x?.(e);
                 } finally {
                     j(!1);
                 }
             },
-            [R, x, C],
+            [R, C, x],
         ),
         P = l.useCallback(
             async (e) => {

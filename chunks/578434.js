@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(652215),
     A = n(994500),
     f = n(975571),
-    x = n(786051),
-    C = n(559868),
+    C = n(786051),
+    x = n(559868),
     E = n(105292);
 function S(e) {
     var t, S;
@@ -81,8 +81,8 @@ function S(e) {
             (O.buttonIcon = k ? a.t : void 0),
             (O.onButtonClick = function () {
                 if (k) {
-                    (open(C.Do),
-                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: C.Do }));
+                    (open(x.Do),
+                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: x.Do }));
                     return;
                 }
                 open(f.A.getArticleURL(p.MVz.SYSTEM_DMS));
@@ -95,5 +95,5 @@ function S(e) {
             (O.onButtonClick = function () {
                 r.A.unblockUser(M.getRecipientId());
             }));
-    return (0, l.jsx)(x.A, { ...O, children: R });
+    return (0, l.jsx)(C.A, { ...O, children: R });
 }

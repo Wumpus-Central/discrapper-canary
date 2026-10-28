@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(830215),
     A = n(857182),
     f = n(66834),
-    x = n(775602),
-    C = n(315982),
+    C = n(775602),
+    x = n(315982),
     E = n(480900),
     S = n(311043),
     I = n(60465),
@@ -202,7 +202,7 @@ class eA extends i.PureComponent {
         null != e && (0, N.Ze)(e.id);
     };
     handleClaimAccount = () => {
-        C.R();
+        x.R();
     };
     handleVerifyPhone = () => {
         (0, u.openModalLazy)(
@@ -289,8 +289,8 @@ class eA extends i.PureComponent {
                 channelFollowingUsersSeen: p,
                 showLurkerModeUpsellPopout: A,
                 showMemberVerificationModal: f,
-                missingVerificationRole: x,
-                verificationRole: C,
+                missingVerificationRole: C,
+                verificationRole: x,
                 useReducedMotion: S,
                 isStaff: I,
                 guildJoinRequest: y,
@@ -337,10 +337,10 @@ class eA extends i.PureComponent {
                         (k.onButtonClick = this.handleShowMemberVerification));
             }
         else
-            null != M && null != C && x
-                ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${C.name}` })),
-                  null === C.tags.guild_connections &&
-                      ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(C, M.id))))
+            null != M && null != x && C
+                ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${x.name}` })),
+                  null === x.tags.guild_connections &&
+                      ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(x, M.id))))
                 : j || null == _
                   ? i && !I
                       ? ((k.message = w.intl.string(w.t["2dThMM"])),
@@ -416,7 +416,7 @@ function ef(e) {
         p = !!(0, M.Qd)(a),
         A = (0, r.bG)([Z], () => Z.shouldShowPopout(s)),
         f = (0, r.bG)([er.A], () => er.A.can(v.xBc.SEND_MESSAGES, t)),
-        C = (0, r.bG)([R.A], () => R.A.getRequest(s)),
+        x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: _,
@@ -462,12 +462,12 @@ function ef(e) {
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: p,
             showMemberVerificationModal: g && p,
-            guildJoinRequestStatus: C?.applicationStatus ?? T.B5.STARTED,
-            guildJoinRequest: C,
+            guildJoinRequestStatus: x?.applicationStatus ?? T.B5.STARTED,
+            guildJoinRequest: x,
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: _,
             shouldRelaunchLinkedLobbyApplication: b,
-            useReducedMotion: x.Ay.useReducedMotion,
+            useReducedMotion: C.Ay.useReducedMotion,
             isStaff: m,
             pendingGameProfileReturn: N,
         };

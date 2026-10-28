@@ -1,4 +1,4 @@
-t.d(n, { A: () => x });
+t.d(n, { A: () => A });
 var l = t(17928),
     i = t(73153),
     a = t(555337),
@@ -11,12 +11,12 @@ let s = {},
     h = !1,
     f = null,
     g = null;
-function m(e) {
+function E(e) {
     let n = {};
     for (let t of u.P) n[t] = (0, r.O9)(e[t]);
     return n;
 }
-class E extends l.Ay.Store {
+class m extends l.Ay.Store {
     static displayName = "PinotStore";
     initialize() {
         this.waitFor(a.A);
@@ -59,11 +59,11 @@ class E extends l.Ay.Store {
         return g;
     }
 }
-let x = new E(i.h, {
+let A = new m(i.h, {
     PINOT_FETCH_SUCCESS: function (e) {
         let { guildId: n, features: t } = e;
         if (a.A.getGuild()?.id !== n || null != s[n]) return !1;
-        ((s[n] = t), (d[n] = !1), (c[n] = m(t)));
+        ((s[n] = t), (d[n] = !1), (c[n] = E(t)));
     },
     PINOT_FETCH_FAILURE: function (e) {
         let { guildId: n } = e;
@@ -78,7 +78,7 @@ let x = new E(i.h, {
     },
     PINOT_SAVE_SUCCESS: function (e) {
         let { guildId: n, features: t } = e;
-        ((o = !1), null != s[n] && ((s[n] = t), (c[n] = m(t))));
+        ((o = !1), null != s[n] && ((s[n] = t), (c[n] = E(t))));
     },
     PINOT_SAVE_START: function (e) {
         ((o = !0), (h = !1));
@@ -95,7 +95,7 @@ let x = new E(i.h, {
         let { guildId: n } = e,
             t = s[n];
         if (null == t && null == f && null == g && !h) return !1;
-        ((f = null), (g = null), (h = !1), null != t && (c[n] = m(t)));
+        ((f = null), (g = null), (h = !1), null != t && (c[n] = E(t)));
     },
     GUILD_SETTINGS_SET_SECTION: function () {
         if (null == f && null == g) return !1;

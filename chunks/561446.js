@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => x });
 var l = n(477900);
 n(582128);
 var i = n(17928),
@@ -15,9 +15,9 @@ var i = n(17928),
     p = n(123393),
     A = n(652215),
     f = n(105292),
-    x = n(243226);
-function C(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
+    C = n(243226);
+function x(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
         E = h.default.cast(t),
         {
             joinRequest: S,
@@ -39,7 +39,7 @@ function C(e) {
         { approveRequest: b, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
     return null != S && S.applicationStatus === g.B5.SUBMITTED && I
         ? (0, l.jsxs)("div", {
-              className: x.U,
+              className: C.U,
               children: [
                   (0, l.jsx)(s.m, {
                       text: f.intl.string(f.t.cdPGbE),
@@ -69,7 +69,7 @@ function C(e) {
                           size: "sm",
                           text: f.intl.string(f.t.iXAna6),
                       }),
-                  C && (0, l.jsx)(r.Ay.Divider, {}),
+                  x && (0, l.jsx)(r.Ay.Divider, {}),
               ],
           })
         : null;

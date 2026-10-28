@@ -1,6 +1,6 @@
-n.d(t, { f: () => s });
+n.d(t, { f: () => l });
 var i = n(794400);
-class s extends i.v {
+class l extends i.v {
     constructor(e) {
         (super(e), (this.name = "GuildBoostError"));
     }

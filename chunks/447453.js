@@ -4,24 +4,24 @@ var t = l(477900),
     a = l(503698),
     n = l.n(a),
     o = l(399513),
-    m = l(866323),
-    r = l(834730),
+    r = l(866323),
+    m = l(834730),
     d = l(475358),
     p = l(17928),
     c = l(775602),
     u = l(425763),
-    f = l(105292),
-    h = l(707615);
+    h = l(105292),
+    f = l(707615);
 function g(e) {
     let { className: s } = e,
         l = [
-            { keybinds: ["Spacebar", "Enter"], name: f.intl.string(f.t["cs/HVH"]) },
-            { keybinds: ["up", "down"], name: f.intl.string(f.t.dmMqay) },
-            { keybinds: ["ESC"], name: f.intl.string(f.t["1ioMJQ"]) },
+            { keybinds: ["Spacebar", "Enter"], name: h.intl.string(h.t["cs/HVH"]) },
+            { keybinds: ["up", "down"], name: h.intl.string(h.t.dmMqay) },
+            { keybinds: ["ESC"], name: h.intl.string(h.t["1ioMJQ"]) },
         ],
         a = (0, p.bG)([c.Ay], () => c.Ay.useReducedMotion),
         g = (0, u.VU)();
-    return (0, m.p)(
+    return (0, r.p)(
         g,
         {
             enter: { from: { opacity: 0, y: 80 * !a }, to: { opacity: 1, y: 0 } },
@@ -32,9 +32,9 @@ function g(e) {
     )((e, a) =>
         a
             ? (0, t.jsx)("div", {
-                  className: n()(h.lY, s),
+                  className: n()(f.lY, s),
                   children: (0, t.jsx)(o.animated.div, {
-                      className: h.kL,
+                      className: f.kL,
                       style: e,
                       children: l.map((e, s) => {
                           let { keybinds: a, name: n } = e;
@@ -42,9 +42,9 @@ function g(e) {
                               i.Fragment,
                               {
                                   children: [
-                                      (0, t.jsx)(r.E, { variant: "text-md/semibold", className: h.nx, children: n }),
-                                      a.map((e) => (0, t.jsx)(d.e, { shortcut: e, className: h.LE }, e)),
-                                      s < l.length - 1 ? (0, t.jsx)("span", { className: h.me }) : null,
+                                      (0, t.jsx)(m.E, { variant: "text-md/semibold", className: f.nx, children: n }),
+                                      a.map((e) => (0, t.jsx)(d.e, { shortcut: e, className: f.LE }, e)),
+                                      s < l.length - 1 ? (0, t.jsx)("span", { className: f.me }) : null,
                                   ],
                               },
                               n,

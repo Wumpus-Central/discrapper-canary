@@ -1,6 +1,6 @@
-n.d(t, { d: () => s });
+n.d(t, { d: () => l });
 var i = n(260447);
-class s extends i.z {
+class l extends i.z {
     getSentryAppContext() {
         return "billing";
     }

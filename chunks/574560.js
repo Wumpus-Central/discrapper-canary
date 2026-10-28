@@ -1,4 +1,4 @@
-l.d(s, { A: () => m });
+l.d(s, { A: () => r });
 var t = l(17928),
     i = l(73153);
 let a = { gameUpsellsDismissal: {} },
@@ -19,7 +19,7 @@ class o extends t.Ay.PersistedStore {
         return n.gameUpsellsDismissal[e] ?? null;
     }
 }
-let m = new o(i.h, {
+let r = new o(i.h, {
     LOGOUT: function () {
         n = { ...a };
     },

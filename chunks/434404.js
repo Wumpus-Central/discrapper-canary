@@ -1,7 +1,7 @@
 n.d(t, { F: () => _ });
 var i = n(419954),
-    s = n(780964),
-    l = n(477900),
+    l = n(780964),
+    s = n(477900),
     r = n(582128),
     a = n(17928),
     o = n(192308),
@@ -13,10 +13,10 @@ var i = n(419954),
     A = n(105292),
     E = n(536854),
     h = n(72290);
-function x() {
+function S() {
     let e = (0, a.bG)([c.default], () => c.default.locale),
         [t, i] = r.useState(e),
-        x = r.useMemo(
+        S = r.useMemo(
             () =>
                 (0, A.getAvailableLocales)().map((e) => {
                     let t;
@@ -29,49 +29,49 @@ function x() {
                         id: e.value,
                         value: e.value,
                         label: e.name,
-                        leading: (0, l.jsx)("div", {
+                        leading: (0, s.jsx)("div", {
                             className: E.Jt,
                             "aria-hidden": !0,
-                            children: (0, l.jsx)("img", { alt: "", src: t, className: E.Eb }),
+                            children: (0, s.jsx)("img", { alt: "", src: t, className: E.Eb }),
                         }),
-                        trailing: (0, l.jsx)("span", { className: E.hI, children: A.intl.string(e.localizedName) }),
+                        trailing: (0, s.jsx)("span", { className: E.hI, children: A.intl.string(e.localizedName) }),
                     };
                 }),
             [],
         ),
-        S = r.useCallback((e) => {
+        x = r.useCallback((e) => {
             (i(e),
                 h.nextTick(() => {
                     (d.Ay.updateLocale(e),
-                        (0, o.closeModal)(m.y) && (0, g.openUserSettings)(s.X.LANGUAGE_AND_TIME_PANEL));
+                        (0, o.closeModal)(m.y) && (0, g.openUserSettings)(l.X.LANGUAGE_AND_TIME_PANEL));
                 }));
         }, []);
-    return (0, l.jsx)(u.Z, {
+    return (0, s.jsx)(u.Z, {
         selectionMode: "single",
         label: A.intl.string(A.t["mx+sp7"]),
         description: A.intl.string(A.t.rTPlcq),
         value: t,
-        options: x,
-        onSelectionChange: S,
+        options: S,
+        onSelectionChange: x,
     });
 }
-let S = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
+let x = (0, i.E2)(l.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [A.intl.string(A.t.IHMsPn)],
-    Component: () => (0, l.jsx)(x, {}),
+    Component: () => (0, s.jsx)(S, {}),
 });
-var p = n(873298),
-    T = n(253932);
-let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
+var T = n(873298),
+    p = n(253932);
+let f = (0, i.Qx)(l.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [A.intl.string(A.t.dyamEI), A.intl.string(A.t.p8NOwi), A.intl.string(A.t["+o/sOo"])],
         useTitle: () => A.intl.string(A.t.dyamEI),
-        useValue: () => T.PZ.useSetting(),
-        setValue: (e) => T.PZ.updateSetting(e),
+        useValue: () => p.PZ.useSetting(),
+        setValue: (e) => p.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: A.intl.string(A.t.FMWYvb), value: p.PZ.AUTO },
-                { name: A.intl.string(A.t.p8NOwi), value: p.PZ.H12 },
-                { name: A.intl.string(A.t["+o/sOo"]), value: p.PZ.H23 },
+                { name: A.intl.string(A.t.FMWYvb), value: T.PZ.AUTO },
+                { name: A.intl.string(A.t.p8NOwi), value: T.PZ.H12 },
+                { name: A.intl.string(A.t["+o/sOo"]), value: T.PZ.H23 },
             ];
         },
     }),
-    _ = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, f] });
+    _ = (0, i.zZ)(l.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [x, f] });

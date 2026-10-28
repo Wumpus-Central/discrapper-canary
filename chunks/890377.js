@@ -9,8 +9,8 @@ function o(e) {
             size: s = "md",
             width: l,
             height: o,
-            color: m = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: r = "",
+            color: r = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: m = "",
             ...d
         } = e,
         p = (0, n.J)(s),
@@ -25,14 +25,14 @@ function o(e) {
         viewBox: "0 0 24 24",
         children: [
             (0, t.jsx)("path", {
-                fill: "string" == typeof m ? m : m.css,
+                fill: "string" == typeof r ? r : r.css,
                 d: "M11.3 5.3a1 1 0 0 0 0 1.4l5.29 5.3-5.3 5.3a1 1 0 0 0 1.42 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.42 0Z",
-                className: r,
+                className: m,
             }),
             (0, t.jsx)("path", {
-                fill: "string" == typeof m ? m : m.css,
+                fill: "string" == typeof r ? r : r.css,
                 d: "M5.3 5.3a1 1 0 0 0 0 1.4l5.29 5.3-5.3 5.3a1 1 0 1 0 1.42 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.42 0Z",
-                className: r,
+                className: m,
             }),
         ],
     });

@@ -1,22 +1,22 @@
-l.d(n, { A: () => A });
-var t = l(477900),
-    i = l(582128),
-    a = l(503698),
-    s = l.n(a),
-    r = l(17928),
-    o = l(473193),
-    c = l(559106),
-    d = l(346055),
-    u = l(824994),
-    h = l(176201),
-    m = l(676608),
-    g = l(317525),
-    x = l(318626);
+n.d(l, { A: () => A });
+var i = n(477900),
+    t = n(582128),
+    s = n(503698),
+    a = n.n(s),
+    r = n(17928),
+    o = n(473193),
+    c = n(559106),
+    d = n(346055),
+    u = n(824994),
+    h = n(176201),
+    m = n(676608),
+    x = n(317525),
+    g = n(318626);
 let A = function (e) {
     let {
-            className: n,
-            compact: l = !1,
-            contentOnly: a = !1,
+            className: l,
+            compact: n = !1,
+            contentOnly: s = !1,
             zalgo: A = !0,
             preview: j = !1,
             disableInteraction: p = !1,
@@ -28,51 +28,51 @@ let A = function (e) {
             childrenMessageContent: b,
             childrenAccessories: E,
             messageRef: y,
-            focusProps: M = { offset: { left: 4, right: 4 } },
-            hasThread: _,
-            isSystemMessage: S,
+            focusProps: _ = { offset: { left: 4, right: 4 } },
+            hasThread: S,
+            isSystemMessage: M,
             hasReply: R,
             author: T,
             onMouseEnter: w,
             onMouseLeave: O,
             ...k
         } = e,
-        G = (0, r.bG)([g.A], () =>
-            T?.guildId == null || T?.colorRoleId == null ? null : g.A.getRole(T.guildId, T.colorRoleId),
+        G = (0, r.bG)([x.A], () =>
+            T?.guildId == null || T?.colorRoleId == null ? null : x.A.getRole(T.guildId, T.colorRoleId),
         ),
         P = (0, m.jV)(T?.guildId, G) && (0, h.kz)(T),
-        [D, L] = i.useState(!1),
-        U = i.useCallback(
+        [D, L] = t.useState(!1),
+        U = t.useCallback(
             (e) => {
                 (L(!0), w?.(e));
             },
             [w],
         ),
-        V = i.useCallback(
+        V = t.useCallback(
             (e) => {
                 (L(!1), O?.(e));
             },
             [O],
         ),
         H = (0, u.W)({ location: "BaseMessage" }),
-        $ = i.useMemo(() => ({ animate: D, setAnimate: L }), [D]),
-        z = (0, t.jsx)(o.C.Provider, {
+        $ = t.useMemo(() => ({ animate: D, setAnimate: L }), [D]),
+        z = (0, i.jsx)(o.C.Provider, {
             value: $,
-            children: (0, t.jsx)(c.vN, {
-                ...M,
-                children: (0, t.jsxs)("div", {
-                    className: s()(n, {
-                        [x.D7]: P,
-                        [x.e8]: H && T?.displayNameStyles != null && T?.guildId == null,
-                        [x.iE]: !0,
-                        [x.kl]: a,
-                        [x.oE]: l,
-                        [x.VH]: j,
-                        [x.E]: !l,
-                        [x.GZ]: A,
-                        [x.pR]: _,
-                        [x.X4]: S,
-                        [x.h8]: R,
+            children: (0, i.jsx)(c.vN, {
+                ..._,
+                children: (0, i.jsxs)("div", {
+                    className: a()(l, {
+                        [g.D7]: P,
+                        [g.e8]: H && T?.displayNameStyles != null && T?.guildId == null,
+                        [g.iE]: !0,
+                        [g.kl]: s,
+                        [g.oE]: n,
+                        [g.VH]: j,
+                        [g.E]: !n,
+                        [g.GZ]: A,
+                        [g.pR]: S,
+                        [g.X4]: M,
+                        [g.h8]: R,
                     }),
                     ref: y,
                     ...k,
@@ -82,12 +82,12 @@ let A = function (e) {
                     children: [
                         v,
                         N,
-                        (0, t.jsxs)("div", { className: x.PG, children: [I, f, null == I && b] }),
+                        (0, i.jsxs)("div", { className: g.PG, children: [I, f, null == I && b] }),
                         E,
-                        null != C ? (0, t.jsx)("div", { className: x.UD, children: C }) : null,
+                        null != C ? (0, i.jsx)("div", { className: g.UD, children: C }) : null,
                     ],
                 }),
             }),
         });
-    return p ? (0, t.jsx)(d.M, { children: z }) : z;
+    return p ? (0, i.jsx)(d.M, { children: z }) : z;
 };

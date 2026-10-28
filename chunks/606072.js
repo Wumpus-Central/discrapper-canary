@@ -1,4 +1,4 @@
-(l.d(t, { F6: () => g, T4: () => _, UF: () => b, kG: () => v, zE: () => j }), l(321073));
+(l.d(t, { F6: () => g, T4: () => v, UF: () => b, kG: () => _, zE: () => j }), l(321073));
 var n,
     i = l(582128),
     s = l(17928),
@@ -31,8 +31,8 @@ function p() {
 function j() {
     o.A.fetchedConsents || null != h || (h = (0, a.Q)().then(p, p));
 }
-var v = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
-function _(e) {
+var _ = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
+function v(e) {
     i.useEffect(j, []);
     let t = d.tz.useSetting(),
         l = !d.JG.useSetting().includes(e),

@@ -21,8 +21,8 @@ function p(e) {
 }
 var A = n(832712),
     f = n(543465),
-    x = n(477427),
-    C = n(393432),
+    C = n(477427),
+    x = n(393432),
     E = n(652215),
     S = n(790782),
     I = n(355097),
@@ -51,8 +51,8 @@ function v(e) {
                         A.A.updateChannelOverrideSettings({
                             guildId: e,
                             channelId: l,
-                            settings: { flags: (0, C.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            label: x.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            settings: { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
+                            label: C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
                             location: { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         }),
                         n());

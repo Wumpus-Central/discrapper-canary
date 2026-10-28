@@ -1,30 +1,30 @@
-t.d(a, { A: () => h });
-var i = t(477900);
-t(582128);
-var n = t(17928),
-    l = t(43990),
-    s = t(980707),
-    r = t(477782),
-    d = t(750943),
-    c = t(428610),
-    o = t(946274),
-    u = t(363195),
-    m = t(105292);
+a.d(t, { A: () => h });
+var i = a(477900);
+a(582128);
+var n = a(17928),
+    l = a(43990),
+    s = a(980707),
+    r = a(477782),
+    c = a(750943),
+    d = a(428610),
+    o = a(946274),
+    u = a(363195),
+    m = a(105292);
 function h(e) {
-    let { lastEdit: a, cropAndUpload: t, onChangeImage: h, onClose: g } = e,
-        p = (0, n.bG)([u.A], () => u.A.theme);
+    let { lastEdit: t, cropAndUpload: a, onChangeImage: h, onClose: p } = e,
+        g = (0, n.bG)([u.A], () => u.A.theme);
     function v() {
-        (0, o.AM)(a.unprocessedFile, (e, i) => t(e, i, a.transform));
+        (0, o.AM)(t.unprocessedFile, (e, i) => a(e, i, t.transform));
     }
     return (0, i.jsx)(l.N, {
-        theme: p,
+        theme: g,
         children: (e) =>
             (0, i.jsx)("div", {
                 className: e,
                 children: (0, i.jsx)(s.W, {
                     "data-menu-migrated": !0,
                     navId: "personal-widget-image-edit-menu",
-                    onClose: g,
+                    onClose: p,
                     onSelect: void 0,
                     "aria-label": m.intl.string(m.t.RWkUzH),
                     children: (0, i.jsxs)(r.rX, {
@@ -33,15 +33,15 @@ function h(e) {
                                 id: "change-image",
                                 label: m.intl.string(m.t.dh0LD5),
                                 action: h,
-                                icon: d.X,
-                                leadingAccessory: { type: "icon", icon: d.X },
+                                icon: c.X,
+                                leadingAccessory: { type: "icon", icon: c.X },
                             }),
                             (0, i.jsx)(r.Dr, {
                                 id: "reposition-image",
                                 label: m.intl.string(m.t.je0LTI),
                                 action: v,
-                                icon: c.K,
-                                leadingAccessory: { type: "icon", icon: c.K },
+                                icon: d.K,
+                                leadingAccessory: { type: "icon", icon: d.K },
                             }),
                         ],
                     }),

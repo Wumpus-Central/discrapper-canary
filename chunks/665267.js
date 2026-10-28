@@ -1,7 +1,7 @@
-n.d(t, { J3: () => b, sB: () => R });
+n.d(t, { J3: () => y, sB: () => R });
 var i = n(477900),
-    s = n(582128),
-    l = n(17928),
+    l = n(582128),
+    s = n(17928),
     r = n(821609),
     a = n(331322),
     o = n(793574),
@@ -13,25 +13,25 @@ var i = n(477900),
     A = n(82498),
     E = n(724651),
     h = n(732280),
-    x = n(792656),
-    S = n(511484),
-    p = n(811611),
-    T = n(174459),
+    S = n(792656),
+    x = n(511484),
+    T = n(811611),
+    p = n(174459),
     f = n(830543),
     _ = n(652215),
     I = n(385803),
     N = n(202541),
     C = n(105292),
-    y = n(510081);
-function b() {
+    b = n(510081);
+function y() {
     ((0, g.nf)(g.HP.CLIENT_THEMES), (0, f.default)());
 }
 function v() {
     let e = (0, E.O)(),
-        t = (0, S.U9)(e, N.pe.TIER_2)
+        t = (0, x.U9)(e, N.pe.TIER_2)
             ? C.intl.formatToPlainString(C.t.bkQ4bH, { percent: e?.discount.amount })
             : C.intl.string(C.t.mr4K7D);
-    return (0, i.jsx)(x.A, {
+    return (0, i.jsx)(S.A, {
         subscriptionTier: N.pe.TIER_2,
         defaultTextOverride: t,
         premiumModalAnalyticsLocation: { object: _.ZSU.BUTTON_CTA, objectType: _.AnalyticsObjectTypes.BUY },
@@ -39,51 +39,51 @@ function v() {
     });
 }
 function j() {
-    let e = (0, l.bG)([d.A], () => d.A.isPreview),
+    let e = (0, s.bG)([d.A], () => d.A.isPreview),
         t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
-              className: y.gY,
+              className: b.gY,
               children: [
-                  (0, i.jsx)(r.$, { variant: "secondary", text: C.intl.string(C.t["E+COuA"]), onClick: b }),
+                  (0, i.jsx)(r.$, { variant: "secondary", text: C.intl.string(C.t["E+COuA"]), onClick: y }),
                   (0, i.jsx)(v, {}),
               ],
           });
 }
 function O(e) {
     let { children: t } = e,
-        n = (0, l.bG)([d.A], () => d.A.isPreview),
+        n = (0, s.bG)([d.A], () => d.A.isPreview),
         { analyticsLocations: r } = (0, u.Ay)(o.A.USER_SETTINGS);
-    return (s.useEffect(() => {
+    return (l.useEffect(() => {
         n &&
-            (T.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
+            (p.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: r,
             }),
             (0, m.sq)(_.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, A.uq)(N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
     }, [n, r]),
     n)
-        ? (0, i.jsx)("div", { className: y._$, children: t })
+        ? (0, i.jsx)("div", { className: b._$, children: t })
         : t;
 }
 function L() {
-    let e = (0, l.bG)([d.A], () => d.A.isPreview),
+    let e = (0, s.bG)([d.A], () => d.A.isPreview),
         t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return e && t
         ? (0, i.jsxs)("div", {
               children: [
                   (0, i.jsx)("div", {
-                      className: y.c7,
+                      className: b.c7,
                       children: (0, i.jsx)(r.$, {
                           variant: "secondary",
                           fullWidth: !0,
                           text: C.intl.string(C.t["E+COuA"]),
-                          onClick: () => b(),
+                          onClick: () => y(),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: y.BU }),
-                  (0, i.jsx)(p.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
+                  (0, i.jsx)("div", { className: b.BU }),
+                  (0, i.jsx)(T.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
               ],
           })
         : null;
@@ -96,10 +96,10 @@ function R() {
                 (0, i.jsx)(c.ew, {
                     isCoachmark: !1,
                     renderCTAButtons: () => (0, i.jsx)(j, {}),
-                    headingClassName: y.EK,
+                    headingClassName: b.EK,
                     titleTextVariant: "text-md/semibold",
-                    titleClassName: y.cI,
-                    titleIconClassName: y.Hq,
+                    titleClassName: b.cI,
+                    titleIconClassName: b.Hq,
                 }),
                 (0, i.jsx)(a.B, {
                     direction: "horizontal",

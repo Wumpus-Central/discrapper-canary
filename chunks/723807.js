@@ -1,15 +1,15 @@
-t.d(r, { h: () => i });
-var n = t(582128),
-    l = t(288106),
-    u = t(871123);
-function i(e) {
-    let r = e?.rewardRequirements,
-        t = e?.rewardStatus;
-    return n.useMemo(() => {
-        if (t === l.GM.EARNED || t === l.GM.CONSUMED) return null;
-        let e = (r ?? []).filter(u.Ww);
+n.d(t, { h: () => a });
+var l = n(582128),
+    r = n(288106),
+    i = n(871123);
+function a(e) {
+    let t = e?.rewardRequirements,
+        n = e?.rewardStatus;
+    return l.useMemo(() => {
+        if (n === r.GM.EARNED || n === r.GM.CONSUMED) return null;
+        let e = (t ?? []).filter(i.Ww);
         return 1 !== e.length || 1 !== e[0].skuIds.length
             ? null
             : { applicationId: e[0].applicationId, skuId: e[0].skuIds[0] };
-    }, [r, t]);
+    }, [t, n]);
 }
