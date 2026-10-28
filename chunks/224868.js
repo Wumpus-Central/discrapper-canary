@@ -1,112 +1,111 @@
-n.d(t, { f: () => N, p: () => S });
+n.d(t, { f: () => S, p: () => g });
 var i = n(47167),
     r = n(236285),
     a = n(7584),
-    s = n(620181),
-    l = n(863005),
-    o = n(734057),
-    d = n(808728),
-    c = n(696451),
-    u = n(317525),
-    _ = n(71393),
-    E = n(576705),
-    A = n(994500),
-    h = n(287809),
-    f = n(768038),
-    I = n(690521),
-    p = n(935208),
-    T = n(408018),
-    m = n(652215),
-    g = n(307731);
-function S(e, t, n, T) {
-    let { allowUsers: S = !0, allowRoles: N = !0 } = T ?? {};
+    s = n(863005),
+    l = n(734057),
+    o = n(808728),
+    d = n(696451),
+    c = n(317525),
+    u = n(71393),
+    _ = n(576705),
+    E = n(994500),
+    A = n(287809),
+    h = n(768038),
+    f = n(690521),
+    I = n(935208),
+    p = n(408018),
+    T = n(652215),
+    m = n(307731);
+function g(e, t, n, p) {
+    let { allowUsers: g = !0, allowRoles: S = !0 } = p ?? {};
     switch (e[0]) {
         case "@":
             return (function (e, t, n, i, r) {
                 let [a, s] = e.slice(1).split("#", 2),
-                    l = null != t ? _.A.getGuild(t) : null;
-                if (r && null == s && null != l) {
-                    for (let e of u.A.getSortedRoles(l.id))
+                    o = null != t ? u.A.getGuild(t) : null;
+                if (r && null == s && null != o) {
+                    for (let e of c.A.getSortedRoles(o.id))
                         if (a === e.name) return { type: "roleMention", roleId: e.id, children: [{ text: "" }] };
                 }
                 if (i) {
-                    let e = null != n ? o.A.getChannel(n) : null;
+                    let e = null != n ? l.A.getChannel(n) : null;
                     if (null == e) return null;
                     let i = (
                         e.isPrivate()
                             ? e.recipients
-                            : c.Ay.getMembers(t).map((e) => {
+                            : d.Ay.getMembers(t).map((e) => {
                                   let { userId: t } = e;
                                   return t;
                               })
                     )
-                        .map((e) => h.default.getUser(e))
-                        .filter((e) => void 0 !== e && C(a, s, e));
+                        .map((e) => A.default.getUser(e))
+                        .filter((e) => void 0 !== e && N(a, s, e));
                     if (1 === i.length) {
                         let e = i[0];
-                        if (C(a, s, e, { requireExact: !0 }))
+                        if (N(a, s, e, { requireExact: !0 }))
                             return { type: "userMention", userId: e.id, children: [{ text: "" }] };
                     }
                 }
                 return null;
-            })(e, t, n, S, N);
+            })(e, t, n, g, S);
         case ":":
-            return (function (e, t, n) {
-                let i = a.Ay.EMOJI_NAME_RE.exec(e);
-                if (null == i) return null;
-                let l = i[1],
-                    d = r.Ay.getDisambiguatedEmojiContext(t),
-                    c = (0, s.A)(d, l),
-                    u = null != n ? o.A.getChannel(n) : null;
-                return null == c || I.Ay.isEmojiFiltered({ emoji: c, channel: u, intention: g.EmojiIntention.CHAT })
-                    ? null
-                    : {
-                          type: "customEmoji",
-                          emoji: {
-                              emojiId: c.id,
-                              name: "require_colons" in c && c.require_colons ? `:${c.name}:` : c.name,
-                              animated: !0 === c.animated,
-                              jumboable: !1,
-                          },
-                          children: [{ text: "" }],
-                      };
-            })(e, t, n);
-        case "#":
-            let O;
-            var R = e,
-                L = t;
+            var C = e,
+                O = t,
+                R = n;
+            let L = a.Ay.EMOJI_NAME_RE.exec(C);
             if (null == L) break;
-            O =
-                R.length > 3 && '"' === R[1] && '"' === R[R.length - 1]
-                    ? (0, i.LG)(R.slice(2, R.length - 1))
-                    : R.slice(1);
-            let y = d.Ay.getTextChannelNameDisambiguations(L);
-            for (let e of p.default.keys(y))
-                if (y[e].name === O) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
-            for (let e of f.L3)
-                if (e !== d.I6) {
-                    for (let { channel: t } of d.Ay.getChannels(L)[e])
-                        if ((0, i.m1)(t, h.default, A.A) === O) {
-                            if (t.isCategory() && !E.A.can(m.xBc.VIEW_CHANNEL, t)) continue;
+            let y = L[1],
+                D = r.Ay.getDisambiguatedEmojiContext(O).getCustomEmoji().get(y),
+                v = null != R ? l.A.getChannel(R) : null;
+            return null == D || f.Ay.isEmojiFiltered({ emoji: D, channel: v, intention: m.EmojiIntention.CHAT })
+                ? null
+                : {
+                      type: "customEmoji",
+                      emoji: {
+                          emojiId: D.id,
+                          name: "require_colons" in D && D.require_colons ? `:${D.name}:` : D.name,
+                          animated: !0 === D.animated,
+                          jumboable: !1,
+                      },
+                      children: [{ text: "" }],
+                  };
+        case "#":
+            let b;
+            var P = e,
+                M = t;
+            if (null == M) break;
+            b =
+                P.length > 3 && '"' === P[1] && '"' === P[P.length - 1]
+                    ? (0, i.LG)(P.slice(2, P.length - 1))
+                    : P.slice(1);
+            let U = o.Ay.getTextChannelNameDisambiguations(M);
+            for (let e of I.default.keys(U))
+                if (U[e].name === b) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
+            for (let e of h.L3)
+                if (e !== o.I6) {
+                    for (let { channel: t } of o.Ay.getChannels(M)[e])
+                        if ((0, i.m1)(t, A.default, E.A) === b) {
+                            if (t.isCategory() && !_.A.can(T.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
                         }
                 }
-            let D = l.A.getActiveJoinedThreadsForGuild(L);
-            for (let e of p.default.keys(D))
-                for (let t of p.default.keys(D[e])) {
-                    let { channel: n } = D[e][t];
-                    if ((0, i.m1)(n, h.default, A.A) === O)
+            let w = s.A.getActiveJoinedThreadsForGuild(M);
+            for (let e of I.default.keys(w))
+                for (let t of I.default.keys(w[e])) {
+                    let { channel: n } = w[e][t];
+                    if ((0, i.m1)(n, A.default, E.A) === b)
                         return { type: "channelMention", channelId: n.id, children: [{ text: "" }] };
                 }
             break;
     }
     return null;
 }
-function N(e, t, n, i) {
-    let r = S(e, t, n, i);
-    return null == r ? null : (0, T.QR)(r);
+function S(e, t, n, i) {
+    let r = g(e, t, n, i);
+    return null == r ? null : (0, p.QR)(r);
 }
-function C(e, t, n) {
+function N(e, t, n) {
     let { requireExact: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return null != n && (i ? n.username === e : n.username.startsWith(e)) && n.discriminator === (t ?? "0");
 }
