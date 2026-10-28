@@ -295,44 +295,45 @@ function z(e) {
         } = e,
         h = l.useRef(null),
         { gameId: j, comment: I, tags: N } = d,
-        { coverImageUrl: w, gameName: T, isLoading: y } = (0, p.A)(j),
-        k = { variant: "heading-sm/medium", color: "text-default" },
-        S = c && !u,
-        L = 1 === (0, E.cv)(o),
-        P = S && (0, R.y9)(o),
-        D = S && !L,
-        { registerDragHandleRef: O } = (0, C.r)();
-    if (y) return (0, i.jsx)(b.E, {});
-    function G() {
+        { coverImageUrl: w, iconImageUrl: T, gameName: y, isLoading: k } = (0, p.A)(j),
+        S = { variant: "heading-sm/medium", color: "text-default" },
+        L = c && !u,
+        P = 1 === (0, E.cv)(o),
+        D = L && (0, R.y9)(o),
+        O = L && !P,
+        { registerDragHandleRef: G } = (0, C.r)();
+    if (k) return (0, i.jsx)(b.E, {});
+    function F() {
         return (0, i.jsx)(A.A, {
             coverRef: x,
-            className: null == w || u ? void 0 : U.iL,
+            className: (null == w && null == T) || u ? void 0 : U.iL,
             imageSrc: w,
-            gameName: T,
+            iconSrc: T,
+            gameName: y,
             gameId: j,
             userId: t.id,
             disableInteraction: u,
             hideTooltip: !0,
         });
     }
-    function F() {
+    function X() {
         return (0, i.jsxs)("div", {
             ref: h,
             className: s()(H.Nr, f),
             children: [
-                D
+                O
                     ? (0, i.jsxs)("div", {
                           className: H.An,
-                          children: [G(), (0, i.jsx)(v.jV, { buttonRef: O(d.gameId), className: H.BU })],
+                          children: [F(), (0, i.jsx)(v.jV, { buttonRef: G(d.gameId), className: H.BU })],
                       })
-                    : G(),
+                    : F(),
                 (0, i.jsxs)("div", {
                     className: H.zH,
                     children: [
                         u
-                            ? (0, i.jsx)(r.D, { ...k, children: T })
-                            : (0, i.jsx)(W, { gameId: j, userId: t.id, gameName: T, ...k }),
-                        P
+                            ? (0, i.jsx)(r.D, { ...S, children: y })
+                            : (0, i.jsx)(W, { gameId: j, userId: t.id, gameName: y, ...S }),
+                        D
                             ? (0, i.jsx)(B, { text: I, user: t, guildId: n, channelId: a, widgetType: o, gameId: j })
                             : (0, i.jsx)(Y, { text: I, user: t, guildId: n, channelId: a }),
                         (0, i.jsx)(_, {
@@ -345,17 +346,17 @@ function z(e) {
                         }),
                     ],
                 }),
-                S && (0, i.jsx)(M.A, { game: d, widgetType: o, className: H.vS, onRemove: () => g?.(d.gameId) }),
+                L && (0, i.jsx)(M.A, { game: d, widgetType: o, className: H.vS, onRemove: () => g?.(d.gameId) }),
             ],
         });
     }
-    return D
+    return O
         ? (0, i.jsx)(V, {
               index: m ?? 0,
               widgetType: o,
               game: d,
               getWidth: () => h.current?.offsetWidth,
-              children: F(),
+              children: X(),
           })
-        : F();
+        : X();
 }

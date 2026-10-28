@@ -212,10 +212,11 @@
 }
 
 .dot__9293f {
-    align-items: center;
     color: var(--background-mod-strong);
     height: 4px;
     margin: 0 4px;
+    min-height: 4px;
+    min-width: 4px;
     width: 4px
 }
 
@@ -3119,4 +3120,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=597384.39fdca54fcaf466a.css.map*/
+/*# sourceMappingURL=597384.6675cf96aab4cbfa.css.map*/

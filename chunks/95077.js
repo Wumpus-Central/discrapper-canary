@@ -1972,23 +1972,23 @@ var na = n(675816),
     no = n(365611),
     nc = n(900850);
 function nu(e) {
-    let { index: t, widgetType: n, game: l, coverImageUrl: a, gameName: s, children: r } = e,
-        { manageFocusOnReorder: d } = (0, ta.r)(),
-        c = o.useRef(null);
+    let { index: t, widgetType: n, game: l, coverImageUrl: a, iconImageUrl: s, gameName: r, children: d } = e,
+        { manageFocusOnReorder: c } = (0, ta.r)(),
+        u = o.useRef(null);
     return (0, i.jsx)(tl.mG, {
         index: t,
         itemId: l.gameId,
         listType: n,
         itemType: "GAME_COVER",
-        itemPreviewProps: { imageSrc: a, gameName: s, getWidth: () => c.current?.offsetWidth },
+        itemPreviewProps: { imageSrc: a, iconSrc: s, gameName: r, getWidth: () => u.current?.offsetWidth },
         "aria-label": v.intl.formatToPlainString(v.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, j.Un)(n, e, t),
-        onEnd: () => d(l.gameId),
+        onEnd: () => c(l.gameId),
         className: nc.kL,
         dropBeforeClassName: nc.A,
         dropAfterClassName: nc.Ze,
         draggingClassName: nc.Id,
-        children: (0, i.jsx)("div", { ref: c, className: nc.An, children: r }),
+        children: (0, i.jsx)("div", { ref: u, className: nc.An, children: d }),
     });
 }
 function nm(e) {
@@ -2002,33 +2002,42 @@ function nm(e) {
             onRemoveGame: d,
             coverRef: o,
         } = e,
-        { coverImageUrl: c, gameName: u, isLoading: m } = (0, ns.A)(t.gameId),
-        { registerDragHandleRef: g } = (0, ta.r)(),
-        x = a && !s,
-        { isDragging: f } = (0, na.V)((e) => ({ isDragging: e.isDragging() }));
-    function h() {
+        { coverImageUrl: c, iconImageUrl: u, gameName: m, isLoading: g } = (0, ns.A)(t.gameId),
+        { registerDragHandleRef: x } = (0, ta.r)(),
+        f = a && !s,
+        { isDragging: h } = (0, na.V)((e) => ({ isDragging: e.isDragging() }));
+    function p() {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(nr.A, {
                     imageSrc: c,
-                    gameName: u,
+                    iconSrc: u,
+                    gameName: m,
                     gameId: t.gameId,
                     userId: n,
                     disableInteraction: s,
-                    className: null == c || s ? void 0 : no.iL,
-                    hideTooltip: f,
+                    className: (null == c && null == u) || s ? void 0 : no.iL,
+                    hideTooltip: h,
                     coverRef: o,
                 }),
-                x && (0, i.jsx)(tl.jV, { buttonRef: g(t.gameId), className: nc.BU }),
-                x && (0, i.jsx)(nd.A, { game: t, widgetType: l, className: nc.vS, onRemove: () => d?.(t.gameId) }),
+                f && (0, i.jsx)(tl.jV, { buttonRef: x(t.gameId), className: nc.BU }),
+                f && (0, i.jsx)(nd.A, { game: t, widgetType: l, className: nc.vS, onRemove: () => d?.(t.gameId) }),
             ],
         });
     }
-    return m
+    return g
         ? (0, i.jsx)("div", { className: no.mD })
-        : x
-          ? (0, i.jsx)(nu, { widgetType: l, index: r ?? 0, game: t, coverImageUrl: c, gameName: u, children: h() })
-          : (0, i.jsx)("div", { className: nc.kL, children: h() });
+        : f
+          ? (0, i.jsx)(nu, {
+                widgetType: l,
+                index: r ?? 0,
+                game: t,
+                coverImageUrl: c,
+                iconImageUrl: u,
+                gameName: m,
+                children: p(),
+            })
+          : (0, i.jsx)("div", { className: nc.kL, children: p() });
 }
 function ng(e) {
     let { games: t, userId: n, widgetType: l, allowEditing: a, disableInteraction: s } = e,
@@ -2117,23 +2126,24 @@ function nh(e) {
 var np = n(875620);
 function nj(e) {
     let { gameId: t, userId: n, onClick: l } = e,
-        { coverImageUrl: a, gameName: s, isLoading: r } = (0, ns.A)(t),
-        d = (0, u.bG)([tQ.A], () => tQ.A.suggestedFetchIsLoading),
-        o = v.intl.formatToPlainString(v.t["3mb1s5"], { game: s });
-    return r || d
+        { coverImageUrl: a, iconImageUrl: s, gameName: r, isLoading: d } = (0, ns.A)(t),
+        o = (0, u.bG)([tQ.A], () => tQ.A.suggestedFetchIsLoading),
+        c = v.intl.formatToPlainString(v.t["3mb1s5"], { game: r });
+    return d || o
         ? (0, i.jsx)("div", { className: no.mD })
         : (0, i.jsx)(k.m, {
-              text: o,
+              text: c,
               ariaHidden: !0,
               children: (0, i.jsxs)(E.D, {
                   className: np.c9,
                   onClick: l,
-                  "aria-label": o,
+                  "aria-label": c,
                   children: [
                       (0, i.jsx)(nr.A, {
                           className: np.Iv,
                           imageSrc: a,
-                          gameName: s,
+                          iconSrc: s,
+                          gameName: r,
                           gameId: t,
                           userId: n,
                           disableInteraction: !0,

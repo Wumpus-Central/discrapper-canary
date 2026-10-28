@@ -2038,6 +2038,14 @@
     overflow: visible
 }
 
+.leadingBar__6ec1a {
+    background: var(--border-subtle);
+    flex: 0 0 auto;
+    height: var(--space-16);
+    margin-inline-start: var(--space-8);
+    width: 1px
+}
+
 .topicClickTarget__6ec1a {
     bottom: 0;
     pointer-events: none;
@@ -2056,4 +2064,4 @@
     cursor: pointer
 }
 
-/*# sourceMappingURL=598476.5d6468e02c377284.css.map*/
+/*# sourceMappingURL=598476.4b44cff0f85cd612.css.map*/

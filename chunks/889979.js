@@ -47,7 +47,7 @@ class c extends r.A {
             try {
                 let { openSocialLayerStorefrontAnnouncementModal: e } = await Promise.all([
                     n.e("324732"),
-                    n.e("101105"),
+                    n.e("412117"),
                     n.e("263406"),
                     n.e("1955"),
                     n.e("341161"),

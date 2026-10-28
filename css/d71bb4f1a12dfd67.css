@@ -1,0 +1,13 @@
+.linkIcon_a4b5f8 {
+    color: var(--interactive-text-default)
+}
+
+.rowContainer_a4b5f8 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+/*# sourceMappingURL=d71bb4f1a12dfd67.css.map*/

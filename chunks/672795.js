@@ -1559,7 +1559,7 @@ function t0(e) {
                 ariaHidden: !0,
                 children: (0, i.jsx)("div", {
                     className: j()(tX.PY, { [tX.vk]: u, [tX.iL]: u && null != r }),
-                    children: (0, i.jsx)(tV.R, { imageSrc: r, gameName: a }),
+                    children: (0, i.jsx)(tV.R, { imageSrc: r ?? null, iconSrc: null, gameName: a }),
                 }),
             }),
             (0, i.jsx)(b.E, { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: a }),

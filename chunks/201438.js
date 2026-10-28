@@ -1,7 +1,12 @@
-r.d(t, { A: () => n });
-var a = r(454908),
-    i = r(105292);
-function n(e, t, r) {
-    let { data: n, isLoading: s } = (0, a.I)(e);
-    return { coverImageUrl: n?.getCoverURL(r), gameName: n?.name ?? t ?? i.intl.string(i.t.GIWFlF), isLoading: s };
+t.d(n, { A: () => c });
+var r = t(454908),
+    a = t(105292);
+function c(e, n, t) {
+    let { data: c, isLoading: i } = (0, r.I)(e);
+    return {
+        coverImageUrl: c?.getCoverURL(t) ?? null,
+        iconImageUrl: c?.getIconURL(t ?? 256) ?? null,
+        gameName: c?.name ?? n ?? a.intl.string(a.t.GIWFlF),
+        isLoading: i,
+    };
 }

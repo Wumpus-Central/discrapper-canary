@@ -2,6 +2,23 @@
     margin: 0
 }
 
+.dot__5e185 {
+    background: var(--background-mod-strong);
+    border-radius: 50%;
+    height: 4px;
+    margin-inline: var(--space-4) var(--space-12);
+    width: 4px
+}
+
+.dot__5e185,
+.label__5e185 {
+    flex: 0 0 auto
+}
+
+.label__5e185 {
+    cursor: default
+}
+
 .channelList__35be2 {
     background-color: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
@@ -58,4 +75,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=9d5b322b72ac9b0a.css.map*/
+/*# sourceMappingURL=a0d7111a3d05bc1c.css.map*/

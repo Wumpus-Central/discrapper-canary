@@ -120,6 +120,16 @@
 
 .cover__96b3f {}
 
+.cover__96b3f:before {
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: background 50ms ease-in;
+    z-index: 1
+}
+
 .addButton__96b3f {
     border-radius: 8px;
     cursor: pointer;
@@ -151,4 +161,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=fddd8a203fdb58a6.css.map*/
+/*# sourceMappingURL=14fa750d273d1552.css.map*/

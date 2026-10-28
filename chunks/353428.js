@@ -394,7 +394,7 @@ function er(e) {
         children: [(0, t.jsx)(ei, { channel: n }), (0, t.jsx)(es, { channel: n }, n.id)],
     });
 }
-function ea(e, n) {
+function ea(e, n, l) {
     switch (e.type) {
         case K.rbe.DM:
             return (0, t.jsx)(er, { channel: e });
@@ -404,7 +404,7 @@ function ea(e, n) {
         case K.rbe.GUILD_STAGE_VOICE:
         case K.rbe.GROUP_DM:
         case K.rbe.GUILD_APP:
-            return null != n ? (0, t.jsx)(Y.A, { channel: e, guild: n }, e.id) : null;
+            return null != n ? (0, t.jsx)(Y.A, { channel: e, guild: n, leadingDivider: l }, e.id) : null;
         default:
             return null;
     }

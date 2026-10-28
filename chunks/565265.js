@@ -62,13 +62,15 @@ class p extends i.Component {
         });
     };
     render() {
-        let { channel: e } = this.props;
+        let { channel: e, leadingDivider: n = "dot" } = this.props;
         if (e.isMultiUserDM()) return null;
-        let n = null != e.topic && e.topic.length > 0;
-        return null != e.linkedLobby || n
+        let l = null != e.topic && e.topic.length > 0;
+        return null != e.linkedLobby || l
             ? (0, t.jsxs)(i.Fragment, {
                   children: [
-                      (0, t.jsx)(h.A.Divider, {}),
+                      "bar" === n
+                          ? (0, t.jsx)("span", { className: A.U_, "aria-hidden": !0 })
+                          : (0, t.jsx)(h.A.Divider, {}),
                       (0, t.jsxs)("div", {
                           className: r()(A.At, A.lu, j.PT),
                           onContextMenu: this.handleContextMenu,
@@ -79,7 +81,7 @@ class p extends i.Component {
                                   "aria-label": m.intl.string(m.t.mKwsSp),
                                   className: A.h8,
                               }),
-                              null == e.linkedLobby || n
+                              null == e.linkedLobby || l
                                   ? (0, t.jsx)(d.E, {
                                         tag: "span",
                                         color: "none",
