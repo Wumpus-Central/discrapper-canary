@@ -1,49 +1,49 @@
-a.d(t, { Iy: () => E, JN: () => k, P6: () => w, RW: () => L, XU: () => S, YI: () => R, yN: () => O });
-var s = a(636537),
-    n = a(506774),
-    l = a(73153),
-    r = a(195880),
-    i = a(347111),
-    o = a(245179),
-    c = a(89222),
-    u = a(287111),
-    d = a(889921),
-    m = a(975189),
-    f = a(371169),
-    h = a(260498),
-    x = a(652215),
-    g = a(248675),
-    p = a(105292);
-let v = "ConjureHeldPrompts",
-    j = new Map(),
+n.d(t, { Iy: () => E, JN: () => k, P6: () => C, RW: () => O, XU: () => R, YI: () => S, yN: () => L });
+var s = n(636537),
+    a = n(506774),
+    l = n(73153),
+    r = n(195880),
+    i = n(347111),
+    o = n(245179),
+    c = n(89222),
+    u = n(287111),
+    d = n(889921),
+    m = n(975189),
+    f = n(371169),
+    h = n(260498),
+    x = n(652215),
+    g = n(248675),
+    p = n(105292);
+let j = "ConjureHeldPrompts",
+    v = new Map(),
     N = new Map();
 function b(e, t) {
-    let a =
-        j.get(e) ??
+    let n =
+        v.get(e) ??
         (async () => {
             try {
                 await t();
             } catch (t) {
-                throw (j.delete(e), t);
+                throw (v.delete(e), t);
             }
         })();
-    return (j.set(e, a), a);
+    return (v.set(e, n), n);
 }
 function y() {
-    return n.w.get(v) ?? {};
+    return a.w.get(j) ?? {};
 }
-function C(e) {
-    let { [e]: t, ...a } = y();
-    n.w.set(v, a);
+function w(e) {
+    let { [e]: t, ...n } = y();
+    a.w.set(j, n);
 }
-function w(e, t) {
-    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+function C(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     if (h.Ay.getProject(e)?.install_scope_setup != null)
-        n.w.set(v, { ...y(), [e]: { message: t, attachments: a, nonce: (0, r.m)() } });
-    else (0, d.sendUserMessage)(e, t, a);
+        a.w.set(j, { ...y(), [e]: { message: t, attachments: n, nonce: (0, r.m)() } });
+    else (0, d.sendUserMessage)(e, t, n);
 }
-function A(e, t, a) {
-    (C(e),
+function A(e, t, n) {
+    (w(e),
         (0, d.withdrawUserMessage)(e, t.nonce),
         "" === c.A.getDraft(e) && (0, i.I)(e, t.message),
         0 === (0, u.GU)(e, "chat").length &&
@@ -54,41 +54,41 @@ function A(e, t, a) {
                     draft: { name: e.name, contentType: e.content_type, status: "ready", ref: e },
                 })),
             ),
-        a());
+        n());
 }
 function E(e, t) {
-    let a = y()[e],
+    let n = y()[e],
         s = h.Ay.getProject(e);
-    if (null == a || null == s || !o.A.hasLoadedHistory(e)) return;
+    if (null == n || null == s || !o.A.hasLoadedHistory(e)) return;
     let l = o.A.getMessages(e),
-        r = (0, d.optimisticMessageId)(a.nonce);
-    if (!0 === a.sent) {
-        let n = l.some((e) => "user" === e.role && !0 !== e.held && e.id !== r && e.content === a.message),
+        r = (0, d.optimisticMessageId)(n.nonce);
+    if (!0 === n.sent) {
+        let a = l.some((e) => "user" === e.role && !0 !== e.held && e.id !== r && e.content === n.message),
             i = o.A.getHistoryLoads(e) > (N.get(e) ?? 0);
-        n
-            ? C(e)
-            : !i || null != s.install_scope_setup || o.A.isHistoryUnavailable(e) || o.A.isThinking(e) || A(e, a, t);
+        a
+            ? w(e)
+            : !i || null != s.install_scope_setup || o.A.isHistoryUnavailable(e) || o.A.isThinking(e) || A(e, n, t);
         return;
     }
     if (null != s.install_scope_setup) {
-        l.some((e) => e.id === r) || (0, d.showUserMessage)(e, a.message, a.attachments, { held: !0, nonce: a.nonce });
+        l.some((e) => e.id === r) || (0, d.showUserMessage)(e, n.message, n.attachments, { held: !0, nonce: n.nonce });
         return;
     }
     "open" === d.default.getConnState(e) &&
-        (n.w.set(v, { ...y(), [e]: { ...a, sent: !0 } }),
+        (a.w.set(j, { ...y(), [e]: { ...n, sent: !0 } }),
         N.set(e, o.A.getHistoryLoads(e)),
-        (0, d.sendUserMessage)(e, a.message, a.attachments, { nonce: a.nonce }) || A(e, a, t));
+        (0, d.sendUserMessage)(e, n.message, n.attachments, { nonce: n.nonce }) || A(e, n, t));
 }
-function S(e, t) {
+function R(e, t) {
     if (0 === e.length) return {};
-    let a = e.find((e) => e.id === t);
+    let n = e.find((e) => e.id === t);
     return {
         input: "server",
         note: p.intl.string(g.default.SU9K9U),
-        ...(null != a ? { default_entities: [{ id: a.id, name: a.name, kind: "server" }] } : {}),
+        ...(null != n ? { default_entities: [{ id: n.id, name: n.name, kind: "server" }] } : {}),
     };
 }
-function R(e) {
+function S(e) {
     return {
         id: e.id,
         questions: e.questions.map((e) => ({
@@ -101,31 +101,31 @@ function R(e) {
         })),
     };
 }
-async function I(e, t, a) {
-    let n = await s.Bo.put({
+async function I(e, t, n) {
+    let a = await s.Bo.put({
         url: `${x.Rsh.CONJURE_PROJECT(e)}/install-scope`,
-        body: { install_scope: t, ...(null != a ? { guild_id: a } : {}) },
+        body: { install_scope: t, ...(null != n ? { guild_id: n } : {}) },
         rejectWithError: !0,
     });
-    l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body });
+    l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: a.body });
 }
-function k(e, t, a) {
+function k(e, t, n) {
     return b(`settle:${e}`, async () => {
         try {
-            await I(e, t, a);
+            await I(e, t, n);
         } catch (t) {
             if (409 !== t.status) throw t;
             await (0, f.U1)(e);
         }
     });
 }
-function O(e, t, a, s) {
+function L(e, t, n, s) {
     return b(`switch:${e}:${t}`, async () => {
-        await I(e, a, s);
-        let t = "guild" === a ? g.default["8+EcCu"] : g.default["U7+Yeh"];
+        await I(e, n, s);
+        let t = "guild" === n ? g.default["8+EcCu"] : g.default["U7+Yeh"];
         if (!(0, d.sendUserMessage)(e, p.intl.string(t))) throw Error("Not connected");
     });
 }
-function L(e) {
+function O(e) {
     return (0, m.b4)(e, "keep install scope", (e) => e.sendKeepInstallScope());
 }

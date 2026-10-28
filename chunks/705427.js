@@ -1,29 +1,29 @@
-a.d(t, { A: () => f });
-var s = a(477900);
-a(582128);
-var n = a(152367),
-    l = a(661531),
-    r = a(866665),
-    i = a(939249),
-    o = a(742589),
-    c = a(497183),
-    u = a(248675),
-    d = a(105292),
-    m = a(631417);
+n.d(t, { A: () => f });
+var s = n(477900);
+n(582128);
+var a = n(152367),
+    l = n(661531),
+    r = n(866665),
+    i = n(939249),
+    o = n(742589),
+    c = n(497183),
+    u = n(248675),
+    d = n(105292),
+    m = n(631417);
 function f(e) {
-    let { title: t, actions: a, breadcrumb: f, project: h, onOpenProjectSettings: x, transparent: g = !1 } = e,
+    let { title: t, actions: n, breadcrumb: f, project: h, onOpenProjectSettings: x, transparent: g = !1 } = e,
         p = d.intl.string(u.default.FzfmQ8);
     return (0, s.jsx)(o.A, {
         hideSearch: !0,
         transparent: g,
-        toolbar: a,
+        toolbar: n,
         className: m.wx,
         "aria-label": t,
         children: (0, s.jsxs)("div", {
             className: m.QF,
             children: [
                 null == h
-                    ? (0, s.jsx)(n.D, {
+                    ? (0, s.jsx)(a.D, {
                           size: "custom",
                           width: 20,
                           height: 20,
