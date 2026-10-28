@@ -83,6 +83,7 @@ class l extends s {
             status: e.status,
             orbsReward: e.orbs_reward,
             checkoutContext: e.checkout_context,
+            paymentLegs: e.payment_legs,
         });
     }
     static createFromOrder(e) {
