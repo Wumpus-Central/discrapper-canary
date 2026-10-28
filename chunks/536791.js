@@ -10,6 +10,8 @@ _.exports = {
     mK: "includes__5b810",
     CT: "contentRow__5b810",
     Pw: "contentIcon__5b810",
+    fR: "appChannelRow__5b810",
+    HY: "appChannelsPrivate__5b810",
     KO: "sharedWith__5b810",
     Kk: "sharedRow__5b810",
     $f: "guildIcon__5b810",

@@ -131,32 +131,32 @@ async function F(t, l) {
         await (0, w.$)(n, i).catch(() => {}),
         await (0, g.U1)(t).catch(() => {}));
 }
-async function O(t, l, n) {
-    let e,
-        { project: i } = t,
-        { platform: u, guildId: r } = n,
-        s = i.id;
-    B.add(s);
+async function O(t, l, n, e) {
+    let i,
+        { project: u } = t,
+        { platform: r, guildId: s } = n,
+        o = u.id;
+    B.add(o);
     try {
-        let t = await (0, x.xQ)(s);
-        e = 1 === t.destinations.length ? t.selected_destination_id : await u.promptPublishDestination(t);
+        let t = await (0, x.xQ)(o);
+        i = 1 === t.destinations.length ? t.selected_destination_id : await r.promptPublishDestination(t);
     } catch (t) {
-        u.showError(t instanceof Error ? t.message : M.intl.string(y.default.gMWZeG));
+        r.showError(t instanceof Error ? t.message : M.intl.string(y.default.gMWZeG));
         return;
     } finally {
-        B.delete(s);
+        B.delete(o);
     }
-    if (null == e) return;
-    if (C.A.isProjectPublishing(s) || C.A.getPublishStatus(s)?.publishing === !0)
-        return void u.showError(M.intl.string(y.default["TD/ze/"]));
-    let o = null != t.guildId && t.input.status?.surface === "activity" && null == t.appChannelId && !l.isUpdate;
-    (o && L(s, !0),
-        (0, x.TV)(s, e)
+    if (null == i) return;
+    if (C.A.isProjectPublishing(o) || C.A.getPublishStatus(o)?.publishing === !0)
+        return void r.showError(M.intl.string(y.default["TD/ze/"]));
+    let d = null != t.guildId && t.input.status?.surface === "activity" && null == t.appChannelId && !l.isUpdate;
+    (d && L(o, !0),
+        (0, x.TV)(o, i, e)
             .then((t) => {
                 let l;
                 if (!0 === t.ok) return t;
                 throw (
-                    20088 === t.code && (0, g.U1)(s).catch(() => {}),
+                    20088 === t.code && (0, g.U1)(o).catch(() => {}),
                     Error(
                         null != (l = t.detail?.trim()) && "" !== l
                             ? l
@@ -168,21 +168,21 @@ async function O(t, l, n) {
             })
             .then(
                 (l) => {
-                    (u.showConfirmation(M.intl.string(y.default.S6Px3n)),
-                        null != t.guildId && q(i),
-                        (0, S.tZ)(s, { isPreview: !1 })
+                    (r.showConfirmation(M.intl.string(y.default.S6Px3n)),
+                        null != t.guildId && q(u),
+                        (0, S.tZ)(o, { isPreview: !1 })
                             .catch((t) => {
-                                console.error("[conjure] post-publish refresh failed", s, t);
+                                console.error("[conjure] post-publish refresh failed", o, t);
                             })
-                            .then(() => (o && !0 !== l.channel_skipped ? H(s, r) : void 0))
-                            .finally(() => L(s, !1))
+                            .then(() => (d && !0 !== l.channel_skipped ? H(o, s) : void 0))
+                            .finally(() => L(o, !1))
                             .catch(() => {}));
                 },
                 (t) => {
-                    L(s, !1);
+                    L(o, !1);
                     let l = t instanceof Error ? t.message : M.intl.string(y.default.gMWZeG);
-                    (a.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_FAILED", projectId: s, message: l }),
-                        u.showError(l));
+                    (a.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_FAILED", projectId: o, message: l }),
+                        r.showError(l));
                 },
             ));
 }
@@ -198,62 +198,63 @@ function q(t) {
 }
 let B = new Set();
 async function Q(t, l, e) {
-    let { guildId: i, platform: a } = e;
+    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        { guildId: a, platform: u } = e;
     if (!0 === e.busy || B.has(t)) return;
-    let u = k(t, i),
-        r = u?.input.status?.publishState;
-    if (null == u || null == r || !(0, N.Uh)(r)) return;
-    let s = C.A.getPublishApprovalUrl(t);
-    if (null != s && (0, A.PV)(u.project)) {
+    let r = k(t, a),
+        s = r?.input.status?.publishState;
+    if (null == r || null == s || !(0, N.Uh)(s)) return;
+    let o = C.A.getPublishApprovalUrl(t);
+    if (null != o && (0, A.PV)(r.project)) {
         let { promptPublishApproval: t } = await Promise.all([n.e("241989"), n.e("574246")]).then(n.bind(n, 200389));
-        t(s);
+        t(o);
         return;
     }
-    if (C.A.isProjectPublishing(t) || u.input.status?.publishing === !0) return;
-    let o = I(u.input);
+    if (C.A.isProjectPublishing(t) || r.input.status?.publishing === !0) return;
+    let d = I(r.input);
     ((0, _.yJ)(t, {
         entryPoint: l,
-        publishState: r,
-        surface: u.input.status?.surface ?? null,
-        installScope: u.project.install_scope,
-        action: o.action,
+        publishState: s,
+        surface: r.input.status?.surface ?? null,
+        installScope: r.project.install_scope,
+        action: d.action,
     }),
-    null != o.disabledReason)
-        ? a.showPublishBlocked(E.k.MISSING_MANAGE_SERVER, o.disabledReason)
-        : ((0, x.dx)(t), null != o.confirmReason)
-          ? a.showPublishBlocked(E.k.MISSING_MANAGE_CHANNELS, o.confirmReason, () => {
-                Z(t, o, e).catch(() => {});
+    null != d.disabledReason)
+        ? u.showPublishBlocked(E.k.MISSING_MANAGE_SERVER, d.disabledReason)
+        : ((0, x.dx)(t), null != d.confirmReason)
+          ? u.showPublishBlocked(E.k.MISSING_MANAGE_CHANNELS, d.confirmReason, () => {
+                Z(t, d, e, i).catch(() => {});
             })
-          : await Z(t, o, e);
+          : await Z(t, d, e, i);
 }
-async function Z(t, l, n) {
-    let { guildId: e, platform: i } = n,
-        a = k(t, e);
-    if (!(null == a || C.A.isProjectPublishing(t))) {
+async function Z(t, l, n, e) {
+    let { guildId: i, platform: a } = n,
+        u = k(t, i);
+    if (!(null == u || C.A.isProjectPublishing(t))) {
         if ("consent_then_publish" === l.intent) {
             B.add(t);
             try {
-                await (i.requestConsent ?? ((t) => F(t, e)))(t);
+                await (a.requestConsent ?? ((t) => F(t, i)))(t);
             } finally {
                 B.delete(t);
             }
             if (C.A.isProjectPublishing(t)) return;
-            let a = k(t, e),
-                u = a?.input.integrationStatus ?? null;
+            let u = k(t, i),
+                r = u?.input.integrationStatus ?? null;
             if (
-                null == a ||
+                null == u ||
                 (0, f.Qg)({
-                    installScope: a.project.install_scope,
-                    previewReady: u?.preview_ready === !0,
-                    integrationInstalled: u?.integration_installed ?? null,
-                    botPermissionsChanged: u?.bot_permissions_changed === !0,
+                    installScope: u.project.install_scope,
+                    previewReady: r?.preview_ready === !0,
+                    integrationInstalled: r?.integration_installed ?? null,
+                    botPermissionsChanged: r?.bot_permissions_changed === !0,
                 })
             )
                 return;
-            await O(a, l, n);
+            await O(u, l, n, e);
             return;
         }
-        await O(a, l, n);
+        await O(u, l, n, e);
     }
 }
 function Y(t, l) {
@@ -362,10 +363,10 @@ function Y(t, l) {
                   });
         })(b ? t : null),
         K = e.useCallback(
-            (l) => {
+            (l, n) => {
                 null != t &&
                     null != a &&
-                    Q(t, l, a).catch((l) => {
+                    Q(t, l, a, n).catch((l) => {
                         console.error("[conjure] publish action failed", t, l);
                     });
             },

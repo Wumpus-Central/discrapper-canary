@@ -183,28 +183,29 @@ function g(e) {
     (0, o.KY)(e)?.sendPreparePublish();
 }
 function E(e, t) {
-    let n = !1;
-    return new Promise((s, i) => {
-        let l = (0, o.KY)(e);
-        if (null == l) return void i(Error("Not connected"));
-        if (y.has(e)) return void i(Error("Publish already in flight"));
-        let a = setTimeout(() => {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        s = !1;
+    return new Promise((i, l) => {
+        let a = (0, o.KY)(e);
+        if (null == a) return void l(Error("Not connected"));
+        if (y.has(e)) return void l(Error("Publish already in flight"));
+        let c = setTimeout(() => {
             O(e, "Publish timed out");
         }, 9e5);
-        (y.set(e, { resolve: s, reject: i, timeout: a }),
-            (n = !0),
+        (y.set(e, { resolve: i, reject: l, timeout: c }),
+            (s = !0),
             r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
         try {
-            l.sendPublish(t);
+            a.sendPublish(t, n);
         } catch (t) {
-            (y.delete(e), clearTimeout(a), i(t instanceof Error ? t : Error("publish send failed")));
+            (y.delete(e), clearTimeout(c), l(t instanceof Error ? t : Error("publish send failed")));
         }
     })
         .catch((t) => {
             throw ((0, d.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
         })
         .finally(() => {
-            n && r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
+            s && r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
         });
 }
 function S(e) {

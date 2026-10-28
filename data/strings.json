@@ -1722,6 +1722,7 @@
   "uMdX5T": "Publish history pages",
   "ufHcsq": "Show release notes",
   "656Avb": "Publish history",
+  "Td1mlg": "{count, plural,one {Make channel private}other {Make channels private}",
   "qpffbI": "Missing server permission",
   "bljqPk": "Publishing adds a rule to your server’s AutoMod.",
   "+VqXVO": "Anyone you share with can use this app once published.",
