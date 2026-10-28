@@ -332,7 +332,7 @@ let eZ = new I.A("MediaEngineStore"),
     e1 = 5 * eG.A.Millis.SECOND,
     e2 = 2 * eG.A.Millis.SECOND,
     e3 = 30 * eG.A.Millis.SECOND,
-    e5 = "https://ciscobinary.openh264.org/libopenh264-2.5.1-linux64.7.so.bz2",
+    e5 = "https://ciscobinary.openh264.org/libopenh264-2.7.0-linux64.8.so.bz2",
     e6 = 0;
 var e4 =
     (((h = {}).WEBCAM = "WEBCAM"),
@@ -1077,7 +1077,7 @@ async function nw() {
             let t = await T.Ay.downloadOpenH264(
                 e5,
                 a,
-                "d828a944d4d2bb64195ada89cf2cde9bc41733b1547d0788ef49fb8cb231b76f",
+                "1522f873a482923c5ec018a4415e1866898197528828c50f90fd300c94620df3",
                 (e) => {
                     eZ.log("OpenH264 download status", e);
                 },
