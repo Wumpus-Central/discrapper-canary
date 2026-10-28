@@ -81,6 +81,7 @@ function F(e) {
                                   title: e.title ?? void 0,
                                   tags: e.tags,
                                   localClipId: e.local_clip_id ?? void 0,
+                                  clipEventsTimeline: e.clip_events_timeline,
                                   videoURL: e.video_url,
                                   thumbnailURL: e.thumbnail_url,
                                   spritesheetImageURL: e.spritesheet_image_url,

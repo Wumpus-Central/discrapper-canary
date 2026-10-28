@@ -1,5 +1,5 @@
-t.d(a, { A: () => l, K: () => n });
-var i = t(582128);
+a.d(t, { A: () => l, K: () => n });
+var i = a(582128);
 function n(e) {
     return "saved" === e.status && null != e.videoURL;
 }
@@ -17,6 +17,7 @@ function l(e) {
                             thumbnailURL: e.thumbnailURL,
                             spritesheetImageURL: e.spritesheetImageURL,
                             spritesheetVttURL: e.spritesheetVttURL,
+                            clipEventsTimeline: e.clipEventsTimeline,
                             title: e.title,
                             tags: e.tags,
                         };

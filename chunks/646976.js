@@ -6,7 +6,7 @@ function s(e) {
     return "uploading" !== e.status;
 }
 function l(e) {
-    let t = { game_id: e.gameId, title: e.title, tags: e.tags };
+    let t = { game_id: e.gameId, title: e.title, tags: e.tags, clip_events_timeline: e.clipEventsTimeline };
     return "saved" === e.status
         ? { ...t, id: e.id, file_id: e.fileId, local_clip_id: e.localClipId }
         : { ...t, upload_filename: e.uploadFilename, local_clip_id: e.localClipId };

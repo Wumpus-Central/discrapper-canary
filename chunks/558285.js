@@ -1,50 +1,60 @@
-t.d(a, { A: () => c });
-var i = t(256905),
-    n = t(625494),
-    l = t(652215);
+a.d(t, { A: () => d });
+var i = a(256905),
+    n = a(625494),
+    l = a(652215);
 let s = { width: 1920, height: 1080 };
 async function r(e) {
     if (null == e) return s;
     try {
-        let { width: a, height: t } = await new Promise((a, t) => {
+        let { width: t, height: a } = await new Promise((t, a) => {
             let i = new Image();
-            ((i.onload = () => a({ width: i.naturalWidth, height: i.naturalHeight })),
-                (i.onerror = () => t(Error("measureImage: the image failed to load"))),
+            ((i.onload = () => t({ width: i.naturalWidth, height: i.naturalHeight })),
+                (i.onerror = () => a(Error("measureImage: the image failed to load"))),
                 (i.src = e));
         });
-        return a > 0 && t > 0 ? { width: a, height: t } : s;
+        return t > 0 && a > 0 ? { width: t, height: a } : s;
     } catch {
         return s;
     }
 }
-async function d(e, a) {
-    let { key: t, gameId: i, videoURL: s, thumbnailURL: d, title: c, spritesheetImageURL: o, spritesheetVttURL: u } = e,
-        { width: m, height: h } = await r(d);
+async function c(e, t) {
+    let {
+            key: a,
+            gameId: i,
+            videoURL: s,
+            thumbnailURL: c,
+            title: d,
+            spritesheetImageURL: o,
+            spritesheetVttURL: u,
+            clipEventsTimeline: m,
+        } = e,
+        { width: h, height: p } = await r(c);
     return {
         type: "VIDEO",
         url: s,
         proxyUrl: s,
-        poster: d,
-        width: m,
-        height: h,
-        alt: c,
+        poster: c,
+        width: h,
+        height: p,
+        alt: d,
         clip: {
-            id: t,
+            id: a,
             url: s,
-            width: m,
-            height: h,
-            title: c,
+            width: h,
+            height: p,
+            title: d,
             application: { id: i },
             spritesheet_image_url: o,
             spritesheet_vtt_url: u,
+            clip_events_timeline: m,
         },
-        onEnded: a ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
+        onEnded: t ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
     };
 }
-async function c(e) {
-    let { clips: a, startingIndex: t } = e;
-    if (0 === a.length) return;
-    let n = a.length > 1,
-        l = await Promise.all(a.map((e) => d(e, n)));
-    (0, i.R)({ location: "user_profile_widget_clip", items: l, startingIndex: t, shouldHideMediaOptions: !0 });
+async function d(e) {
+    let { clips: t, startingIndex: a } = e;
+    if (0 === t.length) return;
+    let n = t.length > 1,
+        l = await Promise.all(t.map((e) => c(e, n)));
+    (0, i.R)({ location: "user_profile_widget_clip", items: l, startingIndex: a, shouldHideMediaOptions: !0 });
 }
