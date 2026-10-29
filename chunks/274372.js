@@ -32,7 +32,7 @@ let h = "default",
     M = {
         clipsEnabled: !1,
         storageLocation: h,
-        clipsQuality: { resolution: A.on.RESOLUTION_1080, frameRate: A.kn.FPS_30, bitratePercent: _.Y2 },
+        clipsQuality: { resolution: A.on.RESOLUTION_1080, frameRate: A.kn.FPS_60, bitratePercent: _.Y2 },
         clipsLength: _.LX.SECONDS_30,
         remindersEnabled: !0,
         decoupledClipsEnabled: !1,
@@ -190,6 +190,16 @@ class B extends r.Ay.DeviceSettingsStore {
             !1 !== e.clipsSettings.enableAutoclipping
                 ? e
                 : { ...e, clipsSettings: { ...e.clipsSettings, clipsEnabled: !1 } },
+        (e) =>
+            e.clipsSettings.clipsQuality.frameRate !== A.kn.FPS_15
+                ? e
+                : {
+                      ...e,
+                      clipsSettings: {
+                          ...e.clipsSettings,
+                          clipsQuality: { ...e.clipsSettings.clipsQuality, frameRate: A.kn.FPS_30 },
+                      },
+                  },
     ];
     initialize(e) {
         (null != e && (U = e), w(), this.waitFor(l.Ay));

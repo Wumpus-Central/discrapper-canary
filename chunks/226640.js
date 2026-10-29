@@ -36,7 +36,6 @@ function e() {
 }
 function u() {
     return [
-        { id: "15", value: o.kn.FPS_15, label: a.intl.formatToPlainString(a.t.Qb44XH, { fps: o.kn.FPS_15 }) },
         { id: "30", value: o.kn.FPS_30, label: a.intl.formatToPlainString(a.t.Qb44XH, { fps: o.kn.FPS_30 }) },
         { id: "60", value: o.kn.FPS_60, label: a.intl.formatToPlainString(a.t.Qb44XH, { fps: o.kn.FPS_60 }) },
     ];
