@@ -1,17 +1,18 @@
 n.d(t, {
-    $8: () => C,
+    $8: () => O,
+    Lb: () => C,
     NI: () => S,
-    Q9: () => L,
-    ST: () => b,
-    Sr: () => v,
-    Y2: () => R,
-    b8: () => y,
-    dZ: () => D,
+    Q9: () => y,
+    ST: () => P,
+    Sr: () => b,
+    Y2: () => L,
+    b8: () => D,
+    dZ: () => v,
     i2: () => m,
     lU: () => p,
-    mK: () => P,
+    mK: () => M,
     p9: () => T,
-    uE: () => O,
+    uE: () => R,
     yM: () => N,
 });
 var i = n(582128),
@@ -42,10 +43,10 @@ function p(e) {
     return I.has(e);
 }
 function T() {
-    return !C();
+    return !O();
 }
 function m() {
-    return !O();
+    return !R();
 }
 function g(e) {
     return e === s.Tk.VERIFIED_TEEN || e === s.Tk.INFERRED_TEEN;
@@ -56,16 +57,17 @@ function S() {
 function N() {
     return (0, a.bG)([c.default], () => g(c.default.getCurrentUser()?.ageVerificationStatus));
 }
-function C() {
-    let e = c.default.getCurrentUser(),
-        t = e?.ageVerificationStatus;
-    return t === s.Tk.VERIFIED_ADULT || t === s.Tk.INFERRED_ADULT;
+function C(e) {
+    return e === s.Tk.VERIFIED_ADULT || e === s.Tk.INFERRED_ADULT;
 }
 function O() {
-    let e = (0, a.bG)([c.default], () => c.default.getCurrentUser());
-    return e?.ageVerificationStatus === s.Tk.VERIFIED_ADULT || e?.ageVerificationStatus === s.Tk.INFERRED_ADULT;
+    return C(c.default.getCurrentUser()?.ageVerificationStatus);
 }
 function R() {
+    let e = (0, a.bG)([c.default], () => c.default.getCurrentUser());
+    return C(e?.ageVerificationStatus);
+}
+function L() {
     let e = (0, a.bG)([c.default], () => {
         var e;
         return (
@@ -74,15 +76,15 @@ function R() {
     });
     return (0, o.aX)(r.t.REACTIVE_CHECK) && e;
 }
-function L() {
+function y() {
     let e = c.default.getCurrentUser();
     return e?.ageVerificationStatus !== s.Tk.UNVERIFIED && e?.ageVerificationStatus !== s.Tk.CLIENT_ONLY_PENDING;
 }
-function y() {
+function D() {
     let e = (0, a.bG)([c.default], () => c.default.getCurrentUser());
     return e?.ageVerificationStatus !== s.Tk.UNVERIFIED && e?.ageVerificationStatus !== s.Tk.CLIENT_ONLY_PENDING;
 }
-function D(e) {
+function v(e) {
     let t = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, l.Ay)(t),
         r = (0, a.bG)([d.default], () => null != d.default.getSuspendedUserToken()),
@@ -93,14 +95,14 @@ function D(e) {
         (o || u) && e();
     }, [e, o, u]);
 }
-function v(e) {
+function b(e) {
     return null != e && _.zn.has(e);
 }
-function b(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return f.has(e) ? h.intl.string(h.t.lSWVTM) : t ? h.intl.string(A.default["/kgWIg"]) : h.intl.string(h.t.xYXsr6);
 }
-function P(e, t) {
+function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
