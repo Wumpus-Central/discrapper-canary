@@ -1,7 +1,8 @@
-n.d(t, { B1: () => u, Gg: () => o, b1: () => c, cV: () => s, nh: () => a });
+(n.d(t, { B1: () => u, Gg: () => o, b1: () => c, cV: () => s, nh: () => a }), n(580630));
 var l = n(2242),
-    i = n(202541),
-    r = n(105292);
+    i = n(202541);
+n(818348);
+var r = n(105292);
 function a(e) {
     return "roles" in e ? `emoji-${e.id}` : `${e.ref_type}-${e.emoji_id}-${e.name}-${e.ref_id}`;
 }
