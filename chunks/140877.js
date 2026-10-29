@@ -5,7 +5,7 @@ var r = n(477900),
     a = n(834730),
     l = n(287809),
     u = n(24482),
-    o = n(947893),
+    o = n(298072),
     d = n(993408),
     c = n(740076),
     I = n(466459),
@@ -26,11 +26,11 @@ function m(e) {
         C = (0, d.G0)(t),
         b = (0, d.tt)(t),
         {
-            checkoutEligiblePrices: R,
-            hasSufficientOrbs: k,
+            checkoutEligiblePrices: k,
+            hasSufficientOrbs: R,
             shouldCheckoutWithOrbs: y,
         } = (0, g.F)({ product: t, hasShopDiscount: m, prioritizedCurrency: n }),
-        j = R[0]?.currency,
+        j = k[0]?.currency,
         T = i.useMemo(() => (0, d.fT)(t, m, j), [t, m, j]);
     return _
         ? (0, r.jsx)(a.E, {
@@ -67,16 +67,16 @@ function m(e) {
                       lineClamp: 1,
                       children: x.intl.string(x.t.rt69oo),
                   })
-                : 0 === R.length
+                : 0 === k.length
                   ? null
                   : (0, r.jsx)(v.x, {
-                        priceAmount: R[0].amount,
-                        priceCurrency: R[0].currency,
+                        priceAmount: k[0].amount,
+                        priceCurrency: k[0].currency,
                         discount: T,
                         discountIconConfig: m
                             ? { displayMode: "default", source: p ?? d.D0.NITRO, size: "sm" }
                             : void 0,
-                        className: y && !k ? A.c : void 0,
+                        className: y && !R ? A.c : void 0,
                         variant: "text-md/bold",
                     });
 }

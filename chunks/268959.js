@@ -11,7 +11,7 @@ var i = n(503698),
     c = n(287809),
     I = n(24482),
     f = n(590180),
-    v = n(947893),
+    v = n(298072),
     p = n(993408),
     g = n(466459),
     x = n(623373),
@@ -37,9 +37,9 @@ function C(e) {
     let { product: t, badgeOverride: n, productBadgeOverride: i, className: l, prioritizedCurrency: o } = e,
         { isPurchased: v, isPartiallyOwnedBundle: C } = (0, g.h)(t),
         b = (0, p.G0)(t),
-        R = (0, a.bG)([f.A], () => f.A.getCategoryForProduct(t.skuId)),
-        k = t.categoryWillUnpublishAt ?? R?.unpublishedAt,
-        y = null != k ? (0, p.WU)(k) : null,
+        k = (0, a.bG)([f.A], () => f.A.getCategoryForProduct(t.skuId)),
+        R = t.categoryWillUnpublishAt ?? k?.unpublishedAt,
+        y = null != R ? (0, p.WU)(R) : null,
         j = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
         T = I.Ay.canUseShopDiscounts(j),
         { isOrbExclusive: S } = (0, m.F)({ product: t, hasShopDiscount: T, prioritizedCurrency: o }),
@@ -50,7 +50,7 @@ function C(e) {
                 ? (O = A.AW.BADGE_OVERRIDE)
                 : (0, x.JQ)(t)
                   ? (O = A.AW.DYNAMIC)
-                  : (0, p.HF)(k)
+                  : (0, p.HF)(R)
                     ? (O = A.AW.LIMITED_TIME)
                     : !C && !v && (0, p.aT)(t.skuId)
                       ? (O = A.AW.NEW)

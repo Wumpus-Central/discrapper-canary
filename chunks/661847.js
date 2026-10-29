@@ -11,7 +11,7 @@ var r = n(477900),
     I = n(820081),
     f = n(307301),
     v = n(260762),
-    p = n(947893),
+    p = n(298072),
     g = n(317097),
     x = n(466459),
     A = n(623373),
@@ -50,11 +50,11 @@ function C(e) {
             [t],
         ),
         C = i.useId(),
-        R = (0, v.A)(`shop-variants-group-${t.storeListingId}-${C}`, u.Gl.HORIZONTAL);
+        k = (0, v.A)(`shop-variants-group-${t.storeListingId}-${C}`, u.Gl.HORIZONTAL);
     return 0 === x.length
         ? null
         : (0, r.jsx)(l.hD, {
-              navigator: R,
+              navigator: k,
               children: (0, r.jsx)(l.PR, {
                   children: (e) => {
                       let { ref: i, ...l } = e;
@@ -83,7 +83,7 @@ function C(e) {
                               ),
                               null != c &&
                                   _ &&
-                                  (0, r.jsx)(k, {
+                                  (0, r.jsx)(R, {
                                       zIndex: g >= c.maxVariantsToShow - 1 ? m + 1 : 0,
                                       isSelected: g >= c.maxVariantsToShow - 1,
                                       onOverflowClick: c.onClick,
@@ -131,16 +131,16 @@ function b(e) {
             style: { backgroundColor: t.variantValue, zIndex: f },
             ...A,
             tabIndex: -1 === p ? -1 : A.tabIndex,
-            children: m && (0, r.jsx)(R, { variant: t }),
+            children: m && (0, r.jsx)(k, { variant: t }),
         }),
     });
 }
-function R(e) {
+function k(e) {
     let { variant: t } = e,
         n = i.useMemo(() => (0, g.qt)(t.variantValue) && 0.3 > (0, g.OK)((0, g.LX)(t.variantValue)), [t.variantValue]);
     return (0, r.jsx)(I.B, { className: E.U, color: n ? o.A.colors.BLACK.css : o.A.colors.WHITE.css });
 }
-function k(e) {
+function R(e) {
     let { zIndex: t, isSelected: n, onOverflowClick: s, storeListingId: u, onTrackClick: o, parentTabIndex: d } = e,
         { onFocus: I, ...v } = (0, l.rm)(`shop-variants-group-${u}-overflow`),
         p = i.useCallback(
