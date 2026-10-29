@@ -1,56 +1,56 @@
-n.d(t, { u: () => h });
-var l = n(582128),
-    i = n(17928),
-    u = n(308368),
-    d = n(627363),
-    a = n(616356),
-    r = n(280450),
-    s = n(486350),
-    o = n(208284),
-    A = n(435558),
-    c = n.n(A),
-    g = n(734057),
-    p = n(696451),
-    y = n(317525),
-    b = n(576705),
-    f = n(488926),
-    S = n(652215),
-    _ = n(25528);
+i.d(t, { u: () => h });
+var l = i(582128),
+    n = i(17928),
+    u = i(308368),
+    d = i(627363),
+    a = i(616356),
+    r = i(280450),
+    s = i(486350),
+    o = i(208284),
+    A = i(435558),
+    c = i.n(A),
+    g = i(734057),
+    p = i(696451),
+    y = i(317525),
+    b = i(576705),
+    f = i(488926),
+    S = i(652215),
+    _ = i(25528);
 function h(e, t) {
-    var n;
+    var i;
     let { enabled: A } = o.A.useConfig({ guildId: t?.guild_id ?? "", location: "useRequestToStreamData" }),
-        h = (0, i.bG)([r.default], () => r.default.getId()),
-        R = (0, _.Ay)(e, t?.guild_id)[0],
-        C = (0, i.bG)([a.A], () => null != a.A.getStreamForUser(e, t?.getGuildId())),
-        E = (0, d.YY)(R?.application_id).data,
-        G =
-            ((n = t?.id),
-            (0, i.bG)([b.A, g.A, p.Ay, y.A], () => {
-                if (null == n) return !1;
-                let t = g.A.getChannel(n);
-                if (null == t) return !1;
+        h = (0, n.bG)([r.default], () => r.default.getId()),
+        G = (0, _.Ay)(e, t?.guild_id)[0],
+        R = (0, n.bG)([a.A], () => null != a.A.getStreamForUser(e, t?.getGuildId())),
+        C = (0, d.YY)(G?.application_id).data,
+        E =
+            ((i = t?.id),
+            (0, n.bG)([b.A, g.A, p.Ay, y.A], () => {
+                if (null == i) return !1;
+                let t = g.A.getChannel(i);
+                if (null == t || t.isGuildStageVoice()) return !1;
                 let l = b.A.can(S.xBc.SEND_MESSAGES, t),
-                    i = p.Ay.getMember(t.guild_id, e),
-                    u = c().keyBy(y.A.getManyRoles(t.guild_id, i?.roles ?? []), "id"),
+                    n = p.Ay.getMember(t.guild_id, e),
+                    u = c().keyBy(y.A.getManyRoles(t.guild_id, n?.roles ?? []), "id"),
                     d = f.$3({ permission: S.xBc.STREAM, user: e, context: t, roles: u });
                 return l && d;
             })),
         I = l.useCallback(
-            (n) => {
-                let { analyticsLocation: l } = n;
+            (i) => {
+                let { analyticsLocation: l } = i;
                 null != t &&
                     (u.A.sendActivityInvite({
                         type: S.xL.STREAM_REQUEST,
                         channelId: t.id,
-                        activity: R,
+                        activity: G,
                         content: `<@${e}>`,
                         location: l,
                         targetUserId: e,
                     }),
                     (0, s.p)(e));
             },
-            [t, R, e],
+            [t, G, e],
         ),
-        k = h !== e && (null != R || A) && (null != E || A) && G && !C;
-    return l.useMemo(() => (k ? { playingApplication: E, handleRequestToStream: I } : null), [k, E, I]);
+        k = h !== e && (null != G || A) && (null != C || A) && E && !R;
+    return l.useMemo(() => (k ? { playingApplication: C, handleRequestToStream: I } : null), [k, C, I]);
 }
