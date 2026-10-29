@@ -1,4 +1,4 @@
-.getXboxApp__03af1 {
+.getCrunchyollApp__1bc87 {
     align-items: center;
     background: var(--background-mod-normal);
     border-radius: var(--radius-sm);
@@ -7,21 +7,20 @@
     padding: 16px
 }
 
-.getXboxAppBody__03af1 {
+.getCrunchyollAppBody__1bc87 {
     text-align: start
 }
 
-.getXboxAppHeading__03af1 {
+.getCrunchyollAppHeading__1bc87 {
     display: flex
 }
 
-.getXboxAppQR__03af1 {
+.getCrunchyollAppQR__1bc87 {
     margin-inline-start: 16px
 }
 
-.xboxLogoBox__03af1 {
+.crunchyollLogoBox__1bc87 {
     align-items: center;
-    background-color: var(--platform-xbox);
     border-radius: var(--radius-xs);
     display: flex;
     height: 24px;
@@ -30,9 +29,9 @@
     width: 24px
 }
 
-.xboxLogoBox__03af1 img {
+.crunchyollLogoBox__1bc87 img {
     height: 20px;
     width: 20px
 }
 
-/*# sourceMappingURL=f4d8ecc518bd4ba0.css.map*/
+/*# sourceMappingURL=952b18e838385024.css.map*/

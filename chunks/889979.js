@@ -46,7 +46,7 @@ class c extends r.A {
             this._didAttemptToOpenModal = !0;
             try {
                 let { openSocialLayerStorefrontAnnouncementModal: e } = await Promise.all([
-                    n.e("324732"),
+                    n.e("237427"),
                     n.e("412117"),
                     n.e("263406"),
                     n.e("1955"),
@@ -198,7 +198,8 @@ class c extends r.A {
                     n.e("168248"),
                     n.e("245420"),
                     n.e("216870"),
-                    n.e("89100"),
+                    n.e("841136"),
+                    n.e("560338"),
                     n.e("340363"),
                     n.e("459086"),
                     n.e("720210"),
@@ -358,6 +359,7 @@ class c extends r.A {
                     n.e("361626"),
                     n.e("646506"),
                     n.e("445124"),
+                    n.e("393766"),
                     n.e("27773"),
                     n.e("445421"),
                     n.e("721690"),
@@ -370,7 +372,7 @@ class c extends r.A {
                     n.e("502018"),
                     n.e("276863"),
                     n.e("955184"),
-                    n.e("407170"),
+                    n.e("497516"),
                     n.e("249366"),
                     n.e("728633"),
                     n.e("628439"),
@@ -596,7 +598,7 @@ class c extends r.A {
                     n.e("661832"),
                     n.e("474907"),
                     n.e("791824"),
-                ]).then(n.bind(n, 99161));
+                ]).then(n.bind(n, 82343));
                 e();
             } catch (e) {
                 ((this._didAttemptToOpenModal = !1), d.error("Failed to open announcement modal", e));
