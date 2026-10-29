@@ -56,25 +56,25 @@
     overflow: hidden
 }
 
-.staticPreview__6d099,
+.preview__6d099,
 .staticPreviewContainer__6d099 {
     height: 100%;
     position: relative;
     width: 100%
 }
 
-.staticPreview__6d099 {
+.preview__6d099 {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: bottom;
     object-position: bottom
 }
 
-.full-motion .staticPreview__6d099 {
+.full-motion .preview__6d099 {
     transition: transform .3s ease-in-out
 }
 
-.staticPreviewHighlighted__6d099 {
+.previewHighlighted__6d099 {
     transform: scale(1.08)
 }
 
@@ -86,4 +86,4 @@
     background: #a8a9aa
 }
 
-/*# sourceMappingURL=919789.f7dd126188940cf0.css.map*/
+/*# sourceMappingURL=919789.a0171b4e0dc2a9c4.css.map*/

@@ -238,6 +238,7 @@ class A extends s.A {
                 null != e.preview_asset_paths
                     ? {
                           fgStatic: e.preview_asset_paths.fg_static,
+                          fgVideo: e.preview_asset_paths.fg_video,
                           fgAnimated: e.preview_asset_paths.fg_animated,
                           bgStatic: e.preview_asset_paths.bg_static,
                           bgAnimated: e.preview_asset_paths.bg_animated,

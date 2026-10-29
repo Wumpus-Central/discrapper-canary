@@ -76,6 +76,7 @@ class c extends l.A {
                 null != E
                     ? {
                           fgStatic: E.fg_static,
+                          fgVideo: E.fg_video,
                           fgAnimated: E.fg_animated,
                           bgStatic: E.bg_static,
                           bgAnimated: E.bg_animated,
