@@ -92,7 +92,7 @@ var eh = n(540185),
     eI = n(321191),
     eb = n(958805),
     eN = n(735321),
-    eS = n(96173),
+    eS = n(714889),
     eC = n(280450),
     ek = n(403362);
 async function ey(e) {
@@ -655,8 +655,8 @@ var eq = n(435558),
     e1 = n(71393),
     e8 = n(309010),
     e2 = n(449054),
-    e3 = n(60465),
-    e4 = n(311043),
+    e4 = n(60465),
+    e3 = n(311043),
     e6 = n(636537),
     e5 = n(73153);
 let e9 = {};
@@ -739,7 +739,7 @@ async function tl(e) {
 var ti = n(927813);
 let ta = [];
 function tr(e) {
-    return e4.A.getGame(e)?.communityGuildIds ?? ta;
+    return e3.A.getGame(e)?.communityGuildIds ?? ta;
 }
 let ts = (0, m.UT)(te, {
     getQueryId: (e) => (tr(e).length > 0 ? `game-community-guilds/${e}` : null),
@@ -1239,7 +1239,7 @@ function t2(e) {
             }
             let e = e8.Ay.getCurrentlySelectedChannelId(t.id);
             null != e &&
-                e3.default.setGameProfilePendingReturn({
+                e4.default.setGameProfilePendingReturn({
                     gameId: l.id,
                     channelId: e,
                     tab: y.COMMUNITIES,
@@ -1257,7 +1257,7 @@ function t2(e) {
         onClick: d,
     });
 }
-function t3() {
+function t4() {
     var e;
     let t,
         n,
@@ -1306,7 +1306,7 @@ function t3() {
         ],
     });
 }
-var t4 = n(707554),
+var t3 = n(707554),
     t6 = n(369606),
     t5 = n(775602),
     t9 = n(21161),
@@ -1615,13 +1615,13 @@ let n0 = /^#{1,3}\s+(.+)$/,
     n1 = /^https?:\/\/\S+$/;
 var n8 = n(158390),
     n2 = n(103348),
-    n3 = n(371794);
-let n4 = new Set(["700136079562375258", "1402418693958275202", "1402418696126992445", "1417993715611467826"]);
+    n4 = n(371794);
+let n3 = new Set(["700136079562375258", "1402418693958275202", "1402418696126992445", "1417993715611467826"]);
 async function n6(e) {
     e5.h.dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_START", collectionId: e });
     try {
         let t = (
-                await (0, n3.aP)({
+                await (0, n4.aP)({
                     url: eT.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(e),
                     query: { locale: C.default.locale, include_pricing: !0, with_bundled_skus: !0 },
                     rejectWithError: !1,
@@ -1637,7 +1637,7 @@ async function n6(e) {
 }
 async function n5(e) {
     let t = ((await e6.Bo.get({ url: eT.Rsh.SIMILAR_GAMES(e), rejectWithError: !0 })).body.similar_games ?? []).filter(
-        (t) => t !== e && !n4.has(t),
+        (t) => t !== e && !n3.has(t),
     );
     e5.h.dispatch({ type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: e, games: t });
 }
@@ -2146,7 +2146,7 @@ let lp = s.memo(function (e) {
             null != e &&
                 null != g &&
                 (c(k.GameProfileTrackActionActions.Announcements),
-                e3.default.setGameProfilePendingReturn({ gameId: d, channelId: g, initialScrollOffset: t() }),
+                e4.default.setGameProfilePendingReturn({ gameId: d, channelId: g, initialScrollOffset: t() }),
                 o(),
                 li({ invite: i, guildId: e, channelId: g, analyticsLocationStack: n }));
         }, [c, o, t, i, h, g, n, d]),
@@ -2156,7 +2156,7 @@ let lp = s.memo(function (e) {
                 null != l &&
                     null != g &&
                     (c(k.GameProfileTrackActionActions.AnnouncementsItem),
-                    e3.default.setGameProfilePendingReturn({ gameId: d, channelId: g, initialScrollOffset: t() }),
+                    e4.default.setGameProfilePendingReturn({ gameId: d, channelId: g, initialScrollOffset: t() }),
                     o(),
                     li({ invite: i, guildId: l, channelId: g, messageId: e, analyticsLocationStack: n }));
             },
@@ -2590,7 +2590,7 @@ let l0 = function () {
 var l1 = n(141628),
     l8 = n(289363),
     l2 = n(793919);
-function l3() {
+function l4() {
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
         className: l2.uW,
@@ -2615,7 +2615,7 @@ function l3() {
         ],
     });
 }
-function l4(e) {
+function l3(e) {
     let { analyticsLocations: t } = e,
         n = (0, th.c)("GameProfileLinkAccount"),
         {
@@ -2635,7 +2635,7 @@ function l4(e) {
     return !u || h || null == g
         ? null
         : null == d || (o && !i)
-          ? (0, r.jsx)(l3, {})
+          ? (0, r.jsx)(l4, {})
           : !o || a
             ? null
             : (0, r.jsxs)("div", {
@@ -2858,11 +2858,11 @@ function ih() {
     let f = s.useMemo(
             () => [
                 ...(e.trailers ?? []).map((e) => {
-                    let t = (0, n3.YE)(e.application_id, e.id, e.width, "mp4");
+                    let t = (0, n4.YE)(e.application_id, e.id, e.width, "mp4");
                     return {
                         url: t,
                         proxyUrl: t,
-                        poster: (0, n3.YE)(e.application_id, e.id, e.width, "webp"),
+                        poster: (0, n4.YE)(e.application_id, e.id, e.width, "webp"),
                         type: "VIDEO",
                         width: e.width,
                         height: e.height,
@@ -3650,21 +3650,21 @@ function i1(e) {
 function i8() {
     let { game: e } = F(),
         { isFetching: t, similarGames: n } = (function (e) {
-            let t = !n4.has(e),
+            let t = !n3.has(e),
                 { data: n, isLoading: l, error: i } = n9(e, t),
                 a = t && null != n ? n : iK;
             (0, b.x)(a);
             let r = (0, m.bG)(
-                    [e4.A],
-                    () => a.some((e) => null == e4.A.getGame(e) && !e4.A.hasNoData(e) && !e4.A.didFetchingFail(e)),
+                    [e3.A],
+                    () => a.some((e) => null == e3.A.getGame(e) && !e3.A.hasNoData(e) && !e3.A.didFetchingFail(e)),
                     [a],
                 ),
                 s = (0, m.yK)(
-                    [e4.A, D.default],
+                    [e3.A, D.default],
                     () => {
                         let e = D.default.getCurrentUser()?.nsfwAllowed;
                         return a
-                            .map((e) => e4.A.getGame(e))
+                            .map((e) => e3.A.getGame(e))
                             .filter((e) => null != e)
                             .filter((t) => (0, iX.T_)(t) && !(0, O.b)(t, e) && (0, i$.zu)(t));
                     },
@@ -3710,8 +3710,8 @@ function i8() {
 }
 n(667532);
 var i2 = n(853022);
-let i3 = new Set(["1402418703554842694", "356877880938070016"]),
-    i4 = [lj.V1.EPICGAMES, lj.V1.STEAM, lj.V1.ROBLOX, lj.V1.BATTLENET, lj.V1.RIOT, lj.V1.MINECRAFT];
+let i4 = new Set(["1402418703554842694", "356877880938070016"]),
+    i3 = [lj.V1.EPICGAMES, lj.V1.STEAM, lj.V1.ROBLOX, lj.V1.BATTLENET, lj.V1.RIOT, lj.V1.MINECRAFT];
 function i6(e) {
     return (0, r.jsx)($.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
 }
@@ -3802,9 +3802,9 @@ function al(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== lj.V1.EPICGAMES || !!i3.has(l)) &&
+                            (e.category !== lj.V1.EPICGAMES || !!i4.has(l)) &&
                             (e.category !== lj.V1.STEAM || a !== ij.Y.RETIRED_ABANDONED) &&
-                            i4.includes(e.category),
+                            i3.includes(e.category),
                     ) ?? [];
                 null == t ||
                     a === ij.Y.RETIRED_ABANDONED ||
@@ -4159,7 +4159,7 @@ function aP(e) {
         null == e.heading
             ? (0, r.jsx)(s.Fragment, { children: e.runs.map((e, t) => (0, r.jsx)(aO, { run: e }, t)) }, t)
             : (0, r.jsx)(
-                  t4.F,
+                  t3.F,
                   {
                       forceLevel: aR[e.heading],
                       children: (0, r.jsx)(tm.D, {
@@ -4409,7 +4409,7 @@ let aU = s.memo(function (e) {
                     (0, r.jsxs)("div", { className: aV.X, children: [(0, r.jsx)(aa, {}), (0, r.jsx)(aD, {})] }),
                 ],
             }),
-            (0, r.jsx)(l4, { analyticsLocations: t }),
+            (0, r.jsx)(l3, { analyticsLocations: t }),
             (0, r.jsx)(tM, {}),
             (0, r.jsx)(lp, { getScrollOffset: l }),
             (0, r.jsx)(nw, { selectTab: n }),
@@ -4491,7 +4491,7 @@ function a0(e) {
                 className: aF.V,
                 children: [
                     (0, r.jsx)(aa, {}),
-                    (0, r.jsx)(l4, { analyticsLocations: t }),
+                    (0, r.jsx)(l3, { analyticsLocations: t }),
                     (0, r.jsx)(tM, {}),
                     (0, r.jsx)(iR, {}),
                     (0, r.jsx)(l0, {}),
@@ -4530,7 +4530,7 @@ function a8(e) {
                 children: [
                     (0, r.jsx)("div", { className: a1.xY, "aria-hidden": !0 }),
                     (0, r.jsx)(nu, {}),
-                    (0, r.jsx)(t4.F, {
+                    (0, r.jsx)(t3.F, {
                         children: t
                             ? (0, r.jsxs)("div", {
                                   className: a1.jC,
@@ -4550,17 +4550,17 @@ function a8(e) {
     });
 }
 var a2 = n(897503),
-    a3 = n(787188);
-function a4(e) {
+    a4 = n(787188);
+function a3(e) {
     let { applicationId: t, selectedPageIndex: n } = e;
     return (0, r.jsx)(a2.SocialLayerStorefrontInnerWrapper, {
         applicationId: t,
         pageIndex: n,
         analyticsLocation: f.A.GAME_PROFILE_GAME_SHOP,
         analyticsPlacement: ng.Ye.GAME_PROFILE_GAME_SHOP,
-        className: a3.kL,
-        scrollerClassName: a3.XG,
-        promotionBannerClassName: a3.Rv,
+        className: a4.kL,
+        scrollerClassName: a4.XG,
+        promotionBannerClassName: a4.Rv,
     });
 }
 var a6 = n(733391),
@@ -4812,8 +4812,8 @@ function a9(e) {
                                           isTwoColumn: U,
                                           analyticsLocations: $,
                                       }),
-                                  eI === y.COMMUNITIES && (0, r.jsx)(t3, {}),
-                                  eI === y.COMMERCE && (0, r.jsx)(a4, { applicationId: eS, selectedPageIndex: ek }),
+                                  eI === y.COMMUNITIES && (0, r.jsx)(t4, {}),
+                                  eI === y.COMMERCE && (0, r.jsx)(a3, { applicationId: eS, selectedPageIndex: ek }),
                               ],
                           }),
                       }),
