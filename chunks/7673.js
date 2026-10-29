@@ -663,7 +663,7 @@ function ef() {
     return (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120 } });
 }
 var ej = n(674658),
-    ev = n(258245),
+    ev = n(905276),
     ey = n(561769);
 let ek = function (e) {
     let { skuId: t, aspectRatio: n } = e,

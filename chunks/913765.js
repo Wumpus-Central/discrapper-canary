@@ -302,11 +302,12 @@ class j extends r.PureComponent {
     }
     scrollPageUp = () => {
         let e = this.scrollerRef.current;
-        (u()(null != e, "Scroller is pagedUp when not mounted"), e.scrollPageUp({ animate: !0 }));
+        (u()(null != e, "Scroller is pagedUp when not mounted"), e.scrollPageUp({ animate: !L.Ay.useReducedMotion }));
     };
     scrollPageDown = () => {
         let e = this.scrollerRef.current;
-        (u()(null != e, "Scroller is pagedDown when not mounted"), e.scrollPageDown({ animate: !0 }));
+        (u()(null != e, "Scroller is pagedDown when not mounted"),
+            e.scrollPageDown({ animate: !L.Ay.useReducedMotion }));
     };
     arrowUp = (e) => {
         let { direction: t } = e;

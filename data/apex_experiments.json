@@ -5423,6 +5423,19 @@
     }
   },
   {
+    "name": "2026-10-fractional-nitro-pricing",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": 2800,
+      "2": 4200
+    }
+  },
+  {
     "name": "2026-10-game-exit-promo-rust",
     "kind": "user",
     "defaultConfig": {

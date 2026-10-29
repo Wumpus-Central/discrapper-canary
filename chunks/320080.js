@@ -1025,10 +1025,10 @@ function nd(e) {
             ));
     a.useEffect(() => {
         function e() {
-            p.current?.scrollPageUp({ animate: !0 });
+            p.current?.scrollPageUp({ animate: !G.Ay.useReducedMotion });
         }
         function n() {
-            p.current?.scrollPageDown({ animate: !0 });
+            p.current?.scrollPageDown({ animate: !G.Ay.useReducedMotion });
         }
         return (
             ne._.subscribe(e_.jej.SCROLL_PAGE_DOWN, n),
@@ -1075,26 +1075,26 @@ function nd(e) {
         }, [t, i]),
         w = 0 === t.length && 0 === i.length,
         K = w && O,
-        G = !S || (r && w),
-        z = a.useMemo(() => no.filter((e) => D[e].length > 0), [D]),
-        X = a.useMemo(() => {
+        z = !S || (r && w),
+        X = a.useMemo(() => no.filter((e) => D[e].length > 0), [D]),
+        P = a.useMemo(() => {
             if (x)
                 return [
                     ...i.map((e) => ({ type: "message", messageGroup: [e], isUnread: !0 })),
                     ...t.map((e) => ({ type: "message", messageGroup: [e], isUnread: !1 })),
                 ];
             let e = [];
-            for (let n of z)
+            for (let n of X)
                 if ((e.push({ type: "section-header", category: n }), y[n]))
                     for (let t of D[n]) e.push({ type: "message", messageGroup: t, isUnread: n === eL.Ur.UNREAD });
             return e;
-        }, [x, i, t, z, y, D]),
-        P = a.useMemo(() => [X.length], [X.length]),
-        Y = a.useCallback((e, n) => (X[n]?.type === "section-header" ? 32 : 64), [X]),
-        H = a.useCallback(
+        }, [x, i, t, X, y, D]),
+        Y = a.useMemo(() => [P.length], [P.length]),
+        H = a.useCallback((e, n) => (P[n]?.type === "section-header" ? 32 : 64), [P]),
+        $ = a.useCallback(
             (e) => {
                 let { row: n } = e,
-                    t = X[n];
+                    t = P[n];
                 return "section-header" === t.type
                     ? (0, s.jsx)(
                           nr,
@@ -1110,15 +1110,15 @@ function nd(e) {
                       )
                     : u(t.messageGroup, t.isUnread);
             },
-            [X, y, T, A, u],
+            [P, y, T, A, u],
         ),
-        $ = X[X.length - 1],
-        F = $?.type === "section-header",
-        W = B((e) => e.setInboxReadState),
-        { selectedFilter: V } = (0, k.A)();
+        F = P[P.length - 1],
+        W = F?.type === "section-header",
+        V = B((e) => e.setInboxReadState),
+        { selectedFilter: Z } = (0, k.A)();
     (a.useEffect(() => {
-        G || V !== eL.Io.ALL || W(0 === D.UNREAD.length);
-    }, [D, G, W, V]),
+        z || Z !== eL.Io.ALL || V(0 === D.UNREAD.length);
+    }, [D, z, V, Z]),
         (function (e) {
             let { messagesByCategory: n } = e,
                 t = a.useRef(!1),
@@ -1131,16 +1131,16 @@ function nd(e) {
         })({ messagesByCategory: D }),
         a.useEffect(() => {
             I.current = 0;
-        }, [V]));
-    let Z = a.useCallback(() => {
+        }, [Z]));
+    let J = a.useCallback(() => {
         let e = no.filter((e) => y[e]).reduce((e, n) => e + D[n].length, 0),
             n = p.current?.getScrollerState();
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - e);
     }, [y, D]);
     return (
         a.useEffect(() => {
-            G || E || I.current >= 2 || 0 >= Z() || ((!F || M) && (I.current++, c?.(eL.VA.FILL_SCROLLER)));
-        }, [Z, c, G, E, F, M]),
+            z || E || I.current >= 2 || 0 >= J() || ((!W || M) && (I.current++, c?.(eL.VA.FILL_SCROLLER)));
+        }, [J, c, z, E, W, M]),
         (0, R.Hi)({
             notificationCenterVariant: j,
             entrypoint: f,
@@ -1154,7 +1154,7 @@ function nd(e) {
             onClick: nl,
             onDoubleClick: nl,
             "aria-label": e["aria-label"],
-            children: G
+            children: z
                 ? d()
                 : K
                   ? (0, s.jsx)(nc, {})
@@ -1169,10 +1169,10 @@ function nd(e) {
                                     },
                                     className: l()(ni.m4, h, { [ni.xc]: x }),
                                     onScroll: C,
-                                    sections: P,
+                                    sections: Y,
                                     sectionHeight: 0,
-                                    rowHeight: Y,
-                                    renderRow: H,
+                                    rowHeight: H,
+                                    renderRow: $,
                                     fade: !0,
                                     ...t,
                                 });
