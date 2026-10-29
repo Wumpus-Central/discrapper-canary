@@ -409,7 +409,8 @@
     height: 100%;
     justify-content: safe center;
     overflow-y: auto;
-    padding: var(--space-32);
+    padding-block: var(--custom-checkpoint-screen-vertical-inset);
+    padding-inline: clamp(var(--space-16), 4vw, var(--space-32));
     text-align: center
 }
 
@@ -443,4 +444,4 @@
     gap: var(--space-32)
 }
 
-/*# sourceMappingURL=691548.afaad81462c55894.css.map*/
+/*# sourceMappingURL=691548.1ce541d202881b1b.css.map*/
