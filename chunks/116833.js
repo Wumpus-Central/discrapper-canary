@@ -16,6 +16,7 @@ var i,
         (i[(i.QUEST_ACTIVITY_UNENROLLED = 9)] = "QUEST_ACTIVITY_UNENROLLED"),
         (i[(i.GUILD_THEME_NUX_PREVIEW = 10)] = "GUILD_THEME_NUX_PREVIEW"),
         (i[(i.BADGE_DIRECTORY_NUX = 11)] = "BADGE_DIRECTORY_NUX"),
+        (i[(i.MEMBER_VERIFICATION_SUCCESS = 12)] = "MEMBER_VERIFICATION_SUCCESS"),
         i);
 let o = {
         0: () => Promise.all([n.e("543521"), n.e("348565")]).then(n.bind(n, 732852)),
@@ -128,6 +129,7 @@ let o = {
             ]).then(n.bind(n, 392498)),
         10: () => Promise.all([n.e("138545"), n.e("646570"), n.e("744262")]).then(n.bind(n, 276837)),
         11: () => Promise.all([n.e("827788"), n.e("274726"), n.e("885200")]).then(n.bind(n, 988563)),
+        12: () => Promise.all([n.e("718818"), n.e("755865")]).then(n.bind(n, 170240)),
     },
     d = {
         0: 732852,
@@ -142,6 +144,7 @@ let o = {
         9: 392498,
         10: 276837,
         11: 988563,
+        12: 170240,
     };
 function c() {
     return null;
@@ -174,4 +177,5 @@ let _ = {
     9: u(9),
     10: u(10),
     11: u(11),
+    12: u(12),
 };

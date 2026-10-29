@@ -70,6 +70,14 @@
     gap: var(--space-8)
 }
 
+.italic_fb17a5 {
+    font-style: italic
+}
+
+.underline_fb17a5 {
+    text-decoration: underline
+}
+
 .column__8e830 {
     display: flex;
     flex-direction: column
@@ -121,6 +129,11 @@
 
 .text__594cf {
     white-space: pre-wrap
+}
+
+.text__594cf :is(h2, h3, h4, h5) {
+    display: inline;
+    margin: 0
 }
 
 .coverArtStoreLinksSummary__6fa67 {
@@ -209,4 +222,4 @@
     padding-inline: calc(var(--custom-spacing) + var(--custom-spacing))
 }
 
-/*# sourceMappingURL=dfbf45cb58922973.css.map*/
+/*# sourceMappingURL=9d057119f0524a2d.css.map*/

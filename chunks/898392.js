@@ -8178,7 +8178,7 @@ let rz = {
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Whirlwind_v1.lottiejson": () =>
         a.e("349693").then(a.t.bind(a, 754124, 19)),
     "discord_app/modules/guild_member_verification/images/islandMiddleAnimation.lottiejson": () =>
-        a.e("244678").then(a.t.bind(a, 144759, 19)),
+        a.e("739900").then(a.t.bind(a, 144759, 19)),
     "discord_app/modules/premium/web/animations/guild_sidebar_premium_entrypoint_dt.json": () =>
         a.e("515048").then(a.t.bind(a, 366043, 19)),
     "discord_app/modules/premium/web/animations/guild_sidebar_premium_entrypoint_lt.json": () =>

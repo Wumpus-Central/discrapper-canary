@@ -1,4 +1,4 @@
-n.d(t, { A: () => ef });
+n.d(t, { A: () => eh });
 var l = n(477900),
     i = n(582128),
     s = n(284009),
@@ -20,144 +20,107 @@ var l = n(477900),
     S = n(311043),
     I = n(60465),
     y = n(409626),
-    j = n(422069),
-    v = n(652215),
-    _ = n(624458),
+    _ = n(422069),
+    j = n(652215),
+    v = n(624458),
     b = n(821124),
     N = n(202384),
     T = n(513461),
     M = n(709977),
     R = n(212455),
-    D = n(224640),
-    k = n(604121),
-    L = n(430993),
-    P = n(297264),
-    O = n(834730),
-    G = n(696208),
-    U = n(915089),
-    w = n(105292),
-    F = n(788228);
-function H() {
-    return n
-        .e("244678")
-        .then(n.t.bind(n, 144759, 19))
-        .then((e) => {
-            let { default: t } = e;
-            return t;
-        });
-}
-let B = function (e) {
-    let t = (0, U.GV)();
-    return (0, l.jsxs)(D.d, {
-        ...e,
-        size: "sm",
-        children: [
-            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(k.a, { importData: H, className: F.WG }) }),
-            (0, l.jsx)(L.c, {
-                children: (0, l.jsxs)("div", {
-                    className: F.lq,
-                    children: [
-                        (0, l.jsx)(P.D, {
-                            variant: "heading-lg/semibold",
-                            className: F.wx,
-                            id: t,
-                            children: w.intl.format(w.t.z9qozJ, { guildName: e.guildName }),
-                        }),
-                        (0, l.jsx)(O.E, {
-                            variant: "text-sm/medium",
-                            color: "text-default",
-                            children: w.intl.string(w.t.nwpqyc),
-                        }),
-                    ],
-                }),
-            }),
-            (0, l.jsx)(G.H, {
-                actions: [
-                    {
-                        variant: "primary",
-                        onClick: function () {
-                            (e.onAccept(), e.onClose());
-                        },
-                        text: w.intl.string(w.t.NuzmOA),
-                    },
-                ],
-                actionsFullWidth: !0,
-            }),
-        ],
+    D = n(772707),
+    k = n(116833),
+    L = n(105292);
+let P = function (e) {
+    let { guild: t, onAccept: n, onClose: i, ...s } = e;
+    return (0, l.jsx)(D.k, {
+        ...s,
+        onClose: function () {
+            return (n(), i());
+        },
+        graphic: {
+            type: "dynamic",
+            component: k.DynamicGraphicComponent.MEMBER_VERIFICATION_SUCCESS,
+            props: { guild: t },
+        },
+        title: L.intl.formatToPlainString(L.t.TMNpew, { guildName: t.name }),
+        subtitle: L.intl.string(L.t.cLuoAc),
     });
 };
-var K = n(73153),
-    V = n(857071);
-let z = null,
-    W = null;
-function $() {
-    let e = V.A.mostRecentLurkedGuildId();
-    null != e ? ((z = e), (W = null)) : ((W = null != z ? z : null), (z = null));
+var O = n(73153),
+    G = n(857071);
+let U = null,
+    w = null;
+function F() {
+    let e = G.A.mostRecentLurkedGuildId();
+    null != e ? ((U = e), (w = null)) : ((w = null != U ? U : null), (U = null));
 }
-class q extends r.Ay.Store {
+class H extends r.Ay.Store {
     static displayName = "LurkerModePopoutStore";
     initialize() {
-        this.syncWith([V.A], $);
+        this.syncWith([G.A], F);
     }
     shouldShowPopout(e) {
-        return W === e;
+        return w === e;
     }
 }
-let Z = new q(K.h);
-var J = n(821609),
-    Y = n(521790);
-let X = function (e) {
+let B = new H(O.h);
+var K = n(297264),
+    V = n(834730),
+    z = n(821609),
+    W = n(521790);
+let $ = function (e) {
     let { guild: t, onClose: i } = e;
     return (0, l.jsxs)("div", {
-        className: Y.kL,
+        className: W.kL,
         children: [
-            (0, l.jsx)("img", { alt: "", className: Y.Sl, src: n(960416) }),
+            (0, l.jsx)("img", { alt: "", className: W.Sl, src: n(960416) }),
             (0, l.jsxs)("div", {
-                className: Y.Qs,
+                className: W.Qs,
                 children: [
-                    (0, l.jsx)(P.D, {
+                    (0, l.jsx)(K.D, {
                         variant: "heading-md/semibold",
-                        children: w.intl.format(w.t.THgVCC, { guild: t.name }),
+                        children: L.intl.format(L.t.THgVCC, { guild: t.name }),
                     }),
-                    (0, l.jsx)(O.E, {
+                    (0, l.jsx)(V.E, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: w.intl.string(w.t["1yq3nO"]),
+                        children: L.intl.string(L.t["1yq3nO"]),
                     }),
                     (0, l.jsx)("div", {
-                        className: Y.UD,
-                        children: (0, l.jsx)(J.$, { variant: "primary", text: w.intl.string(w.t.hLw0wc), onClick: i }),
+                        className: W.UD,
+                        children: (0, l.jsx)(z.$, { variant: "primary", text: L.intl.string(L.t.hLw0wc), onClick: i }),
                     }),
                 ],
             }),
         ],
     });
 };
-var Q = n(698405),
-    ee = n(557722),
-    et = n(976860),
-    en = n(363195),
-    el = n(560010),
-    ei = n(696451),
-    es = n(71393),
-    ea = n(834942),
-    er = n(576705),
-    eo = n(287809),
-    ec = n(488926),
-    ed = n(137577),
-    eu = n(786051),
-    eh = n(818023),
-    em = n(53516),
-    eg = n(514559);
-function ep(e, t) {
+var q = n(698405),
+    J = n(557722),
+    Z = n(976860),
+    Y = n(363195),
+    X = n(560010),
+    Q = n(696451),
+    ee = n(71393),
+    et = n(834942),
+    en = n(576705),
+    el = n(287809),
+    ei = n(488926),
+    es = n(137577),
+    ea = n(786051),
+    er = n(818023),
+    eo = n(53516),
+    ec = n(514559);
+function ed(e, t) {
     (null != t.gameIconUrl && (e.imageSrc = t.gameIconUrl),
-        (e.message = w.intl.format(w.t["qxH/YE"], { gameName: t.gameName })),
-        (e.buttonText = w.intl.string(w.t.DjifDP)),
+        (e.message = L.intl.format(L.t["qxH/YE"], { gameName: t.gameName })),
+        (e.buttonText = L.intl.string(L.t.DjifDP)),
         (e.buttonIcon = d.r),
         (e.buttonVariant = "primary"),
         (e.onButtonClick = t.onReturnToGameProfile));
 }
-class eA extends i.PureComponent {
+class eu extends i.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = i.createRef();
     upsellTargetRef = i.createRef();
@@ -176,17 +139,17 @@ class eA extends i.PureComponent {
     renderSuccessPopout = (e) => {
         let { closePopout: t } = e,
             { guild: n } = this.props;
-        return (a()(null != n, "This guildID cannot be null"), (0, l.jsx)(X, { onClose: t, guild: n }));
+        return (a()(null != n, "This guildID cannot be null"), (0, l.jsx)($, { onClose: t, guild: n }));
     };
     handleCancelApplication = () => {
         let { guild: e } = this.props;
         null != e &&
             (0, c.A)({
-                title: w.intl.string(w.t.aIz1oV),
-                subtitle: w.intl.string(w.t["13tjTU"]),
+                title: L.intl.string(L.t.aIz1oV),
+                subtitle: L.intl.string(L.t["13tjTU"]),
                 variant: "primary",
-                confirmText: w.intl.string(w.t["cY+Oob"]),
-                onConfirm: () => _.A.removeGuildJoinRequest(e.id),
+                confirmText: L.intl.string(L.t["cY+Oob"]),
+                onConfirm: () => v.A.removeGuildJoinRequest(e.id),
             });
     };
     handleViewApplicationRejection = () => {
@@ -217,15 +180,15 @@ class eA extends i.PureComponent {
                     n.e("84704"),
                     n.e("286197"),
                 ]).then(n.bind(n, 615715));
-                return (t) => (0, l.jsx)(e, { reason: ee.d.GUILD_PHONE_REQUIRED, ...t });
+                return (t) => (0, l.jsx)(e, { reason: J.d.GUILD_PHONE_REQUIRED, ...t });
             },
-            { modalKey: em.V },
+            { modalKey: eo.V },
         );
     };
     handleResendVerification = () => {
         p.A.verifyResend();
-        let e = eo.default.getCurrentUser()?.email;
-        null != e && (0, o.A)({ title: w.intl.string(w.t.LykQYk), subtitle: w.intl.format(w.t.azKEPy, { email: e }) });
+        let e = el.default.getCurrentUser()?.email;
+        null != e && (0, o.A)({ title: L.intl.string(L.t.LykQYk), subtitle: L.intl.format(L.t.azKEPy, { email: e }) });
     };
     handleTextAreaClick = () => {
         let { showLurkerModeUpsellPopout: e } = this.props;
@@ -235,13 +198,13 @@ class eA extends i.PureComponent {
         this.setState({ submitting: !0 });
         let e = this.props.channel.getGuildId();
         try {
-            await f.A.joinGuild(e, { source: v.Q4z.CHAT_INPUT_BLOCKER });
+            await f.A.joinGuild(e, { source: j.Q4z.CHAT_INPUT_BLOCKER });
         } catch {
             this.setState({ submitting: !1 });
         }
     };
     handleGoBack = () => {
-        (this.setState({ submitting: !0 }), (0, et.JK)().goBack());
+        (this.setState({ submitting: !0 }), (0, Z.JK)().goBack());
     };
     handleFollowAnnouncement = () => {
         let { channel: e } = this.props;
@@ -257,7 +220,7 @@ class eA extends i.PureComponent {
         let { guild: e } = this.props;
         return (
             a()(null != e, "GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined"),
-            (0, l.jsx)(Q.A, { type: Q.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
+            (0, l.jsx)(q.A, { type: q.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
         );
     };
     renderMemberVerificationSuccessModal = () => {
@@ -265,10 +228,10 @@ class eA extends i.PureComponent {
             n = t?.applicationStatus === T.B5.APPROVED;
         if (null == e || null == t || !n || (0, b.NK)(t)) return null;
         function i() {
-            null != e && null != t && _.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
+            null != e && null != t && v.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
         }
         return (0, l.jsx)(h.aF, {
-            renderModal: (t) => (0, l.jsx)(B, { ...t, onAccept: i, guildName: e.name }),
+            renderModal: (t) => (0, l.jsx)(P, { ...t, onAccept: i, guild: e }),
             onCloseRequest: i,
         });
     };
@@ -294,77 +257,77 @@ class eA extends i.PureComponent {
                 useReducedMotion: S,
                 isStaff: I,
                 guildJoinRequest: y,
-                showLinkedLobbyApplicationLoadingIndicator: j,
-                requiredLinkedLobbyApplication: _,
+                showLinkedLobbyApplicationLoadingIndicator: _,
+                requiredLinkedLobbyApplication: v,
                 shouldRelaunchLinkedLobbyApplication: b,
                 pendingGameProfileReturn: N,
                 guild: M,
             } = this.props,
             { shouldShowLurkerModeUpsellPopout: R, shouldShowLurkerModeSuccessPopout: D } = this.state,
             k = { theme: d, useReducedMotion: S };
-        if (null != N && ((e && !h) || t)) ep(k, N);
+        if (null != N && ((e && !h) || t)) ed(k, N);
         else if (e && !h) {
-            if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != p && p >= 1e3)) {
+            if (((k.message = L.intl.string(L.t.Hl0Mqh)), null != p && p >= 1e3)) {
                 let e = 1e3 * Math.floor(p / 1e3);
-                k.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
+                k.subtitle = L.intl.formatToPlainString(L.t.C5bgrC, { count: e.toLocaleString() });
             }
-            ((k.buttonText = w.intl.string(w.t["3aOv+h"])),
+            ((k.buttonText = L.intl.string(L.t["3aOv+h"])),
                 (k.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((k.onSecondaryButtonClick = this.handleJoinServer),
-                    (k.secondaryButtonText = w.intl.string(w.t.RLch70))));
+                    (k.secondaryButtonText = L.intl.string(L.t.RLch70))));
         } else if (n)
-            ((k.message = w.intl.string(w.t["Eg3/c9"])),
-                (k.buttonText = w.intl.string(w.t.fiNVin)),
+            ((k.message = L.intl.string(L.t["Eg3/c9"])),
+                (k.buttonText = L.intl.string(L.t.fiNVin)),
                 (k.onButtonClick = f ? this.handleShowMemberVerification : this.handleClaimAccount));
         else if (f)
             switch (y?.applicationStatus) {
                 case T.B5.SUBMITTED:
-                    ((k.message = w.intl.string(w.t["5iLvSx"])),
-                        (k.subtitle = w.intl.string(w.t.FdsK4h)),
-                        (k.buttonText = w.intl.string(w.t.mqtdmQ)),
+                    ((k.message = L.intl.string(L.t["5iLvSx"])),
+                        (k.subtitle = L.intl.string(L.t.FdsK4h)),
+                        (k.buttonText = L.intl.string(L.t.mqtdmQ)),
                         (k.onButtonClick = this.handleCancelApplication));
                     break;
                 case T.B5.REJECTED:
-                    ((k.message = w.intl.string(w.t.lk30cY)),
-                        (k.buttonText = w.intl.string(w.t["8RrsHr"])),
+                    ((k.message = L.intl.string(L.t.lk30cY)),
+                        (k.buttonText = L.intl.string(L.t["8RrsHr"])),
                         (k.onButtonClick = this.handleViewApplicationRejection));
                     break;
                 default:
-                    ((k.message = w.intl.string(w.t.rEBKvg)),
-                        (k.buttonText = w.intl.string(w.t["r8/DT+"])),
+                    ((k.message = L.intl.string(L.t.rEBKvg)),
+                        (k.buttonText = L.intl.string(L.t["r8/DT+"])),
                         (k.buttonVariant = "primary"),
                         (k.onButtonClick = this.handleShowMemberVerification));
             }
         else
             null != M && null != x && C
-                ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${x.name}` })),
+                ? ((k.message = L.intl.format(L.t.HbivnU, { roleName: `@${x.name}` })),
                   null === x.tags.guild_connections &&
-                      ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(x, M.id))))
-                : j || null == _
+                      ((k.buttonText = L.intl.string(L.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(x, M.id))))
+                : _ || null == v
                   ? i && !I
-                      ? ((k.message = w.intl.string(w.t["2dThMM"])),
-                        (k.buttonText = w.intl.string(w.t["50gfOv"])),
+                      ? ((k.message = L.intl.string(L.t["2dThMM"])),
+                        (k.buttonText = L.intl.string(L.t["50gfOv"])),
                         (k.onButtonClick = this.handleVerifyPhone))
                       : s
-                        ? ((k.message = w.intl.string(w.t.FkGPS5)),
-                          (k.buttonText = w.intl.string(w.t.lm1UKt)),
+                        ? ((k.message = L.intl.string(L.t.FkGPS5)),
+                          (k.buttonText = L.intl.string(L.t.lm1UKt)),
                           (k.onButtonClick = this.handleResendVerification))
                         : a
-                          ? ((k.message = w.intl.formatToPlainString(w.t.IH7RMF, { min: v.$8o.MEMBER_AGE })),
+                          ? ((k.message = L.intl.formatToPlainString(L.t.IH7RMF, { min: j.$8o.MEMBER_AGE })),
                             (k.countdown = r))
                           : o
-                            ? ((k.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: v.$8o.ACCOUNT_AGE })),
+                            ? ((k.message = L.intl.formatToPlainString(L.t["2JA2GH"], { min: j.$8o.ACCOUNT_AGE })),
                               (k.countdown = c))
-                            : null != N && ep(k, N)
-                  : ((k.imageSrc = _.getIconURL(eh.iu.SMALL) ?? void 0),
+                            : null != N && ed(k, N)
+                  : ((k.imageSrc = v.getIconURL(er.iu.SMALL) ?? void 0),
                     b
-                        ? (k.message = w.intl.format(w.t["SU2mY/"], { name: _.name }))
-                        : ((k.message = w.intl.format(w.t.EvDn1D, { name: _.name })),
-                          null != _.connectionEntrypointUrl &&
-                              ((k.buttonText = w.intl.string(w.t.S0W8Z5)),
+                        ? (k.message = L.intl.format(L.t["SU2mY/"], { name: v.name }))
+                        : ((k.message = L.intl.format(L.t.EvDn1D, { name: v.name })),
+                          null != v.connectionEntrypointUrl &&
+                              ((k.buttonText = L.intl.string(L.t.S0W8Z5)),
                               (k.onButtonClick = () => {
-                                  window.open(_.connectionEntrypointUrl, "_blank");
+                                  window.open(v.connectionEntrypointUrl, "_blank");
                               }))));
         return (0, l.jsx)(m.Y, {
             targetElementRef: this.textAreaContainerRef,
@@ -374,7 +337,7 @@ class eA extends i.PureComponent {
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
-                (0, l.jsx)(eu.A, {
+                (0, l.jsx)(ea.A, {
                     ...k,
                     children: (0, l.jsxs)("div", {
                         ref: this.textAreaContainerRef,
@@ -390,7 +353,7 @@ class eA extends i.PureComponent {
                                           (0, l.jsx)(g.D, {
                                               innerRef: this.upsellTargetRef,
                                               ...e,
-                                              className: eg._,
+                                              className: ec._,
                                               onClick: this.handleTextAreaClick,
                                               children: u,
                                           }),
@@ -402,30 +365,30 @@ class eA extends i.PureComponent {
         });
     }
 }
-function ef(e) {
+function eh(e) {
     let { channel: t, children: n } = e,
         s = t.getGuildId(),
-        a = (0, r.bG)([es.A], () => es.A.getGuild(s)),
-        o = (0, r.bG)([ea.A], () => ea.A.getCheck(s)),
-        c = t.type === v.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(v.GuildFeatures.NEWS),
-        d = (0, r.bG)([el.A], () => (c ? el.A.getFollowerStatsForChannel(t.id) : null)),
-        u = (0, r.bG)([V.A], () => V.A.isLurking(s)),
-        h = (0, r.bG)([eo.default], () => eo.default.getCurrentUser()),
+        a = (0, r.bG)([ee.A], () => ee.A.getGuild(s)),
+        o = (0, r.bG)([et.A], () => et.A.getCheck(s)),
+        c = t.type === j.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(j.GuildFeatures.NEWS),
+        d = (0, r.bG)([X.A], () => (c ? X.A.getFollowerStatsForChannel(t.id) : null)),
+        u = (0, r.bG)([G.A], () => G.A.isLurking(s)),
+        h = (0, r.bG)([el.default], () => el.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
-        g = (0, r.bG)([ei.Ay], () => null != h && (ei.Ay.getMember(s, h.id)?.isPending ?? !1)),
+        g = (0, r.bG)([Q.Ay], () => null != h && (Q.Ay.getMember(s, h.id)?.isPending ?? !1)),
         p = !!(0, M.Qd)(a),
-        A = (0, r.bG)([Z], () => Z.shouldShowPopout(s)),
-        f = (0, r.bG)([er.A], () => er.A.can(v.xBc.SEND_MESSAGES, t)),
+        A = (0, r.bG)([B], () => B.shouldShowPopout(s)),
+        f = (0, r.bG)([en.A], () => en.A.can(j.xBc.SEND_MESSAGES, t)),
         x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
             showLinkedLobbyApplicationLoadingIndicator: E,
-            requiredLinkedLobbyApplication: _,
+            requiredLinkedLobbyApplication: v,
             shouldRelaunchLinkedLobbyApplication: b,
-        } = (0, ed.A)(t.linkedLobby),
+        } = (0, es.A)(t.linkedLobby),
         N = (function (e) {
             let { channelId: t } = e,
-                n = (0, r.bG)([j.A], () => {
-                    let e = j.A.getPendingReturn();
+                n = (0, r.bG)([_.A], () => {
+                    let e = _.A.getPendingReturn();
                     return null == e || e.channelId !== t ? null : e;
                 }),
                 [l, s] = i.useState(null),
@@ -447,7 +410,7 @@ function ef(e) {
             }, [c?.id]);
             let d = c?.name;
             if (null == c || null == d) return null;
-            let u = c?.getIconURL(v.eQT) ?? void 0;
+            let u = c?.getIconURL(j.eQT) ?? void 0;
             return { gameId: c.id, gameName: d, gameIconUrl: u, isReturning: a, onReturnToGameProfile: o };
         })({ channelId: t.id }),
         D = {
@@ -456,8 +419,8 @@ function ef(e) {
             isLurking: u,
             isFollowable: c,
             shouldShowLurkerModeSuccessPopout: A,
-            showLurkerModeUpsellPopout: u && null != a && ec.MJ(v.xBc.SEND_MESSAGES, t),
-            theme: en.A.theme,
+            showLurkerModeUpsellPopout: u && null != a && ei.MJ(j.xBc.SEND_MESSAGES, t),
+            theme: Y.A.theme,
             canSendMessages: f,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: p,
@@ -465,11 +428,11 @@ function ef(e) {
             guildJoinRequestStatus: x?.applicationStatus ?? T.B5.STARTED,
             guildJoinRequest: x,
             showLinkedLobbyApplicationLoadingIndicator: E,
-            requiredLinkedLobbyApplication: _,
+            requiredLinkedLobbyApplication: v,
             shouldRelaunchLinkedLobbyApplication: b,
             useReducedMotion: C.Ay.useReducedMotion,
             isStaff: m,
             pendingGameProfileReturn: N,
         };
-    return (0, l.jsx)(eA, { ...D, channel: t, children: n });
+    return (0, l.jsx)(eu, { ...D, channel: t, children: n });
 }
