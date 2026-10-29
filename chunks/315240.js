@@ -14,18 +14,18 @@ var i,
     A = n(287809),
     p = n(977997),
     m = n(927813),
-    I = n(935208),
-    E = n(914853),
+    E = n(935208),
+    I = n(914853),
     S = n(41984),
     C = n(956753),
     _ = n(296027),
-    T =
+    N =
         (((i = {}).GuildText = "GUILD_TEXT"),
         (i.GuildVoice = "GUILD_VOICE"),
         (i.DirectMessage = "DIRECT_MESSAGE"),
         (i.GroupDM = "GROUP_DM"),
         i);
-function N(e, t, n, i) {
+function T(e, t, n, i) {
     let l = 0;
     for (let [r, s] of e.entries()) {
         let e = i(r);
@@ -68,12 +68,12 @@ class v {
             let n = M(this.signals.lastUnreadAtMs, e, 18e5);
             ((t += 0.8 * n), (this.scoreInfo.rawSignalsScore.lastUnreadAtMs = n));
         }
-        let n = N(this.signals.recentMessageAuthorIds, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let n = T(this.signals.recentMessageAuthorIds, e, 6e5, this.providers.getNormalizedUserAffinity);
         return ((this.scoreInfo.rawSignalsScore.recentMessageAuthorIds = n), (t += 1.2 * n));
     }
     _computeActivityScore(e) {
         if (!this.signals.isTyping) return 0;
-        let t = N(this.signals.typingUserIdsWithTimestampMs, e, 15e3, this.providers.getNormalizedUserAffinity);
+        let t = T(this.signals.typingUserIdsWithTimestampMs, e, 15e3, this.providers.getNormalizedUserAffinity);
         return ((this.scoreInfo.rawSignalsScore.typingUserIdsWithTimestampMs = t), 1.5 * t);
     }
     getScoreWithoutPenalty(e) {
@@ -142,28 +142,28 @@ class y {
     }
     _computeVoiceUsersScore(e) {
         if (0 === this.signals.voiceUsersWithJoinTimestampMs.size) return 0;
-        let t = N(this.signals.voiceUsersWithJoinTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let t = T(this.signals.voiceUsersWithJoinTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
         return ((this.scoreInfo.rawSignalsScore.voiceUsersWithJoinTimestampMs = t), 1.25 * t);
     }
     _computeVoiceActivityScore(e) {
         let t = 0;
         (null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, M(this.signals.lastVoiceJoinAtMs, e, 12e4))),
             (this.scoreInfo.rawSignalsScore.lastVoiceJoinAtMs = t));
-        let n = N(this.signals.lastUnmuteActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity);
+        let n = T(this.signals.lastUnmuteActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity);
         return (
             (this.scoreInfo.rawSignalsScore.lastUnmuteActivityAtMs = n),
             (n = Math.max(
                 n,
-                N(this.signals.lastUndeafenActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity),
+                T(this.signals.lastUndeafenActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity),
             )),
             (this.scoreInfo.rawSignalsScore.lastUndeafenActivityAtMs = n),
             1.25 * (n + t)
         );
     }
     _computeStreamUsersScore(e) {
-        let t = N(this.signals.streamUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let t = T(this.signals.streamUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
         this.scoreInfo.rawSignalsScore.streamUsersWithTimestampMs = t;
-        let n = N(this.signals.videoUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let n = T(this.signals.videoUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
         return ((this.scoreInfo.rawSignalsScore.videoUsersWithTimestampMs = n), 2 * (t + n));
     }
     computeScore(e) {
@@ -401,7 +401,7 @@ function $(e, t) {
     return (
         e.score *
         (1 + n) *
-        (e.candidate.kind === T.DirectMessage || e.candidate.kind === T.GroupDM ? 1 : 1 + L(e.candidate, t))
+        (e.candidate.kind === N.DirectMessage || e.candidate.kind === N.GroupDM ? 1 : 1 + L(e.candidate, t))
     );
 }
 function Z() {
@@ -439,7 +439,7 @@ function X() {
 function Q(e, t) {
     let n = u.A.getChannel(e);
     if (null == n) return !1;
-    let [i] = U.A.isFavorite(E.x.MESSAGES, e);
+    let [i] = U.A.isFavorite(I.x.MESSAGES, e);
     if (i || n.isPrivate?.()) return !1;
     let l = n.getGuildId?.() ?? null;
     return (
@@ -461,7 +461,7 @@ function ee(e, t, n) {
         recipients: i.recipients ?? [],
         isVocal: () => i.isVocal?.() ?? !1,
     });
-    if (null == l || l.kind !== T.GuildText) return null;
+    if (null == l || l.kind !== N.GuildText) return null;
     let r = H.getChannel(e);
     if (null != r) return r;
     let s = new w(l, t, n);
@@ -480,7 +480,7 @@ function et(e, t, n) {
         recipients: i.recipients ?? [],
         isVocal: () => i.isVocal?.() ?? !1,
     });
-    if (null == l || l.kind !== T.GuildVoice) return null;
+    if (null == l || l.kind !== N.GuildVoice) return null;
     let r = B.getChannel(e);
     if (null != r) return r;
     let s = new w(l, t, n);
@@ -506,7 +506,7 @@ function ei() {
                 if ((0, o.ke)(s.type)) {
                     let e = s.lastMessageId;
                     if (null == e) continue;
-                    let n = I.default.extractTimestamp(e);
+                    let n = E.default.extractTimestamp(e);
                     if (n < t || null != H.getChannel(i)) continue;
                     let r = q();
                     ((r.lastMessageAtMs = n),
@@ -561,16 +561,16 @@ class er extends r.Ay.Store {
     getScoreForChannelId(e) {
         let t = H.getChannel(e) ?? B.getChannel(e);
         if (null == t) return null;
-        let n = K({ includeVcProbability: t.candidate.kind === T.GuildVoice });
+        let n = K({ includeVcProbability: t.candidate.kind === N.GuildVoice });
         return $(t, n);
     }
     getScoreBreakdownForChannelId(e) {
         let t = H.getChannel(e) ?? B.getChannel(e) ?? null;
         if (null == t) return null;
-        let n = t.candidate.kind === T.GuildVoice ? "VOICE" : "TEXT",
-            i = K({ includeVcProbability: t.candidate.kind === T.GuildVoice }),
+        let n = t.candidate.kind === N.GuildVoice ? "VOICE" : "TEXT",
+            i = K({ includeVcProbability: t.candidate.kind === N.GuildVoice }),
             l = x(t.candidate, { voiceGuildId: z(), mostRecentGuildId: k }),
-            r = t.candidate.kind === T.DirectMessage || t.candidate.kind === T.GroupDM,
+            r = t.candidate.kind === N.DirectMessage || t.candidate.kind === N.GroupDM,
             s = r ? 0 : L(t.candidate, i),
             a = t.score;
         return {
@@ -593,7 +593,7 @@ let ea = new er(
         ? {}
         : {
               OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: es(function (e) {
-                  if (e.tab !== E.x.MESSAGES) return !1;
+                  if (e.tab !== I.x.MESSAGES) return !1;
                   let t = e.targetId;
                   if (e.isFavorite) {
                       let e = null != H.getChannel(t),

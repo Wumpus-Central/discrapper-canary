@@ -23,7 +23,7 @@ function x(e) {
             joinRequest: S,
             isModmin: I,
             guildId: y,
-            maxMembers: j,
+            maxMembers: _,
         } = (0, i.cf)([m.A, d.A, u.A], () => {
             let e = m.A.getRequest(E),
                 t = d.A.getGuild(e?.guildId);
@@ -34,8 +34,8 @@ function x(e) {
                 maxMembers: t?.maxMembers,
             };
         }),
-        v = (0, i.bG)([c.A], () => (null != y ? c.A.getMemberCount(y) : 0)),
-        _ = null != j && (v ?? 0) >= j,
+        j = (0, i.bG)([c.A], () => (null != y ? c.A.getMemberCount(y) : 0)),
+        v = null != _ && (j ?? 0) >= _,
         { approveRequest: b, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
     return null != S && S.applicationStatus === g.B5.SUBMITTED && I
         ? (0, l.jsxs)("div", {
@@ -43,14 +43,14 @@ function x(e) {
               children: [
                   (0, l.jsx)(s.m, {
                       text: f.intl.string(f.t.cdPGbE),
-                      shouldShow: _,
+                      shouldShow: v,
                       children: (0, l.jsx)(a.$, {
                           variant: "active",
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
                           loading: T,
                           onClick: b,
-                          disabled: _,
+                          disabled: v,
                       }),
                   }),
                   (0, l.jsx)(a.$, {

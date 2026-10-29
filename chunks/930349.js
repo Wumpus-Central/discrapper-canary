@@ -65,8 +65,8 @@ function A(e) {
             disabled: A = !1,
             buttonRef: I,
             affordance: y,
-            errorMessageId: C,
-            ...k
+            errorMessageId: k,
+            ...C
         } = e,
         x = "add" === y,
         N = a.useRef(null),
@@ -75,7 +75,7 @@ function A(e) {
         E = a.useRef(null),
         w = I ?? E,
         R = a.useId(),
-        S = null != C ? `${R} ${C}` : R,
+        S = null != k ? `${R} ${k}` : R,
         D =
             null != y && "add" !== y
                 ? {
@@ -92,7 +92,7 @@ function A(e) {
         disabled: A,
         isInteracting: P,
         deleteButton: D,
-        hasError: null != C,
+        hasError: null != k,
         children: (0, t.jsxs)("div", {
             className: p.tileInner,
             children: [
@@ -104,11 +104,11 @@ function A(e) {
                     "aria-label": u,
                     onClick: A ? void 0 : l,
                     "aria-disabled": A,
-                    "aria-invalid": null != C || void 0,
+                    "aria-invalid": null != k || void 0,
                     "aria-describedby": S,
-                    "aria-errormessage": C,
+                    "aria-errormessage": k,
                     tabIndex: A ? -1 : 0,
-                    ...k,
+                    ...C,
                 }),
                 c && !A && (0, t.jsx)(b, {}),
                 x &&

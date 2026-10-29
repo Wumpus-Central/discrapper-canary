@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     YK: "spacing__856b5",
     bj: "largeSpacing__856b5",
     a: "lighten__856b5",

@@ -32,7 +32,7 @@ let p = { x: 0, y: 0 },
         doZoom: () => {},
         wrapperRef: l.createRef(),
     }),
-    x = (0, s.debounce)((e, t, n) => {
+    f = (0, s.debounce)((e, t, n) => {
         let i = null,
             l = null;
         if (null != n && (0, o.wL)(n)) {
@@ -47,10 +47,10 @@ let p = { x: 0, y: 0 },
             share_application_id: l,
         });
     }, 2e3),
-    f = l.memo(function (e) {
+    x = l.memo(function (e) {
         let { streamKey: t, minZoom: n = 1, maxZoom: o = 5, children: u } = e,
             [c, d] = l.useState(n),
-            [m, f] = l.useState(!1),
+            [m, x] = l.useState(!1),
             [h, A] = l.useState(!1),
             [v, E] = l.useState(!1),
             [C, j] = l.useState(!1),
@@ -77,19 +77,19 @@ let p = { x: 0, y: 0 },
                 (e, i, l) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == i || a === c) return;
-                    f(!0);
+                    x(!0);
                     let u = a / c;
                     (N((e) => T({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
                         d(a),
-                        x(a, l, t),
+                        f(a, l, t),
                         null == y.current && (y.current = new r.Ep()),
                         y.current.start(2e3, () => {
-                            f(!1);
+                            x(!1);
                         }));
                 },
                 [T, o, n, t, c],
             ),
-            R = l.useMemo(
+            D = l.useMemo(
                 () => ({
                     enabled: !0,
                     zoomLevel: c,
@@ -97,7 +97,7 @@ let p = { x: 0, y: 0 },
                     maxZoom: o,
                     setZoomLevel: d,
                     isZooming: m,
-                    setIsZooming: f,
+                    setIsZooming: x,
                     isDragging: h,
                     setIsDragging: A,
                     isWheeling: v,
@@ -114,8 +114,8 @@ let p = { x: 0, y: 0 },
                 }),
                 [T, L, h, C, v, m, o, n, _, I, c],
             );
-        return (0, i.jsx)(g.Provider, { value: R, children: u });
+        return (0, i.jsx)(g.Provider, { value: D, children: u });
     });
 function h(e) {
-    return e.enableZoom ? (0, i.jsx)(f, { ...e }) : e.children;
+    return e.enableZoom ? (0, i.jsx)(x, { ...e }) : e.children;
 }

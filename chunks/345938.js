@@ -3,7 +3,7 @@ var r = n(477900),
     i = n(192308),
     o = n(294454);
 let s = (t) => {
-    let { sku: e, guildId: s, source: a, analyticsLocations: u, analyticsContext: l } = t;
+    let { sku: e, guildId: s, source: a, analyticsLocations: l, analyticsContext: u } = t;
     (0, i.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
@@ -37,7 +37,7 @@ let s = (t) => {
                 n.e("510404"),
             ]).then(n.bind(n, 763375));
             return (n) =>
-                (0, r.jsx)(t, { ...n, sku: e, guildId: s, source: a, analyticsLocations: u, analyticsContext: l });
+                (0, r.jsx)(t, { ...n, sku: e, guildId: s, source: a, analyticsLocations: l, analyticsContext: u });
         },
         { stackingBehavior: "stack", modalKey: o.aU },
     );

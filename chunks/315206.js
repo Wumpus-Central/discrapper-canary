@@ -14,8 +14,8 @@ var l = n(31728),
     A = n(933958),
     p = n(969151),
     m = n(594007),
-    I = n(227042),
-    E = n(652215);
+    E = n(227042),
+    I = n(652215);
 function S(e) {
     let t = e ?? i;
     null != t && u.A.isOpen(t) && l.jD(t);
@@ -37,14 +37,14 @@ function _() {
         let e = (0, m.A)(t.location.id, t.applicationId);
         return (
             !((0, g.f)() || u.A.isOpen(e)) &&
-            (null != i && l.VN(i), l.ho(e, E.o1q.ACTIVITY, { channel: r }), void (i = e))
+            (null != i && l.VN(i), l.ho(e, I.o1q.ACTIVITY, { channel: r }), void (i = e))
         );
     }
 }
-function T() {
-    return (0, I.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
+function N() {
+    return (0, E.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
 }
-class N extends r.A {
+class T extends r.A {
     _initialize() {
         (c.Ay.addChangeListener(_),
             h.A.addChangeListener(_),
@@ -52,7 +52,7 @@ class N extends r.A {
             f.A.addChangeListener(_),
             s.A.addChangeListener(_),
             A.Ay.addChangeListener(_),
-            o.A.addChangeListener(T));
+            o.A.addChangeListener(N));
     }
     _terminate() {
         (c.Ay.removeChangeListener(_),
@@ -61,7 +61,7 @@ class N extends r.A {
             f.A.removeChangeListener(_),
             s.A.removeChangeListener(_),
             A.Ay.removeChangeListener(_),
-            o.A.removeChangeListener(T));
+            o.A.removeChangeListener(N));
     }
 }
-let v = new N();
+let v = new T();

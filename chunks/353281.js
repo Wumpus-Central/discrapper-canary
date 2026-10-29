@@ -1,10 +1,10 @@
-l.d(t, { H: () => o, J: () => i });
-var n = l(477900),
-    r = l(582128);
+t.d(l, { H: () => o, J: () => i });
+var n = t(477900),
+    r = t(582128);
 let a = (0, r.createContext)(null);
 function i(e) {
-    let { navigateToStorefrontPage: t, viewProductDetails: l, children: i } = e,
-        o = r.useMemo(() => ({ navigateToStorefrontPage: t, viewProductDetails: l }), [t, l]);
+    let { navigateToStorefrontPage: l, viewProductDetails: t, children: i } = e,
+        o = r.useMemo(() => ({ navigateToStorefrontPage: l, viewProductDetails: t }), [l, t]);
     return (0, n.jsx)(a.Provider, { value: o, children: i });
 }
 function o() {

@@ -1,4 +1,4 @@
-l.d(t, { a: () => i });
+l.d(t, { a: () => a });
 var n = l(840251),
-    a = l(688151);
-let i = new n.E([], a.$G.COLLECTIBLES_SHOP_OPEN, { location: "collectibles shop open" });
+    i = l(688151);
+let a = new n.E([], i.$G.COLLECTIBLES_SHOP_OPEN, { location: "collectibles shop open" });

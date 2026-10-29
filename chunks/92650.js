@@ -18,11 +18,11 @@ function C(e) {
     let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
         E = (0, f.A)(),
         [S, I] = l.useState(!1),
-        [y, j] = l.useState(!1),
-        [v, _] = l.useState(!1),
+        [y, _] = l.useState(!1),
+        [j, v] = l.useState(!1),
         [b, N] = l.useState(!1),
         [T, M] = l.useState(!1),
-        R = S || y || v,
+        R = S || y || j,
         D = l.useCallback(
             async (e) => {
                 if (!R) {
@@ -42,14 +42,14 @@ function C(e) {
         k = l.useCallback(
             async (e) => {
                 if (!R) {
-                    j(!0);
+                    _(!0);
                     try {
                         (await (0, h.UK)(e), M(!0), C?.());
                     } catch (t) {
                         let e = new a.LG(t);
                         x?.(e);
                     } finally {
-                        j(!1);
+                        _(!1);
                     }
                 }
             },
@@ -58,7 +58,7 @@ function C(e) {
         L = l.useCallback(
             async (e) => {
                 if (R) return;
-                j(!0);
+                _(!0);
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
@@ -67,7 +67,7 @@ function C(e) {
                     let e = new a.LG(t);
                     x?.(e);
                 } finally {
-                    j(!1);
+                    _(!1);
                 }
             },
             [R, C, x],
@@ -76,7 +76,7 @@ function C(e) {
             async (e) => {
                 if (!R) {
                     if (null != t && null == o.A.getMutualGuilds(t.id)) {
-                        _(!0);
+                        v(!0);
                         try {
                             await (0, c.A)(t.id, t.getAvatarURL(void 0, 80), {
                                 withMutualGuilds: !0,
@@ -84,7 +84,7 @@ function C(e) {
                             });
                         } catch (e) {
                         } finally {
-                            _(!1);
+                            v(!1);
                         }
                     }
                     !(function (e) {
@@ -164,7 +164,7 @@ function C(e) {
         markAsNotSpam: O,
         isAcceptLoading: S,
         isRejectLoading: y,
-        isUserProfileLoading: v,
+        isUserProfileLoading: j,
         isOptimisticAccepted: b,
         isOptimisticRejected: T,
     };

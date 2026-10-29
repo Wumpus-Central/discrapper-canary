@@ -1,25 +1,25 @@
-n.d(t, { U: () => o });
+n.d(e, { U: () => o });
 var i = n(359800),
     r = n(206828),
     l = n(429913),
-    s = n(792620),
+    u = n(792620),
     a = n(942370);
-function o(e) {
-    let t = (0, s.I6)(e),
-        n = (0, s.xc)(e),
+function o(t) {
+    let e = (0, u.I6)(t),
+        n = (0, u.xc)(t),
         o = (0, l.h)(n),
         {
-            fetched: u,
+            fetched: s,
             hasAlreadyLinked: c,
-            canStartAuthorization: d,
-            startAuthorization: f,
-        } = (0, r.RD)(t ? o : null, { allowedFlows: [a._.WEB] }),
-        m = (0, i.z)(f, c, { showInGameModal: !1, showToastOnSuccess: !0 });
+            canStartAuthorization: f,
+            startAuthorization: g,
+        } = (0, r.RD)(e ? o : null, { allowedFlows: [a._.WEB] }),
+        m = (0, i.z)(g, c, { showInGameModal: !1, showToastOnSuccess: !0 });
     return {
-        isInGameQuest: t,
-        fetched: u,
-        hasAlreadyLinked: u ? c : void 0,
-        canStartAuthorization: d,
+        isInGameQuest: e,
+        fetched: s,
+        hasAlreadyLinked: s ? c : void 0,
+        canStartAuthorization: f,
         startAuthorization: m,
     };
 }

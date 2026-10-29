@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, oN: () => C });
+n.d(t, { Ay: () => N, oN: () => C });
 var i,
     l,
     r = n(477900),
@@ -14,8 +14,8 @@ var i,
     A = n(235986),
     p = n(174459),
     m = n(652215),
-    I = n(105292),
-    E = n(51377),
+    E = n(105292),
+    I = n(51377),
     S = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
     C = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
 class _ extends s.PureComponent {
@@ -44,17 +44,17 @@ class _ extends s.PureComponent {
             f = "left" === t || n,
             g = "center" === t || !f;
         return (0, r.jsxs)(u.l, {
-            className: o()(E.Sy, s),
+            className: o()(I.Sy, s),
             children: [
                 null != e &&
                     (0, r.jsx)(A.A, {
-                        className: E.il,
+                        className: I.il,
                         justify: f ? A.A.Justify.START : A.A.Justify.CENTER,
                         children: e(),
                     }),
-                (0, r.jsx)(d.H, { className: o()({ [E.Av]: g, [E.gH]: f }), children: i }),
+                (0, r.jsx)(d.H, { className: o()({ [I.Av]: g, [I.gH]: f }), children: i }),
                 (0, r.jsx)("string" == typeof l ? "p" : "div", {
-                    className: o()({ [E.IF]: g, [E.If]: f }),
+                    className: o()({ [I.IF]: g, [I.If]: f }),
                     children: l,
                 }),
                 (0, r.jsxs)(c.e, {
@@ -65,13 +65,13 @@ class _ extends s.PureComponent {
                             fullWidth: !0,
                             variant: "primary",
                             onClick: this.handleDismiss,
-                            text: I.intl.string(I.t["+IrDzN"]),
+                            text: E.intl.string(E.t["+IrDzN"]),
                         }),
                         (0, r.jsx)(h.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             onClick: a,
-                            text: I.intl.string(I.t["33wtxt"]),
+                            text: E.intl.string(E.t["33wtxt"]),
                         }),
                     ],
                 }),
@@ -79,7 +79,7 @@ class _ extends s.PureComponent {
         });
     }
 }
-class T extends s.PureComponent {
+class N extends s.PureComponent {
     static TextAlignments = S;
     static defaultProps = { textAlign: "left" };
     onClickComplete = (e) => {
@@ -100,16 +100,16 @@ class T extends s.PureComponent {
                     ...this.props,
                     className: o()(
                         {
-                            [E.sQ]: "bottom" === n,
-                            [E.eV]: !l && !u,
-                            [E.tJ]: !l && u,
-                            [E.II]: l && !u,
-                            [E.HU]: l && u,
-                            [E.pG]: "right" === n,
-                            [E.Mn]: "top" === n,
-                            [E.kb]: "left" === n,
-                            [E.ks]: "top" === s,
-                            [E.Eo]: "middle" === s,
+                            [I.sQ]: "bottom" === n,
+                            [I.eV]: !l && !u,
+                            [I.tJ]: !l && u,
+                            [I.II]: l && !u,
+                            [I.HU]: l && u,
+                            [I.pG]: "right" === n,
+                            [I.Mn]: "top" === n,
+                            [I.kb]: "left" === n,
+                            [I.ks]: "top" === s,
+                            [I.Eo]: "middle" === s,
                             "force-theme": null != i,
                         },
                         e,

@@ -1,20 +1,20 @@
-l.d(t, { A: () => E });
+l.d(t, { A: () => d });
 var n = l(477900);
 l(582128);
-var a = l(877624),
-    i = l(554146),
+var i = l(877624),
+    a = l(554146),
     r = l(131607),
     s = l(549996),
     o = l(613556),
     c = l(814124),
     u = l(49999);
-function E(e) {
+function d(e) {
     let { tab: t, handleTransition: l } = e,
-        E = (0, s.c)(a.C.SHOP_NAGBAR),
-        d = E?.properties.properties.oneofKind === "shopNagbar" ? E.properties.properties.shopNagbar : null,
-        p = E?.promotionId,
-        [A, _] = (0, r.Cc)(null != d && null != p ? i.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, p ?? "", u.m.NOTICE_BAR, !0);
-    return null != E && null != d && null != A
-        ? (0, n.jsx)(o.A, { shopNagbar: d, componentId: E.id, promotionId: E.promotionId, tab: t, onDismiss: _ })
+        d = (0, s.c)(i.C.SHOP_NAGBAR),
+        E = d?.properties.properties.oneofKind === "shopNagbar" ? d.properties.properties.shopNagbar : null,
+        A = d?.promotionId,
+        [p, C] = (0, r.Cc)(null != E && null != A ? a.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, A ?? "", u.m.NOTICE_BAR, !0);
+    return null != d && null != E && null != p
+        ? (0, n.jsx)(o.A, { shopNagbar: E, componentId: d.id, promotionId: d.promotionId, tab: t, onDismiss: C })
         : (0, n.jsx)(c.A, { tab: t, handleTransition: l });
 }

@@ -1,35 +1,35 @@
-r.d(o, { A: () => A });
-var e = r(477900),
-    C = r(582128),
-    E = r(503698),
-    c = r.n(E),
-    d = r(835517),
-    s = r(399667),
-    _ = r(819648),
-    n = r(881245);
-function A(a) {
-    let { character: o, size: r, className: E } = a,
-        A = C.useMemo(() => (0, _.vF)(o, Math.round(r * (0, d.A)())), [o, r]),
-        N = C.useMemo(() => (0, s.O)(o), [o]),
-        R = C.useRef(new Set()),
-        [O, t] = C.useState(!1);
-    function l(a) {
-        (R.current.add(a), A.every((a) => R.current.has(a)) && t(!0));
+r.d(E, { A: () => e });
+var C = r(477900),
+    o = r(582128),
+    N = r(503698),
+    a = r.n(N),
+    O = r(835517),
+    A = r(399667),
+    R = r(819648),
+    s = r(881245);
+function e(_) {
+    let { character: E, size: r, className: N } = _,
+        e = o.useMemo(() => (0, R.vF)(E, Math.round(r * (0, O.A)())), [E, r]),
+        T = o.useMemo(() => (0, A.O)(E), [E]),
+        I = o.useRef(new Set()),
+        [P, l] = o.useState(!1);
+    function n(_) {
+        (I.current.add(_), e.every((_) => I.current.has(_)) && l(!0));
     }
     return (
-        C.useLayoutEffect(() => {
-            let a = A.filter((a) => R.current.has(a));
-            ((R.current = new Set(a)), t(a.length === A.length));
-        }, [A]),
-        (0, e.jsx)("div", {
+        o.useLayoutEffect(() => {
+            let _ = e.filter((_) => I.current.has(_));
+            ((I.current = new Set(_)), l(_.length === e.length));
+        }, [e]),
+        (0, C.jsx)("div", {
             role: "img",
-            "aria-label": N,
-            className: c()(n.GG, { [n.Kc]: O }, E),
-            children: A.map((a) =>
-                (0, e.jsx)(
+            "aria-label": T,
+            className: a()(s.GG, { [s.Kc]: P }, N),
+            children: e.map((_) =>
+                (0, C.jsx)(
                     "img",
-                    { src: a, alt: "", draggable: !1, className: n.qd, onLoad: () => l(a), onError: () => l(a) },
-                    a,
+                    { src: _, alt: "", draggable: !1, className: s.qd, onLoad: () => n(_), onError: () => n(_) },
+                    _,
                 ),
             ),
         })

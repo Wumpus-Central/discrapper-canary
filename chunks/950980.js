@@ -52,11 +52,11 @@ function N(e) {
         });
     if (null == t || null == v) return null;
     let _ = (0, f.hp)(v).find((e) => e.value === r),
-        O = null != _ ? E.Ps.EXPERIMENT_TREATMENT : E.Ps.EXPERIMENT,
-        P = null != b && null != _ && b.variantId === _.value,
-        w = (0, l.jsx)(k, { url: n }),
+        w = null != _ ? E.Ps.EXPERIMENT_TREATMENT : E.Ps.EXPERIMENT,
+        O = null != b && null != _ && b.variantId === _.value,
+        P = (0, l.jsx)(k, { url: n }),
         D = null;
-    return (O === E.Ps.EXPERIMENT_TREATMENT && null != _
+    return (w === E.Ps.EXPERIMENT_TREATMENT && null != _
         ? (D = (0, l.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: _.label }))
         : null != M &&
           (D = (0, l.jsxs)(c.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", L] })),
@@ -86,7 +86,7 @@ function N(e) {
                                           }),
                                       ],
                                   }),
-                                  w,
+                                  P,
                               ],
                           }),
                       }),
@@ -94,12 +94,12 @@ function N(e) {
                   null != _
                       ? (0, l.jsx)(m.$, {
                             fullWidth: !0,
-                            variant: P ? "critical-primary" : "primary",
-                            text: P ? `Clear Treatment ${_.value}` : `Apply Treatment ${_.value}`,
+                            variant: O ? "critical-primary" : "primary",
+                            text: O ? `Clear Treatment ${_.value}` : `Apply Treatment ${_.value}`,
                             onClick: function () {
                                 null == t ||
                                     null == v ||
-                                    (null != _ && (P ? (0, x.t$)(v.system, t, null) : (0, x.t$)(v.system, t, _.value)));
+                                    (null != _ && (O ? (0, x.t$)(v.system, t, null) : (0, x.t$)(v.system, t, _.value)));
                             },
                         })
                       : (0, l.jsx)("div", {

@@ -1,18 +1,18 @@
-l.d(t, { A: () => m, O: () => d });
-var n = l(477900),
-    r = l(503698),
-    a = l.n(r),
-    i = l(834730),
-    o = l(318254),
-    s = l(206285),
-    c = l(105292),
-    u = l(919700);
+t.d(l, { A: () => m, O: () => d });
+var n = t(477900),
+    r = t(503698),
+    a = t.n(r),
+    i = t(834730),
+    o = t(318254),
+    s = t(206285),
+    c = t(105292),
+    u = t(919700);
 function d(e) {
-    let { variant: t, color: l = "text-default", className: r, orbPrice: a } = e;
+    let { variant: l, color: t = "text-default", className: r, orbPrice: a } = e;
     return (0, n.jsx)(i.E, {
         className: r,
-        variant: t,
-        color: l,
+        variant: l,
+        color: t,
         lineClamp: 1,
         children: c.intl.format(s.default["0oZGvW"], {
             orbPrice: a,
@@ -21,11 +21,11 @@ function d(e) {
     });
 }
 function m(e) {
-    let { orbsGate: t, className: l, orbPrice: r, fiatPrice: o, textDefaultColor: m = "text-default" } = e;
-    return "HIDDEN" === t
+    let { orbsGate: l, className: t, orbPrice: r, fiatPrice: o, textDefaultColor: m = "text-default" } = e;
+    return "HIDDEN" === l
         ? null
         : (0, n.jsx)(i.E, {
-              className: a()(u.Q, l),
+              className: a()(u.Q, t),
               variant: "text-md/medium",
               color: "text-muted",
               lineClamp: 1,

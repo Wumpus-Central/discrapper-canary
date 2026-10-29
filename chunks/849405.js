@@ -1,4 +1,4 @@
-_.exports = {
+i.exports = {
     Wi: "descriptionWrapper__43963",
     z_: "subText__43963",
     q3: "indicator__43963",

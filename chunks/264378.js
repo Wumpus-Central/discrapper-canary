@@ -12,8 +12,8 @@ var l = n(503698),
     m = n(287809),
     p = n(174459),
     g = n(24482),
-    x = n(834708),
-    f = n(154486);
+    f = n(834708),
+    x = n(154486);
 let h = (0, n(945810).mj)({
     name: "2026-10-hd-streaming-contextual-referrals",
     kind: "user",
@@ -28,13 +28,13 @@ function j(e) {
     let { streamerId: t, idle: n } = e,
         l = (0, r.bG)([m.default], () => m.default.getUser(t) ?? null, [t]),
         s = g.Ay.canStreamQuality(g.Ay.StreamQuality.HIGH, l),
-        a = (0, x.d)(l),
+        a = (0, f.d)(l),
         o = h.useConfig({ location: "HD_STREAMING_CONTEXTUAL_UPSELL" }).enabled;
     return null != l && a && !s && o ? (0, i.jsx)(I, { streamer: l, idle: n }) : null;
 }
 function I(e) {
     let { streamer: t, idle: n } = e;
-    return (0, f.p)(t.id) ? (0, i.jsx)(S, { recipient: t, idle: n }) : null;
+    return (0, x.p)(t.id) ? (0, i.jsx)(S, { recipient: t, idle: n }) : null;
 }
 function S(e) {
     let { recipient: t, idle: l } = e,

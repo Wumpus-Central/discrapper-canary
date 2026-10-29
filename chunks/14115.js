@@ -1,9 +1,9 @@
-n.d(t, { v: () => r });
-let l = { EARN: 0.25, SPEND: 0.3 };
-function r(e, t) {
-    let { targetTime: n, isRenderedWithoutLottieAnimation: r } = t;
-    if (r) return { duration: n, delay: 0 };
-    let a = e > 0,
-        u = n * l[a ? "EARN" : "SPEND"];
-    return { duration: u, delay: a ? n - u : 0 };
+n.d(t, { v: () => a });
+let r = { EARN: 0.25, SPEND: 0.3 };
+function a(e, t) {
+    let { targetTime: n, isRenderedWithoutLottieAnimation: a } = t;
+    if (a) return { duration: n, delay: 0 };
+    let l = e > 0,
+        u = n * r[l ? "EARN" : "SPEND"];
+    return { duration: u, delay: l ? n - u : 0 };
 }

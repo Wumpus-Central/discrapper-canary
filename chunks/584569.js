@@ -14,8 +14,8 @@ var i = n(17928),
     A = n(652215),
     p = n(806931);
 let m = new s.A(),
-    I = new s.A(),
-    E = new Set();
+    E = new s.A(),
+    I = new Set();
 function S(e, t, n) {
     let i = new o.A({ userId: e.id, channelId: n }),
         l = (0, g.RQ)(i, t ?? A.ME, e.id);
@@ -37,12 +37,12 @@ function S(e, t, n) {
         localVideoDisabled: !1,
         isPoppedOut: !1,
     };
-    I.set(e.id, r);
+    E.set(e.id, r);
 }
 function C(e) {
     let t = m.delete(e),
-        n = I.delete(e),
-        i = E.delete(e);
+        n = E.delete(e),
+        i = I.delete(e);
     return t || n || i;
 }
 function _() {
@@ -51,18 +51,18 @@ function _() {
     let t = d.A.getChannel(e)?.getGuildId(),
         n = !1;
     return (
-        E.forEach((i) => {
-            if (null != f.A.getVoiceStateForChannel(e, i)) return void E.delete(i);
+        I.forEach((i) => {
+            if (null != f.A.getVoiceStateForChannel(e, i)) return void I.delete(i);
             let l = h.default.getUser(i);
-            null != l && ((n = !0), E.delete(i), S(l, t, e));
+            null != l && ((n = !0), I.delete(i), S(l, t, e));
         }),
         n
     );
 }
-function T() {
-    (m.clear(), I.clear(), E.clear());
+function N() {
+    (m.clear(), E.clear(), I.clear());
 }
-class N extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "RTCConnectionDesyncStore";
     initialize() {
         (this.waitFor(f.A, h.default, d.A, c.A), this.syncWith([h.default], _));
@@ -77,18 +77,18 @@ class N extends i.Ay.Store {
         return m.values();
     }
     getDesyncedParticipants() {
-        return I.values();
+        return E.values();
     }
 }
-let v = new N(r.h, {
+let v = new T(r.h, {
     CONNECTION_OPEN: function () {
-        T();
+        N();
     },
-    VOICE_CHANNEL_SELECT: T,
+    VOICE_CHANNEL_SELECT: N,
     RTC_CONNECTION_STATE: function (e) {
         let { state: t, context: n } = e;
         if (n !== l.x.DEFAULT || t !== A.S7L.DISCONNECTED) return !1;
-        T();
+        N();
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
@@ -108,7 +108,7 @@ let v = new N(r.h, {
             t.reduce((e, t) => {
                 if (null != f.A.getVoiceStateForChannel(i, t)) return e;
                 let l = h.default.getUser(t);
-                return null == l ? (E.add(t), e) : (S(l, n, i), !0);
+                return null == l ? (I.add(t), e) : (S(l, n, i), !0);
             }, !1)
         );
     },

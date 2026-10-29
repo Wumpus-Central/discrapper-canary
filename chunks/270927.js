@@ -89,8 +89,8 @@ var G = n(951305),
     V = n(10716),
     Y = n(31823),
     K = n(427675),
-    Z = n(977445),
-    q = n(525877),
+    q = n(977445),
+    Z = n(525877),
     z = n(566980),
     $ = n(319820),
     Q = n(52635);
@@ -219,9 +219,9 @@ function er(e) {
         { upperInlineNoticeProps: L, footerInlineNoticeProps: k } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, W.bG)([V.A], () => V.A.getFetchState()),
-                a = (0, Z.uS)(n.id),
+                a = (0, q.uS)(n.id),
                 s = n.supportsEmbeddedSurface(H.U.MAIN) && r === V.$.ERROR,
-                o = (0, q.o)({ application: n, productLine: t?.productLine, isGift: l });
+                o = (0, Z.o)({ application: n, productLine: t?.productLine, isGift: l });
             return {
                 upperInlineNoticeProps: i.useMemo(() => {
                     let e = [];

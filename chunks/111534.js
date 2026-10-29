@@ -1,59 +1,59 @@
-t.d(e, { A: () => s });
-var r = t(17928),
-    i = t(73153),
-    l = t(91242),
-    u = t(818023);
-let a = null,
-    o = null,
+n.d(t, { A: () => p });
+var r = n(17928),
+    i = n(73153),
+    l = n(91242),
+    u = n(818023);
+let A = null,
+    a = null,
     c = !1,
-    A = !1;
-class p extends r.Ay.Store {
+    d = !1;
+class o extends r.Ay.Store {
     initialize() {
         this.waitFor(l.A);
     }
     getBuilderPreviewApplicationId() {
-        return a;
+        return A;
     }
     getPhoneLensApplicationId() {
-        return o;
+        return a;
     }
     getLastBuilderPreviewApplicationId() {
-        return o;
+        return a;
     }
     isBuilderPreviewMobile() {
         return c;
     }
     isBuilderPreviewLandscape() {
-        return A;
+        return d;
     }
 }
-let s = new p(i.h, {
+let p = new o(i.h, {
     LOGOUT: function () {
-        if (null == a && null == o && !c && !A) return !1;
-        ((a = null), (o = null), (c = !1), (A = !1));
+        if (null == A && null == a && !c && !d) return !1;
+        ((A = null), (a = null), (c = !1), (d = !1));
     },
-    CONJURE_BUILDER_PREVIEW_APPLICATION_SET: function (n) {
-        let { applicationId: e } = n;
-        if (a === e) return !1;
-        ((a = e), null != e && (o = e));
+    CONJURE_BUILDER_PREVIEW_APPLICATION_SET: function (e) {
+        let { applicationId: t } = e;
+        if (A === t) return !1;
+        ((A = t), null != t && (a = t));
     },
-    CONJURE_BUILDER_PREVIEW_MOBILE_SET: function (n) {
-        let { enabled: e } = n;
-        if (c === e) return !1;
-        c = e;
+    CONJURE_BUILDER_PREVIEW_MOBILE_SET: function (e) {
+        let { enabled: t } = e;
+        if (c === t) return !1;
+        c = t;
     },
-    CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET: function (n) {
-        let { landscape: e } = n;
-        if (A === e) return !1;
-        A = e;
+    CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET: function (e) {
+        let { landscape: t } = e;
+        if (d === t) return !1;
+        d = t;
     },
-    FRAME_SET_ORIENTATION_LOCK_STATE: function (n) {
-        let { frameId: e, lockState: t } = n;
-        if (t !== u.N7.LANDSCAPE && t !== u.N7.PORTRAIT) return !1;
-        let r = l.A.getFrame(e);
-        if (null == r || r.applicationId !== o) return !1;
-        let i = t === u.N7.LANDSCAPE;
-        if (A === i) return !1;
-        A = i;
+    FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
+        let { frameId: t, lockState: n } = e;
+        if (n !== u.N7.LANDSCAPE && n !== u.N7.PORTRAIT) return !1;
+        let r = l.A.getFrame(t);
+        if (null == r || r.applicationId !== a) return !1;
+        let i = n === u.N7.LANDSCAPE;
+        if (d === i) return !1;
+        d = i;
     },
 });

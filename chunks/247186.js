@@ -36,9 +36,9 @@ var E = t(112107),
     L = t(785562),
     T = t(192308),
     _ = t(588975),
-    O = t(442433),
-    P = t(975807),
-    w = t(235393),
+    w = t(442433),
+    O = t(975807),
+    P = t(235393),
     D = t(679164),
     U = t(652215),
     R = t(24686),
@@ -360,14 +360,14 @@ function ed(e) {
                         : async (t) => {
                               let l = await D.AN(n.attachmentUrl);
                               (e.shouldStopPropagation && t?.stopPropagation(),
-                                  w.A.trackLinkClicked(l),
+                                  P.A.trackLinkClicked(l),
                                   e.shouldCloseDefaultModals && (0, T.closeAllModals)(),
-                                  (0, P.A)(l));
+                                  (0, O.A)(l));
                           },
                     o = i.noStyleAndInteraction
                         ? U.tEg
                         : (e) => {
-                              (0, O.L3)(e, async () => {
+                              (0, w.L3)(e, async () => {
                                   let { default: e } = await t.e("762529").then(t.bind(t, 740024));
                                   return (t) =>
                                       (0, l.jsx)(e, {

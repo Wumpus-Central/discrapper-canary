@@ -1,55 +1,55 @@
-n.d(t, { z: () => f });
+n.d(e, { z: () => g });
 var i = n(477900),
     r = n(582128),
     l = n(192308),
-    s = n(858899),
+    u = n(858899),
     a = n(475743),
     o = n(942370),
-    u = n(211850),
+    s = n(211850),
     c = n(105292);
-let d = "in-game-auth-check-modal";
-function f(e, t) {
-    let { showInGameModal: f = !0, showToastOnSuccess: m = !0 } =
+let f = "in-game-auth-check-modal";
+function g(t, e) {
+    let { showInGameModal: g = !0, showToastOnSuccess: m = !0 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        [g, A] = r.useState(!1),
-        E = r.useCallback(
+        [d, A] = r.useState(!1),
+        I = r.useCallback(
             function () {
-                for (var t = arguments.length, r = Array(t), s = 0; s < t; s++) r[s] = arguments[s];
+                for (var e = arguments.length, r = Array(e), u = 0; u < e; u++) r[u] = arguments[u];
                 A(!0);
-                let a = e(...r);
+                let a = t(...r);
                 return (
                     a === o._.RPC &&
-                        f &&
+                        g &&
                         (0, l.openModalLazy)(
                             async () => {
-                                let { default: e } = await n.e("630724").then(n.bind(n, 272047));
-                                return (t) => (0, i.jsx)(e, { ...t });
+                                let { default: t } = await n.e("630724").then(n.bind(n, 272047));
+                                return (e) => (0, i.jsx)(t, { ...e });
                             },
-                            { modalKey: d },
+                            { modalKey: f },
                         ),
                     a
                 );
             },
-            [e, A, f],
+            [t, A, g],
         ),
-        C = (0, a.Ay)(t);
+        E = (0, a.Ay)(e);
     return (
         r.useEffect(() => {
-            if (g && !1 === C && !0 === t) {
-                function e() {
-                    (0, s.P0)({ text: c.intl.string(u.default.uG6teD), variant: "success" });
+            if (d && !1 === E && !0 === e) {
+                function t() {
+                    (0, u.P0)({ text: c.intl.string(s.default.uG6teD), variant: "success" });
                 }
-                ((0, l.closeModal)(d),
+                ((0, l.closeModal)(f),
                     A(!1),
                     m &&
                         ("visible" === document.visibilityState
-                            ? e()
-                            : document.addEventListener("visibilitychange", function t() {
+                            ? t()
+                            : document.addEventListener("visibilitychange", function e() {
                                   "visible" === document.visibilityState &&
-                                      (e(), document.removeEventListener("visibilitychange", t));
+                                      (t(), document.removeEventListener("visibilitychange", e));
                               })));
             }
-        }, [g, t, C, m]),
-        E
+        }, [d, e, E, m]),
+        I
     );
 }

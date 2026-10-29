@@ -11,8 +11,8 @@ var i,
     m = n(276208),
     p = n(927813),
     g = n(37965);
-let x = 20 * p.A.Millis.SECOND;
-var f = n(821589),
+let f = 20 * p.A.Millis.SECOND;
+var x = n(821589),
     h = n(950183),
     A = (((i = {}).CONTAIN = "contain"), (i.COVER = "cover"), (i.COVER_LANDSCAPE = "cover-landscape"), i);
 let v = s.memo(function (e) {
@@ -39,7 +39,7 @@ let v = s.memo(function (e) {
             },
             [A, n],
         ),
-        R = "cover-landscape" === A ? (null == y || y.width >= y.height ? "cover" : "contain") : A;
+        D = "cover-landscape" === A ? (null == y || y.width >= y.height ? "cover" : "contain") : A;
     !(function (e) {
         let { location: t, videoSpinnerContext: n, userId: i, streamId: l, loading: r, paused: a = !1 } = e,
             [o] = s.useState(() => new d.M(t));
@@ -47,7 +47,7 @@ let v = s.memo(function (e) {
             a || (r ? o.onSpinnerStarted() : null != l && o.trackSpinnerDuration(n, i, l));
         }, [r, a, l, o, n, i]);
     })({ location: "VideoStream", videoSpinnerContext: j, userId: I, streamId: t, loading: N, paused: E });
-    let { onReady: D } = (function (e) {
+    let { onReady: R } = (function (e) {
             let { streamId: t, userId: n, videoSpinnerContext: i, streamKey: l, loading: r, paused: a = !1 } = e,
                 o = s.useRef(new c.Ep()),
                 p = i === d.u.SELF_STREAM || i === d.u.REMOTE_STREAM ? u.x.STREAM : u.x.DEFAULT;
@@ -56,7 +56,7 @@ let v = s.memo(function (e) {
                     if (!r || a || !m.X.isIncomingVideoEnabled()) return;
                     let e = o.current;
                     return (
-                        e.start(x, () => {
+                        e.start(f, () => {
                             (0, g.Z)(t, n, p, l);
                         }),
                         () => {
@@ -72,14 +72,14 @@ let v = s.memo(function (e) {
             );
         })({ streamId: t, userId: I, loading: N, videoSpinnerContext: j, streamKey: S, paused: E }),
         k = s.useCallback(() => {
-            (b(!1), D());
-        }, [D]);
+            (b(!1), R());
+        }, [R]);
     return (0, l.jsxs)("div", {
         className: a()(h.wrapper, i),
         children: [
             null != t &&
                 (0, l.jsx)(r, {
-                    className: a()(h.video, (0, f.t)(h, "video", R), { [h.mirror]: v }, p),
+                    className: a()(h.video, (0, x.t)(h, "video", D), { [h.mirror]: v }, p),
                     streamId: t,
                     onResize: L,
                     onReady: k,

@@ -73,8 +73,8 @@ var I = n(51906),
     V = n(828162),
     z = n(378570),
     W = n(309010),
-    q = n(287809),
-    $ = n(625494),
+    $ = n(287809),
+    q = n(625494),
     J = n(403362),
     Z = n(723702),
     Y = n(936649),
@@ -122,8 +122,8 @@ function ee(e) {
                     [t, e],
                 ),
                 N = (0, o.bG)(
-                    [q.default],
-                    () => q.default.getCurrentUser()?.desktop === !0 || q.default.getCurrentUser()?.mobile === !0,
+                    [$.default],
+                    () => $.default.getCurrentUser()?.desktop === !0 || $.default.getCurrentUser()?.mobile === !0,
                 ),
                 {
                     guildPopulated: ee,
@@ -215,7 +215,7 @@ function ee(e) {
                     }),
                         null != e &&
                             (W.Ay.getChannelId(t?.id) === e.id
-                                ? $._.dispatch(w.jej.TEXTAREA_FOCUS, { highlight: !0, channelId: e.id })
+                                ? q._.dispatch(w.jej.TEXTAREA_FOCUS, { highlight: !0, channelId: e.id })
                                 : (0, z.iN)(e.id)));
                 }, [t?.id, e])),
                 (f = i.useCallback(() => {

@@ -14,13 +14,13 @@ var i = n(477900),
     A = n(92446),
     p = n(628284),
     m = n(95635),
-    I = n(993077),
-    E = n(194261),
+    E = n(993077),
+    I = n(194261),
     S = n(661531),
     C = n(233545),
     _ = n(108088),
-    T = n(229659),
-    N = n(253932),
+    N = n(229659),
+    T = n(253932),
     v = n(360906),
     y = n(174459),
     M = n(975571),
@@ -58,7 +58,7 @@ let U = function (e) {
                 : x.intl.format(x.t.vggaMt, { badPing: 250, url: a }),
         d = (0, l.useCallback)(() => {
             let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: s } = e,
-                a = N.Q_.getSetting();
+                a = T.Q_.getSetting();
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     a &&
@@ -66,7 +66,7 @@ let U = function (e) {
                             children: [
                                 (0, i.jsx)("div", {
                                     className: L.o0,
-                                    children: (0, i.jsx)(T.A, { dataPoints: e.pings, width: 258, height: 80 }),
+                                    children: (0, i.jsx)(N.A, { dataPoints: e.pings, width: 258, height: 80 }),
                                 }),
                                 (0, i.jsx)(f.E, {
                                     variant: "text-sm/bold",
@@ -111,7 +111,7 @@ let U = function (e) {
             });
         }, [e, u]),
         { connectionState: c, connectionTypeText: h } = e,
-        U = N.Q_.getSetting(),
+        U = T.Q_.getSetting(),
         P = {
             [R.S7L.AWAITING_ENDPOINT]: x.intl.format(x.t.Eu2vUR, { url: R.qF7.STATUS }),
             [R.S7L.CONNECTING]: x.intl.string(x.t["y+E8aD"]),
@@ -163,11 +163,11 @@ let U = function (e) {
                         }),
                     ],
                 }),
-            (0, i.jsxs)(I.Z, {
-                type: I.Z.Types.SUCCESS,
+            (0, i.jsxs)(E.Z, {
+                type: E.Z.Types.SUCCESS,
                 className: w.g4,
                 children: [
-                    (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(I.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, { variant: "text-xs/medium", color: "text-feedback-positive", children: h }),
                 ],
             }),
@@ -237,11 +237,11 @@ function W(e) {
                 }),
             (0, i.jsx)("hr", { className: w.me }),
             (0, i.jsx)(f.E, { variant: "text-xs/normal", color: "text-subtle", children: x.intl.string(x.t.B9JNsl) }),
-            (0, i.jsxs)(I.Z, {
-                type: I.Z.Types.SUCCESS,
+            (0, i.jsxs)(E.Z, {
+                type: E.Z.Types.SUCCESS,
                 className: w.g4,
                 children: [
-                    (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(I.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, {
                         variant: "text-xs/medium",
                         color: "text-feedback-positive",

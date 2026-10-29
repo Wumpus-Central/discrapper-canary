@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(367513),
     p = n(401843),
     g = n(964486),
-    x = n(684339),
-    f = n(164617),
+    f = n(684339),
+    x = n(164617),
     h = n(402216),
     A = n(626584),
     v = n(525505),
@@ -27,8 +27,8 @@ var i = n(477900),
     y = n(426179),
     T = n(51092),
     L = n(40056),
-    R = n(109294);
-function D(e) {
+    D = n(109294);
+function R(e) {
     return (1 & e.buttons) == 1;
 }
 let k = l.memo(function (e) {
@@ -41,8 +41,8 @@ let k = l.memo(function (e) {
             isDragging: d,
             setIsDragging: m,
             panOffset: p,
-            setPanOffset: x,
-            zoomLevel: f,
+            setPanOffset: f,
+            zoomLevel: x,
             isWheeling: h,
             setIsWheeling: A,
             isSlidering: v,
@@ -60,7 +60,7 @@ let k = l.memo(function (e) {
         W = l.useRef(new _.Ep()),
         $ = l.useRef(new _.Ep()),
         B = l.useRef(null),
-        Z = f > c,
+        Z = x > c,
         Y = l.useCallback(
             (e) => {
                 (e.width > 0 && e.height > 0 && E(e.width / e.height), s?.(e));
@@ -77,7 +77,7 @@ let k = l.memo(function (e) {
         ),
         K = l.useCallback(
             (e) => {
-                if (!Z || !D(e)) return;
+                if (!Z || !R(e)) return;
                 (e.preventDefault(), e.stopPropagation());
                 let t = Q(e);
                 (m(!0), M(t), k(t), G(Date.now()), F(t), P(p));
@@ -91,13 +91,13 @@ let k = l.memo(function (e) {
                 let t = Q(e),
                     n = t.x - H.x,
                     i = t.y - H.y;
-                (x(I({ x: V.x + n, y: V.y + i })), k(t));
+                (f(I({ x: V.x + n, y: V.y + i })), k(t));
             },
-            [I, H, V, u, Q, d, Z, o, x],
+            [I, H, V, u, Q, d, Z, o, f],
         ),
         q = l.useCallback(
             (e) => {
-                !d || D(e) || (e.preventDefault(), e.stopPropagation(), m(!1), F(null), P(null));
+                !d || R(e) || (e.preventDefault(), e.stopPropagation(), m(!1), F(null), P(null));
             },
             [d, m],
         ),
@@ -119,13 +119,13 @@ let k = l.memo(function (e) {
             (e) => {
                 u &&
                     (A(!0),
-                    j(f - e.deltaY / 100, Q(e), "wheel"),
+                    j(x - e.deltaY / 100, Q(e), "wheel"),
                     o(),
                     W.current.start(100, () => {
                         A(!1);
                     }));
             },
-            [u, j, f, Q, o, A],
+            [u, j, x, Q, o, A],
         );
     ((0, N.i4)(
         C,
@@ -141,11 +141,11 @@ let k = l.memo(function (e) {
                 let { width: l, height: s } = i;
                 (1 > Math.abs(t - l) && 1 > Math.abs(n - s)) ||
                     (z(!0),
-                    x((e) => {
-                        let i = (l * (f - 1)) / 2,
-                            r = (s * (f - 1)) / 2,
-                            a = (t * (f - 1)) / 2,
-                            o = (n * (f - 1)) / 2;
+                    f((e) => {
+                        let i = (l * (x - 1)) / 2,
+                            r = (s * (x - 1)) / 2,
+                            a = (t * (x - 1)) / 2,
+                            o = (n * (x - 1)) / 2;
                         return I({ x: (0 !== i ? e.x / i : 0) * a, y: (0 !== r ? e.y / r : 0) * o });
                     }),
                     (B.current = { width: t, height: n }),
@@ -153,28 +153,28 @@ let k = l.memo(function (e) {
                         z(!1);
                     }));
             },
-            [I, Z, f, x],
+            [I, Z, x, f],
         ),
-        [Z, f],
+        [Z, x],
     ),
         (0, g.l0)(() => {
             (W.current.stop(), $.current.stop());
         }),
         l.useEffect(() => {
-            null != n && (0, y.c)(n, void 0, u && Z ? f : 1);
-        }, [u, Z, n, f]));
+            null != n && (0, y.c)(n, void 0, u && Z ? x : 1);
+        }, [u, Z, n, x]));
     let en = l.useMemo(() => {
         let e = I(p);
         return {
-            "--custom-zoom-scale": f,
+            "--custom-zoom-scale": x,
             "--custom-pan-x": `${e.x}px`,
             "--custom-pan-y": `${e.y}px`,
             "--custom-zoom-transition": d || U || h || v ? "none" : "transform 0.15s ease-out",
         };
-    }, [I, d, U, h, v, p, f]);
+    }, [I, d, U, h, v, p, x]);
     return (0, i.jsx)("div", {
         ref: C,
-        className: r()(R.iE, a, { [R.rc]: u && Z, [R.d$]: d }),
+        className: r()(D.iE, a, { [D.rc]: u && Z, [D.d$]: d }),
         onMouseDown: K,
         onMouseMove: X,
         onMouseUp: q,
@@ -184,7 +184,7 @@ let k = l.memo(function (e) {
         children:
             null != n &&
             (0, i.jsx)("div", {
-                className: r()(R.j, R.L2),
+                className: r()(D.j, D.L2),
                 style: en,
                 children: (0, i.jsx)(T.A, { ...t, onResize: Y, wrapperClassName: void 0 }),
             }),
@@ -277,15 +277,15 @@ function ei(e) {
         b = P.Ay.getVideoComponent(),
         y = (0, a.bG)([G.default], () => G.default.getId()),
         T = (0, E.A)(),
-        { stream: L, user: R, streamId: D } = t,
+        { stream: L, user: D, streamId: R } = t,
         $ = (0, a.bG)([V.A], () => V.A.getChannel(L.channelId)),
-        B = (0, a.bG)([O.A], () => O.A.getActiveStreamForUser(R.id, L.guildId), [R.id, L.guildId]),
+        B = (0, a.bG)([O.A], () => O.A.getActiveStreamForUser(D.id, L.guildId), [D.id, L.guildId]),
         K = (0, a.bG)([O.A], () => O.A.getAllActiveStreams().length > 0),
         X = (0, a.bG)([H.A], () => H.A.isFocused()),
         en = (0, a.bG)([w.Ay], () => w.Ay.pauseSelfStreamPreviewWhenUnfocused),
         ei = B?.ownerId === y,
-        el = ei && en && !X && A === f.N.NO_POPOUT,
-        es = null != B ? (0, j.A)(B, R, R.id === y, el) : null,
+        el = ei && en && !X && A === x.N.NO_POPOUT,
+        es = null != B ? (0, j.A)(B, D, D.id === y, el) : null,
         er = S < 195;
     (0, g.Ay)(() => {
         !K &&
@@ -303,7 +303,7 @@ function ei(e) {
         }, [b, B, n]),
         T)
     )
-        return (0, i.jsx)(Q, { stream: t.stream, isSmall: er, selected: n, isSelfStream: R.id === y });
+        return (0, i.jsx)(Q, { stream: t.stream, isSmall: er, selected: n, isSelfStream: D.id === y });
     if (B?.state === q.XYD.ENDED) return (0, i.jsx)(U.A, { selected: n, stream: B, width: S });
     if (null != ea || B?.state === q.XYD.FAILED)
         return (0, i.jsx)(z.A, { avError: ea?.type, avErrorContext: ea, selected: n, stream: t.stream, width: S });
@@ -315,17 +315,17 @@ function ei(e) {
                     k,
                     {
                         onResize: s,
-                        wrapperClassName: r()(A !== f.N.CALL_TILE ? Y.tN : void 0, _),
+                        wrapperClassName: r()(A !== x.N.CALL_TILE ? Y.tN : void 0, _),
                         className: Y.Qs,
-                        streamId: D,
+                        streamId: R,
                         videoComponent: b,
                         fit: h,
                         paused: N || B?.state === q.XYD.PAUSED || el,
-                        videoSpinnerContext: ei ? x.u.SELF_STREAM : x.u.REMOTE_STREAM,
-                        userId: R.id,
+                        videoSpinnerContext: ei ? f.u.SELF_STREAM : f.u.REMOTE_STREAM,
+                        userId: D.id,
                         streamKey: t.id,
                     },
-                    D,
+                    R,
                 ),
                 null != es ? (0, i.jsx)(M.A, { size: (0, F.J)(S), ...es }) : null,
             ],

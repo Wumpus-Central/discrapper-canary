@@ -138,7 +138,7 @@ function d(e) {
             );
         }, [n, h]));
     let m = { width: e.width, height: e.height },
-        { onHoverTime: I, onHoverClick: E } = e;
+        { onHoverTime: E, onHoverClick: I } = e;
     function S(e) {
         if (null == A) return null;
         let t = e.currentTarget.getBoundingClientRect();
@@ -147,17 +147,17 @@ function d(e) {
         return Date.now() - (1 - n) * A;
     }
     let C =
-            null != I && null != A
-                ? (e) => {
-                      let t = S(e);
-                      null != t && I(t);
-                  }
-                : void 0,
-        _ =
             null != E && null != A
                 ? (e) => {
                       let t = S(e);
                       null != t && E(t);
+                  }
+                : void 0,
+        _ =
+            null != I && null != A
+                ? (e) => {
+                      let t = S(e);
+                      null != t && I(t);
                   }
                 : void 0;
     return (0, i.jsx)(
@@ -168,7 +168,7 @@ function d(e) {
             height: e.height,
             ref: t,
             onPointerMove: C,
-            onPointerLeave: null != I ? () => I(null) : void 0,
+            onPointerLeave: null != E ? () => E(null) : void 0,
             onPointerDown: _,
         },
         "canvas",

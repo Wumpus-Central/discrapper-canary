@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(408278),
     p = n(597770),
     g = n(409626),
-    x = n(692969),
-    f = n(980822),
+    f = n(692969),
+    x = n(980822),
     h = n(852105),
     A = n(240248),
     v = n(818023),
@@ -21,8 +21,8 @@ var i = n(477900),
     j = n(584841);
 function I(e) {
     let { applicationId: t, hideApplicationName: n } = e,
-        { gameId: l, gameRecord: s } = (0, f.A)({ applicationId: t }),
-        c = (0, x.A)({
+        { gameId: l, gameRecord: s } = (0, x.A)({ applicationId: t }),
+        c = (0, f.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             gameId: l ?? void 0,
             source: g.GameProfileSources.CallTile,
@@ -49,13 +49,13 @@ function I(e) {
 }
 function S(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: o, idle: u } = e,
-        [g, x] = l.useState(!1),
-        f = l.useRef(null),
-        A = l.useCallback(() => x(!0), []),
-        v = l.useCallback(() => x(!1), []),
+        [g, f] = l.useState(!1),
+        x = l.useRef(null),
+        A = l.useCallback(() => f(!0), []),
+        v = l.useCallback(() => f(!1), []),
         I = C.intl.string(C.t["wg/30i"]);
     return (0, i.jsx)(c.Y, {
-        targetElementRef: f,
+        targetElementRef: x,
         shouldShow: g,
         animation: c.Y.Animation.FADE,
         position: "left",
@@ -69,7 +69,7 @@ function S(e) {
             }),
         children: () =>
             (0, i.jsx)("div", {
-                ref: f,
+                ref: x,
                 children: (0, i.jsx)(a.m, {
                     text: I,
                     shouldShow: !g && void 0,

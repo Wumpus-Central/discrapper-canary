@@ -12,7 +12,7 @@ function l(e, t) {
     return (function (e, t, r) {
         let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             l = (0, c.bG)([u.A], () => u.A.hasLoadedExperiments),
-            [f, A, d, g, p, C, F] = (0, c.yK)([o.A], () => [
+            [A, f, d, g, p, C, F] = (0, c.yK)([o.A], () => [
                 o.A.isFetchingCategories,
                 o.A.lastFetchOptions,
                 o.A.error,
@@ -27,12 +27,12 @@ function l(e, t) {
                 let n = Date.now() - g < h.Zq;
                 if (d && n) return;
                 let c = { ...e, variantsReturnStyle: i.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: F },
-                    u = !(0, a.gn)(A, c),
-                    f = Date.now() - p < h.i0;
-                (u || !f) && (0, a.CK)(c, t, r);
-            }, [s, l, A, p, e, d, g, t, r, F]),
+                    u = !(0, a.gn)(f, c),
+                    A = Date.now() - p < h.i0;
+                (u || !A) && (0, a.CK)(c, t, r);
+            }, [s, l, f, p, e, d, g, t, r, F]),
             {
-                isFetching: f,
+                isFetching: A,
                 categories: C,
                 fetchCategoriesError: d,
                 refreshCategories: (0, n.useCallback)(() => {

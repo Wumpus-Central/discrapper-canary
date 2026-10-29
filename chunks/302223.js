@@ -22,7 +22,7 @@ function u(e) {
         p = (0, a.G)(t?.state);
     if (null == t) return null;
     let { emoji: m } = t,
-        I = null != p && "" !== p ? p : d;
+        E = null != p && "" !== p ? p : d;
     return (0, i.jsxs)("div", {
         className: r()(o.__invalid_container, n),
         children: [
@@ -30,11 +30,11 @@ function u(e) {
                 ? null
                 : (0, i.jsx)(s.A, {
                       emoji: m,
-                      className: r()(o.Z, l, null != c ? { [c]: null == I || "" === I } : null),
+                      className: r()(o.Z, l, null != c ? { [c]: null == E || "" === E } : null),
                       animate: h,
                       hideTooltip: f,
                   }),
-            null != I && I.length > 0 ? (0, i.jsx)("span", { className: u, children: I }) : null,
+            null != E && E.length > 0 ? (0, i.jsx)("span", { className: u, children: E }) : null,
             A,
         ],
     });

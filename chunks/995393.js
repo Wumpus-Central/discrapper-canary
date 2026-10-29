@@ -1,4 +1,4 @@
-n.d(e, { Jq: () => u, Ng: () => l, ST: () => _, bB: () => a });
+n.d(e, { Jq: () => l, Ng: () => u, ST: () => _, bB: () => a });
 var r,
     i,
     o,
@@ -12,7 +12,7 @@ var r,
         (r.VIEW_DETAILS_BUTTON = "view_details_button"),
         (r.BUY_WITH_ORBS_BUTTON = "buy_with_orbs_button"),
         r),
-    u =
+    l =
         (((i = {}).BUY_BUTTON = "buy_button"),
         (i.GIFT_BUTTON = "gift_button"),
         (i.WISHLIST_BUTTON = "wishlist_button"),
@@ -27,5 +27,5 @@ var r,
         (i.EARN_MORE_ORBS_BUTTON = "earn_more_orbs_button"),
         (i.NITRO_UPSELL_BUTTON = "nitro_upsell_button"),
         i),
-    l = (((o = {}).COPY_LINK_BUTTON = "copy_link_button"), o),
+    u = (((o = {}).COPY_LINK_BUTTON = "copy_link_button"), o),
     _ = 221552 == n.j ? (((s = {}).LEARN_MORE = "learn_more"), s) : null;

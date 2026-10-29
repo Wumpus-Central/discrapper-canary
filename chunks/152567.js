@@ -1,4 +1,4 @@
-n.d(t, { V: () => T, A: () => P });
+n.d(t, { V: () => N, A: () => P });
 var i,
     l = n(477900),
     r = n(582128),
@@ -14,8 +14,8 @@ var i,
     A = n(821609),
     p = n(866665),
     m = n(827343),
-    I = n(765671),
-    E = n(661531),
+    E = n(765671),
+    I = n(661531),
     S = n(953727);
 function C(e) {
     let { width: t = 80, height: n = 28, color: i = "currentColor", foreground: s, ...a } = e,
@@ -44,8 +44,8 @@ function C(e) {
     });
 }
 var _ = n(838949),
-    T = (((i = {}).BLACK = "BLACK"), (i.GRAY = "GRAY"), i);
-let N = { BLACK: _.Ql, GRAY: _.wm },
+    N = (((i = {}).BLACK = "BLACK"), (i.GRAY = "GRAY"), i);
+let T = { BLACK: _.Ql, GRAY: _.wm },
     v = { sm: 20, md: 28 };
 function y(e) {
     return 8 * Math.round(e / 8);
@@ -55,14 +55,14 @@ function M(e) {
             notchBackground: t,
             progress: n,
             size: i = "md",
-            gradientStart: s = E.A.unsafe_rawColors.YELLOW_260.css,
-            gradientEnd: o = E.A.unsafe_rawColors.GREEN_360.css,
+            gradientStart: s = I.A.unsafe_rawColors.YELLOW_260.css,
+            gradientEnd: o = I.A.unsafe_rawColors.GREEN_360.css,
             className: u,
             notchClassName: d,
             children: c,
         } = e,
         h = v[i],
-        { ref: f, width: g } = (0, I.Ay)(),
+        { ref: f, width: g } = (0, E.Ay)(),
         A = r.useMemo(() => (null != g ? y(g) : 0), [g]),
         p = r.useMemo(() => {
             let e = Math.abs(y((A * (100 - Math.max(0, Math.min(100, n)))) / 100) - A);
@@ -82,7 +82,7 @@ function M(e) {
                 style: m,
                 children: [
                     (0, l.jsx)("div", { className: _.qB, style: p }),
-                    0 !== A && (0, l.jsx)(C, { width: A, height: h, className: a()(_.DR, N[t], d) }),
+                    0 !== A && (0, l.jsx)(C, { width: A, height: h, className: a()(_.DR, T[t], d) }),
                 ],
             }),
             c,
@@ -200,15 +200,15 @@ class U extends r.PureComponent {
                 buttonMinWidth: c,
                 measureButtonRef: h,
                 meterOnly: m = !1,
-                containerClassName: I,
-                helpText: E,
+                containerClassName: E,
+                helpText: I,
             } = this.props,
             { isMicTesting: S, volume: C, isDetectingInput: _ } = this.state,
-            T = e && !S ? L.intl.string(L.t["9viE2A"]) : null;
+            N = e && !S ? L.intl.string(L.t["9viE2A"]) : null;
         S && e && !d && this._micTestStop();
-        let N = s.length >= r.length ? s : r;
+        let T = s.length >= r.length ? s : r;
         return (0, l.jsxs)("div", {
-            className: a()(w.kL, I),
+            className: a()(w.kL, E),
             children: [
                 (0, l.jsx)(g.D, {
                     label: t ?? void 0,
@@ -227,12 +227,12 @@ class U extends r.PureComponent {
                                                 buttonRef: h,
                                                 size: u,
                                                 variant: o,
-                                                text: N,
+                                                text: T,
                                                 tabIndex: -1,
                                             }),
                                         }),
                                         (0, l.jsx)(p.m, {
-                                            text: T,
+                                            text: N,
                                             children: (0, l.jsx)("div", {
                                                 style: null != c ? { minWidth: c } : { opacity: 0 },
                                                 children: (0, l.jsx)(A.$, {
@@ -256,12 +256,12 @@ class U extends r.PureComponent {
                         ],
                     }),
                 }),
-                null != E &&
+                null != I &&
                     (0, l.jsx)(f.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         style: { visibility: S && !_ ? "hidden" : "visible" },
-                        children: E,
+                        children: I,
                     }),
             ],
         });
@@ -305,7 +305,7 @@ function P(e) {
             };
         }),
         h = (0, d.bG)([R.A], () => R.A.isConnected()),
-        { ref: f, width: g } = (0, I.Ay)();
+        { ref: f, width: g } = (0, E.Ay)();
     return (0, l.jsx)(U, {
         isVoiceConnected: h,
         inputVolume: s,

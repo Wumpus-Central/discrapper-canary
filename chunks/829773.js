@@ -14,13 +14,13 @@ var i = n(477900),
     A = n(833473),
     p = n(844981),
     m = n(486487),
-    I = n(110027),
-    E = n(298242),
+    E = n(110027),
+    I = n(298242),
     S = n(360906),
     C = n(763827),
     _ = n(532624),
-    T = n(152567);
-function N(e) {
+    N = n(152567);
+function T(e) {
     let { ref: t, ...n } = e,
         { "aria-label": r, location: s, containerClassName: a, notchClassName: o } = n,
         u = l.useRef(null);
@@ -35,8 +35,8 @@ function N(e) {
             tabIndex: -1,
             role: "img",
             "aria-label": r,
-            children: (0, i.jsx)(T.A, {
-                notchBackground: T.V.BLACK,
+            children: (0, i.jsx)(N.A, {
+                notchBackground: N.V.BLACK,
                 location: s,
                 meterOnly: !0,
                 containerClassName: a,
@@ -57,7 +57,7 @@ function L(e) {
             appContext: t,
             onInteraction: n,
             onSelect: l,
-            onClose: T,
+            onClose: N,
             maybeRenderPTTCheckbox: L = !1,
             renderDeafenCheckbox: w = !1,
             renderInputProfiles: U = !1,
@@ -79,9 +79,9 @@ function L(e) {
         W = (0, g.H)({ deviceType: D.oh.AUDIO_INPUT, analyticsLocations: H, asSubmenu: !0 }),
         Y = (0, g.H)({ deviceType: D.oh.AUDIO_OUTPUT, analyticsLocations: H, asSubmenu: !0 }),
         z = (0, s.bG)([S.Ay], () => S.Ay.getActiveInputProfile()),
-        J = (0, I.A)(H),
+        J = (0, E.A)(H),
         K = (0, m.A)(H),
-        $ = (0, E.A)(H),
+        $ = (0, I.A)(H),
         Z = a.x.DEFAULT,
         q = S.Ay.isSelfDeaf(Z),
         X = (0, p.Ay)("AudioDeviceMenu"),
@@ -101,7 +101,7 @@ function L(e) {
             "data-menu-migrated": !0,
             onSelect: l,
             onInteraction: n,
-            onClose: T,
+            onClose: N,
             navId: "audio-device-context",
             variant: "fixed",
             "aria-label": R.intl.string(R.t.ZR1Ss6),
@@ -118,7 +118,7 @@ function L(e) {
                                 interactive: !1,
                                 label: R.intl.string(R.t["ye+BAy"]),
                                 control: (e, t) =>
-                                    (0, i.jsx)(N, {
+                                    (0, i.jsx)(T, {
                                         ...e,
                                         ref: t,
                                         "aria-label": R.intl.string(R.t["ye+BAy"]),

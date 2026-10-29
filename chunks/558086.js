@@ -14,7 +14,7 @@ var i = n(477900),
     A = n(174459),
     p = n(652215),
     m = n(105292);
-function I(e) {
+function E(e) {
     let {
             tutorialId: t,
             targetElementRef: n,
@@ -49,13 +49,13 @@ function I(e) {
         onRequestClose: u,
     });
 }
-function E(e) {
+function I(e) {
     let { children: t, ...n } = e,
         [r, s] = l.useState(!1),
         a = l.useCallback(() => s((e) => !e), []),
         o = l.useCallback(() => s(!1), []);
     return (0, i.jsxs)(i.Fragment, {
-        children: [t({ onClick: a, "aria-expanded": r }, r), r && (0, i.jsx)(I, { ...n, onClose: o })],
+        children: [t({ onClick: a, "aria-expanded": r }, r), r && (0, i.jsx)(E, { ...n, onClose: o })],
     });
 }
 var S = n(787541),
@@ -72,13 +72,13 @@ let _ = Object.freeze({
     "friends-list": { spacing: 8, popoutPosition: "right" },
     "create-more-servers": { spacing: 8, popoutPosition: "right" },
 });
-var T = n(241541),
-    N = n(851230);
+var N = n(241541),
+    T = n(851230);
 function v() {
     return (0, i.jsx)(i.Fragment, {
         children: m.intl.format(m.t.ymkBti, {
             shareIcon: m.intl.string(m.t.VINpSK),
-            shareIconHook: () => (0, i.jsx)(T.D, { className: N.Kk }, "icon"),
+            shareIconHook: () => (0, i.jsx)(N.D, { className: T.Kk }, "icon"),
         }),
     });
 }
@@ -88,7 +88,7 @@ var y = n(79858),
     R = n(303634);
 let O = {
     "voice-conversations": function (e) {
-        return (0, i.jsx)(E, {
+        return (0, i.jsx)(I, {
             ...e,
             graphicSrc:
                 "https://cdn.discordapp.com/assets/content/2fbf80a634ec810152549bc64cc498329014001bf81341a6fd08ca73f0370316.svg",
@@ -98,7 +98,7 @@ let O = {
     },
     "writing-messages": function (e) {
         let t = (0, d.bG)([M.A, D.A], () => M.A.getGuild(D.A.getGuildId()))?.name;
-        return (0, i.jsx)(E, {
+        return (0, i.jsx)(I, {
             ...e,
             graphicSrc:
                 "https://cdn.discordapp.com/assets/content/bdb4aa801d39492170cf3db05e482b46af127a4a87ba006b661eb376daeaee04.svg",
@@ -107,7 +107,7 @@ let O = {
         });
     },
     "organize-by-topic": function (e) {
-        return (0, i.jsx)(E, {
+        return (0, i.jsx)(I, {
             ...e,
             graphicSrc:
                 "https://cdn.discordapp.com/assets/content/5d2fe3296aafdf78f5a3c44a803c714f1c90e3b0d6d1c7290aa5fdf2e79831e3.svg",
@@ -199,8 +199,8 @@ class x extends l.PureComponent {
                 popoutPosition: g,
             } = r,
             { offsetX: A, offsetY: p } = this.state,
-            I = { left: null != A ? l.x + A : void 0, top: null != p ? l.y + p : void 0 };
-        function E(e) {
+            E = { left: null != A ? l.x + A : void 0, top: null != p ? l.y + p : void 0 };
+        function I(e) {
             let t = n && !e;
             return { [R.bW]: t, [R.EO]: !t, [R.TX]: d };
         }
@@ -210,10 +210,10 @@ class x extends l.PureComponent {
                     ...e,
                     "aria-label": m.intl.string(m.t.IyCzIF),
                     className: R.q3,
-                    style: I,
+                    style: E,
                     innerRef: this.contentRef,
                     children: (0, i.jsxs)("div", {
-                        className: s()(R.Mp, E(t)),
+                        className: s()(R.Mp, I(t)),
                         children: [
                             ((l = n && !t),
                             !0 !== d
@@ -224,22 +224,22 @@ class x extends l.PureComponent {
                                           (0, i.jsx)("div", { className: s()(R.sQ, { [R.bW]: l, [R.EO]: !l }) }),
                                       ],
                                   })),
-                            (0, i.jsx)("div", { className: s()(R.r6, E(t)) }),
-                            (0, i.jsx)("div", { className: s()(R.CY, E(t)) }),
+                            (0, i.jsx)("div", { className: s()(R.r6, I(t)) }),
+                            (0, i.jsx)("div", { className: s()(R.CY, I(t)) }),
                         ],
                     }),
                 });
             },
-            T = O[e];
-        if (null != T)
-            return (0, i.jsx)(T, {
+            N = O[e];
+        if (null != N)
+            return (0, i.jsx)(N, {
                 tutorialId: e,
                 targetElementRef: this.contentRef,
                 position: g,
                 onComplete: this.handleDismiss,
                 children: S,
             });
-        let N = this.getTutorialPopoutText();
+        let T = this.getTutorialPopoutText();
         return (0, i.jsx)(C.Ay, {
             innerRef: this.contentRef,
             position: g,
@@ -252,7 +252,7 @@ class x extends l.PureComponent {
             arrowAlignment: f,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...N,
+            ...T,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return S(e, n);

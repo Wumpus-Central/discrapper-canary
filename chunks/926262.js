@@ -19,13 +19,13 @@ function C(e) {
     i.useEffect(() => {
         m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
     }, [S, E]);
-    let j = i.useCallback(() => {
+    let _ = i.useCallback(() => {
             (C?.(), t());
         }, [C, t]),
-        v = i.useCallback(() => {
+        j = i.useCallback(() => {
             (x?.(), t());
         }, [x, t]),
-        _ = i.useRef(null);
+        v = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
@@ -39,9 +39,9 @@ function C(e) {
                             (0, a.M)(t) ? y.dark() : y.light(),
                         ]);
                         l ||
-                            null == _.current ||
+                            null == v.current ||
                             (e = i.loadAnimation({
-                                container: _.current,
+                                container: v.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -57,12 +57,12 @@ function C(e) {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, l.jsxs)("form", {
                 className: A.$,
-                onSubmit: j,
+                onSubmit: _,
                 children: [
                     (0, l.jsxs)("div", {
                         className: A.rf,
                         children: [
-                            null != y && (0, l.jsx)("div", { className: A.lY, ref: _ }),
+                            null != y && (0, l.jsx)("div", { className: A.lY, ref: v }),
                             (0, l.jsxs)("div", {
                                 className: A.Qs,
                                 children: [
@@ -83,7 +83,7 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
-                                                            onClick: v,
+                                                            onClick: j,
                                                             text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),
@@ -101,7 +101,7 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "primary",
-                                                            onClick: j,
+                                                            onClick: _,
                                                             text: p.intl.string(p.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),

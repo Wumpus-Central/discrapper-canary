@@ -18,8 +18,8 @@ var t = l(477900),
     A = l(655098),
     I = l(323350),
     y = l(135261),
-    C = l(35277),
-    k = l(820066),
+    k = l(35277),
+    C = l(820066),
     x = l(702483),
     N = l(490682),
     j = l(683167),
@@ -50,12 +50,12 @@ function z(e) {
                             a = n.originalName ?? n.name ?? "",
                             r = `:${n.name}:`,
                             i = null != n.id ? `<${t}:${a.replace(/:/g, "")}:${n.id}>` : null,
-                            s = k.VW.areStylesDisabled(e) || null == i ? r : i;
+                            s = C.VW.areStylesDisabled(e) || null == i ? r : i;
                         m.o.withSingleEntry(e, () => {
-                            C.b.insertText(e, s + (l ? " " : ""));
+                            k.b.insertText(e, s + (l ? " " : ""));
                         });
                     })(n, t, a),
-                    k.VW.focus(n)),
+                    C.VW.focus(n)),
                     a && l());
             },
             [n],
@@ -114,7 +114,7 @@ function F(e) {
         } = e,
         m = a.useContext(g._),
         I = m?.errorMessageId != null,
-        k = a.useRef(null),
+        C = a.useRef(null),
         j = a.useRef(null),
         P = a.useCallback(() => n, [n]),
         E = a.useCallback((e) => [...(0, N.A)(n, e, void 0), ...(0, x.A)(n, e)], [n]);
@@ -127,12 +127,12 @@ function F(e) {
                     () => e.ownerDocument.removeEventListener("scroll", n, { capture: !0 })
                 );
             function n(n) {
-                n.target.contains(e) && k.current?.hide();
+                n.target.contains(e) && C.current?.hide();
             }
         }, []),
         (0, t.jsxs)(t.Fragment, {
             children: [
-                (0, t.jsx)(y.A, { ref: k, getSlateEditor: P, containerRef: j }),
+                (0, t.jsx)(y.A, { ref: C, getSlateEditor: P, containerRef: j }),
                 (0, t.jsx)(v.vN, {
                     children: (0, t.jsxs)("div", {
                         className: i()(G.I6, B["text-sm/normal"]),
@@ -144,9 +144,9 @@ function F(e) {
                                 className: i()(G.XG, O.yL),
                                 onMouseDown: (e) => {
                                     e.target === e.currentTarget &&
-                                        (e.preventDefault(), C.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
+                                        (e.preventDefault(), k.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
                                 },
-                                onScroll: () => k.current?.hide(),
+                                onScroll: () => C.current?.hide(),
                                 children: (0, t.jsx)(A.A, {
                                     id: m?.controlId,
                                     containerClassName: G.RZ,
@@ -190,7 +190,7 @@ function H(e) {
             onKeyDown: m,
             onFocus: A,
             onBlur: y,
-            "aria-labelledby": k,
+            "aria-labelledby": C,
             ...x
         } = e,
         N = (function (e) {
@@ -230,7 +230,7 @@ function H(e) {
         g,
         () => ({
             focus(e) {
-                (C.b.resetSelectionToEditorEnd(N), u.rL.toDOMNode(N, N).focus(e));
+                (k.b.resetSelectionToEditorEnd(N), u.rL.toDOMNode(N, N).focus(e));
             },
             blur() {
                 u.rL.toDOMNode(N, N).blur();
@@ -273,7 +273,7 @@ function H(e) {
                 onKeyDown: m,
                 onFocus: A,
                 onBlur: y,
-                ariaLabelledByProp: k,
+                ariaLabelledByProp: C,
             }),
         })
     );

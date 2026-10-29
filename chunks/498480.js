@@ -1,5 +1,5 @@
 i.d(t, {
-    Wp: () => v,
+    Wp: () => R,
     pj: () => C,
     cq: () => I,
     Jr: () => y,
@@ -9,7 +9,7 @@ i.d(t, {
     hE: () => V,
     jL: () => b,
     K: () => S,
-    tT: () => R,
+    tT: () => v,
     dk: () => M,
     z9: () => x,
     Kz: () => O,
@@ -271,7 +271,7 @@ function I(e) {
               }
           });
 }
-function R(e, t) {
+function v(e, t) {
     return (0, c.aP)({
         url: A.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
         query: { locale: a.default.locale },
@@ -289,7 +289,7 @@ function R(e, t) {
         }
     });
 }
-function v(e, t) {
+function R(e, t) {
     e &&
         o.default.track(A.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
             user_id: l.default.getCurrentUser()?.id,

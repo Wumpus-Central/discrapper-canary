@@ -10,7 +10,7 @@ function o(e) {
         [u, c] = l.useState(),
         [d, m] = l.useState(),
         [p, g] = l.useState(),
-        [x, f] = l.useState(),
+        [f, x] = l.useState(),
         h = n.id.split(":").at(-1),
         A = t === h,
         v = l.useCallback((e, t, n) => {
@@ -27,7 +27,7 @@ function o(e) {
                         ? ((l = s.bitrateEstimate), `${(l / 1e3).toFixed(2)} Kbps`)
                         : "unknown",
                 ),
-                f("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
+                x("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
         }, []);
     return (
         l.useEffect(() => {
@@ -55,7 +55,7 @@ function o(e) {
                 }),
                 (0, i.jsxs)("div", {
                     className: a.l,
-                    children: [(0, i.jsx)("span", { children: "FPS: " }), (0, i.jsx)("strong", { children: x })],
+                    children: [(0, i.jsx)("span", { children: "FPS: " }), (0, i.jsx)("strong", { children: f })],
                 }),
                 A &&
                     (0, i.jsxs)("div", {

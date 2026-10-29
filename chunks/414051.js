@@ -230,8 +230,8 @@ function M(e) {
             priceOptions: V,
             setCurrency: Y,
             expressCheckoutVisibilityState: K,
-            isOrderLocked: Z,
-            refetchInvoicePreviews: q,
+            isOrderLocked: q,
+            refetchInvoicePreviews: Z,
         } = (0, h.t4)((e) => ({
             priceOptions: e.checkoutPriceOptions,
             setCurrency: e.setCheckoutCurrency,
@@ -246,9 +246,9 @@ function M(e) {
         } = K,
         { dropdownCurrencies: J, displayCurrency: X } = (0, _.Jn)(),
         ee = i.useCallback(() => {
-            (k(!0), q());
-        }, [q]),
-        et = i.useMemo(() => Z || Q || (C ?? !1), [Z, Q, C]),
+            (k(!0), Z());
+        }, [Z]),
+        et = i.useMemo(() => q || Q || (C ?? !1), [q, Q, C]),
         { giftCardCheckboxProps: en, disabled: el } = i.useMemo(
             () =>
                 null != y

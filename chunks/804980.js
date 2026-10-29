@@ -14,13 +14,13 @@ var i = n(477900),
     A = n(878549),
     p = n(969151),
     m = n(550151),
-    I = n(902439),
-    E = n(283488),
+    E = n(902439),
+    I = n(283488),
     S = n(732637),
     C = n(315206),
     _ = n(104171),
-    T = n(594007),
-    N = n(227042),
+    N = n(594007),
+    T = n(227042),
     v = n(793574),
     y = n(688810),
     M = n(698141),
@@ -64,8 +64,8 @@ function Y(e) {
 function z(e) {
     let { participants: t, application: n, channel: r, width: u } = e,
         p = u > 400 ? 2 : +(u > 300),
-        [I] = u > 400 ? [o._3.SIZE_56, 56] : u > 300 ? [o._3.SIZE_32, 32] : [o._3.SIZE_24, 24],
-        E = (0, a.yK)([G.default, P.default], () =>
+        [E] = u > 400 ? [o._3.SIZE_56, 56] : u > 300 ? [o._3.SIZE_32, 32] : [o._3.SIZE_24, 24],
+        I = (0, a.yK)([G.default, P.default], () =>
             Array.from(t)
                 .map((e) => ((0, A.S)(e, P.default) ? null : G.default.getUser(e.userId)))
                 .filter(F.Vq),
@@ -75,8 +75,8 @@ function z(e) {
         ),
         { analyticsLocations: C } = (0, y.Ay)(),
         _ = (0, h.p)(),
-        T = j.Ay.getName(r.getGuildId(), r.id, E?.[0]),
-        N = (0, m.vG)({ userId: G.default.getCurrentUser()?.id, channelId: r.id, application: n }) === m.Gy.CAN_JOIN,
+        N = j.Ay.getName(r.getGuildId(), r.id, I?.[0]),
+        T = (0, m.vG)({ userId: G.default.getCurrentUser()?.id, channelId: r.id, application: n }) === m.Gy.CAN_JOIN,
         v = r.getGuildId() ?? void 0,
         D = l.useId(),
         R = n.id,
@@ -85,14 +85,14 @@ function z(e) {
     return (0, i.jsxs)("div", {
         className: B.Yi,
         children: [
-            (0, i.jsx)(Y, { avatarSize: I, guildId: v, channelId: r.id, users: E }),
+            (0, i.jsx)(Y, { avatarSize: E, guildId: v, channelId: r.id, users: I }),
             (0, i.jsx)(d.E, {
                 className: s()(B.m_, { [B.EX]: 0 === p, [B.Y]: 1 === p }),
                 variant: "text-sm/normal",
                 children:
-                    E.length > 1
-                        ? H.intl.formatToPlainString(H.t.cpe6CK, { username: T, count: E.length - 1 })
-                        : H.intl.formatToPlainString(H.t["7Uuia2"], { username: T }),
+                    I.length > 1
+                        ? H.intl.formatToPlainString(H.t.cpe6CK, { username: N, count: I.length - 1 })
+                        : H.intl.formatToPlainString(H.t["7Uuia2"], { username: N }),
             }),
             (0, i.jsx)(d.E, {
                 className: s()(B.wx, { [B.EX]: 0 === p, [B.Y]: 1 === p }),
@@ -101,7 +101,7 @@ function z(e) {
             }),
             (0, i.jsx)("div", {
                 className: B.Uo,
-                children: N
+                children: T
                     ? (0, i.jsx)(c.$, {
                           text: H.intl.string(H.t["4i2vj+"]),
                           onClick: function (e) {
@@ -128,7 +128,7 @@ function J(e) {
     let { participant: t, width: n, selected: r, interactible: s, channel: o } = e,
         { analyticsLocations: u } = (0, y.Ay)(v.A.ACTIVITY_TILE),
         { applicationId: d, frameId: c } = t,
-        h = (0, I.A)(),
+        h = (0, E.A)(),
         f = (0, a.bG)([O.A], () => (0, V.ny)(O.A.getFrame(c)), [c]),
         g = (0, w.Us)() === k.BRT.APP,
         A = null != h && (0, p.H)(h.location) === o.id && h.applicationId === d,
@@ -137,14 +137,14 @@ function J(e) {
         M = null != m || A,
         P = null != m ? g : A,
         [G] = (0, D.A)([d]),
-        { url: F } = (0, E.A)({ applicationId: d, names: W, size: 1024 }),
+        { url: F } = (0, I.A)({ applicationId: d, names: W, size: 1024 }),
         j = !r && P,
         H = !P,
-        Y = (0, a.bG)([b.A, U.A], () => (0, N.A)({ LayerStore: b.A, PopoutWindowStore: U.A }));
+        Y = (0, a.bG)([b.A, U.A], () => (0, T.A)({ LayerStore: b.A, PopoutWindowStore: U.A }));
     return (
         l.useEffect(() => {
             if (j && null == m && null != h && !Y) {
-                let e = (0, T.A)(h.location.id, h.applicationId);
+                let e = (0, N.A)(h.location.id, h.applicationId);
                 (0, C.cK)(e);
             }
         }, [j, m, h, Y]),
@@ -160,7 +160,7 @@ function J(e) {
                     j &&
                         null == f &&
                         null != h &&
-                        (0, i.jsx)(S.A, { className: B.pU, embedId: (0, T.A)(h.location.id, d) }),
+                        (0, i.jsx)(S.A, { className: B.pU, embedId: (0, N.A)(h.location.id, d) }),
                     H && null != G && null != F && "" !== F
                         ? (0, i.jsx)("img", { className: B.j0, alt: G.name, src: F })
                         : null,

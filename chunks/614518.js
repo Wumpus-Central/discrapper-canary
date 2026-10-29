@@ -14,8 +14,8 @@ function p(e) {
     null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
 }
 let g = [],
-    x = 10 * o.A.Millis.SECOND,
-    f = (0, l.debounce)(() => {
+    f = 10 * o.A.Millis.SECOND,
+    x = (0, l.debounce)(() => {
         let e = (0, u.fr)(m);
         (r.O.announce(e, "polite"), (m = []));
     }, 500);
@@ -49,14 +49,14 @@ let A = new h(a.h, {
             null != i &&
             ((d[n] = { emoji: t, sentAt: Date.now(), animationType: i }),
             (m = [...m, { emojiName: t.name, userId: n }]),
-            f());
+            x());
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: function () {
         let e = new Date();
         if ((g = [e, ...g].slice(0, 20)).length >= 20) {
             let t = g[g.length - 1],
                 n = e.getTime() - t.getTime();
-            n < x && (i = new Date(e.getTime() + x - n));
+            n < f && (i = new Date(e.getTime() + f - n));
         }
     },
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: function (e) {

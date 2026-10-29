@@ -1,9 +1,9 @@
-s.d(t, { A: () => g });
-var i = s(17928),
-    n = s(73153),
-    a = s(297966),
-    l = s(870975),
-    r = s(202541);
+i.d(t, { A: () => g });
+var s = i(17928),
+    n = i(73153),
+    a = i(297966),
+    l = i(870975),
+    r = i(202541);
 let c = null,
     o = a.db.NOT_FETCHED,
     d = null;
@@ -15,7 +15,7 @@ function m(e) {
     let t = (0, l.MM)(e.entitlement);
     ((c = null == t ? null : { perk: a.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), u());
 }
-class x extends i.Ay.Store {
+class x extends s.Ay.Store {
     static displayName = "PartnerActivationStore";
     getActivationStatus() {
         return c;
@@ -66,14 +66,14 @@ let g = new x(n.h, {
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function (e) {
         if (e.applicationId !== r.tv || 0 === e.entitlements.length) return !1;
         let t = null;
-        for (let s of e.entitlements) {
-            if (s.sku_id !== l.cc) continue;
-            let e = (0, l.MM)(s);
+        for (let i of e.entitlements) {
+            if (i.sku_id !== l.cc) continue;
+            let e = (0, l.MM)(i);
             if (e === a.gR.ACTIVATED) {
-                ((c = { perk: a.n9.XGPP, state: a.gR.ACTIVATED, entitlement_id: s.id, redirect: null }), u());
+                ((c = { perk: a.n9.XGPP, state: a.gR.ACTIVATED, entitlement_id: i.id, redirect: null }), u());
                 return;
             }
-            e === a.gR.CANCELLATION_PENDING && (t = s.id);
+            e === a.gR.CANCELLATION_PENDING && (t = i.id);
         }
         if (null == t) return !1;
         ((c = { perk: a.n9.XGPP, state: a.gR.CANCELLATION_PENDING, entitlement_id: t, redirect: null }), u());
