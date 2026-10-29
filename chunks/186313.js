@@ -1,4 +1,4 @@
-t.d(n, { A: () => nn });
+t.d(n, { A: () => ni });
 var l = t(477900),
     r = t(582128),
     a = t(146849),
@@ -15,9 +15,9 @@ var h = t(791606),
     x = t(997141),
     f = t(954403),
     v = t(503698),
-    g = t.n(v),
-    j = t(939249),
-    p = t(933832),
+    p = t.n(v),
+    g = t(939249),
+    j = t(933832),
     I = t(624479),
     y = t(143145),
     A = t(441136),
@@ -27,7 +27,7 @@ var h = t(791606),
 function S(e) {
     let { text: n } = e,
         [t, a] = r.useState(!1);
-    return (0, l.jsx)(j.D, {
+    return (0, l.jsx)(g.D, {
         onClick: function () {
             (0, k.C)(
                 n,
@@ -36,23 +36,23 @@ function S(e) {
             );
         },
         children: t
-            ? (0, l.jsx)(p.CheckmarkLargeIcon, { size: "xs", color: "currentColor" })
+            ? (0, l.jsx)(j.CheckmarkLargeIcon, { size: "xs", color: "currentColor" })
             : (0, l.jsx)(I.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
 var w = t(17928),
-    N = t(236285),
-    E = t(7584),
-    M = t(930101),
-    L = t(690521),
-    P = t(307731);
+    M = t(236285),
+    N = t(7584),
+    E = t(930101),
+    P = t(690521),
+    L = t(307731);
 let _ = r.createContext(!1);
 function z(e) {
     let { value: n, jumboable: t } = e,
-        r = L.Ay.getURL(n),
-        a = E.Ay.convertSurrogateToName(n),
+        r = P.Ay.getURL(n),
+        a = N.Ay.convertSurrogateToName(n),
         i = d();
-    return (0, l.jsx)(M.H, {
+    return (0, l.jsx)(E.H, {
         node: { name: a, src: r, jumboable: t },
         channelId: i?.channelId,
         messageId: i?.messageId,
@@ -62,11 +62,11 @@ function G(e) {
     let { value: n, jumboable: t } = e,
         r = d(),
         a = r?.guildId,
-        i = (0, w.bG)([N.Ay], () => N.Ay.getDisambiguatedEmojiContext(a).getById(String(n.id)), [a, n.id]),
+        i = (0, w.bG)([M.Ay], () => M.Ay.getDisambiguatedEmojiContext(a).getById(String(n.id)), [a, n.id]),
         s = i?.name ?? n.name;
     return (
         null != i && i.require_colons && (s = `:${i.name}:`),
-        (0, l.jsx)(M.X, {
+        (0, l.jsx)(E.X, {
             node: { name: s, animated: n.animated, emojiId: String(n.id), jumboable: t },
             channelId: r?.channelId,
             messageId: r?.messageId,
@@ -76,12 +76,12 @@ function G(e) {
 function $() {
     return d()?.formatInline === !0 ? C.tZ : void 0;
 }
-var T = t(588975),
-    H = t(442433),
-    R = t(9578),
-    F = t(975807),
-    J = t(380610),
-    U = t(235393),
+var R = t(588975),
+    T = t(442433),
+    H = t(9578),
+    U = t(975807),
+    F = t(380610),
+    J = t(235393),
     B = t(258072),
     q = t(332173),
     D = t(679164),
@@ -129,7 +129,7 @@ let V = /^dev:\/\//i,
 function er(e) {
     let { url: n } = e,
         t =
-            (0, J.vS)(n) || (0, J.h4)(n)
+            (0, F.vS)(n) || (0, F.h4)(n)
                 ? (0, l.jsx)(ee, { url: n })
                 : (0, Z.W0)(n)
                   ? (0, l.jsx)(en, { url: n })
@@ -152,9 +152,9 @@ var ea = t(192308),
     ex = t(906754),
     ef = t(37632),
     ev = t(593284),
-    eg = t(288539),
-    ej = t(317525),
-    ep = t(71393),
+    ep = t(288539),
+    eg = t(317525),
+    ej = t(71393),
     eI = t(994500),
     ey = t(287809),
     eA = t(147036),
@@ -194,12 +194,12 @@ function ew(e) {
                           iconType: o,
                           children: u ?? (0, l.jsx)("em", { children: eS.intl.string(eS.t.J90oLW) }),
                       })
-                    : (0, l.jsx)(eN, { guildId: r, children: u })
+                    : (0, l.jsx)(eM, { guildId: r, children: u })
                 : (0, l.jsx)(eh.A, { iconType: "locked", children: eS.intl.string(eS.t["/YzI63"]) }),
-        g = null;
+        p = null;
     return (
         null != a &&
-            (g = (0, l.jsxs)(l.Fragment, {
+            (p = (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)(ef.A, {}), (0, l.jsx)(eh.A, { iconType: c ? "post" : "message" })],
             })),
         (0, l.jsxs)(q.A, {
@@ -212,7 +212,7 @@ function ew(e) {
             onContextMenu: x
                 ? function (e) {
                       let r = O.A.getChannel(n);
-                      (0, H.L3)(e, async () => {
+                      (0, T.L3)(e, async () => {
                           let { default: e } = await Promise.all([t.e("638221"), t.e("343266"), t.e("404391")]).then(
                               t.bind(t, 254106),
                           );
@@ -228,19 +228,19 @@ function ew(e) {
                   }
                 : void 0,
             className: "channelMention",
-            children: [v, g],
+            children: [v, p],
         })
     );
 }
-function eN(e) {
+function eM(e) {
     let { guildId: n, children: t } = e,
-        r = (0, w.bG)([ep.A], () => ep.A.getGuild(n), [n]);
+        r = (0, w.bG)([ej.A], () => ej.A.getGuild(n), [n]);
     return (0, l.jsxs)(ex.A, { guild: r, children: [r?.name, null != r ? (0, l.jsx)(ef.A, {}) : null, t] });
 }
-function eE(e) {
+function eN(e) {
     let { id: n } = e,
         t = d();
-    return (0, l.jsx)(eg.A, {
+    return (0, l.jsx)(ep.A, {
         className: "mention",
         userId: n,
         channelId: t?.channelId,
@@ -250,11 +250,11 @@ function eE(e) {
         inlinePreview: t?.noStyleAndInteraction,
     });
 }
-function eM(e) {
+function eE(e) {
     let { id: n } = e,
         t = d(),
         r = t?.guildId,
-        a = (0, w.bG)([ej.A], () => (null != r ? ej.A.getRole(r, n)?.name : null) ?? eS.intl.string(eS.t.sKdZ6U), [
+        a = (0, w.bG)([eg.A], () => (null != r ? eg.A.getRole(r, n)?.name : null) ?? eS.intl.string(eS.t.sKdZ6U), [
             r,
             n,
         ]);
@@ -266,12 +266,12 @@ function eM(e) {
         children: `@${a}`,
     });
 }
-function eL(e) {
+function eP(e) {
     let { id: n } = e,
         t = d();
     return (0, l.jsx)(em.A, { gameId: n, authorId: t?.authorId });
 }
-function eP(e) {
+function eL(e) {
     let { roleName: n } = e,
         t = d();
     return (0, l.jsx)(ev.A, {
@@ -287,7 +287,7 @@ function e_(e) {
         r = d(),
         a = r?.guildId,
         i = (0, eo.Q)(n),
-        s = (0, w.bG)([ej.A], () => (0, eo.f)(ej.A, n, t, a), [n, t, a]);
+        s = (0, w.bG)([eg.A], () => (0, eo.f)(eg.A, n, t, a), [n, t, a]);
     return null == i
         ? null
         : (0, l.jsxs)(q.A, {
@@ -322,15 +322,15 @@ function e$(e) {
         s = (0, w.bG)([O.A], () => (null != a && null == O.A.getChannel(t) ? a : t), [t, a]);
     return (0, l.jsx)(ew, { channelId: s, guildId: n, messageId: r, conversationId: i });
 }
-function eT(e) {
+function eR(e) {
     let { url: n, name: a, interactive: i } = e,
         s = r.useCallback(async () => {
             let e = await D.AN(n);
-            (U.A.trackLinkClicked(e), (0, F.A)(e));
+            (J.A.trackLinkClicked(e), (0, U.A)(e));
         }, [n]),
         u = r.useCallback(
             (e) => {
-                (0, H.L3)(e, async () => {
+                (0, T.L3)(e, async () => {
                     let { default: e } = await t.e("762529").then(t.bind(t, 740024));
                     return (t) => (0, l.jsx)(e, { ...t, attachmentUrl: n, attachmentName: a });
                 });
@@ -343,14 +343,14 @@ function eT(e) {
         onClick: i ? s : void 0,
         onContextMenu: i ? u : void 0,
         className: "attachmentLink",
-        children: [(0, l.jsx)(T.P, { size: "xs", className: eG.Kk, color: "currentColor" }), a],
+        children: [(0, l.jsx)(R.P, { size: "xs", className: eG.Kk, color: "currentColor" }), a],
     });
 }
-var eH = t(196765),
-    eR = t(976245),
-    eF = t(302031);
-function eJ() {
-    return (0, eR.y)()((e) => ({
+var eT = t(196765),
+    eH = t(976245),
+    eU = t(302031);
+function eF() {
+    return (0, eH.y)()((e) => ({
         revealedIds: new Set(),
         hoveredId: null,
         reveal(n) {
@@ -361,11 +361,11 @@ function eJ() {
         },
     }));
 }
-let eU = (0, eR.y)()(() => ({ revealedIds: new Set(), hoveredId: null, reveal() {}, setHovered() {} })),
-    eB = r.createContext(eU);
+let eJ = (0, eH.y)()(() => ({ revealedIds: new Set(), hoveredId: null, reveal() {}, setHovered() {} })),
+    eB = r.createContext(eJ);
 function eq(e) {
     let { children: n } = e,
-        [t] = r.useState(eJ);
+        [t] = r.useState(eF);
     return (0, l.jsx)(eB.Provider, { value: t, children: n });
 }
 var eD = t(785562),
@@ -449,9 +449,9 @@ let e1 = {
             let e = W(t);
             if (null != e) return (0, l.jsx)(e$, { ...e });
             let n = (0, B.h)(t);
-            if (null != n) return (0, l.jsx)(eT, { url: t, name: n.name, interactive: !i });
+            if (null != n) return (0, l.jsx)(eR, { url: t, name: n.name, interactive: !i });
         }
-        if ((0, J.vS)(t)) return (0, l.jsx)(er, { url: t });
+        if ((0, F.vS)(t)) return (0, l.jsx)(er, { url: t });
         let u = s ? (0, l.jsx)(f.z, { text: t }) : a;
         if (V.test(t))
             return (0, l.jsxs)(l.Fragment, {
@@ -467,7 +467,7 @@ let e1 = {
                     : t),
         i)
             ? (0, l.jsx)("span", { title: o ?? t, children: u })
-            : (0, l.jsx)(R.A, {
+            : (0, l.jsx)(H.A, {
                   title: o,
                   href: t,
                   trusted: s ? () => (0, K.m)(t, t) : void 0,
@@ -512,7 +512,7 @@ let e1 = {
                 className: C.Hy,
                 children: [
                     k.p5 ? (0, l.jsx)("div", { className: C.lB, children: (0, l.jsx)(S, { text: t }) }) : null,
-                    (0, l.jsx)(A.E, { code: t, lang: n, className: g()(b.kw, "hljs") }),
+                    (0, l.jsx)(A.E, { code: t, lang: n, className: p()(b.kw, "hljs") }),
                 ],
             }),
         });
@@ -546,15 +546,15 @@ let e1 = {
             case "channel":
                 return (0, l.jsx)(ew, { channelId: String(t) });
             case "user":
-                return (0, l.jsx)(eE, { id: String(t) });
+                return (0, l.jsx)(eN, { id: String(t) });
             case "role":
-                return (0, l.jsx)(eM, { id: String(t) });
+                return (0, l.jsx)(eE, { id: String(t) });
             case "everyone":
-                return (0, l.jsx)(eP, { roleName: "@everyone" });
+                return (0, l.jsx)(eL, { roleName: "@everyone" });
             case "here":
-                return (0, l.jsx)(eP, { roleName: "@here" });
+                return (0, l.jsx)(eL, { roleName: "@here" });
             case "game":
-                return (0, l.jsx)(eL, { id: String(t) });
+                return (0, l.jsx)(eP, { id: String(t) });
             case "command":
                 return (0, l.jsx)(ez, { id: String(t.id), name: t.name });
             case "static":
@@ -579,8 +579,8 @@ let e1 = {
             i = r.useMemo(() => Array.from((0, s.tJ)([t])).some((e) => "link" === e.type), [t]),
             u = d(),
             o = r.useContext(eB),
-            c = (0, eH.P)(o, (e) => e.revealedIds.has(a)),
-            h = (0, eH.P)(o, (e) => e.hoveredId === a),
+            c = (0, eT.P)(o, (e) => e.revealedIds.has(a)),
+            h = (0, eT.P)(o, (e) => e.hoveredId === a),
             m = r.useCallback(() => o.getState().reveal(a), [o, a]),
             x = r.useCallback(() => o.getState().setHovered(a, !0), [o, a]),
             f = r.useCallback(() => o.getState().setHovered(a, !1), [o, a]);
@@ -588,8 +588,8 @@ let e1 = {
             r.useEffect(() => {
                 u?.setHasSpoilerEmbeds?.(i);
             }, [u, i]),
-            (0, l.jsx)(eF.Ay, {
-                type: eF.Ay.Types.TEXT,
+            (0, l.jsx)(eU.Ay, {
+                type: eU.Ay.Types.TEXT,
                 obscured: !c,
                 hovered: h,
                 onReveal: m,
@@ -645,7 +645,7 @@ function e9(e) {
                             default:
                                 return !1;
                         }
-                    return n <= P.MAX_EMOJI_TO_BE_JUMBO;
+                    return n <= L.MAX_EMOJI_TO_BE_JUMBO;
                 })(h),
             [t, h],
         ),
@@ -712,108 +712,125 @@ var e7 = t(174459),
     e5 = t(594808),
     e8 = t(652215),
     ne = t(910379);
-function nn(e, n) {
+function nn(e) {
     let {
-            hideSimpleEmbedContent: i = !0,
-            formatInline: s = !1,
-            noStyleAndInteraction: u = !1,
-            allowHeading: o = !1,
-            allowList: d = !1,
-            allowLinks: h = !1,
-            allowDevLinks: m = !1,
-            previewLinkTarget: x = !1,
-            viewingChannelId: f,
-            postProcessor: v,
-            restrictedPreview: g = !1,
-        } = n,
-        j = (0, a.I2)({ location: "useMessageRenderedContent" }),
-        [p, I] = r.useState(!1),
-        y = r.useCallback((e) => {
-            e && I(!0);
-        }, []);
-    r.useEffect(() => {
-        I(!1);
-    }, [e.content]);
-    let A = e.id,
-        k = e.channel_id,
-        C = (0, e2.U)(e),
-        b = e.author?.id,
-        S = r.useMemo(
+        hideSimpleEmbedContent: n = !0,
+        formatInline: t = !1,
+        noStyleAndInteraction: l = !1,
+        allowHeading: a = !1,
+        allowList: i = !1,
+        allowLinks: s = !1,
+        allowDevLinks: u = !1,
+        previewLinkTarget: o = !1,
+        viewingChannelId: c,
+        postProcessor: d,
+        restrictedPreview: h = !1,
+    } = e;
+    return r.useMemo(
+        () => ({
+            hideSimpleEmbedContent: n,
+            formatInline: t,
+            noStyleAndInteraction: l,
+            allowHeading: a,
+            allowList: i,
+            allowLinks: s,
+            allowDevLinks: u,
+            previewLinkTarget: o,
+            viewingChannelId: c,
+            allowGameMentions: !0,
+            postProcessor: d,
+            restrictedPreview: h,
+        }),
+        [n, t, l, a, i, s, u, o, c, d, h],
+    );
+}
+function nt(e, n) {
+    return (0, a.I2)({ location: n }).enabled && null == e.postProcessor;
+}
+function nl(e, n) {
+    let { restrictedPreview: t, postProcessor: l, ...r } = n;
+    return (0, e6.Ay)(e, { ...r, postProcessor: t ? (e, n) => (0, eW.A)(l?.(e, n) ?? e) : l });
+}
+function nr(e) {
+    if (null != e.customRenderedContent) return e.customRenderedContent;
+    if (e.isUnsupported) return { content: eS.intl.string(eS.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+    if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(e8.pr7.LOADING))
+        return { content: (0, l.jsx)(e5.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+    if (e.type === e8.lAJ.CHANGELOG) {
+        let { renderChangelogMessageMarkup: n } = t(550997);
+        return n(e, ne, {
+            track: (e, n) => {
+                e7.default.track(e, n);
+            },
+        });
+    }
+    return null;
+}
+function na(e) {
+    let { message: n, options: t, setHasSpoilerEmbeds: a } = e,
+        i = nn(t),
+        s = nt(i, "MessageRenderedContent"),
+        u = n.id,
+        o = n.channel_id,
+        d = (0, e2.U)(n),
+        h = n.author?.id,
+        { viewingChannelId: m, formatInline: x, noStyleAndInteraction: f } = i,
+        v = r.useMemo(
             () => ({
-                messageId: A,
-                channelId: k,
-                viewingChannelId: f,
-                guildId: C,
-                authorId: b,
-                setHasSpoilerEmbeds: y,
-                formatInline: s,
-                noStyleAndInteraction: u,
+                messageId: u,
+                channelId: o,
+                viewingChannelId: m,
+                guildId: d,
+                authorId: h,
+                setHasSpoilerEmbeds: a,
+                formatInline: x,
+                noStyleAndInteraction: f,
             }),
-            [A, k, f, C, b, y, s, u],
+            [u, o, m, d, h, a, x, f],
         );
     return r.useMemo(() => {
-        if (null != e.customRenderedContent) return e.customRenderedContent;
-        if (e.isUnsupported) return { content: eS.intl.string(eS.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
-        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(e8.pr7.LOADING))
-            return { content: (0, l.jsx)(e5.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
-        if (e.type === e8.lAJ.CHANGELOG) {
-            let { renderChangelogMessageMarkup: n } = t(550997);
-            return n(e, ne, {
-                track: (e, n) => {
-                    e7.default.track(e, n);
-                },
-            });
-        }
-        if (j.enabled && null == v)
-            return {
-                content: (0, l.jsx)(r.Suspense, {
+        let e = nr(n);
+        return null != e
+            ? e.content
+            : s
+              ? (0, l.jsx)(r.Suspense, {
                     children: (0, l.jsx)(c.Provider, {
-                        value: S,
+                        value: v,
                         children: (0, l.jsx)(e3, {
-                            content: e.content,
-                            allowJumboEmoji: !s && e.type !== e8.lAJ.MEDIA_MENTION_MESSAGE,
-                            hideSingleLinkContent: i && (0, eQ.k5)(e.embeds),
-                            redactRestrictedContent: g,
+                            content: n.content,
+                            allowJumboEmoji: !x && n.type !== e8.lAJ.MEDIA_MENTION_MESSAGE,
+                            hideSingleLinkContent: i.hideSimpleEmbedContent && (0, eQ.k5)(n.embeds),
+                            redactRestrictedContent: i.restrictedPreview,
                         }),
                     }),
-                }),
-                hasSpoilerEmbeds: p,
-                hasBailedAst: !1,
-            };
-        let n = g ? (e, n) => (0, eW.A)(v?.(e, n) ?? e) : v;
-        return (0, e6.Ay)(e, {
-            hideSimpleEmbedContent: i,
-            formatInline: s,
-            noStyleAndInteraction: u,
-            allowHeading: o,
-            allowList: d,
-            allowLinks: h,
-            allowDevLinks: m,
-            previewLinkTarget: x,
-            viewingChannelId: f,
-            allowGameMentions: !0,
-            postProcessor: n,
-        });
-    }, [
-        e.content,
-        e.customRenderedContent,
-        e.embeds,
-        e.interaction,
-        e.state,
-        e.type,
-        i,
-        s,
-        u,
-        o,
-        d,
-        h,
-        x,
-        m,
-        f,
-        v,
-        g,
-        j.enabled,
-        p,
-        S,
-    ]);
+                })
+              : nl(n, i).content;
+    }, [n.content, n.customRenderedContent, n.embeds, n.interaction, n.state, n.type, i, s, v]);
+}
+function ni(e, n) {
+    let t = nn(n),
+        a = nt(t, "useMessageRenderedContent"),
+        [i, s] = r.useState(!1),
+        u = r.useCallback((e) => {
+            e && s(!0);
+        }, []);
+    r.useEffect(() => {
+        s(!1);
+    }, [e.content]);
+    let o = e.id,
+        c = e.channel_id,
+        d = (0, e2.U)(e),
+        h = e.author?.id;
+    return r.useMemo(() => {
+        let n = nr(e);
+        return null != n
+            ? n
+            : a
+              ? {
+                    content: (0, l.jsx)(na, { message: e, options: t, setHasSpoilerEmbeds: u }),
+                    hasSpoilerEmbeds: i,
+                    hasBailedAst: !1,
+                }
+              : nl(e, t);
+    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, t, a, u, i, o, c, d, h]);
 }
