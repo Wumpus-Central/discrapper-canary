@@ -92,6 +92,12 @@
     margin-bottom: var(--space-16)
 }
 
+.error__4ad69 {
+    flex-shrink: 0;
+    overflow-wrap: anywhere;
+    padding: var(--space-12) var(--space-16)
+}
+
 .deletedMessage__4ad69 {
     display: flex;
     justify-content: space-between;
@@ -231,4 +237,4 @@
     overflow: hidden
 }
 
-/*# sourceMappingURL=af7029703817da0b.css.map*/
+/*# sourceMappingURL=ff3a9fcb51f029b2.css.map*/
