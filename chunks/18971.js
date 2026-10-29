@@ -232,7 +232,7 @@ var eH = n(176781),
     eW = n(780964),
     ez = n(766075),
     eZ = n(734066),
-    eK = n(274372),
+    eK = n(915725),
     eq = n(409067),
     eY = n(271597),
     eQ = n(297264),
@@ -333,7 +333,7 @@ function tA(e) {
         o = (0, u.bG)([eK.Ay], () => eK.Ay.getSettings()),
         c = (0, u.bG)([eK.Ay], () => eK.Ay.getNewClipIds()),
         d = (0, e8.aJ)("ClipsPopout"),
-        m = (0, e4.E)(),
+        m = (0, u.bG)([eK.Ay], () => eK.Ay.getEnableAutoclipping()),
         h = (0, u.bG)([e5.Ay], () => e5.Ay.getKeybindForAction(th.hCu.SAVE_CLIP)),
         p = i.useCallback(
             (e) => {
@@ -2831,7 +2831,7 @@ function iP(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iw.A)("1793290037756", !0);
+        let e = (0, iw.A)("1793290994846", !0);
         t =
             null != e
                 ? eO.intl.formatToPlainString(eO.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -3805,7 +3805,7 @@ class iV extends i.PureComponent {
                     n.e("214451"),
                     n.e("993720"),
                     n.e("654658"),
-                    n.e("486512"),
+                    n.e("550006"),
                     n.e("233049"),
                     n.e("569443"),
                     n.e("439518"),

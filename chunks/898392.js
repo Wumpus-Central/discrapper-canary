@@ -23,7 +23,7 @@ var n,
     S = a(999926),
     _ = a(157257),
     N = a(507868),
-    A = a(274372),
+    A = a(915725),
     k = a(341923),
     D = a(614584),
     I = a(423341),
@@ -32,30 +32,30 @@ var n,
     w = a(227628),
     O = a(468550),
     M = a(196765);
-let P = (0, M.v)(() => ({ enabled: !1, pending: null, lastResult: null }));
-function L(e) {
-    P.setState({ enabled: e });
+let L = (0, M.v)(() => ({ enabled: !1, pending: null, lastResult: null }));
+function P(e) {
+    L.setState({ enabled: e });
 }
 function U(e) {
-    P.setState({ pending: e });
+    L.setState({ pending: e });
 }
 function G(e) {
-    P.setState({ lastResult: e });
+    L.setState({ lastResult: e });
 }
 var B = a(781710),
     F = a(696016),
     $ = a(264572).Buffer;
 function V() {
-    let e = P((e) => e.enabled),
-        t = P((e) => e.pending),
-        a = P((e) => e.lastResult),
+    let e = L((e) => e.enabled),
+        t = L((e) => e.pending),
+        a = L((e) => e.lastResult),
         n = o.useCallback(async (e, t, a, n) => {
             let l = S.Ay.getMediaEngine();
             if (null == l.setClipsPerfMonitoring) return (G("setClipsPerfMonitoring unsupported in this build"), null);
             U(n);
             try {
                 let n = await l.setClipsPerfMonitoring(e, t, a);
-                return (L(n.enabled), n);
+                return (P(n.enabled), n);
             } catch (e) {
                 return (G(`${n} failed: ${e instanceof Error ? e.message : String(e)}`), null);
             } finally {
@@ -64,9 +64,9 @@ function V() {
         }, []),
         l = o.useCallback(
             async (t) => {
-                L(t);
+                P(t);
                 let a = await n(t, !1, !1, t ? "enable" : "disable");
-                null != a ? G(`recorder ${a.enabled ? "enabled" : "disabled"}`) : L(e);
+                null != a ? G(`recorder ${a.enabled ? "enabled" : "disabled"}`) : P(e);
             },
             [n, e],
         ),
@@ -219,23 +219,23 @@ function K() {
                 l = e.filter((e) => e.applicationId === n).slice(0, 10);
             (A.Ay.devSetLastClipsSession(H(n, l)), (0, w.w9)());
         }, []),
-        p = o.useCallback(
+        S = o.useCallback(
             (e) => {
                 e ? s() : (0, w.yj)();
             },
             [s],
         ),
-        S = o.useCallback(
+        N = o.useCallback(
             (e) => {
                 (n(e), t && l(e));
             },
             [l, t],
         ),
-        [N, k] = o.useState(F.rb.KILL),
-        [T, R] = o.useState(1),
-        [M, P] = o.useState(""),
-        L = (0, d.bG)([A.Ay], () => A.Ay.isAutoStashEnabled()),
-        U = o.useCallback((e) => {
+        [k, T] = o.useState(F.rb.KILL),
+        [R, M] = o.useState(1),
+        [L, P] = o.useState(""),
+        U = (0, d.bG)([A.Ay], () => A.Ay.isAutoStashEnabled()),
+        G = o.useCallback((e) => {
             e
                 ? (0, c.A)({
                       title: "Stash all gaming sessions?",
@@ -249,198 +249,211 @@ function K() {
                   })
                 : D.mN(!1);
         }, []),
-        [G, $] = o.useState([]),
-        [W, K] = o.useState(void 0),
-        Y = o.useCallback((e) => {
-            ($(e), K((t) => (null != t && e.includes(t) ? t : e[0])));
+        [$, W] = o.useState([]),
+        [K, Y] = o.useState(void 0),
+        q = o.useCallback((e) => {
+            (W(e), Y((t) => (null != t && e.includes(t) ? t : e[0])));
         }, []),
-        q = o.useCallback(async () => {
+        J = o.useCallback(async () => {
             let e = y.A.clips.debugListStashedClipDeciderSessions;
-            null != e && Y(await e());
-        }, [Y]);
-    return (
-        o.useEffect(() => {
-            let e = !0,
-                t = y.A.clips.debugListStashedClipDeciderSessions;
-            if (null != t)
-                return (
-                    t().then((t) => {
-                        e && Y(t);
+            null != e && q(await e());
+        }, [q]);
+    o.useEffect(() => {
+        let e = !0,
+            t = y.A.clips.debugListStashedClipDeciderSessions;
+        if (null != t)
+            return (
+                t().then((t) => {
+                    e && q(t);
+                }),
+                () => {
+                    e = !1;
+                }
+            );
+    }, [q]);
+    let Q = (0, d.bG)([A.Ay], () => A.Ay.getState().clipsSettings.enableAutoclipping),
+        X = (0, d.bG)([A.Ay], () => A.Ay.getEnableAutoclipping());
+    return (0, r.jsx)(g.Ip, {
+        children: (0, r.jsxs)(v.l, {
+            children: [
+                (0, r.jsx)(u.n, {
+                    label: "Send Test Signals",
+                    children: (0, r.jsxs)(h.M, {
+                        children: [
+                            (0, r.jsx)(x.$, { text: "Manual", onClick: () => D.Ts({ type: F.Gy.MANUAL }) }),
+                            (0, r.jsx)(x.$, {
+                                text: "Distributed",
+                                onClick: () =>
+                                    D.Ts({
+                                        type: F.Gy.DISTRIBUTED,
+                                        remoteTriggerUserId: "123",
+                                        remoteTriggerClipId: "456",
+                                    }),
+                            }),
+                            (0, r.jsx)(x.$, {
+                                text: "Shouting",
+                                onClick: () => D.Ts({ type: F.Gy.SHOUTING, userId: "123", confidence: 1 }),
+                            }),
+                            (0, r.jsx)(x.$, { text: "Laughter", onClick: () => I.A.debugCreateRankableLaughterClip() }),
+                        ],
                     }),
-                    () => {
-                        e = !1;
-                    }
-                );
-        }, [Y]),
-        (0, r.jsx)(g.Ip, {
-            children: (0, r.jsxs)(v.l, {
-                children: [
-                    (0, r.jsx)(u.n, {
-                        label: "Send Test Signals",
-                        children: (0, r.jsxs)(h.M, {
+                }),
+                (0, r.jsxs)(u.n, {
+                    label: "Game Event Creator",
+                    children: [
+                        (0, r.jsxs)(h.M, {
                             children: [
-                                (0, r.jsx)(x.$, { text: "Manual", onClick: () => D.Ts({ type: F.Gy.MANUAL }) }),
-                                (0, r.jsx)(x.$, {
-                                    text: "Distributed",
-                                    onClick: () =>
-                                        D.Ts({
-                                            type: F.Gy.DISTRIBUTED,
-                                            remoteTriggerUserId: "123",
-                                            remoteTriggerClipId: "456",
-                                        }),
+                                (0, r.jsx)(j.l, {
+                                    label: "Event Type",
+                                    value: k,
+                                    onSelectionChange: (e) => T(e),
+                                    options: [
+                                        { id: "kill", label: "Kill", value: F.rb.KILL },
+                                        { id: "multikill", label: "Multikill", value: F.rb.MULTIKILL },
+                                        { id: "death", label: "Death", value: F.rb.DEATH },
+                                        { id: "assist", label: "Assist", value: F.rb.ASSIST },
+                                        { id: "item", label: "Item", value: F.rb.ITEM },
+                                        { id: "victory", label: "Victory", value: F.rb.VICTORY },
+                                        { id: "defeat", label: "Defeat", value: F.rb.DEFEAT },
+                                        { id: "level_up", label: "Level Up", value: F.rb.LEVEL_UP },
+                                        { id: "treasure", label: "Treasure", value: F.rb.TREASURE },
+                                        { id: "objective_kill", label: "Objective Kill", value: F.rb.OBJECTIVE_KILL },
+                                    ],
+                                    selectionMode: "single",
+                                    fullWidth: !0,
                                 }),
-                                (0, r.jsx)(x.$, {
-                                    text: "Shouting",
-                                    onClick: () => D.Ts({ type: F.Gy.SHOUTING, userId: "123", confidence: 1 }),
-                                }),
-                                (0, r.jsx)(x.$, {
-                                    text: "Laughter",
-                                    onClick: () => I.A.debugCreateRankableLaughterClip(),
+                                (0, r.jsx)(j.l, {
+                                    label: "Importance",
+                                    value: R,
+                                    onSelectionChange: M,
+                                    options: [
+                                        { id: "low", label: "Low", value: 0 },
+                                        { id: "medium", label: "Medium", value: 0.5 },
+                                        { id: "high", label: "High", value: 1 },
+                                    ],
+                                    selectionMode: "single",
+                                    fullWidth: !0,
                                 }),
                             ],
                         }),
-                    }),
-                    (0, r.jsxs)(u.n, {
-                        label: "Game Event Creator",
-                        children: [
-                            (0, r.jsxs)(h.M, {
-                                children: [
-                                    (0, r.jsx)(j.l, {
-                                        label: "Event Type",
-                                        value: N,
-                                        onSelectionChange: (e) => k(e),
-                                        options: [
-                                            { id: "kill", label: "Kill", value: F.rb.KILL },
-                                            { id: "multikill", label: "Multikill", value: F.rb.MULTIKILL },
-                                            { id: "death", label: "Death", value: F.rb.DEATH },
-                                            { id: "assist", label: "Assist", value: F.rb.ASSIST },
-                                            { id: "item", label: "Item", value: F.rb.ITEM },
-                                            { id: "victory", label: "Victory", value: F.rb.VICTORY },
-                                            { id: "defeat", label: "Defeat", value: F.rb.DEFEAT },
-                                            { id: "level_up", label: "Level Up", value: F.rb.LEVEL_UP },
-                                            { id: "treasure", label: "Treasure", value: F.rb.TREASURE },
-                                            {
-                                                id: "objective_kill",
-                                                label: "Objective Kill",
-                                                value: F.rb.OBJECTIVE_KILL,
-                                            },
-                                        ],
-                                        selectionMode: "single",
-                                        fullWidth: !0,
-                                    }),
-                                    (0, r.jsx)(j.l, {
-                                        label: "Importance",
-                                        value: T,
-                                        onSelectionChange: R,
-                                        options: [
-                                            { id: "low", label: "Low", value: 0 },
-                                            { id: "medium", label: "Medium", value: 0.5 },
-                                            { id: "high", label: "High", value: 1 },
-                                        ],
-                                        selectionMode: "single",
-                                        fullWidth: !0,
-                                    }),
-                                ],
-                            }),
-                            (0, r.jsx)(f.k, {
-                                label: "Description (optional)",
-                                value: M,
-                                onChange: P,
-                                placeholder: "e.g., Killed enemy ADC in bot lane",
-                            }),
-                            (0, r.jsx)(x.$, {
-                                text: "Create Game Event",
-                                onClick: () => {
-                                    D.Ts({ type: F.Gy.GAME_EVENT, eventType: N, importance: T, description: M });
-                                },
-                            }),
-                            (0, r.jsx)(m.d, {
-                                label: "Auto-stash decider data",
-                                description:
-                                    "Stashes every gaming session to your Desktop when it ends. Resets to off on each Discord launch.",
-                                checked: L,
-                                onChange: U,
-                            }),
-                            (0, r.jsx)(j.l, {
-                                label: "Stash session (re-run ranking)",
-                                value: W,
-                                onSelectionChange: (e) => K(e),
-                                options: G.map((e) => ({ id: e, label: e, value: e })),
-                                placeholder: 0 === G.length ? "No stashed sessions" : "Most recent",
-                                disabled: 0 === G.length,
-                                selectionMode: "single",
-                                fullWidth: !0,
-                            }),
-                            (0, r.jsxs)(h.M, {
-                                children: [
-                                    (0, r.jsx)(x.$, {
-                                        text: "re-run ranking",
-                                        onClick: () => {
-                                            I.i.debugRerunRanking(W).catch((e) => {
-                                                F.nx.error("re-run ranking failed", e);
-                                            });
-                                        },
-                                    }),
-                                    (0, r.jsx)(x.$, {
-                                        text: "run automontage",
-                                        onClick: () => {
-                                            I.i.debugRunAutoMontage(W).catch((e) => {
-                                                F.nx.error("run automontage failed", e);
-                                            });
-                                        },
-                                    }),
-                                    (0, r.jsx)(x.$, {
-                                        text: "refresh sessions",
-                                        variant: "secondary",
-                                        onClick: () => {
-                                            q();
-                                        },
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)(u.n, { label: "Clip Metadata Tool", children: (0, r.jsx)(B.A, {}) }),
-                    (0, r.jsx)(b.c, {}),
-                    (0, r.jsx)(V, {}),
-                    (0, r.jsx)(b.c, {}),
-                    (0, r.jsx)(z, {}),
-                    (0, r.jsx)(b.c, {}),
-                    (0, r.jsxs)(u.n, {
-                        label: "Reminder UI",
-                        children: [
-                            (0, r.jsx)(m.d, {
-                                label: "Clips Quick Bar",
-                                description:
-                                    "Force-show the inline quick bar above the account panel. Fabricates a session (up to 10 clips) from your recent clips so it can be tested without capturing a real game session.",
-                                checked: e,
-                                onChange: p,
-                            }),
-                            (0, r.jsx)(m.d, {
-                                label: "Clips Reminder",
-                                description:
-                                    "Force-show the post-session ClipsReminder panel. Fabricates a session from your most recent clips (and game) so it can be tested without capturing a real game session.",
-                                checked: t,
-                                onChange: i,
-                            }),
-                            (0, r.jsx)(j.l, {
-                                label: "Clip count",
-                                value: a,
-                                onSelectionChange: S,
-                                options: [
-                                    { id: "1", label: "1 clip", value: 1 },
-                                    { id: "2", label: "2 clips", value: 2 },
-                                    { id: "3", label: "3 clips", value: 3 },
-                                ],
-                                selectionMode: "single",
-                                fullWidth: !0,
-                            }),
-                        ],
-                    }),
-                ],
-            }),
-        })
-    );
+                        (0, r.jsx)(f.k, {
+                            label: "Description (optional)",
+                            value: L,
+                            onChange: P,
+                            placeholder: "e.g., Killed enemy ADC in bot lane",
+                        }),
+                        (0, r.jsx)(x.$, {
+                            text: "Create Game Event",
+                            onClick: () => {
+                                D.Ts({ type: F.Gy.GAME_EVENT, eventType: k, importance: R, description: L });
+                            },
+                        }),
+                        (0, r.jsx)(m.d, {
+                            label: "Auto-stash decider data",
+                            description:
+                                "Stashes every gaming session to your Desktop when it ends. Resets to off on each Discord launch.",
+                            checked: U,
+                            onChange: G,
+                        }),
+                        (0, r.jsx)(j.l, {
+                            label: "Stash session (re-run ranking)",
+                            value: K,
+                            onSelectionChange: (e) => Y(e),
+                            options: $.map((e) => ({ id: e, label: e, value: e })),
+                            placeholder: 0 === $.length ? "No stashed sessions" : "Most recent",
+                            disabled: 0 === $.length,
+                            selectionMode: "single",
+                            fullWidth: !0,
+                        }),
+                        (0, r.jsxs)(h.M, {
+                            children: [
+                                (0, r.jsx)(x.$, {
+                                    text: "re-run ranking",
+                                    onClick: () => {
+                                        I.i.debugRerunRanking(K).catch((e) => {
+                                            F.nx.error("re-run ranking failed", e);
+                                        });
+                                    },
+                                }),
+                                (0, r.jsx)(x.$, {
+                                    text: "run automontage",
+                                    onClick: () => {
+                                        I.i.debugRunAutoMontage(K).catch((e) => {
+                                            F.nx.error("run automontage failed", e);
+                                        });
+                                    },
+                                }),
+                                (0, r.jsx)(x.$, {
+                                    text: "refresh sessions",
+                                    variant: "secondary",
+                                    onClick: () => {
+                                        J();
+                                    },
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+                (0, r.jsx)(u.n, { label: "Clip Metadata Tool", children: (0, r.jsx)(B.A, {}) }),
+                (0, r.jsx)(b.c, {}),
+                (0, r.jsx)(V, {}),
+                (0, r.jsx)(b.c, {}),
+                (0, r.jsx)(z, {}),
+                (0, r.jsx)(b.c, {}),
+                (0, r.jsxs)(u.n, {
+                    label: "Reminder UI",
+                    children: [
+                        (0, r.jsx)(m.d, {
+                            label: "Clips Quick Bar",
+                            description:
+                                "Force-show the inline quick bar above the account panel. Fabricates a session (up to 10 clips) from your recent clips so it can be tested without capturing a real game session.",
+                            checked: e,
+                            onChange: S,
+                        }),
+                        (0, r.jsx)(m.d, {
+                            label: "Clips Reminder",
+                            description:
+                                "Force-show the post-session ClipsReminder panel. Fabricates a session from your most recent clips (and game) so it can be tested without capturing a real game session.",
+                            checked: t,
+                            onChange: i,
+                        }),
+                        (0, r.jsx)(j.l, {
+                            label: "Clip count",
+                            value: a,
+                            onSelectionChange: N,
+                            options: [
+                                { id: "1", label: "1 clip", value: 1 },
+                                { id: "2", label: "2 clips", value: 2 },
+                                { id: "3", label: "3 clips", value: 3 },
+                            ],
+                            selectionMode: "single",
+                            fullWidth: !0,
+                        }),
+                        (0, r.jsx)(b.c, {}),
+                        (0, r.jsxs)(u.n, {
+                            label: "Clips Settings",
+                            children: [
+                                (0, r.jsxs)(p.E, {
+                                    variant: "text-md/normal",
+                                    children: ["autoclippingEnabled (internal): ", String(Q)],
+                                }),
+                                (0, r.jsxs)(p.E, {
+                                    variant: "text-md/normal",
+                                    children: ["autoclippingEnabled (exposed): ", String(X)],
+                                }),
+                                (0, r.jsx)(x.$, {
+                                    text: "unset autoclipping default",
+                                    onClick: () => {
+                                        D.uL(void 0, !1);
+                                    },
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
+        }),
+    });
 }
 var Y = a(503698),
     q = a.n(Y),
@@ -797,8 +810,8 @@ function ew(e) {
 a(508300);
 var eO = a(132500),
     eM = a(157559),
-    eP = a(780777),
-    eL = a(993408),
+    eL = a(780777),
+    eP = a(993408),
     eU = a(579151),
     eG = a(559474),
     eB = a(816866),
@@ -1030,7 +1043,7 @@ let tn = (e) => {
                       (0, r.jsxs)("div", {
                           style: { display: "none" },
                           children: [
-                              (0, r.jsx)(eP.A, {
+                              (0, r.jsx)(eL.A, {
                                   ref: (e) => {
                                       s.current.animated = e;
                                   },
@@ -1044,21 +1057,21 @@ let tn = (e) => {
                                   },
                                   multiple: !1,
                               }),
-                              (0, r.jsx)(eP.A, {
+                              (0, r.jsx)(eL.A, {
                                   ref: (e) => {
                                       s.current.thumbnail = e;
                                   },
                                   onChange: (e) => D(eF.qH.THUMBNAIL, e),
                                   multiple: !1,
                               }),
-                              (0, r.jsx)(eP.A, {
+                              (0, r.jsx)(eL.A, {
                                   ref: (e) => {
                                       s.current.static = e;
                                   },
                                   onChange: (e) => D(eF.qH.STATIC, e),
                                   multiple: !1,
                               }),
-                              (0, r.jsx)(eP.A, {
+                              (0, r.jsx)(eL.A, {
                                   ref: (e) => {
                                       s.current.reducedMotion = e;
                                   },
@@ -1507,7 +1520,7 @@ let tn = (e) => {
                                                       }),
                                                       (0, r.jsx)("div", {
                                                           style: { display: "none" },
-                                                          children: (0, r.jsx)(eP.A, {
+                                                          children: (0, r.jsx)(eL.A, {
                                                               ref: (e) => {
                                                                   s.current[`randomized-${t}`] = e;
                                                               },
@@ -1598,7 +1611,7 @@ function ts() {
         [n, l] = o.useState(),
         i = o.useRef(null),
         { categories: s } = (0, eU.A)(),
-        d = o.useMemo(() => (0, eL.Wj)(s), [s]),
+        d = o.useMemo(() => (0, eP.Wj)(s), [s]),
         [c, u] = o.useState(""),
         m = o.useMemo(
             () =>
@@ -1679,7 +1692,7 @@ function ts() {
                                             color: "text-overlay-light",
                                             children: "Import Shared Config",
                                         }),
-                                        (0, r.jsx)(eP.A, { ref: i, onChange: g, multiple: !1 }),
+                                        (0, r.jsx)(eL.A, { ref: i, onChange: g, multiple: !1 }),
                                     ],
                                 }),
                                 (0, r.jsx)(x.$, {
@@ -1806,7 +1819,7 @@ function tN() {
         e?.id != null && (0, tj.A)(e.id);
     }, [e?.id]);
     let { purchases: a, isFetching: n } = (0, tf.b5)(),
-        l = o.useMemo(() => (0, eL.MG)(a, new Map()), [a]),
+        l = o.useMemo(() => (0, eP.MG)(a, new Map()), [a]),
         [{ pendingProfileFrame: i }, s] = (0, d.yK)([tg.A], () => [tg.A.getPendingChanges(), tg.A.showNotice()]),
         c = void 0 === i ? t?.profileFrame : i,
         u = null != c ? a.get(c.skuId) : void 0,
@@ -1903,12 +1916,12 @@ var tA = a(702841),
     tw = a(61750),
     tO = a(73153),
     tM = a(499454),
-    tP = a(202541);
-let tL = "devtools-collectibles-gift";
+    tL = a(202541);
+let tP = "devtools-collectibles-gift";
 async function tU(e) {
     let { skuId: t, sender: a } = e,
         n = {
-            code: tL,
+            code: tP,
             user: { id: a.id },
             sku_id: t,
             uses: 0,
@@ -1916,9 +1929,9 @@ async function tU(e) {
             expires_at: null,
             redeemed: !1,
             application_id: em.FYj,
-            gift_style: tP.o2.STANDARD_BOX,
+            gift_style: tL.o2.STANDARD_BOX,
         };
-    (await tO.h.dispatch({ type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: n }), (0, tM.h)({ processedCode: tL }));
+    (await tO.h.dispatch({ type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: n }), (0, tM.h)({ processedCode: tP }));
 }
 var tG = a(80101);
 let tB = /^\d{17,20}$/,
@@ -2733,8 +2746,8 @@ function aO() {
     });
 }
 var aM = a(554146),
-    aP = a(594061),
-    aL = a(617617),
+    aL = a(594061),
+    aP = a(617617),
     aU = a(355898),
     aG = a(644103),
     aB = a(574560),
@@ -2748,7 +2761,7 @@ let a$ = [
 function aW() {
     let [e, t] = o.useState("dismissals"),
         [a, n] = o.useState(aM.M.GAME_ACCOUNT_LINK_RECURRING_UPSELL),
-        l = (0, d.bG)([aL.A], () => aL.A.settings.userContent?.recurringDismissibleContentStates[a] ?? null),
+        l = (0, d.bG)([aP.A], () => aP.A.settings.userContent?.recurringDismissibleContentStates[a] ?? null),
         i = (0, d.bG)([aB.A], () => aB.A.getAllGameUpsellDismissals(a)),
         s = o.useMemo(() => Object.keys(i ?? {}), [i]),
         c = (0, tX.A)(s),
@@ -2817,7 +2830,7 @@ function aW() {
                                   (0, r.jsx)(x.$, {
                                       variant: "secondary",
                                       text: "Reset Global DCF State",
-                                      onClick: () => (0, aP._N)(a),
+                                      onClick: () => (0, aL._N)(a),
                                   }),
                               ],
                           }),
@@ -3726,7 +3739,7 @@ function nO() {
     });
 }
 var nM = a(541660);
-function nP(e) {
+function nL(e) {
     let { title: t, sortKey: a, activeSortKey: n, sortDir: l, onClick: i } = e,
         s = n === a ? ("desc" === l ? " \u25BC" : " \u25B2") : "";
     return (0, r.jsx)(J.D, {
@@ -3735,7 +3748,7 @@ function nP(e) {
         children: (0, r.jsx)(p.E, { variant: "text-sm/semibold", children: t + s }),
     });
 }
-function nL() {
+function nP() {
     let [e, t] = o.useState("affinity"),
         [a, n] = o.useState("desc"),
         l = o.useCallback(
@@ -3769,7 +3782,7 @@ function nL() {
                     key: "user",
                     cellClassName: nM.iL,
                     renderHeader: () =>
-                        (0, r.jsx)(nP, {
+                        (0, r.jsx)(nL, {
                             title: "USER",
                             sortKey: "username",
                             activeSortKey: e,
@@ -3784,7 +3797,7 @@ function nL() {
                 {
                     key: "affinity",
                     renderHeader: () =>
-                        (0, r.jsx)(nP, {
+                        (0, r.jsx)(nL, {
                             title: "COMMUNICATION AFFINITY",
                             sortKey: "affinity",
                             activeSortKey: e,
@@ -3800,7 +3813,7 @@ function nL() {
                 {
                     key: "vcProbability",
                     renderHeader: () =>
-                        (0, r.jsx)(nP, {
+                        (0, r.jsx)(nL, {
                             title: "VOICE AFFINITY",
                             sortKey: "vcProbability",
                             activeSortKey: e,
@@ -4609,16 +4622,16 @@ function lR() {
 var lw = a(689175),
     lO = a(541689),
     lM = a(199773);
-function lP() {
+function lL() {
     let e = (0, o.useCallback)((e) => {
-        let t = new Set(lL());
+        let t = new Set(lP());
         t.delete(e);
         let a = Array.from(t).slice(0, 4);
         (a.unshift(e), tq.w.set("RecentDismissibleOverrides", a));
     }, []);
-    return [lL(), e];
+    return [lP(), e];
 }
-function lL() {
+function lP() {
     return tq.w.get("RecentDismissibleOverrides") ?? [];
 }
 a(667532);
@@ -4658,7 +4671,7 @@ let l$ = o.memo(function (e) {
                         label: `${a.toLowerCase()} (${aM.M[a]})`,
                         description: (0, lB.Zm)(l)
                             ? (function (e) {
-                                  let t = aL.A.settings.userContent?.recurringDismissibleContentStates?.[e];
+                                  let t = aP.A.settings.userContent?.recurringDismissibleContentStates?.[e];
                                   if (null == t) return null;
                                   let a = [],
                                       { lastDismissedVersion: n, lastDismissedAtMs: l, lastDismissedObjectId: i } = t;
@@ -4686,7 +4699,7 @@ let l$ = o.memo(function (e) {
 });
 function lV(e) {
     let { items: t, onChange: a } = e,
-        [n, l] = lP(),
+        [n, l] = lL(),
         i = (0, o.useCallback)(
             (e) => {
                 (l(e), a?.(e));
@@ -4701,7 +4714,7 @@ function lV(e) {
 function lW(e) {
     let { searchQuery: t = "" } = e,
         a = (0, lA.Ay)((e) => e.recentlyShown),
-        [n, l] = lP(),
+        [n, l] = lL(),
         i = n
             .filter((e) => e.toLowerCase().includes(t.toLowerCase()))
             .filter((e) => !a.includes(aM.M[e]))
@@ -4766,12 +4779,12 @@ function lK() {
                                 (0, r.jsx)(x.$, {
                                     variant: "primary",
                                     text: "Undismiss All DCs",
-                                    onClick: () => (0, aP.nT)(),
+                                    onClick: () => (0, aL.nT)(),
                                 }),
                                 (0, r.jsx)(x.$, {
                                     variant: "primary",
                                     text: "Dismiss All DCs",
-                                    onClick: () => (0, aP.D1)(),
+                                    onClick: () => (0, aL.D1)(),
                                 }),
                                 (0, r.jsx)(p.E, {
                                     variant: "text-sm/normal",
@@ -5611,21 +5624,21 @@ var iT = a(334279),
 async function iM() {
     return (
         await l9.Bo.get({
-            url: em.Rsh.ENTITLEMENTS_FOR_APPLICATION(tP.tv),
+            url: em.Rsh.ENTITLEMENTS_FOR_APPLICATION(tL.tv),
             oldFormErrors: !0,
             query: { exclude_consumed: !0, exclude_ended: !0 },
             rejectWithError: !0,
         })
     ).body.map((e) => iO.A.createFromServer(e));
 }
-async function iP(e) {
+async function iL(e) {
     await l9.Bo.post({
         url: "/debug/entitlements/fractional-premium",
         body: { count: 1, sku_id: e },
         rejectWithError: !1,
     });
 }
-async function iL(e) {
+async function iP(e) {
     let t = "/debug/entitlements/fractional-premium";
     (null != e && (t = `${t}/${e}`), await l9.Bo.del({ url: t, rejectWithError: !0 }));
 }
@@ -5646,7 +5659,7 @@ function iG() {
         }, []),
         i = (0, o.useCallback)(
             async (e) => {
-                (await iP(e), await l());
+                (await iL(e), await l());
             },
             [l],
         );
@@ -5654,7 +5667,7 @@ function iG() {
         grantFractionalPremium: i,
         deleteFractionalPremium: (0, o.useCallback)(
             async (e) => {
-                (await iL(e), await l());
+                (await iP(e), await l());
             },
             [l],
         ),
@@ -6468,8 +6481,8 @@ function sM() {
         ],
     });
 }
-var sP = a(582306),
-    sL = a(507104),
+var sL = a(582306),
+    sP = a(507104),
     sU = a(846466);
 function sG(e) {
     let t = new Date(e);
@@ -6482,7 +6495,7 @@ function sG(e) {
 function sB(e, t) {
     return null != t ? `/users/@me/gift-intents/dismissals/${e}/${t}` : `/users/@me/gift-intents/dismissals/${e}`;
 }
-let sF = tP.np.FRIEND_ANNIVERSARY;
+let sF = tL.np.FRIEND_ANNIVERSARY;
 function s$(e) {
     return 403 === e?.status
         ? "Forbidden (403). This account is likely not in the backend-persistence experiment; clearing also requires a staff account."
@@ -6491,18 +6504,18 @@ function s$(e) {
           : String(e);
 }
 function sV() {
-    let e = (0, d.bG)([sL.Ay], () => sL.Ay.getDevToolTotalFriendAnniversaries()),
-        t = (0, d.bG)([sL.Ay], () => sL.Ay.getDevToolCurrentDate()),
-        a = (0, d.bG)([sL.Ay], () => sL.Ay.getMessageGiftIntentLastShownMap()),
-        n = (0, d.bG)([sL.Ay], () => sL.Ay.getHighestAffinityFriendAnniversaries()),
-        l = (0, d.bG)([sL.Ay], () => sL.Ay.getHighAffinityFriendAnniversaries()),
+    let e = (0, d.bG)([sP.Ay], () => sP.Ay.getDevToolTotalFriendAnniversaries()),
+        t = (0, d.bG)([sP.Ay], () => sP.Ay.getDevToolCurrentDate()),
+        a = (0, d.bG)([sP.Ay], () => sP.Ay.getMessageGiftIntentLastShownMap()),
+        n = (0, d.bG)([sP.Ay], () => sP.Ay.getHighestAffinityFriendAnniversaries()),
+        l = (0, d.bG)([sP.Ay], () => sP.Ay.getHighAffinityFriendAnniversaries()),
         i = (0, d.bG)([eo.default], () => eo.default.getCurrentUser()?.isStaff() ?? !1),
         s = (0, d.bG)(
             [aY.A],
             () => aY.A.getFriendIDs().filter((e) => !aY.A.isIgnored(e) && null != aY.A.getSince(e)).length,
         ),
-        c = (0, d.bG)([aL.A], () => {
-            let e = Number(aL.A.settings.userContent?.lastGiftIntentDismissedAtMs ?? "0");
+        c = (0, d.bG)([aP.A], () => {
+            let e = Number(aP.A.settings.userContent?.lastGiftIntentDismissedAtMs ?? "0");
             return Number.isNaN(e) || 0 === e ? null : e;
         }),
         [u, m] = o.useState([]),
@@ -6545,7 +6558,7 @@ function sV() {
     function M(e) {
         tO.h.dispatch({ type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT", total: e });
     }
-    function P(e) {
+    function L(e) {
         let t = nT.A.getUserAffinity(e);
         return t?.dmProbability != null ? `${(100 * t.dmProbability).toFixed(3)}%` : "N/A";
     }
@@ -6649,7 +6662,7 @@ function sV() {
                                                     a = t?.username ?? `Unknown User (${e})`;
                                                 return (0, r.jsxs)(
                                                     p.E,
-                                                    { variant: "text-xs/normal", children: [a, " (", P(e), ")"] },
+                                                    { variant: "text-xs/normal", children: [a, " (", L(e), ")"] },
                                                     e,
                                                 );
                                             }),
@@ -6668,7 +6681,7 @@ function sV() {
                                                     a = t?.username ?? `Unknown User (${e})`;
                                                 return (0, r.jsxs)(
                                                     p.E,
-                                                    { variant: "text-xs/normal", children: [a, " (", P(e), ")"] },
+                                                    { variant: "text-xs/normal", children: [a, " (", L(e), ")"] },
                                                     e,
                                                 );
                                             }),
@@ -6683,7 +6696,7 @@ function sV() {
                         gap: 8,
                         direction: "horizontal",
                         children: [
-                            (0, r.jsx)(sP.J, {
+                            (0, r.jsx)(sL.J, {
                                 label: "Override current date used for cooldowns",
                                 value: null != t ? nG()(t) : void 0,
                                 onSelect: function (e) {
@@ -7671,7 +7684,7 @@ async function rN(e) {
 function rA() {
     let e = (0, d.bG)([n_.A], () => n_.A.getGuildId()),
         t = (0, d.bG)([nS.A], () => nS.A.getGuild(e)?.name),
-        a = (0, d.yK)([aL.A], () => [...ry, ...rE].filter((t) => null != e && (0, rv.zs)(t, e))),
+        a = (0, d.yK)([aP.A], () => [...ry, ...rE].filter((t) => null != e && (0, rv.zs)(t, e))),
         n = (0, d.yK)([rf.A], () => (null != e ? (rf.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
     if (null != e)
         return (0, r.jsxs)(g.Ip, {
@@ -7752,7 +7765,7 @@ function rA() {
                                     onChange: (a) => {
                                         a
                                             ? (0, rv._$)(t, e, !1)
-                                            : ((0, aP._N)(aM.M.GUILD_POWERUP_NOTIFICATION), (0, rv.hk)(t, e));
+                                            : ((0, aL._N)(aM.M.GUILD_POWERUP_NOTIFICATION), (0, rv.hk)(t, e));
                                     },
                                 },
                                 t,
@@ -7773,7 +7786,7 @@ function rA() {
                                     onChange: (a) => {
                                         a
                                             ? (0, rv._$)(t, e, !1)
-                                            : ((0, aP._N)(aM.M.GUILD_POWERUP_NOTIFICATION), (0, rv.hk)(t, e));
+                                            : ((0, aL._N)(aM.M.GUILD_POWERUP_NOTIFICATION), (0, rv.hk)(t, e));
                                     },
                                 },
                                 t,
@@ -7849,7 +7862,7 @@ var rR = a(632296),
     rw = a(855522),
     rO = a(37646),
     rM = a(773669);
-function rP() {
+function rL() {
     let e = (0, d.bG)([rM.default], () => rM.default.locale),
         [t, a] = o.useState(),
         n = (0, rR.runtimeHashMessageKey)(t ?? ""),
@@ -7901,9 +7914,9 @@ function rP() {
         ],
     });
 }
-var rL = a(434404);
+var rP = a(434404);
 function rU() {
-    let { node: e } = (0, es.Ay)(rL.F, "");
+    let { node: e } = (0, es.Ay)(rP.F, "");
     return (0, r.jsx)(g.Ip, {
         className: t0.nd,
         children: (0, r.jsx)("div", {
@@ -10230,7 +10243,7 @@ function oO(e) {
     let E = null != v,
         C = t.hasExpired,
         S = t.isRedeemed,
-        _ = f?.skuId === tP.pe.TIER_0;
+        _ = f?.skuId === tL.pe.TIER_0;
     async function N() {
         (m(!0), E ? await A({ expiresAt: null }) : await (0, oE.u1)(t), n(), m(!1));
     }
@@ -10312,7 +10325,7 @@ function oO(e) {
                             "Trial Length:",
                             " ",
                             (0, oN.re)({
-                                intervalType: f?.interval ?? tP.WT.MONTH,
+                                intervalType: f?.interval ?? tL.WT.MONTH,
                                 intervalCount: f?.intervalCount ?? 1,
                                 capitalize: !1,
                             }),
@@ -10514,7 +10527,7 @@ function oM(e) {
         })
     );
 }
-function oP() {
+function oL() {
     let [e, t] = o.useState([]),
         [a, n] = o.useState([]),
         [l, i] = o.useState(),
@@ -10541,7 +10554,7 @@ function oP() {
     async function M() {
         (await oT(), m(!0));
     }
-    async function P() {
+    async function L() {
         let e = new Date(Date.now() + 60 * C * 1e3).toISOString();
         (await oR(e), R());
     }
@@ -10592,13 +10605,13 @@ function oP() {
                                         variant: "primary",
                                         size: "sm",
                                         text: "Clear Mobile Trials DismissibleContent",
-                                        onClick: () => (0, aP.xB)(aM.M.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE),
+                                        onClick: () => (0, aL.xB)(aM.M.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE),
                                     }),
                                     (0, r.jsx)(x.$, {
                                         variant: "primary",
                                         size: "sm",
                                         text: "Clear Offer Nagbar DismissibleContent",
-                                        onClick: () => (0, aP._N)(aM.M.NAGBAR_NOTICE_OFFER_EXPIRING),
+                                        onClick: () => (0, aL._N)(aM.M.NAGBAR_NOTICE_OFFER_EXPIRING),
                                     }),
                                     (0, r.jsx)(x.$, {
                                         variant: "primary",
@@ -10714,7 +10727,7 @@ function oP() {
                                     selectionMode: "single",
                                     fullWidth: !0,
                                 }),
-                                (0, r.jsx)(x.$, { variant: "primary", text: "Create", onClick: P }),
+                                (0, r.jsx)(x.$, { variant: "primary", text: "Create", onClick: L }),
                             ],
                         }),
                     }),
@@ -10738,7 +10751,7 @@ function oP() {
         })
     );
 }
-var oL = a(872162),
+var oP = a(872162),
     oU = a(26279),
     oG = a(628577);
 let oB = {
@@ -10861,7 +10874,7 @@ function oV(e) {
                     (0, r.jsx)(x.$, { variant: "secondary", size: "sm", text: l ? "Copied!" : "Copy ID", onClick: c }),
                 ],
             }),
-            (0, r.jsx)(oL.C, { items: d, label: "Order information", layout: "inline" }),
+            (0, r.jsx)(oP.C, { items: d, label: "Order information", layout: "inline" }),
             (0, r.jsxs)(tJ.B, {
                 direction: "vertical",
                 gap: 4,
@@ -12033,7 +12046,7 @@ let dw = ["__webpack_require__", "fn"],
             },
         },
     ],
-    dP = {
+    dL = {
         searchType: nK.n.REGEX,
         searchStringGenerator: (e) => {
             let { name: t, type: a, stack: n, data: l } = e,
@@ -12042,7 +12055,7 @@ let dw = ["__webpack_require__", "fn"],
         },
         throttleMs: 100,
     };
-function dL() {
+function dP() {
     let { ref: e, height: t } = (0, oZ.Ay)(),
         a = (0, d.bG)([o7.A], () => o7.A.isModuleLoggingEnabled()),
         [n, l] = o.useState(a),
@@ -12081,7 +12094,7 @@ function dL() {
             _(e);
         }, []),
         { renderSelectedTab: I } = (0, nx.A)({ tabs: dM }, []);
-    (0, nY.RT)(y, C, D, dP, [f]);
+    (0, nY.RT)(y, C, D, dL, [f]);
     let T = o.useCallback((e) => {
             (l(e), oX.A.setModuleLogging(e));
         }, []),
@@ -12101,10 +12114,10 @@ function dL() {
                 }
             );
     }, [R]);
-    let P = o.useCallback((e) => {
+    let L = o.useCallback((e) => {
             j(null != e ? JSON.parse(e) : null);
         }, []),
-        L = o.useCallback(
+        P = o.useCallback(
             (e) => {
                 if (e) return j(null);
                 (0, eY.openModal)(
@@ -12112,14 +12125,14 @@ function dL() {
                         (0, r.jsx)(dA, {
                             modalProps: e,
                             onClose: (t) => {
-                                (P(t), e.onClose());
+                                (L(t), e.onClose());
                             },
                         }),
                     { modalKey: "breadcrumb-import-panel" },
                     eJ.SY,
                 );
             },
-            [P],
+            [L],
         );
     return (0, r.jsxs)("div", {
         ref: e,
@@ -12164,7 +12177,7 @@ function dL() {
                             }),
                             (0, r.jsx)(J.D, {
                                 className: dc.ny,
-                                onClick: () => L(null != v),
+                                onClick: () => P(null != v),
                                 children: (0, r.jsx)(p.E, {
                                     variant: "text-sm/normal",
                                     color: "currentColor",
@@ -12413,7 +12426,7 @@ function dz() {
                     ],
                 }),
                 "state" === e && (0, r.jsx)(dB, {}),
-                "logging" === e && (0, r.jsx)(dL, {}),
+                "logging" === e && (0, r.jsx)(dP, {}),
                 "experiments" === e && (0, r.jsx)(dW, {}),
             ],
         })
@@ -12624,22 +12637,22 @@ function cd(e) {
         : null;
 }
 let cc = function () {
-    let [e, t] = o.useState(tP.pe.TIER_2),
+    let [e, t] = o.useState(tL.pe.TIER_2),
         [a, n] = o.useState(null),
         l = (0, d.yK)([nS.A], () => nS.A.getGuildsArray()),
         [i] = (0, d.yK)([ox.A], () => [ox.A.getPremiumSubscription()]),
         s = l.map((e) => ({ id: e.id, value: e, label: e.name })),
         [c, m] = o.useState(s.length > 0 ? s[0].value : null),
         [h, v] = o.useState(""),
-        [y, E] = o.useState({ plan_id: tP.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
+        [y, E] = o.useState({ plan_id: tL.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
         C = "true" !== y.gift && null != i,
         [S, _] = o.useState(s.length > 0 ? s[0].value : null),
         { analyticsLocations: N } = (0, nv.Ay)(tk.A.PAYMENT_FLOW_TEST_PAGE),
         [A, k] = o.useState(""),
         [D, I] = o.useState(em.dJq),
         { balance: T, isFetching: R, error: w } = (0, cs.W0)(),
-        { isSubmitting: O, responseMessage: M, redeemVirtualCurrency: P } = (0, cs.Qr)(),
-        [L, U] = o.useState(em.dJq),
+        { isSubmitting: O, responseMessage: M, redeemVirtualCurrency: L } = (0, cs.Qr)(),
+        [P, U] = o.useState(em.dJq),
         [G, B] = o.useState(""),
         [F, $] = o.useState(em.dJq),
         [V, W] = o.useState(em.dJq);
@@ -12660,9 +12673,9 @@ let cc = function () {
                                 label: "Gift",
                                 value: e,
                                 options: [
-                                    { id: "tier_2", value: tP.pe.TIER_2, label: "Nitro" },
-                                    { id: "tier_1", value: tP.pe.TIER_1, label: "Nitro Classic" },
-                                    { id: "tier_0", value: tP.pe.TIER_0, label: "Nitro Basic" },
+                                    { id: "tier_2", value: tL.pe.TIER_2, label: "Nitro" },
+                                    { id: "tier_1", value: tL.pe.TIER_1, label: "Nitro Classic" },
+                                    { id: "tier_0", value: tL.pe.TIER_0, label: "Nitro Basic" },
                                     { id: "none", value: null, label: "None" },
                                 ],
                                 onSelectionChange: (e) => t(e),
@@ -12687,9 +12700,9 @@ let cc = function () {
                                 label: "Premium Select Plan",
                                 value: a,
                                 options: [
-                                    { id: "tier_2", value: tP.pe.TIER_2, label: "Nitro" },
-                                    { id: "tier_1", value: tP.pe.TIER_1, label: "Nitro Classic" },
-                                    { id: "tier_0", value: tP.pe.TIER_0, label: "Nitro Basic" },
+                                    { id: "tier_2", value: tL.pe.TIER_2, label: "Nitro" },
+                                    { id: "tier_1", value: tL.pe.TIER_1, label: "Nitro Classic" },
+                                    { id: "tier_0", value: tL.pe.TIER_0, label: "Nitro Basic" },
                                     { id: "none", value: null, label: "None" },
                                 ],
                                 onSelectionChange: (e) => n(e),
@@ -12765,9 +12778,9 @@ let cc = function () {
                                 label: "Plan",
                                 value: y.plan_id,
                                 options: [
-                                    { id: "tier_2", value: tP.gD.PREMIUM_MONTH_TIER_2, label: "Nitro" },
-                                    { id: "tier_1", value: tP.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic" },
-                                    { id: "tier_0", value: tP.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic" },
+                                    { id: "tier_2", value: tL.gD.PREMIUM_MONTH_TIER_2, label: "Nitro" },
+                                    { id: "tier_1", value: tL.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic" },
+                                    { id: "tier_0", value: tL.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic" },
                                 ],
                                 onSelectionChange: (e) => {
                                     E((t) => ({ ...t, plan_id: e }));
@@ -12842,14 +12855,14 @@ let cc = function () {
                             (0, r.jsx)(f.k, {
                                 label: "SKU ID",
                                 placeholder: "SKU ID",
-                                value: L,
+                                value: P,
                                 onChange: (e) => U(e),
                             }),
                             (0, r.jsx)(x.$, {
                                 variant: "primary",
                                 text: "Redeem Virtual Currency for SKU",
                                 loading: O,
-                                onClick: () => P(L, (0, eO.A)()),
+                                onClick: () => L(P, (0, eO.A)()),
                             }),
                             null != M && (0, r.jsx)(p.E, { variant: "text-sm/normal", children: M }),
                         ],
@@ -13968,7 +13981,7 @@ function cN() {
                         variant: "text-lg/bold",
                         children: "Existing Payment Sources",
                     }),
-                    b.map((e) => (0, r.jsx)(cP, { paymentSource: e }, e.id)),
+                    b.map((e) => (0, r.jsx)(cL, { paymentSource: e }, e.id)),
                 ],
             }),
         })
@@ -14110,7 +14123,7 @@ function cM() {
         ],
     });
 }
-function cP(e) {
+function cL(e) {
     let { paymentSource: t } = e;
     async function a() {
         (await l9.Bo.patch({ url: em.Rsh.BILLING_PAYMENT_SOURCE(t.id), body: { default: !0 }, rejectWithError: !1 }),
@@ -14127,7 +14140,7 @@ function cP(e) {
         ],
     });
 }
-var cL = a(706712),
+var cP = a(706712),
     cU = a(441574),
     cG = a(501419),
     cB = a(349871),
@@ -14215,7 +14228,7 @@ function cW(e) {
 }
 function cz() {
     let e = o.useCallback(() => {
-            (0, aP._N)(aM.M.NITRO_TENURE_BADGE_LEVEL_UP);
+            (0, aL._N)(aM.M.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
         { lastDismissedAtMs: t } = (0, cG.FZ)(aM.M.NITRO_TENURE_BADGE_LEVEL_UP),
         a = null != t ? new Date(t) : null;
@@ -14345,21 +14358,21 @@ async function un() {
             } else e = ua([em.NJ8.ASH, em.NJ8.DARK, em.NJ8.ONYX]);
             await c6.u_(
                 { theme: e, backgroundGradientPresetId: n ?? void 0, customUserThemeSettings: void 0 },
-                aP.Sb.INFREQUENT_USER_ACTION,
+                aL.Sb.INFREQUENT_USER_ACTION,
             );
         } else {
             let e = ua(ue);
             await c6.u_(
                 { theme: e, backgroundGradientPresetId: void 0, customUserThemeSettings: void 0 },
-                aP.Sb.INFREQUENT_USER_ACTION,
+                aL.Sb.INFREQUENT_USER_ACTION,
             );
         }
     } catch (e) {}
 }
 async function ul() {
     let e = tI.A.purchases,
-        t = (0, eL.x9)(e),
-        a = (0, eL.$W)(e),
+        t = (0, eP.x9)(e),
+        a = (0, eP.$W)(e),
         n = t.length > 0,
         l = a.length > 0;
     if (n || l)
@@ -14387,8 +14400,8 @@ function us() {
         a = c2.eh.useSetting(),
         n = (0, d.bG)([c1.A], () => c1.A.theme),
         l = a.backgroundGradientPresetId,
-        i = (0, eL.x9)(e),
-        s = (0, eL.$W)(e),
+        i = (0, eP.x9)(e),
+        s = (0, eP.$W)(e),
         c = t?.avatarDecoration?.skuId,
         u = t?.collectibles?.nameplate?.skuId,
         m = null != c ? (i.find((e) => e.skuId === c) ?? null) : null,
@@ -14403,8 +14416,8 @@ function us() {
             let e = eo.default.getCurrentUser(),
                 t = c2.eh.getSetting(),
                 a = tI.A.purchases,
-                n = (0, eL.x9)(a),
-                l = (0, eL.$W)(a),
+                n = (0, eP.x9)(a),
+                l = (0, eP.$W)(a),
                 i = c1.A.theme,
                 s = t.backgroundGradientPresetId,
                 r = e?.avatarDecoration?.skuId,
@@ -14418,7 +14431,7 @@ function us() {
                 try {
                     (c6.u_(
                         { theme: i, backgroundGradientPresetId: s ?? void 0, customUserThemeSettings: void 0 },
-                        aP.Sb.INFREQUENT_USER_ACTION,
+                        aL.Sb.INFREQUENT_USER_ACTION,
                     ),
                         (0, tp.p)({ avatarDecoration: d, nameplate: c }));
                     let e = tg.A.getPendingChanges(),
@@ -14509,7 +14522,7 @@ let uu = [5793266, 2303016],
 function uh() {
     let { themeOverride: e, setThemeOverride: t, savedClientTheme: a, setSavedClientTheme: n } = (0, uc.Zt)(),
         l = (0, eg.Ay)(),
-        i = (0, d.bG)([aL.A], () => aL.A.settings.appearance?.clientThemeSettings),
+        i = (0, d.bG)([aP.A], () => aP.A.settings.appearance?.clientThemeSettings),
         s =
             i?.customUserThemeSettings != null &&
             null != i.customUserThemeSettings.colors &&
@@ -14729,7 +14742,7 @@ function uN() {
         children: [
             (0, r.jsx)(j.l, {
                 label: "Override Client-Side Premium Type",
-                options: tP.Jm,
+                options: tL.Jm,
                 value: a,
                 onSelectionChange: (t) => {
                     (0, uS.O)(t, e);
@@ -14739,11 +14752,11 @@ function uN() {
             }),
             (0, r.jsx)(l3.Q, {
                 onClick: () => {
-                    (0, uS.O)(tP.$I, e);
+                    (0, uS.O)(tL.$I, e);
                 },
                 text: "Reset premium type override",
             }),
-            (0, r.jsx)(sP.J, {
+            (0, r.jsx)(sL.J, {
                 label: "Override Client-Side Account Created At Date",
                 value: nG()(t),
                 onSelect: (e) => {
@@ -14985,8 +14998,8 @@ function uw() {
 }
 var uO = a(124152),
     uM = a(653887),
-    uP = a(799226);
-function uL() {
+    uL = a(799226);
+function uP() {
     let e = Object.keys(uO).map((e) => (0, r.jsx)(uB, { riveName: e }, e));
     return (0, r.jsx)(g.Ar, {
         style: { maxHeight: "100%" },
@@ -15146,7 +15159,7 @@ function uB(e) {
         n = uO[t]?.riveSrc,
         l = null == n,
         i = o.useRef(null),
-        s = (0, uP.Gy)(n);
+        s = (0, uL.Gy)(n);
     return (0, r.jsxs)(
         tJ.B,
         {
@@ -15167,7 +15180,7 @@ function uB(e) {
                                 let l = new FileReader();
                                 ((l.onload = (e) => {
                                     let t = e.target?.result;
-                                    (null != n && (0, uP.DS)(n, t), a?.(t));
+                                    (null != n && (0, uL.DS)(n, t), a?.(t));
                                 }),
                                     l.readAsArrayBuffer(t));
                             },
@@ -15177,7 +15190,7 @@ function uB(e) {
                             "aria-label": `Clear override for ${t}`,
                             onClick: function () {
                                 (null != i.current && (i.current.value = ""),
-                                    null != n && (0, uP.DS)(n, null),
+                                    null != n && (0, uL.DS)(n, null),
                                     a?.(null));
                             },
                             icon: nW.TrashIcon,
@@ -16180,7 +16193,7 @@ function mM() {
         })
     );
 }
-function mP() {
+function mL() {
     let { previewEnabled: e, setPreviewEnabled: t, clearAssets: a } = (0, u1.JE)(),
         { ignoredFilenames: n, clearAssets: l, clearIgnoredFilenames: i, processAndUpsertAssets: s } = (0, eG.ds)(),
         { setDropHandler: d } = o.useContext(mS),
@@ -16220,7 +16233,7 @@ function mP() {
         })
     );
 }
-function mL() {
+function mP() {
     let [e, t] = o.useState("preview");
     return (0, r.jsxs)("div", {
         className: mC.kL,
@@ -16236,7 +16249,7 @@ function mL() {
                 optionClassName: mC.UK,
             }),
             (0, r.jsx)(az.h, { size: 8 }),
-            "preview" === e && (0, r.jsx)(mP, {}),
+            "preview" === e && (0, r.jsx)(mL, {}),
             "validate" === e && (0, r.jsx)(mM, {}),
             (0, r.jsx)(az.h, { size: 16 }),
         ],
@@ -16382,7 +16395,7 @@ function mJ() {
                     title: "Assets",
                     expanded: a.has("assets"),
                     onToggle: () => l("assets"),
-                    children: (0, r.jsx)(mL, {}),
+                    children: (0, r.jsx)(mP, {}),
                 }),
             ],
         }),
@@ -17045,9 +17058,9 @@ function hM(e, t) {
         })
         .join(",");
 }
-let hP = !1;
-function hL() {
-    if (hP) return !0;
+let hL = !1;
+function hP() {
+    if (hL) return !0;
     if (!S.Ay.isEnabled()) return !1;
     try {
         let e = S.Ay.getMediaEngine();
@@ -17056,9 +17069,9 @@ function hL() {
                 ni.A.isDeveloper && hU();
             }),
             e.once(od.bg.Destroy, () => {
-                hP = !1;
+                hL = !1;
             }),
-            (hP = !0),
+            (hL = !0),
             !0
         );
     } catch {
@@ -17066,7 +17079,7 @@ function hL() {
     }
 }
 function hU() {
-    if (ni.A.isDeveloper && hL())
+    if (ni.A.isDeveloper && hP())
         try {
             var e;
             let t =
@@ -17097,9 +17110,9 @@ class hG extends d.Ay.DeviceSettingsStore {
         (this.waitFor(ni.A),
             (hO = null != e ? { ...hw, ...e } : { ...hw }),
             hU(),
-            hP ||
+            hL ||
                 S.Ay.addChangeListener(function e() {
-                    hL() && (hU(), S.Ay.removeChangeListener(e));
+                    hP() && (hU(), S.Ay.removeChangeListener(e));
                 }));
     }
     getUserAgnosticState() {
@@ -17657,7 +17670,7 @@ function xd() {
     function M() {
         S.Ay.getMediaEngine().stopRecordingRawSamples();
     }
-    function P(e) {
+    function L(e) {
         if ((t && M(), O(), null == w)) return;
         let a = w.createBufferSource();
         ((a.buffer = e.audioBuffer),
@@ -17676,11 +17689,11 @@ function xd() {
         (0, xt.l0)(() => {
             xe.default.setMode(S.Ay.getMode(), { vadKrispActivationThreshold: void 0 });
         }));
-    let L = [];
+    let P = [];
     return (
-        I && L.push({ id: "krisp", label: "Krisp", value: "KRISP" }),
-        D && L.push({ id: "standard", label: "Standard", value: "STANDARD" }),
-        L.push({ id: "disabled", label: "Disabled", value: "NONE" }),
+        I && P.push({ id: "krisp", label: "Krisp", value: "KRISP" }),
+        D && P.push({ id: "standard", label: "Standard", value: "STANDARD" }),
+        P.push({ id: "disabled", label: "Disabled", value: "NONE" }),
         (0, r.jsx)(g.Ip, {
             className: t0.nd,
             children: (0, r.jsxs)("div", {
@@ -17699,7 +17712,7 @@ function xd() {
                             (xe.default.setNoiseCancellation("KRISP" === e),
                                 xe.default.setNoiseSuppression("STANDARD" === e));
                         },
-                        options: L,
+                        options: P,
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
@@ -17829,7 +17842,7 @@ function xd() {
                         children: [
                             (0, r.jsx)(p.E, { variant: "text-sm/semibold", children: "Recordings" }),
                             n.map((e, t) =>
-                                (0, r.jsx)(xo, { recording: e, playing: e === s, onPlay: P, onStop: O }, t),
+                                (0, r.jsx)(xo, { recording: e, playing: e === s, onPlay: L, onStop: O }, t),
                             ),
                         ],
                     }),
@@ -18132,7 +18145,7 @@ function xM(e) {
         ],
     });
 }
-function xP() {
+function xL() {
     let { value: e } = xj("reflections.room.minCorner"),
         { value: t } = xj("reflections.room.maxCorner"),
         a = t.x - e.x,
@@ -18147,7 +18160,7 @@ function xP() {
             : "Every axis of the max corner must be greater than the min corner.",
     });
 }
-function xL(e) {
+function xP(e) {
     let t,
         { overrideCount: a, onResetAll: n } = e,
         { supported: l, active: i } = (0, d.cf)([S.Ay, xu.A], () => ({
@@ -18429,7 +18442,7 @@ function xH() {
                 className: xx.kL,
                 children: [
                     (0, r.jsx)(xz, { overrides: e, modified: m > 0, profiles: l }),
-                    (0, r.jsx)(xL, {
+                    (0, r.jsx)(xP, {
                         overrideCount: m,
                         onResetAll: () => xe.default.setSpatialAudioOverrides(e1().cloneDeep(i)),
                     }),
@@ -18589,7 +18602,7 @@ function xH() {
                     (0, r.jsxs)(u.n, {
                         label: "Room",
                         children: [
-                            (0, r.jsx)(xP, {}),
+                            (0, r.jsx)(xL, {}),
                             (0, r.jsx)(xT, { path: "reflections.room.minCorner", label: "Min corner" }),
                             (0, r.jsx)(xT, { path: "reflections.room.maxCorner", label: "Max corner" }),
                             (0, r.jsx)(xM, { path: "reflections.room.floor", label: "Floor" }),
@@ -18624,7 +18637,7 @@ function x0() {
         a = (0, d.bG)([eo.default], () => eo.default.getCurrentUser()),
         n = (0, xX.Lh)(),
         l = (0, d.bG)([ox.A], () => ox.A.getPremiumTypeSubscription()),
-        i = null != n ? (tP.VD[n]?.tenureReqNumMonths ?? 0) : 0,
+        i = null != n ? (tL.VD[n]?.tenureReqNumMonths ?? 0) : 0,
         s = o.useCallback(
             async (e) => {
                 let n = new Date();
@@ -18758,7 +18771,7 @@ function x7(e) {
                     children:
                         "Select the target date and time to travel the subscription to. This will adjust the subscription period and trigger any necessary invoice operations.",
                 }),
-                (0, r.jsx)(sP.J, { label: "Target Date", value: i, onSelect: s }),
+                (0, r.jsx)(sL.J, { label: "Target Date", value: i, onSelect: s }),
                 (0, r.jsx)(u.n, {
                     label: "Target Time (HH:mm)",
                     children: (0, r.jsx)("input", {
@@ -18943,7 +18956,7 @@ function pa(e) {
         }
         l();
     }
-    let _ = tP.hd[n.planIdFromItems]?.premiumType === tP.PremiumTypes.TIER_0,
+    let _ = tL.hd[n.planIdFromItems]?.premiumType === tL.PremiumTypes.TIER_0,
         N = n.metadata?.ended_at,
         A = null != N ? new Date(N).toISOString().substring(0, 10) : "",
         k = [
@@ -18974,10 +18987,10 @@ function pa(e) {
         (0, r.jsx)("div", {
             className: q()(iF.Nr, _ ? iF.Qf : iF.C1),
             children: (0, r.jsxs)(u.n, {
-                label: `Type: ${null == (a = n.planIdFromItems) ? "No plan id" : a in tP.hd ? tP.hd[a].name : `Unknown plan id ${a}`}`,
+                label: `Type: ${null == (a = n.planIdFromItems) ? "No plan id" : a in tL.hd ? tL.hd[a].name : `Unknown plan id ${a}`}`,
                 className: oG.lI,
                 children: [
-                    (0, r.jsx)(oL.C, { items: k, label: "Subscription details" }),
+                    (0, r.jsx)(oP.C, { items: k, label: "Subscription details" }),
                     D &&
                         (0, r.jsxs)("div", {
                             className: oG.VK,
@@ -19204,7 +19217,7 @@ function pa(e) {
                                         (0, r.jsxs)(tJ.B, {
                                             gap: 16,
                                             children: [
-                                                (0, r.jsx)(sP.J, {
+                                                (0, r.jsx)(sL.J, {
                                                     label: "Premium Streak Start Date",
                                                     value: nG()(n.premiumSince?.toISOString().substring(0, 10)),
                                                     onSelect: (e) => E({ premiumStreakStart: e.toISOString() }),
@@ -19212,7 +19225,7 @@ function pa(e) {
                                                 (0, r.jsx)(x0, {}),
                                             ],
                                         }),
-                                        (0, r.jsx)(sP.J, {
+                                        (0, r.jsx)(sL.J, {
                                             label: "Metadata Ended At Date",
                                             value: "" !== A ? nG()(A) : void 0,
                                             onSelect: (e) => E({ endedAt: e.toISOString() }),
@@ -19236,15 +19249,15 @@ async function pn() {
     ).body.map((e) => xY.A.createFromServer(e));
 }
 let pl = [
-    { id: "nitro-monthly", label: "Nitro Monthly", value: tP.gD.PREMIUM_MONTH_TIER_2 },
-    { id: "nitro-yearly", label: "Nitro Yearly", value: tP.gD.PREMIUM_YEAR_TIER_2 },
-    { id: "nitro-classic-monthly", label: "Nitro Classic Monthly", value: tP.gD.PREMIUM_MONTH_TIER_1 },
-    { id: "nitro-classic-yearly", label: "Nitro Classic Yearly", value: tP.gD.PREMIUM_YEAR_TIER_1 },
-    { id: "basic-monthly", label: "Basic Monthly", value: tP.gD.PREMIUM_MONTH_TIER_0 },
-    { id: "basic-yearly", label: "Basic Yearly", value: tP.gD.PREMIUM_YEAR_TIER_0 },
-    { id: "reverse-trial-1week", label: "Reverse Trial 1-week", value: tP.gd },
-    { id: "reverse-trial-2week", label: "Reverse Trial 2-week", value: tP.Uk },
-    { id: "nitro-squad-monthly", label: "Nitro Squad Monthly", value: tP.gD.PREMIUM_GROUP_MONTH },
+    { id: "nitro-monthly", label: "Nitro Monthly", value: tL.gD.PREMIUM_MONTH_TIER_2 },
+    { id: "nitro-yearly", label: "Nitro Yearly", value: tL.gD.PREMIUM_YEAR_TIER_2 },
+    { id: "nitro-classic-monthly", label: "Nitro Classic Monthly", value: tL.gD.PREMIUM_MONTH_TIER_1 },
+    { id: "nitro-classic-yearly", label: "Nitro Classic Yearly", value: tL.gD.PREMIUM_YEAR_TIER_1 },
+    { id: "basic-monthly", label: "Basic Monthly", value: tL.gD.PREMIUM_MONTH_TIER_0 },
+    { id: "basic-yearly", label: "Basic Yearly", value: tL.gD.PREMIUM_YEAR_TIER_0 },
+    { id: "reverse-trial-1week", label: "Reverse Trial 1-week", value: tL.gd },
+    { id: "reverse-trial-2week", label: "Reverse Trial 2-week", value: tL.Uk },
+    { id: "nitro-squad-monthly", label: "Nitro Squad Monthly", value: tL.gD.PREMIUM_GROUP_MONTH },
 ];
 function pi() {
     let e = (0, d.bG)([ox.A], () => ox.A.getPremiumTypeSubscription()),
@@ -19442,7 +19455,7 @@ let pM = function (e) {
             })
         );
     },
-    pP = function (e) {
+    pL = function (e) {
         let { assetKey: t, initialValue: a, onMessageChange: n, title: l } = e,
             [i, s] = o.useState("");
         return (
@@ -19458,10 +19471,10 @@ let pM = function (e) {
             })
         );
     };
-var pL = a(77870);
+var pP = a(77870);
 let pU = function (e) {
     let { onSelect: t, quest: a } = e,
-        { quests: n } = (0, pL.mL)({ fetchPolicy: "cache-and-network", callerSource: "prefill_selector" }),
+        { quests: n } = (0, pP.mL)({ fetchPolicy: "cache-and-network", callerSource: "prefill_selector" }),
         l = [
             { id: "none", label: "NONE", value: null },
             ...n.map((e) => ({ id: e.id, label: e.config.messages.questName, value: e })),
@@ -19872,26 +19885,26 @@ function p0() {
             (0, r.jsxs)("div", {
                 className: pI.OA,
                 children: [
-                    (0, r.jsx)(pP, {
+                    (0, r.jsx)(pL, {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: E,
                         initialValue: t.config.messages.questName,
                     }),
-                    (0, r.jsx)(pP, {
+                    (0, r.jsx)(pL, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: E,
                         initialValue: t.config.messages.gameTitle,
                     }),
-                    (0, r.jsx)(pP, {
+                    (0, r.jsx)(pL, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: E,
                         initialValue: t.config.messages.gamePublisher,
                     }),
                     A &&
-                        (0, r.jsx)(pP, {
+                        (0, r.jsx)(pL, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, a) {
@@ -20001,13 +20014,13 @@ function p0() {
                             (0, r.jsxs)("div", {
                                 className: pI.OA,
                                 children: [
-                                    (0, r.jsx)(pP, {
+                                    (0, r.jsx)(pL, {
                                         title: "Name",
                                         assetKey: "name",
                                         onMessageChange: (e, t) => C(e, t, a),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, r.jsx)(pP, {
+                                    (0, r.jsx)(pL, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
                                         onMessageChange: (e, t) => C(e, t, a),
@@ -21190,8 +21203,8 @@ function gM() {
         ],
     });
 }
-var gP = a(718446),
-    gL = a(766075),
+var gL = a(718446),
+    gP = a(766075),
     gU = a(355097);
 let gG = (0, p3.D)(() => ({ urlString: "", error: null })),
     gB = Object.entries(gU.od).map((e) => {
@@ -21205,10 +21218,10 @@ function gF() {
         l = o.useCallback(() => {
             let e = gG.getField("urlString");
             if (null == e || "" === e) return void gG.setState({ error: "URL is required" });
-            let t = (0, gP.parseSettingsUrl)({ path: e });
-            ((0, gP.trackParseSettingsUrl)(t, "devtools"), null == t.target)
+            let t = (0, gL.parseSettingsUrl)({ path: e });
+            ((0, gL.trackParseSettingsUrl)(t, "devtools"), null == t.target)
                 ? gG.setState({ error: "String did not match expected format" })
-                : (0, gL.openUserSettings)(t.target, { path: t.path });
+                : (0, gP.openUserSettings)(t.target, { path: t.path });
         }, []);
     return (0, r.jsxs)(u.n, {
         label: "Settings Deep Link Tool",
@@ -21259,7 +21272,7 @@ let gV = (0, p3.D)(() => ({ setting: g$.X.ACCOUNT_PANEL }));
 function gW() {
     let e = gV.useField("setting"),
         t = o.useCallback(() => {
-            (0, gL.openUserSettings)(e);
+            (0, gP.openUserSettings)(e);
         }, [e]),
         a = o.useMemo(() => Object.values(g$.X).map((e) => ({ id: e, label: e, value: e })), []);
     return (0, r.jsxs)(u.n, {
@@ -21279,7 +21292,7 @@ function gW() {
     });
 }
 var gz = a(963935),
-    gH = a(59039),
+    gH = a(561505),
     gK = a(555738);
 function gY(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,
@@ -21451,7 +21464,7 @@ function gZ() {
                     name: "Performance",
                     group: np.fu.DEVELOPMENT,
                     tags: ["fps", "frames", "gateway", "telemetry"],
-                    render: () => (0, r.jsx)(cL.Ay, {}),
+                    render: () => (0, r.jsx)(cP.Ay, {}),
                 }),
                 e.push({
                     id: "feedback",
@@ -21548,7 +21561,7 @@ function gZ() {
                 name: "Rive",
                 group: np.fu.UI,
                 tags: ["animation"],
-                render: () => (0, r.jsx)(uL, {}),
+                render: () => (0, r.jsx)(uP, {}),
             }),
             e.push({
                 id: "gradient-contrast",
@@ -21569,7 +21582,7 @@ function gZ() {
                 name: "Intl",
                 group: np.fu.UI,
                 tags: ["i18n", "localization", "messages"],
-                render: () => (0, r.jsx)(rP, {}),
+                render: () => (0, r.jsx)(rL, {}),
             }),
             e.push({
                 id: "colors",
@@ -21638,7 +21651,7 @@ function gZ() {
                 name: "Affinity",
                 group: np.fu.USERS,
                 tags: ["friends"],
-                render: () => (0, r.jsx)(nL, {}),
+                render: () => (0, r.jsx)(nP, {}),
             }),
             e.push({
                 id: "channel_affinity",
@@ -21682,7 +21695,7 @@ function gZ() {
                     name: "Offers",
                     group: np.fu.PREMIUM,
                     tags: ["discounts", "trials", "reverse trials", "churn"],
-                    render: () => (0, r.jsx)(oP, {}),
+                    render: () => (0, r.jsx)(oL, {}),
                 }),
                 e.push({
                     id: "payments",

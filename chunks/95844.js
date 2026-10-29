@@ -24,7 +24,7 @@ var i = n(858899),
     O = n(116956),
     R = n(174459),
     L = n(723702),
-    y = n(274372),
+    y = n(915725),
     D = n(572164),
     v = n(696016),
     b = n(652215),
@@ -220,16 +220,19 @@ class Y extends w {
                     null != t ? this.handleClipsReminder(t) : (0, j.kF)();
                 },
                 RPC_SERVER_READY: () => {
-                    ((0, _.se)((0, D.T)()), (0, E.eZ)((0, D.T)()));
+                    ((0, _.se)(y.Ay.getEnableAutoclipping()), (0, E.eZ)(y.Ay.getEnableAutoclipping()));
                 },
             }));
     }
     handlePostConnectionOpen() {
-        (super.handlePostConnectionOpen(), (0, _.se)((0, D.T)()), (0, E.eZ)((0, D.T)()), (0, x.B)((0, D.T)()));
+        (super.handlePostConnectionOpen(),
+            (0, _.se)(y.Ay.getEnableAutoclipping()),
+            (0, E.eZ)(y.Ay.getEnableAutoclipping()),
+            (0, x.B)(y.Ay.getEnableAutoclipping()));
     }
     maybeFetchAutoclipsCapabilities(e) {
         let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        null == e || ((0, G.s$)() && (0, D.T)() && (t ? B.b.refetchMany([e]) : B.b.fetchMany([e])));
+        null == e || ((0, G.s$)() && y.Ay.getEnableAutoclipping() && (t ? B.b.refetchMany([e]) : B.b.fetchMany([e])));
     }
     stores = new Map().set(o.A, () => this.applyNativeClipsSettings());
     maybeOpenQuickBar() {
@@ -256,7 +259,10 @@ class Y extends w {
     }
     applyNativeClipsSettings(e) {
         if (
-            (e?.settings.clipsEnabled != null && ((0, _.se)((0, D.T)()), (0, E.eZ)((0, D.T)()), (0, x.B)((0, D.T)())),
+            (e?.settings.enableAutoclipping != null &&
+                ((0, _.se)(e.settings.enableAutoclipping),
+                (0, E.eZ)(e.settings.enableAutoclipping),
+                (0, x.B)(e.settings.enableAutoclipping)),
             !(0, p.ri)(f.Ay))
         )
             return;

@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => C });
 var i = n(439372),
     r = n(952818),
     a = n(287809),
@@ -6,21 +6,22 @@ var i = n(439372),
     l = n(572164),
     o = n(614584),
     d = n(507868),
-    c = n(974293),
-    u = n(240899),
-    _ = n(458977),
-    E = n(399091),
-    A = n(526233),
-    h = n(415281),
-    f = n(171251),
-    I = n(826685),
-    p = n(876474),
-    T = n(190443);
-let m = "Clip signal handler registration";
-function g(e) {
-    return !!(0, l.T)() && d.A.isGameAllowed(e ?? r.Ay.getVisibleGame()?.id);
+    c = n(915725),
+    u = n(974293),
+    _ = n(240899),
+    E = n(458977),
+    A = n(399091),
+    h = n(526233),
+    f = n(415281),
+    I = n(171251),
+    p = n(826685),
+    T = n(876474),
+    m = n(190443);
+let g = "Clip signal handler registration";
+function S(e) {
+    return !!c.Ay.getEnableAutoclipping() && d.A.isGameAllowed(e ?? r.Ay.getVisibleGame()?.id);
 }
-class S extends i.A {
+class N extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -40,41 +41,41 @@ class S extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, c.$i)(m) && g(),
+                    isEnabled: () => (0, u.$i)(g) && S(),
                     importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: () => g() && _.A.getConfig({ location: m }).enableDistributedClips,
+                    isEnabled: () => S() && E.A.getConfig({ location: g }).enableDistributedClips,
                     importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: p.m,
-                    isEnabled: () => g(p.m) && A.A.getConfig({ location: m }).enableLeagueEvents,
+                    applicationId: T.m,
+                    isEnabled: () => S(T.m) && h.A.getConfig({ location: g }).enableLeagueEvents,
                     importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
                     name: "cs2-gsi",
-                    applicationId: f.w,
-                    isEnabled: () => g(f.w) && u.A.getConfig({ location: m }).enableCs2Gsi,
+                    applicationId: I.w,
+                    isEnabled: () => S(I.w) && _.A.getConfig({ location: g }).enableCs2Gsi,
                     importHandler: () => n.e("860838").then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
                     name: "dota-gsi",
-                    applicationId: I.b,
-                    isEnabled: () => g(I.b) && E.A.getConfig({ location: m }).enableDotaGsi,
+                    applicationId: p.b,
+                    isEnabled: () => S(p.b) && A.A.getConfig({ location: g }).enableDotaGsi,
                     importHandler: () => Promise.all([n.e("465129"), n.e("709692")]).then(n.bind(n, 840631)),
                 },
                 {
                     type: "application",
                     name: "rocket-league",
-                    applicationId: T.e,
-                    isEnabled: () => g(T.e) && h.A.getConfig({ location: m }).enableRocketLeagueEvents,
+                    applicationId: m.e,
+                    isEnabled: () => S(m.e) && f.A.getConfig({ location: g }).enableRocketLeagueEvents,
                     importHandler: () => n.e("182150").then(n.bind(n, 446885)),
                 },
             ]))
@@ -148,4 +149,4 @@ class S extends i.A {
         (this.terminatedCount++, this.stopAllHandlers());
     }
 }
-let N = new S();
+let C = new N();

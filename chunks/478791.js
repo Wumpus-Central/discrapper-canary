@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "656073";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "656103";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1508,7 +1508,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 656073, Version Hash: 20bdedc5fd893290d9b86786f2d838ebc3978b0b`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 656103, Version Hash: 5ac66a37c7e6e5e1dc25541c17dfe82567fe5d21`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -5707,7 +5707,7 @@ let so = (0, rl.Fe)({
                 n.e("993720"),
                 n.e("725246"),
                 n.e("654658"),
-                n.e("486512"),
+                n.e("550006"),
                 n.e("564395"),
                 n.e("169987"),
                 n.e("895099"),
@@ -26219,7 +26219,7 @@ let y_ = "isHideDevBanner",
                     className: tf()(yu.Wz, yu.mr),
                     children: [
                         (0, b.jsx)(yc, { className: yu.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "656073" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "656103" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -26229,7 +26229,7 @@ var yA = n(765671),
     yh = n(890856),
     yf = n(905552),
     yI = n(157257),
-    yp = n(274372),
+    yp = n(915725),
     yT = n(609174),
     ym = n(930317),
     yg = n(111994),
@@ -26883,7 +26883,7 @@ function y7() {
 }
 var y8 = n(757780),
     y9 = n(18971),
-    De = n(115486),
+    De = n(437087),
     Dt = n(504337),
     Dn = n(629016),
     Di = n(636585),
@@ -31360,7 +31360,7 @@ let bN = (0, tZ.Fe)({
     bU = (0, tZ.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("630279"),
+                n.e("352694"),
                 n.e("150009"),
                 n.e("740509"),
                 n.e("555235"),
@@ -33613,7 +33613,7 @@ let bY = (0, tZ.qT)({ createPromise: bW, webpackId: 646482, name: "Channel", ren
     }),
     bX = (0, tZ.Fe)({
         createPromise: () =>
-            Promise.all([n.e("630279"), n.e("298903"), n.e("815537"), n.e("236999"), n.e("86105")]).then(
+            Promise.all([n.e("352694"), n.e("298903"), n.e("815537"), n.e("236999"), n.e("86105")]).then(
                 n.bind(n, 995198),
             ),
         webpackId: 995198,
@@ -33623,7 +33623,7 @@ let bY = (0, tZ.qT)({ createPromise: bW, webpackId: 646482, name: "Channel", ren
     bq = (0, tZ.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("630279"),
+                n.e("352694"),
                 n.e("566594"),
                 n.e("815275"),
                 n.e("874821"),
@@ -37910,7 +37910,7 @@ let wI = (0, rl.Fe)({
                 n.e("102137"),
                 n.e("375971"),
                 n.e("792818"),
-                n.e("630279"),
+                n.e("352694"),
                 n.e("460582"),
                 n.e("477751"),
                 n.e("245851"),
@@ -38879,7 +38879,7 @@ let wI = (0, rl.Fe)({
                 n.e("102137"),
                 n.e("375971"),
                 n.e("792818"),
-                n.e("630279"),
+                n.e("352694"),
                 n.e("847499"),
                 n.e("45646"),
                 n.e("389684"),
@@ -39342,7 +39342,7 @@ let wI = (0, rl.Fe)({
                 n.e("102137"),
                 n.e("375971"),
                 n.e("792818"),
-                n.e("630279"),
+                n.e("352694"),
                 n.e("460582"),
                 n.e("477751"),
                 n.e("245851"),
@@ -44375,31 +44375,32 @@ let kH = {
 };
 var kj = n(873727);
 let kW = (function () {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    function t() {
-        let t = (0, kj.mB)(ef.Ay.useReducedMotion);
-        if (!e) return t;
-        let { uiDensity: n, ...i } = t;
-        return i;
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        t = arguments.length > 1 ? arguments[1] : void 0;
+    function n() {
+        let n = (0, kj.mB)(ef.Ay.useReducedMotion);
+        if ((null != t && (n.customTheme = t()), !e)) return n;
+        let { uiDensity: i, ...r } = n;
+        return r;
     }
     return {
         [j.ZE4.DISCORD_ENV_UPDATE]: {
             scope: { [bg.sm.ANY]: [bg.W_, bg.VH] },
             handler() {
                 let e = !1,
-                    n = null;
+                    t = null;
                 return (i) => {
                     let { prevState: r, dispatch: a } = i,
-                        s = t();
+                        s = n();
                     return (
-                        iV().isEqual(s, r) ? (n = r ?? null) : ((n = s), a(s)),
+                        iV().isEqual(s, r) ? (t = r ?? null) : ((t = s), a(s)),
                         e ||
                             ((e = !0),
                             requestAnimationFrame(() => {
                                 requestAnimationFrame(() => {
                                     e = !1;
-                                    let i = t();
-                                    iV().isEqual(i, n) || ((n = i), a(i));
+                                    let i = n();
+                                    iV().isEqual(i, t) || ((t = i), a(i));
                                 });
                             })),
                         s
@@ -54699,7 +54700,7 @@ let Yu = (0, tZ.Fe)({
             n.e("993720"),
             n.e("725246"),
             n.e("654658"),
-            n.e("486512"),
+            n.e("550006"),
             n.e("564395"),
             n.e("155361"),
             n.e("233049"),
@@ -54915,25 +54916,25 @@ function YL(e) {
         o = (0, Ym.LK)(t.id),
         d = !l && !o,
         c = Yg.useConfig({ location: "FramePool" }).enabled,
-        u = null;
+        u = (0, YS.v)(t, Gi.v.DESKTOP),
+        _ = null;
     if (null != a) {
         let { url: e, proxyTicketRefreshing: n } = t.data,
-            i = (0, YS.A)(t, Gi.v.DESKTOP),
-            r = t.surface.type === Gr.U.OVERLAY;
-        u = n
+            i = t.surface.type === Gr.U.OVERLAY;
+        _ = n
             ? (0, b.jsx)("div", { className: YO.p, children: (0, b.jsx)(rr.y, {}) })
             : (0, b.jsx)(Yf.oI, {
                   allowPopups: (0, Yh.b)(a),
                   referrerPolicy: "origin",
-                  transparentWhileLoading: r || t.surface.type === Gr.U.APP_CHANNEL,
+                  transparentWhileLoading: i || t.surface.type === Gr.U.APP_CHANNEL,
                   spinnerWhileLoading: (0, MA.Q5)(t.surface),
-                  style: r ? Yf.cT : void 0,
+                  style: i ? Yf.cT : void 0,
                   url: e,
                   contextSource: { type: xd.f.FRAME, frameId: t.id },
                   onIframeMount: (e) => nN.A.attachFrameIframe(t.id, e),
                   onIframeUnmount: (e) => nN.A.detachFrameIframe(t.id, e),
                   onGuestReload: () => nN.A.setFrameRunsInBackground(t.id, !1),
-                  queryParams: i,
+                  queryParams: u,
                   className: YO.p,
                   shouldRefocus: d,
                   nativeView: c && (0, MA.Q5)(t.surface),
@@ -54950,7 +54951,7 @@ function YL(e) {
                 overflow: l || o ? "hidden" : void 0,
             },
             children: [
-                i ? u : null,
+                i ? _ : null,
                 (0, b.jsx)("div", { ref: r, style: { position: "absolute", inset: 0, pointerEvents: "none" } }),
             ],
         }),
@@ -55902,7 +55903,7 @@ let KL = (0, rl.Fe)({
     Kw = (0, rl.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("630279"),
+                n.e("352694"),
                 n.e("480527"),
                 n.e("698965"),
                 n.e("336335"),
@@ -55971,7 +55972,7 @@ let KL = (0, rl.Fe)({
                 n.e("945756"),
                 n.e("775417"),
                 n.e("533651"),
-                n.e("630279"),
+                n.e("352694"),
                 n.e("570385"),
                 n.e("294498"),
                 n.e("689387"),
@@ -56136,7 +56137,7 @@ let KL = (0, rl.Fe)({
     Kx = (0, rl.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("630279"),
+                n.e("352694"),
                 n.e("815275"),
                 n.e("874821"),
                 n.e("815537"),

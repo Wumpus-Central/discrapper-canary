@@ -7,7 +7,7 @@ var n = i(284009),
     o = i(684013),
     u = i(587895),
     c = i(198052),
-    d = i(274372),
+    d = i(915725),
     A = i(952818),
     f = i(320095),
     p = i(176154),
@@ -250,8 +250,8 @@ var t0 = i(554146),
     t2 = i(429913),
     t9 = i(263577),
     t3 = i(826673),
-    t8 = i(999926),
-    t5 = i(308726),
+    t5 = i(999926),
+    t8 = i(308726),
     t4 = i(818023),
     t7 = i(731854),
     t6 = i(709946),
@@ -644,7 +644,7 @@ let eh = new eC(s.h, {
         if (V.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (j.A.isNotificationDisabled(Y.KS.WelcomeNudge)) return null;
-            t8.Ay.supports(t7.O5.VIDEO) ||
+            t5.Ay.supports(t7.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== Y.Jr.GO_LIVE_VOICE && t.type !== Y.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, F.Y9)(Y.KS.WelcomeNudge, {
                     notif_type: Y.KS.WelcomeNudge,
@@ -693,7 +693,7 @@ let eh = new eC(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, $.jsx)(t5.ru, {
+                                (0, $.jsx)(t8.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",

@@ -478,106 +478,6 @@
     margin-bottom: 8px
 }
 
-.root_f5cd6a {
-    align-items: center;
-    background-color: var(--background-base-lowest);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16);
-    height: 100%;
-    justify-content: center;
-    overflow: hidden;
-    padding: var(--space-16);
-    position: relative;
-    width: 100%
-}
-
-.gradient_f5cd6a {
-    background: radial-gradient(75% 90% at 50% 100%, var(--background-base-lowest) 55%, var(--transparent) 100%), linear-gradient(90deg, var(--expressive-gradient-blue-start) 0, var(--expressive-gradient-blue-end) 100%);
-    bottom: auto;
-    height: 100%;
-    inset-inline-end: 0;
-    inset-inline-start: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0
-}
-
-.art_f5cd6a {
-    flex: 1 1 auto;
-    max-height: 200px;
-    max-width: 280px;
-    min-height: 0;
-    -o-object-fit: contain;
-    object-fit: contain;
-    position: relative;
-    width: 100%
-}
-
-.caption_f5cd6a {
-    max-width: 260px;
-    text-align: center
-}
-
-.caption_f5cd6a,
-.togglePill_f5cd6a {
-    flex: none;
-    position: relative
-}
-
-.togglePill_f5cd6a {
-    background-color: var(--background-mod-normal);
-    border-radius: var(--radius-md);
-    box-sizing: border-box;
-    padding: var(--space-12) var(--space-16);
-    width: -moz-fit-content;
-    width: fit-content
-}
-
-.closeButton_f5cd6a {
-    color: var(--interactive-text-default);
-    cursor: pointer;
-    inset-inline-end: var(--space-12);
-    position: absolute;
-    top: var(--space-12);
-    z-index: 1
-}
-
-.closeButton_f5cd6a:focus,
-.closeButton_f5cd6a:hover {
-    color: var(--interactive-text-hover)
-}
-
-.shelfButtonRoot_f5cd6a {
-    align-items: center;
-    background-color: var(--background-base-lowest);
-    color: var(--white);
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    position: relative;
-    width: 100%
-}
-
-.clickableTile_f5cd6a {
-    cursor: pointer;
-    display: flex;
-    flex: 1
-}
-
-.iconContainer_f5cd6a {
-    align-items: center;
-    color: var(--interactive-text-default);
-    display: flex;
-    justify-content: center
-}
-
-.iconContainer_f5cd6a:focus,
-.iconContainer_f5cd6a:hover {
-    color: var(--interactive-text-hover)
-}
-
 .row_d6271c {
     justify-content: center
 }
@@ -610,4 +510,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=630279.6e51622c63e1fc69.css.map*/
+/*# sourceMappingURL=352694.0d904562ea0dd247.css.map*/
