@@ -140,7 +140,7 @@ function el(e) {
             (0, i.jsx)(m.D, {
                 className: er.VV,
                 onClick: function () {
-                    (null != t && t(en.i.DISMISS), s(z.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, U.D)());
+                    (null != t && t(en.i.DISMISS), s(z.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, U.DS)());
                 },
                 children: (0, i.jsx)(T.a, { size: "md", color: "currentColor", className: er.P0 }),
             }),
@@ -171,7 +171,7 @@ function ec(e) {
                         (0, R.NA)({ [e]: r.theme }),
                         (0, R.qX)(e, { backgroundGradientPresetId: r.id }),
                         (0, G.S8)(),
-                        (0, U.D)());
+                        (0, U.DS)());
                     return;
                 }
                 ((0, es.X8)({ isPersisted: !0, themeName: d.ju[r.id], analyticsLocations: n }),
@@ -221,7 +221,7 @@ function ed(e) {
                 onClick: function () {
                     (null != t && t(en.i.DISMISS),
                         o(z.HAw.CLIENT_THEME_PREVIEW_CLOSED),
-                        (0, U.D)(),
+                        (0, U.DS)(),
                         s || (0, k.openUserSettings)(D.X.APPEARANCE_THEME_CATEGORY));
                 },
                 variant: "secondary",

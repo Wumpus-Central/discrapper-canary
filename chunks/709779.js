@@ -11,8 +11,8 @@ var n = i(477900),
     p = i(452027),
     g = i(150934),
     x = i(347704),
-    S = i(47167),
-    f = i(468689),
+    f = i(47167),
+    S = i(468689),
     m = i(555337),
     E = i(636042),
     h = i(376092),
@@ -26,9 +26,9 @@ var n = i(477900),
     y = i(455207),
     P = i(124759),
     M = i(652215),
-    L = i(105292),
-    O = i(28317);
-function _(t) {
+    _ = i(105292),
+    L = i(28317);
+function O(t) {
     let { guild: e, verificationLevelMet: i, contentFilterMet: l } = t;
     return (
         s.useEffect(() => {
@@ -37,8 +37,8 @@ function _(t) {
         (0, n.jsxs)(o.B, {
             gap: 12,
             children: [
-                !i && (0, n.jsx)(G, { title: L.intl.string(L.t["rkA56+"]), description: L.intl.string(L.t.fHiGA0) }),
-                !l && (0, n.jsx)(G, { title: L.intl.string(L.t.COu4bk), description: L.intl.string(L.t.b0MaDV) }),
+                !i && (0, n.jsx)(G, { title: _.intl.string(_.t["rkA56+"]), description: _.intl.string(_.t.fHiGA0) }),
+                !l && (0, n.jsx)(G, { title: _.intl.string(_.t.COu4bk), description: _.intl.string(_.t.b0MaDV) }),
             ],
         })
     );
@@ -56,27 +56,27 @@ function B(t) {
     }, [e.id]);
     let u = (0, r.bG)([j.Ay], () => j.Ay.getChannels(e.id)),
         p = s.useCallback((t) => ({ id: t.value, value: t.value, label: t.label }), []),
-        g = [{ value: P.SP, label: L.intl.string(L.t.Cla0re) }];
+        g = [{ value: P.SP, label: _.intl.string(_.t.Cla0re) }];
     return (
         u[j.I6].forEach((t) => {
             let { channel: e } = t;
-            e.type === M.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, S.m1)(e, b.default, I.A, !0) });
+            e.type === M.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, f.m1)(e, b.default, I.A, !0) });
         }),
         (0, n.jsxs)(o.B, {
             gap: 16,
             children: [
                 (0, n.jsx)(d.Z, {
-                    label: L.intl.string(L.t.dYrhCO),
-                    description: L.intl.string(L.t["+Af+Vw"]),
-                    options: g,
+                    label: _.intl.string(_.t.dYrhCO),
+                    description: _.intl.string(_.t["+Af+Vw"]),
+                    options: [{ value: M._Ee, label: _.intl.string(_.t.PoWNfe) }, ...g],
                     formatOption: p,
-                    onSelectionChange: (t) => a(t ?? P.SP),
+                    onSelectionChange: (t) => a(t === M._Ee ? null : t),
                     selectionMode: "single",
-                    value: i,
+                    value: i ?? M._Ee,
                 }),
                 (0, n.jsx)(d.Z, {
-                    label: L.intl.string(L.t.vAyDGU),
-                    description: L.intl.string(L.t.ZFeonu),
+                    label: _.intl.string(_.t.vAyDGU),
+                    description: _.intl.string(_.t.ZFeonu),
                     options: g,
                     formatOption: p,
                     onSelectionChange: (t) => c(t ?? P.SP),
@@ -94,7 +94,7 @@ function G(t) {
         gap: 8,
         align: "start",
         children: [
-            (0, n.jsx)(c.y, { size: "sm", className: O.aV, color: a.A.colors.ICON_FEEDBACK_POSITIVE }),
+            (0, n.jsx)(c.y, { size: "sm", className: L.aV, color: a.A.colors.ICON_FEEDBACK_POSITIVE }),
             (0, n.jsxs)(o.B, {
                 gap: 4,
                 children: [
@@ -108,23 +108,23 @@ function G(t) {
 function R(t) {
     let { enabledPermissions: e, onGetPermisisonName: i } = t;
     return (0, n.jsxs)("div", {
-        className: O.CZ,
+        className: L.CZ,
         children: [
             (0, n.jsx)(u.E, {
-                className: O.qd,
+                className: L.qd,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: L.intl.string(L.t.xU8RDk),
+                children: _.intl.string(_.t.xU8RDk),
             }),
             (0, n.jsx)("div", {
-                className: O.lM,
+                className: L.lM,
                 children: e.map((t, e) =>
                     (0, n.jsxs)(
                         "div",
                         {
-                            className: O.ce,
+                            className: L.ce,
                             children: [
-                                (0, n.jsx)("div", { className: O.dT }),
+                                (0, n.jsx)("div", { className: L.dT }),
                                 (0, n.jsx)(u.E, { variant: "text-sm/normal", color: "text-default", children: i(t) }),
                             ],
                         },
@@ -137,22 +137,22 @@ function R(t) {
 }
 function T(t) {
     let { disabledPermissions: e, onGetPermisisonName: i } = t,
-        s = L.intl.string(L.t.Yo5qlq);
+        s = _.intl.string(_.t.Yo5qlq);
     return (
-        e.length === P.dR.length && (s = L.intl.string(L.t.FgMS6i)),
+        e.length === P.dR.length && (s = _.intl.string(_.t.FgMS6i)),
         (0, n.jsxs)("div", {
-            className: O.CZ,
+            className: L.CZ,
             children: [
-                (0, n.jsx)(u.E, { className: O.qd, variant: "text-xs/semibold", color: "text-muted", children: s }),
+                (0, n.jsx)(u.E, { className: L.qd, variant: "text-xs/semibold", color: "text-muted", children: s }),
                 (0, n.jsx)("div", {
-                    className: O.lM,
+                    className: L.lM,
                     children: e.map((t, e) =>
                         (0, n.jsxs)(
                             "div",
                             {
-                                className: O.ce,
+                                className: L.ce,
                                 children: [
-                                    (0, n.jsx)("div", { className: O.xE }),
+                                    (0, n.jsx)("div", { className: L.xE }),
                                     (0, n.jsx)(u.E, { variant: "text-sm/normal", color: "text-muted", children: i(t) }),
                                 ],
                             },
@@ -169,18 +169,18 @@ function Y(t) {
     function i(t) {
         switch (t.toString()) {
             case M.xBc.MENTION_EVERYONE.toString():
-                return L.intl.string(L.t.yCpsQw);
+                return _.intl.string(_.t.yCpsQw);
             case M.xBc.CREATE_GUILD_EXPRESSIONS.toString():
-                return L.intl.string(L.t.vo2LdY);
+                return _.intl.string(_.t.vo2LdY);
             case M.xBc.MANAGE_GUILD_EXPRESSIONS.toString():
-                return L.intl.string(L.t.cmp2W6);
+                return _.intl.string(_.t.cmp2W6);
             default:
                 return (0, h.hx)(t);
         }
     }
     let { enabledPermissions: s, disabledPermissions: l } = e;
     return (0, n.jsxs)("div", {
-        className: O.tp,
+        className: L.tp,
         children: [
             0 !== s.length ? (0, n.jsx)(R, { enabledPermissions: s, onGetPermisisonName: i }) : null,
             (0, n.jsx)(T, { disabledPermissions: l, onGetPermisisonName: i }),
@@ -207,11 +207,11 @@ function D(t) {
             (0, n.jsxs)(o.B, {
                 gap: 12,
                 children: [
-                    !i && (0, n.jsx)(G, { title: L.intl.string(L.t.uPYswy), description: L.intl.string(L.t.pf6ptp) }),
+                    !i && (0, n.jsx)(G, { title: _.intl.string(_.t.uPYswy), description: _.intl.string(_.t.pf6ptp) }),
                     !l &&
                         (0, n.jsx)(G, {
-                            title: L.intl.format(L.t.IYQeOA, {}),
-                            description: L.intl.string(L.t["+Iyaif"]),
+                            title: _.intl.format(_.t.IYQeOA, {}),
+                            description: _.intl.string(_.t["+Iyaif"]),
                         }),
                 ],
             }),
@@ -226,12 +226,12 @@ function F(t) {
             (0, y.sx)({ fromStep: P.pj.BASICS, toStep: P.pj.RULES, guildId: e.id });
         }, [e.id]),
         (0, n.jsx)(p.D, {
-            label: L.intl.string(L.t["k+b2Cf"]),
-            description: L.intl.format(L.t["BwbW/Q"], {
+            label: _.intl.string(_.t["k+b2Cf"]),
+            description: _.intl.format(_.t["BwbW/Q"], {
                 communityGuidelines: v.A.getArticleURL(M.MVz.PUBLIC_GUILD_GUILDLINES),
                 typesOfGuilds: v.A.getArticleURL(M.MVz.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
             }),
-            children: (0, n.jsx)(g.S, { label: L.intl.string(L.t["9AG3wI"]), checked: i, onChange: l }),
+            children: (0, n.jsx)(g.S, { label: _.intl.string(_.t["9AG3wI"]), checked: i, onChange: l }),
         })
     );
 }
@@ -247,12 +247,12 @@ function w(t) {
         u = null != d && d > M.PvD.NONE,
         p = c === M.gh6.ALL_MEMBERS,
         g = !(u && p),
-        [S, h] = s.useState(P.SP),
+        [f, h] = s.useState(P.SP),
         [j, I] = s.useState(P.SP),
         [b] = s.useState(() => !P.dR.some((t) => A.Ib(t, i))),
         [v] = s.useState(() => i?.defaultMessageNotifications),
-        O = v === M.orn.ONLY_MENTIONS,
-        G = !O || !b,
+        L = v === M.orn.ONLY_MENTIONS,
+        G = !L || !b,
         R = (0, r.bG)([C.A], () => (null != i ? C.A.getEveryoneRole(i) : void 0)),
         [T, Y] = s.useState(!1);
     if (null == i) return null;
@@ -265,13 +265,13 @@ function w(t) {
         }
         let e = {
             features: new Set([...i.features, M.GuildFeatures.COMMUNITY]),
-            rulesChannelId: S,
+            rulesChannelId: f,
             publicUpdatesChannelId: j,
             ...(!u && { verificationLevel: M.PvD.LOW }),
             ...(!p && { explicitContentFilter: M.gh6.ALL_MEMBERS }),
-            ...(!O && { defaultMessageNotifications: M.orn.ONLY_MENTIONS }),
+            ...(!L && { defaultMessageNotifications: M.orn.ONLY_MENTIONS }),
         };
-        (f.A.updateGuild(e), await f.A.saveGuild(i.id, e, { throwErr: !0 }));
+        (S.A.updateGuild(e), await S.A.saveGuild(i.id, e, { throwErr: !0 }));
     }
     async function K() {
         (N.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose());
@@ -280,28 +280,28 @@ function w(t) {
             {
                 stepKey: P.pj.INTRO,
                 modalProps: {
-                    title: L.intl.string(L.t.ElKTeb),
-                    subtitle: L.intl.string(L.t["CwC/ll"]),
+                    title: _.intl.string(_.t.ElKTeb),
+                    subtitle: _.intl.string(_.t["CwC/ll"]),
                     graphic: {
                         src: "https://cdn.discordapp.com/assets/content/3956ff6cb15230c8f21653fee2a8cea719aebeb9dceda42ac326d0e4bccff159.svg",
                         type: "image",
                     },
                     gradientColor: "green",
                 },
-                nextButtonProps: { text: L.intl.string(L.t.LhlgY9) },
+                nextButtonProps: { text: _.intl.string(_.t.LhlgY9) },
             },
             {
                 stepKey: P.pj.SAFETY_CHECK,
-                modalProps: { title: L.intl.string(L.t.QrjLYl), subtitle: L.intl.string(L.t.i1STwu) },
-                body: (0, n.jsx)(_, { guild: i, verificationLevelMet: u, contentFilterMet: p }),
-                nextButtonProps: { text: L.intl.string(L.t.JFfins) },
+                modalProps: { title: _.intl.string(_.t.QrjLYl), subtitle: _.intl.string(_.t.i1STwu) },
+                body: (0, n.jsx)(O, { guild: i, verificationLevelMet: u, contentFilterMet: p }),
+                nextButtonProps: { text: _.intl.string(_.t.JFfins) },
             },
             {
                 stepKey: P.pj.BASICS,
-                modalProps: { title: L.intl.string(L.t.YtXpEh), subtitle: L.intl.string(L.t["J/fYR8"]) },
+                modalProps: { title: _.intl.string(_.t.YtXpEh), subtitle: _.intl.string(_.t["J/fYR8"]) },
                 body: (0, n.jsx)(B, {
                     guild: i,
-                    rulesChannelId: S,
+                    rulesChannelId: f,
                     publicUpdatesChannelId: j,
                     onRulesChannelChange: h,
                     onPublicUpdatesChannelChange: I,
@@ -309,14 +309,14 @@ function w(t) {
             },
             {
                 stepKey: P.pj.FINISH,
-                modalProps: { title: L.intl.string(L.t.EzGuSr) },
-                body: (0, n.jsx)(D, { guild: i, defaultNotificationSettingsMet: O, everyonePermissionsMet: b }),
-                nextButtonProps: { text: L.intl.string(L.t.JFfins) },
+                modalProps: { title: _.intl.string(_.t.EzGuSr) },
+                body: (0, n.jsx)(D, { guild: i, defaultNotificationSettingsMet: L, everyonePermissionsMet: b }),
+                nextButtonProps: { text: _.intl.string(_.t.JFfins) },
             },
             {
                 stepKey: P.pj.RULES,
-                modalProps: { title: L.intl.string(L.t["Pj/s/a"]) },
-                nextButtonProps: { text: L.intl.string(L.t.XGl4ba) },
+                modalProps: { title: _.intl.string(_.t["Pj/s/a"]) },
+                nextButtonProps: { text: _.intl.string(_.t.XGl4ba) },
                 body: (0, n.jsx)(F, { guild: i, policyAccepted: T, onPolicyAcceptedChange: Y }),
                 nextEnabled: T,
             },

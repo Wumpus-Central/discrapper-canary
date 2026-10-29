@@ -1,4 +1,4 @@
-n.d(t, { k: () => $ });
+n.d(t, { k: () => ee });
 var i = n(419954),
     l = n(780964),
     s = n(17928),
@@ -143,32 +143,33 @@ let w = (0, i.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
 });
 var F = n(873298),
     B = n(793574),
-    z = n(653523),
-    X = n(973654),
-    Y = n(185928),
-    H = n(652215),
-    W = n(448600);
-let K = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
+    z = n(11029),
+    X = n(653523),
+    Y = n(973654),
+    H = n(185928),
+    W = n(652215),
+    K = n(448600);
+let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
         var e;
         let { analyticsLocations: t } = (0, x.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
             [n, i, l, a, o] = (0, s.yK)([D.A, r.A], () => [
-                D.A.themePreferenceForSystemTheme(Y.Fc.LIGHT),
-                D.A.themePreferenceForSystemTheme(Y.Fc.DARK),
-                D.A.getSyncedClientTheme(Y.Fc.LIGHT)?.backgroundGradientPresetId,
-                D.A.getSyncedClientTheme(Y.Fc.DARK)?.backgroundGradientPresetId,
+                D.A.themePreferenceForSystemTheme(H.Fc.LIGHT),
+                D.A.themePreferenceForSystemTheme(H.Fc.DARK),
+                D.A.getSyncedClientTheme(H.Fc.LIGHT)?.backgroundGradientPresetId,
+                D.A.getSyncedClientTheme(H.Fc.DARK)?.backgroundGradientPresetId,
                 r.A.isPreview,
             ]);
         function d(e, n, i) {
-            ((0, X.NA)({ [e]: n }), (0, X.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
+            ((0, Y.NA)({ [e]: n }), (0, Y.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
             let l = null != i ? `${e}-mode-${F.ju[i]}` : `${e}-mode-${n}`;
-            (0, V.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l });
+            ((0, V.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l }), (0, z.cO)(), (0, z.by)());
         }
         let g = o ? [] : k.G$.filter(k.Qm),
             m = o ? [] : k.iA.filter(k.Qm);
         return (0, c.jsxs)("div", {
-            className: W.k,
+            className: K.k,
             children: [
                 (0, c.jsxs)(V.Ay, {
                     type: V.v0.SETTINGS,
@@ -184,20 +185,20 @@ let K = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                             gap: 8,
                             padding: { top: 16 },
                             children: [
-                                (0, c.jsx)(z.zy, {
-                                    theme: H.NJ8.LIGHT,
+                                (0, c.jsx)(X.zy, {
+                                    theme: W.NJ8.LIGHT,
                                     size: k.ni.SIZE_48,
-                                    isSelected: ((e = H.NJ8.LIGHT), (o || null == l) && n === e),
-                                    onSelect: () => d(Y.Fc.LIGHT, H.NJ8.LIGHT, void 0),
+                                    isSelected: ((e = W.NJ8.LIGHT), (o || null == l) && n === e),
+                                    onSelect: () => d(H.Fc.LIGHT, W.NJ8.LIGHT, void 0),
                                 }),
                                 g.map((e) =>
                                     (0, c.jsx)(
-                                        z.MX,
+                                        X.MX,
                                         {
                                             preset: e,
                                             size: k.ni.SIZE_48,
                                             isSelected: l === e.id,
-                                            onSelect: () => d(Y.Fc.LIGHT, e.theme, e.id),
+                                            onSelect: () => d(H.Fc.LIGHT, e.theme, e.id),
                                             showBadge: !1,
                                         },
                                         e.id,
@@ -223,24 +224,24 @@ let K = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                             children: [
                                 k.f5.map((e) =>
                                     (0, c.jsx)(
-                                        z.zy,
+                                        X.zy,
                                         {
                                             theme: e,
                                             size: k.ni.SIZE_48,
                                             isSelected: (o || null == a) && i === e,
-                                            onSelect: () => d(Y.Fc.DARK, e, void 0),
+                                            onSelect: () => d(H.Fc.DARK, e, void 0),
                                         },
                                         e,
                                     ),
                                 ),
                                 m.map((e) =>
                                     (0, c.jsx)(
-                                        z.MX,
+                                        X.MX,
                                         {
                                             preset: e,
                                             size: k.ni.SIZE_48,
                                             isSelected: a === e.id,
-                                            onSelect: () => d(Y.Fc.DARK, e.theme, e.id),
+                                            onSelect: () => d(H.Fc.DARK, e.theme, e.id),
                                             showBadge: !1,
                                         },
                                         e.id,
@@ -255,10 +256,10 @@ let K = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     },
     usePredicate: a.V,
 });
-var Z = n(462887),
-    q = n(817281),
-    Q = (n(644235), n(189916));
-let J = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
+var q = n(462887),
+    Q = n(817281),
+    J = (n(644235), n(189916));
+let $ = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
         useTitle: () => u.intl.string(u.t.c445ix),
         useSubtitle: () => u.intl.string(u.t["+tBsvs"]),
         useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
@@ -269,23 +270,23 @@ let J = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
             e
                 ? (function () {
                       if (
-                          (q.Ay.setShouldSyncAppearanceSettings(!1),
-                          null == D.A.getSyncedClientTheme(Y.Fc.LIGHT) && null == D.A.getSyncedClientTheme(Y.Fc.DARK))
+                          (Q.Ay.setShouldSyncAppearanceSettings(!1),
+                          null == D.A.getSyncedClientTheme(H.Fc.LIGHT) && null == D.A.getSyncedClientTheme(H.Fc.DARK))
                       ) {
                           let e = D.A.theme,
-                              t = (0, Z.M)(e) ? Y.Fc.DARK : Y.Fc.LIGHT,
+                              t = (0, q.M)(e) ? H.Fc.DARK : H.Fc.LIGHT,
                               n = r.A.gradientPreset?.id,
-                              i = !r.A.isPreview || (0, Q.oB)(n) ? n : void 0;
-                          ((0, X.NA)({ [t]: e }),
-                              null != i ? (0, X.qX)(t, { backgroundGradientPresetId: i }) : (0, X.qX)(t, { theme: e }));
+                              i = !r.A.isPreview || (0, J.oB)(n) ? n : void 0;
+                          ((0, Y.NA)({ [t]: e }),
+                              null != i ? (0, Y.qX)(t, { backgroundGradientPresetId: i }) : (0, Y.qX)(t, { theme: e }));
                       }
-                      ((0, X.ZM)(!0), (0, X.k7)(Y.Q_.ON));
+                      ((0, Y.ZM)(!0), (0, Y.k7)(H.Q_.ON));
                   })()
-                : ((0, X.k7)(Y.Q_.OFF), (0, X.ZM)(!1));
+                : ((0, Y.k7)(H.Q_.OFF), (0, Y.ZM)(!1));
         },
     }),
-    $ = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
+    ee = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => u.intl.string(u.t.Ksh3ik),
         isTitleHiddenVisually: !0,
-        buildLayout: () => [J, K, w, M, v, d],
+        buildLayout: () => [$, Z, w, M, v, d],
     });

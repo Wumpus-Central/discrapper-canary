@@ -369,7 +369,7 @@ function j(e) {
                     discountOffer: N,
                     children: M.intl.format(M.t["5KMAnK"], {
                         onClick: () => {
-                            ((0, S.pX)(P.BVt.APPLICATION_STORE), (0, g.D)());
+                            ((0, S.pX)(P.BVt.APPLICATION_STORE), (0, g.DS)());
                         },
                     }),
                 })

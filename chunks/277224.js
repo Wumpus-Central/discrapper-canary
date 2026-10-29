@@ -11101,10 +11101,10 @@ let c0 = () => {
                               layout: "horizontal-responsive",
                               label: en.intl.string(en.t["otcXP/"]),
                               description: en.intl.string(en.t.BtwmYB),
-                              value: e.rulesChannelId ?? void 0,
-                              options: s,
+                              value: e.rulesChannelId ?? et._Ee,
+                              options: [{ id: et._Ee, value: et._Ee, label: en.intl.string(en.t.PoWNfe) }, ...s],
                               onSelectionChange: function (e) {
-                                  $.A.updateGuild({ rulesChannelId: e });
+                                  $.A.updateGuild({ rulesChannelId: e === et._Ee ? null : e });
                               },
                               disabled: !t,
                           }),
