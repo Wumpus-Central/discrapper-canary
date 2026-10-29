@@ -37,15 +37,15 @@ var T = n(503698),
     D = n(430392),
     G = n(794083),
     L = n(715641),
-    w = n(231483),
-    U = n(939249),
+    U = n(231483),
+    w = n(901117),
+    M = n(323384),
+    O = n(939249),
     z = n(750943),
-    M = n(858899),
-    O = n(95477),
-    R = n(103557),
-    F = n(950305),
-    Z = n(901117),
-    B = n(323384),
+    F = n(858899),
+    R = n(95477),
+    Z = n(103557),
+    B = n(950305),
     H = n(193249),
     W = n(47167),
     Y = n(548118),
@@ -54,23 +54,16 @@ var T = n(503698),
     V = n(497183),
     Q = n(536791);
 let $ = { screen_capture: S.k, connect_user_to_voice: q.H },
-    J = { [p.q7.BOT]: D.RobotIcon, [p.q7.ACTIVITY]: G.b, [p.q7.PROFILE_WIDGET]: L.b, [p.q7.AUTOMOD]: w.ShieldIcon };
+    J = { [p.q7.BOT]: D.RobotIcon, [p.q7.ACTIVITY]: G.b, [p.q7.PROFILE_WIDGET]: L.b, [p.q7.AUTOMOD]: U.ShieldIcon };
 function ee(e) {
     let { project: l, panel: n } = e,
         { initial: a, editable: s, identity: c, sharing: u } = n,
         o = i.useRef(null),
         { appChannelsPrivate: d } = n,
-        m = [
+        m = d?.isPrivate === !0 ? w.Z : M.k,
+        x = [
             ...(a
-                ? n.initialChannelNames.length > 0
-                    ? [
-                          (0, t.jsx)(
-                              et,
-                              { channelNames: n.initialChannelNames, appChannelsPrivate: d, disabled: n.saving },
-                              "app-channels",
-                          ),
-                      ]
-                    : []
+                ? n.initialChannelNames.map((e) => (0, t.jsx)(en, { icon: m, label: e }, `channel:${e}`))
                 : n.channels.map((e) => (0, t.jsx)(ei, { channel: e }, e.id))),
             ...n.components.map((e) => {
                 let { surface: l, label: n } = e;
@@ -85,7 +78,7 @@ function ee(e) {
                 children: [
                     s
                         ? null != c.iconURL
-                            ? (0, t.jsxs)(U.D, {
+                            ? (0, t.jsxs)(O.D, {
                                   className: Q.gb,
                                   "aria-label": P.intl.string(P.t["6yrpFR"]),
                                   onClick: () => o.current?.activateUploadDialogue(),
@@ -98,7 +91,7 @@ function ee(e) {
                                       }),
                                   ],
                               })
-                            : (0, t.jsx)(U.D, {
+                            : (0, t.jsx)(O.D, {
                                   className: k()(Q.gb, Q.YX),
                                   "aria-label": P.intl.string(P.t["MsUY/S"]),
                                   onClick: () => o.current?.activateUploadDialogue(),
@@ -114,7 +107,7 @@ function ee(e) {
                               maxFileSizeBytes: X.Q0,
                               onChange: c.setIcon,
                               onFileSizeError: () =>
-                                  (0, M.P0)({ text: P.intl.string(y.default.ZTAAMc), variant: "critical" }),
+                                  (0, F.P0)({ text: P.intl.string(y.default.ZTAAMc), variant: "critical" }),
                               "aria-hidden": !0,
                           })
                         : null,
@@ -132,7 +125,7 @@ function ee(e) {
                                       "aria-hidden": !0,
                                       children: P.intl.string(y.default.knevPu),
                                   }),
-                                  (0, t.jsx)(O.k, {
+                                  (0, t.jsx)(R.k, {
                                       label: P.intl.string(y.default.knevPu),
                                       hideLabel: !0,
                                       value: n.name,
@@ -153,7 +146,7 @@ function ee(e) {
                                       "aria-hidden": !0,
                                       children: P.intl.string(y.default.ynaGa1),
                                   }),
-                                  (0, t.jsx)(R.f, {
+                                  (0, t.jsx)(Z.f, {
                                       label: P.intl.string(y.default.ynaGa1),
                                       hideLabel: !0,
                                       placeholder: P.intl.string(y.default["I+3UTL"]),
@@ -188,7 +181,14 @@ function ee(e) {
                               : null,
                       ],
                   }),
-            (0, t.jsx)(el, { title: P.intl.string(y.default.BqNMms), rows: m }),
+            (0, t.jsx)(el, { title: P.intl.string(y.default.BqNMms), rows: x }),
+            null != d
+                ? (0, t.jsx)(et, {
+                      channelCount: n.initialChannelNames.length,
+                      appChannelsPrivate: d,
+                      disabled: n.saving,
+                  })
+                : null,
             (0, t.jsx)(el, {
                 title: P.intl.string(y.default.LnqeFd),
                 rows: n.devicePermissions.map((e) => (0, t.jsx)(en, { icon: $[e], label: P.intl.string(I[e]) }, e)),
@@ -215,7 +215,7 @@ function ee(e) {
                                         })
                                       : (0, t.jsx)("span", {
                                             className: Q.qU,
-                                            children: (0, t.jsx)(F.UserIcon, {
+                                            children: (0, t.jsx)(B.UserIcon, {
                                                 size: "xs",
                                                 color: "currentColor",
                                                 "aria-hidden": !0,
@@ -264,56 +264,31 @@ function en(e) {
     return (0, t.jsxs)("div", {
         className: Q.CT,
         children: [
-            (0, t.jsx)(l, { size: "xs", color: "currentColor", className: Q.Pw, "aria-hidden": !0 }),
-            (0, t.jsx)(r.E, { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: n }),
+            (0, t.jsx)(l, { size: "sm", color: "currentColor", className: Q.Pw, "aria-hidden": !0 }),
+            (0, t.jsx)(r.E, { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: n }),
         ],
     });
 }
 function et(e) {
-    let { channelNames: l, appChannelsPrivate: n, disabled: i } = e,
-        a = n?.isPrivate === !0,
-        s = a ? Z.Z : B.k,
-        c = P.intl.formatToPlainString(y.default.Td1mlg, { count: l.length });
+    let { channelCount: l, appChannelsPrivate: n, disabled: i } = e,
+        { isPrivate: a } = n,
+        s = P.intl.formatToPlainString(y.default.Td1mlg, { count: l });
     return (0, t.jsxs)("div", {
+        className: Q.HY,
         children: [
-            l.map((e) =>
-                (0, t.jsxs)(
-                    "div",
-                    {
-                        className: Q.fR,
-                        children: [
-                            (0, t.jsx)(s, { size: "sm", color: "currentColor", className: Q.Pw, "aria-hidden": !0 }),
-                            (0, t.jsx)(r.E, {
-                                variant: "text-md/semibold",
-                                color: "text-strong",
-                                lineClamp: 1,
-                                children: e,
-                            }),
-                        ],
-                    },
-                    e,
-                ),
-            ),
-            null != n
-                ? (0, t.jsxs)("div", {
-                      className: Q.HY,
-                      children: [
-                          (0, t.jsx)(r.E, {
-                              variant: "text-md/medium",
-                              color: a ? "text-default" : "text-muted",
-                              "aria-hidden": !0,
-                              children: c,
-                          }),
-                          (0, t.jsx)(H.d, { label: c, hideLabel: !0, checked: a, disabled: i, onChange: n.setPrivate }),
-                      ],
-                  })
-                : null,
+            (0, t.jsx)(r.E, {
+                variant: "text-md/medium",
+                color: a ? "text-default" : "text-muted",
+                "aria-hidden": !0,
+                children: s,
+            }),
+            (0, t.jsx)(H.d, { label: s, hideLabel: !0, checked: a, disabled: i, onChange: n.setPrivate }),
         ],
     });
 }
 function ei(e) {
     let { channel: l } = e;
-    return (0, t.jsx)(en, { icon: B.k, label: (0, W.Ay)(l) ?? "" });
+    return (0, t.jsx)(en, { icon: M.k, label: (0, W.Ay)(l) ?? "" });
 }
 var ea = n(787032);
 function es(e) {
@@ -342,7 +317,7 @@ function er(e) {
                     liveDescription: D,
                     channels: G,
                     guild: L,
-                    memberCount: w,
+                    memberCount: U,
                 } = ((n = e.id),
                 (t = l.guildId),
                 (r = (0, a.bG)([c.Ay], () => c.Ay.getProject(n) ?? null, [n])),
@@ -374,14 +349,14 @@ function er(e) {
                     guild: T,
                     memberCount: k,
                 }),
-                U = (0, x.A)(e.id),
-                z = ((s = e.id), (0, a.bG)([N.A], () => N.A.getPublishStatus(s)?.previewDevicePermissions ?? C)),
-                [M, O] = i.useState(e.name),
-                [R, F] = i.useState(!1),
+                w = (0, x.A)(e.id),
+                M = ((s = e.id), (0, a.bG)([N.A], () => N.A.getPublishStatus(s)?.previewDevicePermissions ?? C)),
+                [O, z] = i.useState(e.name),
+                [F, R] = i.useState(!1),
                 Z = null == l.status || !(0, v.lE)(l.status.publishState),
                 B = Z && (0, c.PV)(e),
                 H = (Z ? e.preview_supported_surfaces : e.supported_surfaces) ?? [],
-                W = M.trim(),
+                W = O.trim(),
                 Y = B ? (0, g.p)(W) : null,
                 K = l.status?.previewAppChannels ?? [],
                 X = 0 === K.length && H.includes(p.q7.APP_CHANNEL) ? [P.intl.string(y.default.xI4N6Q)] : K,
@@ -403,23 +378,23 @@ function er(e) {
                     [$],
                 );
             async function ee() {
-                if (R || null != Y) return !1;
-                F(!0);
+                if (F || null != Y) return !1;
+                R(!0);
                 try {
-                    return (B && (W !== e.name || U.changed) && (await (0, h.CW)(e.id, { ...U.changes, name: W })), !0);
+                    return (B && (W !== e.name || w.changed) && (await (0, h.CW)(e.id, { ...w.changes, name: W })), !0);
                 } finally {
-                    F(!1);
+                    R(!1);
                 }
             }
             return {
                 initial: Z,
                 editable: B,
-                identity: U,
-                name: M,
-                setName: O,
+                identity: w,
+                name: O,
+                setName: z,
                 nameError: Y,
                 displayName: Z ? e.name : q,
-                description: Z ? U.description : D,
+                description: Z ? w.description : D,
                 initialChannelNames: X,
                 channels: G,
                 appChannelsPrivate: J ? { isPrivate: V, setPrivate: Q } : null,
@@ -430,7 +405,7 @@ function er(e) {
                     let [l, n] = e;
                     return { surface: l, label: P.intl.string(n) };
                 }),
-                devicePermissions: Z ? z : [],
+                devicePermissions: Z ? M : [],
                 note:
                     Z && "user" !== e.install_scope && H.includes(p.q7.AUTOMOD)
                         ? P.intl.string(y.default.bljqPk)
@@ -439,12 +414,12 @@ function er(e) {
                     null != L
                         ? {
                               guild: L,
-                              caption: null != w ? P.intl.formatToPlainString(y.default.ZpZxK9, { count: w }) : null,
+                              caption: null != U ? P.intl.formatToPlainString(y.default.ZpZxK9, { count: U }) : null,
                           }
                         : "user" === e.install_scope
                           ? { guild: null, caption: P.intl.string(y.default.RUhWLH) }
                           : null,
-                saving: R,
+                saving: F,
                 save: ee,
             };
         })(l, n),

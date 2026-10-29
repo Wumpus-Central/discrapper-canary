@@ -81,7 +81,7 @@
     align-items: center;
     display: flex;
     gap: var(--space-8);
-    min-height: var(--space-32);
+    min-height: var(--space-40);
     min-width: 0
 }
 
@@ -90,19 +90,11 @@
     flex: 0 0 auto
 }
 
-.appChannelRow__5b810 {
-    align-items: center;
-    display: flex;
-    gap: var(--space-8);
-    min-height: var(--space-40)
-}
-
 .appChannelsPrivate__5b810 {
     align-items: center;
     display: flex;
     gap: var(--space-12);
-    justify-content: space-between;
-    margin-top: var(--space-12)
+    justify-content: space-between
 }
 
 .sharedWith__5b810 {
@@ -156,4 +148,4 @@ div.guildIcon__5b810 {
     margin-bottom: var(--space-8)
 }
 
-/*# sourceMappingURL=9bd20b5bab49c40d.css.map*/
+/*# sourceMappingURL=204847a348d6f97b.css.map*/
