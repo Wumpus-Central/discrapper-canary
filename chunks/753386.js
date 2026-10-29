@@ -1,4 +1,14 @@
-n.d(t, { J$: () => C, WM: () => s.WM, cZ: () => _, eG: () => A, vd: () => I, vm: () => T, zh: () => E, zv: () => f });
+n.d(t, {
+    J$: () => p,
+    WM: () => s.WM,
+    cZ: () => I,
+    di: () => T,
+    eG: () => A,
+    vd: () => C,
+    vm: () => _,
+    zh: () => E,
+    zv: () => f,
+});
 var r = n(544180),
     u = n(427495),
     l = n(859703),
@@ -20,6 +30,9 @@ function E(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
 function T(e) {
+    return Number.isFinite(e) && e > 0;
+}
+function _(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: u } = e;
     i.Ay.getState().setTranscriptEnabled(!1);
     let s = i.Ay.getState().getVideoProgress(t);
@@ -44,12 +57,12 @@ function T(e) {
             sourceQuestContent: n,
         }));
 }
-function _(e) {
+function I(e) {
     return `VIDEO-QUEST-${e}`;
 }
-function I(e, t) {
+function C(e, t) {
     return e >= t - 1 ? Math.max(e, t) : e;
 }
-function C(e) {
-    return !!(0, c.vv)(e) && (0, n(192308).hasModalOpen)(_(e.id));
+function p(e) {
+    return !!(0, c.vv)(e) && (0, n(192308).hasModalOpen)(I(e.id));
 }

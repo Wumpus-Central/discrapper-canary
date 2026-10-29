@@ -313,7 +313,8 @@ function ea() {
                 impressionId: N(),
             }),
                 (function (e) {
-                    let { bounty: t, sourceQuestContent: s } = e;
+                    let { bounty: t, sourceQuestContent: s } = e,
+                        a = performance.now();
                     (0, $.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
@@ -323,11 +324,11 @@ function ea() {
                                 n.e("955628"),
                                 n.e("255563"),
                                 n.e("602078"),
-                                n.e("258427"),
+                                n.e("664973"),
                                 n.e("182045"),
-                                n.e("655624"),
-                            ]).then(n.bind(n, 361211));
-                            return (n) => (0, l.jsx)(e, { ...n, bounty: t, sourceQuestContent: s });
+                                n.e("430165"),
+                            ]).then(n.bind(n, 869172));
+                            return (n) => (0, l.jsx)(e, { ...n, bounty: t, sourceQuestContent: s, openedAtMs: a });
                         },
                         { modalKey: "BOUNTY_VIDEO_MODAL" },
                     );
