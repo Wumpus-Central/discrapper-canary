@@ -18,11 +18,11 @@ var t = l(477900),
     A = l(746002),
     I = l(515718),
     y = l(195292);
-function C(e) {
+function k(e) {
     let n = (0, A.getCollectiblesItemAssetUrl)({ skuId: e.skuId, assetFormat: A.CollectiblesItemAssetFormat.STATIC });
     null != n && (0, I.NN)(n).catch(() => {});
 }
-var k = l(105292),
+var C = l(105292),
     x = l(352497),
     N = l(249360);
 function j(e) {
@@ -40,14 +40,14 @@ function j(e) {
         p = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingDisplayNameStyles),
         A = (0, s.bG)([h.A], () => h.A.getPendingChanges(null).pendingPrimaryGuildId),
         I = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingAvatar),
-        k = (function (e) {
+        C = (function (e) {
             let { enabled: n, isInteracting: l } = e,
-                { categories: t, purchases: r } = (0, m.Ay)({ stalePurchasesOK: !0 }),
+                { categories: t, purchases: r } = (0, m.Ay)({ stalePurchasesOK: !0, skipFetch: !n }),
                 i = a.useMemo(() => (0, b.zd)(r, t), [r, t]),
-                s = (0, y.A)({ enabled: n, isInteracting: l, items: i, preload: C });
+                s = (0, y.A)({ enabled: n, isInteracting: l, items: i, preload: k });
             return null != s ? { skuId: s.skuId, asset: s.asset, label: s.label, palette: s.palette } : null;
         })({ enabled: u && !o && !g, isInteracting: c }),
-        j = null != k,
+        j = null != C,
         P = j ? void 0 : r?.label;
     return (0, t.jsx)("div", {
         className: i()(x.M, { [N.O]: j }),
@@ -58,7 +58,7 @@ function j(e) {
             children: (0, t.jsx)(d.A, {
                 user: n,
                 guildId: l ?? void 0,
-                nameplate: j ? k : r,
+                nameplate: j ? C : r,
                 showPlaceholderUser: (u && !o) || !c,
                 isHighlighted: c,
                 pendingGlobalName: v,
@@ -79,7 +79,7 @@ function P(e) {
         A = n.collectibles?.nameplate,
         I = h ? b : A,
         y = void 0 !== m,
-        C = null === m || (!y && null == I),
+        k = null === m || (!y && null == I),
         x = h && null != A,
         N = (0, v.lw)({ pendingValue: m, userValue: A, guildValue: b, guildId: l ?? void 0 }),
         { product: P } = (0, o.q)(N?.skuId),
@@ -89,7 +89,7 @@ function P(e) {
                 ? {
                       onClick: () => (0, f.p)({ guildId: l ?? void 0, nameplate: null }),
                       type: x ? "reset" : "remove",
-                      accessibleLabel: k.intl.string(x ? k.t.neYqhR : k.t["9zwziY"]),
+                      accessibleLabel: C.intl.string(x ? C.t.neYqhR : C.t["9zwziY"]),
                   }
                 : void 0,
         R = a.useCallback(() => {
@@ -97,18 +97,18 @@ function P(e) {
         }, [d, l]);
     return (0, t.jsx)(p.A, {
         buttonRef: s,
-        affordance: C && !x ? "add" : w,
+        affordance: k && !x ? "add" : w,
         variant: "bar",
         onClick: R,
-        fieldA11yLabel: k.intl.string(k.t.x5CoXR),
-        editButtonA11yLabel: k.intl.string(k.t.BwdeM1),
+        fieldA11yLabel: C.intl.string(C.t.x5CoXR),
+        editButtonA11yLabel: C.intl.string(C.t.BwdeM1),
         currentValueA11yLabel: (function (e) {
             let { nameplatePreview: n, productName: l, hasPendingSelection: t } = e;
             return null == n
-                ? k.intl.string(k.t["3Xph0/"])
+                ? C.intl.string(C.t["3Xph0/"])
                 : null != l && "" !== l
                   ? l
-                  : k.intl.string(t ? k.t.mo1Huz : k.t.s9kNKK);
+                  : C.intl.string(t ? C.t.mo1Huz : C.t.s9kNKK);
         })({ nameplatePreview: N, productName: (0, g.VG)(P), hasPendingSelection: null != m }),
         "aria-haspopup": "dialog",
         disabled: r,
@@ -118,7 +118,7 @@ function P(e) {
                 user: n,
                 guildId: l,
                 nameplatePreview: N,
-                isEmpty: C,
+                isEmpty: k,
                 hasMainProfileFallback: x,
                 isInteracting: e,
                 disabled: r,

@@ -1,43 +1,41 @@
 (n.d(t, {
-    $W: () => Y,
-    $b: () => J,
-    Br: () => L,
-    CE: () => ec,
-    D0: () => g,
-    Dm: () => V,
-    G0: () => O,
-    HF: () => et,
-    MG: () => Z,
-    P_: () => k,
-    R8: () => y,
-    V6: () => eo,
-    WD: () => w,
-    WU: () => ee,
-    Wj: () => z,
-    XS: () => x,
-    Zu: () => el,
-    aT: () => en,
-    aw: () => ei,
-    b_: () => N,
-    bf: () => ed,
-    c7: () => es,
-    es: () => M,
-    f6: () => H,
-    fT: () => U,
-    gA: () => R,
-    hU: () => Q,
-    l8: () => D,
-    oj: () => er,
-    pA: () => ea,
-    ps: () => W,
-    rr: () => P,
-    sz: () => q,
-    tt: () => G,
-    wo: () => X,
-    x9: () => j,
-    xM: () => C,
-    yt: () => b,
-    zd: () => K,
+    $W: () => W,
+    $b: () => Q,
+    Br: () => R,
+    D0: () => m,
+    Dm: () => B,
+    G0: () => C,
+    HF: () => ee,
+    MG: () => q,
+    P_: () => x,
+    R8: () => L,
+    V6: () => el,
+    WD: () => U,
+    WU: () => J,
+    Wj: () => $,
+    XS: () => G,
+    Zu: () => es,
+    aT: () => et,
+    aw: () => en,
+    b_: () => S,
+    c7: () => ea,
+    es: () => P,
+    f6: () => V,
+    fT: () => M,
+    gA: () => O,
+    hU: () => Z,
+    l8: () => y,
+    oj: () => ei,
+    pA: () => er,
+    ps: () => j,
+    rr: () => b,
+    sz: () => X,
+    tt: () => w,
+    wo: () => z,
+    x9: () => H,
+    xM: () => N,
+    yt: () => v,
+    zd: () => Y,
 }),
     n(321073));
 var i,
@@ -52,18 +50,18 @@ var i,
     _ = n(837015),
     E = n(203632),
     A = n(892118),
-    h = n(719986),
-    f = n(623373),
-    I = n(758836),
-    p = n(652215),
-    T = n(818348),
-    m = n(105292),
-    g = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
-let S = { nitro: "nitro", thirdparty: "xbox" };
-function N(e) {
-    return null != e ? S[e] : null;
+    h = n(719986);
+n(623373);
+var f = n(758836),
+    I = n(652215),
+    p = n(818348),
+    T = n(105292),
+    m = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
+let g = { nitro: "nitro", thirdparty: "xbox" };
+function S(e) {
+    return null != e ? g[e] : null;
 }
-function C(e) {
+function N(e) {
     if (!d.Ay.canUseShopDiscounts(e)) return null;
     if (d.Ay.canUseCollectibles(e)) return "nitro";
     let t = (0, l.kQ)(e?.perks, s.bb.SHOP_DISCOUNTS);
@@ -73,57 +71,57 @@ function C(e) {
           ? "thirdparty"
           : null;
 }
-function O(e) {
+function C(e) {
     return e?.premiumType != null;
 }
-function R(e) {
-    return e?.purchaseType === p.zF_.PREMIUM_PURCHASE;
+function O(e) {
+    return e?.purchaseType === I.zF_.PREMIUM_PURCHASE;
+}
+function R(e, t, n) {
+    return v(e, n ? (t ? I.lid.MOBILE_PREMIUM_TIER_2 : I.lid.MOBILE) : t ? I.lid.PREMIUM_TIER_2 : I.lid.DEFAULT);
 }
 function L(e, t, n) {
-    return b(e, n ? (t ? p.lid.MOBILE_PREMIUM_TIER_2 : p.lid.MOBILE) : t ? p.lid.PREMIUM_TIER_2 : p.lid.DEFAULT);
-}
-function y(e, t, n) {
-    let i = L(e, t, n);
+    let i = R(e, t, n);
     return null == i ? "" : (0, c.$g)(i?.amount, i?.currency);
 }
-function D(e, t) {
-    return ((0, o.isAndroid)() || (0, o.isIOS)()) && t !== T.Yr.DISCORD_ORB
+function y(e, t) {
+    return ((0, o.isAndroid)() || (0, o.isIOS)()) && t !== p.Yr.DISCORD_ORB
         ? e
-            ? p.lid.MOBILE_PREMIUM_TIER_2
-            : p.lid.MOBILE
+            ? I.lid.MOBILE_PREMIUM_TIER_2
+            : I.lid.MOBILE
         : e
-          ? p.lid.PREMIUM_TIER_2
-          : p.lid.DEFAULT;
+          ? I.lid.PREMIUM_TIER_2
+          : I.lid.DEFAULT;
 }
-function v(e, t) {
+function D(e, t) {
     let n = e.bundledProducts;
     if (null == n) return 0;
-    let i = D(!1, t);
+    let i = y(!1, t);
     return n.reduce((e, n) => {
-        let r = b(n, i, t);
+        let r = v(n, i, t);
         return e + (r?.amount ?? 0);
     }, 0);
 }
-function b(e, t, n) {
+function v(e, t, n) {
     let i = e.prices[t]?.countryPrices?.prices;
     return null == i ? null : ((null == n ? i[0] : i.find((e) => e.currency === n)) ?? null);
 }
-let P = { original: -1, discountPercentage: -1 },
-    M = 5;
-function U(e, t, n) {
-    if (null == e) return P;
-    let i = v(e, n);
-    if (i <= 0) return P;
-    let r = b(e, D(t, n), n);
-    return null == r ? P : { original: i, discountPercentage: Math.round(((i - r.amount) / i) * 100) };
+let b = { original: -1, discountPercentage: -1 },
+    P = 5;
+function M(e, t, n) {
+    if (null == e) return b;
+    let i = D(e, n);
+    if (i <= 0) return b;
+    let r = v(e, y(t, n), n);
+    return null == r ? b : { original: i, discountPercentage: Math.round(((i - r.amount) / i) * 100) };
 }
-function w(e, t) {
+function U(e, t) {
     let { hasShopDiscount: n, discount: i } = t,
-        r = b(e, p.lid.DEFAULT);
+        r = v(e, I.lid.DEFAULT);
     if (null == r) return null;
     if (r.amount <= 0) return { defaultPrice: r, showDefaultPriceOnly: !0 };
-    let a = b(e, p.lid.PREMIUM_TIER_2),
-        s = ei(e) && n ? { ...r, amount: i.original } : r,
+    let a = v(e, I.lid.PREMIUM_TIER_2),
+        s = en(e) && n ? { ...r, amount: i.original } : r,
         l = n && null != a,
         o = l ? a : s;
     return {
@@ -136,10 +134,10 @@ function w(e, t) {
         showDefaultPriceOnly: !1,
     };
 }
-function G(e) {
-    return b(e, p.lid.DEFAULT)?.amount === 0;
+function w(e) {
+    return v(e, I.lid.DEFAULT)?.amount === 0;
 }
-function x(e) {
+function G(e) {
     return e.reduce(
         (e, t) =>
             null != t && t.type === a.R.VARIANTS_GROUP && null != t.variants
@@ -155,11 +153,11 @@ function x(e) {
         [],
     );
 }
-function k(e, t) {
+function x(e, t) {
     let n = (0, r.flatMap)([...e.values()], "products");
-    return (0, r.uniqBy)(t ? x(n) : n, "storeListingId");
+    return (0, r.uniqBy)(t ? G(n) : n, "storeListingId");
 }
-function F(e, t) {
+function k(e, t) {
     if (t === a.R.AVATAR_DECORATION) {
         let t = (0, r.flatMap)([...e.values()], "items").filter(u.T);
         return (0, r.uniqBy)(t, "skuId");
@@ -178,8 +176,8 @@ function F(e, t) {
     }
     return [];
 }
-function B(e, t) {
-    let n = k(e, !0);
+function F(e, t) {
+    let n = x(e, !0);
     if (t === a.R.AVATAR_DECORATION) {
         let e = (0, r.flatMap)(n, "items").filter(u.T);
         return (0, r.uniqBy)(e, "skuId");
@@ -198,80 +196,80 @@ function B(e, t) {
     }
     return [];
 }
-function V(e) {
+function B(e) {
     switch (e) {
         case a.R.AVATAR_DECORATION:
-            return m.intl.string(m.t["7v0T9P"]);
+            return T.intl.string(T.t["7v0T9P"]);
         case a.R.PROFILE_EFFECT:
-            return m.intl.string(m.t.wR5wOo);
+            return T.intl.string(T.t.wR5wOo);
         case a.R.NAMEPLATE:
-            return m.intl.string(m.t.x5CoXR);
+            return T.intl.string(T.t.x5CoXR);
         case a.R.PROFILE_FRAME:
-            return m.intl.string(m.t.GWrZOd);
+            return T.intl.string(T.t.GWrZOd);
         default:
             return null;
     }
 }
-function H(e) {
+function V(e) {
     return null != e ? h.M.fromServer(e) : void 0;
 }
-function j(e) {
-    return F(e, a.R.AVATAR_DECORATION);
+function H(e) {
+    return k(e, a.R.AVATAR_DECORATION);
 }
-function W(e, t) {
-    return (0, r.uniqBy)([...j(e), ...B(t, a.R.AVATAR_DECORATION)], "skuId");
+function j(e, t) {
+    return (0, r.uniqBy)([...H(e), ...F(t, a.R.AVATAR_DECORATION)], "skuId");
 }
-function Y(e) {
-    return F(e, a.R.NAMEPLATE);
+function W(e) {
+    return k(e, a.R.NAMEPLATE);
 }
-function K(e, t) {
-    return (0, r.uniqBy)([...Y(e), ...B(t, a.R.NAMEPLATE)], "skuId");
+function Y(e, t) {
+    return (0, r.uniqBy)([...W(e), ...F(t, a.R.NAMEPLATE)], "skuId");
+}
+function K(e) {
+    return k(e, a.R.PROFILE_EFFECT);
 }
 function $(e) {
     return F(e, a.R.PROFILE_EFFECT);
 }
-function z(e) {
-    return B(e, a.R.PROFILE_EFFECT);
+function z(e, t) {
+    return (0, r.uniqBy)([...K(e), ...$(t)], "skuId");
 }
 function X(e, t) {
-    return (0, r.uniqBy)([...$(e), ...z(t)], "skuId");
-}
-function q(e, t) {
-    let n = $(t),
-        i = z(e).filter((e) => {
+    let n = K(t),
+        i = $(e).filter((e) => {
             let { skuId: t } = e;
             return !n.some((e) => e.skuId === t);
         });
     return { purchased: n, shopPreviews: i };
 }
-function Z(e, t) {
-    return (0, r.uniqBy)([...F(e, a.R.PROFILE_FRAME), ...B(t, a.R.PROFILE_FRAME)], "skuId");
+function q(e, t) {
+    return (0, r.uniqBy)([...k(e, a.R.PROFILE_FRAME), ...F(t, a.R.PROFILE_FRAME)], "skuId");
+}
+function Z(e) {
+    return e.applicationId === I.FYj;
 }
 function Q(e) {
-    return e.applicationId === p.FYj;
-}
-function J(e) {
     return 3.8 * e;
 }
-function ee(e) {
+function J(e) {
     let t = new Date(),
         n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
     return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5);
 }
-function et(e) {
-    return null != e && ee(e) <= I.x3;
+function ee(e) {
+    return null != e && J(e) <= f.x3;
 }
-function en(e) {
-    let t = I.Tq[e];
+function et(e) {
+    let t = f.Tq[e];
     return null != t && new Date().getTime() < t;
 }
-function ei(e) {
+function en(e) {
     return e?.type === a.R.BUNDLE;
 }
-function er(e) {
+function ei(e) {
     if (null != e) return e.type === a.R.BUNDLE ? a.R.BUNDLE : e.items?.[0]?.type;
 }
-function ea(e) {
+function er(e) {
     let { invoicePreview: t, selectedSkuId: n, skusById: i } = e,
         r = t?.invoiceItems?.[0]?.unitPrice,
         a = null != r ? { amount: r.amount, currency: r.currency } : void 0;
@@ -281,16 +279,16 @@ function ea(e) {
     }
     return a;
 }
-function es(e, t, n) {
-    if (ei(e)) return v(e);
-    let i = b(e, t ? (n ? p.lid.MOBILE : p.lid.DEFAULT) : n ? p.lid.MOBILE_PREMIUM_TIER_2 : p.lid.PREMIUM_TIER_2);
+function ea(e, t, n) {
+    if (en(e)) return D(e);
+    let i = v(e, t ? (n ? I.lid.MOBILE : I.lid.DEFAULT) : n ? I.lid.MOBILE_PREMIUM_TIER_2 : I.lid.PREMIUM_TIER_2);
     return i?.amount;
 }
-function el(e) {
+function es(e) {
     let { product: t, isPartiallyOwnedBundle: n, isPurchased: i } = e;
-    return !n && !(I.Dp.ORB_PROFILE_BADGE === t?.skuId && i);
+    return !n && !(f.Dp.ORB_PROFILE_BADGE === t?.skuId && i);
 }
-function eo(e, t) {
+function el(e, t) {
     switch (e) {
         case a.R.AVATAR_DECORATION:
             return "avatar decoration";
@@ -303,9 +301,9 @@ function eo(e, t) {
         case a.R.BUNDLE:
             return "bundle";
         case a.R.EXTERNAL_SKU:
-            if (t === I.Dp.FRACTIONAL_PREMIUM) return "3-day nitro credit";
-            if (t === I.Dp.FRACTIONAL_PREMIUM_1_DAY) return "1-day nitro credit";
-            if (t === I.Dp.ORB_PROFILE_BADGE) return "orb profile badge";
+            if (t === f.Dp.FRACTIONAL_PREMIUM) return "3-day nitro credit";
+            if (t === f.Dp.FRACTIONAL_PREMIUM_1_DAY) return "1-day nitro credit";
+            if (t === f.Dp.ORB_PROFILE_BADGE) return "orb profile badge";
             return "unknown";
         case a.R.VARIANTS_GROUP:
             return "variants group";
@@ -313,14 +311,4 @@ function eo(e, t) {
             return "unknown";
     }
 }
-function ed(e, t, n) {
-    return e.sort((e, i) => {
-        let r = n ? (0, f.CW)({ product: e, hasShopDiscount: t }) : L(e, t, !1),
-            a = n ? (0, f.CW)({ product: i, hasShopDiscount: t }) : L(i, t, !1);
-        return (r?.amount ?? 0) - (a?.amount ?? 0);
-    });
-}
-function ec(e) {
-    return e.filter((e) => !e.isCategoryReward);
-}
-(T.Yr.KZT, T.Yr.NGN, T.Yr.EGP);
+(p.Yr.KZT, p.Yr.NGN, p.Yr.EGP);

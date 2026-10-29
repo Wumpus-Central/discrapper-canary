@@ -1,7 +1,7 @@
-(a.r(t), a.d(t, { collectiblesCollection: () => M, playgroundConfig: () => _ }));
+(a.r(t), a.d(t, { collectiblesCollection: () => I, playgroundConfig: () => j }));
 var r = a(34188),
-    l = a(477900),
-    n = a(582128),
+    n = a(477900),
+    l = a(582128),
     o = a(834730),
     s = a(262056);
 let i = {
@@ -11,13 +11,13 @@ let i = {
             name: "Promotion Progress Ring",
             id: "promotion-progress-ring",
             component: function (e) {
-                let { current: t, target: a, progressColor: r, segmentGap: n } = e;
-                return (0, l.jsx)(s.A, {
+                let { current: t, target: a, progressColor: r, segmentGap: l } = e;
+                return (0, n.jsx)(s.A, {
                     current: t,
                     target: a,
                     progressColor: r,
-                    segmentGap: n,
-                    children: (0, l.jsxs)(o.E, { variant: "text-md/semibold", children: [t, "/", a] }),
+                    segmentGap: l,
+                    children: (0, n.jsxs)(o.E, { variant: "text-md/semibold", children: [t, "/", a] }),
                 });
             },
             controls: {
@@ -32,149 +32,20 @@ let i = {
 var c = a(331322),
     d = a(440938),
     u = a(161918),
-    m = a(395856),
-    p = a(682301),
-    g = a(258245),
-    h = a(484469),
-    v = a(721720),
-    x = a(758836),
-    f = a(107481);
-function b(e) {
+    m = a(682301),
+    p = a(258245),
+    g = a(484469),
+    h = a(721720),
+    v = a(758836),
+    x = a(107481);
+function f(e) {
     return e.split(/[\s,]+/).filter((e) => "" !== e);
 }
-let y = {
-    title: "Shop Loading",
-    stories: [
-        {
-            name: "Batched SKU Loader",
-            id: "shop-batched-sku-loader",
-            component: function (e) {
-                let { skuIds: t } = e,
-                    a = n.useMemo(() => b(t), [t]),
-                    r = (0, p.hv)(a, { needsCategory: !1 });
-                return (0, l.jsxs)(c.B, {
-                    direction: "vertical",
-                    gap: 16,
-                    align: "start",
-                    children: [
-                        (0, l.jsx)(o.E, {
-                            variant: "text-sm/normal",
-                            color: "text-muted",
-                            children:
-                                "Comma- or space-separate shop SKU IDs in the controls. Each tile resolves via the storefront APIs through CollectiblesShopManager \u2014 all IDs entered here coalesce into one batched request. Tiles show the skeleton until the SKU resolves.",
-                        }),
-                        (0, l.jsx)("div", {
-                            className: f.Vg,
-                            children: a.map((e) => {
-                                let { state: t, product: a } = r[e] ?? { state: "loading", product: null };
-                                return (0, l.jsx)(
-                                    "div",
-                                    {
-                                        className: f.Vs,
-                                        children:
-                                            "ready" === t && null != a
-                                                ? (0, l.jsxs)(l.Fragment, {
-                                                      children: [
-                                                          (0, l.jsx)(o.E, {
-                                                              variant: "text-sm/semibold",
-                                                              children: a.name,
-                                                          }),
-                                                          (0, l.jsx)(o.E, {
-                                                              variant: "text-xs/normal",
-                                                              color: "text-muted",
-                                                              children: e,
-                                                          }),
-                                                      ],
-                                                  })
-                                                : "error" === t
-                                                  ? (0, l.jsxs)(o.E, {
-                                                        variant: "text-sm/semibold",
-                                                        color: "text-feedback-critical",
-                                                        children: ["error: ", e],
-                                                    })
-                                                  : (0, l.jsx)(h.A, {}),
-                                    },
-                                    e,
-                                );
-                            }),
-                        }),
-                    ],
-                });
-            },
-            controls: { skuIds: { label: "SKU IDs", type: "text", defaultValue: "" } },
-        },
-        {
-            name: "Product Card",
-            id: "shop-product-card",
-            component: function (e) {
-                let { skuIds: t, improvedLoading: a } = e,
-                    r = n.useMemo(() => b(t), [t]);
-                return (0, l.jsx)(m.k, {
-                    value: a,
-                    children: (0, l.jsx)(u.iM, {
-                        tab: x.G2.HOME,
-                        children: (0, l.jsx)(d.R9, {
-                            newValue: { sessionId: "playground" },
-                            children: (0, l.jsxs)(c.B, {
-                                direction: "vertical",
-                                gap: 16,
-                                align: "start",
-                                children: [
-                                    (0, l.jsx)(o.E, {
-                                        variant: "text-sm/normal",
-                                        color: "text-muted",
-                                        children:
-                                            "Renders real ProductCards. With the experiment toggle on, each card resolves through CollectiblesShopManager and shows a skeleton until ready; with it off, cards use the legacy CollectiblesCategoryStore path (empty in the playground).",
-                                    }),
-                                    (0, l.jsx)("div", {
-                                        className: f.Vg,
-                                        children: r.map((e) => (0, l.jsx)(g.A, { skuId: e }, e)),
-                                    }),
-                                ],
-                            }),
-                        }),
-                    }),
-                });
-            },
-            controls: {
-                skuIds: { label: "SKU IDs", type: "text", defaultValue: "" },
-                improvedLoading: { label: "ImprovedShopLoading experiment", type: "boolean", defaultValue: !0 },
-            },
-        },
-        {
-            name: "Shop Home Feed",
-            id: "shop-home-feed",
-            component: function (e) {
-                let { improvedLoading: t } = e;
-                return (0, l.jsx)(m.k, {
-                    value: t,
-                    children: (0, l.jsx)(u.iM, {
-                        tab: x.G2.HOME,
-                        children: (0, l.jsx)(d.R9, {
-                            newValue: { sessionId: "playground" },
-                            children: (0, l.jsx)("div", {
-                                className: f.rO,
-                                children: (0, l.jsx)(v.A, {
-                                    handleTransition: () => {},
-                                    tab: x.G2.HOME,
-                                    transitionState: x.Pf.VISIBLE,
-                                }),
-                            }),
-                        }),
-                    }),
-                });
-            },
-            controls: {
-                improvedLoading: { label: "ImprovedShopLoading experiment", type: "boolean", defaultValue: !0 },
-            },
-        },
-    ],
-};
-var S = a(278416),
-    C = a(297264),
-    w = a(173127),
-    E = a(703086);
-let A = {
+var b = a(278416),
+    y = a(297264),
+    S = a(173127),
+    C = a(703086);
+let E = {
     home: "Home",
     catalog: "Catalog",
     browse: "Browse",
@@ -186,10 +57,10 @@ let A = {
     "games-b": "Game B",
     "game servers": "Game Servers",
 };
-var k = a(821609),
-    I = a(793574),
-    j = a(722258);
-let M = {
+var w = a(821609),
+    A = a(793574),
+    k = a(722258);
+let I = {
         id: "collectibles",
         name: "Collectibles Shop",
         groups: [
@@ -202,27 +73,27 @@ let M = {
                         component: function (e) {
                             let { skuId: t } = e,
                                 a = t.trim(),
-                                { state: r } = (0, p.IK)(a, { needsCategory: !0 });
-                            return (0, l.jsxs)(c.B, {
+                                { state: r } = (0, m.IK)(a, { needsCategory: !0 });
+                            return (0, n.jsxs)(c.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
                                 children: [
-                                    (0, l.jsx)(o.E, {
+                                    (0, n.jsx)(o.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "Enter a shop SKU ID in the controls, then open the product details modal. The loader resolves the product + category from the storefront APIs (store-first, single item).",
                                     }),
-                                    (0, l.jsxs)(o.E, {
+                                    (0, n.jsxs)(o.E, {
                                         variant: "text-sm/semibold",
                                         children: ["Resolver state: ", "" === a ? "idle (no skuId)" : r],
                                     }),
-                                    (0, l.jsx)(k.$, {
+                                    (0, n.jsx)(w.$, {
                                         text: "Open product details",
                                         disabled: "" === a,
                                         onClick: () =>
-                                            (0, j.B)({ skuId: a, analyticsLocations: [I.A.COLLECTIBLES_SHOP] }),
+                                            (0, k.B)({ skuId: a, analyticsLocations: [A.A.COLLECTIBLES_SHOP] }),
                                     }),
                                 ],
                             });
@@ -231,7 +102,121 @@ let M = {
                     },
                 ],
             },
-            y,
+            {
+                title: "Shop Loading",
+                stories: [
+                    {
+                        name: "Batched SKU Loader",
+                        id: "shop-batched-sku-loader",
+                        component: function (e) {
+                            let { skuIds: t } = e,
+                                a = l.useMemo(() => f(t), [t]),
+                                r = (0, m.hv)(a, { needsCategory: !1 });
+                            return (0, n.jsxs)(c.B, {
+                                direction: "vertical",
+                                gap: 16,
+                                align: "start",
+                                children: [
+                                    (0, n.jsx)(o.E, {
+                                        variant: "text-sm/normal",
+                                        color: "text-muted",
+                                        children:
+                                            "Comma- or space-separate shop SKU IDs in the controls. Each tile resolves via the storefront APIs through CollectiblesShopManager \u2014 all IDs entered here coalesce into one batched request. Tiles show the skeleton until the SKU resolves.",
+                                    }),
+                                    (0, n.jsx)("div", {
+                                        className: x.Vg,
+                                        children: a.map((e) => {
+                                            let { state: t, product: a } = r[e] ?? { state: "loading", product: null };
+                                            return (0, n.jsx)(
+                                                "div",
+                                                {
+                                                    className: x.Vs,
+                                                    children:
+                                                        "ready" === t && null != a
+                                                            ? (0, n.jsxs)(n.Fragment, {
+                                                                  children: [
+                                                                      (0, n.jsx)(o.E, {
+                                                                          variant: "text-sm/semibold",
+                                                                          children: a.name,
+                                                                      }),
+                                                                      (0, n.jsx)(o.E, {
+                                                                          variant: "text-xs/normal",
+                                                                          color: "text-muted",
+                                                                          children: e,
+                                                                      }),
+                                                                  ],
+                                                              })
+                                                            : "error" === t
+                                                              ? (0, n.jsxs)(o.E, {
+                                                                    variant: "text-sm/semibold",
+                                                                    color: "text-feedback-critical",
+                                                                    children: ["error: ", e],
+                                                                })
+                                                              : (0, n.jsx)(g.A, {}),
+                                                },
+                                                e,
+                                            );
+                                        }),
+                                    }),
+                                ],
+                            });
+                        },
+                        controls: { skuIds: { label: "SKU IDs", type: "text", defaultValue: "" } },
+                    },
+                    {
+                        name: "Product Card",
+                        id: "shop-product-card",
+                        component: function (e) {
+                            let { skuIds: t } = e,
+                                a = l.useMemo(() => f(t), [t]);
+                            return (0, n.jsx)(u.iM, {
+                                tab: v.G2.HOME,
+                                children: (0, n.jsx)(d.R9, {
+                                    newValue: { sessionId: "playground" },
+                                    children: (0, n.jsxs)(c.B, {
+                                        direction: "vertical",
+                                        gap: 16,
+                                        align: "start",
+                                        children: [
+                                            (0, n.jsx)(o.E, {
+                                                variant: "text-sm/normal",
+                                                color: "text-muted",
+                                                children:
+                                                    "Renders real ProductCards. Each card resolves through CollectiblesShopManager and shows a skeleton until ready.",
+                                            }),
+                                            (0, n.jsx)("div", {
+                                                className: x.Vg,
+                                                children: a.map((e) => (0, n.jsx)(p.A, { skuId: e }, e)),
+                                            }),
+                                        ],
+                                    }),
+                                }),
+                            });
+                        },
+                        controls: { skuIds: { label: "SKU IDs", type: "text", defaultValue: "" } },
+                    },
+                    {
+                        name: "Shop Home Feed",
+                        id: "shop-home-feed",
+                        component: function () {
+                            return (0, n.jsx)(u.iM, {
+                                tab: v.G2.HOME,
+                                children: (0, n.jsx)(d.R9, {
+                                    newValue: { sessionId: "playground" },
+                                    children: (0, n.jsx)("div", {
+                                        className: x.rO,
+                                        children: (0, n.jsx)(h.A, {
+                                            handleTransition: () => {},
+                                            tab: v.G2.HOME,
+                                            transitionState: v.Pf.VISIBLE,
+                                        }),
+                                    }),
+                                }),
+                            });
+                        },
+                    },
+                ],
+            },
             {
                 title: "Navigation",
                 stories: [
@@ -239,14 +224,14 @@ let M = {
                         name: "Navigation Menu",
                         id: "navigation-menu",
                         component: function () {
-                            let [e, t] = n.useState("home"),
-                                a = n.useCallback(
+                            let [e, t] = l.useState("home"),
+                                a = l.useCallback(
                                     (e, a) => () => {
                                         (window.history.pushState(null, "", a), t(e));
                                     },
                                     [],
                                 ),
-                                r = n.useMemo(
+                                r = l.useMemo(
                                     () => [
                                         {
                                             type: "page",
@@ -274,7 +259,7 @@ let M = {
                                                     type: "page",
                                                     key: "offer eligible",
                                                     text: "Offer Eligible",
-                                                    trailingIndicator: { type: "icon", icon: S.TagIcon },
+                                                    trailingIndicator: { type: "icon", icon: b.TagIcon },
                                                     onClick: a("offer eligible", "#offereligible"),
                                                 },
                                                 {
@@ -327,23 +312,23 @@ let M = {
                                     ],
                                     [a],
                                 );
-                            return (0, l.jsxs)("div", {
-                                className: E.MY,
+                            return (0, n.jsxs)("div", {
+                                className: C.MY,
                                 children: [
-                                    (0, l.jsx)("div", {
-                                        className: E.jr,
-                                        children: (0, l.jsx)(w.A, {
+                                    (0, n.jsx)("div", {
+                                        className: C.jr,
+                                        children: (0, n.jsx)(S.A, {
                                             "aria-label": "Playground Navigation",
-                                            className: E.C$,
+                                            className: C.C$,
                                             options: r,
                                             selectedKey: e,
                                             overflowLabel: "More",
                                             overflowExpandLabel: "More navigation options",
                                         }),
                                     }),
-                                    (0, l.jsx)("div", {
-                                        className: E.Qs,
-                                        children: (0, l.jsx)(C.D, { variant: "heading-lg/bold", children: A[e] ?? e }),
+                                    (0, n.jsx)("div", {
+                                        className: C.Qs,
+                                        children: (0, n.jsx)(y.D, { variant: "heading-lg/bold", children: E[e] ?? e }),
                                     }),
                                 ],
                             });
@@ -356,4 +341,4 @@ let M = {
         tags: ["Collectibles", "Shop", "Storefront"],
         IconComponent: r.U,
     },
-    _ = { playgroundBaseUrl: "collectibles", collections: [M] };
+    j = { playgroundBaseUrl: "collectibles", collections: [I] };
