@@ -248,9 +248,9 @@ function tZ(t) {
 var t0 = i(554146),
     t1 = i(298990),
     t2 = i(429913),
-    t3 = i(263577),
-    t9 = i(826673),
-    t5 = i(360906),
+    t9 = i(263577),
+    t3 = i(826673),
+    t5 = i(999926),
     t8 = i(308726),
     t7 = i(818023),
     t4 = i(731854),
@@ -259,7 +259,7 @@ var t0 = i(554146),
 function ee(t) {
     let { game: e } = t,
         i = (0, t2.h)(e.id);
-    return null == i ? null : (0, $.jsx)(t3.V, { src: i.getIconURL(t7.iu.LARGE), size: 40 });
+    return null == i ? null : (0, $.jsx)(t9.V, { src: i.getIconURL(t7.iu.LARGE), size: 40 });
 }
 let ei = 5 * k.A.Millis.SECOND,
     en = 8 * k.A.Millis.SECOND,
@@ -700,7 +700,7 @@ let eh = new eC(s.h, {
                                     className: et.kL,
                                 })));
                 }
-            let r = (0, t9.k8)(t0.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t3.k8)(t0.M.OVERLAY_OOP_WELCOME_NUX),
                 s = H.intl.string(H.t.KWDIrh);
             return {
                 icon:
@@ -713,16 +713,16 @@ let eh = new eC(s.h, {
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t9.Dr)(t0.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t3.Dr)(t0.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         o.A.setInputLocked(!1, P.A.getTargetPID()),
-                        r || (0, t9.Dr)(t0.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t3.Dr)(t0.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t9.Dr)(t0.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t3.Dr)(t0.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, K.qv)(), e);

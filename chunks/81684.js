@@ -146,7 +146,7 @@ var k = n(149741),
     ef = n(51092),
     ex = n(802867),
     eA = n(110234),
-    eE = n(360906),
+    eE = n(999926),
     eS = n(287809),
     eI = n(562153),
     ev = n(761661),
@@ -916,16 +916,16 @@ function e2(e) {
                 }),
             });
 }
-var e3 = n(193249),
-    e5 = n(821609),
+var e5 = n(193249),
+    e3 = n(821609),
     e4 = n(706712),
     e6 = n(403010),
-    e8 = n(321090),
-    e9 = n(189953);
+    e9 = n(321090),
+    e8 = n(189953);
 function e7(e) {
     let { locked: t, pinned: n, anchorLeft: i } = e,
         r = (0, P.bG)([e6.A], () => e6.A.getSocket()),
-        s = (0, P.bG)([e8.A], () => e8.A.isGPUBoosted());
+        s = (0, P.bG)([e9.A], () => e9.A.isGPUBoosted());
     (0, e4.ZX)();
     let a = (0, P.bG)([Y.A], () => Y.A.getWindow(e0.f)),
         [o, d] = (0, e4.DQ)(r),
@@ -962,21 +962,21 @@ function e7(e) {
     return t && !n
         ? null
         : (0, l.jsxs)("div", {
-              className: C()(e9.st, !i && e9.Hk),
+              className: C()(e8.st, !i && e8.Hk),
               children: [
                   (b || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e9.PG,
+                          className: e8.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: b, onChange: (e) => w(e) }),
+                                      className: e8.On,
+                                      children: (0, l.jsx)(e5.d, { checked: b, onChange: (e) => w(e) }),
                                   }),
                               (0, l.jsxs)(N.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e9.e0,
+                                  className: e8.e0,
                                   children: [
                                       "FPS:",
                                       " ",
@@ -997,17 +997,17 @@ function e7(e) {
                       }),
                   (R || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e9.PG,
+                          className: e8.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: R, onChange: (e) => M(e) }),
+                                      className: e8.On,
+                                      children: (0, l.jsx)(e5.d, { checked: R, onChange: (e) => M(e) }),
                                   }),
                               (0, l.jsxs)(N.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e9.e0,
+                                  className: e8.e0,
                                   children: [
                                       "Frame Times:",
                                       " ",
@@ -1023,17 +1023,17 @@ function e7(e) {
                       }),
                   (D || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e9.PG,
+                          className: e8.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: D, onChange: (e) => z(e) }),
+                                      className: e8.On,
+                                      children: (0, l.jsx)(e5.d, { checked: D, onChange: (e) => z(e) }),
                                   }),
                               (0, l.jsxs)(N.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e9.e0,
+                                  className: e8.e0,
                                   children: [
                                       "Dropped Frames:",
                                       " ",
@@ -1052,7 +1052,7 @@ function e7(e) {
                                           tag: "span",
                                           variant: "code",
                                           color: "text-subtle",
-                                          className: e9.af,
+                                          className: e8.af,
                                           children: ["(", ((g.current / p.current) * 100).toFixed(3), "%)"],
                                       }),
                                   ],
@@ -1061,17 +1061,17 @@ function e7(e) {
                       }),
                   (k || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e9.PG,
+                          className: e8.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: k, onChange: (e) => L(e) }),
+                                      className: e8.On,
+                                      children: (0, l.jsx)(e5.d, { checked: k, onChange: (e) => L(e) }),
                                   }),
                               (0, l.jsxs)(N.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e9.e0,
+                                  className: e8.e0,
                                   children: [
                                       "Rendered Frames:",
                                       " ",
@@ -1087,12 +1087,12 @@ function e7(e) {
                       }),
                   (V || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e9.PG,
+                          className: e8.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: V, onChange: (e) => U(e) }),
+                                      className: e8.On,
+                                      children: (0, l.jsx)(e5.d, { checked: V, onChange: (e) => U(e) }),
                                   }),
                               (0, l.jsx)(en.m, {
                                   position: "left",
@@ -1101,7 +1101,7 @@ function e7(e) {
                                       children: (0, l.jsxs)(N.E, {
                                           variant: "text-md/normal",
                                           color: "text-subtle",
-                                          className: e9.e0,
+                                          className: e8.e0,
                                           children: [
                                               "Idle Frame Delta:",
                                               " ",
@@ -1139,9 +1139,9 @@ function e7(e) {
                       }),
                   !t &&
                       (0, l.jsx)("div", {
-                          className: e9.m8,
+                          className: e8.m8,
                           children: (0, l.jsx)(O.A, {
-                              children: (0, l.jsx)(e5.$, { variant: "primary", text: "Reset Frame Data", onClick: _ }),
+                              children: (0, l.jsx)(e3.$, { variant: "primary", text: "Reset Frame Data", onClick: _ }),
                           }),
                       }),
               ],
@@ -1299,7 +1299,7 @@ function t2(e) {
         (e) => ((t.current = e), e)
     );
 }
-function t3(e) {
+function t5(e) {
     let {
         ref: t,
         isActive: n,
@@ -1345,7 +1345,7 @@ function t3(e) {
         "aria-label": E["aria-label"],
     });
 }
-function t5(e) {
+function t3(e) {
     let { voiceChannel: t, locked: n } = e,
         i = v.useRef(null),
         { suppress: r, selfMute: s, mute: a } = (0, tH.A)(t),
@@ -1382,7 +1382,7 @@ function t5(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: s } = t;
-            return (0, l.jsx)(t3, {
+            return (0, l.jsx)(t5, {
                 ref: i,
                 iconComponent: u,
                 isActive: o,
@@ -1457,7 +1457,7 @@ function t4(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: o } = t;
-            return (0, l.jsx)(t3, {
+            return (0, l.jsx)(t5, {
                 ref: i,
                 iconComponent: h,
                 tooltip: (0, tx.A)(r, s, !1),
@@ -1521,7 +1521,7 @@ function t6(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: s } = t;
-            return (0, l.jsx)(t3, {
+            return (0, l.jsx)(t5, {
                 ref: i,
                 iconComponent: g,
                 tooltip: A,
@@ -1539,7 +1539,7 @@ function t6(e) {
         },
     });
 }
-function t8(e) {
+function t9(e) {
     let t,
         { voiceChannel: n, locked: i } = e,
         r = v.useRef(null),
@@ -1607,7 +1607,7 @@ function t8(e) {
         children: (e, n) => {
             let { onClick: i } = e,
                 { isShown: s } = n;
-            return (0, l.jsx)(t3, {
+            return (0, l.jsx)(t5, {
                 ref: r,
                 iconComponent: f,
                 tooltip: t,
@@ -1627,7 +1627,7 @@ function t8(e) {
         },
     });
 }
-function t9(e) {
+function t8(e) {
     let { voiceChannel: t, locked: i } = e,
         r = v.useRef(null),
         s = t?.getGuildId() ?? null,
@@ -1664,7 +1664,7 @@ function t9(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: i } = t;
-            return (0, l.jsx)(t3, {
+            return (0, l.jsx)(t5, {
                 ref: r,
                 iconComponent: m,
                 tooltip: a
@@ -1747,7 +1747,7 @@ function t7(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: a } = t;
-            return (0, l.jsx)(t3, {
+            return (0, l.jsx)(t5, {
                 ref: i,
                 iconComponent: f,
                 tooltip: r ? eC.intl.string(eC.t["6vrfgt"]) : eC.intl.string(eC.t.S0W8Z5),
@@ -1867,7 +1867,7 @@ function ni(e) {
             children: (e, u) => {
                 let { onClick: c } = e,
                     { isShown: h } = u;
-                return (0, l.jsx)(t3, {
+                return (0, l.jsx)(t5, {
                     ref: n,
                     iconComponent: tg.x,
                     tooltip: r,
@@ -1926,7 +1926,7 @@ function ns(e) {
                     (0, l.jsxs)("div", {
                         className: nr.qi,
                         children: [
-                            (0, l.jsx)(t5, { voiceChannel: s, locked: t }),
+                            (0, l.jsx)(t3, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(t4, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(t6, { voiceChannel: s, locked: t }),
                         ],
@@ -1934,8 +1934,8 @@ function ns(e) {
                     (0, l.jsxs)("div", {
                         className: nr.qi,
                         children: [
-                            (0, l.jsx)(t8, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(t9, { voiceChannel: s, locked: t }),
+                            (0, l.jsx)(t8, { voiceChannel: s, locked: t }),
                             i && r && (0, l.jsx)(ni, { voiceChannel: s, locked: t }),
                         ],
                     }),
@@ -2455,7 +2455,7 @@ var nK = n(602853),
     n0 = n(73153),
     n1 = n(308528);
 let n2 = new Set();
-async function n3(e) {
+async function n5(e) {
     if (!n2.has(e)) {
         n2.add(e);
         try {
@@ -2467,7 +2467,7 @@ async function n3(e) {
         } catch {}
     }
 }
-var n5 = n(835078),
+var n3 = n(835078),
     n4 = (((r = {}).DEFAULT = "DEFAULT"), (r.CHANNEL_TYPE = "CHANNEL_TYPE"), r);
 let n6 = v.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: i, iconVariant: r = "DEFAULT" } = e,
@@ -2504,7 +2504,7 @@ let n6 = v.memo(function (e) {
             [t],
         );
     v.useEffect(() => {
-        null == j && n3(t);
+        null == j && n5(t);
     }, [j, t]);
     let T = (0, P.bG)(
             [n$.A, eS.default],
@@ -2526,7 +2526,7 @@ let n6 = v.memo(function (e) {
             [j],
         ),
         _ = (0, l.jsx)("div", {
-            className: n5.St,
+            className: n3.St,
             children: (function () {
                 let e = j?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === r && !e) {
@@ -2539,10 +2539,10 @@ let n6 = v.memo(function (e) {
                     return (
                         t && (n.boxShadow = `0 0 0 2px rgba(${i}), 0 0 12px 2px rgba(${r})`),
                         (0, l.jsx)("div", {
-                            className: C()(n5.s, a && n5.lJ),
+                            className: C()(n3.s, a && n3.lJ),
                             style: n,
                             children: (0, l.jsx)(e, {
-                                className: n5.Yc,
+                                className: n3.Yc,
                                 size: "sm",
                                 color: a ? nx.A.colors.WHITE : nx.A.colors.ICON_STATUS_ONLINE,
                             }),
@@ -2684,7 +2684,7 @@ let n6 = v.memo(function (e) {
             return ((e ??= m.ChatIcon), (0, l.jsx)(e, { size: "sm", color: nx.A.colors.INTERACTIVE_ICON_DEFAULT }));
         })();
     return null == j
-        ? (0, l.jsx)("div", { className: n5.R })
+        ? (0, l.jsx)("div", { className: n3.R })
         : (0, l.jsx)(nE.u, {
               title: O,
               body: M,
@@ -2692,7 +2692,7 @@ let n6 = v.memo(function (e) {
               assetSize: 20,
               "aria-label": A,
               children: (0, l.jsxs)(w.D, {
-                  className: n5.pc,
+                  className: n3.pc,
                   focusProps: { offset: 4 },
                   onClick: () => {
                       (s && (0, nw.S$)({ minimized: !1 }),
@@ -2708,15 +2708,15 @@ let n6 = v.memo(function (e) {
                   children: [
                       _,
                       (0, l.jsx)("div", {
-                          className: n5.vT,
+                          className: n3.vT,
                           children: (0, l.jsx)(nq.A, { selected: a, hovered: c, unread: y }),
                       }),
                   ],
               }),
           });
 });
-var n8 = n(148494),
-    n9 = n(688606),
+var n9 = n(148494),
+    n8 = n(688606),
     n7 = n(355622),
     ie = n(232835),
     it = n(576705),
@@ -2751,7 +2751,7 @@ function is(e) {
     (s = i?.first() ?? null),
     (a = null != d && null == s && null != i && !i.loadingMore && !i.ready && !i.hasFetched && r),
     v.useEffect(() => {
-        null == t || (!n.current.has(t) && a && (n.current.add(t), n8.A.fetchMessages({ channelId: t, limit: 50 })));
+        null == t || (!n.current.has(t) && a && (n.current.add(t), n9.A.fetchMessages({ channelId: t, limit: 50 })));
     }, [t, a]),
     v.useEffect(() => {
         if (null == o || h) return;
@@ -2765,7 +2765,7 @@ function is(e) {
               className: il.Q,
               children: (0, l.jsx)("div", {
                   className: il.T,
-                  children: (0, l.jsx)(n9.A, { channel: d, guild: c, chatInputType: n7.oU.OVERLAY }, d.id),
+                  children: (0, l.jsx)(n8.A, { channel: d, guild: c, chatInputType: n7.oU.OVERLAY }, d.id),
               }),
           })
         : null;
@@ -2778,7 +2778,7 @@ function io(e) {
         a = (0, P.bG)([E.A], () => E.A.getVoiceChatMinimized()),
         o = (0, P.bG)([W.A], () => (null != s ? (W.A.getChannel(s) ?? null) : null), [s]);
     v.useEffect(() => {
-        null == s || (null == o && n3(s));
+        null == s || (null == o && n5(s));
     }, [o, s]);
     let d = (0, P.bG)([x.A], () => nc(o, x.A), [o]),
         u = (0, P.bG)([A.A], () => A.A.getChannelId(), []),
@@ -3268,7 +3268,7 @@ let i0 = {
 function i2(e, t) {
     return e.status === t.status && e.gameName === t.gameName && e.targetedGames === t.targetedGames;
 }
-function i3(e) {
+function i5(e) {
     let { applicationId: t } = e,
         n = (0, iN.A)(),
         {
@@ -3414,17 +3414,17 @@ function i3(e) {
                     children: (0, l.jsx)(N.E, { variant: "text-xs/medium", color: "none", lineClamp: 1, children: h }),
                 }),
             }),
-            null != p ? (0, l.jsx)(e5.$, { size: "sm", variant: p.variant, text: p.text, onClick: p.onClick }) : null,
+            null != p ? (0, l.jsx)(e3.$, { size: "sm", variant: p.variant, text: p.text, onClick: p.onClick }) : null,
         ],
     });
 }
-var i5 = n(155037),
+var i3 = n(155037),
     i4 = n(165610),
     i6 = n(197921);
-function i8(e) {
+function i9(e) {
     let { applicationId: t } = e,
         n = (0, iV.A)({ applicationId: t, surface: i4.ZN, hostWindowKey: e0.f });
-    v.useEffect(() => () => (0, i5.G)(t), [t]);
+    v.useEffect(() => () => (0, i3.G)(t), [t]);
     let i =
         n.state === iV.n.Launched && n.frame.data.proxyTicketRefreshing
             ? "loading"
@@ -3471,7 +3471,7 @@ function i8(e) {
             return null;
     }
 }
-let i9 = v.memo(function (e) {
+let i8 = v.memo(function (e) {
     let { applicationId: t, locked: n, dragging: i, dragStart: r } = e,
         s = v.useCallback(
             (e) => {
@@ -3488,10 +3488,10 @@ let i9 = v.memo(function (e) {
                 onMouseDown: s,
                 children: (0, l.jsx)("div", { className: i6.Ub }),
             }),
-            (0, l.jsx)(i3, { applicationId: t }),
+            (0, l.jsx)(i5, { applicationId: t }),
             (0, l.jsx)("div", {
                 className: C()(i6.ru, { [i6.po]: n || i }),
-                children: (0, l.jsx)(i8, { applicationId: t }),
+                children: (0, l.jsx)(i9, { applicationId: t }),
             }),
         ],
     });
@@ -3815,7 +3815,7 @@ let rh = v.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, locked: n, dragging: i, dragStart: r } = e;
                 return (0, eG.Du)(t)
-                    ? (0, l.jsx)(i9, { applicationId: t.meta.applicationId, locked: n, dragging: i, dragStart: r })
+                    ? (0, l.jsx)(i8, { applicationId: t.meta.applicationId, locked: n, dragging: i, dragStart: r })
                     : null;
             },
             renderTitle: (e) => ((0, eG.Du)(e) ? (0, l.jsx)(i7, { applicationId: e.meta.applicationId }) : null),
