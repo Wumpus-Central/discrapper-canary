@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(451394),
     S = n(821609),
     T = n(194261),
-    M = n(683071),
-    I = n(297264),
+    I = n(683071),
+    M = n(297264),
     L = n(404778),
     R = n(663417),
     w = n(565787),
@@ -36,9 +36,9 @@ var l = n(477900),
     k = n(443063),
     P = n(615606),
     U = n(587895),
-    V = n(709066),
-    B = n(63104),
-    H = n(60868),
+    H = n(709066),
+    V = n(63104),
+    B = n(60868),
     F = n(894328),
     z = n(468689),
     Z = n(776781),
@@ -145,7 +145,7 @@ class eN extends i.PureComponent {
 }
 var eS = n(967144),
     eT = n(258776);
-function eM(e) {
+function eI(e) {
     let { role: t, guild: a } = e,
         [s, r] = i.useState(!1);
     return (0, eb.x)(a, t)
@@ -171,7 +171,7 @@ function eM(e) {
           })
         : null;
 }
-function eI(e) {
+function eM(e) {
     let {
             color: t,
             id: i,
@@ -219,7 +219,7 @@ function eI(e) {
                           return (0, l.jsx)(j.m, { text: g, children: (0, l.jsx)(eN, { className: eT.s2, src: e }) });
                       })(),
                       (0, l.jsx)("div", { className: eT.dD, children: r }),
-                      m && null != a ? (0, l.jsx)(eM, { guild: s, role: a }) : null,
+                      m && null != a ? (0, l.jsx)(eI, { guild: s, role: a }) : null,
                   ],
               }),
           });
@@ -234,9 +234,9 @@ var eL = n(736653),
     ek = n(403362),
     eP = n(695184),
     eU = n(975571),
-    eV = n(562153),
-    eB = n(558393),
-    eH = n(427262),
+    eH = n(562153),
+    eV = n(558393),
+    eB = n(427262),
     eF = n(652215),
     ez = n(105292),
     eZ = n(967829),
@@ -295,7 +295,7 @@ function eq(e) {
             switch (t.type) {
                 case D.r2.MEMBER: {
                     let n = K.default.getUser(t.id);
-                    null != n && (e = eH.Ay.getName(n));
+                    null != n && (e = eB.Ay.getName(n));
                     break;
                 }
                 case D.r2.ROLE: {
@@ -336,7 +336,7 @@ function eq(e) {
         A = n.isForumLikeChannel() && ec.zy(t.deny, eF.xBc.SEND_MESSAGES),
         f = ec.zy(t.deny, eF.xBc.SEND_MESSAGES),
         C = ec.zy(t.deny, eF.xBc.READ_MESSAGE_HISTORY),
-        j = eB.A.generateChannelPermissionSpec(c, n, p, {
+        j = eV.A.generateChannelPermissionSpec(c, n, p, {
             createPostsDisabled: A,
             sendMessagesDisabled: f,
             readMessageHistoryDisabled: C,
@@ -347,7 +347,7 @@ function eq(e) {
             null != d
                 ? (0, l.jsx)("div", {
                       className: eX.B2,
-                      children: (0, l.jsx)(M.w, {
+                      children: (0, l.jsx)(I.w, {
                           type: "info",
                           message: ez.intl.format(ez.t["Xq++FA"], { appName: d.name }),
                           role: "none",
@@ -385,8 +385,8 @@ function eq(e) {
 function e$(e) {
     let { guildId: t, channelId: n, user: i } = e,
         a = i.getAvatarURL(t, 32),
-        r = eV.Ay.getNickname(t, n, i),
-        o = eH.Ay.useUserTag(i),
+        r = eH.Ay.getNickname(t, n, i),
+        o = eB.Ay.useUserTag(i),
         d = null,
         c = null;
     return (
@@ -446,7 +446,7 @@ function e0(e) {
             },
             options: h,
             formatOption: function (e) {
-                return { id: e.id, value: e, label: eK(e) ? e.name : eH.Ay.getUserTag(e) };
+                return { id: e.id, value: e, label: eK(e) ? e.name : eB.Ay.getUserTag(e) };
             },
             children: [
                 (0, l.jsx)("div", {
@@ -575,7 +575,7 @@ function e2() {
                 return null == u
                     ? null
                     : (0, l.jsx)(
-                          eI,
+                          eM,
                           {
                               theme: p,
                               roleStyle: x,
@@ -596,13 +596,13 @@ function e2() {
                 if (null == u) return null;
                 let t = e.getAvatarURL(u.id, 24);
                 return (0, l.jsx)(
-                    eI,
+                    eM,
                     {
                         id: e.id,
                         guild: u,
                         theme: p,
                         roleStyle: x,
-                        "aria-label": eH.Ay.getUserTag(e, { decoration: "never" }),
+                        "aria-label": eB.Ay.getUserTag(e, { decoration: "never" }),
                         onContextMenu: (t) => A(t, { id: e.id, name: e.username }),
                         children: (0, l.jsxs)("div", {
                             className: eX.mG,
@@ -613,7 +613,7 @@ function e2() {
                                     "aria-label": e.username,
                                     className: eX.bE,
                                 }),
-                                (0, l.jsx)("span", { className: eX.Xh, children: eH.Ay.getUserTag(e) }),
+                                (0, l.jsx)("span", { className: eX.Xh, children: eB.Ay.getUserTag(e) }),
                             ],
                         }),
                     },
@@ -794,7 +794,7 @@ function ts(e) {
                 case tl.oO.ROLES:
                     ((c =
                         (d = n[h]).rowType === tl.T6.ROLE && d.tags?.guild_connections === null
-                            ? (0, l.jsx)(B.A, { className: ta.a, color: d.colorString, size: 20 })
+                            ? (0, l.jsx)(V.A, { className: ta.a, color: d.colorString, size: 20 })
                             : (0, l.jsx)(A.i, { size: "custom", className: ta.a, color: d.colorString, height: 20 })),
                         (o = (0, l.jsxs)(l.Fragment, {
                             children: [
@@ -814,7 +814,7 @@ function ts(e) {
                             children: [
                                 (0, l.jsx)(f.eu, { src: d.avatarURL, size: C._3.SIZE_20, "aria-hidden": !0 }),
                                 (0, l.jsx)(s.E, { variant: "text-sm/normal", children: d.name }),
-                                d.bot && (0, l.jsx)(V.A, { verified: d.verifiedBot }),
+                                d.bot && (0, l.jsx)(H.A, { verified: d.verifiedBot }),
                                 (0, l.jsx)(s.E, {
                                     color: "text-muted",
                                     className: ta.Gq,
@@ -1037,7 +1037,7 @@ function to(e) {
                         u &&
                             (0, l.jsx)("div", {
                                 className: ta.Ux,
-                                children: (0, l.jsx)(M.w, {
+                                children: (0, l.jsx)(I.w, {
                                     type: "warning",
                                     message: ez.intl.string(ez.t["5f3HIC"]),
                                     role: "status",
@@ -1048,7 +1048,7 @@ function to(e) {
                             !s &&
                             (0, l.jsx)("div", {
                                 className: ta.Ux,
-                                children: (0, l.jsx)(M.w, {
+                                children: (0, l.jsx)(I.w, {
                                     type: "warning",
                                     message: ez.intl.string(ez.t.ZAk4Q9),
                                     role: "status",
@@ -1060,7 +1060,7 @@ function to(e) {
                                     (0, l.jsxs)("div", {
                                         className: ta.MJ,
                                         children: [
-                                            (0, l.jsx)(I.D, {
+                                            (0, l.jsx)(M.D, {
                                                 variant: "heading-sm/semibold",
                                                 className: ta.DH,
                                                 children: g.formLabel,
@@ -1103,7 +1103,7 @@ function td(e) {
     return (0, l.jsxs)("div", {
         children: [
             (0, l.jsx)(L.c, { className: ta.yF }),
-            (0, l.jsx)(I.D, { variant: "heading-sm/semibold", className: x()(ta.DH, ta.Gf), children: t }),
+            (0, l.jsx)(M.D, { variant: "heading-sm/semibold", className: x()(ta.DH, ta.Gf), children: t }),
         ],
     });
 }
@@ -1161,7 +1161,7 @@ let tc = a.Ay.connectStores([X.A, q.A, Q.Ay, $.A, Y.A, U.A], () => {
         a.isCategory() && ((m.title = ez.intl.string(ez.t["/uELTj"])), (m.subtitle = ez.intl.string(ez.t["8iAg3Q"]))),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(I.D, { variant: "heading-lg/semibold", children: m.title }),
+                (0, l.jsx)(M.D, { variant: "heading-lg/semibold", children: m.title }),
                 (0, l.jsx)(s.E, { variant: "text-sm/normal", children: m.subtitle }),
                 null != i && t
                     ? h
@@ -1187,7 +1187,7 @@ let tc = a.Ay.connectStores([X.A, q.A, Q.Ay, $.A, Y.A, U.A], () => {
                                                   onConfirm: async () => {
                                                       let { guild_id: e } = i,
                                                           t = et.s9(i, (0, k.GY)(a));
-                                                      (await (0, H.n)(a, t[e].deny, t[e].allow)) &&
+                                                      (await (0, B.n)(a, t[e].deny, t[e].allow)) &&
                                                           (0, o.RT)(a.id, { permissionOverwrites: Object.values(t) });
                                                   },
                                               });
@@ -1273,8 +1273,8 @@ function tT() {
     return (0, l.jsx)(tN.A, { invites: s, loading: r, guild: n, channel: t, canCreateInvites: i, hide: e });
 }
 (n(938796), n(667532));
-var tM = n(371444),
-    tI = n(392421),
+var tI = n(371444),
+    tM = n(392421),
     tL = n(602137),
     tR = n(665260),
     tw = n(452027),
@@ -1285,9 +1285,9 @@ var tM = n(371444),
     tk = n(691885),
     tP = n(270003),
     tU = n(331322),
-    tV = n(95477),
-    tB = n(205513),
-    tH = n(144228),
+    tH = n(95477),
+    tV = n(893007),
+    tB = n(144228),
     tF = n(73153),
     tz = n(534963),
     tZ = n(820284),
@@ -1574,8 +1574,8 @@ function nN(e) {
 }
 var nS = n(280450),
     nT = n(717518),
-    nM = n(147036),
-    nI = n(927813),
+    nI = n(147036),
+    nM = n(927813),
     nL = n(879631),
     nR = n(221851);
 function nw(e) {
@@ -1599,9 +1599,9 @@ function nw(e) {
                 n = parseInt(e, 10);
             if (Number.isNaN(n)) return void c(null);
             n <= eF.WA1 && t.push(n);
-            let l = n * nI.A.Seconds.MINUTE;
+            let l = n * nM.A.Seconds.MINUTE;
             l <= eF.WA1 && t.push(l);
-            let i = n * nI.A.Seconds.HOUR;
+            let i = n * nM.A.Seconds.HOUR;
             (i <= eF.WA1 && t.push(i), c(t));
         }, []),
         m = i.useCallback(() => {
@@ -1641,7 +1641,7 @@ function nO(e) {
             gap: 4,
             padding: { top: 8, bottom: 8 },
             children: [
-                (0, l.jsx)(tH.z, {
+                (0, l.jsx)(tB.z, {
                     label: ez.intl.string(ez.t.yLB4y2),
                     onChange: s,
                     options: c,
@@ -1649,7 +1649,7 @@ function nO(e) {
                     disabled: !i || null != t.linkedLobby || o || (a && r),
                 }),
                 null != t.linkedLobby
-                    ? (0, l.jsx)(M.w, { type: "warning", message: ez.intl.string(ez.t.EvavKG), role: "none" })
+                    ? (0, l.jsx)(I.w, { type: "warning", message: ez.intl.string(ez.t.EvavKG), role: "none" })
                     : null,
             ],
         })
@@ -1907,9 +1907,9 @@ function nk(e) {
 }
 var nP = n(746080),
     nU = n(307731),
-    nV = n(37411),
-    nB = n(35692);
-let nH = {
+    nH = n(37411),
+    nV = n(35692);
+let nB = {
         popoutLocation: {
             page: eF.liQ.CHANNEL_SETTINGS,
             section: eF.JJy.CHANNEL_DEFAULT_REACTION,
@@ -2018,7 +2018,7 @@ function nW(e) {
         align: "right",
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, l.jsx)(t2.A, { ...e, ref: s, active: n, className: nB.Z8, tabIndex: 0 });
+            return (0, l.jsx)(t2.A, { ...e, ref: s, active: n, className: nV.Z8, tabIndex: 0 });
         },
     });
 }
@@ -2073,7 +2073,7 @@ class nJ extends i.PureComponent {
               : ez.intl.string(ez.t["HEA/DU"]);
     }
     getAutoArchiveDurationSliderMarker(e) {
-        return (0, nL.$)(e * nI.A.Seconds.MINUTE, !0);
+        return (0, nL.$)(e * nM.A.Seconds.MINUTE, !0);
     }
     renderChannelInfo(e, t) {
         let n,
@@ -2097,9 +2097,9 @@ class nJ extends i.PureComponent {
                 ? (0, l.jsx)(tw.D, {
                       label: p ? ez.intl.string(ez.t.yR6HwZ) : ez.intl.string(ez.t.X8jMDh),
                       children: (0, l.jsx)(t0.Ay, {
-                          className: x()(nB.zm, { [nB.r9]: !a }),
-                          innerClassName: x()(nB.At, { [nB.r9]: !a }),
-                          characterCountClassName: nB.IQ,
+                          className: x()(nV.zm, { [nV.r9]: !a }),
+                          innerClassName: x()(nV.At, { [nV.r9]: !a }),
+                          characterCountClassName: nV.IQ,
                           maxCharacterCount: p ? 4096 : 1024,
                           onChange: this.handleChangeRichTopic,
                           placeholder: ez.intl.string(ez.t["71fbmh"]),
@@ -2163,10 +2163,10 @@ class nJ extends i.PureComponent {
                               label: ez.intl.string(ez.t["8ao1+E"]),
                               description: ez.intl.string(ez.t.SdbF0q),
                               children: (0, l.jsxs)("div", {
-                                  className: nB.OZ,
+                                  className: nV.OZ,
                                   children: [
                                       (0, l.jsx)("div", {
-                                          className: x()(nB.t0, nB._h),
+                                          className: x()(nV.t0, nV._h),
                                           children: (0, l.jsxs)(tG.e, {
                                               align: "center",
                                               children: [
@@ -2210,10 +2210,10 @@ class nJ extends i.PureComponent {
                           children: [
                               (0, l.jsx)(L.c, {}),
                               (0, l.jsxs)("div", {
-                                  className: nB.OZ,
+                                  className: nV.OZ,
                                   children: [
                                       (0, l.jsx)("div", {
-                                          className: x()(nB.t0, nB.WC),
+                                          className: x()(nV.t0, nV.WC),
                                           children: (0, l.jsx)(tk.l, {
                                               selectionMode: "single",
                                               label: ez.intl.string(ez.t["kQvoC/"]),
@@ -2222,21 +2222,21 @@ class nJ extends i.PureComponent {
                                                   {
                                                       id: "list",
                                                       label: ez.intl.string(ez.t["4HXEZG"]),
-                                                      value: tM.C.LIST,
+                                                      value: tI.C.LIST,
                                                   },
                                                   {
                                                       id: "grid",
                                                       label: ez.intl.string(ez.t["8RswJG"]),
-                                                      value: tM.C.GRID,
+                                                      value: tI.C.GRID,
                                                   },
                                               ],
-                                              value: e.defaultForumLayout ?? tM.C.LIST,
+                                              value: e.defaultForumLayout ?? tI.C.LIST,
                                               onSelectionChange: this.handleChangeDefaultForumLayout,
                                           }),
                                       }),
-                                      e.defaultForumLayout === tM.C.GRID
-                                          ? (0, l.jsx)(nD, { className: nB.Kf })
-                                          : (0, l.jsx)(nk, { className: nB.Kf }),
+                                      e.defaultForumLayout === tI.C.GRID
+                                          ? (0, l.jsx)(nD, { className: nV.Kf })
+                                          : (0, l.jsx)(nk, { className: nV.Kf }),
                                   ],
                               }),
                               (0, l.jsx)(L.c, {}),
@@ -2263,15 +2263,15 @@ class nJ extends i.PureComponent {
                       label: ez.intl.string(ez.t.Paxaug),
                       description: ez.intl.string(ez.t.DqOl8J),
                       options: [
-                          { id: "some", label: ez.intl.string(ez.t.rQ0ctQ), value: tI.n.MATCH_SOME },
-                          { id: "all", label: ez.intl.string(ez.t.FCXUu0), value: tI.n.MATCH_ALL },
+                          { id: "some", label: ez.intl.string(ez.t.rQ0ctQ), value: tM.n.MATCH_SOME },
+                          { id: "all", label: ez.intl.string(ez.t.FCXUu0), value: tM.n.MATCH_ALL },
                       ],
                       value: e.getDefaultTagSetting(),
                       onSelectionChange: this.handleChangeDefaultTagSetting,
                   })
                 : null,
             T = m ? r : a,
-            I = tp.nb.has(e.type)
+            M = tp.nb.has(e.type)
                 ? p
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
@@ -2311,7 +2311,7 @@ class nJ extends i.PureComponent {
                           page: eF.liQ.CHANNEL_SETTINGS,
                           children: (0, l.jsx)(nc, {
                               isDisabled: !o,
-                              autoArchiveDuration: e.threadMetadata.autoArchiveDuration ?? nV.cM,
+                              autoArchiveDuration: e.threadMetadata.autoArchiveDuration ?? nH.cM,
                               onChange: this.handleAutoArchiveDurationChanged,
                               helperText: c ? ez.intl.string(ez.t["3aJN9M"]) : ez.intl.string(ez.t.YUXr4Z),
                           }),
@@ -2364,7 +2364,7 @@ class nJ extends i.PureComponent {
                                   checked: e.type === eF.rbe.GUILD_ANNOUNCEMENT,
                                   disabled: !a,
                               }),
-                              (0, l.jsx)(M.w, { type: "info", message: ez.intl.string(ez.t["2Ab4Id"]), role: "none" }),
+                              (0, l.jsx)(I.w, { type: "info", message: ez.intl.string(ez.t["2Ab4Id"]), role: "none" }),
                           ],
                       })
                     : null,
@@ -2424,7 +2424,7 @@ class nJ extends i.PureComponent {
                           count: t.length,
                       });
                   })(e),
-            V =
+            H =
                 e.type === eF.rbe.GUILD_APP && null != d
                     ? (0, l.jsx)(tY.A, {
                           guildId: d.id,
@@ -2435,11 +2435,11 @@ class nJ extends i.PureComponent {
                           helperText: U,
                       })
                     : null,
-            B = u ? s : a;
+            V = u ? s : a;
         return (0, l.jsxs)(tU.B, {
             gap: 24,
             children: [
-                (0, l.jsx)(tV.k, {
+                (0, l.jsx)(tH.k, {
                     label: i,
                     fullWidth: !0,
                     inputRef: this.nameInputRef,
@@ -2449,9 +2449,9 @@ class nJ extends i.PureComponent {
                     error: this.getError("name"),
                     name: n,
                     autoFocus: !0,
-                    disabled: !B,
+                    disabled: !V,
                     maxLength: eF.Ign,
-                    trailing: B
+                    trailing: V
                         ? {
                               type: "emoji",
                               button: (0, l.jsx)(nW, {
@@ -2462,7 +2462,7 @@ class nJ extends i.PureComponent {
                           }
                         : void 0,
                 }),
-                V,
+                H,
                 C,
                 j,
                 b,
@@ -2470,7 +2470,7 @@ class nJ extends i.PureComponent {
                 null != d
                     ? (0, l.jsx)(nE, { channel: e, guildId: d.id, onChange: this.handleChangeApplication })
                     : null,
-                I,
+                M,
                 R,
                 y,
                 E,
@@ -2490,22 +2490,19 @@ class nJ extends i.PureComponent {
     renderVoiceBitrate(e, t) {
         let { canManageChannels: n } = this.props;
         if (!this.showVoiceSettings()) return null;
-        let i = (0, nM.Jz)(t, e),
+        let i = (0, nI.Jz)(t, e),
             a = this.getError("bitrate");
-        return (0, l.jsx)(tB.G, {
+        return (0, l.jsx)(tV.A, {
             label: ez.intl.string(ez.t.w2d0vU),
             errorMessage: "" !== a ? a : void 0,
             helperText: i > eF.gp3 ? ez.intl.format(ez.t.SbQJk5, { bitrate: eF.gp3 / 1e3 }) : void 0,
             value: Math.min(e.bitrate, i),
-            initialValue: Math.min(e.bitrate, i),
-            onValueChange: this.handleChangeBitrate,
-            asValueChanges: this.handleChangeBitrate,
-            onValueRender: this.renderBitrate,
-            onMarkerRender: this.renderBitrate,
-            markers: [...new Set([eF.hcd, eF.gp3, i])],
+            onChange: this.handleChangeBitrate,
+            formatValue: this.renderBitrate,
+            marks: [...new Set([eF.hcd, eF.gp3, i])],
             minValue: eF.hcd,
             maxValue: i,
-            keyboardStep: eF.l2F,
+            step: eF.l2F,
             disabled: !n,
         });
     }
@@ -2525,7 +2522,7 @@ class nJ extends i.PureComponent {
             { value: eF.K3c.AUTO, name: ez.intl.string(ez.t.jjKYpu) },
             { value: eF.K3c.FULL, name: ez.intl.string(ez.t["7jOoJE"]) },
         ];
-        return (0, l.jsx)(tH.z, {
+        return (0, l.jsx)(tB.z, {
             label: ez.intl.string(ez.t.jhJEJs),
             helperText: ez.intl.format(ez.t.c5W7Ss, {}),
             onChange: (e) => this.handleVideoQualityModeChange(e),
@@ -2544,17 +2541,17 @@ class nJ extends i.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let n = this.getError("user_limit"),
             i = e.isGuildStageVoice() ? eF.RCc : eF.cSc;
-        return (0, l.jsx)(tB.G, {
+        return (0, l.jsx)(tV.A, {
             label: ez.intl.string(ez.t["/AoSGN"]),
             errorMessage: "" !== n ? n : void 0,
             helperText: ez.intl.format(e.isGuildStageVoice() ? ez.t.OqZI8D : ez.t["8yb3JT"], {}),
             value: Math.min(e.userLimit, i),
-            initialValue: Math.min(e.userLimit, i),
-            onValueChange: this.handleUserLimitChange,
-            asValueChanges: this.handleUserLimitChange,
-            onValueRender: this.onRenderUserLimit,
-            onMarkerRender: (e) => (0 === Math.round(e) ? "\u221E" : e),
-            markers: [0, i],
+            onChange: this.handleUserLimitChange,
+            formatValue: this.onRenderUserLimit,
+            marks: [
+                { value: 0, label: "\u221E" },
+                { value: i, label: `${i}` },
+            ],
             minValue: 0,
             maxValue: i,
             disabled: !t,
@@ -2609,7 +2606,7 @@ class nJ extends i.PureComponent {
         return (0, l.jsxs)(tP.n, {
             "aria-labelledby": i,
             children: [
-                (0, l.jsx)(I.D, { id: i, variant: "text-lg/medium", children: ez.intl.string(ez.t["/dp6yY"]) }),
+                (0, l.jsx)(M.D, { id: i, variant: "text-lg/medium", children: ez.intl.string(ez.t["/dp6yY"]) }),
                 this.renderChannelInfo(e, t),
                 this.showVoiceSettings() ? (0, l.jsx)(L.c, { gap: 24 }) : null,
                 this.renderVoiceBitrate(e, n),
@@ -2632,7 +2629,7 @@ class nJ extends i.PureComponent {
             },
             pickerIntention: nU.EmojiIntention.COMMUNITY_CONTENT,
             channel: n,
-            analyticsOverride: nH,
+            analyticsOverride: nB,
         });
     };
     handleRequireTagChanged = (e) => {

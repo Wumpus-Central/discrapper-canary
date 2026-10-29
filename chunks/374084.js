@@ -161,6 +161,5 @@ var D =
     (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
     (r[(r.TODO = 1)] = "TODO"),
     (r[(r.RESOURCE = 2)] = "RESOURCE"),
-    (r[(r.RULES = 3)] = "RULES"),
-    (r[(r.UPDATES = 4)] = "UPDATES"),
+    (r[(r.UPDATES = 3)] = "UPDATES"),
     r);

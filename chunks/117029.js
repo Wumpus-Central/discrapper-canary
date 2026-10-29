@@ -9,10 +9,10 @@ var i = n(477900),
     c = n(866665),
     d = n(408278),
     m = n(92259),
-    p = n(205513),
+    p = n(893007),
     g = n(218429),
-    x = n(964486),
-    f = n(461782),
+    f = n(964486),
+    x = n(461782),
     h = n(360906),
     A = n(40056),
     v = n(105292),
@@ -26,14 +26,14 @@ function I(e) {
 }
 let S = l.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: S, onPreventIdle: _, onAllowIdle: N } = l.useContext(f.k3),
+        { onActive: S, onPreventIdle: _, onAllowIdle: N } = l.useContext(x.k3),
         {
             enabled: b,
             zoomLevel: y,
             minZoom: T,
             maxZoom: L,
-            isDragging: R,
-            isWheeling: D,
+            isDragging: D,
+            isWheeling: R,
             isSlidering: k,
             setIsSlidering: w,
             doZoom: M,
@@ -101,11 +101,11 @@ let S = l.memo(function (e) {
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * i}%`,
                 "--custom-zoom-indicator-transition":
-                    R || U || D || k
+                    D || U || R || k
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [R, U, D, k, P, y, V]),
+        }, [D, U, R, k, P, y, V]),
         et = l.useCallback(
             (e) => {
                 (e.preventDefault(), e.stopPropagation(), M(y - 0.25, A.qd, "button"));
@@ -131,7 +131,7 @@ let S = l.memo(function (e) {
             },
             [M, S, w],
         );
-    return ((0, x.l0)(() => {
+    return ((0, f.l0)(() => {
         ei.current?.stop();
     }),
     b && null != n)
@@ -185,13 +185,13 @@ let S = l.memo(function (e) {
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
-                                      (0, i.jsx)(p.G, {
+                                      (0, i.jsx)(p.A, {
                                           minValue: T,
                                           maxValue: L,
-                                          initialValue: y,
+                                          step: 0.01,
                                           value: y,
-                                          asValueChanges: el,
-                                          onValueRender: (e) => `${Math.round(100 * e)}%`,
+                                          onChange: el,
+                                          formatValue: (e) => `${Math.round(100 * e)}%`,
                                           "aria-label": v.intl.string(v.t.grzPmr),
                                       }),
                                   ],
