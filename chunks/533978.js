@@ -1,4 +1,4 @@
-t.d(n, { A: () => O });
+t.d(n, { A: () => L });
 var i = t(477900),
     l = t(582128),
     s = t(17928),
@@ -11,159 +11,167 @@ var i = t(477900),
     A = t(480890),
     h = t(160761),
     m = t(421773),
-    g = t(600597),
-    x = t(813564),
-    C = t(674168),
-    f = t(987933),
-    p = t(714736),
-    E = t(662080),
-    j = t(754388),
-    v = t(173660),
-    I = t(665252),
-    N = t(999926),
-    T = t(607567),
-    _ = t(246356),
-    b = t(204651);
+    g = t(994153),
+    x = t(600597),
+    C = t(813564),
+    f = t(674168),
+    p = t(987933),
+    E = t(714736),
+    j = t(829834),
+    v = t(662080),
+    I = t(754388),
+    N = t(173660),
+    T = t(665252),
+    _ = t(999926),
+    b = t(607567),
+    S = t(246356),
+    y = t(204651);
 t(980504);
-var S = t(376086),
-    y = t(105292);
-function O(e) {
-    let { channel: n, themeable: O, whichPopoutIsOpen: R, setWhichPopoutIsOpen: L, idle: M } = e,
-        { parentAnalyticsLocation: D } = (0, u.Ay)(),
+var O = t(376086),
+    R = t(105292);
+function L(e) {
+    let { channel: n, themeable: L, whichPopoutIsOpen: D, setWhichPopoutIsOpen: M, idle: G } = e,
+        { parentAnalyticsLocation: P } = (0, u.Ay)(),
         {
-            Component: G,
-            play: P,
-            events: { onMouseEnter: k, onMouseLeave: U },
+            Component: k,
+            play: U,
+            events: { onMouseEnter: V, onMouseLeave: B },
         } = (0, r.E)(),
-        V = n.getGuildId(),
-        { mute: B, suppress: w } = (0, v.A)(n),
-        H = (0, s.bG)([N.Ay], () => N.Ay.isDeaf()),
-        Y = B || w || H,
-        z = (0, x.VE)({ isSoundboardButtonDisabled: Y }),
-        [K, F] = (0, h.DP)(z),
-        { analyticsLocations: X } = (0, u.Ay)(),
-        { showQuickAccess: q } = (0, g.j)("ActionBarSoundboardButton"),
-        [Q, W] = l.useState(q),
-        J = l.useCallback(
+        w = n.getGuildId(),
+        { mute: H, suppress: Y } = (0, N.A)(n),
+        z = (0, s.bG)([_.Ay], () => _.Ay.isDeaf()),
+        K = H || Y || z,
+        F = (0, C.VE)({ isSoundboardButtonDisabled: K }),
+        [X, q] = (0, h.DP)(F),
+        { analyticsLocations: Q } = (0, u.Ay)(),
+        W = (0, g.N)(w, "ActionBarSoundboardButton") && !K,
+        J = l.useCallback((e) => (0, i.jsx)(j.A, { showDot: W, children: (0, i.jsx)(k, { ...e }) }), [k, W]),
+        { showQuickAccess: $ } = (0, x.j)("ActionBarSoundboardButton"),
+        [Z, ee] = l.useState($),
+        en = l.useCallback(
             (e) => {
-                q && W(e);
+                $ && ee(e);
             },
-            [q],
+            [$],
         ),
-        $ = l.useCallback(() => J(!1), [J]),
-        { enabled: Z } = (0, p.W)(V ?? "0", "ActionBarSoundboardButton"),
-        { isHovered: ee, setIsHovered: en, onMouseEnter: et, onMouseLeave: ei } = (0, m.A)(200, 300),
-        el = l.useMemo(() => (ee && (R === S.P.SOUNDBOARD || null == R)) || R === S.P.SOUNDBOARD, [ee, R]);
-    function es(e) {
-        null != V &&
+        et = l.useCallback(() => en(!1), [en]),
+        { enabled: ei } = (0, E.W)(w ?? "0", "ActionBarSoundboardButton"),
+        { isHovered: el, setIsHovered: es, onMouseEnter: ea, onMouseLeave: er } = (0, m.A)(200, 300),
+        eo = l.useMemo(() => (el && (D === O.P.SOUNDBOARD || null == D)) || D === O.P.SOUNDBOARD, [el, D]);
+    function ec() {
+        return H
+            ? R.intl.string(R.t["Ox4/zU"])
+            : Y
+              ? R.intl.string(R.t["+YBKYI"])
+              : z
+                ? R.intl.string(R.t.X1lQli)
+                : R.intl.string(R.t["6EJvHt"]);
+    }
+    function eu(e) {
+        null != w &&
             (0, c.L3)(e, async () => {
                 let { default: e } = await t.e("811562").then(t.bind(t, 666801));
                 return (n) =>
                     (0, i.jsx)(e, {
-                        guildId: V,
-                        sourceAnalyticsLocations: X,
+                        guildId: w,
+                        sourceAnalyticsLocations: Q,
                         ...n,
-                        onInteraction: (0, A.s)("SoundboardContextMenu", D),
+                        onInteraction: (0, A.s)("SoundboardContextMenu", P),
                     });
             });
     }
-    function ea() {
-        (P(), null != R && et(), Q && $(), L?.(S.P.SOUNDBOARD));
+    function ed() {
+        (U(), null != D && ea(), Z && et(), M?.(O.P.SOUNDBOARD));
     }
-    function er() {
-        ((0, d.X)(D, d.O.SOUNDBOARD), R === S.P.SOUNDBOARD ? (L?.(void 0), ei()) : ea());
+    function eA() {
+        ((0, d.X)(P, d.O.SOUNDBOARD), D === O.P.SOUNDBOARD ? (M?.(void 0), er()) : ed());
     }
     l.useEffect(() => {
-        el || Q || J(!0);
-    }, [el, Q, J]);
-    let eo = l.useCallback(() => {
-            null == R && L?.(S.P.SOUNDBOARD);
-        }, [R, L]),
-        ec = l.useRef(null),
-        { usersInChannel: eu } = (0, s.cf)([T.Ay], () => ({ usersInChannel: T.Ay.countVoiceStatesForChannel(n.id) }), [
+        eo || Z || en(!0);
+    }, [eo, Z, en]);
+    let eh = l.useCallback(() => {
+            null == D && M?.(O.P.SOUNDBOARD);
+        }, [D, M]),
+        em = l.useRef(null),
+        { usersInChannel: eg } = (0, s.cf)([b.Ay], () => ({ usersInChannel: b.Ay.countVoiceStatesForChannel(n.id) }), [
             n,
         ]),
-        [ed, eA] = l.useState(!1);
+        [ex, eC] = l.useState(!1);
     return (
         l.useEffect(() => {
-            let e = eu >= 2 && !Y && null == R;
-            if (M || !e) return void eA(!1);
-            let n = setTimeout(() => eA(!0), 300);
+            let e = eg >= 2 && !K && null == D;
+            if (G || !e) return void eC(!1);
+            let n = setTimeout(() => eC(!0), 300);
             return () => clearTimeout(n);
-        }, [M, Y, eu, R]),
+        }, [G, K, eg, D]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Y, {
-                    targetElementRef: ec,
-                    shouldShow: el,
+                    targetElementRef: em,
+                    shouldShow: eo,
                     animation: o.Y.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        (en(!1), L?.(void 0));
+                        (es(!1), M?.(void 0));
                     },
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return Y
+                        return K
                             ? null
-                            : (0, i.jsx)(_.A, {
+                            : (0, i.jsx)(S.A, {
                                   children: (0, i.jsx)("div", {
-                                      onMouseEnter: et,
-                                      onMouseLeave: ei,
-                                      onMouseDown: eo,
-                                      children: Q
-                                          ? (0, i.jsx)(E.A, {
+                                      onMouseEnter: ea,
+                                      onMouseLeave: er,
+                                      onMouseDown: eh,
+                                      children: Z
+                                          ? (0, i.jsx)(v.A, {
                                                 channel: n,
-                                                guildId: V,
-                                                openFullPicker: $,
+                                                guildId: w,
+                                                openFullPicker: et,
                                                 onClose: t,
                                                 analyticsSource: "action bar button",
-                                                showEchoes: Z,
+                                                showEchoes: ei,
                                             })
-                                          : (0, i.jsx)(j.A, {
-                                                guildId: V,
+                                          : (0, i.jsx)(I.A, {
+                                                guildId: w,
                                                 channel: n,
                                                 onClose: t,
                                                 gridNotice:
-                                                    K === a.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                                    (0, i.jsx)(C.m, { onClose: t, markAsDismissed: F }),
+                                                    X === a.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                                    (0, i.jsx)(f.m, { onClose: t, markAsDismissed: q }),
                                                 analyticsSource: "action bar button",
-                                                showEchoes: Z,
+                                                showEchoes: ei,
                                             }),
                                   }),
                               });
                     },
                     children: () =>
-                        (0, i.jsx)(b.l, {
-                            ref: ec,
+                        (0, i.jsx)(y.l, {
+                            ref: em,
                             isTrayButton: !0,
-                            themeable: O,
-                            label: B
-                                ? y.intl.string(y.t["Ox4/zU"])
-                                : w
-                                  ? y.intl.string(y.t["+YBKYI"])
-                                  : H
-                                    ? y.intl.string(y.t.X1lQli)
-                                    : y.intl.string(y.t["6EJvHt"]),
-                            iconComponent: G,
-                            disabled: Y,
-                            onContextMenu: es,
-                            onClick: er,
+                            themeable: L,
+                            label: ec(),
+                            "aria-label": W ? R.intl.string(R.t.D923q4) : ec(),
+                            iconComponent: J,
+                            disabled: K,
+                            onContextMenu: eu,
+                            onClick: eA,
                             onMouseEnter: (e) => {
-                                (k(), "focus" !== e.type && et());
+                                (V(), "focus" !== e.type && ea());
                             },
                             onMouseLeave: () => {
-                                null == R && (ei(), U());
+                                null == D && (er(), B());
                             },
-                            isActive: ee || R === S.P.SOUNDBOARD,
-                            color: ee || R === S.P.SOUNDBOARD ? "primaryDark" : void 0,
+                            isActive: el || D === O.P.SOUNDBOARD,
+                            color: el || D === O.P.SOUNDBOARD ? "primaryDark" : void 0,
                         }),
                 }),
-                !el && null != V && Z ? (0, i.jsx)(I.A, { guildId: V, channelId: n.id }) : null,
-                ed &&
-                    (0, i.jsx)(f.A, { targetElementRef: ec, openSoundboardPicker: ea, shouldShowSoundboardPicker: el }),
+                !eo && null != w && ei ? (0, i.jsx)(T.A, { guildId: w, channelId: n.id }) : null,
+                ex &&
+                    (0, i.jsx)(p.A, { targetElementRef: em, openSoundboardPicker: ed, shouldShowSoundboardPicker: eo }),
             ],
         })
     );

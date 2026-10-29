@@ -1,4 +1,4 @@
-n.d(t, { A: () => tS });
+n.d(t, { A: () => tv });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -23,22 +23,24 @@ var x = n(562708),
     b = n(369606),
     I = n(939249),
     v = n(297264),
-    N = n(358618),
-    T = n(983851),
-    j = n(442433),
-    k = n(537652),
-    _ = n(212245),
-    R = n(139286),
-    O = n(915089),
-    w = n(724511),
-    M = n(850992),
-    L = n(887695),
-    P = n(435558),
-    D = n(962125),
-    U = n(24482),
-    V = n(240864),
-    W = n(212633);
-let F = (0, P.throttle)(
+    N = n(62010),
+    T = n(358618),
+    j = n(983851),
+    k = n(442433),
+    _ = n(537652),
+    R = n(212245),
+    O = n(139286),
+    w = n(520117),
+    M = n(915089),
+    L = n(724511),
+    P = n(850992),
+    D = n(887695),
+    U = n(435558),
+    V = n(962125),
+    W = n(24482),
+    F = n(240864),
+    B = n(212633);
+let G = (0, U.throttle)(
         function (e) {
             let {
                 listRef: t,
@@ -49,7 +51,7 @@ let F = (0, P.throttle)(
                 sectionFooterHeight: s,
             } = e;
             if (null == t.current) return;
-            let a = (0, V.s)({
+            let a = (0, F.s)({
                 listRef: t,
                 searchQuery: n,
                 nitroLockedSectionStates: l,
@@ -65,7 +67,7 @@ let F = (0, P.throttle)(
         300,
         { leading: !1, trailing: !0 },
     ),
-    B = function (e) {
+    K = function (e) {
         let {
                 categories: t,
                 store: n,
@@ -93,13 +95,13 @@ let F = (0, P.throttle)(
             N = i.useMemo(
                 () =>
                     t.map((e) =>
-                        (0, U.Em)(e.categoryInfo)
+                        (0, W.Em)(e.categoryInfo)
                             ? { isNitroLocked: e.categoryInfo.isNitroLocked }
                             : { isNitroLocked: !1 },
                     ),
                 [t],
             ),
-            T = (0, L.Fk)({
+            T = (0, D.Fk)({
                 activeCategoryIndex: v,
                 isScrolling: C,
                 listRef: b,
@@ -110,7 +112,7 @@ let F = (0, P.throttle)(
             j = i.useCallback(
                 (e) => {
                     (T(e),
-                        F({
+                        G({
                             listRef: b,
                             searchQuery: I,
                             nitroLockedSectionStates: N,
@@ -126,7 +128,7 @@ let F = (0, P.throttle)(
             i.useEffect(() => {
                 null != b.current && j(b.current.getScrollerNode()?.scrollTop ?? 0);
             }, [j, b]),
-            (0, L.FV)({ searchQuery: I, activeCategoryIndex: v, listRef: b }),
+            (0, D.FV)({ searchQuery: I, activeCategoryIndex: v, listRef: b }),
             i.useImperativeHandle(
                 A,
                 () => ({
@@ -160,11 +162,11 @@ let F = (0, P.throttle)(
                 [],
             ),
             (0, l.jsxs)("div", {
-                className: W.i,
+                className: B.i,
                 children: [
                     I.length > 0 && !r && null != m
                         ? m()
-                        : (0, l.jsx)(D.A, {
+                        : (0, l.jsx)(V.A, {
                               role: "none presentation",
                               listPadding: s,
                               onScroll: j,
@@ -186,11 +188,11 @@ let F = (0, P.throttle)(
             })
         );
     };
-var K = n(462180),
-    G = n(602034),
-    H = n(683438),
-    z = n(642232);
-let q = function (e) {
+var H = n(462180),
+    z = n(602034),
+    q = n(683438),
+    $ = n(642232);
+let Q = function (e) {
     let {
             store: t,
             hasSendableExpressions: n,
@@ -202,12 +204,12 @@ let q = function (e) {
             ref: c,
         } = e,
         h = i.useRef(null),
-        [m, f] = (0, d.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], K.x),
+        [m, f] = (0, d.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], H.x),
         p = t.useStore((e) => e.searchPlaceholder),
-        [g, x] = t.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], K.x),
+        [g, x] = t.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], H.x),
         E = i.useCallback(
             (e) => {
-                (t.setActiveCategoryIndex("" === e ? 0 : M.Uk),
+                (t.setActiveCategoryIndex("" === e ? 0 : P.Uk),
                     t.setInspectedExpressionPosition(0, 0),
                     t.setSearchPlaceholder(null),
                     (0, d.Ri)(e),
@@ -224,8 +226,8 @@ let q = function (e) {
             f && h.current?.focus();
         }, [f]),
         (0, l.jsx)("div", {
-            className: z.i,
-            children: (0, l.jsx)(H.I, {
+            className: $.i,
+            children: (0, l.jsx)(q.I, {
                 autoFocus: n,
                 disabled: !n,
                 query: m,
@@ -238,14 +240,14 @@ let q = function (e) {
                     "aria-haspopup": "grid",
                     "aria-controls": s,
                     "aria-expanded": !0,
-                    ...(x ? { "aria-activedescendant": (0, G.Aq)(s, g.columnIndex, g.rowIndex) } : void 0),
+                    ...(x ? { "aria-activedescendant": (0, z.Aq)(s, g.columnIndex, g.rowIndex) } : void 0),
                 },
             }),
         })
     );
 };
-var $ = n(904289);
-function Q(e) {
+var Z = n(904289);
+function X(e) {
     let {
             categories: t,
             collapsedCategories: n,
@@ -279,19 +281,19 @@ function Q(e) {
             renderUpsell: w,
         } = e,
         M = i.useRef(null),
+        L = i.useRef(null),
         P = i.useRef(null),
-        D = i.useRef(null),
         U = 0 === t.length,
         V = (0, d.RQ)((e) => e.searchQuery),
         W = s.useStore((e) => e.inspectedExpressionPosition),
-        F = (0, L.oV)({ gridWrapperRef: M, containerWidth: r, showingEmptyState: U }),
+        F = (0, D.oV)({ gridWrapperRef: M, containerWidth: r, showingEmptyState: U }),
         {
-            expressionsGrid: K,
+            expressionsGrid: B,
             rowCount: G,
             rowCountBySection: H,
             columnCounts: z,
-            gutterWidth: Q,
-        } = (0, L.se)({
+            gutterWidth: q,
+        } = (0, D.se)({
             categories: t,
             collapsedCategories: n,
             gridWidth: F,
@@ -300,15 +302,15 @@ function Q(e) {
             itemNodeMargin: j,
         }),
         {
-            getItemProps: Z,
+            getItemProps: $,
             getRowProps: X,
             gridContainerProps: J,
             handleGridContainerKeyDown: Y,
             isUsingKeyboardNavigation: ee,
-        } = (0, L.JZ)({
+        } = (0, D.JZ)({
             columnCounts: z,
-            expressionsListRef: P,
-            expressionsGrid: K,
+            expressionsListRef: L,
+            expressionsGrid: B,
             onSelectItem: a,
             store: s,
             gridNavigatorId: _,
@@ -316,23 +318,23 @@ function Q(e) {
         et = i.useCallback(
             (e, t) =>
                 p(
-                    K[e],
+                    B[e],
                     X(e),
                     {
                         isUsingKeyboardNavigation: ee.current,
-                        gutterWidth: Q,
+                        gutterWidth: q,
                         rowIndex: e,
                         totalRowCount: G,
                         sectionIndex: t.sectionIndex,
                     },
-                    (t) => Z(e, t),
+                    (t) => $(e, t),
                     (t) => s.setInspectedExpressionPosition(t, e),
                 ),
-            [K, Z, X, Q, ee, p, s, G],
+            [B, $, X, q, ee, p, s, G],
         ),
         en = i.useCallback((e) => x?.(t[e], e), [t, x]),
         el = i.useCallback((e) => E?.(t[e], e), [t, E]),
-        ei = i.useCallback(() => S?.(K?.[W.rowIndex]?.[W.columnIndex]), [K, W.columnIndex, W.rowIndex, S]);
+        ei = i.useCallback(() => S?.(B?.[W.rowIndex]?.[W.columnIndex]), [B, W.columnIndex, W.rowIndex, S]);
     (i.useEffect(() => {
         o(V);
     }, [o, V]),
@@ -341,16 +343,16 @@ function Q(e) {
         }),
         i.useEffect(() => s.resetStoreState, [s.resetStoreState]),
         i.useLayoutEffect(() => {
-            D.current?.focus();
+            P.current?.focus();
         }, []));
     let er = (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(q, {
-                ref: D,
+            (0, l.jsx)(Q, {
+                ref: P,
                 store: s,
                 hasSendableExpressions: !0,
                 onKeyDown: Y,
-                expressionsListRef: P,
+                expressionsListRef: L,
                 gridNavigatorId: _,
                 defaultSearchPlaceholder: h,
                 emptySearchPlaceholder: m,
@@ -360,23 +362,23 @@ function Q(e) {
     });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != O ? O(er) : (0, l.jsxs)("div", { className: $.wx, children: [" ", er, " "] }),
+            null != O ? O(er) : (0, l.jsxs)("div", { className: Z.wx, children: [" ", er, " "] }),
             U && null != f
-                ? f($.p$)
+                ? f(Z.p$)
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          A(P),
-                          null != R && (0, l.jsx)("div", { className: $.Eb, children: R }),
+                          A(L),
+                          null != R && (0, l.jsx)("div", { className: Z.Eb, children: R }),
                           (0, l.jsx)("div", {
                               ref: M,
-                              className: $.AD,
+                              className: Z.AD,
                               id: _,
                               ...J,
                               children:
                                   null != F
-                                      ? (0, l.jsx)(B, {
+                                      ? (0, l.jsx)(K, {
                                             categories: t,
-                                            ref: P,
+                                            ref: L,
                                             store: s,
                                             hasSearchResults: c,
                                             listPadding: k,
@@ -401,42 +403,43 @@ function Q(e) {
         ],
     });
 }
-var Z = n(89366),
-    X = n(319993),
-    J = n(202639),
-    Y = n(414872),
-    ee = n(285373),
-    et = n(609178),
-    en = n(253932),
-    el = n(763827),
-    ei = n(287809),
-    er = n(977997),
-    es = n(147925),
-    ea = n(174459),
-    eo = n(807348),
-    eu = n(813564),
-    ec = n(147472);
+var J = n(89366),
+    Y = n(319993),
+    ee = n(202639),
+    et = n(414872),
+    en = n(285373),
+    el = n(609178),
+    ei = n(253932),
+    er = n(763827),
+    es = n(287809),
+    ea = n(977997),
+    eo = n(147925),
+    eu = n(174459),
+    ec = n(994153),
+    ed = n(807348),
+    eh = n(813564),
+    em = n(147472);
 n(321073);
-var ed = n(964486),
-    eh = n(931991),
-    em = n(734057),
-    ef = n(71393),
-    ep = n(576705),
-    eg = n(309010),
-    ex = n(473145),
-    eE = n(636537),
-    eS = n(73153),
-    ey = n(463347),
-    eA = n(125831),
-    eC = n(652215),
-    eb = n(805143),
-    eI = n(194567),
-    ev = n(980504),
-    eN = n(202541);
-function eT(e, t) {
-    return (null != t && (e = t(e)), e.map((e, t) => ({ type: eo.uq.SOUND, sound: e, index: t })));
+var ef = n(964486),
+    ep = n(931991),
+    eg = n(734057),
+    ex = n(71393),
+    eE = n(576705),
+    eS = n(309010),
+    ey = n(473145),
+    eA = n(636537),
+    eC = n(73153),
+    eb = n(463347),
+    eI = n(125831),
+    ev = n(652215),
+    eN = n(805143),
+    eT = n(194567),
+    ej = n(980504),
+    ek = n(202541);
+function e_(e, t) {
+    return (null != t && (e = t(e)), e.map((e, t) => ({ type: ed.uq.SOUND, sound: e, index: t })));
 }
-function ej(e) {
+function eR(e) {
     let { sections: t, guildIds: n, allSounds: l, potentialSoundIdsForSection: i, sectionType: r, sortSoundsFn: s } = e,
         a = {};
     for (let e of [...n, "0"])
@@ -446,30 +449,32 @@ function ej(e) {
         let t = a[e];
         null != t && o.push(t);
     }
-    let u = eT(o, s);
+    let u = e_(o, s);
     u.length > 0 && t.push({ key: r, categoryInfo: { type: r }, items: u });
 }
-function ek(e, t) {
-    let n = t.get("0") ?? ev.pD;
-    e.push({ key: eo.Cx.DEFAULTS, categoryInfo: { type: eo.Cx.DEFAULTS }, items: eT(n, eI.U9) });
+function eO(e, t) {
+    let n = t.get("0") ?? ej.pD;
+    e.push({ key: ed.Cx.DEFAULTS, categoryInfo: { type: ed.Cx.DEFAULTS }, items: e_(n, eT.U9) });
 }
-var e_ = n(340368),
-    eR = n(837381),
-    eO = n(866665),
-    ew = n(713517),
-    eM = n(88218),
-    eL = n(407698),
-    eP = n(941971),
-    eD = n(698279),
-    eU = n(105292),
-    eV = n(120052);
-let eW = [8, 8, 8, 8],
-    eF = "soundboard_guild_",
-    { itemIdForIndex: eB } = (0, eM.J)(eF);
-function eK(e) {
+var ew = n(258204),
+    eM = n(340368),
+    eL = n(837381),
+    eP = n(866665),
+    eD = n(521588),
+    eU = n(713517),
+    eV = n(88218),
+    eW = n(407698),
+    eF = n(941971),
+    eB = n(698279),
+    eG = n(105292),
+    eK = n(120052);
+let eH = [8, 8, 8, 8],
+    ez = "soundboard_guild_",
+    { itemIdForIndex: eq } = (0, eV.J)(ez);
+function e$(e) {
     let { children: t, className: n, isSelected: r, listItemProps: s, onClick: a } = e,
         o = i.useRef(null),
-        { isHoveringOrFocusing: u } = (0, ew.A)(o);
+        { isHoveringOrFocusing: u } = (0, eU.A)(o);
     return (0, l.jsxs)(I.D, {
         innerRef: o,
         ...s,
@@ -477,98 +482,102 @@ function eK(e) {
         onClick: a,
         children: [
             (0, l.jsx)("div", {
-                className: eV.a$,
-                children: (0, l.jsx)(eP.A, { hovered: u, selected: r, size: "small" }),
+                className: eK.a$,
+                children: (0, l.jsx)(eF.A, { hovered: u, selected: r, size: "small" }),
             }),
             t,
         ],
     });
 }
-function eG(e) {
+function eQ(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: r } = e;
-    return (0, l.jsx)(eK, {
-        className: s()(eV.Yl, { [eV.wH]: n }),
+    return (0, l.jsx)(e$, {
+        className: s()(eK.Yl, { [eK.wH]: n }),
         isSelected: n,
         listItemProps: r,
         onClick: i,
-        children: (0, l.jsx)(t, { className: eV.xi, color: "currentColor" }),
+        children: (0, l.jsx)(t, { className: eK.xi, color: "currentColor" }),
     });
 }
-function eH(e, t, n, i, r) {
+function eZ(e, t, n, i, r, s) {
     switch (e.categoryInfo.type) {
-        case eo.Cx.FAVORITES:
-            return (0, l.jsx)(eG, { icon: S.StarIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
-        case eo.Cx.FREQUENTLY_USED:
-            return (0, l.jsx)(eG, { icon: y.ClockIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
-        case eo.Cx.GUILD:
-            return (0, l.jsx)(
-                eK,
+        case ed.Cx.FAVORITES:
+            return (0, l.jsx)(eQ, { icon: S.StarIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
+        case ed.Cx.FREQUENTLY_USED:
+            return (0, l.jsx)(eQ, { icon: y.ClockIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
+        case ed.Cx.GUILD:
+            return (0, l.jsxs)(
+                e$,
                 {
-                    className: eV.L1,
+                    className: eK.L1,
                     isSelected: n,
                     listItemProps: i,
                     onClick: t,
-                    children: (0, l.jsx)(w.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: r }),
+                    children: [
+                        (0, l.jsx)(L.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: r }),
+                        s && (0, l.jsx)(eD.a, { bottom: -2, right: -2, showBlurpleTreatment: !0 }),
+                    ],
                 },
                 e.key,
             );
-        case eo.Cx.DEFAULTS:
-            return (0, l.jsx)(eG, { icon: A.p, onClick: t, isSelected: n, listItemProps: i }, e.key);
-        case eo.Cx.TOP_SOUNDS:
-            return (0, l.jsx)(eG, { icon: b.TrophyIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
+        case ed.Cx.DEFAULTS:
+            return (0, l.jsx)(eQ, { icon: A.p, onClick: t, isSelected: n, listItemProps: i }, e.key);
+        case ed.Cx.TOP_SOUNDS:
+            return (0, l.jsx)(eQ, { icon: b.TrophyIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
         default:
             return null;
     }
 }
-function ez(e) {
-    let { category: t, categoryIndex: n, onClick: i, isSelected: r, isNitroLocked: s } = e,
-        a = (0, eR.rm)(eB(n));
-    return t.categoryInfo.type === eo.Cx.GUILD
-        ? (0, l.jsx)(eL.Q, { guild: t.categoryInfo.guild, children: eH(t, i, r, a, s) })
-        : (0, l.jsx)(eO.m, {
+function eX(e) {
+    let { category: t, categoryIndex: n, onClick: i, isSelected: r, isNitroLocked: s, hasNewSounds: a } = e,
+        o = (0, eL.rm)(eq(n));
+    return t.categoryInfo.type === ed.Cx.GUILD
+        ? (0, l.jsx)(eW.Q, { guild: t.categoryInfo.guild, children: eZ(t, i, r, o, s, a) })
+        : (0, l.jsx)(eP.m, {
               text: (function (e) {
                   switch (e.categoryInfo.type) {
-                      case eo.Cx.FAVORITES:
-                          return eU.intl.string(eU.t.k8fFjp);
-                      case eo.Cx.FREQUENTLY_USED:
-                          return eU.intl.string(eU.t["+cGVV6"]);
-                      case eo.Cx.GUILD:
+                      case ed.Cx.FAVORITES:
+                          return eG.intl.string(eG.t.k8fFjp);
+                      case ed.Cx.FREQUENTLY_USED:
+                          return eG.intl.string(eG.t["+cGVV6"]);
+                      case ed.Cx.GUILD:
                           return e.categoryInfo.guild.name;
-                      case eo.Cx.DEFAULTS:
-                          return eU.intl.string(eU.t.Rtvk9X);
-                      case eo.Cx.TOP_SOUNDS:
-                          return eU.intl.formatToPlainString(eU.t.GXs41w, { guildName: e.categoryInfo.guild.name });
+                      case ed.Cx.DEFAULTS:
+                          return eG.intl.string(eG.t.Rtvk9X);
+                      case ed.Cx.TOP_SOUNDS:
+                          return eG.intl.formatToPlainString(eG.t.GXs41w, { guildName: e.categoryInfo.guild.name });
                   }
               })(t),
               position: "right",
               align: "center",
-              children: eH(t, i, r, a, s),
+              children: eZ(t, i, r, o, s, !1),
           });
 }
-function eq(e) {
+function eJ(e) {
     let {
             soundboardListRef: t,
             categories: n,
             shouldUpsellLockedCategories: r,
-            listPadding: a = eW,
+            listPadding: a = eH,
             guildId: o,
             inExpressionPicker: u,
+            newSoundGuildIds: c,
         } = e,
-        c = i.useRef(null),
-        d = (0, E.bG)([ei.default], () => ei.default.getCurrentUser()),
-        h = (0, U.TW)(d, eN.PremiumTypes.TIER_2),
-        m = i.useCallback(
+        d = i.useRef(null),
+        h = (0, E.bG)([es.default], () => es.default.getCurrentUser()),
+        m = (0, W.TW)(h, ek.PremiumTypes.TIER_2),
+        f = i.useCallback(
             (e, t, n, i) => {
-                let s = r && e$(e.categoryInfo, h, o);
-                return (0, l.jsx)(ez, {
+                let s = r && eY(e.categoryInfo, m, o);
+                return (0, l.jsx)(eX, {
                     category: e,
                     categoryIndex: t,
                     onClick: function () {
-                        (ea.default.track(eC.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                            location: { page: eC.liQ.SOUNDBOARD_POPOUT },
+                        (eu.default.track(ev.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                            location: { page: ev.liQ.SOUNDBOARD_POPOUT },
                             guild_id: o ?? null,
                             num_expressions: e.items.length,
-                            tab: eD.kx.SOUNDBOARD,
+                            tab: eB.kx.SOUNDBOARD,
                             sticker_pack_id: null,
                             pack_id: null,
                         }),
@@ -576,65 +585,66 @@ function eq(e) {
                     },
                     isSelected: i,
                     isNitroLocked: s,
+                    hasNewSounds: e.categoryInfo.type === ed.Cx.GUILD && c?.has(e.categoryInfo.guild.id) === !0,
                 });
             },
-            [o, r, h],
+            [o, r, m, c],
         );
-    return (0, l.jsx)(eM.A, {
-        className: s()(u ? eV.HZ : eV.jv),
-        categoryListRef: c,
+    return (0, l.jsx)(eV.A, {
+        className: s()(u ? eK.HZ : eK.jv),
+        categoryListRef: d,
         expressionsListRef: t,
-        store: M.LW,
+        store: P.LW,
         categories: n,
         listPadding: a,
-        renderCategoryListItem: m,
+        renderCategoryListItem: f,
         rowCount: n.length,
         categoryHeight: 40,
         navId: "soundboard-picker-categories",
-        itemIdPrefix: eF,
+        itemIdPrefix: ez,
     });
 }
-function e$(e, t, n) {
-    return (null == n && e.type === eo.Cx.GUILD && !t) || (e.type === eo.Cx.GUILD && e.guild.id !== n && !t);
+function eY(e, t, n) {
+    return (null == n && e.type === ed.Cx.GUILD && !t) || (e.type === ed.Cx.GUILD && e.guild.id !== n && !t);
 }
-var eQ = n(554146),
-    eZ = n(191023),
-    eX = n(192308),
-    eJ = n(28863),
-    eY = n(695366),
-    e0 = n(834730),
-    e1 = n(789645),
-    e2 = n(788026),
-    e5 = n(775602),
-    e3 = n(826673),
-    e8 = n(182922),
-    e6 = n(532624),
-    e7 = n(531685),
-    e4 = n(723702),
-    e9 = n(350535),
-    te = n(115023);
-function tt(e) {
+var e0 = n(554146),
+    e1 = n(191023),
+    e2 = n(192308),
+    e5 = n(28863),
+    e8 = n(695366),
+    e3 = n(834730),
+    e6 = n(789645),
+    e7 = n(788026),
+    e4 = n(775602),
+    e9 = n(826673),
+    te = n(182922),
+    tt = n(532624),
+    tn = n(531685),
+    tl = n(723702),
+    ti = n(350535),
+    tr = n(115023);
+function ts(e) {
     let { soundboardSound: t, closePicker: i } = e,
         r = (0, d.RQ)((e) => e.searchQuery),
         s = (0, m.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
-        a = (0, m.bG)([ef.A], () => ef.A.getGuild(t?.guildId)),
-        o = (0, m.bG)([e5.Ay], () => e5.Ay.useReducedMotion, []),
-        u = (0, m.bG)([e7.A], () => e7.A.isFocused()),
-        c = (0, m.bG)([e6.Ay], () => e6.Ay.getKeybindForAction(eC.hCu.SOUNDBOARD_HOLD));
+        a = (0, m.bG)([ex.A], () => ex.A.getGuild(t?.guildId)),
+        o = (0, m.bG)([e4.Ay], () => e4.Ay.useReducedMotion, []),
+        u = (0, m.bG)([tn.A], () => tn.A.isFocused()),
+        c = (0, m.bG)([tt.Ay], () => tt.Ay.getKeybindForAction(ev.hCu.SOUNDBOARD_HOLD));
     if (null != t && r.length > 0)
-        return (0, l.jsx)(e8.A, {
+        return (0, l.jsx)(te.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, l.jsx)(e2.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: te.Zg })
-                    : (0, l.jsx)(eZ.ImageIcon, { size: "md", color: "currentColor", className: te.Zg }),
-            graphicSecondary: null != a ? (0, l.jsx)(w.A, { guild: a, shouldAnimate: !o && u }) : null,
+                    ? (0, l.jsx)(e7.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tr.Zg })
+                    : (0, l.jsx)(e1.ImageIcon, { size: "md", color: "currentColor", className: tr.Zg }),
+            graphicSecondary: null != a ? (0, l.jsx)(L.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
             titleSecondary: a?.name,
             isFavorite: s,
         });
     function h() {
         (i(),
-            (0, eX.openModalLazy)(async () => {
+            (0, e2.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("161411"),
                     n.e("498640"),
@@ -644,38 +654,38 @@ function tt(e) {
                 return (t) => (0, l.jsx)(e, { ...t });
             }));
     }
-    let f = (0, e3.k8)(eQ.M.SOUNDBOARD_KEYBIND_TIP),
+    let f = (0, e9.k8)(e0.M.SOUNDBOARD_KEYBIND_TIP),
         p =
-            null != c && (0, e4.isWindows)() && !f
-                ? eU.intl.format(eU.t.udMTth, {
-                      keybind: (0, e9.dI)(c.shortcut, !0),
-                      openSettingsHook: (e, t) => (0, l.jsx)(eJ.Anchor, { onClick: h, children: e }, t),
+            null != c && (0, tl.isWindows)() && !f
+                ? eG.intl.format(eG.t.udMTth, {
+                      keybind: (0, ti.dI)(c.shortcut, !0),
+                      openSettingsHook: (e, t) => (0, l.jsx)(e5.Anchor, { onClick: h, children: e }, t),
                   })
                 : null;
     return null == p
         ? null
         : (0, l.jsxs)("div", {
-              className: te.g,
+              className: tr.g,
               children: [
-                  (0, l.jsx)(eY.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: te.QW }),
-                  (0, l.jsx)(e0.E, { variant: "text-sm/medium", color: "text-default", className: te.L5, children: p }),
+                  (0, l.jsx)(e8.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: tr.QW }),
+                  (0, l.jsx)(e3.E, { variant: "text-sm/medium", color: "text-default", className: tr.L5, children: p }),
                   (0, l.jsx)(I.D, {
-                      className: te.b,
+                      className: tr.b,
                       onClick: function () {
-                          return (0, e3.Dr)(eQ.M.SOUNDBOARD_KEYBIND_TIP);
+                          return (0, e9.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
                       },
-                      children: (0, l.jsx)(e1.P, { size: "xs", color: "currentColor" }),
+                      children: (0, l.jsx)(e6.P, { size: "xs", color: "currentColor" }),
                   }),
               ],
           });
 }
-var tn = n(805945),
-    tl = n(890856),
-    ti = n(307301),
-    tr = n(468689);
-function ts(e) {
-    (tr.A.open(e, eC.BEX.SOUNDBOARD),
-        (0, eX.openModalLazy)(async () => {
+var ta = n(805945),
+    to = n(890856),
+    tu = n(307301),
+    tc = n(468689);
+function td(e) {
+    (tc.A.open(e, ev.BEX.SOUNDBOARD),
+        (0, e2.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("860350"),
                 n.e("207998"),
@@ -699,34 +709,34 @@ function ts(e) {
             return (n) => (0, l.jsx)(t, { ...n, guildId: e });
         }));
 }
-var ta = n(948611),
-    to = n(308078);
-function tu(e) {
+var th = n(948611),
+    tm = n(308078);
+function tf(e) {
     let { guild: t, focused: n, onSelectItem: i, ...r } = e,
-        { canCreateExpressions: a } = (0, eh.nr)(t);
-    return (0, l.jsx)(eO.m, {
-        text: eU.intl.string(eU.t["fHo+z1"]),
+        { canCreateExpressions: a } = (0, ep.nr)(t);
+    return (0, l.jsx)(eP.m, {
+        text: eG.intl.string(eG.t["fHo+z1"]),
         shouldShow: !a,
         children: (0, l.jsx)("li", {
-            className: ta.H,
-            children: (0, l.jsxs)(tl.s, {
+            className: th.H,
+            children: (0, l.jsxs)(to.s, {
                 ...r,
-                "aria-label": eU.intl.formatToPlainString(eU.t.c1qVYh, { guildName: t.name }),
-                className: s()(to.n4, { [to.in]: n, [to.r9]: !a }),
-                onClick: () => (null != i ? i() : ts(t.id)),
+                "aria-label": eG.intl.formatToPlainString(eG.t.c1qVYh, { guildName: t.name }),
+                className: s()(tm.n4, { [tm.in]: n, [tm.r9]: !a }),
+                onClick: () => (null != i ? i() : td(t.id)),
                 children: [
-                    (0, l.jsx)(ti.j, { size: "sm", color: "currentColor" }),
-                    (0, l.jsx)(e0.E, {
+                    (0, l.jsx)(tu.j, { size: "sm", color: "currentColor" }),
+                    (0, l.jsx)(e3.E, {
                         variant: "text-xs/semibold",
                         color: a ? "currentColor" : "text-muted",
-                        children: eU.intl.string(eU.t["8Fu/S7"]),
+                        children: eG.intl.string(eG.t["8Fu/S7"]),
                     }),
                 ],
             }),
         }),
     });
 }
-function tc(e) {
+function tp(e) {
     let {
             descriptor: t,
             soundButtonProps: n,
@@ -741,19 +751,20 @@ function tc(e) {
             isNitroLocked: h,
             showLockForDisabledSound: m,
             inExpressionPicker: f,
+            isNew: p,
         } = e,
-        p = M.LW.useStore((e) => e.inspectedExpressionPosition),
-        g = `${l}-${r}`,
-        x = s && p.rowIndex === l && p.columnIndex === r;
+        g = P.LW.useStore((e) => e.inspectedExpressionPosition),
+        x = `${l}-${r}`,
+        E = s && g.rowIndex === l && g.columnIndex === r;
     switch (t.item.type) {
-        case eo.uq.SOUND:
-            return (0, i.createElement)(tn.Ay, {
+        case ed.uq.SOUND:
+            return (0, i.createElement)(ta.Ay, {
                 ...o(r),
                 ...n,
-                key: g,
+                key: x,
                 sound: t.item.sound,
                 suppressPlaySound: a,
-                focused: x,
+                focused: E,
                 onMouseEnter: () => c(r),
                 onSelectItem: (e) => u(t, e),
                 enableSecondaryActions: !0,
@@ -761,123 +772,145 @@ function tc(e) {
                 inNitroLockedSection: h,
                 showLockForDisabledSound: m,
                 isSoundmoji: !0 === f,
+                isNew: p,
             });
-        case eo.uq.ADD_SOUND:
-            return (0, i.createElement)(tu, {
+        case ed.uq.ADD_SOUND:
+            return (0, i.createElement)(tf, {
                 ...o(r),
-                key: g,
+                key: x,
                 guild: t.item.guild,
-                focused: x,
+                focused: E,
                 onSelectItem: () => u(t),
             });
     }
 }
-var td = n(635799);
-let th = 32 + Y.kg - 8,
-    tm = {
-        [eo.Cx.SEARCH]: u.A.SOUNDBOARD_SEARCH_RESULTS_SECTION,
-        [eo.Cx.DEFAULTS]: u.A.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
-        [eo.Cx.GUILD]: u.A.SOUNDBOARD_GUILD_SOUNDS_SECTION,
-        [eo.Cx.FAVORITES]: u.A.SOUNDBOARD_FAVORITES_SECTION,
-        [eo.Cx.FREQUENTLY_USED]: u.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
-        [eo.Cx.TOP_SOUNDS]: u.A.SOUNDBOARD_TOP_SOUNDS_SECTION,
+var tg = n(635799);
+let tx = 32 + et.kg - 8,
+    tE = {
+        [ed.Cx.SEARCH]: u.A.SOUNDBOARD_SEARCH_RESULTS_SECTION,
+        [ed.Cx.DEFAULTS]: u.A.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
+        [ed.Cx.GUILD]: u.A.SOUNDBOARD_GUILD_SOUNDS_SECTION,
+        [ed.Cx.FAVORITES]: u.A.SOUNDBOARD_FAVORITES_SECTION,
+        [ed.Cx.FREQUENTLY_USED]: u.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
+        [ed.Cx.TOP_SOUNDS]: u.A.SOUNDBOARD_TOP_SOUNDS_SECTION,
     };
-function tf(e) {
-    let { categoryInfo: t, collapsed: n, toggleCollapsed: i, isSectionNitroLocked: r, showNitroDivider: a } = e;
+function tS(e) {
+    let { onSeen: t } = e,
+        n = (0, w.A)({ onVisible: t, minTimeVisibleMs: 500 });
+    return (0, l.jsx)("div", { ref: n, "aria-hidden": !0 });
+}
+function ty(e) {
+    let {
+        categoryInfo: t,
+        collapsed: n,
+        toggleCollapsed: i,
+        isSectionNitroLocked: r,
+        showNitroDivider: a,
+        showNewBadge: o,
+        onNewSoundsSeen: u,
+    } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            a && (0, l.jsx)(Y.Ay, { className: td.yH }),
-            (0, l.jsx)("div", {
-                className: s()(td.hd, { [td.Jb]: r, [td.VD]: r }),
-                children: (0, l.jsx)(I.D, {
-                    className: td.bV,
-                    onClick: i,
-                    onKeyDown: (e) => e.stopPropagation(),
-                    "aria-expanded": !n,
-                    children: (0, l.jsxs)("div", {
-                        className: td.M2,
-                        children: [
-                            (function () {
-                                switch (t.type) {
-                                    case eo.Cx.FAVORITES:
-                                        return (0, l.jsx)(S.StarIcon, {
-                                            size: "xs",
-                                            color: "currentColor",
-                                            className: td.nr,
-                                        });
-                                    case eo.Cx.FREQUENTLY_USED:
-                                        return (0, l.jsx)(y.ClockIcon, {
-                                            size: "xs",
-                                            color: "currentColor",
-                                            className: td.nr,
-                                        });
-                                    case eo.Cx.GUILD:
-                                        return (0, l.jsx)(w.A, { guild: t.guild, height: 16, width: 16 });
-                                    case eo.Cx.DEFAULTS:
-                                        return (0, l.jsx)(A.p, {
-                                            size: "custom",
-                                            width: 28,
-                                            height: 28,
-                                            color: "currentColor",
-                                            className: td.nr,
-                                        });
-                                    case eo.Cx.SEARCH:
-                                        return (0, l.jsx)(C.MagnifyingGlassIcon, {
-                                            size: "md",
-                                            color: "currentColor",
-                                            className: td.nr,
-                                        });
-                                    case eo.Cx.TOP_SOUNDS:
-                                        return (0, l.jsx)(b.TrophyIcon, {
-                                            size: "xs",
-                                            color: "currentColor",
-                                            className: td.nr,
-                                        });
-                                }
-                            })(),
-                            (0, l.jsx)(v.D, {
-                                variant: "text-sm/semibold",
-                                color: "none",
-                                className: td.Gf,
-                                children: (function () {
+            a && (0, l.jsx)(et.Ay, { className: tg.yH }),
+            (0, l.jsxs)("div", {
+                className: s()(tg.hd, { [tg.Jb]: r, [tg.VD]: r }),
+                children: [
+                    (0, l.jsx)(I.D, {
+                        className: tg.bV,
+                        onClick: i,
+                        onKeyDown: (e) => e.stopPropagation(),
+                        "aria-expanded": !n,
+                        children: (0, l.jsxs)("div", {
+                            className: tg.M2,
+                            children: [
+                                (function () {
                                     switch (t.type) {
-                                        case eo.Cx.FAVORITES:
-                                            return eU.intl.string(eU.t.k8fFjp);
-                                        case eo.Cx.FREQUENTLY_USED:
-                                            return eU.intl.string(eU.t["+cGVV6"]);
-                                        case eo.Cx.GUILD:
-                                            return t.guild.name;
-                                        case eo.Cx.DEFAULTS:
-                                            return eU.intl.string(eU.t.Rtvk9X);
-                                        case eo.Cx.SEARCH:
-                                            return eU.intl.string(eU.t["zkoeq/"]);
-                                        case eo.Cx.TOP_SOUNDS:
-                                            return eU.intl.formatToPlainString(eU.t.GXs41w, {
-                                                guildName: t.guild.name,
+                                        case ed.Cx.FAVORITES:
+                                            return (0, l.jsx)(S.StarIcon, {
+                                                size: "xs",
+                                                color: "currentColor",
+                                                className: tg.nr,
+                                            });
+                                        case ed.Cx.FREQUENTLY_USED:
+                                            return (0, l.jsx)(y.ClockIcon, {
+                                                size: "xs",
+                                                color: "currentColor",
+                                                className: tg.nr,
+                                            });
+                                        case ed.Cx.GUILD:
+                                            return (0, l.jsx)(L.A, { guild: t.guild, height: 16, width: 16 });
+                                        case ed.Cx.DEFAULTS:
+                                            return (0, l.jsx)(A.p, {
+                                                size: "custom",
+                                                width: 28,
+                                                height: 28,
+                                                color: "currentColor",
+                                                className: tg.nr,
+                                            });
+                                        case ed.Cx.SEARCH:
+                                            return (0, l.jsx)(C.MagnifyingGlassIcon, {
+                                                size: "md",
+                                                color: "currentColor",
+                                                className: tg.nr,
+                                            });
+                                        case ed.Cx.TOP_SOUNDS:
+                                            return (0, l.jsx)(b.TrophyIcon, {
+                                                size: "xs",
+                                                color: "currentColor",
+                                                className: tg.nr,
                                             });
                                     }
                                 })(),
-                            }),
-                            (0, l.jsx)(es.A, {
-                                className: td.nr,
-                                direction: n ? es.A.Directions.RIGHT : es.A.Directions.DOWN,
-                            }),
-                        ],
+                                (0, l.jsx)(v.D, {
+                                    variant: "text-sm/semibold",
+                                    color: "none",
+                                    className: tg.Gf,
+                                    children: (function () {
+                                        switch (t.type) {
+                                            case ed.Cx.FAVORITES:
+                                                return eG.intl.string(eG.t.k8fFjp);
+                                            case ed.Cx.FREQUENTLY_USED:
+                                                return eG.intl.string(eG.t["+cGVV6"]);
+                                            case ed.Cx.GUILD:
+                                                return t.guild.name;
+                                            case ed.Cx.DEFAULTS:
+                                                return eG.intl.string(eG.t.Rtvk9X);
+                                            case ed.Cx.SEARCH:
+                                                return eG.intl.string(eG.t["zkoeq/"]);
+                                            case ed.Cx.TOP_SOUNDS:
+                                                return eG.intl.formatToPlainString(eG.t.GXs41w, {
+                                                    guildName: t.guild.name,
+                                                });
+                                        }
+                                    })(),
+                                }),
+                                o &&
+                                    (0, l.jsx)("span", {
+                                        className: tg.Ad,
+                                        children: (0, l.jsx)(N.E, { type: "new", variant: "primary" }),
+                                    }),
+                                (0, l.jsx)(eo.A, {
+                                    className: tg.nr,
+                                    direction: n ? eo.A.Directions.RIGHT : eo.A.Directions.DOWN,
+                                }),
+                            ],
+                        }),
                     }),
-                }),
+                    null != u && (0, l.jsx)(tS, { onSeen: u }),
+                ],
             }),
         ],
     });
 }
-function tp() {
-    return (0, l.jsx)(k.A, { message: eU.intl.string(eU.t.bgDdNK) });
+function tA() {
+    return (0, l.jsx)(_.A, { message: eG.intl.string(eG.t.bgDdNK) });
 }
-function tg(e) {
+function tC(e) {
     let { className: t } = e,
-        n = (0, E.bG)([g.A], () => g.A.isSoundboardVolumeMuted()) ? N._ : T.H;
+        n = (0, E.bG)([g.A], () => g.A.isSoundboardVolumeMuted()) ? T._ : j.H;
     return (0, l.jsx)(n, { size: "md", color: "currentColor", className: t });
 }
-function tx(e) {
+function tb(e) {
     let {
             guildId: t,
             channel: r,
@@ -895,89 +928,89 @@ function tx(e) {
             inExpressionPicker: v,
             analyticsSource: N,
         } = e,
-        { analyticsLocations: k } = (0, c.Ay)(),
-        { analyticsLocations: w } = (0, c.Ay)(u.A.PREMIUM_UPSELL),
-        { location: L } = (0, _.p)(),
-        P = i.useMemo(() => ({ ...L, section: eC.JJy.SOUNDBOARD_SOUND_PICKER }), [L]),
-        [D, V] = i.useState(null),
-        W = (0, E.bG)([ei.default], () => ei.default.getCurrentUser()),
-        F = (0, U.TW)(W, eN.PremiumTypes.TIER_2),
-        B = (0, E.bG)([er.A], () => er.A.getVoiceState(t, W?.id ?? eC.dJq)),
-        K = B?.selfDeaf || B?.mute || B?.suppress,
-        G = (0, d.RQ)((e) => e.searchQuery),
-        H = null != G && "" !== G,
-        z = (0, O.GV)(),
+        { analyticsLocations: T } = (0, c.Ay)(),
+        { analyticsLocations: _ } = (0, c.Ay)(u.A.PREMIUM_UPSELL),
+        { location: w } = (0, R.p)(),
+        L = i.useMemo(() => ({ ...w, section: ev.JJy.SOUNDBOARD_SOUND_PICKER }), [w]),
+        [D, U] = i.useState(null),
+        V = (0, E.bG)([es.default], () => es.default.getCurrentUser()),
+        F = (0, W.TW)(V, ek.PremiumTypes.TIER_2),
+        B = (0, E.bG)([ea.A], () => ea.A.getVoiceState(t, V?.id ?? ev.dJq)),
+        G = B?.selfDeaf || B?.mute || B?.suppress,
+        K = (0, d.RQ)((e) => e.searchQuery),
+        H = null != K && "" !== K,
+        z = (0, M.GV)(),
         {
             categories: q,
             availableSounds: $,
-            soundCounts: Y,
+            soundCounts: Q,
         } = (function (e) {
             let { filterOutEmptyCurrentGuild: t = !1 } =
                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                l = (0, E.bG)([ei.default], () => ei.default.getCurrentUser()),
-                r = U.Ay.isPremium(l, eN.PremiumTypes.TIER_2),
+                l = (0, E.bG)([es.default], () => es.default.getCurrentUser()),
+                r = W.Ay.isPremium(l, ek.PremiumTypes.TIER_2),
                 [s, a, o, u] = (0, E.yK)([g.A], () => [
                     g.A.getSounds(),
                     g.A.getFavorites(),
                     g.A.getFrequentlyUsedSoundIds(),
                     g.A.isFetching(),
                 ]),
-                c = (0, eI.IJ)(),
-                d = (0, eb.Y)(e, !1),
-                h = (0, E.yK)([ef.A], () => {
+                c = (0, eT.IJ)(),
+                d = (0, eN.Y)(e, !1),
+                h = (0, E.yK)([ex.A], () => {
                     let e = [];
                     return (
                         d.forEach((t) => {
-                            let n = ef.A.getGuild(t);
+                            let n = ex.A.getGuild(t);
                             null != n && e.push(n);
                         }),
                         e
                     );
                 }),
-                m = U.Ay.canUseSoundboardEverywhere(l),
-                f = (0, E.bG)([ef.A], () => ef.A.getGuild(e?.guild_id)),
+                m = W.Ay.canUseSoundboardEverywhere(l),
+                f = (0, E.bG)([ex.A], () => ex.A.getGuild(e?.guild_id)),
                 p = (0, E.bG)(
-                    [ep.A],
+                    [eE.A],
                     () => {
-                        let { canCreateExpressions: e } = (0, eh.ie)(f);
+                        let { canCreateExpressions: e } = (0, ep.ie)(f);
                         return e;
                     },
                     [f],
                 ),
                 x = i.useMemo(() => o.filter((e) => !a.has(e)).slice(0, 3), [o, a]),
-                S = (0, E.bG)([eg.Ay, em.A, ef.A], () => {
-                    let e = eg.Ay.getVoiceChannelId(),
-                        t = null != e ? em.A.getChannel(e) : null;
-                    return t?.guild_id != null ? ef.A.getGuild(t.guild_id) : void 0;
+                S = (0, E.bG)([eS.Ay, eg.A, ex.A], () => {
+                    let e = eS.Ay.getVoiceChannelId(),
+                        t = null != e ? eg.A.getChannel(e) : null;
+                    return t?.guild_id != null ? ex.A.getGuild(t.guild_id) : void 0;
                 });
-            (0, ed.Ay)(() => {
+            (0, ef.Ay)(() => {
                 !(function (e) {
                     var t;
-                    if (null == e || null == ei.default.getCurrentUser()) return;
+                    if (null == e || null == es.default.getCurrentUser()) return;
                     let n = g.A.getTopSoundboardSoundsMetadata(e);
                     if (null != n) {
                         let { topSoundsTTL: e } = n;
                         if (null == e || Date.now() < e) return;
                     }
-                    eA.A.getIsFetching(e) ||
+                    eI.A.getIsFetching(e) ||
                         ((t = e),
-                        (0, ey.tZ)(t) ||
-                            (eS.h.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: t }),
-                            eE.Bo.get({
-                                url: eC.Rsh.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(t),
+                        (0, eb.tZ)(t) ||
+                            (eC.h.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: t }),
+                            eA.Bo.get({
+                                url: ev.Rsh.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(t),
                                 oldFormErrors: !0,
                                 rejectWithError: !0,
                             }).then(
                                 (e) =>
-                                    eS.h.dispatch({
+                                    eC.h.dispatch({
                                         type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS",
                                         guildId: t,
                                         topSoundsMetadata: e.body.items
                                             .map((e) => ({ soundId: e.sound_id, rank: e.sound_rank }))
                                             .sort((e, t) => e.rank - t.rank),
                                     }),
-                                () => eS.h.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId: t }),
+                                () => eC.h.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId: t }),
                             )));
                 })(S?.id);
             });
@@ -988,10 +1021,10 @@ function tx(e) {
                     l = 0,
                     i = [];
                 return n
-                    ? (ek(i, s),
+                    ? (eO(i, s),
                       {
                           categories: i,
-                          availableSounds: s.get("0") ?? ev.pD,
+                          availableSounds: s.get("0") ?? ej.pD,
                           isFetching: u,
                           soundCounts: {
                               favoriteSoundCount: 0,
@@ -1011,26 +1044,26 @@ function tx(e) {
                               }
                               0 !== s.length &&
                                   e.push({
-                                      key: eo.Cx.TOP_SOUNDS,
-                                      categoryInfo: { type: eo.Cx.TOP_SOUNDS, guild: t },
-                                      items: eT(s),
+                                      key: ed.Cx.TOP_SOUNDS,
+                                      categoryInfo: { type: ed.Cx.TOP_SOUNDS, guild: t },
+                                      items: e_(s),
                                   });
                           })(i, S, { allSounds: s, topSoundIds: A }),
-                      ej({
+                      eR({
                           sections: i,
                           guildIds: d,
                           allSounds: s,
                           potentialSoundIdsForSection: Array.from(a),
-                          sectionType: eo.Cx.FAVORITES,
-                          sortSoundsFn: eI.XP,
+                          sectionType: ed.Cx.FAVORITES,
+                          sortSoundsFn: eT.XP,
                       }),
                       x.length > 0 &&
-                          ej({
+                          eR({
                               sections: i,
                               guildIds: d,
                               allSounds: s,
                               potentialSoundIdsForSection: x,
-                              sectionType: eo.Cx.FREQUENTLY_USED,
+                              sectionType: ed.Cx.FREQUENTLY_USED,
                           }),
                       void 0 !== f &&
                           (function (e, t, n) {
@@ -1041,13 +1074,13 @@ function tx(e) {
                                       sortSoundsFn: s,
                                   } = n,
                                   a = i.get(t.id) ?? [],
-                                  o = eT(a, s),
-                                  u = a.length < (0, ex.fA)(t) && l,
+                                  o = e_(a, s),
+                                  u = a.length < (0, ey.fA)(t) && l,
                                   c = 0 === o.length;
-                              ((u || c) && !r && o.push({ type: eo.uq.ADD_SOUND, guild: t }),
+                              ((u || c) && !r && o.push({ type: ed.uq.ADD_SOUND, guild: t }),
                                   (r && c) ||
                                       e.push({
-                                          categoryInfo: { type: eo.Cx.GUILD, guild: t, isNitroLocked: !1 },
+                                          categoryInfo: { type: ed.Cx.GUILD, guild: t, isNitroLocked: !1 },
                                           key: t.id,
                                           items: o,
                                       }));
@@ -1057,7 +1090,7 @@ function tx(e) {
                               filterOutEmptyCurrentGuild: t,
                               sortSoundsFn: c,
                           }),
-                      m || ek(i, s),
+                      m || eO(i, s),
                       !(function (e) {
                           let {
                               sections: t,
@@ -1069,18 +1102,18 @@ function tx(e) {
                           } = e;
                           for (let e of n) {
                               if (e.id === l) continue;
-                              let n = eT(i.get(e.id) ?? [], s);
+                              let n = e_(i.get(e.id) ?? [], s);
                               n.length > 0 &&
                                   t.push({
-                                      categoryInfo: { type: eo.Cx.GUILD, guild: e, isNitroLocked: !r },
+                                      categoryInfo: { type: ed.Cx.GUILD, guild: e, isNitroLocked: !r },
                                       key: e.id,
                                       items: n,
                                   });
                           }
                       })({ sections: i, guilds: h, currentGuildId: f?.id, allSounds: s, hasNitro: r, sortSoundsFn: c }),
-                      m && ek(i, s),
+                      m && eO(i, s),
                       i.forEach((t) => {
-                          t.categoryInfo.type === eo.Cx.GUILD &&
+                          t.categoryInfo.type === ed.Cx.GUILD &&
                               (t.categoryInfo.isNitroLocked ? (l += t.items.length) : (e += t.items.length));
                       }),
                       {
@@ -1095,98 +1128,109 @@ function tx(e) {
                       });
             }, [d, s, a, !0, f, p, t, m, h, n, u, r, c, x, S, A]);
         })(r, void 0, b),
-        [es, eR] = i.useState([]),
-        eO = i.useMemo(
-            () => (G.length > 0 ? [{ key: eo.Cx.SEARCH, categoryInfo: { type: eo.Cx.SEARCH }, items: eT(es) }] : q),
-            [q, G.length, es],
+        { isNewSound: Z, markGuildSeen: et } = (0, ew.A)(),
+        eo = i.useMemo(() => {
+            let e = new Set();
+            for (let { categoryInfo: t, items: n } of q)
+                t.type === ed.Cx.GUILD && n.some((e) => e.type === ed.uq.SOUND && Z(e.sound)) && e.add(t.guild.id);
+            return e;
+        }, [q, Z]),
+        eL = eo.size > 0,
+        eP = (0, ec.V)(eL ? "SoundboardSoundGrid" : "Invalid - SoundboardSoundGrid"),
+        eD = eL && eP,
+        [eU, eV] = i.useState([]),
+        eW = i.useMemo(
+            () => (K.length > 0 ? [{ key: ed.Cx.SEARCH, categoryInfo: { type: ed.Cx.SEARCH }, items: e_(eU) }] : q),
+            [q, K.length, eU],
         ),
-        ew = (0, d.RQ)((e) => e.isNitroLockedSectionVisible),
-        eM = i.useMemo(() => eO.filter((e) => e.items.length > 0), [eO]),
-        eL = i.useMemo(
-            () => eM.findLastIndex((e) => !!(0, U.Em)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
-            [eM],
+        eF = (0, d.RQ)((e) => e.isNitroLockedSectionVisible),
+        eK = i.useMemo(() => eW.filter((e) => e.items.length > 0), [eW]),
+        eH = i.useMemo(
+            () => eK.findLastIndex((e) => !!(0, W.Em)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+            [eK],
         ),
-        eP = !F && p && -1 !== eL,
-        eV = !F && p && -1 !== eL,
-        eW = en.b0.useSetting(),
-        eF = i.useMemo(() => new Set(eW), [eW]),
-        eB = null == r,
-        eK = U.Ay.canUseCustomCallSounds(W),
-        eG = i.useCallback(
+        ez = !F && p && -1 !== eH,
+        eq = !F && p && -1 !== eH,
+        e$ = ei.b0.useSetting(),
+        eQ = i.useMemo(() => new Set(e$), [e$]),
+        eZ = null == r,
+        eX = W.Ay.canUseCustomCallSounds(V),
+        e0 = i.useCallback(
             (e) => {
-                (eF.has(e) ? eF.delete(e) : eF.add(e), en.b0.updateSetting(Array.from(eF)));
+                (eQ.has(e) ? eQ.delete(e) : eQ.add(e), ei.b0.updateSetting(Array.from(eQ)));
             },
-            [eF],
+            [eQ],
         ),
-        eH = i.useCallback(
+        e1 = i.useCallback(
             (e, t, n, l) => {
                 if (null != h && !m) return h(e, n);
-                let i = (0, eu.Ir)(W, e, r, !1);
+                let i = (0, eh.Ir)(V, e, r, !1);
                 if (null != h && m && i) h(e, n);
-                else if (!f && i && (0, eu.Au)(r))
-                    ((0, eu.Ak)(e, r?.id ?? eC.dJq, t, l),
+                else if (!f && i && (0, eh.Au)(r))
+                    ((0, eh.Ak)(e, r?.id ?? ev.dJq, t, l),
                         H &&
-                            ea.default.track(eC.HAw.SEARCH_RESULT_SELECTED, {
-                                search_type: eC.I4_.SOUNDBOARD,
+                            eu.default.track(ev.HAw.SEARCH_RESULT_SELECTED, {
+                                search_type: ev.I4_.SOUNDBOARD,
                                 channel_id: r?.id,
-                                query: G,
+                                query: K,
                                 location_stack: t,
                             }));
                 else {
-                    if ((0, eu.Ir)(W, e, r)) return;
-                    p && V(e);
+                    if ((0, eh.Ir)(V, e, r)) return;
+                    p && U(e);
                 }
             },
-            [f, W, r, p, H, G, h, m],
+            [f, V, r, p, H, K, h, m],
         ),
-        ez = i.useCallback(
+        e2 = i.useCallback(
             (e, t) => {
                 switch (e.item.type) {
-                    case eo.uq.SOUND:
-                        let n = tm[e?.category] ?? null,
+                    case ed.uq.SOUND:
+                        let n = tE[e?.category] ?? null,
                             l = e?.item.index;
-                        return eH(e.item.sound, null == n ? k : [...k, n], t?.shiftKey !== !0, l);
-                    case eo.uq.ADD_SOUND:
-                        return (o(), ts(e.item.guild.id));
+                        return e1(e.item.sound, null == n ? T : [...T, n], t?.shiftKey !== !0, l);
+                    case ed.uq.ADD_SOUND:
+                        return (o(), td(e.item.guild.id));
                 }
             },
-            [k, eH, o],
+            [T, e1, o],
         ),
-        eQ = i.useCallback(
+        e5 = i.useCallback(
             (e, n, i, a, o) => {
-                let u = eM[i.sectionIndex],
-                    c = p && e$(u.categoryInfo, F, t) && eP;
+                let u = eK[i.sectionIndex],
+                    c = p && eY(u.categoryInfo, F, t) && ez;
                 return (0, l.jsx)(
                     "ul",
                     {
                         ...n,
-                        className: s()(td.a, { [td.uL]: c }),
+                        className: s()(tg.a, { [tg.uL]: c }),
                         children: e.map((e, t) => {
                             let n =
-                                e.item.type === eo.uq.SOUND
+                                e.item.type === ed.uq.SOUND
                                     ? `sound-${e.item.sound.soundId}`
                                     : `add-sound-${e.item.guild.id}`;
                             return (0, l.jsx)(
-                                tc,
+                                tp,
                                 {
                                     descriptor: e,
                                     soundButtonProps: {
                                         channel: r,
-                                        interactive: eB ? eK : !K,
+                                        interactive: eZ ? eX : !G,
                                         forceSecondaryActions: !0,
-                                        analyticsLocations: k,
+                                        analyticsLocations: T,
                                     },
                                     rowIndex: i.rowIndex,
                                     columnIndex: t,
                                     isUsingKeyboardNavigation: i.isUsingKeyboardNavigation,
                                     suppressPlaySound: f,
                                     getItemProps: a,
-                                    onSelectItem: ez,
+                                    onSelectItem: e2,
                                     onItemMouseEnter: o,
                                     buttonOverlay: y,
                                     isNitroLocked: c,
                                     showLockForDisabledSound: p,
                                     inExpressionPicker: v,
+                                    isNew: eD && e.item.type === ed.uq.SOUND && Z(e.item.sound),
                                 },
                                 n,
                             );
@@ -1195,226 +1239,231 @@ function tx(e) {
                     `row-${n["aria-rowindex"]}`,
                 );
             },
-            [eM, p, F, t, f, ez, r, eB, eK, K, k, y, eP, v],
+            [eK, p, F, t, f, e2, r, eZ, eX, G, T, y, ez, v, eD, Z],
         ),
-        eZ = i.useCallback(
+        e8 = i.useCallback(
             (e, t) => {
                 if (e <= 0 || !p) return !1;
-                let n = eM[e],
-                    l = eM[e - 1],
-                    i = e$(n.categoryInfo, F, t),
-                    r = e$(l.categoryInfo, F, t);
+                let n = eK[e],
+                    l = eK[e - 1],
+                    i = eY(n.categoryInfo, F, t),
+                    r = eY(l.categoryInfo, F, t);
                 return i && !r;
             },
-            [eM, p, F],
+            [eK, p, F],
         ),
-        eX = i.useCallback(() => {
+        e3 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
-            null != e && V(e);
+            null != e && U(e);
         }, []),
-        eJ = i.useCallback(() => {
-            let e = (0, U.Dd)(eN.PremiumTypes.TIER_2);
-            return eU.intl.format(eU.t["tw/SSq"], { nitroTierName: e, onClick: eX });
-        }, [eX]),
-        eY = i.useCallback((e) => (eZ(e, t) ? th : 32), [t, eZ]),
-        e0 = i.useCallback(
+        e6 = i.useCallback(() => {
+            let e = (0, W.Dd)(ek.PremiumTypes.TIER_2);
+            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e3 });
+        }, [e3]),
+        e7 = i.useCallback((e) => (e8(e, t) ? tx : 32), [t, e8]),
+        e4 = i.useCallback(
             (e) => {
-                let t = e === eM.length - 1;
-                return eV && t ? 70 : eP && e === eL ? 20 : 0;
+                let t = e === eK.length - 1;
+                return eq && t ? 70 : ez && e === eH ? 20 : 0;
             },
-            [eM.length, eP, eV, eL],
+            [eK.length, ez, eq, eH],
         ),
-        e1 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
-        e2 = i.useCallback(
+        e9 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
+        te = i.useCallback(
             (e, n) => {
                 let i = `${e.key}`,
-                    r = p && e$(e.categoryInfo, F, t),
-                    s = eZ(n, t),
-                    a = eF.has(i);
+                    r = p && eY(e.categoryInfo, F, t),
+                    s = e8(n, t),
+                    a = eQ.has(i),
+                    { categoryInfo: o } = e,
+                    u = o.type === ed.Cx.GUILD && eo.has(o.guild.id) ? o.guild.id : null;
                 return (0, l.jsx)(
-                    tf,
+                    ty,
                     {
                         categoryInfo: e.categoryInfo,
                         toggleCollapsed: function () {
-                            (ea.default.track(eC.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
-                                location: { page: eC.liQ.SOUNDBOARD_POPOUT },
-                                tab: eD.kx.SOUNDBOARD,
+                            (eu.default.track(ev.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                                location: { page: ev.liQ.SOUNDBOARD_POPOUT },
+                                tab: eB.kx.SOUNDBOARD,
                                 guild_id: t ?? null,
                                 collapsed: !a,
                                 sticker_pack_id: null,
                                 num_expressions: e.items.length,
                             }),
-                                eG(i));
+                                e0(i));
                         },
                         collapsed: a,
-                        isSectionNitroLocked: r && eP,
-                        showNitroDivider: s && eP,
+                        isSectionNitroLocked: r && ez,
+                        showNitroDivider: s && ez,
+                        showNewBadge: eD && null != u,
+                        onNewSoundsSeen: null == u || a ? void 0 : () => et(u),
                     },
                     `header-${i}`,
                 );
             },
-            [eF, eG, t, eZ, p, F, eP],
+            [eQ, e0, t, e8, p, F, ez, eo, eD, et],
         ),
-        e5 = i.useCallback(
+        tt = i.useCallback(
             (e, t) => {
-                let n = t === eM.length - 1,
-                    i = t === eL;
-                return eV && n
-                    ? (0, l.jsx)("div", { className: s()(td.Lk, { [td.Ns]: i }) })
-                    : eP && t === eL
-                      ? (0, l.jsx)("div", { className: s()(td.a3, { [td.Ns]: i }) })
+                let n = t === eK.length - 1,
+                    i = t === eH;
+                return eq && n
+                    ? (0, l.jsx)("div", { className: s()(tg.Lk, { [tg.Ns]: i }) })
+                    : ez && t === eH
+                      ? (0, l.jsx)("div", { className: s()(tg.a3, { [tg.Ns]: i }) })
                       : null;
             },
-            [eL, eP, eV, eM.length],
+            [eH, ez, eq, eK.length],
         ),
-        e3 = i.useCallback((e) => eR((0, ec.lG)(e, $, W, r, k)), [r, W, $, k]),
-        e8 = i.useCallback(
+        tn = i.useCallback((e) => eV((0, em.lG)(e, $, V, r, T)), [r, V, $, T]),
+        tl = i.useCallback(
             (e) => {
-                (0, j.L3)(e, async () => {
+                (0, k.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
-                    return (t) => (0, l.jsx)(e, { sourceAnalyticsLocations: k, ...t });
+                    return (t) => (0, l.jsx)(e, { sourceAnalyticsLocations: T, ...t });
                 });
             },
-            [k],
+            [T],
         ),
-        e6 = (0, e_._)("SoundboardSoundGrid"),
-        e7 = i.useCallback(
+        ti = (0, eM._)("SoundboardSoundGrid"),
+        tr = i.useCallback(
             () =>
                 v
-                    ? (0, l.jsx)(X.Gq, {
-                          renderPopout: () => (0, l.jsx)(X.qn, {}),
-                          tooltipText: eU.intl.string(eU.t["19lt24"]),
+                    ? (0, l.jsx)(Y.Gq, {
+                          renderPopout: () => (0, l.jsx)(Y.qn, {}),
+                          tooltipText: eG.intl.string(eG.t["19lt24"]),
                           position: "top",
-                          clickableClassName: s()(td.Jm, td.Zz),
-                          children: (0, l.jsx)(T.H, { size: "md", color: "currentColor", className: td.By }),
+                          clickableClassName: s()(tg.Jm, tg.Zz),
+                          children: (0, l.jsx)(j.H, { size: "md", color: "currentColor", className: tg.By }),
                       })
                     : (0, l.jsx)(I.D, {
                           tabIndex: 0,
-                          className: td.Jm,
-                          onClick: e8,
-                          "aria-label": e6 ? eU.intl.string(eU.t.wQKOBb) : eU.intl.string(eU.t.kbFsAD),
-                          children: (0, l.jsx)(tg, { className: td.By }),
+                          className: tg.Jm,
+                          onClick: tl,
+                          "aria-label": ti ? eG.intl.string(eG.t.wQKOBb) : eG.intl.string(eG.t.kbFsAD),
+                          children: (0, l.jsx)(tC, { className: tg.By }),
                       }),
-            [v, e8, e6],
+            [v, tl, ti],
         ),
-        e4 = i.useCallback(
+        ta = i.useCallback(
             (e) =>
-                (0, l.jsx)(eq, {
+                (0, l.jsx)(eJ, {
                     soundboardListRef: e,
                     categories: q,
-                    shouldUpsellLockedCategories: eP,
+                    shouldUpsellLockedCategories: ez,
                     listPadding: A,
                     guildId: t,
                     inExpressionPicker: v,
+                    newSoundGuildIds: eD ? eo : void 0,
                 }),
-            [q, A, eP, t, v],
+            [q, A, ez, t, v, eD, eo],
         ),
-        e9 = i.useCallback(() => {
-            let e = (0, Z.qD)();
-            return (0, U.LE)(e, eN.pe.TIER_2) ?? eU.intl.string(eU.t.pj0XBN);
+        to = i.useCallback(() => {
+            let e = (0, J.qD)();
+            return (0, W.LE)(e, ek.pe.TIER_2) ?? eG.intl.string(eG.t.pj0XBN);
         }, []);
     i.useEffect(() => {
-        eV &&
-            ew &&
-            ea.default.track(eC.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: eN.e.SOUNDBOARD_PICKER_FLOATING_UPSELL,
-                location: P,
-                location_stack: w,
-                sku_id: U.Ay.getSkuIdForPremiumType(eN.PremiumTypes.TIER_2),
-                voice_guild_id: el.A.getGuildId() ?? null,
+        eq &&
+            eF &&
+            eu.default.track(ev.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: ek.e.SOUNDBOARD_PICKER_FLOATING_UPSELL,
+                location: L,
+                location_stack: _,
+                sku_id: W.Ay.getSkuIdForPremiumType(ek.PremiumTypes.TIER_2),
+                voice_guild_id: er.A.getGuildId() ?? null,
             });
-    }, [P, w, eV, ew]);
-    let te = i.useCallback(
+    }, [L, _, eq, eF]);
+    let tu = i.useCallback(
             () =>
-                eV
-                    ? (0, l.jsx)(J.d, {
-                          showUpsell: ew,
-                          text: eJ(),
-                          button: e9(),
-                          buttonAnalyticsObject: { section: eC.JJy.SOUND_PICKER_FLOATING_UPSELL },
-                          leadingAction: (0, l.jsx)(ee.l, {
+                eq
+                    ? (0, l.jsx)(ee.d, {
+                          showUpsell: eF,
+                          text: e6(),
+                          button: to(),
+                          buttonAnalyticsObject: { section: ev.JJy.SOUND_PICKER_FLOATING_UPSELL },
+                          leadingAction: (0, l.jsx)(en.l, {
                               size: "sm",
-                              className: td.ij,
+                              className: tg.ij,
                               location: u.A.PREMIUM_WISHLIST_SOUNDBOARD_UPSELL,
                               forceDarkTheme: !0,
                           }),
                       })
                     : null,
-            [eJ, e9, eV, ew],
+            [e6, to, eq, eF],
         ),
-        tn = i.useCallback(
+        tc = i.useCallback(
             (e) =>
-                e?.item.type === eo.uq.SOUND
-                    ? (0, l.jsx)(tt, { closePicker: o, soundboardSound: e?.item.sound ?? null })
+                e?.item.type === ed.uq.SOUND
+                    ? (0, l.jsx)(ts, { closePicker: o, soundboardSound: e?.item.sound ?? null })
                     : null,
             [o],
         ),
-        tl = (0, E.bG)([el.A], () => el.A.getMediaSessionId());
+        th = (0, E.bG)([er.A], () => er.A.getMediaSessionId());
     return (
-        (0, R.A)({
+        (0, O.A)({
             type: x.ImpressionTypes.POPOUT,
             name: x.ImpressionNames.SOUNDBOARD_POPOUT,
             properties: {
                 source: N,
                 guild_id: t,
-                media_session_id: tl,
-                available_custom_sounds_count: Y.unlockedCustomSoundCount,
-                unavailable_custom_sounds_count: Y.lockedCustomSoundCount,
-                favorite_sounds_count: Y.favoriteSoundCount,
-                type: ev.c4.FULL_PICKER,
+                media_session_id: th,
+                available_custom_sounds_count: Q.unlockedCustomSoundCount,
+                unavailable_custom_sounds_count: Q.lockedCustomSoundCount,
+                favorite_sounds_count: Q.favoriteSoundCount,
+                type: ej.c4.FULL_PICKER,
             },
         }),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 null != D
-                    ? (0, l.jsx)(et.A, {
-                          title: eU.intl.string(v ? eU.t.rZEEvU : eU.t.jGDYF0),
-                          description: eU.intl.string(v ? eU.t.ZPNG5A : eU.t["grL/hg"]),
-                          analyticsLocationSection: eC.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
+                    ? (0, l.jsx)(el.A, {
+                          title: eG.intl.string(v ? eG.t.rZEEvU : eG.t.jGDYF0),
+                          description: eG.intl.string(v ? eG.t.ZPNG5A : eG.t["grL/hg"]),
+                          analyticsLocationSection: ev.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
                           upsellViewedTrackingData: {
-                              type: eN.e.SOUND_PICKER_SOUND_CLICKED,
+                              type: ek.e.SOUND_PICKER_SOUND_CLICKED,
                               is_external: !0,
-                              location: { ...P, object: eC.ZSU.SOUNDBOARD_SOUND },
-                              location_stack: w,
-                              sku_id: U.Ay.getSkuIdForPremiumType(eN.PremiumTypes.TIER_2),
-                              voice_guild_id: el.A.getGuildId(),
+                              location: { ...L, object: ev.ZSU.SOUNDBOARD_SOUND },
+                              location_stack: _,
+                              sku_id: W.Ay.getSkuIdForPremiumType(ek.PremiumTypes.TIER_2),
+                              voice_guild_id: er.A.getGuildId(),
                           },
-                          onClose: () => V(null),
+                          onClose: () => U(null),
                           onUpsellClicked: o,
                       })
                     : void 0,
-                (0, l.jsx)(Q, {
-                    categories: eM,
-                    collapsedCategories: eF,
+                (0, l.jsx)(X, {
+                    categories: eK,
+                    collapsedCategories: eQ,
                     containerWidth: a,
-                    store: M.LW,
-                    onSelectItem: ez,
-                    onSearchExpressions: e3,
-                    hasSearchResults: es.length > 0,
-                    defaultSearchPlaceholder: eU.intl.string(eU.t.sKt3xS),
-                    renderRow: eQ,
-                    renderSectionHeader: e2,
-                    renderSectionFooter: e5,
-                    renderSection: e1,
-                    renderCategoryList: e4,
-                    renderHeaderAccessories: e7,
+                    store: P.LW,
+                    onSelectItem: e2,
+                    onSearchExpressions: tn,
+                    hasSearchResults: eU.length > 0,
+                    defaultSearchPlaceholder: eG.intl.string(eG.t.sKt3xS),
+                    renderRow: e5,
+                    renderSectionHeader: te,
+                    renderSectionFooter: tt,
+                    renderSection: e9,
+                    renderCategoryList: ta,
+                    renderHeaderAccessories: tr,
                     rowHeight: 48,
-                    sectionHeaderHeight: eY,
-                    sectionFooterHeight: e0,
+                    sectionHeaderHeight: e7,
+                    sectionFooterHeight: e4,
                     itemNodeWidth: 150,
                     gridNavigatorId: z,
-                    renderEmptySearchState: tp,
-                    renderInspector: tn,
+                    renderEmptySearchState: tA,
+                    renderInspector: tc,
                     gridNotice: S,
                     renderHeader: C,
-                    renderUpsell: te,
+                    renderUpsell: tu,
                 }),
             ],
         })
     );
 }
-var tE = n(70317);
-function tS(e) {
+var tI = n(70317);
+function tv(e) {
     let {
             guildId: t,
             channel: n,
@@ -1452,12 +1501,12 @@ function tS(e) {
             value: O,
             children: (0, l.jsxs)(a.l, {
                 style: w,
-                className: s()(tE.Nz, { [tE.Bg]: _, [tE.yV]: I }),
+                className: s()(tI.Nz, { [tI.Bg]: _, [tI.yV]: I }),
                 children: [
                     k && null != t && n?.id != null ? (0, l.jsx)(h.A, { guildId: t, channelId: n.id }) : null,
                     _
                         ? (0, l.jsx)(o.y, {})
-                        : (0, l.jsx)(tx, {
+                        : (0, l.jsx)(tb, {
                               guildId: t,
                               channel: n,
                               onClose: x,

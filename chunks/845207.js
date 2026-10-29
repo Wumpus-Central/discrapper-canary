@@ -88,7 +88,6 @@ let _ = { width: 500, height: T.$V },
                 n.e("726033"),
                 n.e("655708"),
                 n.e("371133"),
-                n.e("280854"),
                 n.e("335395"),
                 n.e("715038"),
                 n.e("408362"),
@@ -152,8 +151,8 @@ var M = n(861382),
     W = n(659280),
     F = n(579940),
     B = n(962125),
-    K = n(915089),
-    G = n(850992),
+    G = n(915089),
+    K = n(850992),
     H = n(887695),
     z = n(286509),
     q = n(721768),
@@ -235,7 +234,7 @@ function ei(e) {
               children: (0, l.jsx)(ee.A, {
                   categoryListRef: d,
                   expressionsListRef: c,
-                  store: G.LS,
+                  store: K.LS,
                   categories: r,
                   className: en.p_,
                   renderCategoryListItem: f,
@@ -261,7 +260,7 @@ function ed(e) {
         [u, c] = i.useState(0),
         d = i.useRef(null),
         [h, m] = i.useState(!1),
-        f = G.LS.useStore((e) => e.activeCategoryIndex);
+        f = K.LS.useStore((e) => e.activeCategoryIndex);
     i.useEffect(() => {
         (0, V.zV)(ea.HAw.APPLICATION_COMMAND_BROWSER_OPENED);
     }, []);
@@ -288,7 +287,7 @@ function ed(e) {
                 let t = g[e];
                 if (null != t) {
                     let e = p.findIndex((e) => e.id === t.id);
-                    G.LS.setActiveCategoryIndex(e);
+                    K.LS.setActiveCategoryIndex(e);
                 }
             },
             scrollOffset: 20,
@@ -420,7 +419,7 @@ function ed(e) {
             },
             [t, x, _, p, u],
         ),
-        M = (0, K.GV)();
+        M = (0, G.GV)();
     return (
         (0, F.gf)(M, !0, (0, W.aI)(u)),
         i.useEffect(
@@ -515,8 +514,8 @@ var eD = n(194004),
     eW = n(951260),
     eF = n(29080),
     eB = n(834730),
-    eK = n(241326),
-    eG = n(559647),
+    eG = n(241326),
+    eK = n(559647),
     eH = n(767089),
     ez = n(380629);
 n(321073);
@@ -626,8 +625,8 @@ var eJ = n(113494),
     e1 = n(625494),
     e2 = n(587481),
     e5 = n(87466),
-    e3 = n(698279),
-    e8 = n(252433),
+    e8 = n(698279),
+    e3 = n(252433),
     e6 = n(495088);
 function e7(e) {
     var t;
@@ -692,17 +691,17 @@ function e7(e) {
         N = u ? j.intl.string(j.t["3XohGn"]) : j.intl.string(j.t.AlHqHT),
         T = u ? j.intl.string(j.t.ZcgDJX) : j.intl.string(j.t.RscU7I);
     return (0, l.jsxs)("div", {
-        className: e8._W,
+        className: e3._W,
         children: [
             (0, l.jsx)(J.m, {
                 text: T,
                 children: (0, l.jsx)("div", {
-                    className: s()(e3.VQ, e6.UD),
+                    className: s()(e8.VQ, e6.UD),
                     children: (0, l.jsx)(eH.A, { className: e6.x6, onClick: S, isActive: u, icon: v, "aria-label": N }),
                 }),
             }),
             (0, l.jsx)(e5.A, {
-                className: e8.ou,
+                className: e3.ou,
                 waveform: n.waveform,
                 currentTime: p,
                 duration: x,
@@ -716,17 +715,17 @@ function e7(e) {
                 onDragEnd: b,
             }),
             (0, l.jsx)("div", {
-                className: e8.RE,
+                className: e3.RE,
                 children: (0, l.jsx)(eB.E, {
                     variant: "text-sm/normal",
-                    className: e8.O1,
+                    className: e3.O1,
                     tabularNumbers: !0,
                     children: (0, ez.rB)(I),
                 }),
             }),
             (0, l.jsx)(e0.A, {
                 ref: o,
-                className: e8.Zn,
+                className: e3.Zn,
                 controls: !1,
                 preload: "metadata",
                 onEnded: C,
@@ -828,7 +827,7 @@ let te = i.memo(function (e) {
                               ? (0, l.jsx)(J.m, {
                                     text: j.intl.string(j.t.hHBkuG),
                                     children: (0, l.jsx)("div", {
-                                        className: s()(e3.VQ, e6.UD),
+                                        className: s()(e8.VQ, e6.UD),
                                         children: (0, l.jsx)(eH.A, {
                                             className: e6.x6,
                                             onClick: C,
@@ -865,12 +864,12 @@ let te = i.memo(function (e) {
             (0, l.jsx)(J.m, {
                 text: j.intl.string(j.t.oyYWHE),
                 children: (0, l.jsx)("div", {
-                    className: s()(e3.VQ, e6.UD),
+                    className: s()(e8.VQ, e6.UD),
                     children: (0, l.jsx)(eH.A, {
                         className: e6.x6,
                         onClick: () => (0, e$.eT)(n),
                         isActive: !1,
-                        icon: eK.TrashIcon,
+                        icon: eG.TrashIcon,
                         "aria-label": j.intl.string(j.t.RdK9sV),
                     }),
                 }),
@@ -878,7 +877,7 @@ let te = i.memo(function (e) {
             (0, l.jsx)(J.m, {
                 text: j.intl.string(j.t.TXNS7S),
                 children: (0, l.jsx)("div", {
-                    className: s()(e3.VQ, e6.UD),
+                    className: s()(e8.VQ, e6.UD),
                     onKeyDown: I,
                     children: (0, l.jsx)(eH.A, {
                         ref: r,
@@ -889,7 +888,7 @@ let te = i.memo(function (e) {
                         noHover: !N,
                         isActive: !1,
                         "aria-label": j.intl.string(j.t["+8GStU"]),
-                        children: (0, l.jsx)(eG.SendMessageIcon, {
+                        children: (0, l.jsx)(eK.SendMessageIcon, {
                             size: "xs",
                             color: "currentColor",
                             className: e9.AO,
@@ -1231,26 +1230,26 @@ function tW(e) {
 }
 var tF = n(73153),
     tB = n(734057);
-let tK = new Set();
-class tG extends m.Ay.PersistedStore {
+let tG = new Set();
+class tK extends m.Ay.PersistedStore {
     static displayName = "PTOStore";
     static persistKey = "PTOStore";
     initialize(e) {
-        (this.waitFor(tB.A, tt.Ay, tl.Ay, tr.default), null != e && (tK = new Set(e)));
+        (this.waitFor(tB.A, tt.Ay, tl.Ay, tr.default), null != e && (tG = new Set(e)));
     }
     hasId(e) {
-        return tK.has(e);
+        return tG.has(e);
     }
     getState() {
-        return [...tK];
+        return [...tG];
     }
 }
-let tH = new tG(tF.h, {});
+let tH = new tK(tF.h, {});
 function tz() {
     let e = tl.Ay.getChannelId();
     if (null == e) return;
     let t = tB.A.getChannel(e);
-    null != t && t.isPrivate() && (tK.has(t.getRecipientId()) || (tK.add(t.getRecipientId()), tH.emitChange()));
+    null != t && t.isPrivate() && (tG.has(t.getRecipientId()) || (tG.add(t.getRecipientId()), tH.emitChange()));
 }
 function tq() {
     return (0, l.jsxs)("div", {
@@ -1317,8 +1316,8 @@ var t0 = n(575293),
     t1 = n(536637),
     t2 = n.n(t1),
     t5 = n(31717),
-    t3 = n(551640),
-    t8 = n(970244),
+    t8 = n(551640),
+    t3 = n(970244),
     t6 = n(29621);
 function t7(e) {
     let { channel: t, scheduledMessageDraft: n } = e,
@@ -1335,10 +1334,10 @@ function t7(e) {
                         className: t6.a3,
                         "aria-describedby": s,
                         onClick: function () {
-                            (0, t8.e0)({
+                            (0, t3.e0)({
                                 channel: t,
                                 defaultValue: t2()(r),
-                                entryPoint: t3.t.COMPOSER_BAR,
+                                entryPoint: t8.t.COMPOSER_BAR,
                                 isEditing: !0,
                             });
                         },
@@ -1642,13 +1641,13 @@ function nf(e) {
 }
 function np(e, t, n) {
     let l = i.useCallback(() => {
-            t || (0, ex.r$)(e3.kx.EMOJI, e, n);
+            t || (0, ex.r$)(e8.kx.EMOJI, e, n);
         }, [t, e, n]),
         r = i.useCallback(() => {
-            !t && e.gifs?.allowSending && (0, ex.r$)(e3.kx.GIF, e, n);
+            !t && e.gifs?.allowSending && (0, ex.r$)(e8.kx.GIF, e, n);
         }, [t, e, n]),
         s = i.useCallback(() => {
-            !t && e.stickers?.allowSending && (0, ex.r$)(e3.kx.STICKER, e, n);
+            !t && e.stickers?.allowSending && (0, ex.r$)(e8.kx.STICKER, e, n);
         }, [t, e, n]);
     ((0, to.Vo)({ event: ea.jej.TOGGLE_EMOJI_POPOUT, handler: l }),
         (0, to.Vo)({ event: ea.jej.TOGGLE_GIF_PICKER, handler: r }),
@@ -1778,8 +1777,8 @@ let nb = i.memo(function (e) {
             onFocus: W,
             onKeyDown: F,
             onSubmit: B,
-            promptToUpload: K,
-            highlighted: G,
+            promptToUpload: G,
+            highlighted: K,
             canMentionRoles: H,
             canMentionChannels: z,
             maxCharacterCount: q,
@@ -1832,8 +1831,8 @@ let nb = i.memo(function (e) {
             isPendingMember: eU,
             disabled: eF,
             canAttachFiles: eB,
-            canCreateThreads: eK,
-            canEveryoneSendMessages: eG,
+            canCreateThreads: eG,
+            canEveryoneSendMessages: eK,
         } = ny(T, j, eL, I),
         eH = j.toolbarType === th.O1.STATIC,
         ez = !eV.D_.useSetting() && !(0, tc.isAndroidWeb)() && null != window.ResizeObserver,
@@ -1852,9 +1851,9 @@ let nb = i.memo(function (e) {
             },
             [D, j.commands?.enabled, eJ],
         ),
-        { submitting: e5, submit: e3, handleSubmit: e8 } = nd(B, j, ey, eb, T.id),
+        { submitting: e5, submit: e8, handleSubmit: e3 } = nd(B, j, ey, eb, T.id),
         { autocompleteRef: e7, handleMaybeShowAutocomplete: e9, handleHideAutocomplete: tn } = nx(),
-        tl = nh(e3, j, ey),
+        tl = nh(e8, j, ey),
         ts = nm(ey),
         to = nf({ editorRef: ey, disabled: eF, textValue: r, channelId: T.id, chatInputType: j, submit: B }),
         tu = i.useCallback(
@@ -1943,9 +1942,9 @@ let nb = i.memo(function (e) {
         }, [eJ]);
     (0, td.R)(eJ, T.guild_id, T.id);
     let tk = null != P,
-        tR = (eF && !((eD || eU) && eG)) || (e5 && j.submit?.useDisabledStylesOnSubmit),
+        tR = (eF && !((eD || eU) && eK)) || (e5 && j.submit?.useDisabledStylesOnSubmit),
         tw = null;
-    null != eL ? (tw = O?.(eL, eP, e6.g$)) : (!eF || eK) && (tw = R?.(tk, e6.g$));
+    null != eL ? (tw = O?.(eL, eP, e6.g$)) : (!eF || eG) && (tw = R?.(tk, e6.g$));
     let { isVisible: tM, showsUpsell: tL } = (0, nc.A)({
             type: j,
             textValue: r,
@@ -1974,7 +1973,7 @@ let nb = i.memo(function (e) {
                     let n = tr.default.getUser(t.getRecipientId());
                     if (!n?.isStaff()) return !1;
                     let l = tt.Ay.getNicknames(n.id).some((e) => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
-                    return l ? !tH.hasId(n.id) && l : (tK.delete(n.id) && tH.emitChange(), !1);
+                    return l ? !tH.hasId(n.id) && l : (tG.delete(n.id) && tH.emitChange(), !1);
                 }),
                 f = (0, tZ.Ay)((e) => e.channelId === t.id);
             return i.useMemo(() => {
@@ -2019,9 +2018,9 @@ let nb = i.memo(function (e) {
         },
         [T.id],
     );
-    let tG = i.useRef(tB);
+    let tK = i.useRef(tB);
     i.useEffect(() => {
-        (tG.current && !tB && ey.current?.focus(), (tG.current = tB));
+        (tK.current && !tB && ey.current?.focus(), (tK.current = tB));
     }, [tB]);
     let tz = null != P ? [X, t_].filter(Boolean).join(" ") : X,
         t$ = j.layout === th.wt.INLINE,
@@ -2035,7 +2034,7 @@ let nb = i.memo(function (e) {
                       type: j,
                       disabled: eF,
                       channel: T,
-                      handleSubmit: e8,
+                      handleSubmit: e3,
                       isEmpty: tF,
                       showAllButtons: !eM && !ew,
                       expressionButtonsHidden: ew,
@@ -2070,7 +2069,7 @@ let nb = i.memo(function (e) {
                             [e6.Bz]: tM && tD,
                             [e6.Qv]: tL && tD,
                             [e6.h9]: tR,
-                            [e6.mr]: G,
+                            [e6.mr]: K,
                             [e6.Wn]: d.Fr,
                             [e6.Ls]: t$,
                             [e6.AH]: tX,
@@ -2118,7 +2117,7 @@ let nb = i.memo(function (e) {
                                                                   placeholder: v,
                                                                   required: x,
                                                                   accessibilityLabel: N,
-                                                                  isPreviewing: (eD || eU) && eG,
+                                                                  isPreviewing: (eD || eU) && eK,
                                                                   channel: T,
                                                                   type: j,
                                                                   canPasteFiles: eB,
@@ -2131,7 +2130,7 @@ let nb = i.memo(function (e) {
                                                                   onBlur: V,
                                                                   onFocus: W,
                                                                   onKeyDown: F,
-                                                                  onSubmit: e3,
+                                                                  onSubmit: e8,
                                                                   onSubmitFailure: tj,
                                                                   onTab: tx,
                                                                   onEnter: tE,
@@ -2140,7 +2139,7 @@ let nb = i.memo(function (e) {
                                                                   onSelectionChanged: eY,
                                                                   onMaybeShowAutocomplete: e9,
                                                                   onHideAutocomplete: tn,
-                                                                  promptToUpload: K,
+                                                                  promptToUpload: G,
                                                                   fontSize: eZ,
                                                                   spellcheckEnabled: eX,
                                                                   canOnlyUseTextCommands: tk,
@@ -2180,7 +2179,7 @@ let nb = i.memo(function (e) {
                                 type: j,
                                 targetRef: ec,
                                 editorRef: ey,
-                                onSendMessage: e3,
+                                onSendMessage: e8,
                                 onSendSticker: to,
                                 onVisibilityChange: tN,
                                 editorScrollerRef: eA,

@@ -1,31 +1,31 @@
-n.d(t, { a: () => l });
-var i = n(477900);
+n.d(t, { a: () => a });
+var l = n(477900);
 n(582128);
-var r = n(503698),
-    a = n.n(r),
+var i = n(503698),
+    r = n.n(i),
     s = n(809380);
-let l = (e) => {
+let a = (e) => {
     let {
         left: t,
-        top: n = 0,
-        right: r = 0,
-        bottom: l,
+        bottom: n,
+        top: i = 0,
+        right: a = 0,
         size: o = 8,
-        alert: d = !1,
+        alert: u = !1,
         showBlurpleTreatment: c = !1,
-        maskColor: u = 2,
-        additionalStyles: _,
+        maskColor: d = 2,
+        additionalStyles: h,
     } = e;
-    return (0, i.jsx)("span", {
-        className: a()(s.Om, {
-            [s.xE]: d,
+    return (0, l.jsx)("span", {
+        className: r()(s.Om, {
+            [s.xE]: u,
             [s.nB]: c,
-            [s.GS]: 0 === u,
-            [s.Pn]: 1 === u,
-            [s.HP]: 2 === u,
-            [s.gl]: 3 === u,
-            [_ ?? ""]: void 0 !== _,
+            [s.GS]: 0 === d,
+            [s.Pn]: 1 === d,
+            [s.HP]: 2 === d,
+            [s.gl]: 3 === d,
+            [h ?? ""]: void 0 !== h,
         }),
-        style: { height: o, width: o, left: t, top: n, right: r, bottom: l },
+        style: { height: o, width: o, left: t, top: null == n ? i : void 0, right: a, bottom: n },
     });
 };

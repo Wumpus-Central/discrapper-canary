@@ -341,4 +341,30 @@
     width: 100%
 }
 
-/*# sourceMappingURL=967850.59549a74ecee8f56.css.map*/
+@keyframes newSoundSheen__9be63 {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+}
+
+.newSound__9be63 {
+    background: var(--background-mod-normal)
+}
+
+.newSheen__9be63 {
+    background: linear-gradient(110deg, transparent 30%, var(--background-mod-strong) 50%, transparent 70%);
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-100%)
+}
+
+.full-motion .newSheen__9be63 {
+    animation: newSoundSheen 1.5s ease-in-out 2
+}
+
+/*# sourceMappingURL=967850.06ae25981baf5d16.css.map*/

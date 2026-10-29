@@ -28,4 +28,6 @@ _.exports = {
     B3: "primaryIconTopLevel__9be63",
     ET: "unavailableTooltip__9be63",
     ld: "unavailableTooltipActions__9be63",
+    ox: "newSound__9be63",
+    wO: "newSheen__9be63",
 };
