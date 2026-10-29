@@ -1,4 +1,4 @@
-n.d(t, { A: () => H });
+n.d(t, { A: () => O });
 var l = n(477900),
     a = n(582128),
     i = n(834730),
@@ -23,42 +23,44 @@ var l = n(477900),
     A = n(811587);
 let w = [d.Ay, v.A, k.Ay, j.A, _.A];
 var S = n(866665),
-    N = n(248675),
-    C = n(105292),
-    I = n(482062);
-let E = I.w5,
-    P = { in_progress: N.default["Y8pS+n"], draft: N.default.CSAaT0, published: N.default.qbUdLZ };
-function D(e) {
+    C = n(22231),
+    N = n(661531),
+    I = n(248675),
+    E = n(105292),
+    P = n(482062);
+let T = P.w5,
+    D = { in_progress: I.default["Y8pS+n"], draft: I.default.CSAaT0 };
+function M(e) {
     let { status: t } = e;
     return (0, l.jsx)(S.m, {
-        text: C.intl.string(P[t]),
+        text: E.intl.string(D[t]),
         position: "top",
         ariaHidden: !0,
         children: (0, l.jsx)("span", {
-            className: I.qS,
+            className: P.qS,
             "aria-hidden": !0,
             children:
                 "in_progress" === t
-                    ? (0, l.jsx)(s.y, { type: s.t.SPINNING_CIRCLE_SIMPLE, className: I.u1, itemClassName: I.pu })
-                    : (0, l.jsx)("span", { className: "draft" === t ? I.K4 : I.H3 }),
+                    ? (0, l.jsx)(s.y, { type: s.t.SPINNING_CIRCLE_SIMPLE, className: P.u1, itemClassName: P.pu })
+                    : (0, l.jsx)(C.PencilIcon, { size: "xxs", color: N.A.colors.ICON_SUBTLE }),
         }),
     });
 }
-var T = n(731084),
-    M = n(104317),
-    L = n(886540),
+var L = n(731084),
+    z = n(104317),
+    B = n(886540),
     K = n(162052),
-    z = n(790624);
-function B(e) {
+    G = n(790624);
+function R(e) {
     let { projectId: t } = e,
         n = (0, u.bG)(
             [v.A],
             () => {
-                let e = (0, L.Ji)(v.A.getMessages(t));
+                let e = (0, B.Ji)(v.A.getMessages(t));
                 return null == e
                     ? null
-                    : ((0, M.w)(e.steps) ??
-                          (0, T.Dy)({
+                    : ((0, z.w)(e.steps) ??
+                          (0, L.Dy)({
                               activity: v.A.getThinkingActivity(t),
                               compacting: v.A.isCompacting(t),
                               saving: v.A.isSaving(t),
@@ -69,19 +71,19 @@ function B(e) {
     return (0, l.jsx)(i.E, {
         variant: "text-xs/normal",
         color: "none",
-        className: m()(z.pG, K.Hz),
+        className: m()(G.pG, K.Hz),
         "aria-hidden": !0,
-        children: n ?? C.intl.string(N.default["Y8pS+n"]),
+        children: n ?? E.intl.string(I.default["Y8pS+n"]),
     });
 }
-let G = a.memo(function (e) {
+let H = a.memo(function (e) {
     let t,
         n,
         { project: a, onSelect: r, selected: c = !1, renderActions: f, onContextMenu: k } = e,
         {
             status: S,
-            unread: I,
-            deleting: T,
+            unread: C,
+            deleting: N,
         } = ((t = a.id),
         (n = (a.supported_surfaces?.length ?? 0) > 0),
         (0, u.cf)(
@@ -106,85 +108,83 @@ let G = a.memo(function (e) {
             }),
             [t, n],
         )),
-        M = !T && "in_progress" === S,
-        L = !T && I,
-        G = (function (e) {
+        P = !N && "in_progress" === S,
+        L = !N && C,
+        z = N || "published" === S ? null : S,
+        B = [null != z ? E.intl.string(D[z]) : null, L ? E.intl.string(I.default["N+3Pzk"]) : null]
+            .filter(Boolean)
+            .join(", "),
+        H = (function (e) {
             if (null == e.updated_at) return null;
             let t = Date.parse(e.updated_at);
             return Number.isNaN(t) ? null : t;
         })(a);
     return (0, l.jsxs)("li", {
-        className: m()(z.AS, { [z.Cp]: T, [z.vX]: null != f }),
-        "aria-busy": T,
+        className: m()(G.AS, { [G.Cp]: N, [G.vX]: null != f }),
+        "aria-busy": N,
         children: [
-            L ? (0, l.jsx)("span", { className: z.dM, "aria-hidden": !0 }) : null,
+            L ? (0, l.jsx)("span", { className: G.dM, "aria-hidden": !0 }) : null,
             (0, l.jsxs)(p.D, {
-                className: m()(z.nM, { [z.wH]: c, [z.gy]: L }),
+                className: m()(G.nM, { [G.wH]: c, [G.gy]: L }),
                 "aria-current": c ? "page" : void 0,
-                tabIndex: T ? -1 : void 0,
-                onMouseDown: T
+                tabIndex: N ? -1 : void 0,
+                onMouseDown: N
                     ? void 0
                     : (e) => {
                           0 === e.button && (0, o.tf)(a.id);
                       },
-                onClick: T ? void 0 : () => r(a),
-                onContextMenu: null == k || T ? void 0 : (e) => k(e, a),
+                onClick: N ? void 0 : () => r(a),
+                onContextMenu: null == k || N ? void 0 : (e) => k(e, a),
                 children: [
                     (0, l.jsxs)("span", {
-                        className: z.Kk,
+                        className: G.Kk,
                         children: [
-                            (0, l.jsx)(x.A, { project: a, size: "sidebar", className: E }),
-                            T ? null : (0, l.jsx)(D, { status: S }),
+                            (0, l.jsx)(x.A, { project: a, size: "sidebar", className: null != z ? T : void 0 }),
+                            null != z ? (0, l.jsx)(M, { status: z }) : null,
                         ],
                     }),
                     (0, l.jsxs)("span", {
-                        className: z.rf,
+                        className: G.rf,
                         children: [
                             (0, l.jsx)(i.E, {
                                 variant: "text-md/medium",
                                 color: "none",
-                                className: m()(z.UU, { [K.Hz]: M }),
+                                className: m()(G.UU, { [K.Hz]: P }),
                                 children: a.name,
                             }),
-                            T
+                            N
                                 ? (0, l.jsx)(i.E, {
                                       variant: "text-xs/normal",
                                       color: "none",
-                                      className: m()(z.pG, z.sL),
-                                      children: C.intl.string(N.default.Yh5pAc),
+                                      className: m()(G.pG, G.sL),
+                                      children: E.intl.string(I.default.Yh5pAc),
                                   })
-                                : M
-                                  ? (0, l.jsx)(B, { projectId: a.id })
-                                  : null != G
+                                : P
+                                  ? (0, l.jsx)(R, { projectId: a.id })
+                                  : null != H
                                     ? (0, l.jsx)(i.E, {
                                           variant: "text-xs/normal",
                                           color: "none",
-                                          className: m()(z.pG, z.sL),
-                                          children: (0, h.jb)(G, !1),
+                                          className: m()(G.pG, G.sL),
+                                          children: (0, h.jb)(H, !1),
                                       })
                                     : null,
                         ],
                     }),
-                    T
-                        ? null
-                        : (0, l.jsx)(g.A, {
-                              children: [C.intl.string(P[S]), L ? C.intl.string(N.default["N+3Pzk"]) : null]
-                                  .filter(Boolean)
-                                  .join(", "),
-                          }),
+                    "" !== B ? (0, l.jsx)(g.A, { children: B }) : null,
                 ],
             }),
             null != f
                 ? (0, l.jsx)("div", {
-                      className: m()(z.XI, { [z.Rn]: T }),
-                      children: T ? (0, l.jsx)(s.y, { type: s.t.SPINNING_CIRCLE_SIMPLE }) : f(a),
+                      className: m()(G.XI, { [G.Rn]: N }),
+                      children: N ? (0, l.jsx)(s.y, { type: s.t.SPINNING_CIRCLE_SIMPLE }) : f(a),
                   })
                 : null,
         ],
     });
 });
-var R = n(655074);
-function H(e) {
+var W = n(655074);
+function O(e) {
     let t,
         n,
         f,
@@ -217,10 +217,10 @@ function H(e) {
                       : { kind: "empty" });
     return "projects" === v.kind
         ? (0, l.jsx)("ul", {
-              className: R.p_,
+              className: W.p_,
               children: v.projects.map((e) =>
                   (0, l.jsx)(
-                      G,
+                      H,
                       { project: e, onSelect: p, selected: e.id === x, renderActions: j, onContextMenu: k },
                       e.id,
                   ),
@@ -230,32 +230,32 @@ function H(e) {
           ? (0, l.jsx)(i.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                className: R.Ie,
-                children: C.intl.string(N.default.X37fkR),
+                className: W.Ie,
+                children: E.intl.string(I.default.X37fkR),
             })
           : "error" === v.kind
             ? (0, l.jsxs)("div", {
-                  className: R.E8,
+                  className: W.E8,
                   children: [
                       (0, l.jsx)(i.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: C.intl.string(N.default.DJAPMO),
+                          children: E.intl.string(I.default.DJAPMO),
                       }),
                       (0, l.jsx)(r.$, {
                           variant: "secondary",
                           size: "sm",
-                          text: C.intl.string(N.default["WFJ/vb"]),
+                          text: E.intl.string(I.default["WFJ/vb"]),
                           onClick: () => (0, o.listProjects)(h),
                       }),
                   ],
               })
             : "loading" === v.kind
-              ? (0, l.jsx)("div", { className: R.E8, children: (0, l.jsx)(s.y, {}) })
+              ? (0, l.jsx)("div", { className: W.E8, children: (0, l.jsx)(s.y, {}) })
               : (0, l.jsx)(i.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    className: R.Ie,
-                    children: C.intl.string(N.default["9/5sLV"]),
+                    className: W.Ie,
+                    children: E.intl.string(I.default["9/5sLV"]),
                 });
 }

@@ -20,22 +20,6 @@
     mask-image: radial-gradient(circle at 3px calc(100% - 5px), transparent 9px, #000 9.5px)
 }
 
-.draft_b59e43 {
-    border: 2px dotted var(--status-warning);
-    box-sizing: border-box
-}
-
-.draft_b59e43,
-.published_b59e43 {
-    border-radius: 50%;
-    height: var(--space-12);
-    width: var(--space-12)
-}
-
-.published_b59e43 {
-    background: var(--status-positive)
-}
-
 .spinner_b59e43 {
     height: var(--space-12);
     width: var(--space-12)
@@ -45,4 +29,4 @@
     stroke: var(--icon-strong)
 }
 
-/*# sourceMappingURL=ced8d3fafc3f6caa.css.map*/
+/*# sourceMappingURL=8922db2da81e53e5.css.map*/
