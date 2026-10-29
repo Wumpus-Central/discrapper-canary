@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "656321";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "656322";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1508,7 +1508,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 656321, Version Hash: 651f0d0d2a1909b0ee9b5ce51f98d9ee97b0554c`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 656322, Version Hash: 3a9b59fd5070c93edbdada9ad3200749e5272e84`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -5779,8 +5779,8 @@ function su() {
     ]).then(n.bind(n, 496879));
 }
 let s_ = (0, rl.Fe)({
-        createPromise: () => Promise.all([n.e("900578"), n.e("450309")]).then(n.bind(n, 546419)),
-        webpackId: 546419,
+        createPromise: () => Promise.all([n.e("700930"), n.e("912601"), n.e("450309")]).then(n.bind(n, 939723)),
+        webpackId: 939723,
         name: "ChannelTabBar",
     }),
     sE = (0, rl.Fe)({ createPromise: su, webpackId: 496879 }),
@@ -26225,7 +26225,7 @@ let y_ = "isHideDevBanner",
                     className: tf()(yu.Wz, yu.mr),
                     children: [
                         (0, b.jsx)(yc, { className: yu.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "656321" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "656322" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -38451,8 +38451,8 @@ let wI = (0, rl.Fe)({
                 n.e("979585"),
                 n.e("678827"),
                 n.e("606913"),
-                n.e("291553"),
                 n.e("61924"),
+                n.e("291553"),
                 n.e("652199"),
                 n.e("317731"),
                 n.e("215980"),
@@ -39251,8 +39251,8 @@ let wI = (0, rl.Fe)({
                 n.e("979585"),
                 n.e("678827"),
                 n.e("606913"),
-                n.e("291553"),
                 n.e("61924"),
+                n.e("291553"),
                 n.e("652199"),
                 n.e("215980"),
                 n.e("842492"),
@@ -39887,8 +39887,8 @@ let wI = (0, rl.Fe)({
                 n.e("979585"),
                 n.e("678827"),
                 n.e("606913"),
-                n.e("291553"),
                 n.e("61924"),
+                n.e("291553"),
                 n.e("652199"),
                 n.e("317731"),
                 n.e("215980"),
@@ -53090,9 +53090,10 @@ let Yn = (0, rl.qT)({
                 n.e("725241"),
                 n.e("61924"),
                 n.e("724553"),
+                n.e("912601"),
                 n.e("924927"),
-            ]).then(n.bind(n, 417680)),
-        webpackId: 417680,
+            ]).then(n.bind(n, 228822)),
+        webpackId: 228822,
     }),
     Yi = { transform: "scale(0.7)", opacity: 0 },
     Yr = { transform: "scale(1)", opacity: 1 },

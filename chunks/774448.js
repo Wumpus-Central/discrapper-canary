@@ -1,33 +1,29 @@
-t.d(i, { default: () => c });
-var a = t(477900);
-t(582128);
-var e = t(980707),
-    d = t(477782),
-    r = t(442433),
-    l = t(114129),
-    s = t(105292);
+i.d(t, { default: () => c });
+var a = i(477900);
+i(582128);
+var e = i(980707),
+    d = i(477782),
+    r = i(442433),
+    l = i(114129),
+    s = i(105292);
 function c(n) {
-    let { tab: i, onSelect: t } = n;
+    let { tab: t, onSelect: i, onRequestClose: c } = n;
     return (0, a.jsxs)(e.W, {
         "data-menu-migrated": !0,
         navId: "channel-tab-context",
         onClose: r.Z_,
         "aria-label": s.intl.string(s.t.dd5Eyn),
-        onSelect: t,
+        onSelect: i,
         children: [
             (0, a.jsx)(d.rX, {
                 children: (0, a.jsx)(d.Dr, {
-                    id: i.pinned ? "unpin-tab" : "pin-tab",
-                    label: i.pinned ? s.intl.string(s.t.LvKSA8) : s.intl.string(s.t.Aiucjd),
-                    action: () => (0, l.RL)(i.id, !i.pinned),
+                    id: t.pinned ? "unpin-tab" : "pin-tab",
+                    label: t.pinned ? s.intl.string(s.t.LvKSA8) : s.intl.string(s.t.Aiucjd),
+                    action: () => (0, l.RL)(t.id, !t.pinned),
                 }),
             }),
             (0, a.jsx)(d.rX, {
-                children: (0, a.jsx)(d.Dr, {
-                    id: "close-tab",
-                    label: s.intl.string(s.t.In6PEK),
-                    action: () => (0, l.f5)(i.id),
-                }),
+                children: (0, a.jsx)(d.Dr, { id: "close-tab", label: s.intl.string(s.t.In6PEK), action: c }),
             }),
         ],
     });

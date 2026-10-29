@@ -1,32 +1,36 @@
-e.d(t, { A: () => p });
-var i = e(477900),
-    s = e(582128),
-    c = e(978940),
-    o = e(730852),
-    r = e(688810),
-    a = e(384059),
-    l = e(625494),
-    u = e(204651),
-    C = e(652215),
-    d = e(105292);
+t.d(e, { A: () => p });
+var i = t(477900),
+    s = t(582128),
+    l = t(978940),
+    a = t(730852),
+    o = t(688810),
+    c = t(384059),
+    r = t(114129),
+    u = t(442325),
+    C = t(625494),
+    d = t(204651),
+    A = t(652215),
+    b = t(105292);
 function p(n) {
-    let { channel: t, centerButton: e = !1, onCallJoined: p, ...A } = n,
-        { parentAnalyticsLocation: b } = (0, r.Ay)(),
-        _ = e ? u.l : u.A,
-        h = t.isManaged() || !t.isPrivate() ? d.intl.string(d.t.S0W8Z5) : d.intl.string(d.t["0D/6Rz"]),
-        j = s.useCallback(() => {
-            (p?.(), (0, a.X)(b, a.O.JOIN_CALL), o.default.selectVoiceChannel(t.id));
-        }, [t.id, p, b]);
+    let { channel: e, centerButton: t = !1, onCallJoined: p, ..._ } = n,
+        { parentAnalyticsLocation: h } = (0, o.Ay)(),
+        j = t ? d.l : d.A,
+        k = e.isManaged() || !e.isPrivate() ? b.intl.string(b.t.S0W8Z5) : b.intl.string(b.t["0D/6Rz"]),
+        L = s.useCallback(() => {
+            (p?.(), (0, c.X)(h, c.O.JOIN_CALL));
+            let n = u.A.isEnabled() ? u.A.getTabForChannel(e.id) : null;
+            (null != n && (0, r.ZD)(n.id, !0), a.default.selectVoiceChannel(e.id));
+        }, [e.id, p, h]);
     return (
         s.useEffect(
             () => (
-                l._.subscribe(C.jej.CALL_ACCEPT, j),
+                C._.subscribe(A.jej.CALL_ACCEPT, L),
                 () => {
-                    l._.unsubscribe(C.jej.CALL_ACCEPT, j);
+                    C._.unsubscribe(A.jej.CALL_ACCEPT, L);
                 }
             ),
-            [j],
+            [L],
         ),
-        (0, i.jsx)(_, { ...A, iconComponent: c._, label: h, onClick: j, isTrayButton: !1 })
+        (0, i.jsx)(j, { ..._, iconComponent: l._, label: k, onClick: L, isTrayButton: !1 })
     );
 }

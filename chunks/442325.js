@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => S });
 var i = n(574381),
     r = n(17928),
     a = n(73153),
@@ -20,9 +20,23 @@ function f(e, t, n, i) {
     return { id: e.id, pinned: e.pinned, ...t, entries: n, index: i };
 }
 function I(e) {
-    return !A() && (0 === e.length || (1 === e.length && !e[0].pinned));
+    let t = c.find((t) =>
+        "channel" === e.kind
+            ? "channel" === t.kind && t.channelId === e.channelId
+            : "route" === t.kind && t.routePath === e.routePath,
+    );
+    if (null != t) {
+        u = t.id;
+        return;
+    }
+    if (c.length >= 25) return !1;
+    let n = h(e);
+    ((c = [...c, n]), (u = n.id));
 }
 function p(e) {
+    return !A() && (0 === e.length || (1 === e.length && !e[0].pinned));
+}
+function T(e) {
     let t = c.find((e) => e.id === u);
     if (null == t) return !1;
     let n = t.index + e,
@@ -30,7 +44,7 @@ function p(e) {
     if (null == i) return !1;
     c = c.map((e) => (e.id === u ? f(e, i, e.entries, n) : e));
 }
-function T(e) {
+function m(e) {
     let { channel: t } = e;
     if (!A()) return !1;
     function n(e) {
@@ -38,13 +52,13 @@ function T(e) {
     }
     if (0 === c.filter((e) => n(e) && e.id !== u).length) return !1;
     let i = c.filter((e) => !n(e) || e.id === u);
-    if (I(i)) {
+    if (p(i)) {
         ((c = []), (u = null));
         return;
     }
     c = i;
 }
-class m extends r.Ay.PersistedStore {
+class g extends r.Ay.PersistedStore {
     static displayName = "ChannelTabsStore";
     static persistKey = "ChannelTabsStore";
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
@@ -81,6 +95,12 @@ class m extends r.Ay.PersistedStore {
     isTabBarVisible() {
         return A() && c.length >= 1;
     }
+    getTabForChannel(e) {
+        return c.find((t) => "channel" === t.kind && t.channelId === e) ?? null;
+    }
+    getTabForRoute(e) {
+        return c.find((t) => "route" === t.kind && t.routePath === e) ?? null;
+    }
     isAtMaxTabs() {
         return c.length >= 25;
     }
@@ -93,7 +113,7 @@ class m extends r.Ay.PersistedStore {
         return null != e && e.index < e.entries.length - 1;
     }
 }
-let g = new m(a.h, {
+let S = new g(a.h, {
     CHANNEL_TABS_OPEN: function (e) {
         if (c.length >= 25) return !1;
         if (0 === c.length) {
@@ -115,7 +135,7 @@ let g = new m(a.h, {
             n = c.findIndex((e) => e.id === t);
         if (-1 === n || (A() && 1 === c.length)) return !1;
         let i = c[n].id === u;
-        if (I((c = c.filter((e) => e.id !== t)))) {
+        if (p((c = c.filter((e) => e.id !== t)))) {
             ((c = []), (u = null));
             return;
         }
@@ -142,10 +162,10 @@ let g = new m(a.h, {
         c = c.map((e) => (e.id === t ? { ...e, pinned: n } : e));
     },
     CHANNEL_TABS_BACK: function () {
-        return p(-1);
+        return T(-1);
     },
     CHANNEL_TABS_FORWARD: function () {
-        return p(1);
+        return T(1);
     },
     CHANNEL_TABS_SET_ENABLED: function (e) {
         let { enabled: t } = e;
@@ -174,17 +194,17 @@ let g = new m(a.h, {
         }
         if (null == u) return !1;
         let r = c.find((e) => e.id === u);
-        if (null == r || ("route" === r.kind && r.routePath === t)) return !1;
-        if (r.pinned) {
-            if (c.length >= 25) return !1;
-            let e = h(i);
-            return ((c = [...c, e]), void (u = e.id));
-        }
-        c = c.map((e) => {
-            if (e.id !== u) return e;
-            let t = [...e.entries.slice(0, e.index + 1), i];
-            return f(e, i, t, t.length - 1);
-        });
+        return (
+            null != r &&
+            ("route" !== r.kind || r.routePath !== t) &&
+            (r.pinned
+                ? I(i)
+                : void (c = c.map((e) => {
+                      if (e.id !== u) return e;
+                      let t = [...e.entries.slice(0, e.index + 1), i];
+                      return f(e, i, t, t.length - 1);
+                  })))
+        );
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e;
@@ -197,20 +217,20 @@ let g = new m(a.h, {
         }
         if (null == u) return !1;
         let r = c.find((e) => e.id === u);
-        if (null == r || ("channel" === r.kind && r.channelId === t)) return !1;
-        if (r.pinned) {
-            if (c.length >= 25) return !1;
-            let e = h(i);
-            return ((c = [...c, e]), void (u = e.id));
-        }
-        c = c.map((e) => {
-            if (e.id !== u) return e;
-            let t = [...e.entries.slice(0, e.index + 1), i];
-            return f(e, i, t, t.length - 1);
-        });
+        return (
+            null != r &&
+            ("channel" !== r.kind || r.channelId !== t) &&
+            (r.pinned
+                ? I(i)
+                : void (c = c.map((e) => {
+                      if (e.id !== u) return e;
+                      let t = [...e.entries.slice(0, e.index + 1), i];
+                      return f(e, i, t, t.length - 1);
+                  })))
+        );
     },
-    CHANNEL_DELETE: T,
-    THREAD_DELETE: T,
+    CHANNEL_DELETE: m,
+    THREAD_DELETE: m,
     LOGOUT: function () {
         if (0 === c.length) return !1;
         ((c = []), (u = null));

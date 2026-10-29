@@ -1,0 +1,215 @@
+.tab_c652e0 {
+    align-items: center;
+    background-color: var(--background-surface-higher);
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 0;
+    max-width: 200px;
+    min-width: 0;
+    position: relative;
+    -webkit-app-region: no-drag;
+    color: var(--interactive-text-default);
+    padding-inline-end: var(--space-4)
+}
+
+.tab_c652e0:not(.tabActive_c652e0):hover {
+    background-image: linear-gradient(var(--interactive-background-hover), var(--interactive-background-hover));
+    color: var(--interactive-text-hover)
+}
+
+.tab_c652e0:not(:first-child):before {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 60%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 20%;
+    width: 1px
+}
+
+.tabActive_c652e0+.tab_c652e0:before,
+.tabActive_c652e0:before {
+    display: none
+}
+
+.tabActive_c652e0 {
+    background-image: linear-gradient(var(--interactive-background-active), var(--interactive-background-active));
+    color: var(--interactive-text-active)
+}
+
+@keyframes channelTabEnter_c652e0 {
+    0% {
+        flex-grow: 0;
+        max-width: 0;
+        opacity: 0;
+        padding-inline-end: 0
+    }
+}
+
+@keyframes channelTabExit_c652e0 {
+    to {
+        flex-grow: 0;
+        max-width: 0;
+        opacity: 0;
+        padding-inline-end: 0
+    }
+}
+
+.tabEntering_c652e0 {
+    animation: channelTabEnter_c652e0 .15s ease-out;
+    overflow: hidden
+}
+
+.tabClosing_c652e0 {
+    animation: channelTabExit_c652e0 .15s ease-out forwards;
+    overflow: hidden;
+    pointer-events: none
+}
+
+.tabButton_c652e0 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-8);
+    height: 100%;
+    padding-inline: var(--space-8) var(--space-4)
+}
+
+.channelName_c652e0,
+.tabButton_c652e0 {
+    flex: 1 1 auto;
+    min-width: 0
+}
+
+.channelName_c652e0 {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap
+}
+
+.channelNameFade_c652e0 {
+    background-image: linear-gradient(to right, transparent, var(--background-surface-higher));
+    bottom: 0;
+    inset-inline-end: 0;
+    position: absolute;
+    top: 0;
+    width: var(--space-8)
+}
+
+.tab_c652e0:not(.tabActive_c652e0):hover .channelNameFade_c652e0 {
+    background-image: linear-gradient(to right, transparent, var(--interactive-background-hover)), linear-gradient(to right, transparent, var(--background-surface-higher))
+}
+
+.tabActive_c652e0 .channelNameFade_c652e0 {
+    background-image: linear-gradient(to right, transparent, var(--interactive-background-active)), linear-gradient(to right, transparent, var(--background-surface-higher))
+}
+
+.closeButton_c652e0 {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    justify-content: center;
+    width: 20px
+}
+
+.closeButton_c652e0:hover {
+    background-color: var(--background-mod-strong)
+}
+
+.tab_c652e0:not(.tabActive_c652e0) .closeButton_c652e0 {
+    display: none
+}
+
+.tab_c652e0:not(.tabActive_c652e0):hover .closeButton_c652e0 {
+    display: flex
+}
+
+.tab_c652e0:not(.tabActive_c652e0):hover .unreadIndicator_c652e0 {
+    display: none
+}
+
+.pinIndicator_c652e0 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 16px;
+    justify-content: center;
+    position: relative;
+    width: 16px
+}
+
+.pinUnreadDot_c652e0 {
+    inset-block-end: -2px;
+    inset-inline-end: -2px;
+    pointer-events: none;
+    position: absolute
+}
+
+.guildIcon_c652e0 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0
+}
+
+.dmIcon_c652e0 {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px
+}
+
+.dmIcon_c652e0,
+.favoritesIcon_c652e0,
+.iconWrapper_c652e0 {
+    flex-shrink: 0
+}
+
+.iconWrapper_c652e0 {
+    display: flex;
+    position: relative
+}
+
+.mentionBadge_c652e0 {
+    inset-block-end: -3px;
+    inset-inline-end: -3px;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(.85);
+    transform-origin: bottom right
+}
+
+.unreadIndicator_c652e0 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    justify-content: center;
+    width: 20px
+}
+
+.platform-web .tabBar__97b44 {
+    margin-inline-start: var(--custom-guild-list-width)
+}
+
+.tabBar__97b44 {
+    align-items: stretch;
+    background-color: var(--background-surface-higher);
+    display: flex;
+    flex: 1 1 auto;
+    height: var(--custom-app-top-bar-height);
+    min-width: 0;
+    padding-inline-end: var(--space-40);
+    position: relative;
+    -webkit-app-region: drag
+}
+
+.newTabButton__97b44 {
+    align-self: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-start: calc((var(--custom-app-top-bar-height) - var(--space-24))/2);
+    -webkit-app-region: no-drag
+}
+
+/*# sourceMappingURL=c68eed001c9c9a13.css.map*/

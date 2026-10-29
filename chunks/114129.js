@@ -25,12 +25,14 @@ var i,
     _ = n(652215),
     E = n(746080);
 function A(e, t) {
-    let n = o.A.getChannel(e);
-    (null != n && n.isGuildVocal() && a.A.updateChatOpen(e, !0),
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = o.A.getChannel(e);
+    (null != i && i.isGuildVocal() && a.A.updateChatOpen(e, !n),
         null != t ? (0, s.pX)(_.BVt.CHANNEL(t, e), { openChannel: !0 }) : (0, l.iN)(e));
 }
 function h(e) {
-    "route" === e.kind ? (0, s.pX)(e.routePath) : A(e.channelId, e.guildId);
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    "route" === e.kind ? (0, s.pX)(e.routePath) : A(e.channelId, e.guildId, t);
 }
 function f(e, t) {
     let n = d.Ay.getCurrentlySelectedChannelId();
@@ -98,8 +100,18 @@ function C(e) {
     r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });
 }
 function O(e) {
-    let t = u.A.getTabs().find((t) => t.id === e);
-    null != t && u.A.getActiveTabId() !== e && (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: e }), h(t));
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = u.A.getTabs().find((t) => t.id === e);
+    if (null != n) {
+        if (u.A.getActiveTabId() === e) {
+            if ("channel" !== n.kind) return;
+            d.Ay.getCurrentlySelectedChannelId() !== n.channelId
+                ? A(n.channelId, n.guildId, t)
+                : t && o.A.getChannel(n.channelId)?.isGuildVocal() === !0 && a.A.updateChatOpen(n.channelId, !1);
+            return;
+        }
+        (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: e }), h(n, t));
+    }
 }
 function R(e) {
     let t = u.A.getTabs();
