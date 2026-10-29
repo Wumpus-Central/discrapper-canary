@@ -1,4 +1,4 @@
-t.d(n, { Ay: () => D, Gy: () => y, k7: () => i.k });
+t.d(n, { Ay: () => E, Gy: () => D, k7: () => i.k });
 var a = t(477900),
     r = t(582128),
     l = t(503698),
@@ -12,8 +12,8 @@ let d = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend
     m = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } };
 var f = t(462887),
     v = t(736653),
-    C = t(802814);
-let h = { width: 60, height: 60 };
+    p = t(802814);
+let C = { width: 60, height: 60 };
 function g(e) {
     let { currentAnimationType: n, animationTypeRef: t, onSetAnimationDurationMS: a, play: l, getDuration: u } = e,
         s = u(),
@@ -25,7 +25,7 @@ function g(e) {
             a(i);
         }, [a, i]));
 }
-function k(e) {
+function h(e) {
     var n;
     let l,
         u,
@@ -62,10 +62,10 @@ function k(e) {
             });
     return (
         g({ currentAnimationType: o, ...d, ...v }),
-        (0, a.jsx)(f, { ...h, size: "custom", className: C.E$, useLottieDefaultColors: !0 })
+        (0, a.jsx)(f, { ...C, size: "custom", className: p.E$, useLottieDefaultColors: !0 })
     );
 }
-function p(e) {
+function k(e) {
     var n;
     let l,
         u,
@@ -102,115 +102,133 @@ function p(e) {
             });
     return (
         g({ currentAnimationType: o, ...m, ...v }),
-        (0, a.jsx)(f, { ...h, size: "custom", className: C.E$, useLottieDefaultColors: !0 })
+        (0, a.jsx)(f, { ...C, size: "custom", className: p.E$, useLottieDefaultColors: !0 })
     );
 }
 let b = function (e) {
     let { themeOverride: n, ...t } = e,
         r = (0, v.Ay)();
-    return (0, f.q)(n ?? r) ? (0, a.jsx)(p, { ...t }) : (0, a.jsx)(k, { ...t });
+    return (0, f.q)(n ?? r) ? (0, a.jsx)(k, { ...t }) : (0, a.jsx)(h, { ...t });
 };
 var x = t(105292);
 function j() {
-    return (0, a.jsx)("div", { className: C.V8, "aria-hidden": !0 });
+    return (0, a.jsx)("div", { className: p.V8, "aria-hidden": !0 });
 }
 function y(e) {
     let {
+            balance: n,
+            variant: t = "default",
+            themeOverride: l,
+            balanceWidgetMode: s = i.k.DEFAULT,
+            showNotificationBadge: c,
+            onMouseDown: d,
+            disabled: m,
+            isInModalOverlay: f,
+            className: v,
+            ref: C,
+            loading: g,
+            isInteractive: h,
+        } = e,
+        [k, x] = (0, r.useState)(!1),
+        y = (0, r.useMemo)(() => (s === i.k.SELECTED ? p.wH : k ? p.mr : p.Ay), [s, k]),
+        D = h && !0 !== m,
+        [E, A] = (0, r.useState)(2700),
+        [S, T] = (0, r.useState)(null),
+        L = (0, r.useRef)(null),
+        M = (0, r.useCallback)(() => {
+            ((L.current = null), T(null));
+        }, []),
+        N = (0, r.useCallback)(
+            (e) => {
+                let n = S === L.current;
+                e > 0 && ("earn" !== S || !n) && T("earn");
+            },
+            [T, S],
+        );
+    return (0, a.jsxs)("span", {
+        onMouseDown: d,
+        onMouseEnter: D ? () => x(!0) : void 0,
+        onMouseLeave: D ? () => x(!1) : void 0,
+        ref: C,
+        className: u()(p.kL, y, v, { [p.D0]: "overlay-secondary" === t, [p.En]: g, [p.dA]: f, [p.r9]: m }),
+        children: [
+            (0, a.jsx)("div", {
+                className: u()(p.hr, g ? p.nr : void 0),
+                children: (0, a.jsx)(b, {
+                    currentAnimationType: S,
+                    animationTypeRef: L,
+                    onSetAnimationDurationMS: A,
+                    themeOverride: l,
+                }),
+            }),
+            (0, a.jsx)(o.A, {
+                value: n,
+                onValueChange: N,
+                onValueReached: M,
+                targetTotalCounterTime: E,
+                className: g ? p.F : void 0,
+                textColor: "overlay-secondary" === t ? "text-overlay-light" : void 0,
+            }),
+            c && (0, a.jsx)(j, {}),
+        ],
+    });
+}
+function D(e) {
+    let {
             id: n,
             balance: t,
-            variant: l = "default",
-            themeOverride: c,
-            balanceWidgetMode: d = i.k.DEFAULT,
-            showNotificationBadge: m,
-            onClick: f,
-            onMouseDown: v,
-            disabled: h,
-            isInModalOverlay: g,
-            ariaExpanded: k,
-            clickableRef: p,
-            className: y,
-            ref: D,
+            showNotificationBadge: l,
+            onClick: i,
+            disabled: o,
+            ariaExpanded: c,
+            clickableRef: d,
+            ...m
         } = e,
-        [E, A] = (0, r.useState)(!1),
-        S = (0, r.useMemo)(() => (d === i.k.SELECTED ? C.wH : E ? C.mr : C.Ay), [d, E]),
-        [L, M] = (0, r.useState)(!1),
-        [N, w] = (0, r.useState)(!1),
-        [R, T] = (0, r.useState)(2700),
-        F = null === t;
+        [f, v] = (0, r.useState)(!1),
+        [C, g] = (0, r.useState)(!1),
+        h = null === t;
     ((0, r.useEffect)(() => {
-        F &&
-            !L &&
-            (M(!0),
+        h &&
+            !f &&
+            (v(!0),
             setTimeout(() => {
-                w(!0);
+                g(!0);
             }, 500));
-    }, [F, M, L]),
+    }, [h, v, f]),
         (0, r.useEffect)(() => {
-            N && !F && M(!1);
-        }, [F, N]));
-    let P = F || L,
-        z = L ? null : t,
-        [V, q] = (0, r.useState)(null),
-        G = (0, r.useRef)(null),
-        U = (0, r.useCallback)(() => {
-            ((G.current = null), q(null));
-        }, []),
-        $ = (0, r.useCallback)(
-            (e) => {
-                let n = V === G.current;
-                e > 0 && ("earn" !== V || !n) && q("earn");
-            },
-            [q, V],
-        ),
-        _ = null != f,
-        H = _ && !0 !== h,
-        K = (function (e) {
+            C && !h && v(!1);
+        }, [h, C]));
+    let k = h || f,
+        b = f ? null : t,
+        j = null != i,
+        D = (function (e) {
             let { loading: n, balance: t, hasUnread: a } = e;
             return n
                 ? x.intl.string(x.t.y0WGqP)
                 : a
                   ? x.intl.formatToPlainString(x.t.AgMngw, { balance: t })
                   : x.intl.formatToPlainString(x.t.zPaLL9, { balance: t });
-        })({ loading: P, balance: z ?? 0, hasUnread: !0 === m }),
-        O = (0, a.jsxs)("span", {
-            onMouseDown: v,
-            onMouseEnter: H ? () => A(!0) : void 0,
-            onMouseLeave: H ? () => A(!1) : void 0,
-            ref: D,
-            className: u()(C.kL, S, y, { [C.D0]: "overlay-secondary" === l, [C.En]: P, [C.dA]: g, [C.r9]: h }),
-            children: [
-                (0, a.jsx)("div", {
-                    className: u()(C.hr, P ? C.nr : void 0),
-                    children: (0, a.jsx)(b, {
-                        currentAnimationType: V,
-                        animationTypeRef: G,
-                        onSetAnimationDurationMS: T,
-                        themeOverride: c,
-                    }),
-                }),
-                (0, a.jsx)(o.A, {
-                    value: z,
-                    onValueChange: $,
-                    onValueReached: U,
-                    targetTotalCounterTime: R,
-                    className: P ? C.F : void 0,
-                    textColor: "overlay-secondary" === l ? "text-overlay-light" : void 0,
-                }),
-                m && (0, a.jsx)(j, {}),
-            ],
-        });
-    return _
+        })({ loading: k, balance: b ?? 0, hasUnread: !0 === l }),
+        E = { ...m, balance: b, showNotificationBadge: l, disabled: o, loading: k, isInteractive: j };
+    return j
         ? (0, a.jsx)(s.D, {
-              innerRef: p,
-              onClick: P ? void 0 : f,
-              "aria-expanded": k,
-              "aria-haspopup": null != k ? "dialog" : void 0,
-              "aria-label": K,
-              "aria-busy": P,
-              className: u()(C.vk, { [C.r9]: h }),
+              innerRef: d,
+              onClick: k ? void 0 : i,
+              "aria-expanded": c,
+              "aria-haspopup": null != c ? "dialog" : void 0,
+              "aria-label": D,
+              "aria-busy": k,
+              className: u()(p.vk, { [p.r9]: o }),
               id: n ?? "balance-widget-pill",
-              children: O,
+              children: (0, a.jsx)(y, { ...E }),
           })
-        : (0, a.jsx)("div", { role: "img", "aria-label": K, "aria-busy": P, className: C.Kc, id: n, children: O });
+        : (0, a.jsx)("div", {
+              role: "img",
+              "aria-label": D,
+              "aria-busy": k,
+              className: p.Kc,
+              id: n,
+              children: (0, a.jsx)(y, { ...E }),
+          });
 }
-let D = 588245 != t.j ? y : null;
+let E = 588245 != t.j ? D : null;
