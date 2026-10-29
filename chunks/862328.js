@@ -62,8 +62,8 @@ function _(e) {
         D = `${C}-highlight_mask`,
         v = _?.width != null ? _.width : 16,
         b = _?.height != null ? _.height : 16,
-        P = { width: u ? n : n + 8, height: u ? n : n + 8, x: u ? 0 : -4, y: u ? 0 : -4 },
-        M = u ? 20 : h,
+        M = { width: u ? n : n + 8, height: u ? n : n + 8, x: u ? 0 : -4, y: u ? 0 : -4 },
+        P = u ? 20 : h,
         U = p
             ? (function (e) {
                   switch (e) {
@@ -107,9 +107,9 @@ function _(e) {
                 (0, i.jsxs)(
                     "svg",
                     {
-                        width: P.width,
-                        height: P.height,
-                        viewBox: `${P.x} ${P.y} ${P.width} ${P.height}`,
+                        width: M.width,
+                        height: M.height,
+                        viewBox: `${M.x} ${M.y} ${M.width} ${M.height}`,
                         className: s()(c.JW, { [c.Qq]: E, [c.Pm]: !u }),
                         overflow: "visible",
                         role: "none",
@@ -121,12 +121,12 @@ function _(e) {
                                     null != f
                                         ? (0, i.jsx)("rect", {
                                               id: O,
-                                              x: n - M + A,
+                                              x: n - P + A,
                                               y: -A,
-                                              width: M,
-                                              height: M,
-                                              rx: M / 2,
-                                              ry: M / 2,
+                                              width: P,
+                                              height: P,
+                                              rx: P / 2,
+                                              ry: P / 2,
                                           })
                                         : null,
                                     null != I

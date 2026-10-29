@@ -4,7 +4,7 @@ n.d(t, {
     wo: () => w,
     ks: () => N,
     $5: () => m,
-    sn: () => P,
+    sn: () => M,
     mH: () => k,
     cg: () => F,
     Y7: () => b,
@@ -19,7 +19,7 @@ n.d(t, {
     _Z: () => D,
     l0: () => U,
     mq: () => x,
-    b: () => M,
+    b: () => P,
     K9: () => S,
 });
 var i,
@@ -106,11 +106,11 @@ function v(e) {
 function b(e) {
     return v(e) && T(e)?.expirationMode === l.PREMIUM_PERMANENT;
 }
-function P(e) {
+function M(e) {
     let t = e.userStatus?.claimedTier ?? 0;
     return "rewardsConfig" in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t];
 }
-function M(e) {
+function P(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === o.l.VIRTUAL_CURRENCY);
     if (t?.type !== o.l.VIRTUAL_CURRENCY) return null;
     let { premiumOrbQuantity: n, orbQuantity: i } = t;
@@ -118,7 +118,7 @@ function M(e) {
 }
 function U(e, t) {
     if (null == t) return 1;
-    let n = M(e) ?? 1,
+    let n = P(e) ?? 1,
         i = (0, c.m)(t);
     return C(e) && (0, I.B9)(i) ? n : 1;
 }

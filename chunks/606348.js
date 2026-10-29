@@ -1,19 +1,19 @@
-r.d(E, { f: () => a });
-var C,
-    o = r(661531),
+C.d(E, { f: () => O });
+var r,
+    o = C(661531),
     N =
-        (((C = {})[(C.ZERO = 0)] = "ZERO"),
-        (C[(C.ONE = 1)] = "ONE"),
-        (C[(C.TWO = 2)] = "TWO"),
-        (C[(C.THREE = 3)] = "THREE"),
-        (C[(C.FOUR = 4)] = "FOUR"),
-        (C[(C.FIVE = 5)] = "FIVE"),
-        (C[(C.SIX = 6)] = "SIX"),
-        (C[(C.SEVEN = 7)] = "SEVEN"),
-        (C[(C.EIGHT = 8)] = "EIGHT"),
-        (C[(C.NINE = 9)] = "NINE"),
-        C);
-let a = {
+        (((r = {})[(r.ZERO = 0)] = "ZERO"),
+        (r[(r.ONE = 1)] = "ONE"),
+        (r[(r.TWO = 2)] = "TWO"),
+        (r[(r.THREE = 3)] = "THREE"),
+        (r[(r.FOUR = 4)] = "FOUR"),
+        (r[(r.FIVE = 5)] = "FIVE"),
+        (r[(r.SIX = 6)] = "SIX"),
+        (r[(r.SEVEN = 7)] = "SEVEN"),
+        (r[(r.EIGHT = 8)] = "EIGHT"),
+        (r[(r.NINE = 9)] = "NINE"),
+        r);
+let O = {
     [N.ZERO]: {
         primaryColor: o.A.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_PRIMARY,
         secondaryColor: o.A.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_SECONDARY,

@@ -29,8 +29,8 @@ var i = t(477900),
     O = t(795816),
     R = t(648027),
     L = t(855446),
-    M = t(652215),
-    D = t(105292),
+    D = t(652215),
+    M = t(105292),
     G = t(472489);
 let P = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
     k = `vc-activities-${(0, s.A)()}`;
@@ -97,14 +97,14 @@ function V(e) {
         } = e,
         { id: I, guild_id: N } = t;
     (l.useEffect(() => {
-        y.default.track(M.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: I, guild_id: N });
+        y.default.track(D.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: I, guild_id: N });
     }, [I, N]),
         l.useEffect(() => {
             s || a();
         }, [a, s]));
     let T = (0, _.Us)(),
         { analyticsLocations: S, newestAnalyticsLocation: P } = (0, f.Ay)(C.A.ACTIVITIES_MINI_SHELF),
-        V = T === M.BRT.POPOUT,
+        V = T === D.BRT.POPOUT,
         B = ((n = t.getGuildId()), (0, R.A)({ guildId: n }).slice(0, 5));
     l.useEffect(() => {
         let e = setTimeout(() => O.LK(), 1e3);
@@ -122,7 +122,7 @@ function V(e) {
         H = l.useCallback(
             (e) => {
                 (r(),
-                    y.default.track(M.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    y.default.track(D.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
                         channel_id: t.id,
                         guild_id: t.getGuildId(),
                     }));
@@ -140,7 +140,7 @@ function V(e) {
                     (0, i.jsx)(A.F, {
                         forceLevel: 2,
                         children: (0, i.jsx)(h.A, {
-                            children: (0, i.jsx)(A.H, { id: k, children: D.intl.string(D.t["2lnYtB"]) }),
+                            children: (0, i.jsx)(A.H, { id: k, children: M.intl.string(M.t["2lnYtB"]) }),
                         }),
                     }),
                     (0, i.jsxs)("div", {
@@ -161,7 +161,7 @@ function V(e) {
                                             }),
                                             (0, i.jsx)(g.E, {
                                                 variant: "eyebrow",
-                                                children: D.intl.string(D.t.f3Cz25),
+                                                children: M.intl.string(M.t.f3Cz25),
                                             }),
                                         ],
                                     }),
@@ -171,7 +171,7 @@ function V(e) {
                                         children: [
                                             (0, i.jsx)(g.E, {
                                                 variant: "eyebrow",
-                                                children: D.intl.string(D.t["K8+z4S"]),
+                                                children: M.intl.string(M.t["K8+z4S"]),
                                             }),
                                             (0, i.jsx)(x._, {
                                                 size: "custom",

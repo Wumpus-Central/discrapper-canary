@@ -28,21 +28,21 @@ var i = n(121197),
     D = n(71393),
     v = n(403362),
     b = n(891897),
-    P = n(652215),
-    M = n(746080);
+    M = n(652215),
+    P = n(746080);
 async function U(e) {
     let { guildId: t, channelId: n } = e,
         i = D.A.getGuild(t),
         r = y.A.getUnsafeMutableRoles(t);
-    if (null == i && t !== P.ME && n !== M.VV.GAME_SHOP) return !1;
+    if (null == i && t !== M.ME && n !== P.VV.GAME_SHOP) return !1;
     if (null == n) return !0;
-    if ((0, M.jq)(n))
+    if ((0, P.jq)(n))
         switch (n) {
-            case M.VV.CONJURE:
+            case P.VV.CONJURE:
                 return null != i && (0, u.N)(i, "isAccessibleChannelOrThreadPath");
-            case M.VV.ROLE_SUBSCRIPTIONS:
+            case P.VV.ROLE_SUBSCRIPTIONS:
                 return (0, p.l8)(t, r);
-            case M.VV.SERVER_MONETIZATION_ONBOARDING:
+            case P.VV.SERVER_MONETIZATION_ONBOARDING:
                 let a;
                 return (
                     null != i &&
@@ -55,35 +55,35 @@ async function U(e) {
                         shouldRestrictUpdatingRoleSubscriptionSettings: (0, m.mk)(i.id),
                     }))
                 );
-            case M.VV.GAME_SHOP:
+            case P.VV.GAME_SHOP:
                 return (0, R.jz)(i ?? { id: t, type: "id-only" });
-            case M.VV.GUILD_SHOP:
+            case P.VV.GUILD_SHOP:
                 return (0, _.K)(i, r);
-            case M.VV.MEMBER_APPLICATIONS:
+            case P.VV.MEMBER_APPLICATIONS:
                 return (0, A.h)(t);
-            case M.VV.GUILD_HOME:
+            case P.VV.GUILD_HOME:
                 return (0, I.K)(t);
-            case M.VV.CHANNEL_BROWSER:
-                return null != i && i.features.has(P.GuildFeatures.COMMUNITY);
-            case M.VV.GUILD_ONBOARDING:
+            case P.VV.CHANNEL_BROWSER:
+                return null != i && i.features.has(M.GuildFeatures.COMMUNITY);
+            case P.VV.GUILD_ONBOARDING:
                 return f.Ay.shouldShowOnboarding(t);
-            case M.VV.CUSTOMIZE_COMMUNITY:
-                return null != i && i.features.has(P.GuildFeatures.COMMUNITY);
-            case M.VV.MEMBER_SAFETY:
+            case P.VV.CUSTOMIZE_COMMUNITY:
+                return null != i && i.features.has(M.GuildFeatures.COMMUNITY);
+            case P.VV.MEMBER_SAFETY:
                 return (0, h.Ml)(t);
-            case M.VV.GUILD_BOOSTS:
+            case P.VV.GUILD_BOOSTS:
                 return !0;
-            case M.VV.REPORT_TO_MOD:
+            case P.VV.REPORT_TO_MOD:
                 return null != i && (0, O.A)(i);
-            case M.VV.GAME_SERVERS:
+            case P.VV.GAME_SERVERS:
                 return (
                     (0, E.TS)(t, "isAccessibleChannelOrThreadPath") &&
                     null != i &&
-                    i.features.has(P.GuildFeatures.GAME_SERVERS)
+                    i.features.has(M.GuildFeatures.GAME_SERVERS)
                 );
-            case M.VV.GUILD_OFFICIAL_MESSAGES:
+            case P.VV.GUILD_OFFICIAL_MESSAGES:
                 return (0, C.GP)(i, "isAccessibleChannelOrThreadPath");
-            case M.VV.GUILD_SPACE:
+            case P.VV.GUILD_SPACE:
                 return (0, N.tT)(i, "isAccessibleChannelOrThreadPath");
             default:
                 (0, v.xb)(n);
@@ -92,7 +92,7 @@ async function U(e) {
     return (
         (null != s ||
             (await L.A.loadThread(n),
-            null == (s = o.A.getChannel(n)) && t === P.ME && (s = await c.A.openChannel(n)),
+            null == (s = o.A.getChannel(n)) && t === M.ME && (s = await c.A.openChannel(n)),
             null != s)) &&
         (0, b.A)(s)
     );
@@ -102,7 +102,7 @@ async function G(e, t) {
     let n = (0, d.FM)(e);
     if (null != n) {
         let { guildId: e, channelId: r, diceCount: s, diceSides: l } = n;
-        ((0, i.t)(r, s, l), (0, a.pX)(P.BVt.CHANNEL(e, r), t));
+        ((0, i.t)(r, s, l), (0, a.pX)(M.BVt.CHANNEL(e, r), t));
         return;
     }
     let c = (0, d.vu)(e);
@@ -113,13 +113,13 @@ async function G(e, t) {
         let t = o.A.getChannel(e.channelId);
         if (null == t) return e;
         let n = (0, l.j)(t);
-        return { ...e, guildId: n ?? P.ME };
+        return { ...e, guildId: n ?? M.ME };
     })(c);
     null == u.channelId
         ? (0, s.u)(u.guildId)
         : (0, r.C$)(u.channelId) && (0, r.C$)(u.threadId)
           ? null != u.threadId
-              ? (0, a.pX)(P.BVt.CHANNEL_THREAD_VIEW(u.guildId, u.channelId, u.threadId, u.messageId), t)
-              : (0, a.pX)(P.BVt.CHANNEL(u.guildId, u.channelId, u.messageId), t)
+              ? (0, a.pX)(M.BVt.CHANNEL_THREAD_VIEW(u.guildId, u.channelId, u.threadId, u.messageId), t)
+              : (0, a.pX)(M.BVt.CHANNEL(u.guildId, u.channelId, u.messageId), t)
           : (0, w.showInaccessibleReportPostModal)();
 }

@@ -33,7 +33,7 @@ function I(e) {
         D = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
         { analyticsLocations: v } = (0, s.Ay)(),
         b = (0, A.V)(),
-        P = !C && null != b && null != I && h.kb[b.trialId].skus.includes(I);
+        M = !C && null != b && null != I && h.kb[b.trialId].skus.includes(I);
     return L({
         onClick: function (e) {
             if ((e.preventDefault(), null == y))
@@ -68,7 +68,7 @@ function I(e) {
                         return (0, i.jsx)(e, { ...r, onClose: n });
                     };
                 });
-            let r = P ? b.subscriptionTrial?.id : null,
+            let r = M ? b.subscriptionTrial?.id : null,
                 s = f.AnalyticsObjectTypes.BUY;
             null != r ? (s = f.AnalyticsObjectTypes.TRIAL) : C && (s = f.AnalyticsObjectTypes.GIFT);
             let _ = {

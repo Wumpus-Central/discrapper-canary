@@ -1,4 +1,4 @@
-_.exports = {
+d.exports = {
     mG: "noDrag_d68e4d",
     kL: "container_d68e4d",
     Nr: "card_d68e4d",

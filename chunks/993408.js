@@ -19,9 +19,9 @@
     aw: () => en,
     b_: () => S,
     c7: () => ea,
-    es: () => P,
+    es: () => M,
     f6: () => V,
-    fT: () => M,
+    fT: () => P,
     gA: () => O,
     hU: () => Z,
     l8: () => y,
@@ -107,8 +107,8 @@ function v(e, t, n) {
     return null == i ? null : ((null == n ? i[0] : i.find((e) => e.currency === n)) ?? null);
 }
 let b = { original: -1, discountPercentage: -1 },
-    P = 5;
-function M(e, t, n) {
+    M = 5;
+function P(e, t, n) {
     if (null == e) return b;
     let i = D(e, n);
     if (i <= 0) return b;

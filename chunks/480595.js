@@ -43,8 +43,8 @@ var N = n(155718),
     D = n(734057),
     v = n(760751),
     b = n(794383),
-    P = n(309010),
-    M = n(528767),
+    M = n(309010),
+    P = n(528767),
     U = n(652215);
 let w = [],
     G = {},
@@ -76,7 +76,7 @@ function k() {
     } else x = null;
     let d = null != o ? A.Ay.getSdkResolutionForPID(o.pid) : void 0,
         c = null != d && d.type !== f.r.UNRESOLVED ? d.game.id : void 0,
-        u = M.A.getRemoteActivities(),
+        u = P.A.getRemoteActivities(),
         h =
             null != c &&
             [...e, ...u].some(
@@ -123,7 +123,7 @@ function k() {
 class F extends o.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        (this.waitFor(_.A, y.A, D.A, c.Ay, b.A, S, v.A, A.Ay, P.Ay, M.A, h.A, O.A, L.A), this.syncWith([S], () => k()));
+        (this.waitFor(_.A, y.A, D.A, c.Ay, b.A, S, v.A, A.Ay, M.Ay, P.A, h.A, O.A, L.A), this.syncWith([S], () => k()));
     }
     getActivities() {
         return w;

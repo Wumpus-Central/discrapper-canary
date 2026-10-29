@@ -28,7 +28,7 @@ let g = { key: "active_now", type: p.ik.ACTIVE_NOW },
     D = new Map(),
     v = [],
     b = null;
-function P(e) {
+function M(e) {
     if (!u.A.isFriend(e)) return null;
     let t = _.default.getUser(e);
     if (null == t) return null;
@@ -57,7 +57,7 @@ function P(e) {
         voiceChannelId: o?.channelId ?? null,
     };
 }
-function M(e, t) {
+function P(e, t) {
     switch (t) {
         case p.Vj.ACTIVE_NOW:
             if ((0, T.iX)(e.status)) return N;
@@ -129,7 +129,7 @@ function V(e) {
 }
 function H() {
     for (let e of (D.clear(), (v = []), (b = null), y.values())) {
-        let t = M(e, O),
+        let t = P(e, O),
             n = D.get(t.key) ?? F(t),
             i = U(e);
         null != i ? B(n, i).rows.push(e) : n.rows.push(e);
@@ -180,7 +180,7 @@ function W(e) {
 function Y() {
     if (!L) {
         for (let e of (y.clear(), u.A.getFriendIDs())) {
-            let t = P(e);
+            let t = M(e);
             null != t && y.set(e, t);
         }
         (H(), (L = !0));
@@ -192,13 +192,13 @@ function K() {
 }
 function $(e) {
     let t = y.get(e),
-        n = P(e);
+        n = M(e);
     return (
         !((null == t && null == n) || (null != t && null != n && (0, r.A)(t, n))) &&
         (null != t &&
             (function (e) {
                 let t,
-                    n = M(e, O),
+                    n = P(e, O),
                     i = D.get(n.key);
                 if (null == i) return;
                 let r = x(i),
@@ -219,7 +219,7 @@ function $(e) {
         null != n
             ? (y.set(e, n),
               !(function (e) {
-                  let t = M(e, O),
+                  let t = P(e, O),
                       n = D.get(t.key) ?? F(t),
                       i = x(n),
                       r = U(e);

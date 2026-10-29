@@ -28,8 +28,8 @@ var i = n(192308),
     D = n(988102),
     v = n(174768),
     b = n(652215),
-    P = n(746080),
-    M = n(758836);
+    M = n(746080),
+    P = n(758836);
 let U = () => Promise.resolve();
 U = n(113673).playApplication;
 let w = Object.freeze({
@@ -57,7 +57,7 @@ function k(e, t) {
         d = D.A.isEmail(r),
         c = D.A.isPhoneNumber(r),
         u = D.A.isUserTagLike(r),
-        E = null != l && (0, P.jq)(l);
+        E = null != l && (0, M.jq)(l);
     function A(e) {
         return null == e ? null : e.type === _.rD.IN_APP_NAVIGATION ? e.type + "_" + e.record.type : e.type;
     }
@@ -193,7 +193,7 @@ function W(e) {
             } else
                 e.record.type === E.t1.SHOP_ORBS_TAB
                     ? (0, A.Cz)({
-                          tab: M.G2.ORBS,
+                          tab: P.G2.ORBS,
                           analyticsLocations: [u.A.QUICK_SWITCHER],
                           analyticsSource: u.A.QUICK_SWITCHER,
                       })

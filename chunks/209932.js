@@ -40,8 +40,8 @@ let g = new Map(),
         afterCompute: () => {},
     }),
     b = [],
-    P = !1,
-    M = !1;
+    M = !1,
+    P = !1;
 function U(e) {
     let { sound: t } = e,
         n = g.get(t.guildId),
@@ -61,7 +61,7 @@ let w = r().debounce((e) => {
         });
     }, 1e3);
 function x() {
-    M = c.dG.getSetting()?.volume === 0;
+    P = c.dG.getSetting()?.volume === 0;
 }
 function k(e) {
     let t = e?.audioContextSettings?.user ?? {};
@@ -144,10 +144,10 @@ class F extends l.Ay.Store {
         return C.has(e);
     }
     isSoundboardVolumeMuted() {
-        return M;
+        return P;
     }
     hasHadOtherUserPlaySoundInSession() {
-        return P;
+        return M;
     }
     hasFetchedAllSounds() {
         return 2 === R && 2 === O;
@@ -162,10 +162,10 @@ let B = new F(o.h, {
             S.clear(),
             N.clear(),
             y.clear(),
-            (P = !1),
+            (M = !1),
             (R = 0),
             (O = 0),
-            (M = !1),
+            (P = !1),
             (b = []),
             v.overwriteHistory({}));
     },
@@ -184,7 +184,7 @@ let B = new F(o.h, {
         let { soundId: t, userId: n } = e,
             i = (N.get(t) ?? 0) + 1,
             r = (y.get(n) ?? 0) + 1;
-        (N.set(t, i), y.set(n, r), n !== E.default.getCurrentUser()?.id && (P = !0));
+        (N.set(t, i), y.set(n, r), n !== E.default.getCurrentUser()?.id && (M = !0));
     },
     GUILD_SOUNDBOARD_SOUND_PLAY_END: function (e) {
         let { soundId: t, userId: n } = e,
@@ -198,8 +198,8 @@ let B = new F(o.h, {
     },
     USER_SOUNDBOARD_SET_VOLUME: function (e) {
         let { volume: t, location: n } = e,
-            i = M;
-        ((M = 0 === t), w(t), G(t, n), i !== M && w.flush());
+            i = P;
+        ((P = 0 === t), w(t), G(t, n), i !== P && w.flush());
     },
     SOUNDBOARD_TRACK_USAGE: function (e) {
         let { soundId: t } = e;

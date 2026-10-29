@@ -1,4 +1,4 @@
-(n.d(t, { B4: () => c, C6: () => h, CT: () => x, Jf: () => g, Lf: () => j, SY: () => u, WQ: () => s, lt: () => k }),
+(n.d(t, { B4: () => c, C6: () => h, CT: () => x, Jf: () => g, Lf: () => j, SY: () => u, WQ: () => s, lt: () => v }),
     n(321073),
     n(134528),
     n(947204));
@@ -224,9 +224,9 @@ function g(e, t) {
                 (e.detailDrivenBy = t.map((e) => e.driven_by ?? null)),
                 (e.detailError = t.map((e) => e.error ?? null)));
         }
-        let k = [...a.values()];
-        for (let e of k) n || "running" !== e.task.status || (e.task.status = "incomplete");
-        return { steps: l, tasks: k, ...(null != t ? { turn: t } : {}) };
+        let v = [...a.values()];
+        for (let e of v) n || "running" !== e.task.status || (e.task.status = "incomplete");
+        return { steps: l, tasks: v, ...(null != t ? { turn: t } : {}) };
     })(e, { turnActive: t }));
 }
 function h(e) {
@@ -290,7 +290,7 @@ function j(e) {
     }
     return !1;
 }
-function k(e) {
+function v(e) {
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
         if (n?.kind === "todos" && (null == n.task_id || "" === n.task_id) && null != n.items && n.items.length > 0)

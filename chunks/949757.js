@@ -1,4 +1,4 @@
-i.d(e, { Hj: () => d, iG: () => f, vt: () => h, yN: () => g });
+i.d(e, { Hj: () => p, iG: () => f, vt: () => h, yN: () => g });
 var a = i(477900),
     n = i(582128),
     r = i(666476),
@@ -7,8 +7,8 @@ var a = i(477900),
     u = i(721507),
     o = i(716594),
     s = i(248675),
-    p = i(105292);
-async function d(t, e, i) {
+    d = i(105292);
+async function p(t, e, i) {
     (0, c.ensureConnection)(t);
     let a = await (0, l.vX)(t, e);
     (0, c.sendUserMessage)(t, i, [a]);
@@ -17,7 +17,7 @@ function h(t) {
     let e = "" === t.type ? "application/octet-stream" : t.type;
     return (0, r.Oq)(t.size, e)
         ? null
-        : p.intl.formatToPlainString(s.default.ThxcOX, { size: (0, r.sM)((0, r.Ju)(e)) });
+        : d.intl.formatToPlainString(s.default.ThxcOX, { size: (0, r.sM)((0, r.Ju)(e)) });
 }
 async function f(t, e) {
     let i,

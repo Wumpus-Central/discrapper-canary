@@ -20,18 +20,18 @@ function g(e) {
             tint: h,
             detail: x,
             connected: j = !1,
-            connectsDown: k = !1,
-            anchor: v = !1,
+            connectsDown: v = !1,
+            anchor: b = !1,
         } = e,
-        [b, y] = a.useState(!1),
+        [k, y] = a.useState(!1),
         _ = a.useRef(null);
     a.useLayoutEffect(() => {
         i && _.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [i]);
     let A = a.useId(),
-        w = a.useCallback(() => y((e) => !e), []),
-        { text: S, phase: N } = (0, c.Q)(n),
-        C = b ? s.a : o._,
+        S = a.useCallback(() => y((e) => !e), []),
+        { text: w, phase: N } = (0, c.Q)(n),
+        C = k ? s.a : o._,
         I = null != x,
         E = (0, l.jsxs)(l.Fragment, {
             children: [
@@ -41,7 +41,7 @@ function g(e) {
                     variant: "text-md/normal",
                     color: "currentColor",
                     className: r()(p.qo, { [p._q]: "exit" === N, [p.GD]: "enter" === N }),
-                    children: S,
+                    children: w,
                 }),
                 I ? (0, l.jsx)(C, { size: "xs", color: "currentColor", className: p.nD }) : null,
             ],
@@ -64,22 +64,22 @@ function g(e) {
         "data-live": i,
         "data-settled": g,
         "data-connected": j,
-        "data-connects-down": k,
-        "data-conjure-turn-status": v ? "true" : void 0,
+        "data-connects-down": v,
+        "data-conjure-turn-status": b ? "true" : void 0,
         style: null != h ? { "--custom-conjure-shimmer-tint": h } : void 0,
         children: [
             I
                 ? (0, l.jsx)(d.D, {
                       tag: "div",
                       className: r()(p.ep, p.EK),
-                      "aria-expanded": b,
+                      "aria-expanded": k,
                       "aria-controls": A,
-                      "aria-label": m.intl.formatToPlainString(f.default.yByAPh, { activity: S }),
-                      onClick: w,
+                      "aria-label": m.intl.formatToPlainString(f.default.yByAPh, { activity: w }),
+                      onClick: S,
                       children: P,
                   })
                 : (0, l.jsx)("div", { className: p.ep, children: P }),
-            (0, l.jsx)("div", { id: A, hidden: !b, "data-conjure-entrance": !0, className: p.BA, children: x }),
+            (0, l.jsx)("div", { id: A, hidden: !k, "data-conjure-entrance": !0, className: p.BA, children: x }),
         ],
     });
 }

@@ -46,7 +46,7 @@ function N(e) {
         L = s.useCallback(() => {
             O(!1);
         }, [O]),
-        M = s.useMemo(
+        D = s.useMemo(
             () =>
                 (0, l.jsx)("div", {
                     className: E.Gz,
@@ -54,7 +54,7 @@ function N(e) {
                 }),
             [S],
         ),
-        D = s.useMemo(() => {
+        M = s.useMemo(() => {
             switch (b) {
                 case g.o6.JOIN:
                     return (0, l.jsx)("div", {
@@ -116,8 +116,8 @@ function N(e) {
                                             imageClassName: E.jj,
                                             imageNotFoundClassName: E.v_,
                                         }),
-                                        M,
                                         D,
+                                        M,
                                     ],
                                 }),
                         }),

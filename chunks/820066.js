@@ -222,7 +222,7 @@ function P(e, t, n, l, r) {
         case "url":
         case "link":
         case "subtext": {
-            l = K(t, l);
+            l = G(t, l);
             let { before: n, after: i } = (function (e, t) {
                     if ("inlineCode" === e) return { before: t[1], after: t[1] };
                     if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
@@ -251,7 +251,7 @@ function P(e, t, n, l, r) {
                 (l = W(e, t, s ?? "", l, r)),
                 r.pop(),
                 (l = F({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
-                K(t, l)
+                G(t, l)
             );
         }
         default:
@@ -299,14 +299,14 @@ function W(e, t, n, l, i) {
               n.forEach((n) => {
                   l = P(e, t, n, l, i);
               })),
-        K(t, l)
+        G(t, l)
     );
 }
 function F(e) {
     let { result: t, sourceText: n, syntaxCharacters: l, pos: i, attributes: r } = e;
     if (l.length > 0) {
         let e = n.indexOf(l, i);
-        if (-1 === e) return G(`Slate: Unable to find syntax characters "${l}" at position ${i}`, l, i);
+        if (-1 === e) return K(`Slate: Unable to find syntax characters "${l}" at position ${i}`, l, i);
         let s = n.substring(i, e + l.length);
         (t.push({ text: s, attributes: [...r], start: i, data: null }), (i = e + l.length));
     }
@@ -314,20 +314,20 @@ function F(e) {
 }
 function B(e) {
     let { result: t, sourceText: n, text: l, originalStart: i, attributes: r, data: s } = e,
-        a = K(n, i);
+        a = G(n, i);
     for (; "\n" === l.charAt(0) || " " === l.charAt(0);) l = l.substring(1);
     let o = n.indexOf(l, a);
     if ((o !== a ? (a = i = H(t, n, a, o)) : "\\" === l && "\\" === n.charAt(o + 1) && (o++, (i = ++a)), o !== a))
-        return G(`Slate: Unable to find content in source text at start position ${a} for text position ${o}`, l, i);
+        return K(`Slate: Unable to find content in source text at start position ${a} for text position ${o}`, l, i);
     let u = a + l.length,
         c = n.substring(i, u);
     return (t.push({ text: c, attributes: r.slice(), start: i, data: s }), u);
 }
-function K(e, t) {
+function G(e, t) {
     for (; "\n" === e.charAt(t) || " " === e.charAt(t);) t++;
     return t;
 }
-function G(e, t, n) {
+function K(e, t, n) {
     if (t.split("").some((e) => C.has(e))) return (E.error(e), n);
     throw Error(e);
 }
@@ -335,7 +335,7 @@ function H(e, t, n, l) {
     for (; n < l;)
         if (C.has(t[n]))
             ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
-                (n = K(t, n)));
+                (n = G(t, n)));
         else break;
     return n;
 }

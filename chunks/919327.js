@@ -262,8 +262,8 @@ class V extends i.PureComponent {
 var W = n(666860),
     F = n(997141),
     B = n(146849),
-    K = n(152959),
-    G = n(625494),
+    G = n(152959),
+    K = n(625494),
     H = n(317681),
     z = n(186306),
     q = n(655098),
@@ -451,8 +451,8 @@ function eT(e) {
             "aria-autocomplete": eF,
         } = d,
         eB = i.useRef(null),
-        eK = i.useRef(null),
-        eG = i.useRef(!0),
+        eG = i.useRef(null),
+        eK = i.useRef(!0),
         eH = i.useRef(!0),
         ez = A || b,
         eq = i.useCallback(
@@ -502,10 +502,10 @@ function eT(e) {
             [g.id, g.guild_id],
         ),
         e$ = i.useCallback(() => {
-            eG.current = !1;
+            eK.current = !1;
         }, []),
         eQ = i.useCallback(() => {
-            eG.current = !0;
+            eK.current = !0;
         }, []),
         eZ = (0, ei.A)({ channel: g, chatInputType: p, onChangeStart: e$, onChangeEnd: eQ, updateState: eq }),
         eX = i.useCallback(
@@ -546,7 +546,7 @@ function eT(e) {
                 for (let [e, t] of n)
                     (Q.b.setNodes(eZ, { error: !0 }, { at: t }), i || Q.b.select(eZ, Z.VW.end(eZ, t)), (i = !0));
             if (i) {
-                (G._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), ep?.());
+                (K._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), ep?.());
                 return;
             }
             er?.((0, $.WO)(Z.VW.richValue(eZ), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
@@ -845,14 +845,14 @@ function eT(e) {
             },
             [eS],
         ),
-        e3 = i.useCallback(
+        e8 = i.useCallback(
             (e) => {
-                e !== eK.current ? eH.current && T?.(null, (0, $.WO)(e, { mode: "raw" }), e) : eH.current && eS();
+                e !== eG.current ? eH.current && T?.(null, (0, $.WO)(e, { mode: "raw" }), e) : eH.current && eS();
             },
             [eS, T],
         );
     (i.useLayoutEffect(() => {
-        eG.current && ((eK.current = h), eq(eZ, "parent", { value: h }));
+        eK.current && ((eG.current = h), eq(eZ, "parent", { value: h }));
     }, [eZ, h, eq]),
         i.useEffect(() => {
             function e() {
@@ -861,12 +861,12 @@ function eT(e) {
             }
             return (E.A.addChangeListener(e), () => E.A.removeChangeListener(e));
         }, [g, eZ, eX]));
-    let e8 = (0, B.I2)({ location: "SlateChannelTextArea" }).enabled,
-        e6 = (0, K.n)(e8),
+    let e3 = (0, B.I2)({ location: "SlateChannelTextArea" }).enabled,
+        e6 = (0, G.n)(e3),
         e7 = (0, F.j)({ formatInline: !1 }),
         e4 = i.useCallback(
             (e) => [
-                ...(e8
+                ...(e3
                     ? e6
                         ? (function (e, t, n) {
                               if (Z.VW.areStylesDisabled(e)) return [];
@@ -1077,7 +1077,7 @@ function eT(e) {
                     );
                 })(eZ, e),
             ],
-            [eZ, g, e8, e6, e7],
+            [eZ, g, e3, e6, e7],
         ),
         e9 = i.useCallback(
             (e) => {
@@ -1157,7 +1157,7 @@ function eT(e) {
                     spellCheck: ej,
                     autoFocus: !e_,
                     canFocus: !A,
-                    onChange: e3,
+                    onChange: e8,
                     onFocus: _,
                     onBlur: R,
                     onClick: e5,

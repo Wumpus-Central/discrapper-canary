@@ -38,7 +38,7 @@ var U = n(5867),
     V = n(940169);
 function W(e) {
     let { ref: t, ...n } = e,
-        { channel: r, type: W, editorHeight: F, onVisibilityChange: B, editorScrollerRef: K, barsHeight: G } = n,
+        { channel: r, type: W, editorHeight: F, onVisibilityChange: B, editorScrollerRef: G, barsHeight: K } = n,
         H = (0, g.GV)(),
         z = (0, o.bG)([S.A], () => S.A.getGuild(r.guild_id) ?? null, [r.guild_id]),
         q = i.useRef(null),
@@ -219,9 +219,9 @@ function W(e) {
     let el = { [V.pK]: null == Y, [V.YB]: null != Y, [V.sQ]: null == Y && "bottom" === n.position, [V.mO]: ee },
         ei = 490;
     null != Y && (ei = W.autocomplete?.small ? 200 : $.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let er = Math.max(F, K?.current?.clientHeight ?? 0),
+    let er = Math.max(F, G?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, er);
-    ei = Math.min(window.innerHeight - 120 - es - (G ?? 0), ei);
+    ei = Math.min(window.innerHeight - 120 - es - (K ?? 0), ei);
     let ea = (0, l.jsx)(f.Ay, {
         id: H,
         className: s()(V.nx, el),

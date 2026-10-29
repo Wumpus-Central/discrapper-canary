@@ -1,17 +1,17 @@
-e.d(a, { a: () => c, t: () => s });
-var i = e(477900);
-e(582128);
-var t = e(503698),
-    o = e.n(t),
-    n = e(834730),
-    l = e(458029);
-let s = { DEFAULT: "default", DESCRIPTION: "description" };
-function c(r) {
-    let { type: a = s.DEFAULT, className: e, disabled: t, children: c, style: b, ...m } = r,
-        v = "modeDefault";
+a.d(t, { a: () => l, t: () => c });
+var s = a(477900);
+a(582128);
+var d = a(503698),
+    i = a.n(d),
+    r = a(834730),
+    n = a(458029);
+let c = { DEFAULT: "default", DESCRIPTION: "description" };
+function l(e) {
+    let { type: t = c.DEFAULT, className: a, disabled: d, children: l, style: p, ...u } = e,
+        o = "modeDefault";
     return (
-        t && (v = "modeDisabled"),
-        (0, i.jsx)(n.E, { variant: "text-sm/normal", className: o()(l[a], e, l[v]), style: b, ...m, children: c })
+        d && (o = "modeDisabled"),
+        (0, s.jsx)(r.E, { variant: "text-sm/normal", className: i()(n[t], a, n[o]), style: p, ...u, children: l })
     );
 }
-c.Types = s;
+l.Types = c;

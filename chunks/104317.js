@@ -28,19 +28,19 @@ function h(e) {
             durationMs: h,
             connectsDown: x = !1,
             closed: j = !1,
-            tier: k,
+            tier: v,
         } = e,
-        v = (0, s.SY)(n),
-        b = (0, i.Q7)(f.intl.string(c.default.uk6jhJ), k),
+        b = (0, s.SY)(n),
+        k = (0, i.Q7)(f.intl.string(c.default.uk6jhJ), v),
         y = g ? void 0 : h,
-        _ = null != y ? (0, r.nY)(y) : null != v ? (0, s.WQ)(v) : (p ?? f.intl.string(c.default.t8skVB)),
+        _ = null != y ? (0, r.nY)(y) : null != b ? (0, s.WQ)(b) : (p ?? f.intl.string(c.default.t8skVB)),
         A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(o.A, {
         glyph: (0, l.jsx)(a.u, {
             asset: (0, l.jsx)(d.A, { size: 32 }),
             assetSize: 32,
-            title: b.title,
-            body: b.body,
+            title: k.title,
+            body: k.body,
             position: "left",
             children: (0, l.jsx)("span", { className: m.nC, children: (0, l.jsx)(d.A, {}) }),
         }),
@@ -53,7 +53,7 @@ function h(e) {
             ? (0, l.jsx)("ol", {
                   className: m.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: g && e === v }, e.id),
+                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: g && e === b }, e.id),
                   ),
               })
             : void 0,

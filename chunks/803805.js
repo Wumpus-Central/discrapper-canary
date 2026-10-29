@@ -34,7 +34,7 @@ class c extends l.G {
             { no: 7, name: "application_command_frecency", kind: "message", T: () => L },
             { no: 8, name: "favorite_soundboard_sounds", kind: "message", T: () => b },
             { no: 9, name: "application_frecency", kind: "message", T: () => x },
-            { no: 10, name: "heard_sound_frecency", kind: "message", T: () => M },
+            { no: 10, name: "heard_sound_frecency", kind: "message", T: () => P },
             { no: 11, name: "played_sound_frecency", kind: "message", T: () => w },
             { no: 12, name: "guild_and_channel_frecency", kind: "message", T: () => F },
             { no: 13, name: "emoji_reaction_frecency", kind: "message", T: () => O },
@@ -83,7 +83,7 @@ class c extends l.G {
                     a.applicationFrecency = x.internalBinaryRead(e, e.uint32(), n, a.applicationFrecency);
                     break;
                 case 10:
-                    a.heardSoundFrecency = M.internalBinaryRead(e, e.uint32(), n, a.heardSoundFrecency);
+                    a.heardSoundFrecency = P.internalBinaryRead(e, e.uint32(), n, a.heardSoundFrecency);
                     break;
                 case 11:
                     a.playedSoundFrecency = w.internalBinaryRead(e, e.uint32(), n, a.playedSoundFrecency);
@@ -124,7 +124,7 @@ class c extends l.G {
             e.applicationFrecency &&
                 x.internalBinaryWrite(e.applicationFrecency, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
             e.heardSoundFrecency &&
-                M.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
+                P.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
             e.playedSoundFrecency &&
                 w.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
             e.guildAndChannelFrecency &&
@@ -700,7 +700,7 @@ class v extends l.G {
     }
 }
 let b = new v();
-class P extends l.G {
+class M extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.HeardSoundFrecency", [
             { no: 1, name: "heard_sounds", kind: "map", K: 9, V: { kind: "message", T: () => D } },
@@ -762,7 +762,7 @@ class P extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let M = new P();
+let P = new M();
 class U extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.PlayedSoundFrecency", [

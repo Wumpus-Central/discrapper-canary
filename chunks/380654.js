@@ -1,4 +1,4 @@
-n.d(t, { V: () => k, S: () => j });
+n.d(t, { V: () => v, S: () => j });
 var l = n(477900),
     a = n(582128),
     i = n(442433),
@@ -89,6 +89,6 @@ function j(e) {
         a = h(t, n);
     return (0, l.jsx)(p.A, { ...a, trigger: "iconButton" });
 }
-function k(e, t, n) {
+function v(e, t, n) {
     (0, i.jA)(e, () => (0, l.jsx)(x, { project: t, guildId: n }));
 }

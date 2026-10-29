@@ -1,8 +1,8 @@
 n.d(t, { A: () => et });
 var l = n(477900),
-    r = n(582128),
-    s = n(503698),
-    a = n.n(s),
+    s = n(582128),
+    r = n(503698),
+    a = n.n(r),
     i = n(323889),
     o = n(939249),
     u = n(834730),
@@ -15,10 +15,10 @@ var l = n(477900),
     f = n(971649),
     C = n(620954),
     v = n(617986),
-    g = n(139210),
-    N = n(980707),
-    A = n(477782),
-    y = n(743368),
+    N = n(139210),
+    g = n(980707),
+    y = n(477782),
+    A = n(743368),
     j = n(265872),
     E = n(442433),
     _ = n(507395),
@@ -30,11 +30,11 @@ var l = n(477900),
     S = n(105292);
 function I(e) {
     let { onSelect: t, onClose: n } = e,
-        r = (0, Q.o5)(),
-        s = (0, Q.Q8)(r),
+        s = (0, Q.o5)(),
+        r = (0, Q.Q8)(s),
         a = (0, f.wW)(),
-        o = (0, R.Yh)(s);
-    return (0, l.jsxs)(N.W, {
+        o = (0, R.Yh)(r);
+    return (0, l.jsxs)(g.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
         onSelect: function () {
@@ -45,14 +45,14 @@ function I(e) {
         onClose: n ?? b.tE,
         children: [
             (0, l.jsx)(
-                A.rX,
+                y.rX,
                 {
-                    children: (0, l.jsx)(A.Dr, {
+                    children: (0, l.jsx)(y.Dr, {
                         id: "open-game-link",
-                        label: r.cta.buttonLabel,
+                        label: s.cta.buttonLabel,
                         action: function () {
                             (0, C._Q)(
-                                { adContentId: r.id, adCreativeType: i.p.BOUNTY, cta: r.cta },
+                                { adContentId: s.id, adCreativeType: i.p.BOUNTY, cta: s.cta },
                                 {
                                     content: p.uF.QUEST_BAR_V2,
                                     ctaContent: h.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
@@ -61,21 +61,21 @@ function I(e) {
                                 },
                             );
                         },
-                        icon: y.W,
-                        leadingAccessory: { type: "icon", icon: y.W },
+                        icon: A.W,
+                        leadingAccessory: { type: "icon", icon: A.W },
                     }),
                 },
                 "major-actions",
             ),
             (0, l.jsxs)(
-                A.rX,
+                y.rX,
                 {
                     children: [
-                        (0, l.jsx)(A.Dr, {
+                        (0, l.jsx)(y.Dr, {
                             id: "display-disclosure",
                             label: S.intl.string(S.t.GcsZKJ),
                             action: function () {
-                                (0, v.Zc)(s, {
+                                (0, v.Zc)(r, {
                                     content: p.uF.QUEST_BAR_V2,
                                     ctaContent: h.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
                                     impressionId: a(),
@@ -83,7 +83,7 @@ function I(e) {
                                 });
                             },
                         }),
-                        (0, l.jsx)(A.Dr, {
+                        (0, l.jsx)(y.Dr, {
                             id: "hide-entrypoint",
                             label: S.intl.string(S.t.NN79E9),
                             action: function () {
@@ -105,13 +105,13 @@ function I(e) {
         ],
     });
 }
-function U(e) {
-    let { children: t, onOpen: n, onClose: s, onSelect: a } = e,
+function M(e) {
+    let { children: t, onOpen: n, onClose: r, onSelect: a } = e,
         i = (0, Q.o5)(),
         o = (0, Q.Q8)(i),
         u = (0, f.wW)(),
-        c = r.useRef(null),
-        d = r.useCallback(() => {
+        c = s.useRef(null),
+        d = s.useCallback(() => {
             ((0, _.r)({
                 type: T.F.CLICK_INTERNAL,
                 ...(0, R.Yh)(o),
@@ -125,7 +125,7 @@ function U(e) {
     return (0, l.jsx)(j.Y, {
         targetElementRef: c,
         onRequestOpen: d,
-        onRequestClose: s,
+        onRequestClose: r,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, l.jsx)(I, { onSelect: a, onClose: t });
@@ -134,7 +134,7 @@ function U(e) {
         children: (e) => (0, l.jsx)("div", { ref: c, children: t(e) }),
     });
 }
-var M = n(241762);
+var U = n(241762);
 n(272111);
 var w = n(886030);
 function F() {
@@ -142,21 +142,21 @@ function F() {
         t = (0, Q.Q8)(e),
         n = (0, f.wW)(),
         {
-            onCtxMenuOpen: s,
-            onCtxMenuClose: N,
-            onCtxMenuSelect: A,
-            isExpanded: y,
+            onCtxMenuOpen: r,
+            onCtxMenuClose: g,
+            onCtxMenuSelect: y,
+            isExpanded: A,
             isExpansionAnimationComplete: j,
-        } = (0, M.H)(),
+        } = (0, U.H)(),
         { productIcon: E } = e,
-        _ = r.useCallback(() => {
+        _ = s.useCallback(() => {
             (0, v.Zc)(t, {
                 content: p.uF.QUEST_BAR_V2,
                 ctaContent: h.Cy.OPEN_DISCLOSURE,
                 sourceQuestContent: p.uF.QUEST_BAR_V2,
             });
         }, [t]),
-        T = r.useCallback(() => {
+        T = s.useCallback(() => {
             (0, C._Q)(
                 { adContentId: e.id, adCreativeType: i.p.BOUNTY, cta: e.cta },
                 {
@@ -167,17 +167,17 @@ function F() {
                 },
             );
         }, [e.cta, e.id, n]);
-    return (0, l.jsxs)(g.A, {
+    return (0, l.jsxs)(N.A, {
         className: w.bU,
         children: [
-            (0, l.jsx)(g.h, { className: w.Tu }),
-            (0, l.jsxs)(g.h, {
+            (0, l.jsx)(N.h, { className: w.Tu }),
+            (0, l.jsxs)(N.h, {
                 className: w.W2,
                 children: [
                     null != E &&
                         (0, l.jsx)(o.D, {
                             onClick: T,
-                            className: a()(w.iY, w.vk, { [w.wm]: y && j }),
+                            className: a()(w.iY, w.vk, { [w.wm]: A && j }),
                             children: (0, l.jsx)("img", {
                                 src: (0, x.lR)({ assetUrl: E, width: 24, height: 24 }),
                                 alt: e.advertiserName,
@@ -200,12 +200,12 @@ function F() {
                     }),
                 ],
             }),
-            (0, l.jsx)(g.h, {
+            (0, l.jsx)(N.h, {
                 className: w.jd,
-                children: (0, l.jsx)(U, {
-                    onOpen: s,
-                    onClose: N,
-                    onSelect: A,
+                children: (0, l.jsx)(M, {
+                    onOpen: r,
+                    onClose: g,
+                    onSelect: y,
                     children: (e) =>
                         (0, l.jsx)(o.D, {
                             ...e,
@@ -229,9 +229,9 @@ var P = n(17928),
     L = n(546121),
     D = n(792620),
     W = n(557637),
-    Y = n(192308),
-    q = n(415441),
-    H = n(783569),
+    H = n(192308),
+    Y = n(415441),
+    q = n(783569),
     X = n(333949),
     G = n(53440),
     K = n(427483),
@@ -240,18 +240,18 @@ let $ = { url: K.A, mimetype: "video/webm", isAnimated: !0 },
     Z = { url: z.A, mimetype: "image/webp", isAnimated: !1 };
 function J() {
     let e = (0, Q.o5)(),
-        { imagePreview: t, videoPreview: s, productName: o, videoDurationSeconds: c } = e,
-        { isExpanded: d, isExpansionAnimationComplete: m } = (0, M.H)(),
+        { imagePreview: t, videoPreview: r, productName: o, videoDurationSeconds: c } = e,
+        { isExpanded: d, isExpansionAnimationComplete: m } = (0, U.H)(),
         C = (0, f.wW)(),
         v = (0, P.bG)([k.Ay], () => k.Ay.useReducedMotion),
-        [g, N] = r.useState(!1),
-        A = r.useMemo(() => (null == s ? null : { url: s, mimetype: (0, x.vm)(s), isAnimated: !0 }), [s]),
-        y = !v || g,
-        j = r.useMemo(() => {
+        [N, g] = s.useState(!1),
+        y = s.useMemo(() => (null == r ? null : { url: r, mimetype: (0, x.vm)(r), isAnimated: !0 }), [r]),
+        A = !v || N,
+        j = s.useMemo(() => {
             let e = c ?? 0;
             return e <= 0 ? S.intl.string(S.t.kfks9Y) : (0, L.AF)((0, D.X3)({ progressSeconds: 0, targetSeconds: e }));
         }, [c]),
-        E = r.useCallback(() => {
+        E = s.useCallback(() => {
             ((0, _.r)({
                 type: T.F.CLICK_INTERNAL,
                 adCreativeType: i.p.BOUNTY,
@@ -262,8 +262,8 @@ function J() {
                 impressionId: C(),
             }),
                 (function (e) {
-                    let { bounty: t, sourceQuestContent: r } = e;
-                    (0, Y.openModalLazy)(
+                    let { bounty: t, sourceQuestContent: s } = e;
+                    (0, H.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("974119"),
@@ -276,7 +276,7 @@ function J() {
                                 n.e("182045"),
                                 n.e("655624"),
                             ]).then(n.bind(n, 361211));
-                            return (n) => (0, l.jsx)(e, { ...n, bounty: t, sourceQuestContent: r });
+                            return (n) => (0, l.jsx)(e, { ...n, bounty: t, sourceQuestContent: s });
                         },
                         { modalKey: "BOUNTY_VIDEO_MODAL" },
                     );
@@ -286,10 +286,10 @@ function J() {
     return (0, l.jsxs)("div", {
         className: G.rf,
         onMouseEnter: () => {
-            v && !g && N(!0);
+            v && !N && g(!0);
         },
         onMouseLeave: () => {
-            v && g && N(!1);
+            v && N && g(!1);
         },
         children: [
             (0, l.jsxs)("div", {
@@ -300,28 +300,28 @@ function J() {
                             id: "QuestBarBounty_previewImage",
                             children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: G.$_ }),
                         }),
-                    null != A &&
+                    null != y &&
                         (0, l.jsx)(W._M, {
                             id: "QuestBarBounty_previewVideo",
                             children: (e) =>
                                 (0, l.jsx)(X.X, {
                                     ref: e,
-                                    isHovered: g,
-                                    asset: A,
+                                    isHovered: N,
+                                    asset: y,
                                     poster: t,
-                                    className: a()(G.$_, null != t && G.Ki, { [G.mv]: y || null == t }),
+                                    className: a()(G.$_, null != t && G.Ki, { [G.mv]: A || null == t }),
                                 }),
                         }),
                 ],
             }),
             (0, l.jsx)("div", { className: G.tV }),
-            (0, l.jsx)(H.T, {
+            (0, l.jsx)(q.T, {
                 children: (0, l.jsxs)("div", {
                     className: G.Qs,
                     children: [
                         (0, l.jsx)("div", {
                             className: G.Qq,
-                            children: (0, l.jsx)(q.N, {
+                            children: (0, l.jsx)(Y.N, {
                                 showVideo: d && m,
                                 imageAsset: {
                                     asset: Z,

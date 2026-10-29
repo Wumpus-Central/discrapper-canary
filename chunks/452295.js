@@ -28,8 +28,8 @@ var i = n(488428),
     D = n(991690),
     v = n(933958),
     b = n(734057),
-    P = n(287809),
-    M = n(646865),
+    M = n(287809),
+    P = n(646865),
     U = n(909206),
     w = n(795816),
     G = n(817636);
@@ -38,11 +38,11 @@ async function x(e) {
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        ((t = await (0, G.A)(e.targetApplicationId, e.channelId)), (n = (0, M.f)()));
+        ((t = await (0, G.A)(e.targetApplicationId, e.channelId)), (n = (0, P.f)()));
     } catch {
         return !1;
     }
-    return (0, M.w)(n, () => k({ ...e, targetApplication: t }));
+    return (0, P.w)(n, () => k({ ...e, targetApplication: t }));
 }
 async function k(e) {
     let {
@@ -60,7 +60,7 @@ async function k(e) {
             inviterUserId: _,
             onConfirmActivityLaunchChecksAlertOpen: E,
         } = e,
-        A = P.default.getCurrentUser();
+        A = M.default.getCurrentUser();
     return (
         null != i &&
         null != b.A.getChannel(i) &&

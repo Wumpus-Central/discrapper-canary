@@ -141,8 +141,8 @@ function c(e) {
                 { isVisible: g, triggerProps: y }
             );
         })({ targetElementRef: y.targetElementRef, ...L }),
-        P = R ? void 0 : D,
-        M =
+        M = R ? void 0 : D,
+        P =
             ((t = i.isValidElement(S) ? S : d),
             (n = y.triggerRef),
             (u = i.useCallback(
@@ -185,7 +185,7 @@ function c(e) {
                 onContextMenu: (0, a.cy)(f.onContextMenu, b.onContextMenu),
                 onClick: (0, a.cy)(f.onClick, b.onClick),
             }),
-            null != P && "" !== P && (g["aria-describedby"] = (0, a.iO)(f["aria-describedby"], P)),
+            null != M && "" !== M && (g["aria-describedby"] = (0, a.iO)(f["aria-describedby"], M)),
             "string" == typeof t.type
                 ? (g.ref = A)
                 : "buttonRef" in t.props
@@ -223,5 +223,5 @@ function c(e) {
                   };
             return (0, a.EE)({ tag: l, children: t, triggerHandlers: o, triggerRef: i });
         })(C, S, b, y.triggerRef, D, R, O);
-    return { tooltipId: D, isVisible: v, targetElementRef: y.targetElementRef, trigger: U ?? M, describedById: P };
+    return { tooltipId: D, isVisible: v, targetElementRef: y.targetElementRef, trigger: U ?? P, describedById: M };
 }

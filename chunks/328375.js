@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     My: "containerColumn_fcb27c",
     kL: "container_fcb27c",
     Ac: "eventPrompts_fcb27c",

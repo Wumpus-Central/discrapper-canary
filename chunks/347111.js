@@ -1,5 +1,5 @@
-n.d(t, { I: () => a });
-var s = n(73153);
+s.d(t, { I: () => a });
+var n = s(73153);
 function a(e, t) {
-    s.h.dispatch({ type: "CONJURE_COMPOSER_DRAFT_SET", projectId: e, draft: t });
+    n.h.dispatch({ type: "CONJURE_COMPOSER_DRAFT_SET", projectId: e, draft: t });
 }

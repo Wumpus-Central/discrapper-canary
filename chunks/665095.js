@@ -6,8 +6,8 @@ var l = n(477900),
     s = n(636537),
     o = n(192308),
     u = n(830215),
-    d = n(398590),
-    c = n(631670),
+    c = n(398590),
+    d = n(631670),
     m = n(475743),
     h = n(775121),
     p = n(139286),
@@ -132,15 +132,15 @@ class w extends i.PureComponent {
         t?.(e);
     };
 }
-var L = n(87404),
-    P = n(53516);
+var P = n(87404),
+    L = n(53516);
 function k() {
     let { action: e, theme: t } = (0, r.cf)([v.A, A.A], () => ({ action: v.A.getAction(), theme: A.A.theme })),
         E = x.A.getVerificationTypes(e),
         [C, _] = i.useState(0),
         T = (0, m.Ay)(E);
     function y() {
-        ((0, c.Cw)(),
+        ((0, d.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("647999"), n.e("689913"), n.e("25467")]).then(
@@ -148,7 +148,7 @@ function k() {
                     );
                     return (t) => (0, l.jsx)(e, { ...t });
                 },
-                { modalKey: L.H1, Layer: f.Ay },
+                { modalKey: P.H1, Layer: f.Ay },
             ));
     }
     return (
@@ -184,7 +184,7 @@ function k() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: L.Pr, Layer: f.Ay, onCloseCallback: y },
+                    { modalKey: P.Pr, Layer: f.Ay, onCloseCallback: y },
                 );
         }, [E, T]),
         (0, l.jsx)(w, {
@@ -196,7 +196,7 @@ function k() {
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
-                }).then(d.jH, () => {
+                }).then(c.jH, () => {
                     _((e) => e + 1);
                 });
             },
@@ -218,7 +218,7 @@ function k() {
                               return (t) =>
                                   (0, l.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: P.V, Layer: f.Ay },
+                          { modalKey: L.V, Layer: f.Ay },
                       );
             },
             onLogout: function () {

@@ -159,8 +159,8 @@ class y {
 let D = new y();
 var v = n(863160),
     b = n(652215);
-let P = new l.A("RunningGameHeartbeatManager"),
-    M = 5 * f.A.Millis.MINUTE;
+let M = new l.A("RunningGameHeartbeatManager"),
+    P = 5 * f.A.Millis.MINUTE;
 function U() {
     let e = A.A.isFocused(),
         t = A.A.isVisible();
@@ -247,7 +247,7 @@ class w extends s.A {
         }
         (D.enable(),
             this.enableWindowTracking(),
-            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(M, this.logRunningGameHeartbeats));
+            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(P, this.logRunningGameHeartbeats));
     }
     handleRunningGamesChanged = (e) => {
         this.scheduleHeartbeatTracking();
@@ -299,7 +299,7 @@ class w extends s.A {
                 });
             })
             .catch((e) => {
-                (t || e instanceof r.Fh || P.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
+                (t || e instanceof r.Fh || M.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
                     h.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
                         ...p,
                         ...S,

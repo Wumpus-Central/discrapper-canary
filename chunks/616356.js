@@ -22,8 +22,8 @@ var c = n(17928),
     D = n(325278);
 let v = null,
     b = {},
-    P = null,
-    M = 10 * T.A.Millis.SECOND;
+    M = null,
+    P = 10 * T.A.Millis.SECOND;
 function U() {
     ((i = new Map()), (r = {}), (a = {}), (s = {}), (l = new Map()));
 }
@@ -41,7 +41,7 @@ function G() {
 function x(e) {
     let t,
         { streamKey: n, region: r, viewerIds: s, paused: o } = e;
-    (null == (t = l.get(n)) || Date.now() - t < M || l.delete(n),
+    (null == (t = l.get(n)) || Date.now() - t < P || l.delete(n),
         i.set(n, { ...(0, A.Iy)(n), state: o ? y.XYD.PAUSED : y.XYD.ACTIVE }),
         (a[n] = { streamKey: n, region: r, viewerIds: s }));
 }
@@ -145,7 +145,7 @@ class B extends c.Ay.PersistedStore {
         return null != n ? n.viewerIds : [];
     }
     getCurrentAppIntent() {
-        return P;
+        return M;
     }
     getStreamingState() {
         return (0, f.A)(N.Ay)
@@ -329,7 +329,7 @@ let V = new B(u.h, {
     },
     SET_STREAM_APP_INTENT: function (e) {
         let { intent: t } = e;
-        P = t;
+        M = t;
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n } = e;

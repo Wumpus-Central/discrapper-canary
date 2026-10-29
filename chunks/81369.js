@@ -1,38 +1,38 @@
-t.d(a, { H: () => c });
-var l = t(477900);
-t(582128);
-var i = t(661531),
-    e = t(996682),
-    h = t(27989);
-function c(s) {
+n.d(t, { H: () => i });
+var r = n(477900);
+n(582128);
+var a = n(661531),
+    s = n(996682),
+    l = n(27989);
+function i(e) {
     let {
-            size: a = "md",
-            width: t,
-            height: c,
-            color: n = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: r = "",
-            ...d
-        } = s,
-        o = (0, h.J)(a),
-        w = o?.width ?? t,
-        p = o?.height ?? c;
-    return (0, l.jsxs)("svg", {
-        ...(0, e.A)(d),
+            size: t = "md",
+            width: n,
+            height: i,
+            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: o = "",
+            ...u
+        } = e,
+        d = (0, l.J)(t),
+        m = d?.width ?? n,
+        h = d?.height ?? i;
+    return (0, r.jsxs)("svg", {
+        ...(0, s.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
-        width: w,
-        height: p,
+        width: m,
+        height: h,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, l.jsx)("path", {
-                fill: "string" == typeof n ? n : n.css,
+            (0, r.jsx)("path", {
+                fill: "string" == typeof c ? c : c.css,
                 d: "M13.82 21.7c.17.05.14.3-.04.3H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h7.5c.28 0 .5.22.5.5V5a5 5 0 0 0 5 5h2.5c.28 0 .5.22.5.5v2.3a.4.4 0 0 1-.68.27l-.2-.2a3 3 0 0 0-4.24 0l-4 4a3 3 0 0 0 0 4.25c.3.3.6.46.94.58Z",
-                className: r,
+                className: o,
             }),
-            (0, l.jsx)("path", {
-                fill: "string" == typeof n ? n : n.css,
+            (0, r.jsx)("path", {
+                fill: "string" == typeof c ? c : c.css,
                 d: "M21.66 8c.03 0 .05-.03.04-.06a3 3 0 0 0-.58-.82l-4.24-4.24a3 3 0 0 0-.82-.58.04.04 0 0 0-.06.04V5a3 3 0 0 0 3 3h2.66ZM18.3 14.3a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1-1.4 1.4L20 17.42V23a1 1 0 1 1-2 0v-5.59l-2.3 2.3a1 1 0 0 1-1.4-1.42l4-4Z",
-                className: r,
+                className: o,
             }),
         ],
     });

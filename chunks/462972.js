@@ -1,4 +1,4 @@
-(n.d(t, { AT: () => L, DV: () => P, Pd: () => b, al: () => y, iG: () => U, ms: () => M, vJ: () => R }), n(321073));
+(n.d(t, { AT: () => L, DV: () => M, Pd: () => b, al: () => y, iG: () => U, ms: () => P, vJ: () => R }), n(321073));
 var i = n(132500),
     r = n(344351),
     a = n(731738),
@@ -66,8 +66,8 @@ function b(e, t) {
         L = f.default.getCurrentUser();
     if (null == L) return;
     let b = null != u ? A.A.getChannel(u) : null,
-        P = n.guildId ?? b?.getGuildId() ?? null,
-        M = n.locationKind ?? (null == b ? void 0 : null != P ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL),
+        M = n.guildId ?? b?.getGuildId() ?? null,
+        P = n.locationKind ?? (null == b ? void 0 : null != M ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL),
         U = h.A.getMediaSessionId(),
         w = null != U ? [U] : [],
         G = (0, i.A)();
@@ -79,10 +79,10 @@ function b(e, t) {
         activitiesInfraVersion: p,
         connectedSince: Date.now(),
         frameChannelId: u,
-        frameGuildId: P,
-        frameLocationKind: M,
+        frameGuildId: M,
+        frameLocationKind: P,
     };
-    let x = m.Ay.getShelfActivities(P),
+    let x = m.Ay.getShelfActivities(M),
         k = T.A.getState().shelfOrder,
         F = (0, g.A)({ applicationId: e, activityConfigs: x }),
         B = 1 + k.findIndex((t) => t === e),
@@ -90,7 +90,7 @@ function b(e, t) {
         H = c.A.getRawThermalState();
     (I.default.track(O.HAw.ACTIVITY_SESSION_JOINED, {
         channel_id: u,
-        guild_id: P,
+        guild_id: M,
         media_session_id: w[0],
         activity_session_id: E,
         application_id: e,
@@ -108,14 +108,14 @@ function b(e, t) {
         command_context_type: null != b ? (0, s.ud)(b, e) : null,
         invite_inviter_id: o,
         interaction_id: C,
-        embedded_activity_location_kind: M,
+        embedded_activity_location_kind: P,
     }),
         v(e, a.K.FRAME_SESSION_JOIN),
         I.default.track(O.HAw.ACTIVITY_IFRAME_MOUNT, {
             location_stack: S,
             channel_id: u,
             channel_type: b?.type,
-            guild_id: P,
+            guild_id: M,
             application_id: e,
             instance_id: _,
             initial_media_session_id: w[0],
@@ -125,13 +125,13 @@ function b(e, t) {
             shelf_rank: F?.activity?.shelf_rank,
             shelf_sorted_rank: B > 0 ? B : null,
             activities_infra_version: p,
-            embedded_activity_location_kind: M,
+            embedded_activity_location_kind: P,
         }));
 }
-function P(e) {
+function M(e) {
     return R[e];
 }
-async function M(e, t, n) {
+async function P(e, t, n) {
     let i = D(e, n);
     if (null == i) return;
     let { isStart: r, channelId: s, guildId: l, locationKind: o, analyticsLocations: d, source: u } = i,

@@ -1,14 +1,14 @@
 n.d(t, { A: () => u });
-var l = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
+var r = n(477900),
+    a = n(582128),
+    s = n(503698),
+    l = n.n(s),
     i = n(627369),
     c = n(343053),
     o = n(610771);
 function u(e) {
-    let { cardColorPalette: t, size: n, className: a, style: u, children: d } = e,
-        m = r.useMemo(() => {
+    let { cardColorPalette: t, size: n, className: s, style: u, children: d } = e,
+        m = a.useMemo(() => {
             let e = (0, i.j)(t);
             return {
                 "--custom-checkpoint-card-primary": e.primaryBackgroundColor,
@@ -17,9 +17,9 @@ function u(e) {
                 ...u,
             };
         }, [t, u]),
-        h = r.useMemo(() => ({ size: n }), [n]);
-    return (0, l.jsx)(c.I.Provider, {
+        h = a.useMemo(() => ({ size: n }), [n]);
+    return (0, r.jsx)(c.I.Provider, {
         value: h,
-        children: (0, l.jsx)("div", { className: s()(o.container, o[n], a), style: m, children: d }),
+        children: (0, r.jsx)("div", { className: l()(o.container, o[n], s), style: m, children: d }),
     });
 }

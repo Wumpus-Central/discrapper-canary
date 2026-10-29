@@ -1,5 +1,5 @@
 n.d(t, {
-    Dp: () => M,
+    Dp: () => P,
     Dy: () => p,
     EZ: () => w,
     G2: () => N,
@@ -15,7 +15,7 @@ n.d(t, {
     ck: () => y,
     cw: () => R,
     dF: () => O,
-    gs: () => P,
+    gs: () => M,
     i0: () => h,
     l5: () => b,
     md: () => D,
@@ -418,7 +418,7 @@ let L = 800,
     D = 12,
     v = 60,
     b = 5;
-var P =
+var M =
     (((l = {})[(l.FIAT = 0)] = "FIAT"),
     (l[(l.ORB = 1)] = "ORB"),
     (l[(l.PREMIUM_PURCHASE = 2)] = "PREMIUM_PURCHASE"),
@@ -426,12 +426,12 @@ var P =
     (l[(l.TENURE_REWARD = 4)] = "TENURE_REWARD"),
     (l[(l.GIFT = 5)] = "GIFT"),
     l);
-let M = {
+let P = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: _.j.PREMIUM_TIER_2_3_DAY,
         FRACTIONAL_PREMIUM_1_DAY: _.j.PREMIUM_TIER_2_1_DAY,
     },
-    U = new Set(Object.values(M));
+    U = new Set(Object.values(P));
 function w(e) {
     return _.I.ALL.has(e);
 }

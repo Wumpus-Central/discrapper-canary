@@ -80,8 +80,8 @@ var R = n(931664),
     W = n(375499),
     F = n(554146),
     B = n(43105),
-    K = n(131607),
-    G = n(151271),
+    G = n(131607),
+    K = n(151271),
     H = n(490035),
     z = n(49999),
     q = n(698279),
@@ -89,11 +89,11 @@ var R = n(931664),
 function Q(e) {
     let { targetElementRef: t, type: n, channelId: r } = e,
         s = (0, H.H)("DefaultEmojisPopover"),
-        a = (0, G.RQ)((e) => null != e.activeView),
-        [o, u] = (0, K.kn)(s && !a ? [F.M.DEFAULT_EMOJIS_POPOVER] : []),
+        a = (0, K.RQ)((e) => null != e.activeView),
+        [o, u] = (0, G.kn)(s && !a ? [F.M.DEFAULT_EMOJIS_POPOVER] : []),
         c = o === F.M.DEFAULT_EMOJIS_POPOVER,
         d = i.useCallback(() => {
-            (u(z.i.TAKE_ACTION), (0, G.bf)(q.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
+            (u(z.i.TAKE_ACTION), (0, K.bf)(q.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
         }, [u, n, r]),
         h = i.useCallback(() => {
             u(z.i.USER_DISMISS);
@@ -121,11 +121,11 @@ var Z = n(355622),
     X = n(495088);
 let J = i.memo(function (e) {
     let { disabled: t, type: n, channelId: r, ref: s } = e,
-        [a, o, u, c] = (0, G.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], V.x),
+        [a, o, u, c] = (0, K.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], V.x),
         d = n === Z.oU.NORMAL,
         h = i.useRef(null),
         m = i.useCallback(() => {
-            (0, G.r$)(q.kx.EMOJI, n, r);
+            (0, K.r$)(q.kx.EMOJI, n, r);
         }, [n, r]);
     return t
         ? null
@@ -160,7 +160,7 @@ let er = i.memo(function (e) {
             [en.A],
             () => o && Object.values(en.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
         ),
-        [d, h, m, f] = (0, G.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], V.x),
+        [d, h, m, f] = (0, K.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], V.x),
         g = i.useRef(0),
         x = i.useCallback(() => {
             (u(!0),
@@ -171,7 +171,7 @@ let er = i.memo(function (e) {
         }, []);
     (0, el.Vo)({ event: p.jej.FAVORITE_GIF, handler: x });
     let S = i.useCallback(() => {
-            (0, G.r$)(q.kx.GIF, n, r.id);
+            (0, K.r$)(q.kx.GIF, n, r.id);
         }, [n, r.id]),
         { Component: y, events: A, play: C } = (0, ee.V)();
     if (t) return null;
@@ -241,10 +241,10 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             a,
             o,
             { disabled: u, type: c, channel: d, ref: h } = e,
-            [m, f, p, g] = (0, G.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], V.x),
+            [m, f, p, g] = (0, K.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], V.x),
             x = m === q.kx.STICKER && g === c && p === d.id,
             S = i.useCallback(() => {
-                (0, G.r$)(q.kx.STICKER, c, d.id);
+                (0, K.r$)(q.kx.STICKER, c, d.id);
             }, [c, d.id]),
             {
                 Component: y,
@@ -323,7 +323,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             W = !T || j.isEmojiButtonEnabled,
             F = !T || j.isGifButtonEnabled,
             B = !T || j.isStickerButtonEnabled,
-            K =
+            G =
                 ((n = C.id),
                 (x = y),
                 (E = I),
@@ -332,7 +332,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                         t = null != e && e.length > 0;
                     return 0 === D.A.getUploads(n, x.drafts.type).length && E && !t;
                 })),
-            { activeCommand: G, activeCommandOption: H } = (0, s.cf)([u.A], () => ({
+            { activeCommand: K, activeCommandOption: H } = (0, s.cf)([u.A], () => ({
                 activeCommand: u.A.getActiveCommand(C.id),
                 activeCommandOption: u.A.getActiveOption(C.id),
             })),
@@ -383,21 +383,21 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     (0, P.K3)(t);
                 }
             }, [t, et, S]));
-        let en = null == G || (null != H && H.type !== a.n4.ATTACHMENT);
+        let en = null == K || (null != H && H.type !== a.n4.ATTACHMENT);
         return (!r.Fr &&
             (y.gifts?.button != null &&
-                null == G &&
+                null == K &&
                 !z &&
                 (null == Q || U.Ay.isPremiumEligible(Q)) &&
                 q.push((0, l.jsx)(es.A, { disabled: A, channel: C }, "gift")),
             y.gifs?.button != null &&
-                null == G &&
+                null == K &&
                 v &&
                 F &&
                 !N &&
                 q.push((0, l.jsx)(er, { disabled: A, type: y, channel: C }, "gif")),
             y.stickers?.button != null &&
-                null == G &&
+                null == K &&
                 v &&
                 B &&
                 !N &&
@@ -409,7 +409,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 ? W && q.push((0, l.jsx)(J, { disabled: A, type: y, channelId: C.id }, "emoji"))
                 : q.push((0, l.jsx)(Y.A, { disabled: A, type: y, channel: C }, "expression"))),
         Z && V && q.push((0, l.jsx)(_, { channelId: C.id, type: y }, "appLauncher")),
-        ee && q.push((0, l.jsx)(eu, { onClick: b, disabled: A || K }, "submit")),
+        ee && q.push((0, l.jsx)(eu, { onClick: b, disabled: A || G }, "submit")),
         0 === q.length)
             ? null
             : (0, l.jsx)("div", { className: X.Uo, children: q });

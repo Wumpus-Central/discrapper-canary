@@ -94,11 +94,11 @@ function v(e, t) {
 function b(e) {
     return D.getState()[e];
 }
-function P(e) {
+function M(e) {
     let t = b(e);
     return (null == t && v(e, (t = y(1))), t);
 }
-async function M(e) {
+async function P(e) {
     (await (0, d.yy)(200), null != b(e) && v(e, { requestState: 3, abortController: null, lastUpdated: Date.now() }));
 }
 function U(e) {
@@ -121,7 +121,7 @@ async function G(e) {
         r = O.A.getSearchStateByGuildId(e),
         l = O.A.getPaginationStateByGuildId(e),
         o = L(e),
-        d = P(o),
+        d = M(o),
         [c, u] = (function (e, t, n) {
             let i = (function (e, t) {
                     let n,
@@ -141,7 +141,7 @@ async function G(e) {
                             currentPageChunkNumber: w(r, n),
                             nextPageChunkNumber: w(a, n),
                         }),
-                        { previousPagination: d } = P(L(e)),
+                        { previousPagination: d } = M(L(e)),
                         c = t.currentPage,
                         u = d?.currentPage ?? 0,
                         _ = O.A.getElasticSearchPaginationByGuildId(e);
@@ -222,7 +222,7 @@ async function G(e) {
             })(r)),
             null == u ? t : { ...t, ...u }),
         p = r.selectedSort ?? f.mF.ORDER_BY_GUILD_JOINED_AT_DESC;
-    if (((n = P(o)), a()(n.query, I) && (0, s.isEqual)(c, d.cursor))) return;
+    if (((n = M(o)), a()(n.query, I) && (0, s.isEqual)(c, d.cursor))) return;
     let T =
         ((i = b(o)),
         i?.requestState === 2 && i.abortController?.abort(),
@@ -244,7 +244,7 @@ async function G(e) {
         null != b(o) && v(o, { requestState: 0, abortController: null, lastUpdated: Date.now() });
         return;
     }
-    await M(o);
+    await P(o);
 }
 function x(e) {
     return D((t) => {
@@ -286,7 +286,7 @@ class F extends c.A {
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return M(L(t));
+        return P(L(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;

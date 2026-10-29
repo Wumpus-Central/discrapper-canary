@@ -31,24 +31,24 @@ let y = !0,
 function b(e) {
     return !(0, c.oB)(e.id) || null == S.default.getCurrentUser() || !(0, d.$X)(L.vB.CLIENT_THEME);
 }
-function P(e) {
+function M(e) {
     if (null == e) return;
     let t = R.ag[e];
     return null != t && b(t) ? t : void 0;
 }
-function M() {
+function P() {
     let e = f.eh.getSetting().backgroundGradientPresetId;
-    return (0, c.oB)(e) ? P(e) : void 0;
+    return (0, c.oB)(e) ? M(e) : void 0;
 }
 function U() {
-    (y && (i = M()), (v = !1), (D = !1));
+    (y && (i = P()), (v = !1), (D = !1));
 }
 function w() {
     var e;
     let t = !1;
     if (null == i || b(i)) {
         if (null == i) {
-            let e = M();
+            let e = P();
             null != e && ((i = e), (t = !0));
         }
     } else ((i = void 0), (t = !0));
@@ -64,7 +64,7 @@ function G() {
         if (null == i) return !1;
         i = void 0;
     } else {
-        let t = P(e);
+        let t = M(e);
         if (t === i) return !1;
         i = t;
     }
@@ -96,7 +96,7 @@ class B extends a.Ay.PersistedStore {
     migrations = [(e) => ({ gradientPresetId: e?.gradientPreset?.id })];
     initialize(e) {
         ((v = !1),
-            null != e && ((i = P(e.gradientPresetId)), (y = !0 !== e.canUseClientThemes)),
+            null != e && ((i = M(e.gradientPresetId)), (y = !0 !== e.canUseClientThemes)),
             this.waitFor(g.A, _.A, A.A, h.Ay, I.A, S.default),
             this.syncWith([S.default], w),
             this.syncWith([_.A], G));
@@ -110,7 +110,7 @@ class B extends a.Ay.PersistedStore {
     }
     get gradientPreset() {
         if (T()) {
-            let e = P(A.A.getSyncedClientTheme(A.A.systemTheme)?.backgroundGradientPresetId);
+            let e = M(A.A.getSyncedClientTheme(A.A.systemTheme)?.backgroundGradientPresetId);
             return y ? (v ? i : null != e && (0, c.oB)(e.id) ? e : void 0) : e;
         }
         return null != i && b(i) ? i : void 0;
@@ -150,7 +150,7 @@ let V = new B(l.h, {
         r = t;
     },
     RESET_PREVIEW_CLIENT_THEME: function (e) {
-        ((i = y ? M() : void 0), (v = !1));
+        ((i = y ? P() : void 0), (v = !1));
     },
     CLIENT_THEMES_EDITOR_CLOSE: U,
     CHANNEL_SELECT: function (e) {

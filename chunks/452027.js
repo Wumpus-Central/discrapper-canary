@@ -98,7 +98,7 @@ function A(e) {
                 [I, u, t, _, g, i, h, T, E, p, A, o, f, d, c],
             );
         })(e, { hasTrailingAuxiliaryContent: null != O }),
-        { labelId: y, controlId: D, errorMessageId: v, describedById: b, helperTextId: P, descriptionId: M } = L,
+        { labelId: y, controlId: D, errorMessageId: v, describedById: b, helperTextId: M, descriptionId: P } = L,
         U = m?.horizontalControlColumnWidth,
         w = "group" === p || "radiogroup" === p,
         G = w ? "fieldset" : "div",
@@ -140,7 +140,7 @@ function A(e) {
             errorMessage: f,
             helperText: E,
             trailing: O,
-            helperTextId: P,
+            helperTextId: M,
             errorMessageId: v,
         });
     return (0, i.jsx)(u._.Provider, {
@@ -169,7 +169,7 @@ function A(e) {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: _.h_,
-                                      id: M,
+                                      id: P,
                                       children: d,
                                   }),
                               "under-label" === C ? V : null,

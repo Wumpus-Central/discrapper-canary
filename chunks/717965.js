@@ -29,8 +29,8 @@ var i = t(477900),
     O = t(643501),
     R = t(880144),
     L = t(698441),
-    M = t(394412),
-    D = t(859894),
+    D = t(394412),
+    M = t(859894),
     G = t(267102),
     P = t(931991),
     k = t(151476),
@@ -293,11 +293,11 @@ let eb = l.memo(function (e) {
         v = g > 0,
         S = (x && !j) || (null != E && E.user.id !== C?.id),
         L = (0, y.s)("AudioDeviceMenu", t, { entrypoint: eC.GK.CARET }),
-        M = l.useRef(null),
-        D = l.useRef(null);
+        D = l.useRef(null),
+        M = l.useRef(null);
     if (null == C) return null;
     let G = (0, i.jsx)(d.Y, {
-        targetElementRef: M,
+        targetElementRef: D,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(K.A, {
@@ -316,7 +316,7 @@ let eb = l.memo(function (e) {
             let { onClick: t } = e,
                 { isShown: l } = n;
             return (0, i.jsx)(Q.A, {
-                ref: M,
+                ref: D,
                 centerButton: !0,
                 hasPermission: m,
                 enabled: h,
@@ -338,7 +338,7 @@ let eb = l.memo(function (e) {
                       className: ep.qi,
                       children: [
                           (0, i.jsx)(d.Y, {
-                              targetElementRef: D,
+                              targetElementRef: M,
                               renderPopout: (e) => {
                                   let { closePopout: n } = e;
                                   return (0, i.jsx)(K.A, {
@@ -363,7 +363,7 @@ let eb = l.memo(function (e) {
                                   let { onClick: t } = e,
                                       { isShown: l } = n;
                                   return (0, i.jsx)(q.A, {
-                                      ref: D,
+                                      ref: M,
                                       centerButton: !0,
                                       onPopoutClick: t,
                                       selfMute: r,
@@ -431,9 +431,9 @@ let ey = l.memo(function (e) {
                     (0, i.jsxs)("div", {
                         className: ep.Ac,
                         children: [
-                            d ? (0, i.jsx)(M.A, { channelId: n?.id }) : null,
+                            d ? (0, i.jsx)(D.A, { channelId: n?.id }) : null,
                             (0, i.jsx)("div", { className: ep.me }),
-                            d && r && !o ? (0, i.jsx)(D.A, { highlight: !0, channel: n }) : null,
+                            d && r && !o ? (0, i.jsx)(M.A, { highlight: !0, channel: n }) : null,
                             (0, i.jsx)("div", { className: ep.me }),
                         ],
                     }),

@@ -94,11 +94,11 @@ function b(e) {
     let t = (0, g.lQ)(e.clip);
     return { startMs: t + e.videoStartMs, endMs: t + e.videoEndMs };
 }
-function P(e) {
+function M(e) {
     let { startMs: t, endMs: n } = b(e);
     return { srcStartMs: t, srcEndMs: n, label: e.label };
 }
-function M(e, t) {
+function P(e, t) {
     let n = 0,
         i = !0;
     for (let r of e) {
@@ -695,11 +695,11 @@ function K(e) {
                                               })
                                               .sort((e, t) => t.score - e.score),
                                           s = [],
-                                          l = M(r, t);
+                                          l = P(r, t);
                                       for (; l > n;) {
                                           let n = a.pop();
                                           if (null == n) break;
-                                          (s.push(e[n.id]), (r[n.id] = null), (l = M(r, t)));
+                                          (s.push(e[n.id]), (r[n.id] = null), (l = P(r, t)));
                                       }
                                       return (
                                           s.length > 0 &&
@@ -712,7 +712,7 @@ function K(e) {
                               return {
                                   durationMs: (0, g.s_)(T, i.blendMs),
                                   resolved: T,
-                                  skipped: [...E, ...p, ...m.map(P)],
+                                  skipped: [...E, ...p, ...m.map(M)],
                                   requestedSectionCount: _.length,
                                   trimmedSectionCount: m.length,
                               };

@@ -1,4 +1,4 @@
-e.exports = {
+r.exports = {
     Nb: "featureBorder__65c15",
     wU: "premiumFeatureBorder__65c15 featureBorder__65c15",
     rY: "limitedFeatureBorder__65c15 featureBorder__65c15",

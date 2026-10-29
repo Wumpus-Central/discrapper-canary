@@ -1,4 +1,4 @@
-e.d(a, { U: () => c });
+e.d(a, { U: () => b });
 var i = e(477900);
 e(582128);
 let t =
@@ -37,11 +37,11 @@ let l = {
         Messages: ["State Machine 1"],
         Servers: ["State Machine 1"],
     };
-function c(r) {
-    let { artboard: a = "Preview", stateMachine: e, ...c } = r,
-        { status: b, buffer: m } = (0, n.CE)(t),
+function b(r) {
+    let { artboard: a = "Preview", stateMachine: e, ...b } = r,
+        { status: c, buffer: m } = (0, n.CE)(t),
         v = (0, n.m2)(t);
-    return b === n.BW.Loading
+    return c === n.BW.Loading
         ? null
         : (0, i.jsx)(o.w, {
               ...(v ? { key: "override" } : {}),
@@ -50,7 +50,7 @@ function c(r) {
               stateMachine: e,
               artboardProperties: l,
               artboardStateMachines: s,
-              ...c,
+              ...b,
           });
 }
-c.riveSrc = t;
+b.riveSrc = t;

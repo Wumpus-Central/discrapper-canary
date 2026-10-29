@@ -135,8 +135,8 @@ y.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE;
 var D = n(773669),
     v = n(617617),
     b = n(696451),
-    P = n(184989),
-    M = n(317525),
+    M = n(184989),
+    P = n(317525),
     U = n(711014),
     w = n(287809),
     G = n(927813),
@@ -575,7 +575,7 @@ function eN(e) {
             guildId: t,
             role: { id: n },
         } = e,
-        i = M.A.getRole(t, n);
+        i = P.A.getRole(t, n);
     if (!(null != i && (0, N.U)(i))) return !1;
     (em(t), eT());
 }
@@ -583,7 +583,7 @@ class eC extends _.Ay.PersistedStore {
     static displayName = "EmojiStore";
     static persistKey = "EmojiStoreV2";
     initialize(e) {
-        (this.waitFor(W.A, S.A, b.Ay, P.A, M.A, R.A, D.default, H.A, U.Ay, O.A, Y.A, v.A, w.default),
+        (this.waitFor(W.A, S.A, b.Ay, M.A, P.A, R.A, D.default, H.A, U.Ay, O.A, Y.A, v.A, w.default),
             null != e &&
                 (null != e.pendingUsages && (Z.pendingUsages = e.pendingUsages),
                 null != e.emojiReactionPendingUsages && (Z.emojiReactionPendingUsages = e.emojiReactionPendingUsages),
@@ -755,7 +755,7 @@ let eO = new eC(E.h, {
     },
     CACHED_EMOJIS_LOADED: function (e) {
         let { emojis: t } = e;
-        for (let [e] of t) P.A.isMember(e) && em(e);
+        for (let [e] of t) M.A.isMember(e) && em(e);
         eT();
     },
     GUILD_MEMBER_UPDATE: function (e) {

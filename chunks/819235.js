@@ -88,11 +88,11 @@ async function b(e) {
             S.delete(t);
         }
 }
-function P() {
+function M() {
     v();
 }
-function M() {
-    P();
+function P() {
+    M();
 }
 function U() {
     D(T);
@@ -117,11 +117,11 @@ function k() {
 }
 class F extends s.A {
     actions = {
-        POST_CONNECTION_OPEN: M,
+        POST_CONNECTION_OPEN: P,
         CONNECTION_CLOSED: U,
-        WINDOW_FOCUS: P,
-        IDLE: P,
-        CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: P,
+        WINDOW_FOCUS: M,
+        IDLE: M,
+        CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,
         CONTENT_INVENTORY_MANUAL_REFRESH: w,
         CONTENT_INVENTORY_INBOX_STALE: G,
         SPOTIFY_NEW_TRACK: x,

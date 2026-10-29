@@ -72,17 +72,17 @@ function N(e) {
         L = l.useCallback(() => {
             ((0, A.X)(T, A.O.CHAT, !S), h?.(), !S && g && f?.(), c.A.updateChatOpen(t, !S));
         }, [t, S, h, g, f, T]),
-        M = l.useCallback(
+        D = l.useCallback(
             (e) => {
                 let { className: n } = e;
                 return (0, i.jsx)(I, { className: n, channelId: t });
             },
             [t],
         ),
-        D = l.useCallback(() => {
+        M = l.useCallback(() => {
             b.current?.focus();
         }, []);
-    (0, x.Vo)({ event: E.jej.FOCUS_CHAT_BUTTON, handler: _ ? null : D });
+    (0, x.Vo)({ event: E.jej.FOCUS_CHAT_BUTTON, handler: _ ? null : M });
     let [G, P] = l.useState(!1),
         k = l.useCallback(() => {
             m && P(!0);
@@ -109,7 +109,7 @@ function N(e) {
             onClick: L,
             label: n,
             "aria-label": U.join(", "),
-            iconComponent: M,
+            iconComponent: D,
             tooltipPosition: "bottom",
             wrapperClassName: a()(s, null != r && { [r]: y }),
             forceTooltipOpen: G,

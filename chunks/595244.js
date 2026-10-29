@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => b, Sm: () => w, bc: () => F, dR: () => M, gz: () => x, i8: () => k, jX: () => P, xb: () => G }),
+(n.d(t, { Ay: () => b, Sm: () => w, bc: () => F, dR: () => P, gz: () => x, i8: () => k, jX: () => M, xb: () => G }),
     n(142703),
     n(321073));
 var i = n(477900),
@@ -52,10 +52,10 @@ function b(e) {
         })
     );
 }
-function P(e) {
+function M(e) {
     return (0, i.jsx)(b, { ...e, headerClassName: v.nQ });
 }
-function M(e) {
+function P(e) {
     let { guild: t, application: n, ...a } = e,
         { onClose: s } = a,
         l = r.useCallback(() => {

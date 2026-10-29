@@ -51,23 +51,23 @@ function b(e) {
         n = R[e];
     return null != n ? n : (R[e] = v(e, t));
 }
-function P(e) {
+function M(e) {
     null != e && (L[e] = (L[e] ?? 0) + 1);
 }
-function M() {
+function P() {
     for (let e in ((O = {}), (R = {}), L)) L[e] += 1;
     y += 1;
 }
 function U() {
-    M();
+    P();
 }
 function w() {
-    M();
+    P();
 }
 function G(e) {
     let { user: t } = e;
     if (t.id !== S.default.getCurrentUser()?.id) return !1;
-    M();
+    P();
 }
 function x() {
     return !0;
@@ -87,7 +87,7 @@ function F(e) {
         delete R[e.id];
     }),
         (y += 1),
-        P(t));
+        M(t));
 }
 function B(e) {
     let { instance: t } = e,
@@ -106,7 +106,7 @@ function V(e) {
         delete R[e.id];
     }),
         (y += 1),
-        P(t));
+        M(t));
 }
 function H(e, t, n, i) {
     let r = p.x3;
@@ -242,7 +242,7 @@ let Y = new j(l.h, {
         let i = S.default.getCurrentUser(),
             r = p.cc({ user: i, context: n });
         if (R[n.id] === r) return !1;
-        ((R[n.id] = r), (y += 1), P(n.getGuildId()));
+        ((R[n.id] = r), (y += 1), M(n.getGuildId()));
     },
     THREAD_CREATE: x,
     THREAD_UPDATE: x,
@@ -257,7 +257,7 @@ let Y = new j(l.h, {
             if (null == t || t.isPrivate()) continue;
             let i = S.default.getCurrentUser(),
                 r = p.cc({ user: i, context: t });
-            R[t.id] !== r && ((R[t.id] = r), P(t.getGuildId()), (n = !0));
+            R[t.id] !== r && ((R[t.id] = r), M(t.getGuildId()), (n = !0));
         }
         return !!n && ((y += 1), n);
     },
@@ -268,14 +268,14 @@ let Y = new j(l.h, {
     SEARCH_MESSAGES_SUCCESS: k,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: k,
     THREAD_MEMBER_UPDATE: function (e) {
-        return S.default.getCurrentUser()?.id === e.userId && (P(e.guildId), !0);
+        return S.default.getCurrentUser()?.id === e.userId && (M(e.guildId), !0);
     },
     THREAD_MEMBERS_UPDATE: function (e) {
-        return !!(0, _.k)(e) && (P(e.guildId), !0);
+        return !!(0, _.k)(e) && (M(e.guildId), !0);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return (delete R[t.id], (y += 1), P(t.guild_id), !1);
+        return (delete R[t.id], (y += 1), M(t.guild_id), !1);
     },
     GUILD_ROLE_CREATE: F,
     GUILD_ROLE_UPDATE: F,

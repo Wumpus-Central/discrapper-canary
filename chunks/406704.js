@@ -13,7 +13,7 @@
     gZ: () => V,
     io: () => m,
     jr: () => G,
-    lK: () => M,
+    lK: () => P,
     n: () => g,
     qi: () => B,
     s5: () => j,
@@ -120,10 +120,10 @@ function v(e) {
 function b(e, t) {
     return null != e && t.can(T.xBc.SEND_MESSAGES_IN_THREADS, e);
 }
-function P(e, t, n) {
+function M(e, t, n) {
     return !(null == e || !e.isThread() || e.isMediaThread()) && (e.threadMetadata?.locked ? n : t);
 }
-function M(e) {
+function P(e) {
     let t = (0, s.bG)(
             [f.A],
             () => null != e && f.A.can(T.xBc.SEND_MESSAGES_IN_THREADS, e) && f.A.can(T.xBc.SEND_MESSAGES, e),
@@ -137,16 +137,16 @@ function M(e) {
             [e],
         ),
         i = k(e);
-    return P(e, t && n, i);
+    return M(e, t && n, i);
 }
 function U(e) {
     let t = b(e, f.A),
         n = b(null != e ? h.A.getChannel(e.parent_id) : null, f.A),
         i = F(e);
-    return P(e, t && n, i);
+    return M(e, t && n, i);
 }
 function w(e) {
-    let t = M(e);
+    let t = P(e);
     return (
         null != e &&
         (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && e.threadMetadata?.locked !== !0 && t))

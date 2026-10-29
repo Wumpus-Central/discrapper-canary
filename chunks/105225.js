@@ -29,8 +29,8 @@ var i = t(477900),
     O = t(643501),
     R = t(857253),
     L = t(652896),
-    M = t(880144),
-    D = t(338771),
+    D = t(880144),
+    M = t(338771),
     G = t(558076),
     P = t(360729),
     k = t(508654),
@@ -107,7 +107,7 @@ function eN(e) {
         ((0, b.X)(h, b.O.STREAM, !0), a) ? j() : (0, eg.A)();
     }
     function S() {
-        ((0, b.X)(h, b.O.STREAM, !1), (0, D.A)(C));
+        ((0, b.X)(h, b.O.STREAM, !1), (0, M.A)(C));
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -225,7 +225,7 @@ let e_ = l.memo(function (e) {
         y = T && _ && S,
         O = (0, k.Qs)(s.id),
         R = l.useRef(null),
-        M = l.useCallback(
+        D = l.useCallback(
             () =>
                 o?.type === ep.lp.ACTIVITY && (null != o.frameId || o.applicationId === a?.applicationId)
                     ? "ACTIVITY"
@@ -236,21 +236,21 @@ let e_ = l.memo(function (e) {
                         : "CALL",
             [o, a?.applicationId, j, y, O],
         ),
-        [D, V] = l.useState(M()),
+        [M, V] = l.useState(D()),
         B = (0, m.z)(
             {
                 opacity: g ? 0.2 : 1,
                 transform: g && !d.enabled ? "scale(0.7)" : "scale(1)",
                 config: { mass: 2, tension: g ? 600 : 1e3, friction: 45, precision: 0.01, clamp: g },
                 onRest: () => {
-                    (V(M()), f(!1));
+                    (V(D()), f(!1));
                 },
             },
             "animate-always",
         );
     l.useEffect(() => {
-        M() !== D && f(!0);
-    }, [D, M]);
+        D() !== M && f(!0);
+    }, [M, D]);
     let w = l.useCallback(() => {
         if (null != E) (0, C.vN)((0, L._z)(E));
         else for (let e of N) (0, C.vN)((0, L._z)(e));
@@ -280,7 +280,7 @@ let e_ = l.memo(function (e) {
                 ref: R,
                 children: (function (e, l) {
                     let c = { isTrayButton: !1, centerButton: !0, popoutOpen: e };
-                    switch (D) {
+                    switch (M) {
                         case "ACTIVITY":
                             if (null == o || null == n || o.type !== ep.lp.ACTIVITY) return;
                             if (null != o.frameId)
@@ -389,7 +389,7 @@ let ey = function (e) {
         I = !w.k.useConfig({ location: "CenterControlTray" }).videoEnabled,
         b = (0, ec.A)(n),
         { suppress: S, selfMute: y, mute: L } = (0, eu.A)(n),
-        { canGoLive: D } = (0, u.cf)([el.Ay], () => ({ canGoLive: (0, M.A)(el.Ay) })),
+        { canGoLive: M } = (0, u.cf)([el.Ay], () => ({ canGoLive: (0, D.A)(el.Ay) })),
         G = (0, R.A)(),
         P = (0, u.bG)([O.default], () => null != O.default.getAwaitingRemoteSessionInfo()),
         k = null != G,
@@ -504,7 +504,7 @@ let ey = function (e) {
                                                     channel: n,
                                                     currentUser: x,
                                                     exitFullScreen: r,
-                                                    canGoLive: D,
+                                                    canGoLive: M,
                                                     hasPermission: b,
                                                     videoBlocked: I,
                                                 }),

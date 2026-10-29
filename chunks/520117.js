@@ -1,23 +1,23 @@
-e.d(r, { A: () => c });
-var n = e(582128),
-    t = e(172218);
-function c(u) {
-    let { onVisible: r, threshold: e, minTimeVisibleMs: c } = u,
-        l = n.useRef(!1),
-        i = n.useRef(null);
+n.d(t, { A: () => r });
+var l = n(582128),
+    i = n(172218);
+function r(e) {
+    let { onVisible: t, threshold: n, minTimeVisibleMs: r } = e,
+        s = l.useRef(!1),
+        a = l.useRef(null);
     return (
-        n.useEffect(
+        l.useEffect(
             () => () => {
-                null != i.current && (clearTimeout(i.current), (i.current = null));
+                null != a.current && (clearTimeout(a.current), (a.current = null));
             },
             [],
         ),
-        (0, t.K)(function (u) {
-            function e() {
-                (r(), (l.current = !0), (i.current = null));
+        (0, i.K)(function (e) {
+            function n() {
+                (t(), (s.current = !0), (a.current = null));
             }
-            (null == i.current || u || !1 !== l.current || (clearTimeout(i.current), (i.current = null)),
-                u && !0 !== l.current && (null != c ? (i.current = setTimeout(e, c)) : e()));
-        }, e)
+            (null == a.current || e || !1 !== s.current || (clearTimeout(a.current), (a.current = null)),
+                e && !0 !== s.current && (null != r ? (a.current = setTimeout(n, r)) : n()));
+        }, n)
     );
 }

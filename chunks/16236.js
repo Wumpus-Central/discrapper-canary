@@ -43,7 +43,7 @@ var i = n(435558),
     D = n(349828),
     v = n(652215),
     b = n(818348);
-function P(e) {
+function M(e) {
     let t = 0;
     for (let n in e) {
         let i = e[n];
@@ -51,7 +51,7 @@ function P(e) {
     }
     return t + 1;
 }
-function M(e) {
+function P(e) {
     let t = I.A.getGuildId(),
         n = f.Ay.getChannelId();
     (0, N.ai)(t) &&
@@ -132,7 +132,7 @@ function B(e) {
 }
 function V(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.default.fromTimestamp(Date.now());
-    return ((e[n] = s.wL.create({ nickname: t, type: s.Ip.CATEGORY, position: P(e), parentId: D.O8 })), n);
+    return ((e[n] = s.wL.create({ nickname: t, type: s.Ip.CATEGORY, position: M(e), parentId: D.O8 })), n);
 }
 function H(e, t) {
     let n = t.trim().toLowerCase();
@@ -166,7 +166,7 @@ async function j(e, t, n) {
                     nickname: "",
                     type: s.Ip.REFERENCE_ORIGINAL,
                     channelType: null != c ? l.ZQ.create({ value: c.type }) : void 0,
-                    position: P(e.favoriteChannels),
+                    position: M(e.favoriteChannels),
                     parentId: d,
                 })),
                     U(e.favoriteChannels),
@@ -187,7 +187,7 @@ function Y(e) {
     let { trackAnalytics: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = T.A.getFavorite(e);
     null != n &&
-        (M(new Set([e])),
+        (P(new Set([e])),
         B({
             update: (i) => {
                 if ((delete i.favoriteChannels[e], n.type === s.Ip.CATEGORY))
@@ -216,7 +216,7 @@ async function $(e, t) {
         update: (e) => {
             let i = (0, m.wm)(t).filter((t) => n.has(t.id) && null != e.favoriteChannels[t.id]);
             if (0 === i.length) return !1;
-            for (let t of (M(new Set(i.map((e) => e.id))), i))
+            for (let t of (P(new Set(i.map((e) => e.id))), i))
                 (delete e.favoriteChannels[t.id], (0, C.TX)(t.type, G(e.favoriteChannels)));
         },
     });

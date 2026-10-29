@@ -8,7 +8,7 @@
     dI: () => v,
     pi: () => L,
     rB: () => D,
-    sg: () => P,
+    sg: () => M,
 }),
     n(321073));
 var i = n(695497),
@@ -232,7 +232,7 @@ function b(e, t) {
         })
     );
 }
-function P(e) {
+function M(e) {
     return (
         null != e &&
         "object" == typeof e &&

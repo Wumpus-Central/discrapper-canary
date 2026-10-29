@@ -28,7 +28,7 @@ function _(e) {
         y = (0, A.et)(n.id),
         O = (0, A.dL)(y),
         R = y !== A.xy.CAN_LAUNCH || S,
-        { isHovered: L, setIsHovered: M, onMouseEnter: D, onMouseLeave: G } = (0, E.A)(200, 300),
+        { isHovered: L, setIsHovered: D, onMouseEnter: M, onMouseLeave: G } = (0, E.A)(200, 300),
         P = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
         k = (0, s.bG)(
             [u.Ay],
@@ -37,9 +37,9 @@ function _(e) {
         U = !R,
         V = l.useCallback(
             (e) => {
-                "focus" !== e.type && D();
+                "focus" !== e.type && M();
             },
-            [D],
+            [M],
         ),
         B = (0, p.Us)() === I.BRT.POPOUT,
         { parentAnalyticsLocation: w, newestAnalyticsLocation: H } = (0, g.Ay)(),
@@ -72,7 +72,7 @@ function _(e) {
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        (M(!1), b?.(void 0));
+                        (D(!1), b?.(void 0));
                     },
                     renderPopout: (e) => {
                         let { closePopout: t, setPopoutRef: l } = e;
@@ -83,7 +83,7 @@ function _(e) {
                                   },
                                   channel: n,
                                   closePopout: t,
-                                  onMouseEnter: D,
+                                  onMouseEnter: M,
                                   onMouseLeave: G,
                                   isHovered: L,
                                   onClick: () => s(N.i.UNKNOWN),

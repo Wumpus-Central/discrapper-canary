@@ -63,15 +63,15 @@ function b() {
     let e = c.A.getChannel(A.Ay.getVoiceChannelId());
     return ((S = null != e && (0, f.A)(_.Ay) && (0, h.vz)(e, u.A, E.A, !1)), y(), !1);
 }
-function P() {
+function M() {
     return null != i ? (0, I.A)(i) : null;
 }
-function M() {
+function P() {
     let { soundshareEnabled: e } = d.A.getState();
     return {
         sourceId: "prepicked:0",
         nativePickerStyleUsed: R.lastPresentedPickerStyle,
-        sourceName: P() ?? m.intl.string(m.t.KKcy95),
+        sourceName: M() ?? m.intl.string(m.t.KKcy95),
         sound: e,
     };
 }
@@ -96,7 +96,7 @@ class U extends s.Ay.Store {
         return i;
     }
     getLastPickedContentTitle() {
-        return P();
+        return M();
     }
     getLastPickedContentPID() {
         if (null != i) {
@@ -110,7 +110,7 @@ class U extends s.Ay.Store {
         return null;
     }
     getStreamStartOptions() {
-        return M();
+        return P();
     }
 }
 let w = new U(l.h, {
@@ -118,7 +118,7 @@ let w = new U(l.h, {
         let { existing: t, content: n } = e;
         if (((R = { lastPickerAction: 1 }), (i = n), 0 === N && !t)) {
             let e = c.A.getChannel(A.Ay.getVoiceChannelId());
-            null != e && (0, f.A)(_.Ay) && (0, h.vz)(e, u.A, E.A, !1) && (0, o.XI)(e.getGuildId(), e.id, M());
+            null != e && (0, f.A)(_.Ay) && (0, h.vz)(e, u.A, E.A, !1) && (0, o.XI)(e.getGuildId(), e.id, P());
         }
     },
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: function () {

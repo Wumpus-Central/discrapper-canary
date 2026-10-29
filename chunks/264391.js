@@ -59,7 +59,7 @@ function B(e, t) {
           ? (0, l.jsx)(n, { size: "custom", width: 12, height: 12, color: "currentColor", "aria-hidden": !0 })
           : (0, l.jsx)(n, { size: t, color: "currentColor", "aria-hidden": !0 });
 }
-function K(e) {
+function G(e) {
     let { channel: t, targetChannel: n, transitionState: i, onClose: r, onReturn: s, onDiscard: a } = e,
         o = F(t),
         u = t.getGuildId(),
@@ -189,7 +189,7 @@ function K(e) {
                 : null,
     });
 }
-var G = n(709372),
+var K = n(709372),
     H = n(680671),
     z = n(518950),
     q = n(381941);
@@ -220,12 +220,12 @@ function ei(e) {
 }
 function er(e) {
     let t = et;
-    t?.channelId === e && (ei(t), (et = null), (0, G.zh)(e), t.resultPromise.then(J).catch(() => {}));
+    t?.channelId === e && (ei(t), (et = null), (0, K.zh)(e), t.resultPromise.then(J).catch(() => {}));
 }
 async function es(e) {
     if (!(0, H.t)()) return void Z.warn("Voice message recording is not supported on this client");
-    if (!S.A.getConfig({ location: S.R }).enabled || (0, G.tO)()) return;
-    let t = (0, G.yC)();
+    if (!S.A.getConfig({ location: S.R }).enabled || (0, K.tO)()) return;
+    let t = (0, K.yC)();
     if (null != t)
         if (null == x.A.getChannel(t)) er(t);
         else {
@@ -236,7 +236,7 @@ async function es(e) {
             null != n &&
                 null != i &&
                 (0, s.openModal)((e) =>
-                    (0, l.jsx)(K, {
+                    (0, l.jsx)(G, {
                         ...e,
                         channel: n,
                         targetChannel: i,
@@ -245,13 +245,13 @@ async function es(e) {
                     }),
                 ));
         }
-    let n = (0, G.CH)();
+    let n = (0, K.CH)();
     if (null != n && n !== e) return void eu(n);
-    let i = (0, G.Mk)(e);
+    let i = (0, K.Mk)(e);
     if (i?.phase === "requesting" || i?.phase === "recording") return;
     let a = (0, H.d)(),
         o = { channelId: e, backend: a, samples: [], startedAtMs: null, maxDurationTimer: null };
-    ((Y = o), (0, G.z5)(e, "requesting"));
+    ((Y = o), (0, K.z5)(e, "requesting"));
     try {
         await a.start((e) => {
             o.samples.push(e);
@@ -259,14 +259,14 @@ async function es(e) {
     } catch (t) {
         (Z.error("Failed to start voice message recording", t),
             (Y = null),
-            (0, G.zh)(e),
+            (0, K.zh)(e),
             (0, r.P0)({ text: V.intl.string(V.t.H03AqF), variant: "critical" }));
         return;
     }
     Y !== o
         ? a.cancel()
         : ((o.startedAtMs = Date.now()),
-          (0, G.z5)(e, "recording", o.startedAtMs),
+          (0, K.z5)(e, "recording", o.startedAtMs),
           (o.maxDurationTimer = window.setTimeout(() => {
               Y === o && ec(o.channelId, $);
           }, z.iA)));
@@ -275,14 +275,14 @@ async function ea(e) {
     let t,
         n = Y;
     if (null == n || n.channelId !== e) return;
-    ((Y = null), ee(n), (0, G.zh)(e), (0, G.Rz)(e, !0));
+    ((Y = null), ee(n), (0, K.zh)(e), (0, K.Rz)(e, !0));
     try {
         t = await n.backend.stop();
     } catch (e) {
         (Z.error("Failed to finalize voice message recording", e), X());
         return;
     } finally {
-        (0, G.Rz)(e, !1);
+        (0, K.Rz)(e, !1);
     }
     if (t.durationSecs < 0.5) return void J(t);
     let l = el(n.samples);
@@ -306,29 +306,29 @@ function ec(e, t) {
     if (null == n || n.channelId !== e) return;
     ((Y = null), ee(n));
     let l = n.backend.stop();
-    ((0, G.Rz)(e, !0),
+    ((0, K.Rz)(e, !0),
         l.then(
             (t) => {
-                if (((0, G.Rz)(e, !1), et?.resultPromise === l)) {
+                if (((0, K.Rz)(e, !1), et?.resultPromise === l)) {
                     let n = URL.createObjectURL(t.file);
                     ((et.playbackUrl = n),
-                        (0, G.AL)(e, t.durationSecs),
-                        (0, G.o2)(e, { src: n, fileName: t.file.name, fileSize: t.file.size, waveform: et.waveform }));
+                        (0, K.AL)(e, t.durationSecs),
+                        (0, K.o2)(e, { src: n, fileName: t.file.name, fileSize: t.file.size, waveform: et.waveform }));
                 }
             },
-            () => (0, G.Rz)(e, !1),
+            () => (0, K.Rz)(e, !1),
         ),
         l.catch((t) => {
             (Z.error("Failed to finalize voice message recording", t),
-                et?.resultPromise === l && ((et = null), (0, G.zh)(e), X()));
+                et?.resultPromise === l && ((et = null), (0, K.zh)(e), X()));
         }),
         (et = { channelId: e, resultPromise: l, waveform: el(n.samples), samples: n.samples, playbackUrl: null }),
-        (0, G.tH)(e, t));
+        (0, K.tH)(e, t));
 }
 async function ed(e) {
     let t,
         n = et?.channelId === e ? et : null;
-    if ((null != n && ei(n), (et = null), (0, G.zh)(e), null != n)) {
+    if ((null != n && ei(n), (et = null), (0, K.zh)(e), null != n)) {
         try {
             t = await n.resultPromise;
         } catch {
@@ -341,7 +341,7 @@ async function ed(e) {
 }
 function eh(e) {
     let t = Y;
-    (null != t && t.channelId === e && (ee(t), t.backend.cancel(), (Y = null)), er(e), (0, G.zh)(e));
+    (null != t && t.channelId === e && (ee(t), t.backend.cancel(), (Y = null)), er(e), (0, K.zh)(e));
 }
 function em(e, t, n, l, i) {
     let r = x.A.getChannel(e);
@@ -371,5 +371,5 @@ a.h.subscribe("LOGOUT", function () {
     let e = Y;
     null != e && (ee(e), e.backend.cancel(), (Y = null));
     let t = et;
-    (null != t && ei(t), (et = null), t?.resultPromise.then(J).catch(() => {}), (0, G.nf)());
+    (null != t && ei(t), (et = null), t?.resultPromise.then(J).catch(() => {}), (0, K.nf)());
 });

@@ -129,9 +129,9 @@ function R(e) {
             stateMachine: v,
             artboardStateMachines: b,
         } = e,
-        P = a.useContext(c.C),
-        M = (0, d.Rs)(),
-        U = (0, u.G9)().isWindowFocused?.() ?? M,
+        M = a.useContext(c.C),
+        P = (0, d.Rs)(),
+        U = (0, u.G9)().isWindowFocused?.() ?? P,
         [w, G] = (0, d.Xb)(3e4),
         [x, k] = a.useState(void 0),
         F = a.useMemo(() => {
@@ -373,7 +373,7 @@ function R(e) {
             onDataBindingChange: N,
         }),
         a.useEffect(() => {
-            if (null != j && "short-loop" === T && P.reducedMotion.enabled) {
+            if (null != j && "short-loop" === T && M.reducedMotion.enabled) {
                 function e() {
                     null != j &&
                         j.isPlaying &&
@@ -393,7 +393,7 @@ function R(e) {
                     }
                 );
             }
-        }, [j, T, P.reducedMotion.enabled]),
+        }, [j, T, M.reducedMotion.enabled]),
         a.useLayoutEffect(() => {
             if (null != j) {
                 "layout" === _ && j.resizeDrawingSurfaceToCanvas();
@@ -406,7 +406,7 @@ function R(e) {
             }
         }, [j, _]),
         a.useEffect(() => {
-            if (null == j || !P.reducedMotion.enabled) return;
+            if (null == j || !M.reducedMotion.enabled) return;
             let e = j.canvas;
             if (null == e) return;
             let t = new (e.ownerDocument.defaultView ?? window).ResizeObserver(() => {
@@ -414,7 +414,7 @@ function R(e) {
                     j.isPlaying || (j.startRendering(), requestAnimationFrame(() => j.stopRendering())));
             });
             return (t.observe(e), () => t.disconnect());
-        }, [j, P.reducedMotion.enabled]),
+        }, [j, M.reducedMotion.enabled]),
         a.useEffect(() => {
             B ||
                 (null != j &&
@@ -433,7 +433,7 @@ function R(e) {
                     "number" == typeof t.data &&
                     ((Y.current = t.data),
                     t.data > 0 &&
-                        ("halt" === T && P.reducedMotion.enabled && j.isPlaying && j.pause(),
+                        ("halt" === T && M.reducedMotion.enabled && j.isPlaying && j.pause(),
                         j.off(o.EventType.Advance, e)));
             };
             return (
@@ -443,7 +443,7 @@ function R(e) {
                     j.off(o.EventType.Advance, e);
                 }
             );
-        }, [j, P.reducedMotion.enabled, T, s]),
+        }, [j, M.reducedMotion.enabled, T, s]),
         a.useEffect(() => {
             G();
         }, [G, p, _, E, S, O, g]),

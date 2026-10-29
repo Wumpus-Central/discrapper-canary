@@ -53,8 +53,8 @@ function C(e) {
             step: D = 1,
             onChange: v,
             onChangeEnd: b,
-            formatValue: P,
-            marks: M,
+            formatValue: M,
+            marks: P,
             snapToMarks: U = !1,
             defaultMark: w,
             "aria-label": G,
@@ -71,14 +71,14 @@ function C(e) {
         { keyboardModeEnabled: $ } = r.useContext(f.C),
         z = r.useMemo(
             () =>
-                (M ?? [])
+                (P ?? [])
                     .map((e) =>
                         "number" == typeof e
                             ? { value: e, label: void 0, usesFormatValue: !0 }
                             : { value: e.value, label: e.label, usesFormatValue: !1 },
                     )
                     .sort((e, t) => e.value - t.value),
-            [M],
+            [P],
         ),
         X = r.useMemo(() => z.map((e) => e.value), [z]),
         q = U && X.length > 1;
@@ -90,7 +90,7 @@ function C(e) {
     }
     let J = (0, l.J)();
     function ee(e) {
-        return null != P ? P(e) : J.format(e);
+        return null != M ? M(e) : J.format(e);
     }
     let et = (0, A.S)({
             value: Z(O),

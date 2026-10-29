@@ -1,4 +1,4 @@
-e.d(a, { m: () => c });
+e.d(a, { m: () => b });
 var i = e(477900);
 e(582128);
 let t =
@@ -155,11 +155,11 @@ let l = {
         Username: ["State Machine 1"],
         "Friends 01 Rotation": ["State Machine 1"],
     };
-function c(r) {
-    let { artboard: a = "MAIN", stateMachine: e, ...c } = r,
-        { status: b, buffer: m } = (0, n.CE)(t),
+function b(r) {
+    let { artboard: a = "MAIN", stateMachine: e, ...b } = r,
+        { status: c, buffer: m } = (0, n.CE)(t),
         v = (0, n.m2)(t);
-    return b === n.BW.Loading
+    return c === n.BW.Loading
         ? null
         : (0, i.jsx)(o.w, {
               ...(v ? { key: "override" } : {}),
@@ -168,7 +168,7 @@ function c(r) {
               stateMachine: e,
               artboardProperties: l,
               artboardStateMachines: s,
-              ...c,
+              ...b,
           });
 }
-c.riveSrc = t;
+b.riveSrc = t;

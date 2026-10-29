@@ -141,7 +141,7 @@ function b() {
     let e = S;
     return null != e && !!e.unknownChannels.some((e) => null != E.A.getChannel(e)) && ((S = null), !0);
 }
-function P() {
+function M() {
     ((g = {}), (S = null));
     let e = f.A.getAllVoiceStates();
     I.default.keys(e).forEach((t) => {
@@ -150,10 +150,10 @@ function P() {
         });
     });
 }
-class M extends a.Ay.Store {
+class P extends a.Ay.Store {
     static displayName = "SortedVoiceStateStore";
     initialize() {
-        (P(),
+        (M(),
             this.waitFor(_.default, E.A, d.A, A.Ay, h.default, f.A),
             this.syncWith([h.default], D),
             this.syncWith([d.A], v),
@@ -218,12 +218,12 @@ class M extends a.Ay.Store {
         return N(e ?? T.ME).getVersion();
     }
 }
-let U = new M(o.h, {
+let U = new P(o.h, {
     CONNECTION_OPEN: function () {
         ((g = {}), (S = null));
     },
     OVERLAY_INITIALIZE: function () {
-        P();
+        M();
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { guildId: t } = e,

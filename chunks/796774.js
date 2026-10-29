@@ -4,7 +4,7 @@
     dZ: () => v,
     eS: () => L,
     g0: () => b,
-    iy: () => P,
+    iy: () => M,
     lT: () => N,
     nh: () => y,
     qP: () => D,
@@ -139,6 +139,6 @@ function v(e, t) {
 function b(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_END", soundId: e, userId: t });
 }
-function P(e, t) {
+function M(e, t) {
     s.h.dispatch({ type: "USER_SOUNDBOARD_SET_VOLUME", volume: e, location: t });
 }

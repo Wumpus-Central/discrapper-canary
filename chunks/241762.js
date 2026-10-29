@@ -1,9 +1,9 @@
 n.d(t, { H: () => a, R: () => i });
 var l = n(477900),
-    r = n(582128);
-let s = r.createContext(null);
+    s = n(582128);
+let r = s.createContext(null);
 function a() {
-    let e = r.useContext(s);
+    let e = s.useContext(r);
     if (null == e) throw Error("useQuestBarExpansionContext requires a QuestBarExpansionContextProvider ancestor");
     return e;
 }
@@ -19,7 +19,7 @@ function i(e) {
             onGameSheetOpen: d,
             onGameSheetClose: m,
         } = e,
-        p = r.useMemo(
+        p = s.useMemo(
             () => ({
                 isExpanded: n,
                 isExpansionAnimationComplete: a,
@@ -32,5 +32,5 @@ function i(e) {
             }),
             [n, a, i, o, u, c, d, m],
         );
-    return (0, l.jsx)(s.Provider, { value: p, children: t });
+    return (0, l.jsx)(r.Provider, { value: p, children: t });
 }

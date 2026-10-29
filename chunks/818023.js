@@ -3,11 +3,11 @@ n.d(t, {
     iu: () => m,
     D4: () => E,
     Ig: () => c,
-    M1: () => P,
+    M1: () => M,
     AM: () => p,
     W9: () => o.W9,
     xW: () => S,
-    dm: () => M,
+    dm: () => P,
     N7: () => o.N7,
     gq: () => h,
     $W: () => _,
@@ -91,5 +91,5 @@ let L = { label_type: s.Hr.NONE, release_phase: "", label_from: null, label_unti
     D = [l.rbe.GUILD_TEXT, l.rbe.DM, l.rbe.GROUP_DM, l.rbe.GUILD_SPACE],
     v = [...D, l.rbe.GUILD_VOICE],
     b = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var P = (((a = {}).NORMAL = "normal"), (a.FULL_SCREEN = "full-screen"), a);
-let M = 216e5;
+var M = (((a = {}).NORMAL = "normal"), (a.FULL_SCREEN = "full-screen"), a);
+let P = 216e5;

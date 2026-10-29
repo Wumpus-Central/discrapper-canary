@@ -40,8 +40,8 @@ var l = n(477900),
     F = n(967144);
 n(209932);
 var B = n(734057),
-    K = n(317525),
-    G = n(994500),
+    G = n(317525),
+    K = n(994500),
     H = n(351906),
     z = n(287809),
     q = n(147036),
@@ -99,7 +99,7 @@ function et(e) {
 }
 function en(e) {
     let { id: t, guildId: n, channelId: r } = e,
-        s = (0, y.bG)([K.A], () => (null != n ? K.A.getRole(n, t) : void 0)),
+        s = (0, y.bG)([G.A], () => (null != n ? G.A.getRole(n, t) : void 0)),
         a = (0, y.bG)([j.Ay], () => j.Ay.roleStyle),
         o = (0, F.X_)(n, s, s?.colorStrings),
         u = i.useRef(null);
@@ -141,7 +141,7 @@ function el(e) {
         r = "text",
         s = !0;
     return (null != n &&
-        ((i = (0, M.nc)(n) ? (0, k.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
+        ((i = (0, M.nc)(n) ? (0, k.m1)(n, z.default, K.A) : Z.intl.string(Z.t["/YzI63"])),
         (r = (0, M.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
         (s = (0, L.Y)(n.type))),
     s)
@@ -151,7 +151,7 @@ function el(e) {
 function ei(e) {
     let { id: t, itemId: n, guildId: i } = e,
         r = (0, P.Q)(t),
-        s = (0, y.bG)([K.A], () => (0, P.f)(K.A, t, n, i), [t, n, i]);
+        s = (0, y.bG)([G.A], () => (0, P.f)(G.A, t, n, i), [t, n, i]);
     return (0, l.jsxs)(U.A, { iconType: t, children: [r, null != s && (0, l.jsx)(V.A, {}), s] });
 }
 function er(e) {

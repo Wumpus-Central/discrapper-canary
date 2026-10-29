@@ -29,8 +29,8 @@ var i = t(477900),
     O = t(290863),
     R = t(849736),
     L = t(113783),
-    M = t(925931),
-    D = t(105530),
+    D = t(925931),
+    M = t(105530),
     G = t(699970),
     P = t(345687),
     k = t(818348),
@@ -97,7 +97,7 @@ let Y = l.memo(function (e) {
             h = (0, _.gn)(n.guild_id, A?.userId, A?.colorStrings ?? null),
             m = l.useMemo(() => ({ [r]: [s.user.id] }), [r, s.user.id]);
         (0, N.Eq)(m, "RequestToSpeakSidebar");
-        let p = s.rtsState === D.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        let p = s.rtsState === M.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function E(e) {
             null != r &&
                 (0, j.L3)(e, async () => {
@@ -168,7 +168,7 @@ let Y = l.memo(function (e) {
                                         (0, i.jsx)(f.E, {
                                             variant: "text-xs/normal",
                                             color: "text-default",
-                                            children: (0, M.g)(s),
+                                            children: (0, D.g)(s),
                                         }),
                                     ],
                                 }),

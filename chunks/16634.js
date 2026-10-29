@@ -15,16 +15,16 @@ var l = n(477900),
     h = n(463660),
     x = n(115982),
     j = n(17928),
-    k = n(778712),
-    v = n(730134),
-    b = n(287809),
+    v = n(778712),
+    b = n(730134),
+    k = n(287809),
     y = n(427262),
     _ = n(248675),
     A = n(105292),
-    w = n(59678);
-function S(e) {
+    S = n(59678);
+function w(e) {
     let { userId: t } = e,
-        n = (0, j.bG)([b.default], () => b.default.getUser(t), [t]),
+        n = (0, j.bG)([k.default], () => k.default.getUser(t), [t]),
         a = (0, y.tx)(n);
     if (null == n || null == a) return null;
     let i = A.intl.formatToPlainString(_.default["664n2O"], { name: a });
@@ -32,10 +32,10 @@ function S(e) {
         text: i,
         ariaHidden: !0,
         children: (0, l.jsx)("span", {
-            className: w.jz,
+            className: S.jz,
             role: "img",
             "aria-label": i,
-            children: (0, l.jsx)(v.A, { user: n, size: k._3.SIZE_16, "aria-hidden": !0 }),
+            children: (0, l.jsx)(b.A, { user: n, size: v._3.SIZE_16, "aria-hidden": !0 }),
         }),
     });
 }
@@ -45,68 +45,68 @@ function I(e) {
     let { projectId: t, node: n, presentation: i = "row", active: m = !1 } = e,
         [p, h] = a.useState(!1),
         j = a.useId(),
-        k = a.useCallback(() => h((e) => !e), []),
-        v = (0, x.WQ)(n),
-        b = n.detail,
+        v = a.useCallback(() => h((e) => !e), []),
+        b = (0, x.WQ)(n),
+        k = n.detail,
         y = "failed" === n.status ? "text-feedback-critical" : "detail" === i ? "text-muted" : "text-default",
         I = "text-muted" === y,
         E = m && I ? "none" : p && I ? "currentColor" : y,
-        D = r()(w.iq, { [C.Hz]: m && I }),
-        T = "detail" === i ? "text-md/normal" : "text-sm/normal",
+        T = r()(S.iq, { [C.Hz]: m && I }),
+        D = "detail" === i ? "text-md/normal" : "text-sm/normal",
         M = "detail" === i ? "text-sm/normal" : "text-xs/normal",
-        L = null != t ? n.screenshots : [],
-        K = null != t ? n.attachments : [];
-    if (0 === b.length && 0 === L.length && 0 === K.length)
+        K = null != t ? n.screenshots : [],
+        z = null != t ? n.attachments : [];
+    if (0 === k.length && 0 === K.length && 0 === z.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
-            className: w.Dx,
+            className: S.Dx,
             children: (0, l.jsx)(s.E, {
                 tag: "div",
-                variant: T,
+                variant: D,
                 color: E,
                 selectable: !0,
-                className: D,
-                children: (0, l.jsx)(N.A, { text: v, variant: T, prose: !0 }),
+                className: T,
+                children: (0, l.jsx)(N.A, { text: b, variant: D, prose: !0 }),
             }),
         });
-    let z = p ? o.a : u._;
+    let B = p ? o.a : u._;
     return (0, l.jsxs)("li", {
         "data-step-kind": n.labelKey ?? "step",
         "data-conjure-entrance": !0,
-        className: w.Dx,
+        className: S.Dx,
         children: [
             (0, l.jsxs)(d.D, {
                 tag: "div",
-                className: w.kG,
+                className: S.kG,
                 "aria-expanded": p,
                 "aria-controls": j,
-                "aria-label": A.intl.formatToPlainString(_.default["KE1KI+"], { step: v }),
-                onClick: k,
+                "aria-label": A.intl.formatToPlainString(_.default["KE1KI+"], { step: b }),
+                onClick: v,
                 children: [
                     (0, l.jsx)(s.E, {
                         tag: "span",
-                        variant: T,
+                        variant: D,
                         color: E,
-                        className: D,
-                        children: (0, l.jsx)(N.A, { text: v, variant: T, prose: !0 }),
+                        className: T,
+                        children: (0, l.jsx)(N.A, { text: b, variant: D, prose: !0 }),
                     }),
-                    (0, l.jsx)(z, { size: "xs", color: "currentColor", className: w.Ue }),
+                    (0, l.jsx)(B, { size: "xs", color: "currentColor", className: S.Ue }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 id: j,
                 hidden: !p,
                 "data-conjure-entrance": !0,
-                className: w.yJ,
+                className: S.yJ,
                 children: [
-                    b.map((e, t) => {
+                    k.map((e, t) => {
                         let a = n.detailDrivenBy[t],
                             i = n.detailError[t] ?? null;
                         return (0, l.jsxs)(
                             "div",
                             {
-                                className: w.l6,
+                                className: S.l6,
                                 children: [
                                     (0, l.jsx)(s.E, {
                                         tag: "div",
@@ -116,13 +116,13 @@ function I(e) {
                                         className: r()({ [C.Hz]: m && I }),
                                         children: (0, l.jsx)(N.A, { text: e, variant: M }),
                                     }),
-                                    null != a ? (0, l.jsx)(S, { userId: a }) : null,
+                                    null != a ? (0, l.jsx)(w, { userId: a }) : null,
                                     null != i
                                         ? (0, l.jsx)(c.m, {
                                               text: i,
                                               ariaHidden: !0,
                                               children: (0, l.jsx)("span", {
-                                                  className: w.n9,
+                                                  className: S.n9,
                                                   role: "img",
                                                   "aria-label": i,
                                                   children: (0, l.jsx)(f.WarningIcon, {
@@ -137,13 +137,13 @@ function I(e) {
                             t,
                         );
                     }),
-                    null != t && L.length > 0
+                    null != t && K.length > 0
                         ? (0, l.jsx)("div", {
-                              className: w.y8,
-                              children: L.map((e) => (0, l.jsx)(P, { projectId: t, screenshotId: e }, e)),
+                              className: S.y8,
+                              children: K.map((e) => (0, l.jsx)(P, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
-                    null != t && K.length > 0 ? (0, l.jsx)(g.A, { projectId: t, attachments: K }) : null,
+                    null != t && z.length > 0 ? (0, l.jsx)(g.A, { projectId: t, attachments: z }) : null,
                 ],
             }),
         ],

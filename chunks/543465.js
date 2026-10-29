@@ -44,8 +44,8 @@ let m = {},
     D = {},
     v = {},
     b = new Set(),
-    P = new Set(),
-    M = {},
+    M = new Set(),
+    P = {},
     U = {};
 function w(e, t) {
     let n = m[e],
@@ -64,7 +64,7 @@ function w(e, t) {
         (function (e) {
             if (null == e) return;
             let t = new Set(v[e]),
-                n = M[e] ?? {};
+                n = P[e] ?? {};
             for (let e in n) {
                 let i = n[e];
                 a.Lt(i.flags, T.vv.OPT_IN_ENABLED) ? t.add(e) : t.delete(e);
@@ -98,12 +98,12 @@ function k(e, t, n) {
 }
 function F(e, t) {
     let n = {},
-        i = (null != e ? M[e] : null) ?? {};
+        i = (null != e ? P[e] : null) ?? {};
     (_.default.keys(t).forEach((r) => {
         let a = V(e, r, t[r]);
         ((n[r] = a), (i[r] = { flags: a.flags ?? 0 }));
     }),
-        null != e && (M[e] = { ...M[e], ...i }),
+        null != e && (P[e] = { ...P[e], ...i }),
         B(e, n));
 }
 function B(e, t) {
@@ -306,13 +306,13 @@ class z extends s.Ay.PersistedStore {
         return a.Lt(i, T.vv.OPT_IN_ENABLED);
     }
     getOptedInChannels(e) {
-        return d.A.isFullServerPreview(e) ? (d.A.getViewingChannels(e) ?? P) : (v[e] ?? P);
+        return d.A.isFullServerPreview(e) ? (d.A.getViewingChannels(e) ?? M) : (v[e] ?? M);
     }
     getOptedInChannelsWithPendingUpdates(e) {
         return U[e];
     }
     getPendingChannelUpdates(e) {
-        return M[e];
+        return P[e];
     }
     getGuildFavorites(e) {
         if (d.A.isFullServerPreview(e)) return null;
@@ -386,7 +386,7 @@ let X = new z(l.h, {
     },
     USER_GUILD_SETTINGS_CHANNEL_UPDATE: function (e) {
         let { guildId: t, channelId: n, settings: i } = e;
-        (null != t && null != i.flags && (M[t] = { ...M[t], [n]: { flags: i.flags } }), k(t, n, i));
+        (null != t && null != i.flags && (P[t] = { ...P[t], [n]: { flags: i.flags } }), k(t, n, i));
     },
     USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: function (e) {
         let { guildId: t, overrides: n } = e;
@@ -449,14 +449,14 @@ let X = new z(l.h, {
     USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES: function (e) {
         let { guildId: t, updates: n } = e;
         if (null == t) return !1;
-        let i = M[t];
+        let i = P[t];
         if (null == i) return !1;
         for (let e in n) r().isEqual(n[e], i[e]) && delete i[e];
     },
     CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: function (e) {
         let { guildId: t } = e;
         if (null == t) return !1;
-        (delete M[t], delete U[t]);
+        (delete P[t], delete U[t]);
     },
     NOTIFICATION_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;

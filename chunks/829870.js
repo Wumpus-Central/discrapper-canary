@@ -1,1 +1,1 @@
-e.exports = { z: "details__014df", D: "title__014df" };
+_.exports = { z: "details__014df", D: "title__014df" };

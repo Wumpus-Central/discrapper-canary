@@ -73,7 +73,7 @@ function h(e) {
         { id: m, name: g } = n[r],
         [h, x] = a.useState(null),
         j = c.has(m),
-        [k, v] = a.useState(0);
+        [v, b] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
@@ -87,8 +87,8 @@ function h(e) {
                 e = !0;
             }
         );
-    }, [t, m, k]);
-    let b = a.useCallback(() => {
+    }, [t, m, v]);
+    let k = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, s.PK)(t, e.id), alt: e.name })),
         ).then(
@@ -110,12 +110,12 @@ function h(e) {
               name: g,
               thumbSrc: h,
               ariaLabel: d.intl.formatToPlainString(u.default.GtNukg, { name: g }),
-              onClick: b,
+              onClick: k,
               onThumbError: () => {
                   (x(null),
                       (0, s.n6)(t, m).then(
                           (e) => {
-                              e ? 0 === k && v(1) : f(m);
+                              e ? 0 === v && b(1) : f(m);
                           },
                           () => {},
                       ));
