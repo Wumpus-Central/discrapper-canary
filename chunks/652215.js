@@ -5687,7 +5687,6 @@ var rP =
         (((ek = {}).CHANNEL_SETTINGS = "CHANNEL_SETTINGS"),
         (ek.GUILD_SETTINGS = "GUILD_SETTINGS"),
         (ek.RTC_DEBUG = "RTC_DEBUG"),
-        (ek.COLLECTIBLES_SHOP = "COLLECTIBLES_SHOP"),
         (ek.COMPONENT_PLAYGROUND = "COMPONENT_PLAYGROUND"),
         ek);
 let rw = Object.freeze({

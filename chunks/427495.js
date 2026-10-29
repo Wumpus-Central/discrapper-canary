@@ -84,28 +84,30 @@ function M(e) {
 }
 class U {
     pendingRequests = new Map();
-    recordEarnedRequestAttempt(e, t) {
-        let n = {
-            initialSendTimestamp: Date.now(),
-            endpoint: "/quests/earned-decision",
-            apiResponseTimestamp: null,
-            wasSuccessful: !1,
-            callerSource: t,
-            requestId: null,
-            fetchedAt: null,
-        };
-        (this.pendingRequests.set(e, n),
-            setTimeout(() => {
-                let t = this.pendingRequests.get(e);
-                null != t && (M(t), this.pendingRequests.delete(e));
-            }, 3e4));
+    recordEarnedRequestAttempt(e) {
+        let t = Symbol(),
+            n = {
+                timeoutId: setTimeout(() => {
+                    let e = this.pendingRequests.get(t);
+                    null != e && (this.pendingRequests.delete(t), M(e));
+                }, 3e4),
+                initialSendTimestamp: Date.now(),
+                endpoint: "/quests/earned-decision",
+                apiResponseTimestamp: null,
+                wasSuccessful: !1,
+                callerSource: e,
+                requestId: null,
+                fetchedAt: null,
+            };
+        return (this.pendingRequests.set(t, n), t);
     }
     recordEarnedRequestApiResponse(e, t) {
         let { wasSuccessful: n, requestId: i = null, fetchedAt: r = null } = t,
             a = this.pendingRequests.get(e);
         null != a &&
-            (M({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, requestId: i, fetchedAt: r }),
-            this.pendingRequests.delete(e));
+            (clearTimeout(a.timeoutId),
+            this.pendingRequests.delete(e),
+            M({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, requestId: i, fetchedAt: r }));
     }
 }
 let w = new U();
@@ -134,27 +136,29 @@ class k {
     pendingRequests = new Map();
     recordQuestRequestAttempt(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            i = null != n ? (c.A.deliveryAdDecisionByPlacement.get(n) ?? null) : null,
-            r = {
+            i = Symbol(),
+            r = null != n ? (c.A.deliveryAdDecisionByPlacement.get(n) ?? null) : null,
+            a = {
+                timeoutId: setTimeout(() => {
+                    let e = this.pendingRequests.get(i);
+                    null != e && (this.pendingRequests.delete(i), x(e, "timeout", null));
+                }, 3e4),
                 initialSendTimestamp: Date.now(),
                 endpoint: e,
                 apiResponseTimestamp: null,
                 wasSuccessful: !1,
                 callerSource: t,
                 adRequestId: null,
-                previousAdDecision: i,
+                previousAdDecision: r,
                 placement: n,
             };
-        (this.pendingRequests.set(e, r),
-            setTimeout(() => {
-                let t = this.pendingRequests.get(e);
-                null != t && (x(t, "timeout", null), this.pendingRequests.delete(e));
-            }, 3e4));
+        return (this.pendingRequests.set(i, a), i);
     }
     recordQuestRequestApiResponse(e, t) {
         let { wasSuccessful: n, adRequestId: i = null, currentCreative: r = null, currentFetchedAt: s = null } = t,
             l = this.pendingRequests.get(e);
         if (null != l) {
+            (clearTimeout(l.timeoutId), this.pendingRequests.delete(e));
             let t = (function (e, t) {
                 function n(e) {
                     if (null == e) return "null";
@@ -188,8 +192,7 @@ class k {
                       }
                     : null,
             );
-            (x({ ...l, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: i }, t, s),
-                this.pendingRequests.delete(e));
+            x({ ...l, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: i }, t, s);
         }
     }
 }
@@ -549,130 +552,128 @@ function eg(e) {
     o.h.dispatch({ type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId: e });
 }
 async function eS(e, t) {
-    let n = Date.now();
-    (F.recordQuestRequestAttempt("/quests/decision", t, e),
-        o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: e }));
+    let n = Date.now(),
+        i = F.recordQuestRequestAttempt("/quests/decision", t, e);
+    o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: e });
     try {
-        let s,
-            d = await (0, I.Ht)(),
-            c = await (0, f.sN)(),
-            E = z.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }),
-            A = (0, T.pc)(),
-            m = null != A ? A() : [],
-            S = O.Ay.getGuildsTree(),
-            L = m
-                .filter((e) => {
-                    if ((0, g.tZ)(e)) return !1;
-                    let t = S.getNode(e);
-                    return t?.parentId == null || N.A.isFolderExpanded(t.parentId);
-                })
-                .slice(0, 50),
-            y = E.enabled ? L : void 0,
-            D = new URLSearchParams({ placement: String(e) });
-        (d?.uuid != null && D.append("client_heartbeat_session_id", d.uuid),
-            null != c.uuid && D.append("client_ad_session_id", c.uuid),
-            null != y && y.forEach((e) => D.append("visible_guild_ids", e)));
-        let v = (
+        let d,
+            c = await (0, I.Ht)(),
+            E = await (0, f.sN)(),
+            A = z.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }),
+            m = (0, T.pc)(),
+            S = null != m ? m() : [],
+            L = O.Ay.getGuildsTree(),
+            y = S.filter((e) => {
+                if ((0, g.tZ)(e)) return !1;
+                let t = L.getNode(e);
+                return t?.parentId == null || N.A.isFolderExpanded(t.parentId);
+            }).slice(0, 50),
+            D = A.enabled ? y : void 0,
+            v = new URLSearchParams({ placement: String(e) });
+        (c?.uuid != null && v.append("client_heartbeat_session_id", c.uuid),
+            null != E.uuid && v.append("client_ad_session_id", E.uuid),
+            null != D && D.forEach((e) => v.append("visible_guild_ids", e)));
+        let b = (
                 await l.Bo.get({
-                    url: `${P.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${D.toString()}`,
+                    url: `${P.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${v.toString()}`,
                     rejectWithError: !1,
                     context: { connection_type: C.A.getType() },
                 })
             ).body,
-            b = !1;
+            M = !1;
         e === H.p9.MOBILE_HOME_DOCK_AREA
-            ? (b = $.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled)
+            ? (M = $.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled)
             : e === H.p9.DESKTOP_ACCOUNT_PANEL_AREA &&
-              (b = W.w.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled);
-        let M = v.creative?.creative_type !== a.p.BOUNTY || b ? v.creative : null,
-            U = null,
-            w = null;
-        if (null != M)
-            switch (M.creative_type) {
+              (M = W.w.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled);
+        let U = b.creative?.creative_type !== a.p.BOUNTY || M ? b.creative : null,
+            w = null,
+            x = null;
+        if (null != U)
+            switch (U.creative_type) {
                 case a.p.QUEST:
-                    ((s = (0, q.Yn)(M.creative_content)), (U = { type: a.p.QUEST, questId: s.id }));
+                    ((d = (0, q.Yn)(U.creative_content)), (w = { type: a.p.QUEST, questId: d.id }));
                     break;
                 case a.p.BOUNTY:
-                    let x = (0, u.t)(M.creative_content);
-                    U = { type: a.p.BOUNTY, bounty: x };
+                    let k = (0, u.t)(U.creative_content);
+                    w = { type: a.p.BOUNTY, bounty: k };
                     break;
                 case a.p.PLAYABLE:
-                    var i, r;
-                    let k = {
-                        id: (i = M.creative_content).id,
-                        applicationId: i.application_id,
-                        advertiserName: i.advertiser_name,
-                        productName: i.product_name,
-                        productIcon: (0, _.dv)(i.product_icon),
-                        videoPreview: (0, _.Zf)(i.video_preview),
-                        imagePreview: (0, _.Zf)(i.image_preview),
+                    var r, s;
+                    let B = {
+                        id: (r = U.creative_content).id,
+                        applicationId: r.application_id,
+                        advertiserName: r.advertiser_name,
+                        productName: r.product_name,
+                        productIcon: (0, _.dv)(r.product_icon),
+                        videoPreview: (0, _.Zf)(r.video_preview),
+                        imagePreview: (0, _.Zf)(r.image_preview),
                         cta: {
-                            url: (r = i.cta).url,
-                            buttonLabel: r.button_label,
-                            android: null != r.android ? { androidAppId: r.android.android_app_id } : void 0,
-                            ios: null != r.ios ? { iosAppId: r.ios.ios_app_id } : void 0,
+                            url: (s = r.cta).url,
+                            buttonLabel: s.button_label,
+                            android: null != s.android ? { androidAppId: s.android.android_app_id } : void 0,
+                            ios: null != s.ios ? { iosAppId: s.ios.ios_app_id } : void 0,
                         },
-                        rewardTimerSeconds: i.reward_timer_seconds,
+                        rewardTimerSeconds: r.reward_timer_seconds,
                     };
-                    U = { type: a.p.PLAYABLE, playable: k };
+                    w = { type: a.p.PLAYABLE, playable: B };
                     break;
                 case a.p.NO_FILL:
-                    w = M.creative_content?.ad_content_id ?? null;
+                    x = U.creative_content?.ad_content_id ?? null;
             }
         else {
-            let e = v.quest;
-            null != e && ((s = (0, q.Yn)(e)), (U = { type: a.p.QUEST, questId: s.id }));
+            let e = b.quest;
+            null != e && ((d = (0, q.Yn)(e)), (w = { type: a.p.QUEST, questId: d.id }));
         }
         (o.h.dispatch({
             type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
-            quest: s,
-            creative: U,
-            isNoFill: M?.creative_type === a.p.NO_FILL,
-            noFillAdContentId: w,
+            quest: d,
+            creative: w,
+            isNoFill: U?.creative_type === a.p.NO_FILL,
+            noFillAdContentId: x,
             adDecisionData: {
-                ad_id: v.ad_identifiers?.ad_id,
-                adset_id: v.ad_identifiers?.adset_id,
-                ad_set_id: v.ad_identifiers?.ad_set_id,
-                campaign_id: v.ad_identifiers?.campaign_id,
-                creative_id: v.ad_identifiers?.creative_id,
-                creative_type: v.ad_identifiers?.creative_type,
-                decision_id: v.request_id,
-                is_targeted: null != v.ad_identifiers,
+                ad_id: b.ad_identifiers?.ad_id,
+                adset_id: b.ad_identifiers?.adset_id,
+                ad_set_id: b.ad_identifiers?.ad_set_id,
+                campaign_id: b.ad_identifiers?.campaign_id,
+                creative_id: b.ad_identifiers?.creative_id,
+                creative_type: b.ad_identifiers?.creative_type,
+                decision_id: b.request_id,
+                is_targeted: null != b.ad_identifiers,
             },
-            metadataSealed: v.metadata_sealed,
-            trafficMetadataSealed: v.traffic_metadata_sealed,
-            provenanceMetadataSealed: v.provenance_metadata_sealed,
-            adContext: v.ad_context,
-            responseTtlSeconds: v.response_ttl_seconds,
+            metadataSealed: b.metadata_sealed,
+            trafficMetadataSealed: b.traffic_metadata_sealed,
+            provenanceMetadataSealed: b.provenance_metadata_sealed,
+            adContext: b.ad_context,
+            responseTtlSeconds: b.response_ttl_seconds,
             placement: e,
             fetchedAt: n,
         }),
-            F.recordQuestRequestApiResponse("/quests/decision", {
+            F.recordQuestRequestApiResponse(i, {
                 wasSuccessful: !0,
-                adRequestId: String(v.request_id),
-                currentCreative: U,
+                adRequestId: String(b.request_id),
+                currentCreative: w,
                 currentFetchedAt: n,
             }));
-        let B = (0, h.K2)(U);
-        if (null == U || null == B) return;
-        (e === H.p9.DESKTOP_ACCOUNT_PANEL_AREA && G.A.startTracking(B, U.type),
+        let V = (0, h.K2)(w);
+        if (null == w || null == V) return;
+        (e === H.p9.DESKTOP_ACCOUNT_PANEL_AREA && G.A.startTracking(V, w.type),
             R.default.track(P.HAw.QUEST_DECISION_RECEIVED, {
                 ...(0, p.A)(),
-                quest_id: U.type === a.p.QUEST ? B : null,
-                ad_content_id: B,
-                creative_type: U.type,
+                quest_id: w.type === a.p.QUEST ? V : null,
+                ad_content_id: V,
+                creative_type: w.type,
                 caller_source: t,
-                ad_request_id: String(v.request_id),
+                ad_request_id: String(b.request_id),
             }));
-    } catch (i) {
-        (F.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1, currentFetchedAt: n }),
+    } catch (r) {
+        (F.recordQuestRequestApiResponse(i, { wasSuccessful: !1, currentFetchedAt: n }),
             R.default.track(P.HAw.QUEST_DECISION_ROUNDTRIP_ERROR, {
                 ...(0, p.A)(),
-                reason: i?.message ?? null,
-                api_error: new d.A(i).getAnyErrorMessage(),
+                reason: r?.message ?? null,
+                api_error: new d.A(r).getAnyErrorMessage(),
                 caller_source: t,
             }),
-            o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: new d.A(i), placement: e }));
+            o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: new d.A(r), placement: e }));
     }
 }
 function eN(e, t) {
@@ -691,35 +692,35 @@ async function eC(e, t, n) {
             return !(0, X.Oh)(t);
         });
     if (0 === r.length) return;
-    let a = Date.now();
-    (w.recordEarnedRequestAttempt(t, n),
-        o.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: t }));
+    let a = Date.now(),
+        s = w.recordEarnedRequestAttempt(n);
+    o.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: t });
     try {
         let e = await (0, I.Ht)(),
             n = r.join(","),
             i = await l.Bo.get({ url: P.Rsh.QUEST_EARNED_DECISION(n, t, e?.uuid), rejectWithError: !1 }),
-            s = i.body.quests,
-            d = i.body.response_ttl_seconds,
-            c = new Map(
+            d = i.body.quests,
+            c = i.body.response_ttl_seconds,
+            u = new Map(
                 r.map((e) => {
-                    let t = s?.[e];
+                    let t = d?.[e];
                     return [e, null != t && (0, q.s2)(t) ? t : null];
                 }),
             );
         (o.h.dispatch({
             type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_SUCCESS",
-            serverQuests: c,
+            serverQuests: u,
             content: t,
             fetchedAt: a,
-            responseTtlSeconds: d,
+            responseTtlSeconds: c,
         }),
-            w.recordEarnedRequestApiResponse(t, {
+            w.recordEarnedRequestApiResponse(s, {
                 wasSuccessful: !0,
                 requestId: i.body.request_id ?? null,
                 fetchedAt: a,
             }));
     } catch (e) {
-        (w.recordEarnedRequestApiResponse(t, { wasSuccessful: !1, fetchedAt: a }),
+        (w.recordEarnedRequestApiResponse(s, { wasSuccessful: !1, fetchedAt: a }),
             o.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: new d.A(e), content: t }));
     }
 }
