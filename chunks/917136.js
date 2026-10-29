@@ -29,7 +29,7 @@ async function d() {
     return { challenge: e, ticket: t };
 }
 function c() {
-    r.Bo.get({ url: l.Rsh.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: !0 }).then((e) => {
+    return r.Bo.get({ url: l.Rsh.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: !0 }).then((e) => {
         if (null != e.body) {
             let t = e.body.map((e) => {
                 let t = null == e.last_used ? null : new Date(e.last_used);

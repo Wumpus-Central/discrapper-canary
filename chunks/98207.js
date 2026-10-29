@@ -13,14 +13,13 @@ let _ = {
             rejectWithError: (0, t.fT)(),
         }).then((e) => E.h.dispatch({ type: "MFA_ENABLE_SUCCESS", token: e.body.token, codes: e.body.backup_codes }));
     },
-    disable() {
+    disable: () =>
         t.Bo.post({ url: s.Rsh.MFA_TOTP_DISABLE, oldFormErrors: !0, rejectWithError: (0, t.fT)() }).then((e) => {
             let {
                 body: { token: r },
             } = e;
             return E.h.dispatch({ type: "MFA_DISABLE_SUCCESS", token: r });
-        });
-    },
+        }),
     enableSMS: () => (
         E.h.dispatch({ type: "MFA_SMS_TOGGLE" }),
         t.Bo.post({ url: s.Rsh.MFA_SMS_ENABLE, oldFormErrors: !0, rejectWithError: (0, t.fT)() }).then(
