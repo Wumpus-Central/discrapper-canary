@@ -9,12 +9,12 @@ var n = t(477900),
     u = t(95477),
     d = t(103557),
     p = t(150934),
-    f = t(274652),
-    m = t(465856),
+    m = t(274652),
+    f = t(465856),
     g = t(644447),
     x = t(652215),
-    j = t(381941),
-    h = t(650583),
+    h = t(381941),
+    j = t(650583),
     v = t(105292),
     b = t(946027);
 function I(e) {
@@ -39,7 +39,7 @@ function S(e) {
 }
 function C(e) {
     let { upload: i } = e;
-    return i.item.platform !== f.x.WEB
+    return i.item.platform !== m.x.WEB
         ? null
         : i.isImage
           ? (0, n.jsx)(S, { file: i.item.file })
@@ -52,8 +52,8 @@ function E(e) {
             description: a,
             spoiler: l,
             isImage: r,
-            isVideo: f,
-            disableFilename: m,
+            isVideo: m,
+            disableFilename: f,
             disableSpoiler: g,
             transitionState: x,
             onClose: b,
@@ -61,8 +61,8 @@ function E(e) {
         } = e,
         [S, C] = s.useState(t ?? ""),
         [E, k] = s.useState(a ?? ""),
-        [y, R] = s.useState(l),
-        L = s.useMemo(() => S.startsWith(j.MO), [S]);
+        [y, L] = s.useState(l),
+        R = s.useMemo(() => S.startsWith(h.MO), [S]);
     function O() {
         (I({ name: S, description: E, spoiler: y }), b());
     }
@@ -86,22 +86,23 @@ function E(e) {
                             value: S,
                             onChange: C,
                             onKeyDown: (e) => {
-                                e.key === h.dh.ENTER && (e.preventDefault(), O());
+                                e.key === j.dh.ENTER && (e.preventDefault(), O());
                             },
-                            disabled: m,
+                            disabled: f,
                         }),
-                        r || f
+                        r || m
                             ? (0, n.jsx)(d.f, {
                                   label: v.intl.string(v.t.eOB2eR),
                                   placeholder: v.intl.string(v.t.RNH1jn),
                                   value: E,
                                   onChange: k,
+                                  maxLength: 1024,
                               })
                             : null,
                     ],
                 }),
                 !0 !== g &&
-                    (0, n.jsx)(p.S, { checked: y || L, disabled: L, onChange: R, label: v.intl.string(v.t["gsI+xC"]) }),
+                    (0, n.jsx)(p.S, { checked: y || R, disabled: R, onChange: L, label: v.intl.string(v.t["gsI+xC"]) }),
             ],
         }),
     });
@@ -128,7 +129,7 @@ function y(e) {
         c = o ? (0, n.jsx)(I, { src: (0, g.E)({ proxyURL: l.proxy_url, url: l.url }) }) : void 0;
     return (0, n.jsx)(E, {
         preview: c,
-        filename: (0, m.A)(l),
+        filename: (0, f.A)(l),
         description: l.description,
         spoiler: (0, r.Lt)(l.flags ?? 0, x.sbO.IS_SPOILER),
         isImage: o,

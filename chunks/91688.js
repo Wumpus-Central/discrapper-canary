@@ -7693,8 +7693,8 @@ class ct extends r.Component {
     handleEditAttachment = (e) => {
         let t = e.originalItem;
         (0, g.openModalLazy)(async () => {
-            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("865429"), n.e("570698")]).then(
-                n.bind(n, 427281),
+            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("865429"), n.e("165778")]).then(
+                n.bind(n, 342889),
             );
             return (n) =>
                 (0, s.jsx)(i, {
