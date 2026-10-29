@@ -65,7 +65,7 @@ function h(e) {
         (0, a.jsx)(f, { ...C, size: "custom", className: p.E$, useLottieDefaultColors: !0 })
     );
 }
-function k(e) {
+function x(e) {
     var n;
     let l,
         u,
@@ -108,9 +108,9 @@ function k(e) {
 let b = function (e) {
     let { themeOverride: n, ...t } = e,
         r = (0, v.Ay)();
-    return (0, f.q)(n ?? r) ? (0, a.jsx)(k, { ...t }) : (0, a.jsx)(h, { ...t });
+    return (0, f.q)(n ?? r) ? (0, a.jsx)(x, { ...t }) : (0, a.jsx)(h, { ...t });
 };
-var x = t(105292);
+var k = t(105292);
 function j() {
     return (0, a.jsx)("div", { className: p.V8, "aria-hidden": !0 });
 }
@@ -118,58 +118,67 @@ function y(e) {
     let {
             balance: n,
             variant: t = "default",
-            themeOverride: l,
-            balanceWidgetMode: s = i.k.DEFAULT,
-            showNotificationBadge: c,
-            onMouseDown: d,
-            disabled: m,
-            isInModalOverlay: f,
-            className: v,
-            ref: C,
-            loading: g,
-            isInteractive: h,
+            borderRadius: l = "sm",
+            textSize: s = "md",
+            themeOverride: c,
+            balanceWidgetMode: d = i.k.DEFAULT,
+            showNotificationBadge: m,
+            onMouseDown: f,
+            disabled: v,
+            isInModalOverlay: C,
+            className: g,
+            ref: h,
+            loading: x,
+            isInteractive: k,
         } = e,
-        [k, x] = (0, r.useState)(!1),
-        y = (0, r.useMemo)(() => (s === i.k.SELECTED ? p.wH : k ? p.mr : p.Ay), [s, k]),
-        D = h && !0 !== m,
-        [E, A] = (0, r.useState)(2700),
-        [S, T] = (0, r.useState)(null),
-        L = (0, r.useRef)(null),
-        M = (0, r.useCallback)(() => {
-            ((L.current = null), T(null));
+        [y, D] = (0, r.useState)(!1),
+        E = (0, r.useMemo)(() => (d === i.k.SELECTED ? p.wH : y ? p.mr : p.Ay), [d, y]),
+        A = k && !0 !== v,
+        [S, T] = (0, r.useState)(2700),
+        [L, M] = (0, r.useState)(null),
+        N = (0, r.useRef)(null),
+        R = (0, r.useCallback)(() => {
+            ((N.current = null), M(null));
         }, []),
-        N = (0, r.useCallback)(
+        w = (0, r.useCallback)(
             (e) => {
-                let n = S === L.current;
-                e > 0 && ("earn" !== S || !n) && T("earn");
+                let n = L === N.current;
+                e > 0 && ("earn" !== L || !n) && M("earn");
             },
-            [T, S],
+            [M, L],
         );
     return (0, a.jsxs)("span", {
-        onMouseDown: d,
-        onMouseEnter: D ? () => x(!0) : void 0,
-        onMouseLeave: D ? () => x(!1) : void 0,
-        ref: C,
-        className: u()(p.kL, y, v, { [p.D0]: "overlay-secondary" === t, [p.En]: g, [p.dA]: f, [p.r9]: m }),
+        onMouseDown: f,
+        onMouseEnter: A ? () => D(!0) : void 0,
+        onMouseLeave: A ? () => D(!1) : void 0,
+        ref: h,
+        className: u()(p.kL, E, g, {
+            [p.Wf]: "round" === l,
+            [p.D0]: "overlay-secondary" === t,
+            [p.En]: x,
+            [p.dA]: C,
+            [p.r9]: v,
+        }),
         children: [
             (0, a.jsx)("div", {
-                className: u()(p.hr, g ? p.nr : void 0),
+                className: u()(p.hr, x ? p.nr : void 0),
                 children: (0, a.jsx)(b, {
-                    currentAnimationType: S,
-                    animationTypeRef: L,
-                    onSetAnimationDurationMS: A,
-                    themeOverride: l,
+                    currentAnimationType: L,
+                    animationTypeRef: N,
+                    onSetAnimationDurationMS: T,
+                    themeOverride: c,
                 }),
             }),
             (0, a.jsx)(o.A, {
                 value: n,
-                onValueChange: N,
-                onValueReached: M,
-                targetTotalCounterTime: E,
-                className: g ? p.F : void 0,
+                onValueChange: w,
+                onValueReached: R,
+                targetTotalCounterTime: S,
+                className: x ? p.F : void 0,
+                textVariant: "sm" === s ? "text-sm/semibold" : "text-md/semibold",
                 textColor: "overlay-secondary" === t ? "text-overlay-light" : void 0,
             }),
-            c && (0, a.jsx)(j, {}),
+            m && (0, a.jsx)(j, {}),
         ],
     });
 }
@@ -198,26 +207,26 @@ function D(e) {
         (0, r.useEffect)(() => {
             C && !h && v(!1);
         }, [h, C]));
-    let k = h || f,
+    let x = h || f,
         b = f ? null : t,
         j = null != i,
         D = (function (e) {
             let { loading: n, balance: t, hasUnread: a } = e;
             return n
-                ? x.intl.string(x.t.y0WGqP)
+                ? k.intl.string(k.t.y0WGqP)
                 : a
-                  ? x.intl.formatToPlainString(x.t.AgMngw, { balance: t })
-                  : x.intl.formatToPlainString(x.t.zPaLL9, { balance: t });
-        })({ loading: k, balance: b ?? 0, hasUnread: !0 === l }),
-        E = { ...m, balance: b, showNotificationBadge: l, disabled: o, loading: k, isInteractive: j };
+                  ? k.intl.formatToPlainString(k.t.AgMngw, { balance: t })
+                  : k.intl.formatToPlainString(k.t.zPaLL9, { balance: t });
+        })({ loading: x, balance: b ?? 0, hasUnread: !0 === l }),
+        E = { ...m, balance: b, showNotificationBadge: l, disabled: o, loading: x, isInteractive: j };
     return j
         ? (0, a.jsx)(s.D, {
               innerRef: d,
-              onClick: k ? void 0 : i,
+              onClick: x ? void 0 : i,
               "aria-expanded": c,
               "aria-haspopup": null != c ? "dialog" : void 0,
               "aria-label": D,
-              "aria-busy": k,
+              "aria-busy": x,
               className: u()(p.vk, { [p.r9]: o }),
               id: n ?? "balance-widget-pill",
               children: (0, a.jsx)(y, { ...E }),
@@ -225,7 +234,7 @@ function D(e) {
         : (0, a.jsx)("div", {
               role: "img",
               "aria-label": D,
-              "aria-busy": k,
+              "aria-busy": x,
               className: p.Kc,
               id: n,
               children: (0, a.jsx)(y, { ...E }),

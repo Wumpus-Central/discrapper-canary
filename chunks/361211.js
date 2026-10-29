@@ -18,8 +18,8 @@ var h = n(613373),
 function p(e) {
     return { label: e.productName, buttonLabel: e.cta.buttonLabel, iconImageUri: e.productIcon };
 }
-var C = n(637691),
-    b = n(738883),
+var b = n(637691),
+    C = n(738883),
     A = n(669912),
     v = n(657792),
     f = n(503698),
@@ -234,8 +234,8 @@ function ed(e) {
             rewardTargetSeconds: m,
             isRewardEarned: x,
             rewardRemainingSeconds: p,
-            maxSeekableTimeSeconds: C,
-            handleProgressUpdate: b,
+            maxSeekableTimeSeconds: b,
+            handleProgressUpdate: C,
             handleSeek: A,
             handleEnded: v,
         } = (function (e) {
@@ -253,10 +253,10 @@ function ed(e) {
                 h = i.useRef(s),
                 x = es(t, c),
                 p = s || l >= x,
-                C = i.useCallback((e) => {
+                b = i.useCallback((e) => {
                     ((m.current = e), u(e));
                 }, []),
-                b = i.useCallback(
+                C = i.useCallback(
                     (e) => {
                         let n = Math.max(d.current, e);
                         ((d.current = n), o(n), !h.current && n >= es(t, m.current) && ((h.current = !0), r()));
@@ -265,9 +265,9 @@ function ed(e) {
                 ),
                 A = i.useCallback(
                     (e, t) => {
-                        (Number.isFinite(t) && t > 0 && C(t), b(e));
+                        (Number.isFinite(t) && t > 0 && b(t), C(e));
                     },
-                    [C, b],
+                    [b, C],
                 );
             return {
                 rewardTargetSeconds: x,
@@ -277,14 +277,14 @@ function ed(e) {
                 handleProgressUpdate: A,
                 handleSeek: i.useCallback(
                     (e) => {
-                        b(e);
+                        C(e);
                     },
-                    [b],
+                    [C],
                 ),
                 handleEnded: i.useCallback(() => {
                     let e = a.current?.duration;
-                    null != e && Number.isFinite(e) && e > 0 && (C(e), b(e));
-                }, [a, C, b]),
+                    null != e && Number.isFinite(e) && e > 0 && (b(e), C(e));
+                }, [a, b, C]),
             };
         })({
             rewardTimerSeconds: t.rewardTimerSeconds,
@@ -297,7 +297,7 @@ function ed(e) {
         { balance: k } = (0, P.W0)(),
         y = i.useMemo(() => (0, a.jsx)(ec, {}), []),
         E = i.useMemo(() => M.intl.formatToPlainString(M.t["nLXlh+"], { orbAmount: er.FA }), []),
-        U = (0, w.A)({ targetSec: m, label: E, isCompleted: x, icon: y, clickable: C >= m }),
+        U = (0, w.A)({ targetSec: m, label: E, isCompleted: x, icon: y, clickable: b >= m }),
         V = i.useCallback(
             () =>
                 (0, a.jsx)(I.N, {
@@ -311,7 +311,12 @@ function ed(e) {
                                     className: g.Cq,
                                     children: [
                                         (0, a.jsx)(ei, { totalSeconds: m, remainingSeconds: p }),
-                                        (0, a.jsx)(O.Ay, { variant: "overlay-secondary", balance: k }),
+                                        (0, a.jsx)(O.Ay, {
+                                            variant: "overlay-secondary",
+                                            balance: k,
+                                            borderRadius: "round",
+                                            textSize: "sm",
+                                        }),
                                     ],
                                 }),
                                 (0, a.jsx)("div", { className: g.ne, children: (0, a.jsx)(L.A, { onClose: o }) }),
@@ -336,12 +341,12 @@ function ed(e) {
         persistPlayhead: !1,
         pauseOnLostVisibility: !x,
         getPlaybackBlockedMessage: _.b,
-        maxSeekableTimeSec: C,
+        maxSeekableTimeSec: b,
         initialVolume: f,
         initialMuted: N,
         onVolumeChange: j,
         onMutedChange: T,
-        onProgressUpdate: b,
+        onProgressUpdate: C,
         onSeek: A,
         onEnded: v,
         renderPersistentOverlay: V,
@@ -402,9 +407,9 @@ function em(e) {
             parentTransitionState: t,
             onClose: n,
         }),
-        footer: (0, a.jsx)(b.A, {
+        footer: (0, a.jsx)(C.A, {
             prefix: (0, a.jsx)(T, { iconImageUri: R.iconImageUri, size: "sm" }),
-            advertiserDetails: (0, a.jsx)(C.A, {
+            advertiserDetails: (0, a.jsx)(b.A, {
                 title: N,
                 subtitle: M.intl.string(M.t.o6FLcF),
                 onClick: () => g(x.uF.VIDEO_MODAL),

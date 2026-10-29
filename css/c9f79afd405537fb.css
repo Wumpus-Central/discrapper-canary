@@ -122,6 +122,10 @@
     position: relative
 }
 
+.rounded_a3e8db {
+    border-radius: var(--radius-round)
+}
+
 .container_a3e8db.disabled_a3e8db {
     cursor: none;
     pointer-events: none
@@ -225,4 +229,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=12c81998ca06a90f.css.map*/
+/*# sourceMappingURL=c9f79afd405537fb.css.map*/
