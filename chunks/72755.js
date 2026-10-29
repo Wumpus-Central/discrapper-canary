@@ -33,8 +33,8 @@ let b = function (e) {
             backgroundSrc: l,
             userId: c,
             guildId: b,
-            pulseSpeakingIndicator: T = !1,
-            speaking: v = !1,
+            pulseSpeakingIndicator: v = !1,
+            speaking: T = !1,
             ..._
         } = e,
         I = l ?? n,
@@ -61,6 +61,6 @@ let b = function (e) {
     return (0, i.jsx)("div", {
         style: k ? { ...t, ...O } : { ...P },
         className: s()(C.T, { [N]: k }),
-        children: T ? (0, i.jsx)(d, { shouldAnimate: v, children: M }) : M,
+        children: v ? (0, i.jsx)(d, { shouldAnimate: T, children: M }) : M,
     });
 };

@@ -16,7 +16,7 @@ var i = n(477900),
     x = n(969426);
 let g = "CameraPreviewPosition";
 function C(e) {
-    let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: j, onSelectParticipant: y } = e,
+    let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: y, onSelectParticipant: j } = e,
         [I, N] = (function () {
             let [e, t] = l.useState(() => o.w.get(g, m.CUs.BOTTOM_RIGHT));
             return [
@@ -29,9 +29,9 @@ function C(e) {
         v = l.useRef(null),
         E = null == C.getGuildId() ? 70 : 50,
         b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
-        S = j.length,
-        _ = b * S + 8 * (S - 1),
-        T = l.useMemo(
+        S = y.length,
+        T = b * S + 8 * (S - 1),
+        _ = l.useMemo(
             () => ({
                 minWidth: A.mn[A.R8.CAMERA_PREVIEW] * S + 8 * (S - 1),
                 maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * S + 8 * (S - 1),
@@ -40,7 +40,7 @@ function C(e) {
         );
     l.useLayoutEffect(() => {
         v.current?.ensureIsInPosition();
-    }, [j.length]);
+    }, [y.length]);
     let R = l.useCallback(
             (e) => {
                 let t = 0 === S ? e : (e - 8 * (S - 1)) / S;
@@ -59,7 +59,7 @@ function C(e) {
         children: (0, i.jsx)(u.S8, {
             position: I,
             id: 0,
-            width: _,
+            width: T,
             ref: v,
             onMove: O,
             onResize: R,
@@ -69,10 +69,10 @@ function C(e) {
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
-            resizeConfig: T,
+            resizeConfig: _,
             children: (0, i.jsx)("div", {
                 className: f.iA,
-                children: j.map((e) =>
+                children: y.map((e) =>
                     (0, i.jsx)(
                         p.Ay,
                         {
@@ -84,7 +84,7 @@ function C(e) {
                             inCall: !0,
                             popoutType: d.N.NO_POPOUT,
                             width: 160,
-                            onClick: y,
+                            onClick: j,
                         },
                         e.id,
                     ),

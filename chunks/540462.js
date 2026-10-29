@@ -16,16 +16,16 @@ var i = n(477900),
     x = n(442433),
     g = n(148494),
     C = n(730852),
-    j = n(401843),
-    y = n(817281),
+    y = n(401843),
+    j = n(817281),
     I = n(820284),
     N = n(765671),
     v = n(475743),
     E = n(646865),
     b = n(10716),
     S = n(795816),
-    _ = n(933958),
-    T = n(47294),
+    T = n(933958),
+    _ = n(47294),
     R = n(793574),
     O = n(666860),
     L = n(688810),
@@ -70,16 +70,16 @@ var i = n(477900),
     ex = n(488947),
     eg = n(12830),
     eC = n(125248),
-    ej = n(616356),
-    ey = n(280450),
+    ey = n(616356),
+    ej = n(280450),
     eI = n(249288),
     eN = n(696451),
     ev = n(71393),
     eE = n(576705),
     eb = n(309010),
     eS = n(287809),
-    e_ = n(977997),
-    eT = n(174459),
+    eT = n(977997),
+    e_ = n(174459),
     eR = n(147036),
     eO = n(625494),
     eL = n(723702),
@@ -161,7 +161,7 @@ class eJ extends l.PureComponent {
     componentDidMount() {
         let { channel: e, layout: t } = this.props;
         (this.currentDocument.addEventListener(eM.Wb, this.handleFullScreenChange),
-            eT.default.track(eY.HAw.VIDEO_LAYOUT_TOGGLED, {
+            e_.default.track(eY.HAw.VIDEO_LAYOUT_TOGGLED, {
                 video_layout: this.inPopout ? "popout" : t,
                 ...(0, O.QS)(e.id),
             }));
@@ -505,10 +505,10 @@ class eJ extends l.PureComponent {
     handleSelectParticipant = (e, t) => {
         let { channel: n, selectedParticipant: i, allActiveStreams: l, inCall: a, mode: s } = this.props;
         ((0, eW.Ay)(e) &&
-            (0, k.eo)(n, e_.A, ev.A, eE.A, D.default)[0] &&
+            (0, k.eo)(n, eT.A, ev.A, eE.A, D.default)[0] &&
             (C.default.selectVoiceChannel(n.id),
             0 === l.filter((t) => (0, G._z)(t) === e.id && t.state !== eY.XYD.ENDED).length &&
-                (0, j.A9)((0, G.Iy)(e.id), { forceMultiple: t.shiftKey })),
+                (0, y.A9)((0, G.Iy)(e.id), { forceMultiple: t.shiftKey })),
             a &&
                 s === eY._Of.VIDEO &&
                 (i?.id === e.id ? f.A.selectParticipant(n.id, null) : f.A.selectParticipant(n.id, e.id)));
@@ -524,7 +524,7 @@ class eJ extends l.PureComponent {
             let n = e.getGuildId();
             (null == n || eN.Ay.isCurrentUserGuest(n) || (0, K.pX)((0, eR.vJ)(n)), Y.openChannelCallPopout(e));
         }
-        null == t || (0, E.f)() ? n() : (0, T.A)({ onConfirm: n });
+        null == t || (0, E.f)() ? n() : (0, _.A)({ onConfirm: n });
     };
     handleStayOnTop = (e) => {
         ((0, ez.X)(R.A.VOICE_CONTROL_TRAY, ez.O.STAY_ON_TOP, e), Y.setAlwaysOnTop(eY.MLl.CHANNEL_CALL_POPOUT, e));
@@ -701,14 +701,14 @@ class eJ extends l.PureComponent {
                 guildRoomVisible: g,
                 isPlacingNote: C,
             } = this.props,
-            j = u.isGuildStageVoice(),
-            y = p === eY.DUB.MINIMUM,
-            I = y || p === eY.DUB.NORMAL,
+            y = u.isGuildStageVoice(),
+            j = p === eY.DUB.MINIMUM,
+            I = j || p === eY.DUB.NORMAL,
             N = l && s === eY._Of.VIDEO,
             v = (f?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
         let E = !l || !(this.popoutOpen && !this.inPopout),
-            b = !m && l && !y && e.idle,
+            b = !m && l && !j && e.idle,
             S = (0, i.jsx)(ei.A, {
                 ref: this._contentRef,
                 inCall: l,
@@ -729,12 +729,12 @@ class eJ extends l.PureComponent {
                 awaitingRemoteSessionInfo: A,
                 callContainerDimensions: x,
             }),
-            _ = S;
+            T = S;
         return (
             g
-                ? (_ = (0, i.jsx)(H.A, { channelId: u.id, popoutType: t, idle: e.idle }))
-                : j &&
-                  (_ = (0, i.jsx)(Z.nM, {
+                ? (T = (0, i.jsx)(H.A, { channelId: u.id, popoutType: t, idle: e.idle }))
+                : y &&
+                  (T = (0, i.jsx)(Z.nM, {
                       channel: u,
                       inCall: l,
                       hasConnectPermission: a,
@@ -746,14 +746,14 @@ class eJ extends l.PureComponent {
                 renderBottomLeft: this.renderBottomLeft,
                 renderBottomCenter: this.renderBottomCenter,
                 renderBottomRight: this.renderBottomRight,
-                renderChatToasts: u.isGuildVoiceOrThread() || j ? this.renderChatToasts : void 0,
+                renderChatToasts: u.isGuildVoiceOrThread() || y ? this.renderChatToasts : void 0,
                 renderVoiceChannelEffects: this.renderVoiceChannelEffects,
                 ...e,
                 screenMessage: this.screenMessage,
-                disableGradients: !l || y,
+                disableGradients: !l || j,
                 hideControls: C,
                 idle: b,
-                children: E && (this.renderVoiceChannelAppSurface() ?? _),
+                children: E && (this.renderVoiceChannelAppSurface() ?? T),
             })
         );
     }
@@ -850,12 +850,12 @@ let e0 = function (e) {
         { ref: x } = (0, N.Ay)(),
         g = (0, W.Us)(),
         C = (0, V.A)(),
-        j = (0, d.bG)([eb.Ay], () => (C?.channelId ?? eb.Ay.getVoiceChannelId()) === t.id),
+        y = (0, d.bG)([eb.Ay], () => (C?.channelId ?? eb.Ay.getVoiceChannelId()) === t.id),
         E = t.isGuildStageVoice();
     (0, Q.A)(E);
     let {
             participants: S,
-            filteredParticipants: T,
+            filteredParticipants: _,
             participantsVersion: O,
             mode: P,
             layout: M,
@@ -891,14 +891,14 @@ let e0 = function (e) {
             },
             [g, t.id, E],
         ),
-        H = (0, d.yK)([ej.A], () => ej.A.getAllActiveStreams()),
+        H = (0, d.yK)([ey.A], () => ey.A.getAllActiveStreams()),
         { selectedStream: Y } = (0, d.cf)(
-            [ej.A],
-            () => ({ selectedStream: null != B ? ej.A.getActiveStreamForStreamKey(B.id) : null }),
+            [ey.A],
+            () => ({ selectedStream: null != B ? ey.A.getActiveStreamForStreamKey(B.id) : null }),
             [B],
         ),
         K = (0, d.bG)([ev.A], () => ev.A.getGuild(t.getGuildId())),
-        X = (0, d.bG)([ey.default], () => ey.default.getId()),
+        X = (0, d.bG)([ej.default], () => ej.default.getId()),
         { popoutWindow: q, popoutWindowAlwaysOnTop: Z } = (0, d.cf)([$.A], () => ({
             popoutWindow: $.A.getWindow(eY.MLl.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: $.A.getIsAlwaysOnTop(eY.MLl.CHANNEL_CALL_POPOUT),
@@ -908,7 +908,7 @@ let e0 = function (e) {
         en = (0, d.bG)([D.default], () => D.default.getAwaitingRemoteSessionInfo()),
         ei = (0, d.bG)([ee.Ay], () => ee.Ay.callHeaderHeight),
         el = l.useCallback((e) => {
-            y.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
+            j.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         ea = (0, d.bG)([b.A], () => b.A.getFetchState(), []),
         es = (0, v.Ay)(ea);
@@ -917,10 +917,10 @@ let e0 = function (e) {
             es !== b.$.ERROR &&
             (0, m.P0)({ text: e$.intl.string(e$.t["AlJyI+"]), variant: "critical" });
     }, [ea, es]);
-    let er = (0, d.bG)([_.Ay], () => _.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]),
+    let er = (0, d.bG)([T.Ay], () => T.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]),
         eo = (0, U.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ec } = (0, L.Ay)(R.A.CHANNEL_CALL),
-        ed = _.Ay.getEmbeddedActivitiesForChannel(t.id),
+        ed = T.Ay.getEmbeddedActivitiesForChannel(t.id),
         { enabled: eu } = (0, z.mf)({ guildId: t.guild_id, location: "ChannelCall" }),
         eh = (0, d.bG)([F.A], () => F.A.isVisible(t.id)),
         ep = (0, d.bG)([F.A], () => {
@@ -928,7 +928,7 @@ let e0 = function (e) {
             return null != e && null == e.position;
         }),
         em = (0, ew.j)(),
-        eA = (0, ef.d7)(t, j),
+        eA = (0, ef.d7)(t, y),
         eg = (0, ef.kM)(t),
         eC = (0, ex.F)(g) && eg ? eA : null,
         { theme: eN } = (0, A.wR)();
@@ -950,9 +950,9 @@ let e0 = function (e) {
                             popoutWindowAlwaysOnTop: Z,
                             selectedStream: Y,
                             mode: P,
-                            inCall: j,
+                            inCall: y,
                             participants: S,
-                            filteredParticipants: T,
+                            filteredParticipants: _,
                             participantsVersion: O,
                             layout: M,
                             chatOpen: G,

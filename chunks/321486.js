@@ -16,24 +16,24 @@ var i = n(477900),
     x = n(652896),
     g = n(616356),
     C = n(287809),
-    j = n(927813),
-    y = n(562153),
+    y = n(927813),
+    j = n(562153),
     I = n(218394),
     N = n(920639),
     v = n(393371),
     E = n(360627),
     b = n(809369),
     S = n(652215),
-    _ = n(652061),
-    T = n(105292),
+    T = n(652061),
+    _ = n(105292),
     R = n(814402);
-let O = 10 * j.A.Millis.SECOND,
+let O = 10 * y.A.Millis.SECOND,
     L = { tension: 220, friction: 30, clamp: !0 },
     P = { x: "100%" },
     M = { x: "0%" },
     w = { x: "-100%" };
 function U(e) {
-    let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: j } = e,
+    let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: y } = e,
         U = (0, o.yK)(
             [g.A],
             () =>
@@ -58,11 +58,11 @@ function U(e) {
         $ = U.includes((0, x._z)(H)),
         K = B ? W : H,
         X = (0, o.bG)([C.default], () => C.default.getUser(K.ownerId), [K]),
-        q = y.Ay.useName(K.guildId, K.channelId, X),
+        q = j.Ay.useName(K.guildId, K.channelId, X),
         Z = (0, I.j)(),
-        Q = j / 225,
-        J = $ ? T.intl.string(_.default.zW6Hyu) : T.intl.string(T.t["7Xq/nV"]),
-        ee = T.intl.string(_.default["t+GPi4"]),
+        Q = y / 225,
+        J = $ ? _.intl.string(T.default.zW6Hyu) : _.intl.string(_.t["7Xq/nV"]),
+        ee = _.intl.string(T.default["t+GPi4"]),
         et = l.useCallback(() => {
             let e = (0, x._z)(W);
             V((t) => ({ streamKey: e, sequence: t.sequence + 1 }));

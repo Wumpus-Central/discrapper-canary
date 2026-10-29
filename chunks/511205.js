@@ -24,9 +24,9 @@ function h(e) {
         { width: f, height: x } = m,
         g = n?.length ?? 0,
         C = f - 16,
-        j = x - (h + p),
+        y = x - (h + p),
         {
-            tileStyle: y,
+            tileStyle: j,
             tileWidth: I,
             rows: N,
             columns: v,
@@ -59,17 +59,17 @@ function h(e) {
                         (h = Math.ceil(i / (o = d(s, l)))),
                         { tileWidth: s, columns: Math.max(1, o), rows: h });
                     return { tileStyle: { width: A }, tileWidth: A, rows: p, columns: m };
-                })(g, C, j),
-            [g, C, j],
+                })(g, C, y),
+            [g, C, y],
         ),
         E = v + 1,
         b = E * I + (E - 1) * 8 <= f,
         S = Math.floor(I / c) + 8,
-        _ = Math.max(0, j - S * N) / 2;
+        T = Math.max(0, y - S * N) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
-        listPadding: [h + _, 0, p + _ - 8, 8],
+        listPadding: [h + T, 0, p + T - 8, 8],
         renderRow: function (e) {
             let t = e * v;
             return (0, i.jsx)(
@@ -81,7 +81,7 @@ function h(e) {
                         return (0, i.jsx)(
                             "div",
                             {
-                                style: y,
+                                style: j,
                                 className: s()(o.Vs, {
                                     [o.E3]: b,
                                     [o.k4]: l >= (N - 1) * v,

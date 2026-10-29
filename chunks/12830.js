@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(51082),
     g = n(280450),
     C = n(488947),
-    j = n(806931),
-    y = n(213738),
+    y = n(806931),
+    j = n(213738),
     I = n(105292),
     N = n(649914);
 function v(e) {
@@ -30,8 +30,8 @@ function v(e) {
             (n = g.default.getId()),
             null !=
             (a =
-                (l = t.filter((e) => e.type !== j.lp.ACTIVITY && e.user?.id !== n && (0, x.Ay)(e))).find(
-                    (e) => e.type === j.lp.STREAM,
+                (l = t.filter((e) => e.type !== y.lp.ACTIVITY && e.user?.id !== n && (0, x.Ay)(e))).find(
+                    (e) => e.type === y.lp.STREAM,
                 ) ?? l[0])
                 ? [a]
                 : []),
@@ -63,9 +63,9 @@ function E(e) {
         case m.n.RenderingElsewhere:
             return (0, i.jsx)(h.A, { description: I.intl.string(I.t["2KIDX+"]) });
         case m.n.NoApplication:
-            return (0, i.jsx)(h.A, { description: I.intl.string(y.default.TQptZV) });
+            return (0, i.jsx)(h.A, { description: I.intl.string(j.default.TQptZV) });
         case m.n.DoesNotSupportSurface:
-            return (0, i.jsx)(h.A, { description: I.intl.string(y.default["13FYwI"]) });
+            return (0, i.jsx)(h.A, { description: I.intl.string(j.default["13FYwI"]) });
         case m.n.Error:
             return (0, i.jsx)(h.A, { heading: I.intl.string(I.t.VquUff), error: I.intl.string(I.t["Sd9D/R"]) });
         case m.n.AwaitingLaunch:

@@ -21,10 +21,10 @@ function C() {
     let e = (2 * Math.random() - 1) * 5;
     return 0.5 > Math.random() ? { x: 5, y: e } : { x: e, y: -5 };
 }
-function j(e, t) {
+function y(e, t) {
     return { x: g(e.x + t.x), y: g(e.y + t.y) };
 }
-let y = l.createContext(null);
+let j = l.createContext(null);
 function I(e) {
     return (0, a.bG)([h.A], () => {
         let t = h.A.getPendingNote(e);
@@ -38,7 +38,7 @@ function N(e) {
 }
 function v(e) {
     let { position: t, targetLabel: n } = e,
-        i = l.useContext(y),
+        i = l.useContext(j),
         { x: a, y: s } = t;
     return l.useMemo(
         () =>
@@ -59,7 +59,7 @@ function E(e) {
         v = N(t),
         E = l.useId(),
         [b, S] = l.useState(null),
-        _ = l.useRef(null);
+        T = l.useRef(null);
     (v || null == b || S(null),
         l.useEffect(() => {
             if (g)
@@ -76,33 +76,33 @@ function E(e) {
         l.useEffect(() => {
             if (v)
                 return () => {
-                    _.current = null;
+                    T.current = null;
                 };
         }, [v]),
         l.useEffect(() => {
             v && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
         }, [v, n]));
-    let T = l.useMemo(
+    let _ = l.useMemo(
         () =>
             v
                 ? {
                       descriptionId: E,
                       setPreviewTarget: (e) => {
-                          let t = _.current ?? C();
-                          ((_.current = t), S(j(e, t)));
+                          let t = T.current ?? C();
+                          ((T.current = t), S(y(e, t)));
                       },
                       placeNextTo: (e) => {
                           let n = h.A.getPendingNote(t);
                           if (null == n || null != n.position) return;
-                          let i = _.current ?? C();
-                          ((_.current = i), (0, u.Dr)(t, j(e, i)));
+                          let i = T.current ?? C();
+                          ((T.current = i), (0, u.Dr)(t, y(e, i)));
                       },
                   }
                 : null,
         [v, E, t],
     );
-    return (0, i.jsxs)(y.Provider, {
-        value: T,
+    return (0, i.jsxs)(j.Provider, {
+        value: _,
         children: [
             v &&
                 (0, i.jsx)(r.Ok, {

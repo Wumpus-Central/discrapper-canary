@@ -27,8 +27,8 @@ let E = (e) => {
 E.displayName = "DismissButton";
 var C = n(302614),
     b = n(233741),
-    T = n(222506),
-    v = n(57019),
+    v = n(222506),
+    T = n(57019),
     _ = n(652215),
     I = n(105292),
     y = n(709946);
@@ -45,7 +45,7 @@ let R = r.memo(function (e) {
             onDismissClick: A,
             onConfirmClick: p,
             onCancelClick: C,
-            onNotificationClick: v,
+            onNotificationClick: T,
             hint: R,
             cancelText: x,
             confirmText: O,
@@ -62,7 +62,7 @@ let R = r.memo(function (e) {
         } = e,
         [V, G] = r.useState(!1),
         F = g || V || j === _.yFH.FOCUSED,
-        W = (0, o.bG)([T.A, b.A], () => T.A.isInputLocked(b.A.getTargetPID()));
+        W = (0, o.bG)([v.A, b.A], () => v.A.isInputLocked(b.A.getTargetPID()));
     r.useEffect(() => {
         f?.();
     }, [f]);
@@ -101,8 +101,8 @@ let R = r.memo(function (e) {
                         ignoreKeyPress: !0,
                         onMouseOver: K,
                         onMouseLeave: J,
-                        onClick: v,
-                        className: s()(y.kL, { [y.vk]: null != v }, w),
+                        onClick: T,
+                        className: s()(y.kL, { [y.vk]: null != T }, w),
                         children:
                             ((t = P?.(F, W)),
                             (0, i.jsxs)(i.Fragment, {
@@ -250,7 +250,7 @@ function k(e) {
             },
             [u, d],
         ),
-        { clickSpring: T, handleMouseClick: _ } = (function () {
+        { clickSpring: v, handleMouseClick: _ } = (function () {
             let [e, t] = r.useState(!1),
                 [n, i] = r.useState(!1),
                 l = (0, g.z)({
@@ -305,11 +305,11 @@ function k(e) {
         } = t,
         F = !s && l,
         W = 0 === n && !L && !F,
-        { ref: H, springs: B } = (0, v.Ru)(t.id, a, o);
+        { ref: H, springs: B } = (0, T.Ru)(t.id, a, o);
     return (0, i.jsx)(x, {
         transitionState: a,
         springs: B,
-        scaleOverride: T?.scale,
+        scaleOverride: v?.scale,
         index: n,
         locked: l,
         animationWrapperClassName: E,

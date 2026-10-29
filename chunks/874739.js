@@ -1,4 +1,4 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -16,21 +16,21 @@ var i = n(477900),
     x = n(652215),
     g = n(806931),
     C = n(804273);
-let j = (0, s.A)((e) => {
+let y = (0, s.A)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: s,
-        participantsVersion: j,
-        layout: y,
+        participantsVersion: y,
+        layout: j,
         onSelectParticipant: I,
         onContextMenuParticipant: N,
         onFullscreenParticipant: v,
         channel: E,
         hasConnectPermission: b,
         className: S,
-        inCall: _,
-        showParticipants: T = !0,
+        inCall: T,
+        showParticipants: _ = !0,
         width: R,
         height: O,
         idle: L,
@@ -44,13 +44,13 @@ let j = (0, s.A)((e) => {
     }, [R, O, U.width, U.height]);
     let D = l.useMemo(
             () => n.filter((e) => e.type !== g.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
-            [n, j],
+            [n, y],
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
     if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: O });
-    if (E?.isGuildVocalOrThread() && !_)
+    if (E?.isGuildVocalOrThread() && !T)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
-    if (((n = _ ? n : t), P === x._Of.VOICE))
+    if (((n = T ? n : t), P === x._Of.VOICE))
         return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
@@ -69,7 +69,7 @@ let j = (0, s.A)((e) => {
                 onClick: I,
                 onDoubleClick: v,
                 onContextMenu: N,
-                inCall: _,
+                inCall: T,
                 popoutType: M,
             }),
         });
@@ -86,9 +86,9 @@ let j = (0, s.A)((e) => {
         idle: L,
         height: O,
         width: R,
-        layout: y,
-        inCall: _,
+        layout: j,
+        inCall: T,
         channel: E,
-        showParticipants: T,
+        showParticipants: _,
     });
 });

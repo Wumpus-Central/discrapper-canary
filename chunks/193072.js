@@ -12,8 +12,8 @@ var l = n(477900),
     m = n(980707),
     p = n(477782),
     g = n(663417),
-    h = n(70688),
-    x = n(92446),
+    x = n(70688),
+    h = n(92446),
     j = n(173936),
     v = n(473935),
     b = n(625903),
@@ -31,8 +31,8 @@ var l = n(477900),
     T = n(87501),
     D = n(105292);
 let M = new Set();
-var K = n(893067),
-    z = n(442331),
+var z = n(893067),
+    K = n(442331),
     B = n(616334),
     L = n(260498);
 n(321073);
@@ -53,8 +53,8 @@ function Q(e) {
         [f, m] = a.useState(null),
         p = "delete" === i,
         g = p ? (0, H.fI)(n) : (0, H.Kd)(n),
-        h = p ? null : (0, H.L4)(n),
-        x = (0, H.Mi)(n),
+        x = p ? null : (0, H.L4)(n),
+        h = (0, H.Mi)(n),
         j = p
             ? D.intl.formatToPlainString(T.default.CJBhb2, { name: n.projectName })
             : D.intl.formatToPlainString(T.default.x6FvsZ, { app: n.appName });
@@ -88,16 +88,16 @@ function Q(e) {
         children: (0, l.jsxs)(O.B, {
             gap: 12,
             children: [
-                g.length > 0 || null != h
+                g.length > 0 || null != x
                     ? (0, l.jsx)(J.Ay, {
                           items: g,
                           optionalItem:
-                              null == h
+                              null == x
                                   ? void 0
-                                  : { item: h, checked: o, onChange: u, disabled: !n.canRemovePreviewBot },
+                                  : { item: x, checked: o, onChange: u, disabled: !n.canRemovePreviewBot },
                       })
                     : null,
-                null != x ? (0, l.jsx)($.E, { variant: "text-sm/normal", color: "text-muted", children: x }) : null,
+                null != h ? (0, l.jsx)($.E, { variant: "text-sm/normal", color: "text-muted", children: h }) : null,
             ],
         }),
     });
@@ -176,9 +176,9 @@ function el(e) {
             onCloseMenu: ef,
         } = e,
         em = (0, G.iI)(t),
-        ep = a.useContext(K.bI),
-        { pending: eg, refresh: eh } = (0, S.A)(ed ?? null),
-        { pending: ex, connect: ej } = (function (e, t) {
+        ep = a.useContext(z.bI),
+        { pending: eg, refresh: ex } = (0, S.A)(ed ?? null),
+        { pending: eh, connect: ej } = (function (e, t) {
             let [n, l] = a.useState(M),
                 i = a.useRef(M),
                 r = a.useCallback((e) => {
@@ -206,7 +206,7 @@ function el(e) {
                 ),
             };
         })(ec ?? null, en),
-        ev = (0, i.bG)([z.A], () => (null == ec ? et : z.A.getDeclaredConnections(ec))),
+        ev = (0, i.bG)([K.A], () => (null == ec ? et : K.A.getDeclaredConnections(ec))),
         eb = a.useMemo(() => (0, I.Xl)(ev), [ev]),
         ek = (0, H.Bs)(t),
         ey = (0, H.CU)(t) && _,
@@ -248,7 +248,7 @@ function el(e) {
                           },
                 );
             return i;
-        })({ canRefresh: null != ed, refreshPending: eg, offers: eb, connectPending: ex }),
+        })({ canRefresh: null != ed, refreshPending: eg, offers: eb, connectPending: eh }),
         ew = a.useMemo(() => new Map(ev.map((e) => [e.type, e])), [ev]),
         eN = null != $ && A,
         eC = _ && null != O,
@@ -300,8 +300,8 @@ function el(e) {
                           null != eu
                               ? (0, l.jsx)(p.Dr, {
                                     id: "close",
-                                    icon: h.DoorExitIcon,
-                                    leadingAccessory: { type: "icon", icon: h.DoorExitIcon },
+                                    icon: x.DoorExitIcon,
+                                    leadingAccessory: { type: "icon", icon: x.DoorExitIcon },
                                     label: D.intl.string(T.default["/TlGcK"]),
                                     action: eu,
                                 })
@@ -314,8 +314,8 @@ function el(e) {
                       children: (0, l.jsx)(p.sL, {
                           id: "debug",
                           label: D.intl.string(T.default.Mt5k9d),
-                          leftIcon: x.BugIcon,
-                          leadingAccessory: { type: "icon", icon: x.BugIcon },
+                          leftIcon: h.BugIcon,
+                          leadingAccessory: { type: "icon", icon: h.BugIcon },
                           checked: eo,
                           action: es,
                       }),
@@ -332,7 +332,7 @@ function el(e) {
                                   disabled: e.disabled,
                                   dontCloseOnAction: !0,
                                   action: () => {
-                                      if ("refresh" === e.kind) return void eh();
+                                      if ("refresh" === e.kind) return void ex();
                                       let t = null == e.connectionType ? null : ew.get(e.connectionType);
                                       null != t && ej(t);
                                   },

@@ -5,8 +5,8 @@ var i = n(477900),
     a = n.n(l),
     r = n(837381),
     o = n(17928),
-    c = n(451988),
-    d = n(661531),
+    d = n(451988),
+    c = n(661531),
     u = n(866665),
     m = n(939249),
     x = n(342073),
@@ -35,8 +35,8 @@ function G(e) {
     let { sound: t, containerDimensions: n, ref: l } = e,
         a = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
         r = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        [c, d] = s.useState([]),
-        u = c.length < 50,
+        [d, c] = s.useState([]),
+        u = d.length < 50,
         m = t?.emojiId != null || t?.emojiName != null,
         x = s.useCallback(() => {
             if (!r && u && m && null != a) {
@@ -45,12 +45,12 @@ function G(e) {
                     i = R.B.PREMIUM,
                     s = (0, y.random)(k.Bf[i].length, !1),
                     l = { id: (0, T.A)(), animationId: s, animationType: i, shouldResize: n, url: e, userId: a.id };
-                d((e) => [...e, l]);
+                c((e) => [...e, l]);
             }
         }, [r, u, m, a, t]);
     s.useImperativeHandle(l, () => ({ addAnimation: x }));
     let h = s.useCallback((e) => {
-        d((t) => {
+        c((t) => {
             let n = [...t],
                 i = n.findIndex((t) => t.id === e);
             return (n.splice(i, 1), n);
@@ -61,7 +61,7 @@ function G(e) {
         : (0, i.jsx)("div", {
               className: L.z,
               style: { width: n.width, height: n.height },
-              children: c.map((e) => (0, i.jsx)(P.A, { containerDimensions: n, effect: e, onComplete: h }, e.id)),
+              children: d.map((e) => (0, i.jsx)(P.A, { containerDimensions: n, effect: e, onComplete: h }, e.id)),
           });
 }
 var M = n(253932),
@@ -96,13 +96,13 @@ function Y(e) {
 function $(e) {
     let { sound: t, previewSound: n, disabled: l = !1, tooltipPosition: a = "top" } = e,
         r = (0, o.bG)([w.A], () => w.A.getGuildId()),
-        c = (0, K._)("PreviewButton"),
-        d = s.useMemo(
+        d = (0, K._)("PreviewButton"),
+        c = s.useMemo(
             () =>
-                c
+                d
                     ? (0, i.jsx)(x.L, { size: "md", color: "currentColor", className: Z.Wo })
                     : (0, i.jsx)(h.H, { size: "md", color: "currentColor", className: Z.Wo }),
-            [c],
+            [d],
         );
     return (0, i.jsx)(Y, {
         tooltipPosition: a,
@@ -119,14 +119,14 @@ function $(e) {
                 n());
         },
         text: q.intl.formatToPlainString(q.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
-        children: d,
+        children: c,
     });
 }
 function Q(e) {
     let { sound: t, disabled: n = !1 } = e,
         { analyticsLocations: l } = (0, E.Ay)(),
         r = (0, o.bG)([z.A], () => z.A.isFavoriteSound(t.soundId), [t.soundId]),
-        c = s.useCallback(
+        d = s.useCallback(
             (e) => {
                 (e.stopPropagation(),
                     e.currentTarget.blur(),
@@ -139,20 +139,20 @@ function Q(e) {
         );
     return (0, i.jsx)(Y, {
         disabled: n,
-        onClick: c,
+        onClick: d,
         text: q.intl.formatToPlainString(r ? q.t.lQLsjc : q.t.Y5DOs4, { emojiName: t.emojiName, soundName: t.name }),
         children: r
             ? (0, i.jsx)(j.StarIcon, {
                   size: "xs",
                   className: a()(Z.Wo, Z.gj),
-                  color: d.A.unsafe_rawColors.PLATFORM_GOLD.css,
+                  color: c.A.unsafe_rawColors.PLATFORM_GOLD.css,
               })
             : (0, i.jsx)(g.y, { size: "xs", color: "currentColor", className: Z.Wo }),
     });
 }
 function ee(e) {
     var t, n, l;
-    let d,
+    let c,
         {
             sound: m,
             channel: x,
@@ -180,9 +180,9 @@ function ee(e) {
         } = e,
         { name: el, emojiId: ea, emojiName: er } = m,
         eo = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
-        ec = (0, F.v)(m, x?.guild_id),
+        ed = (0, F.v)(m, x?.guild_id),
         {
-            playSoundboardSound: ed,
+            playSoundboardSound: ec,
             previewSound: eu,
             isPlayingSound: em,
         } = (0, B.A)(
@@ -203,7 +203,7 @@ function ee(e) {
             }, [n, t])),
         eg = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion),
         ep = s.useRef(0.01),
-        eN = s.useRef(new c.IX()),
+        eN = s.useRef(new d.IX()),
         eI = "1" === m.soundId,
         eb = `sound-${m.soundId}`,
         ef = (0, r.rm)(eb),
@@ -227,7 +227,7 @@ function ee(e) {
             Math.random() < ep.current && ex(ej.x, ej.y, void 0, void 0, { sprite: W.dR })),
         null != R)
             ? R(e)
-            : k || ed(L);
+            : k || ec(L);
     }
     let eR = (0, i.jsx)("div", {
         onMouseEnter: eT,
@@ -262,9 +262,9 @@ function ee(e) {
     }, [eI]);
     let eM =
             ((l = eh.current),
-            null == (d = l?.parentElement?.getBoundingClientRect())
+            null == (c = l?.parentElement?.getBoundingClientRect())
                 ? { width: 0, height: 0 }
-                : { width: d.width, height: d.height }),
+                : { width: c.width, height: c.height }),
         ew = q.intl.formatToPlainString(q.t.tuMUJ2, { emojiName: m.emojiName, soundName: m.name });
     return (0, i.jsxs)("li", {
         ref: ei,
@@ -299,7 +299,7 @@ function ee(e) {
                     onClick: (e) => {
                         e_?.(e);
                     },
-                    onContextMenu: T && !eA ? ec : void 0,
+                    onContextMenu: T && !eA ? ed : void 0,
                     children: [
                         (0, i.jsxs)("div", {
                             className: a()(Z.KM, { [Z.hn]: ev }),

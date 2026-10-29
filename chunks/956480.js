@@ -56,18 +56,18 @@ function m(e, t, n) {
                 );
             }
         }
-        let j = [];
-        for (let [e] of l.positions)
-            i.positions.has(e) || j.push(p.intl.formatToPlainString(h.default.u7LUkR, { userName: s(e) }));
         let y = [];
+        for (let [e] of l.positions)
+            i.positions.has(e) || y.push(p.intl.formatToPlainString(h.default.u7LUkR, { userName: s(e) }));
+        let j = [];
         if (f) {
             for (let e of n)
                 l.noteAuthors.has(e.objectId) ||
-                    y.push(p.intl.formatToPlainString(h.default.zTbxKr, { userName: s(e.createdBy) }));
+                    j.push(p.intl.formatToPlainString(h.default.zTbxKr, { userName: s(e.createdBy) }));
             for (let [e, t] of l.noteAuthors)
-                i.noteAuthors.has(e) || y.push(p.intl.formatToPlainString(h.default.DO8iXB, { userName: s(t) }));
+                i.noteAuthors.has(e) || j.push(p.intl.formatToPlainString(h.default.DO8iXB, { userName: s(t) }));
         }
-        let I = [...d, ...j, ...g, ...C, ...y];
+        let I = [...d, ...y, ...g, ...C, ...j];
         0 !== I.length && a.O.announce(I.join(". "), "polite");
     }, [t, n, e, m, A, f]);
 }

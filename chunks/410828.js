@@ -17,16 +17,16 @@ var l = n(17928),
     x = n(747376),
     g = n(113783),
     C = n(518769),
-    j = n(776781),
-    y = n(446600),
+    y = n(776781),
+    j = n(446600),
     I = n(571909),
     N = n(623413),
     v = n(717965),
     E = n(895903),
     b = n(788122),
     S = n(105292),
-    _ = n(925556),
-    T = n(853325);
+    T = n(925556),
+    _ = n(853325);
 function R(e) {
     let { channel: t, inCall: n, hasConnectPermission: l, hasSpeakers: a, children: r } = e,
         { isOnStartStageScreen: o } = (0, I.Ay)();
@@ -43,11 +43,11 @@ function R(e) {
           ? a
               ? r
               : (0, i.jsxs)("div", {
-                    className: T.kL,
+                    className: _.kL,
                     children: [
                         (0, i.jsx)(A.A, {}),
                         (0, i.jsx)(s.D, {
-                            className: _.uQ,
+                            className: T.uQ,
                             variant: "heading-lg/normal",
                             children: S.intl.string(b.default["P63Z/o"]),
                         }),
@@ -62,14 +62,14 @@ function O(e) {
     return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(v.A, { channel: t, isOnStartStageScreen: l }) });
 }
 function L(e) {
-    return (0, l.bG)([y.A], () => (e.isGuildStageVoice() ? y.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);
+    return (0, l.bG)([j.A], () => (e.isGuildStageVoice() ? j.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);
 }
 function P(e) {
     let { channel: t } = e,
         n = (0, g.uy)(t.id),
         l = (0, g.zy)(t.id, C.ip.AUDIENCE);
     return (0, i.jsxs)("div", {
-        className: _.Qf,
+        className: T.Qf,
         children: [
             (0, i.jsx)(r.MicrophoneIcon, { size: "xs", color: a.A.colors.TEXT_MUTED }),
             (0, i.jsx)(o.E, {
@@ -90,7 +90,7 @@ function M(e) {
     let { channel: t, className: n } = e,
         { parentAnalyticsLocation: a } = (0, h.Ay)(),
         s = (0, l.bG)([p.A], () => p.A.getStageAudienceSidebarOpen(t.id), [t.id]),
-        r = (0, j.Ni)(t.id),
+        r = (0, y.Ni)(t.id),
         u = (0, g.zy)(t.id, C.ip.REQUESTED_TO_SPEAK_ONLY),
         A = r ? u : 0,
         x = S.intl.string(b.default.Ds8IST);
@@ -106,12 +106,12 @@ function M(e) {
             iconComponent: (e) => {
                 let { className: t } = e;
                 return (0, i.jsxs)("div", {
-                    className: _.Sl,
+                    className: T.Sl,
                     children: [
                         (0, i.jsx)(c.n, { className: t, color: "currentColor" }),
                         A > 0
                             ? (0, i.jsx)(o.E, {
-                                  className: _.gC,
+                                  className: T.gC,
                                   variant: "text-xs/semibold",
                                   color: "none",
                                   children: A > 99 ? "99+" : A,

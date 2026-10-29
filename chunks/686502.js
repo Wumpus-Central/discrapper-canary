@@ -16,16 +16,16 @@ var i = n(477900),
     x = n(821609),
     g = n(283973),
     C = n(834730),
-    j = n(789645),
-    y = n(964486),
+    y = n(789645),
+    j = n(964486),
     I = n(648027),
     N = n(855446),
     v = n(793574),
     E = n(688810),
     b = n(975412),
     S = n(392054),
-    _ = n(826673),
-    T = n(757293),
+    T = n(826673),
+    _ = n(757293),
     R = n(174459),
     O = n(272812),
     L = n(652215),
@@ -161,7 +161,7 @@ function V(e) {
 }
 function G(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
-    (0, y.Ay)(() => {
+    (0, j.Ay)(() => {
         R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
@@ -206,10 +206,10 @@ function G(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
+                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
                     },
                     children: [
-                        (0, i.jsx)(T.A, {}),
+                        (0, i.jsx)(_.A, {}),
                         (0, i.jsx)(C.E, { variant: "text-sm/medium", children: P.intl.string(P.t["5E9SB9"]) }),
                     ],
                 }),
@@ -223,7 +223,7 @@ function G(e) {
                         }),
                             a());
                     },
-                    children: (0, i.jsx)(j.P, { size: "md", color: "currentColor", className: M.b }),
+                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
                 }),
             ],
         }),

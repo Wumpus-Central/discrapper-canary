@@ -1135,8 +1135,8 @@ var eQ = n(4511),
     e2 = n(276208);
 let e3 = { any: 100 },
     e5 = { any: 0 },
-    e6 = 30 * eV.A.Millis.SECOND,
-    e4 = 120 * eV.A.Millis.SECOND,
+    e4 = 30 * eV.A.Millis.SECOND,
+    e6 = 120 * eV.A.Millis.SECOND,
     e7 = -1 !== (0, e0.EL)();
 var e8 = (((o = {}).UserSSRCUpdate = "user-ssrc-update"), (o.Update = "update"), o);
 function e9(e) {
@@ -1397,7 +1397,7 @@ class te extends S.A {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? e4 : e6;
+        return this.isStageChannel ? e6 : e4;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : z.r8.NO_OVERRIDE;

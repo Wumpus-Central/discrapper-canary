@@ -16,16 +16,16 @@ var i = n(477900),
     x = n(952270),
     g = n(104510),
     C = n(789645),
-    j = n(177953),
-    y = n(683438),
+    y = n(177953),
+    j = n(683438),
     I = n(475825),
     N = n(367513),
     v = n(442433),
     E = n(59520),
     b = n(793574),
     S = n(688810),
-    _ = n(139286),
-    T = n(43189),
+    T = n(139286),
+    _ = n(43189),
     R = n(480890),
     O = n(812771),
     L = n(58736),
@@ -50,14 +50,14 @@ var Y = n(806931),
     q = n(645265);
 let Z = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
-        { user: C, userNick: j, blocked: y, ignored: I, rtsState: N } = t,
+        { user: C, userNick: y, blocked: j, ignored: I, rtsState: N } = t,
         E = l.useRef(null),
-        T = (0, P.Us)(),
+        _ = (0, P.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
         L = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
         D = N === z.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
     function V(e) {
-        ((0, _.x)({
+        ((0, T.x)({
             type: c.ImpressionTypes.MENU,
             name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
@@ -110,7 +110,7 @@ let Z = l.memo(function (e) {
                             }),
                         });
                 },
-                { context: T },
+                { context: _ },
             ));
     }
     return (0, i.jsx)(M.A, {
@@ -134,16 +134,16 @@ let Z = l.memo(function (e) {
                             (0, i.jsx)(p.eu, {
                                 src: C.getAvatarURL(r, 32, !1),
                                 size: m._3.SIZE_32,
-                                className: s()(q.e$, { [q.zj]: y || I }),
+                                className: s()(q.e$, { [q.zj]: j || I }),
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsx)(A.E, {
                                 className: q.wR,
                                 variant: "text-sm/medium",
                                 color: "text-strong",
-                                children: j,
+                                children: y,
                             }),
-                            y ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
+                            j ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
                             I ? (0, i.jsx)(x.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
                             L ? (0, i.jsx)(g._, { size: "xs", color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK }) : null,
                         ],
@@ -180,7 +180,7 @@ function Q(e) {
                     o()(e, t.userNick.toLowerCase()),
             );
         }, [m, v]),
-        _ = [p.length, Math.max(1, S.length)],
+        T = [p.length, Math.max(1, S.length)],
         R = (0, i.jsx)(L.Ay.Icon, {
             icon: C.P,
             tooltip: X.intl.string(X.t.cpT0Cq),
@@ -190,7 +190,7 @@ function Q(e) {
         sidebarType: O.X.StageAudienceSidebar,
         maxWidth: c,
         minWidth: 240,
-        floatingLayer: T.Ay,
+        floatingLayer: _.Ay,
         children: (0, i.jsxs)("div", {
             className: q.kL,
             children: [
@@ -198,7 +198,7 @@ function Q(e) {
                     toolbar: R,
                     "aria-label": X.intl.string(X.t.suRApw),
                     children: [
-                        (0, i.jsx)(L.Ay.ChannelIcon, { icon: j.n, "aria-label": X.intl.string(X.t.suRApw) }),
+                        (0, i.jsx)(L.Ay.ChannelIcon, { icon: y.n, "aria-label": X.intl.string(X.t.suRApw) }),
                         (0, i.jsx)(L.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
                     ],
                 }),
@@ -208,7 +208,7 @@ function Q(e) {
                           children: [
                               h ? (0, i.jsx)(W.d1, { useVerboseLabel: !0, channel: s }) : null,
                               u
-                                  ? (0, i.jsx)(y.I, {
+                                  ? (0, i.jsx)(j.I, {
                                         query: f,
                                         onChange: x,
                                         onClear: () => x(""),
@@ -221,7 +221,7 @@ function Q(e) {
                     : null,
                 (0, i.jsx)(I.OZ, {
                     className: q.p_,
-                    sections: _,
+                    sections: T,
                     sectionHeight: function (e) {
                         switch (e) {
                             case 0:

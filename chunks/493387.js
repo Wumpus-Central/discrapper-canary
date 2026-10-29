@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(999926),
     g = n(531685),
     C = n(85448),
-    j = n(806931),
-    y = n(105292),
+    y = n(806931),
+    j = n(105292),
     I = n(836905),
     N = n(938442),
     v = n(138267);
@@ -104,28 +104,28 @@ function S(e) {
         v = (0, p.Ay)(),
         E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
         S = (0, o.bG)([g.A], () => g.A.isFocused()),
-        _ = (0, f.oN)(),
-        T = (0, o.bG)([x.Ay], () => new Map(n.filter(j.Xw).map((e) => [e.user.id, x.Ay.isLocalMute(e.user.id)])), [n]),
+        T = (0, f.oN)(),
+        _ = (0, o.bG)([x.Ay], () => new Map(n.filter(y.Xw).map((e) => [e.user.id, x.Ay.isLocalMute(e.user.id)])), [n]),
         R = (0, o.bG)(
             [A.A],
-            () => new Map(n.filter(j.Xw).map((e) => [e.user.id, A.A.isLocalSoundboardMuted(e.user.id)])),
+            () => new Map(n.filter(y.Xw).map((e) => [e.user.id, A.A.isLocalSoundboardMuted(e.user.id)])),
             [n],
         ),
         O = (0, m.g)(R.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
         L = n.map((e) => {
-            if (e.type !== j.lp.USER) return null;
+            if (e.type !== y.lp.USER) return null;
             let { user: t, speaking: n, ringing: a, playingSoundboard: s } = e,
-                o = (0, f.Nd)(e.voiceState, _),
+                o = (0, f.Nd)(e.voiceState, T),
                 c = null;
-            !0 === T.get(t.id)
-                ? (c = y.intl.string(y.t.Q8Uzof))
+            !0 === _.get(t.id)
+                ? (c = j.intl.string(j.t.Q8Uzof))
                 : o?.isVoiceDeafened() === !0
-                  ? (c = y.intl.string(y.t.NjmiOL))
+                  ? (c = j.intl.string(j.t.NjmiOL))
                   : o?.isVoiceMuted() === !0
-                    ? (c = y.intl.string(y.t.tjtv3P))
-                    : O && !0 === R.get(t.id) && (c = y.intl.string(y.t["9bJYWN"]));
+                    ? (c = j.intl.string(j.t.tjtv3P))
+                    : O && !0 === R.get(t.id) && (c = j.intl.string(j.t["9bJYWN"]));
             let d =
-                null != c ? y.intl.formatToPlainString(y.t["1+MVBP"], { userName: t.username, status: c }) : t.username;
+                null != c ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: c }) : t.username;
             return (0, i.jsx)(
                 b,
                 {

@@ -1,42 +1,42 @@
-n.d(t, { I6: () => s, UY: () => a, bx: () => b, ck: () => h, e0: () => u, gw: () => o });
-var i = n(477900),
-    d = n(582128),
-    r = n(333007);
-let [l, h] = (0, n(786300).A)();
-function u(e) {
-    let { children: t } = e,
-        [n, r] = d.useState(null),
-        [h, u] = d.useState(null),
-        [a, b] = d.useState(null),
-        o = d.useMemo(
-            () => ({
-                setCheckoutFooterContentNode: r,
-                checkoutFooterContentNode: n,
-                checkoutHeaderElementNode: h,
-                setCheckoutHeaderElementNode: u,
-                checkoutFooterLineItemNode: a,
-                setCheckoutFooterLineItemNode: b,
-            }),
-            [n, r, h, u, a, b],
-        );
-    return (0, i.jsx)(l.Provider, { value: o, children: t });
-}
-function a(e) {
-    let { children: t } = e,
-        { checkoutHeaderElementNode: n } = h();
-    return null == n ? null : r.createPortal(t, n);
-}
-function b(e) {
-    let { children: t } = e,
-        { checkoutFooterContentNode: n } = h();
-    return null == n ? null : r.createPortal(t, n);
-}
+l.d(t, { I6: () => m, UY: () => u, bx: () => c, ck: () => i, e0: () => o, gw: () => d });
+var n = l(477900),
+    a = l(582128),
+    r = l(333007);
+let [s, i] = (0, l(786300).A)();
 function o(e) {
     let { children: t } = e,
-        { checkoutFooterLineItemNode: n } = h();
-    return null == n ? null : r.createPortal(t, n);
+        [l, r] = a.useState(null),
+        [i, o] = a.useState(null),
+        [u, c] = a.useState(null),
+        d = a.useMemo(
+            () => ({
+                setCheckoutFooterContentNode: r,
+                checkoutFooterContentNode: l,
+                checkoutHeaderElementNode: i,
+                setCheckoutHeaderElementNode: o,
+                checkoutFooterLineItemNode: u,
+                setCheckoutFooterLineItemNode: c,
+            }),
+            [l, r, i, o, u, c],
+        );
+    return (0, n.jsx)(s.Provider, { value: d, children: t });
 }
-function s() {
-    let e = d.useContext(l);
+function u(e) {
+    let { children: t } = e,
+        { checkoutHeaderElementNode: l } = i();
+    return null == l ? null : r.createPortal(t, l);
+}
+function c(e) {
+    let { children: t } = e,
+        { checkoutFooterContentNode: l } = i();
+    return null == l ? null : r.createPortal(t, l);
+}
+function d(e) {
+    let { children: t } = e,
+        { checkoutFooterLineItemNode: l } = i();
+    return null == l ? null : r.createPortal(t, l);
+}
+function m() {
+    let e = a.useContext(s);
     return null == e ? null : e.checkoutFooterLineItemNode;
 }

@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { Cr: () => ew, Ay: () => e4, Wm: () => eD }), n(321073), n(938796));
+(n.d(t, { Cr: () => ew, Ay: () => e6, Wm: () => eD }), n(321073), n(938796));
 var r = n(435558),
     a = n(536637),
     s = n.n(a),
@@ -679,7 +679,7 @@ class ew {
                     w.A.hasLoaded(n.guild_id) &&
                         W.default
                             .keys(w.A.getThreadsForParent(n.guild_id, i))
-                            .every((e) => e6.hasOpenedThread(e) || 0 > W.default.compare(e, r.ackMessageId)) &&
+                            .every((e) => e4.hasOpenedThread(e) || 0 > W.default.compare(e, r.ackMessageId)) &&
                         r.ack({
                             trackAnalytics: !0,
                             location: {
@@ -1319,7 +1319,7 @@ class e5 extends o.Ay.Store {
         return eg.getAllChannelIdsForWindowId(e);
     }
 }
-let e6 = new e5(_.h, {
+let e4 = new e5(_.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -1763,7 +1763,7 @@ let e6 = new e5(_.h, {
             ((t = n.filter(
                 (e) =>
                     K.A.getChannel(e.channelId)?.isForumLikeChannel() === !0 ||
-                    (null != e.messageId && e6.hasUnreadOrMentions(e.channelId, e.readStateType)),
+                    (null != e.messageId && e4.hasUnreadOrMentions(e.channelId, e.readStateType)),
             )),
                 t.forEach((e) => {
                     let { channelId: t, messageId: n, readStateType: i } = e;
@@ -1984,4 +1984,4 @@ let e6 = new e5(_.h, {
             );
         },
     }),
-    e4 = e6;
+    e6 = e4;

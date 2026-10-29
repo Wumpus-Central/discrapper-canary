@@ -1,4 +1,4 @@
-a.exports = {
+_.exports = {
     Ui: "cardContainer__47729",
     Ew: "square__47729",
     oG: "cardContainerRelative__47729",

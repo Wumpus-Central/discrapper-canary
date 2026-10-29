@@ -12,15 +12,15 @@ var l = n(477900),
     m = n(465006),
     p = n(719564),
     g = n(17928),
-    h = n(617617),
-    x = n(573163),
+    x = n(617617),
+    h = n(573163),
     j = n(245179),
     v = n(404373),
     b = n(260498),
     k = n(189714),
     y = n(722701),
     _ = n(811587);
-let A = [b.Ay, j.A, x.Ay, h.A, y.A];
+let A = [b.Ay, j.A, h.Ay, x.A, y.A];
 var S = n(866665),
     w = n(22231),
     N = n(661531),
@@ -46,8 +46,8 @@ function D(e) {
     });
 }
 var M = n(731084),
-    K = n(104317),
-    z = n(886540),
+    z = n(104317),
+    K = n(886540),
     B = n(162052),
     L = n(790624);
 function G(e) {
@@ -55,10 +55,10 @@ function G(e) {
         n = (0, g.bG)(
             [j.A],
             () => {
-                let e = (0, z.Ji)(j.A.getMessages(t));
+                let e = (0, K.Ji)(j.A.getMessages(t));
                 return null == e
                     ? null
-                    : ((0, K.w)(e.steps) ??
+                    : ((0, z.w)(e.steps) ??
                           (0, M.Dy)({
                               activity: j.A.getThinkingActivity(t),
                               compacting: j.A.isCompacting(t),
@@ -78,7 +78,7 @@ function G(e) {
 let H = a.memo(function (e) {
     let t,
         n,
-        { project: a, onSelect: i, selected: x = !1, renderActions: S, onContextMenu: w } = e,
+        { project: a, onSelect: i, selected: h = !1, renderActions: S, onContextMenu: w } = e,
         {
             status: N,
             unread: E,
@@ -102,15 +102,15 @@ let H = a.memo(function (e) {
                     publishState: y.A.getPublishStatus(t)?.publishState ?? null,
                     everPublished: n,
                 }),
-                unread: (0, v.tz)(t) && !(0, k.j)(h.A.settings, t),
+                unread: (0, v.tz)(t) && !(0, k.j)(x.A.settings, t),
                 deleting: b.Ay.isProjectDeleting(t),
             }),
             [t, n],
         )),
-        K = !M && "in_progress" === N,
-        z = !M && E,
+        z = !M && "in_progress" === N,
+        K = !M && E,
         H = M || "published" === N ? null : N,
-        R = [null != H ? I.intl.string(T[H]) : null, z ? I.intl.string(C.default["N+3Pzk"]) : null]
+        R = [null != H ? I.intl.string(T[H]) : null, K ? I.intl.string(C.default["N+3Pzk"]) : null]
             .filter(Boolean)
             .join(", "),
         W = (function (e) {
@@ -137,7 +137,7 @@ let H = a.memo(function (e) {
                         (0, l.jsx)(s.E, {
                             variant: "text-md/medium",
                             color: "none",
-                            className: r()(L.UU, { [B.Hz]: K }),
+                            className: r()(L.UU, { [B.Hz]: z }),
                             children: a.name,
                         }),
                         M
@@ -147,7 +147,7 @@ let H = a.memo(function (e) {
                                   className: r()(L.pG, L.sL),
                                   children: I.intl.string(C.default.Yh5pAc),
                               })
-                            : K
+                            : z
                               ? (0, l.jsx)(G, { projectId: a.id })
                               : "" !== O
                                 ? (0, l.jsx)(s.E, {
@@ -167,9 +167,9 @@ let H = a.memo(function (e) {
               className: r()(L.AS, { [L.Cp]: M }),
               "aria-busy": M,
               children: [
-                  z ? (0, l.jsx)("span", { className: L.dM, "aria-hidden": !0 }) : null,
+                  K ? (0, l.jsx)("span", { className: L.dM, "aria-hidden": !0 }) : null,
                   (0, l.jsxs)("div", {
-                      className: r()(L.nM, L.bl, { [L.gy]: z }),
+                      className: r()(L.nM, L.bl, { [L.gy]: K }),
                       onContextMenu: null == w || M ? void 0 : (e) => w(e, a),
                       children: [$, null == S || M ? null : (0, l.jsx)("div", { className: L.a7, children: S(a) })],
                   }),
@@ -179,10 +179,10 @@ let H = a.memo(function (e) {
               className: r()(L.AS, { [L.Cp]: M, [L.vX]: null != S }),
               "aria-busy": M,
               children: [
-                  z ? (0, l.jsx)("span", { className: L.dM, "aria-hidden": !0 }) : null,
+                  K ? (0, l.jsx)("span", { className: L.dM, "aria-hidden": !0 }) : null,
                   (0, l.jsx)(u.D, {
-                      className: r()(L.nM, { [L.wH]: x, [L.gy]: z }),
-                      "aria-current": x ? "page" : void 0,
+                      className: r()(L.nM, { [L.wH]: h, [L.gy]: K }),
+                      "aria-current": h ? "page" : void 0,
                       tabIndex: M ? -1 : void 0,
                       onMouseDown: M
                           ? void 0

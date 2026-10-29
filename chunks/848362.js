@@ -40,14 +40,14 @@ function b(e) {
             onClose: f,
             onSelect: A,
             appContext: b = p.BRT.APP,
-            disableChangeWindows: T = !1,
-            onInteraction: v,
+            disableChangeWindows: v = !1,
+            onInteraction: T,
         } = e,
         _ = r.find((e) => e.ownerId === n?.id) ?? null,
         I = C(t, n, r),
         y = (0, d.A)(_, b),
         S = (0, m.E)({
-            disableChangeWindows: T,
+            disableChangeWindows: v,
             stream: _,
             showReportOption: c,
             handleGoLive: g,
@@ -61,7 +61,7 @@ function b(e) {
             onSelect: A,
             navId: "manage-streams",
             onClose: f,
-            onInteraction: v,
+            onInteraction: T,
             "aria-label": null != _ ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
             children: [
                 (0, i.jsx)(a.rX, {

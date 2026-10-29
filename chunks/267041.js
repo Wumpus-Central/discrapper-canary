@@ -1893,8 +1893,8 @@ var eJ = n(33282),
     e2 = n(852015),
     e3 = n(144367),
     e5 = n(428420),
-    e6 = n(535384);
-class e4 extends e6.G {
+    e4 = n(535384);
+class e6 extends e4.G {
     constructor() {
         super("discord_protos.qos_token.v1.QosToken", [
             { no: 1, name: "client_provided", kind: "message", T: () => e9 },
@@ -1938,8 +1938,8 @@ class e4 extends e6.G {
         return (!1 !== i && (!0 == i ? e2.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e4();
-class e8 extends e6.G {
+let e7 = new e6();
+class e8 extends e4.G {
     constructor() {
         super("discord_protos.qos_token.v1.ClientProvidedQosData", [
             { no: 1, name: "is_active", kind: "scalar", T: 8 },
@@ -1976,7 +1976,7 @@ class e8 extends e6.G {
     }
 }
 let e9 = new e8();
-class te extends e6.G {
+class te extends e4.G {
     constructor() {
         super("discord_protos.qos_token.v1.DerivedQosData", [
             { no: 1, name: "claims", kind: "scalar", T: 12 },
@@ -2026,7 +2026,7 @@ class te extends e6.G {
     }
 }
 let tt = new te();
-class tn extends e6.G {
+class tn extends e4.G {
     constructor() {
         super("discord_protos.qos_token.v1.Claims", [
             { no: 1, name: "user_id", kind: "scalar", T: 6 },

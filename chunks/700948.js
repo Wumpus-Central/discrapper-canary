@@ -16,16 +16,16 @@ var i = n(477900),
     x = n(856660),
     g = n(544299),
     C = n(913481),
-    j = n(711478),
-    y = n(487048),
+    y = n(711478),
+    j = n(487048),
     I = n(232571),
     N = n(519342),
     v = n(241215),
     E = n(207274),
     b = n(70067),
     S = n(956480),
-    _ = n(739820),
-    T = n(652061),
+    T = n(739820),
+    _ = n(652061),
     R = n(105292),
     O = n(923932);
 function L(e) {
@@ -41,12 +41,12 @@ function L(e) {
             notePad: G,
             screen: k,
             getName: B,
-        } = _.iX[L],
+        } = T.iX[L],
         { width: F = 0, height: z = 0, ref: H } = (0, c.Ay)(),
         W = F / z > U,
         Y = W ? z * U : F,
         $ = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
-        K = $ ? (0, _.bf)(U, W) : 1,
+        K = $ ? (0, T.bf)(U, W) : 1,
         X = l.useRef(null),
         q = l.useRef(null),
         Z = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
@@ -58,7 +58,7 @@ function L(e) {
         el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
     (0, S.A)(t, Z, Q);
     let ea = (0, g.Y1)(t),
-        es = R.intl.string(ea ? T.default.F9DcvR : T.default["sV/+Cu"]);
+        es = R.intl.string(ea ? _.default.F9DcvR : _.default["sV/+Cu"]);
     return (
         l.useEffect(() => {
             (0, A.zR)({ channelId: t });
@@ -90,7 +90,7 @@ function L(e) {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(o.s, {
-                                  children: R.intl.formatToPlainString(T.default["/l5Wn+"], {
+                                  children: R.intl.formatToPlainString(_.default["/l5Wn+"], {
                                       seatedCount: J,
                                       openSeatCount: ee,
                                       objectCount: et,
@@ -109,7 +109,7 @@ function L(e) {
                                           children: (0, i.jsxs)(h.xp, {
                                               containerRef: X,
                                               children: [
-                                                  (0, i.jsx)(y.A, { channelId: t, corners: k, roomWidth: Y }),
+                                                  (0, i.jsx)(j.A, { channelId: t, corners: k, roomWidth: Y }),
                                                   (0, i.jsxs)("div", {
                                                       ref: q,
                                                       children: [
@@ -135,9 +135,9 @@ function L(e) {
                                                           }),
                                                           (0, i.jsxs)("div", {
                                                               role: "list",
-                                                              "aria-label": R.intl.string(T.default.JYlbK5),
+                                                              "aria-label": R.intl.string(_.default.JYlbK5),
                                                               children: [
-                                                                  (0, i.jsx)(j.A, {
+                                                                  (0, i.jsx)(y.A, {
                                                                       channelId: t,
                                                                       plantConfig: D,
                                                                       roomWidth: Y,

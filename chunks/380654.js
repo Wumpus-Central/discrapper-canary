@@ -12,13 +12,13 @@ var l = n(477900),
     m = n(260498),
     p = n(193072),
     g = n(95264);
-function h(e, t) {
+function x(e, t) {
     let n,
         l,
         i,
         p,
-        h,
         x,
+        h,
         { onExport: j } =
             ((n = e.id),
             (l = e.name),
@@ -45,7 +45,7 @@ function h(e, t) {
                             i.current = !1;
                         }));
             }, [n, l])),
-            (h = a.useCallback(
+            (x = a.useCallback(
                 (e) => {
                     let t = (0, d.vt)(e);
                     null != t
@@ -67,7 +67,7 @@ function h(e, t) {
                 },
                 [n, l],
             )),
-            { onExport: p, onImport: (x = (0, d.yN)(h)).open, importInput: x.input });
+            { onExport: p, onImport: (h = (0, d.yN)(x)).open, importInput: h.input });
     return {
         projectId: e.id,
         projectName: e.name,
@@ -79,16 +79,16 @@ function h(e, t) {
         onExport: j,
     };
 }
-function x(e) {
+function h(e) {
     let { project: t, guildId: n } = e,
-        a = h(t, n);
+        a = x(t, n);
     return (0, l.jsx)(p.z, { ...a, onCloseMenu: i.Z_ });
 }
 function j(e) {
     let { project: t, guildId: n } = e,
-        a = h(t, n);
+        a = x(t, n);
     return (0, l.jsx)(p.A, { ...a, trigger: "iconButton" });
 }
 function v(e, t, n) {
-    (0, i.jA)(e, () => (0, l.jsx)(x, { project: t, guildId: n }));
+    (0, i.jA)(e, () => (0, l.jsx)(h, { project: t, guildId: n }));
 }

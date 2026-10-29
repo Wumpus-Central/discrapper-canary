@@ -16,16 +16,16 @@ var i = n(477900),
     x = n(206828),
     g = n(294323),
     C = n(429913),
-    j = n(853735),
-    y = n(131607),
+    y = n(853735),
+    j = n(131607),
     I = n(409626),
     N = n(613902),
     v = n(692969),
     E = n(980822),
     b = n(834757),
     S = n(548118),
-    _ = n(832163),
-    T = n(852105),
+    T = n(832163),
+    _ = n(852105),
     R = n(280450),
     O = n(240248),
     L = n(49999),
@@ -33,7 +33,7 @@ var i = n(477900),
     M = n(105292),
     w = n(472344);
 function U(e) {
-    let [t, n] = (0, y.RF)(e, (0, j.c)(e), void 0, !0);
+    let [t, n] = (0, j.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
 }
 function D(e) {
@@ -88,12 +88,12 @@ function G(e) {
         { user: n, stream: a, channel: s } = e,
         [c, d] = l.useState(!1),
         u = (0, b.AO)(a),
-        j = u?.id,
-        y = (0, r.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
-        I = null != j ? y[j] : null,
+        y = u?.id,
+        j = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
+        I = null != y ? j[y] : null,
         v = (0, C.h)(I),
         E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
-        O = E ? (I ?? j ?? null) : I,
+        O = E ? (I ?? y ?? null) : I,
         G = (0, C.h)(O),
         {
             isLoading: k,
@@ -144,7 +144,7 @@ function G(e) {
                     renderPopout: function (e) {
                         return null == O
                             ? null
-                            : (0, i.jsx)(T.V, {
+                            : (0, i.jsx)(_.V, {
                                   className: e,
                                   userId: n.id,
                                   channel: s,
@@ -169,7 +169,7 @@ function G(e) {
                 renderPopout: function (e) {
                     return null == I
                         ? null
-                        : (0, i.jsx)(T.Z, { className: e, userId: n.id, channel: s, applicationId: I, onClose: ee });
+                        : (0, i.jsx)(_.Z, { className: e, userId: n.id, channel: s, applicationId: I, onClose: ee });
                 },
                 positionKey: "feature-card-version",
             };
@@ -180,7 +180,7 @@ function G(e) {
               theme: P.NJ.DARK,
               children: (e) =>
                   null == ec
-                      ? (0, i.jsx)(V, { className: e, applicationId: j })
+                      ? (0, i.jsx)(V, { className: e, applicationId: y })
                       : (0, i.jsx)(f.Y, {
                             targetElementRef: W,
                             shouldShow: c,

@@ -17,8 +17,8 @@ var i = n(477900),
     E = n(231723),
     C = n(212245),
     b = n(327649),
-    T = n(248174),
-    v = n(375742),
+    v = n(248174),
+    T = n(375742),
     _ = n(734057),
     I = n(71393),
     y = n(309010),
@@ -105,10 +105,10 @@ function M(e) {
                 );
             if (null == e) return null;
             let D = a === x.jQ.PRESET_DOCUMENTS ? x.kn.FPS_30 : c,
-                j = (0, T.A)("useStreamSettingsItems", f, e.guildId),
+                j = (0, v.A)("useStreamSettingsItems", f, e.guildId),
                 U = o === j?.maxResolution && c === j?.maxFPS;
             function w(e) {
-                return U ? ((0, v.A)(e, f, A, M) ?? o) : o;
+                return U ? ((0, T.A)(e, f, A, M) ?? o) : o;
             }
             let L = w(c),
                 z = x.ce.map((e) => {

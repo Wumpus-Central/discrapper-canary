@@ -6,7 +6,7 @@ n.d(t, {
     FZ: () => s,
     Ov: () => c,
     kx: () => o,
-    uc: () => h,
+    uc: () => x,
     vg: () => r,
     xu: () => p,
 });
@@ -74,7 +74,7 @@ function p(e) {
 function g(e) {
     return i.intl.string(p(e));
 }
-function h(e) {
+function x(e) {
     let t = (0, l.a7)(e.cost_usd);
     return {
         text: i.intl.formatToPlainString(a.default.gMuw5d, { runes: t.toLocaleString() }),

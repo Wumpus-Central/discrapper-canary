@@ -2,8 +2,8 @@ n.d(t, { default: () => M, u: () => S });
 var i = n(477900),
     s = n(582128),
     l = n(17928),
-    r = n(116833),
-    a = n(772707),
+    a = n(116833),
+    r = n(772707),
     o = n(331322),
     d = n(691885),
     u = n(683071),
@@ -29,8 +29,8 @@ function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: E } = e,
         [m, S] = s.useState(g),
         [M, f] = s.useState(null),
-        [R, L] = s.useState("init"),
-        x = m === c.tI.PERSONAL,
+        [R, x] = s.useState("init"),
+        L = m === c.tI.PERSONAL,
         D = (0, l.bG)([h.A], () => h.A.getGuildId()),
         O = (0, l.bG)(
             [C.A],
@@ -40,7 +40,7 @@ function M(e) {
             },
             [t],
         ),
-        G = x ? null : O;
+        G = L ? null : O;
     s.useEffect(() => {
         D !== t && E();
     }, [t, E, D]);
@@ -50,16 +50,16 @@ function M(e) {
         U = s.useCallback(async () => {
             if ("init" === R) {
                 if (D !== t) return void (await E());
-                (L("submitting"), f(null));
+                (x("submitting"), f(null));
                 try {
-                    await I(t, x);
+                    await I(t, L);
                 } catch (e) {
-                    (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), L("init"));
+                    (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), x("init"));
                     return;
                 }
-                (L("submitted"), n(_.i.TAKE_ACTION), await E());
+                (x("submitted"), n(_.i.TAKE_ACTION), await E());
             }
-        }, [t, x, n, E, D, R]),
+        }, [t, L, n, E, D, R]),
         y = s.useCallback(async () => {
             ("submitted" !== R && n(_.i.USER_DISMISS), await E());
         }, [n, E, R]),
@@ -70,15 +70,15 @@ function M(e) {
             ],
             [],
         ),
-        P = x ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
-    return (0, i.jsx)(a.k, {
+        P = L ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
+    return (0, i.jsx)(r.k, {
         size: "md",
         transitionState: A,
         onClose: y,
         gradientColor: "blue",
         graphic: {
             type: "dynamic",
-            component: r.DynamicGraphicComponent.GUILD_THEME_NUX_PREVIEW,
+            component: a.DynamicGraphicComponent.GUILD_THEME_NUX_PREVIEW,
             aspectRatio: "16/9",
             props: { themeSettings: G },
         },
@@ -87,7 +87,7 @@ function M(e) {
         actions: [
             {
                 text: P,
-                variant: x ? "secondary" : "primary",
+                variant: L ? "secondary" : "primary",
                 loading: "submitting" === R,
                 disabled: "submitting" === R,
                 onClick: U,
@@ -107,7 +107,7 @@ function M(e) {
                     label: N.intl.string(N.t.Q7mm4g),
                     hideLabel: !0,
                 }),
-                x && (0, i.jsx)(u.w, { type: "warning", message: N.intl.string(N.t.tTHQAy), role: "status" }),
+                L && (0, i.jsx)(u.w, { type: "warning", message: N.intl.string(N.t.tTHQAy), role: "status" }),
                 null != M && (0, i.jsx)(u.w, { type: "critical", message: M, role: "alert" }),
             ],
         }),

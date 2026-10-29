@@ -1,4 +1,4 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -53,39 +53,39 @@ function C() {
         ],
     });
 }
-function j(e) {
-    let { channelId: t, x: n, y: j, label: y, roomWidth: I, seat: N } = e,
+function y(e) {
+    let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
         v = (0, a.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
         E = (0, a.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
-                .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === j)),
+                .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
         ),
         b = (0, a.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
         S = l.useCallback(async () => {
             null != b &&
                 (v
-                    ? (0, u.AQ)(b, t, { user_position: { x: n, y: j }, user_seat: N }).catch((e) =>
+                    ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: N }).catch((e) =>
                           (0, h.b)({ silent: !0 }),
                       )
-                    : ((0, u.TJ)({ x: n, y: j }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [v, b, t, n, j, N]),
-        _ = (0, m.Sb)({
-            position: { x: n, y: j },
-            targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: y }),
+                    : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
+        }, [v, b, t, n, y, N]),
+        T = (0, m.Sb)({
+            position: { x: n, y },
+            targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
         });
     if (E || null == b) return null;
-    let { numericAvatarSize: T } = (0, A.F)(I),
-        R = 1.2 * Math.max(T, 24);
+    let { numericAvatarSize: _ } = (0, A.F)(I),
+        R = 1.2 * Math.max(_, 24);
     return (0, i.jsx)(s.m, {
-        text: v || null != _ ? null : x.intl.string(x.t["96ANUN"]),
+        text: v || null != T ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(r.D, {
             role: "listitem",
-            "aria-label": y,
+            "aria-label": j,
             className: g.am,
-            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${j}% - ${R / 2}px)` },
+            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
             onClick: S,
-            ..._,
+            ...T,
             children: (0, i.jsx)(C, {}),
         }),
     });

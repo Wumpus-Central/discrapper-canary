@@ -16,16 +16,16 @@ var i = n(477900),
     x = n(939249),
     g = n(367513),
     C = n(717558),
-    j = n(793574),
-    y = n(198052),
+    y = n(793574),
+    j = n(198052),
     I = n(85448),
     N = n(614881),
     v = n(480890),
     E = n(450149),
     b = n(607407),
     S = n(776231),
-    _ = n(267102),
-    T = n(209932),
+    T = n(267102),
+    _ = n(209932),
     R = n(326567),
     O = n(51082),
     L = n(541157),
@@ -108,7 +108,7 @@ function es(e) {
             posturesEnabled: $,
             seat: q,
         } = e,
-        el = (0, _.Us)(),
+        el = (0, T.Us)(),
         es = (0, d.bG)([U.default], () => U.default.getUser(t)),
         er = (0, d.bG)([U.default], () => U.default.getCurrentUser()?.id === t),
         { isMenuOpen: eo, setMenuOpen: ec } = l.useContext(W.t),
@@ -120,16 +120,16 @@ function es(e) {
         ),
         ep = (0, d.bG)([P.A], () => P.A.getStreamForUser(t, eu)),
         em = (0, C.A)({ userId: t }),
-        eA = (0, d.bG)([T.A], () => T.A.isUserPlayingSounds(t)),
+        eA = (0, d.bG)([_.A], () => _.A.isUserPlayingSounds(t)),
         ef = (0, d.bG)([V.A], () => V.A.isFocused()),
         ex = (0, G.tx)(eu, n, es),
         eg = (0, d.bG)([z.A], () => z.A.getRoom(n)?.background ?? o.I.DEFAULT),
         { seats: eC } = Q.iX[eg],
-        ej =
+        ey =
             null != q && q !== c.x.UNSET
                 ? eC[q]
                 : Object.values(eC).find((e) => e.position.x === a && e.position.y === u),
-        [ey, eI] = l.useState(!1),
+        [ej, eI] = l.useState(!1),
         eN = (0, p.z)({
             x: a,
             y: u,
@@ -138,23 +138,23 @@ function es(e) {
             onStart: () => eI(!0),
         }),
         ev = (0, d.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === n),
-        eE = (0, d.bG)([y.A], () => {
-            let e = y.A.getParticipant(n, t);
+        eE = (0, d.bG)([j.A], () => {
+            let e = j.A.getParticipant(n, t);
             return (0, J.Xw)(e) ? e : null;
         }),
         eb = (0, O.y9)(eE ?? void 0),
         eS = ev && eb && null != eE,
-        e_ = l.useCallback(() => {
+        eT = l.useCallback(() => {
             null != eu &&
                 ((0, B.EB)({ guildId: eu, channelId: n, interactionType: "clicked" }),
                 eS && (ed || !er || !$) && (g.A.selectParticipant(n, null), (0, k.UV)(!0, n)));
         }, [eu, n, ed, eS, er, $]),
-        eT = l.useCallback(
+        e_ = l.useCallback(
             (e) => {
                 let t = M.A.getChannel(n);
                 if (null != eu && null != es && null != t)
                     return (0, R.r)(e, es, t, { context: el }, (e, t) =>
-                        (0, v.s)(e, j.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: es.id })(t),
+                        (0, v.s)(e, y.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: es.id })(t),
                     );
             },
             [eu, es, n, el],
@@ -165,10 +165,10 @@ function es(e) {
         eO = (er && $) || eS,
         eL = $ ? K.x.find((e) => e.id === E) : null,
         eP =
-            null != ej
+            null != ey
                 ? en.intl.formatToPlainString(eL?.userLabel ?? et.default["4bL+KW"], {
                       username: ex,
-                      seatLabel: ej.getLabel(),
+                      seatLabel: ey.getLabel(),
                   })
                 : ex,
         eM = eh?.isVoiceDeafened()
@@ -194,7 +194,7 @@ function es(e) {
                   deafen: eh?.isVoiceDeafened() ?? !1,
                   voiceStatus: eF,
                   ringing: !1,
-                  className: ej?.dim ? ei.r3 : void 0,
+                  className: ey?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
                   avatarClassName: s()(ei.Cy, eL?.avatarClassName),
                   renderIcon:
@@ -223,7 +223,7 @@ function es(e) {
                   deafen: eh?.isVoiceDeafened() ?? !1,
                   voiceStatus: eF,
                   ringing: !1,
-                  className: ej?.dim ? ei.r3 : void 0,
+                  className: ey?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
                   avatarClassName: eL?.avatarClassName,
                   renderIcon:
@@ -249,8 +249,8 @@ function es(e) {
             "aria-label": eM,
             className: ei.KI,
             onMouseEnter: eR,
-            onClick: e_,
-            onContextMenu: eT,
+            onClick: eT,
+            onContextMenu: e_,
             ...ew,
             children: ez,
         });
@@ -266,12 +266,12 @@ function es(e) {
             "aria-label": eM,
             className: ei.KI,
             onMouseEnter: eR,
-            onClick: e_,
-            onContextMenu: eT,
+            onClick: eT,
+            onContextMenu: e_,
             ...ew,
             children: eW,
         }),
-        e$ = ey && er ? 500 : 100;
+        e$ = ej && er ? 500 : 100;
     return (0, i.jsx)(r.animated.div, {
         role: "listitem",
         className: s()(ei.f1, { [ei.hY]: eO }),
@@ -292,9 +292,9 @@ function es(e) {
                                       innerRef: t,
                                       onMouseEnter: eR,
                                       onClick: () => {
-                                          (n(), e_());
+                                          (n(), eT());
                                       },
-                                      onContextMenu: eT,
+                                      onContextMenu: e_,
                                       ...ew,
                                       children: ez,
                                   });

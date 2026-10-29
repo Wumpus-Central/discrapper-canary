@@ -1,21 +1,21 @@
-n.d(t, { t: () => a });
-var i = n(96337),
-    d = n(997101),
-    r = n(626584);
-let l = new Set(i.A.map((e) => e.alpha2)),
-    h = [`${d.d.AN}`, `${d.d.MI}`, `${d.d.TP}`],
-    u = new r.A("GetFlagEmoji");
-function a(e) {
+l.d(t, { t: () => u });
+var n = l(96337),
+    a = l(997101),
+    r = l(626584);
+let s = new Set(n.A.map((e) => e.alpha2)),
+    i = [`${a.d.AN}`, `${a.d.MI}`, `${a.d.TP}`],
+    o = new r.A("GetFlagEmoji");
+function u(e) {
     if (null == e) return "";
     try {
-        if (h.includes(e) || !l.has(e)) return n(874629)("./1f30e.svg");
+        if (i.includes(e) || !s.has(e)) return l(874629)("./1f30e.svg");
         let t = e
             .toUpperCase()
             .split("")
             .map((e) => (127397 + e.charCodeAt(0)).toString(16))
             .join("-");
-        return n(874629)(`./${t}.svg`);
+        return l(874629)(`./${t}.svg`);
     } catch (e) {
-        return (u.error("Error getting flag emoji: ", e), "");
+        return (o.error("Error getting flag emoji: ", e), "");
     }
 }

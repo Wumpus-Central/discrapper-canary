@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => T });
 var i = n(477900),
     l = n(582128),
     a = n(621466),
@@ -16,21 +16,21 @@ var i = n(477900),
     x = n(734057),
     g = n(71393),
     C = n(576705),
-    j = n(309010),
-    y = n(977997),
+    y = n(309010),
+    j = n(977997),
     I = n(625494),
     N = n(446243),
     v = n(889426),
     E = n(652215),
     b = n(806931),
     S = n(527133);
-let _ = function (e) {
-    let { channelId: t, popoutType: n, width: _, height: T, idle: R, onClose: O } = e,
+let T = function (e) {
+    let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: O } = e,
         L = (0, m.Us)(),
         P = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
         M = (0, s.bG)([x.A], () => x.A.getChannel(t)),
         w = (0, s.bG)([g.A], () => g.A.getGuild(M?.getGuildId())),
-        U = (0, s.bG)([j.Ay], () => null != M && j.Ay.getVoiceChannelId() === M.id),
+        U = (0, s.bG)([y.Ay], () => null != M && y.Ay.getVoiceChannelId() === M.id),
         {
             participants: D,
             filteredParticipants: V,
@@ -65,7 +65,7 @@ let _ = function (e) {
     null == M)
         ? null
         : (0, i.jsx)(r.D, {
-              style: { width: _, height: T },
+              style: { width: T, height: _ },
               className: S.Lw,
               onClick: function (e) {
                   null == M || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || O();
@@ -88,7 +88,7 @@ let _ = function (e) {
                       if (null != M) {
                           if (
                               (0, b.Ay)(e) &&
-                              (0, p.eo)(M, y.A, g.A, C.A, u.default)[0] &&
+                              (0, p.eo)(M, j.A, g.A, C.A, u.default)[0] &&
                               0 ===
                                   f.A.getAllActiveStreams().filter(
                                       (t) => (0, h._z)(t) === e.id && t.state !== E.XYD.ENDED,
@@ -112,7 +112,7 @@ let _ = function (e) {
                   showParticipants: F,
                   popoutType: n,
                   awaitingRemoteSessionInfo: z,
-                  callContainerDimensions: { width: _, height: T },
+                  callContainerDimensions: { width: T, height: _ },
               }),
           });
 };

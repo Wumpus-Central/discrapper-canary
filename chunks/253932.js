@@ -19,7 +19,7 @@ n.d(t, {
     NF: () => e3,
     NO: () => M,
     NR: () => L,
-    PZ: () => e4,
+    PZ: () => e6,
     Pf: () => $,
     Pw: () => eY,
     Q$: () => eD,
@@ -84,7 +84,7 @@ n.d(t, {
     pE: () => e$,
     pK: () => e8,
     pR: () => W,
-    qN: () => e6,
+    qN: () => e4,
     rs: () => eM,
     tP: () => G,
     tz: () => eS,
@@ -853,7 +853,7 @@ function e5(e) {
     let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: i } = e;
     return { goreContentGuilds: t ?? void 0, goreContentFriendDm: n ?? void 0, goreContentNonFriendDm: i ?? void 0 };
 }
-let e6 = (0, _.c$)("textAndImages", "goreContentSettings", e3, e5);
+let e4 = (0, _.c$)("textAndImages", "goreContentSettings", e3, e5);
 ((0, _.c$)(
     "appearance",
     "searchResultExactCountEnabled",
@@ -866,7 +866,7 @@ let e6 = (0, _.c$)("textAndImages", "goreContentSettings", e3, e5);
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ));
-let e4 = (0, _.c$)(
+let e6 = (0, _.c$)(
         "appearance",
         "timestampHourCycle",
         (e) => e ?? s.PZ.AUTO,

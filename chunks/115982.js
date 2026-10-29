@@ -1,4 +1,4 @@
-(n.d(t, { B4: () => c, C6: () => h, CT: () => x, Jf: () => g, Lf: () => j, SY: () => u, WQ: () => s, lt: () => v }),
+(n.d(t, { B4: () => c, C6: () => x, CT: () => h, Jf: () => g, Lf: () => j, SY: () => u, WQ: () => s, lt: () => v }),
     n(321073),
     n(134528),
     n(947204));
@@ -122,7 +122,7 @@ function g(e, t) {
             let l = { taskId: e, task: p("task", "task", t), steps: [] };
             return (a.set(e, l), l);
         }
-        function h(e, n, a, i) {
+        function x(e, n, a, i) {
             if ("task" === a || "task" === n) return null != e ? g(e, i).task : (t = t ?? p("task", "task", i));
             let r = `${e ?? ""} ${n}`,
                 o = s.get(r);
@@ -130,7 +130,7 @@ function g(e, t) {
             let u = p(n, "step", i);
             return (s.set(r, u), null != e ? g(e, i).steps.push(u) : l.push(u), u);
         }
-        let x = (function (e) {
+        let h = (function (e) {
                 let t = new Set();
                 for (let n of e) {
                     if ("node" !== n.kind || null == n.node) continue;
@@ -155,12 +155,12 @@ function g(e, t) {
             })(e);
         for (let [t, n] of e.entries()) {
             if (
-                (0 !== x.size &&
+                (0 !== h.size &&
                     "error" !== n.kind &&
                     "terminal_error" !== n.kind &&
                     null != n.task_id &&
                     "" !== n.task_id &&
-                    x.has(n.task_id)) ||
+                    h.has(n.task_id)) ||
                 (0 !== j.size &&
                     "node" === n.kind &&
                     null != n.node &&
@@ -171,7 +171,7 @@ function g(e, t) {
             let e = m[t] ?? 0;
             if ("node" === n.kind && null != n.node) {
                 let t = n.node,
-                    l = h(n.task_id, t.id, t.node_kind ?? "step", e);
+                    l = x(n.task_id, t.id, t.node_kind ?? "step", e);
                 if (
                     ((l.touched = ++u),
                     null != t.label_key && (l.labelKey = t.label_key),
@@ -207,7 +207,7 @@ function g(e, t) {
                 continue;
             }
             if ("error" === n.kind || "terminal_error" === n.kind) {
-                let l = h(void 0, `${n.kind}-${t}`, "step", e);
+                let l = x(void 0, `${n.kind}-${t}`, "step", e);
                 ((l.touched = ++u),
                     (l.labelKey = (function (e) {
                         let t = "error" === e.kind ? e.failure_kind : void 0,
@@ -229,7 +229,7 @@ function g(e, t) {
         return { steps: l, tasks: v, ...(null != t ? { turn: t } : {}) };
     })(e, { turnActive: t }));
 }
-function h(e) {
+function x(e) {
     let t,
         { turnActive: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { items: l } = (null == (t = m.get(e)) && ((t = f(e)), m.set(e, t)), t),
@@ -269,7 +269,7 @@ function h(e) {
     }
     return c;
 }
-function x(e, t) {
+function h(e, t) {
     let { turnActive: n } = t,
         l = e.filter((e) => e.hasWork || e.hasTodos).at(-1)?.index,
         a = e.at(-1)?.index,

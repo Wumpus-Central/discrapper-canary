@@ -17,7 +17,7 @@ var i = n(477900),
     E = n(545807),
     C = n(392164),
     b = n(85290);
-function T(e, t) {
+function v(e, t) {
     return {
         name: e,
         left: Math.ceil(t.left),
@@ -26,7 +26,7 @@ function T(e, t) {
         bottom: Math.ceil(t.bottom),
     };
 }
-class v {
+class T {
     resizeObserver;
     mutationObserver;
     zones = new Map();
@@ -47,7 +47,7 @@ class v {
         let t = this.zones.get(e);
         null != t && this.resizeObserver.unobserve(t.element);
         let n = e.getBoundingClientRect();
-        (this.zones.set(e, { element: e, zone: T(t?.zone.name ?? (0, u.A)(), n) }),
+        (this.zones.set(e, { element: e, zone: v(t?.zone.name ?? (0, u.A)(), n) }),
             this.elements.add(e),
             this.resizeObserver.observe(e),
             this.updateZones());
@@ -67,7 +67,7 @@ class v {
             let e = !1;
             for (let [t, n] of this.zones) {
                 let i = t.getBoundingClientRect(),
-                    r = T(n.zone.name, i);
+                    r = v(n.zone.name, i);
                 (0, d.A)(r, n.zone) || ((e = !0), (n = { element: n.element, zone: r }), this.zones.set(t, n));
             }
             e && this.updateZones();
@@ -101,7 +101,7 @@ class v {
             this.updateZones());
     }
 }
-let _ = r.createContext(new v((0, E.b)()));
+let _ = r.createContext(new T((0, E.b)()));
 function I(e) {
     let { observe: t = !0, className: n, style: l, children: a } = e,
         o = r.useContext(_),

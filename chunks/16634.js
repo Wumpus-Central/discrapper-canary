@@ -12,8 +12,8 @@ var l = n(477900),
     m = n(256905),
     p = n(922329),
     g = n(919790),
-    h = n(463660),
-    x = n(115982),
+    x = n(463660),
+    h = n(115982),
     j = n(17928),
     v = n(778712),
     b = n(730134),
@@ -43,10 +43,10 @@ var N = n(60160),
     C = n(162052);
 function I(e) {
     let { projectId: t, node: n, presentation: i = "row", active: m = !1 } = e,
-        [p, h] = a.useState(!1),
+        [p, x] = a.useState(!1),
         j = a.useId(),
-        v = a.useCallback(() => h((e) => !e), []),
-        b = (0, x.WQ)(n),
+        v = a.useCallback(() => x((e) => !e), []),
+        b = (0, h.WQ)(n),
         k = n.detail,
         y = "failed" === n.status ? "text-feedback-critical" : "detail" === i ? "text-muted" : "text-default",
         I = "text-muted" === y,
@@ -54,9 +54,9 @@ function I(e) {
         T = r()(S.iq, { [C.Hz]: m && I }),
         D = "detail" === i ? "text-md/normal" : "text-sm/normal",
         M = "detail" === i ? "text-sm/normal" : "text-xs/normal",
-        K = null != t ? n.screenshots : [],
-        z = null != t ? n.attachments : [];
-    if (0 === k.length && 0 === K.length && 0 === z.length)
+        z = null != t ? n.screenshots : [],
+        K = null != t ? n.attachments : [];
+    if (0 === k.length && 0 === z.length && 0 === K.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
@@ -137,13 +137,13 @@ function I(e) {
                             t,
                         );
                     }),
-                    null != t && K.length > 0
+                    null != t && z.length > 0
                         ? (0, l.jsx)("div", {
                               className: S.y8,
-                              children: K.map((e) => (0, l.jsx)(P, { projectId: t, screenshotId: e }, e)),
+                              children: z.map((e) => (0, l.jsx)(P, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
-                    null != t && z.length > 0 ? (0, l.jsx)(g.A, { projectId: t, attachments: z }) : null,
+                    null != t && K.length > 0 ? (0, l.jsx)(g.A, { projectId: t, attachments: K }) : null,
                 ],
             }),
         ],
@@ -157,7 +157,7 @@ function P(e) {
     a.useEffect(() => {
         let e = !1;
         return (
-            (0, h.aF)(t, n).then(
+            (0, x.aF)(t, n).then(
                 (t) => {
                     e || r(t);
                 },
@@ -172,7 +172,7 @@ function P(e) {
     }, [t, n]);
     let u = A.intl.string(_.default["5kjnI/"]),
         d = a.useCallback(() => {
-            (0, h.aF)(t, n).then((e) => {
+            (0, x.aF)(t, n).then((e) => {
                 (0, m.R)({
                     items: [{ type: "IMAGE", url: e, alt: u }],
                     startingIndex: 0,

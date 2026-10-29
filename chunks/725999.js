@@ -2963,8 +2963,8 @@ class e3 extends eA {
     setVideoEncoderParameters(e) {}
 }
 let e5 = n.p + "worklet.8d84a64a97f8451a.js",
-    e6 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e4 extends R.EventEmitter {
+    e4 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
+class e6 extends R.EventEmitter {
     userId;
     sinkId;
     input;
@@ -3021,7 +3021,7 @@ class e4 extends R.EventEmitter {
         null != n && (null == t || 0 === n.removeTrack(t)) && (n.destroy(), delete this.outputs[e]);
     }
     async handshake() {
-        let e = await this.pc1.createOffer(e6);
+        let e = await this.pc1.createOffer(e4);
         (await this.pc1.setLocalDescription(
             (function (e) {
                 let t = e.sdp.split("\n");
@@ -3496,7 +3496,7 @@ class ts extends p.A {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new e4(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new e6(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }

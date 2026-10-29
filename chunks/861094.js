@@ -31,18 +31,18 @@ function i(e, t, n, i) {
                 x = h - d,
                 g = -o + d - h,
                 C = 0,
-                j = 0;
+                y = 0;
             if (0 !== A || 0 !== g) {
                 let e = p * x - f * m;
-                ((C = (A * x - m * g) / e), (j = (p * g - f * A) / e));
+                ((C = (A * x - m * g) / e), (y = (p * g - f * A) / e));
             }
-            let y = r + C * r,
-                I = u + j * u,
+            let j = r + C * r,
+                I = u + y * u,
                 N = o + C * o,
-                v = h + j * h,
+                v = h + y * h,
                 E = C / t,
-                b = j / n;
-            return `matrix3d(${[y / t, N / t, 0, E, I / n, v / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
+                b = y / n;
+            return `matrix3d(${[j / t, N / t, 0, E, I / n, v / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
         })(l, t, a),
     };
 }
