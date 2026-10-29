@@ -914,13 +914,13 @@ var ek = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "656642",
-        s = "527353d13fd57a3b56ca9b9f1b02ba4a2f602654".substring(0, 7),
+        n = "656654",
+        s = "eb1395b1b463a54ef441be01ed8d577ffa4a46ae".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1793304084721", !1) : null,
+        u = null != o ? (0, eq.A)("1793304364548", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1086,8 +1086,8 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e9 = n(669067),
-    e4 = n(830543),
+    e4 = n(669067),
+    e9 = n(830543),
     e7 = n(953056);
 let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
     e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
@@ -1100,7 +1100,7 @@ function e8(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eM.default.getCurrentUser() && (g(!0), (0, e4.default)());
+            null == eM.default.getCurrentUser() && (g(!0), (0, e9.default)());
         }
         return (
             ek.default.addChangeListener(e),
@@ -1117,7 +1117,7 @@ function e8(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e3.has(e) || (0, e9._)(e);
+                  e3.has(e) || (0, e4._)(e);
                   let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
