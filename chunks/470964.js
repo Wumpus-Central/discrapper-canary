@@ -45,10 +45,8 @@ function b(e, t) {
                 guildId: N,
                 authorId: O,
                 setHasSpoilerEmbeds: w,
-                formatInline: C,
-                noStyleAndInteraction: E,
             }),
-            [x, I, _, N, O, w, C, E],
+            [x, I, _, N, O, w],
         );
     return i.useMemo(() => {
         if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -63,14 +61,14 @@ function b(e, t) {
                 },
             });
         }
-        return j.enabled && null == y
+        return j.enabled && !C && null == y
             ? {
                   content: (0, s.jsx)(i.Suspense, {
                       children: (0, s.jsx)(h.O.Provider, {
                           value: R,
                           children: (0, s.jsx)(d.A, {
                               content: e.content,
-                              allowJumboEmoji: !C && e.type !== p.lAJ.MEDIA_MENTION_MESSAGE,
+                              allowJumboEmoji: e.type !== p.lAJ.MEDIA_MENTION_MESSAGE,
                               hideSingleLinkContent: b && (0, l.k5)(e.embeds),
                           }),
                       }),
