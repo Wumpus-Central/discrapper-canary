@@ -841,8 +841,8 @@ var e0 = n(305866),
     e2 = n(229087),
     e7 = n(753437),
     e8 = n(382701),
-    e5 = n(408519);
-function e3(e) {
+    e3 = n(408519);
+function e5(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
         d = o.useMemo(() => n?.filter((e) => null != (0, e7.W3)(e)) ?? [], [n]),
@@ -909,11 +909,11 @@ function e3(e) {
         );
     return c || u
         ? (0, i.jsxs)("div", {
-              className: e5.kL,
+              className: e3.kL,
               ref: x,
               children: [
                   (0, i.jsxs)("ul", {
-                      className: e5.xP,
+                      className: e3.xP,
                       "aria-hidden": !0,
                       children: [
                           d.map((e) =>
@@ -931,7 +931,7 @@ function e3(e) {
                               ),
                           ),
                           (0, i.jsx)("li", {
-                              className: e5.lv,
+                              className: e3.lv,
                               ref: h,
                               children: (0, i.jsx)(g.E, {
                                   variant: "text-xxs/medium",
@@ -943,7 +943,7 @@ function e3(e) {
                   }),
                   c &&
                       (0, i.jsx)("ul", {
-                          className: e5.nM,
+                          className: e3.nM,
                           "aria-label": v.intl.string(v.t["4Rq3a7"]),
                           children: d
                               .slice(0, E)
@@ -959,7 +959,7 @@ function e3(e) {
                           onOpenChange: b,
                           disableInteraction: a,
                           children: d.map((e) =>
-                              (0, i.jsx)(e2.A, { tag: e, className: e5.Hl, onRemove: r ? () => O(e) : void 0 }, e),
+                              (0, i.jsx)(e2.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
                   u && (0, i.jsx)(e1.A, { tags: d, onTagsChange: y, onOpen: k, onClose: R, variant: "filled", ref: I }),
@@ -972,7 +972,7 @@ function e4(e) {
         d = v.intl.string(v.t.pWHvBI);
     return s
         ? (0, i.jsx)("div", {
-              className: `${e5.lv} ${e8.r9}`,
+              className: `${e3.lv} ${e8.r9}`,
               ref: t,
               children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
           })
@@ -985,10 +985,10 @@ function e4(e) {
               onRequestClose: () => a(!1),
               renderPopout: () =>
                   (0, i.jsx)(e0.l, {
-                      className: e5.Kt,
+                      className: e3.Kt,
                       "aria-label": d,
                       returnRef: t,
-                      children: (0, i.jsx)("ul", { className: e5.ns, children: r }),
+                      children: (0, i.jsx)("ul", { className: e3.ns, children: r }),
                   }),
               children: (e) =>
                   (0, i.jsx)(k.m, {
@@ -999,7 +999,7 @@ function e4(e) {
                           innerRef: t,
                           "aria-label": d,
                           "aria-expanded": l,
-                          className: e5.lv,
+                          className: e3.lv,
                           children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
                       }),
                   }),
@@ -1462,7 +1462,7 @@ function tO(e) {
                             n.e("531123"),
                             n.e("5257"),
                             n.e("970846"),
-                            n.e("586467"),
+                            n.e("334179"),
                             n.e("151502"),
                             n.e("317225"),
                             n.e("124060"),
@@ -1594,7 +1594,7 @@ function tO(e) {
                                                       allowEditing: G,
                                                       onEditingChange: N,
                                                   }),
-                                                  (0, i.jsx)(e3, {
+                                                  (0, i.jsx)(e5, {
                                                       clipId: _.key,
                                                       tags: _.tags,
                                                       allowEditing: r,
@@ -1849,7 +1849,7 @@ function t2(e) {
 }
 var t7 = n(683071),
     t8 = n(312252);
-function t5(e) {
+function t3(e) {
     let { widgetType: t, gameCount: n } = e,
         l = (0, j.cv)(t);
     return n <= l
@@ -1863,7 +1863,7 @@ function t5(e) {
               }),
           });
 }
-var t3 = n(943793),
+var t5 = n(943793),
     t4 = n(192),
     t9 = n(148420);
 function t6(e) {
@@ -1875,7 +1875,7 @@ function t6(e) {
             (0, i.jsx)(
                 "li",
                 {
-                    children: (0, i.jsx)(t3.A, {
+                    children: (0, i.jsx)(t5.A, {
                         index: t,
                         user: n,
                         game: e,
@@ -1906,7 +1906,7 @@ function ne(e) {
     return n && !l
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(t5, { widgetType: t, gameCount: a.length }),
+                  (0, i.jsx)(t3, { widgetType: t, gameCount: a.length }),
                   (0, i.jsx)(ta.B, { emptyListFallbackRef: r, children: m }),
               ],
           })
@@ -1945,7 +1945,7 @@ function nn(e) {
         ...d,
         children:
             null != o
-                ? (0, i.jsx)(t3.A, {
+                ? (0, i.jsx)(t5.A, {
                       user: t,
                       widgetType: n.type,
                       game: o,
@@ -2073,7 +2073,7 @@ function nx(e) {
     return n && !l
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(t5, { widgetType: t, gameCount: a.length }),
+                  (0, i.jsx)(t3, { widgetType: t, gameCount: a.length }),
                   (0, i.jsx)(ta.B, { emptyListFallbackRef: r, children: m }),
               ],
           })
