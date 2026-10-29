@@ -1,4 +1,4 @@
-let n, r, i, _, o, l, I, s, a, A;
+let n, r, i, _, o, s, l, I, a, A;
 var S,
     T,
     O,
@@ -49,7 +49,7 @@ if (null != $) {
         r = $.os.arch,
         _ = $.os.appArch,
         o = $.app.getReleaseChannel(),
-        l = P();
+        s = P();
     switch (E) {
         case "win32":
             e = "Windows";
@@ -72,7 +72,7 @@ if (null != $) {
             os_version: n,
             os_arch: r,
             app_arch: _,
-            system_locale: l,
+            system_locale: s,
             has_client_mods: M(),
             client_launch_id: f,
         }),
@@ -94,8 +94,8 @@ function B(e, t) {
     let E = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === E || ("string" != typeof E[1] && E[1].length) ? "" : decodeURIComponent(E[1]).replace(/\+/g, " ");
 }
-let H = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function v() {
+let v = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function H() {
     var e;
     let t,
         E,
@@ -107,7 +107,7 @@ function v() {
             ...n,
             ...((e = window.location.href),
             (E = {}),
-            H.forEach((t) => {
+            v.forEach((t) => {
                 let n = B(e, t);
                 n.length > 0 && (E[t] = n);
             }),
@@ -214,18 +214,20 @@ if (null == i)
                     n.set(U, 1));
             }
             let i = n.get(h);
-            null == i && ((i = v()), n.set(h, i));
+            null == i && ((i = H()), n.set(h, i));
             let _ = r.get(h);
             if (null == _) {
                 var o;
                 let e;
-                ((o = v()), (e = {}), Object.keys(o).map((t) => (e[`${t}_current`] = o[t])), (_ = e), r.set(h, _));
+                ((o = H()), (e = {}), Object.keys(o).map((t) => (e[`${t}_current`] = o[t])), (_ = e), r.set(h, _));
             }
             return {
                 ...E,
                 ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: D().version || "" }),
                 (t = w()),
-                null != t ? { ...e, os_version: t.systemVersion || "" } : { ...e, os_version: D()?.os?.version ?? "" }),
+                null != t
+                    ? { ...e, os_version: t.systemVersion || "", os_sdk_version: t.osSdkVersion || void 0 }
+                    : { ...e, os_version: D()?.os?.version ?? "" }),
                 ...i,
                 ..._,
             };
@@ -233,28 +235,28 @@ if (null == i)
     } catch (e) {
         i = {};
     }
-((l = {}),
-    (I = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
-        (null == l.release_channel || "" === l.release_channel) &&
-        (l.release_channel = I.split("-")[0]),
-    isNaN((s = parseInt("656992", 10))) || (l.client_build_number = s),
-    null == (a = $?.app.getBuildNumber()) || isNaN(a) || (l.native_build_number = a),
-    (l.client_event_source = (function () {
+((s = {}),
+    (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
+        (null == s.release_channel || "" === s.release_channel) &&
+        (s.release_channel = l.split("-")[0]),
+    isNaN((I = parseInt("657000", 10))) || (s.client_build_number = I),
+    null == (a = $?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
+    (s.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
         } catch (e) {}
         return null;
     })()),
-    (l.has_client_mods = M()),
-    (l.client_launch_id = f),
-    null != (A = w()?.installSource) && (l.install_source = A),
+    (s.has_client_mods = M()),
+    (s.client_launch_id = f),
+    null != (A = w()?.installSource) && (s.install_source = A),
     (function (e) {
         try {
             G.from(JSON.stringify(e)).toString("base64");
         } catch (e) {
             return null;
         }
-    })((i = { ...i, ...l })));
+    })((i = { ...i, ...s })));
 var y = E(824120),
     b = E.n(y);
 function F(e) {
@@ -675,7 +677,7 @@ function eo(e) {
           ? { decryptedToken: eE.decryptString(e.substring(et.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
-var el =
+var es =
         (((T = {})[(T.DISPATCH = 0)] = "DISPATCH"),
         (T[(T.HEARTBEAT = 1)] = "HEARTBEAT"),
         (T[(T.IDENTIFY = 2)] = "IDENTIFY"),
@@ -709,8 +711,8 @@ var el =
         (T[(T.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (T[(T.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         T),
-    eI = E(377941),
-    es = E.n(eI),
+    el = E(377941),
+    eI = E.n(el),
     ea =
         (((O = {}).ALL = "ALL"),
         (O.AVATAR_DECORATION = "AVATAR_DECORATION"),
@@ -989,7 +991,7 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
     );
 function ed(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return new x(`:${es()(e)}(${t})${E ? "?" : ""}`);
+    return new x(`:${eI()(e)}(${t})${E ? "?" : ""}`);
 }
 (Object.freeze({
     GUILD_FEED_REMOVED: 1,
@@ -1025,13 +1027,13 @@ let eC = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = ec.map(es()).join("|");
+            E = ec.map(eI()).join("|");
         return ed(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...eL].map(es()).join("|");
+            E = [...eL].map(eI()).join("|");
         return ed(e, `${E}|\\d+`, { optional: t });
     },
 };
@@ -1106,7 +1108,7 @@ let ep = new Set([
         E = window._ws.state,
         r = E.open;
     performance.mark("FastConnect-socket-open", { detail: { alreadyOpen: r } });
-    let l = function () {
+    let s = function () {
         if (
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
@@ -1132,7 +1134,7 @@ let ep = new Set([
         }
         let _ = n.get("installation_id_v3") ?? n.get("analytics_installation");
         var o = r({
-            op: el.IDENTIFY,
+            op: es.IDENTIFY,
             d: {
                 token: e,
                 capabilities: (function (e) {
@@ -1145,5 +1147,5 @@ let ep = new Set([
         });
         (performance.mark("FastConnect-identify-sent"), t.send(o), (E.identify = !0));
     };
-    r ? l() : (t.onopen = l);
+    r ? s() : (t.onopen = s);
 })();
