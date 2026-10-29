@@ -4497,18 +4497,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-09-referral-trial-cta",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "kind": "installation",
     "name": "2026-09-registration-email-opt-in-copy",
     "defaultConfig": {
