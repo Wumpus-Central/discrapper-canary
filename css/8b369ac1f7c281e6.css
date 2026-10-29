@@ -10,7 +10,7 @@
 
     @container (max-width: 192px) {
         --custom-placeholder-text-size: 12px;
-        --custom-placeholder-text-gap: 8px
+        --custom-placeholder-text-gap: var(--space-8)
     }
 
     align-items:center;
@@ -27,7 +27,7 @@
 
 .placeholderBar__7a78a {
     background-color: var(--background-mod-subtle);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     height: var(--custom-placeholder-text-size)
 }
 
@@ -55,4 +55,4 @@
     opacity: .2
 }
 
-/*# sourceMappingURL=7b1b03864a6f1621.css.map*/
+/*# sourceMappingURL=8b369ac1f7c281e6.css.map*/
