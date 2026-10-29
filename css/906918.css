@@ -568,6 +568,15 @@
     padding-inline: var(--space-8)
 }
 
+.emojiItem_a3bcb0:active {
+    transform: translate(var(--space-4), var(--space-4))
+}
+
+.emojiItem_a3bcb0:active,
+.emojiItem_a3bcb0[aria-pressed=true] {
+    box-shadow: none
+}
+
 .emoji_a3bcb0 {
     height: 28px;
     width: 28px
@@ -1375,4 +1384,4 @@
     gap: 2px
 }
 
-/*# sourceMappingURL=906918.3e5f54ec5cace61f.css.map*/
+/*# sourceMappingURL=906918.29318522992b4873.css.map*/
