@@ -22,4 +22,16 @@
     z-index: -1
 }
 
-/*# sourceMappingURL=94703890b8b180f5.css.map*/
+.heroContainer__4b1a9 {
+    min-width: 0
+}
+
+.backgroundImageHero__4b1a9 {
+    bottom: auto;
+    height: 350px;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, .6) 60%, rgba(0, 0, 0, .4) 80%, transparent);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, .6) 60%, rgba(0, 0, 0, .4) 80%, transparent);
+    opacity: 1
+}
+
+/*# sourceMappingURL=09b265dd6a2ce2be.css.map*/

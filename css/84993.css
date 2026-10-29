@@ -56,6 +56,17 @@
     height: 246px
 }
 
+.cardFullWidth_abfd90 {
+    aspect-ratio: 1056/516;
+    container-type: inline-size;
+    min-height: 15.375rem
+}
+
+.cardFullWidth_abfd90.cardAnimation_abfd90:has(:focus-visible),
+.cardFullWidth_abfd90.cardAnimation_abfd90:hover {
+    transform: scale(101%)
+}
+
 .cardImageContainer_abfd90 {
     bottom: 0;
     top: 0;
@@ -167,6 +178,12 @@
     position: absolute
 }
 
+.cardFullWidth_abfd90 .inGameItemLabelContainer_abfd90>div,
+.cardFullWidth_abfd90 .itemName_abfd90 {
+    background-color: var(--opacity-black-28);
+    border-radius: var(--radius-xs)
+}
+
 .titleContainer_abfd90 {
     display: flex;
     flex-direction: row;
@@ -267,6 +284,15 @@
 
 .full-motion .bottomGradient_abfd90 {
     transition: transform .5s
+}
+
+.cardFullWidth_abfd90 .bottomGradient_abfd90 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, .9) 10%, rgba(0, 0, 0, .6) 40%, transparent 90%)
+}
+
+.cardFullWidth_abfd90:not(.cardAnimation_abfd90) .cardBackgroundImage_abfd90,
+.cardFullWidth_abfd90:not(.cardAnimation_abfd90) .cardImage_abfd90 {
+    transform: none
 }
 
 .iconAsset_abfd90 {
@@ -398,6 +424,43 @@
     vertical-align: top
 }
 
+@container (min-width: 786px) {
+    .cardFullWidth_abfd90 .buttonHover_abfd90 {
+        inset-inline-end: auto;
+        max-width: calc(var(--space-160)*3);
+        min-width: calc(var(--space-192) + var(--space-16) + 2px);
+        width: -moz-fit-content;
+        width: fit-content
+    }
+
+    .cardFullWidth_abfd90 .details_abfd90 {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto 1fr
+    }
+
+    .cardFullWidth_abfd90 .descriptionContainer_abfd90 {
+        min-height: 0;
+        overflow: hidden
+    }
+
+    .cardFullWidth_abfd90:has(:focus-visible) .titleContainer_abfd90,
+    .cardFullWidth_abfd90:hover .titleContainer_abfd90 {
+        transform: translateY(0)
+    }
+
+    .cardFullWidth_abfd90:has(:focus-visible) .details_abfd90,
+    .cardFullWidth_abfd90:hover .details_abfd90 {
+        grid-template-rows: auto 0fr;
+        padding-bottom: calc(var(--space-16) + var(--space-40) + var(--space-12));
+        row-gap: 0
+    }
+
+    .full-motion .cardFullWidth_abfd90 .details_abfd90 {
+        transition: grid-template-rows .5s, row-gap .5s, padding-bottom .5s
+    }
+}
+
 .full-motion .placeholderCard_abfd90 {
     animation: pulse_abfd90 2s ease-in-out infinite alternate;
     animation-fill-mode: backwards
@@ -414,4 +477,4 @@
     vertical-align: middle
 }
 
-/*# sourceMappingURL=84993.f1ec2f981381362b.css.map*/
+/*# sourceMappingURL=84993.3e7dde3530762918.css.map*/

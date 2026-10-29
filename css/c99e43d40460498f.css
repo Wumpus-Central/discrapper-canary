@@ -17,6 +17,10 @@
     grid-template-columns: repeat(auto-fit, minmax(246px, 516px))
 }
 
+.fullWidthCardGrid_e176e1 {
+    grid-template-columns: minmax(0, 1fr)
+}
+
 .sectionContainer_beb040 {
     width: 100%
 }
@@ -27,6 +31,10 @@
 
 .reducedTopMargin_beb040 {
     margin-top: var(--space-12)
+}
+
+.noTopMargin_beb040 {
+    margin-top: 0
 }
 
 .content__9c1cb {
@@ -81,4 +89,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=3bcbb1fa63ad5bc8.css.map*/
+/*# sourceMappingURL=c99e43d40460498f.css.map*/
