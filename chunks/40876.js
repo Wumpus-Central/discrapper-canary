@@ -697,7 +697,6 @@ let r = {
     QuestFetchManager: {
         actions: [
             "QUESTS_FETCH_CURRENT_QUESTS_BEGIN",
-            "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN",
             "POST_CONNECTION_OPEN",
             "RUNNING_GAMES_CHANGE",
             "RUNNING_NON_GAMES_CHANGE",

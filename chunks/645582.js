@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => m });
 var i = n(439372),
     r = n(183636),
     a = n(927813),
@@ -18,19 +18,16 @@ let u = { questFetchJitterMs: 5 * a.A.Millis.SECOND, questHomeHeroJitterMs: 5 * 
     });
 var E = n(971276);
 let A = a.A.Millis.DAY,
-    h = a.A.Millis.HOUR,
+    h = 30 * a.A.Millis.MINUTE,
     f = 5 * a.A.Millis.MINUTE,
-    I = 30 * a.A.Millis.MINUTE,
-    p = 5 * a.A.Millis.MINUTE,
-    T = 12 * a.A.Millis.HOUR,
-    m = 5 * a.A.Millis.MINUTE;
-class g extends i.A {
+    I = 12 * a.A.Millis.HOUR,
+    p = 5 * a.A.Millis.MINUTE;
+class T extends i.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
     initialQuestHomeHeroFetchTimerId = null;
     recurringFetchTimerId = null;
     lastFetchAttemptedAt = 0;
-    lastQuestHomeHeroFetchAttemptedAt = 0;
     lastFetchedQuestForLocaleChangeAt = 0;
     hasHandledConnectionOpen = !1;
     _fetch(e) {
@@ -56,22 +53,13 @@ class g extends i.A {
     handleQuestsFetchCurrentQuestsBegin = () => {
         this.lastFetchAttemptedAt = Date.now();
     };
-    handleQuestsFetchQuestHomeHeroBegin = () => {
-        this.lastQuestHomeHeroFetchAttemptedAt = Date.now();
-    };
     handlePostConnectionOpen = () => {
         (window.clearTimeout(this.initialFetchTimerId),
             window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
-            (this.recurringFetchTimerId = window.setInterval(async () => {
-                if (
-                    (Date.now() - this.lastFetchAttemptedAt > A && this._fetch("post_connect_recurring"),
-                    (0, E.s)() && Date.now() - this.lastQuestHomeHeroFetchAttemptedAt >= h - f)
-                )
-                    try {
-                        await (0, o.Yf)();
-                    } catch (e) {}
-            }, I)));
+            (this.recurringFetchTimerId = window.setInterval(() => {
+                Date.now() - this.lastFetchAttemptedAt > A && this._fetch("post_connect_recurring");
+            }, h)));
         let e = (0, E.s)(),
             t = this.hasHandledConnectionOpen;
         this.hasHandledConnectionOpen = !0;
@@ -85,21 +73,21 @@ class g extends i.A {
             r = Math.floor(Math.random() * n);
         if (
             ((this.initialFetchTimerId = window.setTimeout(() => {
-                Date.now() - d.A.lastFetchedCurrentQuests <= m || this._fetch("post_connect_initial");
+                Date.now() - d.A.lastFetchedCurrentQuests <= p || this._fetch("post_connect_initial");
             }, r)),
             e)
         ) {
             let e = r + Math.floor(Math.random() * i);
-            this.initialQuestHomeHeroFetchTimerId = window.setTimeout(async () => {
+            this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {
-                    await (0, o.Yf)();
+                    (0, o.Yf)();
                 } catch (e) {}
             }, e);
         }
     };
     handleRunningGamesChange = () => {
-        this.instantiatedAt + T > Date.now() ||
-            d.A.lastFetchedCurrentQuests + T > Date.now() ||
+        this.instantiatedAt + I > Date.now() ||
+            d.A.lastFetchedCurrentQuests + I > Date.now() ||
             this._fetch("running_games");
     };
     handleUserSettingsProtoUpdate = (e) => {
@@ -107,7 +95,7 @@ class g extends i.A {
         !("localization" in n.proto) ||
             !t ||
             i ||
-            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= p ||
+            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= f ||
             ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch("user_settings"));
     };
     handleStartSession = () => {
@@ -118,13 +106,11 @@ class g extends i.A {
             window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
             (this.lastFetchAttemptedAt = 0),
-            (this.lastQuestHomeHeroFetchAttemptedAt = 0),
             (this.lastFetchedQuestForLocaleChangeAt = 0),
             (this.hasHandledConnectionOpen = !1));
     };
     actions = {
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: this.handleQuestsFetchCurrentQuestsBegin,
-        QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: this.handleQuestsFetchQuestHomeHeroBegin,
         POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
         RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
         RUNNING_NON_GAMES_CHANGE: this.handleRunningGamesChange,
@@ -133,4 +119,4 @@ class g extends i.A {
         LOGOUT: this.handleLogout,
     };
 }
-let S = new g();
+let m = new T();

@@ -122,7 +122,7 @@ let N = new S(E.h, {
         ((T = !0), g(t, !0));
     },
     QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function (e) {
-        ((T = !1), (p = Date.now()), g(e.placement, !1), l.get(e.placement)?.succeed(), o.delete(e.placement));
+        ((T = !1), (p = Date.now()), g(e.placement, !1));
         let t = {
             creative: null != e.questHomeHero ? { type: c.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
             fetchedAt: e.fetchedAt,
@@ -138,7 +138,5 @@ let N = new S(E.h, {
     QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
         let { placement: t } = e;
         ((T = !1), g(t, !1));
-        let n = l.get(t);
-        (null == n && ((n = new d.A(f, I)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },
 });
