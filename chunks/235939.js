@@ -12,9 +12,9 @@ function d(e) {
     let { tab: t, handleTransition: l } = e,
         d = (0, s.c)(i.C.SHOP_NAGBAR),
         E = d?.properties.properties.oneofKind === "shopNagbar" ? d.properties.properties.shopNagbar : null,
-        A = d?.promotionId,
-        [p, C] = (0, r.Cc)(null != E && null != A ? a.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, A ?? "", u.m.NOTICE_BAR, !0);
-    return null != d && null != E && null != p
+        p = d?.promotionId,
+        [A, C] = (0, r.Cc)(null != E && null != p ? a.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, p ?? "", u.m.NOTICE_BAR, !0);
+    return null != d && null != E && null != A
         ? (0, n.jsx)(o.A, { shopNagbar: E, componentId: d.id, promotionId: d.promotionId, tab: t, onDismiss: C })
         : (0, n.jsx)(c.A, { tab: t, handleTransition: l });
 }

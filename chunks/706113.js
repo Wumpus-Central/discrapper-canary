@@ -18,11 +18,11 @@ function u(e) {
             () => ({ collection: r.A.getCollection(u), fetchState: r.A.getFetchState(u) }),
             [u],
         ),
-        A = (0, c.Hd)(u, E),
-        p = n.useMemo(() => (null != d ? o.A.fromStorefrontCollectionRecord(d) : null), [d]),
-        C = n.useMemo(() => ("error" === E || A ? "error" : null != p ? "ready" : "loading"), [E, A, p]);
+        p = (0, c.Hd)(u, E),
+        A = n.useMemo(() => (null != d ? o.A.fromStorefrontCollectionRecord(d) : null), [d]),
+        C = n.useMemo(() => ("error" === E || p ? "error" : null != A ? "ready" : "loading"), [E, p, A]);
     return {
-        category: p,
+        category: A,
         state: C,
         retry: n.useCallback(() => {
             "" !== u &&

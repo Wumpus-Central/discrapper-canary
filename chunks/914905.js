@@ -25,7 +25,7 @@ var l = n(477900),
     N = n(268378),
     T = n(429955);
 let j = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
-function _(e) {
+function k(e) {
     let { alt: t, spoiler: n, renderContent: r, size: a } = e,
         [o, u] = i.useState(!1);
     return (0, l.jsx)(y.Bs.Provider, {
@@ -61,7 +61,7 @@ function _(e) {
         }),
     });
 }
-function k(e) {
+function _(e) {
     let { file: t, alt: n, spoiler: r, size: a = I.L.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [h, m] = i.useState({ width: 0, height: 0 }),
@@ -123,7 +123,7 @@ function k(e) {
             className: T.clickableMedia,
             "aria-label": E,
             tabIndex: -1,
-            children: (0, l.jsx)(_, { size: a, alt: n, spoiler: r, renderContent: p }),
+            children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: p }),
         }),
     });
 }
@@ -155,7 +155,7 @@ function R(e) {
             onMouseEnter: o,
             className: T.mediaContainer,
             children: [
-                (0, l.jsx)(_, {
+                (0, l.jsx)(k, {
                     size: a,
                     alt: n,
                     spoiler: r,
@@ -194,7 +194,7 @@ function O(e) {
     let { upload: t, size: n = I.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
     return t.isImage && t.item.platform === E.x.WEB
-        ? (0, l.jsx)(k, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
+        ? (0, l.jsx)(_, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
         : !u && t.isVideo && t.item.platform === E.x.WEB
           ? (0, l.jsx)(R, {
                 file: t.item.file,
@@ -234,8 +234,8 @@ function w(e) {
             clip: C,
         } = e,
         j = null != C,
-        _ = E === I.L.SMALL,
-        k = (0, a.bG)([A.A], () => A.A.getChannel(t)?.guild_id);
+        k = E === I.L.SMALL,
+        _ = (0, a.bG)([A.A], () => A.A.getChannel(t)?.guild_id);
     function R() {
         p.A.remove(t, o.id, r);
     }
@@ -308,7 +308,7 @@ function w(e) {
             children: [
                 S
                     ? (0, l.jsx)(b.A, {
-                          className: s()({ [T.action]: _ }),
+                          className: s()({ [T.action]: k }),
                           tooltip: j ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
                           onClick: () => {
                               p.A.update(t, o.id, r, { spoiler: !o.spoiler });
@@ -317,36 +317,36 @@ function w(e) {
                               ? (0, l.jsx)(c.EyeSlashIcon, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: s()({ [T.actionBarIcon]: _ }),
+                                    className: s()({ [T.actionBarIcon]: k }),
                                 })
                               : (0, l.jsx)(d.EyeIcon, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: s()({ [T.actionBarIcon]: _ }),
+                                    className: s()({ [T.actionBarIcon]: k }),
                                 }),
                       })
                     : null,
                 S
                     ? (0, l.jsx)(b.A, {
-                          className: s()({ [T.action]: _ }),
+                          className: s()({ [T.action]: k }),
                           tooltip: j ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
                           onClick: w,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
-                              className: s()({ [T.actionBarIcon]: _ }),
+                              className: s()({ [T.actionBarIcon]: k }),
                           }),
                       })
                     : null,
                 (0, l.jsx)(b.A, {
-                    className: s()({ [T.action]: _ }),
+                    className: s()({ [T.action]: k }),
                     tooltip: j ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
                     onClick: R,
                     dangerous: !0,
                     children: (0, l.jsx)(m.TrashIcon, {
                         size: "md",
                         color: "currentColor",
-                        className: s()({ [T.actionBarIcon]: _ }),
+                        className: s()({ [T.actionBarIcon]: k }),
                     }),
                 }),
             ],
@@ -357,9 +357,9 @@ function w(e) {
         handleEditModal: w,
         keyboardModeEnabled: g,
         size: E,
-        className: s()({ [T.attachmentItemSmall]: _ }),
+        className: s()({ [T.attachmentItemSmall]: k }),
         children: [
-            (0, l.jsx)(O, { upload: o, size: E, clip: C, guildId: k }),
+            (0, l.jsx)(O, { upload: o, size: E, clip: C, guildId: _ }),
             !y &&
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,

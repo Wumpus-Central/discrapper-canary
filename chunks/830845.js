@@ -160,13 +160,13 @@ function y(e) {
         ((0, i.A)(W, e), (W.length = r.length), k.notifyListeners(W.location, W.action));
     }
     function O(e) {
-        (void 0 !== e.state || -1 !== navigator.userAgent.indexOf("CriOS")) && D(E(e.state));
+        (void 0 !== e.state || -1 !== navigator.userAgent.indexOf("CriOS")) && I(E(e.state));
     }
     function P() {
-        D(E(v()));
+        I(E(v()));
     }
     var L = !1;
-    function D(e) {
+    function I(e) {
         L
             ? ((L = !1), S())
             : k.confirmTransitionTo(e, "POP", V, function (t) {
@@ -180,8 +180,8 @@ function y(e) {
                         (s = n - o) && ((L = !0), M(s)));
               });
     }
-    var I = E(v()),
-        U = [I.key];
+    var D = E(v()),
+        U = [D.key];
     function C(e) {
         return R + d(e);
     }
@@ -198,7 +198,7 @@ function y(e) {
         W = {
             length: r.length,
             action: "POP",
-            location: I,
+            location: D,
             createHref: C,
             push: function (e, t) {
                 var i = "PUSH",
@@ -332,8 +332,8 @@ function E(e) {
                               ? A({ action: "POP", location: r })
                               : ((t = r),
                                 (i = j.location),
-                                -1 === (n = I.lastIndexOf(d(i))) && (n = 0),
-                                -1 === (o = I.lastIndexOf(d(t))) && (o = 0),
+                                -1 === (n = D.lastIndexOf(d(i))) && (n = 0),
+                                -1 === (o = D.lastIndexOf(d(t))) && (o = 0),
                                 (s = n - o) && ((k = !0), U(s)));
                       }));
         }
@@ -341,8 +341,8 @@ function E(e) {
     var P = T(),
         L = b(P);
     P !== L && R(L);
-    var D = y(),
-        I = [d(D)];
+    var I = y(),
+        D = [d(I)];
     function U(e) {
         t.go(e);
     }
@@ -354,7 +354,7 @@ function E(e) {
         j = {
             length: t.length,
             action: "POP",
-            location: D,
+            location: I,
             createHref: function (e) {
                 var t = document.querySelector("base"),
                     r = "";
@@ -369,9 +369,9 @@ function E(e) {
                             n = b(h + t);
                         if (T() !== n) {
                             ((S = t), (window.location.hash = n));
-                            var o = I.lastIndexOf(d(j.location)),
-                                s = I.slice(0, o + 1);
-                            (s.push(t), (I = s), A({ action: r, location: i }));
+                            var o = D.lastIndexOf(d(j.location)),
+                                s = D.slice(0, o + 1);
+                            (s.push(t), (D = s), A({ action: r, location: i }));
                         } else A();
                     }
                 });
@@ -384,8 +384,8 @@ function E(e) {
                         var t = d(i),
                             n = b(h + t);
                         T() !== n && ((S = t), R(n));
-                        var o = I.indexOf(d(j.location));
-                        (-1 !== o && (I[o] = t), A({ action: r, location: i }));
+                        var o = D.indexOf(d(j.location));
+                        (-1 !== o && (D[o] = t), A({ action: r, location: i }));
                     }
                 });
             },

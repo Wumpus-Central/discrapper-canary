@@ -1,13 +1,13 @@
-(e.d(i, { A: () => n }), e(938796));
-var s = e(613373),
-    l = e(652215);
-function n(t, i) {
-    if (null == t) return null;
-    let e = i?.find((i) => i.id === t.attachment_id);
+(t.d(n, { A: () => l }), t(938796));
+var a = t(613373),
+    i = t(652215);
+function l(e, n) {
+    if (null == e) return null;
+    let t = n?.find((n) => n.id === e.attachment_id);
     return {
-        timestamp: (0, s.rB)(t.timestamp / 1e3),
-        title: e?.title ?? null,
-        isClip: ((e?.flags ?? 0) & l.sbO.IS_CLIP) != 0,
-        attachment: e,
+        timestamp: (0, a.rB)(e.timestamp / 1e3),
+        title: t?.title ?? null,
+        isClip: ((t?.flags ?? 0) & i.sbO.IS_CLIP) != 0,
+        attachment: t,
     };
 }

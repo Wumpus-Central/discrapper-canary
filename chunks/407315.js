@@ -168,14 +168,14 @@ function I(e, t) {
                                         let o = a()(`${r}\0${e}`),
                                             d = j.get(o);
                                         if (null != d && d.length === n) return d;
-                                        if (_.has(o)) return null;
+                                        if (k.has(o)) return null;
                                         for (let t of e.split("\n")) if (t.length > 1e3) return null;
                                         try {
                                             let t = s.highlightToHtml(e);
                                             if (((i = t.html), null != l)) for (let e of t.missingInjections) l(e);
                                         } catch (e) {
                                             return (
-                                                _.set(o, !0),
+                                                k.set(o, !0),
                                                 h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                                     tags: { app_context: "syntax_highlighting" },
                                                     extra: { lang: r, surface: "editor" },
@@ -198,7 +198,7 @@ function I(e, t) {
                                                         r = 0;
                                                     for (v.lastIndex = 0; null != (t = v.exec(e));) {
                                                         let s = t.index + t[0].length,
-                                                            a = k(e.substring(r, t.index)).length,
+                                                            a = _(e.substring(r, t.index)).length,
                                                             o = l.filter((e) => null != e);
                                                         if (
                                                             (a > 0 &&
@@ -212,7 +212,7 @@ function I(e, t) {
                                                         } else l.pop();
                                                         r = s;
                                                     }
-                                                    let s = k(e.substring(r)).length,
+                                                    let s = _(e.substring(r)).length,
                                                         a = l.filter((e) => null != e);
                                                     return (
                                                         s > 0 &&
@@ -258,8 +258,8 @@ let v = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
 for (let [e, t] of Object.entries(S)) e.startsWith("a-") && null != t && N.set(e, t);
 let T = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     j = new (r())(T),
-    _ = new (r())(T);
-function k(e) {
+    k = new (r())(T);
+function _(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")

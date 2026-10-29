@@ -1,4 +1,4 @@
-n.d(t, { a: () => L, A: () => w });
+n.d(t, { a: () => M, A: () => w });
 var l = n(582128),
     i = n(143236),
     r = n(719442),
@@ -90,8 +90,8 @@ function j(e, t, n) {
         }
     return (f.b.delete(e, { at: u, unit: t, reverse: n, select: !0 }), !0);
 }
-var _ = n(694403),
-    k = n(323350),
+var k = n(694403),
+    _ = n(323350),
     R = n(235599),
     O = n(551483);
 function w(e) {
@@ -102,7 +102,7 @@ function w(e) {
             return (
                 (l.children = (0, d.x7)("")),
                 (l.selection = { anchor: O.K, focus: O.K }),
-                L({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
+                M({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
         });
@@ -126,7 +126,7 @@ function w(e) {
         i
     );
 }
-function L(e) {
+function M(e) {
     var t;
     let {
             editor: n,
@@ -205,7 +205,7 @@ function L(e) {
                 );
             })(S, !0 === u)).setFragmentData = (e) => {
             if (null != t.selection && !p.Kh.equals(t.selection.anchor, t.selection.focus)) {
-                let n = (0, k.WO)(p.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
+                let n = (0, _.WO)(p.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
                 e.setData("text/plain", n);
             }
         }),
@@ -218,8 +218,8 @@ function L(e) {
             if (0 === n.length) return !1;
             if (null != t.selection && p.ZF.isExpanded(t.selection)) {
                 let e = r.KE.string(t, t.selection),
-                    l = (0, _.W1)(n),
-                    i = (0, _.W1)(e);
+                    l = (0, k.W1)(n),
+                    i = (0, k.W1)(e);
                 if (null != l && null == i) {
                     let [e, n] = p.ZF.edges(t.selection);
                     return (

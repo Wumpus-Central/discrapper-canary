@@ -25,13 +25,13 @@ var l = n(477900),
     N = n(820066),
     T = n(696451),
     j = n(576705),
-    _ = n(351906),
-    k = n(287809),
+    k = n(351906),
+    _ = n(287809),
     R = n(31498),
     O = n(887129),
     w = n(741918),
-    L = n(267102),
-    M = n(652215),
+    M = n(267102),
+    L = n(652215),
     P = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
@@ -46,16 +46,16 @@ function W(e) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
                 u = (0, C.A)(),
-                c = (0, o.bG)([T.Ay, k.default], () => {
-                    let e = k.default.getCurrentUser();
+                c = (0, o.bG)([T.Ay, _.default], () => {
+                    let e = _.default.getCurrentUser();
                     return (null != l.guild_id && null != e ? T.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
-                    [j.A, _.A],
+                    [j.A, k.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
-                        hidePersonalInformation: _.A.hidePersonalInformation,
+                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(L.xBc.MENTION_EVERYONE, l),
+                        hidePersonalInformation: k.A.hidePersonalInformation,
                     }),
                     [l, r, c],
                 ),
@@ -72,7 +72,7 @@ function W(e) {
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: r } = e,
-                        { renderWindow: s } = i.useContext(L.Ay);
+                        { renderWindow: s } = i.useContext(M.Ay);
                     function a(e, t, i) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,

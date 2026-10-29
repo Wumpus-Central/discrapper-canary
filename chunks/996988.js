@@ -1,10 +1,10 @@
-o.d(t, { d: () => l });
-var r,
+r.d(t, { d: () => l });
+var o,
     l =
-        (((r = {}).POPOUT = "POPOUT"),
-        (r.MODAL = "MODAL"),
-        (r.MODAL_V2 = "MODAL_V2"),
-        (r.SIDEBAR = "SIDEBAR"),
-        (r.VIDEO_TILE_BACKGROUND = "VIDEO_TILE_BACKGROUND"),
-        (r.EMBED = "EMBED"),
-        r);
+        (((o = {}).POPOUT = "POPOUT"),
+        (o.MODAL = "MODAL"),
+        (o.MODAL_V2 = "MODAL_V2"),
+        (o.SIDEBAR = "SIDEBAR"),
+        (o.VIDEO_TILE_BACKGROUND = "VIDEO_TILE_BACKGROUND"),
+        (o.EMBED = "EMBED"),
+        o);

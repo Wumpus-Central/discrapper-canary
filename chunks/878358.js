@@ -16,8 +16,8 @@ var l = n(477900),
     j = n(939249),
     p = n(788026),
     v = n(142617),
-    A = n(819648),
-    C = n(33293),
+    C = n(819648),
+    A = n(33293),
     E = n(498137),
     N = n(192339),
     S = n(144103),
@@ -158,7 +158,7 @@ function F(e) {
         { character: a, stats: i, cardColorPalette: c } = t,
         o = null != a && null != i,
         d = (0, v.FX)("Checkpoint2026CardDisplayComponent"),
-        m = r.useMemo(() => (null != i ? (0, A.R8)(i) : null), [i]);
+        m = r.useMemo(() => (null != i ? (0, C.R8)(i) : null), [i]);
     return (0, l.jsxs)(E.A, {
         cardColorPalette: c,
         size: y.W.SM,
@@ -171,7 +171,7 @@ function F(e) {
             null != a && null != m
                 ? (0, l.jsx)(S.A, { powerLevel: m.powerLevel, powerLevelUnits: m.powerLevelUnits })
                 : null,
-            null != a ? (0, l.jsx)(C.A, { character: a }) : null,
+            null != a ? (0, l.jsx)(A.A, { character: a }) : null,
             null != m ? (0, l.jsx)(D, { stats: m }) : null,
             (0, l.jsx)(G, { isCheckpointEnabled: d, onClick: n }),
         ],

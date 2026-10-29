@@ -1,4 +1,4 @@
-(n.d(t, { A: () => k, t: () => R }), n(321073), n(667532));
+(n.d(t, { A: () => _, t: () => R }), n(321073), n(667532));
 var l = n(485845),
     i = n(465532),
     r = n(155718),
@@ -26,8 +26,8 @@ var l = n(485845),
 n(827669);
 let T = new Set(["applicationCommandOption"]),
     j = new Set([r.n4.ATTACHMENT]),
-    _ = new Set(["line", "applicationCommand"]);
-function k(e, t) {
+    k = new Set(["line", "applicationCommand"]);
+function _(e, t) {
     let {
         insertData: n,
         isInline: h,
@@ -35,7 +35,7 @@ function k(e, t) {
         onChange: E,
         deleteBackward: S,
         deleteForward: N,
-        deleteFragment: k,
+        deleteFragment: _,
     } = e;
     ((e.insertData = (l) => {
         if (null != t && I.VW.isEditorEmpty(e) && l.types.includes("application/x-discord-interaction-data")) {
@@ -70,13 +70,13 @@ function k(e, t) {
         (e.isInline = (e) => !!T.has(e.type) || h(e)),
         (e.isVoid = (e) => !!("applicationCommandOption" === e.type && j.has(e.optionType)) || g(e)),
         (e.deleteBackward = (t) => {
-            M(e, () => S(t));
+            L(e, () => S(t));
         }),
         (e.deleteForward = (t) => {
-            M(e, () => N(t));
+            L(e, () => N(t));
         }),
         (e.deleteFragment = (t) => {
-            M(e, () => k(t));
+            L(e, () => _(t));
         }));
     let D = null,
         U = null,
@@ -104,7 +104,7 @@ function k(e, t) {
                                     commandChanged: u,
                                     previousOptionValues: d,
                                 } = e,
-                                { command: h, commandText: g } = L(t),
+                                { command: h, commandText: g } = M(t),
                                 E = n.activeCommand,
                                 S = t.chatInputType.commands?.enabled === !0,
                                 A = null != p.A.getPendingReply(a.id);
@@ -236,7 +236,7 @@ function k(e, t) {
                                     return (s.Gf({ channelId: a.id, command: null, section: null }), null);
                                 let e = I.VW.richValue(t)[0],
                                     l = e.children[0];
-                                if (_.has(e.type) && I.l5.isText(l)) {
+                                if (k.has(e.type) && I.l5.isText(l)) {
                                     let e = (function (e, t) {
                                         if (!e.startsWith("/")) return null;
                                         let n = (0, m.p)(t, e, x.A.getDraftCommand(t.id, x.C.ChannelMessage));
@@ -427,19 +427,19 @@ function w(e) {
     }
     p && s.H2(n, m);
 }
-function L(e) {
+function M(e) {
     let t = y.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function M(e, t) {
+function L(e, t) {
     let n = y.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
     if (null == l || n === y.O7(e)[0]) return;
-    let { command: i, commandText: r } = L(e);
+    let { command: i, commandText: r } = M(e);
     !(null == i || null == r || r.endsWith(" ")) &&
         I.Kh.equals(l, { path: v.fP, offset: i.displayName.length + 1 }) &&
         b.b.insertText(e, " ");

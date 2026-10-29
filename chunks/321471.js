@@ -21,8 +21,8 @@ let c = function (e) {
         } = e,
         p = r.useId(),
         v = r.useId(),
-        A = g ?? p,
-        C = null != x ? v : void 0,
+        C = g ?? p,
+        A = null != x ? v : void 0,
         [E, N] = r.useState(void 0),
         [S, I] = r.useState(void 0),
         b = void 0 !== S;
@@ -32,8 +32,8 @@ let c = function (e) {
         style: m ?? void 0,
         children: (0, l.jsx)(a.hN, {
             "data-migration-pending": !0,
-            titleId: A,
-            errorId: C,
+            titleId: C,
+            errorId: A,
             error: x ?? void 0,
             isFocused: E,
             setIsFocused: N,
@@ -50,8 +50,8 @@ let c = function (e) {
                               required: d,
                               error: x,
                               className: o,
-                              id: A,
-                              errorId: C,
+                              id: C,
+                              errorId: A,
                               ...j,
                               children: h,
                           })

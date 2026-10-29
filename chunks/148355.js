@@ -1,4 +1,4 @@
-n.d(t, { A: () => M, h: () => _ });
+n.d(t, { A: () => L, h: () => k });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -34,11 +34,11 @@ function j(e, t) {
         "data-format-type": t.format_type,
     });
 }
-function _(e) {
+function k(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
     return b.intl.formatToPlainString(b.t.rk6pOw, { stickerName: t });
 }
-function k(e) {
+function _(e) {
     let { children: t, hasError: n, isLoading: i, maskAsset: r, size: a, withLoadingIndicator: o = !0 } = e,
         u = a >= 33;
     return (0, l.jsxs)("div", {
@@ -130,9 +130,9 @@ function R(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": A ? b.intl.string(b.t.yEvsK9) : _(s),
+              "aria-label": A ? b.intl.string(b.t.yEvsK9) : k(s),
               ref: m,
-              children: (0, l.jsx)(k, {
+              children: (0, l.jsx)(_, {
                   hasError: A,
                   isLoading: S,
                   maskAsset: h,
@@ -185,7 +185,7 @@ let O = (e) => {
                   children: (0, l.jsx)("div", {
                       className: s()(o, I.__invalid_pngImageWrapper),
                       ref: c,
-                      children: (0, l.jsx)(k, {
+                      children: (0, l.jsx)(_, {
                           hasError: E,
                           isLoading: g,
                           maskAsset: u,
@@ -194,7 +194,7 @@ let O = (e) => {
                           children: j(
                               (0, l.jsx)("img", {
                                   className: I.r3,
-                                  alt: _(n),
+                                  alt: k(n),
                                   src: b,
                                   draggable: !1,
                                   onError: T,
@@ -245,7 +245,7 @@ let O = (e) => {
                                     (0, l.jsx)(u.animated.div, {
                                         className: I.tm,
                                         style: e,
-                                        children: (0, l.jsx)(L, {
+                                        children: (0, l.jsx)(M, {
                                             className: I.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -272,7 +272,7 @@ let O = (e) => {
             )
         );
     };
-function L(e) {
+function M(e) {
     let {
             isInteracting: t = !1,
             disableAnimation: n = !1,
@@ -325,4 +325,4 @@ function L(e) {
         `${c.id},${u}`,
     );
 }
-let M = L;
+let L = M;

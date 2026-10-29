@@ -1,6 +1,6 @@
 var n = r(948055),
-    a = r(724039),
-    o = r(389293);
+    o = r(724039),
+    a = r(389293);
 function i(e, t) {
     return t.encode ? (t.strict ? n(e) : encodeURIComponent(e)) : e;
 }
@@ -41,14 +41,14 @@ function i(e, t) {
                             r[e] = [].concat(r[e], t);
                         };
                 }
-            })((t = a({ arrayFormat: "none" }, t))),
+            })((t = o({ arrayFormat: "none" }, t))),
             n = Object.create(null);
         return "string" == typeof e && (e = e.trim().replace(/^(\?|#|&)/, ""))
             ? (e.split("&").forEach(function (e) {
                   var t = e.replace(/\+/g, " ").split("="),
-                      a = t.shift(),
+                      o = t.shift(),
                       i = t.length > 0 ? t.join("=") : void 0;
-                  ((i = void 0 === i ? null : o(i)), r(o(a), i, n));
+                  ((i = void 0 === i ? null : a(i)), r(a(o), i, n));
               }),
               Object.keys(n)
                   .sort()
@@ -93,24 +93,24 @@ function i(e, t) {
                         return null === r ? i(t, e) : [i(t, e), "=", i(r, e)].join("");
                     };
             }
-        })((t = a({ encode: !0, strict: !0, arrayFormat: "none" }, t)));
+        })((t = o({ encode: !0, strict: !0, arrayFormat: "none" }, t)));
         return e
             ? Object.keys(e)
                   .sort()
                   .map(function (n) {
-                      var a = e[n];
-                      if (void 0 === a) return "";
-                      if (null === a) return i(n, t);
-                      if (Array.isArray(a)) {
-                          var o = [];
+                      var o = e[n];
+                      if (void 0 === o) return "";
+                      if (null === o) return i(n, t);
+                      if (Array.isArray(o)) {
+                          var a = [];
                           return (
-                              a.slice().forEach(function (e) {
-                                  void 0 !== e && o.push(r(n, e, o.length));
+                              o.slice().forEach(function (e) {
+                                  void 0 !== e && a.push(r(n, e, a.length));
                               }),
-                              o.join("&")
+                              a.join("&")
                           );
                       }
-                      return i(n, t) + "=" + i(a, t);
+                      return i(n, t) + "=" + i(o, t);
                   })
                   .filter(function (e) {
                       return e.length > 0;

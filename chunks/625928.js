@@ -25,13 +25,13 @@ var l = n(477900),
     N = n(652215),
     T = n(105292),
     j = n(845210);
-function _() {
+function k() {
     (0, E.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
 }
-function k(e) {
+function _(e) {
     let { className: t, iconOnly: n } = e,
         r = (0, o.bG)([I.Ay, b.A], () => {
             let e = b.A.getChannel(I.Ay.getChannelId());
@@ -50,7 +50,7 @@ function k(e) {
         n
             ? (0, l.jsx)(S.D, {
                   className: j.e7,
-                  onClick: () => _(),
+                  onClick: () => k(),
                   children: (0, l.jsx)(u.m, {
                       text: T.intl.string(T.t["+eFIjX"]),
                       position: "top",
@@ -64,7 +64,7 @@ function k(e) {
                       (0, l.jsx)(d.E, {
                           className: j.Qq,
                           variant: "text-sm/normal",
-                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: _ }),
+                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: k }),
                       }),
                   ],
               })
@@ -82,7 +82,7 @@ function w(e) {
         I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && S,
         v = null != t.upsellLongMessages && !S,
         j = A - b,
-        _ = j > C;
+        k = j > C;
     (0, a.$)({ currentLength: b, maxLength: A, message: T.intl.string(T.t.c2Jqed) });
     let w =
             0 === j
@@ -90,12 +90,12 @@ function w(e) {
                 : j > 0
                   ? T.intl.formatToPlainString(T.t.qH8uFW, { count: j })
                   : T.intl.string(T.t.YSRIqa),
-        { analyticsLocations: L } = (0, f.Ay)(m.A.CHARACTER_COUNT),
-        { isVisible: M } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
-    if (!M) return null;
+        { analyticsLocations: M } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { isVisible: L } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
+    if (!L) return null;
     let P = j >= 0;
     return (0, l.jsx)(f.f5, {
-        value: L,
+        value: M,
         children: (0, l.jsxs)("div", {
             className: s()(E, O.Dq),
             children: [
@@ -109,7 +109,7 @@ function w(e) {
                                   children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: O.y }),
                               })
                             : null,
-                        _
+                        k
                             ? null
                             : (0, l.jsx)(u.m, {
                                   text: w,
@@ -125,8 +125,8 @@ function w(e) {
                     ],
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: j }) }),
-                v && !_
-                    ? (0, l.jsx)(k, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
+                v && !k
+                    ? (0, l.jsx)(_, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
                     : null,
             ],
         }),

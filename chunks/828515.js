@@ -1,4 +1,4 @@
-l.d(t, { A: () => I });
+l.d(t, { A: () => G });
 var n = l(477900),
     i = l(582128),
     a = l(503698),
@@ -9,33 +9,33 @@ var n = l(477900),
     u = l(653887),
     d = l(866665),
     E = l(881636),
-    A = l(661531),
-    p = l(775602),
+    p = l(661531),
+    A = l(775602),
     C = l(607470),
     _ = l(531685),
-    S = l(993408),
-    O = l(62010),
-    L = l(105292),
-    g = l(543136);
-let G = function (e) {
-    let { category: t, daysRemainingText: l = L.t.Io7ozn, className: i } = e;
-    if (!(0, S.HF)(t.unpublishedAt)) return null;
-    let a = (0, S.WU)(t.unpublishedAt),
-        s = a > 1 ? L.intl.formatToPlainString(l, { days: a }) : L.intl.string(L.t.Bc13HF);
+    g = l(993408),
+    S = l(62010),
+    O = l(105292),
+    f = l(543136);
+let L = function (e) {
+    let { category: t, daysRemainingText: l = O.t.Io7ozn, className: i } = e;
+    if (!(0, g.HF)(t.unpublishedAt)) return null;
+    let a = (0, g.WU)(t.unpublishedAt),
+        s = a > 1 ? O.intl.formatToPlainString(l, { days: a }) : O.intl.string(O.t.Bc13HF);
     return (0, n.jsx)("div", {
-        className: r()(g.Z, i),
-        children: (0, n.jsx)(O.E, { type: { text: s }, variant: "inverted" }),
+        className: r()(f.Z, i),
+        children: (0, n.jsx)(S.E, { type: { text: s }, variant: "inverted" }),
     });
 };
-var T = l(212407),
-    f = l(761977);
-function I(e) {
+var b = l(212407),
+    h = l(761977);
+function G(e) {
     let { category: t, onSelect: l } = e,
-        a = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
-        S = (0, o.bG)([_.A], () => _.A.isFocused()),
-        { catalogBannerStatic: O, catalogBannerAnimated: g, catalogBannerRive: I } = (0, T.MV)(t),
-        h = i.useRef(null),
-        b = null != I,
+        a = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion),
+        g = (0, o.bG)([_.A], () => _.A.isFocused()),
+        { catalogBannerStatic: S, catalogBannerAnimated: f, catalogBannerRive: G } = (0, b.MV)(t),
+        I = i.useRef(null),
+        T = null != G,
         m =
             null != l
                 ? {
@@ -49,46 +49,46 @@ function I(e) {
                   }
                 : {};
     return (0, n.jsxs)("div", {
-        ref: h,
-        className: r()(f.sW, { [f.by]: b, [f.vk]: null != l }),
+        ref: I,
+        className: r()(h.sW, { [h.by]: T, [h.vk]: null != l }),
         ...m,
         children: [
             (0, n.jsx)(s.s, { children: (0, n.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, n.jsx)("div", {
-                className: f.Db,
-                children: b
+                className: h.Db,
+                children: T
                     ? (0, n.jsx)(u._, {
-                          src: I,
+                          src: G,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
-                          eventTargetRef: h,
+                          eventTargetRef: I,
                           autoplay: !0,
                       })
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)("img", { className: f.ze, src: O, alt: "" }),
-                              null != g &&
+                              (0, n.jsx)("img", { className: h.ze, src: S, alt: "" }),
+                              null != f &&
                                   !a &&
-                                  S &&
-                                  (0, n.jsx)(C.A, { src: g, className: f.tr, autoPlay: !0, loop: !0 }),
+                                  g &&
+                                  (0, n.jsx)(C.A, { src: f, className: h.tr, autoPlay: !0, loop: !0 }),
                           ],
                       }),
             }),
-            (0, n.jsx)(G, { category: t, className: f.v0, daysRemainingText: L.t["8gsP5M"] }),
+            (0, n.jsx)(L, { category: t, className: h.v0, daysRemainingText: O.t["8gsP5M"] }),
             null != l &&
                 (0, n.jsx)("div", {
-                    className: f.IG,
+                    className: h.IG,
                     children: (0, n.jsx)(d.m, {
-                        text: L.intl.string(L.t["o1ol+T"]),
+                        text: O.intl.string(O.t["o1ol+T"]),
                         children: (0, n.jsx)(E.u, {
                             "aria-hidden": "true",
                             size: "sm",
-                            color: A.A.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+                            color: p.A.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
                         }),
                     }),
                 }),
         ],
     });
 }
-(0, S.$b)(90);
+(0, g.$b)(90);

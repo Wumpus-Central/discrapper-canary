@@ -25,7 +25,7 @@ var l = n(477900),
     N = n(60809),
     T = n(105292),
     j = n(215837);
-let _ = function (e) {
+let k = function (e) {
         let { type: t, channelId: n, ref: r } = e,
             a = (0, s.bG)(
                 [b.A],
@@ -64,15 +64,15 @@ let _ = function (e) {
             }),
         });
     },
-    k = i.memo(function (e) {
+    _ = i.memo(function (e) {
         let { type: t, channelId: n } = e;
-        return (0, l.jsx)(_, { type: t, channelId: n });
+        return (0, l.jsx)(k, { type: t, channelId: n });
     });
 var R = n(931664),
     O = n(951260),
     w = n(87207),
-    L = n(625494),
-    M = n(709372),
+    M = n(625494),
+    L = n(709372),
     P = n(264391),
     D = n(522602),
     U = n(24482),
@@ -318,7 +318,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            _ = j.isSubmitButtonEnabled,
+            k = j.isSubmitButtonEnabled,
             V = !T || j.isAppsButtonEnabled,
             W = !T || j.isEmojiButtonEnabled,
             F = !T || j.isGifButtonEnabled,
@@ -367,16 +367,16 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     }));
                 return l && i && null == r;
             })({ channel: C, chatInputType: y }),
-            ee = y.submit?.button != null && (y.submit?.ignorePreference || _),
+            ee = y.submit?.button != null && (y.submit?.ignorePreference || k),
             et = (0, w.A)(C, y);
         ((t = C.id),
-            (S = (0, M.wX)()),
+            (S = (0, L.wX)()),
             i.useEffect(() => {
                 if (et && !S)
                     return (
-                        L._.subscribe(p.jej.RECORD_VOICE_MESSAGE, e),
+                        M._.subscribe(p.jej.RECORD_VOICE_MESSAGE, e),
                         () => {
-                            L._.unsubscribe(p.jej.RECORD_VOICE_MESSAGE, e);
+                            M._.unsubscribe(p.jej.RECORD_VOICE_MESSAGE, e);
                         }
                     );
                 function e() {
@@ -408,7 +408,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             (v || N
                 ? W && q.push((0, l.jsx)(J, { disabled: A, type: y, channelId: C.id }, "emoji"))
                 : q.push((0, l.jsx)(Y.A, { disabled: A, type: y, channel: C }, "expression"))),
-        Z && V && q.push((0, l.jsx)(k, { channelId: C.id, type: y }, "appLauncher")),
+        Z && V && q.push((0, l.jsx)(_, { channelId: C.id, type: y }, "appLauncher")),
         ee && q.push((0, l.jsx)(eu, { onClick: b, disabled: A || K }, "submit")),
         0 === q.length)
             ? null

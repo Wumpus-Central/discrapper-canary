@@ -1,30 +1,30 @@
-a.d(l, { A: () => g });
-var n = a(478437),
-    t = a(17928),
+a.d(e, { A: () => g });
+var t = a(478437),
+    n = a(17928),
     i = a(73153),
     s = a(403010),
-    r = a(927813);
-let d = new Set(),
-    c = {};
-function o(e) {
-    return new Date(e * r.A.Millis.SECOND).getTime();
+    c = a(927813);
+let r = new Set(),
+    d = {};
+function o(l) {
+    return new Date(l * c.A.Millis.SECOND).getTime();
 }
 function h() {
-    d.clear();
+    r.clear();
 }
-function u(e) {
-    d.delete(e.guild.id);
+function u(l) {
+    r.delete(l.guild.id);
 }
-class v extends t.Ay.Store {
+class v extends n.Ay.Store {
     initialize() {
         this.waitFor(s.A);
     }
     static displayName = "VoiceChannelStartTimeStore";
-    getStartTime(e) {
-        if (null != e && null != e.guild_id && e.type === n.r.GUILD_VOICE) return c[e.guild_id]?.[e.id];
+    getStartTime(l) {
+        if (null != l && null != l.guild_id && l.type === t.r.GUILD_VOICE) return d[l.guild_id]?.[l.id];
     }
-    hasRequestedStartTimes(e) {
-        return d.has(e);
+    hasRequestedStartTimes(l) {
+        return r.has(l);
     }
 }
 let g = new v(i.h, {
@@ -32,16 +32,16 @@ let g = new v(i.h, {
     GUILD_DELETE: u,
     CONNECTION_RESUMED: h,
     CONNECTION_OPEN: h,
-    VOICE_CHANNEL_START_TIME_UPDATE: function (e) {
-        let { guildId: l, id: a, voiceStartTime: n } = e;
-        (null == c[l] && (c[l] = {}), (c[l][a] = null != n ? o(n) : void 0));
+    VOICE_CHANNEL_START_TIME_UPDATE: function (l) {
+        let { guildId: e, id: a, voiceStartTime: t } = l;
+        (null == d[e] && (d[e] = {}), (d[e][a] = null != t ? o(t) : void 0));
     },
-    CHANNEL_INFO: function (e) {
-        let { guildId: l, channels: a } = e;
-        for (let { id: e, voiceStartTime: n } of ((c[l] = {}), a)) c[l][e] = null != n ? o(n) : void 0;
+    CHANNEL_INFO: function (l) {
+        let { guildId: e, channels: a } = l;
+        for (let { id: l, voiceStartTime: t } of ((d[e] = {}), a)) d[e][l] = null != t ? o(t) : void 0;
     },
-    FETCH_CHANNEL_INFO: function (e) {
-        let { guildId: l } = e;
-        d.add(l);
+    FETCH_CHANNEL_INFO: function (l) {
+        let { guildId: e } = l;
+        r.add(e);
     },
 });
