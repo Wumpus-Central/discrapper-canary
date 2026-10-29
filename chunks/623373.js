@@ -1,14 +1,15 @@
 n.d(t, {
     $K: () => l,
     Ab: () => c,
-    B1: () => _,
+    B1: () => E,
     CW: () => s,
     JQ: () => u,
     Vx: () => o,
-    YW: () => h,
+    YW: () => f,
+    ex: () => _,
     go: () => d,
-    rb: () => A,
-    v8: () => E,
+    rb: () => h,
+    v8: () => A,
 });
 var i = n(575593),
     r = n(203632),
@@ -44,22 +45,29 @@ function c(e) {
 function u(e) {
     return (
         null != e &&
-        h(e) === i.R.PROFILE_EFFECT &&
+        f(e) === i.R.PROFILE_EFFECT &&
         e.items.some(
             (e) => (0, r.C3)(e) && e.effects.some((e) => null != e.randomizedSources && e.randomizedSources.length > 0),
         )
     );
 }
 function _(e) {
-    return e.type === i.R.VARIANTS_GROUP && null != e.variants && 0 !== e.variants.length;
+    return e.filter((e) => {
+        let t = o(e),
+            n = d(e);
+        return t && n;
+    });
 }
 function E(e) {
-    return _(e) ? e.variants.map((e) => e.skuId) : [e.skuId];
+    return e.type === i.R.VARIANTS_GROUP && null != e.variants && 0 !== e.variants.length;
 }
-function A(e, t) {
-    return _(e) && null != t ? (e.variants[t] ?? e) : e;
+function A(e) {
+    return E(e) ? e.variants.map((e) => e.skuId) : [e.skuId];
 }
-function h(e) {
+function h(e, t) {
+    return E(e) && null != t ? (e.variants[t] ?? e) : e;
+}
+function f(e) {
     if (null == e) return null;
     if (e.type === i.R.VARIANTS_GROUP) {
         if (null == e.variants || 0 === e.variants.length) return null;
