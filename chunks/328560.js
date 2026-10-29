@@ -1,4 +1,4 @@
-n.d(t, { default: () => rC });
+n.d(t, { default: () => rS });
 var l,
     i,
     a,
@@ -4388,15 +4388,27 @@ function a3(e) {
           : (0, r.jsx)("u", { className: a, children: n });
 }
 function a6(e) {
+    let { link: t, title: n, children: l } = e,
+        { trackAction: i } = F();
+    return (0, r.jsx)(aZ.A, {
+        href: t,
+        title: n,
+        onClick: function () {
+            return (i(S.GameProfileTrackActionActions.ClickDescriptionLink), !1);
+        },
+        children: l,
+    });
+}
+function a9(e) {
     let { segment: t, heading: n } = e,
         l = t.runs.map((e, t) => (null == n ? (0, r.jsx)(a4, { run: e }, t) : (0, r.jsx)(a3, { run: e }, t))),
         { link: i } = t;
-    return null == i ? l : (0, r.jsx)(aZ.A, { href: i, title: t.runs.map((e) => e.text).join(""), children: l });
+    return null == i ? l : (0, r.jsx)(a6, { link: i, title: t.runs.map((e) => e.text).join(""), children: l });
 }
-function a9(e) {
+function a5(e) {
     let { group: t } = e,
         { heading: n, segments: l } = t,
-        i = l.map((e, t) => (0, r.jsx)(a6, { segment: e, heading: n }, t));
+        i = l.map((e, t) => (0, r.jsx)(a9, { segment: e, heading: n }, t));
     return null == n
         ? i
         : (0, r.jsx)(t3.F, {
@@ -4404,7 +4416,7 @@ function a9(e) {
               children: (0, r.jsx)(tm.D, { variant: a0[n], color: "text-strong", children: i }),
           });
 }
-function a5(e) {
+function a7(e) {
     let { runs: t } = e;
     return s
         .useMemo(
@@ -4422,11 +4434,11 @@ function a5(e) {
                 })(t),
             [t],
         )
-        .map((e, t) => (0, r.jsx)(a9, { group: e }, t));
+        .map((e, t) => (0, r.jsx)(a5, { group: e }, t));
 }
-var a7 = n(672572),
-    re = n(94936);
-function rt() {
+var re = n(672572),
+    rt = n(94936);
+function rn() {
     let e = s.useRef(null),
         { game: t, isTwoColumn: n } = F(),
         l = s.useMemo(
@@ -4595,33 +4607,33 @@ function rt() {
     if (0 === l.length) return null;
     let m = a ? em.intl.string(em.t["6MwJo/"]) : em.intl.string(em.t.lBeKY2);
     return (0, r.jsxs)("div", {
-        className: u()(a7.fi, re.k),
+        className: u()(re.fi, rt.k),
         onFocusCapture: d,
         children: [
             (0, r.jsx)(Y.E, {
                 ref: e,
-                className: re.Q,
+                className: rt.Q,
                 lineClamp: a ? void 0 : i,
                 variant: "text-md/medium",
-                children: (0, r.jsx)(a5, { runs: l }),
+                children: (0, r.jsx)(a7, { runs: l }),
             }),
             o && (0, r.jsx)(ao.Q, { onClick: c, text: m, "aria-expanded": a }),
         ],
     });
 }
-var rn = n(40478),
-    rl = n(764948);
-let ri = s.memo(function (e) {
+var rl = n(40478),
+    ri = n(764948);
+let ra = s.memo(function (e) {
     let { analyticsLocations: t, selectTab: n, getScrollOffset: l } = e;
     return (0, r.jsxs)("div", {
-        className: rl.V,
+        className: ri.V,
         children: [
             (0, r.jsx)(ix, {}),
             (0, r.jsxs)("div", {
-                className: rn.h,
+                className: rl.h,
                 children: [
                     (0, r.jsx)(no, {}),
-                    (0, r.jsxs)("div", { className: rn.X, children: [(0, r.jsx)(as, {}), (0, r.jsx)(rt, {})] }),
+                    (0, r.jsxs)("div", { className: rl.X, children: [(0, r.jsx)(as, {}), (0, r.jsx)(rn, {})] }),
                 ],
             }),
             (0, r.jsx)(l9, { analyticsLocations: t }),
@@ -4635,13 +4647,13 @@ let ri = s.memo(function (e) {
         ],
     });
 });
-var ra = n(164135);
-let rr = s.memo(function (e) {
+var rr = n(164135);
+let rs = s.memo(function (e) {
     let { selectTab: t, getScrollOffset: n } = e;
     return (0, r.jsxs)("div", {
-        className: ra.V,
+        className: rr.V,
         children: [
-            (0, r.jsxs)("div", { className: ra.B, children: [(0, r.jsx)(ix, {}), (0, r.jsx)(rt, {})] }),
+            (0, r.jsxs)("div", { className: rr.B, children: [(0, r.jsx)(ix, {}), (0, r.jsx)(rn, {})] }),
             (0, r.jsx)(lp, { getScrollOffset: n }),
             (0, r.jsx)(nw, { selectTab: t }),
             (0, r.jsx)(i$, {}),
@@ -4649,19 +4661,19 @@ let rr = s.memo(function (e) {
         ],
     });
 });
-var rs = n(881698),
-    ro = n(928550),
-    rc = n(562708),
-    ru = n(414499),
-    rd = n(359549),
-    rm = n(139286),
-    rh = n(873516);
-function rg(e) {
+var ro = n(881698),
+    rc = n(928550),
+    ru = n(562708),
+    rd = n(414499),
+    rm = n(359549),
+    rh = n(139286),
+    rg = n(873516);
+function rx(e) {
     let { onCloudPlayClick: t, analyticsLocations: n } = e,
         { closeModal: l, trackAction: i } = F();
-    (0, rm.A)({
-        name: rc.ImpressionNames.CLOUD_PLAY_CTA,
-        type: rc.ImpressionTypes.VIEW,
+    (0, rh.A)({
+        name: ru.ImpressionNames.CLOUD_PLAY_CTA,
+        type: ru.ImpressionTypes.VIEW,
         properties: { location_stack: n },
     });
     let a = s.useCallback(() => {
@@ -4671,7 +4683,7 @@ function rg(e) {
         text: em.intl.string(em.t.JVwWva),
         position: "top",
         children: (0, r.jsx)($.$, {
-            icon: ru.h,
+            icon: rd.h,
             text: em.intl.string(em.t["jaYS/h"]),
             variant: "overlay-secondary",
             onClick: a,
@@ -4679,31 +4691,31 @@ function rg(e) {
         }),
     });
 }
-function rx(e) {
+function rf(e) {
     let { cloudPlayAppId: t, analyticsLocations: n } = e,
         { game: l } = F(),
-        i = (0, rd.rC)({ applicationId: t, sourceApplicationId: l.id, analyticsLocations: n });
+        i = (0, rm.rC)({ applicationId: t, sourceApplicationId: l.id, analyticsLocations: n });
     return null == i
         ? null
         : (0, r.jsx)("div", {
-              className: rh.k,
-              children: (0, r.jsx)(rg, { onCloudPlayClick: i, analyticsLocations: n }),
+              className: rg.k,
+              children: (0, r.jsx)(rx, { onCloudPlayClick: i, analyticsLocations: n }),
           });
 }
-var rf = n(768626);
-function rp(e) {
+var rp = n(768626);
+function rj(e) {
     let { analyticsLocations: t } = e,
         { game: n } = F(),
-        l = (0, rs.A)(n.linkedApplications)?.id,
-        [i] = (0, ro.L_)(n.getOfficialApplicationId()),
-        [a] = (0, ro.L_)(n.id),
+        l = (0, ro.A)(n.linkedApplications)?.id,
+        [i] = (0, rc.L_)(n.getOfficialApplicationId()),
+        [a] = (0, rc.L_)(n.id),
         { showsStoreLinks: s } = aa(n);
     return (0, r.jsxs)("div", {
-        className: u()(rf.pz, a7.fi, s ? rf.FJ : rf.dg),
+        className: u()(rp.pz, re.fi, s ? rp.FJ : rp.dg),
         children: [
-            null == l || i || a ? null : (0, r.jsx)(rx, { cloudPlayAppId: l, analyticsLocations: t }),
+            null == l || i || a ? null : (0, r.jsx)(rf, { cloudPlayAppId: l, analyticsLocations: t }),
             (0, r.jsxs)("div", {
-                className: rl.V,
+                className: ri.V,
                 children: [
                     (0, r.jsx)(as, {}),
                     (0, r.jsx)(l9, { analyticsLocations: t }),
@@ -4715,8 +4727,8 @@ function rp(e) {
         ],
     });
 }
-var rj = n(105865);
-function rv(e) {
+var rv = n(105865);
+function rA(e) {
     let { isTwoColumn: t, selectTab: n, selectionVersion: l, initialScrollOffset: i, analyticsLocations: a } = e,
         o = s.useRef(null),
         c = s.useRef(null),
@@ -4740,23 +4752,23 @@ function rv(e) {
             (0, r.jsx)(na, { ref: o }),
             (0, r.jsxs)(eZ.Ch, {
                 ref: c,
-                className: rj.XG,
+                className: rv.XG,
                 onScroll: m,
                 children: [
-                    (0, r.jsx)("div", { className: rj.xY, "aria-hidden": !0 }),
+                    (0, r.jsx)("div", { className: rv.xY, "aria-hidden": !0 }),
                     (0, r.jsx)(nd, {}),
                     (0, r.jsx)(t3.F, {
                         children: t
                             ? (0, r.jsxs)("div", {
-                                  className: rj.jC,
+                                  className: rv.jC,
                                   children: [
-                                      (0, r.jsx)(rr, { selectTab: n, getScrollOffset: d }),
-                                      (0, r.jsx)(rp, { analyticsLocations: a }),
+                                      (0, r.jsx)(rs, { selectTab: n, getScrollOffset: d }),
+                                      (0, r.jsx)(rj, { analyticsLocations: a }),
                                   ],
                               })
                             : (0, r.jsx)("div", {
-                                  className: rj.b9,
-                                  children: (0, r.jsx)(ri, { analyticsLocations: a, selectTab: n, getScrollOffset: d }),
+                                  className: rv.b9,
+                                  children: (0, r.jsx)(ra, { analyticsLocations: a, selectTab: n, getScrollOffset: d }),
                               }),
                     }),
                 ],
@@ -4764,23 +4776,23 @@ function rv(e) {
         ],
     });
 }
-var rA = n(897503),
-    rI = n(787188);
-function rE(e) {
+var rI = n(897503),
+    rE = n(787188);
+function rb(e) {
     let { applicationId: t, selectedPageIndex: n } = e;
-    return (0, r.jsx)(rA.SocialLayerStorefrontInnerWrapper, {
+    return (0, r.jsx)(rI.SocialLayerStorefrontInnerWrapper, {
         applicationId: t,
         pageIndex: n,
         analyticsLocation: f.A.GAME_PROFILE_GAME_SHOP,
         analyticsPlacement: ng.Ye.GAME_PROFILE_GAME_SHOP,
-        className: rI.kL,
-        scrollerClassName: rI.XG,
-        promotionBannerClassName: rI.Rv,
+        className: rE.kL,
+        scrollerClassName: rE.XG,
+        promotionBannerClassName: rE.Rv,
     });
 }
-var rb = n(733391),
-    rN = n(171616);
-function rk(e) {
+var rN = n(733391),
+    rk = n(171616);
+function rC(e) {
     let {
             gameId: t,
             source: n,
@@ -4939,7 +4951,7 @@ function rk(e) {
                 r = t?.getOfficialApplicationId(),
                 o = eu({ location: "GameProfileModal" });
             s.useEffect(() => {
-                o && (0, rb.Xw)();
+                o && (0, rN.Xw)();
             }, [o]);
             let c = (0, m.bG)(
                     [P.A],
@@ -4949,7 +4961,7 @@ function rk(e) {
                     [a, r],
                 ),
                 u = o && null != c,
-                { storefront: d } = (0, rN.A)({ applicationId: u ? c : null }),
+                { storefront: d } = (0, rk.A)({ applicationId: u ? c : null }),
                 [h, g] = s.useState({ storefrontId: d?.id, index: 0 }),
                 [x, f] = s.useState(l);
             l !== x && (f(l), l !== y.COMMERCE && g({ storefrontId: d?.id, index: 0 }));
@@ -5009,18 +5021,18 @@ function rk(e) {
                   children: (0, r.jsx)(V.Provider, {
                       value: eT,
                       children: (0, r.jsx)("div", {
-                          className: u()(z, a7.kL),
+                          className: u()(z, re.kL),
                           ref: ep,
                           children: (0, r.jsxs)(N.A, {
                               obscured: en,
                               onClose: ev,
                               children: [
                                   (0, r.jsx)("div", {
-                                      className: u()(a7.sx, { [a7.Tk]: eE !== y.COMMERCE }),
+                                      className: u()(re.sx, { [re.Tk]: eE !== y.COMMERCE }),
                                       children: (0, r.jsx)(eJ, { navigation: eA, socialLayerStorefront: eb }),
                                   }),
                                   eE === y.OVERVIEW &&
-                                      (0, r.jsx)(rv, {
+                                      (0, r.jsx)(rA, {
                                           selectTab: eA.selectTab,
                                           selectionVersion: eI,
                                           initialScrollOffset: o,
@@ -5028,7 +5040,7 @@ function rk(e) {
                                           analyticsLocations: $,
                                       }),
                                   eE === y.COMMUNITIES && (0, r.jsx)(t4, {}),
-                                  eE === y.COMMERCE && (0, r.jsx)(rE, { applicationId: ek, selectedPageIndex: eS }),
+                                  eE === y.COMMERCE && (0, r.jsx)(rb, { applicationId: ek, selectedPageIndex: eS }),
                               ],
                           }),
                       }),
@@ -5036,7 +5048,7 @@ function rk(e) {
               }),
           });
 }
-let rC = function (e) {
+let rS = function (e) {
     let { gameId: t, source: n, sourceUserId: l, initialScrollOffset: i, initialTab: a, ...o } = e,
         [c, u] = s.useState({ gameId: t, source: n, sourceUserId: l, initialScrollOffset: i, initialTab: a }),
         d = c.gameId,
@@ -5047,7 +5059,7 @@ let rC = function (e) {
             [d],
         );
     return (0, r.jsx)(
-        rk,
+        rC,
         {
             gameId: c.gameId,
             source: c.source,

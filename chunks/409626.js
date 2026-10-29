@@ -72,6 +72,7 @@ var i,
         (r[(r.GooglePlayStoreLink = 46)] = "GooglePlayStoreLink"),
         (r[(r.ItchLink = 47)] = "ItchLink"),
         (r[(r.FandomLink = 48)] = "FandomLink"),
+        (r[(r.ClickDescriptionLink = 49)] = "ClickDescriptionLink"),
         r),
     A =
         (((a = {}).ActivityCard = "activity_card"),
