@@ -2,7 +2,7 @@ n.d(t, { J: () => l });
 var i = n(477900);
 n(582128);
 var r = n(972213),
-    a = n(432816),
+    a = n(460890),
     s = n(657718);
 function l(e) {
     let { variant: t = "icon-only", "aria-label": n, ...l } = e,

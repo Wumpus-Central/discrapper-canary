@@ -4,7 +4,7 @@ var i,
     a = n(971940),
     s = n(888633),
     l = n(167789),
-    o = n(432816),
+    o = n(460890),
     d = (((i = {}).Loading = "loading"), (i.Loaded = "loaded"), i);
 let c = (0, s.v)(() => ({ riveAssetCache: new Map(), riveOverrideCache: {} })),
     u = new Set();

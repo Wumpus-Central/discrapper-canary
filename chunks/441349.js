@@ -14,7 +14,7 @@ var l = s(477900),
     j = s(452027),
     N = s(81466),
     b = s(862301),
-    v = s(432816),
+    v = s(460890),
     E = s(341450);
 function f(e) {
     let { value: a, onChange: s, minValue: r, maxValue: f, placeholderValue: p, granularity: _ = "day", ...g } = e,
