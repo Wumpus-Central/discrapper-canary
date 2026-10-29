@@ -1,4 +1,4 @@
-(i.d(t, { Cr: () => x, I1: () => k, Nj: () => w, UB: () => T, SX: () => z, R6: () => P }), i(938796));
+(i.d(t, { Cr: () => x, I1: () => k, Nj: () => T, UB: () => P, SX: () => w, R6: () => z }), i(938796));
 var n = i(477900),
     a = i(582128),
     l = i(448761),
@@ -18,8 +18,8 @@ var o = i(682176),
     A = i(465856),
     f = i(44788),
     I = i(447991),
-    C = i(838541),
-    y = i(516653),
+    y = i(838541),
+    C = i(516653),
     v = i(105292);
 function x(e) {
     let t = e.item.originalItem;
@@ -64,7 +64,7 @@ function k(e) {
                         onSeekRequest: e.onSeekRequest,
                         onContextMenu: e.onContextMenu ?? void 0,
                         maxWidth: e.maxWidth,
-                        maxHeight: e.maxHeight ?? C.Rk,
+                        maxHeight: e.maxHeight ?? y.Rk,
                         showParticipants: e.isSingleMosaicItem,
                         allowFullScreen: e.allowFullScreen,
                         onPlay: e.onPlay ?? void 0,
@@ -74,7 +74,7 @@ function k(e) {
                     e.renderAdjacentContent?.(),
                 ],
             })
-          : (0, y.T)(e.naturalWidth, e.naturalHeight)
+          : (0, C.T)(e.naturalWidth, e.naturalHeight)
             ? (0, n.jsx)(E, { attachmentProps: e, posterUrl: a.toString() })
             : M(e, a.toString());
 }
@@ -112,8 +112,8 @@ function E(e) {
             m = "portrait" === c,
             h = null != a.description && "" !== a.description ? a.description : v.intl.string(v.t.FlNoSV),
             { width: _, height: S } =
-                ((e = t.maxWidth ?? C.k6),
-                (l = t.maxHeight ?? C.Rk),
+                ((e = t.maxWidth ?? y.k6),
+                (l = t.maxHeight ?? y.Rk),
                 (r = e >= 240 && l >= 180),
                 (0, g.Uj)({
                     width: t.width ?? 0,
@@ -147,6 +147,7 @@ function E(e) {
                             src: a.url,
                             poster: A,
                             fileSizeBytes: a.size,
+                            mimeType: t.mimeType?.join("/"),
                             initialActive: !1,
                             playable: t.playable,
                             autoplay: t.autoPlay,
@@ -185,11 +186,11 @@ function E(e) {
     }
     return M(t, i);
 }
-function w(e) {
+function T(e) {
     let t = e.item.originalItem;
     return (0, f.gL)({ ...e, fileSize: t.size, fileName: (0, A.A)(t), src: t.url });
 }
-function z(e) {
+function w(e) {
     let { message: t, item: i } = e,
         n = i.originalItem,
         l = (0, d.dx)(d.k0.VOICE_MESSAGE, n.id),
@@ -246,7 +247,7 @@ function z(e) {
         playbackCacheKey: l,
     });
 }
-function P(e) {
+function z(e) {
     let t = e.item.originalItem,
         { message: i } = e;
     return (0, f._d)({
@@ -266,7 +267,7 @@ function P(e) {
             i.type !== l.l.INTERACTION_PREMIUM_UPSELL,
     });
 }
-function T(e) {
+function P(e) {
     let t = e.item.originalItem;
     return (0, f.Dk)({ ...e, url: t.url, fileName: (0, A.A)(t), fileSize: t.size });
 }
