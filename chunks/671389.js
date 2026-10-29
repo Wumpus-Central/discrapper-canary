@@ -66,7 +66,8 @@ async function C() {
         (await e(),
             await new Promise((e) => {
                 function t() {
-                    c.Ay.getProjectsFetchState()?.type !== "loading" && (c.Ay.removeChangeListener(t), e());
+                    let n = c.Ay.getOwnedProjectsFetchState();
+                    ("success" === n || "error" === n) && (c.Ay.removeChangeListener(t), e());
                 }
                 (c.Ay.addChangeListener(t), t());
             }));
