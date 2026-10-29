@@ -183,6 +183,7 @@ class I extends a.A {
     externalGatewayFacet;
     giftingFacet;
     subscriptionFacet;
+    promotionsFacet;
     checkoutContextRecord;
     createdAt;
     unsatisfiedConstraints;
@@ -199,6 +200,7 @@ class I extends a.A {
             createdAt: e.created_at,
             unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
             subscriptionFacet: A.createFromServer(e.subscription_facet),
+            promotionsFacet: e.promotions_facet ?? null,
         });
     }
     constructor(e) {
@@ -211,12 +213,17 @@ class I extends a.A {
             (this.externalGatewayFacet = e.externalGatewayFacet ?? null),
             (this.giftingFacet = e.giftingFacet ?? null),
             (this.subscriptionFacet = e.subscriptionFacet ?? null),
+            (this.promotionsFacet = e.promotionsFacet ?? null),
             (this.checkoutContextRecord = e.checkoutContextRecord ?? null),
             (this.createdAt = e.createdAt),
             (this.unsatisfiedConstraints = e.unsatisfiedConstraints ?? []));
     }
     getInvoicePreview() {
         return null == this.billingFacetRecord ? null : this.billingFacetRecord.invoicePreview;
+    }
+    getGoogleOfferId() {
+        let e = this.promotionsFacet?.applied_promotions ?? [];
+        return e.find((e) => null != e.google_offer_id)?.google_offer_id ?? null;
     }
     firstUnsatisfiedConstraintReasonCode() {
         return this.unsatisfiedConstraints.length > 0 ? this.unsatisfiedConstraints[0].reason_code : null;
