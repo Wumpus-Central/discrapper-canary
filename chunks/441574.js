@@ -1601,6 +1601,7 @@ var j =
         (m[(m.CUSTOM_TYPING_INDICATOR = 34)] = "CUSTOM_TYPING_INDICATOR"),
         (m[(m.PREMIUM_REFERRALS = 35)] = "PREMIUM_REFERRALS"),
         (m[(m.PREMIUM_TENURE_BADGE = 36)] = "PREMIUM_TENURE_BADGE"),
+        (m[(m.SCHEDULED_MESSAGES = 37)] = "SCHEDULED_MESSAGES"),
         m),
     er =
         (((g = {})[(g.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
@@ -3343,7 +3344,7 @@ class e3 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfig", [
             { no: 1, name: "source", kind: "enum", repeat: 1, T: () => ["discord_protos.users.v1.PerkSource", er] },
-            { no: 2, name: "increased_file_upload_size", kind: "message", oneof: "kind", T: () => e4 },
+            { no: 2, name: "increased_file_upload_size", kind: "message", oneof: "kind", T: () => e6 },
             { no: 3, name: "increased_guild_limit", kind: "message", oneof: "kind", T: () => e8 },
             { no: 4, name: "display_name_styles", kind: "message", oneof: "kind", T: () => te },
             { no: 5, name: "client_themes", kind: "message", oneof: "kind", T: () => tn },
@@ -3372,7 +3373,7 @@ class e3 extends O.G {
                 case 2:
                     r.kind = {
                         oneofKind: "increasedFileUploadSize",
-                        increasedFileUploadSize: e4.internalBinaryRead(
+                        increasedFileUploadSize: e6.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -3421,7 +3422,7 @@ class e3 extends O.G {
             t.join();
         }
         ("increasedFileUploadSize" === e.kind.oneofKind &&
-            e4.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
+            e6.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
             "increasedGuildLimit" === e.kind.oneofKind &&
                 e8.internalBinaryWrite(e.kind.increasedGuildLimit, t.tag(3, S.O0.LengthDelimited).fork(), n).join(),
             "displayNameStyles" === e.kind.oneofKind &&
@@ -3435,7 +3436,7 @@ class e3 extends O.G {
     }
 }
 let e5 = new e3();
-class e6 extends O.G {
+class e4 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedFileUploadSize", [
             { no: 1, name: "max_size", kind: "scalar", T: 4 },
@@ -3471,7 +3472,7 @@ class e6 extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e6();
+let e6 = new e4();
 class e7 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedGuildLimit", [
