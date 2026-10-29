@@ -4784,72 +4784,69 @@ function aX(e) {
     return e.getUniqueKey();
 }
 function aZ(e) {
-    let { children: t, onWidgetAddedFromBelow: n } = e,
-        r = (0, aB.A)(),
-        s = az(r),
-        o = (0, a.bG)([ro.Ay], () => ro.Ay.hasClips()),
-        u = (0, a.bG)([C.default], () => J.Ay.isPremium(C.default.getCurrentUser(), iU.PremiumTypes.TIER_2)),
-        d = l.useMemo(
+    let { children: t } = e,
+        n = (0, aB.A)(),
+        r = az(n),
+        s = (0, a.bG)([ro.Ay], () => ro.Ay.hasClips()),
+        o = (0, a.bG)([C.default], () => J.Ay.isPremium(C.default.getCurrentUser(), iU.PremiumTypes.TIER_2)),
+        u = l.useMemo(
             () =>
                 aF({
-                    addableWidgets: r,
-                    applicationAffinityData: s,
-                    hasClips: o,
-                    hasPremium: u,
+                    addableWidgets: n,
+                    applicationAffinityData: r,
+                    hasClips: s,
+                    hasPremium: o,
                     maxWidgetOptions: 6,
                     promotedWidgetTypes: [],
                 }),
-            [r, s, o, u],
+            [n, r, s, o],
         ),
-        c = d.length >= 2;
+        d = u.length >= 2;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            c && (0, i.jsx)(a$, { suggestions: d, suggestionsLocation: "above" }),
+            d && (0, i.jsx)(a$, { suggestions: u, suggestionsLocation: "above" }),
             t,
-            c && (0, i.jsx)(a$, { suggestions: d, suggestionsLocation: "below", onWidgetAdded: n }),
+            d && (0, i.jsx)(a$, { suggestions: u, suggestionsLocation: "below" }),
         ],
     });
 }
 function a$(e) {
-    let t = aW.useConfig({ location: "UserProfileModalV2WidgetSuggestions" });
-    return t.enabled && t.suggestionsLocation === e.suggestionsLocation ? (0, i.jsx)(aJ, { ...e }) : null;
+    let { suggestions: t, suggestionsLocation: n } = e,
+        l = aW.useConfig({ location: "UserProfileModalV2WidgetSuggestions" });
+    return l.enabled && l.suggestionsLocation === n ? (0, i.jsx)(aJ, { suggestions: t, suggestionsLocation: n }) : null;
 }
 function aJ(e) {
-    let { suggestions: t, suggestionsLocation: n, onWidgetAdded: r } = e,
-        { trackUserProfileEditAction: a } = (0, Q.NJ)(),
-        { focusAddedWidget: o } = (0, sK.r)(),
-        [u, d] = (0, eM.kn)([eP.M.USER_PROFILE_WIDGET_SUGGESTIONS], { bypassAutoDismiss: !0 }),
-        c = l.useCallback(
+    let { suggestions: t, suggestionsLocation: n } = e,
+        { trackUserProfileEditAction: r } = (0, Q.NJ)(),
+        { focusAddedWidget: a } = (0, sK.r)(),
+        [o, u] = (0, eM.kn)([eP.M.USER_PROFILE_WIDGET_SUGGESTIONS], { bypassAutoDismiss: !0 }),
+        d = l.useCallback(
             (e, t) =>
                 (0, i.jsx)(aK.A, {
                     widget: e,
                     size: "small",
                     compact: !0,
                     listItemProps: t,
-                    onAddWidget: () => {
-                        (o(e.getUniqueKey()), r?.());
-                    },
-                    trackUserProfileEditAction: a,
+                    onAddWidget: () => a(e.getUniqueKey()),
+                    trackUserProfileEditAction: r,
                 }),
-            [o, r, a],
+            [a, r],
         );
-    return u !== eP.M.USER_PROFILE_WIDGET_SUGGESTIONS
+    return o !== eP.M.USER_PROFILE_WIDGET_SUGGESTIONS
         ? null
         : (0, i.jsx)(aY.A, {
               className: s()(aq.uW, "above" === n && aq.G1),
-              compactHeader: !0,
               headingVariant: "below" === n ? "text-xs/normal" : void 0,
-              onDismiss: () => d(eG.i.USER_DISMISS),
+              onDismiss: () => u(eG.i.USER_DISMISS),
               children: (0, i.jsx)(aU.A, {
                   items: t,
                   getItemKey: aX,
-                  renderItem: c,
+                  renderItem: d,
                   gap: 8,
                   edgeFade: 80,
                   scrollStep: "item",
                   iconButtonSize: "sm",
                   className: aq.Dk,
-                  scrollerClassName: aq.jv,
                   itemClassName: aq.Vs,
                   actionsClassName: aq.o1,
                   maintainFocusOnReorder: !0,
@@ -4994,10 +4991,10 @@ function a8() {
     });
 }
 function a7(e) {
-    let { user: t, guildId: n, channelId: r, onWidgetAddedFromBelow: s } = e,
-        o = (0, sw.A)(t.id),
-        u = sD(t.id),
-        d = (function () {
+    let { user: t, guildId: n, channelId: r } = e,
+        s = (0, sw.A)(t.id),
+        o = sD(t.id),
+        u = (function () {
             let [e, t] = (0, a.yK)([sR.A], () => [sR.A.ipCountryCode, sR.A.ipCountryCodeRequest]),
                 n = (0, sP.Z)();
             return (
@@ -5007,28 +5004,28 @@ function a7(e) {
                 "GB" === e && n
             );
         })(),
-        c = 0 === o.length && u,
-        g = l.useMemo(() => o.filter(ri.fu), [o]),
-        f = l.useMemo(() => o.filter((e) => e instanceof sO.R), [o]);
-    function m() {
-        let e = o.map((e, l) =>
+        d = 0 === s.length && o,
+        c = l.useMemo(() => s.filter(ri.fu), [s]),
+        g = l.useMemo(() => s.filter((e) => e instanceof sO.R), [s]);
+    function f() {
+        let e = s.map((e, l) =>
             (0, i.jsx)(
                 aD.u,
-                { widget: e, user: t, guildId: n, channelId: r, allowEditing: u, index: l },
+                { widget: e, user: t, guildId: n, channelId: r, allowEditing: o, index: l },
                 e.getUniqueKey(),
             ),
         );
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                u &&
+                o &&
                     (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(sY, { className: a9.cG }), d && (0, i.jsx)(a8, {}), (0, i.jsx)(s2, {})],
+                        children: [(0, i.jsx)(sY, { className: a9.cG }), u && (0, i.jsx)(a8, {}), (0, i.jsx)(s2, {})],
                     }),
-                u ? (0, i.jsx)(aZ, { onWidgetAddedFromBelow: s, children: e }) : e,
+                o ? (0, i.jsx)(aZ, { children: e }) : e,
             ],
         });
     }
-    return ((0, s_.Y)(u, g),
+    return ((0, s_.Y)(o, c),
     !(function (e, t) {
         let n = l.useMemo(() => t.map((e) => e.applicationId), [t]);
         (0, ec.A)(n);
@@ -5037,12 +5034,12 @@ function a7(e) {
         l.useEffect(() => {
             s.current && ((s.current = !1), r());
         }, [r]);
-    })(t.id, f),
-    c)
+    })(t.id, g),
+    d)
         ? (0, i.jsx)(a3, { userId: t.id })
-        : u
-          ? (0, i.jsx)(sK.D, { children: m() })
-          : m();
+        : o
+          ? (0, i.jsx)(sK.D, { children: f() })
+          : f();
 }
 function a6(e) {
     var t;
@@ -5051,18 +5048,13 @@ function a6(e) {
         { user: o, ...u } = e,
         d = l.useRef(null);
     (0, sL.i)({ containerRef: d });
-    let c = l.useCallback(() => {
-            requestAnimationFrame(() => {
-                d.current?.scrollTo({ top: 0, behavior: th.Ay.useReducedMotion ? "auto" : "smooth" });
-            });
-        }, []),
-        g = ((t = o.id), (n = (0, a.bG)([lJ.default], () => lJ.default.getId() === t)), (r = rA()), n && null != r);
+    let c = ((t = o.id), (n = (0, a.bG)([lJ.default], () => lJ.default.getId() === t)), (r = rA()), n && null != r);
     return (0, i.jsxs)(sf, {
         "data-scroller": !0,
         scrollerRef: d,
-        className: s()(a9.XG, { [a9.az]: g }),
+        className: s()(a9.XG, { [a9.az]: c }),
         fade: !0,
-        children: [(0, i.jsx)(aG, { scrollerRef: d }), (0, i.jsx)(a7, { user: o, onWidgetAddedFromBelow: c, ...u })],
+        children: [(0, i.jsx)(aG, { scrollerRef: d }), (0, i.jsx)(a7, { user: o, ...u })],
     });
 }
 var a4 = n(132500),
