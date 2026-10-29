@@ -1,4 +1,4 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => g });
 var i = n(256693),
     s = n(343030);
 class l {
@@ -103,10 +103,71 @@ var r = n(73153);
 function a(e, t) {
     r.h.dispatch({ type: "FRAME_POOL_VISIBILITY_UPDATE", frameId: e, poolVisibility: t });
 }
-var o = n(457827),
-    c = n(812901);
-class h extends l {
-    strategy = (0, c.G)();
+var o = n(457827);
+let c = { [s.A.Backstage]: 0, [s.A.WithinAppContent]: 1, [s.A.WithinCallContent]: 3, [s.A.AboveAppContent]: 1002 };
+class h {
+    _pool = null;
+    setPool(e) {
+        this._pool = e;
+    }
+    get pool() {
+        if (null == this._pool) throw Error("FramePlacementStrategy: pool accessed before setPool");
+        return this._pool;
+    }
+}
+class d extends h {
+    placed = new Map();
+    rafHandle = null;
+    initialize(e) {
+        ((e.style.position = "fixed"),
+            (e.style.top = "0"),
+            (e.style.left = "0"),
+            (e.style.pointerEvents = "none"),
+            (e.style.display = "none"),
+            this.pool.appendChild(e));
+    }
+    place(e, t, n) {
+        (this.placed.set(e, { target: t, level: n }), this.position(e, t, n), this.ensureTicking());
+    }
+    unplace(e) {
+        (this.placed.delete(e), (e.style.display = "none"));
+    }
+    ensureTicking() {
+        null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
+    }
+    position(e, t, n) {
+        let i = t.getBoundingClientRect(),
+            s = t.offsetWidth > 0 ? i.width / t.offsetWidth : 1,
+            l = Math.abs(s - 1) > 0.01;
+        ((e.style.display = "block"),
+            (e.style.zIndex = String(c[n])),
+            (e.style.transformOrigin = "0 0"),
+            (e.style.transform = `translate(${i.left}px, ${i.top}px)${l ? ` scale(${s})` : ""}`),
+            (e.style.width = `${l ? t.offsetWidth : i.width}px`),
+            (e.style.height = `${l ? t.offsetHeight : i.height}px`));
+    }
+    tick = () => {
+        for (let [e, { target: t, level: n }] of this.placed) this.position(e, t, n);
+        this.rafHandle = this.placed.size > 0 ? requestAnimationFrame(this.tick) : null;
+    };
+}
+class p extends h {
+    initialize(e) {
+        ((e.style.width = "100%"),
+            (e.style.height = "100%"),
+            (e.style.pointerEvents = "none"),
+            (e.style.display = "none"),
+            this.pool.appendChild(e));
+    }
+    place(e, t, n) {
+        (e.parentElement !== t && t.moveBefore(e, null), (e.style.display = "block"));
+    }
+    unplace(e) {
+        (e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none"));
+    }
+}
+class u extends l {
+    strategy = "function" == typeof Element.prototype.moveBefore ? new p() : new d();
     constructor() {
         super({ maxBackgrounded: 3, timeoutMs: 3e5 });
     }
@@ -133,4 +194,4 @@ class h extends l {
         (0, i.fS)(e) ? (0, i.aQ)(e) : (0, o.r)(e);
     }
 }
-let d = new h();
+let g = new u();

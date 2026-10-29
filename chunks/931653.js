@@ -25,15 +25,15 @@ p.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
 var x = i(625180),
     A = i(457827),
     j = i(373677),
-    y = i(754027),
-    b = i(939398),
+    b = i(754027),
+    y = i(939398),
     R = i(165610);
 function E(e) {
     let t = e.preview_application_id;
     if (null == t) return () => void 0;
     let i = (0, j.PH)(null, (0, j.hR)(e.preview_supported_surfaces)),
-        n = (0, b.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
-        l = (0, y.Op)((0, y.jS)(e), i);
+        n = (0, y.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
+        l = (0, b.Op)((0, b.jS)(e), i);
     return (
         x.A.launchFrame({
             applicationId: t,
@@ -48,12 +48,12 @@ var I = i(858899),
     S = i(381991);
 async function M(e, t) {
     let i = await e.open(t);
-    return (i.ok ? (0, S.Ay)(i.projectId) : (0, I.P0)({ text: i.message, variant: "critical" }), i);
+    return (i.ok ? (0, S.A)(i.projectId) : (0, I.P0)({ text: i.message, variant: "critical" }), i);
 }
 function G(e) {
     let { project: t, currentGuildId: i, transitionState: p, onClose: x } = e,
         [A, j] = l.useState(i),
-        [y, b] = l.useState(!1),
+        [b, y] = l.useState(!1),
         [R, I] = l.useState(0),
         S = l.useRef(null);
     l.useEffect(() => {
@@ -145,19 +145,19 @@ function G(e) {
             [G],
         ),
         P = l.useCallback(async () => {
-            if (y || null == S.current) return;
-            b(!0);
+            if (b || null == S.current) return;
+            y(!0);
             let e = await M(S.current, A);
-            e.ok ? await x() : (e.kept || I((e) => e + 1), b(!1));
-        }, [y, A, x]);
+            e.ok ? await x() : (e.kept || I((e) => e + 1), y(!1));
+        }, [b, A, x]);
     return (0, n.jsx)(r.a, {
         transitionState: p,
         onClose: x,
         title: C.intl.string(m.default["9wQTdG"]),
         size: "md",
         actions: [
-            { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: x, disabled: y },
-            { text: C.intl.string(m.default.XWgAfc), variant: "primary", onClick: P, loading: y },
+            { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: x, disabled: b },
+            { text: C.intl.string(m.default.XWgAfc), variant: "primary", onClick: P, loading: b },
         ],
         children: (0, n.jsx)(d.Z, {
             selectionMode: "single",
@@ -165,7 +165,7 @@ function G(e) {
             options: O,
             value: A,
             onSelectionChange: j,
-            disabled: y,
+            disabled: b,
             fullWidth: !0,
         }),
     });

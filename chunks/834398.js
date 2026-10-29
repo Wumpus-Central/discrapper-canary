@@ -1486,7 +1486,7 @@ function nN(e) {
         { options: o, listState: d } = (function (e, t) {
             let { options: n, listState: l } = (function (e) {
                     i.useEffect(() => {
-                        (0, nx.hF)(e);
+                        (0, nx.listProjects)(e);
                     }, [e]);
                     let t = (0, a.yK)([nA.Ay], () => nA.Ay.getOwnedProjects()),
                         n = (0, a.yK)([nA.Ay], () => nA.Ay.getSharedProjects(e), [e]),

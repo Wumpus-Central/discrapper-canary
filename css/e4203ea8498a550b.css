@@ -11,27 +11,13 @@
     position: relative
 }
 
-.homeInOverlay_c87fd6 {
-    border: 1px solid var(--app-frame-border);
-    border-end-end-radius: var(--radius-md);
-    border-inline-start: none;
-    border-start-end-radius: var(--radius-md);
-    border-start-start-radius: 0
-}
-
 .notice_c87fd6 {
-    display: flex;
-    flex: 1 1 auto
-}
-
-.notice_c87fd6,
-.noticeInOverlay_c87fd6 {
     align-items: center;
+    display: flex;
+    flex: 1 1 auto;
     justify-content: center;
     padding: var(--space-24);
     text-align: center
 }
 
-.noticeInOverlay_c87fd6 {}
-
-/*# sourceMappingURL=d15ccd29138c1fcf.css.map*/
+/*# sourceMappingURL=e4203ea8498a550b.css.map*/

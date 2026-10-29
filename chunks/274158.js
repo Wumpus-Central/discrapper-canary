@@ -1,18 +1,1 @@
-e.exports = {
-    NI: "slot__8306d",
-    f_: "entry__8306d",
-    h5: "status__8306d",
-    wH: "selected__8306d",
-    oT: "entryContent__8306d",
-    Er: "statusName__8306d",
-    WK: "mentionBadge__8306d",
-    uP: "mentionBadgeEstimated__8306d",
-    RB: "wand__8306d",
-    dQ: "sparkle__8306d",
-    q2: "shine__8306d",
-    Cc: "working__8306d",
-    ck: "conjure-title-bar-shine__8306d",
-    ui: "sparkleSmall__8306d",
-    zn: "conjure-title-bar-twinkle__8306d",
-    Mb: "sparkleLarge__8306d",
-};
+s.exports = { N: "slot__8306d" };

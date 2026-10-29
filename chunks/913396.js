@@ -25,7 +25,7 @@ function p(l) {
         f = (0, i.yK)([u.Ay], () => (null != p ? (u.Ay.getSelfMember(p)?.roles ?? []) : []), [p]);
     return (
         t.useEffect(() => {
-            e && null != n && (0, a.hF)(p ?? void 0);
+            e && null != n && (0, a.listProjects)(p ?? void 0);
         }, [e, n, p, y, f]),
         (0, i.bG)(
             [d.Ay],

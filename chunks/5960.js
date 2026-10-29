@@ -1,33 +1,33 @@
-n.d(t, { A: () => A });
-var u = n(582128),
-    r = n(158390),
-    c = n(17928),
-    s = n(71393),
-    l = n(246338),
-    i = n(371169),
-    p = n(260498);
-let d = new r.A(3e4, 3e5);
-function A(e, t) {
-    let n = (0, c.bG)([s.A], () => t && null != e && (0, l.XF)(s.A.getGuildsArray(), "useIsOwnedConjureApplication"), [
+s.d(t, { A: () => d });
+var r = s(582128),
+    c = s(158390),
+    n = s(17928),
+    u = s(71393),
+    l = s(246338),
+    i = s(371169),
+    p = s(260498);
+let o = new c.A(3e4, 3e5);
+function d(e, t) {
+    let s = (0, n.bG)([u.A], () => t && null != e && (0, l.XF)(u.A.getGuildsArray(), "useIsOwnedConjureApplication"), [
             t,
             e,
         ]),
-        r = (0, c.bG)([p.Ay], () => p.Ay.getProjectsFetchState()?.type ?? null);
+        c = (0, n.bG)([p.Ay], () => p.Ay.getProjectsFetchState()?.type ?? null);
     return (
-        u.useEffect(() => {
-            if (("success" === r && d.succeed(), n)) {
-                if (null == r) return void (0, i.hF)();
-                "error" !== r || d.pending || d.fail(() => (0, i.hF)());
+        r.useEffect(() => {
+            if (("success" === c && o.succeed(), s)) {
+                if (null == c) return void (0, i.listProjects)();
+                "error" !== c || o.pending || o.fail(() => (0, i.listProjects)());
             }
-        }, [n, r]),
-        (0, c.bG)(
+        }, [s, c]),
+        (0, n.bG)(
             [p.Ay],
             () => {
-                if (!n || null == e) return !1;
+                if (!s || null == e) return !1;
                 let t = p.Ay.findProjectByApplicationId(e);
                 return !!(null != t && (0, p.PV)(t)) || (p.Ay.getProjectsFetchState()?.type !== "success" && null);
             },
-            [n, e],
+            [s, e],
         )
     );
 }

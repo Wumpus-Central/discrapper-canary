@@ -1,3 +1,35 @@
+.glowMask__122f0 {
+    border-radius: var(--custom-conjure-glow-radius, var(--radius-sm));
+    inset: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .3s ease-in-out
+}
+
+.glowMask__122f0[data-thinking] {
+    opacity: 1;
+    transition: opacity 1s ease-in-out
+}
+
+.glowMask__122f0 {
+    --custom-conjure-glow-extent: 100%
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .glowMask__122f0,
+    .glowMask__122f0[data-thinking] {
+        transition: none
+    }
+}
+
+.reduce-motion .glowMask__122f0,
+.reduce-motion .glowMask__122f0[data-thinking] {
+    transition: none
+}
+
 .iconBase__933a1 {
     cursor: pointer;
     line-height: 0;
@@ -2431,4 +2463,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=7b65661eb4c5ffc8.css.map*/
+/*# sourceMappingURL=860fe64324384282.css.map*/

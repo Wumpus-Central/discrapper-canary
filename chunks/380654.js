@@ -56,7 +56,7 @@ function h(e, t) {
                               confirmText: f.intl.string(c.default.gFHykw),
                               variant: "critical",
                               onConfirm: async () => {
-                                  (0, o.Ay)(n);
+                                  (0, o.A)(n);
                                   try {
                                       await (0, d.Hj)(n, e, f.intl.string(c.default.Owerd3));
                                   } catch {

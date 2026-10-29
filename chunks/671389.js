@@ -1,78 +1,89 @@
 n.d(t, { Ay: () => y });
 var i = n(17928),
-    r = n(636537),
-    a = n(73153),
-    s = n(885576),
-    l = n(309010),
-    o = n(967198),
-    d = n(97005),
-    c = n(735769),
-    u = n(260498),
-    _ = n(189117),
-    E = n(652215),
-    A = n(746080);
-let h = null,
+    r = n(73153),
+    a = n(885576),
+    s = n(309010),
+    l = n(967198),
+    o = n(97005),
+    d = n(735769),
+    c = n(260498),
+    u = n(189117),
+    _ = n(652215),
+    E = n(746080);
+let A = null,
+    h = null,
     f = null,
     I = null,
-    p = null,
-    T = !1;
-function m() {
-    null != I && (clearTimeout(I), (I = null));
+    p = !1;
+function T() {
+    null != f && (clearTimeout(f), (f = null));
 }
-function g(e) {
-    let t = _.ZR.filter((t) => t !== e);
+function m(e) {
+    let t = u.ZR.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
+function g() {
+    null != I && (clearTimeout(I), (I = null));
+}
 function S() {
-    null != p && (clearTimeout(p), (p = null));
+    return (T(), g(), (A = null), null != h && ((h = null), !0));
 }
-function N() {
-    return (m(), S(), (h = null), null != f && ((f = null), !0));
-}
-function C(e) {
+function N(e) {
     let { withGracePeriod: t } = e;
-    if (s.A.isIdle() || (null != h && null == u.Ay.getProject(h))) return N();
+    if (a.A.isIdle() || (null != A && null == c.Ay.getProject(A))) return S();
     let n = (function () {
-        let e = c.A.getShownProjectId();
-        if (null != e) return null != u.Ay.getProject(e) ? e : null;
-        let t = o.A.getGuildId(),
+        let e = d.A.getShownProjectId();
+        if (null != e) return null != c.Ay.getProject(e) ? e : null;
+        let t = l.A.getGuildId(),
             n =
-                u.Ay.getGlobalSelectedProjectId() ??
-                (null != t && l.Ay.getChannelId() === A.VV.CONJURE ? u.Ay.getSelectedProjectId(t) : null);
-        return null == n || null == u.Ay.getProject(n) ? null : n;
+                c.Ay.getGlobalSelectedProjectId() ??
+                (null != t && s.Ay.getChannelId() === E.VV.CONJURE ? c.Ay.getSelectedProjectId(t) : null);
+        return null == n || null == c.Ay.getProject(n) ? null : n;
     })();
     return null == n
-        ? null != f && t
-            ? (null == I &&
-                  (I = setTimeout(() => {
-                      ((I = null), N() && L.emitChange());
+        ? null != h && t
+            ? (null == f &&
+                  (f = setTimeout(() => {
+                      ((f = null), S() && L.emitChange());
                   }, 3e4)),
               !1)
-            : N()
-        : (m(),
-          (n !== h || null == f) &&
-              ((h = n),
-              (f = { type: E.$pd.PLAYING, name: _.Vb, details: g(), timestamps: { start: Date.now() } }),
+            : S()
+        : (T(),
+          (n !== A || null == h) &&
+              ((A = n),
+              (h = { type: _.$pd.PLAYING, name: u.Vb, details: m(), timestamps: { start: Date.now() } }),
               !(function e() {
-                  (S(),
-                      (p = setTimeout(() => {
-                          ((p = null), null != f && ((f = { ...f, details: g(f.details) }), e(), L.emitChange()));
+                  (g(),
+                      (I = setTimeout(() => {
+                          ((I = null), null != h && ((h = { ...h, details: m(h.details) }), e(), L.emitChange()));
                       }, 3e5)));
               })(),
               !0));
 }
+async function C() {
+    if ("success" !== c.Ay.getOwnedProjectsFetchState()) {
+        let { listProjects: e } = await Promise.resolve().then(n.bind(n, 371169));
+        (await e(),
+            await new Promise((e) => {
+                function t() {
+                    c.Ay.getProjectsFetchState()?.type !== "loading" && (c.Ay.removeChangeListener(t), e());
+                }
+                (c.Ay.addChangeListener(t), t());
+            }));
+    }
+    if ("success" !== c.Ay.getOwnedProjectsFetchState()) throw Error("Conjure projects fetch failed");
+    return c.Ay.getOwnedProjects();
+}
 async function O() {
-    if (!T && ((T = !0), (0, d.zN)("conjure_resume")))
+    if (!p && ((p = !0), (0, o.zN)("conjure_resume")))
         try {
-            let [{ body: e }, { ensureConnection: t }] = await Promise.all([
-                r.Bo.get({ url: E.Rsh.CONJURE_PROJECTS, rejectWithError: !0 }),
+            let [e, { ensureConnection: t }] = await Promise.all([
+                C(),
                 Promise.all([
                     n.e("661008"),
                     n.e("916758"),
-                    n.e("356664"),
-                    n.e("473380"),
+                    n.e("947802"),
                     n.e("741111"),
-                    n.e("722440"),
                     n.e("421060"),
                     n.e("778042"),
                     n.e("623927"),
@@ -81,27 +92,28 @@ async function O() {
                     n.e("992166"),
                     n.e("534485"),
                     n.e("667034"),
+                    n.e("722440"),
                 ]).then(n.bind(n, 889921)),
             ]);
             e.filter((e) => !0 === e.running)
                 .slice(0, 5)
                 .forEach((e) => t(e.id));
         } catch {
-            T = !1;
+            p = !1;
         }
 }
 class R extends i.Ay.Store {
     static displayName = "ConjureRichPresenceStore";
     initialize() {
-        this.syncWith([s.A, l.Ay, o.A, u.Ay, c.A], () => C({ withGracePeriod: !0 }));
+        this.syncWith([a.A, s.Ay, l.A, c.Ay, d.A], () => N({ withGracePeriod: !0 }));
     }
     getActivity() {
-        return f;
+        return h;
     }
 }
-let L = new R(a.h, {
-        CONNECTION_OPEN: () => C({ withGracePeriod: !1 }),
+let L = new R(r.h, {
+        CONNECTION_OPEN: () => N({ withGracePeriod: !1 }),
         POST_CONNECTION_OPEN: () => (O(), !1),
-        LOGOUT: () => ((T = !1), N()),
+        LOGOUT: () => ((p = !1), S()),
     }),
     y = L;

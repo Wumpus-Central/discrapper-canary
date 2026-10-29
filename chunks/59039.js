@@ -15984,7 +15984,7 @@ let T0 = (0, h.FW)(S.X.OVERLAY_WIDGETS_LIST, {
         Component: function () {
             let e = (0, _.bG)([TZ.A], () => TZ.A.getProjects());
             return (f.useEffect(() => {
-                (0, Tq.hF)();
+                (0, Tq.listProjects)();
             }, []),
             0 === e.length)
                 ? null

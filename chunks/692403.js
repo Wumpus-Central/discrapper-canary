@@ -31,8 +31,8 @@ var C = n(503698),
     j = n(663417),
     T = n(138134),
     k = n(972213),
-    L = n(328162),
-    P = n(231723),
+    P = n(328162),
+    L = n(231723),
     R = n(345874),
     M = n(442433),
     G = n(793574),
@@ -230,9 +230,9 @@ let eO = [],
             j = i.useCallback((e) => {
                 (0, em.uD)(e);
             }, []),
-            { id: T, zIndex: k, size: L, anchor: P, minSize: R } = t,
-            M = i.useMemo(() => (0, eA.fd)(L, I), [L, I]),
-            G = (0, eA.Nv)(P, I),
+            { id: T, zIndex: k, size: P, anchor: L, minSize: R } = t,
+            M = i.useMemo(() => (0, eA.fd)(P, I), [P, I]),
+            G = (0, eA.Nv)(L, I),
             { resizeX: U, resizeY: K, dragAnywhere: B, constrainAutoSizeToExplicitResizeEvents: F } = p ?? {},
             W = !v,
             H = _ || !v,
@@ -316,7 +316,7 @@ function ek() {
     }
     return r;
 }
-let eL = i.memo(function (e) {
+let eP = i.memo(function (e) {
     let { className: t } = e,
         n = (0, eE.A)(),
         s = (0, l.bG)([g.A], () => g.A.windowSize((0, y.Q2)(n))),
@@ -324,7 +324,7 @@ let eL = i.memo(function (e) {
         a = i.useCallback((e) => (0, r.jsx)("div", { className: t, style: s, children: e }), [t, s]);
     return (0, r.jsx)(eh.F, { items: o, renderItem: ej, getItemKey: eS, wrapChildren: a });
 });
-var eP = n(233741),
+var eL = n(233741),
     eR = n(222506);
 let eM = new Set(["shift", "ctrl", "control", "alt", "meta", "os"]);
 function eG(e) {
@@ -520,17 +520,17 @@ let ta = i.memo(function (e) {
                   className: tr.BE,
                   children: (0, r.jsx)(ee, {
                       "data-testid": "overlay-unlock-button",
-                      onClick: () => s.A.setInputLocked(!1, eP.A.getTargetPID()),
-                      IconComponent: L.w,
+                      onClick: () => s.A.setInputLocked(!1, eL.A.getTargetPID()),
+                      IconComponent: P.w,
                   }),
               })
             : null;
     });
 function td() {
-    s.A.setInputLocked(!0, eP.A.getTargetPID());
+    s.A.setInputLocked(!0, eL.A.getTargetPID());
 }
 function tc(e) {
-    let t = eR.A.isInputLocked(eP.A.getTargetPID());
+    let t = eR.A.isInputLocked(eL.A.getTargetPID());
     ("alt" !== e.key.toLowerCase() ||
         t ||
         ("keyup" === e.type.toLowerCase()
@@ -539,7 +539,7 @@ function tc(e) {
         (function (e, t) {
             if (t || "keydown" !== e.type.toLowerCase()) return;
             let n = e.key.toLowerCase();
-            ("escape" === n || "esc" === n) && s.A.setInputLocked(!0, eP.A.getTargetPID());
+            ("escape" === n || "esc" === n) && s.A.setInputLocked(!0, eL.A.getTargetPID());
         })(e, t),
         (ti || (0, eH.SE)()) &&
             (function (e) {
@@ -559,7 +559,7 @@ function tc(e) {
                     )
                 );
             })(e) &&
-            (e.preventDefault(), e.stopPropagation(), s.A.setInputLocked(!t, eP.A.getTargetPID())));
+            (e.preventDefault(), e.stopPropagation(), s.A.setInputLocked(!t, eL.A.getTargetPID())));
 }
 let th = i.memo(function () {
         return (0, l.bG)([ev.A], () => ev.A.hasRenderDebugMode(x.x7.WindowContainer))
@@ -568,9 +568,9 @@ let th = i.memo(function () {
     }),
     tf = i.memo(function () {
         let e = (0, eE.A)(),
-            t = (0, l.bG)([eP.A], () => eP.A.getTargetPID()),
+            t = (0, l.bG)([eL.A], () => eL.A.getTargetPID()),
             n = (0, l.bG)([eR.A], () => eR.A.isInputLocked(t), [t]),
-            s = (0, l.bG)([eP.A], () => eP.A.isFocused(t), [t]),
+            s = (0, l.bG)([eL.A], () => eL.A.isFocused(t), [t]),
             o = (0, l.bG)(
                 [Y.Ay],
                 () => (null != Y.Ay.getOverlayKeybind() ? (0, $.dI)(Y.Ay.getOverlayKeybind()?.shortcut, !0) : "???"),
@@ -579,7 +579,7 @@ let th = i.memo(function () {
         i.useEffect(() => {
             if ((J._.dispatch(eC.jej.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), n))
                 return (
-                    (0, N.closeAllModalsInContext)(P.KX),
+                    (0, N.closeAllModalsInContext)(L.KX),
                     e.addEventListener("contextmenu", ts, !1),
                     () => {
                         e.removeEventListener("contextmenu", ts, !1);
@@ -595,7 +595,7 @@ let th = i.memo(function () {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(ta, { locked: n, keybind: o, onClick: td, widgetsPanelOpen: a, onToggleWidgetsPanel: d }),
-                (0, r.jsx)(eL, { className: b()({ [tr.ZK]: n, [tr.al]: !n }) }),
+                (0, r.jsx)(eP, { className: b()({ [tr.ZK]: n, [tr.al]: !n }) }),
                 n || a ? null : (0, r.jsx)(te, { onBrowse: c }),
                 !n && a ? (0, r.jsx)(tt.Ay, { onClose: h }) : null,
                 (ti || (0, eH.SE)()) && (0, r.jsx)(tu, { locked: n, focused: s }),
@@ -637,7 +637,7 @@ function tg() {
         { analyticsLocations: T } = (0, U.Ay)(G.A.OVERLAY);
     return (
         (n = (0, eE.A)()),
-        (a = (0, l.bG)([eP.A], () => eP.A.getTargetPID(), [])),
+        (a = (0, l.bG)([eL.A], () => eL.A.getTargetPID(), [])),
         (u = (0, l.bG)(
             [Y.Ay],
             () => {
@@ -701,7 +701,7 @@ function tg() {
         }),
         (x = (0, eE.A)()),
         (e = () => {
-            (s.A.overlayReady(eP.A.getTargetPID()),
+            (s.A.overlayReady(eL.A.getTargetPID()),
                 x.addEventListener("keydown", tc, !0),
                 x.addEventListener("keyup", tc));
         }),
@@ -731,7 +731,7 @@ function tg() {
                 l = null != t,
                 o = (0, B.A)(V.Ay) && !i && null != e,
                 a = l && null != r && null != t,
-                u = eP.A.getTargetPID();
+                u = eL.A.getTargetPID();
             if (eB.default.hasChangedRenderMode(u)) return;
             let d = eF.A.isNotificationDisabled(tn.KS.WelcomeNudge),
                 c = eF.A.isNotificationDisabled(tn.KS.GoLiveNudge),
@@ -754,7 +754,7 @@ function tg() {
         }),
         ((C = (0, eq.TW)("overlay_conjure_widgets")),
         i.useEffect(() => {
-            C && (0, e1.hF)();
+            C && (0, e1.listProjects)();
         }, [C]),
         (b = (0, l.bG)([e0.A], () => e0.A.hasFetchSucceeded())),
         (N = (0, l.bG)([e0.A], () => e0.A.getProjects())),
@@ -903,16 +903,16 @@ let tO = i.memo(function (e) {
                     () => !!(!m.isPlatformEmbedded || (0, eH.SE)()) || tm.A.isWindowHandleInitialized(),
                 ),
                 u = (0, l.bG)([d.A], () => d.A.getWindow(e)),
-                c = (0, l.bG)([eP.A], () => eP.A.getFocusedPID()),
+                c = (0, l.bG)([eL.A], () => eL.A.getFocusedPID()),
                 p = i.useMemo(() => !!(!m.isPlatformEmbedded || (0, eH.SE)()) || (null != c && -1 !== c), [c]),
                 [A, v] = i.useState(!1),
                 w = i.useRef(!1),
                 C = i.useCallback(() => {
-                    let e = eP.A.getTargetPID(),
+                    let e = eL.A.getTargetPID(),
                         n = null != f.Ay.getVoiceChannelId();
                     ((0, E.g)(eC.HAw.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: eP.A.isPinned(eC.uss.TEXT),
+                        text_widget_connected: eL.A.isPinned(eC.uss.TEXT),
                         overlay_render_method: x.Ue[eB.default.getOverlayMethod(e)],
                         unpinned_widget_types: h.A.getAllUnpinnedPinnedWidgets(t),
                     }),
@@ -927,7 +927,7 @@ let tO = i.memo(function (e) {
                             ty("cssLoaded", !0);
                         } catch (e) {
                             (tw.error("Timed out waiting for CSS to load", e),
-                                s.A.setOverlayCrashed(eP.A.getTargetPID(), e),
+                                s.A.setOverlayCrashed(eL.A.getTargetPID(), e),
                                 ty("errorMessage", "CSS failed load"));
                             return;
                         }
@@ -935,7 +935,7 @@ let tO = i.memo(function (e) {
                             if ((await tC(e, t), b.current)) return;
                             (0, tp.Mq)();
                         } catch (e) {
-                            (s.A.setOverlayCrashed(eP.A.getTargetPID(), e), ty("errorMessage", "showInactive failed"));
+                            (s.A.setOverlayCrashed(eL.A.getTargetPID(), e), ty("errorMessage", "showInactive failed"));
                             return;
                         }
                         (await new Promise((t) => {
@@ -953,7 +953,7 @@ let tO = i.memo(function (e) {
                         if (!p) {
                             _.current ||
                                 (s.A.updateOverlayState(
-                                    eP.A.getTargetPID(),
+                                    eL.A.getTargetPID(),
                                     x.AR.WAITING_FOR_PID_FOCUS,
                                     "AppOverlay - not focused",
                                 ),
@@ -967,7 +967,7 @@ let tO = i.memo(function (e) {
                     (clearInterval(N.current), (b.current = !0));
                 }),
                 (n = (0, l.bG)([g.A], () => g.A.windowSize(null != u ? (0, y.Q2)(u) : void 0))),
-                (r = (0, l.bG)([eP.A], () => eP.A.getFocusedWindowHandle())),
+                (r = (0, l.bG)([eL.A], () => eL.A.getFocusedWindowHandle())),
                 i.useEffect(() => {
                     let e, t;
                     if (null != u && A && u.innerHeight === n.height && u.innerWidth === n.width)
@@ -988,10 +988,10 @@ let tO = i.memo(function (e) {
                 A
             );
         })(u, eI.GJ),
-        v = (0, l.bG)([eP.A], () => eP.A.getFocusedPID()),
+        v = (0, l.bG)([eL.A], () => eL.A.getFocusedPID()),
         C = (0, l.bG)([eR.A], () => eR.A.isInputLocked(v), [v]),
-        b = (0, l.bG)([eB.default, eP.A], () =>
-            (0, tv.S)(eP.A.getNativeLimitedInteraction(), eB.default.getOverlayMethod(eP.A.getTargetPID())),
+        b = (0, l.bG)([eB.default, eL.A], () =>
+            (0, tv.S)(eL.A.getNativeLimitedInteraction(), eB.default.getOverlayMethod(eL.A.getTargetPID())),
         );
     return p
         ? (0, r.jsx)(w.p, {

@@ -534,13 +534,6 @@
     overflow: hidden
 }
 
-.channelViewMainPanel_ea14bc.channelViewMainInOverlay_ea14bc {
-    border: 1px solid var(--app-frame-border);
-    border-end-end-radius: var(--radius-md);
-    border-inline-start: none;
-    border-start-end-radius: var(--radius-md)
-}
-
 .channelViewMainPanel_ea14bc.chatSidebarOpen_ea14bc {
     border-end-end-radius: var(--radius-sm);
     border-inline-end: 1px solid var(--border-subtle);
@@ -598,37 +591,4 @@
     display: none
 }
 
-.chatPanelHostInOverlay_ea14bc {
-    --app-frame-border: transparent;
-    --background-gradient-app-frame: transparent;
-    position: relative;
-    z-index: 100
-}
-
-.chatPanelHostInOverlay_ea14bc:after,
-.chatPanelHostInOverlay_ea14bc:before {
-    border-radius: var(--radius-md);
-    box-sizing: border-box;
-    content: "";
-    inset-block: 0;
-    inset-inline-end: 0;
-    pointer-events: none;
-    position: absolute;
-    width: var(--custom-conjure-chat-width, 0)
-}
-
-.chatPanelHostInOverlay_ea14bc:before {
-    background: var(--custom-conjure-overlay-chat-background);
-    z-index: -1
-}
-
-.chatPanelHostInOverlay_ea14bc:after {
-    border: 1px solid var(--custom-conjure-overlay-frame-border);
-    z-index: 101
-}
-
-.chatPanelHostInOverlay_ea14bc .agentChatPanel_ea14bc {
-    border-radius: calc(var(--radius-md) - 1px)
-}
-
-/*# sourceMappingURL=46f9b982041dd9cd.css.map*/
+/*# sourceMappingURL=ba76b01c0170ed4a.css.map*/

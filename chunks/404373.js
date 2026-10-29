@@ -1,4 +1,4 @@
-n.d(t, { E1: () => f, NC: () => h, tz: () => E, xp: () => A });
+n.d(t, { E1: () => h, NC: () => A, tz: () => E });
 var i = n(582128),
     r = n(17928),
     a = n(73153),
@@ -15,9 +15,6 @@ function E(e) {
     return _(l.Ay.getMentionCount(e, u.P.CONJURING_PROJECT), l.Ay.ackMessageId(e, u.P.CONJURING_PROJECT));
 }
 function A(e) {
-    return l.Ay.getMentionCount(e, u.P.CONJURING_PROJECT);
-}
-function h(e) {
     return (0, r.cf)(
         [l.Ay, s.A, d.Ay],
         () => {
@@ -45,7 +42,7 @@ function h(e) {
         [e],
     );
 }
-function f(e, t) {
+function h(e, t) {
     let n = (0, r.bG)(
         [l.Ay],
         () =>

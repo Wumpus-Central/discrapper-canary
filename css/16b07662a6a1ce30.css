@@ -1,0 +1,10 @@
+.slot__8306d {
+    align-items: center;
+    display: flex
+}
+
+.slot__8306d:first-child {
+    padding-inline-start: calc(var(--custom-guild-list-width) + var(--space-12))
+}
+
+/*# sourceMappingURL=16b07662a6a1ce30.css.map*/

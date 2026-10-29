@@ -1,0 +1,31 @@
+.item_e112fb {
+    overflow: hidden;
+    --custom-conjure-glow-radius: inherit
+}
+
+.icon_e112fb,
+.item_e112fb {
+    position: relative
+}
+
+.icon_e112fb {
+    display: block
+}
+
+.iconPulse_e112fb {
+    animation: iconPulse_e112fb 2s ease-in-out infinite
+}
+
+@keyframes iconPulse_e112fb {
+
+    0%,
+    to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .6
+    }
+}
+
+/*# sourceMappingURL=e659b9de9983698f.css.map*/

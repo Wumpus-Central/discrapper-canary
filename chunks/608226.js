@@ -7,8 +7,7 @@ function t(e, n) {
         let { default: s } = await Promise.all([
             a.e("304350"),
             a.e("916758"),
-            a.e("356664"),
-            a.e("473380"),
+            a.e("947802"),
             a.e("460773"),
             a.e("387634"),
             a.e("623927"),

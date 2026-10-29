@@ -1,38 +1,37 @@
-(t.r(u), t.d(u, { default: () => E }));
-var l = t(477900),
-    s = t(582128),
-    c = t(17928),
-    n = t(976860),
-    r = t(696451),
-    A = t(71393),
-    d = t(576705),
-    f = t(325132),
-    i = t(381991),
-    a = t(371169),
-    p = t(652215),
-    h = t(746080);
-function E(e) {
-    let { guildId: u, projectId: t } = e,
-        E = (0, c.yK)([r.Ay], () => r.Ay.getSelfMember(u)?.roles ?? [], [u]),
+(u.r(t), u.d(t, { default: () => h }));
+var l = u(477900),
+    s = u(582128),
+    c = u(17928),
+    r = u(976860),
+    n = u(696451),
+    d = u(71393),
+    f = u(576705),
+    i = u(325132),
+    A = u(751841),
+    a = u(371169),
+    p = u(652215);
+function h(e) {
+    let { guildId: t, projectId: u } = e,
+        h = (0, c.yK)([n.Ay], () => n.Ay.getSelfMember(t)?.roles ?? [], [t]),
         b = (0, c.bG)(
-            [A.A, d.A],
+            [d.A, f.A],
             () => {
-                let e = A.A.getGuild(u);
-                return null != e && d.A.can(p.xBc.MANAGE_GUILD, e);
+                let e = d.A.getGuild(t);
+                return null != e && f.A.can(p.xBc.MANAGE_GUILD, e);
             },
-            [u],
+            [t],
         ),
-        G = t ?? null;
+        o = u ?? null;
     return (
         s.useEffect(() => {
-            (0, a.hF)(u);
-        }, [u, E, b]),
+            (0, a.listProjects)(t);
+        }, [t, h, b]),
         s.useEffect(() => {
-            (0, a.dm)(u, null);
-        }, [u, G]),
+            (0, a.dm)(t, null);
+        }, [t, o]),
         s.useEffect(() => {
-            null != G && ((0, n.bG)(p.BVt.CHANNEL(u, h.VV.CONJURE)), (0, i.Ay)(G));
-        }, [u, G]),
-        (0, l.jsx)(f.A, { guildId: u })
+            null != o && (0, r.bG)((0, A.hU)(o));
+        }, [o]),
+        (0, l.jsx)(i.A, { guildId: t })
     );
 }

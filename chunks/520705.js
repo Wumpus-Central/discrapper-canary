@@ -20,8 +20,8 @@ var r = n(477900),
     j = n(548118),
     k = n(956790),
     I = n(699426),
-    y = n(71393),
-    L = n(186111),
+    L = n(71393),
+    y = n(186111),
     A = n(381991),
     w = n(754027),
     E = n(327152),
@@ -68,7 +68,7 @@ var O = n(506868),
 function $(e) {
     if (!(0, w.Q5)(e.surface)) return void (0, T.returnToConjureFrameSurface)(e);
     let t = N.Ay.findProjectByApplicationId(e.applicationId);
-    null != t && (0, A.Ay)(t.id);
+    null != t && (0, A.A)(t.id);
 }
 function J(e) {
     let { width: t, height: n } = e;
@@ -118,7 +118,7 @@ function Q(e) {
 function Y(e) {
     let { frame: t, applicationName: n } = e,
         l = (0, v.A)(t.surface),
-        a = (0, o.bG)([y.A], () => y.A.getGuild(l), [l]);
+        a = (0, o.bG)([L.A], () => L.A.getGuild(l), [l]);
     return (0, r.jsx)("div", {
         className: _.Q,
         children: (0, r.jsxs)("div", {
@@ -230,11 +230,11 @@ function Z(e) {
                 [t, n],
             )),
             l.useMemo(() => ({ shown: t.filter((e) => !a.includes(e)), hidden: a }), [t, a])),
-        h = (0, o.bG)([L.A], () => L.A.hasLayers()),
+        h = (0, o.bG)([y.A], () => y.A.hasLayers()),
         [p, v] = l.useState(() => new Map()),
         [g, b] = l.useState(() => new Map()),
         [C, j] = l.useState(!1),
-        y = l.useRef(!1),
+        L = l.useRef(!1),
         A = l.useCallback((e, t) => {
             v((n) => new Map(n).set(e, t));
         }, []),
@@ -355,15 +355,15 @@ function Z(e) {
         })(),
         { handleDragStart: N } = E,
         T = l.useCallback(() => {
-            ((y.current = !0), j(!0), N());
+            ((L.current = !0), j(!0), N());
         }, [N]),
         M = l.useCallback(() => {
             (j(!1),
                 setTimeout(() => {
-                    y.current = !1;
+                    L.current = !1;
                 }, 0));
         }, []),
-        D = l.useCallback(() => y.current, []);
+        D = l.useCallback(() => L.current, []);
     if (0 === m.length && 0 === f.length) return null;
     let F = new Map();
     return (

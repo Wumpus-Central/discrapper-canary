@@ -4494,7 +4494,7 @@ function s6(e) {
             return (
                 (e = t.id),
                 void (null != (0, sY.wu)(n) || null != (0, sZ.oX)("openConjureProjectEditor")
-                    ? (0, sq.Ay)(n.id)
+                    ? (0, sq.A)(n.id)
                     : (0, sJ.A)(n.id, { initialTab: "app", isPreview: n.preview_application_id === e }))
             );
         },
@@ -5197,8 +5197,7 @@ function ro(e) {
                                     n.e("304350"),
                                     n.e("253335"),
                                     n.e("916758"),
-                                    n.e("356664"),
-                                    n.e("473380"),
+                                    n.e("947802"),
                                     n.e("387634"),
                                     n.e("623927"),
                                     n.e("479971"),
