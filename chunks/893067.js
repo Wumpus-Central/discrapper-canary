@@ -1,4 +1,4 @@
-n.d(l, { bI: () => j, Ay: () => J, vL: () => O, KL: () => R, qF: () => D, FZ: () => Z });
+n.d(l, { bI: () => j, Ay: () => J, vL: () => O, KL: () => R, qF: () => k, FZ: () => Z });
 var e = n(582128),
     i = n(17928),
     a = n(73153),
@@ -73,6 +73,7 @@ var E = n(516288),
 let T = {
     preparing: y.default.GQeas1,
     approval: y.default["TkHHD+"],
+    approved_by_grant: y.default["9+kNt8"],
     setup: y.default["F+AxgM"],
     build: y.default.oQeMIy,
     deploy: y.default.LqZvZ2,
@@ -84,12 +85,12 @@ let j = 221552 == n.j ? e.createContext(null) : null;
 function R(t, l) {
     return "user" === t.install_scope ? null : (t.guild_id ?? l);
 }
-function D(t) {
+function k(t) {
     if ((0, b.Fl)(t)) return !1;
     let l = s.A.getApplication(t.application_id)?.name;
     return null != l && l !== t.name;
 }
-function k(t) {
+function D(t) {
     if (null == C.A.getPublishApprovalUrl(t)) return !1;
     let l = C.A.getPublishProgress(t)?.stage;
     return null == l || "preparing" === l || "approval" === l;
@@ -115,7 +116,7 @@ function F(t, l) {
             canManageChannels: null == a ? null : h.A.can(U.xBc.MANAGE_CHANNELS, a),
             usesAppChannels: (0, b.Hv)(n),
             botInGuild: (0, m.AS)(n, e),
-            liveNameOutdated: D(n),
+            liveNameOutdated: k(n),
         },
     };
 }
@@ -209,7 +210,7 @@ async function Z(t, l, e) {
     let r = F(t, a),
         s = r?.input.status?.publishState;
     if (null == r || null == s || !(0, N.Uh)(s)) return;
-    let o = k(t) ? C.A.getPublishApprovalUrl(t) : null;
+    let o = D(t) ? C.A.getPublishApprovalUrl(t) : null;
     if (null != o && (0, A.PV)(r.project)) {
         let { promptPublishApproval: t } = await Promise.all([n.e("241989"), n.e("574246")]).then(n.bind(n, 200389));
         t(o);
@@ -280,7 +281,7 @@ function J(t, l) {
             integrationStatus: x,
             guildName: U,
             appChannelName: R,
-            appChannelPending: D,
+            appChannelPending: k,
             canManageGuild: O,
             canManageChannels: L,
             usesAppChannels: H,
@@ -298,10 +299,10 @@ function J(t, l) {
                     appChannelId: l?.appChannelId ?? null,
                     publishing:
                         null != t &&
-                        !1 === k(t) &&
+                        !1 === D(t) &&
                         (C.A.isProjectPublishing(t) || C.A.getPublishStatus(t)?.publishing === !0),
                     failure: null == t ? null : C.A.getPublishFailure(t),
-                    approvalUrl: null != t && k(t) ? C.A.getPublishApprovalUrl(t) : null,
+                    approvalUrl: null != t && D(t) ? C.A.getPublishApprovalUrl(t) : null,
                     installScope: l?.input.installScope ?? null,
                     status: l?.input.status ?? null,
                     integrationStatus: l?.input.integrationStatus ?? null,
@@ -327,14 +328,14 @@ function J(t, l) {
                           integrationStatus: x,
                           guildName: U,
                           appChannelName: R,
-                          appChannelPending: D,
+                          appChannelPending: k,
                           canManageGuild: O,
                           canManageChannels: L,
                           usesAppChannels: H,
                           botInGuild: q,
                           liveNameOutdated: Q,
                       },
-            [P, S, E, x, U, R, D, O, L, H, q, Q],
+            [P, S, E, x, U, R, k, O, L, H, q, Q],
         ),
         J = Y?.status?.publishState ?? null,
         W = Y?.installScope === "guild" && Y.status?.surface === "bot";

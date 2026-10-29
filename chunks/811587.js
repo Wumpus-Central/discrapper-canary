@@ -5,4 +5,4 @@ function l(t) {
     return "nothing_built" !== t && "live_auto_synced" !== t;
 }
 e.d(n, { Uh: () => l, lE: () => i, n: () => _ });
-let _ = ["preparing", "approval", "setup", "build", "deploy", "discord", "activating"];
+let _ = ["preparing", "approval", "approved_by_grant", "setup", "build", "deploy", "discord", "activating"];
