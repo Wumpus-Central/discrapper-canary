@@ -48,9 +48,7 @@ var c = n(652215),
         (i.Unmuted = "unmuted"),
         (i.MutedScheduledEvents = "muted scheduled events"),
         (i.UnmutedScheduledEvents = "unmuted scheduled events"),
-        (i.OverrideCreated = "channel override created"),
         (i.OverrideDeleted = "channel override deleted"),
-        (i.AnnouncementAutoEnable = "announcement channels auto set to all messages"),
         i);
 let h = {
         forumThreadsCreated: (e) =>
