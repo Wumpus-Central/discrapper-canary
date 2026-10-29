@@ -362,6 +362,7 @@ let eI = l.memo(function () {
                                           t.e("955557"),
                                           t.e("368358"),
                                           t.e("947502"),
+                                          t.e("202622"),
                                           t.e("916758"),
                                           t.e("343266"),
                                           t.e("965789"),
@@ -619,8 +620,8 @@ var eR = t(202776),
     e6 = t(817818),
     e9 = t(591552),
     e8 = t(961973),
-    e3 = t(435558),
-    e2 = t.n(e3),
+    e2 = t(435558),
+    e3 = t.n(e2),
     e7 = t(665260),
     ne = t(355097);
 function nn(e) {
@@ -643,8 +644,8 @@ function ni(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => i.includes(e.id));
-                                ((l = e2().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e2().difference(t?.roleIds ?? [], n.roleIds ?? [])));
+                                ((l = e3().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e3().difference(t?.roleIds ?? [], n.roleIds ?? [])));
                             } else if (t) ((l = n.roleIds ?? []), (s = []));
                             else {
                                 let t = e.options.filter((e) => i.includes(e.id)),
@@ -657,7 +658,7 @@ function ni(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((l = []), (s = e2().difference(r, d)));
+                                ((l = []), (s = e3().difference(r, d)));
                             }
                             return { addedRoleIds: l, removedRoleIds: s };
                         })(n, t, i, l),
@@ -667,8 +668,8 @@ function ni(e) {
                                 r = [];
                             if (t.singleSelect && l) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                ((a = e2().difference(i.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e2().difference(e?.channelIds ?? [], i.channelIds ?? [])));
+                                ((a = e3().difference(i.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e3().difference(e?.channelIds ?? [], i.channelIds ?? [])));
                             } else if (l) ((a = i.channelIds ?? []), (r = []));
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
@@ -681,7 +682,7 @@ function ni(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((a = []), (r = e2().difference(l, d)));
+                                ((a = []), (r = e3().difference(l, d)));
                             }
                             return (
                                 (0, et.cE)(n) && a.push(...e9.A.getDefaultChannelIds(n)),
