@@ -1,6 +1,9 @@
 _.exports = {
     rf: "body__8b1f1",
     xX: "artwork__8b1f1",
+    Tj: "artworkMedia__8b1f1",
+    ch: "collapsedIllustration__8b1f1",
+    QF: "collapsedIllustrationAsset__8b1f1",
     $_: "media__8b1f1",
     Ki: "video__8b1f1",
     mv: "videoVisible__8b1f1",

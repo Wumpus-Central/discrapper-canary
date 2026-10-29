@@ -1,101 +1,106 @@
-n.d(t, { A: () => et });
+n.d(t, { A: () => ei });
 var l = n(477900),
     s = n(582128),
-    r = n(503698),
-    a = n.n(r),
-    i = n(323889),
-    o = n(939249),
-    u = n(834730),
-    c = n(290136),
-    d = n(661531),
-    m = n(365199),
-    p = n(738822),
-    x = n(291749),
-    h = n(590202),
-    f = n(971649),
-    C = n(620954),
-    v = n(617986),
-    N = n(139210),
-    g = n(980707),
-    y = n(477782),
-    A = n(743368),
-    j = n(265872),
-    E = n(442433),
-    _ = n(507395),
-    T = n(144779),
-    R = n(494280),
-    B = n(845890),
-    Q = n(963713),
-    b = n(818348),
-    S = n(105292);
-function I(e) {
+    a = n(503698),
+    r = n.n(a),
+    i = n(941143),
+    o = n(323889),
+    u = n(939249),
+    c = n(43990),
+    d = n(834730),
+    m = n(290136),
+    p = n(661531),
+    x = n(365199),
+    h = n(738822),
+    f = n(291749),
+    C = n(590202),
+    v = n(971649),
+    N = n(620954),
+    g = n(557637),
+    y = n(398025),
+    j = n(617986),
+    A = n(139210),
+    E = n(568329),
+    _ = n(980707),
+    T = n(477782),
+    R = n(743368),
+    Q = n(265872),
+    B = n(442433),
+    b = n(507395),
+    S = n(144779),
+    I = n(494280),
+    M = n(845890),
+    U = n(963713),
+    w = n(818348),
+    F = n(105292);
+function P(e) {
     let { onSelect: t, onClose: n } = e,
-        s = (0, Q.o5)(),
-        r = (0, Q.Q8)(s),
-        a = (0, f.wW)(),
-        o = (0, R.Yh)(r);
-    return (0, l.jsxs)(g.W, {
+        s = (0, U.o5)(),
+        a = (0, U.Q8)(s),
+        r = (0, v.wW)(),
+        i = (0, I.Yh)(a);
+    return (0, l.jsxs)(_.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
         onSelect: function () {
-            null != t ? t() : (0, E.Z_)();
+            null != t ? t() : (0, B.Z_)();
         },
         navId: "quest-bar-bounty",
-        "aria-label": S.intl.string(S.t.ogxXGq),
-        onClose: n ?? b.tE,
+        "aria-label": F.intl.string(F.t.ogxXGq),
+        onClose: n ?? w.tE,
         children: [
             (0, l.jsx)(
-                y.rX,
+                T.rX,
                 {
-                    children: (0, l.jsx)(y.Dr, {
+                    children: (0, l.jsx)(T.Dr, {
                         id: "open-game-link",
                         label: s.cta.buttonLabel,
                         action: function () {
-                            (0, C._Q)(
-                                { adContentId: s.id, adCreativeType: i.p.BOUNTY, cta: s.cta },
+                            (0, N._Q)(
+                                { adContentId: s.id, adCreativeType: o.p.BOUNTY, cta: s.cta },
                                 {
-                                    content: p.uF.QUEST_BAR_V2,
-                                    ctaContent: h.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
-                                    impressionId: a(),
-                                    sourceQuestContent: p.uF.QUEST_BAR_V2,
+                                    content: h.uF.QUEST_BAR_V2,
+                                    ctaContent: C.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
+                                    impressionId: r(),
+                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
                                 },
                             );
                         },
-                        icon: A.W,
-                        leadingAccessory: { type: "icon", icon: A.W },
+                        icon: R.W,
+                        leadingAccessory: { type: "icon", icon: R.W },
                     }),
                 },
                 "major-actions",
             ),
             (0, l.jsxs)(
-                y.rX,
+                T.rX,
                 {
                     children: [
-                        (0, l.jsx)(y.Dr, {
+                        (0, l.jsx)(T.Dr, {
                             id: "display-disclosure",
-                            label: S.intl.string(S.t.GcsZKJ),
+                            label: F.intl.string(F.t.GcsZKJ),
                             action: function () {
-                                (0, v.Zc)(r, {
-                                    content: p.uF.QUEST_BAR_V2,
-                                    ctaContent: h.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
-                                    impressionId: a(),
-                                    sourceQuestContent: p.uF.QUEST_BAR_V2,
+                                (0, j.Zc)(a, {
+                                    content: h.uF.QUEST_BAR_V2,
+                                    ctaContent: C.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
+                                    impressionId: r(),
+                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
                                 });
                             },
                         }),
-                        (0, l.jsx)(y.Dr, {
+                        (0, l.jsx)(T.Dr, {
                             id: "hide-entrypoint",
-                            label: S.intl.string(S.t.NN79E9),
+                            label: F.intl.string(F.t.NN79E9),
                             action: function () {
-                                ((0, _.r)({
-                                    type: T.F.CLICK_INTERNAL,
-                                    ...o,
-                                    questContentCTA: h.Cy.CONTEXT_MENU_HIDE_CONTENT,
-                                    surfaceId: p.uF.QUEST_BAR_V2,
-                                    sourceQuestContent: p.uF.QUEST_BAR_V2,
-                                    impressionId: a(),
+                                ((0, b.r)({
+                                    type: S.F.CLICK_INTERNAL,
+                                    ...i,
+                                    questContentCTA: C.Cy.CONTEXT_MENU_HIDE_CONTENT,
+                                    surfaceId: h.uF.QUEST_BAR_V2,
+                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                                    impressionId: r(),
                                 }),
-                                    (0, B.Xo)(o, p.uF.QUEST_BAR_V2));
+                                    (0, M.Xo)(i, h.uF.QUEST_BAR_V2));
                             },
                         }),
                     ],
@@ -105,116 +110,157 @@ function I(e) {
         ],
     });
 }
-function M(e) {
-    let { children: t, onOpen: n, onClose: r, onSelect: a } = e,
-        i = (0, Q.o5)(),
-        o = (0, Q.Q8)(i),
-        u = (0, f.wW)(),
+function O(e) {
+    let { children: t, onOpen: n, onClose: a, onSelect: r } = e,
+        i = (0, U.o5)(),
+        o = (0, U.Q8)(i),
+        u = (0, v.wW)(),
         c = s.useRef(null),
         d = s.useCallback(() => {
-            ((0, _.r)({
-                type: T.F.CLICK_INTERNAL,
-                ...(0, R.Yh)(o),
-                questContentCTA: h.Cy.OPEN_CONTEXT_MENU,
-                surfaceId: p.uF.QUEST_BAR_V2,
-                sourceQuestContent: p.uF.QUEST_BAR_V2,
+            ((0, b.r)({
+                type: S.F.CLICK_INTERNAL,
+                ...(0, I.Yh)(o),
+                questContentCTA: C.Cy.OPEN_CONTEXT_MENU,
+                surfaceId: h.uF.QUEST_BAR_V2,
+                sourceQuestContent: h.uF.QUEST_BAR_V2,
                 impressionId: u(),
             }),
                 null != n && n());
         }, [o, u, n]);
-    return (0, l.jsx)(j.Y, {
+    return (0, l.jsx)(Q.Y, {
         targetElementRef: c,
         onRequestOpen: d,
-        onRequestClose: r,
+        onRequestClose: a,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(I, { onSelect: a, onClose: t });
+            return (0, l.jsx)(P, { onSelect: r, onClose: t });
         },
-        animation: j.Y.Animation.NONE,
+        animation: Q.Y.Animation.NONE,
         children: (e) => (0, l.jsx)("div", { ref: c, children: t(e) }),
     });
 }
-var U = n(241762);
+var V = n(241762);
 n(272111);
-var w = n(886030);
-function F() {
-    let e = (0, Q.o5)(),
-        t = (0, Q.Q8)(e),
-        n = (0, f.wW)(),
+var k = n(652215),
+    L = n(886030);
+function D() {
+    let e = (0, U.o5)(),
+        t = (0, U.Q8)(e),
+        n = (0, v.wW)(),
+        { expansionSpring: a } = s.useContext(E.PW),
         {
-            onCtxMenuOpen: r,
-            onCtxMenuClose: g,
-            onCtxMenuSelect: y,
-            isExpanded: A,
-            isExpansionAnimationComplete: j,
-        } = (0, U.H)(),
-        { productIcon: E } = e,
-        _ = s.useCallback(() => {
-            (0, v.Zc)(t, {
-                content: p.uF.QUEST_BAR_V2,
-                ctaContent: h.Cy.OPEN_DISCLOSURE,
-                sourceQuestContent: p.uF.QUEST_BAR_V2,
+            onCtxMenuOpen: _,
+            onCtxMenuClose: T,
+            onCtxMenuSelect: R,
+            isExpanded: Q,
+            isExpansionAnimationComplete: B,
+            collapsedHeight: b,
+        } = (0, V.H)(),
+        { productIcon: S } = e,
+        I = s.useCallback(() => {
+            (0, j.Zc)(t, {
+                content: h.uF.QUEST_BAR_V2,
+                ctaContent: C.Cy.OPEN_DISCLOSURE,
+                sourceQuestContent: h.uF.QUEST_BAR_V2,
             });
         }, [t]),
-        T = s.useCallback(() => {
-            (0, C._Q)(
-                { adContentId: e.id, adCreativeType: i.p.BOUNTY, cta: e.cta },
+        M = s.useCallback(() => {
+            (0, N._Q)(
+                { adContentId: e.id, adCreativeType: o.p.BOUNTY, cta: e.cta },
                 {
-                    content: p.uF.QUEST_BAR_HEADER,
-                    ctaContent: h.Cy.OPEN_GAME_LINK,
+                    content: h.uF.QUEST_BAR_HEADER,
+                    ctaContent: C.Cy.OPEN_GAME_LINK,
                     impressionId: n(),
-                    sourceQuestContent: p.uF.QUEST_BAR_V2,
+                    sourceQuestContent: h.uF.QUEST_BAR_V2,
                 },
             );
         }, [e.cta, e.id, n]);
-    return (0, l.jsxs)(N.A, {
-        className: w.bU,
+    return (0, l.jsxs)(A.A, {
+        className: L.bU,
         children: [
-            (0, l.jsx)(N.h, { className: w.Tu }),
-            (0, l.jsxs)(N.h, {
-                className: w.W2,
+            (0, l.jsx)(A.h, { className: L.Tu }),
+            (0, l.jsxs)(i.animated.div, {
+                className: L.W2,
+                style: {
+                    transform: a.to({ range: [0, 1], output: [b / 2 - 24 - 6, 0] }).to((e) => `translateY(${e}px)`),
+                },
                 children: [
-                    null != E &&
-                        (0, l.jsx)(o.D, {
-                            onClick: T,
-                            className: a()(w.iY, w.vk, { [w.wm]: A && j }),
-                            children: (0, l.jsx)("img", {
-                                src: (0, x.lR)({ assetUrl: E, width: 24, height: 24 }),
-                                alt: e.advertiserName,
-                                width: 24,
-                                height: 24,
-                                className: w.Q1,
+                    null != S &&
+                        (0, l.jsx)(u.D, {
+                            onClick: M,
+                            className: r()(L.iY, L.vk, { [L.wm]: Q && B }),
+                            children: (0, l.jsx)(i.animated.div, {
+                                className: L.U$,
+                                style: {
+                                    transform: a.to({ range: [0, 1], output: [1, 0.75] }).to((e) => `scale(${e})`),
+                                },
+                                children: (0, l.jsx)(g._M, {
+                                    id: "QuestBarBounty_productIcon",
+                                    children: (t) =>
+                                        (0, l.jsx)("img", {
+                                            ref: t,
+                                            src: (0, f.lR)({ assetUrl: S, width: 32, height: 32 }),
+                                            alt: e.advertiserName,
+                                            width: 32,
+                                            height: 32,
+                                            className: L.Q1,
+                                        }),
+                                }),
                             }),
                         }),
-                    (0, l.jsxs)(o.D, {
-                        className: a()(w.y8, w.RK),
-                        onClick: _,
+                    (0, l.jsxs)("div", {
+                        className: L.cA,
                         children: [
-                            (0, l.jsx)(u.E, {
-                                color: "text-overlay-light",
-                                variant: "text-xs/normal",
-                                children: S.intl.string(S.t.o6FLcF),
+                            (0, l.jsx)(c.N, {
+                                theme: k.NJ8.DARK,
+                                disableAdaptiveTheme: !0,
+                                children: (t) =>
+                                    (0, l.jsx)(i.animated.div, {
+                                        "aria-hidden": !0,
+                                        className: r()(t, L.it),
+                                        style: { opacity: (0, y.a)(a.to({ range: [0, 1], output: [1, 0] })) },
+                                        children: (0, l.jsx)(d.E, {
+                                            variant: "text-sm/medium",
+                                            color: "text-strong",
+                                            lineClamp: 2,
+                                            children: e.productName ?? "",
+                                        }),
+                                    }),
                             }),
-                            (0, l.jsx)(c.CircleQuestionIcon, { color: d.A.colors.WHITE, className: w.P$ }),
+                            (0, l.jsx)(A.h, {
+                                className: L.OO,
+                                children: (0, l.jsxs)(u.D, {
+                                    className: r()(L.y8, L.RK),
+                                    onClick: I,
+                                    children: [
+                                        (0, l.jsx)(d.E, {
+                                            color: "text-overlay-light",
+                                            variant: "text-xs/normal",
+                                            children: F.intl.string(F.t.o6FLcF),
+                                        }),
+                                        (0, l.jsx)(m.CircleQuestionIcon, { color: p.A.colors.WHITE, className: L.P$ }),
+                                    ],
+                                }),
+                            }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsx)(N.h, {
-                className: w.jd,
-                children: (0, l.jsx)(M, {
-                    onOpen: r,
-                    onClose: g,
-                    onSelect: y,
+            (0, l.jsx)(A.h, {
+                className: L.jd,
+                children: (0, l.jsx)(O, {
+                    onOpen: _,
+                    onClose: T,
+                    onSelect: R,
                     children: (e) =>
-                        (0, l.jsx)(o.D, {
+                        (0, l.jsx)(u.D, {
                             ...e,
-                            className: a()(w.oz, w.rb),
-                            "aria-label": S.intl.string(S.t.DEoVWZ),
-                            children: (0, l.jsx)(m.MoreHorizontalIcon, {
+                            className: r()(L.oz, L.rb),
+                            "aria-label": F.intl.string(F.t.DEoVWZ),
+                            children: (0, l.jsx)(x.MoreHorizontalIcon, {
                                 size: "md",
                                 color: "currentColor",
-                                className: a()(w.Bx, w.ON),
+                                className: r()(L.Bx, L.ON),
                             }),
                         }),
                 }),
@@ -222,48 +268,53 @@ function F() {
         ],
     });
 }
-var P = n(17928),
-    O = n(297264),
-    V = n(821609),
-    k = n(775602),
-    L = n(546121),
-    D = n(792620),
-    W = n(557637),
-    H = n(192308),
-    Y = n(415441),
-    q = n(783569),
-    X = n(333949),
-    G = n(53440),
-    K = n(427483),
-    z = n(337611);
-let $ = { url: K.A, mimetype: "video/webm", isAnimated: !0 },
-    Z = { url: z.A, mimetype: "image/webp", isAnimated: !1 };
-function J() {
-    let e = (0, Q.o5)(),
-        { imagePreview: t, videoPreview: r, productName: o, videoDurationSeconds: c } = e,
-        { isExpanded: d, isExpansionAnimationComplete: m } = (0, U.H)(),
-        C = (0, f.wW)(),
-        v = (0, P.bG)([k.Ay], () => k.Ay.useReducedMotion),
-        [N, g] = s.useState(!1),
-        y = s.useMemo(() => (null == r ? null : { url: r, mimetype: (0, x.vm)(r), isAnimated: !0 }), [r]),
-        A = !v || N,
-        j = s.useMemo(() => {
+var W = n(17928),
+    Y = n(133825),
+    q = n(297264),
+    H = n(821609),
+    X = n(775602),
+    G = n(546121),
+    K = n(792620),
+    $ = n(192308),
+    z = n(415441),
+    Z = n(783569),
+    J = n(333949),
+    ee = n(53440),
+    et = n(427483),
+    en = n(337611);
+let el = { url: et.A, mimetype: "video/webm", isAnimated: !0 },
+    es = { url: en.A, mimetype: "image/webp", isAnimated: !1 };
+function ea() {
+    let e = (0, U.o5)(),
+        { imagePreview: t, videoPreview: a, productName: u, videoDurationSeconds: c } = e,
+        { isExpanded: m, isExpansionAnimationComplete: p } = (0, V.H)(),
+        { expansionSpring: x } = s.useContext(E.PW),
+        N = (0, v.wW)(),
+        j = (0, W.bG)([X.Ay], () => X.Ay.useReducedMotion),
+        [A, _] = s.useState(!1),
+        T = s.useRef(null);
+    s.useEffect(() => {
+        m && T.current?.pause();
+    }, [m]);
+    let R = s.useMemo(() => (null == a ? null : { url: a, mimetype: (0, f.vm)(a), isAnimated: !0 }), [a]),
+        Q = !j || A,
+        B = s.useMemo(() => {
             let e = c ?? 0;
-            return e <= 0 ? S.intl.string(S.t.kfks9Y) : (0, L.AF)((0, D.X3)({ progressSeconds: 0, targetSeconds: e }));
+            return e <= 0 ? F.intl.string(F.t.kfks9Y) : (0, G.AF)((0, K.X3)({ progressSeconds: 0, targetSeconds: e }));
         }, [c]),
-        E = s.useCallback(() => {
-            ((0, _.r)({
-                type: T.F.CLICK_INTERNAL,
-                adCreativeType: i.p.BOUNTY,
+        I = s.useCallback(() => {
+            ((0, b.r)({
+                type: S.F.CLICK_INTERNAL,
+                adCreativeType: o.p.BOUNTY,
                 adCreativeId: e.id,
-                questContentCTA: h.Cy.START_BOUNTY,
-                surfaceId: p.uF.QUEST_BAR_V2,
-                sourceQuestContent: p.uF.QUEST_BAR_V2,
-                impressionId: C(),
+                questContentCTA: C.Cy.START_BOUNTY,
+                surfaceId: h.uF.QUEST_BAR_V2,
+                sourceQuestContent: h.uF.QUEST_BAR_V2,
+                impressionId: N(),
             }),
                 (function (e) {
                     let { bounty: t, sourceQuestContent: s } = e;
-                    (0, H.openModalLazy)(
+                    (0, $.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("974119"),
@@ -280,79 +331,101 @@ function J() {
                         },
                         { modalKey: "BOUNTY_VIDEO_MODAL" },
                     );
-                })({ bounty: e, sourceQuestContent: p.uF.QUEST_BAR_V2 }));
-        }, [e, C]),
-        R = !d || m;
+                })({ bounty: e, sourceQuestContent: h.uF.QUEST_BAR_V2 }));
+        }, [e, N]),
+        M = m && p,
+        w = !m || p;
     return (0, l.jsxs)("div", {
-        className: G.rf,
+        className: ee.rf,
         onMouseEnter: () => {
-            v && !N && g(!0);
+            j && !A && _(!0);
         },
         onMouseLeave: () => {
-            v && N && g(!1);
+            j && A && _(!1);
         },
         children: [
             (0, l.jsxs)("div", {
-                className: G.xX,
+                className: ee.xX,
                 children: [
-                    null != t &&
-                        (0, l.jsx)(W._M, {
-                            id: "QuestBarBounty_previewImage",
-                            children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: G.$_ }),
-                        }),
-                    null != y &&
-                        (0, l.jsx)(W._M, {
-                            id: "QuestBarBounty_previewVideo",
-                            children: (e) =>
-                                (0, l.jsx)(X.X, {
-                                    ref: e,
-                                    isHovered: N,
-                                    asset: y,
-                                    poster: t,
-                                    className: a()(G.$_, null != t && G.Ki, { [G.mv]: A || null == t }),
+                    (0, l.jsxs)(i.animated.div, {
+                        className: ee.Tj,
+                        style: { opacity: (0, y.a)(x.to({ range: [0, 1], output: [0, 1] })) },
+                        children: [
+                            null != t &&
+                                (0, l.jsx)(g._M, {
+                                    id: "QuestBarBounty_previewImage",
+                                    children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: ee.$_ }),
                                 }),
+                            null != R &&
+                                (0, l.jsx)(g._M, {
+                                    id: "QuestBarBounty_previewVideo",
+                                    children: (e) =>
+                                        (0, l.jsx)(J.X, {
+                                            ref: e,
+                                            isHovered: A,
+                                            asset: R,
+                                            poster: t,
+                                            className: r()(ee.$_, null != t && ee.Ki, { [ee.mv]: Q || null == t }),
+                                        }),
+                                }),
+                        ],
+                    }),
+                    (0, l.jsx)(i.animated.div, {
+                        className: ee.ch,
+                        style: { opacity: (0, y.a)(x.to({ range: [0, 1], output: [1, 0] })) },
+                        children: (0, l.jsx)(Y.a, {
+                            ref: T,
+                            autoplay: !m,
+                            stateMachine: "State Machine 1",
+                            fit: "contain",
+                            className: ee.QF,
                         }),
+                    }),
                 ],
             }),
-            (0, l.jsx)("div", { className: G.tV }),
-            (0, l.jsx)(q.T, {
+            (0, l.jsx)("div", { className: ee.tV }),
+            (0, l.jsx)(Z.T, {
                 children: (0, l.jsxs)("div", {
-                    className: G.Qs,
+                    className: ee.Qs,
                     children: [
                         (0, l.jsx)("div", {
-                            className: G.Qq,
-                            children: (0, l.jsx)(Y.N, {
-                                showVideo: d && m,
+                            className: ee.Qq,
+                            children: (0, l.jsx)(z.N, {
+                                showVideo: M,
                                 imageAsset: {
-                                    asset: Z,
+                                    asset: es,
                                     assetId: "QuestBarBounty_rewardTileStatic",
-                                    alt: S.intl.string(S.t.UMclVN),
-                                    className: G.Ag,
+                                    alt: F.intl.string(F.t.UMclVN),
+                                    className: ee.Ag,
                                 },
-                                videoAsset: { asset: $, assetId: "QuestBarBounty_rewardTileAnimated", className: G.Ag },
+                                videoAsset: {
+                                    asset: el,
+                                    assetId: "QuestBarBounty_rewardTileAnimated",
+                                    className: ee.Ag,
+                                },
                                 imageSize: { width: 64, height: 64 },
                             }),
                         }),
                         (0, l.jsxs)("div", {
-                            className: G.C,
+                            className: ee.C,
                             children: [
-                                (0, l.jsx)(O.D, {
+                                (0, l.jsx)(q.D, {
                                     color: "text-strong",
                                     variant: "heading-md/medium",
                                     lineClamp: 2,
-                                    children: o ?? "",
+                                    children: u ?? "",
                                 }),
-                                (0, l.jsx)(u.E, { variant: "text-xs/normal", children: S.intl.string(S.t["1uzE2S"]) }),
+                                (0, l.jsx)(d.E, { variant: "text-xs/normal", children: F.intl.string(F.t["1uzE2S"]) }),
                             ],
                         }),
                         (0, l.jsx)("div", {
-                            className: a()({ [G._o]: !R }),
-                            children: (0, l.jsx)(V.$, {
+                            className: r()({ [ee._o]: !w }),
+                            children: (0, l.jsx)(H.$, {
                                 variant: "primary",
                                 size: "md",
                                 fullWidth: !0,
-                                text: j,
-                                onClick: E,
+                                text: B,
+                                onClick: I,
                             }),
                         }),
                     ],
@@ -361,7 +434,7 @@ function J() {
         ],
     });
 }
-var ee = n(742860);
-function et() {
-    return (0, l.jsx)(ee.A, { layoutVariant: "inset", header: (0, l.jsx)(F, {}), children: (0, l.jsx)(J, {}) });
+var er = n(742860);
+function ei() {
+    return (0, l.jsx)(er.A, { layoutVariant: "inset", header: (0, l.jsx)(D, {}), children: (0, l.jsx)(ea, {}) });
 }

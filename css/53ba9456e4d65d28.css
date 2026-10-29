@@ -77,41 +77,6 @@
     width: fit-content
 }
 
-.body__6891d {
-    align-items: center;
-    background-color: color-mix(in srgb, var(--background-brand) 23%, #000);
-    border-start-end-radius: var(--radius-sm);
-    border-start-start-radius: var(--radius-sm);
-    box-sizing: border-box;
-    display: flex;
-    gap: var(--space-12);
-    height: 100%;
-    overflow: hidden;
-    padding-inline: var(--space-12) var(--space-16)
-}
-
-.productIcon__6891d {
-    background-color: var(--background-base-lowest);
-    border-radius: var(--radius-sm);
-    flex: 0 0 auto;
-    height: 32px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 32px
-}
-
-.productName__6891d {
-    min-width: 0
-}
-
-.illustration__6891d {
-    flex: 0 0 auto;
-    height: 100%;
-    margin-inline: auto calc((var(--space-16) + 5px)*-1);
-    pointer-events: none;
-    width: 124px
-}
-
 .wrapper__8c034 {
     align-items: center;
     border-radius: inherit;
@@ -279,6 +244,7 @@
 .bountyLeading__8c034 {
     gap: var(--space-8);
     inset-inline-start: 16px;
+    max-width: calc(100% - var(--space-16)*2);
     min-width: 0
 }
 
@@ -291,14 +257,39 @@
     flex: 0 0 auto
 }
 
+.bountyProductIconScaler__8c034 {
+    margin: calc(var(--space-4)*-1);
+    transform-origin: center
+}
+
 .bountyProductIcon__8c034 {
     background-color: var(--background-base-lowest);
     border-radius: var(--radius-sm);
-    flex: 0 0 auto;
-    height: 24px;
+    display: block;
+    height: 32px;
     -o-object-fit: cover;
     object-fit: cover;
-    width: 24px
+    width: 32px
+}
+
+.bountyLeadingLabel__8c034 {
+    align-items: center;
+    display: grid;
+    min-width: 0
+}
+
+.bountyProductName__8c034 {
+    grid-area: 1/1;
+    margin-inline-end: calc(103px + var(--space-12));
+    margin-inline-start: var(--space-8);
+    min-width: 0;
+    pointer-events: none
+}
+
+.bountyPromotedBadgeWrapper__8c034 {
+    display: flex;
+    grid-area: 1/1;
+    justify-self: start
 }
 
 .bountyPromotedBadge__8c034 {
@@ -311,4 +302,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=da1599966a999b8e.css.map*/
+/*# sourceMappingURL=53ba9456e4d65d28.css.map*/

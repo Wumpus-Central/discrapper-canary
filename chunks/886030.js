@@ -17,7 +17,11 @@ _.exports = {
     W2: "bountyLeading__8c034",
     jd: "bountyMenu__8c034",
     iY: "bountyProductIconButton__8c034",
+    U$: "bountyProductIconScaler__8c034",
     Q1: "bountyProductIcon__8c034",
+    cA: "bountyLeadingLabel__8c034",
+    it: "bountyProductName__8c034",
+    OO: "bountyPromotedBadgeWrapper__8c034",
     RK: "bountyPromotedBadge__8c034",
     oz: "bountyMenuTarget__8c034",
 };

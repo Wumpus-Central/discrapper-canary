@@ -7,17 +7,34 @@
     background-color: color-mix(in srgb, var(--background-brand) 23%, #000);
     border-start-end-radius: var(--radius-sm);
     border-start-start-radius: var(--radius-sm);
+    overflow: hidden
+}
+
+.artwork__8b1f1,
+.artworkMedia__8b1f1 {
     inset: 0;
-    overflow: hidden;
     position: absolute
+}
+
+.collapsedIllustration__8b1f1 {
+    height: 70px;
+    inset-block-start: 0;
+    inset-inline-end: -5px;
+    pointer-events: none;
+    position: absolute;
+    width: 124px
+}
+
+.collapsedIllustrationAsset__8b1f1,
+.media__8b1f1 {
+    height: 100%;
+    width: 100%
 }
 
 .media__8b1f1 {
     display: block;
-    height: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
+    object-fit: cover
 }
 
 .video__8b1f1 {
@@ -258,4 +275,4 @@
     border-radius: 8px 8px 0 0
 }
 
-/*# sourceMappingURL=8ecdc3cb80794846.css.map*/
+/*# sourceMappingURL=aa579c15166f3979.css.map*/
