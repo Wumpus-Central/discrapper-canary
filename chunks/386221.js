@@ -8,8 +8,8 @@
             a = e.availableFormats,
             c = e.timeFormats,
             f = e.dateFormats,
-            p = e.medium,
-            d = [],
+            d = e.medium,
+            p = [],
             h = [],
             m = [];
         function v(e, t) {
@@ -24,7 +24,7 @@
         for (t in a)
             a.hasOwnProperty(t) &&
                 (n = u((r = v(t, a[t])))) &&
-                (d.push(n),
+                (p.push(n),
                 (function (e) {
                     for (var t = 0; t < l.length; t += 1) if (e.hasOwnProperty(l[t])) return !1;
                     return !0;
@@ -37,14 +37,14 @@
         for (i = 0; i < h.length; i += 1)
             for (o = 0; o < m.length; o += 1)
                 (n = u(
-                    (r = p
+                    (r = d
                         .replace("{0}", h[i])
                         .replace("{1}", m[o])
                         .replace(/^[,\s]+|[,\s]+$/gi, "")),
-                )) && d.push(n);
-        for (t in c) c.hasOwnProperty(t) && (n = u((r = v(t, c[t])))) && d.push(n);
-        for (t in f) f.hasOwnProperty(t) && (n = u((r = v(t, f[t])))) && d.push(n);
-        return d;
+                )) && p.push(n);
+        for (t in c) c.hasOwnProperty(t) && (n = u((r = v(t, c[t])))) && p.push(n);
+        for (t in f) f.hasOwnProperty(t) && (n = u((r = v(t, f[t])))) && p.push(n);
+        return p;
     }));
 var r =
         /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,

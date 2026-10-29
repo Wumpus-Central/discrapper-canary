@@ -7,18 +7,18 @@ var n = r(757431),
     u = r(475694),
     c = r(499018),
     f = r(795734),
-    p = r(906046),
-    d = r(400696),
+    d = r(906046),
+    p = r(400696),
     h = Object("a"),
     m = "a" !== h[0] || !(0 in h),
-    v = p("String.prototype.split");
+    v = d("String.prototype.split");
 e.exports = function (e) {
     var t,
         r = c(this),
-        p = u((m && d(r) ? v(r, "") : r).length);
+        d = u((m && p(r) ? v(r, "") : r).length);
     if (!l(e)) throw TypeError("Array.prototype.map callback must be a function");
     arguments.length > 1 && (t = arguments[1]);
-    for (var h = n(r, p), y = 0; y < p;) {
+    for (var h = n(r, d), y = 0; y < d;) {
         var g = f(y);
         if (s(r, g)) {
             var b = i(e, t, [a(r, g), y, r]);

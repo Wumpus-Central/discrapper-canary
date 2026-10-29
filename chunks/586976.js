@@ -39,8 +39,8 @@ var s = function (e) {
         }, {});
     },
     f = "u" > typeof window && window.document && window.document.createElement ? n.useLayoutEffect : n.useEffect,
-    p = r(333007),
-    d = r(888767),
+    d = r(333007),
+    p = r(888767),
     h = r(412700),
     m = r.n(h),
     v = [],
@@ -67,7 +67,7 @@ var s = function (e) {
                     fn: function (e) {
                         var t = e.state,
                             r = Object.keys(t.elements);
-                        p.flushSync(function () {
+                        d.flushSync(function () {
                             l({
                                 styles: c(
                                     r.map(function (e) {
@@ -108,7 +108,7 @@ var s = function (e) {
             f(
                 function () {
                     if (null != e && null != t) {
-                        var n = (r.createPopper || d.n)(e, t, h);
+                        var n = (r.createPopper || p.n)(e, t, h);
                         return (
                             (y.current = n),
                             function () {
@@ -141,8 +141,8 @@ function _(e) {
         l = e.modifiers,
         c = void 0 === l ? w : l,
         f = e.referenceElement,
-        p = e.onFirstUpdate,
-        d = e.innerRef,
+        d = e.onFirstUpdate,
+        p = e.innerRef,
         h = e.children,
         m = n.useContext(i),
         v = n.useState(null),
@@ -153,9 +153,9 @@ function _(e) {
         C = E[1];
     n.useEffect(
         function () {
-            u(d, _);
+            u(p, _);
         },
-        [d, _],
+        [p, _],
     );
     var k = y(
             f || m,
@@ -165,11 +165,11 @@ function _(e) {
                     return {
                         placement: r,
                         strategy: a,
-                        onFirstUpdate: p,
+                        onFirstUpdate: d,
                         modifiers: [].concat(c, [{ name: "arrow", enabled: null != x, options: { element: x } }]),
                     };
                 },
-                [r, a, p, c, x],
+                [r, a, d, c, x],
             ),
         ),
         T = k.state,

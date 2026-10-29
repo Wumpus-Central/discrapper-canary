@@ -121,15 +121,15 @@ class D extends h {
         (super(...e), (this.identifier = "coptic"));
     }
 }
-var p = t(489138);
-let g = 765433;
+var g = t(489138);
+let p = 765433;
 function f(e) {
-    return 7 > (0, p.z)(7 * e + 1, 19);
+    return 7 > (0, g.z)(7 * e + 1, 19);
 }
 function v(e) {
     let a = Math.floor((235 * e - 234) / 19),
         t = 29 * a + Math.floor((12084 + 13753 * a) / 25920);
-    return (3 > (0, p.z)(3 * (t + 1), 7) && (t += 1), t);
+    return (3 > (0, g.z)(3 * (t + 1), 7) && (t += 1), t);
 }
 function b(e) {
     let a, t;
@@ -156,7 +156,7 @@ function R(e, a) {
 class P {
     fromJulianDay(e) {
         let a = e - 347997,
-            t = Math.floor((((25920 * a) / g) * 19 + 234) / 235) + 1,
+            t = Math.floor((((25920 * a) / p) * 19 + 234) / 235) + 1,
             r = b(t),
             n = Math.floor(a - r);
         for (; n < 1;) n = Math.floor(a - (r = b(--t)));
@@ -478,7 +478,7 @@ class L {
         return 12;
     }
     getDaysInMonth(e) {
-        return e.month <= 6 ? 31 : e.month <= 11 || 8 > (0, p.z)(25 * e.year + 11, 33) ? 30 : 29;
+        return e.month <= 6 ? 31 : e.month <= 11 || 8 > (0, g.z)(25 * e.year + 11, 33) ? 30 : 29;
     }
     getMaximumMonthsInYear() {
         return 12;

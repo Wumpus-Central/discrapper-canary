@@ -36,7 +36,7 @@ var n =
                     key: "create",
                     value: function (e) {
                         if (e.outputRange && "string" == typeof e.outputRange[0]) {
-                            var t, r, i, o, p;
+                            var t, r, i, o, d;
                             return (
                                 a((r = (t = e).outputRange).length >= 2, "Bad output range"),
                                 (function (e) {
@@ -54,18 +54,18 @@ var n =
                                 (o = r[0].match(c).map(function (e, r) {
                                     return l.create(n({}, t, { outputRange: i[r] }));
                                 })),
-                                (p = /^rgb/.test(r[0])),
+                                (d = /^rgb/.test(r[0])),
                                 function (e) {
                                     var t = 0;
                                     return r[0].replace(c, function () {
                                         var r = o[t++](e);
-                                        return String(p && t < 4 ? Math.round(r) : r);
+                                        return String(d && t < 4 ? Math.round(r) : r);
                                     });
                                 }
                             );
                         }
-                        var d = e.outputRange;
-                        f("outputRange", d);
+                        var p = e.outputRange;
+                        f("outputRange", p);
                         var h = e.inputRange;
                         (f("inputRange", h),
                             (function (e) {
@@ -74,11 +74,11 @@ var n =
                                     a(e[t] >= e[t - 1], "inputRange must be monotonically increasing " + e);
                             })(h),
                             a(
-                                h.length === d.length,
+                                h.length === p.length,
                                 "inputRange (" +
                                     h.length +
                                     ") and outputRange (" +
-                                    d.length +
+                                    p.length +
                                     ") must have the same length",
                             ));
                         var m = e.easing || s,
@@ -115,7 +115,7 @@ var n =
                                             (l = o(l)),
                                             n === -1 / 0 ? (l = -l) : i === 1 / 0 ? (l += n) : (l = l * (i - n) + n),
                                             l);
-                                })(e, h[t], h[t + 1], d[t], d[t + 1], m, v, y);
+                                })(e, h[t], h[t + 1], p[t], p[t + 1], m, v, y);
                             }
                         );
                     },

@@ -1,8 +1,8 @@
 n.d(t, { R: () => m, T: () => p });
 var l = n(477900),
     s = n(582128),
-    r = n(941143),
-    a = n(17928),
+    a = n(941143),
+    r = n(17928),
     i = n(717421),
     o = n(765671),
     u = n(475743),
@@ -18,7 +18,7 @@ function m(e) {
 function p(e) {
     let { children: t } = e,
         { springConfig: n, isExpanded: m } = s.useContext(d),
-        p = (0, a.bG)([c.Ay], () => c.Ay.useReducedMotion),
+        p = (0, r.bG)([c.Ay], () => c.Ay.useReducedMotion),
         { ref: x, height: h = null } = (0, o.Ay)(),
         f = (0, u.Ay)(h) ?? null,
         [{ height: C }, v] = (0, i.z)(() => ({ from: { height: 0 }, config: n }));
@@ -26,7 +26,7 @@ function p(e) {
         s.useLayoutEffect(() => {
             null !== h && v({ height: h, immediate: !m || p || null === f });
         }, [h, v, m, p, f]),
-        (0, l.jsx)(r.animated.div, {
+        (0, l.jsx)(a.animated.div, {
             style: { height: null === f ? "auto" : C, overflow: "hidden" },
             children: (0, l.jsx)("div", { style: { overflow: "hidden" }, ref: x, children: t }),
         })

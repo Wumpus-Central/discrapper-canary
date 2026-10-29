@@ -46,7 +46,7 @@ let c = function (e, t) {
         for (e = r ? o(e / 700) : e >> 1, e += o(e / t); e > 455; n += 36) e = o(e / 35);
         return o(n + (36 * e) / (e + 38));
     },
-    p = function (e) {
+    d = function (e) {
         let t = [],
             r = e.length,
             n = 0,
@@ -64,31 +64,31 @@ let c = function (e, t) {
                 ((l >= 36 || l > o((0x7fffffff - n) / t)) && s("overflow"), (n += l * t));
                 let f = i <= a ? 1 : i >= a + 26 ? 26 : i - a;
                 if (l < f) break;
-                let p = 36 - f;
-                (t > o(0x7fffffff / p) && s("overflow"), (t *= p));
+                let d = 36 - f;
+                (t > o(0x7fffffff / d) && s("overflow"), (t *= d));
             }
-            let p = t.length + 1;
-            ((a = f(n - l, p, 0 == l)),
-                o(n / p) > 0x7fffffff - i && s("overflow"),
-                (i += o(n / p)),
-                (n %= p),
+            let d = t.length + 1;
+            ((a = f(n - l, d, 0 == l)),
+                o(n / d) > 0x7fffffff - i && s("overflow"),
+                (i += o(n / d)),
+                (n %= d),
                 t.splice(n++, 0, i));
         }
         return String.fromCodePoint(...t);
     },
-    d = function (e) {
+    p = function (e) {
         let t = [],
             r = (e = u(e)).length,
             n = 128,
             i = 0,
             l = 72;
         for (let r of e) r < 128 && t.push(a(r));
-        let p = t.length,
-            d = p;
-        for (p && t.push("-"); d < r;) {
+        let d = t.length,
+            p = d;
+        for (d && t.push("-"); p < r;) {
             let r = 0x7fffffff;
             for (let t of e) t >= n && t < r && (r = t);
-            let u = d + 1;
+            let u = p + 1;
             for (let h of (r - n > o((0x7fffffff - i) / u) && s("overflow"), (i += (r - n) * u), (n = r), e))
                 if ((h < n && ++i > 0x7fffffff && s("overflow"), h == n)) {
                     let e = i;
@@ -99,7 +99,7 @@ let c = function (e, t) {
                             s = 36 - n;
                         (t.push(a(c(n + (i % s), 0))), (e = o(i / s)));
                     }
-                    (t.push(a(c(e, 0))), (l = f(i, u, d == p)), (i = 0), ++d);
+                    (t.push(a(c(e, 0))), (l = f(i, u, p == d)), (i = 0), ++p);
                 }
             (++i, ++n);
         }
@@ -108,16 +108,16 @@ let c = function (e, t) {
 e.exports = {
     version: "2.1.0",
     ucs2: { decode: u, encode: (e) => String.fromCodePoint(...e) },
-    decode: p,
-    encode: d,
+    decode: d,
+    encode: p,
     toASCII: function (e) {
         return l(e, function (e) {
-            return r.test(e) ? "xn--" + d(e) : e;
+            return r.test(e) ? "xn--" + p(e) : e;
         });
     },
     toUnicode: function (e) {
         return l(e, function (e) {
-            return t.test(e) ? p(e.slice(4).toLowerCase()) : e;
+            return t.test(e) ? d(e.slice(4).toLowerCase()) : e;
         });
     },
 };

@@ -180,7 +180,7 @@ function f(e) {
     if (Number.isFinite(e) && (e > 34028234663852886e22 || e < -34028234663852886e22))
         throw Error("invalid float 32: " + e);
 }
-function p(e, t) {
+function d(e, t) {
     switch (t) {
         case n.rO.BIGINT:
             return e.toBigInt();
@@ -190,7 +190,7 @@ function p(e, t) {
             return e.toString();
     }
 }
-class d {
+class p {
     constructor(e) {
         this.info = e;
     }
@@ -369,14 +369,14 @@ class d {
                 case n.LN.INT64:
                 case n.LN.SFIXED64:
                 case n.LN.SINT64:
-                    if (null === e) return p(s.h.ZERO, r);
+                    if (null === e) return d(s.h.ZERO, r);
                     if ("number" != typeof e && "string" != typeof e) break;
-                    return p(s.h.from(e), r);
+                    return d(s.h.from(e), r);
                 case n.LN.FIXED64:
                 case n.LN.UINT64:
-                    if (null === e) return p(s.e.ZERO, r);
+                    if (null === e) return d(s.e.ZERO, r);
                     if ("number" != typeof e && "string" != typeof e) break;
-                    return p(s.e.from(e), r);
+                    return d(s.e.from(e), r);
                 case n.LN.BOOL:
                     if (null === e) return !1;
                     if ("boolean" != typeof e) break;
@@ -513,46 +513,46 @@ class h {
     }
     scalar(e, t, r, i, o) {
         if (void 0 === t) return void l(i);
-        let p = o || i;
+        let d = o || i;
         switch (e) {
             case n.LN.INT32:
             case n.LN.SFIXED32:
             case n.LN.SINT32:
-                if (0 === t) return p ? 0 : void 0;
+                if (0 === t) return d ? 0 : void 0;
                 return (u(t), t);
             case n.LN.FIXED32:
             case n.LN.UINT32:
-                if (0 === t) return p ? 0 : void 0;
+                if (0 === t) return d ? 0 : void 0;
                 return (c(t), t);
             case n.LN.FLOAT:
                 f(t);
             case n.LN.DOUBLE:
-                if (0 === t) return p ? 0 : void 0;
+                if (0 === t) return d ? 0 : void 0;
                 if ((l("number" == typeof t), Number.isNaN(t))) return "NaN";
                 if (t === 1 / 0) return "Infinity";
                 if (t === -1 / 0) return "-Infinity";
                 return t;
             case n.LN.STRING:
-                if ("" === t) return p ? "" : void 0;
+                if ("" === t) return d ? "" : void 0;
                 return (l("string" == typeof t), t);
             case n.LN.BOOL:
-                if (!1 === t) return !p && void 0;
+                if (!1 === t) return !d && void 0;
                 return (l("boolean" == typeof t), t);
             case n.LN.UINT64:
             case n.LN.FIXED64:
                 l("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
-                let d = s.e.from(t);
-                if (d.isZero() && !p) return;
-                return d.toString();
+                let p = s.e.from(t);
+                if (p.isZero() && !d) return;
+                return p.toString();
             case n.LN.INT64:
             case n.LN.SFIXED64:
             case n.LN.SINT64:
                 l("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
                 let h = s.h.from(t);
-                if (h.isZero() && !p) return;
+                if (h.isZero() && !d) return;
                 return h.toString();
             case n.LN.BYTES:
-                if ((l(t instanceof Uint8Array), !t.byteLength)) return p ? "" : void 0;
+                if ((l(t instanceof Uint8Array), !t.byteLength)) return d ? "" : void 0;
                 return (0, a.C)(t);
         }
     }
@@ -564,11 +564,11 @@ function v(e, t = n.rO.STRING) {
             return !1;
         case n.LN.UINT64:
         case n.LN.FIXED64:
-            return p(s.e.ZERO, t);
+            return d(s.e.ZERO, t);
         case n.LN.INT64:
         case n.LN.SFIXED64:
         case n.LN.SINT64:
-            return p(s.h.ZERO, t);
+            return d(s.h.ZERO, t);
         case n.LN.DOUBLE:
         case n.LN.FLOAT:
             return 0;
@@ -628,8 +628,8 @@ class y {
                     } else s[u] = a.T().internalBinaryRead(e, e.uint32(), r, s[u]);
                     break;
                 case "map":
-                    let [p, d] = this.mapEntry(a, e, r);
-                    s[u][p] = d;
+                    let [d, p] = this.mapEntry(a, e, r);
+                    s[u][d] = p;
             }
         }
     }
@@ -690,11 +690,11 @@ class y {
             case n.LN.FLOAT:
                 return e.float();
             case n.LN.INT64:
-                return p(e.int64(), r);
+                return d(e.int64(), r);
             case n.LN.UINT64:
-                return p(e.uint64(), r);
+                return d(e.uint64(), r);
             case n.LN.FIXED64:
-                return p(e.fixed64(), r);
+                return d(e.fixed64(), r);
             case n.LN.FIXED32:
                 return e.fixed32();
             case n.LN.BYTES:
@@ -704,11 +704,11 @@ class y {
             case n.LN.SFIXED32:
                 return e.sfixed32();
             case n.LN.SFIXED64:
-                return p(e.sfixed64(), r);
+                return d(e.sfixed64(), r);
             case n.LN.SINT32:
                 return e.sint32();
             case n.LN.SINT64:
-                return p(e.sint64(), r);
+                return d(e.sint64(), r);
         }
     }
 }
@@ -979,7 +979,7 @@ class I {
             (this.fields = t.map(n.mS)),
             (this.options = null != r ? r : {}),
             (this.refTypeCheck = new i(this)),
-            (this.refJsonReader = new d(this)),
+            (this.refJsonReader = new p(this)),
             (this.refJsonWriter = new h(this)),
             (this.refBinReader = new y(this)),
             (this.refBinWriter = new g(this)));

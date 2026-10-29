@@ -15,8 +15,8 @@ var n =
     u = r(762116),
     c = r(779288),
     f = r(841532),
-    p = r(872511),
-    d = r(933786);
+    d = r(872511),
+    p = r(933786);
 r(150433);
 var h = r(452767),
     m = r(527851),
@@ -40,7 +40,7 @@ var h = r(452767),
             y(t, r, e) || {
                 start: function (e) {
                     (t.stopTracking(),
-                        r.toValue instanceof o ? t.track(new p(t, r.toValue, h, r, e)) : t.animate(new h(r), e));
+                        r.toValue instanceof o ? t.track(new d(t, r.toValue, h, r, e)) : t.animate(new h(r), e));
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -120,7 +120,7 @@ e.exports = {
             y(t, r, e) || {
                 start: function (e) {
                     (t.stopTracking(),
-                        r.toValue instanceof o ? t.track(new p(t, r.toValue, v, r, e)) : t.animate(new v(r), e));
+                        r.toValue instanceof o ? t.track(new d(t, r.toValue, v, r, e)) : t.animate(new v(r), e));
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -174,7 +174,7 @@ e.exports = {
                 t && t.listener && t.listener.apply(null, n));
         };
     },
-    isAnimated: d,
+    isAnimated: p,
     createAnimatedComponent: r(626919),
     inject: {
         ApplyAnimatedValues: r(848822).inject,

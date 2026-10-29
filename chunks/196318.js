@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     U6: "pulse__3b43f",
     kL: "container__3b43f",
     o5: "bannerPadding__3b43f",

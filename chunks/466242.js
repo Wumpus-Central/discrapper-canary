@@ -1,8 +1,8 @@
 n.d(t, { A: () => u });
 var l = n(582128),
     s = n(17928),
-    r = n(157695),
-    a = n(859703);
+    a = n(157695),
+    r = n(859703);
 let i = (0, n(945810).mj)({
     name: "2026-08-no-fill-logging",
     kind: "user",
@@ -12,8 +12,8 @@ let i = (0, n(945810).mj)({
 var o = n(971276);
 function u(e, t) {
     let { enableNoFill: n } = i.useConfig({ location: t }),
-        u = (0, s.bG)([r.A], () => r.A.getNoFillForPlacement(e), [e]),
-        c = (0, s.bG)([a.A], () => null != a.A.questEnrollmentBlockedUntil),
+        u = (0, s.bG)([a.A], () => a.A.getNoFillForPlacement(e), [e]),
+        c = (0, s.bG)([r.A], () => null != r.A.questEnrollmentBlockedUntil),
         [d, m] = l.useState(null);
     return (
         l.useEffect(() => {

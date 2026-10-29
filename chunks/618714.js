@@ -1,5 +1,6 @@
 var n;
 ((n = function () {
+    "use strict";
     var e,
         t,
         n,
@@ -11,8 +12,8 @@ var n;
         u = "u" > typeof window ? window : (r.g, r.g),
         c = (u.cancelRequestAnimationFrame && u.requestAnimationFrame) || setTimeout,
         f = u.cancelRequestAnimationFrame || clearTimeout,
-        p = [],
-        d = 0,
+        d = [],
+        p = 0,
         h = !1,
         m = 7,
         v = 35,
@@ -62,16 +63,16 @@ var n;
             t,
             r,
             n = m > 9 ? 9 : 1;
-        if (((b = Date.now()), (h = !1), (s = null), d > 2 || b - a - 50 < o))
-            for (t = 0, r = p.length; t < r && _.timeRemaining() > n; t++) ((e = p.shift()), w++, e && e(_));
-        p.length ? k() : (d = 0);
+        if (((b = Date.now()), (h = !1), (s = null), p > 2 || b - a - 50 < o))
+            for (t = 0, r = d.length; t < r && _.timeRemaining() > n; t++) ((e = d.shift()), w++, e && e(_));
+        d.length ? k() : (p = 0);
     }
     function M(e) {
-        return (g++, p.push(e), k(), g);
+        return (g++, d.push(e), k(), g);
     }
     function P(e) {
         var t = e - 1 - w;
-        p[t] && (p[t] = null);
+        d[t] && (d[t] = null);
     }
     if (u.requestIdleCallback && u.cancelIdleCallback)
         try {

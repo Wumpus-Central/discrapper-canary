@@ -6,14 +6,14 @@ var n = l(158390),
 let r = a.A.Millis.SECOND,
     d = 10 * a.A.Millis.SECOND,
     c = { status: "idle" },
-    u = { status: "loading" },
-    o = { status: "error" },
+    o = { status: "loading" },
+    u = { status: "error" },
     m = {};
-function f(e, t) {
+function x(e, t) {
     let l = e.entriesByWidgetId.get(t);
     return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
-function x(e, t, l, i) {
+function f(e, t, l, i) {
     let a = l.filter((t) => e.entriesByWidgetId.get(t)?.state.status !== "success");
     if (0 === a.length) {
         e.backoff?.pending !== !0 && e.backoff?.succeed();
@@ -21,8 +21,8 @@ function x(e, t, l, i) {
     }
     let c = [];
     (a.forEach((t) => {
-        let l = f(e, t);
-        i && l.attempts < 3 ? c.push(t) : (l.state = o);
+        let l = x(e, t);
+        i && l.attempts < 3 ? c.push(t) : (l.state = u);
     }),
         0 !== c.length &&
             ((e.backoff ??= new n.A(r, d, !0)),
@@ -57,8 +57,8 @@ let h = new g(s.h, {
         ((s.activeRequestId = n),
             (s.activeWidgetIds = i),
             i.forEach((e) => {
-                let t = f(s, e);
-                "success" !== t.state.status && ((t.state = u), (t.attempts += 1));
+                let t = x(s, e);
+                "success" !== t.state.status && ((t.state = o), (t.attempts += 1));
             }));
     },
     GUILD_SPACE_HYDRATE_SUCCESS: function (e) {
@@ -77,18 +77,18 @@ let h = new g(s.h, {
         (s.forEach((e) => {
             let t = a.get(e);
             if (null != t) {
-                let l = f(i, e);
+                let l = x(i, e);
                 ((l.state = { status: "success", data: t }), (l.attempts = 0));
             } else r.push(e);
         }),
-            x(i, t, r, !0));
+            f(i, t, r, !0));
     },
     GUILD_SPACE_HYDRATE_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: n } = e,
             i = m[t];
         if (i?.activeRequestId !== l) return !1;
         let s = i.activeWidgetIds ?? [];
-        (delete i.activeRequestId, delete i.activeWidgetIds, x(i, t, s, n));
+        (delete i.activeRequestId, delete i.activeWidgetIds, f(i, t, s, n));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,

@@ -61,12 +61,12 @@ var u = (function () {
             o = e.offsetHeight;
         return !(i || o || e.getClientRects().length);
     },
-    p = function (e) {
+    d = function (e) {
         var t,
             r = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
         return !!(r && e instanceof r.Element);
     },
-    d = function (e) {
+    p = function (e) {
         switch (e.tagName) {
             case "INPUT":
                 if ("image" !== e.type) break;
@@ -114,14 +114,14 @@ var u = (function () {
             a = !r && v.test(t.overflowX || ""),
             s = r ? 0 : b(t.paddingTop),
             l = r ? 0 : b(t.paddingRight),
-            p = r ? 0 : b(t.paddingBottom),
-            d = r ? 0 : b(t.paddingLeft),
+            d = r ? 0 : b(t.paddingBottom),
+            p = r ? 0 : b(t.paddingLeft),
             h = r ? 0 : b(t.borderTopWidth),
             S = r ? 0 : b(t.borderRightWidth),
             E = r ? 0 : b(t.borderBottomWidth),
             x = r ? 0 : b(t.borderLeftWidth),
-            C = d + l,
-            k = s + p,
+            C = p + l,
+            k = s + d,
             T = x + S,
             M = h + E,
             P = a ? e.offsetHeight - M - e.clientHeight : 0,
@@ -134,7 +134,7 @@ var u = (function () {
                 devicePixelContentBoxSize: w(Math.round(I * devicePixelRatio), Math.round(O * devicePixelRatio), i),
                 borderBoxSize: w(R, D, i),
                 contentBoxSize: w(I, O, i),
-                contentRect: new u(d, s, I, O),
+                contentRect: new u(p, s, I, O),
             });
         return (m.set(e, L), L);
     },
@@ -321,7 +321,7 @@ var u = (function () {
                     t = E(this.target, this.observedBox);
                 return (
                     c((e = this.target)) ||
-                        d(e) ||
+                        p(e) ||
                         "inline" !== getComputedStyle(e).display ||
                         (this.lastReportedSize = t),
                     this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize
@@ -388,7 +388,7 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!p(e))
+                if (!d(e))
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
@@ -399,7 +399,7 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!p(e))
+                if (!d(e))
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );

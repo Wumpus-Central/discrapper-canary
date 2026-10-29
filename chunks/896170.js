@@ -22,8 +22,8 @@ function l(e, t, r) {
         o = i.keys,
         l = i.threshold,
         c = void 0 === l ? a.MATCHES : l,
-        p = i.baseSort,
-        d = void 0 === p ? s : p,
+        d = i.baseSort,
+        p = void 0 === d ? s : d,
         h = i.sorter;
     return (
         void 0 === h
@@ -33,7 +33,7 @@ function l(e, t, r) {
                       return (
                           (r = e),
                           (n = t),
-                          (i = d),
+                          (i = p),
                           (o = r.rank),
                           (a = r.keyIndex),
                           (s = n.rank),
@@ -46,15 +46,15 @@ function l(e, t, r) {
     )(
         e.reduce(function (e, i, s) {
             var l,
-                p,
                 d,
+                p,
                 h,
                 m =
                     ((l = i),
-                    (p = o),
-                    (d = t),
+                    (d = o),
+                    (p = t),
                     (h = r),
-                    p
+                    d
                         ? (function (e, t) {
                               for (var r = [], i = 0, o = t.length; i < o; i++) {
                                   for (
@@ -90,8 +90,8 @@ function l(e, t, r) {
                                                               n = s;
                                                           }
                                                           if (Array.isArray(n[0])) {
-                                                              var p = [];
-                                                              return p.concat.apply(p, n);
+                                                              var d = [];
+                                                              return d.concat.apply(d, n);
                                                           }
                                                           return n;
                                                       })(t, e);
@@ -100,14 +100,14 @@ function l(e, t, r) {
                                               return null == r ? [] : Array.isArray(r) ? r : [String(r)];
                                           })(e, s),
                                           c = 0,
-                                          p = u.length;
-                                      c < p;
+                                          d = u.length;
+                                      c < d;
                                       c++
                                   )
                                       r.push({ itemValue: u[c], attributes: l });
                               }
                               return r;
-                          })(l, p).reduce(
+                          })(l, d).reduce(
                               function (e, t, r) {
                                   var n = e.rank,
                                       i = e.rankedValue,
@@ -115,20 +115,20 @@ function l(e, t, r) {
                                       s = e.keyThreshold,
                                       l = t.itemValue,
                                       c = t.attributes,
-                                      f = u(l, d, h),
-                                      p = i,
+                                      f = u(l, p, h),
+                                      d = i,
                                       m = c.minRanking,
                                       v = c.maxRanking,
                                       y = c.threshold;
                                   return (
                                       f < m && f >= a.MATCHES ? (f = m) : f > v && (f = v),
-                                      f > n && ((n = f), (o = r), (s = y), (p = l)),
-                                      { rankedValue: p, rank: n, keyIndex: o, keyThreshold: s }
+                                      f > n && ((n = f), (o = r), (s = y), (d = l)),
+                                      { rankedValue: d, rank: n, keyIndex: o, keyThreshold: s }
                                   );
                               },
                               { rankedValue: l, rank: a.NO_MATCH, keyIndex: -1, keyThreshold: h.threshold },
                           )
-                        : { rankedValue: l, rank: u(l, d, h), keyIndex: -1, keyThreshold: h.threshold }),
+                        : { rankedValue: l, rank: u(l, p, h), keyIndex: -1, keyThreshold: h.threshold }),
                 v = m.rank,
                 y = m.keyThreshold;
             return (v >= (void 0 === y ? c : y) && e.push((0, n.A)({}, m, { item: i, index: s })), e);

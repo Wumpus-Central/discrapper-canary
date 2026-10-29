@@ -6,8 +6,8 @@ function t(e) {
             : null
         : (t = s.hex6.exec(e))
           ? parseInt(t[1] + "ff", 16) >>> 0
-          : p.hasOwnProperty(e)
-            ? p[e]
+          : d.hasOwnProperty(e)
+            ? d[e]
             : (t = s.rgb.exec(e))
               ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0
               : (t = s.rgba.exec(e))
@@ -73,7 +73,7 @@ function f(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-var p = {
+var d = {
     transparent: 0,
     aliceblue: 0xf0f8ffff,
     antiquewhite: 0xfaebd7ff,

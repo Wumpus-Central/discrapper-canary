@@ -7,8 +7,8 @@ var n = "function" == typeof Map && Map.prototype,
     u = s && l && "function" == typeof l.get ? l.get : null,
     c = s && Set.prototype.forEach,
     f = "function" == typeof WeakMap && WeakMap.prototype ? WeakMap.prototype.has : null,
-    p = "function" == typeof WeakSet && WeakSet.prototype ? WeakSet.prototype.has : null,
-    d = "function" == typeof WeakRef && WeakRef.prototype ? WeakRef.prototype.deref : null,
+    d = "function" == typeof WeakSet && WeakSet.prototype ? WeakSet.prototype.has : null,
+    p = "function" == typeof WeakRef && WeakRef.prototype ? WeakRef.prototype.deref : null,
     h = Boolean.prototype.valueOf,
     m = Object.prototype.toString,
     v = Function.prototype.toString,
@@ -171,8 +171,8 @@ e.exports = function e(t, n, i, s) {
         (("u" > typeof HTMLElement && eu instanceof HTMLElement) ||
             ("string" == typeof eu.nodeName && "function" == typeof eu.getAttribute))
     ) {
-        for (var eu, ec, ef = "<" + _.call(String(t.nodeName)), ep = t.attributes || [], ed = 0; ed < ep.length; ed++) {
-            ef += " " + ep[ed].name + "=" + K(((ec = ep[ed].value), b.call(String(ec), /"/g, "&quot;")), "double", M);
+        for (var eu, ec, ef = "<" + _.call(String(t.nodeName)), ed = t.attributes || [], ep = 0; ep < ed.length; ep++) {
+            ef += " " + ed[ep].name + "=" + K(((ec = ed[ep].value), b.call(String(ec), /"/g, "&quot;")), "double", M);
         }
         return (
             (ef += ">"),
@@ -257,7 +257,7 @@ e.exports = function e(t, n, i, s) {
             try {
                 f.call(e, f);
                 try {
-                    p.call(e, p);
+                    d.call(e, d);
                 } catch (e) {
                     return !0;
                 }
@@ -269,9 +269,9 @@ e.exports = function e(t, n, i, s) {
         return J("WeakMap");
     if (
         (function (e) {
-            if (!p || !e || "object" != typeof e) return !1;
+            if (!d || !e || "object" != typeof e) return !1;
             try {
-                p.call(e, p);
+                d.call(e, d);
                 try {
                     f.call(e, f);
                 } catch (e) {
@@ -285,9 +285,9 @@ e.exports = function e(t, n, i, s) {
         return J("WeakSet");
     if (
         (function (e) {
-            if (!d || !e || "object" != typeof e) return !1;
+            if (!p || !e || "object" != typeof e) return !1;
             try {
-                return (d.call(e), !0);
+                return (p.call(e), !0);
             } catch (e) {}
             return !1;
         })(t)

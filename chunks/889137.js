@@ -59,13 +59,13 @@ let n = Symbol.for("@ts-pattern/matcher"),
     c = (e, t) => e.reduce((e, r) => e.concat(t(r)), []);
 function f(e) {
     return Object.assign(e, {
-        optional: () => p(e),
-        and: (t) => d(e, t),
+        optional: () => d(e),
+        and: (t) => p(e, t),
         or: (t) => h(e, t),
         select: (t) => (void 0 === t ? v(e) : v(t, e)),
     });
 }
-function p(e) {
+function d(e) {
     return f({
         [n]: () => ({
             match: (t) => {
@@ -82,7 +82,7 @@ function p(e) {
         }),
     });
 }
-function d(...e) {
+function p(...e) {
     return f({
         [n]: () => ({
             match: (t) => {
@@ -153,42 +153,42 @@ let w = f(
         Object.assign(f(e), {
             startsWith: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.startsWith(t)),
                     ),
                 ),
             endsWith: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.endsWith(t)),
                     ),
                 ),
             minLength: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.length >= t),
                     ),
                 ),
             maxLength: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.length <= t),
                     ),
                 ),
             includes: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.includes(t)),
                     ),
                 ),
             regex: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && !!e.match(t)),
                     ),
@@ -206,15 +206,15 @@ let w = f(
     I = () => m((e) => y(e) && e < 0),
     O = (e) =>
         Object.assign(f(e), {
-            between: (t, r) => O(d(e, E(t, r))),
-            lt: (t) => O(d(e, x(t))),
-            gt: (t) => O(d(e, C(t))),
-            lte: (t) => O(d(e, k(t))),
-            gte: (t) => O(d(e, T(t))),
-            int: () => O(d(e, M())),
-            finite: () => O(d(e, P())),
-            positive: () => O(d(e, A())),
-            negative: () => O(d(e, I())),
+            between: (t, r) => O(p(e, E(t, r))),
+            lt: (t) => O(p(e, x(t))),
+            gt: (t) => O(p(e, C(t))),
+            lte: (t) => O(p(e, k(t))),
+            gte: (t) => O(p(e, T(t))),
+            int: () => O(p(e, M())),
+            finite: () => O(p(e, P())),
+            positive: () => O(p(e, A())),
+            negative: () => O(p(e, I())),
         }),
     R = O(m(y)),
     D = (e, t) => m((r) => b(r) && e <= r && t >= r),
@@ -226,13 +226,13 @@ let w = f(
     K = () => m((e) => b(e) && e < 0),
     V = (e) =>
         Object.assign(f(e), {
-            between: (t, r) => V(d(e, D(t, r))),
-            lt: (t) => V(d(e, L(t))),
-            gt: (t) => V(d(e, F(t))),
-            lte: (t) => V(d(e, N(t))),
-            gte: (t) => V(d(e, j(t))),
-            positive: () => V(d(e, B())),
-            negative: () => V(d(e, K())),
+            between: (t, r) => V(p(e, D(t, r))),
+            lt: (t) => V(p(e, L(t))),
+            gt: (t) => V(p(e, F(t))),
+            lte: (t) => V(p(e, N(t))),
+            gte: (t) => V(p(e, j(t))),
+            positive: () => V(p(e, B())),
+            negative: () => V(p(e, K())),
         }),
     U = V(m(b)),
     $ = f(
@@ -253,7 +253,7 @@ let w = f(
 var G = {
     __proto__: null,
     matcher: n,
-    optional: p,
+    optional: d,
     array: function (...e) {
         return (function e(t) {
             return Object.assign(
@@ -262,7 +262,7 @@ var G = {
                         yield Object.assign(t, { [i]: !0 });
                     },
                 }),
-                { optional: () => e(p(t)), select: (r) => e(void 0 === r ? v(t) : v(r, t)) },
+                { optional: () => e(d(t)), select: (r) => e(void 0 === r ? v(t) : v(r, t)) },
             );
         })({
             [n]: () => ({
@@ -344,7 +344,7 @@ var G = {
             }),
         });
     },
-    intersection: d,
+    intersection: p,
     union: h,
     not: function (e) {
         return f({

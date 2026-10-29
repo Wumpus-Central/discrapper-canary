@@ -197,14 +197,14 @@ function y(e, a) {
     return e.calendar.toJulianDay(e) - a.calendar.toJulianDay(a);
 }
 function D(e, a) {
-    return p(e) - p(a);
+    return g(e) - g(a);
 }
-function p(e) {
+function g(e) {
     return 36e5 * e.hour + 6e4 * e.minute + 1e3 * e.second + e.millisecond;
 }
-let g = null;
+let p = null;
 function f() {
-    return (null == g && (g = new Intl.DateTimeFormat().resolvedOptions().timeZone), g);
+    return (null == p && (p = new Intl.DateTimeFormat().resolvedOptions().timeZone), p);
 }
 function v() {
     return !1;

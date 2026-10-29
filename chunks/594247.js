@@ -5,9 +5,9 @@ t.d(a, {
     Yd: () => y,
     ay: () => h,
     cd: () => b,
-    gw: () => p,
+    gw: () => g,
     oU: () => l,
-    tR: () => g,
+    tR: () => p,
     uB: () => v,
     yP: () => f,
 });
@@ -61,7 +61,7 @@ function c(e, a) {
 }
 function m(e, a, t = "compatible") {
     var r, n, u;
-    let d = g(e);
+    let d = p(e);
     if ("UTC" === a) return l(d);
     if (a === (0, o.Xj)() && "compatible" === t && !(0, o.rS)()) {
         d = f(d, new (0, i.FG)());
@@ -74,7 +74,7 @@ function m(e, a, t = "compatible") {
     let h = l(d),
         y = s(h - 864e5, a),
         D = s(h + 864e5, a),
-        p =
+        g =
             ((r = d),
             ((n = h - y) == (u = h - D) ? [n] : [n, u]).filter((e) => {
                 var t;
@@ -90,14 +90,14 @@ function m(e, a, t = "compatible") {
                         t.second === n.second
                 );
             }));
-    if (1 === p.length) return p[0];
-    if (p.length > 1)
+    if (1 === g.length) return g[0];
+    if (g.length > 1)
         switch (t) {
             case "compatible":
             case "earlier":
-                return p[0];
+                return g[0];
             case "later":
-                return p[p.length - 1];
+                return g[g.length - 1];
             case "reject":
                 throw RangeError("Multiple possible absolute times found");
         }
@@ -129,10 +129,10 @@ function y(e, a) {
 function D(e, a) {
     return y(e.getTime(), a);
 }
-function p(e) {
+function g(e) {
     return new (0, r.ng)(e.calendar, e.era, e.year, e.month, e.day);
 }
-function g(e, a) {
+function p(e, a) {
     let t = 0,
         n = 0,
         i = 0,

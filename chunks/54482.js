@@ -19,8 +19,8 @@ function u() {
 }
 var c = RegExp("rgb" + u(s, s, s)),
     f = RegExp("rgba" + u(s, s, s, s)),
-    p = RegExp("hsl" + u(s, l, l)),
-    d = RegExp("hsla" + u(s, l, l, s)),
+    d = RegExp("hsl" + u(s, l, l)),
+    p = RegExp("hsla" + u(s, l, l, s)),
     h = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     m = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     v = /^#([0-9a-fA-F]{6})$/,
@@ -84,9 +84,9 @@ function x(e) {
                             ? parseInt(t[1], 16) >>> 0
                             : (t = m.exec(e))
                               ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
-                              : (t = p.exec(e))
+                              : (t = d.exec(e))
                                 ? (255 | b(_(t[1]), E(t[2]), E(t[3]))) >>> 0
-                                : (t = d.exec(e))
+                                : (t = p.exec(e))
                                   ? (b(_(t[1]), E(t[2]), E(t[3])) | S(t[4])) >>> 0
                                   : null;
     return null === r

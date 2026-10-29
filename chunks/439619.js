@@ -7,8 +7,8 @@ var n,
     u = r(870064),
     c = r(741623),
     f = r(913789),
-    p = r(603763),
-    d = r(949893),
+    d = r(603763),
+    p = r(949893),
     h = r(783277),
     m = r(658471),
     v = r(327709),
@@ -120,8 +120,8 @@ var n,
         "%Function.prototype.apply%": P,
         "%Object.defineProperty%": S,
         "%Object.getPrototypeOf%": T,
-        "%Math.abs%": p,
-        "%Math.floor%": d,
+        "%Math.abs%": d,
+        "%Math.floor%": p,
         "%Math.max%": h,
         "%Math.min%": m,
         "%Math.pow%": v,
@@ -250,23 +250,23 @@ e.exports = function (e, t) {
         s = !1,
         l = i.alias;
     l && ((n = l[0]), K(r, B([0, 1], l)));
-    for (var f = 1, p = !0; f < r.length; f += 1) {
-        var d = r[f],
-            h = U(d, 0, 1),
-            m = U(d, -1);
+    for (var f = 1, d = !0; f < r.length; f += 1) {
+        var p = r[f],
+            h = U(p, 0, 1),
+            m = U(p, -1);
         if (('"' === h || "'" === h || "`" === h || '"' === m || "'" === m || "`" === m) && h !== m)
             throw new u("property names with quotes must have matching quotes");
-        if ((("constructor" !== d && p) || (s = !0), (n += "." + d), j(R, (o = "%" + n + "%")))) a = R[o];
+        if ((("constructor" !== p && d) || (s = !0), (n += "." + p), j(R, (o = "%" + n + "%")))) a = R[o];
         else if (null != a) {
-            if (!(d in a)) {
+            if (!(p in a)) {
                 if (!t) throw new c("base intrinsic for " + e + " exists, but the property is not available.");
                 return;
             }
             if (_ && f + 1 >= r.length) {
-                var v = _(a, d);
-                a = (p = !!v) && "get" in v && !("originalValue" in v.get) ? v.get : a[d];
-            } else ((p = j(a, d)), (a = a[d]));
-            p && !s && (R[o] = a);
+                var v = _(a, p);
+                a = (d = !!v) && "get" in v && !("originalValue" in v.get) ? v.get : a[p];
+            } else ((d = j(a, p)), (a = a[p]));
+            d && !s && (R[o] = a);
         }
     }
     return a;

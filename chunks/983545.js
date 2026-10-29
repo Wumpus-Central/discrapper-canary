@@ -24,47 +24,47 @@ let E = {
                 reset: A,
                 setCurrentTab: C,
             } = (0, o.v)(),
-            _ = n.useMemo(() => {
+            S = n.useMemo(() => {
                 var t;
                 return (0, u.dF)(e) || (t = e) === u.G2.COLLABS || t === u.G2.OFFER_ELIGIBLE ? u.G2.CATALOG : e;
             }, [e]),
-            [g, S] = n.useState(_),
-            [O, f] = n.useState(u.Pf.VISIBLE);
+            [_, g] = n.useState(S),
+            [O, h] = n.useState(u.Pf.VISIBLE);
         (n.useEffect(() => {
-            g !== u.G2.GAME_SERVERS && C(g);
-        }, [g, C]),
+            _ !== u.G2.GAME_SERVERS && C(_);
+        }, [_, C]),
             n.useEffect(() => {
-                if ((S(_), e === u.G2.CATALOG)) A();
+                if ((g(S), e === u.G2.CATALOG)) A();
                 else if (e === u.G2.COLLABS) a();
                 else if (e === u.G2.OFFER_ELIGIBLE) p();
                 else if ((0, u.dF)(e)) {
                     let t = E[e];
                     null != t ? l(t) : A();
                 }
-            }, [_, e, l, a, p, A]));
+            }, [S, e, l, a, p, A]));
         let { clearError: L } = (0, c.S)(),
-            b = (0, i.W6)(),
-            h = n.useCallback(
+            f = (0, i.W6)(),
+            b = n.useCallback(
                 async (e, n) => {
                     if ((L(), e === u.G2.CATALOG)) A();
                     else if (e === u.G2.COLLABS) a();
                     else if (e === u.G2.OFFER_ELIGIBLE) p();
-                    else if ((0, u.dF)(e) && e !== g) {
+                    else if ((0, u.dF)(e) && e !== _) {
                         let t = E[e];
                         null != t ? l(t) : A();
                     }
-                    if (g !== e) {
+                    if (_ !== e) {
                         if (n && !t) {
                             var i;
-                            (f(u.Pf.OUT), await ((i = 1.1 * u.H1), new Promise((e) => setTimeout(e, i))));
+                            (h(u.Pf.OUT), await ((i = 1.1 * u.H1), new Promise((e) => setTimeout(e, i))));
                         }
-                        (S(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
-                            n && !t && f(u.Pf.IN),
-                            b.push(d.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            f(u.Pf.VISIBLE));
+                        (g(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
+                            n && !t && h(u.Pf.IN),
+                            f.push(d.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            h(u.Pf.VISIBLE));
                     }
                 },
-                [b, l, a, p, A, g, L, t],
+                [f, l, a, p, A, _, L, t],
             );
-        return { selectedTab: g, transitionState: O, transitionToTab: h };
+        return { selectedTab: _, transitionState: O, transitionToTab: b };
     };

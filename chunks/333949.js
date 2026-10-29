@@ -1,15 +1,15 @@
 n.d(t, { X: () => c });
 var l = n(477900),
     s = n(582128),
-    r = n(17928),
-    a = n(775602),
+    a = n(17928),
+    r = n(775602),
     i = n(607470),
     o = n(139384),
     u = n(241762);
 function c(e) {
     let { isHovered: t, asset: n, poster: c, className: d, autoPlay: m = !1, ref: p } = e,
         { isExpanded: x } = (0, u.H)(),
-        h = (0, r.bG)([a.Ay], () => a.Ay.useReducedMotion),
+        h = (0, a.bG)([r.Ay], () => r.Ay.useReducedMotion),
         f = s.useRef(null);
     return (
         s.useEffect(() => {

@@ -45,8 +45,8 @@ var n,
     (i[(i.tag = 8)] = "tag"),
     ((o = l || (l = {}))[(o.number = 0)] = "number"),
     (o[(o.dateTime = 1)] = "dateTime"));
-var p = /[ \xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/,
-    d =
+var d = /[ \xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/,
+    p =
         /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g,
     h = /[\t-\r \x85\u200E\u200F\u2028\u2029]/i,
     m = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
@@ -379,8 +379,8 @@ var S = {
         "te-IN": ["hB", "h", "H"],
         "zu-ZA": ["H", "hB", "hb", "h"],
     },
-    E = new RegExp("^".concat(p.source, "*")),
-    x = new RegExp("".concat(p.source, "*$"));
+    E = new RegExp("^".concat(d.source, "*")),
+    x = new RegExp("".concat(d.source, "*$"));
 function C(e, t) {
     return { start: e, end: t };
 }
@@ -935,7 +935,7 @@ var U = (function () {
                 case "date":
                 case "time":
                     this.bumpSpace();
-                    var p = null;
+                    var d = null;
                     if (this.bumpIf(",")) {
                         this.bumpSpace();
                         var h = this.clonePosition(),
@@ -944,15 +944,15 @@ var U = (function () {
                         var v = B(m.val);
                         if (0 === v.length)
                             return this.error(a.EXPECT_ARGUMENT_STYLE, C(this.clonePosition(), this.clonePosition()));
-                        p = { style: v, styleLocation: C(h, this.clonePosition()) };
+                        d = { style: v, styleLocation: C(h, this.clonePosition()) };
                     }
                     var y = this.tryParseArgumentClose(n);
                     if (y.err) return y;
                     var g = C(n, this.clonePosition());
-                    if (p && D(null == p ? void 0 : p.style, "::", 0)) {
-                        var b = j(p.style.slice(2));
+                    if (d && D(null == d ? void 0 : d.style, "::", 0)) {
+                        var b = j(d.style.slice(2));
                         if ("number" === u) {
-                            var m = this.parseNumberSkeletonFromString(b, p.styleLocation);
+                            var m = this.parseNumberSkeletonFromString(b, d.styleLocation);
                             if (m.err) return m;
                             return { val: { type: s.number, value: r, location: g, style: m.val }, err: null };
                         }
@@ -1004,10 +1004,10 @@ var U = (function () {
                         var v = {
                             type: l.dateTime,
                             pattern: _,
-                            location: p.styleLocation,
+                            location: d.styleLocation,
                             parsedOptions: this.shouldParseSkeletons
                                 ? ((w = {}),
-                                  _.replace(d, function (e) {
+                                  _.replace(p, function (e) {
                                       var t = e.length;
                                       switch (e[0]) {
                                           case "G":
@@ -1120,7 +1120,7 @@ var U = (function () {
                             type: "number" === u ? s.number : "date" === u ? s.date : s.time,
                             value: r,
                             location: g,
-                            style: null != (i = null == p ? void 0 : p.style) ? i : null,
+                            style: null != (i = null == d ? void 0 : d.style) ? i : null,
                         },
                         err: null,
                     };
@@ -1400,11 +1400,11 @@ var U = (function () {
                 if (0 === u.length) {
                     var f = this.clonePosition();
                     if ("select" !== t && this.bumpIf("=")) {
-                        var p = this.tryParseDecimalInteger(
+                        var d = this.tryParseDecimalInteger(
                             a.EXPECT_PLURAL_ARGUMENT_SELECTOR,
                             a.INVALID_PLURAL_ARGUMENT_SELECTOR,
                         );
-                        if (p.err) return p;
+                        if (d.err) return d;
                         ((c = C(f, this.clonePosition())), (u = this.message.slice(f.offset, this.offset())));
                     } else break;
                 }
@@ -1414,7 +1414,7 @@ var U = (function () {
                         c,
                     );
                 ("other" === u && (o = !0), this.bumpSpace());
-                var d = this.clonePosition();
+                var p = this.clonePosition();
                 if (!this.bumpIf("{"))
                     return this.error(
                         "select" === t
@@ -1424,9 +1424,9 @@ var U = (function () {
                     );
                 var h = this.parseMessage(e + 1, t, r);
                 if (h.err) return h;
-                var m = this.tryParseArgumentClose(d);
+                var m = this.tryParseArgumentClose(p);
                 if (m.err) return m;
-                (s.push([u, { value: h.val, location: C(d, this.clonePosition()) }]),
+                (s.push([u, { value: h.val, location: C(p, this.clonePosition()) }]),
                     l.add(u),
                     this.bumpSpace(),
                     (u = (i = this.parseIdentifierIfPossible()).value),

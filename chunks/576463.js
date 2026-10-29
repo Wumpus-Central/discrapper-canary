@@ -39,11 +39,11 @@ class d {
             m = Math.floor((0, n.z)(d, 1461) / 365),
             [h, y] = u(400 * t + 100 * s + 4 * c + m + +(4 !== s && 4 !== m)),
             D = e - i(h, y, 1, 1),
-            p = 2;
-        e < i(h, y, 3, 1) ? (p = 0) : o(y) && (p = 1);
-        let g = Math.floor(((D + p) * 12 + 373) / 367),
-            f = e - i(h, y, g, 1) + 1;
-        return new (0, r.ng)(h, y, g, f);
+            g = 2;
+        e < i(h, y, 3, 1) ? (g = 0) : o(y) && (g = 1);
+        let p = Math.floor(((D + g) * 12 + 373) / 367),
+            f = e - i(h, y, p, 1) + 1;
+        return new (0, r.ng)(h, y, p, f);
     }
     toJulianDay(e) {
         return i(e.era, e.year, e.month, e.day);

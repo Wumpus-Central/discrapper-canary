@@ -61,12 +61,12 @@ var u = (function () {
             o = e.offsetHeight;
         return !(i || o || e.getClientRects().length);
     },
-    p = function (e) {
+    d = function (e) {
         var t,
             r = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
         return !!(r && e instanceof r.Element);
     },
-    d = function (e) {
+    p = function (e) {
         switch (e.tagName) {
             case "INPUT":
                 if ("image" !== e.type) break;
@@ -113,15 +113,15 @@ var u = (function () {
             a = !n && v.test(r.overflowY || ""),
             s = !n && v.test(r.overflowX || ""),
             l = n ? 0 : b(r.paddingTop),
-            p = n ? 0 : b(r.paddingRight),
-            d = n ? 0 : b(r.paddingBottom),
+            d = n ? 0 : b(r.paddingRight),
+            p = n ? 0 : b(r.paddingBottom),
             h = n ? 0 : b(r.paddingLeft),
             S = n ? 0 : b(r.borderTopWidth),
             E = n ? 0 : b(r.borderRightWidth),
             x = n ? 0 : b(r.borderBottomWidth),
             C = n ? 0 : b(r.borderLeftWidth),
-            k = h + p,
-            T = l + d,
+            k = h + d,
+            T = l + p,
             M = C + E,
             P = S + x,
             A = s ? e.offsetHeight - P - e.clientHeight : 0,
@@ -325,7 +325,7 @@ var u = (function () {
                     t = E(this.target, this.observedBox, !0);
                 return (
                     c((e = this.target)) ||
-                        d(e) ||
+                        p(e) ||
                         "inline" !== getComputedStyle(e).display ||
                         (this.lastReportedSize = t),
                     this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize
@@ -392,7 +392,7 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!p(e))
+                if (!d(e))
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
@@ -403,7 +403,7 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!p(e))
+                if (!d(e))
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );

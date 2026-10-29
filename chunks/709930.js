@@ -9,8 +9,8 @@ var l = "u" > typeof BigInt,
     u = "u" > typeof Symbol,
     c = s(Object.prototype.toString),
     f = s(Number.prototype.valueOf),
-    p = s(String.prototype.valueOf),
-    d = s(Boolean.prototype.valueOf);
+    d = s(String.prototype.valueOf),
+    p = s(Boolean.prototype.valueOf);
 if (l) var h = s(BigInt.prototype.valueOf);
 if (u) var m = s(Symbol.prototype.valueOf);
 function v(e, t) {
@@ -121,10 +121,10 @@ function M(e) {
     return v(e, f);
 }
 function P(e) {
-    return v(e, p);
+    return v(e, d);
 }
 function A(e) {
-    return v(e, d);
+    return v(e, p);
 }
 function I(e) {
     return l && v(e, h);

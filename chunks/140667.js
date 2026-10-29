@@ -1,4 +1,5 @@
 !(function (t) {
+    "use strict";
     var r,
         n = Object.prototype,
         i = n.hasOwnProperty,
@@ -21,9 +22,9 @@
             (o = e),
             (a = n),
             (s = new T(i || [])),
-            (l = p),
+            (l = d),
             (u._invoke = function (e, t) {
-                if (l === d) throw Error("Generator is already running");
+                if (l === p) throw Error("Generator is already running");
                 if (l === h) {
                     if ("throw" === e) throw t;
                     return P();
@@ -69,10 +70,10 @@
                     }
                     if ("next" === s.method) s.sent = s._sent = s.arg;
                     else if ("throw" === s.method) {
-                        if (l === p) throw ((l = h), s.arg);
+                        if (l === d) throw ((l = h), s.arg);
                         s.dispatchException(s.arg);
                     } else "return" === s.method && s.abrupt("return", s.arg);
-                    l = d;
+                    l = p;
                     var u = f(o, a, s);
                     if ("normal" === u.type) {
                         if (((l = s.done ? h : "suspendedYield"), u.arg === m)) continue;
@@ -92,8 +93,8 @@
         }
     }
     (u = t.regeneratorRuntime = e.exports).wrap = c;
-    var p = "suspendedStart",
-        d = "executing",
+    var d = "suspendedStart",
+        p = "executing",
         h = "completed",
         m = {};
     function v() {}

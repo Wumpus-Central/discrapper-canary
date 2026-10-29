@@ -40,10 +40,10 @@ var n =
                     i.flatten ? a.push.apply(a, f) : a.push({ scopeParent: u, candidates: f });
                 } else {
                     o.call(u, n) && i.filter(u) && (r || !t.includes(u)) && a.push(u);
-                    var p = u.shadowRoot || ("function" == typeof i.getShadowRoot && i.getShadowRoot(u)),
-                        d = !s(p, !1) && (!i.shadowRootFilter || i.shadowRootFilter(u));
-                    if (p && d) {
-                        var h = e(!0 === p ? u.children : p.children, !0, i);
+                    var d = u.shadowRoot || ("function" == typeof i.getShadowRoot && i.getShadowRoot(u)),
+                        p = !s(d, !1) && (!i.shadowRootFilter || i.shadowRootFilter(u));
+                    if (d && p) {
+                        var h = e(!0 === d ? u.children : d.children, !0, i);
                         i.flatten ? a.push.apply(a, h) : a.push({ scopeParent: u, candidates: h });
                     } else l.unshift.apply(l, u.children);
                 }
@@ -53,12 +53,12 @@ var n =
     f = function (e) {
         return !isNaN(parseInt(e.getAttribute("tabindex"), 10));
     },
-    p = function (e) {
+    d = function (e) {
         if (!e) throw Error("No node provided");
         return e.tabIndex < 0 && (/^(AUDIO|VIDEO|DETAILS)$/.test(e.tagName) || l(e)) && !f(e) ? 0 : e.tabIndex;
     },
-    d = function (e, t) {
-        var r = p(e);
+    p = function (e, t) {
+        var r = d(e);
         return r < 0 && t && !f(e) ? 0 : r;
     },
     h = function (e, t) {
@@ -180,7 +180,7 @@ var n =
         );
     },
     x = function (e, t) {
-        return !(g(t) || 0 > p(t)) && !!E(e, t);
+        return !(g(t) || 0 > d(t)) && !!E(e, t);
     },
     C = function (e) {
         var t = parseInt(e.getAttribute("tabindex"), 10);
@@ -193,7 +193,7 @@ var n =
             t.forEach(function (t, i) {
                 var o = !!t.scopeParent,
                     a = o ? t.scopeParent : t,
-                    s = d(a, o),
+                    s = p(a, o),
                     l = o ? e(t.candidates) : a;
                 0 === s
                     ? o

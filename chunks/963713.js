@@ -1,8 +1,8 @@
 n.d(t, { $0: () => d, Q8: () => N, SH: () => p, aV: () => h, fF: () => v, l: () => f, o5: () => C });
 var l = n(477900),
     s = n(582128),
-    r = n(323889),
-    a = n(409626),
+    a = n(323889),
+    r = n(409626),
     i = n(692969),
     o = n(792620),
     u = n(284846),
@@ -12,19 +12,19 @@ let d = s.createContext({ quest: null, taskDetails: null }),
     p = s.createContext({ hasAlreadyLinked: void 0, onClickGameTitle: void 0 });
 function x(e) {
     let { children: t, quest: n } = e,
-        { hasAlreadyLinked: r } = (0, u.U)(n),
+        { hasAlreadyLinked: a } = (0, u.U)(n),
         d = (0, i.A)({
             applicationId: (0, o.xc)(n),
             location: c.rE.QUEST_INSTRUCTIONS,
-            source: a.GameProfileSources.QuestBar,
+            source: r.GameProfileSources.QuestBar,
         }),
-        m = s.useMemo(() => ({ hasAlreadyLinked: r, onClickGameTitle: d }), [r, d]);
+        m = s.useMemo(() => ({ hasAlreadyLinked: a, onClickGameTitle: d }), [a, d]);
     return (0, l.jsx)(p.Provider, { value: m, children: t });
 }
 function h(e) {
-    let { children: t, quest: n, taskDetails: r } = e,
-        a = s.useMemo(() => ({ quest: n, taskDetails: r }), [n, r]);
-    return (0, l.jsx)(d.Provider, { value: a, children: t });
+    let { children: t, quest: n, taskDetails: a } = e,
+        r = s.useMemo(() => ({ quest: n, taskDetails: a }), [n, a]);
+    return (0, l.jsx)(d.Provider, { value: r, children: t });
 }
 function f(e) {
     let { children: t, quest: n } = e;
@@ -40,5 +40,5 @@ function v(e) {
     return (0, l.jsx)(m.Provider, { value: t, children: n });
 }
 function N(e) {
-    return s.useMemo(() => ({ type: r.p.BOUNTY, bounty: e }), [e]);
+    return s.useMemo(() => ({ type: a.p.BOUNTY, bounty: e }), [e]);
 }

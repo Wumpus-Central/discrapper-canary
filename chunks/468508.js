@@ -11,14 +11,14 @@ t.d(a, {
     gt: () => b,
     hZ: () => m,
     ib: () => h,
-    tY: () => g,
+    tY: () => p,
     xy: () => v,
 });
 var r = t(594247),
     n = t(576463);
 function i(e, a) {
     let t = e.copy(),
-        r = "hour" in t ? p(t, a) : 0;
+        r = "hour" in t ? g(t, a) : 0;
     (o(t, a.years || 0),
         t.calendar.balanceYearMonth && t.calendar.balanceYearMonth(t, e),
         (t.month += a.months || 0),
@@ -105,7 +105,7 @@ function D(e, a) {
     let t = e % a;
     return (t < 0 && (t += a), t);
 }
-function p(e, a) {
+function g(e, a) {
     let t;
     return (
         (e.hour += a.hours || 0),
@@ -123,12 +123,12 @@ function p(e, a) {
         t
     );
 }
-function g(e, a) {
+function p(e, a) {
     let t = e.copy();
-    return (p(t, a), t);
+    return (g(t, a), t);
 }
 function f(e, a) {
-    return g(e, d(a));
+    return p(e, d(a));
 }
 function v(e, a, t, r) {
     let n = e.copy();

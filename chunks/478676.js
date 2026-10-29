@@ -1,4 +1,5 @@
 e.exports = (function () {
+    "use strict";
     var e,
         t,
         r,
@@ -13,12 +14,12 @@ e.exports = (function () {
         f = function (e) {
             return e.replace(l, "\n").replace(c, "").replace(u, "    ");
         },
-        p = function (e, t) {
+        d = function (e, t) {
             var r = e || {};
             if (null != t) for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (r[n] = t[n]);
             return r;
         },
-        d = function (e, t) {
+        p = function (e, t) {
             var r,
                 n = Object.keys(e).filter(function (t) {
                     var r = e[t];
@@ -58,7 +59,7 @@ e.exports = (function () {
                     if (l > 1e3) return (t && s.push({ type: "text", content: t }), s);
                     for (r = a = Object.assign({}, a, { _parseDepth: l }); t;) {
                         for (
-                            var c = null, f = null, p = null, d = -1e5, h = 1e5, m = [i.get(t.charCodeAt(0)), o], v = 0;
+                            var c = null, f = null, d = null, p = -1e5, h = 1e5, m = [i.get(t.charCodeAt(0)), o], v = 0;
                             v < m.length;
                             v++
                         ) {
@@ -73,33 +74,33 @@ e.exports = (function () {
                                         E = w.match(t, a, S);
                                     if (E) {
                                         var x = w.quality ? w.quality(E, a, S) : 0;
-                                        (_ < h || x > d) && ((c = b), (f = w), (p = E), (d = x), (h = _));
+                                        (_ < h || x > p) && ((c = b), (f = w), (d = E), (p = x), (h = _));
                                     }
                                 }
                         }
-                        if (null == f || null == p)
+                        if (null == f || null == d)
                             throw Error(
                                 "Could not find a matching rule for the below content. The rule with highest `order` should always match content provided to it. Check the definition of `match` for '" +
                                     n[n.length - 1] +
                                     "'. It seems to not match the following source:\n" +
                                     t,
                             );
-                        if (p.index)
+                        if (d.index)
                             throw Error(
                                 "`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?",
                             );
-                        var C = f.parse(p, u, a);
+                        var C = f.parse(d, u, a);
                         (Array.isArray(C)
                             ? Array.prototype.push.apply(s, C)
                             : (null == C.type && (C.type = c), s.push(C)),
-                            (a.prevCapture = p),
+                            (a.prevCapture = d),
                             (t = t.substring(a.prevCapture[0].length)));
                     }
                     return s;
                 },
                 c = function (e, n) {
                     return (
-                        (r = p(n, t)).inline || r.disableAutoBlockNewlines || (e += "\n\n"),
+                        (r = d(n, t)).inline || r.disableAutoBlockNewlines || (e += "\n\n"),
                         (r.prevCapture = null),
                         u(f(e), r)
                     );
@@ -377,14 +378,14 @@ e.exports = (function () {
                                 c = n === a.length - 1,
                                 f = -1 !== u.indexOf("\n\n") || (c && s);
                             s = f;
-                            var p = r.inline,
-                                d = r._list;
+                            var d = r.inline,
+                                p = r._list;
                             ((r._list = !0),
                                 f
                                     ? ((r.inline = !1), (i = u.replace(F, "\n\n")))
                                     : ((r.inline = !0), (i = u.replace(F, ""))));
                             var h = t(i, r);
-                            return ((r.inline = p), (r._list = d), h);
+                            return ((r.inline = d), (r._list = p), h);
                         }),
                     };
                 },
@@ -729,10 +730,10 @@ e.exports = (function () {
                 return ((n = a = a || n), Array.isArray(r)) ? i(r, o, a) : e[r.type][t](r, o, a);
             };
             return function (e, t) {
-                return o(e, (n = p(t, r)));
+                return o(e, (n = d(t, r)));
             };
         },
-        q = d(G),
+        q = p(G),
         Y = function (e, t) {
             return (((t = t || {}).inline = !1), q(e, t));
         },
@@ -747,7 +748,7 @@ e.exports = (function () {
         };
     return {
         defaultRules: G,
-        parserFor: d,
+        parserFor: p,
         outputFor: W,
         inlineRegex: h,
         blockRegex: m,

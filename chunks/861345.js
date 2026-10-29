@@ -7,19 +7,19 @@ let n = r(864886),
     u = r(596641),
     c = r(738018),
     f = r(569671);
-e.exports = (e, t, r, p) => {
-    let d, h, m, v, y;
-    switch (((e = new n(e, p)), (t = new a(t, p)), r)) {
+e.exports = (e, t, r, d) => {
+    let p, h, m, v, y;
+    switch (((e = new n(e, d)), (t = new a(t, d)), r)) {
         case ">":
-            ((d = l), (h = c), (m = u), (v = ">"), (y = ">="));
+            ((p = l), (h = c), (m = u), (v = ">"), (y = ">="));
             break;
         case "<":
-            ((d = u), (h = f), (m = l), (v = "<"), (y = "<="));
+            ((p = u), (h = f), (m = l), (v = "<"), (y = "<="));
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');
     }
-    if (s(e, t, p)) return !1;
+    if (s(e, t, d)) return !1;
     for (let r = 0; r < t.set.length; ++r) {
         let n = t.set[r],
             a = null,
@@ -29,7 +29,7 @@ e.exports = (e, t, r, p) => {
                 (e.semver === o && (e = new i(">=0.0.0")),
                     (a = a || e),
                     (s = s || e),
-                    d(e.semver, a.semver, p) ? (a = e) : m(e.semver, s.semver, p) && (s = e));
+                    p(e.semver, a.semver, d) ? (a = e) : m(e.semver, s.semver, d) && (s = e));
             }),
             a.operator === v ||
                 a.operator === y ||

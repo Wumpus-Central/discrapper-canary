@@ -1,4 +1,5 @@
 !(function (e, t) {
+    "use strict";
     function r(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -121,18 +122,18 @@
     var u,
         c,
         f,
-        p,
         d,
+        p,
         h = { exports: {} };
     h.exports = (function () {
-        if (d) return p;
-        d = 1;
+        if (p) return d;
+        p = 1;
         var e = f ? c : ((f = 1), (c = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"));
         function t() {}
         function r() {}
         return (
             (r.resetWarningCache = t),
-            (p = function () {
+            (d = function () {
                 function n(t, r, n, i, o, a) {
                     if (a !== e) {
                         var s = Error(
@@ -424,9 +425,9 @@
                     2,
                 ),
                 f = c[0],
-                p = c[1],
-                d = function (e, t) {
-                    p(function (r) {
+                d = c[1],
+                p = function (e, t) {
+                    d(function (r) {
                         return r.stripe && r.checkoutSdk ? r : { stripe: e, checkoutSdk: t };
                     });
                 },
@@ -441,7 +442,7 @@
                               !h.current &&
                               ((h.current = !0),
                               o.stripe.initCheckout(n).then(function (e) {
-                                  e && (d(o.stripe, e), e.on("change", u));
+                                  e && (p(o.stripe, e), e.on("change", u));
                               }))
                             : o.stripePromise.then(function (t) {
                                   t &&
@@ -449,7 +450,7 @@
                                       !h.current &&
                                       ((h.current = !0),
                                       t.initCheckout(n).then(function (e) {
-                                          e && (d(t, e), e.on("change", u));
+                                          e && (p(t, e), e.on("change", u));
                                       }));
                               }),
                         function () {
@@ -535,8 +536,8 @@
                               u = r.options,
                               c = void 0 === u ? {} : u,
                               f = r.onBlur,
-                              p = r.onFocus,
-                              d = r.onReady,
+                              d = r.onFocus,
+                              p = r.onReady,
                               h = r.onChange,
                               m = r.onEscape,
                               g = r.onClick,
@@ -556,7 +557,7 @@
                               R = t.useRef(null),
                               D = t.useRef(null);
                           (v(I, "blur", f),
-                              v(I, "focus", p),
+                              v(I, "focus", d),
                               v(I, "escape", m),
                               v(I, "click", g),
                               v(I, "loaderror", b),
@@ -567,12 +568,12 @@
                               v(I, "shippingaddresschange", C),
                               v(I, "shippingratechange", k),
                               v(I, "change", h),
-                              d &&
+                              p &&
                                   (i =
                                       "expressCheckout" === e
-                                          ? d
+                                          ? p
                                           : function () {
-                                                d(I);
+                                                p(I);
                                             }),
                               v(I, "ready", i),
                               t.useLayoutEffect(
@@ -794,22 +795,22 @@
                     },
                     [l],
                 ));
-            var p = y(r);
+            var d = y(r);
             t.useEffect(
                 function () {
-                    null !== p &&
-                        p !== r &&
+                    null !== d &&
+                        d !== r &&
                         console.warn(
                             "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.",
                         );
                 },
-                [p, r],
+                [d, r],
             );
-            var d = y(n);
+            var p = y(n);
             return (
                 t.useEffect(
                     function () {
-                        if (null != d) {
+                        if (null != p) {
                             if (null == n)
                                 return void console.warn(
                                     "Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.",
@@ -819,34 +820,34 @@
                                 console.warn(
                                     "Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.",
                                 ),
-                                null != d.clientSecret &&
-                                    n.clientSecret !== d.clientSecret &&
+                                null != p.clientSecret &&
+                                    n.clientSecret !== p.clientSecret &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.",
                                     ),
-                                null != d.fetchClientSecret &&
-                                    n.fetchClientSecret !== d.fetchClientSecret &&
+                                null != p.fetchClientSecret &&
+                                    n.fetchClientSecret !== p.fetchClientSecret &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.",
                                     ),
-                                null != d.onComplete &&
-                                    n.onComplete !== d.onComplete &&
+                                null != p.onComplete &&
+                                    n.onComplete !== p.onComplete &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.",
                                     ),
-                                null != d.onShippingDetailsChange &&
-                                    n.onShippingDetailsChange !== d.onShippingDetailsChange &&
+                                null != p.onShippingDetailsChange &&
+                                    n.onShippingDetailsChange !== p.onShippingDetailsChange &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.",
                                     ),
-                                null != d.onLineItemsChange &&
-                                    n.onLineItemsChange !== d.onLineItemsChange &&
+                                null != p.onLineItemsChange &&
+                                    n.onLineItemsChange !== p.onLineItemsChange &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.",
                                     ));
                         }
                     },
-                    [d, n],
+                    [p, n],
                 ),
                 t.createElement(V.Provider, { value: c }, i)
             );

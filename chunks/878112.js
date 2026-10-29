@@ -25,8 +25,8 @@ let h = function (e) {
             returnRef: E,
             onSuccess: C,
             tooltipDelay: b,
-            fullWidth: R = !1,
-            fullWidthLabel: k,
+            fullWidth: k = !1,
+            fullWidthLabel: R,
             giftRecipient: y,
             giftingOrigin: j = m.vQ.SHOP_PAGE,
             onTrackClick: T,
@@ -65,12 +65,12 @@ let h = function (e) {
                         : void 0,
             }));
     }
-    if (R)
+    if (k)
         return (0, r.jsx)(a.$, {
             variant: n ? "primary" : "secondary",
             icon: l.GiftIcon,
             onClick: N,
-            text: k ?? _.intl.string(_.t.gmnzqM),
+            text: R ?? _.intl.string(_.t.gmnzqM),
             fullWidth: !0,
             tabIndex: S,
         });

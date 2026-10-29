@@ -1,5 +1,6 @@
 ((e = r.nmd(e)),
     function () {
+        "use strict";
         var n = { function: !0, object: !0 },
             i = (n[typeof window] && window) || this,
             o = n[typeof t] && t,
@@ -10,17 +11,17 @@
             u = Object.prototype,
             c = u.hasOwnProperty,
             f = u.toString;
-        function p(e) {
+        function d(e) {
             return (e = String(e)).charAt(0).toUpperCase() + e.slice(1);
         }
-        function d(e) {
-            return ((e = g(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : p(e));
+        function p(e) {
+            return ((e = g(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : d(e));
         }
         function h(e, t) {
             for (var r in e) c.call(e, r) && t(e[r], r, e);
         }
         function m(e) {
-            return null == e ? p(e) : f.call(e).slice(8, -1);
+            return null == e ? d(e) : f.call(e).slice(8, -1);
         }
         function v(e) {
             return String(e).replace(/([ -])(?!$)/g, "$1?");
@@ -49,8 +50,8 @@
                 u = e && "object" == typeof e && "String" != m(e);
             u && ((s = e), (e = null));
             var c = s.navigator || {},
-                p = c.userAgent || "";
-            e || (e = p);
+                d = c.userAgent || "";
+            e || (e = d);
             var w = u ? !!c.likeChrome : /\bChrome\b/.test(e) && !/internal|\n/i.test(f.toString()),
                 _ = "Object",
                 S = u && s.java ? "JavaPackage" : m(s.java),
@@ -64,7 +65,7 @@
                 A = e,
                 I = [],
                 O = null,
-                R = e == p,
+                R = e == d,
                 D = R && M && "function" == typeof M.version && M.version(),
                 L = y(
                     [
@@ -273,7 +274,7 @@
                                 (n = String(n)),
                                 a && i && (n = n.replace(RegExp(a, "i"), i)),
                                 (t = n =
-                                    d(
+                                    p(
                                         n
                                             .replace(/ ce$/i, " CE")
                                             .replace(/\bhpw/i, "web")
@@ -306,7 +307,7 @@
                                 !/[\d.]+/.test(t[0]) &&
                                 (t[0] += " " + t[1]),
                             (r = r.label || r),
-                            (t = d(
+                            (t = p(
                                 t[0]
                                     .replace(RegExp(n, "i"), r)
                                     .replace(RegExp("; *(?:" + r + "[_-])?", "i"), " ")
@@ -448,7 +449,7 @@
                             (A = o.arch),
                             (B = o.platform),
                             (D = (D = /[\d.]+/.exec(o.version)) ? D[0] : null)));
-                B = B && d(B);
+                B = B && p(B);
             }
             if (
                 (D &&
@@ -498,7 +499,7 @@
                       l.test(F)
                           ? (/\bIE\b/.test(o) && "Mac OS" == B && (B = null), (o = "identify" + o))
                           : ((o = "mask" + o),
-                            (F = P ? d(P.replace(/([a-z])([A-Z])/g, "$1 $2")) : "Opera"),
+                            (F = P ? p(P.replace(/([a-z])([A-Z])/g, "$1 $2")) : "Opera"),
                             /\bIE\b/.test(o) && (B = null),
                             R || (D = null)),
                       (L = ["Presto"]),

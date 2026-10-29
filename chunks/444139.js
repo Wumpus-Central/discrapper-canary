@@ -7,12 +7,12 @@ var n = r(741623),
     u = r(159367),
     c = r(421580),
     f = r(732937),
-    p = r(94535),
-    d = r(203894),
+    d = r(94535),
+    p = r(203894),
     h = r(227106);
 e.exports = function (e, t, r, m, v) {
     var y,
-        g = d(e);
+        g = p(e);
     if (void 0 !== e && !h(e)) throw new n("Assertion failed: O must be undefined or an Object");
     if (!f(t)) throw new n("Assertion failed: P must be a Property Key");
     if ("boolean" != typeof r) throw new n("Assertion failed: extensible must be a Boolean");
@@ -23,8 +23,8 @@ e.exports = function (e, t, r, m, v) {
             !!r &&
             ("Undefined" === g ||
                 (l(m)
-                    ? i(u, p, s, e, t, m)
-                    : i(u, p, s, e, t, {
+                    ? i(u, d, s, e, t, m)
+                    : i(u, d, s, e, t, {
                           "[[Configurable]]": !!m["[[Configurable]]"],
                           "[[Enumerable]]": !!m["[[Enumerable]]"],
                           "[[Value]]": m["[[Value]]"],
@@ -36,38 +36,38 @@ e.exports = function (e, t, r, m, v) {
     if (!v["[[Configurable]]"]) {
         if (
             ("[[Configurable]]" in m && m["[[Configurable]]"]) ||
-            ("[[Enumerable]]" in m && !p(m["[[Enumerable]]"], v["[[Enumerable]]"])) ||
-            (!c(m) && !p(l(m), l(v)))
+            ("[[Enumerable]]" in m && !d(m["[[Enumerable]]"], v["[[Enumerable]]"])) ||
+            (!c(m) && !d(l(m), l(v)))
         )
             return !1;
         if (l(v)) {
             if (
-                ("[[Get]]" in m && !p(m["[[Get]]"], v["[[Get]]"])) ||
-                ("[[Set]]" in m && !p(m["[[Set]]"], v["[[Set]]"]))
+                ("[[Get]]" in m && !d(m["[[Get]]"], v["[[Get]]"])) ||
+                ("[[Set]]" in m && !d(m["[[Set]]"], v["[[Set]]"]))
             )
                 return !1;
         } else if (
             !v["[[Writable]]"] &&
-            (("[[Writable]]" in m && m["[[Writable]]"]) || ("[[Value]]" in m && !p(m["[[Value]]"], v["[[Value]]"])))
+            (("[[Writable]]" in m && m["[[Writable]]"]) || ("[[Value]]" in m && !d(m["[[Value]]"], v["[[Value]]"])))
         )
             return !1;
     }
     return (
         "Undefined" === g ||
         (u(v) && l(m)
-            ? i(u, p, s, e, t, {
+            ? i(u, d, s, e, t, {
                   "[[Configurable]]": !!(y = ("[[Configurable]]" in m ? m : v)["[[Configurable]]"]),
                   "[[Enumerable]]": !!("[[Enumerable]]" in m ? m : v)["[[Enumerable]]"],
                   "[[Get]]": ("[[Get]]" in m ? m : v)["[[Get]]"],
                   "[[Set]]": ("[[Set]]" in m ? m : v)["[[Set]]"],
               })
             : l(v) && u(m)
-              ? i(u, p, s, e, t, {
+              ? i(u, d, s, e, t, {
                     "[[Configurable]]": !!(y = ("[[Configurable]]" in m ? m : v)["[[Configurable]]"]),
                     "[[Enumerable]]": !!("[[Enumerable]]" in m ? m : v)["[[Enumerable]]"],
                     "[[Value]]": ("[[Value]]" in m ? m : v)["[[Value]]"],
                     "[[Writable]]": !!("[[Writable]]" in m ? m : v)["[[Writable]]"],
                 })
-              : i(u, p, s, e, t, m))
+              : i(u, d, s, e, t, m))
     );
 };

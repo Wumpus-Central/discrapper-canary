@@ -45,8 +45,8 @@ var o = /^\s*class\b/,
         return !1;
     };
 if ("object" == typeof document) {
-    var p = document.all;
-    l.call(p) === l.call(document.all) &&
+    var d = document.all;
+    l.call(d) === l.call(document.all) &&
         (f = function (e) {
             if ((c || !e) && (void 0 === e || "object" == typeof e))
                 try {
