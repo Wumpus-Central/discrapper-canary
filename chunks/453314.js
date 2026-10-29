@@ -34,8 +34,8 @@ var C = n(12351),
     D = n(458294),
     v = n(71393),
     b = n(290863),
-    P = n(573163),
-    M = n(309010),
+    M = n(573163),
+    P = n(309010),
     U = n(607567),
     w = n(234320),
     G = n(625494),
@@ -165,12 +165,12 @@ class X extends r.Component {
         });
     }
 }
-let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
+let q = _.Ay.connectStores([M.Ay, y.A], (e) => {
         let { channel: t } = e;
         return {
-            unread: P.Ay.hasUnread(t.id),
-            mentions: P.Ay.getMentionCount(t.id),
-            isMentionLowImportance: P.Ay.getIsMentionLowImportance(t.id),
+            unread: M.Ay.hasUnread(t.id),
+            mentions: M.Ay.getMentionCount(t.id),
+            isMentionLowImportance: M.Ay.getIsMentionLowImportance(t.id),
             category: y.A.getChannel(t.parent_id),
         };
     })(X),
@@ -184,20 +184,20 @@ let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
         let { guild: t } = e;
         return { unread: D.default.hasUnread(t.id) };
     })(k.OS),
-    J = _.Ay.connectStores([P.Ay, b.A], (e) => {
+    J = _.Ay.connectStores([M.Ay, b.A], (e) => {
         let { channel: t } = e,
             n = null,
             i = b.A.getState().statuses;
         return (
             t.recipients?.some((e) => i[e] === H.clD.ONLINE) && (n = H.clD.ONLINE),
-            { mentions: P.Ay.getMentionCount(t.id), status: n }
+            { mentions: M.Ay.getMentionCount(t.id), status: n }
         );
     })(k.nG),
-    ee = _.Ay.connectStores([y.A, P.Ay, b.A], (e) => {
+    ee = _.Ay.connectStores([y.A, M.Ay, b.A], (e) => {
         let { user: t } = e,
             n = y.A.getDMFromUserId(t.id);
         return {
-            mentions: null != n ? P.Ay.getMentionCount(n) : 0,
+            mentions: null != n ? M.Ay.getMentionCount(n) : 0,
             status: b.A.getStatus(t.id),
             isMobile: b.A.isMobileOnline(t.id),
         };
@@ -394,9 +394,8 @@ class en extends r.PureComponent {
                         n.e("274461"),
                         n.e("830560"),
                         n.e("526575"),
-                        n.e("724557"),
-                        n.e("725134"),
-                        n.e("906918"),
+                        n.e("267387"),
+                        n.e("816348"),
                         n.e("165291"),
                         n.e("109383"),
                         n.e("818291"),
@@ -525,7 +524,6 @@ class en extends r.PureComponent {
                         n.e("452075"),
                         n.e("900277"),
                         n.e("70484"),
-                        n.e("887093"),
                         n.e("905581"),
                         n.e("249681"),
                         n.e("62052"),
@@ -601,7 +599,6 @@ class en extends r.PureComponent {
                         n.e("21921"),
                         n.e("407170"),
                         n.e("811310"),
-                        n.e("593020"),
                         n.e("844780"),
                         n.e("571210"),
                         n.e("676418"),
@@ -614,7 +611,7 @@ class en extends r.PureComponent {
                         n.e("88342"),
                         n.e("323624"),
                         n.e("187110"),
-                        n.e("127151"),
+                        n.e("854461"),
                         n.e("942724"),
                         n.e("139970"),
                         n.e("393766"),
@@ -677,7 +674,6 @@ class en extends r.PureComponent {
                         n.e("146844"),
                         n.e("255580"),
                         n.e("163235"),
-                        n.e("507158"),
                         n.e("212055"),
                         n.e("14035"),
                         n.e("632756"),
@@ -687,9 +683,10 @@ class en extends r.PureComponent {
                         n.e("491793"),
                         n.e("474610"),
                         n.e("299854"),
+                        n.e("902564"),
                         n.e("608557"),
                         n.e("428967"),
-                        n.e("183559"),
+                        n.e("903839"),
                         n.e("525013"),
                         n.e("953858"),
                         n.e("758946"),
@@ -1086,7 +1083,7 @@ class en extends r.PureComponent {
                         (0, i.jsx)(e, {
                             ...n,
                             channel: t.record,
-                            selected: M.Ay.getChannelId() === t.record.id,
+                            selected: P.Ay.getChannelId() === t.record.id,
                             onSelect: o.jD,
                         });
                 });

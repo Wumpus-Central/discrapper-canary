@@ -139,9 +139,8 @@ let p = (0, c.Fe)({
             n.e("274461"),
             n.e("830560"),
             n.e("526575"),
-            n.e("724557"),
-            n.e("725134"),
-            n.e("906918"),
+            n.e("267387"),
+            n.e("816348"),
             n.e("165291"),
             n.e("109383"),
             n.e("818291"),
@@ -222,7 +221,6 @@ let p = (0, c.Fe)({
             n.e("452075"),
             n.e("900277"),
             n.e("70484"),
-            n.e("887093"),
             n.e("905581"),
             n.e("249681"),
             n.e("76428"),
@@ -295,7 +293,6 @@ let p = (0, c.Fe)({
             n.e("21921"),
             n.e("407170"),
             n.e("811310"),
-            n.e("593020"),
             n.e("844780"),
             n.e("676418"),
             n.e("572963"),
@@ -306,7 +303,7 @@ let p = (0, c.Fe)({
             n.e("307575"),
             n.e("323624"),
             n.e("187110"),
-            n.e("127151"),
+            n.e("854461"),
             n.e("942724"),
             n.e("139970"),
             n.e("393766"),
@@ -368,7 +365,6 @@ let p = (0, c.Fe)({
             n.e("146844"),
             n.e("255580"),
             n.e("163235"),
-            n.e("507158"),
             n.e("212055"),
             n.e("14035"),
             n.e("632756"),
@@ -378,9 +374,10 @@ let p = (0, c.Fe)({
             n.e("491793"),
             n.e("474610"),
             n.e("299854"),
+            n.e("902564"),
             n.e("608557"),
             n.e("428967"),
-            n.e("183559"),
+            n.e("903839"),
             n.e("525013"),
             n.e("953858"),
             n.e("758946"),
@@ -534,10 +531,10 @@ function T(e) {
                 );
             }, [])),
             { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
-        P = r.useCallback(() => {
+        M = r.useCallback(() => {
             (L(!1), R && u?.());
         }, [u, R]),
-        M = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 (L(!R), null != e && "number" == typeof e && D(e), R ? u?.() : c?.());
             },
@@ -545,12 +542,12 @@ function T(e) {
         );
     r.useEffect(
         () => (
-            f._.subscribe(I.jej.TOGGLE_INBOX, M),
+            f._.subscribe(I.jej.TOGGLE_INBOX, P),
             () => {
-                f._.unsubscribe(I.jej.TOGGLE_INBOX, M);
+                f._.unsubscribe(I.jej.TOGGLE_INBOX, P);
             }
         ),
-        [M],
+        [P],
     );
     let U = (0, a.bG)([_.A], () => _.A.hasOverdueReminder(), []);
     r.useEffect(() => {
@@ -558,9 +555,9 @@ function T(e) {
     });
     let w = r.useCallback(
             (e) => {
-                e.shiftKey || P();
+                e.shiftKey || M();
             },
-            [P],
+            [M],
         ),
         G = (0, E.Sc)();
     return (0, i.jsx)(d.f5, {
@@ -572,14 +569,14 @@ function T(e) {
             align: g,
             autoInvert: !1,
             shouldShow: R,
-            onRequestClose: P,
+            onRequestClose: M,
             renderPopout: function () {
                 return (0, i.jsx)(p, {
                     dialogClassName: C,
                     isScheduledMessagesEnabled: G,
                     tab: y,
                     setTab: D,
-                    closePopout: P,
+                    closePopout: M,
                     handleMentionsJump: w,
                     showTutorial: v,
                     setSeenTutorial: b,
@@ -590,7 +587,7 @@ function T(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return T(M, n, e, U);
+                return T(P, n, e, U);
             },
         }),
     });
