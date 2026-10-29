@@ -23,7 +23,7 @@ function o(e, t, n) {
             return { ...i, type: e, config: { type: e } };
     }
 }
-let c = [s.a.POPULAR_MUSIC, s.a.LEADERBOARD];
+let c = [s.a.POPULAR_MUSIC, s.a.LEADERBOARD, s.a.POPULAR_GAMES];
 function u(e) {
     return c.flatMap((t, n) => {
         let i = e.find((e) => e.type === t);
