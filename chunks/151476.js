@@ -1,13 +1,13 @@
-n.d(t, { A: () => r });
-var i = n(435558),
-    l = n.n(i),
-    s = n(17928),
-    o = n(999926),
-    a = n(731854);
-function r() {
-    let { enabled: e, cameraUnavailable: t } = (0, s.cf)([o.Ay], () => {
-        let e = l()(o.Ay.getVideoDevices()).values().first()?.disabled ?? !0;
-        return { enabled: o.Ay.isVideoEnabled(), cameraUnavailable: e || !o.Ay.supports(a.O5.VIDEO) };
+n.d(i, { A: () => c });
+var t = n(435558),
+    l = n.n(t),
+    a = n(17928),
+    s = n(999926),
+    d = n(731854);
+function c() {
+    let { enabled: e, cameraUnavailable: i } = (0, a.cf)([s.Ay], () => {
+        let e = l()(s.Ay.getVideoDevices()).values().first()?.disabled ?? !0;
+        return { enabled: s.Ay.isVideoEnabled(), cameraUnavailable: e || !s.Ay.supports(d.O5.VIDEO) };
     });
-    return { enabled: e, cameraUnavailable: t };
+    return { enabled: e, cameraUnavailable: i };
 }

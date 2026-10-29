@@ -1,10 +1,10 @@
-e.d(n, { Fz: () => h, Hy: () => d, gw: () => A, hV: () => p, xf: () => r, yJ: () => E });
+e.d(n, { Fz: () => h, Hy: () => d, gw: () => A, hV: () => p, xf: () => o, yJ: () => E });
 var i = e(666860),
     l = e(723702),
     _ = e(260498),
     u = e(246338),
-    o = e(652215);
-let r = {
+    r = e(652215);
+let o = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
     AGENT_ERROR: "AGENT_ERROR",
@@ -35,7 +35,7 @@ function c(t, n) {
 }
 function p(t, n) {
     var e;
-    (0, i.zV)(o.HAw.CONJURE_TURN_RESULTED, {
+    (0, i.zV)(r.HAw.CONJURE_TURN_RESULTED, {
         ...s(t),
         ...c(t, !0),
         turn_id: n.turn_id ?? null,
@@ -63,11 +63,11 @@ function p(t, n) {
     });
 }
 function d(t, n) {
-    let { location: e, code: l, message: _, details: u, isPreview: r = !0, turnId: p } = n;
-    (0, i.zV)(o.HAw.CONJURE_ERRORED, {
+    let { location: e, code: l, message: _, details: u, isPreview: o = !0, turnId: p } = n;
+    (0, i.zV)(r.HAw.CONJURE_ERRORED, {
         ...s(t),
-        is_preview: r,
-        ...c(t, r),
+        is_preview: o,
+        ...c(t, o),
         turn_id: p ?? null,
         error_location: e,
         error_code: l,
@@ -76,12 +76,12 @@ function d(t, n) {
     });
 }
 function E(t, n) {
-    let { entryPoint: e, publishState: l, surface: u, installScope: r, action: a } = n,
+    let { entryPoint: e, publishState: l, surface: u, installScope: o, action: a } = n,
         s = _.Ay.getProject(t);
-    (0, i.zV)(o.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
+    (0, i.zV)(r.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
         project_id: t,
         application_id: s?.application_id ?? null,
-        ...("user" === r ? { guild_id: null, channel_id: null } : c(t, !1)),
+        ...("user" === o ? { guild_id: null, channel_id: null } : c(t, !1)),
         entry_point: e,
         publish_state:
             null == l
@@ -92,7 +92,7 @@ function E(t, n) {
                     ? "changes"
                     : "up_to_date",
         surface: u,
-        install_scope: r,
+        install_scope: o,
         action: a,
     });
 }
@@ -115,8 +115,8 @@ function R(t) {
     };
 }
 function A(t) {
-    (0, i.zV)(o.HAw.CONJURE_RATING_SUBMITTED, R(t));
+    (0, i.zV)(r.HAw.CONJURE_RATING_SUBMITTED, R(t));
 }
 function h(t, n) {
-    (0, i.zV)(o.HAw.CONJURE_RATING_FEEDBACK_SUBMITTED, { ...R(t), feedback_text: n });
+    (0, i.zV)(r.HAw.CONJURE_RATING_FEEDBACK_SUBMITTED, { ...R(t), feedback_text: n });
 }

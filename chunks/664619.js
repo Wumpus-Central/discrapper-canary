@@ -3,8 +3,8 @@ var i = e(636537),
     l = e(73153),
     _ = e(803306),
     u = e(382483),
-    o = e(287809),
-    r = e(517244),
+    r = e(287809),
+    o = e(517244),
     a = e(513845),
     s = e(371169),
     c = e(260498),
@@ -45,7 +45,7 @@ async function h(t) {
             previewAppChannels: e.previewAppChannels,
             previewDevicePermissions: e.previewDevicePermissions,
         });
-    let i = o.default.getCurrentUser()?.id;
+    let i = r.default.getCurrentUser()?.id;
     return (null != i && (0, _.eO)(i).catch(() => {}), !0);
 }
 async function I(t, n) {
@@ -53,12 +53,12 @@ async function I(t, n) {
         l = c.Ay.getProject(t),
         _ = null == l ? null : e ? l.preview_application_id : l.application_id,
         u = !e || null != i,
-        o = null != _ ? w(_, e, u ? i : null) : null,
-        { bot_permissions_changed: r, integration_installed: a, project: p } = (await (0, s.U1)(t)).body,
+        r = null != _ ? w(_, e, u ? i : null) : null,
+        { bot_permissions_changed: o, integration_installed: a, project: p } = (await (0, s.U1)(t)).body,
         d = e ? p.preview_application_id : p.application_id;
     if (null != d) {
-        let t = { integrationInstalled: a, botPermissionsChanged: r };
-        d !== _ || null == o ? await w(d, e, t) : (await o, u || U(d, e, t));
+        let t = { integrationInstalled: a, botPermissionsChanged: o };
+        d !== _ || null == r ? await w(d, e, t) : (await r, u || v(d, e, t));
     }
 }
 function f(t) {
@@ -67,8 +67,8 @@ function f(t) {
 async function w(t, n, e) {
     (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: t }),
         await Promise.all([(0, s.$N)(t), (0, u.un)(t, { force: !0 }).catch(() => {})]),
-        null !== e && U(t, n, e));
+        null !== e && v(t, n, e));
 }
-function U(t, n, e) {
-    n ? e?.integrationInstalled !== !0 || e.botPermissionsChanged || (0, r.k)(t) : (0, a.R2)(t);
+function v(t, n, e) {
+    n ? e?.integrationInstalled !== !0 || e.botPermissionsChanged || (0, o.k)(t) : (0, a.R2)(t);
 }

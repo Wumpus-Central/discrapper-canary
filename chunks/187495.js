@@ -77,8 +77,8 @@ var I = n(51906),
     q = n(625494),
     J = n(403362),
     Z = n(723702),
-    Y = n(936649),
-    X = n(105292);
+    X = n(936649),
+    Y = n(105292);
 let Q = new I.Zy();
 function ee(e) {
     let t,
@@ -185,8 +185,8 @@ function ee(e) {
                     handleBoost: ed,
                 } = ((p = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(w.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: Y.XT.CHANNEL_WELCOME,
-                        action: Y.AG.INVITE,
+                        setup_type: X.XT.CHANNEL_WELCOME,
+                        action: X.AG.INVITE,
                     }),
                         null != t &&
                             (0, _.openModalLazy)(async () => {
@@ -210,8 +210,8 @@ function ee(e) {
                 }, [t])),
                 (A = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(w.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: Y.XT.CHANNEL_WELCOME,
-                        action: Y.AG.SEND_MESSAGE,
+                        setup_type: X.XT.CHANNEL_WELCOME,
+                        action: X.AG.SEND_MESSAGE,
                     }),
                         null != e &&
                             (W.Ay.getChannelId(t?.id) === e.id
@@ -220,15 +220,15 @@ function ee(e) {
                 }, [t?.id, e])),
                 (f = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(w.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: Y.XT.CHANNEL_WELCOME,
-                        action: Y.AG.PERSONALIZE_SERVER,
+                        setup_type: X.XT.CHANNEL_WELCOME,
+                        action: X.AG.PERSONALIZE_SERVER,
                     }),
                         null != t && F.A.open(t.id, (0, B.x)(), { section: w.JJy.CHANNEL_WELCOME_CTA }));
                 }, [t])),
                 (C = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(w.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: Y.XT.CHANNEL_WELCOME,
-                        action: Y.AG.DOWNLOAD,
+                        setup_type: X.XT.CHANNEL_WELCOME,
+                        action: X.AG.DOWNLOAD,
                     }),
                         (0, _.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e("569433"), n.e("944602"), n.e("825280")]).then(
@@ -245,8 +245,8 @@ function ee(e) {
                     handleAddApplication: i.useCallback(() => {
                         null != t &&
                             (b.Ay.trackWithMetadata(w.HAw.SERVER_SETUP_CTA_CLICKED, {
-                                setup_type: Y.XT.CHANNEL_WELCOME,
-                                action: Y.AG.ADD_APP,
+                                setup_type: X.XT.CHANNEL_WELCOME,
+                                action: X.AG.ADD_APP,
                             }),
                             (0, _.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([
@@ -264,8 +264,8 @@ function ee(e) {
                     }, [t]),
                     handleBoost: i.useCallback(() => {
                         (b.Ay.trackWithMetadata(w.HAw.SERVER_SETUP_CTA_CLICKED, {
-                            setup_type: Y.XT.CHANNEL_WELCOME,
-                            action: Y.AG.BOOST,
+                            setup_type: X.XT.CHANNEL_WELCOME,
+                            action: X.AG.BOOST,
                         }),
                             null != t && (0, V.A)(t.id, v.A.GUILD_POWERUPS_CHANNEL_WELCOME_CTA));
                     }, [t]),
@@ -294,7 +294,7 @@ function ee(e) {
                     eA.push({
                         key: "invite",
                         iconUrl: "/assets/ea08bfae3e0ab96d.svg",
-                        title: X.intl.string(X.t.q9n0Ta),
+                        title: Y.intl.string(Y.t.q9n0Ta),
                         completed: ee,
                         onClick: es,
                     }),
@@ -302,7 +302,7 @@ function ee(e) {
                         eA.push({
                             key: "customize",
                             iconUrl: "/assets/428a003b3c729aa6.svg",
-                            title: X.intl.string(X.t.c5kxPh),
+                            title: Y.intl.string(Y.t.c5kxPh),
                             completed: en,
                             onClick: er,
                         }),
@@ -310,7 +310,7 @@ function ee(e) {
                         eA.push({
                             key: "message",
                             iconUrl: "/assets/2ed198e767bd5423.svg",
-                            title: X.intl.string(X.t["SoP7+l"]),
+                            title: Y.intl.string(Y.t["SoP7+l"]),
                             completed: et,
                             onClick: ea,
                         }),
@@ -318,19 +318,19 @@ function ee(e) {
                         eA.push({
                             key: "download",
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
-                            title: X.intl.string(X.t.pGVNI9),
+                            title: Y.intl.string(Y.t.pGVNI9),
                             completed: N,
                             onClick: eo,
                         }));
                 let e = S
-                        ? { key: "addapp", iconUrl: j, title: X.intl.string(X.t.IhHDEO), completed: eg, onClick: ec }
+                        ? { key: "addapp", iconUrl: j, title: Y.intl.string(Y.t.IhHDEO), completed: eg, onClick: ec }
                         : null,
                     t = ei
                         ? {
                               key: "boost",
                               iconUrl:
                                   "https://cdn.discordapp.com/assets/content/bc3217e772906510d881b75ebefea754b9c3ba903ddf6f994e46e5c5a85770a3.svg",
-                              title: X.intl.string(X.t["6Qbqxw"]),
+                              title: Y.intl.string(Y.t["6Qbqxw"]),
                               completed: el,
                               onClick: ed,
                           }
@@ -390,8 +390,8 @@ function ee(e) {
                 e.key,
             ),
         ),
-        ei = x ? X.intl.string(X.t["1ach9C"]) : X.intl.string(X.t["ezm+/j"]);
-    ee && (ei = X.intl.string(X.t["gwyU/J"]));
+        ei = x ? Y.intl.string(Y.t["1ach9C"]) : Y.intl.string(Y.t["ezm+/j"]);
+    ee && (ei = Y.intl.string(Y.t["gwyU/J"]));
     let es = `${g.A.getArticleURL(w.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(p.Ay, {
         channelId: f.id,
@@ -406,13 +406,13 @@ function ee(e) {
                             (0, l.jsx)(c.D, {
                                 className: E.ud,
                                 variant: "heading-xxl/medium",
-                                children: X.intl.format(X.t.rkHVKf, { guildName: C.name }),
+                                children: Y.intl.format(Y.t.rkHVKf, { guildName: C.name }),
                             }),
                             (0, l.jsxs)(d.E, {
                                 color: "text-default",
                                 className: a()({ [E.VA]: !0, [E.lg]: 0 === el.length }),
                                 variant: "text-sm/normal",
-                                children: [ei, " ", el.length > 0 ? X.intl.format(X.t.UOtD32, { guideURL: es }) : null],
+                                children: [ei, " ", el.length > 0 ? Y.intl.format(Y.t.UOtD32, { guideURL: es }) : null],
                             }),
                         ],
                     }),

@@ -5,15 +5,15 @@ var n = l(477900),
     u = l(736653),
     i = l(608266),
     d = l(818348),
-    r = l(351585),
-    o = l(105292),
+    o = l(351585),
+    r = l(105292),
     c = l(946456);
 function m() {
     let e = (0, u.Ay)();
     return (0, n.jsx)(s.E, {
         variant: "text-sm/medium",
         className: c.Q,
-        children: o.intl.format(r.default.fcJiY8, {
+        children: r.intl.format(o.default.fcJiY8, {
             provider: (0, n.jsx)(
                 "img",
                 {
