@@ -5,7 +5,7 @@ var i = n(477900),
     a = n.n(r),
     l = n(941861),
     o = n(844222),
-    u = n(460890),
+    u = n(432816),
     c = n(471544);
 class d extends s.PureComponent {
     static defaultProps = { pauseWhileUnfocused: !0, pause: !1 };
