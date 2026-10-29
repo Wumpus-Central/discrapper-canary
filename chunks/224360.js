@@ -10,14 +10,14 @@ var l = n(503698),
     c = n(105292),
     u = n(772168);
 function m(e) {
-    let { onDismiss: t, children: n, className: l, headingVariant: m = "text-xs/medium" } = e,
-        g = (0, o.GV)();
+    let { onDismiss: t, children: n, className: l, headingVariant: m = "text-xs/medium", compactHeader: g = !1 } = e,
+        x = (0, o.GV)();
     return (0, i.jsxs)("aside", {
         className: a()(u.kL, l),
-        "aria-labelledby": g,
+        "aria-labelledby": x,
         children: [
             (0, i.jsxs)("div", {
-                className: u.wx,
+                className: a()(u.wx, g && u.xn),
                 children: [
                     (0, i.jsx)(s.D, {
                         className: u.r,
@@ -25,7 +25,7 @@ function m(e) {
                         onClick: t,
                         children: (0, i.jsx)(r.P, { size: "sm", color: "currentColor" }),
                     }),
-                    (0, i.jsx)(d.D, { id: g, variant: m, color: "text-subtle", children: c.intl.string(c.t.zMUr6Z) }),
+                    (0, i.jsx)(d.D, { id: x, variant: m, color: "text-subtle", children: c.intl.string(c.t.zMUr6Z) }),
                 ],
             }),
             n,

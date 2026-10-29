@@ -13,6 +13,11 @@
     justify-content: space-between
 }
 
+.compactHeader__203bc {
+    flex-direction: row;
+    position: relative
+}
+
 .dismissButton__203bc {
     color: var(--icon-subtle);
     cursor: pointer;
@@ -22,6 +27,18 @@
 .dismissButton__203bc:hover {
     color: var(--icon-strong);
     transition: color .15s ease-out
+}
+
+.compactHeader__203bc .dismissButton__203bc {
+    align-items: center;
+    display: flex;
+    inset-block-start: 50%;
+    inset-inline-end: calc(var(--space-4)*-1);
+    justify-content: center;
+    min-height: var(--space-24);
+    min-width: var(--space-24);
+    position: absolute;
+    transform: translateY(-50%)
 }
 
 .list_f9ae8b {
@@ -156,4 +173,4 @@
     transition: opacity .15s ease-out
 }
 
-/*# sourceMappingURL=be1db590d002ae59.css.map*/
+/*# sourceMappingURL=99e836e78a01d24e.css.map*/
