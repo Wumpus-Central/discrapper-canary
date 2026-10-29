@@ -1,31 +1,31 @@
 n.d(t, {
-    Dp: () => w,
-    Dy: () => T,
-    EZ: () => x,
-    G2: () => O,
-    H1: () => D,
-    Hi: () => A,
-    MS: () => V,
-    P1: () => N,
-    Pf: () => p,
-    QB: () => B,
-    Tq: () => h,
-    Xi: () => S,
-    Zq: () => I,
-    _6: () => F,
-    ck: () => v,
-    cw: () => y,
-    dF: () => L,
-    gs: () => U,
-    i0: () => f,
-    l5: () => P,
-    md: () => b,
-    pQ: () => k,
-    rr: () => m,
-    sH: () => H,
-    tD: () => C,
-    uY: () => g,
-    x3: () => M,
+    Dp: () => G,
+    Dy: () => m,
+    EZ: () => k,
+    G2: () => R,
+    H1: () => v,
+    Hi: () => h,
+    MS: () => H,
+    P1: () => C,
+    Pf: () => T,
+    QB: () => V,
+    Tq: () => f,
+    Xi: () => N,
+    Zq: () => p,
+    _6: () => B,
+    ck: () => b,
+    cw: () => D,
+    dF: () => y,
+    gs: () => w,
+    hE: () => g,
+    i0: () => I,
+    l5: () => U,
+    md: () => M,
+    pQ: () => F,
+    sH: () => j,
+    tD: () => O,
+    uY: () => S,
+    x3: () => P,
 });
 var i,
     r,
@@ -34,55 +34,56 @@ var i,
     l,
     o,
     d,
-    c = n(641150),
-    u = n(401864),
-    _ = n(124987),
-    E = n(334279),
-    A = (((i = {}).FIAT = "fiat"), (i.ORBS = "orbs"), i);
-let h = {},
-    f = 6e5,
-    I = 6e5;
-var p =
+    c,
+    u = n(641150),
+    _ = n(401864),
+    E = n(124987),
+    A = n(334279),
+    h = (((i = {}).FIAT = "fiat"), (i.ORBS = "orbs"), i);
+let f = {},
+    I = 6e5,
+    p = 6e5;
+var T =
     (((r = {})[(r.VISIBLE = 0)] = "VISIBLE"),
     (r[(r.HIDDEN = 1)] = "HIDDEN"),
     (r[(r.IN = 2)] = "IN"),
     (r[(r.OUT = 3)] = "OUT"),
     r);
-let T = 24,
-    m = 225;
-var g =
-        (((a = {}).SEARCH_ICON = "search icon"),
-        (a.SEARCH_BAR = "search bar"),
-        (a.SEARCH_BAR_CLEAR = "search bar clear"),
-        a),
-    S = (((s = {}).SEARCH = "SEARCH"), (s.SEARCH_SUGGESTION = "search suggestion"), s);
-let N = "category",
-    C = "game_server_game_id";
-var O =
-    (((l = {}).HOME = "home"),
-    (l.CATALOG = "catalog"),
-    (l.ORBS = "orbs"),
-    (l.AVATAR_DECORATIONS = "avatar-decorations"),
-    (l.PROFILE_EFFECTS = "profile-effects"),
-    (l.NAMEPLATES = "nameplates"),
-    (l.PROFILE_FRAMES = "profile-frames"),
-    (l.BUNDLES = "bundles"),
-    (l.COLLABS = "collabs"),
-    (l.OFFER_ELIGIBLE = "offer-eligible"),
-    (l.PROMOTION = "promotion"),
-    (l.COLLECTION_INDEX = "collection-index"),
-    (l.GAME_SHOPS = "game-shops"),
-    (l.GAME_SERVERS = "game-servers"),
-    l);
-let R = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
-function L(e) {
-    return R.includes(e);
-}
+let m = 24;
+var g = (((a = {})[(a.DEFAULT = 182)] = "DEFAULT"), (a[(a.WIDE = 256)] = "WIDE"), a),
+    S =
+        (((s = {}).SEARCH_ICON = "search icon"),
+        (s.SEARCH_BAR = "search bar"),
+        (s.SEARCH_BAR_CLEAR = "search bar clear"),
+        s),
+    N = (((l = {}).SEARCH = "SEARCH"), (l.SEARCH_SUGGESTION = "search suggestion"), l);
+let C = "category",
+    O = "game_server_game_id";
+var R =
+    (((o = {}).HOME = "home"),
+    (o.CATALOG = "catalog"),
+    (o.ORBS = "orbs"),
+    (o.AVATAR_DECORATIONS = "avatar-decorations"),
+    (o.PROFILE_EFFECTS = "profile-effects"),
+    (o.NAMEPLATES = "nameplates"),
+    (o.PROFILE_FRAMES = "profile-frames"),
+    (o.BUNDLES = "bundles"),
+    (o.COLLABS = "collabs"),
+    (o.OFFER_ELIGIBLE = "offer-eligible"),
+    (o.PROMOTION = "promotion"),
+    (o.COLLECTION_INDEX = "collection-index"),
+    (o.GAME_SHOPS = "game-shops"),
+    (o.GAME_SERVERS = "game-servers"),
+    o);
+let L = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
 function y(e) {
+    return L.includes(e);
+}
+function D(e) {
     return null != e && "home" !== e && "catalog" !== e && "game-shops" !== e;
 }
-let D = 800,
-    v = [
+let v = 800,
+    b = [
         "1212569433839636530",
         "1144308439720394944",
         "1314020996201713685",
@@ -418,62 +419,62 @@ let D = 800,
         "1285465421167988758",
         "1277733174797008931",
     ],
-    b = 12,
-    M = 60,
-    P = 5;
-var U =
-    (((o = {})[(o.FIAT = 0)] = "FIAT"),
-    (o[(o.ORB = 1)] = "ORB"),
-    (o[(o.PREMIUM_PURCHASE = 2)] = "PREMIUM_PURCHASE"),
-    (o[(o.PROMOTIONAL = 3)] = "PROMOTIONAL"),
-    (o[(o.TENURE_REWARD = 4)] = "TENURE_REWARD"),
-    (o[(o.GIFT = 5)] = "GIFT"),
-    o);
-let w = {
-        ORB_PROFILE_BADGE: "1342211853484429445",
-        FRACTIONAL_PREMIUM: E.j.PREMIUM_TIER_2_3_DAY,
-        FRACTIONAL_PREMIUM_1_DAY: E.j.PREMIUM_TIER_2_1_DAY,
-    },
-    G = new Set(Object.values(w));
-function x(e) {
-    return E.I.ALL.has(e);
-}
-function k(e) {
-    return G.has(e);
-}
-let F = [c.q.AVATAR_DECORATION, c.q.NAMEPLATE, c.q.PROFILE_EFFECT, c.q.PROFILE_FRAME, c.q.BUNDLE],
-    B = [
-        { sortType: _.$.RELEVANCE, sortDirection: u.A.DESC },
-        { sortType: _.$.RECENCY, sortDirection: u.A.DESC },
-        { sortType: _.$.PRICE, sortDirection: u.A.ASC },
-        { sortType: _.$.PRICE, sortDirection: u.A.DESC },
-        { sortType: _.$.POPULARITY, sortDirection: u.A.DESC },
-    ],
-    V = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
-var H =
-    (((d = {}).BUY_WITH_FIAT = "buy_with_fiat"),
-    (d.BUY_WITH_ORBS = "buy_with_orbs"),
-    (d.SEND_AS_GIFT = "send_as_gift"),
-    (d.SUBSCRIBE_NOW = "subscribe_now"),
-    (d.ADD_TO_WISHLIST = "add_to_wishlist"),
-    (d.REMOVE_FROM_WISHLIST = "remove_from_wishlist"),
-    (d.CLOSE_DETAIL = "close_detail"),
-    (d.GO_TO_COLLECTION = "go_to_collection"),
-    (d.COPY_LINK = "copy_link"),
-    (d.SHARE_LINK = "share_link"),
-    (d.USE_NOW = "use_now"),
-    (d.EDIT_PROFILE = "edit_profile"),
-    (d.UNLOCK_WITH_NITRO = "unlock_with_nitro"),
-    (d.ADD_TO_COLLECTION = "add_to_collection"),
-    (d.BUNDLE_VIEW_AVATAR_DECORATION = "bundle_view_avatar_decoration"),
-    (d.BUNDLE_VIEW_PROFILE_EFFECT = "bundle_view_profile_effect"),
-    (d.BUNDLE_VIEW_NAMEPLATE = "bundle_view_nameplate"),
-    (d.BUNDLE_VIEW_PRODUCT = "bundle_view_product"),
-    (d.FULL_PROFILE_PREVIEW = "full_profile_preview"),
-    (d.FULL_PROFILE_PREVIEW_BUTTON = "full_profile_preview_button"),
-    (d.VIEW_DETAILS = "view_details"),
-    (d.PAYMENT_OPTIONS = "payment_options"),
-    (d.OPEN_DETAILS = "open_details"),
-    (d.VARIANT_CLICK = "variant_click"),
-    (d.VARIANT_CLICK_MORE = "variant_click_more"),
+    M = 12,
+    P = 60,
+    U = 5;
+var w =
+    (((d = {})[(d.FIAT = 0)] = "FIAT"),
+    (d[(d.ORB = 1)] = "ORB"),
+    (d[(d.PREMIUM_PURCHASE = 2)] = "PREMIUM_PURCHASE"),
+    (d[(d.PROMOTIONAL = 3)] = "PROMOTIONAL"),
+    (d[(d.TENURE_REWARD = 4)] = "TENURE_REWARD"),
+    (d[(d.GIFT = 5)] = "GIFT"),
     d);
+let G = {
+        ORB_PROFILE_BADGE: "1342211853484429445",
+        FRACTIONAL_PREMIUM: A.j.PREMIUM_TIER_2_3_DAY,
+        FRACTIONAL_PREMIUM_1_DAY: A.j.PREMIUM_TIER_2_1_DAY,
+    },
+    x = new Set(Object.values(G));
+function k(e) {
+    return A.I.ALL.has(e);
+}
+function F(e) {
+    return x.has(e);
+}
+let B = [u.q.AVATAR_DECORATION, u.q.NAMEPLATE, u.q.PROFILE_EFFECT, u.q.PROFILE_FRAME, u.q.BUNDLE],
+    V = [
+        { sortType: E.$.RELEVANCE, sortDirection: _.A.DESC },
+        { sortType: E.$.RECENCY, sortDirection: _.A.DESC },
+        { sortType: E.$.PRICE, sortDirection: _.A.ASC },
+        { sortType: E.$.PRICE, sortDirection: _.A.DESC },
+        { sortType: E.$.POPULARITY, sortDirection: _.A.DESC },
+    ],
+    H = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
+var j =
+    (((c = {}).BUY_WITH_FIAT = "buy_with_fiat"),
+    (c.BUY_WITH_ORBS = "buy_with_orbs"),
+    (c.SEND_AS_GIFT = "send_as_gift"),
+    (c.SUBSCRIBE_NOW = "subscribe_now"),
+    (c.ADD_TO_WISHLIST = "add_to_wishlist"),
+    (c.REMOVE_FROM_WISHLIST = "remove_from_wishlist"),
+    (c.CLOSE_DETAIL = "close_detail"),
+    (c.GO_TO_COLLECTION = "go_to_collection"),
+    (c.COPY_LINK = "copy_link"),
+    (c.SHARE_LINK = "share_link"),
+    (c.USE_NOW = "use_now"),
+    (c.EDIT_PROFILE = "edit_profile"),
+    (c.UNLOCK_WITH_NITRO = "unlock_with_nitro"),
+    (c.ADD_TO_COLLECTION = "add_to_collection"),
+    (c.BUNDLE_VIEW_AVATAR_DECORATION = "bundle_view_avatar_decoration"),
+    (c.BUNDLE_VIEW_PROFILE_EFFECT = "bundle_view_profile_effect"),
+    (c.BUNDLE_VIEW_NAMEPLATE = "bundle_view_nameplate"),
+    (c.BUNDLE_VIEW_PRODUCT = "bundle_view_product"),
+    (c.FULL_PROFILE_PREVIEW = "full_profile_preview"),
+    (c.FULL_PROFILE_PREVIEW_BUTTON = "full_profile_preview_button"),
+    (c.VIEW_DETAILS = "view_details"),
+    (c.PAYMENT_OPTIONS = "payment_options"),
+    (c.OPEN_DETAILS = "open_details"),
+    (c.VARIANT_CLICK = "variant_click"),
+    (c.VARIANT_CLICK_MORE = "variant_click_more"),
+    c);

@@ -1,7 +1,7 @@
 .searchBar__824d3 {
-    flex: 1 1 var(--custom-search-bar-width);
+    flex: 0 1 var(--custom-search-bar-width);
     max-width: var(--custom-search-bar-width);
-    min-width: 0
+    width: var(--custom-search-bar-width)
 }
 
 .platform-osx .searchBar__824d3 {
@@ -24,8 +24,12 @@
     max-width: var(--custom-search-bar-width);
     padding-inline-end: var(--space-4);
     position: relative;
-    width: var(--custom-search-bar-width);
     z-index: 10
+}
+
+.searchFloating__824d3,
+.suggestions__824d3 {
+    width: var(--custom-search-bar-width)
 }
 
 .suggestions__824d3 {
@@ -34,8 +38,7 @@
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-high);
     box-sizing: border-box;
-    padding: var(--space-8);
-    width: 324px
+    padding: var(--space-8)
 }
 
 .suggestions__824d3,
@@ -69,4 +72,4 @@
     display: none
 }
 
-/*# sourceMappingURL=06002e3b20d06998.css.map*/
+/*# sourceMappingURL=493a96c9479c834e.css.map*/

@@ -5169,7 +5169,8 @@
     "name": "2026-10-collectibles-upgraded-search",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "enabled": false,
+      "searchBarWidthPx": null
     },
     "variations": {
       "0": {
@@ -5177,7 +5178,8 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "enabled": true,
+        "searchBarWidthPx": null
       }
     }
   },
@@ -5707,6 +5709,22 @@
       "0": {
         "enabled": false,
         "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-10-profile-nitro-upsell-refresh",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
       }
     }
   },
