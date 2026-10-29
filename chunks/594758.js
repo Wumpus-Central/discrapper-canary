@@ -6514,7 +6514,7 @@ function ss(e) {
                         { enabled: u } = aZ.A.useConfig({ location: "orb_checkout_review_step_footer" }),
                         {
                             setPurchaseState: d,
-                            orbBalanceOnCheckout: m,
+                            getOrbBalanceOnCheckout: m,
                             setOrbBalanceOnCheckout: p,
                             order: h,
                             setOrder: C,
@@ -6525,7 +6525,7 @@ function ss(e) {
                         } = (0, S.t4)((e) => ({
                             setPurchaseState: e.setPurchaseState,
                             setOrbBalanceOnCheckout: e.setOrbBalanceOnCheckout,
-                            orbBalanceOnCheckout: e.orbBalanceOnCheckout,
+                            getOrbBalanceOnCheckout: e.getOrbBalanceOnCheckout,
                             order: e.order,
                             setOrder: e.setOrder,
                             loadId: e.contextMetadata.loadId,
@@ -6674,7 +6674,8 @@ function ss(e) {
                         });
                     return (
                         (0, c.useEffect)(() => {
-                            null != E && null != m && (_(eG.HAw.PAYMENT_FLOW_FAILED, E), p(null));
+                            let e = m();
+                            null != E && null != e && (_(eG.HAw.PAYMENT_FLOW_FAILED, E), p(null));
                         }, [E, _, m, p]),
                         {
                             onClickCheckout: (0, c.useCallback)(() => {

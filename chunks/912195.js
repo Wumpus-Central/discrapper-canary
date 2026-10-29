@@ -665,7 +665,11 @@ function es(e) {
                     },
                 };
             })(i),
-            ...{ orbBalanceOnCheckout: null, setOrbBalanceOnCheckout: (t) => e({ orbBalanceOnCheckout: t }) },
+            ...{
+                orbBalanceOnCheckout: null,
+                setOrbBalanceOnCheckout: (t) => e({ orbBalanceOnCheckout: t }),
+                getOrbBalanceOnCheckout: () => i().orbBalanceOnCheckout,
+            },
             ...(0, ee.d)(e, i),
             get: (e) => (null != E[e] ? E[e]() : null),
             contextMetadata: a,
