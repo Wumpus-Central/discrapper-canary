@@ -725,7 +725,7 @@ let _ = {
                         n.e("869449"),
                         n.e("86454"),
                         n.e("134358"),
-                        n.e("406803"),
+                        n.e("234264"),
                     ]).then(n.bind(n, 328560));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
@@ -1436,7 +1436,7 @@ let _ = {
                         n.e("869449"),
                         n.e("86454"),
                         n.e("134358"),
-                        n.e("406803"),
+                        n.e("234264"),
                     ]).then(n.bind(n, 328560));
                     return (n) =>
                         (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, initialTab: l, ...n }, t);

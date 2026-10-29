@@ -304,7 +304,7 @@ var _,
         EyeSlashIcon: () => Tu.EyeSlashIcon,
         FacebookNeutralIcon: () => T_.Z,
         FandomBrandIcon: () => TE,
-        FandomNeutralIcon: () => TA,
+        FandomNeutralIcon: () => TA.g,
         FileDenyIcon: () => Th.u,
         FileIcon: () => Tf.FileIcon,
         FileUpIcon: () => TI.H,
@@ -383,7 +383,7 @@ var _,
         InventoryIcon: () => A4._,
         ItalicIcon: () => mm.y,
         ItchBrandIcon: () => mg,
-        ItchNeutralIcon: () => mS,
+        ItchNeutralIcon: () => mS.x,
         JoystickIcon: () => mN._,
         KeyIcon: () => mO.R,
         KeyboardIcon: () => mC.F,
@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657086";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657096";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657086, Version Hash: fd4eb9ac4c52131c834521f66db47c114989f89a`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657096, Version Hash: d60482b320eb42cc8bc1977f614eb2bb2a58b20a`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -18032,33 +18032,8 @@ function TE(e) {
         ],
     });
 }
-function TA(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = ad.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, hl.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, b.jsx)("svg", {
-        ...(0, hs.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, b.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M8.4 1a.4.4 0 0 0-.46.32v9.01l-3.26-3.2a.4.4 0 0 0-.57 0c-.02 0-.03.03-.05.05A.36.36 0 0 0 4 7.4v9.22c0 .59.23 1.15.65 1.55l4.24 4.19c.42.41.98.64 1.57.64h3.1c.59 0 1.14-.23 1.56-.64l4.23-4.2c.42-.4.65-.96.65-1.54V13.3c0-.58-.23-1.14-.65-1.55L8.61 1.12a.44.44 0 0 0-.2-.11Zm1.42 11.48a.7.7 0 0 1 .47.19l1.71 1.7 1.71-1.7a.67.67 0 0 1 .94 0l1.22 1.2c.12.13.2.3.2.48v1.29c0 .17-.08.34-.2.47l-3.41 3.39a.68.68 0 0 1-.95 0l-3.4-3.4a.67.67 0 0 1-.2-.46v-1.3c0-.17.08-.33.2-.46l1.22-1.21c.12-.13.3-.2.48-.2Z",
-            className: a,
-        }),
-    });
-}
-var Th = n(519396),
+var TA = n(423438),
+    Th = n(519396),
     Tf = n(514042),
     TI = n(81369),
     Tp = n(860430),
@@ -18695,33 +18670,8 @@ function mg(e) {
         }),
     });
 }
-function mS(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = ad.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, hl.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, b.jsx)("svg", {
-        ...(0, hs.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, b.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M3.87 2.12C2.9 2.7 1.02 4.9 1 5.47v.95C1 7.63 2.12 8.7 3.13 8.7a2.26 2.26 0 0 0 2.23-2.23c0 1.21.98 2.23 2.2 2.23a2.2 2.2 0 0 0 2.17-2.23 2.28 2.28 0 0 0 2.26 2.23H12a2.28 2.28 0 0 0 2.26-2.23 2.2 2.2 0 0 0 2.17 2.23c1.21 0 2.2-1.02 2.2-2.23a2.26 2.26 0 0 0 2.23 2.23C21.88 8.7 23 7.63 23 6.42v-.95c-.02-.58-1.9-2.77-2.87-3.35C17.15 2.02 15.08 2 12 2c-3.08 0-7.28.05-8.13.12Zm5.84 6a2.53 2.53 0 0 1-2.21 1.3 2.54 2.54 0 0 1-2.2-1.29c-.11.21-.28.39-.44.55-.48.47-1.12.74-1.8.74a.78.78 0 0 1-.23-.05c-.1 1.03-.14 2.01-.16 2.73v1.09c.02 2.16-.21 7 .94 8.2 1.8.42 5.09.6 8.39.61 3.3 0 6.6-.2 8.39-.61 1.15-1.2.92-6.04.94-8.2V12.1c-.02-.73-.06-1.71-.16-2.74a.76.76 0 0 1-.24.05c-.67 0-1.31-.27-1.79-.74a2.54 2.54 0 0 1-.44-.55 2.54 2.54 0 0 1-4.41-.01A2.55 2.55 0 0 1 12 9.42h-.07a2.54 2.54 0 0 1-2.22-1.3Zm-1.83 2.4c.73 0 1.37 0 2.17.89a18.31 18.31 0 0 1 3.9 0c.8-.89 1.44-.88 2.17-.89.35 0 1.72 0 2.68 2.72l1.03 3.73c.76 2.78-.25 2.84-1.5 2.85-1.86-.07-2.9-1.44-2.9-2.8-1.02.16-2.23.25-3.43.25-1.2 0-2.4-.09-3.43-.26 0 1.37-1.04 2.74-2.9 2.8-1.25 0-2.26-.06-1.5-2.84l1.03-3.73c.96-2.72 2.33-2.72 2.68-2.72ZM12 12.66s-1.96 1.82-2.31 2.47l1.28-.05v1.13c0 .05.51.03 1.03 0 .51.03 1.03.05 1.03 0v-1.13l1.28.05c-.35-.65-2.31-2.47-2.31-2.47Z",
-            className: a,
-        }),
-    });
-}
-var mN = n(785866),
+var mS = n(341904),
+    mN = n(785866),
     mC = n(410767),
     mO = n(530557),
     mR = n(37646),
@@ -26233,7 +26183,7 @@ let y_ = "isHideDevBanner",
                     className: tf()(yu.Wz, yu.mr),
                     children: [
                         (0, b.jsx)(yc, { className: yu.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657086" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657096" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
