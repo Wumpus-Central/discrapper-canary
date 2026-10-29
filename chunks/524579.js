@@ -747,8 +747,8 @@ function eQ(e) {
                                                         n.e("654282"),
                                                         n.e("538513"),
                                                         n.e("631573"),
-                                                        n.e("147864"),
                                                         n.e("763400"),
+                                                        n.e("919726"),
                                                         n.e("644816"),
                                                         n.e("195468"),
                                                         n.e("928662"),
@@ -763,6 +763,7 @@ function eQ(e) {
                                                         n.e("784813"),
                                                         n.e("831445"),
                                                         n.e("140557"),
+                                                        n.e("830228"),
                                                         n.e("235996"),
                                                         n.e("50097"),
                                                         n.e("484189"),
@@ -971,8 +972,8 @@ var e2 = n(34188),
     e3 = n(825484),
     e4 = n(683071),
     e6 = n(900797),
-    e5 = n(847374),
-    e9 = n(10716),
+    e9 = n(847374),
+    e5 = n(10716),
     te = n(702841),
     tt = n(150934),
     tn = n(95477),
@@ -986,11 +987,11 @@ function ta(e) {
             useActivityUrlOverride: i,
             filter: s,
         } = (0, te.cf)(
-            [e9.A],
+            [e5.A],
             () => ({
-                activityUrlOverride: e9.A.getActivityUrlOverride(),
-                useActivityUrlOverride: e9.A.getUseActivityUrlOverride(),
-                filter: e9.A.getFilter(),
+                activityUrlOverride: e5.A.getActivityUrlOverride(),
+                useActivityUrlOverride: e5.A.getUseActivityUrlOverride(),
+                filter: e5.A.getFilter(),
             }),
             [],
         );
@@ -1152,7 +1153,7 @@ var tI = n(576917),
 function ty(e) {
     let { context: t, application: n, videoUrl: l, imageCoverUrl: i, sectionName: s, hasCommands: a } = e,
         c = o.useMemo(() => (0, I.u8)(n) ?? "", [n]),
-        d = (0, A.bG)([e9.A], () => e9.A.inDevModeForApplication(n.id)),
+        d = (0, A.bG)([e5.A], () => e5.A.inDevModeForApplication(n.id)),
         { isSlideReady: u } = (0, h.uM)(),
         [m, p] = o.useState(!1);
     o.useEffect(() => {
@@ -1419,7 +1420,7 @@ function tb(e) {
                           }),
                           h
                               ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              : (0, r.jsx)(e9.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1509,10 +1510,10 @@ var tU = n(724002),
 function tY() {
     let e = (0, tX.z)(),
         t = eY.Q_.getSetting(),
-        n = (0, A.bG)([e9.A], () => e9.A.getFetchState(), []);
+        n = (0, A.bG)([e5.A], () => e5.A.getFetchState(), []);
     return (
         o.useEffect(() => {
-            e && t && n === e9.$.INITIALIZED && (0, tz.S)();
+            e && t && n === e5.$.INITIALIZED && (0, tz.S)();
         }, [e, n, t]),
         null
     );
@@ -1573,8 +1574,8 @@ function t3(e, t) {
 }
 var t4 = n(785728),
     t6 = n(712440),
-    t5 = n(733110),
-    t9 = n(73153);
+    t9 = n(733110),
+    t5 = n(73153);
 let ne = 10 * Y.A.Millis.MINUTE,
     nt = { lastUsedCommandId: null, lastUsedTimeMs: null };
 class nn extends A.Ay.PersistedStore {
@@ -1594,7 +1595,7 @@ class nn extends A.Ay.PersistedStore {
               nt.lastUsedCommandId);
     }
 }
-new nn(t9.h, {
+new nn(t5.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t } = e;
         ((nt.lastUsedCommandId = t.id), (nt.lastUsedTimeMs = Date.now()));
@@ -2253,8 +2254,8 @@ function n6(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n5 = n(562708),
-    n9 = n(139286),
+var n9 = n(562708),
+    n5 = n(139286),
     le = n(520117);
 function lt(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
@@ -2262,9 +2263,9 @@ function lt(e) {
     return {
         trackSearchResultsItemImpressionRef: (0, le.A)({
             onVisible: function () {
-                (0, n9.x)({
-                    type: n5.ImpressionTypes.VIEW,
-                    name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                (0, n5.x)({
+                    type: n9.ImpressionTypes.VIEW,
+                    name: n9.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -3017,7 +3018,7 @@ let lN = [],
     lC = tw.K.APP_LAUNCHER_IN_TEXT;
 function l_(e) {
     let { context: t, entrypoint: n, searchQuery: l, setSearchQuery: i, setScroller: s, isScrollCloseToBottom: a } = e,
-        c = (0, A.bG)([e9.A], () => e9.A.getIsEnabled(), []),
+        c = (0, A.bG)([e5.A], () => e5.A.getIsEnabled(), []),
         d = n === _.s4.TEXT && "channel" === t.type && null != t.channel && !t.channel.isPrivate(),
         u = (0, I.sw)(n),
         m = !(0, I.sw)(n),
@@ -3159,13 +3160,13 @@ function ly(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t5.default], () => t5.default.getFetchState());
+                        s = (0, A.bG)([t9.default], () => t9.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t5.FetchState.NOT_FETCHED && t6.A.fetch();
+                        i && s === t9.FetchState.NOT_FETCHED && t6.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t5.default], () =>
+                    let a = (0, A.yK)([t9.default], () =>
                             i
-                                ? t5.default
+                                ? t9.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(tJ.F.APPLICATIONS_COMMANDS))
                                 : [],
