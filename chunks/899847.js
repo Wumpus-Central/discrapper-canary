@@ -61,49 +61,50 @@ async function p() {
 }
 let T = {
     async initialPageLoad() {
-        let e;
-        a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+        let e,
+            { showLoading: t = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        t && a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
         try {
             e = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: (0, i.fT)() });
         } catch {
             return (a.h.dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" }), null);
         }
-        let { body: t } = e,
-            { teen_audit_log: n, linked_users: r, users: s, age_group: l } = t,
-            o = {
-                teenId: n?.teen_user_id,
-                rangeStartId: n?.range_start_id,
-                totals: n?.totals ?? {},
-                actions: n?.actions ?? [],
-                users: n?.users ?? [],
-                guilds: n?.guilds ?? [],
-                topUserActivities: n?.top_user_activities ?? [],
-                topGuildActivities: n?.top_guild_activities ?? [],
-                totalSpendAmount: n?.total_spend?.amount ?? null,
-                totalSpendCurrency: n?.total_spend?.currency ?? null,
-                spendingLimit: t.spending_limit ?? null,
-                monthlyPurchases: t.monthly_purchases ?? null,
-                invoices: n?.invoices ?? [],
-                gifts: n?.gifts ?? [],
+        let { body: n } = e,
+            { teen_audit_log: r, linked_users: s, users: l, age_group: o } = n,
+            d = {
+                teenId: r?.teen_user_id,
+                rangeStartId: r?.range_start_id,
+                totals: r?.totals ?? {},
+                actions: r?.actions ?? [],
+                users: r?.users ?? [],
+                guilds: r?.guilds ?? [],
+                topUserActivities: r?.top_user_activities ?? [],
+                topGuildActivities: r?.top_guild_activities ?? [],
+                totalSpendAmount: r?.total_spend?.amount ?? null,
+                totalSpendCurrency: r?.total_spend?.currency ?? null,
+                spendingLimit: n.spending_limit ?? null,
+                monthlyPurchases: n.monthly_purchases ?? null,
+                invoices: r?.invoices ?? [],
+                gifts: r?.gifts ?? [],
             };
         return (
-            null != o.invoices && o.invoices.length > 0 && (await E(o.invoices)),
-            null != o.gifts && o.gifts.length > 0 && (await A(o.gifts)),
+            null != d.invoices && d.invoices.length > 0 && (await E(d.invoices)),
+            null != d.gifts && d.gifts.length > 0 && (await A(d.gifts)),
             a.h.dispatch({
                 type: "FAMILY_CENTER_INITIAL_LOAD",
-                familyCenterTeenActivity: o,
-                linkedUsers: r,
-                users: s,
-                ageGroup: l,
+                familyCenterTeenActivity: d,
+                linkedUsers: s,
+                users: l,
+                ageGroup: o,
             }),
-            null != t.restricted_schedule &&
-                null != o.teenId &&
+            null != n.restricted_schedule &&
+                null != d.teenId &&
                 a.h.dispatch({
                     type: "USER_RESTRICTED_SCHEDULE_UPDATE",
-                    userId: o.teenId,
-                    restrictedSchedule: t.restricted_schedule,
+                    userId: d.teenId,
+                    restrictedSchedule: n.restricted_schedule,
                 }),
-            o
+            d
         );
     },
     async fetchLinkedUsers() {
