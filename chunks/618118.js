@@ -1,6 +1,8 @@
 _.exports = {
     FO: "guildRowIcon__7db08",
     QH: "guildRowSwitch__7db08",
+    yW: "guildRowInfo__7db08",
+    Xc: "guildRowName__7db08",
     gO: "controlsContainer__7db08",
     Ku: "sortDropdown__7db08",
     X1: "guildsList__7db08",

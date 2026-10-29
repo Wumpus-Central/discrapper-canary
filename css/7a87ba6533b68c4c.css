@@ -37,6 +37,20 @@
     white-space: nowrap
 }
 
+.guildRowInfo__7db08 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.guildRowName__7db08 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
 .controlsContainer__7db08 {
     align-items: center;
     display: flex;
@@ -52,24 +66,27 @@
 }
 
 .guildsList__7db08 {
-    padding-bottom: var(--space-24)
+    gap: var(--space-24);
+    list-style: none;
+    margin: 0;
+    padding: 0 0 var(--space-24)
 }
 
 .guildsList__7db08,
 .wrapper__7db08 {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-16)
+    flex-direction: column
 }
 
 .wrapper__7db08 {
+    gap: var(--space-16);
     margin-top: calc(var(--space-16)*-1)
 }
 
 .noResultsContainer__7db08 {
     align-items: center;
     display: flex;
-    height: 736px;
+    height: 200px;
     justify-content: center
 }
 
@@ -86,7 +103,7 @@
     padding-top: var(--space-16);
     position: sticky;
     top: 0;
-    z-index: 1
+    z-index: 2
 }
 
 .notice__192be {
@@ -151,4 +168,4 @@ button.inner__02fc8:disabled {
     pointer-events: none
 }
 
-/*# sourceMappingURL=12197308eb2c286f.css.map*/
+/*# sourceMappingURL=7a87ba6533b68c4c.css.map*/
