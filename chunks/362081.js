@@ -18,7 +18,7 @@ async function d(e) {
 var m = l(956050),
     f = l(635793),
     h = l(696016),
-    p = l(268378),
+    p = l(507216),
     x = l(105292);
 let v = (e, t, l, a) => (a([]), () => {}),
     g = n.createContext(null);
@@ -33,8 +33,8 @@ function j(e) {
         { children: w, clip: k, modalContainerRef: A, editOnly: R = !1 } = e,
         L = k.type === h.nQ.SCREENSHOT,
         {
-            initialDuration: I,
-            initialCropStart: T,
+            initialDuration: T,
+            initialCropStart: I,
             initialCropEnd: M,
             initialCurrentTime: D,
         } = ((j = k.length / 1e3),
@@ -55,8 +55,8 @@ function j(e) {
         ),
         [O, P] = n.useState({
             clipName: k.name,
-            cropStart: T,
-            cropEnd: 0 === M ? I : M,
+            cropStart: I,
+            cropEnd: 0 === M ? T : M,
             voiceAudioEnabled: k.editMetadata?.voiceAudio ?? !0,
             applicationAudioEnabled: k.editMetadata?.applicationAudio ?? !0,
             soundboardAudioEnabled: k.editMetadata?.soundboardAudio ?? !0,
@@ -67,14 +67,14 @@ function j(e) {
             clipName: $,
             cropStart: U,
             cropEnd: G,
-            voiceAudioEnabled: H,
-            applicationAudioEnabled: B,
+            voiceAudioEnabled: B,
+            applicationAudioEnabled: H,
             soundboardAudioEnabled: X,
             cropPreset: F,
         } = O,
-        W = n.useRef(null),
-        V = n.useRef(D),
-        [K, Y] = n.useState(I),
+        V = n.useRef(null),
+        W = n.useRef(D),
+        [K, Y] = n.useState(T),
         [Z, Q] = n.useState(!1),
         [J, q] = n.useState(!1),
         ee = n.useRef(new Set()),
@@ -90,10 +90,10 @@ function j(e) {
         eg = n.useRef(ex);
     eg.current = ex;
     let ej = n.useCallback(() => {
-            let e = W.current?.videoElement?.currentTime ?? U,
+            let e = V.current?.videoElement?.currentTime ?? U,
                 t = (0, i.clamp)(e, U, G - h.Cx);
             return { startSec: t, endSec: Math.min(t + h.tS, G) };
-        }, [U, G, W]),
+        }, [U, G, V]),
         eb = n.useCallback(() => {
             let e = crypto.randomUUID(),
                 t = {
@@ -150,21 +150,21 @@ function j(e) {
                 editMetadata: {
                     start: U,
                     end: G,
-                    applicationAudio: B,
-                    voiceAudio: H,
+                    applicationAudio: H,
+                    voiceAudio: B,
                     soundboardAudio: X,
                     crop: { preset: F },
                 },
             }),
-            [k, $, U, G, B, H, X, F],
+            [k, $, U, G, H, B, X, F],
         ),
         eR = n.useCallback((e) => {
-            ((W.current = e), ea(e.videoElement));
+            ((V.current = e), ea(e.videoElement));
         }, []),
         eL = n.useCallback((e, t, l, a) => {
             (ei(e), ec(t), er(l), ef(() => a));
         }, []),
-        eI = n.useCallback(() => {
+        eT = n.useCallback(() => {
             ed(!0);
         }, []);
     ((t = k.filepath),
@@ -195,7 +195,7 @@ function j(e) {
                     try {
                         l = await r.A.clips.loadClip(t);
                     } catch {
-                        eI();
+                        eT();
                         return;
                     }
                     ((e.onmessage = (e) => {
@@ -240,7 +240,7 @@ function j(e) {
                     (e.terminate(), a.terminate(), n.clear());
                 }
             );
-        }, [t, eL, ep, eI]),
+        }, [t, eL, ep, eT]),
         n.useEffect(
             () => () => {
                 null != en && URL.revokeObjectURL(en);
@@ -290,8 +290,8 @@ function j(e) {
                     editMetadata: {
                         start: U,
                         end: G,
-                        voiceAudio: H,
-                        applicationAudio: B,
+                        voiceAudio: B,
+                        applicationAudio: H,
                         soundboardAudio: X,
                         crop: { preset: F },
                     },
@@ -300,9 +300,9 @@ function j(e) {
             eg,
         ),
         n.useEffect(() => {
-            K > 0 && G <= 0 && I <= 0 && P((e) => ({ ...e, cropEnd: K }));
-        }, [K, G, I]));
-    let eT = n.useMemo(() => G - U, [U, G]),
+            K > 0 && G <= 0 && T <= 0 && P((e) => ({ ...e, cropEnd: K }));
+        }, [K, G, T]));
+    let eI = n.useMemo(() => G - U, [U, G]),
         eM = n.useCallback(
             (e) => (
                 ee.current.add(e),
@@ -319,18 +319,18 @@ function j(e) {
         } = ((N = n.useCallback(
             (e) => {
                 let t = (0, i.clamp)(e, 0, G - 1);
-                (P((e) => ({ ...e, cropStart: t })), W?.current?.seek(t));
+                (P((e) => ({ ...e, cropStart: t })), V?.current?.seek(t));
             },
-            [G, P, W],
+            [G, P, V],
         )),
         {
             setCropStart: N,
             setCropEnd: n.useCallback(
                 (e) => {
                     let t = (0, i.clamp)(e, U + 1, K);
-                    (P((e) => ({ ...e, cropEnd: t })), W?.current?.seek(t));
+                    (P((e) => ({ ...e, cropEnd: t })), V?.current?.seek(t));
                 },
-                [U, K, P, W],
+                [U, K, P, V],
             ),
             setCrop: n.useCallback(
                 (e, t) => {
@@ -344,25 +344,25 @@ function j(e) {
             pause: e_,
             seek: ez,
         } = ((E = n.useCallback(() => {
-            W?.current?.play();
-        }, [W])),
+            V?.current?.play();
+        }, [V])),
         {
             play: E,
             pause: n.useCallback(() => {
-                W?.current?.pause();
-            }, [W]),
+                V?.current?.pause();
+            }, [V]),
             seek: n.useCallback(
                 (e) => {
-                    W?.current?.seek(e);
+                    V?.current?.seek(e);
                 },
-                [W],
+                [V],
             ),
         });
     ((0, s.A)(() => {
-        let e = W.current?.videoElement;
+        let e = V.current?.videoElement;
         if (null == e || !et.current) return;
         let t = e.currentTime;
-        (V.current !== t && ((V.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
+        (W.current !== t && ((W.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
             A.current?.style.setProperty("--custom-video-progress", `${(t / e.duration) * 100}%`));
     }),
         n.useEffect(() => {
@@ -374,7 +374,7 @@ function j(e) {
                     el.addEventListener("loadedmetadata", a),
                     el.addEventListener("seeked", n),
                     el.duration > 0 && Y(el.duration),
-                    el.readyState >= 1 && (q(!0), W?.current?.seek(D)),
+                    el.readyState >= 1 && (q(!0), V?.current?.seek(D)),
                     Q(!el.paused),
                     () => {
                         (el.removeEventListener("play", e),
@@ -394,12 +394,12 @@ function j(e) {
                 null != el && Y(el.duration);
             }
             function a() {
-                null != el && (q(!0), Y(el.duration), W?.current?.seek(D));
+                null != el && (q(!0), Y(el.duration), V?.current?.seek(D));
             }
             function n() {
                 et.current = !0;
             }
-        }, [el, D, W, ee, Q, q, Y, et]));
+        }, [el, D, V, ee, Q, q, Y, et]));
     let e$ = n.useCallback((e) => {
             P((t) => ({ ...t, clipName: e }));
         }, []),
@@ -409,16 +409,16 @@ function j(e) {
         eG = n.useCallback((e) => {
             P((t) => ({ ...t, applicationAudioEnabled: e }));
         }, []),
-        eH = n.useCallback((e) => {
+        eB = n.useCallback((e) => {
             P((t) => ({ ...t, voiceAudioEnabled: e }));
         }, []),
-        eB = n.useCallback((e) => {
+        eH = n.useCallback((e) => {
             P((t) => ({ ...t, soundboardAudioEnabled: e }));
         }, []),
         eX = n.useMemo(
             () =>
                 function () {
-                    let [e, t] = n.useState(V.current);
+                    let [e, t] = n.useState(W.current);
                     return (
                         n.useEffect(() => {
                             let e = {
@@ -436,7 +436,7 @@ function j(e) {
                         e
                     );
                 },
-            [V, ee],
+            [W, ee],
         ),
         eF = n.useMemo(
             () => ({
@@ -446,7 +446,7 @@ function j(e) {
                 isLoaded: J,
                 cropStart: U,
                 cropEnd: G,
-                cropDuration: eT,
+                cropDuration: eI,
                 setCropStart: eD,
                 setCropEnd: eS,
                 setCrop: eO,
@@ -459,16 +459,16 @@ function j(e) {
                 seek: ez,
                 subscribe: eM,
                 setVideoPlayerRef: eR,
-                videoPlayerRef: W,
+                videoPlayerRef: V,
                 videoURL: en,
                 audioTracks: eo,
                 hasError: eu,
-                applicationAudioEnabled: B,
+                applicationAudioEnabled: H,
                 setApplicationAudioEnabled: eG,
-                voiceAudioEnabled: H,
-                setVoiceAudioEnabled: eH,
+                voiceAudioEnabled: B,
+                setVoiceAudioEnabled: eB,
                 soundboardAudioEnabled: X,
-                setSoundboardAudioEnabled: eB,
+                setSoundboardAudioEnabled: eH,
                 getEditedClip: eA,
                 tracks: ex,
                 addTextTrack: eb,
@@ -493,7 +493,7 @@ function j(e) {
                 J,
                 U,
                 G,
-                eT,
+                eI,
                 eD,
                 eS,
                 eO,
@@ -510,12 +510,12 @@ function j(e) {
                 en,
                 eo,
                 eu,
-                B,
-                eG,
                 H,
-                eH,
-                X,
+                eG,
+                B,
                 eB,
+                X,
+                eH,
                 eA,
                 ex,
                 eb,

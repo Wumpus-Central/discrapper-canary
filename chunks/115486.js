@@ -46,7 +46,7 @@ var i,
     $ = n(265872),
     z = n(827827),
     X = n(481045),
-    q = n(57129),
+    q = n(305103),
     Z = n(105292),
     Q = n(293686);
 function J(e) {
@@ -364,7 +364,7 @@ var ed = n(688810),
     eL = n(572164),
     ey = n(614584),
     eD = n(118328),
-    ev = n(268378),
+    ev = n(507216),
     eb = n(253146);
 let eM = 2 * eR.A.Millis.WEEK;
 function eP(e) {
@@ -495,8 +495,8 @@ var eZ = n(769015),
     e2 = n(277680),
     e3 = n(118277),
     e5 = n(905552),
-    e6 = n(95035),
-    e4 = n(567249),
+    e4 = n(95035),
+    e6 = n(567249),
     e7 = n(507756),
     e8 = n(929921),
     e9 = n(616356),
@@ -586,7 +586,7 @@ let tK = (0, ej.mj)({
     });
 var tz = n(610010),
     tX = n(475669),
-    tq = n(394107);
+    tq = n(351585);
 function tZ(e) {
     let { title: t, body: n, ctaText: i, runningGameId: a, targetElementRef: s, onClick: l, onClose: o } = e,
         d = (0, _.bG)([tX.A], () => null != a && tX.A.getGlobalCatalogGame(a)?.can_market === !0, [a]);
@@ -629,8 +629,8 @@ var tJ = n(338771),
     t2 = n(44724),
     t3 = n(153488),
     t5 = n(942370),
-    t6 = n(758836),
-    t4 = n(165610),
+    t4 = n(758836),
+    t6 = n(165610),
     t7 = n(79958);
 function t8(e, t, n) {
     return (
@@ -719,8 +719,8 @@ let t9 = a.memo(function (e) {
                     n.e("236946"),
                     n.e("338601"),
                     n.e("944727"),
-                    n.e("118577"),
-                    n.e("39404"),
+                    n.e("312159"),
+                    n.e("942474"),
                     n.e("82001"),
                 ]).then(n.bind(n, 266536));
                 return (t) =>
@@ -747,8 +747,8 @@ let t9 = a.memo(function (e) {
                           n.e("236946"),
                           n.e("338601"),
                           n.e("944727"),
-                          n.e("118577"),
-                          n.e("39404"),
+                          n.e("312159"),
+                          n.e("942474"),
                           n.e("82001"),
                       ]).then(n.bind(n, 266536));
                       return (n) =>
@@ -781,8 +781,8 @@ let t9 = a.memo(function (e) {
         en = a.useCallback(() => {
             let e = A?.id;
             (0, tj.pK)({ gameApplicationId: e, buttonVariant: "shop" });
-            let t = F.BVt.COLLECTIBLES_SHOP_WITH_TAB(t6.G2.GAME_SERVERS);
-            (0, tr.pX)(null != e ? `${t}&${t6.tD}=${e}` : t);
+            let t = F.BVt.COLLECTIBLES_SHOP_WITH_TAB(t4.G2.GAME_SERVERS);
+            (0, tr.pX)(null != e ? `${t}&${t4.tD}=${e}` : t);
         }, [A?.id]),
         ei = a.useRef(null),
         [er, ea] = a.useState(!1);
@@ -860,7 +860,7 @@ let t9 = a.memo(function (e) {
                       icon: tO.DoorExitIcon,
                   }),
         e_ =
-            null == I || I.intent !== t4.sV.MAIN
+            null == I || I.intent !== t6.sV.MAIN
                 ? null
                 : (0, r.jsx)(tG.A, {
                       tooltipText: Z.intl.string(Z.t["R/FK4A"]),
@@ -904,7 +904,7 @@ let t9 = a.memo(function (e) {
             eE ?? es ?? ec,
             el,
             (eu ?? e_) == null
-                ? (0, r.jsx)(tV, { isActivity: null == A && null != I && I.intent !== t4.sV.MAIN })
+                ? (0, r.jsx)(tV, { isActivity: null == A && null != I && I.intent !== t6.sV.MAIN })
                 : null,
             eo,
             eu ?? e_,
@@ -1037,7 +1037,7 @@ var nE = n(37595),
     nI = n(233741),
     np = n(532624),
     nT = n(350535),
-    nm = n(248675),
+    nm = n(87501),
     ng = n(369409);
 function nS(e) {
     let { isCurrentlyRunningGame: t, gamePid: n, onClickNotSharing: i } = e,
@@ -1225,7 +1225,7 @@ let nD = {
 };
 var nv = n(534952),
     nb = n(731854),
-    nM = n(559626),
+    nM = n(80268),
     nP = n(821095),
     nU = n(268920),
     nw = n(633217);
@@ -1521,7 +1521,7 @@ function nV(e) {
                 children: (0, r.jsxs)("div", {
                     className: nP.pq,
                     children: [
-                        (0, r.jsx)(e6.A, {
+                        (0, r.jsx)(e4.A, {
                             href: t,
                             onClick: function () {
                                 (f(), E && p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
@@ -1529,7 +1529,7 @@ function nV(e) {
                             children: (0, r.jsx)(tT.A, { className: nP._W, children: n.name }),
                         }),
                         null != a && (0, ta.pQ)(a.type)
-                            ? (0, r.jsx)(e6.A, {
+                            ? (0, r.jsx)(e4.A, {
                                   href: t,
                                   onClick: f,
                                   children: (0, r.jsx)(tp.A, { className: nP.Ix, children: h }),
@@ -1554,12 +1554,12 @@ function nH(e) {
                         (0, r.jsx)(f.D, {
                             onClick: function () {
                                 if (s) return void p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
-                                if (t.intent !== t4.sV.MAIN) {
+                                if (t.intent !== t6.sV.MAIN) {
                                     let e = (0, ex.A)(t.surface);
                                     null != e && (0, tr.pX)(F.BVt.CHANNEL((0, ek.A)(t.surface) ?? F.ME, e));
                                     return;
                                 }
-                                eF.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: t4.y0.FOCUSED });
+                                eF.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: t6.y0.FOCUSED });
                             },
                             onMouseDown: (e) => {
                                 e.stopPropagation();
@@ -1635,7 +1635,7 @@ let nW = (0, N.A)(function (e) {
         O = (0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
         R = m?.type === F.rbe.GUILD_SPACE ? null : O,
         b = (0, _.bG)([eB.A, ef.A, ew.Ay], () => {
-            let e = (0, t4.ny)(eB.A.getMainFrame());
+            let e = (0, t6.ny)(eB.A.getMainFrame());
             return null != e && (0, eU.A)(e) ? null : e;
         }),
         U = (0, _.bG)([td.A, tc.A], () => null == p || e0.vz(p, td.A, tc.A, !1)),
@@ -1666,7 +1666,7 @@ let nW = (0, N.A)(function (e) {
             if (i !== tt.on.RESOLUTION_720 || t === tt.kn.FPS_60) return `${(0, tt.zr)(i)} ${(0, te.Bs)(t)}`;
         })(),
         [Y, K] = a.useState(!1),
-        $ = (0, _.bG)([e4.A], () => e4.A.getWindowOpen(F.MLl.ACTIVITY_POPOUT)),
+        $ = (0, _.bG)([e6.A], () => e6.A.getWindowOpen(F.MLl.ACTIVITY_POPOUT)),
         { parentAnalyticsLocation: z, analyticsLocations: X } = (0, ed.Ay)(),
         {
             hasAlreadyLinked: q,

@@ -106,7 +106,7 @@ var J = s(207803),
     Q = s(661531),
     ee = s(48736),
     et = s(317097),
-    es = s(701974),
+    es = s(26168),
     el = s(105292);
 function ea(e, t) {
     return a.useMemo(
@@ -925,11 +925,11 @@ function e8(e) {
     return (0, l.jsx)(m.jl, { "data-migration-pending": !0, className: e1.qr, children: i || o ? u : S });
 }
 var e5 = s(366010),
-    e9 = s(43990),
-    e2 = s(629584),
+    e2 = s(43990),
+    e9 = s(629584),
     e3 = s(943255),
-    e7 = s(575181),
-    e6 = s(736653),
+    e6 = s(575181),
+    e7 = s(736653),
     e4 = s(780898),
     te = s(344346),
     tt = s(320095),
@@ -954,7 +954,7 @@ function tf(e) {
             selectedColors: d,
             isPremiumTryItOut: u = !1,
         } = e,
-        m = (0, e6.Ay)(),
+        m = (0, e7.Ay)(),
         f = (0, e5.M)(m),
         [h, g] = (0, a.useState)(f),
         S = (0, tr.Ay)(t.id, null),
@@ -1005,7 +1005,7 @@ function tf(e) {
                     forceUserTheme: !0,
                     children: (0, l.jsx)("div", { className: tm.b8, style: { backgroundImage: `url(${F})` } }),
                 }),
-            (0, l.jsx)(e9.N, {
+            (0, l.jsx)(e2.N, {
                 theme: m,
                 children: (e) =>
                     (0, l.jsxs)("div", {
@@ -1088,7 +1088,7 @@ function tf(e) {
 function th(e) {
     let { darkPreview: t, onToggleTheme: s } = e,
         a = t ? V.NJ8.DARK : V.NJ8.LIGHT;
-    return (0, l.jsx)(e2.I, {
+    return (0, l.jsx)(e9.I, {
         className: tm.xr,
         optionClassName: tm.$C,
         options: [
@@ -1103,7 +1103,7 @@ function th(e) {
                 name: "",
                 tooltip: el.intl.string(el.t.K2sFfo),
                 value: V.NJ8.LIGHT,
-                icon: e7.F,
+                icon: e6.F,
                 className: a === V.NJ8.LIGHT ? tm.iB : void 0,
             },
         ],

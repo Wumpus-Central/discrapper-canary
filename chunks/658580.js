@@ -228,7 +228,7 @@ function X(e) {
         children: t,
     });
 }
-var $ = n(763166),
+var $ = n(128400),
     ee = n(105292),
     et = n(383931);
 function en(e) {
@@ -520,7 +520,7 @@ function eT(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", { className: o()(eI.n, n), children: t });
 }
-var ey = n(922704);
+var ey = n(478718);
 function eM() {
     let e = (0, d.bG)([C.A], () => C.A.stats?.emojis);
     return (0, r.jsxs)(eT, {
@@ -833,11 +833,11 @@ function e2(e) {
             return null;
     }
 }
-var e3 = n(358618),
-    e4 = n(983851);
-function e6() {
+var e4 = n(358618),
+    e3 = n(983851);
+function e8() {
     let e = (0, d.bG)([C.A], () => C.A.isMuted),
-        t = e ? e3._ : e4.H;
+        t = e ? e4._ : e3.H;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(U, {
@@ -857,9 +857,9 @@ function e6() {
         ],
     });
 }
-var e8 = n(435558),
-    e7 = n(477155),
-    e9 = n(935286),
+var e7 = n(435558),
+    e9 = n(477155),
+    e6 = n(935286),
     te = n(858899),
     tt = n(289873),
     tn = n(621466);
@@ -883,7 +883,7 @@ function ts(e) {
             onClick: t,
             disabled: n,
             "aria-label": ee.intl.string(ee.t["13/7kX"]),
-            children: (0, r.jsx)(e7.r, { color: "currentColor" }),
+            children: (0, r.jsx)(e9.r, { color: "currentColor" }),
         })
     );
 }
@@ -897,7 +897,7 @@ function tl(e) {
             onClick: t,
             disabled: n,
             "aria-label": ee.intl.string(ee.t.PDTjLN),
-            children: (0, r.jsx)(e9.E, { color: "currentColor" }),
+            children: (0, r.jsx)(e6.E, { color: "currentColor" }),
         })
     );
 }
@@ -939,14 +939,14 @@ function tc(e) {
                 }),
                 s
                     ? (0, r.jsx)(tt.y, { type: tt.t.SPINNING_CIRCLE_SIMPLE, className: ta.u1, itemClassName: ta.$N })
-                    : (0, r.jsx)(e9.E, { size: "refresh_sm", color: "currentColor" }),
+                    : (0, r.jsx)(e6.E, { size: "refresh_sm", color: "currentColor" }),
             ],
         })
     );
 }
 function to(e) {
     let { activeRoute: t, isRouteBlocked: n, onBack: a, onNext: s } = e,
-        l = i.useMemo(() => (0, e8.throttle)((e) => e(), 500, { trailing: !1 }), []);
+        l = i.useMemo(() => (0, e7.throttle)((e) => e(), 500, { trailing: !1 }), []);
     switch (t) {
         case j.gr.HOME:
             return null;
@@ -1323,8 +1323,8 @@ var tX = n(445199),
     t1 = n(152321);
 let t5 = [0, 0, 2],
     t2 = [0, 1, 0],
-    t3 = [0, 0, 0],
-    t4 = `
+    t4 = [0, 0, 0],
+    t3 = `
 attribute vec4 a_position;
 attribute vec2 a_texcoord;
 uniform mat4 u_normalMatrix;
@@ -1352,7 +1352,7 @@ void main() {
   v_lighting = ambientLight + (directionalLightColor * directional);
 }
 `,
-    t6 = `
+    t8 = `
 precision mediump float;
 
 varying vec2 v_texcoord;
@@ -1365,7 +1365,7 @@ void main() {
   gl_FragColor = vec4(texelColor.rgb * v_lighting, texelColor.a);
 }
 `,
-    t8 = [
+    t7 = [
         -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5,
         -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5,
         0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5,
@@ -1373,11 +1373,11 @@ void main() {
         -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5,
         -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5,
     ],
-    t7 = [
+    t9 = [
         0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0,
         1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0,
     ],
-    t9 = [
+    t6 = [
         0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
         1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0,
         -1, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
@@ -1425,8 +1425,8 @@ function ne(e) {
                 i = r.createShader(r.FRAGMENT_SHADER);
             if (null == s || null == i) return;
             if (
-                (r.shaderSource(s, t4),
-                r.shaderSource(i, t6),
+                (r.shaderSource(s, t3),
+                r.shaderSource(i, t8),
                 r.compileShader(s),
                 !r.getShaderParameter(s, r.COMPILE_STATUS))
             )
@@ -1448,15 +1448,15 @@ function ne(e) {
                 x = r.getUniformLocation(c, "u_normalMatrix"),
                 g = r.createBuffer();
             (r.bindBuffer(r.ARRAY_BUFFER, g),
-                r.bufferData(r.ARRAY_BUFFER, new Float32Array(t9), r.STATIC_DRAW),
+                r.bufferData(r.ARRAY_BUFFER, new Float32Array(t6), r.STATIC_DRAW),
                 r.vertexAttribPointer(h, 3, r.FLOAT, !1, 0, 0),
                 r.enableVertexAttribArray(h));
             let f = r.createBuffer();
             (r.bindBuffer(r.ARRAY_BUFFER, f),
-                (e = new Float32Array(t8)),
+                (e = new Float32Array(t7)),
                 r.bufferData(r.ARRAY_BUFFER, e, r.STATIC_DRAW));
             let j = r.createBuffer();
-            (r.bindBuffer(r.ARRAY_BUFFER, j), r.bufferData(r.ARRAY_BUFFER, new Float32Array(t7), r.STATIC_DRAW));
+            (r.bindBuffer(r.ARRAY_BUFFER, j), r.bufferData(r.ARRAY_BUFFER, new Float32Array(t9), r.STATIC_DRAW));
             let p = tX.DF(60);
             return (
                 (n = requestAnimationFrame(function e() {
@@ -1474,7 +1474,7 @@ function ne(e) {
                         r.vertexAttribPointer(u, 2, r.FLOAT, !1, 0, 0));
                     let l = a.clientWidth / a.clientHeight,
                         i = t$.fN(t$.vt(), p, l, 1, 2e3),
-                        h = t$.t5(t$.vt(), t5, t3, t2),
+                        h = t$.t5(t$.vt(), t5, t4, t2),
                         g = t$.lw(t$.vt(), i, h),
                         E = t$.vt();
                     (t$.eL(E, E, t), t$.Z8(E, E, s));
@@ -2251,23 +2251,23 @@ function n2(e) {
         ],
     });
 }
-var n3 = n(972106);
-let n4 = [];
-function n6(e) {
+var n4 = n(972106);
+let n3 = [];
+function n8(e) {
     let { guild: t, rank: n, iconSize: a = 100, children: s } = e;
     return (0, r.jsxs)("div", {
-        className: n3.w_,
+        className: n4.w_,
         children: [
             (0, r.jsxs)("div", {
-                className: n3.jj,
+                className: n4.jj,
                 children: [
                     (0, r.jsx)(nL, { rank: n }),
                     (0, r.jsxs)("div", {
-                        className: n3.gI,
+                        className: n4.gI,
                         children: [
                             (0, r.jsx)(W, {
                                 variant: "heading-xxl/medium",
-                                className: n3.J5,
+                                className: n4.J5,
                                 lineClamp: 1,
                                 children: t.name,
                             }),
@@ -2280,24 +2280,24 @@ function n6(e) {
         ],
     });
 }
-function n8(e) {
+function n7(e) {
     let { guild: t, numVoiceMinutes: n, numMessagesSent: a } = e;
-    return (0, r.jsx)(n6, {
+    return (0, r.jsx)(n8, {
         guild: t,
         rank: 1,
         iconSize: 140,
         children: (0, r.jsx)(n2, { numVoiceMinutes: n, numMessagesSent: a }),
     });
 }
-function n7(e) {
+function n9(e) {
     let { guilds: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: n3.wx,
+                className: n4.wx,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: n3.R_,
+                        className: n4.R_,
                         children: [
                             (0, r.jsx)(tT, { icon: e$.R, children: ee.intl.string($.default.Mb5E6r) }),
                             (0, r.jsx)(nO, { children: ee.intl.string(ey.default.F0fkrh) }),
@@ -2307,28 +2307,28 @@ function n7(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: n3.Pl,
+                className: n4.Pl,
                 children: t.map((e, t) => {
                     let { guild: n, numMessagesSent: a, numVoiceMinutes: s } = e;
                     return 0 === t
-                        ? (0, r.jsx)(n8, { guild: n, numMessagesSent: a ?? 0, numVoiceMinutes: s ?? 0 }, n.id)
-                        : (0, r.jsx)(n6, { guild: n, rank: t + 1 }, n.id);
+                        ? (0, r.jsx)(n7, { guild: n, numMessagesSent: a ?? 0, numVoiceMinutes: s ?? 0 }, n.id)
+                        : (0, r.jsx)(n8, { guild: n, rank: t + 1 }, n.id);
                 }),
             }),
         ],
     });
 }
-function n9(e) {
+function n6(e) {
     let { guilds: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: n3.wx,
+                className: n4.wx,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: n3.R_,
+                        className: n4.R_,
                         children: [
-                            (0, r.jsx)(tu, { className: n3.gi }),
+                            (0, r.jsx)(tu, { className: n4.gi }),
                             (0, r.jsx)(nO, { children: ee.intl.string(ey.default.F0fkrh) }),
                         ],
                     }),
@@ -2336,20 +2336,20 @@ function n9(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: n3.Pl,
-                children: t.map((e, t) => (0, r.jsx)(n6, { guild: e, rank: t + 1 }, e.id)),
+                className: n4.Pl,
+                children: t.map((e, t) => (0, r.jsx)(n8, { guild: e, rank: t + 1 }, e.id)),
             }),
         ],
     });
 }
 function re() {
-    let e = (0, d.bG)([C.A], () => C.A.stats?.guilds?.guilds ?? n4),
+    let e = (0, d.bG)([C.A], () => C.A.stats?.guilds?.guilds ?? n3),
         t = (0, d.bG)([C.A], () => C.A.globalStats?.guilds?.guildsByMembers),
         n = 0 === e.length && null != t;
     return (0, r.jsx)(th, {
         children: (0, r.jsx)("div", {
-            className: n3.kL,
-            children: n ? (0, r.jsx)(n9, { guilds: t }) : (0, r.jsx)(n7, { guilds: e }),
+            className: n4.kL,
+            children: n ? (0, r.jsx)(n6, { guilds: t }) : (0, r.jsx)(n9, { guilds: e }),
         }),
     });
 }
@@ -2901,7 +2901,7 @@ function rM(e) {
                     (0, r.jsxs)("div", {
                         className: ry.$s,
                         children: [
-                            (0, r.jsx)(e6, {}),
+                            (0, r.jsx)(e8, {}),
                             (0, r.jsx)(U, {
                                 size: "sm",
                                 "aria-label": ee.intl.string(ee.t.cpT0Cq),

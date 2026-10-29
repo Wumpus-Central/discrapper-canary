@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"u72Prd":["Streamuj v\xa0HD rozli\u0161en\xed s\xa0Nitrem"],"uwMBDo":["Sd\xedlet zvuk aplikace"],"3wwZ/Q":["Zah\xe1jit streamov\xe1n\xed"],"OsS9Ll":["Zastavit streamov\xe1n\xed"],"j+eAMQ":["Streamovat zvuk"],"/XSr8v":["Re\u017Eim streamov\xe1n\xed"],"ibH7vy":["Vyv\xe1\u017Een\xe1 kvalita a\xa0v\xfdkon (",[1,"resolution"],"p, ",[1,"fps"],"\xa0fps)"],"2qmQ8N":["V\xfdchoz\xed"],"q4gYBi":["Pro video a\xa0hran\xed (",[1,"resolution"],"p, ",[1,"fps"],"\xa0fps)"],"nMcXo1":["Vysok\xe1 kvalita"],"fN0UQY":["Optimalizov\xe1no pro pomalej\u0161\xed za\u0159\xedzen\xed (",[1,"resolution"],"p, ",[1,"fps"],"\xa0fps)"],"5eO4/m":["V\xfdkon"],"CrNjqp":["Nastaven\xed streamu"]}',
+);

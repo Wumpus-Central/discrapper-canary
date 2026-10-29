@@ -42,11 +42,11 @@ function R(e) {
     }, [t?.entitlements]);
 }
 var k = l(105292),
-    L = l(25525),
+    L = l(930259),
     D = l(144977),
     O = l(628049),
     U = l(568065),
-    B = l(394107),
+    B = l(351585),
     V = l(929729),
     M = l(517826);
 function W(e) {
@@ -653,7 +653,7 @@ function eY(e) {
 }
 var e0 = l(826673),
     e1 = l(549996),
-    e2 = l(412260);
+    e9 = l(412260);
 function e6(e) {
     let t = (function () {
             let e = (0, e1.c)(et.C.GUILD_BOOST_TAB_BANNER),
@@ -677,7 +677,7 @@ function e6(e) {
                       markAsDismissed: s,
                   };
         })(),
-        l = (0, r.bG)([e2.A], () => e2.A.isFetchingActivePromotions),
+        l = (0, r.bG)([e9.A], () => e9.A.isFetchingActivePromotions),
         i = "admin" !== e || t.isBannerEligible || l ? [] : [z.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD],
         [s, o] = (0, b.kn)(i),
         a = n.useCallback(() => {
@@ -698,12 +698,12 @@ function e6(e) {
     let u = l || t.isBannerEligible || d?.kind === "video";
     return { variant: e, content: d, isReserved: u };
 }
-var e9 = l(463080);
-function e8(e) {
+var e8 = l(463080);
+function e2(e) {
     let { text: t } = e,
         l = (0, j.c)("Tier3OverrideNotice");
     return (0, i.jsx)("div", {
-        className: e9.ac,
+        className: e8.ac,
         children: (0, i.jsx)(v.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
     });
 }
@@ -752,14 +752,14 @@ function e5(e) {
         u = (0, j.c)("GuildPowerupNotificationContainer");
     return l.shouldShow || s.shouldShow || o.shouldShow || d.shouldShow || null != a.content
         ? (0, i.jsxs)("div", {
-              className: e9.kL,
+              className: e8.kL,
               children: [
                   (0, i.jsx)(v.E, {
                       variant: u ? "experimental/heading-sm/semibold" : "eyebrow",
                       color: u ? "text-strong" : "text-subtle",
                       children: k.intl.string(L.default["3FRirU"]),
                   }),
-                  l.shouldShow && (0, i.jsx)(e8, { text: l.text }),
+                  l.shouldShow && (0, i.jsx)(e2, { text: l.text }),
                   s.shouldShow &&
                       (0, i.jsx)(eY, { guildId: t, powerupNames: s.expiringPowerupNames, warnings: s.warnings }),
                   o.shouldShow &&

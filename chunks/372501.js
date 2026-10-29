@@ -21,7 +21,7 @@ var t = n(477900),
     N = n(722701);
 let C = [];
 var E = n(652215),
-    y = n(248675),
+    y = n(87501),
     P = n(105292);
 let _ = [
         [p.q7.BOT, y.default.UnoAgo],
@@ -51,7 +51,7 @@ var T = n(503698),
     Y = n(548118),
     K = n(946274),
     X = n(535466),
-    V = n(497183),
+    V = n(719564),
     Q = n(536791);
 let $ = { screen_capture: S.k, connect_user_to_voice: q.H },
     J = { [p.q7.BOT]: D.RobotIcon, [p.q7.ACTIVITY]: G.b, [p.q7.PROFILE_WIDGET]: L.b, [p.q7.AUTOMOD]: U.ShieldIcon };

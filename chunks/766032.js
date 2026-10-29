@@ -242,7 +242,7 @@ var w = l(278416),
     Q = l(832163),
     ee = l(44724),
     et = l(486020),
-    el = l(394107);
+    el = l(351585);
 let en = [
     { tab: y.G2.OFFER_ELIGIBLE, labelKey: N.t.hY8Ft1 },
     { tab: y.G2.AVATAR_DECORATIONS, labelKey: N.t.dRZYNE },

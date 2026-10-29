@@ -75,7 +75,7 @@ function H(n) {
 var K = e(26095),
     Y = e(607739),
     M = e(652215),
-    V = e(876891);
+    V = e(902345);
 function $(n) {
     let { classificationTypeText: i, guildMetadata: e } = n,
         a = l.useMemo(() => {

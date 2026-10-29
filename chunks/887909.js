@@ -623,7 +623,7 @@ let e1 = (0, F.Fe)({
             n.e("163466"),
             n.e("940298"),
             n.e("738015"),
-            n.e("234017"),
+            n.e("456398"),
             n.e("621820"),
             n.e("40791"),
             n.e("358404"),
@@ -681,7 +681,7 @@ let e1 = (0, F.Fe)({
             n.e("249366"),
             n.e("728633"),
             n.e("628439"),
-            n.e("756148"),
+            n.e("680922"),
             n.e("570506"),
             n.e("539620"),
             n.e("225990"),
@@ -692,7 +692,7 @@ let e1 = (0, F.Fe)({
             n.e("165595"),
             n.e("401590"),
             n.e("498215"),
-            n.e("631608"),
+            n.e("435474"),
             n.e("133902"),
             n.e("123353"),
             n.e("231588"),
@@ -928,7 +928,7 @@ function e5(e) {
         })
     );
 }
-function e6(e) {
+function e4(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = v.A.get(t),
@@ -965,7 +965,7 @@ function e6(e) {
         ],
     });
 }
-function e4() {
+function e6() {
     return (0, i.jsx)("div", { className: e0.g4, children: (0, i.jsx)(T.y, { className: e0.u1 }) });
 }
 function e7(e) {
@@ -1243,7 +1243,7 @@ function e7(e) {
         tI = !1;
     switch (em) {
         case null:
-            return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+            return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
         case "CONNECT_ACCOUNT":
             ((t = (0, i.jsx)(e5, { clientId: A, platformType: eE, platformName: tu })),
                 (tA = !1),
@@ -1252,7 +1252,7 @@ function e7(e) {
                 (t_ = !0));
             break;
         case "SELECT_INSTALL_TYPE":
-            if (null == ez) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+            if (null == ez) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             ((t = (0, i.jsx)(e1, {
                 application: ez,
                 onSelect: function (e) {
@@ -1266,7 +1266,7 @@ function e7(e) {
             break;
         case "AUTHORIZE_SCOPES":
             if (null == eI || null == eB || null == eY)
-                return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+                return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             let tp = null == eS || eS instanceof Error ? {} : eS,
                 tT = eD?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tm = eY === u.b.GUILD_INSTALL && e2.includes(_.F.WEBHOOK_INCOMING),
@@ -1277,7 +1277,7 @@ function e7(e) {
                 children: [
                     null != ex &&
                         eF &&
-                        (0, i.jsx)(e6, {
+                        (0, i.jsx)(e4, {
                             platformType: ex.type,
                             platformName: tu,
                             connectedAccount: ex,
@@ -1318,7 +1318,7 @@ function e7(e) {
                 (t_ = !0));
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":
-            if (null == eI) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+            if (null == eI) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             ((t = (0, i.jsx)(ek, {
                 application: eI.application,
                 permissions: e7,

@@ -68,7 +68,7 @@ class S extends i.A {
                     name: "dota-gsi",
                     applicationId: I.b,
                     isEnabled: () => g(I.b) && E.A.getConfig({ location: m }).enableDotaGsi,
-                    importHandler: () => Promise.all([n.e("556967"), n.e("709692")]).then(n.bind(n, 840631)),
+                    importHandler: () => Promise.all([n.e("465129"), n.e("709692")]).then(n.bind(n, 840631)),
                 },
                 {
                     type: "application",

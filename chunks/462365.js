@@ -35,7 +35,7 @@ function u(r) {
         ),
     });
 }
-var p = t(248675),
+var p = t(87501),
     x = t(105292);
 function h(r) {
     let { appName: e, permissions: t, onDecide: a, ...c } = r;

@@ -59,7 +59,7 @@ var P = s(342952),
     er = s(403362),
     en = s(279250),
     ea = s(652215),
-    ec = s(807207),
+    ec = s(879697),
     eo = s(105292),
     ed = s(675356);
 function eu(e) {
@@ -1423,8 +1423,8 @@ var eK = s(843402),
     e$ = s(859703),
     eJ = s(975571),
     e1 = s(290805),
-    e0 = s(971276),
-    e2 = s(639214),
+    e2 = s(971276),
+    e0 = s(639214),
     e5 = s(205434);
 function e3(e, t, s, l) {
     let i = (0, T.isWindows)() ? (0, b.A)(w.Ay, M.A) : null,
@@ -1486,7 +1486,7 @@ function e7(e) {
         ],
     });
 }
-function e8(e) {
+function e9(e) {
     var t;
     let s,
         { onClick: r } = e,
@@ -1511,13 +1511,13 @@ function e8(e) {
         }),
         S =
             ((t = (0, u.bG)([e$.A], () => e$.A.quests)),
-            (s = (0, e0.s)()),
+            (s = (0, e2.s)()),
             i.useMemo(() => {
                 if (null == n || !s) return null;
                 for (let e of n) {
                     let s = j.find((t) => (0, em.A)(e.id, t.windowHandle));
                     if (s?.id == null) continue;
-                    let l = (0, e2.L7)(t, s.id);
+                    let l = (0, e0.L7)(t, s.id);
                     if (null != l && l.userStatus?.enrolledAt != null && l.userStatus?.completedAt == null)
                         return { source: e, quest: l };
                 }
@@ -1559,7 +1559,7 @@ function e8(e) {
     }
     let y = [];
     return ((y = f === d.fS.WINDOW ? C : f === d.fS.SCREEN ? o : a), f === d.fS.CAMERA && 0 === y.length)
-        ? (0, l.jsx)(e9, {})
+        ? (0, l.jsx)(e8, {})
         : (0, l.jsx)("div", {
               className: e5.zr,
               children: y.map((e) =>
@@ -1576,7 +1576,7 @@ function e8(e) {
               ),
           });
 }
-function e9() {
+function e8() {
     return (0, l.jsxs)("div", {
         className: e5.p$,
         children: [
@@ -1609,7 +1609,7 @@ var e6 = s(505312),
     tr = s(270816),
     tn = s(498642),
     ta = s(309010),
-    tc = s(586760);
+    tc = s(549218);
 function to(e) {
     switch (e) {
         case eM.jQ.PRESET_CUSTOM:
@@ -2317,7 +2317,7 @@ function t1(e) {
                                         children:
                                             B && es !== d.fS.CAMERA
                                                 ? (0, l.jsx)(eY, { onSourceSelect: er })
-                                                : (0, l.jsx)(e8, {
+                                                : (0, l.jsx)(e9, {
                                                       onClick: function (e) {
                                                           e.id?.startsWith(d.fS.CAMERA)
                                                               ? z({ type: "set_selected_source", source: e })

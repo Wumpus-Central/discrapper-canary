@@ -28,7 +28,7 @@ var i,
     D = n(972013),
     v = n(751841),
     b = n(738601),
-    M = n(399513),
+    M = n(941143),
     P = n(717421);
 let U = { friction: 28, tension: 600 };
 function w(e) {
@@ -449,7 +449,7 @@ function e3(e) {
     );
 }
 let e5 = (0, eJ.L_)((e, t, n) => ["null", ...t, ...e, e1, eN.sFm.E3_SERVER_DISCOVERY_BADGE, e0]);
-function e6(e) {
+function e4(e) {
     let { ref: t, ...n } = e,
         i = (0, E.yK)([eB.Ay, e$.A, ea.default], () =>
             e5(eB.Ay.getGuildFolders(), e$.A.getUnreadPrivateChannelIds(), ea.default.getStoreChangeSentinel()),
@@ -469,7 +469,7 @@ function e6(e) {
     });
 }
 n(667532);
-var e4 = n(868285),
+var e6 = n(868285),
     e7 = n(763827),
     e8 = n(778712),
     e9 = n(812993),
@@ -726,7 +726,7 @@ class tI extends a.PureComponent {
                       n.e("88342"),
                       n.e("311802"),
                       n.e("698965"),
-                      n.e("368358"),
+                      n.e("819316"),
                       n.e("235313"),
                       n.e("947502"),
                       n.e("474610"),
@@ -759,7 +759,7 @@ class tI extends a.PureComponent {
                       n.e("146652"),
                       n.e("391763"),
                       n.e("955557"),
-                      n.e("368358"),
+                      n.e("819316"),
                       n.e("947502"),
                       n.e("965789"),
                       n.e("198415"),
@@ -894,7 +894,7 @@ function tT() {
             "aria-label": eC.intl.string(eC.t.YUU0RF),
             gap: "xs",
             hidden: s.length < 1,
-            children: (0, r.jsx)(e4.F, { component: a.Fragment, children: s }),
+            children: (0, r.jsx)(e6.F, { component: a.Fragment, children: s }),
         })
     );
 }
@@ -1200,8 +1200,8 @@ function t5(e) {
         }),
     });
 }
-var t6 = n(696292),
-    t4 = n(836480),
+var t4 = n(696292),
+    t6 = n(836480),
     t7 = n(533129),
     t8 = n(726845),
     t9 = n(837057),
@@ -1219,7 +1219,7 @@ let nr = function (e) {
                     return (0, t9.transitionToGlobalDiscovery)({
                         tab: nt.GlobalDiscoveryTab.QUESTS,
                         location: ni.rE.DISCOVERY_COMPASS,
-                        questContent: t6.u.DISCOVERY_COMPASS,
+                        questContent: t4.u.DISCOVERY_COMPASS,
                         questId: i,
                     });
                 case nt.GlobalDiscoveryTab.SERVERS:
@@ -1248,7 +1248,7 @@ let nr = function (e) {
         },
         selected: t,
         tooltip: eC.intl.string(eC.t["4nEZLk"]),
-        icon: t4.CompassIcon,
+        icon: t6.CompassIcon,
     });
 };
 var na = n(506774),
@@ -1566,8 +1566,8 @@ function n5(e) {
         children: (0, r.jsx)("div", { className: n3.ZU }),
     });
 }
-var n6 = n(114329),
-    n4 = n(937067);
+var n4 = n(114329),
+    n6 = n(937067);
 let n7 = (0, n$.xI)(nH.A.FOLDER_ITEM_ANIMATION_DURATION),
     n8 = (0, nY.P)(I.B),
     n9 = a.memo(function (e) {
@@ -1651,7 +1651,7 @@ let n7 = (0, n$.xI)(nH.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       V(e);
                                   }
                                 : void 0,
-                            className: l()(nQ.MJ, { [nQ.L0]: "icon" === L || F, [n4.oR]: !B && G && !_ }),
+                            className: l()(nQ.MJ, { [nQ.L0]: "icon" === L || F, [n6.oR]: !B && G && !_ }),
                             "data-dnd-name": W,
                             children: B
                                 ? (0, r.jsx)(n5, { isFolder: !0 })
@@ -1678,7 +1678,7 @@ let n7 = (0, n$.xI)(nH.A.FOLDER_ITEM_ANIMATION_DURATION),
                     m ? (0, r.jsx)(tY, { name: W, targetNode: o, onDragOverChanged: H }) : null,
                 ],
             }),
-            J = (0, n6.rk)(o.color),
+            J = (0, n4.rk)(o.color),
             ee = null != J ? (0, nV.Hl)(J) : void 0;
         return (0, r.jsxs)("div", {
             ref: Z,
@@ -2488,7 +2488,7 @@ function iw(e, t) {
             n.e("477175"),
             n.e("960235"),
             n.e("585968"),
-            n.e("910486"),
+            n.e("402040"),
             n.e("198329"),
             n.e("678157"),
             n.e("942374"),
@@ -2501,7 +2501,7 @@ function iw(e, t) {
             n.e("397270"),
             n.e("190779"),
             n.e("373122"),
-            n.e("217951"),
+            n.e("715881"),
             n.e("221856"),
             n.e("186212"),
             n.e("755936"),
@@ -2522,7 +2522,7 @@ function iw(e, t) {
             n.e("958038"),
             n.e("532039"),
             n.e("719466"),
-            n.e("178565"),
+            n.e("234503"),
             n.e("413846"),
             n.e("576909"),
             n.e("27355"),
@@ -2594,7 +2594,7 @@ function iw(e, t) {
             n.e("147626"),
             n.e("613867"),
             n.e("952548"),
-            n.e("164776"),
+            n.e("917298"),
             n.e("203589"),
             n.e("636373"),
             n.e("294857"),
@@ -2635,7 +2635,7 @@ function iw(e, t) {
             n.e("731503"),
             n.e("803332"),
             n.e("859546"),
-            n.e("556576"),
+            n.e("42942"),
             n.e("432805"),
             n.e("938149"),
             n.e("408362"),
@@ -2698,7 +2698,7 @@ function iw(e, t) {
             n.e("460773"),
             n.e("883952"),
             n.e("159957"),
-            n.e("28676"),
+            n.e("82814"),
             n.e("540715"),
             n.e("458273"),
             n.e("208018"),
@@ -2756,7 +2756,7 @@ function iw(e, t) {
             n.e("134504"),
             n.e("333097"),
             n.e("908608"),
-            n.e("882571"),
+            n.e("603757"),
             n.e("409391"),
             n.e("645830"),
             n.e("479971"),
@@ -2767,7 +2767,7 @@ function iw(e, t) {
             n.e("463726"),
             n.e("553203"),
             n.e("199139"),
-            n.e("816589"),
+            n.e("897975"),
             n.e("553683"),
             n.e("115368"),
             n.e("636002"),
@@ -2782,7 +2782,7 @@ function iw(e, t) {
             n.e("708364"),
             n.e("138733"),
             n.e("452823"),
-            n.e("779348"),
+            n.e("556967"),
             n.e("647011"),
             n.e("205896"),
             n.e("269178"),
@@ -3025,7 +3025,7 @@ let iG = a.memo(function (e) {
                   "data-dnd-name": d.name,
                   style: { scale: null == R ? 1 : R },
                   "data-drop-hovering": X,
-                  className: l()(n4.rN, { [n4.p9]: N, [n4.oR]: X, [n4.wH]: X || _ }),
+                  className: l()(n6.rN, { [n6.p9]: N, [n6.oR]: X, [n6.wH]: X || _ }),
                   children: (0, r.jsx)(B.Q, {
                       selected: !0,
                       upperBadge: b,
@@ -3036,7 +3036,7 @@ let iG = a.memo(function (e) {
               })
             : (0, r.jsx)(M.animated.div, {
                   style: { scale: null == R ? 1 : R },
-                  className: l()(n4.rN, { [n4.p9]: N, [n4.oR]: X, [n4.wH]: X || _ }),
+                  className: l()(n6.rN, { [n6.p9]: N, [n6.oR]: X, [n6.wH]: X || _ }),
                   "data-drop-hovering": X,
                   children: (0, r.jsx)(B.Q, {
                       selected: _,
@@ -3308,7 +3308,7 @@ let i1 = (0, G.Fe)({
                 n.e("139970"),
                 n.e("858164"),
                 n.e("427032"),
-                n.e("368358"),
+                n.e("819316"),
                 n.e("617249"),
                 n.e("362422"),
                 n.e("533746"),
@@ -3326,7 +3326,7 @@ let i1 = (0, G.Fe)({
                 n.e("472627"),
                 n.e("941348"),
                 n.e("802529"),
-                n.e("307348"),
+                n.e("232374"),
                 n.e("130706"),
                 n.e("303886"),
                 n.e("108066"),
@@ -3448,7 +3448,7 @@ class i5 {
         this.nodeRefs[e] = t;
     };
 }
-function i6(e) {
+function i4(e) {
     let { hideDms: t, scrollToTop: n, lurkingGuildIds: i, isConjureVisible: a } = e,
         s = (0, F.A)(),
         l = (0, r.jsx)(k, { shown: a }),
@@ -3468,7 +3468,7 @@ function i6(e) {
         ],
     });
 }
-function i4(e) {
+function i6(e) {
     let { guildDiscoveryButton: t, disableAppDownload: n, isOverlay: i, renderTreeNode: a, lurkingGuildIds: s } = e,
         [l] = (0, E.yK)([eB.Ay], () => {
             let e = eB.Ay.getGuildsTree();
@@ -3667,7 +3667,7 @@ function i7(e) {
                     className: l()(i0.iE, A, e, { [i0.R]: P }),
                     "aria-label": eC.intl.string(eC.t.PjnF2t),
                     children: [
-                        (0, r.jsx)(e6, {
+                        (0, r.jsx)(e4, {
                             ref: B,
                             isVisible: et.isItemVisible,
                             onJumpTo: et.handleJumpToGuild,
@@ -3690,9 +3690,9 @@ function i7(e) {
                                     ref: et.scrollerRef,
                                     onScroll: et.handleScroll,
                                     children: [
-                                        (0, r.jsx)(i6, { scrollToTop: er, lurkingGuildIds: M, isConjureVisible: Z }),
+                                        (0, r.jsx)(i4, { scrollToTop: er, lurkingGuildIds: M, isConjureVisible: Z }),
                                         (0, r.jsx)(nM, {}),
-                                        (0, r.jsx)(i4, {
+                                        (0, r.jsx)(i6, {
                                             guildDiscoveryButton: el,
                                             disableAppDownload: d,
                                             isOverlay: _,
@@ -3710,7 +3710,7 @@ function i7(e) {
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(e6, {
+                        (0, r.jsx)(e4, {
                             reverse: !0,
                             ref: V,
                             isVisible: et.isItemVisible,

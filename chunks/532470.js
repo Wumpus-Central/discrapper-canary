@@ -4,7 +4,7 @@ var n = a(713608),
     i = a(877784),
     d = a(144705),
     o = a(826685),
-    r = a(268378);
+    r = a(507216);
 let s = {
         [d.I.Kill]: n.q,
         [d.I.MultiKill]: n.q,

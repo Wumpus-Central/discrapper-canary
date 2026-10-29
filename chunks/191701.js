@@ -103,7 +103,7 @@ var ts = i(387755),
     tO = i(485045),
     tL = i(609145),
     tb = i(46282),
-    tx = i(905322);
+    tx = i(181712);
 function tD(t, e, i, n, l) {
     if (j.A.isNotificationDisabled(Y.KS.RequestToStream) || null != g.A.getCurrentUserActiveStream()) return null;
     let a = i.username,
@@ -241,7 +241,7 @@ function tW(t) {
     });
 }
 var tq = i(119191),
-    tQ = i(671210);
+    tQ = i(184748);
 function tZ(t) {
     t && (0, tM.Ak)(R.cH, R.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
@@ -250,16 +250,16 @@ var t0 = i(554146),
     t2 = i(429913),
     t9 = i(263577),
     t3 = i(826673),
-    t5 = i(999926),
-    t8 = i(308726),
-    t7 = i(818023),
-    t4 = i(731854),
+    t8 = i(999926),
+    t5 = i(308726),
+    t4 = i(818023),
+    t7 = i(731854),
     t6 = i(709946),
     et = i(302933);
 function ee(t) {
     let { game: e } = t,
         i = (0, t2.h)(e.id);
-    return null == i ? null : (0, $.jsx)(t9.V, { src: i.getIconURL(t7.iu.LARGE), size: 40 });
+    return null == i ? null : (0, $.jsx)(t9.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
 }
 let ei = 5 * k.A.Millis.SECOND,
     en = 8 * k.A.Millis.SECOND,
@@ -644,7 +644,7 @@ let eh = new eC(s.h, {
         if (V.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (j.A.isNotificationDisabled(Y.KS.WelcomeNudge)) return null;
-            t5.Ay.supports(t4.O5.VIDEO) ||
+            t8.Ay.supports(t7.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== Y.Jr.GO_LIVE_VOICE && t.type !== Y.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, F.Y9)(Y.KS.WelcomeNudge, {
                     notif_type: Y.KS.WelcomeNudge,
@@ -693,7 +693,7 @@ let eh = new eC(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, $.jsx)(t8.ru, {
+                                (0, $.jsx)(t5.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",

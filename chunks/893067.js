@@ -22,7 +22,7 @@ var e = n(582128),
     S = n(664619),
     C = n(722701),
     N = n(811587),
-    y = n(248675),
+    y = n(87501),
     M = n(105292);
 function I(t) {
     let { installScope: l, integrationStatus: n } = t,

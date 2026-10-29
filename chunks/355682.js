@@ -171,10 +171,10 @@ var eq = t(110384),
     e7 = t(892340),
     e2 = t(715757),
     e4 = t(967198),
-    e9 = t(287809),
-    e5 = t(628691),
+    e5 = t(287809),
+    e9 = t(628691),
     e6 = t(49999),
-    e3 = t(39470),
+    e3 = t(812676),
     ne = t(663417),
     nn = t(965407),
     nt = t(249700),
@@ -308,8 +308,8 @@ function nP(e) {
             favoriteableName: n7,
             itemHref: n2,
             itemSrc: n4,
-            itemSafeSrc: n9,
-            itemTextContent: n5,
+            itemSafeSrc: n5,
+            itemTextContent: n9,
             canReport: n6,
             onHeightUpdate: n3,
             onSelect: te,
@@ -723,11 +723,11 @@ function nP(e) {
                 t = e.interactionMetadata?.authorizing_integration_owners[nh.b.USER_INSTALL],
                 i = e.interactionMetadata?.authorizing_integration_owners[nh.b.GUILD_INSTALL],
                 s = e.interactionMetadata?.user.id,
-                o = (0, x.bG)([e9.default], () => e9.default.getUser(t)),
+                o = (0, x.bG)([e5.default], () => e5.default.getUser(t)),
                 c = (0, x.bG)([nv.A], () => nv.A.getGuild(i)),
                 d = nD.A.getChannel(e.channel_id),
                 u = d?.getGuildId(),
-                A = (0, x.bG)([e9.default], () => e9.default.getUser(s));
+                A = (0, x.bG)([e5.default], () => e5.default.getUser(s));
             if (
                 (a.useEffect(() => {
                     null == o && null != t && (0, n_.wz)(t);
@@ -872,7 +872,7 @@ function nP(e) {
         tN =
             ((nF = (0, x.bG)([e4.A], () => e4.A.getGuildId())),
             (nX = (0, e2.Qo)(nF)),
-            (0, e5.ul)(n$)
+            (0, e9.ul)(n$)
                 ? (0, l.jsx)(r.Dr, {
                       id: "report",
                       label: nX ? j.intl.string(j.t.n5EBAJ) : j.intl.string(j.t.GwbdGe),
@@ -884,8 +884,8 @@ function nP(e) {
                 : null),
         tR =
             ((nH = (0, x.bG)([eQ.Ay], () => eQ.Ay.get("iar_testing"))),
-            (nz = (0, x.bG)([e9.default], () => e9.default.getCurrentUser())),
-            (0, e5.ul)(n$) && null != nz && nz.isStaff() && nH
+            (nz = (0, x.bG)([e5.default], () => e5.default.getCurrentUser())),
+            (0, e9.ul)(n$) && null != nz && nz.isStaff() && nH
                 ? (0, l.jsx)(r.Dr, {
                       id: "staff-test-message-report",
                       label: "[STAFF] Test Message Report",
@@ -1027,7 +1027,7 @@ function nP(e) {
                 })
             );
         })(n0, nY.getGuildId()),
-        tk = (0, p.A)(n9, n$, {
+        tk = (0, p.A)(n5, n$, {
             shouldHideMediaOptions: tl,
             contentType: nQ?.contentType,
             originalContentType: nQ?.originalContentType,
@@ -1090,7 +1090,7 @@ function nP(e) {
                       action: nZ,
                   })
                 : null),
-        tH = (0, y.A)(n2 ?? n4, n5, n$, { shouldHideMediaOptions: tl }),
+        tH = (0, y.A)(n2 ?? n4, n9, n$, { shouldHideMediaOptions: tl }),
         tz = (0, A.A)({ id: n$.id, label: j.intl.string(j.t.zBoHlf), shiftId: `${n$.channel_id}-${n$.id}` }),
         tK = (function (e) {
             let { messageId: n, itemId: t, type: i, imageSrc: s } = e,

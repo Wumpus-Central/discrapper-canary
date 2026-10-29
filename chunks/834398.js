@@ -1432,7 +1432,7 @@ function nl(e) {
         }),
     });
 }
-var ni = n(235640),
+var ni = n(13259),
     na = n(840387),
     ns = n(268761),
     nr = n(474078),
@@ -1474,7 +1474,7 @@ function nj(e, t, n) {
 function nb(e) {
     return (0, np.W)(e, nh.U.VOICE_CHANNEL);
 }
-var nv = n(389036);
+var nv = n(213738);
 let ny = "none";
 function nE(e) {
     let { channel: t, guildId: n, onChange: i } = e;
@@ -1908,7 +1908,7 @@ function nk(e) {
 var nP = n(746080),
     nU = n(307731),
     nH = n(37411),
-    nV = n(35692);
+    nV = n(590930);
 let nB = {
         popoutLocation: {
             page: eF.liQ.CHANNEL_SETTINGS,

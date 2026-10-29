@@ -344,7 +344,7 @@ var eQ = n(808380),
     e3 = n(266080),
     e2 = n(70191);
 let e5 = { [eQ.Y.XBOX]: e3.A, [eQ.Y.PLAYSTATION]: e1.A };
-function e6(e) {
+function e4(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
         u = r.useMemo(() => {
@@ -371,7 +371,7 @@ function e6(e) {
               return (0, i.jsx)(ea.A, { game: n, size: l, unknownGameIconFallback: u ?? d });
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
-let e4 = G._3.SIZE_32,
+let e6 = G._3.SIZE_32,
     e9 = [et.iq, et.tR, et.K7, et.sp, et.MK];
 function e7(e) {
     let t,
@@ -470,7 +470,7 @@ function e8(e) {
             avatarDecorationSrc: m,
             avatarSrc: I,
             eventHandlers: E,
-        } = (0, eh.A)({ userId: g, size: e4, animateOnHover: !0, guildId: null }),
+        } = (0, eh.A)({ userId: g, size: e6, animateOnHover: !0, guildId: null }),
         A = r.useMemo(() => {
             let e = h ?? "no-group",
                 t = l ?? "no-relationship",
@@ -666,7 +666,7 @@ let tt = r.memo((e) => {
                                 "div",
                                 {
                                     className: eT.im,
-                                    children: (0, i.jsx)(e6, {
+                                    children: (0, i.jsx)(e4, {
                                         activities: n,
                                         gameProfileEntry: N,
                                         gameIconSize: ea.M.SMALL,
@@ -691,7 +691,7 @@ let tt = r.memo((e) => {
         onContextMenu: D,
         avatar: (0, i.jsx)(U.eu, {
             ...S,
-            size: e4,
+            size: e6,
             src: p,
             isMobile: _,
             isTyping: !1,
@@ -824,7 +824,7 @@ let tn = r.memo((e) => {
         onContextMenu: _,
         avatar: (0, i.jsx)(U.eu, {
             ...I,
-            size: e4,
+            size: e6,
             src: m,
             isMobile: S,
             isTyping: !1,
@@ -847,7 +847,7 @@ let tn = r.memo((e) => {
                     G
                         ? (0, i.jsx)("div", {
                               className: eT.im,
-                              children: (0, i.jsx)(e6, {
+                              children: (0, i.jsx)(e4, {
                                   activities: n,
                                   gameProfileEntry: E,
                                   gameIconSize: ea.M.XSMALL,
@@ -1077,7 +1077,7 @@ function tk(e, t) {
         i = r.useCallback(() => l(t), [t]);
     return ((0, ty.RT)(e, t, l, tM), [n, i]);
 }
-var tO = n(671210),
+var tO = n(184748),
     tw = n(690132);
 function tF(e) {
     let {
@@ -1927,7 +1927,7 @@ function t5(e) {
         ],
     });
 }
-function t6(e) {
+function t4(e) {
     let { currentUser: t, activity: n, currentGameName: l, activeTab: u, onTabChange: d } = e,
         {
             friendsHasUnreadFavorites: c,
@@ -1997,7 +1997,7 @@ function t6(e) {
                         l = !0 === E[t],
                         r = !0 === f[t];
                     return (0, i.jsx)(
-                        t4,
+                        t6,
                         {
                             tab: t,
                             label: eB.intl.formatToPlainString(n, {}),
@@ -2013,7 +2013,7 @@ function t6(e) {
         ],
     });
 }
-function t4(e) {
+function t6(e) {
     let {
             tab: t,
             label: n,
@@ -3248,8 +3248,8 @@ function n1() {
 var n3 = n(776096),
     n2 = n(607567),
     n5 = n(377802),
-    n6 = n(342952),
-    n4 = n(676923),
+    n4 = n(342952),
+    n6 = n(676923),
     n9 = n(342296),
     n7 = n(936520),
     n8 = n(956123);
@@ -3379,7 +3379,7 @@ function ll(e) {
         ? null
         : (0, i.jsx)("div", {
               className: n8.X0,
-              children: (0, i.jsx)(n6.A, {
+              children: (0, i.jsx)(n4.A, {
                   users: l,
                   guildId: n ?? void 0,
                   maxUsers: Math.min(l.length, 4),
@@ -3496,7 +3496,7 @@ function li(e) {
             n = f ? H : nx._;
         return (0, i.jsx)("div", {
             onDoubleClick: ln,
-            children: (0, i.jsx)(n4.S, {
+            children: (0, i.jsx)(n6.S, {
                 tooltipText: e,
                 onClick: f ? b : D,
                 onMouseEnter: Y,
@@ -4001,7 +4001,7 @@ function l_() {
     return (0, i.jsxs)("div", {
         className: lT.kL,
         children: [
-            (0, i.jsx)(t6, {
+            (0, i.jsx)(t4, {
                 currentUser: h,
                 activity: E,
                 currentGameName: n?.name ?? null,

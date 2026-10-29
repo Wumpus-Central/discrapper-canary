@@ -97,7 +97,7 @@ let M = {
     };
 var R = l(825484),
     w = l(821609),
-    O = l(39470);
+    O = l(812676);
 let G = (e) => {
     let t,
         {
@@ -887,25 +887,25 @@ let e8 = (e) => {
         ],
     });
 };
-var e9 = l(120337);
-let e5 = (e) => {
+var e5 = l(120337);
+let e9 = (e) => {
     let { guild: t } = e,
         l = (0, V.c)("GuildPreviewElement");
     return (0, n.jsxs)("div", {
-        className: e9.kL,
+        className: e5.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e9.wx,
+                className: e5.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t["0ox7Hq"]),
             }),
             (0, n.jsx)("div", {
-                className: e9.bo,
+                className: e5.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e9.OA,
+                    className: e5.OA,
                     children: [
                         (0, n.jsx)("div", {
-                            className: e9.$f,
+                            className: e5.$f,
                             children: (0, n.jsx)(eX.Ay, { guild: t, size: eX.Ay.Sizes.LARGE }),
                         }),
                         (0, n.jsx)("div", {
@@ -1544,7 +1544,7 @@ function t3(e) {
 var t2 = l(778712),
     t4 = l(730134),
     t8 = l(243899);
-let t9 = (e) => {
+let t5 = (e) => {
     let { user: t } = e,
         l = (0, V.c)("UserPreviewElement");
     return (0, n.jsxs)("div", {
@@ -1582,7 +1582,7 @@ let t9 = (e) => {
         ],
     });
 };
-var t5 = l(95077),
+var t9 = l(95077),
     t6 = l(287809),
     t7 = l(818972);
 let le = (e) => {
@@ -1599,7 +1599,7 @@ let le = (e) => {
                           variant: i ? "heading-sm/medium" : "heading-sm/semibold",
                           children: T.intl.string(T.t.SpsnDY),
                       }),
-                      (0, n.jsx)(t5.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
+                      (0, n.jsx)(t9.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
                   ],
               });
     },
@@ -1837,11 +1837,11 @@ let la = (e) => {
                     null != ln(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
                         (0, n.jsx)(tb, { message: l.record }),
-                    null != ln(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t9, { user: l.record }) : null,
+                    null != ln(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t5, { user: l.record }) : null,
                     null != ln(t, "widget_preview") && "widget" === l.name
                         ? (0, n.jsx)(le, { widget: l.widget, userId: l.user_id })
                         : null,
-                    null != ln(t, "guild_preview") && "guild" === l.name ? (0, n.jsx)(e5, { guild: l.record }) : null,
+                    null != ln(t, "guild_preview") && "guild" === l.name ? (0, n.jsx)(e9, { guild: l.record }) : null,
                     null != ln(t, "breadcrumbs") && (0, n.jsx)(es, { isModeratorReport: U, history: r }),
                     (function (e) {
                         let { elements: t } = e;

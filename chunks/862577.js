@@ -22,9 +22,9 @@ var l = n(477900),
     O = n(652215);
 let h = "social-layer-storefront-coupon-purchase-complete-modal";
 var P = n(317560),
-    v = n(206285),
+    v = n(924919),
     y = n(105292),
-    R = n(1889);
+    R = n(535975);
 function x(e) {
     let { applicationId: t, coupon: x, discountPercent: _, analyticsLocations: w, surface: b = "storefront" } = e,
         { skuId: L, applicationId: D } = x,

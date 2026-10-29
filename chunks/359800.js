@@ -5,7 +5,7 @@ var i = n(477900),
     u = n(858899),
     a = n(475743),
     o = n(942370),
-    s = n(211850),
+    s = n(778344),
     c = n(105292);
 let f = "in-game-auth-check-modal";
 function g(t, e) {

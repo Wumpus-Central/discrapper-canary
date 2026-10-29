@@ -48,7 +48,7 @@ var i,
     Z = n(788026),
     Y = n(915089),
     $ = n(60587),
-    q = n(732447),
+    q = n(609313),
     Q = n(105292),
     ee = n(126904);
 let et = r.memo(function (e) {
@@ -542,9 +542,9 @@ function e3(e) {
         },
     });
 }
-var e5 = n(200589),
-    e4 = n(435558),
-    e8 = n.n(e4),
+var e4 = n(200589),
+    e5 = n(435558),
+    e8 = n.n(e5),
     e6 = n(837381),
     e7 = n(460905),
     e9 = n(775602),
@@ -767,7 +767,7 @@ let tZ = (e) => {
         })({ sectionDescriptors: i, emojiListRef: n }),
         g = (0, p.p)(),
         h = (0, eV.ss)(s, a, { guildId: a?.guild_id ?? c }),
-        A = r.useMemo(() => (0, e5.t)(u ? (0, eV.CQ)() : h, d), [h, d, u]),
+        A = r.useMemo(() => (0, e4.t)(u ? (0, eV.CQ)() : h, d), [h, d, u]),
         _ = r.useRef(null),
         N = (0, m.bG)([tc.A], () => tc.A.isFocused()),
         C = (0, m.bG)([e9.Ay], () => e9.Ay.useReducedMotion, []),
@@ -942,13 +942,13 @@ let t$ = function (e) {
         ],
     });
 };
-var tq = n(399513),
+var tq = n(941143),
     tQ = n(717421),
     t0 = n(343032),
     t1 = n(683063),
     t2 = n(748798);
 let t3 = { tension: 750, mass: 2.5, friction: 70 };
-function t5(e) {
+function t4(e) {
     let { checked: t, onClick: n, buttonRef: i } = e,
         s = (0, m.bG)([e9.Ay], () => e9.Ay.useReducedMotion),
         a = U.default.getCurrentUser(),
@@ -993,7 +993,7 @@ function t5(e) {
         }),
     });
 }
-var t4 = n(821609),
+var t5 = n(821609),
     t8 = n(644508),
     t6 = n(824832),
     t7 = n(267102),
@@ -1028,7 +1028,7 @@ function ne(e) {
             (0, l.jsx)(b.m, {
                 asContainer: !0,
                 text: d ? Q.intl.string(Q.t.RMbedC) : null,
-                children: (0, l.jsx)(t4.$, {
+                children: (0, l.jsx)(t5.$, {
                     text: Q.intl.string(Q.t.iMJO37),
                     variant: "secondary",
                     onClick: function () {
@@ -1254,7 +1254,7 @@ let np = function (e) {
                     autoFocus: u,
                     defaultSearchPlaceholder: (0, eV.wT)(i, f),
                 }),
-                i === ez.EmojiIntention.REACTION ? (0, l.jsx)(t5, { checked: f, onClick: E, buttonRef: I }) : null,
+                i === ez.EmojiIntention.REACTION ? (0, l.jsx)(t4, { checked: f, onClick: E, buttonRef: I }) : null,
                 n ?? (0, l.jsx)(nm, { searchBarRef: d, className: nh.fx, selectedSurrogate: m }),
                 i !== ez.EmojiIntention.NO_CUSTOM_EMOJI && h ? (0, l.jsx)(ne, { channel: t, closePopout: p }) : null,
             ],
@@ -1850,8 +1850,8 @@ let n1 = (e) => {
 };
 var n2 = n(618723);
 let n3 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
-    n5 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
-    n4 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
+    n4 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
+    n5 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
     n8 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
     n6 = (0, eJ.xI)(E.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
     n7 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
@@ -2120,7 +2120,7 @@ let n3 = (0, eJ.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                         [t, d, R, b],
                     );
                 return {
-                    listPadding: r.useMemo(() => ["" !== u ? n8 : n3, n5, n4, 0], [u]),
+                    listPadding: r.useMemo(() => ["" !== u ? n8 : n3, n4, n5, 0], [u]),
                     renderRow: D,
                     renderSection: U,
                     renderSectionHeader: w,
@@ -2403,7 +2403,7 @@ let i_ = u()(eV.bo, 200),
             eE = r.useRef(null),
             eI = r.useRef(null),
             eN = r.useRef(null),
-            eC = null != ee && !z && (0, e5.z)(c),
+            eC = null != ee && !z && (0, e4.z)(c),
             ex = r.useCallback((e) => {
                 (eN.current?.focus(), (0, O.M5)(e));
             }, []),
@@ -2436,8 +2436,8 @@ let i_ = u()(eV.bo, 200),
             { diversitySurrogate: e0 } = (0, m.cf)([j.Ay], () => ({ diversitySurrogate: j.Ay.diversitySurrogate })),
             e1 = (0, eV.sL)(ef, u, c, z),
             e2 = null == e1 ? 0 : e1.locked.length + e1.unlocked.length,
-            e4 = eU.iM.useSetting(),
-            e6 = r.useMemo(() => new Set(e4), [e4]),
+            e5 = eU.iM.useSetting(),
+            e6 = r.useMemo(() => new Set(e5), [e5]),
             e7 = r.useCallback((e) => {
                 eU.iM.updateSetting(Array.from(e));
             }, []),

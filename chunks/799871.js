@@ -2,7 +2,7 @@
 var i,
     s = n(477900),
     l = n(582128),
-    r = n(399513),
+    r = n(941143),
     a = n(17928),
     o = n(554146),
     d = n(451988),
@@ -312,20 +312,20 @@ function e6(e) {
     });
 }
 var e8 = n(562708),
-    e5 = n(702841),
-    e7 = n(139286),
-    e2 = n(468689),
+    e2 = n(702841),
+    e5 = n(139286),
+    e7 = n(468689),
     e4 = n(105292),
     e9 = n(330766);
 function te(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e5.bG)([P.A, eE.default], () => {
+        l = (0, e2.bG)([P.A, eE.default], () => {
             let e = eE.default.getCurrentUser(),
                 n = P.A.getGuild(t);
             return null != n && (0, eh.bM)(n, e);
         });
     return (
-        (0, e7.A)({
+        (0, e5.A)({
             type: e8.ImpressionTypes.POPOUT,
             name: e8.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -340,7 +340,7 @@ function te(e) {
                     text: e4.intl.string(e4.t.OgQQbG),
                     variant: "primary",
                     onClick: function () {
-                        e2.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
+                        e7.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
                     },
                 },
             ],
@@ -361,7 +361,7 @@ function tt(e) {
             text: e4.intl.string(e4.t.BQq86h),
             variant: "primary",
             onClick: function () {
-                e2.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                e7.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
         },
         onRequestClose: () => n(el.i.USER_DISMISS),
@@ -403,7 +403,7 @@ function ta(e) {
                 text: e4.intl.string(e4.t["9l+df7"]),
                 variant: "primary",
                 onClick: function (e) {
-                    e2.A.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
+                    e7.A.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
                 },
             },
         ],
@@ -780,9 +780,9 @@ var tY = n(503698),
     t3 = n(104171),
     t6 = n(47167),
     t8 = n(713654),
-    t5 = n(976860),
-    t7 = n(747376),
-    t2 = n(110618),
+    t2 = n(976860),
+    t5 = n(747376),
+    t7 = n(110618),
     t4 = n(280450),
     t9 = n(309010),
     ne = n(312006),
@@ -1042,7 +1042,7 @@ function nC(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t7.av)(t), (0, t5.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t5.av)(t), (0, t2.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1122,7 +1122,7 @@ function nN(e) {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: nc.c8,
-                                    children: (0, t2.c)(o, d, n?.id, i.length),
+                                    children: (0, t7.c)(o, d, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1220,7 +1220,7 @@ function nR(e) {
         type: j.n5X.COMMANDS_MIGRATION,
         image: "/assets/ab63b30e9bc8855c.svg",
         onClick: () => {
-            (n(), e2.A.open(t.id, j.BEX.INTEGRATIONS));
+            (n(), e7.A.open(t.id, j.BEX.INTEGRATIONS));
         },
         imageMarginTop: 15,
         imageMarginX: 22,
@@ -1265,7 +1265,7 @@ function nD(e) {
               type: j.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: "/assets/eaaec668caed688e.svg",
               onClick: () => {
-                  (r(), e2.A.open(n.id, j.BEX.INTEGRATIONS));
+                  (r(), e7.A.open(n.id, j.BEX.INTEGRATIONS));
               },
               imageMarginTop: 6,
               imageMarginX: 46,
@@ -1297,7 +1297,7 @@ let nG = function (e) {
     return (0, s.jsx)(tb, {
         guild: t,
         onDismissed: n,
-        onClick: () => e2.A.open(t.id, j.BEX.COMMUNITY),
+        onClick: () => e7.A.open(t.id, j.BEX.COMMUNITY),
         message: e4.intl.string(e4.t["2klD0Z"]),
         trackingSource: j.kZU.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: j.n5X.PUBLIC_UPSELL,
@@ -1466,11 +1466,11 @@ let n0 = new nJ(m.h),
     ],
     n6 = n3.map((e) => e.store).filter(nt.Vq),
     n8 = new Set([o.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, o.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n5(e) {
+function n2(e) {
     e.stopPropagation();
 }
-let n7 = [];
-function n2(e) {
+let n5 = [];
+function n7(e) {
     var t, n;
     let i,
         r,
@@ -1493,7 +1493,7 @@ function n2(e) {
             (c = d && u),
             l.useMemo(() => {
                 let e = [];
-                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n7);
+                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n5);
             }, [c])),
         [g, I] = (0, Z.ww)(m, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
@@ -1539,7 +1539,7 @@ function n2(e) {
                     return null;
             }
         })();
-    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n5, children: R });
+    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n2, children: R });
 }
 let n4 = function (e) {
     let { guild: t } = e;
@@ -1557,7 +1557,7 @@ let n4 = function (e) {
         case z.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, s.jsx)(nD, { guild: t });
     }
-    return nb.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n2, { guild: e.guild });
+    return nb.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n7, { guild: e.guild });
 };
 var n9 = n(883476);
 function ie(e) {
@@ -1929,7 +1929,7 @@ class ia extends l.PureComponent {
                     n.e("477175"),
                     n.e("960235"),
                     n.e("585968"),
-                    n.e("910486"),
+                    n.e("402040"),
                     n.e("198329"),
                     n.e("678157"),
                     n.e("942374"),
@@ -1942,7 +1942,7 @@ class ia extends l.PureComponent {
                     n.e("397270"),
                     n.e("190779"),
                     n.e("373122"),
-                    n.e("217951"),
+                    n.e("715881"),
                     n.e("221856"),
                     n.e("186212"),
                     n.e("755936"),
@@ -1961,7 +1961,7 @@ class ia extends l.PureComponent {
                     n.e("958038"),
                     n.e("532039"),
                     n.e("719466"),
-                    n.e("178565"),
+                    n.e("234503"),
                     n.e("413846"),
                     n.e("576909"),
                     n.e("27355"),
@@ -2024,7 +2024,7 @@ class ia extends l.PureComponent {
                     n.e("147626"),
                     n.e("613867"),
                     n.e("952548"),
-                    n.e("164776"),
+                    n.e("917298"),
                     n.e("203589"),
                     n.e("636373"),
                     n.e("294857"),
@@ -2063,7 +2063,7 @@ class ia extends l.PureComponent {
                     n.e("731503"),
                     n.e("803332"),
                     n.e("859546"),
-                    n.e("556576"),
+                    n.e("42942"),
                     n.e("432805"),
                     n.e("938149"),
                     n.e("408362"),
@@ -2121,7 +2121,7 @@ class ia extends l.PureComponent {
                     n.e("460773"),
                     n.e("883952"),
                     n.e("159957"),
-                    n.e("28676"),
+                    n.e("82814"),
                     n.e("540715"),
                     n.e("458273"),
                     n.e("208018"),
@@ -2184,7 +2184,7 @@ class ia extends l.PureComponent {
                     n.e("346313"),
                     n.e("463726"),
                     n.e("553203"),
-                    n.e("816589"),
+                    n.e("897975"),
                     n.e("115368"),
                     n.e("636002"),
                     n.e("343233"),
@@ -2195,7 +2195,7 @@ class ia extends l.PureComponent {
                     n.e("359702"),
                     n.e("708364"),
                     n.e("452823"),
-                    n.e("779348"),
+                    n.e("556967"),
                     n.e("647011"),
                     n.e("205896"),
                     n.e("269178"),
@@ -2670,15 +2670,15 @@ function io(e) {
         eq && e8.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
         e$ && e8.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         eM && e8.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
-    let e5 = (0, q.uW)([
+    let e2 = (0, q.uW)([
             ...e8,
             o.M.GUILD_HEADER_COACHMARK,
             o.M.GAME_SERVER_NEW_GAMES_COACHMARK,
             o.M.BOOST_TO_UNLOCK_COACHMARK,
             o.M.EXPIRING_POWERUP_COACHMARK,
         ]),
-        e7 = (0, eR.Dq)(G) && !e5,
-        e2 = (function (e) {
+        e5 = (0, eR.Dq)(G) && !e2,
+        e7 = (function (e) {
             let t = (0, es.c)(ei.C.GUILD_HEADER_COACHMARK),
                 n =
                     null != t && "guildHeaderCoachmark" === t.properties.properties.oneofKind
@@ -2697,34 +2697,34 @@ function io(e) {
                 coachmark: n,
                 markAsDismissed: l,
             };
-        })(e7 ? null : L),
-        [e4, e9] = (0, Z.kn)(e7 ? [] : e8, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
-        [te, tt] = (0, ex.vB)(eQ && !1 === eY && !(0, $.ai)(L) && !e7, el.m.GUILD_HEADER_TOOLTIPS),
+        })(e5 ? null : L),
+        [e4, e9] = (0, Z.kn)(e5 ? [] : e8, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [te, tt] = (0, ex.vB)(eQ && !1 === eY && !(0, $.ai)(L) && !e5, el.m.GUILD_HEADER_TOOLTIPS),
         [tn, ti] = (0, Z.D8)(
-            e1 && !e7 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
+            e1 && !e5 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,
             { cooldownDurationMs: eL.bW, numTimesToRecur: 5 },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         [ts, tl] = (0, Z.D8)(
-            e6 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            e6 && !e5 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
             L,
             { cooldownDurationMs: eL.mD },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         tr = l.useMemo(
             () =>
-                e2.shouldShow && null != e2.coachmark
+                e7.shouldShow && null != e7.coachmark
                     ? {
                           contentType: o.M.GUILD_HEADER_COACHMARK,
                           data: {
                               marketingComponent: {
-                                  componentId: e2.componentId,
-                                  promotionId: e2.promotionId,
-                                  coachmark: e2.coachmark,
+                                  componentId: e7.componentId,
+                                  promotionId: e7.promotionId,
+                                  coachmark: e7.coachmark,
                               },
                           },
-                          markAsDismissed: e2.markAsDismissed,
+                          markAsDismissed: e7.markAsDismissed,
                       }
                     : null != e4
                       ? { contentType: e4, data: null, markAsDismissed: e9 }
@@ -2736,11 +2736,11 @@ function io(e) {
                             ? { contentType: ts, data: { featuredExpiringPowerup: e3 }, markAsDismissed: tl }
                             : null,
             [
-                e2.shouldShow,
-                e2.coachmark,
-                e2.componentId,
-                e2.promotionId,
-                e2.markAsDismissed,
+                e7.shouldShow,
+                e7.coachmark,
+                e7.componentId,
+                e7.promotionId,
+                e7.markAsDismissed,
                 e4,
                 te,
                 tn,
@@ -2769,11 +2769,11 @@ function io(e) {
         hasChannelNotice: null != V || X,
         anyLayerOpen: K || F || W,
         showGuildHeaderTutorial: z,
-        showPriorityHeaderNotice: e7,
+        showPriorityHeaderNotice: e5,
         showGuildTemplateDirtyTooltip: eg,
         showNewUnreadsBar: e_,
         isHeaderPopoutOpen: eC,
-        isGuildHeaderDismissibleTooltipShown: e5,
+        isGuildHeaderDismissibleTooltipShown: e2,
         headerAnalyticsLocations: k,
         shouldRenderBurstCoachmark: !eN,
         guildHeaderContentDescriptor: tr,
