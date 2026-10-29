@@ -7,7 +7,7 @@ var l = t(477900),
     o = t(683063),
     c = t(939249),
     u = t(265872),
-    d = t(565645),
+    d = t(788026),
     m = t(666860),
     h = t(189551),
     p = t(174459),
@@ -99,7 +99,7 @@ let k = (e) => {
         [S, M] = a.useState(!1),
         [L, T] = a.useState(!1),
         _ = a.useRef(null);
-    function O(e) {
+    function w(e) {
         return (0, l.jsx)(d.A, {
             emojiName: n.name,
             size: e ?? (n.jumboable ? "jumbo" : "default"),
@@ -110,10 +110,10 @@ let k = (e) => {
             messageId: I,
         });
     }
-    let P = (0, s.A)();
-    function w(e) {
+    let O = (0, s.A)();
+    function P(e) {
         return (0, l.jsx)(o.u, {
-            asset: O("jumbo"),
+            asset: w("jumbo"),
             title: n.name,
             titleLineClamp: 1,
             body: i ? C.intl.string(C.t["515vjG"]) : "",
@@ -124,7 +124,7 @@ let k = (e) => {
             onTooltipShow: () => {
                 (M(!0),
                     i &&
-                        (N({ emojiNode: n, isCustomEmoji: !0, nonce: P }),
+                        (N({ emojiNode: n, isCustomEmoji: !0, nonce: O }),
                         (0, h.K)(A.EmojiInteractionPoint.CustomEmojiTooltipShown)));
             },
             children: (0, l.jsx)(c.D, {
@@ -139,12 +139,12 @@ let k = (e) => {
                       }
                     : void 0,
                 onMouseLeave: () => {
-                    S && (p.default.track(j.HAw.CLOSE_POPOUT, { nonce: P }), M(!1));
+                    S && (p.default.track(j.HAw.CLOSE_POPOUT, { nonce: O }), M(!1));
                 },
                 tag: "span",
                 tabIndex: m ? 0 : -1,
                 className: r()(E.qq, { [E._Y]: i, [E.gp]: n.jumboable }),
-                children: O(),
+                children: w(),
             }),
         });
     }
@@ -154,19 +154,19 @@ let k = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  (p.default.track(j.HAw.CLOSE_POPOUT, { nonce: P }), M(!1), T(!1));
+                  (p.default.track(j.HAw.CLOSE_POPOUT, { nonce: O }), M(!1), T(!1));
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: "right",
               renderPopout: function (e) {
-                  return (0, l.jsx)(g.iP, { ...e, node: n, refreshPositionKey: () => b(String(Date.now())), nonce: P });
+                  return (0, l.jsx)(g.iP, { ...e, node: n, refreshPositionKey: () => b(String(Date.now())), nonce: O });
               },
               positionKey: v,
               targetElementRef: _,
-              children: w,
+              children: P,
           })
-        : w();
+        : P();
 };
 function N(e) {
     let { emojiNode: n, isCustomEmoji: t, nonce: l } = e;

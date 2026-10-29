@@ -771,7 +771,7 @@ let tN = (0, h.zD)(S.X.ENABLE_APPS_BUTTON, {
         usePredicate: () => (0, tI.n)("ChatBarAdvancedAccordion"),
         buildLayout: () => [tb, tN, tD],
     });
-var tG = n(565645);
+var tG = n(788026);
 let tM = (0, h.zD)(S.X.CHAT_EMOJI_CONVERT_EMOTICONS, {
         useTitle: () => V.intl.string(V.t["79qal8"]),
         useSubtitle: () =>

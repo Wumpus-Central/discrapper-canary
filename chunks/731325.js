@@ -471,8 +471,8 @@ var eZ = n(404778),
     e2 = n(631576),
     e5 = n(369163),
     e3 = n(123292),
-    e6 = n(631305),
-    e8 = n(468689),
+    e8 = n(631305),
+    e6 = n(468689),
     e7 = n(931991),
     e4 = n(473145),
     e9 = n(625633),
@@ -515,7 +515,7 @@ let tt = function (e) {
                           text: eb.intl.string(eb.t["Gb+BJD"]),
                           onClick: function () {
                               null != h &&
-                                  (0, e6.A)({
+                                  (0, e8.A)({
                                       analyticsLocations: c,
                                       analyticsSourceLocation: u,
                                       guild: h,
@@ -546,7 +546,7 @@ let tt = function (e) {
                           variant: "primary",
                           text: eb.intl.string(eb.t.bwNjug),
                           onClick: function () {
-                              ((0, B.v8)(), e8.A.open(n, eA.BEX.STICKERS, u));
+                              ((0, B.v8)(), e6.A.open(n, eA.BEX.STICKERS, u));
                           },
                       }),
                   ],
@@ -721,6 +721,7 @@ let tS = i.memo(function (e) {
                                                 n.e("699733"),
                                                 n.e("689827"),
                                                 n.e("268582"),
+                                                n.e("848625"),
                                                 n.e("883952"),
                                                 n.e("66580"),
                                                 n.e("480436"),
@@ -1600,8 +1601,8 @@ function t3(e) {
         ],
     });
 }
-var t6 = n(970099);
-let t8 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+var t8 = n(970099);
+let t6 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     t7 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     t4 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     t9 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
@@ -1670,7 +1671,7 @@ function na(e) {
             },
             [s, S, H],
         ),
-        J = null != N && N > t8,
+        J = null != N && N > t6,
         {
             rowCount: Y,
             rowCountBySection: ee,
@@ -1770,6 +1771,7 @@ function na(e) {
                                         n.e("699733"),
                                         n.e("689827"),
                                         n.e("268582"),
+                                        n.e("848625"),
                                         n.e("883952"),
                                         n.e("66580"),
                                         n.e("480436"),
@@ -1834,16 +1836,16 @@ function na(e) {
         children: [
             !(f && v && !u) &&
                 (0, l.jsx)("div", {
-                    className: t6.wx,
+                    className: t8.wx,
                     children: (0, l.jsx)(t$, { ref: x, onKeyDown: em, stickersListRef: g, channel: r }),
                 }),
             v
-                ? (0, l.jsx)(eQ, { className: t6.p$, onClose: a })
+                ? (0, l.jsx)(eQ, { className: t8.p$, onClose: a })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
                               ref: p,
-                              className: t6.AD,
+                              className: t8.AD,
                               id: eH.lq,
                               ...eh,
                               children:
@@ -1878,11 +1880,11 @@ let no = function (e) {
     return (
         (0, R.XQ)(),
         (0, l.jsx)("div", {
-            className: t6.iE,
+            className: t8.iE,
             id: eH.GX,
             "aria-labelledby": eH.LD,
             role: "tabpanel",
-            children: n.isLoading ? (0, l.jsx)(D.y, { className: t6.Mz }) : (0, l.jsx)(na, { ...n, ref: t }),
+            children: n.isLoading ? (0, l.jsx)(D.y, { className: t8.Mz }) : (0, l.jsx)(na, { ...n, ref: t }),
         })
     );
 };

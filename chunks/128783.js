@@ -5,7 +5,7 @@ var l = n(477900),
     a = n(17928),
     r = n(95701),
     o = n(769591),
-    c = n(517092),
+    c = n(804326),
     d = n(834730),
     u = n(821609),
     h = n(744898),
@@ -27,15 +27,15 @@ var A = n(832712),
     S = n(790782),
     I = n(355097),
     y = n(105292),
-    j = n(113528);
-function v(e) {
+    _ = n(113528);
+function j(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, l.jsxs)("div", {
-        className: j.l,
+        className: _.l,
         children: [
             (0, l.jsx)(p, { id: t.id }),
             (0, l.jsx)("div", {
-                className: j.p,
+                className: _.p,
                 children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: y.intl.format(y.t.P6Y2N1, {}) }),
             }),
             (0, l.jsx)(u.$, {
@@ -61,7 +61,7 @@ function v(e) {
         ],
     });
 }
-var _ = n(228098),
+var v = n(228098),
     b = n(157259),
     N = n(503698),
     T = n.n(N),
@@ -153,7 +153,7 @@ function O(e) {
 var G = n(626360);
 let U = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
-        d = (0, _.A)(t),
+        d = (0, v.A)(t),
         u = (0, s.A)(),
         { showUnreadsNotice: h, clearUnreadsNotice: m } = (function (e) {
             let t = (0, o.os)("useShouldRenderBanner"),
@@ -175,7 +175,7 @@ let U = i.memo(function (e) {
           : t.isLockedThread()
             ? (0, l.jsx)(O, { channel: t, narrow: n })
             : h
-              ? (0, l.jsx)(v, { channel: t, clearUnreadsNotice: m })
+              ? (0, l.jsx)(j, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
                 ? (0, l.jsx)(b.A, { channel: t, narrow: n })
                 : null;

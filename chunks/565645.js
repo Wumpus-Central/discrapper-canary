@@ -1,142 +1,88 @@
-n.d(t, { A: () => S });
-var i = n(477900),
-    s = n(582128),
-    r = n(503698),
-    a = n.n(r),
-    l = n(17928),
-    o = n(724442),
-    u = n(692051),
-    c = n(868132),
-    d = n(498924),
-    m = n(776231),
-    h = n(830178),
-    p = n(253932),
-    f = n(532294),
-    g = n(486020),
-    C = n(690521),
-    y = n(218394),
-    b = n(732139);
-let v = __OVERLAY__ ? () => (0, l.bG)([f.default], () => f.default.isInstanceFocused()) : y.j;
-function x(e) {
-    let {
-            src: t,
-            alt: n,
-            className: r,
-            emojiId: l,
-            emojiName: u,
-            channelId: h,
-            messageId: f,
-            animated: y,
-            size: x = "default",
-            isInteracting: A = !1,
-            shouldAnimate: S,
-            onMouseEnter: j,
-            onMouseLeave: N,
-            canSelect: E = !0,
-            autoplay: R,
-            registerInnerRef: w,
-            registerAnimatedElementRef: V,
-            surrogate: k,
-            ...F
-        } = e,
-        [B, M] = s.useState(!1),
-        [U, _] = s.useState(void 0),
-        I = s.useRef(void 0),
-        { triggerAnimation: z, untriggerAnimation: L } = s.useContext(d.w),
-        P = p.Sf.useSetting(),
-        T = v(),
-        W = null == R ? P : R,
-        D = b.Ec[x],
-        G = s.useRef(null),
-        O = s.useMemo(() => {
-            if (null != t) return t;
-            if (null != l) {
-                let e = !0 === S && W;
-                return g.Ay.getEmojiURL({ id: l, animated: T && !0 === y && (e || B || !0 === A), size: D });
-            }
-            if (null != u) return C.Ay.getURL(u);
-            throw Error("Unknown Src for Emoji");
-        }, [y, W, l, u, D, T, B, A, S, t]),
-        Y = s.useCallback(() => {
-            null != O &&
-                (I.current = (0, m.yt)(O, (e) => {
-                    e || _(Date.now());
-                }));
-        }, [O]),
-        H = s.useCallback(
-            (e) => {
-                (y && M(!0), null == l && z(u), j?.(e));
-            },
-            [y, u, j, z, l],
-        ),
-        q = s.useCallback(
-            (e) => {
-                (y && M(!1), null == l && L(u), N?.(e));
-            },
-            [y, l, u, N, L],
-        ),
-        $ = s.useMemo(() => {
-            let e = null != l && "" !== l ? { "data-id": l } : { "data-name": u };
-            return {
-                ...F,
-                className: a()("emoji", r, { jumboable: "jumbo" === x }),
-                onError: Y,
-                onMouseEnter: H,
-                onMouseLeave: q,
-                "data-type": "emoji",
-                ...e,
-            };
-        }, [r, l, u, H, q, Y, F, x]);
-    s.useEffect(() => () => I.current?.(), []);
-    let J = s.useCallback(
-            (e) => {
-                ((G.current = e), w?.(e), V?.(e));
-            },
-            [w, V],
-        ),
-        K = (0, o.A)(G);
-    return null == O || "" === O
-        ? (0, i.jsx)("span", { ...$, ref: J, className: a()("emoji", "emoji-text"), children: k ?? u })
-        : (0, i.jsxs)(i.Fragment, {
-              children: [
-                  (0, i.jsx)(c.q, {
-                      channelId: h,
-                      messageId: f,
-                      emojiName: u,
-                      disable: !1 === W || !1 === P,
-                      emojiRef: K,
-                  }),
-                  E
-                      ? (0, i.jsx)("img", { ...$, ref: J, src: O, alt: n ?? u ?? void 0, draggable: !1 }, U)
-                      : (0, i.jsx)(
-                            "div",
-                            {
-                                ...$,
-                                ref: J,
-                                role: "img",
-                                "aria-label": n ?? u ?? void 0,
-                                style: {
-                                    backgroundImage: `url(${O})`,
-                                    backgroundSize: "contain",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundPosition: "center center",
-                                },
-                            },
-                            U,
-                        ),
-              ],
-          });
+(n.d(t, { q: () => S }), n(938796));
+var i = n(665260),
+    r = n(734057),
+    a = n(696451),
+    s = n(71393),
+    l = n(701785),
+    o = n(65995),
+    d = n(707167),
+    c = n(652215),
+    u = n(340837);
+n(801541);
+var _ = n(889137),
+    E = n(790782);
+function A(e, t) {
+    return (0, _.YW)([t, e])
+        .with([c.orn.ALL_MESSAGES, E.e.ALL_MESSAGES], () => "all_messages")
+        .with([c.orn.ONLY_MENTIONS, E.e.UNSET], () => "mentions")
+        .with([c.orn.ONLY_MENTIONS, E.e.ONLY_MENTIONS], () => "mentions")
+        .with([c.orn.NO_MESSAGES, E.e.UNSET], () => "nothing")
+        .with([c.orn.NO_MESSAGES, E.e.ONLY_MENTIONS], () => "nothing")
+        .otherwise(() => "custom");
 }
-function A(e) {
-    let { useThoughtfullyAnimated: t } = s.useContext(h.W),
-        { animate: n, registerRef: r } = t(),
-        { disableAnimations: a } = s.useContext(u.Y);
-    return (0, i.jsx)(x, { ...e, registerAnimatedElementRef: r, shouldAnimate: n && !a });
-}
+n(105292);
+var h = n(576705),
+    f = n(573163),
+    I = n(543465),
+    p = n(287809),
+    T = n(927813),
+    m = n(666860),
+    g = n(746080);
 function S(e) {
-    return null == e.emojiId && null == e.emojiName && null == e.src
-        ? null
-        : e.animated && void 0 === e.shouldAnimate
-          ? (0, i.jsx)(A, { ...e })
-          : (0, i.jsx)(x, { ...e });
+    var t;
+    let n, _;
+    if ((0, g.jq)(e)) return { channel_static_route: e };
+    let E = r.A.getChannel(e);
+    if (null == E) return { channel_id: e };
+    let S = s.A.getGuild(E.guild_id);
+    if (null == S) {
+        let t = !1;
+        if (E.isDM()) {
+            let e = p.default.getUser(E.recipients[0]);
+            null != e && (t = e.bot);
+        }
+        let n = E.isDM() || E.isGroupDM() ? (0, m.g4)(E.recipients) : null;
+        return {
+            channel_id: e,
+            is_app_dm: t,
+            ...(null != n
+                ? { friend_recipient_count: n.friendCount, non_friend_recipient_count: n.nonFriendCount }
+                : null),
+        };
+    }
+    let N = f.Ay.getSnapshot(e, 10 * T.A.Millis.SECOND);
+    return {
+        channel_id: e,
+        channel_was_unread: N.unread,
+        channel_mention_count: N.mentionCount,
+        channel_is_muted: I.Ay.isChannelMuted(E.guild_id, E.id),
+        channel_is_nsfw: E.isNSFW(),
+        channel_is_spoiler: E.isSpoilerChannel(),
+        channel_resolved_unread_setting: I.Ay.resolveUnreadSetting(E),
+        channel_preset: A(I.Ay.resolveUnreadSetting(E), I.Ay.resolvedMessageNotifications(E)),
+        guild_id: E.guild_id,
+        guild_was_unread: N.guildUnread,
+        guild_mention_count: N.guildMentionCount,
+        guild_is_muted: I.Ay.isMuted(E.guild_id),
+        guild_resolved_unread_setting: I.Ay.resolveGuildUnreadSetting(S),
+        guild_preset: A(I.Ay.resolveGuildUnreadSetting(S), I.Ay.getMessageNotifications(E.guild_id)),
+        parent_id: E.parent_id,
+        parent_channel_type: E.parentChannelThreadType,
+        has_pending_member_action:
+            ((t = E.guild_id),
+            (n = s.A.getGuild(t)),
+            (_ = r.A.getChannel(e)),
+            null != n &&
+                null != _ &&
+                (0, d.A)(n) &&
+                n.features.has(c.GuildFeatures.GUILD_SERVER_GUIDE) &&
+                !i.Lt(a.Ay.getSelfMember(n.id)?.flags ?? 0, u.D.COMPLETED_HOME_ACTIONS) &&
+                l.h.hasMemberAction(n.id, _.id) &&
+                !o.A.hasCompletedActionForChannel(n.id, _.id)),
+        can_send_message: h.A.can(c.xBc.SEND_MESSAGES, E),
+        is_app_dm: !1,
+        ...((E.type === c.rbe.GUILD_APP || E.isGuildVocal()) && null != E.application_id
+            ? { application_id: E.application_id }
+            : null),
+    };
 }

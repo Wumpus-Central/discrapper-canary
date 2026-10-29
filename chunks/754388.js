@@ -604,11 +604,11 @@ var eQ = n(554146),
     eY = n(695366),
     e0 = n(834730),
     e1 = n(789645),
-    e2 = n(565645),
+    e2 = n(788026),
     e5 = n(775602),
     e3 = n(826673),
-    e6 = n(182922),
-    e8 = n(532624),
+    e8 = n(182922),
+    e6 = n(532624),
     e7 = n(531685),
     e4 = n(723702),
     e9 = n(350535),
@@ -620,9 +620,9 @@ function tt(e) {
         a = (0, m.bG)([ef.A], () => ef.A.getGuild(t?.guildId)),
         o = (0, m.bG)([e5.Ay], () => e5.Ay.useReducedMotion, []),
         u = (0, m.bG)([e7.A], () => e7.A.isFocused()),
-        c = (0, m.bG)([e8.Ay], () => e8.Ay.getKeybindForAction(eC.hCu.SOUNDBOARD_HOLD));
+        c = (0, m.bG)([e6.Ay], () => e6.Ay.getKeybindForAction(eC.hCu.SOUNDBOARD_HOLD));
     if (null != t && r.length > 0)
-        return (0, l.jsx)(e6.A, {
+        return (0, l.jsx)(e8.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(e2.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: te.Zg })
@@ -684,6 +684,7 @@ function ts(e) {
                 n.e("775417"),
                 n.e("67491"),
                 n.e("308555"),
+                n.e("848625"),
                 n.e("883952"),
                 n.e("220287"),
                 n.e("66580"),
@@ -1267,7 +1268,7 @@ function tx(e) {
             [eM, eP, eV, eL.length],
         ),
         e3 = i.useCallback((e) => eR((0, ec.lG)(e, $, W, r, _)), [r, W, $, _]),
-        e6 = i.useCallback(
+        e8 = i.useCallback(
             (e) => {
                 (0, j.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1276,7 +1277,7 @@ function tx(e) {
             },
             [_],
         ),
-        e8 = (0, ek._)("SoundboardSoundGrid"),
+        e6 = (0, ek._)("SoundboardSoundGrid"),
         e7 = i.useCallback(
             () =>
                 v
@@ -1290,11 +1291,11 @@ function tx(e) {
                     : (0, l.jsx)(I.D, {
                           tabIndex: 0,
                           className: td.Jm,
-                          onClick: e6,
-                          "aria-label": e8 ? eU.intl.string(eU.t.wQKOBb) : eU.intl.string(eU.t.kbFsAD),
+                          onClick: e8,
+                          "aria-label": e6 ? eU.intl.string(eU.t.wQKOBb) : eU.intl.string(eU.t.kbFsAD),
                           children: (0, l.jsx)(tg, { className: td.By }),
                       }),
-            [v, e6, e8],
+            [v, e8, e6],
         ),
         e4 = i.useCallback(
             (e) =>

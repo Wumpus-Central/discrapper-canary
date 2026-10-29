@@ -61,43 +61,49 @@ async function p() {
 }
 let T = {
     async initialPageLoad() {
+        let e;
         a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let { body: e } = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: (0, i.fT)() }),
-            { teen_audit_log: t, linked_users: n, users: r, age_group: s } = e,
-            l = {
-                teenId: t?.teen_user_id,
-                rangeStartId: t?.range_start_id,
-                totals: t?.totals ?? {},
-                actions: t?.actions ?? [],
-                users: t?.users ?? [],
-                guilds: t?.guilds ?? [],
-                topUserActivities: t?.top_user_activities ?? [],
-                topGuildActivities: t?.top_guild_activities ?? [],
-                totalSpendAmount: t?.total_spend?.amount ?? null,
-                totalSpendCurrency: t?.total_spend?.currency ?? null,
-                spendingLimit: e.spending_limit ?? null,
-                monthlyPurchases: e.monthly_purchases ?? null,
-                invoices: t?.invoices ?? [],
-                gifts: t?.gifts ?? [],
+        try {
+            e = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: (0, i.fT)() });
+        } catch {
+            return (a.h.dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" }), null);
+        }
+        let { body: t } = e,
+            { teen_audit_log: n, linked_users: r, users: s, age_group: l } = t,
+            o = {
+                teenId: n?.teen_user_id,
+                rangeStartId: n?.range_start_id,
+                totals: n?.totals ?? {},
+                actions: n?.actions ?? [],
+                users: n?.users ?? [],
+                guilds: n?.guilds ?? [],
+                topUserActivities: n?.top_user_activities ?? [],
+                topGuildActivities: n?.top_guild_activities ?? [],
+                totalSpendAmount: n?.total_spend?.amount ?? null,
+                totalSpendCurrency: n?.total_spend?.currency ?? null,
+                spendingLimit: t.spending_limit ?? null,
+                monthlyPurchases: t.monthly_purchases ?? null,
+                invoices: n?.invoices ?? [],
+                gifts: n?.gifts ?? [],
             };
         return (
-            null != l.invoices && l.invoices.length > 0 && (await E(l.invoices)),
-            null != l.gifts && l.gifts.length > 0 && (await A(l.gifts)),
+            null != o.invoices && o.invoices.length > 0 && (await E(o.invoices)),
+            null != o.gifts && o.gifts.length > 0 && (await A(o.gifts)),
             a.h.dispatch({
                 type: "FAMILY_CENTER_INITIAL_LOAD",
-                familyCenterTeenActivity: l,
-                linkedUsers: n,
-                users: r,
-                ageGroup: s,
+                familyCenterTeenActivity: o,
+                linkedUsers: r,
+                users: s,
+                ageGroup: l,
             }),
-            null != e.restricted_schedule &&
-                null != l.teenId &&
+            null != t.restricted_schedule &&
+                null != o.teenId &&
                 a.h.dispatch({
                     type: "USER_RESTRICTED_SCHEDULE_UPDATE",
-                    userId: l.teenId,
-                    restrictedSchedule: e.restricted_schedule,
+                    userId: o.teenId,
+                    restrictedSchedule: t.restricted_schedule,
                 }),
-            l
+            o
         );
     },
     async fetchLinkedUsers() {
@@ -129,37 +135,43 @@ let T = {
         return (a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS", ...r }), r);
     },
     async fetchTeenActivity(e) {
+        let t;
         a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let t = _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY(e),
-            { body: n } = await i.Bo.get({ url: t, rejectWithError: (0, i.fT)() }),
-            r = n.teen_audit_log,
-            s = {
-                teenId: r.teen_user_id,
-                rangeStartId: r.range_start_id,
-                totals: r.totals,
-                actions: r.actions,
-                users: r.users,
-                guilds: r.guilds,
-                topUserActivities: r.top_user_activities ?? [],
-                topGuildActivities: r.top_guild_activities ?? [],
-                totalSpendAmount: r?.total_spend?.amount ?? null,
-                totalSpendCurrency: r?.total_spend?.currency ?? null,
-                spendingLimit: n.spending_limit ?? null,
-                monthlyPurchases: n.monthly_purchases ?? null,
-                invoices: r?.invoices ?? [],
-                gifts: r?.gifts ?? [],
+        let n = _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY(e);
+        try {
+            t = await i.Bo.get({ url: n, rejectWithError: (0, i.fT)() });
+        } catch (e) {
+            throw (a.h.dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_FAILURE" }), e);
+        }
+        let { body: r } = t,
+            s = r.teen_audit_log,
+            l = {
+                teenId: s.teen_user_id,
+                rangeStartId: s.range_start_id,
+                totals: s.totals,
+                actions: s.actions,
+                users: s.users,
+                guilds: s.guilds,
+                topUserActivities: s.top_user_activities ?? [],
+                topGuildActivities: s.top_guild_activities ?? [],
+                totalSpendAmount: s?.total_spend?.amount ?? null,
+                totalSpendCurrency: s?.total_spend?.currency ?? null,
+                spendingLimit: r.spending_limit ?? null,
+                monthlyPurchases: r.monthly_purchases ?? null,
+                invoices: s?.invoices ?? [],
+                gifts: s?.gifts ?? [],
             };
         return (
-            s.invoices && s.invoices.length > 0 && (await E(s.invoices)),
-            s.gifts && s.gifts.length > 0 && (await A(s.gifts)),
-            a.h.dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: s }),
-            null != n.restricted_schedule &&
+            l.invoices && l.invoices.length > 0 && (await E(l.invoices)),
+            l.gifts && l.gifts.length > 0 && (await A(l.gifts)),
+            a.h.dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: l }),
+            null != r.restricted_schedule &&
                 a.h.dispatch({
                     type: "USER_RESTRICTED_SCHEDULE_UPDATE",
                     userId: e,
-                    restrictedSchedule: n.restricted_schedule,
+                    restrictedSchedule: r.restricted_schedule,
                 }),
-            s
+            l
         );
     },
     async fetchMoreTeenActivity(e, t, n, r) {

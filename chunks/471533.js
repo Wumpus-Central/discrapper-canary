@@ -158,13 +158,13 @@ function W() {
     if (null == e) throw Error("useConversationFocusDismiss must be used inside <ConversationFocusDismissProvider>");
     return e;
 }
-function q(e) {
+function $(e) {
     let { children: t } = e,
         [n, l] = r.useState(null),
         i = r.useMemo(() => ({ dismissReason: n, setDismissReason: l }), [n, l]);
     return (0, a.jsx)(z.Provider, { value: i, children: t });
 }
-var $ = n(399513),
+var q = n(399513),
     J = n(661531),
     Z = n(602853),
     Y = n(717421),
@@ -456,8 +456,8 @@ var eK = n(284009),
     eV = n.n(eK),
     ez = n(256331),
     eW = n(93474),
-    eq = n(384231),
-    e$ = n(959698),
+    e$ = n(384231),
+    eq = n(959698),
     eJ = n(853145),
     eZ = n(9842),
     eY = n(69282),
@@ -619,9 +619,9 @@ var tS = n(754459),
     tK = n(241326),
     tV = n(365199),
     tz = n(417270),
-    tW = n(565645),
-    tq = n(812930),
-    t$ = n(822123),
+    tW = n(788026),
+    t$ = n(812930),
+    tq = n(822123),
     tJ = n(7584),
     tZ = n(635222),
     tY = n(969043),
@@ -690,7 +690,7 @@ function nu(e) {
 }
 let nh = r.memo(function (e) {
     let { channel: t, message: n } = e,
-        l = (0, t$.QZ)(t.guild_id).filter(
+        l = (0, tq.QZ)(t.guild_id).filter(
             (e) =>
                 !t6.Ay.isEmojiFilteredOrLocked({
                     emoji: e,
@@ -839,7 +839,7 @@ function nm(e) {
                     d.features.has(em.GuildFeatures.NEWS) &&
                     S &&
                     (N || x) &&
-                    (0, tq.A)(n),
+                    (0, t$.A)(n),
                 P = t.getGuildId(),
                 O =
                     null != P &&
@@ -1310,8 +1310,8 @@ let nU = r.memo(function (e) {
         m = n.state === eZ.a.LOADED ? n.message : void 0,
         g = (0, e8.X4)(m),
         p = (0, e8.d8)(m?.actor, l).nick,
-        A = (0, eq.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        f = (0, e$.U)(),
+        A = (0, e$.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        f = (0, eq.U)(),
         C = r.useMemo(() => {
             if (null == m) return null;
             let e = (0, nR.A)(m);
@@ -1552,7 +1552,7 @@ function nV(e) {
         _ = eQ.hD.useSetting(),
         j = eQ.rs.useSetting(),
         b = (0, u.bG)([eZ.A], () => eZ.A.getMessageByReference(p)),
-        N = (0, eq.S)((n.editedTimestamp ?? n.timestamp).valueOf()),
+        N = (0, e$.S)((n.editedTimestamp ?? n.timestamp).valueOf()),
         {
             handleMouseEnter: T,
             handleMouseLeave: M,
@@ -1699,15 +1699,15 @@ let nz = r.memo(function (e) {
         K = (0, u.bG)([e2.A], () => e2.A.isEditing(h, s), [h, s]),
         z = (0, u.bG)([v.Ay], () => v.Ay.keyboardModeEnabled),
         W = T || K || (z && G),
-        q = W || O,
-        $ = (0, u.bG)(
+        $ = W || O,
+        q = (0, u.bG)(
             [e0.A],
             () => i.hasFlag(em.pr7.HAS_THREAD) && e0.A.getChannel(ei.default.castMessageIdAsChannelId(i.id)),
         ),
         J = i.isFirstMessageInForumPost(o),
-        Z = (0, eq.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
+        Z = (0, e$.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
         Y = (0, u.bG)([e1.A], () => e1.A.isDeveloper),
-        X = (0, e$.U)(),
+        X = (0, eq.U)(),
         {
             content: Q,
             hasSpoilerEmbeds: ee,
@@ -1753,7 +1753,7 @@ let nz = r.memo(function (e) {
         eC = r.useRef(window),
         ex = null != eg;
     ((n = i.type === em.lAJ.CUSTOM_GIFT ? "" : !K && ex ? (0, tv.A)(e, Q) : (0, nj.Ay)(e, Q, K)),
-        (n = (0, a.jsx)(tl.x, { value: q, children: n })));
+        (n = (0, a.jsx)(tl.x, { value: $, children: n })));
     let eE = i.id === f,
         eS = (0, a.jsx)(m.vN, {
             offset: { left: 4, right: 4 },
@@ -1824,7 +1824,7 @@ let nz = r.memo(function (e) {
                         hasSpoilerEmbeds: ee,
                         hasBailedAst: et,
                         handleContextMenu: R,
-                        isInteracting: q,
+                        isInteracting: $,
                         isAutomodBlockedMessage: ex,
                         hideInviteEmbedBanner: x,
                         hideActivityInvite: E,
@@ -1871,7 +1871,7 @@ let nz = r.memo(function (e) {
                     childrenMessageContent: n,
                     onMouseMove: k,
                     onMouseLeave: L,
-                    hasThread: !C && i.hasFlag(em.pr7.HAS_THREAD) && null != $,
+                    hasThread: !C && i.hasFlag(em.pr7.HAS_THREAD) && null != q,
                     isSystemMessage: (0, e7.A)(i),
                     hasReply: i.type === em.lAJ.REPLY,
                     messageRef: (e) => {
@@ -1891,8 +1891,8 @@ let nz = r.memo(function (e) {
 });
 n(801541);
 var nW = n(889137),
-    nq = n(952270),
-    n$ = n(428678),
+    n$ = n(952270),
+    nq = n(428678),
     nJ = n(353182),
     nZ = n(922529),
     nY = n(888675),
@@ -1901,10 +1901,10 @@ function nQ(e) {
     let { expanded: t, onClick: n, count: l, compact: i, collapsedReason: s, canUncollapse: r = !0 } = e,
         o = (0, nW.YW)({ collapsedReason: s })
             .with({ collapsedReason: eL.t["VFWjc+"] }, () =>
-                (0, a.jsx)(nq.EyeSlashIcon, { size: "md", color: "currentColor", className: nX.Q6 }),
+                (0, a.jsx)(n$.EyeSlashIcon, { size: "md", color: "currentColor", className: nX.Q6 }),
             )
             .with({ collapsedReason: eL.t["+FcYM/"] }, () =>
-                (0, a.jsx)(n$.K, { size: "md", color: "currentColor", className: nX.Q6 }),
+                (0, a.jsx)(nq.K, { size: "md", color: "currentColor", className: nX.Q6 }),
             )
             .with({ collapsedReason: eL.t.rHRovo }, () =>
                 (0, a.jsx)(nJ._, { size: "md", color: "currentColor", className: nX.TG }),
@@ -2184,7 +2184,7 @@ function lh(e) {
         );
     return null == b
         ? null
-        : (0, a.jsxs)($.animated.div, {
+        : (0, a.jsxs)(q.animated.div, {
               className: ld.Nr,
               style: {
                   top: t.cardTop,
@@ -2197,8 +2197,8 @@ function lh(e) {
                   boxShadow: p.to((e) => `0 8px 24px rgba(0, 0, 0, ${e})`),
               },
               children: [
-                  (0, a.jsx)($.animated.div, { className: ld.sB, style: { opacity: t.bodyTintOpacity } }),
-                  (0, a.jsx)($.animated.div, {
+                  (0, a.jsx)(q.animated.div, { className: ld.sB, style: { opacity: t.bodyTintOpacity } }),
+                  (0, a.jsx)(q.animated.div, {
                       style: { paddingTop: A, paddingLeft: A, paddingRight: A },
                       children: (0, a.jsx)(eB, { channel: n, conversation: b, requestDismiss: s }),
                   }),
@@ -2209,7 +2209,7 @@ function lh(e) {
                               className: ld.XG,
                               ref: i,
                               onScroll: S,
-                              children: (0, a.jsxs)($.animated.div, {
+                              children: (0, a.jsxs)(q.animated.div, {
                                   style: { paddingLeft: A, paddingRight: A },
                                   children: [
                                       (0, a.jsx)(n6, {
@@ -2359,7 +2359,7 @@ function lg(e) {
 var lp = n(708988),
     lA = n(872351),
     lf = n(359144);
-let lC = (0, $.animated)("button"),
+let lC = (0, q.animated)("button"),
     lx = (0, k.P)(ev.E);
 function lE(e) {
     e.preventDefault();
@@ -2433,11 +2433,11 @@ let lS = r.memo(function (e) {
         onMouseLeave: b,
         onClick: N,
         children: [
-            (0, a.jsx)($.animated.span, {
+            (0, a.jsx)(q.animated.span, {
                 className: c()(lf.Og, p && lf.v7),
                 style: {
                     opacity: j.pillOpacity,
-                    transform: (0, $.to)(
+                    transform: (0, q.to)(
                         [j.pillX, j.pillScale],
                         (e, t) => `translateY(-50%) translateX(${e}px) scale(${t})`,
                     ),
@@ -2458,13 +2458,13 @@ let lS = r.memo(function (e) {
                 lineClamp: 1,
                 style: {
                     opacity: j.textOpacity,
-                    transform: (0, $.to)([j.textScale, j.textX], (e, t) => `scale(${e}) translateX(${t}px)`),
+                    transform: (0, q.to)([j.textScale, j.textX], (e, t) => `scale(${e}) translateX(${t}px)`),
                 },
                 children: I,
             }),
             (0, a.jsx)("span", {
                 className: lf.iF,
-                children: (0, a.jsx)($.animated.span, {
+                children: (0, a.jsx)(q.animated.span, {
                     className: lf.iN,
                     style: {
                         width: j.lineWidth,
@@ -2473,12 +2473,12 @@ let lS = r.memo(function (e) {
                     },
                 }),
             }),
-            (0, a.jsx)($.animated.span, {
+            (0, a.jsx)(q.animated.span, {
                 className: lf.$N,
                 "aria-hidden": "true",
                 style: {
                     opacity: j.arrowOpacity,
-                    transform: (0, $.to)([j.arrowX, j.arrowScale], (e, t) => `translateX(${e}px) scale(${t})`),
+                    transform: (0, q.to)([j.arrowX, j.arrowScale], (e, t) => `translateX(${e}px) scale(${t})`),
                 },
                 children:
                     "down" === S
@@ -2835,7 +2835,7 @@ function lL(e) {
 function lP(e) {
     let { channel: t, scrollManager: n } = e,
         l = (0, V.sV)(t.guild_id, "scrollbar_chips");
-    return (0, a.jsxs)(q, {
+    return (0, a.jsxs)($, {
         children: [(0, a.jsx)(lg, { channel: t }), l && (0, a.jsx)(lL, { channel: t, scrollManager: n })],
     });
 }
@@ -2850,8 +2850,8 @@ var lO = n(354328),
     lV = n(573163),
     lz = n(399263),
     lW = n(287809),
-    lq = n(234320),
-    l$ = n(863439),
+    l$ = n(234320),
+    lq = n(863439),
     lJ = n(326337),
     lZ = n(125435);
 function lY(e) {
@@ -3874,8 +3874,8 @@ var iK = n(93246),
     iV = n(95701),
     iz = n(808728),
     iW = n(534890),
-    iq = n(713654),
-    i$ = n(691060),
+    i$ = n(713654),
+    iq = n(691060),
     iJ = n(376310),
     iZ = n(959717);
 function iY(e) {
@@ -3896,10 +3896,10 @@ function iY(e) {
 var iX = n(151582);
 function iQ(e) {
     let { channel: t } = e,
-        n = (0, i$.kt)(t),
+        n = (0, iq.kt)(t),
         { firstMessage: l } = (0, u.cf)([tY.A], () => tY.A.getMessage(t.id)),
-        i = new Set((0, i$.zt)(t, n)),
-        s = (0, iq.gU)(t) ?? iW.ChatIcon,
+        i = new Set((0, iq.zt)(t, n)),
+        s = (0, i$.gU)(t) ?? iW.ChatIcon,
         r = (0, P.Ay)(t);
     return (0, a.jsxs)(iT.Ay, {
         channelId: t.id,
@@ -4383,7 +4383,7 @@ function sL(e) {
 }
 function sP(e) {
     let { channel: t } = e,
-        n = (0, iq.gU)(t) ?? tG.y,
+        n = (0, i$.gU)(t) ?? tG.y,
         l = (0, P.Ay)(t);
     return (0, a.jsxs)(iT.Ay, {
         channelId: t.id,
@@ -4417,8 +4417,8 @@ function sz(e) {
     return (0, u.bG)([sV.A], () => (null !== e ? sV.A.getUserProfile(e ?? em.dJq)?.application : void 0)) ?? void 0;
 }
 var sW = n(260498),
-    sq = n(5960),
-    s$ = n(381991),
+    s$ = n(5960),
+    sq = n(381991),
     sJ = n(616334),
     sZ = n(246338),
     sY = n(434279),
@@ -4443,7 +4443,7 @@ function s7(e) {
                     l === em.eA$.BLOCKED ||
                     l === em.eA$.PENDING_INCOMING,
                 s = sz(n ? t : null),
-                a = !0 === (0, sq.A)(n ? (s?.id ?? t) : null, n),
+                a = !0 === (0, s$.A)(n ? (s?.id ?? t) : null, n),
                 r = n ? !a : i,
                 o = (0, s4.D)(e.id, t),
                 { message: c, loaded: d, error: h } = (0, s3.I)(e, { enabled: r }),
@@ -4494,7 +4494,7 @@ function s6(e) {
             return (
                 (e = t.id),
                 void (null != (0, sY.wu)(n) || null != (0, sZ.oX)("openConjureProjectEditor")
-                    ? (0, s$.Ay)(n.id)
+                    ? (0, sq.Ay)(n.id)
                     : (0, sJ.A)(n.id, { initialTab: "app", isPreview: n.preview_application_id === e }))
             );
         },
@@ -4550,7 +4550,7 @@ function ae(e) {
         { isOwned: m, project: g } =
             ((t = c?.id),
             (n = o.bot),
-            (l = (0, sq.A)(t, n)),
+            (l = (0, s$.A)(t, n)),
             (i = (0, u.bG)([sW.Ay], () => (!0 === l && null != t ? sW.Ay.findProjectByApplicationId(t) : null), [
                 l,
                 t,
@@ -4821,7 +4821,7 @@ function aI(e) {
             )),
         m = !0 === i.bot,
         g = i.isNonUserBot(),
-        p = (0, e$.U)(),
+        p = (0, eq.U)(),
         A = aS.n;
     return (
         g
@@ -5058,8 +5058,8 @@ function aV(e) {
 }
 var az = n(505527),
     aW = n(467073),
-    aq = n(960538),
-    a$ = n(604121),
+    a$ = n(960538),
+    aq = n(604121),
     aJ = n(988904);
 function aZ() {
     return n
@@ -5081,7 +5081,7 @@ let aY = r.memo(function (e) {
             ? (0, a.jsxs)("div", {
                   className: aJ.aP,
                   children: [
-                      (0, a.jsx)(a$.a, { importData: aZ, shouldAnimate: !l, className: aJ.lY }),
+                      (0, a.jsx)(aq.a, { importData: aZ, shouldAnimate: !l, className: aJ.lY }),
                       (0, a.jsxs)("div", {
                           className: aJ.FS,
                           children: [
@@ -5429,7 +5429,7 @@ function rx(e) {
                                               forceHideReactionCreates: !0,
                                           }),
                                           !v &&
-                                              (0, a.jsx)(aq.t, {
+                                              (0, a.jsx)(a$.t, {
                                                   message: I,
                                                   channel: S,
                                                   useChatFontScaling: !1,
@@ -5576,7 +5576,7 @@ function rk(e) {
 var rL = n(950490);
 function rP(e) {
     let { message: t, compact: n, channel: l, id: i } = e,
-        s = (0, i$.kt)(l),
+        s = (0, iq.kt)(l),
         o = (0, lG.IO)(l),
         c = t?.author.id,
         d = (0, r.useMemo)(() => (null != c ? { [l.guild_id]: [c] } : {}), [l.guild_id, c]);
@@ -5916,14 +5916,14 @@ function rK(e) {
 var rV = n(306788),
     rz = n(340833),
     rW = n(913642),
-    rq = n(453302),
-    r$ = n(670455),
+    r$ = n(453302),
+    rq = n(670455),
     rJ = n(912104);
 function rZ(e) {
     let { summary: t, channel: n } = e,
         l = (0, aO.bG)([lH.A], () => lH.A.summaryFeedback(t));
     function i(e, l) {
-        (e.stopPropagation(), (0, rq.A)({ summary: t, channel: n, rating: l }));
+        (e.stopPropagation(), (0, r$.A)({ summary: t, channel: n, rating: l }));
     }
     let s = (0, Q.p)(
         null == l,
@@ -5939,7 +5939,7 @@ function rZ(e) {
             t
                 ? (0, a.jsx)("div", {
                       className: rJ.RD,
-                      children: (0, a.jsxs)($.animated.div, {
+                      children: (0, a.jsxs)(q.animated.div, {
                           style: e,
                           className: rJ.GK,
                           children: [
@@ -5949,11 +5949,11 @@ function rZ(e) {
                                   children: eL.intl.string(eL.t["5ZsiE9"]),
                               }),
                               (0, a.jsx)(eI.D, {
-                                  onClick: (e) => i(e, r$.P0.GOOD),
+                                  onClick: (e) => i(e, rq.P0.GOOD),
                                   children: (0, a.jsx)(rW.A, { className: rJ.O1, width: 12, height: 12 }),
                               }),
                               (0, a.jsx)(eI.D, {
-                                  onClick: (e) => i(e, r$.P0.BAD),
+                                  onClick: (e) => i(e, rq.P0.BAD),
                                   children: (0, a.jsx)(rz.A, { className: rJ.O1, width: 12, height: 12 }),
                               }),
                           ],
@@ -6191,11 +6191,11 @@ function ou(e) {
                 })({ compact: f, messageGroups: V, groupRange: 4, attachments: z, fontSize: T, groupSpacing: o }),
             [f, V, z, T, o],
         ),
-        q = (0, u.bG)([lw.A], () =>
+        $ = (0, u.bG)([lw.A], () =>
             tm.A.can(em.xBc.READ_MESSAGE_HISTORY, m) ? null : lw.A.getViewingRolesTimestamp(m.getGuildId()),
         ),
-        $ = R ?? q,
-        J = g.hasMoreBefore && null == $,
+        q = R ?? $,
+        J = g.hasMoreBefore && null == q,
         Z = J ? W.totalHeight : 0,
         Y = g.hasMoreAfter ? W.totalHeight : 0,
         X = (function (e) {
@@ -6311,7 +6311,7 @@ function ou(e) {
                     },
                     [o],
                 );
-            return ((0, lq.Vo)({ event: em.jej.FOCUS_MESSAGES, handler: c }), o);
+            return ((0, l$.Vo)({ event: em.jej.FOCUS_MESSAGES, handler: c }), o);
         })({ scrollerRef: X.ref, isEditing: null != N, keyboardModeEnabled: M, hasMoreAfter: g.hasMoreAfter }),
         {
             channelStreamMarkup: ee,
@@ -6401,7 +6401,7 @@ function ou(e) {
                 }, [t, n]));
             let z = null,
                 W = [],
-                q = m.map((e, t) => {
+                $ = m.map((e, t) => {
                     if (e.type === em.TZK.DIVIDER) {
                         let n = null != e.unreadId;
                         return null != C
@@ -6491,12 +6491,12 @@ function ou(e) {
                         e.content.id,
                     );
                 });
-            W.push(...q);
-            let $ = m[m.length - 1];
+            W.push(...$);
+            let q = m[m.length - 1];
             if (
                 (null != N &&
                     g.forEach((e, t) => {
-                        let n = 0 === t && (0, es.l)(s, $, new rX.Ay({ type: em.lAJ.DEFAULT, author: N }));
+                        let n = 0 === t && (0, es.l)(s, q, new rX.Ay({ type: em.lAJ.DEFAULT, author: N }));
                         W.push(
                             (0, a.jsx)(
                                 or,
@@ -6705,7 +6705,7 @@ function ou(e) {
             scrollManager: X,
             specs: W,
             hasTopPlaceholders: J,
-            filterAfterTimestamp: $,
+            filterAfterTimestamp: q,
             showingQuarantineBanner: D,
             hideSummaries: k,
             jumpToPresent: function () {
@@ -6724,9 +6724,9 @@ function ou(e) {
         (i = r.useCallback(() => {
             (X.handleUserScrollGesture(), t.current?.scrollPageDown({ animate: !v.Ay.useReducedMotion }));
         }, [X, t])),
-        (0, lq.Vo)({ event: em.jej.SCROLLTO_PRESENT, handler: n }),
-        (0, lq.Vo)({ event: em.jej.SCROLL_PAGE_UP, handler: l }),
-        (0, lq.Vo)({ event: em.jej.SCROLL_PAGE_DOWN, handler: i }));
+        (0, l$.Vo)({ event: em.jej.SCROLLTO_PRESENT, handler: n }),
+        (0, l$.Vo)({ event: em.jej.SCROLL_PAGE_UP, handler: l }),
+        (0, l$.Vo)({ event: em.jej.SCROLL_PAGE_DOWN, handler: i }));
     let ec = (0, S.R7)(),
         { ref: ed, ...eu } = (0, d.LT)(Q),
         eh = r.useRef(null),
@@ -7147,7 +7147,7 @@ let oh = r.memo(function (e) {
                 isGameInvitesPost: A,
             };
         })(t),
-        j = (0, l$.A)(f, d);
+        j = (0, lq.A)(f, d);
     return (0, a.jsx)(lF.Bs.Provider, {
         value: j,
         children: (0, a.jsx)(lX.t, {
