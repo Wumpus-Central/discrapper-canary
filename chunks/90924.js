@@ -95,6 +95,7 @@ function G(e) {
         communication_disabled_until: e.communicationDisabledUntil ?? null,
         pending: e.isPending ?? !1,
         flags: e.flags ?? 0,
+        color_string: e.colorString,
     };
 }
 function j(e, t) {
