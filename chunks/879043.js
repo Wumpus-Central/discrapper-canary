@@ -35,8 +35,13 @@ function p(t, e) {
     let { discountPercent: S } = l,
         g = t.rewardStatus === u.GM.EARNED;
     switch (e) {
-        case "storefront.headerText":
-            return f.intl.formatToPlainString(g ? c.default.siNyGT : c.default.vyOvli, { discountPercent: S });
+        case "storefront.headerText": {
+            let t = c.default.dWuM4X;
+            return (
+                g ? (t = c.default.siNyGT) : s && (t = c.default.vyOvli),
+                f.intl.formatToPlainString(t, { discountPercent: S })
+            );
+        }
         case "pdp.label": {
             let t = c.default.dWuM4X;
             return (
