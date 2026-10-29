@@ -30,4 +30,5 @@ _.exports = {
     ld: "unavailableTooltipActions__9be63",
     ox: "newSound__9be63",
     wO: "newSheen__9be63",
+    li: "newSoundSheen__9be63",
 };

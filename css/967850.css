@@ -341,16 +341,6 @@
     width: 100%
 }
 
-@keyframes newSoundSheen__9be63 {
-    0% {
-        transform: translateX(-100%)
-    }
-
-    to {
-        transform: translateX(100%)
-    }
-}
-
 .newSound__9be63 {
     background: var(--background-mod-normal)
 }
@@ -364,7 +354,20 @@
 }
 
 .full-motion .newSheen__9be63 {
-    animation: newSoundSheen 1.5s ease-in-out 2
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-name: newSoundSheen__9be63;
+    animation-timing-function: ease-in-out
 }
 
-/*# sourceMappingURL=967850.06ae25981baf5d16.css.map*/
+@keyframes newSoundSheen__9be63 {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+}
+
+/*# sourceMappingURL=967850.1763e9ebf540940e.css.map*/
