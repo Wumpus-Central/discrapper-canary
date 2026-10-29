@@ -4634,14 +4634,10 @@ var ar = n(49229),
     ad = n(156328);
 function au(e) {
     let { userId: t } = e;
-    return (0, a.jsx)(eD.$, {
-        size: "sm",
-        variant: "secondary",
-        onClick: function () {
-            ar.A.blockUser(t, { location: em.liQ.DM_CHANNEL });
-        },
-        text: eL.intl.string(eL.t.l4Emac),
-    });
+    async function n() {
+        (await ar.A.blockUser(t, { location: em.liQ.DM_CHANNEL }), ic.A.showBlockSuccessToast(t));
+    }
+    return (0, a.jsx)(eD.$, { size: "sm", variant: "secondary", onClick: n, text: eL.intl.string(eL.t.l4Emac) });
 }
 function ah(e) {
     let { userId: t, showingBanner: n, variant: l = "primary", label: i } = e,
@@ -5783,7 +5779,7 @@ function rK(e) {
         d = r.useCallback(
             (e) => () => {
                 (ar.A.blockUser(i, { location: rw.Rx }).then(() => {
-                    o();
+                    (ic.A.showBlockSuccessToast(i, t), o());
                 }),
                     (0, ig._$)({
                         channelId: t,
