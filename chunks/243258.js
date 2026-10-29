@@ -87,67 +87,70 @@ function F(e) {
     );
 }
 function L(e) {
-    let { clips: t, onClose: i, analyticsLocations: a, ...n } = e;
+    let { clips: t, onClose: i, onShared: a, analyticsLocations: n, ...c } = e;
     (0, O.A)();
-    let { analyticsLocations: c } = (0, p.Ay)(...a, m.A.CLIPS_SHARE_MODAL),
-        o = s.useCallback(
+    let { analyticsLocations: o } = (0, p.Ay)(...n, m.A.CLIPS_SHARE_MODAL),
+        d = s.useCallback(
             async (e, l, s) => {
-                let { withMessage: a, transitionToDestination: n, closeAfterSend: o } = l;
+                let { withMessage: n, transitionToDestination: c, closeAfterSend: d } = l;
                 s(!0);
                 try {
                     let l = [],
-                        d = [];
+                        m = [];
                     for (let e of t) {
-                        let t = await (0, N.VO)(e, { analyticsLocations: c }),
+                        let t = await (0, N.VO)(e, { analyticsLocations: o }),
                             i = (0, _.A)(e, e.type === P.nQ.SCREENSHOT ? "jpeg" : "mp4");
                         switch (e.type) {
                             case P.nQ.CLIP:
                             case P.nQ.VOICE_CLIP:
-                                (l.push(new File([t], i, { type: "video/mp4" })), d.push({ clip: (0, T.J)(e) }));
+                                (l.push(new File([t], i, { type: "video/mp4" })), m.push({ clip: (0, T.J)(e) }));
                                 break;
                             case P.nQ.SCREENSHOT:
-                                (l.push(new File([t], i, { type: "image/jpeg" })), d.push({}));
+                                (l.push(new File([t], i, { type: "image/jpeg" })), m.push({}));
                                 break;
                             default:
                                 e.type;
                         }
                     }
-                    let m = (await Promise.all(e.map(y.pk))).filter(k.Vq).filter((e) => (0, v.t)(e));
-                    if (0 === m.length) {
+                    let p = (await Promise.all(e.map(y.pk))).filter(k.Vq).filter((e) => (0, v.t)(e));
+                    if (0 === p.length) {
                         ((0, h.P0)({ text: S.intl.string(S.t.iufib1), variant: "critical" }), s(!1));
                         return;
                     }
-                    for (let e of (o && i(), m)) {
+                    for (let e of (d && i(), p)) {
                         let t = j.A.getChannel(e);
                         null != t &&
                             ((0, w.R)(l, t, b.C.ChannelMessage, {
-                                filesMetadata: d,
+                                filesMetadata: m,
                                 origin: "unknown:clip_share",
                                 requireConfirm: !1,
                             }),
-                            null != a &&
-                                "" !== a.trim() &&
-                                (await u.A.sendMessage(t.id, A.Ay.parse(t, a), !1, { location: R.Hx.FORWARDING })));
+                            null != n &&
+                                "" !== n.trim() &&
+                                (await u.A.sendMessage(t.id, A.Ay.parse(t, n), !1, { location: R.Hx.FORWARDING })));
                     }
-                    n && 1 === m.length && ((0, C.iN)(m[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals());
+                    (a?.(),
+                        c &&
+                            1 === p.length &&
+                            ((0, C.iN)(p[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals()));
                 } catch (e) {
                     (0, h.P0)({ text: S.intl.string(S.t.iufib1), variant: "critical" });
                 } finally {
                     s(!1);
                 }
             },
-            [t, i, c],
+            [t, i, a, o],
         ),
-        d = s.useCallback((e) => {
+        x = s.useCallback((e) => {
             if (e instanceof E.YB && !(0, v.t)(e.id)) return { label: S.intl.string(S.t.iufib1) };
         }, []);
     return (0, l.jsx)(f.ForwardModal, {
-        ...n,
+        ...c,
         onClose: i,
         customTitle: S.intl.string(S.t.I8lglT),
         customSubtitle: S.intl.string(S.t.Ey7mOU),
         customPreview: (0, l.jsx)(F, { clips: t }),
-        customSendHandler: o,
-        customValidateDestination: d,
+        customSendHandler: d,
+        customValidateDestination: x,
     });
 }

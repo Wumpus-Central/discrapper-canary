@@ -13,12 +13,12 @@ var t = a(192308),
     m = a(589553),
     g = a(696016);
 async function f(l, e) {
-    let { channelId: f, analyticsLocations: C, messageReference: p, povTargetInformation: v } = e,
-        _ = o.A.getChannel(f);
-    if (null != _) {
+    let { channelId: f, analyticsLocations: C, messageReference: p, povTargetInformation: v, onShared: _ } = e,
+        I = o.A.getChannel(f);
+    if (null != I) {
         if (null != p) {
             let l = s.A.getMessage(p.channel_id, p.message_id);
-            null != l && (0, d.Yf)({ message: l, channel: _, shouldMention: !1, showMentionToggle: !1 });
+            null != l && (0, d.Yf)({ message: l, channel: I, shouldMention: !1, showMentionToggle: !1 });
         }
         try {
             let e = [],
@@ -59,7 +59,8 @@ async function f(l, e) {
                         n.type;
                 }
             }
-            ((0, c.R)(e, _, r.C.ChannelMessage, { filesMetadata: a, origin: "unknown:clip_share" }),
+            ((0, c.R)(e, I, r.C.ChannelMessage, { filesMetadata: a, origin: "unknown:clip_share" }),
+                _?.(),
                 t.closeAllModals());
         } catch (l) {
             throw (g.nx.error(l), l);
@@ -219,7 +220,7 @@ async function f(l, e) {
                     a.e("895008"),
                     a.e("92871"),
                 ]).then(a.bind(a, 243258));
-                return (a) => (0, n.jsx)(e, { ...a, clips: l, analyticsLocations: C });
+                return (a) => (0, n.jsx)(e, { ...a, clips: l, analyticsLocations: C, onShared: _ });
             },
             { stackingBehavior: "stack", modalKey: i.aU },
         );

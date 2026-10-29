@@ -1,9 +1,22 @@
 .header__6e1e4 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    min-width: 0;
+    align-items: flex-start;
+    gap: var(--space-16);
     padding: var(--space-16) var(--space-16) 0
+}
+
+.header__6e1e4,
+.titleBlock__6e1e4 {
+    display: flex;
+    min-width: 0
+}
+
+.titleBlock__6e1e4 {
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.titleBlockWithBack__6e1e4 {
+    padding-top: var(--space-8)
 }
 
 .title__6e1e4 {
@@ -707,4 +720,4 @@
     width: 12px
 }
 
-/*# sourceMappingURL=51c6b48270c62859.css.map*/
+/*# sourceMappingURL=b1f85f7efdafa11a.css.map*/

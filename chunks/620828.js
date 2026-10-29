@@ -1,5 +1,7 @@
 _.exports = {
     wx: "header__6e1e4",
+    K5: "titleBlock__6e1e4",
+    fr: "titleBlockWithBack__6e1e4",
     DD: "title__6e1e4",
     KW: "metaRow__6e1e4",
     Ho: "metaItem__6e1e4",
