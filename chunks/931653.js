@@ -1,77 +1,79 @@
-(i.d(t, { default: () => G }), i(321073));
+(i.d(t, { default: () => T }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(17928),
     r = i(189213),
-    d = i(890497),
-    u = i(548118),
-    o = i(71393),
-    s = i(711014),
-    c = i(246338),
-    p = i(73153),
-    h = i(195880),
-    f = i(889921),
+    d = i(331322),
+    u = i(834730),
+    s = i(890497),
+    o = i(548118),
+    c = i(71393),
+    p = i(711014),
+    h = i(246338),
+    f = i(73153),
+    m = i(195880),
+    g = i(889921),
     v = i(642785),
     _ = i(371169),
-    g = i(525530),
-    m = i(87501),
-    C = i(105292);
+    x = i(525530),
+    C = i(87501),
+    k = i(105292);
 let w = " (Remix)",
-    k = new Map();
-p.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
+    j = new Map();
+f.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
     let { nonce: t, projectId: i, wsTicket: n } = e;
-    k.get(t)?.(i, n);
+    j.get(t)?.(i, n);
 });
-var x = i(625180),
-    A = i(457827),
-    j = i(373677),
+var A = i(625180),
+    E = i(457827),
+    R = i(373677),
     b = i(754027),
     y = i(939398),
-    R = i(165610);
-function E(e) {
+    I = i(165610);
+function S(e) {
     let t = e.preview_application_id;
     if (null == t) return () => void 0;
-    let i = (0, j.PH)(null, (0, j.hR)(e.preview_supported_surfaces)),
+    let i = (0, R.PH)(null, (0, R.hR)(e.preview_supported_surfaces)),
         n = (0, y.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
         l = (0, b.Op)((0, b.jS)(e), i);
     return (
-        x.A.launchFrame({
+        A.A.launchFrame({
             applicationId: t,
             surface: l,
             launch: null == n ? void 0 : { customId: n },
             showErrorModal: !1,
         }).catch(() => void 0),
-        () => (0, A.r)((0, R.VA)(t, l))
+        () => (0, E.r)((0, I.VA)(t, l))
     );
 }
-var I = i(858899),
-    S = i(381991);
-async function M(e, t) {
+var M = i(858899),
+    G = i(381991);
+async function O(e, t) {
     let i = await e.open(t);
-    return (i.ok ? (0, S.A)(i.projectId) : (0, I.P0)({ text: i.message, variant: "critical" }), i);
+    return (i.ok ? (0, G.A)(i.projectId) : (0, M.P0)({ text: i.message, variant: "critical" }), i);
 }
-function G(e) {
-    let { project: t, currentGuildId: i, transitionState: p, onClose: x } = e,
-        [A, j] = l.useState(i),
+function T(e) {
+    let { project: t, currentGuildId: i, transitionState: f, onClose: A } = e,
+        [E, R] = l.useState(i),
         [b, y] = l.useState(!1),
-        [R, I] = l.useState(0),
-        S = l.useRef(null);
+        [I, M] = l.useState(0),
+        G = l.useRef(null);
     l.useEffect(() => {
         let e = (function (e, t, i) {
             var n;
             let l,
-                a = C.intl.string(m.default.Cn8H0Y),
+                a = k.intl.string(C.default.Cn8H0Y),
                 r = (0, v.gA)(e.id);
             r.catch(() => void 0);
             let d = null,
                 u = null,
-                o = !1;
-            function s(e) {
-                return ((0, f.ensureConnection)(e), (d ??= (0, g.Io)(r, e).catch(() => "rejected")));
+                s = !1;
+            function o(e) {
+                return ((0, g.ensureConnection)(e), (d ??= (0, x.Io)(r, e).catch(() => "rejected")));
             }
-            let c = (0, h.m)();
-            k.set(c, (e, t) => {
-                (k.delete(c), (u = e), (0, v.vG)(e, t), s(e));
+            let c = (0, m.m)();
+            j.set(c, (e, t) => {
+                (j.delete(c), (u = e), (0, v.vG)(e, t), o(e));
             });
             let p = (0, _.iR)({
                 name: ((n = e.name), `${n.slice(0, 128 - w.length)}${w}`),
@@ -81,23 +83,23 @@ function G(e) {
                 nonce: c,
             }).then(
                 (e) => (
-                    k.delete(c),
-                    null != e.remix_preview && ((0, _.A5)(e.id, e.remix_preview), o || (l = i?.(e))),
-                    s(e.id),
+                    j.delete(c),
+                    null != e.remix_preview && ((0, _.A5)(e.id, e.remix_preview), s || (l = i?.(e))),
+                    o(e.id),
                     e
                 ),
-                () => (k.delete(c), null != u && (0, f.closeConnection)(u), null),
+                () => (j.delete(c), null != u && (0, g.closeConnection)(u), null),
             );
-            async function x(e) {
-                o = !0;
+            async function h(e) {
+                s = !0;
                 let i = await p;
                 if (null == i) return { ok: !1, message: a, kept: !1 };
-                let n = await s(i.id);
+                let n = await o(i.id);
                 return "unreachable" === n
-                    ? ((d = null), (o = !1), { ok: !1, message: a, kept: !0 })
+                    ? ((d = null), (s = !1), { ok: !1, message: a, kept: !0 })
                     : "rejected" === n
                       ? (l?.(),
-                        (0, f.closeConnection)(i.id),
+                        (0, g.closeConnection)(i.id),
                         await (0, _.xx)(i.id).catch(() => void 0),
                         { ok: !1, message: a, kept: !1 })
                       : e !== t &&
@@ -107,66 +109,82 @@ function G(e) {
                           ))
                         ? (l?.(),
                           (0, v.$Y)(i.id),
-                          (0, f.closeConnection)(i.id),
-                          (0, f.ensureConnection)(i.id),
+                          (0, g.closeConnection)(i.id),
+                          (0, g.ensureConnection)(i.id),
                           { ok: !0, projectId: i.id, guildId: e })
                         : { ok: !0, projectId: i.id, guildId: t };
             }
             return {
                 created: p,
-                open: x,
+                open: h,
                 dismiss: function () {
-                    o ||
-                        ((o = !0),
+                    s ||
+                        ((s = !0),
                         p.then((e) => {
-                            (l?.(), null != e && (0, f.closeConnection)(e.id));
+                            (l?.(), null != e && (0, g.closeConnection)(e.id));
                         }));
                 },
             };
-        })(t, i, E);
-        return ((S.current = e), () => e.dismiss());
-    }, [t, i, R]);
-    let G = (0, a.yK)([s.Ay, o.A], () => {
+        })(t, i, S);
+        return ((G.current = e), () => e.dismiss());
+    }, [t, i, I]);
+    let T = (0, a.yK)([p.Ay, c.A], () => {
             let e = [];
-            for (let t of s.Ay.getFlattenedGuildIds()) {
-                let i = o.A.getGuild(t);
-                null != i && (0, c.dd)(i, "ConjureRemixModal") && e.push(i);
+            for (let t of p.Ay.getFlattenedGuildIds()) {
+                let i = c.A.getGuild(t);
+                null != i && (0, h.dd)(i, "ConjureRemixModal") && e.push(i);
             }
             return e;
         }),
-        O = l.useMemo(
+        P = l.useMemo(
             () =>
-                G.map((e) => ({
+                T.map((e) => ({
                     id: e.id,
                     label: e.name,
                     value: e.id,
-                    leading: (0, n.jsx)(u.Ay, { guild: e, size: u.Ay.Sizes.MINI, active: !0 }),
+                    leading: (0, n.jsx)(o.Ay, { guild: e, size: o.Ay.Sizes.MINI, active: !0 }),
                 })),
-            [G],
+            [T],
         ),
-        P = l.useCallback(async () => {
-            if (b || null == S.current) return;
+        W = l.useCallback(async () => {
+            if (b || null == G.current) return;
             y(!0);
-            let e = await M(S.current, A);
-            e.ok ? await x() : (e.kept || I((e) => e + 1), y(!1));
-        }, [b, A, x]);
+            let e = await O(G.current, E);
+            e.ok ? await A() : (e.kept || M((e) => e + 1), y(!1));
+        }, [b, E, A]);
     return (0, n.jsx)(r.a, {
-        transitionState: p,
-        onClose: x,
-        title: C.intl.string(m.default["9wQTdG"]),
+        transitionState: f,
+        onClose: A,
+        title: k.intl.string(C.default["9wQTdG"]),
         size: "md",
         actions: [
-            { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: x, disabled: b },
-            { text: C.intl.string(m.default.XWgAfc), variant: "primary", onClick: P, loading: b },
+            { text: k.intl.string(k.t["ETE/oC"]), variant: "secondary", onClick: A, disabled: b },
+            { text: k.intl.string(C.default.XWgAfc), variant: "primary", onClick: W, loading: b },
         ],
-        children: (0, n.jsx)(d.Z, {
-            selectionMode: "single",
-            label: C.intl.string(m.default["maL0+X"]),
-            options: O,
-            value: A,
-            onSelectionChange: j,
-            disabled: b,
-            fullWidth: !0,
+        children: (0, n.jsxs)(d.B, {
+            gap: 24,
+            children: [
+                (0, n.jsxs)(d.B, {
+                    gap: 8,
+                    children: [
+                        (0, n.jsx)(u.E, {
+                            variant: "text-md/normal",
+                            children: k.intl.format(C.default.JKN64Y, { name: t.name }),
+                        }),
+                        (0, n.jsx)(u.E, { variant: "text-md/normal", children: k.intl.string(C.default["fT4+km"]) }),
+                    ],
+                }),
+                (0, n.jsx)(s.Z, {
+                    selectionMode: "single",
+                    label: k.intl.string(C.default["maL0+X"]),
+                    description: k.intl.string(C.default.R2uxWO),
+                    options: P,
+                    value: E,
+                    onSelectionChange: R,
+                    disabled: b,
+                    fullWidth: !0,
+                }),
+            ],
         }),
     });
 }
