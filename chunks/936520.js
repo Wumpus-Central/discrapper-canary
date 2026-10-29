@@ -1,4 +1,4 @@
-(t.d(s, { Wr: () => er, Ay: () => ec, Kc: () => ea }), t(321073));
+(t.d(s, { Wr: () => ea, Ay: () => eo, Kc: () => ec }), t(321073));
 var n,
     i = t(477900),
     l = t(582128),
@@ -7,48 +7,49 @@ var n,
     c = t(172218),
     o = t(738678),
     d = t(960027),
-    u = t(17928),
-    m = t(866665),
-    x = t(943812),
-    A = t(428689),
+    u = t(31300),
+    m = t(17928),
+    x = t(866665),
+    A = t(943812),
+    h = t(428689),
     g = t(695366),
-    h = t(661531),
-    N = t(323384),
-    E = t(39623),
-    j = t(939249),
+    N = t(661531),
+    E = t(323384),
+    j = t(39623),
+    I = t(939249),
     C = t(778712),
-    I = t(890856),
-    p = t(546861),
-    f = t(666654),
-    L = t(83107),
-    O = t(615675),
-    R = t(990836),
-    T = t(387755),
+    p = t(890856),
+    f = t(546861),
+    L = t(666654),
+    O = t(83107),
+    R = t(615675),
+    T = t(990836),
+    k = t(387755),
     S = t(440594),
     _ = t(323073),
     b = t(666860),
-    k = t(863089),
-    v = t(85448),
-    D = t(556525),
-    y = t(402216),
-    M = t(268218),
-    V = t(609425),
-    G = t(73392),
-    P = t(769015);
-let U = (0, t(945810).mj)({
+    v = t(863089),
+    D = t(85448),
+    y = t(556525),
+    M = t(402216),
+    V = t(268218),
+    G = t(609425),
+    P = t(73392),
+    U = t(769015);
+let K = (0, t(945810).mj)({
     name: "2026-09-guild-sidebar-stream-preview",
     kind: "guild",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var K = t(450149),
-    F = t(430363),
-    w = t(823854),
-    z = t(602853),
-    H = t(475743),
-    J = t(775602),
-    Z = t(21161),
-    B =
+var F = t(450149),
+    w = t(430363),
+    z = t(823854),
+    H = t(602853),
+    J = t(475743),
+    Z = t(775602),
+    B = t(21161),
+    W =
         (((n = {})[(n.OFFERED = 0)] = "OFFERED"),
         (n[(n.ACCEPTED = 1)] = "ACCEPTED"),
         (n[(n.RUNNING = 2)] = "RUNNING"),
@@ -56,32 +57,32 @@ var K = t(450149),
         (n[(n.FAILED = 4)] = "FAILED"),
         (n[(n.CANCELLED = 5)] = "CANCELLED"),
         n),
-    W = t(818888);
-function X(e) {
+    X = t(818888);
+function Y(e) {
     let { userId: s, wrapperClassName: t, children: n } = e,
-        r = (0, u.bG)([w.A], () => w.A.getProgressForUserId(s), [s]),
-        a = (0, u.bG)(
-            [w.A],
+        r = (0, m.bG)([z.A], () => z.A.getProgressForUserId(s), [s]),
+        a = (0, m.bG)(
+            [z.A],
             () => {
-                let e = w.A.getTrackingEntryForUserId(s);
-                return e?.presence?.phase === B.COMPLETED;
+                let e = z.A.getTrackingEntryForUserId(s);
+                return e?.presence?.phase === W.COMPLETED;
             },
             [s],
         ),
-        c = (0, u.bG)([J.Ay], () => J.Ay.useReducedMotion),
-        o = (0, H.Ay)(r),
-        d = (0, H.Ay)(a),
-        { createMultipleConfettiAt: m } = l.useContext(Z.x),
-        x = (0, z.r)(h.A.colors.INTERACTIVE_BACKGROUND_HOVER).hex(),
-        A = (0, z.r)(h.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-        g = (0, z.r)(h.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
-        N = l.useRef(0),
+        c = (0, m.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
+        o = (0, J.Ay)(r),
+        d = (0, J.Ay)(a),
+        { createMultipleConfettiAt: u } = l.useContext(B.x),
+        x = (0, H.r)(N.A.colors.INTERACTIVE_BACKGROUND_HOVER).hex(),
+        A = (0, H.r)(N.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+        h = (0, H.r)(N.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
+        g = l.useRef(0),
         E = l.useRef(null),
         j = Math.max(0, Math.min(1, r ?? 0)),
-        C = j >= 1 ? g : A,
-        I = l.useMemo(
-            () => ({ backgroundImage: `conic-gradient(${C} ${Math.round(360 * j)}deg, ${x} 0deg)` }),
-            [j, C, x],
+        I = j >= 1 ? h : A,
+        C = l.useMemo(
+            () => ({ backgroundImage: `conic-gradient(${I} ${Math.round(360 * j)}deg, ${x} 0deg)` }),
+            [j, I, x],
         ),
         p = l.useMemo(
             () => ({
@@ -93,8 +94,8 @@ function X(e) {
         f = l.useCallback(() => {
             if (c) return;
             let e = E.current?.getBoundingClientRect();
-            null != e && m(e.left + e.width / 2, e.top + e.height / 2, p, 250);
-        }, [p, m, c]);
+            null != e && u(e.left + e.width / 2, e.top + e.height / 2, p, 250);
+        }, [p, u, c]);
     (l.useEffect(() => {
         c || ((o ?? 0) < 1 && j >= 1 && f());
     }, [j, f, o, c]),
@@ -104,43 +105,43 @@ function X(e) {
     let L = l.useCallback(() => {
         if (c || j < 1) return;
         let e = Date.now();
-        e - N.current < 4e3 || ((N.current = e), f());
+        e - g.current < 4e3 || ((g.current = e), f());
     }, [j, f, c]);
     return (0, i.jsx)("div", {
         className: t,
         onMouseEnter: L,
         children: (0, i.jsxs)("div", {
             ref: E,
-            className: W.R,
-            children: [(0, i.jsx)("div", { className: W.h, style: I }), n],
+            className: X.R,
+            children: [(0, i.jsx)("div", { className: X.h, style: C }), n],
         }),
     });
 }
-function Y(e) {
+function $(e) {
     let { userId: s, wrapperClassName: t, children: n } = e,
-        l = (0, F.Uk)("VoiceDareAvatarRing"),
-        r = (0, u.bG)([w.A], () => w.A.hasVoiceDareForUserId(s), [s]);
+        l = (0, w.Uk)("VoiceDareAvatarRing"),
+        r = (0, m.bG)([z.A], () => z.A.hasVoiceDareForUserId(s), [s]);
     return l && r
-        ? (0, i.jsx)(X, { userId: s, wrapperClassName: t, children: n })
+        ? (0, i.jsx)(Y, { userId: s, wrapperClassName: t, children: n })
         : (0, i.jsx)("div", { className: t, children: n });
 }
-var $ = t(790381),
-    q = t(266080),
-    Q = t(427262),
-    ee = t(652215),
-    es = t(806931),
-    et = t(544105),
-    en = t(105292),
-    ei = t(254849);
-let el = (0, M.Fe)({
+var q = t(790381),
+    Q = t(266080),
+    ee = t(427262),
+    es = t(652215),
+    et = t(806931),
+    en = t(544105),
+    ei = t(105292),
+    el = t(254849);
+let er = (0, V.Fe)({
     createPromise: () => Promise.all([t.e("910349"), t.e("528966")]).then(t.bind(t, 217356)),
     webpackId: 217356,
 });
-function er(e) {
-    let { children: s, collapsed: t = !1, className: n } = e;
-    return (0, i.jsx)("div", { className: a()(n, ei.p_, t ? ei.GT : ei.m3), role: "group", children: s });
-}
 function ea(e) {
+    let { children: s, collapsed: t = !1, className: n } = e;
+    return (0, i.jsx)("div", { className: a()(n, el.p_, t ? el.GT : el.m3), role: "group", children: s });
+}
+function ec(e) {
     let {
             className: s,
             mute: t,
@@ -148,34 +149,34 @@ function ea(e) {
             localVideoDisabled: l,
             serverMute: r,
             deaf: c,
-            serverDeaf: u,
+            serverDeaf: m,
             collapsed: C,
-            video: I,
+            video: p,
             isStreaming: b,
-            disabled: k,
-            isWatching: v,
-            ringing: D,
-            iconClassName: M,
-            embeddedApplication: V,
-            otherClientSessionType: G,
-            voicePlatform: P,
-            application: F,
-            game: w,
-            guildId: z,
-            channelId: H,
-            user: J,
-            disconnected: Z,
-            isHovered: B,
-            soundboardMuted: W,
+            disabled: v,
+            isWatching: D,
+            ringing: y,
+            iconClassName: V,
+            embeddedApplication: G,
+            otherClientSessionType: P,
+            voicePlatform: U,
+            application: w,
+            game: z,
+            guildId: H,
+            channelId: J,
+            user: Z,
+            disconnected: B,
+            isHovered: W,
+            soundboardMuted: X,
         } = e,
-        X = C || k,
-        { enabled: Y } = U.useConfig({ guildId: z ?? "", location: "VoiceUserIcons" }),
-        Q = (0, _.UK)(H),
-        { previewUrl: ee } = (0, K.A)(z, H, Y && b && !X && !Q ? J.id : void 0),
-        el = null != ee && "" !== ee.trim();
-    if (X) return null;
-    let er = [],
-        ea = (function (e) {
+        Y = C || v,
+        { enabled: $ } = K.useConfig({ guildId: H ?? "", location: "VoiceUserIcons" }),
+        ee = (0, _.UK)(J),
+        { previewUrl: es } = (0, F.A)(H, J, $ && b && !Y && !ee ? Z.id : void 0),
+        er = null != es && "" !== es.trim();
+    if (Y) return null;
+    let ea = [],
+        ec = (function (e) {
             let {
                     iconClassName: s,
                     mute: t,
@@ -190,10 +191,10 @@ function ea(e) {
                 (o &&
                     d.push(
                         (0, i.jsx)(
-                            m.m,
+                            x.m,
                             {
-                                text: en.intl.string(en.t["9bJYWN"]),
-                                children: (0, i.jsx)(p.N, { className: a()(ei.Kk, s), color: "currentColor" }),
+                                text: ei.intl.string(ei.t["9bJYWN"]),
+                                children: (0, i.jsx)(f.N, { className: a()(el.Kk, s), color: "currentColor" }),
                             },
                             "soundboard-mute",
                         ),
@@ -201,17 +202,17 @@ function ea(e) {
                 t)
             ) {
                 let e;
-                e = l || n ? f.O : L.z;
-                let t = (0, i.jsx)(e, { className: a()(ei.Kk, s, { [ei.DU]: l }), color: "currentColor" });
+                e = l || n ? L.O : O.z;
+                let t = (0, i.jsx)(e, { className: a()(el.Kk, s, { [el.DU]: l }), color: "currentColor" });
                 d.push(
                     (0, i.jsx)(
-                        m.m,
+                        x.m,
                         {
                             text: n
-                                ? en.intl.string(en.t.Q8Uzof)
+                                ? ei.intl.string(ei.t.Q8Uzof)
                                 : l
-                                  ? en.intl.string(en.t.uLddbQ)
-                                  : en.intl.string(en.t.tjtv3P),
+                                  ? ei.intl.string(ei.t.uLddbQ)
+                                  : ei.intl.string(ei.t.tjtv3P),
                             children: t,
                         },
                         "mute",
@@ -219,242 +220,256 @@ function ea(e) {
                 );
             }
             if (c || r) {
-                let e = c ? O.T : R.c,
-                    t = (0, i.jsx)(e, { className: a()(ei.Kk, s, { [ei.DU]: c }), color: "currentColor" });
+                let e = c ? R.T : T.c,
+                    t = (0, i.jsx)(e, { className: a()(el.Kk, s, { [el.DU]: c }), color: "currentColor" });
                 d.push(
                     (0, i.jsx)(
-                        m.m,
-                        { text: c ? en.intl.string(en.t.btxSdB) : en.intl.string(en.t.NjmiOL), children: t },
+                        x.m,
+                        { text: c ? ei.intl.string(ei.t.btxSdB) : ei.intl.string(ei.t.NjmiOL), children: t },
                         "deaf",
                     ),
                 );
             }
             return d;
-        })({ iconClassName: M, mute: t, localMute: n, serverMute: r, deaf: c, serverDeaf: u, soundboardMuted: W });
-    (I &&
+        })({ iconClassName: V, mute: t, localMute: n, serverMute: r, deaf: c, serverDeaf: m, soundboardMuted: X });
+    (p &&
         (l
-            ? er.push(
+            ? ea.push(
                   (0, i.jsx)(
-                      m.m,
+                      x.m,
                       {
-                          text: en.intl.string(en.t["PXMZ/+"]),
-                          children: (0, i.jsx)(x.O, { size: "md", color: "currentColor", className: a()(ei.Kk, M) }),
+                          text: ei.intl.string(ei.t["PXMZ/+"]),
+                          children: (0, i.jsx)(A.O, { size: "md", color: "currentColor", className: a()(el.Kk, V) }),
                       },
                       "video",
                   ),
               )
-            : er.push(
+            : ea.push(
                   (0, i.jsx)(
-                      m.m,
+                      x.m,
                       {
-                          text: en.intl.string(en.t.FlNoSV),
-                          children: (0, i.jsx)(A.VideoIcon, {
+                          text: ei.intl.string(ei.t.FlNoSV),
+                          children: (0, i.jsx)(h.VideoIcon, {
                               size: "md",
                               color: "currentColor",
-                              className: a()(ei.Kk, M),
+                              className: a()(el.Kk, V),
                           }),
                       },
                       "video",
                   ),
               )),
-        Z &&
-            er.push(
+        B &&
+            ea.push(
                 (0, i.jsx)(
-                    m.m,
+                    x.m,
                     {
-                        text: en.intl.string(en.t.HFwRpk),
+                        text: ei.intl.string(ei.t.HFwRpk),
                         children: (0, i.jsx)(g.E, {
-                            className: a()(ei.Kk, M),
-                            color: h.A.colors.STATUS_WARNING_BACKGROUND,
+                            className: a()(el.Kk, V),
+                            color: N.A.colors.STATUS_WARNING_BACKGROUND,
                         }),
                     },
                     "disconnected",
                 ),
             ),
-        null != V &&
-            er.push(
+        null != G &&
+            ea.push(
                 (0, i.jsx)(
-                    m.m,
+                    x.m,
                     {
-                        text: (0, S.A)(V.name),
-                        children: (0, i.jsx)(N.k, { size: "md", color: "currentColor", className: a()(ei.Kk, M) }),
+                        text: (0, S.A)(G.name),
+                        children: (0, i.jsx)(E.k, { size: "md", color: "currentColor", className: a()(el.Kk, V) }),
                     },
                     "activity",
                 ),
             ),
-        G === et.f$.XBOX || P === es.J7.XBOX
-            ? er.push((0, i.jsx)(q.A, { className: a()(ei.Kk, M) }, "xbox"))
-            : G === et.f$.PLAYSTATION || P === es.J7.PLAYSTATION
-              ? er.push((0, i.jsx)($.A, { className: a()(ei.Kk, M) }, "playstation"))
-              : P === es.J7.QUEST &&
-                er.push((0, i.jsx)(o.G, { size: "xs", color: "currentColor", className: a()(ei.Kk, M) }, "quest")),
-        v &&
-            er.push(
+        P === en.f$.XBOX || U === et.J7.XBOX
+            ? ea.push((0, i.jsx)(Q.A, { className: a()(el.Kk, V) }, "xbox"))
+            : P === en.f$.PLAYSTATION || U === et.J7.PLAYSTATION
+              ? ea.push((0, i.jsx)(q.A, { className: a()(el.Kk, V) }, "playstation"))
+              : U === et.J7.QUEST &&
+                ea.push((0, i.jsx)(o.G, { size: "xs", color: "currentColor", className: a()(el.Kk, V) }, "quest")),
+        D &&
+            ea.push(
                 (0, i.jsx)(
-                    m.m,
+                    x.m,
                     {
-                        text: en.intl.string(en.t["JH1SJ+"]),
-                        children: (0, i.jsx)(E.EyeIcon, {
+                        text: ei.intl.string(ei.t["JH1SJ+"]),
+                        children: (0, i.jsx)(j.EyeIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: a()(ei.Kk, M),
+                            className: a()(el.Kk, V),
                         }),
                     },
                     "watch",
                 ),
             ));
-    let ec = null != F && !F.isEmbedded,
-        ed =
-            ec && !D
+    let eo = null != w && !w.isEmbedded,
+        eu =
+            eo && !y
                 ? (0, i.jsx)(
                       "div",
                       {
-                          className: ei.RL,
-                          children: (0, i.jsx)(eo, {
-                              application: F,
-                              game: w,
-                              iconClassName: M,
-                              guildId: z,
-                              channelId: H,
-                              userId: J.id,
+                          className: el.RL,
+                          children: (0, i.jsx)(ed, {
+                              application: w,
+                              game: z,
+                              iconClassName: V,
+                              guildId: H,
+                              channelId: J,
+                              userId: Z.id,
                           }),
                       },
-                      `${J.id}-game`,
+                      `${Z.id}-game`,
                   )
                 : null;
-    return (Y && null != ed && er.push(ed),
-    b && !el && er.push((0, i.jsx)(y.Ay, { size: y.Ay.Sizes.SMALL }, "stream")),
-    D &&
-        null != H &&
-        B &&
-        er.push(
+    return ($ && null != eu && ea.push(eu),
+    b && !er && ea.push((0, i.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL }, "stream")),
+    y &&
+        null != J &&
+        W &&
+        ea.push(
             (0, i.jsx)(
-                m.m,
+                x.m,
                 {
-                    text: en.intl.string(en.t.ygslb0),
-                    children: (0, i.jsx)(j.D, {
+                    text: ei.intl.string(ei.t.ygslb0),
+                    children: (0, i.jsx)(I.D, {
                         onClick: (e) => {
-                            (e.stopPropagation(), T.A.stopRinging(H, [J.id]));
+                            (e.stopPropagation(), k.A.stopRinging(J, [Z.id]));
                         },
                         children: (0, i.jsx)(d.z, {
                             size: "sm",
-                            color: h.A.colors.ICON_FEEDBACK_CRITICAL,
-                            className: a()(ei.Kk, M),
+                            color: N.A.colors.ICON_FEEDBACK_CRITICAL,
+                            className: a()(el.Kk, V),
                         }),
                     }),
                 },
                 "ring",
             ),
         ),
-    0 !== er.length || 0 !== ea.length || ec || D || el)
+    0 !== ea.length || 0 !== ec.length || eo || y || er)
         ? (0, i.jsxs)("div", {
-              className: a()(ei.Pt, s),
+              className: a()(el.Pt, s),
               children: [
-                  (0, i.jsxs)("div", { className: ei.RL, children: [ea, er] }),
-                  !Y && ed,
-                  Y &&
-                      el &&
-                      (0, i.jsx)(m.m, {
-                          text: en.intl.string(en.t.dI3q4h),
+                  (0, i.jsxs)("div", { className: el.RL, children: [ec, ea] }),
+                  !$ && eu,
+                  $ &&
+                      er &&
+                      (0, i.jsx)(x.m, {
+                          text: ei.intl.string(ei.t.dI3q4h),
                           ariaHidden: !0,
-                          children: (0, i.jsx)("img", { src: ee, alt: en.intl.string(en.t.cxSpOM), className: ei.Rh }),
+                          children: (0, i.jsxs)("div", {
+                              className: el.Um,
+                              children: [
+                                  (0, i.jsx)("img", { src: es, alt: ei.intl.string(ei.t.cxSpOM), className: el.Rh }),
+                                  (0, i.jsx)("div", {
+                                      className: el.yo,
+                                      children: (0, i.jsx)(u.k, {
+                                          height: 10,
+                                          width: 10,
+                                          size: "custom",
+                                          color: N.A.colors.WHITE,
+                                      }),
+                                  }),
+                              ],
+                          }),
                       }),
               ],
           })
         : null;
 }
-let ec = function (e) {
+let eo = function (e) {
     let s,
         t,
         n,
         r,
         {
-            avatarContainerClass: c = ei.H,
-            userNameClassName: o = ei.gr,
-            size: d = ee.OSZ.SMALL,
-            selected: x = !1,
+            avatarContainerClass: c = el.H,
+            userNameClassName: o = el.gr,
+            size: d = es.OSZ.SMALL,
+            selected: u = !1,
             disabled: A = !1,
-            isOverlay: g = !1,
-            ref: h,
+            isOverlay: h = !1,
+            ref: g,
             ...N
         } = e,
         {
             onClick: E,
             onKeyDown: j,
-            onDoubleClick: p,
+            onDoubleClick: I,
             onContextMenu: f,
             onMouseLeave: L,
             onMouseDown: O,
             priority: R,
             speaking: T = !1,
-            playingSoundboard: S = !1,
-            collapsed: _,
-            mute: b,
-            localMute: y,
+            playingSoundboard: k = !1,
+            collapsed: S,
+            mute: _,
+            localMute: b,
             serverMute: M,
-            deaf: P,
+            deaf: V,
             serverDeaf: U,
             guildId: K,
-            nick: z,
+            nick: F,
             isGuest: H,
             flipped: J,
             className: Z,
             overlap: B,
             "aria-label": W,
             ringing: X,
-            connecting: $ = !1,
+            connecting: Y = !1,
             user: q,
-            soundboardMuted: es,
+            soundboardMuted: Q,
         } = N,
-        et = (0, V.A)({ userId: q.id, guildId: K }),
-        er = (0, G.a)({ displayNameStyles: et }),
-        ec = (0, k.A)(q.id),
-        eo = (0, D.v)({
-            voiceStatus: (0, C.n$)(T, S),
-            voiceDb: ec,
-            ...(B ? { spreadDirection: D.O.INSET_ONLY, maxInnerSpreadRadius: 3 } : {}),
+        et = (0, G.A)({ userId: q.id, guildId: K }),
+        en = (0, P.a)({ displayNameStyles: et }),
+        ea = (0, v.A)(q.id),
+        eo = (0, y.v)({
+            voiceStatus: (0, C.n$)(T, k),
+            voiceDb: ea,
+            ...(B ? { spreadDirection: y.O.INSET_ONLY, maxInnerSpreadRadius: 3 } : {}),
         }),
         [ed, eu] = l.useState(!1),
         em = (() => {
             if (null != W) return W;
-            let e = z ?? q.username,
+            let e = F ?? q.username,
                 s = null;
-            return ($
-                ? (s = en.intl.string(en.t["7LkwqE"]))
+            return (Y
+                ? (s = ei.intl.string(ei.t["7LkwqE"]))
                 : U
-                  ? (s = en.intl.string(en.t.btxSdB))
-                  : P
-                    ? (s = en.intl.string(en.t.NjmiOL))
-                    : y
-                      ? (s = en.intl.string(en.t.Q8Uzof))
+                  ? (s = ei.intl.string(ei.t.btxSdB))
+                  : V
+                    ? (s = ei.intl.string(ei.t.NjmiOL))
+                    : b
+                      ? (s = ei.intl.string(ei.t.Q8Uzof))
                       : M
-                        ? (s = en.intl.string(en.t.uLddbQ))
-                        : b
-                          ? (s = en.intl.string(en.t.tjtv3P))
-                          : es && (s = en.intl.string(en.t["9bJYWN"])),
+                        ? (s = ei.intl.string(ei.t.uLddbQ))
+                        : _
+                          ? (s = ei.intl.string(ei.t.tjtv3P))
+                          : Q && (s = ei.intl.string(ei.t["9bJYWN"])),
             null != s)
-                ? en.intl.formatToPlainString(en.t["1+MVBP"], { userName: e, status: s })
+                ? ei.intl.formatToPlainString(ei.t["1+MVBP"], { userName: e, status: s })
                 : e;
         })(),
-        ex = (0, u.bG)([w.A], () => w.A.getProgressForUserId(q.id), [q.id]),
-        eA = (0, F.Uk)("VoiceUser") && null != ex;
-    return (0, i.jsx)(I.s, {
-        ref: h,
+        ex = (0, m.bG)([z.A], () => z.A.getProgressForUserId(q.id), [q.id]),
+        eA = (0, w.Uk)("VoiceUser") && null != ex;
+    return (0, i.jsx)(p.s, {
+        ref: g,
         className: a()(Z, {
-            [ei.q7]: !0,
-            [ei.EF]: B,
-            [ei.wH]: x,
-            [ei.vk]: null != E,
-            [ei.L9]: d === ee.OSZ.SMALL,
-            [ei.p8]: d === ee.OSZ.LARGE,
-            [ei.r9]: !x && A,
-            [ei.jI]: $,
+            [el.q7]: !0,
+            [el.EF]: B,
+            [el.wH]: u,
+            [el.vk]: null != E,
+            [el.L9]: d === es.OSZ.SMALL,
+            [el.p8]: d === es.OSZ.LARGE,
+            [el.r9]: !u && A,
+            [el.jI]: Y,
         }),
         onClick: function (e) {
             E?.(e, q);
         },
         onDoubleClick: function (e) {
-            p?.(e, q);
+            I?.(e, q);
         },
         onContextMenu: function (e) {
             f?.(e, q);
@@ -472,38 +487,38 @@ let ec = function (e) {
         "aria-label": em,
         focusProps: { offset: { right: 4 } },
         children: (0, i.jsxs)("div", {
-            className: a()(ei.Qs, { [ei.zq]: J }),
+            className: a()(el.Qs, { [el.zq]: J }),
             children: [
-                R && !_
-                    ? (0, i.jsx)(m.m, {
-                          text: en.intl.string(en.t.BVK71i),
-                          children: (0, i.jsx)("div", { className: a()(ei.G, { [ei.g4]: !b && !M && T }) }),
+                R && !S
+                    ? (0, i.jsx)(x.m, {
+                          text: ei.intl.string(ei.t.BVK71i),
+                          children: (0, i.jsx)("div", { className: a()(el.G, { [el.g4]: !_ && !M && T }) }),
                       })
                     : null,
-                ((s = a()(ei.my, { [ei.Jb]: d === ee.OSZ.LARGE, [ei.dT]: d === ee.OSZ.SMALL, [ei.DF]: X })),
-                (t = { backgroundImage: `url(${q.getAvatarURL(K, d === ee.OSZ.LARGE ? 38 : 24)})`, ...eo }),
+                ((s = a()(el.my, { [el.Jb]: d === es.OSZ.LARGE, [el.dT]: d === es.OSZ.SMALL, [el.DF]: X })),
+                (t = { backgroundImage: `url(${q.getAvatarURL(K, d === es.OSZ.LARGE ? 38 : 24)})`, ...eo }),
                 X
-                    ? (0, i.jsx)(v.Ay, {
-                          size: d === ee.OSZ.LARGE ? C._3.SIZE_40 : C._3.SIZE_24,
+                    ? (0, i.jsx)(D.Ay, {
+                          size: d === es.OSZ.LARGE ? C._3.SIZE_40 : C._3.SIZE_24,
                           ringing: !0,
-                          src: q.getAvatarURL(K, d === ee.OSZ.LARGE ? 40 : 24),
+                          src: q.getAvatarURL(K, d === es.OSZ.LARGE ? 40 : 24),
                           className: a()(c, s),
                       })
                     : eA
-                      ? (0, i.jsx)(Y, {
+                      ? (0, i.jsx)($, {
                             userId: q.id,
                             wrapperClassName: c,
                             children: (0, i.jsx)("div", { className: s, style: t }),
                         })
                       : (0, i.jsx)("div", { className: a()(c, s), style: t })),
                 ((n = (0, i.jsxs)("div", {
-                    className: a()(o, ei.Xh, er, { [ei.Pi]: !b && !M && T, [ei.DF]: X }),
+                    className: a()(o, el.Xh, en, { [el.Pi]: !_ && !M && T, [el.DF]: X }),
                     children: [
-                        z ?? Q.Ay.getName(q),
+                        F ?? ee.Ay.getName(q),
                         H
                             ? (0, i.jsxs)("span", {
-                                  className: ei.IW,
-                                  children: ["\xa0", en.intl.string(en.t["pFO/Ph"])],
+                                  className: el.IW,
+                                  children: ["\xa0", ei.intl.string(ei.t["pFO/Ph"])],
                               })
                             : "",
                     ],
@@ -512,40 +527,40 @@ let ec = function (e) {
                     primaryGuild: q.primaryGuild,
                     userId: q.id,
                     contextGuildId: K,
-                    isOverlay: g,
+                    isOverlay: h,
                     disableTooltip: !0,
-                    className: a()(ei.fc, g && ei.zW),
-                    profileViewedAnalytics: { source: g ? ee.JJy.OVERLAY : ee.ThZ.VOICE_PANEL },
+                    className: a()(el.fc, h && el.zW),
+                    profileViewedAnalytics: { source: h ? es.JJy.OVERLAY : es.ThZ.VOICE_PANEL },
                 }),
-                !_ || g ? (0, i.jsx)(el, { ...r, children: n }) : null),
-                (0, i.jsx)(ea, { disabled: A, ...N, isHovered: ed }),
+                !S || h ? (0, i.jsx)(er, { ...r, children: n }) : null),
+                (0, i.jsx)(ec, { disabled: A, ...N, isHovered: ed }),
             ],
         }),
     });
 };
-function eo(e) {
+function ed(e) {
     let { application: s, game: t, iconClassName: n, guildId: r, channelId: o, userId: d } = e,
-        [u, x] = l.useState(!1),
-        A = (0, c.K)((e) => x(e));
+        [u, m] = l.useState(!1),
+        A = (0, c.K)((e) => m(e));
     return (
         l.useEffect(() => {
             u &&
-                b.Ay.trackWithMetadata(ee.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+                b.Ay.trackWithMetadata(es.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
                     channel_id: o,
                     guild_id: r,
                     user_id: d,
                 });
         }, [s.id, o, r, d, u]),
-        (0, i.jsx)(m.m, {
-            text: en.intl.formatToPlainString(en.t.Sq9xJ7, { game: s.name }),
-            "aria-label": en.intl.formatToPlainString(en.t.Sq9xJ7, { game: s.name }),
-            children: (0, i.jsx)(P.A, {
+        (0, i.jsx)(x.m, {
+            text: ei.intl.formatToPlainString(ei.t.Sq9xJ7, { game: s.name }),
+            "aria-label": ei.intl.formatToPlainString(ei.t.Sq9xJ7, { game: s.name }),
+            children: (0, i.jsx)(U.A, {
                 ref: A,
-                className: a()(ei.Kk, ei.n8, n),
+                className: a()(el.Kk, el.n8, n),
                 game: t ?? s,
-                size: P.M.XSMALL,
+                size: U.M.XSMALL,
                 onMouseEnter: function () {
-                    b.Ay.trackWithMetadata(ee.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+                    b.Ay.trackWithMetadata(es.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                         channel_id: o,
                         guild_id: r,
                         game_name: s.name,
