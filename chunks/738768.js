@@ -1,10 +1,10 @@
-(n.d(e, { wG: () => p }), n(321073));
+(n.d(e, { wG: () => g, th: () => f, q$: () => p }), n(321073));
 var r = n(435558),
     i = n.n(r);
 n(309613);
-let o = n(346344).newStemmer("english");
+let l = n(346344).newStemmer("english");
 function h(t) {
-    return o.stem(t);
+    return l.stem(t);
 }
 let u = new Set([
     "a",
@@ -41,49 +41,63 @@ let u = new Set([
     "will",
     "with",
 ]);
-function s(t) {
+function o(t) {
     return t.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
-function c(t) {
+function s(t) {
     return t.toLowerCase();
 }
-function l(t) {
+function a(t) {
     return u.has(t);
 }
-function a(t) {
+function c(t) {
     return 0 === t.length;
 }
-function p(t) {
+function f(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = t.length >= 3 && t.length <= 12 && e,
-        r = new Set(i()(t.split(/\W+/)).map(s).reject(a).map(c).reject(l).map(h).value());
+        n = t.length >= 3 && t.length <= 12;
+    return {
+        words: new Set(i()(t.split(/\W+/)).map(o).reject(c).map(s).reject(a).map(h).value()),
+        supportPartialMatches: n && e,
+    };
+}
+function p(t, e) {
+    let { words: n, supportPartialMatches: r } = e;
+    if (0 === n.size) return null;
+    let i = [],
+        l = "";
+    for (let e of t.split(/(\W+)/g))
+        !(function (t, e) {
+            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            if (c((t = s(o(t)))) || a(t)) return !1;
+            let r = h(t);
+            if (n) {
+                for (let t of e.values()) if (r.includes(t)) return !0;
+                return !1;
+            }
+            return e.has(r);
+        })(e, n, r)
+            ? (l += e)
+            : (l.length > 0 && i.push({ text: l, highlight: !1 }), i.push({ text: e, highlight: !0 }), (l = ""));
+    return 0 === i.length ? null : (l.length > 0 && i.push({ text: l, highlight: !1 }), i);
+}
+function g(t) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        { words: n, supportPartialMatches: r } = f(t, e);
     return (t) =>
         (function t(e, n, r) {
             if (Array.isArray(e)) e.forEach((e) => t(e, n, r));
             else if ("list" === e.type) e.items.forEach((e) => t(e, n, r));
             else if ("string" == typeof e.content && "codeBlock" !== e.type) {
-                let t = [],
-                    i = "";
-                (e.content.split(/(\W+)/g).forEach((e) => {
-                    !(function (t, e) {
-                        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (a((t = c(s(t)))) || l(t)) return !1;
-                        let r = h(t);
-                        if (n) {
-                            for (let t of e.values()) if (r.includes(t)) return !0;
-                            return !1;
-                        }
-                        return e.has(r);
-                    })(e, n, r)
-                        ? (i += e)
-                        : (i.length > 0 && t.push({ type: "text", content: i }),
-                          t.push({ type: "highlight", content: e }),
-                          (i = ""));
-                }),
-                    t.length > 0 &&
-                        (i.length > 0 && t.push({ type: "text", content: i }),
-                        "text" === e.type ? (e.content = t) : (e.content = [{ type: "text", content: t }])));
+                let t = p(e.content, { words: n, supportPartialMatches: r });
+                if (null != t) {
+                    let n = t.map((t) => {
+                        let { text: e, highlight: n } = t;
+                        return { type: n ? "highlight" : "text", content: e };
+                    });
+                    "text" === e.type ? (e.content = n) : (e.content = [{ type: "text", content: n }]);
+                }
             } else null != e.content && t(e.content, n, r);
             return e;
-        })(t, r, n);
+        })(t, n, r);
 }

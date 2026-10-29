@@ -1,29 +1,32 @@
-n.d(t, { A: () => r });
-let i = new Set(["link", "url", "autolink", "mailto", "tel", "attachmentLink", "devLink"]);
-function l(e) {
+t.d(n, { A: () => s, u: () => r });
+let l = new Set(["link", "url", "autolink", "mailto", "tel", "attachmentLink", "devLink"]);
+function r(e) {
+    return `:${e.replace(/^:+|:+$/g, "")}:`;
+}
+function a(e) {
     return null == e
         ? ""
         : "string" == typeof e
           ? e
           : Array.isArray(e)
-            ? e.map(l).join("")
+            ? e.map(a).join("")
             : "string" == typeof e.content
               ? e.content
-              : l(e.content);
+              : a(e.content);
 }
-function s(e) {
-    if (i.has(e.type)) {
-        let t = l(e.target);
-        return { type: "inlineCode", content: t.length > 0 ? t : l(e.content) };
+function i(e) {
+    if (l.has(e.type)) {
+        let n = a(e.target);
+        return { type: "inlineCode", content: n.length > 0 ? n : a(e.content) };
     }
-    if ("customEmoji" === e.type) return { type: "text", content: `:${String(e.name ?? "").replace(/^:+|:+$/g, "")}:` };
-    let t = { ...e };
+    if ("customEmoji" === e.type) return { type: "text", content: r(String(e.name ?? "")) };
+    let n = { ...e };
     return (
-        null != e.content && "string" != typeof e.content && (t.content = r(e.content)),
-        null != e.items && (t.items = e.items.map((e) => r(e))),
-        t
+        null != e.content && "string" != typeof e.content && (n.content = s(e.content)),
+        null != e.items && (n.items = e.items.map((e) => s(e))),
+        n
     );
 }
-function r(e) {
-    return Array.isArray(e) ? e.map(s) : s(e);
+function s(e) {
+    return Array.isArray(e) ? e.map(i) : i(e);
 }
