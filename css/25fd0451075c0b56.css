@@ -124,7 +124,7 @@
 }
 
 .container__594cf {
-    gap: 8px
+    gap: var(--space-8)
 }
 
 .text__594cf {
@@ -222,4 +222,4 @@
     padding-inline: calc(var(--custom-spacing) + var(--custom-spacing))
 }
 
-/*# sourceMappingURL=9d057119f0524a2d.css.map*/
+/*# sourceMappingURL=25fd0451075c0b56.css.map*/
