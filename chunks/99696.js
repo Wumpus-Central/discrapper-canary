@@ -1,13 +1,13 @@
 l.d(t, {
-    Ey: () => x,
-    HF: () => v,
-    Ng: () => p,
-    P6: () => m,
-    Pc: () => u,
-    Qp: () => d,
-    cV: () => j,
-    k$: () => f,
-    tn: () => h,
+    Ey: () => f,
+    HF: () => g,
+    Ng: () => h,
+    P6: () => x,
+    Pc: () => m,
+    Qp: () => u,
+    cV: () => v,
+    k$: () => p,
+    tn: () => j,
 });
 var n = l(477900);
 l(582128);
@@ -17,18 +17,26 @@ var a = l(636537),
     i = l(652215),
     o = l(105292),
     c = l(882411);
-async function d(e) {
+function d(e) {
+    return e.replace(/[\s-]/g, "").toUpperCase();
+}
+async function u(e) {
     return (
-        await a.Bo.post({ url: i.Rsh.BILLING_GIFT_CARD_VIEW, body: { pin: e }, oldFormErrors: !0, rejectWithError: !1 })
+        await a.Bo.post({
+            url: i.Rsh.BILLING_GIFT_CARD_VIEW,
+            body: { pin: d(e) },
+            oldFormErrors: !0,
+            rejectWithError: !1,
+        })
     ).body;
 }
-function u(e) {
+function m(e) {
     s.default.track(i.HAw.GIFT_CARD_REDEMPTION_START, { source: e.source, load_id: e.loadId });
 }
-function m(e) {
+function x(e) {
     s.default.track(i.HAw.GIFT_CARD_REDEMPTION_EMBED_CLICKED, { source: e.source, load_id: e.loadId });
 }
-function x(e, t) {
+function f(e, t) {
     s.default.track(i.HAw.GIFT_CARD_REDEMPTION_COMPLETED, {
         source: t.source,
         load_id: t.loadId,
@@ -36,14 +44,14 @@ function x(e, t) {
         redemption_currency: e.currency,
     });
 }
-function f(e) {
+function p(e) {
     s.default.track(i.HAw.GIFT_CARD_REDEMPTION_FAILED, { source: e.source, load_id: e.loadId });
 }
-async function p(e, t, l) {
+async function h(e, t, l) {
     try {
         let n = await a.Bo.post({
             url: i.Rsh.BILLING_GIFT_CARD_REDEEM,
-            body: { pin: e, postal_code: t, country_code: l },
+            body: { pin: d(e), postal_code: t, country_code: l },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
@@ -52,12 +60,12 @@ async function p(e, t, l) {
         throw e;
     }
 }
-function h(e) {
+function j(e) {
     return e?.body?.code === i.t02.GIFT_CARD_ALREADY_REDEEMED
         ? o.intl.string(c.default.uo9YsP)
         : o.intl.string(c.default.EUKPip);
 }
-function j(e) {
+function v(e) {
     let { amountRedeemed: t, currencyCode: a, loadId: s, onClose: i } = e;
     (0, r.openModalLazy)(async () => {
         let { default: e } = await Promise.all([l.e("359189"), l.e("986437")]).then(l.bind(l, 544036));
@@ -73,7 +81,7 @@ function j(e) {
             });
     });
 }
-function v() {
+function g() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         {
             initialCode: t = "",
