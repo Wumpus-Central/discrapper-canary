@@ -81,8 +81,8 @@ function g(e, t, a, l) {
         locked: !1,
     };
 }
-var v = a(81253);
-let A = [
+var A = a(81253);
+let v = [
         g("left-2", _.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
         g("right-1", _.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
         g("left-1", _.a.IMAGE_TEXT, 0, 0, {
@@ -93,14 +93,16 @@ let A = [
         }),
         g("right-2", _.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    x = A.filter((e) => {
-        let { requires_hydration: t } = e;
-        return t;
-    }).map((e) => {
-        let { id: t } = e;
-        return t;
-    }),
-    b = {
+    f = v
+        .filter((e) => {
+            let { requires_hydration: t } = e;
+            return t;
+        })
+        .map((e) => {
+            let { id: t } = e;
+            return t;
+        }),
+    x = {
         stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
@@ -131,7 +133,7 @@ let A = [
             },
         ],
     },
-    f = {
+    b = {
         title: "Server Hub Page",
         stories: [
             {
@@ -150,7 +152,7 @@ let A = [
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: x,
+                                        widgetIds: f,
                                     }),
                                     "loading" !== n)
                                 ) {
@@ -165,17 +167,17 @@ let A = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: x.map((e) => ({
+                                        widgets: f.map((e) => ({
                                             id: e,
-                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...b } : null,
+                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...x } : null,
                                         })),
                                     });
                                 }
                             }, [t, n]),
                             t);
                     return (0, l.jsx)("div", {
-                        className: r()(v.frame, v[a]),
-                        children: (0, l.jsx)(m.A, { canEdit: !0, guildId: i, widgets: A }),
+                        className: r()(A.frame, A[a]),
+                        children: (0, l.jsx)(m.A, { canEdit: !0, guildId: i, widgets: v }),
                     });
                 },
                 controls: {
@@ -208,17 +210,17 @@ let A = [
     };
 a(321073);
 var y = a(17928),
-    w = a(331322),
+    S = a(331322),
     E = a(994500),
-    S = a(711014),
+    w = a(711014),
     I = a(287809),
     D = a(927813),
     R = a(427262),
     k = a(914609),
     j = a(539888),
-    T = a(282435);
-let G = [...T.sx.slice(0, 2), "1442738138211553383", ...T.sx.slice(2, 9)],
-    N = [
+    N = a(282435);
+let T = [...N.sx.slice(0, 2), "1442738138211553383", ...N.sx.slice(2, 9)],
+    G = [
         { days: 7, totalSeconds: 7 * D.A.Seconds.DAY - 60, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
         { days: 7, totalSeconds: 32 * D.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
         { days: 5, totalSeconds: 26 * D.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
@@ -240,19 +242,19 @@ let G = [...T.sx.slice(0, 2), "1442738138211553383", ...T.sx.slice(2, 9)],
         { days: 1, totalSeconds: 1440, gameIndexes: [6] },
         { days: 1, totalSeconds: 660, gameIndexes: [9] },
     ];
-var L = a(546184);
-let M = g("leaderboard", _.a.LEADERBOARD, 0, 0),
-    P = {
+var M = a(546184);
+let L = g("leaderboard", _.a.LEADERBOARD, 0, 0),
+    C = {
         winningStat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         winningStreak: 1,
         winningValue: 40 * D.A.Millis.HOUR + 33 * D.A.Millis.MINUTE,
     },
-    C = { ...P, winningStreak: 3 },
+    P = { ...C, winningStreak: 3 },
     U = { currentLeaderStat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED };
 function O(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
-        className: r()(L.Gt, a),
+        className: r()(M.Gt, a),
         children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
@@ -264,7 +266,7 @@ let H = {
             a,
             { state: n, stat: r, currentUserPlacement: d } = e,
             o = (0, y.bG)([I.default], () => I.default.getCurrentUser()?.id),
-            u = (0, y.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
+            u = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
             c =
                 ((t = (0, y.yK)([E.A], () => E.A.getFriendIDs())),
                 s.useMemo(
@@ -291,18 +293,21 @@ let H = {
         let _ = (function (e) {
                 let {
                         memberIds: t,
-                        gameIds: a = G,
+                        gameIds: a = T,
                         stat: l = p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
-                        entryCount: s = N.length,
+                        entryCount: s = G.length,
                         ended: n = !1,
                     } = e,
-                    r = 0 === t.length ? [] : N.slice(0, s),
-                    i = Math.floor(Date.now() / 1e3);
+                    r = 0 === t.length ? [] : G.slice(0, s),
+                    i = Math.floor(Date.now() / 1e3),
+                    d = (i - (n ? 8 : 3) * D.A.Seconds.DAY) * D.A.Millis.SECOND,
+                    o = Math.floor(d / D.A.Millis.DAY) * D.A.Millis.DAY;
                 return {
                     stat: l,
-                    week_start_ts: i - (n ? 8 : 3) * D.A.Seconds.DAY,
+                    week_start_ts: d / D.A.Millis.SECOND,
                     next_stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
                     computed_at: new Date((i - D.A.Seconds.DAY) * 1e3).toISOString(),
+                    day_pt: new Date(o + 6 * !!n * D.A.Millis.DAY).toISOString(),
                     entries: r.map((e, s) => ({
                         user_id: t[s % t.length],
                         value: (function (e, t) {
@@ -341,28 +346,28 @@ let H = {
                     : "error" === n
                       ? { status: "error" }
                       : { status: "success", data: g }));
-        let v = (0, l.jsx)(j.P, { guildId: u, widget: M, guildSpaceMode: "view", hydration: a });
+        let A = (0, l.jsx)(j.P, { guildId: u, widget: L, guildSpaceMode: "view", hydration: a });
         return (0, l.jsxs)("div", {
-            className: L.Zp,
+            className: M.Zp,
             children: [
-                (0, l.jsx)(O, { label: "Narrow column (380px)", className: L.sc, children: v }),
-                (0, l.jsx)(O, { label: "Wide column (685px)", className: L.U, children: v }),
+                (0, l.jsx)(O, { label: "Narrow column (380px)", className: M.sc, children: A }),
+                (0, l.jsx)(O, { label: "Wide column (685px)", className: M.U, children: A }),
                 null != o
                     ? (0, l.jsx)(O, {
                           label: "Badges",
-                          children: (0, l.jsxs)(w.B, {
+                          children: (0, l.jsxs)(S.B, {
                               gap: 16,
                               children: [
-                                  (0, l.jsxs)(w.B, {
+                                  (0, l.jsxs)(S.B, {
                                       direction: "horizontal",
                                       align: "center",
                                       gap: 8,
                                       children: [
                                           (0, l.jsx)(i.E, { variant: "text-sm/normal", children: "Winner" }),
-                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: P, leaderData: null }),
+                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: C, leaderData: null }),
                                       ],
                                   }),
-                                  (0, l.jsxs)(w.B, {
+                                  (0, l.jsxs)(S.B, {
                                       direction: "horizontal",
                                       align: "center",
                                       gap: 8,
@@ -371,10 +376,10 @@ let H = {
                                               variant: "text-sm/normal",
                                               children: "Winner on a streak",
                                           }),
-                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: C, leaderData: null }),
+                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: P, leaderData: null }),
                                       ],
                                   }),
-                                  (0, l.jsxs)(w.B, {
+                                  (0, l.jsxs)(S.B, {
                                       direction: "horizontal",
                                       align: "center",
                                       gap: 8,
@@ -427,11 +432,11 @@ let H = {
     },
 };
 a(347661);
-let B = T.sx.slice(0, 5),
-    W = [8, 6, 5, 4, 3];
-function Y(e) {
-    let { memberIds: t, gameIds: a = B, entryCount: l = W.length, totalUsers: s = 42, totalGames: n = 89 } = e,
-        r = (0 === t.length ? [] : W.slice(0, l)).map((e, l) => ({
+let B = N.sx.slice(0, 5),
+    Y = [8, 6, 5, 4, 3];
+function W(e) {
+    let { memberIds: t, gameIds: a = B, entryCount: l = Y.length, totalUsers: s = 42, totalGames: n = 89 } = e,
+        r = (0 === t.length ? [] : Y.slice(0, l)).map((e, l) => ({
             application_id: a[l % a.length],
             total_users: e,
             user_ids: t.slice(0, 5),
@@ -447,7 +452,7 @@ let V = g("popular-games", _.a.POPULAR_GAMES, 0, 0);
 function F(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
-        className: `${L.Gt} ${a}`,
+        className: `${M.Gt} ${a}`,
         children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
@@ -461,7 +466,7 @@ let q = {
                 let t,
                     a,
                     { state: n } = e,
-                    r = (0, y.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
+                    r = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
                     d =
                         ((t = (0, y.yK)([E.A], () => E.A.getFriendIDs())),
                         s.useMemo(
@@ -487,10 +492,10 @@ let q = {
                     });
                 a =
                     "few" === n
-                        ? Y({ memberIds: d, entryCount: 2, totalUsers: 6, totalGames: 2 })
+                        ? W({ memberIds: d, entryCount: 2, totalUsers: 6, totalGames: 2 })
                         : "empty" === n
-                          ? Y({ memberIds: d, entryCount: 2, totalUsers: 2 })
-                          : Y({ memberIds: d, entryCount: 5 });
+                          ? W({ memberIds: d, entryCount: 2, totalUsers: 2 })
+                          : W({ memberIds: d, entryCount: 5 });
                 let o = (0, l.jsx)(j.P, {
                     guildId: r,
                     widget: V,
@@ -503,10 +508,10 @@ let q = {
                               : { status: "success", data: a },
                 });
                 return (0, l.jsxs)("div", {
-                    className: L.Zp,
+                    className: M.Zp,
                     children: [
-                        (0, l.jsx)(F, { label: "Narrow column (380px)", className: L.sc, children: o }),
-                        (0, l.jsx)(F, { label: "Wide column (685px)", className: L.U, children: o }),
+                        (0, l.jsx)(F, { label: "Narrow column (380px)", className: M.sc, children: o }),
+                        (0, l.jsx)(F, { label: "Wide column (685px)", className: M.U, children: o }),
                     ],
                 });
             },
@@ -724,7 +729,7 @@ function es(e) {
 function en(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
-        className: `${L.Gt} ${a}`,
+        className: `${M.Gt} ${a}`,
         children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
@@ -749,10 +754,10 @@ function er(e) {
             onCommitConfig: o,
         });
     return (0, l.jsxs)("div", {
-        className: L.Zp,
+        className: M.Zp,
         children: [
-            (0, l.jsx)(en, { label: "Narrow column (380px)", className: L.sc, children: u }),
-            (0, l.jsx)(en, { label: "Wide column (685px)", className: L.U, children: u }),
+            (0, l.jsx)(en, { label: "Narrow column (380px)", className: M.sc, children: u }),
+            (0, l.jsx)(en, { label: "Wide column (685px)", className: M.U, children: u }),
         ],
     });
 }
@@ -764,7 +769,7 @@ let ei = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
-            f,
+            b,
             u,
             {
                 title: "Server Hub Widget Framework",
@@ -820,7 +825,7 @@ let ei = {
                             let t,
                                 a,
                                 { state: n, mode: r, viewerPlacement: i } = e,
-                                d = (0, y.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
+                                d = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
                                 o = (function (e, t) {
                                     switch (e) {
                                         case "populated":
