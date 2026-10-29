@@ -4029,52 +4029,48 @@ function rp(e) {
                 c = t?.install_scope_setup,
                 d = "server" === l || (null == l && "choose_server" === c),
                 f = t?.guild_id,
-                h = i.useMemo(
-                    () =>
-                        d
-                            ? {
-                                  id: n.length > 0 ? "server-setup" : "server-setup-empty",
-                                  questions: [
-                                      {
-                                          id: "server-setup:q0",
-                                          question: eb.intl.string(
-                                              n.length > 0 ? ej.default.ZWXDeI : ej.default["u5+Qhu"],
-                                          ),
-                                          recommendation_reason: "",
-                                          allow_custom: !1,
-                                          options:
-                                              n.length > 0
-                                                  ? []
-                                                  : [{ id: rc, label: eb.intl.string(ej.default.qLYOpH) }],
-                                          ...(0, rs.XU)(n, f),
-                                      },
-                                  ],
-                              }
-                            : {
-                                  id: "scope-setup",
-                                  questions: [
-                                      {
-                                          id: ro,
-                                          question: eb.intl.string(ej.default.ickKBI),
-                                          recommendation_reason: "",
-                                          allow_custom: !1,
-                                          options: [
-                                              {
-                                                  id: rc,
-                                                  label: eb.intl.string(ej.default.qLYOpH),
-                                                  detail: eb.intl.string(ej.default.QSKvUE),
-                                              },
-                                              {
-                                                  id: rd,
-                                                  label: eb.intl.string(ej.default.QV5C7b),
-                                                  detail: eb.intl.string(ej.default["ZzHR4/"]),
-                                              },
-                                          ],
-                                      },
-                                  ],
-                              },
-                    [d, n, f],
-                );
+                h = i.useMemo(() => {
+                    var t;
+                    return d
+                        ? ((t = f ?? (0, rs.EP)(e)),
+                          {
+                              id: n.length > 0 ? "server-setup" : "server-setup-empty",
+                              questions: [
+                                  {
+                                      id: "server-setup:q0",
+                                      question: eb.intl.string(n.length > 0 ? ej.default.ZWXDeI : ej.default["u5+Qhu"]),
+                                      recommendation_reason: "",
+                                      allow_custom: !1,
+                                      options:
+                                          n.length > 0 ? [] : [{ id: rc, label: eb.intl.string(ej.default.qLYOpH) }],
+                                      ...(0, rs.XU)(n, t),
+                                  },
+                              ],
+                          })
+                        : {
+                              id: "scope-setup",
+                              questions: [
+                                  {
+                                      id: ro,
+                                      question: eb.intl.string(ej.default.ickKBI),
+                                      recommendation_reason: "",
+                                      allow_custom: !1,
+                                      options: [
+                                          {
+                                              id: rc,
+                                              label: eb.intl.string(ej.default.qLYOpH),
+                                              detail: eb.intl.string(ej.default.QSKvUE),
+                                          },
+                                          {
+                                              id: rd,
+                                              label: eb.intl.string(ej.default.QV5C7b),
+                                              detail: eb.intl.string(ej.default["ZzHR4/"]),
+                                          },
+                                      ],
+                                  },
+                              ],
+                          };
+                }, [d, n, f, e]);
             if (null == c) return null;
             if (null == t || !(0, ti.PV)(t))
                 return { clarification: (0, rs.YI)(h), readOnly: !0, hideSubmit: !0, failure: null };

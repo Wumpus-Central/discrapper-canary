@@ -12,8 +12,8 @@ var s = n(477900),
     f = n(458518),
     h = n(742589),
     x = n(949757),
-    p = n(858899),
-    g = n(989145),
+    g = n(858899),
+    p = n(989145),
     v = n(639519),
     j = n(889921),
     N = n(371169),
@@ -180,8 +180,8 @@ let Z = a.memo(function (e) {
                     f = !1,
                     h = !1,
                     x = document.hasFocus(),
-                    p = !0;
-                function g() {
+                    g = !0;
+                function p() {
                     if (null == e || null == n) return;
                     a = (s = Array.from(n.querySelectorAll(`[${Q}]`))).map((e) => e.offsetLeft + e.offsetWidth / 2);
                     let o = (l = s.length > 1 ? Math.abs(s[1].offsetLeft - s[0].offsetLeft) : 1) * s.length;
@@ -215,7 +215,7 @@ let Z = a.memo(function (e) {
                         (d = requestAnimationFrame(j)));
                 }
                 function N() {
-                    let e = t && !f && !h && x && p;
+                    let e = t && !f && !h && x && g;
                     e && 0 === d
                         ? ((m = null), (d = requestAnimationFrame(j)))
                         : e || 0 === d || (cancelAnimationFrame(d), (d = 0));
@@ -238,14 +238,14 @@ let Z = a.memo(function (e) {
                 function E() {
                     ((x = !1), N());
                 }
-                (g(), v(), N());
+                (p(), v(), N());
                 let R = new ResizeObserver(() => {
-                    (g(), v());
+                    (p(), v());
                 });
                 (R.observe(e), R.observe(n));
                 let S = new IntersectionObserver((e) => {
                     let [t] = e;
-                    ((p = t.isIntersecting), N());
+                    ((g = t.isIntersecting), N());
                 });
                 return (
                     S.observe(e),
@@ -395,8 +395,8 @@ function ef(e) {
 }
 var eh = n(559106),
     ex = n(783977),
-    ep = n(559647),
-    eg = n(531685),
+    eg = n(559647),
+    ep = n(531685),
     ev = n(957071),
     ej = n(34595),
     eN = n(587157),
@@ -486,7 +486,7 @@ function eA(e) {
             [],
         ),
         l = (0, i.bG)([G.Ay], () => G.Ay.useReducedMotion),
-        r = (0, i.bG)([eg.A], () => eg.A.isFocused()),
+        r = (0, i.bG)([ep.A], () => ep.A.isFocused()),
         o = t || !r;
     return (0, s.jsx)("div", {
         className: eb.qf,
@@ -510,7 +510,7 @@ function eE(e) {
             attachments: h,
             onImport: x,
         } = e,
-        [p, g] = a.useState(!1),
+        [g, p] = a.useState(!1),
         v = a.useRef(null),
         j = a.useId(),
         N = "" !== t,
@@ -552,11 +552,11 @@ function eE(e) {
                                     onChange: (e) => l(e.currentTarget.value),
                                     onKeyDown: A,
                                     onPaste: (e) => w(e),
-                                    onFocus: () => g(!0),
-                                    onBlur: () => g(!1),
+                                    onFocus: () => p(!0),
+                                    onBlur: () => p(!1),
                                 }),
                             }),
-                            N ? null : (0, s.jsx)(eA, { boxFocused: p }),
+                            N ? null : (0, s.jsx)(eA, { boxFocused: g }),
                         ],
                     }),
                     h.attachments.length > 0
@@ -594,7 +594,7 @@ function eE(e) {
                                     (0, s.jsx)(D.$, {
                                         variant: "primary",
                                         size: "sm",
-                                        icon: ep.SendMessageIcon,
+                                        icon: eg.SendMessageIcon,
                                         text: R.intl.string(E.default.bNtzxp),
                                         disabled: c,
                                         loading: o,
@@ -925,10 +925,10 @@ function eq(e) {
     null != e.draft.previewUrl && URL.revokeObjectURL(e.draft.previewUrl);
 }
 async function eW(e, t) {
-    if ("fits" === (0, ez.R9)(t, (0, ez.Ft)(t))) return (0, g.vX)(e, t);
+    if ("fits" === (0, ez.R9)(t, (0, ez.Ft)(t))) return (0, p.vX)(e, t);
     let n = await (0, ez.th)(t);
     if (null == n) throw Error("attachment over its size limit");
-    return (0, g.vX)(e, n);
+    return (0, p.vX)(e, n);
 }
 var eB = n(698638),
     eJ = n(606128),
@@ -1067,7 +1067,7 @@ function eK(e) {
                     async (e, s) => {
                         if (r.current) return;
                         let a = (0, x.vt)(e);
-                        if (null != a) return void (0, p.P0)({ text: a, variant: "critical" });
+                        if (null != a) return void (0, g.P0)({ text: a, variant: "critical" });
                         ((r.current = !0), l(!0));
                         try {
                             let a = await w({
@@ -1076,7 +1076,7 @@ function eK(e) {
                                 modelSettings: n,
                                 start: async (t) => {
                                     try {
-                                        let n = await (0, g.vX)(t, e);
+                                        let n = await (0, p.vX)(t, e);
                                         (0, A.P6)(t, R.intl.string(E.default["LUc7/5"]), [n]);
                                     } catch {
                                         try {
@@ -1088,7 +1088,7 @@ function eK(e) {
                             });
                             (0, C.Ay)(a);
                         } catch (e) {
-                            (0, p.P0)({
+                            (0, g.P0)({
                                 text: e instanceof S ? R.intl.string(E.default["Q+l4Hv"]) : (0, v.mG)(e),
                                 variant: "critical",
                             });
@@ -1122,42 +1122,42 @@ function eK(e) {
             [em],
         ),
         ex = a.useRef(!1),
-        ep = a.useCallback(async () => {
+        eg = a.useCallback(async () => {
             let e = l.trim();
             if (("" !== e || 0 !== V.length) && !ex.current) {
                 ((ex.current = !0), z(!0), H(null));
                 try {
-                    let n = await w({
+                    let s = await w({
                         guildId: t,
                         installScope: null,
                         prompt: e,
                         modelSettings: q,
-                        start: async (t) => {
-                            let n = [];
+                        start: async (s) => {
+                            let a = [];
                             if (V.length > 0)
                                 try {
-                                    n = await Promise.all(
+                                    a = await Promise.all(
                                         V.map((e) => {
-                                            let { file: n } = e;
-                                            return eW(t, n);
+                                            let { file: t } = e;
+                                            return eW(s, t);
                                         }),
                                     );
                                 } catch {
-                                    throw (await (0, N.xx)(t).catch(() => void 0), new eX());
+                                    throw (await (0, N.xx)(s).catch(() => void 0), new eX());
                                 }
-                            ((0, A.P6)(t, e, n), et());
+                            ((0, A.P6)(s, e, a, n ? void 0 : t), et());
                         },
                     });
-                    (j(""), (b.current = ""), (ex.current = !1), z(!1), (0, C.Ay)(n));
+                    (j(""), (b.current = ""), (ex.current = !1), z(!1), (0, C.Ay)(s));
                 } catch (e) {
                     (H(e instanceof eX ? R.intl.string(E.default["903H7m"]) : (0, v.mG)(e)), (ex.current = !1), z(!1));
                 }
             }
-        }, [l, q, t, V, et]),
-        eg = a.useCallback((e) => {
+        }, [l, q, t, n, V, et]),
+        ep = a.useCallback((e) => {
             (U.w.set(F, e), J(e));
         }, []),
-        ev = a.useCallback(() => eg(!1), [eg]),
+        ev = a.useCallback(() => ep(!1), [ep]),
         ej = R.intl.string(B ? E.default.kar7jh : E.default.WSc5Y2);
     return (0, s.jsx)("div", {
         className: r()(e$.MY, eJ.T),
@@ -1187,7 +1187,7 @@ function eK(e) {
                                       tooltip: ej,
                                       "aria-label": ej,
                                       selected: B,
-                                      onClick: () => eg(!B),
+                                      onClick: () => ep(!B),
                                   }),
                               }),
                         (0, s.jsx)(c.Ip, {
@@ -1223,7 +1223,7 @@ function eK(e) {
                                                         idea: l,
                                                         inputRef: $,
                                                         onIdeaChange: em,
-                                                        onSubmit: ep,
+                                                        onSubmit: eg,
                                                         submitting: ea,
                                                         submitDisabled: er,
                                                         error: G,
