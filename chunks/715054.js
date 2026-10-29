@@ -19,11 +19,18 @@ function s(e) {
             reportError: g,
         } = (0, a.f)({ order: C, errorSource: "orb_redeem_orders_api", onSignFailure: m }),
         A = R ? f : u,
-        p = (0, n.useCallback)(
+        p = null != e ? e.onSetIsSubmitting : null,
+        T = (0, n.useCallback)(
+            (e) => {
+                (E(e), null != p && p(e));
+            },
+            [p],
+        ),
+        U = (0, n.useCallback)(
             async (e, t, r) => {
-                E(!0);
+                T(!0);
                 let n = await y({ loadId: t, errorExtra: { skuId: e, loadId: t } });
-                if ("signed" !== n.type) return void E(!1);
+                if ("signed" !== n.type) return void T(!1);
                 try {
                     let e = await (0, l.Vw)(n.order.id);
                     if (0 === e.length) throw new l.j2();
@@ -31,33 +38,33 @@ function s(e) {
                 } catch (r) {
                     g(r, { skuId: e, loadId: t, orderId: n.order.id });
                 } finally {
-                    E(!1);
+                    T(!1);
                 }
             },
-            [y, g],
+            [y, g, T],
         ),
-        T = (0, n.useCallback)(
+        S = (0, n.useCallback)(
             (e, t, r) =>
                 (0, i.J$)({
                     skuId: e,
                     loadId: t,
                     onRedeemStart: function () {
-                        (E(!0), h(null));
+                        (T(!0), h(null));
                     },
                     onRedeemSucceed: function (e) {
-                        (o(e), E(!1), r?.(e));
+                        (o(e), T(!1), r?.(e));
                     },
                     onRedeemFail: function (e) {
-                        (h(e), E(!1));
+                        (h(e), T(!1));
                     },
                 }),
-            [],
+            [T],
         ),
-        U = (0, n.useCallback)(
+        F = (0, n.useCallback)(
             (e, t, r) => {
-                R ? p(e, t, r) : T(e, t, r);
+                R ? U(e, t, r) : S(e, t, r);
             },
-            [R, p, T],
+            [R, U, S],
         );
     return (
         (0, n.useEffect)(() => {
@@ -74,6 +81,6 @@ function s(e) {
             }
             r("");
         }, [s, A]),
-        { entitlements: s, error: A, isSubmitting: _, responseMessage: t, redeemVirtualCurrency: U }
+        { entitlements: s, error: A, isSubmitting: _, responseMessage: t, redeemVirtualCurrency: F }
     );
 }

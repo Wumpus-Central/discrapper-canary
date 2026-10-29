@@ -658,6 +658,7 @@ function es(e) {
                     },
                 };
             })(i),
+            ...{ orbBalanceOnCheckout: null, setOrbBalanceOnCheckout: (t) => e({ orbBalanceOnCheckout: t }) },
             ...(0, ee.d)(e, i),
             get: (e) => (null != E[e] ? E[e]() : null),
             contextMetadata: a,
@@ -747,6 +748,8 @@ function es(e) {
             setIsOrderSyncing: (t) => e({ isOrderSyncing: t }),
             isOrderSigning: !1,
             setIsOrderSigning: (t) => e({ isOrderSigning: t }),
+            orderSigningError: null,
+            setOrderSigningError: (t) => e({ orderSigningError: t ?? null }),
             orderSyncError: null,
             setOrderSyncError: (t) => e({ orderSyncError: t ?? null }),
             checkoutPriceOptions: { paymentSourceId: o ?? void 0, currency: d, loaded: !1 },

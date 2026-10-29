@@ -14,7 +14,7 @@ var i = n(477900),
     S = n(655857),
     f = n(883645),
     A = n(166532),
-    T = n(123816),
+    T = n(912195),
     m = n(442467),
     I = n(558620),
     h = n(427675),
@@ -191,12 +191,12 @@ function ee(e) {
         e5 = l.useMemo(() => {
             if (null != e1) return e1.options;
         }, [e1]),
-        e8 = (0, f.qv)(),
-        e4 = "sm";
-    ef ? (e4 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e4 = "md");
-    let e6 = null != e5 ? e5.modalSizeGetter : void 0,
-        e9 = (0, b.O)(),
-        e3 = null != X && !eB && (0, w.U9)(e9, X),
+        e4 = (0, f.qv)(),
+        e8 = "sm";
+    ef ? (e8 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
+    let e9 = null != e5 ? e5.modalSizeGetter : void 0,
+        e6 = (0, b.O)(),
+        e3 = null != X && !eB && (0, w.U9)(e6, X),
         [e7, te] = l.useState({
             load_id: ew.loadId,
             discovery_session_id: ew.discoverySessionId,
@@ -252,7 +252,7 @@ function ee(e) {
                 continue_session_initial_step: ev,
                 custom_checkout_flow: ej,
                 has_saved_payment_source: eM,
-                discount_id: null != e9 ? e9.discountId : ta,
+                discount_id: null != e6 ? e6.discountId : ta,
             });
         }),
         l.useEffect(() => {
@@ -291,7 +291,7 @@ function ee(e) {
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: l, emitPaymentFlowLoadedEvent: a } = t,
                     s = Date.now();
                 if (e === A.pn.CONFIRM && (ts(), z?.(l), tu(), eh)) return void tr();
-                (e8(e), eE?.(e), ex(null), e === A.pn.ADD_PAYMENT_STEPS && ((0, u.ET)(), (0, r.T3)()));
+                (e4(e), eE?.(e), ex(null), e === A.pn.ADD_PAYMENT_STEPS && ((0, u.ET)(), (0, r.T3)()));
                 let o = null != n ? n : e2;
                 null === o || a
                     ? P.default.track(D.HAw.PAYMENT_FLOW_LOADED, {
@@ -311,7 +311,7 @@ function ee(e) {
                           gift_card_currency: ti,
                       });
             },
-            [e8, eE, ex, e2, ev, e7, to, ew.startTime, ts, z, tu, eh, tr, eM, tn, ti],
+            [e4, eE, ex, e2, ev, e7, to, ew.startTime, ts, z, tu, eh, tr, eM, tn, ti],
         );
     return (
         (0, R.b)(e2, eJ, tc, eO, !1, void 0, ek),
@@ -339,9 +339,9 @@ function ee(e) {
                 isGift: eB,
                 giftRecipient: eQ,
                 returnRef: eI,
-                manaModalSize: e4,
+                manaModalSize: e8,
                 modalSizeOverride: eT,
-                modalSizeGetter: e6,
+                modalSizeGetter: e9,
                 handleClose: tr,
                 children: (0, i.jsx)(K.Ay, {
                     disableDefaultSlideTransformStyling: em,
@@ -365,6 +365,7 @@ function ee(e) {
                         skipConfirm: eh,
                         continueSessionToInitialStep: ev,
                         startingStepOverride: eP,
+                        analyticsSourceLocation: y,
                     },
                 }),
             }),
