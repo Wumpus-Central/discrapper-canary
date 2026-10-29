@@ -1,4 +1,4 @@
-t.d(r, { l: () => s, u: () => a });
+t.d(r, { A: () => s, u: () => a });
 var n = t(582128),
     l = t(608266),
     o = t(351585),
@@ -14,8 +14,7 @@ function a(e) {
     };
 }
 function s() {
-    let { regionId: e, gameServerInstance: r, name: t, planId: n } = (0, l.bv)();
-    if (null == r) return "" !== t && "" !== e && void 0 !== n;
-    let o = r.name !== t || r.planId !== n;
-    return "" !== t && void 0 !== n && o;
+    let { regionId: e, gameServerInstance: r, name: t, planId: n } = (0, l.bv)(),
+        o = "" !== t && "" !== e && void 0 !== n;
+    return null != r ? o && (r.name !== t || r.regionId !== e || r.planId !== n) : o;
 }

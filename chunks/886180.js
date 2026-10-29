@@ -89,8 +89,8 @@ async function z(e) {
     });
 }
 var L = t(349085),
-    M = t(115815),
-    V = t(289444),
+    M = t(749351),
+    V = t(115815),
     y = t(231513),
     R = t(885574),
     G = t(351585),
@@ -278,7 +278,7 @@ var J = t(199781),
 let ei = [];
 function et(e) {
     let { region: i, disabled: t } = e,
-        { pingText: a, pingCircleStyle: s } = (0, M.b)(i.pingUrl);
+        { pingText: a, pingCircleStyle: s } = (0, V.b)(i.pingUrl);
     return (0, l.jsxs)("div", {
         className: ee.wV,
         children: [
@@ -333,7 +333,7 @@ function ea(e) {
             initialRegionName: U,
             initialServerName: w,
             activeSubscription: I,
-            onViewServer: M,
+            onViewServer: V,
             ...R
         } = e,
         O = null != I,
@@ -351,7 +351,7 @@ function ea(e) {
         [es, en] = a.useState(k),
         [er, ed] = a.useState(P ?? n[0]?.id),
         ec = (0, d.bG)([b.default], () => E.Ay.canUseShopDiscounts(b.default.getCurrentUser())),
-        { isValid: eo, errors: eu } = (0, V.u)(Y),
+        { isValid: eo, errors: eu } = (0, M.u)(Y),
         em = n.find((e) => e.id === er) ?? n[0],
         ex =
             !ec &&
@@ -391,9 +391,9 @@ function ea(e) {
                 initialRegionId: es,
                 initialRegionName: U,
                 initialServerName: Y,
-                onViewServer: M,
+                onViewServer: V,
             });
-        }, [i, t, s, n, I, er, es, U, Y, M]),
+        }, [i, t, s, n, I, er, es, U, Y, V]),
         eA = a.useCallback(() => {
             if (null != em) {
                 if (O) {
@@ -407,7 +407,7 @@ function ea(e) {
                                 activeSubscription: I,
                                 isPlanUpgrade: eg,
                                 planGroup: n.map((e) => e.id),
-                                onViewServer: M,
+                                onViewServer: V,
                                 onBack: eC,
                             }),
                         R.onClose());
@@ -421,12 +421,12 @@ function ea(e) {
                         gameId: t,
                         serverName: Y,
                         regionId: es,
-                        onViewServer: M,
+                        onViewServer: V,
                         onBack: eC,
                     }),
                     R.onClose());
             }
-        }, [O, eg, ej, ep, I, eE, em, n, es, i, t, Y, R, eC, M]),
+        }, [O, eg, ej, ep, I, eE, em, n, es, i, t, Y, R, eC, V]),
         eS = X.eh[r.X.SHOCKBYTE] ?? "";
     return (0, l.jsxs)(m.d, {
         ...R,
