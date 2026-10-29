@@ -2001,7 +2001,7 @@ let ng = 498 + nm.as.MEDIUM,
         i.useEffect(() => {
             ee && (0, v.Fp)();
         }, [ee]);
-        let et = (0, B.RQ)((e) => e.showEmojiPacks),
+        let et = (0, B.RQ)((e) => e.showEmojiPacks || null != e.showSelectedEmojiPackId),
             en = (0, d.bG)([nc.A], () => nc.A.isOpen()),
             el = null != W,
             ei = (0, m.useIsModalAtTop)(W ?? ""),

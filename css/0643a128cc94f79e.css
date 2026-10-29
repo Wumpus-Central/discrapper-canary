@@ -4,6 +4,7 @@
     flex: 0 0 auto;
     flex-direction: column;
     min-height: 0;
+    position: relative;
     width: clamp(280px, 28%, 360px)
 }
 
@@ -42,4 +43,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=25ceb083c9007d8c.css.map*/
+/*# sourceMappingURL=0643a128cc94f79e.css.map*/

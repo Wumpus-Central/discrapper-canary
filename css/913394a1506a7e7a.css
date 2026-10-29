@@ -4,6 +4,7 @@
     flex-direction: column;
     min-height: 0;
     padding-block-start: var(--space-8);
+    position: relative;
     width: 100%
 }
 
@@ -115,4 +116,4 @@
     margin-top: var(--space-20)
 }
 
-/*# sourceMappingURL=b046f903c4acc6b7.css.map*/
+/*# sourceMappingURL=913394a1506a7e7a.css.map*/

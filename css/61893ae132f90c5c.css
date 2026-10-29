@@ -1,0 +1,19 @@
+.title__9be57 {
+    display: block;
+    padding: 0 var(--space-8) var(--space-4)
+}
+
+.emptyState_bc2bbf {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    inset: 0;
+    justify-content: center;
+    padding: var(--space-16);
+    pointer-events: none;
+    position: absolute;
+    text-align: center
+}
+
+/*# sourceMappingURL=61893ae132f90c5c.css.map*/

@@ -1773,10 +1773,10 @@ class nV extends i.PureComponent {
         let { activeView: t } = e;
         (0, e3.bf)(t, this.props.chatInputType, this.props.channel.id);
     };
-    openEmojiPacks = () => {
-        let { channel: e, chatInputType: t, announcementComposerEnabled: n } = this.props,
-            l = e.type === ew.rbe.GUILD_ANNOUNCEMENT && n ? U.oU.CREATE_ANNOUNCEMENT_POST : t;
-        (0, e3.bf)(nP.kx.EMOJI, l, e.id, { showEmojiPacks: !0 });
+    openEmojiPacks = (e) => {
+        let { channel: t, chatInputType: n, announcementComposerEnabled: l } = this.props,
+            i = t.type === ew.rbe.GUILD_ANNOUNCEMENT && l ? U.oU.CREATE_ANNOUNCEMENT_POST : n;
+        (0, e3.bf)(nP.kx.EMOJI, i, t.id, { showSelectedEmojiPackId: e });
     };
     handleOpenAppLauncher = (e) => {
         let { applicationId: t } = e;
