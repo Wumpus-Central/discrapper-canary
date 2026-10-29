@@ -521,7 +521,7 @@ function eX(e) {
         children: [
             (0, i.jsx)(eJ, { guildId: t, entry: l, identity: x, lastPlayedGame: g, onClick: u }),
             (0, i.jsx)(e2, { entry: l, stat: n, width: m, onClick: p }),
-            (0, i.jsx)(e9, {
+            (0, i.jsx)(e8, {
                 name: x.name,
                 applicationIds: l.application_ids,
                 applicationCount: l.application_count,
@@ -702,7 +702,7 @@ function e4(e) {
         ],
     });
 }
-function e8(e) {
+function e9(e) {
     let { played: t, totalCount: l, children: n } = e,
         s = t.filter((e) => null != e.iconUrl || e.isLoading),
         { visibleGames: a, overflowCount: r } = e6(s, s.length),
@@ -731,12 +731,12 @@ function e8(e) {
         children: n,
     });
 }
-function e9(e) {
+function e8(e) {
     let { name: t, applicationIds: l, applicationCount: n, games: s, onClick: a } = e,
         r = ex(s, l);
     return (0, i.jsx)("div", {
         className: eZ.ag,
-        children: (0, i.jsx)(e8, {
+        children: (0, i.jsx)(e9, {
             played: r,
             totalCount: n,
             children: (0, i.jsx)(L.D, {
@@ -846,7 +846,7 @@ function te(e) {
                                           colorStrings: f.roleColorStrings,
                                       }),
                         }),
-                        (0, i.jsx)(e8, {
+                        (0, i.jsx)(e9, {
                             played: x,
                             totalCount: l.application_count,
                             children: (0, i.jsx)(b.E, {
@@ -1646,7 +1646,7 @@ function t4(e) {
         ],
     });
 }
-function t8(e) {
+function t9(e) {
     let { guildId: t, user: l } = e,
         n = en.Ay.useName(t, void 0, l);
     return (0, i.jsx)(m.m, {
@@ -1663,7 +1663,7 @@ function t8(e) {
         }),
     });
 }
-function t9(e) {
+function t8(e) {
     let { guildId: t, memberIds: l, totalUsers: n, totalGames: s, isCompact: a } = e,
         r = a ? 2 : 4,
         d = (0, R.yK)(
@@ -1696,7 +1696,7 @@ function t9(e) {
                         size: tO.DN.SIZE_24,
                         max: d.length,
                         renderUser: function (e) {
-                            return e instanceof tB.A ? (0, i.jsx)(t8, { guildId: t, user: e }) : null;
+                            return e instanceof tB.A ? (0, i.jsx)(t9, { guildId: t, user: e }) : null;
                         },
                         count: n,
                         hideMoreUsers: c <= 0,
@@ -1789,7 +1789,7 @@ function t5(e) {
                           children: [
                               null != u &&
                                   (0, i.jsx)(t4, { guildId: t, requirement: u, onClick: () => _("activity_sharing") }),
-                              (0, i.jsx)(t9, {
+                              (0, i.jsx)(t8, {
                                   guildId: t,
                                   memberIds: x,
                                   totalUsers: l.total_users,
@@ -2106,7 +2106,7 @@ function lw(e) {
                                     l.e("726391"),
                                     l.e("342551"),
                                     l.e("125729"),
-                                    l.e("113187"),
+                                    l.e("111057"),
                                     l.e("695765"),
                                     l.e("188941"),
                                     l.e("349619"),
@@ -2673,7 +2673,7 @@ function l4(e) {
         ],
     });
 }
-function l8(e) {
+function l9(e) {
     let { widgetName: t, isCompact: l } = e;
     return (0, i.jsxs)("div", {
         className: l6.D_,
@@ -2704,12 +2704,12 @@ function l8(e) {
         ],
     });
 }
-function l9(e) {
+function l8(e) {
     let { guildId: t, widgetName: n, isCompact: s, isSpotifyConnected: a, onClick: r } = e;
     return (0, i.jsxs)("div", {
         className: l6.UX,
         children: [
-            a ? (0, i.jsx)(l8, { widgetName: n, isCompact: s }) : (0, i.jsx)(l4, { guildId: t, isCompact: s }),
+            a ? (0, i.jsx)(l9, { widgetName: n, isCompact: s }) : (0, i.jsx)(l4, { guildId: t, isCompact: s }),
             (0, i.jsx)(z.$, {
                 variant: "secondary",
                 size: "sm",
@@ -3421,8 +3421,8 @@ let n2 = [];
 var n3 = l(344351),
     n6 = l(256693),
     n4 = l(343030),
-    n8 = l(317608),
-    n9 = l(953538);
+    n9 = l(317608),
+    n8 = l(953538);
 let n5 = {
     [d.a.IMAGE_TEXT]: {
         View: function (e) {
@@ -3856,7 +3856,7 @@ let n5 = {
             lA({ guildId: d, widgetId: c.id, data: b, length: 0, isAtEnd: !1, disabled: I || !E });
             let R =
                     "view" === u && _ && !p
-                        ? (0, i.jsx)(l9, {
+                        ? (0, i.jsx)(l8, {
                               guildId: d,
                               widgetName: nU(c),
                               isCompact: x,
@@ -4019,25 +4019,25 @@ let n5 = {
                 f = null != n && o && !u;
             return null == n
                 ? (0, i.jsx)(A.B, {
-                      className: n9.kL,
+                      className: n8.kL,
                       align: "center",
                       justify: "center",
                       children: (0, i.jsx)(r, { alt: "", width: 200, height: 192 }),
                   })
                 : a
                   ? (0, i.jsxs)("div", {
-                        className: n9.kL,
+                        className: n8.kL,
                         children: [
                             null != d &&
-                                (0, i.jsx)(n8.A, {
+                                (0, i.jsx)(n9.A, {
                                     frameId: (0, n6.Ri)(d),
                                     level: n4.A.WithinAppContent,
-                                    className: n9.t$,
+                                    className: n8.t$,
                                 }),
                             null == d &&
                                 f &&
                                 (0, i.jsx)("div", {
-                                    className: n9.P5,
+                                    className: n8.P5,
                                     children: (0, i.jsx)(z.$, {
                                         variant: "secondary",
                                         text: E.intl.string(Z.default.PSuly6),
@@ -4048,9 +4048,9 @@ let n5 = {
                         ],
                     })
                   : (0, i.jsx)("div", {
-                        className: n9.kL,
+                        className: n8.kL,
                         children: (0, i.jsx)("div", {
-                            className: n9.m0,
+                            className: n8.m0,
                             children: (0, i.jsx)(b.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
