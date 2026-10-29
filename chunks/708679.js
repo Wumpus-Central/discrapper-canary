@@ -1,4 +1,4 @@
-n.d(t, { EP: () => C, Iy: () => R, JN: () => L, P6: () => A, RW: () => P, XU: () => S, YI: () => I, yN: () => O });
+n.d(t, { EP: () => C, Iy: () => R, JN: () => L, P6: () => A, RW: () => O, XU: () => I, YI: () => S, yN: () => P });
 var s = n(636537),
     a = n(506774),
     l = n(73153),
@@ -83,7 +83,7 @@ function R(e, t) {
         N.set(e, o.A.getHistoryLoads(e)),
         (0, d.sendUserMessage)(e, n.message, n.attachments, { nonce: n.nonce }) || E(e, n, t));
 }
-function S(e, t) {
+function I(e, t) {
     if (0 === e.length) return {};
     let n = e.find((e) => e.id === t);
     return {
@@ -92,7 +92,7 @@ function S(e, t) {
         ...(null != n ? { default_entities: [{ id: n.id, name: n.name, kind: "server" }] } : {}),
     };
 }
-function I(e) {
+function S(e) {
     return {
         id: e.id,
         questions: e.questions.map((e) => ({
@@ -123,13 +123,13 @@ function L(e, t, n) {
         }
     });
 }
-function O(e, t, n, s) {
+function P(e, t, n, s) {
     return b(`switch:${e}:${t}`, async () => {
         await k(e, n, s);
         let t = "guild" === n ? g.default["8+EcCu"] : g.default["U7+Yeh"];
         if (!(0, d.sendUserMessage)(e, p.intl.string(t))) throw Error("Not connected");
     });
 }
-function P(e) {
+function O(e) {
     return (0, m.b4)(e, "keep install scope", (e) => e.sendKeepInstallScope());
 }

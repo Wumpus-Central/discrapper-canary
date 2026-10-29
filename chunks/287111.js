@@ -32,7 +32,7 @@ function x(e, t, n) {
     let { draftsByProject: s } = m.getState();
     m.setState({ draftsByProject: { ...s, [e]: { ...s[e], [t]: n } } });
 }
-function p(e, t, n, s) {
+function g(e, t, n, s) {
     let a = h(e, t);
     return (
         !!a.some((e) => e.localId === n) &&
@@ -44,13 +44,13 @@ function p(e, t, n, s) {
         !0)
     );
 }
-function g(e, t) {
+function p(e, t) {
     (0, i.Vm)(e, t).catch((e) => {
         console.error("[conjure] attachment cleanup failed", e);
     });
 }
 function v(e, t) {
-    (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && g(e, t.ref.id));
+    (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && p(e, t.ref.id));
 }
 function j(e, t) {
     let { deleteFromWorker: n } = t,
@@ -87,18 +87,18 @@ function w(e, t, n) {
     s))
         a?.().then(
             (s) => {
-                if ("errorText" in s) return void p(e, t, n.localId, { status: "error", errorText: s.errorText });
+                if ("errorText" in s) return void g(e, t, n.localId, { status: "error", errorText: s.errorText });
                 let { converted: a, ...l } = s;
-                p(e, t, n.localId, { ...a, status: "ready", ref: l })
+                g(e, t, n.localId, { ...a, status: "ready", ref: l })
                     ? setTimeout(
-                          () => p(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default.E7dS5n) }),
+                          () => g(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default.E7dS5n) }),
                           r.o2 - 3e5,
                       )
-                    : g(e, l.id);
+                    : p(e, l.id);
             },
             (s) => {
                 (console.error("[conjure] attachment upload failed", s),
-                    p(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
+                    g(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
             },
         );
 }

@@ -1,22 +1,22 @@
-(a.d(t, { o: () => l }), a(323874), a(14289), a(35956));
-var i = a(77729),
-    n = a(723702),
-    r = a(264572).Buffer;
-async function l(e, t) {
+(i.d(e, { o: () => l }), i(323874), i(14289), i(35956));
+var a = i(77729),
+    n = i(723702),
+    r = i(264572).Buffer;
+async function l(t, e) {
     if (n.isPlatformEmbedded) {
-        let a = r.from(await e.arrayBuffer());
-        if ("function" == typeof i.A.fileManager.saveWithDialog2) await i.A.fileManager.saveWithDialog2(a, t);
+        let i = r.from(await t.arrayBuffer());
+        if ("function" == typeof a.A.fileManager.saveWithDialog2) await a.A.fileManager.saveWithDialog2(i, e);
         else
             try {
-                await i.A.fileManager.saveWithDialog(a, t);
+                await a.A.fileManager.saveWithDialog(i, e);
             } catch {}
         return;
     }
-    let a = URL.createObjectURL(e);
+    let i = URL.createObjectURL(t);
     try {
-        let e = document.createElement("a");
-        ((e.href = a), (e.download = t), (e.rel = "noopener"), e.click());
+        let t = document.createElement("a");
+        ((t.href = i), (t.download = e), (t.rel = "noopener"), t.click());
     } finally {
-        window.setTimeout(() => URL.revokeObjectURL(a), 0);
+        window.setTimeout(() => URL.revokeObjectURL(i), 0);
     }
 }

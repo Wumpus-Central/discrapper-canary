@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var s = n(477900),
     a = n(582128),
     l = n(477262),
@@ -12,7 +12,7 @@ var s = n(477900),
     f = n(663341),
     h = n(248675),
     x = n(105292);
-let p = [
+let g = [
     {
         id: "add-images-videos",
         label: h.default["51+9lc"],
@@ -27,14 +27,14 @@ let p = [
     },
     { id: "add-other-files", label: h.default.aotDee, icon: i.H, accept: "" },
 ];
-function g(e) {
+function p(e) {
     let {
             navId: t,
             disabled: n,
             buttonClassName: l,
             iconClassName: r,
             onAddFiles: i,
-            onImport: g,
+            onImport: p,
             onSendToOtherProjects: v,
         } = e,
         j = a.useRef(null),
@@ -76,7 +76,7 @@ function g(e) {
                         onSelect: n,
                         children: (0, s.jsxs)(u.rX, {
                             children: [
-                                p.map((e) =>
+                                g.map((e) =>
                                     (0, s.jsx)(
                                         u.Dr,
                                         {
@@ -89,13 +89,13 @@ function g(e) {
                                         e.id,
                                     ),
                                 ),
-                                null != g
+                                null != p
                                     ? (0, s.jsx)(u.Dr, {
                                           id: "import-project",
                                           label: x.intl.string(h.default["p/k5i7"]),
                                           iconLeft: d.q,
                                           leadingAccessory: { type: "icon", icon: d.q },
-                                          action: g,
+                                          action: p,
                                       })
                                     : null,
                                 null != v

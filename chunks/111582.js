@@ -1,43 +1,43 @@
-n.d(e, { A: () => p });
-var i = n(582128),
-    a = n(858899),
-    l = n(949757),
-    r = n(889921),
-    u = n(639519),
-    c = n(391712),
-    s = n(371169),
-    o = n(248675),
-    d = n(105292);
-function p(t, e) {
-    let [n, p] = i.useState(!1),
-        f = i.useRef(!1),
-        h = i.useCallback(
-            async (n) => {
-                let i = (0, l.vt)(n);
-                if (null != i) return void (0, a.P0)({ text: i, variant: "critical" });
-                if (null == t || f.current) return;
-                ((f.current = !0), p(!0));
+i.d(n, { A: () => f });
+var e = i(582128),
+    r = i(858899),
+    a = i(949757),
+    l = i(889921),
+    u = i(639519),
+    c = i(391712),
+    s = i(371169),
+    d = i(248675),
+    o = i(105292);
+function f(t, n) {
+    let [i, f] = e.useState(!1),
+        p = e.useRef(!1),
+        h = e.useCallback(
+            async (i) => {
+                let e = (0, a.vt)(i);
+                if (null != e) return void (0, r.P0)({ text: e, variant: "critical" });
+                if (null == t || p.current) return;
+                ((p.current = !0), f(!0));
                 let h = null;
                 try {
                     ((h = await (0, s.gA)({ guild_id: t, install_scope: "user" })),
-                        (0, r.ensureConnection)(h),
-                        (0, r.stageModelSettings)(h, c.A4),
-                        await (0, l.Hj)(h, n, d.intl.string(o.default["LUc7/5"])),
-                        e(h));
+                        (0, l.ensureConnection)(h),
+                        (0, l.stageModelSettings)(h, c.A4),
+                        await (0, a.Hj)(h, i, o.intl.string(d.default["LUc7/5"])),
+                        n(h));
                 } catch (t) {
                     if (null != h)
                         try {
                             await (0, s.xx)(h);
                         } catch {}
-                    (0, a.P0)({
-                        text: null != h ? d.intl.string(o.default["Q+l4Hv"]) : (0, u.mG)(t),
+                    (0, r.P0)({
+                        text: null != h ? o.intl.string(d.default["Q+l4Hv"]) : (0, u.mG)(t),
                         variant: "critical",
                     });
                 } finally {
-                    ((f.current = !1), p(!1));
+                    ((p.current = !1), f(!1));
                 }
             },
-            [t, e],
+            [t, n],
         );
-    return { ...(0, l.yN)(h), importing: n };
+    return { ...(0, a.yN)(h), importing: i };
 }

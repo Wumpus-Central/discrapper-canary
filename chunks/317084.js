@@ -108,13 +108,13 @@ let I = i.memo(function (e) {
         [S, j] = i.useState({ x: 0, y: 0 }),
         T = Math.abs(S.x) + Math.abs(S.y) > 0,
         k = i.useMemo(() => v().chunk(f, _), [f]),
-        L = i.useCallback(
+        P = i.useCallback(
             (e, t) => {
                 null == m.current[w] ? (m.current[w] = []) : (m.current[w][t] = e);
             },
             [w],
         ),
-        P = i.useCallback(
+        L = i.useCallback(
             (e, t) => {
                 ((A.current = t), u(_ * e + t));
             },
@@ -182,11 +182,11 @@ let I = i.memo(function (e) {
                                 return E(e, t, r, i) || E(e, t, i, s) || E(e, t, s, l) || E(e, t, l, r);
                             })(s, u, t.getBoundingClientRect())
                         )
-                            return void P(w, e);
+                            return void L(w, e);
                     }
                     R();
                 }, 16),
-            [a, G, R, P, w, n, t],
+            [a, G, R, L, w, n, t],
         ),
         B = i.useCallback(
             (e) => {
@@ -194,9 +194,9 @@ let I = i.memo(function (e) {
                 let t = w + (e.deltaY > 0 ? 1 : -1);
                 t >= 0 &&
                     t < k.length &&
-                    (null != A.current && (k[t].length > A.current ? P(t, A.current) : R()), I(t));
+                    (null != A.current && (k[t].length > A.current ? L(t, A.current) : R()), I(t));
             },
-            [c, w, k, P, R],
+            [c, w, k, L, R],
         ),
         F = i.useMemo(
             () =>
@@ -208,7 +208,7 @@ let I = i.memo(function (e) {
                     return (0, r.jsx)(
                         "div",
                         {
-                            ref: (e) => L(e, i),
+                            ref: (e) => P(e, i),
                             className: b.Tj,
                             style: { left: a, top: u, width: l, height: s },
                             children: e,
@@ -216,7 +216,7 @@ let I = i.memo(function (e) {
                         i,
                     );
                 }),
-            [k, w, t, l, n, s, f.length, L],
+            [k, w, t, l, n, s, f.length, P],
         );
     return (0, r.jsx)(x.D, {
         className: b.Pw,
@@ -347,12 +347,12 @@ function k(e) {
         O = i.useRef(null),
         [_, D] = i.useState(void 0),
         k = (0, s.bG)([c.A], () => c.A.getMediaSessionId()),
-        { analyticsLocations: L } = (0, a.Ay)(o.A.SOUNDBOARD_WHEEL),
-        P = i.useCallback(
+        { analyticsLocations: P } = (0, a.Ay)(o.A.SOUNDBOARD_WHEEL),
+        L = i.useCallback(
             (e) => {
-                ((0, m.Ak)(e, n.id, L), C());
+                ((0, m.Ak)(e, n.id, P), C());
             },
-            [L, n.id, C],
+            [P, n.id, C],
         );
     (i.useEffect(() => {
         (f.E7(), d.bW.loadIfNecessary());
@@ -363,9 +363,9 @@ function k(e) {
         i.useEffect(
             () => () => {
                 let e = O.current;
-                x || null == e || P(e);
+                x || null == e || L(e);
             },
-            [x, P],
+            [x, L],
         ),
         (0, u.A)(
             {
@@ -390,9 +390,9 @@ function k(e) {
             (e) => {
                 if (null == e) return;
                 let t = b[e];
-                null != t && P(t);
+                null != t && L(t);
             },
-            [b, P],
+            [b, L],
         ),
         U = i.useMemo(
             () =>
@@ -408,7 +408,7 @@ function k(e) {
     return 0 === b.length
         ? null
         : (0, r.jsx)(a.f5, {
-              value: L,
+              value: P,
               children: (0, r.jsx)(I, {
                   wheelWidth: y,
                   wheelHeight: v,

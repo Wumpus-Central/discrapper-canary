@@ -11,13 +11,13 @@ var n = l(477900),
 function m(e) {
     let { onPublish: t } = e,
         [l, m] = i.useState(!1),
-        [x, f] = i.useState(!1),
+        [f, x] = i.useState(!1),
         g = i.useCallback(async () => {
-            (m(!0), f(!1));
+            (m(!0), x(!1));
             try {
                 (await t(), s.O.announce(u.intl.string(c.default.pDzipI)));
             } catch {
-                f(!0);
+                x(!0);
             } finally {
                 m(!1);
             }
@@ -26,7 +26,7 @@ function m(e) {
         className: o.lm,
         children: [
             (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: o.Kk }),
-            x
+            f
                 ? (0, n.jsx)(r.E, {
                       variant: "text-sm/medium",
                       color: "text-feedback-critical",

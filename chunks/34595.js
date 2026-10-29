@@ -1,4 +1,4 @@
-(n.d(t, { FM: () => p, Nl: () => g, gn: () => x }), n(323874), n(14289), n(35956));
+(n.d(t, { FM: () => g, Nl: () => p, gn: () => x }), n(323874), n(14289), n(35956));
 var s = n(477900),
     a = n(582128),
     l = n(834730),
@@ -38,7 +38,7 @@ function x(e, t, n, s) {
         });
     (0, c.fD)(e, t, l);
 }
-function p(e) {
+function g(e) {
     let { projectId: t, surface: n, onUploadFile: s } = e,
         l = (0, c.G)(t, n),
         r = a.useCallback((e) => x(t, n, e, s), [t, n, s]),
@@ -54,7 +54,7 @@ function p(e) {
         takeRefs: u,
     };
 }
-function g(e) {
+function p(e) {
     let { draft: t, onRemove: n } = e;
     return (0, s.jsxs)(u.p, {
         name: t.name,

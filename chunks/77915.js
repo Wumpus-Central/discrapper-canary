@@ -1,4 +1,4 @@
-l.d(t, { B6: () => m, MX: () => f, WK: () => x, XG: () => o, qL: () => g });
+l.d(t, { B6: () => m, MX: () => x, WK: () => f, XG: () => o, qL: () => g });
 var n = l(582128),
     i = l(17928),
     s = l(253932),
@@ -15,20 +15,20 @@ function o() {
 function m() {
     return (0, i.bG)([a.A], () => a.A.getAccounts().filter(u).length > 0);
 }
-function x() {
+function f() {
     return (0, i.bG)([a.A], () =>
         a.A.getAccounts()
             .filter(u)
             .some((e) => e.showActivity),
     );
 }
-function f(e) {
+function x(e) {
     let { isSharingActivityInGuild: t, hasFetchedConsents: l, hasPersonalizationConsent: n } = (0, d.T4)(e);
-    return { isSpotifyConnected: m(), hasFetchedConsents: l, isContributing: x() && t && n };
+    return { isSpotifyConnected: m(), hasFetchedConsents: l, isContributing: f() && t && n };
 }
 function g(e, t) {
     let l = (0, i.bG)([r.default], () => r.default.getCurrentUser()?.id),
-        { isContributing: a, hasFetchedConsents: d } = f(e),
+        { isContributing: a, hasFetchedConsents: d } = x(e),
         u = s.jP.useSetting(),
         o = !a || u === c.clD.OFFLINE || u === c.clD.INVISIBLE;
     return {

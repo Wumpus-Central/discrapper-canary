@@ -31,25 +31,25 @@ function h(e) {
             tier: k,
         } = e,
         v = (0, s.SY)(n),
-        y = (0, i.Q7)(f.intl.string(c.default.uk6jhJ), k),
-        b = g ? void 0 : h,
-        _ = null != b ? (0, r.nY)(b) : null != v ? (0, s.WQ)(v) : (p ?? f.intl.string(c.default.t8skVB)),
-        w = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+        b = (0, i.Q7)(f.intl.string(c.default.uk6jhJ), k),
+        y = g ? void 0 : h,
+        _ = null != y ? (0, r.nY)(y) : null != v ? (0, s.WQ)(v) : (p ?? f.intl.string(c.default.t8skVB)),
+        A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(o.A, {
         glyph: (0, l.jsx)(a.u, {
             asset: (0, l.jsx)(d.A, { size: 32 }),
             assetSize: 32,
-            title: y.title,
-            body: y.body,
+            title: b.title,
+            body: b.body,
             position: "left",
             children: (0, l.jsx)("span", { className: m.nC, children: (0, l.jsx)(d.A, {}) }),
         }),
         line: _,
         anchor: !0,
         live: g,
-        settled: null != b || (!g && j),
+        settled: null != y || (!g && j),
         connectsDown: x,
-        detail: w
+        detail: A
             ? (0, l.jsx)("ol", {
                   className: m.dO,
                   children: n.map((e) =>

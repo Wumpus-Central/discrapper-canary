@@ -30,8 +30,8 @@ var r = n(477900),
     j = n(681582),
     T = n(573435),
     k = n(71855),
-    L = n(203480),
-    P = n(670735),
+    P = n(203480),
+    L = n(670735),
     R = n(549205),
     M = n(750506),
     G = n(80556),
@@ -336,7 +336,7 @@ class eD extends i.Component {
             } = this.props,
             p = eO({ withTitleBar: l, isFullScreen: i }),
             w = n === eb.f,
-            C = w ? eg : P.A;
+            C = w ? eg : L.A;
         return (0, r.jsx)(u.Kd, {
             children: (0, r.jsxs)(
                 ep.e,
@@ -436,7 +436,7 @@ let eS = function (e) {
         forcedColors: N.Ay.useForcedColors ? "yes" : "no",
         connectedEmbeddedActivity: _.Ay.getCurrentEmbeddedActivity(),
     }));
-    (0, L.A)(i, !1);
+    (0, P.A)(i, !1);
     let { analyticsLocations: u } = (0, I.Ay)(D.A.POPOUT_WINDOW),
         { clientThemesClassName: d, clientThemesCSS: c } = (0, S.Ay)(),
         f = (0, em.NC)(),

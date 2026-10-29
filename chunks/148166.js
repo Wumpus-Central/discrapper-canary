@@ -8,9 +8,9 @@ var n = l(477900),
 function c(e) {
     let { src: t, isCircular: l, FallbackIcon: s, children: c } = e,
         [u, o] = i.useState(t),
-        [m, x] = i.useState(!1);
+        [m, f] = i.useState(!1);
     return (
-        u !== t && (o(t), x(!1)),
+        u !== t && (o(t), f(!1)),
         (0, n.jsxs)("span", {
             className: a()(d.xX, { [d.A6]: l }),
             children: [
@@ -25,7 +25,7 @@ function c(e) {
                           alt: "",
                           "aria-hidden": !0,
                           loading: "lazy",
-                          onError: () => x(!0),
+                          onError: () => f(!0),
                       }),
                 c,
             ],

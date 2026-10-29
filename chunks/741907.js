@@ -1,49 +1,49 @@
-n.d(e, { A: () => s });
-var i = n(17928),
-    r = n(245179),
-    u = n(874421),
-    l = n(886540),
-    a = n(260498),
-    d = n(935208);
-function s(t) {
-    return (0, i.yK)(
-        [a.Ay, r.A],
+i.d(e, { A: () => o });
+var a = i(17928),
+    n = i(245179),
+    r = i(874421),
+    l = i(886540),
+    c = i(260498),
+    u = i(935208);
+function o(t) {
+    return (0, a.yK)(
+        [c.Ay, n.A],
         () =>
             (null != t
-                ? [...a.Ay.getOwnedProjects(), ...a.Ay.getSharedProjects(t)].filter(
+                ? [...c.Ay.getOwnedProjects(), ...c.Ay.getSharedProjects(t)].filter(
                       (e) => e.guild_id === t || e.preview_guild_id === t,
                   )
-                : a.Ay.getOwnedProjects()
+                : c.Ay.getOwnedProjects()
             )
                 .map((t) => {
-                    let e = (0, l.Ji)(r.A.getMessages(t.id));
+                    let e = (0, l.Ji)(n.A.getMessages(t.id));
                     return {
                         project: t,
-                        turnStartedAt: null != e ? (0, u.S)(e) : null,
-                        finishedAt: r.A.getFinishedAt(t.id),
+                        turnStartedAt: null != e ? (0, r.S)(e) : null,
+                        finishedAt: n.A.getFinishedAt(t.id),
                     };
                 })
                 .map((t) => ({
                     project: t.project,
                     time: (function (t) {
                         var e;
-                        let n,
-                            { project: i, turnStartedAt: r, finishedAt: u } = t;
+                        let i,
+                            { project: a, turnStartedAt: n, finishedAt: r } = t;
                         return Math.max(
-                            /^\d+$/.test(i.id) ? d.default.extractTimestamp(i.id) : 0,
-                            Number.isNaN((n = null == (e = i.updated_at) ? 0 : Date.parse(e))) ? 0 : n,
+                            /^\d+$/.test(a.id) ? u.default.extractTimestamp(a.id) : 0,
+                            Number.isNaN((i = null == (e = a.updated_at) ? 0 : Date.parse(e))) ? 0 : i,
+                            n ?? 0,
                             r ?? 0,
-                            u ?? 0,
                         );
                     })(t),
                 }))
                 .sort((t, e) => {
-                    var n, i;
+                    var i, a;
                     return t.time !== e.time
                         ? e.time - t.time
-                        : ((n = t.project.id),
-                          (i = e.project.id),
-                          n.length !== i.length ? i.length - n.length : n < i ? 1 : n > i ? -1 : 0);
+                        : ((i = t.project.id),
+                          (a = e.project.id),
+                          i.length !== a.length ? a.length - i.length : i < a ? 1 : i > a ? -1 : 0);
                 })
                 .map((t) => {
                     let { project: e } = t;

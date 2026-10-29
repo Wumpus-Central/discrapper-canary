@@ -9,11 +9,11 @@ let r = a.A.Millis.SECOND,
     u = { status: "loading" },
     o = { status: "error" },
     m = {};
-function x(e, t) {
+function f(e, t) {
     let l = e.entriesByWidgetId.get(t);
     return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
-function f(e, t, l, i) {
+function x(e, t, l, i) {
     let a = l.filter((t) => e.entriesByWidgetId.get(t)?.state.status !== "success");
     if (0 === a.length) {
         e.backoff?.pending !== !0 && e.backoff?.succeed();
@@ -21,7 +21,7 @@ function f(e, t, l, i) {
     }
     let c = [];
     (a.forEach((t) => {
-        let l = x(e, t);
+        let l = f(e, t);
         i && l.attempts < 3 ? c.push(t) : (l.state = o);
     }),
         0 !== c.length &&
@@ -57,7 +57,7 @@ let h = new g(s.h, {
         ((s.activeRequestId = n),
             (s.activeWidgetIds = i),
             i.forEach((e) => {
-                let t = x(s, e);
+                let t = f(s, e);
                 "success" !== t.state.status && ((t.state = u), (t.attempts += 1));
             }));
     },
@@ -77,18 +77,18 @@ let h = new g(s.h, {
         (s.forEach((e) => {
             let t = a.get(e);
             if (null != t) {
-                let l = x(i, e);
+                let l = f(i, e);
                 ((l.state = { status: "success", data: t }), (l.attempts = 0));
             } else r.push(e);
         }),
-            f(i, t, r, !0));
+            x(i, t, r, !0));
     },
     GUILD_SPACE_HYDRATE_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: n } = e,
             i = m[t];
         if (i?.activeRequestId !== l) return !1;
         let s = i.activeWidgetIds ?? [];
-        (delete i.activeRequestId, delete i.activeWidgetIds, f(i, t, s, n));
+        (delete i.activeRequestId, delete i.activeWidgetIds, x(i, t, s, n));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,

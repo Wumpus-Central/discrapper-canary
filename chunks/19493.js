@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Dk: "carousel__3ebc0",
     vV: "carouselManual__3ebc0",
     AS: "item__3ebc0",
