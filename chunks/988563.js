@@ -6,13 +6,13 @@ let i =
         "https://cdn.discordapp.com/assets/content/adc54f3bc3a0a446acfe8ddcfb8781518b22776e4e74b0e99a1f52fac3a8cfef.png",
     n = `${i} 1x, https://cdn.discordapp.com/assets/content/5b210ea37a83f22acc6f228922a958700a988a03dc33a616d4407d2686b3c1d2.png 2x, https://cdn.discordapp.com/assets/content/95d692c879b58cd680af65ed985943cf4ba507e399f75a9b8af6037a30e08699.png 3x`;
 function r(e) {
-    let { alt: c, ariaLabel: a, ariaHidden: r, role: l, width: o, height: p, className: b, style: f } = e,
-        h = s.useMemo(
-            () => (0, d.H)({ width: o, height: p, intrinsicWidth: 156, intrinsicHeight: 100, style: f }),
-            [o, p, f],
+    let { alt: c, ariaLabel: a, ariaHidden: r, role: l, width: o, height: p, className: b, style: h } = e,
+        f = s.useMemo(
+            () => (0, d.H)({ width: o, height: p, intrinsicWidth: 156, intrinsicHeight: 100, style: h }),
+            [o, p, h],
         );
     return (0, t.jsx)("img", {
-        style: h,
+        style: f,
         src: i,
         srcSet: n,
         className: (0, d.Z)(b),
@@ -23,16 +23,16 @@ function r(e) {
     });
 }
 let l =
-        "https://cdn.discordapp.com/assets/content/4f53c7a25fd46ba1462275e6207456e73f01a192cf80a3556f5c04367fa19423.png",
-    o = `${l} 1x, https://cdn.discordapp.com/assets/content/d75c97fc5884112c4c6370baffce2f4bb8aa379e88124469ec8e0a782979f21a.png 2x, https://cdn.discordapp.com/assets/content/da1f39953e2125a4e19fba8b15ff75bcfc2ad23f361d6bb79098b38d5126aa58.png 3x`;
+        "https://cdn.discordapp.com/assets/content/29af5a5ee0858150e0efd0ce86ecce1d687f3d76d12ffd08f8cfd0276ceb940a.png",
+    o = `${l} 1x, https://cdn.discordapp.com/assets/content/149b636669aafb92054f54b3c2eea855650c5c5462c80c7c57dd8c7266e3e89a.png 2x, https://cdn.discordapp.com/assets/content/97964688b8afff4d9f29a9ef9a36a95b2bc5bf661205d4d559eebd8a79828b5d.png 3x`;
 function p(e) {
-    let { alt: c, ariaLabel: a, ariaHidden: i, role: n, width: r, height: p, className: b, style: f } = e,
-        h = s.useMemo(
-            () => (0, d.H)({ width: r, height: p, intrinsicWidth: 156, intrinsicHeight: 100, style: f }),
-            [r, p, f],
+    let { alt: c, ariaLabel: a, ariaHidden: i, role: n, width: r, height: p, className: b, style: h } = e,
+        f = s.useMemo(
+            () => (0, d.H)({ width: r, height: p, intrinsicWidth: 156, intrinsicHeight: 100, style: h }),
+            [r, p, h],
         );
     return (0, t.jsx)("img", {
-        style: h,
+        style: f,
         src: l,
         srcSet: o,
         className: (0, d.Z)(b),
@@ -44,17 +44,17 @@ function p(e) {
 }
 let b =
         "https://cdn.discordapp.com/assets/content/4e7386037eb7480e19dd03fad478675a6aaf99cc7c7b243e428eb0b8e7b9c35b.png",
-    f = `${b} 1x, https://cdn.discordapp.com/assets/content/fcc3f91b0eb3f8552dc2b51e8513e6eef89658eae897672c57a40a13a36294d8.png 2x, https://cdn.discordapp.com/assets/content/7badc6a2ba9963659edea7aa8b882f007113c50e64362c5d99cd30840567244f.png 3x`;
-function h(e) {
+    h = `${b} 1x, https://cdn.discordapp.com/assets/content/fcc3f91b0eb3f8552dc2b51e8513e6eef89658eae897672c57a40a13a36294d8.png 2x, https://cdn.discordapp.com/assets/content/7badc6a2ba9963659edea7aa8b882f007113c50e64362c5d99cd30840567244f.png 3x`;
+function f(e) {
     let { alt: c, ariaLabel: a, ariaHidden: i, role: n, width: r, height: l, className: o, style: p } = e,
-        h = s.useMemo(
+        f = s.useMemo(
             () => (0, d.H)({ width: r, height: l, intrinsicWidth: 156, intrinsicHeight: 100, style: p }),
             [r, l, p],
         );
     return (0, t.jsx)("img", {
-        style: h,
+        style: f,
         src: b,
-        srcSet: f,
+        srcSet: h,
         className: (0, d.Z)(o),
         alt: c,
         "aria-label": a,
@@ -111,7 +111,7 @@ function w() {
         children: [
             (0, t.jsx)(r, { alt: "", ariaHidden: !0, width: 40, height: 40 }),
             (0, t.jsx)(p, { alt: "", ariaHidden: !0, width: 50, height: 50 }),
-            (0, t.jsx)(h, { alt: "", ariaHidden: !0, width: 40, height: 40 }),
+            (0, t.jsx)(f, { alt: "", ariaHidden: !0, width: 40, height: 40 }),
         ],
     });
 }
@@ -130,7 +130,7 @@ function k(e) {
               children: [
                   (0, t.jsx)(x, { alt: "", ariaHidden: !0, width: 42, height: 42 }),
                   (0, t.jsx)(y, { alt: "", ariaHidden: !0, width: 60, height: 60 }),
-                  (0, t.jsx)(h, { alt: "", ariaHidden: !0, width: 42, height: 42 }),
+                  (0, t.jsx)(f, { alt: "", ariaHidden: !0, width: 42, height: 42 }),
               ],
           })
         : (0, t.jsx)("div", {
