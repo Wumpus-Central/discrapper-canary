@@ -435,22 +435,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2025-12-mana-multistep-community-enabled",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2025-12-orb-redemption-thru-orders",
     "kind": "user",
     "defaultConfig": {
