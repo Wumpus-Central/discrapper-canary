@@ -5945,15 +5945,10 @@ function iH(e) {
     var t;
     let n,
         l,
-        { appName: r, intro: s, proposal: u, renderPreview: o, commandNames: c } = e;
-    return (0, a.jsxs)("div", {
-        className: iD.aN,
-        children: [
-            (0, a.jsxs)("div", {
-                className: iD.Lv,
-                children: [(0, a.jsx)(v.D, { variant: "heading-lg/semibold", color: "text-strong", children: r }), s],
-            }),
-            ((t = u.experiences ?? []),
+        r,
+        { appName: s, intro: u, proposal: o, renderPreview: c, commandNames: d } = e,
+        f =
+            ((t = o.experiences ?? []),
             (n = t
                 .filter((e) => {
                     let { kind: t } = e;
@@ -5967,7 +5962,7 @@ function iH(e) {
                                 if (0 === t.length) return !1;
                                 let n = t.map(ak()).join("|");
                                 return RegExp(`(?<![\\p{L}\\p{N}/.:])/(?:${n})(?![\\p{L}\\p{N}_-])`, "iu").test(e);
-                            })(e, c),
+                            })(e, d),
                     );
                 })),
             (l = t.find((e) => {
@@ -5982,7 +5977,22 @@ function iH(e) {
                     : e === l
                       ? [{ experience: e, bullets: [...e.changes, ...n] }]
                       : [{ experience: e, bullets: e.changes }],
-            )).map((e) => {
+            )),
+        m =
+            ((r =
+                f.find((e) => {
+                    let { experience: t } = e;
+                    return "bot" === t.kind || "commands" === t.kind;
+                }) ?? f[0]),
+            r?.experience.id);
+    return (0, a.jsxs)("div", {
+        className: iD.aN,
+        children: [
+            (0, a.jsxs)("div", {
+                className: iD.Lv,
+                children: [(0, a.jsx)(v.D, { variant: "heading-lg/semibold", color: "text-strong", children: s }), u],
+            }),
+            f.map((e) => {
                 let { experience: t, bullets: n } = e;
                 return (0, a.jsxs)(
                     i.Fragment,
@@ -5992,86 +6002,124 @@ function iH(e) {
                             (0, a.jsx)(iK, {
                                 experience: t,
                                 bullets: n,
-                                preview: o(t),
-                                blocks: (function (e, t) {
+                                preview: c(t),
+                                blocks: (function (e, t, n) {
+                                    let l = n
+                                        ? [
+                                              {
+                                                  key: "permissions",
+                                                  caption: ej.default["2UbW6r"],
+                                                  names: e.bot_permissions,
+                                              },
+                                              {
+                                                  key: "intents",
+                                                  caption: ej.default["7TKfpj"],
+                                                  names: e.privileged_intents,
+                                              },
+                                          ]
+                                              .flatMap((e) => {
+                                                  let { key: t, caption: n, names: l } = e;
+                                                  return null != l && l.length > 0
+                                                      ? [{ key: t, caption: eb.intl.string(n), labels: l.map(aw) }]
+                                                      : [];
+                                              })
+                                              .map((e) => {
+                                                  let { key: t, caption: n, labels: l } = e;
+                                                  return (0, a.jsx)(
+                                                      iO,
+                                                      { caption: n, children: (0, a.jsx)(iz, { labels: l }) },
+                                                      t,
+                                                  );
+                                              })
+                                        : [];
                                     switch (t.kind) {
                                         case "frame":
-                                            let n = (function (e, t) {
-                                                if ("frame" !== t.kind) return null;
-                                                let n = eb.intl.string(ej.default["6/3tGY"]),
-                                                    l = [];
-                                                if (t.surfaces.includes(eD.q7.APP_CHANNEL)) {
-                                                    let r = e.app_channel_names ?? [];
-                                                    l = (
-                                                        null != t.app_channels && t.app_channels.length > 0
-                                                            ? t.app_channels
-                                                            : r.length > 0
-                                                              ? r.map((e) => ({ name: e }))
-                                                              : [
+                                            return [
+                                                ...(function (e, t) {
+                                                    let n = (function (e, t) {
+                                                        if ("frame" !== t.kind) return null;
+                                                        let n = eb.intl.string(ej.default["6/3tGY"]),
+                                                            l = [];
+                                                        if (t.surfaces.includes(eD.q7.APP_CHANNEL)) {
+                                                            let r = e.app_channel_names ?? [];
+                                                            l = (
+                                                                null != t.app_channels && t.app_channels.length > 0
+                                                                    ? t.app_channels
+                                                                    : r.length > 0
+                                                                      ? r.map((e) => ({ name: e }))
+                                                                      : [
+                                                                            {
+                                                                                name: t.name
+                                                                                    .toLowerCase()
+                                                                                    .replace(/[^\p{L}\p{N}]+/gu, "-")
+                                                                                    .replace(/^-+|-+$/g, ""),
+                                                                            },
+                                                                        ]
+                                                            ).map((e) => {
+                                                                let { name: t, description: l } = e,
+                                                                    r = l?.trim() ?? "";
+                                                                return { name: t, description: "" !== r ? r : n };
+                                                            });
+                                                        }
+                                                        return {
+                                                            channels: l,
+                                                            launchableAnywhere: t.surfaces.includes(eD.q7.ACTIVITY),
+                                                            usableInVoice: t.surfaces.includes(eD.q7.VOICE_CHANNEL),
+                                                        };
+                                                    })(e, t);
+                                                    if (null == n) return [];
+                                                    let l = [];
+                                                    n.channels.length > 0 &&
+                                                        l.push(
+                                                            (0, a.jsx)(
+                                                                iO,
+                                                                {
+                                                                    className: iD.Iw,
+                                                                    caption: eb.intl.formatToPlainString(
+                                                                        ej.default.w8F5sy,
+                                                                        { count: n.channels.length },
+                                                                    ),
+                                                                    children: (0, a.jsx)("ul", {
+                                                                        className: iD.wZ,
+                                                                        "data-conjure-plan-channels": "",
+                                                                        children: n.channels.map((e) => {
+                                                                            let { name: t, description: n } = e;
+                                                                            return (0, a.jsx)(
+                                                                                iG,
+                                                                                { name: t, description: n },
+                                                                                t,
+                                                                            );
+                                                                        }),
+                                                                    }),
+                                                                },
+                                                                "channels",
+                                                            ),
+                                                        );
+                                                    let r = [
+                                                        ...(n.usableInVoice
+                                                            ? [eb.intl.string(ej.default["4oGg2h"])]
+                                                            : []),
+                                                        ...(n.launchableAnywhere
+                                                            ? [eb.intl.string(ej.default.BTGCfR)]
+                                                            : []),
+                                                    ];
+                                                    return (
+                                                        r.length > 0 &&
+                                                            l.push(
+                                                                (0, a.jsx)(
+                                                                    iO,
                                                                     {
-                                                                        name: t.name
-                                                                            .toLowerCase()
-                                                                            .replace(/[^\p{L}\p{N}]+/gu, "-")
-                                                                            .replace(/^-+|-+$/g, ""),
+                                                                        caption: eb.intl.string(ej.default.MY6UGJ),
+                                                                        children: (0, a.jsx)(iz, { labels: r }),
                                                                     },
-                                                                ]
-                                                    ).map((e) => {
-                                                        let { name: t, description: l } = e,
-                                                            r = l?.trim() ?? "";
-                                                        return { name: t, description: "" !== r ? r : n };
-                                                    });
-                                                }
-                                                return {
-                                                    channels: l,
-                                                    launchableAnywhere: t.surfaces.includes(eD.q7.ACTIVITY),
-                                                    usableInVoice: t.surfaces.includes(eD.q7.VOICE_CHANNEL),
-                                                };
-                                            })(e, t);
-                                            if (null == n) return [];
-                                            let l = [];
-                                            n.channels.length > 0 &&
-                                                l.push(
-                                                    (0, a.jsx)(
-                                                        iO,
-                                                        {
-                                                            className: iD.Iw,
-                                                            caption: eb.intl.formatToPlainString(ej.default.w8F5sy, {
-                                                                count: n.channels.length,
-                                                            }),
-                                                            children: (0, a.jsx)("ul", {
-                                                                className: iD.wZ,
-                                                                "data-conjure-plan-channels": "",
-                                                                children: n.channels.map((e) => {
-                                                                    let { name: t, description: n } = e;
-                                                                    return (0, a.jsx)(
-                                                                        iG,
-                                                                        { name: t, description: n },
-                                                                        t,
-                                                                    );
-                                                                }),
-                                                            }),
-                                                        },
-                                                        "channels",
-                                                    ),
-                                                );
-                                            let r = [
-                                                ...(n.usableInVoice ? [eb.intl.string(ej.default["4oGg2h"])] : []),
-                                                ...(n.launchableAnywhere ? [eb.intl.string(ej.default.BTGCfR)] : []),
+                                                                    "features",
+                                                                ),
+                                                            ),
+                                                        l
+                                                    );
+                                                })(e, t),
+                                                ...l,
                                             ];
-                                            return (
-                                                r.length > 0 &&
-                                                    l.push(
-                                                        (0, a.jsx)(
-                                                            iO,
-                                                            {
-                                                                caption: eb.intl.string(ej.default.MY6UGJ),
-                                                                children: (0, a.jsx)(iz, { labels: r }),
-                                                            },
-                                                            "features",
-                                                        ),
-                                                    ),
-                                                l
-                                            );
                                         case "bot":
                                         case "commands":
                                             return [
@@ -6087,44 +6135,13 @@ function iH(e) {
                                                               "commands",
                                                           ),
                                                       ]),
-                                                ...[
-                                                    {
-                                                        key: "permissions",
-                                                        caption: ej.default["2UbW6r"],
-                                                        names: e.bot_permissions,
-                                                    },
-                                                    {
-                                                        key: "intents",
-                                                        caption: ej.default["7TKfpj"],
-                                                        names: e.privileged_intents,
-                                                    },
-                                                ]
-                                                    .flatMap((e) => {
-                                                        let { key: t, caption: n, names: l } = e;
-                                                        return null != l && l.length > 0
-                                                            ? [
-                                                                  {
-                                                                      key: t,
-                                                                      caption: eb.intl.string(n),
-                                                                      labels: l.map(aw),
-                                                                  },
-                                                              ]
-                                                            : [];
-                                                    })
-                                                    .map((e) => {
-                                                        let { key: t, caption: n, labels: l } = e;
-                                                        return (0, a.jsx)(
-                                                            iO,
-                                                            { caption: n, children: (0, a.jsx)(iz, { labels: l }) },
-                                                            t,
-                                                        );
-                                                    }),
+                                                ...l,
                                             ];
                                         default:
-                                            return [];
+                                            return l;
                                     }
-                                })(u, t),
-                                commandNames: c,
+                                })(o, t, t.id === m),
+                                commandNames: d,
                             }),
                         ],
                     },
