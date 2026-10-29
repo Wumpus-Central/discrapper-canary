@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "655910";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "655939";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 655910, Version Hash: 40c20dc003387e41ec4c24a3fac92f67596d35e1`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 655939, Version Hash: aa0359be5210f35269eebc1991f5f2b3619f6a95`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -5657,6 +5657,7 @@ let so = (0, rl.Fe)({
                 n.e("943534"),
                 n.e("124564"),
                 n.e("666601"),
+                n.e("628922"),
                 n.e("286712"),
                 n.e("49344"),
                 n.e("739725"),
@@ -26108,7 +26109,7 @@ let yo = "isHideDevBanner",
                     className: tf()(yl.Wz, yl.mr),
                     children: [
                         (0, b.jsx)(ys, { className: yl.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "655910" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "655939" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -28619,6 +28620,7 @@ let bE = (0, rl.Fe)({
             n.e("434786"),
             n.e("506286"),
             n.e("394704"),
+            n.e("628922"),
             n.e("852870"),
             n.e("895099"),
         ]).then(n.bind(n, 812201)),
@@ -31727,6 +31729,7 @@ let bT = (0, tZ.Fe)({
                 n.e("92064"),
                 n.e("394704"),
                 n.e("124564"),
+                n.e("628922"),
                 n.e("852870"),
                 n.e("485384"),
                 n.e("169987"),
@@ -31854,6 +31857,7 @@ let bT = (0, tZ.Fe)({
                 n.e("621343"),
                 n.e("506286"),
                 n.e("394704"),
+                n.e("628922"),
                 n.e("852870"),
                 n.e("169987"),
                 n.e("895099"),
@@ -54505,6 +54509,7 @@ let Yl = (0, tZ.Fe)({
             n.e("228966"),
             n.e("666601"),
             n.e("780611"),
+            n.e("628922"),
             n.e("752516"),
             n.e("286712"),
             n.e("49344"),

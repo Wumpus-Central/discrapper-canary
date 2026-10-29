@@ -1,20 +1,20 @@
 (a.r(t),
     a.d(t, {
         CheckpointNumbersCenterAlignedRive: () => w.m,
-        UnlockRive: () => J.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => Q.u,
+        UnlockRive: () => K.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => J.u,
         CheckpointKnickKnacksRive: () => L.U,
+        ServerHubPerkRive: () => H.f,
         AnimatedNitroOrbRewardsRive: () => r.Z,
-        ServerHubPerkRive: () => j.f,
         FistBumpRive: () => R.l,
-        PerfTestRive: () => E.Q,
+        PerfTestRive: () => x.Q,
         NitroRewardsMouseRive: () => N.C,
         BoostGemLevelTwoRive: () => u.J,
         GameServerHostingRive: () => A.E,
         CheckpointFriendsRive: () => M.m,
         BoostGemLevelOneRive: () => n.t,
         TabHoverGradientRive: () => U.U,
-        WandAndSparklesRive: () => ee,
+        WandAndSparklesRive: () => et,
         BoostThisServerRive: () => b.D,
         NitroQuestOrbsMultiplierRive: () => X.E,
         BoostGemLevelThreeRive: () => g.z,
@@ -27,13 +27,14 @@
         CheckpointCardRive: () => h,
         BadgesCoachmarkRive: () => m.U,
         CheckpointNumbersLeftAlignedRive: () => y.w,
-        PulseGradientRive: () => x.M,
-        VibingWumpusBackgroundRive: () => Z.R,
+        PulseGradientRive: () => j.M,
+        OrbsIllustration_HandsRive: () => E.a,
+        VibingWumpusBackgroundRive: () => z.R,
         JetpackWumpusWithTrinketsRive: () => k.e,
         GlowButtonRive: () => F.s,
-        TeenScreenTimeRive: () => H.w,
+        TeenScreenTimeRive: () => Q.w,
         NitroWishlistingWumpusRive: () => G,
-        VibingWumpusRive: () => K.Z,
+        VibingWumpusRive: () => Z.Z,
     }));
 var i = a(402386),
     r = a(567341),
@@ -1168,23 +1169,24 @@ function G(e) {
           });
 }
 G.riveSrc = V;
-var E = a(102079),
-    x = a(440166),
-    j = a(93675),
+var E = a(133825),
+    x = a(102079),
+    j = a(440166),
+    H = a(93675),
     U = a(549254),
-    H = a(632679),
-    Q = a(583094),
-    J = a(242644),
-    K = a(773350),
-    Z = a(615429);
-let z =
+    Q = a(632679),
+    J = a(583094),
+    K = a(242644),
+    Z = a(773350),
+    z = a(615429);
+let q =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    q = { "Surprise Me": { fill: "color" } },
-    $ = { "Surprise Me": ["State Machine 1"] };
-function ee(e) {
+    $ = { "Surprise Me": { fill: "color" } },
+    ee = { "Surprise Me": ["State Machine 1"] };
+function et(e) {
     let { artboard: t = "Surprise Me", stateMachine: a, ...i } = e,
-        { status: r, buffer: o } = (0, s.CE)(z),
-        m = (0, s.m2)(z);
+        { status: r, buffer: o } = (0, s.CE)(q),
+        m = (0, s.m2)(q);
     return r === s.BW.Loading
         ? null
         : (0, c.jsx)(f.w, {
@@ -1192,9 +1194,9 @@ function ee(e) {
               buffer: o,
               artboard: t,
               stateMachine: a,
-              artboardProperties: q,
-              artboardStateMachines: $,
+              artboardProperties: $,
+              artboardStateMachines: ee,
               ...i,
           });
 }
-ee.riveSrc = z;
+et.riveSrc = q;
