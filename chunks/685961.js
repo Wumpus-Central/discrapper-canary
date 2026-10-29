@@ -853,32 +853,32 @@ let e3 = (e) => {
               ],
           });
 };
-var e4 = l(486020),
-    e2 = l(695451);
+var e2 = l(486020),
+    e4 = l(695451);
 let e8 = (e) => {
     let { entry: t } = e,
         l = (0, V.c)("GuildDiscoveryPreviewElement"),
         { id: i, icon: a, name: s } = t,
-        r = e4.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
+        r = e2.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
     return (0, n.jsxs)("div", {
-        className: e2.kL,
+        className: e4.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e2.wx,
+                className: e4.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.nTe4HC),
             }),
             (0, n.jsx)("div", {
-                className: e2.bo,
+                className: e4.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e2.OA,
+                    className: e4.OA,
                     children: [
                         (0, n.jsx)(B.Ay, {
                             mask: B.Ay.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: e2.$d,
-                            children: (0, n.jsx)("img", { src: r, alt: "", className: e2.$f }),
+                            className: e4.$d,
+                            children: (0, n.jsx)("img", { src: r, alt: "", className: e4.$f }),
                         }),
                         (0, n.jsx)(P.E, { color: "text-default", variant: "text-sm/normal", children: s }),
                     ],
@@ -921,28 +921,28 @@ let e5 = (e) => {
         ],
     });
 };
-var e7 = l(285496);
-let e6 = (e) => {
+var e6 = l(285496);
+let e7 = (e) => {
     let { event: t } = e,
         l = (0, V.c)("GuildScheduledEventPreviewElement"),
         i = (0, L.bG)([e0.A], () => e0.A.getGuild(t.guild_id));
     return null == i
         ? null
         : (0, n.jsxs)("div", {
-              className: e7.kL,
+              className: e6.kL,
               children: [
                   (0, n.jsx)(p.D, {
-                      className: e7.wx,
+                      className: e6.wx,
                       variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                       children: T.intl.string(T.t.SDTOL7),
                   }),
                   (0, n.jsxs)("div", {
-                      className: e7.bo,
+                      className: e6.bo,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: e7.OA,
+                              className: e6.OA,
                               children: [
-                                  (0, n.jsx)(eX.Ay, { guild: i, size: eX.Ay.Sizes.MINI, className: e7.$f }),
+                                  (0, n.jsx)(eX.Ay, { guild: i, size: eX.Ay.Sizes.MINI, className: e6.$f }),
                                   (0, n.jsx)(P.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
@@ -1071,7 +1071,7 @@ var to = l(364522),
     th = l(438729),
     tg = l(895597),
     tp = l(448368),
-    tv = l(470964),
+    tv = l(186313),
     t_ = l(838541),
     tj = l(660845);
 let tb = (e) => {
@@ -1541,8 +1541,8 @@ function t3(e) {
           })
         : null;
 }
-var t4 = l(778712),
-    t2 = l(730134),
+var t2 = l(778712),
+    t4 = l(730134),
     t8 = l(243899);
 let t9 = (e) => {
     let { user: t } = e,
@@ -1560,7 +1560,7 @@ let t9 = (e) => {
                 children: (0, n.jsxs)("div", {
                     className: t8.eF,
                     children: [
-                        (0, n.jsx)(t2.A, { className: t8.Hk, user: t, size: t4._3.SIZE_40 }),
+                        (0, n.jsx)(t4.A, { className: t8.Hk, user: t, size: t2._3.SIZE_40 }),
                         (0, n.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
@@ -1583,19 +1583,19 @@ let t9 = (e) => {
     });
 };
 var t5 = l(95077),
-    t7 = l(287809),
-    t6 = l(818972);
+    t6 = l(287809),
+    t7 = l(818972);
 let le = (e) => {
         let { widget: t, userId: l } = e,
             i = (0, V.c)("WidgetPreviewElement"),
-            a = (0, L.bG)([t7.default], () => t7.default.getUser(l));
+            a = (0, L.bG)([t6.default], () => t6.default.getUser(l));
         return null == a
             ? null
             : (0, n.jsxs)("div", {
-                  className: t6.k,
+                  className: t7.k,
                   children: [
                       (0, n.jsx)(p.D, {
-                          className: t6.w,
+                          className: t7.w,
                           variant: i ? "heading-sm/medium" : "heading-sm/semibold",
                           children: T.intl.string(T.t.SpsnDY),
                       }),
@@ -1917,7 +1917,7 @@ let la = (e) => {
                         (0, n.jsx)(tQ, { stageInstance: l.record }),
                     null != ln(t, "guild_scheduled_event_preview") &&
                         "guild_scheduled_event" === l.name &&
-                        (0, n.jsx)(e6, { event: l.record }),
+                        (0, n.jsx)(e7, { event: l.record }),
                     null != ln(t, "guild_directory_entry_preview") &&
                         "guild_directory_entry" === l.name &&
                         (0, n.jsx)(e3, { entry: l.record }),

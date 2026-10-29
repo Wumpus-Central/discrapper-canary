@@ -765,7 +765,7 @@ async function ey(e) {
 let eD = 5 * L.A.Millis.MINUTE;
 async function ev() {
     let e = H.p9.QUEST_HOME_BANNER_DESKTOP;
-    if (c.A.isFetchingAdToDeliverByPlacement(e)) return;
+    if (c.A.isFetchingAdToDeliverByPlacement(e) || !c.A.canRefreshAd(e)) return;
     let t = c.A.getLastFetchedQuestHomeHero();
     if (null != t && Date.now() - t <= eD) return;
     let n = Date.now();

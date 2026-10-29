@@ -627,8 +627,8 @@ var eZ = n(702841),
     e7 = n(322387),
     e2 = n(912309),
     e8 = n(174459),
-    e4 = n(198476);
-function e6(e) {
+    e6 = n(198476);
+function e4(e) {
     let { closePopout: t } = e,
         n = (0, e2.kX)();
     return (0, a.jsx)(p.m, {
@@ -636,7 +636,7 @@ function e6(e) {
         text: er.intl.string(er.t["lMR96+"]),
         children: (0, a.jsxs)(K.D, {
             "aria-label": `${er.intl.string(er.t["lMR96+"])}, ${n}`,
-            className: e4.b,
+            className: e6.b,
             onClick: () => {
                 (e8.default.track(eO.HAw.NOTIFICATION_CENTER_ACTION, {
                     action_type: e7.e1.FRIEND_REQUESTS_BUTTON_CLICK,
@@ -646,7 +646,7 @@ function e6(e) {
             },
             children: [
                 (0, a.jsx)(e1.$, { size: "xs", color: "currentColor" }),
-                n > 0 && (0, a.jsx)(H.hV, { count: n, color: C.A.colors.BACKGROUND_MOD_STRONG.css, className: e4.D }),
+                n > 0 && (0, a.jsx)(H.hV, { count: n, color: C.A.colors.BACKGROUND_MOD_STRONG.css, className: e6.D }),
             ],
         }),
     });
@@ -1021,8 +1021,8 @@ var tQ = n(536637),
     t7 = n(749314),
     t2 = n(33358),
     t8 = n(384231),
-    t4 = n(207133),
-    t6 = n(704413),
+    t6 = n(207133),
+    t4 = n(704413),
     t5 = n(9842),
     t9 = n(994500),
     ne = n(5095),
@@ -1034,7 +1034,7 @@ var tQ = n(536637),
     ni = n(91688),
     nr = n(837528),
     nd = n(754459),
-    nc = n(470964),
+    nc = n(186313),
     no = n(824556),
     nu = n(699352),
     nh = n(715628),
@@ -1070,7 +1070,7 @@ let ny = i.memo(function e(t) {
         p = ej.rs.useSetting(),
         N = ej.kt.useSetting(),
         y = (0, t8.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
-        v = (0, t4.A)(s?.id),
+        v = (0, t6.A)(s?.id),
         { disableReactionCreates: I } = (0, ns.A)(s),
         { setPopout: C } = (0, nd.A)(l.id, nj.Fd),
         E = (0, nr.VL)(l, s, C, v),
@@ -1095,7 +1095,7 @@ let ny = i.memo(function e(t) {
         D = (0, no.A)({ message: l, channel: s, announcementEnabled: T }),
         k = (0, t2.P)(l),
         O = (0, ne._f)(l.id, l.channel_id),
-        G = (0, t6.A)(l),
+        G = (0, t4.A)(l),
         P = (0, na.fF)(l);
     return _
         ? (0, a.jsx)(e, { ...t, message: g.message, channel: x, hasThread: !1 })
@@ -1670,8 +1670,8 @@ function n7(e) {
 }
 var n2 = n(81466),
     n8 = n(508654),
-    n4 = n(29414);
-let n6 = { top: 8, bottom: 8, left: -4, right: -4 };
+    n6 = n(29414);
+let n4 = { top: 8, bottom: 8, left: -4, right: -4 };
 function n5(e) {
     let {
             guild: t,
@@ -1688,7 +1688,7 @@ function n5(e) {
     return (0, a.jsx)("div", {
         className: ed.N1,
         children: (0, a.jsx)(F.vN, {
-            offset: n6,
+            offset: n4,
             children: (0, a.jsxs)("div", {
                 className: d()(ed.ZO, { [ed.yZ]: r }),
                 ...h,
@@ -1825,7 +1825,7 @@ function se(e) {
                 collapsed: t.collapsed,
                 children: (0, a.jsx)("div", {
                     className: n9.k,
-                    children: m.map((e) => (0, a.jsx)(n4.A, { className: n9.f, guildEvent: e, truncate: !0 }, e.id)),
+                    children: m.map((e) => (0, a.jsx)(n6.A, { className: n9.f, guildEvent: e, truncate: !0 }, e.id)),
                 }),
             }),
         }),
@@ -2241,7 +2241,7 @@ function su(e) {
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
                         "aria-label": er.intl.string(er.t["8k+6QY"]),
-                        children: [(0, a.jsx)(sh, { tab: t }), (0, a.jsx)(e6, { closePopout: s })],
+                        children: [(0, a.jsx)(sh, { tab: t }), (0, a.jsx)(e4, { closePopout: s })],
                     }),
                 ],
             }),

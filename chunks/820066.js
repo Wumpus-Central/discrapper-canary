@@ -131,13 +131,13 @@ let T = {
         },
     },
     j = /(-# +)/,
-    _ = (0, p.A)([b, T]),
-    k = (0, p.A)([I, T]),
-    R = c.X(_),
-    O = c.X(k),
+    k = (0, p.A)([b, T]),
+    _ = (0, p.A)([I, T]),
+    R = c.X(k),
+    O = c.X(_),
     w = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    L = new (o())(w),
-    M = new (o())(w);
+    M = new (o())(w),
+    L = new (o())(w);
 function P(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
@@ -565,7 +565,7 @@ let q = {
         },
         markdown(e, t, n) {
             let l = "line" === e.type && e.codeBlockState?.wasInCodeBlock === !0,
-                i = e.children.map((e) => (Z.isText(e) ? e.text : "?"));
+                i = Q.serializeMarkdownChildren(e);
             return {
                 entries: (function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -597,7 +597,7 @@ let q = {
                             "" !== o &&
                                 (function (e, t, n) {
                                     let l = [],
-                                        i = n ? M : L,
+                                        i = n ? L : M,
                                         r = i.get(e);
                                     if (null != r) return r;
                                     let s =
@@ -646,6 +646,7 @@ let q = {
                 serializedChildren: i,
             };
         },
+        serializeMarkdownChildren: (e) => e.children.map((e) => (Z.isText(e) ? e.text : "?")),
         isEmpty(e) {
             if (e.children.length > 1) return !1;
             if (0 === e.children.length) return !0;
