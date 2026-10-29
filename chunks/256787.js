@@ -106,7 +106,7 @@ function E(e) {
     return c(e) || u(e) || _(e);
 }
 function A(e) {
-    return !E(e);
+    return !E(e) && !p(e);
 }
 function h(e) {
     return o.includes(e);

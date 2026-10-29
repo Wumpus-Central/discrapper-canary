@@ -344,7 +344,7 @@ async function F() {
         "userContent",
         (t) => {
             let n = new Uint8Array();
-            for (let i of _.zd) (0, _.Jq)(i) ? (n = (0, h.Vf)(n, i)) : (t.recurringDismissibleContentStates[i] = e(i));
+            for (let i of _.zd) (0, _.Zm)(i) ? (t.recurringDismissibleContentStates[i] = e(i)) : (n = (0, h.Vf)(n, i));
             t.dismissedContents = n;
         },
         m.Sb.INFREQUENT_USER_ACTION,

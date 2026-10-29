@@ -46,7 +46,7 @@ function _(e) {
             userId: a.default.getId(),
             newUserMinAgeRequiredOverridden: c.A.newUserMinAgeRequiredOverridden,
         }));
-    return r ? e : e.filter((e) => A(n, e, t));
+    return r ? [...e] : e.filter((e) => A(n, e, t));
 }
 function E(e) {
     return (
