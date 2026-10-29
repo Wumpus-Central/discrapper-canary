@@ -1,0 +1,65 @@
+.flowCard__04693 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16)
+}
+
+.flowHeader__04693 {
+    align-items: center
+}
+
+.flowHeader__04693,
+.flowRow__04693 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.flowRow__04693 {
+    align-items: flex-start
+}
+
+.statusIconColumn__04693 {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: var(--space-20)
+}
+
+.flowRow__04693 .statusIconColumn__04693 {
+    margin-block-start: calc(var(--space-4)/2)
+}
+
+.flowName__04693 {
+    flex-grow: 1;
+    min-width: 0
+}
+
+.flowStepText__04693 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.disabledCallout__04693 {
+    background: var(--background-feedback-critical);
+    border: 1px solid var(--border-feedback-critical);
+    border-radius: var(--radius-sm);
+    padding: var(--space-8)
+}
+
+.linkStatus__04693 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8);
+    margin-block-end: var(--space-8)
+}
+
+/*# sourceMappingURL=b8112257b6e4863c.css.map*/
