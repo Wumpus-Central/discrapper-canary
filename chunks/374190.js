@@ -8,6 +8,7 @@ e.exports = {
     $R: "defaultContainer__459fb",
     Ie: "custom__459fb",
     zi: "customColorPicker__459fb",
+    l$: "singleRow__459fb",
     iH: "colorPickerSwatch__459fb",
     Ay: "default__459fb",
     r9: "disabled__459fb",

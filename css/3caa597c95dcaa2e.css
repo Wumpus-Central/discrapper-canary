@@ -129,6 +129,19 @@
     overflow: hidden
 }
 
+.colorPickerRow__459fb.singleRow__459fb {
+    flex-wrap: nowrap;
+    gap: var(--space-8);
+    height: auto;
+    margin-top: 0;
+    overflow: visible
+}
+
+.colorPickerRow__459fb.singleRow__459fb .colorPickerSwatch__459fb {
+    flex-shrink: 0;
+    margin-inline-end: 0
+}
+
 .colorPickerSwatch__459fb {
     align-items: center;
     background-color: transparent;
@@ -204,4 +217,4 @@
     border-color: GrayText
 }
 
-/*# sourceMappingURL=3ee5233a8da681c2.css.map*/
+/*# sourceMappingURL=3caa597c95dcaa2e.css.map*/

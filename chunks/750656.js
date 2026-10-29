@@ -21,9 +21,8 @@ let a = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
     c = [
         [2797222, 16762e3],
         [0xe45eff, 2522592],
+        [8277963, 6802328],
         [0xefb4aa, 0xe46ce2],
-        [0xdf4232, 0xbd8fff],
-        [2535780, 9497343],
         [0xf5983c, 0xe55ae7],
     ].map((e) => ({ colors: e, name: "" })),
     u = [
@@ -33,17 +32,15 @@ let a = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [0xc4ed65, 0x98de60, 7130467, 4570214],
         [8173823, 9363664, 0x9d94f5, 6737904],
         [0xd77bff, 0xb56bff, 0xe45ce5, 9137407],
+        [0xd83a5f, 0xc94bcb, 9133311, 0xb06cff],
     ],
     _ = 0.78,
     E = 0.72,
     A = 38,
     h = [
         [0xfe9242, 3534206, 0xffe047, 0xff4cd2, 5793266],
-        [0xff3d3d, 0xff8a2a, 0xffd447, 0xff4fa3, 8086015],
-        [7997702, 0xc81e12, 0xf45a18, 0xff9500, 0xffd447],
         [8316888, 8178687, 8359167, 0xb56dff, 0xf38ad8],
-        [3528287, 1497266, 2147829, 2850047, 7032319],
-        [0xa7e8a1, 0xd9f08c, 0xffe08a, 0xffc4a8, 0xf3b6d9],
+        [7997702, 0xc81e12, 0xf45a18, 0xff9500, 0xffd447],
     ];
 function f(e) {
     switch (e) {

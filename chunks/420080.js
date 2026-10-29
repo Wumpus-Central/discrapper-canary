@@ -8,4 +8,5 @@ e.exports = {
     r9: "editButton__5d6af",
     Vz: "editClickable__5d6af",
     IZ: "editIcon__5d6af",
+    N: "iconBacking__5d6af",
 };
