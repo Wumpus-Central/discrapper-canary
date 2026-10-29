@@ -5,4 +5,6 @@ e.exports = {
     FF: "projectIconButton__2688e",
     DD: "title__2688e",
     Qw: "titleText__2688e",
+    l0: "shareTarget__2688e",
+    uN: "shareTargetDivider__2688e",
 };

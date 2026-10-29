@@ -1,58 +1,76 @@
-n.d(t, { A: () => f });
-var s = n(477900);
-n(582128);
-var a = n(152367),
-    l = n(661531),
-    r = n(866665),
-    i = n(939249),
-    o = n(742589),
-    c = n(497183),
-    u = n(248675),
-    d = n(105292),
-    m = n(631417);
-function f(e) {
-    let { title: t, actions: n, breadcrumb: f, project: h, onOpenProjectSettings: x, transparent: g = !1 } = e,
-        p = d.intl.string(u.default.FzfmQ8);
-    return (0, s.jsx)(o.A, {
+s.d(t, { A: () => x });
+var n = s(477900);
+s(582128);
+var a = s(152367),
+    l = s(661531),
+    r = s(866665),
+    i = s(939249),
+    c = s(834730),
+    o = s(742589),
+    u = s(465006),
+    d = s(497183),
+    m = s(248675),
+    f = s(105292),
+    h = s(631417);
+function x(e) {
+    let { title: t, actions: s, breadcrumb: x, project: g, onOpenProjectSettings: p, transparent: j = !1 } = e,
+        v = f.intl.string(m.default.FzfmQ8),
+        N = (0, u.A)(g ?? null);
+    return (0, n.jsx)(o.A, {
         hideSearch: !0,
-        transparent: g,
-        toolbar: n,
-        className: m.wx,
+        transparent: j,
+        toolbar: s,
+        className: h.wx,
         "aria-label": t,
-        children: (0, s.jsxs)("div", {
-            className: m.QF,
+        children: (0, n.jsxs)("div", {
+            className: h.QF,
             children: [
-                null == h
-                    ? (0, s.jsx)(a.D, {
+                null == g
+                    ? (0, n.jsx)(a.D, {
                           size: "custom",
                           width: 20,
                           height: 20,
                           color: l.A.colors.ICON_STRONG,
-                          className: m.Kk,
+                          className: h.Kk,
                       })
                     : null,
-                null != f
-                    ? (0, s.jsxs)(s.Fragment, {
+                null != x
+                    ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, s.jsx)(o.A.Title, { onClick: f.onClick, children: f.title }),
-                              (0, s.jsx)(o.A.Caret, {}),
+                              (0, n.jsx)(o.A.Title, { onClick: x.onClick, children: x.title }),
+                              (0, n.jsx)(o.A.Caret, {}),
                           ],
                       })
                     : null,
-                null != h && null != x
-                    ? (0, s.jsx)(r.m, {
+                null != g && null != p
+                    ? (0, n.jsx)(r.m, {
                           asContainer: !0,
-                          text: p,
+                          text: v,
                           position: "bottom",
-                          children: (0, s.jsx)(i.D, {
-                              className: m.FF,
-                              onClick: x,
-                              "aria-label": p,
-                              children: (0, s.jsx)(c.A, { project: h, size: "header" }),
+                          children: (0, n.jsx)(i.D, {
+                              className: h.FF,
+                              onClick: p,
+                              "aria-label": v,
+                              children: (0, n.jsx)(d.A, { project: g, size: "header" }),
                           }),
                       })
                     : null,
-                (0, s.jsx)(o.A.Title, { className: m.Qw, wrapperClassName: m.DD, children: t }),
+                (0, n.jsx)(o.A.Title, { className: h.Qw, wrapperClassName: h.DD, children: t }),
+                null != N
+                    ? (0, n.jsxs)(n.Fragment, {
+                          children: [
+                              (0, n.jsx)(o.A.Divider, { className: h.uN }),
+                              (0, n.jsx)(c.E, {
+                                  tag: "span",
+                                  variant: "text-sm/medium",
+                                  color: "text-muted",
+                                  lineClamp: 1,
+                                  className: h.l0,
+                                  children: N,
+                              }),
+                          ],
+                      })
+                    : null,
             ],
         }),
     });

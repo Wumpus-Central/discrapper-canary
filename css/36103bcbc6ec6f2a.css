@@ -70,7 +70,7 @@
 }
 
 .title__2688e {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     margin-inline-end: 0;
     min-width: 0;
     overflow: hidden
@@ -78,6 +78,14 @@
 
 .titleText__2688e {
     text-overflow: ellipsis
+}
+
+.shareTarget__2688e {
+    min-width: 0
+}
+
+.breadcrumb__2688e .shareTargetDivider__2688e {
+    margin-inline: var(--space-6)
 }
 
 .stop-animations .header__2688e {
@@ -88,4 +96,4 @@
     --background-gradient-lowest: var(--background-gradient-chat)
 }
 
-/*# sourceMappingURL=2a72ee9e448ae633.css.map*/
+/*# sourceMappingURL=36103bcbc6ec6f2a.css.map*/
