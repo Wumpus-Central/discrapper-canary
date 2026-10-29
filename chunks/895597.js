@@ -1,4 +1,4 @@
-(n.d(l, { ix: () => e8, Ay: () => e9, tO: () => e3 }), n(321073), n(938796));
+(n.d(l, { ix: () => e8, Ay: () => e5, tO: () => e3 }), n(321073), n(938796));
 var i = n(477900),
     t = n(582128),
     s = n(503698),
@@ -499,7 +499,7 @@ var eG = n(854627),
     eF = n(3026),
     eY = n(104510),
     eK = n(376304),
-    eq = n(878678),
+    eq = n(464120),
     eW = n(98318),
     eJ = n(976860),
     eX = n(746080),
@@ -635,7 +635,7 @@ let e7 = t.memo(function (e) {
         ),
         y = t.useRef(null),
         _ = (0, c.bG)([eL.A], () => eL.A.getGuild(a)),
-        S = t.useMemo(() => e5(r, g, o, _), [r, g, o, _]),
+        S = t.useMemo(() => e4(r, g, o, _), [r, g, o, _]),
         M = t.useMemo(
             () =>
                 null == o
@@ -793,10 +793,10 @@ function e8(e) {
         ],
     });
 }
-function e5(e, l, n, i) {
+function e4(e, l, n, i) {
     return (!e || l) && null != n && null != i ? 1 : (!e || l) && null != n ? 2 : 0;
 }
-let e9 = t.memo(function (e) {
+let e5 = t.memo(function (e) {
     let {
             message: l,
             repliedMessage: n,
@@ -964,7 +964,7 @@ let e9 = t.memo(function (e) {
             () => (0, e0.k)({ message: l, channel: I, user: l?.author, compact: s, isRepliedMessage: !1 }),
             [l, I, s],
         ),
-        O = (0, c.bG)([eL.A], () => e5(s, T, j, eL.A.getGuild(e.guildId)), [s, T, j, e.guildId]),
+        O = (0, c.bG)([eL.A], () => e4(s, T, j, eL.A.getGuild(e.guildId)), [s, T, j, e.guildId]),
         k = (0, eI.gj)(e.guildId, l.author.id),
         G = (0, ey.Sc)(),
         P = t.useMemo(() => {

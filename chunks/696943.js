@@ -26,7 +26,7 @@ var i = n(477900),
     A = n(688810),
     f = n(948134),
     p = n(892740),
-    C = n(878678),
+    C = n(464120),
     E = n(987144),
     x = n(976860),
     N = n(71393),
@@ -39,8 +39,8 @@ var i = n(477900),
     v = n(72377),
     R = n(565553),
     y = n(168900),
-    T = n(285828);
-function M(e) {
+    M = n(285828);
+function T(e) {
     let { powerup: t, eventTargetRef: n, className: l } = e,
         s = { eventTargetRef: n, fit: "contain", className: l };
     switch (t.skuId) {
@@ -49,7 +49,7 @@ function M(e) {
         case a.RV:
             return (0, i.jsx)(y.J, { ...s });
         case a.YG:
-            return (0, i.jsx)(T.z, { ...s });
+            return (0, i.jsx)(M.z, { ...s });
         default:
             return null;
     }
@@ -431,7 +431,7 @@ function ee(e) {
     return (0, i.jsx)(en, {
         asset:
             n.type === D.o9.LEVEL
-                ? (0, i.jsx)(M, { powerup: n, eventTargetRef: m, className: F.Lj })
+                ? (0, i.jsx)(T, { powerup: n, eventTargetRef: m, className: F.Lj })
                 : (0, i.jsx)("img", { alt: "", src: c, className: F.Sl }),
         title: k.intl.string(H.default.n37JhA),
         body: k.intl.formatToPlainString(h || n.type === D.o9.LEVEL ? H.default.Yr1ogl : H.default["7MZ2tu"], {
@@ -486,7 +486,7 @@ function et(e) {
                   stateMachine: C ? "SM_Main_Int" : "SM_Auto",
               })
             : u?.type === D.o9.LEVEL
-              ? (0, i.jsx)(M, { powerup: u, eventTargetRef: p, className: F.Lj })
+              ? (0, i.jsx)(T, { powerup: u, eventTargetRef: p, className: F.Lj })
               : (0, i.jsx)("img", { alt: "", src: f, className: F.Sl }),
         title: x,
         body: b,

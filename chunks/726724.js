@@ -7,6 +7,13 @@ e.exports = {
     so: "sidebarContainer__89463",
     lt: "powerupsSection__89463",
     qJ: "powerupContainer__89463",
+    SE: "levelsScroller__89463",
     dU: "powerupsLevelContainer__89463",
+    j$: "levelsOverflowLeft__89463",
+    QQ: "levelsOverflowRight__89463",
+    YP: "levelsShadowOverflow__89463",
+    pw: "levelsShadowTrack__89463",
+    GX: "levelsShadow__89463",
+    lQ: "powerupLevelCard__89463",
     CG: "memberSidebarSection__89463",
 };

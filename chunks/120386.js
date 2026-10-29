@@ -18,8 +18,8 @@ var t = l(477900),
     A = l(84540),
     I = l(854627),
     y = l(930349),
-    C = l(993408),
-    k = l(841702),
+    k = l(993408),
+    C = l(841702),
     x = l(486020),
     N = l(515718),
     j = l(195292);
@@ -45,8 +45,8 @@ function L(e) {
         } = e,
         f = (function (e) {
             let { size: n, enabled: l, isInteracting: t } = e,
-                { categories: r, purchases: i } = (0, k.Ay)({ stalePurchasesOK: !0 }),
-                s = a.useMemo(() => (0, C.ps)(i, r).filter(P), [i, r]),
+                { categories: r, purchases: i } = (0, C.Ay)({ stalePurchasesOK: !0, skipFetch: !l }),
+                s = a.useMemo(() => (0, k.ps)(i, r).filter(P), [i, r]),
                 u = a.useCallback(
                     (e) => {
                         let l = (0, x.F_)({
@@ -92,17 +92,17 @@ function M(e) {
         { analyticsLocations: o } = (0, d.Ay)(),
         m = (0, s.bG)([b.A], () => (null != l ? b.A.getGuild(l) : null)),
         I = null != l,
-        C = (0, p.a4)({ user: n }),
-        k = (0, p.a4)({ user: n, guildId: l ?? void 0 }),
+        k = (0, p.a4)({ user: n }),
+        C = (0, p.a4)({ user: n, guildId: l ?? void 0 }),
         { pendingAvatarDecoration: x } = (0, p.CP)(l ?? void 0),
         N = void 0 !== x,
-        j = null === x || (!N && null == k),
-        P = I && null != C,
+        j = null === x || (!N && null == C),
+        P = I && null != k,
         w = j && P,
-        R = (0, c.A)((0, p.lw)({ userValue: C, guildValue: k, pendingValue: x, guildId: l })),
+        R = (0, c.A)((0, p.lw)({ userValue: k, guildValue: C, pendingValue: x, guildId: l })),
         { product: S } = (0, v.q)(R?.skuId),
         D = j ? null : S?.items.find(f.T)?.label,
-        M = N ? null != x : null != k,
+        M = N ? null != x : null != C,
         T =
             null != R && M
                 ? {
