@@ -7781,19 +7781,20 @@ let uS = i.memo(function (e) {
                 restoring: u = !1,
                 onSend: o,
                 onInterrupt: c,
-                onUploadFile: d,
-                onApprove: h,
-                onImport: g,
-                onSendToOtherProjects: p,
-                suggestion: x,
-                questionOpen: v = !1,
-                hasPendingContext: j = !1,
-                onDraftHasTextChange: b,
-                modelSettings: y,
-                onModelSettingsChange: k,
+                escapeScopeRef: d,
+                onUploadFile: h,
+                onApprove: g,
+                onImport: p,
+                onSendToOtherProjects: x,
+                suggestion: v,
+                questionOpen: j = !1,
+                hasPendingContext: b = !1,
+                onDraftHasTextChange: y,
+                modelSettings: k,
+                onModelSettingsChange: w,
             } = e,
-            w = n && !l && !r,
-            S = (function (e) {
+            S = n && !l && !r,
+            N = (function (e) {
                 let t = i.useContext(uf.Ay),
                     [n] = i.useState(() => {
                         let n = (0, ur.ie)();
@@ -7842,60 +7843,60 @@ let uS = i.memo(function (e) {
                     });
                 return (i.useLayoutEffect(() => n.onChange(), [n]), n);
             })(rF.A.getDraft(t)),
-            [N, C] = i.useState(() => up(S));
-        (0, s2.N$)(N);
-        let A = i.useRef(N),
-            [I, E] = i.useState(null),
-            M = i.useCallback(() => {
-                let e = up(S);
-                (e !== A.current && ((A.current = e), (0, s1.I)(t, e), C(e)),
-                    E(
+            [C, A] = i.useState(() => up(N));
+        (0, s2.N$)(C);
+        let I = i.useRef(C),
+            [E, M] = i.useState(null),
+            _ = i.useCallback(() => {
+                let e = up(N);
+                (e !== I.current && ((I.current = e), (0, s1.I)(t, e), A(e)),
+                    M(
                         (function (e) {
                             let { selection: t } = e;
                             if (null == t || !uc.ZF.isCollapsed(t)) return null;
                             let [n] = uc.VW.node(e, t.anchor.path);
                             return uc.l5.isText(n) ? n.text.slice(0, t.anchor.offset) : null;
-                        })(S),
+                        })(N),
                     ));
-            }, [S, t]),
-            _ = i.useCallback((e) => ux(S, e), [S]),
-            T = "" !== N.trim();
-        i.useEffect(() => b?.(T), [T, b]);
-        let P = i.useRef(t);
+            }, [N, t]),
+            T = i.useCallback((e) => ux(N, e), [N]),
+            P = "" !== C.trim();
+        i.useEffect(() => y?.(P), [P, y]);
+        let R = i.useRef(t);
         i.useLayoutEffect(() => {
-            P.current !== t && ((P.current = t), ux(S, rF.A.getDraft(t)));
-        }, [S, t]);
-        let R = (0, m.bG)([a0.Ay], () => a0.Ay.isSubmitButtonEnabled),
-            [L, $] = i.useState(!1);
+            R.current !== t && ((R.current = t), ux(N, rF.A.getDraft(t)));
+        }, [N, t]);
+        let L = (0, m.bG)([a0.Ay], () => a0.Ay.isSubmitButtonEnabled),
+            [$, q] = i.useState(!1);
         i.useEffect(() => {
-            s || $(!1);
+            s || q(!1);
         }, [s]);
         let {
-                drafts: q,
-                addFiles: D,
-                pasteFiles: F,
-                removeDraft: O,
-                settled: z,
-                takeRefs: G,
-            } = (0, tO.FM)({ projectId: t, surface: "chat", onUploadFile: d }),
-            U = ea.useState((e) => {
+                drafts: F,
+                addFiles: O,
+                pasteFiles: z,
+                removeDraft: G,
+                settled: U,
+                takeRefs: B,
+            } = (0, tO.FM)({ projectId: t, surface: "chat", onUploadFile: h }),
+            K = ea.useState((e) => {
                 let n = null == t ? null : e.byProject[t];
                 return null != n && en(n);
             }),
-            B = "" !== N.trim() || q.length > 0 || j || U,
-            K = w && B && z,
-            [H, W] = i.useState(null);
+            H = "" !== C.trim() || F.length > 0 || b || K,
+            W = S && H && U,
+            [X, Y] = i.useState(null);
         i.useEffect(() => {
-            if (null == H) return;
+            if (null == X) return;
             let e = 0,
                 t = requestAnimationFrame(() => {
-                    e = requestAnimationFrame(() => W(null));
+                    e = requestAnimationFrame(() => Y(null));
                 });
             return () => {
                 (cancelAnimationFrame(t), 0 !== e && cancelAnimationFrame(e));
             };
-        }, [H]);
-        let X = (function (e) {
+        }, [X]);
+        let Q = (function (e) {
                 var t;
                 let n,
                     l,
@@ -7938,25 +7939,25 @@ let uS = i.memo(function (e) {
                     [u, o, c],
                 );
             })(t),
-            Y = (0, s7.rU)(t),
-            [Q, Z] = i.useState(null),
-            [J, ee] = i.useState(0),
-            et = i.useMemo(() => (null != I && w ? (0, s3.OG)(I, I.length) : null), [I, w]),
-            el = et?.start ?? null;
+            Z = (0, s7.rU)(t),
+            [J, ee] = i.useState(null),
+            [et, el] = i.useState(0),
+            er = i.useMemo(() => (null != E && S ? (0, s3.OG)(E, E.length) : null), [E, S]),
+            ei = er?.start ?? null;
         i.useEffect(() => {
-            null == el ? Z(null) : (0, s7.IP)(t);
-        }, [el, t]);
-        let er = el === Q ? null : et,
-            ei = i.useMemo(() => (null == er ? [] : (0, s3.l$)(X, Y, er.text)), [er, X, Y]),
-            eo = er?.text;
-        i.useEffect(() => ee(0), [eo]);
-        let ec = ei.length > 0,
-            ed = Math.min(J, Math.max(0, ei.length - 1)),
-            ef = i.useId(),
-            em = i.useCallback(
+            null == ei ? ee(null) : (0, s7.IP)(t);
+        }, [ei, t]);
+        let eo = ei === J ? null : er,
+            ec = i.useMemo(() => (null == eo ? [] : (0, s3.l$)(Q, Z, eo.text)), [eo, Q, Z]),
+            ed = eo?.text;
+        i.useEffect(() => el(0), [ed]);
+        let ef = ec.length > 0,
+            em = Math.min(et, Math.max(0, ec.length - 1)),
+            eh = i.useId(),
+            eg = i.useCallback(
                 (e) => {
-                    let t = ei[e];
-                    null != er &&
+                    let t = ec[e];
+                    null != eo &&
                         null != t &&
                         (function (e, t, n) {
                             let { selection: l } = e;
@@ -7964,14 +7965,14 @@ let uS = i.memo(function (e) {
                             let { path: r, offset: a } = l.anchor;
                             (uo.b.select(e, { anchor: { path: r, offset: t }, focus: { path: r, offset: a } }),
                                 uo.b.insertText(e, `${n} `));
-                        })(S, er.start, "user" === t.kind ? `<@${t.user.id}>` : `<file:${t.file.id}>`);
+                        })(N, eo.start, "user" === t.kind ? `<@${t.user.id}>` : `<file:${t.file.id}>`);
                 },
-                [ei, er, S],
+                [ec, eo, N],
             ),
-            eh = i.useCallback(() => {
-                if (!K) return;
-                let e = G(),
-                    n = U
+            ep = i.useCallback(() => {
+                if (!W) return;
+                let e = B(),
+                    n = K
                         ? (function (e) {
                               let t = es(e);
                               if (null == t || !en(t)) return null;
@@ -8058,7 +8059,7 @@ let uS = i.memo(function (e) {
                               );
                           })(t)
                         : null;
-                o(N, e.length > 0 ? e : void 0, n ?? void 0);
+                o(C, e.length > 0 ? e : void 0, n ?? void 0);
                 let l = (function (e, t, n) {
                     let l,
                         r,
@@ -8085,77 +8086,107 @@ let uS = i.memo(function (e) {
                     let d = a.slice(0, o),
                         f = d.lastIndexOf(" ");
                     return (f > 0 ? d.slice(0, f) : d).trimEnd();
-                })(uC(ew.current), eT.current, (0, s3.Lj)(N));
-                ("" !== l && W(l), _(""), Z(null));
-            }, [K, U, t, N, o, G, _]),
-            eg = i.useCallback(
+                })(uC(eN.current), eR.current, (0, s3.Lj)(C));
+                ("" !== l && Y(l), T(""), ee(null));
+            }, [W, K, t, C, o, B, T]),
+            ev = i.useCallback(
                 (e) => {
-                    (e.preventDefault(), eh());
+                    (e.preventDefault(), ep());
                 },
-                [eh],
+                [ep],
             ),
-            ep = i.useCallback(() => {
-                null == c || L || ($(!0), c());
-            }, [c, L]),
-            ev = null == x || "" !== N || !w || u || j ? null : x,
-            ey = i.useCallback(
+            ey = i.useCallback(() => {
+                null == c || $ || (q(!0), c());
+            }, [c, $]);
+        !(function (e) {
+            let { active: t, projectId: n, scopeRef: l, onEscape: r } = e,
+                a = i.useRef(r);
+            (i.useEffect(() => {
+                a.current = r;
+            }),
+                i.useEffect(() => {
+                    if (t)
+                        return (
+                            window.addEventListener("keydown", e, !0),
+                            () => window.removeEventListener("keydown", e, !0)
+                        );
+                    function e(e) {
+                        var t, r;
+                        "Escape" === e.key &&
+                            !e.isComposing &&
+                            null == es(n) &&
+                            !D(n).active &&
+                            ((t = e.target),
+                            (r = l?.current),
+                            (!(0, tR.vq)(t) ||
+                                t === document.body ||
+                                t === document.documentElement ||
+                                (null != r &&
+                                    r.contains(t) &&
+                                    null == t.closest('input, textarea, [contenteditable="true"]'))) &&
+                                (e.preventDefault(), e.stopPropagation(), a.current()));
+                    }
+                }, [t, n, l]));
+        })({ active: s && null != c, projectId: t, scopeRef: d, onEscape: ey });
+        let ek = null == v || "" !== C || !S || u || b ? null : v,
+            ew = i.useCallback(
                 (e) => {
-                    if (ec && !e.shiftKey && !e.metaKey && !e.ctrlKey && !e.altKey) {
-                        let t = ei.length;
+                    if (ef && !e.shiftKey && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                        let t = ec.length;
                         if ("ArrowDown" === e.key || "ArrowUp" === e.key) {
-                            (e.preventDefault(), ee((ed + ("ArrowDown" === e.key ? 1 : t - 1)) % t));
+                            (e.preventDefault(), el((em + ("ArrowDown" === e.key ? 1 : t - 1)) % t));
                             return;
                         }
                         if ("Enter" === e.key || "Tab" === e.key) {
-                            (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), em(ed));
+                            (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), eg(em));
                             return;
                         }
                         if ("Escape" === e.key) {
-                            (e.preventDefault(), e.stopPropagation(), Z(er?.start ?? null));
+                            (e.preventDefault(), e.stopPropagation(), ee(eo?.start ?? null));
                             return;
                         }
                     }
-                    if ("Escape" === e.key && s && null != c && !L) {
-                        (e.preventDefault(), e.stopPropagation(), ep());
+                    if ("Escape" === e.key && s && null != c) {
+                        (e.preventDefault(), e.stopPropagation(), ey());
                         return;
                     }
-                    if ("Tab" === e.key && !e.shiftKey && null != ev) {
-                        (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), _(ev));
+                    if ("Tab" === e.key && !e.shiftKey && null != ek) {
+                        (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), T(ek));
                         return;
                     }
                     if ("Enter" === e.key && (e.metaKey || e.ctrlKey)) {
-                        null != h && (e.preventDefault(), h());
+                        null != g && (e.preventDefault(), g());
                         return;
                     }
-                    "Enter" !== e.key || e.shiftKey || (e.preventDefault(), eh());
+                    "Enter" !== e.key || e.shiftKey || (e.preventDefault(), ep());
                 },
-                [eh, h, s, c, L, ep, ev, _, ec, ei.length, ed, em, er],
+                [ep, g, s, c, ey, ek, T, ef, ec.length, em, eg, eo],
             ),
-            ek = i.useCallback(
+            eS = i.useCallback(
                 (e) => {
-                    w && F(e);
+                    S && z(e);
                 },
-                [w, F],
+                [S, z],
             );
         (0, sV.Vo)({
             event: e1.jej.GLOBAL_CLIPBOARD_PASTE,
             handler: (e) => {
                 let { event: t } = e;
-                return ek(t);
+                return eS(t);
             },
         });
-        let ew = i.useRef(null),
-            eS = i.useCallback(() => {
-                let e = A.current;
-                p?.((0, s3.Lj)(e), () => {
-                    A.current === e && _("");
+        let eN = i.useRef(null),
+            eC = i.useCallback(() => {
+                let e = I.current;
+                x?.((0, s3.Lj)(e), () => {
+                    I.current === e && T("");
                 });
-            }, [p, _]),
-            [eN, eC] = i.useState(0),
-            [eA, eI] = i.useState(!1);
+            }, [x, T]),
+            [eA, eI] = i.useState(0),
+            [eE, eM] = i.useState(!1);
         i.useEffect(() => {
-            if (0 === N.length) return void eI(!1);
-            let e = uC(ew.current);
+            if (0 === C.length) return void eM(!1);
+            let e = uC(eN.current);
             if (null != e) {
                 let t = (function (e) {
                     let t = e.ownerDocument.getSelection(),
@@ -8164,112 +8195,112 @@ let uS = i.memo(function (e) {
                     let l = t.getRangeAt(0).getBoundingClientRect();
                     return 0 === l.height ? null : l.left - n.getBoundingClientRect().left;
                 })(e);
-                null != t && eC(t);
+                null != t && eI(t);
             }
-            eI(!0);
-            let t = setTimeout(() => eI(!1), uN);
+            eM(!0);
+            let t = setTimeout(() => eM(!1), uN);
             return () => clearTimeout(t);
-        }, [N]);
-        let eE = i.useMemo(() => ({ "--custom-glow-x": `${eN}px` }), [eN]),
-            eM = eA ? ` ${uj.EB}` : "",
-            e_ = u
+        }, [C]);
+        let e_ = i.useMemo(() => ({ "--custom-glow-x": `${eA}px` }), [eA]),
+            eT = eE ? ` ${uj.EB}` : "",
+            eP = u
                 ? eb.intl.string(ej.default.qqlUiW)
                 : r
                   ? eb.intl.string(ej.default.Z0hyNL)
                   : l
                     ? eb.intl.string(ej.default.GcFRaY)
-                    : w
-                      ? j
+                    : S
+                      ? b
                           ? eb.intl.string(ej.default.knUjL3)
-                          : v
+                          : j
                             ? eb.intl.string(ej.default.IevBEw)
                             : eb.intl.string(s ? ej.default["0BJa/0"] : ej.default.TEeU7z)
                       : eb.intl.string(ej.default.zZ9NgM),
-            eT = i.useRef(0),
-            eP = i.useRef(null),
-            eR = i.useCallback((e) => {
-                if ((eP.current?.disconnect(), null == e)) return;
-                eT.current = e.clientWidth;
+            eR = i.useRef(0),
+            eL = i.useRef(null),
+            e$ = i.useCallback((e) => {
+                if ((eL.current?.disconnect(), null == e)) return;
+                eR.current = e.clientWidth;
                 let t = new ResizeObserver(() => {
-                    eT.current = e.clientWidth;
+                    eR.current = e.clientWidth;
                 });
-                (t.observe(e), (eP.current = t));
+                (t.observe(e), (eL.current = t));
             }, []),
-            eL = i.useId(),
-            e$ = i.useId(),
-            eq = null != ev,
-            eD = H ?? ev ?? e_,
-            eF = "" === N && "" !== eD;
+            eq = i.useId(),
+            eD = i.useId(),
+            eF = null != ek,
+            eO = X ?? ek ?? eP,
+            ez = "" === C && "" !== eO;
         return (0, a.jsxs)("form", {
-            onSubmit: eg,
+            onSubmit: ev,
             className: uj.DA,
             children: [
-                ec
+                ef
                     ? (0, a.jsx)(un, {
-                          id: ef,
+                          id: eh,
                           projectId: t,
-                          suggestions: ei,
-                          selectedIndex: ed,
-                          onHover: ee,
-                          onSelect: em,
+                          suggestions: ec,
+                          selectedIndex: em,
+                          onHover: el,
+                          onSelect: eg,
                       })
                     : null,
-                q.length > 0 || U
+                F.length > 0 || K
                     ? (0, a.jsxs)("div", {
                           className: uj.lN,
                           children: [
-                              q.map((e) => (0, a.jsx)(tO.Nl, { draft: e, onRemove: O }, e.localId)),
-                              U ? (0, a.jsx)(sZ, { projectId: t }) : null,
+                              F.map((e) => (0, a.jsx)(tO.Nl, { draft: e, onRemove: G }, e.localId)),
+                              K ? (0, a.jsx)(sZ, { projectId: t }) : null,
                           ],
                       })
                     : null,
-                (0, a.jsx)("span", { className: `${uj.wg} ${uj.LP}${eM}`, style: eE, "aria-hidden": !0 }),
-                (0, a.jsx)("span", { className: `${uj.wg} ${uj.L3}${eM}`, style: eE, "aria-hidden": !0 }),
+                (0, a.jsx)("span", { className: `${uj.wg} ${uj.LP}${eT}`, style: e_, "aria-hidden": !0 }),
+                (0, a.jsx)("span", { className: `${uj.wg} ${uj.L3}${eT}`, style: e_, "aria-hidden": !0 }),
                 (0, a.jsxs)("div", {
                     className: uj.VA,
-                    ref: ew,
+                    ref: eN,
                     children: [
                         (0, a.jsx)(s6.A, {
                             navId: "conjure-composer-attach",
-                            disabled: !w,
+                            disabled: !S,
                             buttonClassName: `${uj.Y0} ${uj.nu}`,
                             iconClassName: uj.Qu,
-                            onAddFiles: D,
-                            onImport: g,
-                            onSendToOtherProjects: null != p ? eS : void 0,
+                            onAddFiles: O,
+                            onImport: p,
+                            onSendToOtherProjects: null != x ? eC : void 0,
                         }),
-                        eF
+                        ez
                             ? (0, a.jsx)("div", {
-                                  ref: eR,
+                                  ref: e$,
                                   className: uj.ar,
                                   "aria-hidden": "true",
-                                  children: (0, a.jsx)(uw, { text: eD, offering: eq && null == H, typed: null != H }),
+                                  children: (0, a.jsx)(uw, { text: eO, offering: eF && null == X, typed: null != X }),
                               })
                             : null,
-                        (0, a.jsx)(n$.A, { id: e$, children: eb.intl.string(ej.default.ldNl9x) }),
+                        (0, a.jsx)(n$.A, { id: eD, children: eb.intl.string(ej.default.ldNl9x) }),
                         (0, a.jsx)(rq.Fu.Provider, {
                             value: t,
                             children: (0, a.jsx)(sH.A, {
-                                editor: S,
+                                editor: N,
                                 containerClassName: f()(uj.sq, ub.dv),
                                 className: uj.jp,
-                                readOnly: !w,
-                                canFocus: w,
-                                onChange: M,
-                                onBlur: () => E(null),
-                                onKeyDown: ey,
-                                onPaste: ek,
+                                readOnly: !S,
+                                canFocus: S,
+                                onChange: _,
+                                onBlur: () => M(null),
+                                onKeyDown: ew,
+                                onPaste: eS,
                                 renderExtraElement: uv,
-                                "aria-labelledby": e$,
-                                "aria-describedby": eF ? eL : void 0,
+                                "aria-labelledby": eD,
+                                "aria-describedby": ez ? eq : void 0,
                                 "aria-autocomplete": "list",
                                 "aria-haspopup": "listbox",
-                                "aria-expanded": ec,
-                                "aria-controls": ec ? ef : void 0,
-                                "aria-activedescendant": ec ? ((0, s8.aI)(ed) ?? void 0) : void 0,
+                                "aria-expanded": ef,
+                                "aria-controls": ef ? eh : void 0,
+                                "aria-activedescendant": ef ? ((0, s8.aI)(em) ?? void 0) : void 0,
                             }),
                         }),
-                        eF ? (0, a.jsx)(n$.A, { id: eL, children: e_ }) : null,
+                        ez ? (0, a.jsx)(n$.A, { id: eq, children: eP }) : null,
                         (0, a.jsx)("div", {
                             className: uj.Sz,
                             children:
@@ -8280,8 +8311,8 @@ let uS = i.memo(function (e) {
                                           children: (0, a.jsx)("button", {
                                               type: "button",
                                               className: `${uj.Y0} ${uj.$E}`,
-                                              disabled: L,
-                                              onClick: ep,
+                                              disabled: $,
+                                              onClick: ey,
                                               "aria-label": eb.intl.string(ej.default.wiguT0),
                                               children: (0, a.jsx)(rz.w, {
                                                   size: "custom",
@@ -8291,13 +8322,13 @@ let uS = i.memo(function (e) {
                                               }),
                                           }),
                                       })
-                                    : y?.tierSettings != null && null != k
+                                    : k?.tierSettings != null && null != w
                                       ? (0, a.jsx)(s0.A, {
-                                            settings: y.tierSettings,
-                                            tiers: y.tiers,
-                                            choices: y.choices,
-                                            disabled: !w,
-                                            onChange: k,
+                                            settings: k.tierSettings,
+                                            tiers: k.tiers,
+                                            choices: k.choices,
+                                            disabled: !S,
+                                            onChange: w,
                                             className: `${uj.Y0} ${uj.$E}`,
                                             icon: (0, a.jsx)(sB.R, {
                                                 size: "custom",
@@ -8308,7 +8339,7 @@ let uS = i.memo(function (e) {
                                         })
                                       : null,
                         }),
-                        R
+                        L
                             ? (0, a.jsxs)("div", {
                                   className: uj.fF,
                                   children: [
@@ -8316,7 +8347,7 @@ let uS = i.memo(function (e) {
                                       (0, a.jsx)("button", {
                                           type: "submit",
                                           className: uj.rt,
-                                          disabled: !K,
+                                          disabled: !W,
                                           "aria-label": eb.intl.string(ej.default.rxW2cl),
                                           children: (0, a.jsx)(sK.SendMessageIcon, {
                                               size: "custom",
@@ -11231,29 +11262,29 @@ function cU(e) {
         s,
         o,
         c,
-        { projectId: d, restoreState: f, onRestoreVersion: g, onImportProject: p } = e,
-        x = (0, m.bG)([rr.A], () => rr.A.getMessages(d), [d]),
-        v = (0, m.bG)([ex.default], () => ex.default.getConnState(d), [d]),
-        j = (0, m.bG)([rr.A], () => rr.A.getProjectUsage(d), [d]),
-        b = (0, m.bG)([rr.A], () => rr.A.getThinkingActivity(d), [d]),
-        y = (0, m.bG)([rr.A], () => rr.A.isCompacting(d), [d]),
-        k = (0, m.bG)([rr.A], () => rr.A.isSaving(d), [d]),
-        w = ri(d),
-        S = (0, m.bG)([re.A], () => re.A.getModelSettings(d), [d]),
-        N = i.useRef(null),
+        { projectId: d, restoreState: f, onRestoreVersion: g, onImportProject: p, escapeScopeRef: x } = e,
+        v = (0, m.bG)([rr.A], () => rr.A.getMessages(d), [d]),
+        j = (0, m.bG)([ex.default], () => ex.default.getConnState(d), [d]),
+        b = (0, m.bG)([rr.A], () => rr.A.getProjectUsage(d), [d]),
+        y = (0, m.bG)([rr.A], () => rr.A.getThinkingActivity(d), [d]),
+        k = (0, m.bG)([rr.A], () => rr.A.isCompacting(d), [d]),
+        w = (0, m.bG)([rr.A], () => rr.A.isSaving(d), [d]),
+        S = ri(d),
+        N = (0, m.bG)([re.A], () => re.A.getModelSettings(d), [d]),
         C = i.useRef(null),
         A = i.useRef(null),
         E = i.useRef(null),
+        M = i.useRef(null),
         {
-            stickToBottomRef: M,
-            pinned: T,
-            atBottom: P,
-            unpin: R,
-            releasePinHold: L,
-            showsLatest: $,
-            showsLatestRef: q,
-            handleShowsLatestChange: D,
-            updatePin: F,
+            stickToBottomRef: T,
+            pinned: P,
+            atBottom: R,
+            unpin: L,
+            releasePinHold: $,
+            showsLatest: q,
+            showsLatestRef: D,
+            handleShowsLatestChange: F,
+            updatePin: O,
         } = (function (e) {
             let t = i.useRef(!0),
                 [n, l] = i.useState(!0),
@@ -11299,10 +11330,10 @@ function cU(e) {
                 handleShowsLatestChange: m,
                 updatePin: h,
             };
-        })(C),
-        O = i.useCallback(() => {
+        })(A),
+        z = i.useCallback(() => {
             function e() {
-                let e = N.current;
+                let e = C.current;
                 if (null == e) return;
                 let t = e.querySelector('[data-conjure-turn-status="true"][data-live="true"]'),
                     n = e.querySelectorAll('[data-conjure-turn-status="true"]'),
@@ -11311,30 +11342,30 @@ function cU(e) {
                 let r = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches === !0;
                 l.scrollIntoView({ block: "center", behavior: r ? "auto" : "smooth" });
             }
-            (L(), q.current ? e() : A.current?.showLatest(e));
-        }, [L, q]),
-        z = i.useCallback(() => {
-            (F(), A.current?.handleScroll());
-            let e = E.current;
-            null != e && (e.position = M.current ? null : (A.current?.snapshot() ?? null));
-        }, [F, M]),
-        U = i.useContext(eP) === d;
+            ($(), D.current ? e() : E.current?.showLatest(e));
+        }, [$, D]),
+        U = i.useCallback(() => {
+            (O(), E.current?.handleScroll());
+            let e = M.current;
+            null != e && (e.position = T.current ? null : (E.current?.snapshot() ?? null));
+        }, [O, T]),
+        B = i.useContext(eP) === d;
     i.useLayoutEffect(() => {
-        if (!U) return;
+        if (!B) return;
         let e = { position: eL.A.getProjectView(d).chatScroll };
-        return ((E.current = e), () => (0, eR.g7)(d, { chatScroll: e.position }));
-    }, [U, d]);
-    let B = i.useRef(!U);
+        return ((M.current = e), () => (0, eR.g7)(d, { chatScroll: e.position }));
+    }, [B, d]);
+    let K = i.useRef(!B);
     (i.useLayoutEffect(() => {
-        if (B.current || 0 === x.length) return;
-        B.current = !0;
+        if (K.current || 0 === v.length) return;
+        K.current = !0;
         let e = eL.A.getProjectView(d).chatScroll;
-        null != e && A.current?.restore(e) !== !0 && null != E.current && (E.current.position = null);
-    }, [x, d]),
+        null != e && E.current?.restore(e) !== !0 && null != M.current && (M.current.position = null);
+    }, [v, d]),
         i.useLayoutEffect(() => {
-            let e = N.current;
+            let e = C.current;
             if (null == e) return;
-            let t = C.current?.getScrollerNode(),
+            let t = A.current?.getScrollerNode(),
                 n = e.getBoundingClientRect().width,
                 l = t?.getBoundingClientRect().height,
                 r = new ResizeObserver((t) => {
@@ -11349,16 +11380,16 @@ function cU(e) {
                             if (e === l) continue;
                             ((l = e), (r = !0));
                         }
-                    r && (M.current ? C.current?.scrollToBottom() : A.current?.recordAnchor());
+                    r && (T.current ? A.current?.scrollToBottom() : E.current?.recordAnchor());
                 });
             return (r.observe(e), null != t && r.observe(t), () => r.disconnect());
-        }, [M]),
+        }, [T]),
         i.useEffect(() => {
             (0, ex.ensureConnection)(d);
         }, [d]),
         (0, rD.E1)(d, (0, nA.j)()));
-    let K = H(d),
-        V = (function (e) {
+    let V = H(d),
+        W = (function (e) {
             let t = (0, tp.Ay)(e),
                 n = t?.guildId ?? null,
                 l = (0, m.bG)([lT.A], () => (null == n ? null : (lT.A.getGuild(n)?.name ?? null))),
@@ -11373,7 +11404,7 @@ function cU(e) {
                       onDismiss: () => a(e),
                   };
         })(d),
-        W = (function (e) {
+        X = (function (e) {
             let t = (0, m.bG)([rR.A], () => rR.A.getSpendLimit(e), [e]);
             if (null == t) return null;
             let n = null == t.limitUsd ? null : rL.format(t.limitUsd);
@@ -11391,7 +11422,7 @@ function cU(e) {
             let l = Math.min(99, Math.floor((t.spentUsd / t.limitUsd) * 100));
             return { blocked: !1, message: eb.intl.formatToPlainString(ej.default.GHgG2B, { percent: l, limit: n }) };
         })(d),
-        X =
+        Y =
             ((l = (0, m.bG)([rn.A], () => rn.A.getFailure(d))),
             (r = i.useCallback(() => (0, rl.CM)(d), [d])),
             null == l
@@ -11400,17 +11431,17 @@ function cU(e) {
                       message: eb.intl.format(ej.default.Up6Ssw, { reason: l }),
                       retry: { text: eb.intl.string(ej.default["ywA+ET"]), onClick: r },
                   }),
-        Y = (0, m.bG)([rn.A], () => rn.A.getSetupStartedAt(d), [d]),
-        Q = i.useCallback(
+        Q = (0, m.bG)([rn.A], () => rn.A.getSetupStartedAt(d), [d]),
+        Z = i.useCallback(
             (e, t) => {
                 (0, ex.sendUserMessage)(d, e, t);
             },
             [d],
         ),
-        Z = i.useCallback(
+        J = i.useCallback(
             (e, t, n) => {
-                let l = n ?? Q;
-                0 === K.annotations.length
+                let l = n ?? Z;
+                0 === V.annotations.length
                     ? l(e, t)
                     : (l(
                           (function (e) {
@@ -11440,14 +11471,14 @@ function cU(e) {
                               });
                               let i = n.trim();
                               return ("" !== i && (a.push(""), a.push(`Note for the whole batch: ${i}`)), a.join("\n"));
-                          })({ annotations: K.annotations, metaComment: e, context: K.context }),
+                          })({ annotations: V.annotations, metaComment: e, context: V.context }),
                           t,
                       ),
                       G(d));
             },
-            [K, Q, d],
+            [V, Z, d],
         ),
-        J = i.useCallback(() => {
+        ee = i.useCallback(() => {
             (!(function (e) {
                 let t = !1;
                 for (let [n, l] of nm)
@@ -11464,31 +11495,31 @@ function cU(e) {
                 rr.A.isThinking(d)) &&
                 (0, ex.interruptTurn)(d);
         }, [d]),
-        ee = i.useCallback((e) => (0, n0.RQ)(d, e.implementation_prompt), [d]),
-        [et, en] = (function (e) {
+        et = i.useCallback((e) => (0, n0.RQ)(d, e.implementation_prompt), [d]),
+        [en, el] = (function (e) {
             let [t, n] = i.useState(() => rO(e)),
                 [l, r] = i.useState(e),
                 a = l !== e,
                 s = a ? rO(e) : t;
             return (a && (r(e), n(s)), [s, n]);
         })(d),
-        el = i.useCallback(() => Q(eb.intl.string(ej.default["t5CN3+"])), [Q]),
-        er = i.useCallback((e, t, n) => (0, n0.RQ)(d, e, { clarificationAnswers: t, attachments: n }), [d]),
-        ea = i.useCallback((e) => (0, rt.X)(d, e), [d]),
-        ei = i.useCallback((e) => (0, t$.vX)(d, e), [d]),
-        es = i.useCallback((e) => (0, tO.gn)(d, "chat", Array.from(e), ei), [d, ei]),
-        eu = i.useCallback(() => (0, n0.RQ)(d, eb.intl.string(ej.default.Zc7gML)), [d]),
-        eo = f?.status === "restoring",
-        ec = "open" === v && !eo,
-        ed = x[x.length - 1],
-        ef = null != ed && "assistant" === ed.role && null != ed.proposal,
-        [em, eh] = i.useState(null),
-        eg = ed?.clarification != null && ed.clarification.id !== em ? ed.clarification : null,
-        ev = i.useCallback(() => {
-            null != eg && eh(eg.id);
-        }, [eg]),
-        [ey, ek] = i.useState(null),
-        ew = (function (e) {
+        er = i.useCallback(() => Z(eb.intl.string(ej.default["t5CN3+"])), [Z]),
+        ea = i.useCallback((e, t, n) => (0, n0.RQ)(d, e, { clarificationAnswers: t, attachments: n }), [d]),
+        ei = i.useCallback((e) => (0, rt.X)(d, e), [d]),
+        es = i.useCallback((e) => (0, t$.vX)(d, e), [d]),
+        eu = i.useCallback((e) => (0, tO.gn)(d, "chat", Array.from(e), es), [d, es]),
+        eo = i.useCallback(() => (0, n0.RQ)(d, eb.intl.string(ej.default.Zc7gML)), [d]),
+        ec = f?.status === "restoring",
+        ed = "open" === j && !ec,
+        ef = v[v.length - 1],
+        em = null != ef && "assistant" === ef.role && null != ef.proposal,
+        [eh, eg] = i.useState(null),
+        ev = ef?.clarification != null && ef.clarification.id !== eh ? ef.clarification : null,
+        ey = i.useCallback(() => {
+            null != ev && eg(ev.id);
+        }, [ev]),
+        [ek, ew] = i.useState(null),
+        eS = (function (e) {
             let [t, n] = i.useState(null),
                 l = i.useRef(null),
                 r = i.useCallback((e) => {
@@ -11518,18 +11549,18 @@ function cU(e) {
                 );
             return { request: a?.request ?? null, open: s, close: u, sent: o };
         })(d),
-        eS = ed?.appBuildRequest != null && (0, nE.BL)(ed) && ed.appBuildRequest.id !== ey ? ed.appBuildRequest : null,
-        eN = ew.request ?? (null == eg ? eS : null),
-        eC = null == ew.request ? eg : null,
-        eA = null != eN && eN === ew.request,
-        { close: eI, sent: eE } = ew,
-        eM = ew.request?.id,
-        e_ = i.useCallback(() => {
-            eA ? eI() : null != eN && ek(eN.id);
-        }, [eN, eA, eI]),
-        eT = i.useCallback(
+        eN = ef?.appBuildRequest != null && (0, nE.BL)(ef) && ef.appBuildRequest.id !== ek ? ef.appBuildRequest : null,
+        eC = eS.request ?? (null == ev ? eN : null),
+        eA = null == eS.request ? ev : null,
+        eI = null != eC && eC === eS.request,
+        { close: eE, sent: eM } = eS,
+        e_ = eS.request?.id,
+        eT = i.useCallback(() => {
+            eI ? eE() : null != eC && ew(eC.id);
+        }, [eC, eI, eE]),
+        e$ = i.useCallback(
             (e) => {
-                (null != eM && eE(eM),
+                (null != e_ && eM(e_),
                     (0, ep.P0)({
                         text: eb.intl.formatToPlainString(ej.default.RZO35O, {
                             names: e.map((e) => e.name).join(", "),
@@ -11537,61 +11568,61 @@ function cU(e) {
                         variant: "success",
                     }));
             },
-            [eM, eE],
+            [e_, eM],
         ),
-        e$ = (0, m.bG)([rp.A], () => rp.A.getSettings(d), [d]),
-        [eq, eD] = i.useState(null),
-        eF = rS(),
-        eO =
-            null != ed &&
-            ((t = ed.id),
-            (s = (0, rx.Mv)(x, e$?.secrets)),
-            (o = rN(x)),
-            x.some(
+        eq = (0, m.bG)([rp.A], () => rp.A.getSettings(d), [d]),
+        [eD, eF] = i.useState(null),
+        eO = rS(),
+        ez =
+            null != ef &&
+            ((t = ef.id),
+            (s = (0, rx.Mv)(v, eq?.secrets)),
+            (o = rN(v)),
+            v.some(
                 (e) =>
                     "assistant" === e.role &&
                     e.id !== t &&
                     !!(0, nE.BL)(e) &&
                     ((null != e.secretRequest && "open" === s.get(e.render_id)) ||
-                        (null != e.settingsRequest && !o.has(e.id) && !rC(e.settingsRequest, e$, eF.has(e.id)))),
+                        (null != e.settingsRequest && !o.has(e.id) && !rC(e.settingsRequest, eq, eO.has(e.id)))),
             )),
-        ez =
-            null != ed &&
-            "assistant" === ed.role &&
-            null != ed.settingsRequest &&
-            null == ed.secretRequest &&
-            (0, nE.BL)(ed) &&
-            ed.id !== eq &&
-            ((n = ed.settingsRequest),
+        eG =
+            null != ef &&
+            "assistant" === ef.role &&
+            null != ef.settingsRequest &&
+            null == ef.secretRequest &&
+            (0, nE.BL)(ef) &&
+            ef.id !== eD &&
+            ((n = ef.settingsRequest),
             (c = n.keys ?? []),
-            null != e$ &&
+            null != eq &&
                 0 !== c.length &&
                 c.every((e) => {
-                    let t = e$.schema.find((t) => t.key === e);
+                    let t = eq.schema.find((t) => t.key === e);
                     return null != t && rv.has(t.type);
                 })) &&
-            rj(ed.settingsRequest, e$) &&
-            !eO
-                ? ed
+            rj(ef.settingsRequest, eq) &&
+            !ez
+                ? ef
                 : null,
-        eG = null == ew.request ? ez : null,
-        eU = eG?.settingsRequest ?? null,
-        eB = i.useCallback(() => {
-            null != ez && eD(ez.id);
-        }, [ez]),
-        eK = null != eU,
-        [eH, eV] = i.useState(null),
-        eW = eC?.id ?? eN?.id ?? eG?.id ?? (w ? "scope-setup" : void 0),
-        eX = null != eg || null != eN || null != ez || w;
+        eU = null == eS.request ? eG : null,
+        eB = eU?.settingsRequest ?? null,
+        eK = i.useCallback(() => {
+            null != eG && eF(eG.id);
+        }, [eG]),
+        eH = null != eB,
+        [eV, eW] = i.useState(null),
+        eX = eA?.id ?? eC?.id ?? eU?.id ?? (S ? "scope-setup" : void 0),
+        eY = null != ev || null != eC || null != eG || S;
     i.useLayoutEffect(() => {
-        let e = C.current?.getScrollerNode(),
-            t = eH?.firstElementChild;
-        if (null == eH || null == e || !(0, tR.vq)(t, HTMLElement) || null == eW) return;
+        let e = A.current?.getScrollerNode(),
+            t = eV?.firstElementChild;
+        if (null == eV || null == e || !(0, tR.vq)(t, HTMLElement) || null == eX) return;
         function n() {
-            M.current && C.current?.scrollToBottom();
+            T.current && A.current?.scrollToBottom();
         }
         let l = new ResizeObserver(() => {
-            let l = e.getBoundingClientRect().bottom - eH.getBoundingClientRect().top - t.offsetTop;
+            let l = e.getBoundingClientRect().bottom - eV.getBoundingClientRect().top - t.offsetTop;
             (e.style.setProperty("--custom-conjure-docked-card-inset", `${Math.max(0, Math.round(l))}px`), n());
         });
         return (
@@ -11601,9 +11632,9 @@ function cU(e) {
                 (l.disconnect(), e.style.removeProperty("--custom-conjure-docked-card-inset"), n());
             }
         );
-    }, [eH, eW, C, M]);
-    let eY = (0, m.bG)([rr.A], () => rr.A.hasLoadedHistory(d), [d]),
-        eQ = (function (e) {
+    }, [eV, eX, A, T]);
+    let eQ = (0, m.bG)([rr.A], () => rr.A.hasLoadedHistory(d), [d]),
+        eZ = (function (e) {
             let t = ri(e),
                 n = (0, m.bG)([ta.Ay], () => null != ta.Ay.getProject(e), [e]),
                 l = (0, m.bG)([rr.A], () => rr.A.hasLoadedHistory(e), [e]),
@@ -11617,108 +11648,108 @@ function cU(e) {
                 s
             );
         })(d),
-        eZ = (function (e) {
+        eJ = (function (e) {
             let { historyLoaded: t, historyUnavailable: n, connState: l } = e;
             return n ? "unavailable" : t ? "greeting" : "failed" === l || "closed" === l ? "unavailable" : "loading";
         })({
-            historyLoaded: eY,
+            historyLoaded: eQ,
             historyUnavailable: (0, m.bG)([rr.A], () => rr.A.isHistoryUnavailable(d), [d]),
-            connState: v,
+            connState: j,
         }),
-        eJ = "loading" === eZ && 0 === x.length,
-        e0 = i.useMemo(() => {
+        e0 = "loading" === eJ && 0 === v.length,
+        e1 = i.useMemo(() => {
             let e = 0;
             for (let t = 0; t < d.length; t++) e = (31 * e + d.charCodeAt(t)) % 0x7fffffff;
             return cG[e % cG.length];
         }, [d]),
-        e1 = ef ? eb.intl.string(ej.default.Zc7gML) : "greeting" === eZ && 0 === x.length ? e0 : null,
-        e2 = i.useMemo(() => {
-            for (let e = x.length - 1; e >= 0; e--) {
-                let t = x[e];
+        e2 = em ? eb.intl.string(ej.default.Zc7gML) : "greeting" === eJ && 0 === v.length ? e1 : null,
+        e3 = i.useMemo(() => {
+            for (let e = v.length - 1; e >= 0; e--) {
+                let t = v[e];
                 if ("assistant" === t.role && !(0, nE.BL)(t)) return t;
             }
-        }, [x]),
-        e3 = null != e2,
-        e7 = null != e2 ? (0, r$.S)(e2) : void 0,
-        e4 = ef && ec ? eu : void 0,
-        e5 = i.useCallback(() => (0, n0.RQ)(d, eb.intl.string(ej.default.EMgIuY)), [d]),
-        [e6, e8] = i.useState(null),
-        [e9, te] = i.useState(e3);
-    (e9 !== e3 && (te(e3), e3 || e8(null)),
+        }, [v]),
+        e7 = null != e3,
+        e4 = null != e3 ? (0, r$.S)(e3) : void 0,
+        e5 = em && ed ? eo : void 0,
+        e6 = i.useCallback(() => (0, n0.RQ)(d, eb.intl.string(ej.default.EMgIuY)), [d]),
+        [e8, e9] = i.useState(null),
+        [te, tt] = i.useState(e7);
+    (te !== e7 && (tt(e7), e7 || e9(null)),
         i.useEffect(() => {
-            if (!e3) return;
-            let e = C.current?.getScrollerNode(),
+            if (!e7) return;
+            let e = A.current?.getScrollerNode(),
                 t = e?.querySelector('[data-conjure-turn-status="true"][data-live="true"]');
             if (null == e || null == t) return;
             let n = new IntersectionObserver(
                 (e) => {
                     let [t] = e;
                     null == t || t.isIntersecting || null == t.rootBounds
-                        ? e8(null)
-                        : e8(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
+                        ? e9(null)
+                        : e9(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
                 },
                 { root: e, threshold: 0 },
             );
             return (n.observe(t), () => n.disconnect());
-        }, [e3, e2?.steps, $]));
-    let tt = $ ? e6 : "bottom",
-        tn = i.useMemo(() => (null != e2 ? (0, n_.b9)(e2.steps) : ""), [e2]),
-        tl = i.useMemo(() => (null != e2 ? ((0, nI.lt)(e2.steps) ?? e2.todos) : void 0), [e2]),
-        tr = e2?.provisionalTodo,
-        ti = null != e2 && nM(e2),
-        ts = i.useMemo(() => {
+        }, [e7, e3?.steps, q]));
+    let tn = q ? e8 : "bottom",
+        tl = i.useMemo(() => (null != e3 ? (0, n_.b9)(e3.steps) : ""), [e3]),
+        tr = i.useMemo(() => (null != e3 ? ((0, nI.lt)(e3.steps) ?? e3.todos) : void 0), [e3]),
+        ti = e3?.provisionalTodo,
+        ts = null != e3 && nM(e3),
+        tu = i.useMemo(() => {
             var e;
-            return null != e2 ? ((e = e2.steps), r2((0, nI.Jf)(e, !0).tasks)) : void 0;
-        }, [e2]);
+            return null != e3 ? ((e = e3.steps), r2((0, nI.Jf)(e, !0).tasks)) : void 0;
+        }, [e3]);
     return (0, a.jsxs)("section", {
-        ref: N,
+        ref: C,
         "data-conjure-chat": !0,
         className: cz.TE,
         children: [
-            ec
+            ed
                 ? (0, a.jsx)(nC.A, {
                       title: eb.intl.string(ej.default.gy7byi),
                       description: eb.intl.string(ej.default["dkv/WO"]),
                       icons: cO.ir,
-                      onDrop: es,
+                      onDrop: eu,
                   })
                 : null,
             (0, a.jsx)(nZ, {
-                onJumpToActivity: O,
-                line: tn,
-                placement: e3 && "top" === tt ? "top" : null,
-                todos: tl,
-                todosLive: ti,
-                provisionalTodo: tr,
-                agents: ts,
+                onJumpToActivity: z,
+                line: tl,
+                placement: e7 && "top" === tn ? "top" : null,
+                todos: tr,
+                todosLive: ts,
+                provisionalTodo: ti,
+                agents: tu,
             }),
             (0, a.jsxs)("div", {
                 className: cz.JX,
                 children: [
                     (0, a.jsx)(nS.Ch, {
-                        ref: C,
-                        onScroll: z,
-                        scrollbarGutter: eJ ? "both-edges" : "stable",
-                        className: [cz.N$, P ? null : cz.hB, eK ? cz.J9 : null].filter(Boolean).join(" "),
+                        ref: A,
+                        onScroll: U,
+                        scrollbarGutter: e0 ? "both-edges" : "stable",
+                        className: [cz.N$, R ? null : cz.hB, eH ? cz.J9 : null].filter(Boolean).join(" "),
                         children: (0, a.jsx)(rq.Fu.Provider, {
                             value: d,
                             children: (0, a.jsx)(cj, {
                                 projectId: d,
-                                messages: x,
-                                emptyState: eZ,
-                                floatingSettingsMessageId: ez?.id,
-                                liveClarificationId: eC?.id,
-                                onPickIdea: ec ? ee : void 0,
-                                onAskForIdeas: ec ? el : void 0,
-                                draftHasText: et,
-                                onApprovePlan: ec ? e5 : void 0,
-                                onRestoreVersion: eo || e3 ? void 0 : g,
-                                scrollerRef: C,
-                                stickToBottomRef: M,
-                                pinned: T,
-                                onUnpin: R,
-                                handleRef: A,
-                                onShowsLatestChange: D,
+                                messages: v,
+                                emptyState: eJ,
+                                floatingSettingsMessageId: eG?.id,
+                                liveClarificationId: eA?.id,
+                                onPickIdea: ed ? et : void 0,
+                                onAskForIdeas: ed ? er : void 0,
+                                draftHasText: en,
+                                onApprovePlan: ed ? e6 : void 0,
+                                onRestoreVersion: ec || e7 ? void 0 : g,
+                                scrollerRef: A,
+                                stickToBottomRef: T,
+                                pinned: P,
+                                onUnpin: L,
+                                handleRef: E,
+                                onShowsLatestChange: F,
                             }),
                         }),
                     }),
@@ -11726,69 +11757,69 @@ function cU(e) {
                         className: cz.NJ,
                         children: (0, a.jsx)(cF, {
                             projectId: d,
-                            thinking: e3,
-                            turnStartedAt: e7,
-                            restoring: eo,
-                            remixStartedAt: Y,
-                            recalling: eJ,
-                            thinkingActivity: b,
-                            compacting: y,
-                            saving: k,
-                            projectUsage: j,
-                            connState: v,
+                            thinking: e7,
+                            turnStartedAt: e4,
+                            restoring: ec,
+                            remixStartedAt: Q,
+                            recalling: e0,
+                            thinkingActivity: y,
+                            compacting: k,
+                            saving: w,
+                            projectUsage: b,
+                            connState: j,
                         }),
                     }),
-                    w
-                        ? (0, a.jsx)("div", { ref: eV, className: cz.B5, children: (0, a.jsx)(rh, { projectId: d }) })
+                    S
+                        ? (0, a.jsx)("div", { ref: eW, className: cz.B5, children: (0, a.jsx)(rh, { projectId: d }) })
                         : null,
-                    null == eC
+                    null == eA
                         ? null
                         : (0, a.jsx)("div", {
-                              ref: eV,
-                              className: eK ? `${cz.B5} ${cz.J9}` : cz.B5,
+                              ref: eW,
+                              className: eH ? `${cz.B5} ${cz.J9}` : cz.B5,
                               children:
-                                  null != eC.install_scope_switch
+                                  null != eA.install_scope_switch
                                       ? (0, a.jsx)(
                                             rg,
                                             {
                                                 projectId: d,
-                                                clarification: eC,
-                                                offer: eC.install_scope_switch,
-                                                onKept: ev,
+                                                clarification: eA,
+                                                offer: eA.install_scope_switch,
+                                                onKept: ey,
                                             },
-                                            eC.id,
+                                            eA.id,
                                         )
                                       : (0, a.jsx)(
                                             l9,
                                             {
                                                 projectId: d,
-                                                clarification: eC,
-                                                onSubmit: ec ? er : void 0,
-                                                onDismiss: ev,
+                                                clarification: eA,
+                                                onSubmit: ed ? ea : void 0,
+                                                onDismiss: ey,
                                             },
-                                            eC.id,
+                                            eA.id,
                                         ),
                           }),
-                    null == eN
+                    null == eC
                         ? null
                         : (0, a.jsx)("div", {
-                              ref: eV,
+                              ref: eW,
                               className: cz.B5,
                               children: (0, a.jsx)(
                                   le,
-                                  { projectId: d, request: eN, canSend: ec, onDismiss: e_, onSent: eA ? eT : void 0 },
-                                  eN.id,
+                                  { projectId: d, request: eC, canSend: ed, onDismiss: eT, onSent: eI ? e$ : void 0 },
+                                  eC.id,
                               ),
                           }),
-                    null == eU
+                    null == eB
                         ? null
                         : (0, a.jsx)("div", {
-                              ref: null == eC && null == eN ? eV : void 0,
+                              ref: null == eA && null == eC ? eW : void 0,
                               className: cz.B5,
                               children: (0, a.jsx)(
                                   rT,
-                                  { askId: eG?.id, projectId: d, request: eU, onDismiss: eB },
-                                  eG?.id,
+                                  { askId: eU?.id, projectId: d, request: eB, onDismiss: eK },
+                                  eU?.id,
                               ),
                           }),
                 ],
@@ -11797,15 +11828,15 @@ function cU(e) {
                 className: cz.Jx,
                 children: [
                     (0, a.jsx)(nZ, {
-                        onJumpToActivity: O,
-                        line: tn,
-                        placement: e3 && "bottom" === tt ? "bottom" : null,
-                        todos: tl,
-                        todosLive: ti,
-                        provisionalTodo: tr,
-                        agents: ts,
+                        onJumpToActivity: z,
+                        line: tl,
+                        placement: e7 && "bottom" === tn ? "bottom" : null,
+                        todos: tr,
+                        todosLive: ts,
+                        provisionalTodo: ti,
+                        agents: tu,
                     }),
-                    0 === K.annotations.length
+                    0 === V.annotations.length
                         ? null
                         : (0, a.jsxs)("div", {
                               className: cz.g0,
@@ -11815,7 +11846,7 @@ function cU(e) {
                                       variant: "text-sm/medium",
                                       color: "text-default",
                                       children: eb.intl.formatToPlainString(ej.default["7b49dS"], {
-                                          count: K.annotations.length,
+                                          count: V.annotations.length,
                                       }),
                                   }),
                                   (0, a.jsx)(u.E, {
@@ -11831,23 +11862,23 @@ function cU(e) {
                                   }),
                               ],
                           }),
-                    null == X
+                    null == Y
                         ? null
                         : (0, a.jsx)("div", {
                               className: cz.qB,
                               children: (0, a.jsx)(nN.w, {
                                   type: "critical",
                                   role: "alert",
-                                  message: X.message,
-                                  action: X.retry,
+                                  message: Y.message,
+                                  action: Y.retry,
                               }),
                           }),
-                    null == V
+                    null == W
                         ? null
                         : (0, a.jsxs)("div", {
                               className: cz.Db,
                               children: [
-                                  (0, a.jsx)(nN.w, { type: "warning", role: "status", message: V.message }),
+                                  (0, a.jsx)(nN.w, { type: "warning", role: "status", message: W.message }),
                                   (0, a.jsx)("div", {
                                       className: cz.jU,
                                       children: (0, a.jsx)(tq.m, {
@@ -11858,45 +11889,46 @@ function cU(e) {
                                               icon: tM.P,
                                               variant: "color-mix",
                                               size: "md",
-                                              onClick: V.onDismiss,
+                                              onClick: W.onDismiss,
                                           }),
                                       }),
                                   }),
                               ],
                           }),
-                    null == W
+                    null == X
                         ? null
                         : (0, a.jsx)("div", {
                               className: cz.qB,
                               children: (0, a.jsx)(nN.w, {
-                                  type: W.blocked ? "critical" : "warning",
-                                  role: W.blocked ? "alert" : "status",
-                                  message: W.message,
+                                  type: X.blocked ? "critical" : "warning",
+                                  role: X.blocked ? "alert" : "status",
+                                  message: X.message,
                               }),
                           }),
                     (0, a.jsx)(
                         uS,
                         {
                             projectId: d,
-                            canSend: ec,
-                            running: e3,
-                            restoring: eo,
-                            onSend: Z,
-                            hasPendingContext: K.annotations.length > 0,
-                            onInterrupt: ec ? J : void 0,
-                            onUploadFile: ei,
+                            escapeScopeRef: x,
+                            canSend: ed,
+                            running: e7,
+                            restoring: ec,
+                            onSend: J,
+                            hasPendingContext: V.annotations.length > 0,
+                            onInterrupt: ed ? ee : void 0,
+                            onUploadFile: es,
                             onImport: p,
-                            onSendToOtherProjects: eX ? void 0 : ew.open,
-                            onApprove: e4,
-                            suggestion: e1,
-                            questionOpen: eX,
-                            modelSettings: S,
-                            onModelSettingsChange: ea,
-                            onDraftHasTextChange: en,
-                            inputLocked: w,
-                            aiPaused: W?.blocked === !0,
+                            onSendToOtherProjects: eY ? void 0 : eS.open,
+                            onApprove: e5,
+                            suggestion: e2,
+                            questionOpen: eY,
+                            modelSettings: N,
+                            onModelSettingsChange: ei,
+                            onDraftHasTextChange: el,
+                            inputLocked: S,
+                            aiPaused: X?.blocked === !0,
                         },
-                        eQ,
+                        eZ,
                     ),
                 ],
             }),
@@ -16471,6 +16503,7 @@ function m8(e) {
                                                             restoreState: j,
                                                             onRestoreVersion: g,
                                                             onImportProject: p,
+                                                            escapeScopeRef: E,
                                                         },
                                                         t,
                                                     ),
