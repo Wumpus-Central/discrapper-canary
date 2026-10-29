@@ -2,6 +2,7 @@ _.exports = {
     AS: "item__8d39c",
     dM: "unreadPill__8d39c",
     nM: "row__8d39c",
+    bl: "rowStatic__8d39c",
     wH: "selected__8d39c",
     gy: "unread__8d39c",
     Kk: "icon__8d39c",
@@ -13,4 +14,5 @@ _.exports = {
     vX: "itemWithActions__8d39c",
     XI: "action__8d39c",
     Rn: "actionVisible__8d39c",
+    a7: "inlineAction__8d39c",
 };

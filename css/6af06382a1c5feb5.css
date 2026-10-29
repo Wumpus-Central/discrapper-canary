@@ -1,3 +1,63 @@
+.listState_cba4db {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16);
+    text-align: center
+}
+
+.empty_cba4db {
+    padding: 0 var(--space-8)
+}
+
+.nameWithTag__21abf {
+    white-space: nowrap
+}
+
+.tag__21abf {
+    display: inline-flex;
+    vertical-align: middle
+}
+
+.box__21abf {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12);
+    transition: opacity .15s ease
+}
+
+.boxDimmed__21abf {
+    opacity: .5
+}
+
+.row__21abf {
+    align-items: center;
+    color: var(--text-subtle);
+    display: flex;
+    gap: var(--space-8)
+}
+
+.optionalRow__21abf {
+    cursor: pointer
+}
+
+.optionalRowDisabled__21abf {
+    cursor: default
+}
+
+.optionalLabel__21abf {
+    flex: 1
+}
+
+.trigger__106b4 {
+    align-items: center;
+    display: inline-flex
+}
+
 .header__3633a {
     display: flex;
     font-weight: var(--font-weight-medium);
@@ -404,4 +464,4 @@
     vertical-align: middle
 }
 
-/*# sourceMappingURL=b8684b68f154e9a1.css.map*/
+/*# sourceMappingURL=6af06382a1c5feb5.css.map*/

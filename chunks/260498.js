@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => R, H_: () => c, PV: () => l, jf: () => d }), n(321073));
+(n.d(t, { Ay: () => y, H_: () => c, PV: () => l, jf: () => d }), n(321073));
 var i = n(17928),
     r = n(73153),
     a = n(287809),
@@ -27,8 +27,10 @@ let u = new Map(),
     m = null,
     g = new Set(),
     S = new Map(),
-    N = "unattempted";
-class C extends i.Ay.Store {
+    N = new Map(),
+    C = [],
+    O = "unattempted";
+class R extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -56,6 +58,9 @@ class C extends i.Ay.Store {
         for (let n of u.values()) l(n) || n.guild_id !== e || t.push(n);
         return t;
     }
+    getViewOnlyProjects(e) {
+        return N.get(e) ?? C;
+    }
     getIntegrationStatus(e) {
         return _.get(e) ?? null;
     }
@@ -81,17 +86,17 @@ class C extends i.Ay.Store {
         return S.get(e) ?? "unattempted";
     }
     getOwnedProjectsFetchState() {
-        return N;
+        return O;
     }
     isConjureProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function O(e) {
+function L(e) {
     let { project: t } = e;
     u.set(t.id, t);
 }
-let R = new C(r.h, {
+let y = new R(r.h, {
     LOGOUT: function () {
         if (
             0 === u.size &&
@@ -101,6 +106,7 @@ let R = new C(r.h, {
             0 === h.size &&
             0 === f.size &&
             0 === g.size &&
+            0 === N.size &&
             null == m &&
             null == p &&
             !T
@@ -114,35 +120,45 @@ let R = new C(r.h, {
             f.clear(),
             g.clear(),
             S.clear(),
+            N.clear(),
             (m = null),
             (I = !1),
-            (N = "unattempted"),
+            (O = "unattempted"),
             (p = null),
             (T = !1));
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t ? S.set(t, "loading") : (N = "loading"), (m = { type: "loading" }));
+        (null != t ? S.set(t, "loading") : (O = "loading"), (m = { type: "loading" }));
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
-            i = new Set(t.map((e) => e.id));
-        for (let [e, t] of u) !i.has(e) && (l(t) || (null != n && t.guild_id === n)) && u.delete(e);
-        for (let e of t) u.set(e.id, e);
-        for (let e of (null != n && (g.add(n), S.set(n, "success")), _.keys())) u.has(e) || _.delete(e);
+            i = t.filter((e) => !0 !== e.view_only),
+            r = new Set(i.map((e) => e.id));
+        for (let [e, t] of u) !r.has(e) && (l(t) || (null != n && t.guild_id === n)) && u.delete(e);
+        for (let e of i) u.set(e.id, e);
+        for (let e of (null != n &&
+            (g.add(n),
+            S.set(n, "success"),
+            N.set(
+                n,
+                t.filter((e) => !0 === e.view_only),
+            )),
+        _.keys()))
+            u.has(e) || _.delete(e);
         for (let [e, t] of E) u.has(t) || E.delete(e);
-        ((I = !0), (N = "success"), (m = { type: "success", fetchedAt: Date.now() }));
+        ((I = !0), (O = "success"), (m = { type: "success", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t ? S.set(t, "error") : (N = "error"), (m = { type: "error", fetchedAt: Date.now() }));
+        (null != t ? S.set(t, "error") : (O = "error"), (m = { type: "error", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;
         ((p = t), (T = !0));
     },
-    CONJURE_PROJECT_CREATE_SUCCESS: O,
-    CONJURE_PROJECT_UPDATE_SUCCESS: O,
+    CONJURE_PROJECT_CREATE_SUCCESS: L,
+    CONJURE_PROJECT_UPDATE_SUCCESS: L,
     CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         _.set(t, n);
