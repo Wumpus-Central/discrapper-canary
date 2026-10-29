@@ -976,34 +976,35 @@ function tf(e) {
             pendingBio: L,
             pendingLegacyUsernameDisabled: k,
         } = N,
-        M = u ? E.tryItOutAvatar : A,
-        P = (0, ti.V7)({ userId: t.id, image: M }),
-        w = u ? void 0 : I,
-        R = u ? E.tryItOutBanner : C,
-        O = u ? E.tryItOutThemeColors : _,
-        { bannerSrc: F } = (0, to.A)({ displayProfile: S, size: 413, canAnimate: !1, pendingBanner: R }),
-        { userNameplate: B, guildNameplate: Y, pendingNameplate: G } = (0, p.rv)(t, s?.id),
-        H = (0, e4.WK)(Y);
+        M = null == s ? n : void 0,
+        P = u ? E.tryItOutAvatar : A,
+        w = (0, ti.V7)({ userId: t.id, image: P }),
+        R = u ? void 0 : I,
+        O = u ? E.tryItOutBanner : C,
+        F = u ? E.tryItOutThemeColors : _,
+        { bannerSrc: B } = (0, to.A)({ displayProfile: S, size: 413, canAnimate: !1, pendingBanner: O }),
+        { userNameplate: Y, guildNameplate: G, pendingNameplate: H } = (0, p.rv)(t, s?.id),
+        U = (0, e4.WK)(G);
     h && !f ? (m = V.NJ8.DARK) : !h && f && (m = V.NJ8.LIGHT);
-    let U = (0, a.useCallback)((e) => {
+    let z = (0, a.useCallback)((e) => {
             (g(e === V.NJ8.DARK), x.default.track(V.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === V.NJ8.DARK }));
         }, []),
-        z = (0, a.useMemo)(
+        K = (0, a.useMemo)(
             () => ({ ...(0, tl.FT)(t, null), nick: n, displayNameStyles: { fontId: r, effectId: o, colors: d } }),
             [t, r, o, d, n],
         );
     return (0, l.jsxs)("div", {
         className: tm._l,
         children: [
-            null != F &&
+            null != B &&
                 (0, l.jsx)(td.A, {
                     user: t,
                     displayProfile: S,
                     themeType: tu.d.MODAL_V2,
                     className: tm.LX,
-                    pendingThemeColors: O,
+                    pendingThemeColors: F,
                     forceUserTheme: !0,
-                    children: (0, l.jsx)("div", { className: tm.b8, style: { backgroundImage: `url(${F})` } }),
+                    children: (0, l.jsx)("div", { className: tm.b8, style: { backgroundImage: `url(${B})` } }),
                 }),
             (0, l.jsx)(e2.N, {
                 theme: m,
@@ -1015,20 +1016,20 @@ function tf(e) {
                             (0, l.jsx)(tn.A, {
                                 user: t,
                                 guild: s,
-                                pendingGlobalName: n,
+                                pendingGlobalName: M,
                                 pendingNickname: y,
                                 pendingPronouns: j,
-                                pendingAvatar: P,
-                                pendingAvatarDecoration: w,
+                                pendingAvatar: w,
+                                pendingAvatarDecoration: R,
                                 pendingPrimaryGuildId: v,
-                                pendingBanner: R,
-                                pendingThemeColors: O,
+                                pendingBanner: O,
+                                pendingThemeColors: F,
                                 pendingAccentColor: b,
                                 pendingBio: L,
                                 pendingProfileEffect: D,
                                 pendingProfileFrame: T,
                                 pendingLegacyUsernameDisabled: k,
-                                pendingDisplayNameStyles: z.displayNameStyles,
+                                pendingDisplayNameStyles: K.displayNameStyles,
                                 canUsePremiumCustomization: !0,
                                 disabledInputs: !0,
                                 hideCustomStatus: !0,
@@ -1039,7 +1040,7 @@ function tf(e) {
                                 hideProfileFrame: !0,
                             }),
                             (0, l.jsx)(ta.A, {
-                                author: z,
+                                author: K,
                                 message: (0, tt.rh)({
                                     ...(0, ts.Ay)({ channelId: "1337", content: el.intl.string(es.default.h5Cuej) }),
                                     state: V.cmJ.SENT,
@@ -1050,19 +1051,20 @@ function tf(e) {
                                 hideGuildTag: !0,
                                 className: tm.OT,
                                 previewGuildId: s?.id,
-                                avatarDecorationOverride: w,
-                                avatarOverride: P,
+                                avatarDecorationOverride: R,
+                                avatarOverride: w,
                             }),
                             (0, l.jsx)(te.A, {
                                 user: t,
                                 guildId: s?.id,
-                                nameplate: G,
-                                nameplateData: null == G ? (H ?? B) : void 0,
-                                pendingGlobalName: n,
-                                pendingAvatarDecoration: w,
+                                nameplate: H,
+                                nameplateData: null == H ? (U ?? Y) : void 0,
+                                pendingGlobalName: M,
+                                pendingNickname: y,
+                                pendingAvatarDecoration: R,
                                 pendingPrimaryGuildId: v,
-                                pendingDisplayNameStyles: z.displayNameStyles,
-                                pendingAvatar: M,
+                                pendingDisplayNameStyles: K.displayNameStyles,
+                                pendingAvatar: P,
                                 isHighlighted: !0,
                                 className: tm.qF,
                             }),
@@ -1079,7 +1081,7 @@ function tf(e) {
                             helpArticleLink: tc.A.getArticleURL(V.MVz.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, l.jsx)(th, { darkPreview: h, onToggleTheme: U }),
+                    (0, l.jsx)(th, { darkPreview: h, onToggleTheme: z }),
                 ],
             }),
         ],
@@ -1181,7 +1183,9 @@ function t_(e) {
                 [X.A, $.Ay],
                 () => {
                     let e = X.A.getPendingChanges(v);
-                    return null != v ? (e.pendingNickname ?? $.Ay.getNick(v, O?.id)) : e.pendingGlobalName;
+                    if (null == v) return e.pendingGlobalName;
+                    let { pendingNickname: t } = e;
+                    return "" === t ? null : (t ?? $.Ay.getNick(v, O?.id));
                 },
                 [v, O],
             ) ??
