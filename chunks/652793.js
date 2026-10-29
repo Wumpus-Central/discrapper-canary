@@ -30,6 +30,8 @@ function h(e) {
         children: (0, i.jsxs)(o.s, {
             ...E,
             buttonProps: { ...x, id: t, role: "button" },
+            "data-list-item-id": x["data-list-item-id"],
+            onFocus: x.onFocus,
             tag: "div",
             "aria-label": N,
             focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
