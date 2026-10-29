@@ -914,13 +914,13 @@ var ek = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "656283",
-        s = "5e4ebb46a4d68e03c64403ea7d257833045251a3".substring(0, 7),
+        n = "656287",
+        s = "3819e24afbe45d05895e16ed34ec8bc6445db12c".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1793295495149", !1) : null,
+        u = null != o ? (0, eq.A)("1793295518558", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();

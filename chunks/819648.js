@@ -133,18 +133,14 @@ function C(e) {
     return {
         powerLevel: S(e.powerLevel),
         powerLevelUnits: N(e.powerLevelPercentile),
-        voice: {
-            text:
-                (n = Math.round(e.totalVoiceMinutes)) > 0
-                    ? (0, d.oO)(n)
-                    : f.intl.formatToPlainString(f.t.iXLF9W, { minutes: n }),
-            accessibilityLabel: f.intl.formatToPlainString(h.default.lw35aH, { duration: (0, d.GM)(n) }),
-        },
+        voice:
+            ((n = Math.round(e.totalVoiceMinutes)),
+            {
+                text: f.intl.formatToPlainString(h.default["Ww/dDO"], { count: n }),
+                accessibilityLabel: f.intl.formatToPlainString(h.default.lw35aH, { duration: (0, d.GM)(n) }),
+            }),
         messages: {
-            text:
-                e.numMessagesSent > 0
-                    ? e.numMessagesSent.toLocaleString(f.intl.currentLocale)
-                    : f.intl.formatToPlainString(h.default.foKBCN, { count: e.numMessagesSent }),
+            text: f.intl.formatToPlainString(h.default.foKBCN, { count: e.numMessagesSent }),
             accessibilityLabel: f.intl.formatToPlainString(h.default.IdRUAC, { count: e.numMessagesSent }),
         },
         topGuildDaysInteracted: (function (e) {
@@ -153,7 +149,7 @@ function C(e) {
                 return { text: (t = f.intl.string(h.default.GultYJ)), accessibilityLabel: t };
             }
             return {
-                text: f.intl.formatToPlainString(f.t.GBLpQ8, { days: e.topGuildNumDaysInteracted }),
+                text: f.intl.formatToPlainString(h.default["51Y/V2"], { count: e.topGuildNumDaysInteracted }),
                 accessibilityLabel: f.intl.formatToPlainString(h.default.MpSH8v, { days: e.topGuildNumDaysInteracted }),
             };
         })(e),
@@ -167,10 +163,7 @@ function C(e) {
                 };
         })(e),
         reactions: {
-            text:
-                e.numEmojisSent > 0
-                    ? e.numEmojisSent.toLocaleString(f.intl.currentLocale)
-                    : f.intl.formatToPlainString(h.default.RHYx1k, { count: e.numEmojisSent }),
+            text: f.intl.formatToPlainString(h.default.RHYx1k, { count: e.numEmojisSent }),
             accessibilityLabel: f.intl.formatToPlainString(h.default["36qpUG"], { count: e.numEmojisSent }),
         },
         topEmojiName: (function (e) {
@@ -188,7 +181,7 @@ function C(e) {
         daysPlayed: {
             text:
                 e.totalDaysPlayed > 0
-                    ? f.intl.formatToPlainString(f.t.GBLpQ8, { days: e.totalDaysPlayed })
+                    ? f.intl.formatToPlainString(h.default["LD/96a"], { count: e.totalDaysPlayed })
                     : f.intl.string(h.default.mg1NPe),
             accessibilityLabel: f.intl.formatToPlainString(h.default.LYcKX7, { days: e.totalDaysPlayed }),
         },

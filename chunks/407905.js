@@ -1,17 +1,18 @@
 n.d(t, {
-    $p: () => x,
-    BF: () => E,
-    IH: () => A,
-    Kr: () => g,
-    XF: () => m,
-    _R: () => N,
+    $p: () => g,
+    BF: () => N,
+    IH: () => p,
+    Kr: () => f,
+    XF: () => h,
+    _R: () => S,
     bD: () => u,
-    jr: () => j,
-    nb: () => f,
-    oL: () => h,
-    uO: () => p,
+    jr: () => v,
+    nb: () => j,
+    oL: () => x,
+    uO: () => E,
     wj: () => d,
-    y7: () => v,
+    y7: () => A,
+    yQ: () => m,
 });
 var r = n(889227),
     a = n(149790),
@@ -27,6 +28,9 @@ function d(e) {
     return new Intl.NumberFormat(l.intl.currentLocale, { notation: "compact", compactDisplay: "long" }).format(e);
 }
 function m(e) {
+    return e / 87765;
+}
+function h(e) {
     if (null == e) return null;
     let t = new Date();
     t.setUTCHours(e, 0, 0, 0);
@@ -37,31 +41,31 @@ function m(e) {
         a = new Intl.DateTimeFormat(l.intl.currentLocale, r).format(t);
     return { value: a.replace(o, ""), label: a };
 }
-function h(e) {
+function x(e) {
     return e?.sidekick != null;
 }
-function x(e) {
-    return h(e) && (e?.users?.length ?? 0) > 0;
-}
 function g(e) {
-    return Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0;
+    return x(e) && (e?.users?.length ?? 0) > 0;
 }
 function f(e) {
-    return Math.round(e?.messages?.numMessagesSent ?? 0) > 0;
+    return Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0;
 }
 function j(e) {
-    return (e?.guilds?.guilds.length ?? 0) > 0;
+    return Math.round(e?.messages?.numMessagesSent ?? 0) > 0;
 }
 function v(e) {
-    return Math.round(e?.emojis?.numEmojisSent ?? 0) > 0 && (e?.emojis?.emojis.length ?? 0) > 0;
+    return (e?.guilds?.guilds.length ?? 0) > 0;
 }
 function A(e) {
-    return Math.round(e?.games?.totalGamesPlayed ?? 0) > 0 && (e?.games?.games.length ?? 0) > 0;
+    return Math.round(e?.emojis?.numEmojisSent ?? 0) > 0 && (e?.emojis?.emojis.length ?? 0) > 0;
 }
 function p(e) {
-    return Math.round(e?.games?.totalDaysPlayed ?? 0) > 0;
+    return Math.round(e?.games?.totalGamesPlayed ?? 0) > 0 && (e?.games?.games.length ?? 0) > 0;
 }
 function E(e) {
+    return Math.round(e?.games?.totalDaysPlayed ?? 0) > 0;
+}
+function N(e) {
     let { voice: t, messages: n, guilds: s, emojis: l, games: i, sidekick: c, users: o, power: u } = e;
     return {
         voice: {
@@ -88,7 +92,7 @@ function E(e) {
             totalGamesPlayedPercentile: i.total_games_played_percentile,
             games: i.games.map((e) => {
                 let { game: t, num_sessions: n } = e;
-                return { game: S(t), numSessions: n };
+                return { game: C(t), numSessions: n };
             }),
             totalDaysPlayed: i.total_days_played,
             totalDaysPlayedPercentile: i.total_days_played_percentile,
@@ -104,7 +108,7 @@ function E(e) {
         power: { powerLevel: u.power_level, powerLevelPercentile: u.power_level_percentile },
     };
 }
-function N(e) {
+function S(e) {
     let { voice: t, messages: n, guilds: r, emojis: s, games: l } = e;
     return {
         voice: { peakHourUtc: t.peak_hour_utc },
@@ -126,29 +130,29 @@ function N(e) {
         games: {
             gamesByPlayers: l.games_by_players.map((e) => {
                 let { game: t } = e;
-                return S(t);
+                return C(t);
             }),
             newGamesByPlayers: l.new_games_by_players.map((e) => {
                 let { game: t } = e;
-                return S(t);
+                return C(t);
             }),
             indieGamesByPlayers: l.indie_games_by_players.map((e) => {
                 let { game: t } = e;
-                return S(t);
+                return C(t);
             }),
             gamesByStreamWatchMinutes: l.games_by_stream_watch_minutes.map((e) => {
                 let { game: t } = e;
-                return S(t);
+                return C(t);
             }),
             gamesByCoplayUsers: l.games_by_coplay_users.map((e) => {
                 let { game: t } = e;
-                return S(t);
+                return C(t);
             }),
             numUsersPlayedEveryDay: l.num_users_played_every_day,
         },
     };
 }
-function S(e) {
+function C(e) {
     return {
         id: s.default.cast(e.id),
         name: e.name,
