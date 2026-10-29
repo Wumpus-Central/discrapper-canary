@@ -1,4 +1,4 @@
-let n, r, i, _, o, I, l, s, a, A;
+let n, r, i, _, o, l, I, s, a, A;
 var S,
     T,
     O,
@@ -9,10 +9,10 @@ var S,
     L,
     d,
     C,
-    p,
-    D = E(214958),
-    g = E.n(D);
-function P() {
+    g,
+    p = E(214958),
+    D = E.n(p);
+function M() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -24,7 +24,7 @@ function P() {
         null != e.VencordNative
     );
 }
-function M() {
+function P() {
     return (
         ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
@@ -49,7 +49,7 @@ if (null != $) {
         r = $.os.arch,
         _ = $.os.appArch,
         o = $.app.getReleaseChannel(),
-        I = M();
+        l = P();
     switch (E) {
         case "win32":
             e = "Windows";
@@ -72,12 +72,12 @@ if (null != $) {
             os_version: n,
             os_arch: r,
             app_arch: _,
-            system_locale: I,
-            has_client_mods: P(),
+            system_locale: l,
+            has_client_mods: M(),
             client_launch_id: f,
         }),
-        g().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = g().ua || ""), (i.browser_version = g().version || "")),
+        D().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = D().ua || ""), (i.browser_version = D().version || "")),
         "linux" === E)
     ) {
         let e = $.crashReporter.getMetadata();
@@ -207,8 +207,8 @@ if (null == i)
                         else return "";
                     })()),
                     (e.device_model_name = ""),
-                    (e.system_locale = M()),
-                    (e.has_client_mods = P()),
+                    (e.system_locale = P()),
+                    (e.has_client_mods = M()),
                     (E = e),
                     n.set(m, E),
                     n.set(U, 1));
@@ -223,9 +223,9 @@ if (null == i)
             }
             return {
                 ...E,
-                ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: g().version || "" }),
+                ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: D().version || "" }),
                 (t = w()),
-                null != t ? { ...e, os_version: t.systemVersion || "" } : { ...e, os_version: g()?.os?.version ?? "" }),
+                null != t ? { ...e, os_version: t.systemVersion || "" } : { ...e, os_version: D()?.os?.version ?? "" }),
                 ...i,
                 ..._,
             };
@@ -233,28 +233,28 @@ if (null == i)
     } catch (e) {
         i = {};
     }
-((I = {}),
-    (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
-        (null == I.release_channel || "" === I.release_channel) &&
-        (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("656958", 10))) || (I.client_build_number = s),
-    null == (a = $?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
-    (I.client_event_source = (function () {
+((l = {}),
+    (I = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
+        (null == l.release_channel || "" === l.release_channel) &&
+        (l.release_channel = I.split("-")[0]),
+    isNaN((s = parseInt("656976", 10))) || (l.client_build_number = s),
+    null == (a = $?.app.getBuildNumber()) || isNaN(a) || (l.native_build_number = a),
+    (l.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
         } catch (e) {}
         return null;
     })()),
-    (I.has_client_mods = P()),
-    (I.client_launch_id = f),
-    null != (A = w()?.installSource) && (I.install_source = A),
+    (l.has_client_mods = M()),
+    (l.client_launch_id = f),
+    null != (A = w()?.installSource) && (l.install_source = A),
     (function (e) {
         try {
             G.from(JSON.stringify(e)).toString("base64");
         } catch (e) {
             return null;
         }
-    })((i = { ...i, ...I })));
+    })((i = { ...i, ...l })));
 var y = E(824120),
     b = E.n(y);
 function F(e) {
@@ -675,7 +675,7 @@ function eo(e) {
           ? { decryptedToken: eE.decryptString(e.substring(et.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
-var eI =
+var el =
         (((T = {})[(T.DISPATCH = 0)] = "DISPATCH"),
         (T[(T.HEARTBEAT = 1)] = "HEARTBEAT"),
         (T[(T.IDENTIFY = 2)] = "IDENTIFY"),
@@ -709,8 +709,8 @@ var eI =
         (T[(T.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (T[(T.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         T),
-    el = E(377941),
-    es = E.n(el),
+    eI = E(377941),
+    es = E.n(eI),
     ea =
         (((O = {}).ALL = "ALL"),
         (O.AVATAR_DECORATION = "AVATAR_DECORATION"),
@@ -949,7 +949,6 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             },
             COLLECTIBLES_SHOP_WITH_TAB: (e) => `/shop?tab=${e}`,
             COLLECTIBLES_SHOP_COLLECTION_DETAIL: (e) => `/shop/collection/${e}`,
-            COLLECTIBLES_SHOP_PRODUCT_DETAIL: (e) => `/shop/product/${e}`,
             NITRO_HOME: "/store",
             ACCOUNT_STANDING: "/account-standing",
             CHANNEL_SUMMARIES: (e) => `/channels/${e}/summaries`,
@@ -1015,12 +1014,12 @@ function ed(e, t) {
     UNLISTED: 0x4000000,
 }),
     Object.values(
-        (((p = {}).GUILD_HOME = "home"),
-        (p.SERVER_GUIDE = "guide"),
-        (p.CHANNEL_BROWSER = "browse"),
-        (p.CUSTOMIZE_COMMUNITY = "customize"),
-        (p.LINKED_ROLES = "linked-roles"),
-        p),
+        (((g = {}).GUILD_HOME = "home"),
+        (g.SERVER_GUIDE = "guide"),
+        (g.CHANNEL_BROWSER = "browse"),
+        (g.CUSTOMIZE_COMMUNITY = "customize"),
+        (g.LINKED_ROLES = "linked-roles"),
+        g),
     ));
 let eC = {
     guildId() {
@@ -1036,8 +1035,8 @@ let eC = {
         return ed(e, `${E}|\\d+`, { optional: t });
     },
 };
-var ep = E(806163);
-let eD = new Set([
+var eg = E(806163);
+let ep = new Set([
     eu.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
     eu.APP_WITH_GIFT_CODE(":giftCode"),
     eu.APP,
@@ -1059,7 +1058,6 @@ let eD = new Set([
     eu.MESSAGE_REQUESTS,
     eu.COLLECTIBLES_SHOP,
     eu.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
-    eu.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
     eu.GUILD_DISCOVERY,
     eu.QUEST_HOME_DEPRECATED,
     eu.QUEST_HOME,
@@ -1108,12 +1106,12 @@ let eD = new Set([
         E = window._ws.state,
         r = E.open;
     performance.mark("FastConnect-socket-open", { detail: { alreadyOpen: r } });
-    let I = function () {
+    let l = function () {
         if (
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of eD) if (null != (0, ep.B6)(e, { path: t })) return !0;
+                for (let t of ep) if (null != (0, eg.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )
@@ -1134,7 +1132,7 @@ let eD = new Set([
         }
         let _ = n.get("installation_id_v3") ?? n.get("analytics_installation");
         var o = r({
-            op: eI.IDENTIFY,
+            op: el.IDENTIFY,
             d: {
                 token: e,
                 capabilities: (function (e) {
@@ -1147,5 +1145,5 @@ let eD = new Set([
         });
         (performance.mark("FastConnect-identify-sent"), t.send(o), (E.identify = !0));
     };
-    r ? I() : (t.onopen = I);
+    r ? l() : (t.onopen = l);
 })();
