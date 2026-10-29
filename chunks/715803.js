@@ -9,7 +9,9 @@ _.exports = {
     JB: "appName__50601",
     FS: "toolbarButtons__50601",
     VH: "preview__50601",
+    GL: "frameLens__50601",
     Z7: "frameTarget__50601",
+    bW: "lensChrome__50601",
     Lu: "soundBadge__50601",
     tF: "keeper__50601",
 };

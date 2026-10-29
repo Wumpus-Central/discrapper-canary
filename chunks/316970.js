@@ -1,4 +1,4 @@
-n.d(t, { A: () => hh });
+n.d(t, { A: () => hp });
 var l,
     r,
     a = n(477900),
@@ -16071,10 +16071,12 @@ var mU = n(399503),
     mB = n(853555),
     mK = n(343030),
     mH = n(667811),
-    mV = n(187645);
-let mW = new Map(),
-    mX = !1;
-function mY() {
+    mV = n(327152),
+    mW = n(187645);
+let mX = { width: 1280, height: 720 },
+    mY = new Map(),
+    mQ = !1;
+function mZ() {
     let e = new Map();
     for (let t of new Set([...ri.A.getActivityOrderedProjectIds(), ...(0, eA.T7)()])) {
         if (!(ri.A.isThinking(t) || (0, eA.wK)(t)) || eD.A.isPaused(t)) continue;
@@ -16086,51 +16088,57 @@ function mY() {
         })(t);
         null != n && e.set(t, n);
     }
-    for (let [l, r] of [...mW]) {
+    for (let [l, r] of [...mY]) {
         var t, n;
         e.get(l) !== r.frameId &&
             ((t = l),
             (n = r),
-            mW.delete(t),
+            mY.delete(t),
             n.unregisterLookup(),
             mH.A.removeFrameTarget(n.frameId, n.element),
-            n.element.remove());
+            n.element.remove(),
+            (0, mV.Pn)(n.frameId, null));
     }
     for (let [t, n] of e)
-        mW.has(t) ||
+        mY.has(t) ||
             (function (e, t) {
                 let n = document.createElement("div");
-                ((n.className = mV.t),
+                ((n.className = mW.t),
                     n.setAttribute("inert", ""),
                     n.setAttribute("aria-hidden", "true"),
-                    mQ(n, e, t),
+                    mJ(n, e, t),
                     document.body.appendChild(n));
                 let l = { frameId: t, element: n, unregisterLookup: () => {} };
-                (mW.set(e, l),
+                (mY.set(e, l),
                     (l.unregisterLookup = (0, mB.Ng)(e, () => (0, fJ.n5)(n, t))),
                     mH.A.registerFrameTarget(t, n, mK.A.Backstage, void 0));
             })(t, n);
-    for (let [e, t] of mW) mQ(t.element, e, t.frameId);
+    for (let [e, t] of mY) mJ(t.element, e, t.frameId);
 }
-function mQ(e, t, n) {
+function mJ(e, t, n) {
     if (eZ.A.getFrame(n)?.surface.type === eK.U.OVERLAY) {
-        let n = eG(ti.Ay.getProject(t));
-        (e.classList.remove(mV.L), (e.style.width = `${n.width}px`), (e.style.height = `${n.height}px`));
+        let l = eG(ti.Ay.getProject(t));
+        (e.classList.remove(mW.L),
+            (e.style.width = `${l.width}px`),
+            (e.style.height = `${l.height}px`),
+            (0, mV.Pn)(n, l));
         return;
     }
     let l = td.A.isBuilderPreviewMobile();
-    e.classList.toggle(mV.L, !l);
+    e.classList.toggle(mW.L, !l);
     let r = l ? mn(td.A.isBuilderPreviewLandscape()) : null;
-    ((e.style.width = null != r ? `${r.width}px` : ""), (e.style.height = null != r ? `${r.height}px` : ""));
+    ((e.style.width = null != r ? `${r.width}px` : ""),
+        (e.style.height = null != r ? `${r.height}px` : ""),
+        (0, mV.Pn)(n, r ?? mX));
 }
-var mZ = n(873727),
-    mJ = n(147248),
-    m0 = n(418842),
-    m1 = n(363195),
-    m2 = n(818023);
-let m3 = null;
-var m4 = n(541940);
-function m7(e) {
+var m0 = n(873727),
+    m1 = n(147248),
+    m2 = n(418842),
+    m3 = n(363195),
+    m4 = n(818023);
+let m7 = null;
+var m5 = n(541940);
+function m6(e) {
     let {
             projectId: t,
             designFeedbackToggleRef: n,
@@ -16148,8 +16156,8 @@ function m7(e) {
         v = (0, tc.A)(l, s),
         j = v?.id ?? null;
     (!(function (e, t) {
-        let n = (0, m.bG)([m1.A], () => (0, mZ.x4)(m1.A.theme)),
-            l = (0, m.bG)([mJ.A], () => mJ.A.gradientPreset),
+        let n = (0, m.bG)([m3.A], () => (0, m0.x4)(m3.A.theme)),
+            l = (0, m.bG)([m1.A], () => m1.A.gradientPreset),
             {
                 reducedMotion: r,
                 fontScale: a,
@@ -16158,13 +16166,13 @@ function m7(e) {
                 underlineLinks: o,
             } = (0, m.cf)([a2.Ay], () => ({
                 reducedMotion: a2.Ay.useReducedMotion,
-                fontScale: (0, mZ.U0)(),
+                fontScale: (0, m0.U0)(),
                 highContrast: a2.Ay.isHighContrastModeEnabled,
                 forcedColors: a2.Ay.useForcedColors,
                 underlineLinks: a2.Ay.alwaysShowLinkDecorations,
             })),
             c = eN.hH.useSetting(),
-            d = (0, m0.C)(),
+            d = (0, m2.C)(),
             f = (0, m.bG)(
                 [eZ.A, td.A],
                 () =>
@@ -16185,7 +16193,7 @@ function m7(e) {
                 let i = {
                     revision: ++p.current,
                     baseTheme: n,
-                    customTheme: (0, mZ.Lq)(),
+                    customTheme: (0, m0.Lq)(),
                     uiDensity: d,
                     messageDisplayCompact: c,
                     fontScale: a,
@@ -16255,7 +16263,7 @@ function m7(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
-                className: f()(m4.Mh, o),
+                className: f()(m5.Mh, o),
                 children: [
                     u,
                     g
@@ -16267,7 +16275,7 @@ function m7(e) {
                               resolveTarget: y,
                               frameId: j,
                           }),
-                    (0, a.jsx)("div", { ref: x, className: m4.fm, children: c }),
+                    (0, a.jsx)("div", { ref: x, className: m5.fm, children: c }),
                 ],
             }),
             d,
@@ -16288,7 +16296,7 @@ function m7(e) {
         ],
     });
 }
-function m5(e) {
+function m8(e) {
     let {
         projectId: t,
         designFeedbackToggleRef: n,
@@ -16324,10 +16332,10 @@ function m5(e) {
         i.useEffect(() => {
             let l;
             if (null != e) {
-                if (t) ((l = n ? m2.aX.LANDSCAPE : m2.aX.PORTRAIT), (m3 = e));
+                if (t) ((l = n ? m4.aX.LANDSCAPE : m4.aX.PORTRAIT), (m7 = e));
                 else {
-                    if (m3 !== e) return;
-                    ((l = m2.aX.UNHANDLED), (m3 = null));
+                    if (m7 !== e) return;
+                    ((l = m4.aX.UNHANDLED), (m7 = null));
                 }
                 og.h.dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: l, applicationId: e });
             }
@@ -16335,29 +16343,32 @@ function m5(e) {
     })(I ? l : null);
     let E = i.useRef(null),
         [M, _] = i.useState(0);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         if (null == t) return;
         (0, nN.T)(t);
         let e = setInterval(() => {
             "visible" === document.visibilityState && (0, nN.T)(t);
         }, 3e3);
         return () => clearInterval(e);
-    }, [t]),
-        i.useLayoutEffect(() => {
-            if (I) return ((0, eq.HV)(l), () => (0, eq.HV)(null));
-        }, [l, I]),
+    }, [t]);
+    let T = i.useContext(eP.A),
+        P = (0, m.bG)([e$.A], () => e$.A.isOverlayOpen()),
+        R = I && (!T || P);
+    (i.useLayoutEffect(() => {
+        if (R) return ((0, eq.HV)(l), () => (0, eq.HV)(null));
+    }, [l, R]),
         i.useEffect(() => {
             null != t &&
                 ((0, ex.ensureConnection)(t),
-                mX ||
-                    ((mX = !0),
-                    ri.A.addChangeListener(mY),
-                    ti.Ay.addChangeListener(mY),
-                    eZ.A.addChangeListener(mY),
-                    td.A.addChangeListener(mY),
-                    eD.A.addChangeListener(mY),
-                    (0, eA.W3)(mY),
-                    mY()));
+                mQ ||
+                    ((mQ = !0),
+                    ri.A.addChangeListener(mZ),
+                    ti.Ay.addChangeListener(mZ),
+                    eZ.A.addChangeListener(mZ),
+                    td.A.addChangeListener(mZ),
+                    eD.A.addChangeListener(mZ),
+                    (0, eA.W3)(mZ),
+                    mZ()));
         }, [t]),
         i.useLayoutEffect(() => {
             let e = E.current;
@@ -16369,26 +16380,25 @@ function m5(e) {
             let n = new ResizeObserver(t);
             return (n.observe(e), () => n.disconnect());
         }, []));
-    let T = Math.max(450, M - 320),
-        P = c || I,
-        R = i.useContext(eP.A),
-        L = i.useRef(null),
-        $ = i.useRef(null),
-        q = i.useCallback(() => {
-            null != $.current && L.current?.style.setProperty("--custom-conjure-chat-width", `${$.current}px`);
+    let L = Math.max(450, M - 320),
+        $ = c || I,
+        q = i.useRef(null),
+        D = i.useRef(null),
+        F = i.useCallback(() => {
+            null != D.current && q.current?.style.setProperty("--custom-conjure-chat-width", `${D.current}px`);
         }, []),
-        D = i.useCallback(
+        O = i.useCallback(
             (e) => {
-                (($.current = e), q());
+                ((D.current = e), F());
             },
-            [q],
+            [F],
         );
     return (
-        i.useLayoutEffect(q),
+        i.useLayoutEffect(F),
         (0, a.jsx)("div", {
             ref: E,
-            className: m4.LB,
-            children: (0, a.jsx)(m7, {
+            className: m5.LB,
+            children: (0, a.jsx)(m6, {
                 projectId: t,
                 designFeedbackToggleRef: n,
                 applicationId: l,
@@ -16397,7 +16407,7 @@ function m5(e) {
                 header: o,
                 showsFrame: (0, eB.yf)(k, w),
                 paused: C,
-                mainClassName: null == o ? void 0 : f()(m4.ez, { [m4.zt]: c && !R, [m4.jX]: R }),
+                mainClassName: null == o ? void 0 : f()(m5.ez, { [m5.zt]: c && !T, [m5.jX]: T }),
                 content: (0, a.jsx)(mP, {
                     applicationId: l,
                     previewApplicationId: r,
@@ -16416,17 +16426,17 @@ function m5(e) {
                         (0, a.jsx)(f4, { projectId: t, applicationId: l, previewApplicationId: r, surface: e }),
                 }),
                 sidebar:
-                    null != t && P
+                    null != t && $
                         ? (0, a.jsx)("div", {
-                              ref: L,
-                              className: f()(c ? m4.v7 : m4.LL, { [m4.ax]: R }),
+                              ref: q,
+                              className: f()(c ? m5.v7 : m5.LL, { [m5.ax]: T }),
                               children: (0, a.jsx)(tP.A, {
                                   sidebarType: tP.X.CallChatSidebar,
-                                  maxWidth: T,
-                                  onWidthChange: R ? D : void 0,
+                                  maxWidth: L,
+                                  onWidthChange: T ? O : void 0,
                                   capturePointer: !0,
                                   children: (0, a.jsx)("div", {
-                                      className: m4.cO,
+                                      className: m5.cO,
                                       children: x
                                           ? (0, a.jsx)(fC, { projectId: t, onClose: v ?? (() => {}) }, t)
                                           : (0, a.jsxs)(a.Fragment, {
@@ -16440,9 +16450,9 @@ function m5(e) {
                                                                 null == d
                                                                     ? null
                                                                     : (0, a.jsx)(tR.Ay.Icon, {
-                                                                          icon: R ? t_.E : tT.P,
+                                                                          icon: T ? t_.E : tT.P,
                                                                           tooltip: eb.intl.string(
-                                                                              R
+                                                                              T
                                                                                   ? ej.default["5LSwvg"]
                                                                                   : ej.default.JD6Oit,
                                                                           ),
@@ -16455,7 +16465,7 @@ function m5(e) {
                                                         }),
                                                     }),
                                                     (0, a.jsx)("div", {
-                                                        className: m4.cb,
+                                                        className: m5.cb,
                                                         children: (0, a.jsx)(
                                                             cG,
                                                             {
@@ -16477,10 +16487,10 @@ function m5(e) {
         })
     );
 }
-var m6 = n(705427),
-    m8 = n(606128),
-    m9 = n(323140);
-function he(e) {
+var m9 = n(705427),
+    he = n(606128),
+    ht = n(323140);
+function hn(e) {
     let t,
         l,
         r,
@@ -17030,7 +17040,7 @@ function he(e) {
             null == tF || null == s
                 ? null
                 : (0, a.jsx)("div", {
-                      className: m9.As,
+                      className: ht.As,
                       onMouseDown:
                           null == $ || tF.disabled || tO
                               ? void 0
@@ -17040,13 +17050,13 @@ function he(e) {
                       children: (0, a.jsx)(h.$, {
                           size: "sm",
                           variant: tG,
-                          icon: tO ? ht : null != tz ? g.U : void 0,
+                          icon: tO ? hl : null != tz ? g.U : void 0,
                           text: tU,
                           onClick: () => tB("header"),
                       }),
                   }),
         tX = null == s ? void 0 : () => (0, tM.A)(s.id, { guildId: d, isPreview: !0, publishOptions: tD }),
-        tY = (0, a.jsx)(m6.A, {
+        tY = (0, a.jsx)(m9.A, {
             title: s?.name ?? eb.intl.string(ej.default.G1WwgK),
             project: s,
             onOpenProjectSettings: tX,
@@ -17054,10 +17064,10 @@ function he(e) {
                 null == s
                     ? null
                     : (0, a.jsxs)("div", {
-                          className: m9.FO,
+                          className: ht.FO,
                           children: [
                               (0, a.jsxs)("div", {
-                                  className: m9.QQ,
+                                  className: ht.QQ,
                                   children: [
                                       (0, a.jsx)(tt, {
                                           targets: em,
@@ -17079,7 +17089,7 @@ function he(e) {
                                                 children: [
                                                     "frame" === X
                                                         ? (0, a.jsx)(S.A.Icon, {
-                                                              icon: ew ? hr : hl,
+                                                              icon: ew ? hi : ha,
                                                               tooltip: eN,
                                                               "aria-label": eN,
                                                               selected: ew,
@@ -17088,7 +17098,7 @@ function he(e) {
                                                         : null,
                                                     ew && "frame" === X
                                                         ? (0, a.jsx)(S.A.Icon, {
-                                                              icon: ha,
+                                                              icon: hs,
                                                               tooltip: eH,
                                                               "aria-label": eH,
                                                               selected: ez,
@@ -17101,7 +17111,7 @@ function he(e) {
                                                         children: (0, a.jsx)(S.A.Icon, {
                                                             ref: e6,
                                                             icon: p.x,
-                                                            iconClassName: m9.D8,
+                                                            iconClassName: ht.D8,
                                                             tooltip: tN,
                                                             "aria-label": tN,
                                                             selected: ty || e5,
@@ -17117,7 +17127,7 @@ function he(e) {
                                           : (0, a.jsx)(e4, { frame: eY, controlProjectId: s.id }),
                                   ],
                               }),
-                              (0, a.jsx)("div", { className: m9.YJ }),
+                              (0, a.jsx)("div", { className: ht.YJ }),
                               (0, a.jsx)(ey.A, { frame: eY }),
                               (0, a.jsx)(S.A.Icon, {
                                   icon: x.SettingsIcon,
@@ -17126,7 +17136,7 @@ function he(e) {
                                   onClick: tX,
                               }),
                               (0, a.jsx)(S.A.Icon, {
-                                  icon: hn,
+                                  icon: hr,
                                   tooltip: e1,
                                   "aria-label": e1,
                                   selected: e0,
@@ -17137,19 +17147,19 @@ function he(e) {
                       }),
         });
     return (0, a.jsxs)("div", {
-        className: f()(m9.nj, m8.T, { [m9.i3]: b }),
+        className: f()(ht.nj, he.T, { [ht.i3]: b }),
         children: [
             tR.importInput,
             (0, a.jsx)("main", {
-                className: f()(m9.JX, { [m9.i3]: b && null != s }),
+                className: f()(ht.JX, { [ht.i3]: b && null != s }),
                 children:
                     null == s
                         ? (0, a.jsxs)("div", {
-                              className: m9.j5,
+                              className: ht.j5,
                               children: [
                                   tY,
                                   (0, a.jsxs)("div", {
-                                      className: m9.sD,
+                                      className: ht.sD,
                                       children: [
                                           (0, a.jsx)(v.D, {
                                               variant: "heading-lg/semibold",
@@ -17173,7 +17183,7 @@ function he(e) {
                         : (0, a.jsx)(tx.bI.Provider, {
                               value: tD,
                               children: (0, a.jsx)(
-                                  m5,
+                                  m8,
                                   {
                                       projectId: s.id,
                                       designFeedbackToggleRef: e6,
@@ -17206,28 +17216,28 @@ function he(e) {
         ],
     });
 }
-function ht() {
-    return (0, a.jsx)(o.y, { type: o.t.SPINNING_CIRCLE_SIMPLE, className: m9.Hv, itemClassName: m9.C5 });
-}
-function hn(e) {
-    return (0, a.jsx)(j.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
-}
-function hl(e) {
-    return (0, a.jsx)(b.u, { ...e, size: "custom", width: 20, height: 20 });
+function hl() {
+    return (0, a.jsx)(o.y, { type: o.t.SPINNING_CIRCLE_SIMPLE, className: ht.Hv, itemClassName: ht.C5 });
 }
 function hr(e) {
-    return (0, a.jsx)(y.k, { ...e, size: "custom", width: 20, height: 20 });
+    return (0, a.jsx)(j.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
 }
 function ha(e) {
+    return (0, a.jsx)(b.u, { ...e, size: "custom", width: 20, height: 20 });
+}
+function hi(e) {
+    return (0, a.jsx)(y.k, { ...e, size: "custom", width: 20, height: 20 });
+}
+function hs(e) {
     return (0, a.jsx)(k.H, { ...e, size: "custom", width: 20, height: 20 });
 }
-var hi = n(325132),
-    hs = n(434279),
-    hu = n(972013),
-    ho = n(751841),
-    hc = n(159308);
-function hd(e) {
-    let { className: t = hc.lm } = e;
+var hu = n(325132),
+    ho = n(434279),
+    hc = n(972013),
+    hd = n(751841),
+    hf = n(159308);
+function hm(e) {
+    let { className: t = hf.lm } = e;
     return (0, a.jsx)("div", {
         className: t,
         children: (0, a.jsx)(u.E, {
@@ -17237,10 +17247,10 @@ function hd(e) {
         }),
     });
 }
-function hf() {
-    hu.A.isPinned() ? (0, c.bG)((0, ho.hU)(null)) : (0, eL.Sd)(null);
+function hh() {
+    hc.A.isPinned() ? (0, c.bG)((0, hd.hU)(null)) : (0, eL.Sd)(null);
 }
-function hm(e) {
+function hg(e) {
     let { projectId: t, workspaceGuildId: n } = e,
         { project: l, settled: r } = (function (e) {
             let { project: t, unavailable: n } = (0, m.cf)(
@@ -17256,18 +17266,18 @@ function hm(e) {
                 { project: t, settled: null != t || n }
             );
         })(t),
-        s = (null != l ? (0, hs.wu)(l) : null) ?? n,
-        u = i.useContext(eP.A) ? hc.Gz : hc.lm;
+        s = (null != l ? (0, ho.wu)(l) : null) ?? n,
+        u = i.useContext(eP.A) ? hf.Gz : hf.lm;
     return null != l || r
         ? null == s
-            ? (0, a.jsx)(hd, { className: u })
+            ? (0, a.jsx)(hm, { className: u })
             : (0, a.jsx)(eR.Provider, {
                   value: t,
-                  children: (0, a.jsx)(he, { project: l, projectsLoaded: r, onBack: hf, guildId: s }),
+                  children: (0, a.jsx)(hn, { project: l, projectsLoaded: r, onBack: hh, guildId: s }),
               })
         : (0, a.jsx)("div", { className: u, children: (0, a.jsx)(o.y, {}) });
 }
-function hh(e) {
+function hp(e) {
     let { projectId: t } = e,
         n = (0, n3.rX)("ConjurePage"),
         l = i.useContext(eP.A);
@@ -17280,8 +17290,8 @@ function hh(e) {
     i.useEffect(() => eL.mE, []),
     null == t)
         ? (0, a.jsx)("div", {
-              className: l ? hc.$ : hc.iR,
-              children: null == n ? (0, a.jsx)(hd, {}) : (0, a.jsx)(hi.A, { guildId: n, onConjurePage: !0 }),
+              className: l ? hf.$ : hf.iR,
+              children: null == n ? (0, a.jsx)(hm, {}) : (0, a.jsx)(hu.A, { guildId: n, onConjurePage: !0 }),
           })
-        : (0, a.jsx)(hm, { projectId: t, workspaceGuildId: n }, t);
+        : (0, a.jsx)(hg, { projectId: t, workspaceGuildId: n }, t);
 }

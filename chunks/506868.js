@@ -1,49 +1,54 @@
-t.d(n, { DU: () => K, LK: () => b, mK: () => g });
-var r = t(582128),
-    u = t(17928),
-    A = t(964167),
-    i = t(587895),
-    a = t(197184),
-    l = t(91242),
-    c = t(326843),
-    s = t(409397),
-    d = t(869146),
-    p = t(976860),
-    f = t(964404),
-    o = t(309010),
-    y = t(260498),
-    h = t(566870);
-let m = 588245 != t.j ? [l.A, f.Ay, o.Ay, i.A, y.Ay, d.A] : null;
-function g(e, n) {
+n.d(t, { DU: () => O, LK: () => S, mK: () => R });
+var r = n(582128),
+    i = n(17928),
+    l = n(964167),
+    u = n(587895),
+    A = n(197184),
+    a = n(91242),
+    c = n(326843),
+    d = n(409397),
+    o = n(869146),
+    p = n(976860),
+    E = n(964404),
+    f = n(309010),
+    s = n(111534),
+    I = n(754027),
+    _ = n(260498),
+    P = n(333807),
+    L = n(566870);
+let N = 588245 != n.j ? [a.A, E.Ay, f.Ay, u.A, _.Ay, s.A, o.A] : null;
+function R(e, t) {
+    let n =
+        (0, I.Q5)(e.surface) && (0, P.A)(e.applicationId) && s.A.getBuilderPreviewApplicationId() !== e.applicationId;
     return (
-        !!(0, h.A)(e) &&
-        !!(0, c.A)(e, f.Ay) &&
-        l.A.getMainFrame()?.id !== e.id &&
-        null == (0, s.A)(e) &&
-        (n || o.Ay.getChannelId() !== (0, a.A)(e.surface))
+        (!!n || !!(0, L.A)(e)) &&
+        !!(0, c.A)(e, E.Ay) &&
+        a.A.getMainFrame()?.id !== e.id &&
+        null == (0, d.A)(e) &&
+        (n || t || f.Ay.getChannelId() !== (0, A.A)(e.surface))
     );
 }
-function k(e) {
+function C(e) {
     return (0, p.JK)().listen(e);
 }
-function C() {
-    return r.useSyncExternalStore(k, A.rm);
+function T() {
+    return r.useSyncExternalStore(C, l.rm);
 }
-function K() {
-    let e = C();
-    return (0, u.yK)(
-        m,
+function O() {
+    let e = T();
+    return (0, i.yK)(
+        N,
         () =>
-            l.A.getAllFrames()
-                .filter((n) => g(n, e))
+            a.A.getAllFrames()
+                .filter((t) => R(t, e))
                 .map((e) => e.id),
         [e],
     );
 }
-function b(e) {
-    let n = C();
-    return (0, u.bG)(m, () => {
-        let t = l.A.getFrame(e);
-        return null != t && g(t, n);
-    }, [e, n]);
+function S(e) {
+    let t = T();
+    return (0, i.bG)(N, () => {
+        let n = a.A.getFrame(e);
+        return null != n && R(n, t);
+    }, [e, t]);
 }

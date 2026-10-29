@@ -68,9 +68,21 @@
     width: 320px
 }
 
+.frameLens__50601,
 .frameTarget__50601 {
     height: 100%;
     width: 100%
+}
+
+.frameLens__50601,
+.lensChrome__50601 {
+    transform-origin: 0 0
+}
+
+.lensChrome__50601 {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
 }
 
 .soundBadge__50601 {
@@ -89,4 +101,4 @@
     width: 320px
 }
 
-/*# sourceMappingURL=450b70ffd84eb199.css.map*/
+/*# sourceMappingURL=83c82401b86d877c.css.map*/
