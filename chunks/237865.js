@@ -16,8 +16,8 @@ var l,
     j = n(148494),
     p = n(451909),
     v = n(446244),
-    A = n(734057),
-    C = n(403362);
+    C = n(734057),
+    A = n(403362);
 let E = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
     N = {
         voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 },
@@ -321,17 +321,17 @@ async function er(e) {
 }
 async function ea(e, t) {
     let n = await f.A.getOrEnsurePrivateChannel(t),
-        l = A.A.getChannel(n);
+        l = C.A.getChannel(n);
     if (null == l) throw Error("Failed to open private channel");
     s.default.track(ee.HAw.CHECKPOINT_SIDEKICK_MESSAGE_SENT, { other_user_id: t });
     let r = p.Ay.parse(l, e);
     return j.A.sendMessage(l.id, r, !1, { location: "checkpoint-sidekick" });
 }
 async function es(e, t, n) {
-    let l = (await Promise.all(e.map(v.pk))).filter(C.Vq);
+    let l = (await Promise.all(e.map(v.pk))).filter(A.Vq);
     for (let e of await Promise.allSettled(
         l.map((e) => {
-            let l = A.A.getChannel(e);
+            let l = C.A.getChannel(e);
             if (null != l)
                 return j.A.sendMessage(l.id, p.Ay.parse(l, t), !1, { location: "checkpoint", checkpointCardType: n });
         }),
@@ -417,7 +417,7 @@ var eg = n(127639),
     ej = n(287809),
     ep = n(474090),
     ev = n(817379);
-function eA() {
+function eC() {
     let {
             selectedCharacterTraits: e,
             savedSelection: t,
@@ -440,7 +440,7 @@ function eA() {
         );
     return { selectedCharacterTraits: e, blockedTraits: r };
 }
-var eC = n(920495),
+var eA = n(920495),
     eE = n(299619),
     eN = n(775602),
     eS = n(818348),
@@ -928,11 +928,11 @@ function tj(e) {
 }
 var tp = n(769909);
 let tv = [ec.v7.BASE, ec.v7.OUTFIT_COLOR],
-    tA = [ec.v7.AURA, ec.v7.WEARABLE, ec.v7.SHOES, ec.v7.HAT, ec.v7.OUTFIT, ec.v7.FACE];
-function tC(e) {
+    tC = [ec.v7.AURA, ec.v7.WEARABLE, ec.v7.SHOES, ec.v7.HAT, ec.v7.OUTFIT, ec.v7.FACE];
+function tA(e) {
     let { activeCustomizationOption: t, onSelectOption: n, disabled: l = !1 } = e,
         a = c.useRef(null),
-        s = tA.includes(t);
+        s = tC.includes(t);
     return (0, r.jsx)(td.Y, {
         targetElementRef: a,
         position: "right",
@@ -941,7 +941,7 @@ function tC(e) {
         renderPopout: (e) => {
             let { closePopout: l } = e;
             return (0, r.jsx)(tj, {
-                options: tA,
+                options: tC,
                 activeCustomizationOption: t,
                 returnRef: a,
                 onSelectOption: (e) => {
@@ -1013,7 +1013,7 @@ function tE(e) {
                     );
                 }),
             }),
-            (0, r.jsx)(tC, { activeCustomizationOption: t, onSelectOption: n, disabled: l }),
+            (0, r.jsx)(tA, { activeCustomizationOption: t, onSelectOption: n, disabled: l }),
         ],
     });
 }
@@ -1021,7 +1021,7 @@ var tN = n(195464);
 function tS() {
     let [e, t] = c.useState(ec.v7.BASE),
         { traitOptions: n, selectedOption: l, onSelectOption: a } = tr({ customizationOption: e }),
-        { blockedTraits: s } = eA(),
+        { blockedTraits: s } = eC(),
         i = s.includes(ec.hw[e]),
         o = (0, d.bG)([$], () => $.isSaving);
     return (0, r.jsxs)(ti, {
@@ -1554,8 +1554,8 @@ function np(e) {
     return (0, r.jsx)(eH, { className: nj.l, children: t });
 }
 var nv = n(765671),
-    nA = n(590642),
-    nC = n(362263),
+    nC = n(590642),
+    nA = n(362263),
     nE = n(406956);
 let nN = (0, nd.j5)(eX.Kr);
 function nS(e) {
@@ -1572,7 +1572,7 @@ function nS(e) {
             });
         return () => cancelAnimationFrame(n);
     }, [t, l]);
-    let o = "center" === n ? nA.m : nC.w;
+    let o = "center" === n ? nC.m : nA.w;
     return (0, r.jsxs)("div", {
         className: nE.lY,
         children: [
@@ -1695,10 +1695,10 @@ function nF(e) {
         j = c.useRef(45),
         p = c.useRef(45),
         v = (0, d.bG)([eN.Ay], () => eN.Ay.useReducedMotion),
-        A = 70 * !v,
-        C = 40 * !v,
-        E = c.useRef(A),
-        N = c.useRef(C),
+        C = 70 * !v,
+        A = 40 * !v,
+        E = c.useRef(C),
+        N = c.useRef(A),
         S = c.useRef(!1),
         I = c.useRef(0),
         b = c.useRef(0);
@@ -1753,7 +1753,7 @@ function nF(e) {
                 r.bufferData(r.ARRAY_BUFFER, e, r.STATIC_DRAW));
             let v = r.createBuffer();
             (r.bindBuffer(r.ARRAY_BUFFER, v), r.bufferData(r.ARRAY_BUFFER, new Float32Array(nU), r.STATIC_DRAW));
-            let A = nT.DF(60);
+            let C = nT.DF(60);
             return (
                 (n = requestAnimationFrame(function e() {
                     if (null == r || null == l) return;
@@ -1769,14 +1769,14 @@ function nF(e) {
                         r.bindBuffer(r.ARRAY_BUFFER, v),
                         r.vertexAttribPointer(u, 2, r.FLOAT, !1, 0, 0));
                     let s = l.clientWidth / l.clientHeight,
-                        i = nR.fN(nR.vt(), A, s, 1, 2e3),
+                        i = nR.fN(nR.vt(), C, s, 1, 2e3),
                         h = nR.t5(nR.vt(), nM, nP, nL),
                         g = nR.lw(nR.vt(), i, h),
-                        C = nR.vt();
-                    (nR.eL(C, C, t), nR.Z8(C, C, a));
-                    let E = nR.lw(nR.vt(), g, C),
+                        A = nR.vt();
+                    (nR.eL(A, A, t), nR.Z8(A, A, a));
+                    let E = nR.lw(nR.vt(), g, A),
                         N = nR.vt();
-                    (nR.B8(N, C),
+                    (nR.B8(N, A),
                         nR.mg(N, N),
                         r.uniformMatrix4fv(x, !1, N),
                         r.uniformMatrix4fv(d, !1, E),
@@ -1812,11 +1812,11 @@ function nF(e) {
                     let n = 0.001 * t,
                         l = Math.min(n - f.current, 0.1);
                     if (((p.current += -N.current * l), (j.current += -E.current * l), !S.current)) {
-                        if (Math.abs(E.current) > A) {
+                        if (Math.abs(E.current) > C) {
                             let e = E.current > 0 ? 1 : -1;
                             E.current -= 2 * e * window.devicePixelRatio;
                         }
-                        if (Math.abs(N.current) > C) {
+                        if (Math.abs(N.current) > A) {
                             let e = N.current > 0 ? 1 : -1;
                             N.current -= 2 * e * window.devicePixelRatio;
                         }
@@ -1825,7 +1825,7 @@ function nF(e) {
                 })(0),
                 () => cancelAnimationFrame(g.current)
             ),
-            [A, C],
+            [C, A],
         ));
     let T = c.useCallback((e) => {
             ((S.current = !0), (E.current = 0), (N.current = 0), (I.current = e.clientX), (b.current = e.clientY));
@@ -2017,24 +2017,23 @@ function n6(e) {
             let e = setTimeout(l, 1e3);
             return () => clearTimeout(e);
         }, [l, a, m, n]));
-    let [f, j, p] = s,
-        v = ((0, nm.tx)(f) ?? "").toLocaleUpperCase(),
-        A = ((0, nm.tx)(j) ?? "").toLocaleUpperCase(),
-        C = ((0, nm.tx)(p) ?? "").toLocaleUpperCase(),
-        E = (0, nm.tx)(i?.user) ?? "",
-        N = s.length < 3,
-        S = n === eo.gr.SIDEKICK || n === eo.gr.SIDEKICK_LEAVE;
+    let [f, j] = s,
+        p = ((0, nm.tx)(f) ?? "").toLocaleUpperCase(),
+        v = ((0, nm.tx)(j) ?? "").toLocaleUpperCase(),
+        C = (0, nm.tx)(i?.user) ?? "",
+        A = s.length < 2,
+        E = n === eo.gr.SIDEKICK || n === eo.gr.SIDEKICK_LEAVE;
     c.useEffect(() => () => clearInterval(x.current), []);
-    let I = c.useCallback(() => {
+    let N = c.useCallback(() => {
         (clearInterval(x.current),
             (x.current = setInterval(() => {
                 let e = h.current?.getProperties();
-                e?.twoFriends?.value === N &&
+                e?.twoFriends?.value === A &&
                     e?.reducedMotion?.value === m &&
-                    e?.["Avatar01/Username"]?.value === v &&
+                    e?.["Avatar01/Username"]?.value === C.toLocaleUpperCase() &&
                     (h.current?.play(), clearInterval(x.current));
             }, 50)));
-    }, [v, m, N]);
+    }, [m, C, A]);
     return (0, r.jsxs)(t$, {
         children: [
             (0, r.jsx)(nW.m, {
@@ -2042,21 +2041,21 @@ function n6(e) {
                 className: n5.lW,
                 fit: "contain",
                 autoplay: !1,
-                onLoad: I,
+                onLoad: N,
                 withReducedMotion: "play",
                 dataBinding: {
                     ...n8,
                     AnimationState: g,
-                    "Avatar01/img": n7(f),
-                    "Avatar02/img": n7(p),
-                    "Avatar03/img": n7(j),
+                    "Avatar01/img": n7(i?.user),
+                    "Avatar02/img": n7(j),
+                    "Avatar03/img": n7(f),
                     "Avatar04/img": n7(i?.user),
                     "Avatar05/img": n7(o),
-                    "Avatar01/Username": v,
-                    "Avatar02/Username": C,
-                    "Avatar03/Username": A,
-                    "Avatar04/Username": E.toLocaleUpperCase(),
-                    twoFriends: N,
+                    "Avatar01/Username": C.toLocaleUpperCase(),
+                    "Avatar02/Username": v,
+                    "Avatar03/Username": p,
+                    "Avatar04/Username": C.toLocaleUpperCase(),
+                    twoFriends: A,
                     reducedMotion: m,
                 },
             }),
@@ -2073,7 +2072,7 @@ function n6(e) {
                         description: y.intl.string(ez.default.EqdLDd),
                     }),
                 }),
-            S &&
+            E &&
                 null != i &&
                 (0, r.jsxs)("div", {
                     className: u()(n5.Qs, n5.yG),
@@ -2088,7 +2087,7 @@ function n6(e) {
                                 (0, r.jsx)(le, { sidekick: i }),
                             ],
                         }),
-                        (0, r.jsx)(lt, { user: i.user, username: E }),
+                        (0, r.jsx)(lt, { user: i.user, username: C }),
                     ],
                 }),
         ],
@@ -2338,7 +2337,7 @@ function lj(e) {
 }
 var lp = n(842807);
 let lv = [];
-function lA(e) {
+function lC(e) {
     let { gameStats: t } = e,
         n = Math.round(t?.totalGamesPlayed ?? 0),
         l = t?.games ?? lv;
@@ -2372,7 +2371,7 @@ function lA(e) {
         ],
     });
 }
-function lC(e) {
+function lA(e) {
     let { gameStats: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -2411,7 +2410,7 @@ function lE() {
     return (0, r.jsx)(t$, {
         children: (0, r.jsx)("div", {
             className: lp.kL,
-            children: l ? (0, r.jsx)(lC, { gameStats: n }) : (0, r.jsx)(lA, { gameStats: e }),
+            children: l ? (0, r.jsx)(lA, { gameStats: n }) : (0, r.jsx)(lC, { gameStats: e }),
         }),
     });
 }
@@ -3101,7 +3100,7 @@ function rs(e) {
             (e === z.INIT || e === z.ERROR) && el();
         }, []),
         (0, c.useEffect)(() => {
-            (0, eC.E)(l);
+            (0, eA.E)(l);
         }, [l]),
         c.useEffect(() => {
             g.h.dispatch({ type: "CHECKPOINT_RESET_EDITED_CHARACTER" });
@@ -3109,8 +3108,8 @@ function rs(e) {
     let x = i ? eo.Np.SHARED_DATA : eo.Np.NO_SHARED_DATA,
         [f, j] = c.useState(eo.gr.HOME),
         { characterStage: p, statsScreen: v } = (0, eo.UG)(f),
-        A = f === eo.gr.HOME || null != v,
-        C = A || f === eo.gr.INTRODUCTION,
+        C = f === eo.gr.HOME || null != v,
+        A = C || f === eo.gr.INTRODUCTION,
         E = (0, d.bG)([$], () => ($.fetchState === z.SUCCESS ? $.stats : void 0)),
         N = (0, d.bG)([$], () => $.character),
         S = c.useMemo(
@@ -3147,7 +3146,7 @@ function rs(e) {
                 let e = s.current;
                 a || null == e || ((e.currentTime = 0), e.play());
             }, [a])),
-        { blockedTraits: b } = eA(),
+        { blockedTraits: b } = eC(),
         T = (0, ec._K)(f, b),
         R = c.useCallback(
             (e) => {
@@ -3181,10 +3180,10 @@ function rs(e) {
                 style: S,
                 "aria-label": y.intl.string(tc.default["CdU/PF"]),
                 children: [
-                    (0, r.jsx)(eb, { isVisible: A }),
-                    (0, r.jsx)("div", { className: u()(ra.qd, { [ra.R]: A }), children: (0, r.jsx)(rr, { stage: p }) }),
+                    (0, r.jsx)(eb, { isVisible: C }),
+                    (0, r.jsx)("div", { className: u()(ra.qd, { [ra.R]: C }), children: (0, r.jsx)(rr, { stage: p }) }),
                     (0, eo.Rq)(f) && (0, r.jsx)("div", { className: ra.qd, children: (0, r.jsx)(tk, { route: f }) }),
-                    C &&
+                    A &&
                         (0, r.jsx)("div", {
                             className: ra.qd,
                             children: (0, r.jsx)(l7, { route: f, onNextStep: O, onPreviousStep: _ }),
