@@ -180,19 +180,4 @@
     padding: 4px
 }
 
-.appActions_b5135b {
-    display: contents
-}
-
-.divider_b5135b {
-    background-color: var(--border-subtle);
-    flex: 0 0 auto;
-    height: 20px;
-    width: 1px
-}
-
-.appActions_b5135b:empty+.divider_b5135b {
-    display: none
-}
-
-/*# sourceMappingURL=423e716d71489a61.css.map*/
+/*# sourceMappingURL=c611da7ff1b3e69b.css.map*/
