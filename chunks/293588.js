@@ -18,7 +18,7 @@ function s(e) {
             let { ApplicationCommandShareModal: e } = await Promise.all([
                 n.e("426782"),
                 n.e("406322"),
-                n.e("412117"),
+                n.e("101105"),
                 n.e("263406"),
                 n.e("1955"),
                 n.e("341161"),
@@ -102,7 +102,7 @@ function s(e) {
                 n.e("763343"),
                 n.e("706073"),
                 n.e("194704"),
-                n.e("684290"),
+                n.e("231541"),
                 n.e("274461"),
                 n.e("830560"),
                 n.e("526575"),

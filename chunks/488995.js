@@ -16,8 +16,8 @@ var i,
     a,
     s,
     l,
-    o = (((i = {}).SERVERS = "servers"), (i.QUESTS = "quests"), (i.APPS = "apps"), i);
-let d = ["apps", "servers", "quests"],
+    o = (((i = {}).SERVERS = "servers"), (i.QUESTS = "quests"), (i.APPS = "apps"), (i.GAMES = "games"), i);
+let d = ["apps", "servers", "games", "quests"],
     c = ["servers", "quests"];
 var u = (((r = {}).MORE = "More"), r);
 let _ = "servers",

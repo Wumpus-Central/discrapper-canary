@@ -1,0 +1,96 @@
+.fallback_b789ab {
+    background-color: #423d80;
+    flex-direction: column;
+    padding: 12px
+}
+
+.compactFallback_b789ab,
+.fallback_b789ab {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    text-align: center
+}
+
+.compactFallback_b789ab {
+    background-color: var(--background-mod-muted);
+    justify-content: center;
+    padding: var(--space-4);
+    width: 100%;
+    word-break: break-word
+}
+
+.spacer_b789ab {
+    flex: 1
+}
+
+.iconFallback_b789ab {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.backdrop_b789ab {
+    background-color: var(--background-base-low);
+    border-radius: inherit;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0
+}
+
+.backdrop_b789ab,
+.backdropImage_b789ab {
+    inset: 0;
+    position: absolute
+}
+
+.backdropImage_b789ab {
+    filter: blur(24px);
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transform: scale(1.2);
+    width: 100%
+}
+
+.icon_b789ab {
+    aspect-ratio: 1/1;
+    border-radius: var(--radius-sm);
+    display: block;
+    position: relative;
+    width: 85%;
+    z-index: 0
+}
+
+.cover_b789ab,
+.image_b789ab {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.image_b789ab {
+    border-radius: inherit;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.skeletonForeground_b789ab {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%
+}
+
+.cover_b789ab>.image_b789ab {
+    -o-object-fit: fill;
+    object-fit: fill
+}
+
+/*# sourceMappingURL=102075.7c51976944d76217.css.map*/

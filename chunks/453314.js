@@ -34,8 +34,8 @@ var C = n(12351),
     D = n(458294),
     v = n(71393),
     b = n(290863),
-    P = n(573163),
-    M = n(309010),
+    M = n(573163),
+    P = n(309010),
     U = n(607567),
     w = n(234320),
     G = n(625494),
@@ -165,12 +165,12 @@ class X extends r.Component {
         });
     }
 }
-let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
+let q = _.Ay.connectStores([M.Ay, y.A], (e) => {
         let { channel: t } = e;
         return {
-            unread: P.Ay.hasUnread(t.id),
-            mentions: P.Ay.getMentionCount(t.id),
-            isMentionLowImportance: P.Ay.getIsMentionLowImportance(t.id),
+            unread: M.Ay.hasUnread(t.id),
+            mentions: M.Ay.getMentionCount(t.id),
+            isMentionLowImportance: M.Ay.getIsMentionLowImportance(t.id),
             category: y.A.getChannel(t.parent_id),
         };
     })(X),
@@ -184,20 +184,20 @@ let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
         let { guild: t } = e;
         return { unread: D.default.hasUnread(t.id) };
     })(k.OS),
-    J = _.Ay.connectStores([P.Ay, b.A], (e) => {
+    J = _.Ay.connectStores([M.Ay, b.A], (e) => {
         let { channel: t } = e,
             n = null,
             i = b.A.getState().statuses;
         return (
             t.recipients?.some((e) => i[e] === H.clD.ONLINE) && (n = H.clD.ONLINE),
-            { mentions: P.Ay.getMentionCount(t.id), status: n }
+            { mentions: M.Ay.getMentionCount(t.id), status: n }
         );
     })(k.nG),
-    ee = _.Ay.connectStores([y.A, P.Ay, b.A], (e) => {
+    ee = _.Ay.connectStores([y.A, M.Ay, b.A], (e) => {
         let { user: t } = e,
             n = y.A.getDMFromUserId(t.id);
         return {
-            mentions: null != n ? P.Ay.getMentionCount(n) : 0,
+            mentions: null != n ? M.Ay.getMentionCount(n) : 0,
             status: b.A.getStatus(t.id),
             isMobile: b.A.isMobileOnline(t.id),
         };
@@ -266,7 +266,7 @@ class en extends r.PureComponent {
                         n.e("361922"),
                         n.e("179028"),
                         n.e("403032"),
-                        n.e("684290"),
+                        n.e("231541"),
                         n.e("295570"),
                         n.e("301850"),
                         n.e("936875"),
@@ -283,7 +283,7 @@ class en extends r.PureComponent {
                         n.e("262564"),
                         n.e("71866"),
                         n.e("891473"),
-                        n.e("412117"),
+                        n.e("101105"),
                         n.e("263406"),
                         n.e("1955"),
                         n.e("341161"),
@@ -402,12 +402,13 @@ class en extends r.PureComponent {
                         n.e("519435"),
                         n.e("10985"),
                         n.e("171206"),
-                        n.e("975366"),
+                        n.e("546547"),
+                        n.e("102075"),
                         n.e("828178"),
                         n.e("45036"),
                         n.e("974119"),
                         n.e("434683"),
-                        n.e("920955"),
+                        n.e("572388"),
                         n.e("505928"),
                         n.e("752657"),
                         n.e("747973"),
@@ -589,7 +590,7 @@ class en extends r.PureComponent {
                         n.e("776273"),
                         n.e("776602"),
                         n.e("391763"),
-                        n.e("305692"),
+                        n.e("492762"),
                         n.e("704434"),
                         n.e("140402"),
                         n.e("362422"),
@@ -1078,7 +1079,7 @@ class en extends r.PureComponent {
                         (0, i.jsx)(e, {
                             ...n,
                             channel: t.record,
-                            selected: M.Ay.getChannelId() === t.record.id,
+                            selected: P.Ay.getChannelId() === t.record.id,
                             onSelect: o.jD,
                         });
                 });

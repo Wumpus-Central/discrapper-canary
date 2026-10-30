@@ -1,4 +1,4 @@
-l.d(a, { Ay: () => u, FQ: () => h, wu: () => x });
+l.d(a, { Ay: () => h, FQ: () => j, gr: () => g, wu: () => o });
 var s,
     r = l(477900);
 l(582128);
@@ -6,16 +6,17 @@ var n = l(503698),
     t = l.n(n),
     i = l(834730),
     m = l(5399),
-    c = l(105292),
-    d = l(899830),
-    x = (((s = {})[(s.SMALL = 0)] = "SMALL"), (s[(s.LARGE = 1)] = "LARGE"), (s[(s.COMPACT = 2)] = "COMPACT"), s);
-let o = {
+    c = l(799699),
+    d = l(105292),
+    x = l(899830),
+    o = (((s = {})[(s.SMALL = 0)] = "SMALL"), (s[(s.LARGE = 1)] = "LARGE"), (s[(s.COMPACT = 2)] = "COMPACT"), s);
+let u = {
     0: { nameVariant: "text-xs/medium", nameLineClamp: 3, releaseYearVariant: "text-xxs/normal" },
     1: { nameVariant: "text-md/medium", nameLineClamp: 4, releaseYearVariant: "text-sm/normal" },
 };
-function u(e) {
+function h(e) {
     let { game: a, imageSize: l, ...s } = e;
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(j, {
         ...s,
         coverUrl: a.getCoverURL(l),
         iconUrl: a.getIconURL(l ?? 256),
@@ -23,59 +24,63 @@ function u(e) {
         firstReleaseDate: a.firstReleaseDate,
     });
 }
-function h(e) {
+function j(e) {
     let {
             coverUrl: a,
             iconUrl: l,
             gameName: s,
             firstReleaseDate: n,
             size: i,
-            className: x,
+            className: c,
             foregroundClassName: o,
             loadingPlaceholder: u,
         } = e,
-        { imageUrl: h, isCover: g, isLoading: v, handleLoad: p, handleError: N } = (0, m.Ay)(a, l);
-    if (null == h) return (0, r.jsx)(j, { gameName: s, firstReleaseDate: n, size: i, className: t()(x, o) });
-    let C = 2 === i ? s : c.intl.formatToPlainString(c.t["3ev90U"], { game: s }),
-        L = (0, r.jsx)("img", { src: h, alt: C, draggable: !1, onLoad: p, onError: N, className: d.Sl }, h);
-    return g
+        { imageUrl: h, isCover: j, isLoading: g, handleLoad: N, handleError: p } = (0, m.Ay)(a, l);
+    if (null == h) return (0, r.jsx)(v, { gameName: s, firstReleaseDate: n, size: i, className: t()(c, o) });
+    let C = 2 === i ? s : d.intl.formatToPlainString(d.t["3ev90U"], { game: s }),
+        L = (0, r.jsx)("img", { src: h, alt: C, draggable: !1, onLoad: N, onError: p, className: x.Sl }, h);
+    return j
         ? (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)("span", { className: t()(d.Iv, x, o), children: L }), v && u],
+              children: [(0, r.jsx)("span", { className: t()(x.Iv, c, o), children: L }), g && u],
           })
         : (0, r.jsxs)("div", {
-              className: t()(d.EU, x),
+              className: t()(x.EU, c),
               children: [
                   (0, r.jsx)("span", {
-                      className: d.tB,
+                      className: x.tB,
                       "aria-hidden": !0,
-                      children: (0, r.jsx)("img", { src: h, alt: "", draggable: !1, className: d.oP }),
+                      children: (0, r.jsx)("img", { src: h, alt: "", draggable: !1, className: x.oP }),
                   }),
-                  (0, r.jsx)("span", { className: t()(d.Kk, o), children: L }),
-                  v && u,
+                  (0, r.jsx)("span", { className: t()(x.Kk, o), children: L }),
+                  g && u,
               ],
           });
 }
-function j(e) {
+function g(e) {
+    let { className: a } = e;
+    return (0, r.jsx)(c.qT, { className: a, children: (0, r.jsx)(c.Ay, { className: x.hF }) });
+}
+function v(e) {
     let { gameName: a, firstReleaseDate: l, size: s, className: n } = e;
     if (2 === s)
         return (0, r.jsx)("div", {
             role: "img",
             "aria-label": a,
-            className: t()(d.ui, n),
+            className: t()(x.ui, n),
             children: (0, r.jsx)(i.E, { variant: "text-xxs/medium", lineClamp: 3, "aria-hidden": !0, children: a }),
         });
-    let { nameVariant: m, nameLineClamp: c, releaseYearVariant: x } = o[s],
-        u = null != l ? new Date(l) : null;
+    let { nameVariant: m, nameLineClamp: c, releaseYearVariant: d } = u[s],
+        o = null != l ? new Date(l) : null;
     return (0, r.jsxs)("div", {
-        className: t()(d.Np, n),
+        className: t()(x.Np, n),
         children: [
-            (0, r.jsx)("div", { className: d.jH }),
+            (0, r.jsx)("div", { className: x.jH }),
             (0, r.jsx)(i.E, { variant: m, color: "text-overlay-light", lineClamp: c, children: a }),
-            (0, r.jsx)("div", { className: d.jH }),
+            (0, r.jsx)("div", { className: x.jH }),
             (0, r.jsx)(i.E, {
-                variant: x,
+                variant: d,
                 color: "text-overlay-light",
-                children: null != u ? `(${u.getFullYear()})` : null,
+                children: null != o ? `(${o.getFullYear()})` : null,
             }),
         ],
     });

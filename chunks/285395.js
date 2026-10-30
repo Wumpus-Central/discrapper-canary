@@ -10,6 +10,8 @@ function s(e) {
             return a.intl.string(a.t.bGwCoR);
         case r.GlobalDiscoveryTab.QUESTS:
             return a.intl.string(a.t.EcaD4e);
+        case r.GlobalDiscoveryTab.GAMES:
+            return a.intl.string(a.t.NTv8WZ);
         default:
             (0, i.xb)(e);
     }
@@ -21,6 +23,8 @@ function l(e) {
             return r.GlobalDiscoveryTab.QUESTS;
         case "/discovery/servers":
             return r.GlobalDiscoveryTab.SERVERS;
+        case "/discovery/games":
+            return r.GlobalDiscoveryTab.GAMES;
         default:
             return r.GLOBAL_DISCOVERY_DEFAULT_TAB;
     }

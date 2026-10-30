@@ -32,8 +32,8 @@ function g(e) {
             isGift: D = !1,
             giftMessage: v,
             giftStyle: b,
-            giftingOrigin: P,
-            subscriptionTier: M,
+            giftingOrigin: M,
+            subscriptionTier: P,
             trialId: U,
             postSuccessGuild: w,
             openInvoiceId: G,
@@ -48,7 +48,7 @@ function g(e) {
             startingStepOverride: Y,
         } = e,
         K = r()("payment-modal"),
-        $ = (0, f.mH)(M),
+        $ = (0, f.mH)(P),
         z = D || $ !== (0, f.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
         X = z?.rewardSkuIds[0] ?? null,
         q = !1;
@@ -70,7 +70,7 @@ function g(e) {
     }
     return Promise.all([
         n.e("237427"),
-        n.e("412117"),
+        n.e("101105"),
         n.e("263406"),
         n.e("1955"),
         n.e("341161"),
@@ -638,7 +638,7 @@ function g(e) {
                     planGroup: m.LE,
                     openInvoiceId: G,
                     returnRef: B,
-                    subscriptionTier: M,
+                    subscriptionTier: P,
                     skipConfirm: !!H,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
@@ -671,13 +671,13 @@ function g(e) {
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: L, analyticsLocations: C },
                 checkoutHandlers: { onClose: g, onComplete: S },
-                giftContextProps: { isGift: D, giftMessage: v, giftStyle: b, giftingOrigin: P, giftRecipient: F },
+                giftContextProps: { isGift: D, giftMessage: v, giftStyle: b, giftingOrigin: M, giftRecipient: F },
                 tenantParams: {
                     confirmationFooter: y,
                     defaultPlanId: void 0,
                     referralCode: null,
                     referralTrialOfferId: k,
-                    subscriptionTier: M,
+                    subscriptionTier: P,
                     subscription: V,
                     shouldDisallowPlanSelection: j,
                     initialPaymentSourceId: W,

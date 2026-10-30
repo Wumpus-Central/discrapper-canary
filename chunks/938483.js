@@ -24,7 +24,7 @@ let p = (0, c.Fe)({
             n.e("262564"),
             n.e("71866"),
             n.e("891473"),
-            n.e("412117"),
+            n.e("101105"),
             n.e("263406"),
             n.e("1955"),
             n.e("341161"),
@@ -134,7 +134,7 @@ let p = (0, c.Fe)({
             n.e("464759"),
             n.e("763343"),
             n.e("194704"),
-            n.e("684290"),
+            n.e("231541"),
             n.e("274461"),
             n.e("830560"),
             n.e("526575"),
@@ -147,12 +147,13 @@ let p = (0, c.Fe)({
             n.e("519435"),
             n.e("10985"),
             n.e("171206"),
-            n.e("975366"),
+            n.e("546547"),
+            n.e("102075"),
             n.e("828178"),
             n.e("45036"),
             n.e("974119"),
             n.e("434683"),
-            n.e("920955"),
+            n.e("572388"),
             n.e("505928"),
             n.e("752657"),
             n.e("747973"),
@@ -284,7 +285,7 @@ let p = (0, c.Fe)({
             n.e("776273"),
             n.e("776602"),
             n.e("391763"),
-            n.e("305692"),
+            n.e("492762"),
             n.e("704434"),
             n.e("140402"),
             n.e("362422"),
@@ -528,10 +529,10 @@ function T(e) {
                 );
             }, [])),
             { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
-        P = r.useCallback(() => {
+        M = r.useCallback(() => {
             (L(!1), R && u?.());
         }, [u, R]),
-        M = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 (L(!R), null != e && "number" == typeof e && D(e), R ? u?.() : c?.());
             },
@@ -539,12 +540,12 @@ function T(e) {
         );
     r.useEffect(
         () => (
-            f._.subscribe(I.jej.TOGGLE_INBOX, M),
+            f._.subscribe(I.jej.TOGGLE_INBOX, P),
             () => {
-                f._.unsubscribe(I.jej.TOGGLE_INBOX, M);
+                f._.unsubscribe(I.jej.TOGGLE_INBOX, P);
             }
         ),
-        [M],
+        [P],
     );
     let U = (0, a.bG)([_.A], () => _.A.hasOverdueReminder(), []);
     r.useEffect(() => {
@@ -552,9 +553,9 @@ function T(e) {
     });
     let w = r.useCallback(
             (e) => {
-                e.shiftKey || P();
+                e.shiftKey || M();
             },
-            [P],
+            [M],
         ),
         G = (0, E.Sc)();
     return (0, i.jsx)(d.f5, {
@@ -566,14 +567,14 @@ function T(e) {
             align: g,
             autoInvert: !1,
             shouldShow: R,
-            onRequestClose: P,
+            onRequestClose: M,
             renderPopout: function () {
                 return (0, i.jsx)(p, {
                     dialogClassName: C,
                     isScheduledMessagesEnabled: G,
                     tab: y,
                     setTab: D,
-                    closePopout: P,
+                    closePopout: M,
                     handleMentionsJump: w,
                     showTutorial: v,
                     setSeenTutorial: b,
@@ -584,7 +585,7 @@ function T(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return T(M, n, e, U);
+                return T(P, n, e, U);
             },
         }),
     });

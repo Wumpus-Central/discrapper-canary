@@ -5,5 +5,4 @@ e.exports = {
     cW: "cardWrapper__38ddd",
     xe: "coverArt__38ddd",
     uz: "skeletonArtworkOverlay__38ddd",
-    Lg: "skeletonArtworkForeground__38ddd",
 };

@@ -87,6 +87,8 @@
                     else return (0, l.pX)(_.BVt.GLOBAL_DISCOVERY_APPS);
                 case u.GlobalDiscoveryTab.QUESTS:
                     return (0, s.m)({ fromContent: t.questContent, questId: t.questId });
+                case u.GlobalDiscoveryTab.GAMES:
+                    return (0, l.pX)(_.BVt.GLOBAL_DISCOVERY_GAMES);
                 default:
                     throw Error(`[transitionToGlobalDiscovery] Unhandled tab type: ${n}`);
             }

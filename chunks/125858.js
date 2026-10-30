@@ -1,4 +1,4 @@
-let n, r, i, _, o, s, l, I, a, A;
+let n, r, i, _, o, s, I, l, a, A;
 var S,
     T,
     O,
@@ -236,10 +236,10 @@ if (null == i)
         i = {};
     }
 ((s = {}),
-    (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
+    (I = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
-        (s.release_channel = l.split("-")[0]),
-    isNaN((I = parseInt("658911", 10))) || (s.client_build_number = I),
+        (s.release_channel = I.split("-")[0]),
+    isNaN((l = parseInt("658913", 10))) || (s.client_build_number = l),
     null == (a = $?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
@@ -711,8 +711,8 @@ var es =
         (T[(T.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (T[(T.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         T),
-    el = E(377941),
-    eI = E.n(el),
+    eI = E(377941),
+    el = E.n(eI),
     ea =
         (((O = {}).ALL = "ALL"),
         (O.AVATAR_DECORATION = "AVATAR_DECORATION"),
@@ -882,6 +882,7 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             CONJURE: "/conjure",
             CONJURE_PROJECT: (e) => `/conjure/${e}`,
             GLOBAL_DISCOVERY_SERVERS: "/discovery/servers",
+            GLOBAL_DISCOVERY_GAMES: "/discovery/games",
             GLOBAL_DISCOVERY_APPS: "/discovery/applications",
             GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => `/discovery/applications/categories/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
@@ -991,7 +992,7 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
     );
 function ed(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return new x(`:${eI()(e)}(${t})${E ? "?" : ""}`);
+    return new x(`:${el()(e)}(${t})${E ? "?" : ""}`);
 }
 (Object.freeze({
     GUILD_FEED_REMOVED: 1,
@@ -1027,13 +1028,13 @@ let eC = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = ec.map(eI()).join("|");
+            E = ec.map(el()).join("|");
         return ed(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...eL].map(eI()).join("|");
+            E = [...eL].map(el()).join("|");
         return ed(e, `${E}|\\d+`, { optional: t });
     },
 };

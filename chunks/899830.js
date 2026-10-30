@@ -8,4 +8,5 @@ b.exports = {
     Kk: "icon_b789ab",
     Iv: "cover_b789ab",
     Sl: "image_b789ab",
+    hF: "skeletonForeground_b789ab",
 };
