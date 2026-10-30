@@ -1,4 +1,4 @@
-n.d(t, { A: () => X });
+n.d(t, { A: () => J });
 var i = n(264686),
     r = n(625180),
     a = n(91242),
@@ -217,24 +217,28 @@ function w(e) {
         null != t && O?.projectId === e && ((O = null), t.detach().catch(() => {})));
 }
 var G = n(99549),
-    x = n(226178);
-let k = new WeakMap();
-function F(e) {
+    x = n(485845),
+    k = n(179771),
+    F = n(136722),
+    B = n(803306);
+let V = [k.F.BOT, k.F.APPLICATIONS_COMMANDS],
+    H = new WeakMap();
+function j(e) {
     return new Promise((t) => setTimeout(t, e));
 }
-function B(e, t) {
+function W(e, t) {
     return e.width === t.width && e.height === t.height;
 }
-function V(e, t, n) {
+function Y(e, t, n) {
     let i = t.width - e.width,
         r = t.height - e.height;
     return i >= -2 && r >= -2 && i <= n && r <= n;
 }
-async function H(e, t) {
+async function K(e, t) {
     let n = t,
-        i = k.get(n),
+        i = H.get(n),
         r = null;
-    for (let t = Date.now() + 1500; Date.now() < t; await F(50)) {
+    for (let t = Date.now() + 1500; Date.now() < t; await j(50)) {
         var a, s;
         let t =
             (a = n = (0, S.UJ)(e) ?? n).isConnected && a.getClientRects().length > 0 && a.clientWidth > 0
@@ -250,29 +254,44 @@ async function H(e, t) {
             () => null,
         ));
         if (null == l) {
-            await F(150);
+            await j(150);
             break;
         }
         let o = l.width > 0 && l.height > 0,
-            d = null != i && B(i.viewport, l),
-            c = d && null != i && B(i.box, t),
-            u = !d && null != r && B(r, l) && V(l, t, 32);
-        if (c || (o && (V(l, t, 2) || u))) {
-            k.set(n, { box: t, viewport: l });
+            d = null != i && W(i.viewport, l),
+            c = d && null != i && W(i.box, t),
+            u = !d && null != r && W(r, l) && Y(l, t, 32);
+        if (c || (o && (Y(l, t, 2) || u))) {
+            H.set(n, { box: t, viewport: l });
             break;
         }
         r = l;
     }
     return n;
 }
-var j = n(652215),
-    W = n(165610);
-async function Y(e) {
+var $ = n(652215),
+    z = n(165610);
+async function X(e) {
     let { onClose: t, ...i } = e,
         { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 887909));
-    r((0, x.i)(i), t);
+    r(
+        (function (e) {
+            let { applicationId: t, application: n, guildId: i } = e,
+                r = n?.integrationTypesConfig?.[x.b.GUILD_INSTALL]?.oauth2InstallParams ?? n?.installParams;
+            return {
+                clientId: t,
+                guildId: i,
+                disableGuildSelect: !0,
+                integrationType: x.b.GUILD_INSTALL,
+                scopes: r?.scopes ?? V,
+                permissions: r?.permissions != null ? F.iu(r.permissions) : void 0,
+                callback: () => ((0, B.eO)(t, { withMutualGuilds: !0 }), !0),
+            };
+        })(i),
+        t,
+    );
 }
-async function K(e, t, i) {
+async function q(e, t, i) {
     let { probe: r, spec: a, build: s, onAccepted: l, resolveUploadUrl: o } = i;
     if (!0 === r) return { status: (0, S.rQ)(e) ? "accepted" : "unavailable" };
     if (a?.mode === "widget") {
@@ -309,7 +328,7 @@ async function K(e, t, i) {
             n.e("471043"),
             n.e("352456"),
             n.e("422037"),
-            n.e("825632"),
+            n.e("306490"),
             n.e("97430"),
             n.e("587618"),
             n.e("424199"),
@@ -405,7 +424,7 @@ async function K(e, t, i) {
         if (null == n) return { status: "unavailable" };
         let i = null == l ? { uploadToken: void 0 } : await l();
         if (null == i) return { status: "unavailable" };
-        let r = await H(e, n),
+        let r = await K(e, n),
             d = (0, _.WI)(r, { captureId: t, spec: a, build: s, uploadToken: i.uploadToken, resolveUploadUrl: o });
         function u(e) {
             return Promise.race([d, new Promise((t) => setTimeout(() => t(null), e))]);
@@ -419,7 +438,7 @@ async function K(e, t, i) {
         d();
     }
 }
-async function $(e, t, n, i) {
+async function Z(e, t, n, i) {
     if (!(0, S.rQ)(e)) return { status: "unavailable" };
     let r = (0, c.Wg)(e);
     try {
@@ -427,7 +446,7 @@ async function $(e, t, n, i) {
         if (null == r) return { status: "unavailable" };
         let a = await i?.();
         if (!1 === a) return { status: "unavailable" };
-        let s = await H(e, r),
+        let s = await K(e, r),
             l = (0, G._q)(s);
         try {
             let i = !1,
@@ -443,7 +462,7 @@ async function $(e, t, n, i) {
                             : null,
                 );
             if ("completed" !== r.status) return r;
-            let a = [...z.drain(e), ...l.drain()];
+            let a = [...Q.drain(e), ...l.drain()];
             if (0 === a.length) return r;
             return { ...r, response: { ...r.response, native: a } };
         } finally {
@@ -453,7 +472,7 @@ async function $(e, t, n, i) {
         r();
     }
 }
-let z = (function (e) {
+let Q = (function (e) {
     let t = new Map();
     function n(e) {
         let n = t.get(e);
@@ -504,13 +523,13 @@ let z = (function (e) {
             { timeoutMs: 2e3, retryMs: 400, sourceMatch: "origin", label: "control end" },
         ).catch(() => {});
 });
-let X = {
-    openConjureAppInstallModal: Y,
+let J = {
+    openConjureAppInstallModal: X,
     isWindowFocused: function () {
         return l.A.isFocused();
     },
     areTurnNotificationsDisabled: function () {
-        return s.A.getDesktopType() === j.nRU.NEVER;
+        return s.A.getDesktopType() === $.nRU.NEVER;
     },
     presentTurnNotification: function (e) {
         let { projectId: t, title: r, body: a, route: s, sound: l, volume: c } = e;
@@ -528,8 +547,8 @@ let X = {
             },
         );
     },
-    relayPreviewCapture: K,
-    relayPreviewControl: $,
+    relayPreviewCapture: q,
+    relayPreviewControl: Z,
     abortPreviewControl: function (e) {
         (w(e), g());
         let t = (0, S.UJ)(e);
@@ -542,7 +561,7 @@ let X = {
             ).catch(() => {});
     },
     beginPreviewOperation: function (e) {
-        (z.begin(e),
+        (Q.begin(e),
             (function (e) {
                 if (null == v() || L.has(e)) return;
                 let t = { cancelled: !1 };
@@ -556,7 +575,7 @@ let X = {
             })(e));
     },
     endPreviewOperation: function (e) {
-        (z.end(e), w(e), g());
+        (Q.end(e), w(e), g());
     },
     releasePreviewControl: function (e) {
         (0, c.GU)(e);
@@ -564,6 +583,6 @@ let X = {
     reloadAppFrames: function (e) {
         if (null != e)
             for (let t of a.A.getAllFrames())
-                (0, W.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && r.A.refreshProxyTicket(t.id);
+                (0, z.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && r.A.refreshProxyTicket(t.id);
     },
 };

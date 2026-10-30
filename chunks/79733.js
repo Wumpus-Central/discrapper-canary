@@ -16,10 +16,12 @@ var e = n(582128),
     b = n(951178),
     m = n(426035),
     _ = n(385081),
-    P = n(1371),
-    v = n(246338),
-    S = n(803101),
-    w = n(664619),
+    P = n(545503),
+    v = n(246338);
+async function S(t, l) {
+    (t.guild_id !== l || t.preview_guild_id !== l) && (await (0, g.M7)(t.id, { guild_id: l, preview_guild_id: l }));
+}
+var w = n(664619),
     C = n(722701),
     N = n(811587),
     y = n(87501),
@@ -121,20 +123,22 @@ function F(t, l) {
     };
 }
 async function O(t, l) {
-    let n = A.Ay.getProject(t),
-        e = n?.preview_application_id;
-    if (null == n || null == e) return;
-    let i = (0, S.a)(n, A.Ay.getIntegrationStatus(t), l);
-    (await (0, r.TA)(e).catch(() => {}),
+    var n;
+    let e = A.Ay.getProject(t),
+        i = e?.preview_application_id;
+    if (null == e || null == i) return;
+    let a =
+        ((n = A.Ay.getIntegrationStatus(t)), n?.integration_installed === !0 && e?.guild_id != null ? e.guild_id : l);
+    (await (0, r.TA)(i).catch(() => {}),
         await new Promise((t) => {
             P.A.openConjureAppInstallModal({
-                applicationId: e,
-                application: s.A.getApplication(e) ?? null,
-                guildId: i,
+                applicationId: i,
+                application: s.A.getApplication(i) ?? null,
+                guildId: a,
                 onClose: t,
             });
         }),
-        await (0, S.$)(n, i).catch(() => {}),
+        await S(e, a).catch(() => {}),
         await (0, g.U1)(t).catch(() => {}));
 }
 async function L(t, l, n, e) {

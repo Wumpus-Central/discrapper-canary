@@ -40,7 +40,7 @@ var r = n(158390),
     C = n(525530),
     k = n(743082),
     N = n(385081),
-    w = n(1371);
+    w = n(545503);
 class A {
     sendPing;
     onDead;
