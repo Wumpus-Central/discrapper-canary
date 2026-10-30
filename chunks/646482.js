@@ -8269,7 +8269,7 @@ function hl(e) {
     let { channel: n, guild: t, showTopic: i } = e,
         s = (0, l8.ZF)(n, "channel_header_label");
     return (0, l.jsxs)(l.Fragment, {
-        children: [s ? (0, l.jsx)(l8.yw, {}) : null, i ? (0, t0.EP)(n, t, s ? "bar" : "dot") : null],
+        children: [s ? (0, l.jsx)(l8.yw, { channel: n }) : null, i ? (0, t0.EP)(n, t, s ? "bar" : "dot") : null],
     });
 }
 class hs extends s.PureComponent {

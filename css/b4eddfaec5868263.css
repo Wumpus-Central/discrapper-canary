@@ -2,6 +2,16 @@
     margin: 0
 }
 
+.icon_e10274 {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-8)
+}
+
+.coachmark_e10274 .header_e10274 {
+    margin-top: var(--space-16)
+}
+
 .dot__5e185 {
     background: var(--background-mod-strong);
     border-radius: 50%;
@@ -75,4 +85,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=a0d7111a3d05bc1c.css.map*/
+/*# sourceMappingURL=b4eddfaec5868263.css.map*/

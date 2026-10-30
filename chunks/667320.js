@@ -1,45 +1,44 @@
-n.d(t, { D: () => h });
+n.d(t, { D: () => A });
 var i = n(17928),
-    l = n(576705),
+    s = n(576705),
     a = n(73153);
-let r = new Set(),
-    s = new Set();
-class E extends i.Ay.PersistedStore {
+let l = new Set(),
+    r = new Set();
+class c extends i.Ay.PersistedStore {
     static displayName = "PinotAdminNoticeAckStore";
     static persistKey = "PinotAdminNoticeAckStore";
     initialize(e) {
-        ((r = new Set(e?.ackedGuildIds ?? [])), (s = new Set()));
+        ((l = new Set(e?.ackedGuildIds ?? [])), (r = new Set()));
     }
     getState() {
-        return { ackedGuildIds: Array.from(r) };
+        return { ackedGuildIds: Array.from(l) };
     }
     isAcked(e) {
-        return r.has(e);
+        return l.has(e);
     }
     isHidden(e) {
-        return s.has(e);
+        return r.has(e);
     }
 }
-let d = new E(a.h, {
-        PINOT_ADMIN_NOTICE_ACK: function (e) {
-            let { guildId: t } = e;
-            if (r.has(t)) return !1;
-            r = new Set([...r, t]);
-        },
-        PINOT_ADMIN_NOTICE_HIDE: function (e) {
-            let { guildId: t } = e;
-            if (s.has(t)) return !1;
-            s = new Set([...s, t]);
-        },
-    }),
-    o = 221552 == n.j ? d : null;
+let o = new c(a.h, {
+    PINOT_ADMIN_NOTICE_ACK: function (e) {
+        let { guildId: t } = e;
+        if (l.has(t)) return !1;
+        l = new Set([...l, t]);
+    },
+    PINOT_ADMIN_NOTICE_HIDE: function (e) {
+        let { guildId: t } = e;
+        if (r.has(t)) return !1;
+        r = new Set([...r, t]);
+    },
+});
 var u = n(677166),
-    c = n(652215);
-function h(e) {
+    d = n(652215);
+function A(e) {
     let t = (0, i.bG)(
-            [l.A],
+            [s.A],
             () =>
-                null != e && e.features.has(c.GuildFeatures.DISCOVERABLE) && l.A.can(c.xBc.MANAGE_GUILD, e)
+                null != e && e.features.has(d.GuildFeatures.DISCOVERABLE) && s.A.can(d.xBc.MANAGE_GUILD, e)
                     ? e.id
                     : null,
             [e],
