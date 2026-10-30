@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => U });
 var l = n(477900),
     i = n(582128),
     s = n(675171),
@@ -63,30 +63,29 @@ function j(e) {
 }
 var v = n(228098),
     b = n(157259),
-    N = n(755752),
-    T = n(503698),
-    M = n.n(T),
-    R = n(666860),
-    D = n(174459),
-    k = n(472456),
-    L = n(406704),
-    P = n(215741);
-function O(e) {
+    N = n(503698),
+    T = n.n(N),
+    M = n(666860),
+    R = n(174459),
+    D = n(472456),
+    k = n(406704),
+    L = n(215741);
+function P(e) {
     let { channel: t, narrow: n } = e,
-        s = (0, L.lK)(t);
+        s = (0, k.lK)(t);
     return (
         i.useEffect(() => {
-            D.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
-                ...(0, R.H$)(t.getGuildId()),
-                ...(0, R.dI)(t),
+            R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
+                ...(0, M.H$)(t.getGuildId()),
+                ...(0, M.dI)(t),
                 banner_type: "thread",
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: M()(P.JD, { [P.sc]: n }),
+            className: T()(L.JD, { [L.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: P.E5,
+                    className: L.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? y.intl.string(y.t["833FDn"]) : y.intl.string(y.t.rEeodK),
@@ -96,13 +95,13 @@ function O(e) {
                           variant: "secondary",
                           text: y.intl.string(y.t["0dvvEi"]),
                           onClick: function () {
-                              (D.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
-                                  ...(0, R.H$)(t.getGuildId()),
-                                  ...(0, R.dI)(t),
+                              (R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                                  ...(0, M.H$)(t.getGuildId()),
+                                  ...(0, M.dI)(t),
                                   banner_type: "thread",
                                   cta_type: "unarchive",
                               }),
-                                  k.A.unarchiveThread(t, !1));
+                                  D.A.unarchiveThread(t, !1));
                           },
                           size: "sm",
                       })
@@ -111,22 +110,22 @@ function O(e) {
         })
     );
 }
-function G(e) {
+function O(e) {
     let { channel: t, narrow: n } = e,
-        s = (0, L.H_)(t);
+        s = (0, k.H_)(t);
     return (
         i.useEffect(() => {
-            D.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
-                ...(0, R.H$)(t.getGuildId()),
-                ...(0, R.dI)(t),
+            R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
+                ...(0, M.H$)(t.getGuildId()),
+                ...(0, M.dI)(t),
                 banner_type: "thread",
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: M()(P.JD, { [P.sc]: n }),
+            className: T()(L.JD, { [L.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: P.E5,
+                    className: L.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? y.intl.string(y.t.E7oO8u) : y.intl.string(y.t["V/JF2N"]),
@@ -136,13 +135,13 @@ function G(e) {
                           variant: "secondary",
                           text: y.intl.string(y.t.zA9d1J),
                           onClick: function () {
-                              (D.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
-                                  ...(0, R.H$)(t.getGuildId()),
-                                  ...(0, R.dI)(t),
+                              (R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                                  ...(0, M.H$)(t.getGuildId()),
+                                  ...(0, M.dI)(t),
                                   banner_type: "thread",
                                   cta_type: "unlock",
                               }),
-                                  k.A.unlockThread(t));
+                                  D.A.unlockThread(t));
                           },
                           size: "sm",
                       })
@@ -151,8 +150,8 @@ function G(e) {
         })
     );
 }
-var U = n(626360);
-let w = i.memo(function (e) {
+var G = n(626360);
+let U = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
         d = (0, v.A)(t),
         u = (0, s.A)(),
@@ -168,19 +167,16 @@ let w = i.memo(function (e) {
             }, [n, t, s, e]);
             let d = i.useCallback(() => l(""), []);
             return { showUnreadsNotice: n === e.id, clearUnreadsNotice: d };
-        })(t),
-        g = (0, N.GH)(t, "channel_chat_notice");
+        })(t);
     return t.isMediaThread()
         ? null
         : t.isArchivedLockedThread()
-          ? (0, l.jsx)(O, { channel: t, narrow: n })
+          ? (0, l.jsx)(P, { channel: t, narrow: n })
           : t.isLockedThread()
-            ? (0, l.jsx)(G, { channel: t, narrow: n })
+            ? (0, l.jsx)(O, { channel: t, narrow: n })
             : h
               ? (0, l.jsx)(j, { channel: t, clearUnreadsNotice: m })
-              : g.visible
-                ? (0, l.jsx)(N.KT, { onDismiss: g.dismiss })
-                : d && u.includes(U.i.OPT_IN_CHANNEL)
-                  ? (0, l.jsx)(b.A, { channel: t, narrow: n })
-                  : null;
+              : d && u.includes(G.i.OPT_IN_CHANNEL)
+                ? (0, l.jsx)(b.A, { channel: t, narrow: n })
+                : null;
 });
