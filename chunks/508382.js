@@ -15,115 +15,116 @@ function A(e) {
         {
             focus: n = "none",
             returnFocusElement: o,
-            ownerDocument: A = document,
-            open: h,
-            onOpenChange: f,
-            id: I,
-            className: p,
-            reference: T,
-            overrideTargetRect: m,
-            placement: g = "bottom",
-            spacing: S = 8,
-            alignmentSpacing: N,
-            autoFlip: C = !0,
-            crossAccessFlip: O = !0,
-            autoShift: R = !0,
-            strategy: L = "fixed",
-            portal: y = !0,
-            blockPointerEvents: D = !1,
-            children: v,
-            renderLayer: b,
+            dismissOnEscapeKey: A = !0,
+            ownerDocument: h = document,
+            open: f,
+            onOpenChange: I,
+            id: p,
+            className: T,
+            reference: m,
+            overrideTargetRect: g,
+            placement: S = "bottom",
+            spacing: N = 8,
+            alignmentSpacing: C,
+            autoFlip: O = !0,
+            crossAccessFlip: R = !0,
+            autoShift: L = !0,
+            strategy: y = "fixed",
+            portal: D = !0,
+            blockPointerEvents: v = !1,
+            children: b,
+            renderLayer: M,
             viewportPadding: P = 8,
-            shiftPadding: M,
-            maxHeight: U,
-            trigger: w = "click",
-            hoverDelay: G = 100,
-            autoUpdate: x = !1,
+            shiftPadding: U,
+            maxHeight: w,
+            trigger: G = "click",
+            hoverDelay: x = 100,
+            autoUpdate: k = !1,
         } = e,
-        k = r.useRef(o ?? null);
+        F = r.useRef(o ?? null);
     r.useLayoutEffect(() => {
-        k.current = o ?? null;
+        F.current = o ?? null;
     }, [o]);
-    let F = r.useMemo(() => {
-            let e = [(0, a.cY)({ mainAxis: S, alignmentAxis: N })];
+    let B = r.useMemo(() => {
+            let e = [(0, a.cY)({ mainAxis: N, alignmentAxis: C })];
             return (
-                C && e.push((0, a.UU)({ crossAxis: O, padding: P, boundary: A.body })),
-                R && e.push((0, a.BN)({ padding: M ?? P, limiter: (0, a.ER)(), boundary: A.body })),
+                O && e.push((0, a.UU)({ crossAxis: R, padding: P, boundary: h.body })),
+                L && e.push((0, a.BN)({ padding: U ?? P, limiter: (0, a.ER)(), boundary: h.body })),
                 e.push((0, a.jD)({ strategy: "referenceHidden" })),
-                null != U &&
+                null != w &&
                     e.push(
                         (0, a.Ej)({
                             padding: P,
-                            boundary: A.body,
+                            boundary: h.body,
                             apply(e) {
                                 let { availableHeight: t, elements: n } = e,
-                                    i = Math.min(U, t);
+                                    i = Math.min(w, t);
                                 n.floating.style.setProperty("--custom-floating-layer-max-height", `${i}px`);
                             },
                         }),
                     ),
                 e
             );
-        }, [S, N, C, R, P, M, O, A, U]),
-        B = (0, s.fI)(),
+        }, [N, C, O, L, P, U, R, h, w]),
+        V = (0, s.fI)(),
         {
-            refs: V,
-            floatingStyles: H,
-            placement: j,
-            middlewareData: W,
-            update: Y,
-            context: K,
+            refs: H,
+            floatingStyles: j,
+            placement: W,
+            middlewareData: Y,
+            update: K,
+            context: $,
         } = (0, s.we)({
-            nodeId: B,
-            placement: g,
-            open: h,
-            onOpenChange: f,
-            strategy: L,
-            middleware: F,
-            whileElementsMounted: x
+            nodeId: V,
+            placement: S,
+            open: f,
+            onOpenChange: I,
+            strategy: y,
+            middleware: B,
+            whileElementsMounted: k
                 ? (e, t, n) =>
                       (0, l.ll)(e, t, n, {
-                          ancestorScroll: null == m,
-                          ancestorResize: null == m,
-                          layoutShift: null == m,
+                          ancestorScroll: null == g,
+                          ancestorResize: null == g,
+                          layoutShift: null == g,
                       })
                 : void 0,
         });
     r.useLayoutEffect(() => {
-        null != m ? V.setPositionReference({ getBoundingClientRect: () => m }) : null != T && V.setReference(T);
-    }, [V, m, T]);
-    let $ = (0, s.s9)(K),
-        z = (0, s.Mk)(K, { restMs: G, delay: { open: G, close: 0 }, enabled: "hover" === w, handleClose: (0, s.iB)() }),
-        { getReferenceProps: X, getFloatingProps: q } = (0, s.bv)([$, z]),
-        Z = W.hide?.referenceHidden ? "hidden" : "visible",
-        Q = y ? c.sM : r.Fragment,
-        J = r.useMemo(() => ({ focus: n }), [n]);
+        null != g ? H.setPositionReference({ getBoundingClientRect: () => g }) : null != m && H.setReference(m);
+    }, [H, g, m]);
+    let z = (0, s.s9)($, { escapeKey: A }),
+        X = (0, s.Mk)($, { restMs: x, delay: { open: x, close: 0 }, enabled: "hover" === G, handleClose: (0, s.iB)() }),
+        { getReferenceProps: q, getFloatingProps: Z } = (0, s.bv)([z, X]),
+        Q = Y.hide?.referenceHidden ? "hidden" : "visible",
+        J = D ? c.sM : r.Fragment,
+        ee = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            v({ ref: V.setReference, props: X() }),
+            b({ ref: H.setReference, props: q() }),
             (0, i.jsx)(s.$c, {
-                id: B,
+                id: V,
                 children:
-                    h &&
-                    (0, i.jsxs)(Q, {
-                        ownerDocument: A,
+                    f &&
+                    (0, i.jsxs)(J, {
+                        ownerDocument: h,
                         children: [
-                            D ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
+                            v ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
                             ((t = (0, i.jsx)("div", {
-                                id: I,
-                                className: d()(p, u.q),
+                                id: p,
+                                className: d()(T, u.q),
                                 [_]: !0,
-                                style: { ...H, visibility: Z },
-                                ref: V.setFloating,
-                                ...q(),
+                                style: { ...j, visibility: Q },
+                                ref: H.setFloating,
+                                ...Z(),
                                 children: (0, i.jsx)(E.Provider, {
-                                    value: J,
-                                    children: b({ placement: j, update: Y, hidden: "hidden" === Z, shift: W.shift }),
+                                    value: ee,
+                                    children: M({ placement: W, update: K, hidden: "hidden" === Q, shift: Y.shift }),
                                 }),
                             })),
                             "none" === n
                                 ? t
-                                : (0, i.jsx)(s.s3, { context: K, modal: "modal" === n, returnFocus: k, children: t })),
+                                : (0, i.jsx)(s.s3, { context: $, modal: "modal" === n, returnFocus: F, children: t })),
                         ],
                     }),
             }),

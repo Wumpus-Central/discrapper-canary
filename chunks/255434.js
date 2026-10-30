@@ -97,6 +97,7 @@ function I(e) {
     return (0, i.jsx)(o.Ow, {
         className: c.BM,
         open: n,
+        dismissOnEscapeKey: !1,
         spacing: m,
         placement: L,
         reference: y,
