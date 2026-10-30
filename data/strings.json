@@ -1772,6 +1772,8 @@
   "PSdo+w": "I couldn’t restore that version. Try again in a moment.",
   "qqlUiW": "Restoring your previous version…",
   "M4KI5F": "Loading…",
+  "MLgoex": "In use by {appName}",
+  "SY6j5V": "In use by {appName} and {count, plural,one {# other app}other {# other apps}",
   "1vVBAw": "This app will become the landing experience when people join the channel.",
   "d7EeAm": "Couldn't pin your app to that voice channel. Try again, or do it from the channel's settings.",
   "peOi1H": "Voice channel",

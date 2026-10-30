@@ -1,4 +1,4 @@
-n.d(t, { A: () => O, e: () => y });
+n.d(t, { A: () => x, e: () => y });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -39,6 +39,10 @@ function R(e) {
     return (0, i.jsx)(r, { className: s()(v.hU, { [v.kV]: n }), ...l });
 }
 function O(e) {
+    let { accessory: t, enlarged: n = !1, children: l } = e;
+    return null == t ? l : (0, i.jsxs)("div", { className: s()(v.Bs, { [v.F5]: n }), children: [l, t] });
+}
+function x(e) {
     let {
             quality: t,
             lastPing: n,
@@ -49,27 +53,28 @@ function O(e) {
             childrenAsSubtitle: d,
             connectionStatusTextVariant: I,
             hasVideo: S,
+            statusAccessory: C,
         } = e,
-        C = l.useRef(null),
-        _ = r === T.S7L.RTC_CONNECTED,
-        D = l.useCallback((e) => (0, i.jsx)(E.A, { ...e, channelId: u }), [u]),
-        { connectionStatus: O, connectionStatusText: x } = m.A.getStatus(r, S),
-        L = (0, g.KN)("RTCConnectionStatus");
+        _ = l.useRef(null),
+        D = r === T.S7L.RTC_CONNECTED,
+        x = l.useCallback((e) => (0, i.jsx)(E.A, { ...e, channelId: u }), [u]),
+        { connectionStatus: L, connectionStatusText: w } = m.A.getStatus(r, S),
+        U = (0, g.KN)("RTCConnectionStatus");
     return (0, i.jsxs)("div", {
         className: v.pe,
         children: [
             (0, i.jsx)("div", {
                 className: s()(v.yH, M[t], a),
-                ref: C,
+                ref: _,
                 children: (0, i.jsx)(c.Y, {
-                    targetElementRef: C,
-                    renderPopout: D,
+                    targetElementRef: _,
+                    renderPopout: x,
                     position: "top",
                     children: (e) => {
                         let { onClick: l } = e;
                         return (0, i.jsxs)(i.Fragment, {
                             children: [
-                                _ &&
+                                D &&
                                     (0, i.jsx)(h.m, {
                                         text: t !== T.bFR.UNKNOWN && null != n ? `${n.toFixed(0)} ms` : null,
                                         children: (0, i.jsx)(f.D, {
@@ -83,21 +88,26 @@ function O(e) {
                                 (0, i.jsxs)("div", {
                                     className: v.ei,
                                     children: [
-                                        d && L
+                                        d && U
                                             ? null
-                                            : (0, i.jsx)(f.D, {
-                                                  onClick: (e) => {
-                                                      ((0, p.X)(A.A.RTC_PANEL, p.O.CONNECTION_STATUS), l(e));
-                                                  },
-                                                  children: (0, i.jsx)(N, {
-                                                      text: x,
-                                                      textVariant: I,
-                                                      hasVideo: S,
-                                                      className: y[O],
-                                                      hasConnectedChannel: null != u,
+                                            : (0, i.jsx)(O, {
+                                                  accessory: C,
+                                                  children: (0, i.jsx)(f.D, {
+                                                      onClick: (e) => {
+                                                          ((0, p.X)(A.A.RTC_PANEL, p.O.CONNECTION_STATUS), l(e));
+                                                      },
+                                                      children: (0, i.jsx)(N, {
+                                                          text: w,
+                                                          textVariant: I,
+                                                          hasVideo: S,
+                                                          className: y[L],
+                                                          hasConnectedChannel: null != u,
+                                                      }),
                                                   }),
                                               }),
-                                        d ? o : null,
+                                        d
+                                            ? (0, i.jsx)(O, { accessory: U ? C : null, enlarged: !0, children: o })
+                                            : null,
                                     ],
                                 }),
                             ],

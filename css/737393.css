@@ -110,6 +110,28 @@
     color: var(--text-default)
 }
 
+.indicator__3e1b1 {
+    align-items: center;
+    border: 1px solid var(--icon-subtle);
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 12px;
+    justify-content: center;
+    width: 12px
+}
+
+.dot__3e1b1,
+.indicator__3e1b1 {
+    border-radius: 50%
+}
+
+.dot__3e1b1 {
+    background-color: var(--icon-subtle);
+    height: 6px;
+    width: 6px
+}
+
 .root_e373d2 {
     border-start-end-radius: 8px;
     border-start-start-radius: 8px;
@@ -140,4 +162,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=366396.d1a70343cd5c368f.css.map*/
+/*# sourceMappingURL=737393.c46de3bc9be8f30f.css.map*/

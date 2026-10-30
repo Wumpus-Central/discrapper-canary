@@ -13,4 +13,6 @@ t.exports = {
     mq: "rtcConnectionQualityAverage__06d62",
     yA: "rtcConnectionQualityBad__06d62",
     pe: "rtcConnectionStatusWrapper__06d62",
+    Bs: "statusLine__06d62",
+    F5: "enlargedStatusLine__06d62",
 };
