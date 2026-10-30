@@ -1,4 +1,4 @@
-n.d(t, { nX: () => p, kP: () => A, yE: () => E, IB: () => v, jA: () => S, fr: () => N, K8: () => j });
+n.d(t, { IB: () => j, K8: () => f, fr: () => N, jA: () => S, kP: () => v, nX: () => A, sm: () => E, yE: () => p });
 var r = n(636537),
     a = n(73153),
     s = n(308528),
@@ -7,55 +7,30 @@ var r = n(636537),
     c = n(223863),
     o = n(734057),
     u = n(174459),
-    d = n(403362);
-let m = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
-    h = {
-        voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 },
-        messages: { numMessagesSent: 0, numMessagesSentPercentile: 0 },
-        guilds: { guilds: [] },
-        emojis: { numEmojisSent: 0, numEmojisSentPercentile: 0, emojis: [] },
-        games: {
-            totalGamesPlayed: 0,
-            totalGamesPlayedPercentile: 0,
-            games: [],
-            totalDaysPlayed: 0,
-            totalDaysPlayedPercentile: 0,
-        },
-        sidekick: null,
-        users: [],
-        power: { powerLevel: 0, powerLevelPercentile: 0 },
-    };
-var x = n(407905),
-    g = n(719718),
-    f = n(652215);
-function j() {
+    d = n(403362),
+    m = n(148295),
+    h = n(407905),
+    x = n(719718),
+    g = n(652215);
+function f() {
     return a.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" });
 }
-function v(e, t) {
+function j(e, t) {
     return a.h.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait: e, optionId: t });
 }
-function A() {
+function v() {
     return a.h.dispatch({ type: "CHECKPOINT_RESET_EDITED_CHARACTER" });
 }
-async function p(e) {
-    (g.A.initializeIfNeeded(), a.h.dispatch({ type: "CHECKPOINT_FETCH_START" }));
+async function A(e) {
+    (x.A.initializeIfNeeded(), a.h.dispatch({ type: "CHECKPOINT_FETCH_START" }));
     try {
-        let { body: t } = await r.Bo.get({ url: f.Rsh.CHECKPOINT, rejectWithError: !0 });
+        let { body: t } = await r.Bo.get({ url: g.Rsh.CHECKPOINT, rejectWithError: !0 });
         if (null != e)
             return (
                 a.h.dispatch({
                     type: "CHECKPOINT_FETCH_SUCCESS",
-                    stats: (function (e) {
-                        switch (e) {
-                            case 0:
-                                return m;
-                            case 1:
-                                return null;
-                            case 2:
-                                return h;
-                        }
-                    })(e),
-                    globalStats: (0, x._R)(t.global_stats),
+                    stats: (0, m.g)(e),
+                    globalStats: (0, h._R)(t.global_stats),
                     character: null,
                 }),
                 !0
@@ -63,8 +38,8 @@ async function p(e) {
         return (
             a.h.dispatch({
                 type: "CHECKPOINT_FETCH_SUCCESS",
-                stats: null != t.stats ? (0, x.BF)(t.stats) : null,
-                globalStats: (0, x._R)(t.global_stats),
+                stats: null != t.stats ? (0, h.BF)(t.stats) : null,
+                globalStats: (0, h._R)(t.global_stats),
                 character: t.character,
             }),
             !0
@@ -73,11 +48,11 @@ async function p(e) {
         return (a.h.dispatch({ type: "CHECKPOINT_FETCH_FAILED" }), !1);
     }
 }
-async function E(e) {
+async function p(e) {
     a.h.dispatch({ type: "CHECKPOINT_COMPLETE_START" });
     try {
         return (
-            await r.Bo.post({ url: f.Rsh.CHECKPOINT_COMPLETE, body: e, rejectWithError: !0 }),
+            await r.Bo.post({ url: g.Rsh.CHECKPOINT_COMPLETE, body: e, rejectWithError: !0 }),
             a.h.dispatch({ type: "CHECKPOINT_COMPLETE_SUCCESS", character: e }),
             !0
         );
@@ -85,11 +60,23 @@ async function E(e) {
         return (a.h.dispatch({ type: "CHECKPOINT_COMPLETE_FAILED" }), !1);
     }
 }
+async function E() {
+    a.h.dispatch({ type: "CHECKPOINT_RESET_START" });
+    try {
+        return (
+            await r.Bo.del({ url: g.Rsh.CHECKPOINT_RESET, rejectWithError: !0 }),
+            a.h.dispatch({ type: "CHECKPOINT_RESET_SUCCESS" }),
+            !0
+        );
+    } catch {
+        return (a.h.dispatch({ type: "CHECKPOINT_RESET_FAILED" }), !1);
+    }
+}
 async function N(e, t) {
     let n = await s.A.getOrEnsurePrivateChannel(t),
         r = o.A.getChannel(n);
     if (null == r) throw Error("Failed to open private channel");
-    u.default.track(f.HAw.CHECKPOINT_SIDEKICK_MESSAGE_SENT, { other_user_id: t });
+    u.default.track(g.HAw.CHECKPOINT_SIDEKICK_MESSAGE_SENT, { other_user_id: t });
     let a = i.Ay.parse(r, e);
     return l.A.sendMessage(r.id, a, !1, { location: "checkpoint-sidekick" });
 }

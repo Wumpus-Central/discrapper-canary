@@ -4969,6 +4969,22 @@
     }
   },
   {
+    "name": "2026-10-build-a-bear-qa",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-bulk-nitro-gifting-discounts",
     "kind": "user",
     "defaultConfig": {

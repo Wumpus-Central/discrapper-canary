@@ -1,4 +1,4 @@
-n.d(t, { FX: () => a, Hd: () => o, w: () => s, wV: () => d });
+n.d(t, { FX: () => a, Hd: () => o, TX: () => u, w: () => s, wV: () => d });
 var i = n(945810);
 let r = (0, i.mj)({
     name: "2026-09-build-a-bear",
@@ -26,5 +26,15 @@ function o(e) {
 }
 function d(e) {
     let { enabled: t } = l.getConfig({ location: e });
+    return t;
+}
+let c = (0, i.mj)({
+    name: "2026-10-build-a-bear-qa",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+function u(e) {
+    let { enabled: t } = c.useConfig({ location: e });
     return t;
 }
