@@ -5908,39 +5908,41 @@ function un(e) {
     });
 }
 function ui(e) {
-    let t,
-        { profileOwner: n, guildId: r } = e,
-        o = l.useRef(null);
-    (0, s_.i)({ containerRef: o, itemType: "WISHLIST_ITEM" });
-    let { wishlistId: u, currentUser: d } = (0, a.cf)([et.A, y.default], () => ({
-            wishlistId: et.A.getFirstWishlistId(n.id),
+    var t;
+    let n,
+        { profileOwner: r, guildId: o } = e,
+        u = l.useRef(null);
+    (0, s_.i)({ containerRef: u, itemType: "WISHLIST_ITEM" });
+    let { wishlistId: d, currentUser: c } = (0, a.cf)([et.A, y.default], () => ({
+            wishlistId: et.A.getFirstWishlistId(r.id),
             currentUser: y.default.getCurrentUser(),
         })),
-        { analyticsLocations: c } = (0, b.Ay)(),
-        g = (0, on.A)(() =>
-            (0, rH.aS)()?.enabled === !0 ? et.A.getProfileReadStateSectionAckedAt(n.id, oh.o.WISHLIST) : null,
+        { analyticsLocations: g } = (0, b.Ay)(),
+        f = (0, on.A)(() =>
+            (0, rH.aS)()?.enabled === !0 ? et.A.getProfileReadStateSectionAckedAt(r.id, oh.o.WISHLIST) : null,
         ),
-        f =
-            ((t = (0, rH.bq)()),
+        m =
+            ((t = r.id),
+            (n = (0, rH.bq)()),
             (0, a.bG)(
                 [et.A, y.default],
                 () => {
-                    if (null == t || n.id === y.default.getCurrentUser()?.id) return !1;
-                    let e = et.A.getFirstWishlistId(n.id),
-                        i = null != e ? et.A.getWishlistSettings(n.id, e) : null,
-                        l = et.A.getProfileReadStateSectionAckedAt(n.id, oh.o.WISHLIST);
+                    if (null == n || null == t || t === y.default.getCurrentUser()?.id) return !1;
+                    let e = et.A.getFirstWishlistId(t),
+                        i = null != e ? et.A.getWishlistSettings(t, e) : null,
+                        l = et.A.getProfileReadStateSectionAckedAt(t, oh.o.WISHLIST);
                     return (0, op.uM)(i, l);
                 },
-                [n.id, t],
+                [t, n],
             ));
     l.useEffect(() => {
-        f && oA(n.id);
-    }, [n.id, f]);
-    let m = sw(n.id),
-        { wishlist: p, wasFetched: h, error: x } = (0, Y.fw)({ wishlistId: u, userId: n.id }),
-        [A, I] = l.useState(!1);
-    (h && !A && I(!0), (0, oc.A)(p));
-    let v = (function (e) {
+        m && oA(r.id);
+    }, [r.id, m]);
+    let p = sw(r.id),
+        { wishlist: h, wasFetched: x, error: A } = (0, Y.fw)({ wishlistId: d, userId: r.id }),
+        [I, v] = l.useState(!1);
+    (x && !I && v(!0), (0, oc.A)(h));
+    let C = (function (e) {
             let { wishlist: t, profileOwner: n, currentUser: i } = e,
                 r = n.id === i?.id,
                 s = l.useMemo(() => (t?.userId != null ? [t.userId] : []), [t]),
@@ -5961,70 +5963,70 @@ function ui(e) {
                 () => (0, r9.uniq)([...u, ...d, ...c, ...g, ...(r ? [...f, ...m, ...p] : [])].filter(ef.Vq)),
                 [u, d, c, g, f, m, p, r],
             );
-        })({ wishlist: p, profileOwner: n, currentUser: d }),
-        C = (0, on.A)(() => (0, a6.A)()),
-        E = l.useCallback(() => {
-            (0, tL.Cz)({ analyticsLocations: c, analyticsSource: j.A.USER_PROFILE_WISHLIST });
-        }, [c]),
-        S = l.useCallback((e) => {
+        })({ wishlist: h, profileOwner: r, currentUser: c }),
+        E = (0, on.A)(() => (0, a6.A)()),
+        S = l.useCallback(() => {
+            (0, tL.Cz)({ analyticsLocations: g, analyticsSource: j.A.USER_PROFILE_WISHLIST });
+        }, [g]),
+        N = l.useCallback((e) => {
             (0, ou.G)({ applicationId: e });
         }, []),
-        N = l.useCallback((e) => {
+        k = l.useCallback((e) => {
             ((0, iL.M)(), (0, ou.default)({ applicationId: e }));
         }, []),
-        { handleToggle: k } = (0, ao.c)({
-            userId: d?.id,
+        { handleToggle: T } = (0, ao.c)({
+            userId: c?.id,
             skuId: iG.pe.TIER_2,
             nuxGraphic: or.g,
             onNuxShow: oi.D,
             location: j.A.USER_PROFILE_WISHLIST,
         });
-    if (null == d || null != x) return null;
-    let T = null == p || 0 === p.items.length;
+    if (null == c || null != A) return null;
+    let P = null == h || 0 === h.items.length;
     return (0, i.jsxs)(sg, {
-        scrollerRef: o,
-        className: s()({ [o8.XG]: !T }),
+        scrollerRef: u,
+        className: s()({ [o8.XG]: !P }),
         fade: !0,
         children: [
-            T
+            P
                 ? (0, i.jsx)(ut, {
-                      showEditingControls: m,
-                      socialLayerStorefrontApplicationIds: v,
-                      handleOpenShop: E,
-                      handleOpenGameShop: N,
-                      handleOpenGameShopMouseDown: S,
+                      showEditingControls: p,
+                      socialLayerStorefrontApplicationIds: C,
+                      handleOpenShop: S,
+                      handleOpenGameShop: k,
+                      handleOpenGameShopMouseDown: N,
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(aM, { scrollerRef: o }),
+                          (0, i.jsx)(aM, { scrollerRef: u }),
                           (0, i.jsx)(un, {
-                              isOwner: d?.id === n.id,
-                              showEditingControls: m,
-                              profileOwner: n,
-                              wishlist: p,
-                              socialLayerStorefrontApplicationIds: v,
-                              handleOpenShop: E,
-                              handleOpenGameShop: N,
-                              handleAddNitroToWishlist: (0, og.C3)(p, iG.pe.TIER_2) ? void 0 : k,
+                              isOwner: c?.id === r.id,
+                              showEditingControls: p,
+                              profileOwner: r,
+                              wishlist: h,
+                              socialLayerStorefrontApplicationIds: C,
+                              handleOpenShop: S,
+                              handleOpenGameShop: k,
+                              handleAddNitroToWishlist: (0, og.C3)(h, iG.pe.TIER_2) ? void 0 : T,
                           }),
                           (0, i.jsx)(ok, {
-                              items: p.items,
-                              profileOwner: n,
-                              guildId: r,
-                              showEditingControls: m,
-                              ackedAt: g,
+                              items: h.items,
+                              profileOwner: r,
+                              guildId: o,
+                              showEditingControls: p,
+                              ackedAt: f,
                           }),
                       ],
                   }),
-            m &&
+            p &&
                 (0, i.jsx)(oJ, {
-                    user: n,
-                    guildId: r,
-                    wishlist: p,
-                    hasFetchedWishlist: A,
-                    analyticsLocations: c,
-                    impressionSessionId: C,
-                    className: T ? o8._E : o8.HZ,
+                    user: r,
+                    guildId: o,
+                    wishlist: h,
+                    hasFetchedWishlist: I,
+                    analyticsLocations: g,
+                    impressionSessionId: E,
+                    className: P ? o8._E : o8.HZ,
                 }),
         ],
     });
