@@ -1,10 +1,10 @@
 .tab_c652e0 {
     align-items: center;
-    background-color: var(--background-surface-higher);
+    background: var(--custom-channel-tab-background);
     box-sizing: border-box;
     display: flex;
     flex: 1 1 0;
-    max-width: 200px;
+    max-width: calc(200px + var(--space-4));
     min-width: 0;
     position: relative;
     -webkit-app-region: no-drag;
@@ -13,7 +13,7 @@
 }
 
 .tab_c652e0:not(.tabActive_c652e0):hover {
-    background-image: linear-gradient(var(--interactive-background-hover), var(--interactive-background-hover));
+    background: linear-gradient(var(--interactive-background-hover), var(--interactive-background-hover)), var(--custom-channel-tab-background);
     color: var(--interactive-text-hover)
 }
 
@@ -33,7 +33,7 @@
 }
 
 .tabActive_c652e0 {
-    background-image: linear-gradient(var(--interactive-background-active), var(--interactive-background-active));
+    background: linear-gradient(var(--interactive-background-active), var(--interactive-background-active)), var(--custom-channel-tab-background);
     color: var(--interactive-text-active)
 }
 
@@ -88,20 +88,22 @@
 }
 
 .channelNameFade_c652e0 {
-    background-image: linear-gradient(to right, transparent, var(--background-surface-higher));
+    background: var(--custom-channel-tab-background);
     bottom: 0;
     inset-inline-end: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000);
+    mask-image: linear-gradient(90deg, transparent, #000);
     position: absolute;
     top: 0;
     width: var(--space-8)
 }
 
 .tab_c652e0:not(.tabActive_c652e0):hover .channelNameFade_c652e0 {
-    background-image: linear-gradient(to right, transparent, var(--interactive-background-hover)), linear-gradient(to right, transparent, var(--background-surface-higher))
+    background: linear-gradient(var(--interactive-background-hover), var(--interactive-background-hover)), var(--custom-channel-tab-background)
 }
 
 .tabActive_c652e0 .channelNameFade_c652e0 {
-    background-image: linear-gradient(to right, transparent, var(--interactive-background-active)), linear-gradient(to right, transparent, var(--background-surface-higher))
+    background: linear-gradient(var(--interactive-background-active), var(--interactive-background-active)), var(--custom-channel-tab-background)
 }
 
 .closeButton_c652e0 {
@@ -193,15 +195,19 @@
 }
 
 .tabBar__97b44 {
+    --custom-channel-tab-background: var(--background-gradient-app-frame, var(--background-base-lowest));
     align-items: stretch;
-    background-color: var(--background-surface-higher);
+    background: var(--custom-channel-tab-background);
     display: flex;
     flex: 1 1 auto;
     height: var(--custom-app-top-bar-height);
     min-width: 0;
-    padding-inline-end: var(--space-40);
     position: relative;
     -webkit-app-region: drag
+}
+
+.refresh-fast-follow-guild-bg .tabBar__97b44 {
+    --custom-channel-tab-background: var(--background-gradient-app-frame, var(--app-frame-background))
 }
 
 .newTabButton__97b44 {
@@ -212,4 +218,4 @@
     -webkit-app-region: no-drag
 }
 
-/*# sourceMappingURL=c68eed001c9c9a13.css.map*/
+/*# sourceMappingURL=686e909333f2b4a4.css.map*/
