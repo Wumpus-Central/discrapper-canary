@@ -2,7 +2,7 @@ t.d(n, { A: () => no });
 var l = t(477900),
     r = t(582128),
     i = t(733004),
-    a = t(28640),
+    a = t(917310),
     u = t(292442),
     s = t(834730),
     o = t(791606),
@@ -612,9 +612,9 @@ function e9(e) {
     return (0, l.jsx)(u.tH, {
         fallbackRender: (e) => {
             let { error: t } = e;
-            return (0, l.jsx)(e7, { content: n, error: t });
+            return (0, l.jsx)(e4, { content: n, error: t });
         },
-        children: (0, l.jsx)(e4, {
+        children: (0, l.jsx)(e7, {
             content: n,
             parsed: t,
             allowJumboEmoji: r,
@@ -623,9 +623,9 @@ function e9(e) {
         }),
     });
 }
-function e4(e) {
+function e7(e) {
     let { content: n, parsed: t, allowJumboEmoji: u, hideSingleLinkContent: s, redactRestrictedContent: o } = e;
-    if (((0, eW.b)(null == t), null != t && "error" in t)) throw t.error;
+    if (((0, eW.bf)(null == t), null != t && "error" in t)) throw t.error;
     let c = t?.ast ?? e1,
         d = r.useMemo(
             () =>
@@ -688,7 +688,7 @@ function e4(e) {
         children: (0, l.jsx)(eH, { children: (0, l.jsx)(i.$, { nodes: h, renderers: e3 }) }, n),
     });
 }
-function e7(e) {
+function e4(e) {
     let { content: n, error: t } = e;
     return (
         r.useEffect(() => {
@@ -816,7 +816,7 @@ function no(e, n) {
         u = e?.content ?? null,
         s = (function (e, n) {
             let { enabled: t, formatInline: l } = n,
-                i = (0, eW.n)(t),
+                i = (0, eW.n9)(t),
                 u = (0, d.j)({ formatInline: l });
             return r.useMemo(() => {
                 if (!t || !i || null == e) return null;

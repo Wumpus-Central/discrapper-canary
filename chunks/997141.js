@@ -1,12 +1,12 @@
 t.d(n, { j: () => o });
-var a = t(28640),
+var a = t(849324),
     i = t(17928),
-    l = t(540999);
-let r = a.w4.ALL & ~a.w4.DEV_LINKS,
-    d = a.w4.ALL,
-    u = a.w4.QUOTES;
+    r = t(540999);
+let l = a.w.ALL & ~a.w.DEV_LINKS,
+    u = a.w.ALL,
+    d = a.w.QUOTES;
 function o(e) {
     let { formatInline: n } = e,
-        t = (0, i.bG)([l.A], () => l.A.isDeveloper, []) ? d : r;
-    return n ? t & ~u : t;
+        t = (0, i.bG)([r.A], () => r.A.isDeveloper, []) ? u : l;
+    return n ? t & ~d : t;
 }
