@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "659166";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "659180";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 659166, Version Hash: 8ea92de972067a0d987eabdda727930ed5a8d091`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 659180, Version Hash: 93951670c345c6a0638133a834088aed9005c71c`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -3278,7 +3278,7 @@ let rC = (0, rl.Fe)({
                 n.e("803001"),
                 n.e("460703"),
                 n.e("769450"),
-                n.e("708981"),
+                n.e("844659"),
                 n.e("572570"),
             ]).then(n.bind(n, 149180)),
         webpackId: 149180,
@@ -3514,7 +3514,7 @@ let rC = (0, rl.Fe)({
                 n.e("769450"),
                 n.e("34486"),
                 n.e("294817"),
-                n.e("708981"),
+                n.e("844659"),
                 n.e("433452"),
                 n.e("959275"),
             ]).then(n.bind(n, 522458)),
@@ -23976,7 +23976,7 @@ function O4(e) {
                     n.e("769450"),
                     n.e("34486"),
                     n.e("294817"),
-                    n.e("708981"),
+                    n.e("844659"),
                     n.e("433452"),
                     n.e("959275"),
                 ]).then(n.bind(n, 522458)));
@@ -26099,7 +26099,7 @@ let yh = "isHideDevBanner",
                     className: tf()(yA.Wz, yA.mr),
                     children: [
                         (0, b.jsx)(yE, { className: yA.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "659166" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "659180" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
