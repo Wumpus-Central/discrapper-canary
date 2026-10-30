@@ -72,6 +72,22 @@
     color: var(--text-muted)
 }
 
+.creator__8d39c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.creatorAvatar__8d39c {
+    flex: none
+}
+
+.creatorName__8d39c {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
 .itemDeleting__8d39c {
     opacity: .5;
     pointer-events: none
@@ -147,4 +163,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=8fd7a6e1a4ef01bb.css.map*/
+/*# sourceMappingURL=6ef40de270111847.css.map*/
