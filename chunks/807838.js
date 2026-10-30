@@ -1,1 +1,0 @@
-e.exports = s.p + "dbee2bca30941847.wasm";

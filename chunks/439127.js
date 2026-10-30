@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657453";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657459";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657453, Version Hash: ea1c7f6d9ccc920aba18d5b66e0c4ba013283b82`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657459, Version Hash: f827947d94f5c0a87128ed347d98420288d6c13b`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26186,7 +26186,7 @@ let y_ = "isHideDevBanner",
                     className: tf()(yu.Wz, yu.mr),
                     children: [
                         (0, b.jsx)(yc, { className: yu.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657453" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657459" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -53772,7 +53772,7 @@ let Yc = (0, tZ.Fe)({
             n.e("910167"),
             n.e("70379"),
             n.e("417333"),
-            n.e("70690"),
+            n.e("97430"),
             n.e("587618"),
             n.e("424199"),
             n.e("342551"),
@@ -53791,7 +53791,7 @@ let Yc = (0, tZ.Fe)({
             n.e("338439"),
             n.e("62052"),
             n.e("503376"),
-            n.e("948772"),
+            n.e("616159"),
             n.e("494678"),
             n.e("801856"),
             n.e("311930"),
@@ -56005,11 +56005,11 @@ let KR = (0, rl.Fe)({
                 n.e("562772"),
                 n.e("734187"),
                 n.e("647562"),
-                n.e("70690"),
+                n.e("97430"),
                 n.e("587618"),
                 n.e("595429"),
                 n.e("338439"),
-                n.e("948772"),
+                n.e("616159"),
                 n.e("731336"),
                 n.e("454048"),
                 n.e("993103"),
