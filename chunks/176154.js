@@ -33,6 +33,7 @@ var S = n(152007),
     isActivityFocused: !1,
     isVoicePanelFullscreen: () => t().voicePanelsFullscreen.size > 0,
     isAnyVoicePanelOpen: () => t().voicePanelsOpened.size > 0,
+    voicePanelsWithDock: new Set(),
     voicePanelsFullscreen: new Set(),
     voicePanelsOpened: new Set(),
     voicePanelsPIP: new Set(),
@@ -109,6 +110,15 @@ var S = n(152007),
                     i.delete(t);
                 }
                 return { ...e, voicePanelsPIP: i };
+            });
+        });
+    },
+    setChannelPanelWithDock(t, n) {
+        (0, R.r)(() => {
+            e((e) => {
+                if (e.voicePanelsWithDock.has(t) === n) return e;
+                let i = new Set(e.voicePanelsWithDock);
+                return (n ? i.add(t) : i.delete(t), { ...e, voicePanelsWithDock: i });
             });
         });
     },
