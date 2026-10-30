@@ -201,7 +201,7 @@ function X(e) {
         g = n.useRef(null),
         b = n.useRef(null);
     (0, c.j)(!E);
-    let v = (0, K.H)({ location: "BalanceWidgetMenu" }),
+    let v = (0, K.Hy)({ location: "BalanceWidgetMenu" }),
         O = n.useCallback(() => {
             let e = !E;
             (e &&

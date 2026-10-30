@@ -1713,7 +1713,7 @@ function ll(e) {
             (R(), K());
         }, [R, K]),
         Y = t1.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
-        Q = (0, nm.H)({ location: "UserProfileAccountPopout" }),
+        Q = (0, nm.Hy)({ location: "UserProfileAccountPopout" }),
         $ = (0, eS.FX)("UserProfileAccountPopout"),
         X = (0, tU.A)((e) => e.shouldScrollToOrbsMenuItem),
         [J, ee] = (0, tw.kn)(
@@ -2891,7 +2891,7 @@ function iG(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iF.A)("1793384838894", !0);
+        let e = (0, iF.A)("1793385005750", !0);
         t =
             null != e
                 ? ew.intl.formatToPlainString(ew.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -4266,7 +4266,7 @@ function iQ() {
             );
         }),
         en = { avatar: [], settings: [] },
-        el = (0, nm.H)({ location: "Account" }) && !W,
+        el = (0, nm.Hy)({ location: "Account" }) && !W,
         ec = ed.A.useIsEligible(),
         em = eu.A.coachmarkDismissibleContent,
         eh = (0, P.d)({ location: "AccountCoachmark" }),

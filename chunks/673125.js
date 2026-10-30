@@ -1,12 +1,12 @@
 l.d(t, { Ay: () => _, EB: () => C, Y0: () => m });
-var a,
-    n,
+var n,
+    a,
     s = l(17928),
     i = l(73153),
     r = l(287809),
     c = l(124861),
     o = l(12510);
-function u(e) {
+function h(e) {
     return {
         achievementIdentifier: e.achievement_identifier,
         achievementDefinitionId: String(e.achievement_definition_id),
@@ -15,7 +15,7 @@ function u(e) {
         achievementStatus: e.status,
     };
 }
-let h = new Set([null, c.x.NONE, c.x.IN_PROGRESS, c.x.ELIGIBLE, c.x.COMPLETED]);
+let u = new Set([null, c.x.NONE, c.x.IN_PROGRESS, c.x.ELIGIBLE, c.x.COMPLETED]);
 function d() {
     return {
         challenges: [],
@@ -33,9 +33,9 @@ function d() {
 }
 var m =
         588245 != l.j
-            ? (((a = {}).NEW_ACHIEVEMENT = "new_achievement"), (a.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), a)
+            ? (((n = {}).NEW_ACHIEVEMENT = "new_achievement"), (n.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), n)
             : null,
-    C = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
+    C = (((a = {}).CLAIM_CHALLENGE = "claim_challenge"), (a.FETCH_CHALLENGES = "fetch_challenges"), a);
 class E extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = d();
@@ -53,6 +53,7 @@ class E extends s.Ay.Store {
             CURRENT_USER_UPDATE: () => this.handleCurrentUserPremiumTypeChange(),
             UPDATE_CLIENT_PREMIUM_TYPE: () => this.handleCurrentUserPremiumTypeChange(),
             LOGIN_SUCCESS: () => this.handleReset(),
+            CONNECTION_OPEN: () => this.handleConnectionOpen(),
         });
     }
     initialize() {
@@ -71,6 +72,9 @@ class E extends s.Ay.Store {
     handleReset() {
         this.state = d();
     }
+    handleConnectionOpen() {
+        return !!this.state.hasFetchedChallenges && !this.state.isFetchingChallenges && ((0, o.Od)(), !1);
+    }
     handleOrbChallengesFetchStart(e) {
         let {} = e;
         ((this.state.isFetchingChallenges = !0), (this.state.fetchChallengesError = null));
@@ -81,7 +85,7 @@ class E extends s.Ay.Store {
     }
     handleOrbChallengesFetchSuccess(e) {
         let { response: t } = e;
-        ((this.state.challenges = t.achievements.map(u)),
+        ((this.state.challenges = t.achievements.map(h)),
             (this.state.orbRewardMultiplier = t.orb_multiplier),
             (this.state.nitroGatedOrbMultiplier = t.nitro_gated_orb_multiplier),
             this.setAchievementUnreadState({ has_unclaimed_achievements: t.has_unclaimed_achievements }),
@@ -109,7 +113,7 @@ class E extends s.Ay.Store {
         let { achievementIdentifier: t, response: l } = e;
         ((this.state.isClaimingChallengeMap[t] = !1),
             (this.state.claimChallengeErrorMap[t] = null),
-            (this.state.challenges = this.state.challenges.map((e) => (e.achievementIdentifier === t ? u(l) : e))));
+            (this.state.challenges = this.state.challenges.map((e) => (e.achievementIdentifier === t ? h(l) : e))));
     }
     handleOrbChallengeClaimFail(e) {
         let { achievementIdentifier: t, error: l } = e;
@@ -163,7 +167,7 @@ class E extends s.Ay.Store {
         return this.state.challenges;
     }
     get challengesForOrbWallet() {
-        return this.state.challenges.filter((e) => h.has(e.achievementStatus));
+        return this.state.challenges.filter((e) => u.has(e.achievementStatus));
     }
     get hasFetchedChallenges() {
         return this.state.hasFetchedChallenges;

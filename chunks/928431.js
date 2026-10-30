@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "658496";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "658502";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 658496, Version Hash: 526e04a045ec058b9886da062ae900d8a135328e`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 658502, Version Hash: 1e418ccc937ab2db34f46c571e5f86a24e79cc02`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26165,7 +26165,7 @@ let yE = "isHideDevBanner",
                     className: tf()(y_.Wz, y_.mr),
                     children: [
                         (0, b.jsx)(yu, { className: y_.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "658496" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "658502" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -51975,6 +51975,7 @@ class Wh extends eE.Ay.PersistedStore {
     n(456874),
     n(79858),
     n(997187),
+    n(673125),
     n(921955));
 var Wf = n(674378);
 let WI = "ActivityTrackingStore",
