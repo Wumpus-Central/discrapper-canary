@@ -179,7 +179,7 @@ let w = i.memo(function (e) {
             : h
               ? (0, l.jsx)(j, { channel: t, clearUnreadsNotice: m })
               : g.visible
-                ? (0, l.jsx)(N.KT, { onDismiss: g.dismiss })
+                ? (0, l.jsx)(N.KT, { channel: t, onDismiss: g.dismiss })
                 : d && u.includes(U.i.OPT_IN_CHANNEL)
                   ? (0, l.jsx)(b.A, { channel: t, narrow: n })
                   : null;

@@ -5254,7 +5254,7 @@ function sG(e) {
                             ? (0, i.jsx)("div", {
                                   className: nd.headerNotice,
                                   children: G.visible
-                                      ? (0, i.jsx)(Q.KT, { onDismiss: G.dismiss })
+                                      ? (0, i.jsx)(Q.KT, { channel: t, onDismiss: G.dismiss })
                                       : (0, i.jsx)(Y.A, { channel: t }),
                               })
                             : null,
