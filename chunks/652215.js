@@ -4960,6 +4960,7 @@ var rC =
         (eP.EMOJI_UPLOAD_STARTED = "emoji_upload_started"),
         (eP.EMOJI_UPLOAD_COMPLETED = "emoji_upload_completed"),
         (eP.EMOJI_FILE_RESIZED = "emoji_file_resized"),
+        (eP.DEFAULT_EMOJI_PACK_UPDATE = "default_emoji_pack_update"),
         (eP.STICKER_FILE_RESIZED = "sticker_file_resized"),
         (eP.STICKER_UPLOAD_STARTED = "sticker_upload_started"),
         (eP.STICKER_UPLOAD_COMPLETED = "sticker_upload_completed"),
