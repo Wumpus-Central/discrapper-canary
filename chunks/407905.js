@@ -1,72 +1,81 @@
-n.d(t, {
-    $p: () => g,
-    BF: () => N,
-    IH: () => p,
-    Kr: () => f,
+(n.d(t, {
+    $p: () => I,
+    BF: () => C,
+    IH: () => S,
+    Kr: () => p,
     XF: () => h,
-    _R: () => S,
+    _R: () => O,
     bD: () => u,
-    jr: () => v,
-    nb: () => j,
-    oL: () => x,
-    uO: () => E,
-    wj: () => d,
-    y7: () => A,
-    yQ: () => m,
-});
-var r = n(889227),
-    a = n(149790),
-    s = n(935208),
+    jr: () => m,
+    nb: () => T,
+    oL: () => f,
+    oW: () => _,
+    uO: () => N,
+    wj: () => E,
+    y7: () => g,
+    yQ: () => A,
+}),
+    n(134528),
+    n(947204));
+var i = n(889227),
+    r = n(149790),
+    a = n(935208),
+    s = n(240248),
     l = n(105292);
-let i = { hour: "numeric", minute: "2-digit", numberingSystem: "latn" },
-    c = /^[A-Za-z.\s]+$/,
-    o = /\s/g;
+let o = { hour: "numeric", minute: "2-digit", numberingSystem: "latn" },
+    d = /^[A-Za-z.\s]+$/,
+    c = /\s/g;
 function u(e) {
     return null == e || e < 50 ? null : Math.max(1, Math.ceil(100 - e));
 }
-function d(e) {
+function _(e) {
+    return Array.from((0, s.oN)(e))
+        .at(0)
+        ?.toLocaleUpperCase(l.intl.currentLocale);
+}
+function E(e) {
     return new Intl.NumberFormat(l.intl.currentLocale, { notation: "compact", compactDisplay: "long" }).format(e);
 }
-function m(e) {
+function A(e) {
     return e / 87765;
 }
 function h(e) {
     if (null == e) return null;
     let t = new Date();
     t.setUTCHours(e, 0, 0, 0);
-    let n = new Intl.DateTimeFormat(l.intl.currentLocale, i)
+    let n = new Intl.DateTimeFormat(l.intl.currentLocale, o)
             .formatToParts(t)
             .find((e) => "dayPeriod" === e.type)?.value,
-        r = null == n || c.test(n) ? i : { ...i, hourCycle: "h23" },
-        a = new Intl.DateTimeFormat(l.intl.currentLocale, r).format(t);
-    return { value: a.replace(o, ""), label: a };
-}
-function x(e) {
-    return e?.sidekick != null;
-}
-function g(e) {
-    return x(e) && (e?.users?.length ?? 0) > 0;
+        i = null == n || d.test(n) ? o : { ...o, hourCycle: "h23" },
+        r = new Intl.DateTimeFormat(l.intl.currentLocale, i).format(t);
+    return { value: r.replace(c, ""), label: r };
 }
 function f(e) {
-    return Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0;
+    return e?.sidekick != null;
 }
-function j(e) {
-    return Math.round(e?.messages?.numMessagesSent ?? 0) > 0;
-}
-function v(e) {
-    return (e?.guilds?.guilds.length ?? 0) > 0;
-}
-function A(e) {
-    return Math.round(e?.emojis?.numEmojisSent ?? 0) > 0 && (e?.emojis?.emojis.length ?? 0) > 0;
+function I(e) {
+    return f(e) && (e?.users?.length ?? 0) > 0;
 }
 function p(e) {
+    return Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0;
+}
+function T(e) {
+    return Math.round(e?.messages?.numMessagesSent ?? 0) > 0;
+}
+function m(e) {
+    return (e?.guilds?.guilds.length ?? 0) > 0;
+}
+function g(e) {
+    return Math.round(e?.emojis?.numEmojisSent ?? 0) > 0 && (e?.emojis?.emojis.length ?? 0) > 0;
+}
+function S(e) {
     return Math.round(e?.games?.totalGamesPlayed ?? 0) > 0 && (e?.games?.games.length ?? 0) > 0;
 }
-function E(e) {
+function N(e) {
     return Math.round(e?.games?.totalDaysPlayed ?? 0) > 0;
 }
-function N(e) {
-    let { voice: t, messages: n, guilds: s, emojis: l, games: i, sidekick: c, users: o, power: u } = e;
+function C(e) {
+    let { voice: t, messages: n, guilds: a, emojis: s, games: l, sidekick: o, users: d, power: c } = e;
     return {
         voice: {
             totalVoiceMinutes: t.total_voice_minutes,
@@ -74,8 +83,8 @@ function N(e) {
         },
         messages: { numMessagesSent: n.num_messages_sent, numMessagesSentPercentile: n.num_messages_sent_percentile },
         guilds: {
-            guilds: s.guilds.map((e) => ({
-                guild: (0, a.yF)(e.guild),
+            guilds: a.guilds.map((e) => ({
+                guild: (0, r.yF)(e.guild),
                 numMessagesSent: e.num_messages_sent,
                 numVoiceMinutes: e.num_voice_minutes,
                 numDaysInteracted: e.num_days_interacted,
@@ -83,78 +92,78 @@ function N(e) {
             })),
         },
         emojis: {
-            numEmojisSent: l.num_emojis_sent,
-            numEmojisSentPercentile: l.num_emojis_sent_percentile,
-            emojis: l.emojis,
+            numEmojisSent: s.num_emojis_sent,
+            numEmojisSentPercentile: s.num_emojis_sent_percentile,
+            emojis: s.emojis,
         },
         games: {
-            totalGamesPlayed: i.total_games_played,
-            totalGamesPlayedPercentile: i.total_games_played_percentile,
-            games: i.games.map((e) => {
+            totalGamesPlayed: l.total_games_played,
+            totalGamesPlayedPercentile: l.total_games_played_percentile,
+            games: l.games.map((e) => {
                 let { game: t, num_sessions: n } = e;
-                return { game: C(t), numSessions: n };
+                return { game: R(t), numSessions: n };
             }),
-            totalDaysPlayed: i.total_days_played,
-            totalDaysPlayedPercentile: i.total_days_played_percentile,
+            totalDaysPlayed: l.total_days_played,
+            totalDaysPlayedPercentile: l.total_days_played_percentile,
         },
         sidekick:
-            null != c
-                ? { user: new r.A(c.user), numMessagesSent: c.num_messages_sent, numVoiceMinutes: c.num_voice_minutes }
+            null != o
+                ? { user: new i.A(o.user), numMessagesSent: o.num_messages_sent, numVoiceMinutes: o.num_voice_minutes }
                 : null,
-        users: o.map((e) => {
+        users: d.map((e) => {
             let { user: t } = e;
-            return new r.A(t);
+            return new i.A(t);
         }),
-        power: { powerLevel: u.power_level, powerLevelPercentile: u.power_level_percentile },
+        power: { powerLevel: c.power_level, powerLevelPercentile: c.power_level_percentile },
     };
 }
-function S(e) {
-    let { voice: t, messages: n, guilds: r, emojis: s, games: l } = e;
+function O(e) {
+    let { voice: t, messages: n, guilds: i, emojis: a, games: s } = e;
     return {
         voice: { peakHourUtc: t.peak_hour_utc },
         messages: { numWordsSent: n.num_words_sent },
         guilds: {
-            guildsByMembers: r.guilds_by_members.map((e) => {
+            guildsByMembers: i.guilds_by_members.map((e) => {
                 let { guild: t } = e;
-                return (0, a.yF)(t);
+                return (0, r.yF)(t);
             }),
         },
         emojis: {
-            numEmojisSent: s.num_emojis_sent,
-            numReactionsAdded: s.num_reactions_added,
-            emojis: s.emojis.map((e) => {
+            numEmojisSent: a.num_emojis_sent,
+            numReactionsAdded: a.num_reactions_added,
+            emojis: a.emojis.map((e) => {
                 let { emoji: t } = e;
                 return t;
             }),
         },
         games: {
-            gamesByPlayers: l.games_by_players.map((e) => {
+            gamesByPlayers: s.games_by_players.map((e) => {
                 let { game: t } = e;
-                return C(t);
+                return R(t);
             }),
-            newGamesByPlayers: l.new_games_by_players.map((e) => {
+            newGamesByPlayers: s.new_games_by_players.map((e) => {
                 let { game: t } = e;
-                return C(t);
+                return R(t);
             }),
-            indieGamesByPlayers: l.indie_games_by_players.map((e) => {
+            indieGamesByPlayers: s.indie_games_by_players.map((e) => {
                 let { game: t } = e;
-                return C(t);
+                return R(t);
             }),
-            gamesByStreamWatchMinutes: l.games_by_stream_watch_minutes.map((e) => {
+            gamesByStreamWatchMinutes: s.games_by_stream_watch_minutes.map((e) => {
                 let { game: t } = e;
-                return C(t);
+                return R(t);
             }),
-            gamesByCoplayUsers: l.games_by_coplay_users.map((e) => {
+            gamesByCoplayUsers: s.games_by_coplay_users.map((e) => {
                 let { game: t } = e;
-                return C(t);
+                return R(t);
             }),
-            numUsersPlayedEveryDay: l.num_users_played_every_day,
+            numUsersPlayedEveryDay: s.num_users_played_every_day,
         },
     };
 }
-function C(e) {
+function R(e) {
     return {
-        id: s.default.cast(e.id),
+        id: a.default.cast(e.id),
         name: e.name,
         iconHash: e.icon_hash ?? void 0,
         bannerHash: e.banner_hash ?? void 0,

@@ -1,26 +1,24 @@
 (n.d(t, { Go: () => m, Le: () => S, R8: () => C, _S: () => O, b5: () => R, q6: () => I, sX: () => N, vF: () => g }),
-    n(321073),
-    n(134528),
-    n(947204));
+    n(321073));
 var i = n(35039),
     r = n(675970),
     a = n(155718),
     s = n(7584),
-    l = n(935208),
-    o = n(240248);
+    l = n(935208);
 n(835517);
-var d = n(957806),
-    c = n(627369);
+var o = n(957806),
+    d = n(627369);
 n(399667);
-var u = n(817379),
-    _ = n(142617),
+var c = n(817379),
+    u = n(142617),
+    _ = n(407905),
     E = n(309913),
     A = n(478718),
     h = n(128400),
     f = n(105292);
 function I(e) {
     var t, n;
-    return (0, _.wV)("transformCheckpoint2026CardComponent") && (null != e.character || null != e.stats)
+    return (0, u.wV)("transformCheckpoint2026CardComponent") && (null != e.character || null != e.stats)
         ? {
               version: e.version,
               character:
@@ -107,15 +105,15 @@ function m(e, t, n) {
                       powerLevelPercentile: n.power?.powerLevelPercentile ?? 0,
                   })
                 : void 0,
-        cardColorPalette: (0, c.o)(t),
+        cardColorPalette: (0, d.o)(t),
     };
 }
 function g(e, t) {
     let n = [];
     return (
-        (0, u.fA)(e.wearable).forEach((i) => {
+        (0, c.fA)(e.wearable).forEach((i) => {
             let r = e[i],
-                a = u.qM[i][r]?.layer;
+                a = c.qM[i][r]?.layer;
             null != a && "" !== a && n.push(`${a}?height=${t}&width=${t}`);
         }),
         n
@@ -128,16 +126,15 @@ function N(e) {
     return Math.min(Math.max(Math.round((e / 100) * E.w0), E.Qq), E.sh);
 }
 function C(e) {
-    var t;
-    let n;
+    let t;
     return {
         powerLevel: S(e.powerLevel),
         powerLevelUnits: N(e.powerLevelPercentile),
         voice:
-            ((n = Math.round(e.totalVoiceMinutes)),
+            ((t = Math.round(e.totalVoiceMinutes)),
             {
-                text: f.intl.formatToPlainString(h.default["Ww/dDO"], { count: n }),
-                accessibilityLabel: f.intl.formatToPlainString(h.default.lw35aH, { duration: (0, d.GM)(n) }),
+                text: f.intl.formatToPlainString(h.default["Ww/dDO"], { count: t }),
+                accessibilityLabel: f.intl.formatToPlainString(h.default.lw35aH, { duration: (0, o.GM)(t) }),
             }),
         messages: {
             text: f.intl.formatToPlainString(h.default.foKBCN, { count: e.numMessagesSent }),
@@ -196,13 +193,7 @@ function C(e) {
         })(e),
         topEmoji: e.topEmoji,
         topGuild: e.topGuild,
-        topGuildAcronymCharacter:
-            null != e.topGuild
-                ? ((t = e.topGuild.guildName),
-                  Array.from((0, o.oN)(t))
-                      .at(0)
-                      ?.toLocaleUpperCase(f.intl.currentLocale))
-                : void 0,
+        topGuildAcronymCharacter: null != e.topGuild ? (0, _.oW)(e.topGuild.guildName) : void 0,
         topGame: e.topGame,
     };
 }
