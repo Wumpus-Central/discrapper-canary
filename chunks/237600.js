@@ -1,4 +1,4 @@
-i.d(t, { default: () => ei });
+i.d(t, { default: () => en });
 var n = i(477900),
     l = i(284009),
     s = i.n(l),
@@ -17,9 +17,9 @@ var n = i(477900),
     _ = i(346247),
     S = i(810263),
     x = i(911612),
-    p = i(664967);
+    L = i(664967);
 i(582128);
-var L = i(458294),
+var p = i(458294),
     j = i(567035),
     N = i(105292),
     y = i(711014),
@@ -52,33 +52,34 @@ var Y = i(138134),
     z = i(310419),
     J = i(468689),
     V = i(576705),
-    W = i(887501),
-    Q = i(684407),
-    K = i(941400),
-    q = i(267102),
-    Z = i(488995),
-    $ = i(153594),
-    ee = i(531335);
-function et(e) {
+    W = i(602881),
+    Q = i(887501),
+    K = i(684407),
+    q = i(96106),
+    Z = i(267102),
+    $ = i(488995),
+    ee = i(153594),
+    et = i(531335);
+function ei(e) {
     var t;
     let l,
         u,
         g,
-        et,
-        { guild: ei, onSelect: en, hideSettings: el } = e,
-        es = ei.id,
-        er = (0, r.bG)(
+        ei,
+        { guild: en, onSelect: el, hideSettings: es } = e,
+        er = en.id,
+        ea = (0, r.bG)(
             [h.default],
             () => {
                 let e = h.default.getCurrentUser();
-                return (s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, b.bM)(ei, e));
+                return (s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, b.bM)(en, e));
             },
-            [ei],
+            [en],
         ),
-        ea = (0, ee.A)({ guild: ei, source: X.PE1.GUILD_CONTEXT_MENU, channel: null }),
-        ed = (0, $.A)(es),
-        eo = (0, G.A)(ei),
-        ec = (function (e) {
+        ed = (0, et.A)({ guild: en, source: X.PE1.GUILD_CONTEXT_MENU, channel: null }),
+        eo = (0, ee.A)(er),
+        ec = (0, G.A)(en),
+        eu = (function (e) {
             let t = (function (e) {
                     let t = (0, T.os)("GuildNotificationItems"),
                         {
@@ -219,11 +220,11 @@ function et(e) {
                       children: t,
                   })
                 : null;
-        })(ei),
-        eu = (function (e) {
+        })(en),
+        eg = (function (e) {
             let t,
                 i,
-                l = (0, q.aL)(),
+                l = (0, Z.aL)(),
                 s = (function (e) {
                     let {
                         canManageGuild: t,
@@ -259,12 +260,13 @@ function et(e) {
                 label: N.intl.string(N.t["154/bL"]),
                 action: () => d(),
                 children: ((t = V.A.getGuildPermissionProps(e)),
-                (i = (0, W.b)(e.id).length > 0),
-                K.Ay.generateSections({
+                (i = (0, Q.b)(e.id).length > 0),
+                q.Ay.generateSections({
                     showDirtyGuildTemplateIndicator: !1,
                     ...t,
                     canUnlinkChannels: i,
-                    welcomeScreenEmpty: Q.A.isEmpty(e.id),
+                    welcomeScreenEmpty: K.A.isEmpty(e.id),
+                    isLinkedGameOrganizationEnabled: (0, W.Dl)(e.id, "get-guild-settings-sections"),
                 })
                     .filter((e) => {
                         let { section: t } = e;
@@ -284,7 +286,7 @@ function et(e) {
                                     id: i,
                                     action: () => {
                                         (0, H.transitionToGlobalDiscovery)({
-                                            tab: Z.GlobalDiscoveryTab.APPS,
+                                            tab: $.GlobalDiscoveryTab.APPS,
                                             newSessionState: {
                                                 guildId: e.id,
                                                 entrypoint: { name: z.sW.GUILD_HEADER_POPOUT },
@@ -304,9 +306,9 @@ function et(e) {
                     }
                 }),
             });
-        })(ei),
-        eg = (0, _.A)({
-            guildId: ei.id,
+        })(en),
+        eA = (0, _.A)({
+            guildId: en.id,
             userId: E.default.getId(),
             analyticsLocation: {
                 page: X.liQ.GUILD_CHANNEL,
@@ -314,13 +316,13 @@ function et(e) {
                 object: X.ZSU.CONTEXT_MENU_ITEM,
             },
         }),
-        eA = (0, x.A)(ei),
-        ef = (0, A.A)(ei.id),
-        eb = (0, S.A)(ei),
-        eE =
+        ef = (0, x.A)(en),
+        eb = (0, A.A)(en.id),
+        eE = (0, S.A)(en),
+        eh =
             ((t = { section: X.JJy.GUILD_LIST }),
-            (l = ei.id),
-            (u = (0, r.bG)([L.default], () => L.default.getGuildHasUnreadIgnoreMuted(l), [l])),
+            (l = en.id),
+            (u = (0, r.bG)([p.default], () => p.default.getGuildHasUnreadIgnoreMuted(l), [l])),
             (0, n.jsx)(o.Dr, {
                 id: "mark-guild-read",
                 label: N.intl.string(N.t.e6RscS),
@@ -328,9 +330,9 @@ function et(e) {
                 action: () => (0, j.A)([l], t.section),
                 disabled: !u,
             })),
-        eh = (0, f.A)(ei.id),
-        e_ = (0, p.A)(ei),
-        eS = (function (e) {
+        e_ = (0, f.A)(en.id),
+        eS = (0, L.A)(en),
+        ex = (function (e) {
             let t = (function (e) {
                 let [t] = (0, r.yK)([y.Ay], () => {
                         let e = y.Ay.getGuildsTree();
@@ -441,14 +443,14 @@ function et(e) {
                     }),
                 ],
             });
-        })(es),
-        ex =
+        })(er),
+        eL =
             ((g = (0, r.bG)([k.Ay], () => k.Ay.get("iar_testing"))),
-            null != (et = (0, r.bG)([h.default], () => h.default.getCurrentUser())) && et.isStaff() && g
+            null != (ei = (0, r.bG)([h.default], () => h.default.getCurrentUser())) && ei.isStaff() && g
                 ? (0, n.jsx)(o.Dr, {
                       id: "staff-test-guild-report",
                       label: "[STAFF] Test Guild Report",
-                      action: () => (0, F.RV)(ei, "web_guild_context_menu"),
+                      action: () => (0, F.RV)(en, "web_guild_context_menu"),
                       icon: Y.FlagIcon,
                       color: "danger",
                   })
@@ -456,20 +458,20 @@ function et(e) {
     function ep() {
         (0, a.openModalLazy)(async () => {
             let { default: e } = await i.e("553485").then(i.bind(i, 20508));
-            return (t) => (0, n.jsx)(e, { ...t, guild: ei });
+            return (t) => (0, n.jsx)(e, { ...t, guild: en });
         });
     }
-    return ei.features.has(X.GuildFeatures.HUB)
+    return en.features.has(X.GuildFeatures.HUB)
         ? (0, n.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: c.Z_,
               "aria-label": N.intl.string(N.t.HpQykc),
-              onSelect: en,
+              onSelect: el,
               children: [
                   (0, n.jsxs)(o.rX, {
                       children: [
-                          ea,
+                          ed,
                           (0, n.jsx)(o.Dr, {
                               id: "privacy",
                               label: N.intl.string(N.t.IlFwwR),
@@ -487,13 +489,13 @@ function et(e) {
                                           i.e("597201"),
                                           i.e("303198"),
                                       ]).then(i.bind(i, 382573));
-                                      return (t) => (0, n.jsx)(e, { ...t, guild: ei });
+                                      return (t) => (0, n.jsx)(e, { ...t, guild: en });
                                   }),
                           }),
-                          eg,
+                          eA,
                       ],
                   }),
-                  er
+                  ea
                       ? null
                       : (0, n.jsx)(o.rX, {
                             children: (0, n.jsx)(o.Dr, {
@@ -503,7 +505,7 @@ function et(e) {
                                 color: "danger",
                             }),
                         }),
-                  (0, n.jsx)(o.rX, { children: eb }),
+                  (0, n.jsx)(o.rX, { children: eE }),
               ],
           })
         : (0, n.jsxs)(d.W, {
@@ -511,14 +513,14 @@ function et(e) {
               navId: "guild-context",
               onClose: c.Z_,
               "aria-label": N.intl.string(N.t.HpQykc),
-              onSelect: en,
+              onSelect: el,
               children: [
-                  (0, n.jsx)(o.rX, { children: eE }),
-                  (0, n.jsx)(o.rX, { children: ea }),
-                  (0, n.jsxs)(o.rX, { children: [eo, __OVERLAY__ ? null : ec, ed, eh] }),
+                  (0, n.jsx)(o.rX, { children: eh }),
+                  (0, n.jsx)(o.rX, { children: ed }),
+                  (0, n.jsxs)(o.rX, { children: [ec, __OVERLAY__ ? null : eu, eo, e_] }),
                   (0, n.jsxs)(o.rX, {
                       children: [
-                          el ? null : eu,
+                          es ? null : eg,
                           __OVERLAY__
                               ? null
                               : (0, n.jsx)(o.Dr, {
@@ -538,18 +540,18 @@ function et(e) {
                                                 i.e("597201"),
                                                 i.e("303198"),
                                             ]).then(i.bind(i, 382573));
-                                            return (t) => (0, n.jsx)(e, { ...t, guild: ei });
+                                            return (t) => (0, n.jsx)(e, { ...t, guild: en });
                                         }),
                                 }),
-                          eg,
+                          eA,
                       ],
                   }),
-                  (0, n.jsxs)(o.rX, { children: [eA, ef] }),
-                  (0, n.jsx)(o.rX, { children: eS }),
+                  (0, n.jsxs)(o.rX, { children: [ef, eb] }),
+                  (0, n.jsx)(o.rX, { children: ex }),
                   (0, n.jsxs)(o.rX, {
                       children: [
-                          e_,
-                          !er &&
+                          eS,
+                          !ea &&
                               (0, n.jsx)(o.Dr, {
                                   id: "leave-guild",
                                   label: N.intl.string(N.t.J2TBi3),
@@ -558,12 +560,12 @@ function et(e) {
                               }),
                       ],
                   }),
-                  (0, n.jsx)(o.rX, { children: ex }),
-                  (0, n.jsx)(o.rX, { children: eb }),
+                  (0, n.jsx)(o.rX, { children: eL }),
+                  (0, n.jsx)(o.rX, { children: eE }),
               ],
           });
 }
-function ei(e) {
+function en(e) {
     let { analyticsLocations: t } = (0, g.Ay)(u.A.CONTEXT_MENU);
-    return (0, n.jsx)(g.f5, { value: t, children: (0, n.jsx)(et, { ...e }) });
+    return (0, n.jsx)(g.f5, { value: t, children: (0, n.jsx)(ei, { ...e }) });
 }
