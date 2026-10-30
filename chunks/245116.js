@@ -1,15 +1,15 @@
-l.d(t, { fn: () => j, As: () => b, JQ: () => v });
+l.d(t, { fn: () => b, As: () => j, JQ: () => v });
 var a = l(477900),
     n = l(582128),
     i = l(858899);
-let s = (0, l(945810).mj)({
+let r = (0, l(945810).mj)({
     kind: "user",
     name: "2026-09-clips-editor-image-track",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
 l(508300);
-var r = l(77729),
+var s = l(77729),
     o = l(696016),
     c = l(507216),
     u = l(105292);
@@ -52,8 +52,8 @@ async function m(e, t) {
                 naturalWidth: l.width,
                 naturalHeight: l.height,
             };
-        let s = Math.max(1, Math.round(l.width * i)),
-            r = Math.max(1, Math.round(l.height * i)),
+        let r = Math.max(1, Math.round(l.width * i)),
+            s = Math.max(1, Math.round(l.height * i)),
             { src: m, mimeType: f } = (function (e, t, l) {
                 let a = document.createElement("canvas");
                 ((a.width = t), (a.height = l));
@@ -61,10 +61,10 @@ async function m(e, t) {
                 if (null == n) throw new d(u.intl.string(c.default.piRNeN));
                 n.drawImage(e, 0, 0, e.width, e.height, 0, 0, t, l);
                 let i = a.toDataURL(o.w6, o.ku),
-                    s = i.startsWith(`data:${o.w6}`) ? o.w6 : "image/png";
-                return { src: i, mimeType: s };
-            })(l, s, r);
-        return { src: m, mimeType: f, fileName: t, naturalWidth: s, naturalHeight: r };
+                    r = i.startsWith(`data:${o.w6}`) ? o.w6 : "image/png";
+                return { src: i, mimeType: r };
+            })(l, r, s);
+        return { src: m, mimeType: f, fileName: t, naturalWidth: r, naturalHeight: s };
     } finally {
         l.close();
     }
@@ -72,7 +72,7 @@ async function m(e, t) {
 async function f() {
     let e;
     try {
-        e = await r.A.fileManager.openFiles(
+        e = await s.A.fileManager.openFiles(
             { properties: ["openFile"], filters: [{ name: u.intl.string(c.default.qM8PRd), extensions: o.G$ }] },
             o.sL,
         );
@@ -84,13 +84,13 @@ async function f() {
     return null == t ? null : { bytes: t.data, fileName: t.filename };
 }
 var h = l(635793),
-    p = l(362081);
+    p = l(758262);
 let x = n.createContext(null);
 function v(e) {
     let { children: t, isCropEnabled: l = !0 } = e,
         {
             setActiveTool: i,
-            tracks: r,
+            tracks: s,
             addTextTrack: o,
             addImageTrack: c,
             removeTrack: u,
@@ -98,50 +98,50 @@ function v(e) {
             updateTextTrackData: m,
             updateImageTrackData: f,
         } = (0, p.T)(),
-        { enabled: v } = s.useConfig({ location: "ClipsEditorContextProvider" }),
-        [j, b] = n.useState(null),
+        { enabled: v } = r.useConfig({ location: "ClipsEditorContextProvider" }),
+        [b, j] = n.useState(null),
         y = n.useCallback(
             (e) => {
-                (i(h.Y.NONE), b(e));
+                (i(h.Y.NONE), j(e));
             },
             [i],
         ),
         C = n.useCallback(() => {
-            b(o());
+            j(o());
         }, [o]),
         N = n.useCallback(async () => {
             let e = await g();
-            null != e && b(c(e));
+            null != e && j(c(e));
         }, [c]),
-        E = n.useCallback(
+        w = n.useCallback(
             async (e) => {
                 let t = await g();
                 null != t && f(e, (e) => ({ ...e, ...t }));
             },
             [f],
         ),
-        w = n.useCallback(
+        E = n.useCallback(
             (e) => {
-                (u(e), b((t) => (t === e ? null : t)));
+                (u(e), j((t) => (t === e ? null : t)));
             },
             [u],
         ),
         k = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: v }), [l, !0, v]),
         A = n.useMemo(
             () => ({
-                tracks: r,
-                selectedTrackId: j,
+                tracks: s,
+                selectedTrackId: b,
                 setSelectedTrackId: y,
                 addTextTrack: C,
                 pickAndAddImageTrack: N,
-                pickAndReplaceImage: E,
-                removeTrack: w,
+                pickAndReplaceImage: w,
+                removeTrack: E,
                 updateTrackRange: d,
                 updateTextTrackData: m,
                 updateImageTrackData: f,
                 editorFeatures: k,
             }),
-            [r, j, y, C, N, E, w, d, m, f, k],
+            [s, b, y, C, N, w, E, d, m, f, k],
         );
     return (0, a.jsx)(x.Provider, { value: A, children: t });
 }
@@ -160,11 +160,11 @@ async function g() {
         return ((0, i.P0)({ text: e, variant: "critical" }), null);
     }
 }
-function j() {
+function b() {
     let e = n.useContext(x);
     if (null == e) throw Error("useClipsEditorContext must be used within a ClipsEditorContextProvider");
     return e;
 }
-function b() {
-    return j().editorFeatures;
+function j() {
+    return b().editorFeatures;
 }
