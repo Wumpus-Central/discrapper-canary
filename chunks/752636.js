@@ -16,10 +16,10 @@ function s(e) {
         roleIcon: u,
         hideTimestamp: m,
         hideGuildTag: h,
-        preview: g,
-        avatarDecorationOverride: p,
-        avatarOverride: _,
-        usernameClassName: S,
+        preview: p,
+        avatarDecorationOverride: g,
+        avatarOverride: S,
+        usernameClassName: A,
     } = e;
     return !(0, l.A)(t) && (c || r)
         ? (0, n.jsx)(o, {
@@ -32,10 +32,10 @@ function s(e) {
               roleIcon: u,
               hideTimestamp: m,
               hideGuildTag: h,
-              preview: g,
-              avatarDecorationOverride: p,
-              avatarOverride: _,
-              usernameClassName: S,
+              preview: p,
+              avatarDecorationOverride: g,
+              avatarOverride: S,
+              usernameClassName: A,
           })
         : void 0;
 }

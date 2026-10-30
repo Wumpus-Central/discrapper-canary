@@ -94,7 +94,7 @@ function V(e) {
         ],
     });
 }
-function X(e) {
+function z(e) {
     let {
             iconComponent: t,
             animationTime: n,
@@ -157,10 +157,10 @@ function X(e) {
         }),
     });
 }
-var z = n(91034),
+var X = n(91034),
     W = n(710434),
-    Z = n(634156),
-    q = n(652215),
+    q = n(634156),
+    Z = n(652215),
     J = n(267286);
 let ee = { [d.oA.SM]: 48, [d.oA.MD]: 100, [d.oA.LG]: 100 },
     et = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
@@ -233,7 +233,7 @@ function el(e) {
         eH = l.useCallback(() => {
             if (null == L) return;
             let e = D?.split("/");
-            (M.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+            (M.default.track(Z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
@@ -248,23 +248,23 @@ function el(e) {
     function eV(e) {
         (eY(e), em(e), ew && (eA(!1), eb || ed(!1)), G && e > 0 ? ef(!1) : G || 0 !== e || ef(!0));
     }
-    let eX = l.useCallback(() => {
+    let ez = l.useCallback(() => {
         if (null != eE.current)
             if (0 === ey) {
                 let e = 0 === U ? 0.3 : U;
                 (eY(e), ef(!1), em(e));
             } else (em(ey), eY(0), ef(!0));
     }, [eE, ey, eY, U, ef, em]);
-    function ez() {
+    function eX() {
         (eP(!0), ep(!0));
     }
     function eW() {
         (eP(!1), ep(!1));
     }
-    function eZ() {
+    function eq() {
         (window.clearTimeout(ek.current), eP(!0));
     }
-    function eq() {
+    function eZ() {
         (window.clearTimeout(ek.current), (ek.current = window.setTimeout(() => eP(!1), 150)));
     }
     function eJ(e) {
@@ -311,10 +311,10 @@ function el(e) {
                         (e.stopPropagation(), A || er());
                         break;
                     case d.TJ.MUTE:
-                        (e.stopPropagation(), eX());
+                        (e.stopPropagation(), ez());
                 }
         },
-        [en, er, Y, el, ei, eX, C, A, ev],
+        [en, er, Y, el, ei, ez, C, A, ev],
     );
     (l.useEffect(() => {
         B && null != eF.current && eF.current.focus();
@@ -340,11 +340,11 @@ function el(e) {
     let e2 = 0 === ey ? f._ : ey < 0.5 ? p.S : h.H,
         e6 = _.intl.string(0 === ey ? _.t.YqAjXy : _.t.w4m945),
         { icon: e4, label: e8 } = O[t],
-        e9 = (0, r.jsx)(X, {
+        e9 = (0, r.jsx)(z, {
             iconComponent: e2,
             animationTime: n,
             visible: a,
-            onClick: eX,
+            onClick: ez,
             ariaLabel: e6,
             tooltipLabel: e6,
             hideTooltip: eD,
@@ -379,7 +379,7 @@ function el(e) {
             (0, r.jsxs)("div", {
                 className: K.X3,
                 children: [
-                    (0, r.jsx)(X, {
+                    (0, r.jsx)(z, {
                         iconComponent: e4,
                         animationTime: n,
                         visible: a,
@@ -394,7 +394,7 @@ function el(e) {
                     !w &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(X, {
+                                (0, r.jsx)(z, {
                                     iconComponent: W.q,
                                     animationTime: n,
                                     visible: a,
@@ -405,8 +405,8 @@ function el(e) {
                                     buttonSize: Q[N],
                                     "data-testid": "discord-web-video-player-seek-backward-btn",
                                 }),
-                                (0, r.jsx)(X, {
-                                    iconComponent: Z.i,
+                                (0, r.jsx)(z, {
+                                    iconComponent: q.i,
                                     animationTime: n,
                                     visible: a,
                                     onClick: ei,
@@ -443,8 +443,8 @@ function el(e) {
                                   (0, r.jsx)("div", {
                                       id: eT,
                                       className: i()(K.p8, K.Gl),
-                                      onMouseEnter: eZ,
-                                      onMouseLeave: eq,
+                                      onMouseEnter: eq,
+                                      onMouseLeave: eZ,
                                       "data-testid": "discord-web-video-player-volume-popout",
                                       children: (0, r.jsx)("div", {
                                           "data-testid": "discord-web-video-player-volume-slider",
@@ -454,8 +454,8 @@ function el(e) {
                               children: () =>
                                   (0, r.jsx)("div", {
                                       ref: eL,
-                                      onMouseEnter: eZ,
-                                      onMouseLeave: eq,
+                                      onMouseEnter: eq,
+                                      onMouseLeave: eZ,
                                       onFocus: () => eN(k.Ay.keyboardModeEnabled),
                                       onBlur: () => eN(!1),
                                       onKeyDown: eJ,
@@ -465,9 +465,9 @@ function el(e) {
                                   }),
                           })
                         : (0, r.jsxs)("div", {
-                              onMouseEnter: ez,
+                              onMouseEnter: eX,
                               onMouseLeave: eW,
-                              onFocus: ez,
+                              onFocus: eX,
                               onBlur: eW,
                               className: K.RD,
                               "data-testid": "discord-web-video-player-volume-control",
@@ -526,7 +526,7 @@ function el(e) {
                                 n ||
                                     m.push({
                                         id: "caption",
-                                        iconComponent: z.I,
+                                        iconComponent: X.I,
                                         label: _.intl.string(J.default["0DbPcL"]),
                                         onClick: u,
                                         active: l,
@@ -570,7 +570,7 @@ function el(e) {
                             handleControlBarPendingInteraction: ed,
                         }),
                     !A &&
-                        (0, r.jsx)(X, {
+                        (0, r.jsx)(z, {
                             iconComponent: ex ? E.z : g.T,
                             animationTime: n,
                             visible: a,
@@ -594,7 +594,7 @@ function ea(e) {
           ? (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(
-                        X,
+                        z,
                         {
                             iconComponent: e.iconComponent,
                             animationTime: l,
@@ -664,7 +664,7 @@ function ei(e) {
             });
         },
         children: (e) =>
-            (0, r.jsx)(X, {
+            (0, r.jsx)(z, {
                 ref: u,
                 iconComponent: P.MoreHorizontalIcon,
                 animationTime: n,
@@ -702,7 +702,7 @@ function eu(e) {
         renderPopout: () => (0, r.jsx)(eo, { playbackRate: t, onPlaybackRateChange: n, label: c }),
         children: (e) => {
             let n = 1 !== t;
-            return (0, r.jsx)(X, {
+            return (0, r.jsx)(z, {
                 ref: s,
                 iconComponent: w.$,
                 animationTime: a,

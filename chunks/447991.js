@@ -1,92 +1,92 @@
-t.d(r, { A: () => c });
-var n = t(477900),
-    a = t(582128),
-    s = t(876230),
-    i = t(268218),
-    l = t(584307);
-let u = a.lazy(() =>
+r.d(t, { A: () => d });
+var n = r(477900),
+    l = r(582128),
+    a = r(876230),
+    i = r(268218),
+    u = r(584307);
+let o = l.lazy(() =>
         (0, i.sq)({
-            createPromise: () => Promise.all([t.e("216870"), t.e("133179"), t.e("334127")]).then(t.bind(t, 266546)),
+            createPromise: () => Promise.all([r.e("216870"), r.e("133179"), r.e("334127")]).then(r.bind(r, 266546)),
             webpackId: 266546,
             name: "DiscordVideoPlayer",
         }),
     ),
-    o = { width: "100%", height: "100%", objectFit: "contain" };
-function c(e) {
-    let { onPlay: r, autoplay: t, playable: i = !0, mimeType: c, ...d } = e,
-        f = a.useRef(!1),
-        g = a.useRef(!1),
-        p = a.useCallback(
-            (e, t) => {
-                f.current && ((f.current = !1), r?.(g.current, e, t));
-            },
-            [r],
-        ),
-        k = a.useCallback(
+    s = { width: "100%", height: "100%", objectFit: "contain" };
+function d(e) {
+    let { onPlay: t, autoplay: r, playable: i = !0, mimeType: d, ...c } = e,
+        f = l.useRef(!1),
+        m = l.useRef(!1),
+        p = l.useCallback(
             (e, r) => {
-                e === s.Q6.PLAYING
-                    ? r !== s.KB.BUFFERING_RECOVERY && ((f.current = !0), (g.current = r !== s.KB.USER))
+                f.current && ((f.current = !1), t?.(m.current, e, r));
+            },
+            [t],
+        ),
+        g = l.useCallback(
+            (e, t) => {
+                e === a.Q6.PLAYING
+                    ? t !== a.KB.BUFFERING_RECOVERY && ((f.current = !0), (m.current = t !== a.KB.USER))
                     : p(0, 0);
             },
             [p],
         ),
-        b = a.useCallback(
-            (e, r) => {
-                p(1e3 * e, Number.isFinite(r) ? 1e3 * r : 0);
+        h = l.useCallback(
+            (e, t) => {
+                p(1e3 * e, Number.isFinite(t) ? 1e3 * t : 0);
             },
             [p],
         ),
-        [m] = a.useState(() => new l.A({ src: d.src ?? "", mimeType: c, fileSize: d.fileSizeBytes })),
-        h = a.useRef(null),
-        C = a.useRef(!1),
-        y = a.useCallback(
+        [b] = l.useState(() => new u.A({ src: c.src ?? "", mimeType: d, fileSize: c.fileSizeBytes })),
+        x = l.useRef(null),
+        C = l.useRef(!1),
+        y = l.useCallback(
             (e) => {
-                ((C.current = e), e ? m.onDragStart(h.current?.currentTime ?? null) : m.onDragEnd());
+                ((C.current = e), e ? b.onDragStart(x.current?.currentTime ?? null) : b.onDragEnd());
             },
-            [m],
+            [b],
         ),
-        P = a.useRef(null),
-        S = a.useCallback(
+        v = l.useRef(null),
+        E = l.useCallback(
             (e) => {
-                if ((P.current?.(), (P.current = null), (h.current = e), null == e)) return;
-                let r = { currentTarget: e },
-                    t = {
-                        waiting: () => m.onWaiting(r),
-                        seeking: () => m.onSeeking(r),
-                        seeked: () => m.onSeeked(r),
-                        timeupdate: () => m.onTimeUpdate(r),
-                        loadedmetadata: () => m.onLoadedMetadata(r),
+                if ((v.current?.(), (v.current = null), (x.current = e), null == e)) return;
+                let t = { currentTarget: e },
+                    r = {
+                        waiting: () => b.onWaiting(t),
+                        seeking: () => b.onSeeking(t),
+                        seeked: () => b.onSeeked(t),
+                        timeupdate: () => b.onTimeUpdate(t),
+                        loadedmetadata: () => b.onLoadedMetadata(t),
                         playing: () => {
-                            (m.onPlaying(r), m.checkVideoDecodability(e, !0));
+                            (b.onPlaying(t), b.checkVideoDecodability(e, !0));
                         },
                         pause: () => {
-                            C.current || m.onPause(r);
+                            C.current || b.onPause(t);
                         },
                         error: () => {
-                            ((m.errorCode = e.error?.code ?? null),
-                                (m.errorMessage = e.error?.message ?? null),
-                                m.onError(r));
+                            ((b.errorCode = e.error?.code ?? null),
+                                (b.errorMessage = e.error?.message ?? null),
+                                b.onError(t));
                         },
                     };
-                for (let [r, n] of Object.entries(t)) e.addEventListener(r, n);
-                P.current = () => {
-                    for (let [r, n] of Object.entries(t)) e.removeEventListener(r, n);
+                for (let [t, n] of Object.entries(r)) e.addEventListener(t, n);
+                v.current = () => {
+                    for (let [t, n] of Object.entries(r)) e.removeEventListener(t, n);
                 };
             },
-            [m],
+            [b],
         ),
-        R = null != d.poster ? (0, n.jsx)("img", { src: d.poster, alt: "", style: o }) : null;
+        S = null != c.poster ? (0, n.jsx)("img", { src: c.poster, alt: "", style: s }) : null;
     return i
-        ? (0, n.jsx)(a.Suspense, {
-              fallback: R,
-              children: (0, n.jsx)(u, {
-                  ...d,
-                  autoplay: t,
-                  onPlayerStateChange: k,
-                  onProgressUpdate: b,
+        ? (0, n.jsx)(l.Suspense, {
+              fallback: S,
+              children: (0, n.jsx)(o, {
+                  ...c,
+                  autoplay: r,
+                  onPlayerStateChange: g,
+                  onProgressUpdate: h,
                   onTimelineDragStateChange: y,
-                  ref: S,
+                  ref: E,
               }),
           })
-        : R;
+        : S;
 }

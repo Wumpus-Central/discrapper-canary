@@ -1,12 +1,12 @@
-l.d(t, { A: () => G });
+l.d(t, { A: () => I });
 var n = l(477900),
     a = l(582128),
     i = l(503698),
     r = l.n(i),
     s = l(77692),
     o = l(702841),
-    u = l(297264),
-    c = l(653887),
+    c = l(297264),
+    u = l(653887),
     d = l(866665),
     E = l(881636),
     p = l(661531),
@@ -29,13 +29,13 @@ let h = function (e) {
 };
 var b = l(212407),
     L = l(761977);
-function G(e) {
+function I(e) {
     let { category: t, onSelect: l } = e,
         i = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion),
         S = (0, o.bG)([C.A], () => C.A.isFocused()),
-        { catalogBannerStatic: g, catalogBannerAnimated: O, catalogBannerRive: G } = (0, b.MV)(t),
-        I = a.useRef(null),
-        m = null != G,
+        { catalogBannerStatic: g, catalogBannerAnimated: O, catalogBannerRive: I } = (0, b.MV)(t),
+        G = a.useRef(null),
+        m = null != I,
         T =
             null != l
                 ? {
@@ -49,20 +49,20 @@ function G(e) {
                   }
                 : {};
     return (0, n.jsxs)("div", {
-        ref: I,
+        ref: G,
         className: r()(L.sW, { [L.by]: m, [L.vk]: null != l }),
         ...T,
         children: [
-            (0, n.jsx)(s.s, { children: (0, n.jsx)(u.D, { variant: "heading-lg/semibold", children: t.name }) }),
+            (0, n.jsx)(s.s, { children: (0, n.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, n.jsx)("div", {
                 className: L.Db,
                 children: m
-                    ? (0, n.jsx)(c._, {
-                          src: G,
+                    ? (0, n.jsx)(u._, {
+                          src: I,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
-                          eventTargetRef: I,
+                          eventTargetRef: G,
                           autoplay: !0,
                       })
                     : (0, n.jsxs)(n.Fragment, {

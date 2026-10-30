@@ -1,45 +1,45 @@
-(s.d(t, {
-    G: () => y,
+(n.d(t, {
+    G: () => b,
     GU: () => h,
     RQ: () => S,
-    XR: () => C,
+    XR: () => A,
     fD: () => w,
     iW: () => N,
     lc: () => E,
-    rh: () => b,
-    xJ: () => A,
+    rh: () => y,
+    xJ: () => C,
 }),
-    s(323874),
-    s(14289),
-    s(35956));
-var n = s(73153),
-    l = s(839214),
-    a = s(322227),
-    r = s(666476),
-    i = s(989145),
-    o = s(809526),
-    c = s(105292);
+    n(323874),
+    n(14289),
+    n(35956));
+var s = n(73153),
+    r = n(839214),
+    l = n(322227),
+    a = n(666476),
+    i = n(989145),
+    c = n(809526),
+    o = n(105292);
 let u = [],
     d = 1,
-    m = (0, l.D)(() => ({ draftsByProject: {} }));
-function f(e, t, s) {
-    return e.draftsByProject[t]?.[s] ?? u;
+    m = (0, r.D)(() => ({ draftsByProject: {} }));
+function f(e, t, n) {
+    return e.draftsByProject[t]?.[n] ?? u;
 }
 function h(e, t) {
     return f(m.getState(), e, t);
 }
-function x(e, t, s) {
-    let { draftsByProject: n } = m.getState();
-    m.setState({ draftsByProject: { ...n, [e]: { ...n[e], [t]: s } } });
+function x(e, t, n) {
+    let { draftsByProject: s } = m.getState();
+    m.setState({ draftsByProject: { ...s, [e]: { ...s[e], [t]: n } } });
 }
-function g(e, t, s, n) {
-    let l = h(e, t);
+function g(e, t, n, s) {
+    let r = h(e, t);
     return (
-        !!l.some((e) => e.localId === s) &&
+        !!r.some((e) => e.localId === n) &&
         (x(
             e,
             t,
-            l.map((e) => (e.localId === s ? { ...e, ...n } : e)),
+            r.map((e) => (e.localId === n ? { ...e, ...s } : e)),
         ),
         !0)
     );
@@ -53,90 +53,90 @@ function j(e, t) {
     (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && p(e, t.ref.id));
 }
 function v(e, t) {
-    let { deleteFromWorker: s } = t,
-        { draftsByProject: n } = m.getState(),
-        l = n[e];
-    if (null == l) return;
-    for (let t of Object.values(l))
-        for (let n of t ?? u) s ? j(e, n) : null != n.previewUrl && URL.revokeObjectURL(n.previewUrl);
-    let { [e]: a, ...r } = n;
-    m.setState({ draftsByProject: r });
+    let { deleteFromWorker: n } = t,
+        { draftsByProject: s } = m.getState(),
+        r = s[e];
+    if (null == r) return;
+    for (let t of Object.values(r))
+        for (let s of t ?? u) n ? j(e, s) : null != s.previewUrl && URL.revokeObjectURL(s.previewUrl);
+    let { [e]: l, ...a } = s;
+    m.setState({ draftsByProject: a });
 }
 function N(e) {
-    return c.intl.formatToPlainString(o.default.JZ59Bo, { size: (0, r.sM)((0, r.Ju)(e)) });
+    return o.intl.formatToPlainString(c.default.JZ59Bo, { size: (0, a.sM)((0, a.Ju)(e)) });
 }
-function b(e, t, s, n) {
-    return (0, r.Oq)(t.size, n) ? (0, i.c9)(e, t, s, n) : Promise.resolve({ errorText: N(n) });
+function y(e, t, n, s) {
+    return (0, a.Oq)(t.size, s) ? (0, i.c9)(e, t, n, s) : Promise.resolve({ errorText: N(s) });
 }
-function y(e, t) {
-    return m.useState((s) => f(s, e, t));
+function b(e, t) {
+    return m.useState((n) => f(n, e, t));
 }
-function w(e, t, s) {
-    if (0 === s.length) return;
-    let n = s.map((e) => {
-        let { draft: t, upload: s } = e;
-        return { draft: { ...t, localId: d++ }, upload: s };
+function w(e, t, n) {
+    if (0 === n.length) return;
+    let s = n.map((e) => {
+        let { draft: t, upload: n } = e;
+        return { draft: { ...t, localId: d++ }, upload: n };
     });
-    for (let { draft: s, upload: l } of (x(e, t, [
+    for (let { draft: n, upload: r } of (x(e, t, [
         ...h(e, t),
-        ...n.map((e) => {
+        ...s.map((e) => {
             let { draft: t } = e;
             return t;
         }),
     ]),
-    n))
-        l?.().then(
-            (n) => {
-                if ("errorText" in n) return void g(e, t, s.localId, { status: "error", errorText: n.errorText });
-                let { converted: l, ...a } = n;
-                g(e, t, s.localId, { ...l, status: "ready", ref: a })
+    s))
+        r?.().then(
+            (s) => {
+                if ("errorText" in s) return void g(e, t, n.localId, { status: "error", errorText: s.errorText });
+                let { converted: r, ...l } = s;
+                g(e, t, n.localId, { ...r, status: "ready", ref: l })
                     ? setTimeout(
-                          () => g(e, t, s.localId, { status: "error", errorText: c.intl.string(o.default.E7dS5n) }),
-                          r.o2 - 3e5,
+                          () => g(e, t, n.localId, { status: "error", errorText: o.intl.string(c.default.E7dS5n) }),
+                          a.o2 - 3e5,
                       )
-                    : p(e, a.id);
+                    : p(e, l.id);
             },
-            (n) => {
-                (console.error("[conjure] attachment upload failed", n),
-                    g(e, t, s.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
+            (s) => {
+                (console.error("[conjure] attachment upload failed", s),
+                    g(e, t, n.localId, { status: "error", errorText: o.intl.string(c.default["kUw/b1"]) }));
             },
         );
 }
-function C(e, t, s) {
-    let n = h(e, t),
-        l = n.find((e) => e.localId === s);
-    null != l &&
-        (j(e, l),
+function A(e, t, n) {
+    let s = h(e, t),
+        r = s.find((e) => e.localId === n);
+    null != r &&
+        (j(e, r),
         x(
             e,
             t,
-            n.filter((e) => e.localId !== s),
+            s.filter((e) => e.localId !== n),
         ));
 }
-function A(e, t) {
-    let s = h(e, t);
-    if (0 !== s.length) {
-        for (let t of s) j(e, t);
+function C(e, t) {
+    let n = h(e, t);
+    if (0 !== n.length) {
+        for (let t of n) j(e, t);
         x(e, t, u);
     }
 }
 function E(e, t) {
-    let s = h(e, t);
-    if (0 === s.length) return [];
-    for (let e of s) null != e.previewUrl && URL.revokeObjectURL(e.previewUrl);
-    return (x(e, t, u), s.flatMap((e) => (null != e.ref ? [e.ref] : [])));
+    let n = h(e, t);
+    if (0 === n.length) return [];
+    for (let e of n) null != e.previewUrl && URL.revokeObjectURL(e.previewUrl);
+    return (x(e, t, u), n.flatMap((e) => (null != e.ref ? [e.ref] : [])));
 }
 function S(e, t) {
-    let { clarificationAnswers: s, attachments: n = [] } =
+    let { clarificationAnswers: n, attachments: s = [] } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        l = h(e, "chat"),
-        r = l.length > 0 && l.every((e) => "ready" === e.status) ? E(e, "chat") : [];
-    (0, a.sendUserMessage)(e, t, [...n, ...r], { clarificationAnswers: s });
+        r = h(e, "chat"),
+        a = r.length > 0 && r.every((e) => "ready" === e.status) ? E(e, "chat") : [];
+    (0, l.sendUserMessage)(e, t, [...s, ...a], { clarificationAnswers: n });
 }
-(n.h.subscribe("LOGOUT", () => {
+(s.h.subscribe("LOGOUT", () => {
     for (let e of Object.keys(m.getState().draftsByProject)) v(e, { deleteFromWorker: !0 });
 }),
-    n.h.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (e) => {
+    s.h.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (e) => {
         let { projectId: t } = e;
         v(t, { deleteFromWorker: !1 });
     }));

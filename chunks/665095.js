@@ -21,8 +21,8 @@ var l = n(477900),
     _ = n(607399),
     T = n(821609),
     y = n(331322),
-    N = n(297264),
-    j = n(834730),
+    j = n(297264),
+    N = n(834730),
     S = n(700525),
     I = n(975571),
     b = n(652215),
@@ -71,11 +71,11 @@ class w extends i.PureComponent {
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, l.jsx)(N.D, {
+                                        (0, l.jsx)(j.D, {
                                             variant: "heading-xl/normal",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
-                                        (0, l.jsx)(j.E, {
+                                        (0, l.jsx)(N.E, {
                                             variant: "text-md/normal",
                                             children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
@@ -98,7 +98,7 @@ class w extends i.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsx)(j.E, {
+                        (0, l.jsx)(N.E, {
                             variant: "text-sm/normal",
                             className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
@@ -109,13 +109,13 @@ class w extends i.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, l.jsx)(j.E, {
+                                (0, l.jsx)(N.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.WL51ZR, { supportURL: I.A.getSubmitRequestURL() }),
                                 }),
                                 (0, l.jsx)("div", { className: C()(M.qr, M.mf), children: "\u2022" }),
-                                (0, l.jsx)(j.E, {
+                                (0, l.jsx)(N.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),

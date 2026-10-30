@@ -1,20 +1,20 @@
-s.d(t, { sm: () => m, R9: () => c, XV: () => d, Ft: () => o, th: () => u });
-var n = s(582128),
-    l = s(666476);
-async function a(e) {
-    let t = new Worker(new URL("/assets/" + s.u("638664"), s.b));
+n.d(t, { sm: () => m, R9: () => o, XV: () => d, Ft: () => c, th: () => u });
+var s = n(582128),
+    r = n(666476);
+async function l(e) {
+    let t = new Worker(new URL("/assets/" + n.u("638664"), n.b));
     try {
-        let s = await new Promise((s) => {
+        let n = await new Promise((n) => {
             (t.addEventListener("message", (e) => {
                 let { data: t } = e;
-                return s(t);
+                return n(t);
             }),
-                t.addEventListener("error", () => s(null)),
-                t.addEventListener("messageerror", () => s(null)),
+                t.addEventListener("error", () => n(null)),
+                t.addEventListener("messageerror", () => n(null)),
                 t.postMessage(e));
         });
-        if (null == s) return null;
-        return new File([s], `${e.name.replace(/\.png$/i, "")}.webp`, {
+        if (null == n) return null;
+        return new File([n], `${e.name.replace(/\.png$/i, "")}.webp`, {
             type: "image/webp",
             lastModified: e.lastModified,
         });
@@ -22,37 +22,37 @@ async function a(e) {
         t.terminate();
     }
 }
-(s(323874), s(14289), s(35956));
-var r = s(809526),
-    i = s(105292);
-function o(e) {
+(n(323874), n(14289), n(35956));
+var a = n(809526),
+    i = n(105292);
+function c(e) {
     return "" === e.type ? "application/octet-stream" : e.type;
 }
-function c(e, t) {
-    return (0, l.Oq)(e.size, t)
+function o(e, t) {
+    return (0, r.Oq)(e.size, t)
         ? "fits"
-        : "image/png" === t && e.size <= l.km && "u" > typeof Worker && "u" > typeof OffscreenCanvas
+        : "image/png" === t && e.size <= r.km && "u" > typeof Worker && "u" > typeof OffscreenCanvas
           ? "webp"
           : "too-large";
 }
 async function u(e) {
     let t;
     try {
-        t = await a(e);
+        t = await l(e);
     } catch {
         return null;
     }
-    return null != t && (0, l.Oq)(t.size, t.type) ? t : null;
+    return null != t && (0, r.Oq)(t.size, t.type) ? t : null;
 }
 function d() {
-    return i.intl.formatToPlainString(r.default.Q0aCVZ, { count: l.lN });
+    return i.intl.formatToPlainString(a.default.Q0aCVZ, { count: r.lN });
 }
 function m(e) {
-    return n.useCallback(
+    return s.useCallback(
         (t) => {
             if (t.defaultPrevented) return;
-            let s = Array.from(t.clipboardData?.files ?? []);
-            0 !== s.length && (t.preventDefault(), e(s));
+            let n = Array.from(t.clipboardData?.files ?? []);
+            0 !== n.length && (t.preventDefault(), e(n));
         },
         [e],
     );

@@ -165,11 +165,11 @@ function C(e) {
             handleMouseLeave: H,
             handleMouseMove: Y,
             handleKeyDown: V,
-            hoveredAtX: X,
-            maxSeekableX: z,
+            hoveredAtX: z,
+            maxSeekableX: X,
             isHovering: W,
-            isDragging: Z,
-            dragX: q,
+            isDragging: q,
+            dragX: Z,
             isHoverBeyondMax: J,
             handleClick: ee,
             handleMouseDown: et,
@@ -314,7 +314,7 @@ function C(e) {
             onDragStateChange: B,
             onDragXChange: (e) => eo.set(e),
         }),
-        er = l.useMemo(() => (null == X || null == O ? null : (0, u.hc)(X, O, w)), [X, O, w]),
+        er = l.useMemo(() => (null == z || null == O ? null : (0, u.hc)(z, O, w)), [z, O, w]),
         el = l.useMemo(() => (null == er ? null : (0, u.rB)(er)), [er]),
         ea = l.useMemo(() => (null == U || null == er ? null : (0, v.B8)(U, er)), [U, er]),
         ei = l.useMemo(() => {
@@ -322,11 +322,11 @@ function C(e) {
         }, [n, O]),
         eu = O?.width != null && O?.width !== 0 ? O?.width : 1,
         [{ playbackPxSpring: eo }, es] = (0, o.z)(() => ({ playbackPxSpring: 0, config: S })),
-        ec = l.useRef(Z);
+        ec = l.useRef(q);
     l.useLayoutEffect(() => {
         let e = ec.current;
-        ((ec.current = Z), e && !Z && es({ playbackPxSpring: null == ei || Number.isNaN(ei) ? 0 : ei, immediate: !0 }));
-    }, [Z, ei, es]);
+        ((ec.current = q), e && !q && es({ playbackPxSpring: null == ei || Number.isNaN(ei) ? 0 : ei, immediate: !0 }));
+    }, [q, ei, es]);
     let ed = l.useRef(null),
         em = l.useRef(null),
         ef = l.useRef(null);
@@ -460,13 +460,13 @@ function C(e) {
                                     segment: e,
                                     playbackPxSpring: eo,
                                     playerState: b,
-                                    isDragging: Z,
-                                    dragX: q,
+                                    isDragging: q,
+                                    dragX: Z,
                                     animatingIndex: F?.animatingIndex,
                                     expansionSpring: F?.expansionSpring,
                                     timelineWidth: eu,
                                     preloadedBuffers: C,
-                                    maxSeekableX: z,
+                                    maxSeekableX: X,
                                     segmentBorderRadius: L,
                                     progressClassName: R,
                                 },
@@ -484,7 +484,7 @@ function C(e) {
                     ),
                 (0, r.jsx)(P, {
                     isHovering: W,
-                    hoveredAtX: X,
+                    hoveredAtX: z,
                     hoveredTimeSec: er,
                     formattedTime: el,
                     isFullyVisible: t,
@@ -495,8 +495,8 @@ function C(e) {
                 (W || M) &&
                     c &&
                     null != ei &&
-                    !eb(Z && null != q ? q : ei) &&
-                    (0, r.jsx)(g, { playbackPxSpring: eo, isDragging: Z, dragX: q }),
+                    !eb(q && null != Z ? Z : ei) &&
+                    (0, r.jsx)(g, { playbackPxSpring: eo, isDragging: q, dragX: Z }),
             ],
         }),
     });

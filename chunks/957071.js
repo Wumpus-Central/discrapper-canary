@@ -1,28 +1,28 @@
-s.d(t, { A: () => p });
-var n = s(477900),
-    l = s(582128),
-    a = s(477262),
-    r = s(432017),
-    i = s(81369),
-    o = s(265872),
-    c = s(980707),
-    u = s(477782),
-    d = s(717400),
-    m = s(99677),
-    f = s(663341),
-    h = s(809526),
-    x = s(105292);
+n.d(t, { A: () => p });
+var s = n(477900),
+    r = n(582128),
+    l = n(477262),
+    a = n(432017),
+    i = n(81369),
+    c = n(265872),
+    o = n(980707),
+    u = n(477782),
+    d = n(717400),
+    m = n(99677),
+    f = n(663341),
+    h = n(809526),
+    x = n(105292);
 let g = [
     {
         id: "add-images-videos",
         label: h.default["51+9lc"],
-        icon: a.s,
+        icon: l.s,
         accept: "image/*,video/*,.png,.jpg,.jpeg,.gif,.webp,.avif,.heic,.heif,.svg,.bmp,.mp4,.m4v,.mov,.webm,.mkv,.avi",
     },
     {
         id: "add-sounds",
         label: h.default["10ljr2"],
-        icon: r.T,
+        icon: a.T,
         accept: "audio/*,.mp3,.wav,.ogg,.oga,.opus,.m4a,.aac,.flac,.weba,.webm,.aif,.aiff,.mid,.midi",
     },
     { id: "add-other-files", label: h.default.aotDee, icon: i.H, accept: "" },
@@ -30,29 +30,29 @@ let g = [
 function p(e) {
     let {
             navId: t,
-            disabled: s,
-            buttonClassName: a,
-            iconClassName: r,
+            disabled: n,
+            buttonClassName: l,
+            iconClassName: a,
             onAddFiles: i,
             onImport: p,
             onSendToOtherProjects: j,
         } = e,
-        v = l.useRef(null),
-        N = l.useRef(null),
-        b = x.intl.string(x.t.d56gCa),
-        y = l.useCallback((e) => {
+        v = r.useRef(null),
+        N = r.useRef(null),
+        y = x.intl.string(x.t.d56gCa),
+        b = r.useCallback((e) => {
             let t = v.current;
             null != t && ((t.accept = e), t.click());
         }, []),
-        w = l.useCallback(
+        w = r.useCallback(
             (e) => {
                 (i(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
             },
             [i],
         );
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, n.jsx)("input", {
+            (0, s.jsx)("input", {
                 ref: v,
                 type: "file",
                 multiple: !0,
@@ -61,36 +61,36 @@ function p(e) {
                 tabIndex: -1,
                 "aria-hidden": !0,
             }),
-            (0, n.jsx)(o.Y, {
+            (0, s.jsx)(c.Y, {
                 targetElementRef: N,
                 position: "top",
                 align: "left",
-                animation: o.Y.Animation.NONE,
+                animation: c.Y.Animation.NONE,
                 renderPopout: (e) => {
-                    let { closePopout: s } = e;
-                    return (0, n.jsx)(c.W, {
+                    let { closePopout: n } = e;
+                    return (0, s.jsx)(o.W, {
                         "data-menu-migrated": !0,
                         navId: t,
-                        "aria-label": b,
-                        onClose: s,
-                        onSelect: s,
-                        children: (0, n.jsxs)(u.rX, {
+                        "aria-label": y,
+                        onClose: n,
+                        onSelect: n,
+                        children: (0, s.jsxs)(u.rX, {
                             children: [
                                 g.map((e) =>
-                                    (0, n.jsx)(
+                                    (0, s.jsx)(
                                         u.Dr,
                                         {
                                             id: e.id,
                                             label: x.intl.string(e.label),
                                             iconLeft: e.icon,
                                             leadingAccessory: { type: "icon", icon: e.icon },
-                                            action: () => y(e.accept),
+                                            action: () => b(e.accept),
                                         },
                                         e.id,
                                     ),
                                 ),
                                 null != p
-                                    ? (0, n.jsx)(u.Dr, {
+                                    ? (0, s.jsx)(u.Dr, {
                                           id: "import-project",
                                           label: x.intl.string(h.default["p/k5i7"]),
                                           iconLeft: d.q,
@@ -99,7 +99,7 @@ function p(e) {
                                       })
                                     : null,
                                 null != j
-                                    ? (0, n.jsx)(u.Dr, {
+                                    ? (0, s.jsx)(u.Dr, {
                                           id: "send-to-other-projects",
                                           label: x.intl.string(h.default["5HmLrK"]),
                                           iconLeft: m.t,
@@ -112,20 +112,20 @@ function p(e) {
                     });
                 },
                 children: (e, t) => {
-                    let { isShown: l } = t;
-                    return (0, n.jsx)("button", {
+                    let { isShown: r } = t;
+                    return (0, s.jsx)("button", {
                         ...e,
                         ref: N,
                         type: "button",
-                        className: a,
-                        disabled: s,
-                        "aria-label": b,
+                        className: l,
+                        disabled: n,
+                        "aria-label": y,
                         "aria-haspopup": "menu",
-                        "aria-expanded": l,
-                        children: (0, n.jsx)(f.PlusLargeIcon, {
+                        "aria-expanded": r,
+                        children: (0, s.jsx)(f.PlusLargeIcon, {
                             size: "refresh_sm",
                             color: "currentColor",
-                            className: r,
+                            className: a,
                         }),
                     });
                 },

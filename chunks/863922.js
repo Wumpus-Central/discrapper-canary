@@ -1,4 +1,4 @@
-n.d(t, { $T: () => x, Ay: () => M, C6: () => C, C7: () => j, O$: () => y, Oz: () => E, sK: () => _, s_: () => N });
+n.d(t, { $T: () => x, Ay: () => M, C6: () => C, C7: () => j, O$: () => I, Oz: () => E, sK: () => _, s_: () => N });
 var l = n(582128),
     s = n(435558),
     a = n.n(s),
@@ -130,7 +130,7 @@ async function S(e) {
         error: t,
     });
 }
-async function y(e) {
+async function I(e) {
     try {
         (await r.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             c.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
@@ -138,7 +138,7 @@ async function y(e) {
         throw new o.LG(e);
     }
 }
-let I =
+let y =
         221552 == n.j
             ? {
                   setSummaryFeedback: j,
@@ -167,7 +167,7 @@ let I =
                           (0, i.yK)([f.A], () => f.A.topSummaries(), [])
                       );
                   },
-                  deleteSummary: y,
+                  deleteSummary: I,
               }
             : null,
-    M = 221552 == n.j ? I : null;
+    M = 221552 == n.j ? y : null;

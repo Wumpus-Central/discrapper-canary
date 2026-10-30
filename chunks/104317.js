@@ -1,9 +1,9 @@
-n.d(t, { Ay: () => h, b9: () => g, w: () => p });
+n.d(t, { Ay: () => g, b9: () => x, w: () => p });
 var l = n(477900);
 n(582128);
 var a = n(683063),
-    i = n(56681),
-    r = n(615839),
+    r = n(56681),
+    i = n(615839),
     s = n(115982),
     o = n(566424),
     u = n(16634),
@@ -16,24 +16,24 @@ function p(e) {
         n = (0, s.SY)(t.steps);
     return null != n ? (0, s.WQ)(n) : (t.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ?? null);
 }
-function g(e) {
+function x(e) {
     return p(e) ?? f.intl.string(c.default.t8skVB);
 }
-function h(e) {
+function g(e) {
     let {
             projectId: t,
             steps: n,
             fallbackLabel: p,
-            live: g,
-            durationMs: h,
-            connectsDown: x = !1,
+            live: x,
+            durationMs: g,
+            connectsDown: h = !1,
             closed: j = !1,
             tier: v,
         } = e,
         b = (0, s.SY)(n),
-        k = (0, i.Q7)(f.intl.string(c.default.uk6jhJ), v),
-        y = g ? void 0 : h,
-        _ = null != y ? (0, r.nY)(y) : null != b ? (0, s.WQ)(b) : (p ?? f.intl.string(c.default.t8skVB)),
+        k = (0, r.Q7)(f.intl.string(c.default.uk6jhJ), v),
+        y = x ? void 0 : g,
+        _ = null != y ? (0, i.nY)(y) : null != b ? (0, s.WQ)(b) : (p ?? f.intl.string(c.default.t8skVB)),
         A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(o.A, {
         glyph: (0, l.jsx)(a.u, {
@@ -46,14 +46,14 @@ function h(e) {
         }),
         line: _,
         anchor: !0,
-        live: g,
-        settled: null != y || (!g && j),
-        connectsDown: x,
+        live: x,
+        settled: null != y || (!x && j),
+        connectsDown: h,
         detail: A
             ? (0, l.jsx)("ol", {
                   className: m.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: g && e === b }, e.id),
+                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: x && e === b }, e.id),
                   ),
               })
             : void 0,

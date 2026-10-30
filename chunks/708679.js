@@ -1,24 +1,24 @@
-s.d(t, { EP: () => C, Iy: () => S, JN: () => k, P6: () => A, RW: () => O, XU: () => R, YI: () => I, yN: () => L });
-var n = s(636537),
-    l = s(506774),
-    a = s(73153),
-    r = s(195880),
-    i = s(347111),
-    o = s(245179),
-    c = s(89222),
-    u = s(287111),
-    d = s(322227),
-    m = s(975189),
-    f = s(371169),
-    h = s(260498),
-    x = s(652215),
-    g = s(809526),
-    p = s(105292);
+n.d(t, { EP: () => A, Iy: () => S, JN: () => P, P6: () => C, RW: () => O, XU: () => I, YI: () => R, yN: () => L });
+var s = n(636537),
+    r = n(506774),
+    l = n(73153),
+    a = n(195880),
+    i = n(347111),
+    c = n(245179),
+    o = n(89222),
+    u = n(287111),
+    d = n(322227),
+    m = n(975189),
+    f = n(371169),
+    h = n(260498),
+    x = n(652215),
+    g = n(809526),
+    p = n(105292);
 let j = "ConjureHeldPrompts",
     v = new Map(),
     N = new Map();
-function b(e, t) {
-    let s =
+function y(e, t) {
+    let n =
         v.get(e) ??
         (async () => {
             try {
@@ -27,29 +27,29 @@ function b(e, t) {
                 throw (v.delete(e), t);
             }
         })();
-    return (v.set(e, s), s);
+    return (v.set(e, n), n);
 }
-function y() {
-    return l.w.get(j) ?? {};
+function b() {
+    return r.w.get(j) ?? {};
 }
 function w(e) {
-    let { [e]: t, ...s } = y();
-    l.w.set(j, s);
+    let { [e]: t, ...n } = b();
+    r.w.set(j, n);
 }
-function C(e) {
-    return y()[e]?.guildId;
+function A(e) {
+    return b()[e]?.guildId;
 }
-function A(e, t) {
-    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        n = arguments.length > 3 ? arguments[3] : void 0;
+function C(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+        s = arguments.length > 3 ? arguments[3] : void 0;
     if (h.Ay.getProject(e)?.install_scope_setup != null)
-        l.w.set(j, { ...y(), [e]: { message: t, attachments: s, nonce: (0, r.m)(), guildId: n } });
-    else (0, d.sendUserMessage)(e, t, s);
+        r.w.set(j, { ...b(), [e]: { message: t, attachments: n, nonce: (0, a.m)(), guildId: s } });
+    else (0, d.sendUserMessage)(e, t, n);
 }
-function E(e, t, s) {
+function E(e, t, n) {
     (w(e),
         (0, d.withdrawUserMessage)(e, t.nonce),
-        "" === c.A.getDraft(e) && (0, i.I)(e, t.message),
+        "" === o.A.getDraft(e) && (0, i.I)(e, t.message),
         0 === (0, u.GU)(e, "chat").length &&
             (0, u.fD)(
                 e,
@@ -58,41 +58,41 @@ function E(e, t, s) {
                     draft: { name: e.name, contentType: e.content_type, status: "ready", ref: e },
                 })),
             ),
-        s());
+        n());
 }
 function S(e, t) {
-    let s = y()[e],
-        n = h.Ay.getProject(e);
-    if (null == s || null == n || !o.A.hasLoadedHistory(e)) return;
-    let a = o.A.getMessages(e),
-        r = (0, d.optimisticMessageId)(s.nonce);
-    if (!0 === s.sent) {
-        let l = a.some((e) => "user" === e.role && !0 !== e.held && e.id !== r && e.content === s.message),
-            i = o.A.getHistoryLoads(e) > (N.get(e) ?? 0);
-        l
+    let n = b()[e],
+        s = h.Ay.getProject(e);
+    if (null == n || null == s || !c.A.hasLoadedHistory(e)) return;
+    let l = c.A.getMessages(e),
+        a = (0, d.optimisticMessageId)(n.nonce);
+    if (!0 === n.sent) {
+        let r = l.some((e) => "user" === e.role && !0 !== e.held && e.id !== a && e.content === n.message),
+            i = c.A.getHistoryLoads(e) > (N.get(e) ?? 0);
+        r
             ? w(e)
-            : !i || null != n.install_scope_setup || o.A.isHistoryUnavailable(e) || o.A.isThinking(e) || E(e, s, t);
+            : !i || null != s.install_scope_setup || c.A.isHistoryUnavailable(e) || c.A.isThinking(e) || E(e, n, t);
         return;
     }
-    if (null != n.install_scope_setup) {
-        a.some((e) => e.id === r) || (0, d.showUserMessage)(e, s.message, s.attachments, { held: !0, nonce: s.nonce });
+    if (null != s.install_scope_setup) {
+        l.some((e) => e.id === a) || (0, d.showUserMessage)(e, n.message, n.attachments, { held: !0, nonce: n.nonce });
         return;
     }
     "open" === d.default.getConnState(e) &&
-        (l.w.set(j, { ...y(), [e]: { ...s, sent: !0 } }),
-        N.set(e, o.A.getHistoryLoads(e)),
-        (0, d.sendUserMessage)(e, s.message, s.attachments, { nonce: s.nonce }) || E(e, s, t));
+        (r.w.set(j, { ...b(), [e]: { ...n, sent: !0 } }),
+        N.set(e, c.A.getHistoryLoads(e)),
+        (0, d.sendUserMessage)(e, n.message, n.attachments, { nonce: n.nonce }) || E(e, n, t));
 }
-function R(e, t) {
+function I(e, t) {
     if (0 === e.length) return {};
-    let s = e.find((e) => e.id === t);
+    let n = e.find((e) => e.id === t);
     return {
         input: "server",
         note: p.intl.string(g.default.SU9K9U),
-        ...(null != s ? { default_entities: [{ id: s.id, name: s.name, kind: "server" }] } : {}),
+        ...(null != n ? { default_entities: [{ id: n.id, name: n.name, kind: "server" }] } : {}),
     };
 }
-function I(e) {
+function R(e) {
     return {
         id: e.id,
         questions: e.questions.map((e) => ({
@@ -105,28 +105,28 @@ function I(e) {
         })),
     };
 }
-async function P(e, t, s) {
-    let l = await n.Bo.put({
+async function k(e, t, n) {
+    let r = await s.Bo.put({
         url: `${x.Rsh.CONJURE_PROJECT(e)}/install-scope`,
-        body: { install_scope: t, ...(null != s ? { guild_id: s } : {}) },
+        body: { install_scope: t, ...(null != n ? { guild_id: n } : {}) },
         rejectWithError: !0,
     });
-    a.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: l.body });
+    l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: r.body });
 }
-function k(e, t, s) {
-    return b(`settle:${e}`, async () => {
+function P(e, t, n) {
+    return y(`settle:${e}`, async () => {
         try {
-            await P(e, t, s);
+            await k(e, t, n);
         } catch (t) {
             if (409 !== t.status) throw t;
             await (0, f.U1)(e);
         }
     });
 }
-function L(e, t, s, n) {
-    return b(`switch:${e}:${t}`, async () => {
-        await P(e, s, n);
-        let t = "guild" === s ? g.default["8+EcCu"] : g.default["U7+Yeh"];
+function L(e, t, n, s) {
+    return y(`switch:${e}:${t}`, async () => {
+        await k(e, n, s);
+        let t = "guild" === n ? g.default["8+EcCu"] : g.default["U7+Yeh"];
         if (!(0, d.sendUserMessage)(e, p.intl.string(t))) throw Error("Not connected");
     });
 }
