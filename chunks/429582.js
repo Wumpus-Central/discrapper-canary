@@ -512,7 +512,7 @@ function ex(e, t) {
                 null == l ||
                 l === document.body ||
                 l === document.documentElement ||
-                (!e.contains(l) && !l.contains(e) && !J.has(l) && !ee.has(l))
+                (!e.contains(l) && !l.contains(e) && !J.has(l) && !ee.has(l) && ![...et].some((e) => e.contains(l)))
             )
                 return !1;
         }
