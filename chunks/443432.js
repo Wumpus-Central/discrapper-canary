@@ -420,12 +420,12 @@ function ec(e) {
 }
 function ed(e) {
     var t;
-    let { transparentWhileLoading: n = !1, spinnerWhileLoading: u = !1, ...s } = e,
-        { onLoad: i } = s,
-        [a, d] = l.useState(!1),
-        f = (0, _._o)(),
-        m =
-            ((t = s.url),
+    let { transparentWhileLoading: n = !1, spinnerWhileLoading: u = !1, placeholderClassName: s, ...i } = e,
+        { onLoad: a } = i,
+        [d, f] = l.useState(!1),
+        m = (0, _._o)(),
+        p =
+            ((t = i.url),
             (0, y.nr)()
                 ? (function (e, t) {
                       let n =
@@ -530,33 +530,33 @@ function ed(e) {
                               );
                           })(!1 === r ? n : null, t, u);
                       return null == n || !0 === r ? k : null == r ? N : { status: "needed", popup: o, openPopup: s };
-                  })(t, f)
+                  })(t, m)
                 : k),
-        p = l.useCallback(
+        h = l.useCallback(
             (e) => {
-                (d(!0), i?.(e));
+                (f(!0), a?.(e));
             },
-            [i],
+            [a],
         );
-    if ("needed" === m.status)
+    if ("needed" === p.status)
         return (0, r.jsx)("div", {
             className: es.Qf,
-            children: (0, r.jsx)(x, { popup: m.popup, onOpenPopup: m.openPopup }),
+            children: (0, r.jsx)(x, { popup: p.popup, onOpenPopup: p.openPopup }),
         });
-    let h = "ready" === m.status,
-        E = u || "checking" === m.status;
+    let E = "ready" === p.status,
+        g = u || "checking" === p.status;
     return (0, r.jsxs)("div", {
         className: es.Qf,
         children: [
-            a && h
+            d && E
                 ? null
                 : (0, r.jsx)("div", {
-                      className: o()(es.Qf, !0 !== n ? es.SL : void 0, E ? es.k$ : void 0),
-                      children: E ? (0, r.jsx)(c.y, {}) : null,
+                      className: o()(es.Qf, !0 !== n ? es.SL : void 0, g ? es.k$ : void 0, s),
+                      children: g ? (0, r.jsx)(c.y, {}) : null,
                   }),
             (0, r.jsx)("div", {
-                className: o()(es.Qf, a ? void 0 : es.Ar),
-                children: h ? (0, r.jsx)(ec, { ...s, onLoad: p }) : null,
+                className: o()(es.Qf, d ? void 0 : es.Ar),
+                children: E ? (0, r.jsx)(ec, { ...i, onLoad: h }) : null,
             }),
         ],
     });

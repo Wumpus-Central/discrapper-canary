@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657805";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657809";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657805, Version Hash: d5b971efb8512390cc63d698ce288df3d94cd535`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657809, Version Hash: e59df1e43668df62d40ee293f11fc3551ef20d91`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26192,7 +26192,7 @@ let yE = "isHideDevBanner",
                     className: tf()(y_.Wz, y_.mr),
                     children: [
                         (0, b.jsx)(yu, { className: y_.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657805" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657809" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -55003,7 +55003,7 @@ function Yx() {
         }, []);
     return (0, b.jsxs)("div", {
         ref: s,
-        className: YG.d,
+        className: YG.dz,
         children: [
             e
                 ? n.map((e) =>
@@ -55029,12 +55029,13 @@ function Yk(e) {
         let { url: e, proxyTicketRefreshing: n } = t.data,
             i = t.surface.type === GE.U.OVERLAY;
         _ = n
-            ? (0, b.jsx)("div", { className: YG.p, children: (0, b.jsx)(rr.y, {}) })
+            ? (0, b.jsx)("div", { className: tf()(YG.pU, { [YG.bn]: i }), children: (0, b.jsx)(rr.y, {}) })
             : (0, b.jsx)(YL.oI, {
                   allowPopups: (0, YR.b)(a),
                   referrerPolicy: "origin",
                   transparentWhileLoading: i || t.surface.type === GE.U.APP_CHANNEL,
-                  spinnerWhileLoading: (0, MS.Q5)(t.surface),
+                  spinnerWhileLoading: i || (0, MS.Q5)(t.surface),
+                  placeholderClassName: i ? YG.bn : void 0,
                   style: i ? YL.cT : void 0,
                   url: e,
                   contextSource: { type: xm.f.FRAME, frameId: t.id },
@@ -55042,7 +55043,7 @@ function Yk(e) {
                   onIframeUnmount: (e) => nN.A.detachFrameIframe(t.id, e),
                   onGuestReload: () => nN.A.setFrameRunsInBackground(t.id, !1),
                   queryParams: u,
-                  className: YG.p,
+                  className: YG.pU,
                   shouldRefocus: d,
                   nativeView: c && (0, MS.Q5)(t.surface),
               });
@@ -55077,14 +55078,14 @@ function YF(e) {
     return (
         null != l &&
             (u = c
-                ? (0, b.jsx)("div", { className: YG.p, children: (0, b.jsx)(rr.y, {}) })
+                ? (0, b.jsx)("div", { className: YG.pU, children: (0, b.jsx)(rr.y, {}) })
                 : (0, b.jsx)(YL.oI, {
                       allowPopups: (0, YR.b)(l),
                       referrerPolicy: "origin",
                       url: i,
                       contextSource: { type: xm.f.ACTIVITY, applicationId: n },
                       queryParams: (0, Yv.A)(t, d),
-                      className: YG.p,
+                      className: YG.pU,
                       shouldRefocus: !1,
                       onIframeMount: (e) => (0, Yy.hN)(n, e),
                       onIframeUnmount: (e) => (0, Yy.WO)(n, e),
