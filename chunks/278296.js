@@ -1,4 +1,4 @@
-n.d(t, { Ml: () => d, lo: () => c, pY: () => u, tR: () => l });
+n.d(t, { Ml: () => u, Wz: () => d, lo: () => c, pY: () => _, tR: () => l });
 var i = n(478437),
     s = n(488926),
     r = n(22464),
@@ -17,26 +17,23 @@ let l = Object.freeze({
         },
     }),
     c = new Set([i.r.GUILD_TEXT, i.r.GUILD_ANNOUNCEMENT, i.r.GUILD_FORUM]);
-function d(e, t) {
-    return !e.features.has(t.guildFeature);
+function d(e) {
+    return s.MJ(o.xBc.VIEW_CHANNEL, e) && s.MJ(o.xBc.READ_MESSAGE_HISTORY, e);
 }
 function u(e, t) {
+    return !e.features.has(t.guildFeature);
+}
+function _(e, t) {
     return (
         null != e &&
         null != t &&
         Object.values(l).some((n) =>
             (function (e, t, n) {
-                var i;
-                if (t.guild_id !== e.id || !d(e, n)) return !1;
                 return (
-                    null ==
-                        (c.has(t.type)
-                            ? t.isNSFW()
-                                ? "nsfw"
-                                : ((i = t), s.MJ(o.xBc.VIEW_CHANNEL, i) && s.MJ(o.xBc.READ_MESSAGE_HISTORY, i))
-                                  ? null
-                                  : "not_public"
-                            : "channel_type") && !t.hasFlag(n.channelFlag)
+                    t.guild_id === e.id &&
+                    !!u(e, n) &&
+                    null == (c.has(t.type) ? (t.isNSFW() ? "nsfw" : d(t) ? null : "not_public") : "channel_type") &&
+                    !t.hasFlag(n.channelFlag)
                 );
             })(e, t, n),
         )

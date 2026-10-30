@@ -35,8 +35,8 @@ function u(e, t) {
                 n.e("662068"),
                 n.e("358608"),
                 n.e("637038"),
-                n.e("866553"),
-            ]).then(n.bind(n, 950880));
+                n.e("951219"),
+            ]).then(n.bind(n, 83262));
             return (n) => (0, a.jsx)(t, { ...n, channelType: u, guildId: e.guild_id, categoryId: e.parent_id });
         });
     };

@@ -50,8 +50,8 @@ function u(e) {
                                       n.e("662068"),
                                       n.e("358608"),
                                       n.e("637038"),
-                                      n.e("866553"),
-                                  ]).then(n.bind(n, 950880));
+                                      n.e("951219"),
+                                  ]).then(n.bind(n, 83262));
                                   return (n) => (0, t.jsx)(a, { ...n, channelType: s.rbe.GUILD_TEXT, guildId: e.id });
                               }),
                       },
@@ -83,8 +83,8 @@ function u(e) {
                                       n.e("662068"),
                                       n.e("358608"),
                                       n.e("637038"),
-                                      n.e("866553"),
-                                  ]).then(n.bind(n, 950880));
+                                      n.e("951219"),
+                                  ]).then(n.bind(n, 83262));
                                   return (n) =>
                                       (0, t.jsx)(a, { ...n, channelType: s.rbe.GUILD_CATEGORY, guildId: e.id });
                               }),
