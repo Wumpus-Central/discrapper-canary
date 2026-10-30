@@ -1,5 +1,5 @@
 n.d(t, { A: () => l });
-var i = n(652215);
+var i = n(350835);
 function l(e) {
-    return (e.type === i.$pd.PLAYING || e.type === i.$pd.COMPETING) && null != e.application_id;
+    return (e.type === i.$.PLAYING || e.type === i.$.COMPETING) && null != e.application_id;
 }

@@ -1,11 +1,11 @@
 n.d(e, { A: () => I });
-var i = n(17928),
-    l = n(73153),
-    a = n(294857),
-    r = n(427358),
-    o = n(290863),
-    u = n(287809),
-    s = n(652215);
+var i = n(350835),
+    l = n(17928),
+    a = n(73153),
+    r = n(294857),
+    o = n(427358),
+    u = n(290863),
+    s = n(287809);
 let d = !1,
     c = {},
     A = {};
@@ -32,50 +32,50 @@ function _(t) {
 function E(t) {
     let { user: e, activities: n } = t;
     if (null == e) return !1;
-    let i = n.filter((t) => t.type !== s.$pd.CUSTOM_STATUS);
-    if (0 === i.length) return _(e.id);
-    let l = !1;
+    let l = n.filter((t) => t.type !== i.$.CUSTOM_STATUS);
+    if (0 === l.length) return _(e.id);
+    let a = !1;
     return (
-        i.forEach((t) => {
+        l.forEach((t) => {
             (function (t, e) {
-                let n = (0, a.A)(t);
+                let n = (0, r.A)(t);
                 if (null == n) return _(e.id);
                 let i = A[e.id];
                 null != i && i.gameId !== n && _(e.id);
                 let l = t.timestamps?.start ?? Date.now(),
-                    r = { userId: e.id, activity: t, startedPlaying: l };
+                    a = { userId: e.id, activity: t, startedPlaying: l };
                 return (
-                    (c = { ...c, [n]: { ...c[n], [r.userId]: r } }),
-                    (A = { ...A, [r.userId]: { gameId: n, startedPlaying: r.startedPlaying } }),
+                    (c = { ...c, [n]: { ...c[n], [a.userId]: a } }),
+                    (A = { ...A, [a.userId]: { gameId: n, startedPlaying: a.startedPlaying } }),
                     !0
                 );
-            })(t, e) && (l = !0);
+            })(t, e) && (a = !0);
         }),
-        l
+        a
     );
 }
 function N() {
     let t,
         e = !1;
     return (
-        r.A.shouldFetch() ||
+        o.A.shouldFetch() ||
             d ||
             ((c = {}),
             (A = {}),
             (t = !1),
-            o.A.getUserIds().forEach((e) => {
-                let n = u.default.getUser(e);
-                null != n && (t = E({ user: n, activities: o.A.getActivities(e) }) || t);
+            u.A.getUserIds().forEach((e) => {
+                let n = s.default.getUser(e);
+                null != n && (t = E({ user: n, activities: u.A.getActivities(e) }) || t);
             }),
             (e = t)),
-        (d = !r.A.shouldFetch()),
+        (d = !o.A.shouldFetch()),
         e
     );
 }
-class T extends i.Ay.Store {
+class T extends l.Ay.Store {
     static displayName = "NowPlayingStore";
     initialize() {
-        (this.waitFor(o.A, r.A, u.default), this.syncWith([r.A], N));
+        (this.waitFor(u.A, o.A, s.default), this.syncWith([o.A], N));
     }
     get games() {
         return c;
@@ -93,7 +93,7 @@ class T extends i.Ay.Store {
         return A[t];
     }
 }
-let I = new T(l.h, {
+let I = new T(a.h, {
     CONNECTION_OPEN: function () {
         ((c = {}), (A = {}));
     },

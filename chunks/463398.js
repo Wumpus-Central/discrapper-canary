@@ -1,12 +1,12 @@
 n.d(t, { A: () => u });
-var i = n(439372),
-    r = n(773669),
-    a = n(166403),
-    s = n(962644),
-    l = n(412260),
-    o = n(652215),
+var i = n(931093),
+    r = n(439372),
+    a = n(773669),
+    s = n(166403),
+    l = n(962644),
+    o = n(412260),
     d = n(818348);
-class c extends i.A {
+class c extends r.A {
     actions = {
         POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
         EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this),
@@ -18,25 +18,25 @@ class c extends i.A {
         VIRTUAL_CURRENCY_REDEEM_SUCCESS: this.onVCRedeemed.bind(this),
     };
     stores = new Map()
-        .set(r.default, this.onLocaleChanged.bind(this))
-        .set(a.A, this.onSubscriptionStateChanged.bind(this))
-        .set(l.A, this.onPromotionsFetchSettled.bind(this));
+        .set(a.default, this.onLocaleChanged.bind(this))
+        .set(s.A, this.onSubscriptionStateChanged.bind(this))
+        .set(o.A, this.onPromotionsFetchSettled.bind(this));
     lastSubscriptionStateSignature = null;
     hasPendingSubscriptionRefetch = !1;
     _terminate() {
         ((this.hasPendingSubscriptionRefetch = !1), (this.lastSubscriptionStateSignature = null));
     }
     onLocaleChanged() {
-        null == l.A.lastFetchedActivePromotions ||
-            (l.A.lastFetchedActivePromotionsLocale !== r.default.locale && (0, s.BE)(!1));
+        null == o.A.lastFetchedActivePromotions ||
+            (o.A.lastFetchedActivePromotionsLocale !== a.default.locale && (0, l.BE)(!1));
     }
     onPostConnectionOpen() {
-        (0, s.BE)();
+        (0, l.BE)();
     }
     onSubscriptionStateChanged() {
         let e,
             t =
-                null == (e = a.A.getSubscriptions(!1))
+                null == (e = s.A.getSubscriptions(!1))
                     ? ""
                     : Object.values(e)
                           .filter((e) => e.type === d.rz.PREMIUM)
@@ -51,27 +51,27 @@ class c extends i.A {
                           .join(","),
             n = null == this.lastSubscriptionStateSignature;
         if (t !== this.lastSubscriptionStateSignature && ((this.lastSubscriptionStateSignature = t), !n)) {
-            if (l.A.isFetchingActivePromotions) {
+            if (o.A.isFetchingActivePromotions) {
                 this.hasPendingSubscriptionRefetch = !0;
                 return;
             }
-            (0, s.BE)(!1);
+            (0, l.BE)(!1);
         }
     }
     onPromotionsFetchSettled() {
         !this.hasPendingSubscriptionRefetch ||
-            l.A.isFetchingActivePromotions ||
-            ((this.hasPendingSubscriptionRefetch = !1), (0, s.BE)(!1));
+            o.A.isFetchingActivePromotions ||
+            ((this.hasPendingSubscriptionRefetch = !1), (0, l.BE)(!1));
     }
     onMobilePurchaseSuccess() {
-        (0, s.BE)(!1);
+        (0, l.BE)(!1);
     }
     onOfferUpdated() {
-        (0, s.BE)(!1);
+        (0, l.BE)(!1);
     }
     onVCRedeemed(e) {
         let { entitlements: t } = e;
-        t.some((e) => e.type === o.zF_.FRACTIONAL_REDEMPTION) && (0, s.BE)(!1);
+        t.some((e) => e.type === i.z.FRACTIONAL_REDEMPTION) && (0, l.BE)(!1);
     }
 }
 let u = new c();

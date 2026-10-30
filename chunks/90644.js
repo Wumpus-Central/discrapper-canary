@@ -1,14 +1,15 @@
-n.d(t, { A: () => s });
-var i = n(573648),
-    r = n(652215),
-    a = n(272984);
-function s(e) {
+n.d(t, { A: () => l });
+var i = n(350835),
+    r = n(573648),
+    a = n(652215),
+    s = n(272984);
+function l(e) {
     return (
         null != e &&
-        e.type === r.$pd.LISTENING &&
-        e.name === i.A.get(r.fg2.SPOTIFY).name &&
+        e.type === i.$.LISTENING &&
+        e.name === r.A.get(a.fg2.SPOTIFY).name &&
         null != e.party &&
         null != e.party.id &&
-        (0, a.pH)(e.party.id)
+        (0, s.pH)(e.party.id)
     );
 }

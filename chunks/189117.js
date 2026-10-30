@@ -1,5 +1,5 @@
 n.d(t, { $_: () => s, Vb: () => r, ZR: () => a });
-var i = n(652215);
+var i = n(350835);
 let r = "Conjuring",
     a = [
         "Something magical",
@@ -10,5 +10,5 @@ let r = "Conjuring",
         "Summoning ideas",
     ];
 function s(e) {
-    return e?.type === i.$pd.PLAYING && e.name === r && null == e.application_id;
+    return e?.type === i.$.PLAYING && e.name === r && null == e.application_id;
 }

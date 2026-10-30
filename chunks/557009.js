@@ -1,11 +1,11 @@
 n.d(t, { A: () => d });
 var i = n(913290),
-    r = n(315069),
-    a = n(32731),
-    s = n(24482),
-    l = n(889227),
-    o = n(652215);
-class d extends r.A {
+    r = n(931093),
+    a = n(315069),
+    s = n(32731),
+    l = n(24482),
+    o = n(889227);
+class d extends a.A {
     id;
     skuId;
     applicationId;
@@ -32,7 +32,7 @@ class d extends r.A {
             id: e.id,
             skuId: e.sku_id,
             applicationId: e.application_id,
-            user: null != e.user ? new l.A(e.user) : null,
+            user: null != e.user ? new o.A(e.user) : null,
             userId: e.user_id,
             gifterId: e.gifter_user_id,
             type: e.type,
@@ -47,14 +47,14 @@ class d extends r.A {
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
-            sku: null != e.sku ? a.A.createFromServer(e.sku) : null,
+            sku: null != e.sku ? s.A.createFromServer(e.sku) : null,
             sourceType: e.source_type ?? null,
             fulfillmentStatus: e.fulfillment_status ?? null,
             orbsReward: e.metadata?.orbs_reward ?? null,
         });
     }
     get isGiftable() {
-        return this.type === o.zF_.USER_GIFT && null == this.gifterId;
+        return this.type === r.z.USER_GIFT && null == this.gifterId;
     }
     constructor(e) {
         (super(),
@@ -83,9 +83,9 @@ class d extends r.A {
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (this.isGiftable || this.deleted) return !1;
-        if (this.type === o.zF_.PREMIUM_SUBSCRIPTION) {
+        if (this.type === r.z.PREMIUM_SUBSCRIPTION) {
             let n = t.get(this.skuId);
-            if ((null != n && !n.premium) || !s.Ay.canInstallPremiumApplications(e)) return !1;
+            if ((null != n && !n.premium) || !l.Ay.canInstallPremiumApplications(e)) return !1;
         }
         let i = new Date();
         if ((null != this.startsAt && i < this.startsAt) || (null != this.endsAt && i >= this.endsAt)) return !1;

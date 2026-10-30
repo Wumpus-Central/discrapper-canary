@@ -1,12 +1,13 @@
-n.d(t, { A: () => a });
-var i = n(61330),
-    r = n(652215);
-function a(e) {
-    return null == e || null == e.type || e.type !== r.$pd.PLAYING
+n.d(t, { A: () => s });
+var i = n(570138),
+    r = n(350835),
+    a = n(61330);
+function s(e) {
+    return null == e || null == e.type || e.type !== r.$.PLAYING
         ? null
-        : (0, i.A)(e)
-          ? r.yTV.XBOX
+        : (0, a.A)(e)
+          ? i.y.XBOX
           : null != e.platform
             ? e.platform
-            : r.yTV.DESKTOP;
+            : i.y.DESKTOP;
 }

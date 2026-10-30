@@ -6,10 +6,10 @@ var r = n(189613),
     l = n.n(s),
     o = n(63494),
     d = n.n(o),
-    c = n(17928),
-    u = n(73153),
-    _ = n(671759),
-    E = n(172799);
+    c = n(294630),
+    u = n(17928),
+    _ = n(73153),
+    E = n(671759);
 let A = {},
     h = {},
     f = {},
@@ -27,7 +27,7 @@ function N(e) {
     if (!g.has(n)) return !1;
     (g = new Map(g)).delete(n);
 }
-class C extends c.Ay.Store {
+class C extends u.Ay.Store {
     static displayName = "InstantInviteStore";
     getInvite(e) {
         let {
@@ -35,9 +35,9 @@ class C extends c.Ay.Store {
             targetUserId: n,
             targetApplicationId: i,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return t === E.yV.STREAM && null != n
+        return t === c.y.STREAM && null != n
             ? h[e]?.[n]
-            : t === E.yV.EMBEDDED_APPLICATION && null != i
+            : t === c.y.EMBEDDED_APPLICATION && null != i
               ? f[e]?.[i]
               : A[e];
     }
@@ -54,7 +54,7 @@ class C extends c.Ay.Store {
         return g.get(S(e));
     }
 }
-let O = new C(u.h, {
+let O = new C(_.h, {
     CONNECTION_OPEN: function () {
         ((A = {}), (h = {}), (f = {}), (I = {}), (i = null), (T = !1), (m = !1), (p = !1));
     },
@@ -63,7 +63,7 @@ let O = new C(u.h, {
         (delete A[t.id], delete h[t.id], delete f[t.id]);
     },
     FRIEND_INVITE_CREATE_SUCCESS: function (e) {
-        ((I[e.invite.code] = _.A.createFromServer(e.invite)),
+        ((I[e.invite.code] = E.A.createFromServer(e.invite)),
             (i = a()(l()(d()(Object.values(I), "createdAt"))) ?? null),
             (m = !1));
     },
@@ -80,10 +80,10 @@ let O = new C(u.h, {
     },
     INSTANT_INVITE_CREATE_SUCCESS: function (e) {
         let { channelId: t, invite: n } = e,
-            i = _.A.createFromServer(n);
-        i.targetType === E.yV.STREAM && null != i.targetUser
+            i = E.A.createFromServer(n);
+        i.targetType === c.y.STREAM && null != i.targetUser
             ? (null == h[t] && (h[t] = {}), (h[t][String(i.targetUser.id)] = i))
-            : i.targetType === E.yV.EMBEDDED_APPLICATION && null != i.targetApplication
+            : i.targetType === c.y.EMBEDDED_APPLICATION && null != i.targetApplication
               ? (null == f[t] && (f[t] = {}), (f[t][i.targetApplication.id] = i))
               : (A[t] = i);
     },
@@ -107,7 +107,7 @@ let O = new C(u.h, {
     FRIEND_INVITES_FETCH_RESPONSE: function (e) {
         ((I = {}),
             e.invites.forEach((e) => {
-                I[e.code] = _.A.createFromServer(e);
+                I[e.code] = E.A.createFromServer(e);
             }),
             (i = a()(l()(d()(Object.values(I), "createdAt"))) ?? null),
             (p = !1));

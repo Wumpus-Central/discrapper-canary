@@ -1,9 +1,7 @@
 n.d(e, { A: () => i });
-var l = n(652215);
+var l = n(350835);
 function i(t) {
     return (
-        (t.type === l.$pd.LISTENING || t.type === l.$pd.WATCHING) &&
-        t.timestamps?.start != null &&
-        null != t.timestamps.end
+        (t.type === l.$.LISTENING || t.type === l.$.WATCHING) && t.timestamps?.start != null && null != t.timestamps.end
     );
 }

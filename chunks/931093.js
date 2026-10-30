@@ -1,0 +1,21 @@
+n.d(t, { z: () => r });
+var i,
+    r =
+        (((i = {})[(i.PURCHASE = 1)] = "PURCHASE"),
+        (i[(i.PREMIUM_SUBSCRIPTION = 2)] = "PREMIUM_SUBSCRIPTION"),
+        (i[(i.DEVELOPER_GIFT = 3)] = "DEVELOPER_GIFT"),
+        (i[(i.TEST_MODE_PURCHASE = 4)] = "TEST_MODE_PURCHASE"),
+        (i[(i.FREE_PURCHASE = 5)] = "FREE_PURCHASE"),
+        (i[(i.USER_GIFT = 6)] = "USER_GIFT"),
+        (i[(i.PREMIUM_PURCHASE = 7)] = "PREMIUM_PURCHASE"),
+        (i[(i.APPLICATION_SUBSCRIPTION = 8)] = "APPLICATION_SUBSCRIPTION"),
+        (i[(i.FREE_STAFF_PURCHASE = 9)] = "FREE_STAFF_PURCHASE"),
+        (i[(i.QUEST_REWARD = 10)] = "QUEST_REWARD"),
+        (i[(i.FRACTIONAL_REDEMPTION = 11)] = "FRACTIONAL_REDEMPTION"),
+        (i[(i.VIRTUAL_CURRENCY_REDEMPTION = 12)] = "VIRTUAL_CURRENCY_REDEMPTION"),
+        (i[(i.POWERUP_REDEMPTION = 13)] = "POWERUP_REDEMPTION"),
+        (i[(i.PARTIAL_RETURN = 14)] = "PARTIAL_RETURN"),
+        (i[(i.CATEGORY_REWARD = 15)] = "CATEGORY_REWARD"),
+        (i[(i.PURCHASE_REWARD = 16)] = "PURCHASE_REWARD"),
+        (i[(i.ORBS_ARCADE_REWARD = 17)] = "ORBS_ARCADE_REWARD"),
+        i);

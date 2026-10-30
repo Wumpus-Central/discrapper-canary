@@ -3,30 +3,30 @@ var l = i(477900);
 i(582128);
 var a = i(503698),
     n = i.n(a),
-    s = i(17928),
-    d = i(297264),
-    r = i(866665),
-    c = i(939249),
-    o = i(672979),
+    s = i(350835),
+    d = i(17928),
+    r = i(297264),
+    c = i(866665),
+    o = i(939249),
+    m = i(672979),
     p = i(90644),
-    m = i(432166),
-    u = i(587895),
-    x = i(769015),
-    A = i(202163),
-    h = i(172710),
-    v = i(763758),
-    g = i(970928),
-    N = i(486020),
-    j = i(652215),
+    u = i(432166),
+    x = i(587895),
+    A = i(769015),
+    h = i(202163),
+    v = i(172710),
+    g = i(763758),
+    N = i(970928),
+    j = i(486020),
     y = i(105292),
     I = i(742782);
 function f(e) {
     return (
         {
-            [j.$pd.PLAYING]: y.intl.string(y.t.J4MQFX),
-            [j.$pd.COMPETING]: y.intl.string(y.t.J4MQFX),
-            [j.$pd.WATCHING]: y.intl.string(y.t.xeqvTg),
-            [j.$pd.LISTENING]: y.intl.string(y.t.ep6av7),
+            [s.$.PLAYING]: y.intl.string(y.t.J4MQFX),
+            [s.$.COMPETING]: y.intl.string(y.t.J4MQFX),
+            [s.$.WATCHING]: y.intl.string(y.t.xeqvTg),
+            [s.$.LISTENING]: y.intl.string(y.t.ep6av7),
         }[e] ?? y.intl.string(y.t["1+boPi"])
     );
 }
@@ -36,7 +36,7 @@ function S(e, t, i) {
         ? {
               isSpotify: !0,
               name: t.details ?? t.name ?? "",
-              type: j.$pd.LISTENING,
+              type: s.$.LISTENING,
               assets: t.assets ?? void 0,
               applicationId: t.application_id,
               state: t.state ?? void 0,
@@ -46,7 +46,7 @@ function S(e, t, i) {
               userId: e,
           }
         : null != i
-          ? ((l = t?.type === j.$pd.WATCHING ? j.$pd.WATCHING : j.$pd.PLAYING),
+          ? ((l = t?.type === s.$.WATCHING ? s.$.WATCHING : s.$.PLAYING),
             {
                 isSpotify: !1,
                 isEmbedded: !0,
@@ -55,7 +55,7 @@ function S(e, t, i) {
                 type: l,
                 applicationId: i.application.id,
                 embeddedIconUrl:
-                    N.Ay.getApplicationIconURL({ id: i.application.id, icon: i.application.icon }) ?? void 0,
+                    j.Ay.getApplicationIconURL({ id: i.application.id, icon: i.application.icon }) ?? void 0,
                 embeddedApplicationName: i.application.name,
                 assets: t?.assets ?? void 0,
                 details: t?.details ?? void 0,
@@ -66,9 +66,9 @@ function S(e, t, i) {
           : {
                 isSpotify: !1,
                 isEmbedded: !1,
-                isGame: (0, o.A)(t),
+                isGame: (0, m.A)(t),
                 name: t?.name ?? "",
-                type: t?.type ?? j.$pd.PLAYING,
+                type: t?.type ?? s.$.PLAYING,
                 applicationId: t?.application_id,
                 embeddedIconUrl: void 0,
                 embeddedApplicationName: void 0,
@@ -81,7 +81,7 @@ function S(e, t, i) {
 }
 function G(e) {
     let { resolvedActivity: t, showHeader: i = !0 } = e,
-        { assets: a, applicationId: s, name: o, state: p, syncId: u, timestamps: x, userId: A, rawActivity: N } = t,
+        { assets: a, applicationId: s, name: d, state: m, syncId: p, timestamps: x, userId: A, rawActivity: h } = t,
         j = a?.large_image ?? a?.small_image;
     return (0, l.jsxs)("div", {
         className: I.ec,
@@ -89,7 +89,7 @@ function G(e) {
             i
                 ? (0, l.jsx)("div", {
                       className: I.N1,
-                      children: (0, l.jsx)(d.D, {
+                      children: (0, l.jsx)(r.D, {
                           variant: "text-xs/medium",
                           color: "text-muted",
                           children: f(t.type),
@@ -100,15 +100,15 @@ function G(e) {
                 className: I.Wh,
                 children: [
                     null != j
-                        ? (0, l.jsx)(r.m, {
+                        ? (0, l.jsx)(c.m, {
                               text: a?.large_text ?? null,
                               position: "top",
-                              children: (0, l.jsx)(c.D, {
-                                  onClick: () => (0, h.QX)(N, A),
+                              children: (0, l.jsx)(o.D, {
+                                  onClick: () => (0, v.QX)(h, A),
                                   className: I.nf,
                                   children: (0, l.jsx)("img", {
                                       alt: a?.large_text ?? "",
-                                      src: (0, g.uD)(s, j, [128, 128]),
+                                      src: (0, N.uD)(s, j, [128, 128]),
                                       className: I.Sl,
                                   }),
                               }),
@@ -117,30 +117,30 @@ function G(e) {
                     (0, l.jsxs)("div", {
                         className: I.wt,
                         children: [
-                            null != o &&
-                                o.length > 0 &&
-                                (0, l.jsx)(d.D, {
+                            null != d &&
+                                d.length > 0 &&
+                                (0, l.jsx)(r.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
                                     lineClamp: 1,
                                     children:
-                                        null != u
-                                            ? (0, l.jsx)(c.D, {
-                                                  onClick: () => (0, h.Mp)(N),
+                                        null != p
+                                            ? (0, l.jsx)(o.D, {
+                                                  onClick: () => (0, v.Mp)(h),
                                                   className: I.nf,
-                                                  children: o,
+                                                  children: d,
                                               })
-                                            : o,
+                                            : d,
                                 }),
-                            null != p &&
-                                p.length > 0 &&
+                            null != m &&
+                                m.length > 0 &&
                                 (0, l.jsx)("div", {
                                     className: n()(I.QJ, I.p9, I.Mo),
-                                    children: (0, l.jsx)(v.A, {
-                                        artists: p,
-                                        canOpen: null != u,
+                                    children: (0, l.jsx)(g.A, {
+                                        artists: m,
+                                        canOpen: null != p,
                                         linkClassName: I.QJ,
-                                        onOpenSpotifyArtist: (e) => (0, h.mN)(N, A, e),
+                                        onOpenSpotifyArtist: (e) => (0, v.mN)(h, A, e),
                                     }),
                                 }),
                         ],
@@ -149,20 +149,20 @@ function G(e) {
             }),
             x?.start != null &&
                 x?.end != null &&
-                (0, l.jsx)(m.A, { start: x.start, end: x.end, className: I.Jq, themed: !0, singleLine: !0 }),
+                (0, l.jsx)(u.A, { start: x.start, end: x.end, className: I.Jq, themed: !0, singleLine: !0 }),
         ],
     });
 }
 function b(e) {
     let { resolvedActivity: t } = e,
-        i = (0, s.bG)([u.A], () => (null != t.applicationId ? u.A.getApplication(t.applicationId) : null), [
+        i = (0, d.bG)([x.A], () => (null != t.applicationId ? x.A.getApplication(t.applicationId) : null), [
             t.applicationId,
         ]),
-        { gameRecord: a } = (0, A.A)(t.applicationId),
-        { assets: n, isGame: d, isEmbedded: c } = t;
+        { gameRecord: a } = (0, h.A)(t.applicationId),
+        { assets: n, isGame: s, isEmbedded: r } = t;
     if (null == n || (null == n.large_image && null == n.small_image))
-        return c && null != t.embeddedIconUrl
-            ? (0, l.jsx)(r.m, {
+        return r && null != t.embeddedIconUrl
+            ? (0, l.jsx)(c.m, {
                   text: t.embeddedApplicationName,
                   position: "top",
                   asContainer: !0,
@@ -172,14 +172,14 @@ function b(e) {
                       className: I.Sl,
                   }),
               })
-            : d
-              ? (0, l.jsx)(x.A, { game: a ?? i, className: I.Sl })
+            : s
+              ? (0, l.jsx)(A.A, { game: a ?? i, className: I.Sl })
               : null;
     let o = n.large_image ?? n.small_image;
     return null != o
         ? (0, l.jsx)("img", {
               alt: n.large_text ?? "",
-              src: (0, g.uD)(t.applicationId, o, [128, 128]),
+              src: (0, N.uD)(t.applicationId, o, [128, 128]),
               className: I.Sl,
           })
         : null;

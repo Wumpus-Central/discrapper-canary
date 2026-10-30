@@ -1,14 +1,14 @@
 n.d(t, { Ay: () => y });
-var i = n(17928),
-    r = n(73153),
-    a = n(885576),
-    s = n(309010),
-    l = n(967198),
-    o = n(97005),
-    d = n(735769),
-    c = n(260498),
-    u = n(189117),
-    _ = n(652215),
+var i = n(350835),
+    r = n(17928),
+    a = n(73153),
+    s = n(885576),
+    l = n(309010),
+    o = n(967198),
+    d = n(97005),
+    c = n(735769),
+    u = n(260498),
+    _ = n(189117),
     E = n(746080);
 let A = null,
     h = null,
@@ -19,7 +19,7 @@ function T() {
     null != f && (clearTimeout(f), (f = null));
 }
 function m(e) {
-    let t = u.ZR.filter((t) => t !== e);
+    let t = _.ZR.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
 function g() {
@@ -30,15 +30,15 @@ function S() {
 }
 function N(e) {
     let { withGracePeriod: t } = e;
-    if (a.A.isIdle() || (null != A && null == c.Ay.getProject(A))) return S();
+    if (s.A.isIdle() || (null != A && null == u.Ay.getProject(A))) return S();
     let n = (function () {
-        let e = d.A.getShownProjectId();
-        if (null != e) return null != c.Ay.getProject(e) ? e : null;
-        let t = l.A.getGuildId(),
+        let e = c.A.getShownProjectId();
+        if (null != e) return null != u.Ay.getProject(e) ? e : null;
+        let t = o.A.getGuildId(),
             n =
-                c.Ay.getGlobalSelectedProjectId() ??
-                (null != t && s.Ay.getChannelId() === E.VV.CONJURE ? c.Ay.getSelectedProjectId(t) : null);
-        return null == n || null == c.Ay.getProject(n) ? null : n;
+                u.Ay.getGlobalSelectedProjectId() ??
+                (null != t && l.Ay.getChannelId() === E.VV.CONJURE ? u.Ay.getSelectedProjectId(t) : null);
+        return null == n || null == u.Ay.getProject(n) ? null : n;
     })();
     return null == n
         ? null != h && t
@@ -51,7 +51,7 @@ function N(e) {
         : (T(),
           (n !== A || null == h) &&
               ((A = n),
-              (h = { type: _.$pd.PLAYING, name: u.Vb, details: m(), timestamps: { start: Date.now() } }),
+              (h = { type: i.$.PLAYING, name: _.Vb, details: m(), timestamps: { start: Date.now() } }),
               !(function e() {
                   (g(),
                       (I = setTimeout(() => {
@@ -61,22 +61,22 @@ function N(e) {
               !0));
 }
 async function C() {
-    if ("success" !== c.Ay.getOwnedProjectsFetchState()) {
+    if ("success" !== u.Ay.getOwnedProjectsFetchState()) {
         let { listProjects: e } = await Promise.resolve().then(n.bind(n, 371169));
         (await e(),
             await new Promise((e) => {
                 function t() {
-                    let n = c.Ay.getOwnedProjectsFetchState();
-                    ("success" === n || "error" === n) && (c.Ay.removeChangeListener(t), e());
+                    let n = u.Ay.getOwnedProjectsFetchState();
+                    ("success" === n || "error" === n) && (u.Ay.removeChangeListener(t), e());
                 }
-                (c.Ay.addChangeListener(t), t());
+                (u.Ay.addChangeListener(t), t());
             }));
     }
-    if ("success" !== c.Ay.getOwnedProjectsFetchState()) throw Error("Conjure projects fetch failed");
-    return c.Ay.getOwnedProjects();
+    if ("success" !== u.Ay.getOwnedProjectsFetchState()) throw Error("Conjure projects fetch failed");
+    return u.Ay.getOwnedProjects();
 }
 async function O() {
-    if (!p && ((p = !0), (0, o.zN)("conjure_resume")))
+    if (!p && ((p = !0), (0, d.zN)("conjure_resume")))
         try {
             let [e, { ensureConnection: t }] = await Promise.all([
                 C(),
@@ -104,16 +104,16 @@ async function O() {
             p = !1;
         }
 }
-class R extends i.Ay.Store {
+class R extends r.Ay.Store {
     static displayName = "ConjureRichPresenceStore";
     initialize() {
-        this.syncWith([a.A, s.Ay, l.A, c.Ay, d.A], () => N({ withGracePeriod: !0 }));
+        this.syncWith([s.A, l.Ay, o.A, u.Ay, c.A], () => N({ withGracePeriod: !0 }));
     }
     getActivity() {
         return h;
     }
 }
-let L = new R(r.h, {
+let L = new R(a.h, {
         CONNECTION_OPEN: () => N({ withGracePeriod: !1 }),
         POST_CONNECTION_OPEN: () => (O(), !1),
         LOGOUT: () => ((p = !1), S()),

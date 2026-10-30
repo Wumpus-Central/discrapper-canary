@@ -1,11 +1,11 @@
 (i.d(t, { I: () => l, U: () => r }), i(321073));
 var s = i(435558),
-    n = i(652215);
+    n = i(350835);
 function r(e) {
     return (0, s.uniqWith)(
         e.filter((e) => {
             let { type: t } = e;
-            return t !== n.$pd.CUSTOM_STATUS && t !== n.$pd.HANG_STATUS;
+            return t !== n.$.CUSTOM_STATUS && t !== n.$.HANG_STATUS;
         }),
         (e, t) =>
             (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||

@@ -1,9 +1,9 @@
 n.d(t, { A: () => r });
-var i = n(652215);
+var i = n(350835);
 function r(e) {
     return (
         null != e &&
-        e.type !== i.$pd.CUSTOM_STATUS &&
+        e.type !== i.$.CUSTOM_STATUS &&
         (null != e.details ||
             (null != e.assets && (null != e.assets.large_image || null != e.assets.small_text)) ||
             null != e.party ||

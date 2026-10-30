@@ -1,15 +1,15 @@
 n.d(t, { A: () => p });
-var r = n(17928),
-    i = n(73153),
-    l = n(91242),
-    u = n(818023);
+var r = n(397962),
+    i = n(17928),
+    l = n(73153),
+    u = n(91242);
 let A = null,
     a = null,
     c = !1,
-    d = !1;
-class o extends r.Ay.Store {
+    o = !1;
+class d extends i.Ay.Store {
     initialize() {
-        this.waitFor(l.A);
+        this.waitFor(u.A);
     }
     getBuilderPreviewApplicationId() {
         return A;
@@ -24,13 +24,13 @@ class o extends r.Ay.Store {
         return c;
     }
     isBuilderPreviewLandscape() {
-        return d;
+        return o;
     }
 }
-let p = new o(i.h, {
+let p = new d(l.h, {
     LOGOUT: function () {
-        if (null == A && null == a && !c && !d) return !1;
-        ((A = null), (a = null), (c = !1), (d = !1));
+        if (null == A && null == a && !c && !o) return !1;
+        ((A = null), (a = null), (c = !1), (o = !1));
     },
     CONJURE_BUILDER_PREVIEW_APPLICATION_SET: function (e) {
         let { applicationId: t } = e;
@@ -44,16 +44,16 @@ let p = new o(i.h, {
     },
     CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET: function (e) {
         let { landscape: t } = e;
-        if (d === t) return !1;
-        d = t;
+        if (o === t) return !1;
+        o = t;
     },
     FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { frameId: t, lockState: n } = e;
-        if (n !== u.N7.LANDSCAPE && n !== u.N7.PORTRAIT) return !1;
-        let r = l.A.getFrame(t);
-        if (null == r || r.applicationId !== a) return !1;
-        let i = n === u.N7.LANDSCAPE;
-        if (d === i) return !1;
-        d = i;
+        if (n !== r.o.LANDSCAPE && n !== r.o.PORTRAIT) return !1;
+        let i = u.A.getFrame(t);
+        if (null == i || i.applicationId !== a) return !1;
+        let l = n === r.o.LANDSCAPE;
+        if (o === l) return !1;
+        o = l;
     },
 });
