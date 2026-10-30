@@ -113,6 +113,7 @@
 
 .cardSection_b558e5 .cardScroller_b558e5 {
     margin: calc(0px - var(--space-20));
+    padding: 0;
     width: calc(100% + var(--space-40))
 }
 
@@ -189,4 +190,4 @@
     margin-top: -12px
 }
 
-/*# sourceMappingURL=8aacd1332b542209.css.map*/
+/*# sourceMappingURL=7d552dae0e24b336.css.map*/
