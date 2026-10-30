@@ -134,7 +134,7 @@ let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
 function C() {
     let e = (0, c.T)(),
         t = r.Ay.getMediaEngine(),
-        n = e && (0, f.s$)(),
+        n = e && (0, f.s)(),
         i = s.Ay.getEnableAutoclipping(),
         a = S !== i;
     (g !== n || a) &&

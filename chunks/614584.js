@@ -58,7 +58,7 @@ function R() {
     return (0, m.isDesktop)() && a.A.features.supports("clips_storage_size");
 }
 function L(e) {
-    return "auto" === e && R() && (0, C.s$)() && N.Ay.getEnableAutoclipping();
+    return "auto" === e && R() && (0, C.s)() && N.Ay.getEnableAutoclipping();
 }
 function y(e) {
     return a.A.fileManager.join(e, O.SC);

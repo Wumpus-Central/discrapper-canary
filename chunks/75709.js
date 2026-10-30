@@ -21,8 +21,8 @@ var E = n(442433),
     _ = n(717558),
     T = n(964486),
     y = n(220839),
-    N = n(397244),
-    j = n(394871),
+    j = n(397244),
+    N = n(394871),
     S = n(941143),
     I = n(866323),
     b = n(120842);
@@ -87,8 +87,8 @@ var eE = n(224640),
     e_ = n(877784),
     eT = n(26137),
     ey = n(473935),
-    eN = n(765671),
-    ej = n(470739),
+    ej = n(765671),
+    eN = n(470739),
     eS = n(142617),
     eI = n(366056),
     eb = n(477782),
@@ -132,10 +132,10 @@ function ek(e) {
         y = i.useCallback(() => {
             v(!0);
         }, []),
-        N = i.useCallback(() => {
+        j = i.useCallback(() => {
             (0, x.hasAnyModalOpen)() || v(!1);
         }, []);
-    function j() {
+    function N() {
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("div", { className: eP.iA, children: (0, l.jsx)(a, { size: "xs", color: "currentColor" }) }),
@@ -165,7 +165,7 @@ function ek(e) {
             (t = T
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(g.D, { className: eP.ef, onClick: f, children: j() }),
+                          (0, l.jsx)(g.D, { className: eP.ef, onClick: f, children: N() }),
                           (0, l.jsx)(g.D, {
                               className: eP.ap,
                               "aria-label": ew.intl.string(ew.t.PdRCRg),
@@ -181,14 +181,14 @@ function ek(e) {
                         ...e,
                         onClick: y,
                         children: [
-                            j(),
+                            N(),
                             (0, l.jsx)("div", {
                                 className: eP.ap,
                                 children: (0, l.jsx)(eR._, { size: "xs", color: "currentColor" }),
                             }),
                         ],
                     })
-                  : (0, l.jsx)(g.D, { className: eP.ef, onClick: f, children: j() })),
+                  : (0, l.jsx)(g.D, { className: eP.ef, onClick: f, children: N() })),
             (0, l.jsx)("div", { ref: C, className: eP.jG, children: t })
         );
     }
@@ -196,14 +196,14 @@ function ek(e) {
         ? (0, l.jsx)("li", {
               className: eP.j$,
               onMouseEnter: y,
-              onMouseLeave: N,
+              onMouseLeave: j,
               children: (0, l.jsx)(p.Y, {
                   targetElementRef: c ?? C,
                   align: m,
                   spacing: 0,
                   renderPopout: u,
                   shouldShow: A,
-                  onRequestClose: N,
+                  onRequestClose: j,
                   children: S,
               }),
           })
@@ -392,7 +392,7 @@ function ty(e) {
     let s = (0, d.yK)([e0.Ay], () => Object.values(e0.Ay.getClips())),
         o = (0, d.bG)([e0.Ay], () => e0.Ay.getSettings()),
         u = (0, d.bG)([e0.Ay], () => e0.Ay.getNewClipIds()),
-        c = (0, ti.HN)(),
+        c = (0, ti.H)(),
         m = (0, d.bG)([e0.Ay], () => e0.Ay.getEnableAutoclipping()),
         h = (0, d.bG)([tt.Ay], () => tt.Ay.getKeybindForAction(tE.hCu.SAVE_CLIP)),
         f = i.useCallback(
@@ -514,12 +514,12 @@ function ty(e) {
                                   }),
                           ],
                       })
-                    : (0, l.jsx)(tN, { keybindString: x }),
+                    : (0, l.jsx)(tj, { keybindString: x }),
             ],
         })
     );
 }
-function tN(e) {
+function tj(e) {
     let { keybindString: t } = e,
         n = (0, ta.E)();
     return (0, l.jsxs)("div", {
@@ -556,7 +556,7 @@ function tN(e) {
         ],
     });
 }
-function tj(e) {
+function tN(e) {
     let { onClose: t, popoutContainerRef: n } = e,
         a = (0, eJ.sw)(),
         r = !(0, d.bG)([e0.Ay], () => e0.Ay.getSettings().showPovClipsInGallery),
@@ -828,7 +828,7 @@ function nT(e) {
     i.useEffect(() => {
         c || (y.current = !1);
     }, [c]);
-    let N = i.useCallback(() => {
+    let j = i.useCallback(() => {
             (y.current ||
                 ((y.current = !0),
                 (0, nA.Y)({
@@ -838,7 +838,7 @@ function nT(e) {
                 })),
                 m());
         }, [m]),
-        j = (0, eO.rE)({ action: "PRESS_ORBS", onClick: N });
+        N = (0, eO.rE)({ action: "PRESS_ORBS", onClick: j });
     i.useEffect(() => {
         let e = n?.current,
             t = E.current;
@@ -898,7 +898,7 @@ function nT(e) {
     return (0, l.jsx)("li", {
         ref: E,
         className: eP.j$,
-        onMouseEnter: N,
+        onMouseEnter: j,
         onMouseLeave: v,
         children: (0, l.jsx)(p.Y, {
             targetElementRef: t,
@@ -920,7 +920,7 @@ function nT(e) {
                         innerRef: C,
                         className: eP.ef,
                         ...e,
-                        onClick: j,
+                        onClick: N,
                         children: [
                             (0, l.jsx)("div", {
                                 className: eP.iA,
@@ -948,8 +948,8 @@ function nT(e) {
     });
 }
 var ny = n(290863),
-    nN = n(351906),
-    nj = n(403362),
+    nj = n(351906),
+    nN = n(403362),
     nS = n(562153),
     nI = n(661531),
     nb = n(628284),
@@ -990,7 +990,7 @@ function nJ(e) {
                 n = (0, nq.A)(t),
                 l = i.useMemo(() => n.filter((e) => e instanceof nK.R), [n]),
                 a = (0, nz.A)(e),
-                r = i.useMemo(() => a.filter(nj.Vq), [a]),
+                r = i.useMemo(() => a.filter(nN.Vq), [a]),
                 s = (0, d.cf)([nQ.A], () => {
                     let t = {};
                     for (let n of e) {
@@ -1477,7 +1477,7 @@ function ll(e) {
         { analyticsLocations: g } = (0, w.Ay)(O.A.USER_PROFILE_ACCOUNT_POPOUT),
         v = (0, t0.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, tX.A)(g, p, nX.R7.ACCOUNT_POPOUT);
-    let { ref: E } = (0, eN.Ay)(),
+    let { ref: E } = (0, ej.Ay)(),
         { isHoveringOrFocusing: C, isHovering: _ } = (0, tu.A)(E);
     (i.useEffect(() => {
         a?.(E.current);
@@ -1491,8 +1491,8 @@ function ll(e) {
         ));
     let T = (0, d.bG)([ny.A], () => ny.A.getStatus(t.id)),
         y = n4(nc.CY.useSetting()),
-        N = (0, d.bG)([nN.A], () => nN.A.hidePersonalInformation),
-        j = (0, tP.kB)(),
+        j = (0, d.bG)([nj.A], () => nj.A.hidePersonalInformation),
+        N = (0, tP.kB)(),
         S = nc.Q_.useSetting(),
         I = (function (e) {
             let t = nc.CY.useSetting(),
@@ -1583,7 +1583,7 @@ function ll(e) {
         })(T),
         b = (function (e) {
             let t = (0, d.bG)([nw.default], () => nw.default.getCurrentUser()),
-                n = (0, d.bG)([nN.A], () => nN.A.hidePersonalInformation),
+                n = (0, d.bG)([nj.A], () => nj.A.hidePersonalInformation),
                 i = (0, d.bG)([nM.A], () => (0, tF.M)(nM.A.theme)),
                 { multiAccountUsers: a } = (0, nD.K)(),
                 r = a.map((a) => {
@@ -1719,7 +1719,7 @@ function ll(e) {
             [
                 c.M.DISPLAY_NAME_STYLES_FLYWHEEL_EDIT_PROFILE_NEW_BADGE,
                 Y ? c.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK : void 0,
-            ].filter(nj.Vq),
+            ].filter(nN.Vq),
             { groupName: void 0, bypassAutoDismiss: !0 },
         ),
         et = i.useId();
@@ -1792,7 +1792,7 @@ function ll(e) {
                                             (0, l.jsx)(nd.A, {
                                                 userId: t.id,
                                                 userBio: p?.bio,
-                                                hidePersonalInformation: N,
+                                                hidePersonalInformation: j,
                                                 onClose: n,
                                             }),
                                             Z &&
@@ -1852,7 +1852,7 @@ function ll(e) {
                                                                     icon: () =>
                                                                         (0, l.jsx)(ev.nW, { status: T, size: 12 }),
                                                                     trailing:
-                                                                        (j || T === tE.clD.DND) &&
+                                                                        (N || T === tE.clD.DND) &&
                                                                         (0, l.jsx)(ex.BellSlashIcon, { size: "xxs" }),
                                                                     renderSubmenu: em.Fr
                                                                         ? void 0
@@ -1928,12 +1928,12 @@ function ll(e) {
                                                                         label: ew.intl.string(ew.t.l6w3Vj),
                                                                         onClick: () => {
                                                                             (n(),
-                                                                                (0, ej.openBadgeDirectoryModal)({
+                                                                                (0, eN.openBadgeDirectoryModal)({
                                                                                     viewingCurrentUserBadges: !0,
                                                                                 }));
                                                                         },
                                                                     }),
-                                                                (0, l.jsx)(tj, { onClose: n, popoutContainerRef: E }),
+                                                                (0, l.jsx)(tN, { onClose: n, popoutContainerRef: E }),
                                                                 Q &&
                                                                     (0, l.jsx)(nT, {
                                                                         popoutContainerRef: E,
@@ -2019,8 +2019,8 @@ var li = n(201805),
     l_ = n(625494),
     lT = n(536194),
     ly = n(19575),
-    lN = n(994314),
-    lj = n(485599),
+    lj = n(994314),
+    lN = n(485599),
     lS = n(116833);
 function lI(e) {
     let t = "progress" === e.variant,
@@ -2055,7 +2055,7 @@ function lb(e) {
     return (0, l.jsx)(lI, {
         ...t,
         onPrimaryAction: () => {
-            (i(n$.i.TAKE_ACTION), (0, ej.openBadgeDirectoryModal)());
+            (i(n$.i.TAKE_ACTION), (0, eN.openBadgeDirectoryModal)());
         },
         onRequestClose: () => i(n$.i.USER_DISMISS),
         targetElementRef: n,
@@ -2610,8 +2610,8 @@ function iT(e) {
         _ = (0, d.bG)([lA.Ay], () => lA.Ay.getMode() === is.TB.PUSH_TO_TALK),
         T = (0, d.bG)([lA.Ay], () => lA.Ay.getSettings().modeOptions.shortcut),
         y = (0, d.bG)([iA], () => iA.getIsTutorialActive(iv.v.MUTE_TUTORIAL)),
-        N = (0, d.bG)([lv.A], () => null != lv.A.getChannelId()),
-        { name: j } = (0, ec.x5)(is.oh.AUDIO_INPUT),
+        j = (0, d.bG)([lv.A], () => null != lv.A.getChannelId()),
+        { name: N } = (0, ec.x5)(is.oh.AUDIO_INPUT),
         { enabledInputProfiles: S } = (0, ld.d)({ location: "MicrophoneButton" }),
         I = i.useRef(null),
         b = n || s || a,
@@ -2630,7 +2630,7 @@ function iT(e) {
                 tooltipForceOpen: !0,
             }
           : { tooltipText: U };
-    let F = _ && N,
+    let F = _ && j,
         G = b ? nI.A.colors.ICON_VOICE_MUTED : "currentColor",
         V = i.useCallback(() => {
             (h(), y && ih.N(iv.v.MUTE_TUTORIAL));
@@ -2693,7 +2693,7 @@ function iT(e) {
                             }),
                             (0, l.jsx)(ir.A, {
                                 "aria-label": v
-                                    ? ew.intl.formatToPlainString(ew.t["18wnuD"], { inputDeviceName: j })
+                                    ? ew.intl.formatToPlainString(ew.t["18wnuD"], { inputDeviceName: N })
                                     : ew.intl.string(ew.t.fRzCbB),
                                 className: r()(io.UT, { [io.q6]: a }),
                                 disabled: o,
@@ -2713,11 +2713,11 @@ function iT(e) {
                                 tooltipType: v ? "green_void_do_not_use" : void 0,
                                 tooltipForceOpen: v,
                                 tooltipPositionKey: v
-                                    ? ew.intl.formatToPlainString(ew.t["18wnuD"], { inputDeviceName: j })
+                                    ? ew.intl.formatToPlainString(ew.t["18wnuD"], { inputDeviceName: N })
                                     : void 0,
                                 tooltipShouldShow: !a,
                                 tooltipText: v
-                                    ? ew.intl.format(ew.t["18wnuD"], { inputDeviceName: j })
+                                    ? ew.intl.format(ew.t["18wnuD"], { inputDeviceName: N })
                                     : ew.intl.string(ew.t.fRzCbB),
                             }),
                         ],
@@ -2739,8 +2739,8 @@ function iT(e) {
     });
 }
 var iy = n(935399),
-    iN = n(505312),
-    ij = n(848847),
+    ij = n(505312),
+    iN = n(848847),
     iS = n(975807),
     iI = n(425565),
     ib = n(158843);
@@ -2891,16 +2891,16 @@ function iG(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iF.A)("1793402152776", !0);
+        let e = (0, iF.A)("1793402234988", !0);
         t =
             null != e
                 ? ew.intl.formatToPlainString(ew.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
                 : ew.intl.formatToPlainString(ew.t.Gzh6ZP, { webBuildOverride: a.id });
     } else t = ew.intl.string(ew.t.cduTBL);
     let A = e8.SettingsIcon,
-        v = (0, iN.w)();
+        v = (0, ij.w)();
     return (
-        (A = null != a ? ij.H : v.Component),
+        (A = null != a ? iN.H : v.Component),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(ir.A, {
@@ -2962,9 +2962,9 @@ function iZ(e) {
         E = i.useRef(null),
         _ = t ?? E,
         T = (0, lC.F_)({ avatarDecoration: v, size: (0, Y.Te)(f._3.SIZE_32) }),
-        N = (0, et.A)(),
+        j = (0, et.A)(),
         {
-            updateOpenPopoutRef: j,
+            updateOpenPopoutRef: N,
             highlightBadge: S,
             setHighlightBadge: I,
         } = (function () {
@@ -3030,7 +3030,7 @@ function iZ(e) {
                       (m(), I(void 0));
                   },
                   children: (e) => {
-                      j(e);
+                      N(e);
                       let { onMouseEnter: t, onMouseDown: i, ...m } = e;
                       return (0, l.jsxs)("div", {
                           ref: _,
@@ -3062,7 +3062,7 @@ function iZ(e) {
                                   className: iV.my,
                                   "aria-hidden": !0,
                               }),
-                              (0, l.jsx)("div", { className: iV.oM, children: h(N) }),
+                              (0, l.jsx)("div", { className: iV.oM, children: h(j) }),
                           ],
                       });
                   },
@@ -3983,13 +3983,13 @@ class iK extends i.PureComponent {
                 voiceChannel: s,
             } = this.props;
         if (null == i) return null;
-        if ((0, N.A)({ activities: t, status: a, applicationStream: n, voiceChannel: s }))
+        if ((0, j.A)({ activities: t, status: a, applicationStream: n, voiceChannel: s }))
             return (0, l.jsxs)(M.A, {
                 hoverText: r,
                 forceHover: e,
                 children: [
                     (0, l.jsx)(A.A, { children: nr.Ay.humanizeStatus(a) }),
-                    (0, l.jsx)(j.A, {
+                    (0, l.jsx)(N.A, {
                         user: i,
                         activities: t,
                         applicationStream: n,
@@ -4028,7 +4028,7 @@ class iK extends i.PureComponent {
                   children: [
                       (0, l.jsx)("div", {
                           className: iV.eW,
-                          children: (0, l.jsx)(lj.A, {
+                          children: (0, l.jsx)(lN.A, {
                               className: r()({ [iV.e8]: null != e }),
                               children: (0, l.jsx)(el.A, {
                                   userName: n,
@@ -4041,7 +4041,7 @@ class iK extends i.PureComponent {
                       }),
                       (0, l.jsx)("div", {
                           className: iV.XP,
-                          children: (0, l.jsx)(lN.A, { children: this.renderStatus() }),
+                          children: (0, l.jsx)(lj.A, { children: this.renderStatus() }),
                       }),
                   ],
               });
@@ -4129,9 +4129,9 @@ function iq(e) {
             accountContainerRef: _,
             deviceChangedTooltipType: T,
             dismissTooltips: y,
-            speaking: N,
+            speaking: j,
         } = e,
-        j = (0, $.K)(C);
+        N = (0, $.K)(C);
     function S() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         return (0, l.jsx)(iG, {
@@ -4145,7 +4145,7 @@ function iq(e) {
     }
     return (0, l.jsxs)("div", {
         className: iV.Uo,
-        style: j,
+        style: N,
         children: [
             (0, l.jsx)(iT, {
                 accountContainerRef: _,
@@ -4162,7 +4162,7 @@ function iq(e) {
                 shouldShowSpeakingWhileMutedTooltip: u,
                 shouldShowInputDeviceChangedTooltip: !u && "input" === T,
                 dismissTooltips: y,
-                speaking: N,
+                speaking: j,
             }),
             (0, l.jsx)(id, {
                 selfDeaf: t,
@@ -4237,8 +4237,8 @@ function iQ() {
             let e = lv.A.getChannelId();
             return null != e ? lf.A.getChannel(e) : null;
         }),
-        { mute: T, selfMute: y, suppress: N } = (0, lm.A)(C),
-        { selfDeaf: j, deaf: S } = (0, lc.A)(C),
+        { mute: T, selfMute: y, suppress: j } = (0, lm.A)(C),
+        { selfDeaf: N, deaf: S } = (0, lc.A)(C),
         I = (0, d.bG)([V.A], () => ((0, H.kK)() ? V.A.getCurrentBuildOverride().overrides?.discord_web : null)),
         b = (0, d.bG)([lA.Ay], () => lA.Ay.getSpeakingWhileMuted()),
         R = (0, d.bG)([B.A], () => B.A.isFullscreenInContext()),
@@ -4262,7 +4262,7 @@ function iQ() {
                 null != e &&
                     (l = o()(Array.from(lp.A.getParty(e) ?? []))
                         .map((e) => nw.default.getUser(e))
-                        .filter(nj.Vq)
+                        .filter(nN.Vq)
                         .value()),
                 l.length > 1
             );
@@ -4347,7 +4347,7 @@ function iQ() {
             isOrbchievementsEnabled: el,
             userTag: E,
             occluded: W,
-            selfDeaf: j,
+            selfDeaf: N,
             selfMute: y,
             serverDeaf: S,
             serverMute: T,
@@ -4357,7 +4357,7 @@ function iQ() {
             speakingWhileMuted: b,
             status: f,
             streaming: h,
-            suppress: N,
+            suppress: j,
             webBuildOverride: I,
             awaitingRemote: z,
             nameplate: J,

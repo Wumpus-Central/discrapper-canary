@@ -1788,7 +1788,7 @@ function tX(e) {
         ),
         $ = null == h,
         q = null == x,
-        B = (0, tb.HN)() && d !== G.oH.AUTO_CLIPS,
+        B = (0, tb.H)() && d !== G.oH.AUTO_CLIPS,
         Y = ec.intl.string(tq[m]),
         Q = (0, n.jsxs)(n.Fragment, {
             children: [
@@ -2241,7 +2241,7 @@ function t7(e) {
 var t4 = l(799888);
 function t6(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: i, onClipClick: s, isLoading: r, onScroll: o } = e,
-        c = (0, tb.HN)(),
+        c = (0, tb.H)(),
         d = a.useMemo(() => t1(t), [t]),
         m = c && d.length > 0,
         f = (0, u.yK)([T.Ay], () => T.Ay.getNewClipIds()),
@@ -2394,7 +2394,7 @@ function ld(e) {
         m = (0, e6.P)((e) => e.setClippedWithFacet),
         f = (0, e6.P)((e) => e.clearFilters),
         h = (0, e6.P)((e) => e.setPendingContentFocus),
-        x = (0, tb.HN)(),
+        x = (0, tb.H)(),
         g = null != o || null != c;
     function p(e) {
         return !g && r === e;

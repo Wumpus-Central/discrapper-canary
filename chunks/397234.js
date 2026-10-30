@@ -19969,7 +19969,7 @@ let Cx = (0, h.zD)(S.X.CLIPS_ENABLE_AUTOCLIPPING, {
     Cp = (0, h.zZ)(S.X.CLIPS_AUTOCLIPPING_CATEGORY, {
         useTitle: () => V.intl.string(CS.default.XWkJoi),
         useSubtitle: () => V.intl.string(CS.default["MJ/VsO"]),
-        usePredicate: Cm.HN,
+        usePredicate: Cm.H,
         usePersistentBadge: () => ({ badgeType: T.Xi.BETA }),
         useInlineNotice: () =>
             (0, CA.E)()

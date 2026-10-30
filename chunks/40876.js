@@ -613,7 +613,7 @@ let r = {
             "CLIPS_SESSION_START",
             "CLIPS_SESSION_STOP",
         ],
-        inlineRequire: () => n(813600).A,
+        inlineRequire: () => n(712824).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     GameExitPromoManager: {
