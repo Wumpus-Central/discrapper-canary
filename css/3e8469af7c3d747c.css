@@ -100,9 +100,38 @@
     padding-bottom: 88px
 }
 
+@keyframes scrollerFadeOut__7f9c0 {
+    0% {
+        -webkit-mask-size: 100% calc(100% - 24px), 100% 32px;
+        mask-size: 100% calc(100% - 24px), 100% 32px
+    }
+
+    to {
+        -webkit-mask-size: 100% 100%, 100% 0;
+        mask-size: 100% 100%, 100% 0
+    }
+}
+
 .scrollerFade__7f9c0 {
-    -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 16px), transparent);
-    mask-image: linear-gradient(180deg, #000 calc(100% - 16px), transparent)
+    animation: scrollerFadeOut__7f9c0 linear both;
+    -webkit-mask-image: linear-gradient(#000, #000), linear-gradient(#000 50%, transparent);
+    mask-image: linear-gradient(#000, #000), linear-gradient(#000 50%, transparent);
+    -webkit-mask-position: top, bottom;
+    mask-position: top, bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%, 100% 0;
+    mask-size: 100% 100%, 100% 0;
+    animation-timeline: scroll(self);
+    animation-range: max(0px, calc(100% - var(--space-32))) 100%
+}
+
+@supports not (animation-timeline:scroll()) {
+    .scrollerFade__7f9c0 {
+        animation: none;
+        -webkit-mask-size: 100% calc(100% - 24px), 100% 32px;
+        mask-size: 100% calc(100% - 24px), 100% 32px
+    }
 }
 
 .widgetPreviews__7f9c0,
@@ -217,4 +246,4 @@
     width: 80%
 }
 
-/*# sourceMappingURL=7cad6f18f9db3381.css.map*/
+/*# sourceMappingURL=3e8469af7c3d747c.css.map*/

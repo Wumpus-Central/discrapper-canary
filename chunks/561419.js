@@ -5,6 +5,7 @@ e.exports = {
     tB: "backdrop__7f9c0",
     oR: "toast__7f9c0",
     It: "profileFramePadding__7f9c0",
+    $C: "scrollerFadeOut__7f9c0",
     BE: "scrollerFade__7f9c0",
     sJ: "widgetPreviews__7f9c0",
     vS: "wishlistBreadcrumb__7f9c0",

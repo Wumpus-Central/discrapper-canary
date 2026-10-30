@@ -1,6 +1,7 @@
 e.exports = {
     BK: "themeContainer__5be3e",
     wx: "header__5be3e",
+    Lh: "bodyFadeOut__5be3e",
     rf: "body__5be3e",
     Nr: "card__5be3e",
     qr: "footer__5be3e",
