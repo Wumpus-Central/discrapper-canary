@@ -9,10 +9,10 @@ function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { audioRef: n } = i.useContext(r.A),
         d = i.useRef(null),
-        [c, u] = i.useState(() => null != t.soundId && n.current?.dataset.soundId === t.soundId && !n.current.paused);
+        [u, c] = i.useState(() => null != t.soundId && n.current?.dataset.soundId === t.soundId && !n.current.paused);
     (0, s.Ay)(() => {
         let { current: e } = n;
-        null != e && null != t.soundId && c && e.addEventListener("pause", () => u(!1), { once: !0 });
+        null != e && null != t.soundId && u && e.addEventListener("pause", () => c(!1), { once: !0 });
     });
     let m = i.useCallback(async () => {
         if (null == e) {
@@ -28,7 +28,7 @@ function d(e) {
             m();
         }, [m]),
         {
-            isPlaying: c,
+            isPlaying: u,
             playSound: i.useCallback(
                 async function () {
                     let { volume: e, outputChannel: i = o.a.DEFAULT } =
@@ -43,9 +43,9 @@ function d(e) {
                         (s.dataset.soundId = t.soundId),
                         i === o.a.VOICE && s.setSinkId?.(l.voiceSinkId),
                         s.play(),
-                        (s.onplay = () => u(!0)),
-                        (s.onpause = () => u(!1)),
-                        (s.onended = () => u(!1)),
+                        (s.onplay = () => c(!0)),
+                        (s.onpause = () => c(!1)),
+                        (s.onended = () => c(!1)),
                         !0)
                     );
                 },
@@ -53,7 +53,7 @@ function d(e) {
             ),
             stopSound: i.useCallback(() => {
                 let { current: e } = n;
-                null == e || ((null == t.soundId || e.dataset.soundId === t.soundId) && (e.pause(), u(!1)));
+                null == e || ((null == t.soundId || e.dataset.soundId === t.soundId) && (e.pause(), c(!1)));
             }, [n, t.soundId]),
         }
     );

@@ -1,6 +1,6 @@
-a.d(t, { S: () => i });
-var n = a(935208);
-function i(e) {
+n.d(t, { S: () => r });
+var i = n(935208);
+function r(e) {
     let t = e.turn_id ?? e.steps.find((e) => null != e.turn_id)?.turn_id;
-    return null != t && n.default.isProbablyAValidSnowflake(t) ? n.default.extractTimestamp(t) : e.created_at;
+    return null != t && i.default.isProbablyAValidSnowflake(t) ? i.default.extractTimestamp(t) : e.created_at;
 }

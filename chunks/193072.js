@@ -103,12 +103,12 @@ function q(e) {
 function J(e) {
     (0, O.openModal)((t) => (0, l.jsx)(q, { ...t, ...e }));
 }
-var Q = n(587895);
-function U(e) {
+var Z = n(587895);
+function Q(e) {
     let { project: t, ...n } = e,
         [s, o] = a.useState(!1),
         [u, d] = a.useState(null),
-        c = (0, i.bG)([Q.A], () => Q.A.getApplication(t.application_id)?.name ?? t.name, [t.application_id, t.name]),
+        c = (0, i.bG)([Z.A], () => Z.A.getApplication(t.application_id)?.name ?? t.name, [t.application_id, t.name]),
         f = P.intl.formatToPlainString(E.default.m8KWic, { app: c });
     async function m() {
         (o(!0), d(null));
@@ -139,9 +139,9 @@ function U(e) {
         ],
     });
 }
-var V = n(746080),
-    Y = n(552821);
-let Z = [];
+var U = n(746080),
+    V = n(552821);
+let Y = [];
 function ee(e) {
     (0, r.P0)({ text: e, variant: "critical" });
 }
@@ -160,8 +160,8 @@ function et(e) {
             onConnectTool: $,
             onHistory: X,
             onTogglePreviewPaused: q,
-            previewPaused: Q = !1,
-            previewPauseDisabled: Y = !1,
+            previewPaused: Z = !1,
+            previewPauseDisabled: V = !1,
             onTogglePopout: et,
             poppedOut: en = !1,
             onToggleDebug: el,
@@ -201,7 +201,7 @@ function et(e) {
                 ),
             };
         })(er ?? null, ee),
-        ep = (0, i.bG)([M.A], () => (null == er ? Z : M.A.getDeclaredConnections(er))),
+        ep = (0, i.bG)([M.A], () => (null == er ? Y : M.A.getDeclaredConnections(er))),
         eg = a.useMemo(() => (0, N.Xl)(ep), [ep]),
         eh = (0, L.Bs)(t),
         ex = (0, L.CU)(t) && k,
@@ -251,7 +251,7 @@ function et(e) {
         eS = w.p5 && null != v,
         ew = w.p5,
         eN = eo ? s.BellIcon : o.BellSlashIcon,
-        eC = Q ? u.PlayIcon : d.PauseIcon,
+        eC = Z ? u.PlayIcon : d.PauseIcon,
         eI = en ? c._ : f.t;
     return (0, l.jsxs)(m.W, {
         "data-menu-migrated": !0,
@@ -268,8 +268,8 @@ function et(e) {
                                     id: "toggle-preview-paused",
                                     icon: eC,
                                     leadingAccessory: { type: "icon", icon: eC },
-                                    label: P.intl.string(Q ? E.default.ZKd2Cw : E.default.VHxerm),
-                                    disabled: Y,
+                                    label: P.intl.string(Z ? E.default.ZKd2Cw : E.default.VHxerm),
+                                    disabled: V,
                                     action: q,
                                 })
                               : null,
@@ -366,7 +366,7 @@ function et(e) {
                                     icon: h.LinkIcon,
                                     leadingAccessory: { type: "icon", icon: h.LinkIcon },
                                     action: () =>
-                                        (0, w.C)((0, S.n)(v, V.VV.CONJURE, t), () =>
+                                        (0, w.C)((0, S.n)(v, U.VV.CONJURE, t), () =>
                                             (0, r.P0)({ text: P.intl.string(P.t["L/PwZf"]), variant: "success" }),
                                         ),
                                 })
@@ -425,7 +425,7 @@ function et(e) {
                                         let n = K.Ay.getProject(t);
                                         null != n &&
                                             ((e = { project: n }),
-                                            (0, O.openModal)((t) => (0, l.jsx)(U, { ...t, ...e })));
+                                            (0, O.openModal)((t) => (0, l.jsx)(Q, { ...t, ...e })));
                                     },
                                 })
                               : null,
@@ -478,7 +478,7 @@ function en(e) {
                 { isShown: r } = n;
             return (0, l.jsx)("div", {
                 ref: i,
-                className: Y.h,
+                className: V.h,
                 children:
                     "iconButton" === t
                         ? (0, l.jsx)(b.m, {

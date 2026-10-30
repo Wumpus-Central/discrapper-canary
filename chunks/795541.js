@@ -69,8 +69,8 @@ let k = function (e) {
         return (0, l.jsx)(k, { type: t, channelId: n });
     });
 var R = n(931664),
-    O = n(951260),
-    w = n(87207),
+    w = n(951260),
+    O = n(87207),
     M = n(625494),
     L = n(709372),
     P = n(264391),
@@ -310,7 +310,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 showAllButtons: v,
                 expressionButtonsHidden: N,
             } = e,
-            T = (0, O.n)("ChannelTextAreaButtons"),
+            T = (0, w.n)("ChannelTextAreaButtons"),
             j = (0, s.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
@@ -368,7 +368,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 return l && i && null == r;
             })({ channel: C, chatInputType: y }),
             ee = y.submit?.button != null && (y.submit?.ignorePreference || k),
-            et = (0, w.A)(C, y);
+            et = (0, O.A)(C, y);
         ((t = C.id),
             (S = (0, L.wX)()),
             i.useEffect(() => {

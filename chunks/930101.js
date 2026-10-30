@@ -1,4 +1,4 @@
-t.d(n, { H: () => I, X: () => k });
+t.d(n, { H: () => C, X: () => E });
 var l = t(477900),
     a = t(582128),
     i = t(503698),
@@ -11,49 +11,49 @@ var l = t(477900),
     m = t(666860),
     h = t(189551),
     p = t(174459),
-    g = t(639245),
-    f = t(188645),
-    x = t(516287),
-    j = t(652215),
+    x = t(639245),
+    g = t(188645),
+    j = t(516287),
+    f = t(652215),
     A = t(307731),
     y = t(202541),
-    C = t(105292),
-    E = t(17508);
-function I(e) {
+    k = t(105292),
+    I = t(17508);
+function C(e) {
     let {
             node: n,
-            tooltipPosition: t = f.Uk.position,
+            tooltipPosition: t = g.Uk.position,
             enableClick: i = !0,
             focusable: s = !0,
             channelId: m,
             messageId: h,
         } = e,
         p = a.useRef(null),
-        x = n.originalMatch?.[0],
-        [j, A] = a.useState(!1);
+        j = n.originalMatch?.[0],
+        [f, A] = a.useState(!1);
     function y(e) {
         return (0, l.jsx)(d.A, {
             emojiName: n.name,
             size: e ?? (n.jumboable ? "jumbo" : "default"),
             src: n.src,
-            alt: x,
+            alt: j,
             animated: !1,
             channelId: m,
             messageId: h,
         });
     }
-    function I(e) {
+    function C(e) {
         return (0, l.jsx)(o.u, {
             asset: y("jumbo"),
             title: n.name ?? "",
             titleLineClamp: 1,
-            body: i ? C.intl.string(C.t["515vjG"]) : "",
+            body: i ? k.intl.string(k.t["515vjG"]) : "",
             ariaHidden: !0,
-            ...f.Uk,
+            ...g.Uk,
             position: t,
-            shouldShow: !j,
+            shouldShow: !f,
             onTooltipShow: () => {
-                i && N({ emojiNode: n, isCustomEmoji: !1 });
+                i && v({ emojiNode: n, isCustomEmoji: !1 });
             },
             children: (0, l.jsx)(c.D, {
                 ...e,
@@ -63,7 +63,7 @@ function I(e) {
                 onClick: (n) => {
                     (A(!0), e?.onClick?.(n));
                 },
-                className: r()(E.qq, { [E._Y]: i, [E.gp]: n.jumboable }),
+                className: r()(I.qq, { [I._Y]: i, [I.gp]: n.jumboable }),
                 children: y(),
             }),
         });
@@ -79,72 +79,72 @@ function I(e) {
               onRequestClose: () => {
                   A(!1);
               },
-              renderPopout: (e) => (0, l.jsx)(g.MV, { ...e, node: n }),
+              renderPopout: (e) => (0, l.jsx)(x.MV, { ...e, node: n }),
               targetElementRef: p,
-              children: I,
+              children: C,
           })
-        : I();
+        : C();
 }
-let k = (e) => {
+let E = (e) => {
     let {
             node: n,
-            tooltipPosition: t = f.Uk.position,
+            tooltipPosition: t = g.Uk.position,
             enableClick: i = !0,
             focusable: m = !0,
             channelId: y,
-            messageId: I,
+            messageId: C,
         } = e,
-        k = (0, x.n)(),
-        [v, b] = a.useState(String(Date.now())),
+        E = (0, j.n)(),
+        [N, b] = a.useState(String(Date.now())),
         [S, M] = a.useState(!1),
-        [L, T] = a.useState(!1),
-        _ = a.useRef(null);
-    function w(e) {
+        [_, L] = a.useState(!1),
+        w = a.useRef(null);
+    function T(e) {
         return (0, l.jsx)(d.A, {
             emojiName: n.name,
             size: e ?? (n.jumboable ? "jumbo" : "default"),
             emojiId: n.emojiId,
             animated: n.animated,
-            isInteracting: k,
+            isInteracting: E,
             channelId: y,
-            messageId: I,
+            messageId: C,
         });
     }
     let O = (0, s.A)();
     function P(e) {
         return (0, l.jsx)(o.u, {
-            asset: w("jumbo"),
+            asset: T("jumbo"),
             title: n.name,
             titleLineClamp: 1,
-            body: i ? C.intl.string(C.t["515vjG"]) : "",
+            body: i ? k.intl.string(k.t["515vjG"]) : "",
             ariaHidden: !0,
-            ...f.Uk,
+            ...g.Uk,
             position: t,
-            shouldShow: !L,
+            shouldShow: !_,
             onTooltipShow: () => {
                 (M(!0),
                     i &&
-                        (N({ emojiNode: n, isCustomEmoji: !0, nonce: O }),
+                        (v({ emojiNode: n, isCustomEmoji: !0, nonce: O }),
                         (0, h.K)(A.EmojiInteractionPoint.CustomEmojiTooltipShown)));
             },
             children: (0, l.jsx)(c.D, {
                 ...e,
-                innerRef: _,
+                innerRef: w,
                 onMouseEnter: () => {
                     e?.onMouseEnter?.();
                 },
                 onClick: i
                     ? (n) => {
-                          (M(!1), T(!0), e?.onClick?.(n));
+                          (M(!1), L(!0), e?.onClick?.(n));
                       }
                     : void 0,
                 onMouseLeave: () => {
-                    S && (p.default.track(j.HAw.CLOSE_POPOUT, { nonce: O }), M(!1));
+                    S && (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: O }), M(!1));
                 },
                 tag: "span",
                 tabIndex: m ? 0 : -1,
-                className: r()(E.qq, { [E._Y]: i, [E.gp]: n.jumboable }),
-                children: w(),
+                className: r()(I.qq, { [I._Y]: i, [I.gp]: n.jumboable }),
+                children: T(),
             }),
         });
     }
@@ -154,23 +154,23 @@ let k = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  (p.default.track(j.HAw.CLOSE_POPOUT, { nonce: O }), M(!1), T(!1));
+                  (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: O }), M(!1), L(!1));
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: "right",
               renderPopout: function (e) {
-                  return (0, l.jsx)(g.iP, { ...e, node: n, refreshPositionKey: () => b(String(Date.now())), nonce: O });
+                  return (0, l.jsx)(x.iP, { ...e, node: n, refreshPositionKey: () => b(String(Date.now())), nonce: O });
               },
-              positionKey: v,
-              targetElementRef: _,
+              positionKey: N,
+              targetElementRef: w,
               children: P,
           })
         : P();
 };
-function N(e) {
+function v(e) {
     let { emojiNode: n, isCustomEmoji: t, nonce: l } = e;
-    m.Ay.trackWithMetadata(j.HAw.EXPRESSION_TOOLTIP_VIEWED, {
+    m.Ay.trackWithMetadata(f.HAw.EXPRESSION_TOOLTIP_VIEWED, {
         type: y.e.EMOJI_IN_MESSAGE_HOVER,
         expression_id: n.emojiId,
         expression_name: n.name,

@@ -1,4 +1,4 @@
-n.d(t, { O: () => c, u: () => d });
+n.d(t, { O: () => u, u: () => d });
 var i,
     s = n(624793),
     l = n(975571),
@@ -6,7 +6,7 @@ var i,
     r = n(105292),
     o = n(609313),
     d = (((i = {}).GET_PREMIUM = "GET_PREMIUM"), (i.JOIN_GUILD = "JOIN_GUILD"), (i.UNAVAILABLE = "UNAVAILABLE"), i);
-function c(e) {
+function u(e) {
     if (e.sourceType === s.rV.PACK)
         return {
             type: "UNAVAILABLE",
@@ -26,8 +26,8 @@ function c(e) {
                 isUnusableRoleSubscriptionEmoji: a,
                 isDiscoverable: o,
                 emojiComesFromCurrentGuild: d,
-                userIsRoleSubscriber: c,
-                isRoleSubscriptionEmoji: u,
+                userIsRoleSubscriber: u,
+                isRoleSubscriptionEmoji: c,
                 shouldHideRoleSubscriptionCTA: m,
                 onOpenPremiumSettings: x,
             } = e;
@@ -35,11 +35,11 @@ function c(e) {
                 ? r.intl.formatToPlainString(r.t.uERlTd, { appName: n.name })
                 : i
                   ? l
-                      ? u
+                      ? c
                           ? m && a
                               ? r.intl.string(r.t.xFb68j)
                               : a
-                                ? c
+                                ? u
                                     ? r.intl.string(r.t.vLklfF)
                                     : r.intl.string(r.t["g8i/bf"])
                                 : r.intl.string(r.t.Eoynp0)
@@ -53,7 +53,7 @@ function c(e) {
                     ? m && a
                         ? r.intl.string(r.t.xFb68j)
                         : a
-                          ? c
+                          ? u
                               ? r.intl.string(r.t.vLklfF)
                               : r.intl.string(r.t["g8i/bf"])
                           : d

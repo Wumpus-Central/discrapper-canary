@@ -1,45 +1,45 @@
-a.d(t, { A: () => c, U: () => s });
-var n = a(17928),
-    i = a(245179),
-    r = a(874421),
-    l = a(886540),
-    u = a(260498),
-    o = a(935208);
-function s(e) {
+n.d(t, { A: () => c, U: () => d });
+var i = n(17928),
+    r = n(245179),
+    a = n(874421),
+    s = n(886540),
+    l = n(260498),
+    o = n(935208);
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    return (0, n.yK)(
-        [u.Ay, i.A],
+    return (0, i.yK)(
+        [l.Ay, r.A],
         () =>
             e()
                 .map((e) => {
-                    let t = (0, l.Ji)(i.A.getMessages(e.id));
+                    let t = (0, s.Ji)(r.A.getMessages(e.id));
                     return {
                         project: e,
-                        turnStartedAt: null != t ? (0, r.S)(t) : null,
-                        finishedAt: i.A.getFinishedAt(e.id),
+                        turnStartedAt: null != t ? (0, a.S)(t) : null,
+                        finishedAt: r.A.getFinishedAt(e.id),
                     };
                 })
                 .map((e) => ({
                     project: e.project,
                     time: (function (e) {
                         var t;
-                        let a,
-                            { project: n, turnStartedAt: i, finishedAt: r } = e;
+                        let n,
+                            { project: i, turnStartedAt: r, finishedAt: a } = e;
                         return Math.max(
-                            /^\d+$/.test(n.id) ? o.default.extractTimestamp(n.id) : 0,
-                            Number.isNaN((a = null == (t = n.updated_at) ? 0 : Date.parse(t))) ? 0 : a,
-                            i ?? 0,
+                            /^\d+$/.test(i.id) ? o.default.extractTimestamp(i.id) : 0,
+                            Number.isNaN((n = null == (t = i.updated_at) ? 0 : Date.parse(t))) ? 0 : n,
                             r ?? 0,
+                            a ?? 0,
                         );
                     })(e),
                 }))
                 .sort((e, t) => {
-                    var a, n;
+                    var n, i;
                     return e.time !== t.time
                         ? t.time - e.time
-                        : ((a = e.project.id),
-                          (n = t.project.id),
-                          a.length !== n.length ? n.length - a.length : a < n ? 1 : a > n ? -1 : 0);
+                        : ((n = e.project.id),
+                          (i = t.project.id),
+                          n.length !== i.length ? i.length - n.length : n < i ? 1 : n > i ? -1 : 0);
                 })
                 .map((e) => {
                     let { project: t } = e;
@@ -49,5 +49,5 @@ function s(e) {
     );
 }
 function c() {
-    return s(() => u.Ay.getOwnedProjects());
+    return d(() => l.Ay.getOwnedProjects());
 }

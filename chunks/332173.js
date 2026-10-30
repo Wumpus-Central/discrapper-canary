@@ -6,8 +6,8 @@ var i = n(477900),
     r = n(317097),
     o = n(36075),
     d = n(939249),
-    c = n(232042),
-    u = n(209599);
+    u = n(232042),
+    c = n(209599);
 let m = function (e) {
     let {
             ref: t,
@@ -20,41 +20,41 @@ let m = function (e) {
             onMouseLeave: g,
             ...p
         } = e,
-        [N, I] = s.useState(!1),
-        { gradientStyle: b, gradientClassname: f } = (0, o.v5)({
+        [N, f] = s.useState(!1),
+        { gradientStyle: b, gradientClassname: I } = (0, o.v5)({
             colorStrings: x ?? null,
             roleStyle: "username",
             animateGradient: N,
         }),
         v = s.useCallback(
             (e) => {
-                (I(!0), j?.(e));
+                (f(!0), j?.(e));
             },
-            [I, j],
+            [f, j],
         ),
-        A = s.useCallback(
+        E = s.useCallback(
             (e) => {
-                (I(!1), g?.(e));
+                (f(!1), g?.(e));
             },
-            [I, g],
+            [f, g],
         ),
-        E = {};
+        A = {};
     return (
-        null != m && (E = { color: (0, r.Hl)(m), backgroundColor: N ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
+        null != m && (A = { color: (0, r.Hl)(m), backgroundColor: N ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
         (0, i.jsx)(d.D, {
             ...p,
             innerRef: t,
             tag: "span",
-            className: a()(l, { [u.i]: !0, interactive: p.onClick }),
+            className: a()(l, { [c.i]: !0, interactive: p.onClick }),
             onMouseEnter: v,
-            onMouseLeave: A,
-            style: E,
+            onMouseLeave: E,
+            style: A,
             tabIndex: null != p.onClick ? 0 : -1,
             children:
                 null != h
-                    ? (0, i.jsx)(c.A, { iconType: h, children: n })
+                    ? (0, i.jsx)(u.A, { iconType: h, children: n })
                     : null != x
-                      ? (0, i.jsx)("span", { style: { ...b }, className: f, children: n })
+                      ? (0, i.jsx)("span", { style: { ...b }, className: I, children: n })
                       : n,
         })
     );

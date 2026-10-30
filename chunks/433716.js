@@ -6,8 +6,8 @@ var i = n(477900),
     r = n(834730),
     o = n(62010),
     d = n(821609),
-    c = n(788026),
-    u = n(178653),
+    u = n(788026),
+    c = n(178653),
     m = n(465794),
     x = n(202541),
     h = n(609313),
@@ -15,7 +15,7 @@ var i = n(477900),
     g = n(23236);
 function p(e) {
     let { pack: t, isNitroTier2: n, onClose: p } = e,
-        N = s.useContext(u.A);
+        N = s.useContext(c.A);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { className: g.yF }),
@@ -37,7 +37,7 @@ function p(e) {
                 role: "group",
                 "aria-label": t.name,
                 children: t.previewEmojis.map((e) =>
-                    (0, i.jsx)(c.A, { className: g.Zg, emojiId: e.id, emojiName: e.name, animated: e.animated }, e.id),
+                    (0, i.jsx)(u.A, { className: g.Zg, emojiId: e.id, emojiName: e.name, animated: e.animated }, e.id),
                 ),
             }),
             (!n || null != N) &&

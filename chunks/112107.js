@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => _, LF: () => k });
+n.d(t, { Ay: () => L, LF: () => k });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -6,8 +6,8 @@ var i = n(477900),
     r = n(702841),
     o = n(939249),
     d = n(983851),
-    c = n(866665),
-    u = n(788026),
+    u = n(866665),
+    c = n(788026),
     m = n(864145),
     x = n(926972),
     h = n(470020),
@@ -15,18 +15,18 @@ var i = n(477900),
     g = n(102597),
     p = n(904054),
     N = n(584014),
-    I = n(253932),
+    f = n(253932),
     b = n(174459),
-    f = n(652215);
+    I = n(652215);
 function v(e, t) {
     let { isPlaying: n, playSound: i } = (0, N.A)(null != e ? (0, g.A)(e.soundId) : null);
     return {
         isPlaying: n,
         playSound: s.useCallback(async () => {
-            let n = (0, p.A)(e?.volume ?? 1, I.HO.getSetting());
+            let n = (0, p.A)(e?.volume ?? 1, f.HO.getSetting());
             return (
                 !!(await i({ volume: n })) &&
-                (b.default.track(f.HAw.SOUNDMOJI_PLAY, {
+                (b.default.track(I.HAw.SOUNDMOJI_PLAY, {
                     guild_id: t?.guild_id,
                     channel_id: t?.id,
                     sound_guild_id: e?.guildId,
@@ -37,8 +37,8 @@ function v(e, t) {
         }, [t?.guild_id, t?.id, i, e?.guildId, e?.soundId, e?.volume]),
     };
 }
-var A = n(209932),
-    E = n(807348),
+var E = n(209932),
+    A = n(807348),
     C = n(805945),
     S = n(734057),
     O = n(105292),
@@ -58,7 +58,7 @@ function T(e) {
 }
 function k(e) {
     let { soundId: t } = e,
-        n = (0, r.bG)([A.A], () => A.A.getSoundById(t)),
+        n = (0, r.bG)([E.A], () => E.A.getSoundById(t)),
         s = (0, x.t)({ location: "SoundboardMentionInline" }),
         { isPlaying: l, playSound: a } = v(n);
     return s
@@ -78,24 +78,24 @@ function P(e) {
               onClick: s,
               className: a()(y.Ls, y.oR, { [y.he]: !0 === l }, t),
               children: [
-                  r && (0, i.jsx)(u.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: y.JS }),
+                  r && (0, i.jsx)(c.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: y.JS }),
                   (0, i.jsx)("span", { children: ` ${n?.name} ` }),
               ],
           })
         : null;
 }
-let _ = function (e) {
+let L = function (e) {
     let { channelId: t, messageId: n, soundId: l, messageSounds: a, jumbo: o = !1 } = e,
-        d = I.hH.useSetting(),
-        u = (0, r.bG)([A.A], () => A.A.getSoundById(l), [l]),
-        x = s.useMemo(() => (0, h.A)(t, n, l, a) ?? u, [t, n, l, a, u]),
+        d = f.hH.useSetting(),
+        c = (0, r.bG)([E.A], () => E.A.getSoundById(l), [l]),
+        x = s.useMemo(() => (0, h.A)(t, n, l, a) ?? c, [t, n, l, a, c]),
         g = (0, r.bG)([S.A], () => S.A.getChannel(t)),
         p = (0, m.X)({ location: "SoundboardMention" }),
         N = s.useRef(null),
-        { isPlaying: b, playSound: f } = v(x, g),
+        { isPlaying: b, playSound: I } = v(x, g),
         O = s.useCallback(async () => {
-            (await f()) && N.current?.addAnimation();
-        }, [f]);
+            (await I()) && N.current?.addAnimation();
+        }, [I]);
     return p
         ? null == x
             ? (0, i.jsx)(T, { playSound: O })
@@ -110,7 +110,7 @@ let _ = function (e) {
                         onSelectItem: O,
                         isPlayingSoundOverride: b,
                         isSoundmoji: !0,
-                        buttonOverlay: E.If.SOUNDMOJI,
+                        buttonOverlay: A.If.SOUNDMOJI,
                         tooltipClassName: y.YL,
                         tooltipContentClassName: y.R3,
                         tooltipOverride: (0, i.jsx)(j.WE, { sound: x }),
@@ -118,7 +118,7 @@ let _ = function (e) {
                     },
                     `${x.soundId}`,
                 )
-              : (0, i.jsx)(c.m, {
+              : (0, i.jsx)(u.m, {
                     "aria-label": x.name,
                     "data-pending-richtooltip-migration": !0,
                     __unsupportedReactNodeAsText: (0, i.jsx)(j.WE, { sound: x }),

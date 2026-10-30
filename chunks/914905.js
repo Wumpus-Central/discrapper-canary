@@ -1,4 +1,4 @@
-(n.d(t, { A: () => w, J: () => O }), n(323874), n(14289), n(35956));
+(n.d(t, { A: () => O, J: () => w }), n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -190,7 +190,7 @@ function R(e) {
         })
     );
 }
-function O(e) {
+function w(e) {
     let { upload: t, size: n = I.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
     return t.isImage && t.item.platform === E.x.WEB
@@ -221,7 +221,7 @@ function O(e) {
                 }),
             });
 }
-function w(e) {
+function O(e) {
     let {
             channelId: t,
             draftType: r,
@@ -239,7 +239,7 @@ function w(e) {
     function R() {
         p.A.remove(t, o.id, r);
     }
-    function w(e) {
+    function O(e) {
         (e.stopPropagation(), j)
             ? (0, u.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
@@ -331,7 +331,7 @@ function w(e) {
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: k }),
                           tooltip: j ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
-                          onClick: w,
+                          onClick: O,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
@@ -355,12 +355,12 @@ function w(e) {
         draftType: r,
         id: o.id,
         channelId: t,
-        handleEditModal: w,
+        handleEditModal: O,
         keyboardModeEnabled: g,
         size: E,
         className: s()({ [T.attachmentItemSmall]: k }),
         children: [
-            (0, l.jsx)(O, { upload: o, size: E, clip: C, guildId: _ }),
+            (0, l.jsx)(w, { upload: o, size: E, clip: C, guildId: _ }),
             !y &&
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,

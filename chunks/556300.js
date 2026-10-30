@@ -13,14 +13,14 @@ function m(e) {
     return {
         react(n, m, h) {
             let p = o.A.getChannel(n.channelId),
-                g = h.noStyleAndInteraction
+                x = h.noStyleAndInteraction
                     ? void 0
                     : (t) => {
                           (e.shouldStopPropagation && t?.stopPropagation(),
                               (0, c.o)(n.guildId, n.channelId, n.messageId, n.conversationId),
                               e.shouldCloseDefaultModals && (0, a.closeAllModals)());
                       },
-                f =
+                g =
                     h.noStyleAndInteraction || null == n.channelId || (null == p && null == n.originalLink)
                         ? d.tEg
                         : (e) => {
@@ -44,8 +44,8 @@ function m(e) {
                 r.A,
                 {
                     role: "link",
-                    onClick: g,
-                    onContextMenu: f,
+                    onClick: x,
+                    onContextMenu: g,
                     className: "channelMention",
                     children: [
                         null != n.inContent ? m(n.inContent, h) : null,

@@ -11,60 +11,60 @@ var l = t(477900),
     m = t(9578),
     h = t(236285),
     p = t(232042),
-    g = t(906754),
-    f = t(332173),
-    x = t(37632),
-    j = t(534890),
+    x = t(906754),
+    g = t(332173),
+    j = t(37632),
+    f = t(534890),
     A = t(105292),
     y = t(879386);
-let C = function () {
-    return (0, l.jsx)(j.ChatIcon, {
+let k = function () {
+    return (0, l.jsx)(f.ChatIcon, {
         size: "md",
         color: "currentColor",
         className: y.K,
         "aria-label": A.intl.string(A.t.BAB0yK),
     });
 };
-var E = t(112107),
-    I = t(930101),
-    k = t(302031),
-    N = t(441136),
-    v = t(71393),
+var I = t(112107),
+    C = t(930101),
+    E = t(302031),
+    v = t(441136),
+    N = t(71393),
     b = t(957565),
     S = t(143145),
     M = t(392605),
-    L = t(785562),
-    T = t(192308),
-    _ = t(588975),
-    w = t(442433),
+    _ = t(785562),
+    L = t(192308),
+    w = t(588975),
+    T = t(442433),
     O = t(975807),
     P = t(235393),
-    D = t(679164),
+    R = t(679164),
     U = t(652215),
-    R = t(24686),
+    D = t(24686),
     G = t(147190),
     H = t(556300),
     $ = t(990474);
 t(938796);
-var B = t(380610),
-    K = t(435954),
-    V = t(721779),
-    z = t(333421),
-    W = t(100392),
-    F = t(950980),
-    X = t(836156);
-let Z = a.lazy(async () => ({
+var V = t(380610),
+    B = t(435954),
+    z = t(721779),
+    K = t(333421),
+    F = t(100392),
+    Z = t(950980),
+    W = t(836156);
+let X = a.lazy(async () => ({
         default: (
             await Promise.all([t.e("503634"), t.e("761764"), t.e("60800"), t.e("218126"), t.e("467696")]).then(
                 t.bind(t, 881267),
             )
         ).PlaygroundEmbed,
     })),
-    q = a.lazy(async () => ({
+    Y = a.lazy(async () => ({
         default: (await Promise.all([t.e("378100"), t.e("886456"), t.e("278078")]).then(t.bind(t, 909261)))
             .DevToolsLinkEmbed,
     })),
-    Y = RegExp("^" + V.st.source, V.st.flags);
+    q = RegExp("^" + z.st.source, z.st.flags);
 var J = t(454908),
     Q = t(266645);
 function ee(e) {
@@ -136,7 +136,7 @@ let eu = {
                             b.p5
                                 ? (0, l.jsx)("div", { className: ea.lB, children: (0, l.jsx)(ec, { text: e.content }) })
                                 : null,
-                            (0, l.jsx)(N.E, {
+                            (0, l.jsx)(v.E, {
                                 code: e.content,
                                 lang: e.lang,
                                 className: r()(ei.kw, "hljs"),
@@ -157,9 +157,9 @@ let eu = {
     spoiler: {
         react: (e, n, t) =>
             (0, l.jsx)(
-                k.Ay,
+                E.Ay,
                 {
-                    type: k.Ay.Types.TEXT,
+                    type: E.Ay.Types.TEXT,
                     inline: t.formatInline,
                     renderTextElement: (e, n) =>
                         null == e || e.type !== m.A || n ? e : a.cloneElement(e, { tabIndex: -1 }),
@@ -170,7 +170,7 @@ let eu = {
     },
     soundboard: {
         react: (e, n, t) =>
-            (0, l.jsx)(E.Ay, {
+            (0, l.jsx)(I.Ay, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -182,7 +182,7 @@ let eu = {
         react: (e, n, t) =>
             (0, S.dq)(e.id)
                 ? (0, l.jsxs)(
-                      f.A,
+                      g.A,
                       {
                           role: "link",
                           onClick: function () {
@@ -192,7 +192,7 @@ let eu = {
                           iconType: e.id,
                           children: [
                               n(e.mainContent, t),
-                              null != e.itemContent ? (0, l.jsx)(x.A, {}) : null,
+                              null != e.itemContent ? (0, l.jsx)(j.A, {}) : null,
                               null != e.itemContent ? n(e.itemContent, t) : null,
                           ],
                       },
@@ -200,7 +200,7 @@ let eu = {
                   )
                 : null,
     },
-    timestamp: { react: (e, n, t) => (0, l.jsx)(L.A, { node: e }, t.key) },
+    timestamp: { react: (e, n, t) => (0, l.jsx)(_.A, { node: e }, t.key) },
     list: {
         react: (e, n, t) => {
             let a = e.ordered ? "ol" : "ul",
@@ -229,12 +229,12 @@ let eu = {
     },
     guild: {
         react: (e, n, t) => {
-            let a = v.A.getGuild(e.guildId);
-            return (0, l.jsx)(g.A, { guild: a, children: (0, S.tj)(e, n, t) }, t.key);
+            let a = N.A.getGuild(e.guildId);
+            return (0, l.jsx)(x.A, { guild: a, children: (0, S.tj)(e, n, t) }, t.key);
         },
     },
     channel: { react: (e, n, t) => (0, l.jsx)(p.A, { iconType: e.iconType, children: (0, S.tj)(e, n, t) }, t.key) },
-    message: { react: (e, n, t) => (0, l.jsx)(C, {}, t.key) },
+    message: { react: (e, n, t) => (0, l.jsx)(k, {}, t.key) },
     subtext: {
         react: (e, n, t) => {
             let l = (0, s.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
@@ -260,45 +260,45 @@ function ed(e) {
         ...eu,
         link: (0, et.A)(e),
         devLink: {
-            match: (e, n) => (n.allowLinks && n.allowDevLinks ? Y.exec(e) : null),
+            match: (e, n) => (n.allowLinks && n.allowDevLinks ? q.exec(e) : null),
             parse: (e, n) => ({ target: e, type: "devLink" }),
             react: (e, n, t) => {
                 let i = e.target[0];
-                return (0, B.h4)(i)
+                return (0, V.h4)(i)
                     ? (0, l.jsxs)(
                           a.Fragment,
-                          { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(K.default, { url: i }, i)] },
+                          { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(B.default, { url: i }, i)] },
                           t.key,
                       )
-                    : (0, W.W0)(i)
+                    : (0, F.W0)(i)
                       ? (0, l.jsxs)(
                             a.Fragment,
                             {
                                 children: [
                                     (0, l.jsx)("span", { children: i }),
-                                    (0, l.jsx)(F.ExperimentEmbed, { url: i }),
+                                    (0, l.jsx)(Z.ExperimentEmbed, { url: i }),
                                 ],
                             },
                             t.key,
                         )
-                      : (0, X.i)(i)
+                      : (0, W.i)(i)
                         ? (0, l.jsx)(
                               a.Fragment,
                               {
                                   children: (0, l.jsxs)(a.Suspense, {
                                       fallback: null,
-                                      children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(Z, { url: i })],
+                                      children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(X, { url: i })],
                                   }),
                               },
                               t.key,
                           )
-                        : (0, z.my)(i)
+                        : (0, K.my)(i)
                           ? (0, l.jsx)(
                                 a.Fragment,
                                 {
                                     children: (0, l.jsxs)(a.Suspense, {
                                         fallback: null,
-                                        children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(q, { url: i })],
+                                        children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(Y, { url: i })],
                                     }),
                                 },
                                 t.key,
@@ -315,7 +315,7 @@ function ed(e) {
                         let { key: s, channelId: o, messageId: c } = r;
                         return e.src
                             ? (0, l.jsx)(
-                                  I.H,
+                                  C.H,
                                   {
                                       node: e,
                                       tooltipPosition: n,
@@ -343,7 +343,7 @@ function ed(e) {
                             e = { ...e, name: n ? `:${d.name}:` : d.name };
                         }
                         return (0, l.jsx)(
-                            I.X,
+                            C.X,
                             { node: e, tooltipPosition: n, enableClick: t, focusable: a, channelId: c, messageId: u },
                             s,
                         );
@@ -358,16 +358,16 @@ function ed(e) {
                 let s = i.noStyleAndInteraction
                         ? void 0
                         : async (t) => {
-                              let l = await D.AN(n.attachmentUrl);
+                              let l = await R.AN(n.attachmentUrl);
                               (e.shouldStopPropagation && t?.stopPropagation(),
                                   P.A.trackLinkClicked(l),
-                                  e.shouldCloseDefaultModals && (0, T.closeAllModals)(),
+                                  e.shouldCloseDefaultModals && (0, L.closeAllModals)(),
                                   (0, O.A)(l));
                           },
                     o = i.noStyleAndInteraction
                         ? U.tEg
                         : (e) => {
-                              (0, w.L3)(e, async () => {
+                              (0, T.L3)(e, async () => {
                                   let { default: e } = await t.e("762529").then(t.bind(t, 740024));
                                   return (t) =>
                                       (0, l.jsx)(e, {
@@ -378,7 +378,7 @@ function ed(e) {
                               });
                           };
                 return (0, l.jsxs)(
-                    f.A,
+                    g.A,
                     {
                         role: "link",
                         href: n.attachmentUrl,
@@ -386,7 +386,7 @@ function ed(e) {
                         onContextMenu: o,
                         className: "attachmentLink",
                         children: [
-                            (0, l.jsx)(_.P, { size: "xs", className: r()(G.Kk, R.K), color: "currentColor" }),
+                            (0, l.jsx)(w.P, { size: "xs", className: r()(G.Kk, D.K), color: "currentColor" }),
                             (0, S.tj)(n, a, i),
                         ],
                     },

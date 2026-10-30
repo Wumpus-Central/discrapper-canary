@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => O });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -71,8 +71,8 @@ function _(e) {
     );
 }
 var R = n(263582),
-    O = n(412028);
-function w(e) {
+    w = n(412028);
+function O(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
         S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
         y = (0, p.A)(),
@@ -84,7 +84,7 @@ function w(e) {
         j = A - b,
         k = j > C;
     (0, a.$)({ currentLength: b, maxLength: A, message: T.intl.string(T.t.c2Jqed) });
-    let w =
+    let O =
             0 === j
                 ? T.intl.string(T.t.tU6YQ7)
                 : j > 0
@@ -97,22 +97,22 @@ function w(e) {
     return (0, l.jsx)(f.f5, {
         value: M,
         children: (0, l.jsxs)("div", {
-            className: s()(E, O.Dq),
+            className: s()(E, w.Dq),
             children: [
                 (0, l.jsxs)("div", {
-                    className: O.SW,
+                    className: w.SW,
                     children: [
                         I && P
                             ? (0, l.jsx)(u.m, {
                                   text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: A }),
                                   position: "top",
-                                  children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: O.y }),
+                                  children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: w.y }),
                               })
                             : null,
                         k
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: w,
+                                  text: O,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "text-sm/semibold",
@@ -126,7 +126,7 @@ function w(e) {
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: j }) }),
                 v && !k
-                    ? (0, l.jsx)(_, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
+                    ? (0, l.jsx)(_, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
                     : null,
             ],
         }),

@@ -142,7 +142,7 @@ function R(e) {
               }),
           });
 }
-let O = (e) => {
+let w = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,
@@ -208,7 +208,7 @@ let O = (e) => {
                   }),
               });
     },
-    w = (e) => {
+    O = (e) => {
         let {
                 disableAnimation: t,
                 enlargeScaleFactor: n,
@@ -292,7 +292,7 @@ function M(e) {
         x = (0, y.Th)(t) && !n,
         E = i.useRef(null);
     if (null == c) return null;
-    let C = c.format_type === A.TG.LOTTIE ? R : O;
+    let C = c.format_type === A.TG.LOTTIE ? R : w;
     return (0, l.jsxs)(
         i.Fragment,
         {
@@ -311,7 +311,7 @@ function M(e) {
                     onError: p,
                 }),
                 r &&
-                    (0, l.jsx)(w, {
+                    (0, l.jsx)(O, {
                         disableAnimation: n,
                         enlargeScaleFactor: a,
                         enlargeWithName: s,

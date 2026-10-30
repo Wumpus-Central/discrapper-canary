@@ -61,7 +61,7 @@ function k(e) {
 }
 var _ = n(696451),
     R = n(807094);
-function O(e) {
+function w(e) {
     let { name: t, className: n, state: i, isInline: r, onClick: a } = e,
         o = null;
     i?.isActive && !r
@@ -77,12 +77,12 @@ function O(e) {
     });
     return null == a ? u : (0, l.jsx)(c.D, { className: R.vk, onClick: () => a(t), children: u });
 }
-var w = n(664929);
+var O = n(664929);
 n(827669);
 var M = n(105292),
     L = n(633331);
 function P(e, t, n) {
-    return (0, l.jsx)(O, { className: L.uK, name: e.displayName, state: t, onClick: n }, e.name);
+    return (0, l.jsx)(w, { className: L.uK, name: e.displayName, state: t, onClick: n }, e.name);
 }
 function D(e) {
     let { command: t, optionStates: n, onOptionClick: r } = e,
@@ -154,7 +154,7 @@ function U(e) {
         f = i.useMemo(() => n?.options?.find((e) => e.name === r), [r, n]),
         p = null != r ? c?.[r] : null;
     t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
-    let g = u && null != h ? (0, w.Rg)(h) : null,
+    let g = u && null != h ? (0, O.Rg)(h) : null,
         x = (0, y.bG)([_.Ay], () => {
             if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
@@ -561,16 +561,16 @@ class eR extends eg {
         return (0, l.jsx)(es, { ...this.props });
     }
 }
-function eO(e) {
+function ew(e) {
     let { game: t } = e,
         { extraChromeEnabled: n } = Y.A.useConfig({ location: "game_mention_autocomplete" });
     return (0, l.jsx)(ee.A, { game: t, iconClassName: b.Kk, withBackground: n });
 }
-class ew extends eg {
+class eO extends eg {
     renderContent() {
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(N, { children: (0, l.jsx)(eO, { game: this.props.game }) }),
+                (0, l.jsx)(N, { children: (0, l.jsx)(ew, { game: this.props.game }) }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: this.props.game.name }) }),
                 (0, l.jsx)(et.A, {
                     platforms: this.props.game.platformAvailability,
@@ -600,7 +600,7 @@ class eL extends i.PureComponent {
     static Sticker = ej;
     static EmojiUpsell = e_;
     static Soundmoji = eR;
-    static Game = ew;
+    static Game = eO;
     static Timestamp = eb;
     render() {
         let { children: e, className: t, innerClassName: n, id: r, ...a } = this.props;

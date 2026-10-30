@@ -31,8 +31,8 @@ function k(e) {
 }
 var _ = n(826745),
     R = n(442433),
-    O = n(721768),
-    w = n(555424),
+    w = n(721768),
+    O = n(555424),
     M = n(723702),
     L = n(677134),
     P = n(652215),
@@ -47,7 +47,7 @@ class V extends i.PureComponent {
             this._ref?.setSelection(e.length, e.length);
         }),
             null != f.A.getActiveCommand(this.props.channel.id) &&
-                O.Gf({ channelId: this.props.channel.id, command: null, section: null }));
+                w.Gf({ channelId: this.props.channel.id, command: null, section: null }));
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection &&
@@ -64,7 +64,7 @@ class V extends i.PureComponent {
         for (; n > 0 && !U.test(t[n - 1]);) n--;
         let i = e.selectionEnd;
         for (; i < t.length && !U.test(t[i]);) i++;
-        let r = (0, w.h3)(t.slice(n, l), t.slice(n, i));
+        let r = (0, O.h3)(t.slice(n, l), t.slice(n, i));
         return { word: r.word, fullWord: r.fullWord, isAtStart: 0 === n && !r.didTrimPrefix };
     }
     focus = () => {
@@ -425,7 +425,7 @@ function eT(e) {
             onResize: k,
             onFocus: _,
             onBlur: R,
-            onKeyDown: O,
+            onKeyDown: w,
             onKeyUp: M,
             onTab: L,
             onEnter: U,
@@ -439,8 +439,8 @@ function eT(e) {
             canUseCommands: ek,
             disableAutoFocus: e_,
             disableEnterToSubmit: eR,
-            allowNewLines: eO,
-            "aria-owns": ew,
+            allowNewLines: ew,
+            "aria-owns": eO,
             "aria-expanded": eM,
             "aria-haspopup": eL,
             "aria-activedescendant": eP,
@@ -599,7 +599,7 @@ function eT(e) {
                     if (ec.ug.test(e)) break;
                     ((o += e), u++);
                 }
-                let d = (0, w.h3)(s, o);
+                let d = (0, O.h3)(s, o);
                 return {
                     word: d.word,
                     fullWord: d.fullWord,
@@ -808,12 +808,12 @@ function eT(e) {
             editor: eZ,
             channel: g,
             disableEnterToSubmit: eR,
-            onKeyDown: O,
+            onKeyDown: w,
             onKeyUp: M,
             onTab: L,
             onEnter: U,
             onSpace: V,
-            allowNewLines: eO,
+            allowNewLines: ew,
             submit: eJ,
             hideAutocomplete: ey,
             moveSelection: eT,
@@ -1167,7 +1167,7 @@ function eT(e) {
                     decorate: e4,
                     renderExtraElement: e9,
                     renderExtraLeaf: te,
-                    "aria-owns": ew,
+                    "aria-owns": eO,
                     "aria-haspopup": eL,
                     "aria-expanded": eM,
                     "aria-activedescendant": eP,

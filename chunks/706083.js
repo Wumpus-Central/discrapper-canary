@@ -1,4 +1,4 @@
-(t.d(n, { o: () => f }), t(323874), t(14289), t(35956));
+(t.d(n, { o: () => g }), t(323874), t(14289), t(35956));
 var l = t(730852),
     a = t(448741),
     i = t(235393),
@@ -16,8 +16,8 @@ let h = (0, t(945810).mj)({
     variations: { 1: { navigateOnly: !0 } },
 });
 var p = t(652215),
-    g = t(575279);
-async function f(e, n, t, f) {
+    x = t(575279);
+async function g(e, n, t, g) {
     if (null == n) return;
     if (
         (i.A.trackDiscordLinkClicked({ guildId: e, channelId: n, messageId: t }),
@@ -32,12 +32,12 @@ async function f(e, n, t, f) {
                 if (e instanceof a.w) return;
             }
     }
-    let x = o.A.getChannel(n);
-    if (null != x && null == t && x.isGuildVocal() && (0, r.nc)(x)) {
+    let j = o.A.getChannel(n);
+    if (null != j && null == t && j.isGuildVocal() && (0, r.nc)(j)) {
         let { navigateOnly: e } = h.getConfig({ location: "channel_mention" });
-        if (!e) return void l.default.selectVoiceChannel(x.id);
+        if (!e) return void l.default.selectVoiceChannel(j.id);
     }
-    let j = new URLSearchParams();
-    (null != f && m.default.isProbablyAValidSnowflake(f) && j.append(g.Nl, f),
-        (0, s.A)(p.BVt.CHANNEL(e, n, t), { search: j.toString() }));
+    let f = new URLSearchParams();
+    (null != g && m.default.isProbablyAValidSnowflake(g) && f.append(x.Nl, g),
+        (0, s.A)(p.BVt.CHANNEL(e, n, t), { search: f.toString() }));
 }

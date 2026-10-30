@@ -6,29 +6,29 @@ var i = n(477900),
     r = n(900002),
     o = n(113278);
 function d(e) {
-    let { children: t, "aria-label": n, className: l, position: d, delay: c, lineClamp: u = 1, ...m } = e,
+    let { children: t, "aria-label": n, className: l, position: d, delay: u, lineClamp: c = 1, ...m } = e,
         x = s.useRef(null),
         h = n ?? ("string" == typeof t && t),
         j = {};
     return (
-        null != u && u > 1 && (j = { lineClamp: u, WebkitLineClamp: u }),
+        null != c && c > 1 && (j = { lineClamp: c, WebkitLineClamp: c }),
         (0, i.jsx)(r.ST, {
             ...m,
             position: d ?? "top",
-            delay: c ?? 500,
+            delay: u ?? 500,
             text: t,
             "aria-label": h,
             children: (n) => {
                 let { onMouseEnter: s, onMouseLeave: r } = n;
                 return (0, i.jsx)("div", {
-                    className: a()(l, { [o.j]: 1 === u, [o.E]: u > 1 }),
+                    className: a()(l, { [o.j]: 1 === c, [o.E]: c > 1 }),
                     ref: x,
                     "aria-hidden": e["aria-hidden"],
                     onMouseEnter: () => {
                         let { current: e } = x;
                         null == e ||
-                            (u > 1 && e.offsetHeight + 1 >= e.scrollHeight) ||
-                            (1 === u && e.offsetWidth >= e.scrollWidth) ||
+                            (c > 1 && e.offsetHeight + 1 >= e.scrollHeight) ||
+                            (1 === c && e.offsetWidth >= e.scrollWidth) ||
                             s?.();
                     },
                     onMouseLeave: r,
