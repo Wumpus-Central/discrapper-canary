@@ -18,8 +18,8 @@ function d(e) {
             size: x = 20,
             enableTooltip: h = !0,
             enableHeight: f = !0,
-            onClick: p,
-            ref: j,
+            onClick: j,
+            ref: A,
         } = e;
     return null == s && null == d
         ? null
@@ -31,24 +31,24 @@ function d(e) {
               tag: "span",
               children:
                   ((l = (0, t.jsx)("img", {
-                      ref: j,
+                      ref: A,
                       alt: o.intl.formatToPlainString(o.t["9+YWrE"], { name: m }),
-                      className: i()(c.U, n, { [c.v]: null != p }),
+                      className: i()(c.U, n, { [c.v]: null != j }),
                       height: f ? x : void 0,
                       src: s,
                       width: x,
                   })),
                   (null != d &&
                       (l = (0, t.jsx)("img", {
-                          ref: j,
+                          ref: A,
                           alt: d.allNamesString,
-                          className: i()(c.U, n, { [c.v]: null != p }),
+                          className: i()(c.U, n, { [c.v]: null != j }),
                           height: f ? x : void 0,
                           src: d.url,
                           width: x,
                       })),
-                  null == p)
+                  null == j)
                       ? (0, t.jsx)(a.vN, { offset: { left: 5 }, children: l })
-                      : (0, t.jsx)(r.D, { onClick: p, tag: "span", focusProps: { offset: { left: 5 } }, children: l })),
+                      : (0, t.jsx)(r.D, { onClick: j, tag: "span", focusProps: { offset: { left: 5 } }, children: l })),
           });
 }

@@ -10,15 +10,15 @@ var l = n(477900),
     d = n(996988),
     A = n(105292);
 function f(t) {
-    let { application: e, analyticsLocations: n, onAction: f, onClose: p } = t,
-        { themeType: g } = (0, c.E)(),
-        m = (0, s.Ay)({ application: e, analyticsLocations: n });
+    let { application: e, analyticsLocations: n, onAction: f, onClose: g } = t,
+        { themeType: m } = (0, c.E)(),
+        x = (0, s.Ay)({ application: e, analyticsLocations: n });
     return ((0, o.A)(
         { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: n } },
-        { disableTrack: null == m },
-        [m],
+        { disableTrack: null == x },
+        [x],
     ),
-    null == m)
+    null == x)
         ? null
         : (0, l.jsx)(a.m, {
               text: A.intl.string(A.t.JVwWva),
@@ -28,9 +28,9 @@ function f(t) {
                   text: A.intl.string(A.t["jaYS/h"]),
                   size: "sm",
                   onClick: (t) => {
-                      (t.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), p?.());
+                      (t.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), x(), g?.());
                   },
-                  fullWidth: g !== d.d.MODAL_V2,
+                  fullWidth: m !== d.d.MODAL_V2,
               }),
           });
 }

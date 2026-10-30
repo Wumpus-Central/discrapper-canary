@@ -2,8 +2,8 @@ t.d(e, { A: () => C });
 var l = t(477900),
     i = t(17928),
     a = t(477782),
-    d = t(582128),
-    r = t(192308),
+    r = t(582128),
+    d = t(192308),
     s = t(308528),
     o = t(267102),
     u = t(964404),
@@ -21,19 +21,19 @@ function C(n) {
         { runVoiceCallAction: v } = (function (n) {
             let { userId: e, onClose: i } = n,
                 a = (0, o.aL)(),
-                A = d.useCallback(() => {
+                A = r.useCallback(() => {
                     (s.A.openPrivateChannel({ recipientIds: e, joinCall: !0 }),
                         i?.(),
                         a.dispatch(c.jej.POPOUT_CLOSE),
-                        (0, r.closeAllModals)());
+                        (0, d.closeAllModals)());
                 }, [e, a, i]),
-                b = d.useCallback(() => {
-                    (0, r.openModalLazy)(async () => {
+                b = r.useCallback(() => {
+                    (0, d.openModalLazy)(async () => {
                         let { default: n } = await t.e("19106").then(t.bind(t, 502054));
                         return (e) => (0, l.jsx)(n, { onSubmit: A, ...e });
                     });
                 }, [A]),
-                p = d.useCallback(() => {
+                p = r.useCallback(() => {
                     u.Ay.disableCallUserConfirmationPrompt ? A() : b();
                 }, [b, A]);
             return { startCall: A, runVoiceCallAction: p };

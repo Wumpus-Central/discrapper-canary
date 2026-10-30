@@ -17,9 +17,9 @@ let x = function (e) {
         nameplate: x,
         children: h,
         subText: f,
-        decorators: p,
-        onClick: j,
-        hovered: A,
+        decorators: j,
+        onClick: A,
+        hovered: p,
         selected: g,
         muted: N,
         to: v,
@@ -35,14 +35,14 @@ let x = function (e) {
         [m.wH]: g,
         [m.mr]: b,
         [S ?? ""]: g,
-        [m.vk]: !g && (null != v || null != j),
+        [m.vk]: !g && (null != v || null != A),
     })),
         (E["aria-selected"] = E["aria-selected"] ?? g));
     let M = s.useRef(null),
         R = (0, t.jsxs)("div", {
             className: a()(m.sn, { [m.EY]: null != x }),
             children: [
-                (0, t.jsx)(d.A, { nameplate: x, hovered: A, selected: g, content: M, placement: c.u.MEMBER_LIST }),
+                (0, t.jsx)(d.A, { nameplate: x, hovered: p, selected: g, content: M, placement: c.u.MEMBER_LIST }),
                 (0, t.jsxs)("div", {
                     ref: M,
                     className: a()(T, m.Zp, { [m.SU]: !g && N, [m.Ib]: C }),
@@ -55,7 +55,7 @@ let x = function (e) {
                                     className: m.BG,
                                     children: [
                                         (0, t.jsx)("div", { className: a()(m.UU, { [m.to]: C }), children: i }),
-                                        p,
+                                        j,
                                     ],
                                 }),
                                 null != f ? (0, t.jsx)("div", { className: m.Sv, children: f }) : null,
@@ -69,9 +69,9 @@ let x = function (e) {
     return null != v
         ? (0, t.jsx)(u.vN, {
               ...y,
-              children: (0, t.jsx)(r.N_, { to: v, onClick: j, ...E, role: "listitem", ref: l, children: R }),
+              children: (0, t.jsx)(r.N_, { to: v, onClick: A, ...E, role: "listitem", ref: l, children: R }),
           })
-        : null != j
-          ? (0, t.jsx)(o.D, { onClick: j, focusProps: y, ...E, role: "listitem", innerRef: l, children: R })
+        : null != A
+          ? (0, t.jsx)(o.D, { onClick: A, focusProps: y, ...E, role: "listitem", innerRef: l, children: R })
           : (0, t.jsx)(u.vN, { ...y, children: (0, t.jsx)("div", { ...E, role: "listitem", ref: l, children: R }) });
 };

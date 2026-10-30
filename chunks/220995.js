@@ -12,8 +12,8 @@ var n = t(477900),
     m = t(939249),
     g = t(283973),
     h = t(866665),
-    p = t(834730),
-    f = t(789645),
+    f = t(834730),
+    p = t(789645),
     I = t(320448),
     v = t(775602),
     S = t(793574),
@@ -187,7 +187,7 @@ function P(e) {
                                   (0, n.jsx)(h.m, {
                                       text: T.intl.string(T.t["EE+P0H"]),
                                       overflowOnly: !0,
-                                      children: (0, n.jsx)(p.E, {
+                                      children: (0, n.jsx)(f.E, {
                                           variant: "text-sm/medium",
                                           className: O.Pf,
                                           lineClamp: 1,
@@ -203,7 +203,7 @@ function P(e) {
                                                     (e.stopPropagation(), en("user_explicit"));
                                                 },
                                                 "aria-label": T.intl.string(T.t.cpT0Cq),
-                                                children: (0, n.jsx)(f.P, {
+                                                children: (0, n.jsx)(p.P, {
                                                     size: "xs",
                                                     color: "currentColor",
                                                     className: O.Kk,

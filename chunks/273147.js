@@ -37,8 +37,8 @@ var i = n(477900),
     G = n(486020),
     w = n(837529),
     B = n(686189),
-    V = n(714719),
-    H = n(859161);
+    H = n(714719),
+    V = n(859161);
 function F(e) {
     let { user: t, displayProfile: n, guildId: s, bannerHeight: o, avatarSize: d, avatarInsetStart: c } = e,
         [u, m] = l.useState(!1),
@@ -53,8 +53,8 @@ function F(e) {
         _ = (0, L.LX)((0, D.Ay)(C, E, !1)),
         j = (0, O.A)(n?.primaryColor ?? _).hex,
         { size: N, stroke: y } = (0, a.Kj)(d),
-        T = (0, H.A)(d);
-    return (0, i.jsx)(V.A, {
+        T = (0, V.A)(d);
+    return (0, i.jsx)(H.A, {
         bannerSrc: I,
         backgroundColor: f === B.D.COMPLETE || A ? j : M.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !g && (0, G.o4)(I),
@@ -145,8 +145,8 @@ function ed(e) {
         U = y?.private === !0,
         G = (0, l.useRef)(null),
         [w, B] = (0, v.A)(),
-        V = (0, s.A)(G, B),
-        { isHovering: H } = (0, g.A)(G),
+        H = (0, s.A)(G, B),
+        { isHovering: V } = (0, g.A)(G),
         z = p.kt.useSetting(),
         Y = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
         K = y?.profileEffect?.skuId,
@@ -172,11 +172,11 @@ function ed(e) {
                 displayProfile: y,
                 size: "sm",
                 style: U ? ea : er,
-                containerRef: V,
+                containerRef: H,
                 headingRef: E,
                 headingText: et.intl.formatToPlainString(et.t["8yRya1"], { name: M }),
                 profileEffect:
-                    null != K ? (0, i.jsx)(u.A, { skuId: K, autoPlay: z, isHovering: H, useOpacityOnHover: !W }) : null,
+                    null != K ? (0, i.jsx)(u.A, { skuId: K, autoPlay: z, isHovering: V, useOpacityOnHover: !W }) : null,
                 profileFrame: null != O ? (0, i.jsx)(h.A, { frame: O, fadeIn: !1 }) : null,
                 children: [
                     U && (0, i.jsx)(T.A, { className: el.i9 }),

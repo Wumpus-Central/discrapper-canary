@@ -12,9 +12,9 @@ var t = n(477900),
     x = n(442433),
     h = n(589158),
     f = n(964486),
-    p = n(775602),
-    j = n(793574),
-    A = n(688810),
+    j = n(775602),
+    A = n(793574),
+    p = n(688810),
     g = n(282006),
     N = n(485947),
     v = n(386784),
@@ -209,7 +209,7 @@ function O(e) {
             },
             [i, n, x],
         ),
-        p = (0, u.bG)(
+        j = (0, u.bG)(
             [R.A],
             () => {
                 let e = n ?? x;
@@ -217,15 +217,15 @@ function O(e) {
             },
             [i, n, x],
         ),
-        j = null == n ? null : m?.[n],
-        A = s.useMemo(
+        A = null == n ? null : m?.[n],
+        p = s.useMemo(
             () =>
-                null != p
-                    ? h.map((e) => (0, t.jsx)(P, { member: e, guildId: i, channelId: r, role: p }, e.userId))
+                null != j
+                    ? h.map((e) => (0, t.jsx)(P, { member: e, guildId: i, channelId: r, role: j }, e.userId))
                     : [],
-            [r, i, p, h],
+            [r, i, j, h],
         );
-    return null == p
+    return null == j
         ? null
         : (0, t.jsx)(o.C.Provider, {
               value: void 0,
@@ -236,13 +236,13 @@ function O(e) {
                   children: (0, t.jsxs)(c.Ip, {
                       className: w.bY,
                       children: [
-                          (0, t.jsx)(g.Y, { id: n, guildId: i, title: p.name, count: j, className: w.sd }),
-                          A,
-                          null == j || j <= A.length
+                          (0, t.jsx)(g.Y, { id: n, guildId: i, title: j.name, count: A, className: w.sd }),
+                          p,
+                          null == A || A <= p.length
                               ? null
                               : (0, t.jsx)(N.A, {
                                     className: w.sd,
-                                    children: k.intl.formatToPlainString(k.t["9oMmZC"], { count: j - A.length }),
+                                    children: k.intl.formatToPlainString(k.t["9oMmZC"], { count: A - p.length }),
                                 }),
                       ],
                   }),
@@ -251,8 +251,8 @@ function O(e) {
 }
 function F(e) {
     let { roleId: l, channelId: n, roleName: i, guildId: a, children: o, inlinePreview: c = !1 } = e,
-        { analyticsLocations: x } = (0, A.Ay)(j.A.ROLE_MENTION),
-        h = (0, u.bG)([p.Ay], () => p.Ay.roleStyle),
+        { analyticsLocations: x } = (0, p.Ay)(A.A.ROLE_MENTION),
+        h = (0, u.bG)([j.Ay], () => j.Ay.roleStyle),
         f = (0, u.bG)([R.A], () => (null == a || null == l ? null : R.A.getRole(a, l))),
         g = (0, C.jV)(a, f),
         N = !c && null != f && !(0, T.Qv)(f),
@@ -282,8 +282,8 @@ function F(e) {
         });
     }
     return c || null == n || null == a || (null == l && "@everyone" !== i)
-        ? (0, t.jsx)(A.f5, { value: x, children: M() })
-        : (0, t.jsx)(A.f5, {
+        ? (0, t.jsx)(p.f5, { value: x, children: M() })
+        : (0, t.jsx)(p.f5, {
               value: x,
               children: (0, t.jsx)(m.Y, {
                   targetElementRef: E,

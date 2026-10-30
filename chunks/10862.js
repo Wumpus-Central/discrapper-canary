@@ -8,15 +8,15 @@ var a = e(17928),
     s = e(512474),
     u = e(146151),
     p = e(983851),
-    d = e(148719),
-    c = e(576705),
+    c = e(148719),
+    d = e(576705),
     A = e(818348);
 function m(t) {
     let { channel: l, ...e } = t,
-        m = (0, a.bG)([c.A], () => l.isPrivate() || c.A.can(A.xB.CONNECT, l));
+        m = (0, a.bG)([d.A], () => l.isPrivate() || d.A.can(A.xB.CONNECT, l));
     if (l.isDM() || l.isGroupDM()) return (0, n.jsx)(i._, { ...e });
     let x = l.isGuildStageVoice(),
-        T = !m || (0, d.A)(l);
+        T = !m || (0, c.A)(l);
     return x && T
         ? (0, n.jsx)(o.D, { ...e })
         : x

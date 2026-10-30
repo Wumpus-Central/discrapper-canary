@@ -10,12 +10,12 @@ var l,
     d = n(847374),
     A = n(964486),
     f = n(37948),
-    p = n(174459),
-    g = n(652215),
-    m = (((l = {}).PRIMARY = "primary"), (l.SECONDARY = "secondary"), l);
-function x(t) {
+    g = n(174459),
+    m = n(652215),
+    x = (((l = {}).PRIMARY = "primary"), (l.SECONDARY = "secondary"), l);
+function p(t) {
     let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
-    p.default.track(g.HAw.PLAY_CTA_IMPRESSION, { location_stack: e, distributor: n, game_id: l, level: i });
+    g.default.track(m.HAw.PLAY_CTA_IMPRESSION, { location_stack: e, distributor: n, game_id: l, level: i });
 }
 var _ = n(105292);
 function I(t) {
@@ -37,7 +37,7 @@ function I(t) {
             0 !== e.length &&
                 (!(function (t) {
                     let { analyticsLocations: e, gameId: n, distributors: l } = t;
-                    p.default.track(g.HAw.PLAY_CTA_DISPLAYED, { location_stack: e, game_id: n, distributors: l });
+                    g.default.track(m.HAw.PLAY_CTA_DISPLAYED, { location_stack: e, game_id: n, distributors: l });
                 })({
                     analyticsLocations: l,
                     gameId: n,
@@ -47,7 +47,7 @@ function I(t) {
                     }),
                 }),
                 1 === e.length &&
-                    x({ analyticsLocations: l, distributor: e[0].ctaConfig.distributor, gameId: n, level: m.PRIMARY }));
+                    p({ analyticsLocations: l, distributor: e[0].ctaConfig.distributor, gameId: n, level: x.PRIMARY }));
         }),
         0 === e.length)
     )
@@ -55,7 +55,7 @@ function I(t) {
     function O(t, e, i, a) {
         (!(function (t) {
             let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
-            p.default.track(g.HAw.PLAY_CTA_CLICKED, { location_stack: e, distributor: n, game_id: l, level: i });
+            g.default.track(m.HAw.PLAY_CTA_CLICKED, { location_stack: e, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: e, gameId: n, level: a }),
             T?.({ action: i }),
             h?.(),
@@ -70,7 +70,7 @@ function I(t) {
             text: t.getLabel(),
             fullWidth: N,
             onClick: (e) => {
-                (E && e.stopPropagation(), O(t.getStoreUrl(n), t.distributor, t.analyticsAction, m.PRIMARY));
+                (E && e.stopPropagation(), O(t.getStoreUrl(n), t.distributor, t.analyticsAction, x.PRIMARY));
             },
         });
     }
@@ -87,7 +87,7 @@ function I(t) {
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => O(n.getStoreUrl(l), n.distributor, n.analyticsAction, m.SECONDARY),
+                        action: () => O(n.getStoreUrl(l), n.distributor, n.analyticsAction, x.SECONDARY),
                     },
                     n.distributor,
                 ),
@@ -100,7 +100,7 @@ function I(t) {
         position: "bottom",
         onRequestOpen: function () {
             for (let { ctaConfig: t } of (y(!0), e))
-                x({ analyticsLocations: l, distributor: t.distributor, gameId: n, level: m.SECONDARY });
+                p({ analyticsLocations: l, distributor: t.distributor, gameId: n, level: x.SECONDARY });
         },
         onRequestClose: () => y(!1),
         renderPopout: (t) => {

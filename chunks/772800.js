@@ -12,8 +12,8 @@ var n = t(477900),
     m = t(685399),
     g = t(960076),
     h = t(323073),
-    p = t(597306),
-    f = t(693879),
+    f = t(597306),
+    p = t(693879),
     I = t(268218),
     v = t(834757),
     S = t(727353),
@@ -226,7 +226,7 @@ function F(e) {
         A = u?.nick ?? c,
         { avatarDecorationSrc: m, avatarSrc: h } = (0, b.A)({ userId: i.id, size: a._3.SIZE_32, guildId: t }),
         {
-            status: p,
+            status: f,
             isMobileOnline: I,
             activities: v,
         } = (0, s.cf)([O.A], () => ({
@@ -244,7 +244,7 @@ function F(e) {
                 size: a._3.SIZE_32,
                 "aria-label": A,
                 avatarDecoration: m,
-                status: (0, g.A)(v) ? d.clD.STREAMING : p === d.clD.OFFLINE ? void 0 : p,
+                status: (0, g.A)(v) ? d.clD.STREAMING : f === d.clD.OFFLINE ? void 0 : f,
                 isMobile: I,
                 className: M.my,
             }),
@@ -252,7 +252,7 @@ function F(e) {
                 className: M.Qq,
                 children: [
                     (0, n.jsx)(o.E, { variant: "text-sm/medium", lineClamp: 1, children: A }),
-                    null != x && (0, n.jsx)(f.z, { textColor: "text-feedback-positive", entry: { start: x } }),
+                    null != x && (0, n.jsx)(p.z, { textColor: "text-feedback-positive", entry: { start: x } }),
                 ],
             }),
         ],
@@ -261,13 +261,13 @@ function F(e) {
 function z(e) {
     let i,
         t,
-        { channel: a, user: r, onAction: o, excludeActivity: g, onWatchStream: f, setPopoutRef: I } = e,
+        { channel: a, user: r, onAction: o, excludeActivity: g, onWatchStream: p, setPopoutRef: I } = e,
         b = l.useMemo(() => ({ [a.guild_id]: [r.id] }), [a.guild_id, r.id]);
     (0, c.Eq)(b, "VoiceUserActivities");
     let { enabled: T } = R.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
         G = (0, s.bG)([j.A], () => j.A.getStreamForUser(r.id, a.getGuildId()), [a, r.id]),
         P = (0, s.bG)([O.A], () => (0, v.nr)(G, O.A), [G]),
-        w = (0, p.r)() && (0, h.UK)(a.id),
+        w = (0, f.r)() && (0, h.UK)(a.id),
         U =
             ((i = (0, m.Ay)(a)),
             (t = l.useMemo(() => i.filter((e) => e.embeddedActivity.userIds.has(r.id)), [i, r.id])),
@@ -280,7 +280,7 @@ function z(e) {
         q = (0, _.u)(r.id, a),
         $ = (0, E.Ay)(r.id, a.guild_id),
         H = Y && null != q && 0 === $.length,
-        W = null != G && null != f && !w,
+        W = null != G && null != p && !w,
         Z = W || K.length > 0 || U.length > 0 || null != q,
         J = Z || T;
     if (
@@ -302,7 +302,7 @@ function z(e) {
                     stream: G,
                     streamActivity: P,
                     user: r,
-                    onWatchStream: f,
+                    onWatchStream: p,
                     onAction: o,
                     showHeader: !0,
                 }),

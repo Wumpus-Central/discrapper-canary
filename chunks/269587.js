@@ -10,10 +10,10 @@ var l = n(477900),
     d = n(477782),
     A = n(793574),
     f = n(688810),
-    p = n(315246),
-    g = n(92240),
-    m = n(679492),
-    x = n(243949),
+    g = n(315246),
+    m = n(92240),
+    x = n(679492),
+    p = n(243949),
     _ = n(939496),
     I = n(17928),
     N = n(573648),
@@ -27,8 +27,8 @@ var l = n(477900),
     O = n(105292),
     j = n(754495),
     P = n(534465),
-    R = n(939075),
-    L = n(20805),
+    L = n(939075),
+    R = n(20805),
     b = n(655116),
     M = n(287809),
     U = n(272984),
@@ -49,14 +49,14 @@ function V(t) {
         } = t,
         [W, B] = i.useState(!1),
         { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
-        X = (0, m.NR)(),
+        z = (0, m.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
+        X = (0, x.NR)(),
         $ = i.useRef(null),
         F = X?.interactionPopoutTargetRef ?? $,
         Q = (function (t) {
             let { onAction: e } = t,
                 { themeType: n } = (0, _.E)(),
-                i = (0, x.A)({
+                i = (0, p.A)({
                     userId: t.user.id,
                     tabSection: D.RP.ACTIVITY,
                     label: O.intl.string(O.t.pD1L1u),
@@ -80,7 +80,7 @@ function V(t) {
                             },
                         });
                     if (s) return null;
-                    let c = (0, L.Tq)(n) ? n.extra.entries[0]?.media : n.extra.media;
+                    let c = (0, R.Tq)(n) ? n.extra.entries[0]?.media : n.extra.media;
                     return null == c
                         ? null
                         : (0, l.jsx)(d.Dr, {
@@ -96,7 +96,7 @@ function V(t) {
                 (0, P.gA)(t),
                 (function (t) {
                     let { display: e, entry: n, onAction: i, onClose: a } = t,
-                        r = (0, L.yl)(n),
+                        r = (0, R.yl)(n),
                         s = (0, G.A)({ applicationId: r ? n.extra.application_id : void 0, onClose: a });
                     return "recent" === e && r
                         ? (0, l.jsx)(d.Dr, {
@@ -108,7 +108,7 @@ function V(t) {
                           })
                         : null;
                 })(t),
-                (0, R.A)(t),
+                (0, L.A)(t),
                 (function (t) {
                     let { activity: e, entry: n, display: i, onAction: a, onClose: r } = t,
                         s = (0, I.bG)([v.A], () => null != v.A.getAccount(null, y.fg2.CRUNCHYROLL));
@@ -156,7 +156,7 @@ function V(t) {
                       onClick: (t) => t.stopPropagation(),
                       children: (0, l.jsx)(u.W, {
                           "data-menu-migrated-auto": !0,
-                          navId: p.n,
+                          navId: g.n,
                           onClose: () => {
                               (e(), B(!1));
                           },

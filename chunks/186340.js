@@ -1,4 +1,4 @@
-n.d(t, { A: () => W });
+n.d(t, { A: () => R });
 var l = n(477900),
     a = n(582128),
     i = n(503698),
@@ -110,16 +110,16 @@ let H = a.memo(function (e) {
         z = !M && "in_progress" === N,
         K = !M && E,
         H = M || "published" === N ? null : N,
-        R = [null != H ? I.intl.string(T[H]) : null, K ? I.intl.string(C.default["N+3Pzk"]) : null]
+        W = [null != H ? I.intl.string(T[H]) : null, K ? I.intl.string(C.default["N+3Pzk"]) : null]
             .filter(Boolean)
             .join(", "),
-        W = (function (e) {
+        R = (function (e) {
             if (null == e.updated_at) return null;
             let t = Date.parse(e.updated_at);
             return Number.isNaN(t) ? null : t;
         })(a),
         F = (0, m.A)(a),
-        O = [null != W ? (0, c.Ay)({ since: W, getFormatter: c.i, includeWeeks: !0 }) : null, F]
+        O = [null != R ? (0, c.Ay)({ since: R, getFormatter: c.i, includeWeeks: !0 }) : null, F]
             .filter((e) => null != e)
             .join(" \xb7 "),
         $ = (0, l.jsxs)(l.Fragment, {
@@ -159,7 +159,7 @@ let H = a.memo(function (e) {
                                 : null,
                     ],
                 }),
-                "" !== R ? (0, l.jsx)(o.A, { children: R }) : null,
+                "" !== W ? (0, l.jsx)(o.A, { children: W }) : null,
             ],
         });
     return null == i
@@ -202,11 +202,11 @@ let H = a.memo(function (e) {
               ],
           });
 });
-var R = n(831727);
-function W(e) {
+var W = n(831727);
+function R(e) {
     let { projects: t, onSelect: n, selectedProjectId: a = null, renderProjectActions: i, onProjectContextMenu: r } = e;
     return (0, l.jsx)("ul", {
-        className: R.p,
+        className: W.p,
         children: t.map((e) =>
             (0, l.jsx)(H, { project: e, onSelect: n, selected: e.id === a, renderActions: i, onContextMenu: r }, e.id),
         ),

@@ -12,9 +12,9 @@ var t = n(477900),
     x = n(105292),
     h = n(4577);
 let f = s.memo(function (e) {
-    let { id: l, title: f, count: p, guildId: j, className: A } = e,
-        g = (0, o.Xx)({ roleId: l, guildId: j, size: 16 }),
-        N = (0, i.bG)([d.default], () => (null == p ? null : new Intl.NumberFormat(d.default.locale).format(p)), [p]),
+    let { id: l, title: f, count: j, guildId: A, className: p } = e,
+        g = (0, o.Xx)({ roleId: l, guildId: A, size: 16 }),
+        N = (0, i.bG)([d.default], () => (null == j ? null : new Intl.NumberFormat(d.default.locale).format(j)), [j]),
         v = s.useCallback(
             (e) => {
                 g?.src != null &&
@@ -26,11 +26,11 @@ let f = s.memo(function (e) {
             [g?.src],
         );
     return l === m.clD.UNKNOWN
-        ? (0, t.jsx)("div", { className: A, children: (0, t.jsx)("div", { className: h.k1 }) })
+        ? (0, t.jsx)("div", { className: p, children: (0, t.jsx)("div", { className: h.k1 }) })
         : (0, t.jsxs)(u.A, {
-              className: A,
+              className: p,
               children: [
-                  (0, t.jsx)(a.A, { children: null == p ? f : x.intl.format(x.t.Uaqbke, { title: f, count: p }) }),
+                  (0, t.jsx)(a.A, { children: null == j ? f : x.intl.format(x.t.Uaqbke, { title: f, count: j }) }),
                   (0, t.jsxs)("div", {
                       className: h.CN,
                       "aria-hidden": !0,

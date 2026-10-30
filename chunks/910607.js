@@ -11,10 +11,10 @@ var i = n(17928),
     d = n(661531),
     A = n(778712),
     f = n(730852),
-    p = n(963027),
-    g = n(47167),
-    m = n(548118),
-    x = n(378570),
+    g = n(963027),
+    m = n(47167),
+    x = n(548118),
+    p = n(378570),
     _ = n(345942),
     I = n(576705),
     N = n(575731),
@@ -27,16 +27,16 @@ var i = n(17928),
     y = n(260155);
 let O = 3;
 function j(t) {
-    let { user: e, guild: n, channel: j, onAction: P, onClose: R } = t,
-        { themeType: L } = (0, T.E)(),
+    let { user: e, guild: n, channel: j, onAction: P, onClose: L } = t,
+        { themeType: R } = (0, T.E)(),
         b = (0, N.A)(j),
-        M = (0, g.Ay)(j),
+        M = (0, m.Ay)(j),
         { canViewChannel: U, canConnect: G } = (0, i.cf)([I.A], () => ({
             canViewChannel: I.A.can(C.xBc.VIEW_CHANNEL, j),
             canConnect: j.isPrivate() || I.A.can(C.xBc.CONNECT, j),
         }));
     if (!U) return null;
-    let D = L !== S.d.MODAL && L !== S.d.MODAL_V2 && L !== S.d.SIDEBAR;
+    let D = R !== S.d.MODAL && R !== S.d.MODAL_V2 && R !== S.d.SIDEBAR;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(E.A, { className: y.Ph }),
@@ -47,12 +47,12 @@ function j(t) {
                         asContainer: !0,
                         text: n.name,
                         "aria-label": !1,
-                        children: (0, l.jsx)(m.Ay, {
+                        children: (0, l.jsx)(x.Ay, {
                             guild: n,
-                            size: m.Ay.Sizes.SMOL,
+                            size: x.Ay.Sizes.SMOL,
                             className: y.$f,
                             onClick: (t) => {
-                                (t.stopPropagation(), (0, _.u)(n.id), P?.({ action: "OPEN_VOICE_GUILD" }), R?.());
+                                (t.stopPropagation(), (0, _.u)(n.id), P?.({ action: "OPEN_VOICE_GUILD" }), L?.());
                             },
                         }),
                     }),
@@ -71,12 +71,12 @@ function j(t) {
                                       onClick: (t) => {
                                           (t.stopPropagation(),
                                               f.default.selectVoiceChannel(j.id),
-                                              (0, x.iN)(j.id),
+                                              (0, p.iN)(j.id),
                                               P?.({ action: "OPEN_VOICE_CHANNEL" }),
-                                              R?.());
+                                              L?.());
                                       },
                                       className: y.sd,
-                                      "aria-label": (0, p.Ay)({ channel: j }),
+                                      "aria-label": (0, g.Ay)({ channel: j }),
                                       children: (0, l.jsx)(o.E, {
                                           variant: "text-xs/normal",
                                           color: "text-subtle",

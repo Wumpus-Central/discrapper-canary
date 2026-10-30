@@ -15,8 +15,8 @@ var l = n(477900),
     E = n(47167),
     A = n(713654),
     f = n(573435),
-    p = n(145497),
-    S = n(166444),
+    S = n(145497),
+    p = n(166444),
     N = n(565860),
     x = n(648427),
     T = n(379078),
@@ -234,9 +234,9 @@ let B = i.memo(function (e) {
         if (null == i)
             switch (t.type) {
                 case F.rbe.DM:
-                    return (0, l.jsx)(S.Pk, { channel: t, size: d._3.SIZE_32 });
+                    return (0, l.jsx)(p.Pk, { channel: t, size: d._3.SIZE_32 });
                 case F.rbe.GROUP_DM:
-                    return (0, l.jsx)(S.IC, { channel: t, size: d._3.SIZE_32 });
+                    return (0, l.jsx)(p.IC, { channel: t, size: d._3.SIZE_32 });
                 default:
                     return null;
             }
@@ -246,7 +246,7 @@ let B = i.memo(function (e) {
             height: 32,
             children: (0, l.jsx)("div", {
                 className: L.Ko,
-                children: (0, l.jsx)(p.j, {
+                children: (0, l.jsx)(S.j, {
                     guildId: i.id,
                     guildName: i.name ?? G.intl.string(G.t.DmIUGK),
                     guildIcon: i.icon,
@@ -268,9 +268,9 @@ let B = i.memo(function (e) {
             } = e,
             I = (0, a.bG)([v.A], () => v.A.getChannel(t), [t]),
             f = (0, E.Ay)(I),
-            p = I?.getGuildId(),
-            S = (0, a.bG)([D.A], () => D.A.getGuild(p), [p]),
-            N = (0, A.gU)(I, S),
+            S = I?.getGuildId(),
+            p = (0, a.bG)([D.A], () => D.A.getGuild(S), [S]),
+            N = (0, A.gU)(I, p),
             x = i?.id === t,
             T = x ? "text-feedback-positive" : n ? "interactive-text-active" : "text-muted",
             _ = x ? c.A.colors.TEXT_FEEDBACK_POSITIVE : n ? c.A.colors.INTERACTIVE_TEXT_ACTIVE : c.A.colors.ICON_MUTED;
@@ -303,7 +303,7 @@ let B = i.memo(function (e) {
                               (0, l.jsx)(g.E, {
                                   variant: x ? "text-xs/semibold" : "text-xs/medium",
                                   color: T,
-                                  children: S?.name ?? f,
+                                  children: p?.name ?? f,
                               }),
                           ],
                       }),

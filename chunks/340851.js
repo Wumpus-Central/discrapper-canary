@@ -12,8 +12,8 @@ var n = t(477900),
     m = t(730852),
     g = t(401843),
     h = t(296216),
-    p = t(793574),
-    f = t(480890),
+    f = t(793574),
+    p = t(480890),
     I = t(47167),
     v = t(643501),
     S = t(916641),
@@ -95,10 +95,10 @@ let M = (0, h.J)(function (e) {
         eA = l.useRef(null),
         [em, eg] = l.useState(!1),
         eh = l.useRef(null);
-    function ep() {
+    function ef() {
         eg(!em);
     }
-    function ef(e) {
+    function ep(e) {
         eI();
     }
     function eI() {
@@ -179,7 +179,7 @@ let M = (0, h.J)(function (e) {
                     channel: r,
                     showMediaItems: !0,
                     showStageChannelItems: r.isGuildStageVoice(),
-                    onInteraction: (0, f.s)("GuildChannelUserContextMenu", p.A.VOICE_USER, { targetUserId: s.id }),
+                    onInteraction: (0, p.s)("GuildChannelUserContextMenu", f.A.VOICE_USER, { targetUserId: s.id }),
                 });
         });
     }
@@ -205,7 +205,7 @@ let M = (0, h.J)(function (e) {
             user: s,
             guildId: r.guild_id,
             channelId: r.id,
-            newAnalyticsLocations: [p.A.VOICE_USER],
+            newAnalyticsLocations: [f.A.VOICE_USER],
             shouldShow: em,
             onRequestClose: () => eg(!1),
             children: (e) => {
@@ -239,7 +239,7 @@ let M = (0, h.J)(function (e) {
                         avatarContainerClass: a()({ [k.dj]: !0 }),
                         disabled: es && !t,
                         selected: em,
-                        onClick: t ? void 0 : ep,
+                        onClick: t ? void 0 : ef,
                         onDoubleClick: eS,
                         onContextMenu: ex,
                         guildId: r.guild_id,
@@ -268,7 +268,7 @@ let M = (0, h.J)(function (e) {
                                   });
                               },
                               shouldShow: et && !em,
-                              onRequestClose: ef,
+                              onRequestClose: ep,
                               spacing: 17,
                               children: () =>
                                   (0, n.jsx)(y.Ay, {

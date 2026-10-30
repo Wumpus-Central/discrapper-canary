@@ -13,8 +13,8 @@ function p(t) {
             tooltipText: e,
             textVariant: i = "text-xs/medium",
             textClassName: p,
-            "aria-label": d,
-            icon: c,
+            "aria-label": c,
+            icon: d,
             canTruncate: A = !0,
             hideTooltip: m = !1,
             hideText: x = !1,
@@ -35,26 +35,26 @@ function p(t) {
         C = a.useCallback(() => {
             S(!1);
         }, []);
-    return null == c && x
+    return null == d && x
         ? null
         : h
           ? (0, n.jsx)(s.u, {
                 body: y,
-                asset: c,
+                asset: d,
                 assetSize: 16,
                 delay: 150,
                 shouldShow: N,
                 asContainer: !0,
                 children: (0, n.jsxs)("div", {
                     className: o()(u.kL, u.O1, E),
-                    "aria-label": d,
+                    "aria-label": c,
                     onMouseEnter: v,
                     onMouseLeave: C,
-                    children: [c, !x && (0, n.jsx)(r.E, { ref: T, ...f, children: l })],
+                    children: [d, !x && (0, n.jsx)(r.E, { ref: T, ...f, children: l })],
                 }),
             })
           : (0, n.jsxs)("div", {
                 className: o()(u.kL, u.O1, E),
-                children: [c, !x && (0, n.jsx)(r.E, { ...f, children: l })],
+                children: [d, !x && (0, n.jsx)(r.E, { ...f, children: l })],
             });
 }

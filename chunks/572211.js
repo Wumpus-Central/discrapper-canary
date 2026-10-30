@@ -51,11 +51,11 @@ function _(e) {
         G = O || U,
         w = 0 === j ? E.pv : E.$g,
         B = s.useRef(null),
-        V = s.useCallback(() => {
+        H = s.useCallback(() => {
             let e = B.current;
             null == e || ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        H = s.useMemo(() => !!U && new URL(v).pathname.endsWith(".gif"), [U, v]),
+        V = s.useMemo(() => !!U && new URL(v).pathname.endsWith(".gif"), [U, v]),
         F = s.useMemo(() => {
             if (null != b)
                 return (e) => {
@@ -99,7 +99,7 @@ function _(e) {
                     className: a()(E.cy, w, { [E.wk]: U }),
                     children: [
                         U &&
-                            (H
+                            (V
                                 ? (0, l.jsx)("div", { className: E.O9, style: { backgroundImage: `url(${v})` } })
                                 : (0, l.jsx)(o.A, {
                                       ref: B,
@@ -113,7 +113,7 @@ function _(e) {
                             (0, l.jsx)("div", {
                                 className: E.LR,
                                 style: { backgroundImage: `url(${c})` },
-                                onTransitionEnd: V,
+                                onTransitionEnd: H,
                             }),
                     ],
                 }),

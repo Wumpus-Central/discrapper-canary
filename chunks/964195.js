@@ -10,10 +10,10 @@ var l = n(477900),
     d = n(554830),
     A = n(975460),
     f = n(531913),
-    p = n(633075),
-    g = n(321191),
-    m = n(903209),
-    x = n(105292),
+    g = n(633075),
+    m = n(321191),
+    x = n(903209),
+    p = n(105292),
     _ = n(374129);
 function I(t) {
     let e = (0, A.g)(t.activityApplication);
@@ -25,14 +25,14 @@ function N(t) {
         { hasWidget: r, isLoadingProfile: s } =
             ((e = t.userId),
             (n = t.widgetApplication),
-            (a = (0, c.bG)([g.A], () => g.A.getUserProfile(e))),
+            (a = (0, c.bG)([m.A], () => m.A.getUserProfile(e))),
             i.useEffect(() => {
                 let t = new AbortController();
-                return ((0, m.A)(e, void 0, { abortSignal: t.signal }), () => t.abort());
+                return ((0, x.A)(e, void 0, { abortSignal: t.signal }), () => t.abort());
             }, [e]),
             i.useMemo(
                 () => ({
-                    hasWidget: null != a && null != a.widgets && a.widgets.some((t) => (0, p.E)(t, n?.id)),
+                    hasWidget: null != a && null != a.widgets && a.widgets.some((t) => (0, g.E)(t, n?.id)),
                     isLoadingProfile: null == a,
                 }),
                 [a, n],
@@ -56,19 +56,19 @@ function E(t) {
             compactViewMore: c = !1,
             onClickViewMore: A,
         } = t,
-        p = (0, f.A)(n, i),
-        g = p.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
-    return null != g && p.hasIdentity
+        g = (0, f.A)(n, i),
+        m = g.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
+    return null != m && g.hasIdentity
         ? (0, l.jsxs)("div", {
               className: r()(_.kL, e),
               children: [
                   (0, l.jsx)("div", {
                       className: _.Qs,
-                      children: (0, l.jsx)(s.kH, { ...p, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: g }),
+                      children: (0, l.jsx)(s.kH, { ...g, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: m }),
                   }),
                   a &&
                       (0, l.jsx)(u.D, {
-                          "aria-label": x.intl.string(x.t["OBCR+p"]),
+                          "aria-label": p.intl.string(p.t["OBCR+p"]),
                           className: r()(_.NO, { [_.O7]: c }),
                           onClick: A,
                           children: (0, l.jsx)(d.K, { size: "xxs" }),

@@ -26,12 +26,12 @@ function N(n) {
             isContentGated: E,
             isEmbedded: O,
             ChannelStore: S,
-            GuildStore: T,
-            GuildMemberCountStore: y,
-            RelationshipStore: V,
-            SelectedChannelStore: m,
-            VoiceStateStore: U,
-            PermissionStore: P,
+            GuildStore: y,
+            GuildMemberCountStore: m,
+            RelationshipStore: U,
+            SelectedChannelStore: P,
+            VoiceStateStore: T,
+            PermissionStore: V,
             LocalActivityStore: g,
             SelfPresenceStore: D,
             EmbeddedActivitiesStore: b,
@@ -54,7 +54,7 @@ function N(n) {
             if (null == l) return !1;
             let o = e.getChannel(l);
             return null == o || (o.type === I.rbe.GUILD_VOICE && o.application_id === t.id && r.can(I.xBc.CONNECT, o));
-        })(i.id, N, S, U, P)
+        })(i.id, N, S, T, V)
     )
         return "cannot_join";
     if (O && null != j && !(0, l.VS)(N))
@@ -67,9 +67,9 @@ function N(n) {
             isContentGated: E,
             isActivitiesEnabledForCurrentPlatform: (0, u.A)(),
             ChannelStore: S,
-            VoiceStateStore: U,
-            PermissionStore: P,
-            GuildStore: T,
+            VoiceStateStore: T,
+            PermissionStore: V,
+            GuildStore: y,
         }) === c.Gy.CAN_JOIN
             ? "can_join"
             : "cannot_join";
@@ -80,18 +80,18 @@ function N(n) {
         return "cannot_join";
     let M = (0, _._)(f);
     if (!(0, s.A)(M) || (0, C.U)(M)) return "cannot_join";
-    if ((0, A.A)(f, I.jUm.PARTY_PRIVACY_FRIENDS) && V.isFriend(i.id)) return "can_join";
+    if ((0, A.A)(f, I.jUm.PARTY_PRIVACY_FRIENDS) && U.isFriend(i.id)) return "can_join";
     if ((0, A.A)(f, I.jUm.PARTY_PRIVACY_VOICE_CHANNEL)) {
-        let n = S.getChannel(m.getVoiceChannelId());
-        if (null == n || !U.isInChannel(n.id, i.id)) return "cannot_join";
+        let n = S.getChannel(P.getVoiceChannelId());
+        if (null == n || !T.isInChannel(n.id, i.id)) return "cannot_join";
         switch (n.type) {
             case I.rbe.DM:
             case I.rbe.GROUP_DM:
                 return "can_join";
         }
-        let t = T.getGuild(n.getGuildId());
+        let t = y.getGuild(n.getGuildId());
         if (null == t || t.features.has(I.GuildFeatures.COMMUNITY)) return "cannot_join";
-        let e = y.getMemberCount(t.id);
+        let e = m.getMemberCount(t.id);
         if (null != e && e < 100) return "can_join";
     }
     return "cannot_join";

@@ -19,9 +19,9 @@ function d(t) {
 }
 function A(t) {
     let { user: e, entry: u, display: A, onAction: f } = t,
-        p = (0, c.A)(),
-        g = (0, i.bG)([o.default], () => o.default.getCurrentUser());
-    return e.id === g?.id && "recent" === A && (0, s.$R)(u)
+        g = (0, c.A)(),
+        m = (0, i.bG)([o.default], () => o.default.getCurrentUser());
+    return e.id === m?.id && "recent" === A && (0, s.$R)(u)
         ? (0, l.jsx)(r.Dr, {
               id: "delete-entry-history",
               label: d(u),
@@ -42,7 +42,7 @@ function A(t) {
                                   n.e("436946"),
                               ]).then(n.bind(n, 839785));
                               return (n) =>
-                                  (0, l.jsx)(t, { entry: u, user: e, onAction: f, onOpenGameSettings: p, ...n });
+                                  (0, l.jsx)(t, { entry: u, user: e, onAction: f, onOpenGameSettings: g, ...n });
                           }));
               },
               color: "danger",

@@ -4,8 +4,8 @@ n(582128);
 var r = n(939249),
     o = n(97808),
     a = n(778712),
-    s = n(834730),
-    u = n(821609),
+    u = n(834730),
+    s = n(821609),
     i = n(402860),
     d = n(427262),
     c = n(659723),
@@ -41,7 +41,7 @@ function x(e) {
                                       size: a._3.SIZE_20,
                                       "aria-hidden": !0,
                                   }),
-                                  (0, l.jsx)(s.E, {
+                                  (0, l.jsx)(u.E, {
                                       variant: "text-sm/normal",
                                       color: "none",
                                       lineClamp: 1,
@@ -51,7 +51,7 @@ function x(e) {
                           })
                         : (0, l.jsx)("span", {}),
                     null != n
-                        ? (0, l.jsx)(u.$, {
+                        ? (0, l.jsx)(s.$, {
                               variant: "secondary",
                               size: "sm",
                               text: g.intl.string(m.default.XWgAfc),

@@ -8,8 +8,8 @@ var a = i(17928),
     r = i(302959),
     c = i(765379),
     o = i(709899),
-    p = i(506326),
-    m = i(409626),
+    m = i(506326),
+    p = i(409626),
     u = i(692969),
     x = i(78871),
     A = i(287809),
@@ -20,7 +20,7 @@ function g(e) {
         r = (0, u.A)({
             location: "UserActivityRow",
             applicationId: t.applicationId,
-            source: m.GameProfileSources.UserProfile,
+            source: p.GameProfileSources.UserProfile,
             sourceUserId: t.userId,
             trackEntryPointImpression: !0,
         }),
@@ -80,8 +80,8 @@ function g(e) {
                                       })
                                     : null,
                                 null != i
-                                    ? (0, l.jsxs)(p.mG, {
-                                          location: p.N5.VOICE_USER_POPOUT,
+                                    ? (0, l.jsxs)(m.mG, {
+                                          location: m.N5.VOICE_USER_POPOUT,
                                           children: [
                                               (0, l.jsx)(x.QA, { activity: i }),
                                               (0, l.jsx)(x.cy, { activity: i }),
@@ -105,22 +105,22 @@ let N = function (e) {
             embeddedApp: s,
             applicationStream: d,
             onAction: c,
-            showHeader: p = !0,
+            showHeader: m = !0,
         } = e,
-        m = (0, a.bG)([A.default], () => (null != n ? A.default.getUser(n) : null), [n]);
-    if (null == m) return null;
-    let u = (0, h.Gf)(m.id, i, s);
+        p = (0, a.bG)([A.default], () => (null != n ? A.default.getUser(n) : null), [n]);
+    if (null == p) return null;
+    let u = (0, h.Gf)(p.id, i, s);
     return (0, l.jsxs)("div", {
         children: [
             u.isSpotify
-                ? (0, l.jsx)(h.vP, { resolvedActivity: u, showHeader: p })
-                : (0, l.jsx)(g, { resolvedActivity: u, presenceActivity: i, showHeader: p }),
+                ? (0, l.jsx)(h.vP, { resolvedActivity: u, showHeader: m })
+                : (0, l.jsx)(g, { resolvedActivity: u, presenceActivity: i, showHeader: m }),
             (0, l.jsx)(o.A, {
                 type: null != d ? r.M.STREAM_PREVIEW : r.M.VOICE_CHANNEL,
                 activity: i,
                 embeddedActivity: s?.embeddedActivity,
                 applicationStream: d,
-                user: m,
+                user: p,
                 guildId: t.guild_id,
                 channelId: t.id,
                 buttonVariant: "primary",

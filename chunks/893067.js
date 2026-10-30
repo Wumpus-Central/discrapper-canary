@@ -1,4 +1,4 @@
-n.d(l, { bI: () => j, Ay: () => J, vL: () => O, KL: () => R, qF: () => k, FZ: () => Z });
+n.d(l, { bI: () => U, Ay: () => z, vL: () => O, KL: () => R, qF: () => k, FZ: () => Z });
 var e = n(582128),
     i = n(17928),
     a = n(73153),
@@ -18,8 +18,8 @@ var e = n(582128),
     _ = n(385081),
     P = n(1371),
     v = n(246338),
-    w = n(803101),
-    S = n(664619),
+    S = n(803101),
+    w = n(664619),
     C = n(722701),
     N = n(811587),
     y = n(87501),
@@ -70,7 +70,7 @@ function I(t) {
 var E = n(516288),
     x = n(962998),
     G = n(615839);
-let T = {
+let j = {
     preparing: y.default.GQeas1,
     approval: y.default["TkHHD+"],
     approved_by_grant: y.default["9+kNt8"],
@@ -80,8 +80,8 @@ let T = {
     discord: y.default.LFcGAT,
     activating: y.default.ff1Fq1,
 };
-var U = n(652215);
-let j = 221552 == n.j ? e.createContext(null) : null;
+var T = n(652215);
+let U = 221552 == n.j ? e.createContext(null) : null;
 function R(t, l) {
     return "user" === t.install_scope ? null : (t.guild_id ?? l);
 }
@@ -112,8 +112,8 @@ function F(t, l) {
             guildName: a?.name ?? null,
             appChannelName: null == i ? null : (d.A.getChannel(i)?.name ?? null),
             appChannelPending: C.A.isAppChannelPending(t),
-            canManageGuild: null == a ? null : h.A.can(U.xBc.MANAGE_GUILD, a),
-            canManageChannels: null == a ? null : h.A.can(U.xBc.MANAGE_CHANNELS, a),
+            canManageGuild: null == a ? null : h.A.can(T.xBc.MANAGE_GUILD, a),
+            canManageChannels: null == a ? null : h.A.can(T.xBc.MANAGE_CHANNELS, a),
             usesAppChannels: (0, b.Hv)(n),
             botInGuild: (0, m.AS)(n, e),
             liveNameOutdated: k(n),
@@ -124,7 +124,7 @@ async function O(t, l) {
     let n = A.Ay.getProject(t),
         e = n?.preview_application_id;
     if (null == n || null == e) return;
-    let i = (0, w.a)(n, A.Ay.getIntegrationStatus(t), l);
+    let i = (0, S.a)(n, A.Ay.getIntegrationStatus(t), l);
     (await (0, r.TA)(e).catch(() => {}),
         await new Promise((t) => {
             P.A.openConjureAppInstallModal({
@@ -134,7 +134,7 @@ async function O(t, l) {
                 onClose: t,
             });
         }),
-        await (0, w.$)(n, i).catch(() => {}),
+        await (0, S.$)(n, i).catch(() => {}),
         await (0, g.U1)(t).catch(() => {}));
 }
 async function L(t, l, n, e) {
@@ -176,7 +176,7 @@ async function L(t, l, n, e) {
                 (l) => {
                     (r.showConfirmation(M.intl.string(y.default.S6Px3n)),
                         null != t.guildId && B(u),
-                        (0, S.tZ)(o, { isPreview: !1 })
+                        (0, w.tZ)(o, { isPreview: !1 })
                             .catch((t) => {
                                 console.error("[conjure] post-publish refresh failed", o, t);
                             })
@@ -263,8 +263,8 @@ async function Y(t, l, n, e) {
         await L(u, l, n, e);
     }
 }
-function J(t, l) {
-    let n = e.useContext(j),
+function z(t, l) {
+    let n = e.useContext(U),
         a = l ?? n,
         u = a?.guildId ?? null,
         {
@@ -275,11 +275,11 @@ function J(t, l) {
             approvalUrl: _,
             project: P,
             guildId: v,
-            appChannelId: w,
-            installScope: S,
+            appChannelId: S,
+            installScope: w,
             status: E,
             integrationStatus: x,
-            guildName: U,
+            guildName: T,
             appChannelName: R,
             appChannelPending: k,
             canManageGuild: O,
@@ -323,10 +323,10 @@ function J(t, l) {
                 null == P
                     ? null
                     : {
-                          installScope: S,
+                          installScope: w,
                           status: E,
                           integrationStatus: x,
-                          guildName: U,
+                          guildName: T,
                           appChannelName: R,
                           appChannelPending: k,
                           canManageGuild: O,
@@ -335,23 +335,23 @@ function J(t, l) {
                           botInGuild: q,
                           liveNameOutdated: Q,
                       },
-            [P, S, E, x, U, R, k, O, L, H, q, Q],
+            [P, w, E, x, T, R, k, O, L, H, q, Q],
         ),
-        J = Y?.status?.publishState ?? null,
-        W = Y?.installScope === "guild" && Y.status?.surface === "bot";
+        z = Y?.status?.publishState ?? null,
+        J = Y?.installScope === "guild" && Y.status?.surface === "bot";
     e.useEffect(() => {
-        null != P && null != v && W && null != J && (0, N.lE)(J) && B(P);
-    }, [P?.id, v, W, J]);
-    let z = P?.application_id ?? null,
-        V = null != J && (0, N.lE)(J);
+        null != P && null != v && J && null != z && (0, N.lE)(z) && B(P);
+    }, [P?.id, v, J, z]);
+    let W = P?.application_id ?? null,
+        X = null != z && (0, N.lE)(z);
     e.useEffect(() => {
-        null != z &&
-            V &&
-            null == s.A.getApplication(z) &&
-            !s.A.isFetchingApplication(z) &&
-            (0, r.TA)(z).catch(() => {});
-    }, [z, V]);
-    let X = e.useMemo(() => (null == Y ? null : I(Y)), [Y]),
+        null != W &&
+            X &&
+            null == s.A.getApplication(W) &&
+            !s.A.isFetchingApplication(W) &&
+            (0, r.TA)(W).catch(() => {});
+    }, [W, X]);
+    let V = e.useMemo(() => (null == Y ? null : I(Y)), [Y]),
         K = (function (t) {
             let l = (0, i.bG)([C.A], () => (null == t ? null : C.A.getPublishProgress(t))),
                 [n, a] = e.useState(() => Date.now());
@@ -364,7 +364,7 @@ function J(t, l) {
             null == l)
                 ? null
                 : M.intl.formatToPlainString(y.default["ndkR+x"], {
-                      action: M.intl.string(T[l.stage]),
+                      action: M.intl.string(j[l.stage]),
                       detail: (0, G.C7)(n - l.stageStartedAt),
                   });
         })(b ? t : null),
@@ -378,13 +378,13 @@ function J(t, l) {
             },
             [t, a],
         );
-    if (null == a || !f || null == X || (!g && !b)) return null;
-    let tt = null == _ ? X.label : M.intl.string(y.default.qru9M5);
+    if (null == a || !f || null == V || (!g && !b)) return null;
+    let tt = null == _ ? V.label : M.intl.string(y.default.qru9M5);
     return {
-        ...X,
+        ...V,
         status: Y?.status ?? null,
         guildId: v,
-        appChannelId: w,
+        appChannelId: S,
         publishing: b,
         failure: b ? null : m,
         showsProgress: null != K,
