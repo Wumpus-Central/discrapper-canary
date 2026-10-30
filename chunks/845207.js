@@ -1028,11 +1028,10 @@ function tw(e) {
                                 variant: "text-sm/normal",
                                 children: k.intl.format(k.t["8E4GxS"], {
                                     userHook: (e, t) =>
-                                        (0, l.jsxs)(
+                                        (0, l.jsx)(
                                             i.Fragment,
                                             {
-                                                children: [
-                                                    "\xa0",
+                                                children:
                                                     b?.title != null
                                                         ? (0, l.jsxs)("span", {
                                                               className: tj.H8,
@@ -1064,7 +1063,6 @@ function tw(e) {
                                                               roleName: E,
                                                               displayNameStylesFont: A,
                                                           }),
-                                                ],
                                             },
                                             t,
                                         ),

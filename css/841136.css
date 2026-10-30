@@ -72,7 +72,8 @@
 .replyLabel__841c8 {
     align-items: center;
     display: inline-flex;
-    flex: 1 1 auto
+    flex: 1 1 auto;
+    white-space: pre
 }
 
 .name__841c8 {
@@ -134,4 +135,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=841136.ac7a4f34fb493d3a.css.map*/
+/*# sourceMappingURL=841136.5d7ae3a5a025128b.css.map*/
