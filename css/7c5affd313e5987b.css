@@ -1,3 +1,18 @@
+.image__6d903 {
+    block-size: 100%;
+    display: block;
+    inline-size: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.portraitImage__6d903 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.imageBackdrop__6d903 {}
+
 .container__9d8b7 {
     display: flex;
     flex-direction: column;
@@ -63,33 +78,8 @@
 }
 
 .heroImage__9d8b7 {
-    display: block;
-    height: 100%;
     inset: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
-    position: absolute;
-    width: 100%
-}
-
-.heroFitted__9d8b7 {
-    -o-object-fit: contain;
-    object-fit: contain
-}
-
-.heroBackdrop__9d8b7 {
-    filter: blur(24px);
-    height: 100%;
-    inset: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
-    position: absolute;
-    transform: scale(1.2);
-    width: 100%
-}
-
-.heroBackdropHidden__9d8b7 {
-    display: none
+    position: absolute
 }
 
 .full-motion .heroCurrentImage__9d8b7 {
@@ -115,13 +105,17 @@
     animation: heroFadeOut__9d8b7 .15s ease-in forwards
 }
 
-.thumbnail__9d8b7 {
+.thumbnailFrame__9d8b7 {
+    block-size: 100%;
     border-radius: var(--radius-md);
-    display: block;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
+    inline-size: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.thumbnail__9d8b7 {
+    border-radius: inherit;
+    position: relative
 }
 
 .full-motion .thumbnail__9d8b7 {
@@ -137,14 +131,21 @@
     transform: scale(1.1)
 }
 
+.full-motion .thumbnailClickable__9d8b7:hover .thumbnail__9d8b7[data-portrait] {
+    transform: none
+}
+
 .thumbnailSelected__9d8b7 .thumbnailWrapper__9d8b7 {
     box-sizing: border-box;
     padding: var(--space-4)
 }
 
+.thumbnailSelected__9d8b7 .thumbnailFrame__9d8b7 {
+    border-radius: calc(var(--radius-md) - var(--space-4))
+}
+
 .thumbnailSelected__9d8b7 .thumbnail__9d8b7,
 .thumbnailSelected__9d8b7.thumbnailClickable__9d8b7:hover .thumbnail__9d8b7 {
-    border-radius: calc(var(--radius-md) - var(--space-4));
     transform: scale(1)
 }
 
@@ -301,4 +302,4 @@
     text-decoration: var(--link-decoration)
 }
 
-/*# sourceMappingURL=e4cdeba4e83b2139.css.map*/
+/*# sourceMappingURL=7c5affd313e5987b.css.map*/
