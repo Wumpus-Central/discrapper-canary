@@ -6056,5 +6056,21 @@
         "cpuFallback": true
       }
     }
+  },
+  {
+    "name": "2026-11-nitro-upload-badge",
+    "kind": "user",
+    "defaultConfig": {
+      "showNitroUploadBadge": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showNitroUploadBadge": true
+      }
+    }
   }
 ]

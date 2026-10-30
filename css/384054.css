@@ -1,0 +1,51 @@
+.badge__28a97 {
+    align-items: center;
+    background-color: var(--opacity-black-68);
+    border-radius: 11px;
+    color: var(--white);
+    display: flex;
+    flex: 0 0 auto;
+    gap: 4px;
+    height: 22px;
+    padding-inline: 8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap
+}
+
+.small__28a97 {
+    gap: 3px;
+    height: 18px;
+    padding-inline: 6px
+}
+
+.interactive__28a97 {
+    cursor: pointer
+}
+
+.interactive__28a97:focus-visible,
+.interactive__28a97:hover {
+    background-color: var(--opacity-black-80)
+}
+
+.dimensionlessImage_a22bfd {
+    height: 100%;
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+    width: 100%
+}
+
+.wrapper_a22bfd {
+    cursor: zoom-in
+}
+
+.zoomed_a22bfd {
+    cursor: zoom-out
+}
+
+.media_a22bfd {
+    border-radius: 0
+}
+
+/*# sourceMappingURL=384054.5e1be0fb5abcfbd8.css.map*/

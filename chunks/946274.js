@@ -59,9 +59,9 @@ class d extends a.PureComponent {
         let { openUploadError: e } = await Promise.all([
             i.e("454048"),
             i.e("300699"),
-            i.e("599666"),
+            i.e("488694"),
             i.e("534822"),
-        ]).then(i.bind(i, 494921));
+        ]).then(i.bind(i, 894101));
         e({ title: r.intl.string(r.t["0egKg3"]), help: r.intl.string(r.t["7PnXqu"]) });
     };
     render() {

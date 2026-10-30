@@ -2728,6 +2728,7 @@ var i$ =
         (eo.CLAIM_ACCOUNT_MODAL = "Claim Account"),
         (eo.STREAM_UPSELL_MODAL = "Stream Upsell Modal"),
         (eo.FILE_UPLOAD_UPSELL_MODAL = "File Upload Upsell Modal"),
+        (eo.NITRO_UPLOAD_BADGE_UPSELL_MODAL = "Nitro Upload Badge Upsell Modal"),
         (eo.MESSAGE_LENGTH_UPSELL_MODAL = "Message Length Upsell Modal"),
         (eo.USER_PROFILE = "User Profile"),
         (eo.USER_PROFILE_MUTUAL_FRIENDS = "User Profile Mutual Friends"),

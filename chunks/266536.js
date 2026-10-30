@@ -1486,7 +1486,7 @@ function e7(e) {
         ],
     });
 }
-function e9(e) {
+function e8(e) {
     var t;
     let s,
         { onClick: r } = e,
@@ -1559,7 +1559,7 @@ function e9(e) {
     }
     let y = [];
     return ((y = f === d.fS.WINDOW ? C : f === d.fS.SCREEN ? o : a), f === d.fS.CAMERA && 0 === y.length)
-        ? (0, l.jsx)(e8, {})
+        ? (0, l.jsx)(e9, {})
         : (0, l.jsx)("div", {
               className: e5.zr,
               children: y.map((e) =>
@@ -1576,7 +1576,7 @@ function e9(e) {
               ),
           });
 }
-function e8() {
+function e9() {
     return (0, l.jsxs)("div", {
         className: e5.p$,
         children: [
@@ -1648,7 +1648,7 @@ let th = (e) => {
             s.e("454048"),
             s.e("300699"),
             s.e("349619"),
-            s.e("599666"),
+            s.e("488694"),
             s.e("398125"),
             s.e("221825"),
             s.e("930758"),
@@ -2317,7 +2317,7 @@ function t1(e) {
                                         children:
                                             B && es !== d.fS.CAMERA
                                                 ? (0, l.jsx)(eY, { onSourceSelect: er })
-                                                : (0, l.jsx)(e9, {
+                                                : (0, l.jsx)(e8, {
                                                       onClick: function (e) {
                                                           e.id?.startsWith(d.fS.CAMERA)
                                                               ? z({ type: "set_selected_source", source: e })

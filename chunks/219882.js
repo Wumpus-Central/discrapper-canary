@@ -15,12 +15,12 @@ let a = "NitroFileUploadRollout",
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 function o() {
-    let { location: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return d({ location: e }).enabled ? r.gb : r.f3;
+    let { location: e, autoTrackExposure: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    return d({ location: e, autoTrackExposure: t }).enabled ? r.gb : r.f3;
 }
 function d() {
-    let { location: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return s.getConfig({ location: e ?? a });
+    let { location: e, autoTrackExposure: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    return s.getConfig({ location: e ?? a }, { autoTrackExposure: t });
 }
 function c(e) {
     let { legacyCopy: t, rolloutCopy: n } = e;
