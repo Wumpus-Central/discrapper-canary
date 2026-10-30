@@ -5496,6 +5496,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-10-nitro-settings-marketing-page-refresh",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-nitro-tab-remove-account-age-restriction",
     "kind": "user",
     "defaultConfig": {

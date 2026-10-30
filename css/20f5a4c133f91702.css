@@ -337,12 +337,101 @@
     container-type: inline-size
 }
 
+.settings_c19a92 .premiumCardsHeader_c19a92 {
+    margin-bottom: 0;
+    text-align: start
+}
+
+.settings_c19a92 .cards_c19a92 {
+    align-items: stretch;
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr auto auto;
+    padding: 0
+}
+
+.settings_c19a92 .cards_c19a92 .card_c19a92 {
+    border-radius: var(--radius-lg);
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    max-width: none;
+    min-width: 0;
+    order: 0;
+    overflow: hidden;
+    padding: var(--space-24);
+    row-gap: 0;
+    width: auto
+}
+
+.settings_c19a92 .cardContent_c19a92 {
+    display: contents
+}
+
+.settings_c19a92 .cardBody_c19a92 {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.settings_c19a92 .cardHeader_c19a92 {
+    margin-bottom: var(--space-8)
+}
+
+.settings_c19a92 .footer_c19a92 {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-top: 0;
+    margin-inline: 0;
+    padding: var(--space-24) 0 0
+}
+
+.settings_c19a92 .footer_c19a92>:has(.billingOptions_c19a92) {
+    grid-template-rows: auto 1fr auto
+}
+
+.settings_c19a92 .billingOptions_c19a92 {
+    display: grid;
+    flex: 1;
+    grid-template-rows: repeat(2, 1fr)
+}
+
+.settings_c19a92 .billingOptions_c19a92>* {
+    display: grid
+}
+
+@container (max-width: 540px) {
+    .settings_c19a92 .cards_c19a92 {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none
+    }
+
+    .settings_c19a92 .cards_c19a92 .card_c19a92 {
+        width: 100%
+    }
+}
+
 .wrapper__17be2 {
     bottom: 0;
     display: flex;
     justify-content: center;
     position: sticky;
     z-index: 1
+}
+
+.settings__17be2 {
+    margin-top: var(--space-32);
+    pointer-events: none;
+    width: 100%
+}
+
+.settings__17be2 .buttonContainer__17be2 {
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    pointer-events: auto
 }
 
 .buttonContainer__17be2 {
@@ -600,4 +689,4 @@
     }
 }
 
-/*# sourceMappingURL=ce132d4caf18a90c.css.map*/
+/*# sourceMappingURL=20f5a4c133f91702.css.map*/

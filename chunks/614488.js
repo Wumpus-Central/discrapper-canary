@@ -23,4 +23,7 @@ a.exports = {
     kX: "wumpus_c19a92",
     iR: "premiumCardHover_c19a92",
     oB: "premiumCardsContainer_c19a92",
+    W0: "settings_c19a92",
+    zI: "cardBody_c19a92",
+    US: "billingOptions_c19a92",
 };

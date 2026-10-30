@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "658737";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "658748";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 658737, Version Hash: f5f931070093f13ee67b4f7972757fee83ebd856`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 658748, Version Hash: 00598deaa58f2930badbc5c348ea149c1c8bfd40`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -3014,8 +3014,9 @@ let rd = (0, rl.qT)({
             n.e("241972"),
             n.e("111197"),
             n.e("313052"),
+            n.e("334624"),
             n.e("971508"),
-            n.e("800715"),
+            n.e("775068"),
             n.e("217137"),
             n.e("706687"),
             n.e("503177"),
@@ -5689,9 +5690,10 @@ let so = (0, rl.Fe)({
                 n.e("82384"),
                 n.e("903820"),
                 n.e("876892"),
+                n.e("334624"),
                 n.e("971508"),
                 n.e("816799"),
-                n.e("800715"),
+                n.e("775068"),
                 n.e("352351"),
                 n.e("688669"),
                 n.e("852870"),
@@ -24498,7 +24500,7 @@ let R0 = function (e) {
         children: t,
     });
 };
-var R1 = n(163665),
+var R1 = n(78211),
     R2 = n(212524);
 function R3(e) {
     let { children: t } = e;
@@ -26082,7 +26084,7 @@ let yu = "isHideDevBanner",
                     className: tf()(yc.Wz, yc.mr),
                     children: [
                         (0, b.jsx)(yd, { className: yc.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "658737" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "658748" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -54650,11 +54652,12 @@ let Yf = (0, tZ.Fe)({
             n.e("876892"),
             n.e("239367"),
             n.e("152695"),
+            n.e("334624"),
             n.e("971508"),
             n.e("816799"),
             n.e("375966"),
             n.e("124981"),
-            n.e("800715"),
+            n.e("775068"),
             n.e("352351"),
             n.e("688669"),
             n.e("852870"),
@@ -54807,7 +54810,7 @@ let Yf = (0, tZ.Fe)({
             n.e("34486"),
             n.e("486381"),
             n.e("212993"),
-            n.e("717918"),
+            n.e("232100"),
             n.e("942148"),
             n.e("817495"),
             n.e("997695"),

@@ -1,34 +1,34 @@
-t.d(e, { default: () => N });
-var i = t(477900),
-    a = t(582128),
-    n = t(935399),
-    d = t(122074),
-    c = t(22856),
-    r = t(224640),
-    l = t(315629),
-    o = t(20742),
-    x = t(297264),
-    h = t(834730),
-    m = t(821609),
-    p = t(403581),
-    b = t(501419),
-    g = t(975571),
-    u = t(87719),
-    f = t(652215),
-    j = t(49999),
-    v = t(105292),
-    k = t(431901);
+e.d(t, { default: () => N });
+var i = e(477900),
+    a = e(582128),
+    n = e(935399),
+    c = e(400829),
+    d = e(22856),
+    r = e(224640),
+    l = e(315629),
+    o = e(20742),
+    x = e(297264),
+    h = e(834730),
+    m = e(821609),
+    p = e(403581),
+    b = e(501419),
+    g = e(975571),
+    u = e(87719),
+    j = e(652215),
+    v = e(49999),
+    f = e(105292),
+    k = e(431901);
 function N(s) {
-    let { renderModalProps: e, dismissibleContent: t, markAsDismissed: N } = s,
-        { onClose: S, transitionState: w } = e,
-        { headingId: C } = (0, c.k)();
+    let { renderModalProps: t, dismissibleContent: e, markAsDismissed: N } = s,
+        { onClose: S, transitionState: w } = t,
+        { headingId: A } = (0, d.k)();
     return (
         (0, n.Ay)(() => {
-            (0, b.Wx)(t);
+            (0, b.Wx)(e);
         }),
         a.useEffect(
             () => () => {
-                N(j.i.AUTO_DISMISS);
+                N(v.i.AUTO_DISMISS);
             },
             [N],
         ),
@@ -44,23 +44,23 @@ function N(s) {
                     (0, i.jsx)("div", { className: k.cG, children: (0, i.jsx)(o.s_, { shouldColorMix: !0 }) }),
                     (0, i.jsx)("div", {
                         className: k.JS,
-                        children: (0, i.jsx)(d.D, { alt: "", width: 360, height: "auto" }),
+                        children: (0, i.jsx)(c.D, { alt: "", width: 360, height: "auto" }),
                     }),
                     (0, i.jsxs)("div", {
                         className: k.Qs,
                         children: [
                             (0, i.jsx)(x.D, {
-                                id: C,
+                                id: A,
                                 variant: "nitro-md",
                                 color: "text-strong",
                                 className: k.wx,
-                                children: v.intl.string(v.t.Xm5q5l),
+                                children: f.intl.string(f.t.Xm5q5l),
                             }),
                             (0, i.jsx)(h.E, {
                                 variant: "text-md/normal",
                                 color: "text-subtle",
                                 className: k.rf,
-                                children: v.intl.string(v.t.svsMII),
+                                children: f.intl.string(f.t.svsMII),
                             }),
                             (0, i.jsxs)("div", {
                                 className: k.v0,
@@ -68,14 +68,14 @@ function N(s) {
                                     (0, i.jsx)(m.$, {
                                         variant: "secondary",
                                         size: "md",
-                                        onClick: () => window.open(g.A.getArticleURL(f.MVz.PREMIUM_DETAILS), "_blank"),
-                                        text: v.intl.string(v.t.WHWwCY),
+                                        onClick: () => window.open(g.A.getArticleURL(j.MVz.PREMIUM_DETAILS), "_blank"),
+                                        text: f.intl.string(f.t.WHWwCY),
                                     }),
                                     (0, i.jsx)(m.$, {
                                         variant: "primary",
                                         size: "md",
                                         icon: p.t,
-                                        text: v.intl.string(v.t["mHF+AF"]),
+                                        text: f.intl.string(f.t["mHF+AF"]),
                                         onClick: () => (0, u.x)(S),
                                     }),
                                 ],

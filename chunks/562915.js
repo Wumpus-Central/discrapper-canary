@@ -1,13 +1,3 @@
-var n =
-    (this && this.__importDefault) ||
-    function (e) {
-        return e && e.__esModule ? e : { default: e };
-    };
-Object.defineProperty(t, "__esModule", { value: !0 });
-let a = n(r(67326));
-class i extends a.default {
-    patternBetween() {
-        return /^\s*(\u0456 \u0434\u043e|\u0456 \u043f\u043e|\u0434\u043e|\u043f\u043e|-)\s*$/i;
-    }
-}
-t.default = i;
+s.d(c, { A: () => e });
+let e =
+    "https://cdn.discordapp.com/assets/content/d97070662449989da5c48338d6e7002cfcd25d966ded2e0e21889c2b3a655e38.png";
