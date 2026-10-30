@@ -5473,7 +5473,7 @@ let ud = (0, h.E2)(S.X.BILLING_PAYMENT_METHODS, {
                     actions: e,
                     children: (0, p.jsx)(n4.E, {
                         variant: "text-md/medium",
-                        color: "text-muted",
+                        color: "text-subtle",
                         children: V.intl.string(oy.default.qtKobx),
                     }),
                 }),
@@ -5481,7 +5481,7 @@ let ud = (0, h.E2)(S.X.BILLING_PAYMENT_METHODS, {
         },
         useSearchTerms: () => [],
         usePredicate: () =>
-            (0, oj.y)({ location: "BillingMarketingBanner", countGiftCardWallet: !1, canFetchPaymentSources: !1 }),
+            (0, oj.y)({ location: "BillingMarketingBanner", countGiftCardWallet: !0, canFetchPaymentSources: !1 }),
     }),
     ug = (0, h.zZ)(S.X.BILLING_PAYMENT_METHODS_CATEGORY, {
         useTitle: () => V.intl.string(V.t.W26xGQ),
@@ -6630,24 +6630,9 @@ let dI = (0, h.E2)(S.X.BILLING_TRANSACTION_HISTORY, {
     });
 var dy = n(70283),
     dv = n(682618),
-    dj = n(92202),
-    dO = n(534284),
-    dL = n(139486),
-    dR = n(962644),
-    dD = n(35587),
-    dP = n(86379);
-let dG = (0, h.E2)(S.X.GIFT_BLOCKED_PAYMENTS_SETTING, {
-        Component: d_.uK,
-        usePredicate: () => (0, dP.Hp)(),
-        useSearchTerms: () => [V.intl.string(V.t.vwMEHS)],
-    }),
-    dM = (0, h.zZ)(S.X.GIFT_BLOCKED_PAYMENTS_CATEGORY, { buildLayout: () => [dG] });
-var dU = n(704333),
-    dV = n(414499),
-    dk = n(31300),
-    dw = n(997101);
-let dF = {
-        [dw.d.US]: [
+    dj = n(997101);
+let dO = {
+        [dj.d.US]: [
             {
                 id: "walmart",
                 name: "Walmart",
@@ -6669,7 +6654,7 @@ let dF = {
                 url: "https://www.gamestop.com/gift-cards/virtual-currency/products/discord-25-gift-card/448794.html",
             },
         ],
-        [dw.d.IT]: [
+        [dj.d.IT]: [
             {
                 id: "gamelife",
                 name: "Gamelife",
@@ -6677,14 +6662,29 @@ let dF = {
             },
         ],
     },
-    dB = [];
-function dz(e) {
-    return null == e ? dB : (dF[e] ?? dB);
+    dL = [];
+function dR(e) {
+    return null == e ? dL : (dO[e] ?? dL);
 }
+var dD = n(92202),
+    dP = n(534284),
+    dG = n(139486),
+    dM = n(962644),
+    dU = n(35587),
+    dV = n(86379);
+let dk = (0, h.E2)(S.X.GIFT_BLOCKED_PAYMENTS_SETTING, {
+        Component: d_.uK,
+        usePredicate: () => (0, dV.Hp)(),
+        useSearchTerms: () => [V.intl.string(V.t.vwMEHS)],
+    }),
+    dw = (0, h.zZ)(S.X.GIFT_BLOCKED_PAYMENTS_CATEGORY, { buildLayout: () => [dk] });
+var dF = n(704333),
+    dB = n(414499),
+    dz = n(31300);
 function dX(e) {
-    let { enabled: t } = (0, dj.K)({ location: e }),
+    let { enabled: t } = (0, dD.K)({ location: e }),
         n = (0, _.bG)([sx.default], () => sx.default.getCurrentUser()?.storeCountry?.country);
-    return t && dz(n).length > 0;
+    return t && dR(n).length > 0;
 }
 var dY = n(178881);
 function dH() {
@@ -6727,7 +6727,7 @@ let dK = (0, h.zZ)(S.X.GIFT_CARDS_MARKETING_BANNER_CATEGORY, {
                 })(),
                 i = f.useMemo(
                     () =>
-                        dz(t).map((e) => ({
+                        dR(t).map((e) => ({
                             text: e.name,
                             onClick: () => {
                                 (n(e), (0, o_.A)(e.url));
@@ -6746,8 +6746,8 @@ let dK = (0, h.zZ)(S.X.GIFT_CARDS_MARKETING_BANNER_CATEGORY, {
                           align: "start",
                           gap: 8,
                           children: [
-                              (0, p.jsx)(dW, { icon: dU.B, children: V.intl.string(oy.default["9xo1g9"]) }),
-                              (0, p.jsx)(dW, { icon: dV.h, children: V.intl.string(oy.default.I5UWh9) }),
+                              (0, p.jsx)(dW, { icon: dF.B, children: V.intl.string(oy.default["9xo1g9"]) }),
+                              (0, p.jsx)(dW, { icon: dB.h, children: V.intl.string(oy.default.I5UWh9) }),
                               (0, p.jsx)(dW, {
                                   icon: uM.GiftIcon,
                                   children: V.intl.format(oy.default.ZuneBP, {
@@ -6755,7 +6755,7 @@ let dK = (0, h.zZ)(S.X.GIFT_CARDS_MARKETING_BANNER_CATEGORY, {
                                   }),
                               }),
                               (0, p.jsx)(dW, {
-                                  icon: dk.k,
+                                  icon: dz.k,
                                   children: V.intl.format(oy.default.UwYHGm, { websiteUrl: ob.C }),
                               }),
                           ],
@@ -6794,7 +6794,7 @@ function d2(e) {
     let { tiers: t, currentTier: n } = e;
     return (0, p.jsx)("div", {
         className: d0.dw,
-        children: t.map((e) => (0, p.jsx)(d1, { tier: e, iconUrl: (0, dL.Se)(e), active: e.key === n?.key }, e.key)),
+        children: t.map((e) => (0, p.jsx)(d1, { tier: e, iconUrl: (0, dG.Se)(e), active: e.key === n?.key }, e.key)),
     });
 }
 function d3(e) {
@@ -6822,9 +6822,9 @@ function d4(e) {
         { badgeProgress: n, currentTier: i, nextTier: l, giftsRemaining: s } = e,
         r = (0, dq.rL)(i),
         a = (0, dq.rL)(l),
-        o = (0, dL.GZ)(n, i, l),
-        u = (0, dL.Se)(i),
-        d = (0, dL.Se)(l);
+        o = (0, dG.GZ)(n, i, l),
+        u = (0, dG.Se)(i),
+        d = (0, dG.Se)(l);
     return (
         (t =
             null != l
@@ -6915,7 +6915,7 @@ let d6 = (0, h.zZ)(S.X.GIFTING_BADGE_CATEGORY, {
         useTitle: () => V.intl.string(d$.default.sFokBp),
         buildLayout: () => [d8],
         usePredicate: () => {
-            let e = (0, dL.F5)("gift_inventory"),
+            let e = (0, dG.F5)("gift_inventory"),
                 t = (0, _.bG)([dq.Ay], () => dq.Ay.getBadgeById(dy.$.GIFTING));
             return e && null != t;
         },
@@ -7363,7 +7363,7 @@ function cD(e) {
                         (0, p.jsx)(cL, {
                             ...e,
                             onClose: E,
-                            onClaim: dR.Ay.addClaimedOutboundPromotionCode,
+                            onClaim: dM.Ay.addClaimedOutboundPromotionCode,
                             code: i,
                             outboundPromotion: n,
                         }),
@@ -7383,7 +7383,7 @@ function cP(e) {
             activeOutboundPromotions: l,
             claimedEndedOutboundPromotions: s,
             claimedOutboundPromotionCodeMap: r,
-        } = (0, dD.y7)(),
+        } = (0, dU.y7)(),
         a = n.find((e) => e.giftCodeBatchId === tJ.FB && !e.consumed),
         o = n.filter((e) => e.giftCodeBatchId === tJ.Bu && !e.consumed) ?? [],
         [u, d] = K().partition(o, (e) => {
@@ -7499,7 +7499,7 @@ let cG = (0, h.zZ)(S.X.MY_GIFTS_CATEGORY, {
                         claimedOutboundPromotionCodesLoaded: d9.A.claimedOutboundPromotionCodesLoaded,
                     }),
                 ),
-                n = (0, dD.T1)({ includeClaimedPromotions: !0 }),
+                n = (0, dU.T1)({ includeClaimedPromotions: !0 }),
                 i = (0, d7.Wl)(e, n).length;
             return t && n.length + i > 0;
         },
@@ -7694,7 +7694,7 @@ function cZ(e) {
 let cq = (0, h.zZ)(S.X.REDEEM_GIFT_CATEGORY, {
         useTitle: () => V.intl.string(V.t["il+VCo"]),
         buildLayout: () => [cQ],
-        usePredicate: () => !(0, dP.Hp)(),
+        usePredicate: () => !(0, dV.Hp)(),
     }),
     cQ = (0, h.E2)(S.X.REDEEM_CODE_INPUT, {
         Component: () => (0, p.jsx)(cZ, { redesign: !0 }),
@@ -7702,23 +7702,24 @@ let cq = (0, h.zZ)(S.X.REDEEM_GIFT_CATEGORY, {
     }),
     cJ = (0, h.t_)(S.X.GIFT_PANEL, {
         useTitle: () => V.intl.string(V.t["jcSP+g"]),
-        buildLayout: () => [dK, cq, cG, d6, cz, dM],
+        buildLayout: () => [dK, cq, cG, d6, cz, dw],
         initialize: () => {
-            (dR.Ay.fetchClaimedOutboundPromotionCodes(), (0, dL.Ig)("gift_inventory") && (0, dv.o0)(dy.$.GIFTING));
+            (dM.Ay.fetchClaimedOutboundPromotionCodes(), (0, dG.Ig)("gift_inventory") && (0, dv.o0)(dy.$.GIFTING));
         },
     }),
     c$ = (0, h.i4)(S.X.GIFT_SIDEBAR_ITEM, {
         useTitle: () => V.intl.string(V.t["jcSP+g"]),
         icon: uM.GiftIcon,
         usePersistentBadge: function () {
-            let e = (0, dD.IO)().length;
+            let e = (0, dU.IO)().length;
             return f.useMemo(() => ({ badgeType: T.Xi.COUNT, count: e }), [e]);
         },
         getDismissibleBadges: () => {
             let e = { location: "UserSettingsGiftInventory" },
                 t = ul.A.getConfig(e).enabled,
-                n = dj.A.getConfig(e).enabled;
-            return t && n && (0, dO.q)()
+                n = dD.A.getConfig(e).enabled,
+                i = dR(sx.default.getCurrentUser()?.storeCountry?.country).length > 0;
+            return t && n && (0, dP.q)() && i
                 ? [{ badgeType: T.Xi.NEW, dismissibleContent: eE.M.GIFT_INVENTORY_SETTINGS_NEW_BADGE }]
                 : [];
         },
@@ -8638,7 +8639,7 @@ function gw() {
     });
 }
 let gF = function () {
-        let e = (0, dP.Hp)(),
+        let e = (0, dV.Hp)(),
             { analyticsLocations: t } = (0, eX.Ay)(tk.A.PREMIUM_SETTINGS),
             n = (0, _.bG)([sx.default], () => sx.default.getCurrentUser()),
             i = (0, _.bG)([ur.A], () => ur.A.getPremiumTypeSubscription()),
@@ -15376,7 +15377,7 @@ let Th = (0, h.E2)(S.X.OVERLAY_CURRENT_GAME, {
                   header: (0, p.jsxs)(p.Fragment, {
                       children: [
                           y || v
-                              ? (0, p.jsx)(dk.k, { size: "xxs", color: U })
+                              ? (0, p.jsx)(dz.k, { size: "xxs", color: U })
                               : (0, p.jsx)("div", { className: x2.W4 }),
                           (0, p.jsx)(n4.E, {
                               variant: "text-xs/semibold",
@@ -19160,14 +19161,14 @@ function I5(e) {
                         case null:
                         case void 0:
                         case "":
-                            return { text: V.intl.string(V.t.cDHCNY), icon: dk.k };
+                            return { text: V.intl.string(V.t.cDHCNY), icon: dz.k };
                         case "ios":
                         case "android":
                             return { text: e, icon: I1.u };
                         case "horizon os":
                             return { text: e, icon: I2.G };
                         default:
-                            return { text: e, icon: dk.k };
+                            return { text: e, icon: dz.k };
                     }
                 })(e.client_info?.os);
             return { location: n, platform: i, os: l, Icon: s, lastActive: t ? null : I$(e.approx_last_used_time) };
