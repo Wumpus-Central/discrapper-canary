@@ -296,7 +296,7 @@ var _,
         ExperimentalPineappleHouseIcon: () => Ta,
         ExperimentalRareIcon: () => Ts.A,
         ExperimentalSnowflakeIcon: () => Tl,
-        ExperimentalWebBadgeIcon: () => To,
+        ExperimentalWebBadgeIcon: () => To.f,
         ExperimentalWebIcon: () => Td.s,
         EyeDropperIcon: () => Tc.d,
         EyeIcon: () => Ah.EyeIcon,
@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "658717";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "658719";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 658717, Version Hash: 9581438ad7bd9fd73f4facfb92d139e3fdda32b1`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 658719, Version Hash: e87fc46b462f9c77427d6cb9340eca12dd7884d8`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -17921,52 +17921,8 @@ function Tl(e) {
         }),
     });
 }
-function To(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = ad.A.colors.ICON_MUTED,
-            colorClass: a = "",
-            secondaryColor: s = "#fff",
-            secondaryColorClass: l = "",
-            ...o
-        } = e,
-        d = (0, ho.J)(t),
-        c = d?.width ?? n,
-        u = d?.height ?? i;
-    return (0, b.jsxs)("svg", {
-        ...(0, hl.A)(o),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: c,
-        height: u,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: [
-            (0, b.jsx)("path", {
-                fill: "string" == typeof r ? r : r.css,
-                d: "M24 12c0 1.2-1.95 2.1-2.25 3.15-.3 1.05.6 3 0 3.9-.6.9-2.85.45-3.75 1.2-.9.75-1.2 2.7-2.25 3.15-1.05.45-2.55-1.2-3.75-1.2-1.2 0-2.7 1.5-3.75 1.2C7.2 23.1 6.9 20.85 6 20.25c-.9-.6-3-.3-3.75-1.2-.75-.9.3-2.7 0-3.9C1.95 13.95 0 13.2 0 12s1.95-2.1 2.25-3.15c.3-1.05-.6-3 0-3.9.6-.9 2.85-.45 3.75-1.2C6.9 3 7.2 1.05 8.25.6 9.3.15 10.8 1.8 12 1.8c1.2 0 2.7-1.5 3.75-1.2C16.8.9 17.1 3 18 3.75c.9.75 3 .3 3.75 1.2.75.9-.3 2.7 0 3.9.3 1.2 2.25 1.95 2.25 3.15Z",
-                className: a,
-            }),
-            (0, b.jsx)("path", {
-                fill: "string" == typeof s ? s : s.css,
-                d: "M17.69 12A5.69 5.69 0 1 0 12 17.69V19a7 7 0 1 1 0-14 7 7 0 0 1 0 14v-1.31A5.69 5.69 0 0 0 17.69 12Z",
-                className: l,
-            }),
-            (0, b.jsx)("path", {
-                fill: "string" == typeof s ? s : s.css,
-                d: "M13.87 12c0-1.79-.33-3.35-.81-4.4C12.52 6.41 12.05 6.3 12 6.3c-.05 0-.52.1-1.05 1.28a11.03 11.03 0 0 0-.82 4.41c0 1.79.33 3.35.82 4.4.53 1.18 1 1.29 1.05 1.29V19c-1.76 0-3.18-3.13-3.18-7S10.24 5 12 5c1.76 0 3.18 3.13 3.18 7s-1.42 7-3.18 7v-1.31c.05 0 .52-.1 1.06-1.28.48-1.06.8-2.62.8-4.41Z",
-                className: l,
-            }),
-            (0, b.jsx)("path", {
-                fill: "string" == typeof s ? s : s.css,
-                d: "M17.73 11.32v1.32H6.27v-1.32h11.46Z",
-                className: l,
-            }),
-        ],
-    });
-}
-var Td = n(434544),
+var To = n(682697),
+    Td = n(434544),
     Tc = n(714385),
     Tu = n(622631),
     T_ = n(952270),
@@ -26126,7 +26082,7 @@ let yu = "isHideDevBanner",
                     className: tf()(yc.Wz, yc.mr),
                     children: [
                         (0, b.jsx)(yd, { className: yc.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "658717" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "658719" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -53924,8 +53880,8 @@ let YE = (0, tZ.Fe)({
             n.e("489949"),
             n.e("166495"),
             n.e("307575"),
-            n.e("88342"),
             n.e("770697"),
+            n.e("88342"),
             n.e("323624"),
             n.e("187110"),
             n.e("132191"),
