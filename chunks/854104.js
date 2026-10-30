@@ -34,40 +34,40 @@ let N = (0, y.mj)({
     defaultConfig: { enabled: !1, searchBarWidthPx: v.hE.DEFAULT },
     variations: { 0: { enabled: !1, searchBarWidthPx: v.hE.DEFAULT }, 1: { enabled: !0, searchBarWidthPx: v.hE.WIDE } },
 });
-var B = l(652215),
-    M = l(841998),
+var M = l(652215),
+    B = l(841998),
     k = l(105292),
     P = l(848913);
 let F = [
-        M.default.bKvkzB,
-        M.default["U+7iha"],
-        M.default.fwKulM,
-        M.default.KqfZhk,
-        M.default.amuakh,
-        M.default["5txfu7"],
-        M.default.SxlobC,
-        M.default.bnJVgJ,
-        M.default.Z4b7dI,
-        M.default.M6igKM,
-        M.default.qozQ5X,
-        M.default.tu6vgS,
-        M.default["w/OnRT"],
-        M.default["+EMTB/"],
-        M.default.Ib3xUj,
-        M.default["7DZ2Fj"],
-        M.default.cChmCO,
-        M.default["H0zY/q"],
-        M.default["+Bo7fD"],
-        M.default["o/+isu"],
-        M.default.MzFZoP,
-        M.default["NKZY+Z"],
-        M.default["SM4C+M"],
-        M.default.rsvVIs,
-        M.default["kmA+p3"],
-        M.default["S+ZC67"],
+        B.default.bKvkzB,
+        B.default["U+7iha"],
+        B.default.fwKulM,
+        B.default.KqfZhk,
+        B.default.amuakh,
+        B.default["5txfu7"],
+        B.default.SxlobC,
+        B.default.bnJVgJ,
+        B.default.Z4b7dI,
+        B.default.M6igKM,
+        B.default.qozQ5X,
+        B.default.tu6vgS,
+        B.default["w/OnRT"],
+        B.default["+EMTB/"],
+        B.default.Ib3xUj,
+        B.default["7DZ2Fj"],
+        B.default.cChmCO,
+        B.default["H0zY/q"],
+        B.default["+Bo7fD"],
+        B.default["o/+isu"],
+        B.default.MzFZoP,
+        B.default["NKZY+Z"],
+        B.default["SM4C+M"],
+        B.default.rsvVIs,
+        B.default["kmA+p3"],
+        B.default["S+ZC67"],
     ],
-    H = "collectibles-search-suggestions",
-    j = `${H}-header`;
+    j = "collectibles-search-suggestions",
+    H = `${j}-header`;
 function D() {
     return (0, h.sampleSize)(F, 7).map((e) => k.intl.string(e));
 }
@@ -81,7 +81,7 @@ function U(e) {
         onMouseDown: w,
         children: [
             (0, n.jsx)("div", {
-                id: j,
+                id: H,
                 className: P.Xe,
                 children: (0, n.jsx)(b.E, {
                     variant: "text-xs/semibold",
@@ -91,15 +91,15 @@ function U(e) {
             }),
             (0, n.jsx)("div", {
                 role: "listbox",
-                id: H,
+                id: j,
                 tabIndex: -1,
-                "aria-labelledby": j,
+                "aria-labelledby": H,
                 className: P.sq,
                 children: t.map((e, t) =>
                     (0, n.jsx)(
                         u.D,
                         {
-                            id: `${H}-${t}`,
+                            id: `${j}-${t}`,
                             role: "option",
                             tabIndex: -1,
                             "aria-selected": t === l,
@@ -126,7 +126,7 @@ function V(e) {
         _ = a.useRef(null),
         [h, b] = a.useState(!1),
         y = a.useRef(null),
-        [F, j] = a.useState(!1),
+        [F, H] = a.useState(!1),
         [w, V] = a.useState(!1),
         [K, z] = a.useState(-1),
         [Y, q] = a.useState(0),
@@ -152,7 +152,7 @@ function V(e) {
         }, [i, s]));
     let X = a.useCallback(
             (e, t, n) => {
-                R.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                R.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: f?.sessionId,
                     page_section: f?.pageSection,
                     page_category: f?.pageCategory,
@@ -199,7 +199,7 @@ function V(e) {
             (A(e), V(!1), z(-1));
         }, []),
         Q = a.useCallback(() => {
-            (j(!0), V(!1), z(-1));
+            (H(!0), V(!1), z(-1));
         }, []),
         ee = a.useCallback(() => {
             (l !== v.G2.CATALOG && t(v.G2.CATALOG),
@@ -214,7 +214,7 @@ function V(e) {
             (A(""), E(""), X(v.uY.SEARCH_BAR_CLEAR, v.Xi.SEARCH), i && b(!1));
         }, [E, X, i]),
         en = a.useCallback(() => {
-            (j(!1), i && "" === p && b(!1));
+            (H(!1), i && "" === p && b(!1));
         }, [i, p]),
         ea = i && !h,
         ei = k.intl.string(k.t.arz34K),
@@ -237,12 +237,12 @@ function V(e) {
                 ? {
                       role: "combobox",
                       "aria-expanded": W,
-                      "aria-controls": W ? H : void 0,
+                      "aria-controls": W ? j : void 0,
                       "aria-autocomplete": "list",
-                      "aria-activedescendant": W && K >= 0 ? `${H}-${K}` : void 0,
+                      "aria-activedescendant": W && K >= 0 ? `${j}-${K}` : void 0,
                   }
                 : void 0,
-            placeholder: !S || C ? ei : k.intl.formatToPlainString(M.default.bRwRwX, { option: c[Y] }),
+            placeholder: !S || C ? ei : k.intl.formatToPlainString(B.default.bRwRwX, { option: c[Y] }),
             "aria-label": ei,
         }),
         eo = { "--custom-search-bar-width": `${g}px` };
@@ -314,15 +314,15 @@ function eE(e) {
             m(e.contentRect.width < 800);
         }, []),
     );
-    let T = t === v.G2.ORBS ? B.liQ.SHOP_ORBS_TAB : B.liQ.COLLECTIBLES_SHOP,
+    let T = t === v.G2.ORBS ? M.liQ.SHOP_ORBS_TAB : M.liQ.COLLECTIBLES_SHOP,
         y = a.useCallback(() => {
-            ((0, S.Y)({ pageType: T, sectionType: B.JJy.ORBS_BALANCE_MENU, ctaObject: B.ZSU.CTA_TO_QUEST_HOME }),
+            ((0, S.Y)({ pageType: T, sectionType: M.JJy.ORBS_BALANCE_MENU, ctaObject: M.ZSU.CTA_TO_QUEST_HOME }),
                 (0, f.mA)({ fromContent: s.u.ORBS_BALANCE_MENU }));
         }, [T]),
         N = a.useCallback(() => {
             h?.id != null && (0, C.openUserProfileModal)({ userId: h.id, tabSection: ec.RP.WISHLIST });
         }, [h?.id]),
-        M = (function (e) {
+        B = (function (e) {
             let t,
                 l,
                 n,
@@ -334,8 +334,13 @@ function eE(e) {
                 d,
                 E,
                 p,
-                A = (0, Y.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
-                { gameShops: f, hasGameShops: C } =
+                A,
+                f,
+                C,
+                S,
+                g,
+                _ = (0, Y.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
+                { gameShops: O, hasGameShops: h } =
                     ((t = (0, x.uM)()),
                     (l = (0, o.yK)(
                         [ea.A],
@@ -354,7 +359,7 @@ function eE(e) {
                     }, [l]),
                     (n = a.useCallback(
                         (e) => {
-                            (R.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                            (R.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: t?.sessionId,
                                 page_type: v.G2.GAME_SHOPS,
                                 page_category: t?.pageCategory,
@@ -406,9 +411,9 @@ function eE(e) {
                         ),
                         hasGameShops: l.length > 0,
                     }),
-                S = null != (0, $.HH)(),
-                g =
-                    ((r = (0, X.A)(B.FYj)),
+                b = null != (0, $.HH)(),
+                L =
+                    ((r = (0, X.A)(M.FYj)),
                     (s = (0, Z.XF)(r)),
                     (u = s?.shared.navigation?.tab),
                     (c = u?.title),
@@ -421,7 +426,18 @@ function eE(e) {
                                 ? null
                                 : { title: c, icon: d, collectionId: E },
                         [c, d, E, p],
-                    ));
+                    )),
+                G =
+                    ((A = (0, X.A)(M.FYj)),
+                    (f = (0, Z.NN)(A)),
+                    (C = f?.navigation?.tab?.title),
+                    (S = f?.navigation?.tab?.icon),
+                    (g = f?.collectionId),
+                    a.useMemo(
+                        () => (null == C || null == g ? null : { title: C, icon: S, collectionId: g }),
+                        [C, S, g],
+                    )),
+                I = L ?? G;
             return a.useMemo(() => {
                 let t = (function (e) {
                         let { hasActivePromotion: t } = e;
@@ -429,7 +445,7 @@ function eE(e) {
                             let { tab: l } = e;
                             return l !== v.G2.OFFER_ELIGIBLE || !!t;
                         });
-                    })({ hasActivePromotion: S }).map((t) => {
+                    })({ hasActivePromotion: b }).map((t) => {
                         let { tab: l, labelKey: n } = t,
                             a = l === v.G2.OFFER_ELIGIBLE ? z.TagIcon : void 0;
                         return {
@@ -445,14 +461,14 @@ function eE(e) {
                             type: "page",
                             key: v.G2.HOME,
                             text: k.intl.string(k.t["xNiB/O"]),
-                            route: B.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.HOME),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.HOME),
                             onClick: () => e(v.G2.HOME),
                         },
                         {
                             type: "menu",
                             key: v.G2.CATALOG,
                             text: k.intl.string(k.t.FshAeN),
-                            route: B.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.CATALOG),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.CATALOG),
                             onClick: () => e(v.G2.CATALOG),
                             expandLabel: k.intl.string(k.t["+w36yH"]),
                             options: t,
@@ -461,43 +477,43 @@ function eE(e) {
                             type: "page",
                             key: v.G2.ORBS,
                             text: k.intl.string(k.t.fG3RIg),
-                            route: B.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.ORBS),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.ORBS),
                             onClick: () => e(v.G2.ORBS),
                         },
                     ];
                 if (
-                    (C &&
+                    (h &&
                         l.push({
                             type: "menu",
                             key: v.G2.GAME_SHOPS,
                             text: k.intl.string(k.t.FkjcWY),
                             expandLabel: k.intl.string(k.t.bf9uMH),
-                            options: f,
+                            options: O,
                         }),
-                    A &&
+                    _ &&
                         l.push({
                             type: "page",
                             key: v.G2.GAME_SERVERS,
                             text: k.intl.string(es.default.vCzwM7),
-                            route: B.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.GAME_SERVERS),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(v.G2.GAME_SERVERS),
                             onClick: () => e(v.G2.GAME_SERVERS),
                             badge: "beta",
                         }),
-                    null != g)
+                    null != I)
                 ) {
-                    let e = B.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(g.collectionId),
-                        t = (0, J.s)(g.icon);
+                    let e = M.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(I.collectionId),
+                        t = (0, J.s)(I.icon);
                     l.push({
                         type: "page",
                         key: v.G2.PROMOTION,
-                        text: g.title,
+                        text: I.title,
                         route: e,
                         icon: t ?? void 0,
                         onClick: () => (0, q.pX)(e),
                     });
                 }
                 return l;
-            }, [e, S, g, A, C, f]);
+            }, [e, b, I, _, h, O]);
         })(
             a.useCallback(
                 (e) => {
@@ -508,11 +524,11 @@ function eE(e) {
         ),
         P = a.useMemo(() => {
             if (null == l) return !1;
-            let e = M.find((e) => e.key === v.G2.PROMOTION);
+            let e = B.find((e) => e.key === v.G2.PROMOTION);
             if (null == e) return !1;
-            let t = B.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(l);
+            let t = M.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(l);
             return e.route === t;
-        }, [M, l])
+        }, [B, l])
             ? v.G2.PROMOTION
             : t;
     return (0, n.jsx)("div", {
@@ -550,7 +566,7 @@ function eE(e) {
                 (0, n.jsx)(K.A, {
                     "aria-label": k.intl.string(k.t["5upuqx"]),
                     className: ed.IV,
-                    options: M,
+                    options: B,
                     selectedKey: P,
                     overflowLabel: k.intl.string(k.t["UKOtz+"]),
                     overflowExpandLabel: k.intl.string(k.t.PEtHiE),

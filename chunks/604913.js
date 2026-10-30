@@ -6,6 +6,10 @@ var i,
     l,
     o = (((i = {}).TAG = "TAG"), (i.NITRO = "NITRO"), i),
     d = (((r = {}).DEFAULT = "default"), (r.NITRO = "nitro"), r),
-    c = (((a = {}).TARGETED_OFFER = "TARGETED_OFFER"), (a.COLLECT_AND_CLAIM = "COLLECT_AND_CLAIM"), a),
+    c =
+        (((a = {}).TARGETED_OFFER = "TARGETED_OFFER"),
+        (a.COLLECT_AND_CLAIM = "COLLECT_AND_CLAIM"),
+        (a.COLLECTION_SALE = "COLLECTION_SALE"),
+        a),
     u = (((s = {}).TAKEOVER = "TAKEOVER"), (s.BASIC = "BASIC"), s),
     _ = (((l = {}).LIGHT = "light"), (l.DARK = "dark"), l);

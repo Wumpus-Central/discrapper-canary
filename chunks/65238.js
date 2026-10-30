@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => a, XF: () => l, ml: () => s });
+n.d(t, { Ay: () => a, NN: () => o, XF: () => l, ml: () => s });
 var i = n(315069),
     r = n(604913);
 class a extends i.A {
@@ -83,7 +83,7 @@ class a extends i.A {
                                                                 shopHome: {
                                                                     title: t.shop_home.title,
                                                                     description: t.shop_home.description,
-                                                                    rewardStates: o(t.shop_home.reward_states),
+                                                                    rewardStates: d(t.shop_home.reward_states),
                                                                     style:
                                                                         null != t.shop_home.style
                                                                             ? {
@@ -94,7 +94,7 @@ class a extends i.A {
                                                                 },
                                                                 indexPage: {
                                                                     description: t.index_page.description,
-                                                                    rewardStates: o(t.index_page.reward_states),
+                                                                    rewardStates: d(t.index_page.reward_states),
                                                                     style:
                                                                         null != t.index_page.style
                                                                             ? {
@@ -103,7 +103,7 @@ class a extends i.A {
                                                                               }
                                                                             : void 0,
                                                                 },
-                                                                shared: d(t.shared),
+                                                                shared: c(t.shared),
                                                             }
                                                         );
                                                     case r.h5.BASIC:
@@ -134,23 +134,23 @@ class a extends i.A {
                                                                               }
                                                                             : void 0,
                                                                 },
-                                                                shared: d(n.shared),
+                                                                shared: c(n.shared),
                                                             }
                                                         );
                                                 }
                                                 break;
                                             case r.hE.TARGETED_OFFER:
-                                                let a, s, l, c, u;
+                                                let a, s, l, o, u;
                                                 return (
                                                     (i = e.reward),
                                                     (a = i?.storefront?.nagbar),
                                                     (s = i?.checkout?.offer_notice),
-                                                    (c =
+                                                    (o =
                                                         null == (l = i?.collected?.override_title) || "" === l
                                                             ? void 0
                                                             : l),
                                                     (u = i?.flavor),
-                                                    null == a && null == s && null == c && null == u
+                                                    null == a && null == s && null == o && null == u
                                                         ? { type: r.hE.TARGETED_OFFER }
                                                         : {
                                                               type: r.hE.TARGETED_OFFER,
@@ -183,11 +183,23 @@ class a extends i.A {
                                                                                 },
                                                                             }
                                                                           : void 0,
-                                                                  collected: null != c ? { overrideTitle: c } : void 0,
+                                                                  collected: null != o ? { overrideTitle: o } : void 0,
                                                                   flavor: u ?? void 0,
                                                               },
                                                           }
                                                 );
+                                            case r.hE.COLLECTION_SALE:
+                                                return (function (e) {
+                                                    let { navigation: t } = e;
+                                                    return {
+                                                        type: r.hE.COLLECTION_SALE,
+                                                        collectionId: e.collection_id,
+                                                        navigation:
+                                                            t?.tab != null
+                                                                ? { tab: { title: t.tab.title, icon: t.tab.icon } }
+                                                                : void 0,
+                                                    };
+                                                })(e);
                                         }
                                     })(i.collectibles)
                                   : void 0,
@@ -223,13 +235,17 @@ function l(e) {
     return t?.type === r.hE.COLLECT_AND_CLAIM ? t : void 0;
 }
 function o(e) {
+    let t = e?.tenantMetadata?.collectibles;
+    return t?.type === r.hE.COLLECTION_SALE ? t : void 0;
+}
+function d(e) {
     return {
         inProgress: { progressSteps: e.in_progress.progress_steps.map((e) => ({ heroUrl: e.hero_url })) },
         earned: { heroUrl: e.earned.hero_url },
         consumed: { heroUrl: e.consumed.hero_url },
     };
 }
-function d(e) {
+function c(e) {
     var t;
     let { progress_indicator: n, navigation: i, help_center: r } = e;
     return {
@@ -241,10 +257,10 @@ function d(e) {
                     ? {
                           inProgress:
                               null != (t = n.indicator_reward_states).in_progress
-                                  ? { progressSteps: t.in_progress.progress_steps.map(c) }
+                                  ? { progressSteps: t.in_progress.progress_steps.map(u) }
                                   : void 0,
-                          earned: null != t.earned ? c(t.earned) : void 0,
-                          consumed: null != t.consumed ? c(t.consumed) : void 0,
+                          earned: null != t.earned ? u(t.earned) : void 0,
+                          consumed: null != t.consumed ? u(t.consumed) : void 0,
                       }
                     : void 0,
             assets: {
@@ -263,6 +279,6 @@ function d(e) {
         helpCenter: null != r ? { text: r.text, id: r.id } : void 0,
     };
 }
-function c(e) {
+function u(e) {
     return { title: e.title, description: e.description };
 }

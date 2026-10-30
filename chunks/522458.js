@@ -441,8 +441,8 @@ function e1(e) {
     });
 }
 var e6 = n(652215),
-    e2 = n(628049),
-    e4 = n(49999),
+    e4 = n(628049),
+    e2 = n(49999),
     e8 = n(684644);
 let e7 = [ek.M.STARTUP_FAILED, ek.M.MISSING_STOCK, ek.M.PROVIDER_ERRORED, ek.M.DELETED];
 function e5(e) {
@@ -508,7 +508,7 @@ let te = i.memo(function (e) {
             (0, eq.A)({
                 provider: x,
                 onAccept: () => {
-                    (h(e4.i.TAKE_ACTION), C());
+                    (h(e2.i.TAKE_ACTION), C());
                 },
             });
         }, [x, h, C]),
@@ -518,7 +518,7 @@ let te = i.memo(function (e) {
                 : (0, eq.A)({
                       provider: x,
                       onAccept: () => {
-                          (h(e4.i.TAKE_ACTION), s(t));
+                          (h(e2.i.TAKE_ACTION), s(t));
                       },
                   });
         }, [E, x, h, s, t]),
@@ -560,7 +560,7 @@ let te = i.memo(function (e) {
                 );
             })({ server: t, source: "game-server-shop" });
         }, [t]),
-        N = (0, eZ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e2.qb[x],
+        N = (0, eZ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e4.qb[x],
         I = null != t.instance.gameServerPanelUrl,
         A = null != t.instance.status && e7.includes(t.instance.status),
         L = i.useCallback(() => {
@@ -1493,8 +1493,8 @@ var tQ =
     t0 = n(62010),
     t1 = n(278416),
     t6 = n(602853),
-    t2 = n(661531),
-    t4 = n(947641),
+    t4 = n(661531),
+    t2 = n(947641),
     t8 = n(604338),
     t7 = n(785866),
     t5 = n(373846),
@@ -1662,8 +1662,8 @@ function nm(e) {
 }
 function ng(e) {
     let { color: t, label: n, enum: s, isToggled: l, onToggleColor: i, trackFilterAction: r } = e,
-        o = (0, t6.r)(t2.A.unsafe_rawColors.WHITE).hex(),
-        d = (0, t6.r)(t2.A.unsafe_rawColors.PRIMARY_530).hex();
+        o = (0, t6.r)(t4.A.unsafe_rawColors.WHITE).hex(),
+        d = (0, t6.r)(t4.A.unsafe_rawColors.PRIMARY_530).hex();
     return (0, a.jsx)(
         eB.m,
         {
@@ -1684,7 +1684,7 @@ function ng(e) {
                         l &&
                         (0, a.jsx)("div", {
                             className: nc.oE,
-                            children: (0, a.jsx)(t4.r, {
+                            children: (0, a.jsx)(t2.r, {
                                 size: "xs",
                                 color: (0, nr.j)({ backgroundColor: t, colors: [o, d] }),
                             }),
@@ -1711,7 +1711,7 @@ function nE(e) {
             },
             [n, l],
         ),
-        o = i.useCallback((e) => (n.has(e) || l ? t2.A.colors.WHITE : t2.A.colors.INTERACTIVE_TEXT_DEFAULT), [n, l]),
+        o = i.useCallback((e) => (n.has(e) || l ? t4.A.colors.WHITE : t4.A.colors.INTERACTIVE_TEXT_DEFAULT), [n, l]),
         d = i.useMemo(
             () => [
                 {
@@ -2249,7 +2249,7 @@ function nk(e) {
                     },
                 });
 }
-var ny = n(766032),
+var ny = n(854104),
     nP = n(235939),
     nD = n(976860),
     nB = n(339821),
@@ -2313,7 +2313,7 @@ let nF = function (e) {
         (0, A.N0)(V, s));
     let { dismissShopButtonDC: $ } = (0, nB.A)();
     (i.useEffect(() => {
-        $(e4.i.AUTO_DISMISS);
+        $(e2.i.AUTO_DISMISS);
     }, [$]),
         i.useEffect(() => {
             (0, g.I)(e6.BVt.COLLECTIBLES_SHOP);
