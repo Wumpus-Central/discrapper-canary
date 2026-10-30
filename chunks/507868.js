@@ -32,6 +32,9 @@ class c extends s.Ay.Store {
     isGameAllowed(e) {
         return !!this.isStaffBypassActive() || 0 !== this.getCapabilities(e);
     }
+    hasCapability(e, t) {
+        return !!this.isStaffBypassActive() || (this.getCapabilities(e) & t) != 0;
+    }
 }
 let u = new c(l.h, {
     CLIPS_AUTOCLIPS_CAPABILITIES_UPDATE: function (e) {

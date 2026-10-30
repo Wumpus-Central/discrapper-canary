@@ -1,4 +1,4 @@
-n.d(t, { A: () => $ });
+n.d(t, { A: () => q });
 var i = n(858899),
     r = n(176781),
     a = n(73153),
@@ -201,8 +201,11 @@ var F = n(201538),
     V = n(409067),
     H = n(227628),
     j = n(468550),
-    W = n(105292);
-class Y extends w {
+    W = n(171251),
+    Y = n(826685),
+    K = n(190443),
+    $ = n(105292);
+class z extends w {
     constructor() {
         (super(),
             Object.assign(this.actions, {
@@ -219,16 +222,16 @@ class Y extends w {
                     let { previousGameId: t } = e;
                     null != t ? this.handleClipsReminder(t) : (0, j.kF)();
                 },
-                RPC_SERVER_READY: () => {
-                    ((0, _.se)(y.Ay.getEnableAutoclipping()), (0, E.eZ)(y.Ay.getEnableAutoclipping()));
-                },
+                RPC_SERVER_READY: () => this.installGameEventIntegrations(),
             }));
     }
     handlePostConnectionOpen() {
-        (super.handlePostConnectionOpen(),
-            (0, _.se)(y.Ay.getEnableAutoclipping()),
-            (0, E.eZ)(y.Ay.getEnableAutoclipping()),
-            (0, x.B)(y.Ay.getEnableAutoclipping()));
+        (super.handlePostConnectionOpen(), this.installGameEventIntegrations());
+    }
+    async installGameEventIntegrations() {
+        (0, G.s$)() && (await B.b.fetchMany([W.w], [Y.b], [K.e]));
+        let e = (0, D.T)() && y.Ay.getEnableAutoclipping();
+        ((0, _.se)(e), (0, E.eZ)(e), (0, x.B)(e));
     }
     maybeFetchAutoclipsCapabilities(e) {
         let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -255,14 +258,12 @@ class Y extends w {
         }) && (0, j.M8)(e);
     }
     showClipsToast() {
-        (0, i.P0)({ text: W.intl.string(W.t["d+41qJ"]), icon: r.x, duration: v.Vi });
+        (0, i.P0)({ text: $.intl.string($.t["d+41qJ"]), icon: r.x, duration: v.Vi });
     }
     applyNativeClipsSettings(e) {
         if (
-            (e?.settings.enableAutoclipping != null &&
-                ((0, _.se)(e.settings.enableAutoclipping),
-                (0, E.eZ)(e.settings.enableAutoclipping),
-                (0, x.B)(e.settings.enableAutoclipping)),
+            ((e?.settings.clipsEnabled != null || e?.settings.enableAutoclipping != null) &&
+                this.installGameEventIntegrations(),
             !(0, p.ri)(f.Ay))
         )
             return;
@@ -340,7 +341,7 @@ class Y extends w {
             e !== y.he &&
             k
                 .Fb(e)
-                .then(() => K())
+                .then(() => X())
                 .catch((e) => {
                     v.nx.error("Failed to load clips directory on connection open", e);
                 });
@@ -349,7 +350,7 @@ class Y extends w {
         s.A?.ntpClock?.start().catch(() => {});
     }
 }
-async function K() {
+async function X() {
     if (y.Ay.hasClips() || null == s.A || null == s.A.app) return;
     let e = await s.A.app.getPath("documents");
     if (y.Ay.getSettings().storageLocation === e)
@@ -360,4 +361,4 @@ async function K() {
             v.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let $ = new Y();
+let q = new z();

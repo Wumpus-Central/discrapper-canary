@@ -839,13 +839,13 @@ n(926675);
 var e0 = n(305866),
     e1 = n(123181),
     e2 = n(229087),
-    e7 = n(753437),
-    e8 = n(382701),
+    e8 = n(753437),
+    e7 = n(382701),
     e3 = n(408519);
 function e5(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
-        d = o.useMemo(() => n?.filter((e) => null != (0, e7.W3)(e)) ?? [], [n]),
+        d = o.useMemo(() => n?.filter((e) => null != (0, e8.W3)(e)) ?? [], [n]),
         c = d.length > 0,
         u = r && d.length < 20,
         { trackUserProfileEditAction: m } = (0, eD.NJ)(),
@@ -972,7 +972,7 @@ function e4(e) {
         d = v.intl.string(v.t.pWHvBI);
     return s
         ? (0, i.jsx)("div", {
-              className: `${e3.lv} ${e8.r9}`,
+              className: `${e3.lv} ${e7.r9}`,
               ref: t,
               children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
           })
@@ -1499,9 +1499,9 @@ function tO(e) {
                             n.e("689160"),
                             n.e("520342"),
                             n.e("306270"),
-                            n.e("345627"),
+                            n.e("55781"),
                             n.e("717278"),
-                        ]).then(n.bind(n, 279510));
+                        ]).then(n.bind(n, 954180));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -1847,16 +1847,16 @@ function t2(e) {
         ],
     });
 }
-var t7 = n(683071),
-    t8 = n(312252);
+var t8 = n(683071),
+    t7 = n(312252);
 function t3(e) {
     let { widgetType: t, gameCount: n } = e,
         l = (0, j.cv)(t);
     return n <= l
         ? null
         : (0, i.jsx)("div", {
-              className: t8.l,
-              children: (0, i.jsx)(t7.w, {
+              className: t7.l,
+              children: (0, i.jsx)(t8.w, {
                   type: "warning",
                   message: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
                   role: "alert",

@@ -2,29 +2,28 @@ n.d(t, { t_: () => R, mj: () => C, so: () => O });
 var i,
     r = n(999926),
     a = n(19575),
-    s = n(915725),
-    l = n(974293);
+    s = n(915725);
 n(321073);
-var o = n(636537),
-    d = n(626584),
-    c = n(723702),
-    u = n(572164),
-    _ = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i),
-    E = n(652215);
-let A = new d.A("ClipsAssetManager");
-class h {
+var l = n(636537),
+    o = n(626584),
+    d = n(723702),
+    c = n(572164),
+    u = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i),
+    _ = n(652215);
+let E = new o.A("ClipsAssetManager");
+class A {
     state = { assets: {}, assetState: {}, catalogLastFetchTime: void 0, catalogFetchFailed: !1 };
     activeDownloads = new Map();
     catalogRefreshing = !1;
     downloadRunning = !1;
     downloadPromise = null;
     async start() {
-        if ((A.info("Clips asset manager started"), !(0, u.T)() || !(0, c.isWindows)() || __OVERLAY__))
+        if ((E.info("Clips asset manager started"), !(0, c.T)() || !(0, d.isWindows)() || __OVERLAY__))
             return { allAssetsDownloaded: !1 };
         if (null != this.downloadPromise && (this.downloadRunning || this.areAllAssetsDownloaded()))
             await this.downloadPromise;
         else {
-            (A.info("Clips enabled on startup, prefetching assets"), (this.downloadRunning = !0));
+            (E.info("Clips enabled on startup, prefetching assets"), (this.downloadRunning = !0));
             try {
                 ((this.downloadPromise = this.maybePrefetchAssets()), await this.downloadPromise);
             } finally {
@@ -35,13 +34,13 @@ class h {
     }
     areAllAssetsDownloaded() {
         let e = Object.keys(this.state.assets);
-        return e.length > 0 && e.every((e) => this.state.assetState[e]?.status === _.DOWNLOADED);
+        return e.length > 0 && e.every((e) => this.state.assetState[e]?.status === u.DOWNLOADED);
     }
     async maybePrefetchAssets() {
         try {
             (await this.refreshCatalog(), await this.prefetchAssets());
         } catch (e) {
-            A.warn(`Failed to prefetch clips assets: ${e.message}`);
+            E.warn(`Failed to prefetch clips assets: ${e.message}`);
         }
     }
     async refreshCatalog() {
@@ -55,22 +54,22 @@ class h {
                     null == e.assets[t] && delete this.state.assetState[t];
                 ((this.state.catalogLastFetchTime = new Date()), (this.state.catalogFetchFailed = !1));
                 let t = Object.values(e.assets).map((e) => e.fileName);
-                (await a.Ay.cleanupUnusedClipsFiles(t), A.info("Clips asset catalog refreshed"));
+                (await a.Ay.cleanupUnusedClipsFiles(t), E.info("Clips asset catalog refreshed"));
             } catch (e) {
-                (A.warn(`Failed to refresh clips asset catalog: ${e.message}`), (this.state.catalogFetchFailed = !0));
+                (E.warn(`Failed to refresh clips asset catalog: ${e.message}`), (this.state.catalogFetchFailed = !0));
             } finally {
                 this.catalogRefreshing = !1;
             }
     }
     async fetchCatalog() {
-        let e = await o.Bo.get({
-                url: E.Rsh.CLIPS_MODULE_ASSETS,
+        let e = await l.Bo.get({
+                url: _.Rsh.CLIPS_MODULE_ASSETS,
                 query: { model_set_version: "2" },
                 rejectWithError: !0,
             }),
             t = { assets: {} };
         for (let n of e.body.model_set_assets) t.assets[n.filename] = { url: n.url, fileName: n.filename };
-        return (A.info("Loaded clips asset catalog with assets:", Object.keys(t.assets)), t);
+        return (E.info("Loaded clips asset catalog with assets:", Object.keys(t.assets)), t);
     }
     async scanAssetState(e) {
         if (!a.Ay.canCheckClipsFilesExist()) return;
@@ -79,43 +78,43 @@ class h {
             return { id: t, fileName: n.fileName };
         });
         for (let { id: e, exists: n } of await a.Ay.checkClipsFilesExist(t))
-            this.state.assetState[e] = { status: n ? _.DOWNLOADED : _.MISSING };
+            this.state.assetState[e] = { status: n ? u.DOWNLOADED : u.MISSING };
     }
     async prefetchAssets() {
         let e = this.state.assets,
             t = [];
         for (let [n, i] of Object.entries(e)) {
             let e = this.state.assetState[n];
-            e?.status !== _.DOWNLOADED &&
-                e?.status !== _.DOWNLOADING &&
+            e?.status !== u.DOWNLOADED &&
+                e?.status !== u.DOWNLOADING &&
                 t.push(this.downloadAsset({ assetId: n, url: i.url, fileName: i.fileName }));
         }
-        (A.info(`Waiting for ${t.length} clips asset downloads`),
+        (E.info(`Waiting for ${t.length} clips asset downloads`),
             await Promise.all(t),
-            A.info("Finished downloading all clips assets"));
+            E.info("Finished downloading all clips assets"));
     }
     downloadAsset(e) {
         let { url: t, assetId: n, fileName: i } = e,
             r = this.state.assetState[n],
             s = this.activeDownloads.get(n);
         if (null != s) return s;
-        if (r?.status === _.DOWNLOADED) return Promise.resolve();
-        if (r?.status === _.DOWNLOADING)
+        if (r?.status === u.DOWNLOADED) return Promise.resolve();
+        if (r?.status === u.DOWNLOADING)
             return Promise.reject(Error("Clips asset is downloading but not in active downloads map"));
-        this.state.assetState[n] = { status: _.DOWNLOADING, downloadedBytes: 0 };
+        this.state.assetState[n] = { status: u.DOWNLOADING, downloadedBytes: 0 };
         let l = a.Ay.downloadClipsFile(t, i, (e) => {
             let { downloadedBytes: t, totalBytes: i } = e;
             this.state.assetState[n] = { ...this.state.assetState[n], downloadedBytes: t, totalBytes: i };
         })
             .then((e) => {
-                (e.fetchedFromNetwork && A.info("Downloaded clips asset from network:", n),
-                    (this.state.assetState[n] = { status: _.DOWNLOADED, downloadedBytes: void 0 }));
+                (e.fetchedFromNetwork && E.info("Downloaded clips asset from network:", n),
+                    (this.state.assetState[n] = { status: u.DOWNLOADED, downloadedBytes: void 0 }));
             })
             .catch((t) => {
                 (t?.USER_CANCELED_DOWNLOAD
-                    ? A.info("User canceled the download for clips asset", e)
-                    : A.error("Failed to download clips asset", { reason: t, ...e }),
-                    (this.state.assetState[n] = { status: _.MISSING }));
+                    ? E.info("User canceled the download for clips asset", e)
+                    : E.error("Failed to download clips asset", { reason: t, ...e }),
+                    (this.state.assetState[n] = { status: u.MISSING }));
             })
             .finally(() => {
                 this.activeDownloads.delete(n);
@@ -123,8 +122,9 @@ class h {
         return (this.activeDownloads.set(n, l), l);
     }
 }
-let f = new h();
-var I = n(696016);
+let h = new A();
+var f = n(341923),
+    I = n(696016);
 let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
     T = !1,
     m = null,
@@ -132,9 +132,9 @@ let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
     S = null,
     N = null;
 function C() {
-    let e = (0, u.T)(),
+    let e = (0, c.T)(),
         t = r.Ay.getMediaEngine(),
-        n = e && (0, l.$i)("pushClipsMLFlagsToNative"),
+        n = e && (0, f.s$)(),
         i = s.Ay.getEnableAutoclipping(),
         a = S !== i;
     (g !== n || a) &&
@@ -147,7 +147,7 @@ function C() {
                   t.setClipsV3MLEnabled(!1),
                   (N = !1)),
               (async () => {
-                  let { allAssetsDownloaded: e } = await f.start(),
+                  let { allAssetsDownloaded: e } = await h.start(),
                       n = e && !0 === g && !0 === S;
                   N !== n &&
                       (I.nx.info(

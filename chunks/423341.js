@@ -10,8 +10,9 @@ var i = n(284009),
     u = n(209932),
     _ = n(280450),
     E = n(309010),
-    A = n(915725);
-class h {
+    A = n(507868),
+    h = n(915725);
+class f {
     timeline = [];
     timelineLength;
     clipNow;
@@ -47,8 +48,7 @@ class h {
         for (; this.timeline.length > 0 && this.timeline[0].timestamp < e;) this.timeline.shift();
     }
 }
-var f = n(341923),
-    I = n(572164),
+var I = n(572164),
     p = n(160850),
     T = n(614584),
     m = n(31048),
@@ -60,7 +60,7 @@ var f = n(341923),
     R = n(574206),
     L = n(652215);
 function y(e) {
-    let t = A.Ay.getActiveClipsSession()?.gameId ?? null,
+    let t = h.Ay.getActiveClipsSession()?.gameId ?? null,
         n = new R.k(e);
     return (
         S.h.dispatch({ type: "CLIPS_SESSION_START", session: n, previousGameId: t }),
@@ -74,7 +74,7 @@ function y(e) {
     );
 }
 async function D() {
-    let e = A.Ay.getActiveClipsSession();
+    let e = h.Ay.getActiveClipsSession();
     null != e &&
         (await S.h.dispatch({ type: "CLIPS_SESSION_STOP", gameId: e.gameId }),
         C.default.track(L.HAw.CLIPS_SESSION_ENDED, {
@@ -104,7 +104,7 @@ class w extends l.A {
     currentSessionGameKey = null;
     pendingSessionGameKey = null;
     constructor() {
-        (super(), (this.timeline = new h(Math.max(A.Ay.getSettings().clipsLength, 6e4), m.l)));
+        (super(), (this.timeline = new f(Math.max(h.Ay.getSettings().clipsLength, 6e4), m.l)));
     }
     actions = {
         CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
@@ -149,7 +149,7 @@ class w extends l.A {
     }
     handleSpeaking(e) {
         if (!(0, I.T)() || e.context !== a.x.DEFAULT) return;
-        let t = A.Ay.isVoiceRecordingAllowedForUser(e.userId);
+        let t = h.Ay.isVoiceRecordingAllowedForUser(e.userId);
         (e.userId === _.default.getId() || t) &&
             this.process({ type: P.Gy.SPEAKING, speakingFlags: e.speakingFlags, userId: e.userId });
     }
@@ -188,9 +188,9 @@ class w extends l.A {
     isSignalEnabled(e) {
         switch (e) {
             case P.Gy.DISTRIBUTED:
-                return A.Ay.getSettings().clipSignals.enableDistributedSignals;
+                return h.Ay.getSettings().clipSignals.enableDistributedSignals;
             case P.Gy.GAME_EVENT:
-                return A.Ay.getSettings().clipSignals.enableGameSignals;
+                return h.Ay.getSettings().clipSignals.enableGameSignals;
             default:
                 return !0;
         }
@@ -288,13 +288,13 @@ class w extends l.A {
     }
     async finalizeActiveSession() {
         this.unscheduleClip();
-        let e = A.Ay.getActiveClipsSession(),
+        let e = h.Ay.getActiveClipsSession(),
             t = this.decisionSignals;
         ((this.decisionSignals = (0, g.A)()), await e?.finalize(t));
     }
     async clear() {
         (P.nx.info(
-            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${A.Ay.getActiveClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${A.Ay.getClipCandidates().length}`,
+            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getActiveClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${h.Ay.getClipCandidates().length}`,
         ),
             this.sessionEndTimeout.stop(),
             await this.finalizeActiveSession(),
@@ -310,7 +310,7 @@ class w extends l.A {
     canScheduleClipCandidate(e, t) {
         return (
             null != t &&
-            !!(0, f.jJ)(t.gameId) &&
+            !!A.A.isGameAllowed(t.gameId) &&
             c.Ay.getVisibleGame()?.isLauncher !== !0 &&
             (null != E.Ay.getVoiceChannelId() || (e.type === P.Gy.GAME_EVENT && (0, p.GC)(t.gameId ?? void 0)))
         );
@@ -318,11 +318,11 @@ class w extends l.A {
     scheduleClip(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            r = A.Ay.getActiveClipsSession();
+            r = h.Ay.getActiveClipsSession();
         if (n && !this.canScheduleClipCandidate(e, r)) return;
         let a = (0, m.l)(),
             l = t?.endMs != null ? t.endMs : a,
-            o = t?.startMs != null ? t.startMs : l - Number(A.Ay.getSettings().clipsLength),
+            o = t?.startMs != null ? t.startMs : l - Number(h.Ay.getSettings().clipsLength),
             d = {
                 startMs: o,
                 endMs: l,
@@ -368,7 +368,7 @@ class w extends l.A {
             t = null != e ? (0, c.Es)(e) : null;
         if (
             (P.nx.info(
-                `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${A.Ay.getActiveClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey}`,
+                `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getActiveClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey}`,
             ),
             null === this.currentSessionGameKey)
         ) {
@@ -469,7 +469,7 @@ class w extends l.A {
         this.process({ type: P.Gy.LAUGHTER, userId: e, confidence: 1 });
     }
     handleSettingsUpdate() {
-        this.timeline.updateLength(Math.max(A.Ay.getSettings().clipsLength, 6e4));
+        this.timeline.updateLength(Math.max(h.Ay.getSettings().clipsLength, 6e4));
     }
 }
 let G = new w();

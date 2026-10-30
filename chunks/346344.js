@@ -8,6 +8,7 @@ var s,
                   return e && "function" == typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
               };
 ((s = function (e) {
+    "use strict";
     function i(e, i) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return i && ((void 0 === i ? "undefined" : t(i)) === "object" || "function" == typeof i) ? i : e;
@@ -33,9 +34,9 @@ var s,
                 basque: w,
                 catalan: $,
                 czech: v,
-                danish: f,
-                dutch: k,
-                english: d,
+                danish: d,
+                dutch: f,
+                english: k,
                 finnish: b,
                 french: m,
                 german: j,
@@ -51,7 +52,7 @@ var s,
                 slovene: z,
                 swedish: V,
                 tamil: S,
-                turkish: A,
+                turkish: B,
             }[e.toLowerCase()]();
             return {
                 stem: function (e) {
@@ -1588,7 +1589,7 @@ var s,
                                     w = void 0,
                                     $ = void 0,
                                     v = void 0,
-                                    f = void 0;
+                                    d = void 0;
                                 ((this.B_is_noun = !0),
                                     (this.B_is_verb = !0),
                                     (this.B_is_defined = !1),
@@ -1610,18 +1611,18 @@ var s,
                                             a: do {
                                                 r = this.limit - this.cursor;
                                                 n: do {
-                                                    var k = 1;
+                                                    var f = 1;
                                                     h: for (;;) {
                                                         a = this.limit - this.cursor;
                                                         do {
                                                             if (!this.r_Suffix_Verb_Step1$esjava$0()) break;
-                                                            k--;
+                                                            f--;
                                                             continue h;
                                                         } while (!1);
                                                         this.cursor = this.limit - a;
                                                         break;
                                                     }
-                                                    if (k > 0) break;
+                                                    if (f > 0) break;
                                                     o: do {
                                                         n = this.limit - this.cursor;
                                                         do {
@@ -1750,7 +1751,7 @@ var s,
                                 ((this.cursor = this.limit - s),
                                     (this.cursor = this.limit_backward),
                                     (_ = this.cursor));
-                                f: do {
+                                d: do {
                                     l = this.cursor;
                                     do
                                         if (!this.r_Prefix_Step1$esjava$0()) {
@@ -1765,18 +1766,18 @@ var s,
                                             break;
                                         }
                                     while (!1);
-                                    k: do {
+                                    f: do {
                                         $ = this.cursor;
                                         do {
                                             if (!this.r_Prefix_Step3a_Noun$esjava$0()) break;
-                                            break k;
+                                            break f;
                                         } while (!1);
                                         this.cursor = $;
                                         do {
                                             if (!this.B_is_noun || !this.r_Prefix_Step3b_Noun$esjava$0()) break;
-                                            break k;
+                                            break f;
                                         } while (!1);
-                                        if (((this.cursor = $), !this.B_is_verb)) break f;
+                                        if (((this.cursor = $), !this.B_is_verb)) break d;
                                         v = this.cursor;
                                         do
                                             if (!this.r_Prefix_Step3_Verb$esjava$0()) {
@@ -1784,13 +1785,13 @@ var s,
                                                 break;
                                             }
                                         while (!1);
-                                        if (!this.r_Prefix_Step4_Verb$esjava$0()) break f;
+                                        if (!this.r_Prefix_Step4_Verb$esjava$0()) break d;
                                     } while (!1);
                                 } while (!1);
-                                ((this.cursor = _), (f = this.cursor));
+                                ((this.cursor = _), (d = this.cursor));
                                 do if (!this.r_Normalize_post$esjava$0()) break;
                                 while (!1);
-                                return ((this.cursor = f), !0);
+                                return ((this.cursor = d), !0);
                             },
                         },
                         {
@@ -2287,10 +2288,10 @@ var s,
                                 var e = void 0;
                                 ((this.I_pV = this.limit), (this.I_p2 = this.limit), (e = this.cursor));
                                 e: do {
-                                    d: for (;;) {
+                                    k: for (;;) {
                                         do {
                                             if (!this.in_grouping$esjava$3(t.g_v, 1377, 1413)) break;
-                                            break d;
+                                            break k;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break e;
                                         this.cursor++;
@@ -3508,10 +3509,10 @@ var s,
                                 var e = void 0;
                                 ((this.I_p1 = this.limit), (this.I_p2 = this.limit), (e = this.cursor));
                                 e: do {
-                                    d: for (;;) {
+                                    k: for (;;) {
                                         do {
                                             if (!this.in_grouping$esjava$3(t.g_v, 97, 252)) break;
-                                            break d;
+                                            break k;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break e;
                                         this.cursor++;
@@ -4407,10 +4408,10 @@ var s,
                                 var e = void 0;
                                 ((this.I_pV = this.limit), (this.I_p1 = this.limit), (e = this.cursor));
                                 e: do {
-                                    d: for (;;) {
+                                    k: for (;;) {
                                         do {
                                             if (!this.out_grouping$esjava$3(t.g_v, 97, 367)) break;
-                                            break d;
+                                            break k;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break e;
                                         this.cursor++;
@@ -5029,7 +5030,7 @@ var s,
                 t
             );
         })(c),
-        f = (function (e) {
+        d = (function (e) {
             function t() {
                 return (r(this, t), i(this, Object.getPrototypeOf(t).apply(this, arguments)));
             }
@@ -5371,7 +5372,7 @@ var s,
                 t
             );
         })(c),
-        k = (function (e) {
+        f = (function (e) {
             function t() {
                 return (r(this, t), i(this, Object.getPrototypeOf(t).apply(this, arguments)));
             }
@@ -5439,7 +5440,7 @@ var s,
                                             n: do {
                                                 if (!this.in_grouping$esjava$3(t.g_v, 97, 232)) break;
                                                 this.bra = this.cursor;
-                                                A: do {
+                                                B: do {
                                                     h = this.cursor;
                                                     do {
                                                         if (
@@ -5449,7 +5450,7 @@ var s,
                                                         )
                                                             break;
                                                         this.slice_from$esjava$1("I");
-                                                        break A;
+                                                        break B;
                                                     } while (!1);
                                                     if (((this.cursor = h), !this.eq_s$esjava$1("y"))) break n;
                                                     ((this.ket = this.cursor), this.slice_from$esjava$1("Y"));
@@ -5930,7 +5931,7 @@ var s,
                 t
             );
         })(c),
-        d = (function (e) {
+        k = (function (e) {
             function t() {
                 return (r(this, t), i(this, Object.getPrototypeOf(t).apply(this, arguments)));
             }
@@ -6026,10 +6027,10 @@ var s,
                                         if (this.cursor >= this.limit) break e;
                                         this.cursor++;
                                     }
-                                    B: for (;;) {
+                                    A: for (;;) {
                                         do {
                                             if (!this.out_grouping$esjava$3(t.g_v, 97, 121)) break;
-                                            break B;
+                                            break A;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break e;
                                         this.cursor++;
@@ -6517,11 +6518,11 @@ var s,
                                     do if (!this.r_Step_1a$esjava$0()) break;
                                     while (!1);
                                     this.cursor = this.limit - r;
-                                    A: do {
+                                    B: do {
                                         a = this.limit - this.cursor;
                                         do {
                                             if (!this.r_exception2$esjava$0()) break;
-                                            break A;
+                                            break B;
                                         } while (!1);
                                         ((this.cursor = this.limit - a), (n = this.limit - this.cursor));
                                         do if (!this.r_Step_1b$esjava$0()) break;
@@ -7744,10 +7745,10 @@ var s,
                                         if (this.cursor >= this.limit) break n;
                                         this.cursor++;
                                     }
-                                    B: for (;;) {
+                                    A: for (;;) {
                                         do {
                                             if (!this.out_grouping$esjava$3(t.g_v, 97, 251)) break;
-                                            break B;
+                                            break A;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break n;
                                         this.cursor++;
@@ -7957,12 +7958,12 @@ var s,
                                                     this.cursor = this.limit - n;
                                                     break n;
                                                 case 1:
-                                                    A: do {
+                                                    B: do {
                                                         h = this.limit - this.cursor;
                                                         do {
                                                             if (!this.r_R2$esjava$0()) break;
                                                             this.slice_del$esjava$0();
-                                                            break A;
+                                                            break B;
                                                         } while (!1);
                                                         ((this.cursor = this.limit - h),
                                                             this.slice_from$esjava$1("abl"));
@@ -8270,7 +8271,7 @@ var s,
                                                     break r;
                                             } while (!1);
                                             ((this.cursor = this.limit - r), (n = this.limit - this.cursor));
-                                            D: do {
+                                            E: do {
                                                 this.ket = this.cursor;
                                                 o: do {
                                                     h = this.limit - this.cursor;
@@ -8283,7 +8284,7 @@ var s,
                                                         ((this.cursor = this.limit - h), !this.eq_s_b$esjava$1("\xe7"))
                                                     ) {
                                                         this.cursor = this.limit - n;
-                                                        break D;
+                                                        break E;
                                                     }
                                                     ((this.bra = this.cursor), this.slice_from$esjava$1("c"));
                                                 } while (!1);
@@ -8637,15 +8638,15 @@ var s,
                                     break;
                                 }
                                 this.cursor = e;
-                                E: for (;;) {
+                                D: for (;;) {
                                     r = this.cursor;
                                     a: do {
                                         Y: for (;;) {
                                             a = this.cursor;
-                                            A: do {
+                                            B: do {
                                                 if (!this.in_grouping$esjava$3(t.g_v, 97, 252)) break;
                                                 this.bra = this.cursor;
-                                                D: do {
+                                                E: do {
                                                     n = this.cursor;
                                                     do {
                                                         if (
@@ -8655,7 +8656,7 @@ var s,
                                                         )
                                                             break;
                                                         this.slice_from$esjava$1("U");
-                                                        break D;
+                                                        break E;
                                                     } while (!1);
                                                     if (
                                                         ((this.cursor = n),
@@ -8663,7 +8664,7 @@ var s,
                                                             ((this.ket = this.cursor),
                                                             !this.in_grouping$esjava$3(t.g_v, 97, 252)))
                                                     )
-                                                        break A;
+                                                        break B;
                                                     this.slice_from$esjava$1("Y");
                                                 } while (!1);
                                                 this.cursor = a;
@@ -8672,7 +8673,7 @@ var s,
                                             if (((this.cursor = a), this.cursor >= this.limit)) break a;
                                             this.cursor++;
                                         }
-                                        continue E;
+                                        continue D;
                                     } while (!1);
                                     this.cursor = r;
                                     break;
@@ -8887,17 +8888,17 @@ var s,
                                             break;
                                         case 3:
                                             (this.slice_del$esjava$0(), (u = this.limit - this.cursor));
-                                            A: do {
+                                            B: do {
                                                 this.ket = this.cursor;
-                                                D: do {
+                                                E: do {
                                                     c = this.limit - this.cursor;
                                                     do {
                                                         if (!this.eq_s_b$esjava$1("er")) break;
-                                                        break D;
+                                                        break E;
                                                     } while (!1);
                                                     if (((this.cursor = this.limit - c), !this.eq_s_b$esjava$1("en"))) {
                                                         this.cursor = this.limit - u;
-                                                        break A;
+                                                        break B;
                                                     }
                                                 } while (!1);
                                                 if (((this.bra = this.cursor), !this.r_R1$esjava$0())) {
@@ -9857,10 +9858,10 @@ var s,
                                     (this.I_p2 = this.limit),
                                     (e = this.cursor));
                                 e: do {
-                                    d: for (;;) {
+                                    k: for (;;) {
                                         do {
                                             if (!this.in_grouping$esjava$3(t.g_v, 97, 250)) break;
-                                            break d;
+                                            break k;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break e;
                                         this.cursor++;
@@ -11699,7 +11700,7 @@ var s,
                                     w = void 0,
                                     $ = void 0,
                                     v = void 0,
-                                    f = void 0;
+                                    d = void 0;
                                 ((this.B_Y_found = !1), (e = this.cursor));
                                 do {
                                     if (((this.bra = this.cursor), !this.eq_s$esjava$1("y"))) break;
@@ -11744,10 +11745,10 @@ var s,
                                         if (this.cursor >= this.limit) break n;
                                         this.cursor++;
                                     }
-                                    B: for (;;) {
+                                    A: for (;;) {
                                         do {
                                             if (!this.out_grouping$esjava$3(t.g_v, 97, 121)) break;
-                                            break B;
+                                            break A;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break n;
                                         this.cursor++;
@@ -11807,13 +11808,13 @@ var s,
                                         v = this.cursor;
                                         F: do {
                                             T: for (;;) {
-                                                f = this.cursor;
+                                                d = this.cursor;
                                                 do {
                                                     if (((this.bra = this.cursor), !this.eq_s$esjava$1("Y"))) break;
-                                                    ((this.ket = this.cursor), (this.cursor = f));
+                                                    ((this.ket = this.cursor), (this.cursor = d));
                                                     break T;
                                                 } while (!1);
-                                                if (((this.cursor = f), this.cursor >= this.limit)) break F;
+                                                if (((this.cursor = d), this.cursor >= this.limit)) break F;
                                                 this.cursor++;
                                             }
                                             this.slice_from$esjava$1("y");
@@ -13622,10 +13623,10 @@ var s,
                                 var e = void 0;
                                 ((this.I_pV = this.limit), (this.I_p2 = this.limit), (e = this.cursor));
                                 e: do {
-                                    d: for (;;) {
+                                    k: for (;;) {
                                         do {
                                             if (!this.in_grouping$esjava$3(t.g_v, 1072, 1103)) break;
-                                            break d;
+                                            break k;
                                         } while (!1);
                                         if (this.cursor >= this.limit) break e;
                                         this.cursor++;
@@ -14324,7 +14325,7 @@ var s,
                                             ((this.cursor = this.limit - c), this.slice_del$esjava$0());
                                         } while (!1);
                                         ((this.I_p1 = this.current.length()), (_ = this.limit - this.cursor));
-                                        A: do {
+                                        B: do {
                                             if (
                                                 !(this.I_p1 > 5) ||
                                                 ((this.ket = this.cursor),
@@ -14336,7 +14337,7 @@ var s,
                                             switch (((this.bra = this.cursor), e)) {
                                                 case 0:
                                                     this.cursor = this.limit - _;
-                                                    break A;
+                                                    break B;
                                                 case 1:
                                                     this.slice_del$esjava$0();
                                             }
@@ -15905,7 +15906,7 @@ var s,
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
-                                    M: do {
+                                    K: do {
                                         this.ket = this.cursor;
                                         C: do {
                                             n = this.limit - this.cursor;
@@ -15917,7 +15918,7 @@ var s,
                                                 ((this.cursor = this.limit - n),
                                                 !this.eq_s_b$esjava$1("\u0BC1\u0B95\u0BCD\u0B95\u0BCD"))
                                             )
-                                                break M;
+                                                break K;
                                         } while (!1);
                                         ((this.bra = this.cursor), this.slice_from$esjava$1("\u0BCD"));
                                         break e;
@@ -15978,12 +15979,12 @@ var s,
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
-                                    J: do {
+                                    M: do {
                                         if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0BA9\u0BC1"))) break;
                                         ((o = this.limit - this.cursor), (u = this.limit - this.cursor));
                                         do {
                                             if (0 === this.find_among_b$esjava$1(t.a_9)) break;
-                                            break J;
+                                            break M;
                                         } while (!1);
                                         ((this.cursor = this.limit - u),
                                             (this.cursor = this.limit - o),
@@ -16018,11 +16019,11 @@ var s,
                                     )
                                         return !1;
                                     l = this.limit - this.cursor;
-                                    K: do {
+                                    J: do {
                                         w = this.limit - this.cursor;
                                         do {
                                             if (0 === this.find_among_b$esjava$1(t.a_10)) break;
-                                            break K;
+                                            break J;
                                         } while (!1);
                                         if (((this.cursor = this.limit - w), !this.eq_s_b$esjava$1("\u0BCD")))
                                             return !1;
@@ -16315,9 +16316,9 @@ var s,
                                     w = void 0,
                                     $ = void 0,
                                     v = void 0,
+                                    d = void 0,
                                     f = void 0,
                                     k = void 0,
-                                    d = void 0,
                                     b = void 0,
                                     m = void 0,
                                     j = void 0;
@@ -16384,7 +16385,7 @@ var s,
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
-                                    D: do {
+                                    E: do {
                                         ((u = this.limit - this.cursor), (this.ket = this.cursor));
                                         o: do {
                                             c = this.limit - this.cursor;
@@ -16473,7 +16474,7 @@ var s,
                                                 ((this.cursor = this.limit - c),
                                                 !this.eq_s_b$esjava$1("\u0BC1\u0BB3\u0BCD"))
                                             )
-                                                break D;
+                                                break E;
                                         } while (!1);
                                         ((this.bra = this.cursor),
                                             this.slice_from$esjava$1("\u0BCD"),
@@ -16483,45 +16484,45 @@ var s,
                                     this.cursor = this.limit - e;
                                     F: do {
                                         ((v = this.limit - this.cursor), (this.ket = this.cursor));
-                                        K: do {
-                                            f = this.limit - this.cursor;
+                                        J: do {
+                                            d = this.limit - this.cursor;
                                             do {
                                                 if (!this.eq_s_b$esjava$1("\u0B95\u0BA3\u0BCD")) break;
-                                                break K;
+                                                break J;
                                             } while (!1);
-                                            this.cursor = this.limit - f;
+                                            this.cursor = this.limit - d;
                                             do {
                                                 if (!this.eq_s_b$esjava$1("\u0BAE\u0BC1\u0BA9\u0BCD")) break;
-                                                break K;
+                                                break J;
                                             } while (!1);
-                                            this.cursor = this.limit - f;
+                                            this.cursor = this.limit - d;
                                             do {
                                                 if (!this.eq_s_b$esjava$1("\u0BAE\u0BC7\u0BB2\u0BCD")) break;
-                                                break K;
+                                                break J;
                                             } while (!1);
-                                            this.cursor = this.limit - f;
+                                            this.cursor = this.limit - d;
                                             do {
                                                 if (!this.eq_s_b$esjava$1("\u0BAE\u0BC7\u0BB1\u0BCD")) break;
-                                                break K;
+                                                break J;
                                             } while (!1);
-                                            this.cursor = this.limit - f;
+                                            this.cursor = this.limit - d;
                                             do {
                                                 if (!this.eq_s_b$esjava$1("\u0B95\u0BC0\u0BB4\u0BCD")) break;
-                                                break K;
+                                                break J;
                                             } while (!1);
-                                            this.cursor = this.limit - f;
+                                            this.cursor = this.limit - d;
                                             do {
                                                 if (!this.eq_s_b$esjava$1("\u0BAA\u0BBF\u0BA9\u0BCD")) break;
-                                                break K;
+                                                break J;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - f), !this.eq_s_b$esjava$1("\u0BA4\u0BC1")))
+                                            if (((this.cursor = this.limit - d), !this.eq_s_b$esjava$1("\u0BA4\u0BC1")))
                                                 break F;
-                                            ((k = this.limit - this.cursor), (d = this.limit - this.cursor));
+                                            ((f = this.limit - this.cursor), (k = this.limit - this.cursor));
                                             do {
                                                 if (0 === this.find_among_b$esjava$1(t.a_21)) break;
                                                 break F;
                                             } while (!1);
-                                            ((this.cursor = this.limit - d), (this.cursor = this.limit - k));
+                                            ((this.cursor = this.limit - k), (this.cursor = this.limit - f));
                                         } while (!1);
                                         ((this.bra = this.cursor),
                                             this.slice_del$esjava$0(),
@@ -16594,9 +16595,9 @@ var s,
                                     w = void 0,
                                     $ = void 0,
                                     v = void 0,
+                                    d = void 0,
                                     f = void 0,
-                                    k = void 0,
-                                    d = void 0;
+                                    k = void 0;
                                 if (((this.B_found_a_match = !1), !this.r_has_min_length$esjava$0())) return !1;
                                 ((this.limit_backward = this.cursor),
                                     (this.cursor = this.limit),
@@ -16652,12 +16653,12 @@ var s,
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
-                                                M: do {
+                                                K: do {
                                                     if (!this.eq_s_b$esjava$1("\u0BB5\u0BA9\u0BCD")) break;
                                                     ((n = this.limit - this.cursor), (h = this.limit - this.cursor));
                                                     do {
                                                         if (0 === this.find_among_b$esjava$1(t.a_23)) break;
-                                                        break M;
+                                                        break K;
                                                     } while (!1);
                                                     ((this.cursor = this.limit - h), (this.cursor = this.limit - n));
                                                     break r;
@@ -16904,25 +16905,25 @@ var s,
                                             if (((this.cursor = this.limit - v), !this.eq_s_b$esjava$1("\u0BA4\u0BC1")))
                                                 break e;
                                         } while (!1);
-                                        if (((f = this.limit - this.cursor), !this.eq_s_b$esjava$1("\u0BCD"))) break e;
-                                        ((this.cursor = this.limit - f),
+                                        if (((d = this.limit - this.cursor), !this.eq_s_b$esjava$1("\u0BCD"))) break e;
+                                        ((this.cursor = this.limit - d),
                                             (this.bra = this.cursor),
                                             this.slice_del$esjava$0(),
                                             (this.B_found_a_match = !0),
                                             (this.cursor = this.limit - $));
                                     } while (!1);
                                 while (!1);
-                                ((this.cursor = this.limit - e), (k = this.limit - this.cursor));
+                                ((this.cursor = this.limit - e), (f = this.limit - this.cursor));
                                 do {
                                     if (((this.ket = this.cursor), 0 === this.find_among_b$esjava$1(t.a_25))) break;
                                     ((this.bra = this.cursor), this.slice_del$esjava$0(), (this.B_found_a_match = !0));
                                 } while (!1);
-                                ((this.cursor = this.limit - k),
+                                ((this.cursor = this.limit - f),
                                     (this.cursor = this.limit_backward),
-                                    (d = this.cursor));
+                                    (k = this.cursor));
                                 do if (!this.r_fix_endings$esjava$0()) break;
                                 while (!1);
-                                return ((this.cursor = d), !0);
+                                return ((this.cursor = k), !0);
                             },
                         },
                         {
@@ -17458,7 +17459,7 @@ var s,
                 t
             );
         })(c),
-        A = (function (e) {
+        B = (function (e) {
             function t() {
                 return (r(this, t), i(this, Object.getPrototypeOf(t).apply(this, arguments)));
             }
@@ -17590,7 +17591,7 @@ var s,
                                         break s;
                                     } while (!1);
                                     this.cursor = this.limit - s;
-                                    J: do {
+                                    M: do {
                                         if (!this.eq_s_b$esjava$1("u")) break;
                                         et: for (;;) {
                                             c = this.limit - this.cursor;
@@ -17600,7 +17601,7 @@ var s,
                                                 break et;
                                             } while (!1);
                                             if (((this.cursor = this.limit - c), this.cursor <= this.limit_backward))
-                                                break J;
+                                                break M;
                                             this.cursor--;
                                         }
                                         break s;
@@ -18044,31 +18045,31 @@ var s,
                                     this.cursor = this.limit - e;
                                     do {
                                         if (!this.r_mark_cAsInA$esjava$0()) break;
-                                        A: do {
+                                        B: do {
                                             s = this.limit - this.cursor;
                                             do {
                                                 if (!this.r_mark_sUnUz$esjava$0()) break;
-                                                break A;
+                                                break B;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
                                                 if (!this.r_mark_lAr$esjava$0()) break;
-                                                break A;
+                                                break B;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
                                                 if (!this.r_mark_yUm$esjava$0()) break;
-                                                break A;
+                                                break B;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
                                                 if (!this.r_mark_sUn$esjava$0()) break;
-                                                break A;
+                                                break B;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
                                                 if (!this.r_mark_yUz$esjava$0()) break;
-                                                break A;
+                                                break B;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                         } while (!1);
@@ -18158,31 +18159,31 @@ var s,
                                         (o = this.limit - this.cursor));
                                     do {
                                         this.ket = this.cursor;
-                                        f: do {
+                                        d: do {
                                             u = this.limit - this.cursor;
                                             do {
                                                 if (!this.r_mark_sUnUz$esjava$0()) break;
-                                                break f;
+                                                break d;
                                             } while (!1);
                                             this.cursor = this.limit - u;
                                             do {
                                                 if (!this.r_mark_lAr$esjava$0()) break;
-                                                break f;
+                                                break d;
                                             } while (!1);
                                             this.cursor = this.limit - u;
                                             do {
                                                 if (!this.r_mark_yUm$esjava$0()) break;
-                                                break f;
+                                                break d;
                                             } while (!1);
                                             this.cursor = this.limit - u;
                                             do {
                                                 if (!this.r_mark_sUn$esjava$0()) break;
-                                                break f;
+                                                break d;
                                             } while (!1);
                                             this.cursor = this.limit - u;
                                             do {
                                                 if (!this.r_mark_yUz$esjava$0()) break;
-                                                break f;
+                                                break d;
                                             } while (!1);
                                             this.cursor = this.limit - u;
                                         } while (!1);
@@ -18266,7 +18267,7 @@ var s,
                                         ((this.bra = this.cursor),
                                             this.slice_del$esjava$0(),
                                             (a = this.limit - this.cursor));
-                                        D: do {
+                                        E: do {
                                             this.ket = this.cursor;
                                             o: do {
                                                 n = this.limit - this.cursor;
@@ -18276,7 +18277,7 @@ var s,
                                                     break o;
                                                 } while (!1);
                                                 this.cursor = this.limit - n;
-                                                M: do {
+                                                K: do {
                                                     this.ket = this.cursor;
                                                     C: do {
                                                         h = this.limit - this.cursor;
@@ -18287,7 +18288,7 @@ var s,
                                                         if (
                                                             ((this.cursor = this.limit - h), !this.r_mark_sU$esjava$0())
                                                         )
-                                                            break M;
+                                                            break K;
                                                     } while (!1);
                                                     ((this.bra = this.cursor),
                                                         this.slice_del$esjava$0(),
@@ -18311,7 +18312,7 @@ var s,
                                                     !this.r_stem_suffix_chain_before_ki$esjava$0())
                                                 ) {
                                                     this.cursor = this.limit - a;
-                                                    break D;
+                                                    break E;
                                                 }
                                             } while (!1);
                                         } while (!1);
@@ -18374,9 +18375,9 @@ var s,
                                     w = void 0,
                                     $ = void 0,
                                     v = void 0,
+                                    d = void 0,
                                     f = void 0,
                                     k = void 0,
-                                    d = void 0,
                                     b = void 0,
                                     m = void 0,
                                     j = void 0,
@@ -18415,18 +18416,18 @@ var s,
                                                     break a;
                                                 } while (!1);
                                                 this.cursor = this.limit - t;
-                                                A: do {
+                                                B: do {
                                                     this.ket = this.cursor;
-                                                    D: do {
+                                                    E: do {
                                                         r = this.limit - this.cursor;
                                                         do {
                                                             if (!this.r_mark_possessives$esjava$0()) break;
-                                                            break D;
+                                                            break E;
                                                         } while (!1);
                                                         if (
                                                             ((this.cursor = this.limit - r), !this.r_mark_sU$esjava$0())
                                                         )
-                                                            break A;
+                                                            break B;
                                                     } while (!1);
                                                     ((this.bra = this.cursor),
                                                         this.slice_del$esjava$0(),
@@ -18461,7 +18462,7 @@ var s,
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
-                                    M: do {
+                                    K: do {
                                         this.ket = this.cursor;
                                         C: do {
                                             n = this.limit - this.cursor;
@@ -18469,7 +18470,7 @@ var s,
                                                 if (!this.r_mark_ndA$esjava$0()) break;
                                                 break C;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - n), !this.r_mark_nA$esjava$0())) break M;
+                                            if (((this.cursor = this.limit - n), !this.r_mark_nA$esjava$0())) break K;
                                         } while (!1);
                                         u: do {
                                             h = this.limit - this.cursor;
@@ -18502,7 +18503,7 @@ var s,
                                                 ((this.cursor = this.limit - h),
                                                 !this.r_stem_suffix_chain_before_ki$esjava$0())
                                             )
-                                                break M;
+                                                break K;
                                         } while (!1);
                                         break e;
                                     } while (!1);
@@ -18517,7 +18518,7 @@ var s,
                                             } while (!1);
                                             if (((this.cursor = this.limit - u), !this.r_mark_nU$esjava$0())) break H;
                                         } while (!1);
-                                        J: do {
+                                        M: do {
                                             c = this.limit - this.cursor;
                                             do {
                                                 if (!this.r_mark_sU$esjava$0()) break;
@@ -18536,7 +18537,7 @@ var s,
                                                         break;
                                                     }
                                                 while (!1);
-                                                break J;
+                                                break M;
                                             } while (!1);
                                             if (((this.cursor = this.limit - c), !this.r_mark_lArI$esjava$0())) break H;
                                         } while (!1);
@@ -18550,7 +18551,7 @@ var s,
                                             (l = this.limit - this.cursor));
                                         F: do {
                                             this.ket = this.cursor;
-                                            K: do {
+                                            J: do {
                                                 w = this.limit - this.cursor;
                                                 do {
                                                     if (!this.r_mark_possessives$esjava$0()) break;
@@ -18569,7 +18570,7 @@ var s,
                                                             break;
                                                         }
                                                     while (!1);
-                                                    break K;
+                                                    break J;
                                                 } while (!1);
                                                 this.cursor = this.limit - w;
                                                 do {
@@ -18583,7 +18584,7 @@ var s,
                                                             break;
                                                         }
                                                     while (!1);
-                                                    break K;
+                                                    break J;
                                                 } while (!1);
                                                 if (
                                                     ((this.cursor = this.limit - w),
@@ -18599,20 +18600,20 @@ var s,
                                     this.cursor = this.limit - e;
                                     eh: do {
                                         this.ket = this.cursor;
-                                        k: do {
-                                            f = this.limit - this.cursor;
+                                        f: do {
+                                            d = this.limit - this.cursor;
                                             do {
                                                 if (!this.r_mark_nUn$esjava$0()) break;
-                                                break k;
+                                                break f;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - f), !this.r_mark_ylA$esjava$0())) break eh;
+                                            if (((this.cursor = this.limit - d), !this.r_mark_ylA$esjava$0())) break eh;
                                         } while (!1);
                                         ((this.bra = this.cursor),
                                             this.slice_del$esjava$0(),
-                                            (k = this.limit - this.cursor));
+                                            (f = this.limit - this.cursor));
                                         eo: do
                                             Q: do {
-                                                d = this.limit - this.cursor;
+                                                k = this.limit - this.cursor;
                                                 do {
                                                     if (
                                                         ((this.ket = this.cursor),
@@ -18624,7 +18625,7 @@ var s,
                                                         break;
                                                     break Q;
                                                 } while (!1);
-                                                this.cursor = this.limit - d;
+                                                this.cursor = this.limit - k;
                                                 ee: do {
                                                     this.ket = this.cursor;
                                                     eu: do {
@@ -18656,10 +18657,10 @@ var s,
                                                     break Q;
                                                 } while (!1);
                                                 if (
-                                                    ((this.cursor = this.limit - d),
+                                                    ((this.cursor = this.limit - k),
                                                     !this.r_stem_suffix_chain_before_ki$esjava$0())
                                                 ) {
-                                                    this.cursor = this.limit - k;
+                                                    this.cursor = this.limit - f;
                                                     break eo;
                                                 }
                                             } while (!1);
@@ -18835,35 +18836,35 @@ var s,
                                                 break t;
                                         } while (!1);
                                         this.cursor = this.limit - r;
-                                        var f = this.cursor;
-                                        (this.insert$esjava$3(this.cursor, this.cursor, "\u0131"), (this.cursor = f));
+                                        var d = this.cursor;
+                                        (this.insert$esjava$3(this.cursor, this.cursor, "\u0131"), (this.cursor = d));
                                         break s;
                                     } while (!1);
                                     this.cursor = this.limit - s;
-                                    D: do {
+                                    E: do {
                                         h = this.limit - this.cursor;
-                                        B: for (;;) {
+                                        A: for (;;) {
                                             o = this.limit - this.cursor;
                                             do {
                                                 if (!this.in_grouping_b$esjava$3(t.g_vowel, 97, 305)) break;
                                                 this.cursor = this.limit - o;
-                                                break B;
+                                                break A;
                                             } while (!1);
                                             if (((this.cursor = this.limit - o), this.cursor <= this.limit_backward))
-                                                break D;
+                                                break E;
                                             this.cursor--;
                                         }
-                                        M: do {
+                                        K: do {
                                             u = this.limit - this.cursor;
                                             do {
                                                 if (!this.eq_s_b$esjava$1("e")) break;
-                                                break M;
+                                                break K;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - u), !this.eq_s_b$esjava$1("i"))) break D;
+                                            if (((this.cursor = this.limit - u), !this.eq_s_b$esjava$1("i"))) break E;
                                         } while (!1);
                                         this.cursor = this.limit - h;
-                                        var f = this.cursor;
-                                        (this.insert$esjava$3(this.cursor, this.cursor, "i"), (this.cursor = f));
+                                        var d = this.cursor;
+                                        (this.insert$esjava$3(this.cursor, this.cursor, "i"), (this.cursor = d));
                                         break s;
                                     } while (!1);
                                     this.cursor = this.limit - s;
@@ -18889,8 +18890,8 @@ var s,
                                             if (((this.cursor = this.limit - l), !this.eq_s_b$esjava$1("u"))) break y;
                                         } while (!1);
                                         this.cursor = this.limit - c;
-                                        var f = this.cursor;
-                                        (this.insert$esjava$3(this.cursor, this.cursor, "u"), (this.cursor = f));
+                                        var d = this.cursor;
+                                        (this.insert$esjava$3(this.cursor, this.cursor, "u"), (this.cursor = d));
                                         break s;
                                     } while (!1);
                                     ((this.cursor = this.limit - s), (w = this.limit - this.cursor));
@@ -18914,8 +18915,8 @@ var s,
                                         if (((this.cursor = this.limit - v), !this.eq_s_b$esjava$1("\xfc"))) return !1;
                                     } while (!1);
                                     this.cursor = this.limit - w;
-                                    var f = this.cursor;
-                                    (this.insert$esjava$3(this.cursor, this.cursor, "\xfc"), (this.cursor = f));
+                                    var d = this.cursor;
+                                    (this.insert$esjava$3(this.cursor, this.cursor, "\xfc"), (this.cursor = d));
                                 } while (!1);
                                 return !0;
                             },

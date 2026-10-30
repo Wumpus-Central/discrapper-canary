@@ -1,6 +1,6 @@
 t.d(n, { b: () => c, initNativeMarkdown: () => s, n: () => f });
 var a = t(582128),
-    i = t(917310),
+    i = t(28640),
     l = t(38405);
 let r = !1,
     d = null,

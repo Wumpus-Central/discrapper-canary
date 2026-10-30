@@ -273,7 +273,7 @@ var W = n(666860),
     X = n(702483),
     J = n(490682);
 (n(134528), n(947204));
-var Y = n(917310);
+var Y = n(28640);
 let ee = new Set(["line", "blockQuote"]),
     et = [],
     en = { bold: "strong", italic: "em", underline: "u", strikethrough: "s", spoiler: "spoiler" },

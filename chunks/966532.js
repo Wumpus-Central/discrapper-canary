@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => T });
 var i = n(439372),
     r = n(952818),
     a = n(287809),
@@ -7,21 +7,16 @@ var i = n(439372),
     o = n(614584),
     d = n(507868),
     c = n(915725),
-    u = n(974293),
-    _ = n(240899),
-    E = n(458977),
-    A = n(399091),
-    h = n(526233),
-    f = n(415281),
-    I = n(171251),
-    p = n(826685),
-    T = n(876474),
-    m = n(190443);
-let g = "Clip signal handler registration";
-function S(e) {
-    return !!c.Ay.getEnableAutoclipping() && d.A.isGameAllowed(e ?? r.Ay.getVisibleGame()?.id);
+    u = n(458977),
+    _ = n(696016),
+    E = n(171251),
+    A = n(826685),
+    h = n(876474),
+    f = n(190443);
+function I(e, t) {
+    return !!c.Ay.getEnableAutoclipping() && d.A.hasCapability(t ?? r.Ay.getVisibleGame()?.id, e);
 }
-class N extends i.A {
+class p extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -41,41 +36,44 @@ class N extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, u.$i)(g) && S(),
+                    isEnabled: () => I(_.pZ.LAUGHTER | _.pZ.SHOUTING),
                     importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: () => S() && E.A.getConfig({ location: g }).enableDistributedClips,
+                    isEnabled: () =>
+                        !!c.Ay.getEnableAutoclipping() &&
+                        d.A.isGameAllowed(void 0 ?? r.Ay.getVisibleGame()?.id) &&
+                        u.A.getConfig({ location: "Clip signal handler registration" }).enableDistributedClips,
                     importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: T.m,
-                    isEnabled: () => S(T.m) && h.A.getConfig({ location: g }).enableLeagueEvents,
+                    applicationId: h.m,
+                    isEnabled: () => I(_.pZ.GAME_EVENTS, h.m),
                     importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
                     name: "cs2-gsi",
-                    applicationId: I.w,
-                    isEnabled: () => S(I.w) && _.A.getConfig({ location: g }).enableCs2Gsi,
+                    applicationId: E.w,
+                    isEnabled: () => I(_.pZ.GAME_EVENTS, E.w),
                     importHandler: () => n.e("860838").then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
                     name: "dota-gsi",
-                    applicationId: p.b,
-                    isEnabled: () => S(p.b) && A.A.getConfig({ location: g }).enableDotaGsi,
+                    applicationId: A.b,
+                    isEnabled: () => I(_.pZ.GAME_EVENTS, A.b),
                     importHandler: () => Promise.all([n.e("465129"), n.e("709692")]).then(n.bind(n, 840631)),
                 },
                 {
                     type: "application",
                     name: "rocket-league",
-                    applicationId: m.e,
-                    isEnabled: () => S(m.e) && f.A.getConfig({ location: g }).enableRocketLeagueEvents,
+                    applicationId: f.e,
+                    isEnabled: () => I(_.pZ.GAME_EVENTS, f.e),
                     importHandler: () => n.e("182150").then(n.bind(n, 446885)),
                 },
             ]))
@@ -149,4 +147,4 @@ class N extends i.A {
         (this.terminatedCount++, this.stopAllHandlers());
     }
 }
-let C = new N();
+let T = new p();

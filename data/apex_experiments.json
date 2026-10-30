@@ -1095,28 +1095,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-03-clips-experiment",
-    "defaultConfig": {
-      "enableClips": false,
-      "ignorePlatformRestriction": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableClips": true,
-        "ignorePlatformRestriction": false
-      },
-      "2": {
-        "enableClips": true,
-        "ignorePlatformRestriction": true
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-03-content-inventory-memberlist-and-ranker",
     "defaultConfig": {
       "enabled": true,
@@ -1446,25 +1424,6 @@
       },
       "1": {
         "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-04-clips-v3-runtime",
-    "defaultConfig": {
-      "enableClipsV3ML": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableClipsV3ML": false
-      },
-      "2": {
-        "enableClipsV3ML": true
       }
     }
   },
@@ -1837,22 +1796,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-05-auto-clips-review",
-    "defaultConfig": {
-      "enableAutoClipsReview": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableAutoClipsReview": true
-      }
-    }
-  },
-  {
     "name": "2026-05-av1-bitrate-tuning",
     "kind": "user",
     "defaultConfig": {
@@ -2210,22 +2153,6 @@
       },
       "1": {
         "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-06-clips-league-events",
-    "defaultConfig": {
-      "enableLeagueEvents": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableLeagueEvents": true
       }
     }
   },
@@ -2807,22 +2734,6 @@
       },
       "2": {
         "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-07-gsimagic",
-    "defaultConfig": {
-      "enableCs2Gsi": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableCs2Gsi": true
       }
     }
   },
@@ -3561,22 +3472,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-08-rocketleague-events",
-    "defaultConfig": {
-      "enableRocketLeagueEvents": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableRocketLeagueEvents": true
-      }
-    }
-  },
-  {
     "name": "2026-08-scheduled-messages",
     "kind": "user",
     "defaultConfig": null,
@@ -3778,6 +3673,25 @@
       "2": null,
       "3": null,
       "4": null
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-09-autoclips",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      },
+      "2": {
+        "enabled": true
+      }
     }
   },
   {
@@ -4022,22 +3936,6 @@
       },
       "1": {
         "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-09-gsimagic2",
-    "defaultConfig": {
-      "enableDotaGsi": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableDotaGsi": true
       }
     }
   },

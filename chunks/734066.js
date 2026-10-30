@@ -1,44 +1,28 @@
-n.d(t, { BW: () => f, Pm: () => _, cx: () => h, ri: () => I, sw: () => E });
+n.d(t, { BW: () => A, Pm: () => c, cx: () => E, ri: () => h, sw: () => u });
 var i = n(17928),
-    r = n(945810),
-    a = n(999926),
-    s = n(287809),
-    l = n(723702),
-    o = n(24482),
-    d = n(202541),
-    c = n(731854);
-let u = (0, r.mj)({
-    kind: "user",
-    name: "2026-03-clips-experiment",
-    defaultConfig: { enableClips: !1, ignorePlatformRestriction: !1 },
-    variations: {
-        1: { enableClips: !0, ignorePlatformRestriction: !1 },
-        2: { enableClips: !0, ignorePlatformRestriction: !0 },
-    },
-});
-function _() {
-    if (!I(a.Ay)) return !1;
-    let e = A(s.default.getCurrentUser()),
-        { enableClips: t } = u.getConfig({ location: "areClipsEnabled" });
-    return e || t;
+    r = n(999926),
+    a = n(287809),
+    s = n(723702),
+    l = n(24482),
+    o = n(202541),
+    d = n(731854);
+function c() {
+    return !!h(r.Ay) && _(a.default.getCurrentUser());
+}
+function u() {
+    let e = h(r.Ay);
+    return (0, i.bG)([a.default], () => _(a.default.getCurrentUser())) && e;
+}
+function _(e) {
+    return l.Ay.isPremiumAtLeast(e?.premiumType, o.PremiumTypes.TIER_2);
 }
 function E() {
-    let e = I(a.Ay),
-        t = (0, i.bG)([s.default], () => A(s.default.getCurrentUser())),
-        { enableClips: n } = u.getConfig({ location: "useEnableClips" });
-    return (n || t) && e;
-}
-function A(e) {
-    return o.Ay.isPremiumAtLeast(e?.premiumType, d.PremiumTypes.TIER_2);
-}
-function h() {
     return !1;
 }
-function f() {
+function A() {
     return !1;
 }
-function I(e) {
-    let { ignorePlatformRestriction: t } = u.getConfig({ location: "isClipsClientCapable" }),
-        n = e.getMediaEngine();
-    return t || (l.isDesktop() && n.supports(c.O5.CLIPS) && n.hasClipsV3Support());
+function h(e) {
+    let t = e.getMediaEngine();
+    return s.isDesktop() && t.supports(d.O5.CLIPS) && t.hasClipsV3Support();
 }
