@@ -1742,58 +1742,63 @@ let im = a.memo(function (e) {
         }, [i, n]),
         s = null == n ? 0 : n.length,
         o = (0, c.rm)(`progress-bar-${t.id}`);
-    return (0, r.jsxs)("li", {
-        children: [
-            (0, r.jsxs)(J.D, {
-                ...o,
-                role: "button",
-                focusProps: { offset: { right: 4 } },
-                className: iu.G9,
-                onClick: function () {
-                    (0, en.pX)(H.BVt.CHANNEL(t.id, ei.VV.GUILD_HOME));
-                },
-                children: [
-                    (0, r.jsxs)("div", {
-                        className: iu.A1,
-                        children: [
-                            (0, r.jsx)(io.D, { variant: "heading-sm/bold", children: er.intl.string(er.t.SnrR3x) }),
-                            (0, r.jsxs)("div", {
-                                className: iu.Ib,
-                                children: [
-                                    (0, r.jsx)(e2.E, {
-                                        variant: "text-xs/medium",
-                                        color: "text-muted",
-                                        className: iu.Cv,
-                                        children: er.intl.format(er.t.eqZ1lW, {
-                                            numberHook: ih,
-                                            total: s.toString(),
-                                            completed: l.toString(),
-                                        }),
-                                    }),
-                                    (0, r.jsx)(tt.A, {
-                                        className: iu.UE,
-                                        width: 16,
-                                        height: 16,
-                                        direction: tt.A.Directions.RIGHT,
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)(id.i, {
-                        className: iu.hr,
-                        foregroundGradientColor: [
-                            m.A.unsafe_rawColors.GREEN_300.css,
-                            m.A.unsafe_rawColors.GREEN_230.css,
-                        ],
-                        percent: (l / s) * 100 + 3,
-                        animate: !0,
-                    }),
-                ],
-            }),
-            (0, r.jsx)("div", { role: "separator", className: iu.yF }),
-        ],
-    });
+    return 0 === s
+        ? null
+        : (0, r.jsxs)("li", {
+              children: [
+                  (0, r.jsxs)(J.D, {
+                      ...o,
+                      role: "button",
+                      focusProps: { offset: { right: 4 } },
+                      className: iu.G9,
+                      onClick: function () {
+                          (0, en.pX)(H.BVt.CHANNEL(t.id, ei.VV.GUILD_HOME));
+                      },
+                      children: [
+                          (0, r.jsxs)("div", {
+                              className: iu.A1,
+                              children: [
+                                  (0, r.jsx)(io.D, {
+                                      variant: "heading-sm/bold",
+                                      children: er.intl.string(er.t.SnrR3x),
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                      className: iu.Ib,
+                                      children: [
+                                          (0, r.jsx)(e2.E, {
+                                              variant: "text-xs/medium",
+                                              color: "text-muted",
+                                              className: iu.Cv,
+                                              children: er.intl.format(er.t.eqZ1lW, {
+                                                  numberHook: ih,
+                                                  total: s.toString(),
+                                                  completed: l.toString(),
+                                              }),
+                                          }),
+                                          (0, r.jsx)(tt.A, {
+                                              className: iu.UE,
+                                              width: 16,
+                                              height: 16,
+                                              direction: tt.A.Directions.RIGHT,
+                                          }),
+                                      ],
+                                  }),
+                              ],
+                          }),
+                          (0, r.jsx)(id.i, {
+                              className: iu.hr,
+                              foregroundGradientColor: [
+                                  m.A.unsafe_rawColors.GREEN_300.css,
+                                  m.A.unsafe_rawColors.GREEN_230.css,
+                              ],
+                              percent: (l / s) * 100 + 3,
+                              animate: !0,
+                          }),
+                      ],
+                  }),
+                  (0, r.jsx)("div", { role: "separator", className: iu.yF }),
+              ],
+          });
 });
 var ig = n(581925);
 function iA(e) {

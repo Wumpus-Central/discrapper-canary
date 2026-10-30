@@ -20,11 +20,7 @@ var t = n(477900),
     C = n(652215),
     v = n(105292),
     I = n(374190);
-let N = i.lazy(() =>
-        Promise.all([n.e("577162"), n.e("869047"), n.e("593279"), n.e("936920"), n.e("787680")]).then(
-            n.bind(n, 148259),
-        ),
-    ),
+let N = i.lazy(() => Promise.all([n.e("577162"), n.e("593279"), n.e("936920"), n.e("787680")]).then(n.bind(n, 148259))),
     y = () => Promise.resolve();
 function $(e) {
     let {

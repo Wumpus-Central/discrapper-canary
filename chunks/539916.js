@@ -43,7 +43,7 @@ let _ = 100,
     I = 10,
     p = 100,
     T = 4,
-    m = 1,
+    m = 0,
     g = 13;
 var S = (((i = {})[(i.CUSTOMIZE = 0)] = "CUSTOMIZE"), (i[(i.BROWSE = 1)] = "BROWSE"), i),
     N = (((r = {})[(r.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (r[(r.DROPDOWN = 1)] = "DROPDOWN"), r),

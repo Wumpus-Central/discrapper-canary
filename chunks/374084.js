@@ -131,9 +131,7 @@ function R(e) {
         e.welcomeMessage?.message == null ||
         e.welcomeMessage.message.length < d ||
         e.welcomeMessage?.authorIds == null ||
-        0 === e.welcomeMessage.authorIds.length ||
-        null == e.newMemberActions ||
-        e.newMemberActions.length < 3
+        0 === e.welcomeMessage.authorIds.length
     )
         return !1;
     if (null != e.newMemberActions)

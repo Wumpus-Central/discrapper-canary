@@ -144,7 +144,7 @@ let y = {
             L(e, !0),
             _.A.isFullServerPreview(e))
         ) {
-            ((0, u.$u)(e, T, []), (0, u.Z$)(e, { optInEnabled: !0 }), (0, u.ID)(e, Array.from(r)));
+            ((0, u.$u)(e, T, []), (0, u.Z$)(e, { optInEnabled: l.length > 0 }), (0, u.ID)(e, Array.from(r)));
             let t = f.default.getCurrentUser();
             if (null != t) {
                 let n = h.Ay.getMember(e, t.id)?.flags ?? 0;

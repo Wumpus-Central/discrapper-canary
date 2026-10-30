@@ -99,40 +99,6 @@
     flex: 0
 }
 
-.progress__67225 {
-    overflow: hidden;
-    position: relative;
-    transform: translateZ(0);
-    width: 100%
-}
-
-.progressBar__67225 {
-    position: absolute;
-    width: 100%
-}
-
-.full-motion .animating__67225 {
-    transition: transform .2s ease-out
-}
-
-.xsmall__67225 {
-    height: 4px
-}
-
-.small__67225,
-.xsmall__67225 {
-    border-radius: 3px
-}
-
-.small__67225 {
-    height: 6px
-}
-
-.large__67225 {
-    border-radius: 4px;
-    height: 8px
-}
-
 .container_e9b3cb {
     background-color: var(--background-base-lower);
     border-radius: var(--radius-sm);
@@ -812,4 +778,4 @@
     margin-bottom: 16px
 }
 
-/*# sourceMappingURL=620db98e7cc2a403.css.map*/
+/*# sourceMappingURL=872e5456927daa14.css.map*/
