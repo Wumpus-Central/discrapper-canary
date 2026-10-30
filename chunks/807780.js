@@ -551,8 +551,8 @@ function eO(e) {
                     t.e("507775"),
                     t.e("662068"),
                     t.e("358608"),
-                    t.e("221500"),
-                ]).then(t.bind(t, 906724));
+                    t.e("866553"),
+                ]).then(t.bind(t, 950880));
                 return (t) => (0, i.jsx)(e, { ...t, channelType: null, guildId: n });
             });
         }, [n]),
@@ -615,13 +615,13 @@ var eR = t(202776),
     e$ = t(287809),
     e0 = t(403362),
     e1 = t(427262),
-    e4 = t(19575),
-    e5 = t(669953),
+    e5 = t(19575),
+    e4 = t(669953),
     e9 = t(817818),
     e6 = t(591552),
-    e2 = t(961973),
-    e8 = t(435558),
-    e3 = t.n(e8),
+    e8 = t(961973),
+    e2 = t(435558),
+    e3 = t.n(e2),
     e7 = t(665260),
     ne = t(355097);
 function nn(e) {
@@ -633,7 +633,7 @@ function ni(e) {
     return (
         l.useEffect(() => (nn(e), () => nn(e)), [e]),
         l.useEffect(() => {
-            null != n && 0 !== Object.keys(n).length && e5.A.updateOnboardingResponses(e);
+            null != n && 0 !== Object.keys(n).length && e4.A.updateOnboardingResponses(e);
         }, [e, n]),
         {
             handleSelectOption: l.useCallback(
@@ -698,9 +698,9 @@ function ni(e) {
                             return ((n[t] = { flags: (0, e7.lA)(i, ne.vv.OPT_IN_ENABLED, !1) }), n);
                         }, {}),
                         u = { ...c, ...o };
-                    (e5.A.selectOption(e, n.id, t.id, i),
+                    (e4.A.selectOption(e, n.id, t.id, i),
                         J.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId: e, overrides: u }),
-                        e5.A.updateRolesLocal(e, s, a));
+                        e4.A.updateRolesLocal(e, s, a));
                 },
                 [e],
             ),
@@ -773,7 +773,7 @@ function nA(e) {
         (0, eK.A)(t.id, t.getAvatarURL(n.id, (0, eL.FT)(nC)), { guildId: n.id });
     });
     let g = (0, eW.parseBioReact)(C?.bio),
-        A = e4.Ay.getEnableHardwareAcceleration() ? eG.Js : eG.eu;
+        A = e5.Ay.getEnableHardwareAcceleration() ? eG.Js : eG.eu;
     return (0, i.jsxs)("div", {
         className: nm.ME,
         children: [
@@ -853,8 +853,8 @@ function np(e) {
         [s, d] = l.useState(null),
         [c, o] = l.useState(new Set()),
         h = n?.options?.filter((e) => c.has(e.id)),
-        m = (0, e2.a)(h),
-        x = (0, e2.vV)(h),
+        m = (0, e8.a)(h),
+        x = (0, e8.vV)(h),
         C = (0, r.yK)([e6.A], () => e6.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nl.W)({
             guild: t,
@@ -944,8 +944,8 @@ function nf(e) {
         [s, d] = l.useState(null),
         [c, o] = l.useState(new Set()),
         h = n?.options?.filter((e) => c.has(e.id)),
-        m = (0, e2.a)(h),
-        x = (0, e2.vV)(h),
+        m = (0, e8.a)(h),
+        x = (0, e8.vV)(h),
         C = (0, r.yK)([e6.A], () => e6.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nl.W)({
             guild: t,
@@ -1056,7 +1056,7 @@ function nj(e) {
             if (c?.id != null && !eq.A.isFullServerPreview(c.id))
                 return () => {
                     ((0, ek.hK)(c.id, nh.P.GUILD_ONBOARDING_QUESTION, e6.A.ackIdForGuild(c.id)),
-                        e5.A.updateOnboardingResponses(c.id));
+                        e4.A.updateOnboardingResponses(c.id));
                 };
         }, [c?.id]));
     let f = l.useCallback(

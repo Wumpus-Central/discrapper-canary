@@ -1,39 +1,39 @@
-n.d(t, { y: () => D });
+n.d(t, { y: () => b });
 var i = n(477900),
-    s = n(582128),
-    r = n(683063),
-    a = n(834730),
-    o = n(273875),
-    l = n(208756),
-    c = n(798618),
-    d = n(916845),
-    u = n(627330),
-    _ = n(434544),
-    p = n(661531),
-    A = n(780964),
-    E = n(766075),
-    m = n(975571),
-    g = n(391523),
-    S = n(397306),
-    N = n(652215),
-    f = n(49999),
-    h = n(502209),
-    x = n(105292),
-    C = n(22579);
-function y(e) {
+    s = n(582128);
+if (221552 == n.j) var a = n(683063);
+if (221552 == n.j) var r = n(834730);
+if (221552 == n.j) var o = n(273875);
+if (221552 == n.j) var l = n(208756);
+if (221552 == n.j) var c = n(798618);
+if (221552 == n.j) var d = n(916845);
+if (221552 == n.j) var u = n(627330);
+if (221552 == n.j) var p = n(434544);
+if (221552 == n.j) var m = n(661531);
+var f = n(780964),
+    g = n(766075),
+    _ = n(975571),
+    A = n(391523),
+    x = n(397306),
+    h = n(652215),
+    j = n(49999),
+    v = n(502209),
+    k = n(105292),
+    y = n(22579);
+function E(e) {
     let { channel: t, targetElementRef: n, position: s } = e,
-        { visible: r, markAsDismissed: a } = (0, S.v)(t, "member_coachmark");
-    return r ? (0, i.jsx)(I, { guildId: t.guild_id, targetElementRef: n, position: s, markAsDismissed: a }) : null;
+        { visible: a, markAsDismissed: r } = (0, x.v)(t, "member_coachmark");
+    return a ? (0, i.jsx)(N, { guildId: t.guild_id, targetElementRef: n, position: s, markAsDismissed: r }) : null;
 }
-function I(e) {
-    let { guildId: t, targetElementRef: n, position: r, markAsDismissed: a } = e;
-    function S(e) {
+function N(e) {
+    let { guildId: t, targetElementRef: n, position: a, markAsDismissed: r } = e;
+    function x(e) {
         ("user:explicit" === e || "user:escape" === e) &&
-            ((0, g.Yy)({ noticeType: "member_coachmark", guildId: t }, "dismiss"), a(f.i.USER_DISMISS));
+            ((0, A.Yy)({ noticeType: "member_coachmark", guildId: t }, "dismiss"), r(j.i.USER_DISMISS));
     }
     return (
         s.useEffect(() => {
-            (0, g.Ws)({ noticeType: "member_coachmark", guildId: t });
+            (0, A.Ws)({ noticeType: "member_coachmark", guildId: t });
         }, [t]),
         (0, i.jsx)("div", {
             onClick: (e) => e.stopPropagation(),
@@ -41,40 +41,40 @@ function I(e) {
             onContextMenu: (e) => e.stopPropagation(),
             children: (0, i.jsx)(o.x, {
                 targetElementRef: n,
-                position: r,
-                onRequestClose: (e, t) => S(t),
+                position: a,
+                onRequestClose: (e, t) => x(t),
                 children: (0, i.jsxs)("div", {
-                    className: C._C,
+                    className: y._C,
                     "data-mana-component": "popover",
                     children: [
-                        (0, i.jsx)(d.q, { onClick: () => S("user:explicit") }),
+                        (0, i.jsx)(d.q, { onClick: () => x("user:explicit") }),
                         (0, i.jsx)("div", {
-                            className: C.Kk,
-                            children: (0, i.jsx)(_.s, { size: "lg", color: p.A.colors.ICON_STRONG, "aria-hidden": !0 }),
+                            className: y.Kk,
+                            children: (0, i.jsx)(p.s, { size: "lg", color: m.A.colors.ICON_STRONG, "aria-hidden": !0 }),
                         }),
                         (0, i.jsx)(u.D, {
-                            className: C.wx,
-                            title: x.intl.string(h.default.MrT2mn),
-                            body: x.intl.string(h.default.x9NGts),
+                            className: y.wx,
+                            title: k.intl.string(v.default.MrT2mn),
+                            body: k.intl.string(v.default.x9NGts),
                             textLink: {
-                                text: x.intl.string(h.default.eJZ8MS),
+                                text: k.intl.string(v.default.eJZ8MS),
                                 onClick: function () {
-                                    ((0, g.Yy)({ noticeType: "member_coachmark", guildId: t }, "open_settings"),
-                                        a(f.i.TAKE_ACTION),
-                                        (0, E.openUserSettings)(A.X.DATA_AND_PRIVACY_PANEL));
+                                    ((0, A.Yy)({ noticeType: "member_coachmark", guildId: t }, "open_settings"),
+                                        r(j.i.TAKE_ACTION),
+                                        (0, g.openUserSettings)(f.X.DATA_AND_PRIVACY_PANEL));
                                 },
                             },
                         }),
                         (0, i.jsx)(l.Z, {
                             actions: [
                                 {
-                                    text: x.intl.string(x.t.hvVgAZ),
+                                    text: k.intl.string(k.t.hvVgAZ),
                                     variant: "primary",
                                     onClick: function () {
-                                        ((0, g.Yy)({ noticeType: "member_coachmark", guildId: t }, "learn_more"),
-                                            a(f.i.TAKE_ACTION),
+                                        ((0, A.Yy)({ noticeType: "member_coachmark", guildId: t }, "learn_more"),
+                                            r(j.i.TAKE_ACTION),
                                             window.open(
-                                                m.A.getArticleURL(N.MVz.DISCOVERABLE_CONTENT_ON_THE_WEB),
+                                                _.A.getArticleURL(h.MVz.DISCOVERABLE_CONTENT_ON_THE_WEB),
                                                 "_blank",
                                                 "noopener,noreferrer",
                                             ));
@@ -89,26 +89,26 @@ function I(e) {
         })
     );
 }
-var k = n(948115);
-function D(e) {
+var C = n(948115);
+function b(e) {
     let { channel: t } = e,
         n = s.useRef(null),
-        o = x.intl.string(h.default.uneDIi);
+        o = k.intl.string(v.default.uneDIi);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("span", { className: k.O, "aria-hidden": !0 }),
-            (0, i.jsx)(r.u, {
+            (0, i.jsx)("span", { className: C.O, "aria-hidden": !0 }),
+            (0, i.jsx)(a.u, {
                 title: o,
-                body: x.intl.string(h.default["01KOls"]),
+                body: k.intl.string(v.default["01KOls"]),
                 position: "bottom",
                 children: (0, i.jsx)("span", {
                     ref: n,
-                    className: k.P,
+                    className: C.P,
                     tabIndex: 0,
-                    children: (0, i.jsx)(a.E, { variant: "text-sm/medium", color: "text-muted", children: o }),
+                    children: (0, i.jsx)(r.E, { variant: "text-sm/medium", color: "text-muted", children: o }),
                 }),
             }),
-            (0, i.jsx)(y, { channel: t, targetElementRef: n, position: "bottom" }),
+            (0, i.jsx)(E, { channel: t, targetElementRef: n, position: "bottom" }),
         ],
     });
 }
