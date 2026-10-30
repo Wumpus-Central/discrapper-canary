@@ -17,7 +17,7 @@ var r = n(73153),
     f = n(392739),
     g = n(573083),
     E = n(855859),
-    S = n(691344);
+    S = n(869018);
 let m = {
         capture_preview(e, t) {
             let { projectId: n, ws: r } = t;
@@ -62,7 +62,7 @@ let m = {
         preview_app_published(e, t) {
             let { projectId: n } = t,
                 r = u.Ay.getProject(n)?.preview_application_id;
-            null != r && ((0, p._b)(r).catch(() => void 0), !0 === e.has_activity && (0, S.K)(n, { known: !0 }));
+            null != r && ((0, p._b)(r).catch(() => void 0), !0 === e.has_activity && (0, S.V)(n, { known: !0 }));
         },
         preview_ready(e, t) {
             let { projectId: n } = t;

@@ -39,7 +39,7 @@ var i = n(158390),
     h = n(975189),
     f = n(639519),
     I = n(754027),
-    p = n(691344),
+    p = n(869018),
     T = n(153207),
     m = n(260498),
     g = n(951178),
@@ -76,7 +76,7 @@ async function v(e) {
             query: null != e ? { guild_id: e } : void 0,
             rejectWithError: !0,
         });
-        (l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: n, guildId: t }), (D = !1), P());
+        (l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: n, guildId: t }), (D = !1), M());
     } catch {
         l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_FAIL", guildId: t });
     }
@@ -84,12 +84,12 @@ async function v(e) {
     ((y = null), null != n && n !== t ? v(n) : D && ((D = !1), v()));
 }
 let b = !1;
-async function P() {
+async function M() {
     if (!b) {
         for (let e of ((b = !0), u.Ay.getResourceIds(C.P.CONJURING_PROJECT)))
             if (null == m.Ay.getProject(e)) {
                 if (!(0, E.tz)(e)) {
-                    M(e);
+                    P(e);
                     continue;
                 }
                 if ((await (0, s.yy)(5e3 * Math.random()), null == m.Ay.getProject(e)))
@@ -97,12 +97,12 @@ async function P() {
                         await q(e);
                     } catch (n) {
                         let t = (0, f.$k)(n);
-                        (403 === t || 404 === t) && M(e);
+                        (403 === t || 404 === t) && P(e);
                     }
             }
     }
 }
-function M(e) {
+function P(e) {
     l.h.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: e });
 }
 let U = new i.A(3e4, 3e5),
@@ -131,7 +131,7 @@ async function j(e) {
     } catch (e) {
         t = (0, f.$k)(e);
     }
-    return ((B = null), 200 !== t && (403 === t || 404 === t ? (x.add(e), M(e), !1) : (G.delete(e), !0)));
+    return ((B = null), 200 !== t && (403 === t || 404 === t ? (x.add(e), P(e), !1) : (G.delete(e), !0)));
 }
 async function W() {
     F = !0;
@@ -163,7 +163,7 @@ function z(e) {
     null == (0, h.KY)(e) && (0, A.Et)(e);
     let t = _.default.getCurrentUser()?.id ?? null,
         n = q(e, void 0, t);
-    (n.catch(() => void 0), $.set(e, { read: n, at: Date.now(), userId: t }), (0, p.K)(e));
+    (n.catch(() => void 0), $.set(e, { read: n, at: Date.now(), userId: t }), (0, p.V)(e));
 }
 function X(e) {
     let t = $.get(e);
