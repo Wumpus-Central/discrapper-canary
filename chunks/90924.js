@@ -99,21 +99,23 @@ function G(e) {
     };
 }
 function j(e, t) {
-    let n = [],
-        i = e.getGuildId();
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        i = [],
+        o = e.getGuildId();
     return (
-        [b.rbe.GUILD_CATEGORY, ...d.OU].includes(e.type) ||
-            n.push(
+        n &&
+            ![b.rbe.GUILD_CATEGORY, ...d.OU].includes(e.type) &&
+            i.push(
                 new Promise((t) => {
                     (m.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: b.EMb }));
                 }),
             ),
-        Promise.all(n).then(() => {
+        Promise.all(i).then(() => {
             let n =
                     (!e.isNSFW() || f.default.getCurrentUser()?.nsfwAllowed === !0) && t
                         ? m.A.getMessages(e.id).toArray().map(w.Z)
                         : [],
-                o = Object.values(y.A.getVoiceStatesForChannel(e.id)).map((t) => U(i, e.id, t));
+                i = Object.values(y.A.getVoiceStatesForChannel(e.id)).map((t) => U(o, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -121,10 +123,10 @@ function j(e, t) {
                 topic: e.topic,
                 bitrate: e.bitrate,
                 user_limit: e.userLimit,
-                guild_id: i,
+                guild_id: o,
                 position: e.position,
                 messages: n,
-                voice_states: o,
+                voice_states: i,
             };
         })
     );
