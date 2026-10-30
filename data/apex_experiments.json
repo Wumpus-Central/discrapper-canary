@@ -5566,6 +5566,22 @@
     }
   },
   {
+    "name": "2026-10-pinot-channel-discoverable",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-pinot-member",
     "kind": "user",
     "defaultConfig": {
