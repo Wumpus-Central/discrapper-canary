@@ -4,7 +4,7 @@ var i = n(205693),
     a = n(999926),
     s = n(763827),
     l = n(309010),
-    o = n(116956);
+    o = n(728557);
 function d() {
     return {
         channelId: l.Ay.getVoiceChannelId() ?? void 0,

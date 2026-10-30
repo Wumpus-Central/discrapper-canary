@@ -47,8 +47,8 @@ class m extends g.Ay.PersistedStore {
     getState() {
         return { ackedChannelIds: Array.from(A) };
     }
-    isAcked(e) {
-        return A.has(e);
+    isHidden(e) {
+        return A.has(e) || A.size >= 2;
     }
 }
 let _ = new m(E.h, {
@@ -69,7 +69,7 @@ function I(e, n) {
         i = (0, x.Z)(e),
         r = (0, C.m)(e, n),
         u = l && i && !r ? t : null,
-        s = (0, g.bG)([_], () => null != u && _.isAcked(u), [u]),
+        s = (0, g.bG)([_], () => null != u && _.isHidden(u), [u]),
         d = h.useCallback(() => {
             null != u && (0, S.G)(u);
         }, [u]);

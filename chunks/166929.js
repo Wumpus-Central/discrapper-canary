@@ -418,6 +418,12 @@ class R {
     get isVideoStopped() {
         return 0 !== this.videoStoppedReason;
     }
+    get videoStoppedReasons() {
+        return this.videoStoppedReason;
+    }
+    continueAggregationFrom(e, t) {
+        ((this.previousAggregationStats = e.previousAggregationStats), t && (this.statsWindow = [...e.statsWindow]));
+    }
     get videoStoppedDuration() {
         return this.videoStoppedWatch.elapsed();
     }
