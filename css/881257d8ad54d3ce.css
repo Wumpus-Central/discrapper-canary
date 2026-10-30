@@ -10,12 +10,22 @@
 
 .searchIcon__824d3 {
     align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
     cursor: pointer;
     display: flex;
-    flex: 0 1 var(--custom-search-bar-icon-width);
+    height: 32px;
     justify-content: center;
-    max-width: var(--custom-search-bar-icon-width);
-    min-width: var(--custom-search-bar-icon-width)
+    min-height: 32px;
+    min-width: 32px;
+    transition: background-color .1s ease;
+    width: 32px
+}
+
+.searchIcon__824d3:active,
+.searchIcon__824d3:hover {
+    background-color: var(--background-mod-normal)
 }
 
 .searchFloating__824d3 {
@@ -72,4 +82,4 @@
     display: none
 }
 
-/*# sourceMappingURL=493a96c9479c834e.css.map*/
+/*# sourceMappingURL=881257d8ad54d3ce.css.map*/
