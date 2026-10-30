@@ -3251,6 +3251,7 @@ class eJ extends O.G {
                     "PREMIUM_SUBSCRIPTION_GROUP_ROLE_",
                 ],
             },
+            { no: 4, name: "premium_trial_ends_at", kind: "message", T: () => L.D },
         ]);
     }
     create(e) {
@@ -3276,6 +3277,9 @@ class eJ extends O.G {
                 case 3:
                     r.premiumSubscriptionGroupRole = e.int32();
                     break;
+                case 4:
+                    r.premiumTrialEndsAt = L.D.internalBinaryRead(e, e.uint32(), n, r.premiumTrialEndsAt);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -3289,7 +3293,9 @@ class eJ extends O.G {
     internalBinaryWrite(e, t, n) {
         (0 !== e.premiumSource && t.tag(1, S.O0.Varint).int32(e.premiumSource),
             0 !== e.premiumSubscriptionType && t.tag(2, S.O0.Varint).int32(e.premiumSubscriptionType),
-            0 !== e.premiumSubscriptionGroupRole && t.tag(3, S.O0.Varint).int32(e.premiumSubscriptionGroupRole));
+            0 !== e.premiumSubscriptionGroupRole && t.tag(3, S.O0.Varint).int32(e.premiumSubscriptionGroupRole),
+            e.premiumTrialEndsAt &&
+                L.D.internalBinaryWrite(e.premiumTrialEndsAt, t.tag(4, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
