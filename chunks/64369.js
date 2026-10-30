@@ -4286,7 +4286,6 @@ let ll = Object.freeze({
             let { message: t, channel: n, compact: i } = e;
             return (0, l.jsx)(s9, { message: t, channel: n, compact: i });
         },
-        [P.lAJ.GUILD_BOOST_UPSELL]: void 0,
         [P.lAJ.FRIEND_REQUEST_ACCEPTED]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, l.jsx)(iF, { message: t, channel: n, compact: i });

@@ -130,7 +130,6 @@ var i,
         (i.GUILD_POWERUPS_MARKETING = "guild powerups - marketing"),
         (i.GUILD_POWERUPS_MARKETING_VIDEO_MODAL = "guild powerups - marketing video modal"),
         (i.GUILD_BOOSTING_PREMIUM_UPSELL = "guild boosting premium upsell"),
-        (i.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL = "guild boosting first time booster upsell"),
         (i.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE = "guild boosting announcement message"),
         (i.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE_FIRST_TIME_BOOSTER =
             "guild boosting announcement message first time booster"),
