@@ -29,8 +29,8 @@ var x = n(562708),
     k = n(442433),
     _ = n(537652),
     R = n(212245),
-    O = n(139286),
-    w = n(520117),
+    w = n(139286),
+    O = n(520117),
     M = n(915089),
     L = n(724511),
     P = n(850992),
@@ -277,8 +277,8 @@ function X(e) {
             listPadding: k,
             gridNavigatorId: _,
             gridNotice: R,
-            renderHeader: O,
-            renderUpsell: w,
+            renderHeader: w,
+            renderUpsell: O,
         } = e,
         M = i.useRef(null),
         L = i.useRef(null),
@@ -362,7 +362,7 @@ function X(e) {
     });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != O ? O(er) : (0, l.jsxs)("div", { className: Z.wx, children: [" ", er, " "] }),
+            null != w ? w(er) : (0, l.jsxs)("div", { className: Z.wx, children: [" ", er, " "] }),
             U && null != f
                 ? f(Z.p$)
                 : (0, l.jsxs)(l.Fragment, {
@@ -393,7 +393,7 @@ function X(e) {
                                             rowHeight: b,
                                             sectionHeaderHeight: I,
                                             sectionFooterHeight: v,
-                                            renderUpsell: w,
+                                            renderUpsell: O,
                                             onScroll: u,
                                         })
                                       : null,
@@ -452,11 +452,11 @@ function eR(e) {
     let u = e_(o, s);
     u.length > 0 && t.push({ key: r, categoryInfo: { type: r }, items: u });
 }
-function eO(e, t) {
+function ew(e, t) {
     let n = t.get("0") ?? ej.pD;
     e.push({ key: ed.Cx.DEFAULTS, categoryInfo: { type: ed.Cx.DEFAULTS }, items: e_(n, eT.U9) });
 }
-var ew = n(258204),
+var eO = n(258204),
     eM = n(340368),
     eL = n(837381),
     eP = n(866665),
@@ -796,7 +796,7 @@ let tx = 32 + et.kg - 8,
     };
 function tS(e) {
     let { onSeen: t } = e,
-        n = (0, w.A)({ onVisible: t, minTimeVisibleMs: 500 });
+        n = (0, O.A)({ onVisible: t, minTimeVisibleMs: 500 });
     return (0, l.jsx)("div", { ref: n, "aria-hidden": !0 });
 }
 function ty(e) {
@@ -930,8 +930,8 @@ function tb(e) {
         } = e,
         { analyticsLocations: T } = (0, c.Ay)(),
         { analyticsLocations: _ } = (0, c.Ay)(u.A.PREMIUM_UPSELL),
-        { location: w } = (0, R.p)(),
-        L = i.useMemo(() => ({ ...w, section: ev.JJy.SOUNDBOARD_SOUND_PICKER }), [w]),
+        { location: O } = (0, R.p)(),
+        L = i.useMemo(() => ({ ...O, section: ev.JJy.SOUNDBOARD_SOUND_PICKER }), [O]),
         [D, U] = i.useState(null),
         V = (0, E.bG)([es.default], () => es.default.getCurrentUser()),
         F = (0, W.TW)(V, ek.PremiumTypes.TIER_2),
@@ -1021,7 +1021,7 @@ function tb(e) {
                     l = 0,
                     i = [];
                 return n
-                    ? (eO(i, s),
+                    ? (ew(i, s),
                       {
                           categories: i,
                           availableSounds: s.get("0") ?? ej.pD,
@@ -1090,7 +1090,7 @@ function tb(e) {
                               filterOutEmptyCurrentGuild: t,
                               sortSoundsFn: c,
                           }),
-                      m || eO(i, s),
+                      m || ew(i, s),
                       !(function (e) {
                           let {
                               sections: t,
@@ -1111,7 +1111,7 @@ function tb(e) {
                                   });
                           }
                       })({ sections: i, guilds: h, currentGuildId: f?.id, allSounds: s, hasNitro: r, sortSoundsFn: c }),
-                      m && eO(i, s),
+                      m && ew(i, s),
                       i.forEach((t) => {
                           t.categoryInfo.type === ed.Cx.GUILD &&
                               (t.categoryInfo.isNitroLocked ? (l += t.items.length) : (e += t.items.length));
@@ -1128,7 +1128,7 @@ function tb(e) {
                       });
             }, [d, s, a, !0, f, p, t, m, h, n, u, r, c, x, S, A]);
         })(r, void 0, b),
-        { isNewSound: Z, markGuildSeen: et } = (0, ew.A)(),
+        { isNewSound: Z, markGuildSeen: et } = (0, eO.A)(),
         eo = i.useMemo(() => {
             let e = new Set();
             for (let { categoryInfo: t, items: n } of q)
@@ -1186,9 +1186,8 @@ function tb(e) {
             (e, t) => {
                 switch (e.item.type) {
                     case ed.uq.SOUND:
-                        let n = tE[e?.category] ?? null,
-                            l = e?.item.index;
-                        return e1(e.item.sound, null == n ? T : [...T, n], t?.shiftKey !== !0, l);
+                        let n = e?.item.index;
+                        return e1(e.item.sound, [...T, tE[e.category]], t?.shiftKey !== !0, n);
                     case ed.uq.ADD_SOUND:
                         return (o(), td(e.item.guild.id));
                 }
@@ -1217,7 +1216,7 @@ function tb(e) {
                                         channel: r,
                                         interactive: eZ ? eX : !G,
                                         forceSecondaryActions: !0,
-                                        analyticsLocations: T,
+                                        analyticsLocations: [...T, tE[e.category]],
                                     },
                                     rowIndex: i.rowIndex,
                                     columnIndex: t,
@@ -1400,7 +1399,7 @@ function tb(e) {
         ),
         th = (0, E.bG)([er.A], () => er.A.getMediaSessionId());
     return (
-        (0, O.A)({
+        (0, w.A)({
             type: x.ImpressionTypes.POPOUT,
             name: x.ImpressionNames.SOUNDBOARD_POPOUT,
             properties: {
@@ -1488,8 +1487,8 @@ function tv(e) {
                 (p.E7(), f.bW.loadIfNecessary());
             }, []),
         },
-        { analyticsLocations: O } = (0, c.Ay)(u.A.SOUNDBOARD_POPOUT),
-        w = I ? void 0 : { height: 520 };
+        { analyticsLocations: w } = (0, c.Ay)(u.A.SOUNDBOARD_POPOUT),
+        O = I ? void 0 : { height: 520 };
     return (
         i.useEffect(() => {
             R();
@@ -1498,9 +1497,9 @@ function tv(e) {
             I || (0, d.Ri)("");
         }, [I]),
         (0, l.jsx)(c.f5, {
-            value: O,
+            value: w,
             children: (0, l.jsxs)(a.l, {
-                style: w,
+                style: O,
                 className: s()(tI.Nz, { [tI.Bg]: _, [tI.yV]: I }),
                 children: [
                     k && null != t && n?.id != null ? (0, l.jsx)(h.A, { guildId: t, channelId: n.id }) : null,

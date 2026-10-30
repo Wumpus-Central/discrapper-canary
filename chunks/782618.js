@@ -23,9 +23,9 @@ var i = n(477900),
     C = n(105292),
     O = n(948611);
 function R(e) {
-    let { sound: t, disabled: n, setIsChildTooltipShowing: a, previewSound: l } = e,
-        { emojiId: o, emojiName: A } = t,
-        { text: h, icon: f } = (function (e) {
+    let { sound: t, disabled: n, setIsChildTooltipShowing: a, previewSound: l, analyticsLocations: o } = e,
+        { emojiId: A, emojiName: h } = t,
+        { text: f, icon: I } = (function (e) {
             switch (e) {
                 case m.p0.FAVORITE:
                     return {
@@ -41,24 +41,24 @@ function R(e) {
                     return { text: null, icon: null };
             }
         })(t.type),
-        I = r.useCallback(() => {
+        p = r.useCallback(() => {
             a(!0);
         }, [a]),
-        p = r.useCallback(() => {
+        T = r.useCallback(() => {
             a(!1);
         }, [a]),
-        T = (0, i.jsx)("div", {
-            onMouseEnter: I,
-            onMouseLeave: p,
-            children: (0, i.jsx)(S.PI, { sound: t, previewSound: l }),
-        }),
         g = (0, i.jsx)("div", {
-            onMouseEnter: null != f ? I : void 0,
-            onMouseLeave: null != f ? p : void 0,
+            onMouseEnter: p,
+            onMouseLeave: T,
+            children: (0, i.jsx)(S.PI, { sound: t, previewSound: l, analyticsLocations: o }),
+        }),
+        N = (0, i.jsx)("div", {
+            onMouseEnter: null != I ? p : void 0,
+            onMouseLeave: null != I ? T : void 0,
             children: (0, i.jsx)(u.m, {
-                text: h,
+                text: f,
                 position: "top",
-                children: (0, i.jsx)("div", { className: O.Wo, children: f }),
+                children: (0, i.jsx)("div", { className: O.Wo, children: I }),
             }),
         });
     return n
@@ -68,11 +68,11 @@ function R(e) {
                   (0, i.jsx)(_.LockIcon, {
                       size: "refresh_sm",
                       color: "currentColor",
-                      className: s()(O.C4, O.hz, O.B3, { [O.hn]: null != o || null != A }),
+                      className: s()(O.C4, O.hz, O.B3, { [O.hn]: null != A || null != h }),
                   }),
                   (0, i.jsx)("div", {
                       className: O.d7,
-                      children: (0, i.jsxs)("div", { className: O.O5, children: [T, g] }),
+                      children: (0, i.jsxs)("div", { className: O.O5, children: [g, N] }),
                   }),
               ],
           })
@@ -82,7 +82,7 @@ function R(e) {
                   (0, i.jsx)("div", { className: O.LQ }),
                   (0, i.jsxs)("div", {
                       className: O.O5,
-                      children: [T, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), g],
+                      children: [g, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), N],
                   }),
               ],
           });
@@ -148,7 +148,13 @@ function L(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(R, { sound: t, disabled: F, setIsChildTooltipShowing: V, previewSound: M }),
+                    (0, i.jsx)(R, {
+                        sound: t,
+                        disabled: F,
+                        setIsChildTooltipShowing: V,
+                        previewSound: M,
+                        analyticsLocations: m,
+                    }),
                 ],
             }),
         }),
