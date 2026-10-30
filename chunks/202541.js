@@ -1,123 +1,122 @@
 n.d(t, {
     Hp: () => eI,
-    T: () => tD,
+    T: () => ty,
     J7: () => em,
-    f5: () => th,
+    f5: () => tA,
     $I: () => P,
     np: () => v,
     bi: () => eT,
-    l1: () => tm,
-    $3: () => tA,
-    GI: () => e8,
-    OJ: () => tS,
-    U4: () => eY,
-    _$: () => tN,
+    l1: () => tT,
+    $3: () => tE,
+    GI: () => e7,
+    OJ: () => tg,
+    U4: () => eW,
+    _$: () => tS,
     fY: () => ep,
     lk: () => U,
-    uJ: () => tI,
+    uJ: () => tf,
     q: () => eb,
     Jm: () => w,
     a7: () => eL,
-    eZ: () => e6,
-    UX: () => ej,
+    eZ: () => e4,
+    UX: () => eH,
     EV: () => es,
-    TG: () => ti,
+    TG: () => tn,
     Qo: () => eP,
-    e: () => e1,
-    xc: () => ty,
-    tz: () => tl,
-    ly: () => eH,
+    e: () => e0,
+    xc: () => tL,
+    tz: () => ts,
+    ly: () => eV,
     pW: () => K,
     WN: () => V,
     KG: () => ev,
-    ZC: () => e$,
+    ZC: () => eK,
     u0: () => H,
-    gb: () => e4,
+    gb: () => e5,
     V2: () => ek,
-    DA: () => ta,
-    BR: () => eV,
+    DA: () => tr,
+    BR: () => eB,
     oX: () => et,
     EG: () => eU,
-    VD: () => tL,
+    VD: () => tR,
     TU: () => eD,
     FB: () => ed,
     tv: () => x,
-    sp: () => tR,
+    sp: () => tO,
     YV: () => z,
-    iu: () => eX,
-    XE: () => to,
+    iu: () => ez,
+    XE: () => tl,
     lj: () => eG,
     pe: () => k,
     hd: () => ee,
-    Ae: () => ts,
-    nk: () => e9,
+    Ae: () => ta,
+    nk: () => e8,
     i_: () => ew,
-    Cq: () => tC,
+    Cq: () => tN,
     Ff: () => Q,
     Dw: () => eg,
-    tU: () => tu,
-    uP: () => td,
-    LE: () => tr,
-    OW: () => eQ,
+    tU: () => tc,
+    uP: () => to,
+    LE: () => ti,
+    OW: () => eZ,
     Eg: () => eu,
     gD: () => j,
     HF: () => ex,
-    f3: () => e5,
+    f3: () => e3,
     ph: () => eo,
     VY: () => Y,
-    JR: () => tE,
+    JR: () => t_,
     En: () => X,
     W7: () => eM,
-    CW: () => eB,
+    CW: () => eF,
     k4: () => eh,
-    Jo: () => tT,
+    Jo: () => tp,
     T7: () => F,
     WT: () => Z,
     Vk: () => b,
     yo: () => eR,
     CA: () => eE,
-    xH: () => eF,
-    lA: () => e2,
-    pd: () => tf,
+    lA: () => e1,
+    pd: () => th,
     Bu: () => ec,
     PremiumTypes: () => M,
-    Wx: () => tp,
-    OO: () => e3,
-    Kq: () => tc,
+    Wx: () => tI,
+    OO: () => e2,
+    Kq: () => td,
     a5: () => ei,
-    TP: () => tn,
+    TP: () => tt,
     ci: () => G,
-    sC: () => eK,
+    sC: () => eY,
     gd: () => eN,
     Mr: () => J,
-    Qm: () => ez,
-    o2: () => t_,
+    Qm: () => e$,
+    o2: () => tu,
     L9: () => ea,
     h7: () => e_,
     zE: () => q,
     M4: () => en,
-    xs: () => eJ,
+    xs: () => eQ,
     Tt: () => eO,
-    Pn: () => eq,
-    vQ: () => tg,
+    Pn: () => eX,
+    vQ: () => tm,
     G4: () => eA,
-    NL: () => tv,
-    d8: () => te,
-    RG: () => eW,
+    NL: () => tD,
+    d8: () => e9,
+    RG: () => ej,
     MX: () => eS,
     U1: () => er,
-    kb: () => e0,
+    kb: () => eJ,
     bx: () => el,
-    w6: () => e7,
+    w6: () => e6,
     Uk: () => eC,
     oz: () => B,
     BL: () => $,
     JM: () => W,
     MB: () => ey,
     pX: () => ef,
-    ON: () => eZ,
-    Ac: () => tO,
-    y7: () => tt,
+    ON: () => eq,
+    Ac: () => tC,
+    y7: () => te,
 });
 var i,
     r,
@@ -423,22 +422,21 @@ let J = Object.freeze({ 3: D.t["t9uG/o"], 1: D.t.FSOz78, 2: D.t.lG6a5x }),
     eG = "1215346678383509504",
     ex = "1215366184820539392",
     ek = "1488790996522238054",
-    eF = "1509344915195297792",
-    eB = "1223319122125783040",
-    eV = "1223380890109870080",
-    eH = [eB, eV],
-    ej = "1503844767820152833",
-    eW = "1503844767820152834",
-    eY = [ej, eW],
-    eK = "1542641936282681344",
-    e$ = "2026-07-tr-offer-1-campaign",
-    ez = 1e4,
-    eX = "tr-offer-1-payment-modal-banner",
-    eq = [eR],
-    eZ = [],
-    eQ = 8,
-    eJ = 200,
-    e0 = Object.freeze({
+    eF = "1223319122125783040",
+    eB = "1223380890109870080",
+    eV = [eF, eB],
+    eH = "1503844767820152833",
+    ej = "1503844767820152834",
+    eW = [eH, ej],
+    eY = "1542641936282681344",
+    eK = "2026-07-tr-offer-1-campaign",
+    e$ = 1e4,
+    ez = "tr-offer-1-payment-modal-banner",
+    eX = [eR],
+    eq = [],
+    eZ = 8,
+    eQ = 200,
+    eJ = Object.freeze({
         [eh]: { id: eh, skus: ["521847234246082599"] },
         [ef]: { id: ef, skus: ["521847234246082599"] },
         [eI]: { id: eI, skus: ["521847234246082599"] },
@@ -450,7 +448,7 @@ let J = Object.freeze({ 3: D.t["t9uG/o"], 1: D.t.FSOz78, 2: D.t.lG6a5x }),
         [eO]: { id: eO, skus: ["521847234246082599"] },
         [eR]: { id: eR, skus: ["521847234246082599"] },
     });
-var e1 =
+var e0 =
         (((c = {}).ANIMATED_GUILD_BANNER_TOOLTIP = "animated_guild_banner_tooltip"),
         (c.EMOJI_PICKER_SEARCH = "emoji_picker_search"),
         (c.EMOJI_PICKER_EMOJI_CLICKED = "emoji_picker_emoji_clicked"),
@@ -553,32 +551,32 @@ var e1 =
         (c.APP_ICON_INLINE_UPSELL = "app_icons_inline_upsell"),
         (c.STREAM_QUALITY_UPSELL = "stream_quality_upsell"),
         c),
-    e2 =
+    e1 =
         (((u = {})[(u.PREMIUM_TIER_1 = 1)] = "PREMIUM_TIER_1"),
         (u[(u.PREMIUM_TIER_2 = 2)] = "PREMIUM_TIER_2"),
         (u[(u.GUILD_BOOST = 4)] = "GUILD_BOOST"),
         (u[(u.PREMIUM_TIER_0 = 8)] = "PREMIUM_TIER_0"),
         u);
-let e3 = Object.freeze({
+let e2 = Object.freeze({
         "978380684370378762": 8,
         "521846918637420545": 1,
         "521847234246082599": 2,
         "590663762298667008": 4,
     }),
-    e5 = 524288e3,
-    e4 = 0x40000000,
-    e6 = 0x3200000,
-    e7 = 0x6400000,
-    e8 = 5,
-    e9 = { [L.TVA.NONE]: e8, [L.TVA.TIER_1]: 10, [L.TVA.TIER_2]: 15, [L.TVA.TIER_3]: 30 },
-    te = {
-        [L.TVA.NONE]: e9[L.TVA.NONE],
-        [L.TVA.TIER_1]: e9[L.TVA.NONE] + e9[L.TVA.TIER_1],
-        [L.TVA.TIER_2]: e9[L.TVA.NONE] + e9[L.TVA.TIER_1] + e9[L.TVA.TIER_2],
-        [L.TVA.TIER_3]: e9[L.TVA.NONE] + e9[L.TVA.TIER_1] + e9[L.TVA.TIER_2] + e9[L.TVA.TIER_3],
+    e3 = 524288e3,
+    e5 = 0x40000000,
+    e4 = 0x3200000,
+    e6 = 0x6400000,
+    e7 = 5,
+    e8 = { [L.TVA.NONE]: e7, [L.TVA.TIER_1]: 10, [L.TVA.TIER_2]: 15, [L.TVA.TIER_3]: 30 },
+    e9 = {
+        [L.TVA.NONE]: e8[L.TVA.NONE],
+        [L.TVA.TIER_1]: e8[L.TVA.NONE] + e8[L.TVA.TIER_1],
+        [L.TVA.TIER_2]: e8[L.TVA.NONE] + e8[L.TVA.TIER_1] + e8[L.TVA.TIER_2],
+        [L.TVA.TIER_3]: e8[L.TVA.NONE] + e8[L.TVA.TIER_1] + e8[L.TVA.TIER_2] + e8[L.TVA.TIER_3],
     },
-    tt = { [L.TVA.NONE]: eQ, [L.TVA.TIER_1]: 24, [L.TVA.TIER_2]: 36, [L.TVA.TIER_3]: 48 };
-var tn =
+    te = { [L.TVA.NONE]: eZ, [L.TVA.TIER_1]: 24, [L.TVA.TIER_2]: 36, [L.TVA.TIER_3]: 48 };
+var tt =
     (((_ = {})[(_.EMOJI = 1)] = "EMOJI"),
     (_[(_.AUDIO = 2)] = "AUDIO"),
     (_[(_.ANIMATED = 3)] = "ANIMATED"),
@@ -591,7 +589,7 @@ var tn =
     (_[(_.STAGE_VIDEO = 12)] = "STAGE_VIDEO"),
     (_[(_.SOUNDBOARD = 13)] = "SOUNDBOARD"),
     _);
-let ti = Object.freeze({
+let tn = Object.freeze({
         [L.TVA.NONE]: {
             features: [],
             limits: {
@@ -600,8 +598,8 @@ let ti = Object.freeze({
                 fileSize: L.TbF,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: "720p",
-                soundboardSounds: tt[L.TVA.NONE],
-                stickers: te[L.TVA.NONE],
+                soundboardSounds: te[L.TVA.NONE],
+                stickers: e9[L.TVA.NONE],
                 stageVideoUsers: L._i_,
             },
         },
@@ -613,8 +611,8 @@ let ti = Object.freeze({
                 fileSize: L.TbF,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "720p",
-                soundboardSounds: tt[L.TVA.TIER_1],
-                stickers: te[L.TVA.TIER_1],
+                soundboardSounds: te[L.TVA.TIER_1],
+                stickers: e9[L.TVA.TIER_1],
                 stageVideoUsers: L._i_,
             },
         },
@@ -631,8 +629,8 @@ let ti = Object.freeze({
                 fileSize: 0x3200000,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
-                soundboardSounds: tt[L.TVA.TIER_2],
-                stickers: te[L.TVA.TIER_2],
+                soundboardSounds: te[L.TVA.TIER_2],
+                stickers: e9[L.TVA.TIER_2],
                 stageVideoUsers: L.nyz,
             },
         },
@@ -651,13 +649,13 @@ let ti = Object.freeze({
                 fileSize: 0x6400000,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
-                soundboardSounds: tt[L.TVA.TIER_3],
-                stickers: te[L.TVA.TIER_3],
+                soundboardSounds: te[L.TVA.TIER_3],
+                stickers: e9[L.TVA.TIER_3],
                 stageVideoUsers: L.uaN,
             },
         },
     }),
-    tr = [
+    ti = [
         "978380692553465866",
         "1024422698568122368",
         "511651871736201216",
@@ -668,8 +666,8 @@ let ti = Object.freeze({
         "511651885459963904",
         "1432523012455792640",
     ],
-    ta = ["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"];
-var ts =
+    tr = ["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"];
+var ta =
         (((E = {}).SOUNDBOARD_PLAY = "soundboard play"),
         (E.PROFILE_THEME_COLOR = "profile_theme_color"),
         (E.PROFILE_BANNER = "profile_banner"),
@@ -681,24 +679,24 @@ var ts =
         (E.TYPING_INDICATOR = "typing_indicator"),
         (E.PRESET = "preset"),
         E),
-    tl = (((A = {}).FREE = "free"), (A.PREMIUM_STANDARD = "premium-standard"), A);
-let to = {
+    ts = (((A = {}).FREE = "free"), (A.PREMIUM_STANDARD = "premium-standard"), A);
+let tl = {
     "1024422698568122368": 16,
     "511651876987469824": 16,
     "511651885459963904": 16,
     "944037208325619722": 8,
     "642251038925127690": 5,
 };
-var td =
+var to =
     (((h = {}).HIGH_STREAMING_QUALITY = "high_streaming_quality"),
     (h.MID_STREAMING_QUALITY = "mid_streaming_quality"),
     h);
-let tc = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
-var tu =
+let td = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
+var tc =
         (((f = {})[(f.UserSettings = 0)] = "UserSettings"),
         (f[(f.ApplicationStoreHome = 1)] = "ApplicationStoreHome"),
         f),
-    t_ =
+    tu =
         (((I = {})[(I.SNOWGLOBE = 1)] = "SNOWGLOBE"),
         (I[(I.BOX = 2)] = "BOX"),
         (I[(I.CUP = 3)] = "CUP"),
@@ -712,7 +710,7 @@ var tu =
         (I[(I.SEASONAL_COFFEE = 11)] = "SEASONAL_COFFEE"),
         (I[(I.NITROWEEN_STANDARD = 12)] = "NITROWEEN_STANDARD"),
         I),
-    tE =
+    t_ =
         (((p = {}).USER_NOT_VERIFIED = "user_not_verified"),
         (p.NO_CODE_BODY = "no_code_body"),
         (p.NO_PROMOTION = "no_promotion"),
@@ -721,15 +719,15 @@ var tu =
         (p.PREVIOUS_SUBSCRIBER = "previous_subscriber"),
         (p.BLOCKED_PAYMENT = "blocked_payment"),
         p);
-let tA = Object.freeze({ IS_BLOCKED_IOS: 32, IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64, SUPPRESS_NOTIFICATION: 128 }),
-    th = Object.freeze({ 3: { fileSize: 0x3200000 }, 1: { fileSize: 0x3200000 }, 2: { fileSize: e5 } });
-var tf = (((T = {}).BOOST = "boost"), (T.DISMISS = "dismiss"), T);
-let tI = new Set(["PL", "TR"]),
-    tp = [1, 2, 3];
-[8, 9, 11, 10].concat(tp);
-let tT = 190;
-var tm = (((m = {}).VIEW_ALL = "view_all"), (m.SEND_MESSAGE = "send_message"), m),
-    tg =
+let tE = Object.freeze({ IS_BLOCKED_IOS: 32, IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64, SUPPRESS_NOTIFICATION: 128 }),
+    tA = Object.freeze({ 3: { fileSize: 0x3200000 }, 1: { fileSize: 0x3200000 }, 2: { fileSize: e3 } });
+var th = (((T = {}).BOOST = "boost"), (T.DISMISS = "dismiss"), T);
+let tf = new Set(["PL", "TR"]),
+    tI = [1, 2, 3];
+[8, 9, 11, 10].concat(tI);
+let tp = 190;
+var tT = (((m = {}).VIEW_ALL = "view_all"), (m.SEND_MESSAGE = "send_message"), m),
+    tm =
         (((g = {})[(g.DM_CHANNEL = 0)] = "DM_CHANNEL"),
         (g[(g.SHOP_PAGE = 1)] = "SHOP_PAGE"),
         (g[(g.USER_PROFILE_WISHLIST = 2)] = "USER_PROFILE_WISHLIST"),
@@ -737,10 +735,10 @@ var tm = (((m = {}).VIEW_ALL = "view_all"), (m.SEND_MESSAGE = "send_message"), m
         (g[(g.GUILD_CHANNEL = 4)] = "GUILD_CHANNEL"),
         (g[(g.BADGE_DIRECTORY = 5)] = "BADGE_DIRECTORY"),
         g);
-let tS = 1,
-    tN = 30,
-    tC = 20;
-var tO =
+let tg = 1,
+    tS = 30,
+    tN = 20;
+var tC =
     (((S = {}).PREMIUM_TENURE_1_MONTH = "premium_tenure_1_month_v2"),
     (S.PREMIUM_TENURE_3_MONTH = "premium_tenure_3_month_v2"),
     (S.PREMIUM_TENURE_6_MONTH = "premium_tenure_6_month_v2"),
@@ -750,7 +748,7 @@ var tO =
     (S.PREMIUM_TENURE_60_MONTH = "premium_tenure_60_month_v2"),
     (S.PREMIUM_TENURE_72_MONTH = "premium_tenure_72_month_v2"),
     S);
-let tR = [
+let tO = [
         "premium_tenure_1_month_v2",
         "premium_tenure_3_month_v2",
         "premium_tenure_6_month_v2",
@@ -760,7 +758,7 @@ let tR = [
         "premium_tenure_60_month_v2",
         "premium_tenure_72_month_v2",
     ],
-    tL = {
+    tR = {
         premium_tenure_1_month_v2: {
             id: "premium_tenure_1_month_v2",
             nameUnformatted: D.t.LR1C0a,
@@ -834,13 +832,13 @@ let tR = [
             rarity: O.x.MYTHIC,
         },
     };
-var ty =
+var tL =
         (((N = {})[(N.NONE = 0)] = "NONE"),
         (N[(N.FP_ONLY = 1)] = "FP_ONLY"),
         (N[(N.FP_SUB_PAUSED = 2)] = "FP_SUB_PAUSED"),
         N),
-    tD = (((C = {})[(C.HOUR = 1)] = "HOUR"), (C[(C.DAY = 2)] = "DAY"), C);
-let tv = {
+    ty = (((C = {})[(C.HOUR = 1)] = "HOUR"), (C[(C.DAY = 2)] = "DAY"), C);
+let tD = {
     [R.j.PREMIUM_TIER_2_1_HOUR]: [1, 1],
     [R.j.PREMIUM_TIER_2_1_DAY]: [2, 1],
     [R.j.PREMIUM_TIER_2_3_DAY]: [2, 3],

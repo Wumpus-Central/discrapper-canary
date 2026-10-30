@@ -1019,7 +1019,7 @@ function tE(e) {
                                                         s.e("286615"),
                                                         s.e("735042"),
                                                         s.e("311541"),
-                                                        s.e("795854"),
+                                                        s.e("274227"),
                                                         s.e("870088"),
                                                         s.e("300641"),
                                                         s.e("747802"),
@@ -1890,7 +1890,7 @@ let sS = function (e) {
                                 s.e("286615"),
                                 s.e("735042"),
                                 s.e("311541"),
-                                s.e("795854"),
+                                s.e("274227"),
                                 s.e("870088"),
                                 s.e("300641"),
                                 s.e("747802"),
@@ -3123,12 +3123,11 @@ function nh(e) {
         r = l?.subscriptionTrial,
         d = r?.skuId === t,
         m = i && d && null != r,
-        g = (0, ep.p)(),
         {
-            planRadioOptions: p,
-            selectedPlanId: f,
-            setSelectedPlanId: h,
-            shouldSuppressDiscountCta: N,
+            planRadioOptions: g,
+            selectedPlanId: p,
+            setSelectedPlanId: f,
+            shouldSuppressDiscountCta: h,
         } = (function (e) {
             let { skuId: t } = e,
                 [s, i] = o.useState(null),
@@ -3222,14 +3221,14 @@ function nh(e) {
                 k = U === a ? _ : U === n && v;
             return { planRadioOptions: L, selectedPlanId: U, setSelectedPlanId: i, shouldSuppressDiscountCta: N && !k };
         })({ skuId: t }),
-        A = i && null == g ? "expressive" : "secondary",
-        { buttonText: j } = (0, ne.A)({ subscriptionTier: t }),
-        { subscribeButtonProps: E } = (0, i4.$)({
+        N = i ? "expressive" : "secondary",
+        { buttonText: A } = (0, ne.A)({ subscriptionTier: t }),
+        { subscribeButtonProps: j } = (0, i4.$)({
             subscriptionTier: t,
-            variantOverride: A,
-            buttonTextOverride: N ? j : void 0,
+            variantOverride: N,
+            buttonTextOverride: h ? A : void 0,
         }),
-        b = (0, c.jsxs)(et.B, {
+        E = (0, c.jsxs)(et.B, {
             direction: "vertical",
             gap: 0,
             fullWidth: !0,
@@ -3296,46 +3295,38 @@ function nh(e) {
                 (0, c.jsxs)("div", {
                     className: np.qr,
                     children: [
-                        (0, c.jsx)(nn, { planRadioOptions: p, value: f ?? "", onChange: (e) => h(e.value) }),
-                        (0, c.jsx)(nf, { skuId: t, selectedPlanId: f, subscribeButtonProps: E }),
+                        (0, c.jsx)(nn, { planRadioOptions: g, value: p ?? "", onChange: (e) => f(e.value) }),
+                        (0, c.jsx)(nf, { skuId: t, selectedPlanId: p, subscribeButtonProps: j }),
                     ],
                 }),
             ],
         }),
-        T = u()(np.Nr, s, { [np.Fw]: i });
+        b = u()(np.Nr, s, { [np.Fw]: i });
     return i
         ? (0, c.jsxs)(Y.h, {
               color: "nitro-pink",
-              className: T,
+              className: b,
               children: [
                   (0, c.jsx)("div", {
                       className: np.kX,
                       "aria-hidden": !0,
                       children: (0, c.jsx)(i8, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
                   }),
-                  b,
+                  E,
               ],
           })
-        : (0, c.jsx)("div", { className: T, children: b });
+        : (0, c.jsx)("div", { className: b, children: E });
 }
 function nN(e) {
     let { className: t } = e,
         s = (0, sQ.q)((0, s$.Ay)()),
         i = (0, i9.c)("PlanSelectPremiumGroupCard"),
-        n = (0, ep.p)(),
-        a = null != n,
-        l = nm(tA.pe.TIER_2),
-        r = (0, x.bG)([S.default], () => S.default.getCurrentUser()),
-        { avatarSrc: o, eventHandlers: d } = (0, eU.A)({ userId: r?.id, size: eS._3.SIZE_32, animateOnHover: !0 }),
-        m = (0, x.bG)([nr.A], () => nr.A.get(tA.gD.PREMIUM_GROUP_MONTH)),
-        p = (0, z.N1)(tA.gD.PREMIUM_GROUP_MONTH),
-        f = a
-            ? J.intl.format(ix.default["7j70dP"], {
-                  percent: n.discount?.amount,
-                  premiumGroupProductName: (0, im.DP)(),
-              })
-            : J.intl.string(J.t["2pG5Ga"]),
-        h = (0, c.jsx)(i5.A, {
+        n = nm(tA.pe.TIER_2),
+        a = (0, x.bG)([S.default], () => S.default.getCurrentUser()),
+        { avatarSrc: l, eventHandlers: r } = (0, eU.A)({ userId: a?.id, size: eS._3.SIZE_32, animateOnHover: !0 }),
+        o = (0, x.bG)([nr.A], () => nr.A.get(tA.gD.PREMIUM_GROUP_MONTH)),
+        d = J.intl.string(J.t["2pG5Ga"]),
+        m = (0, c.jsx)(i5.A, {
             subscriptionTier: tA.pe.TIER_2,
             initialPlanId: tA.gD.PREMIUM_GROUP_MONTH,
             children: (e) => {
@@ -3344,19 +3335,18 @@ function nN(e) {
                     size: "md",
                     fullWidth: !0,
                     icon: es.t,
-                    text: f,
+                    text: d,
                     variant: "secondary",
                     onClick: t,
                 });
             },
         }),
-        N = null;
-    if (a && null != p) N = p;
-    else if (null != m)
+        p = null;
+    if (null != o)
         try {
-            N = (0, em.sS)(m, l, !1, !1, !1);
+            p = (0, em.sS)(o, n, !1, !1, !1);
         } catch {
-            N = null;
+            p = null;
         }
     return (0, c.jsx)("div", {
         className: u()(np.Nr, t),
@@ -3380,7 +3370,7 @@ function nN(e) {
                             className: i ? np.ck : np.JJ,
                             children: J.intl.string(ix.default.eSKiXk),
                         }),
-                        null != r &&
+                        null != a &&
                             (0, c.jsxs)(et.B, {
                                 direction: "horizontal",
                                 align: "center",
@@ -3392,10 +3382,10 @@ function nN(e) {
                                     (0, c.jsx)("div", {
                                         className: np.uA,
                                         children: (0, c.jsx)(eD.eu, {
-                                            src: o,
+                                            src: l,
                                             size: eS._3.SIZE_32,
                                             "aria-hidden": !0,
-                                            ...d,
+                                            ...r,
                                         }),
                                     }),
                                     (0, c.jsx)(et.B, {
@@ -3434,17 +3424,17 @@ function nN(e) {
                                     color: "text-strong",
                                     children: J.intl.string(ix.default.SvSwga),
                                 }),
-                                null == N
+                                null == p
                                     ? (0, c.jsx)(g.y, { type: g.y.Type.PULSING_ELLIPSIS })
                                     : (0, c.jsx)(K.E, {
                                           tag: "span",
                                           variant: "heading-lg/semibold",
                                           color: s ? "text-strong" : "text-overlay-light",
-                                          children: N,
+                                          children: p,
                                       }),
                             ],
                         }),
-                        h,
+                        m,
                     ],
                 }),
             ],
@@ -3900,7 +3890,7 @@ function nQ(e) {
 var n$ = s(579245),
     n0 = s(369805);
 let n1 = function () {
-    let e = (0, n0.A)(void 0, { includesPremiumGroup: !0 });
+    let e = (0, n0.A)();
     return null == e ? null : (0, c.jsx)(eE, { text: e });
 };
 function n2() {
@@ -5201,7 +5191,7 @@ let aJ = () => {
     aq = function (e) {
         let { entrypoint: t } = e,
             s = (0, ef.V)(),
-            i = (0, ep.O)({ includePremiumGroupDiscount: !0 }),
+            i = (0, ep.O)(),
             n = (0, i2.NF)({ trialOffer: s }),
             a = (0, i2.Tp)(),
             l = (0, x.bG)([i1.A], () => i1.A.getReminderStateId());
@@ -5230,7 +5220,7 @@ let a$ = function (e) {
         r = (0, x.bG)([S.default], () => S.default.getCurrentUser()),
         d = r?.id,
         C = (0, ef.V)(),
-        R = (0, ep.O)({ includePremiumGroupDiscount: !0 }),
+        R = (0, ep.O)(),
         k = (0, b.Y)(tA.T7),
         [G, w] = o.useState(!0),
         B = o.useRef(0),

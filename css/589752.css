@@ -117,13 +117,8 @@ html:not(.mana-type-consolidation) .logoHeader_f1578d {
     padding-top: var(--space-24)
 }
 
-.descriptionContainer_f1578d,
-.discountDescription_f1578d {
+.descriptionContainer_f1578d {
     margin-bottom: var(--space-10)
-}
-
-.discountDescription_f1578d strong {
-    color: var(--text-strong)
 }
 
 .buttonContainer_f1578d {
@@ -313,4 +308,4 @@ html:not(.mana-type-consolidation) .logoHeader_f1578d {
     width: 67px
 }
 
-/*# sourceMappingURL=589752.57adfd8c5c66394c.css.map*/
+/*# sourceMappingURL=589752.b00c280c1df077ff.css.map*/

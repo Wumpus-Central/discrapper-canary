@@ -245,16 +245,15 @@ function J(e) {
             previewAsSubscriptionUpdate: o,
         }),
         { immediateDelivery: f } = (0, b.U)(),
-        { discountOffer: E, premiumGroupDiscountOffer: D } = (0, T.i)(),
-        U = D ?? E,
-        { paymentSources: G } = (0, v.j)(),
-        { paymentGatewayRestrictions: F } = (0, v.Y)(),
-        B = i.paymentSourceId,
-        W = (0, M.g)(G, B),
-        V = (0, k.J$)(B),
-        Y = null != h && "invoicePreview" in h ? h.invoicePreview : null,
-        z = (0, r.jsx)(Q, { planName: n.name, invoicePreview: Y }),
-        $ = d
+        { discountOffer: E } = (0, T.i)(),
+        { paymentSources: D } = (0, v.j)(),
+        { paymentGatewayRestrictions: U } = (0, v.Y)(),
+        G = i.paymentSourceId,
+        F = (0, M.g)(D, G),
+        B = (0, k.J$)(G),
+        W = null != h && "invoicePreview" in h ? h.invoicePreview : null,
+        V = (0, r.jsx)(Q, { planName: n.name, invoicePreview: W }),
+        Y = d
             ? (0, r.jsx)(g.E, {
                   variant: "text-sm/medium",
                   color: "text-muted",
@@ -262,46 +261,46 @@ function J(e) {
                   children: H.intl.string(K.default.MmcIbA),
               })
             : null,
-        J = {
+        z = {
             shouldShowGlobalNotices: !0,
-            purchaseItemContent: z,
+            purchaseItemContent: V,
             paymentMethodContent: (0, r.jsx)(y.N, {
                 label: H.intl.string(H.t["u+Cw58"]),
                 onPaymentSourceAdd: l,
                 disabled: C,
-                additionalPaymentSourceDropdownProps: { paymentGatewayRestrictions: F },
+                additionalPaymentSourceDropdownProps: { paymentGatewayRestrictions: U },
             }),
-            upperInlineNoticeProps: null != $ ? { directContent: $, key: "gsh-plan-change-notice" } : void 0,
+            upperInlineNoticeProps: null != Y ? { directContent: Y, key: "gsh-plan-change-notice" } : void 0,
         };
-    if (null == h && null != a) return (0, r.jsx)(P.T_, { ...J, legalContent: null });
+    if (null == h && null != a) return (0, r.jsx)(P.T_, { ...z, legalContent: null });
     if (null == h || h.type === _.u$.LOADING) return (0, r.jsx)(P.Ed, { shouldShowUnifiedHeader: !0 });
-    let X = (0, r.jsx)(x.k, {
+    let $ = (0, r.jsx)(x.k, {
             discriminatedInvoicePreview: h,
             subscriptionPlan: n,
             subscriptionTrial: void 0,
-            isPrepaidPaymentSource: V,
+            isPrepaidPaymentSource: B,
         }),
-        ee = h.invoicePreview,
-        et =
-            (U?.discount != null && (0, L.Ro)(ee, U.discount.id)) || ee.invoiceItems.some((e) => e.discounts.length > 0)
-                ? X
-                : (0, r.jsx)(Z, { fallback: X, invoicePreview: ee }),
-        en = null;
-    if (!V && _.ME.has(h.type) && "renewalInvoicePreview" in h && null != h.renewalInvoicePreview) {
+        J = h.invoicePreview,
+        X =
+            (E?.discount != null && (0, L.Ro)(J, E.discount.id)) || J.invoiceItems.some((e) => e.discounts.length > 0)
+                ? $
+                : (0, r.jsx)(Z, { fallback: $, invoicePreview: J }),
+        ee = null;
+    if (!B && _.ME.has(h.type) && "renewalInvoicePreview" in h && null != h.renewalInvoicePreview) {
         let e = (0, O.Gj)(h.invoicePreview, h.renewalInvoicePreview, void 0, { isSubscriptionUpdate: null != s });
-        en = (0, r.jsx)(R._, { ...e });
+        ee = (0, r.jsx)(R._, { ...e });
     }
-    let el = "renewalInvoicePreview" in h ? h.renewalInvoicePreview : null,
-        ei =
-            d && null != el && null != s
+    let et = "renewalInvoicePreview" in h ? h.renewalInvoicePreview : null,
+        en =
+            d && null != et && null != s
                 ? (0, r.jsx)(j._, {
                       immediateDelivery: f,
-                      paymentSourceType: W,
+                      paymentSourceType: F,
                       variant: {
                           type: j.I.Subscription,
                           purchaseButtonText: H.intl.string(K.default.UGbET9),
                           totalDue: 0,
-                          renewalPrice: el.total,
+                          renewalPrice: et.total,
                           currency: h.invoicePreview.currency,
                           interval: n.interval,
                           intervalCount: n.intervalCount,
@@ -311,18 +310,18 @@ function J(e) {
                 : (0, r.jsx)(A.$, {
                       activeSubscription: s,
                       plan: n,
-                      paymentSourceType: W,
+                      paymentSourceType: F,
                       discriminatedInvoicePreview: h,
-                      discountOffer: U,
+                      discountOffer: E,
                       unifiedLegalType: j.I.Subscription,
                   }),
-        er = d ? (0, w.$g)(0, h.invoicePreview.currency) : (0, I.kw)({ subscriptionInvoiceRecord: h.invoicePreview });
+        el = d ? (0, w.$g)(0, h.invoicePreview.currency) : (0, I.kw)({ subscriptionInvoiceRecord: h.invoicePreview });
     return (0, r.jsx)(P.T_, {
-        ...J,
-        subscriptionDetailsContent: en,
-        invoiceSummaryContent: et,
-        legalContent: ei,
-        invoiceTotalDueValue: er,
+        ...z,
+        subscriptionDetailsContent: ee,
+        invoiceSummaryContent: X,
+        legalContent: en,
+        invoiceTotalDueValue: el,
         invoiceTotalDueLabel: H.intl.string(q.default.R0cZsM),
     });
 }

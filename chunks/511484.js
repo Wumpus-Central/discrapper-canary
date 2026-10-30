@@ -88,13 +88,12 @@ function C(e, t, n, i) {
 }
 function O(e) {
     let t = (0, h.O)(),
-        n = (0, h.p)(),
-        { priceOptions: i, discountAmountOff: a } = C(e, t ?? n),
-        s = (0, r.bG)([d.A], () => null != e && d.A.isLoadedForSKU((0, c.mH)(f.hd[e].skuId)), [e]);
-    if (null == e || (null == t && null == n)) return null;
+        { priceOptions: n, discountAmountOff: i } = C(e, t),
+        a = (0, r.bG)([d.A], () => null != e && d.A.isLoadedForSKU((0, c.mH)(f.hd[e].skuId)), [e]);
+    if (null == e || null == t) return null;
     try {
-        let t = (0, c.y8)(e, !1, !1, i, s);
-        return (0, u.$g)(t.amount - (a ?? 0), t.currency);
+        let t = (0, c.y8)(e, !1, !1, n, a);
+        return (0, u.$g)(t.amount - (i ?? 0), t.currency);
     } catch {
         return null;
     }

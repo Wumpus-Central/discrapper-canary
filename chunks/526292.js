@@ -16,9 +16,8 @@ function g() {
     let e = (0, E.V)(),
         t = (0, c.QQ)(),
         n = (0, f.O)(),
-        i = (0, f.p)(),
-        s = h();
-    return null != e || t || null != n || null != i || s;
+        i = h();
+    return null != e || t || null != n || i;
 }
 let h = () => {
     let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
@@ -50,8 +49,6 @@ function p(e) {
             return { duration: 12, percentage: 30, discountId: e };
         case I.V2:
             return { duration: 1, percentage: 40, discountId: e };
-        case I.xH:
-            return { duration: 3, percentage: 30, discountId: e };
         case I.sC:
             return { duration: 1, percentage: 30, discountId: e };
         default:
