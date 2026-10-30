@@ -1,26 +1,25 @@
 n.d(t, {
     f: () => y,
     r7: () => L,
-    wo: () => w,
+    wo: () => U,
     ks: () => N,
     $5: () => m,
     sn: () => M,
-    mH: () => k,
-    cg: () => F,
+    mH: () => x,
+    cg: () => k,
     Y7: () => b,
-    kr: () => B,
+    kr: () => F,
     HG: () => R,
     KK: () => C,
     JX: () => v,
     tU: () => O,
     k5: () => g,
     nj: () => T,
-    $s: () => V,
+    $s: () => B,
     _Z: () => D,
-    l0: () => U,
-    mq: () => x,
-    b: () => P,
+    mq: () => G,
     K9: () => S,
+    b: () => P,
 });
 var i,
     r,
@@ -117,19 +116,13 @@ function P(e) {
     return null == n || 0 === i ? null : Math.round((n / i) * 100) / 100;
 }
 function U(e, t) {
-    if (null == t) return 1;
-    let n = P(e) ?? 1,
-        i = (0, c.m)(t);
-    return C(e) && (0, I.B9)(i) ? n : 1;
-}
-function w(e, t) {
     let n = e.rewardsConfig.rewards.find((e) => e.type === o.l.VIRTUAL_CURRENCY);
     if (null == n) return null;
     if (null == t) return n.orbQuantity;
     let i = (0, c.m)(t);
     return C(e) && (0, I.B9)(i) ? (n.premiumOrbQuantity ?? n.orbQuantity) : n.orbQuantity;
 }
-function G(e, t, n) {
+function w(e, t, n) {
     if (S(e)) {
         let t = e.rewardsConfig.rewards
                 .filter((e) => e.type === o.l.FRACTIONAL_PREMIUM)
@@ -141,24 +134,24 @@ function G(e, t, n) {
     }
     if (N(e)) {
         let n;
-        return ((n = w(e, t) ?? D(e) ?? 0), A.intl.formatToPlainString(A.t["nLXlh+"], { orbAmount: n }));
+        return ((n = U(e, t) ?? D(e) ?? 0), A.intl.formatToPlainString(A.t["nLXlh+"], { orbAmount: n }));
     }
     let i = (0, h.xv)(e);
     return n ? i.messages.nameWithArticle : i.messages.name;
 }
+function G(e, t) {
+    return w(e, t, !1);
+}
 function x(e, t) {
-    return G(e, t, !1);
+    return w(e, t, !0);
 }
-function k(e, t) {
-    return G(e, t, !0);
-}
-function F(e) {
+function k(e) {
     let { quest: t, idx: n } = e;
     if (null == n) return null;
     let i = t.config.rewardsConfig.rewards[n];
     return i.type === o.l.REWARD_CODE ? i : null;
 }
-function B(e) {
+function F(e) {
     let {
             quest: { config: t },
         } = e,
@@ -167,7 +160,7 @@ function B(e) {
         n.assignmentMethod === s.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === o.l.REWARD_CODE)
     );
 }
-function V(e) {
+function B(e) {
     let t = e.rewardsConfig.platforms;
     return t.length > 0 ? t[0] : d.pY.CROSS_PLATFORM;
 }

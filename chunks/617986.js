@@ -352,9 +352,8 @@ function J(e, t, a) {
             n.e("254103"),
             n.e("212466"),
             n.e("307865"),
-            n.e("33546"),
-            n.e("446098"),
-        ]).then(n.bind(n, 589161));
+            n.e("134015"),
+        ]).then(n.bind(n, 186818));
         return (n) => (0, i.jsx)(o, { ...n, initialQuest: e, sourceQuestContent: a, location: t });
     });
 }
