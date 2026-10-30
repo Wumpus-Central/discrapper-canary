@@ -59,14 +59,14 @@ let _ = new m(E.h, {
     },
 });
 var S = t(542744),
-    x = t(84877),
-    N = t(885902),
+    N = t(84877),
+    x = t(885902),
     C = t(397306);
 let p = { visible: !1 };
 function I(e, n) {
-    let t = (0, N.F)(e, n),
+    let t = (0, x.F)(e, n),
         l = (0, a.Hg)(null != t ? e?.guild_id : null, n),
-        i = (0, x.Z)(e),
+        i = (0, N.Z)(e),
         r = (0, C.m)(e, n),
         u = l && i && !r ? t : null,
         s = (0, g.bG)([_], () => null != u && _.isHidden(u), [u]),
@@ -247,7 +247,7 @@ function ed(e) {
             let { name: n } = e;
             return n.toLocaleLowerCase().includes(_);
         });
-    function x(e, l) {
+    function N(e, l) {
         let a = new Set(g);
         for (let n of e) l ? a.add(n) : a.delete(n);
         (0, i.lv)(n, t, { includedChannelIds: a });
@@ -293,7 +293,7 @@ function ed(e) {
                                   (0, T.jsx)(B.Q, {
                                       text: u.intl.string(m ? r.default.MECJZo : u.t.l4rqaz),
                                       textVariant: "text-sm/semibold",
-                                      onClick: () => x(E, !m),
+                                      onClick: () => N(E, !m),
                                       disabled: s,
                                       "aria-describedby": o,
                                   }),
@@ -332,7 +332,7 @@ function ed(e) {
                                                                 name: l,
                                                                 checked: g.has(t.id),
                                                                 disabled: s,
-                                                                onToggle: (e, n) => x([e], n),
+                                                                onToggle: (e, n) => N([e], n),
                                                             }),
                                                         ],
                                                     },
@@ -406,7 +406,9 @@ function eg(e) {
                 variant: "text-sm/normal",
                 color: "text-default",
                 className: eh.Qq,
-                children: u.intl.format(r.default.XRu92R, { learnMoreURL: w.A.getArticleURL(et.MVz.SERVER_WEB_PAGES) }),
+                children: u.intl.format(r.default.XRu92R, {
+                    learnMoreURL: w.A.getArticleURL(et.MVz.DISCOVERABLE_CONTENT_ON_THE_WEB),
+                }),
             }),
             (0, T.jsx)(eo.m, {
                 text: t,
@@ -428,8 +430,8 @@ t(321073);
 var em = t(3666),
     e_ = t(193249),
     eS = t(881636),
-    ex = t(405597);
-let eN = [];
+    eN = t(405597);
+let ex = [];
 function eC(e) {
     let { channels: n } = e,
         t = h.useMemo(() => {
@@ -442,7 +444,7 @@ function eC(e) {
                 "string" == typeof e
                     ? (0, T.jsxs)(
                           R.E,
-                          { variant: "text-sm/medium", color: "none", className: ex.dX, children: [", ", e] },
+                          { variant: "text-sm/medium", color: "none", className: eN.dX, children: [", ", e] },
                           e,
                       )
                     : (0, T.jsxs)(
@@ -450,7 +452,7 @@ function eC(e) {
                           {
                               variant: "text-sm/medium",
                               color: "none",
-                              className: ex.ph,
+                              className: eN.ph,
                               children: [
                                   e.key !== l ? ", " : null,
                                   (0, T.jsx)(Z, {
@@ -459,7 +461,7 @@ function eC(e) {
                                       width: 14,
                                       height: 14,
                                       color: "currentColor",
-                                      className: ex.p,
+                                      className: eN.p,
                                   }),
                                   e.name,
                               ],
@@ -474,7 +476,7 @@ function eC(e) {
         );
     return 0 === t.length
         ? (0, T.jsx)(R.E, { variant: "text-sm/medium", color: "none", children: u.intl.string(u.t.PoWNfe) })
-        : (0, T.jsx)(em.ZV, { className: ex.yQ, items: t, renderItem: i, renderOverflow: a, maxLines: 1 });
+        : (0, T.jsx)(em.ZV, { className: eN.yQ, items: t, renderItem: i, renderOverflow: a, maxLines: 1 });
 }
 function ep(e) {
     let { guildId: n, featureKey: t, disabled: a } = e,
@@ -488,7 +490,7 @@ function ep(e) {
     }, [t]);
     let o = en(
         h.useMemo(
-            () => (null != s && null != d ? (0, z.Dq)(s).filter((e) => d.includedChannelIds.has(e)) : eN),
+            () => (null != s && null != d ? (0, z.Dq)(s).filter((e) => d.includedChannelIds.has(e)) : ex),
             [s, d],
         ),
     );
@@ -506,7 +508,7 @@ function ep(e) {
                 children: [
                     (0, T.jsxs)(L.B, {
                         gap: 4,
-                        className: ex.oo,
+                        className: eN.oo,
                         "data-disabled": a,
                         children: [
                             (0, T.jsx)(R.E, { variant: "text-md/medium", children: f }),
@@ -531,14 +533,14 @@ function ep(e) {
             d.enabled
                 ? (0, T.jsxs)(O.D, {
                       innerRef: c,
-                      className: ex.ag,
+                      className: eN.ag,
                       "aria-label": u.intl.formatToPlainString(r.default["7iIGZ2"], { featureTitle: f, count: E }),
                       onClick: () => (0, i.lF)(t),
                       children: [
                           (0, T.jsx)(R.E, {
                               variant: "text-sm/medium",
                               color: "none",
-                              className: ex.Ao,
+                              className: eN.Ao,
                               children: u.intl.string(r.default["ZS+NM3"]),
                           }),
                           (0, T.jsxs)(L.B, {
@@ -547,7 +549,7 @@ function ep(e) {
                               justify: "end",
                               gap: 12,
                               fullWidth: !1,
-                              className: ex.$n,
+                              className: eN.$n,
                               children: [
                                   (0, T.jsx)(eC, { channels: o }),
                                   (0, T.jsx)(eS.u, { size: "refresh_sm", color: "currentColor" }),

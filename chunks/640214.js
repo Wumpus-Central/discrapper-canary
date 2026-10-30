@@ -20219,7 +20219,9 @@ let CQ = "user_settings_data_usage",
         (0, h.zD)("pinot_member_setting", {
             useTitle: () => V.intl.string(Cq.default.M33rl6),
             useSubtitle: () =>
-                V.intl.format(Cq.default.V0EPTo, { learnMoreURL: eb.A.getArticleURL(I.MVz.SERVER_WEB_PAGES) }),
+                V.intl.format(Cq.default.V0EPTo, {
+                    learnMoreURL: eb.A.getArticleURL(I.MVz.DISCOVERABLE_CONTENT_ON_THE_WEB),
+                }),
             usePredicate: () => (0, CW.Zd)(CQ),
             useValue: () => !(0, CK.p)().optedOut,
             setValue: (e) => {
@@ -20229,7 +20231,9 @@ let CQ = "user_settings_data_usage",
                 return (0, CK.p)().locked;
             },
             useDisabledMessage: () =>
-                V.intl.format(Cq.default.Z9bKIJ, { learnMoreURL: eb.A.getArticleURL(I.MVz.SERVER_WEB_PAGES) }),
+                V.intl.format(Cq.default.Z9bKIJ, {
+                    learnMoreURL: eb.A.getArticleURL(I.MVz.DISCOVERABLE_CONTENT_ON_THE_WEB),
+                }),
             disabledMessageType: "info",
             getDismissibleBadges: () =>
                 !(0, CW.ws)(CQ, { autoTrackExposure: !1 }) || CZ.A.isLocked()
