@@ -4826,6 +4826,7 @@ function r5(e) {
                       case "cancelled":
                           return eS.intl.formatToPlainString(ew.default.kWfWa6, { task: t });
                       case "done":
+                          if (null != e.resultText && "" !== e.resultText) return e.resultText;
                           if (null != e.durationMs)
                               return eS.intl.formatToPlainString(ew.default["++9woZ"], {
                                   task: t,
