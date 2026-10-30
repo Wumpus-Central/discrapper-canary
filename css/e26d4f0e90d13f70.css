@@ -113,6 +113,35 @@
     --custom-product-card-min-width: 0
 }
 
+.calendarContainer__0f179 {
+    container-type: inline-size;
+    margin-inline: auto;
+    max-width: 1060px;
+    width: 100%
+}
+
+.calendarGrid__0f179 {
+    --custom-calendar-gap: var(--space-24);
+    gap: var(--custom-calendar-gap);
+    grid-auto-flow: row;
+    grid-auto-rows: calc((100cqw - (var(--custom-cols) - 1)*var(--custom-calendar-gap))/var(--custom-cols));
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.calendarDoor__0f179 {
+    grid-column: span 2;
+    grid-row: span 2
+}
+
+@container (min-width: 897px) {
+    .calendarGrid__0f179>.calendarDoor__0f179:nth-child(12):last-child {
+        grid-column: 3/span 2;
+        grid-row: 4/span 2
+    }
+}
+
 @container (max-width: 896px) {
     .productsGrid__0f179 {
         --custom-cols: 3
@@ -128,6 +157,16 @@
 @container (max-width: 480px) {
     .productsGrid__0f179 {
         --custom-cols: 1
+    }
+
+    .calendarGrid__0f179 {
+        gap: var(--space-12);
+        grid-auto-rows: auto
+    }
+
+    .calendarGrid__0f179>.calendarTile__0f179 {
+        grid-column: auto;
+        grid-row: auto
     }
 }
 
@@ -232,4 +271,4 @@
     animation: skeletonPulse__0f179 2s ease-in-out infinite alternate
 }
 
-/*# sourceMappingURL=caa708bcc4c444b7.css.map*/
+/*# sourceMappingURL=e26d4f0e90d13f70.css.map*/

@@ -5770,6 +5770,20 @@
     }
   },
   {
+    "name": "2026-10-shop-twelve-days-promo",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-slayer-storefront-single-sku-wide-header",
     "kind": "user",
     "defaultConfig": {
