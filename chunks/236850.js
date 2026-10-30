@@ -1,7 +1,7 @@
-t.d(n, { A: () => a });
+t.d(e, { A: () => l });
 var i = t(405670);
-function a() {
-    let e = (0, i.Kr)((e) => e.volume),
-        n = (0, i.Kr)((e) => e.muted);
-    return { volume: e, muted: n, setVolume: (0, i.Kr)((e) => e.setVolume), setMuted: (0, i.Kr)((e) => e.setMuted) };
+function l() {
+    let n = (0, i.Kr)((n) => n.volume),
+        e = (0, i.Kr)((n) => n.muted);
+    return { volume: n, muted: e, setVolume: (0, i.Kr)((n) => n.setVolume), setMuted: (0, i.Kr)((n) => n.setMuted) };
 }

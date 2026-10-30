@@ -1,40 +1,40 @@
-l.d(e, { m: () => n });
-var s = l(477900);
-l(582128);
-var a = l(661531),
-    i = l(996682),
-    h = l(27989);
-function n(t) {
+e.d(l, { m: () => h });
+var s = e(477900);
+e(582128);
+var a = e(661531),
+    i = e(996682),
+    c = e(27989);
+function h(t) {
     let {
-            size: e = "md",
-            width: l,
-            height: n,
-            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            size: l = "md",
+            width: e,
+            height: h,
+            color: n = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: r = "",
             secondaryColor: o = "#000",
             secondaryColorClass: v = "",
-            tertiaryColor: A = "#fff",
-            tertiaryColorClass: d = "",
-            ...p
+            tertiaryColor: d = "#fff",
+            tertiaryColorClass: A = "",
+            ...g
         } = t,
-        g = (0, h.J)(e),
-        E = g?.width ?? l,
-        m = g?.height ?? n;
+        p = (0, c.J)(l),
+        E = p?.width ?? e,
+        w = p?.height ?? h;
     return (0, s.jsxs)("svg", {
-        ...(0, i.A)(p),
+        ...(0, i.A)(g),
         xmlns: "http://www.w3.org/2000/svg",
         width: E,
-        height: m,
+        height: w,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
             (0, s.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+                fill: "string" == typeof n ? n : n.css,
                 d: "M2 2v20h20V2H2Zm16 8h-4v2h2v6h-2v-2h-4v2H8v-6h2v-2H6V6h4v4h4V6h4v4Z",
                 className: r,
             }),
             (0, s.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+                fill: "string" == typeof n ? n : n.css,
                 d: "M10 18.33H8V18h2v.33ZM16 18.33h-2V18h2v.33ZM14 16.33h-4V16h4v.33ZM10 12.33H8V12h2v.33ZM16 12.33h-2V12h2v.33ZM18 10.33H6V10h12v.33ZM10 6v.33H6V6h4ZM18 6.33h-4V6h4v.33Z",
                 className: r,
             }),
@@ -44,9 +44,9 @@ function n(t) {
                 className: v,
             }),
             (0, s.jsx)("path", {
-                fill: "string" == typeof A ? A : A.css,
+                fill: "string" == typeof d ? d : d.css,
                 d: "M18 10h-4v.33h4V10ZM14 16h-4v.33h4V16ZM16 18h-2v.33h2V18ZM10 18H8v.33h2V18ZM10 10H6v.33h4V10Z",
-                className: d,
+                className: A,
             }),
         ],
     });

@@ -1,30 +1,30 @@
-l.d(e, { A: () => r });
-var s = l(17928),
-    a = l(73153),
-    i = l(845300);
-let h = i.Z.INITIALIZED,
-    n = new Set();
-class c extends s.Ay.Store {
+E.d(e, { A: () => r });
+var I = E(17928),
+    A = E(73153),
+    a = E(845300);
+let i = a.Z.INITIALIZED,
+    L = new Set();
+class p extends I.Ay.Store {
     static displayName = "DeveloperApplicationsStore";
     getFetchState() {
-        return h;
+        return i;
     }
     isDeveloperOfApplication(t) {
-        return null != t && n.has(t);
+        return null != t && L.has(t);
     }
 }
-let r = new c(a.h, {
+let r = new p(A.h, {
     LOGOUT: function () {
-        ((h = i.Z.INITIALIZED), (n = new Set()));
+        ((i = a.Z.INITIALIZED), (L = new Set()));
     },
     DEVELOPER_APPLICATIONS_FETCH_START() {
-        h = i.Z.LOADING;
+        i = a.Z.LOADING;
     },
     DEVELOPER_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { applicationIds: e } = t;
-        ((h = i.Z.LOADED), (n = new Set(e)));
+        ((i = a.Z.LOADED), (L = new Set(e)));
     },
     DEVELOPER_APPLICATIONS_FETCH_FAIL() {
-        h = i.Z.ERROR;
+        i = a.Z.ERROR;
     },
 });

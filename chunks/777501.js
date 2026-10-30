@@ -1,5 +1,5 @@
-s.d(r, { r: () => a });
-let t = (0, s(945810).mj)({
+t.d(r, { r: () => a });
+let n = (0, t(945810).mj)({
     name: "2026-05-dvp-for-attachments",
     kind: "user",
     defaultConfig: { useDiscordVideoPlayer: !1 },
@@ -7,5 +7,5 @@ let t = (0, s(945810).mj)({
 });
 function a(e) {
     let { location: r } = e;
-    return t.useConfig({ location: r });
+    return n.useConfig({ location: r });
 }

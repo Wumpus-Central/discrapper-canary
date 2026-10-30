@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => C, Mg: () => k, Og: () => N, VY: () => m, Y1: () => T, aF: () => b, uk: () => y }),
+(n.d(t, { M$: () => C, Mg: () => N, Og: () => k, VY: () => m, Y1: () => b, aF: () => T, uk: () => y }),
     n(323874),
     n(14289),
     n(35956));
@@ -25,7 +25,7 @@ let m = {
         },
         control_preview(e, t) {
             let { projectId: n, ws: r } = t;
-            ((0, _.T5)(n), R(n, r, e).catch(() => {}));
+            ((0, _.T5)(n), A(n, r, e).catch(() => {}));
         },
         control_abort(e, t) {
             let { projectId: n } = t;
@@ -90,7 +90,7 @@ async function O() {
             await s.A.fetchUserApplicationIdentitiesWithProfiles(e);
         } catch {}
 }
-function T(e, t) {
+function b(e, t) {
     let n = (0, a.KY)(e);
     if (null == n) return !1;
     try {
@@ -99,7 +99,7 @@ function T(e, t) {
         return !1;
     }
 }
-async function b(e, t) {
+async function T(e, t) {
     let { ticket: n, baseUrl: r } = await (0, l.BK)(e),
         s = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${s}`;
@@ -108,11 +108,11 @@ async function C(e, t) {
     let n = await (0, c.h)(e, "/agent/overlay-background", { method: "PUT", body: t });
     if (!n.ok) throw Error(`overlay background upload failed (${n.status})`);
 }
-async function N(e) {
+async function k(e) {
     let t = await (0, c.h)(e, "/agent/overlay-background", { method: "DELETE" });
     if (!t.ok) throw Error(`overlay background reset failed (${t.status})`);
 }
-async function k(e, t) {
+async function N(e, t) {
     let { ticket: n, baseUrl: r } = await (0, l.BK)(e);
     return `${r}/agent/overlay-background?${new URLSearchParams({ ticket: n, v: t })}`;
 }
@@ -127,7 +127,7 @@ async function w(e, t, n) {
             spec: n.spec,
             build: n.build,
             onAccepted: async () => (t.sendCaptureAck(n.id, "accepted"), await (0, f.bm)(e, n.id)),
-            resolveUploadUrl: () => A(e),
+            resolveUploadUrl: () => R(e),
         });
     } catch (e) {
         (console.error("[conjure] preview capture relay failed", e), (r = { status: "failed" }));
@@ -140,7 +140,7 @@ async function w(e, t, n) {
     }),
         t.sendCaptureAck(n.id, r.status, r.code, r.message));
 }
-async function R(e, t, n) {
+async function A(e, t, n) {
     let r = Date.now();
     console.debug("[conjure] control request received", { id: n.id, build: n.build, steps: n.request?.steps?.length });
     try {
@@ -161,7 +161,7 @@ async function R(e, t, n) {
             t.sendControlAck(n.id, "failed", void 0, "the client could not drive the preview frame"));
     }
 }
-async function A(e) {
+async function R(e) {
     let { ticket: t, baseUrl: n } = await (0, l.BK)(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }

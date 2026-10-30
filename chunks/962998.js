@@ -1,13 +1,13 @@
 n.d(t, {
     $C: () => S,
-    BC: () => b,
+    BC: () => T,
     BG: () => m,
     Mz: () => O,
     TV: () => E,
     dx: () => g,
     qy: () => _,
     rS: () => f,
-    xQ: () => A,
+    xQ: () => R,
 });
 var r = n(73153),
     s = n(587895),
@@ -99,7 +99,7 @@ let _ = {
                     turnId: e.turn_id,
                     patch: {
                         publishCta: {
-                            surface: k(e.publish_cta.surface),
+                            surface: N(e.publish_cta.surface),
                             reason: "new_ui" === e.publish_cta.reason ? "new_ui" : "first_publish",
                         },
                     },
@@ -121,7 +121,7 @@ let _ = {
                           : !0 === n.has_unpublished_changes
                             ? "live_outdated"
                             : "live_current",
-                surface: k(e.surface),
+                surface: N(e.surface),
                 previewAppChannels: Array.isArray(e.preview_app_channels)
                     ? e.preview_app_channels.filter((e) => "string" == typeof e)
                     : [],
@@ -175,8 +175,8 @@ let _ = {
         },
         patch_notes_draft(e, t) {
             let { projectId: n } = t,
-                r = T.get(n);
-            null != r && r.nonce === e.nonce && (T.delete(n), clearTimeout(r.timeout), r.resolve(e));
+                r = b.get(n);
+            null != r && r.nonce === e.nonce && (b.delete(n), clearTimeout(r.timeout), r.resolve(e));
         },
     };
 function g(e) {
@@ -212,16 +212,16 @@ function S(e) {
     return new Promise((t, n) => {
         let r = (0, o.KY)(e);
         if (null == r) return void n(Error("Not connected"));
-        b(e, "Superseded by a newer draft request");
+        T(e, "Superseded by a newer draft request");
         let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             i = setTimeout(() => {
-                b(e, "Draft timed out");
+                T(e, "Draft timed out");
             }, 45e3);
-        T.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
+        b.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
         try {
             r.sendDraftPatchNotes(s);
         } catch (t) {
-            (T.delete(e), clearTimeout(i), n(t instanceof Error ? t : Error("draft send failed")));
+            (b.delete(e), clearTimeout(i), n(t instanceof Error ? t : Error("draft send failed")));
         }
     });
 }
@@ -237,26 +237,26 @@ function m(e, t, n) {
 }
 let y = new Map();
 function O(e, t) {
-    (r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId: e, approvalUrl: null }), R(e, t));
+    (r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId: e, approvalUrl: null }), A(e, t));
     let n = y.get(e);
     null != n && (y.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let T = new Map();
-function b(e, t) {
-    let n = T.get(e);
-    null != n && (T.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+let b = new Map();
+function T(e, t) {
+    let n = b.get(e);
+    null != n && (b.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
 let C = new Set(p.n),
-    N = new Set(["activity", "automod", "widget", "bot"]);
-function k(e) {
-    return null != e && N.has(e) ? e : null;
+    k = new Set(["activity", "automod", "widget", "bot"]);
+function N(e) {
+    return null != e && k.has(e) ? e : null;
 }
 let w = new Map();
-function R(e, t) {
+function A(e, t) {
     let n = w.get(e);
     null != n && (w.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-function A(e) {
+function R(e) {
     return new Promise((t, n) => {
         let r = (0, o.KY)(e);
         if (null == r) return n(Error("Not connected"));
@@ -265,14 +265,14 @@ function A(e) {
                 destinations: [{ id: "conjuring", label: "Conjuring" }],
                 selected_destination_id: "conjuring",
             });
-        R(e, "Superseded by a newer publish request");
+        A(e, "Superseded by a newer publish request");
         let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-            i = setTimeout(() => R(e, "Could not load publish destinations. Try again."), 15e3);
+            i = setTimeout(() => A(e, "Could not load publish destinations. Try again."), 15e3);
         w.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
         try {
             r.sendPublishOptions(s);
         } catch {
-            R(e, "Could not load publish destinations. Try again.");
+            A(e, "Could not load publish destinations. Try again.");
         }
     });
 }

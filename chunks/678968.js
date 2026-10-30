@@ -1,9 +1,9 @@
 n.d(t, { A: () => g });
 var r = n(477900),
-    l = n(582128),
-    u = n(554830),
-    i = n(613373),
-    s = n(475815),
+    u = n(582128),
+    l = n(554830),
+    s = n(613373),
+    i = n(475815),
     a = n(738822),
     o = n(192444),
     c = n(291749),
@@ -28,39 +28,39 @@ function v(e) {
 }
 var C = n(781121),
     A = n(190107),
-    h = n(105292);
+    I = n(105292);
 function g(e) {
     let { videoRef: t, onTrackQuestContentClick: n, orientation: p } = e,
-        { onClose: m, sourceQuestContent: g, quest: I, isFullscreenEnabled: D } = l.useContext(f.a),
-        T = (0, C.H)({ quest: I, onClose: m, sourceQuestContent: g }),
-        R = l.useCallback(() => {
+        { onClose: m, sourceQuestContent: g, quest: h, isFullscreenEnabled: D } = u.useContext(f.a),
+        T = (0, C.H)({ quest: h, onClose: m, sourceQuestContent: g }),
+        R = u.useCallback(() => {
             if (D) {
-                let e = (0, s.qf)(t.current?.parentNode, t.current);
-                null != e && (0, s.sP)(e);
+                let e = (0, i.qf)(t.current?.parentNode, t.current);
+                null != e && (0, i.sP)(e);
             }
             (n(a.uF.VIDEO_MODAL_END_CARD, d.Cy.LEARN_MORE), T(a.uF.VIDEO_MODAL_END_CARD, d.Cy.OPEN_GAME_LINK));
         }, [D, t, T, n]),
         { title: O, subtitle: L } = {
-            title: (0, E.wr)(I),
-            subtitle: I.config.ctaConfig.subtitle ?? h.intl.string(h.t.mxaHfx),
+            title: (0, E.wr)(h),
+            subtitle: h.config.ctaConfig.subtitle ?? I.intl.string(I.t.mxaHfx),
         },
         { enabled: N } = o.uK.useConfig({ location: A.rE.VIDEO_MODAL }),
-        k = l.useMemo(() => (0, c.tW)(I, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [I]);
+        k = u.useMemo(() => (0, c.tW)(h, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [h]);
     return N
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(i.nY, { url: k }),
-                  (0, r.jsx)(i.KP, {}),
-                  (0, r.jsxs)(i.zj, {
+                  (0, r.jsx)(s.nY, { url: k }),
+                  (0, r.jsx)(s.KP, {}),
+                  (0, r.jsxs)(s.zj, {
                       orientation: p,
                       children: [
                           null != k &&
                               (0, r.jsx)(_.R, {
-                                  questOrQuests: I,
+                                  questOrQuests: h,
                                   questContent: a.uF.VIDEO_MODAL_END_CARD,
                                   sourceQuestContent: g,
                                   children: (e) =>
-                                      (0, r.jsx)(i.Kb, {
+                                      (0, r.jsx)(s.Kb, {
                                           ref: (t) => {
                                               e.current = t;
                                           },
@@ -68,11 +68,11 @@ function g(e) {
                                           orientation: p,
                                       }),
                               }),
-                          (0, r.jsx)(i.lx, {
+                          (0, r.jsx)(s.lx, {
                               title: O,
                               subtitle: L,
-                              ctaBtnLabel: I.config.ctaConfig.buttonLabel,
-                              ctaIcon: u.K,
+                              ctaBtnLabel: h.config.ctaConfig.buttonLabel,
+                              ctaIcon: l.K,
                               onCTAClick: R,
                               orientation: p,
                           }),
@@ -84,11 +84,11 @@ function g(e) {
               children: [
                   null != k &&
                       (0, r.jsx)(_.R, {
-                          questOrQuests: I,
+                          questOrQuests: h,
                           questContent: a.uF.VIDEO_MODAL_END_CARD,
                           sourceQuestContent: g,
                           children: (e) =>
-                              (0, r.jsx)(i.pK, {
+                              (0, r.jsx)(s.pK, {
                                   ref: (t) => {
                                       e.current = t;
                                   },
@@ -96,10 +96,10 @@ function g(e) {
                               }),
                       }),
                   (0, r.jsx)("div", { className: S.MT, "data-testid": "discord-web-video-player-end-screen" }),
-                  (0, r.jsx)(i.OH, {
+                  (0, r.jsx)(s.OH, {
                       title: O,
                       subtitle: L,
-                      icon: u.K,
+                      icon: l.K,
                       className: S.mT,
                       onClick: R,
                       divider: (0, r.jsx)(v, { color: "#747783" }),

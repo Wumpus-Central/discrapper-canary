@@ -71,9 +71,9 @@ function b(e) {
             animateOnMount: b = !1,
             waveform: x,
             currentTime: M,
-            duration: _,
-            played: w,
-            playing: A,
+            duration: w,
+            played: A,
+            playing: _,
             onDrag: D,
             onDragStart: k,
             onDragEnd: R,
@@ -83,10 +83,10 @@ function b(e) {
             () =>
                 6 *
                     Math.floor(
-                        ((_ <= 0.5 ? 40 : _ >= 45 ? 294 : ((Math.min(_, 45) - 0.5) / 44.5) * 254 + 40) + 4) / 6,
+                        ((w <= 0.5 ? 40 : w >= 45 ? 294 : ((Math.min(w, 45) - 0.5) / 44.5) * 254 + 40) + 4) / 6,
                     ) -
                 4,
-            [_],
+            [w],
         ),
         N = i.useRef(void 0),
         I =
@@ -138,8 +138,8 @@ function b(e) {
                     })(t ?? [], s, r) ?? f,
                 [t, s, r],
             )),
-        j = A && !c,
-        L = i.useRef(w),
+        j = _ && !c,
+        L = i.useRef(A),
         U = i.useRef(j),
         O = i.useRef(null),
         W = i.useRef(null),
@@ -170,8 +170,8 @@ function b(e) {
                 lastInactiveFillColor: m,
                 inactiveFillColor: g,
             };
-        })(w, j),
-        $ = { currentTime: M, duration: _, played: w },
+        })(A, j),
+        $ = { currentTime: M, duration: w, played: A },
         X = i.useRef($);
     (i.useEffect(() => {
         X.current = $;
@@ -187,7 +187,7 @@ function b(e) {
         i.useEffect(() => {
             let e = N.current;
             if (null == e) return;
-            let t = v({ showAll: !w, currentTime: M, duration: _, numSegments: I.length });
+            let t = v({ showAll: !A, currentTime: M, duration: w, numSegments: I.length });
             for (let s = 0; s < e.length; s++) {
                 let a = e[s];
                 if (s < t) {
@@ -196,7 +196,7 @@ function b(e) {
                 }
                 a.reset();
             }
-        }, [I, M, _, w]),
+        }, [I, M, w, A]),
         i.useEffect(() => {
             let e = null;
             return (
@@ -212,7 +212,7 @@ function b(e) {
                         let e = s - W.current;
                         e < 160 ? ((r = e), (l = !0)) : (W.current = null);
                     }
-                    ((L.current !== w || U.current !== j) && ((L.current = w), (U.current = j), (O.current = s)),
+                    ((L.current !== A || U.current !== j) && ((L.current = A), (U.current = j), (O.current = s)),
                         null != O.current && s > O.current + 200 && (O.current = null));
                     let o = a.height / F;
                     (i.clearRect(0, 0, a.width, a.height), i.beginPath());
@@ -257,7 +257,7 @@ function b(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [E, F, I, P, b, M, _, w, j, H, z, K, q, G, Y]));
+        }, [E, F, I, P, b, M, w, A, j, H, z, K, q, G, Y]));
     let [, Z] = (function (e) {
         let { ref: t, onDrag: s, onDragStart: a, onDragEnd: n } = e,
             [l, r] = i.useState(!1);

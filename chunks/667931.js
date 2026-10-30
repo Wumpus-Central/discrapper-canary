@@ -3,8 +3,8 @@
     H$: () => S,
     IE: () => m,
     JQ: () => a,
-    N5: () => N,
-    Sj: () => T,
+    N5: () => k,
+    Sj: () => b,
     TK: () => d,
     TN: () => E,
     W7: () => y,
@@ -65,7 +65,7 @@ function o(e) {
     return e.spans.find((e) => null == e.parent) ?? null;
 }
 function i(e) {
-    return Math.max(1, ...e.spans.map((t) => A(e, t)));
+    return Math.max(1, ...e.spans.map((t) => R(e, t)));
 }
 function l(e) {
     return e.spans.some((e) => null != e.error) || o(e)?.attrs?.ok === !1 || c(e) ? "error" : a(e) ? "ok" : "running";
@@ -77,7 +77,7 @@ function c(e) {
     return !e.live && !a(e);
 }
 function d(e) {
-    let t = R(e);
+    let t = A(e);
     function n(e) {
         return !t.has(e.id) && null != e.end && null == e.error;
     }
@@ -86,8 +86,8 @@ function d(e) {
     let s = (function r(s, o, i, l) {
             let a = s[0],
                 c = Math.min(...s.map((e) => e.start)),
-                d = Math.max(...s.map((t) => A(e, t))),
-                u = s.map((t) => A(e, t) - t.start),
+                d = Math.max(...s.map((t) => R(e, t))),
+                u = s.map((t) => R(e, t) - t.start),
                 p = 1 === s.length ? (t.get(a.id) ?? []) : [],
                 h = {
                     key: 1 === s.length ? `span-${a.id}` : `fold-${a.id}`,
@@ -105,12 +105,12 @@ function d(e) {
                         i.some((n) => {
                             var r, o, i;
                             return (
-                                !s.includes(n) && ((r = e), (o = t), (i = n), o.start < A(r, i) && i.start < A(r, o))
+                                !s.includes(n) && ((r = e), (o = t), (i = n), o.start < R(r, i) && i.start < R(r, o))
                             );
                         }),
                     ),
                     outlivedParent: d > l,
-                    ...N(a),
+                    ...k(a),
                     significant: !1,
                     children: [],
                     descendants: 0,
@@ -132,7 +132,7 @@ function d(e) {
         i = 0.1 * (s.end - s.start);
     return (
         C(s, (e) => {
-            e.significant = b(e) >= i;
+            e.significant = T(e) >= i;
         }),
         s
     );
@@ -156,7 +156,7 @@ function u(e, t) {
                           count: o.reduce((e, t) => e + t.count, 0),
                           start: Math.min(...o.map((e) => e.start)),
                           end: Math.max(...o.map((e) => e.end)),
-                          totalMs: o.reduce((e, t) => e + b(t), 0),
+                          totalMs: o.reduce((e, t) => e + T(t), 0),
                       }),
                     (o = []));
             }
@@ -167,7 +167,7 @@ function u(e, t) {
     );
 }
 function p(e) {
-    return { collapsed: k(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
+    return { collapsed: N(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
 }
 function h(e, t, n) {
     let r = [...p(t).collapsed].filter((e) => !n.has(e));
@@ -178,10 +178,10 @@ function _(e) {
     return (C(e, (e) => t.add(e.key)), t);
 }
 function f(e) {
-    return { collapsed: new Set(), revealed: k(e, () => !0) };
+    return { collapsed: new Set(), revealed: N(e, () => !0) };
 }
 function g(e) {
-    return { collapsed: k(e, (e) => e.depth > 0), revealed: new Set() };
+    return { collapsed: N(e, (e) => e.depth > 0), revealed: new Set() };
 }
 function E(e, t) {
     if (!e.collapsed.has(t.key)) return { ...e, collapsed: new Set(e.collapsed).add(t.key) };
@@ -211,10 +211,10 @@ function m(e, t) {
     );
 }
 function y(e) {
-    let t = R(e);
+    let t = A(e);
     return new Map(
         e.spans.map((n) => {
-            let r = A(e, n);
+            let r = R(e, n);
             return [n.id, r - n.start - v(e, t.get(n.id) ?? [], n.start, r)];
         }),
     );
@@ -227,7 +227,7 @@ function O(e) {
     for (let t = 0; t <= e; t += r) s.push(t);
     return s;
 }
-function T(e) {
+function b(e) {
     return null == e
         ? ""
         : Object.entries(e)
@@ -237,13 +237,13 @@ function T(e) {
               })
               .join(" ");
 }
-function b(e) {
+function T(e) {
     return e.count > 1 ? e.totalMs : e.end - e.start;
 }
 function C(e, t) {
     for (let n of (t(e), e.children)) C(n, t);
 }
-function N(e) {
+function k(e) {
     let t = e.name.search(/[.:]/),
         n = -1 === t ? e.name : e.name.slice(0, t),
         r = (-1 === t ? "" : e.name.slice(t + 1))
@@ -257,7 +257,7 @@ function N(e) {
         category: s[n] ?? "other",
     };
 }
-function k(e, t) {
+function N(e, t) {
     let n = new Set();
     return (
         !(function e(r) {
@@ -267,9 +267,9 @@ function k(e, t) {
     );
 }
 function w(e) {
-    return `${e.name} ${T(e.attrs)}`;
+    return `${e.name} ${b(e.attrs)}`;
 }
-function R(e) {
+function A(e) {
     let t = new Map();
     for (let n of e.spans) {
         let e = t.get(n.parent) ?? [];
@@ -278,12 +278,12 @@ function R(e) {
     for (let e of t.values()) e.sort((e, t) => e.start - t.start);
     return t;
 }
-function A(e, t) {
+function R(e, t) {
     return t.end ?? e.as_of;
 }
 function v(e, t, n, r) {
     let s = t
-            .map((t) => [Math.max(t.start, n), Math.min(A(e, t), r)])
+            .map((t) => [Math.max(t.start, n), Math.min(R(e, t), r)])
             .filter((e) => {
                 let [t, n] = e;
                 return n > t;
