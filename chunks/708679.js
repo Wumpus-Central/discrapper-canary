@@ -1,8 +1,8 @@
-s.d(t, { EP: () => A, Iy: () => R, JN: () => P, P6: () => C, RW: () => O, XU: () => S, YI: () => I, yN: () => L });
+s.d(t, { EP: () => C, Iy: () => R, JN: () => k, P6: () => A, RW: () => O, XU: () => S, YI: () => I, yN: () => L });
 var n = s(636537),
-    a = s(506774),
-    l = s(73153),
-    r = s(195880),
+    l = s(506774),
+    r = s(73153),
+    a = s(195880),
     i = s(347111),
     c = s(245179),
     o = s(89222),
@@ -30,20 +30,20 @@ function b(e, t) {
     return (v.set(e, s), s);
 }
 function y() {
-    return a.w.get(j) ?? {};
+    return l.w.get(j) ?? {};
 }
 function w(e) {
     let { [e]: t, ...s } = y();
-    a.w.set(j, s);
+    l.w.set(j, s);
 }
-function A(e) {
+function C(e) {
     return y()[e]?.guildId;
 }
-function C(e, t) {
+function A(e, t) {
     let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         n = arguments.length > 3 ? arguments[3] : void 0;
     if (h.Ay.getProject(e)?.install_scope_setup != null)
-        a.w.set(j, { ...y(), [e]: { message: t, attachments: s, nonce: (0, r.m)(), guildId: n } });
+        l.w.set(j, { ...y(), [e]: { message: t, attachments: s, nonce: (0, a.m)(), guildId: n } });
     else (0, d.sendUserMessage)(e, t, s);
 }
 function E(e, t, s) {
@@ -64,22 +64,22 @@ function R(e, t) {
     let s = y()[e],
         n = h.Ay.getProject(e);
     if (null == s || null == n || !c.A.hasLoadedHistory(e)) return;
-    let l = c.A.getMessages(e),
-        r = (0, d.optimisticMessageId)(s.nonce);
+    let r = c.A.getMessages(e),
+        a = (0, d.optimisticMessageId)(s.nonce);
     if (!0 === s.sent) {
-        let a = l.some((e) => "user" === e.role && !0 !== e.held && e.id !== r && e.content === s.message),
+        let l = r.some((e) => "user" === e.role && !0 !== e.held && e.id !== a && e.content === s.message),
             i = c.A.getHistoryLoads(e) > (N.get(e) ?? 0);
-        a
+        l
             ? w(e)
             : !i || null != n.install_scope_setup || c.A.isHistoryUnavailable(e) || c.A.isThinking(e) || E(e, s, t);
         return;
     }
     if (null != n.install_scope_setup) {
-        l.some((e) => e.id === r) || (0, d.showUserMessage)(e, s.message, s.attachments, { held: !0, nonce: s.nonce });
+        r.some((e) => e.id === a) || (0, d.showUserMessage)(e, s.message, s.attachments, { held: !0, nonce: s.nonce });
         return;
     }
     "open" === d.default.getConnState(e) &&
-        (a.w.set(j, { ...y(), [e]: { ...s, sent: !0 } }),
+        (l.w.set(j, { ...y(), [e]: { ...s, sent: !0 } }),
         N.set(e, c.A.getHistoryLoads(e)),
         (0, d.sendUserMessage)(e, s.message, s.attachments, { nonce: s.nonce }) || E(e, s, t));
 }
@@ -105,18 +105,18 @@ function I(e) {
         })),
     };
 }
-async function k(e, t, s) {
-    let a = await n.Bo.put({
+async function P(e, t, s) {
+    let l = await n.Bo.put({
         url: `${x.Rsh.CONJURE_PROJECT(e)}/install-scope`,
         body: { install_scope: t, ...(null != s ? { guild_id: s } : {}) },
         rejectWithError: !0,
     });
-    l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: a.body });
+    r.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: l.body });
 }
-function P(e, t, s) {
+function k(e, t, s) {
     return b(`settle:${e}`, async () => {
         try {
-            await k(e, t, s);
+            await P(e, t, s);
         } catch (t) {
             if (409 !== t.status) throw t;
             await (0, f.U1)(e);
@@ -125,7 +125,7 @@ function P(e, t, s) {
 }
 function L(e, t, s, n) {
     return b(`switch:${e}:${t}`, async () => {
-        await k(e, s, n);
+        await P(e, s, n);
         let t = "guild" === s ? g.default["8+EcCu"] : g.default["U7+Yeh"];
         if (!(0, d.sendUserMessage)(e, p.intl.string(t))) throw Error("Not connected");
     });

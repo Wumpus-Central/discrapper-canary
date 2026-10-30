@@ -1,9 +1,9 @@
 s.d(t, { A: () => x });
 var n = s(477900);
 s(582128);
-var a = s(152367),
-    l = s(661531),
-    r = s(866665),
+var l = s(152367),
+    r = s(661531),
+    a = s(866665),
     i = s(939249),
     c = s(834730),
     o = s(742589),
@@ -26,11 +26,11 @@ function x(e) {
             className: h.QF,
             children: [
                 null == g
-                    ? (0, n.jsx)(a.D, {
+                    ? (0, n.jsx)(l.D, {
                           size: "custom",
                           width: 20,
                           height: 20,
-                          color: l.A.colors.ICON_STRONG,
+                          color: r.A.colors.ICON_STRONG,
                           className: h.Kk,
                       })
                     : null,
@@ -43,7 +43,7 @@ function x(e) {
                       })
                     : null,
                 null != g && null != p
-                    ? (0, n.jsx)(r.m, {
+                    ? (0, n.jsx)(a.m, {
                           asContainer: !0,
                           text: v,
                           position: "bottom",

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => x, b9: () => g, w: () => p });
+n.d(t, { Ay: () => h, b9: () => g, w: () => p });
 var l = n(477900);
 n(582128);
 var a = n(683063),
@@ -19,20 +19,20 @@ function p(e) {
 function g(e) {
     return p(e) ?? f.intl.string(c.default.t8skVB);
 }
-function x(e) {
+function h(e) {
     let {
             projectId: t,
             steps: n,
             fallbackLabel: p,
             live: g,
-            durationMs: x,
-            connectsDown: h = !1,
+            durationMs: h,
+            connectsDown: x = !1,
             closed: j = !1,
             tier: v,
         } = e,
         b = (0, s.SY)(n),
         k = (0, i.Q7)(f.intl.string(c.default.uk6jhJ), v),
-        y = g ? void 0 : x,
+        y = g ? void 0 : h,
         _ = null != y ? (0, r.nY)(y) : null != b ? (0, s.WQ)(b) : (p ?? f.intl.string(c.default.t8skVB)),
         A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(o.A, {
@@ -48,7 +48,7 @@ function x(e) {
         anchor: !0,
         live: g,
         settled: null != y || (!g && j),
-        connectsDown: h,
+        connectsDown: x,
         detail: A
             ? (0, l.jsx)("ol", {
                   className: m.dO,

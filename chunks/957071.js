@@ -1,8 +1,8 @@
 s.d(t, { A: () => p });
 var n = s(477900),
-    a = s(582128),
-    l = s(477262),
-    r = s(432017),
+    l = s(582128),
+    r = s(477262),
+    a = s(432017),
     i = s(81369),
     c = s(265872),
     o = s(980707),
@@ -16,13 +16,13 @@ let g = [
     {
         id: "add-images-videos",
         label: h.default["51+9lc"],
-        icon: l.s,
+        icon: r.s,
         accept: "image/*,video/*,.png,.jpg,.jpeg,.gif,.webp,.avif,.heic,.heif,.svg,.bmp,.mp4,.m4v,.mov,.webm,.mkv,.avi",
     },
     {
         id: "add-sounds",
         label: h.default["10ljr2"],
-        icon: r.T,
+        icon: a.T,
         accept: "audio/*,.mp3,.wav,.ogg,.oga,.opus,.m4a,.aac,.flac,.weba,.webm,.aif,.aiff,.mid,.midi",
     },
     { id: "add-other-files", label: h.default.aotDee, icon: i.H, accept: "" },
@@ -31,20 +31,20 @@ function p(e) {
     let {
             navId: t,
             disabled: s,
-            buttonClassName: l,
-            iconClassName: r,
+            buttonClassName: r,
+            iconClassName: a,
             onAddFiles: i,
             onImport: p,
             onSendToOtherProjects: j,
         } = e,
-        v = a.useRef(null),
-        N = a.useRef(null),
+        v = l.useRef(null),
+        N = l.useRef(null),
         b = x.intl.string(x.t.d56gCa),
-        y = a.useCallback((e) => {
+        y = l.useCallback((e) => {
             let t = v.current;
             null != t && ((t.accept = e), t.click());
         }, []),
-        w = a.useCallback(
+        w = l.useCallback(
             (e) => {
                 (i(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
             },
@@ -112,20 +112,20 @@ function p(e) {
                     });
                 },
                 children: (e, t) => {
-                    let { isShown: a } = t;
+                    let { isShown: l } = t;
                     return (0, n.jsx)("button", {
                         ...e,
                         ref: N,
                         type: "button",
-                        className: l,
+                        className: r,
                         disabled: s,
                         "aria-label": b,
                         "aria-haspopup": "menu",
-                        "aria-expanded": a,
+                        "aria-expanded": l,
                         children: (0, n.jsx)(f.PlusLargeIcon, {
                             size: "refresh_sm",
                             color: "currentColor",
-                            className: r,
+                            className: a,
                         }),
                     });
                 },

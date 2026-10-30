@@ -1,8 +1,8 @@
 (s.d(t, { FM: () => g, Nl: () => p, gn: () => x }), s(323874), s(14289), s(35956));
 var n = s(477900),
-    a = s(582128),
-    l = s(834730),
-    r = s(289873),
+    l = s(582128),
+    r = s(834730),
+    a = s(289873),
     i = s(285796),
     c = s(666476),
     o = s(287111),
@@ -12,11 +12,11 @@ var n = s(477900),
     f = s(105292),
     h = s(153171);
 function x(e, t, s, n) {
-    let a = (0, o.GU)(e, t).length,
-        l = s.map((e) => {
+    let l = (0, o.GU)(e, t).length,
+        r = s.map((e) => {
             let t = (0, d.Ft)(e),
                 s = { name: e.name, contentType: t };
-            if (a++ >= c.lN) return { draft: { ...s, status: "error", errorText: (0, d.XV)() } };
+            if (l++ >= c.lN) return { draft: { ...s, status: "error", errorText: (0, d.XV)() } };
             switch ((0, d.R9)(e, t)) {
                 case "too-large":
                     return { draft: { ...s, status: "error", errorText: (0, o.iW)(t) } };
@@ -31,26 +31,26 @@ function x(e, t, s, n) {
                         },
                     };
                 case "fits": {
-                    let a = c.XB.has(t) ? URL.createObjectURL(e) : void 0;
-                    return { draft: { ...s, status: "uploading", previewUrl: a }, upload: () => n(e) };
+                    let l = c.XB.has(t) ? URL.createObjectURL(e) : void 0;
+                    return { draft: { ...s, status: "uploading", previewUrl: l }, upload: () => n(e) };
                 }
             }
         });
-    (0, o.fD)(e, t, l);
+    (0, o.fD)(e, t, r);
 }
 function g(e) {
     let { projectId: t, surface: s, onUploadFile: n } = e,
-        l = (0, o.G)(t, s),
-        r = a.useCallback((e) => x(t, s, e, n), [t, s, n]),
-        i = (0, d.sm)(r),
-        c = a.useCallback((e) => (0, o.XR)(t, s, e), [t, s]),
-        u = a.useCallback(() => (0, o.lc)(t, s), [t, s]);
+        r = (0, o.G)(t, s),
+        a = l.useCallback((e) => x(t, s, e, n), [t, s, n]),
+        i = (0, d.sm)(a),
+        c = l.useCallback((e) => (0, o.XR)(t, s, e), [t, s]),
+        u = l.useCallback(() => (0, o.lc)(t, s), [t, s]);
     return {
-        drafts: l,
-        addFiles: r,
+        drafts: r,
+        addFiles: a,
         pasteFiles: i,
         removeDraft: c,
-        settled: l.every((e) => "ready" === e.status),
+        settled: r.every((e) => "ready" === e.status),
         takeRefs: u,
     };
 }
@@ -61,10 +61,10 @@ function p(e) {
         thumbSrc: t.previewUrl,
         subText:
             "error" === t.status
-                ? (0, n.jsx)(l.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: t.errorText })
+                ? (0, n.jsx)(r.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: t.errorText })
                 : null,
         children: [
-            "uploading" === t.status ? (0, n.jsx)(r.y, { type: r.t.SPINNING_CIRCLE_SIMPLE, className: h.Rk }) : null,
+            "uploading" === t.status ? (0, n.jsx)(a.y, { type: a.t.SPINNING_CIRCLE_SIMPLE, className: h.Rk }) : null,
             (0, n.jsx)("button", {
                 type: "button",
                 className: h.o1,

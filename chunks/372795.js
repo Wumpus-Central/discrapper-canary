@@ -42,8 +42,8 @@ function o(e) {
             [t, n],
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        N = null == f ? 0 : Math.round(f * Math.min(w, 2)),
-        S = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: N }),
+        S = null == f ? 0 : Math.round(f * Math.min(w, 2)),
+        N = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: S }),
         C = (0, i.AV)(t, n),
         A = r.useRef(C);
     (r.useEffect(() => {
@@ -53,8 +53,8 @@ function o(e) {
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [C]),
         r.useEffect(() => {
-            g?.(S, j);
-        }, [S, j, g]),
+            g?.(N, j);
+        }, [N, j, g]),
         r.useEffect(() => {
             c && p.current?.focus();
         }, [c]));

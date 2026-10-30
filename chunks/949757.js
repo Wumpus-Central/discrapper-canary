@@ -1,57 +1,57 @@
-i.d(e, { Hj: () => p, iG: () => f, vt: () => h, yN: () => g });
-var a = i(477900),
-    n = i(582128),
-    r = i(666476),
-    l = i(989145),
-    c = i(322227),
-    u = i(721507),
-    o = i(716594),
-    s = i(87501),
-    d = i(105292);
-async function p(t, e, i) {
-    (0, c.ensureConnection)(t);
-    let a = await (0, l.vX)(t, e);
-    (0, c.sendUserMessage)(t, i, [a]);
+a.d(t, { Hj: () => p, iG: () => h, vt: () => f, yN: () => g });
+var n = a(477900),
+    i = a(582128),
+    r = a(666476),
+    l = a(989145),
+    u = a(322227),
+    o = a(721507),
+    s = a(716594),
+    c = a(87501),
+    d = a(105292);
+async function p(e, t, a) {
+    (0, u.ensureConnection)(e);
+    let n = await (0, l.vX)(e, t);
+    (0, u.sendUserMessage)(e, a, [n]);
 }
-function h(t) {
-    let e = "" === t.type ? "application/octet-stream" : t.type;
-    return (0, r.Oq)(t.size, e)
+function f(e) {
+    let t = "" === e.type ? "application/octet-stream" : e.type;
+    return (0, r.Oq)(e.size, t)
         ? null
-        : d.intl.formatToPlainString(s.default.ThxcOX, { size: (0, r.sM)((0, r.Ju)(e)) });
+        : d.intl.formatToPlainString(c.default.ThxcOX, { size: (0, r.sM)((0, r.Ju)(t)) });
 }
-async function f(t, e) {
-    let i,
-        a =
-            ((i = e
+async function h(e, t) {
+    let a,
+        n =
+            ((a = t
                 .normalize("NFKD")
                 .replace(/[^a-zA-Z0-9]+/g, "-")
                 .replace(/^-+|-+$/g, "")
                 .slice(0, 64)
                 .replace(/-+$/g, "")
                 .toLowerCase()),
-            `${"" === i ? "conjure" : i}.zip`),
-        n = await (0, o.c)(t, a);
-    await (0, u.o)(n, a);
+            `${"" === a ? "conjure" : a}.zip`),
+        i = await (0, s.c)(e, n);
+    await (0, o.o)(i, n);
 }
-function g(t) {
-    let e = n.useRef(null),
-        i = n.useCallback(
-            (e) => {
-                let i = e.target.files?.[0] ?? null;
-                ((e.target.value = ""), null != i && t(i));
+function g(e) {
+    let t = i.useRef(null),
+        a = i.useCallback(
+            (t) => {
+                let a = t.target.files?.[0] ?? null;
+                ((t.target.value = ""), null != a && e(a));
             },
-            [t],
+            [e],
         );
     return {
-        open: () => e.current?.click(),
-        input: (0, a.jsx)("input", {
-            ref: e,
+        open: () => t.current?.click(),
+        input: (0, n.jsx)("input", {
+            ref: t,
             type: "file",
             accept: ".zip,.tar,.tar.gz,.tgz,.tar.bz2,.tar.xz,application/zip,application/gzip,application/x-tar,application/x-bzip2,application/x-xz",
             hidden: !0,
             "aria-hidden": !0,
             tabIndex: -1,
-            onChange: i,
+            onChange: a,
         }),
     };
 }

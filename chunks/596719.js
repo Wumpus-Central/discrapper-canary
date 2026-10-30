@@ -1,28 +1,28 @@
 t.d(r, { A: () => S });
 var l = t(477900),
     s = t(582128),
-    a = t(503698),
-    n = t.n(a),
+    n = t(503698),
+    a = t.n(n),
     i = t(900797),
     o = t(847374),
-    c = t(939249),
-    d = t(652215),
+    d = t(939249),
+    c = t(652215),
     u = t(561029);
-function m(e) {
+function h(e) {
     return (0, l.jsx)("div", { className: e.className, children: e.children });
 }
-function h(e) {
+function m(e) {
     return (0, l.jsx)("div", { className: e.className, children: e.children });
 }
 function N(e) {
     return (0, l.jsx)("div", { className: e.className, children: e.children });
 }
 class p extends s.PureComponent {
-    static SortDirection = d.tSW;
+    static SortDirection = c.tSW;
     static defaultProps = {
-        initialSortDirection: d.tSW.ASCENDING,
-        rowHeaderComponent: m,
-        rowComponent: h,
+        initialSortDirection: c.tSW.ASCENDING,
+        rowHeaderComponent: h,
+        rowComponent: m,
         cellComponent: N,
         hasHeader: !0,
         sortData: !0,
@@ -40,7 +40,7 @@ class p extends s.PureComponent {
     }
     handleSort = (e) => {
         let { sortKey: r, sortDirection: t, onSort: l } = this.props;
-        null != l && l(e, r === e && t === d.tSW.ASCENDING ? d.tSW.DESCENDING : d.tSW.ASCENDING);
+        null != l && l(e, r === e && t === c.tSW.ASCENDING ? c.tSW.DESCENDING : c.tSW.ASCENDING);
     };
     renderHeader() {
         let {
@@ -48,33 +48,33 @@ class p extends s.PureComponent {
                 data: r,
                 sortDirection: t,
                 sortKey: s,
-                headerCellClassName: a,
-                headerClassName: h,
+                headerCellClassName: n,
+                headerClassName: m,
                 sortedHeaderCellClassName: N,
                 stickyHeader: p,
             } = this.props,
             S = e.map((e) => {
-                let m = null != e.renderHeader ? e.renderHeader(e, r) : e.key,
-                    h = t === d.tSW.ASCENDING ? i.t : o.a;
+                let h = null != e.renderHeader ? e.renderHeader(e, r) : e.key,
+                    m = t === c.tSW.ASCENDING ? i.t : o.a;
                 return (0, l.jsx)(
-                    c.D,
+                    d.D,
                     {
-                        className: n()(u.e4, a, e.headerCellClassName, e.cellClassName, s === e.key && N, {
+                        className: a()(u.e4, n, e.headerCellClassName, e.cellClassName, s === e.key && N, {
                             [u.vk]: this.isSortable(e),
                         }),
                         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
                         children: (0, l.jsxs)("div", {
                             className: u.PZ,
                             children: [
-                                m,
-                                this.isSortable(e) && s === e.key ? (0, l.jsx)(h, { className: u.GM }) : null,
+                                h,
+                                this.isSortable(e) && s === e.key ? (0, l.jsx)(m, { className: u.GM }) : null,
                             ],
                         }),
                     },
                     e.key,
                 );
             });
-        return (0, l.jsx)(m, { className: n()(h, u.nM, { [u.ln]: p }), children: S });
+        return (0, l.jsx)(h, { className: a()(m, u.nM, { [u.ln]: p }), children: S });
     }
     renderBody() {
         let {
@@ -82,12 +82,12 @@ class p extends s.PureComponent {
                 data: r,
                 sortData: t,
                 sortKey: l,
-                sortDirection: a,
+                sortDirection: n,
                 bodyCellClassName: i,
                 rowClassName: o,
-                cellProps: c,
-                rowProps: m,
-                rowComponent: h,
+                cellProps: d,
+                rowProps: h,
+                rowComponent: m,
                 cellComponent: N,
             } = this.props,
             p = r;
@@ -100,22 +100,22 @@ class p extends s.PureComponent {
                           })
                         : null,
                 s = [...r],
-                n = null != t && t.sort,
+                a = null != t && t.sort,
                 i =
                     null != t && null != l && this.isSortable(t)
-                        ? s.sort("function" == typeof n ? (e, r) => n(e, r, a) : this.getDefaultSort(l))
+                        ? s.sort("function" == typeof a ? (e, r) => a(e, r, n) : this.getDefaultSort(l))
                         : s;
-            p = null != t && a === d.tSW.DESCENDING ? i.reverse() : i;
+            p = null != t && n === c.tSW.DESCENDING ? i.reverse() : i;
         }
         return p.map((r, t) => {
             let l = e.map((e) =>
                 (0, s.createElement)(
                     N,
-                    { ...c, key: e.key, item: r, className: n()(i, e.bodyCellClassName, e.cellClassName) },
-                    null != e.render ? e.render(r, c, t) : r[e.key],
+                    { ...d, key: e.key, item: r, className: a()(i, e.bodyCellClassName, e.cellClassName) },
+                    null != e.render ? e.render(r, d, t) : r[e.key],
                 ),
             );
-            return (0, s.createElement)(h, { ...m, key: r.key, item: r, className: n()(u.nM, o) }, l);
+            return (0, s.createElement)(m, { ...h, key: r.key, item: r, className: a()(u.nM, o) }, l);
         });
     }
     render() {
