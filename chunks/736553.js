@@ -3,15 +3,16 @@ class r {
     socket = null;
     supportsPublishOptions = !1;
     open(e) {
-        let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: i } = e;
+        let { url: t, ticket: n, templateId: r, onEvent: s, onPong: o, onClose: i, onError: l } = e;
         this.close();
-        let l = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
-            a = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != r ? { template: r } : {}) }),
-            c = new WebSocket(`${l}/agent/ws?${a}`);
-        ((this.socket = c),
-            c.addEventListener("message", (e) => {
+        let a = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
+            c = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != r ? { template: r } : {}) }),
+            d = new WebSocket(`${a}/agent/ws?${c}`);
+        ((this.socket = d),
+            d.addEventListener("message", (e) => {
                 let t;
-                if (this.socket === c) {
+                if (this.socket === d) {
+                    if ("pong" === e.data) return void o?.();
                     try {
                         t = JSON.parse(e.data);
                     } catch (e) {
@@ -21,11 +22,11 @@ class r {
                     ("hello" === t.type && (this.supportsPublishOptions = !0 === t.publish_options), s(t));
                 }
             }),
-            c.addEventListener("error", (e) => {
-                this.socket === c && i?.(e);
+            d.addEventListener("error", (e) => {
+                this.socket === d && l?.(e);
             }),
-            c.addEventListener("close", () => {
-                this.socket === c && o?.();
+            d.addEventListener("close", () => {
+                this.socket === d && i?.();
             }));
     }
     sendPublishScheduleMessage(e) {
@@ -131,6 +132,12 @@ class r {
     sendModelSettings(e) {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "set_model_settings", settings: e }));
+    }
+    sendPing() {
+        if (null != this.socket && this.socket.readyState === WebSocket.OPEN)
+            try {
+                this.socket.send("ping");
+            } catch {}
     }
     sendLoadHistory(e) {
         null != this.socket &&

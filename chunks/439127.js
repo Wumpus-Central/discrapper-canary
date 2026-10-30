@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657211";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657268";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657211, Version Hash: 51d3161acf958a9efa4ba0668560244de6d68cfa`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657268, Version Hash: 496eacbf07e9dfa62935ca177e1640290ab49ec4`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -3545,7 +3545,7 @@ let ry = (0, rl.Fe)({
                 n.e("356675"),
                 n.e("824126"),
                 n.e("248748"),
-                n.e("778042"),
+                n.e("11312"),
                 n.e("387634"),
                 n.e("846308"),
                 n.e("363430"),
@@ -4113,7 +4113,7 @@ let ry = (0, rl.Fe)({
                 n.e("98972"),
                 n.e("341701"),
                 n.e("248748"),
-                n.e("778042"),
+                n.e("11312"),
                 n.e("42834"),
                 n.e("387634"),
                 n.e("468083"),
@@ -26183,7 +26183,7 @@ let y_ = "isHideDevBanner",
                     className: tf()(yu.Wz, yu.mr),
                     children: [
                         (0, b.jsx)(yc, { className: yu.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657211" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657268" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -29645,7 +29645,7 @@ let bN = (0, tZ.Fe)({
                 n.e("356675"),
                 n.e("824126"),
                 n.e("978046"),
-                n.e("778042"),
+                n.e("11312"),
                 n.e("387634"),
                 n.e("846308"),
                 n.e("363430"),
@@ -33505,7 +33505,7 @@ async function bW() {
             n.e("568881"),
             n.e("341701"),
             n.e("248748"),
-            n.e("778042"),
+            n.e("11312"),
             n.e("283230"),
             n.e("42834"),
             n.e("468083"),
@@ -56761,7 +56761,7 @@ let KR = (0, rl.Fe)({
                 n.e("568881"),
                 n.e("341701"),
                 n.e("248748"),
-                n.e("778042"),
+                n.e("11312"),
                 n.e("283230"),
                 n.e("42834"),
                 n.e("468083"),
