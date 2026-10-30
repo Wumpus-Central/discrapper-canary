@@ -23,17 +23,17 @@ function d(e, t) {
         null != t &&
         Object.values(o).some((n) =>
             (function (e, t, n) {
+                var i;
+                if (t.guild_id !== e.id || e.features.has(n.guildFeature)) return !1;
                 return (
-                    !(t.guild_id !== e.id || e.features.has(n.guildFeature)) &&
                     null ==
                         (c.has(t.type)
                             ? t.isNSFW()
                                 ? "nsfw"
-                                : s.MJ(l.xBc.VIEW_CHANNEL, t) && s.MJ(l.xBc.READ_MESSAGE_HISTORY, t)
+                                : ((i = t), s.MJ(l.xBc.VIEW_CHANNEL, i) && s.MJ(l.xBc.READ_MESSAGE_HISTORY, i))
                                   ? null
                                   : "not_public"
-                            : "channel_type") &&
-                    !t.hasFlag(n.channelFlag)
+                            : "channel_type") && !t.hasFlag(n.channelFlag)
                 );
             })(e, t, n),
         )
