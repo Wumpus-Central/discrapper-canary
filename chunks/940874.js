@@ -163,7 +163,7 @@ let d = {
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
                     turnId: e.turn_id,
-                    patch: { clarification: e.clarification },
+                    patch: { clarification: e.clarification, ...(null != e.ts ? { clarificationAt: e.ts } : {}) },
                 });
         },
         attachment(e, t) {
