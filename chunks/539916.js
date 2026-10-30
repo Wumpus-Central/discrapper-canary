@@ -14,14 +14,14 @@
     Uh: () => b,
     a5: () => y,
     fs: () => f,
-    hv: () => M,
+    hv: () => P,
     iD: () => h,
     kq: () => _,
     n4: () => k,
     pA: () => I,
     qC: () => S,
     sd: () => p,
-    tb: () => P,
+    tb: () => M,
     vK: () => G,
     wZ: () => O,
 }),
@@ -130,10 +130,10 @@ function b(e) {
         additionalConnections: e.additional_connections ?? [],
     };
 }
-function M(e) {
+function P(e) {
     return null == e || (null == e.id && null == e.name);
 }
-let P = new Set([
+let M = new Set([
         c.fg2.PLAYSTATION_STAGING,
         c.fg2.CONTACTS,
         c.fg2.DOMAIN,
@@ -143,7 +143,7 @@ let P = new Set([
         c.fg2.LEAGUE_OF_LEGENDS,
         c.fg2.SKYPE,
     ]),
-    U = Object.values(c.fg2).filter((e) => !P.has(e));
+    U = Object.values(c.fg2).filter((e) => !M.has(e));
 function w(e) {
     return 0 === e.connection_type ? `app:${e.application_id}` : `provider:${e.provider_id}`;
 }

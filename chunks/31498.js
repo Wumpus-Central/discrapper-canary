@@ -158,24 +158,24 @@ class p extends l.EventEmitter {
         else if (null == p || (null != g && p.type !== g.type)) return void this.clearQuery();
         let { type: x, typeInfo: E, query: S } = p,
             y = i || (l && (this.state.query?.queryText !== S || this.state.query?.typeInfo !== E)),
-            A = c.ML.getSetting();
-        d.allowStickers = d.allowStickers ? A : d.allowStickers;
-        let C = c.eK.getSetting();
-        d.allowSoundmoji = d.allowSoundmoji ? C : d.allowSoundmoji;
+            C = c.ML.getSetting();
+        d.allowStickers = d.allowStickers ? C : d.allowStickers;
+        let A = c.eK.getSetting();
+        d.allowSoundmoji = d.allowSoundmoji ? A : d.allowSoundmoji;
         let { results: b, metadata: I } = E.queryResults(this.props.channel, this.props.guild, S, d, y),
             v = 0;
         for (let e of Object.values(b)) Array.isArray(e) && (v += e.length);
         l && S.length > 0 && S !== this.state.query?.queryText && (0, s.AR)(x, d);
         let N = !0 === b.isLoading,
             T = this.shouldShow(v, N, E),
-            j = this.state.selectedIndex;
-        (!T || N ? (j = null) : null != j && j >= v && (j = v - 1),
+            k = this.state.selectedIndex;
+        (!T || N ? (k = null) : null != k && k >= v && (k = v - 1),
             T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, I),
             this.endGameSearchSessionIfLeaving(x),
             this.setState({
                 query: { type: x, typeInfo: E, queryText: S, results: b, resultCount: v, options: d, isLoading: N },
                 isVisible: T,
-                selectedIndex: j,
+                selectedIndex: k,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             }));

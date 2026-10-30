@@ -1,4 +1,4 @@
-t.d(n, { Dv: () => d, Ws: () => u, Yy: () => s });
+t.d(n, { Dv: () => c, Ws: () => u, Yy: () => s });
 var l = t(174459),
     i = t(210470),
     a = t(652215);
@@ -15,9 +15,9 @@ function u(e) {
 function s(e, n) {
     l.default.track(a.HAw.SWP_NOTICE_ACTION, { ...r(e), action: n });
 }
-function d(e, n, t, r, u) {
+function c(e, n, t, r, u) {
     let s = (0, i.Dq)(r),
-        d =
+        c =
             null != u
                 ? s.filter((e) => u.includedChannelIds.has(e))
                 : r.channels.filter((e) => e.eligible && e.included);
@@ -27,6 +27,6 @@ function d(e, n, t, r, u) {
         feature_key: t,
         feature_enabled: r.enabled,
         eligible_channel_count: s.length,
-        included_channel_count: d.length,
+        included_channel_count: c.length,
     });
 }

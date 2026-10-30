@@ -36,25 +36,25 @@ function h(e, t, n) {
             () => ({ getScrollerNode: () => D.current, getScrollerState: v, ...(0, u.A)(D, v, b, p) }),
             [D, v, p, b],
         );
-        let M = (0, _.A)({ scrollbarGutter: S, orientation: p, className: f, scrollerRef: D }),
-            P = !1 === S || "vertical" !== p ? void 0 : "stable" === S ? A.x2 : A.GV;
+        let P = (0, _.A)({ scrollbarGutter: S, orientation: p, className: f, scrollerRef: D }),
+            M = !1 === S || "vertical" !== p ? void 0 : "stable" === S ? A.x2 : A.GV;
         return O
             ? (0, i.jsx)(l.B, {
                   gap: C,
                   ref: D,
-                  className: s()(f, P, { [e]: !0, [t]: m, [n]: g }),
+                  className: s()(f, M, { [e]: !0, [t]: m, [n]: g }),
                   style: (0, E.Ay)(N, p, T),
                   dir: I,
                   ...y,
-                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: R, containerRef: D, children: [h, M] }),
+                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: R, containerRef: D, children: [h, P] }),
               })
             : (0, i.jsx)("div", {
                   ref: D,
-                  className: s()(f, P, { [e]: !0, [t]: m, [n]: g }),
+                  className: s()(f, M, { [e]: !0, [t]: m, [n]: g }),
                   style: (0, E.Ay)(N, p, T),
                   dir: I,
                   ...y,
-                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: R, containerRef: D, children: [h, M] }),
+                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: R, containerRef: D, children: [h, P] }),
               });
     };
 }

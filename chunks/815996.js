@@ -237,8 +237,8 @@ class D {
 }
 var v = n(986630),
     b = n(384726),
-    M = n(696444),
-    P = n(474012),
+    P = n(696444),
+    M = n(474012),
     U = n(758836),
     w = n(652215);
 class G {
@@ -313,8 +313,8 @@ class G {
                 return t === n;
             }),
             prices: (0, b.A)(s),
-            items: (0, P.Kh)(f.items),
-            bundledProducts: l?.map(M.A.fromServer),
+            items: (0, M.Kh)(f.items),
+            bundledProducts: l?.map(P.A.fromServer),
             variants: o?.map(v.x.fromServer),
             googleSkuIds: f.google_sku_ids,
             eligibleOffers: f.eligible_offers,

@@ -8,13 +8,13 @@ n.d(t, {
     WQ: () => m,
     AQ: () => g,
     Dr: () => D,
-    z5: () => P,
+    z5: () => M,
     zD: () => C,
     x2: () => T,
     Ft: () => G,
     WT: () => y,
     UV: () => U,
-    yF: () => M,
+    yF: () => P,
     TJ: () => N,
 });
 var i = n(750459),
@@ -178,11 +178,11 @@ async function b(e, t, n, i) {
         throw (s.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_FAILURE", roomId: t, localId: r }), e);
     }
 }
-async function M(e, t, n) {
+async function P(e, t, n) {
     (await L(e, t, n, { object_type: E.N.NOTE }),
         t !== e && (0, c.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t }));
 }
-async function P(e, t) {
+async function M(e, t) {
     try {
         let n = await a.Bo.get({ url: f.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
             i = (0, A.S)(n.body);

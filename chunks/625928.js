@@ -17,15 +17,15 @@ var l = n(477900),
     E = n(192308),
     S = n(939249),
     y = n(404374),
-    A = n(10392),
-    C = n(82498),
+    C = n(10392),
+    A = n(82498),
     b = n(734057),
     I = n(309010),
     v = n(174459),
     N = n(652215),
     T = n(105292),
-    j = n(845210);
-function k() {
+    k = n(845210);
+function j() {
     (0, E.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
@@ -45,26 +45,26 @@ function _(e) {
                 location: { location_page: r, location_section: N.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             }),
-                (0, A.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, C.uq)("longer messages inline")));
+                (0, C.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
         }, [r, a]),
         n
             ? (0, l.jsx)(S.D, {
-                  className: j.e7,
-                  onClick: () => k(),
+                  className: k.e7,
+                  onClick: () => j(),
                   children: (0, l.jsx)(u.m, {
                       text: T.intl.string(T.t["+eFIjX"]),
                       position: "top",
-                      children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: j.M2 }),
+                      children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: k.M2 }),
                   }),
               })
             : (0, l.jsxs)("div", {
-                  className: s()(j.zr, t),
+                  className: s()(k.zr, t),
                   children: [
-                      (0, l.jsx)(c.t, { size: "md", className: j.M2, color: y.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.t, { size: "md", className: k.M2, color: y.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
-                          className: j.Qq,
+                          className: k.Qq,
                           variant: "text-sm/normal",
-                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: k }),
+                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: j }),
                       }),
                   ],
               })
@@ -76,26 +76,26 @@ function O(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
         S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
         y = (0, p.A)(),
-        A = i ?? y,
-        C = r ?? i ?? y / 10,
+        C = i ?? y,
+        A = r ?? i ?? y / 10,
         b = n.length,
         I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && S,
         v = null != t.upsellLongMessages && !S,
-        j = A - b,
-        k = j > C;
-    (0, a.$)({ currentLength: b, maxLength: A, message: T.intl.string(T.t.c2Jqed) });
+        k = C - b,
+        j = k > A;
+    (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
     let O =
-            0 === j
+            0 === k
                 ? T.intl.string(T.t.tU6YQ7)
-                : j > 0
-                  ? T.intl.formatToPlainString(T.t.qH8uFW, { count: j })
+                : k > 0
+                  ? T.intl.formatToPlainString(T.t.qH8uFW, { count: k })
                   : T.intl.string(T.t.YSRIqa),
-        { analyticsLocations: M } = (0, f.Ay)(m.A.CHARACTER_COUNT),
-        { isVisible: L } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
-    if (!L) return null;
-    let P = j >= 0;
+        { analyticsLocations: L } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { isVisible: M } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
+    if (!M) return null;
+    let P = k >= 0;
     return (0, l.jsx)(f.f5, {
-        value: M,
+        value: L,
         children: (0, l.jsxs)("div", {
             className: s()(E, w.Dq),
             children: [
@@ -104,12 +104,12 @@ function O(e) {
                     children: [
                         I && P
                             ? (0, l.jsx)(u.m, {
-                                  text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: A }),
+                                  text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: C }),
                                   position: "top",
                                   children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: w.y }),
                               })
                             : null,
-                        k
+                        j
                             ? null
                             : (0, l.jsx)(u.m, {
                                   text: O,
@@ -119,14 +119,14 @@ function O(e) {
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
                                       color: P ? "text-default" : "text-feedback-critical",
-                                      children: j,
+                                      children: k,
                                   }),
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: j }) }),
-                v && !k
-                    ? (0, l.jsx)(_, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
+                (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: k }) }),
+                v && !j
+                    ? (0, l.jsx)(_, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: k })
                     : null,
             ],
         }),

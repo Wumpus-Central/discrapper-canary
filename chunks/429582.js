@@ -47,8 +47,8 @@ let C = new Set(),
     D = !1,
     v = new Set(),
     b = new WeakMap(),
-    M = 1,
-    P = null,
+    P = 1,
+    M = null,
     U = new Set(),
     w = new Set(),
     G = "",
@@ -179,7 +179,7 @@ function eu(e) {
 }
 function e_(e) {
     let t = b.get(e);
-    return (null == t && ((t = M++), b.set(e, t)), t);
+    return (null == t && ((t = P++), b.set(e, t)), t);
 }
 function eE() {
     if (null != m) return m;
@@ -469,7 +469,7 @@ function eR(e) {
     for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) A.add(e);
     ((g = A),
         (function (e, t) {
-            if (null == P) return;
+            if (null == M) return;
             let n = "";
             for (let e of t) n += `${e_(e)},`;
             for (let { iframe: t } of e) n += `|${e_(t)}`;
@@ -482,24 +482,24 @@ function eR(e) {
             }
             for (let { iframe: t } of e) r(t);
             for (let e of t) r(e);
-            for (let e of w) i.has(e) || P.containers?.unobserve(e);
-            for (let e of i) w.has(e) || P.containers?.observe(e);
+            for (let e of w) i.has(e) || M.containers?.unobserve(e);
+            for (let e of i) w.has(e) || M.containers?.observe(e);
             for (let e of (w.clear(), i)) w.add(e);
         })(e, n),
-        P?.mutations.takeRecords(),
+        M?.mutations.takeRecords(),
         (R = null),
         (L = !0));
 }
 function eL(e) {
     for (let [t, n] of ((T = e), [...J.keys(), ...et].map((e) => [e, ed(e)]))) ec(t, e, n);
-    (P?.mutations.takeRecords(), (I = !0));
+    (M?.mutations.takeRecords(), (I = !0));
 }
 let ey = null,
     eD = null,
     ev = null,
     eb = null,
-    eM = 0,
-    eP = !1,
+    eP = 0,
+    eM = !1,
     eU = !1,
     ew = new Map(),
     eG = new Set();
@@ -542,12 +542,12 @@ function eB() {
     for (let e of eG) ep(e) || eG.delete(e);
     if (eG.size > 0 || [...C].some((e) => !e.contains(n.iframe) && ep(e)) || [...O].some(ep) || !ex(i, T)) return;
     ((ey = e), null != u && (clearTimeout(u), (u = null)));
-    let a = ++eM;
+    let a = ++eP;
     function o(t) {
-        ey === e && eM === a && ((ey = null), t && ((eb = e), (eD = null)), eK(), eY());
+        ey === e && eP === a && ((ey = null), t && ((eb = e), (eD = null)), eK(), eY());
     }
     r.drained()
-        .then(() => (ey === e && eM === a && r.idle() ? t.setOnTop(e, !0) : null))
+        .then(() => (ey === e && eP === a && r.idle() ? t.setOnTop(e, !0) : null))
         .then(
             (e) => {
                 !0 !== e && o(!1 === e);
@@ -564,7 +564,7 @@ function eV() {
     if (null != n) {
         if (
             ((ey = null),
-            eM++,
+            eP++,
             ew.clear(),
             t &&
                 e3()
@@ -579,10 +579,10 @@ function eV() {
 function eH(e) {
     null == ey ||
         (e && (eU = !0),
-        eP ||
-            ((eP = !0),
+        eM ||
+            ((eM = !0),
             requestAnimationFrame(() => {
-                eP = !1;
+                eM = !1;
                 let e = null != ey ? l.get(ey) : null,
                     t = new Map(ew);
                 ew.clear();
@@ -789,11 +789,11 @@ function eX(e) {
     }
 }
 function eq() {
-    if (null == P) return;
+    if (null == M) return;
     let e = new Set();
     for (let t of l.values()) for (let n = t.iframe; null != n; n = n.parentElement) e.add(n);
-    for (let t of U) e.has(t) || P.ancestors?.unobserve(t);
-    for (let t of e) U.has(t) || P.ancestors?.observe(t);
+    for (let t of U) e.has(t) || M.ancestors?.unobserve(t);
+    for (let t of e) U.has(t) || M.ancestors?.observe(t);
     for (let t of (U.clear(), e)) U.add(t);
 }
 let eZ = ["left", "middle", "right"],
@@ -1186,11 +1186,11 @@ function ti(e, t, n, r, d) {
             (l.delete(t),
             m === e && (m = null),
             ey === t && (ey = null),
-            eM++,
+            eP++,
             eD === t && (eD = null),
             ev === t && (ev = null),
             eb === t && (eb = null),
-            P?.visibility?.unobserve(e),
+            M?.visibility?.unobserve(e),
             eq(),
             h?.abort(),
             T.abort(),
@@ -1198,13 +1198,13 @@ function ti(e, t, n, r, d) {
             Reflect.deleteProperty(e, "contentWindow"),
             Reflect.deleteProperty(e, "src"),
             0 === l.size &&
-                (null != P &&
-                    (P.controller.abort(),
-                    P.mutations.disconnect(),
-                    P.ancestors?.disconnect(),
-                    P.containers?.disconnect(),
-                    P.visibility?.disconnect(),
-                    (P = null),
+                (null != M &&
+                    (M.controller.abort(),
+                    M.mutations.disconnect(),
+                    M.ancestors?.disconnect(),
+                    M.containers?.disconnect(),
+                    M.visibility?.disconnect(),
+                    (M = null),
                     U.clear(),
                     w.clear(),
                     (G = ""),
@@ -1243,12 +1243,12 @@ function ti(e, t, n, r, d) {
         ),
         l.set(t, I),
         !(function () {
-            if (null != P) return;
+            if (null != M) return;
             let e = new AbortController(),
                 { signal: t } = e,
                 n = { capture: !0, signal: t },
                 r = { capture: !0, passive: !0, signal: t };
-            for (let n of ((P = {
+            for (let n of ((M = {
                 controller: e,
                 mutations: new MutationObserver(eX),
                 ancestors: "u" > typeof ResizeObserver ? new ResizeObserver(ej) : null,
@@ -1263,7 +1263,7 @@ function ti(e, t, n, r, d) {
                 attributes: !0,
                 attributeFilter: ["class", "style", "hidden", "open", "data-theme"],
             }),
-            P.mutations.observe(document.head, { subtree: !0, childList: !0, characterData: !0 }),
+            M.mutations.observe(document.head, { subtree: !0, childList: !0, characterData: !0 }),
             window.addEventListener("resize", () => eW(!1), { signal: t }),
             document.addEventListener(
                 "scroll",
@@ -1341,7 +1341,7 @@ function ti(e, t, n, r, d) {
                 r,
             );
         })(),
-        P?.visibility?.observe(e),
+        M?.visibility?.observe(e),
         eq(),
         c.create(t, n).then(
             (e) => {

@@ -5,9 +5,9 @@
     PW: () => X,
     l5: () => Z,
     e0: () => ei,
-    ZF: () => Y,
+    ZF: () => J,
     VW: () => q,
-    Kh: () => J,
+    Kh: () => Y,
 }),
     n(134528),
     n(947204));
@@ -73,14 +73,14 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
     y = new Set(["start", "end"]),
-    A = new Map([
+    C = new Map([
         ["inlineCode", y],
         ["spoiler", y],
         ["s", y],
         ["subtext", new Set(["start"])],
         ["u", y],
     ]),
-    C = new Set(["*", "_", "~", "|", "\\"]),
+    A = new Set(["*", "_", "~", "|", "\\"]),
     b = {},
     I = {};
 for (let e in m.Ay.RULES) {
@@ -130,14 +130,14 @@ let T = {
                     : { type: "codeBlockSyntax", content: e[0], originalMatch: e },
         },
     },
-    j = /(-# +)/,
-    k = (0, p.A)([b, T]),
+    k = /(-# +)/,
+    j = (0, p.A)([b, T]),
     _ = (0, p.A)([I, T]),
-    R = c.X(k),
+    R = c.X(j),
     w = c.X(_),
     O = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    M = new (o())(O),
-    L = new (o())(O);
+    L = new (o())(O),
+    M = new (o())(O);
 function P(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
@@ -226,7 +226,7 @@ function P(e, t, n, l, r) {
             let { before: n, after: i } = (function (e, t) {
                     if ("inlineCode" === e) return { before: t[1], after: t[1] };
                     if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
-                    if ("subtext" === e) return { before: j.exec(t.input)[1], after: "" };
+                    if ("subtext" === e) return { before: k.exec(t.input)[1], after: "" };
                     let n = S["link" === e ? "url" : e];
                     if ("inlineStyle" === n.type) return n;
                     throw Error("Slate: rule must be an inlineStyle");
@@ -286,7 +286,7 @@ function D(e) {
         : [t, ...[...l, r].map((e) => `${s}_${e}`)];
 }
 function U(e, t) {
-    return A.get(e)?.has(t) ?? !1;
+    return C.get(e)?.has(t) ?? !1;
 }
 function V(e) {
     return "text" === e.type && "string" == typeof e.content && "" === e.content.trim();
@@ -328,12 +328,12 @@ function G(e, t) {
     return t;
 }
 function K(e, t, n) {
-    if (t.split("").some((e) => C.has(e))) return (E.error(e), n);
+    if (t.split("").some((e) => A.has(e))) return (E.error(e), n);
     throw Error(e);
 }
 function H(e, t, n, l) {
     for (; n < l;)
-        if (C.has(t[n]))
+        if (A.has(t[n]))
             ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
                 (n = G(t, n)));
         else break;
@@ -352,12 +352,12 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
             for (let n of e(t, i)) yield n;
             return;
         }
-        n = J.isPoint(s)
+        n = Y.isPoint(s)
             ? o
                 ? { anchor: s, focus: q.start(t, []) }
                 : { anchor: s, focus: q.end(t, []) }
             : q.range(t, s);
-        let [c, d] = Y.edges(n),
+        let [c, d] = J.edges(n),
             h = q.blocks(t),
             m = o ? -1 : 1,
             f = c.path[0] ?? 0,
@@ -374,9 +374,9 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                     x = X.isAncestor(f, d.path),
                     S = g ? c.path[p] : 0,
                     y = x ? d.path[p] : h.children.length - 1,
-                    A = o ? y : S,
-                    C = o ? S : y;
-                for (let s = A; !E && (!o ? s <= C : s >= C); s += m) {
+                    C = o ? y : S,
+                    A = o ? S : y;
+                for (let s = C; !E && (!o ? s <= A : s >= A); s += m) {
                     let m = h.children[s],
                         p = X.child(f, s);
                     if (Q.isElement(m)) {
@@ -438,7 +438,7 @@ let q = {
             return null == e.selection ? null : this.getParentVoid(e, e.selection);
         },
         getCurrentText(e) {
-            let t = null != e.selection ? Y.toPoint(e.selection) : null;
+            let t = null != e.selection ? J.toPoint(e.selection) : null;
             return null == t ? null : q.node(e, t.path);
         },
         getParentBlock: (e, t) =>
@@ -450,7 +450,7 @@ let q = {
             q.above(e, { at: t, match: (e) => Q.isElement(e) && n.includes(e.type), mode: "lowest" }) ?? null,
         getSelectedParentOfType(e, t) {
             if (null == e.selection) return null;
-            let n = Y.toPoint(e.selection);
+            let n = J.toPoint(e.selection);
             return null == n ? null : q.getParentOfType(e, n, t);
         },
         getNodesOfType: (e, t) =>
@@ -458,11 +458,11 @@ let q = {
         getSelectedVoid(e) {
             let t;
             if (null == e.selection) return null;
-            if (Y.isExpanded(e.selection)) {
-                let [n, l] = Y.edges(e.selection),
+            if (J.isExpanded(e.selection)) {
+                let [n, l] = J.edges(e.selection),
                     i = q.after(e, n, { unit: "offset" }),
                     r = q.before(e, l, { unit: "offset" });
-                if (null == i || null == r || !J.equals(i, r)) return null;
+                if (null == i || null == r || !Y.equals(i, r)) return null;
                 t = i;
             } else t = e.selection.anchor;
             return null == t ? null : q.getParentVoid(e, t);
@@ -479,7 +479,7 @@ let q = {
             return null == n ? "" : this.getTextFromRange(e, n);
         },
         getTextFromRange(e, t) {
-            let [n, l] = Y.edges(t),
+            let [n, l] = J.edges(t),
                 i = q.nodes(e, { at: t, mode: "lowest", match: (e) => Z.isText(e) }),
                 r = "";
             for (let [e, t] of i) {
@@ -528,20 +528,20 @@ let q = {
                     t = { anchor: l ?? n.anchor, focus: i ?? n.focus };
                 } else t = n;
             }
-            let [n, l] = Y.edges(t),
+            let [n, l] = J.edges(t),
                 i = null,
                 r = null;
             return (
-                J.equals(e.selection.anchor, n)
+                Y.equals(e.selection.anchor, n)
                     ? (i = "start")
-                    : J.equals(e.selection.anchor, l)
+                    : Y.equals(e.selection.anchor, l)
                       ? (i = "end")
-                      : Y.includes(t, e.selection.anchor) && (i = "inside"),
-                J.equals(e.selection.focus, n)
+                      : J.includes(t, e.selection.anchor) && (i = "inside"),
+                Y.equals(e.selection.focus, n)
                     ? (r = "start")
-                    : J.equals(e.selection.focus, l)
+                    : Y.equals(e.selection.focus, l)
                       ? (r = "end")
-                      : Y.includes(t, e.selection.focus) && (r = "inside"),
+                      : J.includes(t, e.selection.focus) && (r = "inside"),
                 { anchor: i, focus: r }
             );
         },
@@ -597,7 +597,7 @@ let q = {
                             "" !== o &&
                                 (function (e, t, n) {
                                     let l = [],
-                                        i = n ? L : M,
+                                        i = n ? M : L,
                                         r = i.get(e);
                                     if (null != r) return r;
                                     let s =
@@ -662,7 +662,7 @@ let q = {
         isFirstChild: (e, t) => X.equals(t, X.child(e, 0)),
         child: (e, t) => [...e, t],
     },
-    J = {
+    Y = {
         ...r.bR,
         start(e) {
             let [, t] = e;
@@ -674,19 +674,19 @@ let q = {
             return { path: X.child(n, t.children.length - 1), offset: Z.isText(l) ? l.text.length : 0 };
         },
         isAtStart(e, t) {
-            return J.equals(e, this.start(t));
+            return Y.equals(e, this.start(t));
         },
         isAtEnd(e, t) {
-            return J.equals(e, this.end(t));
+            return Y.equals(e, this.end(t));
         },
         clamp(e, t) {
-            let [n, l] = Y.edges(t);
-            return (J.isBefore(e, n) && (e = n), J.isAfter(e, l) && (e = l), e);
+            let [n, l] = J.edges(t);
+            return (Y.isBefore(e, n) && (e = n), Y.isAfter(e, l) && (e = l), e);
         },
     },
-    Y = {
+    J = {
         ...r.Q6,
-        toPoint: (e) => (null == e || Y.isExpanded(e) ? null : e.anchor),
+        toPoint: (e) => (null == e || J.isExpanded(e) ? null : e.anchor),
         children(e) {
             let [t, n] = e,
                 l = t.children[t.children.length - 1];
@@ -696,15 +696,15 @@ let q = {
             };
         },
         clamp(e, t) {
-            let [n, l] = Y.edges(e),
-                [i, r] = Y.edges(t);
-            return (J.isBefore(n, i) && (n = i), J.isAfter(l, r) && (l = r), Y.isForward(e))
+            let [n, l] = J.edges(e),
+                [i, r] = J.edges(t);
+            return (Y.isBefore(n, i) && (n = i), Y.isAfter(l, r) && (l = r), J.isForward(e))
                 ? { anchor: n, focus: l }
                 : { anchor: l, focus: n };
         },
     },
     ee = {
-        equals: (e, t) => (null == e && null == t) || (null != e && null != t && Y.equals(e, t)),
+        equals: (e, t) => (null == e && null == t) || (null != e && null != t && J.equals(e, t)),
         isValid(e, t) {
             if (null == t) return !1;
             let { anchor: n, focus: l } = t;
@@ -746,7 +746,7 @@ let ei = {
         let i = q.start(e, l[1]),
             r = Array.from(q.positions(e, { at: { anchor: i, focus: t } })),
             s = el(e, t, r, !0);
-        if (n && J.equals(t, s) && !J.isAtEnd(t, l)) {
+        if (n && Y.equals(t, s) && !Y.isAtEnd(t, l)) {
             let n = q.after(e, t);
             if (null == n) return s;
             s = el(e, n, r, !0);
@@ -759,7 +759,7 @@ let ei = {
         let i = q.end(e, l[1]),
             r = Array.from(q.positions(e, { at: { anchor: t, focus: i } })),
             s = el(e, t, r, !1);
-        if (n && J.equals(t, s) && !J.isAtEnd(t, l)) {
+        if (n && Y.equals(t, s) && !Y.isAtEnd(t, l)) {
             let n = q.after(e, t);
             if (null == n) return s;
             s = el(e, n, r, !1);

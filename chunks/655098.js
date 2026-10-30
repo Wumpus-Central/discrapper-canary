@@ -1,4 +1,4 @@
-n.d(t, { A: () => eC });
+n.d(t, { A: () => eA });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -17,21 +17,21 @@ var l = n(477900),
     E = n(820066),
     S = n(112107),
     y = n(17928),
-    A = n(866665),
-    C = n(778712),
+    C = n(866665),
+    A = n(778712),
     b = n(545442),
     I = n(265872),
     v = n(788026),
     N = n(730134),
     T = n(775602),
-    j = n(47167),
-    k = n(442247),
+    k = n(47167),
+    j = n(442247),
     _ = n(454908),
     R = n(545868),
     w = n(376943),
     O = n(465365),
-    M = n(78390),
-    L = n(785562),
+    L = n(78390),
+    M = n(785562),
     P = n(266645),
     D = n(332173),
     U = n(37632),
@@ -49,10 +49,10 @@ var F = n(342296),
     Q = n(427262),
     Z = n(650583),
     X = n(105292),
-    J = n(307126);
-function Y(e) {
+    Y = n(307126);
+function J(e) {
     let { emoji: t } = e;
-    return (0, l.jsx)(A.m, {
+    return (0, l.jsx)(C.m, {
         text: t.name,
         delay: 750,
         position: "top",
@@ -61,7 +61,7 @@ function Y(e) {
 }
 function ee(e) {
     let { emoji: t } = e;
-    return (0, l.jsx)(A.m, {
+    return (0, l.jsx)(C.m, {
         text: t.name,
         delay: 750,
         position: "top",
@@ -95,13 +95,13 @@ function ei(e) {
         c = i.useCallback((e) => (0, l.jsx)(el, { id: t, name: u, targetRef: o, popoutProps: e }), [t, u]);
     if (null != s) {
         let e = a || s.hasUniqueUsername() ? null : `#${s.discriminator}`;
-        return (0, l.jsx)(A.m, {
+        return (0, l.jsx)(C.m, {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
-                className: J.fX,
+                className: Y.fX,
                 children: [
-                    (0, l.jsx)(N.A, { user: s, animate: !0, size: C._3.SIZE_16, className: J.my }),
+                    (0, l.jsx)(N.A, { user: s, animate: !0, size: A._3.SIZE_16, className: Y.my }),
                     Q.Ay.getUserTag(s, { mode: "username", identifiable: a ? "never" : "always" }),
-                    (0, l.jsx)("span", { className: J.D2, children: e }),
+                    (0, l.jsx)("span", { className: Y.D2, children: e }),
                 ],
             }),
             delay: 750,
@@ -165,7 +165,7 @@ function es(e) {
         r = "text",
         s = !0;
     return (null != n &&
-        ((i = (0, w.nc)(n) ? (0, j.m1)(n, z.default, K.A) : X.intl.string(X.t["/YzI63"])),
+        ((i = (0, w.nc)(n) ? (0, k.m1)(n, z.default, K.A) : X.intl.string(X.t["/YzI63"])),
         (r = (0, w.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
         (s = (0, O.Y)(n.type))),
     s)
@@ -174,8 +174,8 @@ function es(e) {
 }
 function ea(e) {
     let { id: t, itemId: n, guildId: i } = e,
-        r = (0, M.Q)(t),
-        s = (0, y.bG)([G.A], () => (0, M.f)(G.A, t, n, i), [t, n, i]);
+        r = (0, L.Q)(t),
+        s = (0, y.bG)([G.A], () => (0, L.f)(G.A, t, n, i), [t, n, i]);
     return (0, l.jsxs)(D.A, { iconType: t, children: [r, null != s && (0, l.jsx)(U.A, {}), s] });
 }
 function eo(e) {
@@ -184,11 +184,11 @@ function eo(e) {
 }
 function eu(e) {
     let { timestamp: t } = e;
-    return (0, l.jsx)(L.A, { node: t, className: "R" === t.format ? J.gS : null });
+    return (0, l.jsx)(M.A, { node: t, className: "R" === t.format ? Y.gS : null });
 }
 function ec(e) {
     let { id: t } = e,
-        n = (0, k.K)(t);
+        n = (0, j.K)(t);
     return ((0, _.I)(null != n ? void 0 : t), (0, l.jsx)(P.A, { gameId: t, onKeyDown: en }));
 }
 var ed = n(891031),
@@ -232,7 +232,7 @@ function eE(e) {
 }
 var eS = n(652215),
     ey = n(809067);
-class eA extends i.PureComponent {
+class eC extends i.PureComponent {
     containerRef = i.createRef();
     state;
     constructor(e) {
@@ -311,7 +311,7 @@ class eA extends i.PureComponent {
                         return (0, l.jsxs)(eE, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
+                            children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
                         return (0, l.jsxs)(eE, {
@@ -693,4 +693,4 @@ class eA extends i.PureComponent {
         });
     }
 }
-let eC = eA;
+let eA = eC;

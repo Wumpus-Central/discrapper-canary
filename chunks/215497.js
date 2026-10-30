@@ -31,13 +31,13 @@ let E = function (e) {
             handleEditModal: E,
             keyboardModeEnabled: S,
             onKeyDown: y,
-            draftType: A,
-            size: C = 1,
+            draftType: C,
+            size: A = 1,
             ref: b,
         } = e,
         I = r.useRef(null),
         { onFocus: v, ...N } = (0, o.rm)(t),
-        { handleFocus: T, handleBlur: j } = (function (e) {
+        { handleFocus: T, handleBlur: k } = (function (e) {
             let [t, n] = (0, r.useState)(!1);
             return {
                 handleFocus: (0, r.useCallback)(
@@ -56,13 +56,13 @@ let E = function (e) {
                 isFocused: t,
             };
         })(v),
-        k = 0 === C,
+        j = 0 === A,
         _ = null != g;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ...N,
             onFocus: T,
-            onBlur: j,
+            onBlur: k,
             onClick: function (e) {
                 if (0 === e.detail && null != I.current) {
                     let e = I.current.querySelector('[role="button"], button');
@@ -73,15 +73,15 @@ let E = function (e) {
                 if (S) {
                     switch (e.which) {
                         case m.Ks6.D:
-                            (e.preventDefault(), c.A.remove(n, t, A));
+                            (e.preventDefault(), c.A.remove(n, t, C));
                             return;
                         case m.Ks6.E:
                             null != E && (e.preventDefault(), E(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
-                                ? (e.preventDefault(), c.A.clearAll(n, A))
-                                : (e.preventDefault(), c.A.remove(n, t, A));
+                                ? (e.preventDefault(), c.A.clearAll(n, C))
+                                : (e.preventDefault(), c.A.remove(n, t, C));
                             return;
                         case m.Ks6.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -101,10 +101,10 @@ let E = function (e) {
                         ? (0, i.jsx)("div", {
                               className: p.TC,
                               children: (0, i.jsx)("div", {
-                                  className: a()(p.KY, { [p.BN]: k }),
+                                  className: a()(p.KY, { [p.BN]: j }),
                                   onContextMenu: x,
                                   "aria-label": f.intl.string(f.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: k }), children: g }),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: j }), children: g }),
                               }),
                           })
                         : null,

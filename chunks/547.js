@@ -29,7 +29,7 @@ var u = n(343328),
     D = n(105292);
 let v = 10 * C.A.Millis.SECOND,
     b = new _.A("MessageManager");
-function M(e) {
+function P(e) {
     let {
         guildId: t,
         channelId: n,
@@ -77,7 +77,7 @@ function M(e) {
                 (function (e) {
                     if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
                     i[e] = Date.now();
-                    let t = Date.now() - P;
+                    let t = Date.now() - M;
                     for (let e in i) i[e] < t && delete i[e];
                     return (r.w.set(U, i), !0);
                 })(n)
@@ -119,7 +119,7 @@ function M(e) {
             );
         }
 }
-let P = 90 * C.A.Millis.DAY,
+let M = 90 * C.A.Millis.DAY,
     U = "viewedThreadIds";
 function w(e) {
     let t = (0, A.B)((0, h.JK)().location.pathname, {
@@ -134,7 +134,7 @@ function G() {
     let t = T.A.getChannel(e);
     if (null == t) return;
     let n = w(t.id);
-    (M({ guildId: t.getGuildId(), channelId: t.id, messageId: n.messageId, avoidInitialScroll: null != n.messageId }),
+    (P({ guildId: t.getGuildId(), channelId: t.id, messageId: n.messageId, avoidInitialScroll: null != n.messageId }),
         V(t.getGuildId(), t.id));
 }
 function x() {
@@ -144,25 +144,25 @@ function x() {
     if (null == t) return;
     if (!(0, I.pQ)(t.type)) return void V(t.getGuildId(), t.id);
     let n = c.A.getOrCreate(e);
-    ((n.ready && n.hasFetched) || M({ guildId: t.getGuildId(), channelId: t.id, messageId: w(t.id).messageId }),
+    ((n.ready && n.hasFetched) || P({ guildId: t.getGuildId(), channelId: t.id, messageId: w(t.id).messageId }),
         V(t.getGuildId(), t.id));
 }
 function k(e) {
     let { guildId: t, channelId: n, messageId: i, jumpType: r, skipMessageFetch: a } = e;
     if (a) return !1;
-    (M({ guildId: t, channelId: n, messageId: i, jumpType: r }), V(t, n));
+    (P({ guildId: t, channelId: n, messageId: i, jumpType: r }), V(t, n));
 }
 function F(e) {
     let { guildId: t, channelId: n } = e;
-    M({ guildId: t, channelId: n });
+    P({ guildId: t, channelId: n });
 }
 function B(e) {
     let { guildId: t, channelId: n, messageId: i, jumpType: r } = e;
-    M({ guildId: t, channelId: n, messageId: i, jumpType: r });
+    P({ guildId: t, channelId: n, messageId: i, jumpType: r });
 }
 function V(e, t) {
     let n = p.Ay.getCurrentSidebarChannelId(t);
-    null == n || M({ guildId: e, channelId: n, messageId: p.Ay.getCurrentSidebarMessageId(t) });
+    null == n || P({ guildId: e, channelId: n, messageId: p.Ay.getCurrentSidebarMessageId(t) });
 }
 function H() {
     let e = S.Ay.getChannelId(),
@@ -173,12 +173,12 @@ function H() {
 }
 function j(e) {
     let { guildId: t, channelId: n, context: i } = e;
-    i === L.QCW && (M({ guildId: t, channelId: n }), V(t, n));
+    i === L.QCW && (P({ guildId: t, channelId: n }), V(t, n));
 }
 function W(e) {
     let { channel: t, messageId: n } = e,
         i = t.guild_id;
-    null != i && S.Ay.getChannelId(i) === t.id && M({ guildId: i, channelId: t.id, messageId: n });
+    null != i && S.Ay.getChannelId(i) === t.id && P({ guildId: i, channelId: t.id, messageId: n });
 }
 function Y(e) {
     let { response: t } = e;
@@ -225,7 +225,7 @@ function X() {
     l.A.fetchNewLocalMessages(e, L.EMb);
 }
 class q extends d.A {
-    fetchMessages = M;
+    fetchMessages = P;
     loadSelectedChannelIfNecessary = x;
     stores = new Map().set(p.Ay, H);
     actions = {

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => M }), n(321073));
+(n.d(t, { A: () => P }), n(321073));
 var i = n(448761),
     r = n(17928),
     a = n(73153),
@@ -95,7 +95,7 @@ class b extends r.Ay.Store {
         return O;
     }
 }
-let M = new b(a.h, {
+let P = new b(a.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
         let { userTrialOfferId: t } = e;
         (_ || (0, l.xM)(), !E.has(t)) && (E.add(t), (0, l.kZ)(t).catch(o.FXj));

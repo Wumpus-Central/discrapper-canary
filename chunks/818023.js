@@ -20,10 +20,10 @@ n.d(t, {
     aX: () => y,
     qA: () => f,
     NW: () => u,
-    i6: () => P,
+    i6: () => M,
     mO: () => O,
     lk: () => b,
-    H5: () => M,
+    H5: () => P,
     _J: () => L,
 });
 var i,
@@ -90,7 +90,7 @@ let D = { label_type: o.Hr.NONE, release_phase: "", label_from: null, label_unti
         supported_locales: [],
     },
     b = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM, d.rbe.GUILD_SPACE],
-    M = [...b, d.rbe.GUILD_VOICE],
-    P = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
+    P = [...b, d.rbe.GUILD_VOICE],
+    M = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
 var U = (((a = {}).NORMAL = "normal"), (a.FULL_SCREEN = "full-screen"), a);
 let w = 216e5;

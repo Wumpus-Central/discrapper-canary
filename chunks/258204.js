@@ -1,4 +1,4 @@
-n.d(t, { A: () => A, t: () => y });
+n.d(t, { A: () => C, t: () => y });
 var l = n(582128),
     i = n(17928),
     r = n(554146),
@@ -36,7 +36,7 @@ function y(e) {
         return (d.A.getSoundsForGuild(e) ?? []).some((e) => S(e, n, t));
     });
 }
-function A() {
+function C() {
     let e = (0, i.bG)([u.default], () => u.default.getCurrentUser()?.id),
         [t] = l.useState(E),
         n = l.useRef(new Set());

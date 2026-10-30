@@ -30,8 +30,8 @@ let R = new A.A("AuthenticationStore"),
     D = "user_id_cache",
     v = null,
     b = null,
-    M = null,
     P = null,
+    M = null,
     U = null,
     w = null,
     G = null,
@@ -205,10 +205,10 @@ class ed extends l.Ay.Store {
         return b;
     }
     getAuthSessionIdHash() {
-        return M;
+        return P;
     }
     getStaticAuthSessionId() {
-        return P;
+        return M;
     }
     getToken() {
         return (0, g.gf)();
@@ -270,8 +270,8 @@ let ec = new ed(
             (Z("handleConnectionOpen called"),
                 S.A.setUser(t.id, t.username, t.email ?? void 0, (0, T.A)(t)),
                 (b = n),
-                (M = i),
-                (P = s),
+                (P = i),
+                (M = s),
                 ei(r),
                 (v = t.id),
                 void 0 !== a && (B = a.authenticator_types),
@@ -302,7 +302,7 @@ let ec = new ed(
         },
         AUTH_SESSION_CHANGE: function (e) {
             let { authSessionIdHash: t } = e;
-            null != t && (M = t);
+            null != t && (P = t);
         },
         LOGIN: function (e) {
             let { isPasswordAttempt: t } = e;

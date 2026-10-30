@@ -160,7 +160,7 @@ class b extends v {
         };
     })();
 }
-class M extends v {
+class P extends v {
     constructor(e) {
         (super(e), (this._parsedMessages = this._createProxy(this._context)));
     }
@@ -178,7 +178,7 @@ class M extends v {
         };
     })();
 }
-class P extends a.EventEmitter {
+class M extends a.EventEmitter {
     Messages;
     loadPromise = Promise.resolve();
     initialLanguageLoad;
@@ -195,7 +195,7 @@ class P extends a.EventEmitter {
             })),
             Intl.__addLocaleData && Intl.__addLocaleData(n(217671)),
             (this._languages = i()),
-            (this._provider = null != window.Proxy ? new M(this._getParsedMessages) : new b(this._getParsedMessages)),
+            (this._provider = null != window.Proxy ? new P(this._getParsedMessages) : new b(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
             (this._getMessages = t));
         try {
@@ -320,4 +320,4 @@ class P extends a.EventEmitter {
         "locale" === e && this.emit(e, this._chosenLocale);
     };
 }
-let U = P;
+let U = M;

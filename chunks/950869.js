@@ -300,8 +300,8 @@ class v {
 }
 n(672396);
 let b = new r.Vy("OverlayV3NativeModuleStore"),
-    M = !1,
     P = !1,
+    M = !1,
     U = null,
     w = !1,
     G = null,
@@ -310,10 +310,10 @@ let b = new r.Vy("OverlayV3NativeModuleStore"),
         async function e() {
             (B(), (U = v.getInstance()));
             try {
-                (await U.initialize(), (M = !0));
+                (await U.initialize(), (P = !0));
             } catch (e) {
                 ((0, c._r)(null, "module_initialization_failed", { error: e }),
-                    (M = !1),
+                    (P = !1),
                     (0, c.mD)(-1, e, { crashType: "native" }));
             } finally {
                 H.emitChange();
@@ -322,7 +322,7 @@ let b = new r.Vy("OverlayV3NativeModuleStore"),
         return () => (null == x && (x = e()), x);
     })();
 function F(e) {
-    __OVERLAY__ || !d.O || (P !== e && ((P = e), e && (0, l.setOutOfProcessSupport)(!0)));
+    __OVERLAY__ || !d.O || (M !== e && ((M = e), e && (0, l.setOutOfProcessSupport)(!0)));
 }
 function B() {
     !__OVERLAY__ && d.O && ((G = null), (w = !1), b.verbose("Maybe Enable Overlay"), F(o.x.oopEnabled));
@@ -336,13 +336,13 @@ class V extends i.Ay.Store {
         return null != x;
     }
     get isOverlayEnabled() {
-        return P;
+        return M;
     }
     get isSupported() {
         return d.O;
     }
     get isModuleLoaded() {
-        return M;
+        return P;
     }
     get isCrashedDisabled() {
         return w;

@@ -36,8 +36,8 @@ function v(e, t) {
     });
 }
 var b = n(834757),
-    M = n(753738),
-    P = n(51271),
+    P = n(753738),
+    M = n(51271),
     U = n(844944),
     w = n(122906),
     G = n(21599),
@@ -177,8 +177,8 @@ var eC = n(71393),
     eD = n(573163),
     ev = n(101392),
     eb = n(287809),
-    eM = n(927813),
-    eP = n(45938),
+    eP = n(927813),
+    eM = n(45938),
     eU = n(975571),
     ew = n(24482),
     eG = n(935208),
@@ -1047,7 +1047,7 @@ ${a}`),
                                     u = U.A.getRequest(s);
                                 if (null != u) {
                                     let { guildId: t, userId: n, applicationStatus: i } = u;
-                                    (0, P.cK)({
+                                    (0, M.cK)({
                                         guildId: t,
                                         channelId: e,
                                         messageId: E.body.id,
@@ -1190,7 +1190,7 @@ ${a}`),
                                     (L = E.body.id),
                                     (G = h ?? "chat_input"),
                                     (k = !!n.isGiftLinkSentOnBehalfOfUser),
-                                    (0, eP.e7)(O).forEach((t) => {
+                                    (0, eM.e7)(O).forEach((t) => {
                                         let n = $.A.getChannel(e);
                                         null != n &&
                                             _.Ay.trackWithMetadata(D.HAw.GIFT_CODE_SENT, {
@@ -1285,10 +1285,10 @@ ${a}`),
                                                 type: "SLOWMODE_SET_COOLDOWN",
                                                 channelId: e,
                                                 slowmodeType: ev.R.SendMessage,
-                                                cooldownMs: t * eM.A.Millis.SECOND,
+                                                cooldownMs: t * eP.A.Millis.SECOND,
                                             });
                                     } else
-                                        M.yf.has(E.body.code)
+                                        P.yf.has(E.body.code)
                                             ? o.h.dispatch({
                                                   type: "MESSAGE_SEND_FAILED_AUTOMOD",
                                                   messageData: ec,
@@ -1377,7 +1377,7 @@ ${a}`),
                 d = null != (i = eR.A.getMessage(e, t)) && i.hasFlag(D.pr7.CROSSPOSTED),
                 c = { channelId: e, messageId: t, content: r, isCrossposted: d, allowed_mentions: s, components: a };
             u.Ay.enqueue({ type: u.AZ.EDIT, message: c }, (n) => {
-                let i = !n.hasErr && M.yf.has(n.body.code);
+                let i = !n.hasErr && P.yf.has(n.body.code);
                 if (i) {
                     let e = { type: u.AZ.EDIT, message: c };
                     o.h.dispatch({

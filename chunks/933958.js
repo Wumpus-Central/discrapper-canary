@@ -62,8 +62,8 @@ class y {
 let D = new Map(),
     v = new Map(),
     b = new Map(),
-    M = new Map();
-function P(e, t) {
+    P = new Map();
+function M(e, t) {
     return `${t}:${e}`;
 }
 let U = new Map(),
@@ -110,14 +110,14 @@ function X(e) {
     if (null == m) return;
     let S = (0, T.H)(o),
         O = 0 === (null != S ? (b.get(S)?.getItems("all") ?? R) : R).length,
-        L = (M.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
+        L = (P.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
         y = A.map((e) => e.userId),
         w = d.default.getId(),
         G = y.some((e) => e === w),
         x = A.find((e) => e.userId === w)?.sessionId,
         k = A.some((e) => (0, p.S)(e)),
         F = D.get(r),
-        B = U.get(P(S ?? null, r)),
+        B = U.get(M(S ?? null, r)),
         V = B?.launchParams,
         W = {
             applicationId: r,
@@ -164,7 +164,7 @@ function X(e) {
                           b = v?.getGuildId();
                       if (null == _.default.getCurrentUser() || (null == b && !v?.isPrivate())) return;
                       i = s;
-                      let M = {
+                      let P = {
                           applicationId: t,
                           url: R,
                           userIds: new Set(l.map((e) => e.userId)),
@@ -178,20 +178,20 @@ function X(e) {
                           proxyTicket: S,
                           renderInFramePool: O,
                       };
-                      (D.set(t, M),
+                      (D.set(t, P),
                           E._.dispatch(C.jej.OPEN_EMBEDDED_ACTIVITY, {
                               location: s,
                               applicationId: t,
                               isFirstActivityInChannel: o,
                               isStart: A,
                               participants: l,
-                              embeddedActivity: M,
+                              embeddedActivity: P,
                               inviterUserId: m,
                           }));
-                      let P = (0, h.f)();
+                      let M = (0, h.f)();
                       (!0 === O
                           ? (j = N.Gd.DISCONNECTED)
-                          : P
+                          : M
                             ? ((j = N.Gd.ACTIVITY_POPOUT_WINDOW), a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }))
                             : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
@@ -216,7 +216,7 @@ function X(e) {
                   }),
               Q({ channelId: S ?? null, applicationId: r })),
         (t = y.length > 0 ? W : null),
-        $(M, o.id).upsert(r, o.id, t),
+        $(P, o.id).upsert(r, o.id, t),
         null != (n = (0, T.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, T.D)(o))).upsert(r, o.id, t)));
 }
 function q(e) {
@@ -229,7 +229,7 @@ function Z(e) {
 }
 function Q(e) {
     let { applicationId: t, channelId: n } = e;
-    U.delete(P(n, t));
+    U.delete(M(n, t));
 }
 class J extends r.Ay.PersistedStore {
     static displayName = "EmbeddedActivitiesStore";
@@ -284,7 +284,7 @@ class J extends r.Ay.PersistedStore {
         return b.get(e)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForLocation(e) {
-        return M.get(e.id)?.getItems("visible") ?? R;
+        return P.get(e.id)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForGuildIncludingHidden(e) {
         return v.get(e)?.getItems("all") ?? R;
@@ -293,7 +293,7 @@ class J extends r.Ay.PersistedStore {
         return b.get(e)?.getItems("all") ?? R;
     }
     getEmbeddedActivitiesForLocationIncludingHidden(e) {
-        return M.get(e.id)?.getItems("all") ?? R;
+        return P.get(e.id)?.getItems("all") ?? R;
     }
     getEmbeddedActivitiesByChannel() {
         let e = new Map();
@@ -361,7 +361,7 @@ class J extends r.Ay.PersistedStore {
         let n,
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (null != t) {
-            e: for (let [r, a] of M)
+            e: for (let [r, a] of P)
                 for (let r of a.getItems(i ? "all" : "visible"))
                     if (r.applicationId === t && r.userIds.has(e)) {
                         n = r;
@@ -374,7 +374,7 @@ class J extends r.Ay.PersistedStore {
         return O.everLaunchedActivities.has(e);
     }
     getLaunchState(e, t) {
-        if (null != e) return U.get(P(t ?? null, e));
+        if (null != e) return U.get(M(t ?? null, e));
     }
     getLaunchStates() {
         return U;
@@ -390,7 +390,7 @@ let ee = new J(a.h, {
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
-            (b.clear(), v.clear(), M.clear(), t.forEach((e) => q(e)));
+            (b.clear(), v.clear(), P.clear(), t.forEach((e) => q(e)));
             let n = d.default.getId();
             for (let e of Array.from(D.values()))
                 ee
@@ -412,7 +412,7 @@ let ee = new J(a.h, {
                 a = v.get(r);
             (a?.removeWhere((e) => (0, T.H)(e.location) === t.id),
                 i.forEach((e) => {
-                    M.delete(e.location.id);
+                    P.delete(e.location.id);
                 }));
         },
         EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
@@ -424,12 +424,12 @@ let ee = new J(a.h, {
                 channelId: a,
                 inviterUserId: s,
             } = e;
-            (U.set(P(a, t), { isLaunching: !0, componentId: n, inviterUserId: s, launchParams: r }),
+            (U.set(M(a, t), { isLaunching: !0, componentId: n, inviterUserId: s, launchParams: r }),
                 (W = i === l.iw.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? N.E8.NO_CHAT : N.E8.RESIZABLE));
         },
         EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET: function (e) {
             let { applicationId: t, channelId: n, proxyTicket: i } = e,
-                r = P(n, t),
+                r = M(n, t),
                 a = U.get(r);
             null != a && U.set(r, { ...a, proxyTicket: i });
         },

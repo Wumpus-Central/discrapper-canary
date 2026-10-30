@@ -1,4 +1,4 @@
-n.d(t, { O1: () => o, oU: () => C, wt: () => u });
+n.d(t, { O1: () => o, oU: () => A, wt: () => u });
 var l,
     i,
     r = n(607399),
@@ -189,7 +189,7 @@ let c = {
         permissions: { requireSendMessages: !0 },
         submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
     },
-    A = {
+    C = {
         analyticsName: "user_profile",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -200,7 +200,7 @@ let c = {
         toolbarType: 2,
         layout: 1,
     },
-    C = {
+    A = {
         NORMAL: c,
         OVERLAY: d,
         OVERLAY_INLINE_REPLY: {
@@ -219,7 +219,7 @@ let c = {
         FORM: f,
         VOICE_CHANNEL_STATUS: p,
         THREAD_CREATION: g,
-        USER_PROFILE: A,
+        USER_PROFILE: C,
         USER_PROFILE_REPLY: {
             analyticsName: "user_profile_reply",
             drafts: { type: s.C.ChannelMessage },

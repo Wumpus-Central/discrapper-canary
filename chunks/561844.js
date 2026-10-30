@@ -3,7 +3,7 @@ n.d(t, {
     DZ: () => B,
     Dq: () => R,
     LW: () => v,
-    OQ: () => P,
+    OQ: () => M,
     Qg: () => D,
     Wc: () => x,
     XH: () => U,
@@ -14,7 +14,7 @@ n.d(t, {
     eA: () => L,
     gr: () => w,
     iE: () => F,
-    kO: () => M,
+    kO: () => P,
 });
 var i = n(132500),
     r = n(323889),
@@ -292,7 +292,7 @@ async function b(e) {
         sourceQuestContent: d,
     });
 }
-function M(e) {
+function P(e) {
     let {
             scrollingType: t,
             scrollingDirection: n,
@@ -316,7 +316,7 @@ function M(e) {
         carousel_size: o,
     });
 }
-function P(e) {
+function M(e) {
     let { searchSessionId: t } = e,
         n = (0, s.sN)().uuid;
     _.default.track(m.HAw.QUEST_HOME_SEARCH_ENTERED, {

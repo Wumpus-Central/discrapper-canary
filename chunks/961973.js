@@ -11,7 +11,7 @@
     a: () => U,
     rs: () => g,
     sZ: () => y,
-    tb: () => P,
+    tb: () => M,
     ui: () => b,
     vV: () => w,
 }),
@@ -169,10 +169,10 @@ function b(e, t) {
         i,
     ];
 }
-function M(e, t) {
+function P(e, t) {
     return e[0].length === t[0].length && e[1].length === t[1].length && (0, a.A)(e[0], t[0]) && (0, a.A)(e[1], t[1]);
 }
-function P(e, t) {
+function M(e, t) {
     return (0, r.bG)(
         [d.Ay],
         () => {
@@ -188,7 +188,7 @@ function P(e, t) {
             return [r, i];
         },
         [e, t],
-        M,
+        P,
     );
 }
 function U(e) {

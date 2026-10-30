@@ -15,12 +15,12 @@ n.d(t, {
     bh: () => v,
     hT: () => I,
     jC: () => D,
-    jh: () => M,
+    jh: () => P,
     jr: () => T,
     pO: () => C,
     py: () => S,
     rH: () => G,
-    ri: () => P,
+    ri: () => M,
     sB: () => m,
     zd: () => x,
 });
@@ -196,11 +196,11 @@ function b(e) {
     let { forumDemoId: t } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }
-function M(e) {
+function P(e) {
     let { added: t } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
-function P(e) {
+function M(e) {
     let { isMobile: t } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
 }

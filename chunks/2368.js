@@ -50,22 +50,22 @@ function S(e, t, n) {
 function y(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
-        if (x.has(i[0].type)) l ? C(e, i, !0, null) : A(e, i, t, n);
+        if (x.has(i[0].type)) l ? A(e, i, !0, null) : C(e, i, t, n);
         else {
             let [r, s] = i;
             for (let i = r.children.length - 1; i >= 0; i--) {
                 let a = r.children[i];
                 if (!h.l5.isText(a) && E.has(a.type)) {
                     let r = [a, h.PW.child(s, i)];
-                    l ? C(e, r, !0, null) : A(e, r, t, n);
+                    l ? A(e, r, !0, null) : C(e, r, t, n);
                 }
             }
         }
 }
-function A(e, t, n, l) {
+function C(e, t, n, l) {
     let r = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         s = h.cv.markdown(t[0], n);
-    (C(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
+    (A(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
         !r &&
             ((function (e, t, n, l, r) {
                 let [s, o] = t,
@@ -109,7 +109,7 @@ function A(e, t, n, l) {
             })(e, t, n, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
             b(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
 }
-function C(e, t, n, l) {
+function A(e, t, n, l) {
     let [i, r] = t,
         s = !1,
         a = n || null == l ? null : v(e, r);

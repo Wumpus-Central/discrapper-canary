@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => x, Gg: () => U, KU: () => w, Qt: () => P, r4: () => G }), n(321073));
+(n.d(t, { Ay: () => x, Gg: () => U, KU: () => w, Qt: () => M, r4: () => G }), n(321073));
 var i,
     r = n(435558),
     a = n(350835),
@@ -28,13 +28,13 @@ var i,
     D = n(652215),
     v = n(165610),
     b = n(731854);
-let M = "__EMBEDDED_ACTIVITIES__";
-function P(e) {
+let P = "__EMBEDDED_ACTIVITIES__";
+function M(e) {
     let { applicationId: t, instanceId: n } = e;
     return null != n ? `activity-${t}-${n}` : `activity-${t}`;
 }
 function U(e) {
-    return P({ applicationId: e.applicationId, instanceId: e.id });
+    return M({ applicationId: e.applicationId, instanceId: e.id });
 }
 function w(e) {
     switch (e.type) {
@@ -122,20 +122,20 @@ class x {
         return this.participantByIndex.get(e) ?? null;
     }
     updateEmbeddedActivities() {
-        return this.updateParticipant(M);
+        return this.updateParticipant(P);
     }
     hasEmbeddedActivity() {
         return this.size("ACTIVITY") > 0;
     }
     updateParticipant(e) {
         let t = this.participants[e],
-            n = e === M ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
+            n = e === P ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
         return (
             (null != t || 0 !== n.length) &&
             (t?.forEach((e) => {
                 this.participantByIndex.delete(e.id);
             }),
-            e !== M && this.updateStageSpeaker(e),
+            e !== P && this.updateStageSpeaker(e),
             n.forEach((e) => {
                 this.participantByIndex.set(e.id, e);
             }),
@@ -201,7 +201,7 @@ class x {
         let e = this._getEmbeddedActivities(),
             t = e.map((e, t) => ({
                 type: y.lp.ACTIVITY,
-                id: P({ applicationId: e.applicationId, instanceId: e.compositeInstanceId }),
+                id: M({ applicationId: e.applicationId, instanceId: e.compositeInstanceId }),
                 applicationId: e.applicationId,
                 activityType: a.$.PLAYING,
                 activityUrl: e.url,

@@ -1,4 +1,4 @@
-(n.d(t, { AZ: () => v, Ay: () => M, Fd: () => L, W$: () => D, d6: () => y, ej: () => _ }), n(321073));
+(n.d(t, { AZ: () => v, Ay: () => P, Fd: () => L, W$: () => D, d6: () => y, ej: () => _ }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -180,7 +180,7 @@ class b extends a.Ay.Store {
         return null == e ? {} : (I[e]?.[t ?? f] ?? {});
     }
 }
-let M = new b(l.h, {
+let P = new b(l.h, {
     CONNECTION_OPEN: function (e) {
         let { guilds: t } = e;
         return (

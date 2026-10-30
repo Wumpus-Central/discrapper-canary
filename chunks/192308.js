@@ -4,7 +4,7 @@
         closeAllModalsInContext: () => y,
         closeModal: () => I,
         closeModalInAllContexts: () => p,
-        doesTopModalAllowNavigation: () => M,
+        doesTopModalAllowNavigation: () => P,
         getInteractingModalContext: () => _,
         getOpenModalKeys: () => S,
         hasAnyModalOpen: () => g,
@@ -246,7 +246,7 @@ function v(e, t) {
 function b(e, t) {
     return D(A(), e, t);
 }
-function M() {
+function P() {
     let e = A.getState(),
         t = _();
     if (t !== o.SY && null != e[t] && e[t].length > 0) return !1;

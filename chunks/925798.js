@@ -559,8 +559,8 @@ class b extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let M = new b();
-class P extends o.G {
+let P = new b();
+class M extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GuildHeaderCoachmark", [
             { no: 1, name: "asset", kind: "message", T: () => d.i },
@@ -631,7 +631,7 @@ class P extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let U = new P();
+let U = new M();
 var w = n(414525),
     G =
         (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
@@ -1573,7 +1573,7 @@ class ef extends o.G {
             { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: () => V },
             { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => k },
             { no: 23, name: "guild_header_coachmark", kind: "message", oneof: "properties", T: () => U },
-            { no: 24, name: "guild_boost_checkout_banner", kind: "message", oneof: "properties", T: () => M },
+            { no: 24, name: "guild_boost_checkout_banner", kind: "message", oneof: "properties", T: () => P },
             { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: () => v },
             { no: 26, name: "guild_boost_tab_banner", kind: "message", oneof: "properties", T: () => y },
             { no: 27, name: "shop_tab_tooltip", kind: "message", oneof: "properties", T: () => O },
@@ -1767,7 +1767,7 @@ class ef extends o.G {
                 case 24:
                     r.properties = {
                         oneofKind: "guildBoostCheckoutBanner",
-                        guildBoostCheckoutBanner: M.internalBinaryRead(
+                        guildBoostCheckoutBanner: P.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1965,7 +1965,7 @@ class ef extends o.G {
                     n,
                 ).join(),
             "guildBoostCheckoutBanner" === e.properties.oneofKind &&
-                M.internalBinaryWrite(
+                P.internalBinaryWrite(
                     e.properties.guildBoostCheckoutBanner,
                     t.tag(24, a.O0.LengthDelimited).fork(),
                     n,

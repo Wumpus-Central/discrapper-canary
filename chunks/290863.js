@@ -120,7 +120,7 @@ function b(e) {
     }
     return (delete S[n], y(n), !0);
 }
-function M(e) {
+function P(e) {
     let {
         guildId: t,
         userId: n,
@@ -144,14 +144,14 @@ function M(e) {
         d[t] = { status: i, clientStatus: r, activities: e, hiddenActivities: n, processedAtTimestamp: l };
     }
 }
-function P(e, t) {
+function M(e, t) {
     if (t === _.default.getId()) return !1;
     let n = f[t];
     if (null == n || null == n[e]) return !1;
     (delete n[e], 0 === Object.keys(n).length && delete f[t], y(t));
 }
 function U(e) {
-    for (let t of u.default.keys(f)) P(e, t);
+    for (let t of u.default.keys(f)) M(e, t);
 }
 class w extends o.Ay.Store {
     static displayName = "PresenceStore";
@@ -265,7 +265,7 @@ let G = new w(d.h, {
                     hiddenActivities: l,
                     processedAtTimestamp: o,
                 } = t;
-                (M({
+                (P({
                     guildId: e.id,
                     userId: n.id,
                     status: i,
@@ -287,7 +287,7 @@ let G = new w(d.h, {
                     processedAtTimestamp: l,
                 } = e;
                 null != t &&
-                    (M({
+                    (P({
                         guildId: A.ME,
                         userId: t.id,
                         status: n,
@@ -337,7 +337,7 @@ let G = new w(d.h, {
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        return P(t, n.id);
+        return M(t, n.id);
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;

@@ -17,16 +17,16 @@ var l = n(485845),
     E = n(317525),
     S = n(287809),
     y = n(317681),
-    A = n(186306),
-    C = n(323350),
+    C = n(186306),
+    A = n(323350),
     b = n(35277),
     I = n(820066),
     v = n(551483),
     N = n(652215);
 n(827669);
 let T = new Set(["applicationCommandOption"]),
-    j = new Set([r.n4.ATTACHMENT]),
-    k = new Set(["line", "applicationCommand"]);
+    k = new Set([r.n4.ATTACHMENT]),
+    j = new Set(["line", "applicationCommand"]);
 function _(e, t) {
     let {
         insertData: n,
@@ -68,15 +68,15 @@ function _(e, t) {
         return n(l);
     }),
         (e.isInline = (e) => !!T.has(e.type) || h(e)),
-        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && j.has(e.optionType)) || g(e)),
+        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && k.has(e.optionType)) || g(e)),
         (e.deleteBackward = (t) => {
-            L(e, () => S(t));
+            M(e, () => S(t));
         }),
         (e.deleteForward = (t) => {
-            L(e, () => N(t));
+            M(e, () => N(t));
         }),
         (e.deleteFragment = (t) => {
-            L(e, () => _(t));
+            M(e, () => _(t));
         }));
     let D = null,
         U = null,
@@ -95,7 +95,7 @@ function _(e, t) {
                     null == F ||
                     a.some((e, t) => F[t] !== e)
                 ) {
-                    let u = A.o.withMergedEntry(e, () =>
+                    let u = C.o.withMergedEntry(e, () =>
                         (function (e) {
                             let {
                                     editor: t,
@@ -104,13 +104,13 @@ function _(e, t) {
                                     commandChanged: u,
                                     previousOptionValues: d,
                                 } = e,
-                                { command: h, commandText: g } = M(t),
+                                { command: h, commandText: g } = L(t),
                                 E = n.activeCommand,
                                 S = t.chatInputType.commands?.enabled === !0,
-                                A = null != p.A.getPendingReply(a.id);
+                                C = null != p.A.getPendingReply(a.id);
                             if (
                                 (!S && E?.integration_types?.includes(l.b.GUILD_INSTALL)) ||
-                                (A && E?.inputType !== c.y$.BUILT_IN_TEXT && E?.inputType !== c.y$.BUILT_IN_INTEGRATION)
+                                (C && E?.inputType !== c.y$.BUILT_IN_TEXT && E?.inputType !== c.y$.BUILT_IN_INTEGRATION)
                             )
                                 return (
                                     null != h
@@ -134,7 +134,7 @@ function _(e, t) {
                                                 { initialValues: i, activeCommand: r } = n;
                                             if (null == r) return null;
                                             let s = (r.options?.length ?? 0) > 0 ? y.pY(e, r) : null,
-                                                a = (0, C.WO)(I.VW.richValue(e), {
+                                                a = (0, A.WO)(I.VW.richValue(e), {
                                                     mode: "raw",
                                                     range: {
                                                         anchor: I.VW.start(e, []),
@@ -169,7 +169,7 @@ function _(e, t) {
                                                 for (let l of r.options)
                                                     if (!e.has(l.name) && (l.required || null != i[l.name])) {
                                                         let e, i;
-                                                        o.length > 0 && !j.has(l.type)
+                                                        o.length > 0 && !k.has(l.type)
                                                             ? ((e = o), (o = ""))
                                                             : (e = (i = P(n, t, l.name)) ?? "");
                                                         let r = {
@@ -236,7 +236,7 @@ function _(e, t) {
                                     return (s.Gf({ channelId: a.id, command: null, section: null }), null);
                                 let e = I.VW.richValue(t)[0],
                                     l = e.children[0];
-                                if (k.has(e.type) && I.l5.isText(l)) {
+                                if (j.has(e.type) && I.l5.isText(l)) {
                                     let e = (function (e, t) {
                                         if (!e.startsWith("/")) return null;
                                         let n = (0, m.p)(t, e, x.A.getDraftCommand(t.id, x.C.ChannelMessage));
@@ -332,7 +332,7 @@ function _(e, t) {
                         }),
                     );
                     if (null != u) {
-                        let t = A.o.currentEntry(e);
+                        let t = C.o.currentEntry(e);
                         (null != t && (t.commandId = u.commandId), (W = u.optionValues));
                     } else W = null;
                     ((D = I.VW.richValue(e)), (U = e.selection), (V = n.activeCommand), (F = a));
@@ -345,7 +345,7 @@ function _(e, t) {
 }
 function R(e, t, n, l) {
     let [i] = I.VW.blocks(e)[0],
-        r = (l ? (0, C.IQ)(i, { mode: "plain" }).trimEnd() : "")
+        r = (l ? (0, A.IQ)(i, { mode: "plain" }).trimEnd() : "")
             .split("\n")
             .map((e) => ({ type: "line", children: [{ text: e }] })),
         a = [r.length - 1];
@@ -358,7 +358,7 @@ function w(e, t) {
         null == t.options ||
         1 !== t.options.length ||
         !0 === t.options[0].required ||
-        j.has(t.options[0].type) ||
+        k.has(t.options[0].type) ||
         y.O7(e).length > 0 ||
         null == y.n$(e)
     )
@@ -427,19 +427,19 @@ function O(e) {
     }
     p && s.H2(n, m);
 }
-function M(e) {
+function L(e) {
     let t = y.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function L(e, t) {
+function M(e, t) {
     let n = y.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
     if (null == l || n === y.O7(e)[0]) return;
-    let { command: i, commandText: r } = M(e);
+    let { command: i, commandText: r } = L(e);
     !(null == i || null == r || r.endsWith(" ")) &&
         I.Kh.equals(l, { path: v.fP, offset: i.displayName.length + 1 }) &&
         b.b.insertText(e, " ");

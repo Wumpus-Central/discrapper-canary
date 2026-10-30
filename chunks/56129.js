@@ -29,8 +29,8 @@ var r = n(503698),
     D = n(646865),
     v = n(795816),
     b = n(104171),
-    M = n(47294),
-    P = n(735168),
+    P = n(47294),
+    M = n(735168),
     U = n(652215),
     w = n(818348),
     G = n(105292),
@@ -129,9 +129,9 @@ function B(e) {
                                       onOpenPopout: function () {
                                           ((0, A.X)(W, A.O.POPOUT, !0),
                                               null != t &&
-                                                  (0, M.A)({
+                                                  (0, P.A)({
                                                       onConfirm: () =>
-                                                          (0, P.A)({
+                                                          (0, M.A)({
                                                               windowKey: U.MLl.CHANNEL_CALL_POPOUT,
                                                               openWindow: () => p.openChannelCallPopout(t),
                                                               refreshProxyTicket: () => (0, v.od)(n, t.id),

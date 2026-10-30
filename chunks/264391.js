@@ -28,21 +28,21 @@ var l = n(477900),
     E = n(803224),
     S = n(74477),
     y = n(934581),
-    A = n(582128),
-    C = n(189213),
+    C = n(582128),
+    A = n(189213),
     b = n(778712),
     I = n(97808),
     v = n(825484),
     N = n(821609),
     T = n(559106),
-    j = n(939249),
-    k = n(834730),
+    k = n(939249),
+    j = n(834730),
     _ = n(47167),
     R = n(713654),
     w = n(598104),
     O = n(145497),
-    M = n(71393),
-    L = n(994500),
+    L = n(71393),
+    M = n(994500),
     P = n(287809),
     D = n(427262),
     U = n(652215),
@@ -67,12 +67,12 @@ function G(e) {
             null == u || u !== n.getGuildId()
                 ? (function (e) {
                       let t = F(e),
-                          n = M.A.getGuild(e.getGuildId());
+                          n = L.A.getGuild(e.getGuildId());
                       if (null != n)
                           return {
                               icon: (0, l.jsx)(O.Ay, { guild: n, iconSize: 32, className: W.sm }),
                               primary: n.name,
-                              secondary: (0, _.m1)(t, P.default, L.A),
+                              secondary: (0, _.m1)(t, P.default, M.A),
                           };
                       let i = (e.recipients ?? []).map((e) => P.default.getUser(e)).filter(Boolean);
                       if (e.type === U.rbe.GROUP_DM)
@@ -83,7 +83,7 @@ function G(e) {
                                   className: W.sm,
                                   "aria-hidden": !0,
                               }),
-                              primary: (0, _.m1)(e, P.default, L.A),
+                              primary: (0, _.m1)(e, P.default, M.A),
                               secondary: i.map((e) => D.Ay.getUserTag(e)).join(", "),
                           };
                       let r = i[0];
@@ -97,18 +97,18 @@ function G(e) {
                                         "aria-hidden": !0,
                                     })
                                   : null,
-                          primary: D.Ay.getName(r) ?? (0, _.m1)(e, P.default, L.A),
+                          primary: D.Ay.getName(r) ?? (0, _.m1)(e, P.default, M.A),
                           secondary: null != r ? D.Ay.getUserTag(r) : void 0,
                       };
                   })(t)
                 : null,
-        d = A.useCallback(() => {
+        d = C.useCallback(() => {
             (r(), s());
         }, [r, s]),
-        h = A.useCallback(() => {
+        h = C.useCallback(() => {
             (a(), r());
         }, [r, a]);
-    return (0, l.jsx)(C.a, {
+    return (0, l.jsx)(A.a, {
         size: "sm",
         title: V.intl.string(V.t.YeUur2),
         subtitle: (function (e) {
@@ -117,12 +117,12 @@ function G(e) {
                 n = 1 === t.length ? P.default.getUser(t[0]) : null;
             if (e.type === U.rbe.DM)
                 return V.intl.format(V.t.UlsYSN, {
-                    recipientName: D.Ay.getName(n) ?? (0, _.m1)(e, P.default, L.A),
+                    recipientName: D.Ay.getName(n) ?? (0, _.m1)(e, P.default, M.A),
                     recipientHook: (e) => (0, l.jsx)("strong", { children: e }),
                 });
             let i = F(e),
-                r = M.A.getGuild(e.getGuildId()),
-                s = (0, _.m1)(i, P.default, L.A),
+                r = L.A.getGuild(e.getGuildId()),
+                s = (0, _.m1)(i, P.default, M.A),
                 a = null != r ? s : (D.Ay.getName(n) ?? s);
             return V.intl.format(V.t.hjBbhU, {
                 destinationName: a,
@@ -150,7 +150,7 @@ function G(e) {
             null != c
                 ? (0, l.jsx)(T.vN, {
                       offset: { right: 4, bottom: 4 },
-                      children: (0, l.jsxs)(j.D, {
+                      children: (0, l.jsxs)(k.D, {
                           className: W.j_,
                           onClick: d,
                           "aria-label": V.intl.string(V.t.h7tN5I),
@@ -159,7 +159,7 @@ function G(e) {
                               (0, l.jsxs)("div", {
                                   className: W.Yr,
                                   children: [
-                                      (0, l.jsx)(k.E, {
+                                      (0, l.jsx)(j.E, {
                                           className: W.ed,
                                           variant: "text-md/semibold",
                                           color: "text-default",
@@ -171,7 +171,7 @@ function G(e) {
                                                 className: W.lj,
                                                 children: [
                                                     null != t.getGuildId() ? B(o, 12) : null,
-                                                    (0, l.jsx)(k.E, {
+                                                    (0, l.jsx)(j.E, {
                                                         className: W.ed,
                                                         variant: "text-xs/medium",
                                                         color: "text-muted",
@@ -199,16 +199,16 @@ let $ = (z.iA + 500) / 1e3,
 function X() {
     (0, r.P0)({ text: V.intl.string(V.t.GjXjfk), variant: "critical" });
 }
-function J(e) {
+function Y(e) {
     e.cleanup?.();
 }
-let Y = null;
+let J = null;
 function ee(e) {
     null != e.maxDurationTimer && (window.clearTimeout(e.maxDurationTimer), (e.maxDurationTimer = null));
 }
 let et = null;
 function en(e) {
-    return Y?.channelId === e ? Y.samples : et?.channelId === e ? et.samples : null;
+    return J?.channelId === e ? J.samples : et?.channelId === e ? et.samples : null;
 }
 function el(e) {
     if (0 === e.length) return "";
@@ -220,7 +220,7 @@ function ei(e) {
 }
 function er(e) {
     let t = et;
-    t?.channelId === e && (ei(t), (et = null), (0, K.zh)(e), t.resultPromise.then(J).catch(() => {}));
+    t?.channelId === e && (ei(t), (et = null), (0, K.zh)(e), t.resultPromise.then(Y).catch(() => {}));
 }
 async function es(e) {
     if (!(0, H.t)()) return void Z.warn("Voice message recording is not supported on this client");
@@ -251,31 +251,31 @@ async function es(e) {
     if (i?.phase === "requesting" || i?.phase === "recording") return;
     let a = (0, H.d)(),
         o = { channelId: e, backend: a, samples: [], startedAtMs: null, maxDurationTimer: null };
-    ((Y = o), (0, K.z5)(e, "requesting"));
+    ((J = o), (0, K.z5)(e, "requesting"));
     try {
         await a.start((e) => {
             o.samples.push(e);
         });
     } catch (t) {
         (Z.error("Failed to start voice message recording", t),
-            (Y = null),
+            (J = null),
             (0, K.zh)(e),
             (0, r.P0)({ text: V.intl.string(V.t.H03AqF), variant: "critical" }));
         return;
     }
-    Y !== o
+    J !== o
         ? a.cancel()
         : ((o.startedAtMs = Date.now()),
           (0, K.z5)(e, "recording", o.startedAtMs),
           (o.maxDurationTimer = window.setTimeout(() => {
-              Y === o && ec(o.channelId, $);
+              J === o && ec(o.channelId, $);
           }, z.iA)));
 }
 async function ea(e) {
     let t,
-        n = Y;
+        n = J;
     if (null == n || n.channelId !== e) return;
-    ((Y = null), ee(n), (0, K.zh)(e), (0, K.Rz)(e, !0));
+    ((J = null), ee(n), (0, K.zh)(e), (0, K.Rz)(e, !0));
     try {
         t = await n.backend.stop();
     } catch (e) {
@@ -284,12 +284,12 @@ async function ea(e) {
     } finally {
         (0, K.Rz)(e, !1);
     }
-    if (t.durationSecs < 0.5) return void J(t);
+    if (t.durationSecs < 0.5) return void Y(t);
     let l = el(n.samples);
     em(e, t.file, t.durationSecs, l, t.cleanup);
 }
 function eo(e) {
-    let t = Y;
+    let t = J;
     return (
         null != t &&
         t.channelId === e &&
@@ -302,9 +302,9 @@ function eu(e) {
         (0, r.P0)({ text: V.intl.string(V.t.UM2R7g), variant: "default" }));
 }
 function ec(e, t) {
-    let n = Y;
+    let n = J;
     if (null == n || n.channelId !== e) return;
-    ((Y = null), ee(n));
+    ((J = null), ee(n));
     let l = n.backend.stop();
     ((0, K.Rz)(e, !0),
         l.then(
@@ -335,13 +335,13 @@ async function ed(e) {
             X();
             return;
         }
-        if (t.durationSecs < 0.5) return void J(t);
+        if (t.durationSecs < 0.5) return void Y(t);
         em(e, t.file, t.durationSecs, n.waveform, t.cleanup);
     }
 }
 function eh(e) {
-    let t = Y;
-    (null != t && t.channelId === e && (ee(t), t.backend.cancel(), (Y = null)), er(e), (0, K.zh)(e));
+    let t = J;
+    (null != t && t.channelId === e && (ee(t), t.backend.cancel(), (J = null)), er(e), (0, K.zh)(e));
 }
 function em(e, t, n, l, i) {
     let r = x.A.getChannel(e);
@@ -368,8 +368,8 @@ function em(e, t, n, l, i) {
         (0, m.Jx)(e));
 }
 a.h.subscribe("LOGOUT", function () {
-    let e = Y;
-    null != e && (ee(e), e.backend.cancel(), (Y = null));
+    let e = J;
+    null != e && (ee(e), e.backend.cancel(), (J = null));
     let t = et;
-    (null != t && ei(t), (et = null), t?.resultPromise.then(J).catch(() => {}), (0, K.nf)());
+    (null != t && ei(t), (et = null), t?.resultPromise.then(Y).catch(() => {}), (0, K.nf)());
 });

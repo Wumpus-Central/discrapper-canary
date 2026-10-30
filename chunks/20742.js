@@ -128,8 +128,8 @@ function N(e) {
             align: "center",
             children: [b, (0, i.jsx)(C, { badge: r, position: a })],
         }));
-    let M = null != n ? v : b,
-        P = (0, i.jsx)("header", {
+    let P = null != n ? v : b,
+        M = (0, i.jsx)("header", {
             className: s()(p.section, p.header, { [p.headerCentered]: f }),
             children: (0, i.jsxs)(h.B, {
                 gap: 8,
@@ -148,7 +148,7 @@ function N(e) {
                                             className: p.headerStepIndicator,
                                             children: (0, i.jsx)(A.z, { ...R }),
                                         }),
-                                    M,
+                                    P,
                                 ],
                             }),
                         }),
@@ -159,7 +159,7 @@ function N(e) {
                 ],
             }),
         });
-    return y ? (0, i.jsx)(c.h, { color: t, className: p.headerGradient, children: P }) : P;
+    return y ? (0, i.jsx)(c.h, { color: t, className: p.headerGradient, children: M }) : M;
 }
 function C(e) {
     let { badge: t, position: n } = e;

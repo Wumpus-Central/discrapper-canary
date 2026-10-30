@@ -32,8 +32,8 @@ var R = n(604594),
     D = n(652215);
 let v = 15 * f.A.Millis.MINUTE,
     b = f.A.Millis.SECOND,
-    M = "LAST_CLIENT_HEARTBEAT_SESSION",
-    P = "user",
+    P = "LAST_CLIENT_HEARTBEAT_SESSION",
+    M = "user",
     U = new d.A("SessionHeartbeatScheduler"),
     w = null,
     G = null,
@@ -58,7 +58,7 @@ function W() {
                 w.type;
         }
         return ((w = null), !0);
-    })() && (I.A.addBreadcrumb({ category: P, message: "Stopping Analytics Heartbeat" }), (0, o.p)());
+    })() && (I.A.addBreadcrumb({ category: M, message: "Stopping Analytics Heartbeat" }), (0, o.p)());
 }
 async function Y() {
     let e,
@@ -73,7 +73,7 @@ async function Y() {
         c = Date.now();
     if (null == d)
         return void I.A.captureException(Error(`Null session when tracking session heartbeat. Waited ${c - l}ms`));
-    I.A.addBreadcrumb({ category: P, message: "Tracking Heartbeat", data: { initialized: d.createdAtTimestamp } });
+    I.A.addBreadcrumb({ category: M, message: "Tracking Heartbeat", data: { initialized: d.createdAtTimestamp } });
     let _ = {
         client_heartbeat_initialization_timestamp: d.createdAtTimestamp,
         client_heartbeat_version: 31,
@@ -169,7 +169,7 @@ async function q() {
 }
 function Z() {
     let e = _.default.getToken();
-    (j !== e && ((j = e), s.w.remove(M), (F = { state: "loaded", session: null }), W(), (k = 0)), z());
+    (j !== e && ((j = e), s.w.remove(P), (F = { state: "loaded", session: null }), W(), (k = 0)), z());
 }
 function Q() {
     let e = A.A.getState();
@@ -217,7 +217,7 @@ async function er() {
         t = null,
         n = "loaded" === F.state ? F.session?.uuid : null;
     try {
-        t = "uninitialized" === F.state ? X(await s.w.getAfterRefresh(M)) : F.session;
+        t = "uninitialized" === F.state ? X(await s.w.getAfterRefresh(P)) : F.session;
     } catch (e) {
         I.A.captureException(e);
     }
@@ -230,7 +230,7 @@ async function er() {
         let e = u();
         if (!(e - x < b))
             try {
-                (s.w.set(M, l), (x = e));
+                (s.w.set(P, l), (x = e));
             } catch (e) {
                 I.A.captureException(e);
             }
@@ -245,6 +245,6 @@ async function er() {
     );
 }
 function ea() {
-    let e = "uninitialized" === F.state ? X(s.w.get(M)) : F.session;
+    let e = "uninitialized" === F.state ? X(s.w.get(P)) : F.session;
     return null == e || (0, R.aE)(e) ? null : e;
 }

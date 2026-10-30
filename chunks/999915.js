@@ -31,7 +31,7 @@ function b(e) {
     let t = u.A.getChannel(e);
     return t?.getGuildId();
 }
-function M(e) {
+function P(e) {
     return {
         type: "guild",
         guildId: e.id,
@@ -39,7 +39,7 @@ function M(e) {
         icon: C.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
     };
 }
-function P(e, t) {
+function M(e, t) {
     let n = x((0, R.EJ)(e.name, 32));
     return {
         type: "channel",
@@ -103,9 +103,9 @@ function k(e, t, n, i, r) {
         channelId: t,
         messageId: n,
         originalLink: r,
-        inContent: null == a || s ? null : [M(a)],
+        inContent: null == a || s ? null : [P(a)],
         content: [
-            P({ name: v.intl.string(v.t.zLZPmk).toLowerCase(), type: D.rbe.UNKNOWN, iconType: "text" }, "italics"),
+            M({ name: v.intl.string(v.t.zLZPmk).toLowerCase(), type: D.rbe.UNKNOWN, iconType: "text" }, "italics"),
         ],
     };
 }
@@ -126,14 +126,14 @@ function F(e, t, n, i) {
     let r = { type: "channelMention", channelId: e.id, guildId: e.guildId, messageId: t, originalLink: i },
         a = E.A.getGuild(e.guildId);
     if (null == a)
-        if (e.isDm) return { ...r, guildId: D.ME, inContent: [P(e)], content: [U(!1)] };
+        if (e.isDm) return { ...r, guildId: D.ME, inContent: [M(e)], content: [U(!1)] };
         else return null != i ? G(i) : x(`#${v.intl.string(v.t.J90oLW)}`);
     let s = e.guildId === n;
     return {
         ...r,
         ...(function (e, t, n, i) {
-            let r = M(e),
-                a = P(t),
+            let r = P(e),
+                a = M(t),
                 s = U(t.isForumPost);
             if (n && i) {
                 if (t.isForumPost) {
@@ -141,7 +141,7 @@ function F(e, t, n, i) {
                     if (null != e)
                         return {
                             inContent: [
-                                P({
+                                M({
                                     name: (0, T.m1)(e, A.default, N.A),
                                     type: e.type,
                                     iconType: (0, O.QG)(e) ?? "forum",

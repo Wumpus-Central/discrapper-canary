@@ -17,8 +17,8 @@ var l = n(477900),
     E = n(775602),
     S = n(392054),
     y = n(17928),
-    A = n(834730),
-    C = n(866665),
+    C = n(834730),
+    A = n(866665),
     b = n(364360);
 function I(e) {
     let { children: t, className: n } = e;
@@ -34,25 +34,25 @@ function N(e) {
 }
 function T(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)(A.E, {
+    return (0, l.jsx)(C.E, {
         className: s()(n, b.hf),
         color: "interactive-text-active",
         variant: "text-md/normal",
         children: t,
     });
 }
-function j(e) {
+function k(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)(A.E, {
+    return (0, l.jsx)(C.E, {
         className: s()(n, b.p3),
         color: "interactive-text-default",
         variant: "text-xs/normal",
         children: t,
     });
 }
-function k(e) {
+function j(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)(A.E, {
+    return (0, l.jsx)(C.E, {
         className: s()(n, b.I0),
         color: "interactive-text-default",
         variant: "text-xs/normal",
@@ -69,7 +69,7 @@ function w(e) {
         : i?.lastValidationResult?.success === !1
           ? (o = R.z3)
           : i?.hasValue && !r && (o = R.hZ);
-    let u = (0, l.jsx)(A.E, {
+    let u = (0, l.jsx)(C.E, {
         variant: r ? "text-md/normal" : "text-sm/normal",
         color: "text-strong",
         className: s()(R.uK, { [R.mG]: r }, o, n),
@@ -79,10 +79,10 @@ function w(e) {
 }
 var O = n(664929);
 n(827669);
-var M = n(105292),
-    L = n(633331);
+var L = n(105292),
+    M = n(633331);
 function P(e, t, n) {
-    return (0, l.jsx)(w, { className: L.uK, name: e.displayName, state: t, onClick: n }, e.name);
+    return (0, l.jsx)(w, { className: M.uK, name: e.displayName, state: t, onClick: n }, e.name);
 }
 function D(e) {
     let { command: t, optionStates: n, onOptionClick: r } = e,
@@ -100,8 +100,8 @@ function D(e) {
             };
         }, [t.options, n]),
         u = (0, l.jsx)("div", {
-            className: L.$2,
-            children: o.map((e) => (0, l.jsx)(A.E, { variant: "text-sm/normal", children: e.displayName }, e.name)),
+            className: M.$2,
+            children: o.map((e) => (0, l.jsx)(C.E, { variant: "text-sm/normal", children: e.displayName }, e.name)),
         }),
         c = s.map((e) => P(e, n?.[e.name], r)),
         h =
@@ -109,9 +109,9 @@ function D(e) {
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(d.D, {
-                              className: L.Ki,
+                              className: M.Ki,
                               variant: "heading-deprecated-12/semibold",
-                              children: M.intl.string(M.t["5C107K"]),
+                              children: L.intl.string(L.t["5C107K"]),
                           }),
                           a.map((e) => P(e, n?.[e.name], r)),
                       ],
@@ -119,23 +119,23 @@ function D(e) {
                 : null,
         m =
             o.length > 0
-                ? (0, l.jsx)(C.m, {
+                ? (0, l.jsx)(A.m, {
                       __unsupportedReactNodeAsText: u,
                       "aria-label": !1,
                       delay: 200,
-                      children: (0, l.jsx)(A.E, {
-                          className: L.kP,
+                      children: (0, l.jsx)(C.E, {
+                          className: M.kP,
                           color: "text-muted",
                           variant: "text-sm/normal",
                           children:
                               0 === a.length
-                                  ? M.intl.formatToPlainString(M.t["0mI72g"], { count: o.length })
-                                  : M.intl.formatToPlainString(M.t.BP8N0K, { count: o.length }),
+                                  ? L.intl.formatToPlainString(L.t["0mI72g"], { count: o.length })
+                                  : L.intl.formatToPlainString(L.t.BP8N0K, { count: o.length }),
                       }),
                   })
                 : null;
     return (0, l.jsxs)(l.Fragment, {
-        children: [c, null != h || null != m ? (0, l.jsxs)("div", { className: L.gM, children: [h, m] }) : null],
+        children: [c, null != h || null != m ? (0, l.jsxs)("div", { className: M.gM, children: [h, m] }) : null],
     });
 }
 function U(e) {
@@ -159,26 +159,26 @@ function U(e) {
             if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
     return (0, l.jsxs)("div", {
-        className: s()(L.iE, m ? null : L.r9),
+        className: s()(M.iE, m ? null : M.r9),
         children: [
-            null != g ? (0, l.jsx)(g, { className: L.Sl, channel: a, section: h, width: 32, height: 32 }) : null,
+            null != g ? (0, l.jsx)(g, { className: M.Sl, channel: a, section: h, width: 32, height: 32 }) : null,
             (0, l.jsxs)("div", {
-                className: L.QR,
+                className: M.QR,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: L.nY,
+                        className: M.nY,
                         children: [
-                            (0, l.jsx)(T, { className: L.DD, children: "/" + n.displayName }),
+                            (0, l.jsx)(T, { className: M.DD, children: "/" + n.displayName }),
                             o ? (0, l.jsx)(D, { command: n, optionStates: c, onOptionClick: d }) : null,
                         ],
                     }),
-                    (0, l.jsx)(j, {
-                        className: s()(L.h_, null != t ? L.z3 : null),
+                    (0, l.jsx)(k, {
+                        className: s()(M.h_, null != t ? M.z3 : null),
                         children: t ?? f?.displayDescription ?? n.displayDescription,
                     }),
                 ],
             }),
-            (0, l.jsx)(k, { className: L.sP, children: x ?? h?.name }),
+            (0, l.jsx)(j, { className: M.sP, children: x ?? h?.name }),
         ],
     });
 }
@@ -195,7 +195,7 @@ var V = n(524007),
     Q = n(307731),
     Z = n(202541),
     X = n(211319);
-let J = function (e) {
+let Y = function (e) {
     let { emojis: t } = e,
         { analyticsLocations: n } = (0, B.Ay)();
     i.useEffect(() => {
@@ -230,12 +230,12 @@ let J = function (e) {
     return (0, l.jsxs)(I, {
         className: X.UX,
         children: [
-            (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: M.intl.format(M.t.uEky42, { count: t.length }) }) }),
-            (0, l.jsx)(k, { children: r }),
+            (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: L.intl.format(L.t.uEky42, { count: t.length }) }) }),
+            (0, l.jsx)(j, { children: r }),
         ],
     });
 };
-var Y = n(168017),
+var J = n(168017),
     ee = n(106191),
     et = n(719067),
     en = n(785562),
@@ -244,13 +244,13 @@ var Y = n(168017),
     er = n(71393);
 function es(e) {
     let { sound: t } = e,
-        n = (0, y.bG)([er.A], () => ("0" === t.guildId ? M.intl.string(M.t.Rtvk9X) : er.A.getGuild(t.guildId)?.name));
+        n = (0, y.bG)([er.A], () => ("0" === t.guildId ? L.intl.string(L.t.Rtvk9X) : er.A.getGuild(t.guildId)?.name));
     return (0, l.jsxs)(I, {
         children: [
             (null != t.emojiId || null != t.emojiName) &&
                 (0, l.jsx)(N, { children: (0, l.jsx)(ei.A, { emojiId: t.emojiId, emojiName: t.emojiName }) }),
             (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: t.name }) }),
-            null != n && (0, l.jsx)(k, { children: n }),
+            null != n && (0, l.jsx)(j, { children: n }),
         ],
     });
 }
@@ -329,7 +329,7 @@ class ex extends eg {
             children: [
                 null != i ? (0, l.jsx)(N, { children: i }) : null,
                 (0, l.jsx)(v, { children: null != n ? (0, l.jsxs)("div", { className: b.QN, children: [r, n] }) : r }),
-                null != t ? (0, l.jsx)(k, { children: t }) : null,
+                null != t ? (0, l.jsx)(j, { children: t }) : null,
             ],
         });
     }
@@ -367,7 +367,7 @@ class ey extends eg {
         return (0, l.jsx)("div", { className: s()(e, b.yF) });
     }
 }
-class eA extends eg {
+class eC extends eg {
     renderContent() {
         let { user: e, nick: t, status: n, hidePersonalInformation: i, guildId: r } = this.props,
             s = null == r ? ec.A.getNickname(e.id) : null;
@@ -382,7 +382,7 @@ class eA extends eg {
                     }),
                 }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: t ?? s ?? eh.Ay.getName(e) }) }),
-                (0, l.jsxs)(k, {
+                (0, l.jsxs)(j, {
                     children: [
                         eh.Ay.getUserTag(e, { mode: "username", identifiable: i ? "never" : "always" }),
                         i || e.hasUniqueUsername()
@@ -394,7 +394,7 @@ class eA extends eg {
         });
     }
 }
-class eC extends eg {
+class eA extends eg {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
             { colorString: i, colorStrings: r } = e,
@@ -424,7 +424,7 @@ class eC extends eg {
                         ],
                     }),
                 }),
-                t ? null : (0, l.jsx)(k, { children: M.intl.string(M.t["/91tbr"]) }),
+                t ? null : (0, l.jsx)(j, { children: L.intl.string(L.t["/91tbr"]) }),
             ],
         });
     }
@@ -437,7 +437,7 @@ class eb extends eg {
                 (0, l.jsx)(v, {
                     children: (0, l.jsx)(T, { children: (0, l.jsx)(en.A, { node: e, showTooltip: !1 }) }),
                 }),
-                null != t ? (0, l.jsx)(k, { children: t }) : null,
+                null != t ? (0, l.jsx)(j, { children: t }) : null,
             ],
         });
     }
@@ -450,7 +450,7 @@ class eI extends eg {
             children: [
                 null != n && (0, l.jsx)(N, { children: (0, l.jsx)(n, { className: b.Kk }) }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: (0, W.m1)(e, ed.default, ec.A) }) }),
-                null != t ? (0, l.jsx)(k, { children: t.name }) : null,
+                null != t ? (0, l.jsx)(j, { children: t.name }) : null,
             ],
         });
     }
@@ -464,7 +464,7 @@ class ev extends eg {
                     children: (0, l.jsx)(x.F, { size: "xs", color: "currentColor", className: b.Kk, colorClass: b.t4 }),
                 }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: e.displayName }) }),
-                (0, l.jsx)(k, { children: e.displayDescription }),
+                (0, l.jsx)(j, { children: e.displayDescription }),
             ],
         });
     }
@@ -509,7 +509,7 @@ class eT extends eg {
                                   : e.url,
                       })
                     : (0, l.jsx)("span", { className: b.nT, children: e.surrogates }),
-            s = null != n ? (0, l.jsx)(k, { children: n.name }) : null;
+            s = null != n ? (0, l.jsx)(j, { children: n.name }) : null;
         return (0, l.jsxs)(I, {
             children: [
                 (0, l.jsx)(N, { children: r }),
@@ -519,7 +519,7 @@ class eT extends eg {
         });
     }
 }
-class ej extends eg {
+class ek extends eg {
     layoutClass = s()(b.rT, b.Mf);
     renderContent() {
         let e,
@@ -535,16 +535,16 @@ class ej extends eg {
                     (0, l.jsxs)(v, {
                         children: [
                             (0, l.jsx)(T, { children: r.name }),
-                            null != t && (0, l.jsx)(j, { children: M.intl.format(M.t.PAutaQ, { queryMatch: t }) }),
+                            null != t && (0, l.jsx)(k, { children: L.intl.format(L.t.PAutaQ, { queryMatch: t }) }),
                         ],
                     }),
-                    null != e && (0, l.jsx)(k, { children: e }),
+                    null != e && (0, l.jsx)(j, { children: e }),
                 ],
             })
         );
     }
 }
-class ek extends eg {
+class ej extends eg {
     layoutClass = b.ju;
     renderContent() {
         let { width: e, height: t, src: n } = this.props;
@@ -553,7 +553,7 @@ class ek extends eg {
 }
 class e_ extends eg {
     renderContent() {
-        return (0, l.jsx)(J, { emojis: this.props.emojis });
+        return (0, l.jsx)(Y, { emojis: this.props.emojis });
     }
 }
 class eR extends eg {
@@ -563,7 +563,7 @@ class eR extends eg {
 }
 function ew(e) {
     let { game: t } = e,
-        { extraChromeEnabled: n } = Y.A.useConfig({ location: "game_mention_autocomplete" });
+        { extraChromeEnabled: n } = J.A.useConfig({ location: "game_mention_autocomplete" });
     return (0, l.jsx)(ee.A, { game: t, iconClassName: b.Kk, withBackground: n });
 }
 class eO extends eg {
@@ -580,24 +580,24 @@ class eO extends eg {
         });
     }
 }
-function eM(e) {
+function eL(e) {
     let { id: t, children: n } = e,
         r = i.useMemo(() => ({ id: t }), [t]);
     return (0, l.jsx)(ep.Provider, { value: r, children: n });
 }
-class eL extends i.PureComponent {
+class eM extends i.PureComponent {
     static Generic = ex;
     static Loading = eE;
     static Title = eS;
     static Divider = ey;
-    static User = eA;
-    static Role = eC;
+    static User = eC;
+    static Role = eA;
     static Channel = eI;
     static Command = ev;
     static NewCommand = eN;
     static Emoji = eT;
-    static GIFIntegration = ek;
-    static Sticker = ej;
+    static GIFIntegration = ej;
+    static Sticker = ek;
     static EmojiUpsell = e_;
     static Soundmoji = eR;
     static Game = eO;
@@ -605,7 +605,7 @@ class eL extends i.PureComponent {
     render() {
         let { children: e, className: t, innerClassName: n, id: r, ...a } = this.props;
         return i.Children.count(e) > 0
-            ? (0, l.jsx)(eM, {
+            ? (0, l.jsx)(eL, {
                   id: r ?? "",
                   children: (0, l.jsx)("div", {
                       className: s()(b.nx, t),
@@ -615,4 +615,4 @@ class eL extends i.PureComponent {
             : null;
     }
 }
-let eP = eL;
+let eP = eM;

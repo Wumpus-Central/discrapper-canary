@@ -28,8 +28,8 @@ let S = !1,
     D = !0,
     v = Object.freeze([]),
     b = Object.freeze([]),
-    M = [],
-    P = [];
+    P = [],
+    M = [];
 function U(e) {
     if (0 === e.length) return e;
     let t = [],
@@ -74,14 +74,14 @@ function x() {
     let i = m.A.getHiddenActivities();
     (b !== i && (b = i),
         e &&
-            (P = U(
-                (M = s()([...R, ...v.filter((e) => e.type !== l.$.CUSTOM_STATUS)].sort(T.m))
+            (M = U(
+                (P = s()([...R, ...v.filter((e) => e.type !== l.$.CUSTOM_STATUS)].sort(T.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
             )));
 }
 function k() {
-    ((D = !1), (C = g.clD.UNKNOWN), x(), T.A.setCurrentUserOnConnectionOpen(N, M));
+    ((D = !1), (C = g.clD.UNKNOWN), x(), T.A.setCurrentUserOnConnectionOpen(N, P));
 }
 class F extends o.Ay.Store {
     static displayName = "SelfPresenceStore";
@@ -96,11 +96,11 @@ class F extends o.Ay.Store {
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? P : L;
+        return e ? M : L;
     }
     getUnfilteredActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? M : R;
+        return e ? P : R;
     }
     getHiddenActivities() {
         return b;

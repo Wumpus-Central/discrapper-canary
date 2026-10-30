@@ -46,9 +46,9 @@ function N(e) {
             "aria-expanded": D,
             "aria-haspopup": v,
             "data-jump-section": b,
-            ref: M,
+            ref: P,
         } = e,
-        P = null != E ? { secondaryColorClass: E } : {};
+        M = null != E ? { secondaryColorClass: E } : {};
     function U(e) {
         return (0, i.jsx)(A, {
             x: 0,
@@ -60,7 +60,7 @@ function N(e) {
             colorClass: c ?? void 0,
             color: d ?? "currentColor",
             "aria-hidden": e,
-            ...P,
+            ...M,
         });
     }
     let w = R;
@@ -76,13 +76,13 @@ function N(e) {
             children:
                 null == f
                     ? (0, i.jsx)("div", {
-                          ref: M,
+                          ref: P,
                           className: s()(t, S.P0, { [S.Ir]: l }),
                           "aria-label": w,
                           children: U(L),
                       })
                     : (0, i.jsxs)(u.D, {
-                          innerRef: M,
+                          innerRef: P,
                           tag: "div",
                           onClick: l ? void 0 : f,
                           onContextMenu: l ? void 0 : I,

@@ -17,8 +17,8 @@ var l = n(477900),
     E = n(267102),
     S = n(186306),
     y = n(339871),
-    A = n(820066),
-    C = n(105292),
+    C = n(820066),
+    A = n(105292),
     b = n(9287);
 function I(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: r } = e;
@@ -129,7 +129,7 @@ function v(e) {
         }, [m, f, p, g]));
     let { x: S, y } = i.useMemo(() => {
             let e = t();
-            if (e?.selection == null || A.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
+            if (e?.selection == null || C.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
             let l = a.rL.findDocumentOrShadowRoot(e),
                 i = l.getSelection();
             if (null == i || null == i.focusNode || null == i.anchorNode || i.isCollapsed) return { x: null, y: null };
@@ -149,7 +149,7 @@ function v(e) {
                 y: Math.max(n.current?.getBoundingClientRect()?.y ?? 0, Math.min(u.y, s.y)),
             };
         }, [n, c, t]),
-        [C, v] = i.useState(0),
+        [A, v] = i.useState(0),
         [N, T] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
@@ -160,22 +160,22 @@ function v(e) {
         null == S || null == y)
     )
         return null;
-    let j = t();
-    return null == j
+    let k = t();
+    return null == k
         ? null
         : (0, l.jsx)(x.Ay, {
               children: (0, l.jsx)("div", {
                   id: "slate-toolbar",
                   ref: u,
                   className: b.KE,
-                  style: { top: y - C, left: S - N },
+                  style: { top: y - A, left: S - N },
                   onMouseDown: (e) => {
                       (e.preventDefault(), e.stopPropagation());
                   },
                   onMouseUp: (e) => {
                       e.stopPropagation();
                   },
-                  children: (0, l.jsx)(I, { slateEditor: j, options: r }),
+                  children: (0, l.jsx)(I, { slateEditor: k, options: r }),
               }),
           });
 }
@@ -183,7 +183,7 @@ function N(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         r = !1;
     if (t?.selection != null) {
-        let [e, l] = A.ZF.edges(t.selection);
+        let [e, l] = C.ZF.edges(t.selection);
         r = null != (0, y.Sx)(t, e, l).before[n];
     }
     return (0, l.jsx)(g.vN, {
@@ -191,17 +191,17 @@ function N(e) {
             "aria-label": (function (e) {
                 switch (e) {
                     case "bold":
-                        return C.intl.string(C.t.XI2CUr);
+                        return A.intl.string(A.t.XI2CUr);
                     case "italics":
-                        return C.intl.string(C.t.a96YKu);
+                        return A.intl.string(A.t.a96YKu);
                     case "underline":
-                        return C.intl.string(C.t.PdIYwI);
+                        return A.intl.string(A.t.PdIYwI);
                     case "strikethrough":
-                        return C.intl.string(C.t["63uDvE"]);
+                        return A.intl.string(A.t["63uDvE"]);
                     case "inlineCode":
-                        return C.intl.string(C.t.iBerkZ);
+                        return A.intl.string(A.t.iBerkZ);
                     case "spoiler":
-                        return C.intl.string(C.t["F+x38C"]);
+                        return A.intl.string(A.t["F+x38C"]);
                 }
             })(n),
             "aria-pressed": r,
@@ -215,12 +215,12 @@ function N(e) {
 }
 function T(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
-        r = null != n ? A.VW.getCurrentBlock(n) : null,
-        s = null != r && A.AS.isType(r[0], t);
+        r = null != n ? C.VW.getCurrentBlock(n) : null,
+        s = null != r && C.AS.isType(r[0], t);
     return (0, l.jsx)(g.vN, {
         children: (0, l.jsx)("button", {
             "aria-label": (function (e) {
-                if ("blockQuote" === e) return C.intl.string(C.t.svB7eY);
+                if ("blockQuote" === e) return A.intl.string(A.t.svB7eY);
             })(t),
             "aria-pressed": s,
             className: b.x6,

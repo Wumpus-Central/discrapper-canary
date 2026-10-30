@@ -33,8 +33,8 @@ let D = (0, n(240921).Ay)({
 });
 var v = n(626584),
     b = n(444431),
-    M = n(655087),
-    P = n(680725),
+    P = n(655087),
+    M = n(680725),
     U = n(487329),
     w = n(451988),
     G =
@@ -397,12 +397,12 @@ var eA = n(53857),
     eD = n(77729),
     ev = n(435558),
     eb = n.n(ev);
-let eM = [];
-class eP {
+let eP = [];
+class eM {
     bytes = {};
     static create() {
-        let e = new eP();
-        return (eM.push(e), e.record);
+        let e = new eM();
+        return (eP.push(e), e.record);
     }
     record = (e) => {
         if (null != e) {
@@ -1979,8 +1979,8 @@ class tE extends S.A {
                 pauseCount: D,
                 freezeCount: v,
                 totalPausesDuration: b,
-                totalFreezesDuration: M,
-                totalFramesDuration: P,
+                totalFreezesDuration: P,
+                totalFramesDuration: M,
                 totalDecodeTime: U,
                 keyframes: w,
                 passthroughCount: G,
@@ -2000,12 +2000,12 @@ class tE extends S.A {
         return (
             e instanceof tc.ET
                 ? ((u.sender_freeze_count = v),
-                  (u.sender_total_freezes_duration = M),
-                  (u.sender_total_frames_duration = P),
+                  (u.sender_total_freezes_duration = P),
+                  (u.sender_total_frames_duration = M),
                   (u.consecutive_static_color_frames_max = e.consecutiveStaticColorFramesMax))
                 : ((u.receiver_freeze_count = v),
-                  (u.receiver_total_freezes_duration = M),
-                  (u.receiver_total_frames_duration = P),
+                  (u.receiver_total_freezes_duration = P),
+                  (u.receiver_total_frames_duration = M),
                   (u.receiver_pause_count = D),
                   (u.receiver_total_pauses_duration = b),
                   (u.total_decode_time_ms = U),
@@ -2506,17 +2506,17 @@ function tb(e, t, n, i) {
     for (let t of e) r[t] = i[t] - n.baseline[t];
     return r;
 }
-function tM(e, t) {
+function tP(e, t) {
     return (t < e.lastRaw && (e.baseline = 0), (e.lastRaw = t), t - e.baseline);
 }
-function tP(e, t) {
-    return null == t ? ((e.baseline = 0), (e.lastRaw = 0), t) : tM(e, t);
+function tM(e, t) {
+    return null == t ? ((e.baseline = 0), (e.lastRaw = 0), t) : tP(e, t);
 }
 function tU(e, t, n, i) {
     let r = {};
     for (let a of e) {
         let e = n[a];
-        r[a] = null == e ? i?.[a] : tM(t[a], e);
+        r[a] = null == e ? i?.[a] : tP(t[a], e);
     }
     return r;
 }
@@ -2955,8 +2955,8 @@ class tx extends S.A {
             }
         }),
             (this.transportStats = {
-                decryptionFailures: tP(this.transportBaseline.decryptionFailures, e.transport.decryptionFailures),
-                routingFailures: tP(this.transportBaseline.routingFailures, e.transport.routingFailures),
+                decryptionFailures: tM(this.transportBaseline.decryptionFailures, e.transport.decryptionFailures),
+                routingFailures: tM(this.transportBaseline.routingFailures, e.transport.routingFailures),
                 ...tU(tO, this.transportBaseline, e.transport, this.transportStats),
             }),
             this.appendTargetRates(this.outboundStats, e.transport.availableOutgoingBitrate, t),
@@ -3885,7 +3885,7 @@ class tq extends S.A {
                         ...i,
                         ...e.getNetworkStats(),
                         ...e.getCodecUsageStats("sender", this.userId),
-                        device_performance_class: (0, P.A)(),
+                        device_performance_class: (0, M.A)(),
                     });
             let i = e.getCameraDurationStats();
             null != i &&
@@ -4057,7 +4057,7 @@ class tq extends S.A {
                 voice_input_volume: o.inputVolume,
                 encryption_mode: this._encryptionMode,
                 channel_count: this.channelIds.size,
-                device_performance_class: (0, P.A)(),
+                device_performance_class: (0, M.A)(),
                 num_fast_udp_reconnects: null != u ? u - this._fastUdpReconnectsAtFragmentStart : null,
                 parent_media_session_id: this.parentMediaSessionId,
                 audio_subsystem: eI.Ay.getMediaEngine().getAudioSubsystem(),
@@ -4469,7 +4469,7 @@ class tq extends S.A {
             u.on(N.yq.PingTimeout, this._handlePingTimeout.bind(this)),
             u.on(N.yq.OutboundLossRate, this._handleOutboundLossRate.bind(this)),
             u.on(N.yq.LocalVideoDisabled, this._handleLocalVideoDisabled.bind(this)),
-            u.on(N.yq.Stats, eP.create()),
+            u.on(N.yq.Stats, eM.create()),
             u.on(N.yq.RemoteStreamsReady, this._handleRemoteStreamsReady.bind(this)),
             u.on(N.yq.UsersMerged, this.handleUsersMerged.bind(this)),
             u.on(N.yq.NoiseCancellationError, (e) => {
@@ -4848,7 +4848,7 @@ class tq extends S.A {
             let e = this._connection;
             null != e && e.setAudioLatencyMeasurement(!0);
         }
-        let t = M.A.getRawThermalState();
+        let t = P.A.getRawThermalState();
         (eS.default.track(ew.HAw.MEDIA_SESSION_JOINED, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),

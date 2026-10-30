@@ -528,10 +528,10 @@ function T(e) {
                 );
             }, [])),
             { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
-        M = r.useCallback(() => {
+        P = r.useCallback(() => {
             (L(!1), R && u?.());
         }, [u, R]),
-        P = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 (L(!R), null != e && "number" == typeof e && D(e), R ? u?.() : c?.());
             },
@@ -539,12 +539,12 @@ function T(e) {
         );
     r.useEffect(
         () => (
-            f._.subscribe(I.jej.TOGGLE_INBOX, P),
+            f._.subscribe(I.jej.TOGGLE_INBOX, M),
             () => {
-                f._.unsubscribe(I.jej.TOGGLE_INBOX, P);
+                f._.unsubscribe(I.jej.TOGGLE_INBOX, M);
             }
         ),
-        [P],
+        [M],
     );
     let U = (0, a.bG)([_.A], () => _.A.hasOverdueReminder(), []);
     r.useEffect(() => {
@@ -552,9 +552,9 @@ function T(e) {
     });
     let w = r.useCallback(
             (e) => {
-                e.shiftKey || M();
+                e.shiftKey || P();
             },
-            [M],
+            [P],
         ),
         G = (0, E.Sc)();
     return (0, i.jsx)(d.f5, {
@@ -566,14 +566,14 @@ function T(e) {
             align: g,
             autoInvert: !1,
             shouldShow: R,
-            onRequestClose: M,
+            onRequestClose: P,
             renderPopout: function () {
                 return (0, i.jsx)(p, {
                     dialogClassName: C,
                     isScheduledMessagesEnabled: G,
                     tab: y,
                     setTab: D,
-                    closePopout: M,
+                    closePopout: P,
                     handleMentionsJump: w,
                     showTutorial: v,
                     setSeenTutorial: b,
@@ -584,7 +584,7 @@ function T(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return T(P, n, e, U);
+                return T(M, n, e, U);
             },
         }),
     });

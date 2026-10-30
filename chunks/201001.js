@@ -40,8 +40,8 @@ function m(e, t, n, a) {
                 rowHeight: D,
                 footerHeight: v = 0,
                 sidebarHeight: b,
-                listHeaderHeight: M = 0,
-                renderSection: P,
+                listHeaderHeight: P = 0,
+                renderSection: M,
                 renderRow: U,
                 renderFooter: w,
                 renderSidebar: G,
@@ -147,7 +147,7 @@ function m(e, t, n, a) {
                 rowHeight: D,
                 footerHeight: v,
                 sidebarHeight: b,
-                listHeaderHeight: M,
+                listHeaderHeight: P,
                 paddingTop: V,
                 paddingBottom: H,
                 chunkSize: K,
@@ -238,7 +238,7 @@ function m(e, t, n, a) {
         return (
             r.useLayoutEffect(() => {
                 2 !== ed.current.dirty && (ed.current.dirty = 2);
-            }, [P, U, w, F, e_, eu, ed]),
+            }, [M, U, w, F, e_, eu, ed]),
             !(function (e) {
                 let {
                     scrollerRef: t,
@@ -358,7 +358,7 @@ function m(e, t, n, a) {
                                         items: eE,
                                         renderListHeader: x,
                                         stickyListHeader: k,
-                                        renderSection: P,
+                                        renderSection: M,
                                         renderRow: U,
                                         renderFooter: w,
                                         wrapSection: F,
@@ -366,7 +366,7 @@ function m(e, t, n, a) {
                                     }),
                                 }),
                             }),
-                        [ee, z, X, q, Z, Q, e_, J, eE, x, k, P, U, w, F, eu, et],
+                        [ee, z, X, q, Z, Q, e_, J, eE, x, k, M, U, w, F, eu, et],
                     ),
                     r.useMemo(
                         () =>

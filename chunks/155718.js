@@ -10,12 +10,12 @@ n.d(t, {
     Tk: () => C,
     Wq: () => H,
     YI: () => L,
-    Ys: () => M,
+    Ys: () => P,
     hE: () => V,
     iS: () => B,
     in: () => x,
     kc: () => U,
-    n4: () => P,
+    n4: () => M,
     qz: () => k,
     r2: () => N,
     wk: () => O,
@@ -64,11 +64,11 @@ var i,
         (u[(u.BOT_DM = 1)] = "BOT_DM"),
         (u[(u.PRIVATE_CHANNEL = 2)] = "PRIVATE_CHANNEL"),
         u),
-    M =
+    P =
         (((_ = {})[(_.APP_HANDLER = 1)] = "APP_HANDLER"),
         (_[(_.DISCORD_LAUNCH_ACTIVITY = 2)] = "DISCORD_LAUNCH_ACTIVITY"),
         _),
-    P =
+    M =
         (((E = {})[(E.SUB_COMMAND = 1)] = "SUB_COMMAND"),
         (E[(E.SUB_COMMAND_GROUP = 2)] = "SUB_COMMAND_GROUP"),
         (E[(E.STRING = 3)] = "STRING"),

@@ -17,21 +17,21 @@ var l = n(477900),
     E = n(513609),
     S = n(71393),
     y = n(597184),
-    A = n(105330),
-    C = n(265431),
+    C = n(105330),
+    A = n(265431),
     b = n(459016),
     I = n(861382),
     v = n(355622),
     N = n(820066),
     T = n(696451),
-    j = n(576705),
-    k = n(351906),
+    k = n(576705),
+    j = n(351906),
     _ = n(287809),
     R = n(31498),
     w = n(887129),
     O = n(741918),
-    M = n(267102),
-    L = n(652215),
+    L = n(267102),
+    M = n(652215),
     P = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
@@ -45,17 +45,17 @@ function W(e) {
         [$, Q, Z] = (function (e, t, n) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
-                u = (0, C.A)(),
+                u = (0, A.A)(),
                 c = (0, o.bG)([T.Ay, _.default], () => {
                     let e = _.default.getCurrentUser();
                     return (null != l.guild_id && null != e ? T.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
-                    [j.A, k.A],
+                    [k.A, j.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(L.xBc.MENTION_EVERYONE, l),
-                        hidePersonalInformation: k.A.hidePersonalInformation,
+                            l.isPrivate() || c || r === v.oU.RULES_INPUT || k.A.can(M.xBc.MENTION_EVERYONE, l),
+                        hidePersonalInformation: j.A.hidePersonalInformation,
                     }),
                     [l, r, c],
                 ),
@@ -72,7 +72,7 @@ function W(e) {
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: r } = e,
-                        { renderWindow: s } = i.useContext(M.Ay);
+                        { renderWindow: s } = i.useContext(L.Ay);
                     function a(e, t, i) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,
@@ -119,7 +119,7 @@ function W(e) {
                 E = e.editorRef.current?.getSlateEditor(),
                 S = null;
             null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
-            let A = {
+            let C = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
@@ -145,10 +145,10 @@ function W(e) {
                               )
                             : "",
                 },
-                [U] = i.useState(() => new R.Ay(A));
+                [U] = i.useState(() => new R.Ay(C));
             return (
                 i.useEffect(() => {
-                    U.updateProps(A);
+                    U.updateProps(C);
                 }),
                 i.useImperativeHandle(t, () => U, [U]),
                 i.useEffect(() => () => U.unmount(), [U]),
@@ -180,9 +180,9 @@ function W(e) {
             );
         })({ ...n, guild: z }, t, q),
         X = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
-        J = (0, f.aI)($.selectedIndex);
-    (0, p.gf)(H, $.isVisible, J);
-    let Y = (0, A.l)({ editorHeight: F, type: W, state: $ }),
+        Y = (0, f.aI)($.selectedIndex);
+    (0, p.gf)(H, $.isVisible, Y);
+    let J = (0, C.l)({ editorHeight: F, type: W, state: $ }),
         ee = (0, o.bG)(
             [h.Ay],
             () => {
@@ -194,14 +194,14 @@ function W(e) {
         ),
         et = i.useMemo(
             () =>
-                Y?.top == null && Y?.left == null && Y?.bottom == null && Y?.right == null ? "" : String(Date.now()),
-            [Y?.top, Y?.left, Y?.bottom, Y?.right],
+                J?.top == null && J?.left == null && J?.bottom == null && J?.right == null ? "" : String(Date.now()),
+            [J?.top, J?.left, J?.bottom, J?.right],
         );
     if (
         (i.useEffect(() => {
             B($.isVisible);
         }, [B, $.isVisible]),
-        !$.isVisible || null == $.query || void 0 === Y)
+        !$.isVisible || null == $.query || void 0 === J)
     )
         return null;
     let en =
@@ -216,9 +216,9 @@ function W(e) {
             onClick: (e) => Q.onResultClick(e),
         }) ?? null;
     if (null == en) return null;
-    let el = { [V.pK]: null == Y, [V.YB]: null != Y, [V.sQ]: null == Y && "bottom" === n.position, [V.mO]: ee },
+    let el = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === n.position, [V.mO]: ee },
         ei = 490;
-    null != Y && (ei = W.autocomplete?.small ? 200 : $.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    null != J && (ei = W.autocomplete?.small ? 200 : $.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
     let er = Math.max(F, G?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, er);
     ei = Math.min(window.innerHeight - 120 - es - (K ?? 0), ei);
@@ -250,11 +250,11 @@ function W(e) {
             }),
         }),
     });
-    return null != Y
+    return null != J
         ? (0, l.jsx)(X, {
               children: (0, l.jsx)(c.Q, {
                   targetRef: n.targetRef,
-                  overrideTargetRect: Y,
+                  overrideTargetRect: J,
                   positionKey: et,
                   position: n.position ?? "top",
                   align: "left",

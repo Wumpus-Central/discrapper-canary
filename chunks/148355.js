@@ -1,4 +1,4 @@
-n.d(t, { A: () => L, h: () => k });
+n.d(t, { A: () => M, h: () => j });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -17,8 +17,8 @@ var l = n(477900),
     E = n(750506),
     S = n(218394),
     y = n(256449),
-    A = n(194004),
-    C = n(378058),
+    C = n(194004),
+    A = n(378058),
     b = n(105292),
     I = n(193833);
 function v(e) {
@@ -26,7 +26,7 @@ function v(e) {
 }
 let N = { tension: 1100, friction: 40 },
     T = { tension: 1600, friction: 60 };
-function j(e, t) {
+function k(e, t) {
     return i.cloneElement(e, {
         "data-type": "sticker",
         "data-id": t.id,
@@ -34,7 +34,7 @@ function j(e, t) {
         "data-format-type": t.format_type,
     });
 }
-function k(e) {
+function j(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
     return b.intl.formatToPlainString(b.t.rk6pOw, { stickerName: t });
 }
@@ -87,10 +87,10 @@ function R(e) {
         g = i.useRef(null),
         E = i.useRef(null),
         [S, y] = i.useState(!0),
-        [A, v] = i.useState(!1),
+        [C, v] = i.useState(!1),
         N = i.useRef(!1);
     N.current = t && c;
-    let T = null == a ? (0, C.zg)(s) : a;
+    let T = null == a ? (0, A.zg)(s) : a;
     return (o()(null != T, `Unable to determine sticker asset URL. Sticker ID: ${s.id}`),
     i.useEffect(() => {
         if (null == g.current || null == T) return;
@@ -130,15 +130,15 @@ function R(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": A ? b.intl.string(b.t.yEvsK9) : k(s),
+              "aria-label": C ? b.intl.string(b.t.yEvsK9) : j(s),
               ref: m,
               children: (0, l.jsx)(_, {
-                  hasError: A,
+                  hasError: C,
                   isLoading: S,
                   maskAsset: h,
                   size: r,
                   withLoadingIndicator: f,
-                  children: j((0, l.jsx)("canvas", { className: I.ex, ref: g }), s),
+                  children: k((0, l.jsx)("canvas", { className: I.ex, ref: g }), s),
               }),
           });
 }
@@ -158,8 +158,8 @@ let w = (e) => {
             [g, x] = i.useState(!0),
             [E, S] = i.useState(!1),
             y = i.useRef(null),
-            A = i.useRef(null),
-            b = m ?? (0, C.zg)(n, { isPreview: !t || !f || !r, size: a }),
+            C = i.useRef(null),
+            b = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
             N = i.useCallback(() => {
                 x(!1);
             }, []),
@@ -173,7 +173,7 @@ let w = (e) => {
             }
         }, []),
         i.useLayoutEffect(() => {
-            A.current?.complete === !0 && x(!1);
+            C.current?.complete === !0 && x(!1);
         }, []),
         null == b)
             ? null
@@ -191,16 +191,16 @@ let w = (e) => {
                           maskAsset: u,
                           size: a,
                           withLoadingIndicator: h,
-                          children: j(
+                          children: k(
                               (0, l.jsx)("img", {
                                   className: I.r3,
-                                  alt: k(n),
+                                  alt: j(n),
                                   src: b,
                                   draggable: !1,
                                   onError: T,
                                   onLoad: N,
                                   onContextMenu: v,
-                                  ref: A,
+                                  ref: C,
                               }),
                               n,
                           ),
@@ -222,13 +222,13 @@ let w = (e) => {
             x = i.useRef(null),
             S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
             y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: N }),
-            A = i.useRef(null),
-            C = (0, p.z)(
-                { ref: A, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
+            C = i.useRef(null),
+            A = (0, p.z)(
+                { ref: C, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
                 "animate-always",
             );
         return (
-            (0, u.useChain)(s ? [x, A] : [A, x], s ? [0, 0.0625] : [0, 0]),
+            (0, u.useChain)(s ? [x, C] : [C, x], s ? [0, 0.0625] : [0, 0]),
             y(
                 (e, i) =>
                     i &&
@@ -245,7 +245,7 @@ let w = (e) => {
                                     (0, l.jsx)(u.animated.div, {
                                         className: I.tm,
                                         style: e,
-                                        children: (0, l.jsx)(M, {
+                                        children: (0, l.jsx)(L, {
                                             className: I.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -259,7 +259,7 @@ let w = (e) => {
                                     r &&
                                         (0, l.jsx)(u.animated.div, {
                                             className: I.av,
-                                            style: C,
+                                            style: A,
                                             children: (0, l.jsx)(m.E, {
                                                 variant: "text-sm/medium",
                                                 className: I.FZ,
@@ -272,7 +272,7 @@ let w = (e) => {
             )
         );
     };
-function M(e) {
+function L(e) {
     let {
             isInteracting: t = !1,
             disableAnimation: n = !1,
@@ -292,12 +292,12 @@ function M(e) {
         x = (0, y.Th)(t) && !n,
         E = i.useRef(null);
     if (null == c) return null;
-    let C = c.format_type === A.TG.LOTTIE ? R : w;
+    let A = c.format_type === C.TG.LOTTIE ? R : w;
     return (0, l.jsxs)(
         i.Fragment,
         {
             children: [
-                (0, l.jsx)(C, {
+                (0, l.jsx)(A, {
                     shouldAnimate: x,
                     isFocused: g,
                     size: u,
@@ -325,4 +325,4 @@ function M(e) {
         `${c.id},${u}`,
     );
 }
-let L = M;
+let M = L;
