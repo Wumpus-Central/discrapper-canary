@@ -1,4 +1,6 @@
-(n.d(t, { H3: () => e8, H9: () => e1, oe: () => e9, r8: () => e7, t8: () => e6, xW: () => te }), n(321073), n(205816));
+(n.d(t, { H3: () => tt, H9: () => e5, KQ: () => $, oe: () => tn, r8: () => te, t8: () => e9, xW: () => ti }),
+    n(321073),
+    n(205816));
 var i = n(621466),
     r = n(941426),
     a = n(350723);
@@ -62,21 +64,23 @@ ${t}`;
 }
 function H() {
     let e = V();
-    e !== F && ((F = e), (x = !0), eV(!0));
+    e !== F && ((F = e), (x = !0), eW(!0));
 }
 let j = null,
     W = "data-native-frame-view-hole",
     Y = "data-native-frame-view-covered",
-    K = "data-native-frame-view-pointer-scope",
-    $ = `[${K}]`.repeat(4),
-    z = ["color", "image", "size", "position", "repeat", "x", "y", "width", "height"],
-    X = `
-${z.map((e) => `@property --native-frame-view-hole-${e} { syntax: '*'; inherits: false; }`).join("\n")}
+    K = "data-native-frame-view-mask",
+    $ = "data-native-frame-view-floating",
+    z = "data-native-frame-view-pointer-scope",
+    X = `[${z}]`.repeat(4),
+    q = ["color", "image", "size", "position", "repeat", "x", "y", "width", "height"],
+    Z = `
+${q.map((e) => `@property --native-frame-view-hole-${e} { syntax: '*'; inherits: false; }`).join("\n")}
 [${W}] {
   background: transparent !important;
 }
 [${W}]::before {
-  ${z.map((e) => `--native-frame-view-hole-${e}: inherit;`).join("\n  ")}
+  ${q.map((e) => `--native-frame-view-hole-${e}: inherit;`).join("\n  ")}
   content: '';
   position: absolute;
   inset: 0;
@@ -97,61 +101,71 @@ ${z.map((e) => `@property --native-frame-view-hole-${e} { syntax: '*'; inherits:
 [${Y}] {
   background: transparent !important;
 }
+[${K}] {
+  mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  mask-size: 100% 100%, var(--native-frame-view-hole-width) var(--native-frame-view-hole-height);
+  mask-position: 0 0, var(--native-frame-view-hole-x) var(--native-frame-view-hole-y);
+  mask-repeat: repeat, no-repeat;
+  mask-origin: padding-box;
+  mask-clip: no-clip;
+  mask-composite: subtract;
+}
 /* Specific enough to win over the important rules that turn pointer events off, like Discord's animating layers. */
-html body ${$}, html body ${$} * {
+html body ${X}, html body ${X} * {
   pointer-events: auto !important;
 }`,
-    q = [
+    Q = [
         ["--native-frame-view-hole-color", "backgroundColor"],
         ["--native-frame-view-hole-image", "backgroundImage"],
         ["--native-frame-view-hole-size", "backgroundSize"],
         ["--native-frame-view-hole-position", "backgroundPosition"],
         ["--native-frame-view-hole-repeat", "backgroundRepeat"],
     ],
-    Z = new Map(),
-    Q = new Map(),
-    J = null,
-    ee = [
+    J = new Map(),
+    ee = new Map(),
+    et = new Set(),
+    en = null,
+    ei = [
         "(prefers-color-scheme: dark)",
         "(prefers-reduced-motion: reduce)",
         "(prefers-contrast: more)",
         "(forced-colors: active)",
         "(resolution: 2dppx)",
     ];
-function et(e) {
+function er(e) {
     return "rgba(0, 0, 0, 0)" !== e.backgroundColor || "none" !== e.backgroundImage;
 }
-function en(e, t) {
-    for (let [t] of (e.removeAttribute(W), q)) e.style.removeProperty(t);
+function ea(e, t) {
+    for (let [t] of (e.removeAttribute(W), Q)) e.style.removeProperty(t);
     for (let t of ["x", "y", "width", "height"]) e.style.removeProperty(`--native-frame-view-hole-${t}`);
-    (t && (e.style.position = ""), Z.delete(e), (h = !0));
+    (t && (e.style.position = ""), J.delete(e), (h = !0));
 }
-let ei = 2 / 64;
-function er(e) {
+let es = 2 / 64;
+function el(e) {
     return Math.round(e * window.devicePixelRatio) / window.devicePixelRatio;
 }
-function ea(e) {
+function eo(e) {
     let t = parseFloat(e);
     return Number.isFinite(t) ? t : 0;
 }
-function es(e) {
+function ed(e) {
     let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect(),
         { borderLeftWidth: a, borderTopWidth: s } = getComputedStyle(e);
-    return { left: t, top: n, right: i, bottom: r, borderLeft: ea(a), borderTop: ea(s) };
+    return { left: t, top: n, right: i, bottom: r, borderLeft: eo(a), borderTop: eo(s) };
 }
-function el(e, t, n) {
+function ec(e, t, n) {
     let i = n.left + n.borderLeft,
         r = n.top + n.borderTop,
-        a = er(t.x),
-        s = er(t.y),
-        l = er(t.x + t.width) - a + ei,
-        o = er(t.y + t.height) - s + ei;
+        a = el(t.x),
+        s = el(t.y),
+        l = el(t.x + t.width) - a + es,
+        o = el(t.y + t.height) - s + es;
     (e.style.setProperty("--native-frame-view-hole-x", `${a - i}px`),
         e.style.setProperty("--native-frame-view-hole-y", `${s - r}px`),
         e.style.setProperty("--native-frame-view-hole-width", `${l}px`),
         e.style.setProperty("--native-frame-view-hole-height", `${o}px`));
 }
-function eo(e) {
+function eu(e) {
     let { x: t, y: n, width: i, height: r } = e,
         a = t + i - 1,
         s = n + r - 1;
@@ -163,16 +177,16 @@ function eo(e) {
         [a, s],
     ];
 }
-function ed(e) {
+function e_(e) {
     let t = b.get(e);
     return (null == t && ((t = M++), b.set(e, t)), t);
 }
-function ec() {
+function eE() {
     if (null != m) return m;
     for (let e of l.values()) return e.iframe;
     return null;
 }
-function eu(e, t) {
+function eA(e, t) {
     if (null == T) return !1;
     let { x: n, y: i, width: r, height: a } = T,
         s = e.getBoundingClientRect();
@@ -185,35 +199,35 @@ function eu(e, t) {
         s.top < i + a + t
     );
 }
-let e_ = new Set(["IMG", "VIDEO", "CANVAS", "IFRAME", "OBJECT", "EMBED", "INPUT", "TEXTAREA", "SELECT"]);
-function eE(e) {
+let eh = new Set(["IMG", "VIDEO", "CANVAS", "IFRAME", "OBJECT", "EMBED", "INPUT", "TEXTAREA", "SELECT"]);
+function ef(e) {
     return null != e && "" !== e && "none" !== e;
 }
-function eA(e) {
+function eI(e) {
     let t = getComputedStyle(e);
-    if (et(t) || eE(t.boxShadow) || eE(t.backdropFilter) || (eE(t.outlineStyle) && parseFloat(t.outlineWidth) > 0))
+    if (er(t) || ef(t.boxShadow) || ef(t.backdropFilter) || (ef(t.outlineStyle) && parseFloat(t.outlineWidth) > 0))
         return !0;
     for (let e of ["top", "right", "bottom", "left"])
-        if (parseFloat(t.getPropertyValue(`border-${e}-width`)) > 0 && eE(t.getPropertyValue(`border-${e}-style`)))
+        if (parseFloat(t.getPropertyValue(`border-${e}-width`)) > 0 && ef(t.getPropertyValue(`border-${e}-style`)))
             return !0;
-    if (e_.has(e.tagName) || e instanceof SVGElement) return !0;
-    for (let t of ["::before", "::after"]) if (eE(getComputedStyle(e, t).content)) return !0;
+    if (eh.has(e.tagName) || e instanceof SVGElement) return !0;
+    for (let t of ["::before", "::after"]) if (ef(getComputedStyle(e, t).content)) return !0;
     return [...e.childNodes].some((e) => e.nodeType === Node.TEXT_NODE && "" !== (e.textContent ?? "").trim());
 }
-function eh(e) {
+function ep(e) {
     if (!e.isConnected) return !1;
     let t = [e];
     for (let n = 0; n < t.length; n++) {
         if (n >= 200)
             return (function (e) {
-                let t = ec();
+                let t = eE();
                 if (null == T || null == t) return !0;
                 let n = T;
-                return em(() => {
-                    for (let [i, r] of eo(n))
+                return eN(() => {
+                    for (let [i, r] of eu(n))
                         for (let n of document.elementsFromPoint(i, r)) {
-                            if (n.contains(t) || Z.has(n) || Q.has(n)) break;
-                            if (e.contains(n) && (n.checkVisibility?.({ opacityProperty: !0 }) ?? !0) && eA(n))
+                            if (n.contains(t) || J.has(n) || ee.has(n)) break;
+                            if (e.contains(n) && (n.checkVisibility?.({ opacityProperty: !0 }) ?? !0) && eI(n))
                                 return !0;
                         }
                     return !1;
@@ -221,8 +235,8 @@ function eh(e) {
             })(e);
         let i = t[n];
         if (i.checkVisibility?.({ opacityProperty: !0 }) === !1) continue;
-        let r = eu(i, 0);
-        if ((i.checkVisibility?.({ visibilityProperty: !0 }) ?? !0) && r && eA(i)) return !0;
+        let r = eA(i, 0);
+        if ((i.checkVisibility?.({ visibilityProperty: !0 }) ?? !0) && r && eI(i)) return !0;
         (!r &&
             (function (e) {
                 let t = getComputedStyle(e);
@@ -235,52 +249,52 @@ function eh(e) {
                     n(t.overflowY) &&
                     "static" !== t.position &&
                     "" !== t.position &&
-                    (eE(t.transform) || eE(t.filter))
+                    (ef(t.transform) || ef(t.filter))
                 );
             })(i)) ||
             t.push(...i.children);
     }
     return !1;
 }
-function ef(e) {
+function eT(e) {
     if (null == T || !(0, i.vq)(e, Element)) return !1;
     let { x: t, y: n, width: r, height: a } = T,
         s = e.getBoundingClientRect();
     return s.right > t && s.left < t + r && s.bottom > n && s.top < n + a;
 }
-function eI(e) {
+function em(e) {
     if (null == e || e === document || e === window) return !0;
     if (!(0, i.vq)(e, Element)) return !1;
     for (let t of l.values()) if (e.contains(t.iframe)) return !0;
     return !1;
 }
-function ep(e) {
-    let t = eT(e);
+function eg(e) {
+    let t = eS(e);
     if (null == t) return !1;
-    for (let n of [...Z.keys(), ...Q.keys()]) if (t.contains(n) && !n.contains(e)) return !0;
+    for (let n of [...J.keys(), ...ee.keys(), ...et]) if (t.contains(n) && !n.contains(e)) return !0;
     return !1;
 }
-function eT(e) {
+function eS(e) {
     let t = null;
     for (let n = e.parentElement; null != n && n !== document.body; n = n.parentElement)
         "none" === getComputedStyle(n).pointerEvents && (t = n);
     return t;
 }
-function em(e) {
+function eN(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
     let r = [...C, ...n].filter((e) => e?.isConnected === !0);
-    for (let e of r) e.setAttribute(K, "");
+    for (let e of r) e.setAttribute(z, "");
     try {
         return e();
     } finally {
-        for (let e of r) e.removeAttribute(K);
+        for (let e of r) e.removeAttribute(z);
     }
 }
-function eg(e) {
+function eC(e) {
     let { iframe: t, clip: n } = e;
-    return em(() => {
+    return eN(() => {
         let e = [];
-        for (let [i, r] of eo(n)) {
+        for (let [i, r] of eu(n)) {
             let n = document.elementsFromPoint(i, r),
                 a = n.findIndex((e) => e.contains(t));
             if (a < 0) {
@@ -288,8 +302,8 @@ function eg(e) {
                 continue;
             }
             for (let t of n.slice(a)) {
-                let n = ed(t);
-                if (Z.has(t) || Q.has(t)) {
+                let n = e_(t);
+                if (J.has(t) || ee.has(t)) {
                     e.push(`${n}p`);
                     continue;
                 }
@@ -298,49 +312,79 @@ function eg(e) {
             }
             e.push("/");
         }
-        for (let t of O) e.push(`pin${ed(t)}`);
+        for (let t of O) e.push(`pin${e_(t)}`);
         return e.join(" ");
-    }, eT(t));
+    }, eS(t));
 }
-function eS() {
+function eO() {
     let e = m;
-    if (null != e && ep(e)) return ((D = !0), !0);
+    if (null != e && eg(e)) return ((D = !0), !0);
     if (D || null == R || null == e) return !1;
-    for (let t of l.values()) if (t.iframe !== e && e3(t.iframe)?.clip != null) return !1;
-    let t = e3(e);
-    return t?.clip != null && JSON.stringify(t) === R.layout && eg({ iframe: e, clip: t.clip }) === R.value;
+    for (let t of l.values()) if (t.iframe !== e && e6(t.iframe)?.clip != null) return !1;
+    let t = e6(e);
+    return t?.clip != null && JSON.stringify(t) === R.layout && eC({ iframe: e, clip: t.clip }) === R.value;
 }
-function eN(e) {
+function eR(e) {
     if (((I = !1), (T = e[0]?.clip ?? null), (m = 1 === e.length ? e[0].iframe : null), (f = performance.now()), x)) {
-        for (let e of ((x = !1), Q.keys())) e.removeAttribute(Y);
-        for (let [e, t] of (Q.clear(), [...Z])) en(e, t);
+        for (let e of ((x = !1), ee.keys())) e.removeAttribute(Y);
+        for (let [e, t] of (ee.clear(), [...J])) ea(e, t);
     }
-    null == J &&
+    null == en &&
         e.length > 0 &&
-        (((J = document.createElement("style")).textContent = X), document.head.appendChild(J));
+        (((en = document.createElement("style")).textContent = Z), document.head.appendChild(en));
     let t = new Map(),
         n = new Set(),
-        r = new Set();
-    function a(e, n) {
-        !(!(0, i.vq)(e, HTMLElement) || t.has(e)) && (Z.has(e) || Q.has(e) || et(getComputedStyle(e))) && t.set(e, n);
+        r = new Set(),
+        a = new Set(),
+        s = new Map();
+    function l(e, n) {
+        !(!(0, i.vq)(e, HTMLElement) || t.has(e)) && (J.has(e) || ee.has(e) || er(getComputedStyle(e))) && t.set(e, n);
     }
     for (let { iframe: t, clip: i } of e) {
-        for (let e = t.parentElement; null != e; e = e.parentElement) a(e, i);
-        for (let e of (em(() => {
-            for (let [e, s] of eo(i)) {
-                let l = document.elementsFromPoint(e, s),
-                    o = l.findIndex((e) => e.contains(t));
-                if (!(o < 0)) {
-                    for (let e of l.slice(0, o)) r.add(e);
-                    for (let e of l.slice(o + 1)) (n.add(e), a(e, i));
+        let e = t.closest(`[${$}]`),
+            o = new Set();
+        for (let t = e; null != t; t = t.parentElement) o.add(t);
+        for (let e = t.parentElement; null != e; e = e.parentElement) l(e, i);
+        for (let d of (eN(() => {
+            for (let [d, c] of eu(i)) {
+                let u = document.elementsFromPoint(d, c),
+                    _ = u.findIndex((e) => e.contains(t));
+                if (!(_ < 0)) {
+                    for (let e of u.slice(0, _)) r.add(e);
+                    if (e?.contains(u[_]) === !0) for (let e of u.slice(0, _)) a.add(e);
+                    for (let t of u.slice(_ + 1))
+                        (n.add(t),
+                            l(t, i),
+                            null == e ||
+                                o.has(t) ||
+                                s.set(
+                                    (function (e, t) {
+                                        let n = e;
+                                        for (; null != n.parentElement && !t.has(n.parentElement);) n = n.parentElement;
+                                        return n;
+                                    })(t, o),
+                                    i,
+                                ));
                 }
             }
-        }, eT(t)),
+        }, eS(t)),
         [...O]))
-            !e.isConnected || r.has(e) || "none" !== getComputedStyle(e).pointerEvents
-                ? O.delete(e)
-                : ef(e) && (n.add(e), a(e, i));
+            !d.isConnected || r.has(d) || "none" !== getComputedStyle(d).pointerEvents
+                ? O.delete(d)
+                : eT(d) && (n.add(d), l(d, i));
     }
+    let o = new Map(),
+        d = [...a];
+    for (let [t, n] of s)
+        !(0, i.vq)(t, HTMLElement) ||
+            d.some((e) => t.contains(e)) ||
+            e.some((e) => {
+                let { iframe: n } = e;
+                return t.contains(n);
+            }) ||
+            o.set(t, n);
+    let c = [...o.keys()];
+    for (let e of [...t.keys()]) c.some((t) => t.contains(e)) && t.delete(e);
     for (let [e, n] of ((function (e) {
         let t = [...e.keys()],
             n = new Map(t.map((e) => [e, e.getBoundingClientRect()])),
@@ -348,12 +392,12 @@ function eN(e) {
                 t.map((e) => [
                     e,
                     (function (e) {
-                        if (Z.has(e))
+                        if (J.has(e))
                             return [
                                 e.style.getPropertyValue("--native-frame-view-hole-color"),
                                 e.style.getPropertyValue("--native-frame-view-hole-image"),
                             ];
-                        let t = Q.get(e);
+                        let t = ee.get(e);
                         if (null != t) return t;
                         let { backgroundColor: n, backgroundImage: i } = getComputedStyle(e);
                         return [n, i];
@@ -387,39 +431,48 @@ function eN(e) {
                 );
             }) && a.set(e, i.get(e));
         }
-        for (let e of Q.keys()) a.has(e) || e.removeAttribute(Y);
-        for (let t of a.keys()) (e.delete(t), Q.has(t) || t.setAttribute(Y, ""));
-        for (let [e, t] of (Q.clear(), a)) Q.set(e, t);
+        for (let e of ee.keys()) a.has(e) || e.removeAttribute(Y);
+        for (let t of a.keys()) (e.delete(t), ee.has(t) || t.setAttribute(Y, ""));
+        for (let [e, t] of (ee.clear(), a)) ee.set(e, t);
     })(t),
-    [...Z]))
-        t.has(e) || en(e, n);
+    [...J]))
+        t.has(e) || ea(e, n);
+    for (let e of [...et])
+        o.has(e) ||
+            (function (e) {
+                for (let t of (e.removeAttribute(K), ["x", "y", "width", "height"]))
+                    e.style.removeProperty(`--native-frame-view-hole-${t}`);
+                (et.delete(e), (h = !0));
+            })(e);
     for (let e of t.keys())
         !(function (e) {
-            if (Z.has(e)) return;
+            if (J.has(e)) return;
             let t = getComputedStyle(e);
-            for (let [n, i] of q) e.style.setProperty(n, t[i]);
+            for (let [n, i] of Q) e.style.setProperty(n, t[i]);
             let n = "static" === t.position;
-            (n && (e.style.position = "relative"), e.setAttribute(W, ""), Z.set(e, n), (h = !0));
+            (n && (e.style.position = "relative"), e.setAttribute(W, ""), J.set(e, n), (h = !0));
         })(e);
-    let s = new Map([...t.keys()].map((e) => [e, es(e)]));
-    for (let [e, n] of t) el(e, n, s.get(e));
-    let l = { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight };
-    for (let e of s.values())
-        l = {
-            left: Math.max(l.left, e.left),
-            top: Math.max(l.top, e.top),
-            right: Math.min(l.right, e.right),
-            bottom: Math.min(l.bottom, e.bottom),
+    for (let e of o.keys()) (e.setAttribute(K, ""), et.has(e) || (h = !0), et.add(e));
+    let u = new Map([...t, ...o]),
+        _ = new Map([...u.keys()].map((e) => [e, ed(e)]));
+    for (let [e, t] of u) ec(e, t, _.get(e));
+    let E = { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight };
+    for (let e of _.values())
+        E = {
+            left: Math.max(E.left, e.left),
+            top: Math.max(E.top, e.top),
+            right: Math.min(E.right, e.right),
+            bottom: Math.min(E.bottom, e.bottom),
         };
-    p = t.size > 0 && 1 === e.length ? l : null;
-    let o = new WeakSet([...t.keys(), ...n]);
-    for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) o.add(e);
-    ((g = o),
+    p = u.size > 0 && 1 === e.length ? E : null;
+    let A = new WeakSet([...t.keys(), ...n]);
+    for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) A.add(e);
+    ((g = A),
         (function (e, t) {
             if (null == P) return;
             let n = "";
-            for (let e of t) n += `${ed(e)},`;
-            for (let { iframe: t } of e) n += `|${ed(t)}`;
+            for (let e of t) n += `${e_(e)},`;
+            for (let { iframe: t } of e) n += `|${e_(t)}`;
             if (n === G) return;
             G = n;
             let i = new Set();
@@ -437,20 +490,20 @@ function eN(e) {
         (R = null),
         (L = !0));
 }
-function eC(e) {
-    for (let [t, n] of ((T = e), [...Z.keys()].map((e) => [e, es(e)]))) el(t, e, n);
+function eL(e) {
+    for (let [t, n] of ((T = e), [...J.keys(), ...et].map((e) => [e, ed(e)]))) ec(t, e, n);
     (P?.mutations.takeRecords(), (I = !0));
 }
-let eO = null,
-    eR = null,
-    eL = null,
-    ey = null,
-    eD = 0,
-    ev = !1,
-    eb = !1,
-    eM = new Map(),
-    eP = new Set();
-function eU(e, t) {
+let ey = null,
+    eD = null,
+    ev = null,
+    eb = null,
+    eM = 0,
+    eP = !1,
+    eU = !1,
+    ew = new Map(),
+    eG = new Set();
+function ex(e, t) {
     let { x: n, y: i, width: r, height: a } = t;
     for (let t = 0; t < 5; t++)
         for (let s = 0; s < 5; s++) {
@@ -459,42 +512,42 @@ function eU(e, t) {
                 null == l ||
                 l === document.body ||
                 l === document.documentElement ||
-                (!e.contains(l) && !l.contains(e) && !Z.has(l) && !Q.has(l))
+                (!e.contains(l) && !l.contains(e) && !J.has(l) && !ee.has(l))
             )
                 return !1;
         }
     return !0;
 }
-function ew(e, t) {
+function ek(e, t) {
     if (t) {
-        if (eL === e) return;
-        ((eL = e), (eR = e), ex());
+        if (ev === e) return;
+        ((ev = e), (eD = e), eB());
         return;
     }
-    eL === e && ((eL = null), (eR = null), ey === e && (ey = null), eO === e && ek(!1));
+    ev === e && ((ev = null), (eD = null), eb === e && (eb = null), ey === e && eV(!1));
 }
-function eG(e) {
-    eO === e && (eL === e && ((eL = null), (eR = null), ey === e && (ey = null)), ek(!1, !1));
+function eF(e) {
+    ey === e && (ev === e && ((ev = null), (eD = null), eb === e && (eb = null)), eV(!1, !1));
 }
-function ex() {
-    let e = eR,
-        t = e0();
-    if (null == e || ey === e || null != eO || null != c || t?.setOnTop == null || (null != m && ep(m))) return;
+function eB() {
+    let e = eD,
+        t = e3();
+    if (null == e || eb === e || null != ey || null != c || t?.setOnTop == null || (null != m && eg(m))) return;
     let n = l.get(e),
         i = n?.inputTarget,
         r = n?.input;
     if (null == n || n.iframe !== m || null == i || null == r || n.inputSuspended || !r.idle() || null == T || N())
         return;
     for (let e of C) e.isConnected || C.delete(e);
-    for (let e of eP) eh(e) || eP.delete(e);
-    if (eP.size > 0 || [...C].some((e) => !e.contains(n.iframe) && eh(e)) || [...O].some(eh) || !eU(i, T)) return;
-    ((eO = e), null != u && (clearTimeout(u), (u = null)));
-    let a = ++eD;
+    for (let e of eG) ep(e) || eG.delete(e);
+    if (eG.size > 0 || [...C].some((e) => !e.contains(n.iframe) && ep(e)) || [...O].some(ep) || !ex(i, T)) return;
+    ((ey = e), null != u && (clearTimeout(u), (u = null)));
+    let a = ++eM;
     function o(t) {
-        eO === e && eD === a && ((eO = null), t && ((ey = e), (eR = null)), ej(), eH());
+        ey === e && eM === a && ((ey = null), t && ((eb = e), (eD = null)), eK(), eY());
     }
     r.drained()
-        .then(() => (eO === e && eD === a && r.idle() ? t.setOnTop(e, !0) : null))
+        .then(() => (ey === e && eM === a && r.idle() ? t.setOnTop(e, !0) : null))
         .then(
             (e) => {
                 !0 !== e && o(!1 === e);
@@ -504,59 +557,59 @@ function ex() {
             },
         );
 }
-function ek() {
+function eV() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = eO;
+        n = ey;
     if (null != n) {
         if (
-            ((eO = null),
-            eD++,
-            eM.clear(),
+            ((ey = null),
+            eM++,
+            ew.clear(),
             t &&
-                e0()
+                e3()
                     ?.setOnTop?.(n, !1)
                     .catch((e) => s.warn(`frame view ${n} could not go back under`, e)),
             e)
         )
-            return void eV(!0);
-        (ej(), eH());
+            return void eW(!0);
+        (eK(), eY());
     }
 }
-function eF(e) {
-    null == eO ||
-        (e && (eb = !0),
-        ev ||
-            ((ev = !0),
+function eH(e) {
+    null == ey ||
+        (e && (eU = !0),
+        eP ||
+            ((eP = !0),
             requestAnimationFrame(() => {
-                ev = !1;
-                let e = null != eO ? l.get(eO) : null,
-                    t = new Map(eM);
-                eM.clear();
-                let n = eb;
-                if (((eb = !1), null != e)) {
-                    if (JSON.stringify(e3(e.iframe)) !== e.lastLayout) return void ek();
+                eP = !1;
+                let e = null != ey ? l.get(ey) : null,
+                    t = new Map(ew);
+                ew.clear();
+                let n = eU;
+                if (((eU = !1), null != e)) {
+                    if (JSON.stringify(e6(e.iframe)) !== e.lastLayout) return void eV();
                     for (let n of t.keys())
                         if (
                             !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || g.has(n)) &&
-                            eu(n, t.get(n) ?? 0)
+                            eA(n, t.get(n) ?? 0)
                         ) {
-                            (eP.add(n), ek());
+                            (eG.add(n), eV());
                             return;
                         }
-                    n && null != e.inputTarget && null != T && !eU(e.inputTarget, T) && ek();
+                    n && null != e.inputTarget && null != T && !ex(e.inputTarget, T) && eV();
                 }
             })));
 }
-function eB() {
-    eV(
-        null == eO &&
+function ej() {
+    eW(
+        null == ey &&
             (function () {
-                let e = e0();
+                let e = e3();
                 if (null == e) return !1;
                 let t = !1;
                 for (let [n, i] of l) {
-                    let r = e3(i.iframe),
+                    let r = e6(i.iframe),
                         a = JSON.stringify(r);
                     a !== i.lastLayout &&
                         ((i.lastLayout = a),
@@ -567,50 +620,50 @@ function eB() {
             })(),
     );
 }
-function eV(e) {
+function eW(e) {
     if (0 !== l.size) {
-        if (null != eO) return void ek();
+        if (null != ey) return void eV();
         (e && (A = !0),
             (_ = 0),
             null != u && (clearTimeout(u), (u = null)),
             (E = 0),
-            (c ??= requestAnimationFrame(eY)));
+            (c ??= requestAnimationFrame(ez)));
     }
 }
-function eH() {
-    null != eO
-        ? eF(!0)
+function eY() {
+    null != ey
+        ? eH(!0)
         : 0 === l.size ||
           null == T ||
           y ||
           ((y = !0),
           requestAnimationFrame(() => {
-              ((y = !1), eS() || eV(!0));
+              ((y = !1), eO() || eW(!0));
           }));
 }
-function ej() {
-    null == eO && null == u && l.size > 0 && (u = setTimeout(eW, d[_]));
+function eK() {
+    null == ey && null == u && l.size > 0 && (u = setTimeout(e$, d[_]));
 }
-function eW() {
+function e$() {
     if (((u = null), null == c && 0 !== l.size)) {
-        if (eS()) {
-            ((_ = Math.min(_ + 1, d.length - 1)), ej(), ex());
+        if (eO()) {
+            ((_ = Math.min(_ + 1, d.length - 1)), eK(), eB());
             return;
         }
         ((A = !0),
             (E = 9),
-            (_ = eY() ? 0 : Math.min(_ + 1, d.length - 1)),
-            null != u && (clearTimeout(u), (u = null), ej()));
+            (_ = ez() ? 0 : Math.min(_ + 1, d.length - 1)),
+            null != u && (clearTimeout(u), (u = null), eK()));
     }
 }
-function eY() {
+function ez() {
     c = null;
-    let e = e0();
+    let e = e3();
     if (null == e) return !1;
     let t = [],
         n = !1;
     for (let [i, r] of l) {
-        let a = e3(r.iframe);
+        let a = e6(r.iframe);
         a?.clip != null && t.push({ iframe: r.iframe, clip: a.clip });
         let l = JSON.stringify(a);
         l !== r.lastLayout &&
@@ -619,65 +672,65 @@ function eY() {
     let i = A;
     ((A = !1), (h = !1));
     let r = n || x || i,
-        a = 1 === t.length && ep(t[0].iframe);
-    if (a) (r && eC(t[0].clip), (r = !1), (D = !0));
+        a = 1 === t.length && eg(t[0].iframe);
+    if (a) (r && eL(t[0].clip), (r = !1), (D = !0));
     else if (D) {
         for (let e of ((D = !1), (r = !0), v)) {
-            if (!e.isConnected || !ef(e)) continue;
+            if (!e.isConnected || !eT(e)) continue;
             let t = getComputedStyle(e);
-            "none" === t.pointerEvents && et(t) && O.add(e);
+            "none" === t.pointerEvents && er(t) && O.add(e);
         }
         v.clear();
     } else if (!x && !i) {
         let e = performance.now() - f >= 250;
-        if (n && !e && 1 === t.length && Z.size > 0 && null != p) {
+        if (n && !e && 1 === t.length && J.size + et.size > 0 && null != p) {
             let { x: e, y: n, width: i, height: a } = t[0].clip;
             e >= p.left - 0.5 &&
                 n >= p.top - 0.5 &&
                 e + i <= p.right + 0.5 &&
                 n + a <= p.bottom + 0.5 &&
-                (eC(t[0].clip), (r = !1));
+                (eL(t[0].clip), (r = !1));
         } else e && (n || E < 10) && (r = !0);
     }
-    if ((r && eN(t), 0 === l.size)) return n;
+    if ((r && eR(t), 0 === l.size)) return n;
     let o = n || h;
-    if ((E = o ? 0 : E + 1) < 10 || N()) c = requestAnimationFrame(eY);
+    if ((E = o ? 0 : E + 1) < 10 || N()) c = requestAnimationFrame(ez);
     else {
-        if (a) return (ej(), o);
-        (I && eN(t),
+        if (a) return (eK(), o);
+        (I && eR(t),
             L &&
                 ((L = !1),
                 (function (e) {
                     if (((R = null), 1 !== e.length)) return;
                     let { iframe: t } = e[0],
-                        n = e3(t);
-                    n?.clip != null && (R = { layout: JSON.stringify(n), value: eg({ iframe: t, clip: n.clip }) });
+                        n = e6(t);
+                    n?.clip != null && (R = { layout: JSON.stringify(n), value: eC({ iframe: t, clip: n.clip }) });
                 })(t)),
-            ej(),
-            ex());
+            eK(),
+            eB());
     }
     return o;
 }
-function eK(e) {
-    if (null != eO) {
+function eX(e) {
+    if (null != ey) {
         let t = 200,
             n = !1;
         for (let r of e)
             if ("childList" === r.type) {
                 for (let e of r.addedNodes)
                     if ((0, i.vq)(e, Element) && !(t <= 0)) {
-                        for (let n of [e, ...e.querySelectorAll("*")].slice(0, t)) (t--, eM.set(n, 0));
+                        for (let n of [e, ...e.querySelectorAll("*")].slice(0, t)) (t--, ew.set(n, 0));
                         ("STYLE" === e.nodeName || "LINK" === e.nodeName) && (n = !0);
                     }
-            } else "attributes" === r.type && (0, i.vq)(r.target, Element) ? eM.set(r.target, 0) : (n = !0);
-        eF(n);
+            } else "attributes" === r.type && (0, i.vq)(r.target, Element) ? ew.set(r.target, 0) : (n = !0);
+        eH(n);
         return;
     }
     if (
         !(
             0 === l.size ||
             (function (e) {
-                let t = ec(),
+                let t = eE(),
                     n = !1,
                     r = null,
                     a = 200;
@@ -694,17 +747,17 @@ function eK(e) {
                     if ("attributes" === s.type && (0, i.vq)(e, Element)) {
                         if ("class" !== s.attributeName && "style" !== s.attributeName) continue;
                         let i = C.has(e);
-                        if (!i && !(null != t && e.contains(t)) && !ef(e)) continue;
+                        if (!i && !(null != t && e.contains(t)) && !eT(e)) continue;
                         let r = "none" === getComputedStyle(e).pointerEvents;
                         r && !i ? (C.add(e), (n = !0)) : !r && i && (C.delete(e), (n = !0));
                     } else if ("childList" === s.type) {
                         for (let e of s.addedNodes)
                             if ((0, i.vq)(e, Element))
                                 for (let i of [e, ...e.querySelectorAll("*")].slice(0, a)) {
-                                    if ((a--, !ef(i))) continue;
+                                    if ((a--, !eT(i))) continue;
                                     let e = getComputedStyle(i);
-                                    if ("none" === e.pointerEvents && et(e)) {
-                                        if ((r ??= null != t && ep(t))) {
+                                    if ("none" === e.pointerEvents && er(e)) {
+                                        if ((r ??= null != t && eg(t))) {
                                             v.add(i);
                                             continue;
                                         }
@@ -715,7 +768,7 @@ function eK(e) {
                                 }
                     }
                 }
-                return (n && eV(!0), n);
+                return (n && eW(!0), n);
             })(e)
         )
     ) {
@@ -727,15 +780,15 @@ function eK(e) {
                 e.parentNode?.nodeName === "STYLE" ||
                 n.some((e) => "STYLE" === e.nodeName || "LINK" === e.nodeName)
             )
-                return void eV(!0);
+                return void eW(!0);
             if ("childList" === t.type) {
-                if (n.some((e) => (0, i.vq)(e, Element) && (null != T || eI(e)))) return void eV(!0);
-            } else if ((0, i.vq)(e, Element) && (g.has(e) || eI(e))) return void eV(!0);
+                if (n.some((e) => (0, i.vq)(e, Element) && (null != T || em(e)))) return void eW(!0);
+            } else if ((0, i.vq)(e, Element) && (g.has(e) || em(e))) return void eW(!0);
         }
-        e.some((e) => "attributes" === e.type) && eH();
+        e.some((e) => "attributes" === e.type) && eY();
     }
 }
-function e$() {
+function eq() {
     if (null == P) return;
     let e = new Set();
     for (let t of l.values()) for (let n = t.iframe; null != n; n = n.parentElement) e.add(n);
@@ -743,8 +796,8 @@ function e$() {
     for (let t of e) U.has(t) || P.ancestors?.observe(t);
     for (let t of (U.clear(), e)) U.add(t);
 }
-let ez = ["left", "middle", "right"],
-    eX = {
+let eZ = ["left", "middle", "right"],
+    eQ = {
         pointer: "default",
         hand: "pointer",
         crosshair: "crosshair",
@@ -790,17 +843,17 @@ let ez = ["left", "middle", "right"],
         custom: "default",
         null: "default",
     },
-    eq = "data-native-frame-view-cursor",
-    eZ = null,
-    eQ = new Map(),
-    eJ = 1;
-function e0() {
+    eJ = "data-native-frame-view-cursor",
+    e0 = null,
+    e1 = new Map(),
+    e2 = 1;
+function e3() {
     return window.DiscordNative?.frameView ?? null;
 }
-function e1() {
-    return null != e0();
+function e5() {
+    return null != e3();
 }
-function e2(e, t) {
+function e4(e, t) {
     let n = Math.max(e.x, t.left),
         i = Math.max(e.y, t.top);
     return {
@@ -810,7 +863,7 @@ function e2(e, t) {
         height: Math.max(0, Math.min(e.y + e.height, t.bottom) - i),
     };
 }
-function e3(e) {
+function e6(e) {
     if (!e.isConnected) return null;
     let t = e.getBoundingClientRect();
     if (t.width <= 0 || t.height <= 0) return null;
@@ -818,23 +871,23 @@ function e3(e) {
         { devicePixelRatio: i } = window;
     if (!e.checkVisibility({ opacityProperty: !0, visibilityProperty: !0 }))
         return { frame: n, clip: null, devicePixelRatio: i };
-    let r = e2(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
+    let r = e4(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
     for (let t = e.parentElement; null != t && r.width > 0; t = t.parentElement) {
         let { overflowX: e, overflowY: n } = getComputedStyle(t);
-        ("visible" !== e || "visible" !== n) && (r = e2(r, t.getBoundingClientRect()));
+        ("visible" !== e || "visible" !== n) && (r = e4(r, t.getBoundingClientRect()));
     }
     return {
         frame: n,
         clip:
             (r = (function (e, t) {
                 let { x: n, y: i, width: r, height: a } = e,
-                    s = Math.ceil(n * t - e5) / t,
-                    l = Math.ceil(i * t - e5) / t;
+                    s = Math.ceil(n * t - e7) / t,
+                    l = Math.ceil(i * t - e7) / t;
                 return {
                     x: s,
                     y: l,
-                    width: Math.max(0, Math.floor((n + r) * t + e5) / t - s),
-                    height: Math.max(0, Math.floor((i + a) * t + e5) / t - l),
+                    width: Math.max(0, Math.floor((n + r) * t + e7) / t - s),
+                    height: Math.max(0, Math.floor((i + a) * t + e7) / t - l),
                 };
             })(r, i)).width > 0 && r.height > 0
                 ? r
@@ -842,19 +895,19 @@ function e3(e) {
         devicePixelRatio: i,
     };
 }
-let e5 = 1 / 64;
-function e4(e) {
+let e7 = 1 / 64;
+function e8(e) {
     for (let [t, n] of l) if (n.iframe === e) return t;
     return null;
 }
-function e6(e) {
-    return null != e4(e);
+function e9(e) {
+    return null != e8(e);
 }
-function e7(e) {
-    let t = e4(e);
+function te(e) {
+    let t = e8(e);
     return null != t && j === t;
 }
-function e8(e) {
+function tt(e) {
     for (let t of l.values())
         if (t.source === e) {
             if (null == t.shell || t.shell.closed) return null;
@@ -871,13 +924,13 @@ function e8(e) {
         }
     return null;
 }
-function e9(e, t) {
-    let n = e0(),
-        i = e4(e);
+function tn(e, t) {
+    let n = e3(),
+        i = e8(e);
     return null == n || null == i ? null : n.capture(i, t);
 }
-function te(e, t, n, r, d) {
-    let c = e0();
+function ti(e, t, n, r, d) {
+    let c = e3();
     if (null == c || e.ownerDocument !== document) return null;
     (null == k &&
         ((F = V()),
@@ -895,20 +948,20 @@ function te(e, t, n, r, d) {
                 let n = l.get(e)?.inputTarget;
                 null != n &&
                     (function (e, t, n) {
-                        let i = eQ.get(e);
+                        let i = e1.get(e);
                         if (null == i) {
-                            null == eZ && ((eZ = document.createElement("style")), document.head.appendChild(eZ));
-                            let n = eZ.sheet;
+                            null == e0 && ((e0 = document.createElement("style")), document.head.appendChild(e0));
+                            let n = e0.sheet;
                             if (null == n) return;
-                            let r = eJ++;
-                            t.setAttribute(eq, String(r));
-                            let a = n.insertRule(`[${eq}="${r}"] {}`, n.cssRules.length);
-                            ((i = n.cssRules[a]), eQ.set(e, i));
+                            let r = e2++;
+                            t.setAttribute(eJ, String(r));
+                            let a = n.insertRule(`[${eJ}="${r}"] {}`, n.cssRules.length);
+                            ((i = n.cssRules[a]), e1.set(e, i));
                         }
                         i.style.cursor = n;
-                    })(e, n, Object.hasOwn(eX, t) ? eX[t] : t.includes("-panning") ? "all-scroll" : "default");
+                    })(e, n, Object.hasOwn(eQ, t) ? eQ[t] : t.includes("-panning") ? "all-scroll" : "default");
             }),
-            c.onUnder?.(eG),
+            c.onUnder?.(eF),
             c.onExit((e, t) => {
                 var n, i;
                 let r,
@@ -1031,24 +1084,24 @@ function te(e, t, n, r, d) {
                       }
                       function T(e) {
                           let i = document.elementFromPoint(e.clientX, e.clientY);
-                          (null != i && n.contains(i)) || (f(p("mouseLeave", e)), ew(t, !1));
+                          (null != i && n.contains(i)) || (f(p("mouseLeave", e)), ek(t, !1));
                       }
                       (I("pointerdown", (e) => {
                           "mouse" === e.pointerType && (n.setPointerCapture(e.pointerId), (l = !0));
                       }),
                           I("lostpointercapture", (e) => {
-                              ((l = !1), eR === t && ex(), o && ((o = !1), T(e)));
+                              ((l = !1), eD === t && eB(), o && ((o = !1), T(e)));
                           }),
                           I("mousedown", (e) => {
-                              (e.preventDefault(), (u = e.buttons), eO === t && ek());
-                              let n = ez[e.button];
+                              (e.preventDefault(), (u = e.buttons), ey === t && eV());
+                              let n = eZ[e.button];
                               null != n && f({ ...p("mouseDown", e), button: n, clickCount: e.detail });
                           }),
                           I("mouseup", (e) => {
                               u = e.buttons;
-                              let n = ez[e.button];
+                              let n = eZ[e.button];
                               (null != n && f({ ...p("mouseUp", e), button: n, clickCount: e.detail }),
-                                  eR === t && ex());
+                                  eD === t && eB());
                           }));
                       let m = !1;
                       for (let e of (n.addEventListener(
@@ -1056,15 +1109,15 @@ function te(e, t, n, r, d) {
                           (e) => {
                               (m = "mouse" === e.pointerType) &&
                                   !a &&
-                                  ((u = e.buttons), h(p("mouseMove", e)), ew(t, !0));
+                                  ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
                           },
                           { signal: r },
                       ),
                       I("mousemove", (e) => {
-                          m || ((u = e.buttons), h(p("mouseMove", e)), ew(t, !0));
+                          m || ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
                       }),
                       I("mouseenter", (e) => {
-                          (f(p("mouseEnter", e)), ew(t, !0));
+                          (f(p("mouseEnter", e)), ek(t, !0));
                       }),
                       I("mouseleave", (e) => {
                           if (l) {
@@ -1094,15 +1147,15 @@ function te(e, t, n, r, d) {
                           r.addEventListener("abort", () => {
                               ((c = null),
                                   (function (e, t) {
-                                      let n = eQ.get(e);
+                                      let n = e1.get(e);
                                       if (null == n) return;
-                                      (eQ.delete(e), t.removeAttribute(eq));
-                                      let i = eZ?.sheet;
+                                      (e1.delete(e), t.removeAttribute(eJ));
+                                      let i = e0?.sheet;
                                       if (null == i) return;
                                       let r = [...i.cssRules].indexOf(n);
                                       r >= 0 && i.deleteRule(r);
                                   })(t, n),
-                                  ew(t, !1));
+                                  ek(t, !1));
                           }),
                           {
                               abort: () => i.abort(),
@@ -1132,13 +1185,13 @@ function te(e, t, n, r, d) {
         l.get(t) === I &&
             (l.delete(t),
             m === e && (m = null),
-            eO === t && (eO = null),
-            eD++,
-            eR === t && (eR = null),
-            eL === t && (eL = null),
             ey === t && (ey = null),
+            eM++,
+            eD === t && (eD = null),
+            ev === t && (ev = null),
+            eb === t && (eb = null),
             P?.visibility?.unobserve(e),
-            e$(),
+            eq(),
             h?.abort(),
             T.abort(),
             j === t && ((j = null), document.hasFocus() || (0, a.XC)(window, !1)),
@@ -1160,18 +1213,18 @@ function te(e, t, n, r, d) {
                     O.clear(),
                     v.clear(),
                     (D = !1),
-                    eP.clear(),
-                    (eO = null),
-                    (eR = null),
-                    (eL = null),
+                    eG.clear(),
                     (ey = null),
-                    eM.clear(),
+                    (eD = null),
+                    (ev = null),
+                    (eb = null),
+                    ew.clear(),
                     (R = null),
                     (L = !1),
                     (p = null),
                     (A = !1),
                     null != u && (clearTimeout(u), (u = null))),
-                eN([]),
+                eR([]),
                 k?.disconnect(),
                 (k = null),
                 (x = !1)));
@@ -1197,12 +1250,12 @@ function te(e, t, n, r, d) {
                 r = { capture: !0, passive: !0, signal: t };
             for (let n of ((P = {
                 controller: e,
-                mutations: new MutationObserver(eK),
-                ancestors: "u" > typeof ResizeObserver ? new ResizeObserver(eB) : null,
-                containers: "u" > typeof ResizeObserver ? new ResizeObserver(eH) : null,
+                mutations: new MutationObserver(eX),
+                ancestors: "u" > typeof ResizeObserver ? new ResizeObserver(ej) : null,
+                containers: "u" > typeof ResizeObserver ? new ResizeObserver(eY) : null,
                 visibility:
                     "u" > typeof IntersectionObserver
-                        ? new IntersectionObserver(() => eV(!0), { threshold: [0, 0.01, 0.25, 0.5, 0.75, 0.99, 1] })
+                        ? new IntersectionObserver(() => eW(!0), { threshold: [0, 0.01, 0.25, 0.5, 0.75, 0.99, 1] })
                         : null,
             }).mutations.observe(document.documentElement, {
                 subtree: !0,
@@ -1211,41 +1264,41 @@ function te(e, t, n, r, d) {
                 attributeFilter: ["class", "style", "hidden", "open", "data-theme"],
             }),
             P.mutations.observe(document.head, { subtree: !0, childList: !0, characterData: !0 }),
-            window.addEventListener("resize", () => eV(!1), { signal: t }),
+            window.addEventListener("resize", () => eW(!1), { signal: t }),
             document.addEventListener(
                 "scroll",
                 (e) => {
-                    eI(e.target) && eV(!1);
+                    em(e.target) && eW(!1);
                 },
                 r,
             ),
             ["pointerover", "pointerout", "pointerdown", "pointerup", "focusin", "focusout"]))
-                document.addEventListener(n, eH, r);
+                document.addEventListener(n, eY, r);
             for (let e of ["transitionrun", "animationstart"])
                 document.addEventListener(
                     e,
                     (t) => {
                         let { target: n } = t;
                         if ((0, i.vq)(n, Element)) {
-                            if (null != eO) {
-                                (eM.set(n, 64), eF(!1));
+                            if (null != ey) {
+                                (ew.set(n, 64), eH(!1));
                                 return;
                             }
                             (!(function (e) {
-                                let t = ec(),
+                                let t = eE(),
                                     n = e;
                                 for (let e = 0; null != n && e < 40; e++, n = n.parentElement) {
                                     if (C.has(n)) return;
                                     if (
                                         "none" === getComputedStyle(n).pointerEvents &&
-                                        ((null != t && n.contains(t)) || ef(n))
+                                        ((null != t && n.contains(t)) || eT(n))
                                     ) {
-                                        (C.add(n), eV(!0));
+                                        (C.add(n), eW(!0));
                                         return;
                                     }
                                 }
                             })(n),
-                                eI(n) ? (S.add(n), eV(!0)) : "transitionrun" === e && g.has(n) && eV(!0));
+                                em(n) ? (S.add(n), eW(!0)) : "transitionrun" === e && g.has(n) && eW(!0));
                         }
                     },
                     n,
@@ -1256,12 +1309,12 @@ function te(e, t, n, r, d) {
                     (e) => {
                         let { target: t } = e;
                         if ((0, i.vq)(t, Element)) {
-                            null != eO && (eM.set(t, 0), eF(!1));
+                            null != ey && (ew.set(t, 0), eH(!1));
                             for (let e of [...C])
                                 e.contains(t) &&
                                     ((e.isConnected && "none" === getComputedStyle(e).pointerEvents) ||
-                                        (C.delete(e), eV(!0)));
-                            S.delete(t) && eV(!0);
+                                        (C.delete(e), eW(!0)));
+                            S.delete(t) && eW(!0);
                         }
                     },
                     n,
@@ -1270,26 +1323,26 @@ function te(e, t, n, r, d) {
                 "load",
                 (e) => {
                     let { target: t } = e;
-                    (0, i.vq)(t, HTMLLinkElement) && eV(!0);
+                    (0, i.vq)(t, HTMLLinkElement) && eW(!0);
                 },
                 n,
             ),
-            ee))
-                window.matchMedia(e).addEventListener("change", () => eV(!0), { signal: t });
-            for (let e of ["dragstart", "dragenter"]) document.addEventListener(e, () => ek(), r);
+            ei))
+                window.matchMedia(e).addEventListener("change", () => eW(!0), { signal: t });
+            for (let e of ["dragstart", "dragenter"]) document.addEventListener(e, () => eV(), r);
             document.addEventListener(
                 "pointerover",
                 (e) => {
                     let { target: t } = e;
-                    if (null == eL) return;
-                    let n = l.get(eL)?.inputTarget;
-                    (null != n && (0, i.vq)(t, Element) && n.contains(t)) || ew(eL, !1);
+                    if (null == ev) return;
+                    let n = l.get(ev)?.inputTarget;
+                    (null != n && (0, i.vq)(t, Element) && n.contains(t)) || ek(ev, !1);
                 },
                 r,
             );
         })(),
         P?.visibility?.observe(e),
-        e$(),
+        eq(),
         c.create(t, n).then(
             (e) => {
                 l.get(t) === I &&
@@ -1301,13 +1354,13 @@ function te(e, t, n, r, d) {
                 l.get(t) === I && (s.error(`frame view ${t} was not created`, e), N(), d?.());
             },
         ),
-        eV(!0),
+        eW(!0),
         {
             destroy() {
                 l.get(t) === I && (N(), c.destroy(t).catch(() => {}));
             },
             setInputSuspended(e) {
-                ((I.inputSuspended = e), e && eO === t && ek(), h?.setSuspended(e));
+                ((I.inputSuspended = e), e && ey === t && eV(), h?.setSuspended(e));
             },
             setColorScheme(e) {
                 e !== f &&

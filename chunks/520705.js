@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => Z }));
+(n.r(t), n.d(t, { default: () => ee }));
 var r = n(477900),
     l = n(582128),
     a = n(503698),
@@ -11,37 +11,38 @@ var r = n(477900),
     m = n(834040),
     f = n(70688),
     h = n(43990),
-    p = n(429913),
-    v = n(747180),
-    g = n(343030),
-    x = n(91242),
-    b = n(545691),
-    C = n(317608),
-    j = n(548118),
-    k = n(956790),
-    I = n(699426),
-    L = n(71393),
-    y = n(186111),
-    A = n(381991),
-    w = n(754027),
-    E = n(327152),
-    N = n(260498),
-    S = n(919417),
-    T = n(228946),
-    M = n(358618),
-    D = n(983851),
-    F = n(625180),
-    R = n(620999),
-    P = n(87501),
-    B = n(105292);
-function G(e) {
+    p = n(429582),
+    v = n(429913),
+    g = n(747180),
+    x = n(343030),
+    b = n(91242),
+    C = n(545691),
+    j = n(317608),
+    k = n(548118),
+    I = n(956790),
+    L = n(699426),
+    y = n(71393),
+    A = n(186111),
+    w = n(381991),
+    E = n(754027),
+    N = n(327152),
+    S = n(260498),
+    T = n(919417),
+    M = n(228946),
+    D = n(358618),
+    F = n(983851),
+    R = n(625180),
+    P = n(620999),
+    B = n(87501),
+    G = n(105292);
+function H(e) {
     e.stopPropagation();
 }
-function H(e) {
+function K(e) {
     let { frame: t, className: n } = e;
-    if (!(0, R.v)(t)) return null;
+    if (!(0, P.v)(t)) return null;
     let { userMuted: l } = t.data,
-        a = B.intl.string(l ? P.default.bd0Ufh : P.default.dxBzpe);
+        a = G.intl.string(l ? B.default.bd0Ufh : B.default.dxBzpe);
     return (0, r.jsx)("div", {
         className: n,
         children: (0, r.jsx)(u.m, {
@@ -50,27 +51,27 @@ function H(e) {
                 size: "sm",
                 variant: "overlay-secondary",
                 "aria-label": a,
-                icon: l ? M._ : D.H,
-                onMouseDown: G,
+                icon: l ? D._ : F.H,
+                onMouseDown: H,
                 onClick: (e) => {
-                    (e.stopPropagation(), F.A.setFrameUserMuted(t.id, !l));
+                    (e.stopPropagation(), R.A.setFrameUserMuted(t.id, !l));
                 },
             }),
         }),
     });
 }
 var O = n(506868),
-    K = n(652215),
-    U = n(165610),
-    _ = n(715803),
-    z = n(155819),
-    X = n(969426);
-function $(e) {
-    if (!(0, w.Q5)(e.surface)) return void (0, T.returnToConjureFrameSurface)(e);
-    let t = N.Ay.findProjectByApplicationId(e.applicationId);
-    null != t && (0, A.A)(t.id);
-}
+    U = n(652215),
+    _ = n(165610),
+    z = n(715803),
+    X = n(155819),
+    $ = n(969426);
 function J(e) {
+    if (!(0, E.Q5)(e.surface)) return void (0, M.returnToConjureFrameSurface)(e);
+    let t = S.Ay.findProjectByApplicationId(e.applicationId);
+    null != t && (0, w.A)(t.id);
+}
+function Q(e) {
     let { width: t, height: n } = e;
     return Math.min(320 / t, 180 / n);
 }
@@ -80,33 +81,33 @@ function V(e) {
         l,
         a,
         { frameId: s, level: i, overlay: o } = e,
-        u = (0, E.L1)(s);
+        u = (0, N.L1)(s);
     return (0, r.jsx)("div", {
-        className: _.GL,
+        className: z.GL,
         style:
             null != u
-                ? ((t = J(u)),
+                ? ((t = Q(u)),
                   (n = (320 - u.width * t) / 2),
                   (l = (180 - u.height * t) / 2),
                   { width: u.width, height: u.height, transform: `translate(${n}px, ${l}px) scale(${t})` })
                 : void 0,
-        children: (0, r.jsx)(C.A, {
+        children: (0, r.jsx)(j.A, {
             frameId: s,
             level: i,
-            className: _.Z7,
+            className: z.Z7,
             overlay:
                 null != u && null != o
                     ? (0, r.jsx)("div", {
-                          className: _.bW,
+                          className: z.bW,
                           style:
-                              ((a = J(u)), { width: u.width * a, height: u.height * a, transform: `scale(${1 / a})` }),
+                              ((a = Q(u)), { width: u.width * a, height: u.height * a, transform: `scale(${1 / a})` }),
                           children: o,
                       })
                     : o,
         }),
     });
 }
-function Q(e) {
+function Y(e) {
     let { label: t, icon: n, onClick: l } = e;
     return (0, r.jsx)(u.m, {
         text: t,
@@ -115,35 +116,35 @@ function Q(e) {
         children: (0, r.jsx)(c.K, { variant: "icon-only", size: "sm", "aria-label": t, icon: n, onClick: l }),
     });
 }
-function Y(e) {
+function q(e) {
     let { frame: t, applicationName: n } = e,
-        l = (0, v.A)(t.surface),
-        a = (0, o.bG)([L.A], () => L.A.getGuild(l), [l]);
+        l = (0, g.A)(t.surface),
+        a = (0, o.bG)([y.A], () => y.A.getGuild(l), [l]);
     return (0, r.jsx)("div", {
-        className: _.Q,
+        className: z.Q,
         children: (0, r.jsxs)("div", {
-            className: _.KE,
+            className: z.KE,
             children: [
-                null != a ? (0, r.jsx)(j.Ay, { guild: a, size: j.Ay.Sizes.MINI, className: _.$f }) : null,
+                null != a ? (0, r.jsx)(k.Ay, { guild: a, size: k.Ay.Sizes.MINI, className: z.$f }) : null,
                 (0, r.jsx)(d.E, {
                     variant: "text-sm/medium",
                     color: "text-strong",
                     lineClamp: 1,
-                    className: _.JB,
+                    className: z.JB,
                     children: n,
                 }),
                 (0, r.jsxs)("div", {
-                    className: _.FS,
+                    className: z.FS,
                     children: [
-                        (0, r.jsx)(Q, {
-                            label: B.intl.string(P.default.tfKtLw),
+                        (0, r.jsx)(Y, {
+                            label: G.intl.string(B.default.tfKtLw),
                             icon: m.MinusIcon,
-                            onClick: () => (0, S.Gt)(t.applicationId, !1),
+                            onClick: () => (0, T.Gt)(t.applicationId, !1),
                         }),
-                        (0, r.jsx)(Q, {
-                            label: B.intl.string(B.t.VkMnR2),
+                        (0, r.jsx)(Y, {
+                            label: G.intl.string(G.t.VkMnR2),
                             icon: f.DoorExitIcon,
-                            onClick: () => (0, b.A)(t.id),
+                            onClick: () => (0, C.A)(t.id),
                         }),
                     ],
                 }),
@@ -151,10 +152,10 @@ function Y(e) {
         }),
     });
 }
-function q(e) {
+function W(e) {
     let { frameId: t, onHoverChange: n, onPress: a, onUnmount: u, shouldIgnoreClick: c } = e,
-        d = (0, o.bG)([x.A], () => (0, U.ny)(x.A.getFrame(t)), [t]),
-        m = (0, p.h)(d?.applicationId)?.name ?? "";
+        d = (0, o.bG)([b.A], () => (0, _.ny)(b.A.getFrame(t)), [t]),
+        m = (0, v.h)(d?.applicationId)?.name ?? "";
     return (l.useEffect(
         () => () => {
             (u(t), n(t, !1));
@@ -164,10 +165,10 @@ function q(e) {
     null == d)
         ? null
         : (0, r.jsx)(h.N, {
-              theme: K.NJ8.DARK,
+              theme: U.NJ8.DARK,
               children: (e) =>
                   (0, r.jsxs)("div", {
-                      className: s()(_.Nr, e),
+                      className: s()(z.Nr, e),
                       onMouseEnter: () => n(t, !0),
                       onMouseLeave: () => n(t, !1),
                       onMouseDown: (e) => {
@@ -180,66 +181,67 @@ function q(e) {
                           e.currentTarget.contains(e.relatedTarget) || n(t, !1);
                       },
                       children: [
-                          (0, r.jsx)(Y, { frame: d, applicationName: m }),
+                          (0, r.jsx)(q, { frame: d, applicationName: m }),
                           (0, r.jsx)("div", {
                               role: "button",
                               tabIndex: 0,
-                              "aria-label": B.intl.formatToPlainString(P.default.dPf03z, { appName: m }),
-                              className: s()(_.VH, X.a8),
+                              "aria-label": G.intl.formatToPlainString(B.default.dPf03z, { appName: m }),
+                              className: s()(z.VH, $.a8),
+                              [p.KQ]: "",
                               onClick: () => {
-                                  c() || $(d);
+                                  c() || J(d);
                               },
                               onKeyDown: (e) => {
                                   e.target === e.currentTarget &&
                                       ("Enter" === e.key || " " === e.key) &&
-                                      (e.preventDefault(), $(d));
+                                      (e.preventDefault(), J(d));
                               },
                               children: (0, r.jsx)(V, {
                                   frameId: d.id,
-                                  level: g.A.AboveAppContent,
-                                  overlay: (0, r.jsx)(H, { frame: d, className: s()(_.Lu, e) }),
+                                  level: x.A.AboveAppContent,
+                                  overlay: (0, r.jsx)(K, { frame: d, className: s()(z.Lu, e) }),
                               }),
                           }),
                       ],
                   }),
           });
 }
-function W(e) {
+function Z(e) {
     let { frameId: t } = e;
     return (0, r.jsx)("div", {
-        className: _.tF,
+        className: z.tF,
         "aria-hidden": !0,
-        children: (0, r.jsx)(V, { frameId: t, level: g.A.Backstage }),
+        children: (0, r.jsx)(V, { frameId: t, level: x.A.Backstage }),
     });
 }
-function Z(e) {
+function ee(e) {
     var t;
     let n,
         a,
         { maxX: i, maxY: u, appContext: c, floatingPictureInPicture: d } = e,
         { shown: m, hidden: f } =
             ((t = (0, O.DU)()),
-            (n = (0, S.sI)()),
+            (n = (0, T.sI)()),
             (a = (0, o.yK)(
-                [x.A],
+                [b.A],
                 () =>
                     t.filter((e) => {
-                        let t = x.A.getFrame(e)?.applicationId;
+                        let t = b.A.getFrame(e)?.applicationId;
                         return null != t && n.has(t);
                     }),
                 [t, n],
             )),
             l.useMemo(() => ({ shown: t.filter((e) => !a.includes(e)), hidden: a }), [t, a])),
-        h = (0, o.bG)([y.A], () => y.A.hasLayers()),
+        h = (0, o.bG)([A.A], () => A.A.hasLayers()),
         [p, v] = l.useState(() => new Map()),
-        [g, b] = l.useState(() => new Map()),
+        [g, x] = l.useState(() => new Map()),
         [C, j] = l.useState(!1),
-        L = l.useRef(!1),
-        A = l.useCallback((e, t) => {
+        k = l.useRef(!1),
+        y = l.useCallback((e, t) => {
             v((n) => new Map(n).set(e, t));
         }, []),
         w = l.useCallback((e, t) => {
-            b((n) => (n.get(e) === t ? n : new Map(n).set(e, t)));
+            x((n) => (n.get(e) === t ? n : new Map(n).set(e, t)));
         }, []),
         E = (function () {
             let [e, t] = l.useState(null),
@@ -354,53 +356,53 @@ function Z(e) {
             );
         })(),
         { handleDragStart: N } = E,
-        T = l.useCallback(() => {
-            ((L.current = !0), j(!0), N());
+        S = l.useCallback(() => {
+            ((k.current = !0), j(!0), N());
         }, [N]),
         M = l.useCallback(() => {
             (j(!1),
                 setTimeout(() => {
-                    L.current = !1;
+                    k.current = !1;
                 }, 0));
         }, []),
-        D = l.useCallback(() => L.current, []);
+        D = l.useCallback(() => k.current, []);
     if (0 === m.length && 0 === f.length) return null;
     let F = new Map();
     return (
         null != d && d.height > 0 && F.set(d.position, d.height + 8),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(I.Ay, {
+                (0, r.jsx)(L.Ay, {
                     children: (0, r.jsx)("div", {
-                        className: s()(z._I, { [z.cB]: C }),
+                        className: s()(X._I, { [X.cB]: C }),
                         children: m.map((e) => {
-                            let t = p.get(e) ?? K.CUs.BOTTOM_RIGHT,
+                            let t = p.get(e) ?? U.CUs.BOTTOM_RIGHT,
                                 n = F.get(t) ?? 0,
                                 l = g.get(e) ?? 0;
                             l > 0 && F.set(t, n + l + 8);
-                            let a = t === K.CUs.TOP_LEFT || t === K.CUs.TOP_RIGHT;
+                            let a = t === U.CUs.TOP_LEFT || t === U.CUs.TOP_RIGHT;
                             return (0, r.jsx)(
-                                k.S8,
+                                I.S8,
                                 {
                                     id: e,
-                                    className: s()(_.x, { [_.yo]: E.isToolbarShown(e), [_.HJ]: E.isSnapping(e) }),
+                                    className: s()(z.x, { [z.yo]: E.isToolbarShown(e), [z.HJ]: E.isSnapping(e) }),
                                     position: t,
                                     hidden: h,
                                     appContext: c,
                                     maxX: i,
                                     maxY: u,
-                                    edgeOffsetTop: k.X8.top + (a ? n : 0),
-                                    edgeOffsetBottom: k.X8.bottom + (a ? 0 : n),
-                                    edgeOffsetLeft: k.X8.left,
-                                    edgeOffsetRight: k.X8.right,
-                                    onMove: A,
+                                    edgeOffsetTop: I.X8.top + (a ? n : 0),
+                                    edgeOffsetBottom: I.X8.bottom + (a ? 0 : n),
+                                    edgeOffsetLeft: I.X8.left,
+                                    edgeOffsetRight: I.X8.right,
+                                    onMove: y,
                                     onHeightChange: w,
-                                    onDragStart: T,
+                                    onDragStart: S,
                                     onDragEnd: M,
                                     onDragRelease: E.handleDragRelease,
                                     onDragSettle: E.handleDragSettle,
                                     dragInsetTop: 40,
-                                    children: (0, r.jsx)(q, {
+                                    children: (0, r.jsx)(W, {
                                         frameId: e,
                                         onHoverChange: E.handleHoverChange,
                                         onPress: E.handlePress,
@@ -413,7 +415,7 @@ function Z(e) {
                         }),
                     }),
                 }),
-                f.map((e) => (0, r.jsx)(W, { frameId: e }, e)),
+                f.map((e) => (0, r.jsx)(Z, { frameId: e }, e)),
             ],
         })
     );
