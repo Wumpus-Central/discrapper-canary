@@ -505,11 +505,9 @@ function e9(e) {
     let { guild: t, isExpanded: n, selectedChannelId: i, className: l } = e,
         s = (0, eX.w)(t),
         r = eq(t),
-        [a, o] = R.useState(r),
-        d = (0, L.bG)([e2.A], () => e2.A.getChannel(i), [i]),
-        c = (0, eW.Ay)(d);
-    async function u() {
-        o(!a);
+        a = (0, L.bG)([e2.A], () => e2.A.getChannel(i), [i]),
+        o = (0, eW.Ay)(a);
+    async function d() {
         try {
             await (0, eK.jB)(t, !r);
             let e = i ?? t.safetyAlertsChannelId ?? null;
@@ -524,7 +522,7 @@ function e9(e) {
                 (0, eY.zV)(et.HAw.GUILD_RAID_ALERTS_SETUP, n);
             }
         } catch (e) {
-            ((0, w.P0)({ text: en.intl.string(en.t["46Rs3v"]), variant: "critical" }), o(!r));
+            (0, w.P0)({ text: en.intl.string(en.t["46Rs3v"]), variant: "critical" });
         }
     }
     return (0, p.jsxs)("div", {
@@ -543,24 +541,31 @@ function e9(e) {
                         color: "text-default",
                         children: en.intl.string(en.t.Mg843t),
                     }),
+                    null == i
+                        ? (0, p.jsx)(G.E, {
+                              variant: "text-sm/medium",
+                              color: "text-subtle",
+                              children: en.intl.string(en.t["lXJ+cv"]),
+                          })
+                        : null,
                     n || null == i
                         ? null
                         : (0, p.jsxs)(G.E, {
                               color: "interactive-text-default",
                               variant: "text-xs/medium",
                               className: e6.Lp,
-                              children: [(0, p.jsx)(eV.N, { size: "xxs", color: "currentColor" }), " ", c],
+                              children: [(0, p.jsx)(eV.N, { size: "xxs", color: "currentColor" }), " ", o],
                           }),
                 ],
             }),
-            (0, p.jsx)(e4, { checked: a, onChange: u, disabled: !s || null == i }),
+            (0, p.jsx)(e4, { checked: r, onChange: d, disabled: !s || (!r && null == i) }),
         ],
     });
 }
 function e7(e) {
-    let { guild: t, selectedChannelId: n, setSelectedChannelId: i, className: l } = e,
-        s = t.safetyAlertsChannelId ?? null,
-        r = (0, L.bG)(
+    let { guild: t, selectedChannelId: n, className: i } = e,
+        l = t.safetyAlertsChannelId ?? null,
+        s = (0, L.bG)(
             [e3.Ay, J.default, e5.A, X.A],
             () => {
                 let e = e3.Ay.getChannels(t.id)
@@ -572,16 +577,15 @@ function e7(e) {
                         let { channel: t } = e;
                         return { id: t.id, value: t.id, label: (0, eW.m1)(t, J.default, e5.A, !0) };
                     });
-                return null != s ? e : [...e];
+                return null != l ? e : [...e];
             },
-            [t.id, s],
+            [t.id, l],
             eB(),
         );
-    async function a(e) {
-        i(e);
+    async function r(e) {
         try {
             if (
-                (e !== s &&
+                (e !== l &&
                     (await $.A.saveGuild(t.id, { safetyAlertsChannelId: e }, { throwErr: !0 }),
                     $.A.updateGuild({ safetyAlertsChannelId: e })),
                 null != e)
@@ -596,19 +600,19 @@ function e7(e) {
                 (0, eY.zV)(et.HAw.GUILD_RAID_ALERTS_SETUP, n);
             }
         } catch (e) {
-            ((0, w.P0)({ text: en.intl.string(en.t["46Rs3v"]), variant: "critical" }), i(s));
+            (0, w.P0)({ text: en.intl.string(en.t["46Rs3v"]), variant: "critical" });
         }
     }
     return (0, p.jsx)("div", {
-        className: k()(e6.ho, l),
+        className: k()(e6.ho, i),
         children: (0, p.jsx)("div", {
             className: e6.U,
             children: (0, p.jsx)(ez.Z, {
                 selectionMode: "single",
                 label: en.intl.string(en.t.sMkYE8),
                 helperText: en.intl.string(en.t["1QxN9N"]),
-                options: r,
-                onSelectionChange: a,
+                options: s,
+                onSelectionChange: r,
                 value: n,
                 maxOptionsVisible: 5,
             }),
@@ -618,23 +622,21 @@ function e7(e) {
 function e8(e) {
     let { guild: t } = e,
         [n, i] = R.useState(!1),
-        l = t.safetyAlertsChannelId ?? null,
-        [s, r] = R.useState(null != l ? l : (t?.publicUpdatesChannelId ?? null));
+        l = t.safetyAlertsChannelId ?? t.publicUpdatesChannelId ?? null;
     return (0, p.jsx)(e1, {
-        renderHeader: (0, p.jsx)(e9, { isExpanded: n, guild: t, selectedChannelId: s }),
+        renderHeader: (0, p.jsx)(e9, { isExpanded: n, guild: t, selectedChannelId: l }),
         isExpanded: n,
         onExpand: () => i(!n),
-        children: (0, p.jsx)(e7, { guild: t, selectedChannelId: s, setSelectedChannelId: r }),
+        children: (0, p.jsx)(e7, { guild: t, selectedChannelId: l }),
     });
 }
 function te(e) {
     let { guild: t } = e,
-        n = t.safetyAlertsChannelId ?? null,
-        [i, l] = R.useState(null != n ? n : (t?.publicUpdatesChannelId ?? null));
+        n = t.safetyAlertsChannelId ?? t.publicUpdatesChannelId ?? null;
     return (0, p.jsxs)(p.Fragment, {
         children: [
-            (0, p.jsx)(e9, { isExpanded: !0, guild: t, selectedChannelId: i, className: e6.pN }),
-            (0, p.jsx)(e7, { guild: t, selectedChannelId: i, setSelectedChannelId: l, className: e6.pN }),
+            (0, p.jsx)(e9, { isExpanded: !0, guild: t, selectedChannelId: n, className: e6.pN }),
+            (0, p.jsx)(e7, { guild: t, selectedChannelId: n, className: e6.pN }),
         ],
     });
 }
@@ -11102,10 +11104,14 @@ let cQ = () => {
                               layout: "horizontal-responsive",
                               label: en.intl.string(en.t.vAyDGU),
                               description: en.intl.string(en.t.ZFeonu),
-                              value: e.publicUpdatesChannelId ?? void 0,
-                              options: s,
+                              helperText:
+                                  null == e.publicUpdatesChannelId && null == e.safetyAlertsChannelId
+                                      ? `${en.intl.string(en.t.zdWNET)} ${en.intl.string(en.t["0H6Cdy"])}`
+                                      : en.intl.string(en.t.zdWNET),
+                              value: e.publicUpdatesChannelId ?? et._Ee,
+                              options: [{ id: et._Ee, value: et._Ee, label: en.intl.string(en.t.PoWNfe) }, ...s],
                               onSelectionChange: function (e) {
-                                  $.A.updateGuild({ publicUpdatesChannelId: e });
+                                  $.A.updateGuild({ publicUpdatesChannelId: e === et._Ee ? null : e });
                               },
                               disabled: !n,
                           }),
