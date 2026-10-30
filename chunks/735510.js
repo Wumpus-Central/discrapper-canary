@@ -1,3 +1,3 @@
-u.exports = JSON.parse(
-    '{"yfwZuy":["Xem Huy Hi\u1EC7u C\u1EE7a T\xf4i"],"UnPGii":["Huy hi\u1EC7u \u0111\xe3 \u0111\u01B0\u1EE3c th\xeam v\xe0o h\u1ED3 s\u01A1 c\u1EE7a b\u1EA1n."],"nvaTQq":["B\u1EA1n \u0110\xe3 Thu Th\u1EADp Huy Hi\u1EC7u H\u1ED3 S\u01A1 Orbs!"]}',
+i.exports = JSON.parse(
+    '{"bnJVgJ":["Thi\xean Th\u1EA7n"],"5txfu7":["Anime"],"MzFZoP":["G\xf3i"],"bKvkzB":["M\xe8o"],"SxlobC":["T\u1ED1i"],"U+7iha":["R\u1ED3ng"],"NKZY+Z":["M\xf9a Thu"],"Ib3xUj":["L\u1EEDa"],"rsvVIs":["Goth"],"+EMTB/":["M\u1EB7t Tr\u0103ng"],"S+ZC67":["Nitro"],"H0zY/q":["Hoa Anh \u0110\xe0o"],"kmA+p3":["R\xf9ng r\u1EE3n"],"w/OnRT":["Ng\xf4i sao"],"Z4b7dI":["Venom"],"7DZ2Fj":["N\u01B0\u1EDBc"],"yfwZuy":["Xem Huy Hi\u1EC7u C\u1EE7a T\xf4i"],"UnPGii":["Huy hi\u1EC7u \u0111\xe3 \u0111\u01B0\u1EE3c th\xeam v\xe0o h\u1ED3 s\u01A1 c\u1EE7a b\u1EA1n."],"nvaTQq":["B\u1EA1n \u0110\xe3 Thu Th\u1EADp Huy Hi\u1EC7u H\u1ED3 S\u01A1 Orbs!"]}',
 );

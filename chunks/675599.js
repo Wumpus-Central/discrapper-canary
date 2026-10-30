@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"yfwZuy":["\u67E5\u770B\u6211\u7684\u5FBD\u7AE0"],"UnPGii":["\u8BE5\u5FBD\u7AE0\u5DF2\u88AB\u6DFB\u52A0\u81F3\u60A8\u7684\u4E2A\u4EBA\u8D44\u6599\u3002"],"nvaTQq":["\u60A8\u83B7\u5F97\u4E86 Orb \u4E2A\u4EBA\u8D44\u6599\u5FBD\u7AE0\uFF01"]}',
+s.exports = JSON.parse(
+    '{"bnJVgJ":["\u5929\u4F7F"],"5txfu7":["\u65E5\u672C\u52A8\u6F2B"],"MzFZoP":["\u540C\u6346\u5305"],"amuakh":["\u90A6\u59AE"],"bKvkzB":["\u732B\u732B"],"SxlobC":["\u9177\u9ED1"],"U+7iha":["\u9F99"],"NKZY+Z":["\u79CB\u5929"],"Ib3xUj":["\u706B"],"rsvVIs":["\u54E5\u7279"],"+EMTB/":["\u660E\u6708"],"S+ZC67":["Nitro"],"H0zY/q":["\u6A31\u82B1"],"kmA+p3":["\u9634\u68EE"],"w/OnRT":["\u4EBA\u6C14\u660E\u661F"],"Z4b7dI":["\u6BD2\u6DB2"],"7DZ2Fj":["\u6C34"],"yfwZuy":["\u67E5\u770B\u6211\u7684\u5FBD\u7AE0"],"UnPGii":["\u8BE5\u5FBD\u7AE0\u5DF2\u88AB\u6DFB\u52A0\u81F3\u60A8\u7684\u4E2A\u4EBA\u8D44\u6599\u3002"],"nvaTQq":["\u60A8\u83B7\u5F97\u4E86 Orb \u4E2A\u4EBA\u8D44\u6599\u5FBD\u7AE0\uFF01"]}',
 );

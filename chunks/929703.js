@@ -1,3 +1,3 @@
 s.exports = JSON.parse(
-    '{"yfwZuy":["\u6AA2\u8996\u6211\u7684\u5FBD\u7AE0"],"UnPGii":["\u5FBD\u7AE0\u5DF2\u65B0\u589E\u81F3\u60A8\u7684\u500B\u4EBA\u8CC7\u6599\u3002"],"nvaTQq":["\u60A8\u6536\u85CF\u4E86 Orbs \u500B\u4EBA\u8CC7\u6599\u5FBD\u7AE0\uFF01"]}',
+    '{"bnJVgJ":["\u5929\u4F7F"],"5txfu7":["\u52D5\u6F2B"],"MzFZoP":["\u7D44\u5408\u5305"],"amuakh":["\u5154\u5B50"],"bKvkzB":["\u8C93"],"SxlobC":["\u7070\u6697"],"U+7iha":["\u5DE8\u9F8D"],"NKZY+Z":["\u79CB\u5B63"],"Ib3xUj":["\u706B"],"rsvVIs":["\u54E5\u5FB7\u98A8"],"+EMTB/":["\u6708\u4EAE"],"S+ZC67":["Nitro"],"H0zY/q":["\u6AFB\u82B1"],"kmA+p3":["\u9670\u68EE"],"w/OnRT":["\u5DE8\u661F"],"Z4b7dI":["\u731B\u6BD2"],"7DZ2Fj":["\u6C34"],"yfwZuy":["\u6AA2\u8996\u6211\u7684\u5FBD\u7AE0"],"UnPGii":["\u5FBD\u7AE0\u5DF2\u65B0\u589E\u81F3\u60A8\u7684\u500B\u4EBA\u8CC7\u6599\u3002"],"nvaTQq":["\u60A8\u6536\u85CF\u4E86 Orbs \u500B\u4EBA\u8CC7\u6599\u5FBD\u7AE0\uFF01"]}',
 );

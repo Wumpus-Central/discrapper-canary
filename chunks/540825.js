@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"yfwZuy":["Zobrazit m\u016Fj odznak"],"UnPGii":["Odznak byl p\u0159id\xe1n do tv\xe9ho profilu."],"nvaTQq":["Z\xedsk\xe1v\xe1\u0161 Orbs odznak na profil!"]}',
+a.exports = JSON.parse(
+    '{"bnJVgJ":["And\u011Bl"],"5txfu7":["Anime"],"SM4C+M":["Podzim"],"MzFZoP":["Bal\xed\u010Dek"],"amuakh":["Zaj\xed\u010Dek"],"bKvkzB":["Ko\u010Dka"],"SxlobC":["Tmav\xfd"],"U+7iha":["Drak"],"NKZY+Z":["Podzim"],"Ib3xUj":["Ohe\u0148"],"+Bo7fD":["Kv\u011Btina"],"rsvVIs":["Goth"],"tu6vgS":["Marvel"],"+EMTB/":["M\u011Bs\xedc"],"S+ZC67":["Nitro"],"o/+isu":["R\u016F\u017Ee"],"H0zY/q":["Sakura"],"cChmCO":["Vesm\xedr"],"fwKulM":["Pavouk"],"kmA+p3":["Stra\u0161ideln\xe1"],"w/OnRT":["Hv\u011Bzda"],"qozQ5X":["Star Wars"],"M6igKM":["VALORANT"],"Z4b7dI":["Venom"],"7DZ2Fj":["Voda"],"KqfZhk":["Vlk"],"bRwRwX":["Nakoupit: ",[1,"option"]],"yfwZuy":["Zobrazit m\u016Fj odznak"],"UnPGii":["Odznak byl p\u0159id\xe1n do tv\xe9ho profilu."],"nvaTQq":["Z\xedsk\xe1v\xe1\u0161 Orbs odznak na profil!"]}',
 );
