@@ -4189,6 +4189,7 @@ var rC =
         (eP.GIFT_CARD_REDEMPTION_FAILED = "gift_card_redemption_failed"),
         (eP.IMPRESSION_GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL = "impression_gift_card_redemption_succeeded_modal"),
         (eP.GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL_CTA_CLICKED = "gift_card_redemption_succeeded_modal_cta_clicked"),
+        (eP.GIFT_CARDS_MARKETING_BANNER_CTA_CLICKED = "gift_cards_marketing_banner_cta_clicked"),
         (eP.GIFT_CARD_WALLET_CONSUMED = "gift_card_wallet_consumed"),
         (eP.ORBS_ENTRYPOINT_CLICKED = "orbs_entrypoint_clicked"),
         (eP.ORB_WALLET_VIEWED = "orb_wallet_viewed"),
