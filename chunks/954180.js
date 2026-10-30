@@ -30,7 +30,7 @@ var n = l(477900),
     M = l(540999),
     S = l(287809),
     D = l(723702),
-    T = l(915725),
+    T = l(738935),
     _ = l(614584),
     R = l(758262),
     H = l(465268),
@@ -444,7 +444,7 @@ function e2(e) {
                 onMouseLeave: () => w(!1),
                 children: (0, n.jsx)("div", {
                     className: e0.w7,
-                    children: (0, n.jsxs)(e5, {
+                    children: (0, n.jsxs)(e3, {
                         ref: G,
                         isPlaying: I,
                         onProgressChange: D,
@@ -455,7 +455,7 @@ function e2(e) {
                                 inert: !0,
                                 "aria-hidden": "true",
                             }),
-                            (0, n.jsx)(e3, {
+                            (0, n.jsx)(e5, {
                                 isNew: i,
                                 showHoverActions: z && !f,
                                 showSelect: y && (z || _),
@@ -472,7 +472,7 @@ function e2(e) {
         }),
     });
 }
-function e5(e) {
+function e3(e) {
     let { isPlaying: t, onProgressChange: l, children: a, ref: i } = e;
     return (0, n.jsx)(eO.d, {
         ref: i,
@@ -482,7 +482,7 @@ function e5(e) {
         children: (0, n.jsx)(eU.h, { isVisible: !0, className: e0.Lw, children: a }),
     });
 }
-function e3(e) {
+function e5(e) {
     let {
             isNew: t,
             showHoverActions: l,
@@ -759,7 +759,7 @@ function e4() {
                   : (0, n.jsx)(eE.k, { size: "xs", color: "currentColor" }),
     });
 }
-e5.displayName = "CardThumbnail";
+e3.displayName = "CardThumbnail";
 var e6 = l(792852);
 function te(e) {
     return Math.min(45 * e, 520);
@@ -1928,7 +1928,7 @@ function t1(e) {
         .slice(0, t);
 }
 var t2 = l(329924);
-function t5(e) {
+function t3(e) {
     let { clips: t, onEdit: l, onEdgeNavigate: i } = e,
         s = a.useMemo(() => t1(t), [t]),
         r = (0, e6.P)((e) => e.setActiveMainLink),
@@ -2021,7 +2021,7 @@ function t5(e) {
               ],
           });
 }
-var t3 = l(770178),
+var t5 = l(770178),
     t8 = l(202163),
     t9 = l(68408);
 function t7(e) {
@@ -2062,7 +2062,7 @@ function t7(e) {
         D = (0, k.A)((e) => {
             M(e.target.clientWidth);
         }),
-        T = (0, t3.w)(D),
+        T = (0, t5.w)(D),
         _ = Math.max(1, (I - 40) / 3),
         R = a.useMemo(() => {
             let e = t.clips.slice(0, 6),
@@ -2312,7 +2312,7 @@ function t6(e) {
                       m &&
                           (0, n.jsx)("div", {
                               className: t4.Dk,
-                              children: (0, n.jsx)(t5, { clips: t, onEdit: i, onEdgeNavigate: b }),
+                              children: (0, n.jsx)(t3, { clips: t, onEdit: i, onEdgeNavigate: b }),
                           }),
                       j.length > 0 &&
                           (0, n.jsxs)(n.Fragment, {
@@ -2782,10 +2782,10 @@ function lh(e) {
                       }),
             [ey, eC],
         ));
-    let e5 = a.useCallback(() => {
+    let e3 = a.useCallback(() => {
             en(new Set());
         }, []),
-        e3 = el.size > 0,
+        e5 = el.size > 0,
         e8 = a.useCallback(() => {
             let e = ef.filter((e) => el.has(e.id));
             (0, d.openModalLazy)(
@@ -2796,22 +2796,22 @@ function lh(e) {
                             ...l,
                             clips: e,
                             onAfterDelete: () => {
-                                (e5(), l.onClose());
+                                (e3(), l.onClose());
                             },
                         });
                 },
                 { stackingBehavior: "stack" },
             );
-        }, [ef, el, e5]),
+        }, [ef, el, e3]),
         e9 = a.useCallback(async () => {
             let e = ef.filter((e) => el.has(e.id));
-            await ep({ clips: e, onShared: e5 });
-        }, [ef, el, ep, e5]),
+            await ep({ clips: e, onShared: e3 });
+        }, [ef, el, ep, e3]),
         e7 = a.useCallback(
             async (e) => {
-                0 !== e.length && (en(new Set(e.map((e) => e.id))), await ep({ clips: e }), e5());
+                0 !== e.length && (en(new Set(e.map((e) => e.id))), await ep({ clips: e }), e3());
             },
-            [ep, e5],
+            [ep, e3],
         ),
         e4 = a.useCallback(() => {
             let e = e6.P.getState();
@@ -2828,8 +2828,8 @@ function lh(e) {
             let e = ef.filter((e) => el.has(e.id)),
                 t = !te;
             (await Promise.all(e.filter((e) => e.isFavorite !== t).map((e) => (0, _.Yy)(e.id, { isFavorite: t }, !0))),
-                e5());
-        }, [ef, el, te, e5]),
+                e3());
+        }, [ef, el, te, e3]),
         tl = a.useMemo(() => {
             let e = 0,
                 t = 0,
@@ -2867,12 +2867,12 @@ function lh(e) {
         () => ({
             selectedClipIds: el,
             toggleClipSelection: eW,
-            clearSelection: e5,
-            isMultiSelectMode: e3,
+            clearSelection: e3,
+            isMultiSelectMode: e5,
             picker: Y,
             onShareSession: et ? e7 : void 0,
         }),
-        [el, eW, e5, e3, Y, et, e7],
+        [el, eW, e3, e5, Y, et, e7],
     );
     return (0, n.jsx)(E.f5, {
         value: J,
@@ -3013,11 +3013,11 @@ function lh(e) {
                                                         ],
                                                     }),
                                               et &&
-                                                  e3 &&
+                                                  e5 &&
                                                   (0, n.jsx)(tc, {
                                                       selectedCount: el.size,
                                                       allSelectedFavorited: te,
-                                                      onClear: e5,
+                                                      onClear: e3,
                                                       onFavorite: tt,
                                                       onDelete: e8,
                                                       onShare: e9,

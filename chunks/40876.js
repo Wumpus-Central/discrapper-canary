@@ -596,6 +596,7 @@ let r = {
             "RTC_CONNECTION_STATE",
             "POST_CONNECTION_OPEN",
             "RPC_SERVER_READY",
+            "CLIPS_APPLY_DEFAULT_SETTINGS",
             "RTC_CONNECTION_USERS_MERGED",
             "CLIPS_ALLOW_VOICE_RECORDING_UPDATE",
             "CLIPS_SETTINGS_UPDATE",
@@ -612,7 +613,7 @@ let r = {
             "CLIPS_SESSION_START",
             "CLIPS_SESSION_STOP",
         ],
-        inlineRequire: () => n(95844).A,
+        inlineRequire: () => n(813600).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     GameExitPromoManager: {

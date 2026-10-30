@@ -28,8 +28,8 @@ var i,
     D = n(260643),
     v = n(999926),
     b = n(756042),
-    M = n(379848),
-    P = n(832248),
+    P = n(379848),
+    M = n(832248),
     U = n(201805),
     w = n(253932),
     G = n(843010),
@@ -315,7 +315,7 @@ function ed(e) {
                 r = w.tz.useSetting(),
                 a = (0, G.G)(),
                 s = (0, E.bG)([x.A], () => x.A.getStatus()),
-                { isOpen: l } = (0, P.A)();
+                { isOpen: l } = (0, M.A)();
             if (((n && i) || t) && !a && !l && !__OVERLAY__) {
                 if (!r && s === B.clD.INVISIBLE) return t ? es.ActivityAndStatus : es.ActivityAndStatusNux;
                 if (!r) return t ? es.Activity : es.ActivityNux;
@@ -327,7 +327,7 @@ function ed(e) {
         n && k.default.track(B.HAw.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]);
     let d = n || l ? [] : [A.M.SHARE_ACTIVITY_COACHMARK_V2];
-    return (0, r.jsx)(M.Ay, {
+    return (0, r.jsx)(P.Ay, {
         contentTypes: d,
         children: (e) => {
             let { visibleContent: a, markAsDismissed: l } = e,
@@ -402,8 +402,8 @@ function eb(e) {
         })
     );
 }
-var eM = n(945810);
-let eP = (0, eM.mj)({
+var eP = n(945810);
+let eM = (0, eP.mj)({
     name: "2026-02-join-game-community-cta",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -497,17 +497,17 @@ var e5 = n(976860),
     tO = n(442433),
     tR = n(42473),
     tL = n(200542),
-    ty = n(915725),
+    ty = n(738935),
     tD = n(572164),
     tv = n(614584),
     tb = n(414405);
-function tM(e) {
+function tP(e) {
     (0, tO.L3)(e, async () => {
         let { default: e } = await Promise.all([n.e("666601"), n.e("344751")]).then(n.bind(n, 575538));
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }
-let tP = function (e) {
+let tM = function (e) {
     let { isActivity: t = !1 } = e,
         { parentAnalyticsLocation: n } = (0, ec.Ay)(),
         i = (0, tD.E)(),
@@ -521,7 +521,7 @@ let tP = function (e) {
               onClick: () => {
                   ((0, tv.l0)(), (0, em.X)(n, em.O.CLIP));
               },
-              onContextMenu: tM,
+              onContextMenu: tP,
               icon: tC.x,
           })
         : null;
@@ -530,13 +530,13 @@ var tU = n(457827),
     tw = n(907878),
     tG = n(831617),
     tx = n(196736);
-let tk = (0, eM.mj)({
+let tk = (0, eP.mj)({
         name: "2026-08-gsh-subs-activity-bar",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    tF = (0, eM.mj)({
+    tF = (0, eP.mj)({
         name: "2026-02-gsh-game-detection-upsell",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -625,15 +625,15 @@ let t1 = a.memo(function (e) {
         } = e,
         { parentAnalyticsLocation: y, analyticsLocations: v } = (0, ec.Ay)(),
         b = (0, t$.A)(T?.id),
-        M = t0(T, p, h),
-        { enabled: P } = tF.useConfig({ location: "activity-panel" }),
+        P = t0(T, p, h),
+        { enabled: M } = tF.useConfig({ location: "activity-panel" }),
         U = (0, tx.H)({ location: "activity-panel" }),
         w = (0, tB.Bp)("activity-panel"),
         G = (0, tG.C$)(l ?? void 0, "activity-panel"),
         x = (0, E.bG)([tX.A], () => tX.A.hasConsented(B.YAq.PERSONALIZATION)),
         F = (0, tB.TF)(_?.id, { shouldFetch: w || G }),
         V = U && x && (0, tB.k0)(_?.id),
-        H = P && x && F,
+        H = M && x && F,
         j = H && w,
         W = H && G,
         Y = a.useCallback(() => {
@@ -806,7 +806,7 @@ let t1 = a.memo(function (e) {
             );
         })(),
         ed =
-            M && null == h
+            P && null == h
                 ? (0, r.jsx)(tR.A, { ref: S, tooltipText: Q.intl.string(Q.t["hC/Zey"]), onClick: Y, icon: tA.D })
                 : null,
         eu =
@@ -862,7 +862,7 @@ let t1 = a.memo(function (e) {
             eE ?? es ?? ed,
             el,
             (eu ?? e_) == null
-                ? (0, r.jsx)(tP, { isActivity: null == _ && null != I && I.intent !== tQ.sV.MAIN })
+                ? (0, r.jsx)(tM, { isActivity: null == _ && null != I && I.intent !== tQ.sV.MAIN })
                 : null,
             eo,
             eu ?? e_,
@@ -1331,7 +1331,7 @@ function nb(e) {
         ],
     });
 }
-function nM(e) {
+function nP(e) {
     let {
             popover: t,
             dismissPopover: n,
@@ -1433,7 +1433,7 @@ function nM(e) {
             return null;
     }
 }
-let nP = (0, N.A)(function (e) {
+let nM = (0, N.A)(function (e) {
     let { message: t } = e;
     return (0, r.jsx)(to.A, { children: t });
 });
@@ -1490,7 +1490,7 @@ function nU(e) {
                                   onClick: f,
                                   children: (0, r.jsx)(to.A, { className: nR.Ix, children: h }),
                               })
-                            : (0, r.jsx)(nP, { timestamps: A }),
+                            : (0, r.jsx)(nM, { timestamps: A }),
                     ],
                 }),
             }),
@@ -1523,7 +1523,7 @@ function nw(e) {
                             className: nR.rB,
                             children: (0, r.jsx)(td.A, { className: nR._W, children: n.name }),
                         }),
-                        (0, r.jsx)(nP, { timestamps: l }),
+                        (0, r.jsx)(nM, { timestamps: l }),
                     ],
                 }),
             ],
@@ -1562,7 +1562,7 @@ let nx = (0, C.A)(function (e) {
         d = a.useRef(null),
         c = (0, E.bG)([e6.default], () => e6.default.getId()),
         h = (0, E.bG)([eU.Ay, ta.A], () => (0, ez.A)(eU.Ay, ta.A)),
-        { enabled: f } = eP.useConfig({ location: "ActivityPanelGameCard" }),
+        { enabled: f } = eM.useConfig({ location: "ActivityPanelGameCard" }),
         { previouslyRunningGame: I, isWithinThreshold: p } = (function () {
             let [e, t] = (0, a.useState)(Date.now()),
                 n = (0, E.bG)([eF], () => eF.getLastPreviouslyRunningGame());
@@ -1590,17 +1590,17 @@ let nx = (0, C.A)(function (e) {
         [N, C] = (0, E.yK)([eJ.A], () => [eJ.A.getCurrentUserActiveStream(), eJ.A.getStreamerActiveStreamMetadata()]),
         R = (0, E.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
         L = g?.type === B.rbe.GUILD_SPACE ? null : R,
-        M = (0, E.bG)([eD.A, eI.A, eN.Ay], () => {
+        P = (0, E.bG)([eD.A, eI.A, eN.Ay], () => {
             let e = (0, tQ.ny)(eD.A.getMainFrame());
             return null != e && (0, eS.A)(e) ? null : e;
         }),
-        P = (0, E.bG)([e9.A, te.A], () => null == T || eW.vz(T, e9.A, te.A, !1)),
+        M = (0, E.bG)([e9.A, te.A], () => null == T || eW.vz(T, e9.A, te.A, !1)),
         [w] = (0, ep.A)([
             (function () {
                 if (null != C && null != C.id) return C.id;
                 if (null != h) return h.id;
                 if (null != L) return L.applicationId;
-                if (null != M) return M.applicationId;
+                if (null != P) return P.applicationId;
                 if (null != I && null != I.id) return I.id;
             })(),
         ]),
@@ -1610,7 +1610,7 @@ let nx = (0, C.A)(function (e) {
                     t = (0, E.bG)([v.Ay], D.sV);
                 return e && t;
             })() &&
-            (null != L || null != M),
+            (null != L || null != P),
         x = (0, E.bG)([v.Ay], () => (0, eY.A)(v.Ay) && (0, tl.isWindows)()) || G,
         F = (0, E.bG)([tt.A], () => (null != c ? tt.A.findActivity(c, (e) => e.type === _.$.PLAYING) : null)),
         V = null != N && N.ownerId === c && N.state !== B.XYD.ENDED,
@@ -1756,16 +1756,16 @@ let nx = (0, C.A)(function (e) {
                             activityPopoutTargetRef: s,
                             isActivityPopoutOpen: K,
                         })
-                      : null != M &&
+                      : null != P &&
                           null != w &&
                           (function (e) {
                               let { application: t, frame: n } = e;
                               return null != t && null != n && n.applicationId === t.id;
-                          })({ application: w, frame: M })
+                          })({ application: w, frame: P })
                         ? (0, r.jsx)(nw, {
                               application: w,
                               accountLinkUpsellTargetRef: o,
-                              frame: M,
+                              frame: P,
                               isActivityPopoutOpen: K,
                           })
                         : V
@@ -1777,7 +1777,7 @@ let nx = (0, C.A)(function (e) {
                           : null != eR
                             ? eL(w, eR, { isGameRunning: !1 })
                             : null,
-            [C, F, w, H, g, L, M, S, K, W, V, eT, eR, eL, h, j],
+            [C, F, w, H, g, L, P, S, K, W, V, eT, eR, eL, h, j],
         );
     return null == ey
         ? null
@@ -1795,12 +1795,12 @@ let nx = (0, C.A)(function (e) {
                           guildId: t,
                           isStreaming: V,
                           channel: g,
-                          canStream: P,
+                          canStream: M,
                           runningGame: h,
                           activity: F,
                           application: w,
                           embeddedActivity: L,
-                          frame: M,
+                          frame: P,
                           analyticsContext: n,
                           inviteButtonRef: d,
                           accountLinkButtonRef: el,
@@ -1809,7 +1809,7 @@ let nx = (0, C.A)(function (e) {
                           hasAlreadyLinked: ea,
                           connectionApp: Z,
                       }),
-                      (0, r.jsx)(nM, {
+                      (0, r.jsx)(nP, {
                           popover: em,
                           dismissPopover: eC,
                           application: w,

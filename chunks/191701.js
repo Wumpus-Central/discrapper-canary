@@ -8,7 +8,7 @@ var n = i(284009),
     u = i(684013),
     c = i(587895),
     d = i(198052),
-    A = i(915725),
+    A = i(738935),
     f = i(952818),
     y = i(320095),
     p = i(176154),
@@ -249,8 +249,8 @@ function t0(t) {
 var t1 = i(554146),
     t2 = i(298990),
     t9 = i(429913),
-    t5 = i(263577),
-    t3 = i(826673),
+    t3 = i(263577),
+    t5 = i(826673),
     t8 = i(999926),
     t7 = i(308726),
     t4 = i(818023),
@@ -260,7 +260,7 @@ var t1 = i(554146),
 function ei(t) {
     let { game: e } = t,
         i = (0, t9.h)(e.id);
-    return null == i ? null : (0, z.jsx)(t5.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
+    return null == i ? null : (0, z.jsx)(t3.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
 }
 let en = 5 * U.A.Millis.SECOND,
     el = 8 * U.A.Millis.SECOND,
@@ -701,7 +701,7 @@ let eT = new eh(o.h, {
                                     className: ee.kL,
                                 })));
                 }
-            let r = (0, t3.k8)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t5.k8)(t1.M.OVERLAY_OOP_WELCOME_NUX),
                 s = J.intl.string(J.t.KWDIrh);
             return {
                 icon:
@@ -714,16 +714,16 @@ let eT = new eh(o.h, {
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         u.A.setInputLocked(!1, w.A.getTargetPID()),
-                        r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, G.qv)(), e);
