@@ -222,7 +222,7 @@ async function ee(e) {
     try {
         let { body: t } = await a.Bo.post({
             url: N.Rsh.CONJURE_PROJECTS,
-            body: { ...e, flags: e.flags ?? g.Zh.GUILD_COLLABORATION },
+            body: { ...e, flags: e.flags ?? g.Zh.GUILD_COLLABORATION | g.Zh.PUBLIC },
             rejectWithError: !1,
         });
         return (null != t.ws_ticket && (0, A.vG)(t.id, t.ws_ticket), t);
