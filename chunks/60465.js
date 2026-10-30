@@ -268,7 +268,7 @@ let _ = {
                         n.e("605739"),
                         n.e("768289"),
                         n.e("386830"),
-                        n.e("836675"),
+                        n.e("50592"),
                         n.e("199663"),
                         n.e("308378"),
                         n.e("358810"),
@@ -719,11 +719,11 @@ let _ = {
                         n.e("631951"),
                         n.e("571180"),
                         n.e("406426"),
-                        n.e("53453"),
+                        n.e("637222"),
                         n.e("86454"),
                         n.e("134358"),
                         n.e("234264"),
-                    ]).then(n.bind(n, 44444));
+                    ]).then(n.bind(n, 456581));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
                 { modalKey: d, contextKey: null != u ? (0, s.modalContextFromAppContext)(u) : void 0 },
@@ -976,7 +976,7 @@ let _ = {
                         n.e("605739"),
                         n.e("768289"),
                         n.e("386830"),
-                        n.e("836675"),
+                        n.e("50592"),
                         n.e("199663"),
                         n.e("308378"),
                         n.e("358810"),
@@ -1427,11 +1427,11 @@ let _ = {
                         n.e("631951"),
                         n.e("571180"),
                         n.e("406426"),
-                        n.e("53453"),
+                        n.e("637222"),
                         n.e("86454"),
                         n.e("134358"),
                         n.e("234264"),
-                    ]).then(n.bind(n, 44444));
+                    ]).then(n.bind(n, 456581));
                     return (n) =>
                         (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, initialTab: l, ...n }, t);
                 },

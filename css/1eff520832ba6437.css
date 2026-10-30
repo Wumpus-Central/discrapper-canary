@@ -64,11 +64,11 @@
     gap: var(--space-8)
 }
 
-.italic_fb17a5 {
+.italic__1cada {
     font-style: italic
 }
 
-.underline_fb17a5 {
+.underline__1cada {
     text-decoration: underline
 }
 
@@ -216,4 +216,4 @@
     padding-inline: calc(var(--custom-spacing) + var(--custom-spacing))
 }
 
-/*# sourceMappingURL=86f2ad9deedb12e9.css.map*/
+/*# sourceMappingURL=1eff520832ba6437.css.map*/
