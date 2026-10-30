@@ -1,10 +1,16 @@
-n.d(t, { _g: () => a, hU: () => s, tb: () => l });
-var i = n(334465),
-    r = n(652215);
-let a = [r.BVt.CONJURE, r.BVt.CONJURE_PROJECT(":projectId")];
-function s(e) {
-    return null == e ? r.BVt.CONJURE : r.BVt.CONJURE_PROJECT(e);
+n.d(t, { _g: () => l, hU: () => o, q6: () => u, tb: () => d });
+var i = n(463347),
+    r = n(334465),
+    a = n(652215),
+    s = n(746080);
+let l = [a.BVt.CONJURE, a.BVt.CONJURE_PROJECT(":projectId")];
+function o(e) {
+    return null == e ? a.BVt.CONJURE : a.BVt.CONJURE_PROJECT(e);
 }
-function l(e) {
-    return null != (0, i.B)(e, { path: a, exact: !0 });
+function d(e) {
+    return null != (0, r.B)(e, { path: l, exact: !0 });
+}
+let c = [a.BVt.CONJURE, a.BVt.CHANNEL(i.pv.guildId(), s.VV.CONJURE, ":projectId")];
+function u(e) {
+    return null != (0, r.B)(e, { path: c });
 }

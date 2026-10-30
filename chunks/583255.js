@@ -22,32 +22,32 @@ var t = l(477900),
     v = l(111582),
     w = l(16619),
     S = l(281091),
-    D = l(738601),
-    I = l(980707),
-    M = l(477782),
-    y = l(972013),
+    y = l(738601),
+    D = l(980707),
+    I = l(477782),
+    M = l(972013),
     _ = l(927731),
     z = l(87501),
     N = l(105292);
 function B(e) {
     let { onImport: n, importDisabled: l } = e,
-        i = (0, u.bG)([y.A], () => y.A.isPinned());
-    return (0, t.jsxs)(I.W, {
+        i = (0, u.bG)([M.A], () => M.A.isPinned());
+    return (0, t.jsxs)(D.W, {
         navId: "conjure-rail",
         onClose: x.Z_,
         onSelect: x.Z_,
         "aria-label": N.intl.string(z.default.uk6jhJ),
         children: [
-            (0, t.jsxs)(M.rX, {
+            (0, t.jsxs)(I.rX, {
                 children: [
-                    (0, t.jsx)(M.Dr, { id: "new-project", label: N.intl.string(z.default["34+ZcS"]), action: C.o }),
-                    (0, t.jsx)(M.Dr, { id: "import", label: N.intl.string(z.default.tx8Azx), disabled: l, action: n }),
+                    (0, t.jsx)(I.Dr, { id: "new-project", label: N.intl.string(z.default["34+ZcS"]), action: C.o3 }),
+                    (0, t.jsx)(I.Dr, { id: "import", label: N.intl.string(z.default.tx8Azx), disabled: l, action: n }),
                 ],
             }),
-            (0, t.jsx)(M.rX, {
+            (0, t.jsx)(I.rX, {
                 children: i
-                    ? (0, t.jsx)(M.Dr, { id: "unpin", label: N.intl.string(z.default.dFMslg), action: _.l })
-                    : (0, t.jsx)(M.Dr, { id: "pin", label: N.intl.string(z.default["DE7U+m"]), action: _._ }),
+                    ? (0, t.jsx)(I.Dr, { id: "unpin", label: N.intl.string(z.default.dFMslg), action: _.l })
+                    : (0, t.jsx)(I.Dr, { id: "pin", label: N.intl.string(z.default["DE7U+m"]), action: _._ }),
             }),
         ],
     });
@@ -57,28 +57,28 @@ function Z() {
     let e,
         n = (0, m.tb)((0, o.zy)().pathname),
         [l, r] = i.useState(!1),
-        I = (0, s.Vd)("conjure"),
+        D = (0, s.Vd)("conjure"),
         {
-            workingProjectId: M,
-            activeProjectId: y,
+            workingProjectId: I,
+            activeProjectId: M,
             unreadProjectCount: _,
         } = ((e = (0, S.A)()),
         (0, u.cf)(
-            D.Nl,
+            y.Nl,
             () =>
                 (function (e) {
                     let n = null,
                         l = null,
                         t = 0;
                     for (let i of e) {
-                        let e = (0, D.AK)(i.id);
+                        let e = (0, y.AK)(i.id);
                         null != e && ((l ??= i.id), "working" === e ? (n ??= i.id) : t++);
                     }
                     return { workingProjectId: n, activeProjectId: l, unreadProjectCount: t };
                 })(e),
             [e],
         )),
-        Z = null != M,
+        Z = null != I,
         E = (0, u.bG)([f.Ay], () => f.Ay.useReducedMotion),
         G = (function (e) {
             let [n, l] = i.useState(e);
@@ -93,7 +93,7 @@ function Z() {
             );
         })(Z && !E),
         J = (0, w.rX)("ConjureRailButton"),
-        K = (0, v.A)(J, C.A),
+        K = (0, v.A)(J, C.Ay),
         { open: L } = K,
         P = N.intl.string(z.default.uk6jhJ),
         R = [
@@ -103,7 +103,7 @@ function Z() {
         ]
             .filter((e) => null != e)
             .join(", "),
-        U = i.useCallback(() => (0, C.A)(n ? null : (y ?? void 0)), [n, y]),
+        U = i.useCallback(() => (0, C.Ay)(n ? null : (M ?? void 0)), [n, M]),
         W = i.useCallback((e) => (0, x.jA)(e, () => (0, t.jsx)(B, { onImport: L, importDisabled: null == J })), [L, J]);
     return (0, t.jsxs)(A.c, {
         children: [
@@ -117,7 +117,7 @@ function Z() {
                     lowerBadge: _ > 0 ? (0, g.wN)(_, void 0, !0) : null,
                     lowerBadgeSize: { width: (0, c.o6)(_) },
                     children: (0, t.jsxs)(j.j, {
-                        ...I,
+                        ...D,
                         ariaLabel: R,
                         "aria-selected": n,
                         selected: (n || l) && !Z,
@@ -127,7 +127,7 @@ function Z() {
                         onMouseEnter: () => r(!0),
                         onMouseLeave: () => r(!1),
                         children: [
-                            (0, t.jsx)(k.Ay, { projectId: M }),
+                            (0, t.jsx)(k.Ay, { projectId: I }),
                             (0, t.jsx)(p.D, {
                                 size: "md",
                                 color: "currentColor",

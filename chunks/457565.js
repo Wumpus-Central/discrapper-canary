@@ -34,11 +34,11 @@ function p(t) {
                 ((e = await (0, c.gA)({ guild_id: y, install_scope: "user" })),
                     (0, u.ensureConnection)(e),
                     (0, u.sendUserMessage)(e, (0, g.aq)(t)),
-                    (0, d.A)(e),
+                    (0, d.Ay)(e),
                     S());
             } catch (t) {
                 if (null != e) {
-                    ((0, d.A)(e), S());
+                    ((0, d.Ay)(e), S());
                     return;
                 }
                 b((0, o.mG)(t));

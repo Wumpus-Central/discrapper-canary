@@ -12,13 +12,13 @@ var l = n(477900),
     m = n(260498),
     p = n(193072),
     g = n(95264);
-function x(e, t) {
+function h(e, t) {
     let n,
         l,
         i,
         p,
-        x,
         h,
+        x,
         { onExport: j } =
             ((n = e.id),
             (l = e.name),
@@ -45,7 +45,7 @@ function x(e, t) {
                             i.current = !1;
                         }));
             }, [n, l])),
-            (x = a.useCallback(
+            (h = a.useCallback(
                 (e) => {
                     let t = (0, d.vt)(e);
                     null != t
@@ -56,7 +56,7 @@ function x(e, t) {
                               confirmText: f.intl.string(c.default.gFHykw),
                               variant: "critical",
                               onConfirm: async () => {
-                                  (0, o.A)(n);
+                                  (0, o.Ay)(n);
                                   try {
                                       await (0, d.Hj)(n, e, f.intl.string(c.default.Owerd3));
                                   } catch {
@@ -67,7 +67,7 @@ function x(e, t) {
                 },
                 [n, l],
             )),
-            { onExport: p, onImport: (h = (0, d.yN)(x)).open, importInput: h.input });
+            { onExport: p, onImport: (x = (0, d.yN)(h)).open, importInput: x.input });
     return {
         projectId: e.id,
         projectName: e.name,
@@ -79,16 +79,16 @@ function x(e, t) {
         onExport: j,
     };
 }
-function h(e) {
+function x(e) {
     let { project: t, guildId: n } = e,
-        a = x(t, n);
+        a = h(t, n);
     return (0, l.jsx)(p.z, { ...a, onCloseMenu: i.Z_ });
 }
 function j(e) {
     let { project: t, guildId: n } = e,
-        a = x(t, n);
+        a = h(t, n);
     return (0, l.jsx)(p.A, { ...a, trigger: "iconButton" });
 }
 function v(e, t, n) {
-    (0, i.jA)(e, () => (0, l.jsx)(h, { project: t, guildId: n }));
+    (0, i.jA)(e, () => (0, l.jsx)(x, { project: t, guildId: n }));
 }

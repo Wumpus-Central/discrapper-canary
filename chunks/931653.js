@@ -25,17 +25,17 @@ f.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
     j.get(t)?.(i, n);
 });
 var A = i(625180),
-    E = i(457827),
-    R = i(373677),
-    b = i(754027),
-    y = i(939398),
+    y = i(457827),
+    E = i(373677),
+    R = i(754027),
+    b = i(939398),
     I = i(165610);
 function S(e) {
     let t = e.preview_application_id;
     if (null == t) return () => void 0;
-    let i = (0, R.PH)(null, (0, R.hR)(e.preview_supported_surfaces)),
-        n = (0, y.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
-        l = (0, b.Op)((0, b.jS)(e), i);
+    let i = (0, E.PH)(null, (0, E.hR)(e.preview_supported_surfaces)),
+        n = (0, b.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
+        l = (0, R.Op)((0, R.jS)(e), i);
     return (
         A.A.launchFrame({
             applicationId: t,
@@ -43,19 +43,19 @@ function S(e) {
             launch: null == n ? void 0 : { customId: n },
             showErrorModal: !1,
         }).catch(() => void 0),
-        () => (0, E.r)((0, I.VA)(t, l))
+        () => (0, y.r)((0, I.VA)(t, l))
     );
 }
 var M = i(858899),
     G = i(381991);
 async function O(e, t) {
     let i = await e.open(t);
-    return (i.ok ? (0, G.A)(i.projectId) : (0, M.P0)({ text: i.message, variant: "critical" }), i);
+    return (i.ok ? (0, G.Ay)(i.projectId) : (0, M.P0)({ text: i.message, variant: "critical" }), i);
 }
 function T(e) {
     let { project: t, currentGuildId: i, transitionState: f, onClose: A } = e,
-        [E, R] = l.useState(i),
-        [b, y] = l.useState(!1),
+        [y, E] = l.useState(i),
+        [R, b] = l.useState(!1),
         [I, M] = l.useState(0),
         G = l.useRef(null);
     l.useEffect(() => {
@@ -147,19 +147,19 @@ function T(e) {
             [T],
         ),
         W = l.useCallback(async () => {
-            if (b || null == G.current) return;
-            y(!0);
-            let e = await O(G.current, E);
-            e.ok ? await A() : (e.kept || M((e) => e + 1), y(!1));
-        }, [b, E, A]);
+            if (R || null == G.current) return;
+            b(!0);
+            let e = await O(G.current, y);
+            e.ok ? await A() : (e.kept || M((e) => e + 1), b(!1));
+        }, [R, y, A]);
     return (0, n.jsx)(r.a, {
         transitionState: f,
         onClose: A,
         title: k.intl.string(C.default["9wQTdG"]),
         size: "md",
         actions: [
-            { text: k.intl.string(k.t["ETE/oC"]), variant: "secondary", onClick: A, disabled: b },
-            { text: k.intl.string(C.default.XWgAfc), variant: "primary", onClick: W, loading: b },
+            { text: k.intl.string(k.t["ETE/oC"]), variant: "secondary", onClick: A, disabled: R },
+            { text: k.intl.string(C.default.XWgAfc), variant: "primary", onClick: W, loading: R },
         ],
         children: (0, n.jsxs)(d.B, {
             gap: 24,
@@ -179,9 +179,9 @@ function T(e) {
                     label: k.intl.string(C.default["maL0+X"]),
                     description: k.intl.string(C.default.R2uxWO),
                     options: P,
-                    value: E,
-                    onSelectionChange: R,
-                    disabled: b,
+                    value: y,
+                    onSelectionChange: E,
+                    disabled: R,
                     fullWidth: !0,
                 }),
             ],

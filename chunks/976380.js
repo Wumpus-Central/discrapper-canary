@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657788";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657799";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657788, Version Hash: 56efaf955e6ec1d259855d37febe04364f5c72ee`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657799, Version Hash: a8b8de98da954b8f2f12d21eddfdcb18b36e0a5b`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -3557,8 +3557,9 @@ let ry = (0, rl.Fe)({
                 n.e("916519"),
                 n.e("442637"),
                 n.e("46233"),
+                n.e("914454"),
                 n.e("688168"),
-                n.e("805172"),
+                n.e("655868"),
                 n.e("757653"),
                 n.e("382840"),
                 n.e("801169"),
@@ -4141,8 +4142,9 @@ let ry = (0, rl.Fe)({
                 n.e("916519"),
                 n.e("442637"),
                 n.e("46233"),
+                n.e("914454"),
                 n.e("688168"),
-                n.e("805172"),
+                n.e("655868"),
                 n.e("256769"),
                 n.e("983884"),
                 n.e("757653"),
@@ -4795,7 +4797,7 @@ let so = (0, rl.Fe)({
         name: "NotificationsInboxTitleBarButton",
     }),
     sd = (0, rl.Fe)({
-        createPromise: () => Promise.all([n.e("970915"), n.e("999045")]).then(n.bind(n, 708624)),
+        createPromise: () => Promise.all([n.e("970915"), n.e("914454"), n.e("999045")]).then(n.bind(n, 708624)),
         webpackId: 708624,
         name: "ConjureTitleBarButton",
     }),
@@ -26190,7 +26192,7 @@ let yE = "isHideDevBanner",
                     className: tf()(y_.Wz, y_.mr),
                     children: [
                         (0, b.jsx)(yu, { className: y_.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657788" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657799" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -29722,8 +29724,9 @@ let bM = (0, tZ.Fe)({
                 n.e("916519"),
                 n.e("442637"),
                 n.e("46233"),
+                n.e("914454"),
                 n.e("688168"),
-                n.e("805172"),
+                n.e("655868"),
                 n.e("757653"),
                 n.e("65694"),
                 n.e("26160"),

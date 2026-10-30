@@ -318,7 +318,7 @@ function ed(e) {
         }),
         { importArchive: m } = l,
         f = (0, h.yN)(a.useCallback((e) => m(e, "guild"), [m])),
-        x = a.useCallback((e) => (0, w.A)(e.id), []),
+        x = a.useCallback((e) => (0, w.Ay)(e.id), []),
         g = a.useCallback((e) => (0, n.jsx)(er.S, { project: e, guildId: s }), [s]),
         p = a.useCallback(
             (e) =>
@@ -1086,7 +1086,7 @@ function eK(e) {
                                         }
                                     },
                                 });
-                            (0, w.A)(l);
+                            (0, w.Ay)(l);
                         } catch (e) {
                             (0, x.P0)({
                                 text: e instanceof S ? R.intl.string(E.default["Q+l4Hv"]) : (0, p.mG)(e),
@@ -1145,7 +1145,7 @@ function eK(e) {
                             ((0, A.P6)(n, e, a, s ? void 0 : t), V());
                         },
                     });
-                    (j(""), (N.current = ""), (eo.current = !1), M(!1), (0, w.A)(n));
+                    (j(""), (N.current = ""), (eo.current = !1), M(!1), (0, w.Ay)(n));
                 } catch (e) {
                     (z(e instanceof eJ ? R.intl.string(E.default["903H7m"]) : (0, p.mG)(e)), (eo.current = !1), M(!1));
                 }

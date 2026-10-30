@@ -20,8 +20,8 @@ var r = n(477900),
     j = n(317608),
     k = n(548118),
     I = n(956790),
-    L = n(699426),
-    y = n(71393),
+    y = n(699426),
+    L = n(71393),
     A = n(186111),
     w = n(381991),
     E = n(754027),
@@ -69,7 +69,7 @@ var O = n(506868),
 function J(e) {
     if (!(0, E.Q5)(e.surface)) return void (0, M.returnToConjureFrameSurface)(e);
     let t = S.Ay.findProjectByApplicationId(e.applicationId);
-    null != t && (0, w.A)(t.id);
+    null != t && (0, w.Ay)(t.id);
 }
 function Q(e) {
     let { width: t, height: n } = e;
@@ -119,7 +119,7 @@ function Y(e) {
 function q(e) {
     let { frame: t, applicationName: n } = e,
         l = (0, g.A)(t.surface),
-        a = (0, o.bG)([y.A], () => y.A.getGuild(l), [l]);
+        a = (0, o.bG)([L.A], () => L.A.getGuild(l), [l]);
     return (0, r.jsx)("div", {
         className: z.Q,
         children: (0, r.jsxs)("div", {
@@ -237,7 +237,7 @@ function ee(e) {
         [g, x] = l.useState(() => new Map()),
         [C, j] = l.useState(!1),
         k = l.useRef(!1),
-        y = l.useCallback((e, t) => {
+        L = l.useCallback((e, t) => {
             v((n) => new Map(n).set(e, t));
         }, []),
         w = l.useCallback((e, t) => {
@@ -372,7 +372,7 @@ function ee(e) {
         null != d && d.height > 0 && F.set(d.position, d.height + 8),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(L.Ay, {
+                (0, r.jsx)(y.Ay, {
                     children: (0, r.jsx)("div", {
                         className: s()(X._I, { [X.cB]: C }),
                         children: m.map((e) => {
@@ -395,7 +395,7 @@ function ee(e) {
                                     edgeOffsetBottom: I.X8.bottom + (a ? 0 : n),
                                     edgeOffsetLeft: I.X8.left,
                                     edgeOffsetRight: I.X8.right,
-                                    onMove: y,
+                                    onMove: L,
                                     onHeightChange: w,
                                     onDragStart: S,
                                     onDragEnd: M,

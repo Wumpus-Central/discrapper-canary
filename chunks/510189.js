@@ -217,7 +217,7 @@ function K(e) {
 function O() {
     let e = (0, r.W5)({ path: c._g, exact: !0 }),
         n = (0, i.rX)("ConjureAppSidebar");
-    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: n, onNavigate: o.A });
+    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: n, onNavigate: o.Ay });
 }
 function H() {
     return (0, a.TW)("ConjureAppSidebar") ? (0, l.jsx)(O, {}) : null;

@@ -4496,7 +4496,7 @@ function s9(e) {
             return (
                 (e = t.id),
                 void (null != (0, sY.wu)(n) || null != (0, sX.oX)("openConjureProjectEditor")
-                    ? (0, sJ.A)(n.id)
+                    ? (0, sJ.Ay)(n.id)
                     : (0, sZ.A)(n.id, { initialTab: "app", isPreview: n.preview_application_id === e }))
             );
         },
