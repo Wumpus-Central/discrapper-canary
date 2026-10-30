@@ -1,43 +1,45 @@
-i.d(n, { A: () => f });
-var e = i(582128),
-    r = i(858899),
-    a = i(949757),
-    l = i(322227),
-    u = i(639519),
-    c = i(391712),
-    s = i(371169),
-    d = i(87501),
-    o = i(105292);
-function f(t, n) {
-    let [i, f] = e.useState(!1),
-        p = e.useRef(!1),
-        h = e.useCallback(
+i.d(n, { A: () => p });
+var a = i(582128),
+    e = i(858899),
+    l = i(949757),
+    r = i(567630),
+    u = i(322227),
+    c = i(639519),
+    s = i(391712),
+    d = i(371169),
+    o = i(87501),
+    f = i(105292);
+function p(t, n) {
+    let [i, p] = a.useState(!1),
+        h = a.useRef(!1),
+        v = a.useCallback(
             async (i) => {
-                let e = (0, a.vt)(i);
-                if (null != e) return void (0, r.P0)({ text: e, variant: "critical" });
-                if (null == t || p.current) return;
-                ((p.current = !0), f(!0));
-                let h = null;
+                let a = (0, l.vt)(i);
+                if (null != a) return void (0, e.P0)({ text: a, variant: "critical" });
+                if (null == t || h.current) return;
+                ((h.current = !0), p(!0));
+                let v = null;
                 try {
-                    ((h = await (0, s.gA)({ guild_id: t, install_scope: "user" })),
-                        (0, l.ensureConnection)(h),
-                        (0, l.stageModelSettings)(h, c.A4),
-                        await (0, a.Hj)(h, i, o.intl.string(d.default["LUc7/5"])),
-                        n(h));
+                    let a = await (0, r.A)(i, t);
+                    ((v = await (0, d.gA)({ guild_id: t, install_scope: a ?? "user" })),
+                        (0, u.ensureConnection)(v),
+                        (0, u.stageModelSettings)(v, s.A4),
+                        await (0, l.Hj)(v, i, f.intl.string(o.default["LUc7/5"])),
+                        n(v));
                 } catch (t) {
-                    if (null != h)
+                    if (null != v)
                         try {
-                            await (0, s.xx)(h);
+                            await (0, d.xx)(v);
                         } catch {}
-                    (0, r.P0)({
-                        text: null != h ? o.intl.string(d.default["Q+l4Hv"]) : (0, u.mG)(t),
+                    (0, e.P0)({
+                        text: null != v ? f.intl.string(o.default["Q+l4Hv"]) : (0, c.mG)(t),
                         variant: "critical",
                     });
                 } finally {
-                    ((p.current = !1), f(!1));
+                    ((h.current = !1), p(!1));
                 }
             },
             [t, n],
         );
-    return { ...(0, a.yN)(h), importing: i };
+    return { ...(0, l.yN)(v), importing: i };
 }

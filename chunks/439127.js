@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657731";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "657738";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657731, Version Hash: 58761cc70fa5d591c3f36fef138544a1f84f478a`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 657738, Version Hash: 8a1c1a8e0371e668efd3646022c17252b21205ca`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -3558,7 +3558,7 @@ let ry = (0, rl.Fe)({
                 n.e("442637"),
                 n.e("46233"),
                 n.e("688168"),
-                n.e("41531"),
+                n.e("805172"),
                 n.e("757653"),
                 n.e("382840"),
                 n.e("801169"),
@@ -4142,7 +4142,7 @@ let ry = (0, rl.Fe)({
                 n.e("442637"),
                 n.e("46233"),
                 n.e("688168"),
-                n.e("41531"),
+                n.e("805172"),
                 n.e("256769"),
                 n.e("983884"),
                 n.e("757653"),
@@ -5230,9 +5230,9 @@ let so = (0, rl.Fe)({
                 n.e("62052"),
                 n.e("503376"),
                 n.e("494678"),
+                n.e("494822"),
                 n.e("801856"),
                 n.e("311930"),
-                n.e("494822"),
                 n.e("131687"),
                 n.e("76428"),
                 n.e("834552"),
@@ -26190,7 +26190,7 @@ let yE = "isHideDevBanner",
                     className: tf()(y_.Wz, y_.mr),
                     children: [
                         (0, b.jsx)(yu, { className: y_.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657731" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "657738" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -29662,7 +29662,7 @@ let bC = (0, tZ.Fe)({
                 n.e("442637"),
                 n.e("46233"),
                 n.e("688168"),
-                n.e("41531"),
+                n.e("805172"),
                 n.e("757653"),
                 n.e("65694"),
                 n.e("26160"),
@@ -53822,9 +53822,9 @@ let Yh = (0, tZ.Fe)({
             n.e("503376"),
             n.e("616159"),
             n.e("494678"),
+            n.e("494822"),
             n.e("801856"),
             n.e("311930"),
-            n.e("494822"),
             n.e("841567"),
             n.e("413167"),
             n.e("766544"),

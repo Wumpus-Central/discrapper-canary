@@ -8290,7 +8290,7 @@ function rq(e) {
                     let n = new Uint8Array(e);
                     rH.$1(n, (e, n) => {
                         null != e && a(e);
-                        let l = Object.keys(n).reduce((e, t) => ({ ...e, [t]: JSON.parse(rH.he(n[t])) }), {}),
+                        let l = Object.keys(n).reduce((e, t) => ({ ...e, [t]: JSON.parse(rH.strFromU8(n[t])) }), {}),
                             i = l["manifest.json"];
                         t(l[`animations/${i.animations[0].id}.json`]);
                     });
