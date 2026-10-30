@@ -15,6 +15,8 @@ let r = {
     error_service_unavailable: l.default.yreXyD,
     error_rate_limited: l.default.d8lNBq,
     error_timeout: l.default.t1R7Rt,
+    error_usage_limit: l.default["9zBM8L"],
+    error_internal_error: l.default.ZnbiGS,
 };
 function s(e) {
     if (null != e.labelText && "" !== e.labelText) return e.labelText;
