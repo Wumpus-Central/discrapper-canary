@@ -12,15 +12,15 @@ var l = n(477900),
     m = n(465006),
     p = n(719564),
     g = n(17928),
-    x = n(617617),
-    h = n(573163),
+    h = n(617617),
+    x = n(573163),
     j = n(245179),
     v = n(404373),
     b = n(260498),
     k = n(189714),
     y = n(722701),
     _ = n(811587);
-let A = [b.Ay, j.A, h.Ay, x.A, y.A];
+let A = [b.Ay, j.A, x.Ay, h.A, y.A];
 var S = n(866665),
     w = n(22231),
     N = n(661531),
@@ -78,7 +78,7 @@ function G(e) {
 let H = a.memo(function (e) {
     let t,
         n,
-        { project: a, onSelect: i, selected: h = !1, renderActions: S, onContextMenu: w } = e,
+        { project: a, onSelect: i, selected: x = !1, renderActions: S, onContextMenu: w } = e,
         {
             status: N,
             unread: E,
@@ -102,7 +102,7 @@ let H = a.memo(function (e) {
                     publishState: y.A.getPublishStatus(t)?.publishState ?? null,
                     everPublished: n,
                 }),
-                unread: (0, v.tz)(t) && !(0, k.j)(x.A.settings, t),
+                unread: (0, v.tz)(t) && !(0, k.j)(h.A.settings, t),
                 deleting: b.Ay.isProjectDeleting(t),
             }),
             [t, n],
@@ -181,8 +181,8 @@ let H = a.memo(function (e) {
               children: [
                   K ? (0, l.jsx)("span", { className: L.dM, "aria-hidden": !0 }) : null,
                   (0, l.jsx)(u.D, {
-                      className: r()(L.nM, { [L.wH]: h, [L.gy]: K }),
-                      "aria-current": h ? "page" : void 0,
+                      className: r()(L.nM, { [L.wH]: x, [L.gy]: K }),
+                      "aria-current": x ? "page" : void 0,
                       tabIndex: M ? -1 : void 0,
                       onMouseDown: M
                           ? void 0
@@ -204,8 +204,16 @@ let H = a.memo(function (e) {
 });
 var W = n(831727);
 function R(e) {
-    let { projects: t, onSelect: n, selectedProjectId: a = null, renderProjectActions: i, onProjectContextMenu: r } = e;
+    let {
+        projects: t,
+        onSelect: n,
+        selectedProjectId: a = null,
+        renderProjectActions: i,
+        onProjectContextMenu: r,
+        listRef: s,
+    } = e;
     return (0, l.jsx)("ul", {
+        ref: s,
         className: W.p,
         children: t.map((e) =>
             (0, l.jsx)(H, { project: e, onSelect: n, selected: e.id === a, renderActions: i, onContextMenu: r }, e.id),
