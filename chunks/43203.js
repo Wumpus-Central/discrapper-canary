@@ -1,4 +1,4 @@
-n.d(t, { $: () => p, A: () => f });
+n.d(t, { $: () => f, A: () => p });
 var l = n(73153),
     i = n(376728),
     a = n(21599),
@@ -10,12 +10,12 @@ var l = n(73153),
     c = n(636401),
     m = n(613057),
     h = n(652215);
-async function p(e, t) {
+async function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         m = (0, a.LO)(n?.targetChannelId),
-        p = (0, a.LO)(n?.targetMessageId),
-        f = (0, a.LO)(n?.guildScheduledEventId),
-        g = (0, a.WU)({ baseCode: e, targetChannelId: m, targetMessageId: p, guildScheduledEventId: f }),
+        f = (0, a.LO)(n?.targetMessageId),
+        p = (0, a.LO)(n?.guildScheduledEventId),
+        g = (0, a.WU)({ baseCode: e, targetChannelId: m, targetMessageId: f, guildScheduledEventId: p }),
         { invite: A } = await i.Ay.resolveInvite(g, t);
     if (null == A) throw new c.A({ errorCode: h.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
     return (
@@ -39,13 +39,13 @@ async function p(e, t) {
         { invite: A, code: e }
     );
 }
-let f = {
+let p = {
     [h.e$_.OPEN_INVITE]: {
         scope: m.hj,
         async handler(e) {
             let { args: t } = e,
                 { code: n, ...l } = t;
-            await p(n, "RPC OPEN_INVITE Handler", l);
+            await f(n, "RPC OPEN_INVITE Handler", l);
         },
     },
 };

@@ -10,8 +10,8 @@ var l = n(477900),
     c = n(631670),
     m = n(475743),
     h = n(775121),
-    p = n(139286),
-    f = n(80556),
+    f = n(139286),
+    p = n(80556),
     g = n(557722),
     A = n(363195),
     v = n(870570),
@@ -21,14 +21,14 @@ var l = n(477900),
     _ = n(607399),
     T = n(821609),
     y = n(331322),
-    j = n(297264),
-    N = n(834730),
-    I = n(700525),
-    S = n(975571),
+    N = n(297264),
+    j = n(834730),
+    S = n(700525),
+    I = n(975571),
     b = n(652215),
     R = n(105292),
     M = n(690807);
-let O = S.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+let O = I.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
 class w extends i.PureComponent {
     static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
     renderFields() {
@@ -36,7 +36,7 @@ class w extends i.PureComponent {
         return (0, l.jsx)(l.Fragment, {
             children: e.map((e) =>
                 e === b.Fz7.CAPTCHA
-                    ? (0, l.jsx)(I.A, { onVerify: i, theme: n }, t)
+                    ? (0, l.jsx)(S.A, { onVerify: i, theme: n }, t)
                     : (0, l.jsx)(T.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
             ),
         });
@@ -71,11 +71,11 @@ class w extends i.PureComponent {
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, l.jsx)(j.D, {
+                                        (0, l.jsx)(N.D, {
                                             variant: "heading-xl/normal",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
-                                        (0, l.jsx)(N.E, {
+                                        (0, l.jsx)(j.E, {
                                             variant: "text-md/normal",
                                             children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
@@ -98,7 +98,7 @@ class w extends i.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsx)(N.E, {
+                        (0, l.jsx)(j.E, {
                             variant: "text-sm/normal",
                             className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
@@ -109,13 +109,13 @@ class w extends i.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, l.jsx)(N.E, {
+                                (0, l.jsx)(j.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
-                                    children: R.intl.format(R.t.WL51ZR, { supportURL: S.A.getSubmitRequestURL() }),
+                                    children: R.intl.format(R.t.WL51ZR, { supportURL: I.A.getSubmitRequestURL() }),
                                 }),
                                 (0, l.jsx)("div", { className: C()(M.qr, M.mf), children: "\u2022" }),
-                                (0, l.jsx)(N.E, {
+                                (0, l.jsx)(j.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -148,11 +148,11 @@ function k() {
                     );
                     return (t) => (0, l.jsx)(e, { ...t });
                 },
-                { modalKey: P.H1, Layer: f.Ay },
+                { modalKey: P.H1, Layer: p.Ay },
             ));
     }
     return (
-        (0, p.A)(
+        (0, f.A)(
             {
                 type: a.ImpressionTypes.MODAL,
                 name: a.ImpressionNames.USER_ACTION_REQUIRED,
@@ -184,7 +184,7 @@ function k() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: f.Ay, onCloseCallback: y },
+                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: y },
                 );
         }, [E, T]),
         (0, l.jsx)(w, {
@@ -216,9 +216,9 @@ function k() {
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, l.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, l.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: L.V, Layer: f.Ay },
+                          { modalKey: L.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {
@@ -240,7 +240,7 @@ function k() {
                                 ...t,
                             });
                     },
-                    { Layer: f.Ay },
+                    { Layer: p.Ay },
                 );
             },
         })

@@ -1,46 +1,46 @@
-a.d(t, { MZ: () => d, wJ: () => c });
-var r = a(975571),
-    n = a(927812),
-    l = a(105292);
-let o = /\{(promotion_end_date|claim_end_date|help_center_url)\}/g,
+l.d(t, { MZ: () => c, wJ: () => u });
+var n = l(975571),
+    a = l(927812),
+    i = l(105292);
+let r = /\{(promotion_end_date|claim_end_date|help_center_url)\}/g,
     s = /\[([^\]\r\n]+)\]\(\{help_center_url\}\)/g;
-function i(e, t) {
+function o(e, t) {
     return null == e ? "" : e.toLocaleDateString(t, { month: "long", day: "numeric", year: "numeric" });
 }
-function c(e, t) {
-    let a = null;
+function u(e, t) {
+    let l = null;
     return (
-        null != t.helpCenterId && "" !== t.helpCenterId && (a = r.A.getArticleURL(t.helpCenterId)),
-        (null != a ? e : e.replace(s, "$1")).replace(o, (e, r) => {
-            switch (r) {
+        null != t.helpCenterId && "" !== t.helpCenterId && (l = n.A.getArticleURL(t.helpCenterId)),
+        (null != l ? e : e.replace(s, "$1")).replace(r, (e, n) => {
+            switch (n) {
                 case "promotion_end_date":
-                    return i(t.endsAt, t.locale);
+                    return o(t.endsAt, t.locale);
                 case "claim_end_date":
-                    return i(t.redemptionEndsAt, t.locale);
+                    return o(t.redemptionEndsAt, t.locale);
                 case "help_center_url":
-                    return a ?? "";
+                    return l ?? "";
                 default:
                     return "";
             }
         })
     );
 }
-function d(e) {
-    var t, a, r;
-    let o,
-        { promotion: s, promotionProgress: i, progressIndicator: d, helpCenterId: u, daysRemaining: m, locale: p } = e,
-        g =
+function c(e) {
+    var t, l, n;
+    let r,
+        { promotion: s, promotionProgress: o, progressIndicator: c, helpCenterId: d, daysRemaining: E, locale: p } = e,
+        A =
             ((t = s.rewardStatus),
-            (a = i?.current ?? 0),
-            (o = (0, n.x)(d.rewardStates, t, a)),
-            { title: o?.title ?? d.title, description: o?.description ?? d.description }),
-        h = { locale: p, endsAt: s.endsAt, redemptionEndsAt: s.redemptionEndsAt, helpCenterId: u },
-        v = null != i ? l.intl.formatToPlainString(l.t.lyXyiY, { current: i.current, target: i.target }) : null,
-        x = null != m && m > 0 ? l.intl.formatToPlainString(l.t.w4GEvw, { days: m }) : null;
+            (l = o?.current ?? 0),
+            (r = (0, a.x)(c.rewardStates, t, l)),
+            { title: r?.title ?? c.title, description: r?.description ?? c.description }),
+        f = { locale: p, endsAt: s.endsAt, redemptionEndsAt: s.redemptionEndsAt, helpCenterId: d },
+        C = null != o ? i.intl.formatToPlainString(i.t.lyXyiY, { current: o.current, target: o.target }) : null,
+        S = null != E && E > 0 ? i.intl.formatToPlainString(i.t.w4GEvw, { days: E }) : null;
     return {
-        title: c(g.title, h),
-        description: ((r = g.description), null != r && "" !== r ? c(r, h) : null),
-        progressText: v,
-        timeLeftText: x,
+        title: u(A.title, f),
+        description: ((n = A.description), null != n && "" !== n ? u(n, f) : null),
+        progressText: C,
+        timeLeftText: S,
     };
 }

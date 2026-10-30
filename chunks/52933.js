@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => A, BA: () => j });
+n.d(t, { Ay: () => j, BA: () => A });
 var s = n(477900),
     l = n(503698),
     i = n.n(l),
@@ -13,7 +13,7 @@ var s = n(477900),
     g = n(746080),
     x = n(105292),
     f = n(240103);
-function j(e) {
+function A(e) {
     let { channel: t, isNew: n } = e,
         s = (0, h.kt)(t),
         l = s.slice(void 0, 3),
@@ -30,15 +30,15 @@ function j(e) {
         forumPostContainsTags: s.length > 0,
     };
 }
-function A(e) {
+function j(e) {
     let { channel: t, isNew: n, tagsClassName: l, className: h } = e,
         {
             shownTags: g,
-            remainingTags: A,
+            remainingTags: j,
             moreTagsCount: v,
             isPinned: p,
             shouldRenderTagsRow: N,
-        } = j({ channel: t, isNew: n }),
+        } = A({ channel: t, isNew: n }),
         { enabled: y } = o.A.useConfig({ location: "forum-post-tags" }),
         { tagFilter: b } = (0, u.R)(t.id),
         C = (0, m.cq)(g);
@@ -74,7 +74,7 @@ function A(e) {
                                 e.id,
                             ),
                         ),
-                  v > 0 ? (0, s.jsx)(m.q6, { tags: A, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: y }) : null,
+                  v > 0 ? (0, s.jsx)(m.q6, { tags: j, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: y }) : null,
               ],
           })
         : null;

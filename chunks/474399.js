@@ -7,8 +7,8 @@ var r = n(284009),
     d = n(734057),
     s = n(573163);
 let o = {},
-    c = new Set();
-class A extends i.Ay.Store {
+    A = new Set();
+class c extends i.Ay.Store {
     static displayName = "ForumPostUnreadCountStore";
     initialize() {
         this.waitFor(a.A, d.A, s.Ay);
@@ -19,13 +19,13 @@ class A extends i.Ay.Store {
     getThreadIdsMissingCounts(e, t) {
         return (
             u()(a.A.hasLoaded(e), "must wait for THREAD_LIST_SYNC before calling this"),
-            t.filter((e) => !(e in o) && !c.has(e))
+            t.filter((e) => !(e in o) && !A.has(e))
         );
     }
 }
-let f = new A(l.h, {
+let f = new c(l.h, {
     CONNECTION_OPEN: function () {
-        ((o = {}), (c = new Set()));
+        ((o = {}), (A = new Set()));
     },
     THREAD_CREATE: function (e) {
         let { channel: t, isNewlyCreated: n } = e;
@@ -56,7 +56,7 @@ let f = new A(l.h, {
         let { threads: t } = e;
         t.forEach((e) => {
             let { threadId: t } = e;
-            return c.add(t);
+            return A.add(t);
         });
     },
 });

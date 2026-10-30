@@ -25,9 +25,9 @@ var l = n(477900),
     y = n(101392),
     T = n(652215),
     I = n(746080),
-    k = n(834730),
-    _ = n(123292),
-    M = n(688810),
+    _ = n(834730),
+    M = n(123292),
+    k = n(688810),
     R = n(359800),
     w = n(206828),
     P = n(769015),
@@ -37,7 +37,7 @@ var l = n(477900),
 function G(e) {
     let t,
         { application: n, size: i = "md", analyticsLocation: s = d.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
-        { analyticsLocations: a } = (0, M.Ay)(s),
+        { analyticsLocations: a } = (0, k.Ay)(s),
         { canStartAuthorization: r, hasAlreadyLinked: o, startAuthorization: c, fetched: u } = (0, w.RD)(n),
         m = (0, R.z)(c, o);
     if (!u || !r || o) return null;
@@ -50,9 +50,9 @@ function G(e) {
             className: O._,
             children: [
                 (0, l.jsx)(P.A, { game: n, size: P.M.MEDIUM }),
-                (0, l.jsx)(k.E, { variant: "text-sm/medium", color: "text-default", className: O.d, children: t }),
+                (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "text-default", className: O.d, children: t }),
                 h
-                    ? (0, l.jsx)(_.Q, {
+                    ? (0, l.jsx)(M.Q, {
                           variant: "primary",
                           size: "sm",
                           text: D.intl.string(L.default.EBSaL4),
@@ -80,7 +80,7 @@ let B = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function V(e) {
     let { parentChannel: t, transitionState: n, onClose: a } = e,
         u = i.useMemo(() => t.availableTags ?? [], [t.availableTags]),
-        [{ textValue: k, richValue: _ }, M] = i.useState(() => (0, m.N3)()),
+        [{ textValue: _, richValue: M }, k] = i.useState(() => (0, m.N3)()),
         [R, w] = i.useState(!1),
         [P, O] = i.useState(() => new Set()),
         H = (0, v.t4)(P),
@@ -130,12 +130,12 @@ function V(e) {
                 g = t.hasFlag(I.lx.REQUIRE_TAG),
                 f = g && 0 === l.size,
                 { rateLimitPerUser: j } = t,
-                k = j > 0,
-                _ = (0, p.bG)([y.A], () => y.A.getSlowmodeCooldownGuess(t.id, y.R.CreateThread)),
-                M = (0, C._i)(t),
+                _ = j > 0,
+                M = (0, p.bG)([y.A], () => y.A.getSlowmodeCooldownGuess(t.id, y.R.CreateThread)),
+                k = (0, C._i)(t),
                 [R, w] = i.useState(!1),
                 [P, L] = i.useState(!1),
-                D = !R && n.trim().length > 0 && n.length <= v.YS && !(k && !M && _ > 0),
+                D = !R && n.trim().length > 0 && n.length <= v.YS && !(_ && !k && M > 0),
                 O = i.useCallback(async () => {
                     if (D) {
                         if (f) return void L(!0);
@@ -154,17 +154,17 @@ function V(e) {
                 voiceToggleDisabled: m,
                 isTagRequired: g,
                 hasTagRequiredError: P && f,
-                isSlowmodeEnabled: k,
+                isSlowmodeEnabled: _,
                 rateLimitPerUser: j,
-                slowmodeCooldownGuess: _,
-                isBypassSlowmode: M,
+                slowmodeCooldownGuess: M,
+                isBypassSlowmode: k,
                 submitting: R,
                 canSubmit: D,
                 submit: O,
             };
         })({
             parentChannel: t,
-            description: k,
+            description: _,
             appliedTagIds: P,
             upload: j.Se,
             onThreadCreated: (e) => {
@@ -172,7 +172,7 @@ function V(e) {
             },
         }),
         el = i.useCallback((e, t, n) => {
-            M({ textValue: t, richValue: n });
+            k({ textValue: t, richValue: n });
         }, []),
         ei = i.useCallback((e) => {
             O((t) => {
@@ -208,8 +208,8 @@ function V(e) {
                         type: z,
                         channel: t,
                         placeholder: D.intl.string(L.default["SU/IAE"]),
-                        textValue: k,
-                        richValue: _,
+                        textValue: _,
+                        richValue: M,
                         focused: R,
                         onChange: el,
                         onFocus: () => w(!0),

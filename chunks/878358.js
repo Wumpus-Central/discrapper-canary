@@ -21,8 +21,8 @@ var r = n(477900),
     N = n(498137),
     S = n(192339),
     C = n(144103),
-    b = n(834109),
-    _ = n(486020),
+    _ = n(834109),
+    b = n(486020),
     R = n(48763),
     I = n(105292),
     T = n(478718),
@@ -68,13 +68,13 @@ function L(e) {
     let { stats: t } = e,
         { topGuild: n, topGuildAcronymCharacter: s, topEmoji: l, topGame: c } = t,
         o = a.useMemo(
-            () => (null != n ? _.Ay.getGuildIconURL({ id: n.guildId, icon: n.guildIcon, size: 16 }) : void 0),
+            () => (null != n ? b.Ay.getGuildIconURL({ id: n.guildId, icon: n.guildIcon, size: 16 }) : void 0),
             [n],
         ),
         u = a.useMemo(
             () =>
                 c?.applicationImageId != null
-                    ? _.Ay.getApplicationIconURL({ id: c.applicationId, icon: c.applicationImageId, size: 16 })
+                    ? b.Ay.getApplicationIconURL({ id: c.applicationId, icon: c.applicationImageId, size: 16 })
                     : void 0,
             [c],
         ),
@@ -167,7 +167,7 @@ function F(e) {
         children: [
             (0, r.jsx)(u.A, { children: I.intl.string(y.default.Og2R9d) }),
             (0, r.jsx)(S.A, {}),
-            (0, r.jsx)(b.A, { variant: null != s ? "full" : "short", className: M.Ss }),
+            (0, r.jsx)(_.A, { variant: null != s ? "full" : "short", className: M.Ss }),
             null != s && null != m
                 ? (0, r.jsx)(C.A, { powerLevel: m.powerLevel, powerLevelUnits: m.powerLevelUnits })
                 : null,

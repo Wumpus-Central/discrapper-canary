@@ -1,8 +1,8 @@
 a.d(e, { A: () => g });
 var t = a(478437),
     n = a(17928),
-    i = a(73153),
-    s = a(403010),
+    s = a(73153),
+    i = a(403010),
     c = a(927813);
 let r = new Set(),
     d = {};
@@ -17,7 +17,7 @@ function u(l) {
 }
 class v extends n.Ay.Store {
     initialize() {
-        this.waitFor(s.A);
+        this.waitFor(i.A);
     }
     static displayName = "VoiceChannelStartTimeStore";
     getStartTime(l) {
@@ -27,7 +27,7 @@ class v extends n.Ay.Store {
         return r.has(l);
     }
 }
-let g = new v(i.h, {
+let g = new v(s.h, {
     GUILD_CREATE: u,
     GUILD_DELETE: u,
     CONNECTION_RESUMED: h,

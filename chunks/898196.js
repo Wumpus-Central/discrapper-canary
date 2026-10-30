@@ -1,21 +1,21 @@
-l.d(t, { i: () => r });
+l.d(t, { i: () => s });
 var a = l(477900);
 l(582128);
 var n = l(661531),
     i = l(996682),
-    s = l(27989);
-function r(e) {
+    r = l(27989);
+function s(e) {
     let {
             size: t = "md",
             width: l,
-            height: r,
+            height: s,
             color: o = n.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: c = "",
             ...u
         } = e,
-        d = (0, s.J)(t),
+        d = (0, r.J)(t),
         m = d?.width ?? l,
-        f = d?.height ?? r;
+        f = d?.height ?? s;
     return (0, a.jsxs)("svg", {
         ...(0, i.A)(u),
         xmlns: "http://www.w3.org/2000/svg",

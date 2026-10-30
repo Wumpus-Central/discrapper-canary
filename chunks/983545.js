@@ -5,15 +5,15 @@ var n = l(582128),
     r = l(17928),
     s = l(775602),
     o = l(365491),
-    c = l(856686),
-    u = l(758836),
+    u = l(856686),
+    c = l(758836),
     d = l(652215);
 let E = {
-        [u.G2.AVATAR_DECORATIONS]: i.q.AVATAR_DECORATION,
-        [u.G2.PROFILE_EFFECTS]: i.q.PROFILE_EFFECT,
-        [u.G2.NAMEPLATES]: i.q.NAMEPLATE,
-        [u.G2.PROFILE_FRAMES]: i.q.PROFILE_FRAME,
-        [u.G2.BUNDLES]: i.q.BUNDLE,
+        [c.G2.AVATAR_DECORATIONS]: i.q.AVATAR_DECORATION,
+        [c.G2.PROFILE_EFFECTS]: i.q.PROFILE_EFFECT,
+        [c.G2.NAMEPLATES]: i.q.NAMEPLATE,
+        [c.G2.PROFILE_FRAMES]: i.q.PROFILE_FRAME,
+        [c.G2.BUNDLES]: i.q.BUNDLE,
     },
     p = (e) => {
         let t = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion),
@@ -26,45 +26,45 @@ let E = {
             } = (0, o.v)(),
             C = n.useMemo(() => {
                 var t;
-                return (0, u.dF)(e) || (t = e) === u.G2.COLLABS || t === u.G2.OFFER_ELIGIBLE ? u.G2.CATALOG : e;
+                return (0, c.dF)(e) || (t = e) === c.G2.COLLABS || t === c.G2.OFFER_ELIGIBLE ? c.G2.CATALOG : e;
             }, [e]),
-            [S, _] = n.useState(C),
-            [g, h] = n.useState(u.Pf.VISIBLE);
+            [S, g] = n.useState(C),
+            [_, O] = n.useState(c.Pf.VISIBLE);
         (n.useEffect(() => {
-            S !== u.G2.GAME_SERVERS && f(S);
+            S !== c.G2.GAME_SERVERS && f(S);
         }, [S, f]),
             n.useEffect(() => {
-                if ((_(C), e === u.G2.CATALOG)) A();
-                else if (e === u.G2.COLLABS) i();
-                else if (e === u.G2.OFFER_ELIGIBLE) p();
-                else if ((0, u.dF)(e)) {
+                if ((g(C), e === c.G2.CATALOG)) A();
+                else if (e === c.G2.COLLABS) i();
+                else if (e === c.G2.OFFER_ELIGIBLE) p();
+                else if ((0, c.dF)(e)) {
                     let t = E[e];
                     null != t ? l(t) : A();
                 }
             }, [C, e, l, i, p, A]));
-        let { clearError: O } = (0, c.S)(),
+        let { clearError: h } = (0, u.S)(),
             b = (0, a.W6)(),
             L = n.useCallback(
                 async (e, n) => {
-                    if ((O(), e === u.G2.CATALOG)) A();
-                    else if (e === u.G2.COLLABS) i();
-                    else if (e === u.G2.OFFER_ELIGIBLE) p();
-                    else if ((0, u.dF)(e) && e !== S) {
+                    if ((h(), e === c.G2.CATALOG)) A();
+                    else if (e === c.G2.COLLABS) i();
+                    else if (e === c.G2.OFFER_ELIGIBLE) p();
+                    else if ((0, c.dF)(e) && e !== S) {
                         let t = E[e];
                         null != t ? l(t) : A();
                     }
                     if (S !== e) {
                         if (n && !t) {
                             var a;
-                            (h(u.Pf.OUT), await ((a = 1.1 * u.H1), new Promise((e) => setTimeout(e, a))));
+                            (O(c.Pf.OUT), await ((a = 1.1 * c.H1), new Promise((e) => setTimeout(e, a))));
                         }
-                        (_(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
-                            n && !t && h(u.Pf.IN),
+                        (g(e === c.G2.HOME || e === c.G2.ORBS || e === c.G2.GAME_SERVERS ? e : c.G2.CATALOG),
+                            n && !t && O(c.Pf.IN),
                             b.push(d.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            h(u.Pf.VISIBLE));
+                            O(c.Pf.VISIBLE));
                     }
                 },
-                [b, l, i, p, A, S, O, t],
+                [b, l, i, p, A, S, h, t],
             );
-        return { selectedTab: S, transitionState: g, transitionToTab: L };
+        return { selectedTab: S, transitionState: _, transitionToTab: L };
     };

@@ -1,12 +1,12 @@
-l.d(t, { A: () => I });
+l.d(t, { A: () => G });
 var n = l(477900),
     a = l(582128),
     i = l(503698),
     r = l.n(i),
     s = l(77692),
     o = l(702841),
-    c = l(297264),
-    u = l(653887),
+    u = l(297264),
+    c = l(653887),
     d = l(866665),
     E = l(881636),
     p = l(661531),
@@ -14,29 +14,29 @@ var n = l(477900),
     f = l(607470),
     C = l(531685),
     S = l(993408),
-    _ = l(62010),
-    g = l(105292),
-    h = l(543136);
-let O = function (e) {
-    let { category: t, daysRemainingText: l = g.t.Io7ozn, className: a } = e;
+    g = l(62010),
+    _ = l(105292),
+    O = l(543136);
+let h = function (e) {
+    let { category: t, daysRemainingText: l = _.t.Io7ozn, className: a } = e;
     if (!(0, S.HF)(t.unpublishedAt)) return null;
     let i = (0, S.WU)(t.unpublishedAt),
-        s = i > 1 ? g.intl.formatToPlainString(l, { days: i }) : g.intl.string(g.t.Bc13HF);
+        s = i > 1 ? _.intl.formatToPlainString(l, { days: i }) : _.intl.string(_.t.Bc13HF);
     return (0, n.jsx)("div", {
-        className: r()(h.Z, a),
-        children: (0, n.jsx)(_.E, { type: { text: s }, variant: "inverted" }),
+        className: r()(O.Z, a),
+        children: (0, n.jsx)(g.E, { type: { text: s }, variant: "inverted" }),
     });
 };
 var b = l(212407),
     L = l(761977);
-function I(e) {
+function G(e) {
     let { category: t, onSelect: l } = e,
         i = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion),
         S = (0, o.bG)([C.A], () => C.A.isFocused()),
-        { catalogBannerStatic: _, catalogBannerAnimated: h, catalogBannerRive: I } = (0, b.MV)(t),
-        T = a.useRef(null),
-        m = null != I,
-        G =
+        { catalogBannerStatic: g, catalogBannerAnimated: O, catalogBannerRive: G } = (0, b.MV)(t),
+        I = a.useRef(null),
+        m = null != G,
+        T =
             null != l
                 ? {
                       role: "button",
@@ -49,38 +49,38 @@ function I(e) {
                   }
                 : {};
     return (0, n.jsxs)("div", {
-        ref: T,
+        ref: I,
         className: r()(L.sW, { [L.by]: m, [L.vk]: null != l }),
-        ...G,
+        ...T,
         children: [
-            (0, n.jsx)(s.s, { children: (0, n.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
+            (0, n.jsx)(s.s, { children: (0, n.jsx)(u.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, n.jsx)("div", {
                 className: L.Db,
                 children: m
-                    ? (0, n.jsx)(u._, {
-                          src: I,
+                    ? (0, n.jsx)(c._, {
+                          src: G,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
-                          eventTargetRef: T,
+                          eventTargetRef: I,
                           autoplay: !0,
                       })
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)("img", { className: L.ze, src: _, alt: "" }),
-                              null != h &&
+                              (0, n.jsx)("img", { className: L.ze, src: g, alt: "" }),
+                              null != O &&
                                   !i &&
                                   S &&
-                                  (0, n.jsx)(f.A, { src: h, className: L.tr, autoPlay: !0, loop: !0 }),
+                                  (0, n.jsx)(f.A, { src: O, className: L.tr, autoPlay: !0, loop: !0 }),
                           ],
                       }),
             }),
-            (0, n.jsx)(O, { category: t, className: L.v0, daysRemainingText: g.t["8gsP5M"] }),
+            (0, n.jsx)(h, { category: t, className: L.v0, daysRemainingText: _.t["8gsP5M"] }),
             null != l &&
                 (0, n.jsx)("div", {
                     className: L.IG,
                     children: (0, n.jsx)(d.m, {
-                        text: g.intl.string(g.t["o1ol+T"]),
+                        text: _.intl.string(_.t["o1ol+T"]),
                         children: (0, n.jsx)(E.u, {
                             "aria-hidden": "true",
                             size: "sm",

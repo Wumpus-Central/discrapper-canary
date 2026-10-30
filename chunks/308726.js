@@ -1,4 +1,4 @@
-(i.d(e, { Ay: () => ty, ru: () => tf }), i(321073));
+(i.d(e, { Ay: () => tp, ru: () => tf }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(284009),
@@ -10,8 +10,8 @@ var n = i(477900),
     d = i(534890),
     A = i(820081),
     f = i(241541),
-    p = i(559647),
-    y = i(866665),
+    y = i(559647),
+    p = i(866665),
     m = i(408278),
     g = i(297152),
     I = i(834730),
@@ -155,8 +155,8 @@ function ts(t) {
     }
     let O = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === g ? (E ? d.ChatIcon : A.B) : h ? f.D : p.SendMessageIcon),
-        (0, n.jsx)(y.m, {
+        (e = "sent" === g ? (E ? d.ChatIcon : A.B) : h ? f.D : y.SendMessageIcon),
+        (0, n.jsx)(p.m, {
             text: O,
             "aria-label": O,
             children: (0, n.jsx)(m.K, {
@@ -195,13 +195,13 @@ function to(t) {
             }
         }
     }
-    let p = ta.intl.string(ta.t.OKsSCR);
-    return (0, n.jsx)(y.m, {
-        text: p,
-        "aria-label": p,
+    let y = ta.intl.string(ta.t.OKsSCR);
+    return (0, n.jsx)(p.m, {
+        text: y,
+        "aria-label": y,
         children: (0, n.jsx)(m.K, {
             icon: "sent" === u ? A.B : g.E,
-            "aria-label": p,
+            "aria-label": y,
             loading: "sending" === u,
             onClick: f,
             variant: "subtle" === a ? "icon-only" : "secondary",
@@ -410,7 +410,7 @@ function tf(t) {
     let e = tA(t);
     return (0, n.jsx)(td, { ...e, className: t.className, variant: t.variant });
 }
-function tp(t) {
+function ty(t) {
     let { activity: e, currentUser: i, showInviteButton: l = !0 } = t,
         a = (0, ti.JH)(e?.application_id),
         r = (0, v.h)(e?.application_id),
@@ -443,7 +443,7 @@ function tp(t) {
               ],
           });
 }
-function ty(t) {
+function tp(t) {
     let { locked: e } = t,
         i = (0, ti.b4)(),
         l = i?.id,
@@ -459,7 +459,7 @@ function ty(t) {
         : (0, n.jsxs)("div", {
               className: tr.kL,
               children: [
-                  (0, n.jsx)(tp, { activity: u, currentUser: s }),
+                  (0, n.jsx)(ty, { activity: u, currentUser: s }),
                   (0, n.jsx)(td, { ...d, className: tr.l_, hideHeader: !0 }),
               ],
           });

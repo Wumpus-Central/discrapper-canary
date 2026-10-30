@@ -2,8 +2,8 @@ a.d(e, { Ay: () => g, CB: () => u, c0: () => v });
 var t = a(477900);
 a(582128);
 var n = a(17928),
-    i = a(231723),
-    s = a(192308);
+    s = a(231723),
+    i = a(192308);
 if (221552 == a.j) var c = a(477782);
 if (221552 == a.j) var r = a(173936);
 var d = a(317525),
@@ -11,7 +11,7 @@ var d = a(317525),
     h = a(105292);
 let u = "guild-connection-roles";
 function v(l) {
-    (0, s.openModalLazy)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 a.e("587882"),
@@ -24,9 +24,9 @@ function v(l) {
         },
         {
             modalKey: u,
-            contextKey: i.SY,
+            contextKey: s.SY,
             onCloseRequest: () => {
-                (0, s.closeModal)(u, i.SY);
+                (0, i.closeModal)(u, s.SY);
             },
         },
     );

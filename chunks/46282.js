@@ -10,8 +10,8 @@ var n = i(477900),
     d = i(560595),
     A = i(929921),
     f = i(734057),
-    p = i(71393),
-    y = i(999926),
+    y = i(71393),
+    p = i(999926),
     m = i(576705),
     g = i(309010),
     I = i(287809),
@@ -22,8 +22,8 @@ function S(t) {
         o = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
         d = (0, a.bG)([f.A], () => f.A.getChannel(o), [o]),
         A = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
-        E = (0, a.bG)([y.Ay], () => (0, c.A)(y.Ay)),
-        _ = (0, a.bG)([p.A, m.A], () => null != d && (0, u.vz)(d, p.A, m.A));
+        E = (0, a.bG)([p.Ay], () => (0, c.A)(p.Ay)),
+        _ = (0, a.bG)([y.A, m.A], () => null != d && (0, u.vz)(d, y.A, m.A));
     return l.useCallback(async () => {
         await C({
             pid: e,
@@ -52,8 +52,8 @@ async function N(t) {
         d = g.Ay.getVoiceChannelId(),
         A = f.A.getChannel(d),
         E = I.default.getCurrentUser(),
-        _ = null != A && (0, u.vz)(A, p.A, m.A),
-        S = (0, c.A)(y.Ay);
+        _ = null != A && (0, u.vz)(A, y.A, m.A),
+        S = (0, c.A)(p.Ay);
     await C({
         pid: e,
         voiceChannelId: d,
@@ -77,15 +77,15 @@ async function C(t) {
         canGoLive: u,
         canStream: c,
         analyticsLocations: f,
-        allowOneClickGoLive: p,
-        onBeforeShowModal: y,
+        allowOneClickGoLive: y,
+        onBeforeShowModal: p,
         onModalStreamStart: m,
         onOneClickGoLive: g,
         appContext: I,
         selectSource: S = !1,
     } = t;
     if (u && c) {
-        if (p && null !== l) {
+        if (y && null !== l) {
             let t = A.A.getState().preset;
             if (t === E.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, o.eO)({ location: "overlay _goLive" });
@@ -96,7 +96,7 @@ async function C(t) {
         }
         if (null == a)
             return void (0, r.P0)({ text: _.intl.string(_.t.OKnWyb), variant: "critical", surface: "overlay" });
-        (y?.(),
+        (p?.(),
             (0, s.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([

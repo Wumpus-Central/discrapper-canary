@@ -1,8 +1,8 @@
-i.d(t, { db: () => r, gR: () => c, n9: () => l });
-var s,
+s.d(t, { db: () => r, gR: () => c, n9: () => l });
+var i,
     n,
     a,
-    l = (((s = {})[(s.XGPP = 1)] = "XGPP"), s),
+    l = (((i = {})[(i.XGPP = 1)] = "XGPP"), i),
     r =
         (((n = {}).NOT_FETCHED = "NOT_FETCHED"),
         (n.FETCHING = "FETCHING"),

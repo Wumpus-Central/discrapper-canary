@@ -1,19 +1,19 @@
-t.d(n, { G: () => i, z: () => s });
+t.d(n, { G: () => a, z: () => u });
 var l = t(477900),
     r = t(582128),
-    a = t(738768);
-let i = r.createContext(null);
-function s(e) {
+    i = t(738768);
+let a = r.createContext(null);
+function u(e) {
     let { text: n } = e,
-        t = r.useContext(i),
-        s = null != t ? (0, a.q$)(n, t) : null;
-    return null == s
+        t = r.useContext(a),
+        u = null != t ? (0, i.q$)(n, t) : null;
+    return null == u
         ? n
-        : s.map((e, n) => {
-              let { text: t, highlight: a } = e;
+        : u.map((e, n) => {
+              let { text: t, highlight: i } = e;
               return (0, l.jsx)(
                   r.Fragment,
-                  { children: a ? (0, l.jsx)("span", { className: "highlight", children: t }) : t },
+                  { children: i ? (0, l.jsx)("span", { className: "highlight", children: t }) : t },
                   n,
               );
           });

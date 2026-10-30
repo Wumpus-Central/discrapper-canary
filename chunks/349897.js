@@ -18,7 +18,7 @@ var r = n(477900),
     S = n(507216),
     E = n(105292),
     y = n(328115);
-function b(e) {
+function A(e) {
     let {
         leftPx: t,
         rightPx: n,
@@ -45,8 +45,8 @@ function b(e) {
                     style: {
                         left: i ? h.to((e) => t - e) : t,
                         right: n,
-                        width: i ? h.to((e) => `${C + 2 * e}px`) : C,
-                        height: i ? h.to((e) => `${C + 2 * e}px`) : C,
+                        width: i ? h.to((e) => `${b + 2 * e}px`) : b,
+                        height: i ? h.to((e) => `${b + 2 * e}px`) : b,
                     },
                     children: (0, r.jsx)(g, {
                         size: "custom",
@@ -58,8 +58,8 @@ function b(e) {
             }),
     });
 }
-let C = 12,
-    A = { tension: 500, friction: 30, clamp: !0 };
+let b = 12,
+    C = { tension: 500, friction: 30, clamp: !0 };
 function j(e) {
     switch (e) {
         case p.B.LAUGHTER:
@@ -103,7 +103,7 @@ function T(e, t, n) {
         u = l.useRef(null),
         [{ expansion: s }, c] = (0, h.z)(() => ({
             expansion: 0,
-            config: A,
+            config: C,
             onRest: () => {
                 null == u.current && a(null);
             },
@@ -132,7 +132,7 @@ function T(e, t, n) {
             for (let e of r) l.some((t) => Math.abs(t.position - e.position) < v.Vd) || l.push(e);
             return (l.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms), l.map((e) => e.event));
         }, [e, d, t, n]),
-        f = l.useMemo(() => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: C, gapPx: 4 })), [m]),
+        f = l.useMemo(() => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: b, gapPx: 4 })), [m]),
         p = l.useCallback(
             (e, n) => {
                 let l = i === e.index,
@@ -148,7 +148,7 @@ function T(e, t, n) {
                               : null;
                 return null == c || null == d
                     ? null
-                    : (0, r.jsx)(b, {
+                    : (0, r.jsx)(A, {
                           ...e,
                           activated: u,
                           gapPx: 4,

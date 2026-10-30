@@ -32,9 +32,9 @@ function y(e, t) {
     let n = e.startSec + e.durationSec;
     return t >= n ? n - t : 0;
 }
-var b = n(507216),
-    C = n(105292),
-    A = n(243189);
+var A = n(507216),
+    b = n(105292),
+    C = n(243189);
 let j = l.memo(function (e) {
     let t,
         { source: n, masterSec: i, isPlaying: u, playbackRate: s, isGridView: o, onMediaElement: d, children: E } = e,
@@ -45,7 +45,7 @@ let j = l.memo(function (e) {
         N = i < n.startSec,
         w = Math.ceil(y(n, i)),
         L = (0, h.rB)(w),
-        R = n.owner?.name ?? n.label ?? C.intl.string(b.default["6XuC8e"]),
+        R = n.owner?.name ?? n.label ?? b.intl.string(A.default["6XuC8e"]),
         { ref: k, width: P, height: O } = (0, c.Ay)();
     (l.useEffect(() => {
         let e = j.current;
@@ -62,22 +62,22 @@ let j = l.memo(function (e) {
     let G = o && !T && 0 !== w;
     return (
         o && T
-            ? (t = C.intl.formatToPlainString(b.default.zc1itm, { name: R }))
-            : o && (t = C.intl.formatToPlainString(N ? b.default.dUPcpR : b.default.q8TlkE, { name: R, time: L })),
+            ? (t = b.intl.formatToPlainString(A.default.zc1itm, { name: R }))
+            : o && (t = b.intl.formatToPlainString(N ? A.default.dUPcpR : A.default.q8TlkE, { name: R, time: L })),
         (0, r.jsxs)("div", {
-            className: A.Vs,
+            className: C.Vs,
             role: o ? "group" : void 0,
             "aria-label": t,
             "data-testid": "discord-web-multi-video-player-grid-tile",
             children: [
                 (0, r.jsxs)("div", {
                     ref: k,
-                    className: a()(A.iH, { [A.om]: o }),
+                    className: a()(C.iH, { [C.om]: o }),
                     children: [
                         E ??
                             (0, r.jsx)(m.A, {
                                 ref: j,
-                                className: a()(A.cr, { [A.qb]: G }),
+                                className: a()(C.cr, { [C.qb]: G }),
                                 poster: (0, f.s)(n.poster, n, P, O),
                                 preload: "auto",
                                 playsInline: !0,
@@ -92,7 +92,7 @@ let j = l.memo(function (e) {
                         o &&
                             null != n.owner &&
                             (0, r.jsx)("div", {
-                                className: A.cL,
+                                className: C.cL,
                                 children: (0, r.jsx)(g.eu, {
                                     src: n.owner.avatarUrl,
                                     size: (P ?? 0) > 300 ? p._3.SIZE_32 : p._3.SIZE_20,
@@ -103,7 +103,7 @@ let j = l.memo(function (e) {
                 }),
                 G &&
                     (0, r.jsxs)("div", {
-                        className: A.rm,
+                        className: C.rm,
                         "aria-hidden": !0,
                         children: [
                             (0, r.jsx)(v.Q, { size: "xs", color: "currentColor" }),
@@ -118,9 +118,9 @@ var I = n(683063),
     _ = n(599507);
 let T = l.memo(function (e) {
     let { source: t, label: n, isActive: l, isOriginal: i, currentMasterTimeSec: u, onSelect: s } = e,
-        d = t.owner?.name ?? n ?? C.intl.string(b.default["6XuC8e"]),
+        d = t.owner?.name ?? n ?? b.intl.string(A.default["6XuC8e"]),
         m = S(t, u),
-        { ref: x, width: E, height: A } = (0, c.Ay)(m, l, i);
+        { ref: x, width: E, height: C } = (0, c.Ay)(m, l, i);
     if (!m && !l && !i) {
         let e = (0, h.rB)(y(t, u));
         return (0, r.jsx)(I.u, {
@@ -131,7 +131,7 @@ let T = l.memo(function (e) {
             ariaHidden: !0,
             children: (0, r.jsx)("div", {
                 className: _.RG,
-                "aria-label": C.intl.formatToPlainString(b.default.JFaxs2, { name: d, time: e }),
+                "aria-label": b.intl.formatToPlainString(A.default.JFaxs2, { name: d, time: e }),
                 "data-testid": "discord-web-multi-video-player-pov-out-of-range",
                 children: (0, r.jsx)(g.eu, { src: t.owner?.avatarUrl, size: p._3.SIZE_32, "aria-hidden": !0 }),
             }),
@@ -140,8 +140,8 @@ let T = l.memo(function (e) {
     return (0, r.jsxs)(o.D, {
         className: a()(_.uF, { [_._]: l }),
         "aria-label": l
-            ? C.intl.formatToPlainString(b.default["RSMzC/"], { name: d })
-            : C.intl.formatToPlainString(b.default["4AH1Vb"], { name: d }),
+            ? b.intl.formatToPlainString(A.default["RSMzC/"], { name: d })
+            : b.intl.formatToPlainString(A.default["4AH1Vb"], { name: d }),
         "aria-current": l,
         onClick: function (e) {
             (e.stopPropagation(), s(t));
@@ -155,7 +155,7 @@ let T = l.memo(function (e) {
                     (0, r.jsx)("img", {
                         ref: x,
                         className: _.a1,
-                        src: (0, f.s)(t.poster, t, E, A),
+                        src: (0, f.s)(t.poster, t, E, C),
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -181,7 +181,7 @@ function N(e) {
             onEnded: v,
             onLoadedMetadata: x,
             onError: y,
-            onPlay: A,
+            onPlay: C,
             onPause: I,
             children: _,
             original: N,
@@ -519,15 +519,15 @@ function N(e) {
             },
             [],
         ));
-    let eb = l.useRef($);
-    function eC(e) {
+    let eA = l.useRef($);
+    function eb(e) {
         e.id !== er.id && ex(e.id, Z);
     }
-    function eA(e) {
+    function eC(e) {
         ei() || P.onCanPlay?.(e);
     }
     (l.useEffect(() => {
-        eb.current !== $ && ((eb.current = $), O.current?.load());
+        eA.current !== $ && ((eA.current = $), O.current?.load());
     }, [$]),
         l.useEffect(() => {
             if (g) return;
@@ -553,8 +553,8 @@ function N(e) {
                                 ref: U,
                                 className: a()(u, { [M._b]: ej, [M.l3]: L }),
                                 poster: (0, f.s)(er.poster ?? i, er, V, D),
-                                onCanPlay: eA,
-                                onCanPlayThrough: eA,
+                                onCanPlay: eC,
+                                onCanPlayThrough: eC,
                                 onTimeUpdate: function (e) {
                                     let t = O.current;
                                     if (null != t && null == eo.current && null == ed.current) {
@@ -595,7 +595,7 @@ function N(e) {
                                     er.id !== N.id ? eS(er.startSec + (O.current?.currentTime ?? 0)) : y?.(e);
                                 },
                                 onPlay: function (e) {
-                                    (K(!0), es(Z), A?.(e));
+                                    (K(!0), es(Z), C?.(e));
                                 },
                                 onPause: function (e) {
                                     (K(!1), ec(), I?.(e));
@@ -641,18 +641,18 @@ function N(e) {
                                     {
                                         source: e,
                                         label:
-                                            e.id === N.id ? (e.label ?? C.intl.string(b.default["9tdsDk"])) : e.label,
+                                            e.id === N.id ? (e.label ?? b.intl.string(A.default["9tdsDk"])) : e.label,
                                         isActive: e.id === er.id,
                                         isOriginal: e.id === N.id,
                                         currentMasterTimeSec: Z,
-                                        onSelect: eC,
+                                        onSelect: eb,
                                     },
                                     e.id,
                                 ),
                             ),
                         (0, r.jsx)(o.D, {
                             className: M.LI,
-                            "aria-label": C.intl.string(b.default.lykjkX),
+                            "aria-label": b.intl.string(A.default.lykjkX),
                             "aria-pressed": !1,
                             onClick: function (e) {
                                 if ((e.stopPropagation(), L)) {
