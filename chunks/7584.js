@@ -133,7 +133,7 @@ function y(e) {
 let D = String.fromCodePoint(917631),
     v = String.fromCodePoint(127988),
     b = /^[\u{E0061}-\u{E007A}]$/u;
-function P(e, t) {
+function M(e, t) {
     if (!0 !== t && !L(e)) return [{ type: "text", text: e }];
     let n = "",
         i = [],
@@ -162,7 +162,7 @@ function P(e, t) {
     }
     return (null != n && "" !== n && i.push(y(n)), i);
 }
-function M(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
     return g(e)?.surrogates ?? t;
 }
@@ -193,22 +193,22 @@ let w = {
     },
     contentHasUnicodeOrEmoji: L,
     translateInlineEmojiToSurrogates: function (e) {
-        return e.replace(u, (e, t) => M(t, e));
+        return e.replace(u, (e, t) => P(t, e));
     },
     maybeTranslateSurrogatesToInlineEmoji: function (e) {
         if (!L(e)) return null;
-        let t = P(e, !0)
+        let t = M(e, !0)
             .map((e) => ("text" === e.type ? e.text : e.emojiName))
             .join("");
         return t === e ? null : t;
     },
-    findInlineEmojisFromSurrogates: P,
+    findInlineEmojisFromSurrogates: M,
     translateSurrogatesToInlineEmoji: function (e) {
-        return P(e)
+        return M(e)
             .map((e) => ("text" === e.type ? e.text : e.emojiName))
             .join("");
     },
-    convertNameToSurrogate: M,
+    convertNameToSurrogate: P,
     convertSurrogateToName: U,
     convertShortcutToName: function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],

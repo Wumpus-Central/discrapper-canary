@@ -1,8 +1,8 @@
-n.d(l, { Q7: () => u, bF: () => a, hW: () => r });
+n.d(t, { Q7: () => u, bF: () => a, hW: () => r });
 var e = n(809526),
     i = n(105292);
-function a(t) {
-    switch (t) {
+function a(l) {
+    switch (l) {
         case "simple":
             return e.default["/tlOR5"];
         case "balanced":
@@ -13,8 +13,8 @@ function a(t) {
             return null;
     }
 }
-function u(t, l) {
-    let n = a(l);
-    return null != n ? { title: t, body: i.intl.string(n) } : { body: t };
+function u(l, t) {
+    let n = a(t);
+    return null != n ? { title: l, body: i.intl.string(n) } : { body: l };
 }
 let r = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" };

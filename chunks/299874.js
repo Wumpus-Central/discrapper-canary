@@ -28,8 +28,8 @@ var i = n(477900),
     D = n(812993),
     v = n(548118),
     b = n(71393),
-    P = n(771640),
-    M = n(105292),
+    M = n(771640),
+    P = n(105292),
     U = n(327580);
 function w(e) {
     let { guildId: t, animate: n } = e,
@@ -93,10 +93,10 @@ function x(e) {
         C = r.useCallback(() => {
             (a || S(!1), h?.(!1));
         }, [a, h]),
-        v = n || null == s ? null : (0, P.oi)(s),
+        v = n || null == s ? null : (0, M.oi)(s),
         b =
             !n && l > 0
-                ? (0, P.wN)(
+                ? (0, M.wN)(
                       l,
                       o ? _.A.colors.BACKGROUND_MOD_STRONG.css : _.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                   )
@@ -119,7 +119,7 @@ function x(e) {
             "aria-owns": c,
             children: [
                 (0, i.jsx)(L.A, {
-                    children: M.intl.formatToPlainString(M.t["90/DwM"], { folderName: d, mentions: l }),
+                    children: P.intl.formatToPlainString(P.t["90/DwM"], { folderName: d, mentions: l }),
                 }),
                 (0, i.jsx)(y.Q, {
                     "aria-hidden": !0,
@@ -166,7 +166,7 @@ let W = (0, T.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                 sorting: D = !1,
                 onDragStart: v,
                 onDragEnd: b,
-                onExpandCollapse: P,
+                onExpandCollapse: M,
                 onHeaderClick: w,
                 onContextMenu: G,
                 renderChildNode: K,
@@ -196,11 +196,11 @@ let W = (0, T.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             }, []),
             ed = r.useCallback(
                 (e) => {
-                    (("ArrowRight" === e.key && !S) || ("ArrowLeft" === e.key && S)) && P();
+                    (("ArrowRight" === e.key && !S) || ("ArrowLeft" === e.key && S)) && M();
                 },
-                [P, S],
+                [M, S],
             ),
-            ec = null != Q && "" !== Q ? Q : null != L && "" !== L ? L : M.intl.string(M.t.xV9hVh),
+            ec = null != Q && "" !== Q ? Q : null != L && "" !== L ? L : P.intl.string(P.t.xV9hVh),
             eu = (0, o.Vd)(`${Z}`),
             e_ = `folder-items-${Z}`,
             eE =
@@ -248,7 +248,7 @@ let W = (0, T.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       isMentionLowImportance: O,
                                       tooltipName: ec,
                                       folderGroupId: e_,
-                                      onClick: w ?? P,
+                                      onClick: w ?? M,
                                       onContextMenu: G,
                                       onHoverChange: et,
                                       onKeyDown: ed,

@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(530804),
     g = n(71393),
     C = n(576705),
-    y = n(686502),
-    j = n(175203),
+    j = n(686502),
+    y = n(175203),
     I = n(263854),
     N = n(652215),
     v = n(886179);
@@ -60,7 +60,7 @@ function E(e) {
         W = U.map(
             (e) => (t) =>
                 (0, i.jsx)(
-                    j.Ay,
+                    y.Ay,
                     {
                         participant: e,
                         channel: S,
@@ -90,7 +90,7 @@ function E(e) {
         !S.isGuildStageVoice() &&
         (w >= 2 && Y && !F && !H
             ? W.push((e) =>
-                  (0, i.jsx)(y.y, {
+                  (0, i.jsx)(j.y, {
                       channel: S,
                       guild: P,
                       width: e,
@@ -103,7 +103,7 @@ function E(e) {
               1 === w &&
               V &&
               W.push((e) =>
-                  (0, i.jsx)(y.y, {
+                  (0, i.jsx)(j.y, {
                       channel: S,
                       guild: P,
                       width: e,

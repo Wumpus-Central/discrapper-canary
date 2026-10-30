@@ -122,7 +122,7 @@ function v() {
     });
 }
 var b = n(661531);
-let P = {
+let M = {
         default: D.colorDefault,
         brand: D.colorBrand,
         danger: D.colorDanger,
@@ -130,7 +130,7 @@ let P = {
         "premium-gradient": D.colorPremiumGradient,
         success: D.colorSuccess,
     },
-    M = -(b.A.modules.menu.BORDER_WIDTH.resolve() + b.A.modules.menu.SCROLLER_BLOCK_PADDING.resolve());
+    P = -(b.A.modules.menu.BORDER_WIDTH.resolve() + b.A.modules.menu.SCROLLER_BLOCK_PADDING.resolve());
 function U(e) {
     let { contents: t, label: n, className: i, color: a = "default" } = e;
     return 0 === t.length
@@ -141,7 +141,7 @@ function U(e) {
               className: i,
               children: [
                   null != n
-                      ? (0, r.jsx)("div", { className: l()(D.groupLabel, D.hideInteraction, P[a]), children: n })
+                      ? (0, r.jsx)("div", { className: l()(D.groupLabel, D.hideInteraction, M[a]), children: n })
                       : null,
                   t,
               ],
@@ -248,7 +248,7 @@ function Z(e) {
             dontCloseOnAction: v,
             iconProps: b,
         } = e,
-        { onSelect: M, onInteraction: U } = a.useContext(y.x),
+        { onSelect: P, onInteraction: U } = a.useContext(y.x),
         H = a.useRef(null),
         W = R("MenuItem"),
         Y = a.useCallback(
@@ -256,10 +256,10 @@ function Z(e) {
                 if ((U?.({ type: y.Q.DEFAULT }), null == m)) return !1;
                 ((e.shiftKey && L) || v || g(),
                     e.persist(),
-                    M?.(),
+                    P?.(),
                     (e.nativeEvent.view ?? window).requestAnimationFrame(() => m(e)));
             },
-            [m, g, M, L, v, U],
+            [m, g, P, L, v, U],
         );
     return (
         a.useEffect(() => {
@@ -267,7 +267,7 @@ function Z(e) {
         }, [p, N]),
         (0, r.jsxs)(w.D, {
             innerRef: H,
-            className: l()(D.item, D.labelContainer, q.nM, P[t], C, { [D.disabled]: I, [D.focused]: p, [O ?? ""]: p }),
+            className: l()(D.item, D.labelContainer, q.nM, M[t], C, { [D.disabled]: I, [D.focused]: p, [O ?? ""]: p }),
             onClick: I ? void 0 : Y,
             "aria-disabled": I,
             ...T,
@@ -409,7 +409,7 @@ function et(e) {
         maxHeight: 360,
         onOpenChange: I,
         spacing: h ? -4 : 4,
-        alignmentSpacing: M,
+        alignmentSpacing: P,
         placement: t,
         portal: !1,
         crossAccessFlip: !1,
@@ -448,7 +448,7 @@ function en(e) {
             },
             [c, E, u, _],
         ),
-        f = o ? l()(D.item, P[n], { [D.focused]: i }) : D.customItem;
+        f = o ? l()(D.item, M[n], { [D.focused]: i }) : D.customItem;
     return (0, r.jsx)(w.D, {
         innerRef: A,
         className: f,
@@ -490,7 +490,7 @@ function er(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: m,
-        className: l()(D.item, D.checkboxContainer, D.labelContainer, q.nM, P[t], f, {
+        className: l()(D.item, D.checkboxContainer, D.labelContainer, q.nM, M[t], f, {
             [D.disabled]: _,
             [D.focused]: E,
             [I ?? ""]: E,
@@ -557,7 +557,7 @@ function es(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: p,
-        className: l()(D.item, D.labelContainer, q.nM, P[t], { [D.disabled]: _, [D.focused]: E }),
+        className: l()(D.item, D.labelContainer, q.nM, M[t], { [D.disabled]: _, [D.focused]: E }),
         onClick: _ ? void 0 : T,
         ...A,
         "aria-checked": s,
@@ -614,7 +614,7 @@ function eo(e) {
     }, [_, o, A]);
     return (0, r.jsxs)(w.D, {
         innerRef: h,
-        className: l()(D.item, D.switchItem, P[t], E, { [D.disabled]: d, [D.focused]: c }),
+        className: l()(D.item, D.switchItem, M[t], E, { [D.disabled]: d, [D.focused]: c }),
         onClick: d ? void 0 : f,
         "aria-checked": o,
         "aria-disabled": d,
@@ -687,7 +687,7 @@ function eu(e) {
     );
     return (0, r.jsxs)("div", {
         ref: h,
-        className: l()(D.item, D.textInputItem, D.hideInteraction, P[t], { [D.disabled]: c }),
+        className: l()(D.item, D.textInputItem, D.hideInteraction, M[t], { [D.disabled]: c }),
         "aria-disabled": c,
         ...E,
         children: [
@@ -755,7 +755,7 @@ function e_(e) {
         );
     return (0, r.jsxs)("div", {
         onClick: I,
-        className: l()(D.item, P[t], {
+        className: l()(D.item, M[t], {
             [D.disabled]: s,
             [D.focused]: c && o,
             [D.hideInteraction]: !c,
@@ -795,7 +795,7 @@ function eE(e) {
         }, [i]),
         (0, r.jsx)("div", {
             ref: c,
-            className: l()(D.item, P[t], { [D.disabled]: n, [D.focused]: s && i, [D.hideInteraction]: !s }),
+            className: l()(D.item, M[t], { [D.disabled]: n, [D.focused]: s && i, [D.hideInteraction]: !s }),
             "aria-disabled": n,
             ...o,
             children: d,
@@ -910,7 +910,7 @@ function eA(e) {
     d()(S.current, f) || (S.current = f);
     let O = R("Menu"),
         b = h.find((e) => null != e.key)?.key,
-        P = (function (e) {
+        M = (function (e) {
             let {
                     navId: t,
                     items: n,
@@ -1070,14 +1070,14 @@ function eA(e) {
             defaultIsUsingKeyboardNavigation: C.Ay.keyboardModeEnabled,
         });
     a.useEffect(() => {
-        P.isUsingKeyboardNavigation ? C.Ay.keyboardModeEnabled || (0, N.uS)() : C.Ay.keyboardModeEnabled && (0, N.Bm)();
-    }, [P.isUsingKeyboardNavigation]);
-    let M = a.useRef(null),
+        M.isUsingKeyboardNavigation ? C.Ay.keyboardModeEnabled || (0, N.uS)() : C.Ay.keyboardModeEnabled && (0, N.Bm)();
+    }, [M.isUsingKeyboardNavigation]);
+    let P = a.useRef(null),
         w = a.useContext(T.jQ),
         G = "none" !== (w?.focus ?? "none");
-    ((0, m.tj)(M, { disable: G }),
+    ((0, m.tj)(P, { disable: G }),
         a.useEffect(() => {
-            G && M.current?.focus();
+            G && P.current?.focus();
         }, [G]));
     let x = i ? g.d_ : g.Ip,
         k = a.useMemo(() => ({ onSelect: E, onInteraction: A }), [E, A]);
@@ -1089,8 +1089,8 @@ function eA(e) {
                 "--custom-menu-viewport-padding": O ? "48px" : "16px",
                 "--custom-menu-flexible-min-width": O ? "144px" : "188px",
             },
-            ...P.getContainerProps(),
-            ref: M,
+            ...M.getContainerProps(),
+            ref: P,
             "aria-label": e["aria-label"],
             children: (0, r.jsxs)(x, {
                 className: l()(D.scroller, { [D.scrollerWithScrollbar]: !i }),
@@ -1099,7 +1099,7 @@ function eA(e) {
                         (0, r.jsx)(Z, {
                             disabled: !0,
                             void_label: () => (0, r.jsx)(ef, {}),
-                            menuItemProps: P.getItemProps({ path: ["empty"] }),
+                            menuItemProps: M.getItemProps({ path: ["empty"] }),
                             isFocused: !1,
                             onFocus: () => {},
                             onClose: _,
@@ -1314,7 +1314,7 @@ function eA(e) {
                                 }
                                 return t;
                             }, []);
-                        })(h, P, [], _),
+                        })(h, M, [], _),
                 ],
             }),
         }),

@@ -11,7 +11,7 @@ n.d(t, {
     GU: () => k,
     Gy: () => et,
     HA: () => ew,
-    Hz: () => eM,
+    Hz: () => eP,
     L4: () => eS,
     LX: () => m,
     Me: () => ed,
@@ -20,7 +20,7 @@ n.d(t, {
     P4: () => N,
     QK: () => eT,
     QY: () => el,
-    Qw: () => eP,
+    Qw: () => eM,
     RC: () => ea,
     SC: () => Q,
     T7: () => eg,
@@ -61,7 +61,7 @@ n.d(t, {
     s3: () => x,
     sL: () => eN,
     sT: () => S,
-    sc: () => P,
+    sc: () => M,
     sz: () => O,
     tS: () => eu,
     td: () => F,
@@ -71,7 +71,7 @@ n.d(t, {
     xy: () => eG,
     yz: () => es,
     z2: () => em,
-    zj: () => M,
+    zj: () => P,
     zq: () => z,
 });
 var i,
@@ -107,8 +107,8 @@ let C = "alt+c",
     D = 2,
     v = 1,
     b = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    P = /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
-    M = 0.1,
+    M = /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
+    P = 0.1,
     U = "clips-gallery",
     w = "clips_player",
     G = 640,
@@ -207,10 +207,10 @@ let ep = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
     eD = 0.35,
     ev = 0.02,
     eb = 2;
-function eP(e, t) {
+function eM(e, t) {
     return Math.max(ev, Math.min(eD, (0.5 * e) / t));
 }
-var eM = (((h = {}).NONE = "none"), (h.SMALL = "small"), (h.MEDIUM = "medium"), (h.LARGE = "large"), h);
+var eP = (((h = {}).NONE = "none"), (h.SMALL = "small"), (h.MEDIUM = "medium"), (h.LARGE = "large"), h);
 let eU = { none: 0, small: 0.02, medium: 0.05, large: 0.1 },
     ew = 0.4,
     eG = "none",

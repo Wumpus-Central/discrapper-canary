@@ -28,8 +28,8 @@ var i = n(192308),
     D = n(174459),
     v = n(988102),
     b = n(174768),
-    P = n(652215),
-    M = n(746080),
+    M = n(652215),
+    P = n(746080),
     U = n(758836);
 let w = () => Promise.resolve();
 w = n(113673).playApplication;
@@ -58,7 +58,7 @@ function F(e, t) {
         d = v.A.isEmail(r),
         c = v.A.isPhoneNumber(r),
         u = v.A.isUserTagLike(r),
-        E = null != l && (0, M.jq)(l);
+        E = null != l && (0, P.jq)(l);
     function A(e) {
         return null == e ? null : e.type === _.rD.IN_APP_NAVIGATION ? e.type + "_" + e.record.type : e.type;
     }
@@ -122,7 +122,7 @@ function H() {
             let e = O.A.getChannel(i);
             t = null != e ? e.type : null;
         }
-        D.default.track(P.HAw.QUICKSWITCHER_OPENED, {
+        D.default.track(M.HAw.QUICKSWITCHER_OPENED, {
             source: e,
             current_guild_id: n,
             current_channel_id: i,
@@ -132,7 +132,7 @@ function H() {
         r.h.dispatch({ type: "QUICKSWITCHER_SHOW", ...k(t) }));
 }
 function j() {
-    (F(P.HAw.QUICKSWITCHER_CLOSED), V());
+    (F(M.HAw.QUICKSWITCHER_CLOSED), V());
 }
 function W(e) {
     r.h.dispatch({ type: "QUICKSWITCHER_SEARCH", ...k(e) });
@@ -146,7 +146,7 @@ function K(e) {
     if (
         (V(),
         (0, i.closeAllModals)(),
-        F(P.HAw.QUICKSWITCHER_RESULT_SELECTED, e),
+        F(M.HAw.QUICKSWITCHER_RESULT_SELECTED, e),
         (function (e) {
             if (!S.A.isEnabled()) return !1;
             let t = null;
@@ -169,7 +169,7 @@ function K(e) {
     )
         return void r.h.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: e });
     let { type: C, record: L } = e,
-        y = { page: P.liQ.QUICK_SWITCHER };
+        y = { page: M.liQ.QUICK_SWITCHER };
     switch (C) {
         case _.rD.GUILD:
             (0, m.u)(L.id, { navigationReplace: !0 });
@@ -187,14 +187,14 @@ function K(e) {
         }
         case _.rD.USER:
             (a.A.openPrivateChannel({ recipientIds: [L.id], location: "Quickswitcher" }),
-                l.A.channelListScrollTo(P.ME, O.A.getDMFromUserId(L.id)));
+                l.A.channelListScrollTo(M.ME, O.A.getDMFromUserId(L.id)));
             break;
         case _.rD.GROUP_DM:
-            ((0, T.iN)(L.id, { navigationReplace: !0 }), l.A.channelListScrollTo(P.ME, L.id));
+            ((0, T.iN)(L.id, { navigationReplace: !0 }), l.A.channelListScrollTo(M.ME, L.id));
             break;
         case _.rD.APPLICATION:
             let D = R.A.getActiveLibraryApplication(L.id);
-            w(L.id, D, { analyticsParams: { source: P.ThZ.QUICK_SWITCHER, location: P.ThZ.QUICK_SWITCHER } });
+            w(L.id, D, { analyticsParams: { source: M.ThZ.QUICK_SWITCHER, location: M.ThZ.QUICK_SWITCHER } });
             break;
         case _.rD.GAME_PROFILE:
             f.default.openGameProfileModal({
@@ -216,7 +216,7 @@ function K(e) {
                 {
                     let { PlaygroundStore: t } = n(764451),
                         i = e.record.collectionId ?? null;
-                    (t.setState({ selectedCollection: i, selectedStory: null }), (0, d.id)(P.zgK.COMPONENT_PLAYGROUND));
+                    (t.setState({ selectedCollection: i, selectedStory: null }), (0, d.id)(M.zgK.COMPONENT_PLAYGROUND));
                 }
             } else
                 e.record.type === E.t1.SHOP_ORBS_TAB
@@ -234,7 +234,7 @@ function $(e) {
     function n() {
         (V(),
             (0, i.closeAllModals)(),
-            F(P.HAw.QUICKSWITCHER_RESULT_SELECTED, e),
+            F(M.HAw.QUICKSWITCHER_RESULT_SELECTED, e),
             r.h.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: e }));
     }
     switch (t) {
@@ -265,5 +265,5 @@ function $(e) {
 }
 async function z(e) {
     let { invite: t } = await o.Ay.resolveInvite(e, "Quick Switcher");
-    null != t && r.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: t, code: e, context: P.BRT.APP });
+    null != t && r.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: t, code: e, context: M.BRT.APP });
 }

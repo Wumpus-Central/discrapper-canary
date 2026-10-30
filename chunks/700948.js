@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(856660),
     g = n(544299),
     C = n(913481),
-    y = n(711478),
-    j = n(487048),
+    j = n(711478),
+    y = n(487048),
     I = n(232571),
     N = n(519342),
     v = n(241215),
@@ -109,7 +109,7 @@ function L(e) {
                                           children: (0, i.jsxs)(h.xp, {
                                               containerRef: X,
                                               children: [
-                                                  (0, i.jsx)(j.A, { channelId: t, corners: k, roomWidth: Y }),
+                                                  (0, i.jsx)(y.A, { channelId: t, corners: k, roomWidth: Y }),
                                                   (0, i.jsxs)("div", {
                                                       ref: q,
                                                       children: [
@@ -137,7 +137,7 @@ function L(e) {
                                                               role: "list",
                                                               "aria-label": R.intl.string(_.default.JYlbK5),
                                                               children: [
-                                                                  (0, i.jsx)(y.A, {
+                                                                  (0, i.jsx)(j.A, {
                                                                       channelId: t,
                                                                       plantConfig: D,
                                                                       roomWidth: Y,

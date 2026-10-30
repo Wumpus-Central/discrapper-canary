@@ -35,22 +35,22 @@ let D = Object.freeze({
     }),
     v = new Map(),
     b = 0,
-    P = 0,
-    M = null,
+    M = 0,
+    P = null,
     U = -1,
     w = null,
     G = -1;
 function x() {
-    return 0 !== v.size && (b++, P++, !0);
+    return 0 !== v.size && (b++, M++, !0);
 }
 function k(e) {
     if (null == e || e === y.ME) return !1;
-    M?.selectedVoiceGuildId === e && P++;
+    P?.selectedVoiceGuildId === e && M++;
     let t = v.get(e);
     return !(null == t || (t.version === b && t.value === D && O.Ay.isMuted(e))) && ((t.version = -1), !0);
 }
 function F() {
-    return 0 !== v.size && (v.clear(), b++, P++, !0);
+    return 0 !== v.size && (v.clear(), b++, M++, !0);
 }
 function B(e, t, n) {
     if (null == t) return !1;
@@ -86,12 +86,12 @@ class j extends s.Ay.Store {
         if (null != t && t.version === b) return t.value;
         let n = (function (e) {
                 let t = (function () {
-                        if (null != M && U === P) return M;
+                        if (null != P && U === M) return P;
                         let e = C.Ay.getVoiceChannelId(),
                             t = null != e ? m.A.getChannel(e) : null,
                             n = N.A.getBlockedOrIgnoredIDs();
                         return (
-                            (M = {
+                            (P = {
                                 currentUserId: T.default.getId(),
                                 selectedVoiceChannelId: e,
                                 selectedVoiceGuildId: t?.guild_id,
@@ -109,8 +109,8 @@ class j extends s.Ay.Store {
                                     return ((w = t), (G = b), t);
                                 })(n),
                             }),
-                            (U = P),
-                            M
+                            (U = M),
+                            P
                         );
                     })(),
                     n = O.Ay.isMuted(e),

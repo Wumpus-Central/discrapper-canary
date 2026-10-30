@@ -228,8 +228,8 @@ var S = n(736056),
     D = n(919638),
     v = n(696451),
     b = n(71393),
-    P = n(763827),
-    M = n(994500),
+    M = n(763827),
+    P = n(994500),
     U = n(309010),
     w = n(967198);
 let G = new g((e) => {
@@ -240,7 +240,7 @@ function x(e, t) {
     let n = {};
     (G.forEach((r) => {
         r !== w.A.getGuildId() &&
-            r !== P.A.getGuildId() &&
+            r !== M.A.getGuildId() &&
             r !== y.A.getChannel(U.Ay.getChannelId())?.getGuildId() &&
             (null == i || i.guildId !== r) &&
             (G.clearWithoutFlushing(r, e), t && (n[r] = G.get(r)));
@@ -288,7 +288,7 @@ function j() {
     if (null == e) null != i && (G.unsubscribeUser(i.guildId, i.userId), (i = null));
     else {
         let { userId: t } = e;
-        if ((null != i && i.userId === t) || M.A.isFriend(t)) return !1;
+        if ((null != i && i.userId === t) || P.A.isFriend(t)) return !1;
         let n = v.Ay.memberOf(t);
         if (0 === n.length) return !1;
         let [r] = n;
@@ -299,7 +299,7 @@ function j() {
 class W extends s.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        (this.waitFor(O.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, P.A, M.A, U.Ay, w.A, C.A),
+        (this.waitFor(O.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, M.A, P.A, U.Ay, w.A, C.A),
             this.syncWith([C.A], j),
             this.syncWith([L.Ay], H));
     }

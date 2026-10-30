@@ -32,8 +32,8 @@ function L(e) {
             id: D,
             onChange: v,
             focusProps: b,
-            hasIcon: P = !1,
-            describedBy: M,
+            hasIcon: M = !1,
+            describedBy: P,
             labelledBy: U,
             innerRef: w,
         } = e,
@@ -46,7 +46,7 @@ function L(e) {
             inputProps: V,
             labelProps: H,
             isPressed: j,
-        } = (0, a.K)({ id: D, isDisabled: L, "aria-describedby": M, "aria-labelledby": U ?? "" }, B, F),
+        } = (0, a.K)({ id: D, isDisabled: L, "aria-describedby": P, "aria-labelledby": U ?? "" }, B, F),
         { hoverProps: W, isHovered: Y } = (0, s.M)({ isDisabled: L }),
         K = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         $ = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
@@ -109,7 +109,7 @@ function L(e) {
                     height: G.enabled ? 16 : eo([16, 10, 19, 10, 19, 16]),
                     rx: G.enabled ? 8 : eo([8, 5, 9.5, 5, 9.5, 8]),
                 }),
-                P &&
+                M &&
                     ((t = es.to({ range: N, output: [en, en, ei, ei], extrapolate: "clamp" })),
                     (0, i.jsx)("svg", {
                         viewBox: "0 0 24 24",

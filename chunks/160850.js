@@ -130,9 +130,9 @@ function p(e, t, n, i) {
         }
         let { startMs: l, endMs: o } = I(i),
             { userIds: c, pLaughter: h, pShouting: N, rms: C, gridStartMs: R, chunkCount: L } = b(l, o),
-            P = c.indexOf(n),
-            M = (0, a.p)(O, l, o),
-            U = M.filter(v);
+            M = c.indexOf(n),
+            P = (0, a.p)(O, l, o),
+            U = P.filter(v);
         null != R &&
             L > 0 &&
             U.length > 0 &&
@@ -183,9 +183,9 @@ function p(e, t, n, i) {
                 } else n = Math.log1p(R);
                 let v = o <= 1,
                     b = v ? t.soloReactionWeight : t.reactionWeight,
-                    P = v ? t.soloCoOccurrenceWeight : t.coOccurrenceWeight;
+                    M = v ? t.soloCoOccurrenceWeight : t.coOccurrenceWeight;
                 return {
-                    audioScore: t.mainWeight * y + b * D + P * n,
+                    audioScore: t.mainWeight * y + b * D + M * n,
                     components: t.normalizeComponents
                         ? { mainEventScore: y, reactionScore: D, coOccurrenceScore: n }
                         : { mainEventScore: p, reactionScore: N, coOccurrenceScore: R },
@@ -200,7 +200,7 @@ function p(e, t, n, i) {
                         coContribPerChunk: L,
                     },
                 };
-            })({ pLaughter: h, pShouting: N, rms: C, main: P, gameEventChunks: e, participantCount: S }, f),
+            })({ pLaughter: h, pShouting: N, rms: C, main: M, gameEventChunks: e, participantCount: S }, f),
             G = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
@@ -209,7 +209,7 @@ function p(e, t, n, i) {
                     i += (r.score ?? 0) * e * a;
                 }
                 return i;
-            })(M, y, D),
+            })(P, y, D),
             x = (0.5 + (0, _.ry)(w.audioScore)) * (1 + Math.tanh(G / f.gameSquashScale)) - 0.5,
             k = b(s, i.decision.timestamp),
             F = k.gridStartMs,
@@ -236,7 +236,7 @@ function p(e, t, n, i) {
                 audioScore: w.audioScore,
                 gameEventsScore: G,
                 hasAudio: h.length > 0,
-                hasGameEvents: M.length > 0,
+                hasGameEvents: P.length > 0,
                 audioEvents: B,
             };
         if (A) {
@@ -254,7 +254,7 @@ function p(e, t, n, i) {
         p.push(V);
     }
     p.sort((e, t) => t.score - e.score);
-    let P = (function (e, t, n, i) {
+    let M = (function (e, t, n, i) {
         function r(t) {
             return [...e].sort((e, n) => t(n) - t(e));
         }
@@ -313,7 +313,7 @@ function p(e, t, n, i) {
             }
         return o;
     })(p, f, o, C?.gameAxisScoreThreshold);
-    return { allClipsRanked: p, selected: P };
+    return { allClipsRanked: p, selected: M };
 }
 function T(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);

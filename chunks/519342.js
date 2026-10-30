@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(939249),
     g = n(367513),
     C = n(717558),
-    y = n(793574),
-    j = n(198052),
+    j = n(793574),
+    y = n(198052),
     I = n(85448),
     N = n(614881),
     v = n(480890),
@@ -125,11 +125,11 @@ function es(e) {
         ex = (0, G.tx)(eu, n, es),
         eg = (0, d.bG)([z.A], () => z.A.getRoom(n)?.background ?? o.I.DEFAULT),
         { seats: eC } = Q.iX[eg],
-        ey =
+        ej =
             null != q && q !== c.x.UNSET
                 ? eC[q]
                 : Object.values(eC).find((e) => e.position.x === a && e.position.y === u),
-        [ej, eI] = l.useState(!1),
+        [ey, eI] = l.useState(!1),
         eN = (0, p.z)({
             x: a,
             y: u,
@@ -138,8 +138,8 @@ function es(e) {
             onStart: () => eI(!0),
         }),
         ev = (0, d.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === n),
-        eE = (0, d.bG)([j.A], () => {
-            let e = j.A.getParticipant(n, t);
+        eE = (0, d.bG)([y.A], () => {
+            let e = y.A.getParticipant(n, t);
             return (0, J.Xw)(e) ? e : null;
         }),
         eb = (0, O.y9)(eE ?? void 0),
@@ -154,7 +154,7 @@ function es(e) {
                 let t = M.A.getChannel(n);
                 if (null != eu && null != es && null != t)
                     return (0, R.r)(e, es, t, { context: el }, (e, t) =>
-                        (0, v.s)(e, y.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: es.id })(t),
+                        (0, v.s)(e, j.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: es.id })(t),
                     );
             },
             [eu, es, n, el],
@@ -165,10 +165,10 @@ function es(e) {
         eO = (er && $) || eS,
         eL = $ ? K.x.find((e) => e.id === E) : null,
         eP =
-            null != ey
+            null != ej
                 ? en.intl.formatToPlainString(eL?.userLabel ?? et.default["4bL+KW"], {
                       username: ex,
-                      seatLabel: ey.getLabel(),
+                      seatLabel: ej.getLabel(),
                   })
                 : ex,
         eM = eh?.isVoiceDeafened()
@@ -194,7 +194,7 @@ function es(e) {
                   deafen: eh?.isVoiceDeafened() ?? !1,
                   voiceStatus: eF,
                   ringing: !1,
-                  className: ey?.dim ? ei.r3 : void 0,
+                  className: ej?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
                   avatarClassName: s()(ei.Cy, eL?.avatarClassName),
                   renderIcon:
@@ -223,7 +223,7 @@ function es(e) {
                   deafen: eh?.isVoiceDeafened() ?? !1,
                   voiceStatus: eF,
                   ringing: !1,
-                  className: ey?.dim ? ei.r3 : void 0,
+                  className: ej?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
                   avatarClassName: eL?.avatarClassName,
                   renderIcon:
@@ -271,7 +271,7 @@ function es(e) {
             ...ew,
             children: eW,
         }),
-        e$ = ej && er ? 500 : 100;
+        e$ = ey && er ? 500 : 100;
     return (0, i.jsx)(r.animated.div, {
         role: "listitem",
         className: s()(ei.f1, { [ei.hY]: eO }),

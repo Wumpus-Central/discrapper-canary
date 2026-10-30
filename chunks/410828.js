@@ -17,8 +17,8 @@ var l = n(17928),
     x = n(747376),
     g = n(113783),
     C = n(518769),
-    y = n(776781),
-    j = n(446600),
+    j = n(776781),
+    y = n(446600),
     I = n(571909),
     N = n(623413),
     v = n(717965),
@@ -62,7 +62,7 @@ function O(e) {
     return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(v.A, { channel: t, isOnStartStageScreen: l }) });
 }
 function L(e) {
-    return (0, l.bG)([j.A], () => (e.isGuildStageVoice() ? j.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);
+    return (0, l.bG)([y.A], () => (e.isGuildStageVoice() ? y.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);
 }
 function P(e) {
     let { channel: t } = e,
@@ -90,7 +90,7 @@ function M(e) {
     let { channel: t, className: n } = e,
         { parentAnalyticsLocation: a } = (0, h.Ay)(),
         s = (0, l.bG)([p.A], () => p.A.getStageAudienceSidebarOpen(t.id), [t.id]),
-        r = (0, y.Ni)(t.id),
+        r = (0, j.Ni)(t.id),
         u = (0, g.zy)(t.id, C.ip.REQUESTED_TO_SPEAK_ONLY),
         A = r ? u : 0,
         x = S.intl.string(b.default.Ds8IST);

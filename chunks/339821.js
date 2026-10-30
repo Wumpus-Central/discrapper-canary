@@ -92,12 +92,12 @@ let N = function () {
         y = null != R && "" !== L,
         [D, v] = (0, u.Cc)(y ? o.M.SHOP_TAB_TOOLTIP : null, L, void 0, !0),
         b = y && null != D,
-        P = (0, l.bG)([E.A], () => E.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
-        [M] = (0, u.RF)(b ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, P?.version ?? 0, void 0, !0),
+        M = (0, l.bG)([E.A], () => E.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
+        [P] = (0, u.RF)(b ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, M?.version ?? 0, void 0, !0),
         U = (0, d.useHasAnyModalOpen)(),
-        w = (0, g.bv)(P),
+        w = (0, g.bv)(M),
         G =
-            null == M || U
+            null == P || U
                 ? null
                 : (function (e, t) {
                       if (t?.type === a.G.BADGE)
@@ -158,7 +158,7 @@ let N = function () {
                                 version: t.version,
                             }
                           : null;
-                  })(w, P),
+                  })(w, M),
         x = b && !U ? R : null;
     return {
         shopButtonDisplayOptions: x ?? G,
@@ -166,20 +166,20 @@ let N = function () {
             (e) => {
                 if (null != x) {
                     (v(e),
-                        null != P &&
-                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, P.version, {
+                        null != M &&
+                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, M.version, {
                                 dismissAction: S.i.AUTO_DISMISS,
                             }));
                     return;
                 }
                 null != G &&
-                    null != P &&
-                    (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, P.version, {
+                    null != M &&
+                    (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, M.version, {
                         dismissAction: e,
-                        version: P.version,
+                        version: M.version,
                     });
             },
-            [x, G, v, P],
+            [x, G, v, M],
         ),
     };
 };

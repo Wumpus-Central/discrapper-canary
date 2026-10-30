@@ -30,7 +30,7 @@ function g(e) {
             trail: 35,
             config: m,
         }),
-        y = (0, d.z)({
+        j = (0, d.z)({
             opacity: +!!u,
             config: A,
             onRest: (e) => {
@@ -49,7 +49,7 @@ function g(e) {
                 style: {
                     marginLeft: x ? void 0 : a,
                     marginRight: x ? a : void 0,
-                    "--custom-menu-item-opacity": (0, r.to)([e.progress, y.opacity], (e, t) => e * t),
+                    "--custom-menu-item-opacity": (0, r.to)([e.progress, j.opacity], (e, t) => e * t),
                     transform: e.progress.to((e) => `translateX(${(1 - e) * g}px)`),
                 },
                 children: t,
@@ -125,7 +125,7 @@ let C = Object.assign(
                 [A, f] = l.useState(a),
                 [g, C] = l.useState(d);
             d !== g && (C(d), d && f(a));
-            let y = (e) => {
+            let j = (e) => {
                 (r?.(e), n && m(!1));
             };
             return (0, i.jsxs)("div", {
@@ -136,7 +136,7 @@ let C = Object.assign(
                         children: (0, i.jsx)(u.$, {
                             variant: A ? "overlay-primary" : "overlay-secondary",
                             size: "md",
-                            onClick: y,
+                            onClick: j,
                             ...c,
                         }),
                     }),
@@ -148,7 +148,7 @@ let C = Object.assign(
                                 size: "md",
                                 icon: h.P,
                                 text: void 0,
-                                onClick: y,
+                                onClick: j,
                                 "aria-label": o,
                             }),
                         }),

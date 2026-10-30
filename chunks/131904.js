@@ -1,4 +1,4 @@
-t.d(n, { A: () => m });
+t.d(n, { A: () => A });
 var l = t(17928),
     i = t(73153),
     a = t(555337),
@@ -16,7 +16,7 @@ function E(e) {
     for (let t of u.P) n[t] = (0, r.O9)(e[t]);
     return n;
 }
-class A extends l.Ay.Store {
+class m extends l.Ay.Store {
     static displayName = "PinotStore";
     initialize() {
         this.waitFor(a.A);
@@ -59,7 +59,7 @@ class A extends l.Ay.Store {
         return g;
     }
 }
-let m = new A(i.h, {
+let A = new m(i.h, {
     PINOT_FETCH_SUCCESS: function (e) {
         let { guildId: n, features: t } = e;
         if (a.A.getGuild()?.id !== n || null != s[n]) return !1;

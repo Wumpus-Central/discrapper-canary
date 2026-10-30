@@ -29,11 +29,11 @@ let R = (0, o.debounce)(u.a8, 1e3),
     D = 3 * S.A.Millis.MINUTE,
     v = 5 * S.A.Millis.SECOND,
     b = 12 * S.A.Millis.SECOND,
-    P = null,
-    M = new Set();
+    M = null,
+    P = new Set();
 function U() {
-    M.forEach((e) => {
-        a.A.isStreamMarkedFull(e) || M.delete(e);
+    P.forEach((e) => {
+        a.A.isStreamMarkedFull(e) || P.delete(e);
     });
 }
 function w(e) {
@@ -50,7 +50,7 @@ function x(e, t) {
     let i = a.A.getStreamForUser(t, n.getGuildId());
     if (null == i) return !1;
     let r = (0, N._z)(i);
-    return !(r === P || a.A.isStreamMarkedFull(r)) && ((P = r), (0, u.A9)(i, { noFocus: !0 }), !0);
+    return !(r === M || a.A.isStreamMarkedFull(r)) && ((M = r), (0, u.A9)(i, { noFocus: !0 }), !0);
 }
 function k(e, t) {
     let n = t ?? p.A.getPreferredRegion();
@@ -110,7 +110,7 @@ class B extends _.A {
             t === O.H2B.STREAM_FULL &&
                 ((0, E.QW)({ type: E.iy.STREAM_FULL, ...(0, A.id)(n) }),
                 (0, u.Xi)(n, !1),
-                M.has(n) || (M.add(n), this.platformShowStreamFull())));
+                P.has(n) || (P.add(n), this.platformShowStreamFull())));
     };
     handleStreamClose = (e) => {
         let { streamKey: t } = e;
@@ -119,7 +119,7 @@ class B extends _.A {
     handleVoiceChannelSelect = (e) => {
         let { channelId: t } = e;
         if (null == t) return;
-        ((P = null), U());
+        ((M = null), U());
         let n = a.A.getAllApplicationStreamsForChannel(t).find(
             (e) => e.ownerId !== s.default.getId() && !a.A.isStreamMarkedFull((0, N._z)(e)),
         );
@@ -131,7 +131,7 @@ class B extends _.A {
             let { userId: t, channelId: n, guildId: i, selfStream: r } = e;
             if (
                 (this.platformHandleVoiceStateUpdate(e),
-                t !== s.default.getId() && (!(r && null != n) && M.size > 0 && U(), null != n))
+                t !== s.default.getId() && (!(r && null != n) && P.size > 0 && U(), null != n))
             ) {
                 if (r && x(n, t)) return;
                 let e = a.A.getActiveStreamForUser(t, i);
@@ -162,7 +162,7 @@ class B extends _.A {
         if (null != n) for (let e of t) n.channelId === e.id && k((0, N._z)(n), e.rtcRegion);
     };
     handleSessionReset = () => {
-        M.clear();
+        P.clear();
     };
     actions = {
         STREAM_WATCH: this.handleStreamWatch,

@@ -91,8 +91,8 @@ var I = n(738935),
     D = n(873985),
     v = n(174459),
     b = n(353835),
-    P = n(927813),
-    M = n(652215);
+    M = n(927813),
+    P = n(652215);
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
@@ -153,13 +153,13 @@ class w {
             (e[this._lastLayout] = (e[this._lastLayout] ?? 0) + ((0, _.tB)() - this._lastLayoutChanged) / 1e3);
         let t = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: U(e[M.SO9.FULL_SCREEN]),
-            duration_layout_theatre: U(e[M.SO9.THEATRE]),
-            duration_layout_pip: U(e[M.SO9.PIP]),
-            duration_layout_popout: U(e[M.SO9.POPOUT]),
-            duration_layout_portrait: U(e[M.SO9.PORTRAIT]),
-            duration_layout_landscape: U(e[M.SO9.LANDSCAPE]),
-            duration_layout_minimized: U(e[M.SO9.MINIMIZED]),
+            duration_layout_fullscreen: U(e[P.SO9.FULL_SCREEN]),
+            duration_layout_theatre: U(e[P.SO9.THEATRE]),
+            duration_layout_pip: U(e[P.SO9.PIP]),
+            duration_layout_popout: U(e[P.SO9.POPOUT]),
+            duration_layout_portrait: U(e[P.SO9.PORTRAIT]),
+            duration_layout_landscape: U(e[P.SO9.LANDSCAPE]),
+            duration_layout_minimized: U(e[P.SO9.MINIMIZED]),
         };
         return this._isSender
             ? {
@@ -181,7 +181,7 @@ var G = n(652896),
     k = n(540305);
 let F = n(815706).p;
 var B = n(731854);
-let V = 5 * P.A.Millis.SECOND;
+let V = 5 * M.A.Millis.SECOND;
 class H {
     streamRegion;
     streamApplication;
@@ -380,7 +380,7 @@ class j extends A.A {
         let e = !1;
         (this.on(h.q.State, (e, t, n) => {
             (c.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n, streamKey: this.streamKey }),
-                e === M.S7L.RTC_CONNECTED &&
+                e === P.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         d.yq.ScreenshareFinish,
                         (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, T, S, N, C, O, R, L) => {
@@ -388,7 +388,7 @@ class j extends A.A {
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, m.wH)(y),
+                            let { gameName: D, gameId: M, exe: U, distributor: w } = (0, m.wH)(y),
                                 G = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId(),
                                 k = (d ?? 0) + (c ?? 0) + (u ?? 0) + (_ ?? 0) + (E ?? 0);
@@ -415,7 +415,7 @@ class j extends A.A {
                                         (p ?? 0) +
                                         (R ?? 0) +
                                         (O ?? 0);
-                                v.default.track(M.HAw.SCREENSHARE_FINISHED, {
+                                v.default.track(P.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
                                     videohook_frames: t,
                                     hybrid_dxgi_frames: n,
@@ -446,7 +446,7 @@ class j extends A.A {
                                         null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
                                     duration: this.analyticsContext.getDuration(),
                                     share_game_name: D,
-                                    share_game_id: P,
+                                    share_game_id: M,
                                     share_game_exe: U,
                                     share_game_distributor: w,
                                     hdr_frames_capable: S,
@@ -464,7 +464,7 @@ class j extends A.A {
                     this._connection?.on(d.yq.SoundshareAttached, () => {
                         let e = R.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
-                            v.default.track(M.HAw.SOUNDSHARE_ATTACHED, {
+                            v.default.track(P.HAw.SOUNDSHARE_ATTACHED, {
                                 ...(0, k.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             });
@@ -477,11 +477,11 @@ class j extends A.A {
                     this._connection?.on(d.yq.SoundshareSpeaking, () => {
                         let e = R.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
-                            (v.default.track(M.HAw.SOUNDSHARE_TRANSMITTING, {
+                            (v.default.track(P.HAw.SOUNDSHARE_TRANSMITTING, {
                                 ...(0, k.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             }),
-                            null != O.A.getHookError(M.LU7.SOUND) &&
+                            null != O.A.getHookError(P.LU7.SOUND) &&
                                 c.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                     }),
                     this._connection?.on(d.yq.SoundshareTrace, (e) => {
@@ -519,7 +519,7 @@ class j extends A.A {
                         if (this._firstFrameDelivered) return;
                         this._firstFrameDelivered = !0;
                         let t = this.getStreamAnalyticsProperties();
-                        v.default.track(M.HAw.RECEIVER_FIRST_FRAME_DELIVERED, {
+                        v.default.track(P.HAw.RECEIVER_FIRST_FRAME_DELIVERED, {
                             guild_id: t.guild_id,
                             channel_id: t.channel_id,
                             rtc_connection_id: t.rtc_connection_id,
@@ -565,7 +565,7 @@ class j extends A.A {
                     }),
                     this._connection?.on(d.yq.FirstFrameEncryptedStats, (e) => {
                         let t = this.getStreamAnalyticsProperties();
-                        v.default.track(M.HAw.STREAMER_FIRST_FRAME_ENCRYPTED, {
+                        v.default.track(P.HAw.STREAMER_FIRST_FRAME_ENCRYPTED, {
                             guild_id: t.guild_id,
                             channel_id: t.channel_id,
                             rtc_connection_id: t.rtc_connection_id,
@@ -632,7 +632,7 @@ class j extends A.A {
         let a = null != t && !this.soundshareFailuresReported[r].has(t);
         (a && this.soundshareFailuresReported[r].add(t),
             (null == t || a) &&
-                v.default.track(M.HAw.SOUNDSHARE_FAILED, {
+                v.default.track(P.HAw.SOUNDSHARE_FAILED, {
                     soundshare_failure_code: t,
                     soundshare_failure_reason: n,
                     soundshare_failure_will_retry: i,
@@ -677,7 +677,7 @@ class j extends A.A {
     }
     trackVideoStartStats() {
         let e = this.isOwner ? F() : null;
-        v.default.track(M.HAw.VIDEO_STREAM_STARTED, {
+        v.default.track(P.HAw.VIDEO_STREAM_STARTED, {
             ...this.getStreamAnalyticsProperties(),
             ...e,
             connection_type: L.A.getType(),
@@ -781,7 +781,7 @@ let X = {},
     Q = {},
     J = {},
     ee = {},
-    et = M.SO9.THEATRE,
+    et = P.SO9.THEATRE,
     en = {};
 function ei() {
     l().forEach(en, (e, t) => {
@@ -806,7 +806,7 @@ class ea extends o.Ay.Store {
         return en[e];
     }
     getQuality(e) {
-        return (0, Y.A)(R.Ay) && null != e ? (en[e]?.quality ?? M.bFR.UNKNOWN) : M.bFR.UNKNOWN;
+        return (0, Y.A)(R.Ay) && null != e ? (en[e]?.quality ?? P.bFR.UNKNOWN) : P.bFR.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;

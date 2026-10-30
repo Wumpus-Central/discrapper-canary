@@ -19,7 +19,7 @@
     aw: () => ei,
     b_: () => N,
     c7: () => es,
-    es: () => M,
+    es: () => P,
     f6: () => H,
     fT: () => U,
     gA: () => R,
@@ -28,7 +28,7 @@
     oj: () => er,
     pA: () => ea,
     ps: () => W,
-    rr: () => P,
+    rr: () => M,
     sz: () => q,
     tt: () => G,
     wo: () => X,
@@ -107,14 +107,14 @@ function b(e, t, n) {
     let i = e.prices[t]?.countryPrices?.prices;
     return null == i ? null : ((null == n ? i[0] : i.find((e) => e.currency === n)) ?? null);
 }
-let P = { original: -1, discountPercentage: -1 },
-    M = 5;
+let M = { original: -1, discountPercentage: -1 },
+    P = 5;
 function U(e, t, n) {
-    if (null == e) return P;
+    if (null == e) return M;
     let i = v(e, n);
-    if (i <= 0) return P;
+    if (i <= 0) return M;
     let r = b(e, D(t, n), n);
-    return null == r ? P : { original: i, discountPercentage: Math.round(((i - r.amount) / i) * 100) };
+    return null == r ? M : { original: i, discountPercentage: Math.round(((i - r.amount) / i) * 100) };
 }
 function w(e, t) {
     let { hasShopDiscount: n, discount: i } = t,

@@ -28,8 +28,8 @@ var i = n(435558),
     D = n(734057),
     v = n(153488),
     b = n(629016),
-    P = n(71393),
-    M = n(576705),
+    M = n(71393),
+    P = n(576705),
     U = n(290863),
     w = n(994500),
     G = n(287809),
@@ -82,7 +82,7 @@ function ee(e) {
 }
 function et(e) {
     let t = x.A.getVoiceStateForUser(e);
-    return t?.channelId != null && M.A.canWithPartialContext(F.xBc.VIEW_CHANNEL, { channelId: t.channelId })
+    return t?.channelId != null && P.A.canWithPartialContext(F.xBc.VIEW_CHANNEL, { channelId: t.channelId })
         ? t.channelId
         : null;
 }
@@ -140,8 +140,8 @@ function ei(e, t, n) {
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: D.A,
                     VoiceStateStore: x.A,
-                    PermissionStore: M.A,
-                    GuildStore: P.A,
+                    PermissionStore: P.A,
+                    GuildStore: M.A,
                 }) !== d.Gy.CAN_JOIN
             )
                 continue;
@@ -179,7 +179,7 @@ function ei(e, t, n) {
         let t = et(e.id),
             n = D.A.getChannel(t),
             i = null != n ? n.getGuildId() : null,
-            s = P.A.getGuild(i);
+            s = M.A.getGuild(i);
         if ((W.has(i) && j.has(t)) || null == n || null == s || n.id === s.afkChannelId)
             null == n && ((a = null), (V = !0));
         else {
@@ -319,7 +319,7 @@ class eo extends s.Ay.Store {
     static displayName = "NowPlayingViewStore";
     initialize() {
         (this.syncWith([G.default, I.A, U.A, b.A, x.A, y.A, w.A, v.A, S.A], el),
-            this.waitFor(I.A, y.A, D.A, v.A, b.A, T.A, P.A, M.A, U.A, w.A, S.A, G.default, x.A));
+            this.waitFor(I.A, y.A, D.A, v.A, b.A, T.A, M.A, P.A, U.A, w.A, S.A, G.default, x.A));
     }
     get currentActivityParties() {
         return j;

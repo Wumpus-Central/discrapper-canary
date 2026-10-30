@@ -1,4 +1,4 @@
-n.d(t, { Av: () => b, uz: () => D, d1: () => y, kv: () => L, nL: () => P, rK: () => v, TT: () => C });
+n.d(t, { Av: () => b, uz: () => D, d1: () => y, kv: () => L, nL: () => M, rK: () => v, TT: () => C });
 var i = n(77729);
 n(321073);
 var r = n(87955),
@@ -392,7 +392,7 @@ async function v(e) {
 function b(e) {
     null != R && R.setAppLocale(e);
 }
-function P(e) {
+function M(e) {
     return N() ? (i.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
 }
 O?.then((e) => {

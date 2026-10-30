@@ -21,10 +21,10 @@ function C() {
     let e = (2 * Math.random() - 1) * 5;
     return 0.5 > Math.random() ? { x: 5, y: e } : { x: e, y: -5 };
 }
-function y(e, t) {
+function j(e, t) {
     return { x: g(e.x + t.x), y: g(e.y + t.y) };
 }
-let j = l.createContext(null);
+let y = l.createContext(null);
 function I(e) {
     return (0, a.bG)([h.A], () => {
         let t = h.A.getPendingNote(e);
@@ -38,7 +38,7 @@ function N(e) {
 }
 function v(e) {
     let { position: t, targetLabel: n } = e,
-        i = l.useContext(j),
+        i = l.useContext(y),
         { x: a, y: s } = t;
     return l.useMemo(
         () =>
@@ -89,19 +89,19 @@ function E(e) {
                       descriptionId: E,
                       setPreviewTarget: (e) => {
                           let t = T.current ?? C();
-                          ((T.current = t), S(y(e, t)));
+                          ((T.current = t), S(j(e, t)));
                       },
                       placeNextTo: (e) => {
                           let n = h.A.getPendingNote(t);
                           if (null == n || null != n.position) return;
                           let i = T.current ?? C();
-                          ((T.current = i), (0, u.Dr)(t, y(e, i)));
+                          ((T.current = i), (0, u.Dr)(t, j(e, i)));
                       },
                   }
                 : null,
         [v, E, t],
     );
-    return (0, i.jsxs)(j.Provider, {
+    return (0, i.jsxs)(y.Provider, {
         value: _,
         children: [
             v &&

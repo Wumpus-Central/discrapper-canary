@@ -1,4 +1,4 @@
-n.d(t, { Js: () => P, Rb: () => O, d9: () => D, eu: () => v });
+n.d(t, { Js: () => M, Rb: () => O, d9: () => D, eu: () => v });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -100,7 +100,7 @@ function y(e) {
             specs: v,
         } = e,
         b = { width: (0, T.FT)(n), height: (0, T.FT)(n) },
-        P =
+        M =
             null == S || N
                 ? void 0
                 : (function (e, t) {
@@ -113,7 +113,7 @@ function y(e) {
                             })
                           : e;
                   })(S, C, O, R),
-        M = v.size * p.Xq,
+        P = v.size * p.Xq,
         U = (function (e, t, n, i) {
             let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             if (null == e) return null;
@@ -230,16 +230,16 @@ function y(e) {
     let w =
         null != y &&
         (0, i.jsx)("svg", {
-            width: M + D,
-            height: M,
-            viewBox: `0 0 ${M + D} ${M}`,
+            width: P + D,
+            height: P,
+            viewBox: `0 0 ${P + D} ${P}`,
             className: g.DX,
             "aria-hidden": !0,
             children: (0, i.jsx)("foreignObject", {
                 x: 0,
                 y: 0,
-                width: M,
-                height: M,
+                width: P,
+                height: P,
                 mask: null != U ? `url(#${U})` : void 0,
                 children: (0, i.jsx)("img", { className: g.M, src: y, alt: " ", "aria-hidden": !0 }),
             }),
@@ -255,7 +255,7 @@ function y(e) {
               onKeyDown: l,
               onMouseEnter: c ?? void 0,
               onMouseLeave: u ?? void 0,
-              "aria-label": P,
+              "aria-label": M,
               "aria-hidden": N,
               children: [t, w],
           })
@@ -266,7 +266,7 @@ function y(e) {
               onMouseEnter: c ?? void 0,
               onMouseLeave: u ?? void 0,
               role: "img",
-              "aria-label": P,
+              "aria-label": M,
               "aria-hidden": N,
               children: [t, w],
           });
@@ -305,8 +305,8 @@ function v(e) {
             statusTooltipDelay: L,
             statusBackdropColor: v,
             "aria-hidden": b = !1,
-            "aria-label": P,
-            imageClassName: M,
+            "aria-label": M,
+            imageClassName: P,
             ref: U,
         } = e,
         w = n !== I.clD.UNKNOWN ? n : null,
@@ -432,7 +432,7 @@ function v(e) {
         (0, h.HZ)(V),
         (0, i.jsx)(y, {
             ...e,
-            ariaLabel: P,
+            ariaLabel: M,
             ariaHidden: b,
             status: w,
             specs: G,
@@ -457,7 +457,7 @@ function v(e) {
                             voiceStatus: m,
                             voiceDb: S,
                             speakingStylesConfig: N,
-                            className: M,
+                            className: P,
                         }),
                     }),
                     null != w && null != v ? R(v, G, w, { isMobile: l, isTyping: c, isVR: o }) : null,
@@ -509,8 +509,8 @@ function b(e) {
             src: O,
             status: v,
             statusColor: b,
-            statusTooltip: P = !1,
-            statusTooltipDelay: M,
+            statusTooltip: M = !1,
+            statusTooltipDelay: P,
             statusBackdropColor: U,
             "aria-hidden": w = !1,
             "aria-label": G,
@@ -585,14 +585,14 @@ function b(e) {
                 }),
                 null != U && R(U, Q, v, { isMobile: o, isTyping: E, isVR: !1 }),
                 (0, i.jsx)(d.m, {
-                    text: P ? (0, f.MU)(v) : null,
+                    text: M ? (0, f.MU)(v) : null,
                     ariaHidden: !0,
                     position: "top",
                     spacing: (function (e, t, n) {
                         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                         return 5 - (n && !i ? 0 : 0.5 * e) + 1.5 * t;
                     })(Q.status, Q.stroke, o, E),
-                    delay: M,
+                    delay: P,
                     children: (0, i.jsxs)(l.animated.g, {
                         transform: ei.scale.to((e) => {
                             let t, n, i, r, a, s;
@@ -603,7 +603,7 @@ function b(e) {
                                 width: J,
                                 height: ee,
                                 viewBox: `0 0 ${J} ${ee}`,
-                                className: P ? g.Oi : void 0,
+                                className: M ? g.Oi : void 0,
                                 children: [
                                     (0, _.pF)(q, Q.status, V),
                                     (0, i.jsx)(l.animated.rect, { fill: X, width: J, height: ee, mask: `url(#${V})` }),
@@ -626,7 +626,7 @@ function b(e) {
     });
 }
 D.displayName = "AvatarImg";
-let P = r.memo(function (e) {
+let M = r.memo(function (e) {
     var t, n;
     let { statusColor: a, status: s, ...l } = e,
         { isMobile: o = !1, isTyping: d = !1, isVR: c = !1 } = l,

@@ -36,7 +36,7 @@ let u = r.memo((e) => {
             ref: D,
         } = e,
         [v, b] = r.useState(-1),
-        [P, M] = r.useState(-1),
+        [M, P] = r.useState(-1),
         U = r.useRef(null),
         w = r.useRef(0),
         G = r.useRef(-1);
@@ -105,11 +105,11 @@ let u = r.memo((e) => {
         let e = U.current?.getScrollerNode();
         if (null == e) return;
         let { offsetWidth: t, offsetHeight: i, scrollTop: r } = e;
-        (M(i), b(r), n?.({ width: t, height: i }));
+        (P(i), b(r), n?.({ width: t, height: i }));
     }, [n]);
     (r.useLayoutEffect(() => {
-        -1 === P && $();
-    }, [P, $]),
+        -1 === M && $();
+    }, [M, $]),
         r.useEffect(() => {
             let e = U.current?.getScrollerNode(),
                 t = c(U);
@@ -150,13 +150,13 @@ let u = r.memo((e) => {
                             } = r,
                             l = F(t),
                             o = a - (N ? l : 0) - i <= w.current,
-                            d = s + i >= w.current + P;
+                            d = s + i >= w.current + M;
                         if (o) {
                             let t = w.current + l - a,
                                 r = N ? w.current - t : a;
                             U.current?.scrollTo({ to: 0 === e ? 0 : r - i, animate: n });
                         } else if (d) {
-                            let e = s - (w.current + P);
+                            let e = s - (w.current + M);
                             U.current?.scrollTo({ to: w.current + e + i, animate: n });
                         }
                     });
@@ -172,17 +172,17 @@ let u = r.memo((e) => {
                         U.current?.scrollTo({ to: (0 === e ? 0 : r.offset.top) + i, animate: n });
                     });
             },
-            getListDimensions: () => ({ height: P, totalHeight: W }),
+            getListDimensions: () => ({ height: M, totalHeight: W }),
             getSectionDescriptors: () => H.current,
             getRowDescriptors: () => j.current,
             getScrollerNode: () => U.current?.getScrollerNode(),
             scrollIntoViewNode: (e) => U.current?.scrollIntoViewNode({ node: e }),
         }),
-        [F, N, W, P],
+        [F, N, W, M],
     );
     let { visibleItems: X, listOffset: q } = r.useMemo(() => {
-            if (-1 === P || -1 === v) return { visibleItems: null, listOffset: 0 };
-            let e = v + P,
+            if (-1 === M || -1 === v) return { visibleItems: null, listOffset: 0 };
+            let e = v + M,
                 t = 0,
                 n = a[0],
                 i = [],
@@ -220,7 +220,7 @@ let u = r.memo((e) => {
                 } else break;
             }
             return { visibleItems: i, listOffset: n };
-        }, [k, B, F, V, a, u, _, A, E, v, K, N, h, x, P]),
+        }, [k, B, F, V, a, u, _, A, E, v, K, N, h, x, M]),
         Z = r.useMemo(() => ({ top: q, right: a?.[1] ?? 0, bottom: a?.[2] ?? 0, left: a?.[3] ?? 0 }), [q, a]),
         Q = r.useMemo(() => ({ height: W }), [W]),
         J = O ? l.zC : l.Ch;

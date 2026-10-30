@@ -28,8 +28,8 @@ var i = n(73153),
     D = n(576705),
     v = n(977997),
     b = n(147036);
-let P = { fromGuildId: void 0, fromChannelId: void 0 };
-var M = n(652215);
+let M = { fromGuildId: void 0, fromChannelId: void 0 };
+var P = n(652215);
 let U = {
     selectChannel(e) {
         let {
@@ -42,10 +42,10 @@ let U = {
                 opensChannel: o,
                 isAppStartupNavigation: d,
             } = e,
-            { fromGuildId: c, fromChannelId: u } = P;
+            { fromGuildId: c, fromChannelId: u } = M;
         i.h.dispatch({
             type: "CHANNEL_SELECT",
-            guildId: t === M.ME ? null : t,
+            guildId: t === P.ME ? null : t,
             channelId: n,
             fromGuildId: c,
             fromChannelId: u,
@@ -58,16 +58,16 @@ let U = {
         });
     },
     selectPrivateChannel(e) {
-        (0, o.pX)(M.BVt.CHANNEL(M.ME, e));
+        (0, o.pX)(P.BVt.CHANNEL(P.ME, e));
     },
     selectVoiceChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
             l = c.A.getChannel(e),
-            P = l?.getGuildId();
+            M = l?.getGuildId();
         l?.isGuildVocalOrThread() && ((0, r.qR)(l) || (0, d.BV)(l))
-            ? (0, o.pX)(M.BVt.CHANNEL(P, e))
+            ? (0, o.pX)(P.BVt.CHANNEL(M, e))
             : u.Ay.isSupported() &&
               (null != e && u.Ay.getMediaEngine().interact(),
               (function (e, t) {
@@ -77,8 +77,8 @@ let U = {
                           arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
                       o = c.A.getChannel(e),
                       d = v.A.getCurrentClientVoiceChannelId(t ?? null) === e,
-                      P = null != o ? y.A.getCheck(o.guild_id) : null;
-                  if (!(null != t && (0, h.V)(t)) && (null == P || P.canChat || (0, f.pC)(o))) {
+                      M = null != o ? y.A.getCheck(o.guild_id) : null;
+                  if (!(null != t && (0, h.V)(t)) && (null == M || M.canChat || (0, f.pC)(o))) {
                       if (null != o && !d) {
                           let e = (0, b.Pd)(o, v.A, L.A);
                           if (e && o.isGuildStageVoice() && (0, I.xn)(o.id))
@@ -177,10 +177,10 @@ let U = {
                               r,
                           ));
                   }
-              })(e, P, t, a, s));
+              })(e, M, t, a, s));
     },
     disconnect() {
         let e = s.default.getRemoteSessionId();
-        (null != e && a.Fc(e), this.selectVoiceChannel(null), l.close(M.MLl.CHANNEL_CALL_POPOUT));
+        (null != e && a.Fc(e), this.selectVoiceChannel(null), l.close(P.MLl.CHANNEL_CALL_POPOUT));
     },
 };

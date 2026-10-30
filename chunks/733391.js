@@ -6,9 +6,9 @@ n.d(t, {
     Rw: () => m,
     SP: () => C,
     Xw: () => w,
-    ZR: () => M,
+    ZR: () => P,
     ap: () => T,
-    d8: () => P,
+    d8: () => M,
     iR: () => G,
     qf: () => N,
 });
@@ -142,7 +142,7 @@ async function b(e) {
             (n.fail(), a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_FAILURE", applicationId: e }));
         }
 }
-async function P(e, t) {
+async function M(e, t) {
     let n = u.A.getStorefrontById(t);
     if (n?.state === "loading") return;
     let i = y(v, t);
@@ -181,10 +181,10 @@ async function P(e, t) {
         } catch (n) {
             (i.fail(),
                 a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_FAILURE", storefrontId: t }),
-                u.A.getPreviewStorefrontId(e) === t && M(e, null));
+                u.A.getPreviewStorefrontId(e) === t && P(e, null));
         }
 }
-function M(e, t) {
+function P(e, t) {
     a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_SET_PREVIEW", applicationId: e, storefrontId: t });
 }
 async function U(e) {

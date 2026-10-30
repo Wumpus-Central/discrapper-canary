@@ -1,4 +1,4 @@
-(n.d(t, { D: () => b, g: () => P }), n(321073));
+(n.d(t, { D: () => b, g: () => M }), n(321073));
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
@@ -47,11 +47,11 @@ function v(e) {
 }
 function b() {
     let { withSuggestionsNotice: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        [t, n] = i.useState(() => P(void 0, { withSuggestionsNotice: e })),
+        [t, n] = i.useState(() => M(void 0, { withSuggestionsNotice: e })),
         r = o.A.isConnected();
     (i.useEffect(() => {
         function t() {
-            n(P(void 0, { withSuggestionsNotice: e }));
+            n(M(void 0, { withSuggestionsNotice: e }));
         }
         t();
         let i = a().throttle(t, 100);
@@ -81,7 +81,7 @@ function b() {
         })(t);
     return { guildChannels: t, shouldShowEmptyState: l && !s, hasNoChannels: l };
 }
-function P(e) {
+function M(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = e ?? N.A.getFavoriteChannels(),
         i = g.Ay.isGuildCollapsed(R.Vc),
@@ -152,7 +152,7 @@ function P(e) {
                 return (null == v && (v = D(d, this)), v);
             },
         },
-        P = (0, C.m_)(n)
+        M = (0, C.m_)(n)
             .filter((e) => null != e.id)
             .map((e) => {
                 let { id: t } = e,
@@ -178,8 +178,8 @@ function P(e) {
                 };
             })
             .filter((e) => null != e),
-        M = 0;
-    for (let e of [b, ...P]) for (let t of ((e.position = ++M), e.channelList)) t.position = ++M;
+        P = 0;
+    for (let e of [b, ...M]) for (let t of ((e.position = ++P), e.channelList)) t.position = ++P;
     let U = { isEmpty: () => !0, getRows: () => [], getRow: () => null },
         w = [];
     t && w.push(L.r.FAVORITES_SUGGESTIONS);
@@ -193,12 +193,12 @@ function P(e) {
         getSections() {
             let e = [];
             ((e[c.Xt] = w.length), (e[c.PU] = 0), (e[c.HP] = 0), (e[c.yO] = 0), (e[c.bK] = b.channelList.length));
-            for (let t = 0; t < P.length; t++) e[c.TF + t] = Math.max(1, P[t].channelList.length);
+            for (let t = 0; t < M.length; t++) e[c.TF + t] = Math.max(1, M[t].channelList.length);
             return e;
         },
-        isPlaceholderRow: (e, t) => !(e < c.TF) && 0 === t && 0 === P[e - c.TF].channelList.length,
-        getCategoryFromSection: (e) => (e === c.bK ? b : P[e - c.TF]),
-        getNamedCategoryFromSection: (e) => P[e - c.TF],
+        isPlaceholderRow: (e, t) => !(e < c.TF) && 0 === t && 0 === M[e - c.TF].channelList.length,
+        getCategoryFromSection: (e) => (e === c.bK ? b : M[e - c.TF]),
+        getNamedCategoryFromSection: (e) => M[e - c.TF],
         getChannelFromSectionRow(e, t) {
             let n = this.getCategoryFromSection(e);
             return null == n || null == n.channelList[t] ? null : { category: n, channel: n.channelList[t] };
@@ -211,10 +211,10 @@ function P(e) {
             let t = [],
                 n = [],
                 i = [],
-                r = [b, ...P];
+                r = [b, ...M];
             for (let a = 0; a < r.length; a++) {
                 let s = r[a],
-                    l = a > 0 ? P[a - 1] : null,
+                    l = a > 0 ? M[a - 1] : null,
                     o = null != l && l.record.name.trim().toLowerCase() === R.A.toLowerCase(),
                     d = a + c.bK;
                 for (let r = 0; r < s.channelList.length; r++) {
@@ -230,7 +230,7 @@ function P(e) {
             return [...t, ...n, ...i];
         },
         forEachShownChannel(e) {
-            for (let t of [b, ...P])
+            for (let t of [b, ...M])
                 for (let n of t.channelList)
                     for (let t of (e(n.record), n.threadIds)) {
                         let n = f.A.getChannel(t);
@@ -238,7 +238,7 @@ function P(e) {
                     }
         },
         forEachChannel(e) {
-            for (let t of [b, ...P]) for (let n of t.getChannelRecords()) e(n);
+            for (let t of [b, ...M]) for (let n of t.getChannelRecords()) e(n);
         },
         getSlicedChannels: (e) => [[], e, []],
         getChannels: () => [],

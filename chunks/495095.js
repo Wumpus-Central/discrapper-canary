@@ -16,8 +16,8 @@ var i = n(477900),
 function x(e) {
     let { channel: t, position: n, setEditorRef: x } = e,
         g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
-        [C, y] = (0, l.useState)(""),
-        [j, I] = (0, l.useState)(""),
+        [C, j] = (0, l.useState)(""),
+        [y, I] = (0, l.useState)(""),
         [N, v] = (0, l.useState)((0, c.x7)("")),
         [E, b] = (0, l.useState)(g),
         S = (0, l.useRef)(!1);
@@ -29,11 +29,11 @@ function x(e) {
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                (I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t)));
+                (I(t), v(n), j(u.Ay.translateInlineEmojiToSurrogates(t)));
             },
             placeholder: A.intl.string(m.default.IAcEEn),
             channel: t,
-            textValue: j,
+            textValue: y,
             richValue: N,
             type: o.oU.GUILD_ROOM,
             onFocus: () => {

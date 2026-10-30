@@ -28,8 +28,8 @@ let c = null,
     D = null,
     v = {},
     b = {},
-    P = null,
-    M = {};
+    M = null,
+    P = {};
 function U() {
     return window?.location?.pathname === d.he.FAMILY_CENTER_MY_FAMILY
         ? d.u9.REQUESTS
@@ -87,7 +87,7 @@ function F(e, t) {
     );
 }
 function B(e) {
-    M = e.reduce(
+    P = e.reduce(
         (e, t) => ({
             ...e,
             [t.id]: {
@@ -95,7 +95,7 @@ function B(e) {
                 approximateMemberCount: t.approximate_member_count ?? 0,
             },
         }),
-        M,
+        P,
     );
 }
 function V(e) {
@@ -154,7 +154,7 @@ function K(e) {
         (L = h),
         (y = f ?? null),
         (D = I ?? null),
-        (P = i ?? null),
+        (M = i ?? null),
         (m = !1),
         (g = !1),
         (S = l.default.fromTimestamp(Date.now())),
@@ -251,7 +251,7 @@ function er() {
         (I = null),
         (A = w()),
         (h = G()),
-        (M = {}),
+        (P = {}),
         (m = !1),
         (g = !1),
         (S = null),
@@ -265,7 +265,7 @@ function er() {
         (D = null),
         (v = {}),
         (b = {}),
-        (P = null),
+        (M = null),
         (T = !1));
 }
 class ea extends r.A {
@@ -325,7 +325,7 @@ class ea extends r.A {
                         e.push(...Array.from(t.values()));
                     }),
                     e),
-                guilds: Object.values(M),
+                guilds: Object.values(P),
             },
         };
     }
@@ -356,7 +356,7 @@ class ea extends r.A {
         return I;
     }
     getGuild(e) {
-        return M[e];
+        return P[e];
     }
     getSelectedTab() {
         return p;
@@ -415,7 +415,7 @@ class ea extends r.A {
         return b[e];
     }
     getAgeGroup() {
-        return P;
+        return M;
     }
     canRefetch() {
         return null === S || l.default.age(S) > d.fD;

@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(71393),
     g = n(999926),
     C = n(576705),
-    y = n(309010),
-    j = n(920639),
+    j = n(309010),
+    y = n(920639),
     I = n(82715),
     N = n(731854),
     v = n(105292),
@@ -27,7 +27,7 @@ function S(e) {
     let { channelId: t, center: n, iconSize: a } = e,
         S = (0, r.bG)([f.A], () => f.A.getChannel(t)),
         T = S?.guild_id,
-        _ = (0, r.bG)([y.Ay], () => y.Ay.getVoiceChannelId() === t),
+        _ = (0, r.bG)([j.Ay], () => j.Ay.getVoiceChannelId() === t),
         R = (0, r.bG)([g.Ay], () => (0, p.A)(g.Ay)),
         O = (0, r.bG)([x.A, C.A], () => null != S && (0, h.vz)(S, x.A, C.A, !0)),
         { analyticsLocations: L } = (0, u.Ay)(d.A.GUILD_ROOM),
@@ -37,7 +37,7 @@ function S(e) {
         U = l.useCallback(() => {
             if (null != T) {
                 if (!R) return void (0, m.A)();
-                ((0, A.A)(T, t, L), (0, j.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
+                ((0, A.A)(T, t, L), (0, y.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
             }
         }, [T, R, t, L]);
     return null != S && null != T && O && _ && M

@@ -16,13 +16,13 @@ var i = n(477900),
     x = n(175203),
     g = n(306852),
     C = n(947580),
-    y = n(163432),
-    j = n(652215),
+    j = n(163432),
+    y = n(652215),
     I = n(806931),
     N = n(804273),
     v = n(517689);
 let E = 16 / 9,
-    b = 8 + y.Vp;
+    b = 8 + j.Vp;
 function S(e) {
     let t,
         {
@@ -54,7 +54,7 @@ function S(e) {
         Q = D <= 2 * b + 144,
         J = M && !Q,
         ee = (0, d.Ay)(J),
-        et = V === j.DUB.MINIMUM || V === j.DUB.NORMAL,
+        et = V === y.DUB.MINIMUM || V === y.DUB.NORMAL,
         en = !Q && (!et || X),
         ei = (0, f.A)(en, 100),
         el = ((0, d.Ay)(P.id) ?? P.id) !== P.id,
@@ -86,9 +86,9 @@ function S(e) {
                 delay: ed || !J ? 0 : 100,
                 config: { ...r.config.stiff, clamp: !0 },
                 onStart: () => K(!0),
-                onChange: () => A._.dispatch(j.jej.REMEASURE_TARGET),
+                onChange: () => A._.dispatch(y.jej.REMEASURE_TARGET),
                 onRest: () => {
-                    (K(!1), A._.dispatch(j.jej.REMEASURE_TARGET));
+                    (K(!1), A._.dispatch(y.jej.REMEASURE_TARGET));
                 },
             },
             ep,
@@ -114,8 +114,8 @@ function S(e) {
         eC = l.useCallback((e) => {
             (z(e), Y(!1));
         }, []),
-        ey = J ? [] : (0, C.Cf)(T, P, B),
-        { visibleParticipants: ej, participantTileWidth: eI } = (0, y.i4)(U, _);
+        ej = J ? [] : (0, C.Cf)(T, P, B),
+        { visibleParticipants: ey, participantTileWidth: eI } = (0, j.i4)(U, _);
     return (0, i.jsxs)("div", {
         className: s()(v.zr, N.tR, w),
         children: [
@@ -184,12 +184,12 @@ function S(e) {
                             opacity: em.value,
                             visibility: em.value.to((e) => (0 === e ? "hidden" : "visible")),
                         },
-                        children: (0, i.jsx)(y.Ay, {
+                        children: (0, i.jsx)(j.Ay, {
                             channel: L,
                             onClick: n,
                             onContextMenu: a,
                             onDoubleClick: S,
-                            participants: ej,
+                            participants: ey,
                             participantTileWidth: eI,
                             selectedParticipantId: P.id,
                             inCall: O,
@@ -199,13 +199,13 @@ function S(e) {
                     }),
                 ],
             }),
-            ey.length > 0
+            ej.length > 0
                 ? (0, i.jsx)(g.A, {
                       onContextMenuParticipant: a,
                       width: U,
                       height: D,
                       channel: L,
-                      participants: ey,
+                      participants: ej,
                       onSelectParticipant: n,
                   })
                 : null,

@@ -9797,39 +9797,39 @@ function b(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).hex("rgba");
+            return M(e, t, n).hex("rgba");
         },
         hsl() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).css("hsl");
+            return M(e, t, n).css("hsl");
         },
         hex() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).hex();
+            return M(e, t, n).hex();
         },
         int() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                i = P(e, t, n),
+                i = M(e, t, n),
                 r = i.num();
             return 1 !== i.alpha() ? (r << 8) | Math.round(255 * i.alpha()) : r;
         },
         rgba() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).rgba();
+            return M(e, t, n).rgba();
         },
     };
 }
-function P(e, t, n) {
+function M(e, t, n) {
     let i = s()(n.opacity ?? 1, 0, 1),
         r = e;
     return (1 !== t && (r = r.set("hsl.s", r.get("hsl.s") * t)), 1 !== i && (r = r.alpha(r.alpha() * i)), r);
 }
-function M(e) {
+function P(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
 function U(e, t) {
-    let n = null != t ? M(t) : null,
-        i = M(e);
+    let n = null != t ? P(t) : null,
+        i = P(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
 let w = v;

@@ -128,7 +128,7 @@ let g = 1e3,
         let { mediaUrls: L, isSuccess: y } = T(!h && a && O),
             D = (0, r.useRef)(null),
             [v, b] = (0, r.useState)(!1),
-            [P, M] = (0, r.useState)(!1),
+            [M, P] = (0, r.useState)(!1),
             [U, w] = (0, r.useState)("none"),
             [G, x] = (0, r.useState)(!1);
         return ((0, r.useEffect)(() => {
@@ -143,7 +143,7 @@ let g = 1e3,
                           (x(!0),
                           _.default.track(p.HAw.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION)),
                       (e = !1))
-                    : (w("animated"), M(!0), (e = !0)),
+                    : (w("animated"), P(!0), (e = !0)),
                 d.h.dispatch({
                     type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                     value: !0,
@@ -213,7 +213,7 @@ let g = 1e3,
                           children: (0, i.jsx)(o.e, {
                               fit: "layout",
                               ref: D,
-                              dataBinding: { ExitTrigger: v, EntryTrigger: P },
+                              dataBinding: { ExitTrigger: v, EntryTrigger: M },
                               listenOnDocumentBody: !0,
                           }),
                       }),

@@ -33,8 +33,8 @@ let I = "default",
     D = !1,
     v = new Set(),
     b = new Map(),
-    P = new Map(),
     M = new Map(),
+    P = new Map(),
     U = [],
     w = {
         clipsEnabled: !1,
@@ -90,7 +90,7 @@ function B(e, t) {
 function V(e) {
     if (!E.A.getConfig({ location: "trackClipMessage" }).enableDistributedClips) return !1;
     let t = e.attachments?.filter((e) => (0, i.Lt)(e.flags ?? 0, h.sbO.IS_CLIP)) ?? [];
-    if (0 === t.length || P.has(e.id)) return !1;
+    if (0 === t.length || M.has(e.id)) return !1;
     let n = (function (e, t) {
         let n = [];
         for (let i of t) {
@@ -99,7 +99,7 @@ function V(e) {
         }
         return n;
     })(e, t);
-    P.set(e.id, n);
+    M.set(e.id, n);
     let r = (function (e) {
             let { message_reference: t } = e;
             if (t?.message_id != null && (null == t.type || t.type === h.SH7.DEFAULT)) return t.message_id;
@@ -107,8 +107,8 @@ function V(e) {
         a = !(null == r || e.author?.id !== o.default.getId() || v.has(r)) && (v.add(r), !0),
         s = !1;
     return (
-        null != r && ((s = B(P.get(r) ?? [], n)), M.set(r, [...(M.get(r) ?? []), ...n])),
-        (s = B(n, M.get(e.id) ?? []) || s) || a
+        null != r && ((s = B(M.get(r) ?? [], n)), P.set(r, [...(P.get(r) ?? []), ...n])),
+        (s = B(n, P.get(e.id) ?? []) || s) || a
     );
 }
 class H extends r.Ay.DeviceSettingsStore {
@@ -505,7 +505,7 @@ let j = new H(a.h, {
             return t;
         },
         LOGOUT: function () {
-            (v.clear(), b.clear(), P.clear(), M.clear(), (C = null), (O = null), (N = null), (R = {}));
+            (v.clear(), b.clear(), M.clear(), P.clear(), (C = null), (O = null), (N = null), (R = {}));
         },
     }),
     W = j;

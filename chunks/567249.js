@@ -70,7 +70,7 @@ function v(e) {
             delete N[e],
             delete S[e],
             setTimeout(() => {
-                P(t);
+                M(t);
             }, 100),
             w.emitChange());
     }
@@ -109,7 +109,7 @@ function b(e) {
                 return v(n.key);
         }
 }
-function P(e) {
+function M(e) {
     if (null != e && !e.closed)
         try {
             e.close();
@@ -117,10 +117,10 @@ function P(e) {
             p.error("Error closing popout window", e);
         }
 }
-function M() {
+function P() {
     for (let e of Object.keys(g)) {
         let t = g[e];
-        null != t && P(t);
+        null != t && M(t);
     }
 }
 class U extends o.Ay.PersistedStore {
@@ -129,7 +129,7 @@ class U extends o.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(E.default),
             window.addEventListener("message", b),
-            window.addEventListener("beforeunload", M),
+            window.addEventListener("beforeunload", P),
             (T = e ?? {}));
     }
     getWindow(e) {
@@ -238,13 +238,13 @@ let w = new U(d.h, {
         POPOUT_WINDOW_CLOSE: function (e) {
             let { key: t } = e,
                 n = g[t];
-            null != n && !n.closed && (y(t), E.default.preventPopoutClose || P(n));
+            null != n && !n.closed && (y(t), E.default.preventPopoutClose || M(n));
         },
         POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function (e) {
             let { key: t, alwaysOnTop: n } = e;
             A.isPlatformEmbedded &&
                 (h.Ay.setAlwaysOnTop(t, n), (m[t] = n), h.Ay.isAlwaysOnTop(t).then((e) => (m[t] = e)));
         },
-        LOGOUT: M,
+        LOGOUT: P,
     }),
     G = w;

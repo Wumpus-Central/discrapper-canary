@@ -50,7 +50,7 @@ function b(e, t) {
     let n = (0, _.gW)(e, t);
     return m.findIndex((e) => e.comboId === n);
 }
-function P(e, t, n, i) {
+function M(e, t, n, i) {
     let r = (0, _.gW)(e, t),
         a = { comboId: r, action: i },
         s = g.indexOf(r);
@@ -60,7 +60,7 @@ function P(e, t, n, i) {
         !n && S && E.A.resume(),
         D());
 }
-function M(e, t) {
+function P(e, t) {
     let n = (0, _.gW)(e, t),
         i = g.indexOf(n);
     -1 !== i && g.splice(i, 1);
@@ -115,23 +115,23 @@ class x extends a.Ay.Store {
 let k = new x(l.h, {
     DISPATCH_APPLICATION_INSTALL: function (e) {
         let { applicationId: t, branchId: n } = e;
-        (R.set((0, _.gW)(t, n), "Install"), P(t, n, !1, "Patch"));
+        (R.set((0, _.gW)(t, n), "Install"), M(t, n, !1, "Patch"));
     },
     DISPATCH_APPLICATION_UPDATE: function (e) {
         let { applicationId: t, branchId: n, automatic: i } = e;
-        P(t, n, i, "Patch");
+        M(t, n, i, "Patch");
     },
     DISPATCH_APPLICATION_UNINSTALL: function (e) {
         let { applicationId: t, branchId: n } = e;
-        (M(t, n), U(t, n));
+        (P(t, n), U(t, n));
     },
     DISPATCH_APPLICATION_CANCEL: function (e) {
         let { applicationId: t, branchId: n } = e;
-        M(t, n);
+        P(t, n);
     },
     DISPATCH_APPLICATION_REPAIR: function (e) {
         let { applicationId: t, branchId: n } = e;
-        (R.set((0, _.gW)(t, n), "Repair"), P(t, n, !1, "Repair"));
+        (R.set((0, _.gW)(t, n), "Repair"), M(t, n, !1, "Repair"));
     },
     DISPATCH_APPLICATION_MOVE_UP: function (e) {
         let { applicationId: t, branchId: n } = e,
@@ -189,7 +189,7 @@ let k = new x(l.h, {
                 let { context: e } = t;
                 if (null != e) {
                     let { application_id: t, branch_id: n } = e;
-                    M(t, n);
+                    P(t, n);
                 }
             }
         }

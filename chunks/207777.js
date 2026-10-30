@@ -28,8 +28,8 @@ let T = [],
     D = a().chain(T),
     v = a().chain(T),
     b = new Set(),
-    P = new Set();
-function M(e) {
+    M = new Set();
+function P(e) {
     return h.Ay.lastMessageId(e) ?? e;
 }
 function U(e) {
@@ -39,7 +39,7 @@ function U(e) {
             : (0, p.yr)(n)
               ? 1
               : e === l.T.LATEST_ACTIVITY
-                ? I.default.compare(M(n), M(t))
+                ? I.default.compare(P(n), P(t))
                 : I.default.compare(n, t);
     };
 }
@@ -54,7 +54,7 @@ function w() {
         (y = []),
         (D = a().chain(T)),
         (v = a().chain(T)),
-        P.clear(),
+        M.clear(),
         b.clear());
 }
 function G() {
@@ -85,7 +85,7 @@ function k(e) {
         (O = 0),
         (L = !0)),
         0 !== b.size && ((y = y.filter((e) => !b.has(e))), b.clear()),
-        0 !== P.size && ((y = Array.from(new Set([...y, ...P]))), P.clear()),
+        0 !== M.size && ((y = Array.from(new Set([...y, ...M]))), M.clear()),
         (e?.refreshThreadIds || e?.sortThreadIds) &&
             ((v = a().chain(y).sort(U(l.T.LATEST_ACTIVITY))), (D = a().chain(y).sort(U(l.T.CREATION_DATE)))));
     let o = (N === l.T.LATEST_ACTIVITY ? v : D).value(),
@@ -168,11 +168,11 @@ let B = new F(c.h, {
         let { channel: t } = e;
         if (null == t.parent_id || t.parent_id !== g) return !1;
         let n = (0, p.yr)(t.id),
-            i = P.has(t.id);
-        if (n && !i) (P.add(t.id), k({ sortThreadIds: !0 }));
+            i = M.has(t.id);
+        if (n && !i) (M.add(t.id), k({ sortThreadIds: !0 }));
         else {
             if (n || !i) return !1;
-            (P.delete(t.id), k({ sortThreadIds: !0 }));
+            (M.delete(t.id), k({ sortThreadIds: !0 }));
         }
     },
     THREAD_DELETE: function (e) {

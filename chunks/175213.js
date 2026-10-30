@@ -1,4 +1,4 @@
-b.exports = {
+e.exports = {
     y1: "backgroundArt_f651bf",
     N4: "backgroundGradient_f651bf",
     ap: "heroContent_f651bf",

@@ -38,10 +38,10 @@ var S = n(135598),
     D = n(652215),
     v = n(355097);
 let b = {};
-function P(e) {
+function M(e) {
     return `${e.channel_id}:${e.id}`;
 }
-function M() {
+function P() {
     (Object.values(b).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
@@ -50,7 +50,7 @@ function M() {
 }
 function U(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
-    let n = P(e);
+    let n = M(e);
     if (null != b[n]) {
         let { timeout: i, setAt: r } = b[n];
         return (
@@ -88,7 +88,7 @@ function w(e, t) {
     }
 }
 function G(e) {
-    return null == b[P(e)];
+    return null == b[M(e)];
 }
 function x(e, t) {
     let { forceBatchScan: n = !1, jitter: i = !1 } = t ?? {},
@@ -96,7 +96,7 @@ function x(e, t) {
             ? e.filter((e) => (0, L.s9)(e) && (0, L.mS)(e)).filter(G)
             : e.filter((e) => (0, L.s9)(e)).filter(G);
     r.forEach((e) => {
-        let t = P(e);
+        let t = M(e);
         null == b[t] &&
             (u.A.increment({ name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
             (b[t] = {
@@ -123,7 +123,7 @@ function x(e, t) {
     i
         ? setTimeout(() => {
               w(
-                  r.filter((e) => null != b[P(e)]),
+                  r.filter((e) => null != b[M(e)]),
                   a,
               );
           }, 800 * Math.random())
@@ -414,7 +414,7 @@ class Q extends d.A {
         SIDEBAR_VIEW_CHANNEL: $,
         MESSAGE_CREATE: V,
         MESSAGE_UPDATE: B,
-        LOGOUT: M,
+        LOGOUT: P,
         SEARCH_MESSAGES_SUCCESS: j,
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: j,
         CHANNEL_SELECT: z,

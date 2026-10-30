@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(952270),
     g = n(104510),
     C = n(789645),
-    y = n(177953),
-    j = n(683438),
+    j = n(177953),
+    y = n(683438),
     I = n(475825),
     N = n(367513),
     v = n(442433),
@@ -50,7 +50,7 @@ var Y = n(806931),
     q = n(645265);
 let Z = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
-        { user: C, userNick: y, blocked: j, ignored: I, rtsState: N } = t,
+        { user: C, userNick: j, blocked: y, ignored: I, rtsState: N } = t,
         E = l.useRef(null),
         _ = (0, P.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
@@ -134,16 +134,16 @@ let Z = l.memo(function (e) {
                             (0, i.jsx)(p.eu, {
                                 src: C.getAvatarURL(r, 32, !1),
                                 size: m._3.SIZE_32,
-                                className: s()(q.e$, { [q.zj]: j || I }),
+                                className: s()(q.e$, { [q.zj]: y || I }),
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsx)(A.E, {
                                 className: q.wR,
                                 variant: "text-sm/medium",
                                 color: "text-strong",
-                                children: y,
+                                children: j,
                             }),
-                            j ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
+                            y ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
                             I ? (0, i.jsx)(x.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
                             L ? (0, i.jsx)(g._, { size: "xs", color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK }) : null,
                         ],
@@ -198,7 +198,7 @@ function Q(e) {
                     toolbar: R,
                     "aria-label": X.intl.string(X.t.suRApw),
                     children: [
-                        (0, i.jsx)(L.Ay.ChannelIcon, { icon: y.n, "aria-label": X.intl.string(X.t.suRApw) }),
+                        (0, i.jsx)(L.Ay.ChannelIcon, { icon: j.n, "aria-label": X.intl.string(X.t.suRApw) }),
                         (0, i.jsx)(L.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
                     ],
                 }),
@@ -208,7 +208,7 @@ function Q(e) {
                           children: [
                               h ? (0, i.jsx)(W.d1, { useVerboseLabel: !0, channel: s }) : null,
                               u
-                                  ? (0, i.jsx)(j.I, {
+                                  ? (0, i.jsx)(y.I, {
                                         query: f,
                                         onChange: x,
                                         onClear: () => x(""),

@@ -28,8 +28,8 @@ var i = n(91871),
     D = n(144914),
     v = n(227841),
     b = n(652215);
-let P = o()().subtract(1, "week"),
-    M = [],
+let M = o()().subtract(1, "week"),
+    P = [],
     U = "",
     w = !1;
 function G(e, t) {
@@ -104,7 +104,7 @@ function W() {
                               libraryApplication: e,
                               lastPlayed: s,
                               supportsCloudSync: null != e && g.A.supportsCloudSync(e.id, e.branchId),
-                              isNew: null != e && o()(e.createdAt).isAfter(P) && 0 === s,
+                              isNew: null != e && o()(e.createdAt).isAfter(M) && 0 === s,
                               isLaunching: E.A.launchingGames.has(e.id),
                               isRunning: i.has(e.id),
                               isLaunchable: (0, D.A)({
@@ -161,11 +161,11 @@ function W() {
         ].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (
         (w = null != f.A.lastFetched && I.A.fetched),
-        !s().isEqual(a, M) &&
-            ((M = a),
+        !s().isEqual(a, P) &&
+            ((P = a),
             L.isPlatformEmbedded &&
                 y.Ay.setSystemTrayApplications(
-                    F(M)
+                    F(P)
                         .map((e) => e.application)
                         .slice(0, 5),
                 ),
@@ -182,13 +182,13 @@ class Y extends d.Ay.Store {
         return U;
     }
     get applicationViewItems() {
-        return M;
+        return P;
     }
     get launchableApplicationViewItems() {
-        return F(M);
+        return F(P);
     }
     get libraryApplicationViewItems() {
-        return k(M);
+        return k(P);
     }
     get filteredLibraryApplicationViewItems() {
         return B(this.libraryApplicationViewItems, U);
@@ -197,7 +197,7 @@ class Y extends d.Ay.Store {
         return V(this.filteredLibraryApplicationViewItems, m.A.sortKey, m.A.sortDirection, A.default.locale);
     }
     get hiddenLibraryApplicationViewItems() {
-        return H(M);
+        return H(P);
     }
     get hasFetchedApplications() {
         return w;

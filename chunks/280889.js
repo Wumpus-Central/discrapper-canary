@@ -1,5 +1,5 @@
 let i;
-n.d(t, { jP: () => P, bK: () => U });
+n.d(t, { jP: () => M, bK: () => U });
 var r,
     a = n(435558),
     s = n.n(a),
@@ -72,7 +72,7 @@ class b extends Error {
         return "server_error" === this.kind || "network_error" === this.kind || "client_error" === this.kind;
     }
 }
-var P =
+var M =
     (((r = {}).NOT_STARTED = "NOT_STARTED"),
     (r.STARTED = "STARTED"),
     (r.UPLOADING = "UPLOADING"),
@@ -81,7 +81,7 @@ var P =
     (r.CANCELED = "CANCELED"),
     (r.REMOVED_FROM_MSG_DRAFT = "REMOVED_FROM_MSG_DRAFT"),
     r);
-class M {
+class P {
     numUploadAttempts;
     timing = {};
     compressAndExtractDisabled;
@@ -132,7 +132,7 @@ class U extends C.Ay {
     error;
     reactNativeFilePrepped = !1;
     startTime;
-    uploadAnalytics = new M();
+    uploadAnalytics = new P();
     uploadAttempts = 0;
     _abortController;
     _xhr;
@@ -634,7 +634,7 @@ class U extends C.Ay {
             (this.responseUrlSetAt = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new M()),
+            (this.uploadAnalytics = new P()),
             this.applyItemConversionAnalytics(),
             (this.uploadAttempts = 0),
             (this._aborted = !1),

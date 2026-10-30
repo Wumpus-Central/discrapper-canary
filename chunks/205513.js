@@ -113,8 +113,8 @@ class T extends r.PureComponent {
                 getAriaValueText: D,
                 barClassName: v,
                 grabberClassName: b,
-                grabberStyles: P = {},
-                markerPosition: M = 0,
+                grabberStyles: M = {},
+                markerPosition: P = 0,
                 tabIndex: U,
                 "aria-hidden": w,
                 "aria-label": G,
@@ -137,8 +137,8 @@ class T extends r.PureComponent {
                               {
                                   className: s()(f.mark, {
                                       [f.defaultValue]: a,
-                                      [f.markAbove]: 0 === M,
-                                      [f.markBelow]: 1 === M,
+                                      [f.markAbove]: 0 === P,
+                                      [f.markBelow]: 1 === P,
                                   }),
                                   style: { left: `${e}%` },
                                   children:
@@ -222,7 +222,7 @@ class T extends r.PureComponent {
                                             positionKey: V,
                                             children: (0, i.jsx)("div", {
                                                 className: s()(f.grabber, b),
-                                                style: { ...P, left: V },
+                                                style: { ...M, left: V },
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef,
                                             }),

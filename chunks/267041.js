@@ -29,25 +29,25 @@ var i,
     v = n(175306);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
 var b = n(536194),
-    P = n(19575);
-let M = null;
+    M = n(19575);
+let P = null;
 function U() {
     return (
-        null == M &&
-            (M = (function () {
+        null == P &&
+            (P = (function () {
                 if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder)
                     return !1;
                 try {
-                    let e = P.Ay.requireModule("discord_zstd");
+                    let e = M.Ay.requireModule("discord_zstd");
                     if (null == e) return !1;
                     return !0;
                 } catch (e) {
                     if (e.message.includes("Cannot find"))
-                        return (P.Ay.ensureModule("discord_zstd").catch((e) => {}), !1);
+                        return (M.Ay.ensureModule("discord_zstd").catch((e) => {}), !1);
                     throw e;
                 }
             })()),
-        M
+        P
     );
 }
 let w = {},
@@ -87,7 +87,7 @@ class x {
                     : (this._decoder = null),
                 (this._stream = (function () {
                     if (!U()) return;
-                    let { createContext: e } = P.Ay.requireModule("discord_zstd");
+                    let { createContext: e } = M.Ay.requireModule("discord_zstd");
                     return e();
                 })()));
         }
@@ -1000,10 +1000,10 @@ let el = new (class {
         let e;
         if (y.isPlatformEmbedded) {
             try {
-                e = P.Ay.requireModule("discord_erlpack");
+                e = M.Ay.requireModule("discord_erlpack");
             } catch {
                 try {
-                    e = P.Ay.requireModule("erlpack");
+                    e = M.Ay.requireModule("erlpack");
                 } catch {
                     e = void 0;
                 }
@@ -1208,8 +1208,8 @@ class ey {
 let eD = (1e3 / 60) * 3,
     ev = (1e3 / 60) * 3,
     eb = 1e3 / 60 / 8,
-    eP = (1e3 / 60) * 12;
-class eM {
+    eM = (1e3 / 60) * 12;
+class eP {
     _browserDeadlineMs;
     _deadlineMs;
     _startMs;
@@ -1275,14 +1275,14 @@ class ew {
                 this.telemetry.measure(eN.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
                 this.telemetry.track(eg.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
-                (this._nextDispatchTimeout = eP));
+                (this._nextDispatchTimeout = eM));
             return;
         }
         let t = performance.now(),
             n = this._workCallbackFn(e),
             i = performance.now();
         (this.clearWorkTimeout(),
-            i - t > ev ? (this._nextDispatchTimeout = eP) : (this._nextDispatchTimeout = eD),
+            i - t > ev ? (this._nextDispatchTimeout = eM) : (this._nextDispatchTimeout = eD),
             n
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
@@ -1322,7 +1322,7 @@ class ew {
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
                 (this.telemetry.time(eS.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eP && this.telemetry.track(eg.LONGER_DISPATCH),
+                this._nextDispatchTimeout === eM && this.telemetry.track(eg.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
@@ -1346,7 +1346,7 @@ let eG =
         }),
     ex = window.cancelIdleCallback ?? clearTimeout;
 function ek(e) {
-    return null == e ? new eM(eb, !0) : new eM(e.timeRemaining(), e.didTimeout);
+    return null == e ? new eP(eb, !0) : new eP(e.timeRemaining(), e.didTimeout);
 }
 class eF extends ew {
     _flushIdleMaxTimeoutHandler = null;

@@ -19,8 +19,8 @@ function C(e) {
     let { channelId: t, corners: n, roomWidth: a } = e,
         {
             screenBounds: C,
-            screenClipPath: y,
-            center: j,
+            screenClipPath: j,
+            center: y,
             boundingBoxCorners: I,
         } = l.useMemo(() => {
             let e = (function (e) {
@@ -77,11 +77,11 @@ function C(e) {
         ref: N,
         className: x.nj,
         inert: _,
-        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: y },
+        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: j },
         children: [
             T.length > 0 && null != b && null != v
                 ? (0, i.jsx)(f.A, { streams: T, fit: b, tooltipSpacing: R, containerWidthPx: v })
-                : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: S }),
+                : (0, i.jsx)(A.A, { channelId: t, center: y, iconSize: S }),
             (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
         ],
     });

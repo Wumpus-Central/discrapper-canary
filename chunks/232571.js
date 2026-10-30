@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => j });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -53,26 +53,26 @@ function C() {
         ],
     });
 }
-function y(e) {
-    let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
+function j(e) {
+    let { channelId: t, x: n, y: j, label: y, roomWidth: I, seat: N } = e,
         v = (0, a.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
         E = (0, a.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
-                .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
+                .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === j)),
         ),
         b = (0, a.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
         S = l.useCallback(async () => {
             null != b &&
                 (v
-                    ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: N }).catch((e) =>
+                    ? (0, u.AQ)(b, t, { user_position: { x: n, y: j }, user_seat: N }).catch((e) =>
                           (0, h.b)({ silent: !0 }),
                       )
-                    : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [v, b, t, n, y, N]),
+                    : ((0, u.TJ)({ x: n, y: j }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
+        }, [v, b, t, n, j, N]),
         T = (0, m.Sb)({
-            position: { x: n, y },
-            targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
+            position: { x: n, y: j },
+            targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: y }),
         });
     if (E || null == b) return null;
     let { numericAvatarSize: _ } = (0, A.F)(I),
@@ -81,9 +81,9 @@ function y(e) {
         text: v || null != T ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(r.D, {
             role: "listitem",
-            "aria-label": j,
+            "aria-label": y,
             className: g.am,
-            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
+            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${j}% - ${R / 2}px)` },
             onClick: S,
             ...T,
             children: (0, i.jsx)(C, {}),

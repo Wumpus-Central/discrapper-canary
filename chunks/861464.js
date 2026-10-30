@@ -185,15 +185,15 @@ let L = {
                 return e.content;
             case l.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED:
                 var b = e.content;
-                let P = I.A.getChannel(S);
-                if (null == P) return null;
-                let M = p.A.getGuild(P.getGuildId());
-                return null == M
+                let M = I.A.getChannel(S);
+                if (null == M) return null;
+                let P = p.A.getGuild(M.getGuildId());
+                return null == P
                     ? null
                     : (0, a.$)(
                           o.intl.formatToParts(o.t.iOuWPk, {
                               username: N,
-                              guildName: M.name,
+                              guildName: P.name,
                               time:
                                   "" !== b
                                       ? new Date(b).toLocaleString(o.intl.currentLocale, {

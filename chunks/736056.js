@@ -116,8 +116,8 @@ var y = n(688151),
     D = n(652215);
 let v = "scientist:triggered",
     b = "exerimentOverrides",
-    P = "userExperimentOverrides",
-    M = "guildExperimentOverrides",
+    M = "userExperimentOverrides",
+    P = "guildExperimentOverrides",
     U = new c.A("ExperimentStore"),
     w = !1,
     G = {},
@@ -413,7 +413,7 @@ function el() {
 function eo(e) {
     let { isSwitchingAccount: t } = e;
     (l.w.remove(v),
-        t || (l.w.remove(b), l.w.remove(P), l.w.remove(M), (j = {}), (W = {})),
+        t || (l.w.remove(b), l.w.remove(M), l.w.remove(P), (j = {}), (W = {})),
         (B = {}),
         (F = { ...F, rawUserExperiments: [] }),
         (G = {}),
@@ -448,7 +448,7 @@ function ec() {
 }
 function eu() {
     try {
-        l.w.set(P, j);
+        l.w.set(M, j);
     } catch (e) {
         (U.error("Error saving user experiment overrides, unsaved data will be lost", e),
             E.default.track(D.HAw.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -457,7 +457,7 @@ function eu() {
             }));
     }
     try {
-        l.w.set(M, W);
+        l.w.set(P, W);
     } catch (e) {
         (U.error("Error saving guild experiment overrides, unsaved data will be lost", e),
             E.default.track(D.HAw.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -534,7 +534,7 @@ class ef extends _.A {
             for (let e in t) n - t[e].time > 6048e5 && (delete t[e], (i = !0));
             return (i && e_(t), t);
         })();
-        let e = [l.w.get(b) ?? {}, l.w.get(P) ?? {}, l.w.get(M) ?? {}];
+        let e = [l.w.get(b) ?? {}, l.w.get(M) ?? {}, l.w.get(P) ?? {}];
         ((j = {}), (W = {}));
         let t = !r().isEmpty(e[0]);
         for (let n of e)

@@ -2,8 +2,8 @@ n.d(t, { A: () => x });
 var l = n(477900);
 n(582128);
 var r = n(939249),
-    o = n(97808),
-    a = n(778712),
+    a = n(97808),
+    o = n(778712),
     u = n(834730),
     s = n(821609),
     i = n(402860),
@@ -15,7 +15,7 @@ var r = n(939249),
     g = n(105292),
     p = n(41799);
 function x(e) {
-    let { creator: t, remixProject: n, guildId: x, onClose: h } = e;
+    let { creator: t, remixProject: n, guildId: x, onClose: j } = e;
     return (0, l.jsxs)("div", {
         className: p.qr,
         children: [
@@ -28,7 +28,7 @@ function x(e) {
                               className: p.xL,
                               onClick: function () {
                                   null != t &&
-                                      (h(),
+                                      (j(),
                                       (0, i.openUserProfileModal)({
                                           userId: t.id,
                                           guildId: x ?? void 0,
@@ -36,9 +36,9 @@ function x(e) {
                                       }));
                               },
                               children: [
-                                  (0, l.jsx)(o.eu, {
+                                  (0, l.jsx)(a.eu, {
                                       src: t.getAvatarURL(x, 40),
-                                      size: a._3.SIZE_20,
+                                      size: o._3.SIZE_20,
                                       "aria-hidden": !0,
                                   }),
                                   (0, l.jsx)(u.E, {
@@ -56,7 +56,7 @@ function x(e) {
                               size: "sm",
                               text: g.intl.string(m.default.XWgAfc),
                               onClick: function () {
-                                  null != n && null != x && (h(), (0, v.A)(n, x));
+                                  null != n && null != x && (j(), (0, v.A)(n, x));
                               },
                           })
                         : null,

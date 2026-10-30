@@ -17,8 +17,8 @@ var i = n(477900),
     g = n(932453),
     C = n(739820);
 n(980504);
-var y = n(618922),
-    j = n(105292),
+var j = n(618922),
+    y = n(105292),
     I = n(130390);
 function N(e) {
     let { channelId: t, position: n } = e,
@@ -34,7 +34,7 @@ function N(e) {
         ? (0, i.jsx)(v, { channelId: t, asset: d.asset, position: n, width: d.width, sound: m })
         : (0, i.jsx)(g.c, {
               asset: d.asset,
-              label: j.intl.string(y.default["93KE7U"]),
+              label: y.intl.string(j.default["93KE7U"]),
               position: n,
               width: d.width,
               className: I.L,
@@ -55,7 +55,7 @@ function v(e) {
         }, [v, x?.id]);
     return (0, i.jsx)(g.A, {
         asset: n,
-        label: j.intl.string(y.default["93KE7U"]),
+        label: y.intl.string(j.default["93KE7U"]),
         position: a,
         width: r,
         disabled: !E,

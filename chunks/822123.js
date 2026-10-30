@@ -1,6 +1,6 @@
 (n.d(t, {
     C5: () => V,
-    CQ: () => M,
+    CQ: () => P,
     D6: () => X,
     DA: () => q,
     EG: () => w,
@@ -15,7 +15,7 @@
     _7: () => B,
     bo: () => k,
     sL: () => W,
-    ss: () => P,
+    ss: () => M,
     wT: () => Z,
     wt: () => H,
     xf: () => U,
@@ -68,7 +68,7 @@ function v(e) {
 function b(e) {
     return null != e && "" !== e ? { load_id: e } : {};
 }
-function P(e, t) {
+function M(e, t) {
     let {
         guildId: n = t?.getGuildId(),
         bypassPremiumEmojiEntitlement: r = !1,
@@ -188,7 +188,7 @@ function P(e, t) {
         }, [e, a]);
     return null != b ? [b, ...v] : v;
 }
-function M() {
+function P() {
     return d.Ay.getCategories().map((e) => ({ type: S.s.UNICODE, id: e, name: e, isNitroLocked: !1 }));
 }
 function U(e) {

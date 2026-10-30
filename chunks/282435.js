@@ -1,5 +1,5 @@
-a.d(o, { aA: () => c, jN: () => n, sx: () => r });
-let c = [
+n.d(t, { aA: () => i, jN: () => a, sx: () => r });
+let i = [
         { name: "Soul", color: "#ff1c90" },
         { name: "Volcano", color: "#e81d1e" },
         { name: "Marsh", color: "#e86e1d" },
@@ -114,4 +114,4 @@ let c = [
         "1272842103910699040",
         "1276737795012165766",
     ],
-    n = new Map(r.map((e, o, a) => [e, a.length - o]));
+    a = new Map(r.map((e, t, n) => [e, n.length - t]));

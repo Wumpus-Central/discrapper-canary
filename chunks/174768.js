@@ -28,8 +28,8 @@ var r = n(435558),
     D = n(403362),
     v = n(652215),
     b = n(105292);
-let P = "seenQSTutorial";
-function M(e) {
+let M = "seenQSTutorial";
+function P(e) {
     return e === d.rD.USER || e === d.rD.USER_GLOBAL;
 }
 function U() {
@@ -61,7 +61,7 @@ function K() {
 function $(e) {
     let t = (0, c.A)(e);
     if (null == t) return null;
-    if (M(k)) {
+    if (P(k)) {
         if (t.type !== d.rD.USER) return null;
     } else if (null != k && k !== t.type) return null;
     return t;
@@ -274,7 +274,7 @@ class J extends s.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(A.A, f.default, I.Ay, p.A, T.A, u.A, m.Ay, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
             this.syncWith([h.A], () => !0),
-            (G = l.w.get(P) || !1),
+            (G = l.w.get(M) || !1),
             (j = e?.channelHistory ?? []));
     }
     getState() {
@@ -331,7 +331,7 @@ let ee = new J(o.h, {
                 r = t.trim();
             if (null == i) return !1;
             if (k !== n) {
-                (null == n ? i.setResultTypes(U()) : M(n) ? i.setResultTypes([d.rD.USER]) : i.setResultTypes([n]),
+                (null == n ? i.setResultTypes(U()) : P(n) ? i.setResultTypes([d.rD.USER]) : i.setResultTypes([n]),
                     i.setLimit(null != n ? 100 : 5));
                 let e = R.A.getGuildId() ?? void 0;
                 n === d.rD.USER && null != e
@@ -350,7 +350,7 @@ let ee = new J(o.h, {
         },
         QUICKSWITCHER_SWITCH_TO: function () {
             if (G) return !1;
-            ((G = !0), l.w.set(P, !0));
+            ((G = !0), l.w.set(M, !0));
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;

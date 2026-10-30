@@ -2,10 +2,10 @@
     CG: () => O,
     DJ: () => x,
     IP: () => y,
-    Jg: () => P,
+    Jg: () => M,
     Jz: () => v,
     Pd: () => D,
-    QG: () => M,
+    QG: () => P,
     af: () => G,
     an: () => a.A,
     fK: () => b,
@@ -120,7 +120,7 @@ function b(e) {
         );
     })({ channels: t, selectedChannelId: n, selectedVoiceChannelId: i, voiceStates: r }).map((e) => e.user);
 }
-function P(e) {
+function M(e) {
     let { type: t } = e;
     switch (t) {
         case I.rbe.DM:
@@ -160,7 +160,7 @@ function P(e) {
             return null;
     }
 }
-function M(e) {
+function P(e) {
     if (null == e) return "text";
     let t = e.isNSFW(),
         n = e.isSpoilerChannel(),

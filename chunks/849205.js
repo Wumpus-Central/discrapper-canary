@@ -34,22 +34,22 @@ function D(e) {
         R = I.Ay.useUserTag(D),
         S = (0, g.a)({ displayNameStyles: D?.displayNameStyles }),
         G = (0, p.bG)({ channelId: e.channel.id }),
-        O = i.useRef(null),
-        [y, k] = i.useState(!1),
+        y = i.useRef(null),
+        [O, k] = i.useState(!1),
         P = i.useRef(void 0),
         F = i.useCallback(() => {
             (clearTimeout(P.current), k(!0));
         }, []),
-        V = i.useCallback(() => {
+        H = i.useCallback(() => {
             P.current = setTimeout(() => {
                 k(!1);
             }, 250);
         }, []);
     i.useEffect(() => () => clearTimeout(P.current), []);
-    let H = (0, s.cf)([E.Ay], () => E.Ay.getNicknameGuildsMapping(n), [n]),
+    let V = (0, s.cf)([E.Ay], () => E.Ay.getNicknameGuildsMapping(n), [n]),
         z = i.useMemo(
             () =>
-                Object.entries(H)
+                Object.entries(V)
                     .filter((e) => {
                         let [n] = e;
                         return n !== D?.globalName;
@@ -58,7 +58,7 @@ function D(e) {
                         let [n, l] = e;
                         return { nickname: n, guildIds: l };
                     }),
-            [H, D?.globalName],
+            [V, D?.globalName],
         ),
         B = z.length > 0,
         w = B && null != D && !l,
@@ -82,7 +82,7 @@ function D(e) {
                     className: _.my,
                     children: [
                         (0, t.jsx)("div", {
-                            ref: O,
+                            ref: y,
                             children:
                                 null != e.handleClick
                                     ? (0, t.jsx)(u.D, {
@@ -90,7 +90,7 @@ function D(e) {
                                           onClick: e.handleClick,
                                           onContextMenu: e.handleContextMenu,
                                           onMouseEnter: w ? F : void 0,
-                                          onMouseLeave: w ? V : void 0,
+                                          onMouseLeave: w ? H : void 0,
                                           className: _.or,
                                           "aria-hidden": !0,
                                           tabIndex: -1,
@@ -100,8 +100,8 @@ function D(e) {
                         }),
                         w &&
                             (0, t.jsxs)(r.x, {
-                                targetElementRef: O,
-                                shouldShow: y,
+                                targetElementRef: y,
+                                shouldShow: O,
                                 onRequestClose: () => k(!1),
                                 position: "bottom",
                                 caretConfig: { align: "start" },
@@ -109,7 +109,7 @@ function D(e) {
                                     (0, t.jsxs)("div", {
                                         className: _.y$,
                                         onMouseEnter: F,
-                                        onMouseLeave: V,
+                                        onMouseLeave: H,
                                         children: [
                                             (0, t.jsxs)("div", {
                                                 className: _.qc,
@@ -165,9 +165,9 @@ function D(e) {
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
                 onMouseEnter: w ? F : void 0,
-                onMouseLeave: w ? V : void 0,
+                onMouseLeave: w ? H : void 0,
                 onFocus: w ? F : void 0,
-                onBlur: w ? V : void 0,
+                onBlur: w ? H : void 0,
                 className: null != e.handleClick ? _.or : null,
                 children: (0, t.jsxs)(t.Fragment, {
                     children: [

@@ -3,8 +3,8 @@
     Wn: () => R,
     CD: () => S,
     vP: () => D,
-    pT: () => P,
-    nR: () => M,
+    pT: () => M,
+    nR: () => P,
     un: () => b,
     wd: () => L,
     Tu: () => y,
@@ -288,7 +288,7 @@ function b(e) {
             application_id: c,
         }));
 }
-function P(e) {
+function M(e) {
     let {
         guildId: t,
         channelId: n,
@@ -312,7 +312,7 @@ function P(e) {
             is_widget_removed: d,
         }));
 }
-function M(e) {
+function P(e) {
     let { guildId: t, channelId: n, analyticsLocations: i, action: a, wishlistId: s, skuId: l, productLines: o } = e;
     (R({ ...e, action: a }),
         E.default.track(T.HAw.USER_PROFILE_WISHLIST_ACTION, {

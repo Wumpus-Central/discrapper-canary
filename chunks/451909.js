@@ -28,8 +28,8 @@ var i = n(435558),
     D = n(690521),
     v = n(403362),
     b = n(562153),
-    P = n(427262),
-    M = n(652215);
+    M = n(427262),
+    P = n(652215);
 n(827669);
 var U = n(307731),
     w = n(105292);
@@ -208,9 +208,9 @@ let F = E.Ay.RULES,
                 let { isNotification: i, guild: a, channelId: s } = n,
                     l = L.default.getUser(e[1]);
                 if (null == l) return { content: e[0] };
-                let o = P.Ay.getUserTag(l, { identifiable: i && R.A.enabled ? "never" : "always" });
+                let o = M.Ay.getUserTag(l, { identifiable: i && R.A.enabled ? "never" : "always" });
                 if (i) {
-                    let e = b.Ay.getNickname(a?.id, s, l) ?? P.Ay.getGlobalName(l);
+                    let e = b.Ay.getNickname(a?.id, s, l) ?? M.Ay.getGlobalName(l);
                     return { content: null != e ? `@${e}` : `@${o}` };
                 }
                 {
@@ -270,10 +270,10 @@ let F = E.Ay.RULES,
             },
         },
         spoiler: {
-            match: s().anyScopeRegex(M.VFs),
+            match: s().anyScopeRegex(P.VFs),
             parse: () => ({ content: `<${w.intl.string(w.t["F+x38C"]).toLowerCase()}>` }),
         },
-        staticRouteLink: { match: s().anyScopeRegex(M.P0V), parse: (e) => ({ content: `<id:${e[1]}>` }) },
+        staticRouteLink: { match: s().anyScopeRegex(P.P0V), parse: (e) => ({ content: `<id:${e[1]}>` }) },
         timestamp: {
             ...F.timestamp,
             parse() {
@@ -339,7 +339,7 @@ function Q(e, t) {
     let n,
         i = e?.getGuildId(),
         a = null != i ? N.A.getGuild(i) : null,
-        s = C.A.can(M.xBc.MENTION_EVERYONE, e);
+        s = C.A.can(P.xBc.MENTION_EVERYONE, e);
     if (e?.isPrivate()) {
         n = e.recipients.map((e) => ({ userId: e, nick: null }));
         let t = L.default.getCurrentUser();
@@ -378,7 +378,7 @@ function Q(e, t) {
                       .filter((e) => e !== m.I6)
                       .flatMap((e) =>
                           m.Ay.getChannels(i)[e].map((e) =>
-                              e.channel.isCategory() && !C.A.can(M.xBc.VIEW_CHANNEL, e.channel)
+                              e.channel.isCategory() && !C.A.can(P.xBc.VIEW_CHANNEL, e.channel)
                                   ? null
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, L.default, O.A) },
                           ),

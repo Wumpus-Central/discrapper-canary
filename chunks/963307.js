@@ -190,7 +190,7 @@ class b {
         null != n && (this.groups.splice(t, 1, y(this.guildId, e, n.count, n.index)), this.version++);
     }
 }
-let P = new (class {
+let M = new (class {
     _guildLists = {};
     get(e, t) {
         let n = this._guildLists[e];
@@ -215,8 +215,8 @@ let P = new (class {
         this._guildLists = {};
     }
 })();
-function M() {
-    P.reset();
+function P() {
+    M.reset();
 }
 let U = [];
 function w() {
@@ -224,12 +224,12 @@ function w() {
         t = U.concat(e);
     ((U = e),
         t.forEach((e) => {
-            P.forEach(null, (t) => t.rebuildMember(e.ownerId));
+            M.forEach(null, (t) => t.rebuildMember(e.ownerId));
         }));
 }
 function G() {
     let e = A.default.getId();
-    P.forEach(null, (t) => t.rebuildMember(e));
+    M.forEach(null, (t) => t.rebuildMember(e));
 }
 class x extends d.Ay.Store {
     static displayName = "ChannelMemberStore";
@@ -239,18 +239,18 @@ class x extends d.Ay.Store {
             this.syncWith([E.A], w));
     }
     getProps(e, t) {
-        let n = P.get(e, v(t));
+        let n = M.get(e, v(t));
         return { listId: `${n.guildId}:${n.listId}`, groups: n.groups, rows: n.rows, version: n.version };
     }
     getRows(e, t) {
-        return P.get(e, v(t)).rows;
+        return M.get(e, v(t)).rows;
     }
 }
 let k = new x(c.h, {
-    CONNECTION_OPEN: M,
-    OVERLAY_INITIALIZE: M,
+    CONNECTION_OPEN: P,
+    OVERLAY_INITIALIZE: P,
     GUILD_MEMBER_LIST_UPDATE: function (e) {
-        let t = P.get(e.guildId, e.id);
+        let t = M.get(e.guildId, e.id);
         (e.ops.forEach((e) => {
             switch (e.op) {
                 case "SYNC":
@@ -273,23 +273,23 @@ let k = new x(c.h, {
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e;
-        P.forEach(t.id, (e) => {
+        M.forEach(t.id, (e) => {
             e.updateOwnerId() && e.rebuildMembers();
         });
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        P.delete(t.id);
+        M.delete(t.id);
     },
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t, role: n } = e;
-        P.forEach(t, (e) => {
+        M.forEach(t, (e) => {
             (e.rebuildGroup(n.id), e.rebuildMembers());
         });
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
-        P.forEach(t, (e) => e.rebuildMember(n.id));
+        M.forEach(t, (e) => e.rebuildMember(n.id));
     },
     CHANNEL_UPDATES: function () {
         return !0;

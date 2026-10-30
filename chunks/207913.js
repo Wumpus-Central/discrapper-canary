@@ -28,8 +28,8 @@ let d = {},
     D = 0,
     v = null,
     b = !1,
-    P = o.qN.NONE,
-    M = null;
+    M = o.qN.NONE,
+    P = null;
 function U(e) {
     let {} = e;
     ((y = ""), (v = null), (b = !1));
@@ -51,9 +51,9 @@ function G() {
         (p = []),
         (m = !1),
         (g = !1),
-        (P = o.qN.NONE),
+        (M = o.qN.NONE),
         (D = 0),
-        (M = null));
+        (P = null));
 }
 class x extends a.Ay.Store {
     static displayName = "SafetyHubStore";
@@ -127,10 +127,10 @@ class x extends a.Ay.Store {
         return b;
     }
     getAgeCheckStatus() {
-        return P;
+        return M;
     }
     getAgeCheckError() {
-        return M;
+        return P;
     }
     getAgeCheckAttempts() {
         return D;
@@ -225,35 +225,35 @@ let k = new x(s.h, {
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: U,
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS: function (e) {
         let {} = e;
-        for (let e in ((P = o.qN.LOADING), d)) d[e].is_coppa && (d[e].appeal_status = { status: l.Wi.REVIEW_PENDING });
+        for (let e in ((M = o.qN.LOADING), d)) d[e].is_coppa && (d[e].appeal_status = { status: l.Wi.REVIEW_PENDING });
     },
     SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED: function (e) {
         let {} = e;
-        P = o.qN.LOADING;
+        M = o.qN.LOADING;
     },
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL: function (e) {
         let {} = e;
-        ((P = o.qN.LOADING), (M = null));
+        ((M = o.qN.LOADING), (P = null));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START: function (e) {
         let {} = e;
-        ((P = o.qN.LOADING), (M = null), (D += 1));
+        ((M = o.qN.LOADING), (P = null), (D += 1));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (e) {
         let { success: t } = e;
-        ((P = t ? o.qN.SUCCESS : D < o.ti ? o.qN.LOADING : o.qN.FAILURE), (M = null));
+        ((M = t ? o.qN.SUCCESS : D < o.ti ? o.qN.LOADING : o.qN.FAILURE), (P = null));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS_V2: function (e) {
         let { status: t } = e;
-        ((P = w[t]), (M = null));
+        ((M = w[t]), (P = null));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (e) {
         let { error: t } = e;
-        ((P = o.qN.ERROR), (M = t));
+        ((M = o.qN.ERROR), (P = t));
     },
     SAFETY_HUB_RESET_AGE_CHECK_STATUS: function (e) {
         let {} = e;
-        ((P = o.qN.NONE), (D = 0), (M = null));
+        ((M = o.qN.NONE), (D = 0), (P = null));
     },
     LOGOUT: G,
     LOGIN_SUSPENDED_USER: G,

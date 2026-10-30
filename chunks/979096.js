@@ -1,7 +1,7 @@
 n.d(t, {
     Ls: () => p,
     iW: () => v,
-    Be: () => P,
+    Be: () => M,
     AR: () => U,
     Wm: () => R,
     z9: () => c,
@@ -788,7 +788,7 @@ class b {
         return this.state.deleteGeneration([], e, t);
     }
 }
-class P {
+class M {
     originalPrefix;
     table;
     get prefix() {
@@ -798,7 +798,7 @@ class P {
         ((this.originalPrefix = e), (this.table = new f([e], t, n, i)));
     }
     withoutLogging() {
-        return new P(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new M(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -842,10 +842,10 @@ class P {
         return this.transaction((n) => n.deleteGeneration(e, t), `${this.prefix} deleteGeneration`);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new M(t)), t);
+        return this.table.transaction((t) => e(new P(t)), t);
     }
     upgradeTransaction(e) {
-        return new M(this.table.upgradeTransaction(e));
+        return new P(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e, t) {
         return this.table.getManySyncUnsafe([e], t);
@@ -860,10 +860,10 @@ class P {
         return { key: [e, t.id], data: t, generation: n };
     }
 }
-class M {
+class P {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new M(new I(e, t, n));
+        return new P(new I(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
@@ -874,12 +874,12 @@ class M {
     }
     putWithGeneration(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace;
-        return this.transaction.put(P.cell(e, t, n), i);
+        return this.transaction.put(M.cell(e, t, n), i);
     }
     putAll(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.Replace;
         return this.transaction.putAll(
-            t.map((t) => P.cell(e, t, null)),
+            t.map((t) => M.cell(e, t, null)),
             n,
         );
     }

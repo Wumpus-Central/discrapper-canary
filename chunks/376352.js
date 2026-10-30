@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(206828),
     g = n(294323),
     C = n(429913),
-    y = n(853735),
-    j = n(131607),
+    j = n(853735),
+    y = n(131607),
     I = n(409626),
     N = n(613902),
     v = n(692969),
@@ -33,7 +33,7 @@ var i = n(477900),
     M = n(105292),
     w = n(472344);
 function U(e) {
-    let [t, n] = (0, j.RF)(e, (0, y.c)(e), void 0, !0);
+    let [t, n] = (0, y.RF)(e, (0, j.c)(e), void 0, !0);
     return [t === e, n];
 }
 function D(e) {
@@ -88,12 +88,12 @@ function G(e) {
         { user: n, stream: a, channel: s } = e,
         [c, d] = l.useState(!1),
         u = (0, b.AO)(a),
-        y = u?.id,
-        j = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
-        I = null != y ? j[y] : null,
+        j = u?.id,
+        y = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
+        I = null != j ? y[j] : null,
         v = (0, C.h)(I),
         E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
-        O = E ? (I ?? y ?? null) : I,
+        O = E ? (I ?? j ?? null) : I,
         G = (0, C.h)(O),
         {
             isLoading: k,
@@ -180,7 +180,7 @@ function G(e) {
               theme: P.NJ.DARK,
               children: (e) =>
                   null == ec
-                      ? (0, i.jsx)(V, { className: e, applicationId: y })
+                      ? (0, i.jsx)(V, { className: e, applicationId: j })
                       : (0, i.jsx)(f.Y, {
                             targetElementRef: W,
                             shouldShow: c,

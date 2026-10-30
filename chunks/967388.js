@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(734057),
     g = n(309010),
     C = n(287809),
-    y = n(562153),
-    j = n(446243),
+    j = n(562153),
+    y = n(446243),
     I = n(920639),
     N = n(538638),
     v = n(781137),
@@ -33,7 +33,7 @@ function R(e) {
         P = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
         M = (0, r.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
         w = (0, r.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t, [t]),
-        U = (0, y.tx)(M, t, P),
+        U = (0, j.tx)(M, t, P),
         D = (0, E.Sb)({
             position: n.position,
             targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
@@ -90,7 +90,7 @@ function R(e) {
                                                   onClick: w
                                                       ? function () {
                                                             null != M &&
-                                                                (0, j.yF)(M, t, n.objectId).catch((e) => (0, N.b)());
+                                                                (0, y.yF)(M, t, n.objectId).catch((e) => (0, N.b)());
                                                         }
                                                       : void 0,
                                                   "aria-disabled": !w,

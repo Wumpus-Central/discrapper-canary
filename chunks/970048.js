@@ -39,12 +39,12 @@ function v(e, t) {
 function b(e, t, n) {
     return e ? D(t) : v(t, n);
 }
-var P = n(161518),
-    M = n(927813),
+var M = n(161518),
+    P = n(927813),
     U = n(601900);
-let w = 10 * M.A.Millis.SECOND;
+let w = 10 * P.A.Millis.SECOND;
 var G = n(280450);
-let x = 10 * M.A.Millis.SECOND;
+let x = 10 * P.A.Millis.SECOND;
 function k() {
     return E.X.isIncomingVideoEnabled() && performance.now() - E.X.lastIncomingVideoEnabledChangeTime() > x;
 }
@@ -58,13 +58,13 @@ function B() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
     return e <= 5 ? 3 : e <= 15 ? 8 : e <= 30 ? 15 : 30;
 }
-let V = 20 * M.A.Millis.SECOND;
+let V = 20 * P.A.Millis.SECOND;
 var H = n(723702);
 let j = BigInt(-3821);
 var W = n(403362),
     Y = n(198052),
     K = n(650338);
-let $ = 20 * M.A.Millis.SECOND;
+let $ = 20 * P.A.Millis.SECOND;
 var z = n(877717);
 n(321073);
 var X = n(803301);
@@ -366,7 +366,7 @@ class J extends r.A {
                         e,
                     );
         }
-        let a = P.A.getActiveErrors();
+        let a = M.A.getActiveErrors();
         if (!(a instanceof Map))
             return void Z.error(`existingErrors is not a Map: ${a} type: ${Object.prototype.toString.call(a)}`);
         if (0 === r.size && 0 === a.size) return;
@@ -398,8 +398,8 @@ class J extends r.A {
                     s = T.A.getChannel(a),
                     o = "streamKey" in t ? t.streamKey : void 0,
                     c = "mediaContext" in t ? t.mediaContext : void 0,
-                    P = "underlyingError" in t ? t.underlyingError : void 0,
-                    M = "errorMessage" in t ? t.errorMessage : void 0,
+                    M = "underlyingError" in t ? t.underlyingError : void 0,
+                    P = "errorMessage" in t ? t.errorMessage : void 0,
                     U = "mediaSessionId" in t ? t.mediaSessionId : void 0,
                     w = "rtcConnectionId" in t ? t.rtcConnectionId : void 0,
                     G = "videoCodec" in t ? t.videoCodec : void 0,
@@ -438,8 +438,8 @@ class J extends r.A {
                             error_code: r.errorCode,
                             error_severity: r.severity,
                             error_category: r.category,
-                            underlying_error: P ?? null,
-                            error_message: M ?? null,
+                            underlying_error: M ?? null,
+                            error_message: P ?? null,
                             guild_id: s?.guild_id ?? null,
                             channel_id: a ?? null,
                             channel_type: s?.type ?? null,

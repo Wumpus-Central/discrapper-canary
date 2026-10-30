@@ -1,8 +1,8 @@
 n.d(t, { A: () => c });
 var l = n(582128),
     r = n(17928),
-    o = n(11044),
-    a = n(287809),
+    a = n(11044),
+    o = n(287809),
     u = n(503275),
     s = n(97005),
     i = n(371169),
@@ -13,11 +13,11 @@ function c(e, t, n) {
             remixProject: v,
             isSettled: f,
         } = (function (e, t, n) {
-            let o = (0, s.m0)({ guildId: t ?? void 0, location: "ConjureAppHoverCard" }) && null != t;
+            let a = (0, s.m0)({ guildId: t ?? void 0, location: "ConjureAppHoverCard" }) && null != t;
             l.useEffect(() => {
                 n && null != e && (0, i.tF)([e]);
             }, [n, e]);
-            let { project: a, isUnavailable: u } = (0, r.cf)(
+            let { project: o, isUnavailable: u } = (0, r.cf)(
                 [d.Ay],
                 () => ({
                     project: null != e ? (d.Ay.getProject(e) ?? null) : null,
@@ -27,11 +27,11 @@ function c(e, t, n) {
             );
             return l.useMemo(
                 () => ({
-                    project: a,
-                    remixProject: o && null != a && (0, d.H_)(a) ? a : null,
-                    isSettled: null == e || null != a || u,
+                    project: o,
+                    remixProject: a && null != o && (0, d.H_)(o) ? o : null,
+                    isSettled: null == e || null != o || u,
                 }),
-                [a, o, e, u],
+                [o, a, e, u],
             );
         })(e?.conjureProjectId ?? null, t, n),
         m = c?.owner_user_id ?? null,
@@ -41,19 +41,19 @@ function c(e, t, n) {
         let e = !0;
         return (
             (async function (t) {
-                (await (0, u.Y_)(t), e && null == a.default.getUser(t) && p(t));
+                (await (0, u.Y_)(t), e && null == o.default.getUser(t) && p(t));
             })(m),
             () => {
                 e = !1;
             }
         );
     }, [n, m]);
-    let x = (0, r.bG)([a.default], () => (null != m ? (a.default.getUser(m) ?? null) : null), [m]),
-        h = x?.getAvatarURL(t, 32);
+    let x = (0, r.bG)([o.default], () => (null != m ? (o.default.getUser(m) ?? null) : null), [m]),
+        j = x?.getAvatarURL(t, 32);
     return (
         l.useEffect(() => {
-            n && null != h && (0, o.N)(h);
-        }, [n, h]),
+            n && null != j && (0, a.N)(j);
+        }, [n, j]),
         l.useMemo(
             () => ({ creator: x, remixProject: v, isSettled: null != e && f && (null == m || null != x || g === m) }),
             [x, v, e, f, m, g],

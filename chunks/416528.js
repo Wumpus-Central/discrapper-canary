@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(689874),
     g = n(872363),
     C = n(446243),
-    y = n(920639),
-    j = n(360729),
+    j = n(920639),
+    y = n(360729),
     I = n(410828),
     N = n(51082),
     v = n(275731),
@@ -96,7 +96,7 @@ function W(e) {
             }),
             [X],
         ),
-        { enabled: J, multipleRoomsEnabled: ee } = (0, j.mf)({
+        { enabled: J, multipleRoomsEnabled: ee } = (0, y.mf)({
             guildId: t.guild_id,
             location: "ChannelCallHeaderToolbar",
         }),
@@ -184,7 +184,7 @@ function W(e) {
                     onClick: () => {
                         if (!W) {
                             ((0, C.zD)(t.id),
-                                (0, y.yt)({
+                                (0, j.yt)({
                                     channelId: t.id,
                                     guildId: t.guild_id,
                                     location: m.A.CHANNEL_CALL,

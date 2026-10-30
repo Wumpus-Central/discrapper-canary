@@ -46,8 +46,8 @@ let y = Symbol("NO GUILD ID"),
     D = new Map(),
     v = new Set(),
     b = new Map(),
-    P = new Map(),
-    M = {},
+    M = new Map(),
+    P = {},
     U = new Map(),
     w = new Map(),
     G = new Map(),
@@ -124,7 +124,7 @@ function B(e) {
 let V = !1,
     H = null;
 function j(e, t) {
-    let n = null != t ? P.get(e)?.get(t) : b.get(e);
+    let n = null != t ? M.get(e)?.get(t) : b.get(e);
     if (n?.collectibles == null) return;
     let i = [];
     (n.collectibles.forEach((n) => {
@@ -132,10 +132,10 @@ function j(e, t) {
         let r = n.expiresAt.getTime() - Date.now();
         r <= 0
             ? i.push(n)
-            : (null == M[e] && (M[e] = { [y]: {} }),
-              null == M[e][t ?? y] && (M[e][t ?? y] = {}),
-              null == M[e][t ?? y][n.skuId] && (M[e][t ?? y][n.skuId] = new o.Ep()),
-              M[e][t ?? y][n.skuId].start(Math.min(R.mnr, r), () => {
+            : (null == P[e] && (P[e] = { [y]: {} }),
+              null == P[e][t ?? y] && (P[e][t ?? y] = {}),
+              null == P[e][t ?? y][n.skuId] && (P[e][t ?? y][n.skuId] = new o.Ep()),
+              P[e][t ?? y][n.skuId].start(Math.min(R.mnr, r), () => {
                   j(e, t);
               }));
     }),
@@ -145,13 +145,13 @@ function j(e, t) {
                 (i.type === a.R.PROFILE_EFFECT
                     ? (n.profileEffect = void 0)
                     : i.type === a.R.PROFILE_FRAME && (n.profileFrame = void 0),
-                    delete M[e]?.[t ?? y]?.[i.skuId]);
+                    delete P[e]?.[t ?? y]?.[i.skuId]);
             }),
-            "guildId" in n ? P.get(e)?.set(n.guildId, n) : b.set(e, n),
+            "guildId" in n ? M.get(e)?.set(n.guildId, n) : b.set(e, n),
             e_.emitChange()));
 }
 function W() {
-    (D.clear(), v.clear(), b.clear(), P.clear(), U.clear(), w.clear(), G.clear(), (V = !1));
+    (D.clear(), v.clear(), b.clear(), M.clear(), U.clear(), w.clear(), G.clear(), (V = !1));
 }
 function Y(e) {
     let { userId: t } = e;
@@ -278,11 +278,11 @@ function X(e) {
                 fetchStartedAt: n,
                 fetchEndedAt: c,
             },
-            i = P.get(t.user.id);
+            i = M.get(t.user.id);
         if (null != i) i.set(t.guild_member_profile.guild_id, e);
         else {
             let n = new Map();
-            (n.set(t.guild_member_profile.guild_id, e), P.set(t.user.id, n));
+            (n.set(t.guild_member_profile.guild_id, e), M.set(t.user.id, n));
         }
         j(t.user.id, t.guild_member_profile.guild_id);
     }
@@ -326,7 +326,7 @@ function Q(e) {
         },
         s = Date.now();
     if (((a.fetchStartedAt = r), (a.fetchEndedAt = s), (a.fetchError = i), b.set(t, a), null != n)) {
-        let e = P.get(t)?.get(n);
+        let e = M.get(t)?.get(n);
         null != e && ((e.fetchStartedAt = r), (e.fetchEndedAt = s), (e.fetchError = i));
     }
     i?.status === 404 && (w.set(t, 0), U.set(t, x), G.set(t, k));
@@ -349,7 +349,7 @@ function ee(e) {
                           theme_colors: o,
                           collectibles: d,
                       } = e,
-                      c = P.get(t);
+                      c = M.get(t);
                   if (null == n || null == c) return;
                   let u = c.get(n);
                   null == u ||
@@ -429,14 +429,14 @@ function eo(e) {
     return ec(e.relationship.id);
 }
 function ed() {
-    (D.clear(), v.clear(), b.clear(), P.clear());
+    (D.clear(), v.clear(), b.clear(), M.clear());
 }
 function ec(e) {
     if (null == e) return !1;
     let t = b.get(e);
     if (null == t) return !1;
     ((t.fetchStartedAt = 0), (t.fetchEndedAt = 0), (t.fetchError = void 0));
-    let n = P.get(e);
+    let n = M.get(e);
     if (null != n) for (let e of n.values()) ((e.fetchStartedAt = 0), (e.fetchEndedAt = 0), (e.fetchError = void 0));
 }
 class eu extends h.A {
@@ -487,7 +487,7 @@ class eu extends h.A {
         return b.get(e);
     }
     getGuildMemberProfile(e, t) {
-        return null == t ? null : (P.get(e)?.get(t) ?? null);
+        return null == t ? null : (M.get(e)?.get(t) ?? null);
     }
     getMutualFriends(e) {
         return U.get(e);

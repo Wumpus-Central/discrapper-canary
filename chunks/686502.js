@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(821609),
     g = n(283973),
     C = n(834730),
-    y = n(789645),
-    j = n(964486),
+    j = n(789645),
+    y = n(964486),
     I = n(648027),
     N = n(855446),
     v = n(793574),
@@ -161,7 +161,7 @@ function V(e) {
 }
 function G(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
-    (0, j.Ay)(() => {
+    (0, y.Ay)(() => {
         R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
@@ -223,7 +223,7 @@ function G(e) {
                         }),
                             a());
                     },
-                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
+                    children: (0, i.jsx)(j.P, { size: "md", color: "currentColor", className: M.b }),
                 }),
             ],
         }),

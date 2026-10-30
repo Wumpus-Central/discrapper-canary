@@ -1,4 +1,4 @@
-t.d(n, { lv: () => E, lF: () => A, FD: () => f, Ug: () => _, um: () => g, dM: () => m });
+t.d(n, { lv: () => E, lF: () => m, FD: () => f, Ug: () => _, um: () => g, dM: () => A });
 var l = t(636537),
     i = t(73153),
     a = t(210470);
@@ -52,10 +52,10 @@ async function g(e) {
 function E(e, n, t) {
     i.h.dispatch({ type: "PINOT_DRAFT_UPDATE", guildId: e, featureKey: n, draft: t });
 }
-function A(e) {
+function m(e) {
     i.h.dispatch({ type: "PINOT_OPEN_FEATURE", featureKey: e });
 }
-function m(e) {
+function A(e) {
     i.h.dispatch({ type: "PINOT_ADMIN_NOTICE_ACK", guildId: e });
 }
 function _(e) {

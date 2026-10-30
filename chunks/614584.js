@@ -6,7 +6,7 @@
     YP: () => ei,
     Uh: () => ea,
     Fb: () => eS,
-    VO: () => eP,
+    VO: () => eM,
     uL: () => ex,
     GS: () => el,
     h5: () => ey,
@@ -68,13 +68,13 @@ function D(e, t) {
 }
 var v = n(458977),
     b = n(439818),
-    P = n(572164);
-let M = ["filepath", "sizeBytes"];
+    M = n(572164);
+let P = ["filepath", "sizeBytes"];
 function U(e) {
     return JSON.stringify(
         (function (e) {
             let t = { ...e };
-            for (let e of M) delete t[e];
+            for (let e of P) delete t[e];
             return t;
         })(e),
     );
@@ -530,8 +530,8 @@ async function eu(e) {
     let R = `${(0, b.A)(m.applicationName.substring(0, 20))}_${m.id}.mp4`,
         D = a.A.fileManager.join(p, R),
         v = I.Ay.getMediaEngine(),
-        P = JSON.stringify(m),
-        M = S.TX(m),
+        M = JSON.stringify(m),
+        P = S.TX(m),
         U =
             ((t = I.Ay.getNoiseCancellation()),
             (n = I.Ay.getSystemMicrophoneMode()),
@@ -554,7 +554,7 @@ async function eu(e) {
             metadata: l,
         } = await v.saveClipEx({
             filepath: D,
-            metadata: P,
+            metadata: M,
             thumbnailMs: x,
             startMs: w,
             endMs: G,
@@ -596,7 +596,7 @@ async function eu(e) {
             } catch (e) {
                 O.nx.warn("Failed to build candidate clip analytics; emitting clip_saved without them:", e);
             }
-        let d = S.u2(M, i, m, e);
+        let d = S.u2(P, i, m, e);
         if (null != l) t = JSON.parse(l);
         else {
             if (((m.length = n), void 0 !== s)) m.thumbnail = s;
@@ -617,9 +617,9 @@ async function eu(e) {
             { ...t, filepath: D, sizeBytes: i.clipSizeBytes }
         );
     } catch (e) {
-        if (!("errorMessage" in e)) throw (T.default.track(ee.HAw.CLIP_SAVE_FAILURE, { ...S.lc(), ...M }), e);
+        if (!("errorMessage" in e)) throw (T.default.track(ee.HAw.CLIP_SAVE_FAILURE, { ...S.lc(), ...P }), e);
         if (e.errorAt !== O.RC.BUFFER_WARMING_UP && e.errorAt !== O.RC.BRIDGE_SHUTDOWN) {
-            let t = S.WR(M, e);
+            let t = S.WR(P, e);
             T.default.track(ee.HAw.CLIP_SAVE_FAILURE, t);
         }
         throw e;
@@ -657,7 +657,7 @@ async function eE(e) {
             r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: O.RC.MODULE_NOT_LOADED }));
         return;
     }
-    let d = (0, P.T)(),
+    let d = (0, M.T)(),
         u = E.A.getCurrentUserActiveStream(),
         A = null != u,
         h = c.Ay.getVisibleGame()?.windowHandle != null,
@@ -912,7 +912,7 @@ async function eb(e) {
               }))
         : r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n });
 }
-async function eP(e, t) {
+async function eM(e, t) {
     let { analyticsLocations: n, isTemporaryEdit: i = !1, skipComposition: r = !1 } = t,
         s = performance.now();
     try {
@@ -946,7 +946,7 @@ async function eP(e, t) {
             if (e.type === O.nQ.SCREENSHOT || f) return n;
             return q(n);
         } finally {
-            await eM(h);
+            await eP(h);
         }
     } finally {
         eU(null);
@@ -954,7 +954,7 @@ async function eP(e, t) {
         T.default.track(ee.HAw.CLIP_EXPORTED, { ...S.lc(), ...S.Zy(e), location_stack: n, export_duration: t - s });
     }
 }
-async function eM(e) {
+async function eP(e) {
     if ((0, m.isDesktop)())
         try {
             await a.A.clips.deleteClip(e);

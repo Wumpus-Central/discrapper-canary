@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(140735),
     g = n(421773),
     C = n(363195),
-    y = n(809369),
-    j = n(618922),
+    j = n(809369),
+    y = n(618922),
     I = n(105292),
     N = n(531281);
 function v(e) {
@@ -47,7 +47,7 @@ function v(e) {
                             (0, i.jsx)(u.E, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-positive",
-                                children: I.intl.string(j.default["2Ll0vk"]),
+                                children: I.intl.string(y.default["2Ll0vk"]),
                             }),
                         ],
                     }),
@@ -89,13 +89,13 @@ function b(e) {
                                     ? (0, i.jsx)(f.D, {
                                           tag: "div",
                                           className: h,
-                                          "aria-label": I.intl.formatToPlainString(j.default.hZobvN, { username: t }),
+                                          "aria-label": I.intl.formatToPlainString(y.default.hZobvN, { username: t }),
                                           onMouseEnter: O,
                                           onMouseLeave: L,
                                           onFocus: O,
                                           onBlur: L,
                                           onClick: () => {
-                                              ((0, y.k)(e.stream), a());
+                                              ((0, j.k)(e.stream), a());
                                           },
                                           children: (0, i.jsxs)("div", {
                                               ref: r,
@@ -126,7 +126,7 @@ function b(e) {
                 id: b,
                 children: [
                     (0, i.jsx)(u.E, { variant: "text-sm/medium", children: t }),
-                    (0, i.jsx)(u.E, { variant: "text-sm/normal", children: I.intl.string(j.default["2Ll0vk"]) }),
+                    (0, i.jsx)(u.E, { variant: "text-sm/normal", children: I.intl.string(y.default["2Ll0vk"]) }),
                 ],
             }),
         ],

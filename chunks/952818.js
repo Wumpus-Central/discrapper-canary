@@ -35,8 +35,8 @@ let y = new L();
 var D = n(871633),
     v = n(760751),
     b = n(189081),
-    P = n(287809),
-    M = n(340829),
+    M = n(287809),
+    P = n(340829),
     U = n(174459),
     w = n(927813),
     G = n(339586),
@@ -161,11 +161,11 @@ function eb(e) {
     let t = ev(e);
     return t?.streamerTool === !0;
 }
-function eP() {
+function eM() {
     let e = ea;
     null != (ea = et.find(ej) ?? null) && (ea.start = null != e && e.pid === ea.pid ? e.start : Date.now());
 }
-function eM() {
+function eP() {
     let { games: e, changed: t } = es.resolve(et);
     return (e !== et && ((et = e), eU()), t);
 }
@@ -174,7 +174,7 @@ function eU() {
         let e = er;
         ((er = et[0]), null != e && er.pid === e.pid ? (er.start = e.start) : (er.start = Date.now()));
     } else er = null;
-    eP();
+    eM();
     let e = [];
     for (let t of et) t.pid in ep || ((ep[t.pid] = t), e.push(t));
     let t = [];
@@ -333,7 +333,7 @@ function eK() {
             .reduce((t, n) => {
                 let i = v.A.getDetectableGame(n.id);
                 if (null == i) return t;
-                for (let r of M.A.getLaunchOptions(n.id, n.branchId)) {
+                for (let r of P.A.getLaunchOptions(n.id, n.branchId)) {
                     let a = `${n.id}:${n.branchId}`;
                     Q.has(a) || ((e = !0), Q.add(a));
                     let { fullExecutablePath: s } = r,
@@ -546,7 +546,7 @@ if (K) {
                     }),
                         _.h.dispatch({ type: "RUNNING_NON_GAMES_CHANGE", nonGames: ei, added: c, removed: u }));
                 },
-                P.default.getCurrentUser()?.id,
+                M.default.getCurrentUser()?.id,
             ),
             e$(),
             R.Ay.setGameDetectionCallback((e, t) => {
@@ -631,10 +631,10 @@ class eZ extends c.Ay.Store {
         )
             for (let n of e.gamesSeen)
                 "number" == typeof n.id && ((n.nativeProcessObserverId = n.id), delete n.id, (t = !0));
-        (this.waitFor(v.A, B.A, M.A, I.A, p.A, T.A, b.A, P.default),
+        (this.waitFor(v.A, B.A, P.A, I.A, p.A, T.A, b.A, M.default),
             ($ = e.gamesSeen.filter((e) => !(0, D.n1)(e))),
             this.syncWith([p.A], eq),
-            this.syncWith([b.A, v.A, M.A], a().throttle(eK, 1e3)),
+            this.syncWith([b.A, v.A, P.A], a().throttle(eK, 1e3)),
             this.syncWith([T.A], eB),
             t && eW());
     }
@@ -833,7 +833,7 @@ let eQ = new eZ(_.h, {
                 n = eH(t);
             ((e_.enableDetection[ew(t)] = !n),
                 eW(),
-                eP(),
+                eM(),
                 U.default.track(j.HAw.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n }));
         },
         RUNNING_GAME_EDIT_NAME: function (e) {
@@ -883,7 +883,7 @@ let eQ = new eZ(_.h, {
                 eW());
         },
         GAMES_DATABASE_UPDATE: function () {
-            return (eE(), eM());
+            return (eE(), eP());
         },
         GAMES_DATABASE_FETCH_FAIL: eE,
         NON_GAMES_DATABASE_UPDATE: eE,
@@ -930,7 +930,7 @@ let eQ = new eZ(_.h, {
         },
         SOCIAL_SDK_GAMES_UPDATE: function (e) {
             let { canonicalGameIdByPid: t } = e;
-            return (es.setCanonicalGameIds(t), eM());
+            return (es.setCanonicalGameIds(t), eP());
         },
     }),
     eJ = eQ;
