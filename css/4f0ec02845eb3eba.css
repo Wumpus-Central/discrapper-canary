@@ -56,11 +56,13 @@
 
 .icon_cb32c7 {
     --custom-icon-size: 38px;
+    --custom-conjure-app-icon-tile-size: var(--custom-icon-size);
     height: var(--custom-icon-size);
     width: var(--custom-icon-size)
 }
 
 .rowIcon_cb32c7 {
+    --custom-conjure-app-icon-tile-size: var(--custom-row-icon-size);
     height: var(--custom-row-icon-size);
     width: var(--custom-row-icon-size)
 }
@@ -71,8 +73,16 @@
 
 .iconCard_cb32c7 {
     --custom-icon-card-size: 48px;
+    --custom-conjure-app-icon-tile-size: var(--custom-icon-card-size);
     height: var(--custom-icon-card-size);
     width: var(--custom-icon-card-size)
+}
+
+.conjureIcon_cb32c7 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    flex-shrink: 0
 }
 
 .darkenImage_cb32c7 {
@@ -285,4 +295,4 @@
     user-select: none
 }
 
-/*# sourceMappingURL=851dcc44b79ffdce.css.map*/
+/*# sourceMappingURL=4f0ec02845eb3eba.css.map*/

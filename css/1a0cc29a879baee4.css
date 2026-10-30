@@ -55,6 +55,7 @@
 }
 
 .appIcon__76bc8 {
+    --custom-conjure-app-icon-tile-size: 32px;
     border-radius: var(--radius-sm)
 }
 
@@ -467,4 +468,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=3f99546449bfc15e.css.map*/
+/*# sourceMappingURL=1a0cc29a879baee4.css.map*/

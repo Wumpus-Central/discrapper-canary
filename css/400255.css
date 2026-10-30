@@ -146,6 +146,7 @@
 }
 
 .icon_d6dae9 {
+    --custom-conjure-app-icon-tile-size: var(--space-48);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     flex: 0 0 auto;
@@ -158,19 +159,6 @@
 .iconImage_d6dae9 {
     -o-object-fit: cover;
     object-fit: cover
-}
-
-.iconPlaceholder_d6dae9 {
-    align-items: center;
-    display: flex;
-    font-family: var(--font-primary);
-    font-size: 24px;
-    font-weight: var(--font-weight-bold);
-    justify-content: center;
-    line-height: 1;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
 }
 
 .details_d6dae9 {
@@ -727,4 +715,4 @@
     width: 139px
 }
 
-/*# sourceMappingURL=400255.11fc4d22d6f1ff60.css.map*/
+/*# sourceMappingURL=400255.fce1d8f28be1f3aa.css.map*/

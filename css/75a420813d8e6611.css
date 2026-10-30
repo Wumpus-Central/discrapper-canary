@@ -1,4 +1,5 @@
 .frame_d9c451 {
+    --custom-conjure-app-icon-tile-size: var(--custom-conjure-project-icon-size);
     border-radius: calc(var(--custom-conjure-project-icon-size)/4);
     box-sizing: border-box;
     flex: 0 0 auto;
@@ -31,19 +32,6 @@
 .image_d9c451 {
     -o-object-fit: cover;
     object-fit: cover
-}
-
-.placeholder_d9c451 {
-    align-items: center;
-    display: flex;
-    font-family: var(--font-primary);
-    font-size: calc(var(--custom-conjure-project-icon-size)/2);
-    font-weight: var(--font-weight-bold);
-    justify-content: center;
-    line-height: 1;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
 }
 
 .header__2688e {
@@ -102,4 +90,4 @@
     --background-gradient-lowest: var(--background-gradient-chat)
 }
 
-/*# sourceMappingURL=80c9ffd178aa097d.css.map*/
+/*# sourceMappingURL=75a420813d8e6611.css.map*/

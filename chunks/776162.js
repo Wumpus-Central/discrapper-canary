@@ -1,86 +1,92 @@
-n.d(t, { Ay: () => N, i2: () => w, t3: () => y });
+n.d(t, { Ay: () => R, i2: () => N, t3: () => _ });
 var i = n(477900),
     r = n(582128),
     l = n(17928),
     s = n(193249),
-    a = n(323384),
-    o = n(331322),
-    d = n(297264),
-    u = n(834730),
-    c = n(866665),
-    h = n(408278),
-    m = n(789645),
-    g = n(627363),
-    p = n(114994),
-    f = n(32584),
-    x = n(486020),
-    A = n(302614),
-    E = n(667419),
-    S = n(81684),
-    I = n(661943),
-    v = n(652215),
-    j = n(254821),
-    C = n(105292),
-    T = n(255324);
-let y = [
-    v.uss.VOICE_V3,
-    v.uss.QUICK_ACTIONS,
-    v.uss.NOTIFICATIONS,
-    v.uss.TEXT_CHAT_V3,
-    v.uss.FRIENDS,
-    v.uss.ACTIVITY,
-    v.uss.VIDEO,
-    v.uss.GO_LIVE,
+    a = n(331322),
+    o = n(297264),
+    d = n(834730),
+    u = n(866665),
+    c = n(408278),
+    h = n(789645),
+    m = n(627363),
+    g = n(114994),
+    p = n(522265),
+    f = n(649045),
+    x = n(32584),
+    A = n(486020),
+    E = n(302614),
+    S = n(667419),
+    I = n(81684),
+    v = n(661943),
+    j = n(652215),
+    C = n(254821),
+    T = n(105292),
+    y = n(255324);
+let _ = [
+    j.uss.VOICE_V3,
+    j.uss.QUICK_ACTIONS,
+    j.uss.NOTIFICATIONS,
+    j.uss.TEXT_CHAT_V3,
+    j.uss.FRIENDS,
+    j.uss.ACTIVITY,
+    j.uss.VIDEO,
+    j.uss.GO_LIVE,
 ];
-function _(e) {
+function b(e) {
     let { icon: t, label: n, description: r, checked: l, onChange: a } = e;
     return (0, i.jsxs)("div", {
-        className: T.nM,
+        className: y.nM,
         children: [
-            (0, i.jsx)("div", { className: T.aL, children: t }),
+            (0, i.jsx)("div", { className: y.aL, children: t }),
             (0, i.jsx)("div", {
-                className: T.L6,
+                className: y.L6,
                 children: (0, i.jsx)(s.d, { label: n, description: r, checked: l, onChange: a }),
             }),
         ],
     });
 }
-function b(e) {
+function w(e) {
     let { type: t, Icon: n, label: r, description: s } = e,
-        a = (0, l.bG)([f.A], () => (0, E.$e)(t, f.A), [t]);
-    return (0, i.jsx)(_, {
+        a = (0, l.bG)([x.A], () => (0, S.$e)(t, x.A), [t]);
+    return (0, i.jsx)(b, {
         icon: (0, i.jsx)(n, { size: "md", color: "currentColor" }),
         label: r,
         description: s,
         checked: a,
-        onChange: (e) => (0, E.JA)(t, !e),
-    });
-}
-function w(e) {
-    let { project: t } = e,
-        n = t.application_id,
-        r = (0, l.bG)([f.A], () => (0, I.$5)(n, f.A), [n]),
-        { data: s } = (0, g.YY)(n),
-        o = null != s ? x.Ay.getApplicationIconURL({ id: n, icon: s.icon, size: 32 }) : null;
-    return (0, i.jsx)(_, {
-        icon:
-            null != o
-                ? (0, i.jsx)("img", { src: o, alt: "", className: T.Z2 })
-                : (0, i.jsx)(a.k, { size: "md", color: "currentColor" }),
-        label: t.name,
-        description: C.intl.string(j.default["P7TOO/"]),
-        checked: !r,
-        onChange: (e) => (0, I.ht)(n, !e),
+        onChange: (e) => (0, S.JA)(t, !e),
     });
 }
 function N(e) {
+    let { project: t } = e,
+        n = t.application_id,
+        r = (0, l.bG)([x.A], () => (0, v.$5)(n, x.A), [n]),
+        { data: s } = (0, m.YY)(n),
+        a = s?.icon != null ? A.Ay.getApplicationIconURL({ id: n, icon: s.icon, size: 32 }) : null;
+    return (0, i.jsx)(b, {
+        icon:
+            null != a
+                ? (0, i.jsx)("img", { src: a, alt: "", className: y.Z2 })
+                : (0, i.jsx)(f.A, {
+                      applicationId: n,
+                      name: t.name,
+                      glyphSize: (0, p.w)(32).glyphSize,
+                      className: y.Z2,
+                  }),
+        label: t.name,
+        description: T.intl.string(C.default["P7TOO/"]),
+        checked: !r,
+        onChange: (e) => (0, v.ht)(n, !e),
+    });
+}
+function R(e) {
     let t,
         n,
         { onClose: s } = e,
-        a = r.useMemo(
+        m = r.useMemo(
             () =>
-                y.flatMap((e) => {
-                    let t = S.A[e];
+                _.flatMap((e) => {
+                    let t = I.A[e];
                     return t?.label != null &&
                         null != t.description &&
                         null != t.icon &&
@@ -90,44 +96,44 @@ function N(e) {
                 }),
             [],
         ),
-        g =
-            ((t = r.useMemo(() => S.A[v.uss.CONJURE]?.predicate?.() ?? !1, [])),
-            (n = (0, l.bG)([p.A], () => p.A.getProjects())),
+        p =
+            ((t = r.useMemo(() => I.A[j.uss.CONJURE]?.predicate?.() ?? !1, [])),
+            (n = (0, l.bG)([g.A], () => g.A.getProjects())),
             t ? n : []),
-        f = C.intl.string(C.t.cpT0Cq);
-    return (0, i.jsx)(A.A, {
-        className: T.nd,
+        f = T.intl.string(T.t.cpT0Cq);
+    return (0, i.jsx)(E.A, {
+        className: y.nd,
         children: (0, i.jsxs)("section", {
-            className: T.SV,
+            className: y.SV,
             "aria-labelledby": "overlay-widgets-panel-title",
             "data-testid": "overlay-widgets-panel",
             children: [
-                (0, i.jsxs)(o.B, {
+                (0, i.jsxs)(a.B, {
                     direction: "horizontal",
                     justify: "space-between",
                     align: "start",
                     gap: 8,
                     children: [
-                        (0, i.jsxs)(o.B, {
+                        (0, i.jsxs)(a.B, {
                             gap: 4,
                             children: [
-                                (0, i.jsx)(d.D, {
+                                (0, i.jsx)(o.D, {
                                     id: "overlay-widgets-panel-title",
                                     variant: "heading-lg/semibold",
                                     color: "text-strong",
-                                    children: C.intl.string(j.default["Qk/rJB"]),
+                                    children: T.intl.string(C.default["Qk/rJB"]),
                                 }),
-                                (0, i.jsx)(u.E, {
+                                (0, i.jsx)(d.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: C.intl.string(j.default.HUjIgu),
+                                    children: T.intl.string(C.default.HUjIgu),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(c.m, {
+                        (0, i.jsx)(u.m, {
                             text: f,
-                            children: (0, i.jsx)(h.K, {
-                                icon: m.P,
+                            children: (0, i.jsx)(c.K, {
+                                icon: h.P,
                                 variant: "icon-only",
                                 size: "sm",
                                 "aria-label": f,
@@ -136,30 +142,30 @@ function N(e) {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(o.B, {
+                (0, i.jsxs)(a.B, {
                     gap: 8,
                     children: [
-                        (0, i.jsx)(d.D, {
+                        (0, i.jsx)(o.D, {
                             variant: "heading-sm/semibold",
                             color: "text-muted",
-                            children: C.intl.string(C.t["/7xJCF"]),
+                            children: T.intl.string(T.t["/7xJCF"]),
                         }),
-                        a.map((e) => {
+                        m.map((e) => {
                             let { type: t, Icon: n, label: r, description: l } = e;
-                            return (0, i.jsx)(b, { type: t, Icon: n, label: r, description: l }, t);
+                            return (0, i.jsx)(w, { type: t, Icon: n, label: r, description: l }, t);
                         }),
                     ],
                 }),
-                g.length > 0
-                    ? (0, i.jsxs)(o.B, {
+                p.length > 0
+                    ? (0, i.jsxs)(a.B, {
                           gap: 8,
                           children: [
-                              (0, i.jsx)(d.D, {
+                              (0, i.jsx)(o.D, {
                                   variant: "heading-sm/semibold",
                                   color: "text-muted",
-                                  children: C.intl.string(j.default["pbu+Yx"]),
+                                  children: T.intl.string(C.default["pbu+Yx"]),
                               }),
-                              g.map((e) => (0, i.jsx)(w, { project: e }, e.id)),
+                              p.map((e) => (0, i.jsx)(N, { project: e }, e.id)),
                           ],
                       })
                     : null,

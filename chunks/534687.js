@@ -9,6 +9,7 @@ c.exports = {
     Kk: "icon_cb32c7",
     zc: "iconContainer_cb32c7",
     oI: "iconCard_cb32c7",
+    S1: "conjureIcon_cb32c7",
     TO: "darkenImage_cb32c7",
     zK: "bannerImageContainer_cb32c7",
     i2: "mediumBanner_cb32c7",

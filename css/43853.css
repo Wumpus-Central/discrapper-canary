@@ -54,9 +54,10 @@
 }
 
 .appIcon_e92794 {
+    --custom-conjure-app-icon-tile-size: 64px;
     border-radius: var(--radius-lg);
     height: 64px;
     width: 64px
 }
 
-/*# sourceMappingURL=43853.13a700338941bad3.css.map*/
+/*# sourceMappingURL=43853.d93e5009ea25c5d5.css.map*/

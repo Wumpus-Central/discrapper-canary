@@ -9,4 +9,5 @@ e.exports = {
     pw: "ellipse__03630",
     AO: "botTag__03630",
     my: "avatar__03630",
+    Ps: "conjureAppIcon__03630",
 };

@@ -3,7 +3,6 @@ e.exports = {
     rf: "body_d6dae9",
     Kk: "icon_d6dae9",
     Dp: "iconImage_d6dae9",
-    Pz: "iconPlaceholder_d6dae9",
     zH: "details_d6dae9",
     qr: "footer_d6dae9",
     xX: "footerGlow_d6dae9",

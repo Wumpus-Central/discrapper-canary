@@ -274,6 +274,7 @@
 }
 
 .headerApplicationIcon_f75fb0 {
+    --custom-conjure-app-icon-tile-size: 14px;
     border-radius: var(--radius-xs);
     flex-shrink: 0;
     height: 14px;
@@ -425,4 +426,4 @@
     background-color: var(--background-mod-normal)
 }
 
-/*# sourceMappingURL=264141.c15349ef8a5f7482.css.map*/
+/*# sourceMappingURL=264141.0e4ac478c576ee6c.css.map*/

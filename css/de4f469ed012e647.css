@@ -20,6 +20,18 @@
     background-color: var(--background-mod-strong)
 }
 
+.projectTileBacking__55e39 {
+    background-color: var(--background-base-lower);
+    height: 100%;
+    width: 100%
+}
+
+.projectTile__55e39 {
+    --custom-conjure-app-icon-tile-size: var(--guildbar-avatar-size);
+    height: 100%;
+    width: 100%
+}
+
 .badge__55e39 {
     align-items: center;
     border-radius: 50%;
@@ -43,4 +55,4 @@
     stroke: var(--icon-strong)
 }
 
-/*# sourceMappingURL=a051cd43479cac03.css.map*/
+/*# sourceMappingURL=de4f469ed012e647.css.map*/

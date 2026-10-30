@@ -6,5 +6,4 @@ e.exports = {
     p_: "list_d9c451",
     r3: "dialog_d9c451",
     Sl: "image_d9c451",
-    qf: "placeholder_d9c451",
 };
