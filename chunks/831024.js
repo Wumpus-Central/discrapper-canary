@@ -4,7 +4,7 @@ var n = t(582128),
     u = t(936785),
     a = t(879043),
     o = t(556766),
-    s = t(924919),
+    s = t(961270),
     i = t(105292);
 function c(e) {
     let { surface: r, applicationId: t } = e,

@@ -74,7 +74,7 @@ var w = n(716357),
     Y = n(661531),
     J = n(775602),
     Q = n(855823),
-    Z = n(663269),
+    Z = n(880098),
     ee = n(105292),
     et = n(517228);
 function en(e) {
@@ -1360,11 +1360,11 @@ function e0(e) {
 }
 var e1 = n(554146),
     e2 = n(942857),
-    e6 = n(131607),
-    e3 = n(967198),
-    e9 = n(725041),
-    e5 = n(49999),
-    e8 = n(312152);
+    e3 = n(131607),
+    e6 = n(967198),
+    e8 = n(725041),
+    e9 = n(49999),
+    e5 = n(312152);
 function e7(e) {
     let t,
         { guildId: C } = e,
@@ -1422,11 +1422,11 @@ function e7(e) {
         [Y, J] = (0, i.yK)([y.A], () => [y.A.getDraft(C), y.A.getSaveStatus(C)], [C]),
         Q = q && null != Y;
     !(function (e, t) {
-        let a = (0, H.useHasModalOpen)(e9.J),
-            s = (0, i.bG)([e3.A], () => e3.A.getGuildId()),
+        let a = (0, H.useHasModalOpen)(e8.J),
+            s = (0, i.bG)([e6.A], () => e6.A.getGuildId()),
             u = (0, e2.A)(),
-            [c, d] = (0, e6.kn)(t && s === e && !u ? [e1.M.GUILD_SPACE_NUX_MODAL] : [], {
-                groupName: e5.m.GUILD_SPACE_NUX,
+            [c, d] = (0, e3.kn)(t && s === e && !u ? [e1.M.GUILD_SPACE_NUX_MODAL] : [], {
+                groupName: e9.m.GUILD_SPACE_NUX,
                 bypassAutoDismiss: !0,
             }),
             o = r.useRef(!1),
@@ -1450,7 +1450,7 @@ function e7(e) {
                                     onClose: n.onClose,
                                 });
                         },
-                        { modalKey: e9.J },
+                        { modalKey: e8.J },
                     ).catch(() => {
                         o.current = !1;
                     }));
@@ -1503,9 +1503,9 @@ function e7(e) {
     }, [C]);
     return null == O || null == Z
         ? (0, l.jsx)("div", {
-              className: e8.MY,
+              className: e5.MY,
               children: (0, l.jsx)("div", {
-                  className: e8.F,
+                  className: e5.F,
                   children:
                       "error" !== W || F
                           ? (0, l.jsx)(s.y, {
@@ -1522,7 +1522,7 @@ function e7(e) {
           })
         : (0, l.jsx)(ea, {
               children: (0, l.jsxs)("div", {
-                  className: e8.MY,
+                  className: e5.MY,
                   children: [
                       (0, l.jsxs)(h.A, {
                           toolbar:
@@ -1545,9 +1545,9 @@ function e7(e) {
                       }),
                       (0, l.jsx)(f.Ch, {
                           ref: j,
-                          className: e8.XG,
+                          className: e5.XG,
                           children: (0, l.jsxs)("div", {
-                              className: e8.Qs,
+                              className: e5.Qs,
                               children: [
                                   q && !V ? (0, l.jsx)(M.A, { onPublish: X }) : null,
                                   (0, l.jsx)(e0, {

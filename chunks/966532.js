@@ -67,7 +67,7 @@ class p extends i.A {
                     name: "dota-gsi",
                     applicationId: A.b,
                     isEnabled: () => I(_.pZ.GAME_EVENTS, A.b),
-                    importHandler: () => Promise.all([n.e("465129"), n.e("709692")]).then(n.bind(n, 840631)),
+                    importHandler: () => Promise.all([n.e("192214"), n.e("709692")]).then(n.bind(n, 840631)),
                 },
                 {
                     type: "application",

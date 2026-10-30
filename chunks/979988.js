@@ -218,7 +218,7 @@ var ef = t(821707),
     eT = t(862577),
     ey = t(910200),
     eS = t(202541),
-    eO = t(924919),
+    eO = t(961270),
     eR = t(774331);
 function eL(e) {
     let { offer: l, applicationId: t, analyticsLocations: r, onUpsellClick: a } = e,
@@ -656,7 +656,7 @@ function eJ(e) {
     s.useEffect(() => {
         null == c || w.A.isFetching(c) || (0, B.Pp)(d, c);
     }, [d, c]);
-    let e4 = s.useCallback(() => {
+    let e7 = s.useCallback(() => {
             null != eu &&
                 (eV(eU.Jq.FORWARD_BUTTON),
                 (0, X.d)({
@@ -667,7 +667,7 @@ function eJ(e) {
                     analyticsContext: A,
                 }));
         }, [eu, ee, eV, Z, A]),
-        e7 = s.useCallback(() => {
+        e4 = s.useCallback(() => {
             eV(eU.Jq.WISHLIST_BUTTON);
         }, [eV]),
         e2 = s.useCallback(() => {
@@ -713,12 +713,12 @@ function eJ(e) {
                                 sku: eu,
                                 isCardHovered: !0,
                                 className: a()(eH.jU, eH.ij),
-                                trackButtonClick: e7,
+                                trackButtonClick: e4,
                                 variant: K ? "secondary" : "overlay-secondary",
                                 location: "social_layer_storefront_product_details_modal",
                             }),
                         (0, n.jsx)(eW, {
-                            onClick: e4,
+                            onClick: e7,
                             ariaLabel: Q.intl.string(Q.t.Ej3B3Y),
                             children: (0, n.jsx)(y.A, { size: "refresh_sm", color: "currentColor" }),
                         }),

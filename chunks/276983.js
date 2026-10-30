@@ -1,6 +1,6 @@
 (n.d(t, { Et: () => d, Us: () => c, de: () => o, jQ: () => l, yG: () => a }), n(205816));
 var r = n(723702),
-    s = n(87501),
+    s = n(809526),
     i = n(105292);
 let u = {
         screen_capture: { isSupported: r.isDesktop, getLabel: () => i.intl.string(s.default["2KIefJ"]) },

@@ -8,7 +8,7 @@ var l = n(582128),
     u = n(296045),
     c = n(556766),
     d = n(459005),
-    m = n(924919),
+    m = n(961270),
     p = n(105292);
 function h(e) {
     let { surface: t, applicationId: n, skuId: h } = e,

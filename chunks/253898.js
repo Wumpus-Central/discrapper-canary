@@ -169,6 +169,6 @@ i.r(
         key: "key_f369db",
         countContainer: "countContainer_f369db",
         countText: "countText_f369db",
-        optInNotice: "optInNotice_f369db",
+        headerNotice: "headerNotice_f369db",
     }),
 );

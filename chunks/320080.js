@@ -892,12 +892,12 @@ let e1 = (0, a.memo)(
     (e, n) => e.isUnread === n.isUnread && e.message.id === n.message.id && e.messageCount === n.messageCount,
 );
 var e3 = t(435558),
-    e2 = t.n(e3),
-    e4 = t(837381),
+    e4 = t.n(e3),
+    e2 = t(837381),
     e8 = t(847374),
     e7 = t(912592),
-    e9 = t(821609),
-    e6 = t(475825),
+    e6 = t(821609),
+    e9 = t(475825),
     e5 = t(928039),
     ne = t(625494);
 let nn = { [eL.Ur.UNREAD]: !0, [eL.Ur.TODAY]: !0, [eL.Ur.YESTERDAY]: !1, [eL.Ur.OLDER]: !1 },
@@ -920,7 +920,7 @@ let nn = { [eL.Ur.UNREAD]: !0, [eL.Ur.TODAY]: !0, [eL.Ur.YESTERDAY]: !1, [eL.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? nt : nn }));
         },
     }));
-var na = t(220885),
+var na = t(478646),
     ni = t(875436);
 function nl(e) {
     e.stopPropagation();
@@ -974,7 +974,7 @@ function nc() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e9.$, {
+                (0, s.jsx)(e6.$, {
                     variant: "secondary",
                     onClick: () => (0, _.tZ)(e),
                     text: eD.intl.string(na.default.klSpfs),
@@ -1060,13 +1060,13 @@ function nd(e) {
             }
             return (
                 (t.length > 0 || i.length > 0) &&
-                    (e2().each(i, (e) => {
+                    (e4().each(i, (e) => {
                         a(e, eL.Ur.UNREAD);
                     }),
-                    e2().each(t, (e) => {
+                    e4().each(t, (e) => {
                         a(e, (0, _.i7)(e));
                     }),
-                    e2().each(no, (t) => {
+                    e4().each(no, (t) => {
                         [...Object.values(s[t]).map((e) => e.reverse()), ...n[t].map((e) => [e])]
                             .sort((e, n) => U.default.compare(n[0].id, e[0].id))
                             .forEach((n) => {
@@ -1161,12 +1161,12 @@ function nd(e) {
                 ? d()
                 : K
                   ? (0, s.jsx)(nc, {})
-                  : (0, s.jsx)(e4.hD, {
+                  : (0, s.jsx)(e2.hD, {
                         navigator: N,
-                        children: (0, s.jsx)(e4.PR, {
+                        children: (0, s.jsx)(e2.PR, {
                             children: (e) => {
                                 let { ref: n, ...t } = e;
-                                return (0, s.jsx)(e6.OZ, {
+                                return (0, s.jsx)(e9.OZ, {
                                     ref: (e) => {
                                         ((p.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },

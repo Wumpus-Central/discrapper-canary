@@ -1949,9 +1949,9 @@ let eZ = function (e) {
 };
 var e0 = n(17928),
     e1 = n(736056),
-    e8 = n(636537),
+    e7 = n(636537),
     e4 = n(73153),
-    e7 = n(913122),
+    e8 = n(913122),
     e5 = n(403362);
 let e2 = (0, e5.m6)()
         ? {
@@ -2087,10 +2087,10 @@ async function tm(e) {
     if (!tc.isFetchingLayout(t, n))
         try {
             e4.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH", tenantId: t, layoutId: n });
-            let e = await e8.Bo.get({ url: td.Rsh.LAYOUT_SYSTEM(t, n), rejectWithError: !0, signal: l });
+            let e = await e7.Bo.get({ url: td.Rsh.LAYOUT_SYSTEM(t, n), rejectWithError: !0, signal: l });
             e4.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH_SUCCESS", tenantId: t, layout: th(e.body) });
         } catch (l) {
-            let e = new e7.LG(l);
+            let e = new e8.LG(l);
             throw (e4.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH_FAILURE", tenantId: t, layoutId: n, apiError: e }), e);
         }
 }
@@ -2099,7 +2099,7 @@ async function tx(e) {
     if (!tc.isFetchingTemplate(t, n, a))
         try {
             e4.h.dispatch({ type: "LAYOUT_SYSTEM_TEMPLATE_FETCH", tenantId: t, templateId: n, requestParams: a });
-            let e = await e8.Bo.get({
+            let e = await e7.Bo.get({
                 url: td.Rsh.LAYOUT_SYSTEM_TEMPLATE(t, n),
                 rejectWithError: !0,
                 signal: l,
@@ -2113,7 +2113,7 @@ async function tx(e) {
                 layout: th(e.body),
             });
         } catch (l) {
-            let e = new e7.LG(l);
+            let e = new e8.LG(l);
             throw (
                 e4.h.dispatch({
                     type: "LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE",
@@ -2315,7 +2315,7 @@ function tC(e) {
     return (0, l.jsx)(tE, { ...e });
 }
 var tT = n(758836),
-    tI = n(995632);
+    tI = n(473717);
 let tw = { prioritizedCurrency: tT.Hi.ORBS };
 var tL = n(993077);
 function tV(e) {

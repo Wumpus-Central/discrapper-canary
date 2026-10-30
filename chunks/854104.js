@@ -35,7 +35,7 @@ let N = (0, y.mj)({
     variations: { 0: { enabled: !1, searchBarWidthPx: v.hE.DEFAULT }, 1: { enabled: !0, searchBarWidthPx: v.hE.WIDE } },
 });
 var M = l(652215),
-    B = l(841998),
+    B = l(711537),
     k = l(105292),
     P = l(848913);
 let F = [
@@ -286,7 +286,7 @@ var z = l(278416),
     ea = l(832163),
     ei = l(44724),
     er = l(486020),
-    es = l(351585);
+    es = l(135570);
 let eo = [
     { tab: v.G2.OFFER_ELIGIBLE, labelKey: k.t.hY8Ft1 },
     { tab: v.G2.AVATAR_DECORATIONS, labelKey: k.t.dRZYNE },

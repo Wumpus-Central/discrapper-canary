@@ -6,7 +6,7 @@ var e = i(477900),
     r = i(473953),
     u = i(202762),
     c = i(593673),
-    d = i(663269),
+    d = i(880098),
     o = i(105292);
 function p(t) {
     let { transitionState: a, onClose: i, guildId: p } = t,

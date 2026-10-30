@@ -42,11 +42,11 @@ function R(e) {
     }, [t?.entitlements]);
 }
 var k = l(105292),
-    L = l(930259),
+    L = l(959456),
     D = l(144977),
     O = l(628049),
     U = l(568065),
-    B = l(351585),
+    B = l(135570),
     V = l(929729),
     M = l(517826);
 function W(e) {
@@ -771,8 +771,8 @@ function e5(e) {
           })
         : null;
 }
-var e3 = l(72377);
-function e4(e) {
+var e4 = l(72377);
+function e3(e) {
     let { guildId: t, powerup: l, badge: s } = e,
         [r, o] = n.useState(void 0);
     (0, ey.A)(r);
@@ -785,7 +785,7 @@ function e4(e) {
         powerup: l,
         badge: s,
         children: [
-            (0, i.jsx)(e3.l, { className: M.Sl, powerup: l, isHovering: a }),
+            (0, i.jsx)(e4.l, { className: M.Sl, powerup: l, isHovering: a }),
             (0, i.jsx)(y.Ft, {
                 title: l.title,
                 textColor: u,
@@ -1486,7 +1486,7 @@ function tD(e) {
                                                   );
                                               case "singlePerk":
                                                   return (0, i.jsx)(
-                                                      e4,
+                                                      e3,
                                                       { guildId: N, powerup: e.powerup, badge: e.badge },
                                                       `powerup-${e.powerup.skuId}`,
                                                   );

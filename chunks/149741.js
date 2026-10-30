@@ -342,14 +342,14 @@ var eq = n(808380),
     e0 = n(429913),
     e1 = n(263577),
     e3 = n(790381),
-    e5 = n(266080),
-    e2 = n(70191);
-let e4 = { [eq.Y.XBOX]: e5.A, [eq.Y.PLAYSTATION]: e3.A };
+    e2 = n(266080),
+    e5 = n(70191);
+let e4 = { [eq.Y.XBOX]: e2.A, [eq.Y.PLAYSTATION]: e3.A };
 function e6(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
         u = r.useMemo(() => {
-            let e = t.find(e2.A);
+            let e = t.find(e5.A);
             if (null != a) {
                 let n = a.altId ?? a.id;
                 return t.find((e) => e.application_id === n) ?? e;
@@ -508,7 +508,7 @@ function te(e) {
             [c, g, _],
         ),
         C = (0, F.K)(y),
-        v = r.useMemo(() => n?.find(e2.A), [n]),
+        v = r.useMemo(() => n?.find(e5.A), [n]),
         D = (0, el.A)({ activity: v, user: t }),
         b = (0, et.zD)(D) ? D : void 0,
         j = r.useCallback(() => {
@@ -633,11 +633,11 @@ let tn = r.memo((e) => {
             },
             [l, c, t.id],
         ),
-        F = n.some(e2.A),
+        F = n.some(e5.A),
         G = (0, d.b4)(),
         L = r.useMemo(() => {
             let e = G?.altId ?? G?.id;
-            return null != e && n.some((t) => (0, e2.A)(t) && t.application_id === e);
+            return null != e && n.some((t) => (0, e5.A)(t) && t.application_id === e);
         }, [n, G]),
         U = C !== eB.clD.ONLINE && C !== eB.clD.IDLE && C !== eB.clD.DND,
         V = (0, eT.A2)(t.id),
@@ -1078,7 +1078,7 @@ function tO(e, t) {
         i = r.useCallback(() => l(t), [t]);
     return ((0, tC.RT)(e, t, l, tk), [n, i]);
 }
-var tw = n(184748),
+var tw = n(254821),
     tF = n(690132);
 function tG(e) {
     let {
@@ -1754,7 +1754,7 @@ var tH = n(687966),
     t0 = n(589051),
     t1 = n(545807),
     t3 = n(659540);
-let t5 = r.memo(function (e) {
+let t2 = r.memo(function (e) {
     let { startTimestampMs: t } = e,
         n = (0, t1.A)(),
         [l, i] = r.useState(() => Date.now());
@@ -1765,8 +1765,8 @@ let t5 = r.memo(function (e) {
     let s = Math.max(0, (l - t) / 1e3);
     return (0, tZ.fU)(s);
 });
-t5.displayName = "OverlayElapsedTime";
-let t2 = r.memo(function () {
+t2.displayName = "OverlayElapsedTime";
+let t5 = r.memo(function () {
     let e = (0, t1.A)(),
         [t, n] = r.useState(() => Date.now());
     r.useEffect(() => {
@@ -1911,7 +1911,7 @@ function t4(e) {
                                   className: t3.p0,
                                   variant: "code",
                                   tag: "div",
-                                  children: (0, i.jsx)(t5, { startTimestampMs: _.startTimestampMs }),
+                                  children: (0, i.jsx)(t2, { startTimestampMs: _.startTimestampMs }),
                               })
                         : "voice_call" === _.type
                           ? null == E
@@ -1920,7 +1920,7 @@ function t4(e) {
                                     className: t3.p0,
                                     variant: "code",
                                     tag: "div",
-                                    children: (0, i.jsx)(t2, {}),
+                                    children: (0, i.jsx)(t5, {}),
                                 })
                           : null,
                 ],
@@ -2036,7 +2036,7 @@ function t9(e) {
         ],
     });
 }
-t2.displayName = "OverlayVoiceCallElapsedTime";
+t5.displayName = "OverlayVoiceCallElapsedTime";
 var t7 = n(594831),
     t8 = n(645959),
     ne = n(812993),
@@ -3246,8 +3246,8 @@ function n3() {
         ],
     });
 }
-var n5 = n(776096),
-    n2 = n(607567),
+var n2 = n(776096),
+    n5 = n(607567),
     n4 = n(377802),
     n6 = n(342952),
     n9 = n(676923),
@@ -3270,7 +3270,7 @@ let lt = r.memo(function (e) {
         })(t, l),
         I = (0, er.A)({ userId: l, guildId: n }),
         A = (0, s.bG)([eI.A], () => null != n && null != eI.A.getStreamForUser(l, n), [n, l]),
-        f = (0, s.bG)([R.A], () => R.A.findActivity(l, e2.A), [l]),
+        f = (0, s.bG)([R.A], () => R.A.findActivity(l, e5.A), [l]),
         S = (0, e0.h)(f?.application_id),
         N = (0, eN.tx)(n ?? void 0, t, g),
         x = r.useCallback(
@@ -3409,9 +3409,9 @@ function lr(e) {
         f = (0, s.bG)([eS.Ay], () => eS.Ay.getVoiceChannelId() === n, [n]),
         S = (0, s.bG)([eH.A], () => null != m && (!!m.isPrivate?.() || eH.A.can(eB.xBc.READ_MESSAGE_HISTORY, m)), [m]),
         [N] = (0, s.bG)(
-            [n2.Ay],
+            [n5.Ay],
             () =>
-                null == m || null == E ? [[], 0] : [n2.Ay.getVoiceStatesForChannel(m), n2.Ay.getVoiceStateVersion(E)],
+                null == m || null == E ? [[], 0] : [n5.Ay.getVoiceStatesForChannel(m), n5.Ay.getVoiceStateVersion(E)],
             [m, E],
             j.D,
         ),
@@ -3420,7 +3420,7 @@ function lr(e) {
             [eY.A, R.A],
             () => {
                 for (let e of Object.values(eY.A.getVoiceStatesForChannel(n))) {
-                    let t = R.A.findActivity(e.userId, e2.A);
+                    let t = R.A.findActivity(e.userId, e5.A);
                     if (t?.name != null) return t.name;
                 }
                 return null;
@@ -3646,9 +3646,9 @@ function ld() {
         L = (0, s.bG)([eS.Ay], () => eS.Ay.getVoiceChannelId(), []),
         U = (0, s.bG)([ls.A], () => ls.A.getActiveNowChannelIds({ kind: ls.u.Voice }), []),
         P = (0, s.bG)(
-            [n5.A],
+            [n2.A],
             () =>
-                n5.A.affinities
+                n2.A.affinities
                     .filter((e) => (e.score ?? 0) > 0)
                     .slice(0, 2)
                     .map((e) => e.guildId),
@@ -3900,7 +3900,7 @@ function ld() {
                 let l = n.rows[t];
                 if (null == l || !d.has(l.channelId)) return 50;
                 let i = eE.A.getChannel(l.channelId),
-                    r = Math.min((null != i ? n2.Ay.getVoiceStatesForChannel(i) : []).length, 25);
+                    r = Math.min((null != i ? n5.Ay.getVoiceStatesForChannel(i) : []).length, 25);
                 return r <= 0 ? 50 : 50 + (32 * r + (r - 1) * 2 + 8);
             },
             [d, en],

@@ -104,7 +104,7 @@ var to = i(387755),
     tL = i(485045),
     tb = i(609145),
     tx = i(46282),
-    tD = i(181712);
+    tD = i(51685);
 function tR(t, e, i, n, l) {
     if (P.A.isNotificationDisabled(H.KS.RequestToStream) || null != I.A.getCurrentUserActiveStream()) return null;
     let a = i.username,
@@ -242,25 +242,25 @@ function tq(t) {
     });
 }
 var tQ = i(119191),
-    tZ = i(184748);
+    tZ = i(254821);
 function t0(t) {
     t && (0, tV.Ak)(k.cH, k.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
 var t1 = i(554146),
     t2 = i(298990),
     t9 = i(429913),
-    t3 = i(263577),
-    t5 = i(826673),
+    t5 = i(263577),
+    t3 = i(826673),
     t8 = i(999926),
-    t4 = i(308726),
-    t7 = i(818023),
+    t7 = i(308726),
+    t4 = i(818023),
     t6 = i(731854),
     et = i(709946),
     ee = i(302933);
 function ei(t) {
     let { game: e } = t,
         i = (0, t9.h)(e.id);
-    return null == i ? null : (0, z.jsx)(t3.V, { src: i.getIconURL(t7.iu.LARGE), size: 40 });
+    return null == i ? null : (0, z.jsx)(t5.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
 }
 let en = 5 * U.A.Millis.SECOND,
     el = 8 * U.A.Millis.SECOND,
@@ -694,14 +694,14 @@ let eT = new eh(o.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, z.jsx)(t4.ru, {
+                                (0, z.jsx)(t7.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
                                     className: ee.kL,
                                 })));
                 }
-            let r = (0, t5.k8)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t3.k8)(t1.M.OVERLAY_OOP_WELCOME_NUX),
                 s = J.intl.string(J.t.KWDIrh);
             return {
                 icon:
@@ -714,16 +714,16 @@ let eT = new eh(o.h, {
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         u.A.setInputLocked(!1, w.A.getTargetPID()),
-                        r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, G.qv)(), e);

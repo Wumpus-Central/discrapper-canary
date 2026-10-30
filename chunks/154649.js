@@ -11,7 +11,7 @@ var a = i(477900),
     f = i(628049),
     g = i(652215),
     c = i(746080),
-    p = i(351585),
+    p = i(135570),
     E = i(105292);
 function _(t) {
     let { gameName: l, gameApplicationId: i, onClose: _, transitionState: b } = t,

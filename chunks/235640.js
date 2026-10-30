@@ -1,3 +1,63 @@
-e.exports = JSON.parse(
-    '{"i9e/u1":["Graduering"],"x9Gtie":["Gummy"],"2akt9l":["Wumpus"],"x68b1F":["Neon"],"cjQOKb":["Pop"],"/M7psm":["Prisme"],"OpWJ3f":["Solid"],"otpeeM":["Tegneserie"],"rN7cuX":["Sakura"],"CbHHnL":["Vingummi"],"ZEL6mz":["gg sans"],"Llo/Ia":["Headbang"],"t9Les4":["Journal"],"pwbAIk":["Mainframe"],"RP8HFf":["Klatrebarer"],"iEcEKO":["Moderne"],"DL7jLZ":["Middelalder"],"jq4aRp":["8-bit"],"jV9DN4":["Vampyr"],"KMR8rT":["Tempo"],"cNc1g9":["Pr\xf8v nye skrifttyper, effekter og farver med Vist navn-stilarter."],"1AE464":["Samme navn, nyt look"],"FHfTsV":["Farvevalg ",[1,"number"],": ",[1,"hexList"]],"c65yqr":["Giv dit viste navn et nyt look med nye skrifttyper og effekter."],"TyUdka":["Giv dit viste navn et nyt look med nye skrifttyper og effekter. Kun med Nitro."],"4dvK8z":["Giv dit viste navn lidt flair med nye skrifttyper og effekter."],"dluV0R":["Giv dit viste navn lidt flair med nye skrifttyper og effekter. Kun med Nitro."],"cYwrp8":["Friske stilarter er lige landet"],"Uzms61":["FRISKE STILARTER ER LIGE LANDET"],"h6sykk":["V\xe6lg en ny Vist navn-stil"],"M5amXH":["Style dit viste navn"],"DC7gJB":[[1,"fontName"]," + ",[1,"effectName"]],"tNYdiM":["Bland og match stilarter for at skabe et uforglemmeligt visningsnavn med Nitro."],"h5Cuej":["Lad dit viste navn skinne"],"JOpi7z":["V\xe6lg farve"],"1wilM1":["V\xe6lg effekt"],"nP0ngb":["V\xe6lg skrifttype"],"6OxgN7":["Farve"],"cVTpnj":["Tilf\xf8j f\xf8rst farver"],"RVtMxT":["Effekter"],"0JCuGm":["Skrifttype"],"+O1xL2":["P\xe5 dette tidspunkt underst\xf8tter den valgte skrifttype kun latinske skrifttyper."],"PWf0xS":["G\xf8r dit viste navn uforglemmeligt med ",[8,"$link",["Nitro"],[[1,"onClickNitro"]]],"."],"NOGFds":["Overrask mig"],"prQba8":["Bem\xe6rkning: Vist navn-farver og -effekter vises ikke p\xe5 servere. Stilarten kan ogs\xe5 se anderledes ud p\xe5 tv\xe6rs af Discord og i lys eller m\xf8rk tilstand. ",[8,"$link",["F\xe5 mere at vide"],[[1,"helpArticleLink"]]]],"ZPMAlX":["Skift Vist navn-stilart"],"gIeJTK":["Brug standard"],"zoh6MT":["Forh\xe5ndsvisning af Vist navn p\xe5 profil"],"vJqrIg":["Skift stilart"],"ymq8WQ":["Fjern stilart"],"86GtGH":["Vist navn-stilarter"],"j/KRxc":["Brug standard"],"L8U56h":["Aktiv\xe9r ",[8,"$link",["Vist navn-stilarter"],[[1,"onClickOpenModal"]]],", herunder skrifttype, effekt og farve p\xe5 tv\xe6rs af Discord."],"aEax6P":["Aktiv\xe9r ",[8,"$link",["Vist navn-stilarter"],[[1,"onClickOpenModal"]]],", herunder skrifttype, effekt og farve over hele Discord."],"2gFUEw":["Vist navn-stilarter"],"gYzaCr":[[8,"displayNameHook",[]],"s stil passer godt til dig!"],"D7+kY/":["Tjek det ud"],"ajHWbZ":["Du kan nu pr\xf8ve enhver Vist navn-stilart, der fanger dit blik."],"t8z5gn":["Pr\xf8v deres stil"],"7ACDrq":["Pr\xf8v dette look"],"2PKrQO":["Pr\xf8v dette look"],"oAYuZw":["Pr\xf8v denne navnestilart"],"NJLgMs":["Pr\xf8v denne navnestilart"],"M4qsJL":["Vist navn-stilart"],"MFNXZh":["Bland og match skrifttyper, effekter og farver for at oprette et vist navn, der skiller sig ud med stil."],"jhmU5E":["Bland og match stilarter for at skabe et uforglemmeligt visningsnavn."],"ABtBDQ":["Samme navn, nyt look."]}',
-);
+e.d(i, { A: () => n });
+var a = e(477900);
+e(582128);
+var t = e(17928),
+    m = e(460905),
+    d = e(834730),
+    l = e(788026),
+    o = e(236285),
+    r = e(441664);
+function n(s) {
+    let { reactionEmoji: i } = s,
+        e = (0, t.bG)([o.Ay], () => (i?.emojiId != null ? o.Ay.getUsableCustomEmojiById(i.emojiId) : null));
+    return (0, a.jsxs)("div", {
+        className: r.kL,
+        children: [
+            (0, a.jsxs)("div", {
+                className: r.rf,
+                children: [
+                    (0, a.jsxs)("div", {
+                        className: r.lm,
+                        children: [
+                            (0, a.jsx)(c, { width: "100%", marginBottom: 8 }),
+                            (0, a.jsx)(c, { width: "80%", marginBottom: 16 }),
+                            (0, a.jsx)(c, { width: "50%", marginBottom: 8 }),
+                            (0, a.jsx)(c, { width: "60%", marginBottom: 16 }),
+                        ],
+                    }),
+                    (0, a.jsx)("div", { className: r.oW }),
+                ],
+            }),
+            (0, a.jsxs)("div", {
+                className: r.qr,
+                children: [
+                    (0, a.jsxs)("div", {
+                        className: r.mJ,
+                        children: [
+                            null != i
+                                ? (0, a.jsx)(l.A, {
+                                      className: r.Ys,
+                                      emojiId: i.emojiId,
+                                      emojiName: i.emojiName,
+                                      animated: !!e?.animated,
+                                  })
+                                : (0, a.jsx)(m.n, { size: "sm", color: "currentColor", className: r.Ys }),
+                            (0, a.jsx)(d.E, {
+                                variant: "text-sm/semibold",
+                                color: "interactive-text-default",
+                                children: 17,
+                            }),
+                        ],
+                    }),
+                    (0, a.jsx)(c, { width: "24px", marginBottom: 0 }),
+                    (0, a.jsx)("div", { className: r.Om }),
+                    (0, a.jsx)(c, { width: "24px", marginBottom: 0 }),
+                ],
+            }),
+        ],
+    });
+}
+function c(s) {
+    let { width: i, marginBottom: e } = s;
+    return (0, a.jsx)("div", { className: r.E3, style: { width: i, marginBottom: e } });
+}

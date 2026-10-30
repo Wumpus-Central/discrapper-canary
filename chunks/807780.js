@@ -179,7 +179,7 @@ function ev(e) {
                 let { default: e } = await Promise.all([
                     t.e("926132"),
                     t.e("955557"),
-                    t.e("819316"),
+                    t.e("591951"),
                     t.e("198415"),
                     t.e("412255"),
                     t.e("63340"),
@@ -327,7 +327,7 @@ let eI = l.memo(function () {
                                           t.e("893190"),
                                           t.e("146652"),
                                           t.e("955557"),
-                                          t.e("819316"),
+                                          t.e("591951"),
                                           t.e("947502"),
                                           t.e("343266"),
                                           t.e("965789"),
@@ -360,7 +360,7 @@ let eI = l.memo(function () {
                                           t.e("893190"),
                                           t.e("146652"),
                                           t.e("955557"),
-                                          t.e("819316"),
+                                          t.e("591951"),
                                           t.e("947502"),
                                           t.e("202622"),
                                           t.e("916758"),
@@ -617,8 +617,8 @@ var eR = t(202776),
     e1 = t(427262),
     e4 = t(19575),
     e5 = t(669953),
-    e6 = t(817818),
-    e9 = t(591552),
+    e9 = t(817818),
+    e6 = t(591552),
     e2 = t(961973),
     e8 = t(435558),
     e3 = t.n(e8),
@@ -629,7 +629,7 @@ function nn(e) {
 }
 let nt = {};
 function ni(e) {
-    let n = (0, r.bG)([e9.A], () => e9.A.getPendingResponseOptions(e) ?? nt, [e]);
+    let n = (0, r.bG)([e6.A], () => e6.A.getPendingResponseOptions(e) ?? nt, [e]);
     return (
         l.useEffect(() => (nn(e), () => nn(e)), [e]),
         l.useEffect(() => {
@@ -638,7 +638,7 @@ function ni(e) {
         {
             handleSelectOption: l.useCallback(
                 (n, t, i) => {
-                    let l = e9.A.getOnboardingResponses(e),
+                    let l = e6.A.getOnboardingResponses(e),
                         { addedRoleIds: s, removedRoleIds: a } = (function (e, n, t, i) {
                             let l = [],
                                 s = [];
@@ -685,7 +685,7 @@ function ni(e) {
                                 ((a = []), (r = e3().difference(l, d)));
                             }
                             return (
-                                (0, et.cE)(n) && a.push(...e9.A.getDefaultChannelIds(n)),
+                                (0, et.cE)(n) && a.push(...e6.A.getDefaultChannelIds(n)),
                                 { addedChannelIds: a, removedChannelIds: r }
                             );
                         })({ guildId: e, prompt: n, option: t, selected: i, responses: l }),
@@ -855,7 +855,7 @@ function np(e) {
         h = n?.options?.filter((e) => c.has(e.id)),
         m = (0, e2.a)(h),
         x = (0, e2.vV)(h),
-        C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(t.id, n.id)),
+        C = (0, r.yK)([e6.A], () => e6.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nl.W)({
             guild: t,
             prompt: n,
@@ -914,7 +914,7 @@ function np(e) {
 }
 function nN(e) {
     let { guild: n } = e,
-        t = (0, r.bG)([e9.A], () => e9.A.getConnections(n.id));
+        t = (0, r.bG)([e6.A], () => e6.A.getConnections(n.id));
     return 0 === t.length
         ? null
         : (0, i.jsxs)("div", {
@@ -946,7 +946,7 @@ function nf(e) {
         h = n?.options?.filter((e) => c.has(e.id)),
         m = (0, e2.a)(h),
         x = (0, e2.vV)(h),
-        C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(t.id, n.id)),
+        C = (0, r.yK)([e6.A], () => e6.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nl.W)({
             guild: t,
             prompt: n,
@@ -1024,7 +1024,7 @@ function nj(e) {
             onboardingPromptsWithNewAnswers: A,
             newAnswersCount: p,
             onboardingPrompts: N,
-        } = ((n = (0, ns.yK)([e9.A], () => e9.A.getEnabledOnboardingPrompts(t))),
+        } = ((n = (0, ns.yK)([e6.A], () => e6.A.getEnabledOnboardingPrompts(t))),
         l.useMemo(() => {
             let e = 0,
                 t = [],
@@ -1050,12 +1050,12 @@ function nj(e) {
             };
         }, [n]));
     (l.useEffect(() => {
-        c?.id == null || (!eq.A.isFullServerPreview(c.id) && (e9.A.shouldFetchPrompts(c.id) || m) && (0, e6.jx)(c.id));
+        c?.id == null || (!eq.A.isFullServerPreview(c.id) && (e6.A.shouldFetchPrompts(c.id) || m) && (0, e9.jx)(c.id));
     }, [c?.id, m, x]),
         l.useEffect(() => {
             if (c?.id != null && !eq.A.isFullServerPreview(c.id))
                 return () => {
-                    ((0, ek.hK)(c.id, nh.P.GUILD_ONBOARDING_QUESTION, e9.A.ackIdForGuild(c.id)),
+                    ((0, ek.hK)(c.id, nh.P.GUILD_ONBOARDING_QUESTION, e6.A.ackIdForGuild(c.id)),
                         e5.A.updateOnboardingResponses(c.id));
                 };
         }, [c?.id]));

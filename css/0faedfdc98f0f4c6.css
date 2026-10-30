@@ -1,0 +1,118 @@
+.container_ce5f0d {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    border-radius: 20px;
+    flex-direction: row;
+    gap: 40px;
+    padding: 32px 24px
+}
+
+.bannerContainer_ce5f0d,
+.container_ce5f0d {
+    align-items: center;
+    display: flex;
+    max-width: 800px
+}
+
+.bannerContainer_ce5f0d {
+    justify-content: center
+}
+
+.bannerContent_ce5f0d {
+    flex: 1 0 0;
+    flex-direction: column;
+    max-width: 476px
+}
+
+.bannerContent_ce5f0d,
+.bannerContentText_ce5f0d {
+    align-items: flex-start;
+    display: flex
+}
+
+.bannerContentText_ce5f0d {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+    text-align: start
+}
+
+.referredFriendAvatar_ce5f0d {
+    border: 2px solid var(--background-surface-high);
+    border-radius: 50%
+}
+
+.availableReferralSlot_ce5f0d {
+    align-items: center;
+    background: var(--background-mod-strong);
+    border-radius: 32px;
+    color: var(--text-strong);
+    display: flex;
+    flex-shrink: 0;
+    font-weight: var(--font-weight-medium);
+    height: 24px;
+    justify-content: center;
+    line-height: 18px;
+    width: 24px
+}
+
+.progressContainer_ce5f0d {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    max-width: 800px
+}
+
+.progressIndicatorSurface_ce5f0d {
+    background: var(--background-surface-high);
+    margin-bottom: var(--space-12)
+}
+
+.progressCircle_ce5f0d {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 160px;
+    justify-content: center;
+    padding: 8px;
+    width: 160px
+}
+
+.progressCircleImage_ce5f0d {
+    max-width: 150px
+}
+
+.orbVideo_ce5f0d {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.progressCircleBorder_ce5f0d {
+    height: "100%";
+    inset-inline-start: 0;
+    position: "absolute";
+    top: 0;
+    transform: rotate(-90deg);
+    width: "100%"
+}
+
+.progressCircleBackground_ce5f0d {
+    fill: var(--background-surface-high)
+}
+
+.progressCircleRing_ce5f0d {
+    fill: var(--background-mod-strong)
+}
+
+.glow_ce5f0d {
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #53ac66, 0 0 1px #53ac66, 0 0 15px #53ac66;
+    height: 100%;
+    width: 100%
+}
+
+/*# sourceMappingURL=0faedfdc98f0f4c6.css.map*/

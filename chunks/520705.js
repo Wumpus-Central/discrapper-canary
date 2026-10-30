@@ -33,7 +33,7 @@ var r = n(477900),
     F = n(983851),
     R = n(625180),
     P = n(620999),
-    B = n(87501),
+    B = n(809526),
     G = n(105292);
 function H(e) {
     e.stopPropagation();

@@ -197,7 +197,7 @@ var y = l(596034),
     L = l(99696),
     k = l(580630),
     G = l(912195),
-    w = l(882411),
+    w = l(493364),
     F = l(685254);
 function M(e) {
     let { text: t = b.intl.string(w.default.iBFPMf), onClick: l, className: n, analytics: r } = e;

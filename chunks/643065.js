@@ -3,7 +3,7 @@ var a = n(477900),
     e = n(582128),
     s = n(732159),
     l = n(317634),
-    r = n(663269),
+    r = n(880098),
     u = n(105292);
 function c(t) {
     let { transitionState: i, onClose: n, guildId: c } = t,

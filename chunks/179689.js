@@ -69,7 +69,7 @@ var i, r, a, s, l, o, d;
             function (e) {
                 d("measure", e);
             }),
-    (i.performance = a),
+    i.performance !== a && (i.performance = a),
     "function" == typeof define &&
         (define.amd || define.ajs) &&
         define("performance", [], function () {

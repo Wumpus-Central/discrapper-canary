@@ -62,7 +62,7 @@ let r = "social-layer-storefront-product-details-modal",
                     n.e("365074"),
                     n.e("437254"),
                     n.e("963333"),
-                    n.e("104876"),
+                    n.e("231193"),
                     n.e("621122"),
                     n.e("493301"),
                 ]).then(n.bind(n, 979988));

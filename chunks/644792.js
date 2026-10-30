@@ -854,7 +854,7 @@ function e0(e) {
         }),
     });
 }
-var e2 = n(87501),
+var e2 = n(809526),
     e1 = n(710135);
 function e3(e) {
     let { application: t, guild: n, integration: i, ...s } = e,
@@ -1006,8 +1006,8 @@ function e8(e) {
 var e7 = n(573648);
 (n(323874), n(14289), n(35956));
 var e5 = n(536637),
-    e4 = n.n(e5),
-    e6 = n(788373),
+    e6 = n.n(e5),
+    e4 = n(788373),
     e9 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1044,9 +1044,9 @@ function td(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e6.F.KICK) {
+                if (b || i.expire_behavior !== e4.F.KICK) {
                     let e =
-                        i.expire_behavior === e6.F.REMOVE_ROLE
+                        i.expire_behavior === e4.F.REMOVE_ROLE
                             ? $.intl.string($.t["6kpw4i"])
                             : $.intl.string($.t.fQUQIJ);
                     (0, eR.A)({
@@ -1110,7 +1110,7 @@ function td(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? $.intl.formatToPlainString($.t.G16Wji, { user: i.user, platformName: t.name })
-                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e4()(i.synced_at).calendar() }),
+                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e6()(i.synced_at).calendar() }),
             };
         }, [_, v, i.revoked, i.synced_at, i.type, i.user]),
         G = (0, o.bG)([eS.A], () => eS.A.getSortedRoles(n.id)),
@@ -1290,12 +1290,12 @@ function td(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e6.F.REMOVE_ROLE.toString(),
+                                                value: e4.F.REMOVE_ROLE.toString(),
                                                 label: $.intl.string($.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e6.F.KICK.toString(),
+                                                value: e4.F.KICK.toString(),
                                                 label: $.intl.string($.t.fQUQIJ),
                                             },
                                         ],
@@ -1335,7 +1335,7 @@ function td(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e6.F.KICK &&
+                        a.expire_behavior === e4.F.KICK &&
                         (0, l.jsx)(I.E, {
                             className: to.Ce,
                             color: "text-feedback-critical",

@@ -47,7 +47,7 @@ var i,
     z = n(265872),
     X = n(827827),
     q = n(481045),
-    Z = n(305103),
+    Z = n(450216),
     Q = n(105292),
     J = n(293686);
 function ee(e) {
@@ -544,7 +544,7 @@ let tk = (0, eM.mj)({
     });
 var tB = n(610010),
     tV = n(475669),
-    tH = n(351585);
+    tH = n(135570);
 function tj(e) {
     let { title: t, body: n, ctaText: i, runningGameId: a, targetElementRef: s, onClick: l, onClose: o } = e,
         d = (0, E.bG)([tV.A], () => null != a && tV.A.getGlobalCatalogGame(a)?.can_market === !0, [a]);
@@ -677,8 +677,8 @@ let t1 = a.memo(function (e) {
                     n.e("236946"),
                     n.e("338601"),
                     n.e("944727"),
-                    n.e("312159"),
-                    n.e("942474"),
+                    n.e("707068"),
+                    n.e("521221"),
                     n.e("82001"),
                 ]).then(n.bind(n, 266536));
                 return (t) =>
@@ -705,8 +705,8 @@ let t1 = a.memo(function (e) {
                           n.e("236946"),
                           n.e("338601"),
                           n.e("944727"),
-                          n.e("312159"),
-                          n.e("942474"),
+                          n.e("707068"),
+                          n.e("521221"),
                           n.e("82001"),
                       ]).then(n.bind(n, 266536));
                       return (n) =>
@@ -995,8 +995,8 @@ var na = n(37595),
     nd = n(233741),
     nc = n(532624),
     nu = n(350535),
-    n_ = n(507216),
-    nE = n(87501),
+    n_ = n(185973),
+    nE = n(809526),
     nA = n(369409);
 function nh(e) {
     let { isCurrentlyRunningGame: t, gamePid: n, onClickNotSharing: i } = e,
@@ -1184,7 +1184,7 @@ let nS = {
 };
 var nN = n(534952),
     nC = n(731854),
-    nO = n(80268),
+    nO = n(169007),
     nR = n(821095),
     nL = n(268920),
     ny = n(633217);

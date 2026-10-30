@@ -42,7 +42,7 @@ var l = n(477900),
     L = n(403581),
     k = n(661531),
     w = n(773669),
-    D = n(926701),
+    D = n(843170),
     U = n(105292);
 function G(e) {
     let { label: t, amount: n, isDiscount: i } = e,

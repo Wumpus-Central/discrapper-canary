@@ -24,7 +24,7 @@ async function S(t, l) {
 var w = n(664619),
     C = n(722701),
     N = n(811587),
-    y = n(87501),
+    y = n(809526),
     M = n(105292);
 function I(t) {
     let { installScope: l, integrationStatus: n } = t,

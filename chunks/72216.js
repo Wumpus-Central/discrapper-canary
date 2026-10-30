@@ -1,6 +1,6 @@
 n.d(t, { O: () => a });
 var i = n(825476),
-    r = n(663269);
+    r = n(880098);
 function a(e, t) {
     var n = r.default["k41/aX"];
     let a = { trackTitle: e.trackTitle ?? "", artistName: e.artistName ?? "", username: t ?? "" };

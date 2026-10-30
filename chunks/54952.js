@@ -7,7 +7,7 @@ var r = a(772707),
     s = a(689906),
     p = a(743569),
     c = a(568065),
-    d = a(930259),
+    d = a(959456),
     o = a(105292);
 function m(t) {
     let { guildId: i, powerup: a, onClose: m, ...u } = t,

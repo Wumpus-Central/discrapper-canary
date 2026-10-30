@@ -1180,7 +1180,7 @@ var te = n(417098),
     tN = n(915725),
     tR = n(226640),
     tO = n(753070),
-    tM = n(507216);
+    tM = n(185973);
 function tD(e) {
     let { onClose: t } = e,
         n = (0, tT.E)(),
@@ -2040,7 +2040,7 @@ function nL(e) {
 var nV = n(350835),
     nG = n(429913),
     nU = n(34307),
-    nF = n(184748),
+    nF = n(254821),
     nY = n(276119);
 function nH(e) {
     return null != e && (e.isDM() || e.isMultiUserDM());
@@ -3155,7 +3155,7 @@ function iM(e, t) {
         hasOverride: null != r,
     };
 }
-var iD = n(87501),
+var iD = n(809526),
     iz = n(408454);
 function ik(e, t) {
     return e.hasGame === t.hasGame && e.shownInGame === t.shownInGame && e.hasOverride === t.hasOverride;
@@ -3712,7 +3712,7 @@ let rm = v.memo(function (e) {
                                           (0, g.L3)(t, async () => {
                                               let { default: t } = await Promise.all([
                                                   n.e("955630"),
-                                                  n.e("643670"),
+                                                  n.e("421289"),
                                               ]).then(n.bind(n, 543824));
                                               return (n) => (0, l.jsx)(t, { ...n, widget: e });
                                           });

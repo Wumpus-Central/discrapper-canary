@@ -7,7 +7,7 @@ let r = (0, n(945810).mj)({
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 var a = n(437614),
-    s = n(924919),
+    s = n(961270),
     l = n(105292);
 let o = {
     [a.Xb.RUST_2026_10]: {

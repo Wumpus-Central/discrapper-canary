@@ -24,7 +24,7 @@ var i = n(582128),
     L = n(758836),
     g = n(652215),
     P = n(202541),
-    h = n(557743),
+    h = n(352354),
     B = n(105292);
 function D(t) {
     return null != t ? B.intl.format(B.t["4kp0AB"], { itemName: t }) : null;

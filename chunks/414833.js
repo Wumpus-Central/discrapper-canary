@@ -13,7 +13,7 @@ var s = r(477900),
     k = r(453322),
     x = r(22071),
     A = r(105292),
-    C = r(82157),
+    C = r(83152),
     f = r(108126);
 function g(e) {
     let { transitionState: t, onClose: r, onLoadError: g, title: m, body: j } = e,

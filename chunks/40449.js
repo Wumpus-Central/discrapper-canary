@@ -13,7 +13,7 @@ n.d(t, {
 var i,
     r,
     a = n(306537),
-    s = n(76475);
+    s = n(418528);
 let l = new Set([a.q1.NSFW_GUILD]),
     o = "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data",
     d = "13-17",

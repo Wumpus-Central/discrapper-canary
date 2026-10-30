@@ -6,7 +6,7 @@ var n = a(713608),
     o = a(369606),
     r = a(106983),
     s = a(171251),
-    c = a(507216);
+    c = a(185973);
 let u = {
         [r.C.Kill]: n.q,
         [r.C.MultiKill]: n.q,

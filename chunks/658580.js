@@ -228,7 +228,7 @@ function X(e) {
         children: t,
     });
 }
-var $ = n(128400),
+var $ = n(842089),
     ee = n(105292),
     et = n(383931);
 function en(e) {
@@ -766,7 +766,7 @@ function eJ() {
     });
 }
 var eW = n(534890),
-    eZ = n(478718);
+    eZ = n(465199);
 function eX() {
     let e = (0, u.bG)([C.A], () => C.A.stats?.messages);
     return (0, r.jsxs)(e_, {
@@ -857,9 +857,9 @@ function e8() {
         ],
     });
 }
-var e6 = n(435558),
-    e7 = n(477155),
-    e9 = n(935286),
+var e9 = n(435558),
+    e6 = n(477155),
+    e7 = n(935286),
     te = n(858899),
     tt = n(289873),
     tn = n(621466);
@@ -883,7 +883,7 @@ function ts(e) {
             onClick: t,
             disabled: n,
             "aria-label": ee.intl.string(ee.t["13/7kX"]),
-            children: (0, r.jsx)(e7.r, { color: "currentColor" }),
+            children: (0, r.jsx)(e6.r, { color: "currentColor" }),
         })
     );
 }
@@ -897,7 +897,7 @@ function tl(e) {
             onClick: t,
             disabled: n,
             "aria-label": ee.intl.string(ee.t.PDTjLN),
-            children: (0, r.jsx)(e9.E, { color: "currentColor" }),
+            children: (0, r.jsx)(e7.E, { color: "currentColor" }),
         })
     );
 }
@@ -939,14 +939,14 @@ function tc(e) {
                 }),
                 s
                     ? (0, r.jsx)(tt.y, { type: tt.t.SPINNING_CIRCLE_SIMPLE, className: ta.u1, itemClassName: ta.$N })
-                    : (0, r.jsx)(e9.E, { size: "refresh_sm", color: "currentColor" }),
+                    : (0, r.jsx)(e7.E, { size: "refresh_sm", color: "currentColor" }),
             ],
         })
     );
 }
 function to(e) {
     let { activeRoute: t, isRouteBlocked: n, onBack: a, onNext: s } = e,
-        l = i.useMemo(() => (0, e6.throttle)((e) => e(), 500, { trailing: !1 }), []);
+        l = i.useMemo(() => (0, e9.throttle)((e) => e(), 500, { trailing: !1 }), []);
     switch (t) {
         case j.gr.HOME:
             return null;
@@ -1365,7 +1365,7 @@ void main() {
   gl_FragColor = vec4(texelColor.rgb * v_lighting, texelColor.a);
 }
 `,
-    t6 = [
+    t9 = [
         -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5,
         -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5,
         0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5,
@@ -1373,11 +1373,11 @@ void main() {
         -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5,
         -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5,
     ],
-    t7 = [
+    t6 = [
         0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0,
         1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0,
     ],
-    t9 = [
+    t7 = [
         0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
         1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0,
         -1, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
@@ -1448,15 +1448,15 @@ function ne(e) {
                 x = r.getUniformLocation(c, "u_normalMatrix"),
                 f = r.createBuffer();
             (r.bindBuffer(r.ARRAY_BUFFER, f),
-                r.bufferData(r.ARRAY_BUFFER, new Float32Array(t9), r.STATIC_DRAW),
+                r.bufferData(r.ARRAY_BUFFER, new Float32Array(t7), r.STATIC_DRAW),
                 r.vertexAttribPointer(h, 3, r.FLOAT, !1, 0, 0),
                 r.enableVertexAttribArray(h));
             let g = r.createBuffer();
             (r.bindBuffer(r.ARRAY_BUFFER, g),
-                (e = new Float32Array(t6)),
+                (e = new Float32Array(t9)),
                 r.bufferData(r.ARRAY_BUFFER, e, r.STATIC_DRAW));
             let j = r.createBuffer();
-            (r.bindBuffer(r.ARRAY_BUFFER, j), r.bufferData(r.ARRAY_BUFFER, new Float32Array(t7), r.STATIC_DRAW));
+            (r.bindBuffer(r.ARRAY_BUFFER, j), r.bufferData(r.ARRAY_BUFFER, new Float32Array(t6), r.STATIC_DRAW));
             let E = tX.DF(60);
             return (
                 (n = requestAnimationFrame(function e() {
@@ -2300,7 +2300,7 @@ function n8(e) {
         ],
     });
 }
-function n6(e) {
+function n9(e) {
     let { guild: t, numVoiceMinutes: n, numMessagesSent: a } = e;
     return (0, r.jsx)(n8, {
         guild: t,
@@ -2309,7 +2309,7 @@ function n6(e) {
         children: (0, r.jsx)(n2, { numVoiceMinutes: n, numMessagesSent: a }),
     });
 }
-function n7(e) {
+function n6(e) {
     let { guilds: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -2331,14 +2331,14 @@ function n7(e) {
                 children: t.map((e, t) => {
                     let { guild: n, numMessagesSent: a, numVoiceMinutes: s } = e;
                     return 0 === t
-                        ? (0, r.jsx)(n6, { guild: n, numMessagesSent: a ?? 0, numVoiceMinutes: s ?? 0 }, n.id)
+                        ? (0, r.jsx)(n9, { guild: n, numMessagesSent: a ?? 0, numVoiceMinutes: s ?? 0 }, n.id)
                         : (0, r.jsx)(n8, { guild: n, rank: t + 1 }, n.id);
                 }),
             }),
         ],
     });
 }
-function n9(e) {
+function n7(e) {
     let { guilds: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -2369,7 +2369,7 @@ function re() {
     return (0, r.jsx)(th, {
         children: (0, r.jsx)("div", {
             className: n4.kL,
-            children: n ? (0, r.jsx)(n9, { guilds: t }) : (0, r.jsx)(n7, { guilds: e }),
+            children: n ? (0, r.jsx)(n7, { guilds: t }) : (0, r.jsx)(n6, { guilds: e }),
         }),
     });
 }

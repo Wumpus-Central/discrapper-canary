@@ -6,8 +6,8 @@ var r = n(477900),
     i = n(834730),
     c = n(343053),
     o = n(309913),
-    u = n(128400),
-    d = n(105292),
+    d = n(842089),
+    u = n(105292),
     m = n(247060);
 let h = [
     "/assets/cee2b812c0cc2a9c.svg",
@@ -19,7 +19,7 @@ function x(e) {
         { size: a } = (0, c.Z)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.A, { children: d.intl.formatToPlainString(u.default["/nxqc2"], { powerLevel: t }) }),
+            (0, r.jsx)(l.A, { children: u.intl.formatToPlainString(d.default["/nxqc2"], { powerLevel: t }) }),
             (0, r.jsxs)("div", {
                 className: s()(m.powerBar, m[a]),
                 "aria-hidden": !0,
