@@ -162,9 +162,15 @@
 
 .iconPlaceholder_d6dae9 {
     align-items: center;
-    background: var(--background-mod-strong);
     display: flex;
-    justify-content: center
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    justify-content: center;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .details_d6dae9 {
@@ -721,4 +727,4 @@
     width: 139px
 }
 
-/*# sourceMappingURL=400255.2502ab3c6b5c4b6f.css.map*/
+/*# sourceMappingURL=400255.11fc4d22d6f1ff60.css.map*/

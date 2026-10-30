@@ -35,9 +35,15 @@
 
 .placeholder_d9c451 {
     align-items: center;
-    background: var(--background-mod-strong);
     display: flex;
-    justify-content: center
+    font-family: var(--font-primary);
+    font-size: calc(var(--custom-conjure-project-icon-size)/2);
+    font-weight: var(--font-weight-bold);
+    justify-content: center;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .header__2688e {
@@ -96,4 +102,4 @@
     --background-gradient-lowest: var(--background-gradient-chat)
 }
 
-/*# sourceMappingURL=36103bcbc6ec6f2a.css.map*/
+/*# sourceMappingURL=80c9ffd178aa097d.css.map*/
