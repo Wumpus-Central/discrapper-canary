@@ -281,6 +281,16 @@
     --custom-hero-content-inline-padding: 0
 }
 
+@media (max-width:1500px) {
+    .heroBlockContent__08415.promotionIndex__08415 {
+        --custom-hero-content-inline-padding: 20px
+    }
+}
+
+.heroBlockContentPromotion__08415 {
+    padding-bottom: 0
+}
+
 .rivBannerButtonContainer__08415 {
     align-items: center;
     display: flex;
@@ -326,7 +336,7 @@
 }
 
 .heroHeaderContainer__08415.promotionTakeover__08415 {
-    height: 400px
+    height: 440px
 }
 
 .heroHeaderBadgeLogoSummaryContainer__08415 {
@@ -826,4 +836,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=5a92457a5c253624.css.map*/
+/*# sourceMappingURL=5791e32e1f3a1bc2.css.map*/

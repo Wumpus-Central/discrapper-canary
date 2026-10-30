@@ -10,19 +10,27 @@
     flex-shrink: 0
 }
 
+.ringWrapper_e6c363 .reward_e6c363 {
+    height: 104px;
+    width: 104px
+}
+
 .ctaButton__05d6f {
     min-width: 96px;
     width: 150px
 }
 
 .card__956bc {
-    background-color: var(--background-base-low);
+    background: var(--background-base-lowest);
+    background-origin: border-box;
     background-position: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 2px solid var(--border-normal);
     border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-high);
     box-sizing: border-box;
-    min-height: 168px;
+    min-height: 120px;
     overflow: hidden
 }
 
@@ -77,4 +85,4 @@
     }
 }
 
-/*# sourceMappingURL=7526a6765977fe25.css.map*/
+/*# sourceMappingURL=f1fc1f00614500b8.css.map*/

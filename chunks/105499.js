@@ -22,6 +22,7 @@ e.exports = {
     os: "heroBlock__08415",
     xX: "heroBlockContent__08415",
     ub: "promotionIndex__08415",
+    uC: "heroBlockContentPromotion__08415",
     fy: "rivBannerButtonContainer__08415",
     Xt: "riveEventOverlay__08415",
     bC: "heroHeaderContainer__08415",

@@ -45,7 +45,7 @@ let h = function (e) {
                                         strokeWidth: 6,
                                         stroke: l,
                                         pathLength: 1,
-                                        strokeDasharray: "1 1",
+                                        strokeDasharray: "1 2",
                                         strokeDashoffset: +!e.isFilled,
                                     }),
                                 ],
