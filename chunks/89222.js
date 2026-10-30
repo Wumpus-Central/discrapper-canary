@@ -1,29 +1,29 @@
 s.d(t, { A: () => f });
 var n = s(435558),
     l = s.n(n),
-    r = s(17928),
-    a = s(506774),
+    a = s(17928),
+    r = s(506774),
     i = s(73153);
-let c = "ConjureComposerDrafts";
-function o() {
-    return a.w.get(c) ?? {};
+let o = "ConjureComposerDrafts";
+function c() {
+    return r.w.get(o) ?? {};
 }
 let u = new Map(),
     d = l().throttle(() => {
         if (0 === u.size) return;
-        let e = o();
+        let e = c();
         for (let [t, s] of u) "" === s ? delete e[t] : (e[t] = s);
-        (u.clear(), a.w.set(c, e));
+        (u.clear(), r.w.set(o, e));
     }, 1e3);
-class m extends r.Ay.Store {
+class m extends a.Ay.Store {
     getDraft(e) {
         let t = u.get(e);
-        return null != t ? t : (o()[e] ?? "");
+        return null != t ? t : (c()[e] ?? "");
     }
 }
 let f = new m(i.h, {
     LOGOUT: function () {
-        return (u.clear(), d.cancel(), a.w.remove(c), !1);
+        return (u.clear(), d.cancel(), r.w.remove(o), !1);
     },
     CONJURE_COMPOSER_DRAFT_SET: function (e) {
         let { projectId: t, draft: s } = e;

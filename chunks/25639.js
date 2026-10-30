@@ -1,38 +1,38 @@
-l.d(t, { A: () => C, s: () => s });
+l.d(t, { A: () => C, s: () => o });
 var n,
     i = l(17928),
-    r = l(73153),
-    a = l(967198),
-    o = l(977997),
-    s =
+    a = l(73153),
+    r = l(967198),
+    s = l(977997),
+    o =
         (((n = {}).GENTLE_AMBIENT = "GENTLE_AMBIENT"),
         (n.GENTLE_AMBIENT_WITH_INTRO = "GENTLE_AMBIENT_WITH_INTRO"),
         (n.HIGH_CONTRAST = "HIGH_CONTRAST"),
         n);
 let c = {},
-    u = {},
-    d = null;
-function T(e) {
-    null != u[e] && (clearTimeout(u[e]), delete u[e]);
+    d = {},
+    u = null;
+function h(e) {
+    null != d[e] && (clearTimeout(d[e]), delete d[e]);
 }
-function E(e) {
-    (T(e),
-        (u[e] = setTimeout(() => {
+function T(e) {
+    (h(e),
+        (d[e] = setTimeout(() => {
             let t = c[e];
-            (null != t && ((c[e] = { ...t, style: "GENTLE_AMBIENT" }), A.emitChange()), delete u[e]);
+            (null != t && ((c[e] = { ...t, style: "GENTLE_AMBIENT" }), A.emitChange()), delete d[e]);
         }, 2e3)));
 }
-function h() {
-    for (let e of Object.keys(u)) clearTimeout(u[e]);
-    ((u = {}), (c = {}));
+function E() {
+    for (let e of Object.keys(d)) clearTimeout(d[e]);
+    ((d = {}), (c = {}));
 }
 function N() {
-    return (h(), !0);
+    return (E(), !0);
 }
 class I extends i.Ay.Store {
     static displayName = "VoiceChannelAnimationStateStore";
     initialize() {
-        this.waitFor(o.A, a.A);
+        this.waitFor(s.A, r.A);
     }
     getAnimationStyle(e) {
         return c[e]?.style ?? "GENTLE_AMBIENT";
@@ -41,11 +41,11 @@ class I extends i.Ay.Store {
         return c[e]?.userCount ?? 0;
     }
 }
-let A = new I(r.h, {
+let A = new I(a.h, {
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e,
-                l = a.A.getGuildId();
-            l !== d && null != l && (d = l);
+                l = r.A.getGuildId();
+            l !== u && null != l && (u = l);
             let n = {};
             for (let e of t)
                 e.guildId === l &&
@@ -58,20 +58,20 @@ let A = new I(r.h, {
                         n = l?.userCount ?? 0,
                         i = Math.max(0, n + t);
                     return 0 === n && i > 0
-                        ? ((c[e] = { style: "GENTLE_AMBIENT_WITH_INTRO", userCount: i }), E(e), !0)
+                        ? ((c[e] = { style: "GENTLE_AMBIENT_WITH_INTRO", userCount: i }), T(e), !0)
                         : n > 0 && i > n
-                          ? ((c[e] = { style: "HIGH_CONTRAST", userCount: i }), E(e), !0)
+                          ? ((c[e] = { style: "HIGH_CONTRAST", userCount: i }), T(e), !0)
                           : 0 === i
-                            ? (T(e), delete c[e], !0)
+                            ? (h(e), delete c[e], !0)
                             : null != l && i !== n && ((c[e] = { ...l, userCount: i }), !0);
                 })(e, t) && (i = !0);
             return i;
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t } = e;
-            if (t === d || null == t) return !1;
-            ((d = t), h());
-            let l = o.A.getVoiceStates(t),
+            if (t === u || null == t) return !1;
+            ((u = t), E());
+            let l = s.A.getVoiceStates(t),
                 n = {};
             for (let e of Object.values(l)) null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1);
             for (let [e, t] of Object.entries(n)) t > 0 && (c[e] = { style: "GENTLE_AMBIENT", userCount: t });

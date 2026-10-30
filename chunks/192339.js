@@ -1,4 +1,4 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var r = n(477900),
     a = n(503698),
     s = n.n(a),
@@ -6,7 +6,7 @@ var r = n(477900),
     i = n(111159),
     c = n(343053),
     o = n(479017);
-function u() {
+function d() {
     let { size: e } = (0, c.Z)();
     return (0, r.jsx)("div", {
         className: s()(o.logo, o[e]),

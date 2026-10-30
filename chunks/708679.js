@@ -1,11 +1,11 @@
-s.d(t, { EP: () => C, Iy: () => R, JN: () => k, P6: () => A, RW: () => O, XU: () => S, YI: () => I, yN: () => L });
+s.d(t, { EP: () => C, Iy: () => S, JN: () => k, P6: () => A, RW: () => O, XU: () => R, YI: () => I, yN: () => L });
 var n = s(636537),
     l = s(506774),
-    r = s(73153),
-    a = s(195880),
+    a = s(73153),
+    r = s(195880),
     i = s(347111),
-    c = s(245179),
-    o = s(89222),
+    o = s(245179),
+    c = s(89222),
     u = s(287111),
     d = s(322227),
     m = s(975189),
@@ -43,13 +43,13 @@ function A(e, t) {
     let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         n = arguments.length > 3 ? arguments[3] : void 0;
     if (h.Ay.getProject(e)?.install_scope_setup != null)
-        l.w.set(j, { ...y(), [e]: { message: t, attachments: s, nonce: (0, a.m)(), guildId: n } });
+        l.w.set(j, { ...y(), [e]: { message: t, attachments: s, nonce: (0, r.m)(), guildId: n } });
     else (0, d.sendUserMessage)(e, t, s);
 }
 function E(e, t, s) {
     (w(e),
         (0, d.withdrawUserMessage)(e, t.nonce),
-        "" === o.A.getDraft(e) && (0, i.I)(e, t.message),
+        "" === c.A.getDraft(e) && (0, i.I)(e, t.message),
         0 === (0, u.GU)(e, "chat").length &&
             (0, u.fD)(
                 e,
@@ -60,30 +60,30 @@ function E(e, t, s) {
             ),
         s());
 }
-function R(e, t) {
+function S(e, t) {
     let s = y()[e],
         n = h.Ay.getProject(e);
-    if (null == s || null == n || !c.A.hasLoadedHistory(e)) return;
-    let r = c.A.getMessages(e),
-        a = (0, d.optimisticMessageId)(s.nonce);
+    if (null == s || null == n || !o.A.hasLoadedHistory(e)) return;
+    let a = o.A.getMessages(e),
+        r = (0, d.optimisticMessageId)(s.nonce);
     if (!0 === s.sent) {
-        let l = r.some((e) => "user" === e.role && !0 !== e.held && e.id !== a && e.content === s.message),
-            i = c.A.getHistoryLoads(e) > (N.get(e) ?? 0);
+        let l = a.some((e) => "user" === e.role && !0 !== e.held && e.id !== r && e.content === s.message),
+            i = o.A.getHistoryLoads(e) > (N.get(e) ?? 0);
         l
             ? w(e)
-            : !i || null != n.install_scope_setup || c.A.isHistoryUnavailable(e) || c.A.isThinking(e) || E(e, s, t);
+            : !i || null != n.install_scope_setup || o.A.isHistoryUnavailable(e) || o.A.isThinking(e) || E(e, s, t);
         return;
     }
     if (null != n.install_scope_setup) {
-        r.some((e) => e.id === a) || (0, d.showUserMessage)(e, s.message, s.attachments, { held: !0, nonce: s.nonce });
+        a.some((e) => e.id === r) || (0, d.showUserMessage)(e, s.message, s.attachments, { held: !0, nonce: s.nonce });
         return;
     }
     "open" === d.default.getConnState(e) &&
         (l.w.set(j, { ...y(), [e]: { ...s, sent: !0 } }),
-        N.set(e, c.A.getHistoryLoads(e)),
+        N.set(e, o.A.getHistoryLoads(e)),
         (0, d.sendUserMessage)(e, s.message, s.attachments, { nonce: s.nonce }) || E(e, s, t));
 }
-function S(e, t) {
+function R(e, t) {
     if (0 === e.length) return {};
     let s = e.find((e) => e.id === t);
     return {
@@ -111,7 +111,7 @@ async function P(e, t, s) {
         body: { install_scope: t, ...(null != s ? { guild_id: s } : {}) },
         rejectWithError: !0,
     });
-    r.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: l.body });
+    a.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: l.body });
 }
 function k(e, t, s) {
     return b(`settle:${e}`, async () => {

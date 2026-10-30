@@ -1,7 +1,7 @@
 (s.d(t, {
     G: () => y,
     GU: () => h,
-    RQ: () => R,
+    RQ: () => S,
     XR: () => C,
     fD: () => w,
     iW: () => N,
@@ -14,11 +14,11 @@
     s(35956));
 var n = s(73153),
     l = s(839214),
-    r = s(322227),
-    a = s(666476),
+    a = s(322227),
+    r = s(666476),
     i = s(989145),
-    c = s(809526),
-    o = s(105292);
+    o = s(809526),
+    c = s(105292);
 let u = [],
     d = 1,
     m = (0, l.D)(() => ({ draftsByProject: {} }));
@@ -59,14 +59,14 @@ function v(e, t) {
     if (null == l) return;
     for (let t of Object.values(l))
         for (let n of t ?? u) s ? j(e, n) : null != n.previewUrl && URL.revokeObjectURL(n.previewUrl);
-    let { [e]: r, ...a } = n;
-    m.setState({ draftsByProject: a });
+    let { [e]: a, ...r } = n;
+    m.setState({ draftsByProject: r });
 }
 function N(e) {
-    return o.intl.formatToPlainString(c.default.JZ59Bo, { size: (0, a.sM)((0, a.Ju)(e)) });
+    return c.intl.formatToPlainString(o.default.JZ59Bo, { size: (0, r.sM)((0, r.Ju)(e)) });
 }
 function b(e, t, s, n) {
-    return (0, a.Oq)(t.size, n) ? (0, i.c9)(e, t, s, n) : Promise.resolve({ errorText: N(n) });
+    return (0, r.Oq)(t.size, n) ? (0, i.c9)(e, t, s, n) : Promise.resolve({ errorText: N(n) });
 }
 function y(e, t) {
     return m.useState((s) => f(s, e, t));
@@ -88,17 +88,17 @@ function w(e, t, s) {
         l?.().then(
             (n) => {
                 if ("errorText" in n) return void g(e, t, s.localId, { status: "error", errorText: n.errorText });
-                let { converted: l, ...r } = n;
-                g(e, t, s.localId, { ...l, status: "ready", ref: r })
+                let { converted: l, ...a } = n;
+                g(e, t, s.localId, { ...l, status: "ready", ref: a })
                     ? setTimeout(
-                          () => g(e, t, s.localId, { status: "error", errorText: o.intl.string(c.default.E7dS5n) }),
-                          a.o2 - 3e5,
+                          () => g(e, t, s.localId, { status: "error", errorText: c.intl.string(o.default.E7dS5n) }),
+                          r.o2 - 3e5,
                       )
-                    : p(e, r.id);
+                    : p(e, a.id);
             },
             (n) => {
                 (console.error("[conjure] attachment upload failed", n),
-                    g(e, t, s.localId, { status: "error", errorText: o.intl.string(c.default["kUw/b1"]) }));
+                    g(e, t, s.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
             },
         );
 }
@@ -126,12 +126,12 @@ function E(e, t) {
     for (let e of s) null != e.previewUrl && URL.revokeObjectURL(e.previewUrl);
     return (x(e, t, u), s.flatMap((e) => (null != e.ref ? [e.ref] : [])));
 }
-function R(e, t) {
+function S(e, t) {
     let { clarificationAnswers: s, attachments: n = [] } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         l = h(e, "chat"),
-        a = l.length > 0 && l.every((e) => "ready" === e.status) ? E(e, "chat") : [];
-    (0, r.sendUserMessage)(e, t, [...n, ...a], { clarificationAnswers: s });
+        r = l.length > 0 && l.every((e) => "ready" === e.status) ? E(e, "chat") : [];
+    (0, a.sendUserMessage)(e, t, [...n, ...r], { clarificationAnswers: s });
 }
 (n.h.subscribe("LOGOUT", () => {
     for (let e of Object.keys(m.getState().draftsByProject)) v(e, { deleteFromWorker: !0 });

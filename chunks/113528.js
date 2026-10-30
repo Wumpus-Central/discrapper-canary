@@ -1,1 +1,1 @@
-a.exports = { l: "notice__51057", p: "info__51057" };
+c.exports = { l: "notice__51057", p: "info__51057" };

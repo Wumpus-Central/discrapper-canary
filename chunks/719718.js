@@ -11,13 +11,13 @@ var r,
 let i = { isMuted: !1 },
     c = {},
     o = { ...i },
-    u = null,
     d = null,
+    u = null,
     m = null,
     h = 0,
     x = null,
-    g = !1;
-class f extends a.Ay.PersistedStore {
+    f = !1;
+class g extends a.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
     getState() {
@@ -30,10 +30,10 @@ class f extends a.Ay.PersistedStore {
         return o.isMuted;
     }
     get stats() {
-        return u;
+        return d;
     }
     get globalStats() {
-        return d;
+        return u;
     }
     get character() {
         return m;
@@ -42,13 +42,13 @@ class f extends a.Ay.PersistedStore {
         return h;
     }
     get isSaving() {
-        return g;
+        return f;
     }
     get selectedCharacterTraits() {
         return x ?? m ?? c;
     }
 }
-let j = new f(s.h, {
+let j = new g(s.h, {
     CHECKPOINT_TOGGLE_MUTE: function () {
         o.isMuted = !o.isMuted;
     },
@@ -56,19 +56,19 @@ let j = new f(s.h, {
         h = 1;
     },
     CHECKPOINT_FETCH_SUCCESS: function (e) {
-        ((u = e.stats), (d = e.globalStats), (m = e.character), (h = 2));
+        ((d = e.stats), (u = e.globalStats), (m = e.character), (h = 2));
     },
     CHECKPOINT_FETCH_FAILED: function () {
         h = 3;
     },
     CHECKPOINT_COMPLETE_START: function () {
-        g = !0;
+        f = !0;
     },
     CHECKPOINT_COMPLETE_SUCCESS: function (e) {
-        ((m = e.character), (x = null), (g = !1));
+        ((m = e.character), (x = null), (f = !1));
     },
     CHECKPOINT_COMPLETE_FAILED: function () {
-        g = !1;
+        f = !1;
     },
     CHECKPOINT_RESET_SUCCESS: function () {
         ((m = null), (x = null));
@@ -80,6 +80,6 @@ let j = new f(s.h, {
         x = null;
     },
     LOGOUT: function () {
-        ((o = { ...i }), (u = null), (d = null), (m = null), (h = 0), (x = null), (g = !1));
+        ((o = { ...i }), (d = null), (u = null), (m = null), (h = 0), (x = null), (f = !1));
     },
 });

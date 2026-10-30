@@ -1,34 +1,34 @@
-n.d(t, { A: () => _, E: () => l });
+n.d(t, { A: () => S, E: () => a });
 var i = n(17928),
-    a = n(73153);
-let l = {},
+    l = n(73153);
+let a = {},
     r = {},
-    s = {},
+    E = {},
+    s = !1,
     d = !1,
-    E = !1,
-    o = !1;
-function c(e) {
+    h = !1;
+function o(e) {
     let { guild: t } = e.invite;
     return t?.welcome_screen != null && ((r[t.id] = t.welcome_screen), !0);
 }
-function u(e) {
+function c(e) {
     let { welcomeScreen: t, guildId: n } = e;
-    r[n] = t ?? l;
+    r[n] = t ?? a;
 }
-class h extends i.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "WelcomeScreenStore";
     get(e) {
         if (null != e) return r[e];
     }
     isFetching() {
-        return E;
+        return d;
     }
     hasError() {
-        return o;
+        return h;
     }
     hasSeen(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null != e && (t ? d : s[e] || !1);
+        return null != e && (t ? s : E[e] || !1);
     }
     isEmpty(e) {
         if (null == e) return !0;
@@ -36,33 +36,33 @@ class h extends i.Ay.Store {
         return null == t || 0 === t.welcome_channels.length;
     }
 }
-let _ = new h(a.h, {
-    INVITE_RESOLVE_SUCCESS: c,
-    INVITE_ACCEPT_SUCCESS: c,
-    WELCOME_SCREEN_SUBMIT_SUCCESS: u,
-    WELCOME_SCREEN_UPDATE: u,
+let S = new u(l.h, {
+    INVITE_RESOLVE_SUCCESS: o,
+    INVITE_ACCEPT_SUCCESS: o,
+    WELCOME_SCREEN_SUBMIT_SUCCESS: c,
+    WELCOME_SCREEN_UPDATE: c,
     WELCOME_SCREEN_VIEW: function (e) {
         let { guildId: t, isLurking: n } = e;
-        ((s[t] = !0), n && (d = !0));
+        ((E[t] = !0), n && (s = !0));
     },
     GUILD_STOP_LURKING: function () {
-        d = !1;
+        s = !1;
     },
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
         } = e;
-        s[t] = !1;
+        E[t] = !1;
     },
     WELCOME_SCREEN_FETCH_START: function () {
-        ((E = !0), (o = !1));
+        ((d = !0), (h = !1));
     },
     WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
-        ((E = !1), (o = !1));
+        ((d = !1), (h = !1));
         let { welcomeScreen: t, guildId: n } = e;
-        r[n] = t ?? l;
+        r[n] = t ?? a;
     },
     WELCOME_SCREEN_FETCH_FAIL: function () {
-        ((E = !1), (o = !0));
+        ((d = !1), (h = !0));
     },
 });

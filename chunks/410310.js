@@ -1,19 +1,19 @@
-u.d(e, { N: () => a, p: () => i });
-var d = u(17928),
-    p = u(406935),
-    s = u(646769),
-    c = u(405018);
-let a = (0, s.c$)(
+t.d(n, { N: () => u, p: () => s });
+var l = t(17928),
+    i = t(406935),
+    a = t(646769),
+    r = t(405018);
+let u = (0, a.c$)(
     "privacy",
     "swpMessagePromotionOptedOut",
-    (t) => t?.value ?? null,
-    (t) => (null != t ? p._t.create({ value: t }) : void 0),
+    (e) => e?.value ?? null,
+    (e) => (null != e ? i._t.create({ value: e }) : void 0),
 );
-function i() {
-    let t = a.useSetting(),
-        { locked: e, defaultOptedOut: u } = (0, d.cf)([c.A], () => ({
-            locked: c.A.isLocked(),
-            defaultOptedOut: c.A.defaultsToOptedOut(),
+function s() {
+    let e = u.useSetting(),
+        { locked: n, defaultOptedOut: t } = (0, l.cf)([r.A], () => ({
+            locked: r.A.isLocked(),
+            defaultOptedOut: r.A.defaultsToOptedOut(),
         }));
-    return { locked: e, optedOut: e || (t ?? u) };
+    return { locked: n, optedOut: n || (e ?? t) };
 }

@@ -2,11 +2,11 @@ s.d(t, { A: () => x });
 var n = s(477900);
 s(582128);
 var l = s(152367),
-    r = s(661531),
-    a = s(866665),
+    a = s(661531),
+    r = s(866665),
     i = s(939249),
-    c = s(834730),
-    o = s(742589),
+    o = s(834730),
+    c = s(742589),
     u = s(465006),
     d = s(845079),
     m = s(809526),
@@ -16,7 +16,7 @@ function x(e) {
     let { title: t, actions: s, breadcrumb: x, project: g, onOpenProjectSettings: p, transparent: j = !1 } = e,
         v = f.intl.string(m.default.FzfmQ8),
         N = (0, u.A)(g ?? null);
-    return (0, n.jsx)(o.A, {
+    return (0, n.jsx)(c.A, {
         hideSearch: !0,
         transparent: j,
         toolbar: s,
@@ -30,20 +30,20 @@ function x(e) {
                           size: "custom",
                           width: 20,
                           height: 20,
-                          color: r.A.colors.ICON_STRONG,
+                          color: a.A.colors.ICON_STRONG,
                           className: h.Kk,
                       })
                     : null,
                 null != x
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(o.A.Title, { onClick: x.onClick, children: x.title }),
-                              (0, n.jsx)(o.A.Caret, {}),
+                              (0, n.jsx)(c.A.Title, { onClick: x.onClick, children: x.title }),
+                              (0, n.jsx)(c.A.Caret, {}),
                           ],
                       })
                     : null,
                 null != g && null != p
-                    ? (0, n.jsx)(a.m, {
+                    ? (0, n.jsx)(r.m, {
                           asContainer: !0,
                           text: v,
                           position: "bottom",
@@ -55,12 +55,12 @@ function x(e) {
                           }),
                       })
                     : null,
-                (0, n.jsx)(o.A.Title, { className: h.Qw, wrapperClassName: h.DD, children: t }),
+                (0, n.jsx)(c.A.Title, { className: h.Qw, wrapperClassName: h.DD, children: t }),
                 null != N
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(o.A.Divider, { className: h.uN }),
-                              (0, n.jsx)(c.E, {
+                              (0, n.jsx)(c.A.Divider, { className: h.uN }),
+                              (0, n.jsx)(o.E, {
                                   tag: "span",
                                   variant: "text-sm/medium",
                                   color: "text-muted",

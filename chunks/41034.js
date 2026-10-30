@@ -1,23 +1,23 @@
-t.d(n, { lv: () => E, lF: () => m, FD: () => f, Ug: () => _, um: () => g, dM: () => A });
+t.d(n, { lv: () => E, lF: () => A, FD: () => h, Ug: () => _, um: () => g, dM: () => m });
 var l = t(636537),
     i = t(73153),
     a = t(210470);
 let r = Object.freeze({ DISCOVERABLE_CONTENT: (e) => `/guilds/${e}/discoverable-content` });
 var u = t(131904),
     s = t(22464);
-function c(e) {
+function d(e) {
     return { channelId: e.channel_id, eligible: e.eligible, included: e.included };
 }
-function d(e) {
-    return { enabled: e.enabled, channels: e.channels.map(c) };
+function c(e) {
+    return { enabled: e.enabled, channels: e.channels.map(d) };
 }
 function o(e) {
-    return { [s.y.CHANNEL_SUMMARIES]: d(e[s.y.CHANNEL_SUMMARIES]), [s.y.CHANNEL_MESSAGES]: d(e[s.y.CHANNEL_MESSAGES]) };
+    return { [s.y.CHANNEL_SUMMARIES]: c(e[s.y.CHANNEL_SUMMARIES]), [s.y.CHANNEL_MESSAGES]: c(e[s.y.CHANNEL_MESSAGES]) };
 }
-let h = new Set();
-async function f(e) {
-    if (!(null != u.A.getFeatures(e) || u.A.fetchFailed(e)) && !h.has(e)) {
-        h.add(e);
+let f = new Set();
+async function h(e) {
+    if (!(null != u.A.getFeatures(e) || u.A.fetchFailed(e)) && !f.has(e)) {
+        f.add(e);
         try {
             let n = await l.Bo.get({ url: r.DISCOVERABLE_CONTENT(e), rejectWithError: !0 }),
                 t = o(n.body);
@@ -25,7 +25,7 @@ async function f(e) {
         } catch {
             i.h.dispatch({ type: "PINOT_FETCH_FAILURE", guildId: e });
         } finally {
-            h.delete(e);
+            f.delete(e);
         }
     }
 }
@@ -52,10 +52,10 @@ async function g(e) {
 function E(e, n, t) {
     i.h.dispatch({ type: "PINOT_DRAFT_UPDATE", guildId: e, featureKey: n, draft: t });
 }
-function m(e) {
+function A(e) {
     i.h.dispatch({ type: "PINOT_OPEN_FEATURE", featureKey: e });
 }
-function A(e) {
+function m(e) {
     i.h.dispatch({ type: "PINOT_ADMIN_NOTICE_ACK", guildId: e });
 }
 function _(e) {
