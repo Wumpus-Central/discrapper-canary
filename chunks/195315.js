@@ -1,4 +1,4 @@
-n.d(t, { y: () => A });
+n.d(t, { y: () => g });
 var i = n(582128),
     s = n(17928),
     r = n(277984),
@@ -7,15 +7,17 @@ var i = n(582128),
     o = n(295405),
     c = n(652215),
     d = n(92202),
-    u = n(534284);
-let h = null,
-    C = null;
-function A(e) {
-    let { location: t, countGiftCardWallet: n, canFetchPaymentSources: A = !0 } = e,
-        { enabled: g } = (0, d.K)({ location: t }),
-        E = (0, s.bG)([l.default], () => l.default.getId()),
-        p = (0, u.P)(),
-        { hasFetchedPaymentSources: _, hasValidPaymentMethod: f } = (0, s.cf)(
+    u = n(935208),
+    h = n(425565);
+let C = null,
+    A = null;
+function g(e) {
+    var t;
+    let { location: n, countGiftCardWallet: g, canFetchPaymentSources: E = !0 } = e,
+        { enabled: p } = (0, d.K)({ location: n }),
+        _ = (0, s.bG)([l.default], () => l.default.getId()),
+        f = null != (t = (0, s.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
+        { hasFetchedPaymentSources: m, hasValidPaymentMethod: T } = (0, s.cf)(
             [o.A],
             () => ({
                 hasFetchedPaymentSources: o.A.hasFetchedPaymentSources,
@@ -24,23 +26,23 @@ function A(e) {
                     return Object.values(e).some(
                         (e) => !e.invalid && e.type !== c.hes.UNKNOWN && (n || e.type !== c.hes.TDS_WALLET),
                     );
-                })(o.A.paymentSources, { countGiftCardWallet: n }),
+                })(o.A.paymentSources, { countGiftCardWallet: g }),
             }),
-            [n],
+            [g],
         ),
-        m = g && p,
-        T = m && A;
+        v = p && f,
+        N = v && E;
     return (
         i.useEffect(() => {
-            !T ||
-                h === E ||
+            !N ||
+                C === _ ||
                 o.A.hasFetchedPaymentSources ||
                 a.A.isPaymentSourceFetching ||
-                ((h = E),
+                ((C = _),
                 r.$o().then((e) => {
-                    null == e && (C = E);
+                    null == e && (A = _);
                 }));
-        }, [T, E]),
-        m && C !== E && _ && !f
+        }, [N, _]),
+        v && A !== _ && m && !T
     );
 }

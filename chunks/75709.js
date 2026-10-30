@@ -68,7 +68,7 @@ var M = n(29160),
     ei = n(643501),
     ea = n(826673),
     er = n(617617),
-    es = n(417792),
+    es = n(195315),
     eo = n(355097),
     eu = n(771527),
     ed = n(552122),
@@ -2764,6 +2764,7 @@ function iR(e) {
         }, [t]);
     return (0, l.jsx)(nV.A, {
         targetElementRef: n,
+        size: "video",
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/147b33df1db170b53e140d7ad45552731aa0b9b16b7a7358cb9916634167ee02.png",
@@ -2891,7 +2892,7 @@ function iG(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iF.A)("1793399198562", !0);
+        let e = (0, iF.A)("1793399742211", !0);
         t =
             null != e
                 ? ew.intl.formatToPlainString(ew.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
