@@ -1509,7 +1509,7 @@
   "PrQg+B": "{name} is live, but its commands didn’t update. Publish again to retry.",
   "XrN+Bg": "[Open AutoMod Settings](Open AutoMod Settings)",
   "35VEu5": "$[Patch notes sent.](sentHook)",
-  "/npn7F": "{name} published to {server}.",
+  "/npn7F": "{name} published to [{server}]({server}).",
   "6/zJpD": "[Send patch notes.](Send patch notes.)",
   "gQzuLC": "Your changes are live.",
   "esEGL5": "[View in AutoMod](View in AutoMod)",
