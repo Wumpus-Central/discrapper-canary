@@ -39,6 +39,11 @@ let r = {
         inlineRequire: () => n(665440).A,
         neverLoadBeforeConnectionOpen: !0,
     },
+    CollectiblesPricingManager: {
+        actions: ["POST_CONNECTION_OPEN"],
+        inlineRequire: () => n(85623).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     CommonTriggerPointManager: {
         actions: ["VOICE_CHANNEL_SELECT", "CALL_CREATE", "USER_SETTINGS_MODAL_OPEN"],
         inlineRequire: () => n(117787).A,
