@@ -16,6 +16,7 @@ async function o() {
         n.e("930141").then(n.bind(n, 393388)),
         n.e("402040").then(n.bind(n, 882411)),
         n.e("732527").then(n.bind(n, 48498)),
+        n.e("240771").then(n.bind(n, 841998)),
         n.e("988228").then(n.bind(n, 557743)),
         n.e("688722").then(n.bind(n, 753193)),
         n.e("942474").then(n.bind(n, 879697)),
