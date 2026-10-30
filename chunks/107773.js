@@ -1,4 +1,4 @@
-t.d(o, { A: () => S });
+t.d(o, { A: () => P });
 var e = t(477900),
     i = t(582128),
     s = t(503698),
@@ -18,8 +18,8 @@ var e = t(477900),
     g = t(404374),
     h = t(464120),
     m = t(814925),
-    R = t(363195),
-    N = t(696451),
+    N = t(363195),
+    R = t(696451),
     T = t(287809),
     D = t(816166),
     x = t(953727);
@@ -131,7 +131,7 @@ function F(r, o) {
         case w._.COMMUNITY:
             return { tooltipTitle: O.intl.string(O.t.K7iRig), tooltipDescription: t };
         case w._.DISCOVERABLE:
-            return { tooltipTitle: O.intl.string(O.t.K7iRig), tooltipDescription: O.intl.string(O.t.op2cJ6) };
+            return { tooltipTitle: O.intl.string(O.t.SiZQ0N), tooltipDescription: O.intl.string(O.t.op2cJ6) };
         default:
             return { tooltipTitle: O.intl.string(O.t["iZRkC/"]) };
     }
@@ -216,7 +216,7 @@ function V(r) {
         ],
     });
 }
-function P(r) {
+function S(r) {
     let { badgeType: o, guildTraits: t } = r,
         { tooltipTitle: i, tooltipSubtitle: s, tooltipDescription: l } = F(o, t.visibility);
     return (0, e.jsxs)(e.Fragment, {
@@ -233,7 +233,7 @@ function P(r) {
         ],
     });
 }
-function S(r) {
+function P(r) {
     let o,
         t,
         {
@@ -250,16 +250,16 @@ function S(r) {
             ...D
         } = r,
         x = D.size ?? 18,
-        L = (0, n.bG)([T.default, N.Ay], () => {
+        L = (0, n.bG)([T.default, R.Ay], () => {
             let r = T.default.getCurrentUser();
-            return N.Ay.isMember(s?.id, r?.id);
+            return R.Ay.isMember(s?.id, r?.id);
         }),
-        b = (0, n.bG)([R.A], () => R.A.theme),
+        b = (0, n.bG)([N.A], () => N.A.theme),
         O = i.useId(),
         V = (0, M.Jp)(s),
-        S = (0, w.K)(V),
+        P = (0, w.K)(V),
         B = V.premium && L && !f;
-    if (S === w._.NONE) return null;
+    if (P === w._.NONE) return null;
     let {
         IconComponent: G,
         backgroundDarkColor: U,
@@ -269,16 +269,16 @@ function S(r) {
         premiumBackgroundColor: W,
         premiumForegroundColor: J,
         sizeAdjustment: K,
-    } = v[S];
+    } = v[P];
     if (null == G) return null;
     V.premium && ((o = J), (t = W));
     let Z = (0, u.M)(b) ? y : H,
         z = (0, u.M)(b) ? U : Y;
     ((o = o ?? Z), (t = t ?? z));
     let q = Math.floor(0.75 * x) - (K ?? 0),
-        { tooltipTitle: X, tooltipSubtitle: Q } = F(S, V.visibility),
-        $ = g ?? (null != Q ? Q : X),
-        rr = (0, e.jsx)(P, { badgeType: S, guildTraits: V }),
+        { tooltipTitle: Q, tooltipSubtitle: X } = F(P, V.visibility),
+        $ = g ?? (null != X ? X : Q),
+        rr = (0, e.jsx)(S, { badgeType: P, guildTraits: V }),
         ro = (0, e.jsx)(m.A, {
             className: c,
             flowerStarClassName: d,
