@@ -17347,8 +17347,9 @@ function hv(e) {
                 }, [l, e]),
                 { project: t, settled: null != t || n }
             );
-        })(t),
-        s = (null != l ? (0, hf.wu)(l) : null) ?? n;
+        })(t);
+    (0, rD.wB)(t);
+    let s = (null != l ? (0, hf.wu)(l) : null) ?? n;
     return null != l || r
         ? null == s
             ? (0, a.jsx)(hp, {})

@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { Cr: () => ew, Ay: () => e6, Wm: () => eD }), n(321073), n(938796));
+(n.d(t, { Cr: () => ew, Ay: () => e9, Wm: () => eD }), n(321073), n(938796));
 var r = n(435558),
     a = n(536637),
     s = n.n(a),
@@ -679,7 +679,7 @@ class ew {
                     w.A.hasLoaded(n.guild_id) &&
                         W.default
                             .keys(w.A.getThreadsForParent(n.guild_id, i))
-                            .every((e) => e4.hasOpenedThread(e) || 0 > W.default.compare(e, r.ackMessageId)) &&
+                            .every((e) => e8.hasOpenedThread(e) || 0 > W.default.compare(e, r.ackMessageId)) &&
                         r.ack({
                             trackAnalytics: !0,
                             location: {
@@ -1116,7 +1116,13 @@ function e3(e, t, n, i) {
         r.ack({ messageId: n, local: i ?? !0, trackAnalytics: !1 }))
     );
 }
-class e5 extends o.Ay.Store {
+let e5 = new Map(),
+    e4 = new Map();
+function e6(e) {
+    let t = W.default.fromTimestamp(Date.now());
+    return e.ack({ messageId: t, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
+}
+class e7 extends o.Ay.Store {
     static displayName = "ReadStateStore";
     initialize() {
         ($.A,
@@ -1319,7 +1325,7 @@ class e5 extends o.Ay.Store {
         return eg.getAllChannelIdsForWindowId(e);
     }
 }
-let e4 = new e5(_.h, {
+let e8 = new e7(_.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -1401,7 +1407,9 @@ let e4 = new e5(_.h, {
             let { lazyPrivateChannels: t } = e;
             eG(t);
         },
-        LOGOUT: ej,
+        LOGOUT: function () {
+            (ej(), e5.clear(), e4.clear());
+        },
         OVERLAY_INITIALIZE: function (e) {
             let { readStates: t, selectedChannelId: n } = e;
             (eL(), (eh = null), eJ({ previousChannelId: e_, newChannelId: n }), (e_ = n));
@@ -1763,7 +1771,7 @@ let e4 = new e5(_.h, {
             ((t = n.filter(
                 (e) =>
                     K.A.getChannel(e.channelId)?.isForumLikeChannel() === !0 ||
-                    (null != e.messageId && e4.hasUnreadOrMentions(e.channelId, e.readStateType)),
+                    (null != e.messageId && e8.hasUnreadOrMentions(e.channelId, e.readStateType)),
             )),
                 t.forEach((e) => {
                     let { channelId: t, messageId: n, readStateType: i } = e;
@@ -1951,19 +1959,26 @@ let e4 = new e5(_.h, {
             if (null == n.ackMessageId) return !1;
             n.ackMessageId = void 0;
         },
+        CONJURE_TURN_NOTIFICATION: function (e) {
+            let { projectId: t, nonce: n } = e;
+            return (e5.set(t, Math.max(n, e5.get(t) ?? 0)), !1);
+        },
         CONJURE_TURN_SETTLED: function (e) {
-            let { projectId: t, entityId: n, badgeCount: i } = e,
-                r = ew.get(t, eo.P.CONJURING_PROJECT);
-            ((r._persisted = !0), (r.ackMessageId = n), (r.mentionCount = i ?? r.mentionCount + 1));
+            let { projectId: t, entityId: n, badgeCount: i, nonce: r } = e,
+                a = ew.get(t, eo.P.CONJURING_PROJECT);
+            ((a._persisted = !0),
+                (a.ackMessageId = n),
+                (a.mentionCount = i ?? a.mentionCount + 1),
+                null != r && r <= (e4.get(t) ?? 0) && e6(a));
         },
         CONJURE_PROJECT_ACK: function (e) {
             let { projectId: t } = e,
-                n = ew.getIfExists(t, eo.P.CONJURING_PROJECT);
-            if (null == n) return !1;
-            let i = null == n.ackMessageId ? 0 : W.default.getNonTimestampBits(n.ackMessageId);
-            if (0 === n.mentionCount && 0 === i) return !1;
-            let r = W.default.fromTimestamp(Date.now());
-            return n.ack({ messageId: r, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
+                n = e5.get(t);
+            null != n && e4.set(t, n);
+            let i = ew.getIfExists(t, eo.P.CONJURING_PROJECT);
+            if (null == i) return !1;
+            let r = null == i.ackMessageId ? 0 : W.default.getNonTimestampBits(i.ackMessageId);
+            return (0 !== i.mentionCount || 0 !== r) && e6(i);
         },
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
@@ -1984,4 +1999,4 @@ let e4 = new e5(_.h, {
             );
         },
     }),
-    e6 = e4;
+    e9 = e8;

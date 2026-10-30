@@ -1,20 +1,27 @@
-n.d(t, { AK: () => c, Nl: () => d, sr: () => u });
-var i = n(617617),
-    r = n(573163),
-    a = n(245179),
-    s = n(404373),
-    l = n(260498),
-    o = n(189714);
-let d = [l.Ay, a.A, r.Ay, i.A];
-function c(e) {
-    return l.Ay.isProjectDeleting(e) || (0, o.j)(i.A.settings, e)
+n.d(t, { AK: () => _, Nl: () => u, yX: () => E });
+var i = n(582128),
+    r = n(17928),
+    a = n(617617),
+    s = n(573163),
+    l = n(245179),
+    o = n(404373),
+    d = n(260498),
+    c = n(189714);
+let u = [d.Ay, l.A, s.Ay, a.A];
+function _(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return d.Ay.isProjectDeleting(e) || (0, c.j)(a.A.settings, e)
         ? null
-        : a.A.isThinking(e)
+        : l.A.isThinking(e)
           ? "working"
-          : (0, s.tz)(e)
+          : (0, o.tz)(e)
             ? "unread"
-            : null;
+            : t && null != l.A.getFinishedAt(e)
+              ? "working"
+              : null;
 }
-function u() {
-    return l.Ay.getOwnedProjects().some((e) => null != c(e.id));
+function E(e) {
+    let [t, n] = i.useState(!1),
+        a = (0, r.bG)(u, () => _(e, t), [e, t]);
+    return (t !== ("working" === a) && n("working" === a), a);
 }

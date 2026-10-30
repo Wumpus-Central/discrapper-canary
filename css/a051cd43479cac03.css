@@ -1,0 +1,46 @@
+.wand__55e39 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    color: var(--text-default);
+    display: flex;
+    height: var(--guildbar-avatar-size);
+    justify-content: center;
+    transition: background-color .2s ease-out;
+    width: var(--guildbar-avatar-size)
+}
+
+.wand__55e39:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.wandSelected__55e39,
+.wandSelected__55e39:hover {
+    background-color: var(--background-mod-strong)
+}
+
+.badge__55e39 {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: var(--space-16);
+    justify-content: center;
+    width: var(--space-16)
+}
+
+.unreadDot__55e39 {
+    background-color: var(--background-brand)
+}
+
+.spinner__55e39,
+.unreadDot__55e39 {
+    height: var(--space-12);
+    width: var(--space-12)
+}
+
+.spinnerPath__55e39 {
+    stroke: var(--icon-strong)
+}
+
+/*# sourceMappingURL=a051cd43479cac03.css.map*/

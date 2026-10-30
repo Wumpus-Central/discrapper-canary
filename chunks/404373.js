@@ -1,4 +1,4 @@
-n.d(t, { E1: () => h, NC: () => A, tz: () => E });
+n.d(t, { E1: () => I, NC: () => h, tz: () => A, wB: () => f });
 var i = n(582128),
     r = n(17928),
     a = n(73153),
@@ -8,13 +8,16 @@ var i = n(582128),
     d = n(260498),
     c = n(189714),
     u = n(790782);
-function _(e, t) {
+function _(e) {
+    a.h.dispatch({ type: "CONJURE_PROJECT_ACK", projectId: e });
+}
+function E(e, t) {
     return e > 0 || (null != t && 0 !== o.default.getNonTimestampBits(t));
 }
-function E(e) {
-    return _(l.Ay.getMentionCount(e, u.P.CONJURING_PROJECT), l.Ay.ackMessageId(e, u.P.CONJURING_PROJECT));
-}
 function A(e) {
+    return E(l.Ay.getMentionCount(e, u.P.CONJURING_PROJECT), l.Ay.ackMessageId(e, u.P.CONJURING_PROJECT));
+}
+function h(e) {
     return (0, r.cf)(
         [l.Ay, s.A, d.Ay],
         () => {
@@ -34,7 +37,7 @@ function A(e) {
                 let o =
                     ((i = l.Ay.getMentionCount(a, u.P.CONJURING_PROJECT)),
                     (r = l.Ay.ackMessageId(a, u.P.CONJURING_PROJECT)),
-                    (0, c.j)(s.A.settings, a) || !_(i, r) ? null : i);
+                    (0, c.j)(s.A.settings, a) || !E(i, r) ? null : i);
                 null != o && (t++, (n += o));
             }
             return { hasUnread: t > 0, unreadCount: t, badgeCount: n };
@@ -42,14 +45,17 @@ function A(e) {
         [e],
     );
 }
-function h(e, t) {
+function f(e) {
+    i.useLayoutEffect(() => () => _(e), [e]);
+}
+function I(e, t) {
     let n = (0, r.bG)(
         [l.Ay],
         () =>
-            null != e && _(l.Ay.getMentionCount(e, u.P.CONJURING_PROJECT), l.Ay.ackMessageId(e, u.P.CONJURING_PROJECT)),
+            null != e && E(l.Ay.getMentionCount(e, u.P.CONJURING_PROJECT), l.Ay.ackMessageId(e, u.P.CONJURING_PROJECT)),
         [e],
     );
     i.useEffect(() => {
-        null != e && n && t && a.h.dispatch({ type: "CONJURE_PROJECT_ACK", projectId: e });
+        null != e && n && t && _(e);
     }, [e, n, t]);
 }
