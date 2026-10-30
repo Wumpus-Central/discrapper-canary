@@ -203,14 +203,14 @@ var L = n(568004),
     D = n(340829),
     v = n(966846),
     b = n(293066),
-    P = n(775228);
-function M(e, t, a, s, l) {
-    let o = P.A.getInstallationPath(e.id, t),
+    M = n(775228);
+function P(e, t, a, s, l) {
+    let o = M.A.getInstallationPath(e.id, t),
         d = null != e.eulaId && !b.A.hasAcceptedEULA(e.eulaId);
     null == o || d
         ? (0, E.openModalLazy)(async () => {
               let { default: i } = await Promise.all([
-                  n.e("205035"),
+                  n.e("321735"),
                   n.e("253729"),
                   n.e("234236"),
                   n.e("76705"),
@@ -233,7 +233,7 @@ function U(e, t, n) {
     if (null == i) return;
     let r = L.A.getTargetBuildId(i.id, t),
         a = L.A.getTargetManifests(i.id, t);
-    null != r && null != a && null != M && M(i, t, r, a, n);
+    null != r && null != a && null != P && P(i, t, r, a, n);
 }
 function w(e, t) {
     let n = f.A.getApplication(e);

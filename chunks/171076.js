@@ -47,7 +47,7 @@ async function y() {
                 n.e("490743"),
                 n.e("44141"),
                 n.e("7452"),
-                n.e("205035"),
+                n.e("321735"),
                 n.e("60002"),
                 n.e("189423"),
                 n.e("415695"),
@@ -469,7 +469,7 @@ function b() {
             ((R = e), D({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
     })();
 }
-function P(e) {
+function M(e) {
     let { channelId: t, message: n } = e;
     if (!p.default.isAnyOverlayRendering()) return;
     let i = o.A.getChannel(t);
@@ -487,7 +487,7 @@ function P(e) {
         })(n);
     (0, S.Ml)({ channelId: t, source: a, lastActivityAtMs: l, lastMessageId: n.id });
 }
-function M(e) {
+function P(e) {
     let { channelId: t, lastMessageId: n } = e,
         i = o.A.getChannel(t);
     D({ channelId: t, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: n ?? null });
@@ -552,11 +552,11 @@ class V extends r.A {
     actions = {
         CHANNEL_SELECT: C(F),
         SIDEBAR_VIEW_CHANNEL: C(F),
-        MESSAGE_CREATE: C(P),
+        MESSAGE_CREATE: C(M),
         VOICE_STATE_UPDATES: C(b),
         VOICE_CHANNEL_SELECT: C(b),
         OVERLAY_SET_INPUT_LOCKED: C(B),
-        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: C(M),
+        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: C(P),
         OVERLAY_TEXT_CHAT_SELECT_CHANNEL: C(U),
         OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: C(w),
         OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: C(G),
