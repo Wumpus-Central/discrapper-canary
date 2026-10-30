@@ -10,7 +10,7 @@ function o(e) {
 function d(e) {
     return null != (0, r.B)(e, { path: l, exact: !0 });
 }
-let c = [a.BVt.CONJURE, a.BVt.CHANNEL(i.pv.guildId(), s.VV.CONJURE, ":projectId")];
+let c = [a.BVt.CONJURE, a.BVt.CHANNEL(i.pv.guildId(), s.VV.CONJURE)];
 function u(e) {
     return null != (0, r.B)(e, { path: c });
 }
