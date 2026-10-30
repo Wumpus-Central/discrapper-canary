@@ -1,10 +1,11 @@
-e.d(n, { Fz: () => h, Hy: () => d, gw: () => A, hV: () => p, xf: () => o, yJ: () => E });
+e.d(n, { Fz: () => f, Hy: () => E, gw: () => I, hV: () => d, wQ: () => w, xf: () => a, yJ: () => R });
 var i = e(666860),
-    l = e(723702),
-    _ = e(260498),
-    u = e(246338),
+    l = e(174459),
+    _ = e(723702),
+    u = e(260498),
+    o = e(246338),
     r = e(652215);
-let o = {
+let a = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
     AGENT_ERROR: "AGENT_ERROR",
@@ -14,33 +15,33 @@ let o = {
     RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
     RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
 };
-function a(t) {
+function c(t) {
     return null == t || "" === t ? null : t.slice(0, 256);
 }
 function s(t) {
-    let n = _.Ay.getProject(t);
+    let n = u.Ay.getProject(t);
     return {
         project_id: t,
-        project_name: a(n?.name),
+        project_name: c(n?.name),
         application_id: n?.application_id ?? null,
         preview_application_id: n?.preview_application_id ?? null,
         install_scope: n?.install_scope ?? null,
     };
 }
-function c(t, n) {
-    let e = _.Ay.getProject(t),
+function p(t, n) {
+    let e = u.Ay.getProject(t),
         i = (n ? e?.preview_guild_id : e?.guild_id) ?? null,
         l = (n ? e?.preview_application_id : e?.application_id) ?? null;
-    return { guild_id: i, channel_id: null != i && null != l ? (0, u.i8)(i, l) : null };
+    return { guild_id: i, channel_id: null != i && null != l ? (0, o.i8)(i, l) : null };
 }
-function p(t, n) {
+function d(t, n) {
     var e;
     (0, i.zV)(r.HAw.CONJURE_TURN_RESULTED, {
         ...s(t),
-        ...c(t, !0),
+        ...p(t, !0),
         turn_id: n.turn_id ?? null,
         turn_result: n.result ?? null,
-        turn_summary: a(n.detail ?? n.summary),
+        turn_summary: c(n.detail ?? n.summary),
         turn_cost: n.cost_usd ?? null,
         turn_duration_ms: n.duration_ms ?? null,
         model_tier: n.model_tier ?? null,
@@ -62,26 +63,26 @@ function p(t, n) {
               }),
     });
 }
-function d(t, n) {
-    let { location: e, code: l, message: _, details: u, isPreview: o = !0, turnId: p } = n;
+function E(t, n) {
+    let { location: e, code: l, message: _, details: u, isPreview: o = !0, turnId: a } = n;
     (0, i.zV)(r.HAw.CONJURE_ERRORED, {
         ...s(t),
         is_preview: o,
-        ...c(t, o),
-        turn_id: p ?? null,
+        ...p(t, o),
+        turn_id: a ?? null,
         error_location: e,
         error_code: l,
-        error_message: a(_),
-        error_details: a(u),
+        error_message: c(_),
+        error_details: c(u),
     });
 }
-function E(t, n) {
-    let { entryPoint: e, publishState: l, surface: u, installScope: o, action: a } = n,
-        s = _.Ay.getProject(t);
+function R(t, n) {
+    let { entryPoint: e, publishState: l, surface: _, installScope: o, action: a } = n,
+        c = u.Ay.getProject(t);
     (0, i.zV)(r.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
         project_id: t,
-        application_id: s?.application_id ?? null,
-        ...("user" === o ? { guild_id: null, channel_id: null } : c(t, !1)),
+        application_id: c?.application_id ?? null,
+        ...("user" === o ? { guild_id: null, channel_id: null } : p(t, !1)),
         entry_point: e,
         publish_state:
             null == l
@@ -91,32 +92,31 @@ function E(t, n) {
                   : "live_outdated" === l
                     ? "changes"
                     : "up_to_date",
-        surface: u,
+        surface: _,
         install_scope: o,
         action: a,
     });
 }
-function R(t) {
-    let { projectId: n, turnId: e, rating: i, publishReason: _, surface: u } = t;
-    return {
-        ...s(n),
-        ...c(n, !0),
-        turn_id: e,
-        rating: i,
-        publish_reason: _,
-        surface: u,
-        client_platform: (0, l.isAndroid)()
-            ? "android"
-            : (0, l.isIOS)()
-              ? "ios"
-              : (0, l.isDesktop)()
-                ? "desktop"
-                : "web",
-    };
+function A() {
+    return (0, _.isAndroid)() ? "android" : (0, _.isIOS)() ? "ios" : (0, _.isDesktop)() ? "desktop" : "web";
 }
-function A(t) {
-    (0, i.zV)(r.HAw.CONJURE_RATING_SUBMITTED, R(t));
+function h(t) {
+    let { projectId: n, turnId: e, rating: i, publishReason: l, surface: _ } = t;
+    return { ...s(n), ...p(n, !0), turn_id: e, rating: i, publish_reason: l, surface: _, client_platform: A() };
 }
-function h(t, n) {
-    (0, i.zV)(r.HAw.CONJURE_RATING_FEEDBACK_SUBMITTED, { ...R(t), feedback_text: n });
+function I(t) {
+    (0, i.zV)(r.HAw.CONJURE_RATING_SUBMITTED, h(t));
+}
+function f(t, n) {
+    (0, i.zV)(r.HAw.CONJURE_RATING_FEEDBACK_SUBMITTED, { ...h(t), feedback_text: n });
+}
+function w(t, n) {
+    let e = u.Ay.getProject(t);
+    l.default.track(r.HAw.CONJURE_BUILDER_OPENED, {
+        project_id: t,
+        entry_point: n,
+        is_owner: null != e ? (0, u.PV)(e) : null,
+        install_scope: e?.install_scope ?? null,
+        client_platform: A(),
+    });
 }

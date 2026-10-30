@@ -16,20 +16,20 @@ var t = e(477900),
     v = e(260498),
     I = e(95264),
     b = e(442331),
-    x = e(616334),
-    h = e(246338),
+    h = e(616334),
+    x = e(246338),
     j = e(913396),
-    G = e(914315),
-    _ = e(809526),
+    _ = e(914315),
+    G = e(809526),
     P = e(105292);
 let w = { remix: null, edit: null, settings: null, showOverlay: null, devicePermissions: null };
 function m(l, n) {
     let { includeSettings: e = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        m = (0, h.w$)(l, n),
+        m = (0, x.w$)(l, n),
         D = (0, j.A)(m ? l : null),
         F = D?.id ?? null,
         k = l.guild_id ?? null,
-        E = (0, G.A)(l, n);
+        E = (0, _.A)(l, n);
     i.useEffect(() => {
         null != F && (0, p.ensureConnection)(F);
     }, [F]);
@@ -48,7 +48,7 @@ function m(l, n) {
                                 id: "conjure-remix",
                                 icon: r.x,
                                 leadingAccessory: { type: "icon", icon: r.x },
-                                label: P.intl.string(_.default["9wQTdG"]),
+                                label: P.intl.string(G.default["9wQTdG"]),
                                 action: () => (0, I.A)(E, k),
                             },
                             "remix",
@@ -62,8 +62,8 @@ function m(l, n) {
                                 id: "conjure-edit",
                                 icon: o.PencilIcon,
                                 leadingAccessory: { type: "icon", icon: o.PencilIcon },
-                                label: P.intl.string(_.default.jMMrDM),
-                                action: () => (0, f.Ay)(D.id),
+                                label: P.intl.string(G.default.jMMrDM),
+                                action: () => (0, f.Ay)(D.id, "app_channel"),
                             },
                             "edit",
                         )
@@ -76,8 +76,8 @@ function m(l, n) {
                                 id: "conjure-settings",
                                 icon: a.SettingsIcon,
                                 leadingAccessory: { type: "icon", icon: a.SettingsIcon },
-                                label: P.intl.string(_.default.I2XSKe),
-                                action: () => (0, x.A)(D.id, { guildId: k, initialTab: "app" }),
+                                label: P.intl.string(G.default.I2XSKe),
+                                action: () => (0, h.A)(D.id, { guildId: k, initialTab: "app" }),
                             },
                             "settings",
                         )
@@ -88,7 +88,7 @@ function m(l, n) {
                             c.sL,
                             {
                                 id: "conjure-show-overlay",
-                                label: P.intl.string(_.default.FQb5Z3),
+                                label: P.intl.string(G.default.FQb5Z3),
                                 checked: L,
                                 action: () => (0, g.Gt)(C, !L),
                             },

@@ -1,78 +1,78 @@
-(t.r(n), t.d(n, { default: () => H }));
-var l = t(477900),
-    s = t(582128),
-    r = t(806163),
-    i = t(97005),
-    a = t(16619),
-    c = t(751841),
-    o = t(381991),
-    d = t(503698),
-    u = t.n(d),
-    j = t(17928),
-    m = t(297264),
-    x = t(866665),
-    p = t(408278),
-    h = t(366605),
-    k = t(364522),
-    g = t(683438),
-    f = t(939249),
-    C = t(152367),
-    v = t(834730),
-    b = t(525113),
-    A = t(441935),
-    N = t(260498),
-    y = t(741907);
+(n.r(t), n.d(t, { default: () => H }));
+var l = n(477900),
+    s = n(582128),
+    r = n(806163),
+    a = n(97005),
+    i = n(16619),
+    c = n(751841),
+    o = n(381991),
+    d = n(503698),
+    u = n.n(d),
+    j = n(17928),
+    m = n(297264),
+    x = n(866665),
+    p = n(408278),
+    h = n(366605),
+    k = n(364522),
+    g = n(683438),
+    C = n(939249),
+    f = n(152367),
+    b = n(834730),
+    v = n(525113),
+    A = n(441935),
+    N = n(260498),
+    y = n(741907);
 function P(e) {
-    let n = (0, y.A)(),
-        t = (0, j.bG)([N.Ay], () => N.Ay.getOwnedProjectsFetchState()),
+    let t = (0, y.A)(),
+        n = (0, j.bG)([N.Ay], () => N.Ay.getOwnedProjectsFetchState()),
         l = e.trim().toLocaleLowerCase(),
-        r = s.useMemo(() => ("" === l ? n : n.filter((e) => e.name.toLocaleLowerCase().includes(l))), [n, l]);
+        r = s.useMemo(() => ("" === l ? t : t.filter((e) => e.name.toLocaleLowerCase().includes(l))), [t, l]);
     return r.length > 0
         ? { kind: "projects", projects: r }
-        : n.length > 0
+        : t.length > 0
           ? { kind: "no_match" }
-          : "error" === t
+          : "error" === n
             ? { kind: "error" }
-            : "success" !== t
+            : "success" !== n
               ? { kind: "loading" }
               : { kind: "empty" };
 }
-var w = t(821609),
-    I = t(289873),
-    D = t(371169),
-    E = t(186340),
-    S = t(809526),
-    _ = t(105292),
-    z = t(655074);
+var w = n(821609),
+    I = n(289873),
+    D = n(371169),
+    E = n(186340),
+    S = n(809526),
+    _ = n(105292),
+    z = n(655074);
 function U(e) {
     let {
-            onSelect: n,
-            query: t = "",
+            onSelect: t,
+            query: n = "",
             selectedProjectId: s = null,
             renderProjectActions: r,
-            onProjectContextMenu: i,
+            onProjectContextMenu: a,
         } = e,
-        a = P(t);
-    return "projects" === a.kind
+        i = P(n);
+    return "projects" === i.kind
         ? (0, l.jsx)(E.A, {
-              projects: a.projects,
-              onSelect: n,
+              projects: i.projects,
+              onSelect: t,
               selectedProjectId: s,
               renderProjectActions: r,
-              onProjectContextMenu: i,
+              onProjectContextMenu: a,
           })
-        : "no_match" === a.kind
-          ? (0, l.jsx)(v.E, {
+        : "no_match" === i.kind
+          ? (0, l.jsx)(b.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 className: z.I,
                 children: _.intl.string(S.default.X37fkR),
             })
-          : "error" === a.kind
+          : "error" === i.kind
             ? (0, l.jsxs)("div", {
                   className: z.E,
                   children: [
-                      (0, l.jsx)(v.E, {
+                      (0, l.jsx)(b.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: _.intl.string(S.default.DJAPMO),
@@ -85,43 +85,44 @@ function U(e) {
                       }),
                   ],
               })
-            : "loading" === a.kind
+            : "loading" === i.kind
               ? (0, l.jsx)("div", { className: z.E, children: (0, l.jsx)(I.y, {}) })
               : null;
 }
-var W = t(602991),
-    G = t(919485),
-    J = t(588359),
-    L = t(434279),
-    M = t(972013),
-    X = t(927731),
-    q = t(111582),
-    $ = t(101766),
-    F = t(5127);
+var W = n(602991),
+    G = n(919485),
+    J = n(588359),
+    L = n(434279),
+    M = n(972013),
+    X = n(927731),
+    q = n(111582),
+    $ = n(101766),
+    F = n(5127);
 function K(e) {
-    let { selectedProjectId: n, workspaceGuildId: t, onNavigate: r } = e,
-        [i, a] = s.useState(""),
+    let { selectedProjectId: t, workspaceGuildId: n, onNavigate: r } = e,
+        [a, i] = s.useState(""),
         c = (0, $.A)("sidebar"),
-        o = "empty" === P(i).kind,
-        d = s.useCallback((e) => r(e.id), [r]),
+        o = "empty" === P(a).kind,
+        d = s.useCallback((e) => r(e.id, "project_list"), [r]),
         N = s.useCallback(
             (e) => {
-                let n = (0, L.wu)(e) ?? t;
-                return null != n ? (0, l.jsx)(W.S, { project: e, guildId: n }) : null;
+                let t = (0, L.wu)(e) ?? n;
+                return null != t ? (0, l.jsx)(W.S, { project: e, guildId: t }) : null;
             },
-            [t],
+            [n],
         ),
         y = s.useCallback(
-            (e, n) => {
-                let l = (0, L.wu)(n) ?? t;
-                null != l && (0, W.V)(e, n, l);
+            (e, t) => {
+                let l = (0, L.wu)(t) ?? n;
+                null != l && (0, W.V)(e, t, l);
             },
-            [t],
+            [n],
         ),
-        w = (0, q.A)(t, r),
-        I = (0, j.bG)([M.A], () => M.A.isPinned()),
-        D = _.intl.string(S.default["DE7U+m"]),
-        E = null == n;
+        w = s.useCallback((e) => r(e, "create"), [r]),
+        I = (0, q.A)(n, w),
+        D = (0, j.bG)([M.A], () => M.A.isPinned()),
+        E = _.intl.string(S.default["DE7U+m"]),
+        z = null == t;
     return (0, l.jsxs)("nav", {
         className: F.pz,
         "aria-label": _.intl.string(S.default.uk6jhJ),
@@ -139,17 +140,17 @@ function K(e) {
                                 className: F.UU,
                                 children: _.intl.string(S.default.uk6jhJ),
                             }),
-                            (0, l.jsx)(b.A, { className: F.vr }),
+                            (0, l.jsx)(v.A, { className: F.vr }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
                         className: F.$s,
                         children: [
-                            (0, l.jsx)(A.A, { importing: w.importing, disabled: null == t, onClick: w.open }),
-                            I
+                            (0, l.jsx)(A.A, { importing: I.importing, disabled: null == n, onClick: I.open }),
+                            D
                                 ? null
                                 : (0, l.jsx)(x.m, {
-                                      text: D,
+                                      text: E,
                                       position: "bottom",
                                       asContainer: !0,
                                       ariaHidden: !0,
@@ -157,11 +158,11 @@ function K(e) {
                                           icon: h.t,
                                           variant: "icon-only",
                                           size: "sm",
-                                          "aria-label": D,
+                                          "aria-label": E,
                                           onClick: X._,
                                       }),
                                   }),
-                            w.input,
+                            I.input,
                         ],
                     }),
                 ],
@@ -174,24 +175,24 @@ function K(e) {
                     (0, l.jsx)("div", {
                         className: F.$P,
                         children: (0, l.jsx)(g.I, {
-                            query: i,
-                            onChange: a,
-                            onClear: () => a(""),
+                            query: a,
+                            onChange: i,
+                            onClear: () => i(""),
                             size: "sm",
                             placeholder: _.intl.string(S.default["2y8sUh"]),
                             "aria-label": _.intl.string(S.default.u0kEN9),
                         }),
                     }),
-                    (0, l.jsxs)(f.D, {
-                        className: u()(F.ap, F.QI, { [F.Xw]: E }),
-                        "aria-current": E ? "page" : void 0,
+                    (0, l.jsxs)(C.D, {
+                        className: u()(F.ap, F.QI, { [F.Xw]: z }),
+                        "aria-current": z ? "page" : void 0,
                         onClick: () => r(null),
                         children: [
                             (0, l.jsx)("span", {
                                 className: F.DW,
-                                children: (0, l.jsx)(C.D, { size: "md", color: "currentColor" }),
+                                children: (0, l.jsx)(f.D, { size: "md", color: "currentColor" }),
                             }),
-                            (0, l.jsx)(v.E, {
+                            (0, l.jsx)(b.E, {
                                 variant: "text-md/medium",
                                 color: "none",
                                 children: _.intl.string(S.default.koUZKY),
@@ -202,9 +203,9 @@ function K(e) {
                         title: _.intl.string(S.default.lqroiy),
                         className: F.uW,
                         children: (0, l.jsx)(U, {
-                            query: i,
+                            query: a,
                             onSelect: d,
-                            selectedProjectId: n,
+                            selectedProjectId: t,
                             renderProjectActions: N,
                             onProjectContextMenu: y,
                         }),
@@ -217,9 +218,9 @@ function K(e) {
 }
 function O() {
     let e = (0, r.W5)({ path: c._g, exact: !0 }),
-        n = (0, a.rX)("ConjureAppSidebar");
-    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: n, onNavigate: o.Ay });
+        t = (0, i.rX)("ConjureAppSidebar");
+    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: t, onNavigate: o.Ay });
 }
 function H() {
-    return (0, i.TW)("ConjureAppSidebar") ? (0, l.jsx)(O, {}) : null;
+    return (0, a.TW)("ConjureAppSidebar") ? (0, l.jsx)(O, {}) : null;
 }

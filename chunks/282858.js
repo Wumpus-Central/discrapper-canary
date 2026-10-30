@@ -365,7 +365,7 @@ function eh(e) {
         }),
         { importArchive: m } = a,
         f = (0, h.yN)(l.useCallback((e) => m(e, "guild"), [m])),
-        x = l.useCallback((e) => (0, w.Ay)(e.id), []),
+        x = l.useCallback((e) => (0, w.Ay)(e.id, "home"), []),
         g = l.useCallback((e) => (0, n.jsx)(eo.S, { project: e, guildId: s }), [s]),
         p = l.useCallback((e, t) => (0, eo.V)(e, t, s), [s]),
         j = S.intl.string(E.default.BMn2lY),
@@ -1122,7 +1122,7 @@ function eY(e) {
                                         }
                                     },
                                 });
-                            (0, w.Ay)(a);
+                            (0, w.Ay)(a, "create");
                         } catch (e) {
                             (0, x.P0)({
                                 text: e instanceof R ? S.intl.string(E.default["Q+l4Hv"]) : (0, p.mG)(e),
@@ -1181,7 +1181,7 @@ function eY(e) {
                             ((0, C.P6)(n, e, l, s ? void 0 : t), Q());
                         },
                     });
-                    (j(""), (0, k.fZ)(""), (eo.current = !1), M(!1), (0, w.Ay)(n));
+                    (j(""), (0, k.fZ)(""), (eo.current = !1), M(!1), (0, w.Ay)(n, "create"));
                 } catch (e) {
                     (D(e instanceof eX ? S.intl.string(E.default["903H7m"]) : (0, p.mG)(e)), (eo.current = !1), M(!1));
                 }

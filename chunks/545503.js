@@ -541,7 +541,7 @@ let J = {
                 sound: l,
                 volume: c,
                 fallbackDeepLink: null == s ? void 0 : (0, o.Id)(s),
-                onClick: () => (0, d.Ay)(t),
+                onClick: () => (0, d.Ay)(t, "deep_link"),
                 isUserAvatar: !1,
             },
         );

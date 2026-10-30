@@ -50,7 +50,7 @@ var M = i(858899),
     G = i(381991);
 async function O(e, t) {
     let i = await e.open(t);
-    return (i.ok ? (0, G.Ay)(i.projectId) : (0, M.P0)({ text: i.message, variant: "critical" }), i);
+    return (i.ok ? (0, G.Ay)(i.projectId, "remix") : (0, M.P0)({ text: i.message, variant: "critical" }), i);
 }
 function T(e) {
     let { project: t, currentGuildId: i, transitionState: f, onClose: A } = e,
