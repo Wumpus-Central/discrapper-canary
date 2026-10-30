@@ -403,8 +403,8 @@ var ed = s(559106),
     ej = s(200160),
     ev = s(465410);
 function eN(e) {
-    let { prompts: t, paused: s, showCaret: l } = e,
-        { index: r, length: i } = (function (e, t) {
+    let { prompts: t, paused: s } = e,
+        { index: l, length: r } = (function (e, t) {
             let [s, n] = a.useState(() =>
                     t ? { index: 0, length: e[0].length, phase: "holding" } : { index: 0, length: 0, phase: "typing" },
                 ),
@@ -451,11 +451,11 @@ function eN(e) {
                 s
             );
         })(t, s);
-    return (0, n.jsxs)(u.E, {
+    return (0, n.jsx)(u.E, {
         variant: "text-md/normal",
         color: "text-muted",
         className: ej.RC,
-        children: [t[r].slice(0, i), l ? (0, n.jsx)("span", { className: ej.OW }) : null],
+        children: t[l].slice(0, r),
     });
 }
 function eb(e) {
@@ -491,9 +491,7 @@ function ey(e) {
     return (0, n.jsx)("div", {
         className: ej.qf,
         "aria-hidden": !0,
-        children: l
-            ? (0, n.jsx)(eb, { prompts: s, paused: i })
-            : (0, n.jsx)(eN, { prompts: s, paused: i, showCaret: !t }),
+        children: l ? (0, n.jsx)(eb, { prompts: s, paused: i }) : (0, n.jsx)(eN, { prompts: s, paused: i }),
     });
 }
 function ew(e) {

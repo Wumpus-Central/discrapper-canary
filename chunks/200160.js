@@ -7,8 +7,6 @@ _.exports = {
     hF: "input__66346",
     qf: "placeholder__66346",
     RC: "placeholderText__66346",
-    OW: "caret__66346",
-    yO: "conjure-home-caret-blink__66346",
     KE: "toolbar__66346",
     gb: "iconButton__66346",
     Xv: "addIcon__66346",

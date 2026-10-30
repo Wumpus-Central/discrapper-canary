@@ -84,25 +84,6 @@
     white-space: nowrap
 }
 
-.caret__66346 {
-    background: var(--text-muted);
-    display: inline-block;
-    height: 1.1em;
-    margin-inline-start: 1px;
-    vertical-align: text-bottom;
-    width: 1px
-}
-
-.full-motion .caret__66346 {
-    animation: conjure-home-caret-blink__66346 1s step-end infinite
-}
-
-@keyframes conjure-home-caret-blink__66346 {
-    50% {
-        opacity: 0
-    }
-}
-
 .toolbar__66346 {
     align-items: center;
     border-top: 1px solid var(--border-muted);
@@ -707,4 +688,4 @@
     opacity: .6
 }
 
-/*# sourceMappingURL=b84ca78a9cfadbbb.css.map*/
+/*# sourceMappingURL=b00a1e70fd5282c0.css.map*/
