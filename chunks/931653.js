@@ -9,9 +9,9 @@ var n = i(477900),
     o = i(548118),
     c = i(71393),
     p = i(711014),
-    h = i(246338),
+    m = i(246338),
     f = i(73153),
-    m = i(195880),
+    h = i(195880),
     g = i(322227),
     v = i(642785),
     _ = i(371169),
@@ -25,17 +25,17 @@ f.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
     j.get(t)?.(i, n);
 });
 var A = i(625180),
-    y = i(457827),
-    E = i(373677),
-    R = i(754027),
-    b = i(939398),
+    b = i(457827),
+    y = i(373677),
+    E = i(754027),
+    R = i(939398),
     I = i(165610);
 function S(e) {
     let t = e.preview_application_id;
     if (null == t) return () => void 0;
-    let i = (0, E.PH)(null, (0, E.hR)(e.preview_supported_surfaces)),
-        n = (0, b.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
-        l = (0, R.Op)((0, R.jS)(e), i);
+    let i = (0, y.PH)(null, (0, y.hR)(e.preview_supported_surfaces)),
+        n = (0, R.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
+        l = (0, E.Op)((0, E.jS)(e), i);
     return (
         A.A.launchFrame({
             applicationId: t,
@@ -43,7 +43,7 @@ function S(e) {
             launch: null == n ? void 0 : { customId: n },
             showErrorModal: !1,
         }).catch(() => void 0),
-        () => (0, y.r)((0, I.VA)(t, l))
+        () => (0, b.r)((0, I.VA)(t, l))
     );
 }
 var M = i(858899),
@@ -54,8 +54,8 @@ async function O(e, t) {
 }
 function T(e) {
     let { project: t, currentGuildId: i, transitionState: f, onClose: A } = e,
-        [y, E] = l.useState(i),
-        [R, b] = l.useState(!1),
+        [b, y] = l.useState(i),
+        [E, R] = l.useState(!1),
         [I, M] = l.useState(0),
         G = l.useRef(null);
     l.useEffect(() => {
@@ -71,7 +71,7 @@ function T(e) {
             function o(e) {
                 return ((0, g.ensureConnection)(e), (d ??= (0, x.Io)(r, e).catch(() => "rejected")));
             }
-            let c = (0, m.m)();
+            let c = (0, h.m)();
             j.set(c, (e, t) => {
                 (j.delete(c), (u = e), (0, v.vG)(e, t), o(e));
             });
@@ -90,7 +90,7 @@ function T(e) {
                 ),
                 () => (j.delete(c), null != u && (0, g.closeConnection)(u), null),
             );
-            async function h(e) {
+            async function m(e) {
                 s = !0;
                 let i = await p;
                 if (null == i) return { ok: !1, message: a, kept: !1 };
@@ -116,7 +116,7 @@ function T(e) {
             }
             return {
                 created: p,
-                open: h,
+                open: m,
                 dismiss: function () {
                     s ||
                         ((s = !0),
@@ -132,11 +132,11 @@ function T(e) {
             let e = [];
             for (let t of p.Ay.getFlattenedGuildIds()) {
                 let i = c.A.getGuild(t);
-                null != i && (0, h.dd)(i, "ConjureRemixModal") && e.push(i);
+                null != i && (0, m.dd)(i, "ConjureRemixModal") && e.push(i);
             }
             return e;
         }),
-        P = l.useMemo(
+        Y = l.useMemo(
             () =>
                 T.map((e) => ({
                     id: e.id,
@@ -146,20 +146,21 @@ function T(e) {
                 })),
             [T],
         ),
-        W = l.useCallback(async () => {
-            if (R || null == G.current) return;
-            b(!0);
-            let e = await O(G.current, y);
-            e.ok ? await A() : (e.kept || M((e) => e + 1), b(!1));
-        }, [R, y, A]);
+        P = l.useCallback(async () => {
+            if (E || null == G.current) return;
+            R(!0);
+            let e = await O(G.current, b);
+            e.ok ? await A() : (e.kept || M((e) => e + 1), R(!1));
+        }, [E, b, A]);
     return (0, n.jsx)(r.a, {
         transitionState: f,
         onClose: A,
         title: k.intl.string(C.default["9wQTdG"]),
+        subtitle: k.intl.string(C.default.mUYiYm),
         size: "md",
         actions: [
-            { text: k.intl.string(k.t["ETE/oC"]), variant: "secondary", onClick: A, disabled: R },
-            { text: k.intl.string(C.default.XWgAfc), variant: "primary", onClick: W, loading: R },
+            { text: k.intl.string(k.t["ETE/oC"]), variant: "secondary", onClick: A, disabled: E },
+            { text: k.intl.string(C.default.XWgAfc), variant: "primary", onClick: P, loading: E },
         ],
         children: (0, n.jsxs)(d.B, {
             gap: 24,
@@ -178,10 +179,10 @@ function T(e) {
                     selectionMode: "single",
                     label: k.intl.string(C.default["maL0+X"]),
                     description: k.intl.string(C.default.R2uxWO),
-                    options: P,
-                    value: y,
-                    onSelectionChange: E,
-                    disabled: R,
+                    options: Y,
+                    value: b,
+                    onSelectionChange: y,
+                    disabled: E,
                     fullWidth: !0,
                 }),
             ],
