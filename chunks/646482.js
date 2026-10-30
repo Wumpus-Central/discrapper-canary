@@ -1074,9 +1074,9 @@ function n0(e) {
         o = (0, nc.A)(n);
     return (0, l.jsxs)(l.Fragment, {
         children: [
+            (0, l.jsx)(nJ, { frame: r }),
             (0, l.jsx)(nI, { channel: n }),
             (0, l.jsx)(nE.A, { frame: r }),
-            (0, l.jsx)(nJ, { frame: r }),
             (0, l.jsx)(nN, { channelId: n.id }),
             (0, l.jsx)(n_, { channelId: n.id }),
             (0, l.jsx)(n$, {
