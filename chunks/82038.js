@@ -1,4 +1,4 @@
-n.d(t, { c: () => f });
+n.d(t, { c: () => p });
 var i = n(621466),
     r = n(557361),
     a = n(775602),
@@ -8,8 +8,22 @@ var i = n(621466),
     d = n(625494),
     c = n(350535),
     u = n(652215);
-let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
+let _ = new Set(["Enter", " "]),
     E = new Set([
+        "button",
+        "checkbox",
+        "link",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "option",
+        "radio",
+        "switch",
+        "tab",
+        "treeitem",
+    ]),
+    A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
+    h = new Set([
         "Alt",
         "AltGraph",
         "CapsLock",
@@ -26,7 +40,7 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "Symbol",
         "SymbolLock",
     ]),
-    A = new Set([
+    f = new Set([
         "F1",
         "F2",
         "F3",
@@ -53,7 +67,7 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "ZoomIn",
         "ZoomOut",
     ]),
-    h = new Set([
+    I = new Set([
         "ChannelDown",
         "ChannelUp",
         "MediaFastForward",
@@ -84,14 +98,29 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "VolumeDown",
         "VolumeMute",
     ]),
-    f = {
+    p = {
         binds: ["any-character"],
         keydown(e, t) {
             let n = (0, i.BF)(e)?.activeElement;
-            if ((0, i.Cw)(n) || r.rx.isActive() || E.has(t) || A.has(t) || h.has(t)) return !1;
-            let f = null != n && "BODY" === n.tagName;
             if (
-                (a.Ay.keyboardModeEnabled && !f && !/^[a-zA-Z0-9]$/.test(t)) ||
+                (0, i.Cw)(n) ||
+                (_.has(t) &&
+                    (function (e) {
+                        if (null == e) return !1;
+                        let t = e.getAttribute("role");
+                        return null != t
+                            ? E.has(t)
+                            : "BUTTON" === e.tagName || ("A" === e.tagName && e.hasAttribute("href"));
+                    })(n)) ||
+                r.rx.isActive() ||
+                h.has(t) ||
+                f.has(t) ||
+                I.has(t)
+            )
+                return !1;
+            let p = null != n && "BODY" === n.tagName;
+            if (
+                (a.Ay.keyboardModeEnabled && !p && !/^[a-zA-Z0-9]$/.test(t)) ||
                 d._.hasSubscribers(u.jej.MODAL_CLOSE) ||
                 s.A.hasLayers()
             )
@@ -111,10 +140,10 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
                         .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))) ||
                 e.metaKey ||
                 e.ctrlKey ||
-                _.has(t)
+                A.has(t)
             )
                 return !1;
-            let I = "Enter" === t && !e.shiftKey && !e.altKey;
-            d._.dispatchToLastSubscribed(u.jej.TEXTAREA_FOCUS, { event: e, wasEnterPressed: I });
+            let T = "Enter" === t && !e.shiftKey && !e.altKey;
+            d._.dispatchToLastSubscribed(u.jej.TEXTAREA_FOCUS, { event: e, wasEnterPressed: T });
         },
     };

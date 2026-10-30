@@ -161,8 +161,10 @@ function eK(e) {
         position: "top",
         spacing: 4,
         asContainer: !0,
+        ariaHidden: !0,
         children: (0, s.jsx)(m.D, {
             className: ew.XI,
+            "aria-label": n,
             onClick: (e) => {
                 ((0, R.Ml)({ message: a, interactionType: l, viewId: r }), e.stopPropagation(), t(a));
             },
@@ -198,6 +200,7 @@ function eG(e) {
                 position: "top",
                 spacing: 4,
                 asContainer: !0,
+                ariaHidden: !0,
                 children: (0, s.jsx)(m.D, {
                     innerRef: x,
                     className: ew.XI,
