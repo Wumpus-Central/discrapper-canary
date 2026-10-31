@@ -1,7 +1,7 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var i = n(477900),
-    s = n(582128),
-    l = n(192308),
+    l = n(582128),
+    s = n(192308),
     a = n(866665),
     r = n(442433),
     o = n(442247),
@@ -52,14 +52,14 @@ function b(e) {
     }
     if (t.collapsed || N(t.startContainer) || N(t.endContainer)) return;
     let i = t.cloneContents(),
-        s = null != i.querySelector(`[${g}]`),
-        l = f(t.startContainer),
+        l = null != i.querySelector(`[${g}]`),
+        s = f(t.startContainer),
         a = f(t.endContainer),
-        r = !s && null != l && l === a;
-    if (s || r) {
+        r = !l && null != s && s === a;
+    if (l || r) {
         let t, n;
         if (r) {
-            let t = l.getAttribute(g);
+            let t = s.getAttribute(g);
             if (null == t || "" === t) return;
             (e.preventDefault(), e.clipboardData.setData("text/plain", (0, h.KW)(t)));
             return;
@@ -77,17 +77,17 @@ function b(e) {
                             if (t.nodeType !== Node.ELEMENT_NODE) return "";
                             let i = t.getAttribute(g);
                             if (null != i) return (0, h.KW)(i);
-                            let s = t.tagName.toUpperCase();
-                            if ("IMG" === s) {
+                            let l = t.tagName.toUpperCase();
+                            if ("IMG" === l) {
                                 let e = t.getAttribute("alt");
                                 return null != e && "" !== e ? e : "";
                             }
                             if (("string" == typeof t.className ? t.className : "").includes("hiddenVisually"))
                                 return "";
-                            if ("BR" === s) return "\n";
-                            let l = "";
-                            for (let i = 0; i < t.childNodes.length; i++) l += e(t.childNodes[i], n + 1);
-                            return (p.has(s) && "" !== l && !l.endsWith("\n") && (l += "\n"), l);
+                            if ("BR" === l) return "\n";
+                            let s = "";
+                            for (let i = 0; i < t.childNodes.length; i++) s += e(t.childNodes[i], n + 1);
+                            return (p.has(l) && "" !== s && !s.endsWith("\n") && (s += "\n"), s);
                         })(e.childNodes[n]);
                     return t.endsWith("\n") ? t.slice(0, -1) : t;
                 })(i),
@@ -107,13 +107,13 @@ function b(e) {
 }
 var I = n(105292),
     v = n(379961);
-let E = function (e) {
+let A = function (e) {
     let { gameId: t, authorId: h, onKeyDown: g } = e,
         p = (0, o.K)(t),
         N = null != p,
         f = p?.gameName ?? I.intl.string(I.t["11pdXZ"]),
-        E = p?.gameIcon;
-    s.useEffect(
+        A = p?.gameIcon;
+    l.useEffect(
         () => (
             1 === (j += 1) && document.addEventListener("copy", b),
             () => {
@@ -122,7 +122,7 @@ let E = function (e) {
         ),
         [],
     );
-    let A = s.useCallback(
+    let E = l.useCallback(
             (e) => {
                 N &&
                     (0, r.L3)(e, async () => {
@@ -142,13 +142,13 @@ let E = function (e) {
             },
             [N, t, f, h],
         ),
-        C = s.useCallback(() => {
-            (0, l.openModalLazy)(async () => {
+        C = l.useCallback(() => {
+            (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e("256466").then(n.bind(n, 188841));
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         }, []),
-        S = s.useCallback(
+        S = l.useCallback(
             (e) => {
                 (e.stopPropagation(), e.preventDefault(), N)
                     ? d.default.openGameProfileModal({
@@ -161,16 +161,16 @@ let E = function (e) {
             },
             [t, N, C, h],
         ),
-        O = N ? `@game ${f}` : void 0;
+        y = N ? `@game ${f}` : void 0;
     return (0, i.jsx)(a.m, {
         asContainer: !0,
         tag: "span",
-        text: O,
-        "aria-label": O,
+        text: y,
+        "aria-label": y,
         delay: 750,
         children: (0, i.jsxs)(m.A, {
             "data-mention-game-id": t,
-            onContextMenu: A,
+            onContextMenu: E,
             onClick: S,
             onKeyDown: g,
             children: [
@@ -178,7 +178,7 @@ let E = function (e) {
                     children: (0, i.jsx)("span", {
                         "aria-hidden": "true",
                         className: v.P0,
-                        children: (0, i.jsx)(c.A, { game: { id: t, icon: E }, iconClassName: v.Kk, allowFetch: !1 }),
+                        children: (0, i.jsx)(c.A, { game: { id: t, icon: A }, iconClassName: v.Kk, allowFetch: !1 }),
                     }),
                 }),
                 (0, i.jsx)("span", { className: v.UU, children: f }),

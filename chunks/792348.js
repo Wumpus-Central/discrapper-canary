@@ -1,7 +1,7 @@
 n.d(t, { A: () => j });
 var i = n(582128),
-    s = n(17928),
-    l = n(946261),
+    l = n(17928),
+    s = n(946261),
     a = n(536184),
     r = n(523006),
     o = n(253932),
@@ -16,7 +16,7 @@ function j(e, t) {
         j = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.a.DEFAULT,
         { audioRef: g } = i.useContext(r.A),
         [p, N] = i.useState(!1),
-        f = (0, s.bG)([u.A], () => u.A.isPlayingSound(e.soundId), [e]);
+        f = (0, l.bG)([u.A], () => u.A.isPlayingSound(e.soundId), [e]);
     return {
         playSoundboardSound: i.useCallback(
             (n) => {
@@ -30,7 +30,7 @@ function j(e, t) {
                 i = new (await (0, a.A)(t))();
             ((i.src = t),
                 null != g.current && g.current.pause(),
-                d.isPlatformEmbedded && j === h.a.VOICE && i.setSinkId?.(l.voiceSinkId),
+                d.isPlatformEmbedded && j === h.a.VOICE && i.setSinkId?.(s.voiceSinkId),
                 (g.current = i),
                 (i.currentTime = 0),
                 (i.volume = (0, x.A)(e.volume, n)),

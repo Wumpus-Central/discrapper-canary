@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => x, Be: () => p, Nj: () => f, y3: () => v }), n(205816));
+(n.d(t, { Ay: () => x, Be: () => f, Nj: () => p, y3: () => v }), n(205816));
 var r,
     i = n(477900),
     a = n(582128),
@@ -9,7 +9,7 @@ var r,
     o = n(637956),
     d = n(352224),
     m = n(509115),
-    p =
+    f =
         (((r = {}).UNKNOWN = "unknown"),
         (r.VISA = "visa"),
         (r.DISCOVER = "discover"),
@@ -41,7 +41,7 @@ var r,
         (r.GIFT_CARD = "gift_card"),
         (r.PIX = "pix"),
         r);
-function f(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
         if ("apple" === e) return n(685430);
@@ -100,12 +100,12 @@ function f(e) {
 }
 let v = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
 class g extends a.PureComponent {
-    static Types = p;
+    static Types = f;
     static Sizes = v;
     static getType(e) {
         if (null == e) return "unknown";
         let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
-        return Object.hasOwn(p, t) ? p[t] : "unknown";
+        return Object.hasOwn(f, t) ? f[t] : "unknown";
     }
     static defaultProps = { size: v.SMALL, flipped: !1 };
     render() {

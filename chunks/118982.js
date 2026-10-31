@@ -1,20 +1,20 @@
 l.d(t, { dI: () => m, k3: () => u, x0: () => x });
-var n = l(811996),
-    a = l(773669),
+var a = l(811996),
+    n = l(773669),
     r = l(832163);
 l(652215);
 var s = l(961270),
     i = l(105292);
 let o = {
-        [n.U.DESKTOP]: "PC",
-        [n.U.XBOX]: "Xbox",
-        [n.U.PLAYSTATION]: "PlayStation",
-        [n.U.SWITCH]: "Switch",
-        [n.U.APPLE_ARCADE]: "Apple Arcade",
-        [n.U.NETFLIX]: "Netflix",
-        [n.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
+        [a.U.DESKTOP]: "PC",
+        [a.U.XBOX]: "Xbox",
+        [a.U.PLAYSTATION]: "PlayStation",
+        [a.U.SWITCH]: "Switch",
+        [a.U.APPLE_ARCADE]: "Apple Arcade",
+        [a.U.NETFLIX]: "Netflix",
+        [a.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
-    c = [n.U.PLAYSTATION];
+    c = [a.U.PLAYSTATION];
 function d(e) {
     let t = (function (e) {
         if (null == e) return c;
@@ -24,7 +24,7 @@ function d(e) {
     return 0 === t.length
         ? ""
         : i.intl.formatToPlainString(s.default["5h8p5P"], {
-              platforms: new Intl.ListFormat(a.default.locale).format(t.map((e) => o[e])),
+              platforms: new Intl.ListFormat(n.default.locale).format(t.map((e) => o[e])),
               count: t.length,
           });
 }
@@ -37,7 +37,7 @@ function m(e) {
 }
 function x(e, t) {
     let { hasAlreadyLinked: l } = t,
-        n = e.name,
-        a = l ? s.default.yqAKVO : s.default.vyAtfo;
-    return i.intl.format(a, { applicationName: n, platforms_info: d(e.id) });
+        a = e.name,
+        n = l ? s.default.yqAKVO : s.default.vyAtfo;
+    return i.intl.format(n, { applicationName: a, platforms_info: d(e.id) });
 }

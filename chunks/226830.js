@@ -10,8 +10,8 @@ var l,
     d = n(834730),
     m = n(297264),
     p = n(315629),
-    h = n(736653),
-    C = n(287809),
+    C = n(736653),
+    h = n(287809),
     f = n(166403),
     E = n(24482),
     S = n(580630),
@@ -81,18 +81,18 @@ var k = n(724651),
     V = n(899082),
     Y = n(12260),
     K = n(658859);
-let q = new B.A("PremiumGroupPrice.tsx"),
-    Z = (0, i.jsx)(F.y, { type: F.y.Type.PULSING_ELLIPSIS, className: K.xB }),
+let Z = new B.A("PremiumGroupPrice.tsx"),
+    q = (0, i.jsx)(F.y, { type: F.y.Type.PULSING_ELLIPSIS, className: K.xB }),
     z = function (e) {
         let t,
             { isGift: n = !1, priceOptions: l } = e,
             r = (0, o.bG)([H.A], () => H.A.get(W.gD.PREMIUM_GROUP_MONTH)),
-            a = (0, c.q)((0, h.Ay)());
-        if (null == r) return Z;
+            a = (0, c.q)((0, C.Ay)());
+        if (null == r) return q;
         try {
             t = (0, E.sS)(r, l, !1, n, !1);
         } catch {
-            return (q.warn(`No price available for plan ${r.id} in currency ${l?.currency ?? "unknown"}`), Z);
+            return (Z.warn(`No price available for plan ${r.id} in currency ${l?.currency ?? "unknown"}`), q);
         }
         let s = W.WT.MONTH;
         return (0, i.jsxs)(i.Fragment, {
@@ -169,13 +169,13 @@ function eo(e) {
             useShortTitle: d = !1,
         } = e,
         p = (0, o.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
-        E = (0, o.bG)([C.default], () => C.default.getCurrentUser()),
+        E = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
         S = (0, w.V)(),
         g = S?.subscriptionTrial?.skuId,
         I = p?.hasActiveTrial ? E?.premiumType : null,
         A = (0, G.Lj)(I, g),
         y = null != A,
-        x = (0, c.q)((0, h.Ay)()),
+        x = (0, c.q)((0, C.Ay)()),
         P = ea(r),
         v = d ? R.intl.string(R.t.tUbSDK) : R.intl.string(R.t["t9uG/o"]),
         _ = (0, i.jsxs)(er, {
@@ -265,7 +265,7 @@ function ed(e) {
             narrowLayout: x = !1,
         } = e,
         P = (0, o.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
-        v = (0, o.bG)([C.default], () => C.default.getCurrentUser()),
+        v = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
         _ = (0, w.V)(),
         T = _?.subscriptionTrial?.skuId,
         N = P?.hasActiveTrial ? v?.premiumType : null,
@@ -273,16 +273,16 @@ function ed(e) {
         j = (0, k.O)(),
         O = (0, g.k5)(),
         L = null != T || null != N ? W.Vk.PREMIUM_TRIAL : null != j || O ? W.Vk.PREMIUM_DISCOUNT : null,
-        F = (0, c.q)((0, h.Ay)()),
+        F = (0, c.q)((0, C.Ay)()),
         B = ea(a),
         H = !a && null != j && (0, U.hm)(j),
         V = !a && O && b && L === W.Vk.PREMIUM_DISCOUNT,
         Y = (0, G.rm)(O, N, a ? null : j, _, T),
         K = (0, D.Sq)() && !a && null == L,
-        q = null != t || E ? (0, i.jsxs)(i.Fragment, { children: [t, E && (0, i.jsx)(M, {})] }) : null,
-        Z = u && !a,
+        Z = null != t || E ? (0, i.jsxs)(i.Fragment, { children: [t, E && (0, i.jsx)(M, {})] }) : null,
+        q = u && !a,
         z = (0, i.jsxs)(er, {
-            footer: q,
+            footer: Z,
             children: [
                 A &&
                     !V &&
@@ -350,7 +350,7 @@ function ed(e) {
                     firstFeatureItemClassName:
                         H || ("inCard" !== S && "giftSelectionModal" !== S) ? void 0 : et.firstFeatureItemContainer,
                 }),
-                Z && (0, i.jsx)(J.K, {}),
+                q && (0, i.jsx)(J.K, {}),
             ],
         }),
         ee = s()(et.card, r, { [et.withGiftBanner]: E });
@@ -358,7 +358,7 @@ function ed(e) {
 }
 function em(e) {
     let { className: t, ctaButton: n, isApplicationHome: l, priceOptions: r } = e,
-        a = (0, c.q)((0, h.Ay)()),
+        a = (0, c.q)((0, C.Ay)()),
         o = (0, i.jsxs)(er, {
             footer: n,
             children: [

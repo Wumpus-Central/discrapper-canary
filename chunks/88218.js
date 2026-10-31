@@ -215,7 +215,7 @@ let A = function (e) {
             renderSection: R,
             role: M ? "none presentation" : void 0,
         }),
-        V = (0, i.jsxs)("div", {
+        K = (0, i.jsxs)("div", {
             className: r()(p.i, C),
             children: [
                 M
@@ -229,5 +229,5 @@ let A = function (e) {
                 A?.(U),
             ],
         });
-    return M ? (0, i.jsx)(a.hD, { navigator: k, children: V }) : V;
+    return M ? (0, i.jsx)(a.hD, { navigator: k, children: K }) : K;
 };

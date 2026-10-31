@@ -1,4 +1,4 @@
-n.d(t, { D: () => h, b: () => C });
+n.d(t, { D: () => C, b: () => h });
 var l = n(582128),
     i = n(17928),
     r = n(561573),
@@ -10,24 +10,24 @@ var l = n(582128),
     d = n(459005),
     m = n(961270),
     p = n(105292);
-function h(e) {
-    let { surface: t, applicationId: n, skuId: h } = e,
-        C = (0, c.m)(n),
-        f = (0, i.bG)([r.A], () => r.A.getPromotionIdsForSkuId(h), [h]),
-        E = (0, u.x)({ surface: t, skuId: h }),
+function C(e) {
+    let { surface: t, applicationId: n, skuId: C } = e,
+        h = (0, c.m)(n),
+        f = (0, i.bG)([r.A], () => r.A.getPromotionIdsForSkuId(C), [C]),
+        E = (0, u.x)({ surface: t, skuId: C }),
         S = l.useMemo(() => {
-            if (null == C) return null;
+            if (null == h) return null;
             for (let e of f ?? []) {
-                let t = C[e];
+                let t = h[e];
                 if (null != t) return t;
             }
             for (let e of E) {
-                let t = C[e.promotionId];
+                let t = h[e.promotionId];
                 if (null != t) return t;
             }
             return null;
-        }, [C, f, E]),
-        g = (0, d.n)({ surface: t, skuId: h }),
+        }, [h, f, E]),
+        g = (0, d.n)({ surface: t, skuId: C }),
         I = (0, o.j)(S, "pdp.label"),
         A = (0, o.j)(S, "pdp.tooltip"),
         y = (0, o.j)(S, "checkout.label"),
@@ -86,9 +86,9 @@ function h(e) {
         }, [t, S, g, I, A, y, x])
     );
 }
-function C(e) {
+function h(e) {
     let { surface: t, applicationId: n, skuId: i } = e,
-        r = h({ surface: t, applicationId: n, skuId: i }),
+        r = C({ surface: t, applicationId: n, skuId: i }),
         a = (0, d.n)({ surface: t, skuId: i }),
         s = (0, u.x)({ surface: t, skuId: i });
     return l.useMemo(() => ({ display: r, reward: a, offers: s }), [r, a, s]);

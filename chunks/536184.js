@@ -1,8 +1,8 @@
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var i = n(76788);
-let s = "" !== new Audio().canPlayType("audio/ogg; codecs=opus");
-async function l(e) {
-    return s || "audio/ogg" !== (await fetch(e, { method: "HEAD" })).headers.get("Content-Type")
+let l = "" !== new Audio().canPlayType("audio/ogg; codecs=opus");
+async function s(e) {
+    return l || "audio/ogg" !== (await fetch(e, { method: "HEAD" })).headers.get("Content-Type")
         ? Audio
         : i.A.OGVPlayer;
 }

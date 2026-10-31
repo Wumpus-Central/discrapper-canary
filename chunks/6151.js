@@ -1,6 +1,6 @@
-(l.d(t, { a: () => E, v: () => N }), l(321073));
-var n = l(477900),
-    a = l(582128),
+(l.d(t, { a: () => N, v: () => g }), l(321073));
+var a = l(477900),
+    n = l(582128),
     r = l(661531),
     s = l(355522),
     i = l(37766),
@@ -13,41 +13,41 @@ var n = l(477900),
     f = l(939249),
     p = l(46054),
     h = l(812745),
-    j = l(758476),
-    v = l(105292),
-    g = l(381909);
-let E = "new_payment_source_id";
-function N(e) {
+    v = l(758476),
+    j = l(105292),
+    E = l(381909);
+let N = "new_payment_source_id";
+function g(e) {
     let {
             value: t,
             options: l,
-            onChange: N,
+            onChange: g,
             onNew: T,
-            noticeMessage: b,
-            newPaymentMethodOptionLabel: A,
+            noticeMessage: A,
+            newPaymentMethodOptionLabel: b,
             disabled: I = !1,
             error: C,
         } = e,
-        _ = a.useMemo(() => {
+        _ = n.useMemo(() => {
             let e = l.map((e) => {
                 let t =
                         null != e.icon
                             ? e.icon === h.Be.BANK
-                                ? (0, n.jsx)(s.M, { className: g.s7 })
+                                ? (0, a.jsx)(s.M, { className: E.s7 })
                                 : e.icon === h.Be.GIFT_CARD
-                                  ? (0, n.jsx)(i._, { className: g.s7 })
+                                  ? (0, a.jsx)(i._, { className: E.s7 })
                                   : e.icon === h.Be.PIX
-                                    ? (0, n.jsx)(o.W, { className: g.s7 })
+                                    ? (0, a.jsx)(o.W, { className: E.s7 })
                                     : e.icon === h.Be.IDEAL
-                                      ? (0, n.jsx)(c.E, { className: g.s7 })
-                                      : (0, n.jsx)("img", { src: (0, h.Nj)(e.icon), alt: "", className: g.s7 })
+                                      ? (0, a.jsx)(c.E, { className: E.s7 })
+                                      : (0, a.jsx)("img", { src: (0, h.Nj)(e.icon), alt: "", className: E.s7 })
                             : void 0,
                     l =
                         null != e.tooltipText
-                            ? (0, n.jsx)(d.m, {
+                            ? (0, a.jsx)(d.m, {
                                   text: e.tooltipText,
                                   asContainer: !0,
-                                  children: (0, n.jsx)(u.CircleInformationIcon, {
+                                  children: (0, a.jsx)(u.CircleInformationIcon, {
                                       size: "xs",
                                       color: r.A.colors.TEXT_MUTED,
                                   }),
@@ -65,45 +65,45 @@ function N(e) {
             });
             return (
                 e.push({
-                    id: E,
-                    value: E,
-                    label: A ?? v.intl.string(j.default.rNF29q),
+                    id: N,
+                    value: N,
+                    label: b ?? j.intl.string(v.default.rNF29q),
                     leading: void 0,
                     description: void 0,
                 }),
                 e
             );
-        }, [l, A]),
-        y = a.useCallback(
+        }, [l, b]),
+        D = n.useCallback(
             (e) => {
-                e === E ? T() : null != e && N(e);
+                e === N ? T() : null != e && g(e);
             },
-            [T, N],
+            [T, g],
         ),
-        D = (0, n.jsxs)(n.Fragment, {
+        S = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, n.jsx)(m.l, {
-                    label: v.intl.string(v.t["u+Cw58"]),
+                (0, a.jsx)(m.l, {
+                    label: j.intl.string(j.t["u+Cw58"]),
                     hideLabel: !0,
-                    placeholder: v.intl.string(j.default.rNF29q),
+                    placeholder: j.intl.string(v.default.rNF29q),
                     value: t,
                     options: _,
-                    onSelectionChange: y,
+                    onSelectionChange: D,
                     selectionMode: "single",
                     disabled: I || 0 === l.length,
                     errorMessage: C,
                     fullWidth: !0,
                     variant: "unsupported_payment_modal_card",
                 }),
-                null != b
-                    ? (0, n.jsxs)("div", {
-                          className: g.T4,
+                null != A
+                    ? (0, a.jsxs)("div", {
+                          className: E.T4,
                           children: [
-                              (0, n.jsx)(u.CircleInformationIcon, { size: "xs", color: r.A.colors.TEXT_FEEDBACK_INFO }),
-                              (0, n.jsx)(x.E, {
+                              (0, a.jsx)(u.CircleInformationIcon, { size: "xs", color: r.A.colors.TEXT_FEEDBACK_INFO }),
+                              (0, a.jsx)(x.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-info",
-                                  children: "string" == typeof b ? p.A.parse(b, !1, { allowLinks: !0 }) : b,
+                                  children: "string" == typeof A ? p.A.parse(A, !1, { allowLinks: !0 }) : A,
                               }),
                           ],
                       })
@@ -111,6 +111,6 @@ function N(e) {
             ],
         });
     return 0 !== l.length || I
-        ? D
-        : (0, n.jsx)(f.D, { onClick: T, "aria-label": v.intl.string(j.default.rNF29q), className: g.OV, children: D });
+        ? S
+        : (0, a.jsx)(f.D, { onClick: T, "aria-label": j.intl.string(v.default.rNF29q), className: E.OV, children: S });
 }

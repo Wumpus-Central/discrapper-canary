@@ -13,7 +13,7 @@ let r = "social-layer-storefront-product-details-modal",
             analyticsLocations: d,
             analyticsContext: m,
             contextKey: p,
-            onClose: h,
+            onClose: C,
         } = e;
         (0, i.openModalLazy)(
             async () => {
@@ -84,7 +84,7 @@ let r = "social-layer-storefront-product-details-modal",
                 contextKey: p,
                 allowsNavigation: o,
                 onCloseCallback: () => {
-                    h?.();
+                    C?.();
                 },
             },
         );

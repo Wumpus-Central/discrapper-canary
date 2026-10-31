@@ -1,13 +1,13 @@
 n.d(t, { A: () => d });
 var i = n(477900),
-    s = n(582128),
-    l = n(503698),
-    a = n.n(l),
+    l = n(582128),
+    s = n(503698),
+    a = n.n(s),
     r = n(900002),
     o = n(113278);
 function d(e) {
-    let { children: t, "aria-label": n, className: l, position: d, delay: u, lineClamp: c = 1, ...m } = e,
-        x = s.useRef(null),
+    let { children: t, "aria-label": n, className: s, position: d, delay: u, lineClamp: c = 1, ...m } = e,
+        x = l.useRef(null),
         h = n ?? ("string" == typeof t && t),
         j = {};
     return (
@@ -19,9 +19,9 @@ function d(e) {
             text: t,
             "aria-label": h,
             children: (n) => {
-                let { onMouseEnter: s, onMouseLeave: r } = n;
+                let { onMouseEnter: l, onMouseLeave: r } = n;
                 return (0, i.jsx)("div", {
-                    className: a()(l, { [o.j]: 1 === c, [o.E]: c > 1 }),
+                    className: a()(s, { [o.j]: 1 === c, [o.E]: c > 1 }),
                     ref: x,
                     "aria-hidden": e["aria-hidden"],
                     onMouseEnter: () => {
@@ -29,7 +29,7 @@ function d(e) {
                         null == e ||
                             (c > 1 && e.offsetHeight + 1 >= e.scrollHeight) ||
                             (1 === c && e.offsetWidth >= e.scrollWidth) ||
-                            s?.();
+                            l?.();
                     },
                     onMouseLeave: r,
                     style: j,

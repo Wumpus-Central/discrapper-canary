@@ -1,23 +1,23 @@
-l.d(t, { c: () => d });
-var n = l(477900);
-l(582128);
-var a = l(683071),
-    r = l(423764),
-    s = l(46054),
-    i = l(758476),
-    o = l(105292),
-    c = l(135734);
-function d(e) {
-    let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: d = !1, role: u } = e,
-        m = (0, r.j7)(t),
-        x = d ? i.default["DE+C4G"] : i.default.vcs3zU,
-        f = o.intl.formatToMarkdownString(x, {
+n.d(t, { c: () => o });
+var r = n(477900);
+n(582128);
+var i = n(683071),
+    a = n(423764),
+    l = n(46054),
+    s = n(758476),
+    u = n(105292),
+    c = n(135734);
+function o(e) {
+    let { relocationCountry: t, relocationCurrencyCode: n, willForfeitGiftCardBalance: o = !1, role: d } = e,
+        m = (0, a.j7)(t),
+        f = o ? s.default["DE+C4G"] : s.default.vcs3zU,
+        p = u.intl.formatToMarkdownString(f, {
             country: m,
-            currency: l?.toUpperCase() ?? "",
-            willForfeitGiftCardBalance: d ? "true" : "false",
+            currency: n?.toUpperCase() ?? "",
+            willForfeitGiftCardBalance: o ? "true" : "false",
         }),
-        p = s.A.parse(f, !1, { allowList: !0 });
-    return null == p
+        v = l.A.parse(p, !1, { allowList: !0 });
+    return null == v
         ? null
-        : (0, n.jsx)("div", { className: c.Q, children: (0, n.jsx)(a.w, { type: "warning", message: p, role: u }) });
+        : (0, r.jsx)("div", { className: c.Q, children: (0, r.jsx)(i.w, { type: "warning", message: v, role: d }) });
 }

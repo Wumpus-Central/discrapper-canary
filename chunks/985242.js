@@ -1,8 +1,8 @@
 n.d(t, { A: () => a });
 var i = n(477900);
 n(582128);
-var s = n(821609),
-    l = n(35275);
+var l = n(821609),
+    s = n(35275);
 function a(e) {
-    return (0, i.jsx)(s.$, { ...e, variant: "expressive", icon: l.A });
+    return (0, i.jsx)(l.$, { ...e, variant: "expressive", icon: s.A });
 }

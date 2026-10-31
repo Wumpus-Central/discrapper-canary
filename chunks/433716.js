@@ -1,7 +1,7 @@
 n.d(t, { A: () => p });
 var i = n(477900),
-    s = n(582128),
-    l = n(403581),
+    l = n(582128),
+    s = n(403581),
     a = n(661531),
     r = n(834730),
     o = n(62010),
@@ -15,7 +15,7 @@ var i = n(477900),
     g = n(23236);
 function p(e) {
     let { pack: t, isNitroTier2: n, onClose: p } = e,
-        N = s.useContext(c.A);
+        N = l.useContext(c.A);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { className: g.yF }),
@@ -25,7 +25,7 @@ function p(e) {
                     (0, i.jsxs)("div", {
                         className: g.DD,
                         children: [
-                            (0, i.jsx)(l.t, { size: "sm", color: a.A.colors.TEXT_DEFAULT }),
+                            (0, i.jsx)(s.t, { size: "sm", color: a.A.colors.TEXT_DEFAULT }),
                             (0, i.jsx)(r.E, { variant: "text-sm/medium", children: j.intl.string(h.default.leUgZw) }),
                         ],
                     }),

@@ -11,8 +11,8 @@ var i = n(503698),
     d = n(297264),
     m = n(788026),
     p = n(241524),
-    h = n(166532),
-    C = n(71393),
+    C = n(166532),
+    h = n(71393),
     f = n(371794),
     E = n(500345),
     S = n(599941),
@@ -33,7 +33,7 @@ function _(e) {
                 s?.cover_image_asset?.application_id != null
                     ? (0, f.YE)(s.cover_image_asset.application_id, s.cover_image_asset, 440)
                     : void 0;
-            return null == e && i !== h.pn.CONFIRM
+            return null == e && i !== C.pn.CONFIRM
                 ? null
                 : null == e
                   ? (0, l.jsx)("div", { className: P.gI })
@@ -44,7 +44,7 @@ function _(e) {
         children: [
             d,
             (function () {
-                if (i !== h.pn.CONFIRM) return null;
+                if (i !== C.pn.CONFIRM) return null;
                 let e = null == n.image_asset ? void 0 : (0, f.YE)(n.application_id, n.image_asset, 80);
                 return (0, l.jsx)("div", {
                     className: P.z9,
@@ -62,7 +62,7 @@ function _(e) {
 }
 function T(e) {
     let { onClose: t, listing: n, guildId: i } = e,
-        r = (0, a.bG)([C.A], () => C.A.getGuild(i), [i]),
+        r = (0, a.bG)([h.A], () => h.A.getGuild(i), [i]),
         o = (0, g.A)(i).filter((e) => e.roles.includes(n.role_id)),
         u = n.role_benefits.benefits.filter(E.B1).slice(0, null === o.length ? 4 : 3),
         p = (0, I.A)(u).slice(0, null === o.length ? 4 : 3);

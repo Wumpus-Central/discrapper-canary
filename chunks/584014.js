@@ -1,7 +1,7 @@
 n.d(t, { A: () => d });
 var i = n(582128),
-    s = n(964486),
-    l = n(946261),
+    l = n(964486),
+    s = n(946261),
     a = n(536184),
     r = n(523006),
     o = n(257645);
@@ -10,7 +10,7 @@ function d(e) {
         { audioRef: n } = i.useContext(r.A),
         d = i.useRef(null),
         [u, c] = i.useState(() => null != t.soundId && n.current?.dataset.soundId === t.soundId && !n.current.paused);
-    (0, s.Ay)(() => {
+    (0, l.Ay)(() => {
         let { current: e } = n;
         null != e && null != t.soundId && u && e.addEventListener("pause", () => c(!1), { once: !0 });
     });
@@ -34,18 +34,18 @@ function d(e) {
                     let { volume: e, outputChannel: i = o.a.DEFAULT } =
                         arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                     (await m(), n.current?.pause());
-                    let { current: s } = d;
+                    let { current: l } = d;
                     return (
-                        null != s &&
-                        ((n.current = s),
-                        (s.currentTime = 0),
-                        (s.volume = e ?? 1),
-                        (s.dataset.soundId = t.soundId),
-                        i === o.a.VOICE && s.setSinkId?.(l.voiceSinkId),
-                        s.play(),
-                        (s.onplay = () => c(!0)),
-                        (s.onpause = () => c(!1)),
-                        (s.onended = () => c(!1)),
+                        null != l &&
+                        ((n.current = l),
+                        (l.currentTime = 0),
+                        (l.volume = e ?? 1),
+                        (l.dataset.soundId = t.soundId),
+                        i === o.a.VOICE && l.setSinkId?.(s.voiceSinkId),
+                        l.play(),
+                        (l.onplay = () => c(!0)),
+                        (l.onpause = () => c(!1)),
+                        (l.onended = () => c(!1)),
                         !0)
                     );
                 },

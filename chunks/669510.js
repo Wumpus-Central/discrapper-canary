@@ -1,6 +1,6 @@
 l.d(t, { _: () => u });
-var n = l(477900),
-    a = l(582128),
+var a = l(477900),
+    n = l(582128),
     r = l(503698),
     s = l.n(r),
     i = l(834730),
@@ -18,39 +18,39 @@ function u(e) {
             intervalType: f,
             intervalCount: p,
             currency: h,
-            defaultExpanded: j = !1,
+            defaultExpanded: v = !1,
         } = e,
-        [v, g] = a.useState(j),
-        E = a.useMemo(() => {
+        [j, E] = n.useState(v),
+        N = n.useMemo(() => {
             let e = x.reduce((e, t) => e + t.amount, 0),
                 t = (0, o.$g)(e, h);
             return (0, o.CE)(t, f, p);
         }, [x, h, f, p]),
-        N = (0, n.jsxs)(c.h, {
+        g = (0, a.jsxs)(c.h, {
             label: t,
-            defaultExpanded: j,
+            defaultExpanded: v,
             isDisabled: x.length <= 0,
-            onExpandedChange: g,
+            onExpandedChange: E,
             collapsedContent: m
-                ? (0, n.jsx)(i.E, { variant: "text-md/normal", color: "text-subtle", children: E })
+                ? (0, a.jsx)(i.E, { variant: "text-md/normal", color: "text-subtle", children: N })
                 : null,
             children: [
                 x.map((e) => {
-                    let { formatWithoutRate: t, amount: l, ...a } = e,
+                    let { formatWithoutRate: t, amount: l, ...n } = e,
                         r = (0, o.$g)(l, h),
                         s = t ? r : (0, o.CE)(r, f, p);
-                    return (0, n.jsx)(c.i, { value: s, ...a }, a.id);
+                    return (0, a.jsx)(c.i, { value: s, ...n }, n.id);
                 }),
-                (0, n.jsx)("div", { className: d.m }),
-                (0, n.jsx)(c.i, {
+                (0, a.jsx)("div", { className: d.m }),
+                (0, a.jsx)(c.i, {
                     label: l ?? t,
                     labelSubText: r,
-                    value: E,
+                    value: N,
                     subText: u,
                     color: "text-strong",
                     valueColor: "text-strong",
                 }),
             ],
         });
-    return (0, n.jsx)("div", { className: s()({ [d.k]: v }), children: N });
+    return (0, a.jsx)("div", { className: s()({ [d.k]: j }), children: g });
 }
