@@ -23,8 +23,9 @@ t.d(n, {
     bq: () => x.bq,
     Ce: () => g.C,
 });
-var s = t(266546),
-    l = t(671897),
+var s = t(266546);
+t(530567);
+var l = t(671897),
     r = t(275664),
     a = t(565164);
 t(408121);
@@ -58,14 +59,14 @@ function S(e) {
             },
             [t],
         ),
-        b = (0, m.useCallback)(() => {
+        v = (0, m.useCallback)(() => {
             let e = n();
             if (null != e && d && S) {
                 let n = Date.now();
                 (a({ startTimeMs: n, endTimeMs: n, segmentStartSec: e, segmentEndSec: e }), (h.current = !0));
             }
         }, [n, d, S]),
-        v = (0, m.useCallback)(() => {
+        b = (0, m.useCallback)(() => {
             let e = n();
             if (null == e || null == r) return;
             let t = Date.now();
@@ -80,9 +81,9 @@ function S(e) {
     }, [d, S]),
         (0, m.useEffect)(() => {
             if (c && d && S)
-                (h.current || b(),
+                (h.current || v(),
                     (g.current = window.setInterval(() => {
-                        v();
+                        b();
                     }, 200)));
             else {
                 let e = n();
@@ -95,7 +96,7 @@ function S(e) {
             return () => {
                 null != g.current && (clearInterval(g.current), (g.current = null));
             };
-        }, [c, d, S, r, v, j, b, n]));
+        }, [c, d, S, r, b, j, v, n]));
     let M = (0, m.useCallback)(() => {
             let e = n();
             if (null != r && null != e) {

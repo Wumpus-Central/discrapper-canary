@@ -46,8 +46,8 @@ var T = n(777334),
     D = n(280450),
     v = n(760751),
     b = n(32584),
-    M = n(174459),
-    P = n(19575),
+    P = n(174459),
+    M = n(19575),
     U = n(9302),
     w = n(899699),
     G = n(652215);
@@ -297,7 +297,7 @@ let en = "none",
             Q.error(n);
             let i = ee((0, U.getPID)());
             (et((0, U.getPID)(), { ...i, error_description: n, success: !1 }),
-                M.default.track(G.HAw.OVERLAY_HOOK_RESULT, ee((0, U.getPID)())));
+                P.default.track(G.HAw.OVERLAY_HOOK_RESULT, ee((0, U.getPID)())));
         },
         timeoutMs: 18e4,
     });
@@ -324,7 +324,7 @@ function ea(e, t) {
                             for (let t of (Q.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
                                 if (null == t) continue;
                                 let e = null != t.processName ? v.A.getGameByExecutable(t.processName) : null;
-                                M.default.track(G.HAw.OVERLAY_HOOK_CRASHED, {
+                                P.default.track(G.HAw.OVERLAY_HOOK_CRASHED, {
                                     process_name: t?.processName,
                                     game_name: e?.name ?? null,
                                     game_id: e?.id ?? null,
@@ -345,7 +345,7 @@ function ea(e, t) {
 }
 async function es(e) {
     try {
-        if (P.Ay.supportsFeature(G.BYE.CREATE_HOST_ON_ATTACH))
+        if (M.Ay.supportsFeature(G.BYE.CREATE_HOST_ON_ATTACH))
             if (B.size > 0) {
                 en = "reconcile.getOverlayURL";
                 let t = await e_();
@@ -530,7 +530,7 @@ function eh(e, t, n) {
             height: n.graphics_height,
         }));
     let a = ee(e);
-    (M.default.track(G.HAw.OVERLAY_HOOK_RESULT, a),
+    (P.default.track(G.HAw.OVERLAY_HOOK_RESULT, a),
         Q.info(`Overlay connection to ${e} ${t ? "succeeded" : "failed"}`, a),
         t
             ? (d.A.updateOverlayState(e, g.AR.OVERLAY_RENDERING, "onConnectComplete"), ea(e, "CONNECTED", "CONNECTING"))
@@ -748,7 +748,7 @@ let eC = new eN(
                       let { port: t } = e;
                       K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "13477151af04b2c3ded96f43fb907fdd110347f9"),
+                      (n.append("build_id", "859c5e5d84d23867602003246804786a3a73a22f"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", K),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));

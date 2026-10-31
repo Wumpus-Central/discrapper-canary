@@ -1,4 +1,4 @@
-e.d(r, { X$: () => o, pT: () => a });
+e.d(r, { X$: () => o, pT: () => a, qb: () => u });
 var n = e(477900),
     i = e(582128);
 let u = i.createContext(null);
@@ -8,10 +8,25 @@ function o() {
     return t;
 }
 function a(t) {
-    let { children: r, activeLayer: e, isFullscreen: o, isActive: a, isControlBarExpanded: s, videoRef: d } = t,
-        l = i.useMemo(
-            () => ({ activeLayer: e, isFullscreen: o, isActive: a, isControlBarExpanded: s, videoRef: d }),
-            [e, o, a, s, d],
+    let {
+            children: r,
+            activeLayer: e,
+            isFullscreen: o,
+            isActive: a,
+            isControlBarExpanded: s,
+            controlBarConfig: d,
+            videoRef: l,
+        } = t,
+        c = i.useMemo(
+            () => ({
+                activeLayer: e,
+                isFullscreen: o,
+                isActive: a,
+                isControlBarExpanded: s,
+                controlBarConfig: d,
+                videoRef: l,
+            }),
+            [e, o, a, s, d, l],
         );
-    return (0, n.jsx)(u.Provider, { value: l, children: r });
+    return (0, n.jsx)(u.Provider, { value: c, children: r });
 }

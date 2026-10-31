@@ -1,0 +1,67 @@
+n.d(t, { $7: () => l, X4: () => a, Xq: () => o, ZH: () => u });
+var r = n(876230);
+let l = 400,
+    i = {
+        barHeightPx: 64,
+        footerHorizontalPaddingPx: 20,
+        footerBottomPx: 4,
+        scrimHeightPx: 121,
+        controlsGapPx: 16,
+        midGroupGapPx: 8,
+        durationMarginPx: 3,
+        trailingGroupWidthPx: 200,
+        timelineVerticalPaddingPx: 20,
+        timelineHeightPx: 4,
+        hoverTimelineHeightPx: 4,
+        playheadSizePx: 12,
+        timelineHitboxOffsetPx: 0,
+        iconSize: "md",
+        buttonHeightPx: 24,
+        timeTextVariant: "text-sm/normal",
+        volumeSliderWidthPx: 100,
+        volumeSliderMarginStartPx: 6,
+        volumeSliderPaddingInlinePx: 0,
+        volumeGroupMarginEndPx: 0,
+        volumeFlexShrink: 1,
+    },
+    a = {
+        [r.oA.SM]: {
+            ...i,
+            barHeightPx: 40,
+            footerHorizontalPaddingPx: 12,
+            scrimHeightPx: 72,
+            controlsGapPx: 12,
+            trailingGroupWidthPx: null,
+            iconSize: "sm",
+            volumeSliderWidthPx: 48,
+        },
+        [r.oA.MD]: { ...i },
+        [r.oA.LG]: { ...i, barHeightPx: 72, iconSize: "lg", buttonHeightPx: 32 },
+    },
+    o = {
+        size: r.oA.SM,
+        overrides: {
+            barHeightPx: 32,
+            footerHorizontalPaddingPx: 4,
+            footerBottomPx: 2,
+            scrimHeightPx: 48,
+            controlsGapPx: 4,
+            midGroupGapPx: 4,
+            durationMarginPx: 0,
+            timelineVerticalPaddingPx: 4,
+            timelineHeightPx: 2,
+            hoverTimelineHeightPx: 4,
+            playheadSizePx: 8,
+            timelineHitboxOffsetPx: -12,
+            timeTextVariant: "text-xs/normal",
+            volumeSliderMarginStartPx: 4,
+            volumeSliderPaddingInlinePx: 4,
+            volumeGroupMarginEndPx: 6,
+            volumeFlexShrink: 0,
+        },
+    };
+function u(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        l = n ? r.oA.LG : (t?.size ?? e);
+    return { size: l, config: { ...a[l], ...(!n ? t?.overrides : void 0) } };
+}

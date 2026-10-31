@@ -1,4 +1,4 @@
-(i.d(t, { Cr: () => T, I1: () => E, Nj: () => P, UB: () => N, SX: () => b, R6: () => L }), i(938796));
+(i.d(t, { Cr: () => E, I1: () => w, Nj: () => z, UB: () => j, SX: () => L, R6: () => N }), i(938796));
 var n = i(477900),
     a = i(582128),
     l = i(448761),
@@ -10,32 +10,33 @@ var o = i(682176),
     c = i(925056),
     u = i(678917),
     m = i(534531),
-    h = i(777501),
-    p = i(174459),
-    g = i(652215),
-    S = i(644447),
-    A = i(515718),
-    _ = i(587481),
-    f = i(998218),
-    y = i(869938),
-    I = i(465856),
-    C = i(44788),
-    v = i(447991),
-    x = i(838541),
-    M = i(516653),
-    k = i(105292);
-function T(e) {
+    h = i(530567),
+    p = i(777501),
+    g = i(174459),
+    S = i(652215),
+    A = i(644447),
+    _ = i(515718),
+    f = i(587481),
+    y = i(998218),
+    I = i(869938),
+    C = i(465856),
+    v = i(44788),
+    x = i(447991),
+    M = i(838541),
+    k = i(516653),
+    T = i(105292);
+function E(e) {
     let t = e.item.originalItem;
-    return (0, C.LL)({
+    return (0, v.LL)({
         ...e,
         alt: t.description,
-        src: (0, S.E)({ proxyURL: t.proxy_url, url: t.url }),
+        src: (0, A.E)({ proxyURL: t.proxy_url, url: t.url }),
         original: t.url,
         placeholder: t.placeholder,
         placeholderVersion: t.placeholder_version,
         contentType: t.content_type,
         originalContentType: t.original_content_type,
-        srcIsAnimated: (0, r.Lt)(t.flags ?? 0, g.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, r.Lt)(t.flags ?? 0, S.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: t.id, filename: t.filename, title: t.title, size: t.size },
@@ -43,10 +44,10 @@ function T(e) {
         analyticsSource: "ImageComponentForMessageAttachment",
     });
 }
-function E(e) {
+function w(e) {
     let t = e.item.originalItem,
-        i = (0, r.Lt)(t.flags ?? 0, g.sbO.IS_CLIP),
-        a = f.A.toURLSafe(t.proxy_url);
+        i = (0, r.Lt)(t.flags ?? 0, S.sbO.IS_CLIP),
+        a = y.A.toURLSafe(t.proxy_url);
     return null == a
         ? null
         : (a.searchParams.append("format", "webp"), i)
@@ -59,86 +60,88 @@ function E(e) {
                         channelId: e.message.channel_id,
                         className: e.className,
                         embed: !0,
-                        volume: (0, _.GD)(),
-                        autoMute: (0, _.uj)(),
+                        volume: (0, f.GD)(),
+                        autoMute: (0, f.uj)(),
                         messageId: e.message.id,
                         fillContainer: !e.isSingleMosaicItem,
                         onClick: e.onClick ?? void 0,
                         onSeekRequest: e.onSeekRequest,
                         onContextMenu: e.onContextMenu ?? void 0,
                         maxWidth: e.maxWidth,
-                        maxHeight: e.maxHeight ?? x.Rk,
+                        maxHeight: e.maxHeight ?? M.Rk,
                         showParticipants: e.isSingleMosaicItem,
                         allowFullScreen: e.allowFullScreen,
                         onPlay: e.onPlay ?? void 0,
-                        onVolumeChange: _.oc,
-                        onMutedChange: _.y5,
+                        onVolumeChange: f.oc,
+                        onMutedChange: f.y5,
                     }),
                     e.renderAdjacentContent?.(),
                 ],
             })
-          : (0, M.T)(e.naturalWidth, e.naturalHeight)
-            ? (0, n.jsx)(z, { attachmentProps: e, posterUrl: a.toString() })
-            : w(e, a.toString());
+          : (0, k.T)(e.naturalWidth, e.naturalHeight)
+            ? (0, n.jsx)(b, { attachmentProps: e, posterUrl: a.toString() })
+            : P(e, a.toString());
 }
-function w(e, t) {
+function P(e, t) {
     let i = e.item.originalItem;
-    return (0, C.$o)({
+    return (0, v.$o)({
         ...e,
         showPlaybackSpeedControl: !0,
         alt: i.description,
         poster: t,
         fileSize: i.size,
-        fileName: (0, I.A)(i),
+        fileName: (0, C.A)(i),
         src: i.url,
         placeholder: i.placeholder,
         placeholderVersion: i.placeholder_version,
-        srcIsAnimated: (0, r.Lt)(i.flags ?? 0, g.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, r.Lt)(i.flags ?? 0, S.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: i.id, filename: i.filename, size: i.size },
         },
     });
 }
-function z(e) {
+function b(e) {
     let { attachmentProps: t, posterUrl: i } = e,
-        a = t.item.originalItem,
-        { useDiscordVideoPlayer: l } = (0, h.r)({ location: "VideoComponentForMessageAttachment" });
-    if (l) {
+        [l, r] = a.useState(!1),
+        o = t.item.originalItem,
+        { useDiscordVideoPlayer: d } = (0, p.r)({ location: "VideoComponentForMessageAttachment" });
+    if (d) {
         let e,
-            l,
-            r,
-            o,
+            a,
             d,
-            h = null != a.width && null != a.height && a.height > a.width ? "portrait" : "landscape",
-            p = !0 === t.isSingleMosaicItem,
-            g = "portrait" === h,
-            S = null != a.description && "" !== a.description ? a.description : k.intl.string(k.t.FlNoSV),
-            { width: f, height: y } =
-                ((e = t.maxWidth ?? x.k6),
-                (l = t.maxHeight ?? x.Rk),
-                (r = e >= 240 && l >= 180),
-                (0, A.Uj)({
+            p,
+            g,
+            S = null != o.width && null != o.height && o.height > o.width ? "portrait" : "landscape",
+            A = !0 === t.isSingleMosaicItem,
+            y = "portrait" === S,
+            I = null != o.description && "" !== o.description ? o.description : T.intl.string(T.t.FlNoSV),
+            { width: C, height: k } =
+                ((e = t.maxWidth ?? M.k6),
+                (a = t.maxHeight ?? M.Rk),
+                (d = e >= 240 && a >= 180),
+                (0, _.Uj)({
                     width: t.width ?? 0,
                     height: t.height ?? 0,
                     maxWidth: e,
-                    maxHeight: l,
-                    minWidth: 240 * !!r,
-                    minHeight: 180 * !!r,
+                    maxHeight: a,
+                    minWidth: 240 * !!d,
+                    minHeight: 180 * !!d,
                 })),
-            I =
-                ((o = t.width ?? 0),
-                (d = t.height ?? 0),
-                o <= 0 || d <= 0 || f <= 0 || y <= 0
+            E = C < h.$7 && !l,
+            w =
+                ((p = t.width ?? 0),
+                (g = t.height ?? 0),
+                p <= 0 || g <= 0 || C <= 0 || k <= 0
                     ? i
                     : (0, s.AE)({
                           src: i,
-                          width: o,
-                          height: d,
-                          ratio: (0, A.U8)({ width: o, height: d, maxWidth: f, maxHeight: y }),
+                          width: p,
+                          height: g,
+                          ratio: (0, _.U8)({ width: p, height: g, maxWidth: C, maxHeight: k }),
                       })),
-            M = (0, C.Ir)({
-                alt: a.description,
+            P = (0, v.Ir)({
+                alt: o.description,
                 disableAltTextDisplay: t.disableAltTextDisplay,
                 hiddenSpoilers: t.hiddenSpoilers,
             })
@@ -149,48 +152,49 @@ function z(e) {
                 (0, n.jsxs)("div", {
                     className: t.className ?? void 0,
                     style: {
-                        width: f,
-                        height: y,
+                        width: C,
+                        height: k,
                         position: "relative",
                         display: "flex",
-                        "--custom-top-start-overlay-top": M,
+                        "--custom-top-start-overlay-top": P,
                     },
                     onContextMenu: t.onContextMenu ?? void 0,
                     children: [
-                        (0, n.jsx)(v.A, {
+                        (0, n.jsx)(x.A, {
                             crossOrigin: null,
-                            alt: S,
-                            src: a.url,
-                            poster: I,
-                            fileSizeBytes: a.size,
+                            alt: I,
+                            src: o.url,
+                            poster: w,
+                            fileSizeBytes: o.size,
                             mimeType: t.mimeType?.join("/"),
                             initialActive: !1,
                             playable: t.playable,
                             autoplay: t.autoPlay,
-                            initialVolume: (0, _.v1)(),
-                            initialMuted: (0, _.uj)(),
-                            getInitialVolume: _.v1,
-                            getInitialMuted: _.uj,
-                            orientation: h,
+                            initialVolume: (0, f.v1)(),
+                            initialMuted: (0, f.uj)(),
+                            getInitialVolume: f.v1,
+                            getInitialMuted: f.uj,
+                            orientation: S,
                             minWidth: 0,
                             minHeight: 0,
                             parentTransitionState: null,
                             onPlay: t.onPlay ?? void 0,
-                            onVolumeChange: _.ls,
-                            onMutedChange: _.y5,
+                            onVolumeChange: f.ls,
+                            onMutedChange: f.y5,
                             onClick: t.onClick ?? void 0,
                             renderOverlay: t.renderOverlayContent ?? void 0,
                             hideFullScreenBtn: !(t.allowFullScreen ?? !0),
-                            hideSkipButtons: !p,
-                            compactTimeDisplay: !p || g,
-                            autoHideVolumeSlider: !p || g,
-                            floatingVolumeSlider: p && g,
-                            hidePlaybackSpeedBtn: !!p && !!g && "inline",
-                            autoSizeControlBar: !0,
-                            renderTopStartOverlay: (0, m.PR)((0, u.o)(a, t.message), c.u.MOSAIC),
+                            hideSkipButtons: !A,
+                            compactTimeDisplay: !A || y || E,
+                            autoHideVolumeSlider: !A || y,
+                            floatingVolumeSlider: (A && y) || E,
+                            hidePlaybackSpeedBtn: !!A && !!y && "inline",
+                            controlBarConfig: h.Xq,
+                            onFullscreenChange: r,
+                            renderTopStartOverlay: (0, m.PR)((0, u.o)(o, t.message), c.u.MOSAIC),
                         }),
-                        (0, n.jsx)(C._z, {
-                            alt: a.description,
+                        (0, n.jsx)(v._z, {
+                            alt: o.description,
                             disableAltTextDisplay: t.disableAltTextDisplay,
                             hiddenSpoilers: t.hiddenSpoilers,
                             reducedSizeAltTextButton: t.reducedSizeAltTextButton,
@@ -201,13 +205,13 @@ function z(e) {
             ],
         });
     }
-    return w(t, i);
+    return P(t, i);
 }
-function P(e) {
+function z(e) {
     let t = e.item.originalItem;
-    return (0, C.gL)({ ...e, fileSize: t.size, fileName: (0, I.A)(t), src: t.url });
+    return (0, v.gL)({ ...e, fileSize: t.size, fileName: (0, C.A)(t), src: t.url });
 }
-function b(e) {
+function L(e) {
     let { message: t, item: i } = e,
         n = i.originalItem,
         l = (0, d.dx)(d.k0.VOICE_MESSAGE, n.id),
@@ -217,7 +221,7 @@ function b(e) {
                 ((l = t.id),
                     (r = n.duration_secs ?? null),
                     (o = t.author.id),
-                    p.default.track(g.HAw.VOICE_MESSAGE_PLAYBACK_STARTED, {
+                    g.default.track(S.HAw.VOICE_MESSAGE_PLAYBACK_STARTED, {
                         message_id: l,
                         total_duration_secs: r,
                         start_duration_secs: Math.min(r ?? i, i),
@@ -232,7 +236,7 @@ function b(e) {
                 ((a = t.id),
                     (l = n.duration_secs ?? null),
                     (r = t.author.id),
-                    p.default.track(g.HAw.VOICE_MESSAGE_PLAYBACK_ENDED, {
+                    g.default.track(S.HAw.VOICE_MESSAGE_PLAYBACK_ENDED, {
                         message_id: a,
                         total_duration_secs: l,
                         end_duration_secs: Math.min(l ?? e, e),
@@ -247,14 +251,14 @@ function b(e) {
                 var i, n;
                 ((i = t.id),
                     (n = e?.message ?? null),
-                    p.default.track(g.HAw.VOICE_MESSAGE_PLAYBACK_FAILED, { message_id: i, error_message: n }));
+                    g.default.track(S.HAw.VOICE_MESSAGE_PLAYBACK_FAILED, { message_id: i, error_message: n }));
             },
             [t],
         );
-    return (0, C.P$)({
+    return (0, v.P$)({
         ...e,
         fileSize: n.size,
-        fileName: (0, I.A)(n),
+        fileName: (0, C.A)(n),
         src: n.url,
         durationSecs: n.duration_secs,
         waveform: n.waveform,
@@ -264,18 +268,18 @@ function b(e) {
         playbackCacheKey: l,
     });
 }
-function L(e) {
+function N(e) {
     let t = e.item.originalItem,
         { message: i } = e;
-    return (0, C._d)({
+    return (0, v._d)({
         ...e,
         url: t.url,
-        fileName: (0, I.A)(t),
+        fileName: (0, C.A)(t),
         fileSize: t.size,
         contentType: t.content_type,
         defaultExpanded:
-            0 === (0, y.A)(i) &&
-            1 === i.attachments.filter((e) => !(0, r.Lt)(e.flags ?? 0, g.sbO.IS_THUMBNAIL)).length &&
+            0 === (0, I.A)(i) &&
+            1 === i.attachments.filter((e) => !(0, r.Lt)(e.flags ?? 0, S.sbO.IS_THUMBNAIL)).length &&
             0 === i.embeds.length &&
             0 === i.codedLinks.length &&
             0 === i.giftCodes.length &&
@@ -284,7 +288,7 @@ function L(e) {
             i.type !== l.l.INTERACTION_PREMIUM_UPSELL,
     });
 }
-function N(e) {
+function j(e) {
     let t = e.item.originalItem;
-    return (0, C.Dk)({ ...e, url: t.url, fileName: (0, I.A)(t), fileSize: t.size });
+    return (0, v.Dk)({ ...e, url: t.url, fileName: (0, C.A)(t), fileSize: t.size });
 }
