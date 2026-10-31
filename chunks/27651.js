@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "659636";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "659642";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 659636, Version Hash: caa19ee771988f8804bf05e30d025bab12075d18`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 659642, Version Hash: ed4f240b82684b000fd69252d3928c9041e34d40`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -4154,8 +4154,8 @@ let ry = (0, rl.Fe)({
                 n.e("843160"),
                 n.e("864905"),
                 n.e("334893"),
-            ]).then(n.bind(n, 334471)),
-        webpackId: 334471,
+            ]).then(n.bind(n, 361287)),
+        webpackId: 361287,
         name: "ConjurePage",
     });
 var rv = n(196765),
@@ -26091,7 +26091,7 @@ let yh = "isHideDevBanner",
                     className: tf()(yA.Wz, yA.mr),
                     children: [
                         (0, b.jsx)(yE, { className: yA.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "659636" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "659642" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
