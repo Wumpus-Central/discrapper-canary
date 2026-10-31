@@ -1,38 +1,39 @@
-s.d(r, { A: () => S });
-var t = s(477900),
-    a = s(582128),
-    d = s(503698),
-    n = s.n(d),
-    o = s(866665),
-    c = s(536637),
-    l = s.n(c),
-    p = s(927813),
-    f = s(379418);
-let u = [
-        [2 * p.A.Seconds.MINUTE, p.A.Seconds.SECOND],
-        [5 * p.A.Seconds.MINUTE, p.A.Seconds.MINUTE],
-        [45 * p.A.Seconds.MINUTE, 2 * p.A.Seconds.MINUTE],
-        [21 * p.A.Seconds.HOUR, 5 * p.A.Seconds.MINUTE],
+t.d(r, { A: () => S });
+var n = t(477900),
+    s = t(582128),
+    d = t(503698),
+    a = t.n(d),
+    o = t(866665),
+    c = t(536637),
+    u = t.n(c),
+    l = t(927813),
+    f = t(379418);
+let p = [
+        [2 * l.A.Seconds.MINUTE, l.A.Seconds.SECOND],
+        [5 * l.A.Seconds.MINUTE, l.A.Seconds.MINUTE],
+        [45 * l.A.Seconds.MINUTE, 2 * l.A.Seconds.MINUTE],
+        [21 * l.A.Seconds.HOUR, 5 * l.A.Seconds.MINUTE],
     ],
-    i = 2 * p.A.Seconds.HOUR;
-var A = s(165648);
+    i = 2 * l.A.Seconds.HOUR;
+var A = t(165648);
 function S(e) {
-    let { node: r, showTooltip: s = !0, className: d } = e,
+    let { node: r, showTooltip: t = !0, className: d } = e,
         c = (function (e) {
-            let [r, s] = a.useState(null);
-            return (a.useEffect(() => {
+            let [r, t] = s.useState(null);
+            return (s.useEffect(() => {
                 if ("R" !== e.format) return;
-                let r = 1e3 * i,
-                    t = Math.abs(e.parsed.diff(l()()));
-                for (let [e, s] of u)
-                    if (t < 1e3 * e) {
-                        r = 1e3 * s;
-                        break;
-                    }
-                let a = setInterval(() => {
-                    s({ parsed: e.parsed, formatted: f.kx.R(e.parsed) });
-                }, r);
-                return () => clearInterval(a);
+                let r = setInterval(
+                    () => {
+                        t({ parsed: e.parsed, formatted: f.kx.R(e.parsed) });
+                    },
+                    (function (e) {
+                        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u()(),
+                            t = Math.abs(e.diff(r));
+                        for (let [e, r] of p) if (t < 1e3 * e) return 1e3 * r;
+                        return 1e3 * i;
+                    })(e.parsed),
+                );
+                return () => clearInterval(r);
             }, [e.format, e.parsed]),
             "R" === e.format)
                 ? null != r && r.parsed === e.parsed
@@ -40,6 +41,6 @@ function S(e) {
                     : f.kx.R(e.parsed)
                 : e.formatted;
         })(r),
-        p = (0, t.jsx)("span", { className: n()(A.vE, d), children: c });
-    return !0 !== s ? p : (0, t.jsx)(o.m, { __unsupportedReactNodeAsText: r.full, ariaHidden: !0, children: p });
+        l = (0, n.jsx)("span", { className: a()(A.vE, d), children: c });
+    return !0 !== t ? l : (0, n.jsx)(o.m, { __unsupportedReactNodeAsText: r.full, ariaHidden: !0, children: l });
 }
