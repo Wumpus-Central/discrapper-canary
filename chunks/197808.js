@@ -28,8 +28,8 @@ var i = n(477900),
     D = n(403362),
     v = n(652215),
     b = n(5867),
-    M = n(806931),
-    P = n(165610),
+    P = n(806931),
+    M = n(165610),
     U = n(155819);
 let w = (0, a.Fe)({
         createPromise: () =>
@@ -127,7 +127,7 @@ let w = (0, a.Fe)({
                 n.e("593176"),
                 n.e("784103"),
                 n.e("509793"),
-                n.e("28047"),
+                n.e("698547"),
                 n.e("638114"),
                 n.e("911521"),
                 n.e("299086"),
@@ -136,15 +136,15 @@ let w = (0, a.Fe)({
                 n.e("584605"),
                 n.e("603432"),
                 n.e("983884"),
-                n.e("805095"),
+                n.e("28047"),
                 n.e("864905"),
                 n.e("816197"),
-            ]).then(n.bind(n, 520705)),
-        webpackId: 520705,
+            ]).then(n.bind(n, 690933)),
+        webpackId: 690933,
         name: "ConjureAppPictureInPictures",
     }),
     G = { [v.o1q.VIDEO]: C.A, [v.o1q.ACTIVITY]: E.A, [v.o1q.FRAME]: p.A },
-    x = { minWidth: M.mn[M.R8.VIDEO], maxWidth: M.cF[M.R8.VIDEO] },
+    x = { minWidth: P.mn[P.R8.VIDEO], maxWidth: P.cF[P.R8.VIDEO] },
     k = [];
 class F extends r.PureComponent {
     state = { selectedPIPWindowHeight: 0 };
@@ -205,7 +205,7 @@ class F extends r.PureComponent {
         o.tw(e, t);
     };
     handleWindowResize = (e) => {
-        o.EB(e, M.R8.VIDEO);
+        o.EB(e, P.R8.VIDEO);
     };
     handleWindowHeightChange = (e) => {
         this.setState({ selectedPIPWindowHeight: e });
@@ -221,9 +221,9 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         p = null != o && !(0, _.A)(E, O.A, L.Ay),
         T = d.Ay.getActivityPanelMode(),
         m = p && T === b.Gd.PANEL,
-        C = null != o && null != E && A.A.getSelectedParticipant(E)?.type === M.lp.ACTIVITY,
-        U = (0, P.ny)(f.A.getMainFrame()),
-        w = U?.data.layoutMode === P.y0.FOCUSED,
+        C = null != o && null != E && A.A.getSelectedParticipant(E)?.type === P.lp.ACTIVITY,
+        U = (0, M.ny)(f.A.getMainFrame()),
+        w = U?.data.layoutMode === M.y0.FOCUSED,
         G = null != n,
         x = G ? S.A.getWindow(n) : null,
         F = !!G && S.A.isWindowFullScreen(n),
@@ -241,7 +241,7 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
                     : (R.A.pipVideoWindow ?? R.A.pipActivityWindow ?? R.A.pipFrameWindow)
               : null;
     let H = Array.from(R.A.pipWindows.values()),
-        j = R.A.pipWidth(M.R8.VIDEO),
+        j = R.A.pipWidth(P.R8.VIDEO),
         W = H.find((e) => e.component === v.o1q.VIDEO),
         Y = H.find((e) => e.component === v.o1q.ACTIVITY),
         K = [W, Y, H.find((e) => e.component === v.o1q.FRAME)].filter(D.Vq),

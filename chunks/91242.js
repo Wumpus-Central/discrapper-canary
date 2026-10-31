@@ -127,6 +127,7 @@ let N = new S(r.h, {
                 orientationLock: null,
                 pipOrientationLock: null,
                 runsInBackground: !1,
+                pictureInPictureInteractive: !1,
                 poolVisibility: "unpooled",
                 muted: h,
                 userMuted: !1,
@@ -178,6 +179,10 @@ let N = new S(r.h, {
         let { frameId: t, enabled: n } = e;
         return I(t, (e) => ({ ...e, runsInBackground: n }));
     },
+    FRAME_SET_PICTURE_IN_PICTURE_INTERACTIVE: function (e) {
+        let { frameId: t, enabled: n } = e;
+        return I(t, (e) => ({ ...e, pictureInPictureInteractive: n }));
+    },
     FRAME_SET_PROXY_TICKET_REFRESHING: function (e) {
         let { frameId: t, refreshing: n } = e;
         return I(t, (e) => ({ ...e, proxyTicketRefreshing: n }));
@@ -218,7 +223,7 @@ let N = new S(r.h, {
         return p(
             t,
             (e) => e.iframeId !== n,
-            (e) => ({ ...e, iframeId: n, runsInBackground: !1, ...E }),
+            (e) => ({ ...e, iframeId: n, runsInBackground: !1, pictureInPictureInteractive: !1, ...E }),
         );
     },
     FRAME_IFRAME_UNMOUNT: function (e) {
@@ -226,7 +231,7 @@ let N = new S(r.h, {
         return p(
             t,
             (e) => e.iframeId === n,
-            (e) => ({ ...e, iframeId: null, runsInBackground: !1, ...E }),
+            (e) => ({ ...e, iframeId: null, runsInBackground: !1, pictureInPictureInteractive: !1, ...E }),
         );
     },
     FRAME_HOST_WINDOW_MOUNT: function (e) {

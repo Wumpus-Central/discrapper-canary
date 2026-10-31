@@ -9,6 +9,7 @@ _.exports = {
     JB: "appName__50601",
     FS: "toolbarButtons__50601",
     VH: "preview__50601",
+    bG: "interactive__50601",
     GL: "frameLens__50601",
     Z7: "frameTarget__50601",
     bW: "lensChrome__50601",

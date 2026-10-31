@@ -1,19 +1,21 @@
 (n.r(t),
     n.d(t, {
-        promoteFrame: () => m,
-        launchFrame: () => I,
-        resetFrameLayoutModes: () => O,
-        demoteMainFrame: () => T,
-        refreshProxyTicket: () => v,
-        attachFrameIframe: () => R,
-        attachFrameHostWindow: () => y,
-        detachFrameHostWindow: () => D,
-        setFrameUserMuted: () => N,
-        detachFrameIframe: () => L,
-        setFrameRunsInBackground: () => S,
+        setFramePictureInPictureInteractive: () => N,
+        refreshProxyTicket: () => P,
         updateFrameLayoutMode: () => g,
-        updateFramePanelMode: () => C,
+        detachFrameHostWindow: () => b,
+        setFrameUserMuted: () => O,
+        resetFrameGuestClaims: () => C,
+        detachFrameIframe: () => D,
+        setFrameRunsInBackground: () => S,
+        updateFramePanelMode: () => R,
         clearMainFrameSlot: () => p,
+        launchFrame: () => I,
+        resetFrameLayoutModes: () => L,
+        demoteMainFrame: () => T,
+        attachFrameIframe: () => y,
+        attachFrameHostWindow: () => v,
+        promoteFrame: () => m,
     }));
 var i = n(73153),
     r = n(730602),
@@ -97,7 +99,7 @@ function p() {
     null != e && (e.intent === A.sV.MAIN ? (0, E.r)(e.id) : T(e.id));
 }
 function T(e) {
-    _.A.getMainFrame()?.id === e && (O(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
+    _.A.getMainFrame()?.id === e && (L(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
 }
 function m(e) {
     null != _.A.getFrame(e) &&
@@ -114,27 +116,33 @@ function S(e, t) {
     i.h.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: e, enabled: t });
 }
 function N(e, t) {
+    i.h.dispatch({ type: "FRAME_SET_PICTURE_IN_PICTURE_INTERACTIVE", frameId: e, enabled: t });
+}
+function C(e) {
+    (S(e, !1), N(e, !1));
+}
+function O(e, t) {
     i.h.dispatch({ type: "FRAME_SET_USER_MUTED", frameId: e, muted: t });
 }
-function C(e, t) {
+function R(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
-function O(e) {
-    (g({ frameId: e, layoutMode: A.y0.FOCUSED }), C(e, h.Gd.PANEL));
-}
-function R(e, t) {
-    i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
-}
-function L(e, t) {
-    i.h.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId: e, iframeId: t });
+function L(e) {
+    (g({ frameId: e, layoutMode: A.y0.FOCUSED }), R(e, h.Gd.PANEL));
 }
 function y(e, t) {
-    i.h.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId: e, windowKey: t });
+    i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
 }
 function D(e, t) {
+    i.h.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId: e, iframeId: t });
+}
+function v(e, t) {
+    i.h.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId: e, windowKey: t });
+}
+function b(e, t) {
     i.h.dispatch({ type: "FRAME_HOST_WINDOW_UNMOUNT", frameId: e, windowKey: t });
 }
-async function v(e) {
+async function P(e) {
     let t = _.A.getFrame(e);
     if (null == t) return !1;
     let { applicationId: n, surface: s } = t,
