@@ -43,4 +43,11 @@
     text-align: center
 }
 
-/*# sourceMappingURL=0643a128cc94f79e.css.map*/
+.footer__9bf82 {
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex: 0 0 auto;
+    padding: var(--space-12) var(--space-16)
+}
+
+/*# sourceMappingURL=5f615632e49dd015.css.map*/
