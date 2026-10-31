@@ -72,17 +72,26 @@
     color: var(--text-muted)
 }
 
-.creator__8d39c {
+.captionWithIcon__8d39c {
     align-items: center;
     display: flex;
     gap: var(--space-4)
 }
 
-.creatorAvatar__8d39c {
+.captionIcon__8d39c {
     flex: none
 }
 
-.creatorName__8d39c {
+.userIconWrapper__8d39c {
+    align-items: center;
+    display: flex;
+    flex: none;
+    height: var(--space-16);
+    justify-content: center;
+    width: var(--space-16)
+}
+
+.captionLabel__8d39c {
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis
@@ -163,4 +172,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=6ef40de270111847.css.map*/
+/*# sourceMappingURL=31d303863b2d0a20.css.map*/
