@@ -34,10 +34,10 @@ var i = n(477900),
     w = n(56129),
     G = n(824613),
     x = n(51250),
-    k = n(818023),
-    F = n(5867),
-    B = n(652215),
-    V = n(806931),
+    k = n(5867),
+    F = n(652215),
+    B = n(806931),
+    V = n(917550),
     H = n(411801),
     j = n(967481),
     W = n(969426);
@@ -78,8 +78,8 @@ function Y(e) {
         { enabled: es } = (0, g.mf)({ guildId: ea ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
         el = (0, l.bG)([m.A], () => null != er && m.A.isVisible(er), [er]),
         eo = ei && es && el,
-        ed = ei && ee?.type !== V.lp.ACTIVITY,
-        ec = !ei && K === F.Gd.PIP,
+        ed = ei && ee?.type !== B.lp.ACTIVITY,
+        ec = !ei && K === k.Gd.PIP,
         eu = (!en || (en && (ed || ec || eo) && null == q)) && !Z,
         e_ = eu && null != O.A.pipVideoWindow && null != O.A.pipActivityWindow;
     function eE() {
@@ -90,7 +90,7 @@ function Y(e) {
                     (0, f.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                 ),
                 eo && (0, T.UV)(!0, t.id));
-            let e = t.getGuildId() ?? B.ME;
+            let e = t.getGuildId() ?? F.ME;
             (u.A.channelListScrollTo(e, t.id), (0, S.uh)(e, t.id));
         }
         null == Q && (0, _.bz)();
@@ -101,7 +101,7 @@ function Y(e) {
     if (
         (r.useEffect(() => {
             if (null != b) {
-                let e = eu ? k.bN.PIP : k.bN.FOCUSED;
+                let e = eu ? V.b.PIP : V.b.FOCUSED;
                 d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: b });
             }
         }, [b, eu]),
@@ -132,7 +132,7 @@ function Y(e) {
                         className: "theme-dark",
                         children: (function (e) {
                             let { onActive: n, onForceIdle: r, idle: s, isActivityInTextChannel: l, users: o } = e;
-                            return eu && null != A && (J?.type === V.lp.ACTIVITY || l)
+                            return eu && null != A && (J?.type === B.lp.ACTIVITY || l)
                                 ? A.config?.useInteractivePIP
                                     ? (0, i.jsx)(w.tM, {
                                           onJumpToChannel: eE,
@@ -154,7 +154,7 @@ function Y(e) {
                                             onMouseDown: n,
                                             onMouseLeave: r,
                                             onJumpToChannel: () => {
-                                                (eE(), (0, y.gk)(F.Gd.PANEL));
+                                                (eE(), (0, y.gk)(k.Gd.PANEL));
                                             },
                                             channel: t,
                                             applicationId: A.applicationId,

@@ -19,10 +19,10 @@ var i = n(991690),
     m = n(366430),
     g = n(165610),
     S = n(652215),
-    N = n(818023),
+    N = n(917550),
     C = n(105292);
 async function O(e) {
-    let { application: t, userId: n, activity: s, sessionId: l, channelId: h, messageId: f, intent: O = N.W9.PLAY } = e,
+    let { application: t, userId: n, activity: s, sessionId: l, channelId: h, messageId: f, intent: O = N.W.PLAY } = e,
         y = t.id;
     null != l && r.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: y });
     let D = s ?? (null != l ? { application_id: y, session_id: l } : null),

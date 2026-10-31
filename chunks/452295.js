@@ -215,15 +215,15 @@ async function er(e, t) {
     });
 }
 var ea = n(59636),
-    es = n(912851),
-    el = n(818023);
-let eo = (0, n(403362).iT)() ? void 0 : window.GLOBAL_ENV.CDN_HOST;
-function ed(e, t) {
-    return null != eo ? `https://${eo}${e}` : t;
+    es = n(912851);
+let el = (0, n(403362).iT)() ? void 0 : window.GLOBAL_ENV.CDN_HOST;
+function eo(e, t) {
+    return null != el ? `https://${el}${e}` : t;
 }
-let ec = ed("/detectables/games.json", J.Rsh.GAMES_DETECTABLE),
-    eu = ed("/detectables/non-games.json", J.Rsh.NON_GAMES_DETECTABLE);
-var e_ = n(105292);
+let ed = eo("/detectables/games.json", J.Rsh.GAMES_DETECTABLE),
+    ec = eo("/detectables/non-games.json", J.Rsh.NON_GAMES_DETECTABLE);
+var eu = n(917550),
+    e_ = n(105292);
 let eE = new A.A("GamesActionCreators");
 function eA(e) {
     let {
@@ -231,7 +231,7 @@ function eA(e) {
         secret: n,
         joinUrl: i,
         channelId: r,
-        intent: a = el.W9.PLAY,
+        intent: a = eu.W.PLAY,
         embedded: s = !1,
         source: l,
         locationObject: o,
@@ -445,7 +445,7 @@ let eI = {
         let e = m.A.detectableGamesEtag;
         (d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
             R.A.get({
-                url: null != eo ? `https://${eo}/detectables/games-v1.json` : ec,
+                url: null != el ? `https://${el}/detectables/games-v1.json` : ed,
                 headers: { "If-None-Match": e },
                 retries: 1,
                 oldFormErrors: !0,
@@ -511,7 +511,7 @@ let eI = {
         let e = h.A.etag;
         (d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
             R.A.get({
-                url: null != eo ? `https://${eo}/detectables/non-games-v1.json` : eu,
+                url: null != el ? `https://${el}/detectables/non-games-v1.json` : ec,
                 headers: { "If-None-Match": e },
                 retries: 1,
                 trackedActionData: {
@@ -560,7 +560,7 @@ let eI = {
             applicationId: i,
             channelId: r,
             messageId: a,
-            intent: s = el.W9.PLAY,
+            intent: s = eu.W.PLAY,
             embedded: l = !1,
             source: o,
             locationObject: c,
