@@ -444,6 +444,13 @@
     width: 1280px
 }
 
+.pill__04ebc {
+    border-radius: var(--radius-round);
+    display: inline-flex;
+    flex: 0 0 auto;
+    margin-inline-start: var(--space-8)
+}
+
 .channelView_ea14bc {
     flex: 1;
     flex-direction: row;
@@ -525,4 +532,4 @@
     display: none
 }
 
-/*# sourceMappingURL=dceee0f7f8b51ec4.css.map*/
+/*# sourceMappingURL=e48d478d14659d95.css.map*/

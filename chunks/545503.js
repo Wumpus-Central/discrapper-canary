@@ -118,7 +118,7 @@ async function b(e) {
     let n = t.response.results[0]?.value?.events;
     return Array.isArray(n) ? n.slice(-200) : [];
 }
-async function M(e, t) {
+async function P(e, t) {
     let n = v(),
         i = (function (e) {
             try {
@@ -167,7 +167,7 @@ async function M(e, t) {
         R === r && (R = null);
     }
 }
-function P(e, t) {
+function M(e, t) {
     return { status: "completed", response: { ok: e.ok, results: [e], ...("" === t ? {} : { build: t }) } };
 }
 async function U(e, t, n) {
@@ -180,10 +180,10 @@ async function U(e, t, n) {
             return "cdp" !== t.action || !Array.isArray(n) || 0 === n.length || n.length > 200 ? null : n;
         })(n);
     if (null == r || null == a) return null;
-    let s = await M(e, t);
+    let s = await P(e, t);
     if (null == s) return null;
     if ("cancelled" === s)
-        return P({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: 0 }, "");
+        return M({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: 0 }, "");
     let l = Date.now(),
         o = null != r.onInput;
     o && (0, N.W8)(e, t);
@@ -195,13 +195,13 @@ async function U(e, t, n) {
             n = Date.now() - l;
         if ("timeout" === t)
             return (
-                w(e), P({ action: "cdp", ok: !1, code: "timeout", message: "the batch ran out of time", ms: n }, "")
+                w(e), M({ action: "cdp", ok: !1, code: "timeout", message: "the batch ran out of time", ms: n }, "")
             );
         if (t.stopped)
-            return P({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: n }, t.build);
+            return M({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: n }, t.build);
         let i = [...s.earlierEvents.splice(0), ...t.events],
             o = { replies: t.replies, url: t.url, title: t.title, doc: t.doc, ...(i.length > 0 ? { events: i } : {}) };
-        return P({ action: "cdp", ok: !0, value: o, ms: n }, t.build);
+        return M({ action: "cdp", ok: !0, value: o, ms: n }, t.build);
     } catch (t) {
         return (w(e), { status: "failed", message: t instanceof Error ? t.message : "the preview debugger failed" });
     } finally {
@@ -327,7 +327,7 @@ async function q(e, t, i) {
             n.e("471043"),
             n.e("352456"),
             n.e("422037"),
-            n.e("306490"),
+            n.e("706006"),
             n.e("97430"),
             n.e("587618"),
             n.e("424199"),
@@ -567,7 +567,7 @@ let J = {
                 let t = { cancelled: !1 };
                 (L.set(e, t),
                     (0, S.o$)(e, 6e3)
-                        .then((n) => (null == n || t.cancelled ? null : M(e, n)))
+                        .then((n) => (null == n || t.cancelled ? null : P(e, n)))
                         .catch(() => {})
                         .finally(() => {
                             L.get(e) === t && L.delete(e);
