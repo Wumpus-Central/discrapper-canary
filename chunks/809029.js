@@ -1,4 +1,4 @@
-n.d(t, { E: () => A });
+n.d(t, { E: () => I });
 var l = n(477900),
     i = n(582128),
     r = n(403581),
@@ -10,93 +10,34 @@ var l = n(477900),
     d = n(24482),
     m = n(615396),
     p = n(448910),
-    h = n(463376),
-    C = n(558620),
-    f = n(912195),
-    E = n(652215),
-    S = n(758476),
-    g = n(105292);
-class I {
+    C = n(463376),
+    h = n(558620),
+    f = n(281044),
+    E = n(758476),
+    S = n(105292);
+class g {
     isTrial;
     isGift;
-    selectedPlan;
-    premiumSubscription;
-    planGroup;
-    isPrepaidPaymentSource;
-    isInPastDueCheckout;
-    constructor({
-        isTrial: e,
-        isGift: t,
-        selectedPlan: n,
-        premiumSubscription: l,
-        planGroup: i,
-        isPrepaidPaymentSource: r,
-        isInPastDueCheckout: a,
-    }) {
-        ((this.isTrial = e),
-            (this.isGift = t),
-            (this.selectedPlan = n),
-            (this.premiumSubscription = l),
-            (this.planGroup = i),
-            (this.isPrepaidPaymentSource = r),
-            (this.isInPastDueCheckout = a));
+    constructor({ isTrial: e, isGift: t }) {
+        ((this.isTrial = e), (this.isGift = t));
     }
     resolveDisabledPurchase(e, t) {
         let { paymentSource: n, invoicePreview: l } = t;
         return !(!e.disablePurchase && null != l && (this.isGift || !this.isTrial || null == n || n.canRedeemTrial()));
     }
-    resolveReviewButtonLabel() {
-        if (this.isGift) return g.intl.string(g.t.ouo4FK);
-        if (null != this.selectedPlan && (0, d.ys)(this.selectedPlan.id))
-            return this.isInPastDueCheckout
-                ? g.intl.string(S.default.LvcUx4)
-                : this.isPrepaidPaymentSource
-                  ? g.intl.string(g.t.cRCCJ3)
-                  : null != this.premiumSubscription
-                    ? this.premiumSubscription.isPausedAllowsResumeButNotUpdates
-                        ? g.intl.string(g.t.zpi5pg)
-                        : (0, m.Ge)(this.premiumSubscription, this.selectedPlan.id, this.planGroup)
-                          ? g.intl.string(g.t.IJI7yk)
-                          : g.intl.string(g.t.VPuTc5)
-                    : (0, d.ff)(null, this.selectedPlan);
-        return g.intl.string(g.t.YScQSF);
-    }
-    resolveTenantReviewButtonProps = (e) => {
-        let { onReviewButtonClick: t, loading: n, disabled: i, hasAcceptedTerms: a } = e,
-            s = this.resolveReviewButtonLabel();
-        return this.isTrial
-            ? {
-                  variant: "expressive",
-                  text: s,
-                  onClick: a ? t : E.tEg,
-                  loading: n,
-                  disabled: i,
-                  iconPosition: "start",
-                  icon: () => (0, l.jsx)(r.t, { color: "currentColor" }),
-                  dataTestId: a ? "purchase" : "submitButton",
-              }
-            : {
-                  variant: "active",
-                  text: this.resolveReviewButtonLabel(),
-                  dataTestId: "purchase",
-                  onClick: t,
-                  loading: n,
-                  disabled: i,
-              };
-    };
     resolveInternalState = (e, t) => ({ disablePurchase: this.resolveDisabledPurchase(e, t) });
 }
-function A(e) {
-    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: r } = (0, h.i)(),
+function I(e) {
+    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: I } = (0, C.i)(),
         {
-            activeSubscription: m,
-            isPremium: E,
-            isGift: S,
-            checkoutPriceOptions: g,
-            isInOneStepSubscriptionCheckout: A,
-            shouldDisallowPlanSelection: y,
-            verifiedTrialId: x,
-            effectivePlanGroup: P,
+            activeSubscription: A,
+            isPremium: y,
+            isGift: x,
+            checkoutPriceOptions: P,
+            isInOneStepSubscriptionCheckout: v,
+            shouldDisallowPlanSelection: _,
+            verifiedTrialId: T,
+            effectivePlanGroup: N,
         } = (0, f.t4)((n) => ({
             activeSubscription: n.activeSubscription,
             isPremium: n.get("isPremiumPurchase"),
@@ -107,71 +48,109 @@ function A(e) {
             verifiedTrialId: n.getVerifiedTrialId({ trialId: e.trialId }),
             effectivePlanGroup: n.getEffectivePlanGroup({ planGroup: e.planGroup }),
         })),
-        v = (0, C.A)(),
-        _ = null != e.openInvoiceId,
-        T = null == e.initialPlanId && null == e.subscriptionTier,
-        N = i.useMemo(() => !y && (A ? T && E : E), [A, T, E, y]),
-        { claimableRewards: b } = (0, a.Pv)(),
-        j = (0, u.px)(v, S, b),
-        R = e.handleStepChange,
-        O = i.useCallback(
+        b = (0, h.A)(),
+        j = null != e.openInvoiceId,
+        R = null == e.initialPlanId && null == e.subscriptionTier,
+        O = i.useMemo(() => !_ && (v ? R && y : y), [v, R, y, _]),
+        { claimableRewards: M } = (0, a.Pv)(),
+        L = (0, u.px)(b, x, M),
+        k = e.handleStepChange,
+        w = i.useCallback(
             () =>
-                A
-                    ? void R(s.pn.SKU_SELECT)
+                v
+                    ? void k(s.pn.SKU_SELECT)
                     : n
-                      ? void R(s.pn.ADD_PAYMENT_STEPS)
-                      : j
-                        ? void R(s.pn.SELECT_FREE_SKU)
-                        : R(s.pn.PLAN_SELECT),
-            [R, A, j, n],
+                      ? void k(s.pn.ADD_PAYMENT_STEPS)
+                      : L
+                        ? void k(s.pn.SELECT_FREE_SKU)
+                        : k(s.pn.PLAN_SELECT),
+            [k, v, L, n],
         ),
-        M = (0, d.J$)(g.paymentSourceId),
-        L = (0, h.R)({ hasOpenInvoice: _ ?? !1 }),
-        k = i.useMemo(
-            () =>
-                new I({
-                    isTrial: t,
-                    isGift: S,
-                    selectedPlan: v,
-                    premiumSubscription: m,
-                    planGroup: P,
-                    isPrepaidPaymentSource: M,
-                    isInPastDueCheckout: L,
-                }),
-            [S, v, m, P, M, t, L],
-        ),
-        w = null != m && !S,
-        D = i.useCallback(
+        D = (0, d.J$)(P.paymentSourceId),
+        U = (0, C.R)({ hasOpenInvoice: j ?? !1 }),
+        G = i.useMemo(() => new g({ isTrial: t, isGift: x }), [x, t]),
+        F = null != A && !x,
+        B = i.useCallback(
             (t) => {
                 let { handlePaymentSourceAdd: n } = t;
-                return w
+                return F
                     ? (0, l.jsx)(c.A, {
                           handlePaymentSourceAdd: n,
-                          planGroup: P,
-                          hasOpenInvoice: _,
-                          isInPastDueCheckout: L,
+                          planGroup: N,
+                          hasOpenInvoice: j,
+                          isInPastDueCheckout: U,
                       })
                     : (0, l.jsx)(o._, {
                           handlePaymentSourceAdd: n,
-                          handleStepChange: R,
-                          planGroup: P,
-                          verifiedTrialId: x,
+                          handleStepChange: k,
+                          planGroup: N,
+                          verifiedTrialId: T,
                           reviewWarningMessage: e.reviewWarningMessage,
                       });
             },
-            [w, P, x, e.reviewWarningMessage, _, L, R],
+            [F, N, T, e.reviewWarningMessage, j, U, k],
         ),
-        U = null != r ? r.id : void 0,
-        G = i.useMemo(() => ({ user_trial_offer_id: U }), [U]),
-        F = i.useMemo(() => ({ trialId: x, planGroup: P }), [x, P]);
+        H = null != I ? I.id : void 0,
+        W = i.useMemo(() => ({ user_trial_offer_id: H }), [H]),
+        V = i.useMemo(() => ({ trialId: T, planGroup: N }), [T, N]),
+        Y = i.useMemo(
+            () =>
+                (function (e) {
+                    let {
+                        isGift: t,
+                        selectedPlan: n,
+                        premiumSubscription: l,
+                        planGroup: i,
+                        isPrepaidPaymentSource: r,
+                        isInPastDueCheckout: a,
+                    } = e;
+                    if (t) return S.intl.string(S.t.ouo4FK);
+                    if (null != n && (0, d.ys)(n.id))
+                        return a
+                            ? S.intl.string(E.default.LvcUx4)
+                            : r
+                              ? S.intl.string(S.t.cRCCJ3)
+                              : null != l
+                                ? l.isPausedAllowsResumeButNotUpdates
+                                    ? S.intl.string(S.t.zpi5pg)
+                                    : (0, m.Ge)(l, n.id, i)
+                                      ? S.intl.string(S.t.IJI7yk)
+                                      : S.intl.string(S.t.VPuTc5)
+                                : (0, d.ff)(null, n);
+                    return S.intl.string(S.t.YScQSF);
+                })({
+                    isGift: x,
+                    selectedPlan: b,
+                    premiumSubscription: A,
+                    planGroup: N,
+                    isPrepaidPaymentSource: D,
+                    isInPastDueCheckout: U,
+                }),
+            [x, b, A, D, U, N],
+        ),
+        K = i.useMemo(
+            () =>
+                (function (e) {
+                    let { isTrial: t, buttonLabel: n } = e;
+                    return t
+                        ? {
+                              variant: "expressive",
+                              text: n,
+                              iconPosition: "start",
+                              icon: () => (0, l.jsx)(r.t, { color: "currentColor" }),
+                          }
+                        : { variant: "active", text: n, dataTestId: "purchase" };
+                })({ isTrial: t, buttonLabel: Y }),
+            [t, Y],
+        );
     return (0, l.jsx)(p.Y, {
         ...e,
-        isBackButtonEligible: N,
-        onFooterBackClick: O,
-        subscriptionMetadata: G,
-        customFooterProps: F,
-        renderStepBody: D,
-        resolveInternalState: k.resolveInternalState,
-        resolveTenantReviewButtonProps: k.resolveTenantReviewButtonProps,
+        isBackButtonEligible: O,
+        onFooterBackClick: w,
+        subscriptionMetadata: W,
+        customFooterProps: V,
+        renderStepBody: B,
+        resolveInternalState: G.resolveInternalState,
+        tenantProvidedReviewButtonProps: K,
     });
 }

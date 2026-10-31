@@ -6,7 +6,7 @@ var i = n(888751),
     a = n(400612),
     s = n(818824),
     o = n(25149),
-    u = n(912195);
+    u = n(281044);
 function c(e) {
     let {
             plan: t,
@@ -15,8 +15,8 @@ function c(e) {
             discriminatedInvoicePreview: d,
             overrideRenewalDate: m,
             fractionalPremiumInfo: p,
-            isInvoiceBilledImmediately: h = !0,
-            unifiedLegalType: C,
+            isInvoiceBilledImmediately: C = !0,
+            unifiedLegalType: h,
             discountOffer: f,
             subscriptionTrial: E,
         } = e,
@@ -30,7 +30,7 @@ function c(e) {
         y = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? A,
         x = (0, r.de)({
             overrideRenewalDate: m,
-            currentInvoice: h ? A : void 0,
+            currentInvoice: C ? A : void 0,
             renewalInvoice: y,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
@@ -41,7 +41,7 @@ function c(e) {
         }),
         _ = {
             purchaseButtonText: g,
-            totalDue: h ? A.total : 0,
+            totalDue: C ? A.total : 0,
             renewalPrice: P,
             multiPeriodDiscountAttributes: v,
             currency: A.currency,
@@ -50,7 +50,7 @@ function c(e) {
             startDate: x,
         };
     return (0, l.jsx)(o._P, {
-        variant: { type: C, ..._ },
+        variant: { type: h, ..._ },
         paymentSourceType: n,
         immediateDelivery: S,
         isExpressCheckout: I,

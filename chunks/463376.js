@@ -3,7 +3,7 @@ var l = n(582128),
     i = n(724651),
     r = n(732280),
     a = n(120700),
-    s = n(912195),
+    s = n(281044),
     o = n(652215),
     u = n(202541);
 function c() {
@@ -27,23 +27,23 @@ function c() {
         d = !n && !o && null != e,
         m = !!(d && null != c && u.kb[c.trialId].skus.includes(e) && !n),
         p = (0, i.O)(),
-        h =
+        C =
             null != e &&
             null != p &&
             null != p.discount &&
             null != p.discount.planIds &&
             p.discount.planIds.some((t) => u.hd[t].skuId === e),
-        C = !!(d && null != p && h);
+        h = !!(d && null != p && C);
     return l.useMemo(
         () => ({
             isPremium: t,
             isPremiumGroupPurchase: n,
             isEligibleForTrial: m,
-            isEligibleForDiscount: C,
+            isEligibleForDiscount: h,
             userTrialOffer: c,
             discountOffer: p,
         }),
-        [t, n, m, C, c, p],
+        [t, n, m, h, c, p],
     );
 }
 function d(e) {

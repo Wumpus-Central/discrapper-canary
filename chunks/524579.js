@@ -676,7 +676,7 @@ function eQ(e) {
                                                         n.e("198329"),
                                                         n.e("678157"),
                                                         n.e("942374"),
-                                                        n.e("147134"),
+                                                        n.e("513"),
                                                         n.e("331988"),
                                                         n.e("10866"),
                                                         n.e("236850"),
@@ -705,7 +705,7 @@ function eQ(e) {
                                                         n.e("532039"),
                                                         n.e("719466"),
                                                         n.e("675212"),
-                                                        n.e("413846"),
+                                                        n.e("468269"),
                                                         n.e("576909"),
                                                         n.e("27355"),
                                                         n.e("953665"),
@@ -746,14 +746,13 @@ function eQ(e) {
                                                         n.e("654282"),
                                                         n.e("538513"),
                                                         n.e("631573"),
-                                                        n.e("676797"),
                                                         n.e("919726"),
                                                         n.e("644816"),
                                                         n.e("195468"),
                                                         n.e("928662"),
                                                         n.e("143549"),
                                                         n.e("723244"),
-                                                        n.e("122990"),
+                                                        n.e("217637"),
                                                         n.e("276177"),
                                                         n.e("154630"),
                                                         n.e("860177"),
@@ -765,7 +764,7 @@ function eQ(e) {
                                                         n.e("830228"),
                                                         n.e("235996"),
                                                         n.e("50097"),
-                                                        n.e("484189"),
+                                                        n.e("63634"),
                                                         n.e("703166"),
                                                         n.e("628752"),
                                                         n.e("262841"),
@@ -967,8 +966,8 @@ function e1(e) {
 }
 var e2 = n(34188),
     e8 = n(700623),
-    e7 = n(177953),
-    e3 = n(825484),
+    e3 = n(177953),
+    e7 = n(825484),
     e6 = n(683071),
     e4 = n(900797),
     e9 = n(847374),
@@ -1306,7 +1305,7 @@ function tT(e) {
         className: tI.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1342,7 +1341,7 @@ function tL(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Z$)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e3.e, {
+            ? (0, r.jsxs)(e7.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tg, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1526,10 +1525,10 @@ var tY = n(111042),
     t1 = n(594061),
     t2 = n(935208),
     t8 = n(630248),
-    t7 = n(355097);
-function t3(e, t) {
+    t3 = n(355097);
+function t7(e, t) {
     o.useEffect(() => {
-        t1.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t1.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t8.A], () => t8.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2212,8 +2211,8 @@ function n0(e) {
 var n1 = n(984516),
     n2 = n(935573),
     n8 = n(651753),
-    n7 = n(485845),
-    n3 = n(994369),
+    n3 = n(485845),
+    n7 = n(994369),
     n6 = n(240591),
     n4 = n(46477);
 function n9(e, t) {
@@ -2731,24 +2730,24 @@ function lA(e) {
                             query: n,
                             guildId: r,
                             page: c,
-                            integrationType: n7.b.USER_INSTALL,
+                            integrationType: n3.b.USER_INSTALL,
                             minUserInstallCommandCount: 1,
                             excludeAppsWithCustomInstallUrl: !0,
                             excludeNonEmbeddedApps: a,
                             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                            source: n3.V.APP_LAUNCHER,
+                            source: n7.V.APP_LAUNCHER,
                         }),
                         totalPages:
                             n8.A.getSearchResults({
                                 query: n,
                                 guildId: r,
                                 page: c,
-                                integrationType: n7.b.USER_INSTALL,
+                                integrationType: n3.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n3.V.APP_LAUNCHER,
+                                source: n7.V.APP_LAUNCHER,
                             })?.totalPages ?? 0,
                     }),
                     [n, r, c, a],
@@ -2762,12 +2761,12 @@ function lA(e) {
                                     query: n,
                                     guildId: r,
                                     page: t + 1,
-                                    integrationType: n7.b.USER_INSTALL,
+                                    integrationType: n3.b.USER_INSTALL,
                                     minUserInstallCommandCount: 1,
                                     excludeAppsWithCustomInstallUrl: !0,
                                     excludeNonEmbeddedApps: a,
                                     excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                    source: n3.V.APP_LAUNCHER,
+                                    source: n7.V.APP_LAUNCHER,
                                 })?.results ?? [],
                         ),
                     [m, r, n, c, a],
@@ -2790,12 +2789,12 @@ function lA(e) {
                             guildId: l,
                             options: {
                                 page: n,
-                                integrationType: n7.b.USER_INSTALL,
+                                integrationType: n3.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n3.V.APP_LAUNCHER,
+                                source: n7.V.APP_LAUNCHER,
                             },
                         });
                     },
@@ -3202,7 +3201,7 @@ function lT(e) {
                             let e = [];
                             return (c && e.push(nl.gq), e);
                         }, [c]),
-                        u = t3(r, a),
+                        u = t7(r, a),
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
@@ -3381,7 +3380,7 @@ function lb(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t3(
+                c = t7(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

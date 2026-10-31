@@ -433,8 +433,8 @@ function e6(e) {
     });
 }
 var e8 = i(702841),
-    e9 = i(676279),
-    e5 = i(941143),
+    e5 = i(676279),
+    e9 = i(941143),
     e4 = i(717421),
     te = i(396583),
     tt = (((s = {}).SINE = "sine"), (s.COSINE = "cosine"), s),
@@ -485,7 +485,7 @@ let ts = (e) => {
     }, A),
     l)
         ? d
-        : (0, c.jsx)(e5.animated.div, {
+        : (0, c.jsx)(e9.animated.div, {
               style: {
                   transform: u.y?.to((e) => {
                       if (null == s) return "translateY(0px)";
@@ -733,7 +733,7 @@ let tc =
                 animationSpeedScale: p = 1,
             } = e,
             f = (0, e8.bG)([ea.Ay], () => ea.Ay.useReducedMotion),
-            h = (0, e9.TM)();
+            h = (0, e5.TM)();
         return (0, c.jsxs)(c.Fragment, {
             children: [
                 (0, c.jsx)(to, {
@@ -1051,7 +1051,7 @@ function tb(e) {
                                                         i.e("217229"),
                                                         i.e("734933"),
                                                         i.e("678157"),
-                                                        i.e("147134"),
+                                                        i.e("513"),
                                                         i.e("40291"),
                                                         i.e("544571"),
                                                         i.e("523276"),
@@ -1059,8 +1059,7 @@ function tb(e) {
                                                         i.e("729963"),
                                                         i.e("830938"),
                                                         i.e("538513"),
-                                                        i.e("676797"),
-                                                        i.e("122990"),
+                                                        i.e("217637"),
                                                         i.e("50097"),
                                                         i.e("594161"),
                                                         i.e("435432"),
@@ -1464,8 +1463,8 @@ function t6(e) {
     });
 }
 var t8 = i(517846),
-    t9 = i(509434),
-    t5 = i(695366),
+    t5 = i(509434),
+    t9 = i(695366),
     t4 = i(27620),
     ie = i(44724),
     it = i(371794);
@@ -1662,7 +1661,7 @@ function iS(e) {
                                   "https://cdn.discordapp.com/assets/content/b67b65e666d1350c52ff2abab5ac4eb205fa6545f63665aef16beeaa0efef060.webp",
                               blurTint: "#2E213D",
                               ctaText: Z.intl.string(iC.default.NmBRGV),
-                              ctaIcon: t9.I,
+                              ctaIcon: t5.I,
                               ctaIconPosition: "end",
                               onCtaClick: () => (0, ie.default)({ applicationId: ij.IG }),
                               analyticsOptions: { thirdPartyPartner: "rust" },
@@ -1704,7 +1703,7 @@ function iS(e) {
                                               ),
                                           }),
                                           titleVariant: "text-sm/medium",
-                                          icon: t5.E,
+                                          icon: t9.E,
                                       },
                                       onClose: () => {
                                           t4.Ay.fireSurveyAction(t8.w.YOUTUBE_3PP_MODAL_DISMISSED);
@@ -1852,7 +1851,7 @@ let iO = function (e) {
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         });
-    return (0, c.jsx)(e5.animated.div, {
+    return (0, c.jsx)(e9.animated.div, {
         className: u()(iD.iE, { [iD.q4]: !t }),
         style: r,
         children: (0, c.jsxs)("div", {
@@ -1922,7 +1921,7 @@ let iO = function (e) {
                                 i.e("217229"),
                                 i.e("734933"),
                                 i.e("678157"),
-                                i.e("147134"),
+                                i.e("513"),
                                 i.e("40291"),
                                 i.e("544571"),
                                 i.e("523276"),
@@ -1930,8 +1929,7 @@ let iO = function (e) {
                                 i.e("729963"),
                                 i.e("830938"),
                                 i.e("538513"),
-                                i.e("676797"),
-                                i.e("122990"),
+                                i.e("217637"),
                                 i.e("50097"),
                                 i.e("594161"),
                                 i.e("435432"),
@@ -2137,8 +2135,8 @@ var i2 = i(462887),
     i7 = i(259065),
     i6 = i(206835),
     i8 = i(591179),
-    i9 = i(462463),
-    i5 = i(219882),
+    i5 = i(462463),
+    i9 = i(219882),
     i4 = i(19886),
     se = i(425713),
     st = i(696292),
@@ -2353,7 +2351,7 @@ function sG() {
         E,
         { analyticsLocations: b } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
         T = (0, i8.X)("useWhatsNewPerkCards"),
-        C = (0, i9.A)({ analyticsLocations: b }),
+        C = (0, i5.A)({ analyticsLocations: b }),
         R = (0, o.useCallback)(() => {
             (0, eo.openUserSettings)(ec.X.PROFILE_PANEL, { analyticsLocations: b }, () =>
                 (0, i7.L)({ analyticsLocations: b }),
@@ -2452,7 +2450,7 @@ function sG() {
         { nitroOrbsRewardsCard: P, questOrbMultiplierCard: y } = su(),
         D =
             ((j = (0, sb.L)(tj.PremiumTypes.TIER_2)),
-            (E = (0, i5.rX)()),
+            (E = (0, i9.rX)()),
             (0, o.useMemo)(
                 () =>
                     j && E
@@ -2554,7 +2552,7 @@ function sY(e) {
                 m = (0, o.useCallback)(() => {
                     (0, eo.openUserSettings)(ec.X.SOUNDBOARD_CATEGORY, { analyticsLocations: n });
                 }, [n]),
-                x = (0, i9.A)({ analyticsLocations: n }),
+                x = (0, i5.A)({ analyticsLocations: n }),
                 g = (0, o.useCallback)(() => {
                     (0, eo.openUserSettings)(ec.X.PROFILE_PANEL, { analyticsLocations: n }, () =>
                         (0, i7.L)({ analyticsLocations: n }),
@@ -2612,7 +2610,7 @@ function sY(e) {
                         {
                             id: tH.LARGE_UPLOADS_CARD_ID,
                             title: Z.intl.string(Z.t.nL1WZV),
-                            description: (0, i5.M6)({
+                            description: (0, i9.M6)({
                                 legacyCopy: Z.intl.formatToPlainString(Z.t.k8LC1w, { maxSizeMb: 500 }),
                                 rolloutCopy: Z.intl.formatToPlainString(Z.t.teOTfv, {
                                     maxFileSize: (0, em.EJ)(tj.PremiumTypes.TIER_2, { useSpace: !1 }),
@@ -2962,8 +2960,8 @@ var s2 = i(286320),
     s6 = i(543213);
 let s8 =
         "https://cdn.discordapp.com/assets/content/3aa94cb4beecb43100d482e94a5a707f188e2e2315d9b15865689b51409c4d56.png",
-    s9 = `${s8} 1x, https://cdn.discordapp.com/assets/content/e33cdb99c455ad732bab8cc40ca15b8bf926a7e9e078cd8834edfd15e4010217.png 2x, https://cdn.discordapp.com/assets/content/4e7462093b85c105a20baea89e1e03ef3ad3cb15eac1aa3a9579569427b68c60.png 3x`;
-function s5(e) {
+    s5 = `${s8} 1x, https://cdn.discordapp.com/assets/content/e33cdb99c455ad732bab8cc40ca15b8bf926a7e9e078cd8834edfd15e4010217.png 2x, https://cdn.discordapp.com/assets/content/4e7462093b85c105a20baea89e1e03ef3ad3cb15eac1aa3a9579569427b68c60.png 3x`;
+function s9(e) {
     let { alt: t, ariaLabel: i, ariaHidden: s, role: n, width: a, height: l, className: r, style: d } = e,
         u = o.useMemo(
             () => (0, ik.H)({ width: a, height: l, intrinsicWidth: 288, intrinsicHeight: 192, style: d }),
@@ -2972,7 +2970,7 @@ function s5(e) {
     return (0, c.jsx)("img", {
         style: u,
         src: s8,
-        srcSet: s9,
+        srcSet: s5,
         className: (0, ik.Z)(r),
         alt: t,
         "aria-label": i,
@@ -3330,7 +3328,7 @@ function nA(e) {
                       (0, c.jsx)("div", {
                           className: nh.kX,
                           "aria-hidden": !0,
-                          children: (0, c.jsx)(s5, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
+                          children: (0, c.jsx)(s9, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
                       }),
                   C,
               ],
@@ -3503,7 +3501,7 @@ var nb = i(366010),
 let nC = function (e) {
     let t,
         { className: i } = e,
-        s = (0, e9.TM)(),
+        s = (0, e5.TM)(),
         n = (0, nb.q)((0, i3.Ay)());
     return (
         (t = s
@@ -3545,7 +3543,7 @@ let n_ = function (e) {
             config: { tension: 120, friction: 12 },
         }),
         r = { section: eq.JJy.MARKETING_FLOATING_CTA };
-    return (0, c.jsx)(e5.animated.div, {
+    return (0, c.jsx)(e9.animated.div, {
         className: u()(nI.iE, { [nI.W0]: a }),
         "aria-hidden": a ? !t : void 0,
         inert: a ? !t : void 0,
@@ -3927,7 +3925,7 @@ let n8 = function (e) {
     let { containerVisibilityPercentage: t, variant: i = "default" } = e,
         s = "settings" === i,
         n = (0, e8.bG)([ea.Ay], () => ea.Ay.useReducedMotion),
-        a = (0, e9.TM)();
+        a = (0, e5.TM)();
     return (0, c.jsxs)("div", {
         "aria-hidden": !0,
         className: u()(n6.YU, { [n6.W0]: s }),
@@ -3958,8 +3956,8 @@ let n8 = function (e) {
         ],
     });
 };
-var n9 = i(14057);
-let n5 = o.memo(function (e) {
+var n5 = i(14057);
+let n9 = o.memo(function (e) {
     let { className: t, subscriptionTier: i, isEligibleForBogoPromotion: s, ref: n, variant: a = "default" } = e,
         l = "settings" === a,
         { analyticsLocations: r } = (0, A.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
@@ -3979,40 +3977,40 @@ let n5 = o.memo(function (e) {
         value: r,
         children: (0, c.jsxs)("div", {
             ref: n,
-            className: u()(n9.kL, t, { [n9.W0]: l }),
+            className: u()(n5.kL, t, { [n5.W0]: l }),
             "data-testid": "marketing-page-hero-header",
             children: [
-                l && (0, c.jsx)(nC, { className: n9.kv }),
+                l && (0, c.jsx)(nC, { className: n5.kv }),
                 (0, c.jsx)("div", {
                     ref: p,
                     children: (0, c.jsxs)("div", {
-                        className: n9.hQ,
+                        className: n5.hQ,
                         children: [
                             (0, c.jsx)(n8, { containerVisibilityPercentage: f, variant: a }),
                             T && (0, c.jsx)(n3, {}),
                             (0, c.jsx)("div", {
-                                className: n9.s8,
+                                className: n5.s8,
                                 children: (0, c.jsx)(ew.F, {
                                     forceLevel: 1,
                                     children: (0, c.jsx)(X.D, {
                                         variant: "nitro-md",
                                         color: "text-strong",
-                                        className: l ? void 0 : n9.wx,
+                                        className: l ? void 0 : n5.wx,
                                         children: Z.intl.string(Z.t.YCZldK),
                                     }),
                                 }),
                             }),
                             (0, c.jsxs)("div", {
-                                className: n9.rf,
+                                className: n5.rf,
                                 children: [
                                     g &&
                                         (0, c.jsx)("div", {
-                                            className: n9.eZ,
+                                            className: n5.eZ,
                                             children: (0, c.jsx)(n0, { referrer: m }),
                                         }),
                                     j &&
                                         (0, c.jsx)("div", {
-                                            className: n9.Qn,
+                                            className: n5.Qn,
                                             children: (0, c.jsx)(n1.A, {
                                                 textColor: "text-strong",
                                                 smallerText: !1,
@@ -4021,7 +4019,7 @@ let n5 = o.memo(function (e) {
                                             }),
                                         }),
                                     (0, c.jsxs)("div", {
-                                        className: T ? n9.es : n9.UJ,
+                                        className: T ? n5.es : n5.UJ,
                                         children: [
                                             (0, c.jsx)(eC.A, {
                                                 size: "md",
@@ -4034,7 +4032,7 @@ let n5 = o.memo(function (e) {
                                         ],
                                     }),
                                     (0, c.jsx)("div", {
-                                        className: n9.iQ,
+                                        className: n5.iQ,
                                         children: (0, c.jsx)(K.E, {
                                             color: "text-muted",
                                             variant: "text-xs/medium",
@@ -4572,7 +4570,7 @@ let af = () => {
                                 onChange: (e) => g(e),
                                 threshold: 0,
                                 active: !0,
-                                children: (0, c.jsx)(n5, { ref: n, subscriptionTier: v }),
+                                children: (0, c.jsx)(n9, { ref: n, subscriptionTier: v }),
                             }),
                         }),
                         (0, c.jsx)("div", {
@@ -4922,7 +4920,7 @@ let aG = o.memo(function (e) {
             {
                 id: tH.LARGE_UPLOADS_CARD_ID,
                 title: Z.intl.string(Z.t.nL1WZV),
-                description: (0, i5.M6)({
+                description: (0, i9.M6)({
                     legacyCopy: Z.intl.formatToPlainString(Z.t.k8LC1w, { maxSizeMb: 500 }),
                     rolloutCopy: Z.intl.formatToPlainString(Z.t.teOTfv, {
                         maxFileSize: (0, em.EJ)(tj.PremiumTypes.TIER_2, { useSpace: !1 }),
@@ -4976,7 +4974,7 @@ let aB = function (e) {
             className: u()(aw.kL, n, { [aw.He]: l }),
             type: tG.Z.Types.CUSTOM,
             children: [
-                (0, c.jsx)(t5.E, {
+                (0, c.jsx)(t9.E, {
                     size: "custom",
                     width: 20,
                     height: 20,
@@ -5045,7 +5043,7 @@ let az = function (e) {
         l = { section: eq.JJy.MARKETING_FLOATING_CTA },
         r = (0, i3.Ay)(),
         o = (0, nb.M)(r);
-    return (0, c.jsx)(e5.animated.div, {
+    return (0, c.jsx)(e9.animated.div, {
         className: u()(aW.iE, { [aW.H8]: s, [aW.q4]: !t }),
         style: a,
         children: (0, c.jsxs)("div", {
@@ -5297,7 +5295,7 @@ let a1 = () => {
                                               children: (e) =>
                                                   (0, c.jsx)("div", {
                                                       className: e,
-                                                      children: (0, c.jsx)(n5, {
+                                                      children: (0, c.jsx)(n9, {
                                                           ref: i,
                                                           subscriptionTier: C,
                                                           variant: "settings",

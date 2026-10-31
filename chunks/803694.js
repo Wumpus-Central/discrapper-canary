@@ -1,7 +1,7 @@
 n.d(t, { A: () => g, iB: () => E, Y0: () => S });
 var l = n(582128),
     i = n(702841),
-    r = n(912195),
+    r = n(281044),
     a = n(166403),
     s = n(459357),
     o = n(813873),
@@ -118,8 +118,8 @@ class p {
             : { shouldSet: !1, correctedPaymentSourceId: null };
     }
 }
-var h = n(105292),
-    C = n(493364);
+var C = n(105292),
+    h = n(493364);
 function f(e) {
     let { giftCardsEnabled: t } = e,
         {
@@ -261,11 +261,11 @@ function S(e) {
             walletCoversSubtotal: V,
             walletCoversTotal: Y,
             isWalletBalanceLoaded: K,
-            isWalletCoverageLoading: q,
-            walletBalanceAmount: Z,
+            isWalletCoverageLoading: Z,
+            walletBalanceAmount: q,
         } = f({ giftCardsEnabled: S }),
-        z = null != Z && Z > 0,
-        $ = null != Z && Z <= 0,
+        z = null != q && q > 0,
+        $ = null != q && q <= 0,
         Q = (x ?? P) === !0,
         J = null != E && null != R && E === R.id,
         X = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: Y }));
@@ -298,11 +298,11 @@ function S(e) {
                         giftCardWallet: R,
                         checked: k,
                         onChange: H,
-                        loading: q,
-                        disabled: !q && !V,
-                        disabledTooltip: q || V ? void 0 : h.intl.string(C.default.ccWIdu),
+                        loading: Z,
+                        disabled: !Z && !V,
+                        disabledTooltip: Z || V ? void 0 : C.intl.string(h.default.ccWIdu),
                     },
-        [R, j, Q, W, k, H, V, q, $, z],
+        [R, j, Q, W, k, H, V, Z, $, z],
     );
     return {
         giftCardsEnabled: S,
@@ -317,7 +317,7 @@ function S(e) {
         walletCoversSubtotal: V,
         walletCoversTotal: Y,
         isWalletBalanceLoaded: K,
-        isWalletCoverageLoading: q,
+        isWalletCoverageLoading: Z,
         isSplitPaymentMode: j,
     };
 }

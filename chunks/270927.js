@@ -1,4 +1,4 @@
-(n.d(t, { RL: () => ec, oO: () => ee, dL: () => J }), n(321073));
+(n.d(t, { RL: () => eu, oO: () => ee, dL: () => J }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(575593),
@@ -10,10 +10,10 @@ var l = n(477900),
     d = n(120700),
     m = n(854354),
     p = n(414051),
-    h = n(38785),
-    C = n(270537),
+    C = n(69882),
+    h = n(848584),
     f = n(241989),
-    E = n(912195),
+    E = n(281044),
     S = n(818296),
     g = n(977445),
     I = n(525877),
@@ -89,8 +89,8 @@ function W(e) {
 var V = n(951305),
     Y = n(284009),
     K = n.n(Y),
-    q = n(31823),
-    Z = n(427675),
+    Z = n(31823),
+    q = n(427675),
     z = n(566980),
     $ = n(319820),
     Q = n(52635);
@@ -172,7 +172,7 @@ function er(e) {
             let e = [];
             return (null != a && e.push(a), e.length > 0 ? e : null);
         }, [a]);
-    return (0, l.jsx)(h.Wl, { footerInlineNoticeProps: s });
+    return (0, l.jsx)(C.Wl, { footerInlineNoticeProps: s });
 }
 function ea(e) {
     let { productLine: t, application: n, isGift: i } = e;
@@ -205,14 +205,14 @@ function es(e) {
                 e.length > 0 ? e : null
             );
         }, [r, o]);
-    return (0, l.jsx)(h.zJ, { upperInlineNoticeProps: u, shouldShowGlobalNotices: !0 });
+    return (0, l.jsx)(C.zJ, { upperInlineNoticeProps: u, shouldShowGlobalNotices: !0 });
 }
 function eo(e) {
     let { application: t } = e,
         n = (0, E.t4)((e) => e.unifiedCheckoutFlow);
     return n === d.C.SLAYER_STOREFRONT_CHECKOUT || n === d.C.PREMIUM_APPS_OTP_CHECKOUT
         ? (0, l.jsx)(es, { application: t })
-        : (0, l.jsx)(h.zJ, { upperInlineNoticeProps: null, shouldShowGlobalNotices: !0 });
+        : (0, l.jsx)(C.zJ, { upperInlineNoticeProps: null, shouldShowGlobalNotices: !0 });
 }
 function eu(e) {
     let { handlePaymentSourceAdd: t } = e,
@@ -239,8 +239,8 @@ function eu(e) {
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                 })),
-                { application: n } = (0, q.V)(),
-                l = (0, Z.gU)();
+                { application: n } = (0, Z.V)(),
+                l = (0, q.gU)();
             K()(null != e, "Expected selectedSkuId");
             let i = l[e],
                 r = i?.eligiblePaymentGateways;
@@ -308,7 +308,7 @@ function eu(e) {
                 })({ sku: f, invoicePreview: r }),
             [f, r],
         ),
-        G = i.useMemo(() => (null != j ? (0, l.jsx)(C.Vm, { ...j }) : null), [j]),
+        G = i.useMemo(() => (null != j ? (0, l.jsx)(h.Vm, { ...j }) : null), [j]),
         F = i.useMemo(() => {
             var e, t;
             return (
@@ -395,7 +395,7 @@ function eu(e) {
         children: [
             n === d.C.COLLECTIBLES_CHECKOUT &&
                 (0, l.jsx)(W, { requiredCheckoutFlow: d.C.COLLECTIBLES_CHECKOUT, invoicePreview: r, product: b }),
-            (0, l.jsx)(h.T_, {
+            (0, l.jsx)(C.T_, {
                 headerBadgeConfig: ee,
                 purchaseItemContent: F,
                 invoiceSummaryContent: G,
@@ -409,8 +409,4 @@ function eu(e) {
             }),
         ],
     });
-}
-function ec(e) {
-    let { isCheckoutDataLoading: t } = (0, E.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
-    return t ? (0, l.jsx)(h.Ed, { shouldShowUnifiedHeader: !0 }) : (0, l.jsx)(eu, { ...e });
 }

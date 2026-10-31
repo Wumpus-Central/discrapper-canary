@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(834730),
     c = n(854354),
     d = n(25149),
-    m = n(912195),
+    m = n(281044),
     p = n(511484),
-    h = n(387278),
-    C = n(307490),
+    C = n(387278),
+    h = n(307490),
     f = n(738869),
     E = n(773669),
     S = n(97352),
@@ -48,19 +48,19 @@ function v(e) {
             premiumSubscriptionPlan: H,
             thePriceOptions: W,
             skuId: V,
-        } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: v, showTotal: N }),
+        } = (0, h.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: v, showTotal: N }),
         { shouldShowPremiumSwitchPlanSelectText: Y, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
-            let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: B });
+            let e = (0, h.U_)(H, { isEligibleForBOGOPromotion: B });
             return {
                 shouldShowPremiumSwitchPlanSelectText: e,
-                premiumSwitchPlanSelectText: e ? (0, C.yq)(H, V) : null,
+                premiumSwitchPlanSelectText: e ? (0, h.yq)(H, V) : null,
             };
         }, [H, B, V]),
-        q = i.useMemo(
-            () => (N && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: v, trialPeriodCopy: G }) : b),
+        Z = i.useMemo(
+            () => (N && F ? (0, h.Ct)(U, { subscriptionPeriodEnd: v, trialPeriodCopy: G }) : b),
             [N, F, U, v, G, b],
         ),
-        Z = i.useMemo(() => (r.length > 0 ? A.hd[r[0]].premiumType : void 0), [r]),
+        q = i.useMemo(() => (r.length > 0 ? A.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, m.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
         $ = i.useCallback(
             (e) => {
@@ -96,7 +96,7 @@ function v(e) {
                         let t,
                             i,
                             o,
-                            { isCurrentPlan: m, disabled: E } = (0, C.cD)(T, e),
+                            { isCurrentPlan: m, disabled: E } = (0, h.cD)(T, e),
                             b = S.A.get(e);
                         a()(null != b, "Missing subscriptionPlan");
                         let L = (0, g.L_)({ planId: e, isGift: N, priceOptions: u, subscriptionPlan: b }),
@@ -112,7 +112,7 @@ function v(e) {
                                 priceOptions: u,
                                 isEligibleForTrial: d,
                             }),
-                            U = (0, h.sR)({
+                            U = (0, C.sR)({
                                 targetSubscriptionPlan: b,
                                 isGift: N,
                                 shouldShowSavingsPercent: k,
@@ -163,7 +163,7 @@ function v(e) {
                                       : "string" != typeof D || U || (t = D)),
                             U && !m)
                         ) {
-                            let e = (0, h.Cj)(b, N, u);
+                            let e = (0, C.Cj)(b, N, u);
                             null != e && (t = e);
                         }
                         let H = (function (e) {
@@ -203,21 +203,21 @@ function v(e) {
             showPlanStatusSubText: _,
             isInPlanSelectStep: N,
         });
-    return null == Z
+    return null == q
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   Y &&
                       (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: P.S, children: K }),
                   (0, l.jsx)(d.me, {
-                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: Z }),
-                      headingSubText: q,
+                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),
+                      headingSubText: Z,
                       planRadioOptions: Q,
                       value: R?.id ?? "",
                       onChange: $,
                   }),
                   N
-                      ? (0, C.LR)({
+                      ? (0, h.LR)({
                             selectedPlan: R,
                             selectedPlanPrice: O,
                             isPrepaid: M,

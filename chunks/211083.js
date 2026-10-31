@@ -1,20 +1,20 @@
-n.d(t, { o: () => u });
+n.d(t, { o: () => s });
 var l = n(582128),
     o = n(17928),
-    r = n(251913),
-    i = n(825755),
-    a = n(912195);
-function u() {
-    let e = (0, o.bG)([i.A], () => i.A.error),
+    i = n(251913),
+    r = n(825755),
+    a = n(281044);
+function s() {
+    let e = (0, o.bG)([r.A], () => r.A.error),
         {
             paymentAuthError: t,
             isAwaitingPaymentAuthentication: n,
-            paymentAuthWasCancelled: u,
+            paymentAuthWasCancelled: s,
         } = (0, a.t4)((e) => ({
             paymentAuthError: e.paymentAuthError,
             isAwaitingPaymentAuthentication: e.isAwaitingPaymentAuthentication,
             paymentAuthWasCancelled: e.paymentAuthWasCancelled,
         })),
-        s = l.useMemo(() => (n ? r.oc.PENDING : u ? r.oc.CANCELLED : null != t ? r.oc.ERROR : r.oc.NONE), [n, u, t]);
-    return { paymentError: null != t ? t : e, paymentAuthenticationState: s };
+        u = l.useMemo(() => (n ? i.oc.PENDING : s ? i.oc.CANCELLED : null != t ? i.oc.ERROR : i.oc.NONE), [n, s, t]);
+    return { paymentError: null != t ? t : e, paymentAuthenticationState: u };
 }

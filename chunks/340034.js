@@ -6,7 +6,7 @@ var i = n(683071),
     a = n(987666),
     s = n(463376),
     o = n(25149),
-    u = n(912195),
+    u = n(281044),
     c = n(881489),
     d = n(898697);
 function m(e) {
@@ -37,12 +37,12 @@ function p(e) {
                     ? o.I0.SubscriptionTrial
                     : o.I0.Subscription;
         })({ isGift: t, isTrial: n, unifiedCheckoutFlow: m }),
-        { discountOffer: h } = (0, s.i)();
+        { discountOffer: C } = (0, s.i)();
     return (0, l.jsx)(a.$, {
         ...d,
         isInvoiceBilledImmediately: i,
         subscriptionTrial: c,
-        discountOffer: h,
+        discountOffer: C,
         unifiedLegalType: p,
     });
 }

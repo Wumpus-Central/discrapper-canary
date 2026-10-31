@@ -4,7 +4,7 @@ n(582128);
 var i = n(888751),
     r = n(854354),
     a = n(400612),
-    s = n(270537),
+    s = n(848584),
     o = n(758476),
     u = n(105292);
 function c(e) {
@@ -16,8 +16,8 @@ function c(e) {
             isCustomGift: m,
         } = e,
         { invoicePreview: p } = t,
-        h = [];
-    h =
+        C = [];
+    C =
         t.type === a.u$.PREMIUM_GIFT
             ? (0, i.fk)(p, { isCustomGift: m, isPrepaidPaymentSource: d, subscriptionPlan: n })
             : (0, i.IY)(p, {
@@ -26,13 +26,13 @@ function c(e) {
                   subscriptionPlan: n,
                   subscriptionTrial: c,
               }).lineItems;
-    let C = (0, r.lp)(p, { manualLineItems: h, includeTaxLineItem: !0 }),
+    let h = (0, r.lp)(p, { manualLineItems: C, includeTaxLineItem: !0 }),
         f = (0, r.Dn)(p);
     return (
-        null != f && C.push(f),
+        null != f && h.push(f),
         (0, l.jsx)(s.Vm, {
             label: u.intl.string(o.default.eoXh7B),
-            lineItems: C,
+            lineItems: h,
             currency: p.currency,
             defaultExpanded: null != f,
         })

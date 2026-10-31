@@ -1,4 +1,4 @@
-n.d(t, { y0: () => en, Ni: () => ei, t4: () => ea, Q9: () => er, y$: () => es });
+n.d(t, { y0: () => er, Ni: () => ea, t4: () => el, Q9: () => es, y$: () => eo });
 var i = n(882035),
     r = n(428865),
     a = n(315069),
@@ -313,14 +313,16 @@ var q = n(811315),
     Q = n(529412),
     J = n(75304),
     ee = n(442467),
-    et = n(705822);
-let en = 1,
-    [ei, er] = (0, m.A)();
-function ea(e) {
+    et = n(120700),
+    en = n(758476),
+    ei = n(705822);
+let er = 1,
+    [ea, es] = (0, m.A)();
+function el(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-    return er()(e, t);
+    return es()(e, t);
 }
-function es(e) {
+function eo(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -506,7 +508,7 @@ function es(e) {
                 },
                 resetPaymentAuthentication: () => e({ ...Y }),
             },
-            ...(0, et.e)(e, i),
+            ...(0, ei.e)(e, i),
             ...((_ = []),
             {
                 getPaymentSourceNotices: () => {
@@ -670,6 +672,97 @@ function es(e) {
                 setOrbBalanceOnCheckout: (t) => e({ orbBalanceOnCheckout: t }),
                 getOrbBalanceOnCheckout: () => i().orbBalanceOnCheckout,
             },
+            ...{
+                getIsPurchaseDisabled: function () {
+                    let { isWalletPurchaseDisabled: e } =
+                            arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                        { hasAcceptedTerms: t, get: n } = i(),
+                        r = n("isOrderLocked"),
+                        a = n("primaryInvoicesError");
+                    return !t || !0 === e || r || null != a;
+                },
+                getIsReviewSubmitDisabled: (e) => {
+                    let { paymentSource: t, isWalletPurchaseDisabled: n } = e,
+                        { unifiedCheckoutFlow: r, paymentSourceId: a, getIsPurchaseDisabled: s } = i();
+                    return (
+                        !(
+                            !s({ isWalletPurchaseDisabled: n }) &&
+                            (r !== et.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT || (null != t && t.canRedeemTrial()))
+                        ) ||
+                        (r === et.C.GUILD_BOOST_CHECKOUT && null == a)
+                    );
+                },
+                getCheckoutReviewButtonText: (e) => {
+                    let { hasPaymentSources: t, tenantProvidedButtonText: n } = e,
+                        { paymentSourceId: r, get: a } = i(),
+                        s = a("checkoutPaymentSources"),
+                        l = null != r && s.some((e) => e.id === r && null != e.relocationCountry);
+                    return null === r && t
+                        ? H.intl.string(H.t.CpOiEO)
+                        : l
+                          ? H.intl.string(en.default["7r4HPu"])
+                          : null != n
+                            ? n
+                            : H.intl.string(en.default.BPzQj4);
+                },
+                getCheckoutReviewButtonProps: (e) => {
+                    let {
+                            isReviewButtonDisabled: t,
+                            isReviewButtonLoading: n,
+                            needsPaymentSource: r,
+                            hasPaymentSources: a,
+                            handlePaymentSourceAdd: s,
+                            tenantProvidedReviewButtonProps: l,
+                            onReviewButtonClick: o,
+                            isApplicationDevShelfLoading: d,
+                        } = e,
+                        { getCheckoutReviewButtonText: c, purchaseType: u, hasAcceptedTerms: _ } = i(),
+                        E = l?.text;
+                    null == E &&
+                        (E = u === L.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(en.default.BPzQj4));
+                    let A = l?.variant,
+                        h = c({ hasPaymentSources: a, tenantProvidedButtonText: E }),
+                        f = {
+                            variant: A ?? "active",
+                            dataTestId: "purchase",
+                            onClick: o,
+                            disabled: t,
+                            loading: n,
+                            ...l,
+                            text: h,
+                        };
+                    return r
+                        ? {
+                              text: h,
+                              tooltipText: H.intl.string(H.t.L7jbQV),
+                              type: "submit",
+                              dataTestId: "submitButton",
+                              loading: n,
+                              ...(null != A ? { variant: A } : { variant: a ? "primary" : "active" }),
+                              ...(a ? { onClick: s } : { disabled: !0 }),
+                          }
+                        : d
+                          ? {
+                                text: h,
+                                tooltipText: H.intl.string(H.t.cjA5tj),
+                                variant: "active",
+                                type: "submit",
+                                dataTestId: "submitButton",
+                                disabled: !0,
+                            }
+                          : t
+                            ? { ...f, disabled: !0, onClick: void 0 }
+                            : _
+                              ? f
+                              : {
+                                    ...f,
+                                    tooltipText: H.intl.string(H.t.XdvBLS),
+                                    disabled: !0,
+                                    onClick: L.tEg,
+                                    dataTestId: "submitButton",
+                                };
+                },
+            },
             ...(0, ee.d)(e, i),
             get: (e) => (null != E[e] ? E[e]() : null),
             contextMetadata: a,
@@ -713,14 +806,14 @@ function es(e) {
             setSelectedSkuId: (t) =>
                 e((e) => {
                     let n = t ?? void 0;
-                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: en };
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: er };
                 }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: en }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: er }) : e({ selectedPlanId: i });
             },
-            quantity: en,
+            quantity: er,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: M(t, i) }),

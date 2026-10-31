@@ -74,11 +74,5 @@ function o(e, t) {
             let n = t().getExpressCheckoutConfig(e);
             return null != n && n.enabled;
         },
-        getIsPurchaseDisabled: () => {
-            let { hasAcceptedTerms: e, get: n } = t(),
-                i = n("isOrderLocked"),
-                r = n("primaryInvoicesError");
-            return !e || i || null != r;
-        },
     };
 }

@@ -10,13 +10,13 @@ var l = n(477900),
     d = n(786567),
     m = n(834730),
     p = n(28863),
-    h = n(683071),
-    C = n(891197),
+    C = n(683071),
+    h = n(891197),
     f = n(710525),
     E = n(901930),
     S = n(725836),
     g = n(580133),
-    I = n(912195),
+    I = n(281044),
     A = n(758476),
     y = n(105292),
     x = n(663466);
@@ -36,9 +36,9 @@ function v() {
     return null != e
         ? (0, l.jsx)("div", {
               className: x.l,
-              children: (0, l.jsx)(h.w, { type: "critical", message: t, role: "alert" }),
+              children: (0, l.jsx)(C.w, { type: "critical", message: t, role: "alert" }),
           })
-        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(P, {})] });
+        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(h.N, {}), (0, l.jsx)(P, {})] });
 }
 function _() {
     return (0, l.jsxs)(l.Fragment, {
@@ -58,8 +58,8 @@ function j(e) {
             isBackButtonEligible: r,
             subscriptionMetadata: m,
             renderStepBody: p,
-            resolveInternalState: h,
-            resolveTenantReviewButtonProps: C,
+            resolveInternalState: C,
+            tenantProvidedReviewButtonProps: h,
             handleStepChange: f,
             openInvoiceId: E,
             analyticsData: S,
@@ -104,8 +104,8 @@ function j(e) {
         B = (0, s.iB)({ paymentSourceId: A, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: H } = i.useMemo(() => {
             let e = { disablePurchase: B || x === b.uH.DEV_STORYBOOK_CHECKOUT };
-            return null != h
-                ? h(
+            return null != C
+                ? C(
                       { ...e },
                       {
                           paymentSource: G,
@@ -116,7 +116,7 @@ function j(e) {
                       },
                   )
                 : e;
-        }, [h, G, A, F, L, y, B, x]);
+        }, [C, G, A, F, L, y, B, x]);
     i.useEffect(() => {
         null != v && null != D.current && D.current.scrollIntoView({ behavior: "smooth" });
     }, [v]);
@@ -131,7 +131,7 @@ function j(e) {
         ),
         Y = i.useMemo(() => p({ handlePaymentSourceAdd: V }), [p, V]),
         K = (0, l.jsx)(d.U, {
-            resolveTenantReviewButtonProps: C,
+            tenantProvidedReviewButtonProps: h,
             onBack: W,
             flowStartTime: P.startTime,
             onPaymentSourceAdd: V,

@@ -14,7 +14,7 @@ var i = n(477900),
     S = n(655857),
     f = n(883645),
     A = n(166532),
-    T = n(912195),
+    T = n(281044),
     m = n(442467),
     I = n(558620),
     h = n(427675),
@@ -194,9 +194,9 @@ function ee(e) {
         e4 = (0, f.qv)(),
         e8 = "sm";
     ef ? (e8 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
-    let e9 = null != e5 ? e5.modalSizeGetter : void 0,
-        e6 = (0, b.O)(),
-        e3 = null != X && !eB && (0, w.U9)(e6, X),
+    let e6 = null != e5 ? e5.modalSizeGetter : void 0,
+        e9 = (0, b.O)(),
+        e3 = null != X && !eB && (0, w.U9)(e9, X),
         [e7, te] = l.useState({
             load_id: ew.loadId,
             discovery_session_id: ew.discoverySessionId,
@@ -252,7 +252,7 @@ function ee(e) {
                 continue_session_initial_step: ev,
                 custom_checkout_flow: ej,
                 has_saved_payment_source: eM,
-                discount_id: null != e6 ? e6.discountId : ta,
+                discount_id: null != e9 ? e9.discountId : ta,
             });
         }),
         l.useEffect(() => {
@@ -341,7 +341,7 @@ function ee(e) {
                 returnRef: eI,
                 manaModalSize: e8,
                 modalSizeOverride: eT,
-                modalSizeGetter: e9,
+                modalSizeGetter: e6,
                 handleClose: tr,
                 children: (0, i.jsx)(K.Ay, {
                     disableDefaultSlideTransformStyling: em,
