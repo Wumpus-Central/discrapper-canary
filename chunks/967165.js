@@ -1,64 +1,64 @@
-n.d(t, { A: () => h });
-var l = n(477900),
-    r = n(582128),
-    a = n(503698),
-    o = n.n(a),
-    u = n(621466),
-    s = n(265872),
-    i = n(331322),
-    d = n(834730),
-    c = n(627363),
-    v = n(421773),
-    f = n(97005),
-    m = n(649045),
-    g = n(756419),
-    p = n(456709),
-    x = n(827656),
-    j = n(41799);
-function h(e) {
-    let { applicationId: t, guildId: n, targetElementRef: a, disabled: o = !1, openOnFocus: s = !1, ...i } = e,
-        { isHovered: d, setIsHovered: c, onMouseEnter: m, onMouseLeave: p, cancelTimers: x } = (0, v.A)(500, 150),
-        [j, h] = r.useState(!1),
-        [C, E] = r.useState(!1),
+t.d(n, { A: () => C });
+var l = t(477900),
+    r = t(582128),
+    o = t(503698),
+    a = t.n(o),
+    u = t(621466),
+    s = t(265872),
+    i = t(331322),
+    d = t(834730),
+    c = t(627363),
+    v = t(421773),
+    m = t(97005),
+    f = t(537129),
+    g = t(649045),
+    p = t(456709),
+    x = t(827656),
+    j = t(41799);
+function C(e) {
+    let { applicationId: n, guildId: t, targetElementRef: o, disabled: a = !1, openOnFocus: s = !1, ...i } = e,
+        { isHovered: d, setIsHovered: c, onMouseEnter: g, onMouseLeave: p, cancelTimers: x } = (0, v.A)(500, 150),
+        [j, C] = r.useState(!1),
+        [h, A] = r.useState(!1),
         H = r.useRef(null),
         L = r.useRef({ targetHovered: !1, targetFocused: !1, cardHovered: !1 }),
-        k = (0, f.m0)({ guildId: n ?? void 0, location: "ConjureAppHoverCard" });
+        k = (0, m.m0)({ guildId: t ?? void 0, location: "ConjureAppHoverCard" });
     r.useEffect(() => {
-        k && (0, g.A)(t);
-    }, [k, t]);
+        k && (0, f.A)(n);
+    }, [k, n]);
     let I = r.useCallback(() => {
-            ((L.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), x(), c(!1), E(!1));
+            ((L.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), x(), c(!1), A(!1));
         }, [x, c]),
         P = r.useCallback(
-            (e, t) => {
-                let n = L.current;
-                ((n[e] = t),
-                    E(n.targetHovered || n.targetFocused || n.cardHovered),
-                    t ? m() : n.targetHovered || n.targetFocused || n.cardHovered || p());
+            (e, n) => {
+                let t = L.current;
+                ((t[e] = n),
+                    A(t.targetHovered || t.targetFocused || t.cardHovered),
+                    n ? g() : t.targetHovered || t.targetFocused || t.cardHovered || p());
             },
-            [m, p],
+            [g, p],
         );
     r.useEffect(() => {
-        let e = a.current;
-        if (!o && null != e)
+        let e = o.current;
+        if (!a && null != e)
             return (
-                e.addEventListener("mouseenter", t),
-                e.addEventListener("mouseleave", n),
+                e.addEventListener("mouseenter", n),
+                e.addEventListener("mouseleave", t),
                 e.addEventListener("mousedown", I),
                 s && (e.addEventListener("focus", l), e.addEventListener("blur", r)),
                 () => {
-                    (e.removeEventListener("mouseenter", t),
-                        e.removeEventListener("mouseleave", n),
+                    (e.removeEventListener("mouseenter", n),
+                        e.removeEventListener("mouseleave", t),
                         e.removeEventListener("mousedown", I),
                         e.removeEventListener("focus", l),
                         e.removeEventListener("blur", r),
                         I());
                 }
             );
-        function t() {
-            (h(!0), P("targetHovered", !0));
+        function n() {
+            (C(!0), P("targetHovered", !0));
         }
-        function n(e) {
+        function t(e) {
             if ((0, u.vq)(e.relatedTarget, Node) && H.current?.contains(e.relatedTarget) === !0) {
                 L.current.targetHovered = !1;
                 return;
@@ -66,22 +66,22 @@ function h(e) {
             P("targetHovered", !1);
         }
         function l() {
-            e?.matches(":focus-visible") === !0 && (h(!0), P("targetFocused", !0));
+            e?.matches(":focus-visible") === !0 && (C(!0), P("targetFocused", !0));
         }
         function r() {
             P("targetFocused", !1);
         }
-    }, [o, s, a, P, I]);
+    }, [a, s, o, P, I]);
     let b = r.useCallback(() => P("cardHovered", !0), [P]),
         N = r.useCallback(() => P("cardHovered", !1), [P]);
     return j
-        ? (0, l.jsx)(A, {
+        ? (0, l.jsx)(E, {
               ...i,
-              applicationId: t,
-              guildId: n ?? null,
-              targetElementRef: a,
+              applicationId: n,
+              guildId: t ?? null,
+              targetElementRef: o,
               isHovered: d,
-              isPointerOver: C,
+              isPointerOver: h,
               cardRef: H,
               onCardEnter: b,
               onCardLeave: N,
@@ -89,40 +89,40 @@ function h(e) {
           })
         : null;
 }
-function A(e) {
+function E(e) {
     let {
-            applicationId: t,
-            guildId: n,
+            applicationId: n,
+            guildId: t,
             targetElementRef: r,
-            isHovered: a,
-            isPointerOver: o,
+            isHovered: o,
+            isPointerOver: a,
             cardRef: u,
             onCardEnter: i,
             onCardLeave: d,
             onClose: v,
-            position: f,
-            animationPosition: m,
+            position: m,
+            animationPosition: f,
             spacing: g,
         } = e,
-        x = (0, c.YY)(t).data,
+        x = (0, c.YY)(n).data,
         j = x?.conjureProjectId != null ? x : null,
-        { creator: h, remixProject: A, isSettled: C } = (0, p.A)(j, n, o || a),
-        H = a && null != j;
+        { creator: C, remixProject: E, isSettled: h } = (0, p.A)(j, t, a || o),
+        H = o && null != j;
     return (0, l.jsx)(s.Y, {
         targetElementRef: r,
-        position: f,
-        animationPosition: m,
+        position: m,
+        animationPosition: f,
         spacing: g,
         shouldShow: H,
         onRequestClose: v,
         renderPopout: () =>
             null != j
-                ? (0, l.jsx)(E, {
+                ? (0, l.jsx)(A, {
                       application: j,
-                      creator: h,
-                      remixProject: A,
-                      showFooter: !(C && null == h),
-                      guildId: n,
+                      creator: C,
+                      remixProject: E,
+                      showFooter: !(h && null == C),
+                      guildId: t,
                       cardRef: u,
                       onMouseEnter: i,
                       onMouseLeave: d,
@@ -132,38 +132,38 @@ function A(e) {
         children: () => null,
     });
 }
-function C(e) {
+function h(e) {
     e.stopPropagation();
 }
-function E(e) {
+function A(e) {
     let {
-            application: t,
-            creator: n,
+            application: n,
+            creator: t,
             remixProject: r,
-            showFooter: a,
+            showFooter: o,
             guildId: u,
             cardRef: s,
             onMouseEnter: c,
             onMouseLeave: v,
-            onClose: f,
+            onClose: m,
         } = e,
-        g = t.getIconURL(96),
-        p = t.description?.trim();
+        f = n.getIconURL(96),
+        p = n.description?.trim();
     return (0, l.jsxs)("div", {
         ref: s,
         className: j.Nr,
         onMouseEnter: c,
         onMouseLeave: v,
-        onClick: C,
-        onMouseDown: C,
-        onContextMenu: C,
+        onClick: h,
+        onMouseDown: h,
+        onContextMenu: h,
         children: [
             (0, l.jsxs)("div", {
                 className: j.rf,
                 children: [
-                    null != g
-                        ? (0, l.jsx)("img", { alt: "", src: g, className: o()(j.Kk, j.Dp) })
-                        : (0, l.jsx)(m.A, { applicationId: t.id, name: t.name, glyphSize: 24, className: j.Kk }),
+                    null != f
+                        ? (0, l.jsx)("img", { alt: "", src: f, className: a()(j.Kk, j.Dp) })
+                        : (0, l.jsx)(g.A, { applicationId: n.id, name: n.name, glyphSize: 24, className: j.Kk }),
                     (0, l.jsxs)(i.B, {
                         gap: 4,
                         className: j.zH,
@@ -172,7 +172,7 @@ function E(e) {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 lineClamp: 1,
-                                children: t.name,
+                                children: n.name,
                             }),
                             null != p && p.length > 0
                                 ? (0, l.jsx)(d.E, {
@@ -186,7 +186,7 @@ function E(e) {
                     }),
                 ],
             }),
-            a ? (0, l.jsx)(x.A, { creator: n, remixProject: r, guildId: u, onClose: f }) : null,
+            o ? (0, l.jsx)(x.A, { creator: t, remixProject: r, guildId: u, onClose: m }) : null,
         ],
     });
 }

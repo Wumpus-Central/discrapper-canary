@@ -1,11 +1,17 @@
-n.d(t, { A: () => s, w: () => a });
-var i = n(627363),
-    r = n(486020);
-function a(e) {
+n.d(t, { A: () => d, w: () => o });
+var i = n(582128),
+    r = n(17928),
+    a = n(587895),
+    s = n(486020),
+    l = n(537129);
+function o(e) {
     return { glyphSize: Math.round(0.6 * e), radius: e / 4 };
 }
-function s(e, t) {
+function d(e, t) {
     let n = e.preview_application_id ?? e.application_id,
-        { data: s } = (0, i.YY)(n);
-    return { url: s?.icon != null ? r.Ay.getApplicationIconURL({ id: n, icon: s.icon, size: t }) : void 0, ...a(t) };
+        d = (0, r.bG)([a.A], () => a.A.getApplication(n)?.icon);
+    return (
+        i.useEffect(() => (0, l.A)(n), [n]),
+        { url: null != d ? s.Ay.getApplicationIconURL({ id: n, icon: d, size: t }) : void 0, ...o(t) }
+    );
 }
