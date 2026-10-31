@@ -38,6 +38,7 @@ function p(e) {
         case I.KG:
             return { duration: 3, percentage: 30, discountId: e };
         case I.HF:
+        case I.Ki:
             return { duration: 1, percentage: 40, discountId: e };
         case I.BR:
             return { duration: 1, percentage: 20, discountId: e };
@@ -64,27 +65,28 @@ function _(e) {
         n = (0, m.A)(I.W7),
         s = (0, m.A)(I.Qo),
         l = (0, m.A)(I.EG),
-        [r, a] = i.useState(!1),
-        [o, c] = i.useState(!1),
-        [u, f] = i.useState(null),
-        E = t ?? n ?? s ?? l ?? null;
-    if (null != E) return { churnUserDiscountOffer: E, isFetchingChurnDiscountOffer: !1 };
-    if (e) return { churnUserDiscountOffer: u, isFetchingChurnDiscountOffer: o };
-    function g() {
-        (a(!0), c(!1));
+        r = (0, m.A)(I.Ki),
+        [a, o] = i.useState(!1),
+        [c, u] = i.useState(!1),
+        [f, E] = i.useState(null),
+        g = t ?? n ?? s ?? l ?? r ?? null;
+    if (null != g) return { churnUserDiscountOffer: g, isFetchingChurnDiscountOffer: !1 };
+    if (e) return { churnUserDiscountOffer: f, isFetchingChurnDiscountOffer: c };
+    function h() {
+        (o(!0), u(!1));
     }
     return (
-        o ||
-            r ||
-            (c(!0),
+        c ||
+            a ||
+            (u(!0),
             (0, d.qz)()
                 .then((e) => {
-                    (f(e), g());
+                    (E(e), h());
                 })
                 .catch((e) => {
-                    g();
+                    h();
                 })),
-        { churnUserDiscountOffer: u, isFetchingChurnDiscountOffer: o }
+        { churnUserDiscountOffer: f, isFetchingChurnDiscountOffer: c }
     );
 }
 function N() {
