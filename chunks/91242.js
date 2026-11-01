@@ -223,7 +223,7 @@ let N = new S(r.h, {
         return p(
             t,
             (e) => e.iframeId !== n,
-            (e) => ({ ...e, iframeId: n, runsInBackground: !1, pictureInPictureInteractive: !1, ...E }),
+            (e) => ({ ...e, iframeId: n, pictureInPictureInteractive: !1, ...E }),
         );
     },
     FRAME_IFRAME_UNMOUNT: function (e) {
@@ -231,7 +231,7 @@ let N = new S(r.h, {
         return p(
             t,
             (e) => e.iframeId === n,
-            (e) => ({ ...e, iframeId: null, runsInBackground: !1, pictureInPictureInteractive: !1, ...E }),
+            (e) => ({ ...e, iframeId: null, pictureInPictureInteractive: !1, ...E }),
         );
     },
     FRAME_HOST_WINDOW_MOUNT: function (e) {

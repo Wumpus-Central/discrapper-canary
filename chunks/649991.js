@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "659905";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "659943";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 659905, Version Hash: 704db725d445b7f76bb9b3e3ce2a3398a1d993c7`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 659943, Version Hash: ff9c5ff770186ad0d4facfcc102adbe9f63788b1`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26090,7 +26090,7 @@ let yh = "isHideDevBanner",
                     className: tf()(yA.Wz, yA.mr),
                     children: [
                         (0, b.jsx)(yE, { className: yA.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "659905" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "659943" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -54899,7 +54899,7 @@ var YL = n(670735),
     Yb = n(824613),
     YP = n(256693),
     YM = n(51250),
-    YU = n(506868);
+    YU = n(118591);
 let Yw = (0, H.mj)({
     name: "2026-10-desktop-conjure-native-preview-view",
     kind: "user",

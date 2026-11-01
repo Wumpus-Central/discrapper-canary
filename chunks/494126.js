@@ -119,7 +119,7 @@ function N(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PICTURE_IN_PICTURE_INTERACTIVE", frameId: e, enabled: t });
 }
 function C(e) {
-    (S(e, !1), N(e, !1));
+    N(e, !1);
 }
 function O(e, t) {
     i.h.dispatch({ type: "FRAME_SET_USER_MUTED", frameId: e, muted: t });
