@@ -12,8 +12,8 @@ var l = n(477900),
     m = n(980707),
     p = n(477782),
     x = n(92446),
-    g = n(173936),
-    h = n(473935),
+    h = n(173936),
+    g = n(473935),
     j = n(625903),
     v = n(265872),
     b = n(866665),
@@ -38,8 +38,8 @@ var K = n(189714),
     L = n(733791),
     F = n(314116),
     G = n(371169),
-    W = n(189213),
-    H = n(331322),
+    H = n(189213),
+    W = n(331322),
     R = n(834730),
     O = n(192308),
     $ = n(664619),
@@ -51,8 +51,8 @@ function q(e) {
         [f, m] = a.useState(null),
         p = "delete" === r,
         x = p ? (0, L.fI)(n) : (0, L.Kd)(n),
-        g = p ? null : (0, L.L4)(n),
-        h = (0, L.Mi)(n),
+        h = p ? null : (0, L.L4)(n),
+        g = (0, L.Mi)(n),
         j = p
             ? P.intl.formatToPlainString(E.default.CJBhb2, { name: n.projectName })
             : P.intl.formatToPlainString(E.default.x6FvsZ, { app: n.appName });
@@ -64,7 +64,7 @@ function q(e) {
             ? m(P.intl.string(p ? E.default["0XDHob"] : E.default.PJ2Fkn))
             : (p || (0, i.P0)({ text: (0, L.p_)(n), variant: "success" }), s.onClose());
     }
-    return (0, l.jsx)(W.a, {
+    return (0, l.jsx)(H.a, {
         ...s,
         role: "alertdialog",
         title: p ? j : (0, L.WX)((0, X.tb)(E.default.x6FvsZ, n.appName)),
@@ -83,19 +83,19 @@ function q(e) {
                 },
             },
         ],
-        children: (0, l.jsxs)(H.B, {
+        children: (0, l.jsxs)(W.B, {
             gap: 12,
             children: [
-                x.length > 0 || null != g
+                x.length > 0 || null != h
                     ? (0, l.jsx)(X.Ay, {
                           items: x,
                           optionalItem:
-                              null == g
+                              null == h
                                   ? void 0
-                                  : { item: g, checked: u, onChange: o, disabled: !n.canRemovePreviewBot },
+                                  : { item: h, checked: u, onChange: o, disabled: !n.canRemovePreviewBot },
                       })
                     : null,
-                null != h ? (0, l.jsx)(R.E, { variant: "text-sm/normal", color: "text-muted", children: h }) : null,
+                null != g ? (0, l.jsx)(R.E, { variant: "text-sm/normal", color: "text-muted", children: g }) : null,
             ],
         }),
     });
@@ -118,7 +118,7 @@ function Z(e) {
               n.onClose())
             : d(P.intl.string(E.default["rE/0SD"]));
     }
-    return (0, l.jsx)(W.a, {
+    return (0, l.jsx)(H.a, {
         ...n,
         role: "alertdialog",
         title: f,
@@ -154,8 +154,8 @@ function et(e) {
             isOwner: k,
             canRemix: y,
             onOpenProjectSettings: A,
-            onExport: W,
-            onImport: H,
+            onExport: H,
+            onImport: W,
             onRemix: R,
             onConnectTool: $,
             onHistory: X,
@@ -203,8 +203,8 @@ function et(e) {
         })(ei ?? null, ee),
         ep = (0, r.bG)([M.A], () => (null == ei ? Y : M.A.getDeclaredConnections(ei))),
         ex = a.useMemo(() => (0, w.Xl)(ep), [ep]),
-        eg = (0, L.Bs)(t),
-        eh = (0, L.CU)(t) && k,
+        eh = (0, L.Bs)(t),
+        eg = (0, L.CU)(t) && k,
         ej = (0, r.bG)(
             [B.Ay],
             () => {
@@ -246,8 +246,8 @@ function et(e) {
         })({ canRefresh: null != er, refreshPending: ed, offers: ex, connectPending: ef }),
         ek = a.useMemo(() => new Map(ep.map((e) => [e.type, e])), [ep]),
         ey = null != R && y,
-        e_ = k && null != H,
-        eA = ey || null != W || e_ || null != $ || null != X,
+        e_ = k && null != W,
+        eA = ey || null != H || e_ || null != $ || null != X,
         eS = N.p5 && null != v,
         eN = N.p5,
         ew = eu ? s.BellIcon : u.BellSlashIcon,
@@ -331,13 +331,13 @@ function et(e) {
                 ? (0, l.jsxs)(p.rX, {
                       children: [
                           ey
-                              ? (0, l.jsx)(p.Dr, { id: "remix", label: P.intl.string(E.default.XWgAfc), action: R })
+                              ? (0, l.jsx)(p.Dr, { id: "remix", label: P.intl.string(E.default["276ll6"]), action: R })
                               : null,
-                          null != W
-                              ? (0, l.jsx)(p.Dr, { id: "export", label: P.intl.string(E.default.WsEEP7), action: W })
+                          null != H
+                              ? (0, l.jsx)(p.Dr, { id: "export", label: P.intl.string(E.default.WsEEP7), action: H })
                               : null,
                           e_
-                              ? (0, l.jsx)(p.Dr, { id: "import", label: P.intl.string(E.default.rWGY3e), action: H })
+                              ? (0, l.jsx)(p.Dr, { id: "import", label: P.intl.string(E.default.rWGY3e), action: W })
                               : null,
                           null != $
                               ? (0, l.jsx)(p.Dr, {
@@ -363,8 +363,8 @@ function et(e) {
                               ? (0, l.jsx)(p.Dr, {
                                     id: "copy-link",
                                     label: P.intl.string(P.t.WqhZss),
-                                    icon: g.LinkIcon,
-                                    leadingAccessory: { type: "icon", icon: g.LinkIcon },
+                                    icon: h.LinkIcon,
+                                    leadingAccessory: { type: "icon", icon: h.LinkIcon },
                                     action: () =>
                                         (0, N.C)((0, S.n)(v, J.VV.CONJURE, t), () =>
                                             (0, i.P0)({ text: P.intl.string(P.t["L/PwZf"]), variant: "success" }),
@@ -374,8 +374,8 @@ function et(e) {
                           (0, l.jsx)(p.Dr, {
                               id: "copy-project-id",
                               label: P.intl.string(E.default["nm/zuU"]),
-                              icon: h.L,
-                              leadingAccessory: { type: "icon", icon: h.L },
+                              icon: g.L,
+                              leadingAccessory: { type: "icon", icon: g.L },
                               action: () =>
                                   (0, N.C)(t, () =>
                                       (0, i.P0)({ text: P.intl.string(E.default.CmfaZG), variant: "success" }),
@@ -384,7 +384,7 @@ function et(e) {
                       ],
                   })
                 : null,
-            k || ev || eg?.canRemoveBot === !0
+            k || ev || eh?.canRemoveBot === !0
                 ? (0, l.jsxs)(p.rX, {
                       children: [
                           ev
@@ -404,18 +404,18 @@ function et(e) {
                                             })),
                                 })
                               : null,
-                          eg?.canRemoveBot === !0
+                          eh?.canRemoveBot === !0
                               ? (0, l.jsx)(p.Dr, {
                                     id: "remove-from-server",
-                                    label: P.intl.formatToPlainString(E.default["3gKG2j"], { server: eg.guildName }),
+                                    label: P.intl.formatToPlainString(E.default["3gKG2j"], { server: eh.guildName }),
                                     color: "danger",
                                     action: () => {
                                         let e = B.Ay.getProject(t);
-                                        null != e && U({ project: e, target: eg, action: "remove" });
+                                        null != e && U({ project: e, target: eh, action: "remove" });
                                     },
                                 })
                               : null,
-                          eh
+                          eg
                               ? (0, l.jsx)(p.Dr, {
                                     id: "unpublish",
                                     label: P.intl.string(E.default.jYAR58),
@@ -436,7 +436,7 @@ function et(e) {
                                     color: "danger",
                                     action: () => {
                                         let e = B.Ay.getProject(t);
-                                        if (null != e && null != eg) U({ project: e, target: eg, action: "delete" });
+                                        if (null != e && null != eh) U({ project: e, target: eh, action: "delete" });
                                         else
                                             (0, F.A)({
                                                 title: P.intl.formatToPlainString(E.default.CJBhb2, { name: n }),

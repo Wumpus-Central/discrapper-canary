@@ -48,7 +48,7 @@ function m(l, n) {
                                 id: "conjure-remix",
                                 icon: r.x,
                                 leadingAccessory: { type: "icon", icon: r.x },
-                                label: P.intl.string(G.default["9wQTdG"]),
+                                label: P.intl.string(G.default["276ll6"]),
                                 action: () => (0, I.A)(E, k),
                             },
                             "remix",

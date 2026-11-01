@@ -54,7 +54,7 @@ function x(e) {
                         ? (0, l.jsx)(s.$, {
                               variant: "secondary",
                               size: "sm",
-                              text: g.intl.string(f.default.XWgAfc),
+                              text: g.intl.string(f.default["276ll6"]),
                               onClick: function () {
                                   null != t && null != x && (j(), (0, v.A)(t, x));
                               },

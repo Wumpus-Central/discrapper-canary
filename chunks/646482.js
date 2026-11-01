@@ -784,7 +784,7 @@ function nI(e) {
                     : null;
             }));
     if (null == i || null == t || r || 0 === a) return null;
-    let o = z.intl.string(nf.default.XWgAfc);
+    let o = z.intl.string(nf.default["276ll6"]);
     return (0, l.jsx)(nh.Ay.Icon, { icon: nu.x, tooltip: o, "aria-label": o, onClick: () => (0, ng.A)(i, t) });
 }
 var nE = t(766367),
