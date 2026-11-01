@@ -72,10 +72,10 @@ var i = n(435558),
     D = n(287809),
     v = n(486020),
     b = n(690521),
-    M = n(194486),
-    P = n(105292);
+    P = n(194486),
+    M = n(105292);
 let U = { start: 10, end: 15 },
-    w = { [M.B.BASIC]: [a], [M.B.PREMIUM]: [s, l, o, d, c, u, _, E, A, h, f, I, p, T, m, g, S, N, C, O, R] },
+    w = { [P.B.BASIC]: [a], [P.B.PREMIUM]: [s, l, o, d, c, u, _, E, A, h, f, I, p, T, m, g, S, N, C, O, R] },
     G = r().memoize(
         (e) =>
             new Promise((t) => {
@@ -97,7 +97,7 @@ let U = { start: 10, end: 15 },
     );
 function x(e, t) {
     let n = w[e];
-    if (null != t && e === M.B.PREMIUM) {
+    if (null != t && e === P.B.PREMIUM) {
         let e = t.end + 1;
         return Math.floor(Math.random() * (t.start - e) + e);
     }
@@ -125,14 +125,14 @@ function B(e) {
     return t.length < 1
         ? ""
         : 1 === t.length
-          ? P.intl.formatToPlainString(P.t.yZYxzF, { firstUsername: D.default.getUser(t[0])?.username, emojiNames: i })
+          ? M.intl.formatToPlainString(M.t.yZYxzF, { firstUsername: D.default.getUser(t[0])?.username, emojiNames: i })
           : 2 === t.length
-            ? P.intl.formatToPlainString(P.t["8rmtbd"], {
+            ? M.intl.formatToPlainString(M.t["8rmtbd"], {
                   firstUsername: D.default.getUser(t[0])?.username,
                   secondUsername: D.default.getUser(t[1])?.username,
                   emojiNames: i,
               })
-            : P.intl.formatToPlainString(P.t["/okjv0"], {
+            : M.intl.formatToPlainString(M.t["/okjv0"], {
                   firstUsername: D.default.getUser(t[0])?.username,
                   secondUsername: D.default.getUser(t[1])?.username,
                   count: t.length - 2,

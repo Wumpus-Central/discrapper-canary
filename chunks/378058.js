@@ -7,7 +7,7 @@ n.d(t, {
     Xw: () => y,
     Y4: () => b,
     l3: () => S,
-    o1: () => P,
+    o1: () => M,
     o6: () => v,
     sL: () => N,
     zg: () => C,
@@ -111,8 +111,8 @@ function b(e) {
     let t = e.guild_id;
     return void 0 !== a.A.getGuild(t);
 }
-let M = [];
-function P(e) {
+let P = [];
+function M(e) {
     let t;
-    return ((t = r.A.frecencyWithoutFetchingLatest), t.favoriteStickers?.stickerIds ?? M).includes(e);
+    return ((t = r.A.frecencyWithoutFetchingLatest), t.favoriteStickers?.stickerIds ?? P).includes(e);
 }

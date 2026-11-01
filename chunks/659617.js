@@ -28,8 +28,8 @@ var i,
     D = n(292348),
     v = n(268761),
     b = n(406704),
-    M = n(474078),
-    P = n(37411),
+    P = n(474078),
+    M = n(37411),
     U = n(652215),
     w = n(381941),
     G = n(105292),
@@ -57,7 +57,7 @@ function V(e, t) {
     {
         if ("" !== a) return B(a, 80);
         let t = T.Ay.unparse(i?.content ?? "", e.id, !0),
-            n = (0, M.A)(t.split("\n")[0], !0);
+            n = (0, P.A)(t.split("\n")[0], !0);
         n = n.replace(/^[ #-]+/, "");
         let r = [];
         for (;;) {
@@ -167,11 +167,11 @@ function W(e) {
                 L = 0,
                 [y, b] = (0, g.Ay)(e);
             y && ((e = b), (L = (0, a.UI)(L, U.pr7.SUPPRESS_NOTIFICATIONS)));
-            let M = (0, v.Gl)(t, null),
-                P = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+            let P = (0, v.Gl)(t, null),
+                M = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
                 G = {
                     name: n,
-                    auto_archive_duration: M,
+                    auto_archive_duration: P,
                     applied_tags: i,
                     message: { content: e, sticker_ids: r, flags: 0 !== L ? L : void 0 },
                 },
@@ -204,7 +204,7 @@ function W(e) {
                     );
                 }
             function k() {
-                return Y(t, l, O, () => s.Bo.post({ url: P, body: G, rejectWithError: (0, s.fT)() }));
+                return Y(t, l, O, () => s.Bo.post({ url: M, body: G, rejectWithError: (0, s.fT)() }));
             }
             try {
                 R = await k();
@@ -272,10 +272,10 @@ async function Y(e, t, i, r) {
                 title: s ? G.intl.string(G.t.vWNFkx) : G.intl.string(G.t["1KEdvB"]),
                 body: G.intl.string(G.t.Whhv4w),
             });
-        else if (P.$j.has(r.body?.code)) throw r;
+        else if (M.$j.has(r.body?.code)) throw r;
         else if (r.body?.code === U.t02.INVALID_FORM_BODY && r.body?.errors?.name != null) throw r;
         else if (r.body?.code === U.t02.UNKNOWN_SESSION) throw r;
-        else if (P.F4.has(r.body?.code)) {
+        else if (M.F4.has(r.body?.code)) {
             if (null != i)
                 if (r.body?.code === U.t02.EXPLICIT_CONTENT) {
                     let t = (0, m.m)();

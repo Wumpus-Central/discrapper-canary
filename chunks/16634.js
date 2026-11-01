@@ -4,8 +4,8 @@ var l = n(477900),
     r = n(503698),
     i = n.n(r),
     s = n(834730),
-    o = n(847374),
-    u = n(320448),
+    u = n(847374),
+    o = n(320448),
     d = n(939249),
     c = n(866665),
     f = n(738188),
@@ -22,7 +22,7 @@ var l = n(477900),
     _ = n(809526),
     A = n(105292),
     S = n(59678);
-function w(e) {
+function N(e) {
     let { userId: t } = e,
         n = (0, j.bG)([k.default], () => k.default.getUser(t), [t]),
         a = (0, y.tx)(n);
@@ -39,7 +39,7 @@ function w(e) {
         }),
     });
 }
-var N = n(60160),
+var w = n(60160),
     C = n(162052);
 function I(e) {
     let { projectId: t, node: n, presentation: r = "row", active: m = !1 } = e,
@@ -55,8 +55,8 @@ function I(e) {
         D = "detail" === r ? "text-md/normal" : "text-sm/normal",
         M = "detail" === r ? "text-sm/normal" : "text-xs/normal",
         z = null != t ? n.screenshots : [],
-        K = null != t ? n.attachments : [];
-    if (0 === k.length && 0 === z.length && 0 === K.length)
+        B = null != t ? n.attachments : [];
+    if (0 === k.length && 0 === z.length && 0 === B.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
@@ -67,10 +67,10 @@ function I(e) {
                 color: E,
                 selectable: !0,
                 className: T,
-                children: (0, l.jsx)(N.A, { text: b, variant: D, prose: !0 }),
+                children: (0, l.jsx)(w.A, { text: b, variant: D, prose: !0 }),
             }),
         });
-    let L = p ? o.a : u._;
+    let K = p ? u.a : o._;
     return (0, l.jsxs)("li", {
         "data-step-kind": n.labelKey ?? "step",
         "data-conjure-entrance": !0,
@@ -89,9 +89,9 @@ function I(e) {
                         variant: D,
                         color: E,
                         className: T,
-                        children: (0, l.jsx)(N.A, { text: b, variant: D, prose: !0 }),
+                        children: (0, l.jsx)(w.A, { text: b, variant: D, prose: !0 }),
                     }),
-                    (0, l.jsx)(L, { size: "xs", color: "currentColor", className: S.Ue }),
+                    (0, l.jsx)(K, { size: "xs", color: "currentColor", className: S.Ue }),
                 ],
             }),
             (0, l.jsxs)("div", {
@@ -114,9 +114,9 @@ function I(e) {
                                         color: m && I ? "none" : "text-muted",
                                         selectable: !0,
                                         className: i()({ [C.Hz]: m && I }),
-                                        children: (0, l.jsx)(N.A, { text: e, variant: M }),
+                                        children: (0, l.jsx)(w.A, { text: e, variant: M }),
                                     }),
-                                    null != a ? (0, l.jsx)(w, { userId: a }) : null,
+                                    null != a ? (0, l.jsx)(N, { userId: a }) : null,
                                     null != r
                                         ? (0, l.jsx)(c.m, {
                                               text: r,
@@ -143,7 +143,7 @@ function I(e) {
                               children: z.map((e) => (0, l.jsx)(P, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
-                    null != t && K.length > 0 ? (0, l.jsx)(x.A, { projectId: t, attachments: K }) : null,
+                    null != t && B.length > 0 ? (0, l.jsx)(x.A, { projectId: t, attachments: B }) : null,
                 ],
             }),
         ],
@@ -153,7 +153,7 @@ function E() {}
 function P(e) {
     let { projectId: t, screenshotId: n } = e,
         [r, i] = a.useState(null),
-        [s, o] = a.useState(!1);
+        [s, u] = a.useState(!1);
     a.useEffect(() => {
         let e = !1;
         return (
@@ -162,7 +162,7 @@ function P(e) {
                     e || i(t);
                 },
                 () => {
-                    e || o(!0);
+                    e || u(!0);
                 },
             ),
             () => {
@@ -170,16 +170,16 @@ function P(e) {
             }
         );
     }, [t, n]);
-    let u = A.intl.string(_.default["5kjnI/"]),
+    let o = A.intl.string(_.default["5kjnI/"]),
         d = a.useCallback(() => {
             (0, g.aF)(t, n).then((e) => {
                 (0, m.R)({
-                    items: [{ type: "IMAGE", url: e, alt: u }],
+                    items: [{ type: "IMAGE", url: e, alt: o }],
                     startingIndex: 0,
                     shouldHideMediaOptions: !0,
                     location: "ConjureChat",
                 });
             }, E);
-        }, [t, n, u]);
-    return s ? null : (0, l.jsx)(p.n, { name: u, thumbSrc: r, ariaLabel: u, onClick: d, onThumbError: () => o(!0) });
+        }, [t, n, o]);
+    return s ? null : (0, l.jsx)(p.n, { name: o, thumbSrc: r, ariaLabel: o, onClick: d, onThumbError: () => u(!0) });
 }

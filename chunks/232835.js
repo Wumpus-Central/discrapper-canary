@@ -31,8 +31,8 @@ var I = n(164956),
     D = n(696451),
     v = n(71393),
     b = n(576705),
-    M = n(994500),
-    P = n(309010),
+    P = n(994500),
+    M = n(309010),
     U = n(967198),
     w = n(287809),
     G = n(652215);
@@ -128,10 +128,10 @@ function X() {
                 t.reset(
                     t.map(
                         (t) => (
-                            t.blocked !== M.A.isBlockedForMessage(t) &&
-                                ((e = !0), (t = t.set("blocked", M.A.isBlockedForMessage(t)))),
-                            t.ignored !== M.A.isIgnoredForMessage(t) &&
-                                ((e = !0), (t = t.set("ignored", M.A.isIgnoredForMessage(t)))),
+                            t.blocked !== P.A.isBlockedForMessage(t) &&
+                                ((e = !0), (t = t.set("blocked", P.A.isBlockedForMessage(t)))),
+                            t.ignored !== P.A.isIgnoredForMessage(t) &&
+                                ((e = !0), (t = t.set("ignored", P.A.isIgnoredForMessage(t)))),
                             t
                         ),
                     ),
@@ -174,7 +174,7 @@ function Z(e) {
 class Q extends l.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
-        (this.waitFor(O.default, R.A, L.A, p.A, y.Ay, D.Ay, v.A, I.A, N.default, b.A, M.A, P.Ay, U.A, w.default),
+        (this.waitFor(O.default, R.A, L.A, p.A, y.Ay, D.Ay, v.A, I.A, N.default, b.A, P.A, M.Ay, U.A, w.default),
             this.syncWith([I.A], () => {}));
     }
     getMessages(e) {

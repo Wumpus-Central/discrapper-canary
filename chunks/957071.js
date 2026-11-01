@@ -1,7 +1,7 @@
 n.d(t, { A: () => p });
 var s = n(477900),
-    r = n(582128),
-    l = n(477262),
+    l = n(582128),
+    r = n(477262),
     a = n(432017),
     i = n(81369),
     c = n(265872),
@@ -16,7 +16,7 @@ let g = [
     {
         id: "add-images-videos",
         label: h.default["51+9lc"],
-        icon: l.s,
+        icon: r.s,
         accept: "image/*,video/*,.png,.jpg,.jpeg,.gif,.webp,.avif,.heic,.heif,.svg,.bmp,.mp4,.m4v,.mov,.webm,.mkv,.avi",
     },
     {
@@ -31,20 +31,20 @@ function p(e) {
     let {
             navId: t,
             disabled: n,
-            buttonClassName: l,
+            buttonClassName: r,
             iconClassName: a,
             onAddFiles: i,
             onImport: p,
-            onSendToOtherProjects: j,
+            onSendToOtherProjects: v,
         } = e,
-        v = r.useRef(null),
-        N = r.useRef(null),
+        j = l.useRef(null),
+        N = l.useRef(null),
         y = x.intl.string(x.t.d56gCa),
-        b = r.useCallback((e) => {
-            let t = v.current;
+        b = l.useCallback((e) => {
+            let t = j.current;
             null != t && ((t.accept = e), t.click());
         }, []),
-        w = r.useCallback(
+        w = l.useCallback(
             (e) => {
                 (i(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
             },
@@ -53,7 +53,7 @@ function p(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("input", {
-                ref: v,
+                ref: j,
                 type: "file",
                 multiple: !0,
                 hidden: !0,
@@ -98,13 +98,13 @@ function p(e) {
                                           action: p,
                                       })
                                     : null,
-                                null != j
+                                null != v
                                     ? (0, s.jsx)(u.Dr, {
                                           id: "send-to-other-projects",
                                           label: x.intl.string(h.default["5HmLrK"]),
                                           iconLeft: m.t,
                                           leadingAccessory: { type: "icon", icon: m.t },
-                                          action: j,
+                                          action: v,
                                       })
                                     : null,
                             ],
@@ -112,16 +112,16 @@ function p(e) {
                     });
                 },
                 children: (e, t) => {
-                    let { isShown: r } = t;
+                    let { isShown: l } = t;
                     return (0, s.jsx)("button", {
                         ...e,
                         ref: N,
                         type: "button",
-                        className: l,
+                        className: r,
                         disabled: n,
                         "aria-label": y,
                         "aria-haspopup": "menu",
-                        "aria-expanded": r,
+                        "aria-expanded": l,
                         children: (0, s.jsx)(f.PlusLargeIcon, {
                             size: "refresh_sm",
                             color: "currentColor",

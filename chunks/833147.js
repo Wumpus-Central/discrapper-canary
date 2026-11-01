@@ -1,32 +1,32 @@
-r.d(e, { A: () => s });
-var n = r(477900);
+r.d(a, { A: () => u });
+var t = r(477900);
 r(582128);
-var t = r(536246),
+var n = r(536246),
     o = r(156954),
-    u = r(355361);
-function s(a) {
+    s = r(355361);
+function u(e) {
     let {
-        application: e,
+        application: a,
         queryParams: r,
-        url: s,
+        url: u,
         contextSource: c,
         onIframeMount: l,
         onIframeUnmount: i,
         onGuestReload: d,
-        transparent: p = !1,
-    } = a;
-    return (0, n.jsx)(o.oI, {
-        allowPopups: (0, t.b)(e),
+        transparent: m = !1,
+    } = e;
+    return (0, t.jsx)(o.oI, {
+        allowPopups: (0, n.b)(a),
         referrerPolicy: "origin",
-        url: s,
+        url: u,
         onIframeMount: l,
         onIframeUnmount: i,
         onGuestReload: d,
         contextSource: c,
         queryParams: r,
-        className: u.p,
-        style: p ? o.cT : void 0,
-        transparentWhileLoading: p,
+        className: s.p,
+        style: m ? o.cT : void 0,
+        transparentWhileLoading: m,
         shouldRefocus: !1,
     });
 }

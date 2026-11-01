@@ -39,7 +39,7 @@ function O(e) {
         { i18n: D } = (0, I.G9)(),
         v = r.useId(),
         b = r.useId(),
-        M = (function (e) {
+        P = (function (e) {
             let t = { size: "xs", "aria-hidden": !0 };
             switch (e) {
                 case "success":
@@ -52,7 +52,7 @@ function O(e) {
                     return (0, i.jsx)(f.WarningIcon, { color: l.A.colors.ICON_FEEDBACK_WARNING, ...t });
             }
         })(t),
-        P = (function (e, t) {
+        M = (function (e, t) {
             switch (e) {
                 case "critical":
                     return t.FEEDBACK_CRITICAL_ICON_A11Y_LABEL;
@@ -64,7 +64,7 @@ function O(e) {
                     return t.FEEDBACK_POSITIVE_ICON_A11Y_LABEL;
             }
         })(t, D),
-        U = [P, (0, o.O)(n), (0, o.O)(a), ...(p ?? []).map(o.O)].filter(Boolean).join(", ");
+        U = [M, (0, o.O)(n), (0, o.O)(a), ...(p ?? []).map(o.O)].filter(Boolean).join(", ");
     return (
         r.useEffect(() => {
             "status" !== L || y || d.O.announce(U, "polite");
@@ -82,7 +82,7 @@ function O(e) {
                                 variant: null != n ? N : C,
                                 color: "none",
                                 className: m.iconContainer,
-                                children: M,
+                                children: P,
                             }),
                             (0, i.jsxs)("div", {
                                 className: s()(m.contentsContainer, { [m.vertical]: null != O }),
@@ -90,7 +90,7 @@ function O(e) {
                                     (0, i.jsxs)("div", {
                                         className: m.copyContainer,
                                         children: [
-                                            (0, i.jsxs)(_.A, { id: v, children: [P, ":"] }),
+                                            (0, i.jsxs)(_.A, { id: v, children: [M, ":"] }),
                                             null == n
                                                 ? null
                                                 : (0, i.jsx)(T.E, {

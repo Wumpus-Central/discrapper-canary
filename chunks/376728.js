@@ -39,8 +39,8 @@ var g = n(612200),
     D = n(473529),
     v = n(707592),
     b = n(698441),
-    M = n(610101),
-    P = n(224536),
+    P = n(610101),
+    M = n(224536),
     U = n(21599),
     w = n(970163),
     G = n(700241),
@@ -466,10 +466,10 @@ let ef = {
             null != e && e_(e, t);
             return;
         }
-        if (null != o && o.features?.includes(er.GuildFeatures.HUB)) return void P.A.onOpenHubInvite(e);
+        if (null != o && o.features?.includes(er.GuildFeatures.HUB)) return void M.A.onOpenHubInvite(e);
         let u = e.flags ?? 0,
             _ = (0, d.Lt)(u, l.Q.IS_GUEST_INVITE) || (0, d.Lt)(u, l.Q.IS_APPLICATION_BYPASS);
-        if (null != o && !_ && e.new_member && (0, M.h)(o)) return void (0, M.W)(o.id);
+        if (null != o && !_ && e.new_member && (0, P.h)(o)) return void (0, P.W)(o.id);
         if (null == s) return;
         let E = eu(e);
         (null != n && (E.transitionTo = n),

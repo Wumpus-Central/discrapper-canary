@@ -40,8 +40,8 @@ var i = n(477900),
     D = n(736653),
     v = n(573648),
     b = n(666860),
-    M = n(269815),
-    P = n(627363),
+    P = n(269815),
+    M = n(627363),
     U = n(587895),
     w = n(224750),
     G = n(62447),
@@ -259,13 +259,13 @@ function ey(e) {
 var eD = n(285796),
     ev = n(628284),
     eb = n(444927),
-    eM = n(698403);
-function eP(e) {
+    eP = n(698403);
+function eM(e) {
     let { text: t, error: n, isFake: r } = e,
         a = !0 === r ? en.intl.string(en.t.OX8EMU) : en.intl.string(en.t["0lpCFG"]),
         l = `${a}: ${t}${null != n ? `. ${n}` : ""}`;
     return (0, i.jsxs)("div", {
-        className: eM.z8,
+        className: eP.z8,
         role: "group",
         "aria-label": l,
         children: [
@@ -273,17 +273,17 @@ function eP(e) {
                 ? (0, i.jsx)(eD.a, {
                       size: "md",
                       color: "currentColor",
-                      className: s()(eM.Kk, eM.RC),
+                      className: s()(eP.Kk, eP.RC),
                       "aria-hidden": !0,
                   })
                 : (0, i.jsx)(ev.y, {
                       size: "md",
                       color: "currentColor",
-                      className: s()(eM.Kk, eM.sc),
+                      className: s()(eP.Kk, eP.sc),
                       "aria-hidden": !0,
                   }),
             (0, i.jsxs)("div", {
-                className: eM.rv,
+                className: eP.rv,
                 "aria-hidden": !0,
                 children: [
                     (0, i.jsx)(m.E, {
@@ -315,22 +315,22 @@ function eU(e) {
         A = o ? en.t.PZpY9c : en.t["1Hz+Sl"],
         h = a === u.b.USER_INSTALL && r.includes(_.F.APPLICATIONS_COMMANDS);
     return (0, i.jsxs)("div", {
-        className: s()(eM.Wu, d ? eM.bc : void 0),
+        className: s()(eP.Wu, d ? eP.bc : void 0),
         children: [
             (0, i.jsx)(g.D, {
                 variant: "heading-sm/normal",
-                className: eM.a9,
+                className: eP.a9,
                 children: en.intl.format(A, { application: t?.name ?? "" }),
             }),
             n
                 .map((e) =>
                     (0, es.rY)(e, n).map((t, n) =>
-                        (0, i.jsx)(eP, { text: t, error: 0 === n ? l?.[e]?.[0] : void 0 }, `${e}-${n}`),
+                        (0, i.jsx)(eM, { text: t, error: 0 === n ? l?.[e]?.[0] : void 0 }, `${e}-${n}`),
                     ),
                 )
                 .flat(),
-            h && (0, i.jsx)(eP, { text: en.intl.string(en.t.Ls2XRq) }),
-            (0, i.jsx)(eP, { text: E, isFake: !0 }),
+            h && (0, i.jsx)(eM, { text: en.intl.string(en.t.Ls2XRq) }),
+            (0, i.jsx)(eM, { text: E, isFake: !0 }),
         ],
     });
 }
@@ -736,7 +736,7 @@ let e5 = (0, F.Fe)({
 function e4() {
     let e = (0, l.zy)(),
         t = r.useMemo(() => (0, J._)(e.search), [e.search]);
-    (0, M.A)();
+    (0, P.A)();
     let a = !e.search.includes("response_type"),
         [s, o] = r.useState(!1),
         d = r.useRef(!1),
@@ -884,7 +884,7 @@ function e7(e) {
         E = s?.name ?? "";
     return (
         r.useEffect(() => {
-            P.Ay.fetchApplication(t);
+            M.Ay.fetchApplication(t);
         }, [t]),
         (0, i.jsxs)("div", {
             className: e3.E4,
@@ -996,7 +996,7 @@ function te(e) {
             prompt: N,
             authorizations: O,
             scopes: D,
-            permissions: M,
+            permissions: P,
             guildId: U,
             channelId: x,
             integrationType: k,
@@ -1026,7 +1026,7 @@ function te(e) {
         [eR, ey] = r.useState(!1),
         eD = eI?.guilds,
         [ev, eb] = r.useState(U ?? null),
-        [eM, eP] = r.useState(x ?? null),
+        [eP, eM] = r.useState(x ?? null),
         [ew, eG] = r.useState(Z.x3),
         ex = (0, h.bG)([z.A], () => (null == eE ? null : (z.A.getAccounts().find((e) => e.type === eE) ?? null)), [eE]),
         eF = null == eE || null != ex,
@@ -1038,7 +1038,7 @@ function te(e) {
         e$ = r.useMemo(() => null == eA && null == k && (D?.length ?? 0) === 0 && null == I, [eA, D?.length, I, k]),
         [ez, eX] = r.useState(null);
     r.useEffect(() => {
-        e$ && P.Ay.fetchApplication(A).then((e) => eX(Y.Ay.createFromServer(e)));
+        e$ && M.Ay.fetchApplication(A).then((e) => eX(Y.Ay.createFromServer(e)));
     }, [A, e$]);
     let eq = r.useMemo(
             () => (null == eY ? null : ez?.integrationTypesConfig?.[eY]?.oauth2InstallParams),
@@ -1050,7 +1050,7 @@ function te(e) {
                 n = es.k$.filter((e) => t.includes(e));
             return { requestedScopes: t, accountScopes: n };
         }, [eq?.scopes, D, e$]),
-        e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : M) ?? Z.x3, [eq?.permissions, M, e$]),
+        e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : P) ?? Z.x3, [eq?.permissions, P, e$]),
         e4 = r.useRef(!1),
         [e6, te] = r.useState(ed ?? []),
         [tt, tn] = r.useState(null != ed && ed.length > 0);
@@ -1104,7 +1104,7 @@ function te(e) {
                         connectedAccountProvider: eE,
                         permissions: E.TF(e2, ew),
                         guildId: eY === u.b.GUILD_INSTALL && null != ev ? ev : void 0,
-                        channelId: eY === u.b.GUILD_INSTALL && null != eM ? eM : void 0,
+                        channelId: eY === u.b.GUILD_INSTALL && null != eP ? eP : void 0,
                     });
                     if ((e && (await (0, w.Yx)(A, e6)), null != q))
                         (q({ application: eI?.application, location: n.location, guild: eW, scopes: eZ, canceled: t }),
@@ -1124,7 +1124,7 @@ function te(e) {
                         eO(!1));
                 }
             },
-            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, T, g, S, e2, ew, ev, eY, eE, eM, e6],
+            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, T, g, S, e2, ew, ev, eY, eE, eP, e6],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
@@ -1211,7 +1211,7 @@ function te(e) {
         }, [em, eF, k]),
         r.useEffect(() => {
             if (null == eY || null != eI || null != eS) return;
-            eY === u.b.USER_INSTALL && (eb(null), eP(null));
+            eY === u.b.USER_INSTALL && (eb(null), eM(null));
             let e = eZ.filter((e) => !es.gX.includes(e));
             0 === eZ.length
                 ? eN(Error("No scopes were provided."))
@@ -1316,16 +1316,16 @@ function te(e) {
                     tm
                         ? (0, i.jsx)(e1, {
                               error: (tp[_.F.WEBHOOK_INCOMING] ?? [])[0],
-                              selectedChannelId: eM,
+                              selectedChannelId: eP,
                               selectedGuildId: ev,
-                              onChannelChange: eP,
+                              onChannelChange: eM,
                           })
                         : null,
                 ],
             })),
                 eZ.includes(_.F.BOT) && !E.aI(e2, Z.x3) && (a = "AUTHORIZE_BOT_PERMISSIONS"),
                 tl.length > 1 && (n = "SELECT_INSTALL_TYPE"),
-                (tE = (tg && null == eW) || (tm && null == eM)),
+                (tE = (tg && null == eW) || (tm && null == eP)),
                 (t_ = !0));
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":

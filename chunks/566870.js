@@ -1,7 +1,7 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => i });
 var r = n(991690),
-    i = n(754027),
+    u = n(754027),
     l = n(333807);
-function u(e) {
-    return e.surface.type === r.U.APP_CHANNEL && !(0, i.Q5)(e.surface) && (0, l.A)(e.applicationId);
+function i(e) {
+    return e.surface.type === r.U.APP_CHANNEL && !(0, u.Q5)(e.surface) && (0, l.A)(e.applicationId);
 }

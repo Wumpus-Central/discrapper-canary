@@ -1,7 +1,7 @@
 n.d(t, {
     A9: () => v,
     Ho: () => b,
-    Nl: () => M,
+    Nl: () => P,
     TZ: () => y,
     Tp: () => w,
     XI: () => L,
@@ -10,7 +10,7 @@ n.d(t, {
     a8: () => G,
     dA: () => k,
     nO: () => F,
-    vN: () => P,
+    vN: () => M,
 });
 var i = n(284009),
     r = n.n(i),
@@ -74,7 +74,7 @@ function v(e, t) {
 function b(e, t) {
     l.h.dispatch({ type: "STREAM_UPDATE_SELF_HIDDEN", channelId: e, selfStreamHidden: t });
 }
-function M(e, t) {
+function P(e, t) {
     let { guildId: n, channelId: i } = e;
     if (null != n && D(n, i)) return;
     v(e, t);
@@ -82,7 +82,7 @@ function M(e, t) {
         a = p.Ay.getVoiceChannelId();
     (r && a === i) || (0, c.A)(e);
 }
-function P(e) {
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     (n && U(e, t),
@@ -130,5 +130,5 @@ function k(e, t) {
 function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = A.A.getCurrentUserActiveStream();
-    null != t && P((0, d._z)(t), e);
+    null != t && M((0, d._z)(t), e);
 }

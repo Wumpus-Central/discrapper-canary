@@ -13,15 +13,15 @@
     n(14289),
     n(35956));
 var s = n(73153),
-    r = n(839214),
-    l = n(322227),
+    l = n(839214),
+    r = n(322227),
     a = n(666476),
     i = n(989145),
     c = n(809526),
     o = n(105292);
 let u = [],
     d = 1,
-    m = (0, r.D)(() => ({ draftsByProject: {} }));
+    m = (0, l.D)(() => ({ draftsByProject: {} }));
 function f(e, t, n) {
     return e.draftsByProject[t]?.[n] ?? u;
 }
@@ -33,13 +33,13 @@ function x(e, t, n) {
     m.setState({ draftsByProject: { ...s, [e]: { ...s[e], [t]: n } } });
 }
 function g(e, t, n, s) {
-    let r = h(e, t);
+    let l = h(e, t);
     return (
-        !!r.some((e) => e.localId === n) &&
+        !!l.some((e) => e.localId === n) &&
         (x(
             e,
             t,
-            r.map((e) => (e.localId === n ? { ...e, ...s } : e)),
+            l.map((e) => (e.localId === n ? { ...e, ...s } : e)),
         ),
         !0)
     );
@@ -49,17 +49,17 @@ function p(e, t) {
         console.error("[conjure] attachment cleanup failed", e);
     });
 }
-function j(e, t) {
+function v(e, t) {
     (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && p(e, t.ref.id));
 }
-function v(e, t) {
+function j(e, t) {
     let { deleteFromWorker: n } = t,
         { draftsByProject: s } = m.getState(),
-        r = s[e];
-    if (null == r) return;
-    for (let t of Object.values(r))
-        for (let s of t ?? u) n ? j(e, s) : null != s.previewUrl && URL.revokeObjectURL(s.previewUrl);
-    let { [e]: l, ...a } = s;
+        l = s[e];
+    if (null == l) return;
+    for (let t of Object.values(l))
+        for (let s of t ?? u) n ? v(e, s) : null != s.previewUrl && URL.revokeObjectURL(s.previewUrl);
+    let { [e]: r, ...a } = s;
     m.setState({ draftsByProject: a });
 }
 function N(e) {
@@ -77,7 +77,7 @@ function w(e, t, n) {
         let { draft: t, upload: n } = e;
         return { draft: { ...t, localId: d++ }, upload: n };
     });
-    for (let { draft: n, upload: r } of (x(e, t, [
+    for (let { draft: n, upload: l } of (x(e, t, [
         ...h(e, t),
         ...s.map((e) => {
             let { draft: t } = e;
@@ -85,16 +85,16 @@ function w(e, t, n) {
         }),
     ]),
     s))
-        r?.().then(
+        l?.().then(
             (s) => {
                 if ("errorText" in s) return void g(e, t, n.localId, { status: "error", errorText: s.errorText });
-                let { converted: r, ...l } = s;
-                g(e, t, n.localId, { ...r, status: "ready", ref: l })
+                let { converted: l, ...r } = s;
+                g(e, t, n.localId, { ...l, status: "ready", ref: r })
                     ? setTimeout(
                           () => g(e, t, n.localId, { status: "error", errorText: o.intl.string(c.default.E7dS5n) }),
                           a.o2 - 3e5,
                       )
-                    : p(e, l.id);
+                    : p(e, r.id);
             },
             (s) => {
                 (console.error("[conjure] attachment upload failed", s),
@@ -104,9 +104,9 @@ function w(e, t, n) {
 }
 function A(e, t, n) {
     let s = h(e, t),
-        r = s.find((e) => e.localId === n);
-    null != r &&
-        (j(e, r),
+        l = s.find((e) => e.localId === n);
+    null != l &&
+        (v(e, l),
         x(
             e,
             t,
@@ -116,7 +116,7 @@ function A(e, t, n) {
 function C(e, t) {
     let n = h(e, t);
     if (0 !== n.length) {
-        for (let t of n) j(e, t);
+        for (let t of n) v(e, t);
         x(e, t, u);
     }
 }
@@ -129,14 +129,14 @@ function E(e, t) {
 function S(e, t) {
     let { clarificationAnswers: n, attachments: s = [] } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        r = h(e, "chat"),
-        a = r.length > 0 && r.every((e) => "ready" === e.status) ? E(e, "chat") : [];
-    (0, l.sendUserMessage)(e, t, [...s, ...a], { clarificationAnswers: n });
+        l = h(e, "chat"),
+        a = l.length > 0 && l.every((e) => "ready" === e.status) ? E(e, "chat") : [];
+    (0, r.sendUserMessage)(e, t, [...s, ...a], { clarificationAnswers: n });
 }
 (s.h.subscribe("LOGOUT", () => {
-    for (let e of Object.keys(m.getState().draftsByProject)) v(e, { deleteFromWorker: !0 });
+    for (let e of Object.keys(m.getState().draftsByProject)) j(e, { deleteFromWorker: !0 });
 }),
     s.h.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (e) => {
         let { projectId: t } = e;
-        v(t, { deleteFromWorker: !1 });
+        j(t, { deleteFromWorker: !1 });
     }));

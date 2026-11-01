@@ -92,11 +92,11 @@ function c(e) {
                 }),
             [t, u, _],
         ),
-        [M, P] = i.useState(!1),
-        U = i.useRef(M);
+        [P, M] = i.useState(!1),
+        U = i.useRef(P);
     (i.useLayoutEffect(() => {
-        U.current = M;
-    }, [M]),
+        U.current = P;
+    }, [P]),
         i.useLayoutEffect(() => {
             let e = C.current;
             if (null != e && c)
@@ -113,11 +113,11 @@ function c(e) {
                     }
                 );
             function n() {
-                P(!0);
+                M(!0);
             }
             function i(e) {
                 e.currentTarget.contains(e.relatedTarget) ||
-                    (P(!1),
+                    (M(!1),
                     requestAnimationFrame(() => {
                         let e = S.current;
                         null !== e && null == R((0, s.Mz)(e)) && D((0, s.Mz)(t, s.KE));
@@ -233,7 +233,7 @@ function c(e) {
     return i.useMemo(
         () => ({
             id: t,
-            containerProps: { onKeyDown: k, ref: C, tabIndex: M && I ? -1 : 0 },
+            containerProps: { onKeyDown: k, ref: C, tabIndex: P && I ? -1 : 0 },
             orientation: m,
             setFocus: F,
             async focusLastVisibleItem() {
@@ -273,6 +273,6 @@ function c(e) {
                 return e ? (0, s.HP)(e) : null;
             },
         }),
-        [t, k, m, M, I, F, x, G, v],
+        [t, k, m, P, I, F, x, G, v],
     );
 }

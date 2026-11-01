@@ -55,8 +55,8 @@ function I(e) {
             onMouseUp: D,
             onMouseEnter: v,
             onMouseLeave: b,
-            onKeyDown: M,
-            children: P,
+            onKeyDown: P,
+            children: M,
             rel: U,
             buttonRef: w,
             focusProps: G,
@@ -100,7 +100,7 @@ function I(e) {
             onMouseDown: T ? void 0 : y,
             onMouseEnter: v,
             onMouseLeave: b,
-            onKeyDown: T ? void 0 : M,
+            onKeyDown: T ? void 0 : P,
             type: g,
             disabled: T,
             style: S,
@@ -114,7 +114,7 @@ function I(e) {
                 m && !T
                     ? (0, i.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: _.u1, itemClassName: _.$N })
                     : null,
-                (0, i.jsx)("div", { className: s()(_.PG, O), children: P }),
+                (0, i.jsx)("div", { className: s()(_.PG, O), children: M }),
             ],
         }),
     });

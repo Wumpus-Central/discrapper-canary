@@ -183,8 +183,8 @@ function v(e, t) {
         }));
 }
 var b = n(168543),
-    M = n(903209),
-    P = n(734057);
+    P = n(903209),
+    M = n(734057);
 n(299091);
 var U = n(721779);
 function w(e, t) {
@@ -220,9 +220,9 @@ function w(e, t) {
                     break;
                 case N.I.USER_PROFILE:
                     if ((0, b.l)("MessageCodedLinkManager")) {
-                        let e = null == t ? null : P.A.getChannel(t);
+                        let e = null == t ? null : M.A.getChannel(t);
                         (0, C.f)(async () => {
-                            await (0, M.A)(i, void 0, {
+                            await (0, P.A)(i, void 0, {
                                 guildId: e?.guild_id ?? void 0,
                                 withMutualGuilds: !0,
                                 withMutualFriends: !0,

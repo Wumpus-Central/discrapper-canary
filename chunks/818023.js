@@ -1,7 +1,7 @@
 n.d(t, {
     iu: () => g,
     D4: () => A,
-    M1: () => P,
+    M1: () => M,
     Ig: () => u,
     AM: () => T,
     xW: () => N,
@@ -18,7 +18,7 @@ n.d(t, {
     aX: () => L,
     qA: () => h,
     NW: () => c,
-    i6: () => M,
+    i6: () => P,
     mO: () => C,
     lk: () => v,
     H5: () => b,
@@ -88,6 +88,6 @@ let y = { label_type: o.Hr.NONE, release_phase: "", label_from: null, label_unti
     },
     v = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM, d.rbe.GUILD_SPACE],
     b = [...v, d.rbe.GUILD_VOICE],
-    M = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var P = (((a = {}).NORMAL = "normal"), (a.FULL_SCREEN = "full-screen"), a);
+    P = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
+var M = (((a = {}).NORMAL = "normal"), (a.FULL_SCREEN = "full-screen"), a);
 let U = 216e5;

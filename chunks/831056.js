@@ -41,10 +41,10 @@ function j(e) {
     let { title: n, subtitle: t, ctaBtnLabel: l, onCTAClick: r, orientation: c, ctaIcon: u } = e;
     return (0, s.jsxs)("div", {
         className: a()(o.pP, { [o.iC]: "portrait" === c }),
-        children: [(0, s.jsx)(b, { title: n, subtitle: t }), (0, s.jsx)(v, { label: l, icon: u, onClick: r })],
+        children: [(0, s.jsx)(v, { title: n, subtitle: t }), (0, s.jsx)(b, { label: l, icon: u, onClick: r })],
     });
 }
-function b(e) {
+function v(e) {
     let { title: n, subtitle: t } = e;
     return (0, s.jsxs)("div", {
         className: o.PH,
@@ -54,7 +54,7 @@ function b(e) {
         ],
     });
 }
-function v(e) {
+function b(e) {
     let { label: n, icon: t, onClick: r, className: m } = e,
         [d, S] = l.useState(!1);
     function f() {

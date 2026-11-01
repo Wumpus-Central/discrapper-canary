@@ -6,7 +6,7 @@
     M: () => O,
     O8: () => m,
     b: () => R,
-    c2: () => M,
+    c2: () => P,
     f: () => U,
     gh: () => D,
     ku: () => p,
@@ -63,7 +63,7 @@ function T(e) {
         : (function (e, t) {
               let n = u.default.getCurrentUser();
               if (null == n || t === n.id) return h.LO.NONE;
-              let i = M(e, t, [o.A, c.A]);
+              let i = P(e, t, [o.A, c.A]);
               return null == i ? h.LO.NONE : m(i);
           })(t, n);
 }
@@ -143,7 +143,7 @@ function y(e, t) {
                     ("image" in n && null != n.image && n.image?.width === 0 && n.image?.height === 0) ||
                     ("images" in n && n.images?.some((e) => null != e && 0 === e.width && 0 === e.height))
                 ) &&
-                    P(
+                    M(
                         null != (r = n).content_scan_version
                             ? r.content_scan_version
                             : null != r.contentScanVersion || null != r.contentScanVersion
@@ -157,14 +157,14 @@ function y(e, t) {
                 (a = e.media),
                 0 !== (l = c).length &&
                     0 !== l.filter((e) => !D(e, { type: E.D.Attachment, media: a })).length &&
-                    P(a.content_scan_version ?? a.contentScanVersion, l)
+                    M(a.content_scan_version ?? a.contentScanVersion, l)
             );
         case E.D.GenericMedia:
             return (
                 (o = e.media),
                 0 !== (d = c).length &&
                     0 !== d.filter((e) => !D(e, { type: E.D.GenericMedia, media: o })).length &&
-                    P(o.contentScanMetadata?.version, d)
+                    M(o.contentScanMetadata?.version, d)
             );
         default:
             return !1;
@@ -206,7 +206,7 @@ function b(e) {
     for (let n of p()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
-function M(e, t) {
+function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.A, c.A],
         [i, r] = n,
         a = i.getChannel(e),
@@ -219,7 +219,7 @@ function M(e, t) {
               : E.v.NON_FRIEND_DM
           : E.v.GUILD;
 }
-function P(e, t) {
+function M(e, t) {
     let n = A.A.validContentScanVersion;
     return e !== I.Ae && (t.includes(h.kn.GORE) || t.includes(h.kn.SELF_HARM) ? null == e || e < n : null == e);
 }

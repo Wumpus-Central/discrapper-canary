@@ -4,8 +4,8 @@ var l = n(477900),
     r = n(503698),
     i = n.n(r),
     s = n(847374),
-    o = n(320448),
-    u = n(834730),
+    u = n(320448),
+    o = n(834730),
     d = n(939249),
     c = n(344587),
     f = n(809526),
@@ -30,18 +30,18 @@ function x(e) {
     }, [r]);
     let A = a.useId(),
         S = a.useCallback(() => y((e) => !e), []),
-        { text: w, phase: N } = (0, c.Q)(n),
-        C = k ? s.a : o._,
+        { text: N, phase: w } = (0, c.Q)(n),
+        C = k ? s.a : u._,
         I = null != h,
         E = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: p.hd, children: t }),
-                (0, l.jsx)(u.E, {
+                (0, l.jsx)(o.E, {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "currentColor",
-                    className: i()(p.qo, { [p._q]: "exit" === N, [p.GD]: "enter" === N }),
-                    children: w,
+                    className: i()(p.qo, { [p._q]: "exit" === w, [p.GD]: "enter" === w }),
+                    children: N,
                 }),
                 I ? (0, l.jsx)(C, { size: "xs", color: "currentColor", className: p.nD }) : null,
             ],
@@ -74,7 +74,7 @@ function x(e) {
                       className: i()(p.ep, p.EK),
                       "aria-expanded": k,
                       "aria-controls": A,
-                      "aria-label": m.intl.formatToPlainString(f.default.yByAPh, { activity: w }),
+                      "aria-label": m.intl.formatToPlainString(f.default.yByAPh, { activity: N }),
                       onClick: S,
                       children: P,
                   })

@@ -42,8 +42,8 @@ let y = new s.J(
     D = null,
     v = null,
     b = !1,
-    M = null,
-    P = 30 * I.A.Millis.MINUTE;
+    P = null,
+    M = 30 * I.A.Millis.MINUTE;
 function U(e) {
     let t = c.A.getChannel(e),
         n = t?.lastMessageId;
@@ -63,13 +63,13 @@ function w(e, t, n, i, r) {
     };
 }
 function G() {
-    (y.clear(), (D = null), (v = null), (b = !1), (M = null));
+    (y.clear(), (D = null), (v = null), (b = !1), (P = null));
 }
 function x() {
     let e = Date.now();
     (G(),
         (v = e),
-        (M = _.A.getChannelId() ?? null),
+        (P = _.A.getChannelId() ?? null),
         (function (e) {
             let t = A.Ay.getChannelId();
             if (null != t && null != c.A.getChannel(t)) {
@@ -92,7 +92,7 @@ function x() {
                 let r = t.lastMessageId;
                 if (null == r) continue;
                 let a = p.default.extractTimestamp(r);
-                if (e - a > P) continue;
+                if (e - a > M) continue;
                 let s = w(i, m.B9.MANUAL, e, a, r);
                 (y.set(i, s), n++);
             }
@@ -116,9 +116,9 @@ function V() {
         t = (function () {
             if (null == D) return !1;
             let e = k();
-            return e !== D && M === D && e !== D && ((D = F(M)), !0);
+            return e !== D && P === D && e !== D && ((D = F(P)), !0);
         })(),
-        n = null == (e = k()) ? ((M = null), !!b && ((b = !1), !0)) : M !== e && ((M = e), !!b && ((b = !1), !0)),
+        n = null == (e = k()) ? ((P = null), !!b && ((b = !1), !0)) : P !== e && ((P = e), !!b && ((b = !1), !0)),
         i = B();
     return t || n || i;
 }

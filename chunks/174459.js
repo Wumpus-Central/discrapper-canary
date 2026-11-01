@@ -15,8 +15,8 @@
         expandLocation: () => L,
         AnalyticEventConfigs: () => R,
         AnalyticsSchema: () => i,
-        debugLogEvent: () => P,
-        expandEventProperties: () => M,
+        debugLogEvent: () => M,
+        expandEventProperties: () => P,
     }));
 var i = {};
 (n.r(i), n(321073));
@@ -186,7 +186,7 @@ let v = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatche
 function b(e) {
     return (g = e);
 }
-function M(e) {
+function P(e) {
     let t = e ?? {};
     if (null != t.location) {
         let { location: e, ...n } = t;
@@ -226,7 +226,7 @@ function M(e) {
         t
     );
 }
-function P(e, t) {
+function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     (E.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t),
         n ? u.z8("Analytics", e, t) : u.z8("Analytics", e));
@@ -252,8 +252,8 @@ function V(e) {
     return e === p.S7.GAME || e === p.S7.DEPRECATED_GAME;
 }
 function H(e, t) {
-    let n = M({ location: (0, c.g$)(), ...t });
-    ((0, c.eE)(e, { type: "action", ...t }), P(e, n), B(e, n));
+    let n = P({ location: (0, c.g$)(), ...t });
+    ((0, c.eE)(e, { type: "action", ...t }), M(e, n), B(e, n));
 }
 function j() {
     return (0, a.A)();
@@ -264,7 +264,7 @@ let W = {
     setSystemAccessibilityFeatures: function (e) {
         y = e;
     },
-    expandEventProperties: M,
+    expandEventProperties: P,
     track: function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             i = String(e);
@@ -273,7 +273,7 @@ let W = {
             null != n.throttlePercent && Math.random() > n.throttlePercent)
         )
             return Promise.resolve();
-        let r = M(t);
-        return (P(i, r, n.logEventProperties), v(e, r, { flush: n.flush, fingerprint: n.fingerprint }));
+        let r = P(t);
+        return (M(i, r, n.logEventProperties), v(e, r, { flush: n.flush, fingerprint: n.fingerprint }));
     },
 };

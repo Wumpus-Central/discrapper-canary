@@ -116,8 +116,8 @@ let b = Object.freeze({
         showGameInviteNotification: !0,
         customInviteMessage: void 0,
     }),
-    M = null,
-    P = {},
+    P = null,
+    M = {},
     U = null,
     w = new Set(),
     G = !1,
@@ -126,8 +126,8 @@ let b = Object.freeze({
     F = new Set(),
     B = !1;
 function V(e) {
-    let t = P[e];
-    return (null == t && (t = P[e] = { ...b }), t);
+    let t = M[e];
+    return (null == t && (t = M[e] = { ...b }), t);
 }
 __OVERLAY__ &&
     (function (e) {
@@ -363,12 +363,12 @@ let H = { ...b },
     ]);
 function Y() {
     if (!__OVERLAY__) return !1;
-    let e = M === (0, u.getPID)(),
+    let e = P === (0, u.getPID)(),
         t = w.has((0, u.getPID)()) || F.size > 0;
     e && t ? (0, s.XC)(window, !0) : (0, s.XC)(window, !1);
 }
 function K() {
-    if (M !== (0, u.getPID)()) return !1;
+    if (P !== (0, u.getPID)()) return !1;
     F.clear();
 }
 function $(e) {
@@ -475,7 +475,7 @@ class X extends i.Ay.PersistedStore {
             __OVERLAY__ && w.delete((0, u.getPID)()),
             null != e)
         ) {
-            P = e;
+            M = e;
             let t = C.default.getId();
             null != t &&
                 (null == (H = V(t)).textChatNotifications && (H.textChatNotifications = b.textChatNotifications),
@@ -484,7 +484,7 @@ class X extends i.Ay.PersistedStore {
         }
     }
     getState() {
-        return P;
+        return M;
     }
     isLocked(e) {
         return !w.has(e);
@@ -493,10 +493,10 @@ class X extends i.Ay.PersistedStore {
         return !w.has((0, u.getPID)());
     }
     isInstanceFocused() {
-        return M === (0, u.getPID)();
+        return P === (0, u.getPID)();
     }
     isFocused(e) {
-        return M === e;
+        return P === e;
     }
     isPinned(e) {
         let t = L.A.getLayout(u.OVERLAY_LAYOUT_ID);
@@ -543,7 +543,7 @@ class X extends i.Ay.PersistedStore {
         return H.disableExternalLinkAlert;
     }
     getFocusedPID() {
-        return M;
+        return P;
     }
     get initialized() {
         return k;
@@ -566,10 +566,10 @@ class X extends i.Ay.PersistedStore {
 }
 let q = new X(a.h, {
     LOGOUT: function (e) {
-        e.isSwitchingAccount || (P = {});
+        e.isSwitchingAccount || (M = {});
     },
     MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-        e.userId in P && delete P[e.userId];
+        e.userId in M && delete M[e.userId];
     },
     CONNECTION_CLOSED: function () {
         w.clear();
@@ -609,7 +609,7 @@ let q = new X(a.h, {
     },
     OVERLAY_INITIALIZE: function (e) {
         let { focusedPID: t, trackedGames: n, overlayStoredSettings: i } = e;
-        ((M = t),
+        ((P = t),
             __OVERLAY__ &&
                 (n.forEach((e) => {
                     z.set(e.pid, e);
@@ -634,7 +634,7 @@ let q = new X(a.h, {
     },
     OVERLAY_FOCUSED: function (e) {
         let { pid: t } = e;
-        ((M = t), Y());
+        ((P = t), Y());
     },
     OVERLAY_SELECT_CHANNEL: function (e) {
         let { guildId: t, channelId: n } = e;
@@ -698,7 +698,7 @@ let q = new X(a.h, {
     },
     OVERLAY_ACTIVATE_REGION: function (e) {
         let { region: t } = e;
-        if (M !== (0, u.getPID)() || F.has(t)) return !1;
+        if (P !== (0, u.getPID)() || F.has(t)) return !1;
         F.add(t);
     },
     OVERLAY_DEACTIVATE_ALL_REGIONS: K,

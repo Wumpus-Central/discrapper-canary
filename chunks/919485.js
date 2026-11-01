@@ -5,13 +5,13 @@ var l = n(477900),
     i = n(55135);
 function s(e) {
     let { title: t, className: n, children: s } = e,
-        o = a.useId();
+        u = a.useId();
     return (0, l.jsxs)("section", {
-        "aria-labelledby": o,
+        "aria-labelledby": u,
         className: n,
         children: [
             (0, l.jsx)(r.E, {
-                id: o,
+                id: u,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 className: i.D,

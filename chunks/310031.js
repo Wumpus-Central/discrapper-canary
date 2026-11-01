@@ -105,8 +105,8 @@ class b {
             (this._isSorted = !1));
     }
 }
-var M = n(652215),
-    P = n(790782),
+var P = n(652215),
+    M = n(790782),
     U = n(37411);
 let w = {},
     G = null,
@@ -147,9 +147,9 @@ function q() {
         let e = g.Ay.getFlattenedGuildIds().flatMap((e) => I.Ay.getSelectableChannelIds(e)),
             t = u.A.getAllActiveJoinedThreads();
         function n(e) {
-            if (M.kvI.ALL_DMS.has(e.type)) {
+            if (P.kvI.ALL_DMS.has(e.type)) {
                 if (S.Ay.isGuildOrCategoryOrChannelMuted(null, e.id)) return !1;
-                if (e.type === M.rbe.DM) {
+                if (e.type === P.rbe.DM) {
                     let t = f.A.getChannel(e.id),
                         n = t?.isDM() === !0 ? t.getRecipientId() : void 0;
                     if (null != n && m.A.isBlocked(n)) return !1;
@@ -157,9 +157,9 @@ function q() {
                 return !0;
             }
             if (
-                !M.kvI.GUILD_TEXTUAL.has(e.type) ||
+                !P.kvI.GUILD_TEXTUAL.has(e.type) ||
                 (0, l.UK)(e.id) ||
-                S.Ay.resolveUnreadSetting(e) === P.e.ONLY_MENTIONS
+                S.Ay.resolveUnreadSetting(e) === M.e.ONLY_MENTIONS
             )
                 return !1;
             if ((0, A.fT)(e.type)) {
@@ -168,13 +168,13 @@ function q() {
                 let n = _.A.flags(e.id);
                 if (null == n || (n & U.CP.ALL_MESSAGES) == 0) {
                     let t = f.A.getBasicChannel(e.parent_id);
-                    if (null != t && S.Ay.resolveUnreadSetting(t) === P.e.ONLY_MENTIONS) return !1;
+                    if (null != t && S.Ay.resolveUnreadSetting(t) === M.e.ONLY_MENTIONS) return !1;
                 }
                 return !_.A.isMuted(e.id);
             }
             return S.Ay.useNewNotifications
                 ? !S.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) &&
-                      S.Ay.resolvedMessageNotifications(e) !== M.orn.NO_MESSAGES &&
+                      S.Ay.resolvedMessageNotifications(e) !== P.orn.NO_MESSAGES &&
                       (!S.Ay.isOptInEnabled(e.guild_id) || S.Ay.isChannelRecordOrParentOptedIn(e))
                 : S.Ay.allowAllMessages(e);
         }

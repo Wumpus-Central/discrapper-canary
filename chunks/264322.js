@@ -40,8 +40,8 @@ var i = n(582128),
     D = n(392054),
     v = n(168186),
     b = n(240591),
-    M = n(46477),
-    P = n(73510),
+    P = n(46477),
+    M = n(73510),
     U = n(652215);
 let w = new A.A("ApplicationCommandIndexStore"),
     G = Symbol("currentUser"),
@@ -444,13 +444,13 @@ function ea(e, t, n, r) {
                 let n = R.Ay.getScoreWithoutLoadingLatest(d, e);
                 return R.Ay.getScoreWithoutLoadingLatest(d, t) - n;
             })
-            .splice(0, P.Ob);
+            .splice(0, M.Ob);
         return 0 === e.length
             ? { descriptors: a, commands: s, sectionedCommands: l, loading: o }
             : {
-                  descriptors: [C.gZ[P.Ik.FRECENCY], ...a],
+                  descriptors: [C.gZ[M.Ik.FRECENCY], ...a],
                   commands: e.concat(s),
-                  sectionedCommands: [{ section: C.gZ[P.Ik.FRECENCY], data: e }, ...l],
+                  sectionedCommands: [{ section: C.gZ[M.Ik.FRECENCY], data: e }, ...l],
                   loading: o,
               };
     }, [o, r.includeFrecency, c, s, a, l, d]);
@@ -607,14 +607,14 @@ function eo(e) {
         }),
         m.length > 0 || !0 === c)
     ) {
-        let e = ed(C.gZ[P.Ik.BUILT_IN], m, !0, !0, N);
+        let e = ed(C.gZ[M.Ik.BUILT_IN], m, !0, !0, N);
         null != e && S.push(e);
     }
     let b = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
             n = g.A.getGuild(t?.context?.guild_id),
-            i = S.some((e) => e.section.id !== P.Ik.BUILT_IN && e.data.length > 0);
+            i = S.some((e) => e.section.id !== M.Ik.BUILT_IN && e.data.length > 0);
         _.commands.useFrecency && i && I.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;
         b.sort((e, t) => {
@@ -652,17 +652,17 @@ function ed(e, t, n, i, r) {
             installOnDemand: _,
         } = r,
         { context: E, userId: A, roleIds: h, isImpersonating: f } = u,
-        I = E?.guild_id != null ? M.we(e.permissions, E.guild_id, A, h, f) : null,
-        p = E?.guild_id != null ? M._W(e.permissions, E, E.guild_id) : null,
+        I = E?.guild_id != null ? P.we(e.permissions, E.guild_id, A, h, f) : null,
+        p = E?.guild_id != null ? P._W(e.permissions, E, E.guild_id) : null,
         T = [];
     for (let r of t)
-        M.zl(r, u, {
+        P.zl(r, u, {
             applicationAllowedForUser: I,
             applicationAllowedForChannel: p,
             commandBotId: e.botId,
             isGuildInstalled: n,
             isUserInstalled: i || _,
-        }) === M.CA.ALLOWED && T.push(r);
+        }) === P.CA.ALLOWED && T.push(r);
     return 0 !==
         (s =
             c !== y.M.NONE && null != l && null != o
@@ -771,9 +771,9 @@ function ef(e, t) {
 }
 function eI(e, t) {
     let n, i;
-    if (t === P.Ik.BUILT_IN)
+    if (t === M.Ik.BUILT_IN)
         return {
-            descriptor: C.gZ[P.Ik.BUILT_IN],
+            descriptor: C.gZ[M.Ik.BUILT_IN],
             sectionCommands: (0, C.Ez)([_.kc.CHAT], !0, !1),
             isGuildInstalled: !0,
             isUserInstalled: !0,

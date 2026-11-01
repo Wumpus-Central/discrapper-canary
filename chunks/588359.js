@@ -1,14 +1,14 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => o });
 var l = n(477900);
 n(582128);
 var a = n(152367),
     r = n(834730),
     i = n(809526),
     s = n(105292),
-    o = n(328981);
-function u() {
+    u = n(328981);
+function o() {
     return (0, l.jsxs)("div", {
-        className: o.p,
+        className: u.p,
         children: [
             (0, l.jsx)(a.D, { size: "md", color: "var(--icon-muted)", "aria-hidden": !0 }),
             (0, l.jsx)(r.E, {

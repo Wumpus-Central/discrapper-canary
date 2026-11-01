@@ -215,7 +215,7 @@ function b(e, t, n) {
               timeoutMs: 1500,
           });
 }
-async function M(e, t, n) {
+async function P(e, t, n) {
     let i = n?.format ?? "webp",
         r = n?.quality ?? 92,
         s = (0, a.oe)(e, { rect: t.bounds, outputSize: v(t), format: "jpeg" === i ? "jpeg" : "png", quality: r });
@@ -239,7 +239,7 @@ async function M(e, t, n) {
         o.close();
     }
 }
-async function P(e, t, n) {
+async function M(e, t, n) {
     let i = performance.now(),
         r = i,
         a = {};
@@ -420,11 +420,11 @@ async function F(e, t) {
 async function B(e, t) {
     let n = (0, c.B0)(e);
     if ((null == n && m("frame identity unknown"), null != g() && null != n)) {
-        let i = await P(e, t, (e) => b(n, e, t.spec));
+        let i = await M(e, t, (e) => b(n, e, t.spec));
         if (null != i) return i;
     }
     if ((0, a.t8)(e)) {
-        let n = await P(e, t, (n) => M(e, n, t.spec));
+        let n = await M(e, t, (n) => P(e, n, t.spec));
         if (null != n) return n;
     }
     return e.ownerDocument !== document ? m("frame in another window") : F(e, t);

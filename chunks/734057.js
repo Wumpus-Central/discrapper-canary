@@ -28,8 +28,8 @@ let C = new A.A("ChannelStore"),
     D = null,
     v = {},
     b = {},
-    M = {},
-    P = 0,
+    P = {},
+    M = 0,
     U = {},
     w = {},
     G = new Set(),
@@ -134,7 +134,7 @@ function z(e) {
 }
 function X(e) {
     if (null != e.recipients.find((e) => (0, E.A)(e))) return !1;
-    ((y[e.id] = e), e.type === S.rbe.DM && (M[e.getRecipientId()] = e.id), (P += 1));
+    ((y[e.id] = e), e.type === S.rbe.DM && (P[e.getRecipientId()] = e.id), (M += 1));
 }
 function q(e) {
     let t = R[e.parent_id];
@@ -186,7 +186,7 @@ function et(e) {
         null != t &&
             (null != L[t] && e.id in L[t] && delete L[t][e.id], null != b[t] && e.id in b[t] && delete b[t][e.id]),
         null == e.guild_id || f.Le.has(e.type)
-            ? (0, f.Gw)(e.type) && (P += 1)
+            ? (0, f.Gw)(e.type) && (M += 1)
             : (U[e.guild_id] = (U[e.guild_id] ?? 0) + 1));
 }
 function en(e) {
@@ -197,7 +197,7 @@ function en(e) {
         (function (e) {
             if ("basicPermissions" in e || e.type !== S.rbe.DM) return;
             let t = e.getRecipientId();
-            M[t] === e.id && delete M[t];
+            P[t] === e.id && delete P[t];
         })(n));
 }
 function ei(e) {
@@ -276,19 +276,19 @@ class el extends s.Ay.Store {
             .value();
     }
     getDMFromUserId(e) {
-        if (null != e) return M[e];
+        if (null != e) return P[e];
     }
     getDMChannelFromUserId(e) {
-        if (null != e) return this.getChannel(M[e]);
+        if (null != e) return this.getChannel(P[e]);
     }
     getMutableDMsByUserIds() {
-        return M;
+        return P;
     }
     getDMUserIds() {
-        return p.default.keys(M);
+        return p.default.keys(P);
     }
     getPrivateChannelsVersion() {
-        return P;
+        return M;
     }
     getGuildChannelsVersion(e) {
         return U[e] ?? 0;
@@ -384,7 +384,7 @@ let ed = new el(l.h, {
     },
     CONNECTION_OPEN: function (e) {
         let t = L;
-        for (let n of ((M = {}),
+        for (let n of ((P = {}),
         (R = {}),
         (L = {}),
         (b = {}),
@@ -436,7 +436,7 @@ let ed = new el(l.h, {
     LOAD_THREADS_SUCCESS: ee,
     LOGOUT: function () {
         (C.fileOnly("initializeClear()"),
-            (M = {}),
+            (P = {}),
             (R = {}),
             (L = {}),
             (U = {}),

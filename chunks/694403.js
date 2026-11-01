@@ -133,16 +133,16 @@ let R = {
         let v = O(o().unescapeUrl(s));
         if (null == v || (0, d.F9)(l)) return u();
         let b = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
-            M = { foundNestedMaskedLink: !1 },
-            P = { ...b, maskedLinkValidation: M },
+            P = { foundNestedMaskedLink: !1 },
+            M = { ...b, maskedLinkValidation: P },
             U = n.allowEmojiLinks ? p : I,
             w = [...U, ...T],
             G = [...m, ...g],
-            x = t(L, P);
-        if (S(M)) return u();
+            x = t(L, M);
+        if (S(P)) return u();
         let k = N(x, w, [_.D.EMOJI]),
-            F = t(y, P);
-        if (S(M)) return u();
+            F = t(y, M);
+        if (S(P)) return u();
         let B = N(F, G);
         if (null == k || null == B) return u();
         let V = (function e(t) {
@@ -186,8 +186,8 @@ let R = {
         if (0 === V.trim().length || (0, d.Ay)(V).length > 0) return u();
         if (V !== L) {
             if ((0, d.Ay)(L).length > 0) return u();
-            let e = t(V, P);
-            if (S(M) || null == N(e, [...w, _.D.EMOJI])) return u();
+            let e = t(V, M);
+            if (S(P) || null == N(e, [...w, _.D.EMOJI])) return u();
         }
         let H = r().pick(t.rules, U),
             j = o().parserFor(H)(A.whitespaceSanitized, b),

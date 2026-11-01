@@ -1,11 +1,11 @@
 n.d(t, {
     dI: () => v,
     JK: () => U,
-    g4: () => P,
+    g4: () => M,
     Ay: () => G,
     QS: () => b,
     H$: () => y,
-    zV: () => M,
+    zV: () => P,
     Ou: () => D,
     dL: () => w,
 });
@@ -107,7 +107,7 @@ function b(e) {
         },
     };
 }
-function M(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (N.default.isThrottled(e)) return;
@@ -123,7 +123,7 @@ function M(e) {
         };
     N.default.track(e, o, { flush: n });
 }
-function P(e) {
+function M(e) {
     let t = 0;
     for (let n of e) T.A.isFriend(n) && t++;
     return { friendCount: t, nonFriendCount: e.length - t };
@@ -151,4 +151,4 @@ function w(e, t) {
         n
     );
 }
-let G = { trackWithMetadata: M, getVoiceStateMetadata: U };
+let G = { trackWithMetadata: P, getVoiceStateMetadata: U };

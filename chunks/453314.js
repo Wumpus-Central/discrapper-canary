@@ -34,8 +34,8 @@ var C = n(12351),
     D = n(458294),
     v = n(71393),
     b = n(290863),
-    M = n(573163),
-    P = n(309010),
+    P = n(573163),
+    M = n(309010),
     U = n(607567),
     w = n(234320),
     G = n(625494),
@@ -165,12 +165,12 @@ class X extends r.Component {
         });
     }
 }
-let q = _.Ay.connectStores([M.Ay, y.A], (e) => {
+let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
         let { channel: t } = e;
         return {
-            unread: M.Ay.hasUnread(t.id),
-            mentions: M.Ay.getMentionCount(t.id),
-            isMentionLowImportance: M.Ay.getIsMentionLowImportance(t.id),
+            unread: P.Ay.hasUnread(t.id),
+            mentions: P.Ay.getMentionCount(t.id),
+            isMentionLowImportance: P.Ay.getIsMentionLowImportance(t.id),
             category: y.A.getChannel(t.parent_id),
         };
     })(X),
@@ -184,20 +184,20 @@ let q = _.Ay.connectStores([M.Ay, y.A], (e) => {
         let { guild: t } = e;
         return { unread: D.default.hasUnread(t.id) };
     })(k.OS),
-    J = _.Ay.connectStores([M.Ay, b.A], (e) => {
+    J = _.Ay.connectStores([P.Ay, b.A], (e) => {
         let { channel: t } = e,
             n = null,
             i = b.A.getState().statuses;
         return (
             t.recipients?.some((e) => i[e] === H.clD.ONLINE) && (n = H.clD.ONLINE),
-            { mentions: M.Ay.getMentionCount(t.id), status: n }
+            { mentions: P.Ay.getMentionCount(t.id), status: n }
         );
     })(k.nG),
-    ee = _.Ay.connectStores([y.A, M.Ay, b.A], (e) => {
+    ee = _.Ay.connectStores([y.A, P.Ay, b.A], (e) => {
         let { user: t } = e,
             n = y.A.getDMFromUserId(t.id);
         return {
-            mentions: null != n ? M.Ay.getMentionCount(n) : 0,
+            mentions: null != n ? P.Ay.getMentionCount(n) : 0,
             status: b.A.getStatus(t.id),
             isMobile: b.A.isMobileOnline(t.id),
         };
@@ -1078,7 +1078,7 @@ class en extends r.PureComponent {
                         (0, i.jsx)(e, {
                             ...n,
                             channel: t.record,
-                            selected: P.Ay.getChannelId() === t.record.id,
+                            selected: M.Ay.getChannelId() === t.record.id,
                             onSelect: o.jD,
                         });
                 });

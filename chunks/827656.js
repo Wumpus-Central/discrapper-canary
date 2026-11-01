@@ -1,21 +1,21 @@
-n.d(t, { A: () => x });
-var l = n(477900);
-n(582128);
-var r = n(939249),
-    a = n(97808),
-    o = n(778712),
-    u = n(834730),
-    s = n(821609),
-    i = n(402860),
-    d = n(427262),
-    c = n(659723),
-    v = n(95264),
-    f = n(652215),
-    m = n(809526),
-    g = n(105292),
-    p = n(41799);
+t.d(n, { A: () => x });
+var l = t(477900);
+t(582128);
+var r = t(939249),
+    o = t(97808),
+    a = t(778712),
+    u = t(834730),
+    s = t(821609),
+    i = t(402860),
+    d = t(427262),
+    c = t(659723),
+    v = t(95264),
+    m = t(652215),
+    f = t(809526),
+    g = t(105292),
+    p = t(41799);
 function x(e) {
-    let { creator: t, remixProject: n, guildId: x, onClose: j } = e;
+    let { creator: n, remixProject: t, guildId: x, onClose: j } = e;
     return (0, l.jsxs)("div", {
         className: p.qr,
         children: [
@@ -23,40 +23,40 @@ function x(e) {
             (0, l.jsxs)("div", {
                 className: p.OZ,
                 children: [
-                    null != t
+                    null != n
                         ? (0, l.jsxs)(r.D, {
                               className: p.xL,
                               onClick: function () {
-                                  null != t &&
+                                  null != n &&
                                       (j(),
                                       (0, i.openUserProfileModal)({
-                                          userId: t.id,
+                                          userId: n.id,
                                           guildId: x ?? void 0,
-                                          appContext: f.BRT.APP,
+                                          appContext: m.BRT.APP,
                                       }));
                               },
                               children: [
-                                  (0, l.jsx)(a.eu, {
-                                      src: t.getAvatarURL(x, 40),
-                                      size: o._3.SIZE_20,
+                                  (0, l.jsx)(o.eu, {
+                                      src: n.getAvatarURL(x, 40),
+                                      size: a._3.SIZE_20,
                                       "aria-hidden": !0,
                                   }),
                                   (0, l.jsx)(u.E, {
                                       variant: "text-sm/normal",
                                       color: "none",
                                       lineClamp: 1,
-                                      children: g.intl.format(m.default["6/x9LD"], { name: (0, d.mG)(t) }),
+                                      children: g.intl.format(f.default["6/x9LD"], { name: (0, d.mG)(n) }),
                                   }),
                               ],
                           })
                         : (0, l.jsx)("span", {}),
-                    null != n
+                    null != t
                         ? (0, l.jsx)(s.$, {
                               variant: "secondary",
                               size: "sm",
-                              text: g.intl.string(m.default.XWgAfc),
+                              text: g.intl.string(f.default.XWgAfc),
                               onClick: function () {
-                                  null != n && null != x && (j(), (0, v.A)(n, x));
+                                  null != t && null != x && (j(), (0, v.A)(t, x));
                               },
                           })
                         : null,

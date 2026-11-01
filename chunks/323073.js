@@ -1,12 +1,12 @@
 n.d(t, {
     $v: () => T.$v,
     Bc: () => R,
-    F2: () => P,
+    F2: () => M,
     Gc: () => T.Gc,
     Gn: () => v,
     Jm: () => k,
     Tv: () => U,
-    UK: () => M,
+    UK: () => P,
     k$: () => D,
     kK: () => w,
     ni: () => V,
@@ -149,14 +149,14 @@ function b() {
     let t = (0, m.r)();
     return !0 !== e.nsfwAllowed || t;
 }
-function M(e) {
+function P(e) {
     return !!b() && null != e && F(u.A.getChannel(e));
 }
-function P(e) {
-    return (0, m.r)() && M(e);
+function M(e) {
+    return (0, m.r)() && P(e);
 }
 function U(e) {
-    return !!P(e) && ((0, p.yO)(g.w_.NSFW_VOICE_CHANNEL, e), !0);
+    return !!M(e) && ((0, p.yO)(g.w_.NSFW_VOICE_CHANNEL, e), !0);
 }
 function w(e, t, n) {
     let i;
@@ -171,7 +171,7 @@ function w(e, t, n) {
         (0, p.yO)(e);
         return;
     }
-    if (null != (i = h.default.getCurrentUser()) && null == i.nsfwAllowed && M(t))
+    if (null != (i = h.default.getCurrentUser()) && null == i.nsfwAllowed && P(t))
         return void (0, p.yO)(n ?? g.w_.NSFW_CHANNEL);
 }
 let G = new Set([g.w_.FAMILY_CENTER, g.w_.DEEP_LINK_PROMPT]);

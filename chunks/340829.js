@@ -44,12 +44,12 @@ let g = +h.A.Millis.MINUTE,
     D = [],
     v = [],
     b = !1;
-function M(e) {
+function P(e) {
     return e.type === m.WTw.INSTALLING || e.type === m.WTw.UPDATING || e.type === m.WTw.REPAIRING
         ? e.networkProgress
         : null;
 }
-function P(e) {
+function M(e) {
     return e.type === m.WTw.INSTALLING || e.type === m.WTw.UPDATING || e.type === m.WTw.REPAIRING
         ? e.diskProgress
         : null;
@@ -273,9 +273,9 @@ let B = new F(s.h, {
                     })(i[e][t])),
                     null != S[c])
                 ) {
-                    let e = k(n, c, M);
+                    let e = k(n, c, P);
                     e > 0 && w((O += e));
-                    let i = k(n, c, P);
+                    let i = k(n, c, M);
                     i > 0 && x((R += i));
                     let r = k(n, c, U);
                     if ((r > 0 && G((L += r)), a === t)) {

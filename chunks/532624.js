@@ -89,15 +89,15 @@ function v() {
     );
 }
 let b = {},
-    M = {},
-    P = 0,
+    P = {},
+    M = 0,
     U = !0,
     w = {},
     G = !1,
     x = [g.hCu.PUSH_TO_TALK, g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET],
     k = [];
 function F(e) {
-    return e === v().id ? v() : M[e];
+    return e === v().id ? v() : P[e];
 }
 function B(e, t, n) {
     (h.default.track(g.HAw.KEYBOARD_SHORTCUT_USED, {
@@ -113,7 +113,7 @@ function V() {
 function H() {
     if (V()) return;
     let e = v();
-    null == s().find(M, (t) => e.action === t.action && t.enabled && t.shortcut.length > 0) &&
+    null == s().find(P, (t) => e.action === t.action && t.enabled && t.shortcut.length > 0) &&
         U &&
         !G &&
         (K(e), (G = !0));
@@ -125,13 +125,13 @@ function j() {
 }
 function W(e) {
     if (f.isPlatformEmbedded) {
-        let t = M[e],
+        let t = P[e],
             n = null != t ? w[t.action] : null;
         (null != t && n?.isPressed === !0 && C.nextTick(() => B(!1, n, t)), I.Ay.inputEventUnregister(parseInt(e, 10)));
     } else {
         let t = b[e];
         if (null != t) {
-            let n = M[e];
+            let n = P[e];
             if (null != n) {
                 let e = w[n.action];
                 e?.isPressed === !0 && C.nextTick(() => B(!1, e, n));
@@ -230,16 +230,16 @@ function K(e) {
         d.A.validateKeybind((0, T.dI)(t)));
 }
 function $(e) {
-    let t = { id: P.toString(), enabled: !0, action: g.hCu.UNASSIGNED, shortcut: [], managed: !1, params: {}, ...e };
-    return ((M = { ...M, [t.id]: t }), (P += 1), t);
+    let t = { id: M.toString(), enabled: !0, action: g.hCu.UNASSIGNED, shortcut: [], managed: !1, params: {}, ...e };
+    return ((P = { ...P, [t.id]: t }), (M += 1), t);
 }
 function z(e) {
-    (W(e.id), (M = { ...M }), delete M[e.id], e.action === g.hCu.TOGGLE_OVERLAY_INPUT_LOCK && H());
+    (W(e.id), (P = { ...P }), delete P[e.id], e.action === g.hCu.TOGGLE_OVERLAY_INPUT_LOCK && H());
 }
 function X(e) {
     let { keybind: t } = e,
-        n = M[t.id];
-    if (((M = { ...M, [t.id]: t }), !__OVERLAY__))
+        n = P[t.id];
+    if (((P = { ...P, [t.id]: t }), !__OVERLAY__))
         switch (
             (h.default.track(g.HAw.USER_SETTINGS_KEYBIND_UPDATED, {
                 keybind_action: t.action,
@@ -262,14 +262,14 @@ function X(e) {
 function q(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     return (
-        null == s().find(M, (t) => t.action === e && (!n || t.managed === n)) &&
+        null == s().find(P, (t) => t.action === e && (!n || t.managed === n)) &&
         (K($({ action: e, enabled: !0, shortcut: (0, T.OH)(t), managed: !0, params: {} })), !0)
     );
 }
 function Z(e) {
     let t = !1;
     return (
-        s().each(M, (n) => {
+        s().each(P, (n) => {
             n.action === e && !0 === n.managed && (z(n), (t = !0));
         }),
         t
@@ -280,7 +280,7 @@ let Q = {},
         function () {
             let e = A.Ay.getShortcuts();
             return (
-                s().each(M, (t) => {
+                s().each(P, (t) => {
                     t.action === g.hCu.PUSH_TO_TALK &&
                         !0 === t.managed &&
                         (null == t.context || null == e[t.context]) &&
@@ -290,7 +290,7 @@ let Q = {},
                     A.Ay.getShortcuts(),
                     (e, t, n) => {
                         let i = s().find(
-                            M,
+                            P,
                             (e) => e.action === g.hCu.PUSH_TO_TALK && !0 === e.managed && e.context === n,
                         );
                         if (null == i)
@@ -340,7 +340,7 @@ function ee() {
 }
 d.A.setGetKeybindList(() => {
     let e = [];
-    for (let t in M) M.hasOwnProperty(t) && e.push((0, T.dI)(M[t].shortcut));
+    for (let t in P) P.hasOwnProperty(t) && e.push((0, T.dI)(P[t].shortcut));
     return e;
 });
 class et extends l.Ay.DeviceSettingsStore {
@@ -406,19 +406,19 @@ class et extends l.Ay.DeviceSettingsStore {
             ),
     ];
     initialize(e) {
-        (__OVERLAY__ || this.waitFor(A.Ay, m.default), (M = e ?? {}));
+        (__OVERLAY__ || this.waitFor(A.Ay, m.default), (P = e ?? {}));
     }
     getUserAgnosticState() {
-        return M;
+        return P;
     }
     hasKeybind(e, t, n) {
-        for (let i in M)
-            for (let r of M[i].shortcut) if (r[0] === e && r[1] === t && (void 0 === n || n === r[2])) return !0;
+        for (let i in P)
+            for (let r of P[i].shortcut) if (r[0] === e && r[1] === t && (void 0 === n || n === r[2])) return !0;
         return !1;
     }
     hasExactKeybind(e) {
-        for (let t in M) {
-            let n = M[t];
+        for (let t in P) {
+            let n = P[t];
             if (s().isEqual(n.shortcut, e)) return !0;
         }
         return !1;
@@ -427,7 +427,7 @@ class et extends l.Ay.DeviceSettingsStore {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return (
-            s().find(M, (i) => i.action === e && (!t || i.managed) && (!n || (i.shortcut.length > 0 && i.enabled))) ??
+            s().find(P, (i) => i.action === e && (!t || i.managed) && (!n || (i.shortcut.length > 0 && i.enabled))) ??
             null
         );
     }
@@ -445,7 +445,7 @@ class et extends l.Ay.DeviceSettingsStore {
         return (0, _.Sy)(e);
     }
     getWaylandPortalShortcutState(e) {
-        return null == M[e] ? null : (Q[e] ?? null);
+        return null == P[e] ? null : (Q[e] ?? null);
     }
 }
 let en = new et(o.h, {
@@ -468,7 +468,7 @@ let en = new et(o.h, {
     },
     KEYBINDS_DELETE_KEYBIND: function (e) {
         let { id: t } = e,
-            n = M[t];
+            n = P[t];
         (__OVERLAY__ ||
             h.default.track(g.HAw.USER_SETTINGS_KEYBIND_UPDATED, {
                 keybind_action: n.action,
@@ -482,17 +482,17 @@ let en = new et(o.h, {
         let { enable: t } = e;
         ((U = t),
             t
-                ? (d.A.enable(), s().forEach(M, K), H())
-                : (d.A.disable(), (0, _.jV)() || s().forEach(M, (e) => W(e.id)), j()));
+                ? (d.A.enable(), s().forEach(P, K), H())
+                : (d.A.disable(), (0, _.jV)() || s().forEach(P, (e) => W(e.id)), j()));
     },
     KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function (e) {
         let { keybinds: t } = e;
         ((w = t),
             (b = {}),
-            (P = 0),
-            Object.values(M).filter((e) => x.includes(e.action) && e.managed).length !== x.length && ee(),
-            s().forEach(M, (e) => {
-                P = Math.max(parseInt(e.id, 10), P) + 1;
+            (M = 0),
+            Object.values(P).filter((e) => x.includes(e.action) && e.managed).length !== x.length && ee(),
+            s().forEach(P, (e) => {
+                M = Math.max(parseInt(e.id, 10), M) + 1;
                 try {
                     K(e);
                 } catch (t) {

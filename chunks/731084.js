@@ -5,7 +5,7 @@ n.d(t, {
     E8: () => f,
     FZ: () => s,
     Ov: () => c,
-    kx: () => o,
+    kx: () => u,
     uc: () => g,
     vg: () => i,
     xu: () => p,
@@ -15,18 +15,18 @@ var l = n(242779),
     r = n(105292);
 let i = 1e3,
     s = 1800,
-    o = [a.default["AX+5lk"], a.default.VAU6A7, a.default["1emysd"], a.default.EXHX3L, a.default.ChslmX];
-function u(e) {
+    u = [a.default["AX+5lk"], a.default.VAU6A7, a.default["1emysd"], a.default.EXHX3L, a.default.ChslmX];
+function o(e) {
     return e === r.intl.string(a.default.xCdlEF) || e === r.intl.string(a.default.Rhx0rn);
 }
 function d(e, t) {
-    return u(e) !== u(t);
+    return o(e) !== o(t);
 }
 function c(e) {
-    return r.intl.string(o[e % o.length]);
+    return r.intl.string(u[e % u.length]);
 }
 function f(e) {
-    return o.some((t) => r.intl.string(t) === e);
+    return u.some((t) => r.intl.string(t) === e);
 }
 function m(e) {
     switch (e) {
@@ -46,12 +46,12 @@ function p(e) {
             restoring: r = !1,
             remixing: i = !1,
             recalling: s = !1,
-            controlling: u = !1,
+            controlling: o = !1,
             publishPending: d = !1,
             publishing: c = !1,
         } = e,
         f = null != t && "end" !== t.phase;
-    return u
+    return o
         ? a.default["1jqaAc"]
         : d
           ? a.default.xCdlEF
@@ -62,7 +62,7 @@ function p(e) {
               : i
                 ? a.default.j8tmjK
                 : s
-                  ? o[0]
+                  ? u[0]
                   : l
                     ? a.default.mKK6wB
                     : n

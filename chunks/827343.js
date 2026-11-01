@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => P }));
+(n.r(t), n.d(t, { default: () => M }));
 var i = n(649852),
     r = n.n(i),
     a = n(73153),
@@ -64,8 +64,8 @@ let L = r()((e, t, n) => {
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {},
     },
-    { enable: D, isNotSupported: v, trackToggleSelfMute: b, trackToggleSelfDeaf: M } = (y = n(401124)),
-    P = {
+    { enable: D, isNotSupported: v, trackToggleSelfMute: b, trackToggleSelfDeaf: P } = (y = n(401124)),
+    M = {
         enable: D,
         toggleSelfMute() {
             let {
@@ -104,7 +104,7 @@ let L = r()((e, t, n) => {
                 location: i,
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             v() ||
-                (M({ usedKeybind: n, location: i }),
+                (P({ usedKeybind: n, location: i }),
                 a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_DEAF", context: e, syncRemote: t }));
         },
         toggleLocalMute(e) {

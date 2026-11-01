@@ -2,7 +2,7 @@
     A_: () => g,
     B4: () => en,
     Do: () => b,
-    Gw: () => P,
+    Gw: () => M,
     IY: () => Z,
     JT: () => z,
     LE: () => Q,
@@ -10,10 +10,10 @@
     Lt: () => ev,
     MK: () => w,
     OU: () => y,
-    OY: () => eP,
+    OY: () => eM,
     QE: () => v,
     TA: () => eh,
-    UE: () => eM,
+    UE: () => eP,
     XD: () => O,
     YB: () => em,
     ZV: () => er,
@@ -147,9 +147,9 @@ function v(e) {
     return D(e) || ((t = e), j.has(t));
 }
 let b = new Set([I.rbe.GUILD_STAGE_VOICE]),
-    M = new Set([I.rbe.DM, I.rbe.GROUP_DM]);
-function P(e) {
-    return M.has(e);
+    P = new Set([I.rbe.DM, I.rbe.GROUP_DM]);
+function M(e) {
+    return P.has(e);
 }
 let U = new Set([I.rbe.GROUP_DM]);
 function w(e) {
@@ -450,7 +450,7 @@ class em extends eI {
         return I.kvI.APPLICATION_MANAGEABLE.has(this.type) && null != this.application_id;
     }
     isPrivate() {
-        return P(this.type);
+        return M(this.type);
     }
     isGroupDM() {
         return this.type === I.rbe.GROUP_DM;
@@ -1078,10 +1078,10 @@ let eb = {
     [I.rbe.GUILD_SPACE]: eN.fromServer,
     [I.rbe.GUILD_APP]: eN.fromServer,
 };
-function eM(e, t) {
+function eP(e, t) {
     return (eb[e.type ?? I.rbe.GUILD_TEXT] ?? eg.fromServer)(e, t);
 }
-function eP(e) {
+function eM(e) {
     return eG(e);
 }
 let eU = {

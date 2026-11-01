@@ -33,8 +33,8 @@ let b = (0, n(945810).mj)({
     defaultConfig: { allowDefaultOn: !1 },
     variations: { 1: { allowDefaultOn: !0 } },
 });
-var M = n(738935),
-    P = n(572164),
+var P = n(738935),
+    M = n(572164),
     U = n(696016),
     w = n(652215),
     G = n(325278),
@@ -105,9 +105,9 @@ class F extends m.A {
     maybeShowClipsWarning(e) {
         let t = O.A.getChannelId();
         null == t ||
-            M.Ay.getClipsWarningShown(t) ||
+            P.Ay.getClipsWarningShown(t) ||
             e === h.default.getId() ||
-            !M.Ay.isClipsEnabledForUser(e) ||
+            !P.Ay.isClipsEnabledForUser(e) ||
             (S.Q$.getSetting() &&
                 (a.h.dispatch({ type: "CLIPS_SHOW_CALL_WARNING", channelId: t }), this.showClipsToast()));
     }
@@ -117,11 +117,11 @@ class F extends m.A {
     handlePostConnectionOpen() {
         if (!(0, p.ri)(f.Ay) || (this.applyNativeClipsSettings(), !(0, p.Pm)())) return;
         (this.loadClipsFromStorage(), this.maybeStartNtpClock());
-        let e = M.Ay.getHardwareClassification();
+        let e = P.Ay.getHardwareClassification();
         if (
             null != e &&
-            null != M.Ay.getHardwareClassificationForDecoupled() &&
-            M.Ay.getHardwareClassificationVersion() === U.V0
+            null != P.Ay.getHardwareClassificationForDecoupled() &&
+            P.Ay.getHardwareClassificationVersion() === U.V0
         ) {
             let t = this.getClipsDefaultSettingsDecision(e);
             null != t && this.applyClipsDefaultSettings(e, t);
@@ -132,10 +132,10 @@ class F extends m.A {
         });
     }
     async applyClipsDefaultSettings(e, t) {
-        let n = M.Ay.getState().clipsSettings.clipsEnabled,
-            i = M.Ay.getClipsDefaultSettingsState().clipsEnabledSource,
-            r = M.Ay.getEnableAutoclipping(),
-            s = null != M.Ay.getHardwareClassification();
+        let n = P.Ay.getState().clipsSettings.clipsEnabled,
+            i = P.Ay.getClipsDefaultSettingsState().clipsEnabledSource,
+            r = P.Ay.getEnableAutoclipping(),
+            s = null != P.Ay.getHardwareClassification();
         if (
             (await a.h.dispatch({ type: "CLIPS_APPLY_DEFAULT_SETTINGS", classification: e, decision: t }),
             this.applyNativeClipsSettings(),
@@ -154,11 +154,11 @@ class F extends m.A {
                 version: U.l6,
                 previous_clips_enabled: n,
                 previous_clips_enabled_source: i,
-                actual_clips_enabled: M.Ay.getState().clipsSettings.clipsEnabled,
-                clips_enabled_source: M.Ay.getClipsDefaultSettingsState().clipsEnabledSource,
+                actual_clips_enabled: P.Ay.getState().clipsSettings.clipsEnabled,
+                clips_enabled_source: P.Ay.getClipsDefaultSettingsState().clipsEnabledSource,
                 default_autoclipping_enabled: t.enableAutoclipping,
                 previous_autoclipping_enabled: r,
-                actual_autoclipping_enabled: M.Ay.getEnableAutoclipping(),
+                actual_autoclipping_enabled: P.Ay.getEnableAutoclipping(),
                 default_allow_voice_recording: t.allowVoiceRecording,
                 previous_allow_voice_recording: l,
                 actual_allow_voice_recording: l && !o,
@@ -169,7 +169,7 @@ class F extends m.A {
         (await S.Q$.updateSetting(e), a.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" }));
     }
     getClipsDefaultSettingsDecision(e) {
-        if (M.Ay.getClipsDefaultSettingsState().version >= U.l6) return null;
+        if (P.Ay.getClipsDefaultSettingsState().version >= U.l6) return null;
         let t = L.default.getCurrentUser();
         if (!(0, p.qj)(t) || !v.A.getConfig({ location: "getClipsDefaultSettingsDecision" }).enabled) return null;
         let n = t?.nsfwAllowed ?? null,
@@ -240,18 +240,18 @@ class F extends m.A {
         let t = O.A.getRTCConnection();
         if (null == t) return;
         if (C.A.getChannel(O.A.getChannelId())?.isGuildStageVoice()) return void t.setClipRecordUser(e, "audio", !1);
-        if (e === h.default.getId()) return void t.setClipRecordUser(e, "audio", (0, P.T)());
-        let n = M.Ay.isVoiceRecordingAllowedForUser(e);
+        if (e === h.default.getId()) return void t.setClipRecordUser(e, "audio", (0, M.T)());
+        let n = P.Ay.isVoiceRecordingAllowedForUser(e);
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
         if (!(0, p.ri)(f.Ay)) return;
         let t = O.A.getRTCConnection();
-        null != t && t.setClipRecordUser(e, "soundboard", (0, P.T)());
+        null != t && t.setClipRecordUser(e, "soundboard", (0, M.T)());
     }
     applyStreamRecording(e, t) {
         if ((0, p.ri)(f.Ay) && h.default.getId() === e) {
-            let n = (0, P.T)();
+            let n = (0, M.T)();
             (t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n));
             return;
         }
@@ -299,30 +299,30 @@ class Q extends F {
     }
     async installGameEventIntegrations() {
         (0, B.s)() && (await W.b.fetchMany([z.w], [X.b], [q.e]));
-        let e = (0, P.T)() && M.Ay.getEnableAutoclipping();
+        let e = (0, M.T)() && P.Ay.getEnableAutoclipping();
         ((0, _.se)(e), (0, E.eZ)(e), (0, V.B)(e));
     }
     maybeFetchAutoclipsCapabilities(e) {
         let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        null == e || ((0, B.s)() && M.Ay.getEnableAutoclipping() && (t ? W.b.refetchMany([e]) : W.b.fetchMany([e])));
+        null == e || ((0, B.s)() && P.Ay.getEnableAutoclipping() && (t ? W.b.refetchMany([e]) : W.b.fetchMany([e])));
     }
     stores = new Map().set(o.A, () => this.applyNativeClipsSettings());
     maybeOpenQuickBar() {
-        if (!M.Ay.canShowReminders()) return;
+        if (!P.Ay.canShowReminders()) return;
         let e = d.Ay.getVisibleGame();
         null == e ||
-            (M.Ay.getLastClipsSession()
-                ?.clipIds.map(M.Ay.getClipById)
+            (P.Ay.getLastClipsSession()
+                ?.clipIds.map(P.Ay.getClipById)
                 .some((t) => t?.applicationId === e.id) &&
                 (K.MZ.getState().isOpen || (0, K.w9)()));
     }
     handleClipsReminder(e) {
-        if (null == e || !M.Ay.canShowReminders()) return;
-        let t = M.Ay.getLastClipsSession();
+        if (null == e || !P.Ay.canShowReminders()) return;
+        let t = P.Ay.getLastClipsSession();
         if (null == t || !t.hasClips) return;
-        let n = !M.Ay.getSettings().showPovClipsInGallery;
+        let n = !P.Ay.getSettings().showPovClipsInGallery;
         t.clipIds.some((t) => {
-            let i = M.Ay.getClipById(t);
+            let i = P.Ay.getClipById(t);
             return null != i && i.applicationId === e && (!n || !(0, Y.kD)(i));
         }) && (0, $.M8)(e);
     }
@@ -339,8 +339,8 @@ class Q extends F {
         (0, j.mj)();
         let t = f.Ay.getMediaEngine(),
             n = () => {
-                let n = M.Ay.getSettings(),
-                    i = (0, P.T)();
+                let n = P.Ay.getSettings(),
+                    i = (0, M.T)();
                 t.setClipsRecordingEnabled(i);
                 let r = !i && !t.supports(x.O5.UNIFIED_CAPTURE_BROKER);
                 if (
@@ -354,7 +354,7 @@ class Q extends F {
                         this.fireClipsInitEvent();
                 }
             };
-        (0, P.T)() ? ((0, j.t_)() ? n() : (0, j.so)().then(n)) : n();
+        (0, M.T)() ? ((0, j.t_)() ? n() : (0, j.so)().then(n)) : n();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = d.Ay.getVisibleGame();
@@ -377,14 +377,14 @@ class Q extends F {
         (c.I.fetchMany([e]), l.YY.fetchMany([e]));
     }
     handleStreamEnded(e) {
-        if (!(0, P.T)()) return;
+        if (!(0, M.T)()) return;
         let { ownerId: t } = (0, u.Iy)(e.streamKey);
         t === h.default.getId() && this.fireClipsInitEvent();
     }
     fireClipsInitEvent() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (
-            !(0, P.T)() ||
+            !(0, M.T)() ||
             (!e &&
                 !f.Ay.getMediaEngine().supports(x.O5.UNIFIED_CAPTURE_BROKER) &&
                 null != A.A.getCurrentUserActiveStream())
@@ -396,7 +396,7 @@ class Q extends F {
             return void (0, j.so)().then(() => {
                 (0, j.t_)() && this.fireClipsInitEvent(e);
             });
-        let n = M.Ay.getSettings();
+        let n = P.Ay.getSettings();
         a.h.dispatch({
             type: "CLIPS_INIT",
             sourceId: `window:${t?.windowHandle}`,
@@ -405,9 +405,9 @@ class Q extends F {
         });
     }
     loadClipsFromStorage() {
-        let { storageLocation: e } = M.Ay.getSettings();
+        let { storageLocation: e } = P.Ay.getSettings();
         "" !== e &&
-            e !== M.he &&
+            e !== P.he &&
             H.Fb(e)
                 .then(() => J())
                 .catch((e) => {
@@ -419,12 +419,12 @@ class Q extends F {
     }
 }
 async function J() {
-    if (M.Ay.hasClips() || null == s.A || null == s.A.app) return;
+    if (P.Ay.hasClips() || null == s.A || null == s.A.app) return;
     let e = await s.A.app.getPath("documents");
-    if (M.Ay.getSettings().storageLocation === e)
+    if (P.Ay.getSettings().storageLocation === e)
         try {
             let e = await s.A.app.getPath("videos");
-            H.HU((0, I.CN)(e, M._c));
+            H.HU((0, I.CN)(e, P._c));
         } catch (e) {
             U.nx.error("Failed to resolve videos path for old default storage migration", e);
         }

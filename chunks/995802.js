@@ -1,31 +1,31 @@
-r.d(e, { Ay: () => I, OQ: () => s, Pc: () => u.A, v8: () => d });
-var t = r(485845),
-    i = r(991690),
-    a = r(587895),
-    l = r(260498),
-    u = r(333807),
-    o = r(734057),
-    c = r(636401),
-    p = r(36810),
-    A = r(652215);
-function s(n) {
-    let e = l.Ay.findProjectByApplicationId(n);
-    if (null != e) return "user" === e.install_scope;
-    let r = a.A.getApplication(n);
+t.d(n, { Ay: () => I, OQ: () => s, Pc: () => l.A, v8: () => d });
+var i = t(485845),
+    r = t(991690),
+    a = t(587895),
+    u = t(260498),
+    l = t(333807),
+    o = t(734057),
+    c = t(636401),
+    A = t(36810),
+    p = t(652215);
+function s(e) {
+    let n = u.Ay.findProjectByApplicationId(e);
+    if (null != n) return "user" === n.install_scope;
+    let t = a.A.getApplication(e);
     return (
-        r?.integrationTypesConfig != null &&
-        r.supportsIntegrationTypes(t.b.USER_INSTALL) &&
-        !r.supportsIntegrationTypes(t.b.GUILD_INSTALL)
+        t?.integrationTypesConfig != null &&
+        t.supportsIntegrationTypes(i.b.USER_INSTALL) &&
+        !t.supportsIntegrationTypes(i.b.GUILD_INSTALL)
     );
 }
-function d(n, e) {
-    let r = n.surface.type !== i.U.OVERLAY ? n.surface.guildId : void 0,
-        t = o.A.getChannel(e);
-    return null != r && null != t && t.isGuildVocal() && t.getGuildId() === r;
+function d(e, n) {
+    let t = e.surface.type !== r.U.OVERLAY ? e.surface.guildId : void 0,
+        i = o.A.getChannel(n);
+    return null != t && null != i && i.isGuildVocal() && i.getGuildId() === t;
 }
-function I(n) {
-    let e = (0, p.Ay)(n);
-    if (!(0, u.A)(e.frame.applicationId))
-        throw new c.A({ errorCode: A.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "Only a Conjuring app can use this API");
-    return e;
+function I(e) {
+    let n = (0, A.Ay)(e);
+    if (!(0, l.A)(n.frame.applicationId))
+        throw new c.A({ errorCode: p.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "Only a Conjuring app can use this API");
+    return n;
 }

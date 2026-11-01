@@ -4,15 +4,15 @@ var l = n(477900),
     r = n(256905),
     i = n(666476),
     s = n(989145),
-    o = n(922329),
-    u = n(809526),
+    u = n(922329),
+    o = n(809526),
     d = n(105292),
     c = n(986109);
 function f(e) {
     let { projectId: t, attachments: n } = e,
         r = n.filter(m),
         [i, s] = a.useState(() => new Set()),
-        o = a.useCallback((e) => {
+        u = a.useCallback((e) => {
             s((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
     return (0, l.jsx)("div", {
@@ -28,7 +28,7 @@ function f(e) {
                             viewableImages: r,
                             viewerIndex: r.indexOf(e),
                             unavailableIds: i,
-                            markUnavailable: o,
+                            markUnavailable: u,
                         },
                         n,
                     )
@@ -41,8 +41,8 @@ function m(e) {
 }
 function p(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? d.intl.formatToPlainString(u.default.nd81jR, { name: t }) : t;
-    return (0, l.jsx)(o.p, { name: a, compact: !0 });
+        a = n ? d.intl.formatToPlainString(o.default.nd81jR, { name: t }) : t;
+    return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
 function x(e) {
     let { projectId: t, id: n, name: r } = e,
@@ -61,10 +61,10 @@ function x(e) {
         }, [t, n]);
     return i
         ? (0, l.jsx)(p, { name: r, unavailable: !0 })
-        : (0, l.jsx)(o.n, {
+        : (0, l.jsx)(u.n, {
               name: r,
               thumbSrc: null,
-              ariaLabel: d.intl.formatToPlainString(u.default["g5+7Vs"], { name: r }),
+              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: r }),
               onClick: f,
           });
 }
@@ -106,10 +106,10 @@ function g(e) {
     }, [t, n, i, c]);
     return j
         ? (0, l.jsx)(p, { name: x, unavailable: !0 })
-        : (0, l.jsx)(o.n, {
+        : (0, l.jsx)(u.n, {
               name: x,
               thumbSrc: g,
-              ariaLabel: d.intl.formatToPlainString(u.default.GtNukg, { name: x }),
+              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: x }),
               onClick: k,
               onThumbError: () => {
                   (h(null),

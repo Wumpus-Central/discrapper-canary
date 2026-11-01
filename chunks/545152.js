@@ -28,8 +28,8 @@ var i = n(284009),
     D = n(292348),
     v = n(721768),
     b = n(360161),
-    M = n(459016),
-    P = n(842209),
+    P = n(459016),
+    M = n(842209),
     U = n(861382),
     w = n(392054),
     G = n(168186),
@@ -63,7 +63,7 @@ async function B(e) {
             if (e.type === c.n4.SUB_COMMAND || e.type === c.n4.SUB_COMMAND_GROUP || !(e.name in n)) continue;
             let a = i.autocomplete?.name === e.name || void 0;
             if (e.type === c.n4.STRING) {
-                let s = M.getOptionalString(n, e.name)?.trim() ?? "";
+                let s = P.getOptionalString(n, e.name)?.trim() ?? "";
                 if (
                     (null != e.choices
                         ? (t = (0, b.$7)(e.choices, s))
@@ -85,7 +85,7 @@ async function B(e) {
                 (g.push(t), m.push({ type: e.type, name: e.name, value: n, focused: a }));
                 continue;
             }
-            let s = M.filterEmpty(n[e.name]);
+            let s = P.filterEmpty(n[e.name]);
             if (
                 (r()(null != i.autocomplete || 1 === s.length, `Option "${e.name}" expects a single option type`),
                 null == s[0] && !a)
@@ -151,7 +151,7 @@ async function B(e) {
                                   null != i.autocomplete && a
                                       ? i.autocomplete.query
                                       : (0, b.lM)(i.channel.id, e.name, n)),
-                            null == t && (t = Number(M.normalizeNumericString(N.default.locale, n))));
+                            null == t && (t = Number(P.normalizeNumericString(N.default.locale, n))));
                     }
                     break;
                 case c.n4.NUMBER:
@@ -164,7 +164,7 @@ async function B(e) {
                                   null != i.autocomplete && a
                                       ? i.autocomplete.query
                                       : (0, b.lM)(i.channel.id, e.name, n)),
-                            null == t && (t = Number(M.normalizeNumericString(N.default.locale, n))));
+                            null == t && (t = Number(P.normalizeNumericString(N.default.locale, n))));
                     }
                     break;
                 default:
@@ -299,7 +299,7 @@ function j(e, t) {
 }
 async function W(e, t, n) {
     if (null == t.channel) return {};
-    let i = P.s$({ channel: t.channel, type: "channel" }, n.type, e.applicationId);
+    let i = M.s$({ channel: t.channel, type: "channel" }, n.type, e.applicationId);
     if (null == i) return {};
     let r = i.application?.bot;
     if (null == r && null != i.botId)

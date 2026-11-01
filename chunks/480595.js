@@ -43,8 +43,8 @@ var O = n(155718),
     D = n(617617),
     v = n(616356),
     b = n(734057),
-    M = n(760751),
-    P = n(794383),
+    P = n(760751),
+    M = n(794383),
     U = n(309010),
     w = n(528767),
     G = n(652215);
@@ -59,7 +59,7 @@ function B() {
         e.push((0, h.F)(t));
     let n = C.getActivities();
     e.push(...n);
-    let i = P.A.getStream();
+    let i = M.A.getStream();
     null != i && e.push({ type: o.$.STREAMING, ...i });
     let a = new Set();
     s().forEach(k, (t) => {
@@ -110,7 +110,7 @@ function B() {
                 })(d, [...e, ..._])),
         T = null != d && d.isLauncher;
     if (null != d && null != d.name && !(I || (T && !l))) {
-        let t = M.A.findGame(d);
+        let t = P.A.findGame(d);
         e.push({
             type: o.$.PLAYING,
             name: d.name,
@@ -125,7 +125,7 @@ function B() {
 class V extends c.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        (this.waitFor(A.A, v.A, b.A, _.Ay, P.A, C, M.A, f.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => B()));
+        (this.waitFor(A.A, v.A, b.A, _.Ay, M.A, C, P.A, f.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => B()));
     }
     getActivities() {
         return x;

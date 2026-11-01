@@ -28,8 +28,8 @@ let I = u.A.Millis.DAY,
     D = new Map(),
     v = u.A.Millis.HOUR,
     b = new Set(),
-    M = new Set(),
-    P = (0, E.isWindows)() ? "win32" : (0, E.isMac)() ? "darwin" : (0, E.isLinux)() ? "linux" : null,
+    P = new Set(),
+    M = (0, E.isWindows)() ? "win32" : (0, E.isMac)() ? "darwin" : (0, E.isLinux)() ? "linux" : null,
     U = Object.freeze([]);
 function w(e) {
     return null != e && e.length > 0 ? e : U;
@@ -204,9 +204,9 @@ class V extends r.Ay.PersistedStore {
     shouldBlock(e) {
         if (null == e.exePath || "" === e.exePath) return !1;
         let t = e.exePath.toLowerCase();
-        if (null != e.id && null != P) {
+        if (null != e.id && null != M) {
             let n = this.getDetectableGame(e.id);
-            if (null != n && n.executables.some((e) => e.os === P && t.endsWith(e.name.toLowerCase()))) return !1;
+            if (null != n && n.executables.some((e) => e.os === M && t.endsWith(e.name.toLowerCase()))) return !1;
         }
         let n = L.find((e) => t.includes(e));
         if (null != n) return (this.maybeTrackBlock(e, "explicit_list", n), !0);
@@ -235,8 +235,8 @@ class V extends r.Ay.PersistedStore {
     }
     trackNameMatchFallback(e, t, n) {
         let i = e.toLowerCase();
-        if (M.has(i)) return;
-        M.add(i);
+        if (P.has(i)) return;
+        P.add(i);
         let r = null != n && "" !== n;
         c.default.track(h.HAw.GAME_NAME_MATCH_FALLBACK, {
             matched_name: e,

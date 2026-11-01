@@ -78,8 +78,8 @@ function S(e) {
             color: v,
             ...b
         } = e,
-        M = (0, A.Us)(),
-        { parentAnalyticsLocation: P } = (0, _.Ay)(),
+        P = (0, A.Us)(),
+        { parentAnalyticsLocation: M } = (0, _.Ay)(),
         U = r?.getGuildId(),
         w = (0, s.bG)([h.A], () => (null != U ? h.A.getGuild(U) : null), [U]),
         G = (0, s.bG)([f.A], () => (null != t ? f.A.getApplicationActivity(t) : void 0)),
@@ -90,7 +90,7 @@ function S(e) {
     null != G && O)
         ? (0, i.jsx)(p.A, {
               onClick: function () {
-                  null != G && (null != P && (0, E.X)(P, E.O.INVITE), u.qf(G, !1, M));
+                  null != G && (null != M && (0, E.X)(M, E.O.INVITE), u.qf(G, !1, P));
               },
               iconComponent: x,
               label: k,
@@ -105,13 +105,13 @@ function S(e) {
                 onClick: () => {
                     (a()(null != w, "guild cannot be null"),
                         a()(null != r, "channel cannot be null"),
-                        null != P && (0, E.X)(P, E.O.INVITE),
+                        null != M && (0, E.X)(M, E.O.INVITE),
                         g({
                             guild: w,
                             channel: r,
                             streamUserId: n?.ownerId,
                             applicationId: t,
-                            appContext: o ?? M,
+                            appContext: o ?? P,
                             exitFullScreen: l,
                             analyticsLocation: S,
                             guildScheduledEvent: N,

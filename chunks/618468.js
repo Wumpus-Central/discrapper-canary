@@ -105,12 +105,12 @@ var v = n(406935),
         (i[(i.REQUIRE = 3)] = "REQUIRE"),
         (i[(i.ASSIGNMENT = 4)] = "ASSIGNMENT"),
         i),
-    M =
+    P =
         (((r = {})[(r.REGULAR = 0)] = "REGULAR"),
         (r[(r.HOLDOUT = 1)] = "HOLDOUT"),
         (r[(r.ROLLOUT = 2)] = "ROLLOUT"),
         r);
-class P extends O.G {
+class M extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Rule", [
             { no: 1, name: "type", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Rule.Type", b] },
@@ -120,7 +120,7 @@ class P extends O.G {
                 no: 5,
                 name: "subtype",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Rule.Subtype", M],
+                T: () => ["discord_protos.discord_experimentation.v1.Rule.Subtype", P],
             },
             { no: 6, name: "hash", kind: "scalar", T: 9 },
             { no: 7, name: "title", kind: "message", T: () => v.hU },
@@ -180,7 +180,7 @@ class P extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let U = new P();
+let U = new M();
 class w extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Override", [
@@ -1569,7 +1569,7 @@ let ey = new eL();
 class eD extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.PlatformVersionRangeBound", [
-            { no: 1, name: "version", kind: "message", T: () => eM },
+            { no: 1, name: "version", kind: "message", T: () => eP },
             { no: 2, name: "inclusive", kind: "scalar", T: 8 },
         ]);
     }
@@ -1588,7 +1588,7 @@ class eD extends O.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    r.version = eM.internalBinaryRead(e, e.uint32(), n, r.version);
+                    r.version = eP.internalBinaryRead(e, e.uint32(), n, r.version);
                     break;
                 case 2:
                     r.inclusive = e.bool();
@@ -1604,7 +1604,7 @@ class eD extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.version && eM.internalBinaryWrite(e.version, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
+        (e.version && eP.internalBinaryWrite(e.version, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.inclusive && t.tag(2, S.O0.Varint).bool(e.inclusive));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
@@ -1660,8 +1660,8 @@ class eb extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eM = new eb();
-class eP extends O.G {
+let eP = new eb();
+class eM extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.ClientRequiredChanges", [
             { no: 1, name: "commit_hashes", kind: "scalar", repeat: 2, T: 9 },
@@ -1711,7 +1711,7 @@ class eP extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eU = new eP();
+let eU = new eM();
 class ew extends O.G {
     constructor() {
         super(
@@ -3308,7 +3308,7 @@ class tv extends O.G {
     }
 }
 let tb = new tv();
-class tM extends O.G {
+class tP extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode", []);
     }
@@ -3328,8 +3328,8 @@ class tM extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-new tM();
-class tP extends O.G {
+new tP();
+class tM extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode", []);
     }
@@ -3349,7 +3349,7 @@ class tP extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-new tP();
+new tM();
 class tU extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.DebugConfig", [

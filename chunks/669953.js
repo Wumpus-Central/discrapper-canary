@@ -120,8 +120,8 @@ let y = {
             D = (0, N.w)(e, new Set(T), y, !0).length,
             v = null == n ? [] : n.options.map((e) => e.id),
             b = g.A.getConnections(e),
-            M = (0, S.H_)(b),
-            P = (0, S.OG)(b);
+            P = (0, S.H_)(b),
+            M = (0, S.OG)(b);
         if (
             (I.default.track(C.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, d.H$)(e),
@@ -135,10 +135,10 @@ let y = {
                 channels_granted: D,
                 guild_onboarding_covered_channel_ids: c.map((e) => e.id),
                 guild_onboarding_uncovered_channel_ids: E.map((e) => e.id),
-                provider_connections_connected: M.connected,
-                provider_connections_not_connected: M.notConnected,
-                application_connections_connected: P.connected,
-                application_connections_not_connected: P.notConnected,
+                provider_connections_connected: P.connected,
+                provider_connections_not_connected: P.notConnected,
+                application_connections_connected: M.connected,
+                application_connections_not_connected: M.notConnected,
             }),
             (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, m.default.fromTimestamp(Date.now())),
             L(e, !0),

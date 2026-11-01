@@ -40,14 +40,14 @@ function _(e) {
         }
         L(t ? "animateIn" : "animateOut");
     }, [t]);
-    let M = s()(u.nj, {
+    let P = s()(u.nj, {
             [u.GA]: D,
             [u.Gu]: D && null != b,
             [u.HY]: "animateIn" === R,
             [u.U9]: "animateOut" === R,
             [u.YK]: "indicator" !== T,
         }),
-        P = (0, i.jsxs)(i.Fragment, {
+        M = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
                     className: u.fb,
@@ -104,7 +104,7 @@ function _(e) {
             ],
         });
     return E
-        ? (0, i.jsx)("div", { className: M, "data-selected": t || void 0, "data-disabled": _ || void 0, children: P })
+        ? (0, i.jsx)("div", { className: P, "data-selected": t || void 0, "data-disabled": _ || void 0, children: M })
         : (0, i.jsx)(o.vN, {
               focusTarget: g,
               ringTarget: S,
@@ -120,9 +120,9 @@ function _(e) {
                   isDisabled: _,
                   isReadOnly: E,
                   "data-mana-component": "checkbox",
-                  className: M,
+                  className: P,
                   value: String(I),
-                  children: P,
+                  children: M,
               }),
           });
 }

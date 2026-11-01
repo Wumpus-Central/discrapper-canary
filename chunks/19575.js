@@ -252,8 +252,8 @@ let v = new Set([
         "discord_voice",
     ]),
     b = !1,
-    M = null,
-    P = "lastImageSaveDirectory",
+    P = null,
+    M = "lastImageSaveDirectory",
     U = /[<>:"/\\|?*@]/g,
     w = /(\.[a-zA-Z0-9]+):[^.]*$/,
     G = /(\.[a-zA-Z0-9]+)%3A.+$/,
@@ -486,7 +486,7 @@ let K = {
         },
         getDiscordIsElevated() {
             return (0, I.isWindows)() && null != this.getDiscordUtils().getDiscordIsElevated
-                ? (null === M && (M = this.getDiscordUtils().getDiscordIsElevated()), M)
+                ? (null === P && (P = this.getDiscordUtils().getDiscordIsElevated()), P)
                 : null;
         },
         getGameUtils() {
@@ -611,7 +611,7 @@ let K = {
             }
             let d = await V(e),
                 c = m.from(d),
-                u = E.w.get(P);
+                u = E.w.get(M);
             if (("string" != typeof u && (u = void 0), "function" == typeof g.fileManager.saveWithDialog2)) {
                 if (null == (i = await g.fileManager.saveWithDialog2(c, s, u ?? void 0))) return "errored";
                 if (i.canceledByUser) return "canceled";
@@ -622,7 +622,7 @@ let K = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == r || "" === r ? "errored" : (E.w.set(P, r), "saved");
+            return null == r || "" === r ? "errored" : (E.w.set(M, r), "saved");
         },
         async saveFile(e, t) {
             l()(I.isPlatformEmbedded, "Save file method called outside native app");

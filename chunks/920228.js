@@ -1,13 +1,13 @@
 n.d(t, { A: () => l });
 var r = n(582128);
 function l(e) {
-    let { videoRef: t, enabled: n, onPipPause: l, onHiddenPause: a } = e,
-        i = r.useRef(l),
-        u = r.useRef(a),
-        o = r.useRef(!1);
+    let { videoRef: t, enabled: n, onPipPause: l, onHiddenPause: i } = e,
+        a = r.useRef(l),
+        o = r.useRef(i),
+        u = r.useRef(!1);
     (r.useEffect(() => {
-        ((i.current = l), (u.current = a));
-    }, [l, a]),
+        ((a.current = l), (o.current = i));
+    }, [l, i]),
         r.useEffect(() => {
             if (!n) return;
             let e = t.current;
@@ -15,25 +15,25 @@ function l(e) {
                 return (
                     e.addEventListener("enterpictureinpicture", r),
                     e.addEventListener("play", l),
-                    e.addEventListener("pause", a),
+                    e.addEventListener("pause", i),
                     () => {
                         (e.removeEventListener("enterpictureinpicture", r),
                             e.removeEventListener("play", l),
-                            e.removeEventListener("pause", a));
+                            e.removeEventListener("pause", i));
                     }
                 );
             function r() {
-                o.current || i.current();
+                u.current || a.current();
             }
             function l() {
                 document.pictureInPictureElement === e
-                    ? i.current()
+                    ? a.current()
                     : "hidden" === document.visibilityState
-                      ? u.current()
-                      : (o.current = !1);
+                      ? o.current()
+                      : (u.current = !1);
             }
-            function a() {
-                o.current = !0;
+            function i() {
+                u.current = !0;
             }
         }, [t, n]));
 }

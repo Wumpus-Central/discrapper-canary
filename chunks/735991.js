@@ -7,12 +7,12 @@
     ME: () => B,
     MJ: () => x,
     N3: () => R,
-    NO: () => P,
+    NO: () => M,
     Pp: () => Y,
     V1: () => K,
     X2: () => k,
     Z$: () => b,
-    b7: () => M,
+    b7: () => P,
     fl: () => U,
     hX: () => j,
     kF: () => H,
@@ -61,10 +61,10 @@ function v(e) {
 function b(e) {
     return L(e) && (0, h.W)(e, r.U.MAIN);
 }
-function M(e) {
+function P(e) {
     return L(e) && (0, E.n)(e, S.gfo.PARTNER);
 }
-function P(e) {
+function M(e) {
     return L(e) && (0, E.n)(e, S.gfo.PROMOTED);
 }
 function U(e) {

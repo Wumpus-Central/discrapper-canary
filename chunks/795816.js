@@ -40,8 +40,8 @@ var i = n(562708),
     D = n(744230),
     v = n(113267),
     b = n(625180),
-    M = n(25451),
-    P = n(451909),
+    P = n(25451),
+    M = n(451909),
     U = n(195880),
     w = n(567249),
     G = n(192552),
@@ -96,8 +96,8 @@ async function ed(e) {
         C = S?.getGuildId() ?? void 0;
     if (null == C && !S?.isPrivate()) return !1;
     let O = g.A.getApplication(i),
-        L = null != O && (0, M.X)(O),
-        P = (0, U.m)();
+        L = null != O && (0, P.X)(O),
+        M = (0, U.m)();
     try {
         if (w.A.getWindowOpen(er.MLl.ACTIVITY_POPOUT)) {
             let { close: e } = n(574172);
@@ -122,7 +122,7 @@ async function ed(e) {
         }
         d.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
-            nonce: P,
+            nonce: M,
             applicationId: i,
             channelId: t ?? null,
             componentId: c,
@@ -172,7 +172,7 @@ async function ed(e) {
                 throw new D.A(D.A.Reasons.INVALID_CHANNEL);
             let l = await ec({
                 applicationId: i,
-                nonce: P,
+                nonce: M,
                 channelId: t,
                 guildId: C,
                 commandOrigin: u,
@@ -186,7 +186,7 @@ async function ed(e) {
                     return (
                         d.h.dispatch({
                             type: "EMBEDDED_ACTIVITY_LAUNCH_CANCEL",
-                            nonce: P,
+                            nonce: M,
                             applicationId: i,
                             channelId: t ?? null,
                         }),
@@ -198,14 +198,14 @@ async function ed(e) {
             if ((A?.(), "failure" === e.result))
                 throw new D.A(D.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
-        d.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: P, applicationId: i, channelId: t ?? null });
+        d.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: M, applicationId: i, channelId: t ?? null });
     } catch (n) {
         if (L) return !1;
         let e = null != C ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
         return (
             d.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: P,
+                nonce: M,
                 applicationId: i,
                 channelId: t ?? null,
                 guildId: C ?? null,
@@ -434,7 +434,7 @@ async function eh(e) {
         c = await u.A.ensurePrivateChannel(r),
         _ = k.A.getChannel(c);
     if (null == _) throw Error("Private channel not found");
-    (null != o && (t = P.Ay.parse(_, o).content), A.A.sendInvite(c, d.code, a, l, t));
+    (null != o && (t = M.Ay.parse(_, o).content), A.A.sendInvite(c, d.code, a, l, t));
 }
 function ef() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : es.i.INDIRECT_ACTION;

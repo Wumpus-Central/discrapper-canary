@@ -92,8 +92,8 @@ function b(e) {
         ],
     });
 }
-var M = n(503698),
-    P = n.n(M),
+var P = n(503698),
+    M = n.n(P),
     U = n(310784),
     w = n.n(U),
     G = n(691885),
@@ -269,7 +269,7 @@ function K(e) {
     let E = t.component,
         A = n !== R.G.HIDDEN && (null != t.controls || null != t.ControlsExtension);
     return (0, i.jsxs)("div", {
-        className: P()(B.iW, { [B.vT]: n === R.G.BOTTOM, [B.Ix]: n === R.G.RIGHT }),
+        className: M()(B.iW, { [B.vT]: n === R.G.BOTTOM, [B.Ix]: n === R.G.RIGHT }),
         children: [
             (0, i.jsx)("div", {
                 className: B.Ji,
@@ -277,7 +277,7 @@ function K(e) {
             }),
             A &&
                 (0, i.jsxs)("div", {
-                    className: P()(B.ne, { [B.WK]: n === R.G.BOTTOM, [B.BT]: n === R.G.RIGHT }),
+                    className: M()(B.ne, { [B.WK]: n === R.G.BOTTOM, [B.BT]: n === R.G.RIGHT }),
                     children: [
                         null != t.ControlsExtension && (0, i.jsx)(t.ControlsExtension, {}),
                         null != t.controls &&

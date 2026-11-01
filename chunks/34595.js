@@ -1,7 +1,7 @@
 (n.d(t, { FM: () => g, Nl: () => p, gn: () => x }), n(323874), n(14289), n(35956));
 var s = n(477900),
-    r = n(582128),
-    l = n(834730),
+    l = n(582128),
+    r = n(834730),
     a = n(289873),
     i = n(285796),
     c = n(666476),
@@ -12,11 +12,11 @@ var s = n(477900),
     f = n(105292),
     h = n(153171);
 function x(e, t, n, s) {
-    let r = (0, o.GU)(e, t).length,
-        l = n.map((e) => {
+    let l = (0, o.GU)(e, t).length,
+        r = n.map((e) => {
             let t = (0, d.Ft)(e),
                 n = { name: e.name, contentType: t };
-            if (r++ >= c.lN) return { draft: { ...n, status: "error", errorText: (0, d.XV)() } };
+            if (l++ >= c.lN) return { draft: { ...n, status: "error", errorText: (0, d.XV)() } };
             switch ((0, d.R9)(e, t)) {
                 case "too-large":
                     return { draft: { ...n, status: "error", errorText: (0, o.iW)(t) } };
@@ -31,26 +31,26 @@ function x(e, t, n, s) {
                         },
                     };
                 case "fits": {
-                    let r = c.XB.has(t) ? URL.createObjectURL(e) : void 0;
-                    return { draft: { ...n, status: "uploading", previewUrl: r }, upload: () => s(e) };
+                    let l = c.XB.has(t) ? URL.createObjectURL(e) : void 0;
+                    return { draft: { ...n, status: "uploading", previewUrl: l }, upload: () => s(e) };
                 }
             }
         });
-    (0, o.fD)(e, t, l);
+    (0, o.fD)(e, t, r);
 }
 function g(e) {
     let { projectId: t, surface: n, onUploadFile: s } = e,
-        l = (0, o.G)(t, n),
-        a = r.useCallback((e) => x(t, n, e, s), [t, n, s]),
+        r = (0, o.G)(t, n),
+        a = l.useCallback((e) => x(t, n, e, s), [t, n, s]),
         i = (0, d.sm)(a),
-        c = r.useCallback((e) => (0, o.XR)(t, n, e), [t, n]),
-        u = r.useCallback(() => (0, o.lc)(t, n), [t, n]);
+        c = l.useCallback((e) => (0, o.XR)(t, n, e), [t, n]),
+        u = l.useCallback(() => (0, o.lc)(t, n), [t, n]);
     return {
-        drafts: l,
+        drafts: r,
         addFiles: a,
         pasteFiles: i,
         removeDraft: c,
-        settled: l.every((e) => "ready" === e.status),
+        settled: r.every((e) => "ready" === e.status),
         takeRefs: u,
     };
 }
@@ -61,7 +61,7 @@ function p(e) {
         thumbSrc: t.previewUrl,
         subText:
             "error" === t.status
-                ? (0, s.jsx)(l.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: t.errorText })
+                ? (0, s.jsx)(r.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: t.errorText })
                 : null,
         children: [
             "uploading" === t.status ? (0, s.jsx)(a.y, { type: a.t.SPINNING_CIRCLE_SIMPLE, className: h.Rk }) : null,

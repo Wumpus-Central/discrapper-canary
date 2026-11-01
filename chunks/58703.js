@@ -2,7 +2,7 @@ n.d(t, {
     Xm: () => w,
     v0: () => S,
     m_: () => T,
-    N5: () => P,
+    N5: () => M,
     mk: () => C,
     uN: () => b,
     ro: () => g,
@@ -572,16 +572,16 @@ function b(e, t) {
           ? u.intl.formatToPlainString(t.hours, { hours: e.hours, minutes: e.minutes })
           : u.intl.formatToPlainString(t.minutes, { minutes: Math.max(1, e.minutes) });
 }
-function M() {
+function P() {
     return new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
 }
-function P() {
-    let e = M(),
+function M() {
+    let e = P(),
         t = new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate();
     return (e.getDate() / t) * 100;
 }
 function U() {
-    let e = M();
+    let e = P();
     return new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate() - e.getDate();
 }
 function w(e) {

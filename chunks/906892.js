@@ -1,2 +1,2 @@
-n.d(t, { $W: () => i, BK: () => a, bW: () => l });
-let { Layer: r, LayerContainer: l, LayerProvider: a, layerContext: i } = (0, n(365912).Ay)("DiscordVideoPlayer");
+n.d(t, { $W: () => a, BK: () => i, bW: () => l });
+let { Layer: r, LayerContainer: l, LayerProvider: i, layerContext: a } = (0, n(365912).Ay)("DiscordVideoPlayer");

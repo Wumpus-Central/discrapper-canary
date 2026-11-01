@@ -71,8 +71,8 @@ var L = n(750506),
     D = n(773669),
     v = n(363195),
     b = n(531685),
-    M = n(19575),
-    P = n(418842),
+    P = n(19575),
+    M = n(418842),
     U = n(607399),
     w = n(112834),
     G = n(964486),
@@ -115,12 +115,12 @@ function j(e) {
         D = O ? "" : `--custom-zoom: ${y};`,
         v = (0, B.A)("highlight_mana_buttons"),
         b = (0, B.A)("highlight_mana_components"),
-        P = (0, B.A)("highlight_mana_text"),
+        M = (0, B.A)("highlight_mana_text"),
         j = (0, B.A)("highlight_void_toggleables"),
         W = (0, B.A)("highlight_void_buttons"),
         Y = (0, B.A)("highlight_mana_text_overrides");
     (a.useEffect(() => {
-        if (!P) return;
+        if (!M) return;
         let e = () => {},
             t = !1;
         return (
@@ -134,7 +134,7 @@ function j(e) {
                 ((t = !0), e());
             }
         );
-    }, [P]),
+    }, [M]),
         a.useEffect(() => {
             if (!Y) return;
             let e = () => {},
@@ -187,7 +187,7 @@ function j(e) {
                 "visual-refresh-chat-input": !1,
                 "highlight-mana-buttons": v,
                 "highlight-mana-components": b,
-                "highlight-mana-text": P,
+                "highlight-mana-text": M,
                 "highlight-mana-text-overrides": Y,
                 "highlight-void-toggleables": j,
                 "highlight-void-buttons": W,
@@ -200,7 +200,7 @@ function j(e) {
         Z = a.useMemo(() => ({ lang: s, style: X, className: q, focused: u }), [s, X, q, u]);
     return (
         (0, G.Ay)(() => {
-            M.Ay.setTrafficLightPosition({ x: 9, y: 9 });
+            P.Ay.setTrafficLightPosition({ x: 9, y: 9 });
         }),
         (0, r.jsx)(H.q.Provider, { value: Z, children: R })
     );
@@ -211,7 +211,7 @@ let K = { Modal: d.ImpressionTypes.MODAL };
 function $(e) {
     let { windowKey: t, themeOverride: n, children: i } = e,
         l = null != t,
-        [d] = a.useState(() => M.Ay.getEnableHardwareAcceleration()),
+        [d] = a.useState(() => P.Ay.getEnableHardwareAcceleration()),
         {
             locale: A,
             theme: h,
@@ -282,7 +282,7 @@ function $(e) {
         })(w, __OVERLAY__ || O),
         Z = 0;
     1 !== F && (Z |= _.REDUCE_SATURATION_ENABLED);
-    let Q = (0, P.C)(),
+    let Q = (0, M.C)(),
         J = (0, N.qK)("RootThemeContextProvider"),
         ee = (0, N.k5)("RootThemeContextProvider"),
         et = (0, N.lV)("RootThemeContextProvider"),

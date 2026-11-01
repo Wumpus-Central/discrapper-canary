@@ -5,8 +5,8 @@ var a = n(683063),
     r = n(56681),
     i = n(615839),
     s = n(115982),
-    o = n(566424),
-    u = n(16634),
+    u = n(566424),
+    o = n(16634),
     d = n(308665),
     c = n(809526),
     f = n(105292),
@@ -35,7 +35,7 @@ function g(e) {
         y = x ? void 0 : g,
         _ = null != y ? (0, i.nY)(y) : null != b ? (0, s.WQ)(b) : (p ?? f.intl.string(c.default.t8skVB)),
         A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
-    return (0, l.jsx)(o.A, {
+    return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
             asset: (0, l.jsx)(d.A, { size: 32 }),
             assetSize: 32,
@@ -53,7 +53,7 @@ function g(e) {
             ? (0, l.jsx)("ol", {
                   className: m.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: x && e === b }, e.id),
+                      (0, l.jsx)(o.A, { projectId: t, node: e, presentation: "detail", active: x && e === b }, e.id),
                   ),
               })
             : void 0,

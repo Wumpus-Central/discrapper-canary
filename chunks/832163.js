@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => M });
+n.d(t, { A: () => P });
 var r = n(17928),
     a = n(73153),
     s = n(773669),
@@ -119,7 +119,7 @@ class b extends r.Ay.Store {
         return L;
     }
 }
-let M = new b(a.h, {
+let P = new b(a.h, {
     LOGOUT: function () {
         ((A = {}),
             (h = {}),

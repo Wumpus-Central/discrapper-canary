@@ -96,14 +96,14 @@ function b(e) {
         l = r && v(n);
     (null == (t = o.w.get(I.gT8)) || a()().diff(t, "day"), (g = s && l && 1 ? n : null));
 }
-function M() {
+function P() {
     let e;
     if (null != g && (v(g) || ((g = null), 0))) return !1;
     null != (e = Object.values((m = m ?? {}))[0]) && v(e)
         ? b({ type: "SURVEY_FETCHED", survey: e })
         : null == g || (g = null);
 }
-class P extends l.Ay.PersistedStore {
+class M extends l.Ay.PersistedStore {
     static displayName = "SurveyStore";
     static persistKey = "SurveyStore";
     static migrations = [
@@ -122,7 +122,7 @@ class P extends l.Ay.PersistedStore {
         (e) => ({ ...e, hiddenSurveys: e.hiddenSurveys ?? {} }),
     ];
     initialize(e) {
-        (this.waitFor(_.A, E.A, A.A, h.A, f.default), (T = e ?? p), this.syncWith([h.A], M));
+        (this.waitFor(_.A, E.A, A.A, h.A, f.default), (T = e ?? p), this.syncWith([h.A], P));
     }
     getState() {
         return T;
@@ -143,7 +143,7 @@ class P extends l.Ay.PersistedStore {
         return Date.now() - (T.lastActionTriggered ?? 0) >= O;
     }
 }
-let U = new P(d.h, {
+let U = new M(d.h, {
     CONNECTION_OPEN: D,
     CONNECTION_RESUMED: D,
     SURVEY_FETCHED: b,

@@ -38,12 +38,12 @@ var f = n(400492),
     D = n(652215);
 let v = L.isPlatformEmbedded && (0, L.isWindows)(),
     b = v && 10 > parseFloat(o.A.os.release),
-    M = !0;
+    P = !0;
 if (v && !b) {
     let [e, , t] = o.A.os.release.split(".");
-    M = parseInt(e) > 10 || parseInt(t) >= 15063;
+    P = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let P = new c.A("NotificationUtils"),
+let M = new c.A("NotificationUtils"),
     U = null;
 function w(e, t, n) {
     let i = [`result:${e}`, `reason:${t}`];
@@ -58,7 +58,7 @@ async function x() {
         try {
             return await y.Ay.invoke("NOTIFICATIONS_GET_SETTINGS");
         } catch (e) {
-            P.warn("Fetching native notification settings failed with error: ", e);
+            M.warn("Fetching native notification settings failed with error: ", e);
         }
     return null;
 }
@@ -80,7 +80,7 @@ async function V(e) {
             await y.Ay.invoke("NOTIFICATIONS_SEND_NOTIFICATION", { sound: B(e, n) });
             return;
         } catch (e) {
-            P.warn("Native notification sound failed with error: ", e);
+            M.warn("Native notification sound failed with error: ", e);
         }
     (0, f.Ak)(e, t, void 0, n, { trackNotificationFailure: !0 });
 }
@@ -112,10 +112,10 @@ if (b) {
             }
             constructor(t, { body: n, icon: i }) {
                 (t.includes("\0")
-                    ? (P.warn("Notification title contains null character, setting to empty string"), (this.title = ""))
+                    ? (M.warn("Notification title contains null character, setting to empty string"), (this.title = ""))
                     : (this.title = t),
                     n.includes("\0")
-                        ? (P.warn("Notification body contains null character, setting to empty string"),
+                        ? (M.warn("Notification body contains null character, setting to empty string"),
                           (this.body = ""))
                         : (this.body = n),
                     (this.icon = i),
@@ -165,7 +165,7 @@ if (o.A?.features.supports("notifications")) {
         }),
             y.Ay.invoke("NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS"));
     } catch (e) {
-        P.warn("Native notification setup failed with error: ", e);
+        M.warn("Native notification setup failed with error: ", e);
     }
     o.A?.features.supports("notifications_provisional") &&
         z().then((e) => {
@@ -213,8 +213,8 @@ async function q(e, t, n, i, r) {
                 r.omitViewTracking || C.default.track(D.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...i })));
         return;
     }
-    (t.includes("\0") && (P.warn("Notification title contains null character, setting to empty string"), (t = "")),
-        n.includes("\0") && (P.warn("Notification body contains null character, setting to empty string"), (n = "")));
+    (t.includes("\0") && (M.warn("Notification title contains null character, setting to empty string"), (t = "")),
+        n.includes("\0") && (M.warn("Notification body contains null character, setting to empty string"), (n = "")));
     let b = r?.tag ?? null,
         k = u && c?.sound === !0 && c?.authorizationStatus === "authorized";
     function F(e, t) {
@@ -293,7 +293,7 @@ async function q(e, t, n, i, r) {
                         try {
                             y.Ay.invoke("NOTIFICATIONS_REMOVE_NOTIFICATIONS", [t]);
                         } catch (e) {
-                            P.warn("Native notification removal failed with error: ", e);
+                            M.warn("Native notification removal failed with error: ", e);
                         }
                     },
                 };
@@ -301,7 +301,7 @@ async function q(e, t, n, i, r) {
             }
             V = "native_ipc_error";
         } catch (e) {
-            ((V = "native_ipc_error"), P.warn("Native notification failed with error: ", e));
+            ((V = "native_ipc_error"), M.warn("Native notification failed with error: ", e));
         }
     } else if (L.isPlatformEmbedded && ((0, L.isMac)() || (0, L.isWindows)())) {
         let e = await (null == U && (U = y.Ay.invoke("NOTIFICATIONS_GET_MODULE_STATUS").catch(() => null)), U);
@@ -337,7 +337,7 @@ async function q(e, t, n, i, r) {
                 C.default.track(D.HAw.NOTIFICATION_CLICKED, p)),
             r.onClick?.(""));
     }),
-    M)
+    P)
         ? { notification: l, trackingProps: i }
         : {
               notification: {
@@ -362,7 +362,7 @@ let Z = {
                     });
                 return;
             } catch (e) {
-                P.warn("Native notification authorization failed with error: ", e);
+                M.warn("Native notification authorization failed with error: ", e);
             }
         null != W &&
             W.requestPermission(async () => {

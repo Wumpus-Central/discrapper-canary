@@ -1,12 +1,12 @@
 (n.d(t, {
-    BZ: () => M,
+    BZ: () => P,
     CZ: () => U,
     Hd: () => S,
     I5: () => g,
     JM: () => T,
     KH: () => R,
     L7: () => O,
-    Pj: () => P,
+    Pj: () => M,
     Pv: () => p,
     Rf: () => m,
     TQ: () => C,
@@ -165,13 +165,13 @@ function v(e, t) {
 function b(e) {
     return p(e, s.K.STREAK_DAYS)?.streak_count_days;
 }
-function M(e) {
+function P(e) {
     let t = b(e);
     if (null == t || t < 3) return !1;
     let n = o.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.A.Millis.HOUR);
 }
-function P(e) {
+function M(e) {
     let t = N(e);
     if (null == t) return { text: null, tooltipText: null, a11yText: null };
     let n = Math.round(t / l.A.Seconds.HOUR);

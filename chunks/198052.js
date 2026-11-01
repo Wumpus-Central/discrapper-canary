@@ -33,9 +33,9 @@ let v = (0, n(240921).Ay)({
     variations: { 1: { closeChatOnLeave: !1 } },
 });
 var b = n(806931),
-    M = n(652215);
-let P = new E.A("ChannelRTCStore");
-P.enableNativeLogger(!0);
+    P = n(652215);
+let M = new E.A("ChannelRTCStore");
+M.enableNativeLogger(!0);
 let U = Object.freeze([]),
     w = [],
     G = new Set(),
@@ -62,8 +62,8 @@ function X(e) {
                 ? ((function (e) {
                       let t = z(e);
                       if (0 === t.size()) return;
-                      let n = e_(e) || et(t) ? M._Of.VIDEO : M._Of.VOICE;
-                      n === M._Of.VOICE ? (delete B[e], delete V[e]) : (B[e] = n);
+                      let n = e_(e) || et(t) ? P._Of.VIDEO : P._Of.VOICE;
+                      n === P._Of.VOICE ? (delete B[e], delete V[e]) : (B[e] = n);
                   })(n),
                   (function (e) {
                       let t = m.default.getId(),
@@ -278,14 +278,14 @@ class eE extends l.Ay.PersistedStore {
               };
     }
     getMode(e) {
-        return B[e] ?? (e_(e) ? M._Of.VIDEO : M._Of.VOICE);
+        return B[e] ?? (e_(e) ? P._Of.VIDEO : P._Of.VOICE);
     }
     getLayout(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M.BRT.APP;
-        if (__OVERLAY__) return M.DUB.NORMAL;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P.BRT.APP;
+        if (__OVERLAY__) return P.DUB.NORMAL;
         let n = this.getUserParticipantCount(e) > 0,
             i = !!S.A.getChannel(e)?.isGuildVocal() || (n && !!S.A.getChannel(e)?.isVocalThread());
-        return V[e]?.[t] ?? (i ? M.DUB.NO_CHAT : M.DUB.NORMAL);
+        return V[e]?.[t] ?? (i ? P.DUB.NO_CHAT : P.DUB.NORMAL);
     }
     getChatOpen(e) {
         return G.has(e);
@@ -294,8 +294,8 @@ class eE extends l.Ay.PersistedStore {
         return G;
     }
     isFullscreenInContext() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : M.BRT.APP;
-        return Object.values(V).some((t) => t[e] === M.DUB.FULL_SCREEN);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : P.BRT.APP;
+        return Object.values(V).some((t) => t[e] === P.DUB.FULL_SCREEN);
     }
     getStageStreamSize(e) {
         return W[e];
@@ -349,9 +349,9 @@ let eA = new eE(o.h, {
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (t.type === M.rbe.GROUP_DM) {
+        if (t.type === P.rbe.GROUP_DM) {
             let e = t.originChannelId;
-            if (null != e) return ((V[t.id] = { [M.BRT.APP]: V[e]?.[M.BRT.APP] ?? M.DUB.NORMAL }), !0);
+            if (null != e) return ((V[t.id] = { [P.BRT.APP]: V[e]?.[P.BRT.APP] ?? P.DUB.NORMAL }), !0);
         }
         return !1;
     },
@@ -379,7 +379,7 @@ let eA = new eE(o.h, {
                 let { ownerId: e } = (0, f.Iy)(i);
                 e === m.default.getId() && q(e, [n]);
             } catch (e) {
-                P.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
+                M.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
             }
             et(r) || (H[n] = !1);
         }

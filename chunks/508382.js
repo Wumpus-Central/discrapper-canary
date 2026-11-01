@@ -33,8 +33,8 @@ function A(e) {
             portal: D = !0,
             blockPointerEvents: v = !1,
             children: b,
-            renderLayer: M,
-            viewportPadding: P = 8,
+            renderLayer: P,
+            viewportPadding: M = 8,
             shiftPadding: U,
             maxHeight: w,
             trigger: G = "click",
@@ -48,13 +48,13 @@ function A(e) {
     let B = r.useMemo(() => {
             let e = [(0, a.cY)({ mainAxis: N, alignmentAxis: C })];
             return (
-                O && e.push((0, a.UU)({ crossAxis: R, padding: P, boundary: h.body })),
-                L && e.push((0, a.BN)({ padding: U ?? P, limiter: (0, a.ER)(), boundary: h.body })),
+                O && e.push((0, a.UU)({ crossAxis: R, padding: M, boundary: h.body })),
+                L && e.push((0, a.BN)({ padding: U ?? M, limiter: (0, a.ER)(), boundary: h.body })),
                 e.push((0, a.jD)({ strategy: "referenceHidden" })),
                 null != w &&
                     e.push(
                         (0, a.Ej)({
-                            padding: P,
+                            padding: M,
                             boundary: h.body,
                             apply(e) {
                                 let { availableHeight: t, elements: n } = e,
@@ -65,7 +65,7 @@ function A(e) {
                     ),
                 e
             );
-        }, [N, C, O, L, P, U, R, h, w]),
+        }, [N, C, O, L, M, U, R, h, w]),
         V = (0, s.fI)(),
         {
             refs: H,
@@ -119,7 +119,7 @@ function A(e) {
                                 ...Z(),
                                 children: (0, i.jsx)(E.Provider, {
                                     value: ee,
-                                    children: M({ placement: W, update: K, hidden: "hidden" === Q, shift: Y.shift }),
+                                    children: P({ placement: W, update: K, hidden: "hidden" === Q, shift: Y.shift }),
                                 }),
                             })),
                             "none" === n

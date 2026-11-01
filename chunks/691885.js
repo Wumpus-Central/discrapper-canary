@@ -34,8 +34,8 @@ function O(e) {
             placeholder: D = t.SELECT_PLACEHOLDER,
             name: v,
             form: b,
-            autoComplete: M,
-            maxOptionsVisible: P = 5,
+            autoComplete: P,
+            maxOptionsVisible: M = 5,
             fitContent: U = !1,
             options: w,
             formatOption: G,
@@ -258,8 +258,8 @@ function O(e) {
                     H.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
                 }, 10)));
     }, [eN, ev, F]);
-    let eM = (0, o.A)(es, q.setReference),
-        eP = r.useCallback(
+    let eP = (0, o.A)(es, q.setReference),
+        eM = r.useCallback(
             (e) => {
                 if (eA) return;
                 let t = Array.from(e)[0],
@@ -297,7 +297,7 @@ function O(e) {
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(m.p, {
-                            ref: eM,
+                            ref: eP,
                             disabled: $,
                             readOnly: a,
                             loading: er,
@@ -341,7 +341,7 @@ function O(e) {
                                         placeholder: D,
                                         selectionMode: n,
                                         selectedItems: eN,
-                                        onRemove: eP,
+                                        onRemove: eM,
                                     }),
                                 ],
                             }),
@@ -350,7 +350,7 @@ function O(e) {
                             name: v,
                             form: b,
                             disabled: eA,
-                            autoComplete: M,
+                            autoComplete: P,
                             selectionMode: n,
                             selectedItems: eN,
                             onSelectionChange: eC,
@@ -376,7 +376,7 @@ function O(e) {
                                     shouldFocusWrap: y,
                                     activeDescendantIndex: el,
                                     renderListItem: (e) => (0, i.jsx)(T.c, { ...e }),
-                                    maxVisibleItems: P,
+                                    maxVisibleItems: M,
                                     loading: er,
                                 }),
                             }),

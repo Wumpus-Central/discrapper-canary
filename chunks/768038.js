@@ -44,8 +44,8 @@ var f = n(626584),
     D = n(152007),
     v = n(253932),
     b = n(594061),
-    M = n(95701),
-    P = n(34457),
+    P = n(95701),
+    M = n(34457),
     U = n(889227),
     w = n(205761),
     G = n(808728),
@@ -131,21 +131,21 @@ class eI {
                 i = t.filter((e) => (0, q.fh)(e));
                 break;
             case ei.rD.USER:
-                i = t.filter((e) => e instanceof M.YB && e.type === E.rbe.DM);
+                i = t.filter((e) => e instanceof P.YB && e.type === E.rbe.DM);
                 break;
             case ei.rD.GROUP_DM:
-                i = t.filter((e) => e instanceof M.YB && e.isMultiUserDM());
+                i = t.filter((e) => e instanceof P.YB && e.isMultiUserDM());
                 break;
             case ei.rD.TEXT_CHANNEL:
-                i = t.filter((e) => e instanceof M.YB && (0, M.tr)(e.type));
+                i = t.filter((e) => e instanceof P.YB && (0, P.tr)(e.type));
                 break;
             case ei.rD.VOICE_CHANNEL:
-                i = t.filter((e) => e instanceof M.YB && e.isGuildVocal());
+                i = t.filter((e) => e instanceof P.YB && e.isGuildVocal());
         }
         let r = {};
         for (let t of i) {
             let i = w.A.getScoreWithoutFetchingLatest(t.id);
-            if (e === ei.rD.USER && t instanceof M.cq)
+            if (e === ei.rD.USER && t instanceof P.cq)
                 switch (t.type) {
                     case E.rbe.DM:
                         r[t.getRecipientId()] = 1 + i / n;
@@ -451,7 +451,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     }
                     return n;
                 })(a, f),
-                S = h === G.I6 || (h !== G.vM && !!(0, M.fT)(h));
+                S = h === G.I6 || (h !== G.vM && !!(0, P.fT)(h));
             r =
                 null != s
                     ? l()(G.Ay.getChannels(s)[h])
@@ -471,10 +471,10 @@ let eL = (0, z.L_)((e, t, n) => {
                     (n = null != s),
                     !(
                         h === t ||
-                        ((n || (0, M.zy)(t)) &&
-                            (h === G.I6 ? (0, M.tr)(t) || (0, M.ay)(t) : h === G.vM && (0, M.ay)(t)))
+                        ((n || (0, P.zy)(t)) &&
+                            (h === G.I6 ? (0, P.tr)(t) || (0, P.ay)(t) : h === G.vM && (0, P.ay)(t)))
                     ) ||
-                        ((0, M.zy)(e.type) && !V.A.can(I ? e.accessPermissions : E.xBc.VIEW_CHANNEL, e)) ||
+                        ((0, P.zy)(e.type) && !V.A.can(I ? e.accessPermissions : E.xBc.VIEW_CHANNEL, e)) ||
                         !A(e))
                 )
                     continue;
@@ -514,14 +514,14 @@ let eL = (0, z.L_)((e, t, n) => {
                         !(r.length > 1) &&
                         (1 !== r.length || r[0].isFullMatch || o) &&
                         ((i = e.type),
-                        h === G.I6 && (0, M.ay)(i) && (c = Math.max(c - 1, 0.5)),
+                        h === G.I6 && (0, P.ay)(i) && (c = Math.max(c - 1, 0.5)),
                         e.isThread() && (e.isActiveThread() || (c -= 3), D.A.hasJoined(e.id) || (c -= 5)),
                         (c = Math.min(
                             c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / O, 1),
                             c >= 7 ? 10 : 7,
                         )),
                         C.push({
-                            type: (0, M.ay)(e.type) ? ei.rD.VOICE_CHANNEL : ei.rD.TEXT_CHANNEL,
+                            type: (0, P.ay)(e.type) ? ei.rD.VOICE_CHANNEL : ei.rD.TEXT_CHANNEL,
                             record: e,
                             score: eh(c, p[e.id]),
                             comparator: (0, u.m1)(e, K.default, j.A),
@@ -800,7 +800,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 let e = F.A.getGuild(n);
                 null != e &&
                     (l()(k.A.getSortedRoles(e.id))
-                        .filter((e) => (e.mentionable || i || o) && a()(u, e.name.toLowerCase()) && !(0, P.Oy)(e))
+                        .filter((e) => (e.mentionable || i || o) && a()(u, e.name.toLowerCase()) && !(0, M.Oy)(e))
                         .take(E.rs7 - c)
                         .forEach((e) => {
                             _.push(e);
@@ -856,7 +856,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     (e.id !== er.T4.CHANNEL_BROWSER || s) &&
                     (e.id !== er.T4.CUSTOMIZE_COMMUNITY || l) &&
                     eg(e.name.toLocaleLowerCase(), r, !1) > 0 &&
-                    d.push(new M.jb({ id: e.id, name: e.name, type: E.rbe.UNKNOWN, guild_id: n.id }));
+                    d.push(new P.jb({ id: e.id, name: e.name, type: E.rbe.UNKNOWN, guild_id: n.id }));
             return d;
         },
         queryChannelResults(e) {

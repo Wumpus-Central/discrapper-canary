@@ -1,14 +1,14 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => o });
 var l = n(477900);
 n(582128);
 var a = n(866665),
     r = n(408278),
     i = n(95635),
     s = n(809526),
-    o = n(105292);
-function u(e) {
-    let { importing: t, disabled: n = !1, onClick: u } = e,
-        d = o.intl.string(s.default.tx8Azx);
+    u = n(105292);
+function o(e) {
+    let { importing: t, disabled: n = !1, onClick: o } = e,
+        d = u.intl.string(s.default.tx8Azx);
     return (0, l.jsx)(a.m, {
         text: d,
         position: "bottom",
@@ -21,7 +21,7 @@ function u(e) {
             "aria-label": d,
             loading: t,
             disabled: n,
-            onClick: u,
+            onClick: o,
         }),
     });
 }

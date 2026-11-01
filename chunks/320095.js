@@ -1,4 +1,4 @@
-(n.d(t, { IU: () => R, SP: () => O, ec: () => M, rh: () => C, ei: () => b }), n(938796));
+(n.d(t, { IU: () => R, SP: () => O, ec: () => P, rh: () => C, ei: () => b }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(721779),
@@ -198,6 +198,6 @@ function v(e) {
 function b(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
-function M(e) {
+function P(e) {
     return e.hasFlag(m.pr7.EPHEMERAL) && e.type !== m.lAJ.IN_GAME_MESSAGE_NUX;
 }

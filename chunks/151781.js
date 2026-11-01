@@ -400,10 +400,10 @@ var y = n(70738),
     D = n(166233),
     v = n(11541),
     b = n(652215);
-let M = !1,
-    P = {};
+let P = !1,
+    M = {};
 function U(e) {
-    return (null == P[e] && (P[e] = new L(e)), P[e]);
+    return (null == M[e] && (M[e] = new L(e)), M[e]);
 }
 function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -482,11 +482,11 @@ let B = new F(r.h, {
     CONNECTION_OPEN: function (e) {
         let t;
         return (
-            M
-                ? (M = !1)
+            P
+                ? (P = !1)
                 : (function () {
                       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      for (let t in P) w(t, e);
+                      for (let t in M) w(t, e);
                   })(!0),
             (t = !1),
             e.guilds.forEach((e) => {
@@ -517,7 +517,7 @@ let B = new F(r.h, {
     LOCAL_MESSAGES_LOADED: function (e) {
         let { guildId: t, members: n } = e;
         if (null == t || null == l.A.getGuild(t)) return !1;
-        M = !0;
+        P = !0;
         let i = U(t),
             r = [];
         for (let e of n) null == i.getMember(e.userId) && r.push(e);
@@ -527,7 +527,7 @@ let B = new F(r.h, {
         let { guildMembers: t } = e,
             n = !1;
         return (
-            (M = !0),
+            (P = !0),
             c.default.entries(t).forEach((e) => {
                 let [t, i] = e;
                 n = U(t).updateClientMembers(Object.values(i)) || n;

@@ -136,14 +136,14 @@ function v(e, t) {
 function b(e, t) {
     return e ? (null === E.A.getPremiumTypeOverride() ? null : E.A.getPerksActual()) : t;
 }
-function M(e, t) {
+function P(e, t) {
     if (e?.users == null) return !1;
     for (let n in e.users) {
         let i = e.users[n];
         y(i) && D(i, t);
     }
 }
-function P(e, t) {
+function M(e, t) {
     (null != e.author && "SENDING" !== e.state && y(e.author) && D(e.author, t),
         e.mentions?.forEach((e) => {
             y(e) && D(e, t);
@@ -154,7 +154,7 @@ function P(e, t) {
                 y(e) && D(e, t);
             });
         }),
-        M(e.resolved, t),
+        P(e.resolved, t),
         e.interaction_metadata?.user != null && y(e.interaction_metadata.user) && D(e.interaction_metadata.user, t),
         null != e.actor && y(e.actor) && D(e.actor, t),
         null != e.message_snapshots &&
@@ -232,18 +232,18 @@ function H(e) {
 }
 function j(e) {
     let { messages: t } = e;
-    return (t.forEach((e) => P(e, !0)), !1);
+    return (t.forEach((e) => M(e, !0)), !1);
 }
 function W(e) {
     let { messages: t, messageReferences: n } = e;
-    return (t.concat(n).forEach((e) => P(e, !0)), !1);
+    return (t.concat(n).forEach((e) => M(e, !0)), !1);
 }
 function Y(e) {
     let { rawConversations: t } = e;
     return (
         t.forEach((e) => {
             let { messages: t } = e;
-            return t?.forEach((e) => P(e, !0));
+            return t?.forEach((e) => M(e, !0));
         }),
         !1
     );
@@ -253,14 +253,14 @@ function K(e) {
     return (
         t.forEach((e) => {
             let { message: t } = e;
-            return P(t, !0);
+            return M(t, !0);
         }),
         !1
     );
 }
 function $(e) {
     let { mostRecentMessages: t } = e;
-    return (t?.forEach((e) => P(e, !1)), !1);
+    return (t?.forEach((e) => M(e, !1)), !1);
 }
 function z(e) {
     let { data: t } = e;
@@ -269,7 +269,7 @@ function z(e) {
             let { messages: t, channels: n } = e;
             (t.forEach((e) => {
                 e.forEach((e) => {
-                    P(e, !0);
+                    M(e, !0);
                 });
             }),
                 n.forEach((e) => {
@@ -282,24 +282,24 @@ function z(e) {
 }
 function X(e) {
     let { messages: t } = e;
-    return (t.forEach((e) => P(e, !0)), !1);
+    return (t.forEach((e) => M(e, !0)), !1);
 }
 function q(e) {
     let { firstMessages: t, owners: n } = e;
-    (null != t && t.forEach((e) => P(e, !0)), null != n && n.forEach((e) => D(e.user, !0)));
+    (null != t && t.forEach((e) => M(e, !0)), null != n && n.forEach((e) => D(e.user, !0)));
 }
 function Z(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: i } = e;
-        (null != t && P(t, !0), null != n && P(n, !0), null != i && null != i.user && D(i.user, !0));
+        (null != t && M(t, !0), null != n && M(n, !0), null != i && null != i.user && D(i.user, !0));
     });
 }
 function Q(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
-        null != t && P(t, !0);
+        null != t && M(t, !0);
     });
 }
 function J(e) {
@@ -313,7 +313,7 @@ function J(e) {
     });
 }
 function ee(e) {
-    (null != e.other_user && D(e.other_user), null != e.message && P(e.message, !0));
+    (null != e.other_user && D(e.other_user), null != e.message && M(e.message, !0));
 }
 function et(e) {
     let { items: t } = e;
@@ -325,7 +325,7 @@ function en(e) {
 }
 function ei(e) {
     let { message: t } = e;
-    if ((P(t, !0), null != t.flags && r.Lt(t.flags, m.pr7.URGENT))) {
+    if ((M(t, !0), null != t.flags && r.Lt(t.flags, m.pr7.URGENT))) {
         let e = S[p.default.getId()];
         return (
             null != e &&
@@ -495,13 +495,13 @@ function eb(e) {
     let { users: t } = e;
     return t.reduce((e, t) => D(t) || e, !1);
 }
-function eM(e) {
+function eP(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return;
     let { users: n } = t;
     return n.reduce((e, t) => D(t) || e, !1);
 }
-function eP(e) {
+function eM(e) {
     let { familyCenterTeenActivity: t } = e,
         { users: n } = t;
     return n.reduce((e, t) => D(t) || e, !1);
@@ -514,7 +514,7 @@ function eU(e) {
 function ew(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
-        null != e.message && P(e.message, !0);
+        null != e.message && M(e.message, !0);
     }, !1);
 }
 function eG(e) {
@@ -537,7 +537,7 @@ function ek(e) {
 }
 function eF(e) {
     let { resolved: t } = e;
-    return M(t, !0);
+    return P(t, !0);
 }
 function eB(e) {
     let { stickers: t } = e;
@@ -608,8 +608,8 @@ class eV extends T.A {
             LOCAL_MESSAGES_LOADED: ef,
             FAMILY_CENTER_INITIAL_LOAD: eD,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ev,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eM,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eP,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eP,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eM,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eb,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eU,
             LOAD_ICYMI_HYDRATED: ew,

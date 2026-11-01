@@ -41,9 +41,9 @@ function E(e) {
             tooltipId: D,
             isVisible: v,
             targetElementRef: b,
-            trigger: M,
+            trigger: P,
         } = (0, u.D)({ children: t, targetElementRef: y, asContainer: h, containerTag: f, ariaHidden: C, ...O }),
-        [P, U] = r.useState(!1),
+        [M, U] = r.useState(!1),
         w = r.useMemo(
             () =>
                 null != A
@@ -62,7 +62,7 @@ function E(e) {
             [n, E, A],
         ),
         G = null != w && ("string" != typeof w || "" !== w),
-        x = v || P;
+        x = v || M;
     r.useEffect(() => {
         v && G ? U(!0) : G || U(!1);
     }, [v, G]);
@@ -70,7 +70,7 @@ function E(e) {
             U(!1);
         }, []),
         F = (0, c.j)({ shouldShow: v, onExitComplete: k });
-    if (!G && (v || !P)) return t;
+    if (!G && (v || !M)) return t;
     if (null == t || (!h && !r.isValidElement(t))) return null;
     let B = N ?? (0, d.Xj)(n),
         V = F((e, t) =>
@@ -93,6 +93,6 @@ function E(e) {
                 : null,
         );
     return (0, i.jsxs)(i.Fragment, {
-        children: [M, C || null == w || "" === w ? null : (0, i.jsx)(a.A, { id: D, children: w }), V],
+        children: [P, C || null == w || "" === w ? null : (0, i.jsx)(a.A, { id: D, children: w }), V],
     });
 }

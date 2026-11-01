@@ -1,8 +1,8 @@
 n.d(t, {
     Cp: () => N,
-    D$: () => M,
+    D$: () => P,
     I5: () => V,
-    Nc: () => P,
+    Nc: () => M,
     Os: () => B,
     P7: () => v,
     Qu: () => R,
@@ -116,17 +116,17 @@ function v(e) {
 function b(e, t) {
     return null == t || (null != e && e >= t);
 }
-function M(e) {
+function P(e) {
     return r()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function P(e) {
+function M(e) {
     let { fractionalState: t } = e,
         n = u.A.getPremiumTypeSubscription(),
         i = d.default.getCurrentUser();
     c.A.hasFetched || c.A.isFetching || (0, s.CD)();
-    let r = M(c.A.boostSlots),
+    let r = P(c.A.boostSlots),
         a = n?.isPausedOrPausePending,
         l = r.length > 0;
     if (a && t === h.xc.NONE && !l) return I.intl.string(I.t.mOWsF1);

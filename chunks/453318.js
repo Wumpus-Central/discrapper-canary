@@ -1,4 +1,4 @@
-(n.d(t, { iS: () => v, a3: () => b, X2: () => P }), n(321073));
+(n.d(t, { iS: () => v, a3: () => b, X2: () => M }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -73,7 +73,7 @@ function v(e) {
         [C, R] = r.useState(null),
         [L, y] = r.useState(!1),
         [v, b] = r.useState(""),
-        [M, P] = r.useState(""),
+        [P, M] = r.useState(""),
         {
             options: U,
             groups: w,
@@ -81,7 +81,7 @@ function v(e) {
             onQueryChange: x,
         } = (0, O.K)({ active: s ?? !0, options: d, renderOption: h }),
         k = r.useCallback((e, t) => {
-            (P(e), b(t ?? e));
+            (M(e), b(t ?? e));
         }, []);
     r.useEffect(() => {
         x(v);
@@ -152,7 +152,7 @@ function v(e) {
             groups: V,
             selectedOptions: j,
             maxOptionsVisible: a,
-            query: M,
+            query: P,
             setQuery: k,
             loading: G,
             handleSelectionChange: Y,
@@ -174,10 +174,10 @@ function b(e) {
         ...a,
         "data-mana-component": "combobox",
         layoutConfig: o,
-        children: (0, i.jsx)(M, { ...s, ref: t }),
+        children: (0, i.jsx)(P, { ...s, ref: t }),
     });
 }
-function M(e) {
+function P(e) {
     let {
             id: t,
             autoFocus: n,
@@ -195,8 +195,8 @@ function M(e) {
         } = e,
         v = r.useRef(null),
         b = r.useRef(null),
-        M = r.useRef(null),
-        P = r.useContext(E._),
+        P = r.useRef(null),
+        M = r.useContext(E._),
         { i18n: U } = r.useContext(f.VO),
         {
             activeDescendantIndex: w,
@@ -252,7 +252,7 @@ function M(e) {
     r.useEffect(() => {
         es &&
             !O &&
-            (M.current = setTimeout(() => {
+            (P.current = setTimeout(() => {
                 b.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
             }, 10));
     }, [ee, es, O]);
@@ -384,7 +384,7 @@ function M(e) {
                 isOpen: !!Z,
                 isInert: K,
                 hasValue: z,
-                hasError: P?.errorMessageId != null,
+                hasError: M?.errorMessageId != null,
                 handleToggle: ed,
                 handleClear: ec,
                 children: (0, i.jsx)("div", {
@@ -411,10 +411,10 @@ function M(e) {
                                     "aria-controls": j,
                                     "aria-expanded": !$ || Z,
                                     "aria-activedescendant": eo,
-                                    "aria-labelledby": P?.labelId,
-                                    "aria-describedby": P?.describedById,
-                                    "aria-errormessage": P?.errorMessageId,
-                                    "aria-invalid": P?.errorMessageId != null,
+                                    "aria-labelledby": M?.labelId,
+                                    "aria-describedby": M?.describedById,
+                                    "aria-errormessage": M?.errorMessageId,
+                                    "aria-invalid": M?.errorMessageId != null,
                                     "aria-required": H,
                                     value: en ?? "",
                                     onChange: ep,
@@ -440,7 +440,7 @@ function M(e) {
         ],
     });
 }
-function P(e) {
+function M(e) {
     let { renderListItem: t, renderEmptyState: n, maxVisibleItems: a = 5 } = e,
         {
             filteredOptions: s,

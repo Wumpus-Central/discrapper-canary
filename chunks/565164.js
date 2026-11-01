@@ -1,10 +1,10 @@
 (n.d(t, { B8: () => p, wb: () => h, xx: () => m, z5: () => f }), n(321073));
 var r = n(477900),
     l = n(582128),
-    a = n(61491),
-    i = n(834730),
-    u = n(584669),
-    o = n(984212),
+    i = n(61491),
+    a = n(834730),
+    o = n(584669),
+    u = n(984212),
     s = n(42388);
 let c = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
     d = [];
@@ -17,8 +17,8 @@ function m(e) {
         : { imageUrl: n, x: parseInt(t[1], 10), y: parseInt(t[2], 10), w: parseInt(t[3], 10), h: parseInt(t[4], 10) };
 }
 function f(e, t, n, r) {
-    let [a, i] = l.useState(null),
-        [u, s] = l.useState(null);
+    let [i, a] = l.useState(null),
+        [o, s] = l.useState(null);
     return (
         l.useEffect(() => {
             if (null == n || 0 === n.length || !e) return;
@@ -36,11 +36,11 @@ function f(e, t, n, r) {
                     l = [];
                 for (let e = 0; e < t.length; e++) {
                     let n = t[e];
-                    if (!(0, o.C)(n)) continue;
+                    if (!(0, u.C)(n)) continue;
                     let r = m(n.text);
                     null != r && l.push({ startSec: n.startTime, endSec: n.endTime, ...r });
                 }
-                (l.sort((e, t) => e.startSec - t.startSec), i({ url: n, cues: l }));
+                (l.sort((e, t) => e.startSec - t.startSec), a({ url: n, cues: l }));
             }
         }, [n, t, e]),
         l.useEffect(() => {
@@ -54,7 +54,7 @@ function f(e, t, n, r) {
                 }
             );
         }, [r, e]),
-        null != a && a?.url === n && u === r ? a.cues : d
+        null != i && i?.url === n && o === r ? i.cues : d
     );
 }
 function p(e, t) {
@@ -63,34 +63,34 @@ function p(e, t) {
         r = e.length - 1;
     for (; n <= r;) {
         let l = (n + r) >> 1,
-            a = e[l];
-        if (t < a.startSec) r = l - 1;
+            i = e[l];
+        if (t < i.startSec) r = l - 1;
         else {
-            if (!(t >= a.endSec)) return a;
+            if (!(t >= i.endSec)) return i;
             n = l + 1;
         }
     }
     return e[Math.max(0, Math.min(n, e.length - 1))];
 }
 function h(e) {
-    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: o } = e;
+    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: u } = e;
     if (t.w <= 0 || t.h <= 0) return null;
     let c = t.w / 2,
         d = 8 + c,
-        m = Math.max(d, o - 8 - c),
+        m = Math.max(d, u - 8 - c),
         f = Math.max(d, Math.min(l, m));
     return (0, r.jsxs)("div", {
         className: s.kL,
         "aria-hidden": !0,
         style: { left: `${f}px`, bottom: "16px", width: `${t.w}px` },
         children: [
-            (0, r.jsx)("div", { className: s.FF, style: (0, u.u)(t) }),
-            (0, r.jsx)(i.E, {
+            (0, r.jsx)("div", { className: s.FF, style: (0, o.u)(t) }),
+            (0, r.jsx)(a.E, {
                 className: s.Sp,
                 variant: "text-xs/normal",
                 color: "text-overlay-light",
                 tabularNumbers: !0,
-                children: (0, a.rB)(n),
+                children: (0, i.rB)(n),
             }),
         ],
     });

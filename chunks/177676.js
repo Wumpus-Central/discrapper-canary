@@ -1,7 +1,7 @@
 n.d(t, { sm: () => m, R9: () => o, XV: () => d, Ft: () => c, th: () => u });
 var s = n(582128),
-    r = n(666476);
-async function l(e) {
+    l = n(666476);
+async function r(e) {
     let t = new Worker(new URL("/assets/" + n.u("638664"), n.b));
     try {
         let n = await new Promise((n) => {
@@ -29,23 +29,23 @@ function c(e) {
     return "" === e.type ? "application/octet-stream" : e.type;
 }
 function o(e, t) {
-    return (0, r.Oq)(e.size, t)
+    return (0, l.Oq)(e.size, t)
         ? "fits"
-        : "image/png" === t && e.size <= r.km && "u" > typeof Worker && "u" > typeof OffscreenCanvas
+        : "image/png" === t && e.size <= l.km && "u" > typeof Worker && "u" > typeof OffscreenCanvas
           ? "webp"
           : "too-large";
 }
 async function u(e) {
     let t;
     try {
-        t = await l(e);
+        t = await r(e);
     } catch {
         return null;
     }
-    return null != t && (0, r.Oq)(t.size, t.type) ? t : null;
+    return null != t && (0, l.Oq)(t.size, t.type) ? t : null;
 }
 function d() {
-    return i.intl.formatToPlainString(a.default.Q0aCVZ, { count: r.lN });
+    return i.intl.formatToPlainString(a.default.Q0aCVZ, { count: l.lN });
 }
 function m(e) {
     return s.useCallback(
