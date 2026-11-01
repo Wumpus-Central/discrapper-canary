@@ -44,8 +44,8 @@ var k = n(705427),
     O = n(735769),
     _ = n(101766);
 (n(976860), n(652215), n(746080));
-var T = n(506774);
-let U = "ConjureProjectsPanelOpen";
+var U = n(506774);
+let T = "ConjureProjectsPanelOpen";
 var M = n(89310),
     F = n(17928),
     D = n(821609),
@@ -461,10 +461,10 @@ function eN(e) {
             mine: a,
             shared: i,
             fetchState: o,
-        } = ((t = (0, em.U)(() => ed.Ay.getOwnedProjects().filter((e) => ef(e, n)), [n])),
+        } = ((t = (0, em.UU)(() => ed.Ay.getOwnedProjects().filter((e) => ef(e, n)), [n])),
         {
             mine: t,
-            shared: (0, em.U)(() => ed.Ay.getSharedProjects(n), [n]),
+            shared: (0, em.UU)(() => ed.Ay.getSharedProjects(n), [n]),
             fetchState: (0, F.bG)([ed.Ay], () => ed.Ay.getGuildProjectsFetchState(n), [n]),
         }),
         m = (0, F.yK)([ed.Ay], () => ed.Ay.getOwnedProjects().filter((e) => !ef(e, n)), [n]),
@@ -785,8 +785,8 @@ function eO(e) {
     });
 }
 var e_ = n(628284),
-    eT = n(369606),
-    eU = n(926268),
+    eU = n(369606),
+    eT = n(926268),
     eM = n(406810),
     eF = n(707554);
 let eD = [
@@ -856,16 +856,16 @@ let eq = {
                 (0, s.jsxs)("div", {
                     className: ez.si,
                     children: [
-                        (0, s.jsx)(eT.TrophyIcon, { size: "xxs", color: z.A.colors.ICON_FEEDBACK_WARNING }),
+                        (0, s.jsx)(eU.TrophyIcon, { size: "xxs", color: z.A.colors.ICON_FEEDBACK_WARNING }),
                         (0, s.jsx)(d.E, { variant: "text-xs/bold", color: "none", className: ez.o9, children: 128 }),
                     ],
                 }),
                 (0, s.jsxs)("div", {
                     className: ez.KQ,
                     children: [
-                        (0, s.jsx)(eU.HeartIcon, { size: "xxs", color: z.A.colors.ICON_FEEDBACK_CRITICAL }),
-                        (0, s.jsx)(eU.HeartIcon, { size: "xxs", color: z.A.colors.ICON_FEEDBACK_CRITICAL }),
-                        (0, s.jsx)(eU.HeartIcon, { size: "xxs", color: z.A.colors.ICON_OVERLAY_LIGHT }),
+                        (0, s.jsx)(eT.HeartIcon, { size: "xxs", color: z.A.colors.ICON_FEEDBACK_CRITICAL }),
+                        (0, s.jsx)(eT.HeartIcon, { size: "xxs", color: z.A.colors.ICON_FEEDBACK_CRITICAL }),
+                        (0, s.jsx)(eT.HeartIcon, { size: "xxs", color: z.A.colors.ICON_OVERLAY_LIGHT }),
                     ],
                 }),
             ],
@@ -1108,7 +1108,7 @@ function e2(e) {
         [b, F] = l.useState(!1),
         [D, z] = l.useState(null),
         [G, q] = l.useState(null),
-        [W, $] = l.useState(() => T.w.get(U) ?? null ?? !0),
+        [W, $] = l.useState(() => U.w.get(T) ?? null ?? !0),
         B = l.useRef(null),
         K = l.useMemo(() => H().map((e) => ({ ...e, image: Y[e.id] })), []),
         J = "user" === (0, f.o)().get("target") || n,
@@ -1251,7 +1251,7 @@ function e2(e) {
             }
         }, [r, G, t, n, Z, V]),
         em = l.useCallback((e) => {
-            (T.w.set(U, e), $(e));
+            (U.w.set(T, e), $(e));
         }, []),
         ef = I.intl.string(W ? S.default.kar7jh : S.default.WSc5Y2);
     return (0, s.jsx)("div", {

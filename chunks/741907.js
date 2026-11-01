@@ -1,4 +1,4 @@
-n.d(t, { A: () => c, U: () => d });
+n.d(t, { UU: () => d, Ay: () => c, $x: () => u });
 var i = n(17928),
     r = n(245179),
     a = n(874421),
@@ -50,4 +50,7 @@ function d(e) {
 }
 function c() {
     return d(() => l.Ay.getOwnedProjects());
+}
+function u() {
+    return d(() => l.Ay.getSharedWithMeProjects());
 }

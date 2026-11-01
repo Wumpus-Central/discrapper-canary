@@ -57,6 +57,9 @@ class O extends i.Ay.Store {
         for (let n of u.values()) l(n) || n.guild_id !== e || t.push(n);
         return t;
     }
+    getSharedWithMeProjects() {
+        return Array.from(u.values()).filter((e) => !l(e) && o(e));
+    }
     getIntegrationStatus(e) {
         return _.get(e) ?? null;
     }

@@ -1,8 +1,8 @@
 n.d(t, { A: () => x });
 var s = n(477900);
 n(582128);
-var r = n(152367),
-    l = n(661531),
+var l = n(152367),
+    r = n(661531),
     a = n(866665),
     i = n(939249),
     c = n(834730),
@@ -13,12 +13,12 @@ var r = n(152367),
     f = n(105292),
     h = n(631417);
 function x(e) {
-    let { title: t, actions: n, breadcrumb: x, project: g, onOpenProjectSettings: p, transparent: j = !1 } = e,
-        v = f.intl.string(m.default.FzfmQ8),
-        N = (0, u.A)(g ?? null);
+    let { title: t, actions: n, breadcrumb: x, project: g, onOpenProjectSettings: p, transparent: v = !1 } = e,
+        j = f.intl.string(m.default.FzfmQ8),
+        N = (0, u.Ay)(g ?? null);
     return (0, s.jsx)(o.A, {
         hideSearch: !0,
-        transparent: j,
+        transparent: v,
         toolbar: n,
         className: h.wx,
         "aria-label": t,
@@ -26,11 +26,11 @@ function x(e) {
             className: h.QF,
             children: [
                 null == g
-                    ? (0, s.jsx)(r.D, {
+                    ? (0, s.jsx)(l.D, {
                           size: "custom",
                           width: 20,
                           height: 20,
-                          color: l.A.colors.ICON_STRONG,
+                          color: r.A.colors.ICON_STRONG,
                           className: h.Kk,
                       })
                     : null,
@@ -45,12 +45,12 @@ function x(e) {
                 null != g && null != p
                     ? (0, s.jsx)(a.m, {
                           asContainer: !0,
-                          text: v,
+                          text: j,
                           position: "bottom",
                           children: (0, s.jsx)(i.D, {
                               className: h.FF,
                               onClick: p,
-                              "aria-label": v,
+                              "aria-label": j,
                               children: (0, s.jsx)(d.A, { project: g, size: "header" }),
                           }),
                       })

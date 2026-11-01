@@ -1,4 +1,4 @@
-n.d(t, { A: () => o, V: () => s });
+n.d(t, { Ay: () => o, V: () => s, ns: () => u });
 var l = n(17928),
     a = n(71393),
     r = n(809526),
@@ -13,6 +13,9 @@ function s(e) {
           : null != n
             ? { kind: "guild", label: n.name, guild: n }
             : null;
+}
+function u(e) {
+    return null == e.guild_id && "user" !== e.install_scope && null == e.install_scope_setup;
 }
 function o(e) {
     return s(e)?.label ?? null;
