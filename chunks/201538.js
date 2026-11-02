@@ -64,7 +64,7 @@ class A {
     async fetchCatalog() {
         let e = await l.Bo.get({
                 url: _.Rsh.CLIPS_MODULE_ASSETS,
-                query: { model_set_version: "2" },
+                query: { model_set_version: "3" },
                 rejectWithError: !0,
             }),
             t = { assets: {} };
