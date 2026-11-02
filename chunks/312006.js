@@ -15,7 +15,7 @@ var i = n(435558),
     f = n(418208);
 let I = {},
     p = { speaker: !1, moderator: !1 };
-function T(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == I[t] && (I[t] = {});
     let i = (function (e, t) {
@@ -41,7 +41,7 @@ function T(e, t) {
     })(e, t, n);
     return ((I[t][e] = i), i);
 }
-function m(e) {
+function T(e) {
     let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
     for (let e of t) delete I[e.id];
     return t.length > 0;
@@ -83,9 +83,9 @@ class N extends a.Ay.Store {
         if (null == e || null == t || (e === u.default.getCurrentUser()?.id && (0, f.o$)())) return p;
         let i = I[t]?.[e];
         if (null != i)
-            if (n && null == i.moderator) return T(e, t, !0);
+            if (n && null == i.moderator) return m(e, t, !0);
             else return i;
-        return T(e, t, n);
+        return m(e, t, n);
     }
 }
 let C = new N(s.h, {
@@ -100,10 +100,10 @@ let C = new N(s.h, {
     GUILD_MEMBER_UPDATE: g,
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t } = e;
-        m(t);
+        T(t);
     },
     PASSIVE_UPDATE_V2: function (e) {
-        return m(e.guildId);
+        return T(e.guildId);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;

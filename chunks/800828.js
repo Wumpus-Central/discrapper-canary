@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(321073));
+(n.d(t, { A: () => T }), n(321073));
 var i = n(17928),
     r = n(713402),
     a = n(73153),
@@ -41,7 +41,7 @@ function I(e) {
 function p(e, t) {
     _.delete(o(e, t));
 }
-class T extends i.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "GameRelationshipStore";
     initialize() {
         this.waitFor(s.A);
@@ -80,7 +80,7 @@ class T extends i.Ay.Store {
         return _.version;
     }
 }
-let m = new T(a.h, {
+let T = new m(a.h, {
     CONNECTION_OPEN: function (e) {
         (_.clear(),
             e.gameRelationships.forEach((e) => {

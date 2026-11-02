@@ -33,8 +33,8 @@ let f = (0, n(945810).mj)({
 });
 var I = n(999291),
     p = n(518477),
-    T = n(652215),
-    m = n(818348);
+    m = n(652215),
+    T = n(818348);
 function g(e) {
     let { user: t, userProfile: n, guildMember: i, guildMemberProfile: r } = e,
         a = n ?? r,
@@ -58,7 +58,7 @@ function g(e) {
 function S(e) {
     let t = c.A.getStatus(e),
         n = c.A.isMobileOnline(e);
-    return t === m.cl.ONLINE && n ? `${t}-mobile` : t === m.cl.ONLINE ? `${t}-desktop` : t;
+    return t === T.cl.ONLINE && n ? `${t}-mobile` : t === T.cl.ONLINE ? `${t}-desktop` : t;
 }
 function N(e) {
     let { layout: t, userId: n, guildId: i, sessionId: r, sourceSessionId: a, showGuildProfile: s = !0 } = e,
@@ -130,7 +130,7 @@ function R(e) {
         section: d,
         applicationId: c,
     } = e;
-    E.default.track(T.HAw.USER_PROFILE_ACTION, {
+    E.default.track(m.HAw.USER_PROFILE_ACTION, {
         ...(0, r.H$)(t),
         ...(0, r.Ou)(n),
         ...N(e),
@@ -166,7 +166,7 @@ function L(e) {
     (o ?? 0) <= 0 ||
         (d ?? 0) <= 0 ||
         (c ?? 0) <= 0 ||
-        E.default.track(T.HAw.USER_PROFILE_UI_VIEWED, {
+        E.default.track(m.HAw.USER_PROFILE_UI_VIEWED, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(n),
             ...N(e),
@@ -194,7 +194,7 @@ function y(e) {
         outbox: _,
         voiceChannelId: A,
     } = e;
-    E.default.track(T.HAw.USER_PROFILE_ACTIVITY_ACTION, {
+    E.default.track(m.HAw.USER_PROFILE_ACTIVITY_ACTION, {
         ...(0, r.H$)(n),
         ...(0, r.Ou)(a),
         ...N(e),
@@ -228,7 +228,7 @@ function y(e) {
 function D(e) {
     let { guildId: t, channelId: n, analyticsLocations: i, badgeId: s, badgeAction: l, position: o, userId: d } = e,
         c = null != s && null != d ? a.Ay.getBadgeById(s, d)?.current_tier : void 0;
-    E.default.track(T.HAw.USER_PROFILE_BADGE_ACTION, {
+    E.default.track(m.HAw.USER_PROFILE_BADGE_ACTION, {
         ...(0, r.H$)(t),
         ...(0, r.Ou)(n),
         ...N(e),
@@ -250,7 +250,7 @@ function v(e) {
                       return null != o.A.getAnyStreamForUser(r) ? t === i.$.PLAYING : t !== i.$.CUSTOM_STATUS;
                   })
                 : null;
-    E.default.track(T.HAw.DM_PROFILE_TOGGLED, {
+    E.default.track(m.HAw.DM_PROFILE_TOGGLED, {
         ...N({ userId: r }),
         is_profile_open: n,
         has_images: !!(a?.assets?.large_image ?? a?.assets?.small_image),
@@ -274,7 +274,7 @@ function b(e) {
         applicationId: c,
     } = e;
     (R({ ...e, action: a }),
-        E.default.track(T.HAw.USER_PROFILE_EDIT_ACTION, {
+        E.default.track(m.HAw.USER_PROFILE_EDIT_ACTION, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(n),
             ...N(e),
@@ -300,7 +300,7 @@ function P(e) {
         isWidgetRemoved: d,
     } = e;
     (R({ ...e, action: "EDIT_SAVED" }),
-        E.default.track(T.HAw.USER_PROFILE_EDIT_SAVED, {
+        E.default.track(m.HAw.USER_PROFILE_EDIT_SAVED, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(n),
             ...N(e),
@@ -315,7 +315,7 @@ function P(e) {
 function M(e) {
     let { guildId: t, channelId: n, analyticsLocations: i, action: a, wishlistId: s, skuId: l, productLines: o } = e;
     (R({ ...e, action: a }),
-        E.default.track(T.HAw.USER_PROFILE_WISHLIST_ACTION, {
+        E.default.track(m.HAw.USER_PROFILE_WISHLIST_ACTION, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(n),
             ...N(e),

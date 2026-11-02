@@ -21,8 +21,8 @@ function _(e) {
             onCancel: f,
             onClose: I,
             onCloseCallback: p,
-            bodyClassName: T,
-            transitionState: m,
+            bodyClassName: m,
+            transitionState: T,
             loading: g = !1,
             confirmButtonColor: S = o.$n.Colors.RED,
             focusCancel: N = !1,
@@ -70,7 +70,7 @@ function _(e) {
         (0, i.jsxs)(d.EO, {
             "data-migration-pending": !0,
             className: A,
-            transitionState: m,
+            transitionState: T,
             impression: C,
             parentComponent: "ConfirmModal",
             children: [
@@ -81,7 +81,7 @@ function _(e) {
                           children: (0, i.jsx)(l.D, { variant: "heading-lg/semibold", children: a }),
                       })
                     : null,
-                (0, i.jsx)(d.$m, { "data-migration-pending": !0, className: s()(u.Q, T), children: c }),
+                (0, i.jsx)(d.$m, { "data-migration-pending": !0, className: s()(u.Q, m), children: c }),
                 (0, i.jsxs)(d.jl, { "data-migration-pending": !0, children: [n, t] }),
             ],
         })

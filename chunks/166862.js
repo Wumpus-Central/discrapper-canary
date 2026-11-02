@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(73153),
     a = n(155718),
@@ -72,7 +72,7 @@ class p extends i.Ay.Store {
         return E(e).lastResponseNonce;
     }
 }
-let T = new p(r.h, {
+let m = new p(r.h, {
     CONNECTION_OPEN: A,
     LOGOUT: A,
     CHANNEL_SELECT: A,

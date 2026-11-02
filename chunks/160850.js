@@ -1,4 +1,4 @@
-(n.d(t, { tA: () => I, Ly: () => p, Q4: () => h, pn: () => m, Tv: () => T, GC: () => f, lq: () => g }), n(321073));
+(n.d(t, { tA: () => I, Ly: () => p, Q4: () => h, pn: () => T, Tv: () => m, GC: () => f, lq: () => g }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(997649),
@@ -65,7 +65,7 @@ function p(e, t, n, i) {
             if (null != a) {
                 let t = 1e3 * Math.floor(s / 1e3);
                 function o(i) {
-                    return T(
+                    return m(
                         i.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
                         e,
                         n,
@@ -79,9 +79,9 @@ function p(e, t, n, i) {
                 for (let i in t.audioModelDataPerUser) {
                     let r = t.audioModelDataPerUser[i];
                     l[i] = {
-                        laughterData: T(r.laughterData, e, n),
-                        shoutingData: T(r.shoutingData, e, n),
-                        rmsData: T(r.rmsData, e, n),
+                        laughterData: m(r.laughterData, e, n),
+                        shoutingData: m(r.shoutingData, e, n),
+                        rmsData: m(r.rmsData, e, n),
                     };
                 }
             let c = (function (e) {
@@ -95,8 +95,8 @@ function p(e, t, n, i) {
                                 e[e.length - 1].timestamp_ms > n && (n = e[e.length - 1].timestamp_ms));
                     }
                     if (t === Number.MAX_VALUE || n === -Number.MAX_VALUE) return e;
-                    r()(t % m == 0 && n % m == 0, "bad timestamps!");
-                    let i = (n - t) / m + 1,
+                    r()(t % T == 0 && n % T == 0, "bad timestamps!");
+                    let i = (n - t) / T + 1,
                         a = {};
                     for (let n in e) {
                         let r = e[n];
@@ -166,11 +166,11 @@ function p(e, t, n, i) {
                     I = (0, u.Dk)(A, h),
                     {
                         mainEventScore: p,
-                        anchors: T,
-                        events: m,
+                        anchors: m,
+                        events: T,
                     } = (0, u.aT)({ laughter: E, shouting: A }, { laughter: f, shouting: I }, s, t),
                     g = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
-                    S = (0, u.Mf)([...T, ...g], t.eventChainGapChunks),
+                    S = (0, u.Mf)([...m, ...g], t.eventChainGapChunks),
                     N = (0, u.tf)(S, f, I, s, t),
                     { laughter: C, shouting: O } = (0, u.Lj)(d, c, a, t),
                     { coOccurrenceScore: R, coContribPerChunk: L } = (0, u.k0)(C, O, t),
@@ -195,7 +195,7 @@ function p(e, t, n, i) {
                         intensityLaughter: f,
                         intensityShouting: I,
                         rmsWeighted: h,
-                        mainEvents: m,
+                        mainEvents: T,
                         reactionAnchors: S,
                         coContribPerChunk: L,
                     },
@@ -315,19 +315,19 @@ function p(e, t, n, i) {
     })(p, f, o, C?.gameAxisScoreThreshold);
     return { allClipsRanked: p, selected: P };
 }
-function T(e, t, n) {
+function m(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
-let m = 1e3;
+let T = 1e3;
 function g(e, t, n) {
     let i = [],
         a = 0;
     for (let s = 0; s < n; s++) {
-        let n = t + m * s,
+        let n = t + T * s,
             l = e[a];
         null != l && l.timestamp_ms === n
             ? (i.push({ ...l }), a++)
-            : (null != l && r()(l.timestamp_ms % m == 0, `bad timestamp! ${l.timestamp_ms}`),
+            : (null != l && r()(l.timestamp_ms % T == 0, `bad timestamp! ${l.timestamp_ms}`),
               i.push({ value: 0, timestamp_ms: n }));
     }
     return (r()(i.length === n, "bad track!"), i);

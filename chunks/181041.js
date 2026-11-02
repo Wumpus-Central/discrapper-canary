@@ -15,10 +15,10 @@ var i = n(635377),
     f = n(161204),
     I = n(575279);
 let p = new (r())({ max: 10, dispose: D }),
-    T = new Map();
-function m(e, t) {
-    let n = T.get(e);
-    return null != n && !!n.has(t) && (n.delete(t), 0 === n.size && T.delete(e), !0);
+    m = new Map();
+function T(e, t) {
+    let n = m.get(e);
+    return null != n && !!n.has(t) && (n.delete(t), 0 === n.size && m.delete(e), !0);
 }
 let g = new Map();
 function S(e, t) {
@@ -83,7 +83,7 @@ function y(e, t) {
     return ((0, h.rO)(r, t), n.messageMetadataByMessageId.delete(t));
 }
 function D(e) {
-    return T.delete(e);
+    return m.delete(e);
 }
 function v(e) {
     let t = p.has(e);
@@ -120,10 +120,10 @@ class b extends a.Ay.Store {
         return null == n ? null : "before" === t ? n.reachedOldest : n.reachedNewest;
     }
     isPendingFetch(e) {
-        return T.has(e);
+        return m.has(e);
     }
     isListFetchPending(e, t) {
-        return T.get(e)?.has(t) ?? !1;
+        return m.get(e)?.has(t) ?? !1;
     }
     getConversationColor(e, t) {
         let n = p.peek(e);
@@ -169,7 +169,7 @@ let P = new b(s.h, {
     CHANNEL_CONVERSATIONS_FETCH_START: function (e) {
         let t,
             { channelId: n, requestKey: i, isJump: r } = e;
-        (r && T.delete(n), null == (t = T.get(n)) && ((t = new Set()), T.set(n, t)), t.add(i));
+        (r && m.delete(n), null == (t = m.get(n)) && ((t = new Set()), m.set(n, t)), t.add(i));
     },
     CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let t,
@@ -183,7 +183,7 @@ let P = new b(s.h, {
                 fullyHydrated: c,
                 selectedConversationId: u,
             } = e;
-        if (!m(n, o)) return !1;
+        if (!T(n, o)) return !1;
         let _ = i.map(f.a).filter(E.Vq),
             h = p.peek(n);
         if (l) {
@@ -191,13 +191,13 @@ let P = new b(s.h, {
             t = null != e ? [e] : [];
         } else t = h?.conversations ?? [];
         let I = l ? null : (h?.reachedOldest ?? null),
-            T = l ? null : (h?.reachedNewest ?? null),
+            m = l ? null : (h?.reachedNewest ?? null),
             g = new Set(t.map((e) => e.id));
         if (
             (_.some((e) => !g.has(e.id)) ||
                 null == s ||
-                ("before" === a ? (I = Date.now()) : "after" === a && (T = Date.now())),
-            "before" === a && null == s && (T = Date.now()),
+                ("before" === a ? (I = Date.now()) : "after" === a && (m = Date.now())),
+            "before" === a && null == s && (m = Date.now()),
             (_ = (function (e, t) {
                 let n = new Map();
                 for (let t of e) n.set(t.id, t);
@@ -207,14 +207,14 @@ let P = new b(s.h, {
             })(t, _)).length > 50)
         )
             if ("after" === a) ((_ = _.slice(_.length - 50)), (I = null));
-            else if ("before" === a) ((_ = _.slice(0, 50)), (T = null));
+            else if ("before" === a) ((_ = _.slice(0, 50)), (m = null));
             else {
                 let e = (function (e, t) {
                     if (null == t) return 0;
                     let n = e.findIndex((e) => A.default.compare(e.startMessageId, t) >= 0);
                     return (-1 === n && (n = e.length), Math.max(0, Math.min(n - Math.floor(25), e.length - 50)));
                 })(_, s);
-                (e > 0 && (I = null), e + 50 < _.length && (T = null), (_ = _.slice(e, e + 50)));
+                (e > 0 && (I = null), e + 50 < _.length && (m = null), (_ = _.slice(e, e + 50)));
             }
         let S = (function (e, t, n) {
             let i = n?.guildId ?? t[0]?.guildId ?? d.A.getChannel(e)?.guild_id ?? null,
@@ -245,13 +245,13 @@ let P = new b(s.h, {
                 reachedNewest: n?.reachedNewest ?? null,
             };
         })(n, _, h);
-        for (let e of ((S.reachedOldest = I), (S.reachedNewest = T), null != h ? Object.assign(h, S) : p.set(n, S), i))
+        for (let e of ((S.reachedOldest = I), (S.reachedNewest = m), null != h ? Object.assign(h, S) : p.set(n, S), i))
             null != e.messages && N(n, e.id, e.messages, c);
         return !0;
     },
     CHANNEL_CONVERSATIONS_FETCH_FAILURE: function (e) {
         let { channelId: t, requestKey: n } = e;
-        return m(t, n);
+        return T(t, n);
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -313,6 +313,6 @@ let P = new b(s.h, {
     RELATIONSHIP_UPDATE: L,
     RELATIONSHIP_REMOVE: L,
     LOGOUT: function () {
-        (p.reset(), T.clear(), g.clear());
+        (p.reset(), m.clear(), g.clear());
     },
 });

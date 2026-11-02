@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -22,8 +22,8 @@ let _ = {
     };
 function A(e, t) {
     let { oldId: n } = t;
-    if (!T.isSampling(e)) return !1;
-    (T.stopSampling(e, n), T.startSampling(e));
+    if (!m.isSampling(e)) return !1;
+    (m.stopSampling(e, n), m.startSampling(e));
 }
 let h = { [u.oh.AUDIO_INPUT]: new s.W0(), [u.oh.AUDIO_OUTPUT]: new s.W0(), [u.oh.VIDEO_INPUT]: new s.W0() },
     f = { [u.oh.AUDIO_INPUT]: {}, [u.oh.AUDIO_OUTPUT]: {}, [u.oh.VIDEO_INPUT]: {} },
@@ -105,7 +105,7 @@ class p extends a.Ay.PersistedStore {
         );
     }
 }
-let T = new p(l.h, {
+let m = new p(l.h, {
         AUDIO_SET_INPUT_DEVICE: (e) => A(u.oh.AUDIO_INPUT, e),
         AUDIO_SET_OUTPUT_DEVICE: (e) => A(u.oh.AUDIO_OUTPUT, e),
         MEDIA_ENGINE_SET_VIDEO_DEVICE: (e) => A(u.oh.VIDEO_INPUT, e),
@@ -115,14 +115,14 @@ let T = new p(l.h, {
             let r = c.default.getCurrentUser()?.id;
             if (null == r) return !1;
             let a = n === r ? u.oh.AUDIO_INPUT : u.oh.AUDIO_OUTPUT;
-            if (i === u.ME.NONE && T.isSampling(a)) T.stopSampling(a);
+            if (i === u.ME.NONE && m.isSampling(a)) m.stopSampling(a);
             else {
-                if (i === u.ME.NONE || T.isSampling(a)) return !1;
-                T.startSampling(a);
+                if (i === u.ME.NONE || m.isSampling(a)) return !1;
+                m.startSampling(a);
             }
         },
         RTC_CONNECTION_CLIENT_CONNECT: function () {
-            T.reset();
+            m.reset();
         },
     }),
-    m = T;
+    T = m;

@@ -15,8 +15,8 @@ var i,
     f = n(817281),
     I = n(775602),
     p = n(793574),
-    T = n(688810),
-    m = n(793943),
+    m = n(688810),
+    T = n(793943),
     g = n(915089),
     S = n(87719),
     N = n(732280),
@@ -108,7 +108,7 @@ function Z(e) {
         f = null != c && null != c.colors && c.colors.length > 0,
         I = (0, d.bG)([H.A], () => H.A.getSavedCustomTheme()),
         p = f || null != I,
-        T = a.useMemo(() => {
+        m = a.useMemo(() => {
             let e, t;
             if (f) ((e = c.colors), (t = c.gradientAngle));
             else {
@@ -121,7 +121,7 @@ function Z(e) {
                 { background: `var(--background-gradient), ${n}` }
             );
         }, [f, c, I]),
-        m = p ? x.A.unsafe_rawColors.WHITE.css : void 0,
+        T = p ? x.A.unsafe_rawColors.WHITE.css : void 0,
         g = a.useCallback(() => {
             (u && _(), i?.());
         }, [u, _, i]);
@@ -138,12 +138,12 @@ function Z(e) {
                 tabIndex: 0,
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: T,
+                style: m,
                 ariaDescribedBy: o,
                 children: [
                     !E && !p && (0, r.jsx)(q, {}),
                     (0, r.jsx)("div", { className: X.JU }),
-                    (0, r.jsx)(w.PaintPaletteIcon, { color: m, className: X.vL }),
+                    (0, r.jsx)(w.PaintPaletteIcon, { color: T, className: X.vL }),
                 ],
             }),
             u && (0, r.jsx)("div", { className: X.Ad, children: (0, r.jsx)(F.E, { type: "new", variant: "primary" }) }),
@@ -243,7 +243,7 @@ function eu(e) {
 function e_(e) {
     let { disabled: t, size: i } = e,
         { type: s, delay: l } = a.useContext(el),
-        { analyticsLocations: o } = (0, T.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
+        { analyticsLocations: o } = (0, m.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
         [u, _] = (0, d.yK)([M.A], () => [M.A.isPreview, M.A.gradientPreset?.id]),
         [h, S] = a.useState(!1),
         [N, C] = a.useState(-1),
@@ -258,7 +258,7 @@ function e_(e) {
             ((0, P.bc)(e.id),
             eo({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, T.nf)(T.HP.CLIENT_THEMES), (0, v.default)())
                 : u
                   ? (0, R.GQ)(e.theme)
                   : (0, f.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
@@ -281,8 +281,8 @@ function e_(e) {
                     isDisabled: t,
                     ariaDescribedBy: b,
                     onSelect: () => {
-                        ((0, m.nf)(m.HP.CUSTOM_THEME, {
-                            from: "SETTINGS" === s ? m.xv.SETTING : m.xv.CLIENT_THEMES_EDITOR,
+                        ((0, T.nf)(T.HP.CUSTOM_THEME, {
+                            from: "SETTINGS" === s ? T.xv.SETTING : T.xv.CLIENT_THEMES_EDITOR,
                         }),
                             "SETTINGS" === s && (0, v.default)());
                     },
@@ -333,7 +333,7 @@ function e_(e) {
 function eE(e) {
     let { size: t, systemSelectorFirst: n, hideSystemSelector: i = !1 } = e,
         { type: s, delay: l } = a.useContext(el),
-        { analyticsLocations: o } = (0, T.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
+        { analyticsLocations: o } = (0, m.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
         [c, u, _] = (0, d.yK)([L.A, y.Ay, M.A], () => [
             L.A.theme,
             null == M.A.gradientPreset && null == D.eh.getSetting().customUserThemeSettings,

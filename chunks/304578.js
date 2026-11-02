@@ -29,8 +29,8 @@ var c = n(115718),
     f = n(351906),
     I = n(287809),
     p = n(768038),
-    T = n(427262),
-    m = n(268988),
+    m = n(427262),
+    T = n(268988),
     g = n(801146),
     S = n(902008),
     N = n(5990),
@@ -179,7 +179,7 @@ function W(e, t) {
                 if (e.isDM()) {
                     let t = e.getRecipientId(),
                         n = I.default.getUser(t);
-                    return null != n && r === T.Ay.getUserTag(n);
+                    return null != n && r === m.Ay.getUserTag(n);
                 }
                 return !1;
             })),
@@ -270,7 +270,7 @@ function et(e) {
                         n.isNonUserBot() ||
                         t.has(n.id) ||
                         A.A.isBlockedOrIgnored(n.id) ||
-                        (e.push({ user: n, text: T.Ay.getUserTag(n) }), t.add(n.id));
+                        (e.push({ user: n, text: m.Ay.getUserTag(n) }), t.add(n.id));
                 }
                 let r = h.Ay.getCurrentlySelectedChannelId(n.guildId);
                 return (
@@ -278,7 +278,7 @@ function et(e) {
                         let { record: t } = e;
                         return l(t);
                     }),
-                    m.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => l(I.default.getUser(e))),
+                    T.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => l(I.default.getUser(e))),
                     e.slice(0, i)
                 );
             }
@@ -334,7 +334,7 @@ function et(e) {
             })
             .map((e) => {
                 let { record: t } = e;
-                return { text: T.Ay.getUserTag(t), user: t };
+                return { text: m.Ay.getUserTag(t), user: t };
             });
     return (E && f.unshift({ text: D.ME, user: d }), f);
 }
@@ -413,7 +413,7 @@ function en(e) {
                             let e = t.getRecipientId(),
                                 n = I.default.getUser(e);
                             if (null != n) {
-                                let e = T.Ay.getUserTag(n);
+                                let e = m.Ay.getUserTag(n);
                                 a.unshift({ text: e, channel: t, key: t.id });
                             }
                         }

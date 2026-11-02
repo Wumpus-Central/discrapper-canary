@@ -1,65 +1,65 @@
-n.d(t, { Cp: () => f, Ay: () => E });
-var l = n(499979),
-    a = n(73153),
-    r = n(587895),
+n.d(t, { Cp: () => f, Ay: () => I });
+var i = n(499979),
+    r = n(73153),
+    a = n(587895),
     s = n(91242),
-    i = n(927813),
-    u = n(998979),
-    o = n(276983),
-    d = n(477900);
+    l = n(927813),
+    o = n(998979),
+    d = n(276983),
+    c = n(477900);
 n(582128);
-var c = n(192308),
-    p = n(673953),
-    m = n(165610);
-let y = new Set(),
-    S = i.A.Millis.SECOND;
+var u = n(192308),
+    _ = n(673953),
+    E = n(165610);
+let A = new Set(),
+    h = l.A.Millis.SECOND;
 function f(e, t) {
-    return (0, o.yG)(t)
-        ? { permission: t, state: u.A.getDecision(e, t) ?? "prompt" }
+    return (0, d.yG)(t)
+        ? { permission: t, state: o.A.getDecision(e, t) ?? "prompt" }
         : { permission: t, state: "unsupported" };
 }
-async function E(e) {
+async function I(e) {
     let {
         applicationId: t,
-        appName: i = r.A.getApplication(t)?.name,
-        iframeId: u,
-        modalContextKey: o,
-        permissions: E,
+        appName: l = a.A.getApplication(t)?.name,
+        iframeId: o,
+        modalContextKey: d,
+        permissions: I,
     } = e;
-    function g() {
-        return E.map((e) => f(t, e));
+    function p() {
+        return I.map((e) => f(t, e));
     }
-    async function C() {
+    async function m() {
         return (
-            g().some((e) => {
+            p().some((e) => {
                 let { state: t } = e;
                 return "granted" !== t;
-            }) && (await (0, l.yy)(S)),
-            g()
+            }) && (await (0, i.yy)(h)),
+            p()
         );
     }
-    let h = E.filter((e) => "prompt" === f(t, e).state);
+    let T = I.filter((e) => "prompt" === f(t, e).state);
     if (
-        0 === h.length ||
-        null == i ||
-        y.has(t) ||
+        0 === T.length ||
+        null == l ||
+        A.has(t) ||
         !(function (e) {
             if (null == e) return !0;
             let t = s.A.getFrameByIframeId(e);
-            return null != t && s.A.isFrameVisible(t.id) && t.data.layoutMode !== m.y0.PIP;
-        })(u)
+            return null != t && s.A.isFrameVisible(t.id) && t.data.layoutMode !== E.y0.PIP;
+        })(o)
     )
-        return C();
-    y.add(t);
+        return m();
+    A.add(t);
     try {
         let e = await ((e) => {
-            let { appName: t, iframeId: l, modalContextKey: a, permissions: r } = e,
-                s = null != l ? (0, p.C6)(l) : a;
+            let { appName: t, iframeId: i, modalContextKey: r, permissions: a } = e,
+                s = null != i ? (0, _.C6)(i) : r;
             return null === s
                 ? Promise.resolve(null)
                 : new Promise((e) => {
-                      let l = null;
-                      (0, c.openModalLazy)(
+                      let i = null;
+                      (0, u.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
                                   n.e("159244"),
@@ -68,23 +68,23 @@ async function E(e) {
                                   n.e("959310"),
                               ]).then(n.bind(n, 462365));
                               return (n) =>
-                                  (0, d.jsx)(e, {
+                                  (0, c.jsx)(e, {
                                       ...n,
                                       appName: t,
-                                      permissions: r,
+                                      permissions: a,
                                       onDecide: (e) => {
-                                          l = e;
+                                          i = e;
                                       },
                                   });
                           },
-                          { contextKey: s, dismissable: !1, onCloseCallback: () => e(l) },
+                          { contextKey: s, dismissable: !1, onCloseCallback: () => e(i) },
                       ).catch(() => e(null));
                   });
-        })({ appName: i, iframeId: u, modalContextKey: o, permissions: h });
+        })({ appName: l, iframeId: o, modalContextKey: d, permissions: T });
         null != e &&
-            a.h.dispatch({ type: "CONJURE_DEVICE_PERMISSIONS_DECIDE", applicationId: t, permissions: h, allowed: e });
+            r.h.dispatch({ type: "CONJURE_DEVICE_PERMISSIONS_DECIDE", applicationId: t, permissions: T, allowed: e });
     } finally {
-        y.delete(t);
+        A.delete(t);
     }
-    return g();
+    return p();
 }

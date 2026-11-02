@@ -15,8 +15,8 @@ var i = n(17928),
     f = n(811315),
     I = n.n(f),
     p = n(229527),
-    T = n(316031),
-    m = n(859126);
+    m = n(316031),
+    T = n(859126);
 function g() {
     return {
         query: "",
@@ -78,7 +78,7 @@ class C {
                 (t.length > 0 &&
                     !(function (e, t) {
                         if ("" === t.trim()) return !1;
-                        let [n, i] = (0, m.H)(t);
+                        let [n, i] = (0, T.H)(t);
                         for (let t of i) if (e.userId === t) return !0;
                         for (let t of n) if (N(e.nick, t)) return !0;
                         if (null == e.user) return !1;
@@ -98,7 +98,7 @@ class C {
             ((!n && !i && !r && !a) ||
                 !!(
                     (n && e.hasUnusualDmActivity) ||
-                    (i && (0, T.Z)(e)) ||
+                    (i && (0, m.Z)(e)) ||
                     (r && e.hasUnusualAccountActivity) ||
                     (a && (0, p.TR)(e))
                 ))

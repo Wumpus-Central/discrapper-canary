@@ -20,8 +20,8 @@ let h = A(o.Fit),
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073));
 var I = n(51906),
     p = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
-let T = new Map();
-function m(e) {
+let m = new Map();
+function T(e) {
     e.listeners.forEach((e) => e());
 }
 function g(e, t) {
@@ -31,7 +31,7 @@ function g(e, t) {
             return (
                 (n = e),
                 void (((i = t).removalTimer = null),
-                i.consumers > 0 || T.get(n) !== i || (T.delete(n), i.riveFile.cleanup()))
+                i.consumers > 0 || m.get(n) !== i || (m.delete(n), i.riveFile.cleanup()))
             );
         }, 3e4)));
 }
@@ -56,18 +56,18 @@ function O(e) {
             return (a.useLayoutEffect(() => {
                 if (null == e) return;
                 let t = (function (e) {
-                    let t = T.get(e);
+                    let t = m.get(e);
                     if (null != t) return t;
                     let n = new o.RiveFile({ buffer: e }),
                         i = { riveFile: n, status: "loading", consumers: 0, removalTimer: null, listeners: new Set() };
                     return (
                         n.on(o.EventType.Load, () => {
-                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && g(e, i), m(i));
+                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && g(e, i), T(i));
                         }),
                         n.on(o.EventType.LoadError, () => {
-                            ((i.status = "error"), T.get(e) === i && T.delete(e), m(i));
+                            ((i.status = "error"), m.get(e) === i && m.delete(e), T(i));
                         }),
-                        T.set(e, i),
+                        m.set(e, i),
                         (0, I.yO)(n.init()),
                         i
                     );
@@ -115,8 +115,8 @@ function R(e) {
             style: A,
             eventTargetRef: I,
             artboard: p,
-            withReducedMotion: T = "halt",
-            ref: m,
+            withReducedMotion: m = "halt",
+            ref: T,
             artboardProperties: g,
             dataBinding: S,
             onDataBindingChange: N,
@@ -163,7 +163,7 @@ function R(e) {
             { ...(t ? { shouldUseIntersectionObserver: !1 } : {}) },
         );
     (a.useImperativeHandle(
-        m,
+        T,
         () => ({
             play: () => j?.play(),
             pause: () => j?.pause(),
@@ -251,7 +251,7 @@ function R(e) {
                             return ((t.current[e] = a), a);
                         }
                     }, [])),
-                T = a.useCallback((e, t) => {
+                m = a.useCallback((e, t) => {
                     let n = e?.[t];
                     return null == n ? null : "object" == typeof n && "value" in n ? n.value : n;
                 }, []);
@@ -321,7 +321,7 @@ function R(e) {
                                     break;
                                 case "trigger":
                                     let u = null != o && ("boolean" == typeof o ? o : 0 !== o),
-                                        _ = T(I.current, r);
+                                        _ = m(I.current, r);
                                     (u && _ !== o && n.viewModelInstance?.trigger(r)?.trigger(), (I.current[r] = o));
                                     break;
                                 case "string":
@@ -329,8 +329,8 @@ function R(e) {
                                     null != E && (E.value = o);
                                     break;
                                 case "enum":
-                                    let m = n.viewModelInstance?.enum(r);
-                                    null != m && "string" == typeof o && (m.value = o);
+                                    let T = n.viewModelInstance?.enum(r);
+                                    null != T && "string" == typeof o && (T.value = o);
                                     break;
                                 case "image":
                                     if (null != o) {
@@ -363,7 +363,7 @@ function R(e) {
                             e.abort("New data binding applied - aborting previous image fetches.");
                         }
                     );
-                }, [T, _, n, i, r, A, n?.viewModelInstance, h, f, p]));
+                }, [m, _, n, i, r, A, n?.viewModelInstance, h, f, p]));
         })({
             rive: j,
             artboard: p,
@@ -373,7 +373,7 @@ function R(e) {
             onDataBindingChange: N,
         }),
         a.useEffect(() => {
-            if (null != j && "short-loop" === T && P.reducedMotion.enabled) {
+            if (null != j && "short-loop" === m && P.reducedMotion.enabled) {
                 function e() {
                     null != j &&
                         j.isPlaying &&
@@ -393,7 +393,7 @@ function R(e) {
                     }
                 );
             }
-        }, [j, T, P.reducedMotion.enabled]),
+        }, [j, m, P.reducedMotion.enabled]),
         a.useLayoutEffect(() => {
             if (null != j) {
                 "layout" === _ && j.resizeDrawingSurfaceToCanvas();
@@ -433,7 +433,7 @@ function R(e) {
                     "number" == typeof t.data &&
                     ((Y.current = t.data),
                     t.data > 0 &&
-                        ("halt" === T && P.reducedMotion.enabled && j.isPlaying && j.pause(),
+                        ("halt" === m && P.reducedMotion.enabled && j.isPlaying && j.pause(),
                         j.off(o.EventType.Advance, e)));
             };
             return (
@@ -443,7 +443,7 @@ function R(e) {
                     j.off(o.EventType.Advance, e);
                 }
             );
-        }, [j, P.reducedMotion.enabled, T, s]),
+        }, [j, P.reducedMotion.enabled, m, s]),
         a.useEffect(() => {
             G();
         }, [G, p, _, E, S, O, g]),

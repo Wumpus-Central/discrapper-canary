@@ -28,10 +28,10 @@ function I(e, t, n) {
 function p(e) {
     return null == e ? f() : I(e, h(e), A(e));
 }
-function T() {
+function m() {
     return p(d.A.getGuildId());
 }
-function m(e) {
+function T(e) {
     if (_?.guildId !== e) return !1;
     let t = d.A.getGuildId();
     return t !== e && p(t);
@@ -50,20 +50,20 @@ class S extends a.Ay.Store {
     }
 }
 let N = new S(s.h, {
-    CACHE_LOADED: T,
-    CACHE_LOADED_LAZY: T,
+    CACHE_LOADED: m,
+    CACHE_LOADED_LAZY: m,
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
         return null == t ? f() : t !== _?.guildId && p(t);
     },
-    CONNECTION_OPEN: T,
+    CONNECTION_OPEN: m,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        return m(t.id);
+        return T(t.id);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t } = e;
-        return m(t);
+        return T(t);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
@@ -97,7 +97,7 @@ let N = new S(s.h, {
     },
     GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: g,
     GUILD_THEME_PREVIEW_SAVE_SUCCESS: g,
-    OVERLAY_INITIALIZE: T,
+    OVERLAY_INITIALIZE: m,
     LOGOUT: function () {
         let e = null != E;
         return ((E = null), f() || e);

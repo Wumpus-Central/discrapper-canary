@@ -6,7 +6,7 @@ n.d(t, {
     K5: () => D,
     Mu: () => f,
     NewMemberActionTypes: () => p,
-    RR: () => m,
+    RR: () => T,
     Rc: () => y,
     SM: () => A,
     Xu: () => g,
@@ -16,7 +16,7 @@ n.d(t, {
     dl: () => c,
     jJ: () => O,
     kh: () => _,
-    kk: () => T,
+    kk: () => m,
     oW: () => h,
     oc: () => u,
     xr: () => N,
@@ -37,7 +37,7 @@ let d = 7,
     f = 200,
     I = 7;
 var p = (((i = {})[(i.VIEW = 0)] = "VIEW"), (i[(i.CHAT = 1)] = "CHAT"), i);
-function T(e) {
+function m(e) {
     return {
         channelId: e.channel_id,
         actionType: e.action_type,
@@ -47,7 +47,7 @@ function T(e) {
         icon: e.icon ?? null,
     };
 }
-function m(e) {
+function T(e) {
     return {
         channelId: e.channel_id,
         title: e.title,
@@ -62,8 +62,8 @@ function g(e) {
         l = { authorIds: t.author_ids, message: t.message };
     return {
         welcomeMessage: l,
-        newMemberActions: n.filter((e) => (0, s.Vq)(a.A.getChannel(e.channel_id))).map(T),
-        resourceChannels: i.filter((e) => (0, s.Vq)(a.A.getChannel(e.channel_id))).map(m),
+        newMemberActions: n.filter((e) => (0, s.Vq)(a.A.getChannel(e.channel_id))).map(m),
+        resourceChannels: i.filter((e) => (0, s.Vq)(a.A.getChannel(e.channel_id))).map(T),
         enabled: r,
     };
 }

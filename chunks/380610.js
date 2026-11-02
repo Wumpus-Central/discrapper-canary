@@ -1,7 +1,7 @@
 (n.d(t, {
     DI: () => h,
     bD: () => _,
-    h4: () => T,
+    h4: () => m,
     hl: () => c,
     i_: () => u,
     k9: () => E,
@@ -34,7 +34,7 @@ function _() {
           ));
 }
 function E(e) {
-    if (T(e))
+    if (m(e))
         return Promise.resolve(
             (function (e) {
                 let t = e.match(p);
@@ -76,10 +76,10 @@ function I(e) {
     return null != e && f.test(e);
 }
 let p = RegExp("^dev://branch/([\\w-./]+)$", "i");
-function T(e) {
+function m(e) {
     return null != e && p.test(e);
 }
-let m = new Set([
+let T = new Set([
         "canary.discord.com",
         "ptb.discord.com",
         "discord.com",
@@ -89,9 +89,9 @@ let m = new Set([
     ]),
     g = new Set(["/__development/link", "/__development/link/"]);
 function S(e) {
-    if (T(e)) return { payload: null, url: e };
+    if (m(e)) return { payload: null, url: e };
     let t = l.A.safeParseWithQuery(e);
-    if (null == t || !m.has(t.hostname) || !("s" in t.query) || !g.has(t.pathname)) return null;
+    if (null == t || !T.has(t.hostname) || !("s" in t.query) || !g.has(t.pathname)) return null;
     for (let e in t.query) "s" !== e && delete t.query[e];
     return { payload: t.query.s, url: r.format(t) };
 }

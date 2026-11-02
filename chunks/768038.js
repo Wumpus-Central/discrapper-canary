@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { Ay: () => ey, zy: () => eh, XA: () => ef, L3: () => em, X3: () => eT }), n(321073), n(667532));
+(n.d(t, { Ay: () => ey, zy: () => eh, XA: () => ef, L3: () => eT, X3: () => em }), n(321073), n(667532));
 var r = n(91871),
     a = n.n(r),
     s = n(435558),
@@ -31,8 +31,8 @@ function h(e, t) {
 var f = n(626584),
     I = n(236285),
     p = n(202776),
-    T = n(473529),
-    m = n(69945),
+    m = n(473529),
+    T = n(69945),
     g = n(796774),
     S = n(209932),
     N = n(147472),
@@ -163,10 +163,10 @@ class eI {
     }
 }
 let ep = new eI();
-function eT(e) {
+function em(e) {
     return ep.get(e);
 }
-let em = [G.I6, G.vM, E.rbe.GUILD_CATEGORY];
+let eT = [G.I6, G.vM, E.rbe.GUILD_CATEGORY];
 function eg(e, t) {
     let { exactQuery: n, containQuery: i, queryLower: r } = t,
         s = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -423,8 +423,8 @@ let eL = (0, z.L_)((e, t, n) => {
                     allowEmptyQueries: f = !1,
                     requireVocalConnectAccess: I = !0,
                     boosters: p = {},
-                    allowSnowflake: T,
-                    includeAllThreads: m,
+                    allowSnowflake: m,
+                    includeAllThreads: T,
                 } = e,
                 g = (function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -456,7 +456,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 null != s
                     ? l()(G.Ay.getChannels(s)[h])
                           .map((e) => e.channel)
-                          .concat(S ? (m ? _.A.getAllThreadsForGuild(s) : y.A.computeAllActiveJoinedThreads(s)) : [])
+                          .concat(S ? (T ? _.A.getAllThreadsForGuild(s) : y.A.computeAllActiveJoinedThreads(s)) : [])
                           .value()
                     : l()(_.A.loadAllGuildAndPrivateChannelsFromDisk())
                           .values()
@@ -480,7 +480,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     continue;
                 let r = [...g],
                     l = (0, u.m1)(e, K.default, j.A).toLocaleLowerCase(),
-                    o = T && a === e.id,
+                    o = m && a === e.id,
                     c = o ? 10 : eO(l, r, d);
                 if (0 !== c) {
                     if (r.length > 0) {
@@ -740,10 +740,10 @@ let eL = (0, z.L_)((e, t, n) => {
                           };
                       })
                     : [],
-                T = p.length,
-                m = t.toLowerCase(),
+                m = p.length,
+                T = t.toLowerCase(),
                 g = [];
-            if (T < h && d) {
+            if (m < h && d) {
                 let e = n.getGuildId(),
                     r = F.A.getGuild(e);
                 if (null != r) {
@@ -752,27 +752,27 @@ let eL = (0, z.L_)((e, t, n) => {
                             let { mentionable: n, name: r, id: s } = t;
                             return (
                                 (n || i || _) &&
-                                (a()(m, r.toLowerCase()) || (I && m === s)) &&
+                                (a()(T, r.toLowerCase()) || (I && T === s)) &&
                                 s !== ee.default.castGuildIdAsEveryoneGuildRoleId(e)
                             );
                         })
                         .value();
-                    ((g = (0, o.Ht)(n, t, { keys: ["name"] }).slice(0, h - T)), (T += g.length));
+                    ((g = (0, o.Ht)(n, t, { keys: ["name"] }).slice(0, h - m)), (m += g.length));
                 }
             }
             let S = [];
             function N(e) {
                 !c ||
                     null == e ||
-                    ((((T < h || 0 === m.length) && a()(m, e.test)) || m === e.test) &&
-                        (T >= h && (g.length > 0 ? g.pop() : p.length > 0 && p.pop()), S.push(e), (T += 1)));
+                    ((((m < h || 0 === T.length) && a()(T, e.test)) || T === e.test) &&
+                        (m >= h && (g.length > 0 ? g.pop() : p.length > 0 && p.pop()), S.push(e), (m += 1)));
             }
             return (
                 !n.isPrivate() &&
                     i &&
                     d &&
-                    (T < h && a()(m, ec().test) && (S.push(ec()), (T += 1)),
-                    r && T < h && a()(m, eu().test) && (S.push(eu()), (T += 1))),
+                    (m < h && a()(T, ec().test) && (S.push(ec()), (m += 1)),
+                    r && m < h && a()(T, eu().test) && (S.push(eu()), (m += 1))),
                 v.BQ.getSetting() && N(e_?.()),
                 N(eE?.()),
                 { users: p, globals: S, roles: g }
@@ -842,7 +842,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     containQuery: RegExp(J.A.escape(i), "i"),
                     queryLower: i,
                 },
-                a = (0, T.K)(n.id) && !n.features.has(E.GuildFeatures.HUB),
+                a = (0, m.K)(n.id) && !n.features.has(E.GuildFeatures.HUB),
                 s = n.features.has(E.GuildFeatures.COMMUNITY),
                 l = (0, p.u)(n) && n.features.has(E.GuildFeatures.COMMUNITY),
                 o = [
@@ -880,7 +880,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 return ((null == i || i.includes(n.type)) && e.push(n), { channels: e });
             }
             let s = [];
-            for (let e of em)
+            for (let e of eT)
                 s = s.concat(
                     this.queryChannels({
                         query: t,
@@ -994,7 +994,7 @@ let eL = (0, z.L_)((e, t, n) => {
             let i = Array.from(S.A.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {
-                        (0, m.A)(n, t?.guild_id, t?.id) && e.push(n);
+                        (0, T.A)(n, t?.guild_id, t?.id) && e.push(n);
                     }),
                     e
                 ),

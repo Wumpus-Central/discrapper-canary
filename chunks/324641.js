@@ -75,9 +75,9 @@ function I(e, t) {
     return !1;
 }
 var p = n(731854);
-let T = new r.Vy("ConjureNativeCapture");
-function m(e, t) {
-    return (T.verbose(`native capture not used: ${e}`, t ?? {}), null);
+let m = new r.Vy("ConjureNativeCapture");
+function T(e, t) {
+    return (m.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }
 function g() {
     return window.DiscordNative?.activityCapture ?? null;
@@ -96,9 +96,9 @@ function S(e) {
 async function N(e, t) {
     let n = window.DiscordNative,
         r = await n?.window?.getMediaSourceId?.();
-    if (null == r) return m("no media source id for our own window");
+    if (null == r) return T("no media source id for our own window");
     let a = r.split(":")[1];
-    if (null == a || "" === a) return m("unrecognized media source id", { sourceId: r });
+    if (null == a || "" === a) return T("unrecognized media source id", { sourceId: r });
     let o = Math.min(
             window.devicePixelRatio,
             1,
@@ -119,7 +119,7 @@ async function N(e, t) {
             thumbnailSize: { width: d, height: c },
         }),
         E = _?.find((e) => e.id.split(":")[1] === a);
-    return null == E || "" === E.url ? m("own window missing from capture sources") : E.url;
+    return null == E || "" === E.url ? T("own window missing from capture sources") : E.url;
 }
 async function C() {
     let e = document.createElement("div");
@@ -134,11 +134,11 @@ async function C() {
 async function O(e, t, n, i) {
     let r = new Image();
     if (((r.decoding = "async"), (r.src = e), await r.decode(), 0 === r.naturalWidth || 0 === r.naturalHeight))
-        return m("window still decoded empty");
+        return T("window still decoded empty");
     let a = r.naturalWidth / window.outerWidth,
         s = r.naturalHeight / window.outerHeight;
     if (a <= 0 || s <= 0 || Math.abs(a - s) > 0.03 * a)
-        return m("window still does not match the window geometry", {
+        return T("window still does not match the window geometry", {
             image: { width: r.naturalWidth, height: r.naturalHeight },
             window: { width: window.outerWidth, height: window.outerHeight },
         });
@@ -162,28 +162,28 @@ async function O(e, t, n, i) {
                     return { x: t, y: r };
         return null;
     })(r, n, a, s);
-    if (null == l) return m("document not found inside the window still", { inset: n });
+    if (null == l) return T("document not found inside the window still", { inset: n });
     let o = Math.max(0, Math.floor((l.x + t.left) * a)),
         d = Math.max(0, Math.floor((l.y + t.top) * s)),
         c = Math.min(r.naturalWidth - o, Math.round(t.width * a)),
         u = Math.min(r.naturalHeight - d, Math.round(t.height * s));
-    if (c < 1 || u < 1) return m("crop resolved empty");
+    if (c < 1 || u < 1) return T("crop resolved empty");
     let _ = Math.min(1, 1568 / Math.max(c, u), Math.sqrt(115e4 / (c * u))),
         E = Math.max(1, Math.round(c * _)),
         A = Math.max(1, Math.round(u * _)),
         h = document.createElement("canvas");
     ((h.width = E), (h.height = A));
     let f = h.getContext("2d");
-    if (null == f) return m("no 2d context");
+    if (null == f) return T("no 2d context");
     f.drawImage(r, o, d, c, u, 0, 0, E, A);
     let I = `image/${i?.format ?? "webp"}`,
         p = Math.min(1, Math.max(0, (i?.quality ?? 92) / 100)),
-        T = await new Promise((e) => h.toBlob(e, I, p));
-    return null == T || T.type !== I
-        ? m("encode failed", { type: I })
-        : T.size > 5242880
-          ? m("encoded capture too large", { bytes: T.size })
-          : { blob: T, scale: (E / t.width + A / t.height) / 2 };
+        m = await new Promise((e) => h.toBlob(e, I, p));
+    return null == m || m.type !== I
+        ? T("encode failed", { type: I })
+        : m.size > 5242880
+          ? T("encoded capture too large", { bytes: m.size })
+          : { blob: m, scale: (E / t.width + A / t.height) / 2 };
 }
 function R(e) {
     return e.resolveUploadUrl().catch(() => null);
@@ -248,7 +248,7 @@ async function M(e, t, n) {
         ((a[`${e}Ms`] = Math.round(t - r)), (r = t));
     }
     function l(e, t) {
-        return m(e, { ...t, ...a, totalMs: Math.round(performance.now() - i) });
+        return T(e, { ...t, ...a, totalMs: Math.round(performance.now() - i) });
     }
     try {
         let o,
@@ -294,7 +294,7 @@ async function M(e, t, n) {
         if ((s("upload"), !f.ok)) return l("upload refused", { status: f.status });
         let I = Math.round(performance.now() - i);
         return (
-            T.verbose(`native capture uploaded in ${I}ms`, {
+            m.verbose(`native capture uploaded in ${I}ms`, {
                 id: t.captureId,
                 bytes: h.size,
                 width: d.width,
@@ -310,17 +310,17 @@ async function M(e, t, n) {
 }
 let U = 0;
 async function w(e) {
-    if (null == g()) return m("frame surface capture unavailable");
+    if (null == g()) return T("frame surface capture unavailable");
     let t = (0, c.B0)(e);
-    if (null == t) return m("frame identity unknown");
+    if (null == t) return T("frame identity unknown");
     let n = `capture-prepare-sketch-${++U}`;
     try {
         let i = await y(e, n, void 0);
-        if ("ready" !== i.phase) return m("frame refused", { code: i.code, error: i.error });
+        if ("ready" !== i.phase) return T("frame refused", { code: i.code, error: i.error });
         let r = await b(t, i, void 0);
         return new Blob([r.data], { type: r.mimeType });
     } catch (e) {
-        return m("frame surface capture failed", { err: e });
+        return T("frame surface capture failed", { err: e });
     } finally {
         D(e, n);
     }
@@ -328,11 +328,11 @@ async function w(e) {
 async function G(e, t) {
     let n,
         { skipWindowPreview: i = !1, onStill: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if (null == window.DiscordNative) return m("not the desktop app");
-    if ("visible" !== document.visibilityState) return m("window not visible");
+    if (null == window.DiscordNative) return T("not the desktop app");
+    if ("visible" !== document.visibilityState) return T("window not visible");
     let a = S(e);
-    if (null == a) return m("frame not fully on screen");
-    if (I(e, a)) return m("frame is covered by Discord UI");
+    if (null == a) return T("frame not fully on screen");
+    if (I(e, a)) return T("frame is covered by Discord UI");
     let s = {
             x: Math.max(0, window.outerWidth - window.innerWidth),
             y: Math.max(0, window.outerHeight - window.innerHeight),
@@ -352,8 +352,8 @@ async function G(e, t) {
         Math.abs(o.width - a.width) > 1 ||
         Math.abs(o.height - a.height) > 1
     )
-        return m("frame moved or resized during capture");
-    if (I(e, o)) return m("Discord UI covered the frame during capture");
+        return T("frame moved or resized during capture");
+    if (I(e, o)) return T("Discord UI covered the frame during capture");
     let d = await O(n, a, s, t);
     return null == d ? null : { ...d, rect: a };
 }
@@ -371,13 +371,13 @@ async function k(e, t) {
         let n = await G(e, void 0, { skipWindowPreview: !0, onStill: t });
         return n?.blob ?? null;
     } catch (e) {
-        return m("threw", { err: e });
+        return T("threw", { err: e });
     }
 }
 async function F(e, t) {
     try {
         var n, i, r;
-        if (null == window.DiscordNative) return m("not the desktop app");
+        if (null == window.DiscordNative) return T("not the desktop app");
         if (
             ((n = t.spec),
             null != n &&
@@ -390,13 +390,13 @@ async function F(e, t) {
                               ? "rect"
                               : "viewport")))
         )
-            return m("targeted capture needs the frame DOM", { spec: t.spec });
+            return T("targeted capture needs the frame DOM", { spec: t.spec });
         let a = R(t),
             s = await G(e, t.spec);
         if (null == s) return null;
         let { rect: l } = s,
             o = await a;
-        if (null == o) return m("no upload url");
+        if (null == o) return T("no upload url");
         let d = {
                 mode: "viewport",
                 bounds: { x: 0, y: 0, width: Math.round(l.width), height: Math.round(l.height) },
@@ -408,18 +408,18 @@ async function F(e, t) {
                 source: "native",
             },
             c = await L(o, t, s.blob, encodeURIComponent(JSON.stringify(d)));
-        if (!c.ok) return m("upload refused", { status: c.status });
+        if (!c.ok) return T("upload refused", { status: c.status });
         return (
-            T.verbose("native capture uploaded", { id: t.captureId, bytes: s.blob.size, scale: d.scale }),
+            m.verbose("native capture uploaded", { id: t.captureId, bytes: s.blob.size, scale: d.scale }),
             { status: "accepted" }
         );
     } catch (e) {
-        return m("threw", { err: e });
+        return T("threw", { err: e });
     }
 }
 async function B(e, t) {
     let n = (0, c.B0)(e);
-    if ((null == n && m("frame identity unknown"), null != g() && null != n)) {
+    if ((null == n && T("frame identity unknown"), null != g() && null != n)) {
         let i = await M(e, t, (e) => b(n, e, t.spec));
         if (null != i) return i;
     }
@@ -427,5 +427,5 @@ async function B(e, t) {
         let n = await M(e, t, (n) => P(e, n, t.spec));
         if (null != n) return n;
     }
-    return e.ownerDocument !== document ? m("frame in another window") : F(e, t);
+    return e.ownerDocument !== document ? T("frame in another window") : F(e, t);
 }

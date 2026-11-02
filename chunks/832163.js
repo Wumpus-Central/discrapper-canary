@@ -15,8 +15,8 @@ let o = {},
     f = {},
     I = {},
     p = {},
-    T = new Set(),
-    m = { state: "idle" },
+    m = new Set(),
+    T = { state: "idle" },
     g = new Set(),
     S = {},
     N = {},
@@ -77,7 +77,7 @@ class b extends r.Ay.Store {
         return f[e];
     }
     getConfig() {
-        return "success" === m.state ? m.config : null;
+        return "success" === T.state ? T.config : null;
     }
     getConfigForApplicationId(e) {
         return O[e];
@@ -95,7 +95,7 @@ class b extends r.Ay.Store {
         if (null != e) return S[e] ?? d[e]?.storefront?.applicationId;
     }
     getConfigFetchState() {
-        return m;
+        return T;
     }
     getStorefrontApplicationIds() {
         return g;
@@ -130,8 +130,8 @@ let P = new b(a.h, {
             (u = {}),
             (_ = {}),
             (E = {}),
-            (T = new Set()),
-            (m = { state: "idle" }),
+            (m = new Set()),
+            (T = { state: "idle" }),
             (g = new Set()),
             (S = {}),
             (N = {}),
@@ -144,7 +144,7 @@ let P = new b(a.h, {
         ((c = {}), (d = {}));
     },
     POST_CONNECTION_OPEN: function () {
-        ((I = {}), (p = {}), (T = new Set()));
+        ((I = {}), (p = {}), (m = new Set()));
     },
     ENTITLEMENT_CREATE: function (e) {
         let { entitlement: t } = e;
@@ -157,11 +157,11 @@ let P = new b(a.h, {
         let n = p[t];
         if (null == n) {
             if (Object.values(I).some((e) => "checking" === e.state)) {
-                if (T.size >= 25) {
-                    let e = T.values().next().value;
-                    T.delete(e);
+                if (m.size >= 25) {
+                    let e = m.values().next().value;
+                    m.delete(e);
                 }
-                T.add(t);
+                m.add(t);
             }
             return !1;
         }
@@ -223,11 +223,11 @@ let P = new b(a.h, {
         (f = { ...f })[t] = { state: "error" };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: function () {
-        m = { state: "loading" };
+        T = { state: "loading" };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: function (e) {
         let { config: t } = e;
-        ((m = { state: "success", config: t, fetchedAt: Date.now() }),
+        ((T = { state: "success", config: t, fetchedAt: Date.now() }),
             (g = new Set(t.storefronts.map((e) => e.applicationId))),
             (R = new Set(t.storefronts.filter((e) => null != e.guildId).map((e) => e.guildId))),
             (S = t.storefronts.reduce((e, t) => (null != t.guildId && (e[t.guildId] = t.applicationId), e), {})),
@@ -242,7 +242,7 @@ let P = new b(a.h, {
             (O = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {})));
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: function () {
-        m = { state: "error", fetchedAt: Date.now() };
+        T = { state: "error", fetchedAt: Date.now() };
     },
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: function (e) {
         let { skuId: t } = e;
@@ -251,8 +251,8 @@ let P = new b(a.h, {
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: function (e) {
         let { skuId: t, interactionId: n } = e;
         if (I[t]?.state !== "checking") return !1;
-        if (T.has(n)) {
-            (T.delete(n), (I = { ...I, [t]: { state: "error", reason: "interaction_failure" } }));
+        if (m.has(n)) {
+            (m.delete(n), (I = { ...I, [t]: { state: "error", reason: "interaction_failure" } }));
             return;
         }
         p[n] = t;

@@ -1,4 +1,4 @@
-n.d(t, { A: () => T, e: () => p });
+n.d(t, { A: () => m, e: () => p });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -17,19 +17,19 @@ var i = n(477900),
 function p(e) {
     return null != e && !e.scopes.includes(l.F.SDK_SOCIAL_LAYER) && e.application.id === E.T.ACTIVISION_APPLICATION_ID;
 }
-let T = function (e) {
+let m = function (e) {
     let { markAsDismissed: t, recurringDismiss: n, noticeType: a } = e,
         l = E.T.CALL_OF_DUTY_APPLICATION_ID,
-        T = (0, u.h)(l),
-        m = T?.name,
-        { startAuthorization: g, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(T),
+        m = (0, u.h)(l),
+        T = m?.name,
+        { startAuthorization: g, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(m),
         { analyticsLocations: O } = (0, c.Ay)(d.A.NOTICE),
         R = p(C),
         [L, y] = r.useState(!1);
     return (r.useEffect(() => {
         N && !R && t(L ? A.i.TAKE_ACTION : A.i.INDIRECT_ACTION);
     }, [L, N, t, R]),
-    null != T && S && N)
+    null != m && S && N)
         ? (0, i.jsxs)(o.$T, {
               color: o.Hv.WARNING,
               children: [
@@ -41,7 +41,7 @@ let T = function (e) {
                   }),
                   (0, i.jsx)("img", {
                       src: "https://cdn.discordapp.com/assets/content/37dd378cbc52678cf98cba1b9abef1a63da6d2bdbc6535c3982aff71e6d23783.png",
-                      alt: m,
+                      alt: T,
                       className: s()(I.tV, I.Y5),
                   }),
                   f.intl.string(h.default.OleW32),

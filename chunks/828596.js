@@ -1,4 +1,4 @@
-n.d(t, { J_: () => O, N4: () => N, cF: () => m, l9: () => S, rd: () => T, tx: () => p });
+n.d(t, { J_: () => O, N4: () => N, cF: () => T, l9: () => S, rd: () => m, tx: () => p });
 var i = n(636537),
     r = n(73153),
     a = n(181658),
@@ -22,9 +22,9 @@ function I(e) {
 }
 async function p(e) {
     let t = e.filter(I);
-    0 !== t.length && (await T(t));
+    0 !== t.length && (await m(t));
 }
-async function T(e) {
+async function m(e) {
     if (0 !== e.length)
         try {
             r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: e });
@@ -41,7 +41,7 @@ async function T(e) {
             r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_FAIL", applicationIds: e });
         }
 }
-async function m(e, t) {
+async function T(e, t) {
     let n;
     r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_START", promotionId: e });
     try {
@@ -50,7 +50,7 @@ async function m(e, t) {
         let t = new a.A(n);
         throw (r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_FAIL", promotionId: e, apiError: t }), t);
     }
-    return (r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: e }), await T([t]), n.body);
+    return (r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: e }), await m([t]), n.body);
 }
 function g(e) {
     return e?.type === "error" ? A : f;

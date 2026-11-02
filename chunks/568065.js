@@ -7,7 +7,7 @@
     Pn: () => j,
     Q0: () => B,
     QS: () => x,
-    Wb: () => m,
+    Wb: () => T,
     YV: () => U,
     a8: () => C,
     aH: () => k,
@@ -16,7 +16,7 @@
     mB: () => N,
     m_: () => F,
     o2: () => g,
-    o9: () => T,
+    o9: () => m,
     oN: () => y,
     sy: () => M,
     w$: () => b,
@@ -44,8 +44,8 @@ var i,
     f = n(652215),
     I = n(628049),
     p = n(105292),
-    T = (((i = {}).PERK = "perk"), (i.LEVEL = "level"), i);
-let m = "1340102344645283891",
+    m = (((i = {}).PERK = "perk"), (i.LEVEL = "level"), i);
+let T = "1340102344645283891",
     g = new Set([c.ec, c.RV, c.YG, c.SL, c.aN, c.OJ, c.jF, c.Ht, c.tv]),
     S = new Set([
         f.GuildFeatures.GUILD_TAGS,

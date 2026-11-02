@@ -19,8 +19,8 @@ function E(e) {
             tag: f = "span",
             position: I = "top",
             align: p = "center",
-            spacing: T,
-            targetElementRef: m,
+            spacing: m,
+            targetElementRef: T,
             anchorRef: g,
             caretConfig: S,
             positionKey: N,
@@ -33,9 +33,9 @@ function E(e) {
     }, [g]);
     let y = r.useCallback(
             (e) => {
-                (null == g && L(e), (0, d.cZ)(m, e));
+                (null == g && L(e), (0, d.cZ)(T, e));
             },
-            [m, g],
+            [T, g],
         ),
         {
             tooltipId: D,
@@ -85,7 +85,7 @@ function E(e) {
                       content: w,
                       position: I,
                       align: p,
-                      spacing: T,
+                      spacing: m,
                       caretConfig: S,
                       animationStyle: e,
                       positionKey: B,

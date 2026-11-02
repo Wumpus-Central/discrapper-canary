@@ -23,8 +23,8 @@ function _(e) {
         hasError: f,
         showChevronButton: I = !0,
         children: p,
-        handleToggle: T,
-        handleClear: m,
+        handleToggle: m,
+        handleClear: T,
         variant: g = "default",
     } = e;
     return (0, i.jsxs)(d.F, {
@@ -39,8 +39,8 @@ function _(e) {
         "aria-busy": s,
         children: [
             (0, i.jsx)("div", { className: u.gt, children: p }),
-            (0, i.jsx)(E, { show: !0 === l && !_ && !0 === h, iconSize: I ? "xs" : "sm", onClick: m }),
-            (0, i.jsx)(A, { show: I, isOpen: c, onClick: T }),
+            (0, i.jsx)(E, { show: !0 === l && !_ && !0 === h, iconSize: I ? "xs" : "sm", onClick: T }),
+            (0, i.jsx)(A, { show: I, isOpen: c, onClick: m }),
         ],
     });
 }

@@ -19,8 +19,8 @@ var E = n(47167),
 n(250953);
 var I = n(380335),
     p = n(451909),
-    T = n(465856),
-    m = n(451919),
+    m = n(465856),
+    T = n(451919),
     g = n(143413);
 n(622794);
 var S = n(152007),
@@ -206,7 +206,7 @@ function $(e, t) {
         return (
             t !== W.CP.NO_MESSAGES &&
             (t === W.CP.ALL_MESSAGES ||
-                (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
+                (0, T.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
         );
     }
     {
@@ -214,7 +214,7 @@ function $(e, t) {
         if (M.Ay.allowAllMessages(l) && t) return !0;
         let n = M.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
             i = M.Ay.isSuppressRolesEnabled(l.getGuildId());
-        return (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
+        return (0, T.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
     }
 }
 function z(e, t) {
@@ -375,7 +375,7 @@ function J(e, t, n) {
                 }
                 if ((0, i.Lt)(e.flags ?? 0, j.pr7.IS_VOICE_MESSAGE)) return Y.intl.string(Y.t.slFYgi);
                 if (void 0 !== e.attachments && e.attachments.length > 0) {
-                    let t = (0, T.A)(e.attachments[0]);
+                    let t = (0, m.A)(e.attachments[0]);
                     return Y.intl.formatToPlainString(Y.t["51OkwL"], { filename: t });
                 }
                 return "";

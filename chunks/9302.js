@@ -10,12 +10,12 @@ let i;
         getRPCAuthToken: () => p,
         isHookModuleTooOld: () => C,
         isValidGamePID: () => I,
-        log: () => T,
+        log: () => m,
         setOutOfProcessSupport: () => g,
         setPID: () => f,
         supportsLegacy: () => O,
         supportsOutOfProcess: () => S,
-        validResolution: () => m,
+        validResolution: () => T,
     }),
     n(323874),
     n(14289),
@@ -46,10 +46,10 @@ function I(e) {
 function p() {
     return new URLSearchParams(window.location.search).get("rpc_auth_token");
 }
-function T(e) {
+function m(e) {
     (0, r.tN)({ type: o.kGV.LOG_MESSAGES, pid: h(), token: p(), payload: e });
 }
-function m(e) {
+function T(e) {
     return !s.isPlatformEmbedded || (e.width >= u.width && e.height >= u.height);
 }
 function g(e) {

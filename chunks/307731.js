@@ -9,10 +9,10 @@
         EMOJI_URL_BASE_SIZE: () => d,
         EmojiDisabledReasons: () => f,
         EmojiIntention: () => I,
-        EmojiInteractionPoint: () => T,
+        EmojiInteractionPoint: () => m,
         EmojiSprites: () => h,
         MAX_EMOJI_TO_BE_JUMBO: () => c,
-        isExternalEmojiAllowedForIntention: () => m,
+        isExternalEmojiAllowedForIntention: () => T,
     }));
 let i = 50,
     r = 200,
@@ -60,7 +60,7 @@ var u,
         (E[(E.TYPING_INDICATOR = 15)] = "TYPING_INDICATOR"),
         E);
 let p = new Set([2, 4, 5, 6, 8]);
-var T =
+var m =
     (((A = {}).EmojiButtonMouseEntered = "EMOJI_BUTTON_MOUSE_ENTERED"),
     (A.EmojiButtonFocused = "EMOJI_BUTTON_FOCUSED"),
     (A.ChatInputExpressionPressed = "CHAT_INPUT_EXPRESSION_PRESSED"),
@@ -76,6 +76,6 @@ var T =
     (A.TrackOpenPopoutUsed = "TRACK_OPEN_POPOUT_USED"),
     (A.CustomEmojiTooltipShown = "CUSTOM_EMOJI_TOOLTIP_SHOWN"),
     A);
-function m(e) {
+function T(e) {
     return !p.has(e);
 }

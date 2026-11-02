@@ -1,4 +1,4 @@
-n.d(t, { CA: () => p, _W: () => m, we: () => g, zl: () => T });
+n.d(t, { CA: () => p, _W: () => T, we: () => g, zl: () => m });
 var i,
     r = n(284009),
     a = n.n(r),
@@ -24,13 +24,13 @@ var i,
         (i[(i.CHANNEL_DENIED = 6)] = "CHANNEL_DENIED"),
         (i[(i.USER_DENIED = 7)] = "USER_DENIED"),
         i);
-function T(e, t, n) {
+function m(e, t, n) {
     let {
             context: i,
             commandTypes: r,
             allowNsfw: c,
             computedPermissions: p,
-            userId: T,
+            userId: m,
             roleIds: S,
             isImpersonating: N,
             hasBaseAccessPermissions: C,
@@ -60,10 +60,10 @@ function T(e, t, n) {
     if ((!C || !O) && y && (null == e.integration_types || e.integration_types.includes(s.b.GUILD_INSTALL))) return 5;
     if (i instanceof u.YB) {
         a()(void 0 !== L, "missing applicationAllowedForChannel");
-        let t = m(e.permissions, i, P);
+        let t = T(e.permissions, i, P);
         if (!1 === t || (!0 !== t && !1 === L)) return 6;
     }
-    let M = g(e.permissions, P, T, S, N);
+    let M = g(e.permissions, P, m, S, N);
     if (!0 === M) return 0;
     if (!1 === M) return 7;
     if (!1 === R) return 7;
@@ -74,7 +74,7 @@ function T(e, t, n) {
         return 7;
     return 0;
 }
-function m(e, t, n) {
+function T(e, t, n) {
     if (null == e) return null;
     let i = t.id;
     t.isThread() && (i = t.parent_id ?? t.id);

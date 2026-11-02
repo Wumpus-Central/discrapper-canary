@@ -19,9 +19,9 @@ function p() {
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.nQ.CLIP,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         p = arguments.length > 3 ? arguments[3] : void 0,
-        T = arguments.length > 4 ? arguments[4] : void 0,
+        m = arguments.length > 4 ? arguments[4] : void 0,
         {
-            sourceName: m,
+            sourceName: T,
             sourceApplicationId: g,
             activity: S,
             isVoiceOnly: N,
@@ -46,7 +46,7 @@ function p() {
                 c = null != e ? (0, s.m1)(e, h.default, E.A) : "";
             }
             let p = (0, o.A)(a),
-                T = A.A.getUnfilteredActivities(!0).filter(function (e) {
+                m = A.A.getUnfilteredActivities(!0).filter(function (e) {
                     return e.type === r.$.PLAYING && null != e.application_id && p.has(e.application_id);
                 });
             return {
@@ -61,9 +61,9 @@ function p() {
                             party: null != e.party ? { id: e.party.id, size: e.party.size } : void 0,
                         };
                 })(
-                    T.find(function (e) {
+                    m.find(function (e) {
                         return (null != e.state && "" !== e.state) || (null != e.details && "" !== e.details);
-                    }) ?? T[0],
+                    }) ?? m[0],
                 ),
                 isVoiceOnly: I,
             };
@@ -84,7 +84,7 @@ function p() {
         createdAt: y,
         syncTimestamp: v,
         version: f.kd,
-        applicationName: m ?? I.intl.string(I.t.qtSJxb),
+        applicationName: T ?? I.intl.string(I.t.qtSJxb),
         applicationId: g,
         activity: S,
         users: Array.from(R),
@@ -93,7 +93,7 @@ function p() {
         channelId: C ?? void 0,
         timeline: n,
         decision: p,
-        gameSessionId: T,
+        gameSessionId: m,
         remoteClipId: p?.signal?.type === f.Gy.DISTRIBUTED ? p.signal.remoteTriggerClipId : void 0,
         length: 0,
         thumbnail: "",

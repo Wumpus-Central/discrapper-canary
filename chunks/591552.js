@@ -28,14 +28,14 @@ function p(e, t, n) {
         })(e, t, n),
     );
 }
-function T(e) {
+function m(e) {
     let { guildId: t, updates: n } = e,
         i = n.onboardingPromptsSeen ?? A[t]?.onboardingPromptsSeen ?? {},
         r = n.onboardingResponsesSeen ?? A[t]?.onboardingResponsesSeen ?? {},
         a = p(n.prompts ?? A[t]?.prompts ?? [], i, r);
     A[t] = { ...A[t], ...n, prompts: a };
 }
-function m(e, t) {
+function T(e, t) {
     if (null == h[e]) return;
     let n = {};
     (Object.keys(h[e]).forEach((i) => {
@@ -168,13 +168,13 @@ let R = new O(s.h, {
         } = e;
         I = !1;
         let h = _.Ay.getOnboardingStatus(t) === _.$o.READY,
-            T = p(n, s, l);
+            m = p(n, s, l);
         ((A[t] = {
             enabled: r,
             mode: o,
             belowRequirements: d,
-            prompts: T,
-            onboardingPrompts: T.filter((e) => e.inOnboarding),
+            prompts: m,
+            onboardingPrompts: m.filter((e) => e.inOnboarding),
             defaultChannelIds: i.filter((e) => (0, u.S)(t, e)),
             responses: h ? [] : a,
             onboardingPromptsSeen: s,
@@ -182,7 +182,7 @@ let R = new O(s.h, {
             connections: c ?? [],
             additionalConnections: E ?? [],
         }),
-            h || m(t, a),
+            h || T(t, a),
             (f[t] = Date.now()));
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
@@ -204,7 +204,7 @@ let R = new O(s.h, {
     },
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function (e) {
         let { guildId: t, options: n, prompts_seen: i, options_seen: r } = e;
-        m(t, n);
+        T(t, n);
         let a = A[t];
         if (null == a) return !1;
         let s = p(a.prompts, i, r);
@@ -216,8 +216,8 @@ let R = new O(s.h, {
             onboardingResponsesSeen: r,
         };
     },
-    GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: T,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: T,
+    GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: m,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: m,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: function (e) {
         let { guildId: t, channelIds: n } = e;
         A[t] = { ...A[t], defaultChannelIds: n };

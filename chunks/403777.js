@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => m, SQ: () => f, kN: () => I, n1: () => A });
+n.d(t, { Ay: () => T, SQ: () => f, kN: () => I, n1: () => A });
 var i = n(477900);
 n(582128);
 var r = n(277057),
@@ -24,13 +24,13 @@ async function h(e) {
             channelId: f,
             appContext: I,
             customStatusPrompt: p,
-            onModalOpen: T,
-            onModalClose: m,
+            onModalOpen: m,
+            onModalClose: T,
             ...g
         } = e,
         S = d.default.getUser(t),
         N = d.default.getCurrentUser();
-    if (null == S || null == N) return void m?.();
+    if (null == S || null == N) return void T?.();
     let C = A(t, _),
         O = a()();
     try {
@@ -903,14 +903,14 @@ async function h(e) {
                         });
                     },
                     onCloseCallback: () => {
-                        (E.delete(C), m?.());
+                        (E.delete(C), T?.());
                     },
                 },
             ),
         ),
-            T?.());
+            m?.());
     } catch (e) {
-        throw (m?.(), e);
+        throw (T?.(), e);
     }
 }
 function f() {
@@ -938,7 +938,7 @@ function p() {
         });
     }
 }
-class T extends l.A {
+class m extends l.A {
     actions = { USER_PROFILE_MODAL_OPEN: h, USER_PROFILE_MODAL_CLOSE: p };
 }
-let m = new T();
+let T = new m();

@@ -36,11 +36,11 @@ var i,
     f = n(652215),
     I = n(202541),
     p = n(105292);
-let T = [
+let m = [
         A.A.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
         ...["discordapp.com/gifts", "discord.com/gifts"].map((e) => A.A.escape(e)),
     ].join("|"),
-    m = RegExp(`(?: |^|https?://)(?:${T})/([a-z0-9-]+)`, "gi"),
+    T = RegExp(`(?: |^|https?://)(?:${m})/([a-z0-9-]+)`, "gi"),
     g = [...["discord.com/billing/promotions", "promos.discord.gg"].map((e) => A.A.escape(e))].join("|"),
     S = RegExp(`(?: |^|https?://)(?:${g})(/|(/)?\\?code=)([a-z0-9-]+)`, "gi");
 function N(e, t) {
@@ -85,7 +85,7 @@ function M(e) {
     let t;
     if (null == e) return [];
     let n = new Set();
-    for (; null != (t = m.exec(e)) && n.size < 3;) n.add(b(t[1]));
+    for (; null != (t = T.exec(e)) && n.size < 3;) n.add(b(t[1]));
     for (; null != (t = S.exec(e)) && n.size < 3;) n.add(b(t[t.length - 1]));
     return Array.from(n);
 }

@@ -15,8 +15,8 @@ var i = n(284009),
     f = n(734057),
     I = n(808728),
     p = n(232835),
-    T = n(573163),
-    m = n(994500),
+    m = n(573163),
+    T = n(994500),
     g = n(711014),
     S = n(543465),
     N = n(287809),
@@ -133,7 +133,7 @@ function X() {
         j = O.default.fromTimestamp(Date.now());
         return;
     }
-    for (let e of G.toSorted((e, t) => O.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e)))) {
+    for (let e of G.toSorted((e, t) => O.default.compare(m.Ay.lastMessageId(t), m.Ay.lastMessageId(e)))) {
         let t = w[e];
         if (t.loadState === v.Ve.UNLOADED && null != t.mostRecentMessageId) {
             j = t.mostRecentMessageId;
@@ -152,7 +152,7 @@ function q() {
                 if (e.type === P.rbe.DM) {
                     let t = f.A.getChannel(e.id),
                         n = t?.isDM() === !0 ? t.getRecipientId() : void 0;
-                    if (null != n && m.A.isBlocked(n)) return !1;
+                    if (null != n && T.A.isBlocked(n)) return !1;
                 }
                 return !0;
             }
@@ -196,16 +196,16 @@ function q() {
         return i
             .map((e) => e.id)
             .sort((e, t) => {
-                let n = T.Ay.hasUnread(e);
-                return n !== T.Ay.hasUnread(t)
+                let n = m.Ay.hasUnread(e);
+                return n !== m.Ay.hasUnread(t)
                     ? n
                         ? -1
                         : 1
-                    : O.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e));
+                    : O.default.compare(m.Ay.lastMessageId(t), m.Ay.lastMessageId(e));
             })
             .reduce(
                 (e, t) => (
-                    T.Ay.lastMessageTimestamp(t) > Date.now() - v.V$
+                    m.Ay.lastMessageTimestamp(t) > Date.now() - v.V$
                         ? e.notifyingChannelIds.push(t)
                         : e.staleChannelIds.push(t),
                     e
@@ -219,7 +219,7 @@ function q() {
     if (0 !== G.length && 0 === n.length && 0 === i.length) return !1;
     for (let e of i) delete w[e];
     for (let e of n)
-        if (((w[e] = { loadState: v.Ve.UNLOADED, mostRecentMessageId: T.Ay.lastMessageId(e) }), p.A.isReady(e))) {
+        if (((w[e] = { loadState: v.Ve.UNLOADED, mostRecentMessageId: m.Ay.lastMessageId(e) }), p.A.isReady(e))) {
             let t = z(e);
             null != t &&
                 ((w[e].loadState = v.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? w[e].mostRecentMessageId));
@@ -296,7 +296,7 @@ function et(e) {
 class en extends a.Ay.Store {
     static displayName = "NotificationsInboxStore";
     initialize() {
-        this.waitFor(o.A, u.A, f.A, I.Ay, _.A, p.A, C.A, T.Ay, d.Ay, m.A, g.Ay, S.Ay, N.default);
+        this.waitFor(o.A, u.A, f.A, I.Ay, _.A, p.A, C.A, m.Ay, d.Ay, T.A, g.Ay, S.Ay, N.default);
     }
     canLoadMore(e) {
         let { preload: t } = e;

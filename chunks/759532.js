@@ -1,4 +1,4 @@
-n.d(t, { AY: () => _, Ay: () => T, v5: () => u });
+n.d(t, { AY: () => _, Ay: () => m, v5: () => u });
 var i,
     r,
     a = n(435558),
@@ -73,7 +73,7 @@ class p extends s.Ay.Store {
         return null != h.guildId && (h.draftEnabled !== h.originalEnabled || !(0, a.isEqual)(h.draft, h.original));
     }
 }
-let T = new p(o.h, {
+let m = new p(o.h, {
     GUILD_THEME_PREVIEW_START: function (e) {
         let { guildId: t, draft: n, original: i, draftEnabled: r, originalEnabled: a, origin: s, owner: l } = e;
         (f(),

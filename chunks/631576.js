@@ -9,7 +9,7 @@
     uK: () => v,
     vr: () => b,
     x5: () => y,
-    zk: () => m,
+    zk: () => T,
 }),
     n(321073));
 var i = n(435558),
@@ -28,8 +28,8 @@ var i = n(435558),
     f = n(378058),
     I = n(652215),
     p = n(355097),
-    T = n(105292);
-async function m(e, t) {
+    m = n(105292);
+async function T(e, t) {
     let { body: n } = await (0, A.aP)({ url: I.Rsh.STICKER_PACK(e), rejectWithError: (0, a.fT)() });
     return (s.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: e, pack: n, ingestStickers: t }), n);
 }
@@ -106,8 +106,8 @@ function v(e) {
         (t) =>
             ((t.stickerIds = D(t.stickerIds)), r().size(t.stickerIds) >= 250)
                 ? (l.A.show({
-                      title: T.intl.string(T.t["+XYXtZ"]),
-                      body: T.intl.formatToPlainString(T.t.JaIyFi, { count: 250 }),
+                      title: m.intl.string(m.t["+XYXtZ"]),
+                      body: m.intl.formatToPlainString(m.t.JaIyFi, { count: 250 }),
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),

@@ -15,8 +15,8 @@ var r = n(435558),
     f = n(626584),
     I = n(736056),
     p = n(108822),
-    T = n(311043),
-    m = n(830012),
+    m = n(311043),
+    T = n(830012),
     g = n(211753),
     S = n(206885),
     N = n(41984),
@@ -123,8 +123,8 @@ let W = new f.A("RunningGameStore"),
     ef = null,
     eI = null,
     ep = {},
-    eT = {},
-    em = new Set(),
+    em = {},
+    eT = new Set(),
     eg = new Set(),
     eS = null,
     eN = null,
@@ -200,7 +200,7 @@ function ex(e) {
 function ek(e) {
     var t;
     let n,
-        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.A;
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.A;
     if (null == e) return;
     let r = i.getGame(e);
     return null != r
@@ -218,14 +218,14 @@ function ek(e) {
 }
 let eF = new Set();
 function eB() {
-    let e = new Set(et.map((e) => (0, H.Un)(e).id).filter((e) => null != e && null != T.A.getGame(e))),
+    let e = new Set(et.map((e) => (0, H.Un)(e).id).filter((e) => null != e && null != m.A.getGame(e))),
         t = e.size !== eF.size || [...e].some((e) => !eF.has(e));
     return ((eF = e), t);
 }
 function eV(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        [i, r, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [v.A, b.A, T.A],
+        [i, r, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [v.A, b.A, m.A],
         s = (0, H.Un)(e);
     if (s.isLauncher)
         return {
@@ -304,7 +304,7 @@ function eW() {
     u.w.set(Y, e_);
 }
 function eY(e, t, n, i) {
-    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : T.A,
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : m.A,
         a = {
             ...e,
             played:
@@ -535,14 +535,14 @@ if (K) {
                     }
                     ((ei = a), (ed = n), (i = r), eU(), (eo = ei.length > 0 ? ei[0] : null));
                     let c = [];
-                    for (let e of ei) e.pid in eT || ((eT[e.pid] = e), c.push(e));
+                    for (let e of ei) e.pid in em || ((em[e.pid] = e), c.push(e));
                     let u = [];
-                    for (let e of Object.values(eT)) ei.some((t) => t.pid === e.pid) || (u.push(e), delete eT[e.pid]);
+                    for (let e of Object.values(em)) ei.some((t) => t.pid === e.pid) || (u.push(e), delete em[e.pid]);
                     (W.info("Running Non-Games Changed", {
                         runningNonGames: ei,
                         added: c,
                         removed: u,
-                        previousNonGames: eT,
+                        previousNonGames: em,
                     }),
                         _.h.dispatch({ type: "RUNNING_NON_GAMES_CHANGE", nonGames: ei, added: c, removed: u }));
                 },
@@ -631,11 +631,11 @@ class eZ extends c.Ay.Store {
         )
             for (let n of e.gamesSeen)
                 "number" == typeof n.id && ((n.nativeProcessObserverId = n.id), delete n.id, (t = !0));
-        (this.waitFor(v.A, B.A, M.A, I.A, p.A, T.A, b.A, P.default),
+        (this.waitFor(v.A, B.A, M.A, I.A, p.A, m.A, b.A, P.default),
             ($ = e.gamesSeen.filter((e) => !(0, D.n1)(e))),
             this.syncWith([p.A], eq),
             this.syncWith([b.A, v.A, M.A], a().throttle(eK, 1e3)),
-            this.syncWith([T.A], eB),
+            this.syncWith([m.A], eB),
             t && eW());
     }
     getVisibleGame() {
@@ -758,7 +758,7 @@ class eZ extends c.Ay.Store {
         return n.enabledLegacy || n.enabledOOP ? n : null;
     }
     getObservedAppNameForWindow(e) {
-        return ed.find((t) => (0, m.A)(e, t.windowHandle))?.name ?? null;
+        return ed.find((t) => (0, T.A)(e, t.windowHandle))?.name ?? null;
     }
     get canShowAdminWarning() {
         return q && !this.isSystemServiceInitialized("input-service");
@@ -902,15 +902,15 @@ let eQ = new eZ(_.h, {
             ((eS = e.level), (eN = e.intervalSeconds));
         },
         GAME_DETECTION_DEBUGGING_STOP: function () {
-            ((eS = null), (eN = null), em.clear());
+            ((eS = null), (eN = null), eT.clear());
         },
         GAME_DETECTION_DEBUGGING_TICK: function (e) {
             let t = e.processes
                 .map((e) => ({ pid: e.pid, cleanedExePath: (0, h.v)(e.exePath) ?? e.exePath }))
                 .filter((e) => {
-                    if (em.has(e.pid) || eg.has(e.cleanedExePath)) return !1;
+                    if (eT.has(e.pid) || eg.has(e.cleanedExePath)) return !1;
                     let t = X.some((t) => e.cleanedExePath.includes(t));
-                    return (t && em.add(e.pid), t);
+                    return (t && eT.add(e.pid), t);
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&

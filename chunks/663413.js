@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -15,11 +15,11 @@ var i = n(477900),
     f = n(203480),
     I = n(652215);
 let p = new Set([I.BVt.LOGIN, I.BVt.REGISTER]),
-    T = r.memo(function (e) {
+    m = r.memo(function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e;
         (0, h.cu)({ skipsSettingDefaultPageTitle: n });
-        let { clientThemesClassName: a, clientThemesCSS: T } = (0, c.Ay)(),
-            m = r.createElement("style", { [c.Vg]: !0 }, T);
+        let { clientThemesClassName: a, clientThemesCSS: m } = (0, c.Ay)(),
+            T = r.createElement("style", { [c.Vg]: !0 }, m);
         return (0, i.jsxs)(l.mg, {
             children: [
                 (function (e) {
@@ -36,7 +36,7 @@ let p = new Set([I.BVt.LOGIN, I.BVt.REGISTER]),
                         className: s()(a, e, { overlay: __OVERLAY__ }),
                     });
                 })(a),
-                m,
+                T,
                 t,
             ],
         });

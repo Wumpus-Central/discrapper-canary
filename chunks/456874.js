@@ -15,10 +15,10 @@ var i = n(435558),
 let f = new Set(),
     I = {},
     p = {};
-function T(e, t) {
+function m(e, t) {
     var n;
     o.A_.has(e.type) &&
-        m(
+        T(
             ((n = e).id in I ||
                 (I[n.id] = {
                     guildId: n.guild_id,
@@ -31,7 +31,7 @@ function T(e, t) {
             t,
         );
 }
-function m(e, t) {
+function T(e, t) {
     let n = (p[e.parentId] ?? 0) + 1;
     ((p[e.parentId] = n), t(e));
 }
@@ -42,12 +42,12 @@ function S(e) {
     if (e.type === h.lAJ.THREAD_STARTER_MESSAGE) return;
     let t = u.A.getChannel(e.channel_id);
     null != t &&
-        T(t, (t) => {
+        m(t, (t) => {
             ((t.mostRecentRawMessage = e), (t.mostRecentMessage = null));
         });
 }
 function N(e) {
-    T(e, (t) => {
+    m(e, (t) => {
         null != e.messageCount && (t.count = e.messageCount);
         let n = t.mostRecentRawMessage ?? t.mostRecentMessage;
         null != e.lastMessageId &&
@@ -151,7 +151,7 @@ let v = new D(s.h, {
                 let t = u.A.getChannel(e.channel_id);
                 null != t &&
                     e.type !== h.lAJ.THREAD_STARTER_MESSAGE &&
-                    T(t, (t) => {
+                    m(t, (t) => {
                         ((t.mostRecentRawMessage = e), (t.mostRecentMessage = null));
                     });
             }));
@@ -185,7 +185,7 @@ let v = new D(s.h, {
                 (t.isForumPost() && n.id === E.default.castChannelIdAsMessageId(t.id)))
         )
             return !1;
-        T(l, (e) => {
+        m(l, (e) => {
             ((e.count = Math.min(e.count + 1, A.su)), (e.mostRecentRawMessage = i), (e.mostRecentMessage = null));
         });
     },
@@ -194,7 +194,7 @@ let v = new D(s.h, {
             n = I[t.channel_id],
             i = n?.mostRecentRawMessage ?? n?.mostRecentMessage;
         if (null == n || null == i || i.id !== t.id) return !1;
-        m(n, (e) => {
+        T(n, (e) => {
             (null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.IU)(e.mostRecentMessage, t)),
                 null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.SP)(e.mostRecentRawMessage, t)));
         });
@@ -205,7 +205,7 @@ let v = new D(s.h, {
         if (null == i) return !1;
         let r = E.default.castChannelIdAsMessageId(n) !== t,
             a = !f.has(t);
-        m(i, (e) => {
+        T(i, (e) => {
             let n = e.mostRecentRawMessage ?? e.mostRecentMessage;
             (null != n && n.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
                 (e.count = r && a ? Math.max(e.count - 1, 0) : e.count),
@@ -222,7 +222,7 @@ let v = new D(s.h, {
             return t && i;
         }).length;
         r > 0 &&
-            m(i, (e) => {
+            T(i, (e) => {
                 let n = e.mostRecentRawMessage ?? e.mostRecentMessage;
                 (null != n && t.includes(n.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
                     (e.count -= r),
@@ -235,7 +235,7 @@ let v = new D(s.h, {
         if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
         let n = u.A.getChannel(e.channelId);
         if (null == n || !o.Le.has(n.type)) return t;
-        T(n, (t) => {
+        m(n, (t) => {
             if (0 === e.messages.length) ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0));
             else {
                 let n = e.messages[0] ?? null;

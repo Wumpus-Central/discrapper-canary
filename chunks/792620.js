@@ -2,12 +2,12 @@ n.d(t, {
     Cr: () => C,
     F9: () => _,
     GL: () => D,
-    I6: () => m,
+    I6: () => T,
     IO: () => R,
     JC: () => H,
     K$: () => b,
     Ki: () => v,
-    Ov: () => T,
+    Ov: () => m,
     TP: () => h,
     X3: () => $,
     Xi: () => B,
@@ -82,10 +82,10 @@ function p(e) {
     let { quest: t } = e;
     return null != t.config.taskConfigV2.tasks[r.n.STREAM_ON_DESKTOP];
 }
-function T(e) {
+function m(e) {
     return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_ACTIVITY];
 }
-function m(e) {
+function T(e) {
     return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_GAME];
 }
 function g(e) {

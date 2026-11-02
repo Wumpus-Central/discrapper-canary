@@ -60,14 +60,14 @@ let A = {
                 durationMax: I,
                 ...p
             } = n,
-            T = t._value,
-            m = E(n.duration, f, I),
+            m = t._value,
+            T = E(n.duration, f, I),
             g = E(n.toValue, a, s),
-            S = i[A](t, { ...p, toValue: g, tension: l, friction: o, duration: m }),
+            S = i[A](t, { ...p, toValue: g, tension: l, friction: o, duration: T }),
             N = S;
         if (c || u) {
             let e = E(n.duration, f, I);
-            ((r = i[A](t, { ...p, toValue: c ? T : -g, tension: l, friction: o, duration: e })),
+            ((r = i[A](t, { ...p, toValue: c ? m : -g, tension: l, friction: o, duration: e })),
                 (N = i.sequence([S, r])));
         }
         d

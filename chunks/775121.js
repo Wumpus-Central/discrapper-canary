@@ -32,12 +32,12 @@ let _ = {},
     ].map((e) => e.replace("mod", c.Mu)),
     I = () => [],
     p = [];
-function T(e) {
+function m(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace("mod", c.Mu));
 }
-function m(e, t) {
+function T(e, t) {
     return (n, i) => (o.default.track(u.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: i }), t(n, i));
 }
 function g(e) {
@@ -54,8 +54,8 @@ function S(e) {
         if (0 === e.length) continue;
         let i = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
         if (
-            (null != n.action && i.call(h, e, m(t, n.action)),
-            null != n.keyup && i.call(h, e, m(t, n.keyup), "keyup"),
+            (null != n.action && i.call(h, e, T(t, n.action)),
+            null != n.keyup && i.call(h, e, T(t, n.keyup), "keyup"),
             null != n.keydown)
         ) {
             let r = e.indexOf("any-character");
@@ -67,9 +67,9 @@ function S(e) {
                     (document.addEventListener(e, n), p.push(() => document.removeEventListener(e, n)));
                 })("keydown", n.keydown),
                 e.splice(r, 1)),
-                e.length > 0 && i.call(h, e, m(t, n.keydown), "keydown"));
+                e.length > 0 && i.call(h, e, T(t, n.keydown), "keydown"));
         }
-        null != n.keypress && i.call(h, e, m(t, n.keypress), "keypress");
+        null != n.keypress && i.call(h, e, T(t, n.keypress), "keypress");
     }
 }
 (0, d.isDesktop)() && new (r())(document.documentElement).bind("backspace", (e) => e.preventDefault());
@@ -85,7 +85,7 @@ let N = {
     checkDupes(e) {
         let t = new Set(),
             n = [];
-        for (let i of T(e)) (t.has(i) && n.push(i), t.add(i));
+        for (let i of m(e)) (t.has(i) && n.push(i), t.add(i));
         n.length > 0 && new s.A("Keybinds").warn("Duplicate keyboard shortcuts defined:", n);
     },
     setLayout(e) {
@@ -108,7 +108,7 @@ let N = {
         A && this.hasBind(e) && h.unbind(e);
     },
     hasBind(e) {
-        let t = T(_);
+        let t = m(_);
         return ((e = (e = e.replace("meta", "cmd")).replace(/right |left /i, "").trim()), t.includes(e));
     },
 };

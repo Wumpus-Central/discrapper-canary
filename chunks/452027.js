@@ -57,8 +57,8 @@ function A(e) {
             errorMessage: f,
             successMessage: I,
             role: p,
-            layout: T = "vertical",
-            layoutConfig: m,
+            layout: m = "vertical",
+            layoutConfig: T,
             badge: g,
             icon: S = null,
             interactiveLabel: N = !1,
@@ -79,27 +79,27 @@ function A(e) {
                 f = r.useId(),
                 I = null != n && "" !== n,
                 p = null != l && "" !== l,
-                T = (null != a && "" !== a) || (null != s && "" !== s),
-                m = [];
-            (p && m.push(A), T && m.push(E), o && m.push(f));
-            let g = m.length > 0 ? m.join(" ") : void 0;
+                m = (null != a && "" !== a) || (null != s && "" !== s),
+                T = [];
+            (p && T.push(A), m && T.push(E), o && T.push(f));
+            let g = T.length > 0 ? T.join(" ") : void 0;
             return r.useMemo(
                 () => ({
                     labelId: I ? u : void 0,
                     controlId: t ?? _,
                     describedById: g,
                     errorMessageId: null != i && "" !== i ? h : void 0,
-                    helperTextId: T ? E : void 0,
+                    helperTextId: m ? E : void 0,
                     descriptionId: p ? A : void 0,
                     trailingAuxiliaryContentId: o ? f : void 0,
                     isLabelHovered: d,
                     setIsLabelHovered: c,
                 }),
-                [I, u, t, _, g, i, h, T, E, p, A, o, f, d, c],
+                [I, u, t, _, g, i, h, m, E, p, A, o, f, d, c],
             );
         })(e, { hasTrailingAuxiliaryContent: null != O }),
         { labelId: y, controlId: D, errorMessageId: v, describedById: b, helperTextId: P, descriptionId: M } = L,
-        U = m?.horizontalControlColumnWidth,
+        U = T?.horizontalControlColumnWidth,
         w = "group" === p || "radiogroup" === p,
         G = w ? "fieldset" : "div",
         x = w ? (0, i.jsx)("legend", { id: y, children: (0, i.jsx)(l.A, { children: t }) }) : null,
@@ -149,7 +149,7 @@ function A(e) {
             role: p,
             ref: R,
             className: _.kL,
-            "data-layout": T,
+            "data-layout": m,
             "data-has-description": F || void 0,
             style: null != U ? { "--custom-field-horizontal-control-width": U } : void 0,
             "data-disabled": o,

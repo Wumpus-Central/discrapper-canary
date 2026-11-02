@@ -20,8 +20,8 @@ var h = n(838111),
     f = n(451909),
     I = n(135621),
     p = n(268761),
-    T = n(659617),
-    m = n(406704),
+    m = n(659617),
+    T = n(406704),
     g = n(253932),
     S = n(734057),
     N = n(576705),
@@ -334,13 +334,13 @@ let G = {
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && (0, m.D1)(t);
+                return null != t && (0, T.D1)(t);
             },
             execute: async (e, t) => {
                 let { channel: n } = t,
                     i = w(e, "name") ?? "",
                     r = w(e, "message") ?? "",
-                    a = await (0, T.Nw)(n, i, l.r.PUBLIC_THREAD, (0, p.Gl)(n, null), "Slash Command");
+                    a = await (0, m.Nw)(n, i, l.r.PUBLIC_THREAD, (0, p.Gl)(n, null), "Slash Command");
                 u.A.sendMessage(a.id, f.Ay.parse(a, r), !0, { location: P.Hx.THREAD_CREATION });
             },
         },

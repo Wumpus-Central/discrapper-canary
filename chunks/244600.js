@@ -15,8 +15,8 @@ var i,
     f = n.n(h),
     I = n(181370),
     p = n.n(I),
-    T = n(132500),
-    m = n(158390),
+    m = n(132500),
+    T = n(158390),
     g = n(665260),
     S = n(972347),
     N = n(205693),
@@ -384,8 +384,8 @@ var eA = n(53857),
     ef = n(71393),
     eI = n(999926),
     ep = n(763827),
-    eT = n(412780),
-    em = n(873985),
+    em = n(412780),
+    eT = n(873985),
     eg = n(287809),
     eS = n(174459),
     eN = n(353835),
@@ -597,7 +597,7 @@ var eq =
 class eZ extends S.A {
     url;
     logger;
-    backoff = new m.A(1e3, 5e3);
+    backoff = new T.A(1e3, 5e3);
     webSocket;
     connectionState;
     heartbeatInterval;
@@ -1966,8 +1966,8 @@ class tE extends S.A {
                 framesCodecErrorNoOutput: f,
                 framesCodecErrorTimeout: I,
                 framesCodecErrorGeneric: p,
-                framesCodecErrorFallback: T,
-                framesCodecErrorParameter: m,
+                framesCodecErrorFallback: m,
+                framesCodecErrorParameter: T,
                 framesCodecErrorOther: g,
                 framesCodec: S,
                 framesNetwork: N,
@@ -2023,8 +2023,8 @@ class tE extends S.A {
                 num_frames_codec_error_no_output: f,
                 num_frames_codec_error_timeout: I,
                 num_frames_codec_error_generic: p,
-                num_frames_codec_error_fallback: T,
-                num_frames_codec_error_parameter: m,
+                num_frames_codec_error_fallback: m,
+                num_frames_codec_error_parameter: T,
                 num_frames_codec_error_other: g,
                 time_to_first_frame_ms: e.timeToFirstFrame,
                 num_frames_dropped: E + A,
@@ -2439,7 +2439,7 @@ function tp(e) {
     }
     return t;
 }
-let tT = [
+let tm = [
         "packetsSent",
         "bytesSent",
         "packetsLost",
@@ -2450,7 +2450,7 @@ let tT = [
         "encryptAttempts",
         "encryptMissingKeyCount",
     ],
-    tm = ["packetsSent", "bytesSent"],
+    tT = ["packetsSent", "bytesSent"],
     tg = [
         "packetsReceived",
         "bytesReceived",
@@ -2571,7 +2571,7 @@ class tx extends S.A {
             (this.periodicInboundStats = {}),
             (this.inputDeviceStats = {}),
             (this.outputDeviceStats = {}),
-            (this.outboundBaseline = ty(tT)),
+            (this.outboundBaseline = ty(tm)),
             (this.outboundLatencyBaseline = tD(tN)),
             (this.transportBaseline = tD(["decryptionFailures", "routingFailures", ...tO])),
             (this.inboundBaselines = {}),
@@ -2945,7 +2945,7 @@ class tx extends S.A {
                 };
                 ((this.outboundStats = {
                     ...this.outboundStats,
-                    ...tb(tT, tm, this.outboundBaseline, n),
+                    ...tb(tm, tT, this.outboundBaseline, n),
                     ...tU(tN, this.outboundLatencyBaseline, e, this.outboundStats),
                     encryptMaxAttempts: e.encryptMaxAttempts ?? 0,
                 }),
@@ -3061,7 +3061,7 @@ async function tW() {
     return e?.cpu_features?.includes(ec.Avx512icl) === !0;
 }
 function tY() {
-    return new m.A(1e3, 1e4);
+    return new T.A(1e3, 1e4);
 }
 function tK(e, t) {
     return null != e && e.address === t.address && e.port === t.port;
@@ -3242,7 +3242,7 @@ class tq extends S.A {
             (this._outboundLossRate = null),
             (this._connectStartTime = 0),
             (this._connectCompletedTime = 0),
-            (this._rtcConnectionId = (0, T.A)()),
+            (this._rtcConnectionId = (0, m.A)()),
             (this._connectCount = 0),
             (this._hasEverConnected = !1),
             (this._connecting = !1),
@@ -3311,7 +3311,7 @@ class tq extends S.A {
         ((this._remoteVideoSinkWants = e3),
             e2.X.on(e2.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             e2.X.on(e2.N.WindowVisibilityChanged, this.windowVisibilityChanged),
-            eT.Ay.shouldRecordNextConnection()
+            em.Ay.shouldRecordNextConnection()
                 ? ((this._recordingEnabled = !0), (0, eo.A)(!1))
                 : (this._recordingEnabled = !1),
             eC.A.addOnlineCallback(this._handleNetworkOnline),
@@ -3362,7 +3362,7 @@ class tq extends S.A {
                 (this._cleanupSocket(),
                 (this._mediaSessionId = null),
                 null != n &&
-                    ((this._rtcConnectionId = (0, T.A)()),
+                    ((this._rtcConnectionId = (0, m.A)()),
                     O.h.dispatch({ type: "RTC_CONNECTION_UPDATE_ID", connection: this }))),
             null == this.endpoint)
         )
@@ -3871,7 +3871,7 @@ class tq extends S.A {
                 ...this._getAnalyticsProperties(),
                 app_hardware_acceleration_enabled: eN.A.getAppHardwareAccelerationEnabled(),
                 media_session_id: this.getMediaSessionId(),
-                guild_region: em.A.getRegion(this.hostname),
+                guild_region: eT.A.getRegion(this.hostname),
                 hostname: this.hostname,
                 hardware_enabled: eI.Ay.getHardwareEncoding(),
             };
@@ -3980,7 +3980,7 @@ class tq extends S.A {
     }
     _trackVoiceDisconnect(e) {
         let { reason: t, reconnect: n, duration: i, sfuMigration: r, sfuEndpoint: a, sfuTrailingGapMs: s } = e,
-            l = em.A.shouldIncludePreferredRegion() ? em.A.getPreferredRegion() : null,
+            l = eT.A.shouldIncludePreferredRegion() ? eT.A.getPreferredRegion() : null,
             o = eI.Ay.getSettings(),
             d = eh.A.getChannel(this.channelId),
             c = $.A.getConnectionStats(this.getMediaEngineConnectionId())?.stats.rtp.outbound.find(
@@ -4114,7 +4114,7 @@ class tq extends S.A {
             this._voiceQuality?.stop(),
             this._voiceQuality?.removeAllListeners(),
             this._resetPerConnectionAnalyticsState(),
-            (this._rtcConnectionId = (0, T.A)()),
+            (this._rtcConnectionId = (0, m.A)()),
             O.h.dispatch({ type: "RTC_CONNECTION_UPDATE_ID", connection: this }),
             (this._sfuFragmentStartTime = 0),
             (this._sfuFragmentStatsAtLoss = null),
@@ -4411,7 +4411,7 @@ class tq extends S.A {
             }),
             u.on(N.yq.Error, (e) => {
                 if (n !== this._socket) return;
-                let t = em.A.shouldIncludePreferredRegion() ? em.A.getPreferredRegion() : null;
+                let t = eT.A.shouldIncludePreferredRegion() ? eT.A.getPreferredRegion() : null;
                 (this.logger.error(`Error occurred while connecting to RTC server: ${e}`),
                     eS.default.track(ew.HAw.VOICE_CONNECTION_FAILURE, {
                         ...this._getAnalyticsProperties(),
@@ -4746,7 +4746,7 @@ class tq extends S.A {
                     sender_user_id: e,
                     reason: "User disconnected",
                     participant_type: "receiver",
-                    guild_region: em.A.getRegion(this.hostname),
+                    guild_region: eT.A.getRegion(this.hostname),
                     hostname: this.hostname,
                     hardware_enabled: eI.Ay.getHardwareEncoding(),
                     ...n,
@@ -4783,7 +4783,7 @@ class tq extends S.A {
     _trackVoiceConnectionSuccess(e) {
         if (this._voiceConnectionSuccessTracked || this.state !== ew.S7L.RTC_CONNECTED || !this._hasCodecs) return;
         this._voiceConnectionSuccessTracked = !0;
-        let t = em.A.shouldIncludePreferredRegion() ? em.A.getPreferredRegion() : null,
+        let t = eT.A.shouldIncludePreferredRegion() ? eT.A.getPreferredRegion() : null,
             n = 1 === this._connectCount,
             i = eI.Ay.getSettings(),
             r = this._getAnalyticsProperties(),

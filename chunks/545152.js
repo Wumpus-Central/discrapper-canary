@@ -15,8 +15,8 @@ var i = n(284009),
     f = n(7584),
     I = n(706727),
     p = n(743738),
-    T = n(409481),
-    m = n(963852),
+    m = n(409481),
+    T = n(963852),
     g = n(195880),
     S = n(472456),
     N = n(773669),
@@ -50,13 +50,13 @@ async function B(e) {
     } = e;
     if (null == i.channel) return;
     let p = U.A.getSource(i.channel.id) ?? I,
-        T = U.A.getCommandOrigin(i.channel.id) ?? d;
+        m = U.A.getCommandOrigin(i.channel.id) ?? d;
     (null == i.autocomplete &&
-        s.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: T }),
+        s.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: m }),
         await S.A.unarchiveThreadIfNecessary(i.channel.id));
-    let m = [],
+    let T = [],
         g = [],
-        C = (0, G.Qr)(T);
+        C = (0, G.Qr)(m);
     if (null != t.options)
         for (let e of t.options) {
             let t;
@@ -74,7 +74,7 @@ async function B(e) {
                 )
                     continue;
                 (r()(null != i.autocomplete || null != t, `Option "${e.name}" expects a value`),
-                    m.push({ type: e.type, name: e.name, value: t, focused: a }));
+                    T.push({ type: e.type, name: e.name, value: t, focused: a }));
                 continue;
             }
             if (e.type === c.n4.ATTACHMENT) {
@@ -82,7 +82,7 @@ async function B(e) {
                 let t = O.A.getUpload(i.channel.id, e.name, C);
                 if (null == t) continue;
                 let n = g.length;
-                (g.push(t), m.push({ type: e.type, name: e.name, value: n, focused: a }));
+                (g.push(t), T.push({ type: e.type, name: e.name, value: n, focused: a }));
                 continue;
             }
             let s = P.filterEmpty(n[e.name]);
@@ -172,12 +172,12 @@ async function B(e) {
             }
             ("" !== t || null == i.autocomplete || a) &&
                 (r()(null != i.autocomplete || null != t, `Unexpected value for option "${e.name}"`),
-                null != t && m.push({ type: e.type, name: e.name, value: t, focused: a }));
+                null != t && T.push({ type: e.type, name: e.name, value: t, focused: a }));
         }
     if (null != t.subCommandPath)
         for (let e = t.subCommandPath.length - 1; e >= 0; e -= 1) {
             let { name: n, type: i } = t.subCommandPath[e];
-            m = [{ type: i, name: n, options: m }];
+            T = [{ type: i, name: n, options: T }];
         }
     if (null != t.execute)
         return (
@@ -185,10 +185,10 @@ async function B(e) {
                 command_id: t.id,
                 application_id: t.applicationId,
                 command_type: t.type,
-                location: Y(T),
+                location: Y(m),
                 source: p,
             }),
-            t.execute(m, i)
+            t.execute(T, i)
         );
     if (
         t.inputType === w.y$.BUILT_IN ||
@@ -202,7 +202,7 @@ async function B(e) {
         guild_id: t.guildId,
         name: t.rootCommand?.name ?? t.untranslatedName,
         type: t.type,
-        options: m,
+        options: T,
         application_command: t.rootCommand,
     };
     (null != a && (R.target_id = a),
@@ -233,7 +233,7 @@ async function B(e) {
                               .filter(y.Vq),
                       )).length > 0 && s.h.dispatch({ type: "EMOJI_TRACK_USAGE", emojiUsed: e });
                   },
-                  analytics_location: Y(T),
+                  analytics_location: Y(m),
                   sectionName: u,
                   source: p,
                   interactionLifecycleOptions: await _(t, i, R),
@@ -307,7 +307,7 @@ async function W(e, t, n) {
             await d.wz(i.botId);
         } catch {}
     let o = {
-        ...(0, m.Ay)({
+        ...(0, T.Ay)({
             channelId: t.channel.id,
             content: "",
             type: n.type === c.kc.CHAT ? x.lAJ.CHAT_INPUT_COMMAND : x.lAJ.CONTEXT_MENU_COMMAND,
@@ -319,7 +319,7 @@ async function W(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: a.G.APPLICATION_COMMAND,
-            user: (0, m.Vi)(R.default.getCurrentUser()),
+            user: (0, T.Vi)(R.default.getCurrentUser()),
         },
         interaction_data: n,
     };
@@ -380,7 +380,7 @@ async function K(e, t) {
     return { totalSize: n, largestUploadedFileSize: i };
 }
 async function $(e, t, n, i) {
-    let r = (0, T.C)((0, L.o2)(n)),
+    let r = (0, m.C)((0, L.o2)(n)),
         a = (0, D.jS)({ location: "executeCommand.stageAttachments" });
     function s(e) {
         (i?.(r, e), I.C1(t, x.t02.ENTITY_TOO_LARGE, F.intl.formatToPlainString(F.t.fxEKdS, { maxSize: (0, L.Hb)(r) })));

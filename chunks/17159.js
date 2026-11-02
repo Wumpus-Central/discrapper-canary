@@ -26,8 +26,8 @@ async function I() {
     }
 }
 var p = n(869968),
-    T = n(10392);
-class m extends s.A {
+    m = n(10392);
+class T extends s.A {
     _premiumPaymentModalCloseResolve = null;
     _premiumPaymentModalCloseReject = null;
     _initialize() {
@@ -65,14 +65,14 @@ class m extends s.A {
         let e = c.default.getCurrentUser();
         if (null != e && e.verified) {
             let t = (u.A.canFractionalPremiumUserUseOffer() || !(0, _.TW)(e)) && !u.A.isFetchingOffer();
-            await (0, T._D)("PremiumManager", t);
+            await (0, m._D)("PremiumManager", t);
         }
         a.h.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
     };
     _handlePaymentSourceChange = () => {
         !(0, _.TW)(c.default.getCurrentUser()) &&
             Object.keys(u.A.getState().userDiscountOffers).length > 0 &&
-            (0, T._D)("UserOfferStore", !0);
+            (0, m._D)("UserOfferStore", !0);
     };
     _maybeFetchCheckoutRecovery = async () => {
         let e = c.default.getCurrentUser();
@@ -125,4 +125,4 @@ class m extends s.A {
         });
     }
 }
-let g = new m();
+let g = new T();

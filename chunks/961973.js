@@ -1,6 +1,6 @@
 (n.d(t, {
     $Y: () => S,
-    A2: () => m,
+    A2: () => T,
     G4: () => D,
     H_: () => G,
     L1: () => N,
@@ -33,8 +33,8 @@ var i = n(665260),
     f = n(539916),
     I = n(652215),
     p = n(340837);
-let T = new Date(16824888e5);
-function m(e) {
+let m = new Date(16824888e5);
+function T(e) {
     return (0, r.bG)([c.A, u.A], () => {
         let t = c.A.getGuild(e),
             n = !!t?.features.has(I.GuildFeatures.COMMUNITY),
@@ -56,7 +56,7 @@ function S(e, t) {
         !e.features.has(I.GuildFeatures.GUILD_ONBOARDING) ||
         null == t ||
         null == t.joinedAt ||
-        new Date(t.joinedAt) < T
+        new Date(t.joinedAt) < m
     )
         return !1;
     let n = t.flags ?? 0;

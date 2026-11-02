@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(723702),
     I = n(953384),
     p = n(952818),
-    T = n(765741),
-    m = n(863160);
+    m = n(765741),
+    T = n(863160);
 class g extends o.A {
     intervalId;
     nonGameIntervalId;
@@ -39,7 +39,7 @@ class g extends o.A {
     updateSocialSdkGames() {
         let e = {};
         for (let t of p.Ay.getRunningGames()) {
-            let n = c.A.getApplication(T.A.getApplicationIdForPID(t.pid))?.getCanonicalGameId();
+            let n = c.A.getApplication(m.A.getApplicationIdForPID(t.pid))?.getCanonicalGameId();
             null != n && (e[t.pid] = n);
         }
         r().isEqual(e, this.canonicalGameIdByPid) ||
@@ -48,7 +48,7 @@ class g extends o.A {
     }
     fetchRunningGameRecords(e) {
         let t = e.games
-            .flatMap((e) => (null != e.processGame ? [e, (0, m.Un)(e)] : [e]))
+            .flatMap((e) => (null != e.processGame ? [e, (0, T.Un)(e)] : [e]))
             .map((e) => e.id ?? _.A.findGame(e)?.id)
             .filter(h.Vq);
         0 !== t.length && u.I.fetchMany(...t.map((e) => [e]));
@@ -56,7 +56,7 @@ class g extends o.A {
     prefetchSdkApplications() {
         let e = new Set();
         for (let t of p.Ay.getRunningGames()) {
-            let n = T.A.getApplicationIdForPID(t.pid);
+            let n = m.A.getApplicationIdForPID(t.pid);
             null != n && e.add(n);
         }
         if (0 === e.size) return;

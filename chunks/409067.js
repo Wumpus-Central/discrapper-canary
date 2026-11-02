@@ -31,8 +31,8 @@ function h(e) {
             o = [],
             c = new Map(),
             p = new Map(),
-            T = new Map(),
-            m = { allClips: 0, autoClips: 0, favorites: 0 },
+            m = new Map(),
+            T = { allClips: 0, autoClips: 0, favorites: 0 },
             g = new Map(),
             S = { allClips: 0, autoClips: 0, favorites: 0 };
         for (let e of s) {
@@ -90,9 +90,9 @@ function h(e) {
                     }
                     return !0;
                 })(e, h) && o.push(e),
-                (m.allClips += 1),
-                "auto" === e.clipMethod && (m.autoClips += 1),
-                e.isFavorite && (m.favorites += 1),
+                (T.allClips += 1),
+                "auto" === e.clipMethod && (T.autoClips += 1),
+                e.isFavorite && (T.favorites += 1),
                 l.has(e.id) &&
                     ((S.allClips += 1),
                     "auto" === e.clipMethod && (S.autoClips += 1),
@@ -107,7 +107,7 @@ function h(e) {
             let t = e.decision?.signal?.type === u.Gy.DISTRIBUTED ? e.decision.signal : null;
             if (null != t && t.remoteTriggerUserId !== I) {
                 let e = t.remoteTriggerUserId;
-                T.set(e, (T.get(e) ?? 0) + 1);
+                m.set(e, (m.get(e) ?? 0) + 1);
             }
         }
         let N = A(o, h.sortOrder),
@@ -139,15 +139,15 @@ function h(e) {
                         i = p.get(t.key) ?? 0;
                     return n !== i ? i - n : e.key.localeCompare(t.key);
                 }),
-            D = Array.from(T.entries())
+            D = Array.from(m.entries())
                 .map((e) => {
                     let [t, n] = e,
                         i = h.clippedWithFacet === t;
                     return { key: t, name: t, count: i ? C : n, isSelected: i, isDisabled: !1, newCount: 0 };
                 })
                 .sort((e, t) => {
-                    let n = T.get(e.key) ?? 0,
-                        i = T.get(t.key) ?? 0;
+                    let n = m.get(e.key) ?? 0,
+                        i = m.get(t.key) ?? 0;
                     return n !== i ? i - n : e.key.localeCompare(t.key);
                 }),
             v = !O && !R;
@@ -158,9 +158,9 @@ function h(e) {
             participantsFacet: y,
             distributedClipInitiatorsFacet: D,
             mainLinkCounts: {
-                allClips: v && h.activeMainLink === d.oH.ALL_CLIPS ? C : m.allClips,
-                autoClips: v && h.activeMainLink === d.oH.AUTO_CLIPS ? C : m.autoClips,
-                favorites: v && h.activeMainLink === d.oH.FAVORITES ? C : m.favorites,
+                allClips: v && h.activeMainLink === d.oH.ALL_CLIPS ? C : T.allClips,
+                autoClips: v && h.activeMainLink === d.oH.AUTO_CLIPS ? C : T.autoClips,
+                favorites: v && h.activeMainLink === d.oH.FAVORITES ? C : T.favorites,
             },
             mainLinkNewCounts: S,
         };

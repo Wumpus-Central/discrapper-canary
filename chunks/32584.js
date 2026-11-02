@@ -57,7 +57,7 @@ var A = n(5463),
     f = n(652215),
     I = n(644434);
 let p = "migrated",
-    T = {
+    m = {
         [f.uss.GUILDS]: {
             resizeX: !1,
             resizeY: !0,
@@ -255,14 +255,14 @@ let p = "migrated",
             version: 4,
         },
     };
-function m(e, t) {
+function T(e, t) {
     let n = r[e];
     if (null == n) return !1;
     let a = i[n.layoutId];
     return null != a && t(n, a);
 }
 function g(e) {
-    let t = T[e];
+    let t = m[e];
     if (null != t) return t.defaultSettings;
 }
 class S extends o.Ay.PersistedStore {
@@ -373,7 +373,7 @@ class S extends o.Ay.PersistedStore {
         } else ((i = {}), (r = {}));
         let a = !1,
             o = [];
-        (s().forEach(T, (e, t) => {
+        (s().forEach(m, (e, t) => {
             e.layoutPolicy === h.X.REQUIRED && o.push(t);
         }),
             s().forEach(i, (e, t) => {
@@ -381,7 +381,7 @@ class S extends o.Ay.PersistedStore {
                     s = !1;
                 for (let i of o) {
                     let o = n.find((e) => e.type === i);
-                    if (null != o || T[i].version !== e.version) continue;
+                    if (null != o || m[i].version !== e.version) continue;
                     s = a = !0;
                     let d = (0, l.A)(),
                         c = g(i);
@@ -446,7 +446,7 @@ class S extends o.Ay.PersistedStore {
         );
     }
     getWidgetConfig(e) {
-        return T[e];
+        return m[e];
     }
     getWidgetDefaultSettings(e) {
         return g(e);
@@ -462,7 +462,7 @@ class S extends o.Ay.PersistedStore {
         return Object.values(r).filter((n) => n.type === e && n.layoutId === t);
     }
     getRegisteredWidgets() {
-        return T;
+        return m;
     }
     getDefaultLayout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -511,7 +511,7 @@ let N = new S(c.h, {
     },
     LAYOUT_SET_PINNED: function (e) {
         let { widgetId: t, pinned: n } = e;
-        return m(t, (e, t) => {
+        return T(t, (e, t) => {
             var i, a;
             ((i = e), (a = n), (r = { ...r, [i.id]: i.set("pinned", a ?? !i.pinned) }));
         });
@@ -527,7 +527,7 @@ let N = new S(c.h, {
     },
     LAYOUT_UPDATE_WIDGET: function (e) {
         let { widgetId: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
-        return m(t, (e, t) =>
+        return T(t, (e, t) =>
             (function (e) {
                 let { widget: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
                 if (
@@ -542,7 +542,7 @@ let N = new S(c.h, {
                     }),
                     null != l)
                 ) {
-                    let e = T[t.type];
+                    let e = m[t.type];
                     null != e && (e.defaultSettings.size = { fixed: e.defaultSettings.size.fixed, ...l });
                 }
             })({ widget: e, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l }),
@@ -550,7 +550,7 @@ let N = new S(c.h, {
     },
     LAYOUT_SET_TOP_WIDGET: function (e) {
         let { widgetId: t } = e;
-        return m(t, (e, t) =>
+        return T(t, (e, t) =>
             (function (e, t) {
                 let n,
                     i =
@@ -611,19 +611,19 @@ let N = new S(c.h, {
     },
     LAYOUT_SET_WIDGET_META: function (e) {
         let { widgetId: t, meta: n } = e;
-        return m(t, (e, t) => {
+        return T(t, (e, t) => {
             var i, a;
             ((i = e), (a = n), (r = { ...r, [i.id]: i.merge({ meta: { ...(i.meta ?? {}), ...a } }) }));
         });
     },
     LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: function (e) {
         let { widgetId: t } = e;
-        return m(t, (e, t) => {
+        return T(t, (e, t) => {
             r = { ...r, [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) };
         });
     },
     LAYOUT_SET_DEFAULT_CONFIG: function (e) {
         let { widgetType: t, defaultConfig: n } = e;
-        T[t] = { ...T[t], ...n };
+        m[t] = { ...m[t], ...n };
     },
 });

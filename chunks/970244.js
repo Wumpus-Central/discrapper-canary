@@ -1,4 +1,4 @@
-(n.d(t, { CI: () => S, XM: () => I, e0: () => g, fK: () => T, s: () => m, tu: () => p }), n(938796), n(321073));
+(n.d(t, { CI: () => S, XM: () => I, e0: () => g, fK: () => m, s: () => T, tu: () => p }), n(938796), n(321073));
 var i = n(477900),
     r = n(477782),
     a = n(192308),
@@ -28,14 +28,14 @@ async function p(e) {
         (0, c.kM)(e.message);
     }
 }
-async function T(e) {
+async function m(e) {
     try {
         (await (0, d.fK)(e), (0, c.Ki)());
     } catch (e) {
         (0, c.Do)(e.message);
     }
 }
-function m(e) {
+function T(e) {
     let { channel: t } = e,
         n = (0, _.FF)().map((e) =>
             (0, i.jsx)(

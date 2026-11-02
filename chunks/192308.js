@@ -8,7 +8,7 @@
         getInteractingModalContext: () => _,
         getOpenModalKeys: () => S,
         hasAnyModalOpen: () => g,
-        hasAnyModalOpenSelector: () => m,
+        hasAnyModalOpenSelector: () => T,
         hasModalOpen: () => v,
         hasModalOpenSelector: () => D,
         hasModalOpenedSince: () => N,
@@ -16,7 +16,7 @@
         openModal: () => f,
         openModalLazy: () => h,
         subscribeToModalChanges: () => C,
-        updateModal: () => T,
+        updateModal: () => m,
         useHasAnyModalOpen: () => O,
         useHasModalOpen: () => b,
         useIsModalAtTop: () => R,
@@ -60,7 +60,7 @@ async function h(e) {
         o = await e();
     return (
         clearTimeout(l),
-        s ? v(a, n) && T(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
+        s ? v(a, n) && m(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
         a
     );
 }
@@ -178,7 +178,7 @@ function p(e) {
             e?.onCloseCallback?.();
         }));
 }
-function T(e, t, n, i) {
+function m(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _();
     (0, s.r)(() => {
         A.setState((a) =>
@@ -195,7 +195,7 @@ function T(e, t, n, i) {
         );
     });
 }
-function m(e) {
+function T(e) {
     for (let t of u) {
         let n = e[t];
         if (null != n && n.length > 0) return !0;
@@ -203,7 +203,7 @@ function m(e) {
     return !1;
 }
 function g() {
-    return m(A.getState());
+    return T(A.getState());
 }
 function S() {
     let e = A.getState(),
@@ -220,7 +220,7 @@ function C(e) {
     return A.subscribe(e);
 }
 function O() {
-    return m(A());
+    return T(A());
 }
 function R(e) {
     let { default: t, popout: n } = A();

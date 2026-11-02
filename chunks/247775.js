@@ -5,7 +5,7 @@ let i, r;
         getAnalyticsToken: () => S,
         getToken: () => N,
         hideToken: () => L,
-        init: () => m,
+        init: () => T,
         removeAnalyticsToken: () => v,
         removeToken: () => D,
         setAnalyticsToken: () => C,
@@ -44,10 +44,10 @@ function p(e) {
           ? { decryptedToken: c.decryptString(e.substring(l.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
-function T(e) {
+function m(e) {
     return c?.isEncryptionAvailable() && !e.startsWith(l) ? `${l}${c.encryptString(e)}` : e;
 }
-function m() {
+function T() {
     if (f) return;
     ((r = a.w.get(s.il)), (A = a.w.get(s.zy) || {}));
     let { decryptedToken: e, wasEncrypted: t } = p(r);
@@ -68,13 +68,13 @@ function m() {
         (f = !0));
 }
 function g() {
-    f || m();
+    f || T();
 }
 function S() {
     return N(o);
 }
 function N(e) {
-    return (m(), null != e) ? E[e] : i;
+    return (T(), null != e) ? E[e] : i;
 }
 function C(e) {
     null == e ? D(o) : (g(), R(e, o));
@@ -107,11 +107,11 @@ function v() {
 function b() {
     (g(),
         c?.isEncryptionAvailable()
-            ? (null != i && (r = T(i)),
+            ? (null != i && (r = m(i)),
               (A = d(
                   Object.entries(E).map((e) => {
                       let [t, n] = e;
-                      return [t, T(n)];
+                      return [t, m(n)];
                   }),
               )),
               (_ = !0))

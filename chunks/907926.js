@@ -15,12 +15,12 @@ var i = n(941426),
     f = n(652896),
     I = n(476697),
     p = n(753070);
-let T = new i.Vy("AutoQualityStreamingManager"),
-    m = 0;
+let m = new i.Vy("AutoQualityStreamingManager"),
+    T = 0;
 class g extends s.A {
     actions = { MEDIA_ENGINE_CONNECTION_STATS: this.handleStats, POST_CONNECTION_OPEN: this.handlePostConnectionOpen };
     handleStats() {
-        if ((m += 1) % 10 != 0) return;
+        if ((T += 1) % 10 != 0) return;
         let e = d.A.getCurrentUserActiveStream();
         if (null == e) return;
         let t = _.A.getRTCConnection((0, f._z)(e)),
@@ -29,7 +29,7 @@ class g extends s.A {
         let i = o.A.getState();
         if (i.preset !== p.jQ.PRESET_AUTO) return;
         if (d.A.getStreamerActiveStreamMetadata()?.id != null)
-            return void T.info("Skipping auto quality checker for game stream.");
+            return void m.info("Skipping auto quality checker for game stream.");
         let s = l.A.getAccumulatedPerformanceStats(t.getMediaEngineConnectionId(), e.ownerId, "long"),
             h = (t.analyticsContext.getDuration() ?? 30) >= 30 * A.A.Millis.SECOND ? 30 : 15;
         if (null == s || s.numDatapoints < h) return;
@@ -40,14 +40,14 @@ class g extends s.A {
             L = null;
         if (
             (s.entropy < 10 && (i.resolution !== N || i.fps !== C)
-                ? (T.info("Low entropy average, switching to screenshare preset."),
+                ? (m.info("Low entropy average, switching to screenshare preset."),
                   (L = {
                       qualityOptions: { preset: p.jQ.PRESET_AUTO, resolution: N, frameRate: C },
                       context: r.x.STREAM,
                   }))
                 : s.entropy > 20 &&
                   (i.resolution !== O || i.fps !== R) &&
-                  (T.info("High entropy average, switching to video preset."),
+                  (m.info("High entropy average, switching to video preset."),
                   (L = {
                       qualityOptions: { preset: p.jQ.PRESET_AUTO, resolution: O, frameRate: R },
                       context: r.x.STREAM,

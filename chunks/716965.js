@@ -29,8 +29,8 @@ async function c(e) {
             guildId: f,
             channelId: I,
             integrationType: p,
-            connectedAccountProvider: T,
-            nonce: m,
+            connectedAccountProvider: m,
+            nonce: T,
         } = e;
     return (
         await r.Bo.post({
@@ -43,7 +43,7 @@ async function c(e) {
                 code_challenge_method: E,
                 scope: d.join(" "),
                 state: A,
-                nonce: m,
+                nonce: T,
             },
             body: {
                 guild_id: f,
@@ -52,7 +52,7 @@ async function c(e) {
                 permissions: h,
                 authorize: i,
                 integration_type: p,
-                connected_account_provider: T,
+                connected_account_provider: m,
                 location_context:
                     ((t = l.Ay.getChannelId()),
                     (n = s.A.getBasicChannel(t)),

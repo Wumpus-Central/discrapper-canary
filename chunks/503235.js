@@ -5,7 +5,7 @@
     cq: () => h,
     hC: () => N,
     hw: () => f,
-    p8: () => T,
+    p8: () => m,
     v2: () => C,
     v7: () => E,
 }),
@@ -70,7 +70,7 @@ function p(e) {
             return !0;
     }
 }
-function T(e) {
+function m(e) {
     let t = new Map(e.map((e, t) => [e, t]));
     function n(n) {
         let { rarity: i } = n;
@@ -78,7 +78,7 @@ function T(e) {
     }
     return (e, t) => n(e) - n(t);
 }
-let m = {
+let T = {
         [r.V.OUTFIT]: u.default.kcAWvo,
         [r.V.HAT]: u.default.RYvRmE,
         [r.V.WEARABLE]: u.default.lbzScK,
@@ -99,7 +99,7 @@ function S(e) {
 function N(e) {
     let { trait: t, rarity: n } = e;
     if (null == n) {
-        let n = m[t];
+        let n = T[t];
         return S(e) && null != n ? _.intl.string(n) : void 0;
     }
     if (n === s.K.DEFAULT) return _.intl.string(u.default["4aaADG"]);

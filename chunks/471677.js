@@ -79,17 +79,17 @@ function h(e, t) {
         I = null != l && null != s ? { query: s, results: l } : null;
     null == a ? null != h && f(null) : null != I && I.results !== h?.results && f(I);
     let p = null != a ? (I ?? h) : null,
-        T = p?.query ?? null,
-        m = p?.results ?? null,
+        m = p?.query ?? null,
+        T = p?.results ?? null,
         [g] = i.useState(() => new u.vn(n, r));
     return (
         i.useEffect(() => {
             g.onQuery(a);
         }, [g, a]),
         i.useEffect(() => {
-            null != T && null != m && g.onResults(T, m);
-        }, [g, T, m]),
+            null != m && null != T && g.onResults(m, T);
+        }, [g, m, T]),
         i.useEffect(() => g.end, [g]),
-        { results: m, isLoading: c || s !== a, error: s === a ? d : null, onSelect: g.select, endSession: g.end }
+        { results: T, isLoading: c || s !== a, error: s === a ? d : null, onSelect: g.select, endSession: g.end }
     );
 }

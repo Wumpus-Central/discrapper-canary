@@ -8,12 +8,12 @@ n.d(t, {
     R0: () => A,
     Us: () => u,
     VX: () => h,
-    WV: () => T,
+    WV: () => m,
     ig: () => o,
     o: () => _,
     tO: () => N,
     v: () => d,
-    wz: () => m,
+    wz: () => T,
 });
 var i,
     r,
@@ -46,8 +46,8 @@ let A = new Set(["hubs"]),
     f = "q",
     I = "c",
     p = "l",
-    T = 10 * s.A.Millis.MINUTE;
-var m =
+    m = 10 * s.A.Millis.MINUTE;
+var T =
     (((a = {})[(a.Clans = -3)] = "Clans"),
     (a[(a.Hub = u)] = "Hub"),
     (a[(a.Communities = c)] = "Communities"),

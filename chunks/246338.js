@@ -4,9 +4,9 @@ n.d(t, {
     Ot: () => I,
     Q9: () => C,
     Ux: () => _,
-    XF: () => m,
+    XF: () => T,
     Xs: () => R,
-    dd: () => T,
+    dd: () => m,
     i8: () => p,
     n5: () => h,
     oX: () => g,
@@ -51,23 +51,23 @@ function p(e, t) {
     for (let { channel: n } of a.Ay.getChannels(e)[a.I6]) if (f(n) === t) return n.id;
     return null;
 }
-function T(e, t) {
+function m(e, t) {
     return (0, d.L0)({ guildId: e.id, location: t });
 }
-function m(e, t) {
-    return e.some((e) => T(e, t));
+function T(e, t) {
+    return e.some((e) => m(e, t));
 }
 function g(e) {
     var t;
     let n = o.A.getGuildId(),
         i = null == n ? null : s.A.getGuild(n);
-    return null != i && T(i, e)
+    return null != i && m(i, e)
         ? i.id
-        : (((t = s.A.getGuildsArray()), t.filter((t) => T(t, e)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id))))[0]
+        : (((t = s.A.getGuildsArray()), t.filter((t) => m(t, e)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id))))[0]
               ?.id ?? null);
 }
 function S(e, t) {
-    return T(e, t);
+    return m(e, t);
 }
 function N(e, t) {
     return (

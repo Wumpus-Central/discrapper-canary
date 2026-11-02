@@ -1,99 +1,99 @@
-n.d(t, { Gl: () => S, mK: () => g, LK: () => O, DU: () => F, W4: () => N });
-var r = n(582128),
-    u = n(17928),
-    l = n(964167),
-    i = n(587895),
-    a = n(197184),
-    c = n(625180),
-    o = n(91242),
-    A = n(326843),
-    d = n(409397),
-    f = n(869146),
-    s = n(976860),
-    E = n(964404),
-    p = n(309010),
-    I = n(111534),
-    P = n(754027),
-    y = n(260498),
-    _ = n(566870),
-    L = n(333807),
-    R = n(165610);
-let C = 588245 != n.j ? [o.A, E.Ay, p.Ay, i.A, y.Ay, I.A, f.A] : null;
-function g(e, t) {
-    let n =
-        (0, P.Q5)(e.surface) && (0, L.A)(e.applicationId) && I.A.getBuilderPreviewApplicationId() !== e.applicationId;
+r.d(t, { Gl: () => k, mK: () => M, LK: () => b, DU: () => Q, W4: () => w });
+var n = r(582128),
+    u = r(17928),
+    a = r(964167),
+    l = r(587895),
+    c = r(197184),
+    i = r(625180),
+    o = r(91242),
+    d = r(326843),
+    A = r(409397),
+    f = r(869146),
+    y = r(976860),
+    s = r(964404),
+    p = r(309010),
+    P = r(111534),
+    m = r(754027),
+    I = r(260498),
+    h = r(566870),
+    F = r(333807),
+    g = r(165610);
+let E = 588245 != r.j ? [o.A, s.Ay, p.Ay, l.A, I.Ay, P.A, f.A] : null;
+function M(e, t) {
+    let r =
+        (0, m.Q5)(e.surface) && (0, F.A)(e.applicationId) && P.A.getBuilderPreviewApplicationId() !== e.applicationId;
     return (
-        (!!n || !!(0, _.A)(e)) &&
-        !!(0, A.A)(e, E.Ay) &&
+        (!!r || !!(0, h.A)(e)) &&
+        !!(0, d.A)(e, s.Ay) &&
         o.A.getMainFrame()?.id !== e.id &&
-        null == (0, d.A)(e) &&
-        (n || t || p.Ay.getChannelId() !== (0, a.A)(e.surface))
+        null == (0, A.A)(e) &&
+        (r || t || p.Ay.getChannelId() !== (0, c.A)(e.surface))
     );
 }
-function h(e) {
-    return (0, s.JK)().listen(e);
+function v(e) {
+    return (0, y.JK)().listen(e);
 }
-function m() {
-    return r.useSyncExternalStore(h, l.rm);
+function C() {
+    return n.useSyncExternalStore(v, a.rm);
 }
-function F() {
-    let e = m();
+function Q() {
+    let e = C();
     return (0, u.yK)(
-        C,
+        E,
         () =>
             o.A.getAllFrames()
-                .filter((t) => g(t, e))
+                .filter((t) => M(t, e))
                 .map((e) => e.id),
         [e],
     );
 }
-function O(e) {
-    let t = m();
-    return (0, u.bG)(C, () => {
-        let n = o.A.getFrame(e);
-        return null != n && g(n, t);
+function b(e) {
+    let t = C();
+    return (0, u.bG)(E, () => {
+        let r = o.A.getFrame(e);
+        return null != r && M(r, t);
     }, [e, t]);
 }
-function S(e) {
+function k(e) {
     return (0, u.bG)(
         [o.A],
         () => {
             var t;
-            let n;
+            let r;
             return (
                 (t = o.A.getFrame(e)),
-                null != (n = (0, R.ny)(t)) &&
-                    n.data.pictureInPictureInteractive &&
-                    n.data.layoutMode === R.y0.PIP &&
-                    !(0, P.Q5)(n.surface)
+                null != (r = (0, g.ny)(t)) &&
+                    r.data.pictureInPictureInteractive &&
+                    r.data.layoutMode === g.y0.PIP &&
+                    !(0, m.Q5)(r.surface)
             );
         },
         [e],
     );
 }
-function T(e) {
-    let t = (0, R.ny)(o.A.getFrame(e));
+function K(e) {
+    let t = (0, g.ny)(o.A.getFrame(e));
     null == t ||
-        (0, P.Q5)(t.surface) ||
-        t.data.layoutMode === R.y0.PIP ||
-        c.A.updateFrameLayoutMode({ frameId: e, layoutMode: R.y0.PIP });
+        (0, m.Q5)(t.surface) ||
+        t.data.layoutMode === g.y0.PIP ||
+        i.A.updateFrameLayoutMode({ frameId: e, layoutMode: g.y0.PIP });
 }
-function M(e) {
-    let t = (0, R.ny)(o.A.getFrame(e));
+function L(e) {
+    let t = (0, g.ny)(o.A.getFrame(e));
     null == t ||
-        (0, P.Q5)(t.surface) ||
-        t.data.layoutMode !== R.y0.PIP ||
-        c.A.updateFrameLayoutMode({ frameId: e, layoutMode: R.y0.FOCUSED });
+        (0, m.Q5)(t.surface) ||
+        t.data.layoutMode !== g.y0.PIP ||
+        i.A.updateFrameLayoutMode({ frameId: e, layoutMode: g.y0.FOCUSED });
 }
-function N(e) {
-    let t = r.useRef([]);
-    (r.useEffect(() => {
-        let n = t.current;
-        (n.filter((t) => !e.includes(t)).forEach(M), e.filter((e) => !n.includes(e)).forEach(T), (t.current = e));
+function w(e) {
+    let t = n.useRef([]);
+    (n.useEffect(() => {
+        let r = t.current;
+        (r.filter((t) => !e.includes(t)).forEach(L), e.filter((e) => !r.includes(e)).forEach(K), (t.current = e));
     }, [e]),
-        r.useEffect(
+        n.useEffect(
             () => () => {
-                (t.current.forEach(M), (t.current = []));
+                (t.current.forEach(L), (t.current = []));
             },
             [],
         ));

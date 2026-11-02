@@ -15,8 +15,8 @@ let A = {},
     f = {},
     I = {},
     p = !1,
-    T = !1,
     m = !1,
+    T = !1,
     g = new Map();
 function S(e) {
     return e.toLowerCase();
@@ -48,7 +48,7 @@ class C extends u.Ay.Store {
         return p;
     }
     canRevokeFriendInvite() {
-        return null != i && !T && !m;
+        return null != i && !m && !T;
     }
     getReceivedInstallationIdForInviteCode(e) {
         return g.get(S(e));
@@ -56,7 +56,7 @@ class C extends u.Ay.Store {
 }
 let O = new C(_.h, {
     CONNECTION_OPEN: function () {
-        ((A = {}), (h = {}), (f = {}), (I = {}), (i = null), (T = !1), (m = !1), (p = !1));
+        ((A = {}), (h = {}), (f = {}), (I = {}), (i = null), (m = !1), (T = !1), (p = !1));
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
@@ -65,10 +65,10 @@ let O = new C(_.h, {
     FRIEND_INVITE_CREATE_SUCCESS: function (e) {
         ((I[e.invite.code] = E.A.createFromServer(e.invite)),
             (i = a()(l()(d()(Object.values(I), "createdAt"))) ?? null),
-            (m = !1));
+            (T = !1));
     },
     FRIEND_INVITE_CREATE_FAILURE: function () {
-        m = !1;
+        T = !1;
     },
     FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
         (null != e.invites &&
@@ -76,7 +76,7 @@ let O = new C(_.h, {
                 null != I[e.code] && delete I[e.code];
             }),
             (i = a()(l()(d()(Object.values(I), "createdAt"))) ?? null),
-            (T = !1));
+            (m = !1));
     },
     INSTANT_INVITE_CREATE_SUCCESS: function (e) {
         let { channelId: t, invite: n } = e,
@@ -96,10 +96,10 @@ let O = new C(_.h, {
         A[t] = null;
     },
     FRIEND_INVITE_REVOKE_REQUEST: function () {
-        T = !0;
+        m = !0;
     },
     FRIEND_INVITE_CREATE_REQUEST: function () {
-        m = !0;
+        T = !0;
     },
     FRIEND_INVITES_FETCH_REQUEST: function () {
         p = !0;

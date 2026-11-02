@@ -15,10 +15,10 @@ let u = {},
     f = _,
     I = l.XlH.CLOSED,
     p = {};
-function T() {
+function m() {
     ((I = l.XlH.OPEN), (p = {}));
 }
-function m() {
+function T() {
     ((I = l.XlH.CLOSED), (p = {}));
 }
 function g() {
@@ -28,7 +28,7 @@ function S() {
     ((h = {}), (p = {}));
 }
 function N() {
-    (S(), g(), m());
+    (S(), g(), T());
 }
 class C extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
@@ -69,8 +69,8 @@ class C extends r.Ay.Store {
     }
 }
 let O = new C(a.h, {
-    USER_SETTINGS_MODAL_INIT: T,
-    USER_SETTINGS_MODAL_OPEN: T,
+    USER_SETTINGS_MODAL_INIT: m,
+    USER_SETTINGS_MODAL_OPEN: m,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
         if (t !== l.nc_.ACCOUNT) return !1;
@@ -84,7 +84,7 @@ let O = new C(a.h, {
         let { guildId: t } = e;
         ((i = null == t || A.has(t) ? void 0 : t), (p = {}));
     },
-    USER_PROFILE_SETTINGS_CLOSE: m,
+    USER_PROFILE_SETTINGS_CLOSE: T,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: N,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
         ((I = l.XlH.SUBMITTING), (p = {}));

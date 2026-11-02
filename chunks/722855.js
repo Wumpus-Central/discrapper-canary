@@ -15,8 +15,8 @@ var i = n(508602),
     f = n(424743),
     I = n(36149),
     p = n(277861),
-    T = n(652215),
-    m = n(835002);
+    m = n(652215),
+    T = n(835002);
 let g = new l.A("AgeVerificationManager");
 function S(e) {
     let { channelId: t, message: n } = e,
@@ -25,20 +25,20 @@ function S(e) {
     let a = r?.embeds?.[0]?.fields?.find((e) => e.rawName === f.uN.CONTENT_TYPE);
     (a?.rawValue === f.Wv.MANUAL_REVIEW_SUBMITTED && (0, p.xf)(),
         a?.rawValue === f.Wv.ERROR
-            ? (d.A.showFailedToast(m.OB.TIGGER_PAWTECT_ERROR), (0, h.Vh)(h.oQ.ERROR))
+            ? (d.A.showFailedToast(T.OB.TIGGER_PAWTECT_ERROR), (0, h.Vh)(h.oQ.ERROR))
             : a?.rawValue === f.Wv.FAE_FAILED
-              ? (d.A.showFailedToast(m.OB.AGE_VERIFICATION_FAE_FAILED), (0, h.Vh)(h.oQ.FAE_FAILED))
+              ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_FAE_FAILED), (0, h.Vh)(h.oQ.FAE_FAILED))
               : a?.rawValue === f.Wv.ID_FAILED
-                ? (d.A.showFailedToast(m.OB.AGE_VERIFICATION_ID_FAILED), (0, h.Vh)(h.oQ.ID_FAILED))
+                ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_ID_FAILED), (0, h.Vh)(h.oQ.ID_FAILED))
                 : a?.rawValue === f.Wv.UNDERAGE
-                  ? (d.A.showFailedToast(m.OB.AGE_VERIFICATION_UNDERAGE), (0, h.Vh)(h.oQ.UNDERAGE))
+                  ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_UNDERAGE), (0, h.Vh)(h.oQ.UNDERAGE))
                   : a?.rawValue === f.Wv.VERIFIED_ADULT
-                    ? (d.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_ADULT))
+                    ? (d.A.showSuccessToast(T.OB.TIGGER_PAWTECT_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_ADULT))
                     : a?.rawValue === f.Wv.VERIFIED_TEEN &&
-                      (d.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_TEEN)));
+                      (d.A.showSuccessToast(T.OB.TIGGER_PAWTECT_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_TEEN)));
 }
 function N(e) {
-    r.A.fetchMessages({ channelId: e, limit: T.EMb });
+    r.A.fetchMessages({ channelId: e, limit: m.EMb });
 }
 class C extends a.A {
     _previousAgeVerificationStatus = null;
@@ -62,7 +62,7 @@ class C extends a.A {
                     let t;
                     (N(e),
                         (t = u.A.getChannel(e)),
-                        (t?.type === T.rbe.GUILD_FORUM || t?.type === T.rbe.GUILD_MEDIA) && (0, o.kB)(t));
+                        (t?.type === m.rbe.GUILD_FORUM || t?.type === m.rbe.GUILD_MEDIA) && (0, o.kB)(t));
                     let n = c.Ay.getCurrentSidebarChannelId(e);
                     null != n && N(n);
                 }

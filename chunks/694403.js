@@ -33,8 +33,8 @@ let f = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
         _.D.TIMESTAMP,
     ],
     p = [...I, _.D.EMOJI, _.D.CUSTOM_EMOJI],
-    T = [_.D.LIST, _.D.HEADING, _.D.BLOCK_QUOTE, _.D.SUBTEXT],
-    m = [_.D.TEXT],
+    m = [_.D.LIST, _.D.HEADING, _.D.BLOCK_QUOTE, _.D.SUBTEXT],
+    T = [_.D.TEXT],
     g = [
         _.D.UNDERLINE,
         _.D.STRONG,
@@ -136,8 +136,8 @@ let R = {
             P = { foundNestedMaskedLink: !1 },
             M = { ...b, maskedLinkValidation: P },
             U = n.allowEmojiLinks ? p : I,
-            w = [...U, ...T],
-            G = [...m, ...g],
+            w = [...U, ...m],
+            G = [...T, ...g],
             x = t(L, M);
         if (S(P)) return u();
         let k = N(x, w, [_.D.EMOJI]),

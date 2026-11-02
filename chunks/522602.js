@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(321073));
+(n.d(t, { A: () => T }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -22,7 +22,7 @@ function p(e, t, n) {
     let i = I(e);
     (i.set(t, n), A.set(e, i));
 }
-class T extends a.Ay.Store {
+class m extends a.Ay.Store {
     static displayName = "UploadAttachmentStore";
     getFirstUpload(e, t) {
         let n = f(e, t);
@@ -44,7 +44,7 @@ class T extends a.Ay.Store {
         return f(e, t).find(n);
     }
 }
-let m = new T(s.h, {
+let T = new m(s.h, {
     UPLOAD_ATTACHMENT_POP_FILE: function (e) {
         let { channelId: t } = e,
             n = [...f(t, u.C.ChannelMessage)];

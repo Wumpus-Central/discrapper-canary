@@ -15,7 +15,7 @@
     TA: () => eh,
     UE: () => eP,
     XD: () => O,
-    YB: () => em,
+    YB: () => eT,
     ZV: () => er,
     Z_: () => $,
     ay: () => D,
@@ -38,7 +38,7 @@
     p6: () => et,
     pQ: () => x,
     pd: () => ef,
-    tr: () => m,
+    tr: () => T,
     uL: () => R,
     wE: () => W,
     xR: () => q,
@@ -61,7 +61,7 @@ var i = n(435558),
     f = n(935208),
     I = n(652215),
     p = n(746080);
-let T = new Set([
+let m = new Set([
     I.rbe.GUILD_TEXT,
     I.rbe.GUILD_ANNOUNCEMENT,
     I.rbe.GUILD_STORE,
@@ -75,8 +75,8 @@ let T = new Set([
     I.rbe.DM,
     I.rbe.GROUP_DM,
 ]);
-function m(e) {
-    return T.has(e);
+function T(e) {
+    return m.has(e);
 }
 let g = new Set([
         I.rbe.DM,
@@ -402,10 +402,10 @@ function ep(e) {
         e
     );
 }
-let eT = Object.freeze({});
-class em extends eI {
+let em = Object.freeze({});
+class eT extends eI {
     get permissionOverwrites() {
-        return this.permissionOverwrites_ ?? eT;
+        return this.permissionOverwrites_ ?? em;
     }
     get topic() {
         return this.topic_ ?? "";
@@ -587,7 +587,7 @@ class em extends eI {
         return null != this.hdStreamingUntil && new Date(this.hdStreamingUntil) > new Date();
     }
 }
-class eg extends em {
+class eg extends eT {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -728,7 +728,7 @@ class eg extends em {
         return (0, _.pp)(n, eg);
     }
 }
-class eS extends em {
+class eS extends eT {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -785,7 +785,7 @@ class eS extends em {
         });
     }
 }
-class eN extends em {
+class eN extends eT {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -837,7 +837,7 @@ class eN extends em {
     }
 }
 class eC extends eN {}
-class eO extends em {
+class eO extends eT {
     constructor(e) {
         (super(e),
             (this.availableTags = e.availableTags ?? []),
@@ -917,7 +917,7 @@ class eR {
 }
 let eL = new eR(),
     ey = new eR();
-class eD extends em {
+class eD extends eT {
     static sortRecipients(e, t) {
         let n = eL.getOrCompute(t);
         return [...(e ?? [])].sort((e, t) => (ey.getOrCompute(e.id) ^ n) - (ey.getOrCompute(t.id) ^ n));
@@ -988,7 +988,7 @@ class eD extends em {
         return this.set("recipients", r().without(this.recipients, e));
     }
 }
-class ev extends em {
+class ev extends eT {
     constructor(e) {
         (super(e),
             (this.appliedTags = e.appliedTags ?? []),

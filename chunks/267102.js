@@ -3,10 +3,10 @@ n.d(t, {
     Iy: () => I,
     Us: () => g,
     Uw: () => u,
-    Wr: () => m,
+    Wr: () => T,
     _o: () => N,
     aL: () => S,
-    g5: () => T,
+    g5: () => m,
     mU: () => A,
     rH: () => f,
     wp: () => h,
@@ -43,11 +43,11 @@ function p() {
     let e = f();
     return null != e ? e.appContext : null;
 }
-function T() {
+function m() {
     let e = s.A.getFocusedWindowId() ?? s.A.getLastFocusedWindowId();
     return null == e ? null : (E.get(e) ?? null);
 }
-function m(e) {
+function T(e) {
     let { appContext: t, renderWindow: n, children: a } = e,
         s = (function (e, t) {
             let [n, i] = r.useState((0, o.Q2)(t)),

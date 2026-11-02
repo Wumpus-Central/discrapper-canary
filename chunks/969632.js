@@ -27,8 +27,8 @@ var i = n(435558),
     f = n(927813),
     I = n(562153),
     p = n(412136),
-    T = n(652215),
-    m = n(105292);
+    m = n(652215),
+    T = n(105292);
 function g() {
     return { text: void 0, image: void 0, localCreationAnswerId: (0, a.A)() };
 }
@@ -45,8 +45,8 @@ function C(e) {
         () =>
             null != e &&
             e.id !== o.E &&
-            !!T.kvI.POLLS.has(e.type) &&
-            (!!e.isPrivate() || (A.A.can(T.xBc.SEND_MESSAGES, e) && A.A.can(T.xBc.SEND_POLLS, e))),
+            !!m.kvI.POLLS.has(e.type) &&
+            (!!e.isPrivate() || (A.A.can(m.xBc.SEND_MESSAGES, e) && A.A.can(m.xBc.SEND_POLLS, e))),
     );
 }
 function O(e, t) {
@@ -79,7 +79,7 @@ function D(e) {
             ((t = p.TU),
             (n = e.embeds[0]?.fields?.find((e) => "poll_question_text" === e.rawName)?.rawValue ?? ""),
             null != t ? (0, s.EJ)(n, t) : n);
-    return m.intl.format(m.t.Vn97Ka, { username: i.nick, title: r });
+    return T.intl.format(T.t.Vn97Ka, { username: i.nick, title: r });
 }
 function v(e) {
     return e.reduce((e, t) => e + (t.count_details?.vote ?? 0), 0);
@@ -103,16 +103,16 @@ function b(e, t, n) {
                 .map((e) => I.Ay.getName(l, s?.id, e))
                 .value());
     if (0 === f.length) return "";
-    let T = Math.max(0, A - f.length);
+    let m = Math.max(0, A - f.length);
     if (1 === f.length)
-        if (T > 0) return m.intl.formatToPlainString(m.t["SV/iZn"], { a: f[0], n: T });
+        if (m > 0) return T.intl.formatToPlainString(T.t["SV/iZn"], { a: f[0], n: m });
         else return f[0];
     if (2 === f.length)
-        if (T > 0) return m.intl.formatToPlainString(m.t.YBnZK0, { a: f[0], b: f[1], n: T });
-        else return m.intl.formatToPlainString(m.t["O5+f5c"], { a: f[0], b: f[1] });
+        if (m > 0) return T.intl.formatToPlainString(T.t.YBnZK0, { a: f[0], b: f[1], n: m });
+        else return T.intl.formatToPlainString(T.t["O5+f5c"], { a: f[0], b: f[1] });
     return 3 !== f.length
-        ? m.intl.formatToPlainString(m.t.yVX6kE, { n: T })
-        : T > 0
-          ? m.intl.formatToPlainString(m.t["ThXp+N"], { a: f[0], b: f[1], c: f[2], n: T })
-          : m.intl.formatToPlainString(m.t["0UzBM3"], { a: f[0], b: f[1], c: f[2] });
+        ? T.intl.formatToPlainString(T.t.yVX6kE, { n: m })
+        : m > 0
+          ? T.intl.formatToPlainString(T.t["ThXp+N"], { a: f[0], b: f[1], c: f[2], n: m })
+          : T.intl.formatToPlainString(T.t["0UzBM3"], { a: f[0], b: f[1], c: f[2] });
 }

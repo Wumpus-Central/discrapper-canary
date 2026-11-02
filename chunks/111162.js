@@ -69,10 +69,10 @@ let E = (() => {
     f = { ...h },
     I = "DeveloperOptionsRoutingKey",
     p = [];
-function T(e) {
+function m(e) {
     ((f = { ...h, ...f, ...e }), E.set(f.sourceMapsEnabled), l.w.set(A, f));
 }
-function m(e) {
+function T(e) {
     ((p = e), l.w.set(I, p));
 }
 class g extends a.Ay.Store {
@@ -157,7 +157,7 @@ class g extends a.Ay.Store {
 }
 let S = new g(o.h, {
     LOGOUT: function (e) {
-        (T(h), m([]));
+        (m(h), T([]));
     },
     CONNECTION_OPEN: function (e) {
         let t = ((e.user.flags ?? 0) & _.nhx.STAFF) === _.nhx.STAFF,
@@ -166,10 +166,10 @@ let S = new g(o.h, {
     },
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
         let { settings: t } = e;
-        T(t);
+        m(t);
     },
     DEVELOPER_OPTIONS_SET_ROUTING_KEY: function (e) {
         let { tags: t } = e;
-        m(t);
+        T(t);
     },
 });

@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(977997),
     I = n(935208),
     p = n(427262),
-    T = n(652215);
-let m = Object.freeze([]),
+    m = n(652215);
+let T = Object.freeze([]),
     g = {},
     S = null;
 function N(e) {
@@ -115,7 +115,7 @@ class y {
     getVoiceStatesForChannel(e) {
         this.processPending();
         let t = this._voiceStates.values(e);
-        return 0 === t.length ? m : t;
+        return 0 === t.length ? T : t;
     }
     countVoiceStatesForChannel(e) {
         return (this.processPending(), this._voiceStates.size(e));
@@ -146,7 +146,7 @@ function P() {
     let e = f.A.getAllVoiceStates();
     I.default.keys(e).forEach((t) => {
         Object.keys(e[t]).forEach((e) => {
-            N(t ?? T.ME).updateVoiceState(e);
+            N(t ?? m.ME).updateVoiceState(e);
         });
     });
 }
@@ -189,7 +189,7 @@ class M extends a.Ay.Store {
                           continue;
                       }
                       if (!a.isVocal()) continue;
-                      let l = a.getGuildId() ?? T.ME,
+                      let l = a.getGuildId() ?? m.ME,
                           o = N(l);
                       t.set(l, o.getVersion());
                       let d = o.getVoiceStatesForChannel(r);
@@ -197,7 +197,7 @@ class M extends a.Ay.Store {
                   }
                   return ((S = { favoriteChannels: e, versions: t, unknownChannels: n, result: i }), i);
               })()
-            : N(e ?? T.ME).getVoiceStates();
+            : N(e ?? m.ME).getVoiceStates();
     }
     getAllVoiceStates() {
         return g;
@@ -205,17 +205,17 @@ class M extends a.Ay.Store {
     getVoiceStatesForChannel(e) {
         let t = e.getGuildId(),
             n = e.id;
-        return N(t ?? T.ME).getVoiceStatesForChannel(n);
+        return N(t ?? m.ME).getVoiceStatesForChannel(n);
     }
     getVoiceStatesForChannelAlt(e, t) {
-        return N(t ?? T.ME).getVoiceStatesForChannel(e);
+        return N(t ?? m.ME).getVoiceStatesForChannel(e);
     }
     countVoiceStatesForChannel(e) {
         let t = E.A.getChannel(e);
-        return null == t ? 0 : N(t.getGuildId() ?? T.ME).countVoiceStatesForChannel(e);
+        return null == t ? 0 : N(t.getGuildId() ?? m.ME).countVoiceStatesForChannel(e);
     }
     getVoiceStateVersion(e) {
-        return N(e ?? T.ME).getVersion();
+        return N(e ?? m.ME).getVersion();
     }
 }
 let U = new M(o.h, {
@@ -228,13 +228,13 @@ let U = new M(o.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         let { guildId: t } = e,
             n = _.default.getId();
-        return null != n && N(t ?? T.ME).updateVoiceState(n);
+        return null != n && N(t ?? m.ME).updateVoiceState(n);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return t.reduce((e, t) => {
             let { guildId: n, userId: i } = t;
-            return N(n ?? T.ME).updateVoiceState(i) || e;
+            return N(n ?? m.ME).updateVoiceState(i) || e;
         }, !1);
     },
     GUILD_MEMBER_UPDATE: function (e) {

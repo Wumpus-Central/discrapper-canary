@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(260762),
     I = n(793574),
     p = n(688810),
-    T = n(139286),
-    m = n(915089),
+    m = n(139286),
+    T = n(915089),
     g = n(465794),
     S = n(594061),
     N = n(665252),
@@ -79,7 +79,7 @@ function B() {
 }
 function V(e) {
     let { channel: t, guildId: n, analyticsLocations: r, sounds: a } = e,
-        s = (0, m.GV)(),
+        s = (0, T.GV)(),
         l = (0, f.A)(s),
         d = (0, c.bG)([O.default], () => O.default.getCurrentUser()),
         u = (0, c.bG)([R.A], () => R.A.getVoiceState(n, d?.id ?? w.dJq)),
@@ -114,11 +114,11 @@ function V(e) {
 function H(e) {
     let { channel: t, guildId: n, analyticsSource: a, openFullPicker: o, showEchoes: d = !1 } = e,
         { analyticsLocations: f } = (0, p.Ay)(I.A.SOUNDBOARD_QUICK_ACCESS_POPOUT),
-        { sounds: m, hasLockedSound: g, isFetching: O } = (0, b.Ay)({ channel: t, currentGuildId: n }),
+        { sounds: T, hasLockedSound: g, isFetching: O } = (0, b.Ay)({ channel: t, currentGuildId: n }),
         R = (0, c.bG)([C.A], () => C.A.getMediaSessionId()),
         L = (0, c.bG)([v.A], () => v.A.getFavorites().size);
     return (
-        (0, T.A)({
+        (0, m.A)({
             type: l.ImpressionTypes.POPOUT,
             name: l.ImpressionNames.SOUNDBOARD_POPOUT,
             properties: {
@@ -165,7 +165,7 @@ function H(e) {
                             }),
                             O
                                 ? (0, i.jsx)(B, {})
-                                : (0, i.jsx)(V, { sounds: m, channel: t, guildId: n, analyticsLocations: f }),
+                                : (0, i.jsx)(V, { sounds: T, channel: t, guildId: n, analyticsLocations: f }),
                         ],
                     }),
                     g && (0, i.jsx)(F, { analyticsLocations: f, voiceGuildId: n }),

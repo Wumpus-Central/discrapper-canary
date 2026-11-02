@@ -2,9 +2,9 @@ n.d(t, {
     A8: () => O,
     AT: () => A,
     Eb: () => v,
-    Iv: () => T,
+    Iv: () => m,
     M8: () => S,
-    Qv: () => m,
+    Qv: () => T,
     V5: () => g,
     XN: () => p,
     ZU: () => I,
@@ -80,13 +80,13 @@ Object.freeze({
     THANKS: _.JJy.APPEAL_INGESTION_THANKS,
     SPAM: _.JJy.APPEAL_INGESTION_SPAM,
 });
-var T =
+var m =
     (((s = {})[(s.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
     (s[(s.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
     (s[(s.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
     (s[(s.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
     s);
-let m = [0, 1, 2, 3],
+let T = [0, 1, 2, 3],
     g = 372,
     S = 279,
     N = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };

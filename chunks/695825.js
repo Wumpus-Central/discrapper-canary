@@ -1,8 +1,8 @@
 n.d(t, {
     AE: () => p,
-    D7: () => T,
+    D7: () => m,
     DQ: () => o,
-    KD: () => m,
+    KD: () => T,
     Nb: () => h,
     PC: () => I,
     WV: () => A,
@@ -153,7 +153,7 @@ async function p(e) {
         throw new r.LG(e);
     }
 }
-async function T(e, t, n) {
+async function m(e, t, n) {
     try {
         return (
             await i.Bo.patch({
@@ -166,7 +166,7 @@ async function T(e, t, n) {
         throw new r.LG(e);
     }
 }
-async function m(e, t, n) {
+async function T(e, t, n) {
     try {
         return (
             await i.Bo.get({

@@ -1,4 +1,4 @@
-n.d(t, { V6: () => R, rQ: () => N, s_: () => T });
+n.d(t, { V6: () => R, rQ: () => N, s_: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -15,12 +15,12 @@ var i = n(477900),
     f = n(834730),
     I = n(22856),
     p = n(592551);
-function T(e) {
+function m(e) {
     let { shouldColorMix: t = !1 } = e,
         { dismissable: n, onClose: r } = (0, I.k)();
     return !1 === n ? null : (0, i.jsx)(d.J, { onClick: r, variant: t ? "color-mix" : void 0 });
 }
-function m(e) {
+function T(e) {
     let { leading: t, trailing: n, hasGradient: r, children: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -28,7 +28,7 @@ function m(e) {
             a,
             (0, i.jsxs)("div", {
                 className: p.headerTrailing,
-                children: [null != n && n, (0, i.jsx)(T, { shouldColorMix: r })],
+                children: [null != n && n, (0, i.jsx)(m, { shouldColorMix: r })],
             }),
         ],
     });
@@ -41,7 +41,7 @@ function g(e) {
             a,
             (0, i.jsxs)("div", {
                 className: s()(p.headerTrailing, p.headerTrailingAbsolute),
-                children: [null != n && n, (0, i.jsx)(T, { shouldColorMix: r })],
+                children: [null != n && n, (0, i.jsx)(m, { shouldColorMix: r })],
             }),
         ],
     });
@@ -82,7 +82,7 @@ function S(e) {
                 (0, i.jsxs)("div", {
                     ref: E,
                     className: s()(p.headerTrailing, p.headerTrailingAbsolute),
-                    children: [null != n && n, (0, i.jsx)(T, { shouldColorMix: a })],
+                    children: [null != n && n, (0, i.jsx)(m, { shouldColorMix: a })],
                 }),
             ],
         })
@@ -98,7 +98,7 @@ function N(e) {
             titleTextVariant: o,
             subtitle: d,
             alignCenter: f = !1,
-            leading: T,
+            leading: m,
             trailing: N,
             progressBarProps: R,
         } = e,
@@ -136,8 +136,8 @@ function N(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: p.headerLayout,
-                        children: (0, i.jsx)(f ? (D ? g : S) : m, {
-                            leading: T,
+                        children: (0, i.jsx)(f ? (D ? g : S) : T, {
+                            leading: m,
                             trailing: N,
                             hasGradient: y,
                             children: (0, i.jsxs)("div", {

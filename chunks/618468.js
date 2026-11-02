@@ -15,8 +15,8 @@ var i,
     f,
     I,
     p,
-    T,
     m,
+    T,
     g,
     S = n(852015),
     N = n(144367),
@@ -1280,8 +1280,8 @@ let ef = new eh();
 class eI extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.SDKVersionRange", [
-            { no: 1, name: "lower_bound", kind: "message", T: () => em },
-            { no: 2, name: "upper_bound", kind: "message", T: () => em },
+            { no: 1, name: "lower_bound", kind: "message", T: () => eT },
+            { no: 2, name: "upper_bound", kind: "message", T: () => eT },
         ]);
     }
     create(e) {
@@ -1299,10 +1299,10 @@ class eI extends O.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    r.lowerBound = em.internalBinaryRead(e, e.uint32(), n, r.lowerBound);
+                    r.lowerBound = eT.internalBinaryRead(e, e.uint32(), n, r.lowerBound);
                     break;
                 case 2:
-                    r.upperBound = em.internalBinaryRead(e, e.uint32(), n, r.upperBound);
+                    r.upperBound = eT.internalBinaryRead(e, e.uint32(), n, r.upperBound);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -1315,14 +1315,14 @@ class eI extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.lowerBound && em.internalBinaryWrite(e.lowerBound, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
-            e.upperBound && em.internalBinaryWrite(e.upperBound, t.tag(2, S.O0.LengthDelimited).fork(), n).join());
+        (e.lowerBound && eT.internalBinaryWrite(e.lowerBound, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
+            e.upperBound && eT.internalBinaryWrite(e.upperBound, t.tag(2, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ep = new eI();
-class eT extends O.G {
+class em extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.SDKVersionRangeBound", [
             { no: 1, name: "version", kind: "message", T: () => eS },
@@ -1366,7 +1366,7 @@ class eT extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let em = new eT();
+let eT = new em();
 class eg extends O.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.SDKVersionSpecifier", [
@@ -2578,29 +2578,29 @@ var ta = n(335871),
         (I[(I.ENABLED = 1)] = "ENABLED"),
         (I[(I.DISABLED = 2)] = "DISABLED"),
         I),
-    tT =
+    tm =
         (((p = {})[(p.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (p[(p.ACTIVE = 1)] = "ACTIVE"),
         (p[(p.UNUSED = 2)] = "UNUSED"),
         (p[(p.BURNED = 3)] = "BURNED"),
         (p[(p.PRESERVED = 4)] = "PRESERVED"),
         p),
-    tm =
-        (((T = {})[(T.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (T[(T.DRAFT = 1)] = "DRAFT"),
-        (T[(T.ACTIVE = 2)] = "ACTIVE"),
-        (T[(T.PAUSED_MANUAL = 3)] = "PAUSED_MANUAL"),
-        (T[(T.PAUSED_HEALTH_CHECK = 4)] = "PAUSED_HEALTH_CHECK"),
-        (T[(T.COMPLETED = 5)] = "COMPLETED"),
-        (T[(T.CANCELED = 6)] = "CANCELED"),
-        T),
-    tg =
+    tT =
         (((m = {})[(m.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (m[(m.PENDING = 1)] = "PENDING"),
-        (m[(m.IN_PROGRESS = 2)] = "IN_PROGRESS"),
-        (m[(m.AWAITING_MANUAL_APPROVAL = 3)] = "AWAITING_MANUAL_APPROVAL"),
-        (m[(m.COMPLETED = 4)] = "COMPLETED"),
+        (m[(m.DRAFT = 1)] = "DRAFT"),
+        (m[(m.ACTIVE = 2)] = "ACTIVE"),
+        (m[(m.PAUSED_MANUAL = 3)] = "PAUSED_MANUAL"),
+        (m[(m.PAUSED_HEALTH_CHECK = 4)] = "PAUSED_HEALTH_CHECK"),
+        (m[(m.COMPLETED = 5)] = "COMPLETED"),
+        (m[(m.CANCELED = 6)] = "CANCELED"),
         m),
+    tg =
+        (((T = {})[(T.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (T[(T.PENDING = 1)] = "PENDING"),
+        (T[(T.IN_PROGRESS = 2)] = "IN_PROGRESS"),
+        (T[(T.AWAITING_MANUAL_APPROVAL = 3)] = "AWAITING_MANUAL_APPROVAL"),
+        (T[(T.COMPLETED = 4)] = "COMPLETED"),
+        T),
     tS =
         (((g = {})[(g.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (g[(g.DRAFT = 1)] = "DRAFT"),
@@ -3242,7 +3242,7 @@ class tv extends O.G {
                 no: 3,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", tT],
+                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", tm],
             },
             {
                 no: 5,
@@ -3475,7 +3475,7 @@ class tk extends O.G {
                 no: 1,
                 name: "status",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", tm, "PLAN_STATUS_"],
+                T: () => ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", tT, "PLAN_STATUS_"],
             },
             { no: 2, name: "ramp_steps", kind: "message", repeat: 1, T: () => tj },
         ]);
@@ -3526,7 +3526,7 @@ class tB extends O.G {
                 no: 1,
                 name: "status",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", tm, "PLAN_STATUS_"],
+                T: () => ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", tT, "PLAN_STATUS_"],
             },
             { no: 2, name: "ramp_steps", kind: "message", repeat: 1, T: () => tj },
         ]);

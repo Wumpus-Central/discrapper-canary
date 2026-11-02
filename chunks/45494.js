@@ -18,14 +18,14 @@ function p(e, t, n, i) {
     let r = `${e}|${t}|${i}|`;
     return 0 === n.size ? r : 1 === n.size ? r + n.values().next().value : r + Array.from(n).sort().join(",");
 }
-function T(e, t) {
+function m(e, t) {
     return t === s.T.LATEST_ACTIVITY ? E.Ay.lastMessageId(e.id) : e.id;
 }
-function m(e) {
+function T(e) {
     let { channelId: t, sortOrder: n, tagFilter: i, tagSetting: s, hasMore: l } = e,
         o = !l,
         d = _.A.getChannel(e.threads[e.threads.length - 1]),
-        c = null == d ? null : T(d, n);
+        c = null == d ? null : m(d, n);
     e.threads = r()(_.A.getAllThreadsForParent(t))
         .filter((e) => e.isArchivedThread())
         .filter((e) => {
@@ -39,11 +39,11 @@ function m(e) {
                 }
             if (o || null == c) return !0;
             {
-                let t = null == e ? null : T(e, n);
+                let t = null == e ? null : m(e, n);
                 return null != t && A.default.compare(t, c) >= 0;
             }
         })
-        .sort((e, t) => A.default.compare(T(e, n), T(t, n)))
+        .sort((e, t) => A.default.compare(m(e, n), m(t, n)))
         .map((e) => e.id)
         .reverse()
         .value();
@@ -154,7 +154,7 @@ let N = new S(o.h, {
                 filterTagIds: Array.from(e.tagFilter),
                 sortOrder: e.sortOrder,
             }),
-            m(i),
+            T(i),
             (i.hasMore = e.hasMore),
             (i.nextOffset = e.offset + f),
             (i.loading = !1),
@@ -169,7 +169,7 @@ let N = new S(o.h, {
     },
     RESORT_THREADS: function (e) {
         let t = !1;
-        for (let n of I.values()) (null == e.channelId || n.channelId === e.channelId) && (m(n), (t = !0));
+        for (let n of I.values()) (null == e.channelId || n.channelId === e.channelId) && (T(n), (t = !0));
         if (!t) return !1;
     },
 });

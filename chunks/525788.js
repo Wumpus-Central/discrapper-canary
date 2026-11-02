@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(97808),
     I = n(778712),
     p = n(265872),
-    T = n(442433),
-    m = n(820284),
+    m = n(442433),
+    T = n(820284),
     g = n(942857),
     S = n(538451),
     N = n(616356),
@@ -139,7 +139,7 @@ function w(e) {
         k = r.useCallback(
             (e, t) => {
                 (G(),
-                    (0, T.L3)(
+                    (0, m.L3)(
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
@@ -209,7 +209,7 @@ function w(e) {
     return (
         w.length > A &&
             (F[F.length - 1] = (0, i.jsxs)("div", { className: v.ju, children: ["+", w.length - A + 1] }, "overflow")),
-        (0, i.jsx)(m.A, {
+        (0, i.jsx)(T.A, {
             section: y.JJy.STREAM_VIEWER_POPOUT,
             children: (0, i.jsx)("div", {
                 onMouseEnter: G,

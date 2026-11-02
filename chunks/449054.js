@@ -1,5 +1,5 @@
 (n.d(t, {
-    Cf: () => m,
+    Cf: () => T,
     PU: () => A,
     Z2: () => _,
     br: () => I,
@@ -8,7 +8,7 @@
     gp: () => h,
     jE: () => E,
     jb: () => p,
-    uf: () => T,
+    uf: () => m,
 }),
     n(323874),
     n(14289),
@@ -30,18 +30,18 @@ async function _(e, t) {
         { channelId: c, onSuccess: _, joinSource: E, loadId: A, shouldNavigate: h = !0, openChannel: f = !1 } = n,
         I = (0, s.JK)(),
         p = d.A.getGuild(e),
-        T = { sourceLocationStack: o, state: { analyticsSource: t } };
+        m = { sourceLocationStack: o, state: { analyticsSource: t } };
     if (null != p && null != p.joinedAt)
         h &&
             (null == c
-                ? (0, l.u)(e, { ...T, openChannel: f })
-                : (0, r.A)(u.BVt.CHANNEL(e, c, n.messageId), { ...T, navigationReplace: !0, openChannel: !0 }));
+                ? (0, l.u)(e, { ...m, openChannel: f })
+                : (0, r.A)(u.BVt.CHANNEL(e, c, n.messageId), { ...m, navigationReplace: !0, openChannel: !0 }));
     else if (null != p && a.A.isLurking(e))
         h &&
             (await i.A.transitionToGuildSync(
                 e,
                 {
-                    ...T,
+                    ...m,
                     welcomeModalChannelId: c,
                     navigationReplace: null != c,
                     openChannel: f || null != c,
@@ -57,7 +57,7 @@ async function _(e, t) {
                 (await i.A.transitionToGuildSync(
                     e,
                     {
-                        ...T,
+                        ...m,
                         welcomeModalChannelId: c,
                         navigationReplace: null != c,
                         openChannel: f || null != c,
@@ -120,11 +120,11 @@ function p(e) {
         is_request_retry: r,
     });
 }
-function T(e) {
+function m(e) {
     let { categoryId: t } = e;
     c.default.track(u.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function m(e) {
+function T(e) {
     let { loadId: t, searchId: n, query: i, guildResults: r, analyticsContext: a, categoryId: s, isTagSearch: l } = e;
     c.default.track(u.HAw.SEARCH_RESULT_VIEWED, {
         search_type: l ? u.I4_.GUILD_DISCOVERY_TAG : u.I4_.GUILD_DISCOVERY,

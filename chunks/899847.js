@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, HB: () => I, Xz: () => p, e$: () => f, nt: () => h });
+n.d(t, { Ay: () => m, HB: () => I, Xz: () => p, e$: () => f, nt: () => h });
 var i = n(636537),
     r = n(873298),
     a = n(73153),
@@ -59,7 +59,7 @@ async function I() {
 async function p() {
     await i.Bo.post({ url: _.Rsh.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: !0 });
 }
-let T = {
+let m = {
     async initialPageLoad() {
         let e,
             { showLoading: t = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};

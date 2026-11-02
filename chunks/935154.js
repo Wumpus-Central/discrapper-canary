@@ -1,4 +1,4 @@
-n.d(t, { C$: () => f, S3: () => A, i0: () => S, nW: () => N, p8: () => g, pF: () => m, v: () => T, yi: () => h });
+n.d(t, { C$: () => f, S3: () => A, i0: () => S, nW: () => N, p8: () => g, pF: () => T, v: () => m, yi: () => h });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -45,7 +45,7 @@ function I(e, t, n, i) {
 function p(e, t, n) {
     return `${0.5625 * e + n}px ${0.75 * e + t}px`;
 }
-function T(e) {
+function m(e) {
     let { size: t, status: n, isMobile: i, isTyping: r, topOffset: a = 0, leftOffset: s = 0 } = e,
         l = (a / 8) * t,
         o = (s / 8) * t;
@@ -181,7 +181,7 @@ function T(e) {
             };
     }
 }
-function m(e, t, n) {
+function T(e, t, n) {
     let {
         bgRadius: r,
         bgY: a,
@@ -197,7 +197,7 @@ function m(e, t, n) {
         polygonOrigin: f,
         dotY: I,
         dotX: p,
-        dotRadius: T,
+        dotRadius: m,
     } = e;
     return (0, i.jsxs)("mask", {
         id: n,
@@ -210,7 +210,7 @@ function m(e, t, n) {
                 transform: h,
                 style: { transformOrigin: f },
             }),
-            (0, i.jsx)(s.animated.circle, { fill: "black", cx: p, cy: I, r: T }),
+            (0, i.jsx)(s.animated.circle, { fill: "black", cx: p, cy: I, r: m }),
         ],
     });
 }

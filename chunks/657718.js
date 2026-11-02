@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(834730),
     I = n(65406),
     p = n(70074);
-let T = { xs: "text-xs/medium", sm: "text-sm/medium", md: "text-md/medium" },
-    m = { xs: "xxs", sm: "xs", md: "refresh_sm" },
+let m = { xs: "text-xs/medium", sm: "text-sm/medium", md: "text-md/medium" },
+    T = { xs: "xxs", sm: "xs", md: "refresh_sm" },
     g = { xs: "sm", sm: "sm", md: "md" };
 function S(e) {
     let {
@@ -26,7 +26,7 @@ function S(e) {
             text: _,
             icon: A,
             iconPosition: h = "start",
-            iconOpticalOffsetMargin: m = 0,
+            iconOpticalOffsetMargin: T = 0,
             fullWidth: g = !1,
             focusProps: S,
             loading: R,
@@ -55,7 +55,7 @@ function S(e) {
         z = null != _,
         X = r.useRef(null),
         q = j ?? X,
-        Z = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: m, iconPosition: h, size: K, ref: q, disabled: F }),
+        Z = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: T, iconPosition: h, size: K, ref: q, disabled: F }),
         Q = "expressive" === n,
         J = r.useContext(d.C),
         { theme: ee, i18n: et } = (0, E.G9)(),
@@ -69,7 +69,7 @@ function S(e) {
             className: s()(I.buttonChildren, { [I.loading]: R }),
             children: [
                 null != Z && "start" === h && Z,
-                z && (0, i.jsx)(f.E, { tag: "span", variant: T[K], color: "none", lineClamp: 1, children: _ }),
+                z && (0, i.jsx)(f.E, { tag: "span", variant: m[K], color: "none", lineClamp: 1, children: _ }),
                 null != Z && "end" === h && Z,
             ],
         }),
@@ -249,7 +249,7 @@ function O(e) {
                 }
                 return {};
             })(),
-            size: m[s],
+            size: T[s],
             className: I.icon,
         });
     } else if (null != t)
@@ -259,7 +259,7 @@ function O(e) {
                 d = (0, i.jsx)(e, {
                     ...t.riveProps,
                     eventTargetRef: l,
-                    style: { width: _.E[m[s]], height: _.E[m[s]] },
+                    style: { width: _.E[T[s]], height: _.E[T[s]] },
                 });
                 break;
             }

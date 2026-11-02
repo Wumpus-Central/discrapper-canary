@@ -24,7 +24,7 @@ function I() {
 function p(e) {
     return I()?.[e]?.type === r.Ip.CATEGORY;
 }
-function T() {
+function m() {
     let e = I();
     if (null == e) return !1;
     let t = !1;
@@ -34,7 +34,7 @@ function T() {
     }
     return t;
 }
-class m extends i.Ay.PersistedStore {
+class T extends i.Ay.PersistedStore {
     static displayName = "CategoryCollapseStore";
     static persistKey = "collapsedCategories";
     initialize(e) {
@@ -42,7 +42,7 @@ class m extends i.Ay.PersistedStore {
             this.removeChangeListener(h),
             this.addChangeListener(h),
             (E = e ?? {}),
-            this.syncWith([l.A], T));
+            this.syncWith([l.A], m));
     }
     getState() {
         return E;
@@ -57,12 +57,12 @@ class m extends i.Ay.PersistedStore {
         return A;
     }
 }
-let g = new m(a.h, {
+let g = new T(a.h, {
     CONNECTION_OPEN: function (e) {
         for (let t of (e.userGuildSettings.partial || (E = {}), e.userGuildSettings.entries))
             if (null != t.channel_overrides)
                 for (let e of t.channel_overrides) e.collapsed ? (E[e.channel_id] = !0) : delete E[e.channel_id];
-        T();
+        m();
     },
     USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
         let { userGuildSettings: t } = e,

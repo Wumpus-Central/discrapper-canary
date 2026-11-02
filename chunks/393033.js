@@ -5,8 +5,8 @@ n.d(t, {
     Tk: () => g,
     W$: () => O,
     _W: () => A,
-    _g: () => m,
-    eu: () => T,
+    _g: () => T,
+    eu: () => m,
     f4: () => f,
     l0: () => p,
     lr: () => N,
@@ -54,14 +54,14 @@ function p(e) {
         [u.Iv.SOMETHING_ELSE]: E.intl.string(E.t.XU3s6r),
     }[e];
 }
-function T(e) {
+function m(e) {
     return null == e || 0 === e.length
         ? ""
         : 1 === e.length
           ? e.toUpperCase()
           : `${e.charAt(0).toUpperCase()}${e.slice(1)}`;
 }
-function m(e) {
+function T(e) {
     return null != e && null != e.guild_metadata;
 }
 function g(e) {

@@ -16,9 +16,9 @@ var A = n(404144),
     f = n(480664),
     I = n.n(f),
     p = n(811315),
-    T = n.n(p),
-    m = n(119469),
-    g = n.n(m),
+    m = n.n(p),
+    T = n(119469),
+    g = n.n(T),
     S = n(141697),
     N = n(904986);
 n(618792);
@@ -855,7 +855,7 @@ class j extends N.A {
         if (null != i && 0 === t)
             return void this.logger.info(`Ignoring attempt to recreate user ${e} with 0 audio SSRC`);
         ((r = void 0 !== r ? [...r].sort() : []), (n = void 0 === n ? (r ?? []) : [...n].sort()));
-        let a = !T()(r, n);
+        let a = !m()(r, n);
         if (
             ((this.remoteAudioSSRCs[e] = t), (this.remoteVideoSSRCs[e] = n ?? []), this.userId !== e && (i !== t || a))
         ) {
@@ -1174,8 +1174,8 @@ class j extends N.A {
                     enableGlobalFramePoolLock: f,
                     useGraphicsCaptureDirtyRegions: I,
                     videoHookAllowDx12: p,
-                    minCaptureWidth: T,
-                    minCaptureHeight: m,
+                    minCaptureWidth: m,
+                    minCaptureHeight: T,
                 } = e.desktopDescription;
                 this.setSoundshareSource(a, s);
                 let [g, S] = null != r ? r.split(":") : ["", ""];
@@ -1202,8 +1202,8 @@ class j extends N.A {
                                   enableGlobalFramePoolLock: f,
                                   useGraphicsCaptureDirtyRegions: I,
                                   videoHookAllowDx12: p,
-                                  minCaptureWidth: T,
-                                  minCaptureHeight: m,
+                                  minCaptureWidth: m,
+                                  minCaptureHeight: T,
                               }))
                             : this.conn.clearDesktopSource()
                         : this.conn.setDesktopSource(`wumpus-${S}`, l, g));
@@ -1305,7 +1305,7 @@ class j extends N.A {
                 let i = e.findIndex((e) => e.rid === t.rid);
                 if (-1 === i) return void n(Error("Invalid rid"));
                 let r = [];
-                (T()(this.videoStreamParameters[i], e[i]) ||
+                (m()(this.videoStreamParameters[i], e[i]) ||
                     ((this.videoStreamParameters[i] = { ...e[i] }), r.push({ ...e[i] })),
                     this.conn.setTransportOptions({ streamParameters: r }));
             }

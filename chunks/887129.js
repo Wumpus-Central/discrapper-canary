@@ -41,8 +41,8 @@ function c(e) {
             setFocusOnList: f,
             preserveFocusPosition: I = !0,
             useVirtualFocus: p = !1,
-            wrap: T = !1,
-            orientation: m = o.Gl.VERTICAL,
+            wrap: m = !1,
+            orientation: T = o.Gl.VERTICAL,
             disableClickOnSpace: g = !1,
         } = e,
         S = i.useRef(n ? (0, s.t$)(t, n) : null),
@@ -159,7 +159,7 @@ function c(e) {
         }, [c, t, I, y, f, D, v]));
     let w = i.useMemo(
             () => ({
-                wrap: T,
+                wrap: m,
                 get from() {
                     if (!p) return;
                     let e = S.current;
@@ -167,7 +167,7 @@ function c(e) {
                     return;
                 },
             }),
-            [p, T],
+            [p, m],
         ),
         G = i.useCallback(async () => {
             let e = await b.getNextFocusableElement(w),
@@ -182,8 +182,8 @@ function c(e) {
         k = i.useCallback(
             (e) => {
                 if (!O.current || (!p && !U.current)) return;
-                let n = m === o.Gl.HORIZONTAL ? o.D$.RIGHT : o.D$.DOWN,
-                    i = m === o.Gl.HORIZONTAL ? o.D$.LEFT : o.D$.UP;
+                let n = T === o.Gl.HORIZONTAL ? o.D$.RIGHT : o.D$.DOWN,
+                    i = T === o.Gl.HORIZONTAL ? o.D$.LEFT : o.D$.UP;
                 switch (e.key) {
                     case n:
                         (e.stopPropagation(), e.preventDefault(), G());
@@ -222,7 +222,7 @@ function c(e) {
                     }
                 }
             },
-            [G, x, t, m, _, u, v, p],
+            [G, x, t, T, _, u, v, p],
         ),
         F = i.useCallback(
             (e) => {
@@ -234,7 +234,7 @@ function c(e) {
         () => ({
             id: t,
             containerProps: { onKeyDown: k, ref: C, tabIndex: P && I ? -1 : 0 },
-            orientation: m,
+            orientation: T,
             setFocus: F,
             async focusLastVisibleItem() {
                 var e, n;
@@ -273,6 +273,6 @@ function c(e) {
                 return e ? (0, s.HP)(e) : null;
             },
         }),
-        [t, k, m, P, I, F, x, G, v],
+        [t, k, T, P, I, F, x, G, v],
     );
 }

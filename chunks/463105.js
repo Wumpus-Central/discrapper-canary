@@ -15,8 +15,8 @@ var i = n(478437),
     f = n(617617),
     I = n(927813),
     p = n(652215);
-let T = 10 * I.A.Millis.SECOND,
-    m = 5 * I.A.Millis.MINUTE;
+let m = 10 * I.A.Millis.SECOND,
+    T = 5 * I.A.Millis.MINUTE;
 class g extends A.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
@@ -26,7 +26,7 @@ class g extends A.A {
         LOGOUT: () => this.onLogout(),
     };
     stores = new Map([[c.Ay, () => this.onPremiumGiftingIntentStoreChange()]]);
-    reconcileBackoff = new u.A(T, m);
+    reconcileBackoff = new u.A(m, T);
     isReconciling = !1;
     heldGiftingPromptSystemMessage = !1;
     lastReconciledDismissalAtMs = new Map();

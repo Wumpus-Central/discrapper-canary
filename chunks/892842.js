@@ -1,4 +1,4 @@
-(n.d(t, { FH: () => I, ML: () => d, kY: () => p, iQ: () => h, P4: () => E, pX: () => g, pd: () => A, hw: () => m }),
+(n.d(t, { FH: () => I, ML: () => d, kY: () => p, iQ: () => h, P4: () => E, pX: () => g, pd: () => A, hw: () => T }),
     n(321073));
 var i = n(284009),
     r = n.n(i),
@@ -155,11 +155,11 @@ let I = new f("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
     ),
     new f("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3));
 let p = new _("2026-10-wasm-precompressed-brotli", "Web: precompressed brotli WASM assets"),
-    T = !1;
-function m() {
-    return T;
+    m = !1;
+function T() {
+    return m;
 }
 function g() {
     (0, a.xd)() &&
-        (o.info("Clearing libdiscore experiment cache and disabling sync"), (T = !0), (0, a.Ih)().clearCache());
+        (o.info("Clearing libdiscore experiment cache and disabling sync"), (m = !0), (0, a.Ih)().clearCache());
 }

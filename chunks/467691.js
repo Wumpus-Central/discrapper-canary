@@ -23,15 +23,15 @@ function p(e, t) {
             : (0, l.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }
-let T = a().throttle(function (e, t) {
+let m = a().throttle(function (e, t) {
     var r;
     let a,
         l,
         E,
         {
             channelPredicate: I = () => !0,
-            guildPredicate: T = () => !0,
-            guildFeaturePredicate: m = () => !1,
+            guildPredicate: m = () => !0,
+            guildFeaturePredicate: T = () => !1,
             ensureChatIsVisible: g = () => !1,
             withVoiceChannels: S = !1,
         } = t,
@@ -48,11 +48,11 @@ let T = a().throttle(function (e, t) {
         L = p(N, S),
         y = L.indexOf(C) + e;
     for (; null != N && "" !== N;) {
-        if (((E = L[y]), T(N)))
+        if (((E = L[y]), m(N)))
             for (; null != E && "" !== E;) {
                 if ("string" == typeof E) {
                     if (I(N, E)) return (0, h.i)(N, E, !1, g(N, E));
-                } else if ("object" == typeof E && m(E.resourceId, E.type))
+                } else if ("object" == typeof E && T(E.resourceId, E.type))
                     return (
                         N !== u.A.getGuildId() && (0, h.i)(N, c.Ay.getDefaultChannel(N)?.id),
                         (0, s.openModalLazy)(async () => {
@@ -230,7 +230,7 @@ let T = a().throttle(function (e, t) {
     }
     A._.dispatch(f.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, f.ugG);
-var m = n(181079),
+var T = n(181079),
     g = n(5180),
     S = n(455234),
     N = n(95701),
@@ -250,7 +250,7 @@ let y = (e, t) => {
     D = (e, t) =>
         t === I.P.GUILD_EVENT ? !L.Ay.isMuteScheduledEventsEnabled(e) && O.Ay.hasUnread(e, t) : O.Ay.hasUnread(e, t);
 function v(e) {
-    return (0, g.ai)(e) ? m.A.favoriteGuildMuted : L.Ay.isMuted(e);
+    return (0, g.ai)(e) ? T.A.favoriteGuildMuted : L.Ay.isMuted(e);
 }
 let b = (e, t) => {
         let n = C.A.getChannel(t);
@@ -266,7 +266,7 @@ let b = (e, t) => {
         action() {
             let e = d.A.getState().guildId ?? f.ME;
             return (
-                T(1, {
+                m(1, {
                     channelPredicate: y,
                     guildPredicate: (t) => t === e || !v(t),
                     guildFeaturePredicate: D,
@@ -283,7 +283,7 @@ let b = (e, t) => {
         action() {
             let e = d.A.getState().guildId ?? f.ME;
             return (
-                T(-1, {
+                m(-1, {
                     channelPredicate: y,
                     guildPredicate: (t) => t === e || !v(t),
                     guildFeaturePredicate: D,
@@ -298,10 +298,10 @@ let b = (e, t) => {
     w = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (T(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (m(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     },
     G = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (T(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (m(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     };

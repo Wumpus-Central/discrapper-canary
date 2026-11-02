@@ -1,10 +1,10 @@
 (n.d(t, {
     $V: () => y,
-    Fg: () => T,
+    Fg: () => m,
     KM: () => g,
     LE: () => v,
     M: () => O,
-    O8: () => m,
+    O8: () => T,
     b: () => R,
     c2: () => P,
     f: () => U,
@@ -12,7 +12,7 @@
     ku: () => p,
     mS: () =>
         function e(t, n) {
-            let i = n ?? T(t);
+            let i = n ?? m(t);
             if (i === h.LO.NONE) return !1;
             if (
                 t.attachments?.some((e) => y({ type: E.D.Attachment, media: e }, i)) ||
@@ -56,7 +56,7 @@ var i = n(665260),
 function p() {
     return Object.values(h.Jn).filter((e) => null == e.isEligible || e.isEligible?.());
 }
-function T(e) {
+function m(e) {
     let { channelId: t, authorId: n } = w(e);
     return null == t || null == e
         ? h.LO.NONE
@@ -64,17 +64,17 @@ function T(e) {
               let n = u.default.getCurrentUser();
               if (null == n || t === n.id) return h.LO.NONE;
               let i = P(e, t, [o.A, c.A]);
-              return null == i ? h.LO.NONE : m(i);
+              return null == i ? h.LO.NONE : T(i);
           })(t, n);
 }
-function m(e) {
+function T(e) {
     let t = p();
     return null == e
         ? h.LO.NONE
         : v(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(_.Vq));
 }
 function g(e) {
-    let t = T(e);
+    let t = m(e);
     return S(e, t);
 }
 function S(e, t) {
@@ -103,7 +103,7 @@ function C(e) {
     return !N(e).some((e) => e.loadingState === a.TD.LOADING);
 }
 function O(e) {
-    let t = T(e);
+    let t = m(e);
     if (t === h.LO.NONE) return { attachmentIds: [], embedIds: [] };
     let n = e.attachments?.filter((e) => y({ type: E.D.Attachment, media: e }, t)),
         i = e.embeds?.filter((e) => y({ type: E.D.Embed, media: e }, t));

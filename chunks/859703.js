@@ -1,4 +1,4 @@
-let i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, T, m, g, S, N, C, O, R, L;
+let i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, m, T, g, S, N, C, O, R, L;
 n.d(t, { A: () => ei });
 var y = n(435558),
     D = n(412703),
@@ -35,8 +35,8 @@ function K() {
         (f = new Set()),
         (H = new Map()),
         (p = new Map()),
-        (T = new Map()),
         (m = new Map()),
+        (T = new Map()),
         (g = new Map()),
         (S = new Map()),
         (I = new Set()),
@@ -76,7 +76,7 @@ function z(e, t) {
     (n.set(e, t), (p = n));
 }
 function X(e) {
-    null != m.get(e) && (m = new Map(m)).delete(e);
+    null != T.get(e) && (T = new Map(T)).delete(e);
 }
 function q(e) {
     let t = new Set(u);
@@ -155,10 +155,10 @@ class et extends b.Ay.Store {
         return p.get(e);
     }
     getRewards(e) {
-        return T.get(e);
+        return m.get(e);
     }
     getStreamHeartbeatFailure(e) {
-        return m.get(e);
+        return T.get(e);
     }
     getQuest(e) {
         return l.get(e);
@@ -314,8 +314,8 @@ let en = new et(P.h, {
         QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
             let { questId: t, streamKey: n } = e;
             null != n &&
-                null == m.get(n) &&
-                (m = new Map(m)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
+                null == T.get(n) &&
+                (T = new Map(T)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
         },
         QUESTS_ENROLL_BEGIN: function (e) {
             let { questId: t } = e,
@@ -362,8 +362,8 @@ let en = new et(P.h, {
             let { questId: t, entitlements: n } = e,
                 i = new Set(_);
             (i.delete(t), (_ = i));
-            let r = new Map(T);
-            (r.set(t, n.items), (T = r));
+            let r = new Map(m);
+            (r.set(t, n.items), (m = r));
             let a = l.get(t),
                 s = a?.userStatus;
             if (null != s && null == s.claimedAt) {

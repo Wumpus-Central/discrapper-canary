@@ -15,8 +15,8 @@ let c = null,
     f = null,
     I = null,
     p = U(),
-    T = !1,
     m = !1,
+    T = !1,
     g = !1,
     S = null,
     N = null,
@@ -114,14 +114,14 @@ function H(e) {
     b = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function j() {
-    ((m = !0), (g = !1));
+    ((T = !0), (g = !1));
 }
 function W() {
-    if (!m) return !1;
-    ((m = !1), (g = !0));
+    if (!T) return !1;
+    ((T = !1), (g = !0));
 }
 function Y() {
-    m = !1;
+    T = !1;
 }
 function K(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
@@ -155,10 +155,10 @@ function K(e) {
         (y = f ?? null),
         (D = I ?? null),
         (P = i ?? null),
-        (m = !1),
+        (T = !1),
         (g = !1),
         (S = l.default.fromTimestamp(Date.now())),
-        (T = !0));
+        (m = !0));
 }
 function $(e) {
     let { linkedUsers: t } = e;
@@ -195,7 +195,7 @@ function X(e) {
         null != h && H(h),
         (C = o),
         (O = d),
-        (m = !1),
+        (T = !1),
         (S = l.default.fromTimestamp(Date.now())),
         (R = _),
         (L = E),
@@ -252,7 +252,7 @@ function er() {
         (A = w()),
         (h = G()),
         (M = {}),
-        (m = !1),
+        (T = !1),
         (g = !1),
         (S = null),
         (p = U()),
@@ -266,7 +266,7 @@ function er() {
         (v = {}),
         (b = {}),
         (P = null),
-        (T = !1));
+        (m = !1));
 }
 class ea extends r.A {
     static displayName = "FamilyCenterStore";
@@ -365,7 +365,7 @@ class ea extends r.A {
         return u;
     }
     getIsInitialized() {
-        return T;
+        return m;
     }
     getAreLinkedUsersProcessed() {
         return E;
@@ -374,7 +374,7 @@ class ea extends r.A {
         return N;
     }
     isLoading() {
-        return m;
+        return T;
     }
     hasInitialLoadFailed() {
         return g;

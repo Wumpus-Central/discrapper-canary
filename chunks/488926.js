@@ -39,7 +39,7 @@ n.d(t, {
                 ((d = r.computeLurkerPermissionsAllowList() ?? d),
                     (a = null != a ? { ...r.permissionOverwrites, ...a } : r.permissionOverwrites));
                 let t = r.getGuildId();
-                n = null != t ? m.A.getGuild(t) : null;
+                n = null != t ? T.A.getGuild(t) : null;
             } else ((a = a ?? {}), (n = r));
             if (null == n) return O;
             let c = {
@@ -94,8 +94,8 @@ var i = n(435558),
     f = n(280450),
     I = n(734057),
     p = n(696451),
-    T = n(317525),
-    m = n(71393),
+    m = n(317525),
+    T = n(71393),
     g = n(287809),
     S = n(7864),
     N = n(935208),
@@ -203,7 +203,7 @@ function w(e) {
         lurkerPermissionsMask: d = y,
     } = e;
     if (o) return U(i.id, n, O, r);
-    let c = (s = null != s ? { ...T.A.getUnsafeMutableRoles(i.id), ...s } : T.A.getUnsafeMutableRoles(i.id))[
+    let c = (s = null != s ? { ...m.A.getUnsafeMutableRoles(i.id), ...s } : m.A.getUnsafeMutableRoles(i.id))[
             (0, A.af)(i)
         ],
         _ = null != c ? c.permissions : L;
@@ -241,7 +241,7 @@ function G(e) {
         ((d = i.computeLurkerPermissionsAllowList() ?? d),
             (r = null != r ? { ...i.permissionOverwrites, ...r } : i.permissionOverwrites));
         let e = i.getGuildId();
-        t = null != e ? m.A.getGuild(e) : null;
+        t = null != e ? T.A.getGuild(e) : null;
     } else ((r = r ?? {}), (t = i));
     if (null == t) return O;
     if (!(o === g.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return M(R, t, o, s);
@@ -294,7 +294,7 @@ function F(e, t, n) {
     );
 }
 function B(e) {
-    return r().some(T.A.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, h._m)(e, C.xBc.ADMINISTRATOR))
+    return r().some(m.A.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, h._m)(e, C.xBc.ADMINISTRATOR))
         ? void 0
         : (e.ownerId ?? void 0);
 }
@@ -303,10 +303,10 @@ function V(e, t, n, i) {
 }
 function H(e, t) {
     let n = p.Ay.getMember(e.id, t);
-    if (null != n) return T.A.getSortedRoles(e.id).find((e) => n.roles.includes(e.id));
+    if (null != n) return m.A.getSortedRoles(e.id).find((e) => n.roles.includes(e.id));
 }
 function j(e, t) {
-    return null == t.hoistRoleId ? null : T.A.getRole(e.id, t.hoistRoleId);
+    return null == t.hoistRoleId ? null : m.A.getRole(e.id, t.hoistRoleId);
 }
 function W(e) {
     return { id: e, type: s.r2.ROLE, allow: O, deny: O };
@@ -323,10 +323,10 @@ function K(e, t) {
             return !1;
         i = t.permissionOverwrites;
         let e = t.getGuildId();
-        n = null != e ? m.A.getGuild(e) : null;
+        n = null != e ? T.A.getGuild(e) : null;
     } else n = t;
     if (null == n) return !1;
-    let r = T.A.getEveryoneRole(n).permissions,
+    let r = m.A.getEveryoneRole(n).permissions,
         s = i[n.id];
     return (null != s && ((r = a.TF(r, s.deny)), (r = a.WQ(r, s.allow))), a.zy(r, e));
 }
@@ -338,9 +338,9 @@ function $(e, t) {
             return !1;
         i = t.permissionOverwrites;
         let e = t.getGuildId();
-        n = null != e ? m.A.getGuild(e) : null;
+        n = null != e ? T.A.getGuild(e) : null;
     } else n = t;
     if (null == n) return !1;
-    let s = T.A.getEveryoneRole(n);
+    let s = m.A.getEveryoneRole(n);
     return !(!(0, h._m)(s, e) || r().some(i, (t) => a.zy(t.deny, e)));
 }

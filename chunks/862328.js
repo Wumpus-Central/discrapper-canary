@@ -49,9 +49,9 @@ function _(e) {
             upperBadge: f,
             lowerBadge: I,
             rounded: p = !1,
-            "aria-hidden": T,
+            "aria-hidden": m,
         } = e,
-        [m, g] = r.useState(!1),
+        [T, g] = r.useState(!1),
         S = null != f,
         N = null != I,
         C = r.useId(),
@@ -102,7 +102,7 @@ function _(e) {
             onBlur: function () {
                 g(!1);
             },
-            "aria-hidden": T,
+            "aria-hidden": m,
             children: [
                 (0, i.jsxs)(
                     "svg",
@@ -172,7 +172,7 @@ function _(e) {
                                       ],
                                   })
                                 : null,
-                            m
+                            T
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)("g", {

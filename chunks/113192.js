@@ -16,22 +16,22 @@ var r = n(646865),
     f = n(262579),
     I = n(241696),
     p = n(746726),
-    T = n(165610),
-    m = n(652215),
+    m = n(165610),
+    T = n(652215),
     g = n(977747),
     S = n(967481);
 function N(e) {
     let { frame: t, idle: N, onMouseDown: C, onMouseMove: O, onMouseLeave: R } = e,
         L = (0, o.h)(t.applicationId),
         y = (0, p.A)(t),
-        D = (0, u.Us)() === m.BRT.POPOUT,
+        D = (0, u.Us)() === T.BRT.POPOUT,
         { parentAnalyticsLocation: v } = (0, l.Ay)();
     function b() {
         (y.isShownInCall && null != y.channelId && null != y.participantId && (0, a.A)(y.channelId, y.participantId),
-            h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: T.y0.FOCUSED }));
+            h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: m.y0.FOCUSED }));
     }
     async function P() {
-        if (t.intent !== T.sV.INLINE) return void b();
+        if (t.intent !== m.sV.INLINE) return void b();
         let { returnToConjureFrameSurface: e } = await Promise.all([
             n.e("644013"),
             n.e("896691"),
@@ -162,7 +162,7 @@ function N(e) {
                                   onOpenPopout: function () {
                                       ((0, d.X)(v, d.O.POPOUT, !0), (0, s.A)({ onConfirm: () => (0, I.A)(t.id) }));
                                   },
-                                  onClosePopout: m.FXj,
+                                  onClosePopout: T.FXj,
                               }),
                         (0, i.jsx)(f.A, { frameId: t.id, className: g.BD }),
                     ],

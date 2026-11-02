@@ -20,8 +20,8 @@ function p(e) {
     let t,
         { applicationId: n, name: a, glyphSize: c, className: E, "aria-label": p } = e,
         {
-            character: T,
-            backgroundColor: m,
+            character: m,
+            backgroundColor: T,
             foregroundColor: g,
         } = ((t = (0, o.r)(d.A.colors.BACKGROUND_BASE_LOWER).hex()),
         r.useMemo(() => {
@@ -60,10 +60,10 @@ function p(e) {
         }, [n, a, t]));
     return (0, i.jsx)("div", {
         className: s()(I.V, E),
-        style: { backgroundColor: m, color: g },
+        style: { backgroundColor: T, color: g },
         role: null != p ? "img" : void 0,
         "aria-label": p,
         "aria-hidden": null == p || void 0,
-        children: T ?? (0, i.jsx)(l.k, { size: "custom", width: c, height: c, color: "currentColor" }),
+        children: m ?? (0, i.jsx)(l.k, { size: "custom", width: c, height: c, color: "currentColor" }),
     });
 }

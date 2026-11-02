@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(439372),
     r = n(945810);
 let a = (0, r.mj)({
@@ -103,7 +103,7 @@ async function p(e, t) {
         : n !== (await window.DiscordNative.settings.get(e.settingKey, e.defaultValue)) &&
           (await window.DiscordNative.settings.set(e.settingKey, n));
 }
-class T extends i.A {
+class m extends i.A {
     stores = new Map().set(A.A, () => {
         if (h)
             for (let e of E) {
@@ -125,4 +125,4 @@ class T extends i.A {
         },
     };
 }
-let m = new T();
+let T = new m();

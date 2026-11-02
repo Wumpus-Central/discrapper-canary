@@ -24,8 +24,8 @@ function A(e) {
         I = n(773371).default,
         p = (0, o.Us)() === c.BRT.OVERLAY,
         {
-            shouldReduceMotion: T,
-            useForcedColors: m,
+            shouldReduceMotion: m,
+            useForcedColors: T,
             isAppFocusedOrOverlayVisible: g,
         } = (0, a.cf)(
             [s.Ay, d.A, I],
@@ -44,15 +44,15 @@ function A(e) {
                 r = 2,
                 a = 3;
             i !== -1 / 0 &&
-                !T &&
+                !m &&
                 g &&
                 ((n = "INSET_ONLY" === E ? 0 : _(i, A)),
                 (r = "OUTSET_ONLY" === E ? 0 : _(i, h)),
                 (a = "OUTSET_ONLY" === E ? 0 : r + 1));
             let s = "var(--status-speaking)";
-            (m ? (s = "Highlight") : t === u.T2.PLAYING_SOUNDBOARD && (s = "var(--brand-500)"),
+            (T ? (s = "Highlight") : t === u.T2.PLAYING_SOUNDBOARD && (s = "var(--brand-500)"),
                 (e.boxShadow = `0 0 0 ${n}px ${s}, inset 0 0 0 ${r}px ${s}, inset 0 0 0 ${a}px var(--background-base-lower)`));
         }
         return (g && (e.transition = "box-shadow 50ms ease-out"), e);
-    }, [t, g, T, m, i, E, A, h, f]);
+    }, [t, g, m, T, i, E, A, h, f]);
 }

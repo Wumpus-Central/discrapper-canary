@@ -1,16 +1,16 @@
 n.d(t, { A: () => l });
 var r = n(17928),
     s = n(73153);
-let o = new Map();
-class i extends r.Ay.Store {
+let i = new Map();
+class o extends r.Ay.Store {
     getSmartContext(e) {
-        return o.get(e) ?? null;
+        return i.get(e) ?? null;
     }
 }
-let l = new i(s.h, {
+let l = new o(s.h, {
     CONJURE_SMART_CONTEXT_SET: function (e) {
         let { projectId: t, enabled: n } = e;
-        if (o.get(t) === n) return !1;
-        o.set(t, n);
+        if (i.get(t) === n) return !1;
+        i.set(t, n);
     },
 });

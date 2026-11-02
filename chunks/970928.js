@@ -59,8 +59,8 @@ var h = n(626584),
     f = n(776231),
     I = n(652215);
 let p = "https://i.scdn.co/image/",
-    T = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-    m = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
+    m = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
+    T = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
     g = {
         [I.fg2.SPOTIFY]: { deserialize: (e) => `${p}${encodeURIComponent(e)}`, serialize: (e) => e.split(p)[1] },
         [I.fg2.TWITCH]: {
@@ -74,7 +74,7 @@ let p = "https://i.scdn.co/image/",
                 );
             },
             serialize: (e) => {
-                let t = e.match(T);
+                let t = e.match(m);
                 return null != t ? t[1] : null;
             },
         },
@@ -84,7 +84,7 @@ let p = "https://i.scdn.co/image/",
                 return ((t = encodeURIComponent(e)), `https://i.ytimg.com/vi/${t}/hqdefault_live.jpg`);
             },
             serialize: (e) => {
-                let t = e.match(m);
+                let t = e.match(T);
                 return null != t ? t[1] : null;
             },
         },

@@ -16,8 +16,8 @@ let A = window.matchMedia("(prefers-reduced-motion: reduce)"),
     f = window.matchMedia("(prefers-contrast: less)"),
     I = window.matchMedia("(prefers-color-scheme: dark)"),
     p = window.matchMedia("(prefers-color-scheme: light)"),
-    T = window.matchMedia("(forced-colors: active)"),
-    m = 5;
+    m = window.matchMedia("(forced-colors: active)"),
+    T = 5;
 function g() {
     return "windows" === (0, d.getOS)();
 }
@@ -27,7 +27,7 @@ let S = {
             this.handleSystemPrefersReducedMotionChanged(A),
             I.addListener(this.handleSystemColorPreferencesChanged),
             p.addListener(this.handleSystemColorPreferencesChanged),
-            T.addListener(this.handleSystemColorPreferencesChanged),
+            m.addListener(this.handleSystemColorPreferencesChanged),
             this.handleSystemColorPreferencesChanged(),
             h.addListener(this.handleSystemPrefersContrastChanged),
             f.addListener(this.handleSystemPrefersContrastChanged),
@@ -44,11 +44,11 @@ let S = {
     },
     maybeShowKeyboardNavigationExplainerModal() {
         let e;
-        ((m = Math.max(m - 1, 0)),
+        ((T = Math.max(T - 1, 0)),
             null == (e = l.default.getCurrentUser()) ||
                 Date.now() - e.createdAt < 864e5 ||
                 u.Ay.keyboardNavigationExplainerModalSeen ||
-                0 !== m ||
+                0 !== T ||
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("65000"), n.e("898186")]).then(n.bind(n, 645905));
@@ -63,7 +63,7 @@ let S = {
     handleSystemColorPreferencesChanged() {
         let e = E.Fc.NO_PREFERENCE;
         I.matches ? (e = E.Fc.DARK) : p.matches && (e = E.Fc.LIGHT);
-        let t = (!d.isPlatformEmbedded || g()) && T.matches ? "active" : "none";
+        let t = (!d.isPlatformEmbedded || g()) && m.matches ? "active" : "none";
         (s.LA(e), c.RI(t));
     },
     handleSystemPrefersContrastChanged() {

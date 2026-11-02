@@ -1,5 +1,5 @@
 n.d(t, {
-    rw: () => m,
+    rw: () => T,
     NZ: () => F,
     ss: () => N,
     D8: () => G,
@@ -45,14 +45,14 @@ var i = n(17928),
     f = n(958872),
     I = n(853735),
     p = n(652215),
-    T = n(49999);
-let m = 2592e6;
+    m = n(49999);
+let T = 2592e6;
 function g(e) {
     let t = l.A.settings.userContent?.recurringDismissibleContentStates[e];
     return {
         lastDismissedVersion: (0, h.L0)(e) ? (0, I.c)(e) : 0,
         lastDismissedAtMs: new Date().getTime().toString(),
-        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + m) : "0",
+        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + T) : "0",
         numTimesDismissed: t?.numTimesDismissed ?? 0,
     };
 }
@@ -207,7 +207,7 @@ function B(e, t, n, i) {
 function V(e, t) {
     (((0, A.dD)(e) || t.forceTrack) &&
         (function (e, t) {
-            t?.dismissAction === T.i.TAKE_ACTION &&
+            t?.dismissAction === m.i.TAKE_ACTION &&
                 (function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     if (E.A.hasTrackedActionedEvent(e)) return;
@@ -232,7 +232,7 @@ function V(e, t) {
                 l = t?.guildId != null ? W(e, t.guildId) : Y(e, t ?? {});
             o.default.track(p.HAw.DISMISSIBLE_CONTENT_DISMISSED, {
                 type: r.M[e],
-                action: t?.dismissAction ?? T.i.UNKNOWN,
+                action: t?.dismissAction ?? m.i.UNKNOWN,
                 content_count: n,
                 group_name: t?.groupName,
                 bypass_fatigue: (0, u.a9)(e),

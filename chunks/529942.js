@@ -1,4 +1,4 @@
-n.d(t, { $u: () => S, IA: () => T, ID: () => N, Tk: () => p, Z$: () => C, rf: () => m });
+n.d(t, { $u: () => S, IA: () => m, ID: () => N, Tk: () => p, Z$: () => C, rf: () => T });
 var i = n(73153),
     r = n(666860),
     a = n(976860),
@@ -23,7 +23,7 @@ function p(e, t) {
         i.h.dispatch({ type: "IMPERSONATE_UPDATE", guildId: e, data: t }),
         g(e));
 }
-function T(e, t) {
+function m(e, t) {
     let n = A.A.getData(e);
     null != n &&
         n.type === t.type &&
@@ -35,7 +35,7 @@ function T(e, t) {
         i.h.dispatch({ type: "IMPERSONATE_UPDATE", guildId: e, data: { ...n, ...t } }),
         g(e));
 }
-function m(e) {
+function T(e) {
     i.h.dispatch({ type: "IMPERSONATE_STOP", guildId: e });
 }
 function g(e) {
@@ -48,7 +48,7 @@ function g(e) {
 }
 function S(e, t, n) {
     let i = new Set(_.Ay.getOptedInChannels(e));
-    (t.forEach((e) => i.add(e)), n.forEach((e) => i.delete(e)), T(e, { type: h._.NEW_MEMBER, optInChannels: i }));
+    (t.forEach((e) => i.add(e)), n.forEach((e) => i.delete(e)), m(e, { type: h._.NEW_MEMBER, optInChannels: i }));
 }
 function N(e, t) {
     let n, i;
@@ -63,8 +63,8 @@ function N(e, t) {
         }));
     let r = {};
     for (let n of d.A.getManyRoles(e, t)) r[n.id] = n;
-    T(e, { type: h._.NEW_MEMBER, roles: r });
+    m(e, { type: h._.NEW_MEMBER, roles: r });
 }
 function C(e, t) {
-    T(e, { type: h._.NEW_MEMBER, ...t });
+    m(e, { type: h._.NEW_MEMBER, ...t });
 }

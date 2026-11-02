@@ -40,20 +40,20 @@ function E(e, t) {
         abortSignal: p,
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if ("" === e || d.A.isFetchingProfile(e, h)) return Promise.resolve();
-    let T = d.A.getUserProfile(e),
-        m = d.A.getGuildMemberProfile(e, h),
-        g = null != h ? m : T,
+    let m = d.A.getUserProfile(e),
+        T = d.A.getGuildMemberProfile(e, h),
+        g = null != h ? T : m,
         S = Date.now() - (g?.fetchEndedAt ?? 0) >= 6e4;
     if ((g?.fetchError?.status === 404 || g?.fetchError?.status === 429) && !S) return Promise.resolve();
     let N = d.A.getMutualGuilds(e),
         C = d.A.getMutualFriends(e),
         O = d.A.getMutualFriendsCount(e),
-        R = null == h ? null == T : null == m,
+        R = null == h ? null == m : null == T,
         L = !R && (S || (null == N && c) || (null == C && E) || (null == O && u));
     if (!R && !L) return Promise.resolve();
-    let y = null != h ? m?.profileEffect : T?.profileEffect;
+    let y = null != h ? T?.profileEffect : m?.profileEffect;
     null != y && (0, a.RE)(y.skuId);
-    let D = null != h ? m?.profileFrame : T?.profileFrame;
+    let D = null != h ? T?.profileFrame : m?.profileFrame;
     (null != D && (0, a.RE)(D.skuId), null != t && (0, r.l0)(t));
     let v = {
             type: n,

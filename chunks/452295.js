@@ -15,8 +15,8 @@ var i = n(488428),
     f = n(952818),
     I = n(651743),
     p = n(773669),
-    T = n(134861),
-    m = n(760751),
+    m = n(134861),
+    T = n(760751),
     g = n(189081),
     S = n(340829),
     N = n(174459),
@@ -324,7 +324,7 @@ function eA(e) {
 }
 function eh(e) {
     let { applicationId: t, branchId: n } = e;
-    if (T.A.isConnected(t)) return Promise.resolve();
+    if (m.A.isConnected(t)) return Promise.resolve();
     let r = null;
     if (null == n) {
         let e = g.A.getActiveLibraryApplication(t);
@@ -363,7 +363,7 @@ function eh(e) {
         let e = _.A.getApplication(t);
         if (null != e) {
             r = C.A.launch(e);
-            let n = m.A.getOfficialGame(e);
+            let n = T.A.getOfficialGame(e);
             null != n && n.id !== t && (r = r.catch(() => C.A.launch(n)));
         } else r = C.A.launchGame(t);
     }
@@ -391,7 +391,7 @@ let eI = {
     },
     toggleOverlay(e, t, n) {
         let i = (0, f.Zh)(e),
-            r = m.A.findGame(i);
+            r = T.A.findGame(i);
         if (null != r) {
             let e = g.A.getActiveLibraryApplication(r.id);
             if (null != e) {
@@ -441,8 +441,8 @@ let eI = {
                 }),
         ),
     getDetectableGames() {
-        if (!m.A.canFetchDetectableGames()) return;
-        let e = m.A.detectableGamesEtag;
+        if (!T.A.canFetchDetectableGames()) return;
+        let e = T.A.detectableGamesEtag;
         (d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
             R.A.get({
                 url: null != el ? `https://${el}/detectables/games-v1.json` : ed,
@@ -465,14 +465,14 @@ let eI = {
                 (e) => {
                     let { status: t } = e;
                     304 === t
-                        ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: m.A.detectableGamesEtag })
+                        ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: T.A.detectableGamesEtag })
                         : d.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
                 },
             ));
     },
     getDetectableBlocklist() {
-        if (!m.A.canFetchExecutableBlocklist()) return;
-        let e = m.A.blocklistEtag;
+        if (!T.A.canFetchExecutableBlocklist()) return;
+        let e = T.A.blocklistEtag;
         (d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             l.Bo.get({
                 url: J.Rsh.GAMES_BLOCKLIST,
@@ -499,7 +499,7 @@ let eI = {
                               type: "GAMES_BLOCKLIST_UPDATE",
                               executables: [],
                               patterns: [],
-                              etag: m.A.blocklistEtag,
+                              etag: T.A.blocklistEtag,
                           })
                         : (eE.error("Failed to fetch games blocklist"),
                           d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
@@ -547,7 +547,7 @@ let eI = {
                 LibraryApplicationStore: g.A,
                 LaunchableGameStore: I.A,
                 DispatchApplicationStore: S.A,
-                ConnectedAppsStore: T.A,
+                ConnectedAppsStore: m.A,
                 applicationId: n,
             }) && (await eh({ applicationId: n }), !0)
         );

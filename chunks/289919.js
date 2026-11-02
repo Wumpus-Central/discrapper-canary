@@ -16,8 +16,8 @@ var r = n(284009),
     f = n(613057),
     I = n(652215);
 let p = "RPC_STORE_WAIT",
-    T = [];
-class m {
+    m = [];
+class T {
     getCurrentUser = () => null;
     onConnect = () => {};
     onDisconnect = () => {};
@@ -200,7 +200,7 @@ class m {
         (l().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate());
     }
     dispatchToSubscriptions(e, t, n, i) {
-        (null != i && "" !== i && (T.includes(i) || (T.unshift(i), T.splice(50), 0))) ||
+        (null != i && "" !== i && (m.includes(i) || (m.unshift(i), m.splice(50), 0))) ||
             this.subscriptions.forEach((i) => {
                 var r;
                 if (
@@ -234,7 +234,7 @@ class m {
         }).then((e) => (a(), e));
     }
 }
-let g = new m(async () => {
+let g = new T(async () => {
     let { default: e } = await (0, i.sq)({
         createPromise: () => n.e("734188").then(n.t.bind(n, 88137, 23)),
         webpackId: 88137,

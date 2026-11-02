@@ -6,7 +6,7 @@
     F1: () => eX,
     GY: () => eb,
     Ip: () => en,
-    Ju: () => eT,
+    Ju: () => em,
     KJ: () => eu,
     KP: () => $,
     NS: () => q,
@@ -62,8 +62,8 @@ var i,
     f,
     I,
     p,
-    T,
     m,
+    T,
     g,
     S,
     N,
@@ -170,38 +170,38 @@ var i,
         (p[(p.DEFAULT = 4)] = "DEFAULT"),
         p),
     Z =
-        (((T = {})[(T.UNSET = 0)] = "UNSET"),
-        (T[(T.DARK = 1)] = "DARK"),
-        (T[(T.LIGHT = 2)] = "LIGHT"),
-        (T[(T.DARKER = 3)] = "DARKER"),
-        (T[(T.MIDNIGHT = 4)] = "MIDNIGHT"),
-        T),
-    Q =
-        (((m = {})[(m.MINT_APPLE = 0)] = "MINT_APPLE"),
-        (m[(m.CITRUS_SHERBERT = 1)] = "CITRUS_SHERBERT"),
-        (m[(m.RETRO_RAINCLOUD = 2)] = "RETRO_RAINCLOUD"),
-        (m[(m.HANAMI = 3)] = "HANAMI"),
-        (m[(m.SUNRISE = 4)] = "SUNRISE"),
-        (m[(m.COTTON_CANDY = 5)] = "COTTON_CANDY"),
-        (m[(m.LOFI_VIBES = 6)] = "LOFI_VIBES"),
-        (m[(m.DESERT_KHAKI = 7)] = "DESERT_KHAKI"),
-        (m[(m.SUNSET = 8)] = "SUNSET"),
-        (m[(m.CHROMA_GLOW = 9)] = "CHROMA_GLOW"),
-        (m[(m.FOREST = 10)] = "FOREST"),
-        (m[(m.CRIMSON_MOON = 11)] = "CRIMSON_MOON"),
-        (m[(m.MIDNIGHT_BLURPLE = 12)] = "MIDNIGHT_BLURPLE"),
-        (m[(m.MARS = 13)] = "MARS"),
-        (m[(m.DUSK = 14)] = "DUSK"),
-        (m[(m.UNDER_THE_SEA = 15)] = "UNDER_THE_SEA"),
-        (m[(m.EASTER_EGG = 16)] = "EASTER_EGG"),
-        (m[(m.RETRO_STORM = 17)] = "RETRO_STORM"),
-        (m[(m.NEON_NIGHTS = 18)] = "NEON_NIGHTS"),
-        (m[(m.SEPIA = 19)] = "SEPIA"),
-        (m[(m.STRAWBERRY_LEMONADE = 20)] = "STRAWBERRY_LEMONADE"),
-        (m[(m.AURORA = 21)] = "AURORA"),
-        (m[(m.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
-        (m[(m.HEXAGON = 23)] = "HEXAGON"),
+        (((m = {})[(m.UNSET = 0)] = "UNSET"),
+        (m[(m.DARK = 1)] = "DARK"),
+        (m[(m.LIGHT = 2)] = "LIGHT"),
+        (m[(m.DARKER = 3)] = "DARKER"),
+        (m[(m.MIDNIGHT = 4)] = "MIDNIGHT"),
         m),
+    Q =
+        (((T = {})[(T.MINT_APPLE = 0)] = "MINT_APPLE"),
+        (T[(T.CITRUS_SHERBERT = 1)] = "CITRUS_SHERBERT"),
+        (T[(T.RETRO_RAINCLOUD = 2)] = "RETRO_RAINCLOUD"),
+        (T[(T.HANAMI = 3)] = "HANAMI"),
+        (T[(T.SUNRISE = 4)] = "SUNRISE"),
+        (T[(T.COTTON_CANDY = 5)] = "COTTON_CANDY"),
+        (T[(T.LOFI_VIBES = 6)] = "LOFI_VIBES"),
+        (T[(T.DESERT_KHAKI = 7)] = "DESERT_KHAKI"),
+        (T[(T.SUNSET = 8)] = "SUNSET"),
+        (T[(T.CHROMA_GLOW = 9)] = "CHROMA_GLOW"),
+        (T[(T.FOREST = 10)] = "FOREST"),
+        (T[(T.CRIMSON_MOON = 11)] = "CRIMSON_MOON"),
+        (T[(T.MIDNIGHT_BLURPLE = 12)] = "MIDNIGHT_BLURPLE"),
+        (T[(T.MARS = 13)] = "MARS"),
+        (T[(T.DUSK = 14)] = "DUSK"),
+        (T[(T.UNDER_THE_SEA = 15)] = "UNDER_THE_SEA"),
+        (T[(T.EASTER_EGG = 16)] = "EASTER_EGG"),
+        (T[(T.RETRO_STORM = 17)] = "RETRO_STORM"),
+        (T[(T.NEON_NIGHTS = 18)] = "NEON_NIGHTS"),
+        (T[(T.SEPIA = 19)] = "SEPIA"),
+        (T[(T.STRAWBERRY_LEMONADE = 20)] = "STRAWBERRY_LEMONADE"),
+        (T[(T.AURORA = 21)] = "AURORA"),
+        (T[(T.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
+        (T[(T.HEXAGON = 23)] = "HEXAGON"),
+        T),
     J = (((g = {})[(g.AUTO = 0)] = "AUTO"), (g[(g.H12 = 1)] = "H12"), (g[(g.H23 = 2)] = "H23"), g),
     ee =
         (((S = {})[(S.LAUNCH_PAD_DISABLED = 0)] = "LAUNCH_PAD_DISABLED"),
@@ -261,7 +261,7 @@ class es extends b.G {
             { no: 15, name: "favorites", kind: "message", T: () => ta },
             { no: 16, name: "audio_context_settings", kind: "message", T: () => tu },
             { no: 17, name: "communities", kind: "message", T: () => tE },
-            { no: 18, name: "broadcast", kind: "message", T: () => tT },
+            { no: 18, name: "broadcast", kind: "message", T: () => tm },
             { no: 19, name: "clips", kind: "message", T: () => tg },
             { no: 20, name: "for_later", kind: "message", T: () => tD },
             { no: 21, name: "safety_settings", kind: "message", T: () => tL },
@@ -339,7 +339,7 @@ class es extends b.G {
                     r.communities = tE.internalBinaryRead(e, e.uint32(), n, r.communities);
                     break;
                 case 18:
-                    r.broadcast = tT.internalBinaryRead(e, e.uint32(), n, r.broadcast);
+                    r.broadcast = tm.internalBinaryRead(e, e.uint32(), n, r.broadcast);
                     break;
                 case 19:
                     r.clips = tg.internalBinaryRead(e, e.uint32(), n, r.clips);
@@ -397,7 +397,7 @@ class es extends b.G {
             e.audioContextSettings &&
                 tu.internalBinaryWrite(e.audioContextSettings, t.tag(16, y.O0.LengthDelimited).fork(), n).join(),
             e.communities && tE.internalBinaryWrite(e.communities, t.tag(17, y.O0.LengthDelimited).fork(), n).join(),
-            e.broadcast && tT.internalBinaryWrite(e.broadcast, t.tag(18, y.O0.LengthDelimited).fork(), n).join(),
+            e.broadcast && tm.internalBinaryWrite(e.broadcast, t.tag(18, y.O0.LengthDelimited).fork(), n).join(),
             e.clips && tg.internalBinaryWrite(e.clips, t.tag(19, y.O0.LengthDelimited).fork(), n).join(),
             e.forLater && tD.internalBinaryWrite(e.forLater, t.tag(20, y.O0.LengthDelimited).fork(), n).join(),
             e.safetySettings &&
@@ -598,7 +598,7 @@ let eE = new e_();
 class eA extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildSettings", [
-            { no: 1, name: "channels", kind: "map", K: 6, V: { kind: "message", T: () => eT } },
+            { no: 1, name: "channels", kind: "map", K: 6, V: { kind: "message", T: () => em } },
             { no: 2, name: "hub_progress", kind: "scalar", T: 13 },
             { no: 3, name: "guild_onboarding_progress", kind: "scalar", T: 13 },
             { no: 4, name: "guild_recents_dismissed_at", kind: "message", T: () => M.D },
@@ -723,7 +723,7 @@ class eA extends b.G {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    s = eT.internalBinaryRead(t, t.uint32(), n);
+                    s = em.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -731,7 +731,7 @@ class eA extends b.G {
                     );
             }
         }
-        e[a ?? "0"] = s ?? eT.create();
+        e[a ?? "0"] = s ?? em.create();
     }
     binaryReadMap12(e, t, n) {
         let i = t.uint32(),
@@ -759,7 +759,7 @@ class eA extends b.G {
         for (let i of Object.keys(e.channels))
             (t.tag(1, y.O0.LengthDelimited).fork().tag(1, y.O0.Bit64).fixed64(i),
                 t.tag(2, y.O0.LengthDelimited).fork(),
-                eT.internalBinaryWrite(e.channels[i], t, n),
+                em.internalBinaryWrite(e.channels[i], t, n),
                 t.join().join());
         for (let i of (0 !== e.hubProgress && t.tag(2, y.O0.Varint).uint32(e.hubProgress),
         0 !== e.guildOnboardingProgress && t.tag(3, y.O0.Varint).uint32(e.guildOnboardingProgress),
@@ -894,8 +894,8 @@ class ep extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eT = new ep();
-class em extends b.G {
+let em = new ep();
+class eT extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomNotificationSoundConfig", [
             { no: 1, name: "notification_sound_pack_id", kind: "message", T: () => P.hU },
@@ -933,7 +933,7 @@ class em extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eg = new em();
+let eg = new eT();
 class eS extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.RecurringDismissibleContentState", [
@@ -3833,8 +3833,8 @@ class tp extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tT = new tp();
-class tm extends b.G {
+let tm = new tp();
+class tT extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClipsSettings", [
             { no: 1, name: "allow_voice_recording", kind: "message", T: () => P._t },
@@ -3871,7 +3871,7 @@ class tm extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tg = new tm();
+let tg = new tT();
 class tS extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.SpendingLimit", [

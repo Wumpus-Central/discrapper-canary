@@ -25,15 +25,15 @@ function I() {
 function p() {
     return !(0, o.k8)(l.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE);
 }
-function T(e) {
+function m(e) {
     return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
 }
-function m(e) {
+function T(e) {
     switch (e.type) {
         case a.K.COVER:
             return "" === e.title.trim() && "" === e.subtitle.trim() && null == e.image;
         case a.K.FIELDS:
-            return e.fields.every(T);
+            return e.fields.every(m);
     }
 }
 function g(e) {
@@ -86,7 +86,7 @@ function O(e) {
             return { type: e.type, title: e.title, subtitle: e.subtitle, image: C(e.image) };
         case a.K.FIELDS: {
             let t = e.fields
-                .filter((e) => !T(e))
+                .filter((e) => !m(e))
                 .map((e) => ({ title: e.title, description: e.description, image: C(e.image) }));
             return { type: e.type, fields: t };
         }
@@ -109,17 +109,17 @@ class R {
                 type: this.type,
                 header: this.header,
                 sections: this.sections
-                    .filter((e) => !m(e))
+                    .filter((e) => !T(e))
                     .map(O)
                     .filter(c.Vq),
             },
         };
     }
     isDiscardable() {
-        return this.sections.every(m);
+        return this.sections.every(T);
     }
     isValid() {
-        return "" !== this.header.trim() && this.sections.some((e) => !m(e));
+        return "" !== this.header.trim() && this.sections.some((e) => !T(e));
     }
     isUpdatable() {
         return (0, u.ki)(d.default.getCurrentUser(), _.PremiumTypes.TIER_2);

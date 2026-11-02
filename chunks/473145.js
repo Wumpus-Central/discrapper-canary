@@ -11,7 +11,7 @@ n.d(t, {
     aG: () => S,
     ax: () => g,
     fA: () => k,
-    fi: () => m,
+    fi: () => T,
     gb: () => O,
     k1: () => D,
     kN: () => H,
@@ -42,8 +42,8 @@ var E = n(652215),
     I = n(105292),
     p = n(899082);
 Object.freeze({ 1: 1, 2: 2, 3: 3, 4: 6, 5: 9, 6: 12, 7: 15, 8: 18, 9: 24 });
-let T = [E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3],
-    m = T.slice().reverse();
+let m = [E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3],
+    T = m.slice().reverse();
 function g(e) {
     return e === E.TVA.NONE ? E.TVA.TIER_1 : w.find((t) => t.tier === e)?.nextTier;
 }
@@ -57,7 +57,7 @@ function N(e) {
 }
 function C(e) {
     if (e === E.TVA.NONE) return h.y7[e];
-    let t = T[T.indexOf(e) - 1];
+    let t = m[m.indexOf(e) - 1];
     return h.y7[e] - h.y7[t];
 }
 function O(e) {
@@ -141,8 +141,8 @@ function M(e) {
     if (n.status === E.Dmq.ACCOUNT_HOLD) return I.intl.string(I.t.JakNQ8);
     if (A > 0) return I.intl.string(I.t.x25mZR);
     if (null == n.renewalMutations) return null;
-    let T = _.bx(n.renewalMutations.additionalPlans);
-    return _.bx(n.additionalPlans) > T ? I.intl.string(I.t.x25mZR) : I.intl.string(I.t["W/bb8f"]);
+    let m = _.bx(n.renewalMutations.additionalPlans);
+    return _.bx(n.additionalPlans) > m ? I.intl.string(I.t.x25mZR) : I.intl.string(I.t["W/bb8f"]);
 }
 function U(e) {
     return !e.ended && (null == e.endsAt || e.endsAt.getTime() > Date.now());
@@ -154,15 +154,15 @@ let w = [
 ];
 function G(e, t) {
     let n = N(t),
-        i = T.indexOf(t);
+        i = m.indexOf(t);
     if (-1 === i) return 0;
-    let r = T[i - 1],
+    let r = m[i - 1],
         a = null != r ? S(r) : 0,
         s = S(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
 function x(e, t, n) {
-    return -1 === T.indexOf(n) ? 0 : Math.max(0, k(e) - t.length);
+    return -1 === m.indexOf(n) ? 0 : Math.max(0, k(e) - t.length);
 }
 function k(e) {
     let t = h.OW + (e.premiumFeatures?.additionalSoundSlots ?? 0);
@@ -180,6 +180,6 @@ function V(e) {
     return e.subscription?.status === E.Dmq.CANCELED || e.canceled;
 }
 function H(e) {
-    return m.find((t) => e >= E.M2T[t]) ?? E.TVA.NONE;
+    return T.find((t) => e >= E.M2T[t]) ?? E.TVA.NONE;
 }
 (E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3);

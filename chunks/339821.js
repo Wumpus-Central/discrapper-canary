@@ -15,12 +15,12 @@ var i = n(582128),
     f = n(174929),
     I = n(807098),
     p = n(966971);
-function T(e) {
+function m(e) {
     if ("" === e) return;
     let t = new Date(e);
     return Number.isNaN(t.getTime()) ? void 0 : t;
 }
-function m(e) {
+function T(e) {
     let t = null != e && "" !== e.lightUrl ? e.lightUrl : void 0,
         n = null != e && "" !== e.darkUrl ? e.darkUrl : void 0;
     if (null != t || null != n) return { srcLightHovered: t, srcDarkHovered: n };
@@ -59,10 +59,10 @@ let C = function () {
                                       buttonLabel: "" !== e.buttonLabel ? e.buttonLabel : void 0,
                                       badgeIcon: "" !== e.badgeIcon ? e.badgeIcon : void 0,
                                       badgeText: "" !== e.badgeText ? e.badgeText : void 0,
-                                      badgeCountdownEndsAt: T(e.badgeCountdownEndsAt),
+                                      badgeCountdownEndsAt: m(e.badgeCountdownEndsAt),
                                       showHoverGradient: e.showHoverGradient,
                                       displayType: g[e.displayType],
-                                      entryPointBackgroundAssets: m(e.hoverBackground),
+                                      entryPointBackgroundAssets: T(e.hoverBackground),
                                       version: e.version,
                                   },
                         [n, e],
@@ -85,9 +85,9 @@ let C = function () {
                                       asset: r ?? "",
                                       badgeIcon: "" !== t.badgeIcon ? t.badgeIcon : void 0,
                                       badgeText: "" !== t.badgeText ? t.badgeText : void 0,
-                                      badgeCountdownEndsAt: T(t.badgeCountdownEndsAt),
+                                      badgeCountdownEndsAt: m(t.badgeCountdownEndsAt),
                                       showHoverGradient: t.showHoverGradient,
-                                      entryPointBackgroundAssets: m(t.hoverBackground),
+                                      entryPointBackgroundAssets: T(t.hoverBackground),
                                   },
                         [r, t],
                     )),

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, u_: () => p, um: () => h });
+n.d(t, { Ay: () => m, u_: () => p, um: () => h });
 var i = n(873298),
     r = n(406935),
     a = n(462887),
@@ -89,7 +89,7 @@ function p(e) {
             l,
         );
 }
-let T = {
+let m = {
     overrideLocale(e) {
         s.h.dispatch({ type: "USER_SETTINGS_LOCALE_OVERRIDE", locale: e });
     },

@@ -44,13 +44,13 @@ function f() {
             null == (e = t) && (e = null != r && l.includes(r) ? r : l[0]);
         }
     }
-    r !== e && ((r = e), t && m.emitChange());
+    r !== e && ((r = e), t && T.emitChange());
 }
 let I = s().throttle(f, 300, { trailing: !0 });
 function p() {
     return (I(), !1);
 }
-class T extends l.Ay.Store {
+class m extends l.Ay.Store {
     static displayName = "VideoSpeakerStore";
     initialize() {
         (this.waitFor(A.A, u.default, E.A, c.A, _.Ay), this.syncWith([A.A, c.A], p));
@@ -59,5 +59,5 @@ class T extends l.Ay.Store {
         return (i !== e && ((i = e), (r = null), f(!1)), r ?? u.default.getId());
     }
 }
-let m = new T(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p }),
-    g = m;
+let T = new m(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p }),
+    g = T;

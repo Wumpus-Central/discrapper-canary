@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(663417),
     I = n(363195),
     p = n(644235),
-    T = n(385803),
-    m = n(652215),
+    m = n(385803),
+    T = n(652215),
     g = n(105292),
     S = n(937729);
 function N() {
@@ -33,7 +33,7 @@ function N() {
 }
 function C(e) {
     let {
-            size: t = T.ni.SIZE_60,
+            size: t = m.ni.SIZE_60,
             name: n,
             className: a,
             style: l,
@@ -62,7 +62,7 @@ function C(e) {
                     tabIndex: u ?? O.tabIndex,
                     className: s()(S.yM, { [S.wH]: d }, a),
                     style: l,
-                    onClick: d ? m.tEg : o,
+                    onClick: d ? T.tEg : o,
                     children: h,
                 }),
                 (d || p) && (0, i.jsx)(N, {}),
@@ -82,13 +82,13 @@ function O(e) {
         c = I.A.themePreferenceForSystemTheme(d),
         u = (function (e) {
             switch (e) {
-                case m.NJ8.LIGHT:
+                case T.NJ8.LIGHT:
                     return S.mT;
-                case m.NJ8.ASH:
+                case T.NJ8.ASH:
                     return S.ce;
-                case m.NJ8.DARK:
+                case T.NJ8.DARK:
                     return S.eQ;
-                case m.NJ8.ONYX:
+                case T.NJ8.ONYX:
                     return S.Ih;
                 default:
                     return S.ce;
@@ -96,13 +96,13 @@ function O(e) {
         })("system" === t ? c : t),
         _ = (function (e) {
             switch (e) {
-                case m.NJ8.LIGHT:
+                case T.NJ8.LIGHT:
                     return g.intl.string(g.t.K2sFfo);
-                case m.NJ8.ASH:
+                case T.NJ8.ASH:
                     return g.intl.string(g.t.SMPT1k);
-                case m.NJ8.DARK:
+                case T.NJ8.DARK:
                     return g.intl.string(g.t.b8Cei3);
-                case m.NJ8.ONYX:
+                case T.NJ8.ONYX:
                     return g.intl.string(g.t.Do4ZJx);
                 case "system":
                     return g.intl.string(g.t["7rOU6j"]);

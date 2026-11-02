@@ -1,59 +1,59 @@
-n.d(t, { A: () => f });
-var r = n(397962),
-    u = n(17928),
-    l = n(73153),
-    i = n(91242);
-let a = null,
-    c = null,
-    o = !1,
-    A = !1;
-class d extends u.Ay.Store {
+n.d(t, { A: () => _ });
+var i = n(397962),
+    r = n(17928),
+    a = n(73153),
+    s = n(91242);
+let l = null,
+    o = null,
+    d = !1,
+    c = !1;
+class u extends r.Ay.Store {
     initialize() {
-        this.waitFor(i.A);
+        this.waitFor(s.A);
     }
     getBuilderPreviewApplicationId() {
-        return a;
+        return l;
     }
     getPhoneLensApplicationId() {
-        return c;
-    }
-    getLastBuilderPreviewApplicationId() {
-        return c;
-    }
-    isBuilderPreviewMobile() {
         return o;
     }
+    getLastBuilderPreviewApplicationId() {
+        return o;
+    }
+    isBuilderPreviewMobile() {
+        return d;
+    }
     isBuilderPreviewLandscape() {
-        return A;
+        return c;
     }
 }
-let f = new d(l.h, {
+let _ = new u(a.h, {
     LOGOUT: function () {
-        if (null == a && null == c && !o && !A) return !1;
-        ((a = null), (c = null), (o = !1), (A = !1));
+        if (null == l && null == o && !d && !c) return !1;
+        ((l = null), (o = null), (d = !1), (c = !1));
     },
     CONJURE_BUILDER_PREVIEW_APPLICATION_SET: function (e) {
         let { applicationId: t } = e;
-        if (a === t) return !1;
-        ((a = t), null != t && (c = t));
+        if (l === t) return !1;
+        ((l = t), null != t && (o = t));
     },
     CONJURE_BUILDER_PREVIEW_MOBILE_SET: function (e) {
         let { enabled: t } = e;
-        if (o === t) return !1;
-        o = t;
+        if (d === t) return !1;
+        d = t;
     },
     CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET: function (e) {
         let { landscape: t } = e;
-        if (A === t) return !1;
-        A = t;
+        if (c === t) return !1;
+        c = t;
     },
     FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { frameId: t, lockState: n } = e;
-        if (n !== r.o.LANDSCAPE && n !== r.o.PORTRAIT) return !1;
-        let u = i.A.getFrame(t);
-        if (null == u || u.applicationId !== c) return !1;
-        let l = n === r.o.LANDSCAPE;
-        if (A === l) return !1;
-        A = l;
+        if (n !== i.o.LANDSCAPE && n !== i.o.PORTRAIT) return !1;
+        let r = s.A.getFrame(t);
+        if (null == r || r.applicationId !== o) return !1;
+        let a = n === i.o.LANDSCAPE;
+        if (c === a) return !1;
+        c = a;
     },
 });

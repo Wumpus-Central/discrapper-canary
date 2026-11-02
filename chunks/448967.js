@@ -19,9 +19,9 @@ var i = n(477900),
     h = n(859703),
     _ = n(77870),
     I = n(590202),
-    T = n(652215),
-    v = n(105292),
-    S = n(299592);
+    S = n(652215),
+    T = n(105292),
+    v = n(299592);
 let L = "/assets/1929535a8397f7f0.png";
 function x(e) {
     let { questId: t, survey: n, transitionState: o, onClose: s, onSubmit: f } = e,
@@ -32,21 +32,21 @@ function x(e) {
         (f(),
             h(1),
             null != y &&
-                g.default.track(T.HAw.QUEST_SURVEY_SUBMITTED, { ...b(y, n), choice: e.text, choice_id: e.key }));
+                g.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(y, n), choice: e.text, choice_id: e.key }));
     }
     async function P(e) {
         1 === e && (await x({ width: "100%" }), s());
     }
     return (
         (0, C.Ay)(() => {
-            null != y && g.default.track(T.HAw.QUEST_SURVEY_DISPLAYED, b(y, n));
+            null != y && g.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, b(y, n));
         }),
         null == y && s(),
         (0, i.jsx)(l.EO, {
             "data-migration-pending": !0,
             transitionState: o,
             size: l.rI.DYNAMIC,
-            className: S.modalRoot,
+            className: v.modalRoot,
             parentComponent: "QuestSurveyModal",
             children: (0, i.jsxs)(c.t, {
                 activeSlide: E,
@@ -60,10 +60,10 @@ function x(e) {
                                 "data-migration-pending": !0,
                                 direction: A.A.Direction.VERTICAL,
                                 separator: !1,
-                                className: S.Hc,
+                                className: v.Hc,
                                 children: [
-                                    (0, i.jsx)(l.s_, { "data-migration-pending": !0, className: S.PV, onClick: s }),
-                                    (0, i.jsx)("img", { src: L, alt: "", className: S.LY }),
+                                    (0, i.jsx)(l.s_, { "data-migration-pending": !0, className: v.PV, onClick: s }),
+                                    (0, i.jsx)("img", { src: L, alt: "", className: v.LY }),
                                     (0, i.jsx)(d.D, { variant: "heading-lg/semibold", children: n.title }),
                                     (0, i.jsx)(m.E, {
                                         variant: "text-md/normal",
@@ -75,7 +75,7 @@ function x(e) {
                             (0, i.jsx)(l.$m, {
                                 "data-migration-pending": !0,
                                 scrollbarGutter: !1,
-                                className: S.jE,
+                                className: v.jE,
                                 children: n.choices.map((e) => (0, i.jsx)(N, { choice: e, onClick: w }, e.key)),
                             }),
                         ],
@@ -85,31 +85,31 @@ function x(e) {
                         children: [
                             (0, i.jsxs)(l.$m, {
                                 "data-migration-pending": !0,
-                                className: S.wD,
+                                className: v.wD,
                                 children: [
-                                    (0, i.jsx)("img", { src: L, alt: "", className: S.LY }),
+                                    (0, i.jsx)("img", { src: L, alt: "", className: v.LY }),
                                     (0, i.jsx)(d.D, {
                                         variant: "heading-lg/semibold",
-                                        children: v.intl.string(v.t.KTjjrG),
+                                        children: T.intl.string(T.t.KTjjrG),
                                     }),
                                     (0, i.jsx)(m.E, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: v.intl.string(v.t.AvbrEM),
+                                        children: T.intl.string(T.t.AvbrEM),
                                     }),
                                 ],
                             }),
                             (0, i.jsx)(l.jl, {
                                 "data-migration-pending": !0,
                                 children: (0, i.jsxs)("div", {
-                                    className: S.cG,
+                                    className: v.cG,
                                     children: [
                                         (0, i.jsx)(p.$, {
                                             variant: "primary",
-                                            text: v.intl.string(v.t.cpT0Cq),
+                                            text: T.intl.string(T.t.cpT0Cq),
                                             onClick: s,
                                         }),
-                                        (0, i.jsx)(r.animated.div, { className: S.ce, style: I }),
+                                        (0, i.jsx)(r.animated.div, { className: v.ce, style: I }),
                                     ],
                                 }),
                             }),
@@ -123,7 +123,7 @@ function x(e) {
 function N(e) {
     let { className: t, choice: n, onClick: a } = e;
     return (0, i.jsxs)(f.D, {
-        className: s()(S.z5, t),
+        className: s()(v.z5, t),
         onClick: () => a(n),
         children: [(0, i.jsx)(m.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(y._, {})],
     });
@@ -145,7 +145,7 @@ function w(e) {
         {
             onCloseCallback: () => {
                 let n = h.A.getQuest(e.questId);
-                null != n && g.default.track(T.HAw.QUEST_SURVEY_DISMISSED, { ...b(n, e.survey), submitted: t });
+                null != n && g.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...b(n, e.survey), submitted: t });
             },
         },
     );

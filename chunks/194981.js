@@ -17,8 +17,8 @@ function c(e) {
         f,
         I,
         p,
-        T,
         m,
+        T,
         g,
         {
             children: S,
@@ -56,7 +56,7 @@ function c(e) {
                 h = t ?? A,
                 [f, I] = i.useState(!1),
                 p = i.useRef(null),
-                T = i.useRef(!1);
+                m = i.useRef(!1);
             i.useEffect(
                 () => (
                     (p.current = new l.Ep()),
@@ -67,10 +67,10 @@ function c(e) {
                 ),
                 [],
             );
-            let m = null != h.current,
-                g = !1 !== n && (f || c) && m && !T.current,
+            let T = null != h.current,
+                g = !1 !== n && (f || c) && T && !m.current,
                 S = i.useCallback(() => {
-                    if (T.current || (u && null == h.current)) return;
+                    if (m.current || (u && null == h.current)) return;
                     if (u && null != h.current) {
                         let e = h.current;
                         if ((0, s.vq)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return;
@@ -94,13 +94,13 @@ function c(e) {
                 }, [N, _]),
                 O = i.useCallback(
                     (e) => {
-                        (null == h.current && (h.current = e.currentTarget), (T.current = !1), S());
+                        (null == h.current && (h.current = e.currentTarget), (m.current = !1), S());
                     },
                     [S, h],
                 ),
                 R = i.useCallback(
                     (e) => {
-                        E && (null == h.current && (h.current = e.currentTarget), (T.current = !1), S());
+                        E && (null == h.current && (h.current = e.currentTarget), (m.current = !1), S());
                     },
                     [E, S, h],
                 ),
@@ -116,7 +116,7 @@ function c(e) {
                     if (!g) return;
                     let e = h.current?.ownerDocument ?? document;
                     function t(e) {
-                        ("Escape" === e.key || "Esc" === e.key) && ((T.current = !0), N());
+                        ("Escape" === e.key || "Esc" === e.key) && ((m.current = !0), N());
                     }
                     return (
                         e.addEventListener("keydown", t),
@@ -170,12 +170,12 @@ function c(e) {
                 },
                 [I, A],
             )),
-            (T = f.innerRef),
-            (m = i.useCallback(
+            (m = f.innerRef),
+            (T = i.useCallback(
                 (e) => {
-                    ((0, a.cZ)(T, e), A(e));
+                    ((0, a.cZ)(m, e), A(e));
                 },
-                [T, A],
+                [m, A],
             )),
             (g = {
                 onMouseEnter: (0, a.cy)(f.onMouseEnter, b.onMouseEnter),
@@ -191,7 +191,7 @@ function c(e) {
                 : "buttonRef" in t.props
                   ? ((g.buttonRef = p), (g.ref = A))
                   : "innerRef" in t.props
-                    ? ((g.innerRef = m), (g.ref = A))
+                    ? ((g.innerRef = T), (g.ref = A))
                     : ((g.ref = A),
                       "function" == typeof t.type && t.type.prototype?.isReactComponent != null && (g.innerRef = A)),
             i.cloneElement(t, g)),

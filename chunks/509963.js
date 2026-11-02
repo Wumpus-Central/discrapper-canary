@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(976860),
     I = n(340829),
     p = n(966846),
-    T = n(674378),
-    m = n(505806),
+    m = n(674378),
+    T = n(505806),
     g = n(652215),
     S = n(105292),
     N = n(627745);
@@ -61,7 +61,7 @@ class O extends r.PureComponent {
         if (e.type === g.WTw.UPDATING || e.type === g.WTw.REPAIRING || e.type === g.WTw.INSTALLING) {
             if (t) return S.intl.string(S.t["5oxtFS"]);
             else if (e.stage === g.OQC.PATCHING || e.stage === g.OQC.REPAIRING)
-                return (0, i.jsx)(m.A, {
+                return (0, i.jsx)(T.A, {
                     getHistoricalTotalBytes: I.A.getHistoricalTotalBytesWritten,
                     updateInterval: 5e3,
                     children: this.renderProgressBody,
@@ -127,9 +127,9 @@ function L(e, t) {
 let y = o.Ay.connectStores([p.A, I.A, A.A], () => {
     let e = p.A.activeItems,
         t = L(e, I.A),
-        { total: n, progress: i } = T.zY(t);
+        { total: n, progress: i } = m.zY(t);
     return {
-        percent: T.uA(i, n),
+        percent: m.uA(i, n),
         isPaused: p.A.paused,
         firstApplication: e.length > 0 ? A.A.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null,

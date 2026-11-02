@@ -1,4 +1,4 @@
-(n.d(t, { $: () => m }), n(321073));
+(n.d(t, { $: () => T }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -15,10 +15,10 @@ let h = Object.freeze({ spacerTop: 0, totalHeight: 0, items: [], isSidebarVisibl
 var f = n(789279),
     I = n(584648),
     p = n(751591),
-    T = n(6095);
-function m(e, t, n, a) {
+    m = n(6095);
+function T(e, t, n, a) {
     let l = new Map(),
-        m =
+        T =
             "u" < typeof document
                 ? c.F
                 : new a((e) => {
@@ -95,9 +95,9 @@ function m(e, t, n, a) {
                     } = e,
                     I = (0, E.A)(),
                     p = (0, r.useRef)(h),
-                    [T] = (0, r.useState)(() => new _.A()),
+                    [m] = (0, r.useState)(() => new _.A()),
                     {
-                        dirty: m,
+                        dirty: T,
                         chunkStart: g,
                         chunkEnd: S,
                         forceUpdateOnChunkChange: N,
@@ -120,9 +120,9 @@ function m(e, t, n, a) {
                     }, [o, g, s]),
                     y = (0, r.useMemo)(
                         () =>
-                            m > 0
+                            T > 0
                                 ? p.current
-                                : (T.mergeProps({
+                                : (m.mergeProps({
                                       sectionHeight: n,
                                       rowHeight: i,
                                       footerHeight: a,
@@ -132,14 +132,14 @@ function m(e, t, n, a) {
                                       sections: t,
                                       getAnchorId: f,
                                   }),
-                                  T.compute(Math.max(0, g * o), S * o)),
-                        [m, g, S, n, i, a, l, c, d, t, T, o, f],
+                                  m.compute(Math.max(0, g * o), S * o)),
+                        [T, g, S, n, i, a, l, c, d, t, m, o, f],
                     );
                 return (
                     (0, r.useLayoutEffect)(() => {
                         p.current = y;
                     }),
-                    { ...y, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
+                    { ...y, listComputer: m, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
                 );
             })({
                 sections: L,
@@ -155,21 +155,21 @@ function m(e, t, n, a) {
                 getAnchorId: B,
             }),
             ep = (0, f.A)(eo),
-            eT = r.useRef(O),
-            em = r.useRef(R);
+            em = r.useRef(O),
+            eT = r.useRef(R);
         r.useLayoutEffect(() => {
-            ((eT.current = O), (em.current = R));
+            ((em.current = O), (eT.current = R));
         });
         let eg = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    (e > ed.current.dirty && (ed.current.dirty = e), 2 === e && eT.current?.(), ef(e));
+                    (e > ed.current.dirty && (ed.current.dirty = e), 2 === e && em.current?.(), ef(e));
                 },
                 [ef, ed],
             ),
             eS = r.useCallback(() => eg(), [eg]);
-        ((0, c.A)({ ref: eo, onUpdate: eS, key: "container", resizeObserver: m, listenerMap: l }),
-            (0, c.A)({ ref: ea, onUpdate: () => em.current?.(), key: "content", resizeObserver: m, listenerMap: l }));
+        ((0, c.A)({ ref: eo, onUpdate: eS, key: "container", resizeObserver: T, listenerMap: l }),
+            (0, c.A)({ ref: ea, onUpdate: () => eT.current?.(), key: "content", resizeObserver: T, listenerMap: l }));
         let eN =
                 ((g = r.useRef(eE)),
                 r.useEffect(() => {
@@ -283,11 +283,11 @@ function m(e, t, n, a) {
             (0, i.jsxs)("div", {
                 ref: eo,
                 onScroll: eO,
-                className: s()(N, !1 === j ? void 0 : "stable" === j ? T.x2 : T.GV, {
+                className: s()(N, !1 === j ? void 0 : "stable" === j ? m.x2 : m.GV, {
                     [e]: !0,
                     [t]: W,
                     [n]: Y,
-                    [T.qw]: es,
+                    [m.qw]: es,
                 }),
                 style: (0, p.Ay)($),
                 ...ei,
@@ -301,7 +301,7 @@ function m(e, t, n, a) {
                                 "aria-multiselectable": Z,
                                 "aria-orientation": Q,
                                 style: { height: e_ },
-                                className: s()(T.Qs, J),
+                                className: s()(m.Qs, J),
                                 ref: ea,
                                 children: (0, i.jsx)(d.t, {
                                     disableFocusRingScope: et,

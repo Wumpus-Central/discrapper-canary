@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(938796));
+(n.d(t, { A: () => T }), n(938796));
 var i = n(477900);
 n(582128);
 var r = n(665260),
@@ -16,7 +16,7 @@ var r = n(665260),
     f = n(473529),
     I = n(978165),
     p = n(340837);
-class T extends s.A {
+class m extends s.A {
     onboardingCompleteGuilds = new Set();
     actions = {
         POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
@@ -106,4 +106,4 @@ class T extends s.A {
         return null == n && !i && (0, r.Lt)(t.flags ?? 0, p.D.STARTED_HOME_ACTIONS) ? await (0, _.aW)(e) : n;
     };
 }
-let m = new T();
+let T = new m();

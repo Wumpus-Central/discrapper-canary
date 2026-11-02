@@ -22,8 +22,8 @@ function f(e) {
             children: f,
             icon: I,
             name: p,
-            ariaLabel: T,
-            className: m,
+            ariaLabel: m,
+            className: T,
             style: g,
             to: S,
             onClick: N,
@@ -48,11 +48,11 @@ function f(e) {
     return (0, i.jsxs)(o.D, {
         ...O,
         onClick: L,
-        className: s()(m, E.iE, { [E.wH]: C }),
+        className: s()(T, E.iE, { [E.wH]: C }),
         style: { ...g, fontSize: n },
         focusProps: { enabled: !1 },
         children: [
-            (0, i.jsx)(d.A, { children: null != T && "" !== T ? T : (p ?? "") }),
+            (0, i.jsx)(d.A, { children: null != m && "" !== m ? m : (p ?? "") }),
             null != t ? (0, i.jsx)("div", { className: s()(h(a, !1), E.q9), "aria-hidden": !0, children: t }) : null,
             null != I
                 ? (0, i.jsx)("img", { className: E.Kk, src: I, alt: " ", width: y, height: y, "aria-hidden": !0 })

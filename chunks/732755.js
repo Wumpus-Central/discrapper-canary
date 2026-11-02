@@ -15,8 +15,8 @@ var i = n(812729),
     f = n(63995),
     I = n(518769),
     p = n(82149),
-    T = n(446600),
-    m = n(96566),
+    m = n(446600),
+    T = n(96566),
     g = n(516607),
     S = n(652215);
 let N = null;
@@ -24,7 +24,7 @@ function C() {
     let e = (function () {
         let e = E.Ay.getVoiceChannelId();
         if (null == e) return null;
-        let t = T.A.getStageInstanceByChannel(e);
+        let t = m.A.getStageInstanceByChannel(e);
         if (null == t) return null;
         let n = d.A.getChannel(e);
         if (null == n || !h.Ib(S.xBc.VIEW_CHANNEL, n)) return null;
@@ -40,7 +40,7 @@ function C() {
         return {
             application_id: g.SS,
             name: t.topic ?? n.topic ?? (0, o.m1)(n, A.default, _.A),
-            type: (0, m.xn)(n.id) ? a.$.WATCHING : a.$.LISTENING,
+            type: (0, T.xn)(n.id) ? a.$.WATCHING : a.$.LISTENING,
             timestamps: { start: s?.timestamps?.start ?? new Date().getTime() },
             assets: { small_image: i.icon ?? void 0, small_text: i.name },
             party: { id: r, size: [C, Math.max(O, R)] },
@@ -51,7 +51,7 @@ function C() {
 class O extends s.Ay.Store {
     static displayName = "StageChannelSelfRichPresenceStore";
     initialize() {
-        this.waitFor(d.A, c.A, u.A, E.Ay, f.A, T.A);
+        this.waitFor(d.A, c.A, u.A, E.Ay, f.A, m.A);
     }
     getActivity() {
         return N;

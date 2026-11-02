@@ -15,8 +15,8 @@ var i = n(277057),
     f = n(24482),
     I = n(811656),
     p = n(652215),
-    T = n(758836),
-    m = n(202541);
+    m = n(758836),
+    T = n(202541);
 function g(e) {
     let {
             initialPlanId: t,
@@ -49,7 +49,7 @@ function g(e) {
         } = e,
         K = r()("payment-modal"),
         $ = (0, f.mH)(M),
-        z = D || $ !== (0, f.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
+        z = D || $ !== (0, f.mH)(T.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
         X = z?.rewardSkuIds[0] ?? null,
         q = !1;
     function Z() {
@@ -634,7 +634,7 @@ function g(e) {
                     onSubscriptionConfirmation: N,
                     postSuccessGuild: w,
                     trialId: U,
-                    planGroup: m.LE,
+                    planGroup: T.LE,
                     openInvoiceId: G,
                     returnRef: B,
                     subscriptionTier: M,
@@ -661,7 +661,7 @@ function g(e) {
                                         (0, _.A)({
                                             product: e,
                                             analyticsLocations: C ?? [],
-                                            purchaseType: T.gs.PROMOTIONAL,
+                                            purchaseType: m.gs.PROMOTIONAL,
                                             overrideGradientColor: "nitro-pink",
                                         });
                                 }

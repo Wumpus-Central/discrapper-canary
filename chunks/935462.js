@@ -15,8 +15,8 @@ var i,
     f = n(689175),
     I = n(707554),
     p = n(475825),
-    T = n(862482),
-    m = n(305866),
+    m = n(862482),
+    T = n(305866),
     g = n(989395),
     S = n(235986),
     N = n(231723),
@@ -37,7 +37,7 @@ function v(e) {
             hideShadow: f = !1,
             onAnimationEnd: I = C.tE,
             returnRef: p,
-            animation: T = "default",
+            animation: m = "default",
             parentComponent: S,
             ...O
         } = e,
@@ -51,7 +51,7 @@ function v(e) {
         v = (0, A.z)(
             {
                 opacity: +!!L,
-                transform: L || D.enabled || "subtle" === T ? "scale(1)" : "scale(0.7)",
+                transform: L || D.enabled || "subtle" === m ? "scale(1)" : "scale(0.7)",
                 config: { duration: 200, easing: u.A.Easing.out(u.A.Easing.quad), clamp: !0 },
                 onRest: I,
             },
@@ -65,7 +65,7 @@ function v(e) {
         G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: M, transitionState: t }), [w, M, t]);
     return (0, a.jsx)(N.CP.Provider, {
         value: G,
-        children: (0, a.jsx)(m.l, {
+        children: (0, a.jsx)(T.l, {
             className: R.Gg,
             role: r,
             returnRef: p,
@@ -131,12 +131,12 @@ function M(e) {
     });
 }
 function U(e) {
-    return (0, a.jsx)(T.$n, {
+    return (0, a.jsx)(m.$n, {
         "data-migration-pending": !0,
         focusProps: e.focusProps,
         "aria-label": O.intl.string(O.t.cpT0Cq),
-        look: T.$n.Looks.BLANK,
-        size: T.$n.Sizes.NONE,
+        look: m.$n.Looks.BLANK,
+        size: m.$n.Sizes.NONE,
         onClick: e.onClick,
         innerClassName: o()(e.innerClassName, { [R.Xk]: e.withCircleBackground }),
         className: o()(e.className, { [R.zB]: e.hideOnFullscreen, [R.VN]: !e.withCircleBackground }),

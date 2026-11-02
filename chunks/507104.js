@@ -17,7 +17,7 @@ var h = n(689739),
     f = n(620750),
     I = n(194537),
     p = n(721441);
-function T(e, t, n) {
+function m(e, t, n) {
     let i = {};
     for (let r in e) {
         let a = e[r];
@@ -25,7 +25,7 @@ function T(e, t, n) {
     }
     return i;
 }
-var m = n(652215);
+var T = n(652215);
 let g = 5,
     S = 6048e5;
 function N() {
@@ -71,7 +71,7 @@ function M() {
 }
 function U() {
     if (null != D) return void x(D);
-    if ((w(), !_.A.hasConsented(m.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
+    if ((w(), !_.A.hasConsented(T.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
     for (let e of E.A.getFriendIDs()) {
         let t = E.A.getSince(e),
             n = d.A.getUserAffinity(e);
@@ -164,7 +164,7 @@ class k extends a.Ay.PersistedStore {
                 (C.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap }),
                 (C.lastKnownGiftIntentDismissedAtMs = e.lastKnownGiftIntentDismissedAtMs ?? 0)),
             this.syncWith([E.A, d.A, _.A, l.A, o.A, u.A], U),
-            (C.messageGiftIntentLastShownMap = T(C.messageGiftIntentLastShownMap, P(), 12096e5)));
+            (C.messageGiftIntentLastShownMap = m(C.messageGiftIntentLastShownMap, P(), 12096e5)));
     }
     getState() {
         return C;
@@ -227,7 +227,7 @@ let F = new k(s.h, {
             let t = i[e];
             i[e] = null == t ? n : Math.max(t, n);
         }
-        ((C.messageGiftIntentLastShownMap = T(i, P(), 1296e6)), (C.lastKnownGiftIntentDismissedAtMs = n));
+        ((C.messageGiftIntentLastShownMap = m(i, P(), 1296e6)), (C.lastKnownGiftIntentDismissedAtMs = n));
     },
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: function () {
         C.lastShownFriendsListGiftIntents = [];

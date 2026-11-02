@@ -1,4 +1,4 @@
-n.d(t, { EJ: () => h, U4: () => T, i7: () => f, lI: () => I, tZ: () => p });
+n.d(t, { EJ: () => h, U4: () => m, i7: () => f, lI: () => I, tZ: () => p });
 var i = n(892227),
     r = n(806163),
     a = n(17928),
@@ -40,7 +40,7 @@ function p(e) {
         t(l.X.NOTIFICATIONS_PANEL, { analyticsLocations: e });
     }
 }
-function T() {
+function m() {
     let e = (0, a.yK)([_.A], () => _.A.getNotifyingChannelIds() ?? []),
         t = (0, a.yK)([c.Ay], () => e.filter((e) => c.Ay.hasUnread(e)), [e]),
         n = (0, a.yK)([s.Ay], () => s.Ay.getSettingsFilteredMentions() ?? []);

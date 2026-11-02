@@ -37,10 +37,10 @@ function p(e) {
         n
     );
 }
-function T() {
+function m() {
     ((E = {}), null != _ && p(_));
 }
-function m(e) {
+function T(e) {
     let {
         guild: { id: t },
     } = e;
@@ -80,11 +80,11 @@ let R = new O(r.h, {
         if (((_ = t ?? null), null == t || null != E[t])) return !1;
         p(t);
     },
-    CONNECTION_OPEN: T,
-    OVERLAY_INITIALIZE: T,
-    CACHE_LOADED_LAZY: T,
-    GUILD_CREATE: m,
-    GUILD_UPDATE: m,
+    CONNECTION_OPEN: m,
+    OVERLAY_INITIALIZE: m,
+    CACHE_LOADED_LAZY: m,
+    GUILD_CREATE: T,
+    GUILD_UPDATE: T,
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },

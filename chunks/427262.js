@@ -4,7 +4,7 @@ n.d(t, {
     G2: () => I,
     Gn: () => S,
     MU: () => h,
-    QV: () => m,
+    QV: () => T,
     R1: () => g,
     mG: () => _,
     mv: () => p,
@@ -78,7 +78,7 @@ function I(e) {
 function p(e) {
     return f(e, { minDaysOld: 0, maxDaysOld: 7 });
 }
-function T(e, t, n) {
+function m(e, t, n) {
     if (null == e) return l.intl.string(l.t.sKdZ6U);
     if (!c(e.username)) return "???";
     let i = n;
@@ -90,10 +90,10 @@ function T(e, t, n) {
     let r = i ? o(e.username) : e.username;
     return "never" !== t.decoration ? `@${r}` : r;
 }
-function m(e, t) {
+function T(e, t) {
     let n = { ...d, ...t },
         i = "auto" !== n.identifiable || r.A.hidePersonalInformation;
-    return T(e, n, i);
+    return m(e, n, i);
 }
 function g(e) {
     return (0, i.bG)([a.default], () => {
@@ -110,9 +110,9 @@ let N = {
     isNameConcealed: function (e) {
         return 2 === e.length && e.endsWith("\u2026");
     },
-    getUserTag: m,
+    getUserTag: T,
     useUserTag: function (e, t) {
-        return T(
+        return m(
             e,
             { ...d, ...t },
             (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
@@ -123,7 +123,7 @@ let N = {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return "???";
         let n = A(e),
-            i = t ? m(e) : (e.username ?? "???");
+            i = t ? T(e) : (e.username ?? "???");
         return n === i ? n : null != n ? `${n} (${i})` : i;
     },
     getGlobalName: A,

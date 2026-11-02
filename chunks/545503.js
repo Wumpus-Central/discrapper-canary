@@ -36,7 +36,7 @@ function p(e) {
           }
         : null;
 }
-function T(e) {
+function m(e) {
     (e.stop(),
         I === e && (I = null),
         e.personActed ||
@@ -49,7 +49,7 @@ function T(e) {
                 }
             })(e));
 }
-async function m(e, t) {
+async function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => null;
     null != I && I.iframe !== e && g();
     let i =
@@ -77,7 +77,7 @@ async function m(e, t) {
                           (n.restoreSelection = p(n.element) ?? n.restoreSelection);
                   }
                   function r() {
-                      ((n.personActed = !0), 0 === n.active && T(n));
+                      ((n.personActed = !0), 0 === n.active && m(n));
                   }
                   return (document.addEventListener("blur", i, !0), document.addEventListener("pointerdown", r, !0), n);
               })(e);
@@ -88,11 +88,11 @@ async function m(e, t) {
     } finally {
         ((i.active -= 1), (i.holdRequested = n() ?? i.holdRequested));
         let t = !i.personActed && !i.released && i.holdRequested && document.activeElement === e;
-        0 !== i.active || t || T(i);
+        0 !== i.active || t || m(i);
     }
 }
 function g() {
-    null != I && ((I.released = !0), 0 === I.active && T(I));
+    null != I && ((I.released = !0), 0 === I.active && m(I));
 }
 var S = n(853555);
 (n(323874), n(14289), n(35956));
@@ -450,7 +450,7 @@ async function Z(e, t, n, i) {
             l = (0, G._q)(s);
         try {
             let i = !1,
-                r = await m(
+                r = await T(
                     s,
                     async () => {
                         let r = await U(e, s, n);

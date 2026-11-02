@@ -126,8 +126,8 @@ let h = new A();
 var f = n(341923),
     I = n(696016);
 let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
-    T = !1,
-    m = null,
+    m = !1,
+    T = null,
     g = null,
     S = null,
     N = null;
@@ -159,10 +159,10 @@ function C() {
             : !1 !== N && (I.nx.info(`clips v3 ml flag set ml=false (was ${N})`), t.setClipsV3MLEnabled(!1), (N = !1)));
 }
 function O() {
-    return null != m
-        ? m
+    return null != T
+        ? T
         : (C(),
-          (m = (async () => {
+          (T = (async () => {
               try {
                   await a.Ay.ensureModule("discord_clips");
                   let e = a.Ay.requireModule("discord_clips").getModulePath(),
@@ -175,13 +175,13 @@ function O() {
                       null != t.setClipsSentryConfig &&
                       t.setClipsSentryConfig(`discord_clips@${a.Ay.buildNumber ?? 0}`, s, i),
                       t.setClipsModulePath(e),
-                      (T = !0),
+                      (m = !0),
                       I.nx.info("discord_clips module loaded, path: " + e));
               } catch (e) {
-                  ((m = null), I.nx.error("Failed to load discord_clips module", e));
+                  ((T = null), I.nx.error("Failed to load discord_clips module", e));
               }
           })()));
 }
 function R() {
-    return T;
+    return m;
 }

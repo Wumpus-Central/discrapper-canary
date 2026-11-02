@@ -53,8 +53,8 @@ function f(e) {
 }
 var I = n(775602),
     p = n(989395),
-    T = n(71855),
-    m = n(267102),
+    m = n(71855),
+    T = n(267102),
     g = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
 var N = n(534409),
@@ -101,8 +101,8 @@ function j(e) {
             keyboardModeEnabled: h,
             saturation: f,
             desaturateUserColors: p,
-            useForcedColors: T,
-            systemForcedColors: m,
+            useForcedColors: m,
+            systemForcedColors: T,
             useReducedMotion: g,
             alwaysShowLinkDecorations: S,
             hardwareAccelerationEnabled: N,
@@ -180,8 +180,8 @@ function j(e) {
                 "is-mobile": U.Fr,
                 "app-focused": u,
                 "desaturate-user-colors": p,
-                "disable-forced-colors": !T && "active" === m,
-                "enable-forced-colors": T,
+                "disable-forced-colors": !m && "active" === T,
+                "enable-forced-colors": m,
                 "visual-refresh": !0,
                 "hardware-acceleration-disabled": !N,
                 "visual-refresh-chat-input": !1,
@@ -247,7 +247,7 @@ function $(e) {
         })),
         q = (function (e, t) {
             let [n, i] = a.useState(0),
-                r = (0, m.aL)();
+                r = (0, T.aL)();
             a.useEffect(() => {
                 function e() {
                     return i((e) => e + 1);
@@ -288,7 +288,7 @@ function $(e) {
         et = (0, N.lV)("RootThemeContextProvider"),
         en = (0, C.c)("RootThemeContextProvider"),
         ei = R.useConfig({ location: "RootThemeContextProvider" }).enabled,
-        er = (0, T.m2)({ isPopoutWindow: l }),
+        er = (0, m.m2)({ isPopoutWindow: l }),
         ea = (function (e) {
             let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: l, locale: o } = e,
                 d = a.useContext(p.A),

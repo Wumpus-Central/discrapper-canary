@@ -4,14 +4,14 @@
     Ap: () => N,
     Cq: () => C,
     Ez: () => v,
-    Lz: () => T,
+    Lz: () => m,
     Oe: () => p,
     PV: () => g,
     Qr: () => L,
     XM: () => S,
     bq: () => D,
     gI: () => M,
-    hT: () => m,
+    hT: () => T,
     my: () => b,
     zl: () => O,
 }),
@@ -91,7 +91,7 @@ function p(e) {
         handler: n.handler,
     };
 }
-function T(e, t) {
+function m(e, t) {
     return o().flatMap(
         e,
         (e) => (
@@ -177,7 +177,7 @@ function T(e, t) {
         ),
     );
 }
-function m(e) {
+function T(e) {
     return f.Ut1.test(e.trim());
 }
 function g(e, t, n, i) {

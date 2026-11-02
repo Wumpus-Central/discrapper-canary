@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var i = n(435558),
     r = n(17928),
     a = n(873298),
@@ -97,4 +97,4 @@ class p extends r.Ay.Store {
         return !(0, i.isEmpty)(this.getFavoriteChannels());
     }
 }
-let T = new p(s.h, {});
+let m = new p(s.h, {});

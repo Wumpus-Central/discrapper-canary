@@ -1,4 +1,4 @@
-(n.d(t, { tp: () => A, Yn: () => E, _g: () => f, rO: () => h, Rd: () => T, Dv: () => g, s2: () => _, S: () => p }),
+(n.d(t, { tp: () => A, Yn: () => E, _g: () => f, rO: () => h, Rd: () => m, Dv: () => g, s2: () => _, S: () => p }),
     n(801541));
 var i = n(889137),
     r = n(440703),
@@ -359,7 +359,7 @@ function p(e) {
         userStatus: null == e.user_status ? null : A(e.user_status),
     };
 }
-function T(e) {
+function m(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -369,7 +369,7 @@ function T(e) {
         tier: e.tier ?? null,
     };
 }
-function m(e) {
+function T(e) {
     return {
         skuId: e.sku_id,
         tenantMetadata: (function (e) {
@@ -379,12 +379,12 @@ function m(e) {
                 case r.l.IN_GAME:
                     return { questRewards: { reward: { tag: t.reward.tag } } };
                 case r.l.REWARD_CODE:
-                    return { questRewards: { reward: { tag: t.reward.tag, rewardCode: T(t.reward.reward_code) } } };
+                    return { questRewards: { reward: { tag: t.reward.tag, rewardCode: m(t.reward.reward_code) } } };
             }
         })(e.tenant_metadata),
         consumed: e.consumed,
     };
 }
 function g(e) {
-    return { claimedAt: e.claimed_at, items: e.entitlements.map(m), errors: e.errors };
+    return { claimedAt: e.claimed_at, items: e.entitlements.map(T), errors: e.errors };
 }

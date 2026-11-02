@@ -1,4 +1,4 @@
-n.d(t, { Ml: () => E, O6: () => p, Ph: () => T, Y0: () => I, dQ: () => A, fw: () => h, vA: () => f });
+n.d(t, { Ml: () => E, O6: () => p, Ph: () => m, Y0: () => I, dQ: () => A, fw: () => h, vA: () => f });
 var i = n(136722),
     r = n(17928),
     a = n(260509),
@@ -62,7 +62,7 @@ function p(e, t, n) {
         [t, e, n],
     );
 }
-function T(e, t, n) {
+function m(e, t, n) {
     let i = s.A.getGuild(e);
     return null != i && t && l.A.canManageUser(u.xBc.BAN_MEMBERS, n, i);
 }

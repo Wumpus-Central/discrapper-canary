@@ -15,13 +15,13 @@ var i = n(350835),
     f = n(935208),
     I = n(636889),
     p = n(427262),
-    T = n(736347),
-    m = n(303911);
-let g = { key: "active_now", type: T.ik.ACTIVE_NOW },
-    S = { key: "online", type: T.ik.ONLINE },
-    N = { key: "offline", type: T.ik.OFFLINE },
+    m = n(736347),
+    T = n(303911);
+let g = { key: "active_now", type: m.ik.ACTIVE_NOW },
+    S = { key: "online", type: m.ik.ONLINE },
+    N = { key: "offline", type: m.ik.OFFLINE },
     C = Object.freeze([]),
-    O = T.Vj.ACTIVE_NOW,
+    O = m.Vj.ACTIVE_NOW,
     R = !0,
     L = !1,
     y = new Map(),
@@ -42,7 +42,7 @@ function P(e) {
         o = s?.assets?.large_image ?? s?.assets?.small_image,
         { voiceState: d } = (0, l.t$)({ userId: e, includeNonDiscoverable: !0 });
     return {
-        type: T.VZ.FRIEND,
+        type: m.VZ.FRIEND,
         userId: e,
         name: _.A.getNickname(e) ?? p.Ay.getName(t),
         status: n,
@@ -59,38 +59,38 @@ function P(e) {
 }
 function M(e, t) {
     switch (t) {
-        case T.Vj.ACTIVE_NOW:
-            if ((0, m.iX)(e.status)) return N;
+        case m.Vj.ACTIVE_NOW:
+            if ((0, T.iX)(e.status)) return N;
             if (null != e.gameName || null != e.voiceChannelId) return g;
             return S;
-        case T.Vj.GAME:
+        case m.Vj.GAME:
             if (null != e.gameName)
                 return {
                     key: `game:${e.gameAppId ?? e.gameName}`,
-                    type: T.ik.GAME,
+                    type: m.ik.GAME,
                     gameAppId: e.gameAppId,
                     gameAssetUrl: e.gameAssetUrl,
                     label: e.gameName ?? void 0,
                 };
-            return (0, m.iX)(e.status) ? N : S;
-        case T.Vj.ALPHABETICAL: {
+            return (0, T.iX)(e.status) ? N : S;
+        case m.Vj.ALPHABETICAL: {
             let t = e.name.normalize("NFD").match(/^\s*(\p{L})/u),
-                n = t?.[1].toLocaleUpperCase(o.default.locale) ?? m.Ce;
-            return { key: `letter:${n}`, type: T.ik.LETTER, label: n };
+                n = t?.[1].toLocaleUpperCase(o.default.locale) ?? T.Ce;
+            return { key: `letter:${n}`, type: m.ik.LETTER, label: n };
         }
     }
 }
 function U(e) {
-    return R && (0, m.kR)(O) ? e.voiceChannelId : null;
+    return R && (0, T.kR)(O) ? e.voiceChannelId : null;
 }
 function w(e, t) {
-    return (0, m.fz)(e, t, !(0, m.kR)(O));
+    return (0, T.fz)(e, t, !(0, T.kR)(O));
 }
 function G(e, t) {
     return e.isListening !== t.isListening ? (e.isListening ? -1 : 1) : w(e, t);
 }
 function x(e) {
-    return e.type === T.ik.ONLINE ? G : w;
+    return e.type === m.ik.ONLINE ? G : w;
 }
 function k(e) {
     ((e.snapshot = null), (b = null));
@@ -107,7 +107,7 @@ function F(e) {
         rows: [],
         snapshot: null,
     };
-    return (D.set(t.key, t), I.Yr(v, t, m.Ut), (b = null), t);
+    return (D.set(t.key, t), I.Yr(v, t, T.Ut), (b = null), t);
 }
 function B(e, t) {
     let n = e.groupsByChannelId.get(t);
@@ -152,7 +152,7 @@ function j(e) {
                                   n = null != A.A.getVoiceStateForChannel(e.channelId),
                                   i = t - e.rows.length - !!n;
                               e.snapshot = {
-                                  type: T.VZ.VOICE_GROUP,
+                                  type: m.VZ.VOICE_GROUP,
                                   key: `voice:${e.channelId}`,
                                   channelId: e.channelId,
                                   rows: e.rows.slice(),
@@ -275,7 +275,7 @@ class ee extends r.Ay.PersistedStore {
     static displayName = "FriendRowStore";
     static persistKey = "FriendRowStore";
     initialize(e) {
-        ((O = e?.groupingMode ?? T.Vj.ACTIVE_NOW),
+        ((O = e?.groupingMode ?? m.Vj.ACTIVE_NOW),
             (R = e?.voiceGroupingEnabled ?? !0),
             K(),
             this.waitFor(d.A, o.default, c.A, u.A, _.A, E.default, A.A),
@@ -302,7 +302,7 @@ let et = new ee(s.h, {
     CONNECTION_OPEN: K,
     OVERLAY_INITIALIZE: K,
     LOGOUT: function () {
-        ((O = T.Vj.ACTIVE_NOW), (R = !0), K());
+        ((O = m.Vj.ACTIVE_NOW), (R = !0), K());
     },
     CONNECTION_OPEN_SUPPLEMENTAL: X,
     PRESENCES_REPLACE: X,

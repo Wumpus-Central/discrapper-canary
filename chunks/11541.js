@@ -1,4 +1,4 @@
-(n.d(t, { CI: () => I, UP: () => f, eN: () => T, uY: () => h, v8: () => p, vk: () => g }), n(321073));
+(n.d(t, { CI: () => I, UP: () => f, eN: () => m, uY: () => h, v8: () => p, vk: () => g }), n(321073));
 var i,
     r = n(636537),
     a = n(462887),
@@ -70,14 +70,14 @@ function p(e) {
             return c.intl.string(c.t.gmCUFw);
     }
 }
-function T(e) {
+function m(e) {
     let t = l.A.get((0, o.ML)(e)),
         n = (0, s.Ay)();
     return null != t && ["twitch", "youtube"].includes(e)
         ? `url('${(0, a.M)(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
         : null;
 }
-function m(e) {
+function T(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -98,7 +98,7 @@ async function g(e, t) {
             rejectWithError: !0,
         });
         if (!Array.isArray(t.body)) return (A(n, 0), []);
-        let a = t.body.map(m),
+        let a = t.body.map(T),
             s = [];
         a.forEach((e) => {
             let { userId: t } = e;

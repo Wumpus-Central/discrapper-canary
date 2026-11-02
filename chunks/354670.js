@@ -23,8 +23,8 @@ var u = n(669316),
     f = n(166403),
     I = n(202541),
     p = n(818348);
-let T = performance.now(),
-    m = {
+let m = performance.now(),
+    T = {
         userOffersLastFetchedAtDate: void 0,
         userTrialOffers: {},
         userDiscountOffers: {},
@@ -40,7 +40,7 @@ let T = performance.now(),
             [p.U7.VIDEO_STREAM_ENDED]: 0,
         },
     },
-    g = m;
+    g = T;
 function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     (null == t && (t = 3600 * (1 + Math.random())), (g.cooldownExpirationTimestamps[e] = Date.now() + 1e3 * t));
@@ -167,7 +167,7 @@ class y extends a.Ay.PersistedStore {
                           }),
                       ),
                   }
-                : m),
+                : T),
             this.waitFor(A.A, o.A, f.A, E.default),
             this.syncWith([E.default], C),
             this.syncWith([f.A], R),
@@ -275,7 +275,7 @@ class y extends a.Ay.PersistedStore {
         return g.shouldTriggerOffer && g.cooldownExpirationTimestamps[e] < Date.now();
     }
     getUptimeForTrigger() {
-        return Math.floor((performance.now() - T) / 1e3);
+        return Math.floor((performance.now() - m) / 1e3);
     }
 }
 let D = new y(s.h, {

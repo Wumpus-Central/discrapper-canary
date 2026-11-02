@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(355097);
 n(705751);
 let p = 10 + Math.random() * (10 * E.A.Millis.SECOND),
-    T = 2 * E.A.Millis.HOUR + Math.floor(Math.random() * (10 * E.A.Millis.MINUTE)),
-    m = null,
+    m = 2 * E.A.Millis.HOUR + Math.floor(Math.random() * (10 * E.A.Millis.MINUTE)),
+    T = null,
     g = !1;
 class S extends s.A {
     actions = { POST_CONNECTION_OPEN: N, CONNECTION_RESUMED: N, CONNECTION_CLOSED: O, APP_STATE_UPDATE: C };
@@ -25,7 +25,7 @@ class S extends s.A {
         (A.bW.beforeSendCallbacks.push({
             hasChanges: () => !1,
             processProto: () => {
-                L(T, !1);
+                L(m, !1);
             },
         }),
             A.bW.beforeSendCallbacks.push({
@@ -111,13 +111,13 @@ function N() {
     ((g = !0), L(p, !0));
 }
 function C(e) {
-    g && "active" !== e.state && (clearTimeout(m), (m = null), R(!1));
+    g && "active" !== e.state && (clearTimeout(T), (T = null), R(!1));
 }
 function O() {
-    g && (clearTimeout(m), (m = null), R(!1));
+    g && (clearTimeout(T), (T = null), R(!1));
 }
 async function R(e) {
-    (L(T, !1),
+    (L(m, !1),
         !h.A.hasLoaded(I.oD.FRECENCY_AND_FAVORITES_SETTINGS) &&
             (u.A.hasPendingUsage() ||
                 d.Ay.hasPendingUsage() ||
@@ -131,6 +131,6 @@ async function R(e) {
         }));
 }
 function L(e, t) {
-    (null != m && clearTimeout(m), (m = setTimeout(() => R(t), e)));
+    (null != T && clearTimeout(T), (T = setTimeout(() => R(t), e)));
 }
 let y = new S();

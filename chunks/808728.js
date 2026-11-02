@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(734057),
     I = n(696451),
     p = n(71393),
-    T = n(576705),
-    m = n(994500),
+    m = n(576705),
+    T = n(994500),
     g = n(287809),
     S = n(652215);
 let N = "SELECTABLE",
@@ -80,7 +80,7 @@ function k(e) {
                 if (
                     ((e.count += 1),
                     E.JT.has(r.type) &&
-                        !T.A.can(S.xBc.VIEW_CHANNEL, r) &&
+                        !m.A.can(S.xBc.VIEW_CHANNEL, r) &&
                         !o.A.isChannelGated(r.guild_id, r.id) &&
                         r.id !== D)
                 )
@@ -97,7 +97,7 @@ function k(e) {
         (a = {}),
         t[N].forEach((e) => {
             let { channel: t } = e,
-                n = (0, d.m1)(t, g.default, m.A),
+                n = (0, d.m1)(t, g.default, T.A),
                 r = Object.prototype.hasOwnProperty.call(a, n) ? a[n] : null;
             (null == r ? (a[n] = 1) : ((a[n] = r + 1), (n += `~${r}`)), (i[t.id] = { id: t.id, name: n }));
         }),
@@ -149,7 +149,7 @@ function W() {
 class Y extends s.Ay.Store {
     static displayName = "GuildChannelStore";
     initialize() {
-        (this.waitFor(h.default, f.A, c.A, o.A, I.Ay, p.A, T.A, g.default), this.syncWith([c.A], W));
+        (this.waitFor(h.default, f.A, c.A, o.A, I.Ay, p.A, m.A, g.default), this.syncWith([c.A], W));
     }
     getAllGuilds() {
         return R;
@@ -169,12 +169,12 @@ class Y extends s.Ay.Store {
     getDefaultChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.xBc.VIEW_CHANNEL;
-        return this.getFirstChannel(e, (e) => T.A.can(n, e.channel), t);
+        return this.getFirstChannel(e, (e) => m.A.can(n, e.channel), t);
     }
     getSFWDefaultChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.xBc.VIEW_CHANNEL;
-        return this.getFirstChannel(e, (e) => T.A.can(n, e.channel) && !e.channel.nsfw, t);
+        return this.getFirstChannel(e, (e) => m.A.can(n, e.channel) && !e.channel.nsfw, t);
     }
     getSelectableChannelIds(e) {
         return this.getChannels(e)[N].map((e) => {

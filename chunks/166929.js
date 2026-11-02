@@ -118,7 +118,7 @@ var f =
         (a.ANDROID = "android"),
         (a.UNKNOWN = "unknown"),
         a);
-let T = Object.freeze({
+let m = Object.freeze({
         "mediafoundation direct3d intel": "wmf_direct_3d_intel",
         "mediafoundation direct3d nvidia": "wmf_direct_3d_nvidia",
         "mediafoundation direct3d amd": "wmf_direct_3d_amd",
@@ -144,7 +144,7 @@ let T = Object.freeze({
         "mediafoundation hw": "wmf_hw",
         "mediafoundation direct3d": "wmf_direct_3d",
     }),
-    m = Object.freeze({
+    T = Object.freeze({
         videotoolbox: "videotoolbox",
         libvpx: "vp8_libvpx",
         electron: "electron",
@@ -168,12 +168,12 @@ var g =
     s);
 function S(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(T)) if (e.toLowerCase().includes(t)) return T[t];
+    for (let t of Object.keys(m)) if (e.toLowerCase().includes(t)) return m[t];
     return "uncategorized";
 }
 function N(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(m)) if (e.toLowerCase().includes(t)) return m[t];
+    for (let t of Object.keys(T)) if (e.toLowerCase().includes(t)) return T[t];
     return "uncategorized";
 }
 function C(e) {
@@ -527,13 +527,13 @@ class R {
             this.statsWindow.length < 6)
         )
             return;
-        let { bytes: p, framesCodec: T, timestamp: m } = this.statsWindow[this.statsWindow.length - 3];
+        let { bytes: p, framesCodec: m, timestamp: T } = this.statsWindow[this.statsWindow.length - 3];
         _.forEach((e) => {
             s <= e && (this.resolutionBuckets[e] += I);
         });
-        let g = (a - m) / 1e3,
+        let g = (a - T) / 1e3,
             S = ((i - p) * 8) / g,
-            N = (r - T) / g;
+            N = (r - m) / g;
         (c.forEach((e) => {
             S <= e && (this.bitrateBuckets[e] += I);
         }),

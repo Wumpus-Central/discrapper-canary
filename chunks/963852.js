@@ -23,8 +23,8 @@ function u(e) {
             nonce: f,
             poll: I,
             sharedCustomTheme: p,
-            changelogId: T,
-            giftingPrompt: m,
+            changelogId: m,
+            giftingPrompt: T,
             state: g,
             mediaMention: S,
         } = e,
@@ -59,8 +59,8 @@ function u(e) {
             nonce: f,
             poll: I,
             shared_client_theme: p,
-            changelog_id: T,
-            gifting_prompt: m,
+            changelog_id: m,
+            gifting_prompt: T,
             media_mention: S,
         }
     );

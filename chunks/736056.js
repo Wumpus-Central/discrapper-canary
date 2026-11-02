@@ -15,13 +15,13 @@ var i = n(435558),
     f = n(17928),
     I = n(149790);
 let p = {};
-class T extends f.Ay.Store {
+class m extends f.Ay.Store {
     static displayName = "AuthInviteStore";
     getGuild(e) {
         return p[e];
     }
 }
-let m = new T(o.h, {
+let T = new m(o.h, {
     AUTH_INVITE_UPDATE: function (e) {
         let { invite: t } = e,
             n = t.guild;
@@ -78,21 +78,21 @@ let L = {
     [s().v3("guild_has_feature")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? m.getGuild(e);
+            let n = S.A.getGuild(e) ?? T.getGuild(e);
             return null != n && t.some((e) => n.features.has(e));
         };
     },
     [s().v3("guild_hub_types")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? m.getGuild(e);
+            let n = S.A.getGuild(e) ?? T.getGuild(e);
             return null != n && "number" == typeof n.hubType && t.some((e) => n.hubType === e);
         };
     },
     [s().v3("guild_has_vanity_url")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? m.getGuild(e);
+            let n = S.A.getGuild(e) ?? T.getGuild(e);
             return null != n && t === (null != n.vanityURLCode);
         };
     },

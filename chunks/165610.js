@@ -4,7 +4,7 @@ n.d(t, {
     VZ: () => p,
     Yf: () => E,
     ZN: () => u,
-    ny: () => T,
+    ny: () => m,
     sV: () => _,
     sd: () => c,
     x1: () => f,
@@ -66,6 +66,6 @@ function I(e) {
 function p(e) {
     return e?.surface.type === l.U.MAIN ? e.surface.channelId : void 0;
 }
-function T(e) {
+function m(e) {
     return f(e) ? e : null;
 }

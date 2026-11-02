@@ -14,10 +14,10 @@ var a = n(17928),
     f = n(253932),
     I = n(617617),
     p = n(185928);
-function T() {
+function m() {
     return h.Ay.useSystemTheme === p.Q_.ON && A.A.isSameAsDeviceThemeEnabled();
 }
-var m = n(95701),
+var T = n(95701),
     g = n(734057),
     S = n(287809),
     N = n(24482),
@@ -70,14 +70,14 @@ function G() {
     }
 }
 function x() {
-    return T();
+    return m();
 }
 function k() {
     return !0;
 }
 function F() {
     let e = f.eh.getSetting().backgroundGradientPresetId;
-    if ((h.Ay.useSystemTheme !== p.Q_.ON || null == e || T() || (0, E.k7)(p.Q_.OFF), null == e)) {
+    if ((h.Ay.useSystemTheme !== p.Q_.ON || null == e || m() || (0, E.k7)(p.Q_.OFF), null == e)) {
         null != i && (i = void 0);
         return;
     }
@@ -109,7 +109,7 @@ class B extends a.Ay.PersistedStore {
             : { gradientPresetId: i?.id, canUseClientThemes: !0 };
     }
     get gradientPreset() {
-        if (T()) {
+        if (m()) {
             let e = P(A.A.getSyncedClientTheme(A.A.systemTheme)?.backgroundGradientPresetId);
             return y ? (v ? i : null != e && (0, c.oB)(e.id) ? e : void 0) : e;
         }
@@ -158,7 +158,7 @@ let V = new B(l.h, {
             i = S.default.getCurrentUser();
         if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, C.G2)(i)) return;
         let r = g.A.getChannel(t);
-        null != r && (0, m.ke)(r.type) && (D = !0);
+        null != r && (0, T.ke)(r.type) && (D = !0);
     },
     LOGOUT: U,
     CACHE_LOADED: F,

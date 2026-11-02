@@ -15,8 +15,8 @@ var i = n(582128),
     f = n(734057),
     I = n(945886),
     p = n(576705),
-    T = n(573163),
-    m = n(309010),
+    m = n(573163),
+    T = n(309010),
     g = n(543465),
     S = n(403362),
     N = n(181079),
@@ -25,7 +25,7 @@ var i = n(582128),
     R = n(349828),
     L = n(281405),
     y = n(818348);
-let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, h.A, f.A, p.A, T.Ay, m.Ay, g.Ay];
+let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, h.A, f.A, p.A, m.Ay, T.Ay, g.Ay];
 function v(e) {
     let { limit: t, includeLoading: n } = e,
         i = N.A.getFavoriteChannels(),
@@ -85,9 +85,9 @@ function P(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = e ?? N.A.getFavoriteChannels(),
         i = g.Ay.isGuildCollapsed(R.Vc),
-        r = m.Ay.getChannelId(),
+        r = T.Ay.getChannelId(),
         l = f.A.getChannel(r),
-        o = m.Ay.getVoiceChannelId(),
+        o = T.Ay.getVoiceChannelId(),
         d = [],
         E = {};
     for (let e in n) {
@@ -114,7 +114,7 @@ function P(e) {
                             ? u.A.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id)
                             : u.A.getActiveJoinedUnreadThreadsForParent(e.guild_id, e.id)) ?? {},
                     f = (0, c.wF)(e, h, l, o, i),
-                    m = I.A.isCollapsed(e.id),
+                    T = I.A.isCollapsed(e.id),
                     S = e.isThread() ? _.A.isMuted(e.id) : g.Ay.isChannelMuted(e.guild_id, e.id),
                     N = {
                         id: e.id,
@@ -123,15 +123,15 @@ function P(e) {
                         position: n[e.id].order,
                         threadIds: f,
                         threadCount: a().size(f),
-                        isCollapsed: m,
+                        isCollapsed: T,
                         isMuted: S,
                         isFirstVoiceChannel: !1,
-                        subtitle: (0, c.go)(e, m, !1),
+                        subtitle: (0, c.go)(e, T, !1),
                     };
-                return d || E || !a().isEmpty(h) || T.Ay.getMentionCount(e.id) > 0
+                return d || E || !a().isEmpty(h) || m.Ay.getMentionCount(e.id) > 0
                     ? N
                     : (i && S) ||
-                        (r && (S || s || (0, A.gV)(e.type) || ((0, A.ig)(e.type) && !1 === T.Ay.hasUnread(e.id))))
+                        (r && (S || s || (0, A.gV)(e.type) || ((0, A.ig)(e.type) && !1 === m.Ay.hasUnread(e.id))))
                       ? null
                       : N;
             })

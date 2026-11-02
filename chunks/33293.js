@@ -1,17 +1,17 @@
-n.d(t, { A: () => u });
-var r = n(477900),
-    a = n(503698),
-    s = n.n(a),
-    l = n(259204),
-    i = n(343053),
-    c = n(48763),
-    o = n(955671);
-let d = { [c.W.SM]: 224, [c.W.LG]: 448 };
+a.d(t, { A: () => u });
+var r = a(477900),
+    i = a(503698),
+    s = a.n(i),
+    c = a(259204),
+    n = a(343053),
+    d = a(48763),
+    l = a(955671);
+let o = { [d.W.SM]: 224, [d.W.LG]: 448 };
 function u(e) {
     let { character: t } = e,
-        { size: n } = (0, i.Z)();
+        { size: a } = (0, n.Z)();
     return (0, r.jsx)("div", {
-        className: s()(o.characterColumn, o[n]),
-        children: (0, r.jsx)(l.A, { character: t, size: d[n], className: o.character }),
+        className: s()(l.characterColumn, l[a]),
+        children: (0, r.jsx)(c.A, { character: t, size: o[a], className: l.character }),
     });
 }

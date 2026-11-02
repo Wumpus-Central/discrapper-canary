@@ -1,4 +1,4 @@
-n.d(t, { Ij: () => I, IS: () => T, Fm: () => p });
+n.d(t, { Ij: () => I, IS: () => m, Fm: () => p });
 var i = n(477900),
     r = n(582128),
     a = n(702841),
@@ -57,7 +57,7 @@ function p(e) {
         return (0, i.jsx)("section", { className: h.uW, children: (0, i.jsx)(r, { activity: e }) }, `delegate-${t}`);
     }
 }
-function T(e) {
+function m(e) {
     let t = e.application_id;
     if (null == t) return !0;
     let n = f[t];

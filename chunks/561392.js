@@ -25,14 +25,14 @@ function o(e) {
         I.current = u;
     }, [u]);
     let p = i.useRef(d);
-    function T() {
+    function m() {
         return { boundary: h?.ref.current ?? "clippingAncestors", padding: h?.padding };
     }
     i.useEffect(() => {
         p.current = d;
     }, [d]);
     let {
-            refs: m,
+            refs: T,
             floatingStyles: g,
             context: S,
         } = (0, r.we)({
@@ -40,9 +40,9 @@ function o(e) {
             onOpenChange: A,
             transform: _,
             middleware: [
-                null == o ? (0, a.RK)(T) : void 0,
+                null == o ? (0, a.RK)(m) : void 0,
                 (0, a.Ej)(() => ({
-                    ...T(),
+                    ...m(),
                     apply(e) {
                         let { rects: t, elements: n } = e;
                         (p.current &&
@@ -56,9 +56,9 @@ function o(e) {
                                 Object.assign(n.floating.style, { maxHeight: `${f.current(t.reference)}px` }));
                     },
                 })),
-                (0, a.UU)(T),
+                (0, a.UU)(m),
                 (0, a.cY)(n),
-                (0, a.BN)(T),
+                (0, a.BN)(m),
             ],
             whileElementsMounted: s.ll,
             placement: o,
@@ -69,7 +69,7 @@ function o(e) {
     return {
         isOpen: E,
         setIsOpen: A,
-        refs: m,
+        refs: T,
         floatingStyles: g,
         context: S,
         getReferenceProps: C,

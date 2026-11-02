@@ -1,4 +1,4 @@
-n.d(t, { Vq: () => m, a6: () => p, xf: () => T });
+n.d(t, { Vq: () => T, a6: () => p, xf: () => m });
 var i = n(636537),
     r = n(73153),
     a = n(662502),
@@ -28,10 +28,10 @@ let h = !1,
 function p() {
     f = null;
 }
-function T() {
+function m() {
     (p(), r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" }));
 }
-async function m() {
+async function T() {
     if (!h) {
         h = !0;
         try {
@@ -43,7 +43,7 @@ async function m() {
                 return void d.A.showManualReviewPendingModal();
             if ("decided_teen" === e.status) return void d.A.showManualReviewDecidedTeenModal(e.teen_age_range);
             d.A.showManualReviewWebview(e.verification_webview_url, () => {
-                (0, s.qn)() && T();
+                (0, s.qn)() && m();
             });
         } catch {
             a.A.showFailedToast(u.OB.TIGGER_PAWTECT_ERROR);

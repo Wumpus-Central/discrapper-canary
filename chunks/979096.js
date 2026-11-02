@@ -358,10 +358,10 @@ class p {
         return 0 == arguments.length ? this.table.delete() : this.table.delete([e]);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new T(t)), t);
+        return this.table.transaction((t) => e(new m(t)), t);
     }
     upgradeTransaction(e) {
-        return new T(this.table.upgradeTransaction(e));
+        return new m(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e) {
         return this.table.getManySyncUnsafe([], e);
@@ -370,10 +370,10 @@ class p {
         return this.table.getMapEntriesSyncUnsafe();
     }
 }
-class T {
+class m {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new T(new I(e, t, n));
+        return new m(new I(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
@@ -387,7 +387,7 @@ class T {
     }
 }
 n(321073);
-var m = n(61090),
+var T = n(61090),
     g = n(941426);
 let S = "1" === n(72290).env.KV_STORAGE_LOGGING,
     N = new g.Vy("Runtime");
@@ -541,12 +541,12 @@ class R {
                 C.executeAsync(t ?? e.type, (t) => {
                     this.raw.execute(t, { ...e, handle: 0 });
                 });
-        return null === t ? i() : m.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
+        return null === t ? i() : T.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
     }
     executeSync(e) {
         if (null == this.raw) throw Error(`database is no longer open (database: ${this}`);
         let t = "key" in e ? e.key[0] : e.table;
-        return m.A.time("\uD83D\uDCBE", `SYNC: ${e.type} ${t ?? ""}`, () =>
+        return T.A.time("\uD83D\uDCBE", `SYNC: ${e.type} ${t ?? ""}`, () =>
             this.raw.execute(null, { ...e, handle: 0 }, { synchronous: !0 }),
         );
     }

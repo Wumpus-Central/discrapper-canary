@@ -12,8 +12,8 @@ var l = n(477900),
     m = n(256905),
     p = n(922329),
     x = n(919790),
-    g = n(463660),
-    h = n(115982),
+    h = n(463660),
+    g = n(115982),
     j = n(17928),
     v = n(778712),
     b = n(730134),
@@ -43,10 +43,10 @@ var w = n(60160),
     C = n(162052);
 function I(e) {
     let { projectId: t, node: n, presentation: r = "row", active: m = !1 } = e,
-        [p, g] = a.useState(!1),
+        [p, h] = a.useState(!1),
         j = a.useId(),
-        v = a.useCallback(() => g((e) => !e), []),
-        b = (0, h.WQ)(n),
+        v = a.useCallback(() => h((e) => !e), []),
+        b = (0, g.WQ)(n),
         k = n.detail,
         y = "failed" === n.status ? "text-feedback-critical" : "detail" === r ? "text-muted" : "text-default",
         I = "text-muted" === y,
@@ -157,7 +157,7 @@ function P(e) {
     a.useEffect(() => {
         let e = !1;
         return (
-            (0, g.aF)(t, n).then(
+            (0, h.aF)(t, n).then(
                 (t) => {
                     e || i(t);
                 },
@@ -172,7 +172,7 @@ function P(e) {
     }, [t, n]);
     let o = A.intl.string(_.default["5kjnI/"]),
         d = a.useCallback(() => {
-            (0, g.aF)(t, n).then((e) => {
+            (0, h.aF)(t, n).then((e) => {
                 (0, m.R)({
                     items: [{ type: "IMAGE", url: e, alt: o }],
                     startingIndex: 0,

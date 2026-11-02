@@ -15,13 +15,13 @@ let c = {},
     f = null,
     I = null,
     p = new Set();
-function T() {
+function m() {
     f = l.pK.getSetting();
 }
-class m extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "ChangelogStore";
     initialize() {
-        (this.waitFor(s.default, o.A), this.syncWith([s.default], () => !0), this.syncWith([o.A], T));
+        (this.waitFor(s.default, o.A), this.syncWith([s.default], () => !0), this.syncWith([o.A], m));
         let e = r.w.get(h);
         if (null != e)
             try {
@@ -61,7 +61,7 @@ class m extends i.Ay.Store {
         return p.size > 0;
     }
 }
-let g = new m(a.h, {
+let g = new T(a.h, {
     CHANGE_LOG_LOCK: function (e) {
         let { key: t } = e;
         if (p.has(t)) return !1;

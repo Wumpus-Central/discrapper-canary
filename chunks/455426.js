@@ -46,7 +46,7 @@ async function p(e) {
     }
     (E || (_ = r), I(r));
 }
-function T(e) {
+function m(e) {
     var t;
     let n;
     if (null == r.A.getFrame(e.frameId)) return { status: "capture_failed", reason: "frame closed" };
@@ -65,13 +65,13 @@ function T(e) {
             ? null
             : { status: "capture_failed", reason: "snapshots stopped" };
 }
-function m() {
-    let e = null != u ? T(u) : null;
+function T() {
+    let e = null != u ? m(u) : null;
     null != e && S(e);
 }
 function g(e, t) {
     for (let n of new Set([r.A, s.A, l.A, ...(e.gate?.stores ?? [])]))
-        t ? n.addChangeListener(m) : n.removeChangeListener(m);
+        t ? n.addChangeListener(T) : n.removeChangeListener(T);
 }
 function S(e) {
     null != u &&
@@ -85,7 +85,7 @@ function S(e) {
         I(e));
 }
 function N() {
-    null != u && S(T(u) ?? { status: "capture_failed", reason: "stopped" });
+    null != u && S(m(u) ?? { status: "capture_failed", reason: "stopped" });
 }
 function C(e) {
     return null != e && Number.isFinite(e) ? Math.min(Math.max(Math.floor(e), 1), 1920) : 1280;

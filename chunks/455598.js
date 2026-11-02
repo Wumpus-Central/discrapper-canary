@@ -288,7 +288,7 @@ class I extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.DeclarativeSettings", [
             { no: 1, name: "versions", kind: "message", T: () => u.u },
-            { no: 2, name: "values", kind: "map", K: 13, V: { kind: "message", T: () => m } },
+            { no: 2, name: "values", kind: "map", K: 13, V: { kind: "message", T: () => T } },
         ]);
     }
     create(e) {
@@ -333,7 +333,7 @@ class I extends s.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = m.internalBinaryRead(t, t.uint32(), n);
+                    s = T.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -341,7 +341,7 @@ class I extends s.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? m.create();
+        e[a ?? 0] = s ?? T.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let r of (e.versions &&
@@ -349,14 +349,14 @@ class I extends s.G {
         Object.keys(e.values)))
             (t.tag(2, i.O0.LengthDelimited).fork().tag(1, i.O0.Varint).uint32(parseInt(r)),
                 t.tag(2, i.O0.LengthDelimited).fork(),
-                m.internalBinaryWrite(e.values[r], t, n),
+                T.internalBinaryWrite(e.values[r], t, n),
                 t.join().join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let p = new I();
-class T extends s.G {
+class m extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.DeclarativeNotifSetting", [
             { no: 1, name: "toggle", kind: "scalar", T: 8 },
@@ -400,7 +400,7 @@ class T extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let m = new T();
+let T = new m();
 class g extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.GuildNotificationSettings", [

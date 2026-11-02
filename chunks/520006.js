@@ -16,8 +16,8 @@ var r = n(284009),
     f = n(480595),
     I = n(576705),
     p = n(204651),
-    T = n(652215),
-    m = n(105292);
+    m = n(652215),
+    T = n(105292);
 function g(e) {
     let {
         guild: t,
@@ -57,7 +57,7 @@ function g(e) {
                         guildScheduledEvent: _,
                     });
             },
-            { modalKey: "stream-invite-modal", contextKey: d === T.BRT.POPOUT ? o.KX : o.SY },
+            { modalKey: "stream-invite-modal", contextKey: d === m.BRT.POPOUT ? o.KX : o.SY },
         ));
 }
 function S(e) {
@@ -84,9 +84,9 @@ function S(e) {
         w = (0, s.bG)([h.A], () => (null != U ? h.A.getGuild(U) : null), [U]),
         G = (0, s.bG)([f.A], () => (null != t ? f.A.getApplicationActivity(t) : void 0)),
         x = null == t || C ? c.D : d.d,
-        k = m.intl.string(m.t["6F9ivu"]);
-    return (null != t && (k = m.intl.string(m.t["OzOM/q"])),
-    null != n && (k = m.intl.string(m.t["6VQaqd"])),
+        k = T.intl.string(T.t["6F9ivu"]);
+    return (null != t && (k = T.intl.string(T.t["OzOM/q"])),
+    null != n && (k = T.intl.string(T.t["6VQaqd"])),
     null != G && O)
         ? (0, i.jsx)(p.A, {
               onClick: function () {
@@ -100,7 +100,7 @@ function S(e) {
               buttonText: D,
               color: v ?? void 0,
           })
-        : null != w && null != r && I.A.can(T.xBc.CREATE_INSTANT_INVITE, r)
+        : null != w && null != r && I.A.can(m.xBc.CREATE_INSTANT_INVITE, r)
           ? (0, i.jsx)(p.A, {
                 onClick: () => {
                     (a()(null != w, "guild cannot be null"),
@@ -115,7 +115,7 @@ function S(e) {
                             exitFullScreen: l,
                             analyticsLocation: S,
                             guildScheduledEvent: N,
-                            source: r.isGuildStageVoice() ? T.PE1.STAGE_CHANNEL : T.PE1.STREAM_INVITE,
+                            source: r.isGuildStageVoice() ? m.PE1.STAGE_CHANNEL : m.PE1.STREAM_INVITE,
                         }));
                 },
                 iconComponent: x,

@@ -40,7 +40,7 @@ let h = Symbol("version"),
 function p(e) {
     return e;
 }
-class T {
+class m {
     type;
     kkvDatabase;
     k1key;
@@ -57,7 +57,7 @@ class T {
         if ((null == this.shouldIndex || this.shouldIndex(e)) && null != t) return "string" == typeof t ? e[t] : t(e);
     }
 }
-class m {
+class T {
     kkvDatabase;
     partition;
     constructor(e, t) {
@@ -100,16 +100,16 @@ class g {
     }
     addSecondaryKVIndex(e, t) {
         let n = new g(this.nextVersion),
-            i = new T("kv", n, e, void 0, t);
+            i = new m("kv", n, e, void 0, t);
         return (this.secondaryIndexes.push(i), n.intoKV());
     }
     addSecondaryKKVIndex(e, t, n) {
         let i = new g(this.nextVersion),
-            r = new T("kkv", i, e, t, n);
+            r = new m("kkv", i, e, t, n);
         return (this.secondaryIndexes.push(r), i);
     }
     intoKV(e) {
-        return new m(this, e ?? "0");
+        return new T(this, e ?? "0");
     }
     version() {
         return this.state.version;

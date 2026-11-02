@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var r = n(17928),
     a = n(73153),
     s = n(32731),
@@ -46,7 +46,7 @@ function p() {
     if (i === l.default.locale) return !1;
     ((i = l.default.locale), I());
 }
-class T extends r.il {
+class m extends r.il {
     static displayName = "SKUStore";
     initialize() {
         (this.waitFor(l.default), this.syncWith([l.default], p), (i = l.default.locale));
@@ -75,7 +75,7 @@ class T extends r.il {
         return c.has(e);
     }
 }
-let m = new T(a.h, {
+let T = new m(a.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
         let { skuId: t } = e;
         d.add(t);

@@ -1,8 +1,8 @@
 n.d(t, { O_: () => c, pk: () => u, tg: () => d });
 var r = n(73153),
     s = n(435183),
-    o = n(734057),
-    i = n(576705),
+    i = n(734057),
+    o = n(576705),
     l = n(975189),
     a = n(652215);
 function c(e) {
@@ -26,9 +26,9 @@ function d(e, t) {
 }
 async function u(e, t) {
     let n;
-    if (!(null != (n = o.A.getChannel(e)) && n.type === a.rbe.GUILD_VOICE && i.A.can(a.xBc.MANAGE_CHANNELS, n)))
+    if (!(null != (n = i.A.getChannel(e)) && n.type === a.rbe.GUILD_VOICE && o.A.can(a.xBc.MANAGE_CHANNELS, n)))
         return !1;
-    if (o.A.getChannel(e)?.application_id === t) return !0;
+    if (i.A.getChannel(e)?.application_id === t) return !0;
     try {
         let n = await (0, s.RT)(e, { applicationId: t });
         return !0 === n.ok;

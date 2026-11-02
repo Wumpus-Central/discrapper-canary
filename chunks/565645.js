@@ -24,8 +24,8 @@ var h = n(576705),
     f = n(573163),
     I = n(543465),
     p = n(287809),
-    T = n(927813),
-    m = n(666860),
+    m = n(927813),
+    T = n(666860),
     g = n(746080);
 function S(e) {
     var t;
@@ -40,7 +40,7 @@ function S(e) {
             let e = p.default.getUser(E.recipients[0]);
             null != e && (t = e.bot);
         }
-        let n = E.isDM() || E.isGroupDM() ? (0, m.g4)(E.recipients) : null;
+        let n = E.isDM() || E.isGroupDM() ? (0, T.g4)(E.recipients) : null;
         return {
             channel_id: e,
             is_app_dm: t,
@@ -49,7 +49,7 @@ function S(e) {
                 : null),
         };
     }
-    let N = f.Ay.getSnapshot(e, 10 * T.A.Millis.SECOND);
+    let N = f.Ay.getSnapshot(e, 10 * m.A.Millis.SECOND);
     return {
         channel_id: e,
         channel_was_unread: N.unread,

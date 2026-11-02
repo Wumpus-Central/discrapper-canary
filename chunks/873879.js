@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(284009),
     r = n.n(i),
     a = n(478676),
@@ -15,8 +15,8 @@ let l = /\n{2,}$/,
     f = RegExp("^\\n" + A.slice(1)),
     I = /^\n/,
     p = /\n *$/,
-    T = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-    m = {
+    m = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
+    T = {
         ...s().defaultRules.list,
         requiredFirstCharacters: "\n *-0123456789".split(""),
         match: (e, t) => {
@@ -27,7 +27,7 @@ let l = /\n{2,}$/,
             }
             let n = null == t.prevCapture ? "" : t.prevCapture[0],
                 i = o.exec(n);
-            return null == i || T.test(i[0]) ? null : h.exec(e);
+            return null == i || m.test(i[0]) ? null : h.exec(e);
         },
         parse: (e, t, n) => {
             let i = e[2],
@@ -40,17 +40,17 @@ let l = /\n{2,}$/,
                 h = null != c ? c[1].length : 0,
                 f = ` {${h},${h + 1}}`,
                 p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", f), "gm"),
-                T = RegExp("^ {1," + A + "}", "gm"),
-                m = d.match(p);
-            r()(null != m, "markup list items can not be parsed.");
+                m = RegExp("^ {1," + A + "}", "gm"),
+                T = d.match(p);
+            r()(null != T, "markup list items can not be parsed.");
             let g = !1;
             return {
                 ordered: a,
                 start: s,
-                items: m.map((e, i) => {
+                items: T.map((e, i) => {
                     let r,
-                        a = e.replace(u, "").replace(T, ""),
-                        s = i === m.length - 1,
+                        a = e.replace(u, "").replace(m, ""),
+                        s = i === T.length - 1,
                         l = -1 !== a.indexOf("\n\n") || (s && g);
                     g = l;
                     let o = n.inline,

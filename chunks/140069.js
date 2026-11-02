@@ -15,8 +15,8 @@ var i,
     f = n(645959),
     I = n(927813),
     p = n(935208),
-    T = n(206885),
-    m = n(41984),
+    m = n(206885),
+    T = n(41984),
     g = n(956753),
     S = n(233741),
     N = n(222506),
@@ -76,7 +76,7 @@ function x() {
                 if (((D = t), !y.has(t))) {
                     let n = U(t),
                         i = c.A.getChannel(t)?.lastMessageId ?? void 0,
-                        r = w(t, m.B9.MANUAL, e, n, i);
+                        r = w(t, T.B9.MANUAL, e, n, i);
                     y.set(t, r);
                 }
             }
@@ -93,7 +93,7 @@ function x() {
                 if (null == r) continue;
                 let a = p.default.extractTimestamp(r);
                 if (e - a > M) continue;
-                let s = w(i, m.B9.MANUAL, e, a, r);
+                let s = w(i, T.B9.MANUAL, e, a, r);
                 (y.set(i, s), n++);
             }
         })(e),
@@ -156,7 +156,7 @@ function Y(e) {
 }
 let K = new W(
     l.h,
-    __OVERLAY__ || (!T.O && !T.e)
+    __OVERLAY__ || (!m.O && !m.e)
         ? {}
         : {
               OVERLAY_MOUNTED: Y(function (e) {

@@ -1,12 +1,12 @@
 (n.d(t, {
     CP: () => g,
-    DZ: () => T,
+    DZ: () => m,
     G_: () => h,
     ME: () => S,
     Qe: () => f,
     Sq: () => I,
     Xh: () => N,
-    ct: () => m,
+    ct: () => T,
     fd: () => A,
 }),
     n(938796));
@@ -107,7 +107,7 @@ function I(e, t, n, i, l) {
         A = p(d, _, "RETURN_PREVIOUS_WHEN_CHANGED"),
         h = A("guild_flags") ?? 0,
         I = (_.guild_flags ?? 0) ^ h,
-        T = 0 === (0, r.iE)(I, E.n3.OPT_IN_CHANNELS_OFF, E.n3.OPT_IN_CHANNELS_ON);
+        m = 0 === (0, r.iE)(I, E.n3.OPT_IN_CHANNELS_OFF, E.n3.OPT_IN_CHANNELS_ON);
     a.Ay.trackWithMetadata(c.HAw.NOTIFICATION_SETTINGS_UPDATED, {
         ..._,
         ...s.A.getStats(e),
@@ -123,7 +123,7 @@ function I(e, t, n, i, l) {
         guild_receive_mobile_push_old: A("guild_receive_mobile_push"),
         guild_scheduled_events_muted_old: A("guild_scheduled_events_muted"),
         guild_message_notification_settings_old: A("guild_message_notification_settings"),
-        is_opt_in_only_change: T,
+        is_opt_in_only_change: m,
     });
 }
 function p(e, t, n) {
@@ -131,10 +131,10 @@ function p(e, t, n) {
         if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return e[i] !== t[i] ? e[i] : void 0;
     };
 }
-function T(e) {
+function m(e) {
     return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null;
 }
-function m(e) {
+function T(e) {
     let {
         updateType: t = u.Y.CHANNEL,
         guildId: n,
@@ -145,7 +145,7 @@ function m(e) {
         label: h,
         location: I,
     } = e;
-    function m(e) {
+    function T(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             i = t.muted ?? e?.channel_is_muted,
             r = null != t.message_notifications ? f[t.message_notifications] : e?.channel_message_notification_settings,
@@ -155,11 +155,11 @@ function m(e) {
             channel_is_overridden: a,
             channel_flags: t.flags ?? e?.channel_flags,
             channel_message_notification_settings: r,
-            channel_muted_until: T(t.mute_config),
+            channel_muted_until: m(t.mute_config),
         };
     }
-    let g = m(A),
-        N = m(S(n, i), _),
+    let g = T(A),
+        N = T(S(n, i), _),
         C = p(g, N, "RETURN_PREVIOUS_WHEN_CHANGED"),
         O = l.A.getChannel(i),
         R = C("channel_flags") ?? 0,

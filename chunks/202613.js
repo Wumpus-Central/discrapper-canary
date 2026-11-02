@@ -15,10 +15,10 @@
     WV: () => L,
     Xj: () => I,
     YS: () => o,
-    _1: () => T,
+    _1: () => m,
     am: () => p,
     cg: () => g,
-    i6: () => m,
+    i6: () => T,
     rJ: () => E,
 }),
     n(938796));
@@ -73,7 +73,7 @@ class l extends r.A {
             case s.hes.PAYPAL:
                 return new d({ ...n, email: e.email });
             case s.hes.VENMO:
-                return new T({ ...n, username: e.username });
+                return new m({ ...n, username: e.username });
             case s.hes.SEPA_DEBIT:
             case s.hes.SOFORT:
                 return new c({ ...n, email: e.email });
@@ -92,7 +92,7 @@ class l extends r.A {
             case s.hes.MOMO_WALLET:
                 return new p({ ...n });
             case s.hes.KAKAOPAY:
-                return new m({ ...n });
+                return new T({ ...n });
             case s.hes.GOPAY_WALLET:
                 return new g({ ...n });
             case s.hes.BANCONTACT:
@@ -134,9 +134,9 @@ class l extends r.A {
             case s.hes.MOMO_WALLET:
                 return new p(e);
             case s.hes.VENMO:
-                return new T(e);
-            case s.hes.KAKAOPAY:
                 return new m(e);
+            case s.hes.KAKAOPAY:
+                return new T(e);
             case s.hes.GOPAY_WALLET:
                 return new g(e);
             case s.hes.BANCONTACT:
@@ -267,7 +267,7 @@ class p extends l {
             throw Error(`Cannot instantiate MomoWalletSourceRecord with type: ${e.type}, must be ${s.hes.MOMO_WALLET}`);
     }
 }
-class T extends l {
+class m extends l {
     username;
     constructor(e) {
         if ((super(e), e.type !== s.hes.VENMO))
@@ -275,7 +275,7 @@ class T extends l {
         this.username = e.username || "";
     }
 }
-class m extends l {
+class T extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.KAKAOPAY))
             throw Error(`Cannot instantiate KaKaoPaySourceRecord with type: ${e.type}, must be ${s.hes.KAKAOPAY}`);

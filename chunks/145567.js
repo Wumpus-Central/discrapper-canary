@@ -1,4 +1,4 @@
-n.d(t, { $p: () => T, D$: () => I, Ml: () => A, S$: () => m, bB: () => h, lu: () => p });
+n.d(t, { $p: () => m, D$: () => I, Ml: () => A, S$: () => T, bB: () => h, lu: () => p });
 var i,
     r = n(73153),
     a = n(308528),
@@ -68,10 +68,10 @@ function p(e) {
         r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL", channelId: t })
     );
 }
-function T() {
+function m() {
     return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS" });
 }
-function m(e) {
+function T(e) {
     let { minimized: t } = e;
     return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED", minimized: t });
 }

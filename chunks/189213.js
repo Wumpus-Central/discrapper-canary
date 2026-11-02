@@ -20,12 +20,12 @@ function c(e) {
             listProps: f,
             notice: I,
             onScroll: p,
-            scrollerRef: T,
-            children: m,
+            scrollerRef: m,
+            children: T,
             "aria-label": g,
             ...S
         } = e,
-        N = null != t ? t : null != u || null != A || (0, s.y)(m) || null != f ? "md" : "sm";
+        N = null != t ? t : null != u || null != A || (0, s.y)(T) || null != f ? "md" : "sm";
     return (0, i.jsxs)(r.d, {
         ...S,
         "aria-label": g ?? n,
@@ -33,7 +33,7 @@ function c(e) {
         children: [
             (0, i.jsx)(o.rQ, { title: n, subtitle: c }),
             (0, i.jsx)(d.i, { message: I?.message, type: I?.type, role: I?.role }),
-            (0, i.jsx)(s.c, { controls: u, listProps: f, onScroll: p, scrollerRef: T, children: m }),
+            (0, i.jsx)(s.c, { controls: u, listProps: f, onScroll: p, scrollerRef: m, children: T }),
             (0, i.jsx)(l.j, { children: _ }),
             (0, i.jsx)(a.H, { leading: A, leadingLayout: h, actions: E, actionsFullWidth: null == A }),
         ],

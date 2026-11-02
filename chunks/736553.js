@@ -3,7 +3,7 @@ class r {
     socket = null;
     supportsPublishOptions = !1;
     open(e) {
-        let { url: t, ticket: n, templateId: r, onEvent: s, onPong: o, onClose: i, onError: l } = e;
+        let { url: t, ticket: n, templateId: r, onEvent: s, onPong: i, onClose: o, onError: l } = e;
         this.close();
         let a = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
             c = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != r ? { template: r } : {}) }),
@@ -12,7 +12,7 @@ class r {
             d.addEventListener("message", (e) => {
                 let t;
                 if (this.socket === d) {
-                    if ("pong" === e.data) return void o?.();
+                    if ("pong" === e.data) return void i?.();
                     try {
                         t = JSON.parse(e.data);
                     } catch (e) {
@@ -26,7 +26,7 @@ class r {
                 this.socket === d && l?.(e);
             }),
             d.addEventListener("close", () => {
-                this.socket === d && i?.();
+                this.socket === d && o?.();
             }));
     }
     sendPublishScheduleMessage(e) {
@@ -37,8 +37,8 @@ class r {
         let {
             templateId: r,
             remix: s,
-            clarificationAnswers: o,
-            linkEmbeds: i,
+            clarificationAnswers: i,
+            linkEmbeds: o,
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(
@@ -49,8 +49,8 @@ class r {
                 attachment_ids: n,
                 template_id: r,
                 remix: s,
-                clarification_answers: o,
-                link_embeds: i,
+                clarification_answers: i,
+                link_embeds: o,
             }),
         );
     }

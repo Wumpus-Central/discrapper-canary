@@ -28,15 +28,15 @@ function f(e, t, n) {
 }
 let I = {},
     p = !1,
-    T = (e, t) => `guild-${e}-${t}`;
-function m(e) {
+    m = (e, t) => `guild-${e}-${t}`;
+function T(e) {
     let t,
         n = [];
-    return (n.push(((t = e.joinRequestId), `guild-join-request=${t}`)), n.push(T(e.guildId, e.applicationStatus)), n);
+    return (n.push(((t = e.joinRequestId), `guild-join-request=${t}`)), n.push(m(e.guildId, e.applicationStatus)), n);
 }
-let g = new s.J(m, (e) => `${e.joinRequestId}`),
-    S = new s.J(m, (e) => `${e.joinRequestId}`),
-    N = new s.J(m, (e) => `${e.actionedAt}`);
+let g = new s.J(T, (e) => `${e.joinRequestId}`),
+    S = new s.J(T, (e) => `${e.joinRequestId}`),
+    N = new s.J(T, (e) => `${e.actionedAt}`);
 function C(e) {
     return g.get(e);
 }
@@ -68,7 +68,7 @@ class P extends a.Ay.Store {
         return v[e];
     }
     getRequests(e, t) {
-        let n = T(e, t);
+        let n = m(e, t);
         return (0, c.mf)(t) ? N.values(n) : (0, c.ar)(t) ? S.values(n) : g.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {

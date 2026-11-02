@@ -25,8 +25,8 @@ function h(e) {
 var f = n(400492),
     I = n(312671),
     p = n(458640),
-    T = n(734057),
-    m = n(803224),
+    m = n(734057),
+    T = n(803224),
     g = n(994500),
     S = n(351906),
     N = n(287809),
@@ -256,7 +256,7 @@ async function q(e, t, n, i, r) {
                         e(o.src);
                     }));
             }))),
-        v && m.A.taskbarFlash && y.Ay.flashFrame(!0));
+        v && T.A.taskbarFlash && y.Ay.flashFrame(!0));
     let V = null;
     if (u) {
         let a = { title: t, body: n };
@@ -271,7 +271,7 @@ async function q(e, t, n, i, r) {
             let e = r.messageRecord.channel_id,
                 t = r.messageRecord.author;
             a.threadIdentifier = e;
-            let n = T.A.getChannel(e);
+            let n = m.A.getChannel(e);
             null != n && (a.groupName = (0, d.m1)(n, N.default, g.A));
             let i = n?.getGuildId();
             ((a.senderIdentifier = t.id),

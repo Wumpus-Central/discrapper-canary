@@ -1,7 +1,7 @@
 n.d(t, {
     Xr: () => C,
-    UZ: () => m,
-    nO: () => T,
+    UZ: () => T,
+    nO: () => m,
     eT: () => N,
     $0: () => A,
     A5: () => c,
@@ -91,13 +91,13 @@ function p(e) {
             .num();
     });
 }
-function T(e) {
-    let t = e[0];
-    if (null == t) return m(0);
-    let [n] = I(t);
-    return m(h(n - f[0].hueShift));
-}
 function m(e) {
+    let t = e[0];
+    if (null == t) return T(0);
+    let [n] = I(t);
+    return T(h(n - f[0].hueShift));
+}
+function T(e) {
     return r().hsl(e, d.kp, d.PS).num();
 }
 function g(e) {

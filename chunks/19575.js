@@ -225,8 +225,8 @@ var i,
     f = n(229531),
     I = n(723702),
     p = n(998218),
-    T = n(652215),
-    m = n(264572).Buffer;
+    m = n(652215),
+    T = n(264572).Buffer;
 let g = window.DiscordNative,
     S = new Set(["jpg", "jpeg", "jfif", "png"]),
     N = new Set(["webp", "avif"]),
@@ -359,7 +359,7 @@ let K = {
                 g.powerMonitor.removeAllListeners(),
                 window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN &&
                     !0 !== E.w.get(o.qx) &&
-                    this.supportsFeature(T.BYE.USER_DATA_CACHE) &&
+                    this.supportsFeature(m.BYE.USER_DATA_CACHE) &&
                     g.userDataCache.cacheUserData(E.w.stringify()));
         },
         inputEventRegister(e, t, n, i) {
@@ -576,15 +576,15 @@ let K = {
             let n = await V(e),
                 i = (0, f.U)(e, t);
             if (null != i && N.has(i)) {
-                ((n = await H(n, t ?? `image/${i}`)), await g.clipboard.copyImage(m.from(n), "image.png"));
+                ((n = await H(n, t ?? `image/${i}`)), await g.clipboard.copyImage(T.from(n), "image.png"));
                 return;
             }
             let r = null != i && S.has(i) ? `image.${i}` : e;
-            await g.clipboard.copyImage(m.from(n), r);
+            await g.clipboard.copyImage(T.from(n), r);
         },
         async copyImageBlob(e, t) {
             let n = await e.arrayBuffer();
-            await g.clipboard.copyImage(m.from(n), t);
+            await g.clipboard.copyImage(T.from(n), t);
         },
         canSaveImage(e, t) {
             if (null == e || !I.isPlatformEmbedded) return !1;
@@ -610,7 +610,7 @@ let K = {
                 s = `${s}.${i}`;
             }
             let d = await V(e),
-                c = m.from(d),
+                c = T.from(d),
                 u = E.w.get(M);
             if (("string" != typeof u && (u = void 0), "function" == typeof g.fileManager.saveWithDialog2)) {
                 if (null == (i = await g.fileManager.saveWithDialog2(c, s, u ?? void 0))) return "errored";
@@ -631,7 +631,7 @@ let K = {
             let i = t ?? n.pathname.split("/").pop() ?? "unknown";
             null == t && (i = B(i));
             let r = await V(e),
-                a = m.from(r),
+                a = T.from(r),
                 s = await g.fileManager.saveWithDialog(a, i, void 0);
             return null == s ? null : s;
         },

@@ -15,11 +15,11 @@ var r = n(649852),
 let f = Date.now(),
     I = !1,
     p = !1,
-    T = !1,
     m = !1,
+    T = !1,
     g = !1;
 function S() {
-    return T || m || ((0, _.isAndroid)() && g);
+    return m || T || ((0, _.isAndroid)() && g);
 }
 function N() {
     let e;
@@ -48,16 +48,16 @@ if (!__OVERLAY__) {
               }
           })(),
           d.A.powerMonitor.on("resume", () => {
-              ((T = !1), C(!1));
+              ((m = !1), C(!1));
           }),
           d.A.powerMonitor.on("suspend", () => {
-              ((T = !0), C(!0), o.default.disconnect());
+              ((m = !0), C(!0), o.default.disconnect());
           }),
           d.A.powerMonitor.on("lock-screen", () => {
-              ((m = !0), C(!0));
+              ((T = !0), C(!0));
           }),
           d.A.powerMonitor.on("unlock-screen", () => {
-              ((m = !1), C(!1));
+              ((T = !1), C(!1));
           }))
         : setInterval(N, 30 * u.A.Millis.SECOND);
     let e = a()(() => {
@@ -94,10 +94,10 @@ class R extends s.Ay.Store {
         return I ? f : null;
     }
     getSystemSuspended() {
-        return T;
+        return m;
     }
     getSystemLocked() {
-        return m;
+        return T;
     }
 }
 let L = new R(l.h, {

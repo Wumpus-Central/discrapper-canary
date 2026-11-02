@@ -12,8 +12,8 @@ var l = n(477900),
     m = n(140735),
     p = n(939249),
     x = n(289873),
-    g = n(548118),
-    h = n(381849),
+    h = n(548118),
+    g = n(381849),
     j = n(287809),
     v = n(427262),
     b = n(503275),
@@ -52,8 +52,8 @@ function G(e) {
         }),
     });
 }
-var W = n(731084),
-    H = n(104317),
+var H = n(731084),
+    W = n(104317),
     R = n(886540),
     O = n(162052),
     $ = n(790624);
@@ -65,8 +65,8 @@ function X(e) {
                 let e = (0, R.Ji)(N.A.getMessages(t));
                 return null == e
                     ? null
-                    : ((0, H.w)(e.steps) ??
-                          (0, W.Dy)({
+                    : ((0, W.w)(e.steps) ??
+                          (0, H.Dy)({
                               activity: N.A.getThinkingActivity(t),
                               compacting: N.A.isCompacting(t),
                               saving: N.A.isSaving(t),
@@ -86,7 +86,7 @@ function q(e) {
     let { guild: t } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(g.Ay, { guild: t, size: g.Ay.Sizes.SMOL, active: !0, className: $.Wy, "aria-hidden": !0 }),
+            (0, l.jsx)(h.Ay, { guild: t, size: h.Ay.Sizes.SMOL, active: !0, className: $.Wy, "aria-hidden": !0 }),
             (0, l.jsx)("span", { className: $.p8, children: t.name }),
         ],
     });
@@ -176,7 +176,7 @@ let Z = a.memo(function (e) {
         n,
         { project: a, onSelect: r, selected: u = !1, renderActions: d, onContextMenu: c, showServer: f = !1 } = e,
         {
-            status: g,
+            status: h,
             unread: v,
             deleting: b,
         } = ((t = a.id),
@@ -203,9 +203,9 @@ let Z = a.memo(function (e) {
             }),
             [t, n],
         )),
-        y = !b && "in_progress" === g,
+        y = !b && "in_progress" === h,
         S = !b && v,
-        D = b || "published" === g ? null : g,
+        D = b || "published" === h ? null : h,
         M = [null != D ? B.intl.string(F[D]) : null, S ? B.intl.string(z.default["N+3Pzk"]) : null]
             .filter(Boolean)
             .join(", "),
@@ -214,9 +214,9 @@ let Z = a.memo(function (e) {
             let t = Date.parse(e.updated_at);
             return Number.isNaN(t) ? null : t;
         })(a),
-        W = (0, s.bG)([j.default], () => j.default.getCurrentUser()?.id),
-        H = a.owner_user_id === W,
-        R = null != K ? (0, h.Ay)({ since: K, getFormatter: h.i, includeWeeks: !0 }) : null,
+        H = (0, s.bG)([j.default], () => j.default.getCurrentUser()?.id),
+        W = a.owner_user_id === H,
+        R = null != K ? (0, g.Ay)({ since: K, getFormatter: g.i, includeWeeks: !0 }) : null,
         q = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)("span", {
@@ -244,7 +244,7 @@ let Z = a.memo(function (e) {
                               })
                             : y
                               ? (0, l.jsx)(X, { projectId: a.id })
-                              : H
+                              : W
                                 ? (0, l.jsx)(V, { project: a, time: R })
                                 : (0, l.jsx)(U, { project: a, time: R, showServer: f }),
                     ],

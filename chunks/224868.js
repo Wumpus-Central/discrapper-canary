@@ -15,11 +15,11 @@ var i = n(47167),
     f = n(768038),
     I = n(690521),
     p = n(935208),
-    T = n(408018),
-    m = n(652215),
+    m = n(408018),
+    T = n(652215),
     g = n(307731);
-function S(e, t, n, T) {
-    let { allowUsers: S = !0, allowRoles: N = !0 } = T ?? {};
+function S(e, t, n, m) {
+    let { allowUsers: S = !0, allowRoles: N = !0 } = m ?? {};
     switch (e[0]) {
         case "@":
             return (function (e, t, n, i, r) {
@@ -87,7 +87,7 @@ function S(e, t, n, T) {
                 if (e !== d.I6) {
                     for (let { channel: t } of d.Ay.getChannels(L)[e])
                         if ((0, i.m1)(t, h.default, A.A) === O) {
-                            if (t.isCategory() && !E.A.can(m.xBc.VIEW_CHANNEL, t)) continue;
+                            if (t.isCategory() && !E.A.can(T.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
                         }
                 }
@@ -104,7 +104,7 @@ function S(e, t, n, T) {
 }
 function N(e, t, n, i) {
     let r = S(e, t, n, i);
-    return null == r ? null : (0, T.QR)(r);
+    return null == r ? null : (0, m.QR)(r);
 }
 function C(e, t, n) {
     let { requireExact: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};

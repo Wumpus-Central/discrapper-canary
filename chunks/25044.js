@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(477900),
     r = n(582128),
     a = n(91871),
@@ -15,7 +15,7 @@ var i = n(477900),
     f = n(957565),
     I = n(96919),
     p = n(105292);
-function T(e) {
+function m(e) {
     let { id: t, experiment: n, currentBucket: r, system: a } = e,
         s = (0, h.h)(n);
     return (0, i.jsxs)(
@@ -65,7 +65,7 @@ function T(e) {
         t,
     );
 }
-function m() {
+function T() {
     let { experiments: e, overridesInfo: t } = (0, A.hI)(),
         { experiments: n, overridesInfo: a } = (0, E.op)(),
         o = r.useMemo(() => {
@@ -89,7 +89,7 @@ function m() {
                 }),
             [o],
         ),
-        m = r.useMemo(
+        T = r.useMemo(
             () =>
                 _.filter((e) => {
                     let { currentBucket: t } = e;
@@ -97,8 +97,8 @@ function m() {
                 }),
             [_],
         ),
-        g = r.useMemo(() => f.map(T), [f]),
-        S = r.useMemo(() => m.map(T), [m]),
+        g = r.useMemo(() => f.map(m), [f]),
+        S = r.useMemo(() => T.map(m), [T]),
         N = (0, i.jsx)(
             l.aK,
             {

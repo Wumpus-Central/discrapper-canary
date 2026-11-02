@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(872162),
     I = n(834730),
     p = n(991957),
-    T = n(44482),
-    m = n(601973),
+    m = n(44482),
+    T = n(601973),
     g = n(483084),
     S = n(641668),
     N = n(715022),
@@ -92,7 +92,7 @@ function O(e) {
                                 selectedItems: [],
                                 onSelectionChange: () => {},
                                 shouldFocusWrap: !1,
-                                renderListItem: (e) => (0, i.jsx)(T.c, { ...e }),
+                                renderListItem: (e) => (0, i.jsx)(m.c, { ...e }),
                             }),
                         }),
                     [e, t, s, n],
@@ -108,10 +108,10 @@ function O(e) {
             },
             [z],
         ),
-        eT = r.useCallback(() => {
+        em = r.useCallback(() => {
             (X(!1), ea.current?.focus());
         }, [X]),
-        em = r.useCallback(() => {
+        eT = r.useCallback(() => {
             !1 !== I && ("multiple" === n ? x([]) : x(null), ea.current?.focus());
         }, [x, n, I]);
     r.useEffect(() => {
@@ -147,9 +147,9 @@ function O(e) {
                     : "multiple" === n
                       ? x(t.map((e) => e.value))
                       : x(t[0]?.value),
-                    e_ && z && eT());
+                    e_ && z && em());
             },
-            [eA, n, x, e_, eT, z],
+            [eA, n, x, e_, em, z],
         ),
         { activeIndex: eO, handleKeyDown: eR } = (0, A.l)(!0, en),
         eL = r.useRef(null);
@@ -189,7 +189,7 @@ function O(e) {
                                     break;
                                 }
                             }
-                            eT();
+                            em();
                             break;
                         }
                         if (!z) return void X(!0);
@@ -236,14 +236,14 @@ function O(e) {
                         break;
                     case "Escape":
                         z
-                            ? (e.preventDefault(), e.stopPropagation(), eT())
-                            : eE && I && (e.preventDefault(), e.stopPropagation(), em());
+                            ? (e.preventDefault(), e.stopPropagation(), em())
+                            : eE && I && (e.preventDefault(), e.stopPropagation(), eT());
                         break;
                     default:
                         eR(e);
                 }
             },
-            [eA, z, en, y, n, eN, el, x, eC, eT, em, eR, eE, I, X],
+            [eA, z, en, y, n, eN, el, x, eC, em, eT, eR, eE, I, X],
         ),
         eD = r.useMemo(() => {
             if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!I + 36 + 12}px`;
@@ -296,7 +296,7 @@ function O(e) {
                 style: { width: O ? "100%" : `minmax(${eD}px, 100%)` },
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(m.p, {
+                        (0, i.jsx)(T.p, {
                             ref: eP,
                             disabled: $,
                             readOnly: a,
@@ -308,7 +308,7 @@ function O(e) {
                             hasValue: eE,
                             hasError: e?.errorMessageId != null,
                             handleToggle: eI,
-                            handleClear: em,
+                            handleClear: eT,
                             variant: B,
                             ...Q(),
                             children: (0, i.jsxs)(u.s, {
@@ -375,7 +375,7 @@ function O(e) {
                                     onSelectionChange: eC,
                                     shouldFocusWrap: y,
                                     activeDescendantIndex: el,
-                                    renderListItem: (e) => (0, i.jsx)(T.c, { ...e }),
+                                    renderListItem: (e) => (0, i.jsx)(m.c, { ...e }),
                                     maxVisibleItems: M,
                                     loading: er,
                                 }),
@@ -400,5 +400,5 @@ function R(e) {
           })
         : "multiple" === n
           ? (0, i.jsx)(f.C, { listRef: s, label: l.SELECTED_TAGS_HEADING, items: r, layout: "inline", onRemove: a })
-          : (0, i.jsx)(T.c, { ...r[0], inInput: !0 });
+          : (0, i.jsx)(m.c, { ...r[0], inInput: !0 });
 }

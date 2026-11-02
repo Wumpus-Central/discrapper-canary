@@ -1,6 +1,6 @@
 n.d(t, {
     $C: () => S,
-    BC: () => T,
+    BC: () => b,
     BG: () => m,
     Mz: () => O,
     TV: () => E,
@@ -11,8 +11,8 @@ n.d(t, {
 });
 var r = n(73153),
     s = n(587895),
-    o = n(975189),
-    i = n(276983),
+    i = n(975189),
+    o = n(276983),
     l = n(423976),
     a = n(260498),
     c = n(677690),
@@ -126,7 +126,7 @@ let _ = {
                     ? e.preview_app_channels.filter((e) => "string" == typeof e)
                     : [],
                 previewDevicePermissions: Array.isArray(e.preview_device_permissions)
-                    ? e.preview_device_permissions.filter(i.de)
+                    ? e.preview_device_permissions.filter(o.de)
                     : [],
                 publishedRevision: "number" == typeof e.published_revision ? e.published_revision : null,
                 publishedAt: "string" == typeof e.published_at ? e.published_at : null,
@@ -155,9 +155,9 @@ let _ = {
         publish_result(e, t) {
             let { projectId: n } = t;
             r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId: n, approvalUrl: null });
-            let o = y.get(n);
+            let i = y.get(n);
             (y.delete(n),
-                null != o && (clearTimeout(o.timeout), o.resolve(e)),
+                null != i && (clearTimeout(i.timeout), i.resolve(e)),
                 !0 !== e.ok
                     ? (0, d.Is)(n, e.error ?? "publish_result not ok", !1)
                     : (function (e) {
@@ -175,24 +175,24 @@ let _ = {
         },
         patch_notes_draft(e, t) {
             let { projectId: n } = t,
-                r = b.get(n);
-            null != r && r.nonce === e.nonce && (b.delete(n), clearTimeout(r.timeout), r.resolve(e));
+                r = T.get(n);
+            null != r && r.nonce === e.nonce && (T.delete(n), clearTimeout(r.timeout), r.resolve(e));
         },
     };
 function g(e) {
-    (0, o.KY)(e)?.sendPreparePublish();
+    (0, i.KY)(e)?.sendPreparePublish();
 }
 function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         s = !1;
-    return new Promise((i, l) => {
-        let a = (0, o.KY)(e);
+    return new Promise((o, l) => {
+        let a = (0, i.KY)(e);
         if (null == a) return void l(Error("Not connected"));
         if (y.has(e)) return void l(Error("Publish already in flight"));
         let c = setTimeout(() => {
             O(e, "Publish timed out");
         }, 9e5);
-        (y.set(e, { resolve: i, reject: l, timeout: c }),
+        (y.set(e, { resolve: o, reject: l, timeout: c }),
             (s = !0),
             r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
         try {
@@ -210,25 +210,25 @@ function E(e, t) {
 }
 function S(e) {
     return new Promise((t, n) => {
-        let r = (0, o.KY)(e);
+        let r = (0, i.KY)(e);
         if (null == r) return void n(Error("Not connected"));
-        T(e, "Superseded by a newer draft request");
+        b(e, "Superseded by a newer draft request");
         let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-            i = setTimeout(() => {
-                T(e, "Draft timed out");
+            o = setTimeout(() => {
+                b(e, "Draft timed out");
             }, 45e3);
-        b.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
+        T.set(e, { resolve: t, reject: n, timeout: o, nonce: s });
         try {
             r.sendDraftPatchNotes(s);
         } catch (t) {
-            (b.delete(e), clearTimeout(i), n(t instanceof Error ? t : Error("draft send failed")));
+            (T.delete(e), clearTimeout(o), n(t instanceof Error ? t : Error("draft send failed")));
         }
     });
 }
 function m(e, t, n) {
     r.h.dispatch({ type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId: e, sent: t });
     try {
-        let r = (0, o.KY)(e);
+        let r = (0, i.KY)(e);
         if (null == r) throw Error("Not connected");
         r.sendPatchNotesSent(t, n);
     } catch (t) {
@@ -241,10 +241,10 @@ function O(e, t) {
     let n = y.get(e);
     null != n && (y.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let b = new Map();
-function T(e, t) {
-    let n = b.get(e);
-    null != n && (b.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+let T = new Map();
+function b(e, t) {
+    let n = T.get(e);
+    null != n && (T.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
 let C = new Set(p.n),
     k = new Set(["activity", "automod", "widget", "bot"]);
@@ -258,7 +258,7 @@ function A(e, t) {
 }
 function R(e) {
     return new Promise((t, n) => {
-        let r = (0, o.KY)(e);
+        let r = (0, i.KY)(e);
         if (null == r) return n(Error("Not connected"));
         if (!r.supportsPublishOptions)
             return void t({
@@ -267,8 +267,8 @@ function R(e) {
             });
         A(e, "Superseded by a newer publish request");
         let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-            i = setTimeout(() => A(e, "Could not load publish destinations. Try again."), 15e3);
-        w.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
+            o = setTimeout(() => A(e, "Could not load publish destinations. Try again."), 15e3);
+        w.set(e, { resolve: t, reject: n, timeout: o, nonce: s });
         try {
             r.sendPublishOptions(s);
         } catch {

@@ -1,4 +1,4 @@
-(n.d(t, { Tg: () => h, h9: () => I, jx: () => f, l8: () => T, sy: () => p }), n(938796));
+(n.d(t, { Tg: () => h, h9: () => I, jx: () => f, l8: () => m, sy: () => p }), n(938796));
 var i = n(665260),
     r = n(636537),
     a = n(73153),
@@ -36,15 +36,15 @@ async function I(e) {
     if (null == r || !r.features.has(E.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
     let a = u.A.shouldFetchPrompts(e),
         s = u.A.getOnboardingPrompts(e);
-    if (!a && s.length > 0) return (s.every((e) => !e.inOnboarding) ? m(e) : n || p(e), Promise.resolve());
+    if (!a && s.length > 0) return (s.every((e) => !e.inOnboarding) ? T(e) : n || p(e), Promise.resolve());
     let c = await f(e);
-    return Array.isArray(c) && c.every((e) => !e.inOnboarding) ? (m(e), Promise.resolve()) : (n || p(e), c);
+    return Array.isArray(c) && c.every((e) => !e.inOnboarding) ? (T(e), Promise.resolve()) : (n || p(e), c);
 }
 function p(e) {
     a.h.dispatch({ type: "GUILD_ONBOARDING_START", guildId: e });
 }
-let T = -3;
-function m(e) {
+let m = -3;
+function T(e) {
     (c.default.track(E.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, s.H$)(e), step: -2, required: !0 }),
         c.default.track(E.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
             ...(0, s.H$)(e),

@@ -15,8 +15,8 @@ var r = n(17928),
     f = n(705751);
 let I = u.A.Millis.DAY,
     p = new l.A(),
-    T = new Map(),
     m = new Map(),
+    T = new Map(),
     g = "",
     S = null,
     N = !1,
@@ -45,13 +45,13 @@ function k(e) {
     return e.trim().toLowerCase();
 }
 function F(e, t) {
-    let n = T.get(t);
-    void 0 === n ? T.set(t, e) : Array.isArray(n) ? n.push(e) : T.set(t, [n, e]);
+    let n = m.get(t);
+    void 0 === n ? m.set(t, e) : Array.isArray(n) ? n.push(e) : m.set(t, [n, e]);
 }
 function B(e) {
     let t = e instanceof o.xg ? G(e) : e;
     for (let n of (p.set(e.id, t), F(t.id, k(t.name)), e.aliases)) F(t.id, k(n));
-    if ((0, E.isDesktop)()) for (let n of e.executables) m.set(n.name, t.id);
+    if ((0, E.isDesktop)()) for (let n of e.executables) T.set(n.name, t.id);
 }
 class V extends r.Ay.PersistedStore {
     static displayName = "GameStore";
@@ -106,7 +106,7 @@ class V extends r.Ay.PersistedStore {
     }
     searchGamesByName(e) {
         if (null == e) return [];
-        let t = T.get(k(e));
+        let t = m.get(k(e));
         return void 0 === t ? [] : Array.isArray(t) ? t : [t];
     }
     findGame(e, t) {
@@ -198,7 +198,7 @@ class V extends r.Ay.PersistedStore {
     }
     getGameByExecutable(e) {
         if (null == e) return;
-        let t = m.get(e);
+        let t = T.get(e);
         return this.getDetectableGame(t);
     }
     shouldBlock(e) {
@@ -262,7 +262,7 @@ class V extends r.Ay.PersistedStore {
 let H = new V(a.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { detectableApplications: t } = e;
-        for (let e of (p.clear(), T.clear(), m.clear(), t)) B(e);
+        for (let e of (p.clear(), m.clear(), T.clear(), t)) B(e);
     },
     GAMES_DATABASE_FETCH: function () {
         i = !0;
@@ -272,7 +272,7 @@ let H = new V(a.h, {
     },
     GAMES_DATABASE_UPDATE: function (e) {
         let { games: t, etag: n } = e;
-        for (let e of (null != n && g !== n && (p.clear(), T.clear(), m.clear(), (g = n)), t))
+        for (let e of (null != n && g !== n && (p.clear(), m.clear(), T.clear(), (g = n)), t))
             B(
                 (function (e) {
                     let { executables: t, aliases: n, third_party_skus: i } = e;

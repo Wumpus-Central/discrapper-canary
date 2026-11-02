@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(290863),
     I = n(711014),
     p = n(403362),
-    T = n(419731),
-    m = n(439174),
+    m = n(419731),
+    T = n(439174),
     g = n(633075),
     S = n(646976),
     N = n(289173),
@@ -205,7 +205,7 @@ function X(e) {
         o =
             null != t.badges
                 ? t.badges.map((e) => {
-                      let t = (0, m.e0)(e.id);
+                      let t = (0, T.e0)(e.id);
                       if (("premium" === e.id || null != t) && null != a) {
                           let n = L.intl.formatToPlainString(L.t["8zbGNR"], { date: a });
                           return (
@@ -258,7 +258,7 @@ function X(e) {
             badges: o,
             widgets: t.widgets?.map(F).filter(p.Vq),
             wishlistSettings: t.wishlist_settings,
-            profileReadState: (0, T.R8)(b.get(t.user.id)?.profileReadState, (0, T.CJ)(t.profile_read_state)),
+            profileReadState: (0, m.R8)(b.get(t.user.id)?.profileReadState, (0, m.CJ)(t.profile_read_state)),
             private: t.private,
         }),
         j(t.user.id),
@@ -404,7 +404,7 @@ function ei(e) {
     let { ownerId: t, ackedAt: n } = e,
         i = b.get(t);
     if (null == i) return !1;
-    b.set(t, { ...i, profileReadState: (0, T.R8)(i.profileReadState, n) });
+    b.set(t, { ...i, profileReadState: (0, m.R8)(i.profileReadState, n) });
 }
 function er(e) {
     let { badges: t, ttlInSeconds: n, userId: i } = e;

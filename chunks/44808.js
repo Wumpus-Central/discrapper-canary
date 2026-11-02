@@ -17,10 +17,10 @@ function A(e) {
         [A, h] = a.useState(null != t),
         [f] = a.useState(() => new d.Ep()),
         [I, p] = a.useState(!0),
-        T = a.useRef(null);
+        m = a.useRef(null);
     return (
         a.useLayoutEffect(() => {
-            (T.current?.addEventListener("transitionend", () => {
+            (m.current?.addEventListener("transitionend", () => {
                 p(!1);
             }),
                 setTimeout(() => {

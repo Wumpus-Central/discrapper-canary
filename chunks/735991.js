@@ -38,8 +38,8 @@ var i = n(487899),
     f = n(451909),
     I = n(395671),
     p = n(486020),
-    T = n(723702),
-    m = n(989837),
+    m = n(723702),
+    T = n(989837),
     g = n(500049),
     S = n(652215),
     N = n(73510),
@@ -69,7 +69,7 @@ function M(e) {
 }
 function U(e) {
     let t = G(e),
-        n = t?.client_platform_config[(0, o.A)((0, T.getOS)())],
+        n = t?.client_platform_config[(0, o.A)((0, m.getOS)())],
         i = Date.now();
     return n?.label_until != null &&
         i < Date.parse(n.label_until) &&
@@ -112,7 +112,7 @@ function x(e) {
                     maxSizeCallback: l,
                     commandOrigin: d,
                     sectionName: o,
-                    source: m.A.entrypoint(),
+                    source: T.A.entrypoint(),
                 });
                 if (t.inputType === c.y$.BUILT_IN_TEXT && null != e && null != i.channel) {
                     let t = f.Ay.parse(u, e.content);

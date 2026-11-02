@@ -21,8 +21,8 @@ function p(e) {
             f.A.setApplicationBackgroundColor(t);
         } catch {}
 }
-var T = n(594061),
-    m = n(355097);
+var m = n(594061),
+    T = n(355097);
 let g = 0,
     S = A.qj,
     N = (0, s.A)(),
@@ -103,12 +103,12 @@ let v = new D(a.h, {
             0 === g && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARK }), (g = 1)),
             u.Ay.darkSidebar &&
                 (_.A.settings.appearance?.darkSidebar ||
-                    T.wc.updateAsync(
+                    m.wc.updateAsync(
                         "appearance",
                         (e) => {
                             e.darkSidebar = !0;
                         },
-                        m.Sb.INFREQUENT_USER_ACTION,
+                        T.Sb.INFREQUENT_USER_ACTION,
                     ),
                 a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } })),
             y()

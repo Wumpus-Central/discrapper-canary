@@ -20,8 +20,8 @@ let I = function (e) {
             size: a,
             className: I,
             textOptions: p,
-            iconClassName: T,
-            postSuccessGuild: m,
+            iconClassName: m,
+            postSuccessGuild: T,
             onSubscribeModalClose: g,
             premiumModalAnalyticsLocation: S,
             showIcon: N = !0,
@@ -54,14 +54,14 @@ let I = function (e) {
             pauseAnimation: !P || C,
             ...b,
             children: [
-                N && (0, i.jsx)(c.t, { size: "md", color: v, className: s()(f.PC, T) }),
+                N && (0, i.jsx)(c.t, { size: "md", color: v, className: s()(f.PC, m) }),
                 (0, i.jsx)("span", { className: s()(f._d, p?.textClassName), children: M.buttonText }),
             ],
         });
     return (0, i.jsx)(E.A, {
         onClick: n,
         subscriptionTier: t,
-        postSuccessGuild: m,
+        postSuccessGuild: T,
         onSubscribeModalClose: g,
         premiumModalAnalyticsLocation: S,
         applicationId: O,

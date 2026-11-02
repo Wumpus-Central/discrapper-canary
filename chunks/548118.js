@@ -20,8 +20,8 @@ function f(e) {
 }
 var I = n(624793),
     p = n(714991),
-    T = n(260509),
-    m = n(531685),
+    m = n(260509),
+    T = n(531685),
     g = n(515718),
     S = n(821589),
     N = n(779469);
@@ -58,7 +58,7 @@ let C = {
 class L extends r.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
-        return null != e.icon || null != t ? null : (0, i.jsx)("div", { className: N.acronym, children: (0, T.Rb)(e) });
+        return null != e.icon || null != t ? null : (0, i.jsx)("div", { className: N.acronym, children: (0, m.Rb)(e) });
     }
     renderBadge() {
         let { showBadge: e, guild: t, badgeStrokeColor: n, badgeTooltipColor: r, badgeTooltipDelay: a } = this.props;
@@ -90,13 +90,13 @@ class L extends r.PureComponent {
                 tabIndex: f,
                 iconSrc: I,
                 "aria-hidden": p,
-                lossless: m,
+                lossless: T,
                 iconSize: g,
                 ...C
             } = this.props,
             O = R[a],
             L = null != _ ? c.D : "div",
-            y = (0, T.Rb)(e);
+            y = (0, m.Rb)(e);
         return (0, i.jsxs)(L, {
             className: s()(N.icon, t, (0, S.t)(N, "iconSize", a), {
                 [(0, S.t)(N, "iconActive", a) ?? ""]: r,
@@ -130,14 +130,14 @@ class L extends r.PureComponent {
             : this.renderTooltip();
     }
 }
-let y = o.Ay.connectStores([m.A], (e) => {
+let y = o.Ay.connectStores([T.A], (e) => {
     let { guild: t, animate: n, iconSrc: i, style: r, size: a, iconSize: s, lossless: l } = e;
     return (
         null == i &&
             (i =
                 t instanceof I.GO
-                    ? t.getIconURL(s ?? O[a], n && m.A.isFocused())
-                    : (0, T.Iv)(t, s ?? O[a], n && m.A.isFocused(), l)),
+                    ? t.getIconURL(s ?? O[a], n && T.A.isFocused())
+                    : (0, m.Iv)(t, s ?? O[a], n && T.A.isFocused(), l)),
         { style: { ...r, backgroundImage: (0, g.wU)(i) } }
     );
 })(

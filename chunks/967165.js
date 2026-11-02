@@ -19,21 +19,21 @@ function C(e) {
     let { applicationId: n, guildId: t, targetElementRef: o, disabled: a = !1, openOnFocus: s = !1, ...i } = e,
         { isHovered: d, setIsHovered: c, onMouseEnter: g, onMouseLeave: p, cancelTimers: x } = (0, v.A)(500, 150),
         [j, C] = r.useState(!1),
-        [h, A] = r.useState(!1),
-        H = r.useRef(null),
-        L = r.useRef({ targetHovered: !1, targetFocused: !1, cardHovered: !1 }),
+        [h, H] = r.useState(!1),
+        L = r.useRef(null),
+        A = r.useRef({ targetHovered: !1, targetFocused: !1, cardHovered: !1 }),
         k = (0, m.m0)({ guildId: t ?? void 0, location: "ConjureAppHoverCard" });
     r.useEffect(() => {
         k && (0, f.A)(n);
     }, [k, n]);
     let I = r.useCallback(() => {
-            ((L.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), x(), c(!1), A(!1));
+            ((A.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), x(), c(!1), H(!1));
         }, [x, c]),
         P = r.useCallback(
             (e, n) => {
-                let t = L.current;
+                let t = A.current;
                 ((t[e] = n),
-                    A(t.targetHovered || t.targetFocused || t.cardHovered),
+                    H(t.targetHovered || t.targetFocused || t.cardHovered),
                     n ? g() : t.targetHovered || t.targetFocused || t.cardHovered || p());
             },
             [g, p],
@@ -59,8 +59,8 @@ function C(e) {
             (C(!0), P("targetHovered", !0));
         }
         function t(e) {
-            if ((0, u.vq)(e.relatedTarget, Node) && H.current?.contains(e.relatedTarget) === !0) {
-                L.current.targetHovered = !1;
+            if ((0, u.vq)(e.relatedTarget, Node) && L.current?.contains(e.relatedTarget) === !0) {
+                A.current.targetHovered = !1;
                 return;
             }
             P("targetHovered", !1);
@@ -82,7 +82,7 @@ function C(e) {
               targetElementRef: o,
               isHovered: d,
               isPointerOver: h,
-              cardRef: H,
+              cardRef: L,
               onCardEnter: b,
               onCardLeave: N,
               onClose: I,
@@ -107,17 +107,17 @@ function E(e) {
         x = (0, c.YY)(n).data,
         j = x?.conjureProjectId != null ? x : null,
         { creator: C, remixProject: E, isSettled: h } = (0, p.A)(j, t, a || o),
-        H = o && null != j;
+        L = o && null != j;
     return (0, l.jsx)(s.Y, {
         targetElementRef: r,
         position: m,
         animationPosition: f,
         spacing: g,
-        shouldShow: H,
+        shouldShow: L,
         onRequestClose: v,
         renderPopout: () =>
             null != j
-                ? (0, l.jsx)(A, {
+                ? (0, l.jsx)(H, {
                       application: j,
                       creator: C,
                       remixProject: E,
@@ -135,7 +135,7 @@ function E(e) {
 function h(e) {
     e.stopPropagation();
 }
-function A(e) {
+function H(e) {
     let {
             application: n,
             creator: t,

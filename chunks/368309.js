@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(676279),
     I = n(24482),
     p = n(652215),
-    T = n(202541),
-    m = n(105292),
+    m = n(202541),
+    T = n(105292),
     g = n(644242),
     S = n(309427);
 function N(e) {
@@ -25,14 +25,14 @@ function N(e) {
         { analyticsLocations: C } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
     (0, s.Ay)(() => {
         (h.default.track(p.HAw.PREMIUM_UPSELL_VIEWED, {
-            type: T.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED,
+            type: m.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED,
             is_external: !0,
             location_section: p.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
             location_stack: C,
-            sku_id: I.Ay.getSkuIdForPremiumType(T.PremiumTypes.TIER_2),
+            sku_id: I.Ay.getSkuIdForPremiumType(m.PremiumTypes.TIER_2),
             voice_guild_id: A.A.getGuildId() ?? null,
         }),
-            (0, c.sq)(p.U7l.PREMIUM_UPSELL_VIEWED, C, () => (0, u.uq)(T.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED)));
+            (0, c.sq)(p.U7l.PREMIUM_UPSELL_VIEWED, C, () => (0, u.uq)(m.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED)));
     });
     let O = (0, r.useCallback)(() => {
         (h.default.track(p.HAw.PREMIUM_PROMOTION_OPENED, {
@@ -46,11 +46,11 @@ function N(e) {
     return (0, i.jsx)(o.f5, {
         value: C,
         children: (0, i.jsx)(_.A, {
-            title: m.intl.string(m.t.jGDYF0),
-            subtitle: m.intl.string(m.t["grL/hg"]),
+            title: T.intl.string(T.t.jGDYF0),
+            subtitle: T.intl.string(T.t["grL/hg"]),
             graphic: { type: "video", src: N, loop: !0, loopAt: 5 },
             gradientColor: "nitro-green",
-            secondaryCTA: m.intl.string(m.t.ZnqyZ2),
+            secondaryCTA: T.intl.string(T.t.ZnqyZ2),
             onSecondaryClick: O,
             onClose: t,
             ...a,

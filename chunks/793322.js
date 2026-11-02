@@ -15,8 +15,8 @@ var i = n(192308),
     f = n(60465),
     I = n(409626),
     p = n(741231),
-    T = n(378570),
-    m = n(345942),
+    m = n(378570),
+    T = n(345942),
     g = n(114129),
     S = n(442325),
     N = n(718446),
@@ -172,17 +172,17 @@ function K(e) {
         y = { page: P.liQ.QUICK_SWITCHER };
     switch (C) {
         case _.rD.GUILD:
-            (0, m.u)(L.id, { navigationReplace: !0 });
+            (0, T.u)(L.id, { navigationReplace: !0 });
             break;
         case _.rD.TEXT_CHANNEL:
             null != (t = O.A.getChannel(L.id)) &&
-                (0, T.iN)(t.id, { state: { analyticsSource: y }, navigationReplace: !0 });
+                (0, m.iN)(t.id, { state: { analyticsSource: y }, navigationReplace: !0 });
             break;
         case _.rD.VOICE_CHANNEL: {
             if (null == (t = O.A.getChannel(L.id))) break;
             o ? s.A.updateChatOpen(L.id, !0) : c.default.selectVoiceChannel(L.id);
             let e = S.A.isEnabled() ? S.A.getTabForChannel(L.id) : null;
-            null != e ? (0, g.ZD)(e.id, !o) : (0, T.iN)(t.id, { state: { analyticsSource: y }, navigationReplace: !0 });
+            null != e ? (0, g.ZD)(e.id, !o) : (0, m.iN)(t.id, { state: { analyticsSource: y }, navigationReplace: !0 });
             break;
         }
         case _.rD.USER:
@@ -190,7 +190,7 @@ function K(e) {
                 l.A.channelListScrollTo(P.ME, O.A.getDMFromUserId(L.id)));
             break;
         case _.rD.GROUP_DM:
-            ((0, T.iN)(L.id, { navigationReplace: !0 }), l.A.channelListScrollTo(P.ME, L.id));
+            ((0, m.iN)(L.id, { navigationReplace: !0 }), l.A.channelListScrollTo(P.ME, L.id));
             break;
         case _.rD.APPLICATION:
             let D = R.A.getActiveLibraryApplication(L.id);

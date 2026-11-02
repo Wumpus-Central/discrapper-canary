@@ -1,5 +1,5 @@
 (n.d(t, {
-    De: () => T,
+    De: () => m,
     E2: () => l,
     IB: () => _,
     Ob: () => c,
@@ -243,7 +243,7 @@ function p(e) {
     let i = _(t.get("rgb.r"), t.get("rgb.g"), t.get("rgb.b"));
     return null == i ? t?.hex() : E(i.hue, i.saturation * n, i.lightness)?.toHexString();
 }
-function T(e, t, n) {
+function m(e, t, n) {
     let i = parseInt(e.substring(1, 3), 16),
         r = parseInt(e.substring(3, 5), 16),
         a = parseInt(e.substring(5, 7), 16),

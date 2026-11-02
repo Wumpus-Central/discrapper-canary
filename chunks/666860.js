@@ -25,8 +25,8 @@ var i = n(435558),
     f = n(576705),
     I = n(290863),
     p = n(763827),
-    T = n(994500),
-    m = n(309010),
+    m = n(994500),
+    T = n(309010),
     g = n(967198),
     S = n(977997),
     N = n(174459),
@@ -113,7 +113,7 @@ function P(e) {
     if (N.default.isThrottled(e)) return;
     let i = !("location" in t) || t.location !== R.ThZ.GUILD_CREATE_INVITE_SUGGESTION,
         r = "guild_id" in t ? t.guild_id : i ? g.A.getGuildId() : null,
-        a = "channel_id" in t ? t.channel_id : i ? m.Ay.getChannelId(r) : null,
+        a = "channel_id" in t ? t.channel_id : i ? T.Ay.getChannelId(r) : null,
         s = d.A.getChannel(a),
         l = null == s ? (r ?? null) : s.isPrivate() ? null : (s.getGuildId() ?? r ?? null),
         o = {
@@ -125,7 +125,7 @@ function P(e) {
 }
 function M(e) {
     let t = 0;
-    for (let n of e) T.A.isFriend(n) && t++;
+    for (let n of e) m.A.isFriend(n) && t++;
     return { friendCount: t, nonFriendCount: e.length - t };
 }
 function U(e, t, n) {

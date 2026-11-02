@@ -1,11 +1,11 @@
-e.d(a, { U: () => b });
-var i = e(477900);
-e(582128);
-let t =
+t.d(a, { U: () => u });
+var i = t(477900);
+t(582128);
+let r =
     "https://cdn.discordapp.com/assets/content/b938a7ed497f825ee131572ca37f34e5c674b47edec8a88661d2a7d380966f1c.riv";
-var o = e(509482),
-    n = e(799226);
-let l = {
+var m = t(509482),
+    o = t(799226);
+let g = {
         Preview: { reducedMotion: "boolean", iconColor: "color" },
         Friends: { reducedMotion: "boolean", iconColor: "color" },
         Globe: { reducedMotion: "boolean", iconColor: "color" },
@@ -21,7 +21,7 @@ let l = {
         Messages: { reducedMotion: "boolean", iconColor: "color" },
         Servers: { reducedMotion: "boolean", iconColor: "color" },
     },
-    s = {
+    n = {
         Preview: ["State Machine 1"],
         Friends: ["State Machine 1"],
         Globe: ["State Machine 1"],
@@ -37,20 +37,20 @@ let l = {
         Messages: ["State Machine 1"],
         Servers: ["State Machine 1"],
     };
-function b(r) {
-    let { artboard: a = "Preview", stateMachine: e, ...b } = r,
-        { status: c, buffer: m } = (0, n.CE)(t),
-        v = (0, n.m2)(t);
-    return c === n.BW.Loading
+function u(e) {
+    let { artboard: a = "Preview", stateMachine: t, ...u } = e,
+        { status: b, buffer: c } = (0, o.CE)(r),
+        I = (0, o.m2)(r);
+    return b === o.BW.Loading
         ? null
-        : (0, i.jsx)(o.w, {
-              ...(v ? { key: "override" } : {}),
-              buffer: m,
+        : (0, i.jsx)(m.w, {
+              ...(I ? { key: "override" } : {}),
+              buffer: c,
               artboard: a,
-              stateMachine: e,
-              artboardProperties: l,
-              artboardStateMachines: s,
-              ...b,
+              stateMachine: t,
+              artboardProperties: g,
+              artboardStateMachines: n,
+              ...u,
           });
 }
-b.riveSrc = t;
+u.riveSrc = r;

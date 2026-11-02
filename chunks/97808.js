@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(427262),
     I = n(652215),
     p = n(190460),
-    T = n(778712),
-    m = n(105292),
+    m = n(778712),
+    T = n(105292),
     g = n(185864);
 let S = { tension: 1200, friction: 70 };
 function N() {
@@ -24,7 +24,7 @@ function N() {
 }
 function C(e) {
     let { size: t, isMobile: n, isTyping: r, ...a } = e,
-        s = (0, T.Kj)(t),
+        s = (0, m.Kj)(t),
         l = s.status * (n && !r ? 1.5 : 1),
         o = s.status * (r ? 2.5 : 1),
         d = r ? (2.5 * s.status - s.status) / 2 : 0,
@@ -58,7 +58,7 @@ function R(e, t, n, r) {
 function L(e) {
     let { status: t, isMobile: n, isTyping: i, size: r } = e,
         a = n && !i && t === I.clD.ONLINE,
-        s = (0, T.Kj)(r);
+        s = (0, m.Kj)(r);
     return {
         ...(function (e, t) {
             let { size: n, status: i, stroke: r, offset: a } = e,
@@ -99,7 +99,7 @@ function y(e) {
             typingOffset: D,
             specs: v,
         } = e,
-        b = { width: (0, T.FT)(n), height: (0, T.FT)(n) },
+        b = { width: (0, m.FT)(n), height: (0, m.FT)(n) },
         P =
             null == S || N
                 ? void 0
@@ -107,7 +107,7 @@ function y(e) {
                       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                           i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                       return null != t
-                          ? m.intl.formatToPlainString(m.t["/6mw10"], {
+                          ? T.intl.formatToPlainString(T.t["/6mw10"], {
                                 label: e,
                                 status: (0, f.MU)(t, { isMobile: n, isVR: i }),
                             })
@@ -119,109 +119,109 @@ function y(e) {
             if (null == e) return null;
             if (i)
                 switch (t) {
-                    case T._3.SIZE_16:
+                    case m._3.SIZE_16:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_16;
-                    case T._3.SIZE_20:
+                    case m._3.SIZE_20:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_20;
-                    case T._3.SIZE_24:
+                    case m._3.SIZE_24:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_24;
-                    case T._3.SIZE_32:
+                    case m._3.SIZE_32:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_32;
-                    case T._3.SIZE_40:
+                    case m._3.SIZE_40:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_40;
-                    case T._3.SIZE_44:
+                    case m._3.SIZE_44:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_44;
-                    case T._3.SIZE_48:
+                    case m._3.SIZE_48:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_48;
-                    case T._3.SIZE_56:
+                    case m._3.SIZE_56:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_56;
-                    case T._3.SIZE_72:
+                    case m._3.SIZE_72:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_72;
-                    case T._3.SIZE_80:
+                    case m._3.SIZE_80:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_80;
-                    case T._3.SIZE_96:
+                    case m._3.SIZE_96:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_96;
-                    case T._3.SIZE_120:
+                    case m._3.SIZE_120:
                         return A.hW.AVATAR_DECORATION_STATUS_TYPING_120;
                 }
             if (e === I.clD.ONLINE && r)
                 switch (t) {
-                    case T._3.SIZE_16:
+                    case m._3.SIZE_16:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_16;
-                    case T._3.SIZE_20:
+                    case m._3.SIZE_20:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_20;
-                    case T._3.SIZE_24:
+                    case m._3.SIZE_24:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_24;
-                    case T._3.SIZE_32:
+                    case m._3.SIZE_32:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_32;
-                    case T._3.SIZE_40:
+                    case m._3.SIZE_40:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_40;
-                    case T._3.SIZE_44:
+                    case m._3.SIZE_44:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_44;
-                    case T._3.SIZE_48:
+                    case m._3.SIZE_48:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_48;
-                    case T._3.SIZE_56:
+                    case m._3.SIZE_56:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_56;
-                    case T._3.SIZE_72:
+                    case m._3.SIZE_72:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_72;
-                    case T._3.SIZE_80:
+                    case m._3.SIZE_80:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_80;
-                    case T._3.SIZE_96:
+                    case m._3.SIZE_96:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_96;
-                    case T._3.SIZE_120:
+                    case m._3.SIZE_120:
                         return A.hW.AVATAR_DECORATION_STATUS_VR_120;
                 }
             if (n && !r)
                 switch (t) {
-                    case T._3.SIZE_16:
+                    case m._3.SIZE_16:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_16;
-                    case T._3.SIZE_20:
+                    case m._3.SIZE_20:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_20;
-                    case T._3.SIZE_24:
+                    case m._3.SIZE_24:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_24;
-                    case T._3.SIZE_32:
+                    case m._3.SIZE_32:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_32;
-                    case T._3.SIZE_40:
+                    case m._3.SIZE_40:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_40;
-                    case T._3.SIZE_44:
+                    case m._3.SIZE_44:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_44;
-                    case T._3.SIZE_48:
+                    case m._3.SIZE_48:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_48;
-                    case T._3.SIZE_56:
+                    case m._3.SIZE_56:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_56;
-                    case T._3.SIZE_72:
+                    case m._3.SIZE_72:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_72;
-                    case T._3.SIZE_80:
+                    case m._3.SIZE_80:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_80;
-                    case T._3.SIZE_96:
+                    case m._3.SIZE_96:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_96;
-                    case T._3.SIZE_120:
+                    case m._3.SIZE_120:
                         return A.hW.AVATAR_DECORATION_STATUS_MOBILE_120;
                 }
             switch (t) {
-                case T._3.SIZE_16:
+                case m._3.SIZE_16:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_16;
-                case T._3.SIZE_20:
+                case m._3.SIZE_20:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_20;
-                case T._3.SIZE_24:
+                case m._3.SIZE_24:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_24;
-                case T._3.SIZE_32:
+                case m._3.SIZE_32:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_32;
-                case T._3.SIZE_40:
+                case m._3.SIZE_40:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_40;
-                case T._3.SIZE_44:
+                case m._3.SIZE_44:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_44;
-                case T._3.SIZE_48:
+                case m._3.SIZE_48:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_48;
-                case T._3.SIZE_56:
+                case m._3.SIZE_56:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_56;
-                case T._3.SIZE_72:
+                case m._3.SIZE_72:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_72;
-                case T._3.SIZE_80:
+                case m._3.SIZE_80:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_80;
-                case T._3.SIZE_96:
+                case m._3.SIZE_96:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_96;
-                case T._3.SIZE_120:
+                case m._3.SIZE_120:
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_120;
             }
             return null;
@@ -298,7 +298,7 @@ function v(e) {
             isTyping: c = !1,
             typingIndicatorRef: E,
             avatarContentRef: p,
-            voiceStatus: m,
+            voiceStatus: T,
             voiceDb: S,
             speakingStylesConfig: N,
             statusTooltip: C = !1,
@@ -310,7 +310,7 @@ function v(e) {
             ref: U,
         } = e,
         w = n !== I.clD.UNKNOWN ? n : null,
-        G = (0, T.Kj)(r),
+        G = (0, m.Kj)(r),
         x = null != w ? Math.ceil((2.5 * G.status - G.status) / 2) : 0,
         k = G.size + x,
         F = (0, _.S3)(w, a),
@@ -319,109 +319,109 @@ function v(e) {
             if (null == e) return A.hW.AVATAR_DEFAULT;
             if (i)
                 switch (t) {
-                    case T._3.SIZE_16:
+                    case m._3.SIZE_16:
                         return A.hW.AVATAR_STATUS_TYPING_16;
-                    case T._3.SIZE_20:
+                    case m._3.SIZE_20:
                         return A.hW.AVATAR_STATUS_TYPING_20;
-                    case T._3.SIZE_24:
+                    case m._3.SIZE_24:
                         return A.hW.AVATAR_STATUS_TYPING_24;
-                    case T._3.SIZE_32:
+                    case m._3.SIZE_32:
                         return A.hW.AVATAR_STATUS_TYPING_32;
-                    case T._3.SIZE_40:
+                    case m._3.SIZE_40:
                         return A.hW.AVATAR_STATUS_TYPING_40;
-                    case T._3.SIZE_44:
+                    case m._3.SIZE_44:
                         return A.hW.AVATAR_STATUS_TYPING_44;
-                    case T._3.SIZE_48:
+                    case m._3.SIZE_48:
                         return A.hW.AVATAR_STATUS_TYPING_48;
-                    case T._3.SIZE_56:
+                    case m._3.SIZE_56:
                         return A.hW.AVATAR_STATUS_TYPING_56;
-                    case T._3.SIZE_72:
+                    case m._3.SIZE_72:
                         return A.hW.AVATAR_STATUS_TYPING_72;
-                    case T._3.SIZE_80:
+                    case m._3.SIZE_80:
                         return A.hW.AVATAR_STATUS_TYPING_80;
-                    case T._3.SIZE_96:
+                    case m._3.SIZE_96:
                         return A.hW.AVATAR_STATUS_TYPING_96;
-                    case T._3.SIZE_120:
+                    case m._3.SIZE_120:
                         return A.hW.AVATAR_STATUS_TYPING_120;
                 }
             if (e === I.clD.ONLINE && r)
                 switch (t) {
-                    case T._3.SIZE_16:
+                    case m._3.SIZE_16:
                         return A.hW.AVATAR_STATUS_VR_16;
-                    case T._3.SIZE_20:
+                    case m._3.SIZE_20:
                         return A.hW.AVATAR_STATUS_VR_20;
-                    case T._3.SIZE_24:
+                    case m._3.SIZE_24:
                         return A.hW.AVATAR_STATUS_VR_24;
-                    case T._3.SIZE_32:
+                    case m._3.SIZE_32:
                         return A.hW.AVATAR_STATUS_VR_32;
-                    case T._3.SIZE_40:
+                    case m._3.SIZE_40:
                         return A.hW.AVATAR_STATUS_VR_40;
-                    case T._3.SIZE_44:
+                    case m._3.SIZE_44:
                         return A.hW.AVATAR_STATUS_VR_44;
-                    case T._3.SIZE_48:
+                    case m._3.SIZE_48:
                         return A.hW.AVATAR_STATUS_VR_48;
-                    case T._3.SIZE_56:
+                    case m._3.SIZE_56:
                         return A.hW.AVATAR_STATUS_VR_56;
-                    case T._3.SIZE_72:
+                    case m._3.SIZE_72:
                         return A.hW.AVATAR_STATUS_VR_72;
-                    case T._3.SIZE_80:
+                    case m._3.SIZE_80:
                         return A.hW.AVATAR_STATUS_VR_80;
-                    case T._3.SIZE_96:
+                    case m._3.SIZE_96:
                         return A.hW.AVATAR_STATUS_VR_96;
-                    case T._3.SIZE_120:
+                    case m._3.SIZE_120:
                         return A.hW.AVATAR_STATUS_VR_120;
                 }
             if (e === I.clD.ONLINE && n && !r)
                 switch (t) {
-                    case T._3.SIZE_16:
+                    case m._3.SIZE_16:
                         return A.hW.AVATAR_STATUS_MOBILE_16;
-                    case T._3.SIZE_20:
+                    case m._3.SIZE_20:
                         return A.hW.AVATAR_STATUS_MOBILE_20;
-                    case T._3.SIZE_24:
+                    case m._3.SIZE_24:
                         return A.hW.AVATAR_STATUS_MOBILE_24;
-                    case T._3.SIZE_32:
+                    case m._3.SIZE_32:
                         return A.hW.AVATAR_STATUS_MOBILE_32;
-                    case T._3.SIZE_40:
+                    case m._3.SIZE_40:
                         return A.hW.AVATAR_STATUS_MOBILE_40;
-                    case T._3.SIZE_44:
+                    case m._3.SIZE_44:
                         return A.hW.AVATAR_STATUS_MOBILE_44;
-                    case T._3.SIZE_48:
+                    case m._3.SIZE_48:
                         return A.hW.AVATAR_STATUS_MOBILE_48;
-                    case T._3.SIZE_56:
+                    case m._3.SIZE_56:
                         return A.hW.AVATAR_STATUS_MOBILE_56;
-                    case T._3.SIZE_72:
+                    case m._3.SIZE_72:
                         return A.hW.AVATAR_STATUS_MOBILE_72;
-                    case T._3.SIZE_80:
+                    case m._3.SIZE_80:
                         return A.hW.AVATAR_STATUS_MOBILE_80;
-                    case T._3.SIZE_96:
+                    case m._3.SIZE_96:
                         return A.hW.AVATAR_STATUS_MOBILE_96;
-                    case T._3.SIZE_120:
+                    case m._3.SIZE_120:
                         return A.hW.AVATAR_STATUS_MOBILE_120;
                 }
             switch (t) {
-                case T._3.SIZE_16:
+                case m._3.SIZE_16:
                     return A.hW.AVATAR_STATUS_ROUND_16;
-                case T._3.SIZE_20:
+                case m._3.SIZE_20:
                     return A.hW.AVATAR_STATUS_ROUND_20;
-                case T._3.SIZE_24:
+                case m._3.SIZE_24:
                     return A.hW.AVATAR_STATUS_ROUND_24;
-                case T._3.SIZE_32:
+                case m._3.SIZE_32:
                     return A.hW.AVATAR_STATUS_ROUND_32;
-                case T._3.SIZE_40:
+                case m._3.SIZE_40:
                     return A.hW.AVATAR_STATUS_ROUND_40;
-                case T._3.SIZE_44:
+                case m._3.SIZE_44:
                     return A.hW.AVATAR_STATUS_ROUND_44;
-                case T._3.SIZE_48:
+                case m._3.SIZE_48:
                     return A.hW.AVATAR_STATUS_ROUND_48;
-                case T._3.SIZE_56:
+                case m._3.SIZE_56:
                     return A.hW.AVATAR_STATUS_ROUND_56;
-                case T._3.SIZE_72:
+                case m._3.SIZE_72:
                     return A.hW.AVATAR_STATUS_ROUND_72;
-                case T._3.SIZE_80:
+                case m._3.SIZE_80:
                     return A.hW.AVATAR_STATUS_ROUND_80;
-                case T._3.SIZE_96:
+                case m._3.SIZE_96:
                     return A.hW.AVATAR_STATUS_ROUND_96;
-                case T._3.SIZE_120:
+                case m._3.SIZE_120:
                     return A.hW.AVATAR_STATUS_ROUND_120;
             }
             throw Error(`getMaskId(): Unsupported type, size: ${t}, status: ${e}, isMobile: ${n ? "true" : "false"}`);
@@ -454,7 +454,7 @@ function v(e) {
                         children: (0, i.jsx)(D, {
                             ref: p,
                             src: t,
-                            voiceStatus: m,
+                            voiceStatus: T,
                             voiceDb: S,
                             speakingStylesConfig: N,
                             className: M,
@@ -505,7 +505,7 @@ function b(e) {
             voiceStatus: h,
             voiceDb: I,
             speakingStylesConfig: p,
-            size: m,
+            size: T,
             src: O,
             status: v,
             statusColor: b,
@@ -520,8 +520,8 @@ function b(e) {
         F = (0, _.S3)(v, b),
         B = r.useId(),
         V = r.useId(),
-        [H] = r.useState(() => ({ fill: a, ...L({ size: m, status: n, isMobile: t, isTyping: !1 }) })),
-        j = r.useMemo(() => ({ fill: F, ...L({ size: m, status: v, isMobile: o, isTyping: E }) }), [F, m, v, o, E]),
+        [H] = r.useState(() => ({ fill: a, ...L({ size: T, status: n, isMobile: t, isTyping: !1 }) })),
+        j = r.useMemo(() => ({ fill: F, ...L({ size: T, status: v, isMobile: o, isTyping: E }) }), [F, T, v, o, E]),
         {
             avatarCutoutX: W,
             avatarCutoutY: Y,
@@ -531,8 +531,8 @@ function b(e) {
             fill: X,
             ...q
         } = (0, c.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
-        Z = (0, T.FT)(m),
-        Q = (0, T.Kj)(m),
+        Z = (0, m.FT)(T),
+        Q = (0, m.Kj)(T),
         J = 2.5 * Q.status,
         ee = 1.5 * Q.status,
         et = null != v ? (2.5 * Q.status - Q.status) / 2 : 0,
@@ -617,7 +617,7 @@ function b(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(C, { size: m, isMobile: o, isTyping: E, className: g.Hs }),
+                            (0, i.jsx)(C, { size: T, isMobile: o, isTyping: E, className: g.Hs }),
                         ],
                     }),
                 }),

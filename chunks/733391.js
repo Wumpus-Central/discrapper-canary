@@ -3,11 +3,11 @@ n.d(t, {
     JX: () => b,
     Kh: () => U,
     Pp: () => S,
-    Rw: () => m,
+    Rw: () => T,
     SP: () => C,
     Xw: () => w,
     ZR: () => M,
-    ap: () => T,
+    ap: () => m,
     d8: () => P,
     iR: () => G,
     qf: () => N,
@@ -64,11 +64,11 @@ async function p(e, t) {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE", guildOrApplicationId: e, eager: i });
         }
 }
-function T(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return p({ type: "application", applicationId: e }, _.Rsh.SOCIAL_LAYER_STOREFRONT_BY_APPLICATION_ID(e), t);
 }
-function m(e) {
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return p({ type: "guild", guildId: e }, _.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT(e), t);
 }

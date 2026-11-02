@@ -21,8 +21,8 @@ let u = function (e) {
             overlay: f,
             "aria-label": I,
             "aria-expanded": p,
-            "aria-haspopup": T,
-            "data-jump-section": m,
+            "aria-haspopup": m,
+            "data-jump-section": T,
             ref: g,
         } = e,
         S = (0, i.jsx)(t, { size: "sm", color: E ?? "currentColor", colorClass: A });
@@ -37,9 +37,9 @@ let u = function (e) {
             className: a()(c.vk, { [c.wH]: r, [c.r9]: _ }),
             role: "button",
             "aria-label": null != I ? I : h,
-            "aria-haspopup": T,
+            "aria-haspopup": m,
             "aria-expanded": p,
-            "data-jump-section": m,
+            "data-jump-section": T,
             "aria-disabled": _,
             children: [
                 u

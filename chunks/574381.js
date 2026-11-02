@@ -3,7 +3,7 @@ n.d(t, {
     Av: () => s,
     Ct: () => A,
     HZ: () => _,
-    Ls: () => m,
+    Ls: () => T,
     R0: () => C,
     Sn: () => h,
     cX: () => d,
@@ -14,7 +14,7 @@ n.d(t, {
     q4: () => p,
     r_: () => N,
     t1: () => S,
-    tn: () => T,
+    tn: () => m,
     uF: () => o,
     un: () => I,
     uo: () => g,
@@ -61,10 +61,10 @@ function I() {
 function p() {
     return navigator.userAgent?.match(/OculusBrowser/i) != null;
 }
-function T() {
+function m() {
     return p();
 }
-function m() {
+function T() {
     return u() || p() || s;
 }
 function g() {

@@ -15,8 +15,8 @@ let d = new Map(),
     f = null,
     I = null,
     p = {},
-    T = new Map(),
-    m = !1,
+    m = new Map(),
+    T = !1,
     g = !1,
     S = !1,
     N = {},
@@ -38,7 +38,7 @@ function L(e, t) {
 }
 function y() {
     let e = l.Ay.getVoiceChannelId();
-    null != e && (T.delete(e), (p[e] = p[e] ?? !0));
+    null != e && (m.delete(e), (p[e] = p[e] ?? !0));
 }
 class D extends i.Ay.PersistedStore {
     static displayName = "GuildRoomStore";
@@ -46,10 +46,10 @@ class D extends i.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(a.default, s.A, l.Ay),
             this.syncWith([l.Ay], y),
-            (m = (g = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1)));
+            (T = (g = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1)));
     }
     getState() {
-        return { videoOverlayVisibility: m, rememberVideoOverlayVisibility: g };
+        return { videoOverlayVisibility: T, rememberVideoOverlayVisibility: g };
     }
     getRoom(e) {
         return E[e] ?? c;
@@ -67,7 +67,7 @@ class D extends i.Ay.PersistedStore {
         return I;
     }
     getMediaSessionId(e) {
-        return T.get(e);
+        return m.get(e);
     }
     isVisible(e) {
         return p[e] ?? !0;
@@ -82,7 +82,7 @@ class D extends i.Ay.PersistedStore {
         return this.getRoomObjects(e).get(o.N.NOTE) ?? u;
     }
     getVideoOverlayVisibility() {
-        return m;
+        return T;
     }
     getRememberVideoOverlayVisibility() {
         return g;
@@ -112,7 +112,7 @@ let v = new D(r.h, {
         (i.delete(t),
             (A[n] = i),
             S && t === a.default.getId() && ((p[n] = !0), (S = !1)),
-            t === a.default.getId() && (delete N[n], delete C[n], g || (m = !1)));
+            t === a.default.getId() && (delete N[n], delete C[n], g || (T = !1)));
     },
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
@@ -172,7 +172,7 @@ let v = new D(r.h, {
     MEDIA_SESSION_JOINED: function () {
         let e = s.A.getChannelId(),
             t = s.A.getMediaSessionId();
-        null != e && null != t && T.set(e, t);
+        null != e && null != t && m.set(e, t);
     },
     GUILD_ROOM_PENDING_NOTE_START: function (e) {
         let { roomId: t } = e;
@@ -202,7 +202,7 @@ let v = new D(r.h, {
     },
     GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY: function (e) {
         let { value: t } = e;
-        m = t;
+        T = t;
     },
     GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function (e) {
         let { rememberVideoOverlayVisibility: t } = e;

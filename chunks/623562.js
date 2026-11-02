@@ -1,9 +1,9 @@
 n.d(t, {
     xI: () => g,
-    ik: () => T,
+    ik: () => m,
     Rl: () => C,
     WF: () => p,
-    Eg: () => m,
+    Eg: () => T,
     P7: () => N,
     qC: () => R,
     p7: () => L,
@@ -91,14 +91,14 @@ async function p(e) {
             throw Error("Failed to fetch conversations");
     }
 }
-async function T(e, t) {
+async function m(e, t) {
     if (!c.A.touchConversation(t))
         try {
             let n = await r.Bo.get({ url: I.Rsh.CHANNEL_CONVERSATION(e, t), oldFormErrors: !0, rejectWithError: !0 });
             a.h.dispatch({ type: "CONVERSATION_FETCH_SUCCESS", channelId: e, rawConversation: n.body });
         } catch {}
 }
-function m() {
+function T() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
 function g(e, t, n) {
@@ -114,7 +114,7 @@ function g(e, t, n) {
     null != l && s.A.jumpToMessage({ channelId: e, messageId: l, flash: !1 });
 }
 async function S(e, t, n) {
-    ("preview" === n && (await T(e, t)), R(e, t, { includeReactions: !0, includeMessageReferences: !0, cacheType: n }));
+    ("preview" === n && (await m(e, t)), R(e, t, { includeReactions: !0, includeMessageReferences: !0, cacheType: n }));
 }
 function N(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });

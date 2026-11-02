@@ -15,8 +15,8 @@ function h(e) {
     let { applicationId: t, transitionState: n, onClose: h } = e,
         [f, I] = r.useState(!1),
         [p] = (0, d.A)([t]),
-        T = p?.name ?? "This Activity";
-    async function m() {
+        m = p?.name ?? "This Activity";
+    async function T() {
         let e = "temporary";
         (f && ((e = "permanent"), o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(_.HAw.MODAL_DISMISSED, { type: A, dismiss_type: e }),
@@ -25,7 +25,7 @@ function h(e) {
     async function g() {
         (c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
             u.Ay.setEnableHardwareAcceleration(!0),
-            await m());
+            await T());
     }
     return (
         r.useEffect(() => {
@@ -34,7 +34,7 @@ function h(e) {
         (0, i.jsx)(a.a, {
             size: "md",
             transitionState: n,
-            onClose: m,
+            onClose: T,
             "aria-label": E.intl.string(E.t.NQkK4l),
             title: E.intl.string(E.t.NQkK4l),
             actionBarInput: (0, i.jsx)(s.S, {
@@ -44,12 +44,12 @@ function h(e) {
                 labelType: "secondary",
             }),
             actions: [
-                { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: m },
+                { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: T },
                 { variant: "primary", text: E.intl.string(E.t["/wlDqi"]), onClick: g },
             ],
             children: (0, i.jsx)(l.E, {
                 variant: "text-md/normal",
-                children: E.intl.format(E.t.B9eiaK, { applicationName: T }),
+                children: E.intl.format(E.t.B9eiaK, { applicationName: m }),
             }),
         })
     );

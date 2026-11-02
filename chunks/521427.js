@@ -1,4 +1,4 @@
-n.d(t, { Fy: () => f, GP: () => I, Zv: () => g, bW: () => p, kn: () => m });
+n.d(t, { Fy: () => f, GP: () => I, Zv: () => g, bW: () => p, kn: () => T });
 var i = n(310784),
     r = n.n(i),
     a = n(317097),
@@ -34,7 +34,7 @@ function p(e, t) {
         { enabled: i } = _.A.useExperiment({ guildId: e ?? void 0, location: t });
     return null != n && n.features.has(h.GuildFeatures.VERIFIED) && i;
 }
-function T(e) {
+function m(e) {
     return (
         null != e &&
         !e.isPrivate() &&
@@ -43,16 +43,16 @@ function T(e) {
         e.type !== h.rbe.GUILD_STAGE_VOICE
     );
 }
-function m(e, t, n) {
+function T(e, t, n) {
     var i;
     let r, a;
     return (
         (i = t.guild_id ?? void 0),
         (r = p(i, n)),
         (a = (0, s.bG)([c.A], () => c.A.can(h.xBc.MANAGE_OFFICIAL_MESSAGES, t), [t])),
-        !(!r || !a || (0, E.A)(e)) && (e.hasFlag(h.pr7.IS_GUILD_OFFICIAL) ? (0, o.jr)(t) : T(t))
+        !(!r || !a || (0, E.A)(e)) && (e.hasFlag(h.pr7.IS_GUILD_OFFICIAL) ? (0, o.jr)(t) : m(t))
     );
 }
 function g(e, t, n) {
-    return I(e, n) && c.A.can(h.xBc.MANAGE_OFFICIAL_MESSAGES, t) && T(t);
+    return I(e, n) && c.A.can(h.xBc.MANAGE_OFFICIAL_MESSAGES, t) && m(t);
 }

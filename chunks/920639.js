@@ -1,10 +1,10 @@
 (n.d(t, {
     E2: () => g,
-    EB: () => m,
+    EB: () => T,
     JF: () => O,
     Ql: () => h,
     U8: () => C,
-    Yv: () => T,
+    Yv: () => m,
     e6: () => S,
     iY: () => N,
     n0: () => f,
@@ -80,7 +80,7 @@ function p(e) {
         r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_OPENED, { ...E(n), location: t, ...e });
     });
 }
-function T(e) {
+function m(e) {
     let { actualSeatPosition: t, targetSeatPosition: n, actualSeatId: i, targetSeatId: a, ...s } = e;
     A(s.channelId, (e) => {
         var l;
@@ -107,7 +107,7 @@ function T(e) {
         });
     });
 }
-function m(e) {
+function T(e) {
     let { interactionType: t, ...n } = e;
     A(n.channelId, (e) => {
         r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_INTERACTED, { ...E(n), interaction_type: t, ...e });

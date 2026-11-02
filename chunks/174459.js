@@ -5,7 +5,7 @@
         addExtraAnalyticsDecorator: () => O,
         stopRecordingAnalyticsEvents: () => x,
         isGameApplicationType: () => V,
-        AnalyticsContext: () => m,
+        AnalyticsContext: () => T,
         getNewAnalyticsLoadId: () => j,
         launchSignature: () => N,
         default: () => W,
@@ -49,8 +49,8 @@ var E = n(111162),
     f = n(652215),
     I = n(53298),
     p = n(705751),
-    T = n(105292);
-let m = r.createContext({ location: {} }),
+    m = n(105292);
+let T = r.createContext({ location: {} }),
     g = {},
     S = performance.now(),
     N = (0, o.xd)() ? (0, o.xy)((0, l.V)()) : null;
@@ -211,7 +211,7 @@ function P(e) {
         (t.client_performance_memory = A.A.getCurrentMemoryUsageKB()),
         (t.cpu_core_count = A.A.getCPUCoreCount()),
         (t.accessibility_features = y()),
-        (t.rendered_locale = T.intl.currentLocale),
+        (t.rendered_locale = m.intl.currentLocale),
         (t.uptime_app = Math.floor((performance.now() - S) / 1e3)));
     let n = A.A.getProcessUptime();
     null != n && (t.uptime_process_renderer = Math.floor(n));

@@ -17,8 +17,8 @@ var _ = n(15552),
 let p = function () {
     return !0;
 };
-var T = n(252919),
-    m = n(174459),
+var m = n(252919),
+    T = n(174459),
     g = n(612181),
     S = n(38405),
     N = n(115036),
@@ -71,7 +71,7 @@ function J() {
 function ee(e) {
     let { withGuildExperiments: t } = e,
         n = {},
-        i = m.default.getSuperPropertiesBase64();
+        i = T.default.getSuperPropertiesBase64();
     return (
         null != i && (n["X-Super-Properties"] = i),
         null != U && (n["X-Fingerprint"] = U),
@@ -268,7 +268,7 @@ let ec = new ed(
                 apexExperiments: l,
             } = e;
             (Z("handleConnectionOpen called"),
-                S.A.setUser(t.id, t.username, t.email ?? void 0, (0, T.A)(t)),
+                S.A.setUser(t.id, t.username, t.email ?? void 0, (0, m.A)(t)),
                 (b = n),
                 (P = i),
                 (M = s),
@@ -280,7 +280,7 @@ let ec = new ed(
         },
         OVERLAY_INITIALIZE: function (e) {
             let { user: t, sessionId: n, analyticsToken: i, token: r } = e;
-            (S.A.setUser(t.id, t.username, t.email ?? void 0, (0, T.A)(t)),
+            (S.A.setUser(t.id, t.username, t.email ?? void 0, (0, m.A)(t)),
                 (b = n),
                 (x = i),
                 en(r, t.id),
@@ -295,7 +295,7 @@ let ec = new ed(
             let i = n(192308).hasModalOpen;
             if (4004 === t) {
                 if (F || i(O.jc) || i(O.Uy)) return void el();
-                (m.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(D) }),
+                (T.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(D) }),
                     eo(),
                     setImmediate(() => (0, I.pX)(f.BVt.DEFAULT_LOGGED_OUT)));
             }
@@ -356,7 +356,7 @@ let ec = new ed(
             let t = e.fingerprint;
             null == U
                 ? null != t
-                    ? (m.default.track(f.HAw.USER_FINGERPRINT_CHANGED, {
+                    ? (T.default.track(f.HAw.USER_FINGERPRINT_CHANGED, {
                           old_fingerprint: null != w ? (0, s.d)(w) : null,
                           new_fingerprint: (0, s.d)(t),
                       }),
@@ -366,7 +366,7 @@ let ec = new ed(
                     : J()
                 : null != t &&
                   U !== t &&
-                  m.default.track(f.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
+                  T.default.track(f.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
                       fingerprint: (0, s.d)(U),
                       dropped_fingerprint: (0, s.d)(t),
                   });

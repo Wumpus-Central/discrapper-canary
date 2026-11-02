@@ -16,8 +16,8 @@ var r = n(192308),
     f = n(734057),
     I = n(498642),
     p = n(873985),
-    T = n(309010),
-    m = n(728557),
+    m = n(309010),
+    T = n(728557),
     g = n(287809),
     S = n(927813),
     N = n(652896),
@@ -43,7 +43,7 @@ function G(e) {
     (y[e]?.stop(), delete y[e]);
 }
 function x(e, t) {
-    if (T.Ay.getVoiceChannelId() !== e) return !1;
+    if (m.Ay.getVoiceChannelId() !== e) return !1;
     let n = f.A.getChannel(e);
     if (null == n || (!n.isDM() && !n.isGuildStageVoice()) || null != a.A.getActiveStreamForUser(t, n.getGuildId()))
         return !1;
@@ -54,10 +54,10 @@ function x(e, t) {
 }
 function k(e, t) {
     let n = t ?? p.A.getPreferredRegion();
-    null != n && n !== p.A.getRegion(m.A.getHostname(e)) && (0, u.dA)(e, n);
+    null != n && n !== p.A.getRegion(T.A.getHostname(e)) && (0, u.dA)(e, n);
 }
 function F(e, t) {
-    if (m.A.getAllActiveStreamKeys().includes(e)) return;
+    if (T.A.getAllActiveStreamKeys().includes(e)) return;
     let n = y[e] ?? new d.Ep();
     ((y[e] = n),
         n.start(t ? b : v, () => {
@@ -97,7 +97,7 @@ class B extends _.A {
         (G(n),
             U(),
             i ||
-                (null != (t = m.A.getRTCConnection(n)?.getMediaEngineConnectionId()) &&
+                (null != (t = T.A.getRTCConnection(n)?.getMediaEngineConnectionId()) &&
                     c.h.dispatch({
                         type: "MEDIA_ENGINE_CONNECTION_USER_STATS_RESET",
                         mediaEngineConnectionId: t,

@@ -30,11 +30,11 @@ let u = Array.from(d.qW)
     f = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
     I = /^\/users\/(\d+)\/?$/,
     p = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-    T = RegExp(
+    m = RegExp(
         `^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|${o.ME})(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?`,
     ),
-    m = RegExp("[\\w%=&+-]+"),
-    g = RegExp(`${T.source}(?:\\?(${m.source}))?`),
+    T = RegExp("[\\w%=&+-]+"),
+    g = RegExp(`${m.source}(?:\\?(${T.source}))?`),
     S = RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
     );

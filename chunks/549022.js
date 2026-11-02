@@ -1,4 +1,4 @@
-n.d(t, { $Y: () => A, Cs: () => h, DY: () => T, WA: () => u, a0: () => p, jG: () => E, oE: () => I, os: () => _ });
+n.d(t, { $Y: () => A, Cs: () => h, DY: () => m, WA: () => u, a0: () => p, jG: () => E, oE: () => I, os: () => _ });
 var i = n(196765),
     r = n(537812),
     a = n(932607),
@@ -49,6 +49,6 @@ function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return !!(!t && f()) || (c.getState().userDismissTimestamps[e] ?? 0) > Date.now() - o;
 }
-function T(e) {
+function m(e) {
     return (c.getState().channelDismissTimestamps[e] ?? 0) > Date.now() - l;
 }

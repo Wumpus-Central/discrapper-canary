@@ -6461,8 +6461,8 @@ let { Themes: c } = d.zv,
         },
     },
     { Themes: p } = d.zv,
-    { SemanticColors: T } = { SemanticColors: E },
-    { RawColors: m } = {
+    { SemanticColors: m } = { SemanticColors: E },
+    { RawColors: T } = {
         RawColors: {
             APPLICATION_SUBSCRIPTION_END: "#0177a4",
             APPLICATION_SUBSCRIPTION_START: "#3442d9",
@@ -9741,11 +9741,11 @@ let { Themes: c } = d.zv,
             PX_192: 192,
         },
     },
-    D = o()(m, (e) => r()(e)),
+    D = o()(T, (e) => r()(e)),
     v = {
         themes: d.NJ,
         modules: O,
-        colors: o()(T, (e, t) => ({
+        colors: o()(m, (e, t) => ({
             css: U(t),
             resolve(n) {
                 let i = n.theme,
@@ -9768,7 +9768,7 @@ let { Themes: c } = d.zv,
                 }
             },
         })),
-        unsafe_rawColors: o()(m, (e, t) => {
+        unsafe_rawColors: o()(T, (e, t) => {
             let n = D[t];
             return { css: U(t), resolve: (e) => b(n, e?.saturation ?? 1) };
         }),

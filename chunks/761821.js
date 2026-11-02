@@ -3,10 +3,10 @@
     Gd: () => A,
     Mr: () => S,
     RK: () => I,
-    VB: () => m,
+    VB: () => T,
     Y5: () => _,
     aw: () => h,
-    gc: () => T,
+    gc: () => m,
     ii: () => E,
     ob: () => f,
     vI: () => g,
@@ -48,11 +48,11 @@ function I(e, t, n) {
 function p(e, t, n) {
     return ((null == t || "null" === t) && (t = c.D0I), t in e.guilds || (e.guilds[t] = s.nx.create()), n(e.guilds[t]));
 }
-function T(e, t, n, i) {
+function m(e, t, n, i) {
     var r;
-    return ((r = (e) => m(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r));
+    return ((r = (e) => T(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r));
 }
-function m(e, t, n) {
+function T(e, t, n) {
     return (t in e.channels || (e.channels[t] = s.Ju.create()), n(e.channels[t]));
 }
 function g(e, t) {

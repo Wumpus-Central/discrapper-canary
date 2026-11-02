@@ -33,7 +33,7 @@ let h = new A(r.h, {
 var f = n(652215),
     I = n(818348);
 let p = 5 * o.A.Millis.MINUTE;
-async function T() {
+async function m() {
     try {
         await i.Bo.post({ url: f.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
     } catch (e) {
@@ -42,7 +42,7 @@ async function T() {
     }
     r.h.dispatch({ type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: Date.now() });
 }
-function m(e) {
+function T(e) {
     return [I.cl.ONLINE, I.cl.STREAMING].includes(e);
 }
 class g extends a.A {
@@ -62,9 +62,9 @@ class g extends a.A {
         s.hV.getSetting() &&
             h.isCooldownElapsed() &&
             null == this.timerId &&
-            m(l.A.getStatus()) &&
+            T(l.A.getStatus()) &&
             (this.timerId = setTimeout(() => {
-                ((this.timerId = null), !m(l.A.getStatus()) || (h.isCooldownElapsed() && T()));
+                ((this.timerId = null), !T(l.A.getStatus()) || (h.isCooldownElapsed() && m()));
             }, p));
     };
     clear = () => {

@@ -6,10 +6,10 @@
         GameProfileTypes: () => h,
         generateViewId: () => f,
         getGuildIdAndVerifiedFromInvite: () => S,
-        trackGameProfileAction: () => T,
+        trackGameProfileAction: () => m,
         trackGameProfileClose: () => p,
         trackGameProfileEmbedAction: () => g,
-        trackGameProfileFeedback: () => m,
+        trackGameProfileFeedback: () => T,
         trackGameProfileOpen: () => I,
     }));
 var i,
@@ -154,7 +154,7 @@ function p(e) {
         guild_id: l,
     });
 }
-function T(e) {
+function m(e) {
     let {
         gameName: t,
         gameId: n,
@@ -178,7 +178,7 @@ function T(e) {
         source: u,
     });
 }
-function m(e) {
+function T(e) {
     let {
         viewId: t,
         applicationId: n,

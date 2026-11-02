@@ -30,8 +30,8 @@ var i = n(435558),
     f = n(309010),
     I = n(967198),
     p = n(935208),
-    T = n(181079),
-    m = n(266599),
+    m = n(181079),
+    T = n(266599),
     g = n(796637),
     S = n(93055),
     N = n(5180),
@@ -143,9 +143,9 @@ function H(e, t) {
 }
 async function j(e, t, n) {
     let { silent: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        r = e.filter((e) => !T.A.isFavorite(e));
+        r = e.filter((e) => !m.A.isFavorite(e));
     if (0 === r.length) return;
-    let a = !T.A.favoriteGuildEnabled;
+    let a = !m.A.favoriteGuildEnabled;
     (await B({
         update: (e) => {
             let o = !1,
@@ -177,7 +177,7 @@ async function j(e, t, n) {
             o && a && !i && ((e.guildVisible = l._t.create({ value: !0 })), (0, C.uS)("auto", !0));
         },
     }),
-        !i && r.some((e) => T.A.isFavorite(e)) && (0, R.P0)({ text: y.intl.string(y.t["4tSWQg"]), icon: L.StarIcon }));
+        !i && r.some((e) => m.A.isFavorite(e)) && (0, R.P0)({ text: y.intl.string(y.t["4tSWQg"]), icon: L.StarIcon }));
 }
 async function W(e) {
     let { channelIds: t, parentId: n, source: i } = e;
@@ -185,7 +185,7 @@ async function W(e) {
 }
 function Y(e) {
     let { trackAnalytics: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = T.A.getFavorite(e);
+        n = m.A.getFavorite(e);
     null != n &&
         (M(new Set([e])),
         B({
@@ -203,7 +203,7 @@ function Y(e) {
         }));
 }
 function K(e, t) {
-    T.A.isFavorite(e) &&
+    m.A.isFavorite(e) &&
         B({
             update: (n) => {
                 n.favoriteChannels[e].nickname = t ?? "";
@@ -214,7 +214,7 @@ async function $(e, t) {
     let n = new Set(e);
     await B({
         update: (e) => {
-            let i = (0, m.wm)(t).filter((t) => n.has(t.id) && null != e.favoriteChannels[t.id]);
+            let i = (0, T.wm)(t).filter((t) => n.has(t.id) && null != e.favoriteChannels[t.id]);
             if (0 === i.length) return !1;
             for (let t of (M(new Set(i.map((e) => e.id))), i))
                 (delete e.favoriteChannels[t.id], (0, C.TX)(t.type, G(e.favoriteChannels)));
@@ -233,7 +233,7 @@ async function z(e) {
                 V(e.favoriteChannels, t, n);
             },
         }),
-        null != T.A.getFavorite(n) ? n : null
+        null != m.A.getFavorite(n) ? n : null
     );
 }
 async function X(e) {
@@ -244,7 +244,7 @@ function q(e) {
     Y(e);
 }
 async function Z(e) {
-    if (!T.A.autoAddJoinedThreads || T.A.isFavorite(e)) return;
+    if (!m.A.autoAddJoinedThreads || m.A.isFavorite(e)) return;
     let t = A.A.getChannel(e);
     null == t ||
         !t.isThread() ||

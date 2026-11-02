@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(717117),
     I = n(534409),
     p = n(711014),
-    T = n(240248),
-    m = n(263715),
+    m = n(240248),
+    T = n(263715),
     g = n(941971),
     S = n(17928),
     N = n(695366),
@@ -83,8 +83,8 @@ function x(e) {
             onHoverChange: h,
             onKeyDown: f,
             treeItemProps: { onFocus: I, ...p },
-            "aria-setsize": T,
-            "aria-posinset": m,
+            "aria-setsize": m,
+            "aria-posinset": T,
         } = e,
         [g, S] = r.useState(!1),
         N = r.useCallback(() => {
@@ -113,8 +113,8 @@ function x(e) {
             focusProps: { enabled: !1 },
             ...p,
             role: "treeitem",
-            "aria-setsize": T,
-            "aria-posinset": m,
+            "aria-setsize": m,
+            "aria-posinset": T,
             "aria-expanded": n,
             "aria-owns": c,
             children: [
@@ -145,7 +145,7 @@ var k = n(531053),
     V = n(550591),
     H = n(114329),
     j = n(937067);
-let W = (0, T.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
+let W = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
     Y = (0, f.P)(E.B),
     K = r.memo(function (e) {
         var t;
@@ -155,7 +155,7 @@ let W = (0, T.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             {
                 folderNode: E,
                 setNodeRef: f,
-                selected: T,
+                selected: m,
                 expanded: S,
                 mediaState: N,
                 mentionCount: C = 0,
@@ -184,8 +184,8 @@ let W = (0, T.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             D && et(!1);
         }, [D]);
         let [{ dragging: es }, el] = (0, l.i)({
-                type: m.PJ.FOLDER,
-                item: () => (v?.(), { type: m.PJ.FOLDER, nodeId: E.id }),
+                type: T.PJ.FOLDER,
+                item: () => (v?.(), { type: T.PJ.FOLDER, nodeId: E.id }),
                 end() {
                     (b?.(), (0, h.um)(p.Ay.getCompatibleGuildFolders()));
                 },
@@ -221,13 +221,13 @@ let W = (0, T.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                         overlay: !0,
                         disabled: es || (S && null == w),
                         hovered: ee,
-                        selected: T,
+                        selected: m,
                         unread: R,
                     }),
                     (0, i.jsx)(V.A, {
                         text: ec,
                         disabled: D,
-                        selected: T,
+                        selected: m,
                         disableWrapper: !0,
                         children: (0, i.jsx)("div", {
                             ref: y

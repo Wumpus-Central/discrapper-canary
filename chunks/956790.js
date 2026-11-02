@@ -147,13 +147,13 @@ var A = n(699426),
     f = n(155819);
 let I = { top: 80, bottom: 132, left: 80, right: 80 },
     p = { [_.CUs.TOP_RIGHT]: f.En, [_.CUs.TOP_LEFT]: f.rG, [_.CUs.BOTTOM_LEFT]: f.j$, [_.CUs.BOTTOM_RIGHT]: f.Ue },
-    T = {
+    m = {
         [_.CUs.TOP_RIGHT]: o.R.HORIZONTAL_LEFT,
         [_.CUs.TOP_LEFT]: o.R.HORIZONTAL_RIGHT,
         [_.CUs.BOTTOM_LEFT]: o.R.HORIZONTAL_RIGHT,
         [_.CUs.BOTTOM_RIGHT]: o.R.HORIZONTAL_LEFT,
     };
-function m(e, t) {
+function T(e, t) {
     let n = 40 * Math.round(e / 40);
     return (0, l.clamp)(n, t.minWidth, t.maxWidth);
 }
@@ -165,7 +165,7 @@ function g(e) {
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: a,
-            orientation: T[d],
+            orientation: m[d],
             usePointerEvents: !0,
         }),
         u = r.useCallback(
@@ -269,7 +269,7 @@ class S extends r.PureComponent {
     ensureWidth = () => {
         let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: i, resizeConfig: r } = this.props;
         if (null == r) return;
-        let a = m(i - (t + n), r);
+        let a = T(i - (t + n), r);
         this.getWidth() > a && ((this._width = a), e?.(a));
     };
     calculateDecayingPosition(e, t, n, i) {
@@ -325,7 +325,7 @@ class S extends r.PureComponent {
     handleResizeEnd = (e) => {
         let { onResize: t, resizeConfig: n } = this.props;
         if (null == n) return;
-        let i = m(e, n);
+        let i = T(e, n);
         ((this._width = i), t?.(i), this.setState({ isResizing: !1 }), this.ensureWidth());
     };
     handleDragStart = (e, t) => {
@@ -437,8 +437,8 @@ let N = r.memo(function (e) {
             dockedRect: E,
             pictureInPictureComponents: h,
             appContext: p,
-            roundCorners: T,
-            resizeConfig: m,
+            roundCorners: m,
+            resizeConfig: T,
             className: g,
             getDockedRectPositionY: N,
         } = e,
@@ -493,8 +493,8 @@ let N = r.memo(function (e) {
                       edgeOffsetBottom: I.bottom,
                       edgeOffsetLeft: I.left,
                       edgeOffsetRight: I.right,
-                      roundCorners: T,
-                      resizeConfig: v || b ? void 0 : m,
+                      roundCorners: m,
+                      resizeConfig: v || b ? void 0 : T,
                       children: R,
                   }),
               }),

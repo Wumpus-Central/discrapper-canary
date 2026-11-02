@@ -32,11 +32,11 @@ let u = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
 function p(e, t) {
     return null != e && null != t && e !== t;
 }
-function T(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && (u.test(e) || (t && I.has(e.toLowerCase())));
 }
-function m(e) {
+function T(e) {
     let t = (0, o.fb)();
     return null != t && e === `media--${t}`;
 }
@@ -51,7 +51,7 @@ function S(e) {
     return (
         null != i &&
         ((!!(0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname)) ||
-            !!((0, o.iT)() && ((t = i.hostname), null != (n = (0, o.fb)()) && (t === n || m(t)))) ||
+            !!((0, o.iT)() && ((t = i.hostname), null != (n = (0, o.fb)()) && (t === n || T(t)))) ||
             i.hostname === window.GLOBAL_ENV.CDN_HOST ||
             _.test(i.hostname))
     );
@@ -63,7 +63,7 @@ function N(e, t, n) {
         null != i &&
         (!!(
             ((0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname) && "4000" === i.port) ||
-            ((0, o.iT)() && m(i.hostname))
+            ((0, o.iT)() && T(i.hostname))
         ) ||
             E.test(i.hostname))
     );
@@ -77,7 +77,7 @@ function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null != e) {
         let n = d.A.toURLSafe(e)?.hostname;
-        if (null != n && T(n, t)) return !0;
+        if (null != n && m(n, t)) return !0;
     }
     return !1;
 }
@@ -91,7 +91,7 @@ let L = {
         return `${location.protocol}//${n}${e}`;
     },
     isOriginalContentTypeDifferent: p,
-    isDiscordHostname: T,
+    isDiscordHostname: m,
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },

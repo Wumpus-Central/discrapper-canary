@@ -104,7 +104,7 @@ function I(e, t) {
 function p(e, t) {
     for (let n of (0, u.e7)(t.guild_space_data?.leaderboard)) I(e, n);
 }
-function T(e, t) {
+function m(e, t) {
     return (
         t.forEach((t) => {
             let { author: n, mentions: r } = t;
@@ -113,10 +113,10 @@ function T(e, t) {
         !1
     );
 }
-function m(e) {
+function T(e) {
     let { channelId: t, messages: n } = e,
         i = _.A.getChannel(t);
-    return null != i && null != i.guild_id && T(i.guild_id, n);
+    return null != i && null != i.guild_id && m(i.guild_id, n);
 }
 function g(e) {
     let { guildId: t, data: n } = e;
@@ -131,7 +131,7 @@ function g(e) {
                 });
             });
         }),
-        T(t, i)
+        m(t, i)
     );
 }
 class S extends r.Ay.Store {
@@ -171,20 +171,20 @@ let N = new S(a.h, {
     SEARCH_MESSAGES_SUCCESS: g,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { smartSearchQuery: t, messages: n } = e;
-        return T(t.guildId, n);
+        return m(t.guildId, n);
     },
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: g,
-    LOCAL_MESSAGES_LOADED: m,
-    LOAD_MESSAGES_SUCCESS: m,
-    LOAD_MESSAGES_AROUND_SUCCESS: m,
-    LOAD_RECENT_MENTIONS_SUCCESS: m,
+    LOCAL_MESSAGES_LOADED: T,
+    LOAD_MESSAGES_SUCCESS: T,
+    LOAD_MESSAGES_AROUND_SUCCESS: T,
+    LOAD_RECENT_MENTIONS_SUCCESS: T,
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { pins: t, channelId: n } = e,
             i = _.A.getChannel(n);
         return (
             null != i &&
             null != i.guild_id &&
-            T(
+            m(
                 i.guild_id,
                 t.map((e) => {
                     let { message: t } = e;
@@ -202,7 +202,7 @@ let N = new S(a.h, {
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { channelId: t, messages: n, messageReferences: i } = e,
             r = _.A.getChannel(t);
-        return null != r && null != r.guild_id && T(r.guild_id, n.concat(i));
+        return null != r && null != r.guild_id && m(r.guild_id, n.concat(i));
     },
     CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { channelId: t, rawConversations: n } = e,
@@ -214,6 +214,6 @@ let N = new S(a.h, {
                 return t ?? [];
             })
             .flat();
-        return T(i.guild_id, r);
+        return m(i.guild_id, r);
     },
 });

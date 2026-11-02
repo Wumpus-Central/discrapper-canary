@@ -31,10 +31,10 @@ let c = new r.J(
     f = o.Z7.LOADED_FINISHED,
     I = !1,
     p = null,
-    T = new Set(),
-    m = new Map();
+    m = new Set(),
+    T = new Map();
 function g(e) {
-    let t = m.get(e);
+    let t = T.get(e);
     return null != t && t.size > 0;
 }
 function S(e) {
@@ -47,14 +47,14 @@ function N(e) {
     let n = e.saveData.messageId;
     null == e.saveData.dueAt ? A.add(n) : A.delete(n);
     let i = e.saveData.channelId,
-        r = m.get(i) ?? new Set();
+        r = T.get(i) ?? new Set();
     (r.add(n),
-        m.set(i, r),
-        null == e.message && T.add(n),
+        T.set(i, r),
+        null == e.message && m.add(n),
         null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(n) : E.delete(n));
 }
 function C(e) {
-    for (let t of (c.clear(), m.clear(), T.clear(), A.clear(), e)) A.add(t);
+    for (let t of (c.clear(), T.clear(), m.clear(), A.clear(), e)) A.add(t);
     ((h = null), (p = null), (I = !1), (f = A.size > 0 ? o.Z7.LOADED_HAS_MORE : o.Z7.LOADED_FINISHED));
 }
 function O(e) {
@@ -66,7 +66,7 @@ function O(e) {
     return ((a.message = null), c.set(i, a), !0);
 }
 function R() {
-    if (0 === T.size || u) return !1;
+    if (0 === m.size || u) return !1;
     u = !0;
 }
 class L extends i.Ay.Store {
@@ -158,8 +158,8 @@ let y = new L(a.h, {
                 ? A.delete(n)
                 : (c.delete(t),
                   A.delete(n),
-                  m.get(i.saveData.channelId)?.delete(n),
-                  T.delete(n),
+                  T.get(i.saveData.channelId)?.delete(n),
+                  m.delete(n),
                   E.delete(n),
                   (_ = Date.now()),
                   !0)
@@ -202,24 +202,24 @@ let y = new L(a.h, {
     GUILD_DELETE: R,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (0 === T.size || u || !g(t.id)) return !1;
+        if (0 === m.size || u || !g(t.id)) return !1;
         u = !0;
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
-        if (0 === T.size || u) return !1;
+        if (0 === m.size || u) return !1;
         let n = !1;
         for (let e of t) g(e.id) && ((u = !0), (n = !0));
         return n;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        if (0 === T.size || u || !g(t.id)) return !1;
+        if (0 === m.size || u || !g(t.id)) return !1;
         u = !0;
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { user: t } = e;
-        if (0 === T.size || u || t.id !== l.default.getCurrentUser()?.id) return !1;
+        if (0 === m.size || u || t.id !== l.default.getCurrentUser()?.id) return !1;
         u = !0;
     },
     GUILD_ROLE_CREATE: R,

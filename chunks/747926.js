@@ -15,8 +15,8 @@ var i = n(284009),
     f = n(940382),
     I = n(253932),
     p = n(358047),
-    T = n(31717),
-    m = n(309010),
+    m = n(31717),
+    T = n(309010),
     g = n(625494),
     S = n(37411),
     N = n(652215),
@@ -37,7 +37,7 @@ function O(e, t, n) {
             null != n ? (0, A.N9)(e, { ...i, source: n }) : (0, A.iN)(e.id, i));
         return;
     }
-    let l = m.Ay.getChannelId();
+    let l = T.Ay.getChannelId();
     (e.parent_id === l || (0, C.mP)(l) || (0, A.iN)(e.parent_id),
         (0, E.pX)(
             (0, d.V1)(N.BVt.CHANNEL_THREAD_VIEW((0, h.j)(e), (0, C.mP)(l) ? C.VV.GUILD_HOME : e.parent_id, e.id)),
@@ -49,7 +49,7 @@ function O(e, t, n) {
 }
 function R(e) {
     let t = e.parent_id;
-    null == t || m.Ay.getCurrentlySelectedChannelId() === t
+    null == t || T.Ay.getCurrentlySelectedChannelId() === t
         ? O(e)
         : p.Ay.getSidebarState(t)?.type === f.PE.CREATE_THREAD &&
           a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t });
@@ -60,11 +60,11 @@ function L(e, t, n) {
         r()(!__OVERLAY__, "Cannot create threads in the overlay."),
         (0, o.zV)(N.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
         u.Uw.dispatch(N.jej.POPOUT_CLOSE),
-        m.Ay.getChannelId() !== e.id && (0, A.iN)(e.id),
-        "" === T.A.getDraft(e.id, T.C.FirstThreadMessage))
+        T.Ay.getChannelId() !== e.id && (0, A.iN)(e.id),
+        "" === m.A.getDraft(e.id, m.C.FirstThreadMessage))
     ) {
-        let t = T.A.getDraft(e.id, T.C.ChannelMessage);
-        (s.A.saveDraft(e.id, "", T.C.ChannelMessage), s.A.saveDraft(e.id, t, T.C.FirstThreadMessage));
+        let t = m.A.getDraft(e.id, m.C.ChannelMessage);
+        (s.A.saveDraft(e.id, "", m.C.ChannelMessage), s.A.saveDraft(e.id, t, m.C.FirstThreadMessage));
     }
     setTimeout(() => {
         a.h.dispatch({ type: "SIDEBAR_CREATE_THREAD", parentChannelId: e.id, parentMessageId: t?.id, location: n });
@@ -76,7 +76,7 @@ function y(e, t) {
 }
 function D(e) {
     (a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e }),
-        l.A.clearAll(e, T.C.FirstThreadMessage),
-        a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: T.C.FirstThreadMessage }),
-        a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: T.C.ThreadSettings }));
+        l.A.clearAll(e, m.C.FirstThreadMessage),
+        a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: m.C.FirstThreadMessage }),
+        a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: m.C.ThreadSettings }));
 }

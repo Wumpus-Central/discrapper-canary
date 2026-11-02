@@ -16,8 +16,8 @@ var h = n(198052),
     f = n(343328),
     I = n(717125),
     p = n(626584),
-    T = n(736056),
-    m = n(698441),
+    m = n(736056),
+    T = n(698441),
     g = n(250953),
     S = n(380335),
     N = n(309199),
@@ -83,8 +83,8 @@ let eu = er.hVb.VIEW_CHANNEL | er.hVb.READ_MESSAGE_HISTORY,
     ef = new Set(),
     eI = !1,
     ep = [],
-    eT = !1,
-    em = null,
+    em = !1,
+    eT = null,
     eg = new (class {
         channelWindowIds = {};
         addWindowId(e, t) {
@@ -159,17 +159,17 @@ function ev(e) {
 }
 async function eb(e) {
     if (0 === ep.length) {
-        ((eT = !1), e?.());
+        ((em = !1), e?.());
         return;
     }
-    eT = !0;
+    em = !0;
     let t = ep.splice(0, 100);
     try {
         await y(() =>
             d.Bo.post({ url: er.Rsh.BULK_ACK, body: { read_states: t }, oldFormErrors: !0, rejectWithError: !1 }),
         );
     } catch (e) {
-        ((ep.length = 0), (eT = !1));
+        ((ep.length = 0), (em = !1));
         return;
     }
     (await (0, c.BK)(1e3), eb(e));
@@ -335,8 +335,8 @@ class ew {
             oldestUnreadMessageIdStale: f,
             estimated: I,
             _mentionCount: p,
-            flags: T,
-            lastViewed: m,
+            flags: m,
+            lastViewed: T,
         } = this;
         if (e)
             return {
@@ -358,8 +358,8 @@ class ew {
                 oldestUnreadMessageIdStale: f,
                 estimated: I,
                 _mentionCount: p,
-                flags: T,
-                lastViewed: m,
+                flags: m,
+                lastViewed: T,
             };
         let g = {
             channelId: t,
@@ -373,10 +373,10 @@ class ew {
             ackPinTimestamp: E,
             lastPinTimestamp: A,
             _mentionCount: p,
-            flags: T,
+            flags: m,
         };
         return (
-            null != m && m > 0 && (g.lastViewed = m),
+            null != T && T > 0 && (g.lastViewed = T),
             r && ((g._isThread = r), (g._isActiveThread = a), (g._isJoinedThread = s)),
             g
         );
@@ -401,8 +401,8 @@ class ew {
             _oldestUnreadMessageId: f,
             oldestUnreadMessageIdStale: I,
             estimated: p,
-            _unreadCount: T,
-            _mentionCount: m,
+            _unreadCount: m,
+            _mentionCount: T,
             flags: g,
             lastViewed: S,
         } = e;
@@ -424,8 +424,8 @@ class ew {
             (this._oldestUnreadMessageId = f),
             (this.oldestUnreadMessageIdStale = I ?? !1),
             (this.estimated = p ?? !1),
-            (this._unreadCount = T ?? 0),
-            (this._mentionCount = m),
+            (this._unreadCount = m ?? 0),
+            (this._mentionCount = T),
             (this.flags = g),
             (this.lastViewed = S),
             ew._mentionChannels.delete(this.channelId),
@@ -540,14 +540,14 @@ class ew {
     }
     handleGuildEventRemoval(e, t) {
         if (W.default.compare(this.ackMessageId, t) >= 0) return;
-        let n = m.Ay.getGuildScheduledEventsForGuild(e),
+        let n = T.Ay.getGuildScheduledEventsForGuild(e),
             i = this.getAckTimestamp();
         if (isNaN(i)) return;
         let r = this._ackMessageId ?? W.default.fromTimestamp(i),
             a = null,
             s = 0;
         (n.forEach((e) => {
-            (0, m.d6)(e) && (W.default.compare(e.id, a) > 0 && (a = e.id), W.default.compare(e.id, r) > 0 && s++);
+            (0, T.d6)(e) && (W.default.compare(e.id, a) > 0 && (a = e.id), W.default.compare(e.id, r) > 0 && s++);
         }),
             (this.lastMessageId = a),
             (this.mentionCount = s));
@@ -1007,7 +1007,7 @@ function eH(e, t, n) {
     return !!eU(i, n) && i.ack({ trackAnalytics: !0, location: e });
 }
 function ej() {
-    null != em && clearTimeout(em);
+    null != eT && clearTimeout(eT);
 }
 let eW = (0, r.throttle)((e) => {
     e.delete();
@@ -1137,8 +1137,8 @@ class e7 extends o.Ay.Store {
             w.A,
             G.A,
             Y.Ay,
-            m.Ay,
-            T.A,
+            T.Ay,
+            m.A,
             I.A,
             et.Ay,
             ei.A,
@@ -1156,7 +1156,7 @@ class e7 extends o.Ay.Store {
                 E.Ay,
                 I.A,
                 z.A,
-                m.Ay,
+                T.Ay,
                 X.A,
                 q.A,
                 G.A,
@@ -1390,7 +1390,7 @@ let e8 = new e7(_.h, {
                     null != e.channelTimestampUpdates && eY(e.channelTimestampUpdates),
                     ek(e));
             (ej(),
-                (em = setTimeout(
+                (eT = setTimeout(
                     () =>
                         (function (e) {
                             let t = eN();
@@ -1792,7 +1792,7 @@ let e8 = new e7(_.h, {
                             read_state_type: e.readStateType,
                         })),
                     ),
-                    eT || eb(r)));
+                    em || eb(r)));
         },
         ENABLE_AUTOMATIC_ACK: function (e) {
             let { channelId: t, windowId: n } = e;

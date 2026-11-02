@@ -36,8 +36,8 @@ function h() {
 var f = n(280450),
     I = n(544180),
     p = n(927813),
-    T = n(453771),
-    m = n(513391),
+    m = n(453771),
+    T = n(513391),
     g = n(292348),
     S = n(280889),
     N = n(381941),
@@ -57,7 +57,7 @@ function L(e) {
     return O(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id;
 }
 let y = [+p.A.Millis.MINUTE, 5 * p.A.Millis.MINUTE];
-class D extends m.A {
+class D extends T.A {
     maxSize;
     requests = new Map();
     analyticsTimeouts = new Map();
@@ -234,18 +234,18 @@ class D extends m.A {
                     (0, g.OW)(e, t)
                 ),
             ));
-        let m = new AbortController();
-        (this.requests.set(d, m),
+        let T = new AbortController();
+        (this.requests.set(d, T),
             l.Bo.post(
                 {
                     url: A.Rsh.INTERACTIONS,
                     body: p,
-                    signal: m.signal,
+                    signal: T.signal,
                     rejectWithError: !0,
                     onRequestCreated: (e) => {
                         e.on("progress", (e) => {
                             let { total: t } = e,
-                                n = (0, u.C)((0, T.o2)(i));
+                                n = (0, u.C)((0, m.o2)(i));
                             null != t && t > n && (this.cancelRequest(d), _?.(n));
                         });
                     },

@@ -49,12 +49,12 @@ async function p() {
             f = A;
         }
 }
-function T(e, t) {
+function m(e, t) {
     (l.A.increment({ name: s.K.NOTIFICATION_SOUND_PLAYBACK_FAILURE, tags: [`reason:${e}`] }),
         _.A.captureException(t, { tags: { source: "notification_sound_playback" } }));
 }
-function m(e) {
-    T("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
+function T(e) {
+    m("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
 }
 u.isPlatformEmbedded && (c.Ay.addChangeListener(p), p());
 let g = class {
@@ -84,7 +84,7 @@ let g = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !0),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && m(e);
+                    this.trackNotificationFailure && T(e);
                 }));
         });
     }
@@ -92,7 +92,7 @@ let g = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !1),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && m(e);
+                    this.trackNotificationFailure && T(e);
                 }));
         });
     }
@@ -142,7 +142,7 @@ let g = class {
                                           ? "decode_error"
                                           : "generic",
                                 n = Error(`could not play audio: ${e}`);
-                            (this.trackNotificationFailure && T(e, n), t(n));
+                            (this.trackNotificationFailure && m(e, n), t(n));
                         }),
                         (i.onended = () => this.destroyAudio()),
                         i.load());

@@ -21,10 +21,10 @@ function p(e) {
     let { isPopoutWindow: t } = e;
     return t ? 16 : 24;
 }
-function T(e) {
+function m(e) {
     return A.Ay.maximize(e);
 }
-function m(e) {
+function T(e) {
     e.stopPropagation();
 }
 function g(e) {
@@ -38,7 +38,7 @@ function g(e) {
         }),
         a = (0, i.jsx)(l.D, {
             className: s()(f.R6, f.T0),
-            onClick: () => T(t),
+            onClick: () => m(t),
             "aria-label": h.intl.string(h.t.G1u0hK),
             tabIndex: -1,
             children: (0, i.jsx)(u.A, {}),
@@ -55,7 +55,7 @@ function g(e) {
 function S(e) {
     let { leading: t, title: n, trailing: a, windowKey: l, className: o, growLeading: d } = e,
         c = (0, E.getPlatform)(),
-        u = r.useCallback(() => T(l), [l]),
+        u = r.useCallback(() => m(l), [l]),
         _ = c === E.PlatformTypes.WINDOWS || c === E.PlatformTypes.LINUX,
         h = r.useMemo(() => c === E.PlatformTypes.OSX && "rtl" === A.Ay.getSystemUIDirection(), [c]);
     return (0, i.jsxs)("div", {
@@ -64,10 +64,10 @@ function S(e) {
         "data-window-chrome": "true",
         children: [
             (0, i.jsx)("div", { className: f.DD, children: n }),
-            (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: m, children: t }),
+            (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: T, children: t }),
             (0, i.jsxs)("div", {
                 className: f.ZY,
-                onDoubleClick: m,
+                onDoubleClick: T,
                 children: [a, _ && (0, i.jsx)(g, { windowKey: l, showDivider: null != a })],
             }),
         ],
@@ -81,7 +81,7 @@ function N(e) {
         }, []),
         _ = r.useCallback(() => {
             let e = d.A.getLastShowTimestamp();
-            (null != e && Date.now() - e < 1e3) || T(a);
+            (null != e && Date.now() - e < 1e3) || m(a);
         }, [a]),
         A = c === E.PlatformTypes.WINDOWS;
     if (c === E.PlatformTypes.WEB) return null;
@@ -91,6 +91,6 @@ function N(e) {
         onClick: u,
         onDoubleClick: _,
         children:
-            h && (0, i.jsx)("div", { className: f.ZY, onDoubleClick: m, children: (0, i.jsx)(g, { windowKey: a }) }),
+            h && (0, i.jsx)("div", { className: f.ZY, onDoubleClick: T, children: (0, i.jsx)(g, { windowKey: a }) }),
     });
 }

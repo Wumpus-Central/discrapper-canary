@@ -1,7 +1,7 @@
 n.d(t, {
     AC: () => u,
     Bm: () => A,
-    D3: () => m,
+    D3: () => T,
     Dm: () => L,
     E7: () => v,
     Er: () => f,
@@ -19,7 +19,7 @@ n.d(t, {
     YV: () => h,
     kI: () => N,
     n8: () => M,
-    qz: () => T,
+    qz: () => m,
     ts: () => C,
     uS: () => E,
     uh: () => b,
@@ -62,7 +62,7 @@ function I(e) {
 function p(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SATURATION", saturation: e });
 }
-function T(e) {
+function m(e) {
     let t = s.Ay.prefersReducedMotion;
     i.h.dispatch({ type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: e });
     let n = s.Ay.prefersReducedMotion;
@@ -74,7 +74,7 @@ function T(e) {
           })
         : t && !n && r.Ay.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
 }
-function m(e) {
+function T(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS", syncForcedColors: e });
 }
 function g(e) {

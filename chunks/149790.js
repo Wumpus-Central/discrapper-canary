@@ -1,13 +1,13 @@
 n.d(t, {
     b9: () => p,
     yN: () => N,
-    Yh: () => m,
+    Yh: () => T,
     zT: () => _,
     Wj: () => E,
     Y1: () => f,
     kI: () => h,
     dangerouslyConstructGuildRecordFromUntypedObject: () => S,
-    xi: () => T,
+    xi: () => m,
     DY: () => I,
     Me: () => A,
     tJ: () => O,
@@ -189,7 +189,7 @@ function p(e) {
         features: (0, a.y)(e.features),
     });
 }
-function T(e) {
+function m(e) {
     return O({
         id: e.guildId,
         name: e.name ?? "",
@@ -199,7 +199,7 @@ function T(e) {
         features: (0, a.y)(e.features),
     });
 }
-function m(e) {
+function T(e) {
     return O({
         id: e.id,
         name: e.name,

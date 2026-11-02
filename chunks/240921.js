@@ -41,8 +41,8 @@ function c(e) {
                     f = c?.isOverride,
                     I = c?.exposureTrackingEnabled,
                     p = c?.useAsEligibility,
-                    T = E(c),
-                    m = null == T;
+                    m = E(c),
+                    T = null == m;
                 return ((0, i.useEffect)(() => {
                     null == l ||
                         null == A ||
@@ -50,12 +50,12 @@ function c(e) {
                         !1 !== f ||
                         !0 !== I ||
                         !0 === p ||
-                        m ||
+                        T ||
                         t.trackExperimentExposure(l, o, e.location, d, h, A, n);
-                }, [n, l, A, h, e.location, f, I, p, m]),
-                null == _ || !0 === p || null == T)
+                }, [n, l, A, h, e.location, f, I, p, T]),
+                null == _ || !0 === p || null == m)
                     ? u
-                    : T;
+                    : m;
             },
             getConfig: function (e, i) {
                 let r = n(d, e),

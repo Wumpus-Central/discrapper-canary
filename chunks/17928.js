@@ -68,7 +68,7 @@ class I {
                 try {
                     (null == this.functionCache[e.type] &&
                         ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)),
-                        T(this.functionCache[e.type], "dispatch_" + e.type)),
+                        m(this.functionCache[e.type], "dispatch_" + e.type)),
                         this.functionCache[e.type](e),
                         t());
                 } catch (e) {
@@ -186,7 +186,7 @@ class p {
             (this._tokensByActionType[n] ??= []).push(r);
             let i = t[n],
                 s = (e) => i(e);
-            (T(s, `${e}_${n}`), (a[n] = s));
+            (m(s, `${e}_${n}`), (a[n] = s));
         }
         return (
             this._nodes.set(r, { name: e, band: i, actionHandler: a, storeDidChange: n, dependencies: [] }),
@@ -244,11 +244,11 @@ class p {
         return (f.forEach((e) => this._tokensByBand.get(e).forEach(n)), (this._callbackTokenPositions = e), e);
     }
 }
-function T(e, t) {
+function m(e, t) {
     Object.defineProperty(e, "name", { value: t });
 }
-var m = n(64015),
-    g = n.n(m),
+var T = n(64015),
+    g = n.n(T),
     S = n(506774);
 n(142703);
 class N {

@@ -20,8 +20,8 @@ function A(e) {
             open: f,
             onOpenChange: I,
             id: p,
-            className: T,
-            reference: m,
+            className: m,
+            reference: T,
             overrideTargetRect: g,
             placement: S = "bottom",
             spacing: N = 8,
@@ -91,8 +91,8 @@ function A(e) {
                 : void 0,
         });
     r.useLayoutEffect(() => {
-        null != g ? H.setPositionReference({ getBoundingClientRect: () => g }) : null != m && H.setReference(m);
-    }, [H, g, m]);
+        null != g ? H.setPositionReference({ getBoundingClientRect: () => g }) : null != T && H.setReference(T);
+    }, [H, g, T]);
     let z = (0, s.s9)($, { escapeKey: A }),
         X = (0, s.Mk)($, { restMs: x, delay: { open: x, close: 0 }, enabled: "hover" === G, handleClose: (0, s.iB)() }),
         { getReferenceProps: q, getFloatingProps: Z } = (0, s.bv)([z, X]),
@@ -112,7 +112,7 @@ function A(e) {
                             v ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
                             ((t = (0, i.jsx)("div", {
                                 id: p,
-                                className: d()(T, u.q),
+                                className: d()(m, u.q),
                                 [_]: !0,
                                 style: { ...j, visibility: Q },
                                 ref: H.setFloating,

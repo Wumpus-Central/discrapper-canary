@@ -15,7 +15,7 @@ let E = new Set(),
     f = new Map(),
     I = new Map(),
     p = null;
-function T(e) {
+function m(e) {
     let t = c.default.getCurrentUser(),
         n = d.A.getGuild(e);
     if (null == n || null == t) return !1;
@@ -31,7 +31,7 @@ function T(e) {
     }
     return (A.set(e, i), f.set(e, E), h.set(e, r), !0);
 }
-function m() {
+function T() {
     (A.clear(), f.clear(), h.clear(), I.clear(), (p = null));
 }
 function g(e) {
@@ -54,7 +54,7 @@ function g(e) {
 }
 function S(e) {
     let { guildId: t } = e;
-    return !!A.has(t) && T(t);
+    return !!A.has(t) && m(t);
 }
 class N extends i.Ay.Store {
     static displayName = "SubscriptionRoleStore";
@@ -69,7 +69,7 @@ class N extends i.Ay.Store {
         return ((p = t), t);
     }
     buildRoles(e) {
-        A.has(e) || T(e);
+        A.has(e) || m(e);
     }
     getSubscriptionRoles(e) {
         return (this.buildRoles(e), A.get(e) ?? E);
@@ -85,8 +85,8 @@ class N extends i.Ay.Store {
     }
 }
 let C = new N(r.h, {
-    CONNECTION_OPEN: m,
-    LOGOUT: m,
+    CONNECTION_OPEN: T,
+    LOGOUT: T,
     GUILD_CREATE: g,
     GUILD_DELETE: function (e) {
         let {
@@ -103,6 +103,6 @@ let C = new N(r.h, {
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e,
             i = c.default.getCurrentUser();
-        return !!(n.id === i?.id && A.has(t)) && T(t);
+        return !!(n.id === i?.id && A.has(t)) && m(t);
     },
 });

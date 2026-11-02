@@ -6,7 +6,7 @@ n.d(t, {
     e3: () => S,
     gK: () => A,
     ph: () => _,
-    qJ: () => T,
+    qJ: () => m,
     wR: () => E,
     zi: () => p,
 });
@@ -94,11 +94,11 @@ function p(e) {
     let t = s.A.findGame(e)?.id;
     return null != t && f.has(t);
 }
-function T(e) {
+function m(e) {
     let t = a.Ay.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && p(t);
 }
-let m = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
+let T = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
 function g(e, t, n) {
     if (e.overlayMethod !== d.Ue.OutOfProcess && e.overlayMethod !== d.Ue.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
@@ -106,7 +106,7 @@ function g(e, t, n) {
         case i.aI.UNKNOWN:
             var r;
             let a;
-            return m.has(
+            return T.has(
                 0 ===
                     (a = Object.keys((r = e.fullscreenHistory))
                         .map(Number)

@@ -3,7 +3,7 @@ n.d(t, {
     r7: () => L,
     wo: () => U,
     ks: () => N,
-    $5: () => m,
+    $5: () => T,
     sn: () => P,
     mH: () => x,
     cg: () => k,
@@ -14,7 +14,7 @@ n.d(t, {
     JX: () => v,
     tU: () => O,
     k5: () => g,
-    nj: () => T,
+    nj: () => m,
     $s: () => B,
     _Z: () => D,
     mq: () => G,
@@ -42,16 +42,16 @@ var d = n(738822),
     f = n(710969),
     I = n(576761);
 let p = new Set([l.PREMIUM_EXTENSION, l.PREMIUM_PERMANENT]);
-function T(e) {
+function m(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === o.l.COLLECTIBLE);
     return t?.type === o.l.COLLECTIBLE ? t : null;
 }
-function m(e) {
-    let t = T(e);
+function T(e) {
+    let t = m(e);
     return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, f.ZG)(t.expiresAtPremium) : null;
 }
 function g(e) {
-    let t = T(e);
+    let t = m(e);
     if (null == t || !("expiresAt" in t) || null == t.expiresAt) return null;
     let n = new Date(e.expiresAt),
         i = new Date(t.expiresAt),
@@ -83,7 +83,7 @@ function C(e) {
     return null != n && n > 0;
 }
 function O(e) {
-    return null != T(e);
+    return null != m(e);
 }
 function R(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === o.l.IN_GAME);
@@ -99,11 +99,11 @@ function D(e) {
     return t?.orbQuantity;
 }
 function v(e) {
-    let t = T(e)?.expirationMode;
+    let t = m(e)?.expirationMode;
     return null != t && p.has(t);
 }
 function b(e) {
-    return v(e) && T(e)?.expirationMode === l.PREMIUM_PERMANENT;
+    return v(e) && m(e)?.expirationMode === l.PREMIUM_PERMANENT;
 }
 function P(e) {
     let t = e.userStatus?.claimedTier ?? 0;

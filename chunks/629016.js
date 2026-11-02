@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -66,7 +66,7 @@ function p(e) {
         null != n && n.delete(t.id);
     }
 }
-class T extends a.Ay.Store {
+class m extends a.Ay.Store {
     static displayName = "GamePartyStore";
     initialize() {
         (this.syncWith([d.A], I), this.waitFor(l.default, o.A, d.A));
@@ -81,7 +81,7 @@ class T extends a.Ay.Store {
         return _;
     }
 }
-let m = new T(s.h, {
+let T = new m(s.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;

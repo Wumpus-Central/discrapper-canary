@@ -1,7 +1,7 @@
 n.d(t, {
     u: () => o,
     Zj: () => l,
-    XB: () => T,
+    XB: () => m,
     ge: () => u,
     tT: () => d,
     r1: () => f,
@@ -53,6 +53,6 @@ function I(e) {
 function p(e) {
     return null != e && A.test(e);
 }
-function T(e) {
+function m(e) {
     return a(e, "video");
 }

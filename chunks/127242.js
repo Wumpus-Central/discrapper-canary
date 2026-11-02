@@ -18,7 +18,7 @@ let E = null,
 function p(e) {
     return (0, u.Vx)(e) ? `native-${e.id}` : null != e.nativeId ? `native-${e.nativeId}` : null;
 }
-function T(e) {
+function m(e) {
     let t = Math.floor(e);
     try {
         return (I.willOverflowNext() && I.reset(), d.default.fromTimestampWithSequence(t, I));
@@ -26,7 +26,7 @@ function T(e) {
         return (I.reset(), d.default.fromTimestampWithSequence(t, I));
     }
 }
-let m = new l.J(
+let T = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
                 n = p(e);
@@ -38,7 +38,7 @@ let m = new l.J(
     ),
     g = 0;
 function S(e) {
-    return m.set(e.id, e);
+    return T.set(e.id, e);
 }
 class N extends s.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
@@ -55,7 +55,7 @@ class N extends s.Ay.Store {
         return A;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return [m.values(e, !0), m.version];
+        return [T.values(e, !0), T.version];
     }
     isModuleLoggingEnabled() {
         return null != f;
@@ -105,7 +105,7 @@ let C = new N(
                           !(function (e, t, n, i) {
                               let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.QJ.Info,
                                   a = performance.timeOrigin + performance.now(),
-                                  s = T(a);
+                                  s = m(a);
                               S({
                                   id: s,
                                   key: s,
@@ -136,10 +136,10 @@ let C = new N(
                                                 let i,
                                                     r = p(e);
                                                 if (null == r) throw Error("Native breadcrumb has no native id");
-                                                m.size(r) > 0 ||
+                                                T.size(r) > 0 ||
                                                     ((g = Math.max(g, Number(e.id))),
                                                     S({
-                                                        id: (i = T(e.timestamp)),
+                                                        id: (i = m(e.timestamp)),
                                                         key: i,
                                                         nativeId: Number(e.id),
                                                         timestamp: e.timestamp,

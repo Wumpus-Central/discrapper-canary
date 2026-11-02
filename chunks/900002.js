@@ -1,4 +1,4 @@
-n.d(t, { ST: () => y, oM: () => T });
+n.d(t, { ST: () => y, oM: () => m });
 var i,
     r = n(477900),
     a = n(582128),
@@ -15,14 +15,14 @@ let h = { tension: 2400, friction: 52 };
 var f = n(775602),
     I = n(750506),
     p = n(233680),
-    T =
+    m =
         (((i = {}).PRIMARY = "primary"),
         (i.GREY = "grey"),
         (i.BRAND = "brand"),
         (i.GREEN = "green"),
         (i.RED = "red"),
         i);
-let m = Object.freeze({}),
+let T = Object.freeze({}),
     g = Object.freeze({
         top: p.dn,
         bottom: p.L_,
@@ -62,11 +62,11 @@ let N = (e) => {
                 animationStyle: A,
                 disableTooltipPointerEvents: h = !1,
                 allowOverflow: f = !1,
-                tooltipPointerClassName: T,
-                positionKeyStemOverride: m,
+                tooltipPointerClassName: m,
+                positionKeyStemOverride: T,
                 dataMeticulousIgnore: N,
             } = e,
-            C = `${m ?? ("string" == typeof s ? s : "")}:${i}`;
+            C = `${T ?? ("string" == typeof s ? s : "")}:${i}`;
         return (0, r.jsx)(I.nE, {
             disablePointerEvents: h,
             targetRef: t,
@@ -84,8 +84,8 @@ let N = (e) => {
                     style: { ...A, ...u },
                     "data-mtctest-ignore": N,
                     children: [
-                        (0, r.jsx)("div", { className: l()(p.xQ, p.yH, T), style: S(t ?? i, n, E) }),
-                        (0, r.jsx)("div", { className: l()(p.xQ, T), style: S(t ?? i, n, E) }),
+                        (0, r.jsx)("div", { className: l()(p.xQ, p.yH, m), style: S(t ?? i, n, E) }),
+                        (0, r.jsx)("div", { className: l()(p.xQ, m), style: S(t ?? i, n, E) }),
                         (0, r.jsx)("div", { className: l()(p.rv, { [p.u2]: f }, _), children: s }),
                     ],
                 });
@@ -114,7 +114,7 @@ function L(e) {
     );
 }
 class y extends a.Component {
-    static Colors = T;
+    static Colors = m;
     static defaultProps = {
         hideOnClick: !0,
         position: "top",
@@ -156,7 +156,7 @@ class y extends a.Component {
     render() {
         let e,
             { children: t, text: n, "aria-label": i } = this.props;
-        if (null == n) return t(m);
+        if (null == n) return t(T);
         "string" == typeof i ? (e = i) : "string" == typeof n && !1 !== i && (e = n);
         let s = {
             onClick: this.handleClick,
@@ -202,9 +202,9 @@ class y extends a.Component {
             } = this.props,
             I = (c.Fr || c.v1) && !0 === E && A,
             p = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement,
-            T = null;
+            m = null;
         return (
-            (T = e instanceof Function ? (p ? e() : null) : e),
+            (m = e instanceof Function ? (p ? e() : null) : e),
             (0, r.jsx)(L, {
                 disableTooltipPointerEvents: (!1 !== d && !I) || !0 === d,
                 targetElementRef: this.domElementRef,
@@ -222,7 +222,7 @@ class y extends a.Component {
                 allowOverflow: _,
                 positionKeyStemOverride: this.props.positionKeyStemOverride,
                 dataMeticulousIgnore: f,
-                children: T,
+                children: m,
             })
         );
     }

@@ -40,8 +40,8 @@ function I(e) {
     return !1;
 }
 function p(e) {}
-function T(e) {}
 function m(e) {}
+function T(e) {}
 function g(e) {}
 function S(e) {}
 function N(e) {}
@@ -65,8 +65,8 @@ function U(e) {}
 function w(e) {}
 (n.r(t),
     n.d(t, {
-        coerceChannelRoute: () => T,
-        coerceChannelSecondaryViewChatRoute: () => m,
+        coerceChannelRoute: () => m,
+        coerceChannelSecondaryViewChatRoute: () => T,
         coerceGuildsRoute: () => N,
         coerceICYMIRoute: () => C,
         coerceMainRoute: () => p,

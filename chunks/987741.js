@@ -21,7 +21,7 @@ function p(e, t) {
     let n = f.get(e);
     null != n && (n.delete(t), 0 === n.size && f.delete(e));
 }
-function T(e, t) {
+function m(e, t) {
     let n = h.get(e);
     if (null == n) return !1;
     let i = A.peek(n);
@@ -31,8 +31,8 @@ function T(e, t) {
     let a = t(r);
     return null != a && (i.messageByMessageId.set(e, a), (0, _.V)(i, e, a), !0);
 }
-function m(e) {
-    return T(e.messageId, (t) => (0, _.y4)(e, t));
+function T(e) {
+    return m(e.messageId, (t) => (0, _.y4)(e, t));
 }
 function g() {
     let e = !1;
@@ -153,21 +153,21 @@ let O = new C(s.h, {
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e,
             n = t.id;
-        return null != n && T(n, (e) => (0, l.IU)(e, t));
+        return null != n && m(n, (e) => (0, l.IU)(e, t));
     },
-    MESSAGE_REACTION_ADD: m,
-    MESSAGE_REACTION_REMOVE: m,
+    MESSAGE_REACTION_ADD: T,
+    MESSAGE_REACTION_REMOVE: T,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { messageId: t, reactions: n } = e;
-        return T(t, (e) => e.addReactionBatch(n, o.default.getId()));
+        return m(t, (e) => e.addReactionBatch(n, o.default.getId()));
     },
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { messageId: t } = e;
-        return T(t, (e) => e.set("reactions", []));
+        return m(t, (e) => e.set("reactions", []));
     },
     MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
         let { messageId: t, emoji: n } = e;
-        return T(t, (e) => e.removeReactionsForEmoji(n));
+        return m(t, (e) => e.removeReactionsForEmoji(n));
     },
     MESSAGE_DELETE: function (e) {
         let { id: t } = e;

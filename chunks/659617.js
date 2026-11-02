@@ -15,8 +15,8 @@ var i,
     f = n(192308),
     I = n(853742),
     p = n(823099),
-    T = n(451909),
-    m = n(195880),
+    m = n(451909),
+    T = n(195880),
     g = n(677413),
     S = n(280450),
     N = n(734057),
@@ -56,7 +56,7 @@ function V(e, t) {
     if ("" !== r) return B(r, 40);
     {
         if ("" !== a) return B(a, 80);
-        let t = T.Ay.unparse(i?.content ?? "", e.id, !0),
+        let t = m.Ay.unparse(i?.content ?? "", e.id, !0),
             n = (0, P.A)(t.split("\n")[0], !0);
         n = n.replace(/^[ #-]+/, "");
         let r = [];
@@ -90,7 +90,7 @@ function H(e) {
     } = e;
     return r.useCallback(
         async (e, r, A) => {
-            var h, f, I, p, m;
+            var h, f, I, p, T;
             let g = null == n,
                 S = F(i, a),
                 O = i.name ?? "";
@@ -126,11 +126,11 @@ function H(e) {
                     (f = e),
                     (I = r),
                     (p = A),
-                    null != (m = E) && null != p && p.length > 0
-                        ? m(h, p, f, I)
+                    null != (T = E) && null != p && p.length > 0
+                        ? T(h, p, f, I)
                         : null != I && I.length > 0
-                          ? u.A.sendStickers(h.id, I, T.Ay.parse(h, f), { location: w.Hx.THREAD_CREATION })
-                          : u.A.sendMessage(h.id, T.Ay.parse(h, f), void 0, { location: w.Hx.THREAD_CREATION }))),
+                          ? u.A.sendStickers(h.id, I, m.Ay.parse(h, f), { location: w.Hx.THREAD_CREATION })
+                          : u.A.sendMessage(h.id, m.Ay.parse(h, f), void 0, { location: w.Hx.THREAD_CREATION }))),
                 _.A.clearAll(t.id, C.C.FirstThreadMessage));
         },
         [t, n, i, o, a, l, d, E],
@@ -159,8 +159,8 @@ function W(e) {
     } = e;
     return r.useCallback(
         async (e, r, f) => {
-            var T;
-            let m,
+            var m;
+            let T,
                 N,
                 O,
                 R,
@@ -177,14 +177,14 @@ function W(e) {
                 },
                 x =
                     null != u
-                        ? ((T = u),
-                          null == (N = null != (m = T.activity?.session_id) ? m : S.default.getSessionId())
+                        ? ((m = u),
+                          null == (N = null != (T = m.activity?.session_id) ? T : S.default.getSessionId())
                               ? null
                               : {
-                                    type: T.type,
+                                    type: m.type,
                                     session_id: N,
-                                    target_user_id: T.targetUserId,
-                                    party_id: T.activity?.party?.id,
+                                    target_user_id: m.targetUserId,
+                                    party_id: m.activity?.party?.id,
                                 })
                         : null;
             if (
@@ -278,7 +278,7 @@ async function Y(e, t, i, r) {
         else if (M.F4.has(r.body?.code)) {
             if (null != i)
                 if (r.body?.code === U.t02.EXPLICIT_CONTENT) {
-                    let t = (0, m.m)();
+                    let t = (0, T.m)();
                     if (null != r.body.attachments && r.body.attachments.length > 0) {
                         var c;
                         (o.h.dispatch({

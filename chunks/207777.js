@@ -15,8 +15,8 @@ var r = n(435558),
     f = n(309010),
     I = n(935208),
     p = n(767581);
-let T = [],
-    m = null,
+let m = [],
+    T = null,
     g = null,
     S = new Set(),
     N = l.T.LATEST_ACTIVITY,
@@ -25,8 +25,8 @@ let T = [],
     R = [],
     L = !1,
     y = [],
-    D = a().chain(T),
-    v = a().chain(T),
+    D = a().chain(m),
+    v = a().chain(m),
     b = new Set(),
     P = new Set();
 function M(e) {
@@ -52,8 +52,8 @@ function w() {
         (C = s.n.MATCH_SOME),
         (O = 0),
         (y = []),
-        (D = a().chain(T)),
-        (v = a().chain(T)),
+        (D = a().chain(m)),
+        (v = a().chain(m)),
         P.clear(),
         b.clear());
 }
@@ -137,8 +137,8 @@ class F extends d.Ay.Store {
         return R;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
-        let e = m;
-        return ((m = null), e);
+        let e = T;
+        return ((T = null), e);
     }
     getFirstNoReplyThreadId() {
         return i;
@@ -162,7 +162,7 @@ let B = new F(c.h, {
     THREAD_CREATE: function (e) {
         let { channel: t, isNewlyCreated: n } = e;
         if (null == t.parent_id || t.parent_id !== g || !n) return !1;
-        t.ownerId !== E.default.getId() ? O++ : (m = t.id);
+        t.ownerId !== E.default.getId() ? O++ : (T = t.id);
     },
     THREAD_UPDATE: function (e) {
         let { channel: t } = e;

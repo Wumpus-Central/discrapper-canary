@@ -15,8 +15,8 @@ var i = n(812729),
     f = n(723702),
     I = n(19575),
     p = n(316501),
-    T = n(350535),
-    m = n(773371),
+    m = n(350535),
+    T = n(773371),
     g = n(652215),
     S = n(696016);
 n(980504);
@@ -32,7 +32,7 @@ function L(e) {
     return { id: "1001", action: g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, shortcut: e, enabled: t, managed: !0, params: {} };
 }
 function y(e) {
-    let t = (0, T.Z0)("shift");
+    let t = (0, m.Z0)("shift");
     return null != t && (1 !== e.length || e[0][1] !== t);
 }
 function D(e, t, n, i) {
@@ -49,7 +49,7 @@ function D(e, t, n, i) {
             keyCombo: t,
             combo: n,
             layoutMapBacktick: r,
-            env: N.g$[(0, T._$)()],
+            env: N.g$[(0, m._$)()],
             backtickEventShape: (0, p.Q_)("`"),
             backquoteKeyShape: (0, p.Q_)(r ?? "`"),
             nativeBackquoteKeyShape: (0, p.Q_)(a ?? "`"),
@@ -66,18 +66,18 @@ function v() {
     "shift" === r && (D("Default overlay keybind is only shift", r, null), (r = "shift+`"));
     let a =
         ((e = r),
-        (t = (0, T.OH)(e)),
+        (t = (0, m.OH)(e)),
         (n = (0, p.Q_)("`")),
-        (i = n?.keyCode ?? (0, T.Z0)("`")),
+        (i = n?.keyCode ?? (0, m.Z0)("`")),
         y(t)
             ? t
             : null == i
               ? (D("Unable to get backtick code for overlay default keybind", e, t, { rawBacktickShape: n }), null)
               : (D("Default overlay keybind is unsupported", e, t, { rawBacktickCode: i }),
-                [...t, [N.zY.KEYBOARD_KEY, i, (0, T._$)()]]));
+                [...t, [N.zY.KEYBOARD_KEY, i, (0, m._$)()]]));
     if (null == a) return L([], !1);
     if (y(a)) return L(a, !0);
-    let s = (0, T.Z0)("shift"),
+    let s = (0, m.Z0)("shift"),
         l = (0, p.Q_)("`");
     return (
         0 === a.length
@@ -102,7 +102,7 @@ function F(e) {
 function B(e, t, n) {
     (h.default.track(g.HAw.KEYBOARD_SHORTCUT_USED, {
         shortcut_name: n.action,
-        shortcut_combo: (0, T.dI)(n.shortcut),
+        shortcut_combo: (0, m.dI)(n.shortcut),
         is_native_keyboard_event: !0,
     }),
         t.onTrigger(e, n));
@@ -171,8 +171,8 @@ function K(e) {
         else {
             W(e.toString());
             let r = (0, E.I)(document);
-            (i.keyup && r.bindGlobal((0, T.dI)(t), () => n(!1), "keyup"),
-                i.keydown && r.bindGlobal((0, T.dI)(t), () => n(!0), "keydown"),
+            (i.keyup && r.bindGlobal((0, m.dI)(t), () => n(!1), "keyup"),
+                i.keydown && r.bindGlobal((0, m.dI)(t), () => n(!0), "keydown"),
                 (b[e] = r));
         }
     })(
@@ -227,7 +227,7 @@ function K(e) {
             shortcutId: l,
         },
     ),
-        d.A.validateKeybind((0, T.dI)(t)));
+        d.A.validateKeybind((0, m.dI)(t)));
 }
 function $(e) {
     let t = { id: M.toString(), enabled: !0, action: g.hCu.UNASSIGNED, shortcut: [], managed: !1, params: {}, ...e };
@@ -249,10 +249,10 @@ function X(e) {
             t.action)
         ) {
             case g.hCu.TOGGLE_OVERLAY_INPUT_LOCK:
-                h.default.track(g.HAw.OVERLAY_SETTINGS_UPDATED, { hotkey: (0, T.dI)(t.shortcut) });
+                h.default.track(g.HAw.OVERLAY_SETTINGS_UPDATED, { hotkey: (0, m.dI)(t.shortcut) });
                 break;
             case g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET:
-                h.default.track(g.HAw.OVERLAY_SETTINGS_UPDATED, { text_activation_hotkey: (0, T.dI)(t.shortcut) });
+                h.default.track(g.HAw.OVERLAY_SETTINGS_UPDATED, { text_activation_hotkey: (0, m.dI)(t.shortcut) });
         }
     if (!(null != n && n.enabled === t.enabled && n.action === t.action && r()(n.shortcut, t.shortcut))) {
         if (!Y(t)) return void W(t.id);
@@ -263,7 +263,7 @@ function q(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     return (
         null == s().find(P, (t) => t.action === e && (!n || t.managed === n)) &&
-        (K($({ action: e, enabled: !0, shortcut: (0, T.OH)(t), managed: !0, params: {} })), !0)
+        (K($({ action: e, enabled: !0, shortcut: (0, m.OH)(t), managed: !0, params: {} })), !0)
     );
 }
 function Z(e) {
@@ -306,7 +306,7 @@ let Q = {},
                             );
                         else {
                             if (null == t) return e || !1;
-                            X({ keybind: { ...i, shortcut: "string" == typeof t ? (0, T.OH)(t) : t, context: n } });
+                            X({ keybind: { ...i, shortcut: "string" == typeof t ? (0, m.OH)(t) : t, context: n } });
                         }
                         return !0;
                     },
@@ -317,12 +317,12 @@ let Q = {},
         function () {
             return V()
                 ? Z(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK)
-                : !!m.default.getAnyGlobalEnabledOverlay() && q(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, R());
+                : !!T.default.getAnyGlobalEnabledOverlay() && q(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, R());
         },
         function () {
             return V()
                 ? Z(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET)
-                : !!m.default.getAnyGlobalEnabledOverlay() && q(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`");
+                : !!T.default.getAnyGlobalEnabledOverlay() && q(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`");
         },
         function () {
             let e = Z(g.hCu.SOUNDBOARD_HOLD);
@@ -340,7 +340,7 @@ function ee() {
 }
 d.A.setGetKeybindList(() => {
     let e = [];
-    for (let t in P) P.hasOwnProperty(t) && e.push((0, T.dI)(P[t].shortcut));
+    for (let t in P) P.hasOwnProperty(t) && e.push((0, m.dI)(P[t].shortcut));
     return e;
 });
 class et extends l.Ay.DeviceSettingsStore {
@@ -363,8 +363,8 @@ class et extends l.Ay.DeviceSettingsStore {
                                       .replace("numlock", "num lock")
                                       .replace("pageup", "page up")
                                       .replace("pagedown", "page down")),
-                                  (n.shortcut = (0, T.OH)(n.shortcut)))
-                                : (n.shortcut = n.shortcut.map((e) => (e.length < 3 ? [...e, (0, T._$)()] : e)))),
+                                  (n.shortcut = (0, m.OH)(n.shortcut)))
+                                : (n.shortcut = n.shortcut.map((e) => (e.length < 3 ? [...e, (0, m._$)()] : e)))),
                         (e[i] = n)),
                     e
                 ),
@@ -379,7 +379,7 @@ class et extends l.Ay.DeviceSettingsStore {
                 (e, t, n) => {
                     if ((0, f.isLinux)() && t.action === g.hCu.SOUNDBOARD_HOLD) {
                         let n = t.shortcut.map((e) => e[1]),
-                            i = (0, T.OH)("`").map((e) => e[1]);
+                            i = (0, m.OH)("`").map((e) => e[1]);
                         if (r()(n, i)) return e;
                     }
                     return { ...e, [n]: t };
@@ -406,7 +406,7 @@ class et extends l.Ay.DeviceSettingsStore {
             ),
     ];
     initialize(e) {
-        (__OVERLAY__ || this.waitFor(A.Ay, m.default), (P = e ?? {}));
+        (__OVERLAY__ || this.waitFor(A.Ay, T.default), (P = e ?? {}));
     }
     getUserAgnosticState() {
         return P;

@@ -6,7 +6,7 @@ n.d(t, {
     L4: () => L,
     Oh: () => E,
     RF: () => b,
-    ZG: () => T,
+    ZG: () => m,
     gO: () => f,
     if: () => I,
     s9: () => y,
@@ -53,11 +53,11 @@ function I(e) {
 function p(e) {
     return null != e && null != e.completedAt && null == e.claimedAt;
 }
-function T(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(s.default.locale, t);
 }
-let m = {
+let T = {
     [c.uF.QUEST_BAR]: c.p9.DESKTOP_ACCOUNT_PANEL_AREA,
     [c.uF.QUEST_BAR_V2]: c.p9.DESKTOP_ACCOUNT_PANEL_AREA,
     [c.uF.QUEST_BAR_MOBILE]: c.p9.MOBILE_HOME_DOCK_AREA,
@@ -67,11 +67,11 @@ let m = {
     [c.uF.VIDEO_MODAL_MOBILE]: c.p9.VIDEO_MODAL_MOBILE,
 };
 function g(e) {
-    return m[e];
+    return T[e];
 }
 function S(e, t) {
     if (null != t && _.cY.has(t)) return !1;
-    let n = m[e];
+    let n = T[e];
     return null != n && _.J6.has(n);
 }
 function N(e) {
@@ -97,21 +97,21 @@ function O(e, t) {
     return e === c.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? N(i) : null == i ? null : N(i);
 }
 function R(e, t) {
-    let n = m[t];
+    let n = T[t];
     if (null == n) return _.K3;
     let { adDecisionData: i, questId: r, adCreativeId: a } = O(n, e) ?? {};
     return null != i && (r === e || a === e || i.ad_id === e) ? i : _.K3;
 }
 function L(e, t) {
-    let n = m[e];
+    let n = T[e];
     if (null != n) return O(n, t)?.metadataSealed;
 }
 function y(e, t) {
-    let n = m[e];
+    let n = T[e];
     if (null != n) return O(n, t)?.provenanceMetadataSealed;
 }
 function D(e, t, n) {
-    let i = m[e];
+    let i = T[e];
     if (null != i) {
         let { trafficMetadataSealed: e, questId: r } = O(i, n) ?? {};
         if (null != e && (null != n || r === t)) return e;
@@ -122,7 +122,7 @@ function D(e, t, n) {
     }
 }
 function v(e, t) {
-    let n = m[e];
+    let n = T[e];
     if (null != n) return O(n, t)?.adContext;
 }
 function b(e, t) {

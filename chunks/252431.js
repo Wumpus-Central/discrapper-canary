@@ -48,7 +48,7 @@ function I() {
 function p() {
     I({ keepLocalItems: !0 });
 }
-function T(e) {
+function m(e) {
     return {
         ...e,
         kind: "notification-center-item",
@@ -56,8 +56,8 @@ function T(e) {
         applicationId: null != e.application ? e.application.id : void 0,
     };
 }
-function m(e) {
-    let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? T(e.item) : e.item;
+function T(e) {
+    let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? m(e.item) : e.item;
     if (!h.initialized || !f(t) || h.notifCenterIds.has(t.id)) return !1;
     (h.notifCenterIds.add(t.id),
         (h.notifCenterItems = [t, ...h.notifCenterItems]),
@@ -201,13 +201,13 @@ let L = new R(r.h, {
         let { guildScheduledEvent: t } = e;
         O(t);
     },
-    NOTIFICATION_CENTER_ITEM_CREATE: m,
+    NOTIFICATION_CENTER_ITEM_CREATE: T,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
         let { id: t } = e;
         if (!h.notifCenterIds.has(t)) return !1;
         (h.notifCenterIds.delete(t), (h.notifCenterItems = h.notifCenterItems.filter((e) => e.id !== t)));
     },
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: m,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: T,
     LOAD_NOTIFICATION_CENTER_ITEMS: function () {
         h.loading = !0;
     },
@@ -223,7 +223,7 @@ let L = new R(r.h, {
             (h.isDataStale = !1),
             (null != i && h.notifCenterIds.has(i)) ||
                 ((h.paginationHasMore = t.length > 0 && n), (h.paginationCursor = t.length > 0 ? i : void 0)),
-            (h.notifCenterItems = [...h.notifCenterItems, ...t.map(T).filter((e) => !h.notifCenterIds.has(e.id))]),
+            (h.notifCenterItems = [...h.notifCenterItems, ...t.map(m).filter((e) => !h.notifCenterIds.has(e.id))]),
             h.notifCenterItems.sort((e, t) => u.default.compare(t.id, e.id)),
             t.forEach((e) => h.notifCenterIds.add(e.id)));
     },

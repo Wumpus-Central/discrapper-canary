@@ -6,7 +6,7 @@ var a = n(143236),
     o = n(175259),
     d = n(478676),
     c = n.n(d);
-let { newline: u, paragraph: _, url: E, link: A, strong: h, u: f, br: I, em: p, image: T, text: m } = d.defaultRules,
+let { newline: u, paragraph: _, url: E, link: A, strong: h, u: f, br: I, em: p, image: m, text: T } = d.defaultRules,
     g = {
         newline: u,
         paragraph: _,
@@ -22,9 +22,9 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: f, br: I, em: p, 
         u: f,
         br: I,
         em: p,
-        image: T,
+        image: m,
         hook: {
-            order: m.order,
+            order: T.order,
             match: (0, d.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
             parse(e, t, n) {
                 let { context: i } = n;
@@ -33,7 +33,7 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: f, br: I, em: p, 
             react: (e, t, n) => e.render(t(e.content, n), n.key),
         },
         noparse: {
-            order: m.order,
+            order: T.order,
             match: (0, d.inlineRegex)(/^!!(\d+?)!!/),
             parse(e, t, n) {
                 let { unsafeContext: i } = n,
@@ -42,7 +42,7 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: f, br: I, em: p, 
             },
             react: (e) => e.content,
         },
-        text: m,
+        text: T,
     },
     S = /\{.+?\}/,
     N = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,

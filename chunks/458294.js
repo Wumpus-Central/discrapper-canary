@@ -16,8 +16,8 @@ var d = n(395504),
     f = n(280450),
     I = n(734057),
     p = n(71393),
-    T = n(536802),
-    m = n(576705),
+    m = n(536802),
+    T = n(576705),
     g = n(573163),
     S = n(309010),
     N = n(543465),
@@ -64,7 +64,7 @@ function G(e) {
                 (e.isThread()
                     ? u.A.isMuted(e.id) || N.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id)
                     : N.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id))) ||
-            (!e.isPrivate() && (w(e, t, (0, d.WW)(e.guild_id)) || !m.A.can(e.accessPermissions, e)))
+            (!e.isPrivate() && (w(e, t, (0, d.WW)(e.guild_id)) || !T.A.can(e.accessPermissions, e)))
         ) &&
         (t > 0 || N.Ay.resolveUnreadSetting(e) === L.e.ALL_MESSAGES)
     );
@@ -157,7 +157,7 @@ function Y(e, t) {
             _ = N.Ay.getChannelOverrides(n),
             h = (0, d.WW)(n),
             f = (0, s.EV)(),
-            T = { userCanSeeNSFW: f, guildIsNSFW: !f && (0, A.wh)(p.A.getGuild(n)) },
+            m = { userCanSeeNSFW: f, guildIsNSFW: !f && (0, A.wh)(p.A.getGuild(n)) },
             S = I.A.getMutableBasicGuildChannelsForGuild(n);
         for (let t in S) {
             var r, a, l;
@@ -168,7 +168,7 @@ function Y(e, t) {
                     mentionCount: c,
                     unread: u,
                     isMentionLowImportance: A,
-                } = g.Ay.getGuildChannelUnreadState(n, h, _, s, d, T),
+                } = g.Ay.getGuildChannelUnreadState(n, h, _, s, d, m),
                 f = c > 0;
             if (!f && s) continue;
             let I = !d && (!s || f) && u;
@@ -176,7 +176,7 @@ function Y(e, t) {
                 ((r = n),
                 (a = c),
                 (l = h),
-                !(((0, E.ay)(r.type) && 0 === a) || !m.A.canBasicChannel((0, E.pd)(r.type), r) || w(r, a, l)) &&
+                !(((0, E.ay)(r.type) && 0 === a) || !T.A.canBasicChannel((0, E.pd)(r.type), r) || w(r, a, l)) &&
                     !("flags" in r && r.hasFlag(R.lx.IS_GUILD_RESOURCE_CHANNEL)) &&
                     (a > 0 || N.Ay.resolveUnreadSetting(r) === L.e.ALL_MESSAGES)) &&
                 (I && ((i.unreadByType[L.P.CHANNEL] = !0), (i.unreadChannelId = t)),
@@ -374,10 +374,10 @@ function ep(e) {
         n = new Set(t.map((e) => e.guild_id ?? y));
     return h.default.keys(D).reduce((e, t) => (n.has(t) && Y(t)) || e, !1);
 }
-function eT() {
+function em() {
     for (let e in D) D[e].ncMentionCount = 0;
 }
-function em(e) {
+function eT(e) {
     let { guildId: t } = e;
     return Y(t);
 }
@@ -388,7 +388,7 @@ function eg(e) {
         null != t && j(t.getGuildId(), [e]);
     });
 }
-class eS extends T.A {
+class eS extends m.A {
     static displayName = "GuildReadStateStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -422,10 +422,10 @@ class eS extends T.A {
             PASSIVE_UPDATE_V2: eE,
             GUILD_MEMBER_UPDATE: J,
             USER_GUILD_SETTINGS_FULL_UPDATE: ep,
-            USER_GUILD_SETTINGS_CHANNEL_UPDATE: em,
-            USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: em,
-            USER_GUILD_SETTINGS_GUILD_UPDATE: em,
-            USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: em,
+            USER_GUILD_SETTINGS_CHANNEL_UPDATE: eT,
+            USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: eT,
+            USER_GUILD_SETTINGS_GUILD_UPDATE: eT,
+            USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: eT,
             GUILD_FEATURE_ACK: ed,
             GUILD_SCHEDULED_EVENT_CREATE: el,
             GUILD_SCHEDULED_EVENT_UPDATE: el,
@@ -439,13 +439,13 @@ class eS extends T.A {
             VOICE_CHANNEL_SELECT: ee,
             ENABLE_AUTOMATIC_ACK: ee,
             RESORT_THREADS: ee,
-            NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: eT,
+            NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: em,
             TRY_ACK: ee,
             LOAD_RECENT_MENTIONS_SUCCESS: eg,
         });
     }
     initialize() {
-        this.waitFor(I.A, p.A, S.Ay, g.Ay, m.A, f.default, C.default, N.Ay, c.A, u.A, o.Ay);
+        this.waitFor(I.A, p.A, S.Ay, g.Ay, T.A, f.default, C.default, N.Ay, c.A, u.A, o.Ay);
     }
     loadCache() {
         let e = this.readSnapshot(eS.LATEST_SNAPSHOT_VERSION);
@@ -487,7 +487,7 @@ class eS extends T.A {
             if (
                 null != n &&
                 (!n.isGuildVocal() || 0 !== g.Ay.getMentionCount(e)) &&
-                m.A.can(n.accessPermissions, n) &&
+                T.A.can(n.accessPermissions, n) &&
                 g.Ay.hasUnreadOrMentions(e)
             )
                 return !0;

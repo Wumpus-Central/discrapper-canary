@@ -108,9 +108,9 @@ class p {
         return !!n.has(t) && (n.del(t), this._onChange(e, n.keys()), !0);
     }
 }
-var T = n(652215);
-function m(e) {
-    return null != e && "null" !== e && e !== T.ME && "undefined" !== e && !(0, d.ai)(e);
+var m = n(652215);
+function T(e) {
+    return null != e && "null" !== e && e !== m.ME && "undefined" !== e && !(0, d.ai)(e);
 }
 class g {
     _members = new h((e, t) => this._enqueue(e, { members: t }));
@@ -186,28 +186,28 @@ class g {
             (this._pending = {}));
     }
     subscribeUser(e, t) {
-        m(e) && this._members.subscribe(e, t);
+        T(e) && this._members.subscribe(e, t);
     }
     unsubscribeUser(e, t) {
-        m(e) && this._members.unsubscribe(e, t);
+        T(e) && this._members.unsubscribe(e, t);
     }
     subscribeChannel(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        return !!m(e) && this._channels.subscribe(e, t, n, i);
+        return !!T(e) && this._channels.subscribe(e, t, n, i);
     }
     subscribeToMemberUpdates(e) {
-        if (!m(e)) return !1;
+        if (!T(e)) return !1;
         (this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e));
     }
     unsubscribeFromMemberUpdates(e) {
-        if (!m(e)) return !1;
+        if (!T(e)) return !1;
         this._enqueue(e, { member_updates: !1 });
     }
     subscribeThreadMemberList(e, t, n) {
-        return !!m(e) && this._threadMemberLists.subscribe(e, t, n);
+        return !!T(e) && this._threadMemberLists.subscribe(e, t, n);
     }
     unsubscribeThreadMemberList(e, t) {
-        return !!m(e) && this._threadMemberLists.unsubscribe(e, t);
+        return !!T(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
         (this._subscribeToFeature(e, this._typing, { typing: !0 }),
@@ -215,7 +215,7 @@ class g {
             this._subscribeToFeature(e, this._threads, { threads: !0 }));
     }
     _subscribeToFeature(e, t, n) {
-        !m(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
+        !T(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
     }
 }
 var S = n(736056),
@@ -249,7 +249,7 @@ function x(e, t) {
 }
 function k(e, t) {
     let n = (0, d.ai)(e) && null != t ? (y.A.getChannel(t)?.getGuildId() ?? e) : e;
-    return (G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === T.YvQ.MEMBERS && F(e, t, c.LD, !0));
+    return (G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === m.YvQ.MEMBERS && F(e, t, c.LD, !0));
 }
 function F(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -258,7 +258,7 @@ function F(e, t, n) {
     if (null == r) return !1;
     let a = r.getGuildId();
     return (a !== e && (0, d.ai)(e) && G.subscribeToGuild(a), r?.isThread())
-        ? r.type === T.rbe.ANNOUNCEMENT_THREAD
+        ? r.type === m.rbe.ANNOUNCEMENT_THREAD
             ? G.subscribeChannel(a, r.parent_id, n, i)
             : !!r.isActiveThread() && G.subscribeThreadMemberList(a, t, U.Ay.getChannelId())
         : G.subscribeChannel(a, t, n, i);

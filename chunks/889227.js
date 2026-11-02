@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(938796));
+(n.d(t, { A: () => T }), n(938796));
 var i = n(136722),
     r = n(665260),
     a = n(441574),
@@ -15,8 +15,8 @@ var i = n(136722),
     f = n(474090),
     I = n(935208),
     p = n(652215),
-    T = n(202541);
-class m extends s.A {
+    m = n(202541);
+class T extends s.A {
     id;
     username;
     discriminator;
@@ -202,20 +202,20 @@ class m extends s.A {
         return (0, r.Lt)(this.premiumUsageFlags, e);
     }
     hasHadSKU(e) {
-        let t = T.OO[e];
+        let t = m.OO[e];
         return null != t && this.hasPurchasedFlag(t);
     }
     hasHadPremium() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = this.hasPurchasedFlag(T.lA.PREMIUM_TIER_0),
-            n = this.hasPurchasedFlag(T.lA.PREMIUM_TIER_1),
-            i = this.hasPurchasedFlag(T.lA.PREMIUM_TIER_2);
+            t = this.hasPurchasedFlag(m.lA.PREMIUM_TIER_0),
+            n = this.hasPurchasedFlag(m.lA.PREMIUM_TIER_1),
+            i = this.hasPurchasedFlag(m.lA.PREMIUM_TIER_2);
         switch (e) {
-            case T.PremiumTypes.TIER_0:
+            case m.PremiumTypes.TIER_0:
                 return t;
-            case T.PremiumTypes.TIER_1:
+            case m.PremiumTypes.TIER_1:
                 return n;
-            case T.PremiumTypes.TIER_2:
+            case m.PremiumTypes.TIER_2:
                 return i;
             default:
                 return t || n || i;
@@ -232,14 +232,14 @@ class m extends s.A {
         return (0, f.ki)(this) && this.premiumState?.premiumSource === a.fE.REVERSE_TRIAL;
     }
     isPremiumWithPremiumGroup() {
-        return (0, f.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
+        return (0, f.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
     }
     hasPaidTier2Subscription() {
-        return (0, f.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
+        return (0, f.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
     }
     isPremiumWithFractionalPremiumOnly() {
         return (
-            (0, f.ki)(this, T.PremiumTypes.TIER_2) &&
+            (0, f.ki)(this, m.PremiumTypes.TIER_2) &&
             (this.premiumState?.premiumSubscriptionType === a.jK.NONE_UNSPECIFIED ||
                 this.premiumState?.premiumSubscriptionType === a.jK.BOOST_ONLY) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO
@@ -247,13 +247,13 @@ class m extends s.A {
     }
     isFractionalPremiumWithNoStandardSub() {
         return (
-            (0, f.ki)(this, T.PremiumTypes.TIER_2) &&
+            (0, f.ki)(this, m.PremiumTypes.TIER_2) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO &&
             this.premiumState.premiumSubscriptionType !== a.jK.TIER_2
         );
     }
     isFractionalPremium() {
-        return (0, f.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
+        return (0, f.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
     }
     hasUrgentMessages() {
         return this.hasFlag(p.nhx.HAS_UNREAD_URGENT_MESSAGES);
@@ -298,4 +298,4 @@ class m extends s.A {
         return this.premiumState?.premiumSubscriptionGroupRole ?? a.qT.UNSPECIFIED;
     }
 }
-new m({ id: "0" });
+new T({ id: "0" });

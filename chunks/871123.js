@@ -44,17 +44,17 @@ var i = n(435558),
     f = n(832163),
     I = n(79871),
     p = n(188275),
-    T = n(652215),
-    m = n(758836);
+    m = n(652215),
+    T = n(758836);
 let g = A.QB ? "webp" : "jpg";
 function S(e) {
-    return null != e && e.productLine === T.EZt.SOCIAL_LAYER_GAME_ITEM;
+    return null != e && e.productLine === m.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
 function N(e) {
     if (f.A.getStorefrontGuildIds().has(e.id)) return !0;
     if ("type" in e) return !1;
     let t = z(e, f.A.getApplicationIdFromGuildId(e.id));
-    return !!f.A.hasStorefrontForApplicationId(t) || (e.features?.has(T.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
+    return !!f.A.hasStorefrontForApplicationId(t) || (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function C(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
@@ -179,12 +179,12 @@ function x(e) {
 }
 function k(e, t, n, i) {
     let { tab: r, applicationId: s, skuId: l } = (0, a.parse)(t);
-    return e.indexOf(T.BVt.COLLECTIBLES_SHOP) >= 0 && r === m.G2.GAME_SHOPS && s === n && (null == i || l === i);
+    return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === T.G2.GAME_SHOPS && s === n && (null == i || l === i);
 }
 function F(e, t) {
     return null == e || k(location.pathname, location.search, t.applicationId)
-        ? `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${T.BVt.COLLECTIBLES_SHOP_GAME_SHOP(t.applicationId, void 0, t.id, t.slug)}`
-        : `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${T.BVt.GAME_SHOP(e, t.id, t.slug)}`;
+        ? `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${m.BVt.COLLECTIBLES_SHOP_GAME_SHOP(t.applicationId, void 0, t.id, t.slug)}`
+        : `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${m.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
 function B(e, t) {
     return `${F(e, t)}
@@ -195,8 +195,8 @@ function V(e, t) {
     let n = E.A.getGuildId(),
         i =
             null != n && location.pathname.indexOf((0, p.Ny)(n)) >= 0
-                ? T.BVt.GAME_SHOP(n)
-                : T.BVt.COLLECTIBLES_SHOP_GAME_SHOP(e),
+                ? m.BVt.GAME_SHOP(n)
+                : m.BVt.COLLECTIBLES_SHOP_GAME_SHOP(e),
         r = new URL(`${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${i}`);
     return (r.searchParams.set("skuIds", t.join(",")), r.toString());
 }
@@ -236,7 +236,7 @@ function Y(e, t, n, i) {
 }
 function K(e) {
     let { pathname: t, search: n, pageIndex: i = 0, applicationId: r, guildId: a, skuId: s } = e;
-    return k(t, n, r, s) || (null != a && t.includes(T.BVt.CHANNELS_GAME_SHOP(a, i, s)));
+    return k(t, n, r, s) || (null != a && t.includes(m.BVt.CHANNELS_GAME_SHOP(a, i, s)));
 }
 function $(e) {
     let t = (0, s.bG)([f.A], () => f.A.getGuildIdFromApplicationId(e)),

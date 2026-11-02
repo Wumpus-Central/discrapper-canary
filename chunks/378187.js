@@ -15,8 +15,8 @@ var i = n(412703),
     f = n(927813),
     I = n(403362),
     p = n(427495),
-    T = n(859703),
-    m = n(738822),
+    m = n(859703),
+    T = n(738822),
     g = n(759366),
     S = n(590202),
     N = n(851936),
@@ -34,13 +34,13 @@ function M(e) {
 }
 function U(e) {
     let t = g.A.getState().autoEnroll,
-        n = T.A.quests;
+        n = m.A.quests;
     for (let i of (0, O.jm)(n, e))
         if (t && 1)
             return (0, p.Oy)(i.id, {
-                questContent: m.uF.RUNNING_ACTIVITY,
+                questContent: T.uF.RUNNING_ACTIVITY,
                 questContentCTA: S.Cy.START_QUEST,
-                sourceQuestContent: m.uF.RUNNING_ACTIVITY,
+                sourceQuestContent: T.uF.RUNNING_ACTIVITY,
             });
 }
 function w(e) {
@@ -53,7 +53,7 @@ class G extends a.A {
         [i.n.PLAY_ACTIVITY]: new Map(),
     };
     calculateHeartbeatDurationMs = (e) => {
-        let t = T.A.quests.get(e);
+        let t = m.A.quests.get(e);
         if (null == t || null == t.config || null == t.userStatus) return v;
         let { progressSeconds: n, targetSeconds: r } = (0, R.Yh)(t, i.o.DESKTOP),
             a = Math.max(0, (r - n) * f.A.Millis.SECOND);
@@ -101,7 +101,7 @@ class G extends a.A {
     };
     terminateHeartbeat = (e, t) => {
         let n = this.heartbeats[t],
-            i = T.A.quests,
+            i = m.A.quests,
             r = n.get(e);
         if (null != r) {
             (P.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
@@ -136,7 +136,7 @@ class G extends a.A {
                 t = this.getActivelyProgressingQuests(i);
             for (let n of new Set(e.keys())) t.has(n) || this.terminateHeartbeat(n, i);
             for (let [r, a] of t.entries())
-                !e.has(r) && (null == n || n(T.A.quests.get(r))) && this.initiateHeartbeat(r, i, a);
+                !e.has(r) && (null == n || n(m.A.quests.get(r))) && this.initiateHeartbeat(r, i, a);
         }
     }
     getActivelyProgressingQuests(e) {
@@ -155,7 +155,7 @@ class G extends a.A {
         let e = new Map(),
             t = d.Ay.getRunningGames(),
             n = d.Ay.getRunningNonGames(),
-            i = T.A.quests;
+            i = m.A.quests;
         P.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
         let r = {};
         for (let e of t) {
@@ -210,7 +210,7 @@ class G extends a.A {
         P.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
         let i = n.id;
         if (null == i) return e;
-        for (let t of T.A.quests.values()) {
+        for (let t of m.A.quests.values()) {
             let n = (0, R.a2)(t);
             M(t) && null != n && n === i && e.set(t.id, { applicationId: i });
         }
@@ -233,7 +233,7 @@ class G extends a.A {
             0 === i.size)
         )
             return e;
-        let r = T.A.quests;
+        let r = m.A.quests;
         for (let t of i)
             for (let n of r.values()) {
                 let i = (0, R.vS)(n);

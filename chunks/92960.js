@@ -15,8 +15,8 @@ var i = n(367513),
     f = n(734057),
     I = n(72314),
     p = n(31717),
-    T = n(580745),
-    m = n(232835),
+    m = n(580745),
+    T = n(232835),
     g = n(573163),
     S = n(309010),
     N = n(967198),
@@ -68,7 +68,7 @@ function y(e) {
 }
 function D(e) {
     if (null != e) {
-        if (T.A.isEditingAny(e)) return (a.A.endEditMessage(e), !1);
+        if (m.A.isEditingAny(e)) return (a.A.endEditMessage(e), !1);
         if (null != c.A.getPendingReply(e)) return ((0, d.Jx)(e), !1);
         if (null != p.A.getScheduledMessage(e)) return (r.A.clearDraft(e, p.C.ScheduledMessage), !1);
         if (null != E.A.getStickerPreview(e, p.C.ChannelMessage)) return ((0, A.x5)(e, p.C.ChannelMessage), !1);
@@ -78,7 +78,7 @@ function v(e) {
     if (null == e) return !1;
     let t = !1;
     return (
-        m.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, L.EMb), (t = !0)),
+        T.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, L.EMb), (t = !0)),
         g.Ay.hasUnread(e) &&
             ((0, s.ack)(e, {
                 object: L.ZSU.MARK_CHANNEL_AS_READ_KEYBIND,

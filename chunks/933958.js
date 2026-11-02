@@ -15,8 +15,8 @@ var r = n(17928),
     f = n(240583),
     I = n(956518),
     p = n(878549),
-    T = n(969151),
-    m = n(847381),
+    m = n(969151),
+    T = n(847381),
     g = n(108959),
     S = n(818023),
     N = n(5867),
@@ -106,9 +106,9 @@ function X(e) {
             participants: e.participants.map(z),
             contentClassification: e.content_classification,
         },
-        m = (0, I.Ay)(r);
-    if (null == m) return;
-    let S = (0, T.H)(o),
+        T = (0, I.Ay)(r);
+    if (null == T) return;
+    let S = (0, m.H)(o),
         O = 0 === (null != S ? (b.get(S)?.getItems("all") ?? R) : R).length,
         L = (P.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
         y = A.map((e) => e.userId),
@@ -124,7 +124,7 @@ function X(e) {
             location: o,
             launchId: s,
             compositeInstanceId: l,
-            url: m,
+            url: T,
             userIds: new Set(y),
             participants: A,
             contentClassification: f,
@@ -152,14 +152,14 @@ function X(e) {
                               isStart: A,
                               referrerId: f,
                               customId: p,
-                              inviterUserId: m,
+                              inviterUserId: T,
                               proxyTicket: S,
                               renderInFramePool: O,
                           } = e,
                           R = (0, I.Ay)(t),
                           L = d.default.getSessionId();
                       if (null == R || null == L || D.get(t)?.location.id === s.id) return;
-                      let y = (0, T.H)(s),
+                      let y = (0, m.H)(s),
                           v = c.A.getChannel(y),
                           b = v?.getGuildId();
                       if (null == _.default.getCurrentUser() || (null == b && !v?.isPrivate())) return;
@@ -186,7 +186,7 @@ function X(e) {
                               isStart: A,
                               participants: l,
                               embeddedActivity: P,
-                              inviterUserId: m,
+                              inviterUserId: T,
                           }));
                       let M = (0, h.f)();
                       (!0 === O
@@ -217,7 +217,7 @@ function X(e) {
               Q({ channelId: S ?? null, applicationId: r })),
         (t = y.length > 0 ? W : null),
         $(P, o.id).upsert(r, o.id, t),
-        null != (n = (0, T.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, T.D)(o))).upsert(r, o.id, t)));
+        null != (n = (0, m.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, m.D)(o))).upsert(r, o.id, t)));
 }
 function q(e) {
     e.activity_instances?.forEach((e) => {
@@ -269,7 +269,7 @@ class J extends r.Ay.PersistedStore {
         (e) => (delete e.surfacesToShowNewActivityIndicator, { ...e, dateRangesForSurfaces: {} }),
     ];
     getSelfEmbeddedActivityForChannel(e) {
-        return null == e ? null : (Array.from(D.values()).find((t) => (0, T.H)(t.location) === e) ?? null);
+        return null == e ? null : (Array.from(D.values()).find((t) => (0, m.H)(t.location) === e) ?? null);
     }
     getSelfEmbeddedActivityForLocation(e) {
         return null == e ? null : (Array.from(D.values()).find((t) => t.location.id === e.id) ?? null);
@@ -339,7 +339,7 @@ class J extends r.Ay.PersistedStore {
         return V.get(e);
     }
     getConnectedActivityChannelId() {
-        if (null != i) return (0, T.H)(i);
+        if (null != i) return (0, m.H)(i);
     }
     getConnectedActivityLocation() {
         return i;
@@ -410,7 +410,7 @@ let ee = new J(a.h, {
             b.delete(t.id);
             let r = K(t.guild_id),
                 a = v.get(r);
-            (a?.removeWhere((e) => (0, T.H)(e.location) === t.id),
+            (a?.removeWhere((e) => (0, m.H)(e.location) === t.id),
                 i.forEach((e) => {
                     P.delete(e.location.id);
                 }));
@@ -494,7 +494,7 @@ let ee = new J(a.h, {
             let r = Date.now();
             (!(function (e) {
                 let { activities: t, now: n } = e,
-                    i = (0, m.A)((0, A.getOS)()),
+                    i = (0, T.A)((0, A.getOS)()),
                     r = t.reduce((e, t) => {
                         let r = t.client_platform_config[i];
                         if (null == r.label_from || null == r.label_until) return e;
@@ -540,7 +540,7 @@ let ee = new J(a.h, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             if (null == i) return;
-            let n = (0, T.H)(i);
+            let n = (0, m.H)(i);
             null != n && n !== t && j === N.Gd.PANEL && (j = N.Gd.PIP);
         },
         POPOUT_WINDOW_CLOSE: function (e) {

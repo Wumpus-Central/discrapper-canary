@@ -1,4 +1,4 @@
-(n.d(t, { A: () => T }), n(321073));
+(n.d(t, { A: () => m }), n(321073));
 var i = n(636537),
     r = n(73153),
     a = n(695870),
@@ -51,7 +51,7 @@ function p(e) {
             });
     return ((A[e] = { type: "LOADING", promise: u }), u);
 }
-let T = {
+let m = {
     getLoadState: function (e) {
         return A[e]?.type;
     },

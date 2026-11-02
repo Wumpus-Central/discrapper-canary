@@ -15,10 +15,10 @@ let A = null,
     f = null,
     I = null,
     p = !1;
-function T() {
+function m() {
     null != f && (clearTimeout(f), (f = null));
 }
-function m(e) {
+function T(e) {
     let t = _.ZR.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
@@ -26,7 +26,7 @@ function g() {
     null != I && (clearTimeout(I), (I = null));
 }
 function S() {
-    return (T(), g(), (A = null), null != h && ((h = null), !0));
+    return (m(), g(), (A = null), null != h && ((h = null), !0));
 }
 function N(e) {
     let { withGracePeriod: t } = e;
@@ -48,14 +48,14 @@ function N(e) {
                   }, 3e4)),
               !1)
             : S()
-        : (T(),
+        : (m(),
           (n !== A || null == h) &&
               ((A = n),
-              (h = { type: i.$.PLAYING, name: _.Vb, details: m(), timestamps: { start: Date.now() } }),
+              (h = { type: i.$.PLAYING, name: _.Vb, details: T(), timestamps: { start: Date.now() } }),
               !(function e() {
                   (g(),
                       (I = setTimeout(() => {
-                          ((I = null), null != h && ((h = { ...h, details: m(h.details) }), e(), L.emitChange()));
+                          ((I = null), null != h && ((h = { ...h, details: T(h.details) }), e(), L.emitChange()));
                       }, 3e5)));
               })(),
               !0));

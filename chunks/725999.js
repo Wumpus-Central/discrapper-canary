@@ -44,8 +44,8 @@ var h = n(582128),
     f = n(284009),
     I = n.n(f),
     p = n(972347),
-    T = n(738239),
-    m = n.n(T),
+    m = n(738239),
+    T = n.n(m),
     g = n(941426),
     S = n(904986),
     N = n(651139),
@@ -1261,8 +1261,8 @@ var eh = n(800754),
     ef = n.n(eh),
     eI = n(226782),
     ep = n.n(eI),
-    eT = n(316179);
-let em = new g.Vy("SDP");
+    em = n(316179);
+let eT = new g.Vy("SDP");
 var eg =
     (((o = {}).SENDRECV = "sendrecv"),
     (o.SENDONLY = "sendonly"),
@@ -1293,7 +1293,7 @@ function eC(e, t, n) {
     ];
 }
 function eO(e) {
-    return eT.write({
+    return em.write({
         version: 0,
         timing: { start: 0, stop: 0 },
         origin: {
@@ -1349,7 +1349,7 @@ function eR(e) {
         };
     let {
         media: [f],
-    } = eT.parse(a);
+    } = em.parse(a);
     if (
         ((f.type = n),
         (f.protocol = eS),
@@ -1437,7 +1437,7 @@ function eL(e, t, n, i, r) {
     return { type: n, name: i, priority: r + 1, payloadType: a.payload, rtxPayloadType: l };
 }
 function ey(e, t) {
-    let n = eT.parse(e).media.reduce(
+    let n = em.parse(e).media.reduce(
         (e, n) => {
             let i,
                 { type: r, rtp: a, ssrcs: s, fmtp: l, direction: o, mid: d } = n;
@@ -1461,7 +1461,7 @@ function ey(e, t) {
                         "sendrecv" === o &&
                             (null != (i = s?.find((e) => "cname" === e.attribute)) && (e.videoSSRC = i.id),
                             null != (i = s?.findLast((e) => "cname" === e.attribute)) &&
-                                (i.id === e.videoSSRC && em.warn("Unable to find a unique rtx SSRC!"),
+                                (i.id === e.videoSSRC && eT.warn("Unable to find a unique rtx SSRC!"),
                                 (e.rtxSSRC = i.id))));
             }
             return e;
@@ -1477,17 +1477,17 @@ function eD(e, t) {
     return { sdp: [...new Set(e.split(/\r\n/).filter((e) => r.test(e)))].join("\n"), codecs: n };
 }
 function ev(e) {
-    if (!e.includes("a=fingerprint")) return (em.error("Remote SDP does not include fingerprint!"), !1);
-    if (!e.includes("a=ice-ufrag")) return (em.error("Remote SDP does not include ICE user name!"), !1);
-    if (!e.includes("a=ice-pwd")) return (em.error("Remote SDP does not include ICE password!"), !1);
-    if (!e.includes("a=candidate")) return (em.error("Remote SDP does not include ICE candidate!"), !1);
-    if (!e.includes("c=")) return (em.error("Remote SDP does not include c-line!"), !1);
+    if (!e.includes("a=fingerprint")) return (eT.error("Remote SDP does not include fingerprint!"), !1);
+    if (!e.includes("a=ice-ufrag")) return (eT.error("Remote SDP does not include ICE user name!"), !1);
+    if (!e.includes("a=ice-pwd")) return (eT.error("Remote SDP does not include ICE password!"), !1);
+    if (!e.includes("a=candidate")) return (eT.error("Remote SDP does not include ICE candidate!"), !1);
+    if (!e.includes("c=")) return (eT.error("Remote SDP does not include c-line!"), !1);
     let t = e
         .split("\n")
         .filter((e) => e.startsWith("c="))
         .join()
         .trim();
-    return !(t.split(" ").length < 3) || (em.error(`Incorrect c-line: ${t}`), !1);
+    return !(t.split(" ").length < 3) || (eT.error(`Incorrect c-line: ${t}`), !1);
 }
 function eb(e) {
     return [...new Set(e.split(/\r\n/).filter((e) => e.startsWith("a=extmap:")))].map((e) => {
@@ -1612,7 +1612,7 @@ class eP extends R.EventEmitter {
                     extensions: _,
                 } = e,
                 E = [];
-            if ((em.info(`generateSessionDescription: ${JSON.stringify(u)}`), "Firefox" === A().name)) {
+            if ((eT.info(`generateSessionDescription: ${JSON.stringify(u)}`), "Firefox" === A().name)) {
                 let e = "answer" === t ? "passive" : "active";
                 u.forEach((t) => {
                     let [i, u, A, h, f] = t;
@@ -2645,16 +2645,16 @@ class e1 extends eA {
                 return (
                     _.forEach((e) => {
                         let t,
-                            { ssrc: _, cname: I, type: p, direction: T, mid: m } = e;
+                            { ssrc: _, cname: I, type: p, direction: m, mid: T } = e;
                         ("" !== I
                             ? (t = eC(I, _, "audio" === p ? "a" : "v"))
-                            : ((t = []), "sendonly" === T ? (T = "inactive") : "sendrecv" === T && (T = "recvonly")),
+                            : ((t = []), "sendonly" === m ? (m = "inactive") : "sendrecv" === m && (m = "recvonly")),
                             h.push(
                                 eR({
-                                    mid: m,
+                                    mid: T,
                                     type: p,
                                     setup: f,
-                                    direction: T,
+                                    direction: m,
                                     baseSDP: n,
                                     codec: "audio" === p ? i : s,
                                     payload: "audio" === p ? r : l,
@@ -3271,7 +3271,7 @@ class ts extends p.A {
             case D.O5.AUTOMATIC_GAIN_CONTROL:
                 return "Safari" !== A().name;
             case D.O5.NOISE_CANCELLATION:
-                return m()();
+                return T()();
             case D.O5.QOS:
             case D.O5.ATTENUATION:
             case D.O5.AUTOMATIC_VAD:

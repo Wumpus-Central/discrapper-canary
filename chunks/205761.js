@@ -36,7 +36,7 @@ let h = 100,
     }),
     I = null,
     p = null;
-function T(e) {
+function m(e) {
     let { guildId: t, channelId: n } = e,
         i = !1;
     return (
@@ -53,7 +53,7 @@ function T(e) {
         i
     );
 }
-function m() {
+function T() {
     let e = o.A.frecencyWithoutFetchingLatest.guildAndChannelFrecency?.guildAndChannels;
     if (null == e) return !1;
     f.overwriteHistory(
@@ -68,7 +68,7 @@ class S extends a.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(d.A, c.A, u.Ay, _.A, o.A),
             null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && E.Ut1.test(e.key))), (g = e)),
-            this.syncWith([o.A], m));
+            this.syncWith([o.A], T));
     }
     getState() {
         return g;
@@ -100,8 +100,8 @@ class S extends a.Ay.PersistedStore {
     }
 }
 let N = new S(s.h, {
-    CHANNEL_SELECT: T,
-    VOICE_CHANNEL_SELECT: T,
+    CHANNEL_SELECT: m,
+    VOICE_CHANNEL_SELECT: m,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {
             settings: { type: t },

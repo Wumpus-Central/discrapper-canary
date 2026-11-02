@@ -13,12 +13,12 @@ n.d(t, {
     HA: () => ew,
     Hz: () => eM,
     L4: () => eS,
-    LX: () => m,
+    LX: () => T,
     Me: () => ed,
     Mu: () => w,
     Ot: () => C,
     P4: () => N,
-    QK: () => eT,
+    QK: () => em,
     QY: () => el,
     Qw: () => eP,
     RC: () => ea,
@@ -70,7 +70,7 @@ n.d(t, {
     w6: () => eO,
     xy: () => eG,
     yz: () => es,
-    z2: () => em,
+    z2: () => eT,
     zj: () => M,
     zq: () => z,
 });
@@ -90,18 +90,18 @@ var i,
     f,
     I,
     p = n(626584),
-    T = n(927813),
-    m =
-        (((i = {})[(i.SECONDS_30 = 30 * T.A.Millis.SECOND)] = "SECONDS_30"),
-        (i[(i.MINUTES_1 = T.A.Millis.MINUTE)] = "MINUTES_1"),
-        (i[(i.MINUTES_2 = 2 * T.A.Millis.MINUTE)] = "MINUTES_2"),
+    m = n(927813),
+    T =
+        (((i = {})[(i.SECONDS_30 = 30 * m.A.Millis.SECOND)] = "SECONDS_30"),
+        (i[(i.MINUTES_1 = m.A.Millis.MINUTE)] = "MINUTES_1"),
+        (i[(i.MINUTES_2 = 2 * m.A.Millis.MINUTE)] = "MINUTES_2"),
         i),
     g = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r);
 let S = "v3";
 var N = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
 let C = "alt+c",
     O = "f12",
-    R = 6 * T.A.Millis.SECOND,
+    R = 6 * m.A.Millis.SECOND,
     L = new p.A("Clips"),
     y = 6,
     D = 2,
@@ -119,11 +119,11 @@ let C = "alt+c",
     V = "killIds",
     H = (e) => `Clip - ${new Date(e).toLocaleString()}`,
     j = 15,
-    W = 60 * T.A.Millis.SECOND,
+    W = 60 * m.A.Millis.SECOND,
     Y = 3e4,
     K = 30,
     $ = 10;
-T.A.Millis.DAY;
+m.A.Millis.DAY;
 let z = 10,
     X = 100,
     q = 75,
@@ -194,8 +194,8 @@ function ef(e) {
 }
 var eI = (((A = {}).NONE = "none"), (A.SMALL = "small"), (A.MEDIUM = "medium"), (A.LARGE = "large"), A);
 let ep = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
-    eT = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
-    em = 0.015,
+    em = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
+    eT = 0.015,
     eg = 0.5,
     eS = 2048,
     eN = 0x2000000,

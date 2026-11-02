@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(734057),
     I = n(945886),
     p = n(576705),
-    T = n(573163),
-    m = n(309010),
+    m = n(573163),
+    T = n(309010),
     g = n(543465),
     S = n(403362),
     N = n(935208),
@@ -26,8 +26,8 @@ let R = null,
     L = null,
     y = new C.Ay();
 function D() {
-    let e = m.Ay.getChannelId(),
-        t = m.Ay.getVoiceChannelId();
+    let e = T.Ay.getChannelId(),
+        t = T.Ay.getVoiceChannelId();
     return ((R = e), (L = t), y.clear());
 }
 function v(e) {
@@ -59,8 +59,8 @@ function w(e) {
     return y.nonPositionalChannelIdUpdate(t);
 }
 function G() {
-    let e = m.Ay.getChannelId(),
-        t = m.Ay.getVoiceChannelId(),
+    let e = T.Ay.getChannelId(),
+        t = T.Ay.getVoiceChannelId(),
         n = R !== e || L !== t;
     return (
         !!n &&
@@ -93,7 +93,7 @@ function B(e) {
 class V extends a.Ay.Store {
     static displayName = "ChannelListStore";
     initialize() {
-        this.waitFor(u.A, A.default, h.A, f.A, I.A, l.Ay, d.A, c.Ay, _.A, p.A, T.Ay, m.Ay, g.Ay, E.A);
+        this.waitFor(u.A, A.default, h.A, f.A, I.A, l.Ay, d.A, c.Ay, _.A, p.A, m.Ay, T.Ay, g.Ay, E.A);
     }
     getGuild(e, t) {
         let n = y.getGuild(e, t?.guildActionRows ?? [], t?.channelNoticeRows ?? []);

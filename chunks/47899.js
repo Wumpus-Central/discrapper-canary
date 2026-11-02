@@ -38,8 +38,8 @@ function p() {
         postConnectionOpen: !1,
     };
 }
-let T = (0, i.h)(p),
-    m = !1;
+let m = (0, i.h)(p),
+    T = !1;
 function g(e) {
     return {
         ...e,
@@ -122,17 +122,17 @@ let L = new o.OC(
                 (("client-only" === e.outcome || "server-success" === e.outcome) && h.succeed(),
                 "server-failure" === e.outcome)
             ) {
-                if (M(T.getState())) return h.succeed();
+                if (M(m.getState())) return h.succeed();
                 h.fails >= 3
                     ? h.cancel()
                     : h.fail(() => {
-                          v([...T.getState().candidates.keys()], "retry", e.context.epoch);
+                          v([...m.getState().candidates.keys()], "retry", e.context.epoch);
                       });
             }
         })(n);
         let i = !1;
         ((0, a.r)(() => {
-            T.setState((e) => {
+            m.setState((e) => {
                 let t = g(e),
                     r = (function (e, t) {
                         let n = t.filter((t) => {
@@ -199,7 +199,7 @@ function b() {
     ((f = {}), (I = null), h.succeed(), L.reset());
 }
 function P() {
-    return M(T.getState());
+    return M(m.getState());
 }
 function M(e) {
     if (E.A.upsellBackoffOverridden) return !1;
@@ -210,9 +210,9 @@ function U(e) {
     let t = (0, _.a9)(e.content),
         n = null;
     ((0, a.r)(() => {
-        T.setState((i) => {
+        m.setState((i) => {
             let r = g(i);
-            return m ? r : t ? N(r, e) : (n = y((r.candidates.set(e.content, e), r), e.content)).state;
+            return T ? r : t ? N(r, e) : (n = y((r.candidates.set(e.content, e), r), e.content)).state;
         });
     }),
         null != n && D(n));
@@ -222,7 +222,7 @@ function w(e, t) {
         i = !1,
         r = !1;
     ((0, a.r)(() => {
-        T.setState((a) => {
+        m.setState((a) => {
             let s = g(a);
             if (((i = s.shownFatigableCandidate?.content === e.content), t)) return (n = y(S(C(s, e), e), null)).state;
             {
@@ -234,21 +234,21 @@ function w(e, t) {
         null != n ? D(n, i) : r && b());
 }
 function G(e) {
-    return T.getState().currentlyShown.has(e);
+    return m.getState().currentlyShown.has(e);
 }
 function x(e) {
-    return T((t) => t.currentlyShown.has(e));
+    return m((t) => t.currentlyShown.has(e));
 }
 function k(e) {
-    return T((t) => e.some((e) => t.currentlyShown.has(e)));
+    return m((t) => e.some((e) => t.currentlyShown.has(e)));
 }
 function F() {
-    let e = [...T.getState().currentlyShown].filter((e) => !(0, _.a9)(e)).length;
-    return [T.getState().currentlyShown.size, e];
+    let e = [...m.getState().currentlyShown].filter((e) => !(0, _.a9)(e)).length;
+    return [m.getState().currentlyShown.size, e];
 }
 function B() {
     ((0, a.r)(() => {
-        T.setState(() => {
+        m.setState(() => {
             let e = p();
             return ((e.postConnectionOpen = !0), e);
         });
@@ -257,14 +257,14 @@ function B() {
 }
 function V() {
     (0, a.r)(() => {
-        T.setState((e) => {
+        m.setState((e) => {
             let t = g(e);
             return ((t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t);
         });
     });
 }
 function H() {
-    return T.getState().postConnectionOpen;
+    return m.getState().postConnectionOpen;
 }
 class j extends s.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
@@ -272,7 +272,7 @@ class j extends s.Ay.Store {
         (this.waitFor(E.A, c.A, u.A), this.syncWith([c.A, u.A], () => this.setHasRequiredAction()));
     }
     setHasRequiredAction() {
-        m = (function () {
+        T = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.A,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.A;
             return null != t.getAction() || Object.keys(e.getState()).length > 0;
@@ -280,6 +280,6 @@ class j extends s.Ay.Store {
     }
 }
 function W(e, t) {
-    return T(e, t);
+    return m(e, t);
 }
 new j(d.h, { CONNECTION_OPEN: () => B(), LOGOUT: () => B() });

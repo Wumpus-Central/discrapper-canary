@@ -15,8 +15,8 @@ var i = n(649852),
     f = n(309010),
     I = n(287809),
     p = n(174459),
-    T = n(650338),
-    m = n(652215),
+    m = n(650338),
+    T = n(652215),
     g = n(257645),
     S = n(731854);
 let N = new s.A("AudioActionCreators");
@@ -36,7 +36,7 @@ function R(e, t, n, i) {
         d = e[n],
         c = A.Ay.getMediaEngine().getAudioSubsystem(),
         u = A.Ay.getMediaEngine().getAudioLayer();
-    p.default.track(m.HAw.MEDIA_DEVICE_CHANGED, {
+    p.default.track(T.HAw.MEDIA_DEVICE_CHANGED, {
         device_from_name: _.A.getCertifiedDeviceName(t, null != o ? o.name : ""),
         device_to_name: _.A.getCertifiedDeviceName(n, null != d ? d.name : ""),
         device_type: i,
@@ -50,7 +50,7 @@ function R(e, t, n, i) {
 }
 N.enableNativeLogger(!0);
 let L = r()((e, t, n) => {
-        p.default.track(m.HAw.USER_VOLUME_SETTING_UPDATED, {
+        p.default.track(T.HAw.USER_VOLUME_SETTING_UPDATED, {
             target_user_id: e,
             context: t,
             volume: n,
@@ -162,7 +162,7 @@ let L = r()((e, t, n) => {
                     r = f.Ay.getVoiceChannelId(),
                     a = null != r ? E.A.getChannel(r) : null,
                     s = O();
-                p.default.track(m.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
+                p.default.track(T.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
                     mode: e,
                     location_stack: i,
                     voice_channel_type: a?.type,
@@ -170,13 +170,13 @@ let L = r()((e, t, n) => {
                     audio_subsystem: t,
                     audio_layer: n,
                 });
-            } else if (e === m.TBI.VOICE_ACTIVITY && s !== t) {
+            } else if (e === T.TBI.VOICE_ACTIVITY && s !== t) {
                 let e = A.Ay.getMediaEngine().getAudioSubsystem(),
                     n = A.Ay.getMediaEngine().getAudioLayer(),
                     r = f.Ay.getVoiceChannelId(),
                     a = null != r ? E.A.getChannel(r) : null,
                     l = O();
-                p.default.track(m.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
+                p.default.track(T.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
                     location_stack: i,
                     voice_channel_type: a?.type,
                     input_device_name: l,
@@ -198,7 +198,7 @@ let L = r()((e, t, n) => {
             a.h.dispatch({ type: "AUDIO_SET_INPUT_VOLUME", volume: e });
             let n = f.Ay.getVoiceChannelId(),
                 i = null != n ? E.A.getChannel(n) : null;
-            p.default.track(m.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
+            p.default.track(T.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: i?.type,
@@ -210,7 +210,7 @@ let L = r()((e, t, n) => {
             a.h.dispatch({ type: "AUDIO_SET_OUTPUT_VOLUME", volume: e });
             let n = f.Ay.getVoiceChannelId(),
                 i = null != n ? E.A.getChannel(n) : null;
-            p.default.track(m.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
+            p.default.track(T.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: i?.type,
@@ -342,7 +342,7 @@ let L = r()((e, t, n) => {
         },
         setGoLiveSource(e) {
             (e?.qualityOptions != null &&
-                (0, T.K2)(
+                (0, m.K2)(
                     e.qualityOptions.preset,
                     e.qualityOptions.resolution,
                     e.qualityOptions.frameRate,

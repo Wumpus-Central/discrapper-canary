@@ -46,7 +46,7 @@ function I(e) {
 function p(e, t, n, i) {
     return !(e !== t || null == n || i.has(n)) && (i.add(n), !0);
 }
-class T extends i.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "PoggermodeStore";
     initialize() {
         this.waitFor(l.default, c.A, o.Ay);
@@ -76,7 +76,7 @@ class T extends i.Ay.Store {
         return null != r ? (0, u.U$)(r, i) * n : 0;
     }
 }
-let m = new T(s.h, {
+let T = new m(s.h, {
         POGGERMODE_UPDATE_COMBO: function (e) {
             let { type: t, ...n } = e;
             if (!c.A.isEnabled()) return !1;
@@ -98,8 +98,8 @@ let m = new T(s.h, {
                                 let n = r.multiplier !== t.multiplier && r.value !== t.value;
                                 t.value <= 0 || n
                                     ? (t.decayInterval?.stop(),
-                                      t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), m.emitChange()))
-                                    : (e({ ...t, value: t.value - 1 }), m.emitChange());
+                                      t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), T.emitChange()))
+                                    : (e({ ...t, value: t.value - 1 }), T.emitChange());
                             }
                         }));
             })(n);
@@ -130,4 +130,4 @@ let m = new T(s.h, {
             return !1;
         },
     }),
-    g = m;
+    g = T;

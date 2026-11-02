@@ -15,8 +15,8 @@ var i = n(481613),
     f = n(73153),
     I = n(181658),
     p = n(178253),
-    T = n(811024);
-function m(e) {
+    m = n(811024);
+function T(e) {
     let { channelId: t, applicationId: n, intent: i, inviterUserId: r, analyticsLocations: a, commandOrigin: s } = e;
     f.h.dispatch({
         type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN",
@@ -180,7 +180,7 @@ function e_(e, t) {
                                                     c === o.y.EMBEDDED_APPLICATION &&
                                                         null != u &&
                                                         ((0, k.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
-                                                        m({
+                                                        T({
                                                             channelId: I,
                                                             applicationId: u,
                                                             intent: r?.intent,
@@ -192,11 +192,11 @@ function e_(e, t) {
                                         !_ && (0, y.V)(t, [Y.A, Z.default, W.Ay]) ? (0, L.Ze)(t, l) : l();
                                     });
                                 })
-                              : (0, T.AX)(f) &&
+                              : (0, m.AX)(f) &&
                                 c === o.y.EMBEDDED_APPLICATION &&
                                 null != u &&
                                 ((0, k.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
-                                m({
+                                T({
                                     channelId: I,
                                     applicationId: u,
                                     intent: r?.intent,
@@ -386,24 +386,24 @@ let ef = {
             A = (0, U.m0)(o),
             h = V.default.getSessionId(),
             I = K.A.getReceivedInstallationIdForInviteCode(A),
-            T = $.A.getInvite(o);
-        if (null != T)
-            ((i = T.guild_scheduled_event),
+            m = $.A.getInvite(o);
+        if (null != m)
+            ((i = m.guild_scheduled_event),
                 (s = i?.id),
-                (r = T.target_channel_id ?? void 0),
-                (a = T.target_message_id ?? void 0));
+                (r = m.target_channel_id ?? void 0),
+                (a = m.target_message_id ?? void 0));
         else {
             let e = (0, U.y$)(o);
             ((s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId));
         }
-        let m = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
+        let T = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
             S = Z.default.getCurrentUser();
         return S?.hasFlag(er.nhx.QUARANTINED)
             ? ((0, G.default)(), new Promise((e, t) => t(Error())))
             : (f.h.dispatch({ type: "INVITE_ACCEPT", code: o }),
               E.Bo.post({
                   url: er.Rsh.INVITE(A),
-                  context: m,
+                  context: T,
                   oldFormErrors: !0,
                   body: { session_id: h, invite_instance_id: c.invite_instance_id, received_installation_id: I },
                   rejectWithError: (0, E.fT)(),
@@ -431,7 +431,7 @@ let ef = {
                           e.body?.code === er.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                               (0, g.yO)(ea.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           e.body?.code === er.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED &&
-                              (0, N.e)(T?.guild?.id),
+                              (0, N.e)(m?.guild?.id),
                           f.h.dispatch({
                               type: "INVITE_ACCEPT_FAILURE",
                               code: o,

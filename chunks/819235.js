@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(424994),
     I = n(652215);
 let p = 2 * u.A.Millis.MINUTE,
-    T = f.X1.GLOBAL_FEED,
-    m = 15 * u.A.Millis.MINUTE,
+    m = f.X1.GLOBAL_FEED,
+    T = 15 * u.A.Millis.MINUTE,
     g = new Map(),
     S = new Set(),
     N = new Map(),
@@ -31,7 +31,7 @@ function L(e, t) {
 }
 function y(e) {
     if (S.has(e) || (e === f.X1.GAME_PROFILE_FEED && void 0 !== h.A.getFeed(e))) return !1;
-    if (e === T) {
+    if (e === m) {
         if (
             !(0, _.VS)("ContentInventoryManager") ||
             (A.A.hidden && null != h.A.getFeed(e)) ||
@@ -40,7 +40,7 @@ function y(e) {
         )
             return !1;
         let t = d.A.getIdleSince();
-        if (null != t && Date.now() - t > m) return !1;
+        if (null != t && Date.now() - t > T) return !1;
     }
     return !0;
 }
@@ -50,16 +50,16 @@ function D(e) {
     void 0 !== t && (clearTimeout(t), g.delete(e));
 }
 function v() {
-    let e = N.get(T) ?? 0;
-    if ((e > 0 && e <= 4) || (D(T), !y(T))) return;
-    let t = h.A.getFeed(T);
+    let e = N.get(m) ?? 0;
+    if ((e > 0 && e <= 4) || (D(m), !y(m))) return;
+    let t = h.A.getFeed(m);
     if (t?.refresh_stale_inbox_after_ms != null && null == C) return;
     let n = t?.expired_at == null ? 0 : new Date(t.expired_at).getTime() - Date.now(),
         i = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), n) + (e > 0 ? R() : 0);
-    (L(T, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
+    (L(m, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
         g.set(
-            T,
-            setTimeout(() => b({ feedId: T, feature: r.M.INBOX }), i),
+            m,
+            setTimeout(() => b({ feedId: m, feature: r.M.INBOX }), i),
         ));
 }
 async function b(e) {
@@ -73,7 +73,7 @@ async function b(e) {
                 N.set(t, 0),
                 S.delete(t),
                 L(t, { loading: !1 }),
-                t === T && ((C = null), v()));
+                t === m && ((C = null), v()));
         } catch (r) {
             let e = N.get(t) ?? 0;
             if (e < 4) {
@@ -95,7 +95,7 @@ function M() {
     P();
 }
 function U() {
-    D(T);
+    D(m);
 }
 function w(e) {
     let { feedId: t, feature: n } = e;
@@ -103,7 +103,7 @@ function w(e) {
 }
 function G(e) {
     let { refreshAfterMs: t } = e,
-        n = h.A.getFeed(T);
+        n = h.A.getFeed(m);
     n?.refresh_stale_inbox_after_ms == null ||
         ((C = new Date(Date.now() + (t ?? n.refresh_stale_inbox_after_ms)).toUTCString()), v());
 }
@@ -112,8 +112,8 @@ function x(e) {
     null == t || (o.A.getAccount(t, I.fg2.SPOTIFY)?.showActivity && O(t, n));
 }
 function k() {
-    let e = h.A.getFeed(T);
-    (null != e && new Date(e.expired_at).getTime() > Date.now()) || b({ feedId: T, feature: r.M.GAME_PROFILE });
+    let e = h.A.getFeed(m);
+    (null != e && new Date(e.expired_at).getTime() > Date.now()) || b({ feedId: m, feature: r.M.GAME_PROFILE });
 }
 class F extends s.A {
     actions = {

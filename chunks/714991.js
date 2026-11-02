@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -27,7 +27,7 @@ class p extends r.PureComponent {
                 iconClassName: h,
                 flowerStarClassName: p,
             } = this.props,
-            T = (function (e) {
+            m = (function (e) {
                 switch (e) {
                     case 2:
                         return f.intl.string(f.t.iCehw9);
@@ -51,7 +51,7 @@ class p extends r.PureComponent {
             color: o,
             position: d,
             delay: c,
-            text: T,
+            text: m,
             children: (l) =>
                 5 === e || 4 === e
                     ? (0, i.jsx)("div", {
@@ -89,4 +89,4 @@ class p extends r.PureComponent {
                       : null;
     }
 }
-let T = p;
+let m = p;

@@ -14,8 +14,8 @@ var a = n(478437),
     f = n(446600),
     I = n(95701),
     p = n(616356),
-    T = n(280450),
-    m = n(734057),
+    m = n(280450),
+    T = n(734057),
     g = n(71393),
     S = n(576705),
     N = n(994500),
@@ -54,7 +54,7 @@ function F() {
 }
 function B(e, t, n) {
     if (null == t) return !1;
-    let i = m.A.getBasicChannel(t);
+    let i = T.A.getBasicChannel(t);
     return (
         null != i &&
         i.type !== a.r.GUILD_STAGE_VOICE &&
@@ -76,8 +76,8 @@ class j extends s.Ay.Store {
     initialize() {
         ((i = C.Ay.getVoiceChannelId()),
             (r = N.A.getBlockedOrIgnoredIDs()),
-            this.waitFor(p.A, T.default, m.A, c.Ay, A.Ay, g.A, S.A, N.A, C.Ay, f.A, O.Ay, R.A),
-            this.syncWith([p.A, m.A, c.Ay, A.Ay, g.A, S.A, f.A, O.Ay], x),
+            this.waitFor(p.A, m.default, T.A, c.Ay, A.Ay, g.A, S.A, N.A, C.Ay, f.A, O.Ay, R.A),
+            this.syncWith([p.A, T.A, c.Ay, A.Ay, g.A, S.A, f.A, O.Ay], x),
             this.syncWith([N.A], V),
             this.syncWith([C.Ay], H));
     }
@@ -88,11 +88,11 @@ class j extends s.Ay.Store {
                 let t = (function () {
                         if (null != M && U === P) return M;
                         let e = C.Ay.getVoiceChannelId(),
-                            t = null != e ? m.A.getChannel(e) : null,
+                            t = null != e ? T.A.getChannel(e) : null,
                             n = N.A.getBlockedOrIgnoredIDs();
                         return (
                             (M = {
-                                currentUserId: T.default.getId(),
+                                currentUserId: m.default.getId(),
                                 selectedVoiceChannelId: e,
                                 selectedVoiceGuildId: t?.guild_id,
                                 selectedVoiceChannelHasVideo: null != e && R.A.hasVideo(e),
@@ -117,7 +117,7 @@ class j extends s.Ay.Store {
                     i = t.selectedVoiceGuildId === e;
                 if (!i && n) return D;
                 let r = c.Ay.getEmbeddedActivitiesForGuild(e).filter((e) => {
-                    let n = m.A.getBasicChannel((0, u.H)(e.location));
+                    let n = T.A.getBasicChannel((0, u.H)(e.location));
                     return (
                         n?.type !== a.r.GUILD_SPACE &&
                         (0 === t.blockedOrIgnoredUserIds.size || !(0, _.PH)([...e.userIds], t.blockedOrIgnoredUserIds))
@@ -152,14 +152,14 @@ class j extends s.Ay.Store {
                 let y = t.streamChannelIdsByGuild.get(e),
                     v = null != y && y.some((t) => !O.Ay.isChannelMuted(e, t)),
                     x = L.default.keys(f.A.getStageInstancesByGuild(e)).some((e) => {
-                        let t = m.A.getBasicChannel(e);
+                        let t = T.A.getBasicChannel(e);
                         return null != t && (0, E.A)(t, S.A);
                     }),
                     k = (0, u.H)(r[0]?.location),
-                    F = (0, d.pE)(m.A.getChannel(k))
+                    F = (0, d.pE)(T.A.getChannel(k))
                         ? r.length > 0
                         : r.some((e) => {
-                              let t = m.A.getChannel((0, u.H)(e.location));
+                              let t = T.A.getChannel((0, u.H)(e.location));
                               return null != t && (0, I.gV)(t.type);
                           });
                 return {

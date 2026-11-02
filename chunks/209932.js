@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(935208),
     I = n(125831),
     p = n(980504),
-    T = n(652215),
-    m = n(355097);
+    m = n(652215),
+    T = n(355097);
 let g = new Map(),
     S = new Map(),
     N = new Map(),
@@ -54,7 +54,7 @@ let w = r().debounce((e) => {
         c.dG.updateSetting({ volume: e });
     }, 1e3),
     G = r().debounce((e, t) => {
-        A.default.track(T.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
+        A.default.track(m.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
             volume: Math.round((0, h.M)(e)),
             location_stack: t,
             voice_guild_id: _.A.getGuildId() ?? null,
@@ -212,7 +212,7 @@ let B = new F(o.h, {
         let { settings: t, wasSaved: n } = e,
             { type: i, proto: a } = t;
         switch (i) {
-            case m.oD.FRECENCY_AND_FAVORITES_SETTINGS:
+            case T.oD.FRECENCY_AND_FAVORITES_SETTINGS:
                 ((L = new Set(a?.favoriteSoundboardSounds?.soundIds ?? [])),
                     n && (b = []),
                     a?.playedSoundFrecency != null &&
@@ -224,7 +224,7 @@ let B = new F(o.h, {
                             b,
                         ));
                 break;
-            case m.oD.PRELOADED_USER_SETTINGS:
+            case T.oD.PRELOADED_USER_SETTINGS:
                 (k(a), x());
         }
     },

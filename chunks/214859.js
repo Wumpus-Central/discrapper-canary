@@ -42,7 +42,7 @@ function p(e) {
     }
     return [...n, ...Array.from(t.values(), (e) => e.event)];
 }
-function T(e) {
+function m(e) {
     let t = new Map();
     for (let n of e) {
         let e = n.additionalData?.[f.gy];
@@ -50,7 +50,7 @@ function T(e) {
     }
     return t;
 }
-function m(e, t) {
+function T(e, t) {
     let n = I(e);
     if (null == n) return null;
     let i = t.get(n[0]);
@@ -248,7 +248,7 @@ let x = {
                                     a = y(t, n, !1),
                                     s = y(t, e.endMs, !0),
                                     l = t.slice(a, s),
-                                    o = T(l),
+                                    o = m(l),
                                     d = new Set(p(l.filter((e) => e.eventName === i.C.MultiKill)));
                                 for (let t of l) {
                                     let n = t.eventName;
@@ -258,7 +258,7 @@ let x = {
                                     let s = `r${e.number} ${n}`;
                                     if (n === i.C.MultiKill) {
                                         if (!d.has(t)) continue;
-                                        let e = m(t, o) ?? t.timestamp_ms;
+                                        let e = T(t, o) ?? t.timestamp_ms;
                                         r.push((0, g.Wp)({ startMs: e, endMs: t.timestamp_ms }, a, { label: s }));
                                     } else
                                         r.push(
@@ -459,7 +459,7 @@ function K(e) {
                               let { localUserId: r, gameId: a, ...s } = n,
                                   l = [],
                                   o = p(e ?? []),
-                                  A = T(o),
+                                  A = m(o),
                                   h = (0, d.Q4)(a, o);
                               function f(e, t) {
                                   return h?.isInGame == null || h.isInGame((e + t) / 2);
@@ -469,7 +469,7 @@ function K(e) {
                                   if (null == t) continue;
                                   let n = i[`game:${t}`];
                                   if (null == n) continue;
-                                  let r = m(e, A) ?? e.clipWindow?.startMs ?? e.timestamp_ms,
+                                  let r = T(e, A) ?? e.clipWindow?.startMs ?? e.timestamp_ms,
                                       a = e.clipWindow?.endMs ?? e.timestamp_ms;
                                   f(r, a) && l.push({ startMs: r, endMs: a, kind: "game", padding: n });
                               }
@@ -516,12 +516,12 @@ function K(e) {
                                               shouting: s ?? f.shoutingEventThreshold,
                                           },
                                           p = l.map((t) => h(e[t].rmsData)),
-                                          T = (0, u.kV)(p, f),
-                                          m = [];
+                                          m = (0, u.kV)(p, f),
+                                          T = [];
                                       for (let t of i) {
                                           let n = l.map((n) => h(e[n][E[t]])),
                                               i = (0, u.br)(n, f, I[t]),
-                                              r = null != T ? (0, u.ei)(i, T) : i;
+                                              r = null != m ? (0, u.ei)(i, m) : i;
                                           l.forEach((e, n) => {
                                               for (let i of (function (e) {
                                                   let t = [],
@@ -536,7 +536,7 @@ function K(e) {
                                                   return t;
                                               })(r[n]))
                                                   i.endChunk - i.startChunk + 1 < f.minConsecutiveChunks ||
-                                                      m.push({
+                                                      T.push({
                                                           kind: t,
                                                           userId: e,
                                                           startMs: o + i.startChunk * d.pn,
@@ -544,7 +544,7 @@ function K(e) {
                                                       });
                                           });
                                       }
-                                      return (m.sort((e, t) => e.startMs - t.startMs), m);
+                                      return (T.sort((e, t) => e.startMs - t.startMs), T);
                                   })(t, r, s, Array.from(I.keys()))) {
                                       let t = I.get(e.kind);
                                       null != t &&
@@ -686,7 +686,7 @@ function K(e) {
                                   h = [];
                               for (let e of _) e.srcEndMs - e.srcStartMs < g.rx ? E.push(e) : h.push(e);
                               let { resolved: I, skipped: p } = (0, g.z2)(h, n),
-                                  { kept: T, removed: m } = (function (e, t, n, i) {
+                                  { kept: m, removed: T } = (function (e, t, n, i) {
                                       let r = [...e],
                                           a = e
                                               .map((e, t) => {
@@ -710,11 +710,11 @@ function K(e) {
                                       );
                                   })(I, i.blendMs, o, d);
                               return {
-                                  durationMs: (0, g.s_)(T, i.blendMs),
-                                  resolved: T,
-                                  skipped: [...E, ...p, ...m.map(P)],
+                                  durationMs: (0, g.s_)(m, i.blendMs),
+                                  resolved: m,
+                                  skipped: [...E, ...p, ...T.map(P)],
                                   requestedSectionCount: _.length,
-                                  trimmedSectionCount: m.length,
+                                  trimmedSectionCount: T.length,
                               };
                           })({
                               selected: h,

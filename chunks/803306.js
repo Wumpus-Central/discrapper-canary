@@ -1,4 +1,4 @@
-(n.d(t, { Q9: () => I, eO: () => g, lA: () => p, nj: () => m, q0: () => S, rQ: () => f, wz: () => T }), n(938796));
+(n.d(t, { Q9: () => I, eO: () => g, lA: () => p, nj: () => T, q0: () => S, rQ: () => f, wz: () => m }), n(938796));
 var i = n(284009),
     r = n.n(i),
     a = n(239947),
@@ -51,7 +51,7 @@ function p(e, t) {
     let i = t ? n.flags | e : n.flags & ~e;
     return s.Bo.patch({ url: E.Rsh.ME, oldFormErrors: !0, body: { flags: i }, rejectWithError: (0, s.fT)() });
 }
-function T(e) {
+function m(e) {
     let t = u.default.getUser(e);
     return null != t
         ? Promise.resolve(t)
@@ -59,7 +59,7 @@ function T(e) {
               (t) => (l.h.dispatch({ type: "USER_UPDATE", user: t.body }), u.default.getUser(e)),
           );
 }
-function m(e) {
+function T(e) {
     return (l.h.dispatch({ type: "USER_UPDATE", user: e }), u.default.getUser(e.id));
 }
 async function g(e) {

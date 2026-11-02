@@ -20,8 +20,8 @@ var E = n(458977),
     f = n(753070);
 let I = "default",
     p = "Discord Clips",
-    T = {},
     m = {},
+    T = {},
     g = [],
     S = 0,
     N = null,
@@ -211,14 +211,14 @@ class H extends r.Ay.DeviceSettingsStore {
         (null != e && (G = e), x(), this.waitFor(l.Ay));
     }
     getClips() {
-        return T;
+        return m;
     }
     getClipById(e) {
-        return T[e];
+        return m[e];
     }
     getClipByRemoteId(e) {
-        let t = m[e];
-        if (null != t) return T[t];
+        let t = T[e];
+        if (null != t) return m[t];
     }
     getClipCandidates() {
         return k().flatMap((e) => e.candidates);
@@ -321,15 +321,15 @@ let j = new H(a.h, {
                 F(n, (e) => e.recordSavedClip(t)),
                 t.isCandidate ||
                     ((G = { ...G, newClipIds: [...(G.newClipIds ?? []), t.id] }),
-                    (T[t.id] = t),
-                    null != t.remoteClipId && (m[t.remoteClipId] = t.id),
+                    (m[t.id] = t),
+                    null != t.remoteClipId && (T[t.remoteClipId] = t.id),
                     (G.hasClips = !0)));
         },
         CLIPS_PROMOTE_CLIP_CANDIDATE: function (e) {
             let { clip: t, session: n } = e;
             (F(n, (e) => e.recordPromotedClip(t)),
                 (G = { ...G, newClipIds: [...(G.newClipIds ?? []), t.id] }),
-                (T[t.id] = t),
+                (m[t.id] = t),
                 (G.hasClips = !0));
         },
         CLIPS_SAVE_CLIP_START: function (e) {
@@ -363,21 +363,21 @@ let j = new H(a.h, {
             G.newClipIds = G.newClipIds.filter((e) => e !== t);
         },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
-            for (let t of ((T = {}), e.clips))
-                t.isCandidate || ((T[t.id] = t), null != t.remoteClipId && (m[t.remoteClipId] = t.id));
-            G.hasClips = Object.keys(T).length > 0;
+            for (let t of ((m = {}), e.clips))
+                t.isCandidate || ((m[t.id] = t), null != t.remoteClipId && (T[t.remoteClipId] = t.id));
+            G.hasClips = Object.keys(m).length > 0;
         },
         CLIPS_DELETE_CLIP: function (e) {
-            let t = T[e.id];
+            let t = m[e.id];
             for (let t of k()) t.removeCandidate(e.id);
-            (delete T[e.id],
-                t?.remoteClipId != null && delete m[t.remoteClipId],
-                (G.hasClips = Object.keys(T).length > 0));
+            (delete m[e.id],
+                t?.remoteClipId != null && delete T[t.remoteClipId],
+                (G.hasClips = Object.keys(m).length > 0));
         },
         CLIPS_UPDATE_METADATA: function (e) {
             let { clip: t } = e;
             if (t.isCandidate) return !1;
-            ((T[t.id] = t), null != t.remoteClipId && (m[t.remoteClipId] = t.id));
+            ((m[t.id] = t), null != t.remoteClipId && (T[t.remoteClipId] = t.id));
         },
         RTC_CONNECTION_FLAGS: function (e) {
             R[e.userId] = {
@@ -481,7 +481,7 @@ let j = new H(a.h, {
                 let { id: n } = e;
                 return n !== t.id;
             })),
-                (T[t.id] = t),
+                (m[t.id] = t),
                 F(n, (e) => e.recordMontageClip(t)),
                 ((G = { ...G, newClipIds: [...(G.newClipIds ?? []), t.id] }).hasClips = !0));
         },

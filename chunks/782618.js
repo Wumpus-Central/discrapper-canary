@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(788026),
     I = n(253932),
     p = n(287809),
-    T = n(813564),
-    m = n(453997),
+    m = n(813564),
+    T = n(453997),
     g = n(792348),
     S = n(805945),
     N = n(257645),
@@ -27,12 +27,12 @@ function R(e) {
         { emojiId: A, emojiName: h } = t,
         { text: f, icon: I } = (function (e) {
             switch (e) {
-                case m.p0.FAVORITE:
+                case T.p0.FAVORITE:
                     return {
                         text: C.intl.string(C.t["iJA/TE"]),
                         icon: (0, i.jsx)(d.StarIcon, { size: "xs", color: "currentColor", className: O.zr }),
                     };
-                case m.p0.FREQUENTLY_USED:
+                case T.p0.FREQUENTLY_USED:
                     return {
                         text: C.intl.string(C.t["+cGVV6"]),
                         icon: (0, i.jsx)(c.ClockIcon, { size: "xs", color: "currentColor", className: O.zr }),
@@ -44,17 +44,17 @@ function R(e) {
         p = r.useCallback(() => {
             a(!0);
         }, [a]),
-        T = r.useCallback(() => {
+        m = r.useCallback(() => {
             a(!1);
         }, [a]),
         g = (0, i.jsx)("div", {
             onMouseEnter: p,
-            onMouseLeave: T,
+            onMouseLeave: m,
             children: (0, i.jsx)(S.PI, { sound: t, previewSound: l, analyticsLocations: o }),
         }),
         N = (0, i.jsx)("div", {
             onMouseEnter: null != I ? p : void 0,
-            onMouseLeave: null != I ? T : void 0,
+            onMouseLeave: null != I ? m : void 0,
             children: (0, i.jsx)(u.m, {
                 text: f,
                 position: "top",
@@ -96,7 +96,7 @@ function L(e) {
             interactive: c,
             onMouseEnter: _,
             openUpsellForSound: E,
-            analyticsLocations: m,
+            analyticsLocations: T,
             ref: S,
         } = e,
         { name: L, emojiId: y, emojiName: D } = t,
@@ -111,13 +111,13 @@ function L(e) {
         G = (0, l.rm)(w),
         x = r.useMemo(() => ({ ...G, id: w, role: "button" }), [G, w]),
         k = null != y || null != D,
-        F = !(0, T.Ir)(v, t, n, !1),
+        F = !(0, m.Ir)(v, t, n, !1),
         [B, V] = r.useState(!1),
         H = r.useCallback(
             (e) => {
-                F ? E?.(e) : b(m);
+                F ? E?.(e) : b(T);
             },
-            [F, E, b, m],
+            [F, E, b, T],
         );
     return (0, i.jsx)("li", {
         ref: S,
@@ -153,7 +153,7 @@ function L(e) {
                         disabled: F,
                         setIsChildTooltipShowing: V,
                         previewSound: P,
-                        analyticsLocations: m,
+                        analyticsLocations: T,
                     }),
                 ],
             }),

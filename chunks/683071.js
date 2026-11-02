@@ -15,12 +15,12 @@ var i = n(477900),
     f = n(738188),
     I = n(432816),
     p = n(331322),
-    T = n(834730),
-    m = n(278817);
+    m = n(834730),
+    T = n(278817);
 function g(e) {
     let { intro: t, items: n } = e,
         r = (0, i.jsx)("ul", {
-            className: m.messageList,
+            className: T.messageList,
             children: n.map((e, t) => (0, i.jsx)("li", { children: e }, t)),
         });
     return null == t ? r : (0, i.jsxs)(p.B, { gap: 4, children: [(0, i.jsx)("div", { children: t }), r] });
@@ -28,8 +28,8 @@ function g(e) {
 function S(e) {
     let { hidden: t = !1, children: n } = e;
     return (0, i.jsx)("div", {
-        className: s()(m.enterExit, { [m.enterExitHidden]: t }),
-        children: (0, i.jsx)("div", { className: m.enterExitClip, children: n }),
+        className: s()(T.enterExit, { [T.enterExitHidden]: t }),
+        children: (0, i.jsx)("div", { className: T.enterExitClip, children: n }),
     });
 }
 let N = "experimental/body-sm/semibold",
@@ -73,33 +73,33 @@ function O(e) {
             hidden: y,
             children: (0, i.jsxs)("div", {
                 role: "alert" === L ? "alert" : void 0,
-                className: s()(m.container, m[t]),
+                className: s()(T.container, T[t]),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: m.iconAndTextContainer,
+                        className: T.iconAndTextContainer,
                         children: [
-                            (0, i.jsx)(T.E, {
+                            (0, i.jsx)(m.E, {
                                 variant: null != n ? N : C,
                                 color: "none",
-                                className: m.iconContainer,
+                                className: T.iconContainer,
                                 children: P,
                             }),
                             (0, i.jsxs)("div", {
-                                className: s()(m.contentsContainer, { [m.vertical]: null != O }),
+                                className: s()(T.contentsContainer, { [T.vertical]: null != O }),
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: m.copyContainer,
+                                        className: T.copyContainer,
                                         children: [
                                             (0, i.jsxs)(_.A, { id: v, children: [M, ":"] }),
                                             null == n
                                                 ? null
-                                                : (0, i.jsx)(T.E, {
+                                                : (0, i.jsx)(m.E, {
                                                       id: b,
                                                       variant: N,
                                                       color: "text-strong",
                                                       children: n,
                                                   }),
-                                            (0, i.jsx)(T.E, {
+                                            (0, i.jsx)(m.E, {
                                                 id: null == n ? b : void 0,
                                                 variant: C,
                                                 color: "text-strong",
@@ -121,10 +121,10 @@ function O(e) {
                         ],
                     }),
                     null != O
-                        ? (0, i.jsx)(T.E, {
+                        ? (0, i.jsx)(m.E, {
                               variant: null != n ? N : C,
                               color: "none",
-                              className: m.iconContainer,
+                              className: T.iconContainer,
                               children: (0, i.jsx)(u.J, {
                                   "aria-label": D.DISMISS_BUTTON_LABEL,
                                   "aria-describedby": `${v} ${b}`,

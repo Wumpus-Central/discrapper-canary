@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(8062),
     I = n(559106),
     p = n(107361),
-    T = n(573435),
-    m = n(640708),
+    m = n(573435),
+    T = n(640708),
     g = n(267102),
     S = n(114640);
 function N(e) {
@@ -35,8 +35,8 @@ function N(e) {
             onClick: f,
             onContextMenu: I,
             tooltip: p = null,
-            tooltipPosition: T = "bottom",
-            tooltipAlign: m,
+            tooltipPosition: m = "bottom",
+            tooltipAlign: T,
             tooltipDisabled: g,
             tooltipSpacing: N,
             role: O,
@@ -68,8 +68,8 @@ function N(e) {
         null == w && "string" == typeof p && (w = p),
         (0, i.jsx)(_.m, {
             __unsupportedReactNodeAsText: p,
-            position: T,
-            align: m,
+            position: m,
+            align: T,
             shouldShow: !g,
             spacing: N,
             ariaHidden: !0,
@@ -114,8 +114,8 @@ function O(e) {
         d = r.useMemo(() => ({ "--__badgeWidth": l + "px", "--__badgeOffset": o + "px" }), [l, o]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(T.Ay, {
-                mask: "top" === t.position ? T.Ay.Masks.HEADER_BAR_BADGE_TOP : T.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
+            (0, i.jsx)(m.Ay, {
+                mask: "top" === t.position ? m.Ay.Masks.HEADER_BAR_BADGE_TOP : m.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
                 height: n + o,
                 width: n + o,
                 rightOverhang: -o,
@@ -145,8 +145,8 @@ function R(e) {
             onDoubleClick: _,
             "aria-label": E,
             "aria-labelledby": A,
-            role: T,
-            scrollable: m,
+            role: m,
+            scrollable: T,
             transparent: N = !1,
             hidden: C = !1,
             disableFocusRingScope: O = !1,
@@ -162,7 +162,7 @@ function R(e) {
                 className: S.cM,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: s()(S.Y_, n, { [S.lE]: m }),
+                        className: s()(S.Y_, n, { [S.lE]: T }),
                         onDoubleClick: _,
                         children: [o.Fr && null != y ? (0, i.jsx)(l._, { onClick: y, className: S.cz }) : null, d],
                     }),
@@ -176,7 +176,7 @@ function R(e) {
         className: s()(t, S.kL, { [S.Sp]: !N, [S.JO]: N, [S.GY]: o.Fr, [S.R]: C }),
         "aria-label": E,
         "aria-labelledby": A,
-        role: T,
+        role: m,
         ref: L,
         children: O ? v : (0, i.jsx)(I.xp, { containerRef: L, children: v }),
     });
@@ -201,8 +201,8 @@ function R(e) {
                 id: f,
                 muted: I = !1,
                 level: p = 1,
-                ref: T,
-                role: m,
+                ref: m,
+                role: T,
                 tabIndex: g,
                 "aria-label": N,
                 "aria-selected": C,
@@ -221,7 +221,7 @@ function R(e) {
             });
         return null != l
             ? (0, i.jsx)(u.D, {
-                  innerRef: T,
+                  innerRef: m,
                   onClick: l,
                   onContextMenu: a,
                   onKeyDown: o,
@@ -230,7 +230,7 @@ function R(e) {
                   onFocus: A,
                   onBlur: h,
                   className: s()(n, S.oB),
-                  role: m,
+                  role: T,
                   tabIndex: g,
                   "aria-label": N,
                   "aria-selected": C,
@@ -239,7 +239,7 @@ function R(e) {
                   children: L,
               })
             : (0, i.jsx)("div", {
-                  ref: T,
+                  ref: m,
                   className: s()(n, S.oB),
                   onContextMenu: a,
                   onKeyDown: o,
@@ -247,7 +247,7 @@ function R(e) {
                   onMouseLeave: E,
                   onFocus: A,
                   onBlur: h,
-                  role: m,
+                  role: T,
                   "aria-label": N,
                   "aria-selected": C,
                   "aria-controls": O,
@@ -257,7 +257,7 @@ function R(e) {
     }),
     (R.Divider = function (e) {
         let { className: t } = e;
-        return (0, i.jsx)(m.A, { className: s()(S.Om, t) });
+        return (0, i.jsx)(T.A, { className: s()(S.Om, t) });
     }),
     (R.Caret = function (e) {
         let { direction: t = "right", className: n } = e;

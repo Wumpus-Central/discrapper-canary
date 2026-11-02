@@ -1,6 +1,6 @@
 n.d(t, {
     FD: () => D,
-    Id: () => m,
+    Id: () => T,
     NO: () => O,
     Qn: () => L,
     T5: () => R,
@@ -24,8 +24,8 @@ let { API_ENDPOINT: u, MEDIA_PROXY_ENDPOINT: _, PROJECT_ENV: E, ASSET_ENDPOINT: 
     f = Object.values(o.y3),
     I = decodeURIComponent(c.Rsh.STICKER_ASSET("[\\d]+", `(${f.join("|")})`)),
     p = RegExp(`(${location.protocol}${A}|${location.protocol}${_})(${I})`, "ig"),
-    T = RegExp(`${location.protocol}${u}(${I})`, "ig");
-function m(e) {
+    m = RegExp(`${location.protocol}${u}(${I})`, "ig");
+function T(e) {
     if (null != e.cover_sticker_id) {
         let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
         if (null != t) return t;
@@ -89,10 +89,10 @@ let C = function (e) {
     return u ? `${I}?force_sdr=true` : I;
 };
 function O(e) {
-    return null != e.match("development" !== E ? p : T);
+    return null != e.match("development" !== E ? p : m);
 }
 function R(e) {
-    return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: m(e) };
+    return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: T(e) };
 }
 function L(e, t) {
     return e === d.BJ.ANIMATE_ON_INTERACTION ? t : e !== d.BJ.NEVER_ANIMATE;

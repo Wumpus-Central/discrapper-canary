@@ -90,9 +90,9 @@ var h = n(927813),
     f = n(636537),
     I = n(181658),
     p = n(652215);
-let T = {
+let m = {
     async resolveGameOrganizationInvite(e) {
-        if (o.h.isDispatching()) return (await Promise.resolve(), T.resolveGameOrganizationInvite(e));
+        if (o.h.isDispatching()) return (await Promise.resolve(), m.resolveGameOrganizationInvite(e));
         o.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_RESOLVE", code: e });
         try {
             let { body: t } = await f.Bo.get({ url: p.Rsh.GAME_ORGANIZATION_INVITE(e), rejectWithError: !0 });
@@ -157,11 +157,11 @@ let T = {
         return t?.state === d.RESOLVED ? t : null;
     },
     load: async (e) => {
-        await T.resolveGameOrganizationInvite(e);
+        await m.resolveGameOrganizationInvite(e);
     },
 }),
     n(993748));
-var m = n(292572),
+var T = n(292572),
     g = n(122906),
     S = n(128391),
     N = n(167189),
@@ -198,7 +198,7 @@ function w(e, t) {
                     break;
                 case N.I.TEMPLATE:
                     (0, C.f)(async () => {
-                        null == g.A.getGuildTemplate(i) && (await m.A.resolveGuildTemplate(i));
+                        null == g.A.getGuildTemplate(i) && (await T.A.resolveGuildTemplate(i));
                     });
                     break;
                 case N.I.BUILD_OVERRIDE:

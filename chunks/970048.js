@@ -15,8 +15,8 @@ var i = n(73153),
     f = n(624694),
     I = n(967347),
     p = n(929921),
-    T = n(734057),
-    m = n(999926),
+    m = n(734057),
+    T = n(999926),
     g = n(763827),
     S = n(873985),
     N = n(728557),
@@ -72,19 +72,19 @@ let q = {
         [d.iy.NO_AUDIO_INPUT_DETECTED]: {
             getActiveErrors: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
-                    i = T.A.getChannel(t),
+                    i = m.A.getChannel(t),
                     r = i?.isGuildStageVoice() && n?.suppress,
                     a = g.A.getMediaSessionId();
                 if (
                     null != i &&
                     null != a &&
-                    !m.Ay.getInputDetectedThisConnection() &&
+                    !T.Ay.getInputDetectedThisConnection() &&
                     g.A.getState() === L.S7L.RTC_CONNECTED &&
-                    m.Ay.getSettings().mode === L.TBI.VOICE_ACTIVITY &&
-                    m.Ay.getSettings().silenceWarning &&
-                    !1 === m.Ay.getInputDetected() &&
+                    T.Ay.getSettings().mode === L.TBI.VOICE_ACTIVITY &&
+                    T.Ay.getSettings().silenceWarning &&
+                    !1 === T.Ay.getInputDetected() &&
                     !r &&
-                    !m.Ay.isSelfMute()
+                    !T.Ay.isSelfMute()
                 )
                     return [{ type: d.iy.NO_AUDIO_INPUT_DETECTED, ...(0, U.jY)() }];
             },
@@ -93,9 +93,9 @@ let q = {
         [d.iy.NO_INPUT_DEVICES]: {
             getActiveErrors: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
-                    i = T.A.getChannel(t),
+                    i = m.A.getChannel(t),
                     r = i?.isGuildStageVoice() && n?.suppress,
-                    a = 0 === Object.keys(m.Ay.getInputDevices()).length,
+                    a = 0 === Object.keys(T.Ay.getInputDevices()).length,
                     s = g.A.getMediaSessionId();
                 if (a && null != i && null != s && !r) return [{ type: d.iy.NO_INPUT_DEVICES, ...(0, U.jY)() }];
             },
@@ -238,7 +238,7 @@ let q = {
             getActiveErrors: () => {
                 if (
                     (g.A.getRTCConnection()?.getDurationSeconds() ?? 0) < 30 ||
-                    performance.now() - m.Ay.getLastAudioInputDeviceChangeTimestamp() < w
+                    performance.now() - T.Ay.getLastAudioInputDeviceChangeTimestamp() < w
                 )
                     return;
                 let e =
@@ -301,7 +301,7 @@ let q = {
                 let e = g.A.getRTCConnection();
                 if (null == e) return null;
                 let t = e.getMediaEngineConnectionId();
-                if (null == t || !m.Ay.isVideoEnabled()) return null;
+                if (null == t || !T.Ay.isVideoEnabled()) return null;
                 let n = g.A.getLastNonZeroRemoteVideoSinkWantsTime();
                 if ((null != n && performance.now() - n < V) || !e.hasActiveRemoteWants()) return null;
                 let i = F(t, G.default.getId());
@@ -395,7 +395,7 @@ class J extends r.A {
                     i,
                     r = (0, d.B1)(e),
                     a = ((i = l.Ay.getVoiceChannelId()), ("channelId" in t ? t.channelId : void 0) ?? i ?? null),
-                    s = T.A.getChannel(a),
+                    s = m.A.getChannel(a),
                     o = "streamKey" in t ? t.streamKey : void 0,
                     c = "mediaContext" in t ? t.mediaContext : void 0,
                     P = "underlyingError" in t ? t.underlyingError : void 0,
@@ -525,28 +525,28 @@ class J extends r.A {
                                 f.A.getConnectionStats(ea)?.stats.transport.outboundBitrateEstimate ?? null,
                             inbound_bitrate_estimate:
                                 f.A.getConnectionStats(ea)?.stats.transport.inboundBitrateEstimate ?? null,
-                            hardware_enabled: m.Ay.getHardwareEncoding(),
-                            audio_input_device_name: B ?? m.Ay.getInputDevices()[m.Ay.getInputDeviceId()]?.name,
-                            audio_output_device_name: V ?? m.Ay.getOutputDevices()[m.Ay.getOutputDeviceId()]?.name,
-                            video_device_name: H ?? m.Ay.getVideoDevices()[m.Ay.getVideoDeviceId()]?.name,
-                            audio_subsystem: m.Ay.getMediaEngine().getAudioSubsystem(),
-                            automatic_audio_subsystem: m.Ay.getSettings().automaticAudioSubsystem,
-                            audio_layer: m.Ay.getMediaEngine().getAudioLayer(),
-                            audio_input_mode: m.Ay.getSettings().mode,
-                            automatic_audio_input_sensitivity_enabled: m.Ay.getSettings().modeOptions.autoThreshold,
-                            audio_input_sensitivity: m.Ay.getSettings().modeOptions.threshold,
-                            echo_cancellation_enabled: m.Ay.getEchoCancellation(),
-                            noise_suppression_enabled: m.Ay.getNoiseSuppression(),
-                            noise_cancellation_enabled: m.Ay.getNoiseCancellation(),
-                            automatic_gain_control_enabled: m.Ay.getAutomaticGainControl(),
-                            sidechain_compression_enabled: m.Ay.getSidechainCompression(),
-                            input_volume: m.Ay.getInputVolume(),
-                            output_volume: m.Ay.getOutputVolume(),
-                            audio_input_device_count: Object.keys(m.Ay.getInputDevices()).length,
-                            audio_output_device_count: Object.keys(m.Ay.getOutputDevices()).length,
+                            hardware_enabled: T.Ay.getHardwareEncoding(),
+                            audio_input_device_name: B ?? T.Ay.getInputDevices()[T.Ay.getInputDeviceId()]?.name,
+                            audio_output_device_name: V ?? T.Ay.getOutputDevices()[T.Ay.getOutputDeviceId()]?.name,
+                            video_device_name: H ?? T.Ay.getVideoDevices()[T.Ay.getVideoDeviceId()]?.name,
+                            audio_subsystem: T.Ay.getMediaEngine().getAudioSubsystem(),
+                            automatic_audio_subsystem: T.Ay.getSettings().automaticAudioSubsystem,
+                            audio_layer: T.Ay.getMediaEngine().getAudioLayer(),
+                            audio_input_mode: T.Ay.getSettings().mode,
+                            automatic_audio_input_sensitivity_enabled: T.Ay.getSettings().modeOptions.autoThreshold,
+                            audio_input_sensitivity: T.Ay.getSettings().modeOptions.threshold,
+                            echo_cancellation_enabled: T.Ay.getEchoCancellation(),
+                            noise_suppression_enabled: T.Ay.getNoiseSuppression(),
+                            noise_cancellation_enabled: T.Ay.getNoiseCancellation(),
+                            automatic_gain_control_enabled: T.Ay.getAutomaticGainControl(),
+                            sidechain_compression_enabled: T.Ay.getSidechainCompression(),
+                            input_volume: T.Ay.getInputVolume(),
+                            output_volume: T.Ay.getOutputVolume(),
+                            audio_input_device_count: Object.keys(T.Ay.getInputDevices()).length,
+                            audio_output_device_count: Object.keys(T.Ay.getOutputDevices()).length,
                             app_hardware_acceleration_enabled: O.A.getAppHardwareAccelerationEnabled(),
-                            input_device_os_muted: m.Ay.getInputDeviceOSMuted() ?? null,
-                            input_device_os_volume: m.Ay.getInputDeviceOSVolume() ?? null,
+                            input_device_os_muted: T.Ay.getInputDeviceOSMuted() ?? null,
+                            input_device_os_volume: T.Ay.getInputDeviceOSVolume() ?? null,
                         };
                         C.default.track(L.HAw.AV_ERROR_REPORTED, i);
                     }));

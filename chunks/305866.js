@@ -12,8 +12,8 @@ function u(e) {
         { children: u, impressionType: _, impression: E, disableTrack: A, returnRef: h, ...f } = n,
         I = r.useRef(null),
         p = r.useRef(null),
-        [T, m] = r.useState(!1),
-        g = T ? p : I;
+        [m, T] = r.useState(!1),
+        g = m ? p : I;
     ((0, s.tj)(g, { returnRef: h }),
         r.useContext(d.A)(
             { type: _, name: E?.impressionName, properties: E?.impressionProperties },
@@ -27,9 +27,9 @@ function u(e) {
         ),
         N = r.useCallback(
             (e) => {
-                T !== e && m(e);
+                m !== e && T(e);
             },
-            [T],
+            [m],
         ),
         C = r.useMemo(() => ({ inDialog: !0, setFocusLockDisabled: N }), [N]);
     return (0, i.jsx)(c.Provider, {

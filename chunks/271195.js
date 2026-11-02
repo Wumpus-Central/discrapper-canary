@@ -1,4 +1,4 @@
-n.d(t, { A: () => T, X: () => p });
+n.d(t, { A: () => m, X: () => p });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -46,7 +46,7 @@ function p(e) {
         ],
     });
 }
-function T(e) {
+function m(e) {
     let {
         children: t,
         idle: n,
@@ -58,8 +58,8 @@ function T(e) {
         renderBottomRightControls: E,
         screenMessage: A,
         hideControls: f = !1,
-        className: T,
-        innerClassName: m,
+        className: m,
+        innerClassName: T,
         videoControlsClassName: g,
         ...S
     } = e;
@@ -67,10 +67,10 @@ function T(e) {
         onMouseMove: o,
         onMouseDown: o,
         onMouseLeave: d,
-        className: a()(I.Hu, { [I.N7]: n }, T),
+        className: a()(I.Hu, { [I.N7]: n }, m),
         onDoubleClick: r,
         children: [
-            (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: m, children: t }, s) }),
+            (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: T, children: t }, s) }),
             null != A ? (0, i.jsx)(h.A, { size: "small", ...A }) : null,
             !f &&
                 (0, i.jsxs)("div", {

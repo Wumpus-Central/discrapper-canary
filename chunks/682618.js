@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => p, PV: () => T, RS: () => h, o0: () => f });
+n.d(t, { Ay: () => p, PV: () => m, RS: () => h, o0: () => f });
 var i = n(158390),
     r = n(731738),
     a = n(636537),
@@ -69,7 +69,7 @@ function p(e, t) {
     });
     return (_.set(i, s), s);
 }
-function T(e) {
+function m(e) {
     s.h.dispatch({ type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId: e });
 }
 s.h.subscribe("LOGOUT", () => {

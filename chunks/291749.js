@@ -1,6 +1,6 @@
 (n.d(t, {
     dv: () => O,
-    i2: () => T,
+    i2: () => m,
     tW: () => S,
     Zf: () => C,
     vm: () => R,
@@ -50,13 +50,13 @@ var I =
 function p(e, t) {
     return null != e ? e : t;
 }
-var T =
+var m =
     (((r = {})[(r.TIER_1 = 1)] = "TIER_1"),
     (r[(r.TIER_2 = 2)] = "TIER_2"),
     (r[(r.TIER_3 = 3)] = "TIER_3"),
     (r[(r.TIER_4 = 4)] = "TIER_4"),
     r);
-let m = {
+let T = {
         video_player_video: { variant: "video", property: "url" },
         video_player_video_low_res: { variant: "videoLowRes", property: "url" },
         video_player_video_hls: { variant: "videoHls", property: "url" },
@@ -74,7 +74,7 @@ function S(e, t, n, i, r) {
     var l, o, u;
     let h,
         I,
-        T,
+        m,
         S,
         N = !1,
         C = !1;
@@ -157,7 +157,7 @@ function S(e, t, n, i, r) {
         case "video_player_transcript": {
             if (!("taskConfigV2" in e.config)) return null;
             let n = e.config.taskConfigV2.tasks[i ? a.n.WATCH_VIDEO_ON_MOBILE : a.n.WATCH_VIDEO],
-                r = m[t],
+                r = T[t],
                 s = n?.assets[r.variant]?.[r.property];
             if (null == s) return null;
             ((S = s), (C = !0));
@@ -172,8 +172,8 @@ function S(e, t, n, i, r) {
             let i = c.CI;
             return t.includes("/") ? ((i = c.GD), `${i}${t}`) : `${i}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
         })(l, o, { theme: A(u?.theme) })),
-        (T = null != (I = R(o)) && f.includes(I)),
-        { url: h, mimetype: I, isAnimated: T });
+        (m = null != (I = R(o)) && f.includes(I)),
+        { url: h, mimetype: I, isAnimated: m });
     return C && null == O.mimetype ? null : O;
 }
 function N(e) {

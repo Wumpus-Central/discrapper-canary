@@ -33,9 +33,9 @@ var h = n(710969),
     f = n(792620),
     I = n(814793),
     p = n(590202),
-    T = n(823784),
-    m = n(652215);
-let g = new Set([m.HAw.QUEST_CONTENT_VIEWED, m.HAw.QUEST_CONTENT_ENGAGED_VIEWED, m.HAw.QUEST_CONTENT_CLICKED]);
+    m = n(823784),
+    T = n(652215);
+let g = new Set([T.HAw.QUEST_CONTENT_VIEWED, T.HAw.QUEST_CONTENT_ENGAGED_VIEWED, T.HAw.QUEST_CONTENT_CLICKED]);
 function S(e, t) {
     return t ? e : ((0, l.Vc)()?.uuid ?? null);
 }
@@ -105,7 +105,7 @@ function L(e) {
             overlay_variant: r,
         };
     switch (a) {
-        case m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
             O({
                 questId: t.id,
                 event: a,
@@ -113,7 +113,7 @@ function L(e) {
                 sourceQuestContent: n.sourceQuestContent,
             });
             break;
-        case m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
             O({
                 questId: t.id,
                 event: a,
@@ -121,7 +121,7 @@ function L(e) {
                 sourceQuestContent: n.sourceQuestContent,
             });
             break;
-        case m.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
             O({
                 questId: t.id,
                 event: a,
@@ -129,8 +129,8 @@ function L(e) {
                 sourceQuestContent: n.sourceQuestContent,
             });
             break;
-        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
-        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
             O({ questId: t.id, event: a, properties: o, sourceQuestContent: n.sourceQuestContent });
     }
 }
@@ -155,7 +155,7 @@ function y(e) {
             overlay_variant: a,
         };
     switch (s) {
-        case m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
             D({
                 adContentId: t,
                 adCreativeType: n,
@@ -164,7 +164,7 @@ function y(e) {
                 sourceQuestContent: i.sourceQuestContent,
             });
             break;
-        case m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
             D({
                 adContentId: t,
                 adCreativeType: n,
@@ -173,7 +173,7 @@ function y(e) {
                 sourceQuestContent: i.sourceQuestContent,
             });
             break;
-        case m.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
             D({
                 adContentId: t,
                 adCreativeType: n,
@@ -182,8 +182,8 @@ function y(e) {
                 sourceQuestContent: i.sourceQuestContent,
             });
             break;
-        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
-        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
+        case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
             D({ adContentId: t, adCreativeType: n, event: s, properties: d, sourceQuestContent: i.sourceQuestContent });
     }
 }
@@ -273,7 +273,7 @@ async function b(e) {
         c = (0, h.Gp)(d, t);
     O({
         questId: t,
-        event: m.HAw.QUEST_CONTENT_CLICKED,
+        event: T.HAw.QUEST_CONTENT_CLICKED,
         properties: {
             ...(await v({
                 questContent: n,
@@ -285,7 +285,7 @@ async function b(e) {
             })),
             metadata_sealed: (0, h.L4)(d) ?? null,
             traffic_metadata_sealed: c ?? null,
-            search_session_id: (0, T.tv)()?.uuid ?? null,
+            search_session_id: (0, m.tv)()?.uuid ?? null,
         },
         trackGuildAndChannelMetadata: o,
         shouldExtendSession: (0, h.xn)(n),
@@ -303,7 +303,7 @@ function P(e) {
             carouselSize: o,
         } = e,
         d = (0, s.sN)().uuid;
-    _.default.track(m.HAw.QUEST_HOME_CAROUSEL_SCROLL, {
+    _.default.track(T.HAw.QUEST_HOME_CAROUSEL_SCROLL, {
         scrolling_type: t,
         client_ad_session_id: d,
         billing_session_id: S(d, (0, h.xn)(l)),
@@ -319,7 +319,7 @@ function P(e) {
 function M(e) {
     let { searchSessionId: t } = e,
         n = (0, s.sN)().uuid;
-    _.default.track(m.HAw.QUEST_HOME_SEARCH_ENTERED, {
+    _.default.track(T.HAw.QUEST_HOME_SEARCH_ENTERED, {
         client_ad_session_id: n,
         billing_session_id: S(n, !1),
         search_session_id: t,
@@ -328,7 +328,7 @@ function M(e) {
 function U(e) {
     let { searchSessionId: t, searchSessionDurationMs: n } = e,
         i = (0, s.sN)().uuid;
-    _.default.track(m.HAw.QUEST_HOME_SEARCH_CLOSED, {
+    _.default.track(T.HAw.QUEST_HOME_SEARCH_CLOSED, {
         client_ad_session_id: i,
         billing_session_id: S(i, !1),
         search_session_id: t,
@@ -338,7 +338,7 @@ function U(e) {
 function w(e) {
     let { searchSessionId: t, searchQuery: n, searchQueryLength: i, resultsCount: r, hasResults: a } = e,
         l = (0, s.sN)().uuid;
-    _.default.track(m.HAw.QUEST_HOME_SEARCH_QUERY_SUBMITTED, {
+    _.default.track(T.HAw.QUEST_HOME_SEARCH_QUERY_SUBMITTED, {
         client_ad_session_id: l,
         billing_session_id: S(l, !1),
         search_session_id: t,
@@ -353,7 +353,7 @@ function G(e) {
         s = (0, p.fF)(t);
     O({
         questId: i,
-        event: m.HAw.QUEST_BAR_MODE_CHANGED,
+        event: T.HAw.QUEST_BAR_MODE_CHANGED,
         properties: { content_id: s.content_id, content_name: s.content_name, mode: r, previous_mode: a },
         sourceQuestContent: n,
     });
@@ -364,7 +364,7 @@ function x(e) {
     D({
         adContentId: t,
         adCreativeType: n,
-        event: m.HAw.QUEST_BAR_MODE_CHANGED,
+        event: T.HAw.QUEST_BAR_MODE_CHANGED,
         properties: { content_id: l.content_id, content_name: l.content_name, mode: a, previous_mode: s },
         sourceQuestContent: r,
     });
@@ -374,7 +374,7 @@ function k(e) {
         s = (0, p.fF)(n);
     O({
         questId: t,
-        event: m.HAw.QUEST_CONTENT_RENDERING_FAILURE,
+        event: T.HAw.QUEST_CONTENT_RENDERING_FAILURE,
         properties: { content_id: s.content_id, content_name: s.content_name, reason: r, impression_id: a },
         sourceQuestContent: i,
     });
@@ -385,11 +385,11 @@ function F(e) {
     D({
         adContentId: t,
         adCreativeType: n,
-        event: m.HAw.QUEST_CONTENT_RENDERING_FAILURE,
+        event: T.HAw.QUEST_CONTENT_RENDERING_FAILURE,
         properties: { content_id: l.content_id, content_name: l.content_name, reason: a, impression_id: s },
         sourceQuestContent: r,
     });
 }
 function B(e, t) {
-    o.Ay.trackWithMetadata(m.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
+    o.Ay.trackWithMetadata(T.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
 }

@@ -16,8 +16,8 @@ var r = n(503698),
     f = n(235986),
     I = n(267102),
     p = n(574172),
-    T = n(704877),
-    m = n(222692),
+    m = n(704877),
+    T = n(222692),
     g = n(447404),
     S = n(271195),
     N = n(204651),
@@ -63,7 +63,7 @@ function B(e) {
         B = !1 === (F?.disabled ?? !0),
         V = (0, _.A)([n])[0],
         H = (0, h.Ay)(t),
-        j = (0, T.A)(t),
+        j = (0, m.A)(t),
         { parentAnalyticsLocation: W } = (0, u.Ay)();
     function Y(e) {
         ((0, A.X)(W, A.O.CAMERA, e), c.default.setVideoEnabled(e));
@@ -99,7 +99,7 @@ function B(e) {
                                 hasPermission: j,
                                 onChange: Y,
                                 onCameraUnavailable: function () {
-                                    B ? Y(!0) : (0, m.A)();
+                                    B ? Y(!0) : (0, T.A)();
                                 },
                             }),
                             null != t &&

@@ -19,14 +19,14 @@ function o(e) {
         { i18n: h } = (0, a.G9)(),
         f = h.CANCEL,
         I = h.INLINE_NOTICE_GENERIC_ERROR,
-        [p, T] = r.useState(!1),
-        m = r.useRef(u);
+        [p, m] = r.useState(!1),
+        T = r.useRef(u);
     (r.useLayoutEffect(() => {
-        m.current = u;
+        T.current = u;
     }),
         r.useLayoutEffect(
             () => () => {
-                m.current?.();
+                T.current?.();
             },
             [],
         ));
@@ -47,11 +47,11 @@ function o(e) {
                 text: t,
                 variant: "critical" === _ ? "critical-primary" : _,
                 onClick: async () => {
-                    (S(void 0), T(!0));
+                    (S(void 0), m(!0));
                     try {
                         (await d?.(N), A.onClose());
                     } catch (e) {
-                        throw (T(!1), S((e) => e ?? I), e);
+                        throw (m(!1), S((e) => e ?? I), e);
                     }
                 },
                 disabled: p,

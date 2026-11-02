@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(677413),
     I = n(863005),
     p = n(253932),
-    T = n(734057),
-    m = n(808728),
+    m = n(734057),
+    T = n(808728),
     g = n(696451),
     S = n(317525),
     N = n(71393),
@@ -240,7 +240,7 @@ let F = E.Ay.RULES,
         channel: {
             match: s().anyScopeRegex(j),
             parse(e) {
-                let t = T.A.getChannel(e[1]);
+                let t = m.A.getChannel(e[1]);
                 return { content: null == t ? e[0] : (0, o.m1)(t, L.default, O.A, !0, !0) };
             },
         },
@@ -368,16 +368,16 @@ function Q(e, t) {
                 let { id: t, name: n } = e;
                 return { id: t, text: n };
             }),
-        u = r()(m.Ay.getTextChannelNameDisambiguations(i)).map((e) => {
+        u = r()(T.Ay.getTextChannelNameDisambiguations(i)).map((e) => {
             let { id: t, name: n } = e;
             return { id: t, text: n };
         }),
         _ =
             null != i
                 ? r()(y.L3)
-                      .filter((e) => e !== m.I6)
+                      .filter((e) => e !== T.I6)
                       .flatMap((e) =>
-                          m.Ay.getChannels(i)[e].map((e) =>
+                          T.Ay.getChannels(i)[e].map((e) =>
                               e.channel.isCategory() && !C.A.can(M.xBc.VIEW_CHANNEL, e.channel)
                                   ? null
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, L.default, O.A) },
@@ -412,7 +412,7 @@ function J(e) {
     return e;
 }
 function ee(e, t, n) {
-    let i = T.A.getChannel(t),
+    let i = m.A.getChannel(t),
         a = null != i ? i.getGuildId() : null,
         l = null != a ? N.A.getGuild(a) : null,
         o = n ? z : r().omit(z, ["spoiler", "timestamp", "unicodeEmoji"]),

@@ -87,7 +87,7 @@ let I = new (n(626584).A)("GuildEmojis"),
             for (let i of (r.putAll(e, t), n)) r.delete(e, i);
         }
     })(),
-    T = new (class {
+    m = new (class {
         val;
         loading = !1;
         loaded = !1;
@@ -116,11 +116,11 @@ let I = new (n(626584).A)("GuildEmojis"),
             return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
         }
     }),
-    m = function (e) {
-        T.setParams(e);
+    T = function (e) {
+        m.setParams(e);
     },
     g = function (e) {
-        let t = T.get();
+        let t = m.get();
         return void 0 !== t ? t[e] : [];
     };
 var S = n(736056),
@@ -498,10 +498,10 @@ function eI() {
 function ep(e) {
     null != es[e] && delete es[e];
 }
-function eT() {
+function em() {
     ((el = null), eE.reset(), 2 === er && (eh.compute(), ef.compute()));
 }
-function em(e) {
+function eT(e) {
     (ep(e), eE.clear(e));
     let t = H.A.getGuildEmojis(e);
     if (null == t) return;
@@ -577,7 +577,7 @@ function eN(e) {
         } = e,
         i = M.A.getRole(t, n);
     if (!(null != i && (0, N.U)(i))) return !1;
-    (em(t), eT());
+    (eT(t), em());
 }
 class eC extends _.Ay.PersistedStore {
     static displayName = "EmojiStore";
@@ -746,35 +746,35 @@ let eO = new eC(E.h, {
         eI();
     },
     CONNECTION_OPEN: function (e) {
-        for (let t of (eI(), e.guilds)) em(t.id);
-        ((er = 0 === e.unavailableGuilds.length && e.guilds.every((e) => "full_sync" === e.emojis.op) ? 2 : 0), eT());
+        for (let t of (eI(), e.guilds)) eT(t.id);
+        ((er = 0 === e.unavailableGuilds.length && e.guilds.every((e) => "full_sync" === e.emojis.op) ? 2 : 0), em());
     },
     OVERLAY_INITIALIZE: function (e) {
-        for (let t in (eI(), e.emojis)) em(t);
-        ((er = 2), eT());
+        for (let t in (eI(), e.emojis)) eT(t);
+        ((er = 2), em());
     },
     CACHED_EMOJIS_LOADED: function (e) {
         let { emojis: t } = e;
-        for (let [e] of t) P.A.isMember(e) && em(e);
-        eT();
+        for (let [e] of t) P.A.isMember(e) && eT(e);
+        em();
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
-        n.id === w.default.getCurrentUser()?.id && (em(t), eT());
+        n.id === w.default.getCurrentUser()?.id && (eT(t), em());
     },
     GUILD_CREATE: function (e) {
-        (em(e.guild.id), eT());
+        (eT(e.guild.id), em());
     },
     GUILD_UPDATE: function (e) {
-        (em(e.guild.id), eT());
+        (eT(e.guild.id), em());
     },
     GUILD_EMOJIS_UPDATE: function (e) {
         let { guildId: t } = e;
-        (em(t), eT());
+        (eT(t), em());
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (ep(t.id), eo.delete(t.id), eT());
+        (ep(t.id), eo.delete(t.id), em());
     },
     MESSAGE_REACTION_ADD: function (e) {
         if (!e.optimistic) return !1;
@@ -803,7 +803,7 @@ let eO = new eC(E.h, {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if ((m(D.default.locale), t !== X.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+        if ((T(D.default.locale), t !== X.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
         ((Z.pendingUsages = []), (Z.emojiReactionPendingUsages = []));
     },
     GUILD_ROLE_CREATE: eN,

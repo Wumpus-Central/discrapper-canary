@@ -12,10 +12,10 @@
         clearMainFrameSlot: () => p,
         launchFrame: () => I,
         resetFrameLayoutModes: () => L,
-        demoteMainFrame: () => T,
+        demoteMainFrame: () => m,
         attachFrameIframe: () => y,
         attachFrameHostWindow: () => v,
-        promoteFrame: () => m,
+        promoteFrame: () => T,
     }));
 var i = n(73153),
     r = n(730602),
@@ -44,15 +44,15 @@ async function I(e) {
             showErrorModal: h = !0,
             invite: I,
         } = e,
-        T = (0, A.VA)(t, n),
-        S = _.A.getFrame(T);
-    if (null != S) return (S.intent === A.sV.MAIN && (m(T), g({ frameId: T, layoutMode: A.y0.FOCUSED })), T);
+        m = (0, A.VA)(t, n),
+        S = _.A.getFrame(m);
+    if (null != S) return (S.intent === A.sV.MAIN && (T(m), g({ frameId: m, layoutMode: A.y0.FOCUSED })), m);
     (0, A.Yf)(n) === A.sV.MAIN && (o(), p());
     let N = ++f;
     i.h.dispatch({
         type: "FRAME_LAUNCH_START",
         applicationId: t,
-        frameId: T,
+        frameId: m,
         surface: n,
         hostWindowKey: E,
         launch: s,
@@ -65,7 +65,7 @@ async function I(e) {
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
                 applicationId: t,
-                frameId: T,
+                frameId: m,
                 surface: n,
                 proxyTicket: e,
                 analyticsContext: l,
@@ -74,7 +74,7 @@ async function I(e) {
                 hostWindowKey: E,
                 launchRequestId: N,
             }),
-            T
+            m
         );
     } catch (e) {
         if (h) {
@@ -85,7 +85,7 @@ async function I(e) {
             i.h.dispatch({
                 type: "FRAME_LAUNCH_FAIL",
                 applicationId: t,
-                frameId: T,
+                frameId: m,
                 launchRequestId: N,
                 error: e,
                 analyticsContext: l,
@@ -96,12 +96,12 @@ async function I(e) {
 }
 function p() {
     let e = _.A.getMainFrame();
-    null != e && (e.intent === A.sV.MAIN ? (0, E.r)(e.id) : T(e.id));
-}
-function T(e) {
-    _.A.getMainFrame()?.id === e && (L(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
+    null != e && (e.intent === A.sV.MAIN ? (0, E.r)(e.id) : m(e.id));
 }
 function m(e) {
+    _.A.getMainFrame()?.id === e && (L(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
+}
+function T(e) {
     null != _.A.getFrame(e) &&
         _.A.getMainFrame()?.id !== e &&
         (o(), p(), i.h.dispatch({ type: "FRAME_PROMOTE", frameId: e }));

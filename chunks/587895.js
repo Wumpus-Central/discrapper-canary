@@ -51,13 +51,13 @@ function p(e) {
             delete A.botUserIdToAppUsage[t];
         }
 }
-function T(e) {
+function m(e) {
     let { applications: t } = e;
     if (0 === t.length) return !1;
     for (let e of t) h(a.Ay.createFromServer(e));
     return !0;
 }
-function m(e) {
+function T(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) e?.application != null && (h(a.Ay.createFromServer(e.application)), (n = !0));
@@ -176,9 +176,9 @@ let N = new S(r.h, {
         let { application: t } = e;
         I(t);
     },
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: m,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: m,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: m,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: T,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: T,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: T,
     GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, applications: n } = e,
             i = [];
@@ -277,7 +277,7 @@ let N = new S(r.h, {
         if (null == t || 0 === t.length) return !1;
         for (let e of t) h(e);
     },
-    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: T,
-    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: T,
-    APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: T,
+    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: m,
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: m,
+    APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: m,
 });

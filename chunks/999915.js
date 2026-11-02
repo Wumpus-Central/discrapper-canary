@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(427262),
     I = n(258072),
     p = n(717125),
-    T = n(47167),
-    m = n(499211),
+    m = n(47167),
+    T = n(499211),
     g = n(376943),
     S = n(576705),
     N = n(994500),
@@ -53,7 +53,7 @@ function U(e) {
 }
 function w(e, t) {
     let n = u.A.getChannel(e),
-        i = (0, m.p)(e, u.A, p.A, S.A).isSubscriptionGated,
+        i = (0, T.p)(e, u.A, p.A, S.A).isSubscriptionGated,
         r = (0, O.QG)(n) ?? "text";
     if (null != t) {
         let a = t.find((t) => t.id === e);
@@ -77,7 +77,7 @@ function w(e, t) {
               type: n.type,
               id: n.id,
               guildId: n.guild_id,
-              name: (0, T.m1)(n, A.default, N.A),
+              name: (0, m.m1)(n, A.default, N.A),
               isDm: n.isPrivate(),
               isForumPost: n.isForumPost(),
               isMentionable: (0, L.Y)(n.type),
@@ -142,7 +142,7 @@ function F(e, t, n, i) {
                         return {
                             inContent: [
                                 M({
-                                    name: (0, T.m1)(e, A.default, N.A),
+                                    name: (0, m.m1)(e, A.default, N.A),
                                     type: e.type,
                                     iconType: (0, O.QG)(e) ?? "forum",
                                 }),
@@ -666,10 +666,10 @@ let ed = {
     ]),
     eI = r().omit(ec, ["codeBlock", "blockQuote", "br"]),
     ep = r().omit(ec, ["codeBlock", "br", "inlineCode"]);
-function eT(e, t) {
+function em(e, t) {
     return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim();
 }
-function em(e, t, n) {
+function eT(e, t, n) {
     let i = t + n;
     return i === e.length || "" === e.charAt(i).trim();
 }
@@ -686,11 +686,11 @@ let eg = (0, J.A)([
                         return null;
                     let n = e.indexOf(t.highlightWord);
                     if (-1 === n) return null;
-                    let i = !eT(e, n) || !em(e, n, t.highlightWord.length);
+                    let i = !em(e, n) || !eT(e, n, t.highlightWord.length);
                     if (i)
                         do
                             ((n = e.indexOf(t.highlightWord, n + 1)),
-                                (i = !eT(e, n) || !em(e, n, t.highlightWord.length)));
+                                (i = !em(e, n) || !eT(e, n, t.highlightWord.length)));
                         while (i && -1 !== n);
                     if (-1 === n) return null;
                     let r = e.substring(0, n),

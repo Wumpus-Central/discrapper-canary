@@ -15,10 +15,10 @@ function h(e) {
     let { scheduledMessage: t, transitionState: n, onClose: a } = e,
         h = s()(t.sendAtTimestamp.substring(0, 200)),
         [f, I] = r.useState(h),
-        [p, T] = r.useState(!1),
-        m = (0, u.Vf)(f, t.scheduledMessageId);
+        [p, m] = r.useState(!1),
+        T = (0, u.Vf)(f, t.scheduledMessageId);
     async function g() {
-        T(!0);
+        m(!0);
         try {
             (await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: f.toISOString() }),
                 (0, c.kb)(),
@@ -26,7 +26,7 @@ function h(e) {
         } catch (e) {
             (0, c.xP)(e.message);
         } finally {
-            T(!1);
+            m(!1);
         }
     }
     return (0, i.jsx)(l.a, {
@@ -36,7 +36,7 @@ function h(e) {
         onClose: a,
         actions: [
             { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: a },
-            { variant: "primary", text: E.intl.string(E.t.VZANAD), onClick: g, loading: p, disabled: null != m },
+            { variant: "primary", text: E.intl.string(E.t.VZANAD), onClick: g, loading: p, disabled: null != T },
         ],
         children: (0, i.jsx)(_.A, { defaultValue: h, onChange: I, scheduledMessageId: t.scheduledMessageId }),
     });

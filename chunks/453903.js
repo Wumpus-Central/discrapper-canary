@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(750506),
     I = n(267102),
     p = n(712687),
-    T = n(38405),
-    m = n(292036),
+    m = n(38405),
+    T = n(292036),
     g = n(652215);
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
     N = r.createContext(null),
@@ -26,7 +26,7 @@ class O extends r.Component {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
         spacing: 0,
-        loadingComponent: (0, i.jsx)(m.s, {}),
+        loadingComponent: (0, i.jsx)(T.s, {}),
         closeOnClickOutside: !0,
     };
     domElementRef = r.createRef();
@@ -77,7 +77,7 @@ class O extends r.Component {
         let e = this.props.targetElementRef?.current;
         if (!(0, d.vq)(e)) {
             let e = Error("Popout cannot find DOM node");
-            return (console.error(e), T.A.captureException(e), null);
+            return (console.error(e), m.A.captureException(e), null);
         }
         return e;
     }
@@ -169,8 +169,8 @@ class O extends r.Component {
                 layerContext: I,
                 clickTrap: p = !1,
             } = this.props,
-            { isLoading: T, shouldShowLoadingState: m } = this.state;
-        return T && !m
+            { isLoading: m, shouldShowLoadingState: T } = this.state;
+        return m && !T
             ? null
             : (0, i.jsx)(u.Wd, {
                   layerContext: I ?? f.uY,

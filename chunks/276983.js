@@ -1,21 +1,21 @@
-(n.d(t, { Et: () => d, Us: () => c, de: () => o, jQ: () => l, yG: () => a }), n(205816));
-var r = n(723702),
-    s = n(809526),
-    i = n(105292);
-let u = {
-        screen_capture: { isSupported: r.isDesktop, getLabel: () => i.intl.string(s.default["2KIefJ"]) },
-        connect_user_to_voice: { isSupported: () => !0, getLabel: () => i.intl.string(s.default["5Hp3Nx"]) },
+(n.d(t, { Et: () => u, Us: () => c, de: () => o, jQ: () => l, yG: () => d }), n(205816));
+var i = n(723702),
+    r = n(809526),
+    a = n(105292);
+let s = {
+        screen_capture: { isSupported: i.isDesktop, getLabel: () => a.intl.string(r.default["2KIefJ"]) },
+        connect_user_to_voice: { isSupported: () => !0, getLabel: () => a.intl.string(r.default["5Hp3Nx"]) },
     },
-    l = Object.keys(u);
+    l = Object.keys(s);
 function o(e) {
-    return "string" == typeof e && Object.hasOwn(u, e);
-}
-function a(e) {
-    return u[e].isSupported();
-}
-function c(e) {
-    return u[e].getLabel();
+    return "string" == typeof e && Object.hasOwn(s, e);
 }
 function d(e) {
-    return i.intl.formatToPlainString(s.default.vBSfKU, { app: e });
+    return s[e].isSupported();
+}
+function c(e) {
+    return s[e].getLabel();
+}
+function u(e) {
+    return a.intl.formatToPlainString(r.default.vBSfKU, { app: e });
 }

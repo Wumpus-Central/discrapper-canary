@@ -47,7 +47,7 @@ function p(e, t) {
         }
     );
 }
-function T(e) {
+function m(e) {
     let { name: t, targetNode: n, combine: a, below: s } = e,
         l = r.useMemo(() => p([_.PJ.GUILD, _.PJ.FOLDER], n, s, a), [n, s, a]),
         [{ canDrop: o, isOver: c }, u] = (0, d.H)(l),
@@ -63,7 +63,7 @@ function T(e) {
         className: f.aC,
     });
 }
-function m(e) {
+function T(e) {
     let { name: t, targetNode: n, onDragOverChanged: a } = e,
         [{ canDrop: l, isOver: o }, c] = (0, d.H)(() => p([_.PJ.GUILD], n, !0, !0));
     r.useEffect(() => {
@@ -94,8 +94,8 @@ let g = r.memo(function (e) {
         className: f.iE,
         "aria-hidden": !0,
         children: [
-            (0, i.jsx)(T, { name: t, targetNode: n, below: a }),
-            l ? (0, i.jsx)(m, { name: t, targetNode: n, onDragOverChanged: s }) : null,
+            (0, i.jsx)(m, { name: t, targetNode: n, below: a }),
+            l ? (0, i.jsx)(T, { name: t, targetNode: n, onDragOverChanged: s }) : null,
         ],
     });
 });

@@ -1,4 +1,4 @@
-n.d(t, { $: () => T, f: () => m });
+n.d(t, { $: () => m, f: () => T });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -15,7 +15,7 @@ var i = n(477900),
     f = n(652215),
     I = n(105292),
     p = n(467793);
-function T(e) {
+function m(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: r } = e;
     (0, A.HU)({ location: I.intl.string(I.t["3S2494"]) });
     let a = (0, l.bG)([h.A], () => h.A.isDeveloper) ? "92px" : void 0;
@@ -29,7 +29,7 @@ function T(e) {
             }),
     });
 }
-function m(e) {
+function T(e) {
     let { hideHeader: t, "aria-label": n, ...a } = e,
         s = (0, i.jsx)(r.Fragment, {}, "controls");
     return (0, i.jsxs)(d.d, {

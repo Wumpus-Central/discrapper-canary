@@ -15,8 +15,8 @@ var i = n(636537),
     f = n(573163),
     I = n(174459),
     p = n(371794),
-    T = n(387755),
-    m = n(730852),
+    m = n(387755),
+    T = n(730852),
     g = n(652215),
     S = n(105292);
 let N = {
@@ -32,7 +32,7 @@ let N = {
             } = e,
             d = this._getRecipients(t);
         function c(e) {
-            n && T.A.call(e.id, r, !0, e.isDM() ? e.getRecipientId() : null);
+            n && m.A.call(e.id, r, !0, e.isDM() ? e.getRecipientId() : null);
         }
         if (1 === d.length) {
             let [e] = d,
@@ -85,7 +85,7 @@ let N = {
                   (t?.(),
                   null != (0, c.Y)()
                       ? (0, E.iN)(a.id, { navigationReplace: i })
-                      : m.default.selectPrivateChannel(a.id)),
+                      : T.default.selectPrivateChannel(a.id)),
               a);
     },
     async ensurePrivateChannel(e) {
@@ -114,7 +114,7 @@ let N = {
             n = (0, A.UE)(e);
         return (
             a.h.dispatch({ type: "CHANNEL_CREATE", channel: n }),
-            null != (0, c.Y)() ? (0, E.iN)(n.id, { navigationReplace: t }) : m.default.selectPrivateChannel(n.id),
+            null != (0, c.Y)() ? (0, E.iN)(n.id, { navigationReplace: t }) : T.default.selectPrivateChannel(n.id),
             n
         );
     },

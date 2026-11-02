@@ -40,7 +40,7 @@ function p(e) {
     if (r.length === i.ids.length) return !1;
     h(n, () => ({ ids: r, messages: a }));
 }
-function T() {
+function m() {
     let e = {},
         t = !1;
     for (let n of Object.keys(E)) {
@@ -59,7 +59,7 @@ function T() {
     if (!t) return !1;
     E = e;
 }
-class m extends r.Ay.Store {
+class T extends r.Ay.Store {
     static displayName = "GuildOfficialMessagesStore";
     initialize() {
         this.waitFor(s.A, l.Ay, o.A, d.A, c.default);
@@ -84,7 +84,7 @@ class m extends r.Ay.Store {
         return E[e]?.hasMore ?? !1;
     }
 }
-let g = new m(a.h, {
+let g = new T(a.h, {
     CONNECTION_OPEN: function () {
         E = {};
     },
@@ -204,7 +204,7 @@ let g = new m(a.h, {
         for (let e of i.ids) r.has(e) && delete s[e];
         h(n, () => ({ ids: a, messages: s }));
     },
-    RELATIONSHIP_ADD: T,
-    RELATIONSHIP_REMOVE: T,
-    RELATIONSHIP_UPDATE: T,
+    RELATIONSHIP_ADD: m,
+    RELATIONSHIP_REMOVE: m,
+    RELATIONSHIP_UPDATE: m,
 });

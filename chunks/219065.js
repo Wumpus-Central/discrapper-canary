@@ -15,7 +15,7 @@ var i = n(435558),
     f = n(427262),
     I = n(652215);
 let p = {};
-class T {
+class m {
     guildId;
     parentId;
     threadId;
@@ -116,7 +116,7 @@ class T {
         return [l, d?.toLowerCase(), s];
     }
 }
-function m(e) {
+function T(e) {
     return g(e.user.id);
 }
 function g(e) {
@@ -193,9 +193,9 @@ let C = new N(s.h, {
         let { threadId: t, guildId: n, members: i } = e,
             r = l.A.getChannel(t),
             a = r?.parent_id;
-        null != a && ((p[t] = new T(n, a, t)), p[t].rebuild(i.map((e) => e.user_id)));
+        null != a && ((p[t] = new m(n, a, t)), p[t].rebuild(i.map((e) => e.user_id)));
     },
-    USER_UPDATE: m,
+    USER_UPDATE: T,
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
         return t
@@ -205,9 +205,9 @@ let C = new N(s.h, {
             })
             .some((e) => e);
     },
-    GUILD_MEMBER_ADD: m,
-    GUILD_MEMBER_UPDATE: m,
-    GUILD_MEMBER_REMOVE: m,
+    GUILD_MEMBER_ADD: T,
+    GUILD_MEMBER_UPDATE: T,
+    GUILD_MEMBER_REMOVE: T,
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e,
             n = r()(t)

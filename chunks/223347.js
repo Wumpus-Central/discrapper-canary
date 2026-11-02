@@ -1,7 +1,7 @@
-n.d(t, { X: () => i, p: () => o });
+n.d(t, { X: () => o, p: () => i });
 var r = n(73153),
     s = n(975189);
-let o = {
+let i = {
     model_settings(e, t) {
         let { projectId: n } = t;
         r.h.dispatch({
@@ -14,7 +14,7 @@ let o = {
         });
     },
 };
-function i(e, t) {
+function o(e, t) {
     let n = (0, s.KY)(e);
     try {
         if (null == n) throw Error("Not connected");

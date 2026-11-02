@@ -1,5 +1,5 @@
 n.d(t, {
-    Eq: () => T,
+    Eq: () => m,
     O9: () => C,
     PZ: () => p,
     Sb: () => N,
@@ -7,7 +7,7 @@ n.d(t, {
     Xx: () => A,
     YP: () => f,
     _A: () => h,
-    _F: () => m,
+    _F: () => T,
     bf: () => S,
     ko: () => R,
     n3: () => y,
@@ -43,8 +43,8 @@ var i,
     f = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a);
 let I = "ROLE_SUBSCRIPTIONS",
     p = "APPLICATION_SUBSCRIPTION_SUBSECTION";
-var T = (((s = {}).USER_PROFILE = "user_profile"), (s.GUILD = "guild"), s),
-    m = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
+var m = (((s = {}).USER_PROFILE = "user_profile"), (s.GUILD = "guild"), s),
+    T = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
     g =
         (((o = {})[(o.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
         (o[(o.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),

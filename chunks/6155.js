@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(198052),
     I = n(616356),
     p = n(334463),
-    T = n(287809),
-    m = n(652215),
+    m = n(287809),
+    T = n(652215),
     g = n(806931),
     S = n(105292),
     N = n(967481);
@@ -25,7 +25,7 @@ function C(e) {
         n,
         { closePopout: r, idle: s, pipWindows: d, voiceChannelId: c, onSelect: u } = e;
     s && r();
-    let T = (0, a.bG)([A.Ay], () => A.Ay.getCurrentEmbeddedActivity()),
+    let m = (0, a.bG)([A.Ay], () => A.Ay.getCurrentEmbeddedActivity()),
         N = (0, a.bG)([p.A], () => p.A.pipWindow),
         C = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(c)),
         O = (0, a.bG)([f.A], () => f.A.getStreamParticipants(c));
@@ -36,7 +36,7 @@ function C(e) {
         onClose: r,
         onSelect: u,
         children: ((t = []),
-        null != (n = d.find((e) => e.component === m.o1q.VIDEO)) &&
+        null != (n = d.find((e) => e.component === T.o1q.VIDEO)) &&
             O.forEach((e) => {
                 let i = I.A.getActiveStreamForApplicationStream(e.stream),
                     r = e.id === C?.id && N?.id === n.id;
@@ -46,8 +46,8 @@ function C(e) {
             let t = e.pipWindow.id,
                 n = e.participant?.id,
                 r = (function (e) {
-                    if (e.pipWindow.component === m.o1q.ACTIVITY && null != T) {
-                        let e = h.A.getApplication(T.applicationId)?.name;
+                    if (e.pipWindow.component === T.o1q.ACTIVITY && null != m) {
+                        let e = h.A.getApplication(m.applicationId)?.name;
                         return null == e
                             ? S.intl.string(S.t["8raC1P"])
                             : S.intl.formatToPlainString(S.t["a9+V+V"], { activityName: e });
@@ -82,11 +82,11 @@ function C(e) {
 let O = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = r.useRef(null),
-        o = Array.from((0, a.bG)([p.A], () => p.A.pipWindows).values()).filter((e) => e.component !== m.o1q.ACTIVITY),
+        o = Array.from((0, a.bG)([p.A], () => p.A.pipWindows).values()).filter((e) => e.component !== T.o1q.ACTIVITY),
         _ = (0, a.yK)([I.A], () => I.A.getAllActiveStreamsForChannel(t)).filter(
-            (e) => e.ownerId !== T.default.getCurrentUser()?.id && e.channelId === t,
+            (e) => e.ownerId !== m.default.getCurrentUser()?.id && e.channelId === t,
         ),
-        E = (1 === o.length && o[0].component === m.o1q.ACTIVITY) || 0 === _.length,
+        E = (1 === o.length && o[0].component === T.o1q.ACTIVITY) || 0 === _.length,
         A = 1 === o.length && _.length <= 1;
     return E || A
         ? null

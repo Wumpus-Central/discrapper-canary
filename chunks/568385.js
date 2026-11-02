@@ -20,9 +20,9 @@ function _(e) {
             leadingIcon: f,
             value: I,
             labelType: p = "primary",
-            usageVariant: T = "single",
+            usageVariant: m = "single",
         } = e,
-        m = (0, r.useRef)(null),
+        T = (0, r.useRef)(null),
         g = (0, r.useRef)(null),
         S = (0, r.useRef)(null),
         N = r.useId(),
@@ -45,13 +45,13 @@ function _(e) {
             [u.Gu]: D && null != b,
             [u.HY]: "animateIn" === R,
             [u.U9]: "animateOut" === R,
-            [u.YK]: "indicator" !== T,
+            [u.YK]: "indicator" !== m,
         }),
         M = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
                     className: u.fb,
-                    ref: m,
+                    ref: T,
                     "aria-hidden": !0,
                     children: [
                         (0, i.jsx)("svg", {

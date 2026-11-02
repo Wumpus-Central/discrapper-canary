@@ -15,7 +15,7 @@ let c = new s.A("MultiAccountSwitchStore"),
     f = !1,
     I = !1,
     p = null;
-function T(e) {
+function m(e) {
     return {
         from_user_id: _,
         to_user_id: E,
@@ -29,7 +29,7 @@ function T(e) {
         switch_origin: A,
     };
 }
-function m() {
+function T() {
     return h && !1;
 }
 class g extends r.Ay.Store {
@@ -83,14 +83,14 @@ let S = new g(a.h, {
         let { user: t } = e;
         if (h) {
             !(function (e) {
-                if (!m()) return;
+                if (!T()) return;
                 let t = i.getToken(e),
                     n = i.getToken(),
                     r = null != E && e !== E,
                     a = null != t && null != n && t !== n;
                 if (!a && !r) return;
                 let s = {
-                    ...T(e),
+                    ...m(e),
                     user_token_exists: null != t,
                     main_token_exists: null != n,
                     is_token_mismatch: a,
@@ -102,14 +102,14 @@ let S = new g(a.h, {
             let e = _ !== t.id;
             if (e) {
                 let e;
-                ((e = T(t.id)),
+                ((e = m(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_SUCCESS, e),
-                    m() && c.log("Account switch success", e));
+                    T() && c.log("Account switch success", e));
             } else {
                 let e;
-                ((e = T(t.id)),
+                ((e = m(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_FAILURE, e),
-                    m() && c.log("Account switch failure", e));
+                    T() && c.log("Account switch failure", e));
             }
             p = { success: e, navigateHome: I };
         } else p = null;
@@ -117,7 +117,7 @@ let S = new g(a.h, {
         (null != n &&
             "" !== n &&
             (!(function (e, t) {
-                if (!m()) return;
+                if (!T()) return;
                 let n = o.A.getUsers()
                     .map((e) => {
                         let { id: t } = e;
@@ -127,13 +127,13 @@ let S = new g(a.h, {
                 if (0 === n.length) return;
                 let r = i.getToken(e) === t,
                     a = n.length >= 2,
-                    s = { ...T(e), colliding_user_ids: n, is_already_corrupted: r || a };
+                    s = { ...m(e), colliding_user_ids: n, is_already_corrupted: r || a };
                 (c.log("setToken about to introduce per-user token collision", s),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, s));
             })(t.id, n),
             i.setToken(n, t.id)),
             (function (e) {
-                if (!m()) return;
+                if (!T()) return;
                 let t = new Map();
                 (o.A.getUsers().forEach((e) => {
                     let { id: n } = e,
@@ -144,7 +144,7 @@ let S = new g(a.h, {
                 }),
                     t.forEach((t) => {
                         if (t.length < 2) return;
-                        let n = { ...T(e), colliding_user_ids: t };
+                        let n = { ...m(e), colliding_user_ids: t };
                         (c.log("Per-user token collision detected", n),
                             l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION, n));
                     }));

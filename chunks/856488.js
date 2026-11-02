@@ -88,8 +88,8 @@ function I() {
         {
             saturation: I,
             useReducedMotion: p,
-            roleStyle: T,
-            highContrastMode: m,
+            roleStyle: m,
+            highContrastMode: T,
             switchIconsEnabled: g,
         } = (0, r.cf)([o.Ay], () => ({
             saturation: o.Ay.saturation,
@@ -129,8 +129,8 @@ function I() {
                     children: (0, i.jsx)(a.sL, {
                         id: "high-contrast",
                         label: A.intl.string(A.t.aZlePv),
-                        checked: m,
-                        action: () => (0, l.uh)(m ? o._1.DEFAULT : o._1.HIGH),
+                        checked: T,
+                        action: () => (0, l.uh)(T ? o._1.DEFAULT : o._1.HIGH),
                     }),
                 },
                 "high-contrast",
@@ -194,7 +194,7 @@ function I() {
                             let { name: t, value: n } = e;
                             return (0, i.jsx)(
                                 a.iD,
-                                { id: n, group: "role-colors", checked: n === T, label: t, action: () => (0, l.IX)(n) },
+                                { id: n, group: "role-colors", checked: n === m, label: t, action: () => (0, l.IX)(n) },
                                 n,
                             );
                         }),

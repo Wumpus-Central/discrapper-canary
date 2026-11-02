@@ -16,12 +16,12 @@ n.d(t, {
     hT: () => I,
     jC: () => D,
     jh: () => P,
-    jr: () => T,
+    jr: () => m,
     pO: () => C,
     py: () => S,
     rH: () => G,
     ri: () => M,
-    sB: () => m,
+    sB: () => T,
     zd: () => x,
 });
 var i = n(666860),
@@ -75,7 +75,7 @@ function p(e) {
         location: l,
     });
 }
-function T(e) {
+function m(e) {
     let { guildId: t, channelId: n } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_CHANNEL_CREATE_NEW_POST_CLICKED, {
         ...(0, E.fO)({ channelId: n }),
@@ -83,7 +83,7 @@ function T(e) {
         channel_id: n,
     });
 }
-function m(e) {
+function T(e) {
     let { guildId: t, channelId: n } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_CHANNEL_CREATE_NEW_POST_KEYBIND_USED, {
         ...(0, E.fO)({ channelId: n }),

@@ -1,18 +1,18 @@
-s.d(a, { A: () => t });
-var l = s(477900);
+s.d(o, { A: () => a });
+var d = s(477900);
 s(582128);
 var i = s(570287),
-    o = s(822775),
-    d = s(784886),
-    n = s(47453);
-function t(e) {
-    let { user: a, guildId: s, channelId: t, onClose: r, appContext: c, disableAutoFocus: h = !1 } = e,
-        u = (0, i.A)(a.id, s);
-    return (0, l.jsxs)("div", {
-        className: n.qr,
+    n = s(822775),
+    l = s(784886),
+    t = s(47453);
+function a(e) {
+    let { user: o, guildId: s, channelId: a, onClose: r, appContext: u, disableAutoFocus: A = !1 } = e,
+        c = (0, i.A)(o.id, s);
+    return (0, d.jsxs)("div", {
+        className: t.qr,
         children: [
-            u && (0, l.jsx)(d.A, { user: a, guildId: s, channelId: t, onClose: r, disableAutoFocus: h }),
-            !u && (0, l.jsx)(o.A, { user: a, guildId: s, onClose: r, fullWidth: !0, appContext: c }),
+            c && (0, d.jsx)(l.A, { user: o, guildId: s, channelId: a, onClose: r, disableAutoFocus: A }),
+            !c && (0, d.jsx)(n.A, { user: o, guildId: s, onClose: r, fullWidth: !0, appContext: u }),
         ],
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Bs: () => g, HB: () => p, K2: () => C, ME: () => m, N5: () => N, OI: () => I, wz: () => S });
+n.d(t, { Bs: () => g, HB: () => p, K2: () => C, ME: () => T, N5: () => N, OI: () => I, wz: () => S });
 var i = n(582128),
     r = n(17928),
     a = n(965025),
@@ -19,18 +19,18 @@ function I(e) {
         n = (0, E.F0)(t);
     return (
         (0, E.AC)(e.maxFrameRate) !== E.kn.FPS_5 &&
-        null == E.ZV.find((e) => e.resolution === n && e.fps !== E.kn.FPS_5 && !T(e))
+        null == E.ZV.find((e) => e.resolution === n && e.fps !== E.kn.FPS_5 && !m(e))
     );
 }
 function p(e) {
     if (null == e) return;
     let t = (0, E.AC)(e.maxFrameRate);
-    return null == E.ZV.find((e) => e.fps === t && !T(e));
-}
-function T(e) {
-    return null != e.quality || null != e.guildPremiumTier;
+    return null == E.ZV.find((e) => e.fps === t && !m(e));
 }
 function m(e) {
+    return null != e.quality || null != e.guildPremiumTier;
+}
+function T(e) {
     return e.type === h.ei.SOURCE
         ? f.intl.string(f.t.XjXqzh)
         : f.intl.formatToPlainString(f.t.TEOC0I, { resolution: e.height });

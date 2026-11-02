@@ -15,12 +15,12 @@ var i = n(836039),
     f = n(307731),
     I = n(202541);
 let p = new Set([f.EmojiDisabledReasons.PREMIUM_LOCKED, f.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED]),
-    T = new Set([
+    m = new Set([
         ...p,
         f.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE,
         f.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE,
     ]),
-    m = new Set([
+    T = new Set([
         f.EmojiDisabledReasons.DISALLOW_CUSTOM,
         f.EmojiDisabledReasons.DISALLOW_EXTERNAL,
         f.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE,
@@ -60,13 +60,13 @@ function N(e) {
     if (!g(t)) return null;
     if (u === f.EmojiIntention.GUILD_PROFILE || u === f.EmojiIntention.NO_CUSTOM_EMOJI)
         return f.EmojiDisabledReasons.DISALLOW_CUSTOM;
-    let T = null != n && (0, l.ke)(n.type),
-        m = null != n && (0, l.ay)(n.type),
+    let m = null != n && (0, l.ke)(n.type),
+        T = null != n && (0, l.ay)(n.type),
         N = S(t, c),
         C = o.A.can(h.xBc.USE_EXTERNAL_EMOJIS, n);
     if (u === f.EmojiIntention.COMMUNITY_CONTENT)
         return N && null != t.guildId && t.available ? null : f.EmojiDisabledReasons.DISALLOW_EXTERNAL;
-    if ((!(0, f.isExternalEmojiAllowedForIntention)(u) && !S(t, c) && !_) || ((T || m) && !N && !C))
+    if ((!(0, f.isExternalEmojiAllowedForIntention)(u) && !S(t, c) && !_) || ((m || T) && !N && !C))
         return f.EmojiDisabledReasons.DISALLOW_EXTERNAL;
     if (null != t.id && !t.available) return f.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
     let O = d.default.getCurrentUser();
@@ -104,8 +104,8 @@ let C = {
                 l.push(e);
                 continue;
             }
-            (m.has(t) || l.push(e),
-                T.has(t) &&
+            (T.has(t) || l.push(e),
+                m.has(t) &&
                     (null != e.id && s.add(e.id),
                     p.has(t) && (d || t !== f.EmojiDisabledReasons.PREMIUM_LOCKED || (d = !0), o++)));
         }
@@ -113,7 +113,7 @@ let C = {
     },
     isEmojiFiltered(e) {
         let t = N(e);
-        return m.has(t);
+        return T.has(t);
     },
     isEmojiPremiumLocked(e) {
         let t = N(e);
@@ -136,7 +136,7 @@ let C = {
     },
     isEmojiDisabled(e) {
         let t = N(e);
-        return T.has(t);
+        return m.has(t);
     },
     isFileTooBig: (e) => e.size > 2097152,
     isDataTooBig: (e) => (0, _.EW)(e) > f.EMOJI_MAX_FILESIZE,

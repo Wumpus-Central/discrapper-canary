@@ -1,4 +1,4 @@
-n.d(t, { $d: () => S, Gx: () => m, _u: () => T, r9: () => h });
+n.d(t, { $d: () => S, Gx: () => T, _u: () => m, r9: () => h });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -54,12 +54,12 @@ function I(e) {
             radioBarClassName: h,
             hasSelection: I,
             radioPosition: p = "left",
-            icon: T,
-            withTransparentBackground: m,
+            icon: m,
+            withTransparentBackground: T,
         } = e,
         g = r.color ?? "",
         S = n || !I,
-        N = (0, i.jsx)(f, { checked: n, disabled: t, radioItemIconClassName: E, icon: T });
+        N = (0, i.jsx)(f, { checked: n, disabled: t, radioItemIconClassName: E, icon: m });
     return (0, i.jsx)(o.D, {
         "data-toggleable-component": "radiogroup",
         role: "radio",
@@ -67,7 +67,7 @@ function I(e) {
         "aria-label": "string" == typeof r.name ? r.name : void 0,
         onClick: t ? void 0 : l,
         tabIndex: !t && S ? 0 : -1,
-        className: s()(A.AS, { [A.r9]: t, [A.EO]: !m }, _),
+        className: s()(A.AS, { [A.r9]: t, [A.EO]: !T }, _),
         children: (0, i.jsxs)("div", {
             style: { "--radio-bar-accent-color": g, padding: a },
             className: s()(A.tG, { [A.go]: "left" === p, [A.Xe]: "right" === p }, h),
@@ -105,7 +105,7 @@ function p(e) {
         } = e,
         f = r.useCallback((e) => (e.preventDefault(), h?.(a)), [h, a]),
         p = n || a.disabled,
-        { icon: T } = a;
+        { icon: m } = a;
     return (0, i.jsx)(I, {
         disabled: !!p,
         checked: t,
@@ -119,11 +119,11 @@ function p(e) {
         radioItemIconClassName: u,
         radioBarClassName: _,
         radioPosition: A,
-        icon: T,
+        icon: m,
         withTransparentBackground: E,
     });
 }
-function T() {
+function m() {
     let {
             orientation: e = "vertical",
             isDisabled: t = !1,
@@ -169,7 +169,7 @@ function T() {
         "aria-disabled": t,
     };
 }
-function m(e) {
+function T(e) {
     let { isSelected: t, label: n } = e;
     return { role: "radio", tabIndex: t ? 0 : -1, "aria-label": n, "aria-checked": t };
 }
@@ -185,14 +185,14 @@ function g(e) {
             radioPosition: E = "left",
             onChange: f = _.tE,
             disabled: I = !1,
-            options: m = [],
+            options: T = [],
             "aria-labelledby": g,
             orientation: S,
             withTransparentBackground: N,
         } = e,
         C = r.useContext(c._),
-        { ref: O, ...R } = T({ labelledBy: g ?? C?.labelId, orientation: S, isDisabled: I }),
-        L = m.some((e) => e.value === d);
+        { ref: O, ...R } = m({ labelledBy: g ?? C?.labelId, orientation: S, isDisabled: I }),
+        L = T.some((e) => e.value === d);
     return (0, i.jsx)("div", {
         ...R,
         ref: O,
@@ -201,7 +201,7 @@ function g(e) {
         "aria-describedby": C?.describedById,
         "aria-errormessage": C?.errorMessageId,
         "aria-invalid": C?.errorMessageId != null,
-        children: m.map((e) =>
+        children: T.map((e) =>
             (0, i.jsx)(
                 p,
                 {

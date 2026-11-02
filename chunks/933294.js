@@ -1,7 +1,7 @@
 n.d(t, { A: () => E });
 var r = n(17928),
     s = n(73153);
-class o {
+class i {
     seqOf;
     items = [];
     cached = null;
@@ -35,14 +35,14 @@ class o {
         return this.seqOf(e) ?? 1 / 0;
     }
 }
-let i = [],
+let o = [],
     l = new Map(),
     a = 0,
     c = { status: "idle", truncated: !1, count: 0 },
     d = new Map();
 class u extends r.Ay.Store {
     getLogs(e) {
-        return l.get(e)?.snapshot() ?? i;
+        return l.get(e)?.snapshot() ?? o;
     }
     getHistoryState(e, t) {
         return d.get(e)?.get(t) ?? c;
@@ -58,18 +58,18 @@ function h(e, t, n) {
 function _(e) {
     let t,
         { projectId: n, log: r } = e,
-        s = (null == (t = l.get(n)) && ((t = new o(p)), l.set(n, t)), t);
+        s = (null == (t = l.get(n)) && ((t = new i(p)), l.set(n, t)), t);
     if (null != r.seq && -1 !== s.indexOfSeq(r.seq)) return !1;
     (s.insert({ key: ++a, log: r }), s.trim(500));
 }
 function f(e) {
-    let { projectId: t, scope: n, status: r, count: s, truncated: o } = e;
+    let { projectId: t, scope: n, status: r, count: s, truncated: i } = e;
     if ("failed" === r) {
         let e = d.get(t)?.get(n);
         h(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
         return;
     }
-    h(t, n, { status: "loaded", truncated: o, count: s });
+    h(t, n, { status: "loaded", truncated: i, count: s });
 }
 let g = new u(s.h, {
         LOGOUT: function () {

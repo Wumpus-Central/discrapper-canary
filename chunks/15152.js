@@ -48,22 +48,22 @@ var _ = n(246338),
     f = n(473529),
     I = n(313627),
     p = n(871123),
-    T = n(734057),
-    m = n(808728),
+    m = n(734057),
+    T = n(808728),
     g = n(71393),
     S = n(309010);
 function N(e) {
     let t = u.getLastProjectId(e);
     if (null != t && C(e)) return [a.VV.CONJURE, t];
     let n = S.Ay.getChannelId(e),
-        i = m.Ay.getDefaultChannel(e)?.id ?? void 0;
+        i = T.Ay.getDefaultChannel(e)?.id ?? void 0;
     if ((n === a.VV.GUILD_ONBOARDING && !h.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, f.K)(e)))
         return [i, null];
     if (n === a.VV.GUILD_SPACE)
         return (0, I.tT)(g.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [i, null];
     if (n === a.VV.GAME_SHOP && (0, p.Ye)(e)) return [n, null];
     if (n === a.VV.CONJURE) return C(e) ? [n, null] : [i, null];
-    let r = T.A.getChannel(n);
+    let r = m.A.getChannel(n);
     return null == r || ((0, A.ai)(e) && !E.A.isChannelOrParentFavorited(r)) ? [i, null] : [n, null];
 }
 function C(e) {

@@ -1,4 +1,4 @@
-n.d(t, { $r: () => m, AN: () => S, BX: () => A, i: () => E, w6: () => h });
+n.d(t, { $r: () => T, AN: () => S, BX: () => A, i: () => E, w6: () => h });
 var i = n(636537),
     r = n(332714),
     a = n(534573),
@@ -54,11 +54,11 @@ function p(e) {
         null != t && !!(!(!_(t) || t.pathname.startsWith("/external/")) && (t.searchParams.has("ex") || E(t))) && f(t)
     );
 }
-function T(e) {
+function m(e) {
     return p(e.image) || e.images?.some(p) || p(e.video);
 }
-function m(e) {
-    return e.attachments.some(I) || e.embeds.some(T);
+function T(e) {
+    return e.attachments.some(I) || e.embeds.some(m);
 }
 async function g(e) {
     return (

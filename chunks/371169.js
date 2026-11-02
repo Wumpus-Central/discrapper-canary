@@ -40,8 +40,8 @@ var i = n(158390),
     f = n(639519),
     I = n(754027),
     p = n(869018),
-    T = n(153207),
-    m = n(260498),
+    m = n(153207),
+    T = n(260498),
     g = n(951178),
     S = n(426035),
     N = n(652215),
@@ -52,7 +52,7 @@ function O(e, t) {
 function R(e, t) {
     let { project: n, hasActivity: i, integrationInstalled: r, botPermissionsChanged: a } = t;
     l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n });
-    let s = m.Ay.getIntegrationStatus(e) ?? T.A.getIntegrationStatus(e);
+    let s = T.Ay.getIntegrationStatus(e) ?? m.A.getIntegrationStatus(e);
     O(e, {
         owner_authorization_revoked: s?.owner_authorization_revoked ?? !1,
         ...(s?.preview_app_channels != null ? { preview_app_channels: s.preview_app_channels } : {}),
@@ -67,7 +67,7 @@ let L = null,
     D = !1;
 async function v(e) {
     let t = e ?? null;
-    if (m.Ay.getProjectsFetchState()?.type === "loading")
+    if (T.Ay.getProjectsFetchState()?.type === "loading")
         return void (null != t && t !== L ? (y = t) : null == t && null != L && (D = !0));
     ((L = t), l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_START", guildId: t }));
     try {
@@ -87,12 +87,12 @@ let b = !1;
 async function P() {
     if (!b) {
         for (let e of ((b = !0), u.Ay.getResourceIds(C.P.CONJURING_PROJECT)))
-            if (null == m.Ay.getProject(e)) {
+            if (null == T.Ay.getProject(e)) {
                 if (!(0, E.tz)(e)) {
                     M(e);
                     continue;
                 }
-                if ((await (0, s.yy)(5e3 * Math.random()), null == m.Ay.getProject(e)))
+                if ((await (0, s.yy)(5e3 * Math.random()), null == T.Ay.getProject(e)))
                     try {
                         await q(e);
                     } catch (n) {
@@ -113,14 +113,14 @@ let U = new i.A(3e4, 3e5),
     F = !1,
     B = null;
 function V(e) {
-    return x.has(e) && null == m.Ay.getProject(e);
+    return x.has(e) && null == T.Ay.getProject(e);
 }
 function H(e) {
     let t;
     for (let n of ((t = _.default.getCurrentUser()?.id ?? null) !== w &&
         ((w = t), G.clear(), x.clear(), k.clear(), U.cancel()),
     e))
-        (G.has(n) && !x.has(n) && B !== n && null == m.Ay.getProject(n) && G.delete(n), G.has(n) || k.add(n));
+        (G.has(n) && !x.has(n) && B !== n && null == T.Ay.getProject(n) && G.delete(n), G.has(n) || k.add(n));
     F || U.pending || W();
 }
 async function j(e) {
@@ -136,7 +136,7 @@ async function j(e) {
 async function W() {
     F = !0;
     let e = [];
-    for (let t of k) (k.delete(t), !G.has(t) && (G.add(t), null == m.Ay.getProject(t) && (await j(t)) && e.push(t)));
+    for (let t of k) (k.delete(t), !G.has(t) && (G.add(t), null == T.Ay.getProject(t) && (await j(t)) && e.push(t)));
     ((F = !1), 0 === e.length)
         ? U.succeed()
         : U.fail(() => {
@@ -147,7 +147,7 @@ async function W() {
 let Y = null;
 async function K() {
     let e = _.default.getCurrentUser()?.id ?? null;
-    if (null == e || Y === e || m.Ay.hasFetchedProjectLimit()) return;
+    if (null == e || Y === e || T.Ay.hasFetchedProjectLimit()) return;
     Y = e;
     let t = null;
     try {
@@ -239,7 +239,7 @@ async function en(e) {
     null != t && l.h.dispatch({ type: "USER_UPDATE", user: t });
 }
 async function ei(e) {
-    let t = m.Ay.getProject(e)?.preview_application_id;
+    let t = T.Ay.getProject(e)?.preview_application_id;
     null != t && (await en(t));
 }
 async function er(e, t) {
@@ -277,7 +277,7 @@ function eo(e, t) {
     el(e).then(() => void 0, t);
 }
 function ed(e) {
-    let t = m.Ay.getProject(e);
+    let t = T.Ay.getProject(e);
     null != t && (q(e).catch(() => {}), (0, o.eO)((0, S.Du)(t), { withMutualGuilds: !0 }).catch(() => {}));
 }
 function ec(e, t) {

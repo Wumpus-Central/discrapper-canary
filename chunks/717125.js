@@ -15,7 +15,7 @@ var i = n(17928),
     f = n(652215);
 let I = {},
     p = new Set();
-function T(e) {
+function m(e) {
     let { guildId: t, role: n, isPreviewingRoles: i } = e;
     return (
         !!(0, s.U)(n) &&
@@ -32,7 +32,7 @@ function T(e) {
         )
     );
 }
-function m(e, t) {
+function T(e, t) {
     if (
         !t.features.has(f.GuildFeatures.CREATOR_MONETIZABLE) &&
         !t.features.has(f.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
@@ -41,7 +41,7 @@ function m(e, t) {
     let n = o.A.isViewingServerShop(t.id);
     for (let i of Object.keys(e.permissionOverwrites)) {
         let r = E.A.getRole(t.id, i);
-        if (!T({ guildId: t.id, role: r, isPreviewingRoles: n })) continue;
+        if (!m({ guildId: t.id, role: r, isPreviewingRoles: n })) continue;
         let a = e.permissionOverwrites[i];
         if ((0, l.Uj)(e, a)) return !0;
     }
@@ -50,7 +50,7 @@ function m(e, t) {
         a = (0, l.AN)(e, e.permissionOverwrites[t.id]);
     if (r && !a) {
         for (let e of E.A.getSortedRoles(t.id))
-            if (T({ guildId: t.id, role: e, isPreviewingRoles: n }) && (0, l.iR)(e)) return !0;
+            if (m({ guildId: t.id, role: e, isPreviewingRoles: n }) && (0, l.iR)(e)) return !0;
     }
     return !1;
 }
@@ -62,7 +62,7 @@ function g(e, t) {
     let r = A.A.getGuild(i.getGuildId());
     if (null == r) return !1;
     let a = n.has(t),
-        s = m(i, r);
+        s = T(i, r);
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 function S() {
@@ -98,7 +98,7 @@ class R extends i.Ay.Store {
                     let i = u.A.getMutableGuildChannelsForGuild(e);
                     for (let e in i) {
                         let r = i[e];
-                        m(r, t) && n.add(r.id);
+                        T(r, t) && n.add(r.id);
                     }
                 })(e),
                 (n = I[e])),

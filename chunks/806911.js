@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(398590),
     I = n(793574),
     p = n(666860),
-    T = n(198052),
-    m = n(94247),
+    m = n(198052),
+    T = n(94247),
     g = n(520698),
     S = n(525788),
     N = n(384059),
@@ -97,7 +97,7 @@ class ec extends r.PureComponent {
     }
     componentWillUnmount() {
         let { channel: e } = this.props;
-        q.default.track(es.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: T.A.getLayout(e.id), ...(0, p.QS)(e.id) });
+        q.default.track(es.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: m.A.getLayout(e.id), ...(0, p.QS)(e.id) });
     }
     handleVideo = (e) => {
         E.default.setVideoEnabled(e);
@@ -273,8 +273,8 @@ class ec extends r.PureComponent {
 }
 function eu(e) {
     let { channel: t, width: n } = e,
-        r = (0, d.bG)([m.A], () => m.A.getSpeaker(t.id)),
-        a = (0, d.bG)([T.A], () => T.A.getParticipant(t.id, r), [t.id, r]),
+        r = (0, d.bG)([T.A], () => T.A.getSpeaker(t.id)),
+        a = (0, d.bG)([m.A], () => m.A.getParticipant(t.id, r), [t.id, r]),
         s = (0, d.bG)([Y.Ay], () => o()(Y.Ay.getVideoDevices()).values().first()),
         l = (0, d.bG)(
             [z.A],

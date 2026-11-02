@@ -336,7 +336,7 @@ class p {
         );
     }
 }
-let T = s().debounce((e, t) => {
+let m = s().debounce((e, t) => {
     var n;
     let i =
         null == (n = t)
@@ -348,11 +348,11 @@ let T = s().debounce((e, t) => {
                 : void 0;
     null != i && e.detectLanguage(i);
 }, 250);
-async function m() {
+async function T() {
     let e = new p((await f.getAvailableDictionaries()) ?? []);
     return (
         e.usesMultilang ||
-            (null != document.body && document.body.addEventListener("beforeinput", (t) => T(e, t.target), !0)),
+            (null != document.body && document.body.addEventListener("beforeinput", (t) => m(e, t.target), !0)),
         e
     );
 }
@@ -366,7 +366,7 @@ function C() {
 }
 let O = C()
         ? new Promise((e) => {
-              Promise.resolve().then(() => (0, g.B)(() => e(m())));
+              Promise.resolve().then(() => (0, g.B)(() => e(T())));
           })
         : null,
     R = null;

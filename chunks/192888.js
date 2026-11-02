@@ -25,7 +25,7 @@ function r(e, t, n, r) {
             null != h && window.clearInterval(h);
         }
         function I() {
-            (window.clearTimeout(A), f(), window.removeEventListener("message", T));
+            (window.clearTimeout(A), f(), window.removeEventListener("message", m));
         }
         function p() {
             for (let i of ((_ += 1) > 1 &&
@@ -40,11 +40,11 @@ function r(e, t, n, r) {
                 e.contentWindow?.postMessage(t, l);
             }
         }
-        function T(e) {
+        function m(e) {
             ("window" === d ? e.source !== E : e.origin !== l) ||
                 ((0, i.YX)(e.data, o.acks, c) ? f() : (0, i.YX)(e.data, o.results, c) && (I(), a(e.data)));
         }
-        (window.addEventListener("message", T), p());
+        (window.addEventListener("message", m), p());
     });
 }
 let a = 0;

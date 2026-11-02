@@ -16,8 +16,8 @@ function d(e) {
             onFocus: f,
             onBlur: I,
             placeholder: p,
-            closeOnSelect: T,
-            selectionMode: m,
+            closeOnSelect: m,
+            selectionMode: T,
         } = c,
         {
             isOpen: g,
@@ -33,7 +33,7 @@ function d(e) {
         isCollapsible: !0,
         isOpen: g,
         setIsOpen: S,
-        closeOnSelect: T ?? "single" === m,
+        closeOnSelect: m ?? "single" === T,
         children: [
             (0, i.jsx)(a.a3, {
                 hideTags: t,

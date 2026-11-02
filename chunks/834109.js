@@ -1,11 +1,11 @@
-n.d(t, { A: () => c });
-var r = n(477900),
-    a = n(503698),
-    s = n.n(a),
-    l = n(343053),
-    i = n(214847);
-function c(e) {
-    let { variant: t, className: n } = e,
-        { size: a } = (0, l.Z)();
-    return (0, r.jsx)("div", { className: s()(i.wordmark, i[a], "full" === t ? i.full : i.short, n) });
+a.d(t, { A: () => d });
+var r = a(477900),
+    i = a(503698),
+    s = a.n(i),
+    c = a(343053),
+    n = a(214847);
+function d(e) {
+    let { variant: t, className: a } = e,
+        { size: i } = (0, c.Z)();
+    return (0, r.jsx)("div", { className: s()(n.wordmark, n[i], "full" === t ? n.full : n.short, a) });
 }

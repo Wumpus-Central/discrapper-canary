@@ -12,10 +12,10 @@ var i = n(477900),
     E = n(76254);
 function A(e) {
     let { value: t, onSelect: n, dateFormat: A = "ll", minDate: h, maxDate: f, disabled: I = !1, ...p } = e,
-        { required: T } = p,
-        m = r.useRef(null);
+        { required: m } = p,
+        T = r.useRef(null);
     return (0, i.jsx)(_.Y, {
-        targetElementRef: m,
+        targetElementRef: T,
         renderPopout: function (e) {
             let { closePopout: r } = e;
             return (0, i.jsx)(u.l, {
@@ -41,7 +41,7 @@ function A(e) {
                     (0, i.jsxs)(s.F, {
                         as: l.D,
                         tag: "div",
-                        innerRef: m,
+                        innerRef: T,
                         disabled: I,
                         "aria-disabled": I,
                         ...r,
@@ -50,7 +50,7 @@ function A(e) {
                         "aria-describedby": e?.describedById,
                         "aria-errormessage": e?.errorMessageId,
                         "aria-invalid": e?.errorMessageId != null,
-                        "aria-required": T,
+                        "aria-required": m,
                         className: E.k,
                         onClick: I ? void 0 : n,
                         children: [

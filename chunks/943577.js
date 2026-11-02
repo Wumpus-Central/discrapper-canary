@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(627363),
     I = n(587895),
     p = n(626584),
-    T = n(403010),
-    m = n(294857),
+    m = n(403010),
+    T = n(294857),
     g = n(475706),
     S = n(427358),
     N = n(57985),
@@ -98,7 +98,7 @@ function ei(e, t, n) {
         E = _.map((e) => e.id),
         A = _.filter((t) => e.has(t.id)),
         f = !1,
-        T = [],
+        m = [],
         v = new Set(),
         w = !1,
         B = [];
@@ -108,7 +108,7 @@ function ei(e, t, n) {
         if ((0, h.qR)(n)) continue;
         let i = q(e.id);
         if ((null != t && B.push({ stream: t, streamUser: e, activity: i }), null == i)) continue;
-        let a = (0, m.A)(i);
+        let a = (0, T.A)(i);
         if (null == a) continue;
         w = a === O.WY;
         let l = (function (e) {
@@ -163,7 +163,7 @@ function ei(e, t, n) {
                   })),
             (A = r().orderBy(A, [en], ["desc"])).length !== _.length && (f = !0),
             v.add(l.id),
-            T.push({
+            m.push({
                 application: l,
                 activity: i,
                 activityUser: e,
@@ -215,7 +215,7 @@ function ei(e, t, n) {
         showPlayingMembers: f,
         guildContext: a,
         currentActivities: ((i = (e) => e.startedPlayingTime ?? 0),
-        r()(T).orderBy(
+        r()(m).orderBy(
             [
                 i,
                 function (e) {
@@ -238,7 +238,7 @@ function er(e) {
     );
 }
 function ea() {
-    return V && T.A.isConnected();
+    return V && m.A.isConnected();
 }
 let es = r().throttle(() => {
     (!(function () {
@@ -319,7 +319,7 @@ class eo extends s.Ay.Store {
     static displayName = "NowPlayingViewStore";
     initialize() {
         (this.syncWith([G.default, I.A, U.A, b.A, x.A, y.A, w.A, v.A, S.A], el),
-            this.waitFor(I.A, y.A, D.A, v.A, b.A, T.A, P.A, M.A, U.A, w.A, S.A, G.default, x.A));
+            this.waitFor(I.A, y.A, D.A, v.A, b.A, m.A, P.A, M.A, U.A, w.A, S.A, G.default, x.A));
     }
     get currentActivityParties() {
         return j;

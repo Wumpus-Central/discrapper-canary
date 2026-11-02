@@ -1,4 +1,4 @@
-n.d(t, { $T: () => m, Hv: () => h, PM: () => T, Z_: () => I, eC: () => p, zr: () => f });
+n.d(t, { $T: () => T, Hv: () => h, PM: () => m, Z_: () => I, eC: () => p, zr: () => f });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -56,7 +56,7 @@ function p(e) {
         children: t,
     });
 }
-function T(e) {
+function m(e) {
     let { onClick: t, noticeType: n, className: r } = e;
     return (0, i.jsx)(d.D, {
         focusProps: { offset: 6 },
@@ -68,7 +68,7 @@ function T(e) {
         children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor", className: A.ut }),
     });
 }
-function m(e) {
+function T(e) {
     let { color: t = h.DEFAULT, className: n, style: r, ref: l, children: o } = e;
     return (0, i.jsx)("div", {
         ref: l,

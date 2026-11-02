@@ -19,8 +19,8 @@ let p = {
         (0, I.P0)({ text: e, variant: "critical" });
     },
 };
-var T = n(780057),
-    m = n(707539),
+var m = n(780057),
+    T = n(707539),
     g = n(736130),
     S = n(652215),
     N = n(746080),
@@ -187,7 +187,7 @@ let L = {
             null == t && (0, d.Gf)({ channelId: e.id, command: null, section: null }));
     },
     async setNotificationSettings(e, t) {
-        ((0, m.hs)(e, t), f.A.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")));
+        ((0, T.hs)(e, t), f.A.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")));
         try {
             return await r.Bo.patch({
                 url: S.Rsh.THREAD_MEMBER_SETTINGS(e.id),
@@ -280,7 +280,7 @@ let L = {
         );
     },
     summarizeThread(e, t) {
-        if (!(!e.isThread() || T.A.isInProgress()))
+        if (!(!e.isThread() || m.A.isInProgress()))
             return (
                 a.h.dispatch({ type: "SUMMARIZE_THREAD_START" }),
                 r.Bo.post({

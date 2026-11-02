@@ -15,8 +15,8 @@ var i,
     f = n(312006),
     I = n(616356),
     p = n(280450),
-    T = n(470710),
-    m = n(734057),
+    m = n(470710),
+    T = n(734057),
     g = n(999926),
     S = n(485296),
     N = n(287809),
@@ -96,11 +96,11 @@ class x {
         return this.participantByIndex.values(e, !0);
     }
     rebuild() {
-        let e = m.A.getChannel(this.channelId);
+        let e = T.A.getChannel(this.channelId);
         if (
             null == e ||
             e.type === D.rbe.GUILD_TEXT ||
-            ((this.call = T.A.getCall(this.channelId)), e.isPrivate() && (null == this.call || this.call.unavailable))
+            ((this.call = m.A.getCall(this.channelId)), e.isPrivate() && (null == this.call || this.call.unavailable))
         )
             return !1;
         let t = new Set(e.isGuildVocalOrThread() ? Object.keys(O.A.getVoiceStatesForChannel(e.id)) : e.recipients);
@@ -144,7 +144,7 @@ class x {
         );
     }
     updateStageSpeaker(e) {
-        m.A.getChannel(this.channelId)?.isGuildStageVoice() && f.Ay.isSpeaker(e, this.channelId)
+        T.A.getChannel(this.channelId)?.isGuildStageVoice() && f.Ay.isSpeaker(e, this.channelId)
             ? this.stageSpeakerIds.add(e)
             : this.stageSpeakerIds.delete(e);
     }
@@ -206,7 +206,7 @@ class x {
                 activityType: a.$.PLAYING,
                 activityUrl: e.url,
                 participants: [...(e.participants ?? [])],
-                guildId: m.A.getChannel(this.channelId)?.getGuildId() ?? null,
+                guildId: T.A.getChannel(this.channelId)?.getGuildId() ?? null,
                 sortKey: t.toString(),
             })),
             n = (0, v.ny)(E.A.getMainFrame());
@@ -222,7 +222,7 @@ class x {
                     activityType: a.$.PLAYING,
                     activityUrl: n.data.url,
                     participants: [{ userId: p.default.getId() }],
-                    guildId: m.A.getChannel(this.channelId)?.getGuildId() ?? null,
+                    guildId: T.A.getChannel(this.channelId)?.getGuildId() ?? null,
                     sortKey: t.length.toString(),
                     frameId: n.id,
                 }),
@@ -237,7 +237,7 @@ class x {
         if (null == r) return i;
         let a = O.A.getVoiceStateForChannel(this.channelId, e),
             s = O.A.getVoicePlatformForChannel(this.channelId, e),
-            o = m.A.getChannel(this.channelId),
+            o = T.A.getChannel(this.channelId),
             d = o?.getGuildId(),
             u = this.call?.ringing?.includes(e) ?? !1;
         (null != a || u) &&

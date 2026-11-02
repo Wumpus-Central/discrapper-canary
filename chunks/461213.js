@@ -15,8 +15,8 @@ var i = n(812729),
     f = n(885576),
     I = n(189081),
     p = n(480595),
-    T = n(290863),
-    m = n(528767),
+    m = n(290863),
+    T = n(528767),
     g = n(652215);
 let S = !1,
     N = g.clD.ONLINE,
@@ -35,7 +35,7 @@ function U(e) {
     let t = [],
         n = [];
     for (let i of e) i.type === l.$.PLAYING ? n.push(i) : t.push(i);
-    return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(T.m)[0]].sort(T.m);
+    return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(m.m)[0]].sort(m.m);
 }
 function w(e) {
     return (0, A.kv)(e, I.A);
@@ -69,24 +69,24 @@ function x() {
     let e = !1,
         t = D || N === g.clD.INVISIBLE ? [] : p.A.getActivities().filter(G);
     r()(R, t) || ((R = t), (L = U(t)), (e = !0));
-    let n = m.A.getRemoteActivities();
+    let n = T.A.getRemoteActivities();
     v !== n && ((v = n), (e = !0));
-    let i = m.A.getHiddenActivities();
+    let i = T.A.getHiddenActivities();
     (b !== i && (b = i),
         e &&
             (M = U(
-                (P = s()([...R, ...v.filter((e) => e.type !== l.$.CUSTOM_STATUS)].sort(T.m))
+                (P = s()([...R, ...v.filter((e) => e.type !== l.$.CUSTOM_STATUS)].sort(m.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
             )));
 }
 function k() {
-    ((D = !1), (C = g.clD.UNKNOWN), x(), T.A.setCurrentUserOnConnectionOpen(N, P));
+    ((D = !1), (C = g.clD.UNKNOWN), x(), m.A.setCurrentUserOnConnectionOpen(N, P));
 }
 class F extends o.Ay.Store {
     static displayName = "SelfPresenceStore";
     initialize() {
-        (this.waitFor(h.A, f.A, I.A, p.A, T.A, m.A, u.A, E.A), this.syncWith([p.A], x));
+        (this.waitFor(h.A, f.A, I.A, p.A, m.A, T.A, u.A, E.A), this.syncWith([p.A], x));
     }
     getLocalPresence() {
         return { status: N, since: O, activities: L, afk: y };

@@ -1,6 +1,6 @@
 let i, r, a;
 (n.d(t, {
-    EL: () => m,
+    EL: () => T,
     JK: () => S,
     MX: () => L,
     PR: () => N,
@@ -12,7 +12,7 @@ let i, r, a;
     m: () => O,
     pX: () => p,
     sY: () => D,
-    uh: () => T,
+    uh: () => m,
 }),
     n(323874),
     n(14289),
@@ -69,11 +69,11 @@ function p(e, t) {
         (r = o),
         (a = d));
 }
-function T(e, t, n, i) {
+function m(e, t, n, i) {
     (u.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
         p(c.BVt.CHANNEL(e, t, n), i));
 }
-function m() {
+function T() {
     return null != r && d.n.has(r);
 }
 function g(e, t, n) {

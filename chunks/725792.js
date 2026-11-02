@@ -15,8 +15,8 @@ var r,
     f = n(880144),
     I = n(613235),
     p = n(997630),
-    T = n(731854),
-    m = n(105292),
+    m = n(731854),
+    T = n(105292),
     g =
         (((r = {})[(r.Present = 0)] = "Present"),
         (r[(r.Update = 1)] = "Update"),
@@ -71,7 +71,7 @@ function M() {
     return {
         sourceId: "prepicked:0",
         nativePickerStyleUsed: R.lastPresentedPickerStyle,
-        sourceName: P() ?? m.intl.string(m.t.KKcy95),
+        sourceName: P() ?? T.intl.string(T.t.KKcy95),
         sound: e,
     };
 }
@@ -81,7 +81,7 @@ class U extends s.Ay.Store {
         (this.syncWith([_.Ay, A.Ay, c.A, u.A, E.A], b), b());
     }
     supported() {
-        return _.Ay.supports(T.O5.NATIVE_SCREENSHARE_PICKER);
+        return _.Ay.supports(m.O5.NATIVE_SCREENSHARE_PICKER);
     }
     enabled() {
         return L();

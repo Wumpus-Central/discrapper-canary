@@ -24,8 +24,8 @@ function _(e) {
             ...I
         } = e,
         p = "",
-        T = {};
-    if ((null != _ && (1 === _ ? (p = d.DN) : ((p = d.ED), (T = { lineClamp: _, WebkitLineClamp: _ }))), void 0 !== E))
+        m = {};
+    if ((null != _ && (1 === _ ? (p = d.DN) : ((p = d.ED), (m = { lineClamp: _, WebkitLineClamp: _ }))), void 0 !== E))
         switch (E) {
             case "currentColor":
                 t = "currentColor";
@@ -36,12 +36,12 @@ function _(e) {
             default:
                 t = o.A.colors[u[E]]?.css;
         }
-    let m = { color: t, ...T, ...I.style };
+    let T = { color: t, ...m, ...I.style };
     return (0, i.jsx)(r, {
         ref: f,
         className: a()({ [d.fT]: void 0 === E, [d.rb]: s, [d.w9]: A, [c.fontScaling]: h }, p, c[n], l),
         ...I,
-        style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
+        style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
         "data-text-variant": n,
     });
 }

@@ -62,10 +62,10 @@ let { createLoader: d } = n(632296),
     f = h(A),
     I = (0, a.chainMessagesObjects)(o.A, (0, a.chainMessagesObjects)(_, f));
 var p = n(226536);
-let { createLoader: T } = n(632296),
-    m = T({ "en-US": () => n.e("421293").then(n.bind(n, 224444)) }, "en-US"),
+let { createLoader: m } = n(632296),
+    T = m({ "en-US": () => n.e("421293").then(n.bind(n, 224444)) }, "en-US"),
     { makeMessagesProxy: g } = n(632296),
-    S = g(m);
+    S = g(T);
 function N(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,

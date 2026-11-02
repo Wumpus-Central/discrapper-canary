@@ -19,8 +19,8 @@ function I(e) {
             onClick: t,
             subscriptionTier: I,
             postSuccessGuild: p,
-            onSubscribeModalClose: T,
-            premiumModalAnalyticsLocation: m,
+            onSubscribeModalClose: m,
+            premiumModalAnalyticsLocation: T,
             applicationId: g,
             giftMessage: S,
             confirmationFooter: N,
@@ -39,7 +39,7 @@ function I(e) {
             if ((e.preventDefault(), null == y))
                 return void (0, d.pX)(f.BVt.LOGIN, { source: "premium_subscribe_button" });
             if ((t?.(e), D?.status === f.Dmq.ACCOUNT_HOLD)) {
-                ((0, l.xf)(), (0, u.openUserSettings)(c.X.NITRO_PANEL), T?.(!1));
+                ((0, l.xf)(), (0, u.openUserSettings)(c.X.NITRO_PANEL), m?.(!1));
                 return;
             }
             if (!y.isClaimed())
@@ -76,10 +76,10 @@ function I(e) {
                 initialPlanId: O,
                 subscriptionTier: I,
                 analyticsLocations: v,
-                analyticsObject: { object: f.ZSU.BUTTON_CTA, objectType: s, ...m },
+                analyticsObject: { object: f.ZSU.BUTTON_CTA, objectType: s, ...T },
                 trialId: r,
                 postSuccessGuild: p,
-                onClose: T,
+                onClose: m,
                 applicationId: g,
                 giftMessage: S,
                 confirmationFooter: N,

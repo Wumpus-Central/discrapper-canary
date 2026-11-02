@@ -1,14 +1,14 @@
 n.d(t, {
     Kl: () => O,
     SW: () => p,
-    VL: () => m,
+    VL: () => T,
     Wi: () => v,
     _R: () => y,
     aY: () => b,
     bz: () => C,
     gm: () => S,
     hK: () => L,
-    hv: () => T,
+    hv: () => m,
     j8: () => R,
     qZ: () => D,
     rA: () => g,
@@ -54,7 +54,7 @@ var I =
         (r.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED = "explicit_media_message_send_blocked"),
         (r.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED = "explicit_media_add_media_to_forum_post_blocked"),
         r);
-function T(e) {
+function m(e) {
     let { action: t, channelId: n, messageId: i, context: r } = e;
     if (null == n || null == i) return;
     let a = _.A.getChannel(n);
@@ -67,7 +67,7 @@ function T(e) {
         context: r,
     });
 }
-var m = (((a = {}).UPDATE = "update"), (a.TIMEOUT = "timeout"), a);
+var T = (((a = {}).UPDATE = "update"), (a.TIMEOUT = "timeout"), a);
 function g(e, t) {
     let n = Math.min(Math.floor((Date.now() - e) / 1e3), 3);
     d.A.increment({

@@ -44,6 +44,6 @@ function u(e, t) {
             : "false",
         I = null != d ? encodeURIComponent(d) : null,
         p = null != c ? encodeURIComponent(c) : null,
-        T = `${o}/Hs5r/?deep_link_value=${E}&pid=${s}&af_force_deeplink=${f}&af_og_description=${h}&af_dp=${A}`;
-    return (null != I && (T += `&af_android_url=${I}`), null != p && (T += `&af_ios_url=${p}`), T);
+        m = `${o}/Hs5r/?deep_link_value=${E}&pid=${s}&af_force_deeplink=${f}&af_og_description=${h}&af_dp=${A}`;
+    return (null != I && (m += `&af_android_url=${I}`), null != p && (m += `&af_ios_url=${p}`), m);
 }

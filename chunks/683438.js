@@ -20,9 +20,9 @@ function l(e) {
             inputProps: f,
             focusProps: I,
             "aria-label": p,
-            ref: T,
+            ref: m,
         } = e,
-        { i18n: m } = (0, a.G9)();
+        { i18n: T } = (0, a.G9)();
     return (0, i.jsx)(s.k, {
         role: "searchbox",
         ...f,
@@ -31,12 +31,12 @@ function l(e) {
         value: t,
         onChange: _,
         onKeyDown: d,
-        placeholder: o ?? m.SEARCH,
+        placeholder: o ?? T.SEARCH,
         disabled: u,
         autoFocus: n,
         autoComplete: h,
-        "aria-label": p ?? m.SEARCH,
-        inputRef: T,
+        "aria-label": p ?? T.SEARCH,
+        inputRef: m,
         leading: r.MagnifyingGlassIcon,
         onClear: l,
         clearable: null != l,

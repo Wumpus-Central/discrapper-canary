@@ -76,8 +76,8 @@ class I extends d.A {
     };
 }
 var p = n(165610),
-    T = n(392164),
-    m = n(105292);
+    m = n(392164),
+    T = n(105292);
 let g = !1,
     S = !1,
     N = new (class extends I {
@@ -105,15 +105,15 @@ let g = !1,
         handlePopoutWindowUpdate = () => {
             let e = g,
                 t = s.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT);
-            if ((!e || t || S || l.A.clearMainFrameSlot(), (g = t), !s.A.getWindowOpen(T.f)))
-                for (let e of A.A.getFramesForSurface(p.ZN)) (0, p.zB)(e) === T.f && (0, h.r)(e.id);
+            if ((!e || t || S || l.A.clearMainFrameSlot(), (g = t), !s.A.getWindowOpen(m.f)))
+                for (let e of A.A.getFramesForSurface(p.ZN)) (0, p.zB)(e) === m.f && (0, h.r)(e.id);
         };
         handleLogout = () => {
             for (let e of A.A.getFramesForSurface(p.ZN)) (0, h.r)(e.id);
         };
         handleFrameLaunch = (e) => {
             let { frameId: t, hostWindowKey: n } = e;
-            n !== T.f || s.A.getWindowOpen(T.f) || (0, h.r)(t);
+            n !== m.f || s.A.getWindowOpen(m.f) || (0, h.r)(t);
         };
         handlePopInFrame = () => {
             ((S = !0), a.close(f.MLl.ACTIVITY_POPOUT));
@@ -122,7 +122,7 @@ let g = !1,
         };
         showRPCDisconnectErrorUI(e) {
             let { code: t, message: n } = e,
-                r = `${m.intl.formatToPlainString(m.t.hbiAO6, { code: t })}: ${n}`;
+                r = `${T.intl.formatToPlainString(T.t.hbiAO6, { code: t })}: ${n}`;
             (0, i.P0)({ text: r, variant: "critical" });
         }
     })();

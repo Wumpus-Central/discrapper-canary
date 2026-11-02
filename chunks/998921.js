@@ -19,7 +19,7 @@ function I(e, t) {
 function p(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
-function T(e) {
+function m(e) {
     return new Promise((t, n) => {
         "string" == typeof e && (e = A.net.createConnection(e));
         let i = new g(e, "json");
@@ -49,10 +49,10 @@ function T(e) {
                 throw (r(), e);
             },
         );
-        return (e.write(m(f.PING, s().uniqueId())), a.then(t, n));
+        return (e.write(T(f.PING, s().uniqueId())), a.then(t, n));
     });
 }
-function m(e, t) {
+function T(e, t) {
     t = JSON.stringify(t);
     let n = i.Buffer.byteLength(t),
         r = i.Buffer.alloc(8 + n);
@@ -84,11 +84,11 @@ class g extends c.A {
         return (e.copy(r, 0, t, n), r);
     }
     send(e) {
-        (h.info(`Socket Emit: ${this.id}`, (0, d.A)(e)), this.socket.write(m(f.FRAME, e)));
+        (h.info(`Socket Emit: ${this.id}`, (0, d.A)(e)), this.socket.write(T(f.FRAME, e)));
     }
     close(e, t) {
         try {
-            this.socket.end(m(f.CLOSE, { code: e, message: t }));
+            this.socket.end(T(f.CLOSE, { code: e, message: t }));
         } catch (e) {
             h.error(`Socket End Error: ${e.message}`);
         }
@@ -140,7 +140,7 @@ class g extends c.A {
     dispatchMessage(e, t) {
         switch (e) {
             case f.PING:
-                (this.socket.emit("ping", t), this.socket.write(m(f.PONG, t)));
+                (this.socket.emit("ping", t), this.socket.write(T(f.PONG, t)));
                 break;
             case f.PONG:
                 this.socket.emit("pong", t);
@@ -168,7 +168,7 @@ class S extends r.EventEmitter {
         super();
         const e = A.net.createServer((e) => this.handleConnection(e));
         (e.on("error", (e) => h.error(`Error: ${e.message}`)),
-            A.getAvailableSocket(T).then((t) => {
+            A.getAvailableSocket(m).then((t) => {
                 e.listen(t, () => {
                     ("function" == typeof e.listening ? e.listening() : e.listening) &&
                         h.info(`Starting on ${e.address()}`);
@@ -179,7 +179,7 @@ class S extends r.EventEmitter {
         if (this.activeConnections >= this.MAX_CONNECTIONS) {
             h.warn(`Connection limit reached (${this.MAX_CONNECTIONS}), rejecting connection`);
             try {
-                e.end(m(f.CLOSE, { code: E.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
+                e.end(T(f.CLOSE, { code: E.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
             } catch (e) {
                 h.error(`Socket End Error: ${e.message}`);
             }

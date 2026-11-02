@@ -1,5 +1,5 @@
 let i, r, a;
-(n.d(t, { A: () => T }), n(142703));
+(n.d(t, { A: () => m }), n(142703));
 var s = n(17928),
     l = n(73153),
     o = n(284016),
@@ -67,7 +67,7 @@ class p extends s.Ay.PersistedStore {
         });
     }
 }
-let T = new p(l.h, {
+let m = new p(l.h, {
     DEVELOPER_TEST_MODE_AUTHORIZATION_START: function (e) {
         let { applicationId: t } = e;
         (A.add(t), (a = null));

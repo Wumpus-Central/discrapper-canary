@@ -3,12 +3,12 @@
     CZ: () => U,
     Hd: () => S,
     I5: () => g,
-    JM: () => T,
+    JM: () => m,
     KH: () => R,
     L7: () => O,
     Pj: () => M,
     Pv: () => p,
-    Rf: () => m,
+    Rf: () => T,
     TQ: () => C,
     U3: () => A,
     W6: () => _,
@@ -112,17 +112,17 @@ function I(e, t, n) {
 function p(e, t) {
     return e.traits.find((e) => e.type === t);
 }
-function T(e) {
+function m(e) {
     return p(e, s.K.IS_LIVE)?.is_live ?? !1;
 }
-function m(e) {
+function T(e) {
     return p(e, s.K.FIRST_TIME)?.first_time ?? !1;
 }
 function g(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function S(e) {
-    return T(e) && !g(e);
+    return m(e) && !g(e);
 }
 function N(e) {
     return p(e, s.K.DURATION_SECONDS)?.duration_seconds;

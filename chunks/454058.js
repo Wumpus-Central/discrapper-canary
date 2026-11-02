@@ -15,8 +15,8 @@ var i = n(17928),
     f = n(927813),
     I = n(935208),
     p = n(652215);
-let T = new Set(),
-    m = {},
+let m = new Set(),
+    T = {},
     g = {},
     S = new Set();
 function N(e) {
@@ -27,7 +27,7 @@ function C() {
     return !1;
 }
 function O(e, t) {
-    let n = m[e];
+    let n = T[e];
     null != n &&
         null != t &&
         n.has(t) &&
@@ -44,14 +44,14 @@ function O(e, t) {
         );
 }
 function R(e) {
-    if (null != m[e]) return;
+    if (null != T[e]) return;
     let t = u.Ay.getChannels(e)[u.I6].map((e) => e.channel.id),
         n = _.Ay.getMember(e, d.default.getId())?.joinedAt;
     if (null == n) return;
-    m[e] = new Set();
+    T[e] = new Set();
     let i = new Date(n).getTime();
     0 !== t.length &&
-        ((m[e] = new Set(
+        ((T[e] = new Set(
             t.filter((t) => {
                 let n = I.default.extractTimestamp(t);
                 return (
@@ -66,9 +66,9 @@ function R(e) {
         (g[e] = Date.now()));
 }
 function L() {
-    I.default.keys(m).forEach((e) => {
-        let t = m[e];
-        m[e] = new Set([...t].filter((t) => !h.Ay.isChannelOrParentOptedIn(e, t)));
+    I.default.keys(T).forEach((e) => {
+        let t = T[e];
+        T[e] = new Set([...t].filter((t) => !h.Ay.isChannelOrParentOptedIn(e, t)));
     });
 }
 class y extends i.Ay.Store {
@@ -77,8 +77,8 @@ class y extends i.Ay.Store {
         (this.waitFor(d.default, c.A, u.Ay, _.Ay, E.A, A.Ay, h.Ay, o.A), this.syncWith([h.Ay], L));
     }
     getNewChannelIds(e) {
-        null != e && null == m[e] && R(e);
-        let t = null != e ? (m[e] ?? T) : T;
+        null != e && null == T[e] && R(e);
+        let t = null != e ? (T[e] ?? m) : m;
         return (0, s.EV)() ? t : new Set([...t].filter((e) => (0, s.G3)(c.A.getChannel(e))));
     }
     shouldIndicateNewChannel(e, t) {
@@ -87,23 +87,23 @@ class y extends i.Ay.Store {
         return (
             null != n &&
             !!n.features.has(p.GuildFeatures.COMMUNITY) &&
-            (null != e && null == m[e] && R(e),
-            !!m[e]?.has(t) && !!(0, s.G3)(c.A.getChannel(t)) && null == A.Ay.getTrackedAckMessageId(t))
+            (null != e && null == T[e] && R(e),
+            !!T[e]?.has(t) && !!(0, s.G3)(c.A.getChannel(t)) && null == A.Ay.getTrackedAckMessageId(t))
         );
     }
 }
 let D = new y(r.h, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
-        if (null == m[t]) return !1;
-        (n.forEach((e) => m[t].delete(e)), 0 === m[t].size && delete m[t]);
+        if (null == T[t]) return !1;
+        (n.forEach((e) => T[t].delete(e)), 0 === T[t].size && delete T[t]);
     },
     CHANNEL_ACK: () => !0,
     CURRENT_USER_UPDATE: () => !0,
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null == t) return !1;
-        let i = m[t],
+        let i = T[t],
             r = !1;
         return ((null == i || g[t] < Date.now() - f.A.Millis.HOUR) && (R(t), (r = !0)), null != n && O(t, n), r);
     },
@@ -126,7 +126,7 @@ let D = new y(r.h, {
             n = N(t.id);
         if (n && !S.has(t.id)) {
             S.add(t.id);
-            let e = m[t.id],
+            let e = T[t.id],
                 n = E.A.getGuild(t.id),
                 i = new Set();
             return (
@@ -135,7 +135,7 @@ let D = new y(r.h, {
                     [n.rulesChannelId, n.publicUpdatesChannelId].forEach((t) => {
                         null != t && e.has(t) && i.add(t);
                     }),
-                (m[t.id] = i),
+                (T[t.id] = i),
                 (g[t.id] = Date.now()),
                 !0
             );
@@ -144,10 +144,10 @@ let D = new y(r.h, {
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (delete m[t.id], S.delete(t.id));
+        (delete T[t.id], S.delete(t.id));
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        t.isVocal() || ((m[t.guild_id] = m[t.guild_id] ?? new Set()), m[t.guild_id].add(t.id));
+        t.isVocal() || ((T[t.guild_id] = T[t.guild_id] ?? new Set()), T[t.guild_id].add(t.id));
     },
 });

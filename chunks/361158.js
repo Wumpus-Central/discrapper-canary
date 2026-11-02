@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(750506),
     I = n(191627),
     p = n(87404),
-    T = n(535978);
-let m = new Set([p._s, I.Uy]),
+    m = n(535978);
+let T = new Set([p._s, I.Uy]),
     g = (0, h.xI)(u.A.FULL_SCREEN_LAYER_ANIMATION_DURATION),
     S = (0, d.v)((e) => ({
         fullScreenLayers: [],
@@ -36,7 +36,7 @@ function N(e) {
             var e, n;
             return (
                 A.A.disable(),
-                m.has(t.key) ||
+                T.has(t.key) ||
                     A.A.enableTemp(
                         ((e = t.key),
                         (n = t.options.onEscape),
@@ -57,18 +57,18 @@ function N(e) {
         }, [t.key, t.options.onEscape]),
         (0, i.jsx)(t.LayerComponent, {
             children: (0, i.jsxs)("div", {
-                className: T.zr,
+                className: m.zr,
                 ref: n,
                 children: [
-                    (0, i.jsx)("div", { className: T.$E }),
+                    (0, i.jsx)("div", { className: m.$E }),
                     t.render({ transitionState: null != t ? t.transitionState : 3, closeLayer: () => y(t.key) }),
                 ],
             }),
         })
     );
 }
-let C = { enter: T.Ve, enterActive: T.T8, enterDone: T.lG, exit: T.NS, exitActive: T.N5, exitDone: T.Dr },
-    O = { enter: T.Zf, enterActive: T.BA, enterDone: T.zo, exit: T.ph, exitActive: T.zX, exitDone: T.hf };
+let C = { enter: m.Ve, enterActive: m.T8, enterDone: m.lG, exit: m.NS, exitActive: m.N5, exitDone: m.Dr },
+    O = { enter: m.Zf, enterActive: m.BA, enterDone: m.zo, exit: m.ph, exitActive: m.zX, exitDone: m.hf };
 function R() {
     let { reducedMotion: e } = r.useContext(E.C),
         t = e.enabled ? O : C,

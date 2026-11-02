@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => A, FT: () => T, X4: () => h, d8: () => p, m2: () => I, p_: () => f });
+n.d(t, { Ay: () => A, FT: () => m, X4: () => h, d8: () => p, m2: () => I, p_: () => f });
 var i = n(284009),
     r = n.n(i),
     a = n(17928),
@@ -24,24 +24,24 @@ function h(e) {
         f = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
         I = r?.colorRoleId,
         p = (0, a.bG)([d.A], () => (null != i && null != I ? d.A.getRole(i, I) : void 0), [i, I]),
-        T = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        m = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
         g = (0, s.A)({ userId: n, guildId: i });
     return null == e
         ? null
-        : m({
+        : T({
               user: e.author,
               channel: t,
               guild: f,
               memberColorRole: p,
               userName: h,
               member: r,
-              friendNickname: T,
+              friendNickname: m,
               displayNameStyles: g,
           });
 }
 function f(e) {
     let t = l.A.getChannel(e.channel_id);
-    return T(e.author, t);
+    return m(e.author, t);
 }
 function I(e, t) {
     let n = p(e, t);
@@ -56,7 +56,7 @@ function p(e, t) {
         A = (0, a.bG)([d.A], () => (null != i && null != _ ? d.A.getRole(i, _) : void 0), [i, _]),
         h = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
         f = E.Ay.useName(e);
-    return m({
+    return T({
         user: e,
         channel: t,
         guild: l,
@@ -67,14 +67,14 @@ function p(e, t) {
         displayNameStyles: (0, s.A)({ userId: n, guildId: i }),
     });
 }
-function T(e, t) {
+function m(e, t) {
     let n = e?.id,
         i = t?.guild_id,
         r = c.A.getGuild(i),
         a = null == i || null == n ? null : o.Ay.getMember(i, n),
         s = null != i && a?.colorRoleId != null ? d.A.getRole(i, a.colorRoleId) : void 0,
         l = null != n && null != t && t.isPrivate() ? u.A.getNickname(n) : null;
-    return m({
+    return T({
         user: e,
         channel: t,
         guild: r,
@@ -84,7 +84,7 @@ function T(e, t) {
         displayNameStyles: e?.displayNameStyles,
     });
 }
-function m(e) {
+function T(e) {
     let {
             user: t,
             channel: n,

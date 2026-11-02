@@ -34,8 +34,8 @@ let A = new l.J(
     f = {},
     I = new Set(),
     p = {},
-    T = {},
     m = {},
+    T = {},
     g = {},
     S = new Map(),
     N = new Map();
@@ -85,10 +85,10 @@ class D extends s.Ay.Store {
         return p[e];
     }
     getSubscriptionTrial(e) {
-        return T[e];
+        return m[e];
     }
     getMonetizationRestrictions(e) {
-        return m[e];
+        return T[e];
     }
     getMonetizationRestrictionsFetchState(e) {
         return g[e] ?? 0;
@@ -102,7 +102,7 @@ class D extends s.Ay.Store {
 }
 let v = new D(o.h, {
     CONNECTION_OPEN: function () {
-        (A.clear(), h.clear(), (f = {}), I.clear(), (p = {}), (T = {}), (m = {}), (g = {}), S.clear(), N.clear());
+        (A.clear(), h.clear(), (f = {}), I.clear(), (p = {}), (m = {}), (T = {}), (g = {}), S.clear(), N.clear());
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
         let { settings: t } = e;
@@ -115,7 +115,7 @@ let v = new D(o.h, {
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
         let { guildId: t, groupListings: n, benefitChannels: i, settings: r, subscriptionTrials: a } = e;
         for (let e of ((f[t] = 2), n)) O(e);
-        for (let e of ((p[t] = r), a)) T[e.id] = e;
+        for (let e of ((p[t] = r), a)) m[e.id] = e;
         L(i);
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
@@ -152,7 +152,7 @@ let v = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL: function (e) {
         let { subscriptionTrial: t } = e;
-        T[t.id] = t;
+        m[t.id] = t;
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: function (e) {
         let { guildId: t } = e;
@@ -160,11 +160,11 @@ let v = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function (e) {
         let { guildId: t, restrictions: n } = e;
-        ((m[t] = n), (g[t] = 2));
+        ((T[t] = n), (g[t] = 2));
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function (e) {
         let { guildId: t } = e;
-        ((g[t] = 2), (m[t] = d.o));
+        ((g[t] = 2), (T[t] = d.o));
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function (e) {
         let { guildId: t } = e;

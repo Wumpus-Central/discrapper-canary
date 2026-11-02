@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var i = n(607399),
     r = n(820739),
     a = n(439372),
@@ -57,4 +57,4 @@ class p extends a.A {
         GUILD_APPLIED_BOOSTS_UPDATE: this.handleAppliedBoostUpdate.bind(this),
     };
 }
-let T = new p();
+let m = new p();

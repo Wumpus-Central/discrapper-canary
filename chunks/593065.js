@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(38021),
     I = n(951001),
     p = n(775602),
-    T = n(793574),
-    m = n(666860),
+    m = n(793574),
+    T = n(666860),
     g = n(688810),
     S = n(660387),
     N = n(343328),
@@ -188,7 +188,7 @@ class Q extends r.Component {
                 num_users_visible_with_mobile_indicator: l.filter((e) => null != e && K.A.isMobileOnline(e)).length,
             };
         ((this.hasReportedAnalytics = !0),
-            m.Ay.trackWithMetadata(X.HAw.DM_LIST_VIEWED, {
+            T.Ay.trackWithMetadata(X.HAw.DM_LIST_VIEWED, {
                 ...d,
                 ...(0, S.F)(),
                 visible_user_ids: l.filter((e) => null != e),
@@ -315,9 +315,9 @@ let J = function (e) {
             return (0, P.eh)(e, [b.A, M.A]);
         });
     (0, D.P)(y);
-    let { analyticsLocations: h } = (0, g.Ay)(T.A.CONTACTS_LIST),
+    let { analyticsLocations: h } = (0, g.Ay)(m.A.CONTACTS_LIST),
         I = (0, W.NC)(),
-        { keyboardModeEnabled: m, version: S } = (0, u.cf)([p.Ay, Y.A], () => ({
+        { keyboardModeEnabled: T, version: S } = (0, u.cf)([p.Ay, Y.A], () => ({
             keyboardModeEnabled: p.Ay.keyboardModeEnabled,
             version: null != n ? `${n}:${Y.A.getPrivateChannelsVersion()}` : Y.A.getPrivateChannelsVersion(),
         })),
@@ -363,7 +363,7 @@ let J = function (e) {
         U = (0, O.GV)(),
         w = (0, c.Ay)({
             id: `private-channels-${U}`,
-            isEnabled: m,
+            isEnabled: T,
             scrollToStart: L,
             scrollToEnd: v,
             defaultFocused: (o + 1).toString(),

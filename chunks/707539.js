@@ -1,4 +1,4 @@
-(n.d(t, { D3: () => T, JO: () => S, TE: () => m, aK: () => h.A, hs: () => g, ju: () => p }), n(938796));
+(n.d(t, { D3: () => m, JO: () => S, TE: () => T, aK: () => h.A, hs: () => g, ju: () => p }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(665260),
@@ -17,11 +17,11 @@ var i = n(536637),
 function p() {
     (0, l.zV)(I.HAw.THREAD_BROWSER_TAB_CHANGED);
 }
-function T() {
+function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
     (0, l.zV)(I.HAw.OPEN_MODAL, { type: "Thread Browser", location_section: e });
 }
-function m() {
+function T() {
     u.default.track(I.HAw.OPEN_POPOUT, { type: "Active Threads Popout" });
 }
 function g(e, t) {
@@ -43,7 +43,7 @@ function g(e, t) {
         E = l(d),
         h = A.A.isMuted(e.id),
         p = (0, _.DZ)(A.A.getMuteConfig(e.id)),
-        { can_send_message: T, parent_channel_type: m, ...g } = n,
+        { can_send_message: m, parent_channel_type: T, ...g } = n,
         S = {
             ...g,
             channel_id: e.id,

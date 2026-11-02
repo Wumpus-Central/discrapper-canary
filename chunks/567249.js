@@ -15,8 +15,8 @@ var i = n(284009),
     f = n(475815),
     I = n(652215);
 let p = new c.A("PopoutWindowStore"),
-    T = {},
     m = {},
+    T = {},
     g = {},
     S = {},
     N = {},
@@ -30,12 +30,12 @@ function y(e) {
     let t = g[e];
     null == t ||
         t.closed ||
-        (T[e] = {
+        (m[e] = {
             x: t.screenX,
             y: t.screenY,
             width: t.innerWidth,
             height: t.innerHeight,
-            alwaysOnTop: !!A.isPlatformEmbedded && m[e],
+            alwaysOnTop: !!A.isPlatformEmbedded && T[e],
         });
 }
 function D(e, t, i) {
@@ -66,7 +66,7 @@ function v(e) {
             r()(null != i, "Window root was null while unmounting"),
             i.unmount(),
             delete g[e],
-            delete m[e],
+            delete T[e],
             delete N[e],
             delete S[e],
             setTimeout(() => {
@@ -130,13 +130,13 @@ class U extends o.Ay.PersistedStore {
         (this.waitFor(E.default),
             window.addEventListener("message", b),
             window.addEventListener("beforeunload", M),
-            (T = e ?? {}));
+            (m = e ?? {}));
     }
     getWindow(e) {
         return g[e];
     }
     getWindowState(e) {
-        return T[e];
+        return m[e];
     }
     getWindowKeys() {
         return Object.keys(g);
@@ -146,7 +146,7 @@ class U extends o.Ay.PersistedStore {
         return null != t && !t.closed;
     }
     getIsAlwaysOnTop(e) {
-        return !!m[e];
+        return !!T[e];
     }
     getWindowFocused(e) {
         let t = g[e];
@@ -157,7 +157,7 @@ class U extends o.Ay.PersistedStore {
         return t?.document?.visibilityState === "visible";
     }
     getState() {
-        return T;
+        return m;
     }
     isWindowFullyInitialized(e) {
         return null != g[e] && null != S[e] && null != N[e];
@@ -185,7 +185,7 @@ let w = new U(d.h, {
             let { defaultWidth: l, defaultHeight: o, defaultAlwaysOnTop: d = !1, ...c } = n,
                 E = { ...c, width: l ?? c.width, height: o ?? c.height },
                 f = d,
-                S = T[t];
+                S = m[t];
             if (null != S) {
                 let { width: e, height: t, x: n, y: i, alwaysOnTop: r } = S;
                 ((f = null != r ? r : d),
@@ -228,7 +228,7 @@ let w = new U(d.h, {
                 (g[t] = R),
                 (N[t] = i),
                 A.isPlatformEmbedded &&
-                    (h.Ay.setAlwaysOnTop(t, f), (m[t] = f), h.Ay.isAlwaysOnTop(t).then((e) => (m[t] = e))),
+                    (h.Ay.setAlwaysOnTop(t, f), (T[t] = f), h.Ay.isAlwaysOnTop(t).then((e) => (T[t] = e))),
                 C.add(t));
         },
         POPOUT_WINDOW_ADD_STYLESHEET: function (e) {
@@ -243,7 +243,7 @@ let w = new U(d.h, {
         POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function (e) {
             let { key: t, alwaysOnTop: n } = e;
             A.isPlatformEmbedded &&
-                (h.Ay.setAlwaysOnTop(t, n), (m[t] = n), h.Ay.isAlwaysOnTop(t).then((e) => (m[t] = e)));
+                (h.Ay.setAlwaysOnTop(t, n), (T[t] = n), h.Ay.isAlwaysOnTop(t).then((e) => (T[t] = e)));
         },
         LOGOUT: M,
     }),

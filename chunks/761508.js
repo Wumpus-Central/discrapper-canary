@@ -39,7 +39,7 @@ let I = function (e) {
 function p(e) {
     return `${e.replace(/\s+/g, "-").toLowerCase()}-tab`;
 }
-function T(e, t) {
+function m(e, t) {
     if (null == e) return;
     let n = {};
     return (
@@ -49,7 +49,7 @@ function T(e, t) {
         n
     );
 }
-class m extends r.Component {
+class T extends r.Component {
     static defaultProps = { disabled: !1, look: "grey", disableItemStyles: !1 };
     state = { hover: !1, active: !1 };
     handleClick = (e) => {
@@ -75,7 +75,7 @@ class m extends r.Component {
         let { color: e, id: t, selectedItem: n, itemType: i } = this.props,
             { hover: r, active: a } = this.state;
         if (null != e) {
-            if ("side" === i) return (null != t && n === t) || a ? T(e, "Selected") : r ? T(e, "Hover") : T(e);
+            if ("side" === i) return (null != t && n === t) || a ? m(e, "Selected") : r ? m(e, "Hover") : m(e);
             if ("top" === i)
                 if (n === t) return { borderColor: e, color: e };
                 else if (r) return { borderColor: (0, o.xp)(e, 0.1), color: (0, o.xp)(e, 0.6) };
@@ -100,8 +100,8 @@ class m extends r.Component {
                 look: h,
                 disableItemStyles: f,
                 role: I = "tab",
-                onFocus: T,
-                onBlur: m,
+                onFocus: m,
+                onBlur: T,
             } = this.props,
             g = this.props["aria-label"],
             S = r === n,
@@ -127,8 +127,8 @@ class m extends r.Component {
             onMouseUp: null != a ? this.handleMouseUp : void 0,
             onMouseDown: this.handleMouseDown,
             onContextMenu: d,
-            onFocus: T,
-            onBlur: m,
+            onFocus: m,
+            onBlur: T,
             "aria-label": g,
             innerRef: A,
             ref: _,
@@ -143,7 +143,7 @@ class m extends r.Component {
 }
 class g extends r.Component {
     static Header = h;
-    static Item = m;
+    static Item = T;
     static Separator = f;
     static Panel = I;
     tabBarRef = r.createRef();
@@ -163,7 +163,7 @@ class g extends r.Component {
             return (
                 null != t ||
                     s ||
-                    e.type !== m ||
+                    e.type !== T ||
                     null == e.props.id ||
                     !0 === e.props.disabled ||
                     ((o = e.props.id), (s = !0)),

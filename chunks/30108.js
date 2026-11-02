@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, Zl: () => T, bF: () => p });
+n.d(t, { Ay: () => g, Zl: () => m, bF: () => p });
 var i = n(17928),
     r = n(439372),
     a = n(400492),
@@ -45,13 +45,13 @@ function p(e) {
         r = (0, i.bG)([E.A], () => E.A.getStageInstanceByChannel(e));
     return t && null == r && !n;
 }
-function T(e) {
+function m(e) {
     let t = o.Ay.getVoiceChannelId() === e,
         n = null != c.A.getMutableParticipants(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
         i = E.A.getStageInstanceByChannel(e);
     return t && null == i && !n;
 }
-class m extends r.A {
+class T extends r.A {
     actions = {
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
         LOGOUT: this.handleLogout,
@@ -90,4 +90,4 @@ class m extends r.A {
         I();
     }
 }
-let g = new m();
+let g = new T();

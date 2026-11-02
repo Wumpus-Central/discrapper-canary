@@ -15,8 +15,8 @@ var i = n(132500),
     f = n(773371),
     I = n(532294),
     p = n(174459),
-    T = n(19575),
-    m = n(9302),
+    m = n(19575),
+    T = n(9302),
     g = n(365971),
     S = n(427603),
     N = n(506774);
@@ -209,7 +209,7 @@ class b {
     }
     update() {
         let e = this.game,
-            t = T.Ay.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
+            t = m.Ay.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
         if (t !== this.lastscreenType) {
             if (!(t in this.counters)) {
                 let n = E.default.getTrackedGameByPid(e.pid);
@@ -263,7 +263,7 @@ class b {
             screentype_most_used: s.aI[r],
             screentype_most_used_previous: null == a ? null : s.aI[a],
             screentype_last: s.aI[this.lastscreenType ?? s.aI.UNKNOWN],
-            game_display_mode_is_adjustment_supported: T.Ay.GameDisplayModeIsGameSupported(this.game.name),
+            game_display_mode_is_adjustment_supported: m.Ay.GameDisplayModeIsGameSupported(this.game.name),
         };
     }
     destroy() {
@@ -340,7 +340,7 @@ class P {
                 current_method: e,
             };
         if (null != t) {
-            let { quns: e } = T.Ay.GetWindowFullscreenTypeExtraByPid(t.pid, t.gameName);
+            let { quns: e } = m.Ay.GetWindowFullscreenTypeExtraByPid(t.pid, t.gameName);
             a.quns_mode = this.getQunsName(e);
         }
         if (null == e)
@@ -531,7 +531,7 @@ function U(e) {
     for (let t of e.removed) (P.destroy(t), L.verbose("handleRunningGamesChange removed", t));
 }
 function w(e) {
-    if (e.pid === m.DEV_PID) return;
+    if (e.pid === T.DEV_PID) return;
     let t = P.getByPid(e.pid);
     (L.verbose("OVERLAY_SET_INPUT_LOCKED", t), null == t)
         ? L.error("OVERLAY_SET_INPUT_LOCKED: Unable to find game", e, P.debug)
@@ -557,14 +557,14 @@ function x(e) {
 }
 function k(e) {
     if (
-        (L.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid || e.pid === m.DEV_PID || -1 === e.pid)
+        (L.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid || e.pid === T.DEV_PID || -1 === e.pid)
     )
         return;
     let t = P.getByPid(e.pid);
     null == t ? L.error("OVERLAY_FOCUSED: Game not found", e, P.debug) : t.gameSetFocused(!0);
 }
 function F(e) {
-    if ((L.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === m.DEV_PID)) return;
+    if ((L.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === T.DEV_PID)) return;
     let t = P.getByPid(e.pid);
     null == t
         ? L.error("SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found", e, P.debug)
@@ -609,7 +609,7 @@ function H(e) {
 }
 function j(e) {
     let t = (0, S.A)();
-    null != t && t !== m.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled());
+    null != t && t !== T.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled());
 }
 function W(e) {
     L.verbose("WINDOW_FOCUS", e);
@@ -619,7 +619,7 @@ function W(e) {
         : P.desktopSetFocused(e.focused);
 }
 function Y(e) {
-    if (e.pid === m.DEV_PID || -1 === e.pid) return;
+    if (e.pid === T.DEV_PID || -1 === e.pid) return;
     let t = P.getByPid(e.pid);
     null == t ? L.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, P.debug) : (t.successfullyShown = !0);
 }

@@ -1,8 +1,8 @@
 n.d(t, {
-    $v: () => T.$v,
+    $v: () => m.$v,
     Bc: () => R,
     F2: () => M,
-    Gc: () => T.Gc,
+    Gc: () => m.Gc,
     Gn: () => v,
     Jm: () => k,
     Tv: () => U,
@@ -34,8 +34,8 @@ var i = n(687123),
     f = n(975571),
     I = n(935208),
     p = n(612200),
-    T = n(874850),
-    m = n(597306),
+    m = n(874850),
+    T = n(597306),
     g = n(204925),
     S = n(652215),
     N = n(105292);
@@ -53,7 +53,7 @@ function D(e) {
     let t = (0, s.b8)(),
         n = (0, c.wh)(e),
         o = (0, r.bG)([h.default], () => h.default.getCurrentUser()?.nsfwAllowed === !1),
-        u = (0, m.a)(),
+        u = (0, T.a)(),
         _ = (function (e) {
             if (!(0, l.aX)(i.t.AGE_GATED_SPACES)) return null;
             let t = (0, c.wh)(e),
@@ -99,7 +99,7 @@ function D(e) {
 }
 function v(e) {
     let t = (0, s.b8)(),
-        n = (0, m.a)(),
+        n = (0, T.a)(),
         a = e === g.w_.NSFW_SERVER || e === g.w_.NSFW_SERVER_INVITE || e === g.w_.NSFW_SERVER_INVITE_EMBED,
         o = (0, r.bG)([h.default], () => h.default.getCurrentUser()?.nsfwAllowed === !1),
         c = (0, l.aX)(i.t.AGE_GATED_SPACES) && a ? (0, d.f)(!0, "") : null;
@@ -146,14 +146,14 @@ function v(e) {
 function b() {
     let e = h.default.getCurrentUser();
     if (null == e) return !1;
-    let t = (0, m.r)();
+    let t = (0, T.r)();
     return !0 !== e.nsfwAllowed || t;
 }
 function P(e) {
     return !!b() && null != e && F(u.A.getChannel(e));
 }
 function M(e) {
-    return (0, m.r)() && P(e);
+    return (0, T.r)() && P(e);
 }
 function U(e) {
     return !!M(e) && ((0, p.yO)(g.w_.NSFW_VOICE_CHANNEL, e), !0);
@@ -177,7 +177,7 @@ function w(e, t, n) {
 let G = new Set([g.w_.FAMILY_CENTER, g.w_.DEEP_LINK_PROMPT]);
 function x(e) {
     if (G.has(e)) return g.ln.DATE_OF_BIRTH;
-    if ((0, m.r)()) return g.ln.AGE_ASSURANCE;
+    if ((0, T.r)()) return g.ln.AGE_ASSURANCE;
     let t = u.A.getChannel(A.Ay.getChannelId());
     return h.default.getCurrentUser()?.nsfwAllowed === !1 && (F(t) || R.has(e))
         ? g.ln.AGE_ASSURANCE
@@ -186,7 +186,7 @@ function x(e) {
 function k(e) {
     if (null == e) return !1;
     let t = (0, s.p9)();
-    return (0, T.Gc)(e) && t;
+    return (0, m.Gc)(e) && t;
 }
 function F(e) {
     if (null == e) return !1;

@@ -9,8 +9,8 @@ n.d(t, {
     VA: () => R,
     Ve: () => O,
     XU: () => A,
-    Yw: () => m,
-    j5: () => T,
+    Yw: () => T,
+    j5: () => m,
     kR: () => y,
     v7: () => C,
     yL: () => N,
@@ -31,8 +31,8 @@ let A = "Notifications Inbox",
     f = 88,
     I = c.A.Millis.WEEK,
     p = 50,
-    T = "notifications-inbox";
-function m(e) {
+    m = "notifications-inbox";
+function T(e) {
     let t;
     return (
         (t =

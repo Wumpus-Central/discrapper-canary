@@ -23,8 +23,8 @@ let u = new Map(),
     f = new Set(),
     I = new Set(),
     p = !1,
-    T = null,
-    m = !1,
+    m = null,
+    T = !1,
     g = null,
     S = new Set(),
     N = new Map(),
@@ -40,10 +40,10 @@ class O extends i.Ay.Store {
         return p;
     }
     getMaxProjects() {
-        return T;
+        return m;
     }
     hasFetchedProjectLimit() {
-        return m;
+        return T;
     }
     getProject(e) {
         return u.get(e) ?? null;
@@ -102,8 +102,8 @@ let R = new O(r.h, {
             0 === f.size &&
             0 === S.size &&
             null == g &&
-            null == T &&
-            !m
+            null == m &&
+            !T
         )
             return !1;
         (u.clear(),
@@ -118,8 +118,8 @@ let R = new O(r.h, {
             (g = null),
             (p = !1),
             (C = "unattempted"),
-            (T = null),
-            (m = !1));
+            (m = null),
+            (T = !1));
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
@@ -141,7 +141,7 @@ let R = new O(r.h, {
     },
     CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;
-        ((T = t), (m = !0));
+        ((m = t), (T = !0));
     },
     CONJURE_PROJECT_CREATE_SUCCESS: function (e) {
         let { project: t } = e;

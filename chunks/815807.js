@@ -5,7 +5,7 @@ n.d(t, {
     is: () => h,
     jq: () => A,
     mb: () => _,
-    n4: () => T,
+    n4: () => m,
     sn: () => I,
     vp: () => p,
 });
@@ -61,7 +61,7 @@ function p(e) {
         i = s.default.getId() === t;
     return !n || !!i;
 }
-function T(e, t) {
+function m(e, t) {
     (a.Zp.updateSetting(e),
         l.default.track(o.HAw.NOTIFICATION_SETTINGS_UPDATED, {
             update_type: d.Y.ACCOUNT,

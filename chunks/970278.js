@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -40,7 +40,7 @@ function I(e) {
     ((c[t] = { ...c[t], [n]: { ...c[t][n] } }), delete c[t][n][i], r().isEmpty(c[t][n]) && delete c[t][n]);
 }
 let p = {};
-class T extends a.Ay.Store {
+class m extends a.Ay.Store {
     static displayName = "ActiveThreadsStore";
     initialize() {
         this.waitFor(o.A);
@@ -66,7 +66,7 @@ class T extends a.Ay.Store {
         return u.has(e);
     }
 }
-let m = new T(s.h, {
+let T = new m(s.h, {
     CONNECTION_OPEN: function (e) {
         ((c = {}),
             u.clear(),

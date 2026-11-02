@@ -4,7 +4,7 @@
     Qd: () => g,
     Xt: () => b,
     Z0: () => p,
-    _$: () => m,
+    _$: () => T,
     dI: () => v,
     pi: () => L,
     rB: () => D,
@@ -31,17 +31,17 @@ function I(e) {
     return "+" === e ? "plus" : e;
 }
 function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m();
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T();
     return t === u.g$.BROWSER ? r()(e) : _[e];
 }
-function T(e, t, n) {
+function m(e, t, n) {
     if ((null != n && n !== u.g$.WINDOWS) || !c.Kh.has(e)) return t;
     let i = (0, c.Ze)().get("Backquote");
     if (t === i) return I(t);
     let r = (0, c.sv)({ key: i, code: "Backquote", keyCode: e });
     return ("\\" === t || ("'" === t && 192 !== e)) && "`" === i ? t : null == r ? I(i ?? t) : I(r.key);
 }
-function m() {
+function T() {
     return (0, d.isLinux)()
         ? u.g$.LINUX
         : (0, d.isMac)()
@@ -78,16 +78,16 @@ function g(e) {
             }
             return null != t ? t : null;
         })(e);
-    if (null != i) return T(t, i, n);
+    if (null != i) return m(t, i, n);
     let a = (0, c.Pk)(t);
-    return null != a ? T(a.keyCode, a.key, n) : null;
+    return null != a ? m(a.keyCode, a.key, n) : null;
 }
 function S(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m(),
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.zY.KEYBOARD_KEY,
         i = (function (e) {
             let t,
-                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m(),
+                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
                 i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.zY.KEYBOARD_KEY;
             if (null == e) return null;
             let a = i === u.zY.KEYBOARD_KEY || i === u.zY.KEYBOARD_MODIFIER_KEY;
@@ -175,7 +175,7 @@ function L(e) {
           }, []);
 }
 function y(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m(),
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.zY.KEYBOARD_KEY;
     return e
         .replace(/numpad plus/i, "")
@@ -199,7 +199,7 @@ function D(e) {
     return e
         .map((e) => {
             let [t, n, i] = e,
-                r = "number" == typeof i ? i : m();
+                r = "number" == typeof i ? i : T();
             switch (t) {
                 case u.zY.KEYBOARD_KEY:
                 case u.zY.KEYBOARD_MODIFIER_KEY:

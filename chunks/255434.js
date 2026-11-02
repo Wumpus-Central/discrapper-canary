@@ -76,8 +76,8 @@ function I(e) {
             id: A,
             content: I,
             position: p = "top",
-            align: T = "center",
-            spacing: m = 11,
+            align: m = "center",
+            spacing: T = 11,
             caretConfig: g,
             animationStyle: S,
             positionKey: N,
@@ -92,13 +92,13 @@ function I(e) {
         !n)
     )
         return null;
-    let L = (0, o.Pv)(p, T),
+    let L = (0, o.Pv)(p, m),
         y = u ?? a.current;
     return (0, i.jsx)(o.Ow, {
         className: c.BM,
         open: n,
         dismissOnEscapeKey: !1,
-        spacing: m,
+        spacing: T,
         placement: L,
         reference: y,
         ownerDocument: O,

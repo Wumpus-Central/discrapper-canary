@@ -23,14 +23,14 @@ function p(e, t, n) {
     let i = _.get(e);
     return !!(0, d.x1)(i) && !!t(i.data) && (_.set(e, { ...i, data: n(i.data) }), !0);
 }
-function T(e, t) {
+function m(e, t) {
     return null != t && e.launchRequestId !== t;
 }
-function m(e) {
+function T(e) {
     for (let t of _.values()) if ((0, d.x1)(t) && t.data.iframeId === e) return t;
 }
 function g(e, t) {
-    let n = m(e);
+    let n = T(e);
     return null != n && I(n.id, t);
 }
 class S extends i.Ay.Store {
@@ -47,7 +47,7 @@ class S extends i.Ay.Store {
         return !(0, d.x1)(t) || "hidden" !== t.data.poolVisibility;
     }
     getFrameByIframeId(e) {
-        return m(e);
+        return T(e);
     }
     isDeviceMuted() {
         return h;
@@ -102,17 +102,17 @@ let N = new S(r.h, {
     FRAME_LAUNCH: function (e) {
         let { frameId: t, proxyTicket: n, launch: i, invite: r, hostWindowKey: s, launchRequestId: l } = e,
             u = _.get(t);
-        if (null == u || T(u, l)) return !1;
+        if (null == u || m(u, l)) return !1;
         let f = (0, a.Ay)(u.applicationId),
             I = null != f && null != i.path ? o.A.toURLSafe(i.path, f)?.toString() : f;
         if (null == I) {
             (_.delete(t), A === t && (A = null));
             return;
         }
-        let { id: p, applicationId: m, intent: g, surface: S } = u;
+        let { id: p, applicationId: T, intent: g, surface: S } = u;
         _.set(t, {
             id: p,
-            applicationId: m,
+            applicationId: T,
             intent: g,
             surface: S,
             launchRequestId: u.launchRequestId,
@@ -142,7 +142,7 @@ let N = new S(r.h, {
     FRAME_LAUNCH_FAIL: function (e) {
         let { frameId: t, launchRequestId: n } = e,
             i = _.get(t);
-        if (null != i && T(i, n)) return !1;
+        if (null != i && m(i, n)) return !1;
         (_.delete(t), A === t && (A = null));
     },
     FRAME_STOP: function (e) {

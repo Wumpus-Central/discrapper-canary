@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(568598),
     I = n(198052),
     p = n(477754),
-    T = n(446243),
-    m = n(558076),
+    m = n(446243),
+    T = n(558076),
     g = n(360729),
     S = n(976860),
     N = n(272812),
@@ -76,7 +76,7 @@ function Y(e) {
         er = t?.id,
         ea = t?.getGuildId(),
         { enabled: es } = (0, g.mf)({ guildId: ea ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
-        el = (0, l.bG)([m.A], () => null != er && m.A.isVisible(er), [er]),
+        el = (0, l.bG)([T.A], () => null != er && T.A.isVisible(er), [er]),
         eo = ei && es && el,
         ed = ei && ee?.type !== B.lp.ACTIVITY,
         ec = !ei && K === k.Gd.PIP,
@@ -89,7 +89,7 @@ function Y(e) {
                     t.id,
                     (0, f.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                 ),
-                eo && (0, T.UV)(!0, t.id));
+                eo && (0, m.UV)(!0, t.id));
             let e = t.getGuildId() ?? F.ME;
             (u.A.channelListScrollTo(e, t.id), (0, S.uh)(e, t.id));
         }

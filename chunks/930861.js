@@ -42,8 +42,8 @@ function I(e) {
             ...I
         } = e,
         p = a.useRef(null),
-        T = (0, u.M)(p),
-        m = !i && !s && !0 !== o && (!h || T);
+        m = (0, u.M)(p),
+        T = !i && !s && !0 !== o && (!h || m);
     return (0, r.jsxs)(d.$n, {
         "data-migration-pending": !0,
         buttonRef: p,
@@ -53,7 +53,7 @@ function I(e) {
         submitting: s,
         children: [
             t,
-            m
+            T
                 ? (0, r.jsx)(f, {
                       "data-migration-pending": !0,
                       shinePaused: E,

@@ -15,8 +15,8 @@ var i = n(284009),
     f = n(628201),
     I = n(124697),
     p = n(643501),
-    T = n(30529),
-    m = n(975571),
+    m = n(30529),
+    T = n(975571),
     g = n(544105),
     S = n(105292),
     N = n(731854);
@@ -48,7 +48,7 @@ class R extends o.A {
                 e.find((e) => {
                     let n = g.hv.has(e.clientInfo.os),
                         i = null != A.A.getVoiceStateForSession(c.default.getId(), e.sessionId),
-                        r = null == t || (0, T.X)(t.type) === e.clientInfo.os;
+                        r = null == t || (0, m.X)(t.type) === e.clientInfo.os;
                     return n && r && i;
                 }));
         if (null == n) return null;
@@ -156,7 +156,7 @@ class R extends o.A {
             return (
                 null != i &&
                     (i.errorCodeMessage = S.intl.format(S.t["1Bi9Cf"], {
-                        supportURL: m.A.getSubmitRequestURL(),
+                        supportURL: T.A.getSubmitRequestURL(),
                         errorCode: n.code,
                     })),
                 i

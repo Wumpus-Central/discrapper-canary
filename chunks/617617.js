@@ -15,8 +15,8 @@ var i = n(284009),
 let f = { ProtoClass: d.nT, proto: d.nT.create(), lazyLoaded: !1, editInfo: (0, h.O9)() },
     I = { ProtoClass: o.aw, proto: o.aw.create(), lazyLoaded: !0, editInfo: (0, h.O9)() },
     p = { [h.oD.PRELOADED_USER_SETTINGS]: f, [h.oD.FRECENCY_AND_FAVORITES_SETTINGS]: I },
-    T = !1;
-function m() {
+    m = !1;
+function T() {
     g();
 }
 function g() {
@@ -39,7 +39,7 @@ function N(e) {
         resetEditInfo: a,
         local: s,
     } = e;
-    T = !s;
+    m = !s;
     let l = p[n];
     (a && S(l),
         i
@@ -96,7 +96,7 @@ class O extends l.Ay.PersistedStore {
         return I.proto;
     }
     get wasMostRecentUpdateFromServer() {
-        return T;
+        return m;
     }
     getFullState() {
         return p;
@@ -172,8 +172,8 @@ let R = new O(u.h, {
             }),
             g());
     },
-    CONNECTION_CLOSED: m,
-    CONNECTION_RESUMED: m,
+    CONNECTION_CLOSED: T,
+    CONNECTION_RESUMED: T,
     OVERLAY_INITIALIZE: function (e) {
         let { userSettingsProto: t } = e;
         ((f.proto = (0, A.Gd)(t)), r()("string" != typeof f.proto, "UserSettingsProto cannot be a string"));

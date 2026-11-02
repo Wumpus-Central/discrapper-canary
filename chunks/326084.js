@@ -1,4 +1,4 @@
-(n.d(t, { P7: () => f, aK: () => E, dy: () => T, kZ: () => S, o: () => A, xM: () => m, xm: () => g }), n(321073));
+(n.d(t, { P7: () => f, aK: () => E, dy: () => m, kZ: () => S, o: () => A, xM: () => T, xm: () => g }), n(321073));
 var i,
     r,
     a = n(158390),
@@ -53,7 +53,7 @@ async function f(e, t, n) {
 }
 let I = new a.A(30 * c.A.Millis.SECOND, 5 * c.A.Millis.MINUTE, !0),
     p = 0;
-async function T(e) {
+async function m(e) {
     if (!(Date.now() < p)) {
         l.h.dispatch({ type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_START", recipientIds: e });
         try {
@@ -76,7 +76,7 @@ async function T(e) {
         }
     }
 }
-function m() {
+function T() {
     return (
         l.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
         s.Bo.get({ url: _.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(

@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(964989),
     I = n(24482),
     p = n(447404),
-    T = n(204651),
-    m = n(806931),
+    m = n(204651),
+    T = n(806931),
     g = n(202541),
     S = n(105292),
     N = n(138302);
@@ -60,13 +60,13 @@ function R(e) {
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: v,
-                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: m.GK.OTHER_BUTTON }),
+                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: T.GK.OTHER_BUTTON }),
                     }),
                 });
             },
             animation: l.Y.Animation.FADE,
             children: (e) =>
-                (0, i.jsx)(T.A, {
+                (0, i.jsx)(m.A, {
                     ...e,
                     buttonRef: f,
                     label: S.intl.string(S.t.tmiYpF),

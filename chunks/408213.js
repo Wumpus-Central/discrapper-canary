@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T });
+n.d(t, { Ay: () => m });
 var i = n(636537),
     r = n(73153),
     a = n(157559),
@@ -15,7 +15,7 @@ var i = n(636537),
     f = n(513461),
     I = n(652215),
     p = n(105292);
-let T = {
+let m = {
     fetchVerificationForm: async function e(e, t) {
         let n = t ?? E.A.getInviteKeyForGuildId(e),
             a = A.default.getCurrentUser(),

@@ -21,7 +21,7 @@ function d(e) {
         className: f,
         children: I,
         ref: p,
-        ...T
+        ...m
     } = e;
     return (0, i.jsx)(n, {
         ref: p,
@@ -41,7 +41,7 @@ function d(e) {
                       return ((e[`padding${l()(n)}`] = c(i)), e);
                   }, {})),
         },
-        ...T,
+        ...m,
         children: I,
     });
 }

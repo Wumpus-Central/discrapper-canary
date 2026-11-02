@@ -40,7 +40,7 @@ class p {
         return this._cachedMessageIds;
     }
 }
-class T {
+class m {
     _channelCaches = new Map();
     has(e, t) {
         return this._channelCaches.get(e)?.has(t) ?? !1;
@@ -73,10 +73,10 @@ class T {
         this._channelCaches.clear();
     }
 }
-let m = new T();
+let T = new m();
 function g(e) {
     let t = !1;
-    if ((m.updateExistingMessageIfCached(e) && (t = !0), A.sl8.has(e.type))) {
+    if ((T.updateExistingMessageIfCached(e) && (t = !0), A.sl8.has(e.type))) {
         let n = e.message_reference;
         if (null == n) return t;
         let i = n.message_id;
@@ -84,12 +84,12 @@ function g(e) {
         if ("referenced_message" in e) {
             let t = e.referenced_message;
             null != t
-                ? (m.set(t.channel_id, t.id, { state: 0, message: (0, u.rh)(t) }),
+                ? (T.set(t.channel_id, t.id, { state: 0, message: (0, u.rh)(t) }),
                   e.type === A.lAJ.THREAD_STARTER_MESSAGE && g(t))
-                : m.set(e.channel_id, i, { state: 2 });
+                : T.set(e.channel_id, i, { state: 2 });
         } else {
             let e = E.A.getMessage(n.channel_id, i) ?? o.A.getMessage(n.channel_id, i) ?? d.A.getMessage(i);
-            null != e ? m.set(n.channel_id, i, { state: 0, message: e }) : m.set(n.channel_id, i, f);
+            null != e ? T.set(n.channel_id, i, { state: 0, message: e }) : T.set(n.channel_id, i, f);
         }
         t = !0;
     }
@@ -112,14 +112,14 @@ function C(e) {
     });
 }
 function O(e) {
-    return m.deleteChannelCache(e.channel.id);
+    return T.deleteChannelCache(e.channel.id);
 }
 function R(e, t) {
-    if (!m.has(e, t)) return !1;
-    m.set(e, t, { state: 2 });
+    if (!T.has(e, t)) return !1;
+    T.set(e, t, { state: 2 });
 }
 function L() {
-    m.clear();
+    T.clear();
 }
 function y(e) {
     let { firstMessages: t } = e;
@@ -132,14 +132,14 @@ class D extends s.Ay.Store {
     }
     getMessageByReference(e) {
         let t;
-        return (null != e && (t = m.get(e.channel_id, e.message_id)), t ?? f);
+        return (null != e && (t = T.get(e.channel_id, e.message_id)), t ?? f);
     }
     getMessage(e, t) {
-        return m.get(e, t) ?? f;
+        return T.get(e, t) ?? f;
     }
     getReplyIdsForChannel(e) {
         let t;
-        return (null != e && (t = m.getCachedMessageIdsForChannel(e)), t ?? I);
+        return (null != e && (t = T.getCachedMessageIdsForChannel(e)), t ?? I);
     }
 }
 let v = new D(l.h, {
@@ -171,10 +171,10 @@ let v = new D(l.h, {
     LOAD_ARCHIVED_THREADS_SUCCESS: y,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e;
-        if (!m.has(n, t)) return !1;
-        let i = m.get(n, t);
+        if (!T.has(n, t)) return !1;
+        let i = T.get(n, t);
         if (null == i || 0 !== i.state) return !1;
-        m.set(n, t, { state: 0, message: (0, c.T)(i.message) });
+        T.set(n, t, { state: 0, message: (0, c.T)(i.message) });
     },
     LOAD_FORUM_POSTS: function (e) {
         let { threads: t } = e;
@@ -191,10 +191,10 @@ let v = new D(l.h, {
         let { message: t } = e,
             n = t.id,
             i = t.channel_id;
-        if (!m.has(i, n)) return !1;
-        let r = m.get(i, n);
+        if (!T.has(i, n)) return !1;
+        let r = T.get(i, n);
         if (null == r || 0 !== r.state) return !1;
-        m.set(i, n, { state: 0, message: (0, u.IU)(r.message, t) });
+        T.set(i, n, { state: 0, message: (0, u.IU)(r.message, t) });
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e;
@@ -206,12 +206,12 @@ let v = new D(l.h, {
     },
     CREATE_PENDING_REPLY: function (e) {
         let { message: t } = e;
-        m.set(t.channel_id, t.id, { state: 0, message: t });
+        T.set(t.channel_id, t.id, { state: 0, message: t });
     },
     CHANNEL_DELETE: O,
     THREAD_DELETE: O,
     GUILD_DELETE: function () {
-        if (0 === m.retainWhere((e) => null != _.A.getChannel(e))) return !1;
+        if (0 === T.retainWhere((e) => null != _.A.getChannel(e))) return !1;
     },
     CONNECTION_OPEN: L,
     LOGOUT: L,

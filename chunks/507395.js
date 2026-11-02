@@ -16,8 +16,8 @@ var i = n(132500),
     I = n(710969);
 n(23766);
 var p = n(823784),
-    T = n(851936),
-    m = n(174459),
+    m = n(851936),
+    T = n(174459),
     g = n(723702),
     S = n(345353),
     N = n(144779),
@@ -74,7 +74,7 @@ async function R(e) {
     if (null == e.adCreativeType) {
         let { surfaceId: t, questContentCTA: n, clickId: r, questContentPosition: a, questContentRowIndex: s } = e,
             l = (0, o.fF)(t, a, s);
-        m.default.track(C.HAw.QUEST_CONTENT_CLICKED, {
+        T.default.track(C.HAw.QUEST_CONTENT_CLICKED, {
             cta_name: n,
             click_id: r ?? (0, i.A)(),
             is_targeted: e.isTargeted ?? !1,
@@ -98,8 +98,8 @@ function y(e) {
             sourceQuestContent: n,
             impressionId: i,
             triggeredByStatusChange: s,
-            minViewTimeSeconds: T,
-            minViewportPercentage: m,
+            minViewTimeSeconds: m,
+            minViewportPercentage: T,
             isQuestEnrollmentBlocked: S,
             shouldExtendSession: N,
             adUser: O,
@@ -108,8 +108,8 @@ function y(e) {
             trackGuildAndChannelMetadata: y,
         } = e,
         D = {
-            min_view_time_seconds: T,
-            min_viewport_percentage: m,
+            min_view_time_seconds: m,
+            min_viewport_percentage: T,
             triggered_by_status_change: s,
             apple_advertising_id: null != O && (0, g.isIOS)() ? O.advertisingId : null,
             android_advertising_id: null != O && (0, g.isAndroid)() ? O.advertisingId : null,
@@ -206,7 +206,7 @@ function y(e) {
 async function D(e) {
     if (null == e.adCreativeType) {
         let t = await (0, S.N)((0, o.jO)(e.surfaceId));
-        m.default.track(C.HAw.QUEST_CONTENT_VIEWED, {
+        T.default.track(C.HAw.QUEST_CONTENT_VIEWED, {
             ...(0, o.fF)(e.surfaceId),
             apple_advertising_id: null != t && (0, g.isIOS)() ? t.advertisingId : null,
             android_advertising_id: null != t && (0, g.isAndroid)() ? t.advertisingId : null,
@@ -217,7 +217,7 @@ async function D(e) {
     y(e);
 }
 function v(e) {
-    (0, T.L)().error("captureAdUserAction failed to report an ad user action", e);
+    (0, m.L)().error("captureAdUserAction failed to report an ad user action", e);
 }
 function b(e) {
     try {

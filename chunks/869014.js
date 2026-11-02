@@ -15,12 +15,12 @@ let A = new r.A("OverlayWindowRAFManager"),
     f = window.cancelAnimationFrame.bind(window),
     I = new Set([c.Ue.OutOfProcess, c.Ue.OutOfProcessLimitedInteraction]),
     p = new Set([c.AR.OVERLAY_CRASHED, c.AR.OVERLAY_CRASHED_DISABLED]);
-function T(e) {
+function m(e) {
     for (let t of Object.values(u.default.getTrackedGames()))
         if (!(!I.has(t.overlayMethod) || p.has(t.state)) && (!e || t.state === c.AR.OVERLAY_RENDERING)) return !0;
     return !1;
 }
-let m = null,
+let T = null,
     g = !1,
     S = !1,
     N = !1,
@@ -68,19 +68,19 @@ function P() {
 function M(e) {
     try {
         let t = P();
-        if (null == t) return ((m = "OverlayNotAvailable"), b(e));
-        if (N && !l.A.isVisible()) return ((m = "MainWindowHidden"), v(e, t));
-        if (!S) return ((m = "MainWindowFocused"), b(e));
-        if (!T(!0)) return ((m = "NoOverlayRendering"), b(e));
+        if (null == t) return ((T = "OverlayNotAvailable"), b(e));
+        if (N && !l.A.isVisible()) return ((T = "MainWindowHidden"), v(e, t));
+        if (!S) return ((T = "MainWindowFocused"), b(e));
+        if (!m(!0)) return ((T = "NoOverlayRendering"), b(e));
         let n = null !== _.A.getFocusedRunningGame(),
             i = l.A.isFocused((0, o.Q2)(t));
         if ((l.A.isFocused() && A.error("Main window is reported as focused when it should not be!"), n || i))
-            return ((m = n ? "OverlayGameFocused" : "OverlayWindowFocused"), v(e, t));
+            return ((T = n ? "OverlayGameFocused" : "OverlayWindowFocused"), v(e, t));
     } catch (e) {
         (A.error("RAF redirect failed, falling back to original. Cause:", e),
             (0, d.pj)(e, u.default.getOverlayMethod(_.A.getTargetPID())));
     }
-    return ((m = "None"), b(e));
+    return ((T = "None"), b(e));
 }
 function U() {
     ((N = (0, a.ZT)("overlay_window_raf_manager")),
@@ -116,12 +116,12 @@ class F extends i.A {
         ((window.requestAnimationFrame = h), G());
     }
     getLastRAFCallbackReason() {
-        return m;
+        return T;
     }
     handleUpdateOverlayMethod() {
         if (!__OVERLAY__) {
-            if (!g && !T(!1)) {
-                ((window.requestAnimationFrame = h), (m = "NoOverlayRendering"), G());
+            if (!g && !m(!1)) {
+                ((window.requestAnimationFrame = h), (T = "NoOverlayRendering"), G());
                 return;
             }
             (A.info("Patching window RAF to use overlay window"), U(), x());

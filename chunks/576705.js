@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(799422),
     I = n(149790),
     p = n(488926),
-    T = n(734057),
-    m = n(696451),
+    m = n(734057),
+    T = n(696451),
     g = n(71393),
     S = n(287809),
     N = n(652215),
@@ -38,10 +38,10 @@ function v(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = S.default.getCurrentUser();
     if (null == n) return p.x3;
-    let i = T.A.getChannel(e);
+    let i = m.A.getChannel(e);
     if (null == i) return p.x3;
     let a = i.getGuildId(),
-        s = null != a && (d.A.isLurking(a) || m.Ay.getMember(a, n.id)?.isPending);
+        s = null != a && (d.A.isLurking(a) || T.Ay.getMember(a, n.id)?.isPending);
     return !i.isScheduledForDeletion() && !s && r().isEmpty(i.permissionOverwrites) && null != a
         ? D(a)
         : p.cc({ user: n, context: i, checkElevated: t });
@@ -82,7 +82,7 @@ function k(e) {
 function F(e) {
     let { guildId: t } = e;
     delete O[t];
-    let n = T.A.getMutableBasicGuildChannelsForGuild(t);
+    let n = m.A.getMutableBasicGuildChannelsForGuild(t);
     (r().forEach(n, (e) => {
         delete R[e.id];
     }),
@@ -91,7 +91,7 @@ function F(e) {
 }
 function B(e) {
     let { instance: t } = e,
-        n = T.A.getChannel(t.channel_id);
+        n = m.A.getChannel(t.channel_id);
     if (null == n) return !1;
     let i = S.default.getCurrentUser(),
         r = p.cc({ user: i, context: n });
@@ -101,7 +101,7 @@ function B(e) {
 function V(e) {
     let { guildId: t } = e;
     delete O[t];
-    let n = T.A.getMutableBasicGuildChannelsForGuild(t);
+    let n = m.A.getMutableBasicGuildChannelsForGuild(t);
     (r().forEach(n, (e) => {
         delete R[e.id];
     }),
@@ -112,8 +112,8 @@ function H(e, t, n, i) {
     let r = p.x3;
     if (e instanceof E.YB) {
         if (E.Le.has(e.type)) {
-            let r = T.A.getChannel(e.parent_id);
-            return null == r ? p.x3 : p.TJ(e, H(r, t, n, i), u.A.hasJoined(e.id), m.Ay.isCurrentUserGuest(e.guild_id));
+            let r = m.A.getChannel(e.parent_id);
+            return null == r ? p.x3 : p.TJ(e, H(r, t, n, i), u.A.hasJoined(e.id), T.Ay.isCurrentUserGuest(e.guild_id));
         }
         r = b(e.id);
     } else (0, I.fh)(e) && (r = D(e.id));
@@ -131,7 +131,7 @@ function H(e, t, n, i) {
 class j extends s.Ay.Store {
     static displayName = "PermissionStore";
     initialize() {
-        this.waitFor(T.A, m.Ay, g.A, o.A, u.A, d.A, c.A, S.default);
+        this.waitFor(m.A, T.Ay, g.A, o.A, u.A, d.A, c.A, S.default);
     }
     getChannelPermissions(e) {
         return E.Le.has(e.type) ? v(e.id) : b(e.id);
@@ -168,7 +168,7 @@ class j extends s.Ay.Store {
     }
     canWithPartialContext(e, t) {
         return "channelId" in t && "string" == typeof t.channelId
-            ? this.can(e, T.A.getChannel(t.channelId))
+            ? this.can(e, m.A.getChannel(t.channelId))
             : "guildId" in t && "string" == typeof t.guildId && this.can(e, g.A.getGuild(t.guildId));
     }
     can(e, t, n, i, r) {
@@ -237,7 +237,7 @@ let Y = new j(l.h, {
         let {
                 channel: { id: t },
             } = e,
-            n = T.A.getChannel(t);
+            n = m.A.getChannel(t);
         if (null == n || n.isPrivate()) return !1;
         let i = S.default.getCurrentUser(),
             r = p.cc({ user: i, context: n });
@@ -253,7 +253,7 @@ let Y = new j(l.h, {
         let { channels: t } = e,
             n = !1;
         for (let { id: e } of t) {
-            let t = T.A.getChannel(e);
+            let t = m.A.getChannel(e);
             if (null == t || t.isPrivate()) continue;
             let i = S.default.getCurrentUser(),
                 r = p.cc({ user: i, context: t });

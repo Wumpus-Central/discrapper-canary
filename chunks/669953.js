@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(287809),
     I = n(174459),
     p = n(403362),
-    T = n(38405),
-    m = n(935208),
+    m = n(38405),
+    T = n(935208),
     g = n(591552),
     S = n(961973),
     N = n(487626),
@@ -54,7 +54,7 @@ function L(e) {
                           options_seen: t.body.onboarding_responses_seen,
                       });
               })
-              .catch((e) => T.A.captureException(e))
+              .catch((e) => m.A.captureException(e))
         : s.Bo.put({
               url: C.Rsh.GUILD_ONBOARDING_RESPONSES(e),
               body: {
@@ -75,7 +75,7 @@ function L(e) {
                       });
               })
               .catch((t) => {
-                  T.A.captureException(
+                  m.A.captureException(
                       Error(`Failed to update onboarding responses for guild ${e}: ${t.statusCode}`, { cause: t }),
                   );
               });
@@ -115,9 +115,9 @@ let y = {
             s = (0, S.vV)(i),
             l = g.A.getEnabled(e) ? g.A.getDefaultChannelIds(e) : [],
             [c, E] = (0, S._N)(e, t, l),
-            T = [...s, ...l],
-            y = T.map((e) => A.A.getChannel(e)).filter(p.Vq),
-            D = (0, N.w)(e, new Set(T), y, !0).length,
+            m = [...s, ...l],
+            y = m.map((e) => A.A.getChannel(e)).filter(p.Vq),
+            D = (0, N.w)(e, new Set(m), y, !0).length,
             v = null == n ? [] : n.options.map((e) => e.id),
             b = g.A.getConnections(e),
             P = (0, S.H_)(b),
@@ -140,11 +140,11 @@ let y = {
                 application_connections_connected: M.connected,
                 application_connections_not_connected: M.notConnected,
             }),
-            (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, m.default.fromTimestamp(Date.now())),
+            (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, T.default.fromTimestamp(Date.now())),
             L(e, !0),
             _.A.isFullServerPreview(e))
         ) {
-            ((0, u.$u)(e, T, []), (0, u.Z$)(e, { optInEnabled: l.length > 0 }), (0, u.ID)(e, Array.from(r)));
+            ((0, u.$u)(e, m, []), (0, u.Z$)(e, { optInEnabled: l.length > 0 }), (0, u.ID)(e, Array.from(r)));
             let t = f.default.getCurrentUser();
             if (null != t) {
                 let n = h.Ay.getMember(e, t.id)?.flags ?? 0;

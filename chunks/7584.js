@@ -18,8 +18,8 @@ let o = null,
         emojisByCategory: f,
         nameToEmoji: I,
         surrogateToEmoji: p,
-        numDiversitySprites: T,
-        numNonDiversitySprites: m,
+        numDiversitySprites: m,
+        numNonDiversitySprites: T,
     } = n(13474);
 function g(e) {
     let t = I[e];
@@ -227,8 +227,8 @@ let w = {
     forEach: (e) => {
         for (let t of h) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
     },
-    numDiversitySprites: T,
-    numNonDiversitySprites: m,
+    numDiversitySprites: m,
+    numNonDiversitySprites: T,
     EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     EMOJI_NAME_AND_DIVERSITY_RE: u,
     EMOJI_SHORTCUT_RE:

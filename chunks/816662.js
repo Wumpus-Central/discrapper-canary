@@ -1,4 +1,4 @@
-n.d(t, { AC: () => m, Hb: () => C, Ol: () => D, e4: () => O, hp: () => N, jA: () => R, xl: () => L, zk: () => g });
+n.d(t, { AC: () => T, Hb: () => C, Ol: () => D, e4: () => O, hp: () => N, jA: () => R, xl: () => L, zk: () => g });
 var i = n(435558),
     r = n(665260),
     a = n(873298),
@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(477427),
     I = n(652215),
     p = n(355097),
-    T = n(105292);
-function m(e, t, n, i) {
+    m = n(105292);
+function T(e, t, n, i) {
     if (null == e) return;
     if (c.A.isFullServerPreview(e)) return void (0, d.$u)(e, n ? [t] : [], n ? [] : [t]);
     let a = A.Ay.getChannelIdFlags(e, t);
@@ -110,7 +110,7 @@ function R(e, t, n, i) {
         d =
             null != s && "" !== s
                 ? {
-                      message: T.intl.formatToPlainString(n ? T.t.CcNVYB : T.t.zSYTEX, { channelName: s }),
+                      message: m.intl.formatToPlainString(n ? m.t.CcNVYB : m.t.zSYTEX, { channelName: s }),
                       assertiveness: "polite",
                   }
                 : void 0;

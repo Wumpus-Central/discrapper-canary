@@ -32,8 +32,8 @@ let A = !1,
     f = null,
     I = E(),
     p = null,
-    T = new Map(),
-    m = null,
+    m = new Map(),
+    T = null,
     g = [],
     S = !1;
 function N() {
@@ -90,10 +90,10 @@ class O extends i.Ay.PersistedStore {
         return _;
     }
     getMarketingComponentByType(e) {
-        if (m?.componentType === e) return m;
+        if (T?.componentType === e) return T;
         let t = l.default.getCurrentUser(),
             n = new Date();
-        return (0, c.A)(T.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
+        return (0, c.A)(m.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
     }
     hasPromotion(e) {
         return Object.values(I).some((t) => Object.values(t).some((t) => t.promotionKey === e));
@@ -140,14 +140,14 @@ let R = new O(r.h, {
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: function (e) {
         let { promotions: t, consumedInboundPromotionId: n } = e;
         ((I = E()),
-            (T = new Map()),
-            (m = null),
+            (m = new Map()),
+            (T = null),
             t.forEach((e) => {
                 let t = s.A.createFromServer(e);
                 ((I[e.promotion_type][e.id] = t),
                     e.marketing_components?.forEach((e) => {
-                        let n = T.get(e.component_type) ?? [];
-                        (n.push(o.A.createFromServer(e, t)), T.set(e.component_type, n));
+                        let n = m.get(e.component_type) ?? [];
+                        (n.push(o.A.createFromServer(e, t)), m.set(e.component_type, n));
                     }));
             }),
             (h = Date.now()),
@@ -160,10 +160,10 @@ let R = new O(r.h, {
         ((A = !0), (f = t));
     },
     ACTIVE_PROMOTIONS_FETCH_FAIL: function () {
-        ((I = E()), (T = new Map()), (m = null), (A = !1));
+        ((I = E()), (m = new Map()), (T = null), (A = !1));
     },
     ACTIVE_PROMOTIONS_CLEAR: function () {
-        ((I = E()), (T = new Map()), (m = null), (A = !1), (h = Date.now()));
+        ((I = E()), (m = new Map()), (T = null), (A = !1), (h = Date.now()));
     },
     OUTBOUND_PROMOTION_NOTICE_DISMISS: function () {
         if (0 === Object.values(I[d.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
@@ -194,11 +194,11 @@ let R = new O(r.h, {
         g = [...g, t];
     },
     LOGOUT: function () {
-        ((_ = u()), (A = !1), (h = null), (I = E()), T.clear(), (m = null), (g = []), (S = !1));
+        ((_ = u()), (A = !1), (h = null), (I = E()), m.clear(), (T = null), (g = []), (S = !1));
     },
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,
             n = null != t.promotion ? s.A.createFromServer(t.promotion) : null;
-        ((m = o.A.createFromServer(t, n)), null != n && (I[n.promotionType][n.id] = n));
+        ((T = o.A.createFromServer(t, n)), null != n && (I[n.promotionType][n.id] = n));
     },
 });

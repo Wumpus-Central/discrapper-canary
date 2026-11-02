@@ -1,4 +1,4 @@
-n.d(t, { Bh: () => p, MW: () => T, ud: () => S, wz: () => N });
+n.d(t, { Bh: () => p, MW: () => m, ud: () => S, wz: () => N });
 var i = n(582128),
     r = n(136722),
     a = n(17928),
@@ -24,7 +24,7 @@ function p(e, t) {
         I = l.A.isViewingRoles(i),
         {
             computedPermissions: p,
-            hasBaseAccessPermissions: T,
+            hasBaseAccessPermissions: m,
             hasSendMessagesPermission: S,
         } = g(n, e instanceof d.YB && e.isThread());
     return {
@@ -34,20 +34,20 @@ function p(e, t) {
         isImpersonating: I,
         commandTypes: t,
         computedPermissions: p,
-        hasBaseAccessPermissions: T,
+        hasBaseAccessPermissions: m,
         hasSendMessagesPermission: S,
-        allowNsfw: m(n, s, r, (0, c.wh)(A.A.getGuild(i))),
+        allowNsfw: T(n, s, r, (0, c.wh)(A.A.getGuild(i))),
     };
 }
-function T(e, t) {
+function m(e, t) {
     let n = i.useMemo(() => (e instanceof d.YB && e.isThread() ? (_.A.getChannel(e.parent_id) ?? e) : e), [e]),
         r = null != n ? N(n) : void 0,
         s = (0, o.hT)(),
         h = (0, a.bG)([u.default], () => u.default.getId()),
         I = (0, a.bG)([f.default], () => f.default.getCurrentUser()?.nsfwAllowed ?? !1),
         p = (0, a.yK)([E.Ay], () => (null != r ? (E.Ay.getMember(r, h)?.roles ?? []) : [])),
-        T = (0, a.bG)([l.A], () => l.A.isViewingRoles(r)),
-        S = m(
+        m = (0, a.bG)([l.A], () => l.A.isViewingRoles(r)),
+        S = T(
             n,
             I,
             s,
@@ -64,15 +64,15 @@ function T(e, t) {
             userId: h,
             roleIds: p,
             commandTypes: t,
-            isImpersonating: T,
+            isImpersonating: m,
             computedPermissions: i,
             hasBaseAccessPermissions: r,
             hasSendMessagesPermission: a,
             allowNsfw: S,
         };
-    }, [t, n, T, p, h, S, e]);
+    }, [t, n, m, p, h, S, e]);
 }
-function m(e, t, n, i) {
+function T(e, t, n, i) {
     return !!t && (!(e instanceof d.YB) || (null != e.guild_id ? e.isNSFW() || i : n));
 }
 function g(e, t) {

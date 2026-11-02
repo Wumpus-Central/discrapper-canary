@@ -1,13 +1,13 @@
-n.d(t, { V5: () => i, VF: () => a, yR: () => l });
+n.d(t, { V5: () => o, VF: () => a, yR: () => l });
 var r = n(73153),
     s = n(975189),
-    o = n(664619);
-let i = {
+    i = n(664619);
+let o = {
     context_switch(e, t) {
         let { projectId: n } = t;
         (r.h.dispatch({ type: "CONJURE_CHAT_CONTEXT_SWITCH", projectId: n, contextSwitch: e }),
             "reverted" === e.status &&
-                (0, o.tZ)(n, { isPreview: !0 }).catch((e) => {
+                (0, i.tZ)(n, { isPreview: !0 }).catch((e) => {
                     console.error("[conjure] post-revert refresh failed", n, e);
                 }));
     },

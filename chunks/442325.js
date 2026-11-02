@@ -36,7 +36,7 @@ function I(e) {
 function p(e) {
     return !A() && (0 === e.length || (1 === e.length && !e[0].pinned));
 }
-function T(e) {
+function m(e) {
     let t = c.find((e) => e.id === u);
     if (null == t) return !1;
     let n = t.index + e,
@@ -44,7 +44,7 @@ function T(e) {
     if (null == i) return !1;
     c = c.map((e) => (e.id === u ? f(e, i, e.entries, n) : e));
 }
-function m(e) {
+function T(e) {
     let { channel: t } = e;
     if (!A()) return !1;
     function n(e) {
@@ -162,10 +162,10 @@ let S = new g(a.h, {
         c = c.map((e) => (e.id === t ? { ...e, pinned: n } : e));
     },
     CHANNEL_TABS_BACK: function () {
-        return T(-1);
+        return m(-1);
     },
     CHANNEL_TABS_FORWARD: function () {
-        return T(1);
+        return m(1);
     },
     CHANNEL_TABS_SET_ENABLED: function (e) {
         let { enabled: t } = e;
@@ -229,8 +229,8 @@ let S = new g(a.h, {
                   })))
         );
     },
-    CHANNEL_DELETE: m,
-    THREAD_DELETE: m,
+    CHANNEL_DELETE: T,
+    THREAD_DELETE: T,
     LOGOUT: function () {
         if (0 === c.length) return !1;
         ((c = []), (u = null));

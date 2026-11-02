@@ -16,14 +16,14 @@ var r = n(503698),
     f = n(428689),
     I = n(983851),
     p = n(323384),
-    T = n(513461),
-    m = n(791606),
+    m = n(513461),
+    T = n(791606),
     g = n(260727);
 function S(e, t, n) {
     return (0, i.jsx)(u.hV, { count: e, color: t, "aria-hidden": n });
 }
 function N() {
-    return (0, i.jsx)(u.fk, { icon: (0, _.k)(m.A), disableColor: !0, className: g.yk });
+    return (0, i.jsx)(u.fk, { icon: (0, _.k)(T.A), disableColor: !0, className: g.yk });
 }
 function C(e) {
     let t,
@@ -51,11 +51,11 @@ function O(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
-                case T.B5.SUBMITTED:
+                case m.B5.SUBMITTED:
                     return [void 0, l.ClockIcon];
-                case T.B5.REJECTED:
+                case m.B5.REJECTED:
                     return [s.A.unsafe_rawColors.RED_400.css, o.P];
-                case T.B5.APPROVED:
+                case m.B5.APPROVED:
                     return [s.A.unsafe_rawColors.GREEN_360.css, d.CheckmarkLargeIcon];
                 default:
                     return [void 0, c.PencilIcon];

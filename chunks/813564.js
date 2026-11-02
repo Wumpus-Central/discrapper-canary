@@ -28,18 +28,18 @@ var r = n(702841),
     f = n(236285),
     I = n(807348),
     p = n(952818),
-    T = n(734057),
-    m = n(763827),
+    m = n(734057),
+    T = n(763827),
     g = n(309010),
     S = n(174459);
 n(980504);
 var N = n(652215),
     C = n(202541);
 function O(e, t, n, i, r) {
-    let a = T.A.getChannel(g.Ay.getVoiceChannelId()),
+    let a = m.A.getChannel(g.Ay.getVoiceChannelId()),
         s = a?.getGuildId(),
-        l = m.A.getMediaSessionId(),
-        o = m.A.getRTCConnectionId(),
+        l = T.A.getMediaSessionId(),
+        o = T.A.getRTCConnectionId(),
         d = p.Ay.getCurrentGameForAnalytics()?.name,
         c = s !== n.guildId && "0" !== n.guildId,
         u = "0" === n.guildId ? "default" : c ? "custom-external" : "custom",

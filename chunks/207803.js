@@ -1,13 +1,13 @@
 n.d(t, {
     EW: () => y,
     Go: () => O,
-    Gr: () => m,
+    Gr: () => T,
     RE: () => g,
     VQ: () => I,
     XQ: () => S,
     a: () => L,
     e$: () => C,
-    gi: () => T,
+    gi: () => m,
     sd: () => N,
     w5: () => D,
     xe: () => R,
@@ -34,7 +34,7 @@ function I() {
 function p(e) {
     u.default.track(A.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: e, feature_tier: h.tz.PREMIUM_STANDARD });
 }
-async function T(e, t, n) {
+async function m(e, t, n) {
     let r = c.default.getCurrentUser()?.id;
     if (null == r) return;
     let u = (0, E.h)();
@@ -59,7 +59,7 @@ async function T(e, t, n) {
         return (a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: n, apiError: e }), i);
     }
 }
-function m(e, t) {
+function T(e, t) {
     let n = c.default.getCurrentUser()?.id;
     null != n && a.h.dispatch({ type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: e, ttlInSeconds: t, userId: n });
 }

@@ -3,13 +3,13 @@ let i, r, a;
     n.d(t, {
         getBoolean: () => E,
         getUserId: () => I,
-        getOptionalRoleId: () => m,
+        getOptionalRoleId: () => T,
         getOptionalString: () => S,
         getOptionalUserId: () => p,
         filterEmpty: () => _,
         getOptionalBoolean: () => A,
         getOptionalChannelId: () => f,
-        getRoleId: () => T,
+        getRoleId: () => m,
         normalizeNumericString: () => N,
         getInitialValuesFromInteractionOptions: () => C,
         getString: () => g,
@@ -92,7 +92,7 @@ function I(e, t) {
 function p(e, t) {
     return null == e[t] ? null : I(e, t);
 }
-function T(e, t) {
+function m(e, t) {
     let n = _(e[t]);
     return (
         l()(1 === n.length, "Contains multiple values"),
@@ -100,8 +100,8 @@ function T(e, t) {
         n[0].roleId
     );
 }
-function m(e, t) {
-    return null == e[t] ? null : T(e, t);
+function T(e, t) {
+    return null == e[t] ? null : m(e, t);
 }
 function g(e, t) {
     let n = e[t],

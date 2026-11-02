@@ -5,12 +5,12 @@ n.d(t, {
     Kh: () => f,
     OU: () => p,
     Vf: () => M,
-    X7: () => T,
+    X7: () => m,
     aM: () => I,
     hW: () => _,
     l8: () => w,
     mC: () => h,
-    nv: () => m,
+    nv: () => T,
     zf: () => A,
 });
 var i,
@@ -398,7 +398,7 @@ let E = Object.freeze({
         [c._3.SIZE_96]: "svg-mask-avatar-decoration-call-icon-96",
         [c._3.SIZE_120]: "svg-mask-avatar-decoration-call-icon-120",
     }),
-    T = Object.freeze({
+    m = Object.freeze({
         [c._3.SIZE_16]: "svg-mask-avatar-decoration-call-status-16",
         [c._3.SIZE_20]: "svg-mask-avatar-decoration-call-status-20",
         [c._3.SIZE_24]: "svg-mask-avatar-decoration-call-status-24",
@@ -412,7 +412,7 @@ let E = Object.freeze({
         [c._3.SIZE_96]: "svg-mask-avatar-decoration-call-status-96",
         [c._3.SIZE_120]: "svg-mask-avatar-decoration-call-status-120",
     }),
-    m = Object.freeze({
+    T = Object.freeze({
         [c._3.SIZE_16]: "svg-mask-avatar-decoration-call-icon-status-16",
         [c._3.SIZE_20]: "svg-mask-avatar-decoration-call-icon-status-20",
         [c._3.SIZE_24]: "svg-mask-avatar-decoration-call-icon-status-24",
@@ -1313,7 +1313,7 @@ let X = a.memo(function () {
                 let [t, n] = e;
                 return i.has(n) && C(n, t);
             }),
-            Object.entries(T).map((e) => {
+            Object.entries(m).map((e) => {
                 let [t, n] = e;
                 return i.has(n) && C(n, t, { withBottomRightStatus: !0 });
             }),
@@ -1321,7 +1321,7 @@ let X = a.memo(function () {
                 let [t, n] = e;
                 return i.has(n) && C(n, t, { withTopRightStatus: !0 });
             }),
-            Object.entries(m).map((e) => {
+            Object.entries(T).map((e) => {
                 let [t, n] = e;
                 return i.has(n) && C(n, t, { withBottomRightStatus: !0, withTopRightStatus: !0 });
             }),

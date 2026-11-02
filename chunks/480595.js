@@ -15,12 +15,12 @@ var i = n(812729),
     f = n(952818),
     I = n(765741),
     p = n(863160),
-    T = n(671389);
-let m = [n(732755).A, T.Ay],
+    m = n(671389);
+let T = [n(732755).A, m.Ay],
     g = [];
 function S() {
     let e = [];
-    for (let t of m) {
+    for (let t of T) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
@@ -29,7 +29,7 @@ function S() {
 class N extends c.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(m, S);
+        this.syncWith(T, S);
     }
     getActivities() {
         return g;
@@ -108,8 +108,8 @@ function B() {
                             })
                     );
                 })(d, [...e, ..._])),
-        T = null != d && d.isLauncher;
-    if (null != d && null != d.name && !(I || (T && !l))) {
+        m = null != d && d.isLauncher;
+    if (null != d && null != d.name && !(I || (m && !l))) {
         let t = P.A.findGame(d);
         e.push({
             type: o.$.PLAYING,
@@ -119,8 +119,8 @@ function B() {
             ...(0, R.CO)(d),
         });
     }
-    let m = L.A.getActivity();
-    return (null != m && e.push({ type: o.$.LISTENING, ...m }), !r()(x, e) && ((x = e), !0));
+    let T = L.A.getActivity();
+    return (null != T && e.push({ type: o.$.LISTENING, ...T }), !r()(x, e) && ((x = e), !0));
 }
 class V extends c.Ay.Store {
     static displayName = "LocalActivityStore";

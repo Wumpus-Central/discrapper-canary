@@ -15,8 +15,8 @@ var i = n(607399),
     f = n(940382),
     I = n(625494),
     p = n(935208),
-    T = n(71393),
-    m = n(576705),
+    m = n(71393),
+    T = n(576705),
     g = n(309010),
     S = n(967198),
     N = n(287809),
@@ -72,7 +72,7 @@ function W() {
         let n = M[t];
         if (n.type === f.PE.VIEW_CHANNEL) {
             let i = o.A.getChannel(n.channelId);
-            (null != i && m.A.can(O.xB.VIEW_CHANNEL, i)) || (delete M[t], (e = !0));
+            (null != i && T.A.can(O.xB.VIEW_CHANNEL, i)) || (delete M[t], (e = !0));
         }
     }
     return e;
@@ -104,8 +104,8 @@ class K extends r.Ay.PersistedStore {
             (b = e.isAppBarToggleOpen ?? !1),
             (M = e.sidebars ?? {}),
             (U = e.guildSidebars ?? {})),
-            this.syncWith([m.A], W),
-            this.waitFor(c.A, o.A, u.A, _.Bt, T.A, m.A, h.A, g.Ay, S.A, N.default));
+            this.syncWith([T.A], W),
+            this.waitFor(c.A, o.A, u.A, _.Bt, m.A, T.A, h.A, g.Ay, S.A, N.default));
     }
     getState() {
         return {

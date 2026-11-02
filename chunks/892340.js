@@ -2,9 +2,9 @@ n.d(t, {
     C$: () => g,
     KB: () => f,
     Fo: () => p,
-    xJ: () => T,
+    xJ: () => m,
     Mn: () => S,
-    uW: () => m,
+    uW: () => T,
     G9: () => C,
     Yj: () => N,
     iU: () => I,
@@ -40,19 +40,19 @@ function I(e) {
 function p(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumChannel();
 }
-function T(e) {
+function m(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumPost();
 }
-function m(e) {
-    return null != e && (p(e) || T(e));
+function T(e) {
+    return null != e && (p(e) || m(e));
 }
 function g(e) {
-    if (null == e || !(0, o.L)() || !m(d.A.getChannel(e))) return !0;
+    if (null == e || !(0, o.L)() || !T(d.A.getChannel(e))) return !0;
     let { loaded: t, firstMessage: n } = l.A.getMessage(e);
     return !t || null == n || !(0, a.y5)(n, r.LO.EXPLICIT);
 }
 function S(e, t) {
-    return !!e.isFirstMessageInForumPost(t) && !!e.isSystemDM() && T(t);
+    return !!e.isFirstMessageInForumPost(t) && !!e.isSystemDM() && m(t);
 }
 function N(e) {
     return e.sort((e, t) => (e.id == s ? -1 : +(t.id == s)));

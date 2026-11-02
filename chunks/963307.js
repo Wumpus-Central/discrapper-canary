@@ -15,8 +15,8 @@ var i,
     f = n(498642),
     I = n(696451),
     p = n(317525),
-    T = n(71393),
-    m = n(290863),
+    m = n(71393),
+    T = n(290863),
     g = n(461213),
     S = n(287809),
     N = n(652215),
@@ -54,17 +54,17 @@ function y(e, t, n, i) {
                 index: i,
             };
         default:
-            let r = T.A.getGuild(e),
+            let r = m.A.getGuild(e),
                 a = null != r ? p.A.getRole(r.id, t) : null;
             return { type: "GROUP", key: t, id: t, title: null != a ? a.name : "", count: n, index: i };
     }
 }
 function D(e, t, n) {
     let i = n === A.default.getId(),
-        r = m.A.isMobileOnline(n),
-        a = m.A.isVROnline(n),
-        s = i ? g.A.getStatus() : m.A.getStatus(n, e),
-        l = i ? g.A.getActivities() : m.A.getActivities(n, e),
+        r = T.A.isMobileOnline(n),
+        a = T.A.isVROnline(n),
+        s = i ? g.A.getStatus() : T.A.getStatus(n, e),
+        l = i ? g.A.getActivities() : T.A.getActivities(n, e),
         o = E.A.getStreamForUser(n, e),
         d = S.default.getUser(n);
     return null == d
@@ -120,7 +120,7 @@ class b {
         ((this.guildId = e), (this.listId = t), this.updateOwnerId());
     }
     updateOwnerId() {
-        let e = T.A.getGuild(this.guildId);
+        let e = m.A.getGuild(this.guildId);
         if (null == e) return !1;
         let t = _.wT(e);
         return this.ownerId !== t && ((this.ownerId = t), !0);
@@ -234,7 +234,7 @@ function G() {
 class x extends d.Ay.Store {
     static displayName = "ChannelMemberStore";
     initialize() {
-        (this.waitFor(S.default, T.A, p.A, h.A, I.Ay, m.A, g.A, A.default, f.A, E.A, u.A),
+        (this.waitFor(S.default, m.A, p.A, h.A, I.Ay, T.A, g.A, A.default, f.A, E.A, u.A),
             this.syncWith([g.A], G),
             this.syncWith([E.A], w));
     }

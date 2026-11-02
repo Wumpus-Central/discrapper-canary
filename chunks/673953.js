@@ -1,18 +1,18 @@
-t.d(u, { C6: () => d, JH: () => l, LV: () => o, cH: () => c });
-var e = t(231723),
-    r = t(484697),
-    i = t(652215);
-function l(n) {
-    return n.ownerDocument.defaultView ?? window;
+n.d(t, { C6: () => d, JH: () => s, LV: () => o, cH: () => l });
+var i = n(231723),
+    r = n(484697),
+    a = n(652215);
+function s(e) {
+    return e.ownerDocument.defaultView ?? window;
 }
-function c(n) {
-    return l(n) === window ? i.BRT.APP : i.BRT.POPOUT;
+function l(e) {
+    return s(e) === window ? a.BRT.APP : a.BRT.POPOUT;
 }
-function o(n) {
-    let u = (0, r.fl)(n);
-    return null == u ? null : c(u);
+function o(e) {
+    let t = (0, r.fl)(e);
+    return null == t ? null : l(t);
 }
-function d(n) {
-    let u = o(n);
-    return null == u ? null : u === i.BRT.POPOUT ? e.KX : e.SY;
+function d(e) {
+    let t = o(e);
+    return null == t ? null : t === a.BRT.POPOUT ? i.KX : i.SY;
 }

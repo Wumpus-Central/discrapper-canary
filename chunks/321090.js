@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(17928),
     r = n(73153),
     a = n(77729),
@@ -23,7 +23,7 @@ async function I() {
         if (E === e || !o.O) return;
         let t = await a.A?.processUtils?.getGpuProcessId?.();
         if (null == t) return;
-        (l.Ay.SetGPUBoostEnabledByPid(t, e) && (E = e), T.emitChange());
+        (l.Ay.SetGPUBoostEnabledByPid(t, e) && (E = e), m.emitChange());
     } catch (e) {
         (e.message?.includes("IPC method called after context was released") && f(),
             u.error("Error during GPU boost request flush:", e));
@@ -44,7 +44,7 @@ class p extends i.Ay.Store {
         return A;
     }
 }
-let T = new p(
+let m = new p(
         r.h,
         __OVERLAY__ || !o.O
             ? {}
@@ -73,4 +73,4 @@ let T = new p(
                   },
               },
     ),
-    m = T;
+    T = m;

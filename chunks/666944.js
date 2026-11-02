@@ -27,10 +27,10 @@ function f(e, t) {
 }
 let I = l()("2021-04-12T00:00:00"),
     p = "LT";
-function T(e, t) {
+function m(e, t) {
     return e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0);
 }
-function m(e, t) {
+function T(e, t) {
     return e.value.unix() - t.value.unix();
 }
 class g {
@@ -44,7 +44,7 @@ class g {
     }
     lookupByValue(e) {
         if (null == e) return;
-        let t = T(I, e);
+        let t = m(I, e);
         return this._index[t.unix()];
     }
     _createLabel(e) {
@@ -61,17 +61,17 @@ class g {
         }
     }
     _createNewOption(e) {
-        let t = T(I, e),
+        let t = m(I, e),
             n = this._createLabel(t);
         return { id: t.toISOString(), label: n, value: t };
     }
     _addNewOption(e) {
-        let t = T(I, e),
+        let t = m(I, e),
             n = this._createLabel(t);
         return (
             (this._index[t.unix()] = t),
             this.options.push({ id: t.toISOString(), label: n, value: t }),
-            this.options.sort(m),
+            this.options.sort(T),
             e
         );
     }
@@ -96,7 +96,7 @@ class g {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(m),
+                e.sort(T),
                 e
             );
         }
@@ -111,7 +111,7 @@ function S(e) {
         d = r.useMemo(() => new g(), []),
         [c, u] = r.useState("");
     function _(e) {
-        null != t && n(T(t, d.selectValue(e)));
+        null != t && n(m(t, d.selectValue(e)));
     }
     function E() {
         let e = f(t, c);

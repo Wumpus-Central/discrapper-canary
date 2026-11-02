@@ -6,8 +6,8 @@ n.d(t, {
     mU: () => N,
     Bf: () => S,
     UT: () => g,
-    St: () => m,
-    Bs: () => T,
+    St: () => T,
+    Bs: () => m,
     _7: () => f,
     Im: () => I,
     IY: () => p,
@@ -81,10 +81,10 @@ var i,
         (((o = {}).NSFW_CHANNEL_AGREE_CTA = "nsfw_channel_agree_cta"),
         (o.NSFW_CHANNEL_DISAGREE_CTA = "nsfw_channel_disagree_cta"),
         o);
-function T(e, t, n) {
+function m(e, t, n) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: e, modal_version: t, entry_point: n });
 }
-function m(e, t, n, i) {
+function T(e, t, n, i) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: i });
 }
 function g(e, t) {

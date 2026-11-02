@@ -1,4 +1,4 @@
-n.d(t, { aW: () => I, ag: () => f, bN: () => p, eC: () => m, qo: () => T });
+n.d(t, { aW: () => I, ag: () => f, bN: () => p, eC: () => T, qo: () => m });
 var i = n(636537),
     r = n(73153),
     a = n(148494),
@@ -57,7 +57,7 @@ function p(e, t) {
             jumpType: s.vx.INSTANT,
         }));
 }
-function T(e, t) {
+function m(e, t) {
     let n = d.A.getChannel(t),
         i = _.h.getActionForChannel(e, t);
     (null == e ||
@@ -72,7 +72,7 @@ function T(e, t) {
         }),
         (0, o.iN)(t));
 }
-function m(e, t) {
+function T(e, t) {
     if ((r.h.dispatch({ type: "COMPLETE_NEW_MEMBER_ACTION", guildId: e, channelId: t }), l.A.isFullServerPreview(e)))
         return;
     let n = d.A.getChannel(t),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -16,12 +16,12 @@ var r = n(192308),
     f = n(389234),
     I = n(652215),
     p = n(64175);
-let T = {
+let m = {
     async handleVoiceConnect(e) {
         let {
             channel: t,
-            connected: T,
-            needSubscriptionToAccess: m,
+            connected: m,
+            needSubscriptionToAccess: T,
             locked: g = !1,
             routeDirectlyToChannel: S = !1,
             bypassChangeModal: N,
@@ -37,7 +37,7 @@ let T = {
             D = y?.channelId === t.id || E.Ay.getChannelId() === A.A.getCurrentClientVoiceChannelId(t.guild_id),
             v = d.A.getBlockedUsersForVoiceChannel(t.id),
             b = d.A.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, o.oE)(new Set([...v, ...b])) && (C = !0), C || g || T || (!(v.size > 0) && !(b.size > 0)))
+        return ((0, o.oE)(new Set([...v, ...b])) && (C = !0), C || g || m || (!(v.size > 0) && !(b.size > 0)))
             ? !N && !g && (0, f.H)(t)
                 ? new Promise((e) => {
                       (0, r.openModalLazy)(async () => {
@@ -49,8 +49,8 @@ let T = {
                                       e(
                                           this.handleVoiceConnect({
                                               channel: t,
-                                              connected: T,
-                                              needSubscriptionToAccess: m,
+                                              connected: m,
+                                              needSubscriptionToAccess: T,
                                               routeDirectlyToChannel: S,
                                               locked: g,
                                               bypassChangeModal: !0,
@@ -60,9 +60,9 @@ let T = {
                               });
                       });
                   })
-                : (g || T || a.default.selectVoiceChannel(t.id),
+                : (g || m || a.default.selectVoiceChannel(t.id),
                   !__OVERLAY__ &&
-                      (T || D || m || S) &&
+                      (m || D || T || S) &&
                       (function (e) {
                           let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                               n = arguments.length > 2 ? arguments[2] : void 0,
@@ -103,8 +103,8 @@ let T = {
                                       e(
                                           this.handleVoiceConnect({
                                               channel: t,
-                                              connected: T,
-                                              needSubscriptionToAccess: m,
+                                              connected: m,
+                                              needSubscriptionToAccess: T,
                                               routeDirectlyToChannel: S,
                                               locked: g,
                                               bypassChangeModal: !0,

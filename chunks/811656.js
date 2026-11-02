@@ -16,7 +16,7 @@ var A = n(671325),
     f = n(799226),
     I = n(676279),
     p = n(652215);
-let T = function (e) {
+let m = function (e) {
     (0, r.useEffect)(() => {
         e && _.default.track(p.HAw.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_PREFETCHING);
     }, [e]);
@@ -107,7 +107,7 @@ let T = function (e) {
         { status: a } = (0, f.CE)(e ? A.A : null);
     return { mediaUrls: t, isSuccess: n && a === f.BW.Loaded, isLoading: i || a === f.BW.Loading };
 };
-var m = n(794899);
+var T = n(794899);
 let g = 1e3,
     S = (e) => {
         let { children: t, isConfirmationStep: n, isEligibleForWowMoment: a, shouldPrefetchWowMoment: A } = e,
@@ -125,7 +125,7 @@ let g = 1e3,
         (0, r.useEffect)(() => {
             A && R(!0);
         }, [A]);
-        let { mediaUrls: L, isSuccess: y } = T(!h && a && O),
+        let { mediaUrls: L, isSuccess: y } = m(!h && a && O),
             D = (0, r.useRef)(null),
             [v, b] = (0, r.useState)(!1),
             [P, M] = (0, r.useState)(!1),
@@ -178,16 +178,16 @@ let g = 1e3,
             ? (0, i.jsxs)("div", {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: m.j,
+                          className: T.j,
                           children: [
                               (0, i.jsx)("div", {
-                                  className: m.ws,
+                                  className: T.ws,
                                   children: (0, i.jsx)(u.A, {
                                       playsInline: !0,
                                       muted: !0,
                                       autoPlay: !0,
                                       onEnded: N,
-                                      className: s()(m.Ki, "entry" === f ? m.RK : m.R),
+                                      className: s()(T.Ki, "entry" === f ? T.RK : T.R),
                                       children: (0, i.jsx)("source", { src: L.modalGlowEntry }),
                                   }),
                               }),
@@ -196,20 +196,20 @@ let g = 1e3,
                                   playsInline: !0,
                                   muted: !0,
                                   loop: !0,
-                                  className: s()(m.Ki, "idle" === f ? m.RK : m.R),
+                                  className: s()(T.Ki, "idle" === f ? T.RK : T.R),
                                   children: (0, i.jsx)("source", { src: L.modalGlowIdle }),
                               }),
                               (0, i.jsx)(u.A, {
                                   ref: S,
                                   playsInline: !0,
                                   muted: !0,
-                                  className: s()(m.Ki, "exit" === f ? m.RK : m.R),
+                                  className: s()(T.Ki, "exit" === f ? T.RK : T.R),
                                   children: (0, i.jsx)("source", { src: L.modalGlowExit }),
                               }),
                           ],
                       }),
                       (0, i.jsx)("div", {
-                          className: m.Sh,
+                          className: T.Sh,
                           children: (0, i.jsx)(o.e, {
                               fit: "layout",
                               ref: D,
@@ -217,7 +217,7 @@ let g = 1e3,
                               listenOnDocumentBody: !0,
                           }),
                       }),
-                      (0, i.jsx)("div", { className: "exit" === f ? m.aO : m.ws, children: t }),
+                      (0, i.jsx)("div", { className: "exit" === f ? T.aO : T.ws, children: t }),
                   ],
               })
             : "static" === U
@@ -229,12 +229,12 @@ let g = 1e3,
                                     (0, i.jsx)("img", {
                                         src: "https://cdn.discordapp.com/assets/content/ada94a00ba3648b0d01f5bbf870b152b02ac6eb1bd1d245d8b46a54527416853.png",
                                         alt: "",
-                                        className: m.Uw,
+                                        className: T.Uw,
                                     }),
                                     (0, i.jsx)("img", {
                                         src: "https://cdn.discordapp.com/assets/content/096964379958760a2615df5128a9022ac6de873c8f7a6af0beadb1c958ce55ea.png",
                                         alt: "",
-                                        className: m.Gv,
+                                        className: T.Gv,
                                     }),
                                 ],
                             }),

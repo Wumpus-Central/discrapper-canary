@@ -11,10 +11,10 @@ n.d(t, {
     ZI: () => u,
     ZN: () => l,
     by: () => o,
-    eh: () => m,
+    eh: () => T,
     q4: () => h,
     qL: () => _,
-    qb: () => T,
+    qb: () => m,
 });
 var i,
     r = n(281445),
@@ -60,11 +60,11 @@ class p {
     static SECOND_GAME_NAME = "Factorio";
     static THIRD_GAME_NAME = "V Rising";
 }
-let T = {
+let m = {
         [r.X.SHOCKBYTE]:
             window.GLOBAL_ENV.RELEASE_CHANNEL === a.B.STAGING
                 ? "https://purple-prod.shockbyte.dev/support"
                 : "https://discord.shockbyte.com/support",
     },
-    m = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    T = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
     g = "0";

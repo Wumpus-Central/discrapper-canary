@@ -6,8 +6,8 @@
     XF: () => h,
     _R: () => O,
     bD: () => u,
-    jr: () => m,
-    nb: () => T,
+    jr: () => T,
+    nb: () => m,
     oL: () => f,
     oW: () => _,
     uO: () => N,
@@ -59,10 +59,10 @@ function I(e) {
 function p(e) {
     return Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0;
 }
-function T(e) {
+function m(e) {
     return Math.round(e?.messages?.numMessagesSent ?? 0) > 0;
 }
-function m(e) {
+function T(e) {
     return (e?.guilds?.guilds.length ?? 0) > 0;
 }
 function g(e) {

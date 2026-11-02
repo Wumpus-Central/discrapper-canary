@@ -31,14 +31,14 @@ async function p(e) {
         n = await t.blob();
     return new Uint8ClampedArray(await n.arrayBuffer());
 }
-function T(e, t, n, i, r) {
+function m(e, t, n, i, r) {
     (0, l.wq)({ [e]: { graph: n, target: t, image: i, blob: r } });
 }
-async function m(e, t, n) {
+async function T(e, t, n) {
     let r,
         s = !1;
-    if (null == n) return T(e, t, i.gO.NONE);
-    if ("blur" === n) return T(e, t, i.gO.BACKGROUND_BLUR);
+    if (null == n) return m(e, t, i.gO.NONE);
+    if ("blur" === n) return m(e, t, i.gO.BACKGROUND_BLUR);
     if ("string" == typeof n || "number" == typeof n) {
         let e = (0, c.A)()[n];
         ((s = e.isVideo ?? !1), (r = e.source));
@@ -74,19 +74,19 @@ async function m(e, t, n) {
                               (n.src = o));
                       })),
                 a = s ? await p(r) : void 0;
-            T(e, t, i.gO.BACKGROUND_REPLACEMENT, n, a);
+            m(e, t, i.gO.BACKGROUND_REPLACEMENT, n, a);
         } catch (e) {
             (0, l.Mj)();
         }
 }
 async function g(e, t) {
     let { track: n = !0, location: r } = t;
-    (await m(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
+    (await T(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
 }
 async function S(e, t, n) {
     let { track: r = !0, location: a } = n;
     ((0, l.Oo)(),
-        await m(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
+        await T(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
         r && (0, d.Uz)(e, a, "Preview"));
 }
 function N() {

@@ -34,9 +34,9 @@ var _ = n(383233),
     f = n(659674),
     I = n(45938),
     p = n(935208),
-    T = n(451919);
+    m = n(451919);
 n(763754);
-var m = n(652215);
+var T = n(652215);
 let g = new c.A({ id: "???", username: "???" });
 function S(e) {
     return h.default.getUser(e.id) ?? new c.A(e);
@@ -49,7 +49,7 @@ function N(e) {
         attachments: e.attachments ?? [],
         embeds: y(e),
         components: (0, s.ZV)(e.components ?? []),
-        codedLinks: m.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
+        codedLinks: T.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
     });
 }
 function C(e) {
@@ -65,12 +65,12 @@ function C(e) {
         C = e?.gift_info,
         O = e.gifting_prompt,
         R = null != e.interaction ? u.createFromServer(e.interaction) : null,
-        y = e.type === m.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
+        y = e.type === T.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
         b = e.content;
     return (
-        e.type === m.lAJ.PREMIUM_REFERRAL &&
+        e.type === T.lAJ.PREMIUM_REFERRAL &&
             ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
-        e.type === m.lAJ.PREMIUM_GROUP_INVITE &&
+        e.type === T.lAJ.PREMIUM_GROUP_INVITE &&
             ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
         new _.Ay({
             ...e,
@@ -86,7 +86,7 @@ function C(e) {
             mentionRoles: o,
             mentionChannels: d,
             messageReference: h,
-            mentioned: (0, T.Uj)({
+            mentioned: (0, m.Uj)({
                 userId: E.default.getId(),
                 channelId: e.channel_id,
                 mentionEveryone: e.mention_everyone ?? !1,
@@ -145,7 +145,7 @@ function R(e, t) {
             (i = !0)),
         null != t.mention_everyone && ((n = n.set("mentionEveryone", t.mention_everyone)), (i = !0)),
         null != t.mention_roles && ((n = n.set("mentionRoles", t.mention_roles)), (i = !0)),
-        i && (n = n.set("mentioned", (0, T.Ay)({ message: n, userId: E.default.getId() }))),
+        i && (n = n.set("mentioned", (0, m.Ay)({ message: n, userId: E.default.getId() }))),
         n
     );
 }
@@ -199,5 +199,5 @@ function b(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
 function P(e) {
-    return e.hasFlag(m.pr7.EPHEMERAL) && e.type !== m.lAJ.IN_GAME_MESSAGE_NUX;
+    return e.hasFlag(T.pr7.EPHEMERAL) && e.type !== T.lAJ.IN_GAME_MESSAGE_NUX;
 }

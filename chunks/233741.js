@@ -15,8 +15,8 @@ var A = n(661886),
     f = n(174459),
     I = n(777334),
     p = n(296027),
-    T = n(515183),
-    m = n(950869);
+    m = n(515183),
+    T = n(950869);
 n(672396);
 var g = n(652215);
 let S = {};
@@ -38,7 +38,7 @@ function R(e, t) {
 class L extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Analytics-Store";
     initialize() {
-        this.waitFor(p.default, m.A, l.Ay);
+        this.waitFor(p.default, T.A, l.Ay);
     }
     getData(e) {
         return C(e);
@@ -61,7 +61,7 @@ let y = new L(
                       n = C(t)?.mounting_started_at ?? new Date().getTime(),
                       i = {
                           renderer_started: !0,
-                          fullscreen_type: (0, T.ph)(t),
+                          fullscreen_type: (0, m.ph)(t),
                           graphics_info_after: new Date().getTime() - n,
                       };
                   return (O(t, i), !0);
@@ -181,7 +181,7 @@ function j(e, t, n, i) {
 class W extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
     initialize() {
-        this.waitFor(m.A, P.A);
+        this.waitFor(T.A, P.A);
     }
     getClickZones() {
         return x;
@@ -196,7 +196,7 @@ let Y = new W(
         ? {}
         : {
               OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
-                  return null == (G = m.A.getNativeModule()) || !!B || ((B = !0), G.setCaptureZoneCallback(j), !0);
+                  return null == (G = T.A.getNativeModule()) || !!B || ((B = !0), G.setCaptureZoneCallback(j), !0);
               },
               OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
                   return ((G = null), !0);
@@ -205,7 +205,7 @@ let Y = new W(
                   let { zones: t } = e;
                   return (
                       !(function (e, t) {
-                          if (!m.A.isOverlayEnabled) {
+                          if (!T.A.isOverlayEnabled) {
                               if (0 === x.length) return;
                               H("overlay_disabled");
                               return;
@@ -237,8 +237,8 @@ var K = n(321090),
     z = n(499979);
 async function X() {
     let e,
-        t = m.A.isModuleLoaded,
-        n = m.A.getNativeModule();
+        t = T.A.isModuleLoaded,
+        n = T.A.getNativeModule();
     if (t && null != n) return (await (0, z.yy)(1e3), n);
     if (t && null == n) throw Error("Native module loaded but not found in store");
     let i = new Promise((e) => {
@@ -260,7 +260,7 @@ async function X() {
         (r.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", a),
             r.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", a));
     }
-    return m.A.getNativeModule();
+    return T.A.getNativeModule();
 }
 var q = n(394072),
     Z = n(644434);
@@ -313,7 +313,7 @@ function eA(e) {
     }
 }
 async function eh() {
-    if (!m.A.isOverlayEnabled)
+    if (!T.A.isOverlayEnabled)
         return void (function () {
             try {
                 for (let e of J) et?.untrackGame(e);
@@ -369,10 +369,10 @@ function ep(e, t) {
     }
     a.A.setFocusedPID(0 === e ? null : e, t, n);
 }
-function eT() {
+function em() {
     ep(null, null, !0);
 }
-function em(e) {
+function eT(e) {
     if (A.A.getPopoutInitializationStages().allDone) {
         if (!ee.has(e))
             return void a.A.updateOverlayState(e, _.AR.WAITING_FOR_SUCCESSFUL_SHOW, "maybeTrackSuccessfullyShown");
@@ -380,7 +380,7 @@ function em(e) {
     }
 }
 async function eg() {
-    (m.A.isModuleLoaded || m.A.isModuleLoading || (await (0, h.P_)()), (et = await X()));
+    (T.A.isModuleLoaded || T.A.isModuleLoading || (await (0, h.P_)()), (et = await X()));
 }
 async function eS(e) {
     (e.overlayMethod === _.Ue.OutOfProcess || e.overlayMethod === _.Ue.OutOfProcessLimitedInteraction
@@ -402,7 +402,7 @@ function eN(e) {
 class eC extends i.Ay.Store {
     static displayName = "Overlay-V3-Store";
     initialize() {
-        this.waitFor(o.default, d.A, y, Y, K.A, $.A, m.A, A.A, l.Ay);
+        this.waitFor(o.default, d.A, y, Y, K.A, $.A, T.A, A.A, l.Ay);
     }
     isOverlayV3EnabledForPID(e) {
         return J.has(e);
@@ -471,7 +471,7 @@ let eO = new eC(
                   OVERLAY_FOCUSED: eN,
                   OVERLAY_OOP_UI_INITIALIZED: function () {
                       J.forEach((e) => {
-                          em(e);
+                          eT(e);
                       });
                   },
                   OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS: function () {
@@ -510,7 +510,7 @@ let eO = new eC(
                           }));
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
-                      ((et = m.A.getNativeModule()), eh());
+                      ((et = T.A.getNativeModule()), eh());
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
                       et = null;
@@ -530,7 +530,7 @@ let eO = new eC(
                   },
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function () {
                       var e;
-                      (eT(),
+                      (em(),
                           null != el && null != eu[(e = el)] && (eu[e] = new Set()),
                           (el = null),
                           (er = null),
@@ -540,16 +540,16 @@ let eO = new eC(
                   OVERLAY_V3_NATIVE_FOCUS_GAINED: function (e) {
                       let { pid: t, windowHandle: n, windowClass: i } = e;
                       null != i && E.has(i)
-                          ? eT()
+                          ? em()
                           : (ep(t, null != n ? (0, M.Oy)(n) : null),
                             t !== en && Q.info("OverlayStore: Focused new PID", t));
                   },
                   OVERLAY_V3_NATIVE_FOCUS_LOST: function () {
-                      eT();
+                      em();
                   },
                   OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN: function (e) {
                       let { pid: t } = e;
-                      (ee.add(t), em(t));
+                      (ee.add(t), eT(t));
                   },
                   OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED: function (e) {
                       let { initialized: t } = e;

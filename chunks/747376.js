@@ -15,8 +15,8 @@ var i = n(66834),
     f = n(73153),
     I = n(272355),
     p = n(967198),
-    T = n(403362);
-class m extends I.A {
+    m = n(403362);
+class T extends I.A {
     _initialize() {
         (f.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
             f.h.subscribe("LOGOUT", this.handleLogout));
@@ -35,13 +35,13 @@ class m extends I.A {
     };
     handleDisconnectFromStageChannel = (e) => {
         let t = p.A.getGuildId();
-        (0, o.A)([t, e].filter(T.Vq));
+        (0, o.A)([t, e].filter(m.Vq));
     };
     handleLogout = () => {
         (this.terminate(), this.handleDisconnectFromStageChannel(null));
     };
 }
-let g = new m();
+let g = new T();
 async function S(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

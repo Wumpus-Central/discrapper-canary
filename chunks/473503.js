@@ -89,19 +89,19 @@ function I(e, t) {
         let { loaded: i, firstMessage: r } = u.A.getMessage(t);
         i || null != r || (A.request(e.id, t), (n = !0));
     }),
-        n && null == h && (h = setTimeout(T, 0)));
+        n && null == h && (h = setTimeout(m, 0)));
 }
 function p(e) {
     I(e, (0, c.S)(e.id).slice(0, 10));
 }
-async function T() {
+async function m() {
     try {
-        for (; A.hasNext();) await m(A.next());
+        for (; A.hasNext();) await T(A.next());
     } finally {
         h = null;
     }
 }
-async function m(e) {
+async function T(e) {
     let t = A.getNextBatch(e, 10);
     try {
         if (0 === t.length) return;

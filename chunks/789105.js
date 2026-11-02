@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(439372),
     r = n(280450),
     a = n(16236),
@@ -46,7 +46,7 @@ function p(e) {
     let { id: t, userId: n, joinTimestamp: i } = e;
     r.default.getId() === n && h(i) && (0, a.Ye)(t).catch(o.tEg);
 }
-class T extends i.A {
+class m extends i.A {
     actions = {
         CHANNEL_DELETE: d,
         CATEGORY_COLLAPSE: c,
@@ -59,4 +59,4 @@ class T extends i.A {
         THREAD_MEMBER_UPDATE: p,
     };
 }
-let m = new T();
+let T = new m();

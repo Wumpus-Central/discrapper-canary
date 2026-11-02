@@ -55,8 +55,8 @@ var i,
 n(623373);
 var I = n(758836),
     p = n(652215),
-    T = n(818348),
-    m = n(105292),
+    m = n(818348),
+    T = n(105292),
     g = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
 let S = { nitro: "nitro", thirdparty: "xbox" };
 function N(e) {
@@ -86,7 +86,7 @@ function y(e, t, n) {
     return null == i ? "" : (0, u.$g)(i?.amount, i?.currency);
 }
 function D(e, t) {
-    return ((0, d.isAndroid)() || (0, d.isIOS)()) && t !== T.Yr.DISCORD_ORB
+    return ((0, d.isAndroid)() || (0, d.isIOS)()) && t !== m.Yr.DISCORD_ORB
         ? e
             ? p.lid.MOBILE_PREMIUM_TIER_2
             : p.lid.MOBILE
@@ -200,13 +200,13 @@ function B(e, t) {
 function V(e) {
     switch (e) {
         case a.R.AVATAR_DECORATION:
-            return m.intl.string(m.t["7v0T9P"]);
+            return T.intl.string(T.t["7v0T9P"]);
         case a.R.PROFILE_EFFECT:
-            return m.intl.string(m.t.wR5wOo);
+            return T.intl.string(T.t.wR5wOo);
         case a.R.NAMEPLATE:
-            return m.intl.string(m.t.x5CoXR);
+            return T.intl.string(T.t.x5CoXR);
         case a.R.PROFILE_FRAME:
-            return m.intl.string(m.t.GWrZOd);
+            return T.intl.string(T.t.GWrZOd);
         default:
             return null;
     }
@@ -312,4 +312,4 @@ function eo(e, t) {
             return "unknown";
     }
 }
-(T.Yr.KZT, T.Yr.NGN, T.Yr.EGP);
+(m.Yr.KZT, m.Yr.NGN, m.Yr.EGP);

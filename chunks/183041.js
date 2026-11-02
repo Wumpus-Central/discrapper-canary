@@ -15,8 +15,8 @@ var i = n(515029),
     f = n(232835),
     I = n(309010),
     p = n(967198),
-    T = n(935208);
-function m(e) {
+    m = n(935208);
+function T(e) {
     return (
         (null != e.attachments && e.attachments.length > 0) ||
         (null != e.embeds && e.embeds.length > 0) ||
@@ -26,7 +26,7 @@ function m(e) {
 function g(e) {
     if (null == e) return !1;
     let t = "messageSnapshots" in e ? e.messageSnapshots : e.message_snapshots;
-    return m(e) || (null != t && t?.some((e) => m(e.message)));
+    return T(e) || (null != t && t?.some((e) => T(e.message)));
 }
 var S = n(135598),
     N = n(930125),
@@ -218,7 +218,7 @@ function F(e, t) {
             attributesByChannelId: l.channelLookup,
         });
     return (
-        T.default.entries(d).forEach((e) => {
+        m.default.entries(d).forEach((e) => {
             let [t, n] = e;
             (0, C.zt)({
                 channelId: t,
@@ -228,7 +228,7 @@ function F(e, t) {
                 numOfEmbedsPendingScan: n.numOfEmbedsPendingScan,
             });
         }),
-        T.default.entries(c).forEach((e) => {
+        m.default.entries(c).forEach((e) => {
             let [t, n] = e;
             (0, C.bz)({
                 messageId: t,
@@ -311,7 +311,7 @@ function W(e) {
 }
 function Y(e) {
     let { guildId: t, threads: n } = e;
-    return null != n && p.A.getGuildId() === t && F(T.default.keys(n).map((e) => n[e].first_message));
+    return null != n && p.A.getGuildId() === t && F(m.default.keys(n).map((e) => n[e].first_message));
 }
 function K(e) {
     let { guildId: t, firstMessages: n } = e;
@@ -375,7 +375,7 @@ function Z(e) {
                     attributesByMessageId: a.messageLookup,
                 });
             return (
-                T.default.entries(o).forEach((e) => {
+                m.default.entries(o).forEach((e) => {
                     let [t, n] = e;
                     (0, C.zt)({
                         channelId: t,
@@ -385,7 +385,7 @@ function Z(e) {
                         numOfEmbedsPendingScan: n.numOfEmbedsPendingScan,
                     });
                 }),
-                T.default.entries(d).forEach((e) => {
+                m.default.entries(d).forEach((e) => {
                     let [t, n] = e;
                     (0, C.bz)({
                         messageId: t,

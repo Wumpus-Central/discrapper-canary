@@ -37,7 +37,7 @@ function f(e) {
         !0 === t.muted
             ? ((_ = new Set(_)).add(e),
               u.setTimer(e, t.muteConfig, () => {
-                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), m.emitChange());
+                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), T.emitChange());
               }) && ((c[e].muted = !1), (_ = new Set(_)).delete(e)))
             : (_ = new Set(_)).delete(e));
 }
@@ -75,7 +75,7 @@ function p(e) {
             });
         });
 }
-class T extends a.Ay.Store {
+class m extends a.Ay.Store {
     initialize() {
         this.waitFor(d.default);
     }
@@ -102,7 +102,7 @@ class T extends a.Ay.Store {
         return _.has(e);
     }
 }
-let m = new T(s.h, {
+let T = new m(s.h, {
         CONNECTION_OPEN: function (e) {
             (u.reset(),
                 (_ = new Set()),
@@ -189,4 +189,4 @@ let m = new T(s.h, {
             );
         },
     }),
-    g = m;
+    g = T;

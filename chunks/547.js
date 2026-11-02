@@ -16,8 +16,8 @@ var u = n(343328),
     f = n(940382),
     I = n(95701),
     p = n(358047),
-    T = n(734057),
-    m = n(71393),
+    m = n(734057),
+    T = n(71393),
     g = n(573163),
     S = n(309010),
     N = n(967198),
@@ -42,7 +42,7 @@ function P(e) {
         fetchKey: f,
     } = e;
     if (null == n || (0, y.jq)(n)) return;
-    let I = T.A.getChannel(n);
+    let I = m.A.getChannel(n);
     if (I?.type === L.rbe.GUILD_STORE || (I?.type != null && L.kvI.GUILD_THREADS_ONLY.has(I.type))) return;
     let p = c.A.getOrCreate(n);
     (p.some(O.$r) &&
@@ -56,7 +56,7 @@ function P(e) {
         (!d || E.A.isConnected() || p.loadingMore
             ? p.loadingMore || (p.ready && !p.cached)
                 ? null != a && (S = !0)
-                : (null == t || null != m.A.getGuild(t)) && (S = !0)
+                : (null == t || null != T.A.getGuild(t)) && (S = !0)
             : (S = !0),
         (0, u.A)(n) && g.Ay.hasUnread(n) && (S = !0),
         S)
@@ -131,7 +131,7 @@ function w(e) {
 function G() {
     let e = S.Ay.getChannelId();
     if (null == e) return;
-    let t = T.A.getChannel(e);
+    let t = m.A.getChannel(e);
     if (null == t) return;
     let n = w(t.id);
     (P({ guildId: t.getGuildId(), channelId: t.id, messageId: n.messageId, avoidInitialScroll: null != n.messageId }),
@@ -140,7 +140,7 @@ function G() {
 function x() {
     let e = S.Ay.getChannelId();
     if (null == e) return;
-    let t = T.A.getChannel(e);
+    let t = m.A.getChannel(e);
     if (null == t) return;
     if (!(0, I.pQ)(t.type)) return void V(t.getGuildId(), t.id);
     let n = c.A.getOrCreate(e);

@@ -1,4 +1,4 @@
-(n.d(t, { Fc: () => m, Jm: () => C, m9: () => p, Uc: () => N, ZG: () => I, VR: () => g, uh: () => S, JS: () => T }),
+(n.d(t, { Fc: () => T, Jm: () => C, m9: () => p, Uc: () => N, ZG: () => I, VR: () => g, uh: () => S, JS: () => m }),
     n(321073));
 var i,
     r = (((i = {}).TRANSFER_EXISTING_CALL = "TRANSFER_EXISTING_CALL"), (i.CREATE_NEW_CALL = "CREATE_NEW_CALL"), i),
@@ -39,7 +39,7 @@ async function I() {
 function p(e) {
     s.h.dispatch({ type: "REMOTE_SESSION_CONNECT", sessionId: e });
 }
-function T(e, t) {
+function m(e, t) {
     let { selfMute: n, selfDeaf: i } = t;
     (s.h.dispatch({
         type: "REMOTE_COMMAND",
@@ -48,7 +48,7 @@ function T(e, t) {
     }),
         f("VOICE_STATE_UPDATE", e));
 }
-function m(e) {
+function T(e) {
     (s.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), f("DISCONNECT", e), I());
 }
 function g(e, t, n, i) {

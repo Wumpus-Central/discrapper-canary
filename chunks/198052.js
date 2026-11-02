@@ -15,8 +15,8 @@ var i = n(284009),
     f = n(652896),
     I = n(209932),
     p = n(312006),
-    T = n(616356),
-    m = n(280450),
+    m = n(616356),
+    T = n(280450),
     g = n(470710),
     S = n(734057),
     N = n(290863),
@@ -66,13 +66,13 @@ function X(e) {
                       n === P._Of.VOICE ? (delete B[e], delete V[e]) : (B[e] = n);
                   })(n),
                   (function (e) {
-                      let t = m.default.getId(),
+                      let t = T.default.getId(),
                           n = z(e);
                       if (0 === n.size() || C.Ay.getVoiceChannelId() !== e) return ee(e, null);
                       let i = b.jd.NONE,
                           a = n
                               .toArray(D.r4.STREAM)
-                              .find((e) => e.type === b.lp.STREAM && null != T.A.getActiveStreamForStreamKey(e.id));
+                              .find((e) => e.type === b.lp.STREAM && null != m.A.getActiveStreamForStreamKey(e.id));
                       if (null != a) (r()(a.type === b.lp.STREAM, "Impossible condition"), (i = a.id));
                       else if (1 === n.size()) i = t;
                       else if (1 === n.size(D.r4.VIDEO)) {
@@ -85,7 +85,7 @@ function X(e) {
                       let [s] = Z(e);
                       if (s !== b.jd.AUTO && s !== b.jd.NONE) {
                           let e = n.getParticipant(s);
-                          (null == e || (e.type === b.lp.STREAM && null == T.A.getActiveStreamForStreamKey(e.id))) &&
+                          (null == e || (e.type === b.lp.STREAM && null == m.A.getActiveStreamForStreamKey(e.id))) &&
                               (s = b.jd.NONE);
                       }
                       (s === b.jd.NONE && null != a && !0 === Y[e] && (s = a.id), ee(e, [s, i]));
@@ -139,7 +139,7 @@ function ei() {
         null != (t = C.Ay.getChannelId()) && e.push(t),
         null == (n = C.Ay.getVoiceChannelId()) || e.includes(n) || e.push(n),
         (i = h.default.getRemoteSessionId()),
-        (r = y.A.getVoiceStateForSession(m.default.getId(), i)),
+        (r = y.A.getVoiceStateForSession(T.default.getId(), i)),
         r?.channelId != null && e.push(r?.channelId),
         s().difference(w, e).forEach(en),
         (a = s().difference(e, w)),
@@ -197,8 +197,8 @@ class eE extends l.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(
             c.A,
-            T.A,
-            m.default,
+            m.A,
+            T.default,
             g.A,
             S.A,
             u.Ay,
@@ -377,7 +377,7 @@ let eA = new eE(o.h, {
         if ((ee(n, [i ?? b.jd.NONE, a]), (0, f.wL)(i))) {
             try {
                 let { ownerId: e } = (0, f.Iy)(i);
-                e === m.default.getId() && q(e, [n]);
+                e === T.default.getId() && q(e, [n]);
             } catch (e) {
                 M.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
             }
@@ -428,7 +428,7 @@ let eA = new eE(o.h, {
     },
     STREAM_UPDATE_SELF_HIDDEN: function (e) {
         let { channelId: t, selfStreamHidden: n } = e,
-            i = m.default.getId();
+            i = T.default.getId();
         if (n) {
             let [e] = Z(t);
             (0, f.wL)(e) && e.includes(i) && ee(t, null);
@@ -470,7 +470,7 @@ let eA = new eE(o.h, {
     GUILD_SOUNDBOARD_SOUND_PLAY_START: el,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: el,
     PUSH_TO_TALK_STATE_CHANGE: function () {
-        return X((e) => e.updateParticipantSpeaking(m.default.getId()));
+        return X((e) => e.updateParticipantSpeaking(T.default.getId()));
     },
     USER_UPDATE: eo,
     GUILD_MEMBER_UPDATE: eo,

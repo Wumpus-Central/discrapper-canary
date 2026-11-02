@@ -15,8 +15,8 @@ var i = n(858899),
     f = n(999926),
     I = n(741394),
     p = n(734066),
-    T = n(205693),
-    m = n(439372),
+    m = n(205693),
+    T = n(439372),
     g = n(967347),
     S = n(253932),
     N = n(617617),
@@ -42,7 +42,7 @@ var P = n(738935),
 function k() {
     return f.Ay.getMediaEngine().supports(x.O5.UNIFIED_CAPTURE_BROKER);
 }
-class F extends m.A {
+class F extends T.A {
     actions = {
         POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
         RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
@@ -70,10 +70,10 @@ class F extends m.A {
         if (!(0, p.Pm)() || n !== w.S7L.RTC_CONNECTED) return;
         let r = h.default.getId();
         switch (t) {
-            case T.x.DEFAULT:
+            case m.x.DEFAULT:
                 (this.applyUserVoiceRecording(r), this.applyUserSoundboardRecording(r));
                 break;
-            case T.x.STREAM: {
+            case m.x.STREAM: {
                 if (null == i) return;
                 let { ownerId: e } = (0, u.Iy)(i);
                 if (e !== r) return;
@@ -85,7 +85,7 @@ class F extends m.A {
     }
     handleRTCUsersUpdate(e) {
         let { userIds: t, context: n } = e;
-        n === T.x.DEFAULT &&
+        n === m.x.DEFAULT &&
             t.forEach((e) => {
                 (this.applyUserVoiceRecording(e), this.applyUserSoundboardRecording(e));
             });
@@ -186,7 +186,7 @@ class F extends m.A {
     loadClipsFromStorage() {}
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
-        if (n !== T.x.STREAM || !(0, p.ri)(f.Ay)) return;
+        if (n !== m.x.STREAM || !(0, p.ri)(f.Ay)) return;
         let a = R.A.getRTCConnection(
             u._z({ streamType: null != r ? G.U4.GUILD : G.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );

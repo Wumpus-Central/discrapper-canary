@@ -13,8 +13,8 @@ var s = n(536637),
     f = n(71393),
     I = n(573163),
     p = n(543465),
-    T = n(287809),
-    m = n(935208),
+    m = n(287809),
+    T = n(935208),
     g = n(746080);
 let S = new d.J(
     function (e) {
@@ -23,7 +23,7 @@ let S = new d.J(
     },
     function (e) {
         let { lastMessageId: t } = e;
-        return -m.default.extractTimestamp(t);
+        return -T.default.extractTimestamp(t);
     },
 );
 function N(e) {
@@ -35,8 +35,8 @@ function N(e) {
                       n = e.isMessageRequestTimestamp;
                   if (null != n) {
                       let e = l()(n).valueOf(),
-                          i = m.default.fromTimestamp(e);
-                      return m.default.compare(t, i) > 0 ? t : i;
+                          i = T.default.fromTimestamp(e);
+                      return T.default.compare(t, i) > 0 ? t : i;
                   }
                   return t;
               })(e);
@@ -83,7 +83,7 @@ let R =
 class L extends o.Ay.Store {
     static displayName = "PrivateChannelSortStore";
     initialize() {
-        (this.waitFor(h.A, f.A, _.A, I.Ay, E.A, p.Ay, T.default), this.syncWith([p.Ay, _.A], C));
+        (this.waitFor(h.A, f.A, _.A, I.Ay, E.A, p.Ay, m.default), this.syncWith([p.Ay, _.A], C));
     }
     getPrivateChannelIds() {
         return R();

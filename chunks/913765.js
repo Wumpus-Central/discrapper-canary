@@ -16,8 +16,8 @@ var o = n(503698),
     f = n(868285),
     I = n(935462),
     p = n(297264),
-    T = n(834730),
-    m = n(475358),
+    m = n(834730),
+    T = n(475358),
     g = n(707554),
     S = n(689175),
     N = n(939249),
@@ -234,7 +234,7 @@ function H() {
                             children: [
                                 (0, i.jsx)(p.D, { variant: "heading-lg/semibold", children: r }),
                                 null != a &&
-                                    (0, i.jsx)(T.E, { className: x.UX, variant: "text-sm/normal", children: a }),
+                                    (0, i.jsx)(m.E, { className: x.UX, variant: "text-sm/normal", children: a }),
                             ],
                         }),
                         (0, i.jsx)(
@@ -249,14 +249,14 @@ function H() {
                                               {
                                                   className: x.YI,
                                                   children: [
-                                                      (0, i.jsx)(T.E, {
+                                                      (0, i.jsx)(m.E, {
                                                           variant: "text-sm/normal",
                                                           children: e.description,
                                                       }),
                                                       (0, i.jsx)("div", {
                                                           className: "keybind-shortcuts",
                                                           children: e.binds.map((e) =>
-                                                              (0, i.jsx)(m.e, { className: x.Me, shortcut: e }, e),
+                                                              (0, i.jsx)(T.e, { className: x.Me, shortcut: e }, e),
                                                           ),
                                                       }),
                                                   ],
@@ -370,7 +370,7 @@ class j extends r.PureComponent {
                     className: x.GK,
                     children: [
                         (0, i.jsx)("div", { className: x.Qs, children: G.intl.string(G.t["1BdUtx"]) }),
-                        (0, i.jsx)(m.e, { shortcut: "mod+/" }),
+                        (0, i.jsx)(T.e, { shortcut: "mod+/" }),
                     ],
                 }),
                 (0, i.jsx)("div", { className: x.KV, children: G.intl.string(G.t["2t19lU"]) }),

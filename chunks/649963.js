@@ -15,8 +15,8 @@ var i,
     f = n(927813),
     I = n(690521),
     p = n(350593),
-    T = n(652215),
-    m = n(105292),
+    m = n(652215),
+    T = n(105292),
     g =
         (((i = {}).MESSAGE = "Message"),
         (i.FORUM_TOOLBAR = "Forum Toolbar"),
@@ -38,15 +38,15 @@ function S(e, t, n) {
     }
     if (403 === r)
         switch (a && a.code) {
-            case T.t02.TOO_MANY_REACTIONS:
+            case m.t02.TOO_MANY_REACTIONS:
                 l.A.show({
-                    title: m.intl.string(m.t.lFddsR),
-                    body: m.intl.string(m.t.h27eIm),
-                    confirmText: m.intl.string(m.t.BddRzS),
+                    title: T.intl.string(T.t.lFddsR),
+                    body: T.intl.string(T.t.h27eIm),
+                    confirmText: T.intl.string(T.t.BddRzS),
                 });
                 break;
-            case T.t02.REACTION_BLOCKED:
-                h._.dispatch(T.jej.SHAKE_APP, { duration: 200, intensity: 2 });
+            case m.t02.REACTION_BLOCKED:
+                h._.dispatch(m.jej.SHAKE_APP, { duration: 200, intensity: 2 });
         }
     else if (!n.isRetry) return (t(), !1);
     return !0;
@@ -67,17 +67,17 @@ function C(e) {
     let { channelId: t, messageId: n, emoji: i, userId: r, useTypeEndpoint: a = !1, type: s = d.v.NORMAL } = e,
         l = null != i.id ? `${i.name}:${i.id}` : i.name;
     return null == r
-        ? T.Rsh.REACTIONS(t, n, l)
+        ? m.Rsh.REACTIONS(t, n, l)
         : a
-          ? T.Rsh.REACTION_WITH_TYPE(t, n, l, r, s)
-          : T.Rsh.REACTION(t, n, l, r);
+          ? m.Rsh.REACTION_WITH_TYPE(t, n, l, r, s)
+          : m.Rsh.REACTION(t, n, l, r);
 }
 async function O(e) {
     let t,
         { channelId: n, messageId: i, emoji: a, limit: l, after: o, type: c } = e,
         u =
             c === d.v.VOTE
-                ? ((t = a.id ?? a.name), T.Rsh.POLL_ANSWER_VOTERS(n, i, t))
+                ? ((t = a.id ?? a.name), m.Rsh.POLL_ANSWER_VOTERS(n, i, t))
                 : C({ channelId: n, messageId: i, emoji: a }),
         _ = await r.Bo.get({
             url: u,
@@ -110,9 +110,9 @@ async function R(e, t, n) {
         ((i = e), (s = t), (u = n), (h = O), null != (f = E.A.getMessage(i, s)) && f.userHasReactedWithEmoji(u, h))
     )
         return void l.A.show({
-            title: m.intl.string(m.t["uaUU/g"]),
-            body: m.intl.string(m.t.psMorl),
-            confirmText: m.intl.string(m.t["NX+WJN"]),
+            title: T.intl.string(T.t["uaUU/g"]),
+            body: T.intl.string(T.t.psMorl),
+            confirmText: T.intl.string(T.t["NX+WJN"]),
         });
     let y = await b(n, O);
     return (
@@ -127,7 +127,7 @@ async function R(e, t, n) {
             .then(() => {
                 if ("Message Shortcut" === I) {
                     let i = _.A.getChannel(e);
-                    A.default.track(T.HAw.MESSAGE_SHORTCUT_ACTION_SENT, {
+                    A.default.track(m.HAw.MESSAGE_SHORTCUT_ACTION_SENT, {
                         channel_id: e,
                         guild_id: i?.guild_id,
                         original_message_id: t,
@@ -138,16 +138,16 @@ async function R(e, t, n) {
                     });
                 }
                 O
-                    ? (a.O.announce(m.intl.formatToPlainString(m.t["RJlG+R"], { name: n.name })),
+                    ? (a.O.announce(T.intl.formatToPlainString(T.t["RJlG+R"], { name: n.name })),
                       p.A.triggerFullscreenAnimation({ channelId: e, messageId: t, emoji: { ...n, animated: !1 } }))
-                    : a.O.announce(m.intl.formatToPlainString(m.t.ol4acF, { name: n.name }));
+                    : a.O.announce(T.intl.formatToPlainString(T.t.ol4acF, { name: n.name }));
             })
             .catch((i) => {
                 S(i, () => R(e, t, n, I, { burst: O, isRetry: !0 }), { isRetry: L }) &&
                     (N("MESSAGE_REACTION_REMOVE", e, t, n, { burst: O }),
                     O
-                        ? a.O.announce(m.intl.formatToPlainString(m.t.fJeu87, { name: n.name }))
-                        : a.O.announce(m.intl.formatToPlainString(m.t["UUn5V+"], { name: n.name })));
+                        ? a.O.announce(T.intl.formatToPlainString(T.t.fJeu87, { name: n.name }))
+                        : a.O.announce(T.intl.formatToPlainString(T.t["UUn5V+"], { name: n.name })));
             })
     );
 }
@@ -158,7 +158,7 @@ function L(e) {
 async function y(e, t, n) {
     let i = null != n && !!n.isRetry;
     (await c.A.unarchiveThreadIfNecessary(e),
-        r.Bo.del({ url: T.Rsh.REMOVE_REACTIONS(e, t), oldFormErrors: !0, rejectWithError: (0, r.fT)() }).catch((n) => {
+        r.Bo.del({ url: m.Rsh.REMOVE_REACTIONS(e, t), oldFormErrors: !0, rejectWithError: (0, r.fT)() }).catch((n) => {
             S(n, () => y(e, t, { isRetry: !0 }), { isRetry: i });
         }));
 }
@@ -166,7 +166,7 @@ async function D(e, t, n, i) {
     let a = null != i && !!i.isRetry;
     await c.A.unarchiveThreadIfNecessary(e);
     let s = null === n.id ? n.name : `${n.name}:${n.id}`;
-    r.Bo.del({ url: T.Rsh.REMOVE_EMOJI_REACTIONS(e, t, s), oldFormErrors: !0, rejectWithError: (0, r.fT)() }).catch(
+    r.Bo.del({ url: m.Rsh.REMOVE_EMOJI_REACTIONS(e, t, s), oldFormErrors: !0, rejectWithError: (0, r.fT)() }).catch(
         (i) => {
             S(i, () => D(e, t, n, { isRetry: !0 }), { isRetry: a });
         },
@@ -193,8 +193,8 @@ async function v(e) {
         })
             .then(() => {
                 o?.burst
-                    ? a.O.announce(m.intl.formatToPlainString(m.t["3l9f6u"], { name: i.name }))
-                    : a.O.announce(m.intl.formatToPlainString(m.t["DQxi+7"], { name: i.name }));
+                    ? a.O.announce(T.intl.formatToPlainString(T.t["3l9f6u"], { name: i.name }))
+                    : a.O.announce(T.intl.formatToPlainString(T.t["DQxi+7"], { name: i.name }));
             })
             .catch(async (e) => {
                 if (
@@ -215,8 +215,8 @@ async function v(e) {
                     let e = await b(i, u);
                     (N("MESSAGE_REACTION_ADD", t, n, i, { userId: l, burst: u, colors: e }),
                         o?.burst
-                            ? a.O.announce(m.intl.formatToPlainString(m.t.OamVbV, { name: i.name }))
-                            : a.O.announce(m.intl.formatToPlainString(m.t["tD9+b+"], { name: i.name })));
+                            ? a.O.announce(T.intl.formatToPlainString(T.t.OamVbV, { name: i.name }))
+                            : a.O.announce(T.intl.formatToPlainString(T.t["tD9+b+"], { name: i.name })));
                 }
             }));
 }

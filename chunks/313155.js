@@ -63,17 +63,17 @@ let I = { source: a.NO_CLASSIFICATION, status: s.Y.EVERYONE };
 function p(e) {
     return (function (e) {
         var t, n, i, r, E;
-        let A, h, f, p, m, g;
+        let A, h, f, p, T, g;
         if (null == e) return I;
         let S = [],
             { type: N, data: C } = e;
         return (
             "minimal" === N
-                ? null != C.discord_classifications && S.push(T(a.DISCORD_CLASSIFICATION, C.discord_classifications))
+                ? null != C.discord_classifications && S.push(m(a.DISCORD_CLASSIFICATION, C.discord_classifications))
                 : null != C.manual_classifications
-                  ? S.push(T(a.MANUAL_CLASSIFICATION, C.manual_classifications))
+                  ? S.push(m(a.MANUAL_CLASSIFICATION, C.manual_classifications))
                   : null != C.automated_classifications &&
-                    S.push(T(a.AUTOMATED_CLASSIFICATION, C.automated_classifications)),
+                    S.push(m(a.AUTOMATED_CLASSIFICATION, C.automated_classifications)),
             null != C.agency_ratings &&
                 (null != C.agency_ratings.esrb &&
                     S.push(
@@ -103,8 +103,8 @@ function p(e) {
                 null != C.agency_ratings.apple &&
                     S.push(
                         ((r = C.agency_ratings.apple),
-                        (m = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: m }),
+                        (T = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: T }),
                     ),
                 null != C.agency_ratings.roblox &&
                     S.push(
@@ -127,7 +127,7 @@ function p(e) {
         );
     })(e).status;
 }
-function T(e, t) {
+function m(e, t) {
     let n = E.iu(t);
     return E.zy(n, A.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED)
         ? { source: e, status: s.Y.ADULT }

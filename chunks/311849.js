@@ -15,8 +15,8 @@ var i = n(141931),
     f = n(19575),
     I = n(652215);
 let p = 15 * _.A.Millis.MINUTE,
-    T = 15 * _.A.Millis.MINUTE,
     m = 15 * _.A.Millis.MINUTE,
+    T = 15 * _.A.Millis.MINUTE,
     g = 30 * _.A.Millis.MINUTE,
     S = 60 * _.A.Millis.MINUTE,
     N = "lastMemoryUsageRestart",
@@ -66,11 +66,11 @@ class y extends a.A {
                 (clearInterval(this._checkIntervalPA),
                 (this._checkIntervalPA = setInterval(async () => {
                     await this.trackPartitionAllocPerformanceStats();
-                }, T)),
+                }, m)),
                 clearInterval(this._checkIntervalV8),
                 (this._checkIntervalV8 = setInterval(async () => {
                     await this.trackV8HeapAlloc();
-                }, m)),
+                }, T)),
                 clearTimeout(this._checkIntervalCPUProfiler),
                 (this._checkIntervalCPUProfiler = setTimeout(() => {
                     100 * Math.random() < 0.5 && this.trackCPUProfiling();

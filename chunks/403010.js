@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(734057),
     I = n(999926),
     p = n(763827),
-    T = n(873985),
-    m = n(309010),
+    m = n(873985),
+    T = n(309010),
     g = n(461213),
     S = n(728557),
     N = n(723702),
@@ -149,8 +149,8 @@ let F = new c.A("ConnectionStore"),
                 selfMute: I.Ay.isSelfMute(),
                 selfDeaf: I.Ay.isSelfDeaf(),
                 selfVideo: I.Ay.isVideoEnabled(),
-                preferredRegion: T.A.getPreferredRegion(),
-                preferredRegions: T.A.getPreferredRegions(),
+                preferredRegion: m.A.getPreferredRegion(),
+                preferredRegions: m.A.getPreferredRegions(),
                 videoStreamParameters: I.Ay.getVideoStreamParameters(),
                 flags: this.computeVoiceFlags(),
             };
@@ -264,8 +264,8 @@ var er = n(159993),
     ef = n(166403),
     eI = n(107351),
     ep = n(284009),
-    eT = n.n(ep),
-    em = n(723176),
+    em = n.n(ep),
+    eT = n(723176),
     eg = n(766034),
     eS = n(314732),
     eN = n(531743),
@@ -284,7 +284,7 @@ function eD(e, t) {
         t?.forEach((t) => {
             if (null == t) return;
             let i = t.user_id;
-            (null != i && (eT()(null != e[i], `Missing user[${i}] in compressed ready payload`), (t.user = e[i])),
+            (null != i && (em()(null != e[i], `Missing user[${i}] in compressed ready payload`), (t.user = e[i])),
                 delete t.user_id,
                 n.push(t));
         }),
@@ -532,8 +532,8 @@ function eY(e, t, n) {
         } = n,
         I = e_.Ay.getMember(e, t.id),
         p = (0, z.t)(A),
-        T = (0, q.mT)(h),
-        m = (0, Q.Rt)(f);
+        m = (0, q.mT)(h),
+        T = (0, Q.Rt)(f);
     (null != I &&
         I.nick === a &&
         I.avatar === s &&
@@ -546,8 +546,8 @@ function eY(e, t, n) {
         I.flags === o &&
         (I.unusualDMActivityUntil ?? null) === (E ?? null) &&
         r().isEqual(I.collectibles ?? null, p ?? null) &&
-        r().isEqual(I.displayNameStyles ?? null, T ?? null) &&
-        r().isEqual(I.gamingLeaderboardData ?? null, m ?? null)) ||
+        r().isEqual(I.displayNameStyles ?? null, m ?? null) &&
+        r().isEqual(I.gamingLeaderboardData ?? null, T ?? null)) ||
         eW({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -563,8 +563,8 @@ function eY(e, t, n) {
             unusualDMActivityUntil: E,
             flags: o,
             collectibles: p,
-            displayNameStyles: T,
-            gamingLeaderboardData: m,
+            displayNameStyles: m,
+            gamingLeaderboardData: T,
         });
 }
 function eK(e) {
@@ -713,7 +713,7 @@ function eq(e) {
             let t,
                 n,
                 i =
-                    ((t = em.A.database()),
+                    ((t = eT.A.database()),
                     (n = (0, eO.O)() ? eg.A.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
@@ -747,7 +747,7 @@ function eq(e) {
                           let i = (e = el.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: a, merged_members: s, guilds: l, ...o } = e;
-                                      (null != em.A.database() &&
+                                      (null != eT.A.database() &&
                                           !1 === n.databaseOk &&
                                           eC.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
                                           (eL = r().keyBy(i, (e) => e.id)),
@@ -756,7 +756,7 @@ function eq(e) {
                                               (null != t &&
                                                   (e.recipients = t.map(
                                                       (e) => (
-                                                          eT()(
+                                                          em()(
                                                               null != eL[e],
                                                               "Missing user in compressed ready payload",
                                                           ),
@@ -2019,7 +2019,7 @@ async function e4(e) {
         n = s.w.get("discord_update_restart_timestamp"),
         i = null != n && Date.now() - parseInt(n, 10) < 3e5;
     s.w.remove("discord_update_restart_timestamp");
-    let r = m.Ay.getVoiceChannelId();
+    let r = T.Ay.getVoiceChannelId();
     if (null != r) {
         let e = s.w.get("discord_watchdog_restart_timestamp"),
             n = null != e && Date.now() - parseInt(e, 10) < 6e4;
@@ -2052,7 +2052,7 @@ function e9(e) {
 class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        (this.waitFor(A.default, h.A, f.A, I.Ay, p.A, T.A, m.Ay, g.A, S.A, E.A),
+        (this.waitFor(A.default, h.A, f.A, I.Ay, p.A, m.A, T.Ay, g.A, S.A, E.A),
             this.syncWith([I.Ay], e7),
             this.syncWith([g.A], e8));
     }
@@ -2205,7 +2205,7 @@ let tt = new te(l.h, {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (B.isSessionEstablished()) {
             let e = null != n ? f.A.getChannel(i)?.rtcRegion : h.A.getCall(i)?.region;
-            B.streamCreate(t, n, i, e ?? T.A.getPreferredRegion());
+            B.streamCreate(t, n, i, e ?? m.A.getPreferredRegion());
         }
         return !1;
     },

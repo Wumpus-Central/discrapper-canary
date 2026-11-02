@@ -15,8 +15,8 @@ var i = n(17928),
     f = n(181435),
     I = n(48345),
     p = n(661886),
-    T = n(96175),
-    m = n(237984),
+    m = n(96175),
+    T = n(237984),
     g = n(567249),
     S = n(392164);
 let N = new r.Vy("OverlayV3NativeModuleUtils");
@@ -48,7 +48,7 @@ function R(e, t, n) {
         windowHandle: t,
         popoutInitializationStages: p.A.getPopoutInitializationStages(),
     }),
-        (0, c.cS)(e, null != t ? (0, T.Oy)(t) : null, n));
+        (0, c.cS)(e, null != t ? (0, m.Oy)(t) : null, n));
 }
 function L(e) {
     ((0, c._r)(e, "renderer_window_focus_lost", { popoutInitializationStages: p.A.getPopoutInitializationStages() }),
@@ -209,7 +209,7 @@ class v {
             (this.lastAssociatedPID = e));
     }
     async openOverlayPopout() {
-        return (await (0, m.o)(), await this.getWindowWithRetry());
+        return (await (0, T.o)(), await this.getWindowWithRetry());
     }
     async getWithRetry(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
@@ -246,7 +246,7 @@ class v {
         return await this.getWithRetry(
             async () => {
                 let e = await u.A?.window?.getNativeHandle(S.f);
-                return null != e ? (0, T.Oy)(e) : null;
+                return null != e ? (0, m.Oy)(e) : null;
             },
             e,
             t,

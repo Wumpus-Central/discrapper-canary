@@ -161,8 +161,8 @@ function f(e, t) {
 }
 let I = null,
     p = new u(750, 500),
-    T = new c(15),
-    m = !1;
+    m = new c(15),
+    T = !1;
 class g extends a.A {
     static displayName = "SaveableChannelsStore";
     static LATEST_SNAPSHOT_VERSION = 1;
@@ -188,10 +188,10 @@ class g extends a.A {
     }
     loadCache() {
         let e = this.readSnapshot(g.LATEST_SNAPSHOT_VERSION);
-        null != e && ((m = !0), g.mergeSnapshot(e));
+        null != e && ((T = !0), g.mergeSnapshot(e));
     }
     canEvictOrphans() {
-        return m;
+        return T;
     }
     saveLimit(e) {
         let t = i.A.getBasicChannel(e);
@@ -204,31 +204,31 @@ class g extends a.A {
     takeSnapshot() {
         return {
             version: g.LATEST_SNAPSHOT_VERSION,
-            data: { channels: [...p.allValues()].filter((e) => !e.fallback), penalized: [...T.keys()], lastChannel: I },
+            data: { channels: [...p.allValues()].filter((e) => !e.fallback), penalized: [...m.keys()], lastChannel: I },
         };
     }
     static mergeSnapshot(e) {
         let t = p,
-            n = T;
+            n = m;
         for (let n of ((p = new u(p.primaryCapacity, p.extendedCapacity)),
-        (T = new c(T.capacity)),
+        (m = new c(m.capacity)),
         (I = I ?? e.lastChannel),
         [e.channels, t.values()]))
             for (let e of n) e.fallback || p.put(e.channelId, e);
         let i = new Set();
         for (let t of [e.penalized, n.keys()])
             for (let e of t) {
-                let t = T.put(e, null);
+                let t = m.put(e, null);
                 null != t && i.add(t[0]);
             }
-        for (let e of i) T.has(e) || p.delete(e);
+        for (let e of i) m.has(e) || p.delete(e);
     }
     static recordChannel(e) {
         let t = i.A.getBasicChannel(e);
         if (null != t && (0, A.c)(t)) {
             let n = { guildId: t.guild_id ?? null, channelId: e, channelType: t.type };
             if (((I = n), p.put(e, n), E(t))) {
-                let t = T.put(e, null);
+                let t = m.put(e, null);
                 null != t && p.delete(t[0]);
             }
         }
@@ -312,9 +312,9 @@ function D(e) {
     return !e.guild.unavailable && (g.deleteGuild(e.guild.id), !0);
 }
 function v(e) {
-    (p.clear(), T.clear(), (m = !1));
+    (p.clear(), m.clear(), (T = !1));
 }
 function b(e) {
-    m = !0;
+    T = !0;
 }
 let P = new g();

@@ -189,8 +189,8 @@ class p extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let T = new p();
-class m extends o.G {
+let m = new p();
+class T extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.MarketingPageBentoBox", [
             { no: 1, name: "asset", kind: "message", T: () => d.i },
@@ -226,7 +226,7 @@ class m extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let g = new m();
+let g = new T();
 class S extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumHomePerkCard", [
@@ -1579,7 +1579,7 @@ class ef extends o.G {
             { no: 27, name: "shop_tab_tooltip", kind: "message", oneof: "properties", T: () => O },
             { no: 28, name: "premium_home_rewards_perk_card", kind: "message", oneof: "properties", T: () => N },
             { no: 29, name: "marketing_page_rewards_bento_box", kind: "message", oneof: "properties", T: () => g },
-            { no: 30, name: "outbound_promotion_popover", kind: "message", oneof: "properties", T: () => T },
+            { no: 30, name: "outbound_promotion_popover", kind: "message", oneof: "properties", T: () => m },
             { no: 31, name: "outbound_promotion_claim_modal_card", kind: "message", oneof: "properties", T: () => I },
             { no: 32, name: "shop_coachmark", kind: "message", oneof: "properties", T: () => h.I },
             { no: 33, name: "nitro_perk_card", kind: "message", oneof: "properties", T: () => A },
@@ -1823,7 +1823,7 @@ class ef extends o.G {
                 case 30:
                     r.properties = {
                         oneofKind: "outboundPromotionPopover",
-                        outboundPromotionPopover: T.internalBinaryRead(
+                        outboundPromotionPopover: m.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1999,11 +1999,13 @@ class ef extends o.G {
                     )
                     .join(),
             "outboundPromotionPopover" === e.properties.oneofKind &&
-                T.internalBinaryWrite(
-                    e.properties.outboundPromotionPopover,
-                    t.tag(30, a.O0.LengthDelimited).fork(),
-                    n,
-                ).join(),
+                m
+                    .internalBinaryWrite(
+                        e.properties.outboundPromotionPopover,
+                        t.tag(30, a.O0.LengthDelimited).fork(),
+                        n,
+                    )
+                    .join(),
             "outboundPromotionClaimModalCard" === e.properties.oneofKind &&
                 I.internalBinaryWrite(
                     e.properties.outboundPromotionClaimModalCard,

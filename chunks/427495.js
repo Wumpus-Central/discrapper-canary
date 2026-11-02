@@ -16,7 +16,7 @@
     yO: () => eC,
     Fr: () => eN,
     Oy: () => es,
-    Gn: () => em,
+    Gn: () => eT,
     uI: () => eO,
     L4: () => eI,
     zh: () => eM,
@@ -24,7 +24,7 @@
     g5: () => e_,
     vD: () => ee,
     qV: () => eU,
-    HA: () => eT,
+    HA: () => em,
     Yf: () => ev,
     Ov: () => en,
     QG: () => eg,
@@ -51,8 +51,8 @@ var i,
     f = n(881615),
     I = n(390595),
     p = n(69114),
-    T = n(633965),
-    m = n(27620),
+    m = n(633965),
+    T = n(27620),
     g = n(463347),
     S = n(310829),
     N = n(383394),
@@ -492,7 +492,7 @@ async function e_(e, t) {
                     rejectWithError: !1,
                 });
             (o.h.dispatch({ type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: (0, q.tp)(i.body) }),
-                J.has(t) && (0, m.hs)(s.w.QUEST_DISMISSED, { quest_id: e }));
+                J.has(t) && (0, T.hs)(s.w.QUEST_DISMISSED, { quest_id: e }));
         } catch (t) {
             o.h.dispatch({ type: "QUESTS_DISMISS_CONTENT_FAILURE", error: new d.A(t), questId: e });
         }
@@ -533,7 +533,7 @@ function eI(e, t) {
 function ep(e, t) {
     o.h.dispatch({ type: "QUESTS_SELECT_TASK_PLATFORM", questId: e, platform: t });
 }
-async function eT() {
+async function em() {
     if (!V.A.isFetchingClaimedQuests) {
         o.h.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
         try {
@@ -546,7 +546,7 @@ async function eT() {
         }
     }
 }
-function em(e, t, n) {
+function eT(e, t, n) {
     o.h.dispatch({ type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS", questId: e, taskEventName: t, progress: n });
 }
 function eg(e) {
@@ -561,8 +561,8 @@ async function eS(e, t) {
             c = await (0, I.Ht)(),
             E = await (0, f.sN)(),
             A = z.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }),
-            m = (0, T.pc)(),
-            S = null != m ? m() : [],
+            T = (0, m.pc)(),
+            S = null != T ? T() : [],
             L = O.Ay.getGuildsTree(),
             y = S.filter((e) => {
                 if ((0, g.tZ)(e)) return !1;

@@ -10,8 +10,8 @@ var d = n(158390),
 let f = 30 * A.A.Millis.SECOND,
     I = 10 * A.A.Millis.MINUTE,
     p = null,
-    T = !1;
-function m() {
+    m = !1;
+function T() {
     ((i = new Map()),
         (r = 0),
         (a = new Map()),
@@ -19,12 +19,12 @@ function m() {
         (l = new Map()),
         (o = new Map()),
         (p = null),
-        (T = !1));
+        (m = !1));
 }
 function g(e, t) {
     (i = new Map(i)).set(e, t);
 }
-m();
+T();
 class S extends _.Ay.Store {
     static displayName = "AdDeliveryStore";
     get lastFetchedQuestToDeliver() {
@@ -45,7 +45,7 @@ class S extends _.Ay.Store {
         return null == t ? null : t.fetchedAt + t.ttlMillis >= Date.now() ? t : null;
     }
     isFetchingQuestHomeHero() {
-        return T;
+        return m;
     }
     getLastFetchedQuestHomeHero() {
         return p;
@@ -57,7 +57,7 @@ class S extends _.Ay.Store {
 }
 let N = new S(E.h, {
     LOGOUT: function () {
-        m();
+        T();
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function (e) {
         let { placement: t } = e;
@@ -93,7 +93,7 @@ let N = new S(E.h, {
                 : s.delete(c),
             l.get(c)?.succeed(),
             o.delete(c));
-        let T = {
+        let m = {
             creative: n ?? null,
             fetchedAt: p,
             ttlMillis: (0, h.Ce)(E),
@@ -103,7 +103,7 @@ let N = new S(E.h, {
             trafficMetadataSealed: f,
             provenanceMetadataSealed: I,
         };
-        (a = new Map(a)).set(c, T);
+        (a = new Map(a)).set(c, m);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
         let { placement: t } = e;
@@ -119,10 +119,10 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
         let { placement: t } = e;
-        ((T = !0), g(t, !0));
+        ((m = !0), g(t, !0));
     },
     QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function (e) {
-        ((T = !1), (p = Date.now()), g(e.placement, !1), l.get(e.placement)?.succeed(), o.delete(e.placement));
+        ((m = !1), (p = Date.now()), g(e.placement, !1), l.get(e.placement)?.succeed(), o.delete(e.placement));
         let t = {
             creative: null != e.questHomeHero ? { type: c.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
             fetchedAt: e.fetchedAt,
@@ -137,7 +137,7 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
         let { placement: t } = e;
-        ((T = !1), g(t, !1));
+        ((m = !1), g(t, !1));
         let n = l.get(t);
         (null == n && ((n = new d.A(f, I)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },

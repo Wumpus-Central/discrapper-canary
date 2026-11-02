@@ -116,7 +116,7 @@ function f(e, t) {
 function I(e, t, n, i, s, l) {
     if (t.signal?.aborted) {
         let e = Object.assign(Error("Request aborted", { cause: l }), { code: "ABORTED" });
-        (m(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
+        (T(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
         return;
     }
     let o = r()[e](t.url);
@@ -178,7 +178,7 @@ function I(e, t, n, i, s, l) {
                     status: r.status,
                     retryAfter: f(r.headers, r.body),
                 };
-                m(t, a);
+                T(t, a);
                 let o = !1,
                     u = (r, a) => {
                         let d = { ...t, headers: { ...t.headers, ...r }, interceptResponse: a };
@@ -213,7 +213,7 @@ function I(e, t, n, i, s, l) {
             (e) => {
                 null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code
                     ? c()
-                    : (m(t),
+                    : (T(t),
                       null != l && null == e.cause && (e.cause = l),
                       i(e),
                       null != s && s({ ok: !1, hasErr: !0, err: e }));
@@ -222,7 +222,7 @@ function I(e, t, n, i, s, l) {
         t.signal?.aborted ? o.abort() : t.signal?.addEventListener("abort", () => o.abort(), { once: !0 }));
 }
 let p = new Map();
-function T(e) {
+function m(e) {
     let t = p.get(e);
     if (null == t)
         return void _.verbose(
@@ -237,7 +237,7 @@ function T(e) {
     }
     (_.verbose("rateLimitExpirationHandler: moving to next record for ", e), n());
 }
-function m(e, t) {
+function T(e, t) {
     var n;
     let i = p.get(e.url);
     if (null != t && ((n = t.status), A.has(n))) {
@@ -249,7 +249,7 @@ function m(e, t) {
             return void _.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
         (null != i && (_.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(i.timeoutId)),
             _.verbose(`cleanupRequestEntry: rate limit for ${e.url} retry after ${s}ms`));
-        let o = setTimeout(() => T(e.url), s);
+        let o = setTimeout(() => m(e.url), s);
         p.set(e.url, {
             queue: i?.queue ?? [],
             retryAfterTimestamp: l,
@@ -261,7 +261,7 @@ function m(e, t) {
     } else
         null != i &&
             i.retryAfterTimestamp < Date.now() &&
-            (_.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), T(e.url));
+            (_.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), m(e.url));
 }
 function g(e, t, n) {
     let i = Error(`HTTP ${e.toUpperCase()} initiated here`);

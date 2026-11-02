@@ -62,9 +62,9 @@
     UC: () => ee,
     e1: () => e5,
     PK: () => eM,
-    z4: () => eT,
+    z4: () => em,
     LE: () => eB,
-    ys: () => em,
+    ys: () => eT,
     U8: () => et,
     tS: () => ek,
     EJ: () => C,
@@ -87,21 +87,21 @@ var i,
     f = n(367888),
     I = n(441574),
     p = n(255438),
-    T = n(836714),
-    m = n(219882),
+    m = n(836714),
+    T = n(219882),
     g = n(349871),
     S = n(202541),
     N = (((i = {}).MID = "mid"), (i.HIGH = "high"), i);
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { useSpace: !0 },
-        n = e === S.PremiumTypes.TIER_2 ? (0, m.ew)({ location: "getMaxFileSizeForPremiumType" }) : S.f5[e].fileSize;
+        n = e === S.PremiumTypes.TIER_2 ? (0, T.ew)({ location: "getMaxFileSizeForPremiumType" }) : S.f5[e].fileSize;
     return (0, p.Xq)(n / 1024, { useKibibytes: !0, useSpace: t.useSpace });
 }
 function O(e) {
-    return (0, T.RM)(T.G5, e);
+    return (0, m.RM)(m.G5, e);
 }
 function R(e) {
-    return (0, T.RM)(T.G3, e);
+    return (0, m.RM)(m.G3, e);
 }
 var L = n(832946),
     y = n(287809),
@@ -452,37 +452,37 @@ function eu(e) {
                 !h),
         I = null != i && null == t.paymentGateway,
         p = t.status === k.Dmq.UNPAID && null !== t.latestInvoice && t.latestInvoice?.status === k.lT7.OPEN,
-        T = f ? k.Dmq.CANCELED : p ? k.Dmq.UNPAID : t.status,
-        m = l?.taxInclusive ?? t.latestInvoice?.taxInclusive ?? !0,
+        m = f ? k.Dmq.CANCELED : p ? k.Dmq.UNPAID : t.status,
+        T = l?.taxInclusive ?? t.latestInvoice?.taxInclusive ?? !0,
         g = S.M4 + (r ? ef(t.additionalPlans) : 0),
         N = I
-            ? m
+            ? T
                 ? V.intl.format(V.t["cd+hqB"], { price: i })
                 : V.intl.format(V.t.NUkcpF, { price: i })
             : V.intl.string(V.t.zYx3Y6),
         C = I
-            ? m
+            ? T
                 ? V.intl.format(V.t.VsKcFB, { price: i })
                 : V.intl.format(V.t.hJ5xEX, { price: i })
             : V.intl.string(V.t["8rSipI"]),
         O = I
-            ? m
+            ? T
                 ? V.intl.format(V.t["jRy6/J"], { price: i, num: g })
                 : V.intl.format(V.t.tTNE8M, { price: i, num: g })
             : V.intl.format(V.t["U+z/HJ"], { num: g });
     switch (n) {
         case S.gD.PREMIUM_MONTH_TIER_0:
         case S.gD.PREMIUM_YEAR_TIER_0:
-            switch (T) {
+            switch (m) {
                 case k.Dmq.CANCELED:
                     return I
-                        ? m
+                        ? T
                             ? V.intl.format(V.t["USi/nc"], { price: i })
                             : V.intl.format(V.t["FS//l2"], { price: i })
                         : V.intl.string(V.t.JshLzq);
                 case k.Dmq.ACCOUNT_HOLD:
                     return I
-                        ? m
+                        ? T
                             ? V.intl.format(V.t["5mv+2i"], { price: i })
                             : V.intl.format(V.t.nkAEfZ, { price: i })
                         : V.intl.format(V.t.SsLIXS, {});
@@ -508,16 +508,16 @@ function eu(e) {
             }
         case S.gD.PREMIUM_MONTH_TIER_1:
         case S.gD.PREMIUM_YEAR_TIER_1:
-            switch (T) {
+            switch (m) {
                 case k.Dmq.CANCELED:
                     return I
-                        ? m
+                        ? T
                             ? V.intl.format(V.t.cXy8Bp, { price: i })
                             : V.intl.format(V.t["C/XsHt"], { price: i })
                         : V.intl.string(V.t.K6tYFa);
                 case k.Dmq.ACCOUNT_HOLD:
                     return I
-                        ? m
+                        ? T
                             ? V.intl.format(V.t.HBkIBi, { price: i })
                             : V.intl.format(V.t.ZsO1Sx, { price: i })
                         : V.intl.format(V.t["0+/WH7"], {});
@@ -546,16 +546,16 @@ function eu(e) {
         case S.gD.PREMIUM_3_MONTH_TIER_2:
         case S.gD.PREMIUM_6_MONTH_TIER_2:
         case S.gD.PREMIUM_GROUP_MONTH:
-            switch (T) {
+            switch (m) {
                 case k.Dmq.CANCELED:
                     return I
-                        ? m
+                        ? T
                             ? V.intl.format(V.t.xoFgRh, { price: i, num: g })
                             : V.intl.format(V.t.nXdbKo, { price: i, num: g })
                         : V.intl.format(V.t.EcSdRH, { num: g });
                 case k.Dmq.ACCOUNT_HOLD:
                     return I
-                        ? m
+                        ? T
                             ? V.intl.format(V.t["5C/0QG"], { price: i, num: g })
                             : V.intl.format(V.t.xfYkhu, { price: i, num: g })
                         : V.intl.format(V.t.ivjxcn, { num: g });
@@ -588,7 +588,7 @@ function eu(e) {
                                   regularPrice: A,
                                   renewalDate: eN(t, _),
                               })
-                            : m
+                            : T
                               ? V.intl.formatToPlainString(V.t["3ZiutU"], {
                                     percent: s?.percentage ?? S._$,
                                     regularPrice: A,
@@ -728,11 +728,11 @@ let eI = new Set([
 function ep(e) {
     return eI.has(e);
 }
-function eT(e) {
+function em(e) {
     return S.pW.has(e);
 }
-function em(e) {
-    return ep(e) || eT(e);
+function eT(e) {
+    return ep(e) || em(e);
 }
 function eg(e) {
     return null != e && e === S.gD.PREMIUM_GROUP_MONTH;
@@ -843,21 +843,21 @@ function ev(e) {
         t = null != e ? (0, x.$g)(e, n.currency) : void 0;
     }
     let p = n.isPurchasedExternally || I,
-        T = null != t ? (0, x.CE)(t, _.interval, _.intervalCount) : "",
-        m = a?.taxInclusive ?? n.latestInvoice?.taxInclusive ?? !0;
+        m = null != t ? (0, x.CE)(t, _.interval, _.intervalCount) : "",
+        T = a?.taxInclusive ?? n.latestInvoice?.taxInclusive ?? !0;
     if (eD(n))
         return p
             ? V.intl.format(V.t["3/WTrI"], { quantity: E })
-            : m
-              ? V.intl.format(V.t["0ozBSB"], { quantity: E, rate: T })
-              : V.intl.format(V.t["yjsv/s"], { quantity: E, rate: T });
+            : T
+              ? V.intl.format(V.t["0ozBSB"], { quantity: E, rate: m })
+              : V.intl.format(V.t["yjsv/s"], { quantity: E, rate: m });
     switch (n.status) {
         case k.Dmq.ACCOUNT_HOLD:
             return p
                 ? V.intl.format(V.t.Nlf3nc, { quantity: E, boostQuantity: E })
-                : m
-                  ? V.intl.format(V.t.oiRy7v, { quantity: E, boostQuantity: E, rate: T })
-                  : V.intl.format(V.t["0QxOAi"], { quantity: E, boostQuantity: E, rate: T });
+                : T
+                  ? V.intl.format(V.t.oiRy7v, { quantity: E, boostQuantity: E, rate: m })
+                  : V.intl.format(V.t["0QxOAi"], { quantity: E, boostQuantity: E, rate: m });
         case k.Dmq.PAUSE_PENDING:
         case k.Dmq.PAUSED:
             if (null != s && !s.isFractionalPremiumActive) return V.intl.string(V.t.CduWAm);
@@ -873,14 +873,14 @@ function ev(e) {
         default:
             if (f) {
                 if (p) return V.intl.format(V.t["krRy+d"], { activeQuantity: A, pendingQuantity: h });
-                let e = m ? V.t["4nc7+E"] : V.t.BmaudS;
-                return V.intl.format(e, { activeQuantity: A, pendingQuantity: h, rate: T });
+                let e = T ? V.t["4nc7+E"] : V.t.BmaudS;
+                return V.intl.format(e, { activeQuantity: A, pendingQuantity: h, rate: m });
             }
             return p
                 ? V.intl.format(V.t["5iud9s"], { quantity: E })
-                : m
-                  ? V.intl.format(V.t.eDwrLA, { quantity: E, rate: T })
-                  : V.intl.format(V.t.ijSDcI, { quantity: E, rate: T });
+                : T
+                  ? V.intl.format(V.t.eDwrLA, { quantity: E, rate: m })
+                  : V.intl.format(V.t.ijSDcI, { quantity: E, rate: m });
     }
 }
 function eb(e, t, n) {
@@ -1453,71 +1453,71 @@ let tr = Object.freeze({
         return Math.max(1, Math.ceil((0, U.c_)(new Date(e.currentPeriodEnd), new Date())));
     },
     canUseAnimatedEmojis: function (e) {
-        return (0, T.RM)(T.gQ, e);
+        return (0, m.RM)(m.gQ, e);
     },
     canUseEmojisEverywhere: function (e) {
-        return (0, T.RM)(T.JK, e);
+        return (0, m.RM)(m.JK, e);
     },
     canUseSoundboardEverywhere: function (e) {
-        return (0, T.RM)(T.He, e);
+        return (0, m.RM)(m.He, e);
     },
     canUseCustomCallSounds: function (e) {
-        return (0, T.RM)(T.ii, e);
+        return (0, m.RM)(m.ii, e);
     },
     canUploadLargeFiles: function (e) {
-        return (0, T.RM)(T.u6, e);
+        return (0, m.RM)(m.u6, e);
     },
     canUseBadges: function (e) {
-        return (0, T.RM)(T.nI, e);
+        return (0, m.RM)(m.nI, e);
     },
     canUseHighVideoUploadQuality: function (e) {
-        return (0, T.RM)(T.DG, e);
+        return (0, m.RM)(m.DG, e);
     },
     canEditDiscriminator: function (e) {
-        return (0, T.RM)(T.nh, e);
+        return (0, m.RM)(m.nh, e);
     },
     hasBoostDiscount: function (e) {
-        return (0, T.RM)(T._V, e);
+        return (0, m.RM)(m._V, e);
     },
     canUseAnimatedAvatar: function (e) {
-        return (0, T.RM)(T.OW, e);
+        return (0, m.RM)(m.OW, e);
     },
     canInstallPremiumApplications: function (e) {
-        return (0, T.RM)(T._w, e);
+        return (0, m.RM)(m._w, e);
     },
     canUseIncreasedMessageLength: function (e) {
-        return (0, T.RM)(T.Qz, e);
+        return (0, m.RM)(m.Qz, e);
     },
     canUseIncreasedGuildCap: function (e) {
-        return (0, T.RM)(T.Pm, e);
+        return (0, m.RM)(m.Pm, e);
     },
     canRedeemPremiumPerks: function (e) {
-        return (0, T.RM)(T.x, e);
+        return (0, m.RM)(m.x, e);
     },
     canUsePremiumProfileCustomization: function (e) {
-        return (0, T.RM)(T.cS, e);
+        return (0, m.RM)(m.cS, e);
     },
     canUsePremiumAppIcons: function (e) {
-        return (0, T.RM)(T.T7, e);
+        return (0, m.RM)(m.T7, e);
     },
     canUsePremiumGuildMemberProfile: function (e) {
-        return (0, T.RM)(T.lx, e);
+        return (0, m.RM)(m.lx, e);
     },
     canUseClientThemes: function (e) {
-        return (0, T.RM)(T.zL, e);
+        return (0, m.RM)(m.zL, e);
     },
     canStreamQuality: function (e, t) {
-        return "high" === e ? (0, T.RM)(T.sj, t) : (0, T.RM)(T.II, t);
+        return "high" === e ? (0, m.RM)(m.sj, t) : (0, m.RM)(m.II, t);
     },
     canUseQuestOrbMultiplier: O,
     hasFreeBoosts: function (e) {
-        return (0, T.RM)(T.aE, e);
+        return (0, m.RM)(m.aE, e);
     },
     canUseCustomStickersEverywhere: function (e) {
-        return (0, T.RM)(T.GS, e);
+        return (0, m.RM)(m.GS, e);
     },
     canUseCustomBackgrounds: function (e) {
-        return (0, T.RM)(T.Zc, e);
+        return (0, m.RM)(m.Zc, e);
     },
     canUseCollectibles: R,
     canUseMonthlyOrbs: function (e) {

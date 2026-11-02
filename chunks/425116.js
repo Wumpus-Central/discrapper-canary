@@ -58,7 +58,7 @@ function p() {
                   Math.max(0, (e.minutesUntil - 16) * 6e4),
               )));
 }
-function T() {
+function m() {
     let e = E();
     e !== A &&
         ((A = e),
@@ -66,7 +66,7 @@ function T() {
         A ? (0, c.openRestrictedHoursModal)() : (0, c.k)(),
         p());
 }
-function m() {
+function T() {
     ((A = !1),
         (I = null),
         i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: !1 }),
@@ -74,7 +74,7 @@ function m() {
         null != f && (clearTimeout(f), (f = null)));
 }
 function g() {
-    (T(), p());
+    (m(), p());
 }
 function S() {
     p();
@@ -85,13 +85,13 @@ class N extends r.A {
         POST_CONNECTION_OPEN: g,
         CURRENT_USER_UPDATE: g,
         NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: S,
-        LOGOUT: m,
+        LOGOUT: T,
     };
     _initialize() {
         ((A = E()),
             i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: A }),
             A && (0, c.openRestrictedHoursModal)(),
-            (h = setInterval(T, 6e4)),
+            (h = setInterval(m, 6e4)),
             p());
     }
     _terminate() {

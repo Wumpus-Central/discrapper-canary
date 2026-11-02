@@ -15,8 +15,8 @@ var i,
     f = n(73153),
     I = n(766034),
     p = n(314732),
-    T = n(214771),
-    m = n(937724),
+    m = n(214771),
+    T = n(937724),
     g = n(626584),
     S = n(807393),
     N = n(464578),
@@ -1098,8 +1098,8 @@ function ef(e) {
 n(667532);
 var eI = n(499979),
     ep = n(877166),
-    eT = n(365971),
-    em = n(435558),
+    em = n(365971),
+    eT = n(435558),
     eg =
         (((i = {}).LONGER_DISPATCH = "longer_dispatch"),
         (i.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
@@ -1141,16 +1141,16 @@ let eC = Object.freeze({
         skip_idle_callback_due_to_backgrounded: 0,
     });
 class ey {
-    _timeTracking = (0, em.cloneDeep)(eC);
-    _timingStats = (0, em.cloneDeep)(eO);
-    _measurements = (0, em.cloneDeep)(eR);
-    _eventCounts = (0, em.cloneDeep)(eL);
+    _timeTracking = (0, eT.cloneDeep)(eC);
+    _timingStats = (0, eT.cloneDeep)(eO);
+    _measurements = (0, eT.cloneDeep)(eR);
+    _eventCounts = (0, eT.cloneDeep)(eL);
     _enabled = !1;
     reset() {
-        ((this._timeTracking = (0, em.cloneDeep)(eC)),
-            (this._timingStats = (0, em.cloneDeep)(eO)),
-            (this._measurements = (0, em.cloneDeep)(eR)),
-            (this._eventCounts = (0, em.cloneDeep)(eL)));
+        ((this._timeTracking = (0, eT.cloneDeep)(eC)),
+            (this._timingStats = (0, eT.cloneDeep)(eO)),
+            (this._measurements = (0, eT.cloneDeep)(eR)),
+            (this._eventCounts = (0, eT.cloneDeep)(eL)));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -1354,7 +1354,7 @@ class eF extends ew {
         (super(),
             f.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
-                n === (0, eT.Xg)() && this._trackAppBackgrounded(!t);
+                n === (0, em.Xg)() && this._trackAppBackgrounded(!t);
             }));
     }
     _queueIdleCallback() {
@@ -1618,8 +1618,8 @@ class e$ {
                         f = [],
                         I = [],
                         p = [],
-                        T = [],
                         m = [],
+                        T = [],
                         g = [],
                         S = [];
                     return (
@@ -1631,8 +1631,8 @@ class e$ {
                                 f.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
                                 I.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
-                                T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                m.push(t),
+                                m.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
+                                T.push(t),
                                 g.push(r),
                                 S.push(a, n));
                         }),
@@ -1652,9 +1652,9 @@ class e$ {
                             guild_roles_size: JSON.stringify(f).length,
                             guild_emojis_size: JSON.stringify(I).length,
                             guild_threads_size: JSON.stringify(p).length,
-                            guild_stickers_size: JSON.stringify(T).length,
+                            guild_stickers_size: JSON.stringify(m).length,
                             guild_events_size: JSON.stringify(g).length,
-                            guild_features_size: JSON.stringify(m).length,
+                            guild_features_size: JSON.stringify(T).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -2573,9 +2573,9 @@ class tf extends eQ {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, m.O)() ? I.A.getCommittedVersions() : {},
-                (0, m.O)() ? T.A.getCommittedVersions() : {},
-                !!(0, m.O)() && p.A.canUseGuildVersions(),
+                (0, T.O)() ? I.A.getCommittedVersions() : {},
+                (0, T.O)() ? m.A.getCommittedVersions() : {},
+                !!(0, T.O)() && p.A.canUseGuildVersions(),
             ]),
             a = (function (e, t) {
                 let n;

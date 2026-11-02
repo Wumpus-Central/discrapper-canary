@@ -60,14 +60,14 @@ var r,
         (d.QUARANTINE_USER = "quarantine_user"),
         (d.BLOCK_GUEST_JOIN = "block_guest_join"),
         d),
-    T =
+    m =
         (((c = {}).BIO = "bio"),
         (c.USERNAME = "username"),
         (c.NICKNAME = "nickname"),
         (c.GLOBAL_NAME = "display_name"),
         (c.CLAN_TAG = "clan_tag"),
         c),
-    m = n(17928),
+    T = n(17928),
     g = n(47167),
     S = n(734057),
     N = n(576705),
@@ -121,7 +121,7 @@ function M(e, t) {
             if (null != t) return t;
         })(e),
         f = P(e, h.INTERACTION_CALLBACK_TYPE),
-        T = P(e, h.APPLICATION_NAME);
+        m = P(e, h.APPLICATION_NAME);
     if (null != c) {
         let e = (function (e, t, n) {
             switch (t) {
@@ -155,8 +155,8 @@ function M(e, t) {
         })(l, o, d);
         if (null != e) return e;
     }
-    let m = N.A.can(y.xBc.VIEW_CHANNEL, t);
-    n = null == t ? (e) => e : m ? i : y.FXj;
+    let T = N.A.can(y.xBc.VIEW_CHANNEL, t);
+    n = null == t ? (e) => e : T ? i : y.FXj;
     let S = (function (e, t, n) {
         let i = P(e, h.VOICE_CHANNEL_STATUS_OUTCOME);
         if (null == i) return null;
@@ -172,24 +172,24 @@ function M(e, t) {
     })(e, s, i);
     return null != R
         ? R
-        : null != T
+        : null != m
           ? f === A.MODAL && null != a
               ? u !== E.BLOCKED
                   ? D.intl.format(D.t["4xL9Sk"], {
-                        applicationName: T,
+                        applicationName: m,
                         interactionUserHook: a,
                         integrationOwnerHook: r,
                     })
-                  : D.intl.format(D.t.S3lNIT, { applicationName: T, interactionUserHook: a, integrationOwnerHook: r })
+                  : D.intl.format(D.t.S3lNIT, { applicationName: m, interactionUserHook: a, integrationOwnerHook: r })
               : u !== E.BLOCKED
                 ? D.intl.format(D.t.AXQufN, {
-                      applicationName: T,
+                      applicationName: m,
                       channelName: s,
                       channelHook: n,
                       integrationOwnerHook: r,
                   })
                 : D.intl.format(D.t.s3tjMN, {
-                      applicationName: T,
+                      applicationName: m,
                       channelName: s,
                       channelHook: n,
                       integrationOwnerHook: r,
@@ -200,13 +200,13 @@ function M(e, t) {
 }
 function U(e) {
     switch (e) {
-        case T.NICKNAME:
+        case m.NICKNAME:
             return D.intl.string(D.t["fkBQa/"]);
-        case T.USERNAME:
+        case m.USERNAME:
             return D.intl.string(D.t.pJQVnr);
-        case T.GLOBAL_NAME:
+        case m.GLOBAL_NAME:
             return D.intl.string(D.t.V9eJ85);
-        case T.CLAN_TAG:
+        case m.CLAN_TAG:
             return D.intl.string(D.t.Rtum01);
         default:
             return D.intl.string(D.t.pJQVnr);
@@ -260,7 +260,7 @@ function G(e) {
 }
 function x(e) {
     let t = u.useMemo(() => G(e), [e]),
-        n = (0, m.bG)([S.A], () => S.A.getChannel(t.embedChannelId), [t.embedChannelId]);
+        n = (0, T.bG)([S.A], () => S.A.getChannel(t.embedChannelId), [t.embedChannelId]);
     return { ...t, embedChannel: n };
 }
 function k(e) {

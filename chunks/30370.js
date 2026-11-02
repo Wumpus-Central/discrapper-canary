@@ -48,10 +48,10 @@ let u = new Set([n(652215).fg2.CONTACTS]),
     f = new Set(),
     I = {},
     p = {};
-function T(e) {
+function m(e) {
     ((E = e.filter((e) => !u.has(e.type) && a.A.isSupported(e.type))), (A = e.filter((e) => u.has(e.type))), (_ = !1));
 }
-class m extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "ConnectedAccountsStore";
     isJoining(e) {
         return h[e] || !1;
@@ -87,13 +87,13 @@ class m extends i.Ay.Store {
         return f.has(e);
     }
 }
-let g = new m(r.h, {
+let g = new T(r.h, {
     CONNECTION_OPEN: function (e) {
-        T(e.connectedAccounts.map((e) => new d(e)));
+        m(e.connectedAccounts.map((e) => new d(e)));
     },
     USER_CONNECTIONS_UPDATE: function (e) {
         e.local && null != e.accounts
-            ? T(
+            ? m(
                   e.accounts.map(
                       (e) =>
                           new d({

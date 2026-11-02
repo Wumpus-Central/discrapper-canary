@@ -17,14 +17,14 @@ let h = !1,
     f = {},
     I = {},
     p = new Set(),
-    T = {},
     m = {},
+    T = {},
     g = !1;
 function S() {
-    l.w.set(E, { ...A(), activeLaunchOptionIds: m });
+    l.w.set(E, { ...A(), activeLaunchOptionIds: T });
 }
 function N() {
-    l.w.set(E, { ...A(), activeLibraryApplicationBranchIds: T });
+    l.w.set(E, { ...A(), activeLibraryApplicationBranchIds: m });
 }
 function C(e) {
     for (let t of e) {
@@ -51,8 +51,8 @@ class y extends s.Ay.Store {
         this.waitFor(u.default);
         let e = l.w.get(E);
         null != e &&
-            (null == e.activeLaunchOptionIds ? S() : (m = e.activeLaunchOptionIds),
-            null == e.activeLibraryApplicationBranchIds ? N() : (T = e.activeLibraryApplicationBranchIds));
+            (null == e.activeLaunchOptionIds ? S() : (T = e.activeLaunchOptionIds),
+            null == e.activeLibraryApplicationBranchIds ? N() : (m = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         var e;
@@ -83,7 +83,7 @@ class y extends s.Ay.Store {
     }
     getActiveLibraryApplication(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = T[e];
+            n = m[e];
         if (null != n) {
             let i = (0, c.gW)(e, n),
                 r = f[i] ?? I[i];
@@ -100,7 +100,7 @@ class y extends s.Ay.Store {
         return p.has((0, c.gW)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
-        return m[(0, c.gW)(e, t)];
+        return T[(0, c.gW)(e, t)];
     }
     get fetched() {
         return h;
@@ -143,12 +143,12 @@ let D = new y(o.h, {
     LIBRARY_APPLICATION_UPDATE: O,
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
         let { applicationId: t, branchId: n, launchOptionId: i } = e;
-        ((m[(0, c.gW)(t, n)] = i), S());
+        ((T[(0, c.gW)(t, n)] = i), S());
     },
     LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function (e) {
         let { applicationId: t, branchId: n } = e;
-        if (T[t] === n) return !1;
-        ((T[t] = n), N());
+        if (m[t] === n) return !1;
+        ((m[t] = n), N());
     },
     LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function (e) {
         let { libraryApplications: t } = e;

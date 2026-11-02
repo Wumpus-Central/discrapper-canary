@@ -30,14 +30,14 @@ function h(e) {
 var f = n(36149),
     I = n(462924),
     p = n(895595),
-    T = n(40449);
-function m(e) {
+    m = n(40449);
+function T(e) {
     if (null != e) return (0, f.Sr)(e) ? r.F.LIGHTBOX : void 0;
 }
 function g(e) {
     var t;
     let { entryPoint: r, onClose: s, onComplete: o, onCancel: d, incodeParameters: c } = e,
-        u = (t = c?.method) === T.VF.FACIAL_AGE_ESTIMATION || t === T.VF.ID_VERIFICATION ? c.method : null,
+        u = (t = c?.method) === m.VF.FACIAL_AGE_ESTIMATION || t === m.VF.ID_VERIFICATION ? c.method : null,
         _ =
             null != c && null != u
                 ? {
@@ -79,7 +79,7 @@ function g(e) {
                       })
                     : (0, i.jsx)(e, { pickerMode: !0, entryPoint: r, onComplete: o, onCancel: d, ...t });
         },
-        { modalKey: T.SW, onCloseCallback: s, backdropStyle: m(r), Layer: l.Ay },
+        { modalKey: m.SW, onCloseCallback: s, backdropStyle: T(r), Layer: l.Ay },
     );
 }
 function S(e) {
@@ -92,7 +92,7 @@ function S(e) {
         incodeParameters: c,
         ...u
     } = e;
-    if (d === T.XM.INCODE && h(r))
+    if (d === m.XM.INCODE && h(r))
         return (
             !!(
                 null != c &&
@@ -105,7 +105,7 @@ function S(e) {
     if (null == o) return !1;
     let _ = s || E(r),
         A = _ && (0, I.d)(r),
-        f = { modalKey: T.SW, onCloseCallback: t, backdropStyle: m(r), Layer: l.Ay, dismissable: !A };
+        f = { modalKey: m.SW, onCloseCallback: t, backdropStyle: T(r), Layer: l.Ay, dismissable: !A };
     return (
         _
             ? (0, a.openModalLazy)(async () => {
@@ -133,7 +133,7 @@ function N(e, t) {
             let { default: e } = await Promise.all([n.e("792899"), n.e("409609")]).then(n.bind(n, 475376));
             return (t) => (0, i.jsx)(e, { ...t });
         },
-        { modalKey: T.NC, backdropStyle: m(e), Layer: l.Ay, onCloseCallback: t },
+        { modalKey: m.NC, backdropStyle: T(e), Layer: l.Ay, onCloseCallback: t },
     );
 }
 let C = {
@@ -173,7 +173,7 @@ let C = {
                           ]).then(n.bind(n, 188602));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
                   );
               })()
             : (0, f.Q9)() && (0, o.u0)()
@@ -191,7 +191,7 @@ let C = {
                         ]).then(n.bind(n, 297102));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
-                    { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                    { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
                 )
               : E(r)
                 ? (0, a.openModalLazy)(
@@ -210,7 +210,7 @@ let C = {
                           ]).then(n.bind(n, 595746));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
                   )
                 : (0, a.openModalLazy)(
                       async () => {
@@ -226,13 +226,13 @@ let C = {
                           ]).then(n.bind(n, 272421));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
                   );
     },
     showManualReviewWebview: function (e, t) {
         return S({
             webviewUrl: e,
-            verificationVendorName: T.XM.K_ID,
+            verificationVendorName: m.XM.K_ID,
             entryPoint: c.q1.MANUAL_REVIEW,
             shouldShowExpressiveModal: !0,
             onComplete: () => {},
@@ -245,7 +245,7 @@ let C = {
                 let { default: t } = await Promise.all([n.e("792899"), n.e("226945")]).then(n.bind(n, 941656));
                 return (n) => (0, i.jsx)(t, { ...n, teenAgeRange: e });
             },
-            { modalKey: T.xO },
+            { modalKey: m.xO },
         );
     },
     showManualReviewPendingModal: function () {
@@ -254,7 +254,7 @@ let C = {
                 let { default: e } = await Promise.all([n.e("792899"), n.e("492758")]).then(n.bind(n, 174453));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
-            { modalKey: T.v7 },
+            { modalKey: m.v7 },
         );
     },
     showManualReviewFallbackModal: N,

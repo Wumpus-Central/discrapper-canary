@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => T });
 var i = n(17928),
     r = n(506774),
     a = n(73153),
@@ -27,7 +27,7 @@ function I() {
 function p() {
     return "miss" === _ && null != E && Date.now() - E < 864e5;
 }
-class T extends i.Ay.Store {
+class m extends i.Ay.Store {
     initialize() {
         this.waitFor(s.default);
     }
@@ -60,7 +60,7 @@ class T extends i.Ay.Store {
         return !("passed" === _ || "suppress" === _ || p());
     }
 }
-let m = new T(a.h, {
+let T = new m(a.h, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
         u = !0;
     },

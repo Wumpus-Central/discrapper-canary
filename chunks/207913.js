@@ -15,8 +15,8 @@ let d = {},
     f = !1,
     I = !1,
     p = [],
-    T = !1,
     m = !1,
+    T = !1,
     g = !1,
     S = !1,
     N = !1,
@@ -49,7 +49,7 @@ function G() {
         (O = o.Iv.DIDNT_VIOLATE_POLICY),
         (R = ""),
         (p = []),
-        (m = !1),
+        (T = !1),
         (g = !1),
         (P = o.qN.NONE),
         (D = 0),
@@ -91,10 +91,10 @@ class x extends a.Ay.Store {
         return p;
     }
     getIsExpressiveModalV2Enabled() {
-        return T;
+        return m;
     }
     getShowExpressiveModalSubtitleAlt() {
-        return m;
+        return T;
     }
     getIsManualReviewFallbackEnabled() {
         return g;
@@ -162,8 +162,8 @@ let k = new x(s.h, {
             (A = null),
             (L = s),
             (p = l),
-            (T = o),
-            (m = c),
+            (m = o),
+            (T = c),
             (g = h),
             (S = N));
     },

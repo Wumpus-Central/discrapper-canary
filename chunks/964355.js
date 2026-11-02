@@ -22,7 +22,7 @@ function u(e) {
             "aria-label": I,
         } = n,
         p = r.useRef(null),
-        T = r.useMemo(() => s().debounce(() => h?.(o.Q.SLIDER), 100), [h]);
+        m = r.useMemo(() => s().debounce(() => h?.(o.Q.SLIDER), 100), [h]);
     return (
         r.useImperativeHandle(
             t,
@@ -39,7 +39,7 @@ function u(e) {
                 tabIndex: E,
                 onChange: A,
                 onChangeEnd: function (e) {
-                    (A(e), T());
+                    (A(e), m());
                 },
                 formatValue: f,
                 passThroughVerticalArrowKeys: !0,

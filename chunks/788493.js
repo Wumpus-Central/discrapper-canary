@@ -1,7 +1,7 @@
-n.d(t, { U: () => o, c: () => i });
+n.d(t, { U: () => i, c: () => o });
 var r = n(73153),
     s = n(975189);
-let o = {
+let i = {
     live_reload(e, t) {
         let { projectId: n } = t;
         r.h.dispatch({
@@ -15,7 +15,7 @@ let o = {
         });
     },
 };
-function i(e, t) {
+function o(e, t) {
     let n = (0, s.KY)(e);
     try {
         if (null == n) throw Error("Not connected");

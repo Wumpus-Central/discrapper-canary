@@ -25,7 +25,7 @@ function I(e) {
     let { controls: t, children: n, listProps: a, onScroll: l, scrollerRef: E } = e,
         [h, f] = r.useState(!1),
         [I, p] = r.useState(!0),
-        [T, m] = r.useState(null != a),
+        [m, T] = r.useState(null != a),
         g = r.useRef(null),
         S = (0, d.A)(g, a?.ref, E),
         N = r.useRef(null),
@@ -53,18 +53,18 @@ function I(e) {
     return (
         r.useLayoutEffect(() => {
             let e = new (N?.current?.ownerDocument?.defaultView ?? window).ResizeObserver(() => {
-                    if (L) return void m(!0);
+                    if (L) return void T(!0);
                     let e = g?.current?.getScrollerNode() ?? null;
                     if (null == e || N?.current == null) return;
                     let t = e.getBoundingClientRect();
-                    m(N.current.getBoundingClientRect().height > t.height);
+                    T(N.current.getBoundingClientRect().height > t.height);
                 }),
                 t = g?.current?.getScrollerNode() ?? null;
             return (null != t && e.observe(t), N?.current != null && e.observe(N.current), () => e.disconnect());
         }, [L]),
         (0, i.jsxs)(c.F, {
             children: [
-                (0, i.jsx)("div", { className: s()(A.bodySpacerTop, { [A.bodySpacerTopBorder]: T && null == t }) }),
+                (0, i.jsx)("div", { className: s()(A.bodySpacerTop, { [A.bodySpacerTopBorder]: m && null == t }) }),
                 null != t && (0, i.jsx)("header", { className: s()(A.bodyControls, { [A.showFade]: h }), children: t }),
                 null != a
                     ? (0, i.jsx)(u.Ei, {
@@ -84,12 +84,12 @@ function I(e) {
                           disableFocusRingScope: !0,
                           children: (0, i.jsx)("main", {
                               ref: N,
-                              className: s()(A.bodyInner, { [A.bodyInnerShouldScroll]: T }),
+                              className: s()(A.bodyInner, { [A.bodyInnerShouldScroll]: m }),
                               children: n,
                           }),
                       }),
                 (0, i.jsx)("div", {
-                    className: s()(A.bodySpacerBottom, { [A.bodyScrollingSpacerBottom]: T, [A.showFade]: I }),
+                    className: s()(A.bodySpacerBottom, { [A.bodyScrollingSpacerBottom]: m, [A.showFade]: I }),
                 }),
             ],
         })

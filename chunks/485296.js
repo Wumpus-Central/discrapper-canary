@@ -20,10 +20,10 @@ function p(e, t) {
     let i = n.delete(t);
     return (0 === n.size && E.delete(e), i);
 }
-function T(e, t, n) {
+function m(e, t, n) {
     return ((E.get(e)?.get(t)?.flags ?? _.ME.NONE) & n) === n;
 }
-function m(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = E.get(e);
     if (null == i) return !1;
@@ -47,23 +47,23 @@ class S extends i.Ay.Store {
     }
     getSpeakers() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return Array.from(E.get(e)?.keys() ?? []).filter((t) => T(e, t, _.ME.VOICE));
+        return Array.from(E.get(e)?.keys() ?? []).filter((t) => m(e, t, _.ME.VOICE));
     }
     isSpeaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT;
-        return T(t, e, _.ME.VOICE);
+        return m(t, e, _.ME.VOICE);
     }
     isPrioritySpeaker(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT;
-        return T(t, e, _.ME.PRIORITY);
+        return m(t, e, _.ME.PRIORITY);
     }
     isSoundSharing(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT;
-        return T(t, e, _.ME.SOUNDSHARE);
+        return m(t, e, _.ME.SOUNDSHARE);
     }
     isAnyoneElseSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return m(e, _.ME.VOICE, !0);
+        return T(e, _.ME.VOICE, !0);
     }
     isCurrentUserSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
@@ -74,7 +74,7 @@ class S extends i.Ay.Store {
     }
     isAnyonePrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return m(e, _.ME.VOICE | _.ME.PRIORITY);
+        return T(e, _.ME.VOICE | _.ME.PRIORITY);
     }
     isCurrentUserPrioritySpeaker() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;

@@ -1,11 +1,11 @@
 n.d(t, {
-    Kv: () => T,
+    Kv: () => m,
     M9: () => f,
     MC: () => I,
     Ot: () => E,
     UW: () => A,
     Ub: () => h,
-    Wl: () => m,
+    Wl: () => T,
     YP: () => g,
     jR: () => u,
     kc: () => _,
@@ -153,13 +153,13 @@ function p(e) {
         emojis: [],
     };
 }
-function T() {
+function m() {
     let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [r.default],
         t = (0, o.tO)(),
         n = e.locale;
     return (t.find((e) => e.code === n) ?? t[0]).code;
 }
-async function m(e) {
+async function T(e) {
     let { loadId: t, guildId: n, index: i, categoryId: r, analyticsLocation: s, options: o } = e,
         c = { ...o, loadId: t };
     (await l.Z2(n, s, c),

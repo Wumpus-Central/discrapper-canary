@@ -9,8 +9,8 @@ var c = n(435558),
     f = n(717125),
     I = n(891897),
     p = n(976860),
-    T = n(95701),
-    m = n(403362),
+    m = n(95701),
+    T = n(403362),
     g = n(280450),
     S = n(734057),
     N = n(808728),
@@ -40,11 +40,11 @@ function G() {
             knownThreadIds: u()(b)
                 .values()
                 .concat(u().values(M))
-                .filter(m.Vq)
+                .filter(T.Vq)
                 .uniq()
                 .filter((e) => {
                     let t = S.A.getBasicChannel(e);
-                    return U.has(e) || (null != t && T.Le.has(t.type));
+                    return U.has(e) || (null != t && m.Le.has(t.type));
                 })
                 .value(),
         });
@@ -58,7 +58,7 @@ function x(e) {
 function k(e, t) {
     if (null == e || null == t || M[e] === t) return !1;
     let n = S.A.getChannel(t),
-        i = null != n && (0, T.ke)(n.type),
+        i = null != n && (0, m.ke)(n.type),
         r = n?.getGuildId() === e;
     return !!i && !!r && ((M[e] = t), !0);
 }
@@ -112,7 +112,7 @@ function j(e) {
 }
 function W(e) {
     if (!j(e)) return !1;
-    let t = T.Le.has(e.type),
+    let t = m.Le.has(e.type),
         n = t ? S.A.getChannel(e.parent_id) : null,
         i = null == n || j(n) ? null : n.id;
     return (V(e.id, e.guild_id, i, t, !1), !0);

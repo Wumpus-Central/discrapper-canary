@@ -42,8 +42,8 @@ function I(e) {
             size: l = h.MEDIUM,
             fullWidth: I = !1,
             grow: p = !0,
-            disabled: T = !1,
-            submitting: m = !1,
+            disabled: m = !1,
+            submitting: T = !1,
             type: g = "button",
             style: S,
             wrapperClassName: N,
@@ -65,7 +65,7 @@ function I(e) {
             submittingFinishedLabel: F,
             ...B
         } = e,
-        V = T || m,
+        V = m || T,
         H = V && (null != v || null != b),
         j =
             ((t = G?.offset),
@@ -83,35 +83,35 @@ function I(e) {
                       }),
         W = r.useRef(!1);
     r.useEffect(() => {
-        (!0 === m && ((W.current = !0), o.O.announce(k ?? u.intl.string(u.t.pfChQr))),
-            !1 === m && !0 === W.current && o.O.announce(F ?? u.intl.string(u.t.SVParY)));
-    }, [m, k, F]);
+        (!0 === T && ((W.current = !0), o.O.announce(k ?? u.intl.string(u.t.pfChQr))),
+            !1 === T && !0 === W.current && o.O.announce(F ?? u.intl.string(u.t.SVParY)));
+    }, [T, k, F]);
     let Y = (0, i.jsx)(d.vN, {
         ...G,
         offset: j,
         children: (0, i.jsxs)("button", {
             ...(V ? null : B),
             "aria-label": x,
-            "aria-busy": !!m || void 0,
+            "aria-busy": !!T || void 0,
             ref: w,
             onClick: V ? (e) => e.preventDefault() : R,
             onDoubleClick: V ? (e) => e.preventDefault() : L,
-            onMouseUp: T ? void 0 : D,
-            onMouseDown: T ? void 0 : y,
+            onMouseUp: m ? void 0 : D,
+            onMouseDown: m ? void 0 : y,
             onMouseEnter: v,
             onMouseLeave: b,
-            onKeyDown: T ? void 0 : P,
+            onKeyDown: m ? void 0 : P,
             type: g,
-            disabled: T,
+            disabled: m,
             style: S,
             rel: U,
             className: s()(
                 C,
-                f({ look: n, color: a, size: l, fullWidth: I, grow: p, submitting: m, disabled: T }),
+                f({ look: n, color: a, size: l, fullWidth: I, grow: p, submitting: T, disabled: m }),
                 H ? null : N,
             ),
             children: [
-                m && !T
+                T && !m
                     ? (0, i.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: _.u1, itemClassName: _.$N })
                     : null,
                 (0, i.jsx)("div", { className: s()(_.PG, O), children: M }),
@@ -141,8 +141,8 @@ function I(e) {
             to: f,
             onClick: I,
             onMouseDown: p,
-            onMouseUp: T,
-            children: m,
+            onMouseUp: m,
+            children: T,
             rel: g,
             ...S
         } = e;
@@ -150,11 +150,11 @@ function I(e) {
             ...S,
             to: f,
             onClick: I,
-            onMouseUp: T,
+            onMouseUp: m,
             onMouseDown: p,
             style: d,
             rel: g,
             className: s()(c, _.x6, t, n, r, { [_.Ij]: a, [_.wS]: o }),
-            children: (0, i.jsx)("span", { className: s()(_.PG, u), children: m }),
+            children: (0, i.jsx)("span", { className: s()(_.PG, u), children: T }),
         });
     }));

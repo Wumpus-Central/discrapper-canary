@@ -24,8 +24,8 @@ let h = (0, n(945810).mj)({
 var f = n(964404),
     I = n(544180),
     p = n(174459),
-    T = n(509929),
-    m = n(927813),
+    m = n(509929),
+    T = n(927813),
     g = n(209489),
     S = n(38405),
     N = n(292348),
@@ -184,17 +184,17 @@ class U extends C.Ay {
     retryOpts() {
         return this.item.platform === A.x.REACT_NATIVE
             ? {
-                  timeout: +m.A.Millis.HOUR,
-                  backoff: new l.A(0.5 * m.A.Millis.SECOND, 30 * m.A.Millis.MINUTE),
+                  timeout: +T.A.Millis.HOUR,
+                  backoff: new l.A(0.5 * T.A.Millis.SECOND, 30 * T.A.Millis.MINUTE),
                   retries: 12,
               }
-            : { timeout: +m.A.Millis.HOUR, retries: 12, backoff: new l.A() };
+            : { timeout: +T.A.Millis.HOUR, retries: 12, backoff: new l.A() };
     }
     createAttachmentUrlRetryOpts() {
         return this.item.platform === A.x.REACT_NATIVE
             ? {
-                  timeout: { response: 30 * m.A.Millis.SECOND, deadline: 30 * m.A.Millis.MINUTE },
-                  backoff: new l.A(0.5 * m.A.Millis.SECOND, 60 * m.A.Millis.SECOND),
+                  timeout: { response: 30 * T.A.Millis.SECOND, deadline: 30 * T.A.Millis.MINUTE },
+                  backoff: new l.A(0.5 * T.A.Millis.SECOND, 60 * T.A.Millis.SECOND),
                   retries: 8,
               }
             : this.retryOpts();
@@ -235,7 +235,7 @@ class U extends C.Ay {
             headers: { "Content-Range": "bytes */*" },
             rejectWithError: !0,
             retries: 0,
-            timeout: { deadline: 30 * m.A.Millis.SECOND },
+            timeout: { deadline: 30 * T.A.Millis.SECOND },
             signal: this._abortController.signal,
         };
         return await this._uploadHttpClient
@@ -455,7 +455,7 @@ class U extends C.Ay {
         D.log(`Starting compression/conversion for ${this.id}`);
         let e = await this.trackTime(
             "compressTimeMs",
-            async () => await (0, T.Si)(this, this.reactNativeFileIndex ?? 0),
+            async () => await (0, m.Si)(this, this.reactNativeFileIndex ?? 0),
         );
         if (null == e || null == e.file)
             throw (
@@ -654,7 +654,7 @@ class U extends C.Ay {
     }
     static isResponseUrlStale(e) {
         if (null == e) return !0;
-        let t = 12 * m.A.Millis.HOUR;
+        let t = 12 * T.A.Millis.HOUR;
         return Date.now() - e > t;
     }
     async ensureFreshResponseUrl() {

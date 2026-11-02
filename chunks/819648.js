@@ -1,4 +1,4 @@
-(n.d(t, { Go: () => S, Le: () => C, R8: () => R, _S: () => L, b5: () => y, q6: () => T, sX: () => O, vF: () => N }),
+(n.d(t, { Go: () => S, Le: () => C, R8: () => R, _S: () => L, b5: () => y, q6: () => m, sX: () => O, vF: () => N }),
     n(321073));
 var i = n(35039),
     r = n(675970),
@@ -18,7 +18,7 @@ var u = n(817379),
     f = n(842089),
     I = n(105292);
 let p = [a.pJ.HOURS, a.pJ.MINUTES];
-function T(e) {
+function m(e) {
     var t, n;
     return (0, _.wV)("transformCheckpoint2026CardComponent") && (null != e.character || null != e.stats)
         ? {
@@ -76,13 +76,13 @@ function T(e) {
           }
         : null;
 }
-let m = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
+let T = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
     g = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
 function S(e, t, n) {
     let i, r, a;
     return {
         version: A.wk.V2026,
-        character: m.has(e) ? (t ?? void 0) : void 0,
+        character: T.has(e) ? (t ?? void 0) : void 0,
         stats:
             g.has(e) && null != n
                 ? ((i = n.guilds?.guilds[0]),

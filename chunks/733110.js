@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { FetchState: () => c, default: () => m }));
+(n.r(t), n.d(t, { FetchState: () => c, default: () => T }));
 var i,
     r = n(17928),
     a = n(73153),
@@ -26,7 +26,7 @@ function p(e, t) {
         f += 1;
     }
 }
-class T extends r.Ay.Store {
+class m extends r.Ay.Store {
     static displayName = "AuthorizedAppsStore";
     initialize() {
         this.waitFor(s.A, l.A, o.A);
@@ -50,7 +50,7 @@ class T extends r.Ay.Store {
         return f;
     }
 }
-let m = new T(a.h, {
+let T = new m(a.h, {
     USER_AUTHORIZED_APPS_REQUEST: function (e) {
         "full" === e.request.type ? p("FETCHING") : p("FETCHING", e.request.applicationIds);
     },

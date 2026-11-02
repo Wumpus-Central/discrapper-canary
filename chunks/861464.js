@@ -15,8 +15,8 @@ var i = n(385244),
     f = n(280450),
     I = n(734057),
     p = n(71393),
-    T = n(994500),
-    m = n(287809),
+    m = n(994500),
+    T = n(287809),
     g = n(562153),
     S = n(935208);
 let N = {
@@ -65,9 +65,9 @@ let L = {
                 return null == t
                     ? null
                     : "object" == typeof t
-                      ? (m.default.getUser(t.id) ?? null)
+                      ? (T.default.getUser(t.id) ?? null)
                       : "string" == typeof t
-                        ? (m.default.getUser(t) ?? null)
+                        ? (T.default.getUser(t) ?? null)
                         : null;
             })(e),
             S = e.channel_id,
@@ -130,7 +130,7 @@ let L = {
             case l.lAJ.THREAD_STARTER_MESSAGE:
                 return o.intl.formatToPlainString(o.t["B8H+Cl"], {
                     username: N,
-                    threadName: (0, s.m1)(t, m.default, T.A),
+                    threadName: (0, s.m1)(t, T.default, m.A),
                 });
             case l.lAJ.ROLE_SUBSCRIPTION_PURCHASE:
                 if (e instanceof h.Ay) return null;

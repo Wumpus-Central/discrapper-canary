@@ -15,8 +15,8 @@ let h = {},
     f = {},
     I = {},
     p = {},
-    T = !1,
     m = !1,
+    T = !1,
     g = !1,
     S = new Set(),
     N = new Set(),
@@ -66,10 +66,10 @@ class D extends o.il {
         return n;
     }
     get fetchingAllEntitlements() {
-        return T;
+        return m;
     }
     get fetchedAllEntitlements() {
-        return m;
+        return T;
     }
     get fetchedEndedEntitlements() {
         return g;
@@ -171,16 +171,16 @@ let v = new D(d.h, {
         })(e.entitlement);
     },
     LOGOUT: function () {
-        ((h = {}), (I = {}), (p = {}), (T = !1), (m = !1), (g = !1), (S = new Set()), (N = new Set()));
+        ((h = {}), (I = {}), (p = {}), (m = !1), (T = !1), (g = !1), (S = new Set()), (N = new Set()));
     },
     ENTITLEMENTS_FETCH_FOR_USER_START: function () {
-        T = !0;
+        m = !0;
     },
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function (e) {
         let { entitlements: t, excludeEnded: n } = e;
-        for (let e of ((m = !0), (T = !1), (g = !n), t)) O(e);
+        for (let e of ((T = !0), (m = !1), (g = !n), t)) O(e);
     },
     ENTITLEMENTS_FETCH_FOR_USER_FAIL: function () {
-        ((m = !1), (T = !1), (g = !1));
+        ((T = !1), (m = !1), (g = !1));
     },
 });

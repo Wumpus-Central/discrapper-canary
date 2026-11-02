@@ -15,8 +15,8 @@ var i = n(73153),
     f = n(776781),
     I = n(96566),
     p = n(312987),
-    T = n(666860),
-    m = n(329551),
+    m = n(666860),
+    T = n(329551),
     g = n(912630),
     S = n(965162),
     N = n(763827),
@@ -138,7 +138,7 @@ let U = {
                                               rtc_connection_id: N.A.getRTCConnectionId(),
                                               duration: N.A.getDuration(),
                                               media_session_id: N.A.getMediaSessionId(),
-                                              ...(0, T.JK)(N.A.getGuildId(), N.A.getChannelId(), n),
+                                              ...(0, m.JK)(N.A.getGuildId(), N.A.getChannelId(), n),
                                               duration_muted_ms: r?.duration_muted_ms ?? null,
                                               output_audio_route_type: R.A.getCurrentRouteType(),
                                           });
@@ -146,7 +146,7 @@ let U = {
                                       let e,
                                           t = {
                                               ...s,
-                                              ...((e = (0, m.i)(O.default.getCurrentUser())),
+                                              ...((e = (0, T.i)(O.default.getCurrentUser())),
                                               {
                                                   video_device_name:
                                                       u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,

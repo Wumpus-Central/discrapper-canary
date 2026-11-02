@@ -1,5 +1,5 @@
 (n.d(t, {
-    EW: () => m,
+    EW: () => T,
     LZ: () => N,
     NN: () => C,
     S4: () => I,
@@ -7,7 +7,7 @@
     U8: () => u,
     Uj: () => d,
     V: () => _,
-    We: () => T,
+    We: () => m,
     aU: () => S,
     bX: () => g,
     eJ: () => E,
@@ -103,7 +103,7 @@ let p = s().memoize(
                 (i.src = e));
         }),
 );
-function T(e) {
+function m(e) {
     return new Promise((t, n) => {
         let i = new FileReader();
         (i.readAsDataURL(e),
@@ -113,7 +113,7 @@ function T(e) {
             (i.onerror = (e) => n(e)));
     });
 }
-function m(e) {
+function T(e) {
     let t = e.split(";base64,");
     return (r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length);
 }

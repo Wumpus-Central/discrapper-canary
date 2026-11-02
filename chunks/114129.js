@@ -6,12 +6,12 @@ n.d(t, {
     RL: () => y,
     TC: () => R,
     ZD: () => O,
-    _U: () => T,
+    _U: () => m,
     a2: () => S,
     f5: () => D,
     lj: () => C,
     qu: () => N,
-    ug: () => m,
+    ug: () => T,
 });
 var i,
     r = n(73153),
@@ -64,10 +64,10 @@ function p() {
     let t = e?.channelId ?? d.Ay.getCurrentlySelectedChannelId();
     null == t || I(t, e?.guildId ?? c.A.getGuildId() ?? null);
 }
-function T(e, t) {
+function m(e, t) {
     r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
 }
-var m = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
+var T = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
 function g(e) {
     if (!u.A.isEnabled()) return "passthrough";
     let t = u.A.getActiveTab();

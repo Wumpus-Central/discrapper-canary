@@ -20,8 +20,8 @@ let p = {
         animateEmoji: { value: !1, reasonKey: I._A.GAME_MODE },
         animateStickers: { value: f.BJ.ANIMATE_ON_INTERACTION, reasonKey: I._A.GAME_MODE },
     },
-    T = Object.keys(p),
-    m = new i.Ep(),
+    m = Object.keys(p),
+    T = new i.Ep(),
     g = new i.Ep(),
     S = new i.Ep(),
     N = 0,
@@ -67,7 +67,7 @@ function U() {
     let t = E.A.isThrottling,
         n = {},
         i = [];
-    for (let e of T) {
+    for (let e of m) {
         let r = u.A.getOverride(e);
         t ? null == r && (n[e] = p[e]) : r?.reasonKey === I._A.GAME_MODE && i.push(e);
     }
@@ -77,7 +77,7 @@ function w() {
     r.h.isDispatching() ? S.start(0, U, !1) : U();
 }
 function G() {
-    (b(), m.stop(), S.stop(), P(0), M(0));
+    (b(), T.stop(), S.stop(), P(0), M(0));
 }
 class x extends s.A {
     actions = {
@@ -87,7 +87,7 @@ class x extends s.A {
             });
         },
         WINDOW_FOCUS: () => {
-            m.start(2e3, L);
+            T.start(2e3, L);
         },
         LOGOUT: () => G(),
     };

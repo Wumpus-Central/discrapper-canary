@@ -21,7 +21,7 @@ let E = new d.Vy("LegacyOverlayLogger"),
         error: console.error.bind(console),
     },
     p = 0;
-async function T(e, t) {
+async function m(e, t) {
     if (!__OVERLAY__) return void E.warn("sendLegacyOverlayLog called from main app context, logging locally instead");
     if (p > 10) return;
     let { level: n, message: i, context: r } = e,
@@ -50,7 +50,7 @@ async function T(e, t) {
             3 === p && E.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function m(e) {
+function T(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -135,17 +135,17 @@ __OVERLAY__ &&
             if (h) return I.warn("Overlay logger already set up, skipping duplicate setup");
             ((h = !0),
                 (A = {
-                    log: (t, n) => T({ level: "log", message: t, context: n }, e),
-                    info: (t, n) => T({ level: "info", message: t, context: n }, e),
-                    warn: (t, n) => T({ level: "warn", message: t, context: n }, e),
-                    error: (t, n) => T({ level: "error", message: t, context: n }, e),
-                    crash: (t, n) => T({ level: "crash", message: t, context: n }, e),
+                    log: (t, n) => m({ level: "log", message: t, context: n }, e),
+                    info: (t, n) => m({ level: "info", message: t, context: n }, e),
+                    warn: (t, n) => m({ level: "warn", message: t, context: n }, e),
+                    error: (t, n) => m({ level: "error", message: t, context: n }, e),
+                    crash: (t, n) => m({ level: "crash", message: t, context: n }, e),
                 }).info("Overlay logger initialized"),
                 (console.log = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.log(...t), null != A))
                         try {
-                            let e = m(t)
+                            let e = T(t)
                                 .map((e) => g(e))
                                 .join(" ");
                             A.log(e);
@@ -157,7 +157,7 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.info(...t), null != A))
                         try {
-                            let e = m(t)
+                            let e = T(t)
                                 .map((e) => g(e))
                                 .join(" ");
                             A.info(e);
@@ -169,7 +169,7 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.warn(...t), null != A))
                         try {
-                            let e = m(t)
+                            let e = T(t)
                                 .map((e) => g(e))
                                 .join(" ");
                             A.warn(e);
@@ -181,7 +181,7 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.error(...t), null != A))
                         try {
-                            let e = m(t)
+                            let e = T(t)
                                 .map((e) => g(e))
                                 .join(" ");
                             A.error(e);

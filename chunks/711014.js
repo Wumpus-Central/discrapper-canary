@@ -15,8 +15,8 @@ var r = n(812729),
     f = n(696451),
     I = n(71393),
     p = n(536802),
-    T = n(543465),
-    m = n(287809);
+    m = n(543465),
+    T = n(287809);
 let g = new d.zF();
 function S(e) {
     switch (e.type) {
@@ -150,7 +150,7 @@ function D(e) {
 }
 function v(e) {
     let { guildId: t, joinedAt: n, user: i } = e,
-        r = m.default.getCurrentUser(),
+        r = T.default.getCurrentUser(),
         a = I.A.getGuild(t);
     if (r?.id !== i.id || null == a) return !1;
     let s = "string" == typeof n ? new Date(n) : n;
@@ -217,7 +217,7 @@ class F extends p.A {
         });
     }
     initialize() {
-        this.waitFor(I.A, T.Ay, u.A, h.A, c.A, A.A, o.A);
+        this.waitFor(I.A, m.Ay, u.A, h.A, c.A, A.A, o.A);
     }
     getGuildsTree() {
         return g;

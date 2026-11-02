@@ -15,8 +15,8 @@ var i = n(582128),
     f = n(469778),
     I = n(739508),
     p = n(24482),
-    T = n(652215),
-    m = n(202541);
+    m = n(652215),
+    T = n(202541);
 function g(e) {
     let {
             isFetching: t = !1,
@@ -29,7 +29,7 @@ function g(e) {
         } = e,
         u = {
             isFractionalPremiumActive: !1,
-            fractionalState: m.xc.NONE,
+            fractionalState: T.xc.NONE,
             startsAt: o()(0),
             endsAt: o()(0),
             currentEntitlementId: "",
@@ -52,8 +52,8 @@ function g(e) {
         throw ((0, I.hD)(t, { extra: { entitlementIds: e } }), Error(t));
     }
     let E = _[0] ?? null,
-        A = m.xc.NONE;
-    null != E && (A = null != s && s.status === T.Dmq.PAUSED ? m.xc.FP_SUB_PAUSED : m.xc.FP_ONLY);
+        A = T.xc.NONE;
+    null != E && (A = null != s && s.status === m.Dmq.PAUSED ? T.xc.FP_SUB_PAUSED : T.xc.FP_ONLY);
     let h = c && E?.sourceType === d.G.REVERSE_TRIAL;
     return {
         isFractionalPremiumActive: null != E,
@@ -70,7 +70,7 @@ function S(e, t) {
     return null != t && !f.A.fetchingAllEntitlements && (!f.A.fetchedAllEntitlements || e);
 }
 function N(e) {
-    return null != e && !f.A.applicationIdsFetching.has(m.tv) && !f.A.applicationIdsFetched.has(m.tv);
+    return null != e && !f.A.applicationIdsFetching.has(T.tv) && !f.A.applicationIdsFetched.has(T.tv);
 }
 function C() {
     let {
@@ -87,7 +87,7 @@ function C() {
         d = (0, u.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
         [I, p] = i.useState(
             g({
-                isFetching: S(e, r) || f.A.fetchingAllEntitlements || N(r) || f.A.applicationIdsFetching.has(m.tv),
+                isFetching: S(e, r) || f.A.fetchingAllEntitlements || N(r) || f.A.applicationIdsFetching.has(T.tv),
                 entitlements: a,
                 unactivatedFractionalPremiumUnits: o,
                 currentUser: r,
@@ -98,7 +98,7 @@ function C() {
         );
     return (
         (0, E.Ay)(() => {
-            (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(m.tv));
+            (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(T.tv));
         }),
         i.useEffect(() => {
             let e = g({

@@ -63,10 +63,10 @@ function p() {
         t = null != e && "" !== e ? E.A.lastDeviceConnected[e] : null;
     return null == t || !0 === E.A.getState().ignoredDevices[t.displayName] ? null : f(t);
 }
-function T(e, t) {
+function m(e, t) {
     return e.length === t.length && e.every((e, n) => (0, l.A)(e, t[n]));
 }
-function m() {
+function T() {
     if (!I()) return [];
     let { ignoredDevices: e } = E.A.getState();
     return Object.values(E.A.lastDeviceConnected)
@@ -75,7 +75,7 @@ function m() {
         .filter((e) => null != e);
 }
 function g() {
-    return (0, s.bG)([E.A, c.Ay, d.A, u.A], m, void 0, T);
+    return (0, s.bG)([E.A, c.Ay, d.A, u.A], T, void 0, m);
 }
 function S(e, t) {
     return null != t ? `${t.vendor.name} ${t.model.name}` : e.displayName;

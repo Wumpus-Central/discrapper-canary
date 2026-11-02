@@ -71,11 +71,11 @@ let h = new A(l.h, {
 var f = n(427495),
     I = n(77870),
     p = n(201805);
-function T(e) {
+function m(e) {
     return null != e && "" !== e;
 }
-function m(e) {
-    return T(e?.start) && T(e?.end);
+function T(e) {
+    return m(e?.start) && m(e?.end);
 }
 function g() {
     let e = (0, p.T2)(),
@@ -88,8 +88,8 @@ function g() {
         shouldShowQuestHomeHeroContent:
             (function (e) {
                 if (null == e) return !1;
-                let t = T(e.tooltipTitle) && T(e.tooltipSubtitle);
-                return T(e.image) || m(e.linearGradient) || m(e.radialGradient) || t;
+                let t = m(e.tooltipTitle) && m(e.tooltipSubtitle);
+                return m(e.image) || T(e.linearGradient) || T(e.radialGradient) || t;
             })(e?.questHomeEntrypoint) &&
             (o || !d),
         dismissQuestHomeHeroContent: i.useCallback(() => {

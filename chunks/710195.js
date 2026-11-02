@@ -16,8 +16,8 @@ let u = [o.ni.User, o.ni.Installation],
     f = {},
     I = {},
     p = new Set(),
-    T = new Set(),
-    m = "apexTrackedExposures",
+    m = new Set(),
+    T = "apexTrackedExposures",
     g = {},
     S = {};
 function N(e) {
@@ -55,7 +55,7 @@ class C extends a.Ay.PersistedStore {
                 if (null == i || null == n) continue;
                 let r = _[n];
                 for (let e in i) {
-                    T.add(e);
+                    m.add(e);
                     let { evaluation_id: t, assignments: n } = i[e],
                         a = { evaluationId: t ?? void 0, assignments: {} };
                     for (let [t, i, s, l, d, c] of ((r[e] = a), n))
@@ -128,7 +128,7 @@ class C extends a.Ay.PersistedStore {
     }
     handleLogout(e) {
         (e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
-            l.w.remove(m),
+            l.w.remove(T),
             this.clearAllTrackedExposures());
     }
     registerExperiment(e) {
@@ -285,7 +285,7 @@ class C extends a.Ay.PersistedStore {
         return null == t || Date.now() - t > 6048e5;
     }
     loadTrackedExposures() {
-        let e = l.w.get(m);
+        let e = l.w.get(T);
         if (null == e || 2 !== e.version) return {};
         let t = e.exposures,
             n = Date.now(),
@@ -295,7 +295,7 @@ class C extends a.Ay.PersistedStore {
     }
     saveTrackedExposures(e) {
         try {
-            l.w.set(m, { version: 2, exposures: e });
+            l.w.set(T, { version: 2, exposures: e });
         } catch (e) {
             (c.error("Error saving tracked exposures", e),
                 this.track(
@@ -310,7 +310,7 @@ class C extends a.Ay.PersistedStore {
             this.clearAllOverrides(),
             this.clearAllTrackedExposures(),
             p.clear(),
-            T.clear());
+            m.clear());
     }
     clearAllServerAssignments() {
         _ = { user: {}, guild: {}, installation: {} };
@@ -334,16 +334,16 @@ class C extends a.Ay.PersistedStore {
         p.add(e);
     }
     handleFetchSuccess(e, t) {
-        (p.delete(e), T.add(e), this.setExperimentAssignments(t));
+        (p.delete(e), m.add(e), this.setExperimentAssignments(t));
     }
     handleFetchFailure(e) {
-        (p.delete(e), T.add(e));
+        (p.delete(e), m.add(e));
     }
     isFetching(e) {
         return p.has(e);
     }
     hasLoaded(e) {
-        return T.has(e);
+        return m.has(e);
     }
     getOverride(e) {
         return h[e] ?? A[e] ?? f[e];

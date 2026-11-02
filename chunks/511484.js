@@ -29,14 +29,14 @@ function I(e) {
 function p(e) {
     return null != e && e.discount.intervalType === f.Ff.MONTH;
 }
-let T = new Set();
-function m(e, t) {
+let m = new Set();
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "message",
         r = null != t ? (t.id ?? t.discountId) : "unknown",
         a = `${e}:${String(r)}`;
-    if (T.has(a)) return;
-    T.add(a);
+    if (m.has(a)) return;
+    m.add(a);
     let s = {
         tags: { app_context: "billing", billing_context: "discount_offer" },
         extra: { userDiscountOfferId: t.id, discountId: t.discountId, ...n },
@@ -47,7 +47,7 @@ function g(e, t) {
     return (
         null != e &&
         (null == e.discount || null == e.discount.planIds
-            ? (m(
+            ? (T(
                   "Unexpected discountOffer payload in discountOfferHasTier: discount offer has no discount or plan ids",
                   e,
                   { reason: null == e.discount ? "missing_discount" : "missing_plan_ids" },
@@ -61,7 +61,7 @@ function S(e) {
     if (null == e) return;
     let t = e.discount?.planIds;
     return null == t || 0 === t.length
-        ? void m("getDiscountOfferApplicablePlan: discount offer has no applicable plan ids", e)
+        ? void T("getDiscountOfferApplicablePlan: discount offer has no applicable plan ids", e)
         : t[0];
 }
 function N(e, t) {

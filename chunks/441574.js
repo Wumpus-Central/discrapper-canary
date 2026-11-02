@@ -27,8 +27,8 @@ var i,
     f,
     I,
     p,
-    T,
     m,
+    T,
     g,
     S = n(852015),
     N = n(144367),
@@ -1561,49 +1561,49 @@ var j =
         (p[(p.TIER_2 = 4)] = "TIER_2"),
         p),
     en =
-        (((T = {})[(T.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (T[(T.PRIMARY = 1)] = "PRIMARY"),
-        (T[(T.MEMBER = 2)] = "MEMBER"),
-        T),
-    ei =
         (((m = {})[(m.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (m[(m.ANIMATED_EMOJIS = 1)] = "ANIMATED_EMOJIS"),
-        (m[(m.EMOJIS_EVERYWHERE = 2)] = "EMOJIS_EVERYWHERE"),
-        (m[(m.STICKERS_EVERYWHERE = 3)] = "STICKERS_EVERYWHERE"),
-        (m[(m.SOUNDBOARD_EVERYWHERE = 4)] = "SOUNDBOARD_EVERYWHERE"),
-        (m[(m.ANIMATED_AVATAR = 5)] = "ANIMATED_AVATAR"),
-        (m[(m.CUSTOM_DISCRIMINATOR = 6)] = "CUSTOM_DISCRIMINATOR"),
-        (m[(m.PREMIUM_GUILD_MEMBER_PROFILE = 7)] = "PREMIUM_GUILD_MEMBER_PROFILE"),
-        (m[(m.PROFILE_PREMIUM_FEATURES = 8)] = "PROFILE_PREMIUM_FEATURES"),
-        (m[(m.STREAM_MID_QUALITY = 9)] = "STREAM_MID_QUALITY"),
-        (m[(m.STREAM_HIGH_QUALITY = 10)] = "STREAM_HIGH_QUALITY"),
-        (m[(m.CUSTOM_NOTIFICATION_SOUNDS = 11)] = "CUSTOM_NOTIFICATION_SOUNDS"),
-        (m[(m.VIDEO_FILTER_ASSETS = 12)] = "VIDEO_FILTER_ASSETS"),
-        (m[(m.INCREASED_FILE_UPLOAD_SIZE = 13)] = "INCREASED_FILE_UPLOAD_SIZE"),
-        (m[(m.INCREASED_GUILD_LIMIT = 14)] = "INCREASED_GUILD_LIMIT"),
-        (m[(m.INCREASED_MESSAGE_LENGTH = 15)] = "INCREASED_MESSAGE_LENGTH"),
-        (m[(m.NITRO_REACTION_TOGGLE = 16)] = "NITRO_REACTION_TOGGLE"),
-        (m[(m.CLIENT_THEMES = 17)] = "CLIENT_THEMES"),
-        (m[(m.PREMIUM_COLLECTIBLES = 18)] = "PREMIUM_COLLECTIBLES"),
-        (m[(m.CUSTOM_CALL_SOUNDS = 19)] = "CUSTOM_CALL_SOUNDS"),
-        (m[(m.PREMIUM_VOICE_FILTERS = 21)] = "PREMIUM_VOICE_FILTERS"),
-        (m[(m.CHAT_WALLPAPERS = 22)] = "CHAT_WALLPAPERS"),
-        (m[(m.MONTHLY_ORBS = 23)] = "MONTHLY_ORBS"),
-        (m[(m.SHOP_DISCOUNTS = 24)] = "SHOP_DISCOUNTS"),
-        (m[(m.MORE_QUEST_ORBS = 25)] = "MORE_QUEST_ORBS"),
-        (m[(m.PROFILE_BADGES = 26)] = "PROFILE_BADGES"),
-        (m[(m.APP_ICONS = 27)] = "APP_ICONS"),
-        (m[(m.BOOST_DISCOUNT = 28)] = "BOOST_DISCOUNT"),
-        (m[(m.FREE_BOOSTS = 29)] = "FREE_BOOSTS"),
-        (m[(m.INSTALL_PREMIUM_APPLICATIONS = 30)] = "INSTALL_PREMIUM_APPLICATIONS"),
-        (m[(m.INCREASED_VIDEO_UPLOAD_QUALITY = 31)] = "INCREASED_VIDEO_UPLOAD_QUALITY"),
-        (m[(m.DISPLAY_NAME_STYLES = 32)] = "DISPLAY_NAME_STYLES"),
-        (m[(m.VAD_COLORS = 33)] = "VAD_COLORS"),
-        (m[(m.CUSTOM_TYPING_INDICATOR = 34)] = "CUSTOM_TYPING_INDICATOR"),
-        (m[(m.PREMIUM_REFERRALS = 35)] = "PREMIUM_REFERRALS"),
-        (m[(m.PREMIUM_TENURE_BADGE = 36)] = "PREMIUM_TENURE_BADGE"),
-        (m[(m.SCHEDULED_MESSAGES = 37)] = "SCHEDULED_MESSAGES"),
+        (m[(m.PRIMARY = 1)] = "PRIMARY"),
+        (m[(m.MEMBER = 2)] = "MEMBER"),
         m),
+    ei =
+        (((T = {})[(T.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (T[(T.ANIMATED_EMOJIS = 1)] = "ANIMATED_EMOJIS"),
+        (T[(T.EMOJIS_EVERYWHERE = 2)] = "EMOJIS_EVERYWHERE"),
+        (T[(T.STICKERS_EVERYWHERE = 3)] = "STICKERS_EVERYWHERE"),
+        (T[(T.SOUNDBOARD_EVERYWHERE = 4)] = "SOUNDBOARD_EVERYWHERE"),
+        (T[(T.ANIMATED_AVATAR = 5)] = "ANIMATED_AVATAR"),
+        (T[(T.CUSTOM_DISCRIMINATOR = 6)] = "CUSTOM_DISCRIMINATOR"),
+        (T[(T.PREMIUM_GUILD_MEMBER_PROFILE = 7)] = "PREMIUM_GUILD_MEMBER_PROFILE"),
+        (T[(T.PROFILE_PREMIUM_FEATURES = 8)] = "PROFILE_PREMIUM_FEATURES"),
+        (T[(T.STREAM_MID_QUALITY = 9)] = "STREAM_MID_QUALITY"),
+        (T[(T.STREAM_HIGH_QUALITY = 10)] = "STREAM_HIGH_QUALITY"),
+        (T[(T.CUSTOM_NOTIFICATION_SOUNDS = 11)] = "CUSTOM_NOTIFICATION_SOUNDS"),
+        (T[(T.VIDEO_FILTER_ASSETS = 12)] = "VIDEO_FILTER_ASSETS"),
+        (T[(T.INCREASED_FILE_UPLOAD_SIZE = 13)] = "INCREASED_FILE_UPLOAD_SIZE"),
+        (T[(T.INCREASED_GUILD_LIMIT = 14)] = "INCREASED_GUILD_LIMIT"),
+        (T[(T.INCREASED_MESSAGE_LENGTH = 15)] = "INCREASED_MESSAGE_LENGTH"),
+        (T[(T.NITRO_REACTION_TOGGLE = 16)] = "NITRO_REACTION_TOGGLE"),
+        (T[(T.CLIENT_THEMES = 17)] = "CLIENT_THEMES"),
+        (T[(T.PREMIUM_COLLECTIBLES = 18)] = "PREMIUM_COLLECTIBLES"),
+        (T[(T.CUSTOM_CALL_SOUNDS = 19)] = "CUSTOM_CALL_SOUNDS"),
+        (T[(T.PREMIUM_VOICE_FILTERS = 21)] = "PREMIUM_VOICE_FILTERS"),
+        (T[(T.CHAT_WALLPAPERS = 22)] = "CHAT_WALLPAPERS"),
+        (T[(T.MONTHLY_ORBS = 23)] = "MONTHLY_ORBS"),
+        (T[(T.SHOP_DISCOUNTS = 24)] = "SHOP_DISCOUNTS"),
+        (T[(T.MORE_QUEST_ORBS = 25)] = "MORE_QUEST_ORBS"),
+        (T[(T.PROFILE_BADGES = 26)] = "PROFILE_BADGES"),
+        (T[(T.APP_ICONS = 27)] = "APP_ICONS"),
+        (T[(T.BOOST_DISCOUNT = 28)] = "BOOST_DISCOUNT"),
+        (T[(T.FREE_BOOSTS = 29)] = "FREE_BOOSTS"),
+        (T[(T.INSTALL_PREMIUM_APPLICATIONS = 30)] = "INSTALL_PREMIUM_APPLICATIONS"),
+        (T[(T.INCREASED_VIDEO_UPLOAD_QUALITY = 31)] = "INCREASED_VIDEO_UPLOAD_QUALITY"),
+        (T[(T.DISPLAY_NAME_STYLES = 32)] = "DISPLAY_NAME_STYLES"),
+        (T[(T.VAD_COLORS = 33)] = "VAD_COLORS"),
+        (T[(T.CUSTOM_TYPING_INDICATOR = 34)] = "CUSTOM_TYPING_INDICATOR"),
+        (T[(T.PREMIUM_REFERRALS = 35)] = "PREMIUM_REFERRALS"),
+        (T[(T.PREMIUM_TENURE_BADGE = 36)] = "PREMIUM_TENURE_BADGE"),
+        (T[(T.SCHEDULED_MESSAGES = 37)] = "SCHEDULED_MESSAGES"),
+        T),
     er =
         (((g = {})[(g.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
         (g[(g.SOURCE_NITRO = 1)] = "SOURCE_NITRO"),
@@ -1678,7 +1678,7 @@ class el extends O.G {
             { no: 8, name: "global_name", kind: "message", T: () => R.hU },
             { no: 9, name: "avatar_decoration_data", kind: "message", T: () => ec },
             { no: 10, name: "primary_guild", kind: "message", T: () => eS },
-            { no: 11, name: "collectibles", kind: "message", T: () => em },
+            { no: 11, name: "collectibles", kind: "message", T: () => eT },
             { no: 12, name: "safety_state", kind: "message", T: () => H },
             { no: 13, name: "display_name_styles", kind: "message", T: () => eA },
             { no: 14, name: "vad_colors", kind: "message", T: () => tc },
@@ -1726,7 +1726,7 @@ class el extends O.G {
                     r.primaryGuild = eS.internalBinaryRead(e, e.uint32(), n, r.primaryGuild);
                     break;
                 case 11:
-                    r.collectibles = em.internalBinaryRead(e, e.uint32(), n, r.collectibles);
+                    r.collectibles = eT.internalBinaryRead(e, e.uint32(), n, r.collectibles);
                     break;
                 case 12:
                     r.safetyState = H.internalBinaryRead(e, e.uint32(), n, r.safetyState);
@@ -1758,7 +1758,7 @@ class el extends O.G {
             e.avatarDecorationData &&
                 ec.internalBinaryWrite(e.avatarDecorationData, t.tag(9, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(10, S.O0.LengthDelimited).fork(), n).join(),
-            e.collectibles && em.internalBinaryWrite(e.collectibles, t.tag(11, S.O0.LengthDelimited).fork(), n).join(),
+            e.collectibles && eT.internalBinaryWrite(e.collectibles, t.tag(11, S.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && H.internalBinaryWrite(e.safetyState, t.tag(12, S.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
                 eA.internalBinaryWrite(e.displayNameStyles, t.tag(13, S.O0.LengthDelimited).fork(), n).join(),
@@ -2137,7 +2137,7 @@ class eI extends O.G {
     }
 }
 let ep = new eI();
-class eT extends O.G {
+class em extends O.G {
     constructor() {
         super("discord_protos.users.v1.UserCollectibles", [{ no: 1, name: "nameplate", kind: "message", T: () => e_ }]);
     }
@@ -2171,7 +2171,7 @@ class eT extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let em = new eT();
+let eT = new em();
 class eg extends O.G {
     constructor() {
         super("discord_protos.users.v1.UserPrimaryGuild", [
@@ -2615,7 +2615,7 @@ class eF extends O.G {
             { no: 4, name: "quest", kind: "message", T: () => eQ },
             { no: 5, name: "primary_guild", kind: "message", T: () => eS },
             { no: 6, name: "cross_platform_restriction", kind: "message", T: () => ey },
-            { no: 7, name: "collectibles", kind: "message", T: () => em },
+            { no: 7, name: "collectibles", kind: "message", T: () => eT },
             { no: 8, name: "safety_state", kind: "message", T: () => H },
             { no: 9, name: "premium_state", kind: "message", T: () => e0 },
             { no: 10, name: "display_name_styles", kind: "message", T: () => eA },
@@ -2673,7 +2673,7 @@ class eF extends O.G {
                     r.crossPlatformRestriction = ey.internalBinaryRead(e, e.uint32(), n, r.crossPlatformRestriction);
                     break;
                 case 7:
-                    r.collectibles = em.internalBinaryRead(e, e.uint32(), n, r.collectibles);
+                    r.collectibles = eT.internalBinaryRead(e, e.uint32(), n, r.collectibles);
                     break;
                 case 8:
                     r.safetyState = H.internalBinaryRead(e, e.uint32(), n, r.safetyState);
@@ -2816,7 +2816,7 @@ class eF extends O.G {
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
                 ey.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, S.O0.LengthDelimited).fork(), n).join(),
-            e.collectibles && em.internalBinaryWrite(e.collectibles, t.tag(7, S.O0.LengthDelimited).fork(), n).join(),
+            e.collectibles && eT.internalBinaryWrite(e.collectibles, t.tag(7, S.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && H.internalBinaryWrite(e.safetyState, t.tag(8, S.O0.LengthDelimited).fork(), n).join(),
             e.premiumState && e0.internalBinaryWrite(e.premiumState, t.tag(9, S.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&

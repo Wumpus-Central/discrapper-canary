@@ -20,9 +20,9 @@ function I() {
 }
 n(321073);
 var p = n(869431),
-    T = n(594615);
-let m = c.A.modules.select.OPTION_HEIGHT.resolve(),
-    g = m + 4,
+    m = n(594615);
+let T = c.A.modules.select.OPTION_HEIGHT.resolve(),
+    g = T + 4,
     S = [];
 function N(e) {
     return null != e.description && "" !== e.description;
@@ -107,7 +107,7 @@ function C(e) {
                     ],
                 )
                     ? g
-                    : m,
+                    : T,
             [H, C],
         ),
         Q = r.useCallback(
@@ -130,17 +130,17 @@ function C(e) {
             let { label: n, description: r } = e,
                 a = N(e);
             return (0, i.jsxs)("div", {
-                className: T.uN,
+                className: m.uN,
                 "data-has-description": a || void 0,
                 children: [
-                    (0, i.jsx)(h.E, { variant: "text-md/medium", color: "currentColor", className: T.vF, children: n }),
+                    (0, i.jsx)(h.E, { variant: "text-md/medium", color: "currentColor", className: m.vF, children: n }),
                     a &&
                         (0, i.jsx)(h.E, {
                             id: t,
                             variant: "text-sm/normal",
                             color: "text-subtle",
                             lineClamp: 1,
-                            className: T.vL,
+                            className: m.vL,
                             children: r,
                         }),
                 ],
@@ -148,9 +148,9 @@ function C(e) {
         }, []);
     if (w)
         t = (0, i.jsx)("div", {
-            className: T.vG,
+            className: m.vG,
             "aria-busy": !0,
-            children: (0, i.jsx)(A.y, { type: A.t.PULSING_ELLIPSIS, className: T.S, itemClassName: T.Ci }),
+            children: (0, i.jsx)(A.y, { type: A.t.PULSING_ELLIPSIS, className: m.S, itemClassName: m.Ci }),
         });
     else if (H.length > 0) {
         let e = C.length > 0;
@@ -160,7 +160,7 @@ function C(e) {
                 height:
                     null != U
                         ? `${
-                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : m), 0) +
+                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : T), 0) +
                               26 *
                                   (function (e, t) {
                                       let n = 0,
@@ -185,7 +185,7 @@ function C(e) {
                               "aria-hidden": !0,
                               variant: "text-sm/semibold",
                               color: "text-muted",
-                              className: T.SG,
+                              className: m.SG,
                               children: C[t].label,
                           },
                           `section-${t}`,
@@ -241,7 +241,7 @@ function C(e) {
                     role: "listbox",
                     tabIndex: a,
                     "aria-multiselectable": "multiple" === _,
-                    className: s()(T.cu, { [T.E1]: H.length > U }),
+                    className: s()(m.cu, { [m.E1]: H.length > U }),
                     "data-mana-component": "listbox",
                     children: t,
                 });
@@ -265,7 +265,7 @@ function O(e) {
     return (0, i.jsxs)("div", {
         ...h,
         id: n,
-        className: s()(T.Vu, p.nM),
+        className: s()(m.Vu, p.nM),
         role: "option",
         tabIndex: -1 === a ? -1 : h.tabIndex,
         onClick: A,
@@ -277,7 +277,7 @@ function O(e) {
         children: [
             t,
             (0, i.jsx)("div", {
-                className: T.Dt,
+                className: m.Dt,
                 "aria-hidden": !0,
                 children:
                     "multiple" === E

@@ -64,8 +64,8 @@ class p {
         return null != i ? i : null;
     }
 }
-let T = p.empty(),
-    m = !1,
+let m = p.empty(),
+    T = !1,
     g = null,
     S = new Map();
 function N(e, t, n) {
@@ -118,10 +118,10 @@ class y extends i.Ay.Store {
         return Object.values(E[e]);
     }
     getVideoStreams() {
-        return T;
+        return m;
     }
     shouldRecordNextConnection() {
-        return m;
+        return T;
     }
     getSimulcastDebugOverride(e, t) {
         let n = I(e, t);
@@ -160,11 +160,11 @@ let D = new y(a.h, {
             s.ho());
     },
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function (e) {
-        T = T.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
+        m = m.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
     },
     RTC_DEBUG_SET_RECORDING_FLAG: function (e) {
         let { value: t } = e;
-        m = t;
+        T = t;
     },
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
         let { userId: t, context: n, quality: i } = e;

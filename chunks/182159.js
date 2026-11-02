@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(73153),
     a = n(710195),
@@ -64,7 +64,7 @@ class p extends i.Ay.PersistedStore {
         return this.getPackForEmoji(e)?.emojis.find((t) => t.id === e);
     }
 }
-let T = new p(r.h, {
+let m = new p(r.h, {
     LOGOUT: function () {
         ((c = d), f());
     },

@@ -1,4 +1,4 @@
-n.d(t, { fK: () => S, I5: () => p, Gv: () => T, wy: () => m, sW: () => I.s, h0: () => g, Bl: () => N });
+n.d(t, { fK: () => S, I5: () => p, Gv: () => m, wy: () => T, sW: () => I.s, h0: () => g, Bl: () => N });
 var i,
     r = n(127258),
     a = n(636537),
@@ -17,7 +17,7 @@ var f = n(652215),
 function p(e) {
     return null == e || "" === e || Number.isNaN(e) ? Date.now() : u.default.extractTimestamp(e) + 9e5;
 }
-async function T(e) {
+async function m(e) {
     let {
             componentType: t,
             messageId: n,
@@ -27,7 +27,7 @@ async function T(e) {
             applicationId: h,
             channelId: I,
             guildId: p,
-            localState: T,
+            localState: m,
         } = e,
         g = u.default.fromTimestamp(Date.now());
     if (!E.Ay.canQueueInteraction(n, g)) return;
@@ -44,7 +44,7 @@ async function T(e) {
             return ((n = I), (i = e), void (null == t && null != i && l.A.sendClydeError(n, i)));
         },
     }),
-        null != T && (0, _.Sw)(n, g, T, A));
+        null != m && (0, _.Sw)(n, g, m, A));
     let S = {
         type: r.G.MESSAGE_COMPONENT,
         nonce: g,
@@ -77,14 +77,14 @@ async function T(e) {
                     default:
                         return null;
                 }
-            })(T),
+            })(m),
         },
     };
     await a.Bo.post({ url: f.Rsh.INTERACTIONS, body: S, timeout: 3e3, rejectWithError: (0, a.fT)() }, (e) => {
-        m(g, e, h, I, p);
+        T(g, e, h, I, p);
     });
 }
-function m(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     if (!t.ok) {
         if (!t.hasErr)
             if (!(t.status >= 400) || !(t.status < 500) || !t.body) return void (0, _.C1)(e, t.body?.code);

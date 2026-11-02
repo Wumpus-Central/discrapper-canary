@@ -13,8 +13,8 @@ var s = n(435558),
     f = n(626584),
     I = n(952818),
     p = n(280450),
-    T = n(30370),
-    m = n(885576),
+    m = n(30370),
+    T = n(885576),
     g = n(290863),
     S = n(485296),
     N = n(977997),
@@ -207,7 +207,7 @@ function es() {
 }
 function el() {
     let e = Object.keys(K),
-        t = T.A.getAccounts().filter((e) => {
+        t = m.A.getAccounts().filter((e) => {
             let { type: t } = e;
             return t === v.fg2.SPOTIFY;
         });
@@ -336,7 +336,7 @@ function eu(e, t) {
 class e_ extends d.Ay.Store {
     static displayName = "SpotifyStore";
     initialize() {
-        (this.waitFor(p.default, T.A, m.A, g.A, I.Ay, S.A, N.A),
+        (this.waitFor(p.default, m.A, T.A, g.A, I.Ay, S.A, N.A),
             this.syncWith([g.A], () =>
                 (function () {
                     if (null == r || null == Z()) return !1;
@@ -394,7 +394,7 @@ class e_ extends d.Ay.Store {
         return z[e];
     }
     shouldShowActivity() {
-        return null != i && i.account.showActivity && !m.A.isIdle();
+        return null != i && i.account.showActivity && !T.A.isIdle();
     }
     getActivity() {
         let e, t, n;
@@ -417,7 +417,7 @@ class e_ extends d.Ay.Store {
             null != E && (t = E.uri),
             (n = null != r && null != r.partyId ? r.partyId : `${D.HS}${p.default.getId()}`));
         let I = l.length > 128 ? l.substring(0, 125) + "..." : l,
-            T = {
+            m = {
                 context_uri: t,
                 album_id: s.id,
                 artist_ids: A.map((e) => {
@@ -427,7 +427,7 @@ class e_ extends d.Ay.Store {
                 type: u,
                 button_urls: [],
             },
-            m = {
+            T = {
                 name: b.name,
                 assets: h,
                 details: I,
@@ -435,7 +435,7 @@ class e_ extends d.Ay.Store {
                 timestamps: { start: _, end: _ + d },
                 party: { id: n },
             };
-        return (c || ((m.sync_id = o), (m.flags = v.jUm.PLAY | v.jUm.SYNC), (m.metadata = T)), m);
+        return (c || ((T.sync_id = o), (T.flags = v.jUm.PLAY | v.jUm.SYNC), (T.metadata = m)), T);
     }
 }
 let eE = new e_(_.h, {
@@ -471,13 +471,13 @@ let eE = new e_(_.h, {
                         er(s, A.id));
                 } else (($[s] = [A]), (I = !0));
             o ? q?.start(U, eo) : ((u = null), q?.stop());
-            let m = T.A.getAccount(s, v.fg2.SPOTIFY);
-            if (null == m) return I;
+            let T = m.A.getAccount(s, v.fg2.SPOTIFY);
+            if (null == T) return I;
             let g = z[s],
                 S =
                     null != u
                         ? {
-                              account: m,
+                              account: T,
                               track: u,
                               startTime:
                                   ((t = Date.now()),
@@ -495,13 +495,13 @@ let eE = new e_(_.h, {
                     .values(z)
                     .find((e) => null != e)),
                 ed(p.default.getId()),
-                null == u || N ? W.stop() : W.start(u.duration - E + G, () => Q(m.id)),
+                null == u || N ? W.stop() : W.start(u.duration - E + G, () => Q(T.id)),
                 null != r && ((!o && E > 0) || null == A || (null != S && r.trackId !== S.track.id))
                     ? (B.info(
                           `Listen along active but playback stopped or track changed. Stopping listen along in ${G}ms`,
                       ),
                       Y.start(G, () => {
-                          (B.info("Stopping listening along"), (0, h.A)(), Q(m.id));
+                          (B.info("Stopping listening along"), (0, h.A)(), Q(T.id));
                       }))
                     : Y.isStarted() && (B.info("Listen along stop cancelled as playback of track resumed"), Y.stop()),
                 O === i ||

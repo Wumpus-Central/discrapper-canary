@@ -29,8 +29,8 @@ n(980504);
 var f = n(652215),
     I = n(355097),
     p = n(105292);
-let T = !1;
-async function m() {
+let m = !1;
+async function T() {
     try {
         let e = (await a.Bo.get({ url: f.Rsh.SOUNDBOARD_DEFAULT_SOUNDS, rejectWithError: (0, a.fT)() })).body.map((e) =>
             (0, A.N0)(e, "0"),
@@ -51,14 +51,14 @@ async function S(e) {
     if (__OVERLAY__) return (s.h.dispatch({ type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST" }), Promise.all([]));
     let t = performance.now(),
         n = e?.disableAnalytics ?? !1,
-        i = !T && !n;
-    i && (T = !0);
+        i = !m && !n;
+    i && (m = !0);
     let r = await Promise.all([
         (function () {
             if (!E.A.shouldFetchDefaultSounds()) return Promise.resolve();
             s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
             let e = g("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
-            return (m(), e);
+            return (T(), e);
         })(),
         (function () {
             let e = (0, h.I)();

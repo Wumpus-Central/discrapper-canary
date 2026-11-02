@@ -20,8 +20,8 @@ function h(e) {
             fullScreenOnMobile: f = !0,
             returnRef: I,
             role: p = "dialog",
-            "aria-label": T,
-            dismissable: m = !0,
+            "aria-label": m,
+            dismissable: T = !0,
             maxHeight: g = "default",
             onClose: S,
             contentOutsideContainer: N,
@@ -29,7 +29,7 @@ function h(e) {
             children: O,
         } = e,
         R = r.useId(),
-        L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: m }), [m, R, S]),
+        L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: T }), [T, R, S]),
         y = (0, _.kS)(t, n),
         D = r.useRef(null);
     return (0, i.jsx)(u.V.Provider, {
@@ -37,8 +37,8 @@ function h(e) {
         children: (0, i.jsx)(o.lG, {
             id: R,
             role: p,
-            "aria-label": T,
-            "aria-labelledby": null != T ? void 0 : L.headingId,
+            "aria-label": m,
+            "aria-labelledby": null != m ? void 0 : L.headingId,
             returnRef: I,
             trackingProps: C,
             trackingComponentName: "Modal",

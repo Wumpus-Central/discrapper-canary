@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(518782),
     I = n(164956),
     p = n(403362),
-    T = n(7864),
-    m = n(935208),
+    m = n(7864),
+    T = n(935208),
     g = n(280450),
     S = n(734057),
     N = n(317525),
@@ -75,10 +75,10 @@ function Y(e, t) {
     for (let s of t) {
         let t = e[s];
         null != t &&
-            ((null == a || (0, T.zA)(t, a)) && (a = t),
-            t.color > 0 && (null == n || (0, T.zA)(t, n)) && (n = t),
-            t.hoist && (null == i || (0, T.zA)(t, i)) && (i = t),
-            (null != t.icon || null != t.unicodeEmoji) && (null == r || (0, T.zA)(t, r)) && (r = t));
+            ((null == a || (0, m.zA)(t, a)) && (a = t),
+            t.color > 0 && (null == n || (0, m.zA)(t, n)) && (n = t),
+            t.hoist && (null == i || (0, m.zA)(t, i)) && (i = t),
+            (null != t.icon || null != t.unicodeEmoji) && (null == r || (0, m.zA)(t, r)) && (r = t));
     }
     return {
         colorString: n?.colorString ?? null,
@@ -107,7 +107,7 @@ function K(e) {
             flags: h,
             collectibles: f,
             displayNameStyles: p,
-            gamingLeaderboardData: T,
+            gamingLeaderboardData: m,
         } = e,
         { colorString: S, colorStrings: N, colorRoleId: C, iconRoleId: R, hoistRoleId: y, highestRoleId: v } = Y(l, o),
         b = {
@@ -132,7 +132,7 @@ function K(e) {
             flags: h,
             collectibles: f,
             displayNameStyles: p,
-            gamingLeaderboardData: T,
+            gamingLeaderboardData: m,
         };
     if (
         ((0, a.Lt)(b.flags ?? 0, O.D.IS_GUEST) && (b.flags = (0, a.UI)(b.flags ?? 0, O.D.BYPASSES_VERIFICATION)),
@@ -142,7 +142,7 @@ function K(e) {
     if (t === g.default.getId())
         if (I.A.isViewingRoles(i) || I.A.isFullServerPreview(i)) {
             let e = I.A.getViewingRoles(i);
-            D[i] = { ...b, ...I.A.getMemberOptions(i), roles: null != e ? m.default.keys(e) : [] };
+            D[i] = { ...b, ...I.A.getMemberOptions(i), roles: null != e ? T.default.keys(e) : [] };
         } else null != D[i] && delete D[i];
     return b;
 }
@@ -281,7 +281,7 @@ function ee(e) {
     let n = C.A.getGuild(e.guildId);
     if (null == n) return (R.warn(`Guild ${e.guildId} not found during ${e.type}.`), !1);
     let i = g.default.getId();
-    for (let r of m.default.keys(t)) {
+    for (let r of T.default.keys(t)) {
         let a = t[r];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let s = r === i && "GUILD_ROLE_DELETE" === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
@@ -437,7 +437,7 @@ class eo extends s.Ay.Store {
     getMemberIds(e) {
         if (null == e) return [];
         let t = L[e];
-        return null == t ? [] : m.default.keys(t);
+        return null == t ? [] : T.default.keys(t);
     }
     getMembers(e) {
         if (null == e) return [];

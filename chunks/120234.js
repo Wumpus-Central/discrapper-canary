@@ -1,25 +1,25 @@
 (n.d(t, { N$: () => u, aN: () => d }), n(321073));
 var r = n(582128),
     s = n(36491),
-    o = n(998218);
-let i = new Map(),
+    i = n(998218);
+let o = new Map(),
     l = new Set();
 function a(e) {
     return e.includes("http")
-        ? [...new Set((e.match(o.A.URL_REGEX) ?? []).filter((e) => /^https?:\/\//i.test(e)))].slice(0, 4)
+        ? [...new Set((e.match(i.A.URL_REGEX) ?? []).filter((e) => /^https?:\/\//i.test(e)))].slice(0, 4)
         : [];
 }
 async function c(e) {
     let t = a(e),
         n = t.join(" ");
-    if (!(0 === t.length || i.has(n) || l.has(n))) {
+    if (!(0 === t.length || o.has(n) || l.has(n))) {
         l.add(n);
         try {
             let e = new Map();
             for (let n of (await (0, s.L4)(t)).embeds ?? [])
                 null != n.url && e.set(n.url, [...(e.get(n.url) ?? []), n]);
-            (i.size >= 100 && i.delete(i.keys().next().value ?? ""),
-                i.set(
+            (o.size >= 100 && o.delete(o.keys().next().value ?? ""),
+                o.set(
                     n,
                     [...e].flatMap((e) => {
                         let [t, n] = e;
@@ -36,11 +36,11 @@ async function c(e) {
                                                 : { url: e.url },
                                         );
                                 let s = { url: e },
-                                    o = n.provider?.name ?? n.footer?.text;
+                                    i = n.provider?.name ?? n.footer?.text;
                                 return (
                                     null != n.title && (s.title = n.title),
                                     null != n.description && (s.description = n.description),
-                                    null != o && (s.site = o),
+                                    null != i && (s.site = i),
                                     n.author?.name != null && (s.author = n.author.name),
                                     r.length > 0 && (s.images = r),
                                     t.some((e) => null != e.video) && (s.video = !0),
@@ -57,7 +57,7 @@ async function c(e) {
     }
 }
 function d(e) {
-    let t = i.get(a(e).join(" "));
+    let t = o.get(a(e).join(" "));
     return null != t && t.length > 0 ? t : void 0;
 }
 function u(e) {

@@ -15,7 +15,7 @@ let _ = !1,
     f = {},
     I = !1,
     p = !1;
-function T(e) {
+function m(e) {
     let t = c.default.getCurrentUser();
     if (null == t) return !1;
     let n = e;
@@ -24,13 +24,13 @@ function T(e) {
         null != d.Ay.getVoiceChannelId() && o.Ay.isVideoEnabled() && null != n
     );
 }
-function m() {
-    (E !== d.Ay.getVoiceChannelId() && ((A = !1), (I = !1), (p = !1)), T() && (A = !0), (E = d.Ay.getVoiceChannelId()));
+function T() {
+    (E !== d.Ay.getVoiceChannelId() && ((A = !1), (I = !1), (p = !1)), m() && (A = !0), (E = d.Ay.getVoiceChannelId()));
 }
 class g extends i.Ay.Store {
     static displayName = "VideoBackgroundStore";
     initialize() {
-        (this.waitFor(o.Ay, d.Ay, s.Ay, l.A, c.default), this.syncWith([d.Ay, o.Ay], m));
+        (this.waitFor(o.Ay, d.Ay, s.Ay, l.A, c.default), this.syncWith([d.Ay, o.Ay], T));
     }
     get videoFilterAssets() {
         return f;
@@ -67,7 +67,7 @@ let S = new g(a.h, {
     },
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function (e) {
         let { backgroundOption: t } = e;
-        T(t) && (A = !0);
+        m(t) && (A = !0);
     },
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function (e) {
         let { settings: t } = e;

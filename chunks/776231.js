@@ -1,4 +1,4 @@
-n.d(t, { AE: () => N, LE: () => m, kr: () => S, mZ: () => _.A, yt: () => g });
+n.d(t, { AE: () => N, LE: () => T, kr: () => S, mZ: () => _.A, yt: () => g });
 var i = n(435558),
     r = n.n(i),
     a = n(635377),
@@ -18,7 +18,7 @@ let h = /\.webp($|\?|#)/i,
         1024, 1280, 1536, 2048, 3072, 4096,
     ],
     p = new (s())({ max: 1e3 });
-function T(e, t, n) {
+function m(e, t, n) {
     let { callbacks: i, url: r } = t;
     if (e) p.del(r);
     else {
@@ -27,7 +27,7 @@ function T(e, t, n) {
     }
     null != i && i.forEach((n) => n(e, t));
 }
-function m(e) {
+function T(e) {
     let t = p.get(e);
     return null != t && t.loaded;
 }
@@ -62,12 +62,12 @@ function g(e, t) {
                                     ? i.fail(() => {
                                           e(t);
                                       })
-                                    : T(!0, t, n));
+                                    : m(!0, t, n));
                         };
                     })(t, n)),
                         (n.onload = () => {
                             let { backoff: e } = t;
-                            (null != e && e.succeed(), T(!1, t, n));
+                            (null != e && e.succeed(), m(!1, t, n));
                         }),
                         (n.src = t.url));
                 })(n)),
@@ -98,8 +98,8 @@ function N(e) {
             ratio: c = 1,
             format: I = null,
             quality: p = null,
-            animated: T = !1,
-            srcIsAnimated: m = !1,
+            animated: m = !1,
+            srcIsAnimated: T = !1,
         } = e,
         g = i,
         S = a;
@@ -117,16 +117,16 @@ function N(e) {
             format: c = null,
             quality: I = null,
             animated: p = !1,
-            srcIsAnimated: T = !1,
+            srcIsAnimated: m = !1,
         } = e;
         if (t.startsWith("data:image") || u.A.isDiscordCdnUrl(t)) return t;
-        let [m, g] = (function (e) {
+        let [T, g] = (function (e) {
             let [t, n] = e.split("?");
             return [t, l.parse(n)];
         })(t);
         (null != c && (g.format = c),
             null != I && (g.quality = I),
-            p && T && (h.test(t) || f.test(t)) && (g.animated = !0),
+            p && m && (h.test(t) || f.test(t)) && (g.animated = !0),
             f.test(t) && (g.format = "webp"));
         let S = (0, d.Uj)({ width: s, height: o, maxWidth: A.uJv, maxHeight: A.uJv });
         if (((s = S.width), (o = S.height), s !== i || o !== a)) {
@@ -150,7 +150,7 @@ function N(e) {
                 })),
                 (t.width !== i || t.height !== a) && ((g.width = 0 | t.width), (g.height = 0 | t.height)));
         }
-        return (r().isEmpty(g) || (m += "?" + l.stringify(g)), m);
+        return (r().isEmpty(g) || (T += "?" + l.stringify(g)), T);
     })({
         src: t,
         sourceWidth: i,
@@ -159,7 +159,7 @@ function N(e) {
         targetHeight: (S *= N),
         format: I,
         quality: p,
-        animated: T,
-        srcIsAnimated: m,
+        animated: m,
+        srcIsAnimated: T,
     });
 }

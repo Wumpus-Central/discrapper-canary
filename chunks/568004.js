@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(775228),
     I = n(927813),
     p = n(674378),
-    T = n(144914);
-let m = new Set(),
+    m = n(144914);
+let T = new Set(),
     g = {},
     S = new Set(),
     N = {},
@@ -30,7 +30,7 @@ function v(e) {
     D.start(e + Math.random() * R, o.r);
 }
 function b() {
-    if (!(0, T.S)() || _.l_.getSetting()) return !1;
+    if (!(0, m.S)() || _.l_.getSetting()) return !1;
     let e = A.A.entitledBranchIds,
         t = [];
     for (let n of e) O.hasOwnProperty(n) || ((O[n] = null), t.push(n));
@@ -69,7 +69,7 @@ class U extends a.Ay.Store {
         return S.has(t);
     }
     isFetching(e, t) {
-        return m.has(t);
+        return T.has(t);
     }
     needsToFetchBuildSize(e) {
         return !N.hasOwnProperty(e);
@@ -83,7 +83,7 @@ let w = new U(l.h, {
         return !_.l_.getSetting() && (v(L), b());
     },
     GAMES_DATABASE_UPDATE: function () {
-        if (!(0, T.S)()) return !1;
+        if (!(0, m.S)()) return !1;
         for (let e of C) {
             let { applicationId: t, branchId: n } = (0, p.r0)(e);
             null != u.A.getApplication(t) && (C.delete(e), P(t, n));
@@ -91,11 +91,11 @@ let w = new U(l.h, {
     },
     APPLICATION_BUILD_FETCH_START: function (e) {
         let { branchId: t } = e;
-        m.add(t);
+        T.add(t);
     },
     APPLICATION_BUILD_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branchId: n, locale: i, build: r } = e;
-        m.delete(n);
+        T.delete(n);
         let a = r.manifests.map((e) => {
                 let { id: t } = e;
                 return t;
@@ -105,7 +105,7 @@ let w = new U(l.h, {
     },
     APPLICATION_BUILD_NOT_FOUND: function (e) {
         let { branchId: t } = e;
-        (m.delete(t), S.add(t));
+        (T.delete(t), S.add(t));
     },
     APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
         let { buildId: t } = e;
@@ -143,7 +143,7 @@ let w = new U(l.h, {
     LOGOUT: M,
     SKU_PURCHASE_SUCCESS: function (e) {
         let { entitlements: t } = e;
-        if (!(0, T.S)()) return !1;
+        if (!(0, m.S)()) return !1;
         let n = new Set();
         for (let e of t) n.add(e.application_id);
         for (let e in A.A.libraryApplications) {

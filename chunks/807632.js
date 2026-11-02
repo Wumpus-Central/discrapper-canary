@@ -1,11 +1,11 @@
 (n.d(t, {
-    Dg: () => T,
+    Dg: () => m,
     IO: () => N,
     Ij: () => L,
     Qq: () => D,
     WP: () => v,
     YG: () => S,
-    YS: () => m,
+    YS: () => T,
     Zu: () => g,
     _k: () => O,
     n5: () => C,
@@ -30,8 +30,8 @@ var i = n(582128),
     I = n(652215),
     p = n(746080);
 n(253913);
-let T = "No Mic",
-    m = 120;
+let m = "No Mic",
+    T = 120;
 function g(e) {
     let t = e.trim().split("\n")[0] ?? "";
     return (0, h.A)(t.slice(0, I.Ign), !0);
@@ -48,7 +48,7 @@ function S(e) {
 }
 function N(e) {
     let t = (0, _.kt)(e);
-    return !!S(e) && !t.some((e) => e.name === T);
+    return !!S(e) && !t.some((e) => e.name === m);
 }
 function C(e, t) {
     return (0, u.OA)(e, { enabled: t, allowArchived: !0 });
@@ -92,7 +92,7 @@ function y(e) {
     return e.size >= 5;
 }
 function D(e, t) {
-    let n = (0, i.useMemo)(() => e?.find((e) => e.name === T), [e]),
+    let n = (0, i.useMemo)(() => e?.find((e) => e.name === m), [e]),
         r = null == n || !t.has(n.id),
         a = null == n || (y(t) && !t.has(n.id));
     return { noMicTag: n, voiceChatEnabled: r, voiceToggleDisabled: a };

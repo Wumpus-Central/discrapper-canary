@@ -15,11 +15,11 @@ var i = n(439372),
     f = n(246338),
     I = n(901173),
     p = n(652215),
-    T = n(746080);
-class m extends i.A {
+    m = n(746080);
+class T extends i.A {
     actions = { CONJURE_TURN_SETTLED: S, CONJURE_TURN_NOTIFICATION: N, LOGOUT: C };
 }
-let g = new m();
+let g = new T();
 function S(e) {
     let { projectId: t, guildId: n, title: i, body: r, nonce: a } = e;
     O(t, n, i, r, a);
@@ -32,10 +32,10 @@ function N(e) {
 function C() {
     v.clear();
 }
-function O(e, t, n, i, m) {
-    if (null != m) {
-        if (m <= (v.get(e) ?? 0)) return;
-        v.set(e, m);
+function O(e, t, n, i, T) {
+    if (null != T) {
+        if (T <= (v.get(e) ?? 0)) return;
+        v.set(e, T);
     }
     if (
         h.A.areTurnNotificationsDisabled() ||
@@ -50,7 +50,7 @@ function O(e, t, n, i, m) {
     if (
         (_.A.getShownProjectId() === e ||
             E.Ay.getGlobalSelectedProjectId() === e ||
-            (null != S && E.Ay.getSelectedProjectId(S) === e && d.Ay.getChannelId() === T.VV.CONJURE)) &&
+            (null != S && E.Ay.getSelectedProjectId(S) === e && d.Ay.getChannelId() === m.VV.CONJURE)) &&
         h.A.isWindowFocused()
     ) {
         g && (0, a.Ak)(R, D);
@@ -62,7 +62,7 @@ function O(e, t, n, i, m) {
         guildId: N,
         title: n,
         body: (0, I.Lj)(i),
-        route: null == N ? null : p.BVt.CHANNEL(N, T.VV.CONJURE, e),
+        route: null == N ? null : p.BVt.CHANNEL(N, m.VV.CONJURE, e),
         sound: g ? R : void 0,
         volume: D,
     });

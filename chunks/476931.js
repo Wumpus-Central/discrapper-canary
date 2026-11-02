@@ -2,7 +2,7 @@ n.d(t, {
     BC: () => o,
     It: () => R,
     Qy: () => p,
-    U6: () => m,
+    U6: () => T,
     XY: () => N,
     Yt: () => I,
     Z8: () => l,
@@ -11,7 +11,7 @@ n.d(t, {
     a0: () => d,
     iq: () => u,
     kI: () => g,
-    oE: () => T,
+    oE: () => m,
     sR: () => y,
     w3: () => C,
     wS: () => c,
@@ -98,11 +98,11 @@ function I(e) {
 function p() {
     return { presetId: f[0].id, customUserThemeSettings: void 0 };
 }
-function T(e, t) {
+function m(e, t) {
     return t === s.NJ.LIGHT ? e.lightAppearance : e.darkAppearance;
 }
-function m(e, t) {
-    let n = T(e, t),
+function T(e, t) {
+    let n = m(e, t),
         i = n.colors
             .map((e) => {
                 let { hex: t, stop: n } = e;

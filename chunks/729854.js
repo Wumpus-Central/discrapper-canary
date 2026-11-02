@@ -24,8 +24,8 @@ function h(e) {
 var f = n(544105),
     I = n(652215),
     p = n(105292);
-let T = "game_console_alert_modal",
-    m = "game_console_ptt_alert_modal",
+let m = "game_console_alert_modal",
+    T = "game_console_ptt_alert_modal",
     g = {
         maybeShowPTTAlert(e) {
             if (c.Ay.getMode() !== I.TBI.PUSH_TO_TALK || (0, d.k8)(a.M.CONSOLE_PTT_DISABLE_ALERT))
@@ -49,14 +49,14 @@ let T = "game_console_alert_modal",
                               actions: [{ text: p.intl.string(p.t.BddRzS), onClick: n }],
                           });
                       }
-                      (0, s.hasModalOpen)(m)
-                          ? (0, s.updateModal)(m, (e) => r(e))
-                          : (0, s.openModalLazy)(async () => (e) => r(e), { modalKey: m });
+                      (0, s.hasModalOpen)(T)
+                          ? (0, s.updateModal)(T, (e) => r(e))
+                          : (0, s.openModalLazy)(async () => (e) => r(e), { modalKey: T });
                   });
         },
         showSelfDismissableAlert(e) {
             let { title: t, body: n, errorCodeMessage: r, reconnectPlatformType: a } = e,
-                d = (0, i.jsx)(h, { body: n, errorCodeMessage: r, dismissCallback: () => (0, s.closeModal)(T) });
+                d = (0, i.jsx)(h, { body: n, errorCodeMessage: r, dismissCallback: () => (0, s.closeModal)(m) });
             function c() {
                 null != a &&
                     ((0, o.A)({ platformType: a }),
@@ -74,8 +74,8 @@ let T = "game_console_alert_modal",
                     children: d,
                 });
             }
-            (0, s.hasModalOpen)(T)
-                ? (0, s.updateModal)(T, (e) => _(e))
-                : (0, s.openModalLazy)(async () => (e) => _(e), { modalKey: T });
+            (0, s.hasModalOpen)(m)
+                ? (0, s.updateModal)(m, (e) => _(e))
+                : (0, s.openModalLazy)(async () => (e) => _(e), { modalKey: m });
         },
     };

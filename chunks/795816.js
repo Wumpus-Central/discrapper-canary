@@ -5,8 +5,8 @@ n.d(t, {
     Ue: () => eh,
     _H: () => e_,
     gk: () => ep,
-    i5: () => eT,
-    od: () => em,
+    i5: () => em,
+    od: () => eT,
     rW: () => eo,
     su: () => ed,
     tk: () => eA,
@@ -27,8 +27,8 @@ var i = n(562708),
     f = n(155718),
     I = n(323073),
     p = n(264322),
-    T = n(545152),
-    m = n(361926),
+    m = n(545152),
+    T = n(361926),
     g = n(587895),
     S = n(972995),
     N = n(878014),
@@ -89,8 +89,8 @@ async function ed(e) {
             referrerId: f,
             customId: I,
             inviterUserId: p,
-            renderInFramePool: T,
-            onConfirmActivityLaunchChecksAlertOpen: m,
+            renderInFramePool: m,
+            onConfirmActivityLaunchChecksAlertOpen: T,
         } = e,
         S = k.A.getChannel(t),
         C = S?.getGuildId() ?? void 0;
@@ -104,7 +104,7 @@ async function ed(e) {
             e(er.MLl.ACTIVITY_POPOUT);
         }
         if (
-            (!0 !== T && b.A.clearMainFrameSlot(),
+            (!0 !== m && b.A.clearMainFrameSlot(),
             L && (0, R.A)(t),
             (0, en.y)({ applicationId: i, launch: { customId: I, referrerId: f } }))
         ) {
@@ -130,7 +130,7 @@ async function ed(e) {
             source: E,
             commandOrigin: u,
             inviterUserId: p,
-            launchParams: { customId: I, referrerId: f, renderInFramePool: T },
+            launchParams: { customId: I, referrerId: f, renderInFramePool: m },
         });
         let [e] = await Promise.all([(0, $.D2)(i, t ?? void 0), (0, y.A)(i)]);
         d.h.dispatch({
@@ -179,7 +179,7 @@ async function ed(e) {
                 sectionName: _,
                 source: E,
                 onExecutedCallback: A,
-                onConfirmActivityLaunchChecksAlertOpen: m,
+                onConfirmActivityLaunchChecksAlertOpen: T,
             });
             if ("failure" === l.result)
                 if (4 === l.reason)
@@ -232,9 +232,9 @@ async function ec(e) {
         } = e,
         c = null;
     try {
-        c = await (0, m.Ay)(i, t);
+        c = await (0, T.Ay)(i, t);
     } catch (e) {
-        if (e.message === m.c5) return { result: "failure", reason: 1 };
+        if (e.message === T.c5) return { result: "failure", reason: 1 };
         throw e;
     }
     let u = c.handler !== f.Ys.APP_HANDLER;
@@ -273,7 +273,7 @@ async function ec(e) {
     }
     return (
         await new Promise((e, d) => {
-            (0, T.A)({
+            (0, m.A)({
                 command: c,
                 optionValues: {},
                 context: { channel: _, guild: E },
@@ -451,10 +451,10 @@ async function eI(e) {
 function ep(e) {
     d.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: e });
 }
-function eT(e) {
+function em(e) {
     d.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT", focusedActivityLayout: e });
 }
-async function em(e, t) {
+async function eT(e, t) {
     d.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: e, refreshing: !0 });
     try {
         let n = await (0, $.D2)(e, t ?? void 0);

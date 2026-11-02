@@ -15,8 +15,8 @@ var r = n(435558),
     f = n(280450),
     I = n(358047),
     p = n(734057),
-    T = n(31717),
-    m = n(808728),
+    m = n(31717),
+    T = n(808728),
     g = n(696451),
     S = n(71393),
     N = n(576705),
@@ -132,7 +132,7 @@ function q(e, t) {
                                       limit: 100,
                                       fuzzy: !0,
                                       filter: () => !0,
-                                      type: m.vM,
+                                      type: T.vM,
                                       allowEmptyQueries: !0,
                                   });
                           }
@@ -152,7 +152,7 @@ function q(e, t) {
                           let c =
                               ((e = (e) => e === i || a.has(e)),
                               (t = []),
-                              T.A.getRecentlyEditedDrafts(T.C.ChannelMessage).forEach((n) => {
+                              m.A.getRecentlyEditedDrafts(m.C.ChannelMessage).forEach((n) => {
                                   let { channelId: i } = n;
                                   if (e(i)) return;
                                   let r = $(i);
@@ -182,7 +182,7 @@ function q(e, t) {
                               E))
                                   (a.add(t.record.id), a.add(e), r.push(t));
                           if (null != n) {
-                              let e = m.Ay.getSelectableChannelIds(n)
+                              let e = T.Ay.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.A.getChannel(e);
                                       return (
@@ -272,7 +272,7 @@ class J extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
-        (this.waitFor(A.A, f.default, I.Ay, p.A, T.A, u.A, m.Ay, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
+        (this.waitFor(A.A, f.default, I.Ay, p.A, m.A, u.A, T.Ay, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
             this.syncWith([h.A], () => !0),
             (G = l.w.get(P) || !1),
             (j = e?.channelHistory ?? []));

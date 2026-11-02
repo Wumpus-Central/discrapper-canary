@@ -25,8 +25,8 @@ var i = n(435558),
     f = n(889227),
     I = n(403362),
     p = n(280450),
-    T = n(536802),
-    m = n(652215),
+    m = n(536802),
+    T = n(652215),
     g = n(202541);
 let S = {},
     N = 0,
@@ -69,10 +69,10 @@ function L(e) {
     void 0 !== I && (delete e.collectibles, (e.collectibles = (0, o.t)(I)));
     let p = e.global_name;
     void 0 !== p && ((e.globalName = p), delete e.global_name);
-    let T = e.primary_guild;
-    void 0 !== T && (e.primary_guild = (0, u.j)(T));
-    let m = e.display_name_styles;
-    void 0 !== m && ((e.displayNameStyles = (0, c.mT)(m)), delete e.display_name_styles);
+    let m = e.primary_guild;
+    void 0 !== m && (e.primary_guild = (0, u.j)(m));
+    let T = e.display_name_styles;
+    void 0 !== T && ((e.displayNameStyles = (0, c.mT)(T)), delete e.display_name_styles);
     let g = e.typing_indicator_style;
     void 0 !== g && ((e.typingIndicatorStyle = (0, d.cE)(g)), delete e.typing_indicator_style);
     let S = e.premium_state;
@@ -273,7 +273,7 @@ function z(e) {
                 });
             }),
                 n.forEach((e) => {
-                    (e.type === m.rbe.DM || e.type === m.rbe.GROUP_DM) &&
+                    (e.type === T.rbe.DM || e.type === T.rbe.GROUP_DM) &&
                         (e.recipients?.forEach((e) => D(e)), null != e.recipient && D(e.recipient));
                 }));
         }),
@@ -325,11 +325,11 @@ function en(e) {
 }
 function ei(e) {
     let { message: t } = e;
-    if ((M(t, !0), null != t.flags && r.Lt(t.flags, m.pr7.URGENT))) {
+    if ((M(t, !0), null != t.flags && r.Lt(t.flags, T.pr7.URGENT))) {
         let e = S[p.default.getId()];
         return (
             null != e &&
-            ((S[p.default.getId()] = e.set("flags", r.lA(e.flags, m.nhx.HAS_UNREAD_URGENT_MESSAGES, !0))), !0)
+            ((S[p.default.getId()] = e.set("flags", r.lA(e.flags, T.nhx.HAS_UNREAD_URGENT_MESSAGES, !0))), !0)
         );
     }
     return !1;
@@ -432,7 +432,7 @@ function ep(e) {
         n
     );
 }
-function eT(e) {
+function em(e) {
     let { guild: t } = e;
     t.members.forEach((e) => {
         let {
@@ -442,7 +442,7 @@ function eT(e) {
         (n !== p.default.getId() && D({ id: n, username: i, avatar: r, discriminator: a, bot: s }), O(n, t.id, l));
     });
 }
-function em(e) {
+function eT(e) {
     return D(e.relationship.user);
 }
 function eg(e) {
@@ -543,7 +543,7 @@ function eB(e) {
     let { stickers: t } = e;
     return t.reduce((e, t) => (null != t.user && D(t.user)) || e, !1);
 }
-class eV extends T.A {
+class eV extends m.A {
     static displayName = "UserStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -572,7 +572,7 @@ class eV extends T.A {
             MESSAGE_UPDATE: ei,
             GUILD_SETTINGS_LOADED_BANS: eo,
             GUILD_SETTINGS_LOADED_BANS_BATCH: ed,
-            GUILD_CREATE: eT,
+            GUILD_CREATE: em,
             GUILD_BAN_ADD: ec,
             GUILD_BAN_REMOVE: ec,
             CHANNEL_RECIPIENT_ADD: eu,
@@ -588,7 +588,7 @@ class eV extends T.A {
             THREAD_MEMBERS_UPDATE: ep,
             CHANNEL_CREATE: er,
             CHANNEL_UPDATES: ea,
-            RELATIONSHIP_ADD: em,
+            RELATIONSHIP_ADD: eT,
             GAME_RELATIONSHIP_ADD: eg,
             LOAD_RELATIONSHIPS_SUCCESS: eS,
             FRIEND_SUGGESTION_CREATE: eN,

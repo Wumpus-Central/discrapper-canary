@@ -17,8 +17,8 @@ function x(e) {
             line: n,
             live: r,
             settled: x,
-            tint: g,
-            detail: h,
+            tint: h,
+            detail: g,
             connected: j = !1,
             connectsDown: v = !1,
             anchor: b = !1,
@@ -32,7 +32,7 @@ function x(e) {
         S = a.useCallback(() => y((e) => !e), []),
         { text: N, phase: w } = (0, c.Q)(n),
         C = k ? s.a : u._,
-        I = null != h,
+        I = null != g,
         E = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: p.hd, children: t }),
@@ -66,7 +66,7 @@ function x(e) {
         "data-connected": j,
         "data-connects-down": v,
         "data-conjure-turn-status": b ? "true" : void 0,
-        style: null != g ? { "--custom-conjure-shimmer-tint": g } : void 0,
+        style: null != h ? { "--custom-conjure-shimmer-tint": h } : void 0,
         children: [
             I
                 ? (0, l.jsx)(d.D, {
@@ -79,7 +79,7 @@ function x(e) {
                       children: P,
                   })
                 : (0, l.jsx)("div", { className: p.ep, children: P }),
-            (0, l.jsx)("div", { id: A, hidden: !k, "data-conjure-entrance": !0, className: p.BA, children: h }),
+            (0, l.jsx)("div", { id: A, hidden: !k, "data-conjure-entrance": !0, className: p.BA, children: g }),
         ],
     });
 }

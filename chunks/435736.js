@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => C, C3: () => S, sw: () => g, tM: () => m, wW: () => f, xc: () => T });
+n.d(t, { Ay: () => C, C3: () => S, sw: () => g, tM: () => T, wW: () => f, xc: () => m });
 var i = n(196765),
     r = n(941426),
     a = n(554146),
@@ -19,10 +19,10 @@ function I() {
 function p(e) {
     (f.setState((t) => ({ ...t, ...e }), !0), s.w.set(A, f.getState()));
 }
-function T() {
+function m() {
     p({ isNewOverlayUser: void 0 });
 }
-function m() {
+function T() {
     p({ isUsingDefaultOverlayKeybind: void 0 });
 }
 function g(e) {

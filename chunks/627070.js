@@ -16,8 +16,8 @@ var c = n(780594),
     f = n(484697),
     I = n(532624),
     p = n(723702),
-    T = n(350535),
-    m = n(652215);
+    m = n(350535),
+    T = n(652215);
 let g = new Set([
         "esc",
         "shift+esc",
@@ -77,8 +77,8 @@ function R() {
                         for (let t of Object.values(I.Ay.getUserAgnosticState()))
                             t.enabled &&
                                 t.shortcut.length > 0 &&
-                                t.action !== m.hCu.UNASSIGNED &&
-                                e.push((0, T.dI)(t.shortcut));
+                                t.action !== T.hCu.UNASSIGNED &&
+                                e.push((0, m.dI)(t.shortcut));
                     return e;
                 })()
                     .flatMap(N)
@@ -207,10 +207,10 @@ class H extends r.A {
     stores = new Map().set(a.A, V);
     _unsubscribeKeybinds = null;
     _initialize() {
-        (s._.subscribe(m.jej.IFRAME_UNMOUNT, F), (this._unsubscribeKeybinds = D(B)));
+        (s._.subscribe(T.jej.IFRAME_UNMOUNT, F), (this._unsubscribeKeybinds = D(B)));
     }
     _terminate() {
-        for (let e of (s._.unsubscribe(m.jej.IFRAME_UNMOUNT, F),
+        for (let e of (s._.unsubscribe(T.jej.IFRAME_UNMOUNT, F),
         this._unsubscribeKeybinds?.(),
         (this._unsubscribeKeybinds = null),
         M.values()))

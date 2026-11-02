@@ -27,8 +27,8 @@ var i = n(582128),
     f = n(773669),
     I = n(594061),
     p = n(280450),
-    T = n(734057),
-    m = n(696451),
+    m = n(734057),
+    T = n(696451),
     g = n(71393),
     S = n(287809),
     N = n(174459),
@@ -201,7 +201,7 @@ class J extends d.Ay.Store {
     collator = new Intl.Collator(f.default.locale, H);
     initialize() {
         (this.waitFor(f.default),
-            this.waitFor(R.Ay, E.A, p.default, T.A, m.Ay, g.A, S.default),
+            this.waitFor(R.Ay, E.A, p.default, m.A, T.Ay, g.A, S.default),
             this.syncWith([f.default], () => {
                 let e;
                 (e = f.default.locale) !== ee.oldLocale &&
@@ -284,7 +284,7 @@ class J extends d.Ay.Store {
         return ((_.loading = _.loading || u), _);
     }
     queryInstallOnDemandApp(e, t) {
-        let n = T.A.getChannel(t);
+        let n = m.A.getChannel(t);
         null != n &&
             this.query(
                 null != n ? { channel: n, type: "channel" } : { type: "contextless" },
@@ -340,7 +340,7 @@ let ee = new J(c.h, {
                 r = i?.result?.sectionIdsByBotId;
             if (null != r)
                 for (let e in r) {
-                    let t = T.A.getDMFromUserId(e);
+                    let t = m.A.getDMFromUserId(e);
                     null != t && K({ type: "channel", channelId: t }, { serverVersion: x });
                 }
         },
@@ -530,8 +530,8 @@ function eo(e) {
         { commandTypes: h } = t,
         f = a?.toLowerCase(),
         p = f?.split(" "),
-        T = s === y.n.ONLY_TEXT,
-        m = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
+        m = s === y.n.ONLY_TEXT,
+        T = s !== y.n.DENY ? (0, C.Ez)(h, !0, m) : [],
         S = [],
         N = {
             permissionContext: t,
@@ -605,9 +605,9 @@ function eo(e) {
             }
             return eh(e.section.name, t.section.name);
         }),
-        m.length > 0 || !0 === c)
+        T.length > 0 || !0 === c)
     ) {
-        let e = ed(C.gZ[M.Ik.BUILT_IN], m, !0, !0, N);
+        let e = ed(C.gZ[M.Ik.BUILT_IN], T, !0, !0, N);
         null != e && S.push(e);
     }
     let b = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
@@ -654,7 +654,7 @@ function ed(e, t, n, i, r) {
         { context: E, userId: A, roleIds: h, isImpersonating: f } = u,
         I = E?.guild_id != null ? P.we(e.permissions, E.guild_id, A, h, f) : null,
         p = E?.guild_id != null ? P._W(e.permissions, E, E.guild_id) : null,
-        T = [];
+        m = [];
     for (let r of t)
         P.zl(r, u, {
             applicationAllowedForUser: I,
@@ -662,7 +662,7 @@ function ed(e, t, n, i, r) {
             commandBotId: e.botId,
             isGuildInstalled: n,
             isUserInstalled: i || _,
-        }) === P.CA.ALLOWED && T.push(r);
+        }) === P.CA.ALLOWED && m.push(r);
     return 0 !==
         (s =
             c !== y.M.NONE && null != l && null != o
@@ -720,8 +720,8 @@ function ed(e, t, n, i, r) {
                               void 0 !== n && l.push({ ...t, score: n }));
                       }
                       return l;
-                  })(l, o, T, e, c)
-                : T).length || d
+                  })(l, o, m, e, c)
+                : m).length || d
         ? ((c === y.M.NONE || c === y.M.APPLICATION_ONLY) && s.sort((e, t) => eh(e.displayName, t.displayName)),
           { section: e, data: s })
         : null;

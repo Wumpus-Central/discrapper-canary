@@ -22,8 +22,8 @@ let A = a.A.Millis.DAY,
     f = 5 * a.A.Millis.MINUTE,
     I = 30 * a.A.Millis.MINUTE,
     p = 5 * a.A.Millis.MINUTE,
-    T = 12 * a.A.Millis.HOUR,
-    m = 5 * a.A.Millis.MINUTE;
+    m = 12 * a.A.Millis.HOUR,
+    T = 5 * a.A.Millis.MINUTE;
 class g extends i.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
@@ -85,7 +85,7 @@ class g extends i.A {
             r = Math.floor(Math.random() * n);
         if (
             ((this.initialFetchTimerId = window.setTimeout(() => {
-                Date.now() - d.A.lastFetchedCurrentQuests <= m || this._fetch("post_connect_initial");
+                Date.now() - d.A.lastFetchedCurrentQuests <= T || this._fetch("post_connect_initial");
             }, r)),
             e)
         ) {
@@ -98,8 +98,8 @@ class g extends i.A {
         }
     };
     handleRunningGamesChange = () => {
-        this.instantiatedAt + T > Date.now() ||
-            d.A.lastFetchedCurrentQuests + T > Date.now() ||
+        this.instantiatedAt + m > Date.now() ||
+            d.A.lastFetchedCurrentQuests + m > Date.now() ||
             this._fetch("running_games");
     };
     handleUserSettingsProtoUpdate = (e) => {

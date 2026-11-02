@@ -1,7 +1,7 @@
 (n.d(t, {
     Cp: () => S,
     HB: () => y,
-    Ng: () => T,
+    Ng: () => m,
     OP: () => O,
     So: () => N,
     WD: () => p,
@@ -9,7 +9,7 @@
     eN: () => R,
     g_: () => C,
     kc: () => g,
-    kd: () => m,
+    kd: () => T,
 }),
     n(938796));
 var i = n(134559),
@@ -35,10 +35,10 @@ function p(e, t) {
         ? `https://${i}/promotions/${e}/${n}${r}`
         : `${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}/promotions/${e}/${n}${r}`;
 }
-function T(e) {
+function m(e) {
     return { code: e.code, userId: e.user_id, claimedAt: e.claimed_at, promotion: c.A.createFromServer(e.promotion) };
 }
-async function m(e) {
+async function T(e) {
     let t,
         { promotionId: n, promotionTitle: r, partnerId: s, analyticsLocations: l } = e,
         o = await a.Bo.post({ url: I.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: (0, a.fT)() }),
@@ -53,7 +53,7 @@ async function m(e) {
             name: r ?? null,
             partner: s ?? null,
         }),
-        T(d)
+        m(d)
     );
 }
 function g(e, t) {

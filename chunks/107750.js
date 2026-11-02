@@ -1,8 +1,8 @@
 (n.d(t, {
     E$: () => h,
-    VR: () => m,
+    VR: () => T,
     ZH: () => I,
-    f0: () => T,
+    f0: () => m,
     iD: () => A,
     oG: () => f,
     tB: () => E,
@@ -99,13 +99,13 @@ function I(e, t, n, i) {
 function p(e, t) {
     return E.put(e, t, { url: c.RQ.PLAYER_PAUSE }).then((e) => (a.h.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" }), e));
 }
-function T() {
+function m() {
     !d.A.isProtocolRegistered() &&
         (0, o.isDesktop)() &&
         l.A.isProtocolRegistered(c.gY).then((e) => {
             a.h.dispatch({ type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered: e });
         });
 }
-function m(e, t) {
+function T(e, t) {
     a.h.dispatch({ type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId: e, deviceId: t });
 }

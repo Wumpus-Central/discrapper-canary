@@ -42,15 +42,15 @@ function T() {
     return e;
 }
 var y = n(575778),
-    j = n(105292),
-    N =
+    N = n(105292),
+    j =
         (((l = {})[(l.REFRESH_APP = -1)] = "REFRESH_APP"),
         (l[(l.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
         (l[(l.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
         (l[(l.PARENTAL_CONSENT_CONNECTION = 10)] = "PARENTAL_CONSENT_CONNECTION"),
         (l[(l.APP_STORE_PARENTAL_REVOCATION = 11)] = "APP_STORE_PARENTAL_REVOCATION"),
         l);
-let S = {
+let I = {
         EMAIL_VERIFICATION: "email_verification",
         PHONE_VERIFICATION: "phone_verification",
         GENERIC_CALL_TO_ACTION: "generic_call_to_action",
@@ -59,18 +59,18 @@ let S = {
         PARENTAL_CONSENT_CONNECTION: "parental_consent_connection",
         APP_STORE_PARENTAL_REVOCATION: "app_store_parental_revocation",
     },
-    I = new Set(Object.values(S)),
+    S = new Set(Object.values(I)),
     b = new Set([10]),
     R = new Set([11]);
-(j.intl.string(y.default["Qm6K/s"]),
-    j.intl.string(y.default["dSkE/A"]),
-    j.intl.string(y.default.dMMSA0),
-    j.intl.string(y.default.Z87TFb));
+(N.intl.string(y.default["Qm6K/s"]),
+    N.intl.string(y.default["dSkE/A"]),
+    N.intl.string(y.default.dMMSA0),
+    N.intl.string(y.default.Z87TFb));
 var M = (((i = {}).Empty = "empty"), (i.VerificationCode = "verification_code"), i),
     O = n(627575),
     w = n(17928),
-    P = n(155718),
-    L = n(379257),
+    L = n(155718),
+    P = n(379257),
     k = n(287809),
     D = n(430993),
     U = n(503698),
@@ -130,9 +130,9 @@ function ea() {
         variant: "text-md/normal",
         color: "text-subtle",
         className: ei.Q,
-        children: j.intl.format(y.default.ifObbX, {
+        children: N.intl.format(y.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                L.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
+                P.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -146,10 +146,10 @@ var er = n(191627),
     em = n(486020),
     eh = n(923531);
 let ef = () => ({
-    seconds: j.intl.string(y.default.M4NOO3),
+    seconds: N.intl.string(y.default.M4NOO3),
     minutes: y.default["9nem85"],
     hours: y.default.sJjWRY,
-    yesterday: j.intl.string(y.default["7SxW32"]),
+    yesterday: N.intl.string(y.default["7SxW32"]),
     days: y.default.tVHevX,
     date: y.default.q6jzya,
 });
@@ -222,14 +222,14 @@ function eA(e) {
                 ? (0, a.jsx)(c.E, {
                       variant: "text-sm/normal",
                       color: "text-muted",
-                      children: j.intl.string(v ? y.default.YQP5dE : y.default["2HvOvh"]),
+                      children: N.intl.string(v ? y.default.YQP5dE : y.default["2HvOvh"]),
                   })
                 : (0, a.jsxs)("div", {
                       className: eg.o1,
                       children: [
                           !l &&
                               (0, a.jsx)(eu.D, {
-                                  "aria-label": j.intl.formatToPlainString(ep.default.jc1Ip7, {
+                                  "aria-label": N.intl.formatToPlainString(ep.default.jc1Ip7, {
                                       name: n.parent_username,
                                   }),
                                   className: F()(eg.hP, eg.xG),
@@ -239,7 +239,7 @@ function eA(e) {
                                       : (0, a.jsx)(ed.r, { className: eg.gE, color: "currentColor" }),
                               }),
                           (0, a.jsx)(eu.D, {
-                              "aria-label": j.intl.formatToPlainString(ep.default["4GtllP"], {
+                              "aria-label": N.intl.formatToPlainString(ep.default["4GtllP"], {
                                   name: n.parent_username,
                               }),
                               className: F()(eg.hP, eg.rr),
@@ -335,7 +335,7 @@ function ev(e) {
             pendingRequests: t,
             linkedUsersProcessed: n,
             onActionError: () => {
-                (0, K.P0)({ text: j.intl.string(ep.default.Wu8BK2), variant: "critical" });
+                (0, K.P0)({ text: N.intl.string(ep.default.Wu8BK2), variant: "critical" });
             },
         });
     return 0 === l.length
@@ -375,20 +375,20 @@ let eT = {
                     (0, a.jsx)(d.D, {
                         variant: "heading-lg/bold",
                         className: e_.DD,
-                        children: j.intl.string(y.default.v52itt),
+                        children: N.intl.string(y.default.v52itt),
                     }),
                     (0, a.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         className: e_.h_,
-                        children: j.intl.string(y.default["5am8D3"]),
+                        children: N.intl.string(y.default["5am8D3"]),
                     }),
                     (0, a.jsx)(u.B, {
                         direction: "horizontal",
                         justify: "end",
                         children: (0, a.jsx)(m.$, {
                             variant: "primary",
-                            text: j.intl.string(y.default["GDsHl+"]),
+                            text: N.intl.string(y.default["GDsHl+"]),
                             onClick: l,
                             disabled: n,
                         }),
@@ -406,8 +406,8 @@ let eT = {
                         text: "Consectetur adipiscing",
                         variant: "primary",
                         onClick: function () {
-                            n?.ageVerificationStatus === P.Tk.UNVERIFIED
-                                ? L.A.showAgeVerificationGetStartedModal({
+                            n?.ageVerificationStatus === L.Tk.UNVERIFIED
+                                ? P.A.showAgeVerificationGetStartedModal({
                                       entryPoint: f.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: M.Empty }),
                                   })
@@ -475,34 +475,34 @@ let eT = {
                     }, [E, n, l, t])),
                 _ = E ? Object.values(x).some((e) => null != e) : g.pending_requests.length > 0,
                 T = E ? A : g.pending_requests.length,
-                N = (0, w.bG)([X.A], () => X.A.getLinkCode()),
-                S = (0, w.bG)([X.A], () => X.A.getLinkCodeExpiresAt()),
-                I = N ?? g.link_code,
-                b = S ?? Date.parse(g.link_code_expires_at),
+                j = (0, w.bG)([X.A], () => X.A.getLinkCode()),
+                I = (0, w.bG)([X.A], () => X.A.getLinkCodeExpiresAt()),
+                S = j ?? g.link_code,
+                b = I ?? Date.parse(g.link_code_expires_at),
                 R = r.useCallback(async () => {
                     try {
                         await o({ type: M.Empty });
                     } catch {
-                        (0, K.P0)({ text: j.intl.string(y.default["+QRSxc"]), variant: "critical" });
+                        (0, K.P0)({ text: N.intl.string(y.default["+QRSxc"]), variant: "critical" });
                     }
                 }, [o]),
-                [P, L] = r.useState(_);
-            _ && !P && L(!0);
+                [L, P] = r.useState(_);
+            _ && !L && P(!0);
             let [U, F] = r.useState(!1),
                 G = r.useCallback(() => {
                     (F(!1), p());
                 }, [p]);
             (0, et.A)(G);
-            let V = !P || U,
+            let V = !L || U,
                 H = V
-                    ? j.intl.format(y.default["6GaRTu"], { link: eC })
-                    : j.intl.format(y.default["Ke+kz5"], { pendingCount: T, link: eC });
+                    ? N.intl.format(y.default["6GaRTu"], { link: eC })
+                    : N.intl.format(y.default["Ke+kz5"], { pendingCount: T, link: eC });
             return (0, a.jsxs)(q.d, {
                 transitionState: f,
                 onClose: ex.tE,
                 dismissable: !1,
                 size: "md",
-                "aria-label": j.intl.string(y.default.dMMSA0),
+                "aria-label": N.intl.string(y.default.dMMSA0),
                 children: [
                     U &&
                         (0, a.jsx)("div", {
@@ -511,11 +511,11 @@ let eT = {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: Y.n,
-                                text: j.intl.string(y.default.CLAQas),
+                                text: N.intl.string(y.default.CLAQas),
                                 onClick: () => F(!1),
                             }),
                         }),
-                    (0, a.jsx)(Q.rQ, { alignCenter: !0, title: j.intl.string(y.default.dMMSA0), subtitle: H }),
+                    (0, a.jsx)(Q.rQ, { alignCenter: !0, title: N.intl.string(y.default.dMMSA0), subtitle: H }),
                     (0, a.jsxs)(D.c, {
                         children: [
                             V &&
@@ -523,7 +523,7 @@ let eT = {
                                     direction: "vertical",
                                     align: "center",
                                     gap: 16,
-                                    children: (0, a.jsx)(el.r, { linkCode: I, expiresAt: b, onRefresh: p }),
+                                    children: (0, a.jsx)(el.r, { linkCode: S, expiresAt: b, onRefresh: p }),
                                 }),
                             (0, a.jsx)("div", {
                                 hidden: V,
@@ -534,17 +534,17 @@ let eT = {
                     (0, a.jsx)($.H, {
                         actionsFullWidth: !0,
                         actions:
-                            P && !U
+                            L && !U
                                 ? [
                                       {
-                                          text: j.intl.string(y.default["RD76/V"]),
+                                          text: N.intl.string(y.default["RD76/V"]),
                                           variant: "secondary",
                                           onClick: function () {
                                               F(!0);
                                           },
                                       },
                                       {
-                                          text: j.intl.string(y.default.OaHZUf),
+                                          text: N.intl.string(y.default.OaHZUf),
                                           variant: "primary",
                                           onClick: R,
                                           disabled: !v || d,
@@ -557,7 +557,7 @@ let eT = {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         className: eE.r,
-                        children: j.intl.format(y.default["0DHxym"], {
+                        children: N.intl.format(y.default["0DHxym"], {
                             handleLogOut: () => (0, O.k)("safety_flows_parental_consent_connection"),
                         }),
                     }),
@@ -574,11 +574,11 @@ let eT = {
                     );
                 }, []);
             return (0, a.jsx)(z, {
-                title: j.intl.string(y.default.Z87TFb),
+                title: N.intl.string(y.default.Z87TFb),
                 variant: "app_store_lockdown",
                 actions: [
                     {
-                        text: j.intl.string(y.default["6FXIU6"]),
+                        text: N.intl.string(y.default["6FXIU6"]),
                         variant: "primary",
                         icon: Z.I,
                         iconPosition: "end",
@@ -592,18 +592,18 @@ let eT = {
                         (0, a.jsx)(c.E, {
                             variant: "text-md/normal",
                             color: "text-subtle",
-                            children: j.intl.string(y.default["1YhkP1"]),
+                            children: N.intl.string(y.default["1YhkP1"]),
                         }),
                         (0, a.jsxs)(u.B, {
                             children: [
                                 (0, a.jsx)(d.D, {
                                     variant: "text-md/normal",
-                                    children: j.intl.string(y.default.z1L5Wt),
+                                    children: N.intl.string(y.default.z1L5Wt),
                                 }),
                                 (0, a.jsx)(c.E, {
                                     variant: "text-md/normal",
                                     color: "text-subtle",
-                                    children: j.intl.string(y.default.BaI6L4),
+                                    children: N.intl.string(y.default.BaI6L4),
                                 }),
                             ],
                         }),
@@ -628,16 +628,16 @@ let eT = {
                   transitionState: l,
               });
     };
-var ej = n(754302),
-    eN = n(700265);
-let eS = {
-        [N.EMAIL_VERIFICATION]: j.intl.string(y.default.HC4IiR),
-        [N.REFRESH_APP]: j.intl.string(y.default.SzfxQ3),
-        [N.AGE_VERIFICATION]: j.intl.string(y.default["dSkE/A"]),
-        [N.PARENTAL_CONSENT_CONNECTION]: j.intl.string(y.default.dMMSA0),
-        [N.APP_STORE_PARENTAL_REVOCATION]: j.intl.string(y.default.Z87TFb),
+var eN = n(754302),
+    ej = n(700265);
+let eI = {
+        [j.EMAIL_VERIFICATION]: N.intl.string(y.default.HC4IiR),
+        [j.REFRESH_APP]: N.intl.string(y.default.SzfxQ3),
+        [j.AGE_VERIFICATION]: N.intl.string(y.default["dSkE/A"]),
+        [j.PARENTAL_CONSENT_CONNECTION]: N.intl.string(y.default.dMMSA0),
+        [j.APP_STORE_PARENTAL_REVOCATION]: N.intl.string(y.default.Z87TFb),
     },
-    eI = function () {
+    eS = function () {
         let { task: e } = T(),
             t = e.flow_context.tasks,
             n = t.findIndex((t) => t.task_type === e.task_type),
@@ -646,7 +646,7 @@ let eS = {
             direction: "vertical",
             justify: "space-between",
             padding: B,
-            className: eN.k,
+            className: ej.k,
             children: [
                 (0, a.jsxs)(u.B, {
                     direction: "vertical",
@@ -654,8 +654,8 @@ let eS = {
                     children: [
                         (0, a.jsx)(d.D, {
                             variant: "display-md",
-                            className: eN.D,
-                            children: j.intl.string(y.default["/OpRAP"]),
+                            className: ej.D,
+                            children: N.intl.string(y.default["/OpRAP"]),
                         }),
                         l &&
                             (0, a.jsx)(u.B, {
@@ -664,9 +664,9 @@ let eS = {
                                 gap: 0,
                                 children: t.map((e, t) =>
                                     (0, a.jsx)(
-                                        ej.B,
+                                        eN.B,
                                         {
-                                            title: eS[e.task_type] ?? "",
+                                            title: eI[e.task_type] ?? "",
                                             listType: "numbered",
                                             index: t,
                                             color: t === n ? "text-strong" : t < n ? "feedback-positive" : "text-muted",
@@ -681,7 +681,7 @@ let eS = {
                 (0, a.jsx)(c.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
-                    children: j.intl.format(y.default["0DHxym"], {
+                    children: N.intl.format(y.default["0DHxym"], {
                         handleLogOut: () => (0, O.k)("safety_flows_sidebar"),
                     }),
                 }),
@@ -700,7 +700,7 @@ function eM(e) {
     let d = b.has(s.task_type);
     return (0, a.jsxs)(_.Provider, {
         value: u,
-        children: [!d && (0, a.jsx)(eI, {}), (0, a.jsx)(ey, { onSubmit: n, disabled: l, transitionState: i })],
+        children: [!d && (0, a.jsx)(eS, {}), (0, a.jsx)(ey, { onSubmit: n, disabled: l, transitionState: i })],
     });
 }
 let eO = function (e) {
@@ -714,22 +714,22 @@ let eO = function (e) {
             try {
                 let e = await E();
                 if (null == e) return void n();
-                !(0, g.uJ)(e.ui_component?.component.type) && I.has(e.ui_component.component.type)
+                !(0, g.uJ)(e.ui_component?.component.type) && S.has(e.ui_component.component.type)
                     ? i(e)
                     : i({
                           task_id: e.task_id,
-                          task_type: N.REFRESH_APP,
+                          task_type: j.REFRESH_APP,
                           assignment_id: e.assignment_id,
-                          ui_component: { component: { type: S.REFRESH_APP, data: {} } },
+                          ui_component: { component: { type: I.REFRESH_APP, data: {} } },
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {
-                _(j.intl.string(y.default["/f++3g"]));
+                _(N.intl.string(y.default["/f++3g"]));
             } finally {
                 v(!1);
             }
         }, [n]),
-        P = r.useCallback(
+        L = r.useCallback(
             async (e) => {
                 if (null !== l) {
                     R(!0);
@@ -738,7 +738,7 @@ let eO = function (e) {
                         (await C(t), w());
                     } catch (e) {
                         if (b.has(l.task_type)) throw e;
-                        _(j.intl.string(y.default["+QRSxc"]));
+                        _(N.intl.string(y.default["+QRSxc"]));
                     } finally {
                         R(!1);
                     }
@@ -749,24 +749,24 @@ let eO = function (e) {
     (0, h.Ay)(() => {
         w();
     });
-    let L = r.useMemo(() => l?.task_type === N.AGE_VERIFICATION, [l]),
+    let P = r.useMemo(() => l?.task_type === j.AGE_VERIFICATION, [l]),
         k = null != l && null === x && b.has(l.task_type);
     return (0, a.jsxs)("div", {
         className: eb.Tp,
         children: [
             (0, a.jsx)("img", { className: eb.xX, src: eR, alt: "" }),
-            L
+            P
                 ? (0, a.jsx)(p.default, {
                       transitionState: t ?? s.ip.ENTERED,
                       entryPoint: f.q1.SAFETY_FLOWS,
                       onClose: ex.tE,
                       onComplete: async () => {
-                          await P({ type: M.Empty });
+                          await L({ type: M.Empty });
                       },
                       dismissable: !1,
                   })
                 : k && null != l
-                  ? (0, a.jsx)(eM, { task: l, handleSubmit: P, disabled: T, transitionState: t ?? s.ip.ENTERED })
+                  ? (0, a.jsx)(eM, { task: l, handleSubmit: L, disabled: T, transitionState: t ?? s.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eb.nA,
                         children: A
@@ -792,12 +792,12 @@ let eO = function (e) {
                                                           children: [
                                                               (0, a.jsx)(d.D, {
                                                                   variant: "heading-xl/semibold",
-                                                                  children: j.intl.string(j.t.c6kn6F),
+                                                                  children: N.intl.string(N.t.c6kn6F),
                                                               }),
                                                               (0, a.jsx)(c.E, {
                                                                   variant: "text-md/normal",
                                                                   color: "text-muted",
-                                                                  children: j.intl.string(j.t.ZUEGFn),
+                                                                  children: N.intl.string(N.t.ZUEGFn),
                                                               }),
                                                           ],
                                                       }),
@@ -809,14 +809,14 @@ let eO = function (e) {
                                                               (0, a.jsx)(m.$, {
                                                                   fullWidth: !0,
                                                                   variant: "secondary",
-                                                                  text: j.intl.string(j.t["2jxGer"]),
+                                                                  text: N.intl.string(N.t["2jxGer"]),
                                                                   onClick: () => {
                                                                       (0, O.k)("safety_flows_modal");
                                                                   },
                                                               }),
                                                               (0, a.jsx)(m.$, {
                                                                   fullWidth: !0,
-                                                                  text: j.intl.string(j.t["7NqTJn"]),
+                                                                  text: N.intl.string(N.t["7NqTJn"]),
                                                                   onClick: () => {
                                                                       w();
                                                                   },
@@ -827,7 +827,7 @@ let eO = function (e) {
                                               }),
                                           null === x &&
                                               null != l &&
-                                              (0, a.jsx)(eM, { task: l, handleSubmit: P, disabled: T }),
+                                              (0, a.jsx)(eM, { task: l, handleSubmit: L, disabled: T }),
                                       ],
                                   }),
                               }),

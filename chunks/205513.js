@@ -1,4 +1,4 @@
-n.d(t, { G: () => T });
+n.d(t, { G: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -49,7 +49,7 @@ function p(e, t) {
         })(e),
     };
 }
-class T extends r.PureComponent {
+class m extends r.PureComponent {
     static contextType = _.C;
     static defaultProps = {
         initialValue: 10,
@@ -101,7 +101,7 @@ class T extends r.PureComponent {
                 disabled: _,
                 stickToMarkers: I,
                 className: p,
-                children: T,
+                children: m,
                 barStyles: g,
                 fillStyles: S,
                 mini: N,
@@ -162,7 +162,7 @@ class T extends r.PureComponent {
         return (0, i.jsx)(A.D, {
             ...F,
             children: (r) =>
-                (0, i.jsx)(m, {
+                (0, i.jsx)(T, {
                     active: t,
                     keyboardFocused: n && this.context.keyboardModeEnabled,
                     children: (a) =>
@@ -213,7 +213,7 @@ class T extends r.PureComponent {
                                             style: { ...S, width: V },
                                         }),
                                     }),
-                                    T,
+                                    m,
                                     (0, i.jsx)("div", {
                                         className: f.track,
                                         children: (0, i.jsx)(h.m, {
@@ -409,7 +409,7 @@ class T extends r.PureComponent {
         (i?.(o), this.setState({ value: o }));
     };
 }
-function m(e) {
+function T(e) {
     let { active: t, keyboardFocused: n, children: i } = e,
         [a, s] = r.useState(!1);
     return i({

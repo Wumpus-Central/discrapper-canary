@@ -31,8 +31,8 @@ class E extends a.Component {
             scrollBehavior: f,
             useMouseEnter: I,
             renderPopout: p,
-            layerContext: T,
-            position: m = "right",
+            layerContext: m,
+            position: T = "right",
             autoInvert: g = !0,
             nudgeAlignIntoViewport: S = !0,
             avoidancePadding: N,
@@ -44,7 +44,7 @@ class E extends a.Component {
             targetElementRef: this.props.targetElementRef,
             preload: _,
             loadingComponent: E,
-            position: m,
+            position: T,
             align:
                 null != a
                     ? a
@@ -61,7 +61,7 @@ class E extends a.Component {
                                   return "center";
                           }
                           throw Error(`Unexpected position: ${e}`);
-                      })(m),
+                      })(T),
             autoInvert: g,
             fixed: s,
             nudgeAlignIntoViewport: S,
@@ -79,7 +79,7 @@ class E extends a.Component {
             ignoreModalClicks: h,
             scrollBehavior: f,
             useMouseEnter: I,
-            layerContext: T,
+            layerContext: m,
             clickTrap: O,
             children: e,
         });

@@ -51,8 +51,8 @@ function A(e) {
         f = (0, r.useRef)(null),
         I = r.useId(),
         p = `${I}label`,
-        T = `${I}description`,
-        m = null != t && "" !== t,
+        m = `${I}description`,
+        T = null != t && "" !== t,
         [g, S] = (0, r.useState)(void 0),
         N = (0, r.useRef)(!1);
     return (
@@ -77,7 +77,7 @@ function A(e) {
                 isDisabled: n,
                 inputRef: f,
                 "aria-labelledby": p,
-                "aria-describedby": m ? T : void 0,
+                "aria-describedby": T ? m : void 0,
                 ref: h,
                 children: [
                     (0, i.jsx)(E, {}),
@@ -90,9 +90,9 @@ function A(e) {
                             focusable: !1,
                         }),
                     (0, i.jsx)(c.E, { id: p, tag: "span", variant: "text-md/normal", children: d }),
-                    m
+                    T
                         ? (0, i.jsx)(c.E, {
-                              id: T,
+                              id: m,
                               className: u.description,
                               variant: "text-sm/normal",
                               color: "text-subtle",

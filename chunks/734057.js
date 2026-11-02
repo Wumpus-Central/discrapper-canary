@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(95701),
     I = n(403362),
     p = n(935208),
-    T = n(280450),
-    m = n(71393),
+    m = n(280450),
+    T = n(71393),
     g = n(287809),
     S = n(652215),
     N = n(746080);
@@ -40,7 +40,7 @@ let C = new A.A("ChannelStore"),
     V = 0;
 class H {
     static loadAllMissingChannels() {
-        let e = m.A.getGuildIds().filter((e) => !G.has(e));
+        let e = T.A.getGuildIds().filter((e) => !G.has(e));
         return this.loadGuildIds(e);
     }
     static loadGuildFromChannelId(e) {
@@ -234,7 +234,7 @@ function es() {
 class el extends s.Ay.Store {
     static displayName = "ChannelStore";
     initialize() {
-        (this.waitFor(T.default, u.A, h.A, m.A, g.default), this.syncWith([h.A], es));
+        (this.waitFor(m.default, u.A, h.A, T.A, g.default), this.syncWith([h.A], es));
     }
     hasChannel(e) {
         return null != K(e);
@@ -246,7 +246,7 @@ class el extends s.Ay.Store {
         if (null != e) return $(e);
     }
     loadAllGuildAndPrivateChannelsFromDisk() {
-        for (let e of m.A.getGuildIds()) j(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
+        for (let e of T.A.getGuildIds()) j(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
         return { ...R, ...y };
     }
     getChannelIds(e) {
@@ -363,7 +363,7 @@ let ed = new el(l.h, {
     CHANNEL_DELETE: en,
     CHANNEL_RECIPIENT_ADD: function (e) {
         let t = $(e.channelId),
-            n = T.default.getId();
+            n = m.default.getId();
         return !!t?.isPrivate() && (z(t.addRecipient(e.user.id, e.nick, n)), !0);
     },
     CHANNEL_RECIPIENT_REMOVE: function (e) {

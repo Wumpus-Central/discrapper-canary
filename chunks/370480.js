@@ -1,4 +1,4 @@
-(n.d(t, { An: () => g, N8: () => T, RP: () => p, _g: () => m, iC: () => h, jO: () => f, vA: () => I }),
+(n.d(t, { An: () => g, N8: () => m, RP: () => p, _g: () => T, iC: () => h, jO: () => f, vA: () => I }),
     n(323874),
     n(14289),
     n(35956));
@@ -238,10 +238,10 @@ function p(e) {
         }
     return s;
 }
-function T(e) {
+function m(e) {
     return e.some((e) => null === e.tags.guild_connections);
 }
-function m(e) {
+function T(e) {
     let { guildMember: t, guild: n, sortedGuildRoles: i, channel: r, onlyChannelConnectionRoles: a = !1 } = e;
     if (null == t || (null == n && null != r && (n = c.A.getGuild(r.getGuildId())), null == n)) return null;
     let { id: s } = n;

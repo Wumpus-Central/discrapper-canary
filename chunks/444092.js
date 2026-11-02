@@ -47,19 +47,19 @@ function _() {
             let p = a.get(f);
             if ("foreground" === h && null != p && Date.now() - p.startedAt < 2e3) return (c(f, p.request), p.request);
             if ("background" === h && n.has(f)) return Promise.reject(new d("guild event is unavailable"));
-            let T = t.get(f);
-            if (null != T && (_(f, T), "background" === h && T.pending))
+            let m = t.get(f);
+            if (null != m && (_(f, m), "background" === h && m.pending))
                 return Promise.reject(Error("guild event fetch is backing off"));
             if ("background" === h && e.size >= 1024)
                 return Promise.reject(Error("too many pending guild event fetches"));
-            function m() {
+            function T() {
                 return e.get(f)?.request === g;
             }
             let g = Promise.resolve()
                 .then(A)
-                .then((e) => (m() && (t.get(f)?.succeed(), t.delete(f), n.delete(f)), e))
+                .then((e) => (T() && (t.get(f)?.succeed(), t.delete(f), n.delete(f)), e))
                 .catch((e) => {
-                    if (e instanceof s.wH || !m()) throw e;
+                    if (e instanceof s.wH || !T()) throw e;
                     if (u(e)) {
                         for (t.get(f)?.cancel(), t.delete(f), n.delete(f), n.add(f); n.size > 1024;) {
                             let e = n.values().next().value;
@@ -68,11 +68,11 @@ function _() {
                         }
                         throw e;
                     }
-                    let a = T ?? new i.A(10 * r.A.Millis.SECOND, 10 * r.A.Millis.MINUTE, !0);
+                    let a = m ?? new i.A(10 * r.A.Millis.SECOND, 10 * r.A.Millis.MINUTE, !0);
                     throw (_(f, a), a.cancel(), a.fail(() => queueMicrotask(() => o(f))), e);
                 })
                 .finally(() => {
-                    m() && e.delete(f);
+                    T() && e.delete(f);
                 });
             return (e.set(f, { request: g, priority: h }), "foreground" === h && c(f, g), g);
         },

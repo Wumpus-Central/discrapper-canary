@@ -29,27 +29,27 @@ function I(e, t) {
 function p(e, t) {
     return !!f(e) && (I(e, t), A?.setInteractionEnabled(!e), C.emitChange(), !0);
 }
-function T(e, t) {
+function m(e, t) {
     return (
         !!f(e) &&
         (I(e, t), null == E || (clearTimeout(E), (E = null), !e)) &&
         (e
             ? p(e, t)
             : (E = setTimeout(() => {
-                  (p(e, t), m());
+                  (p(e, t), T());
               }, 100)),
         !0)
     );
 }
-function m() {
+function T() {
     null != E && (clearTimeout(E), (E = null));
 }
 function g() {
-    (m(), _.clear(), (_ = new Set()), (h = null));
+    (T(), _.clear(), (_ = new Set()), (h = null));
 }
 function S(e) {
     let { locked: t, pid: n } = e;
-    return ((0, o.dK)(n, "setInputLocked called", { locked: t }), T(t, n), !0);
+    return ((0, o.dK)(n, "setInputLocked called", { locked: t }), m(t, n), !0);
 }
 class N extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Input-Lock-Store";
@@ -75,7 +75,7 @@ let C = new N(
                   OVERLAY_ACTIVATE_REGION: function (e) {
                       let { region: t } = e,
                           n = l.A.getFocusedPID();
-                      return ((0, o.dK)(n ?? null, "activate_region", { region: t }), null != n && T(!1, n), !0);
+                      return ((0, o.dK)(n ?? null, "activate_region", { region: t }), null != n && m(!1, n), !0);
                   },
                   OVERLAY_DEACTIVATE_ALL_REGIONS: function () {
                       let e = l.A.getFocusedPID();

@@ -19,20 +19,20 @@ function u(e, t) {
                 disableFocusRingScope: f = !1,
                 onScroll: I,
                 style: p,
-                ref: T,
-                ...m
+                ref: m,
+                ...T
             } = n,
             g = r.useRef(null),
             S = (0, o.A)({ scrollbarGutter: A, orientation: E, className: u, scrollerRef: g }),
             N = !1 === A || "vertical" !== E ? void 0 : "stable" === A ? c.x2 : c.GV;
         return (0, i.jsx)("div", {
             ref: (e) => {
-                ("function" == typeof T ? T(e) : null != T && (T.current = e), (g.current = e));
+                ("function" == typeof m ? m(e) : null != m && (m.current = e), (g.current = e));
             },
             className: s()(u, N, { [e]: !0, [t]: h }),
             style: (0, d.Ay)(p, E),
             dir: _,
-            ...m,
+            ...T,
             children: (0, i.jsxs)(l.t, { disableFocusRingScope: f, containerRef: g, children: [a, S] }),
         });
     };

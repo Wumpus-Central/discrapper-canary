@@ -1,4 +1,4 @@
-(n.d(t, { A: () => T }), n(938796));
+(n.d(t, { A: () => m }), n(938796));
 var i = n(665260),
     r = n(439372),
     a = n(976860),
@@ -47,4 +47,4 @@ class p extends r.A {
             (await (0, _.default)({ guildId: e }), (0, a.pX)(E.BVt.CHANNEL(e, t)));
     };
 }
-let T = new p();
+let m = new p();

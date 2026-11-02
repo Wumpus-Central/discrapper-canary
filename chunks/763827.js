@@ -90,8 +90,8 @@ var h = n(626584),
     f = n(643501),
     I = n(75076),
     p = n(280450),
-    T = n(652215);
-let m = new h.A("RTCConnectionStore"),
+    m = n(652215);
+let T = new h.A("RTCConnectionStore"),
     g = [],
     S = null,
     N = null,
@@ -226,13 +226,13 @@ class B extends a.Ay.Store {
         return i;
     }
     getState() {
-        return null != i ? i.state : T.S7L.DISCONNECTED;
+        return null != i ? i.state : m.S7L.DISCONNECTED;
     }
     isConnected() {
-        return this.getState() === T.S7L.RTC_CONNECTED;
+        return this.getState() === m.S7L.RTC_CONNECTED;
     }
     isDisconnected() {
-        return this.getState() === T.S7L.DISCONNECTED;
+        return this.getState() === m.S7L.DISCONNECTED;
     }
     getRemoteDisconnectVoiceChannelId() {
         return S;
@@ -253,7 +253,7 @@ class B extends a.Ay.Store {
         return null != i ? i.hostname : "";
     }
     getQuality() {
-        return null != i ? i.quality : T.bFR.UNKNOWN;
+        return null != i ? i.quality : m.bFR.UNKNOWN;
     }
     getPings() {
         return null != i ? i.getPings() : g;
@@ -335,7 +335,7 @@ let V = new B(
                   return ((y = null), !1);
               },
               RTC_CONNECTION_STATE: function (e) {
-                  return (e.state === T.S7L.RTC_CONNECTED && ((L = !0), null != i && (y = (0, s.tB)())), !0);
+                  return (e.state === m.S7L.RTC_CONNECTED && ((L = !0), null != i && (y = (0, s.tB)())), !0);
               },
               RTC_CONNECTION_PING: function () {
                   return (null != i && (y = (0, s.tB)()), !0);
@@ -415,7 +415,7 @@ let V = new B(
                           if ((G(), null == e.channelId)) return;
                           let t = new l.Ep();
                           (t.start(3e4, () => {
-                              (m.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", {
+                              (T.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", {
                                   joinVoiceId: e.joinVoiceId,
                                   channelId: e.channelId,
                                   guildId: e.guildId,
@@ -460,7 +460,7 @@ let V = new B(
                   w();
               },
               APP_STATE_UPDATE: function (e) {
-                  return (e.state === T.g6G.ACTIVE && null != i && i.resetBackoff("App state is active"), !1);
+                  return (e.state === m.g6G.ACTIVE && null != i && i.resetBackoff("App state is active"), !1);
               },
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
                   let { userId: t, context: n, quality: r } = e;

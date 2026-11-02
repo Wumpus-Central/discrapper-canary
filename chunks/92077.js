@@ -8,8 +8,8 @@ n.d(t, {
     Vt: () => L,
     ZT: () => R,
     jU: () => y,
-    oc: () => T,
-    qv: () => m,
+    oc: () => m,
+    qv: () => T,
     v7: () => C,
     zr: () => p,
 });
@@ -44,7 +44,7 @@ function I(e, t) {
 function p() {
     E.A.destroy();
 }
-function T(e) {
+function m(e) {
     let { application: t, branchId: n, buildId: i, manifestIds: a, installationPath: s, analyticsLocation: l } = e;
     (E.A.setTargetManifest({
         applicationId: t.id,
@@ -63,7 +63,7 @@ function T(e) {
             location: l,
         }));
 }
-function m(e, t, n) {
+function T(e, t, n) {
     ((0, A.n)(e.id, t).then(() => {
         r.h.dispatch({ type: "DISPATCH_APPLICATION_REPAIR", applicationId: e.id, branchId: t });
     }),

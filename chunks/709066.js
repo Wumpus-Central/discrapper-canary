@@ -43,10 +43,10 @@ function _(e) {
         default:
             f = c.intl.string(c.t["9RNkeF"]);
     }
-    let T = n === d.nu.ORIGINAL_POSTER,
-        m = null;
+    let m = n === d.nu.ORIGINAL_POSTER,
+        T = null;
     _ &&
-        (m = (0, i.jsx)(s.m, {
+        (T = (0, i.jsx)(s.m, {
             text: I,
             align: "center",
             position: "top",
@@ -69,8 +69,8 @@ function _(e) {
         return (0, i.jsxs)("span", {
             role: "img",
             "aria-label": g ?? void 0,
-            className: a()(r, p, A ? u.D0 : u.px, { [u.rV]: T }),
-            children: [E ? null : m, h, (0, i.jsx)("span", { className: u.lc, children: f })],
+            className: a()(r, p, A ? u.D0 : u.px, { [u.rV]: m }),
+            children: [E ? null : T, h, (0, i.jsx)("span", { className: u.lc, children: f })],
         });
     }
     return n === d.nu.ORIGINAL_POSTER

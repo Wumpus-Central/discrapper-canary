@@ -1,4 +1,4 @@
-n.d(t, { GM: () => f, Hi: () => S, Ml: () => T, P3: () => g, Ut: () => m, X8: () => p, op: () => I });
+n.d(t, { GM: () => f, Hi: () => S, Ml: () => m, P3: () => g, Ut: () => T, X8: () => p, op: () => I });
 var i,
     r = n(477900),
     a = n(582128),
@@ -27,7 +27,7 @@ var p =
     (i.ACK = "ack"),
     (i.SETTINGS = "settings"),
     i);
-function T(e) {
+function m(e) {
     let { message: t, interactionType: n, viewId: i } = e;
     c.default.track(A.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
         interaction_type: n,
@@ -38,7 +38,7 @@ function T(e) {
         view_id: i,
     });
 }
-function m(e) {
+function T(e) {
     let { section: t, enabled: n, viewId: i } = e;
     c.default.track(A.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
 }
@@ -74,8 +74,8 @@ function S(e) {
         f = a.useRef(null),
         I = a.useRef(!1),
         p = (0, o.bG)([u.A], () => u.A.isLoading),
-        T = (0, l.A)(p),
-        m = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
+        m = (0, l.A)(p),
+        T = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
         { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
     ((0, d.Ay)(() => {
         (!(function (e) {
@@ -122,21 +122,21 @@ function S(e) {
             }
         }, [i, r, s, N, S, h]),
         a.useEffect(() => {
-            let e = m?.loadingTrigger === E.VA.AUTO_LOAD;
-            null == m ||
-                !0 !== T ||
+            let e = T?.loadingTrigger === E.VA.AUTO_LOAD;
+            null == T ||
+                !0 !== m ||
                 !1 !== p ||
                 e ||
                 g({
-                    timeToLoad: m?.timeToLoad,
+                    timeToLoad: T?.timeToLoad,
                     messagesCount: i.length,
                     unreadMessagesCount: r.length,
-                    loadingTrigger: m?.loadingTrigger ?? E.VA.UNKNOWN,
-                    viewId: m?.viewId,
-                    channelsFetched: m?.channelsFetched,
-                    mentionsFetched: m?.mentionsFetched,
+                    loadingTrigger: T?.loadingTrigger ?? E.VA.UNKNOWN,
+                    viewId: T?.viewId,
+                    channelsFetched: T?.channelsFetched,
+                    mentionsFetched: T?.mentionsFetched,
                 });
-        }, [p, i, r, s, T, m]),
+        }, [p, i, r, s, m, T]),
         (0, d.l0)(() => {
             !(function (e) {
                 let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: a } = e;

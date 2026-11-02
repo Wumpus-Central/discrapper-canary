@@ -15,8 +15,8 @@ var i = n(435558),
     f = n(734057),
     I = n(232835),
     p = n(573163),
-    T = n(994500),
-    m = n(967198),
+    m = n(994500),
+    T = n(967198),
     g = n(543465),
     S = n(287809);
 let N = "recentMentionFilterSettings",
@@ -77,12 +77,12 @@ function G(e) {
     if (
         null == i ||
         i.type === E.rbe.DM ||
-        (D.guildFilter === E.KE7.THIS_SERVER && i.getGuildId() !== m.A.getGuildId())
+        (D.guildFilter === E.KE7.THIS_SERVER && i.getGuildId() !== T.A.getGuildId())
     )
         return null;
     let r = h.default.getId();
     if (
-        T.A.isBlockedOrIgnoredForMessage(e) ||
+        m.A.isBlockedOrIgnoredForMessage(e) ||
         ((t = e), !E.MRS.SELF_MENTIONABLE_SYSTEM.has(t.type) && t.author?.id === r)
     )
         return null;
@@ -144,8 +144,8 @@ function B() {
     ((C = []), (R = {}), (v = !1), (P = !1), (O = {}));
 }
 function V() {
-    (M({ deletedMessages: r().filter(C, (e) => T.A.isBlockedOrIgnoredForMessage(e)) }),
-        (C = C.filter((e) => !T.A.isBlockedOrIgnoredForMessage(e))));
+    (M({ deletedMessages: r().filter(C, (e) => m.A.isBlockedOrIgnoredForMessage(e)) }),
+        (C = C.filter((e) => !m.A.isBlockedOrIgnoredForMessage(e))));
 }
 function H(e) {
     let { channel: t } = e,
@@ -155,7 +155,7 @@ function H(e) {
 class j extends a.Ay.Store {
     static displayName = "RecentMentionsStore";
     initialize() {
-        this.waitFor(h.default, f.A, I.A, p.Ay, T.A, m.A, g.Ay, S.default);
+        this.waitFor(h.default, f.A, I.A, p.Ay, m.A, T.A, g.Ay, S.default);
     }
     get hasLoadedEver() {
         return v;

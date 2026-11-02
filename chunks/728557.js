@@ -78,8 +78,8 @@ class f {
 }
 var I = n(738935),
     p = n(572164),
-    T = n(680725),
-    m = n(973522),
+    m = n(680725),
+    T = n(973522),
     g = n(967347),
     S = n(929921),
     N = n(280450),
@@ -383,24 +383,24 @@ class j extends A.A {
                 e === M.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         d.yq.ScreenshareFinish,
-                        (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, T, S, N, C, O, R, L) => {
+                        (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, m, S, N, C, O, R, L) => {
                             let y = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, m.wH)(y),
+                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, T.wH)(y),
                                 G = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId(),
                                 k = (d ?? 0) + (c ?? 0) + (u ?? 0) + (_ ?? 0) + (E ?? 0);
-                            (0, g.w)().then((m) => {
+                            (0, g.w)().then((T) => {
                                 let g =
-                                        null != m
+                                        null != T
                                             ? {
-                                                  cpu_brand: m.cpu_brand,
-                                                  cpu_vendor: m.cpu_vendor,
-                                                  cpu_memory: m.cpu_memory,
-                                                  gpu_brand: m.gpu_brand,
-                                                  gpu_memory: m.gpu_memory,
+                                                  cpu_brand: T.cpu_brand,
+                                                  cpu_vendor: T.cpu_vendor,
+                                                  cpu_memory: T.cpu_memory,
+                                                  gpu_brand: T.gpu_brand,
+                                                  gpu_memory: T.gpu_memory,
                                               }
                                             : null,
                                     y =
@@ -411,7 +411,7 @@ class j extends A.A {
                                         (r ?? 0) +
                                         (a ?? 0) +
                                         (h ?? 0) +
-                                        (T ?? 0) +
+                                        (m ?? 0) +
                                         (p ?? 0) +
                                         (R ?? 0) +
                                         (O ?? 0);
@@ -432,7 +432,7 @@ class j extends A.A {
                                     hybrid_gdi_printwindow_frames_unique: E,
                                     skip_history_json: A,
                                     quartz_frames: h,
-                                    screencapturekit_frames: T,
+                                    screencapturekit_frames: m,
                                     go_live_camera_frames: p,
                                     total_frames: y,
                                     total_frames_unique: k,
@@ -644,7 +644,7 @@ class j extends A.A {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
             { ownerId: r, guildId: a } = this.streamContext,
             s = D.A.getRegion(y.A.getHostname()),
-            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, m.wH)(t);
+            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, T.wH)(t);
         return {
             channel_id: this.channelId,
             rtc_connection_id: this.getRTCConnectionId(),
@@ -715,7 +715,7 @@ class j extends A.A {
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
                         hardware_enabled: R.Ay.getHardwareEncoding(),
-                        device_performance_class: this.isOwner ? (0, T.A)() : null,
+                        device_performance_class: this.isOwner ? (0, m.A)() : null,
                         soundshare_experimental: R.Ay.getExperimentalSoundshare(),
                         quality_preset: S.A.getState().preset,
                         discord_is_elevated: b.A.getDiscordIsElevated(),
@@ -739,7 +739,7 @@ class j extends A.A {
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
                         hardware_enabled: R.Ay.getHardwareEncoding(),
-                        device_performance_class: this.isOwner ? (0, T.A)() : null,
+                        device_performance_class: this.isOwner ? (0, m.A)() : null,
                     });
             }),
             t

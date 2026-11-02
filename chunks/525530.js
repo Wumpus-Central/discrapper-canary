@@ -1,8 +1,8 @@
-(n.d(t, { CM: () => a, Io: () => l, ow: () => i }), n(323874), n(14289), n(35956));
+(n.d(t, { CM: () => a, Io: () => l, ow: () => o }), n(323874), n(14289), n(35956));
 var r = n(73153),
     s = n(642785),
-    o = n(975189);
-let i = {
+    i = n(975189);
+let o = {
     request_upstream_ticket(e, t) {
         let { ws: n } = t;
         c(n, e.id, e.project_id);
@@ -14,9 +14,9 @@ let i = {
 };
 async function l(e, t) {
     let [n, r] = await Promise.all([e, (0, s.dv)(t)]),
-        o = new URLSearchParams({ ticket: n.ticket });
+        i = new URLSearchParams({ ticket: n.ticket });
     for (let e = 1; ; e++) {
-        let t = await fetch(`${n.baseUrl}/agent/fork?${o}`, {
+        let t = await fetch(`${n.baseUrl}/agent/fork?${i}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: r.ticket }),
@@ -32,7 +32,7 @@ async function l(e, t) {
     }
 }
 function a(e) {
-    return (0, o.b4)(e, "retry remix", (e) => e.sendRetryRemix());
+    return (0, i.b4)(e, "retry remix", (e) => e.sendRetryRemix());
 }
 async function c(e, t, n) {
     try {

@@ -1,4 +1,4 @@
-n.d(t, { Bx: () => eN, Ay: () => eC, Gm: () => eT, Q_: () => ep, zF: () => em, zR: () => eS });
+n.d(t, { Bx: () => eN, Ay: () => eC, Gm: () => em, Q_: () => ep, zF: () => eT, zR: () => eS });
 var i,
     r = n(192308),
     a = n(793322),
@@ -15,13 +15,13 @@ var i,
     f = n(747926),
     I = n(774603),
     p = n(176522),
-    T = n(435558),
-    m = n.n(T),
+    m = n(435558),
+    T = n.n(m),
     g = n(858899),
     S = n(147036),
     N = n(957565),
     C = n(105292);
-let O = (0, T.throttle)(() => (0, g.P0)({ text: C.intl.string(C.t["+5kSoW"]), variant: "success" }), 3e3, {
+let O = (0, m.throttle)(() => (0, g.P0)({ text: C.intl.string(C.t["+5kSoW"]), variant: "success" }), 3e3, {
     leading: !0,
     trailing: !1,
 });
@@ -64,7 +64,7 @@ var $ = n(806964),
 let es = {
     binds: ["mod+shift+e"],
     comboKeysBindGlobal: !0,
-    action: m().debounce(
+    action: T().debounce(
         () => {
             if (L._.hasSubscribers(y.jej.MARK_TOP_INBOX_CHANNEL_READ))
                 return (L._.dispatch(y.jej.MARK_TOP_INBOX_CHANNEL_READ), !1);
@@ -92,7 +92,7 @@ var el = n(478437),
         (i.MESSAGE = "MESSAGE"),
         (i.DND = "DND"),
         i);
-function eT(e) {
+function em(e) {
     switch (e) {
         case "NAVIGATION":
             return C.intl.string(C.t["yGE+jg"]);
@@ -108,7 +108,7 @@ function eT(e) {
             return C.intl.string(C.t["69j6+4"]);
     }
 }
-function em(e) {
+function eT(e) {
     switch (e) {
         case "MESSAGE":
             return C.intl.string(C.t.iepGDn);

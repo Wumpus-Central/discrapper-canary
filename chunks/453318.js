@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(432816),
     I = n(872162),
     p = n(95477),
-    T = n(991957),
-    m = n(44482);
+    m = n(991957),
+    T = n(44482);
 function g() {}
 function S() {
     return r.useContext(N);
@@ -65,8 +65,8 @@ function v(e) {
             onSelectionChange: f,
             value: I,
             customMatchSorter: p,
-            matchSorterOptions: T,
-            required: m,
+            matchSorterOptions: m,
+            required: T,
         } = c,
         g = r.useId(),
         S = r.useRef(null),
@@ -86,7 +86,7 @@ function v(e) {
     r.useEffect(() => {
         x(v);
     }, [x, v]);
-    let F = r.useCallback((e) => (null != p ? p(e, v) : (0, l.Ht)(e, v, T ?? D)), [v, p, T]),
+    let F = r.useCallback((e) => (null != p ? p(e, v) : (0, l.Ht)(e, v, m ?? D)), [v, p, m]),
         { flatOptions: B, groups: V } = r.useMemo(() => {
             if ("" === v) return { flatOptions: U, groups: w };
             if (0 === w.length) return { flatOptions: F(U), groups: [] };
@@ -123,7 +123,7 @@ function v(e) {
     let W = _ || E,
         Y = r.useCallback(
             (e) => {
-                if (W || (m && 0 === e.length)) return;
+                if (W || (T && 0 === e.length)) return;
                 let t = Array.from(e);
                 ("multiple" === u && t.length < 1
                     ? f([])
@@ -134,7 +134,7 @@ function v(e) {
                     A && s && o?.(!1),
                     y(!1));
             },
-            [W, u, n, f, A, s, o, m, k],
+            [W, u, n, f, A, s, o, T, k],
         ),
         K = j.length > 0;
     return (0, i.jsx)(N.Provider, {
@@ -338,14 +338,14 @@ function P(e) {
             },
             [A, ea, ei, Q, G],
         ),
-        eT = r.useMemo(() => {
+        em = r.useMemo(() => {
             if (0 === ee.length) return null;
             if ("single" === x) {
                 if (er) return null;
                 let e = Array.from(ee)[0];
                 return (0, i.jsx)("div", {
                     className: y.OS,
-                    children: (0, i.jsx)(m.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
+                    children: (0, i.jsx)(T.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
                 });
             }
             if (l) return null;
@@ -370,11 +370,11 @@ function P(e) {
                 onRemove: ef,
             });
         }, [x, k, eh, ef, er, ee, l, U]),
-        em = (0, o.A)(W, D);
+        eT = (0, o.A)(W, D);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(C.p, {
-                ref: em,
+                ref: eT,
                 disabled: k,
                 readOnly: F,
                 loading: B,
@@ -393,7 +393,7 @@ function P(e) {
                     children: (0, i.jsxs)("div", {
                         className: y.P$,
                         children: [
-                            eT,
+                            em,
                             (0, i.jsx)(u.vN, {
                                 ringTarget: W,
                                 children: (0, i.jsx)(p.p, {
@@ -428,7 +428,7 @@ function P(e) {
                     }),
                 }),
             }),
-            (0, i.jsx)(T.H, {
+            (0, i.jsx)(m.H, {
                 name: d,
                 form: c,
                 disabled: K,
@@ -453,8 +453,8 @@ function M(e) {
             required: E,
             disabled: I,
             handleSelectionChange: p,
-            query: T,
-            loading: m,
+            query: m,
+            loading: T,
         } = S(),
         { i18n: g } = r.useContext(f.VO);
     return (0, i.jsx)(A.q, {
@@ -473,9 +473,9 @@ function M(e) {
             n ??
             (() =>
                 (0, i.jsx)(h.o, {
-                    message: null == T || "" === T ? g.LISTBOX_EMPTY_STATE : g.LISTBOX_EMPTY_STATE_WITH_QUERY(T),
+                    message: null == m || "" === m ? g.LISTBOX_EMPTY_STATE : g.LISTBOX_EMPTY_STATE_WITH_QUERY(m),
                 })),
         maxVisibleItems: a,
-        loading: m,
+        loading: T,
     });
 }

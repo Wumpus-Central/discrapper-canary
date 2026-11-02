@@ -24,8 +24,8 @@ function h(e) {
     if (null == t) return null;
     let I = (0, _.et)(t.thumbnail),
         p = !f && t.has_media_attachment,
-        T = f ? A.intl.string(A.t.UsZEBI) : A.intl.string(A.t.ReFzYZ),
-        m = null != l ? u.Ay.getName(t.guild_id, t.channel_id, l) : void 0,
+        m = f ? A.intl.string(A.t.UsZEBI) : A.intl.string(A.t.ReFzYZ),
+        T = null != l ? u.Ay.getName(t.guild_id, t.channel_id, l) : void 0,
         g = l?.getAvatarURL(n?.id, 40);
     (null == g || h !== t.guild_id) &&
         (g = c.Ay.getGuildIconURL({ id: t.guild_id, icon: t.guild_icon, size: 40, canAnimate: !1 }));
@@ -39,7 +39,7 @@ function h(e) {
     return {
         title: t.title ?? "",
         subtitle: t.description,
-        ctaText: T,
+        ctaText: m,
         coverImage: I,
         coverImageOverlayText: p ? A.intl.string(A.t.Yonlia) : void 0,
         parentChannelId: t.parent_channel_id,
@@ -50,7 +50,7 @@ function h(e) {
         guildId: t.guild_id,
         guildName: n?.name ?? t.guild_name,
         authorId: t?.author_id,
-        authorName: m,
+        authorName: T,
         channelName: null != a ? (0, r.m1)(a, d.default, o.A) : void 0,
         avatarUrl: g,
         shouldShowBlurredThumbnailImage: p,

@@ -77,7 +77,7 @@ function p(e, t) {
     let i = t(n);
     return (A.set(e, i), !0);
 }
-function T(e) {
+function m(e) {
     let { type: t, messageId: n, userId: i, emoji: r, channelId: a } = e;
     if (!(0, l.vp)(e)) return !1;
     let s = o.default.getId() === i,
@@ -89,7 +89,7 @@ function T(e) {
             : n.removeReaction(r, s, i);
     });
 }
-class m extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "SearchMessageStore";
     initialize() {
         this.waitFor(o.default, d.A, c.A);
@@ -131,7 +131,7 @@ class m extends i.Ay.Store {
         return E.has(e);
     }
 }
-let g = new m(r.h, {
+let g = new T(r.h, {
     SEARCH_MESSAGES_START: function (e) {
         e.ids.forEach((e) => {
             I(e).handleSearchStart();
@@ -181,13 +181,13 @@ let g = new m(r.h, {
         let i = (0, s.IU)(n, e.message);
         A.set(t, i);
     },
-    MESSAGE_REACTION_ADD: T,
+    MESSAGE_REACTION_ADD: m,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { messageId: t, reactions: n } = e,
             i = o.default.getId();
         return p(t, (e) => e.addReactionBatch(n, i));
     },
-    MESSAGE_REACTION_REMOVE: T,
+    MESSAGE_REACTION_REMOVE: m,
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { messageId: t } = e;
         return p(t, (e) => e.set("reactions", []));

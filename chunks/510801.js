@@ -67,8 +67,8 @@ class d extends l.A {
             catalog_banner_rive_url: f,
             featured_block_url: I,
             logo_url: p,
-            pdp_bg_url: T,
-            mobile_banner_url: m,
+            pdp_bg_url: m,
+            mobile_banner_url: T,
             mobile_bg_url: g,
             ...S
         } = e;
@@ -89,8 +89,8 @@ class d extends l.A {
             catalogBannerRiveUrl: f,
             featuredBlockUrl: I,
             logoUrl: p,
-            pdpBgUrl: T,
-            mobileBannerUrl: m,
+            pdpBgUrl: m,
+            mobileBannerUrl: T,
             mobileBgUrl: g,
             heroLogoDisplayConfig: (0, r.f6)(a),
             heroBannerDisplayConfig: (0, r.f6)(l),

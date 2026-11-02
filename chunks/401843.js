@@ -28,8 +28,8 @@ var i = n(284009),
     f = n(734057),
     I = n(71393),
     p = n(309010),
-    T = n(977997),
-    m = n(147036),
+    m = n(977997),
+    T = n(147036),
     g = n(927813),
     S = n(650338),
     N = n(499785);
@@ -54,7 +54,7 @@ function y(e, t) {
 }
 function D(e, t) {
     let n = f.A.getChannel(t);
-    return (r()(null != n, "Cannot join a null voice channel"), !T.A.isInChannel(t) && (0, m.Pd)(n, T.A, I.A));
+    return (r()(null != n, "Cannot join a null voice channel"), !m.A.isInChannel(t) && (0, T.Pd)(n, m.A, I.A));
 }
 function v(e, t) {
     if (null != o.default.getRemoteSessionId()) return;

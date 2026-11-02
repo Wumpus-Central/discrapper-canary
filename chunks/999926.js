@@ -4,7 +4,7 @@ var h,
     f = n(823598),
     I = n(626584),
     p = n(723702),
-    T = n(19575);
+    m = n(19575);
 (0, f.WQ)({
     supported() {
         try {
@@ -19,15 +19,15 @@ var h,
         }
         return !1;
     },
-    supportsFeature: (e) => T.Ay.supportsFeature(e),
+    supportsFeature: (e) => m.Ay.supportsFeature(e),
     setProcessPriority(e) {
-        T.Ay.getDiscordUtils().setProcessPriority(e);
+        m.Ay.getDiscordUtils().setProcessPriority(e);
     },
-    getVoiceEngine: () => T.Ay.getVoiceEngine(),
-    getOpenH264LibraryPath: () => T.Ay.getOpenH264LibraryPath(),
+    getVoiceEngine: () => m.Ay.getVoiceEngine(),
+    getOpenH264LibraryPath: () => m.Ay.getOpenH264LibraryPath(),
 });
-var m = n(284009),
-    g = n.n(m),
+var T = n(284009),
+    g = n.n(T),
     S = n(435558),
     N = n.n(S),
     C = n(481613),
@@ -242,20 +242,20 @@ let eI = (0, W.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    eT = (0, W.mj)({
+    em = (0, W.mj)({
         name: "2026-06-wmf-cpu-encode-intel",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    em = (0, W.mj)({
+    eT = (0, W.mj)({
         name: "2025-12-wmf-gpu-encode",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
 function eg(e) {
-    return em.getConfig({ location: e });
+    return eT.getConfig({ location: e });
 }
 let eS = (0, W.mj)({
     name: "2026-01-wmf-gpu-encode-intel",
@@ -434,8 +434,8 @@ let tt = {},
     tf = !1,
     tI = !1,
     tp = !1,
-    tT = ez.qe,
     tm = ez.qe,
+    tT = ez.qe,
     tg = !1,
     tS = !1,
     tN = new b.Ep(),
@@ -587,9 +587,9 @@ function t9() {
         tp || e)
     ) {
         let t = t4().videoDeviceId;
-        (tp && t === ez.dx && tm === ez.dx && tT !== ez.qe ? (t = tT) : (tm = t),
-            (tT = (tp = e) ? ng(t_, t) : ez.qe),
-            e9.setVideoInputDevice(tT));
+        (tp && t === ez.dx && tT === ez.dx && tm !== ez.qe ? (t = tm) : (tT = t),
+            (tm = (tp = e) ? ng(t_, t) : ez.qe),
+            e9.setVideoInputDevice(tm));
     }
     if (((a = t), null != t)) {
         let e = { resolution: t.quality.resolution, frameRate: t.quality.frameRate };
@@ -770,7 +770,7 @@ function no(e) {
         nl(),
         (0, p.isWindows)() && L().satisfies(M.A?.os.release, ">=10.0.15063") && e.context === ez.x.DEFAULT)
     ) {
-        let t = nT(tc[i.getInputDeviceId()]) || nT(tu[i.getOutputDeviceId()]);
+        let t = nm(tc[i.getInputDeviceId()]) || nm(tu[i.getOutputDeviceId()]);
         e.setEchoReferenceMode(t ? "mix" : "auto");
     }
     if ((0, p.isWeb)()) {
@@ -811,7 +811,7 @@ function nA() {
         e9.setSidechainCompression(e.sidechainCompression),
         e9.setSidechainCompressionStrength(e.sidechainCompressionStrength),
         e9.setAudioInputBypassSystemProcessing(e.bypassSystemInputProcessing),
-        (0, p.isLinux)() && T.Ay?.setOpenH264Enabled?.(e.openH264Enabled));
+        (0, p.isLinux)() && m.Ay?.setOpenH264Enabled?.(e.openH264Enabled));
 }
 function nh() {
     ti || e9.enable().then(() => P.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: !1 }));
@@ -840,10 +840,10 @@ function nI(e, t) {
     );
 }
 let np = /^HDAUDIO\\(?:SUB)?FUNC_\d+&VEN_(?:8086|1002|10DE)/;
-function nT(e) {
+function nm(e) {
     return e?.windowsDeviceService === "voicemodvad";
 }
-function nm(e, t) {
+function nT(e, t) {
     let { deviceType: n, defaultName: i } = t,
         r = e[{ audioinput: "inputDevices", audiooutput: "outputDevices", videoinput: "videoDevices" }[n]];
     if (0 === r.length) {
@@ -1029,8 +1029,8 @@ function nP() {
 }
 async function nM() {
     try {
-        await T.Ay.ensureModule("discord_krisp");
-        let e = T.Ay.requireModule("discord_krisp");
+        await m.Ay.ensureModule("discord_krisp");
+        let e = m.Ay.requireModule("discord_krisp");
         ((tv = !0),
             (u = e.getSdkVersion?.()),
             (_ = e.getSuppressionLevel?.() ?? 100),
@@ -1038,8 +1038,8 @@ async function nM() {
                 ((tP = e), i.emitChange());
             }),
             i.emitChange(),
-            await T.Ay.ensureModule("discord_voice"));
-        let t = T.Ay.requireModule("discord_voice");
+            await m.Ay.ensureModule("discord_voice"));
+        let t = m.Ay.requireModule("discord_voice");
         t.setupKrispPath?.();
     } catch (t) {
         (eq.warn(`Failed to load Krisp module: ${t.message}`), eG.A.captureException(t));
@@ -1064,7 +1064,7 @@ async function nU() {
         let r = i.pathname.split("/"),
             a = r[r.length - 1].replace(".bz2", "");
         try {
-            let t = await T.Ay.downloadOpenH264(
+            let t = await m.Ay.downloadOpenH264(
                 e3,
                 a,
                 "1522f873a482923c5ec018a4415e1866898197528828c50f90fd300c94620df3",
@@ -1084,7 +1084,7 @@ async function nU() {
             }),
             e)
         ) {
-            let e = await T.Ay.cleanupUnusedOpenH264Files([a]);
+            let e = await m.Ay.cleanupUnusedOpenH264Files([a]);
             eq.log("OpenH264 cleanup", e);
         }
     } catch (e) {
@@ -1184,7 +1184,7 @@ class nk extends y.Ay.Store {
                     tK?.startsWith("Intel") &&
                     !0 === t$ &&
                     1 === tz &&
-                    eT.getConfig({ location: "MediaEngineStore" }).enabled &&
+                    em.getConfig({ location: "MediaEngineStore" }).enabled &&
                     e.setExperimentFlag(ez.fd.INTEL_GPU_DISABLE, !0),
                 (0, p.isWindows)() &&
                     tK?.startsWith("Qualcomm") &&
@@ -1433,7 +1433,7 @@ class nk extends y.Ay.Store {
         ) {
             async function t() {
                 let e = await new Promise((e) => {
-                    T.Ay.pollQueueMetrics((t) => {
+                    m.Ay.pollQueueMetrics((t) => {
                         e(t);
                     });
                 });
@@ -2214,7 +2214,7 @@ let nB = (i = new nk(P.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let t = tc;
         if (
-            ((tc = nm(e, { deviceType: ez.oh.AUDIO_INPUT, defaultName: eX.intl.string(eX.t["/QIjDA"]) })),
+            ((tc = nT(e, { deviceType: ez.oh.AUDIO_INPUT, defaultName: eX.intl.string(eX.t["/QIjDA"]) })),
             !N().isEqual(tc, t))
         ) {
             let e = t4();
@@ -2223,7 +2223,7 @@ let nB = (i = new nk(P.h, {
         !(function (e) {
             let t = tu;
             if (
-                ((tu = nm(e, { deviceType: ez.oh.AUDIO_OUTPUT, defaultName: eX.intl.string(eX.t.xlUg0v) })),
+                ((tu = nT(e, { deviceType: ez.oh.AUDIO_OUTPUT, defaultName: eX.intl.string(eX.t.xlUg0v) })),
                 !N().isEqual(tu, t))
             ) {
                 let e = t4(),
@@ -2240,12 +2240,12 @@ let nB = (i = new nk(P.h, {
         tO = e.videoDevices.length > 0;
         let n = t_;
         if (
-            ((t_ = nm(e, { deviceType: ez.oh.VIDEO_INPUT, defaultName: eX.intl.string(eX.t.WKWARY) })),
+            ((t_ = nT(e, { deviceType: ez.oh.VIDEO_INPUT, defaultName: eX.intl.string(eX.t.WKWARY) })),
             tp && !N().isEqual(t_, n))
         ) {
-            let e = void 0 !== t_[tT],
-                t = tT === ez.dx && n[ez.dx]?.disabled,
-                i = "Firefox" === O().name && "" === tT && n[tT]?.name === "Default" && !n[tT]?.disabled;
+            let e = void 0 !== t_[tm],
+                t = tm === ez.dx && n[ez.dx]?.disabled,
+                i = "Firefox" === O().name && "" === tm && n[tm]?.name === "Default" && !n[tm]?.disabled;
             t9(e || t || i);
         }
     },
@@ -2398,7 +2398,7 @@ let nB = (i = new nk(P.h, {
     },
     MEDIA_ENGINE_SET_OPENH264_ENABLED: function (e) {
         let { enabled: t } = e;
-        (nE({ openH264Enabled: t }), T.Ay?.setOpenH264Enabled?.(t));
+        (nE({ openH264Enabled: t }), m.Ay?.setOpenH264Enabled?.(t));
     },
     MEDIA_ENGINE_RESET_SETTINGS: function (e) {
         let { overrides: t } = e;

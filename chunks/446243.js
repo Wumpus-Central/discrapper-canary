@@ -5,12 +5,12 @@ n.d(t, {
     zK: () => b,
     c6: () => w,
     tB: () => x,
-    WQ: () => m,
+    WQ: () => T,
     AQ: () => g,
     Dr: () => D,
     z5: () => M,
     zD: () => C,
-    x2: () => T,
+    x2: () => m,
     Ft: () => G,
     WT: () => y,
     UV: () => U,
@@ -70,11 +70,11 @@ async function p(e, t, n, d) {
         throw (s.h.dispatch({ type: "GUILD_ROOM_CONNECT_FAILURE", guildId: e, roomId: t }), n);
     }
 }
-function T(e, t) {
+function m(e, t) {
     (s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: o.default.getId(), roomId: t }),
         t !== e && (0, c.e6)({ guildId: e, channelId: t }));
 }
-function m(e, t) {
+function T(e, t) {
     s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });
 }
 async function g(e, t, n) {

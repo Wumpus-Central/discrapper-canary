@@ -15,7 +15,7 @@ var i = n(132500),
     f = n(927813),
     I = n(973522),
     p = n(19575);
-class T {
+class m {
     pids = new Set();
     enabled = !1;
     enable() {
@@ -43,7 +43,7 @@ class T {
             : Promise.resolve(null);
     }
 }
-let m = new T();
+let T = new m();
 var g = n(952818),
     S = n(687658),
     N = n(384077),
@@ -186,13 +186,13 @@ class w extends s.A {
     };
     handleSystemServiceInitialize(e) {
         let { status: t, modules: n } = e;
-        n.includes("tool-service") && ("running" === t.state ? m.enable() : m.reset());
+        n.includes("tool-service") && ("running" === t.state ? T.enable() : T.reset());
     }
     _terminate() {
-        (this.heartbeatInterval.stop(), m.disable(), D.disable(), this.disableWindowTracking());
+        (this.heartbeatInterval.stop(), T.disable(), D.disable(), this.disableWindowTracking());
     }
     handleLogout() {
-        (m.disable(),
+        (T.disable(),
             D.disable(),
             this.disableWindowTracking(),
             this.gameSessions.clear(),
@@ -253,7 +253,7 @@ class w extends s.A {
         this.scheduleHeartbeatTracking();
     };
     stopMonitoringPidIfInactive(e) {
-        [...this.gameSessions.values()].some((t) => t.runningGame.pid === e) || m.stopMonitoringPid(e);
+        [...this.gameSessions.values()].some((t) => t.runningGame.pid === e) || T.stopMonitoringPid(e);
     }
     logHeartbeat(e, t, n, i, a) {
         let s = e.runningGame,
@@ -276,7 +276,7 @@ class w extends s.A {
                 rtc_connection_id: E.A.getRTCConnectionId(),
                 media_session_id: E.A.getMediaSessionId(),
             },
-            T = (function (e) {
+            m = (function (e) {
                 if (!o.O) return null;
                 let t = c.default.getTrackedGameByPid(e);
                 return {
@@ -286,8 +286,7 @@ class w extends s.A {
                 };
             })(s.pid),
             S = { discord_window_state: U() };
-        return m
-            .getSnapshot(s.pid)
+        return T.getSnapshot(s.pid)
             .then((e) => {
                 h.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
                     ...p,
@@ -295,7 +294,7 @@ class w extends s.A {
                     ...(a ?? {}),
                     ...(e ?? {}),
                     ...(i ?? {}),
-                    ...(T ?? {}),
+                    ...(m ?? {}),
                 });
             })
             .catch((e) => {
@@ -305,7 +304,7 @@ class w extends s.A {
                         ...S,
                         ...(a ?? {}),
                         ...(i ?? {}),
-                        ...(T ?? {}),
+                        ...(m ?? {}),
                     }));
             });
     }
@@ -330,7 +329,7 @@ class w extends s.A {
                     let s = n.runningGame.pid,
                         l = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
                     (this.gameSessions.set(e, l),
-                        m.startMonitoringPid(a.pid),
+                        T.startMonitoringPid(a.pid),
                         this.logHeartbeat(n, !1, !0, null, r).finally(() => {
                             this.stopMonitoringPidIfInactive(s);
                         }),
@@ -338,7 +337,7 @@ class w extends s.A {
                 } else n.runningGame = a;
             } else {
                 let n = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
-                (this.gameSessions.set(e, n), m.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
+                (this.gameSessions.set(e, n), T.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
             }
         }
         for (let [e, t] of this.gameSessions)

@@ -57,8 +57,8 @@ function p() {
             (0, A.i)(t, s));
     }
 }
-var T = n(963169),
-    m = n(345942),
+var m = n(963169),
+    T = n(345942),
     g = n(309010),
     S = n(967198),
     N = n(723702);
@@ -74,16 +74,16 @@ let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) 
                 let t = S.A.getLastSelectedGuildId();
                 null != t && ((e = t), (0, A.i)(t, g.Ay.getChannelId(t)));
             }
-            return (null != e && (0, m.u)(e), !1);
+            return (null != e && (0, T.u)(e), !1);
         },
     },
     L = {
         binds: (0, N.isMac)() || (0, N.isMacWeb)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, T.OE)("keybind"), !1),
+        action: () => ((0, m.OE)("keybind"), !1),
     },
     y = {
         binds: (0, N.isMac)() || (0, N.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, T.Qb)("keybind"), !1),
+        action: () => ((0, m.Qb)("keybind"), !1),
     };

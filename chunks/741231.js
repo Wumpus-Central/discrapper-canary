@@ -15,8 +15,8 @@ var i = n(121197),
     f = n(713125),
     I = n(473529),
     p = n(960253),
-    T = n(469993),
-    m = n(836039),
+    m = n(469993),
+    T = n(836039),
     g = n(555325),
     S = n(287809),
     N = n(313627),
@@ -51,8 +51,8 @@ async function U(e) {
                         guild: i,
                         isOwner: a,
                         canManageGuildRoleSubscriptions: (0, g.X9)(i),
-                        isUserInCreatorMonetizationEligibleCountry: (0, T.Z1)(),
-                        shouldRestrictUpdatingRoleSubscriptionSettings: (0, m.mk)(i.id),
+                        isUserInCreatorMonetizationEligibleCountry: (0, m.Z1)(),
+                        shouldRestrictUpdatingRoleSubscriptionSettings: (0, T.mk)(i.id),
                     }))
                 );
             case M.VV.GAME_SHOP:

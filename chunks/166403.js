@@ -15,8 +15,8 @@ let c = null,
     f = null,
     I = !1,
     p = !1,
-    T = null,
-    m = !1,
+    m = null,
+    T = !1,
     g = null;
 function S(e) {
     let { activeSubscriptions: t, record: n } = e,
@@ -37,7 +37,7 @@ function N() {
         (f = null),
         (I = !1),
         (p = !1),
-        (m = !1),
+        (T = !1),
         (g = null));
 }
 function C(e) {
@@ -103,13 +103,13 @@ class R extends i.Ay.Store {
         return f;
     }
     getIsSubscriptionEligibleForReward() {
-        return T;
+        return m;
     }
     getIsFetchingSubscriptionRewardEligibility() {
         return p;
     }
     getIsFetchingMostRecentSubscription() {
-        return m;
+        return T;
     }
     getLastLazyPerkSync() {
         return g;
@@ -151,11 +151,11 @@ let L = new R(r.h, {
             null != A && n.type === d.rzx.APPLICATION && (E = S({ activeSubscriptions: A, record: n })));
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: function () {
-        m = !0;
+        T = !0;
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
-        if (((h = !0), (m = !1), null != t)) {
+        if (((h = !0), (T = !1), null != t)) {
             if (t.user_id !== o.default.getId()) {
                 h = !1;
                 return;
@@ -164,7 +164,7 @@ let L = new R(r.h, {
         }
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: function () {
-        m = !1;
+        T = !1;
     },
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
@@ -182,11 +182,11 @@ let L = new R(r.h, {
     },
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: function (e) {
         let { eligible: t } = e;
-        ((T = t), (p = !1));
+        ((m = t), (p = !1));
     },
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: function (e) {
         let {} = e;
-        ((T = !1), (p = !1));
+        ((m = !1), (p = !1));
     },
     SET_PREMIUM_TYPE_OVERRIDE: function () {
         return !0;
