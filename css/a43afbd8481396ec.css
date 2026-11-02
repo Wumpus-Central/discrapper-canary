@@ -3,6 +3,11 @@
     width: 100%
 }
 
+.theme__20557 {
+    border-radius: var(--radius-md);
+    width: 100%
+}
+
 .body_f3ecdb {
     display: flex;
     flex-direction: column;
@@ -501,4 +506,4 @@
     }
 }
 
-/*# sourceMappingURL=5d104d4e4b9569a5.css.map*/
+/*# sourceMappingURL=a43afbd8481396ec.css.map*/

@@ -341,8 +341,8 @@ let K = {
                     ? Promise.resolve()
                     : g.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
-        get hasUpdater() {
-            return !1 !== g.nativeModules.hasUpdater;
+        get canBootstrapNewUpdater() {
+            return g.nativeModules.canBootstrapNewUpdater || !1;
         },
         getCrashReporterMetadata: () => g.crashReporter.getMetadata(),
         getSetting: async (e, t) => await g.settings.get(e, t),

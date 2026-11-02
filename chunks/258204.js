@@ -9,7 +9,7 @@ var l = n(582128),
     c = n(935208),
     d = n(209932),
     h = n(49999);
-let m = Date.parse("2026-11-01T00:00:00Z"),
+let m = Date.parse("2026-10-28T00:00:00Z"),
     f = c.default.fromTimestamp(m);
 function p(e) {
     let t = a.A.getGuildDismissedContentState(e)?.[r.M.SOUNDBOARD_NEW_SOUNDS_BADGE]?.lastDismissedObjectId;

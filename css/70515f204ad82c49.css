@@ -108,6 +108,11 @@
     width: 100%
 }
 
+.previewWidgetTheme_db7c4c {
+    border-radius: var(--radius-md);
+    width: 100%
+}
+
 .previewEmpty__26ee5 {
     align-items: center;
     background: var(--background-gradient-chat, var(--background-base-lower));
@@ -548,4 +553,4 @@
     display: none
 }
 
-/*# sourceMappingURL=c08d22629b23cd84.css.map*/
+/*# sourceMappingURL=70515f204ad82c49.css.map*/
