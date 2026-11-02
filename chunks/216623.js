@@ -35,7 +35,7 @@ async function E() {
             rejectWithError: (0, i.fT)(),
         });
     } catch {
-        await r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", reminders: [], bookmarkIds: [] });
+        await r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", reminders: [], bookmarkIds: [], messages: [] });
         return;
     }
     let t = e.body;
@@ -43,6 +43,7 @@ async function E() {
         type: "SAVED_MESSAGES_UPDATE",
         reminders: t.reminders.map(s.iz),
         bookmarkIds: t.bookmark_ids,
+        messages: (0, s.wX)(t.reminders),
     });
 }
 async function A() {
@@ -84,5 +85,6 @@ async function A() {
         nextBefore: d.results.at(-1)?.save_data.saved_at ?? n,
         bookmarks: d.results.map(s.iz),
         hasMore: d.has_more,
+        messages: (0, s.wX)(d.results),
     });
 }

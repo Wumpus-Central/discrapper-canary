@@ -1363,7 +1363,7 @@ function eq(e) {
         eW({ type: "RECENT_MENTION_DELETE", id: e.message_id });
     }),
     eV(["SAVED_MESSAGE_CREATE"], (e) => {
-        eW({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, ea.iz)(e) });
+        eW({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, ea.iz)(e), messages: (0, ea.wX)([e]) });
     }),
     eV(["SAVED_MESSAGE_DELETE"], (e) => {
         eW({ type: "SAVED_MESSAGE_DELETE", savedMessageData: (0, ea.x6)(e) });

@@ -1,4 +1,4 @@
-n.d(t, { Yf: () => s, Z7: () => l, iz: () => o, x6: () => d });
+n.d(t, { Yf: () => s, Z7: () => l, iz: () => o, wX: () => d, x6: () => c });
 var i,
     r,
     a = n(320095),
@@ -28,5 +28,11 @@ function o(e) {
     };
 }
 function d(e) {
+    return e.flatMap((e) => {
+        let { message: t } = e;
+        return null != t ? [t] : [];
+    });
+}
+function c(e) {
     return { channelId: e.channel_id, messageId: e.message_id };
 }
