@@ -32,7 +32,6 @@ function E(e) {
               ? ((C = I.intl.string(f.default.P0wwmM)), (_ = !0))
               : c !== s.id && ((C = I.intl.string(f.default.qRXats)), (_ = !0)),
         (0, i.jsx)(m.h, {
-            header: I.intl.string(f.default.nAyuPp),
             title: (0, u.uk)(n, s, t),
             actions:
                 n.author.id === t
@@ -45,6 +44,7 @@ function E(e) {
                               onClick: () => {
                                   (0, g.A)(s.guild_id, s.id, v);
                               },
+                              variant: "active",
                           },
                       ],
         })

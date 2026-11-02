@@ -165,8 +165,9 @@ function _(e) {
                                                 isDeadEnd: c,
                                                 iconButton: p,
                                                 buttonRef: A,
+                                                variant: f,
                                             } = e,
-                                            f = 0 === t;
+                                            I = 0 === t;
                                         return p
                                             ? (0, l.jsx)(
                                                   m.m,
@@ -174,7 +175,7 @@ function _(e) {
                                                       text: n,
                                                       targetElementRef: A,
                                                       children: (0, l.jsx)(h.K, {
-                                                          variant: f ? "overlay-primary" : "overlay-secondary",
+                                                          variant: I ? "overlay-primary" : "overlay-secondary",
                                                           disabled: r || null != a,
                                                           loading: o,
                                                           icon: i,
@@ -203,7 +204,8 @@ function _(e) {
                                                       className: E.uc,
                                                       children: [
                                                           (0, l.jsx)(g.$, {
-                                                              variant: f ? "overlay-primary" : "overlay-secondary",
+                                                              variant:
+                                                                  f ?? (I ? "overlay-primary" : "overlay-secondary"),
                                                               disabled: r || null != a,
                                                               loading: o,
                                                               icon: i,
