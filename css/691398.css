@@ -25,23 +25,6 @@
     min-width: 0
 }
 
-.customStatusFill_c9d15c {
-    container: custom-status/inline-size;
-    flex-grow: 1
-}
-
-@container custom-status (width < 40px) {
-    .emoji_c9d15c+.truncated_c9d15c {
-        visibility: hidden
-    }
-}
-
-@container custom-status (width < 16px) {
-    .customStatusContent_c9d15c {
-        visibility: hidden
-    }
-}
-
 .activityContainer_c9d15c {
     align-items: center;
     display: flex;
@@ -126,4 +109,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=691398.de6cc71b242a5468.css.map*/
+/*# sourceMappingURL=691398.9646f761f42b727d.css.map*/
