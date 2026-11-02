@@ -543,7 +543,7 @@ var _,
         RedditNeutralIcon: () => Sz.T,
         RedoIcon: () => SX.U,
         RefreshIcon: () => Sq.RefreshIcon,
-        RemixIcon: () => SZ.x,
+        RemixIcon: () => SZ,
         RemoveReactionIcon: () => SQ.F,
         RetryIcon: () => SJ.RetryIcon,
         RibbonIcon: () => S0.q,
@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "660083";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "660088";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 660083, Version Hash: c5049fe95951ed314e13af1f97816b24910a5295`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 660088, Version Hash: 1391c493021d443969aed0c3d0ee9172a37a3a84`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -21743,9 +21743,41 @@ var SK = n(874804),
     S$ = n(362704),
     Sz = n(72265),
     SX = n(803656),
-    Sq = n(663417),
-    SZ = n(826967),
-    SQ = n(769297),
+    Sq = n(663417);
+function SZ(e) {
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            color: r = ad.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: a = "",
+            ...s
+        } = e,
+        l = (0, h_.J)(t),
+        o = l?.width ?? n,
+        d = l?.height ?? i;
+    return (0, b.jsxs)("svg", {
+        ...(0, hu.A)(s),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: o,
+        height: d,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, b.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                d: "M6 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V5.41l-6.64 6.64A4.66 4.66 0 0 0 4 15.35V17a3 3 0 0 0 3 3 1 1 0 1 1 0 2 5 5 0 0 1-5-5v-1.66c0-1.76.7-3.46 1.95-4.7L10.59 4H7a1 1 0 0 1-1-1Z",
+                className: a,
+            }),
+            (0, b.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                d: "M18 21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-6a1 1 0 1 1 2 0v3.59l6.64-6.64A4.66 4.66 0 0 0 20 8.65V7a3 3 0 0 0-3-3 1 1 0 1 1 0-2 5 5 0 0 1 5 5v1.66c0 1.76-.7 3.46-1.95 4.7L13.41 20H17a1 1 0 0 1 1 1Z",
+                className: a,
+            }),
+        ],
+    });
+}
+var SQ = n(769297),
     SJ = n(417270),
     S0 = n(877784);
 function S1(e) {
@@ -26090,7 +26122,7 @@ let yh = "isHideDevBanner",
                     className: tf()(yA.Wz, yA.mr),
                     children: [
                         (0, b.jsx)(yE, { className: yA.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "660083" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "660088" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })

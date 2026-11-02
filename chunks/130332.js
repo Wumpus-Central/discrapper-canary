@@ -3,7 +3,7 @@ var t = e(477900),
     i = e(582128),
     u = e(17928),
     c = e(477782),
-    r = e(826967),
+    r = e(444570),
     o = e(22231),
     a = e(625903),
     d = e(615606),
@@ -17,19 +17,19 @@ var t = e(477900),
     I = e(95264),
     b = e(442331),
     h = e(616334),
-    x = e(246338),
-    j = e(913396),
-    _ = e(914315),
+    j = e(246338),
+    _ = e(913396),
+    x = e(914315),
     G = e(809526),
     P = e(105292);
 let w = { remix: null, edit: null, settings: null, showOverlay: null, devicePermissions: null };
 function m(l, n) {
     let { includeSettings: e = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        m = (0, x.w$)(l, n),
-        D = (0, j.A)(m ? l : null),
+        m = (0, j.w$)(l, n),
+        D = (0, _.A)(m ? l : null),
         F = D?.id ?? null,
         k = l.guild_id ?? null,
-        E = (0, _.A)(l, n);
+        E = (0, x.A)(l, n);
     i.useEffect(() => {
         null != F && (0, p.ensureConnection)(F);
     }, [F]);
@@ -46,8 +46,8 @@ function m(l, n) {
                             c.Dr,
                             {
                                 id: "conjure-remix",
-                                icon: r.x,
-                                leadingAccessory: { type: "icon", icon: r.x },
+                                icon: r.i,
+                                leadingAccessory: { type: "icon", icon: r.i },
                                 label: P.intl.string(G.default["276ll6"]),
                                 action: () => (0, I.A)(E, k),
                             },
