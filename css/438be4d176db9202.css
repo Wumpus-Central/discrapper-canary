@@ -184,6 +184,16 @@
     transform: scale(1.04)
 }
 
+.gameCapture__915e4 {
+    background: var(--background-base-lowest);
+    height: 100%;
+    inset: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: absolute;
+    width: 100%
+}
+
 .row__5c78a {
     align-items: flex-start;
     display: flex;
@@ -256,4 +266,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=91777f40eda653f6.css.map*/
+/*# sourceMappingURL=438be4d176db9202.css.map*/

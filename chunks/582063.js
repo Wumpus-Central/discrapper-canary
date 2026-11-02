@@ -1,1 +1,8 @@
-e.exports = { JH: "scene__438f2", m2: "backgroundSettings__438f2", dw: "stage__438f2", HL: "widget__438f2" };
+e.exports = {
+    JH: "scene__438f2",
+    m2: "backgroundSettings__438f2",
+    dw: "stage__438f2",
+    HL: "widget__438f2",
+    aF: "captureSwitcher__438f2",
+    Dn: "captureLabel__438f2",
+};

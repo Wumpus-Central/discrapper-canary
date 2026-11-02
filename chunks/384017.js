@@ -18,6 +18,7 @@ _.exports = {
     x1: "rowsGhost_d4831f",
     es: "otherGhost_d4831f",
     Xy: "otherRow_d4831f",
+    $0: "noImage_d4831f",
     X_: "linkConfigure_d4831f",
     $y: "linkBuild_d4831f",
     Pu: "otherInput_d4831f",

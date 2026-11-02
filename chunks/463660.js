@@ -1,11 +1,11 @@
-(n.d(t, { M$: () => C, Mg: () => N, Og: () => k, VY: () => m, Y1: () => b, aF: () => T, uk: () => y }),
+(n.d(t, { M$: () => C, Mg: () => N, Og: () => k, VY: () => m, Y1: () => T, aF: () => b, uk: () => y }),
     n(323874),
     n(14289),
     n(35956));
 var r = n(73153),
     s = n(201718),
-    o = n(287809),
-    i = n(940874),
+    i = n(287809),
+    o = n(940874),
     l = n(649121),
     a = n(975189),
     c = n(688954),
@@ -57,6 +57,15 @@ let m = {
                 imageEtag: e.image_etag,
             });
         },
+        game_captures(e, t) {
+            let { projectId: n } = t;
+            r.h.dispatch({
+                type: "CONJURE_GAME_CAPTURES_SET",
+                projectId: n,
+                captures: e.captures,
+                selectedId: e.selected_id,
+            });
+        },
     },
     y = {
         preview_app_published(e, t) {
@@ -66,7 +75,7 @@ let m = {
         },
         preview_ready(e, t) {
             let { projectId: n } = t;
-            (0, i.OA)(n, e);
+            (0, o.OA)(n, e);
             let r =
                 null != e.integration_installed && null != e.bot_permissions_changed
                     ? {
@@ -84,13 +93,13 @@ let m = {
         },
     };
 async function O() {
-    let e = o.default.getCurrentUser()?.id;
+    let e = i.default.getCurrentUser()?.id;
     if (null != e)
         try {
             await s.A.fetchUserApplicationIdentitiesWithProfiles(e);
         } catch {}
 }
-function b(e, t) {
+function T(e, t) {
     let n = (0, a.KY)(e);
     if (null == n) return !1;
     try {
@@ -99,7 +108,7 @@ function b(e, t) {
         return !1;
     }
 }
-async function T(e, t) {
+async function b(e, t) {
     let { ticket: n, baseUrl: r } = await (0, l.BK)(e),
         s = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${s}`;
