@@ -673,24 +673,42 @@ function eo(e) {
                 getOrbBalanceOnCheckout: () => i().orbBalanceOnCheckout,
             },
             ...{
+                getIsSelectedPaymentSourceDisabled: () => {
+                    let { paymentSourceId: e, get: t } = i(),
+                        n = t("hasCheckoutContextLoaded"),
+                        r = t("checkoutPaymentSources");
+                    if (null == e) return !1;
+                    if (!n) return !0;
+                    let a = r.find((t) => t.id === e);
+                    return null != a && !a.enabled;
+                },
                 getIsPurchaseDisabled: function () {
                     let { isWalletPurchaseDisabled: e } =
                             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                        { hasAcceptedTerms: t, get: n } = i(),
-                        r = n("isOrderLocked"),
-                        a = n("primaryInvoicesError");
-                    return !t || !0 === e || r || null != a;
+                        { hasAcceptedTerms: t, checkoutInvoicePreview: n, customCheckoutFlow: r, get: a } = i(),
+                        s = a("isOrderLocked"),
+                        l = a("primaryInvoicesError");
+                    return r === M.uH.DEV_STORYBOOK_CHECKOUT || null == n || !!s || null != l || !t || !!e;
                 },
                 getIsReviewSubmitDisabled: (e) => {
-                    let { paymentSource: t, isWalletPurchaseDisabled: n } = e,
-                        { unifiedCheckoutFlow: r, paymentSourceId: a, getIsPurchaseDisabled: s } = i();
-                    return (
-                        !(
-                            !s({ isWalletPurchaseDisabled: n }) &&
-                            (r !== et.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT || (null != t && t.canRedeemTrial()))
-                        ) ||
-                        (r === et.C.GUILD_BOOST_CHECKOUT && null == a)
-                    );
+                    let { paymentSource: t, isWalletPurchaseDisabled: n, isTrial: r } = e,
+                        {
+                            unifiedCheckoutFlow: a,
+                            purchasePreviewError: s,
+                            purchaseType: l,
+                            isGift: o,
+                            getIsPurchaseDisabled: d,
+                            getIsSelectedPaymentSourceDisabled: c,
+                        } = i();
+                    if (d({ isWalletPurchaseDisabled: n })) return !0;
+                    if (l === L.VVm.ONE_TIME) {
+                        if (c() || null != s) return !0;
+                    } else if (
+                        ((r && !o) || a === et.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
+                        (null == t || !t.canRedeemTrial())
+                    )
+                        return !0;
+                    return !1;
                 },
                 getCheckoutReviewButtonText: (e) => {
                     let { hasPaymentSources: t, tenantProvidedButtonText: n } = e,
@@ -716,34 +734,35 @@ function eo(e) {
                             onReviewButtonClick: o,
                             isApplicationDevShelfLoading: d,
                         } = e,
-                        { getCheckoutReviewButtonText: c, purchaseType: u, hasAcceptedTerms: _ } = i(),
-                        E = l?.text;
-                    null == E &&
-                        (E = u === L.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(en.default.BPzQj4));
-                    let A = l?.variant,
-                        h = c({ hasPaymentSources: a, tenantProvidedButtonText: E }),
-                        f = {
-                            variant: A ?? "active",
+                        { getCheckoutReviewButtonText: c, purchaseType: u, hasAcceptedTerms: _, get: E } = i(),
+                        A = !_ && !E("isCheckoutDataLoading"),
+                        h = l?.text;
+                    null == h &&
+                        (h = u === L.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(en.default.BPzQj4));
+                    let f = l?.variant,
+                        I = c({ hasPaymentSources: a, tenantProvidedButtonText: h }),
+                        p = {
+                            variant: f ?? "active",
                             dataTestId: "purchase",
                             onClick: o,
                             disabled: t,
                             loading: n,
                             ...l,
-                            text: h,
+                            text: I,
                         };
                     return r
                         ? {
-                              text: h,
+                              text: I,
                               tooltipText: H.intl.string(H.t.L7jbQV),
                               type: "submit",
                               dataTestId: "submitButton",
                               loading: n,
-                              ...(null != A ? { variant: A } : { variant: a ? "primary" : "active" }),
+                              ...(null != f ? { variant: f } : { variant: a ? "primary" : "active" }),
                               ...(a ? { onClick: s } : { disabled: !0 }),
                           }
                         : d
                           ? {
-                                text: h,
+                                text: I,
                                 tooltipText: H.intl.string(H.t.cjA5tj),
                                 variant: "active",
                                 type: "submit",
@@ -751,14 +770,20 @@ function eo(e) {
                                 disabled: !0,
                             }
                           : t
-                            ? { ...f, disabled: !0, onClick: void 0 }
+                            ? {
+                                  ...p,
+                                  ...(A ? { tooltipText: H.intl.string(H.t.XdvBLS) } : {}),
+                                  disabled: !0,
+                                  onClick: void 0,
+                                  dataTestId: "submitButton",
+                              }
                             : _
-                              ? f
+                              ? p
                               : {
-                                    ...f,
+                                    ...p,
                                     tooltipText: H.intl.string(H.t.XdvBLS),
                                     disabled: !0,
-                                    onClick: L.tEg,
+                                    onClick: void 0,
                                     dataTestId: "submitButton",
                                 };
                 },

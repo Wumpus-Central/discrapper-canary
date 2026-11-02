@@ -1,4 +1,4 @@
-n.d(t, { p: () => m });
+n.d(t, { p: () => d });
 var l = n(477900),
     i = n(582128),
     r = n(166532),
@@ -7,39 +7,28 @@ var l = n(477900),
     o = n(69882),
     u = n(281044),
     c = n(105292);
-class d {
-    resolveDisabledPurchase(e, t) {
-        let { isSelectedPaymentSourceDisabled: n, purchasePreviewError: l, invoicePreview: i } = t;
-        return !!e.disablePurchase || !!n || null == i || null != l;
-    }
-    resolveInternalState = (e, t) => ({ disablePurchase: this.resolveDisabledPurchase(e, t) });
-}
-function m(e) {
+function d(e) {
     let {
             isGift: t,
             invoicePreview: n,
-            isCheckoutDataLoading: m,
+            isCheckoutDataLoading: d,
         } = (0, u.t4)((e) => ({
             isGift: e.isGift,
             invoicePreview: e.checkoutInvoicePreview,
             isCheckoutDataLoading: e.get("isCheckoutDataLoading"),
         })),
-        p = n?.total === 0,
-        C = e.handleStepChange,
+        m = n?.total === 0,
+        p = e.handleStepChange,
+        C = e.handlePaymentSourceAdd,
         h = i.useCallback(() => {
-            if (t) return void C(r.pn.GIFT_CUSTOMIZATION);
-        }, [C, t]),
-        f = i.useMemo(() => new d(), []),
-        E = i.useCallback(
-            (e) => {
-                let { handlePaymentSourceAdd: t } = e;
-                return m
-                    ? (0, l.jsx)(o.Ed, { shouldShowUnifiedHeader: !0 })
-                    : (0, l.jsx)(a.RL, { handlePaymentSourceAdd: t });
-            },
-            [m],
+            if (t) return void p(r.pn.GIFT_CUSTOMIZATION);
+        }, [p, t]),
+        f = i.useCallback(
+            () =>
+                d ? (0, l.jsx)(o.Ed, { shouldShowUnifiedHeader: !0 }) : (0, l.jsx)(a.RL, { handlePaymentSourceAdd: C }),
+            [d, C],
         ),
-        S = i.useMemo(
+        E = i.useMemo(
             () =>
                 (function (e) {
                     let { isGift: t, isFree: n } = e,
@@ -48,15 +37,9 @@ function m(e) {
                         t ? (l = c.intl.string(c.t.ouo4FK)) : n && (l = c.intl.string(c.t["302tKP"])),
                         { variant: "active", text: l, dataTestId: "purchase" }
                     );
-                })({ isGift: t, isFree: p }),
-            [t, p],
-        );
-    return (0, l.jsx)(s.Y, {
-        ...e,
-        isBackButtonEligible: t,
-        onFooterBackClick: h,
-        renderStepBody: E,
-        resolveInternalState: f.resolveInternalState,
-        tenantProvidedReviewButtonProps: S,
-    });
+                })({ isGift: t, isFree: m }),
+            [t, m],
+        ),
+        S = i.useMemo(() => ({ tenantProvidedReviewButtonProps: E, onBack: h, backButtonEligible: t }), [h, E, t]);
+    return (0, l.jsx)(s.Y, { ...e, renderStepBody: f, tenantCheckoutFooterProps: S });
 }
