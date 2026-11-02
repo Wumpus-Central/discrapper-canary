@@ -2,12 +2,12 @@
     align-items: center;
     background-color: var(--opacity-black-68);
     border-radius: 11px;
-    color: var(--white);
+    color: var(--text-overlay-light);
     display: flex;
     flex: 0 0 auto;
-    gap: 4px;
+    gap: var(--space-4);
     height: 22px;
-    padding-inline: 8px;
+    padding-inline: var(--space-8);
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -17,7 +17,7 @@
 .small__28a97 {
     gap: 3px;
     height: 18px;
-    padding-inline: 6px
+    padding-inline: var(--space-6)
 }
 
 .interactive__28a97 {
@@ -48,4 +48,4 @@
     border-radius: 0
 }
 
-/*# sourceMappingURL=384054.5e1be0fb5abcfbd8.css.map*/
+/*# sourceMappingURL=384054.d8dc1b0603849aaf.css.map*/

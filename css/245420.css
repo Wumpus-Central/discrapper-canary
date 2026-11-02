@@ -715,7 +715,7 @@
 }
 
 .topStartOverlay_b824c5 {
-    gap: 4px;
+    gap: var(--space-4);
     inset-inline-start: 8px;
     pointer-events: none;
     top: var(--custom-top-start-overlay-top, 8px)
@@ -877,4 +877,4 @@
     }
 }
 
-/*# sourceMappingURL=245420.ef0fda7ea5ba9c82.css.map*/
+/*# sourceMappingURL=245420.7d79dcda942adaae.css.map*/
