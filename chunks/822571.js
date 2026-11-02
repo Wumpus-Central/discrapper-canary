@@ -1,12 +1,11 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(181370),
     r = n.n(i),
     a = n(925798),
     s = n(315069),
     l = n(927813),
     o = n(767589);
-let d = { month: "long", day: "numeric", year: "numeric" };
-class c extends s.A {
+class d extends s.A {
     id;
     componentType;
     properties;
@@ -21,7 +20,7 @@ class c extends s.A {
             i = null != e.end_date ? new Date(e.end_date) : null,
             r = t?.startDate ?? null,
             s = t?.endDate ?? null;
-        return new c({
+        return new d({
             id: e.id,
             componentType: e.component_type,
             properties: (0, o.ii)(a.m, e.properties),
@@ -47,7 +46,8 @@ class c extends s.A {
     }
     getFormatVariableValues(e) {
         var t, n;
-        let i;
+        let i,
+            { includeYear: r = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return null == this.promotionEndDate
             ? {}
             : {
@@ -55,7 +55,11 @@ class c extends s.A {
                       ((t = this.promotionEndDate),
                       (n = new Date()),
                       (i = t.getTime() - n.getTime()) > 0 ? Math.ceil(i / l.A.Millis.DAY) : 0),
-                  promotion_end_date: this.promotionEndDate.toLocaleDateString(e, d),
+                  promotion_end_date: this.promotionEndDate.toLocaleDateString(e, {
+                      month: "long",
+                      day: "numeric",
+                      year: r ? "numeric" : void 0,
+                  }),
               };
     }
     get isTimed() {

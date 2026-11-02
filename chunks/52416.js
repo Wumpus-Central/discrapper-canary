@@ -29,60 +29,64 @@ function I(e) {
     let C = T.getFormatVariableValues(f.intl.currentLocale),
         O = (0, b.n)(N.header, C);
     if (!O.ok) return t;
-    let R = (0, b.d)(N.body, C);
-    if (!R.ok) return t;
-    let h = (0, b.n)(N.button?.copy ?? "", C);
+    let R =
+            T.promotionEndDate?.getFullYear() === new Date().getFullYear()
+                ? T.getFormatVariableValues(f.intl.currentLocale, { includeYear: !1 })
+                : C,
+        h = (0, b.d)(N.body, R);
     if (!h.ok) return t;
-    let P = (0, o.jsx)(_.A, {
+    let P = (0, b.n)(N.button?.copy ?? "", C);
+    if (!P.ok) return t;
+    let v = (0, o.jsx)(_.A, {
             componentType: a.C.PREMIUM_TAB_POPOVER,
             componentId: y,
             promotionId: S,
             dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
         }),
-        { icon: v, iconPosition: M } = (0, p.x)({ buttonAction: N.button?.buttonAction });
-    function L() {
+        { icon: M, iconPosition: L } = (0, p.x)({ buttonAction: N.button?.buttonAction });
+    function x() {
         return I(A.i.USER_DISMISS);
     }
-    let x =
+    let G =
             null != N.button
                 ? {
-                      text: h.content,
+                      text: P.content,
                       variant: "expressive",
                       onClick: (0, p.h)({
                           buttonAction: N.button.buttonAction,
                           deeplinkSection: N.button.deeplinkSection,
                           applicationId: N.button.navigableStorefrontApplicationId?.value,
-                          onClose: L,
+                          onClose: x,
                       }),
-                      icon: v,
-                      iconPosition: M,
+                      icon: M,
+                      iconPosition: L,
                   }
                 : void 0,
-        G = (0, m.C)(N.helpArticle, N.helpArticleId),
-        U = null != G ? { text: G.linkText, link: G.url } : void 0,
-        B = {
+        U = (0, m.C)(N.helpArticle, N.helpArticleId),
+        B = null != U ? { text: U.linkText, link: U.url } : void 0,
+        D = {
             targetElementRef: n,
             title: O.content,
-            body: R.content,
-            textLink: U,
+            body: h.content,
+            textLink: B,
             position: "right",
             alignmentStrategy: "edge",
             align: "top",
             caretConfig: { align: "start" },
-            onRequestClose: L,
+            onRequestClose: x,
         };
     if (E) {
-        let e = { ...B, assetUrl: g ?? "", action: x, disableMediaViewer: !0 };
+        let e = { ...D, assetUrl: g ?? "", action: G, disableMediaViewer: !0 };
         return (0, o.jsxs)(o.Fragment, {
-            children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
+            children: [v, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
         });
     }
-    let D = {
-        ...B,
+    let k = {
+        ...D,
         graphic: null != g ? { type: "image", src: g, aspectRatio: "16/9" } : void 0,
         size: "md",
-        actions: null != x ? [x] : void 0,
+        actions: null != G ? [G] : void 0,
         gradientColor: "nitro-pink",
     };
-    return (0, o.jsxs)(o.Fragment, { children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...D })] });
+    return (0, o.jsxs)(o.Fragment, { children: [v, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...k })] });
 }
