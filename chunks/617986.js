@@ -1,25 +1,25 @@
 (n.d(t, {
-    QA: () => er,
+    QA: () => el,
     Df: () => J,
     FS: () => en,
     z6: () => ea,
     cf: () => Z,
     hJ: () => ee,
-    zg: () => eu,
-    q$: () => el,
+    zg: () => ec,
+    q$: () => eu,
     mA: () => H.m,
     Zc: () => ei,
-    gC: () => ec,
-    Fy: () => ed,
+    gC: () => ed,
+    Fy: () => em,
     _x: () => X,
-    d5: () => es,
+    d5: () => er,
     f7: () => K,
     m6: () => et,
-    e0: () => em,
+    e0: () => ep,
     rx: () => W,
-    Q_: () => ef,
+    Q_: () => ey,
     l9: () => eo,
-    Oz: () => ep,
+    Oz: () => ef,
 }),
     n(323874),
     n(14289),
@@ -46,9 +46,9 @@ var l = n(192308),
     h = n(167189),
     _ = n(721779),
     I = n(976860),
-    T = n(280450),
-    v = n(299091),
-    S = n(711014),
+    S = n(280450),
+    T = n(299091),
+    v = n(711014),
     L = n(174459),
     x = n(998218),
     N = n(877062),
@@ -56,8 +56,8 @@ var l = n(192308),
     b = n(859703),
     P = n(405670),
     q = n(192444),
-    O = n(291749),
-    Q = n(590202),
+    Q = n(291749),
+    O = n(590202),
     j = n(851936),
     U = n(199510),
     M = n.n(U),
@@ -75,13 +75,13 @@ async function F(e) {
     try {
         let t = (0, _.br)(e);
         if (null == t || t.type !== h.I.INVITE) return !1;
-        let n = v.A.getInvite(t.code);
+        let n = T.A.getInvite(t.code);
         if (null == n) {
             let { invite: e } = await E.Ay.resolveInvite(t.code, "Markdown Link");
             n = e;
         }
         if (null == n) return !1;
-        let i = S.Ay.getFlattenedGuildIds(),
+        let i = v.Ay.getFlattenedGuildIds(),
             a = n?.guild?.id;
         return null != a && i.includes(a);
     } catch (e) {
@@ -551,7 +551,19 @@ function eo() {
         n.e("119580"),
     ]).then(n.bind(n, 834135));
 }
-function es(e) {
+function es(e, t, n, i) {
+    let a = P.Ay.getState().getVideoProgress(e);
+    null != a &&
+        a.timestampSec > 1 &&
+        ((0, w.QG)(e),
+        L.default.track($.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            quest_id: e,
+            source_quest_content: (0, O.jO)(t),
+            source_quest_content_cta: n,
+            video_session_id: i,
+        }));
+}
+function er(e) {
     let {
         quest: t,
         questContent: n,
@@ -559,27 +571,19 @@ function es(e) {
         sourceQuestContentCTA: s,
         autoplay: r = !0,
         skipEnrollmentCheck: c = !1,
+        videoSessionId: d = (0, a.A)(),
     } = e;
-    if ((0, D.K$)(t)) return void ed(t);
+    if ((0, D.K$)(t)) return void em(t);
     if (b.A.isQuestAccessSuspended && t.userStatus?.completedAt == null) return void en();
-    let d = (0, a.A)();
-    if (!c && t.userStatus?.enrolledAt == null && !(0, R.Ic)(t)) {
-        b.A.isEnrolling(t.id) ||
-            (0, w.Oy)(t.id, { questContent: n, questContentCTA: Q.Cy.ACCEPT_QUEST, sourceQuestContent: o });
-        let e = P.Ay.getState().getVideoProgress(t.id);
-        null != e &&
-            e.timestampSec > 1 &&
-            ((0, w.QG)(t.id),
-            L.default.track($.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
-                quest_id: t.id,
-                source_quest_content: (0, Q.jO)(o),
-                source_quest_content_cta: s,
-                video_session_id: d,
-            }));
-    }
+    c ||
+        t.userStatus?.enrolledAt != null ||
+        (0, R.Ic)(t) ||
+        (b.A.isEnrolling(t.id) ||
+            (0, w.Oy)(t.id, { questContent: n, questContentCTA: O.Cy.ACCEPT_QUEST, sourceQuestContent: o }),
+        es(t.id, o, s, d));
     let { setCaptionEnabled: m, muted: p, volume: f, captionEnabled: y } = P.Ay.getState(),
         { enabled: E, variant: C } = q.Ig.getConfig({ location: G.rE.VIDEO_MODAL }),
-        A = null != (0, O.tW)(t, O.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+        A = null != (0, Q.tW)(t, Q.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     p &&
         E &&
         (C === q.sy.AUTO_ENABLE_CAPTIONS && A && !y
@@ -606,11 +610,11 @@ function es(e) {
         },
     );
 }
-function er(e) {
+function el(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" === t || "iOS" === t) {
-                let t = T.default.getFingerprint(),
+                let t = S.default.getFingerprint(),
                     n = (0, s.I_)(),
                     i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quests/${e}`;
                 return (0, s.Ay)(i, { utmSource: "quest", fingerprint: t, attemptId: n });
@@ -628,11 +632,11 @@ function er(e) {
             t || (0, I.bG)({ pathname: $.BVt.QUEST_HOME, hash: e });
         }));
 }
-function el(e) {
+function eu(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" === t || "iOS" === t) {
-                let t = T.default.getFingerprint(),
+                let t = S.default.getFingerprint(),
                     n = (0, s.I_)(),
                     i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quest-preview/${e}`;
                 return (0, s.Ay)(i, { utmSource: "quest-preview", fingerprint: t, attemptId: n });
@@ -650,13 +654,13 @@ function el(e) {
             t || (0, I.bG)({ pathname: $.BVt.QUEST_HOME, hash: e });
         }));
 }
-function eu(e) {
+function ec(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" !== t && "iOS" !== t) return "discord://";
             let n = new URLSearchParams();
             e.forEach((e) => n.append("ad_creative_ids", e));
-            let i = T.default.getFingerprint(),
+            let i = S.default.getFingerprint(),
                 a = (0, s.I_)(),
                 o = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quest-home?${n.toString()}`;
             return (0, s.Ay)(o, { utmSource: "quest-home-preview", fingerprint: i, attemptId: a });
@@ -672,7 +676,7 @@ function eu(e) {
             e || (0, I.bG)({ pathname: $.BVt.QUEST_HOME });
         }));
 }
-function ec(e, t, a) {
+function ed(e, t, a) {
     (0, l.openModalLazy)(async () => {
         let { default: o } = await Promise.all([
             n.e("10058"),
@@ -695,7 +699,7 @@ function ec(e, t, a) {
         return (n) => (0, i.jsx)(o, { ...n, multiplier: e, orbMultiplierEligibility: t, ...a });
     });
 }
-function ed(e) {
+function em(e) {
     (0, l.openModalLazy)(async () => {
         let { default: t } = await Promise.all([
             n.e("72338"),
@@ -708,32 +712,36 @@ function ed(e) {
         return (n) => (0, i.jsx)(t, { ...n, questId: e.id });
     });
 }
-async function em(e, t) {
-    let { type: n } = await (0, w.Oy)(e.id, {
+async function ep(e, t) {
+    let n = await (0, w.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
         sourceQuestContent: t.sourceQuestContent,
         questContentPosition: t.questContentPosition,
         questContentRowIndex: t.questContentRowIndex,
     });
-    switch (n) {
-        case w.WM.SUCCESS:
-            es({
-                quest: e,
-                questContent: t.questContent,
-                sourceQuestContent: t.sourceQuestContent,
-                sourceQuestContentCTA: t.sourceQuestContentCTA,
-            });
+    switch (n.type) {
+        case w.WM.SUCCESS: {
+            let i = (0, a.A)();
+            (es(e.id, t.sourceQuestContent, t.sourceQuestContentCTA, i),
+                er({
+                    quest: { ...e, userStatus: n.userStatus },
+                    videoSessionId: i,
+                    questContent: t.questContent,
+                    sourceQuestContent: t.sourceQuestContent,
+                    sourceQuestContentCTA: t.sourceQuestContentCTA,
+                }));
             break;
+        }
         case w.WM.UNKNOWN_ERROR:
             y.A.show({ title: k.intl.string(k.t.R0RpRX), body: k.intl.string(k.t.OXD41D) });
         case w.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
-function ep(e) {
+function ef(e) {
     if ((0, V.vA)(e)) return e.config.features.includes(G.Li.CLOUD_GAMING_ACTIVITY) ? c.h : d.GameControllerIcon;
 }
-function ef(e) {
+function ey(e) {
     let t = (0, Y.bg)(e);
     return (0, D.K$)(e)
         ? { icon: m.u }

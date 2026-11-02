@@ -417,10 +417,11 @@ async function es(e, t) {
                     traffic_metadata_sealed: null != i ? i : null,
                 },
                 rejectWithError: !0,
-            });
+            }),
+            a = (0, q.tp)(r.body);
         return (
-            o.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: (0, q.tp)(r.body) }),
-            { type: "success" }
+            o.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: a }),
+            { type: "success", userStatus: a }
         );
     } catch {
         return (o.h.dispatch({ type: "QUESTS_ENROLL_FAILURE", questId: e }), { type: "unknown_error" });
