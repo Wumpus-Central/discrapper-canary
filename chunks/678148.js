@@ -3,7 +3,7 @@ var l = s(477900),
     a = s(582128),
     n = s(503698),
     i = s.n(n),
-    r = s(562708),
+    r = s(131937),
     o = s(508425),
     d = s(559949),
     c = s(17928),
@@ -915,8 +915,8 @@ var e0 = s(366010),
     e8 = s(629584),
     e5 = s(943255),
     e9 = s(575181),
-    e2 = s(736653),
-    e3 = s(780898),
+    e3 = s(736653),
+    e2 = s(780898),
     e6 = s(344346),
     e7 = s(320095),
     e4 = s(963852),
@@ -940,7 +940,7 @@ function tc(e) {
             selectedColors: d,
             isPremiumTryItOut: u = !1,
         } = e,
-        m = (0, e2.Ay)(),
+        m = (0, e3.Ay)(),
         f = (0, e0.M)(m),
         [h, g] = (0, a.useState)(f),
         x = (0, ta.Ay)(t.id, null),
@@ -970,7 +970,7 @@ function tc(e) {
         F = u ? N.tryItOutThemeColors : _,
         { bannerSrc: B } = (0, tn.A)({ displayProfile: x, size: 413, canAnimate: !1, pendingBanner: O }),
         { userNameplate: Y, guildNameplate: G, pendingNameplate: H } = (0, p.rv)(t, s?.id),
-        U = (0, e3.WK)(G);
+        U = (0, e2.WK)(G);
     h && !f ? (m = K.NJ8.DARK) : !h && f && (m = K.NJ8.LIGHT);
     let z = (0, a.useCallback)((e) => {
             (g(e === K.NJ8.DARK), S.default.track(K.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === K.NJ8.DARK }));

@@ -12,7 +12,7 @@ var s,
     m = n(756377),
     g = n(284009),
     x = n.n(g),
-    A = n(562708),
+    A = n(131937),
     f = n(837381),
     j = n(17928),
     p = n(866665),
@@ -674,8 +674,8 @@ var eZ = n(702841),
     e2 = n(322387),
     e7 = n(912309),
     e8 = n(174459),
-    e6 = n(198476);
-function e4(e) {
+    e4 = n(198476);
+function e6(e) {
     let { closePopout: t } = e,
         n = (0, e7.kX)();
     return (0, a.jsx)(p.m, {
@@ -683,7 +683,7 @@ function e4(e) {
         text: er.intl.string(er.t["lMR96+"]),
         children: (0, a.jsxs)(U.D, {
             "aria-label": `${er.intl.string(er.t["lMR96+"])}, ${n}`,
-            className: e6.b,
+            className: e4.b,
             onClick: () => {
                 (e8.default.track(ek.HAw.NOTIFICATION_CENTER_ACTION, {
                     action_type: e2.e1.FRIEND_REQUESTS_BUTTON_CLICK,
@@ -693,7 +693,7 @@ function e4(e) {
             },
             children: [
                 (0, a.jsx)(e1.$, { size: "xs", color: "currentColor" }),
-                n > 0 && (0, a.jsx)(B.hV, { count: n, color: E.A.colors.BACKGROUND_MOD_STRONG.css, className: e6.D }),
+                n > 0 && (0, a.jsx)(B.hV, { count: n, color: E.A.colors.BACKGROUND_MOD_STRONG.css, className: e4.D }),
             ],
         }),
     });
@@ -1068,8 +1068,8 @@ var tQ = n(536637),
     t2 = n(749314),
     t7 = n(33358),
     t8 = n(384231),
-    t6 = n(207133),
-    t4 = n(704413),
+    t4 = n(207133),
+    t6 = n(704413),
     t5 = n(9842),
     t9 = n(994500),
     ne = n(5095),
@@ -1117,7 +1117,7 @@ let ny = i.memo(function e(t) {
         p = ej.rs.useSetting(),
         N = ej.kt.useSetting(),
         y = (0, t8.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
-        v = (0, t6.A)(s?.id),
+        v = (0, t4.A)(s?.id),
         { disableReactionCreates: I } = (0, ns.A)(s),
         { setPopout: C } = (0, nd.A)(l.id, nj.Fd),
         E = (0, nr.VL)(l, s, C, v),
@@ -1142,7 +1142,7 @@ let ny = i.memo(function e(t) {
         D = (0, no.A)({ message: l, channel: s, announcementEnabled: T }),
         k = (0, t7.P)(l),
         O = (0, ne._f)(l.id, l.channel_id),
-        G = (0, t4.A)(l),
+        G = (0, t6.A)(l),
         P = (0, na.fF)(l);
     return _
         ? (0, a.jsx)(e, { ...t, message: g.message, channel: x, hasThread: !1 })
@@ -1717,8 +1717,8 @@ function n2(e) {
 }
 var n7 = n(81466),
     n8 = n(508654),
-    n6 = n(29414);
-let n4 = { top: 8, bottom: 8, left: -4, right: -4 };
+    n4 = n(29414);
+let n6 = { top: 8, bottom: 8, left: -4, right: -4 };
 function n5(e) {
     let {
             guild: t,
@@ -1735,7 +1735,7 @@ function n5(e) {
     return (0, a.jsx)("div", {
         className: ed.N1,
         children: (0, a.jsx)(K.vN, {
-            offset: n4,
+            offset: n6,
             children: (0, a.jsxs)("div", {
                 className: d()(ed.ZO, { [ed.yZ]: r }),
                 ...h,
@@ -1872,7 +1872,7 @@ function se(e) {
                 collapsed: t.collapsed,
                 children: (0, a.jsx)("div", {
                     className: n9.k,
-                    children: m.map((e) => (0, a.jsx)(n6.A, { className: n9.f, guildEvent: e, truncate: !0 }, e.id)),
+                    children: m.map((e) => (0, a.jsx)(n4.A, { className: n9.f, guildEvent: e, truncate: !0 }, e.id)),
                 }),
             }),
         }),
@@ -2288,7 +2288,7 @@ function su(e) {
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
                         "aria-label": er.intl.string(er.t["8k+6QY"]),
-                        children: [(0, a.jsx)(sh, { tab: t }), (0, a.jsx)(e4, { closePopout: s })],
+                        children: [(0, a.jsx)(sh, { tab: t }), (0, a.jsx)(e6, { closePopout: s })],
                     }),
                 ],
             }),

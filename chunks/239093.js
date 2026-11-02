@@ -27,7 +27,7 @@ var i,
     o,
     d,
     c,
-    u = n(562708),
+    u = n(131937),
     _ = n(652215);
 class E {
     static TOS_LINK = "https://discord.com/terms";

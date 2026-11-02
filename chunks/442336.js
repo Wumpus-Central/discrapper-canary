@@ -1,7 +1,7 @@
 (l.r(t), l.d(t, { default: () => tO }));
 var i = l(477900),
     n = l(582128),
-    s = l(562708),
+    s = l(131937),
     r = l(17928),
     o = l(688810),
     a = l(139286),
@@ -771,8 +771,8 @@ function e5(e) {
           })
         : null;
 }
-var e4 = l(72377);
-function e3(e) {
+var e3 = l(72377);
+function e4(e) {
     let { guildId: t, powerup: l, badge: s } = e,
         [r, o] = n.useState(void 0);
     (0, ey.A)(r);
@@ -785,7 +785,7 @@ function e3(e) {
         powerup: l,
         badge: s,
         children: [
-            (0, i.jsx)(e4.l, { className: M.Sl, powerup: l, isHovering: a }),
+            (0, i.jsx)(e3.l, { className: M.Sl, powerup: l, isHovering: a }),
             (0, i.jsx)(y.Ft, {
                 title: l.title,
                 textColor: u,
@@ -1486,7 +1486,7 @@ function tD(e) {
                                                   );
                                               case "singlePerk":
                                                   return (0, i.jsx)(
-                                                      e3,
+                                                      e4,
                                                       { guildId: N, powerup: e.powerup, badge: e.badge },
                                                       `powerup-${e.powerup.skuId}`,
                                                   );

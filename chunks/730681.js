@@ -1,4 +1,4 @@
-let n, r, i, _, o, s, I, l, a, A;
+let n, r, i, o, _, s, l, I, a, A;
 var S,
     T,
     O,
@@ -6,13 +6,14 @@ var S,
     N,
     c,
     u,
-    L,
     d,
+    L,
     C,
+    p,
     g,
-    p = E(214958),
-    D = E.n(p);
-function M() {
+    D = E(214958),
+    M = E.n(D);
+function P() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -24,7 +25,9 @@ function M() {
         null != e.VencordNative
     );
 }
-function P() {
+let f = "u" < typeof window ? null : window.DiscordNative,
+    G = null != f ? f.process.platform : "";
+function m() {
     return (
         ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
@@ -34,22 +37,22 @@ function P() {
     );
 }
 ((n = E(973117).n), (r = E(28967).n));
-let f = (0, E(132500).A)();
-var G = E(264572).Buffer;
-let m = "deviceProperties",
-    U = "devicePropertiesVersion",
-    h = "referralProperties";
-function w() {}
-let $ = window.DiscordNative;
-if (null != $) {
+let U = (0, E(132500).A)();
+var h = E(264572).Buffer;
+let w = "deviceProperties",
+    $ = "devicePropertiesVersion",
+    B = "referralProperties";
+function v() {}
+let H = window.DiscordNative;
+if (null != H) {
     let e,
-        t = $.app.getVersion(),
-        E = $.process.platform,
-        n = $.os.release,
-        r = $.os.arch,
-        _ = $.os.appArch,
-        o = $.app.getReleaseChannel(),
-        s = P();
+        t = H.app.getVersion(),
+        E = H.process.platform,
+        n = H.os.release,
+        r = H.os.arch,
+        o = H.os.appArch,
+        _ = H.app.getReleaseChannel(),
+        s = m();
     switch (E) {
         case "win32":
             e = "Windows";
@@ -67,35 +70,39 @@ if (null != $) {
         ((i = {
             os: e,
             browser: "Discord Client",
-            release_channel: o || "unknown",
+            release_channel: _ || "unknown",
             client_version: t,
-            os_version: n,
+            ...{
+                os_version: (S = H.os.systemVersion) ?? ("darwin" === E ? "" : n),
+                os_version_is_release: "darwin" !== E || null != S,
+                ...("darwin" === E ? { os_sdk_version: n.split(".")[0] } : {}),
+                ...("win32" === E ? { os_sdk_version: n.split(".")[2] } : {}),
+            },
             os_arch: r,
-            app_arch: _,
+            app_arch: o,
             system_locale: s,
-            has_client_mods: M(),
-            client_launch_id: f,
+            has_client_mods: P(),
+            client_launch_id: U,
         }),
-        D().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = D().ua || ""), (i.browser_version = D().version || "")),
+        M().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = M().ua || ""), (i.browser_version = M().version || "")),
         "linux" === E)
     ) {
-        let e = $.crashReporter.getMetadata();
+        let e = H.crashReporter.getMetadata();
         ((i.window_manager = e.wm),
             (i.distro = e.distro),
             (i.runtime_environment = e.runtime_environment),
             (i.display_server = e.display_server));
-    } else
-        "darwin" === E ? (i.os_sdk_version = n?.split(".")[0]) : "win32" === E && (i.os_sdk_version = n?.split(".")[2]);
+    }
 }
-function B(e, t) {
+function y(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let E = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === E || ("string" != typeof E[1] && E[1].length) ? "" : decodeURIComponent(E[1]).replace(/\+/g, " ");
 }
-let v = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function H() {
+let b = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function F() {
     var e;
     let t,
         E,
@@ -107,8 +114,8 @@ function H() {
             ...n,
             ...((e = window.location.href),
             (E = {}),
-            v.forEach((t) => {
-                let n = B(e, t);
+            b.forEach((t) => {
+                let n = y(e, t);
                 n.length > 0 && (E[t] = n);
             }),
             E),
@@ -128,7 +135,7 @@ function H() {
                                   : null;
                 if (null != n) {
                     t.search_engine = n;
-                    let e = B(E, "yahoo" !== n ? "q" : "p");
+                    let e = y(E, "yahoo" !== n ? "q" : "p");
                     e.length > 0 && (t.mp_keyword = e);
                 }
                 return t;
@@ -139,12 +146,10 @@ function H() {
 if (null == i)
     try {
         i = (function () {
-            let e,
-                t,
-                E = n.get(m);
-            if (null == E || 1 !== n.get(U)) {
-                let e;
-                (((e = {}).os = (function () {
+            let e = n.get(w);
+            if (null == e || 1 !== n.get($)) {
+                let t;
+                (((t = {}).os = (function () {
                     let { userAgent: e } = window.navigator;
                     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
                     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -157,7 +162,7 @@ if (null == i)
                     else if (/Linux/i.test(e)) return "Linux";
                     else return "";
                 })()),
-                    (e.browser = (function () {
+                    (t.browser = (function () {
                         let { userAgent: e, vendor: t = "" } = window.navigator,
                             { opera: E } = window,
                             n = (function (e) {
@@ -195,8 +200,8 @@ if (null == i)
                         else if (/Gecko/.test(e)) return "Mozilla";
                         else return "";
                     })()),
-                    (e.device = (function () {
-                        let e = w(),
+                    (t.device = (function () {
+                        let e = v(),
                             { userAgent: t } = window.navigator;
                         if (null != e) return e.device;
                         if (/(BlackBerry|PlayBook|BB10)/i.test(t)) return "BlackBerry";
@@ -206,60 +211,74 @@ if (null == i)
                         else if (/iPad/.test(t)) return "iPad";
                         else return "";
                     })()),
-                    (e.device_model_name = ""),
-                    (e.system_locale = P()),
-                    (e.has_client_mods = M()),
-                    (E = e),
-                    n.set(m, E),
-                    n.set(U, 1));
+                    (t.device_model_name = ""),
+                    (t.system_locale = m()),
+                    (t.has_client_mods = P()),
+                    (e = t),
+                    n.set(w, e),
+                    n.set($, 1));
             }
-            let i = n.get(h);
-            null == i && ((i = H()), n.set(h, i));
-            let _ = r.get(h);
-            if (null == _) {
-                var o;
+            let t = n.get(B);
+            null == t && ((t = F()), n.set(B, t));
+            let E = r.get(B);
+            if (null == E) {
+                var i;
                 let e;
-                ((o = H()), (e = {}), Object.keys(o).map((t) => (e[`${t}_current`] = o[t])), (_ = e), r.set(h, _));
+                ((i = F()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (E = e), r.set(B, E));
             }
             return {
+                ...e,
+                ...(function () {
+                    let e = {
+                            browser_user_agent: window.navigator.userAgent || "",
+                            browser_version: M().version || "",
+                        },
+                        t = v();
+                    if (null != t) {
+                        var E;
+                        return {
+                            ...e,
+                            ...{
+                                os_version: (E = "ios" === G) ? t.systemVersion : (t.osVersion ?? ""),
+                                os_version_is_release: E || null != t.osVersion,
+                                os_sdk_version: E ? t.osSdkVersion || void 0 : t.systemVersion,
+                            },
+                        };
+                    }
+                    return { ...e, os_version: M()?.os?.version ?? "" };
+                })(),
+                ...t,
                 ...E,
-                ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: D().version || "" }),
-                (t = w()),
-                null != t
-                    ? { ...e, os_version: t.systemVersion || "", os_sdk_version: t.osSdkVersion || void 0 }
-                    : { ...e, os_version: D()?.os?.version ?? "" }),
-                ...i,
-                ..._,
             };
         })();
     } catch (e) {
         i = {};
     }
 ((s = {}),
-    (I = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
+    (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
-        (s.release_channel = I.split("-")[0]),
-    isNaN((l = parseInt("660266", 10))) || (s.client_build_number = l),
-    null == (a = $?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
+        (s.release_channel = l.split("-")[0]),
+    isNaN((I = parseInt("660280", 10))) || (s.client_build_number = I),
+    null == (a = H?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
         } catch (e) {}
         return null;
     })()),
-    (s.has_client_mods = M()),
-    (s.client_launch_id = f),
-    null != (A = w()?.installSource) && (s.install_source = A),
+    (s.has_client_mods = P()),
+    (s.client_launch_id = U),
+    null != (A = v()?.installSource) && (s.install_source = A),
     (function (e) {
         try {
-            G.from(JSON.stringify(e)).toString("base64");
+            h.from(JSON.stringify(e)).toString("base64");
         } catch (e) {
             return null;
         }
     })((i = { ...i, ...s })));
-var y = E(824120),
-    b = E.n(y);
-function F(e) {
+var Y = E(824120),
+    V = E.n(Y);
+function W(e) {
     let t = [];
     for (let E = 0; E < e.length; E++) {
         let n = Number(e[E]);
@@ -267,13 +286,13 @@ function F(e) {
     }
     return t;
 }
-class Y {
+class k {
     parts;
     str;
     static fromString(e) {
-        return new Y(
+        return new k(
             (function (e) {
-                let t = F(e),
+                let t = W(e),
                     E = [, , , ,];
                 for (let e = 0; e < 4; e++)
                     E[3 - e] = (function (e, t) {
@@ -294,7 +313,7 @@ class Y {
         let t = [, , , ,],
             E = Math.floor(e / 16);
         for (let n = 0; n < 4; n++) t[3 - n] = n === E ? 1 << (e - 16 * E) : 0;
-        return new Y(t);
+        return new k(t);
     }
     static asUintN(e, t) {
         let { parts: E } = t,
@@ -303,8 +322,8 @@ class Y {
         for (; r < e && r < 16 * E.length;) {
             let t = Math.min(e - r, 16),
                 i = (1 << t) - 1,
-                _ = E.length - Math.floor(r / 16) - 1;
-            ((n |= (E[_] & i) << r), (r += t));
+                o = E.length - Math.floor(r / 16) - 1;
+            ((n |= (E[o] & i) << r), (r += t));
         }
         return n;
     }
@@ -313,18 +332,18 @@ class Y {
     }
     and(e) {
         let { parts: t } = e;
-        return new Y(this.parts.map((e, E) => e & t[E]));
+        return new k(this.parts.map((e, E) => e & t[E]));
     }
     or(e) {
         let { parts: t } = e;
-        return new Y(this.parts.map((e, E) => e | t[E]));
+        return new k(this.parts.map((e, E) => e | t[E]));
     }
     xor(e) {
         let { parts: t } = e;
-        return new Y(this.parts.map((e, E) => e ^ t[E]));
+        return new k(this.parts.map((e, E) => e ^ t[E]));
     }
     not() {
-        return new Y(this.parts.map((e) => ~e));
+        return new k(this.parts.map((e) => ~e));
     }
     equals(e) {
         let { parts: t } = e;
@@ -335,59 +354,59 @@ class Y {
         let e = Array(16);
         return (
             this.parts.forEach((t, E) => {
-                let n = F(t.toString());
+                let n = W(t.toString());
                 for (let t = 0; t < 4; t++) e[t + 4 * E] = n[3 - t] || 0;
             }),
-            (this.str = b().fromArray(e, 16).toString())
+            (this.str = V().fromArray(e, 16).toString())
         );
     }
     toJSON() {
         return this.toString();
     }
 }
-let V = (function () {
+let K = (function () {
     try {
         return !0;
     } catch (e) {
         return !1;
     }
 })();
-V &&
+K &&
     null == BigInt.prototype.toJSON &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let W = {},
-    k = (
-        V
+let j = {},
+    x = (
+        K
             ? function (e) {
                   return BigInt(e);
               }
             : function (e) {
-                  return e instanceof Y
+                  return e instanceof k
                       ? e
-                      : ("number" == typeof e && (e = e.toString()), null != W[e] || (W[e] = Y.fromString(e)), W[e]);
+                      : ("number" == typeof e && (e = e.toString()), null != j[e] || (j[e] = k.fromString(e)), j[e]);
               }
     )(0),
-    K = V
+    Q = K
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : k,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : x,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
               return e | t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : k,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : x,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
               return e.or(t);
           },
-    j = V
+    J = K
         ? function (e) {
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
-              return Y.fromBit(e);
+              return k.fromBit(e);
           };
-class x {
+class X {
     value;
     constructor(e) {
         this.value = e;
@@ -396,7 +415,7 @@ class x {
         return this.value;
     }
 }
-function Q(e, t) {
+function q(e, t) {
     let E = {};
     for (let n of Object.keys(e)) {
         let r = e[n];
@@ -411,7 +430,7 @@ function Q(e, t) {
                     return e.map((e) =>
                         null == e
                             ? e
-                            : e instanceof x
+                            : e instanceof X
                               ? e.toString()
                               : null == t
                                 ? encodeURIComponent(e)
@@ -426,9 +445,9 @@ function Q(e, t) {
     }
     return E;
 }
-let J = "u" < typeof location ? "" : location.protocol,
-    X = J + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
-    q = J + "//discord.gg";
+let z = "u" < typeof location ? "" : location.protocol,
+    Z = z + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
+    ee = z + "//discord.gg";
 (Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -471,315 +490,315 @@ let J = "u" < typeof location ? "" : location.protocol,
     }),
     Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 }),
     Object.freeze({ 0: "subscription", 1: "sku" }));
-let z = Object.freeze({
-    CREATE_INSTANT_INVITE: j(0),
-    KICK_MEMBERS: j(1),
-    BAN_MEMBERS: j(2),
-    ADMINISTRATOR: j(3),
-    MANAGE_CHANNELS: j(4),
-    MANAGE_GUILD: j(5),
-    CHANGE_NICKNAME: j(26),
-    MANAGE_NICKNAMES: j(27),
-    MANAGE_ROLES: j(28),
-    MANAGE_WEBHOOKS: j(29),
-    MANAGE_GUILD_EXPRESSIONS: j(30),
-    CREATE_GUILD_EXPRESSIONS: j(43),
-    VIEW_AUDIT_LOG: j(7),
-    VIEW_CHANNEL: j(10),
-    VIEW_GUILD_ANALYTICS: j(19),
-    VIEW_CREATOR_MONETIZATION_ANALYTICS: j(41),
-    MODERATE_MEMBERS: j(40),
-    USE_EMBEDDED_ACTIVITIES: j(39),
-    USE_EXTERNAL_APPS: j(50),
-    SEND_MESSAGES: j(11),
-    SEND_TTS_MESSAGES: j(12),
-    MANAGE_MESSAGES: j(13),
-    EMBED_LINKS: j(14),
-    ATTACH_FILES: j(15),
-    READ_MESSAGE_HISTORY: j(16),
-    MENTION_EVERYONE: j(17),
-    USE_EXTERNAL_EMOJIS: j(18),
-    ADD_REACTIONS: j(6),
-    USE_APPLICATION_COMMANDS: j(31),
-    MANAGE_THREADS: j(34),
-    CREATE_PUBLIC_THREADS: j(35),
-    CREATE_PRIVATE_THREADS: j(36),
-    USE_EXTERNAL_STICKERS: j(37),
-    SEND_MESSAGES_IN_THREADS: j(38),
-    SEND_VOICE_MESSAGES: j(46),
-    SEND_POLLS: j(49),
-    PIN_MESSAGES: j(51),
-    BYPASS_SLOWMODE: j(52),
-    MANAGE_OFFICIAL_MESSAGES: j(53),
-    CONNECT: j(20),
-    SPEAK: j(21),
-    MUTE_MEMBERS: j(22),
-    DEAFEN_MEMBERS: j(23),
-    MOVE_MEMBERS: j(24),
-    USE_VAD: j(25),
-    PRIORITY_SPEAKER: j(8),
-    STREAM: j(9),
-    USE_SOUNDBOARD: j(42),
-    USE_EXTERNAL_SOUNDS: j(45),
-    SET_VOICE_CHANNEL_STATUS: j(48),
-    REQUEST_TO_SPEAK: j(32),
-    MANAGE_EVENTS: j(33),
-    CREATE_EVENTS: j(44),
+let et = Object.freeze({
+    CREATE_INSTANT_INVITE: J(0),
+    KICK_MEMBERS: J(1),
+    BAN_MEMBERS: J(2),
+    ADMINISTRATOR: J(3),
+    MANAGE_CHANNELS: J(4),
+    MANAGE_GUILD: J(5),
+    CHANGE_NICKNAME: J(26),
+    MANAGE_NICKNAMES: J(27),
+    MANAGE_ROLES: J(28),
+    MANAGE_WEBHOOKS: J(29),
+    MANAGE_GUILD_EXPRESSIONS: J(30),
+    CREATE_GUILD_EXPRESSIONS: J(43),
+    VIEW_AUDIT_LOG: J(7),
+    VIEW_CHANNEL: J(10),
+    VIEW_GUILD_ANALYTICS: J(19),
+    VIEW_CREATOR_MONETIZATION_ANALYTICS: J(41),
+    MODERATE_MEMBERS: J(40),
+    USE_EMBEDDED_ACTIVITIES: J(39),
+    USE_EXTERNAL_APPS: J(50),
+    SEND_MESSAGES: J(11),
+    SEND_TTS_MESSAGES: J(12),
+    MANAGE_MESSAGES: J(13),
+    EMBED_LINKS: J(14),
+    ATTACH_FILES: J(15),
+    READ_MESSAGE_HISTORY: J(16),
+    MENTION_EVERYONE: J(17),
+    USE_EXTERNAL_EMOJIS: J(18),
+    ADD_REACTIONS: J(6),
+    USE_APPLICATION_COMMANDS: J(31),
+    MANAGE_THREADS: J(34),
+    CREATE_PUBLIC_THREADS: J(35),
+    CREATE_PRIVATE_THREADS: J(36),
+    USE_EXTERNAL_STICKERS: J(37),
+    SEND_MESSAGES_IN_THREADS: J(38),
+    SEND_VOICE_MESSAGES: J(46),
+    SEND_POLLS: J(49),
+    PIN_MESSAGES: J(51),
+    BYPASS_SLOWMODE: J(52),
+    MANAGE_OFFICIAL_MESSAGES: J(53),
+    CONNECT: J(20),
+    SPEAK: J(21),
+    MUTE_MEMBERS: J(22),
+    DEAFEN_MEMBERS: J(23),
+    MOVE_MEMBERS: J(24),
+    USE_VAD: J(25),
+    PRIORITY_SPEAKER: J(8),
+    STREAM: J(9),
+    USE_SOUNDBOARD: J(42),
+    USE_EXTERNAL_SOUNDS: J(45),
+    SET_VOICE_CHANNEL_STATUS: J(48),
+    REQUEST_TO_SPEAK: J(32),
+    MANAGE_EVENTS: J(33),
+    CREATE_EVENTS: J(44),
 });
 (!(function () {
     for (var e = arguments.length, t = Array(e), E = 0; E < e; E++) t[E] = arguments[E];
     let n = t[0];
-    for (let e = 1; e < t.length; e++) n = K(n, t[e]);
+    for (let e = 1; e < t.length; e++) n = Q(n, t[e]);
 })(
-    z.KICK_MEMBERS,
-    z.BAN_MEMBERS,
-    z.ADMINISTRATOR,
-    z.MANAGE_CHANNELS,
-    z.MANAGE_GUILD,
-    z.MANAGE_ROLES,
-    z.MANAGE_MESSAGES,
-    z.MANAGE_THREADS,
-    z.MODERATE_MEMBERS,
+    et.KICK_MEMBERS,
+    et.BAN_MEMBERS,
+    et.ADMINISTRATOR,
+    et.MANAGE_CHANNELS,
+    et.MANAGE_GUILD,
+    et.MANAGE_ROLES,
+    et.MANAGE_MESSAGES,
+    et.MANAGE_THREADS,
+    et.MODERATE_MEMBERS,
 ),
     Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }));
-let Z = Object.freeze({
-    WELCOME: `${X}/welcome/`,
-    ME: `${X}/channels/@me`,
-    SETTINGS: (e, t) => `${X}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
-    CONNECTION: (e) => `${X}/connections/${e}`,
-    CHANGELOGS: `${X}/settings/changelogs`,
-    LOGIN: `${X}/login`,
-    LOGIN_WITH_REDIRECT: (e) => `${X}/login?redirect_to=${e}`,
-    REGISTER: `${X}/register`,
-    REGISTER_WITH_REDIRECT: (e) => `${X}/register?redirect_to=${e}`,
-    CREATE_GUILD: `${X}/guilds/create`,
-    VANITY_INVITE: (e) => `${q}/${e}`,
-    HYPESQUAD_ONLINE: `${X}/settings/hypesquad-online`,
-    BROWSE_NITRO_TITLES: `${X}/store/browse?type=nitro`,
-    SKU_DETAILS: (e, t) => `${X}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
+let eE = Object.freeze({
+    WELCOME: `${Z}/welcome/`,
+    ME: `${Z}/channels/@me`,
+    SETTINGS: (e, t) => `${Z}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
+    CONNECTION: (e) => `${Z}/connections/${e}`,
+    CHANGELOGS: `${Z}/settings/changelogs`,
+    LOGIN: `${Z}/login`,
+    LOGIN_WITH_REDIRECT: (e) => `${Z}/login?redirect_to=${e}`,
+    REGISTER: `${Z}/register`,
+    REGISTER_WITH_REDIRECT: (e) => `${Z}/register?redirect_to=${e}`,
+    CREATE_GUILD: `${Z}/guilds/create`,
+    VANITY_INVITE: (e) => `${ee}/${e}`,
+    HYPESQUAD_ONLINE: `${Z}/settings/hypesquad-online`,
+    BROWSE_NITRO_TITLES: `${Z}/store/browse?type=nitro`,
+    SKU_DETAILS: (e, t) => `${Z}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
     MESSAGE: (e, t, E) => `/channels/${e}/${t}/${E}`,
     CHANNEL: (e, t) => `/channels/${e}/${t}`,
-    REPORT: `${X}/report`,
-    QUEST_PREVIEW_TOOL_2: (e) => `${X}/quest-preview/${e}`,
-    QUEST_HOME_PREVIEW: (e) => `${X}/quest-home?ad_creative_ids=${e}`,
-    QUEST_BAR_PREVIEW: (e) => `${X}/quest-bar-preview?ad_creative_ids=${e}`,
+    REPORT: `${Z}/report`,
+    QUEST_PREVIEW_TOOL_2: (e) => `${Z}/quest-preview/${e}`,
+    QUEST_HOME_PREVIEW: (e) => `${Z}/quest-home?ad_creative_ids=${e}`,
+    QUEST_BAR_PREVIEW: (e) => `${Z}/quest-bar-preview?ad_creative_ids=${e}`,
 });
-var ee =
-    (((S = ee || {}).INDEX = "/"),
-    (S.INDEX_WORD = "/index"),
-    (S.INDEX_BUCKET = "/index/:bucketId"),
-    (S.CHANGELOGS = "/changelogs/:date"),
-    (S.COMMUNITY = "/community"),
-    (S.COMPANY = "/company"),
-    (S.COMPANY_INFORMATION = "/company-information"),
-    (S.CREATORS = "/creators"),
-    (S.DOWNLOADS = "/downloads"),
-    (S.DOWNLOAD = "/download"),
-    (S.GAMING = "/gaming"),
-    (S.PRIVACY = "/privacy"),
-    (S.TOS = "/tos"),
-    (S.TERMS = "/terms"),
-    (S.STORE_TERMS = "/store-terms"),
-    (S.ACKNOWLEDGEMENTS = "/acknowledgements"),
-    (S.LICENSES = "/licenses"),
-    (S.PARTNERS = "/partners"),
-    (S.HYPESQUAD = "/hypesquad"),
-    (S.HYPESQUAD_RIOT = "/hypesquad-riot"),
-    (S.BRANDING = "/branding"),
-    (S.ERROR_404 = "/404"),
-    (S.JOBS = "/jobs"),
-    (S.JOB = "/jobs/:jobId"),
-    (S.STREAMKIT = "/streamkit"),
-    (S.SECURITY = "/security"),
-    (S.NITRO = "/nitro"),
-    (S.DISCOVER = "/servers"),
-    (S.QUESTS = "/ads/quests"),
-    (S.GUIDELINES = "/guidelines"),
-    (S.RICH_PRESENCE = "/rich-presence"),
-    (S.VERIFICATION = "/verification"),
-    (S.OPEN_SOURCE = "/open-source"),
-    (S.WARFRAME = "/warframe"),
-    (S.REMOTE_AUTH = "/ra/:remoteAuthFingerprint"),
-    (S.SAFETY_LANDING = "/safetycenter"),
-    (S.SAFETY_ARTICLE_ROOT = "/safety"),
-    (S.SAFETY_ARTICLE = "/safety/:article"),
-    (S.NEWSROOM = "/newsroom"),
-    (S.INSPIRATION = "/inspiration"),
-    (S.MOD_ACADEMY_LANDING = "/moderation"),
-    (S.MOD_ACADEMY_EXAM = "/moderation/exam"),
-    (S.MOD_ACADEMY_ARTICLE = "/moderation/:article"),
-    (S.BLOG = "/blog"),
-    (S.BUILD = "/build"),
-    (S.DEVELOPERS = "/developers"),
-    (S.APP_DIRECTORY = "/application-directory"),
-    (S.REFRESH_INDEX = "/new"),
-    (S.REFRESH_INDEX_WORD = "/new/index"),
-    (S.REFRESH_COMPANY = "/new/company"),
-    (S.REFRESH_DOWNLOAD = "/new/download"),
-    (S.REFRESH_PRIVACY = "/new/privacy"),
-    (S.REFRESH_TERMS = "/new/terms"),
-    (S.REFRESH_ACKNOWLEDGEMENTS = "/new/acknowledgements"),
-    (S.REFRESH_LICENSES = "/new/licenses"),
-    (S.REFRESH_BRANDING = "/new/branding"),
-    (S.REFRESH_JOBS = "/new/jobs"),
-    (S.REFRESH_JOB = "/new/jobs/:jobId"),
-    (S.REFRESH_STREAMKIT = "/new/streamkit"),
-    (S.REFRESH_NITRO = "/new/nitro"),
-    (S.REFRESH_GUIDELINES = "/new/guidelines"),
-    (S.REFRESH_SAFETY_LANDING = "/new/safety"),
-    (S.REFRESH_SAFETY_ARTICLE = "/new/safety/:article"),
-    (S.COLLEGE = "/college"),
-    (S.LEAGUE_CLUBS = "/league-communities"),
-    (S.DISCORD_RECRUITING_SCAMS = "/discord-recruitment-scams"),
-    (S.DEV_NEWSLETTER_SIGNUP = "/dev-newsletter"),
-    (S.LEGACY_DEV_NEWSLETTER = "/newsletter"),
-    (S.LEGAL_ARCHIVE = "/archive/"),
-    (S.TERMS_MAY_2020 = "/archive/terms/may-2020"),
-    (S.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020"),
-    (S.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020"),
-    (S.FALL_RELEASE_2023 = "/fallrelease"),
-    (S.MOBILE_REDESIGN_2023 = "/mobile"),
-    (S.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019"),
-    (S.REFRESH_WHY_DISCORD = "/why-discord-is-different"),
-    (S.WHY_DISCORD = "/why-discord"),
-    (S.XBOX_OFFER = "/discord-xbox-offer-2020"),
-    (S.COLLEGE_BRUINS = "/bruins"),
-    (S.COLLEGE_ANTEATERS = "/anteaters"),
-    (S.COLLEGE_GAUCHOS = "/gauchos"),
-    (S.COLLEGE_BEARS = "/bears"),
-    (S.COLLEGE_SLUGS = "/slugs"),
-    (S.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = "/terms/back-to-school-2020/instagram"),
-    (S.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = "/terms/back-to-school-2020/twitter"),
-    (S.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
-    (S.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
-    S);
-(Q(Z),
-    Q(ee),
+var en =
+    (((T = en || {}).INDEX = "/"),
+    (T.INDEX_WORD = "/index"),
+    (T.INDEX_BUCKET = "/index/:bucketId"),
+    (T.CHANGELOGS = "/changelogs/:date"),
+    (T.COMMUNITY = "/community"),
+    (T.COMPANY = "/company"),
+    (T.COMPANY_INFORMATION = "/company-information"),
+    (T.CREATORS = "/creators"),
+    (T.DOWNLOADS = "/downloads"),
+    (T.DOWNLOAD = "/download"),
+    (T.GAMING = "/gaming"),
+    (T.PRIVACY = "/privacy"),
+    (T.TOS = "/tos"),
+    (T.TERMS = "/terms"),
+    (T.STORE_TERMS = "/store-terms"),
+    (T.ACKNOWLEDGEMENTS = "/acknowledgements"),
+    (T.LICENSES = "/licenses"),
+    (T.PARTNERS = "/partners"),
+    (T.HYPESQUAD = "/hypesquad"),
+    (T.HYPESQUAD_RIOT = "/hypesquad-riot"),
+    (T.BRANDING = "/branding"),
+    (T.ERROR_404 = "/404"),
+    (T.JOBS = "/jobs"),
+    (T.JOB = "/jobs/:jobId"),
+    (T.STREAMKIT = "/streamkit"),
+    (T.SECURITY = "/security"),
+    (T.NITRO = "/nitro"),
+    (T.DISCOVER = "/servers"),
+    (T.QUESTS = "/ads/quests"),
+    (T.GUIDELINES = "/guidelines"),
+    (T.RICH_PRESENCE = "/rich-presence"),
+    (T.VERIFICATION = "/verification"),
+    (T.OPEN_SOURCE = "/open-source"),
+    (T.WARFRAME = "/warframe"),
+    (T.REMOTE_AUTH = "/ra/:remoteAuthFingerprint"),
+    (T.SAFETY_LANDING = "/safetycenter"),
+    (T.SAFETY_ARTICLE_ROOT = "/safety"),
+    (T.SAFETY_ARTICLE = "/safety/:article"),
+    (T.NEWSROOM = "/newsroom"),
+    (T.INSPIRATION = "/inspiration"),
+    (T.MOD_ACADEMY_LANDING = "/moderation"),
+    (T.MOD_ACADEMY_EXAM = "/moderation/exam"),
+    (T.MOD_ACADEMY_ARTICLE = "/moderation/:article"),
+    (T.BLOG = "/blog"),
+    (T.BUILD = "/build"),
+    (T.DEVELOPERS = "/developers"),
+    (T.APP_DIRECTORY = "/application-directory"),
+    (T.REFRESH_INDEX = "/new"),
+    (T.REFRESH_INDEX_WORD = "/new/index"),
+    (T.REFRESH_COMPANY = "/new/company"),
+    (T.REFRESH_DOWNLOAD = "/new/download"),
+    (T.REFRESH_PRIVACY = "/new/privacy"),
+    (T.REFRESH_TERMS = "/new/terms"),
+    (T.REFRESH_ACKNOWLEDGEMENTS = "/new/acknowledgements"),
+    (T.REFRESH_LICENSES = "/new/licenses"),
+    (T.REFRESH_BRANDING = "/new/branding"),
+    (T.REFRESH_JOBS = "/new/jobs"),
+    (T.REFRESH_JOB = "/new/jobs/:jobId"),
+    (T.REFRESH_STREAMKIT = "/new/streamkit"),
+    (T.REFRESH_NITRO = "/new/nitro"),
+    (T.REFRESH_GUIDELINES = "/new/guidelines"),
+    (T.REFRESH_SAFETY_LANDING = "/new/safety"),
+    (T.REFRESH_SAFETY_ARTICLE = "/new/safety/:article"),
+    (T.COLLEGE = "/college"),
+    (T.LEAGUE_CLUBS = "/league-communities"),
+    (T.DISCORD_RECRUITING_SCAMS = "/discord-recruitment-scams"),
+    (T.DEV_NEWSLETTER_SIGNUP = "/dev-newsletter"),
+    (T.LEGACY_DEV_NEWSLETTER = "/newsletter"),
+    (T.LEGAL_ARCHIVE = "/archive/"),
+    (T.TERMS_MAY_2020 = "/archive/terms/may-2020"),
+    (T.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020"),
+    (T.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020"),
+    (T.FALL_RELEASE_2023 = "/fallrelease"),
+    (T.MOBILE_REDESIGN_2023 = "/mobile"),
+    (T.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019"),
+    (T.REFRESH_WHY_DISCORD = "/why-discord-is-different"),
+    (T.WHY_DISCORD = "/why-discord"),
+    (T.XBOX_OFFER = "/discord-xbox-offer-2020"),
+    (T.COLLEGE_BRUINS = "/bruins"),
+    (T.COLLEGE_ANTEATERS = "/anteaters"),
+    (T.COLLEGE_GAUCHOS = "/gauchos"),
+    (T.COLLEGE_BEARS = "/bears"),
+    (T.COLLEGE_SLUGS = "/slugs"),
+    (T.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = "/terms/back-to-school-2020/instagram"),
+    (T.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = "/terms/back-to-school-2020/twitter"),
+    (T.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
+    (T.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
+    T);
+(q(eE),
+    q(en),
     Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     }));
-let et = "dQw4w9WgXcQ:",
-    eE = null,
-    en = window.DiscordNative;
-null != en && (eE = en.safeStorage);
-let er = !1,
-    ei = {},
-    e_ = !1;
-function eo(e) {
+let er = "dQw4w9WgXcQ:",
+    ei = null,
+    eo = window.DiscordNative;
+null != eo && (ei = eo.safeStorage);
+let e_ = !1,
+    es = {},
+    el = !1;
+function eI(e) {
     return null == e || 0 === e.length
         ? { decryptedToken: null, wasEncrypted: !1 }
-        : eE?.isEncryptionAvailable() && e.startsWith(et)
-          ? { decryptedToken: eE.decryptString(e.substring(et.length)), wasEncrypted: !0 }
+        : ei?.isEncryptionAvailable() && e.startsWith(er)
+          ? { decryptedToken: ei.decryptString(e.substring(er.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
-var es =
-        (((T = {})[(T.DISPATCH = 0)] = "DISPATCH"),
-        (T[(T.HEARTBEAT = 1)] = "HEARTBEAT"),
-        (T[(T.IDENTIFY = 2)] = "IDENTIFY"),
-        (T[(T.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
-        (T[(T.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
-        (T[(T.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
-        (T[(T.RESUME = 6)] = "RESUME"),
-        (T[(T.RECONNECT = 7)] = "RECONNECT"),
-        (T[(T.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
-        (T[(T.INVALID_SESSION = 9)] = "INVALID_SESSION"),
-        (T[(T.HELLO = 10)] = "HELLO"),
-        (T[(T.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
-        (T[(T.CALL_CONNECT = 13)] = "CALL_CONNECT"),
-        (T[(T.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
-        (T[(T.STREAM_CREATE = 18)] = "STREAM_CREATE"),
-        (T[(T.STREAM_DELETE = 19)] = "STREAM_DELETE"),
-        (T[(T.STREAM_WATCH = 20)] = "STREAM_WATCH"),
-        (T[(T.STREAM_PING = 21)] = "STREAM_PING"),
-        (T[(T.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
-        (T[(T.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
-        (T[(T.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
-        (T[(T.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
-        (T[(T.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
-        (T[(T.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
-        (T[(T.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
-        (T[(T.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
-        (T[(T.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
-        (T[(T.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
-        (T[(T.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
-        (T[(T.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
-        (T[(T.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
-        (T[(T.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
-        T),
-    eI = E(377941),
-    el = E.n(eI),
-    ea =
-        (((O = {}).ALL = "ALL"),
-        (O.AVATAR_DECORATION = "AVATAR_DECORATION"),
-        (O.PROFILE_EFFECT = "PROFILE_EFFECT"),
-        (O.NAMEPLATE = "NAMEPLATE"),
-        (O.PROFILE_FRAME = "PROFILE_FRAME"),
-        (O.BUNDLE = "BUNDLE"),
+var ea =
+        (((O = {})[(O.DISPATCH = 0)] = "DISPATCH"),
+        (O[(O.HEARTBEAT = 1)] = "HEARTBEAT"),
+        (O[(O.IDENTIFY = 2)] = "IDENTIFY"),
+        (O[(O.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
+        (O[(O.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
+        (O[(O.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
+        (O[(O.RESUME = 6)] = "RESUME"),
+        (O[(O.RECONNECT = 7)] = "RECONNECT"),
+        (O[(O.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
+        (O[(O.INVALID_SESSION = 9)] = "INVALID_SESSION"),
+        (O[(O.HELLO = 10)] = "HELLO"),
+        (O[(O.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
+        (O[(O.CALL_CONNECT = 13)] = "CALL_CONNECT"),
+        (O[(O.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
+        (O[(O.STREAM_CREATE = 18)] = "STREAM_CREATE"),
+        (O[(O.STREAM_DELETE = 19)] = "STREAM_DELETE"),
+        (O[(O.STREAM_WATCH = 20)] = "STREAM_WATCH"),
+        (O[(O.STREAM_PING = 21)] = "STREAM_PING"),
+        (O[(O.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
+        (O[(O.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
+        (O[(O.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
+        (O[(O.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
+        (O[(O.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
+        (O[(O.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
+        (O[(O.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
+        (O[(O.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
+        (O[(O.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
+        (O[(O.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
+        (O[(O.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
+        (O[(O.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
+        (O[(O.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
+        (O[(O.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         O),
-    eA = (((R = {}).ASC = "asc"), (R.DESC = "desc"), R),
-    eS =
-        (((N = {}).PRICE = "price"),
-        (N.ALPHABETICAL = "alphabetical"),
-        (N.RECENCY = "recency"),
-        (N.POPULARITY = "popularity"),
-        (N.RELEVANCE = "relevance"),
-        N),
+    eA = E(377941),
+    eS = E.n(eA),
     eT =
-        (((c = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
-        (c.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
-        (c.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
+        (((R = {}).ALL = "ALL"),
+        (R.AVATAR_DECORATION = "AVATAR_DECORATION"),
+        (R.PROFILE_EFFECT = "PROFILE_EFFECT"),
+        (R.NAMEPLATE = "NAMEPLATE"),
+        (R.PROFILE_FRAME = "PROFILE_FRAME"),
+        (R.BUNDLE = "BUNDLE"),
+        R),
+    eO = (((N = {}).ASC = "asc"), (N.DESC = "desc"), N),
+    eR =
+        (((c = {}).PRICE = "price"),
+        (c.ALPHABETICAL = "alphabetical"),
+        (c.RECENCY = "recency"),
+        (c.POPULARITY = "popularity"),
+        (c.RELEVANCE = "relevance"),
         c),
-    eO =
-        (((u = {}).HOME = "home"),
-        (u.CATALOG = "catalog"),
-        (u.ORBS = "orbs"),
-        (u.AVATAR_DECORATIONS = "avatar-decorations"),
-        (u.PROFILE_EFFECTS = "profile-effects"),
-        (u.NAMEPLATES = "nameplates"),
-        (u.PROFILE_FRAMES = "profile-frames"),
-        (u.BUNDLES = "bundles"),
-        (u.COLLABS = "collabs"),
-        (u.OFFER_ELIGIBLE = "offer-eligible"),
-        (u.PROMOTION = "promotion"),
-        (u.COLLECTION_INDEX = "collection-index"),
-        (u.GAME_SHOPS = "game-shops"),
-        (u.GAME_SERVERS = "game-servers"),
-        u);
+    eN =
+        (((u = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
+        (u.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
+        (u.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
+        u),
+    ec =
+        (((d = {}).HOME = "home"),
+        (d.CATALOG = "catalog"),
+        (d.ORBS = "orbs"),
+        (d.AVATAR_DECORATIONS = "avatar-decorations"),
+        (d.PROFILE_EFFECTS = "profile-effects"),
+        (d.NAMEPLATES = "nameplates"),
+        (d.PROFILE_FRAMES = "profile-frames"),
+        (d.BUNDLES = "bundles"),
+        (d.COLLABS = "collabs"),
+        (d.OFFER_ELIGIBLE = "offer-eligible"),
+        (d.PROMOTION = "promotion"),
+        (d.COLLECTION_INDEX = "collection-index"),
+        (d.GAME_SHOPS = "game-shops"),
+        (d.GAME_SERVERS = "game-servers"),
+        d);
 (Object.values({
     ORB_PROFILE_BADGE: "1342211853484429445",
-    FRACTIONAL_PREMIUM: eT.PREMIUM_TIER_2_3_DAY,
-    FRACTIONAL_PREMIUM_1_DAY: eT.PREMIUM_TIER_2_1_DAY,
+    FRACTIONAL_PREMIUM: eN.PREMIUM_TIER_2_3_DAY,
+    FRACTIONAL_PREMIUM_1_DAY: eN.PREMIUM_TIER_2_1_DAY,
 }),
-    ea.AVATAR_DECORATION,
-    ea.NAMEPLATE,
-    ea.PROFILE_EFFECT,
-    ea.PROFILE_FRAME,
-    ea.BUNDLE,
-    eS.RELEVANCE,
-    eA.DESC,
-    eS.RECENCY,
-    eA.DESC,
-    eS.PRICE,
-    eA.ASC,
-    eS.PRICE,
-    eA.DESC,
-    eS.POPULARITY,
-    eA.DESC);
-var eR = (((L = {}).ABOUT = "about"), (L.STORE = "store"), L),
-    eN =
-        (((d = {}).GENERAL = "general"),
-        (d.IMAGES = "images"),
-        (d.PREMIUM_DEPRECATED = "premium"),
-        (d.STORE = "store"),
-        (d.PRIVACY = "privacy"),
-        d);
-let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
-    eu = Q(
+    eT.AVATAR_DECORATION,
+    eT.NAMEPLATE,
+    eT.PROFILE_EFFECT,
+    eT.PROFILE_FRAME,
+    eT.BUNDLE,
+    eR.RELEVANCE,
+    eO.DESC,
+    eR.RECENCY,
+    eO.DESC,
+    eR.PRICE,
+    eO.ASC,
+    eR.PRICE,
+    eO.DESC,
+    eR.POPULARITY,
+    eO.DESC);
+var eu = (((L = {}).ABOUT = "about"), (L.STORE = "store"), L),
+    ed =
+        (((C = {}).GENERAL = "general"),
+        (C.IMAGES = "images"),
+        (C.PREMIUM_DEPRECATED = "premium"),
+        (C.STORE = "store"),
+        (C.PRIVACY = "privacy"),
+        C);
+let eL = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
+    eC = q(
         Object.freeze({
             INDEX: "/",
             APP: "/app",
@@ -887,7 +906,7 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => `/discovery/applications/categories/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
-            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eR.STORE}/${t}`,
+            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eu.STORE}/${t}`,
             GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
             GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
             GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
@@ -902,8 +921,8 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
                 `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
             BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE: (e, t) =>
                 `/billing/premium/manage?flow_type=${e}${null != t ? `&load_id=${t}` : ""}`,
-            BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, E, n, r, i, _) =>
-                `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${E}${null != n ? `&payment_method_type=${n}` : ""}${null != r ? `&deep_link_type=${r}` : ""}${null != i ? `&use_preset_offer=${i}` : ""}${null != _ ? `&flow_type=${_}` : ""}`,
+            BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, E, n, r, i, o) =>
+                `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${E}${null != n ? `&payment_method_type=${n}` : ""}${null != r ? `&deep_link_type=${r}` : ""}${null != i ? `&use_preset_offer=${i}` : ""}${null != o ? `&flow_type=${o}` : ""}`,
             BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, E, n) =>
                 `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != E ? `&load_id=${E}` : ""}${null != n ? `&flow_type=${n}` : ""}`,
             GUILD_BOOSTING_MARKETING: (e) => `/guilds/${e}/premium-guild-subscriptions`,
@@ -924,7 +943,7 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             APPLICATION_DIRECTORY: "/application-directory",
             APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
             APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
-            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${eN.STORE}/${t}`,
+            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${ed.STORE}/${t}`,
             APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
             FAMILY_CENTER: "/family-center",
             FAMILY_CENTER_MY_FAMILY: (e, t) => `/feature/family-center/my-family/${e}/${t}`,
@@ -942,7 +961,7 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             REPORT_SECOND_LOOK: "/report-review",
             COLLECTIBLES_SHOP: "/shop",
             COLLECTIBLES_SHOP_GAME_SHOP: (e, t, E, n) => {
-                let r = `/shop?tab=${eO.GAME_SHOPS}&applicationId=${e}`;
+                let r = `/shop?tab=${ec.GAME_SHOPS}&applicationId=${e}`;
                 return (
                     null != t && (r += `&pageIndex=${t}`),
                     null != E && (r += `&skuId=${E}`),
@@ -969,30 +988,30 @@ let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
         }),
         [":", "?", "@"],
     ),
-    eL = new Set(
+    ep = new Set(
         Object.values(
-            (((C = {}).CONJURE = "conjuring"),
-            (C.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
-            (C.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
-            (C.GAME_SHOP = "game-shop"),
-            (C.GUILD_SHOP = "shop"),
-            (C.MEMBER_APPLICATIONS = "member-applications"),
-            (C.GUILD_HOME = "@home"),
-            (C.CHANNEL_BROWSER = "channel-browser"),
-            (C.GUILD_ONBOARDING = "onboarding"),
-            (C.CUSTOMIZE_COMMUNITY = "customize-community"),
-            (C.MEMBER_SAFETY = "member-safety"),
-            (C.GUILD_BOOSTS = "boosts"),
-            (C.GAME_SERVERS = "game-servers"),
-            (C.REPORT_TO_MOD = "report-to-mod"),
-            (C.GUILD_OFFICIAL_MESSAGES = "official-messages"),
-            (C.GUILD_SPACE = "guild-space"),
-            C),
+            (((p = {}).CONJURE = "conjuring"),
+            (p.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
+            (p.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
+            (p.GAME_SHOP = "game-shop"),
+            (p.GUILD_SHOP = "shop"),
+            (p.MEMBER_APPLICATIONS = "member-applications"),
+            (p.GUILD_HOME = "@home"),
+            (p.CHANNEL_BROWSER = "channel-browser"),
+            (p.GUILD_ONBOARDING = "onboarding"),
+            (p.CUSTOMIZE_COMMUNITY = "customize-community"),
+            (p.MEMBER_SAFETY = "member-safety"),
+            (p.GUILD_BOOSTS = "boosts"),
+            (p.GAME_SERVERS = "game-servers"),
+            (p.REPORT_TO_MOD = "report-to-mod"),
+            (p.GUILD_OFFICIAL_MESSAGES = "official-messages"),
+            (p.GUILD_SPACE = "guild-space"),
+            p),
         ),
     );
-function ed(e, t) {
+function eg(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return new x(`:${el()(e)}(${t})${E ? "?" : ""}`);
+    return new X(`:${eS()(e)}(${t})${E ? "?" : ""}`);
 }
 (Object.freeze({
     GUILD_FEED_REMOVED: 1,
@@ -1024,74 +1043,74 @@ function ed(e, t) {
         (g.LINKED_ROLES = "linked-roles"),
         g),
     ));
-let eC = {
+let eD = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = ec.map(el()).join("|");
-        return ed(e, `${E}|\\d+`, { optional: t });
+            E = eL.map(eS()).join("|");
+        return eg(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...eL].map(el()).join("|");
-        return ed(e, `${E}|\\d+`, { optional: t });
+            E = [...ep].map(eS()).join("|");
+        return eg(e, `${E}|\\d+`, { optional: t });
     },
 };
-var eg = E(806163);
-let ep = new Set([
-    eu.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
-    eu.APP_WITH_GIFT_CODE(":giftCode"),
-    eu.APP,
-    eu.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-    eu.SETTINGS(":section", ":subsection?"),
-    eu.USER_GUILD_NOTIFICATION_SETTINGS(eC.guildId()),
-    eu.APPLICATION_LIBRARY_INVENTORY,
-    eu.WELCOME(eC.guildId({ optional: !0 }), eC.channelId({ optional: !0 })),
-    eu.GUILD_EVENT_DETAILS(eC.guildId({ optional: !0 }), ":guildEventId"),
-    eu.GUILD_SETTINGS(eC.guildId(), ":section?", ":subsection?"),
-    eu.CHANNEL_THREAD_VIEW(eC.guildId(), eC.channelId(), ":threadId", ":messageId?"),
-    eu.CHANNEL(eC.guildId(), eC.channelId({ optional: !0 }), ":messageId?"),
-    eu.ACTIVITY,
-    eu.ACTIVITIES,
-    eu.ACTIVITIES_HAPPENING_NOW,
-    eu.ACTIVITY_DETAILS(":applicationId"),
-    eu.APPLICATION_LIBRARY,
-    eu.APPLICATION_STORE,
-    eu.MESSAGE_REQUESTS,
-    eu.COLLECTIBLES_SHOP,
-    eu.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
-    eu.GUILD_DISCOVERY,
-    eu.QUEST_HOME_DEPRECATED,
-    eu.QUEST_HOME,
-    eu.CONJURE,
-    eu.CONJURE_PROJECT(":projectId"),
-    eu.ICYMI,
-    eu.GLOBAL_DISCOVERY,
-    eu.GUILD_MEMBER_VERIFICATION(eC.guildId()),
-    eu.GUILD_MEMBER_VERIFICATION_FOR_HUB(eC.guildId(), ":inviteCode?"),
-    eu.GUILD_BOOSTING_MARKETING(eC.guildId()),
-    eu.GUILD_FEATURE(":feature", eC.guildId()),
-    eu.FEATURE(":feature"),
-    eu.FAMILY_CENTER,
-    eu.APPLICATION_DIRECTORY,
-    eu.GAME_SHOP(eC.guildId(), ":shopSkuId?", ":shopSlug?"),
+var eM = E(806163);
+let eP = new Set([
+    eC.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
+    eC.APP_WITH_GIFT_CODE(":giftCode"),
+    eC.APP,
+    eC.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
+    eC.SETTINGS(":section", ":subsection?"),
+    eC.USER_GUILD_NOTIFICATION_SETTINGS(eD.guildId()),
+    eC.APPLICATION_LIBRARY_INVENTORY,
+    eC.WELCOME(eD.guildId({ optional: !0 }), eD.channelId({ optional: !0 })),
+    eC.GUILD_EVENT_DETAILS(eD.guildId({ optional: !0 }), ":guildEventId"),
+    eC.GUILD_SETTINGS(eD.guildId(), ":section?", ":subsection?"),
+    eC.CHANNEL_THREAD_VIEW(eD.guildId(), eD.channelId(), ":threadId", ":messageId?"),
+    eC.CHANNEL(eD.guildId(), eD.channelId({ optional: !0 }), ":messageId?"),
+    eC.ACTIVITY,
+    eC.ACTIVITIES,
+    eC.ACTIVITIES_HAPPENING_NOW,
+    eC.ACTIVITY_DETAILS(":applicationId"),
+    eC.APPLICATION_LIBRARY,
+    eC.APPLICATION_STORE,
+    eC.MESSAGE_REQUESTS,
+    eC.COLLECTIBLES_SHOP,
+    eC.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
+    eC.GUILD_DISCOVERY,
+    eC.QUEST_HOME_DEPRECATED,
+    eC.QUEST_HOME,
+    eC.CONJURE,
+    eC.CONJURE_PROJECT(":projectId"),
+    eC.ICYMI,
+    eC.GLOBAL_DISCOVERY,
+    eC.GUILD_MEMBER_VERIFICATION(eD.guildId()),
+    eC.GUILD_MEMBER_VERIFICATION_FOR_HUB(eD.guildId(), ":inviteCode?"),
+    eC.GUILD_BOOSTING_MARKETING(eD.guildId()),
+    eC.GUILD_FEATURE(":feature", eD.guildId()),
+    eC.FEATURE(":feature"),
+    eC.FAMILY_CENTER,
+    eC.APPLICATION_DIRECTORY,
+    eC.GAME_SHOP(eD.guildId(), ":shopSkuId?", ":shopSlug?"),
 ]);
 !(function () {
     if (null == window.WebSocket || null == window._ws) return;
     let e =
         ((function () {
-            if (e_) return;
-            ((o = n.get("token")), (ei = n.get("tokens") || {}));
-            let { decryptedToken: e, wasEncrypted: t } = eo(o);
-            ((er = t),
-                (_ = e),
+            if (el) return;
+            ((_ = n.get("token")), (es = n.get("tokens") || {}));
+            let { decryptedToken: e, wasEncrypted: t } = eI(_);
+            ((e_ = t),
+                (o = e),
                 [
-                    ...Object.entries(ei)
+                    ...Object.entries(es)
                         .map((e) => {
                             let [t, E] = e,
-                                { decryptedToken: n, wasEncrypted: r } = eo(E);
-                            return ((er = r || er), [t, n]);
+                                { decryptedToken: n, wasEncrypted: r } = eI(E);
+                            return ((e_ = r || e_), [t, n]);
                         })
                         .filter((e) => {
                             let [t, E] = e;
@@ -1101,9 +1120,9 @@ let ep = new Set([
                     let [E, n] = t;
                     return ((e[E] = n), e);
                 }, {}),
-                (e_ = !0));
+                (el = !0));
         })(),
-        _);
+        o);
     if (null == e || __OVERLAY__) return;
     let t = window._ws.ws,
         E = window._ws.state,
@@ -1114,7 +1133,7 @@ let ep = new Set([
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of ep) if (null != (0, eg.B6)(e, { path: t })) return !0;
+                for (let t of eP) if (null != (0, eM.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )
@@ -1133,20 +1152,20 @@ let ep = new Set([
             }
             null != e && (r = (t) => e.pack(t).buffer);
         }
-        let _ = n.get("installation_id_v3") ?? n.get("analytics_installation");
-        var o = r({
-            op: es.IDENTIFY,
+        let o = n.get("installation_id_v3") ?? n.get("analytics_installation");
+        var _ = r({
+            op: ea.IDENTIFY,
             d: {
                 token: e,
                 capabilities: (function (e) {
                     let { useChannelObfuscation: t } = e;
                     return t ? 1767421 : 1734653;
                 })({ useChannelObfuscation: null != n.get("private_channel_obfuscation") }),
-                properties: { ...i, is_fast_connect: !0, ...(null != _ && "" !== _ ? { installation_id: _ } : {}) },
+                properties: { ...i, is_fast_connect: !0, ...(null != o && "" !== o ? { installation_id: o } : {}) },
                 client_state: { guild_versions: {} },
             },
         });
-        (performance.mark("FastConnect-identify-sent"), t.send(o), (E.identify = !0));
+        (performance.mark("FastConnect-identify-sent"), t.send(_), (E.identify = !0));
     };
     r ? s() : (t.onopen = s);
 })();

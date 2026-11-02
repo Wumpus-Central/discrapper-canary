@@ -655,8 +655,8 @@ var eq = n(435558),
     e1 = n(71393),
     e8 = n(309010),
     e2 = n(449054),
-    e4 = n(60465),
-    e3 = n(311043),
+    e3 = n(60465),
+    e4 = n(311043),
     e6 = n(636537),
     e9 = n(73153);
 let e5 = {};
@@ -739,7 +739,7 @@ async function tl(e) {
 var ti = n(927813);
 let ta = [];
 function tr(e) {
-    return e3.A.getGame(e)?.communityGuildIds ?? ta;
+    return e4.A.getGame(e)?.communityGuildIds ?? ta;
 }
 let ts = (0, m.UT)(te, {
     getQueryId: (e) => (tr(e).length > 0 ? `game-community-guilds/${e}` : null),
@@ -1228,7 +1228,7 @@ function tZ(e) {
             }
             let e = e8.Ay.getCurrentlySelectedChannelId(t.id);
             null != e &&
-                e4.default.setGameProfilePendingReturn({
+                e3.default.setGameProfilePendingReturn({
                     gameId: l.id,
                     channelId: e,
                     tab: y.COMMUNITIES,
@@ -1298,8 +1298,8 @@ function t0() {
 var t1 = n(707554),
     t8 = n(369606),
     t2 = n(775602),
-    t4 = n(21161),
-    t3 = n(400492),
+    t3 = n(21161),
+    t4 = n(400492),
     t6 = n(541830),
     t9 = n(459746);
 let t5 = "1552821538409939044";
@@ -1359,7 +1359,7 @@ function na(e) {
 }
 function nr(e) {
     let { children: t, className: n } = e,
-        { createMultipleConfettiAt: l } = s.useContext(t4.x),
+        { createMultipleConfettiAt: l } = s.useContext(t3.x),
         i = (0, m.bG)([t2.Ay], () => t2.Ay.useReducedMotion),
         a = s.useRef({ count: 0, lastTime: 0 });
     return (0, r.jsx)(tW.D, {
@@ -1374,7 +1374,7 @@ function nr(e) {
                     let t = e.currentTarget.getBoundingClientRect();
                     l(t.left + t.width / 2, t.top + t.height / 2);
                 }
-                (0, t3.Ak)("discodo");
+                (0, t4.Ak)("discodo");
             }
         },
         children: t,
@@ -1737,12 +1737,12 @@ async function n8(e, t) {
     }
 }
 var n2 = n(284009),
-    n4 = n.n(n2),
-    n3 = n(376728),
+    n3 = n.n(n2),
+    n4 = n(376728),
     n6 = n(976860);
 async function n9(e) {
     let { invite: t, guildId: n, channelId: l, messageId: i, analyticsLocationStack: a } = e;
-    n4()(a.length > 0, "analyticsLocationStack must have at least one location");
+    n3()(a.length > 0, "analyticsLocationStack must have at least one location");
     let r = a[a.length - 1],
         s = null;
     if ((null != t && ((n = t.guild?.id), (s = new Set(t.guild?.features))), null == n)) return;
@@ -1757,7 +1757,7 @@ async function n9(e) {
             ));
         else
             null != t &&
-                (await n3.Ay.acceptInvite({ inviteKey: t.code, context: { location: r }, skipOnboarding: !0 }));
+                (await n4.Ay.acceptInvite({ inviteKey: t.code, context: { location: r }, skipOnboarding: !0 }));
     (0, n6.pX)(eT.BVt.CHANNEL(n, l, i), { sourceLocationStack: a });
 }
 var n5 = n(806244),
@@ -2107,7 +2107,7 @@ let lu = s.memo(function (e) {
             null != e &&
                 null != g &&
                 (c(S.GameProfileTrackActionActions.Announcements),
-                e4.default.setGameProfilePendingReturn({ gameId: u, channelId: g, initialScrollOffset: t() }),
+                e3.default.setGameProfilePendingReturn({ gameId: u, channelId: g, initialScrollOffset: t() }),
                 o(),
                 n9({ invite: i, guildId: e, channelId: g, analyticsLocationStack: n }));
         }, [c, o, t, i, h, g, n, u]),
@@ -2117,7 +2117,7 @@ let lu = s.memo(function (e) {
                 null != l &&
                     null != g &&
                     (c(S.GameProfileTrackActionActions.AnnouncementsItem),
-                    e4.default.setGameProfilePendingReturn({ gameId: u, channelId: g, initialScrollOffset: t() }),
+                    e3.default.setGameProfilePendingReturn({ gameId: u, channelId: g, initialScrollOffset: t() }),
                     o(),
                     n9({ invite: i, guildId: l, channelId: g, messageId: e, analyticsLocationStack: n }));
             },
@@ -2661,8 +2661,8 @@ function l0(e) {
 var l1 = n(80687),
     l8 = n(248643),
     l2 = n(256905),
-    l4 = n(44788),
-    l3 = n(191096),
+    l3 = n(44788),
+    l4 = n(191096),
     l6 = n(90721),
     l9 = n(534573),
     l5 = n(635377);
@@ -2806,7 +2806,7 @@ let is = s.memo(function (e) {
                             autoMute: !0,
                             useFullWidth: !0,
                             responsive: !0,
-                            renderLinkComponent: l4.bU,
+                            renderLinkComponent: l3.bU,
                             onPlay: o,
                             onPause: c,
                             onFullscreenChange: u,
@@ -2827,7 +2827,7 @@ function ic() {
         d = s.useRef(null),
         h = s.useRef(null),
         g = (0, m.bG)([t2.Ay], () => t2.Ay.useReducedMotion),
-        { obscured: x } = (0, l3.I3)();
+        { obscured: x } = (0, l4.I3)();
     o !== e.screenshotUrls && (c(e.screenshotUrls), l(0));
     let f = s.useMemo(
             () => [
@@ -3604,16 +3604,16 @@ function iq() {
                 a = t && null != n ? n : iz;
             (0, b.x)(a);
             let r = (0, m.bG)(
-                    [e3.A],
-                    () => a.some((e) => null == e3.A.getGame(e) && !e3.A.hasNoData(e) && !e3.A.didFetchingFail(e)),
+                    [e4.A],
+                    () => a.some((e) => null == e4.A.getGame(e) && !e4.A.hasNoData(e) && !e4.A.didFetchingFail(e)),
                     [a],
                 ),
                 s = (0, m.yK)(
-                    [e3.A, D.default],
+                    [e4.A, D.default],
                     () => {
                         let e = D.default.getCurrentUser()?.nsfwAllowed;
                         return a
-                            .map((e) => e3.A.getGame(e))
+                            .map((e) => e4.A.getGame(e))
                             .filter((e) => null != e)
                             .filter((t) => (0, iB.T_)(t) && !(0, O.b)(t, e) && (0, iW.zu)(t));
                     },
@@ -3663,8 +3663,8 @@ function i1(e) {
 }
 var i8 = n(349361),
     i2 = n(422688),
-    i4 = n(505200),
-    i3 = n(695250);
+    i3 = n(505200),
+    i4 = n(695250);
 let i6 = function (e) {
     switch (e.category) {
         case ld.V1.STEAM:
@@ -3701,7 +3701,7 @@ let i6 = function (e) {
             };
         case ld.V1.RIOT:
             return {
-                icon: i4.A,
+                icon: i3.A,
                 text: em.intl.string(em.t.h6MapL),
                 ariaLabel: em.intl.string(em.t["528nvc"]),
                 action: S.GameProfileTrackActionActions.RiotStoreLink,
@@ -3709,7 +3709,7 @@ let i6 = function (e) {
             };
         case ld.V1.MINECRAFT:
             return {
-                icon: i3.m,
+                icon: i4.m,
                 text: em.intl.string(em.t["HZbmO+"]),
                 ariaLabel: em.intl.string(em.t.WWTqYn),
                 action: S.GameProfileTrackActionActions.MinecraftStoreLink,
@@ -4392,7 +4392,7 @@ function a1(e) {
 }
 var a8 = n(672572),
     a2 = n(94936);
-function a4() {
+function a3() {
     let e = s.useRef(null),
         { game: t, isTwoColumn: n, trackAction: l } = F(),
         i = s.useMemo(
@@ -4578,7 +4578,7 @@ function a4() {
         ],
     });
 }
-var a3 = n(40478),
+var a4 = n(40478),
     a6 = n(764948);
 let a9 = s.memo(function (e) {
     let { analyticsLocations: t, selectTab: n, getScrollOffset: l } = e;
@@ -4587,10 +4587,10 @@ let a9 = s.memo(function (e) {
         children: [
             (0, r.jsx)(ic, {}),
             (0, r.jsxs)("div", {
-                className: a3.h,
+                className: a4.h,
                 children: [
                     (0, r.jsx)(ni, {}),
-                    (0, r.jsxs)("div", { className: a3.X, children: [(0, r.jsx)(ae, {}), (0, r.jsx)(a4, {})] }),
+                    (0, r.jsxs)("div", { className: a4.X, children: [(0, r.jsx)(ae, {}), (0, r.jsx)(a3, {})] }),
                 ],
             }),
             (0, r.jsx)(l0, { analyticsLocations: t }),
@@ -4610,7 +4610,7 @@ let a7 = s.memo(function (e) {
     return (0, r.jsxs)("div", {
         className: a5.V,
         children: [
-            (0, r.jsxs)("div", { className: a5.B, children: [(0, r.jsx)(ic, {}), (0, r.jsx)(a4, {})] }),
+            (0, r.jsxs)("div", { className: a5.B, children: [(0, r.jsx)(ic, {}), (0, r.jsx)(a3, {})] }),
             (0, r.jsx)(lu, { getScrollOffset: n }),
             (0, r.jsx)(nL, { selectTab: t }),
             (0, r.jsx)(iY, {}),
@@ -4620,7 +4620,7 @@ let a7 = s.memo(function (e) {
 });
 var re = n(881698),
     rt = n(928550),
-    rn = n(562708),
+    rn = n(131937),
     rl = n(414499),
     ri = n(359549),
     ra = n(139286),
