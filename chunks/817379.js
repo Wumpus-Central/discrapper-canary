@@ -1,14 +1,15 @@
 (n.d(t, {
-    $C: () => y,
-    FA: () => L,
+    $C: () => D,
+    FA: () => y,
     Rk: () => S,
-    XI: () => v,
-    _g: () => N,
+    XI: () => P,
     fA: () => m,
     mf: () => A,
-    ps: () => C,
+    nb: () => C,
+    ps: () => O,
     qM: () => g,
-    wD: () => D,
+    tS: () => v,
+    wD: () => b,
 }),
     n(321073));
 var i = n(468311),
@@ -95,8 +96,11 @@ let g = {
         [c.V.SHOES]: o._.NONE,
         [c.V.WEARABLE]: d.Z.NONE,
         [c.V.AURA]: i.X.NONE,
-    },
-    C = [
+    };
+function C(e, t) {
+    return N[e] === t;
+}
+let O = [
         l.r.NONE,
         l.r.BADDIE_DEFAULT,
         l.r.TRAVELER_DEFAULT,
@@ -113,7 +117,7 @@ let g = {
         l.r.KNIGHT_DEFAULT,
         l.r.MAGICAL_DEFAULT,
     ],
-    O = {
+    R = {
         [l.r.NONE]: l.r.NONE,
         [l.r.BADDIE_DEFAULT]: l.r.BADDIE_DEFAULT,
         [l.r.TRAVELER_DEFAULT]: l.r.TRAVELER_DEFAULT,
@@ -186,19 +190,25 @@ let g = {
         [l.r.MAGICAL_FROST]: l.r.MAGICAL_DEFAULT,
         [l.r.MAGICAL_CITRINE]: l.r.MAGICAL_DEFAULT,
     },
-    R = {};
-function L(e) {
-    return O[e];
+    L = {};
+function y(e) {
+    return R[e];
 }
-function y(e, t) {
+function D(e, t) {
     let n = T[e][t];
     return null != n && I(n) ? n : void 0;
 }
-function D(e) {
-    let t = O[e];
-    return null != t ? (R[t] ?? []) : [];
+function v(e, t, n) {
+    let { stats: i, hasNitro: r, savedCharacter: a } = n;
+    if (a?.[e] === t) return !1;
+    let s = D(e, t);
+    return null == s ? !C(e, t) : s === _.K.NITRO ? !r : !A(e, i).has(s);
 }
-function v(e) {
+function b(e) {
+    let t = R[e];
+    return null != t ? (L[t] ?? []) : [];
+}
+function P(e) {
     return {
         base: e[c.V.BASE] ?? r.R.ICY,
         shoes: e[c.V.SHOES] ?? o._.NONE,
@@ -210,8 +220,8 @@ function v(e) {
     };
 }
 h(l.r).forEach((e) => {
-    let t = O[e];
+    let t = R[e];
     if (null == t) return;
-    let n = R[t] ?? [];
-    (n.push(e), (R[t] = n));
+    let n = L[t] ?? [];
+    (n.push(e), (L[t] = n));
 });

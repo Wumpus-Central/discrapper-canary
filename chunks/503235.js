@@ -1,13 +1,12 @@
 (n.d(t, {
-    C5: () => N,
+    C5: () => S,
     Ux: () => p,
-    _K: () => R,
+    _K: () => O,
     cq: () => h,
-    hC: () => C,
+    hC: () => N,
     hw: () => f,
-    nb: () => S,
     p8: () => T,
-    v2: () => O,
+    v2: () => C,
     v7: () => E,
 }),
     n(321073));
@@ -94,17 +93,14 @@ let m = {
         [r.V.WEARABLE]: { commonMessage: u.default.ZHs2bR, topMessage: u.default.yoZxcn },
         [r.V.AURA]: { commonMessage: u.default.m9gYwn, topMessage: u.default.mCmdPk },
     };
-function S(e, t) {
-    return o._g[e] === t;
+function S(e) {
+    return (0, o.nb)(e.trait, e.optionId);
 }
 function N(e) {
-    return S(e.trait, e.optionId);
-}
-function C(e) {
     let { trait: t, rarity: n } = e;
     if (null == n) {
         let n = m[t];
-        return N(e) && null != n ? _.intl.string(n) : void 0;
+        return S(e) && null != n ? _.intl.string(n) : void 0;
     }
     if (n === s.K.DEFAULT) return _.intl.string(u.default["4aaADG"]);
     if (n === s.K.NITRO)
@@ -115,7 +111,7 @@ function C(e) {
     let { commonMessage: i, topMessage: o } = g[t];
     return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(o, { percent: 100 - a.ei[n] });
 }
-function O(e, t) {
+function C(e, t) {
     let n = [e.getName()];
     if (
         (e.status === l.eP.LOCKED
@@ -124,12 +120,12 @@ function O(e, t) {
         !t)
     ) {
         null != e.rarity && n.push(_.intl.string(c.iG[e.rarity]));
-        let t = C(e);
+        let t = N(e);
         null != t && n.push(t);
     }
     return n.join(", ");
 }
-function R(e, t) {
+function O(e, t) {
     if (e === d.gr.FINALIZE_CHARACTER) return t.length > 0;
     if (!(0, d.Rq)(e)) return !1;
     let n = I[(0, d.UG)(e).characterStage];

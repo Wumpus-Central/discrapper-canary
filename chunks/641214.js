@@ -1,1 +1,1 @@
-s.exports = { $: "sublabel__8e091", g: "qaSubmenu__8e091" };
+e.exports = { $B: "sublabel__8e091", gn: "qaSubmenu__8e091", u1: "spinner__8e091", $N: "spinnerItem__8e091" };
