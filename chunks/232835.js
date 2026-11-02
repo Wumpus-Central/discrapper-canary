@@ -18,8 +18,8 @@ function f(e) {
 }
 var I = n(164956),
     p = n(931480),
-    T = n(320095),
-    m = n(697470),
+    m = n(320095),
+    T = n(697470),
     g = (n(763754), n(491001)),
     S = n(815807),
     N = n(773669),
@@ -195,7 +195,7 @@ class Q extends l.Ay.Store {
         let t = w.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, m.A)(e, t?.id));
+            .find((e) => (0, T.A)(e, t?.id));
     }
     getLastChatCommandMessage(e) {
         let t = w.default.getCurrentUser();
@@ -281,32 +281,38 @@ let J = new Q(o.h, {
                     channelId: t,
                     isBefore: n,
                     isAfter: i,
-                    jump: r,
-                    hasMoreBefore: a,
-                    hasMoreAfter: s,
-                    messages: l,
-                    isStale: o,
-                    truncate: d,
-                    avoidInitialScroll: u,
-                    requestStartTime: _,
+                    before: r,
+                    after: a,
+                    limit: s,
+                    jump: l,
+                    hasMoreBefore: o,
+                    hasMoreAfter: d,
+                    messages: u,
+                    isStale: _,
+                    truncate: E,
+                    avoidInitialScroll: A,
+                    requestStartTime: h,
                 } = e,
-                E = c.A.getOrCreate(t);
-            for (let e of ((E = E.loadComplete({
-                newMessages: l,
+                f = c.A.getOrCreate(t);
+            for (let e of ((f = f.loadComplete({
+                newMessages: u,
                 isBefore: n,
                 isAfter: i,
-                jump: r,
-                hasMoreBefore: a,
-                hasMoreAfter: s,
-                cached: o,
+                before: r,
+                after: a,
+                limit: s,
+                jump: l,
+                hasMoreBefore: o,
+                hasMoreAfter: d,
+                cached: _,
                 hasFetched: !0,
-                avoidInitialScroll: u,
-                requestStartTime: _,
+                avoidInitialScroll: A,
+                requestStartTime: h,
             })),
-            null != d && (n || i) && (!n || !i) && (E = E.truncate(n, i)),
-            (E = V(t, E)),
-            c.A.commit(E),
-            l))
+            null != E && (n || i) && (!n || !i) && (f = f.truncate(n, i)),
+            (f = V(t, f)),
+            c.A.commit(f),
+            u))
                 W(e);
         },
         LOAD_MESSAGES_FAILURE: function (e) {
@@ -426,13 +432,13 @@ let J = new Q(o.h, {
                 n = e.message.channel_id,
                 i = c.A.getOrCreate(n);
             if (null == i || !i.has(t)) return !1;
-            ((i = i.update(t, (t) => (0, T.IU)(t, e.message))),
+            ((i = i.update(t, (t) => (0, m.IU)(t, e.message))),
                 c.A.commit(i),
                 (function (e) {
                     if (e.media_mention?.message_id == null || !("content" in e)) return;
                     let t = e.media_mention.attachment_id,
                         n = c.A.getOrCreate(t);
-                    ((n = n.update(e.media_mention.message_id, (t) => (0, T.IU)(t, { content: e.content }))),
+                    ((n = n.update(e.media_mention.message_id, (t) => (0, m.IU)(t, { content: e.content }))),
                         c.A.commit(n));
                 })(e.message));
         },

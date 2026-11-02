@@ -1,4 +1,4 @@
-(n.d(t, { A: () => T }), n(775443), n(321073), n(667532));
+(n.d(t, { A: () => m }), n(775443), n(321073), n(667532));
 var i = n(435558),
     r = n.n(i),
     a = n(56562),
@@ -593,8 +593,21 @@ class p {
                 .reverse()
                 .map((e) => (0, o.rh)(e))
                 .value(),
-            f = null;
-        if ((n || i) && null == s && this.ready) f = this.merge(h, n, !0);
+            f = n ? e.before : e.after;
+        if (null == s && this.ready && n !== i && null != f) {
+            let i = n ? this.first() : this.last();
+            if (null != i && i.id !== f)
+                return (
+                    A.info(
+                        `loadComplete: dropping stale ${n ? "before" : "after"} page for channelId=${this.channelId}, anchor=${f}, edge=${i.id}`,
+                    ),
+                    (n ? this._before : this._after).length > 0
+                        ? this.loadFromCache(n, e.limit ?? t.length)
+                        : this.mutate({ loadingMore: !1 })
+                );
+        }
+        let I = null;
+        if ((n || i) && null == s && this.ready) I = this.merge(h, n, !0);
         else {
             let t = this._array.filter((e) => e.state === E.cmJ.SENDING),
                 r = this._array.filter((e) => e.state === E.cmJ.SEND_FAILED),
@@ -610,7 +623,7 @@ class p {
                                   c.default.extractTimestamp(e.id) >= l,
                           ),
                 d = t.length > 0 || r.length > 0 || o.length > 0;
-            ((f = this.reset(h)),
+            ((I = this.reset(h)),
                 !d || n || i || s?.messageId != null || s?.offset != null
                     ? A.info(
                           `loadComplete: resetting state for channelId=${this.channelId}, sending.length=${t.length}`,
@@ -619,16 +632,16 @@ class p {
                           (A.info(
                               `loadComplete: merging with ${o.length} message(s) received during the fetch for channelId=${this.channelId}`,
                           ),
-                          (f = f.merge(o))),
+                          (I = I.merge(o))),
                       r.length > 0 &&
                           (A.info(`loadComplete: merging with SEND_FAILED messages for channelId=${this.channelId}`),
-                          (f = f.merge(r))),
+                          (I = I.merge(r))),
                       t.length > 0 &&
                           (A.info(`loadComplete: merging with SENDING messages for channelId=${this.channelId}`),
-                          (f = f.merge(t)))));
+                          (I = I.merge(t)))));
         }
-        let I = !_ && f.cached && !u;
-        return f.mutate({
+        let p = !_ && I.cached && !u;
+        return I.mutate({
             ready: !0,
             loadingMore: !1,
             jumpType: s?.jumpType ?? a.vx.ANIMATED,
@@ -637,16 +650,16 @@ class p {
             jumpedToPresent: s?.present ?? !1,
             jumpTargetId: s?.messageId ?? null,
             jumpTargetOffset: null != s && null != s.messageId && null != s.offset ? s.offset : 0,
-            jumpSequenceId: null == s || u ? f.jumpSequenceId : f.jumpSequenceId + 1,
+            jumpSequenceId: null == s || u ? I.jumpSequenceId : I.jumpSequenceId + 1,
             jumpReturnTargetId: s?.returnMessageId ?? null,
             onJumpComplete: s?.onJumpComplete ?? null,
-            hasMoreBefore: null == s && i ? f.hasMoreBefore : l,
-            hasMoreAfter: null == s && n ? f.hasMoreAfter : d,
+            hasMoreBefore: null == s && i ? I.hasMoreBefore : l,
+            hasMoreAfter: null == s && n ? I.hasMoreAfter : d,
             cached: _,
             hasFetched: e.hasFetched,
             error: !1,
-            initialScrollSequenceId: I ? f.initialScrollSequenceId + 1 : f.initialScrollSequenceId,
-            suppressRowAnimationSequenceId: I ? f.suppressRowAnimationSequenceId + 1 : f.suppressRowAnimationSequenceId,
+            initialScrollSequenceId: p ? I.initialScrollSequenceId + 1 : I.initialScrollSequenceId,
+            suppressRowAnimationSequenceId: p ? I.suppressRowAnimationSequenceId + 1 : I.suppressRowAnimationSequenceId,
         });
     }
     addCachedMessages(e, t) {
@@ -664,4 +677,4 @@ class p {
         });
     }
 }
-let T = p;
+let m = p;
