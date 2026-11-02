@@ -5,4 +5,6 @@ e.exports = {
     R_: "heading_e0cd4a",
     SB: "giftButtonContainer_e0cd4a",
     pm: "gradientBackground_e0cd4a",
+    W0: "settings_e0cd4a",
+    OM: "settingsBody_e0cd4a",
 };

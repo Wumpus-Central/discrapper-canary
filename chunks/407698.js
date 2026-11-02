@@ -10,29 +10,33 @@ var i = n(477900),
     d = n(107773),
     m = n(652215);
 function f(e) {
-    let { guild: t, children: n } = e,
-        f = (0, c.A)(t);
-    return s.useMemo(() => {
-        if (f) {
-            let e = (0, o.Jp)(t);
-            return (0, a.K)(e) !== a._.NONE;
-        }
-        return (
-            t.features.has(m.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ||
-            t.features.has(m.GuildFeatures.HUB) ||
-            t.features.has(m.GuildFeatures.VERIFIED) ||
-            t.features.has(m.GuildFeatures.PARTNERED)
-        );
-    }, [t, f])
-        ? (0, i.jsx)(r.u, {
-              asset: f
-                  ? (0, i.jsx)(d.A, { disableBoostClick: !0, guild: t, size: 20 })
-                  : (0, i.jsx)(u.A, { guild: t, size: 20 }),
+    let t,
+        { guild: n, children: f, subtitle: E } = e,
+        I = (0, c.A)(n),
+        g = s.useMemo(() => {
+            if (I) {
+                let e = (0, o.Jp)(n);
+                return (0, a.K)(e) !== a._.NONE;
+            }
+            return (
+                n.features.has(m.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ||
+                n.features.has(m.GuildFeatures.HUB) ||
+                n.features.has(m.GuildFeatures.VERIFIED) ||
+                n.features.has(m.GuildFeatures.PARTNERED)
+            );
+        }, [n, I]);
+    return g || null != E
+        ? (g && I
+              ? (t = (0, i.jsx)(d.A, { disableBoostClick: !0, guild: n, size: 20 }))
+              : g && (t = (0, i.jsx)(u.A, { guild: n, size: 20 })),
+          (0, i.jsx)(r.u, {
+              asset: t,
               assetSize: 20,
               position: "right",
               align: "center",
-              body: t.name,
-              children: n,
-          })
-        : (0, i.jsx)(l.m, { position: "right", align: "center", text: t.name, children: n });
+              title: null != E ? n.name : void 0,
+              body: E ?? n.name,
+              children: f,
+          }))
+        : (0, i.jsx)(l.m, { position: "right", align: "center", text: n.name, children: f });
 }

@@ -49,18 +49,19 @@ let A = function (e) {
             listPadding: x,
             rowCount: y,
             getScrollOffsetForIndex: j,
-            categoryHeight: T,
-            onScroll: O,
-            renderCategoryListItem: S,
-            rowCountBySection: b,
-            renderSection: R,
-            navId: v,
-            itemIdPrefix: L,
+            getScrollOffsetForCategory: T,
+            categoryHeight: O,
+            onScroll: S,
+            renderCategoryListItem: b,
+            rowCountBySection: R,
+            renderSection: v,
+            navId: L,
+            itemIdPrefix: P,
         } = e,
-        P = d.useStore((e) => e.activeCategoryIndex),
-        M = null != v && null != L,
-        { itemIdForIndex: D, parseIndex: w } = s.useMemo(() => g(L ?? "expression-category-"), [L]),
-        k = (function (e) {
+        M = d.useStore((e) => e.activeCategoryIndex),
+        D = null != L && null != P,
+        { itemIdForIndex: w, parseIndex: k } = s.useMemo(() => g(P ?? "expression-category-"), [P]),
+        U = (function (e) {
             let {
                     navId: t,
                     categoryListRef: n,
@@ -167,14 +168,14 @@ let A = function (e) {
                 T
             );
         })({
-            navId: v ?? "expression-picker-categories-disabled",
+            navId: L ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: D,
-            parseIndex: w,
+            itemIdForIndex: w,
+            parseIndex: k,
             rowCount: y,
-            activeIndex: P,
+            activeIndex: M,
             getScrollOffsetForIndex: j,
-            enabled: M,
+            enabled: D,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
@@ -191,43 +192,44 @@ let A = function (e) {
                     (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
                 })));
         }, [t, n, i]);
-    })({ activeIndex: P, categoryListRef: t, getScrollOffsetForIndex: j });
-    let U = s.useCallback(
+    })({ activeIndex: M, categoryListRef: t, getScrollOffsetForIndex: j });
+    let G = s.useCallback(
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
-                (d.setActiveCategoryIndex(e), "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e));
+                (d.setActiveCategoryIndex(e),
+                    "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e, { offset: T?.(e) }));
             },
-            [n, d],
+            [n, d, T],
         ),
-        G = s.useCallback((e) => S(l[e], e, () => U(e), P === e), [P, l, U, S]),
-        F = s.useMemo(() => ("function" == typeof T ? (e) => T(l[e], e) : T), [l, T]),
-        J = (0, i.jsx)(o.A, {
+        F = s.useCallback((e) => b(l[e], e, () => G(e), M === e), [M, l, G, b]),
+        J = s.useMemo(() => ("function" == typeof O ? (e) => O(l[e], e) : O), [l, O]),
+        V = (0, i.jsx)(o.A, {
             listPadding: x,
-            onScroll: O,
+            onScroll: S,
             ref: t,
             renderListHeader: _,
             listHeaderHeight: N,
-            renderRow: G,
+            renderRow: F,
             rowCount: y,
-            rowHeight: F,
+            rowHeight: J,
             hideScrollbar: !0,
-            rowCountBySection: b,
-            renderSection: R,
-            role: M ? "none presentation" : void 0,
+            rowCountBySection: R,
+            renderSection: v,
+            role: D ? "none presentation" : void 0,
         }),
         K = (0, i.jsxs)("div", {
             className: r()(p.i, C),
             children: [
-                M
+                D
                     ? (0, i.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
-                              return (0, i.jsx)("div", { className: p.e, ...n, ref: t, children: J });
+                              return (0, i.jsx)("div", { className: p.e, ...n, ref: t, children: V });
                           },
                       })
-                    : J,
-                A?.(U),
+                    : V,
+                A?.(G),
             ],
         });
-    return M ? (0, i.jsx)(a.hD, { navigator: k, children: K }) : K;
+    return D ? (0, i.jsx)(a.hD, { navigator: U, children: K }) : K;
 };

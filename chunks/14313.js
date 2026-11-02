@@ -18,4 +18,8 @@ e.exports = {
     R0: "expandedProgressBarHeader__2c345",
     ER: "referralProgressBarIconSettings__2c345",
     n5: "userAvatarProgressBarUnitNum__2c345",
+    W0: "settings__2c345",
+    z1: "settingsContent__2c345",
+    xh: "settingsProgress__2c345",
+    D1: "settingsIndicator__2c345",
 };

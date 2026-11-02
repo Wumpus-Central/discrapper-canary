@@ -367,7 +367,7 @@ function X(e) {
                 ? f(Z.p$)
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          C(M),
+                          C(M, B),
                           null != R && (0, l.jsx)("div", { className: Z.Eb, children: R }),
                           (0, l.jsx)("div", {
                               ref: L,
@@ -472,18 +472,28 @@ let eH = [8, 8, 8, 8],
     ez = "soundboard_guild_",
     { itemIdForIndex: eq } = (0, eV.J)(ez);
 function e$(e) {
-    let { children: t, className: n, isSelected: r, listItemProps: s, onClick: a } = e,
-        o = i.useRef(null),
-        { isHoveringOrFocusing: u } = (0, eU.A)(o);
+    let { children: t, className: n, isSelected: r, listItemProps: s, onClick: a, ref: o, onFocus: u, ...c } = e,
+        d = i.useRef(null),
+        { isHoveringOrFocusing: h } = (0, eU.A)(d),
+        m = i.useCallback(
+            (e) => {
+                ((d.current = e), "function" == typeof o ? o(e) : null != o && (o.current = e));
+            },
+            [o],
+        );
     return (0, l.jsxs)(I.D, {
-        innerRef: o,
+        innerRef: m,
         ...s,
+        ...c,
+        onFocus: (e) => {
+            (s.onFocus(), u?.(e));
+        },
         className: n,
         onClick: a,
         children: [
             (0, l.jsx)("div", {
                 className: eK.a$,
-                children: (0, l.jsx)(eF.A, { hovered: u, selected: r, size: "small" }),
+                children: (0, l.jsx)(eF.A, { hovered: h, selected: r, size: "small" }),
             }),
             t,
         ],
@@ -529,10 +539,14 @@ function eZ(e, t, n, i, r, s) {
     }
 }
 function eX(e) {
-    let { category: t, categoryIndex: n, onClick: i, isSelected: r, isNitroLocked: s, hasNewSounds: a } = e,
+    let { category: t, categoryIndex: n, onClick: i, isSelected: r, isNitroLocked: s, newSoundCount: a } = e,
         o = (0, eM.rm)(eq(n));
     return t.categoryInfo.type === ed.Cx.GUILD
-        ? (0, l.jsx)(eW.Q, { guild: t.categoryInfo.guild, children: eZ(t, i, r, o, s, a) })
+        ? (0, l.jsx)(eW.Q, {
+              guild: t.categoryInfo.guild,
+              subtitle: a > 0 ? eG.intl.formatToPlainString(eG.t.uXsbSw, { count: a }) : void 0,
+              children: eZ(t, i, r, o, s, a > 0),
+          })
         : (0, l.jsx)(eP.m, {
               text: (function (e) {
                   switch (e.categoryInfo.type) {
@@ -556,26 +570,56 @@ function eX(e) {
 function eY(e) {
     let {
             soundboardListRef: t,
-            categories: n,
-            shouldUpsellLockedCategories: r,
-            listPadding: a = eH,
-            guildId: o,
-            inExpressionPicker: u,
-            newSoundGuildIds: c,
+            soundsGrid: n,
+            categories: r,
+            shouldUpsellLockedCategories: a,
+            listPadding: o = eH,
+            guildId: u,
+            inExpressionPicker: c,
+            newSoundCountByGuildId: d,
+            isNewSound: h,
+            getSectionHeaderHeight: m,
         } = e,
-        d = i.useRef(null),
-        h = (0, E.bG)([es.default], () => es.default.getCurrentUser()),
-        m = (0, W.TW)(h, ej.PremiumTypes.TIER_2),
-        f = i.useCallback(
+        f = i.useRef(null),
+        p = (0, E.bG)([es.default], () => es.default.getCurrentUser()),
+        g = (0, W.TW)(p, ej.PremiumTypes.TIER_2),
+        x = i.useCallback(
+            (e) => {
+                let { categoryInfo: l } = r[e] ?? {};
+                if (l?.type !== ed.Cx.GUILD || d?.has(l.guild.id) !== !0) return 0;
+                let i = l.guild.id,
+                    s = n.findIndex((e) =>
+                        e.some((e) => {
+                            let { item: t, category: n } = e;
+                            return n === ed.Cx.GUILD && t.type === ed.uq.SOUND && t.sound.guildId === i && h(t.sound);
+                        }),
+                    ),
+                    a = t.current;
+                if (-1 === s || null == a) return 0;
+                let o = n[s][0].gridSectionIndex,
+                    u = s - 3,
+                    c = n[u]?.[0]?.gridSectionIndex === o,
+                    f = a.getRowDescriptors(),
+                    p = f[s],
+                    g = c ? f[u] : null,
+                    x = a.getSectionDescriptors()[o];
+                if (null == p || null == x) return 0;
+                let E = 0 === o ? 0 : x.offset.top,
+                    S = p.offset.bottom - x.offset.top <= a.getListDimensions().height;
+                return null == g || S ? 0 : (g.offset.top + g.offset.bottom) / 2 - m(o) - E;
+            },
+            [r, d, n, h, t, m],
+        ),
+        S = i.useCallback(
             (e, t, n, i) => {
-                let s = r && eJ(e.categoryInfo, m, o);
+                let r = a && eJ(e.categoryInfo, g, u);
                 return (0, l.jsx)(eX, {
                     category: e,
                     categoryIndex: t,
                     onClick: function () {
                         (eu.default.track(ev.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: { page: ev.liQ.SOUNDBOARD_POPOUT },
-                            guild_id: o ?? null,
+                            guild_id: u ?? null,
                             num_expressions: e.items.length,
                             tab: eB.kx.SOUNDBOARD,
                             sticker_pack_id: null,
@@ -584,21 +628,22 @@ function eY(e) {
                             n());
                     },
                     isSelected: i,
-                    isNitroLocked: s,
-                    hasNewSounds: e.categoryInfo.type === ed.Cx.GUILD && c?.has(e.categoryInfo.guild.id) === !0,
+                    isNitroLocked: r,
+                    newSoundCount: e.categoryInfo.type === ed.Cx.GUILD ? (d?.get(e.categoryInfo.guild.id) ?? 0) : 0,
                 });
             },
-            [o, r, m, c],
+            [u, a, g, d],
         );
     return (0, l.jsx)(eV.A, {
-        className: s()(u ? eK.HZ : eK.jv),
-        categoryListRef: d,
+        className: s()(c ? eK.HZ : eK.jv),
+        categoryListRef: f,
         expressionsListRef: t,
         store: P.LW,
-        categories: n,
-        listPadding: a,
-        renderCategoryListItem: f,
-        rowCount: n.length,
+        categories: r,
+        listPadding: o,
+        renderCategoryListItem: S,
+        getScrollOffsetForCategory: x,
+        rowCount: r.length,
         categoryHeight: 40,
         navId: "soundboard-picker-categories",
         itemIdPrefix: ez,
@@ -1130,9 +1175,12 @@ function tb(e) {
         })(r, void 0, b),
         { isNewSound: Z, markGuildSeen: et } = (0, eO.A)(),
         eo = i.useMemo(() => {
-            let e = new Set();
-            for (let { categoryInfo: t, items: n } of q)
-                t.type === ed.Cx.GUILD && n.some((e) => e.type === ed.uq.SOUND && Z(e.sound)) && e.add(t.guild.id);
+            let e = new Map();
+            for (let { categoryInfo: t, items: n } of q) {
+                if (t.type !== ed.Cx.GUILD) continue;
+                let l = n.filter((e) => e.type === ed.uq.SOUND && Z(e.sound)).length;
+                l > 0 && e.set(t.guild.id, l);
+            }
             return e;
         }, [q, Z]),
         eM = eo.size > 0,
@@ -1345,17 +1393,20 @@ function tb(e) {
             [v, tl, ti],
         ),
         ta = i.useCallback(
-            (e) =>
+            (e, n) =>
                 (0, l.jsx)(eY, {
                     soundboardListRef: e,
+                    soundsGrid: n,
                     categories: q,
                     shouldUpsellLockedCategories: ez,
                     listPadding: C,
                     guildId: t,
                     inExpressionPicker: v,
-                    newSoundGuildIds: eD ? eo : void 0,
+                    newSoundCountByGuildId: eD ? eo : void 0,
+                    isNewSound: Z,
+                    getSectionHeaderHeight: e7,
                 }),
-            [q, C, ez, t, v, eD, eo],
+            [q, C, ez, t, v, eD, eo, Z, e7],
         ),
         to = i.useCallback(() => {
             let e = (0, Y.qD)();

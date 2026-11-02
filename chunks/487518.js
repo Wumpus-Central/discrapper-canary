@@ -20,4 +20,9 @@ e.exports = {
     LW: "topRimPill_a45ed3",
     sQ: "fractionalPremiumSubheader_a45ed3",
     _K: "premiumGroupHeader_a45ed3",
+    W0: "settings_a45ed3",
+    gd: "settingsHero_a45ed3",
+    hM: "settingsComparison_a45ed3",
+    rf: "settingsPrice_a45ed3",
+    bY: "settingsFeatures_a45ed3",
 };
