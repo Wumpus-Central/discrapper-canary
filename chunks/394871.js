@@ -113,38 +113,36 @@ function G(e) {
 var _ = n(3026),
     U = n(208971);
 function k(e) {
-    let l,
-        {
-            customStatusActivity: n,
-            textClassName: s,
-            iconClassName: i,
-            tooltipClassName: r,
-            textSize: u = "xs",
-            animateEmoji: o = !0,
-            hideEmoji: d = !1,
-            hideTooltip: m = !1,
+    let {
+            customStatusActivity: l,
+            textClassName: n,
+            iconClassName: s,
+            tooltipClassName: i,
+            textSize: r = "xs",
+            animateEmoji: u = !0,
+            hideEmoji: o = !1,
+            hideTooltip: d = !1,
         } = e,
-        x = (0, U.G)(n?.state);
-    if (null == n) return null;
-    let h = n?.emoji,
-        f = null != x && "" !== x,
-        A = null;
-    null == h || d || (A = (0, t.jsx)(j.A, { emoji: h, animate: o, className: i, hideTooltip: m || f }));
-    let p = f && (null != A ? ` ${x}` : x);
+        m = (0, U.G)(l?.state);
+    if (null == l) return null;
+    let x = l?.emoji,
+        h = null != m && "" !== m,
+        f = null;
+    null == x || o || (f = (0, t.jsx)(j.A, { emoji: x, animate: u, className: s, hideTooltip: d || h }));
+    let A = h && (null != f ? ` ${m}` : m);
     return (0, t.jsx)(c.E, {
-        variant: `text-${u}/medium`,
+        variant: `text-${r}/medium`,
         color: "none",
-        className: a()(g.ps, s),
-        children:
-            ((l = null != h && !d && !f),
-            m || l
-                ? (0, t.jsxs)(t.Fragment, { children: [A, p] })
-                : (0, t.jsxs)(_.A, {
-                      delay: 150,
-                      tooltipClassName: r,
-                      className: g.Nu,
-                      children: [A, !1 !== p && (0, t.jsx)("span", { className: g.ps, children: p })],
-                  })),
+        className: a()(g.ps, d && g.$9, n),
+        children: (function () {
+            if (null != x && !o && !h && !d) return f;
+            let e = (0, t.jsxs)(t.Fragment, {
+                children: [f, !1 !== A && (0, t.jsx)("span", { className: g.ps, children: A })],
+            });
+            return d
+                ? (0, t.jsx)("span", { className: g.Nu, children: e })
+                : (0, t.jsx)(_.A, { delay: 150, tooltipClassName: i, className: g.Nu, children: e });
+        })(),
     });
 }
 var w = n(835072),

@@ -27,56 +27,56 @@ let h = i.memo(function (e) {
         [p, C] = i.useState(!1),
         [y, j] = i.useState(!1),
         v = i.useRef(null);
-    return m || null == n || "" === n
-        ? null
-        : (0, l.jsxs)(f.A, {
-              heading: A.intl.string(A.t.ZzAR2Y),
-              hideHeading: !0,
-              children: [
-                  (0, l.jsx)("div", {
-                      ref: (e) => {
-                          ((v.current = e),
-                              null == e ||
-                                  (C(!y && e.scrollHeight - e.clientHeight > 1),
-                                  e.getBoundingClientRect().height > 57.75 && j(!0)));
-                      },
-                      className: a()(S.mA, y && S.Em),
-                      onBlur: function (e) {
-                          null == v.current ||
-                              v.current.contains(e.relatedTarget) ||
-                              (null == v.current.querySelector('[aria-expanded="true"][aria-controls]') &&
-                                  (v.current.scrollTop = 0));
-                      },
-                      children: (0, l.jsx)(d.A, {
-                          userId: t,
-                          guildId: E?.guildId,
-                          userBio: n,
-                          setLineClamp: !1,
-                          textColor: "text-strong",
-                          animateOnHoverOrFocusOnly: h,
-                          isHoveringOrFocusing: T,
-                      }),
-                  }),
-                  (p || y) &&
-                      (0, l.jsx)("div", {
-                          className: S.HV,
-                          children: (0, l.jsx)(s.Q, {
-                              textVariant: "text-xs/normal",
-                              size: "sm",
-                              variant: "secondary",
-                              text: A.intl.string(A.t.YDiPq8),
-                              onClick: function () {
-                                  (r?.(),
-                                      (0, c.openUserProfileModal)({
-                                          ...E,
-                                          userId: t,
-                                          hideRestrictedProfile: g,
-                                          sourceAnalyticsLocations: R,
-                                      }));
-                              },
-                              disabled: x,
-                          }),
-                      }),
-              ],
-          });
+    if (m || null == n || "" === n) return null;
+    let P = p || y;
+    return (0, l.jsxs)(f.A, {
+        heading: A.intl.string(A.t.ZzAR2Y),
+        hideHeading: !0,
+        children: [
+            (0, l.jsx)("div", {
+                ref: (e) => {
+                    ((v.current = e),
+                        null == e ||
+                            (C(!y && e.scrollHeight - e.clientHeight > 1),
+                            e.getBoundingClientRect().height > 57.75 && j(!0)));
+                },
+                className: a()(S.mA, y && S.Em, P && S.ps),
+                onBlur: function (e) {
+                    null == v.current ||
+                        v.current.contains(e.relatedTarget) ||
+                        (null == v.current.querySelector('[aria-expanded="true"][aria-controls]') &&
+                            (v.current.scrollTop = 0));
+                },
+                children: (0, l.jsx)(d.A, {
+                    userId: t,
+                    guildId: E?.guildId,
+                    userBio: n,
+                    setLineClamp: !1,
+                    textColor: "text-strong",
+                    animateOnHoverOrFocusOnly: h,
+                    isHoveringOrFocusing: T,
+                }),
+            }),
+            P &&
+                (0, l.jsx)("div", {
+                    className: S.HV,
+                    children: (0, l.jsx)(s.Q, {
+                        textVariant: "text-xs/normal",
+                        size: "sm",
+                        variant: "secondary",
+                        text: A.intl.string(A.t.YDiPq8),
+                        onClick: function () {
+                            (r?.(),
+                                (0, c.openUserProfileModal)({
+                                    ...E,
+                                    userId: t,
+                                    hideRestrictedProfile: g,
+                                    sourceAnalyticsLocations: R,
+                                }));
+                        },
+                        disabled: x,
+                    }),
+                }),
+        ],
+    });
 });
