@@ -292,8 +292,8 @@ var eX = n(176781),
     e2 = n(734066),
     e3 = n(738935),
     e5 = n(409067),
-    e7 = n(271597),
-    e6 = n(297264),
+    e6 = n(271597),
+    e7 = n(297264),
     e8 = n(475358),
     e9 = n(866665),
     e4 = n(408278),
@@ -317,7 +317,7 @@ function tp(e) {
         a = (0, th.Y_)(),
         r = i.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), t?.(), (0, e7.p)({ initialEditingClipId: a.id }));
+                (e.stopPropagation(), e.preventDefault(), t?.(), (0, e6.p)({ initialEditingClipId: a.id }));
             },
             [a, t],
         );
@@ -340,7 +340,7 @@ let tC = i.memo(function (e) {
         o = i.useRef(null),
         { isHoveringOrFocusing: u } = (0, tm.A)(o),
         d = i.useCallback(() => {
-            (a?.(), (0, e7.p)({ initialEditingClipId: t.id }));
+            (a?.(), (0, e6.p)({ initialEditingClipId: t.id }));
         }, [t.id, a]);
     return (0, l.jsx)(th.Cl, {
         clip: t,
@@ -426,7 +426,7 @@ function tI(e) {
                         (0, l.jsxs)("div", {
                             className: tj.$,
                             children: [
-                                (0, l.jsx)(e6.D, {
+                                (0, l.jsx)(e7.D, {
                                     variant: "heading-md/semibold",
                                     color: "text-strong",
                                     children: eL.intl.string(eL.t.z2jK6X),
@@ -573,7 +573,7 @@ function tb(e) {
         ),
         o = i.useCallback(
             (e) => {
-                (t(), (0, e7.p)({ initialEditingClipId: e }));
+                (t(), (0, e6.p)({ initialEditingClipId: e }));
             },
             [t],
         ),
@@ -729,8 +729,8 @@ var t1 = n(397562),
     t2 = n(206835),
     t3 = n(183555),
     t5 = n(465318),
-    t7 = n(999291),
-    t6 = n(402860),
+    t6 = n(999291),
+    t7 = n(402860),
     t8 = n(718019),
     t9 = n(977059),
     t4 = n(915614),
@@ -1345,7 +1345,7 @@ function n2(e) {
                       loading: r,
                       onClick: function () {
                           (s(!0),
-                              (0, t6.openUserProfileModal)({ userId: o, tabSection: n1.RP.WIDGETS })
+                              (0, t7.openUserProfileModal)({ userId: o, tabSection: n1.RP.WIDGETS })
                                   .then(() => {
                                       let e = u.map((e) => e.id);
                                       ((0, x.openModalLazy)(
@@ -1390,13 +1390,13 @@ function n2(e) {
 }
 var n3 = n(461213),
     n5 = n(818348),
-    n7 = n(709516);
-function n6() {
+    n6 = n(709516);
+function n7() {
     let e = (0, d.bG)([n3.A], () => n3.A.getStatus()),
         t = (0, nu.MU)(e) ?? "",
         n = e === n5.cl.INVISIBLE || e === n5.cl.OFFLINE;
     return (0, l.jsxs)("div", {
-        className: n7.k,
+        className: n6.k,
         children: [
             (0, l.jsxs)(A.A, { tag: "div", children: [eL.intl.string(eL.t.AHoLf4), ":"] }),
             t,
@@ -1470,7 +1470,7 @@ var ll = n(996988),
 function lr(e) {
     let { currentUser: t, onClose: n, setPopoutRef: a, highlightBadge: s, openedAt: o, className: u } = e,
         m = __OVERLAY__,
-        p = (0, t7.Ay)(t.id, void 0),
+        p = (0, t6.Ay)(t.id, void 0),
         { analyticsLocations: g } = (0, w.Ay)(O.A.USER_PROFILE_ACCOUNT_POPOUT),
         v = (0, t3.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, t1.A)(g, p, n1.R7.ACCOUNT_POPOUT);
@@ -1693,7 +1693,7 @@ function lr(e) {
         H = i.useMemo(() => (0, tP.A)(), []),
         [B, W] = i.useState(() => tV.A.getState().shouldRenderTenureLevelUp);
     function z(e) {
-        (n?.(), (0, t6.openUserProfileModal)({ customStatusPrompt: H, sourceAnalyticsLocations: g, ...v, ...e }));
+        (n?.(), (0, t7.openUserProfileModal)({ customStatusPrompt: H, sourceAnalyticsLocations: g, ...v, ...e }));
     }
     i.useEffect(() => {
         let e = setTimeout(() => {
@@ -1844,7 +1844,7 @@ function lr(e) {
                                                                 }),
                                                                 (0, l.jsx)(eD, {
                                                                     action: "PRESS_SET_STATUS",
-                                                                    label: (0, l.jsx)(n6, {}),
+                                                                    label: (0, l.jsx)(n7, {}),
                                                                     sublabel: null != y && y,
                                                                     icon: () =>
                                                                         (0, l.jsx)(ev.nW, { status: T, size: 12 }),
@@ -2110,7 +2110,7 @@ function lW(e) {
             t(n0.i.TAKE_ACTION);
             let e = nk.default.getCurrentUser();
             c && null != e
-                ? (0, t6.openUserProfileModal)({
+                ? (0, t7.openUserProfileModal)({
                       userId: e.id,
                       sourceAnalyticsLocations: r,
                       onModalOpen: () => {
@@ -2252,8 +2252,8 @@ function l3(e) {
     });
 }
 var l5 = n(843010),
-    l7 = n(764231),
-    l6 = n(425713);
+    l6 = n(764231),
+    l7 = n(425713);
 function l8(e) {
     let { groupName: t, targetElementRef: n } = e,
         i = tq(),
@@ -2280,7 +2280,7 @@ function l8(e) {
 function l9(e) {
     let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: a, shouldShow: r } = e,
         s = tK.sp.indexOf(t),
-        o = (0, l6.I)(tK.sp[s > 0 ? s - 1 : s]).ambient,
+        o = (0, l7.I)(tK.sp[s > 0 ? s - 1 : s]).ambient,
         u = (0, i.useCallback)(() => {
             (n(n0.i.TAKE_ACTION),
                 tV.A.setState({ shouldRenderTenureLevelUp: !0 }),
@@ -2291,7 +2291,7 @@ function l9(e) {
         }, [n]),
         c = tK.VD[t],
         m = eL.intl.formatToPlainString(eL.t.ewkaVR, {
-            timeMilestone: (0, l7.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
+            timeMilestone: (0, l6.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
         }),
         h = [{ text: eL.intl.string(eL.t.RzWDqY), variant: "primary", onClick: u }];
     return (0, l.jsx)(nW.A, {
@@ -2413,7 +2413,7 @@ function it(e) {
                                             markAsDismissed: i,
                                             position: "top",
                                             targetElementRef: e.targetElementRef,
-                                            onCheckItOut: e7.p,
+                                            onCheckItOut: e6.p,
                                             children: e.children,
                                         });
                                     case c.M.BADGE_DIRECTORY_NUX_POPOVER:
@@ -2888,7 +2888,7 @@ function iB(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iH.A)("1793634107477", !0);
+        let e = (0, iH.A)("1793634448687", !0);
         t =
             null != e
                 ? eL.intl.formatToPlainString(eL.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
