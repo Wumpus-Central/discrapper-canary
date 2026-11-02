@@ -31,12 +31,19 @@ function I(l) {
         e = l.status ?? { publishState: "not_live", surface: null, previewAppChannels: [] },
         i = "live_current" === e.publishState && l.liveNameOutdated ? { ...e, publishState: "live_outdated" } : e,
         a = (function (l) {
-            let { installScope: t, status: n, appChannelName: e, appChannelPending: i, botInGuild: a } = l;
+            let {
+                installScope: t,
+                status: n,
+                appChannelName: e,
+                appChannelPending: i,
+                usesAppChannels: a,
+                botInGuild: u,
+            } = l;
             return (
                 "guild" === t &&
                 null != n &&
                 !!(0, N.lE)(n.publishState) &&
-                ("activity" === n.surface ? null == e && !0 !== i : "bot" === n.surface && !1 === a)
+                ("activity" === n.surface ? a && null == e && !0 !== i : "bot" === n.surface && !1 === u)
             );
         })({ ...l, status: i }),
         u = (function (l) {
