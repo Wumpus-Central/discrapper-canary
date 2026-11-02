@@ -1,6 +1,7 @@
 t.exports = {
     ue: "assistantTurn__76711",
     ky: "chatMessageAssistant__76711",
+    k1: "chatMessageAssistantForm__76711",
     cW: "chatMarkdown__76711",
     DV: "turnResponse__76711",
     dO: "turnSteps__76711",

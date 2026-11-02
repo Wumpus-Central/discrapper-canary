@@ -7456,7 +7456,7 @@ function sG(e) {
                   : null,
             null != d
                 ? (0, a.jsx)("div", {
-                      className: p()(nQ.ky, sF.XR, { [sD.O]: null != m && "open" === h }),
+                      className: p()(nQ.ky, nQ.k1, sF.XR, { [sD.O]: null != m && "open" === h }),
                       children: (0, a.jsx)(sL, {
                           projectId: t,
                           cardId: f ?? "",
@@ -7468,7 +7468,7 @@ function sG(e) {
                 : null,
             null != g
                 ? (0, a.jsx)("div", {
-                      className: p()(nQ.ky, sF.XR),
+                      className: p()(nQ.ky, nQ.k1, sF.XR),
                       children: (0, a.jsx)(rR, { projectId: t, request: g, askId: x }),
                   })
                 : null,
