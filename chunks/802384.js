@@ -5937,9 +5937,9 @@ function un(e) {
                             return !1;
                         let e = et.A.getWishlistSettings(t, n),
                             i = e?.updated_at;
-                        return (null == i || rY.A.getUpdatedAt(n) === i) && (0, om.uM)(e, et.A.getProfileReadState(t));
+                        return (null == i || rY.A.getUpdatedAt(n) === i) && (0, om.uM)(e, s);
                     },
-                    [t, n],
+                    [t, n, s],
                 ),
                 c = void 0 !== o;
             return (
