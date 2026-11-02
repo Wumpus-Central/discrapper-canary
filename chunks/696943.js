@@ -1,11 +1,11 @@
 n.d(t, {
     YX: () => Q,
     Mr: () => et,
-    mn: () => J,
+    mn: () => q,
     HW: () => K,
     K8: () => Z,
     Gz: () => $,
-    jz: () => q,
+    jz: () => J,
     bo: () => X,
     Gw: () => ee,
     UB: () => W,
@@ -39,8 +39,8 @@ var i = n(477900),
     v = n(72377),
     R = n(565553),
     y = n(168900),
-    T = n(285828);
-function M(e) {
+    M = n(285828);
+function T(e) {
     let { powerup: t, eventTargetRef: n, className: l } = e,
         s = { eventTargetRef: n, fit: "contain", className: l };
     switch (t.skuId) {
@@ -49,7 +49,7 @@ function M(e) {
         case a.RV:
             return (0, i.jsx)(y.J, { ...s });
         case a.YG:
-            return (0, i.jsx)(T.z, { ...s });
+            return (0, i.jsx)(M.z, { ...s });
         default:
             return null;
     }
@@ -57,8 +57,8 @@ function M(e) {
 var L = n(249286),
     U = n(867060),
     D = n(568065),
-    O = n(652215),
-    P = n(746080),
+    P = n(652215),
+    O = n(746080),
     w = n(49999),
     V = n(628049),
     H = n(959456),
@@ -257,7 +257,7 @@ function X(e) {
           })
         : null;
 }
-function q(e) {
+function J(e) {
     let { guildId: t, type: n, markAsDismissed: l, channelRowRef: s } = e,
         { available: r } = (0, b.A)(t),
         { gameName: a, gameName2: d } = (0, f.A)(),
@@ -286,7 +286,7 @@ function q(e) {
         markAsDismissed: l,
     });
 }
-function J(e) {
+function q(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: l } = e,
         s = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
     return (0, i.jsx)(en, {
@@ -305,7 +305,7 @@ function J(e) {
                 text: k.intl.string(k.t.RzWDqY),
                 variant: "primary",
                 onClick: () => {
-                    (n(w.i.TAKE_ACTION), (0, x.pX)(O.BVt.CHANNEL(t, P.VV.GAME_SERVERS)));
+                    (n(w.i.TAKE_ACTION), (0, x.pX)(P.BVt.CHANNEL(t, O.VV.GAME_SERVERS)));
                 },
             },
         ],
@@ -339,7 +339,7 @@ function Z(e) {
                     (n(w.i.TAKE_ACTION),
                         (0, C.K4)({
                             guildId: t,
-                            location: { section: O.JJy.GUILD_HEADER, object: O.ZSU.BUTTON_CTA },
+                            location: { section: P.JJy.GUILD_HEADER, object: P.ZSU.BUTTON_CTA },
                             scrollToPowerupCards: !0,
                         }));
                 },
@@ -372,7 +372,7 @@ function $(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: O.liQ.GUILD_CHANNEL, section: O.JJy.GUILD_HEADER };
+                    let i = { page: P.liQ.GUILD_CHANNEL, section: P.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: c,
@@ -411,7 +411,7 @@ function Q(e) {
                             ? (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, V.W5)
                             : (0, C.K4)({
                                   guildId: t,
-                                  location: { section: O.JJy.GUILD_HEADER, object: O.ZSU.BUTTON_CTA },
+                                  location: { section: P.JJy.GUILD_HEADER, object: P.ZSU.BUTTON_CTA },
                                   scrollToPowerupCards: !0,
                               }));
                 },
@@ -431,7 +431,7 @@ function ee(e) {
     return (0, i.jsx)(en, {
         asset:
             n.type === D.o9.LEVEL
-                ? (0, i.jsx)(M, { powerup: n, eventTargetRef: m, className: F.Lj })
+                ? (0, i.jsx)(T, { powerup: n, eventTargetRef: m, className: F.Lj })
                 : (0, i.jsx)("img", { alt: "", src: c, className: F.Sl }),
         title: k.intl.string(H.default.n37JhA),
         body: k.intl.formatToPlainString(h || n.type === D.o9.LEVEL ? H.default.Yr1ogl : H.default["7MZ2tu"], {
@@ -445,7 +445,7 @@ function ee(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: O.liQ.GUILD_CHANNEL, section: O.JJy.GUILD_HEADER };
+                    let i = { page: P.liQ.GUILD_CHANNEL, section: P.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: d,
@@ -486,7 +486,7 @@ function et(e) {
                   stateMachine: C ? "SM_Main_Int" : "SM_Auto",
               })
             : u?.type === D.o9.LEVEL
-              ? (0, i.jsx)(M, { powerup: u, eventTargetRef: p, className: F.Lj })
+              ? (0, i.jsx)(T, { powerup: u, eventTargetRef: p, className: F.Lj })
               : (0, i.jsx)("img", { alt: "", src: f, className: F.Sl }),
         title: x,
         body: b,
@@ -497,7 +497,7 @@ function et(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: O.liQ.GUILD_CHANNEL, section: O.JJy.GUILD_HEADER };
+                    let i = { page: P.liQ.GUILD_CHANNEL, section: P.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,

@@ -1,12 +1,12 @@
-n.d(t, { Ay: () => h, b9: () => x, w: () => p });
+n.d(t, { Ay: () => h, b9: () => g, w: () => p });
 var l = n(477900);
 n(582128);
 var a = n(683063),
     r = n(56681),
     i = n(615839),
     s = n(115982),
-    u = n(566424),
-    o = n(16634),
+    o = n(566424),
+    u = n(16634),
     d = n(308665),
     c = n(809526),
     f = n(105292),
@@ -16,7 +16,7 @@ function p(e) {
         n = (0, s.SY)(t.steps);
     return null != n ? (0, s.WQ)(n) : (t.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ?? null);
 }
-function x(e) {
+function g(e) {
     return p(e) ?? f.intl.string(c.default.t8skVB);
 }
 function h(e) {
@@ -24,36 +24,36 @@ function h(e) {
             projectId: t,
             steps: n,
             fallbackLabel: p,
-            live: x,
+            live: g,
             durationMs: h,
-            connectsDown: g = !1,
-            closed: j = !1,
-            tier: v,
+            connectsDown: x = !1,
+            closed: k = !1,
+            tier: b,
         } = e,
-        b = (0, s.SY)(n),
-        k = (0, r.Q7)(f.intl.string(c.default.uk6jhJ), v),
-        y = x ? void 0 : h,
-        _ = null != y ? (0, i.nY)(y) : null != b ? (0, s.WQ)(b) : (p ?? f.intl.string(c.default.t8skVB)),
-        A = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
-    return (0, l.jsx)(u.A, {
+        j = (0, s.SY)(n),
+        v = (0, r.Q7)(f.intl.string(c.default.uk6jhJ), b),
+        y = g ? void 0 : h,
+        _ = null != y ? (0, i.nY)(y) : null != j ? (0, s.WQ)(j) : (p ?? f.intl.string(c.default.t8skVB)),
+        w = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+    return (0, l.jsx)(o.A, {
         glyph: (0, l.jsx)(a.u, {
             asset: (0, l.jsx)(d.A, { size: 32 }),
             assetSize: 32,
-            title: k.title,
-            body: k.body,
+            title: v.title,
+            body: v.body,
             position: "left",
             children: (0, l.jsx)("span", { className: m.nC, children: (0, l.jsx)(d.A, {}) }),
         }),
         line: _,
         anchor: !0,
-        live: x,
-        settled: null != y || (!x && j),
-        connectsDown: g,
-        detail: A
+        live: g,
+        settled: null != y || (!g && k),
+        connectsDown: x,
+        detail: w
             ? (0, l.jsx)("ol", {
                   className: m.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(o.A, { projectId: t, node: e, presentation: "detail", active: x && e === b }, e.id),
+                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: g && e === j }, e.id),
                   ),
               })
             : void 0,

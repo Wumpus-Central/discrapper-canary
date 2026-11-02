@@ -1,7 +1,7 @@
-function n() {
-    return i;
+function i() {
+    return r;
 }
-a.d(t, { A4: () => r, Pu: () => n, lO: () => l });
-let i = { main: [], subagent: [], thinking: ["low", "medium", "high", "xhigh", "max"] },
-    r = { tier: "balanced" },
-    l = { simple: { thinking: "high" }, balanced: { thinking: "high" }, complex: { thinking: "high" } };
+t.d(n, { A4: () => l, Pu: () => i, lO: () => a });
+let r = { main: [], subagent: [], thinking: ["low", "medium", "high", "xhigh", "max"] },
+    l = { tier: "balanced" },
+    a = { simple: { thinking: "high" }, balanced: { thinking: "high" }, complex: { thinking: "high" } };

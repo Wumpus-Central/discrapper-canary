@@ -1,76 +1,76 @@
-(n.d(t, { FM: () => g, Nl: () => p, gn: () => x }), n(323874), n(14289), n(35956));
-var s = n(477900),
+(n.d(t, { FM: () => g, Nl: () => x, gn: () => h }), n(323874), n(14289), n(35956));
+var r = n(477900),
     l = n(582128),
-    r = n(834730),
-    a = n(289873),
-    i = n(285796),
-    c = n(666476),
-    o = n(287111),
+    a = n(834730),
+    i = n(289873),
+    s = n(285796),
+    o = n(666476),
+    c = n(287111),
     u = n(922329),
     d = n(177676),
-    m = n(809526),
-    f = n(105292),
-    h = n(153171);
-function x(e, t, n, s) {
-    let l = (0, o.GU)(e, t).length,
-        r = n.map((e) => {
+    f = n(809526),
+    m = n(105292),
+    p = n(153171);
+function h(e, t, n, r) {
+    let l = (0, c.GU)(e, t).length,
+        a = n.map((e) => {
             let t = (0, d.Ft)(e),
                 n = { name: e.name, contentType: t };
-            if (l++ >= c.lN) return { draft: { ...n, status: "error", errorText: (0, d.XV)() } };
+            if (l++ >= o.lN) return { draft: { ...n, status: "error", errorText: (0, d.XV)() } };
             switch ((0, d.R9)(e, t)) {
                 case "too-large":
-                    return { draft: { ...n, status: "error", errorText: (0, o.iW)(t) } };
+                    return { draft: { ...n, status: "error", errorText: (0, c.iW)(t) } };
                 case "webp":
                     return {
                         draft: { ...n, status: "uploading", previewUrl: URL.createObjectURL(e) },
                         upload: async () => {
                             let n = await (0, d.th)(e);
                             return null == n
-                                ? { errorText: (0, o.iW)(t) }
-                                : { ...(await s(n)), converted: { name: n.name, contentType: n.type } };
+                                ? { errorText: (0, c.iW)(t) }
+                                : { ...(await r(n)), converted: { name: n.name, contentType: n.type } };
                         },
                     };
                 case "fits": {
-                    let l = c.XB.has(t) ? URL.createObjectURL(e) : void 0;
-                    return { draft: { ...n, status: "uploading", previewUrl: l }, upload: () => s(e) };
+                    let l = o.XB.has(t) ? URL.createObjectURL(e) : void 0;
+                    return { draft: { ...n, status: "uploading", previewUrl: l }, upload: () => r(e) };
                 }
             }
         });
-    (0, o.fD)(e, t, r);
+    (0, c.fD)(e, t, a);
 }
 function g(e) {
-    let { projectId: t, surface: n, onUploadFile: s } = e,
-        r = (0, o.G)(t, n),
-        a = l.useCallback((e) => x(t, n, e, s), [t, n, s]),
-        i = (0, d.sm)(a),
-        c = l.useCallback((e) => (0, o.XR)(t, n, e), [t, n]),
-        u = l.useCallback(() => (0, o.lc)(t, n), [t, n]);
+    let { projectId: t, surface: n, onUploadFile: r } = e,
+        a = (0, c.G)(t, n),
+        i = l.useCallback((e) => h(t, n, e, r), [t, n, r]),
+        s = (0, d.sm)(i),
+        o = l.useCallback((e) => (0, c.XR)(t, n, e), [t, n]),
+        u = l.useCallback(() => (0, c.lc)(t, n), [t, n]);
     return {
-        drafts: r,
-        addFiles: a,
-        pasteFiles: i,
-        removeDraft: c,
-        settled: r.every((e) => "ready" === e.status),
+        drafts: a,
+        addFiles: i,
+        pasteFiles: s,
+        removeDraft: o,
+        settled: a.every((e) => "ready" === e.status),
         takeRefs: u,
     };
 }
-function p(e) {
+function x(e) {
     let { draft: t, onRemove: n } = e;
-    return (0, s.jsxs)(u.p, {
+    return (0, r.jsxs)(u.p, {
         name: t.name,
         thumbSrc: t.previewUrl,
         subText:
             "error" === t.status
-                ? (0, s.jsx)(r.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: t.errorText })
+                ? (0, r.jsx)(a.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: t.errorText })
                 : null,
         children: [
-            "uploading" === t.status ? (0, s.jsx)(a.y, { type: a.t.SPINNING_CIRCLE_SIMPLE, className: h.Rk }) : null,
-            (0, s.jsx)("button", {
+            "uploading" === t.status ? (0, r.jsx)(i.y, { type: i.t.SPINNING_CIRCLE_SIMPLE, className: p.Rk }) : null,
+            (0, r.jsx)("button", {
                 type: "button",
-                className: h.o1,
+                className: p.o1,
                 onClick: () => n(t.localId),
-                "aria-label": f.intl.string(m.default.Slam9g),
-                children: (0, s.jsx)(i.a, { size: "xs", color: "currentColor" }),
+                "aria-label": m.intl.string(f.default.Slam9g),
+                children: (0, r.jsx)(s.a, { size: "xs", color: "currentColor" }),
             }),
         ],
     });

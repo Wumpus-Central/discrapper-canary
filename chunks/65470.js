@@ -3,8 +3,8 @@ var i = n(477900);
 n(582128);
 var l = n(821609),
     o = n(597770),
-    a = n(688810),
-    s = n(948518),
+    s = n(688810),
+    a = n(948518),
     r = n(194509),
     c = n(485140),
     d = n(652215);
@@ -17,8 +17,8 @@ let p = function (t) {
             buttonTextOverride: m,
             ...x
         } = t,
-        { analyticsLocations: h } = (0, a.Ay)(),
-        { openGiftModal: b } = (0, s.$)({
+        { analyticsLocations: h } = (0, s.Ay)(),
+        { openGiftModal: b } = (0, a.$)({
             giftRecipient: null,
             analyticsLocations: h,
             analyticsObject: { object: d.ZSU.BUTTON_CTA, objectType: d.AnalyticsObjectTypes.GIFT, ...n },

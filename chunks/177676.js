@@ -1,7 +1,7 @@
-n.d(t, { sm: () => m, R9: () => o, XV: () => d, Ft: () => c, th: () => u });
-var s = n(582128),
+n.d(t, { sm: () => f, R9: () => c, XV: () => d, Ft: () => o, th: () => u });
+var r = n(582128),
     l = n(666476);
-async function r(e) {
+async function a(e) {
     let t = new Worker(new URL("/assets/" + n.u("638664"), n.b));
     try {
         let n = await new Promise((n) => {
@@ -23,12 +23,12 @@ async function r(e) {
     }
 }
 (n(323874), n(14289), n(35956));
-var a = n(809526),
-    i = n(105292);
-function c(e) {
+var i = n(809526),
+    s = n(105292);
+function o(e) {
     return "" === e.type ? "application/octet-stream" : e.type;
 }
-function o(e, t) {
+function c(e, t) {
     return (0, l.Oq)(e.size, t)
         ? "fits"
         : "image/png" === t && e.size <= l.km && "u" > typeof Worker && "u" > typeof OffscreenCanvas
@@ -38,17 +38,17 @@ function o(e, t) {
 async function u(e) {
     let t;
     try {
-        t = await r(e);
+        t = await a(e);
     } catch {
         return null;
     }
     return null != t && (0, l.Oq)(t.size, t.type) ? t : null;
 }
 function d() {
-    return i.intl.formatToPlainString(a.default.Q0aCVZ, { count: l.lN });
+    return s.intl.formatToPlainString(i.default.Q0aCVZ, { count: l.lN });
 }
-function m(e) {
-    return s.useCallback(
+function f(e) {
+    return r.useCallback(
         (t) => {
             if (t.defaultPrevented) return;
             let n = Array.from(t.clipboardData?.files ?? []);

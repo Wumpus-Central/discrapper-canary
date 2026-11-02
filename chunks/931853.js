@@ -3,8 +3,8 @@ var r = n(477900),
     l = n(17928),
     i = n(876230),
     a = n(366010),
-    o = n(834730),
-    u = n(363195),
+    u = n(834730),
+    o = n(363195),
     s = n(267286),
     c = n(105292),
     d = n(862649);
@@ -20,7 +20,7 @@ function m(e) {
 }
 let f = function (e) {
     let { message: t, showOverlay: n = !1 } = e,
-        i = (0, l.bG)([u.A], () => u.A.getState().theme);
+        i = (0, l.bG)([o.A], () => o.A.getState().theme);
     return null == t
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -29,7 +29,7 @@ let f = function (e) {
                   (0, r.jsx)("div", {
                       className: d.zG,
                       style: { background: (0, a.M)(i) ? "rgba(0, 0, 0, 0.65)" : "rgba(255, 255, 255, 0.65)" },
-                      children: (0, r.jsx)(o.E, { variant: "text-sm/normal", color: "text-default", children: t }),
+                      children: (0, r.jsx)(u.E, { variant: "text-sm/normal", color: "text-default", children: t }),
                   }),
               ],
           });

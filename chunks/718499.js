@@ -1,10 +1,10 @@
-n.d(t, { Ay: () => c, Bu: () => s, OJ: () => u, XY: () => o });
+n.d(t, { Ay: () => c, Bu: () => s, OJ: () => o, XY: () => u });
 var r = n(582128),
     l = n(876230),
     i = n(614269),
     a = n(53200);
-let o = 8e5,
-    u = 20,
+let u = 8e5,
+    o = 20,
     s = 30;
 function c(e, t) {
     let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: f = "anonymous" } = t,
@@ -36,7 +36,7 @@ function c(e, t) {
                     if (r) return;
                     if (!e.isSupported()) return void P(!0);
                     let a = (i = new e({
-                        backBufferLength: u,
+                        backBufferLength: o,
                         maxBufferLength: s,
                         startPosition: v.current,
                         startFragPrefetch: !0,
@@ -68,7 +68,7 @@ function c(e, t) {
                             });
                     }),
                         a.on(e.Events.FRAG_LOADING, function () {
-                            a.config.minAutoBitrate !== o && (a.config.minAutoBitrate = o);
+                            a.config.minAutoBitrate !== u && (a.config.minAutoBitrate = u);
                         }),
                         a.on(e.Events.ERROR, function (t, n) {
                             if (

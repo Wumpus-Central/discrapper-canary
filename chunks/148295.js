@@ -1,13 +1,13 @@
-a.d(t, { S: () => i, g: () => n });
+a.d(t, { S: () => s, g: () => n });
 var r,
-    i =
+    s =
         588245 != a.j
             ? (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
               (r[(r.NO_PERSONAL_DATA = 1)] = "NO_PERSONAL_DATA"),
               (r[(r.ZERO_DATA = 2)] = "ZERO_DATA"),
               r)
             : null;
-let s = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
+let i = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
     c = {
         voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 },
         messages: { numMessagesSent: 0, numMessagesSentPercentile: 0 },
@@ -27,7 +27,7 @@ let s = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }
 function n(e) {
     switch (e) {
         case 0:
-            return s;
+            return i;
         case 1:
             return null;
         case 2:

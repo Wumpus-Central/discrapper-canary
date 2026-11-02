@@ -27,8 +27,8 @@ let p = Object.freeze([]),
         UserProfileStore: m.A,
     },
     S = { ChannelStore: d.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
-    y = { ...w, ...S },
-    b = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
+    b = { ...w, ...S },
+    y = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
 function C(e) {
     let { userId: t, currentUserId: i, guildId: s } = e,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w,
@@ -51,12 +51,12 @@ function C(e) {
             : null,
     };
 }
-function I(e) {
+function P(e) {
     let { userId: t, guildId: i } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S,
         n = (0, r.t$)({ userId: t, guildId: i }, s);
     return null == n.voiceChannel
-        ? b
+        ? y
         : {
               ...n,
               voiceActivity: (function (e, t) {
@@ -74,7 +74,7 @@ function I(e) {
               })(t, n.voiceChannel.id, s),
           };
 }
-function P(e, t) {
+function I(e, t) {
     let { activities: i, isOffline: s, isPrivate: n, stream: r } = e,
         { voiceActivity: l, voiceChannel: a, voiceState: c } = t,
         d = (0, f.U)(i);
@@ -91,8 +91,8 @@ function P(e, t) {
 }
 function M(e) {
     let { userId: t, currentUserId: i, guildId: s } = e,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y;
-    return P(C({ userId: t, currentUserId: i ?? c.default.getId(), guildId: s }, n), I({ userId: t, guildId: s }, n));
+        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
+    return I(C({ userId: t, currentUserId: i ?? c.default.getId(), guildId: s }, n), P({ userId: t, guildId: s }, n));
 }
 function U(e) {
     let { userId: t, currentUserId: i, guildId: r } = e,
@@ -116,11 +116,11 @@ function U(e) {
         g = (0, n.cf)(
             [d.A, h.A, u.A, v.A],
             () =>
-                I(
+                P(
                     { userId: t, guildId: r },
                     { ChannelStore: d.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
                 ),
             [r, t],
         );
-    return s.useMemo(() => P(f, g), [f, g]);
+    return s.useMemo(() => I(f, g), [f, g]);
 }

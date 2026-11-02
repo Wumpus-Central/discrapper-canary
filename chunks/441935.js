@@ -1,27 +1,27 @@
-n.d(t, { A: () => o });
-var l = n(477900);
-n(582128);
-var a = n(866665),
-    r = n(408278),
-    i = n(95635),
-    s = n(809526),
-    u = n(105292);
-function o(e) {
-    let { importing: t, disabled: n = !1, onClick: o } = e,
-        d = u.intl.string(s.default.tx8Azx);
-    return (0, l.jsx)(a.m, {
-        text: d,
+l.d(e, { A: () => u });
+var s = l(477900);
+l(582128);
+var i = l(866665),
+    t = l(408278),
+    a = l(95635),
+    r = l(809526),
+    d = l(105292);
+function u(n) {
+    let { importing: e, disabled: l = !1, onClick: u } = n,
+        c = d.intl.string(r.default.tx8Azx);
+    return (0, s.jsx)(i.m, {
+        text: c,
         position: "bottom",
         asContainer: !0,
         ariaHidden: !0,
-        children: (0, l.jsx)(r.K, {
-            icon: i.UploadIcon,
+        children: (0, s.jsx)(t.K, {
+            icon: a.UploadIcon,
             variant: "icon-only",
             size: "sm",
-            "aria-label": d,
-            loading: t,
-            disabled: n,
-            onClick: o,
+            "aria-label": c,
+            loading: e,
+            disabled: l,
+            onClick: u,
         }),
     });
 }

@@ -1,26 +1,26 @@
-a.d(t, { A: () => o });
-var n = a(71393),
-    i = a(246338);
-(a(393431), a(532706), a(42231), a(232424), a(949626), a(767709), a(65162));
-let r = /^(?:[^/]+\/)?\.discord\/manifest\.json$/;
-async function l(e) {
+t.d(n, { A: () => u });
+var i = t(71393),
+    r = t(246338);
+(t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162));
+let l = /^(?:[^/]+\/)?\.discord\/manifest\.json$/;
+async function a(e) {
     try {
-        let t = await new Promise((t, a) => {
-            let n = new FileReader();
-            ((n.onload = () => t(new Uint8Array(n.result))), (n.onerror = () => a(n.error)), n.readAsArrayBuffer(e));
+        let n = await new Promise((n, t) => {
+            let i = new FileReader();
+            ((i.onload = () => n(new Uint8Array(i.result))), (i.onerror = () => t(i.error)), i.readAsArrayBuffer(e));
         });
-        if (80 !== t[0] || 75 !== t[1]) return null;
-        let { unzipSync: n, strFromU8: i } = await a.e("494822").then(a.bind(a, 687813)),
-            l = Object.values(n(t, { filter: (e) => r.test(e.name) }));
-        if (1 !== l.length) return null;
-        let o = JSON.parse(i(l[0])).install_scope;
-        return "user" === o || "guild" === o ? o : null;
+        if (80 !== n[0] || 75 !== n[1]) return null;
+        let { unzipSync: i, strFromU8: r } = await t.e("494822").then(t.bind(t, 687813)),
+            a = Object.values(i(n, { filter: (e) => l.test(e.name) }));
+        if (1 !== a.length) return null;
+        let u = JSON.parse(r(a[0])).install_scope;
+        return "user" === u || "guild" === u ? u : null;
     } catch {
         return null;
     }
 }
-async function o(e, t) {
-    var a, r;
-    let o = n.A.getGuild(t);
-    return ((a = await l(e)), (r = null != o && (0, i.sM)(o, "ConjureImport")), "guild" !== a || r ? a : null);
+async function u(e, n) {
+    var t, l;
+    let u = i.A.getGuild(n);
+    return ((t = await a(e)), (l = null != u && (0, r.sM)(u, "ConjureImport")), "guild" !== t || l ? t : null);
 }

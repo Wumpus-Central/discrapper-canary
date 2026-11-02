@@ -16,8 +16,8 @@ function g(e) {
     let { location: n, countGiftCardWallet: g, canFetchPaymentSources: E = !0 } = e,
         { enabled: p } = (0, d.K)({ location: n }),
         _ = (0, s.bG)([l.default], () => l.default.getId()),
-        f = null != (t = (0, s.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
-        { hasFetchedPaymentSources: m, hasValidPaymentMethod: T } = (0, s.cf)(
+        m = null != (t = (0, s.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
+        { hasFetchedPaymentSources: f, hasValidPaymentMethod: T } = (0, s.cf)(
             [o.A],
             () => ({
                 hasFetchedPaymentSources: o.A.hasFetchedPaymentSources,
@@ -30,7 +30,7 @@ function g(e) {
             }),
             [g],
         ),
-        v = p && f,
+        v = p && m,
         N = v && E;
     return (
         i.useEffect(() => {
@@ -43,6 +43,6 @@ function g(e) {
                     null == e && (A = _);
                 }));
         }, [N, _]),
-        v && A !== _ && m && !T
+        v && A !== _ && f && !T
     );
 }

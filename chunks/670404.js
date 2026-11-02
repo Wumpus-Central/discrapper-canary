@@ -1,40 +1,40 @@
 t.d(e, { m: () => c });
-var r = t(582128),
-    n = t(475743),
+var n = t(582128),
+    r = t(475743),
     s = t(174459),
-    l = t(52643),
-    i = t(652215);
+    i = t(52643),
+    l = t(652215);
 function c(a, e) {
-    let [t, c] = r.useState(l.N.LANDING),
-        o = (0, n.Ay)(t),
-        [d, m] = r.useState(null),
-        [x, u] = r.useState(null),
-        [N, h] = r.useState(void 0),
-        p = r.useCallback(() => {
+    let [t, c] = n.useState(i.N.LANDING),
+        o = (0, r.Ay)(t),
+        [d, m] = n.useState(null),
+        [u, x] = n.useState(null),
+        [N, h] = n.useState(void 0),
+        p = n.useCallback(() => {
             switch (t) {
-                case l.N.LANDING:
-                    c(l.N.PRE_CONNECT);
+                case i.N.LANDING:
+                    c(i.N.PRE_CONNECT);
                     break;
-                case l.N.DISCORD_CONSENT:
-                    c(l.N.SUCCESS);
+                case i.N.DISCORD_CONSENT:
+                    c(i.N.SUCCESS);
                     break;
-                case l.N.ERROR:
-                    c(l.N.PRE_CONNECT);
+                case i.N.ERROR:
+                    c(i.N.PRE_CONNECT);
             }
         }, [t]),
-        j = r.useCallback((a) => {
-            (m(null), h(a), c(l.N.ERROR));
+        j = n.useCallback((a) => {
+            (m(null), h(a), c(i.N.ERROR));
         }, []),
-        g = r.useCallback((a) => {
-            (m(a), c(l.N.PRE_CONNECT_WAITING));
+        g = n.useCallback((a) => {
+            (m(a), c(i.N.PRE_CONNECT_WAITING));
         }, []),
-        C = r.useCallback((a) => {
-            (m(null), u(a), c(l.N.DISCORD_CONSENT));
+        C = n.useCallback((a) => {
+            (m(null), x(a), c(i.N.DISCORD_CONSENT));
         }, []);
     return (
-        r.useEffect(() => {
+        n.useEffect(() => {
             t !== o &&
-                s.default.track(i.HAw.ACCOUNT_LINK_STEP, {
+                s.default.track(l.HAw.ACCOUNT_LINK_STEP, {
                     location_stack: a,
                     previous_step: o,
                     current_step: t,
@@ -48,7 +48,7 @@ function c(a, e) {
             handleWaitingForConnection: g,
             handleAuthToken: C,
             expectedCallbackState: d,
-            callbackData: x,
+            callbackData: u,
             errorCode: N,
         }
     );

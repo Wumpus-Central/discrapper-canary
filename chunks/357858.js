@@ -1,23 +1,23 @@
-n.d(t, { Pu: () => i, Td: () => s });
-var u = n(582128);
-let r = new Map();
-function s(e) {
-    return (r.get(e) ?? 0) > 0;
+e.d(E, { Pu: () => _, Td: () => p });
+var i = e(582128);
+let n = new Map();
+function p(t) {
+    return (n.get(t) ?? 0) > 0;
 }
-function i(e) {
-    u.useLayoutEffect(() => {
-        if (null != e) {
-            let t;
+function _(t) {
+    i.useLayoutEffect(() => {
+        if (null != t) {
+            let E;
             return (
-                r.set(e, (r.get(e) ?? 0) + 1),
-                (t = !0),
+                n.set(t, (n.get(t) ?? 0) + 1),
+                (E = !0),
                 () => {
-                    if (!t) return;
-                    t = !1;
-                    let n = (r.get(e) ?? 1) - 1;
-                    n > 0 ? r.set(e, n) : r.delete(e);
+                    if (!E) return;
+                    E = !1;
+                    let e = (n.get(t) ?? 1) - 1;
+                    e > 0 ? n.set(t, e) : n.delete(t);
                 }
             );
         }
-    }, [e]);
+    }, [t]);
 }

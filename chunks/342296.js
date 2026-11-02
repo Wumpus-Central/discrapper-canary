@@ -30,11 +30,11 @@ function f(e) {
             renderPopout: p,
             onRequestOpen: w,
             onRequestClose: S,
-            onClosePopout: y,
-            shouldShow: b,
+            onClosePopout: b,
+            shouldShow: y,
             shouldPreload: C = !0,
-            ignoreModalClicks: I = !0,
-            ...P
+            ignoreModalClicks: P = !0,
+            ...I
         } = e,
         M = n.useRef(void 0),
         U = n.useCallback(
@@ -67,21 +67,21 @@ function f(e) {
                           appContext: g,
                           openedAt: M.current,
                           closePopout: () => {
-                              (e.closePopout(), y?.());
+                              (e.closePopout(), b?.());
                           },
                       }),
-            [i, r, p, l, d, v, j, m, f, g, y],
+            [i, r, p, l, d, v, j, m, f, g, b],
         );
     return (0, s.jsx)(a.Y, {
         popoutKey: u.KM,
-        shouldShow: b,
+        shouldShow: y,
         preload: C ? U : void 0,
         loadingComponent: (0, c.Zm)(),
         renderPopout: k,
         onRequestOpen: w,
         onRequestClose: S,
-        ignoreModalClicks: I,
-        ...P,
+        ignoreModalClicks: P,
+        ...I,
         children: t,
     });
 }

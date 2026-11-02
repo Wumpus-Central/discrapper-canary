@@ -314,8 +314,8 @@ var $ = l(17928),
     Y = l(713654),
     Z = l(769015),
     Q = l(145497),
-    q = l(734057),
-    J = l(71393),
+    J = l(734057),
+    q = l(71393),
     ee = l(287809),
     et = l(58703),
     el = l(403362),
@@ -338,8 +338,8 @@ function es(e) {
         i = (0, ea.h)(l),
         r = (0, V.h)(l.applicationId),
         s = (0, $.yK)([ee.default], () => l.users.map(ee.default.getUser).filter(el.Vq)),
-        o = (0, $.bG)([J.A], () => (null != l.guildId ? J.A.getGuild(l.guildId) : null)),
-        c = (0, $.bG)([q.A], () => (null != l.channelId ? q.A.getChannel(l.channelId) : null)),
+        o = (0, $.bG)([q.A], () => (null != l.guildId ? q.A.getGuild(l.guildId) : null)),
+        c = (0, $.bG)([J.A], () => (null != l.channelId ? J.A.getChannel(l.channelId) : null)),
         u = (0, K.Ay)(c),
         d = null != c ? (0, Y.gU)(c, o) : null,
         m = r?.name ?? l.applicationName,
@@ -1247,8 +1247,8 @@ function eQ(e) {
         }),
     });
 }
-var eq = l(267286),
-    eJ = l(503535);
+var eJ = l(267286),
+    eq = l(503535);
 function e0(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
     let t = Math.floor(e / 60),
@@ -1372,26 +1372,26 @@ function e5(e) {
             },
             [W],
         ),
-        q = n.useCallback(() => {
+        J = n.useCallback(() => {
             (D && f(), S(!1), R(null));
         }, [D, f]);
     n.useEffect(
         () => (
             document.addEventListener("mousemove", Q),
-            document.addEventListener("mouseup", q),
+            document.addEventListener("mouseup", J),
             () => {
-                (document.removeEventListener("mousemove", Q), document.removeEventListener("mouseup", q));
+                (document.removeEventListener("mousemove", Q), document.removeEventListener("mouseup", J));
             }
         ),
-        [Q, q],
+        [Q, J],
     );
-    let { numberOfPreviews: J, timelinePreviewWidth: ee } = n.useMemo(() => {
+    let { numberOfPreviews: q, timelinePreviewWidth: ee } = n.useMemo(() => {
         if (null == y) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
         let e = Math.ceil(U * (y.width / y.height));
         return { numberOfPreviews: Math.ceil($ / e), timelinePreviewWidth: e };
     }, [U, $, y]);
     n.useEffect(() => {
-        if (0 === J || 0 === ee) return;
+        if (0 === q || 0 === ee) return;
         let e = z.current;
         if (null == e) return;
         ((e.height = U), (e.width = $));
@@ -1399,11 +1399,11 @@ function e5(e) {
         if (null == t) return;
         ((t.fillStyle = "transparent"), t.fillRect(0, 0, $, U));
         let l = [];
-        for (let e = 0; e < J; e++) l.push((ee / $) * r * e);
+        for (let e = 0; e < q; e++) l.push((ee / $) * r * e);
         return j(l, ee, U, (e) => {
             for (let l = 0; l < e.length; l++) (t.drawImage(e[l], ee * l, 0, ee, U), e[l].close());
         });
-    }, [U, z, r, J, ee, j, $]);
+    }, [U, z, r, q, ee, j, $]);
     let et = A - o,
         el = n.useCallback(() => {
             g(Math.max(o, A - 10));
@@ -1420,38 +1420,38 @@ function e5(e) {
             background: `linear-gradient(to right, var(--black-500) ${er}%, transparent ${er}%, transparent ${es}%, var(--black-500) ${es}%)`,
         };
     return (0, a.jsxs)("div", {
-        className: eJ.f4,
+        className: eq.f4,
         children: [
-            (0, a.jsx)("div", { className: eJ.qs }),
+            (0, a.jsx)("div", { className: eq.qs }),
             (0, a.jsxs)("div", {
-                className: eJ.lx,
+                className: eq.lx,
                 children: [
                     (0, a.jsx)("div", {
-                        className: eJ.k2,
+                        className: eq.k2,
                         children: (0, a.jsx)("div", {
                             ref: M,
-                            className: eJ.re,
+                            className: eq.re,
                             children: (0, a.jsxs)(G.E, {
                                 variant: "text-xs/medium",
-                                className: eJ.g7,
+                                className: eq.g7,
                                 color: "text-muted",
                                 children: [
-                                    (0, a.jsx)("span", { className: eJ.$k, children: e0(et) }),
-                                    (0, a.jsx)("span", { className: eJ.xW, children: " / " }),
+                                    (0, a.jsx)("span", { className: eq.$k, children: e0(et) }),
+                                    (0, a.jsx)("span", { className: eq.xW, children: " / " }),
                                     e0(u),
                                 ],
                             }),
                         }),
                     }),
                     (0, a.jsxs)("div", {
-                        className: eJ.s2,
+                        className: eq.s2,
                         children: [
                             (0, a.jsx)(H.K, {
                                 size: "sm",
                                 variant: "icon-only",
                                 icon: eN.q,
                                 onClick: el,
-                                "aria-label": en.intl.string(eq.default["dRVF+Z"]),
+                                "aria-label": en.intl.string(eJ.default["dRVF+Z"]),
                             }),
                             (0, a.jsx)(H.K, {
                                 size: "sm",
@@ -1465,14 +1465,14 @@ function e5(e) {
                                 variant: "icon-only",
                                 icon: ek.i,
                                 onClick: ea,
-                                "aria-label": en.intl.string(eq.default.yV2FLL),
+                                "aria-label": en.intl.string(eJ.default.yV2FLL),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: eJ.fL,
+                className: eq.fL,
                 ref: X,
                 children: [
                     (0, a.jsx)(eY, { onMouseDown: Y, videoLength: r, clip: b, noBottomMargin: !0, compact: !0 }),
@@ -1480,29 +1480,29 @@ function e5(e) {
                         onMouseDown: Y,
                         voiceAudioTracks: t,
                         clipId: b.id,
-                        className: eJ.ou,
+                        className: eq.ou,
                         alwaysRenderContainer: !0,
                     }),
                     (0, a.jsx)("div", {
-                        className: eJ.iI,
+                        className: eq.iI,
                         children: (0, a.jsxs)("div", {
-                            className: eJ.Qp,
+                            className: eq.Qp,
                             children: [
-                                (0, a.jsx)("div", { className: eJ.bd }),
+                                (0, a.jsx)("div", { className: eq.bd }),
                                 (0, a.jsx)("div", {
-                                    className: eJ.PH,
+                                    className: eq.PH,
                                     children: (0, a.jsxs)("div", {
-                                        className: p()(eJ.IO, { [eJ.Dg]: null != L }),
+                                        className: p()(eq.IO, { [eq.Dg]: null != L }),
                                         onMouseDown: Y,
                                         children: [
-                                            (0, a.jsx)("canvas", { className: eJ.Ay, ref: z }),
+                                            (0, a.jsx)("canvas", { className: eq.Ay, ref: z }),
                                             (0, a.jsx)(eA.vN, {
                                                 children: (0, a.jsx)("div", {
                                                     tabIndex: 0,
                                                     ref: I,
-                                                    className: eJ.lG,
+                                                    className: eq.lG,
                                                     children: (0, a.jsx)("svg", {
-                                                        className: eJ.$6,
+                                                        className: eq.$6,
                                                         width: "10",
                                                         height: "7.5",
                                                         viewBox: "0 0 8 6",
@@ -1515,9 +1515,9 @@ function e5(e) {
                                                     }),
                                                 }),
                                             }),
-                                            (0, a.jsx)("div", { className: eJ.QT, style: eo }),
+                                            (0, a.jsx)("div", { className: eq.QT, style: eo }),
                                             (0, a.jsxs)("div", {
-                                                className: eJ.Ws,
+                                                className: eq.Ws,
                                                 style: {
                                                     left: null != r ? `${(o / r) * 100}%` : "0",
                                                     right: null != r ? `${((r - c) / r) * 100}%` : "0",
@@ -1525,7 +1525,7 @@ function e5(e) {
                                                 children: [
                                                     (0, a.jsx)(eA.vN, {
                                                         children: (0, a.jsxs)("button", {
-                                                            className: eJ.uI,
+                                                            className: eq.uI,
                                                             onMouseDown: Z("start"),
                                                             onKeyDown: V,
                                                             role: "slider",
@@ -1536,9 +1536,9 @@ function e5(e) {
                                                             "aria-valuemax": c - T.zj,
                                                             "aria-label": en.intl.string(en.t["+BTvw8"]),
                                                             children: [
-                                                                (0, a.jsx)("div", { className: eJ.FV }),
+                                                                (0, a.jsx)("div", { className: eq.FV }),
                                                                 (0, a.jsxs)("svg", {
-                                                                    className: eJ.lm,
+                                                                    className: eq.lm,
                                                                     width: "8",
                                                                     height: "56",
                                                                     viewBox: "0 0 8 56",
@@ -1558,7 +1558,7 @@ function e5(e) {
                                                     }),
                                                     (0, a.jsx)(eA.vN, {
                                                         children: (0, a.jsxs)("button", {
-                                                            className: eJ.H1,
+                                                            className: eq.H1,
                                                             onMouseDown: Z("end"),
                                                             onKeyDown: K,
                                                             role: "slider",
@@ -1569,9 +1569,9 @@ function e5(e) {
                                                             "aria-valuemax": r,
                                                             "aria-label": en.intl.string(en.t.bBgBYo),
                                                             children: [
-                                                                (0, a.jsx)("div", { className: eJ.kn }),
+                                                                (0, a.jsx)("div", { className: eq.kn }),
                                                                 (0, a.jsxs)("svg", {
-                                                                    className: eJ.mN,
+                                                                    className: eq.mN,
                                                                     width: "8",
                                                                     height: "56",
                                                                     viewBox: "0 0 8 56",

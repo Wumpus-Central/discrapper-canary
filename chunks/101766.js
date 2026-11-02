@@ -1,25 +1,25 @@
-n.d(t, { A: () => i });
-var l = n(582128),
-    a = n(398773),
-    r = n(735769);
-function i(e) {
-    let t = l.useRef(null);
+l.d(e, { A: () => a });
+var s = l(582128),
+    i = l(398773),
+    t = l(735769);
+function a(n) {
+    let e = s.useRef(null);
     return (
-        l.useLayoutEffect(() => {
-            let n = t.current;
-            if (null == n || null == e) return;
-            let l = r.A.getScrollTop(e);
-            function i() {
-                l = n?.scrollTop ?? l;
+        s.useLayoutEffect(() => {
+            let l = e.current;
+            if (null == l || null == n) return;
+            let s = t.A.getScrollTop(n);
+            function a() {
+                s = l?.scrollTop ?? s;
             }
             return (
-                l > 0 && ((n.scrollTop = l), (l = n.scrollTop)),
-                n.addEventListener("scroll", i, { passive: !0 }),
+                s > 0 && ((l.scrollTop = s), (s = l.scrollTop)),
+                l.addEventListener("scroll", a, { passive: !0 }),
                 () => {
-                    (n.removeEventListener("scroll", i), (0, a.wd)(e, l));
+                    (l.removeEventListener("scroll", a), (0, i.wd)(n, s));
                 }
             );
-        }, [e]),
-        t
+        }, [n]),
+        e
     );
 }

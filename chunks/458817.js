@@ -2,8 +2,8 @@ n.d(t, { A: () => D });
 var r = n(582128),
     u = n(323889),
     l = n(731738),
-    s = n(17928),
-    i = n(507395),
+    i = n(17928),
+    s = n(507395),
     a = n(144779),
     o = n(69114),
     c = n(807393),
@@ -44,7 +44,7 @@ function D(e) {
         } = e,
         x = (0, p.u0)(),
         y = (0, S.wW)(),
-        V = (0, s.bG)([E.A], () => E.A.getEffectiveConnectionSpeed()),
+        V = (0, i.bG)([E.A], () => E.A.getEffectiveConnectionSpeed()),
         U = (0, r.useRef)(-1),
         Q = r.useMemo(
             () =>
@@ -236,7 +236,7 @@ function D(e) {
         ),
         W = r.useCallback(
             (e, t) => {
-                (0, i.r)({
+                (0, s.r)({
                     type: a.F.CLICK_INTERNAL,
                     adCreativeType: u.p.QUEST,
                     adCreativeId: N,
@@ -271,8 +271,8 @@ function D(e) {
         z = r.useCallback(
             (e, r) => {
                 if (null == t.current) return;
-                let s = t.current?.error,
-                    i = t.current?.networkState,
+                let i = t.current?.error,
+                    s = t.current?.networkState,
                     a = null != t.current ? (0, A.zh)(t.current.currentTime, t.current.duration) : void 0,
                     o = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
                 (x({
@@ -284,9 +284,9 @@ function D(e) {
                         video_asset_id: R,
                         network_connection_speed: V,
                         video_session_id: T,
-                        video_error_code: s?.code,
-                        video_error_message: s?.message,
-                        video_network_state: i,
+                        video_error_code: i?.code,
+                        video_error_message: i?.message,
+                        video_network_state: s,
                         is_full_episode_video_quest: b,
                         is_hls_supported: (0, d.Ap)(),
                         ...h(n),

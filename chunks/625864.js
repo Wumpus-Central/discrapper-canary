@@ -3,8 +3,8 @@ var i = t(477900),
     s = t(582128),
     a = t(265872),
     o = t(305866),
-    r = t(73153),
-    l = t(964486),
+    l = t(73153),
+    r = t(964486),
     u = t(625494),
     d = t(851109),
     c = t(706341);
@@ -17,41 +17,41 @@ var b = t(320080),
 function p(e) {
     let { children: n, popoutPosition: t, popoutAlign: b, targetElementRef: E, spacing: p = 0 } = e,
         { isOpen: A, setIsOpen: f } = h(),
-        N = s.useCallback(() => {
+        x = s.useCallback(() => {
             f(!1);
         }, [f]),
-        x = s.useCallback(() => {
+        L = s.useCallback(() => {
             (A || c.A.loadMoreInbox({ loadingTrigger: g.VA.ON_OPEN }), f(!A));
         }, [A, f]);
-    ((0, l.Ay)(() => {
+    ((0, r.Ay)(() => {
         function e() {
             f(!1);
         }
-        return (r.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => r.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e));
+        return (l.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => l.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e));
     }),
         s.useEffect(
             () => (
-                u._.subscribe(T.jej.TOGGLE_INBOX, x),
+                u._.subscribe(T.jej.TOGGLE_INBOX, L),
                 () => {
-                    u._.unsubscribe(T.jej.TOGGLE_INBOX, x);
+                    u._.unsubscribe(T.jej.TOGGLE_INBOX, L);
                 }
             ),
-            [x],
+            [L],
         ));
-    let { entrypoint: L } = (0, d.X8)({ location: "NotificationsInboxPopout" });
+    let { entrypoint: N } = (0, d.X8)({ location: "NotificationsInboxPopout" });
     return (0, i.jsx)(a.Y, {
         targetElementRef: E,
         shouldShow: A,
         align: b,
-        animation: L === d.RK.TITLE_BAR_LEFT ? a.Y.Animation.TRANSLATE : a.Y.Animation.FADE,
-        animationPosition: L === d.RK.TITLE_BAR_LEFT ? "bottom" : "left",
+        animation: N === d.RK.TITLE_BAR_LEFT ? a.Y.Animation.TRANSLATE : a.Y.Animation.FADE,
+        animationPosition: N === d.RK.TITLE_BAR_LEFT ? "bottom" : "left",
         position: t,
-        onRequestClose: N,
+        onRequestClose: x,
         spacing: p,
         renderPopout: () => (0, i.jsx)(o.l, { "aria-label": m.intl.string(m.t.GSmTKJ), children: (0, i.jsx)(_, {}) }),
         children: (e, t) => {
             let { isShown: i } = t;
-            return n(x, i, e);
+            return n(L, i, e);
         },
     });
 }

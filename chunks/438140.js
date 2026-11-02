@@ -1,4 +1,4 @@
-n.d(t, { Wt: () => s.Wt, Lf: () => i.L, LH: () => s.LH, PL: () => f });
+n.d(t, { Wt: () => s.Wt, Lf: () => i.L, LH: () => s.LH, PL: () => m });
 var i = n(264646),
     s = n(464192),
     r = n(477900),
@@ -15,16 +15,16 @@ var o = n(379257),
     E = n(49999),
     p = n(83154),
     _ = n(105292);
-function f(e) {
+function m(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
         i = (0, d.yM)(),
         s = l.useCallback(() => {
             (t(E.i.TAKE_ACTION), o.A.showAgeVerificationGetStartedModal({ entryPoint: c.q1.TINY_BRONCO_POPOVER }));
         }, [t]),
-        f = l.useCallback(() => {
+        m = l.useCallback(() => {
             (t(E.i.TAKE_ACTION), o.A.openUrl(C.A.getArticleURL(g.MVz.TIGGER_PAWTECT_LEARN_MORE)));
         }, [t]),
-        m = l.useCallback(() => {
+        f = l.useCallback(() => {
             (t(E.i.TAKE_ACTION), (0, h.openUserSettings)(u.X.ACCOUNT_STANDING_CATEGORY));
         }, [t]),
         T = l.useCallback(() => {
@@ -35,8 +35,8 @@ function f(e) {
             ? { text: _.intl.string(p.default.ZzcLhc), onClick: s, external: !1 }
             : { text: _.intl.string(p.default["Bp/1dq"]), link: A.m5, external: !0 },
         x = i
-            ? { text: _.intl.string(p.default["+7NlgO"]), variant: "primary", onClick: f }
-            : { text: _.intl.string(p.default.jjpcno), variant: "primary", onClick: m };
+            ? { text: _.intl.string(p.default["+7NlgO"]), variant: "primary", onClick: m }
+            : { text: _.intl.string(p.default.jjpcno), variant: "primary", onClick: f };
     return (0, r.jsx)(a.A, {
         targetElementRef: n,
         shouldShow: !0,

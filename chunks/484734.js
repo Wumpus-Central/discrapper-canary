@@ -25,8 +25,8 @@ var i = n(477900),
     E = n(625903),
     p = n(659421),
     _ = n(329308),
-    f = n(571694),
-    m = n(47167),
+    m = n(571694),
+    f = n(47167),
     T = n(713654),
     v = n(503698),
     N = n.n(v),
@@ -160,11 +160,11 @@ class Z extends s.Component {
             { mentions: n, category: s, channel: r, isMentionLowImportance: l } = this.props;
         return (
             null != n && n > 0 && (e = (0, i.jsx)(I, { className: V.qS, value: n, lowImportance: l })),
-            null != s && (t = (0, i.jsx)("span", { className: V.N4, children: (0, m.m1)(s, D.default, y.A) })),
+            null != s && (t = (0, i.jsx)("span", { className: V.N4, children: (0, f.m1)(s, D.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: V.UU,
                 children: [
-                    (0, i.jsx)("span", { className: V.YW, children: (0, m.m1)(r, D.default, y.A) }),
+                    (0, i.jsx)("span", { className: V.YW, children: (0, f.m1)(r, D.default, y.A) }),
                     e,
                     this.renderVoiceStates(),
                     t,
@@ -197,7 +197,7 @@ class Z extends s.Component {
     getAccessibilityLabel() {
         let { channel: e } = this.props,
             t = w.A.getGuild(this.props.channel.guild_id)?.name,
-            n = (0, m.m1)(e, D.default, y.A),
+            n = (0, f.m1)(e, D.default, y.A),
             i = (0, M.Jg)(e);
         return k.intl.formatToPlainString(k.t["Vw/da+"], { name: n, type: i, guild: t });
     }
@@ -221,7 +221,7 @@ class F extends s.Component {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
             className: V.IU,
-            children: (0, i.jsx)(l.eu, { src: (0, f.Y)(e), size: a._3.SIZE_20, "aria-hidden": !0, status: t }),
+            children: (0, i.jsx)(l.eu, { src: (0, m.Y)(e), size: a._3.SIZE_20, "aria-hidden": !0, status: t }),
         });
     }
     renderName() {
@@ -231,7 +231,7 @@ class F extends s.Component {
             null != t && t > 0 && (e = (0, i.jsx)(I, { className: V.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: V.UU,
-                children: [(0, i.jsx)("span", { className: V.YW, children: (0, m.m1)(n, D.default, y.A) }), e],
+                children: [(0, i.jsx)("span", { className: V.YW, children: (0, f.m1)(n, D.default, y.A) }), e],
             })
         );
     }
@@ -244,7 +244,7 @@ class F extends s.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, m.m1)(e, D.default, y.A);
+            n = (0, f.m1)(e, D.default, y.A);
         return null != t && t > 0
             ? k.intl.formatToPlainString(k.t.LYdVfN, { name: n, mentions: t })
             : k.intl.formatToPlainString(k.t.lLSbno, { name: n });

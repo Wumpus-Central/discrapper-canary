@@ -1,6 +1,6 @@
 l.d(t, { A: () => u });
-var i = l(512750),
-    n = l(17928),
+var n = l(512750),
+    i = l(17928),
     s = l(71393),
     r = l(294384),
     o = l(998418),
@@ -8,11 +8,11 @@ var i = l(512750),
     d = l(652215);
 function u(e, t) {
     let l = (0, o.Ay)(e, t),
-        u = (0, n.bG)([s.A], () => s.A.getGuild(e)?.features.has(d.GuildFeatures.GUILD_THEME) === !0, [e]),
-        c = t.skuId === i.d0,
+        u = (0, i.bG)([s.A], () => s.A.getGuild(e)?.features.has(d.GuildFeatures.GUILD_THEME) === !0, [e]),
+        c = t.skuId === n.d0,
         m = l.type !== a.b_.INACTIVE || (c && u),
         p = l.type === a.b_.TIER_OVERRIDE_ACTIVATED,
-        x = (0, r.Ay)(e, t, "GuildPowerupCardFooterAdmin"),
-        g = a.HO;
-    return { showToggleButton: (m || !x) && !p, showConfigureButton: m && g.has(t.skuId), isPowerupActive: m };
+        g = (0, r.Ay)(e, t, "GuildPowerupCardFooterAdmin"),
+        x = a.HO;
+    return { showToggleButton: (m || !g) && !p, showConfigureButton: m && x.has(t.skuId), isPowerupActive: m };
 }

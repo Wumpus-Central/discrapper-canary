@@ -107,8 +107,8 @@ function C(e) {
         V = n.useRef(null),
         K = n.useRef(S),
         [Y, Z] = n.useState(I),
-        [Q, q] = n.useState(!1),
-        [J, ee] = n.useState(!1),
+        [Q, J] = n.useState(!1),
+        [q, ee] = n.useState(!1),
         et = n.useRef(new Set()),
         el = n.useRef(!1),
         [ea, en] = n.useState(null),
@@ -436,7 +436,7 @@ function C(e) {
                     ea.addEventListener("seeked", n),
                     ea.duration > 0 && Z(ea.duration),
                     ea.readyState >= 1 && (ee(!0), V?.current?.seek(S)),
-                    q(!ea.paused),
+                    J(!ea.paused),
                     () => {
                         (ea.removeEventListener("play", e),
                             ea.removeEventListener("pause", t),
@@ -446,10 +446,10 @@ function C(e) {
                     }
                 );
             function e() {
-                (q(!0), et.current.forEach((e) => e.onPlay?.()));
+                (J(!0), et.current.forEach((e) => e.onPlay?.()));
             }
             function t() {
-                (q(!1), et.current.forEach((e) => e.onPause?.()));
+                (J(!1), et.current.forEach((e) => e.onPause?.()));
             }
             function l() {
                 null != ea && Z(ea.duration);
@@ -460,7 +460,7 @@ function C(e) {
             function n() {
                 el.current = !0;
             }
-        }, [ea, S, V, et, q, ee, Z, el]));
+        }, [ea, S, V, et, J, ee, Z, el]));
     let eU = n.useCallback((e) => {
             _((t) => ({ ...t, clipName: e }));
         }, []),
@@ -504,7 +504,7 @@ function C(e) {
                 useCurrentTime: eF,
                 duration: Y,
                 isPlaying: Q,
-                isLoaded: J,
+                isLoaded: q,
                 cropStart: G,
                 cropEnd: B,
                 cropDuration: eM,
@@ -551,7 +551,7 @@ function C(e) {
                 eF,
                 Y,
                 Q,
-                J,
+                q,
                 G,
                 B,
                 eM,

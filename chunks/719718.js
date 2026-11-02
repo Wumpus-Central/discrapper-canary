@@ -1,7 +1,7 @@
 a.d(t, { A: () => v, T: () => o });
 var r,
-    i = a(127639),
-    s = a(17928),
+    s = a(127639),
+    i = a(17928),
     c = a(73153),
     n = a(287809),
     d = a(474090),
@@ -21,7 +21,7 @@ let u = { isMuted: !1, progress: null },
     x = 0,
     m = null,
     g = !1;
-class A extends s.Ay.PersistedStore {
+class A extends i.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
     static migrations = [(e) => ({ ...e, progress: null })];
@@ -75,9 +75,9 @@ let v = new A(c.h, {
                 ? ((m = (function (e) {
                       let t = (0, d.ki)(n.default.getCurrentUser()),
                           a = {};
-                      for (let r of Object.values(i.V)) {
-                          let i = e[r];
-                          null == i || (0, l.tS)(r, i, { stats: _, hasNitro: t, savedCharacter: p }) || (a[r] = i);
+                      for (let r of Object.values(s.V)) {
+                          let s = e[r];
+                          null == s || (0, l.tS)(r, s, { stats: _, hasNitro: t, savedCharacter: p }) || (a[r] = s);
                       }
                       return a;
                   })(f.progress.selectedCharacterTraits)),

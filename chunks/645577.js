@@ -1,4 +1,4 @@
-t.d(n, { g: () => s });
-function s(e, n, t) {
-    return e ? (n.timestampSec >= n.duration ? 0 : n.timestampSec) : Math.max(n.timestampSec, t);
+n.d(t, { g: () => s });
+function s(e, t, n) {
+    return e ? (t.timestampSec >= t.duration ? 0 : t.timestampSec) : Math.max(t.timestampSec, n);
 }

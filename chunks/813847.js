@@ -1,23 +1,23 @@
 l.d(t, { e: () => o });
-var i = l(582128),
-    n = l(568065),
+var n = l(582128),
+    i = l(568065),
     s = l(959456),
     r = l(105292);
 function o(e, t, l) {
-    return i.useMemo(
+    return n.useMemo(
         () =>
             t.sourceEntitlement?.ends_at != null
                 ? { type: "expiring", expiringAt: t.sourceEntitlement.ends_at }
                 : l && null != e.storeRemovalDate
                   ? { type: "removing", removingAt: e.storeRemovalDate }
-                  : t.type === n.b_.LEVEL_ACTIVATED
+                  : t.type === i.b_.LEVEL_ACTIVATED
                     ? {
                           type: "active",
                           statusText: r.intl.formatToPlainString(s.default.WRRYUT, {
                               perkName: t.sourcePowerup?.title ?? r.intl.string(r.t.BfF6ED),
                           }),
                       }
-                    : t.type !== n.b_.INACTIVE
+                    : t.type !== i.b_.INACTIVE
                       ? { type: "active", statusText: r.intl.string(s.default.FFLkmx) }
                       : void 0,
         [t, l, e],

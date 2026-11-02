@@ -1,4 +1,4 @@
-n.d(t, { AB: () => v, AI: () => h, Xc: () => _, ae: () => m, g8: () => p, gF: () => N, gS: () => T, vz: () => f });
+n.d(t, { AB: () => v, AI: () => h, Xc: () => _, ae: () => f, g8: () => p, gF: () => N, gS: () => T, vz: () => m });
 var i,
     s = n(873298),
     r = n(253932),
@@ -81,7 +81,7 @@ function _(e) {
             return "";
     }
 }
-function f(e, t) {
+function m(e, t) {
     return {
         title: u.intl.string(e ? u.t.eYDA7D : u.t["9jYwjo"]),
         subtitle: u.intl.format(e ? u.t["c5/jDc"] : u.t.ajzh8S, { settingName: t }),
@@ -89,7 +89,7 @@ function f(e, t) {
         toastContent: u.intl.string(e ? u.t.AdpgML : u.t["Q7E+QF"]),
     };
 }
-function m(e, t) {
+function f(e, t) {
     return {
         title: u.intl.string(e ? u.t.jRx1Aa : u.t.S0Y0bh),
         subtitle: u.intl.format(e ? u.t.Fs96LO : u.t.GcoYX8, { settingName: t }),

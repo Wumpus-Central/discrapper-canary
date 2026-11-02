@@ -1,15 +1,15 @@
 a.d(t, { H: () => n });
 var r = a(477900);
 a(582128);
-var i = a(661531),
-    s = a(996682),
+var s = a(661531),
+    i = a(996682),
     c = a(27989);
 function n(e) {
     let {
             size: t = "md",
             width: a,
             height: n,
-            color: d = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: d = s.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: l = "",
             ...o
         } = e,
@@ -17,7 +17,7 @@ function n(e) {
         h = u?.width ?? a,
         f = u?.height ?? n;
     return (0, r.jsxs)("svg", {
-        ...(0, s.A)(o),
+        ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
         width: h,
         height: f,

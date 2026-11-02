@@ -5,8 +5,8 @@ var a = n(834730),
     r = n(59678);
 let i = /^(.*?)\s*\(([^()]+)\)$/,
     s = /^([\s\S]*?)\s\((exit \d+)\)$/,
-    u = /[[\]{}<>`\xab\xbb;$\\=]/,
-    o = /'[^']*'|"[^"]*"/,
+    o = /[[\]{}<>`\xab\xbb;$\\=]/,
+    u = /'[^']*'|"[^"]*"/,
     d = {
         "text-xs/normal": "text-xs/semibold",
         "text-sm/normal": "text-sm/semibold",
@@ -29,7 +29,7 @@ function f(e) {
     let { text: t, variant: n, prose: a } = e;
     if (!0 === a) return t;
     let d = (t.startsWith("$ ") ? s : i).exec(t);
-    return null == d || u.test(d[2]) || o.test(d[2])
+    return null == d || o.test(d[2]) || u.test(d[2])
         ? c(t, n)
         : (0, l.jsxs)(l.Fragment, {
               children: [

@@ -1,11 +1,11 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => o });
 var l = n(477900);
 n(582128);
 var a = n(503698),
     r = n.n(a),
     i = n(895253),
     s = n(59678);
-function u(e) {
+function o(e) {
     let { className: t, size: n = 20 } = e;
     return (0, l.jsxs)("svg", {
         className: t,

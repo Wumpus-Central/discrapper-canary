@@ -4,12 +4,12 @@ var l = n(582128),
 function r(e) {
     let [t, n] = l.useState(e),
         [r, i] = l.useState("idle"),
-        [s, u] = l.useState(e),
-        o = (0, a.j)();
+        [s, o] = l.useState(e),
+        u = (0, a.j)();
     return (
         s !== e
-            ? (u(e), i(o && e !== t ? "exit" : "idle"), o || n(e))
-            : o || ("idle" === r && t === s) || (n(s), i("idle")),
+            ? (o(e), i(u && e !== t ? "exit" : "idle"), u || n(e))
+            : u || ("idle" === r && t === s) || (n(s), i("idle")),
         l.useEffect(() => {
             if ("exit" !== r) return;
             let e = setTimeout(() => {

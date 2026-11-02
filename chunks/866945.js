@@ -14,11 +14,11 @@ var h = n(558001),
     g = n(323747);
 function E(e) {
     let { label: t, labelHook: n, count: r, dismissNotice: E, className: p, noticeType: _ } = e,
-        f = null != E;
+        m = null != E;
     s.useEffect(() => {
         (0, h.N)(_, C.YX.VIEWED);
     }, [_]);
-    let m = s.useCallback(() => {
+    let f = s.useCallback(() => {
             null != E && (E(), (0, h.N)(_, C.YX.DISMISS));
         }, [_, E]),
         T = s.useCallback(() => {
@@ -39,7 +39,7 @@ function E(e) {
                           })
                         : A.intl.format(t, { hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: T, children: e }, t) }),
             }),
-            f && (0, i.jsx)(d.D, { className: g.b, onClick: m, children: (0, i.jsx)(u.P, {}) }),
+            m && (0, i.jsx)(d.D, { className: g.b, onClick: f, children: (0, i.jsx)(u.P, {}) }),
         ],
     });
 }

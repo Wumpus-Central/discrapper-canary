@@ -2,8 +2,8 @@ n.d(t, { A: () => m });
 var r = n(477900),
     u = n(582128),
     l = n(858899),
-    s = n(866665),
-    i = n(408278),
+    i = n(866665),
+    s = n(408278),
     a = n(173936),
     o = n(738822),
     c = n(590202),
@@ -32,9 +32,9 @@ function m(e) {
               "data-testid": "video-quest-share-btn",
               "data-quest-id": n.id,
               style: { marginLeft: t ? "auto" : void 0, pointerEvents: "auto" },
-              children: (0, r.jsx)(s.m, {
+              children: (0, r.jsx)(i.m, {
                   text: p.intl.string(p.t.WmfZHZ),
-                  children: (0, r.jsx)(i.K, {
+                  children: (0, r.jsx)(s.K, {
                       variant: "overlay-secondary",
                       icon: a.LinkIcon,
                       "aria-label": p.intl.string(p.t.RDE0Sc),

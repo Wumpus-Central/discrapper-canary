@@ -26,8 +26,8 @@ function g(e) {
         E = (0, u.vM)(t);
     if (null == E) return null;
     let p = (0, l.Kj)(s),
-        { name: _, rarity: f } = E,
-        { color: m } = (0, u.ag)(f),
+        { name: _, rarity: m } = E,
+        { color: f } = (0, u.ag)(m),
         T = (0, r.M)(g) ? C : A,
         v = (p.size - p.offset - 2 * p.stroke) * 0.8,
         N = p.size - p.stroke,
@@ -40,7 +40,7 @@ function g(e) {
         children: [
             (0, i.jsx)("div", {
                 className: h.r5,
-                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? m : T.trophy, width: v, height: v }),
+                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? f : T.trophy, width: v, height: v }),
             }),
             !n &&
                 (0, i.jsx)("div", {
@@ -49,7 +49,7 @@ function g(e) {
                     children: (0, i.jsx)(o.LockIcon, { size: "custom", color: T.locked, ...x }),
                 }),
             n &&
-                f === u.md.LEGENDARY &&
+                m === u.md.LEGENDARY &&
                 (0, i.jsx)("div", { className: h.dq, style: I, children: (0, i.jsx)(d.A, { className: h.ox, ...x }) }),
         ],
     });

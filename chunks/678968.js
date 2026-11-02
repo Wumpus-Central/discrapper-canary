@@ -2,8 +2,8 @@ n.d(t, { A: () => g });
 var r = n(477900),
     u = n(582128),
     l = n(554830),
-    s = n(613373),
-    i = n(475815),
+    i = n(613373),
+    s = n(475815),
     a = n(738822),
     o = n(192444),
     c = n(291749),
@@ -35,8 +35,8 @@ function g(e) {
         T = (0, C.H)({ quest: h, onClose: m, sourceQuestContent: g }),
         R = u.useCallback(() => {
             if (D) {
-                let e = (0, i.qf)(t.current?.parentNode, t.current);
-                null != e && (0, i.sP)(e);
+                let e = (0, s.qf)(t.current?.parentNode, t.current);
+                null != e && (0, s.sP)(e);
             }
             (n(a.uF.VIDEO_MODAL_END_CARD, d.Cy.LEARN_MORE), T(a.uF.VIDEO_MODAL_END_CARD, d.Cy.OPEN_GAME_LINK));
         }, [D, t, T, n]),
@@ -49,9 +49,9 @@ function g(e) {
     return N
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(s.nY, { url: k }),
-                  (0, r.jsx)(s.KP, {}),
-                  (0, r.jsxs)(s.zj, {
+                  (0, r.jsx)(i.nY, { url: k }),
+                  (0, r.jsx)(i.KP, {}),
+                  (0, r.jsxs)(i.zj, {
                       orientation: p,
                       children: [
                           null != k &&
@@ -60,7 +60,7 @@ function g(e) {
                                   questContent: a.uF.VIDEO_MODAL_END_CARD,
                                   sourceQuestContent: g,
                                   children: (e) =>
-                                      (0, r.jsx)(s.Kb, {
+                                      (0, r.jsx)(i.Kb, {
                                           ref: (t) => {
                                               e.current = t;
                                           },
@@ -68,7 +68,7 @@ function g(e) {
                                           orientation: p,
                                       }),
                               }),
-                          (0, r.jsx)(s.lx, {
+                          (0, r.jsx)(i.lx, {
                               title: O,
                               subtitle: L,
                               ctaBtnLabel: h.config.ctaConfig.buttonLabel,
@@ -88,7 +88,7 @@ function g(e) {
                           questContent: a.uF.VIDEO_MODAL_END_CARD,
                           sourceQuestContent: g,
                           children: (e) =>
-                              (0, r.jsx)(s.pK, {
+                              (0, r.jsx)(i.pK, {
                                   ref: (t) => {
                                       e.current = t;
                                   },
@@ -96,7 +96,7 @@ function g(e) {
                               }),
                       }),
                   (0, r.jsx)("div", { className: S.MT, "data-testid": "discord-web-video-player-end-screen" }),
-                  (0, r.jsx)(s.OH, {
+                  (0, r.jsx)(i.OH, {
                       title: O,
                       subtitle: L,
                       icon: l.K,

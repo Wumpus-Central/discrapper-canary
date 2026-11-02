@@ -1,4 +1,4 @@
-n.d(t, { $7: () => l, X4: () => a, Xq: () => o, ZH: () => u });
+n.d(t, { $7: () => l, X4: () => a, Xq: () => u, ZH: () => o });
 var r = n(876230);
 let l = 400,
     i = {
@@ -38,7 +38,7 @@ let l = 400,
         [r.oA.MD]: { ...i },
         [r.oA.LG]: { ...i, barHeightPx: 72, iconSize: "lg", buttonHeightPx: 32 },
     },
-    o = {
+    u = {
         size: r.oA.SM,
         overrides: {
             barHeightPx: 32,
@@ -60,7 +60,7 @@ let l = 400,
             volumeFlexShrink: 0,
         },
     };
-function u(e, t) {
+function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = n ? r.oA.LG : (t?.size ?? e);
     return { size: l, config: { ...a[l], ...(!n ? t?.overrides : void 0) } };

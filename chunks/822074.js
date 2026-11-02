@@ -36,11 +36,11 @@ let S = {},
     y = {},
     M = [],
     b = {},
-    T = { status: "ok", lastRequest: null, lastResponse: null },
-    L = [],
+    L = { status: "ok", lastRequest: null, lastResponse: null },
+    T = [],
     R = [];
 function w() {
-    L = f.A.getProps()
+    T = f.A.getProps()
         .results.filter((e) => e.type === m.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -107,19 +107,19 @@ class k extends o.Ay.PersistedStore {
         return b;
     }
     channelAffinitiesStatus() {
-        return T;
+        return L;
     }
     shouldFetchChannelAffinities() {
         return !(
-            "fetching" === T.status ||
-            (null != T.lastResponse && Date.now() - T.lastResponse < 30 * _.A.Millis.SECOND)
+            "fetching" === L.status ||
+            (null != L.lastResponse && Date.now() - L.lastResponse < 30 * _.A.Millis.SECOND)
         );
     }
     defaultChannelIds(e) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: l, numChannels: s = 25 } = e,
             a = [];
         return (
-            t && (a = a.concat(L)),
+            t && (a = a.concat(T)),
             n && (a = a.concat(M.map((e) => e.channel_id))),
             l &&
                 (a = a.filter((e) => {
@@ -216,17 +216,17 @@ let D = new k(u.h, {
         null != n ? (y[t.id] = n) : delete y[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
-        T = { ...T, status: "fetching", lastRequest: Date.now() };
+        L = { ...L, status: "fetching", lastRequest: Date.now() };
     },
     RECEIVE_CHANNEL_AFFINITIES(e) {
         let { affinities: t, error: n } = e;
         if (null != n) {
-            ((M = []), (b = {}), (T = { ...T, status: "error", lastResponse: Date.now() }));
+            ((M = []), (b = {}), (L = { ...L, status: "error", lastResponse: Date.now() }));
             return;
         }
         ((M = t ?? []),
             (b = t?.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}) ?? {}),
-            (T = { ...T, status: "ok", lastResponse: Date.now() }));
+            (L = { ...L, status: "ok", lastResponse: Date.now() }));
     },
     REQUEST_CHANNEL_SUMMARIES_BULK(e) {
         let { channelIds: t, requestedAt: n } = e,

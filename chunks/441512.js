@@ -2,8 +2,8 @@ n.d(t, { A: () => P });
 var r = n(477900),
     u = n(582128),
     l = n(462180),
-    s = n(876230),
-    i = n(645577),
+    i = n(876230),
+    s = n(645577),
     a = n(613373),
     o = n(544180),
     c = n(723702),
@@ -55,21 +55,21 @@ function P(e) {
         q = (0, _.Kr)((e) => e.videoProgress[B.id] ?? _.yc, l.x),
         z = (0, _.Kr)((e) => e.setVideoProgress),
         { volume: X, muted: Z, setVolume: J, setMuted: ee } = (0, A.A)(),
-        et = (0, i.g)(K, q, G.progressSeconds),
+        et = (0, s.g)(K, q, G.progressSeconds),
         [en] = u.useState(() => o.A.getEffectiveConnectionSpeed()),
         er = Math.max(q.maxTimestampSec, G.progressSeconds),
         eu = K ? void 0 : (0, S.vd)(er, q.duration),
-        { videoAsset: el, videoAssetType: es } = (0, D.A)(H, en, et, M, !1),
-        ei = u.useCallback(
+        { videoAsset: el, videoAssetType: ei } = (0, D.A)(H, en, et, M, !1),
+        es = u.useCallback(
             (e) => {
                 let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
-                return t || null != es
+                return t || null != ei
                     ? (0, C.b)({ hasVideoAsset: t, playerState: n, pauseReason: r })
                     : (0, c.isWeb)()
                       ? N.intl.string(N.t["E1du/q"])
                       : N.intl.string(N.t["rStN/7"]);
             },
-            [es],
+            [ei],
         ),
         ea = (0, u.useRef)(null),
         [eo, ec] = u.useState(null),
@@ -101,13 +101,13 @@ function P(e) {
             videoRef: H,
             hlsRef: ea,
             videoSessionId: F,
-            videoAssetId: es,
+            videoAssetId: ei,
             sourceQuestContent: w,
             logger: eE,
             isFullEpisodeVideoQuest: W,
             listenForHlsErrors: !1,
         });
-    (0, R.A)({ videoAssetUrl: el?.url, videoRef: H, hls: eo, videoAssetType: es });
+    (0, R.A)({ videoAssetUrl: el?.url, videoRef: H, hls: eo, videoAssetType: ei });
     let ek =
             ((t = (0, _.Kr)((e) => e.transcript)),
             (u.useEffect(() => {
@@ -133,19 +133,19 @@ function P(e) {
         eM = u.useCallback(
             (e, t) => {
                 switch ((ex(e, t), e)) {
-                    case s.Q6.PLAYING:
+                    case i.Q6.PLAYING:
                         (H.current?.paused === !0 && eS(eQ.current), (eQ.current = null));
                         break;
-                    case s.Q6.PAUSED: {
+                    case i.Q6.PAUSED: {
                         let e = (function (e) {
                             switch (e) {
-                                case s.KB.USER:
+                                case i.KB.USER:
                                     return E.Yg.PAUSE_BUTTON;
-                                case s.KB.FOCUS:
+                                case i.KB.FOCUS:
                                     return E.Yg.LOST_FOCUS;
-                                case s.KB.VISIBILITY:
+                                case i.KB.VISIBILITY:
                                     return E.Yg.MODAL_CLOSED;
-                                case s.KB.PICTURE_IN_PICTURE:
+                                case i.KB.PICTURE_IN_PICTURE:
                                     return E.Yg.PICTURE_IN_PICTURE;
                                 default:
                                     return null;
@@ -159,7 +159,7 @@ function P(e) {
                                     isPlaying: !1,
                                 }));
                     }
-                    case s.Q6.ENDED:
+                    case i.Q6.ENDED:
                 }
             },
             [ex, eS, ev, eN],
@@ -250,7 +250,7 @@ function P(e) {
         persistPlayhead: !1,
         pauseOnLostVisibility: !K,
         autoFocus: y,
-        getPlaybackBlockedMessage: ei,
+        getPlaybackBlockedMessage: es,
         orientation: Q,
         videoUrlOverride: M,
         src: el?.url,

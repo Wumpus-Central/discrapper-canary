@@ -1,110 +1,110 @@
-n.d(t, { A: () => p });
-var s = n(477900),
+n.d(t, { A: () => x });
+var r = n(477900),
     l = n(582128),
-    r = n(477262),
-    a = n(432017),
-    i = n(81369),
-    c = n(265872),
-    o = n(980707),
+    a = n(477262),
+    i = n(432017),
+    s = n(81369),
+    o = n(265872),
+    c = n(980707),
     u = n(477782),
     d = n(717400),
-    m = n(99677),
-    f = n(663341),
-    h = n(809526),
-    x = n(105292);
+    f = n(99677),
+    m = n(663341),
+    p = n(809526),
+    h = n(105292);
 let g = [
     {
         id: "add-images-videos",
-        label: h.default["51+9lc"],
-        icon: r.s,
+        label: p.default["51+9lc"],
+        icon: a.s,
         accept: "image/*,video/*,.png,.jpg,.jpeg,.gif,.webp,.avif,.heic,.heif,.svg,.bmp,.mp4,.m4v,.mov,.webm,.mkv,.avi",
     },
     {
         id: "add-sounds",
-        label: h.default["10ljr2"],
-        icon: a.T,
+        label: p.default["10ljr2"],
+        icon: i.T,
         accept: "audio/*,.mp3,.wav,.ogg,.oga,.opus,.m4a,.aac,.flac,.weba,.webm,.aif,.aiff,.mid,.midi",
     },
-    { id: "add-other-files", label: h.default.aotDee, icon: i.H, accept: "" },
+    { id: "add-other-files", label: p.default.aotDee, icon: s.H, accept: "" },
 ];
-function p(e) {
+function x(e) {
     let {
             navId: t,
             disabled: n,
-            buttonClassName: r,
-            iconClassName: a,
-            onAddFiles: i,
-            onImport: p,
-            onSendToOtherProjects: v,
+            buttonClassName: a,
+            iconClassName: i,
+            onAddFiles: s,
+            onImport: x,
+            onSendToOtherProjects: j,
         } = e,
-        j = l.useRef(null),
-        N = l.useRef(null),
-        y = x.intl.string(x.t.d56gCa),
-        b = l.useCallback((e) => {
-            let t = j.current;
+        b = l.useRef(null),
+        v = l.useRef(null),
+        y = h.intl.string(h.t.d56gCa),
+        w = l.useCallback((e) => {
+            let t = b.current;
             null != t && ((t.accept = e), t.click());
         }, []),
-        w = l.useCallback(
+        C = l.useCallback(
             (e) => {
-                (i(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
+                (s(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
             },
-            [i],
+            [s],
         );
-    return (0, s.jsxs)(s.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, s.jsx)("input", {
-                ref: j,
+            (0, r.jsx)("input", {
+                ref: b,
                 type: "file",
                 multiple: !0,
                 hidden: !0,
-                onChange: w,
+                onChange: C,
                 tabIndex: -1,
                 "aria-hidden": !0,
             }),
-            (0, s.jsx)(c.Y, {
-                targetElementRef: N,
+            (0, r.jsx)(o.Y, {
+                targetElementRef: v,
                 position: "top",
                 align: "left",
-                animation: c.Y.Animation.NONE,
+                animation: o.Y.Animation.NONE,
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, s.jsx)(o.W, {
+                    return (0, r.jsx)(c.W, {
                         "data-menu-migrated": !0,
                         navId: t,
                         "aria-label": y,
                         onClose: n,
                         onSelect: n,
-                        children: (0, s.jsxs)(u.rX, {
+                        children: (0, r.jsxs)(u.rX, {
                             children: [
                                 g.map((e) =>
-                                    (0, s.jsx)(
+                                    (0, r.jsx)(
                                         u.Dr,
                                         {
                                             id: e.id,
-                                            label: x.intl.string(e.label),
+                                            label: h.intl.string(e.label),
                                             iconLeft: e.icon,
                                             leadingAccessory: { type: "icon", icon: e.icon },
-                                            action: () => b(e.accept),
+                                            action: () => w(e.accept),
                                         },
                                         e.id,
                                     ),
                                 ),
-                                null != p
-                                    ? (0, s.jsx)(u.Dr, {
+                                null != x
+                                    ? (0, r.jsx)(u.Dr, {
                                           id: "import-project",
-                                          label: x.intl.string(h.default["p/k5i7"]),
+                                          label: h.intl.string(p.default["p/k5i7"]),
                                           iconLeft: d.q,
                                           leadingAccessory: { type: "icon", icon: d.q },
-                                          action: p,
+                                          action: x,
                                       })
                                     : null,
-                                null != v
-                                    ? (0, s.jsx)(u.Dr, {
+                                null != j
+                                    ? (0, r.jsx)(u.Dr, {
                                           id: "send-to-other-projects",
-                                          label: x.intl.string(h.default["5HmLrK"]),
-                                          iconLeft: m.t,
-                                          leadingAccessory: { type: "icon", icon: m.t },
-                                          action: v,
+                                          label: h.intl.string(p.default["5HmLrK"]),
+                                          iconLeft: f.t,
+                                          leadingAccessory: { type: "icon", icon: f.t },
+                                          action: j,
                                       })
                                     : null,
                             ],
@@ -113,19 +113,19 @@ function p(e) {
                 },
                 children: (e, t) => {
                     let { isShown: l } = t;
-                    return (0, s.jsx)("button", {
+                    return (0, r.jsx)("button", {
                         ...e,
-                        ref: N,
+                        ref: v,
                         type: "button",
-                        className: r,
+                        className: a,
                         disabled: n,
                         "aria-label": y,
                         "aria-haspopup": "menu",
                         "aria-expanded": l,
-                        children: (0, s.jsx)(f.PlusLargeIcon, {
+                        children: (0, r.jsx)(m.PlusLargeIcon, {
                             size: "refresh_sm",
                             color: "currentColor",
-                            className: a,
+                            className: i,
                         }),
                     });
                 },

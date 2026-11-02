@@ -9,8 +9,8 @@ var r = n(477900),
     l = n(582128),
     i = n(503698),
     a = n.n(i),
-    o = n(941143),
-    u = n(621466),
+    u = n(941143),
+    o = n(621466),
     s = n(337836),
     c = n(17928),
     d = n(876230),
@@ -72,8 +72,8 @@ function V(e) {
             transcriptText: el,
             renderEndScreen: ei,
             renderVideo: ea = D.v,
-            onPlayerStateChange: eo,
-            onFullscreenChange: eu,
+            onPlayerStateChange: eu,
+            onFullscreenChange: eo,
             onVolumeChange: es,
             onMutedChange: ec,
             initialVolume: ed = 0.3,
@@ -133,7 +133,7 @@ function V(e) {
         { focused: te, focusedChanged: tt } = (0, I.A7)(),
         { visible: tn, visibleChanged: tr, targetRef: tl } = (0, I.O7)(),
         [ti, ta] = l.useState(n ? d.Q6.PLAYING : d.Q6.PAUSED),
-        [to, tu] = l.useState(!1),
+        [tu, to] = l.useState(!1),
         [ts, tc] = l.useState(!1),
         [td, tm] = l.useState(0),
         [tf, tp] = l.useState(null),
@@ -192,7 +192,7 @@ function V(e) {
             let { videoRef: t, src: n, fileSizeBytes: r } = e,
                 i = null != n && "" !== n,
                 a = (0, c.bG)([G.Ay], () => !!i && G.Ay.isVideoStatsEnabled(n)),
-                [o, u] = l.useState(null);
+                [u, o] = l.useState(null);
             return (
                 l.useEffect(() => {
                     if (!a) return;
@@ -203,7 +203,7 @@ function V(e) {
                     }
                     let l = new H.s(e, r ?? void 0);
                     return (
-                        l.startTracking(u, { emitInitial: !0 }),
+                        l.startTracking(o, { emitInitial: !0 }),
                         () => {
                             l.destroy();
                         }
@@ -217,7 +217,7 @@ function V(e) {
                 ),
                 {
                     showStats: a,
-                    videoStats: a ? o : null,
+                    videoStats: a ? u : null,
                     onCloseStats: l.useCallback(() => {
                         i && (0, G.Vh)(n, !1);
                     }, [n, i]),
@@ -237,8 +237,8 @@ function V(e) {
             onHlsInstance: eR,
             crossOrigin: eJ,
         }),
-        { isReady: no } = (0, A.A)({ videoRef: ne, hls: na, contentMetadata: e4, isHls: ni }),
-        nu = e8 && !no && !ni,
+        { isReady: nu } = (0, A.A)({ videoRef: ne, hls: na, contentMetadata: e4, isHls: ni }),
+        no = e8 && !nu && !ni,
         [ns, nc] = l.useState(null),
         [nd, nm] = l.useState(0),
         [nf, np] = l.useState(!1),
@@ -257,7 +257,7 @@ function V(e) {
     let nP = l.useCallback(
         function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            if (((tM.current = !0), ta(e), eo?.(e, t), null != t0.current))
+            if (((tM.current = !0), ta(e), eu?.(e, t), null != t0.current))
                 switch (e) {
                     case d.Q6.PLAYING:
                         (t9(null), t$(!0), t0.current.play());
@@ -269,7 +269,7 @@ function V(e) {
                         tV(!1);
                 }
         },
-        [eo],
+        [eu],
     );
     (l.useEffect(() => {
         if (!eO) return;
@@ -339,19 +339,19 @@ function V(e) {
         ));
     let nT = ts && tJ,
         nL = ti === d.Q6.ENDED,
-        nM = nT || ((ts || to || nL) && !nS);
+        nM = nT || ((ts || tu || nL) && !nS);
     function nk() {
         tc(!0);
     }
     function nj(e) {
-        ((0, u.vq)(e.relatedTarget, Node) && e.currentTarget.contains(e.relatedTarget)) || tc(!1);
+        ((0, o.vq)(e.relatedTarget, Node) && e.currentTarget.contains(e.relatedTarget)) || tc(!1);
     }
     let nD = l.useRef(!1);
     l.useEffect(() => {
         (nD.current && !nT && nN(), (nD.current = nT));
     }, [nT, nN]);
-    let nI = l.useRef(eu);
-    nI.current = eu;
+    let nI = l.useRef(eo);
+    nI.current = eo;
     let nB = l.useCallback(() => {
         let e = (0, S.qf)(t1.current);
         null == e || (0, S._U)(e) || (e.removeEventListener(S.Wb, nB), tq(!1), nI.current?.(!1));
@@ -593,7 +593,7 @@ function V(e) {
             },
             onClick: n_,
             crossOrigin: eJ ?? void 0,
-            src: ni || nu ? null : (e3 ?? null),
+            src: ni || no ? null : (e3 ?? null),
             onSourceError: function () {
                 return nl(d.SB.SOURCE_ERROR);
             },
@@ -629,13 +629,13 @@ function V(e) {
                     tabIndex: tF ? -1 : 0,
                     focusProps: tF ? void 0 : { ringTarget: tx },
                     onMouseEnter: function () {
-                        (tu(!0),
+                        (to(!0),
                             nC(!1),
                             (nw.current = performance.now()),
                             null != nA.current && clearTimeout(nA.current));
                     },
                     onMouseLeave: function () {
-                        (tu(!1), nC(!1));
+                        (to(!1), nC(!1));
                     },
                     "aria-label": tF ? void 0 : U.intl.string(U.t.RscU7I),
                     onClick: tF ? void 0 : n_,
@@ -685,14 +685,14 @@ function V(e) {
                                     children: (0, r.jsx)(K, { stats: nn, onClose: nr }),
                                 }),
                             null != eC &&
-                                (0, r.jsx)(o.animated.div, {
+                                (0, r.jsx)(u.animated.div, {
                                     className: O.MU,
                                     style: {
-                                        opacity: (0, o.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
-                                        visibility: (0, o.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                        opacity: (0, u.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
+                                        visibility: (0, u.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                             e < 0.1 ? "hidden" : "visible",
                                         ),
-                                        pointerEvents: (0, o.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                        pointerEvents: (0, u.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                             e < 0.3 ? "none" : "auto",
                                         ),
                                     },
@@ -719,11 +719,11 @@ function V(e) {
                                             tabIndex: -1,
                                             children: (0, r.jsx)("div", { className: O.BG }),
                                         }),
-                                        (0, r.jsx)(o.animated.div, {
+                                        (0, r.jsx)(u.animated.div, {
                                             className: a()(O.xr, ew, { [O.MZ]: "portrait" === i }),
                                             "data-testid": "discord-web-video-player-transcript",
                                             style: {
-                                                marginBottom: (0, o.to)(
+                                                marginBottom: (0, u.to)(
                                                     [nQ, nX],
                                                     (e, t) => `${e * nb.barHeightPx + t}px`,
                                                 ),
@@ -738,10 +738,10 @@ function V(e) {
                                     ],
                                 }),
                             tF &&
-                                (0, r.jsx)(o.animated.div, {
+                                (0, r.jsx)(u.animated.div, {
                                     className: O.Jp,
                                     style: {
-                                        opacity: (0, o.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
+                                        opacity: (0, u.to)([nQ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
                                     },
                                 }),
                             (0, r.jsx)(
@@ -762,12 +762,12 @@ function V(e) {
                             tX &&
                                 null != ns &&
                                 !nW &&
-                                (0, r.jsx)(o.animated.div, {
+                                (0, r.jsx)(u.animated.div, {
                                     className: O.o$,
                                     ref: nV,
                                     "data-testid": "discord-web-video-player-captions",
                                     style: {
-                                        translateY: (0, o.to)(
+                                        translateY: (0, u.to)(
                                             [nQ.to({ range: [0, 1], output: [-ny, -nb.barHeightPx] })],
                                             (e) => `${e}px`,
                                         ),
@@ -780,10 +780,10 @@ function V(e) {
                                     }),
                                 }),
                             tF &&
-                                (0, r.jsxs)(o.animated.div, {
+                                (0, r.jsxs)(u.animated.div, {
                                     className: O.r8,
                                     style: {
-                                        height: (0, o.to)(
+                                        height: (0, u.to)(
                                             [nQ.to({ range: [0, 1], output: [0, nb.barHeightPx] })],
                                             (e) => `${e}px`,
                                         ),
@@ -791,9 +791,9 @@ function V(e) {
                                     onFocus: nk,
                                     onBlur: nj,
                                     children: [
-                                        (0, r.jsx)(o.animated.div, {
+                                        (0, r.jsx)(u.animated.div, {
                                             style: {
-                                                transform: (0, o.to)(
+                                                transform: (0, u.to)(
                                                     [nQ.to({ range: [1, 0], output: [0, 1] })],
                                                     (e) => `translateY(-${e * ny}px)`,
                                                 ),
@@ -854,19 +854,19 @@ function V(e) {
                                                 }),
                                             }),
                                         }),
-                                        (0, r.jsx)(o.animated.div, {
+                                        (0, r.jsx)(u.animated.div, {
                                             className: O.uN,
                                             "data-testid": "discord-web-video-player-controls",
                                             style: {
-                                                paddingTop: (0, o.to)(
+                                                paddingTop: (0, u.to)(
                                                     [nQ.to({ range: [0, 1], output: [0, 1] })],
                                                     (e) => `${e * e * ny}px`,
                                                 ),
-                                                paddingBottom: (0, o.to)(
+                                                paddingBottom: (0, u.to)(
                                                     [nQ.to({ range: [0, 1], output: [0, 1] })],
                                                     (e) => `${e * e * ny}px`,
                                                 ),
-                                                pointerEvents: (0, o.to)(
+                                                pointerEvents: (0, u.to)(
                                                     [nQ.to({ range: [0, 1], output: [0, 1] })],
                                                     (e) => (e < 0.3 ? "none" : "auto"),
                                                 ),
@@ -904,10 +904,10 @@ function V(e) {
                                                     let e = !tW,
                                                         t = (0, S.qf)(t1.current);
                                                     (e && null != t
-                                                        ? ((0, S.tl)(t), t.addEventListener(S.Wb, nB), eu?.(!0))
+                                                        ? ((0, S.tl)(t), t.addEventListener(S.Wb, nB), eo?.(!0))
                                                         : e ||
                                                           null == t ||
-                                                          (t.removeEventListener(S.Wb, nB), eu?.(!1), (0, S.sP)(t)),
+                                                          (t.removeEventListener(S.Wb, nB), eo?.(!1), (0, S.sP)(t)),
                                                         tq(e));
                                                 },
                                                 handleSeekBackBtnClick: nF,

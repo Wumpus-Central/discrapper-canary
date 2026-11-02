@@ -8,14 +8,14 @@ var n = s(661531),
     c = s(975807),
     d = s(739010),
     u = s(105292);
-let N = {
+let m = {
     [d.PN.ALL_GOOD]: u.t["/Idfao"],
     [d.PN.LIMITED]: u.t.umleq4,
     [d.PN.VERY_LIMITED]: u.t.WBtMHf,
     [d.PN.AT_RISK]: u.t["7f+4Lg"],
     [d.PN.SUSPENDED]: u.t["0OONGB"],
 };
-var m = s(335891),
+var N = s(335891),
     E = s(259960),
     h = s(239093);
 function I() {
@@ -26,46 +26,46 @@ function I() {
                 termsOfService: h.d$.TOS_LINK,
                 communityGuidelines: h.d$.COMMUNITY_GUIDELINES,
             }),
-            status: N[d.PN.ALL_GOOD],
+            status: m[d.PN.ALL_GOOD],
             Icon: i.y,
             color: n.A.colors.STATUS_POSITIVE,
         },
         [d.PN.LIMITED]: {
             title: u.t.epkcmS,
             description: u.intl.string(u.t["774juc"]),
-            status: N[d.PN.LIMITED],
+            status: m[d.PN.LIMITED],
             Icon: r.E,
             color: n.A.colors.STATUS_WARNING,
         },
         [d.PN.VERY_LIMITED]: {
             title: u.t.crzE2X,
             description: u.intl.string(u.t["T/Ufh9"]),
-            status: N[d.PN.VERY_LIMITED],
+            status: m[d.PN.VERY_LIMITED],
             Icon: r.E,
             color: n.A.unsafe_rawColors.ORANGE_345,
         },
         [d.PN.AT_RISK]: {
             title: u.t.XRNVzO,
             description: u.intl.string(u.t["hbH+9S"]),
-            status: N[d.PN.AT_RISK],
+            status: m[d.PN.AT_RISK],
             Icon: r.E,
             color: n.A.colors.ICON_FEEDBACK_CRITICAL,
         },
         [d.PN.SUSPENDED]: {
             title: u.t.MExFkz,
             description: u.intl.string(u.t["2liUvt"]),
-            status: N[d.PN.SUSPENDED],
+            status: m[d.PN.SUSPENDED],
             Icon: a.a,
             color: n.A.colors.ICON_MUTED,
         },
     };
 }
 function g() {
-    let t = (0, m.K)();
-    return (0, E.v)() ? u.intl.formatToPlainString(N[t.state], { hook: (t) => t }) : u.intl.string(u.t.ZTNur7);
+    let t = (0, N.K)();
+    return (0, E.v)() ? u.intl.formatToPlainString(m[t.state], { hook: (t) => t }) : u.intl.string(u.t.ZTNur7);
 }
 function x() {
-    let t = (0, m.K)();
+    let t = (0, N.K)();
     if (!(0, E.v)()) return u.intl.string(u.t["9m2Bkk"]);
     switch (t.state) {
         case d.PN.ALL_GOOD:
@@ -112,6 +112,6 @@ let A = {
     },
     _ = { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: o.CircleQuestionIcon };
 function D() {
-    let t = (0, m.K)();
+    let t = (0, N.K)();
     return (0, E.v)() ? A[t.state] : _;
 }

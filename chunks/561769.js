@@ -14,8 +14,8 @@ var r,
     p = n(986630),
     g = n(623373),
     x = n(572595),
-    A = n(722258),
-    m = n(57020),
+    m = n(722258),
+    A = n(57020),
     _ = n(758836),
     h = n(652215);
 let E = i.createContext({
@@ -67,9 +67,9 @@ function y(e, t, n) {
         b = i.useRef(null);
     return i.useCallback(
         (r) => {
-            let i = (0, m.A)({ product: e });
+            let i = (0, A.A)({ product: e });
             ((b.current = r.currentTarget), n?.(), o)
-                ? (0, A.B)({
+                ? (0, m.B)({
                       skuId: e.skuId,
                       flattenVariants: f,
                       analyticsLocations: p,

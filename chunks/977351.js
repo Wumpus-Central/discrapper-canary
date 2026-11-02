@@ -934,15 +934,15 @@ let e6 = "playground-premium-tab-tooltip";
 n(321073);
 var e7 = n(896170),
     e3 = n(890497),
-    e8 = n(636537);
-async function e5() {
-    return (await e8.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
+    e5 = n(636537);
+async function e8() {
+    return (await e5.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
         let { id: t, name: n, type: o, source: l, end_date: a } = e;
         return { id: t, name: n, type: o, source: l, endDate: null != a ? new Date(a) : void 0 };
     });
 }
 async function e9(e) {
-    let t = await e8.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
+    let t = await e5.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
         n = new Map();
     for (let e of t.body) {
         let t = (0, k.ii)(D.m, e.properties),
@@ -1829,7 +1829,7 @@ let tr = {
             i.useEffect(() => {
                 let e = !0;
                 return (
-                    e5()
+                    e8()
                         .then((t) => {
                             e && n(t);
                         })

@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(536572),
     g = n(766172),
     x = n(758836),
-    A = n(652215),
-    m = n(202541),
+    m = n(652215),
+    A = n(202541),
     _ = n(105292);
 let h = function (e) {
     let {
@@ -28,7 +28,7 @@ let h = function (e) {
             fullWidth: k = !1,
             fullWidthLabel: R,
             giftRecipient: y,
-            giftingOrigin: j = m.vQ.SHOP_PAGE,
+            giftingOrigin: j = A.vQ.SHOP_PAGE,
             onTrackClick: T,
             tabIndex: S,
         } = e,
@@ -38,7 +38,7 @@ let h = function (e) {
         P = (0, v.A)();
     function N(e) {
         (e.stopPropagation(),
-            I.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            I.default.track(m.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: L?.sessionId,
                 sku_id: t.skuId,
                 page_section: L?.pageSection,
