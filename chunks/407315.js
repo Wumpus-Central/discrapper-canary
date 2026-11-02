@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => I, Q9: () => M, W: () => L }), n(321073));
+(n.d(t, { Ay: () => I, Q9: () => P, W: () => L }), n(321073));
 var l = n(626551),
     i = n(635377),
     r = n.n(i),
@@ -293,22 +293,24 @@ function w(e) {
 let O = new (r())(j);
 function L(e, t) {
     let n = (0, f.p0)(e);
-    if (null != n) return (0, f.tA)(n, t);
-    let l = 0;
-    for (let n of x.VW.nodes(e, {
+    return null != n ? (0, f.tA)(n, t) : M(e, t);
+}
+function M(e, t) {
+    let n = 0;
+    for (let l of x.VW.nodes(e, {
         at: { anchor: { path: E.fP, offset: 0 }, focus: t },
         mode: "lowest",
         match: (e) => x.l5.isText(e),
     })) {
-        let e = n[0].text;
-        x.PW.equals(n[1], t.path) && (e = e.substring(0, t.offset));
+        let e = l[0].text;
+        x.PW.equals(l[1], t.path) && (e = e.substring(0, t.offset));
         let i = e.match(/```/g);
-        l += i?.length ?? 0;
+        n += i?.length ?? 0;
     }
-    return l % 2 != 0;
+    return n % 2 != 0;
 }
-function M(e) {
+function P(e) {
     if (null == e.selection) return !1;
     let t = x.ZF.start(e.selection);
-    return L(e, t);
+    return M(e, t);
 }
