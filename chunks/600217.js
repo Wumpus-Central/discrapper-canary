@@ -7057,7 +7057,7 @@ class c_ extends f.PureComponent {
                             ? (0, p.jsxs)(f.Fragment, {
                                   children: [
                                       V.intl.format(V.t.ltVZcJ, { hours: t.expiresAt.diff(im()(), "h") }),
-                                      " \u2014\xa0",
+                                      (0, p.jsx)(f.Fragment, { children: " \u2014\xa0" }),
                                   ],
                               })
                             : null,
