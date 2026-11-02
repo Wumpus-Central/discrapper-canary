@@ -9180,7 +9180,7 @@ function oA(e) {
             null ==
             (i = (0, c.bG)([ti.Ay, lL.A], () => {
                 let e = ti.Ay.getProject(s);
-                return null == e || "guild" !== e.install_scope || null == e.guild_id
+                return null == e || "user" === e.install_scope || null == e.guild_id
                     ? null
                     : (lL.A.getGuild(e.guild_id) ?? null);
             }))
@@ -9188,7 +9188,7 @@ function oA(e) {
                 : { guildId: i.id, name: i.name },
         f = (0, c.cf)([ti.Ay, th.A, lL.A, oj.A], () => {
             let e = ti.Ay.getProject(s);
-            if (null == e || "guild" !== e.install_scope || null == e.guild_id) return { automod: !1, guildId: null };
+            if (null == e || "user" === e.install_scope || null == e.guild_id) return { automod: !1, guildId: null };
             let t =
                     e.supported_surfaces?.includes(eD.q7.AUTOMOD) === !0 ||
                     th.A.getPublishStatus(s)?.surface === "automod",
@@ -9257,7 +9257,7 @@ function oN(e) {
                                 l === r?.publishedRevision &&
                                 null != n &&
                                 null != a &&
-                                "guild" === a.install_scope &&
+                                "user" !== a.install_scope &&
                                 (0, ti.jf)(a),
                         };
                     },

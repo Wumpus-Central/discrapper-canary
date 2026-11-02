@@ -24,7 +24,7 @@ var i = n(615606),
     c = n(951178),
     u = n(652215);
 function _(e, t) {
-    return null == e || "guild" !== e.install_scope ? null : ((t ? e.preview_guild_id : null) ?? e.guild_id ?? null);
+    return null == e || "user" === e.install_scope ? null : ((t ? e.preview_guild_id : null) ?? e.guild_id ?? null);
 }
 let E = new Set([u.rbe.GUILD_DIRECTORY, u.rbe.GUILD_STORE]);
 function A(e, t) {
