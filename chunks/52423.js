@@ -1,4 +1,4 @@
-s.d(t, { A: () => Y });
+s.d(t, { w: () => X, A: () => ee });
 var n,
     r = s(477900),
     a = s(582128),
@@ -18,14 +18,14 @@ var n,
     A = s(730134),
     y = s(598047),
     x = s(414121),
-    I =
+    w =
         (((n = {})[(n.INITIALIZING = 0)] = "INITIALIZING"),
         (n[(n.PENDING_REMOTE_INIT = 1)] = "PENDING_REMOTE_INIT"),
         (n[(n.PENDING_TICKET = 2)] = "PENDING_TICKET"),
         (n[(n.PENDING_LOGIN = 3)] = "PENDING_LOGIN"),
         (n[(n.FINISH = 4)] = "FINISH"),
         n),
-    w = s(158390),
+    I = s(158390),
     C = s(636537),
     v = s(765548),
     _ = s(626584),
@@ -141,6 +141,15 @@ function Q(e) {
     });
 }
 function X(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        s = U.isPlatformEmbedded && H.Ay.supportsFeature(F.BYE.WEBAUTHN) ? H.Ay.webAuthnAuthenticate : K.J;
+    f.A.authenticatePasswordless({
+        authenticateFunc: s,
+        conditionalMediationAbortController: e,
+        isMultiAccount: t,
+    }).catch(() => {});
+}
+function Y(e) {
     let {
         state: t,
         cancel: s,
@@ -151,10 +160,10 @@ function X(e) {
         horizontal: o,
     } = e;
     switch (t.step) {
-        case I.INITIALIZING:
-        case I.PENDING_REMOTE_INIT: {
+        case w.INITIALIZING:
+        case w.PENDING_REMOTE_INIT: {
             let e = (0, r.jsx)(Q, {
-                    text: t.step === I.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
+                    text: t.step === w.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
                 }),
                 s = o
                     ? {
@@ -189,19 +198,7 @@ function X(e) {
                 d = (0, r.jsx)(p.Q, {
                     text: V.intl.string(V.t["/kpMDt"]),
                     textVariant: s.button,
-                    onClick: () =>
-                        (function (e) {
-                            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                                s =
-                                    U.isPlatformEmbedded && H.Ay.supportsFeature(F.BYE.WEBAUTHN)
-                                        ? H.Ay.webAuthnAuthenticate
-                                        : K.J;
-                            f.A.authenticatePasswordless({
-                                authenticateFunc: s,
-                                conditionalMediationAbortController: e,
-                                isMultiAccount: t,
-                            }).catch(() => {});
-                        })(a, l),
+                    onClick: () => X(a, l),
                     disabled: i,
                 });
             return o
@@ -213,7 +210,7 @@ function X(e) {
                       children: [e, c, (0, r.jsx)(m.B, { padding: 8, align: "center", children: d })],
                   });
         }
-        case I.PENDING_TICKET: {
+        case w.PENDING_TICKET: {
             let { user: e } = t;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -246,12 +243,12 @@ function X(e) {
                 ],
             });
         }
-        case I.PENDING_LOGIN:
-        case I.FINISH:
+        case w.PENDING_LOGIN:
+        case w.FINISH:
             return (0, r.jsx)(d.y, { type: d.y.Type.WANDERING_CUBES });
     }
 }
-function Y(e) {
+function ee(e) {
     let {
             onAuthenticateSuccess: t,
             conditionalMediationAbortController: s,
@@ -263,11 +260,11 @@ function Y(e) {
             let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 [n, r] = a.useState(0),
                 [i, l] = a.useState(!1),
-                [o, c] = a.useState({ step: I.INITIALIZING }),
+                [o, c] = a.useState({ step: w.INITIALIZING }),
                 d = a.useRef(null),
-                u = a.useMemo(() => new w.A(1500, 3e4), []),
+                u = a.useMemo(() => new I.A(1500, 3e4), []),
                 h = (0, v.A)(() => {
-                    (c({ step: I.INITIALIZING }),
+                    (c({ step: w.INITIALIZING }),
                         t
                             ? r((e) => e + 1)
                             : (M.info(
@@ -277,14 +274,14 @@ function Y(e) {
                 }),
                 p = a.useCallback(() => {
                     (M.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
-                        c({ step: I.INITIALIZING }),
+                        c({ step: w.INITIALIZING }),
                         u.pending || u.fail(h));
                 }, [h, u]);
             return (
                 a.useEffect(() => {
                     t &&
                         i &&
-                        o.step === I.INITIALIZING &&
+                        o.step === w.INITIALIZING &&
                         (M.info("reconnecting, now that document is visible"), l(!1), r((e) => e + 1));
                 }, [o, t, i, l]),
                 a.useEffect(() => {
@@ -328,13 +325,13 @@ function Y(e) {
                                 let e = await L.publicKeyFingerprint(g());
                                 if (e !== l.fingerprint) throw Error(`bad fingerprint ${e} !== ${l.fingerprint}`);
                                 (r("handshake complete awaiting remote auth."),
-                                    c({ step: I.PENDING_REMOTE_INIT, fingerprint: e }));
+                                    c({ step: w.PENDING_REMOTE_INIT, fingerprint: e }));
                                 return;
                             }
                             case "pending_login": {
                                 let t = l.ticket;
                                 if (null == t) return void p();
-                                (c({ step: I.PENDING_LOGIN, ticket: t }),
+                                (c({ step: w.PENDING_LOGIN, ticket: t }),
                                     C.Bo.post({
                                         url: F.Rsh.REMOTE_AUTH_LOGIN,
                                         body: { ticket: t },
@@ -355,7 +352,7 @@ function Y(e) {
                                     r("remote auth handshake started, awaiting ticket/cancel."));
                                 let e = l.encrypted_user_payload,
                                     t = await D(g(), e);
-                                c({ step: I.PENDING_TICKET, user: t });
+                                c({ step: w.PENDING_TICKET, user: t });
                                 return;
                             }
                             case "cancel":
@@ -386,7 +383,7 @@ function Y(e) {
                             i.send(JSON.stringify({ op: "init", encoded_public_key: o })),
                             (d.current = l));
                     }
-                    function w(e) {
+                    function I(e) {
                         (r(`disconnected, code: ${e.code} ${e.reason}`), p());
                     }
                     function v(e) {
@@ -395,13 +392,13 @@ function Y(e) {
                     return (
                         i.addEventListener("open", x),
                         i.addEventListener("message", y),
-                        i.addEventListener("close", w),
+                        i.addEventListener("close", I),
                         i.addEventListener("error", v),
                         () => {
                             (r("cleaning up"),
                                 i.removeEventListener("open", x),
                                 i.removeEventListener("message", y),
-                                i.removeEventListener("close", w),
+                                i.removeEventListener("close", I),
                                 i.removeEventListener("error", v),
                                 i.close(1e3),
                                 u.cancel(),
@@ -416,12 +413,12 @@ function Y(e) {
         })(t, (0, y.A)(), n),
         h = (function (e) {
             switch (e) {
-                case I.INITIALIZING:
-                case I.PENDING_REMOTE_INIT:
+                case w.INITIALIZING:
+                case w.PENDING_REMOTE_INIT:
                     return 0;
-                case I.PENDING_TICKET:
-                case I.PENDING_LOGIN:
-                case I.FINISH:
+                case w.PENDING_TICKET:
+                case w.PENDING_LOGIN:
+                case w.FINISH:
                     return 1;
             }
         })(d.step);
@@ -433,7 +430,7 @@ function Y(e) {
             steps: [0, 1],
             children: (0, r.jsx)("div", {
                 className: Z.vP,
-                children: (0, r.jsx)(X, {
+                children: (0, r.jsx)(Y, {
                     state: d,
                     cancel: u,
                     conditionalMediationAbortController: s,

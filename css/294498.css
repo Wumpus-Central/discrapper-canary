@@ -33,6 +33,17 @@
     width: 100%
 }
 
+.mobilePasskeyButton__1d5fc {
+    display: none
+}
+
+@media (max-width:830px) {
+    .mobilePasskeyButton__1d5fc {
+        display: block;
+        margin-bottom: var(--space-8)
+    }
+}
+
 .goBackButton__1d5fc {
     margin-bottom: 16px;
     padding-inline-start: 0
@@ -53,4 +64,4 @@
     top: var(--custom-mobile-web-handoff-link-mobile-web-handoff-height) !important
 }
 
-/*# sourceMappingURL=294498.7be2d9825667eb35.css.map*/
+/*# sourceMappingURL=294498.500b883e4d1ffa7e.css.map*/

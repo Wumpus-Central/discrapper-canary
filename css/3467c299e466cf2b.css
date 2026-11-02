@@ -33,13 +33,13 @@
     flex: 1 1 0;
     flex-direction: column;
     gap: 1px;
-    min-width: 0
+    min-width: 0;
+    padding-inline-end: var(--space-24)
 }
 
 .title__25dca {
     -webkit-line-clamp: 2;
-    line-clamp: 2;
-    width: 165px
+    line-clamp: 2
 }
 
 .body__25dca,
@@ -69,7 +69,7 @@
     color: var(--interactive-icon-default);
     cursor: pointer;
     display: flex;
-    inset-inline-end: -4px;
+    inset-inline-end: 0;
     justify-content: center;
     position: absolute;
     top: 2px;
@@ -83,8 +83,9 @@
 .cardPlacement__1a480 {
     box-sizing: border-box;
     margin-block: var(--space-sm) var(--space-md);
-    margin-inline: var(--space-sm) var(--space-xxs);
+    margin-inline: var(--space-8) 0;
+    max-width: calc(var(--custom-member-list-width) - var(--space-8)*2);
     --custom-contextual-referral-icon-size: 44px
 }
 
-/*# sourceMappingURL=84837186c4f2e7ea.css.map*/
+/*# sourceMappingURL=3467c299e466cf2b.css.map*/

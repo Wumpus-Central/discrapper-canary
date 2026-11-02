@@ -28,8 +28,8 @@
     box-sizing: border-box;
     flex-shrink: 0;
     margin-block: var(--space-sm) var(--space-md);
-    margin-inline: var(--space-sm);
-    max-width: calc(var(--custom-member-list-width) - var(--space-sm)*2);
+    margin-inline: var(--space-8) 0;
+    max-width: calc(var(--custom-member-list-width) - var(--space-8)*2);
     --custom-contextual-referral-icon-size: 44px
 }
 
@@ -836,4 +836,4 @@
     border-top: 1px solid var(--app-frame-border)
 }
 
-/*# sourceMappingURL=4e68e4446428dfc0.css.map*/
+/*# sourceMappingURL=0ce3f7252fab90d9.css.map*/
