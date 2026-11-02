@@ -4,15 +4,15 @@ var n = l(477900),
     a = l(17928),
     r = l(189213),
     u = l(331322),
-    o = l(103557),
-    d = l(95477),
+    d = l(103557),
+    o = l(95477),
     s = l(890497),
     c = l(548118),
     p = l(71393),
     f = l(711014),
     h = l(951178),
-    m = l(246338),
-    g = l(73153),
+    g = l(246338),
+    m = l(73153),
     v = l(195880),
     C = l(322227),
     k = l(642785),
@@ -22,7 +22,7 @@ var n = l(477900),
     w = l(105292);
 let j = " (Copy)",
     y = new Map();
-g.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
+m.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
     let { nonce: t, projectId: l, wsTicket: n } = e;
     y.get(t)?.(l, n);
 });
@@ -57,7 +57,7 @@ async function N(e, t, l) {
         : (n.ok ? (0, G.A)(n.projectId, "remix") : (0, T.P0)({ text: n.message, variant: "critical" }), n);
 }
 function O(e) {
-    let { project: t, currentGuildId: l, transitionState: g, onClose: A } = e,
+    let { project: t, currentGuildId: l, transitionState: m, onClose: A } = e,
         [S, E] = i.useState(l),
         [I, M] = i.useState(""),
         [R, T] = i.useState(() => {
@@ -85,8 +85,8 @@ function O(e) {
                                         r = (0, k.gA)(e.id);
                                     r.catch(() => void 0);
                                     let u = null,
-                                        o = null,
-                                        d = !1,
+                                        d = null,
+                                        o = !1,
                                         s = !1;
                                     function c(e) {
                                         return (
@@ -95,12 +95,12 @@ function O(e) {
                                     }
                                     let p = (0, v.m)();
                                     y.set(p, (e, t) => {
-                                        (y.delete(p), (o = e), (0, k.vG)(e, t), c(e));
+                                        (y.delete(p), (d = e), (0, k.vG)(e, t), c(e));
                                     });
                                     let f = (0, _.iR)({
                                         name: l,
                                         guild_id: t,
-                                        install_scope: e.install_scope,
+                                        install_scope: e.install_scope ?? "guild",
                                         remix_source_project_id: e.id,
                                         nonce: p,
                                     }).then(
@@ -111,15 +111,15 @@ function O(e) {
                                             c(e.id),
                                             e
                                         ),
-                                        () => (y.delete(p), null != o && (0, C.closeConnection)(o), null),
+                                        () => (y.delete(p), null != d && (0, C.closeConnection)(d), null),
                                     );
                                     async function h() {
-                                        d = !0;
+                                        o = !0;
                                         let e = await f;
                                         if (null == e) return { ok: !1, message: a, kept: !1 };
                                         let l = await c(e.id);
                                         return "unreachable" === l
-                                            ? ((u = null), (d = !1), { ok: !1, message: a, kept: !0 })
+                                            ? ((u = null), (o = !1), { ok: !1, message: a, kept: !0 })
                                             : "rejected" === l
                                               ? (i?.(),
                                                 (0, C.closeConnection)(e.id),
@@ -132,7 +132,7 @@ function O(e) {
                                         name: l,
                                         open: h,
                                         abandon: function () {
-                                            d ||
+                                            o ||
                                                 s ||
                                                 ((s = !0),
                                                 f.then((e) => {
@@ -161,7 +161,7 @@ function O(e) {
             let e = [];
             for (let t of f.Ay.getFlattenedGuildIds()) {
                 let l = p.A.getGuild(t);
-                null != l && (0, m.dd)(l, "ConjureRemixModal") && e.push(l);
+                null != l && (0, g.dd)(l, "ConjureRemixModal") && e.push(l);
             }
             return e;
         }),
@@ -186,7 +186,7 @@ function O(e) {
             }
         }, [W, S, R, q, I, A]);
     return (0, n.jsx)(r.a, {
-        transitionState: g,
+        transitionState: m,
         onClose: A,
         title: w.intl.string(x.default["276ll6"]),
         subtitle: w.intl.formatToPlainString(x.default["QN8T+C"], { projectName: t.name }),
@@ -198,7 +198,7 @@ function O(e) {
         children: (0, n.jsxs)(u.B, {
             gap: 16,
             children: [
-                (0, n.jsx)(o.f, {
+                (0, n.jsx)(d.f, {
                     label: w.intl.string(x.default.cvvDlE),
                     placeholder: w.intl.string(x.default.u3W0k0),
                     value: I,
@@ -206,7 +206,7 @@ function O(e) {
                     autoFocus: !0,
                     disabled: G,
                 }),
-                (0, n.jsx)(d.k, {
+                (0, n.jsx)(o.k, {
                     label: w.intl.string(x.default.PuVQeX),
                     value: R,
                     onChange: T,

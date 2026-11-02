@@ -1,4 +1,4 @@
-(n.d(t, { Lj: () => f, OG: () => E, Qu: () => h, l$: () => A }), n(321073));
+(n.d(t, { Lj: () => I, OG: () => E, Qu: () => f, l$: () => h, mO: () => A }), n(321073));
 var i = n(582128),
     r = n(17928),
     a = n(287809),
@@ -14,25 +14,24 @@ function E(e, t) {
     return null == n ? null : { start: t - n[1].length - 1, end: t, text: n[1] };
 }
 function A(e, t, n) {
-    let i = n.toLowerCase();
+    return (
+        !!("" === t || e.username.toLowerCase().startsWith(t)) ||
+        [(0, s.mG)(e), n ?? ""]
+            .join(" ")
+            .toLowerCase()
+            .split(/\s+/)
+            .some((e) => e.startsWith(t))
+    );
+}
+function h(e, t, n) {
     return [
-        ...e
-            .filter(
-                (e) =>
-                    !!("" === i || e.username.toLowerCase().startsWith(i)) ||
-                    (0, s.mG)(e)
-                        .toLowerCase()
-                        .split(/\s+/)
-                        .some((e) => e.startsWith(i)),
-            )
-            .slice(0, 8)
-            .map((e) => ({ kind: "user", user: e })),
+        ...e.slice(0, 8).map((e) => ({ kind: "user", user: e })),
         ...(0, o.dG)(t, n)
             .slice(0, 8)
             .map((e) => ({ kind: "file", file: e })),
     ];
 }
-function h(e) {
+function f(e) {
     let t = i.useMemo(
         () => [
             ...new Set(
@@ -60,7 +59,7 @@ function h(e) {
         (0, r.bG)([a.default], () => t.filter((e) => null != a.default.getUser(e)).length, [t])
     );
 }
-function f(e) {
+function I(e) {
     var t, n;
     return (
         (t = (e) => a.default.getUser(e)),

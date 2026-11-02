@@ -587,7 +587,7 @@ function ey(e) {
                         V = a.useRef(!1),
                         q = y.trim(),
                         G = null != i && (0, er.IU)(i),
-                        X = null != i && "user" !== i.install_scope,
+                        X = null != i && "guild" === i.install_scope,
                         J = X && null != l && (0, er.RX)(i),
                         { isPublic: Q, isGuildCollaboration: K } = (0, eb.n5)(A),
                         W = null != i && q !== b,

@@ -10,9 +10,9 @@ var t = n(477900),
     d = n(71393),
     m = n(576705),
     x = n(961553),
-    h = n(371169),
-    p = n(951178),
-    g = n(277085),
+    g = n(371169),
+    h = n(951178),
+    p = n(277085),
     v = n(811587),
     j = n(587895),
     f = n(808728),
@@ -24,11 +24,11 @@ var E = n(652215),
     y = n(809526),
     P = n(105292);
 let _ = [
-        [p.q7.BOT, y.default.UnoAgo],
-        [p.q7.ACTIVITY, y.default["I88/iG"]],
-        [p.q7.VOICE_CHANNEL, y.default.skjf5I],
-        [p.q7.PROFILE_WIDGET, y.default.gXY1x1],
-        [p.q7.AUTOMOD, y.default.Q9ruoM],
+        [h.q7.BOT, y.default.UnoAgo],
+        [h.q7.ACTIVITY, y.default["I88/iG"]],
+        [h.q7.VOICE_CHANNEL, y.default.skjf5I],
+        [h.q7.PROFILE_WIDGET, y.default.gXY1x1],
+        [h.q7.AUTOMOD, y.default.Q9ruoM],
     ],
     I = { screen_capture: y.default["8/7kE7"], connect_user_to_voice: y.default.uvDWXa };
 var k = n(503698),
@@ -56,11 +56,11 @@ var k = n(503698),
     Q = n(536791);
 let $ = { screen_capture: q.k, connect_user_to_voice: L.H },
     J = {
-        [p.q7.BOT]: S.RobotIcon,
-        [p.q7.ACTIVITY]: D.b,
-        [p.q7.VOICE_CHANNEL]: L.H,
-        [p.q7.PROFILE_WIDGET]: G.b,
-        [p.q7.AUTOMOD]: U.ShieldIcon,
+        [h.q7.BOT]: S.RobotIcon,
+        [h.q7.ACTIVITY]: D.b,
+        [h.q7.VOICE_CHANNEL]: L.H,
+        [h.q7.PROFILE_WIDGET]: G.b,
+        [h.q7.AUTOMOD]: U.ShieldIcon,
     };
 function ee(e) {
     let { project: l, panel: n } = e,
@@ -138,7 +138,7 @@ function ee(e) {
                                       value: n.name,
                                       onChange: n.setName,
                                       error: n.nameError,
-                                      maxLength: p.eq,
+                                      maxLength: h.eq,
                                       disabled: n.saving,
                                       fullWidth: !0,
                                   }),
@@ -159,7 +159,7 @@ function ee(e) {
                                       placeholder: P.intl.string(y.default["I+3UTL"]),
                                       value: c.description,
                                       onChange: c.setDescription,
-                                      maxLength: p.HR,
+                                      maxLength: h.HR,
                                       disabled: n.saving,
                                       rows: 4,
                                       maxRows: 6,
@@ -364,12 +364,12 @@ function er(e) {
                 Z = R && (0, c.PV)(e),
                 B = (R ? e.preview_supported_surfaces : e.supported_surfaces) ?? [],
                 W = M.trim(),
-                V = Z ? (0, g.p)(W) : null,
+                V = Z ? (0, p.p)(W) : null,
                 Y = l.status?.previewAppChannels ?? [],
-                K = 0 === Y.length && B.includes(p.q7.APP_CHANNEL) ? [P.intl.string(y.default.xI4N6Q)] : Y,
+                K = 0 === Y.length && B.includes(h.q7.APP_CHANNEL) ? [P.intl.string(y.default.xI4N6Q)] : Y,
                 [X, Q] = i.useState(!1),
                 $ =
-                    Z && K.length > 0 && "user" !== e.install_scope && e.guild_id === l.guildId
+                    Z && K.length > 0 && "guild" === e.install_scope && e.guild_id === l.guildId
                         ? (e.guild_id ?? null)
                         : null,
                 J = (0, a.bG)(
@@ -388,7 +388,7 @@ function er(e) {
                 if (F || null != V) return !1;
                 H(!0);
                 try {
-                    return (Z && (W !== e.name || w.changed) && (await (0, h.CW)(e.id, { ...w.changes, name: W })), !0);
+                    return (Z && (W !== e.name || w.changed) && (await (0, g.CW)(e.id, { ...w.changes, name: W })), !0);
                 } finally {
                     H(!1);
                 }
@@ -414,7 +414,7 @@ function er(e) {
                 }),
                 devicePermissions: R ? O : [],
                 note:
-                    R && "user" !== e.install_scope && B.includes(p.q7.AUTOMOD)
+                    R && "guild" === e.install_scope && B.includes(h.q7.AUTOMOD)
                         ? P.intl.string(y.default.bljqPk)
                         : null,
                 sharing:
