@@ -82,7 +82,7 @@ function T(e) {
             });
     }, [e]);
 }
-var N = t(297264),
+var N = t(534514),
     k = t(62010),
     C = t(890856),
     A = t(763811);
@@ -753,7 +753,7 @@ function eC(e) {
                         align: "center",
                         gap: 8,
                         children: [
-                            (0, r.jsx)(N.D, { variant: "heading-xl/normal", color: "text-strong", children: n }),
+                            (0, r.jsx)(N.D, { variant: "heading-xl/medium", color: "text-strong", children: n }),
                             null != s && (0, r.jsx)(eg.A, { badge: s }),
                         ],
                     }),
@@ -1017,7 +1017,7 @@ function e6(e) {
     }, [n, i]);
     return (0, r.jsxs)(r.Fragment, { children: [t, (0, r.jsx)(eY.F, { component: "div", children: o })] });
 }
-function e8(e) {
+function e5(e) {
     let { decoration: n } = e,
         t = n.component;
     return (0, r.jsx)("div", {
@@ -1026,7 +1026,7 @@ function e8(e) {
         children: (0, r.jsx)(t, {}),
     });
 }
-function e5(e) {
+function e8(e) {
     let { notice: n, children: t, useObscuredNotice: i } = e,
         s = l.useRef(null),
         a = i?.();
@@ -1056,7 +1056,7 @@ function e7(e) {
     return (0, r.jsxs)("div", {
         className: e1.LZ,
         children: [
-            null != t && (0, r.jsx)(e8, { decoration: t }),
+            null != t && (0, r.jsx)(e5, { decoration: t }),
             (0, r.jsx)(eJ.F, {
                 forceLevel: 2,
                 children: n.map((e, t) =>
@@ -1075,7 +1075,7 @@ function e2(e) {
         { layout: l } = n;
     if ((0, i.zS)(l))
         return (0, r.jsx)(
-            e5,
+            e8,
             {
                 notice: n.notice,
                 useObscuredNotice: n.useObscuredNotice,

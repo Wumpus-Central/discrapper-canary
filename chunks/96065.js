@@ -1,4 +1,4 @@
-l.d(t, { A: () => e5 });
+l.d(t, { A: () => e2 });
 var a = l(477900),
     n = l(582128),
     i = l(621466),
@@ -307,7 +307,7 @@ var $ = l(17928),
     B = l(866665),
     H = l(408278),
     X = l(548411),
-    F = l(297264),
+    F = l(534514),
     W = l(778712),
     V = l(429913),
     K = l(47167),
@@ -1262,7 +1262,7 @@ function e1(e) {
         a = en.intl.formatToPlainString(en.t.geSp4K, { seconds: e % 60 });
     return `${l} ${a}`;
 }
-function e2(e) {
+function e5(e) {
     let { voiceAudioTracks: t, transitionState: l } = e,
         {
             useCurrentTime: i,
@@ -1637,7 +1637,7 @@ function e2(e) {
         ],
     });
 }
-function e5(e) {
+function e2(e) {
     let { transitionState: t, onBack: l } = e,
         {
             cropStart: m,
@@ -1774,7 +1774,7 @@ function e5(e) {
                                       }),
                                       (0, a.jsx)("div", {
                                           className: eo.fL,
-                                          children: (0, a.jsx)(e2, { transitionState: t, voiceAudioTracks: R }),
+                                          children: (0, a.jsx)(e5, { transitionState: t, voiceAudioTracks: R }),
                                       }),
                                   ],
                               }),

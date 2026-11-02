@@ -6,7 +6,7 @@ var i = s(477900),
     r = s(862482),
     c = s(935462),
     o = s(289873),
-    d = s(297264),
+    d = s(534514),
     u = s(834730),
     m = s(821609),
     E = s(793574),
@@ -199,7 +199,7 @@ function D(n) {
                                         children: [
                                             (0, i.jsxs)(d.D, {
                                                 className: t()(R.wx, { [R.k]: na }, F),
-                                                variant: "heading-xl/bold",
+                                                variant: "heading-xl/semibold",
                                                 children: [e, K ? (0, i.jsx)(p.A, { className: R.TN }) : null],
                                             }),
                                             nj ? (0, i.jsx)(U, { affinities: nf }) : void 0,

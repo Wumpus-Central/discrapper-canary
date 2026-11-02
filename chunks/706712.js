@@ -188,7 +188,7 @@ function y(e) {
                     " ",
                     (0, i.jsx)(o.E, {
                         tag: "span",
-                        variant: "text-md/bold",
+                        variant: "text-md/semibold",
                         color: a < 30 ? "text-feedback-critical" : a < 45 ? "text-feedback-warning" : "text-strong",
                         children: a.toFixed(2),
                     }),
@@ -202,7 +202,7 @@ function y(e) {
                     " ",
                     (0, i.jsx)(o.E, {
                         tag: "span",
-                        variant: "text-md/bold",
+                        variant: "text-md/semibold",
                         color: h < 2 ? "text-feedback-critical" : h < 5 ? "text-feedback-warning" : "text-strong",
                         children: f.current,
                     }),
@@ -220,7 +220,7 @@ function y(e) {
                             asContainer: !0,
                             children: (0, i.jsx)(o.E, {
                                 tag: "span",
-                                variant: "text-xs/bold",
+                                variant: "text-xs/semibold",
                                 color: "text-feedback-critical",
                                 className: p.af,
                                 children: "(Backgrounded)",
@@ -279,7 +279,7 @@ function y(e) {
                                 asContainer: !0,
                                 children: (0, i.jsx)(o.E, {
                                     tag: "span",
-                                    variant: "text-xs/bold",
+                                    variant: "text-xs/semibold",
                                     color: "text-feedback-critical",
                                     className: p.af,
                                     children: "(Backgrounded)",
@@ -369,7 +369,7 @@ function b(e) {
                                               (0, i.jsx)("td", {
                                                   children: (0, i.jsxs)(o.E, {
                                                       tag: "span",
-                                                      variant: "text-xs/bold",
+                                                      variant: "text-xs/semibold",
                                                       color: "text-default",
                                                       children: [n.toFixed(2), "ms"],
                                                   }),
@@ -445,7 +445,7 @@ function w(e) {
                                               (0, i.jsx)("td", {
                                                   children: (0, i.jsx)(o.E, {
                                                       tag: "span",
-                                                      variant: "text-xs/bold",
+                                                      variant: "text-xs/semibold",
                                                       color: "text-default",
                                                       children: n,
                                                   }),

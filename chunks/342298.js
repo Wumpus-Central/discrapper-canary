@@ -6,7 +6,7 @@ var n = a(477900),
     r = a(284009),
     c = a.n(r),
     d = a(43990),
-    h = a(297264),
+    h = a(534514),
     o = a(28863),
     u = a(559106),
     m = a(939249),
@@ -76,7 +76,7 @@ class g extends s.PureComponent {
                 ? (l = `url("${e}")`)
                 : null != c &&
                   (a = (0, n.jsx)(h.D, {
-                      variant: "heading-xxl/normal",
+                      variant: "heading-xxl/medium",
                       color: "text-overlay-light",
                       className: v.nX,
                       children: (0, x.oN)(c),

@@ -69,7 +69,7 @@ let U = function (e) {
                                     children: (0, i.jsx)(N.A, { dataPoints: e.pings, width: 258, height: 80 }),
                                 }),
                                 (0, i.jsx)(f.E, {
-                                    variant: "text-sm/bold",
+                                    variant: "text-sm/semibold",
                                     color: "text-default",
                                     className: L.VU,
                                     children: D.A.getShortHostname(t),
@@ -174,7 +174,7 @@ let U = function (e) {
         ],
     });
 };
-var P = n(297264),
+var P = n(534514),
     b = n(939249),
     G = n(624479),
     F = n(957565),
@@ -198,7 +198,7 @@ function W(e) {
     return (0, i.jsxs)("div", {
         className: B.kL,
         children: [
-            (0, i.jsx)(P.D, { variant: "text-sm/bold", color: "text-strong", children: x.intl.string(x.t.cTQI5t) }),
+            (0, i.jsx)(P.D, { variant: "text-sm/semibold", color: "text-strong", children: x.intl.string(x.t.cTQI5t) }),
             (0, i.jsx)(f.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",

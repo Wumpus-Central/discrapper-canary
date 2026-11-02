@@ -89,13 +89,9 @@
 }
 
 .listTitle__664ff {
-    padding-top: 24px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .listTitle__664ff {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    padding-top: 24px;
     text-transform: none
 }
 
@@ -183,4 +179,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=703540.f6ec734006a248dd.css.map*/
+/*# sourceMappingURL=703540.f15559e4e809a305.css.map*/

@@ -1,61 +1,61 @@
-t.d(n, { KP: () => f, Kb: () => x, OH: () => M, lx: () => j, nY: () => S, pK: () => h, zj: () => g });
-var s = t(477900),
-    l = t(582128),
-    r = t(503698),
-    a = t.n(r),
-    c = t(661531),
-    u = t(297264),
-    i = t(939249),
-    m = t(267286),
-    d = t(105292),
-    o = t(862649);
+n.d(t, { KP: () => f, Kb: () => x, OH: () => M, lx: () => j, nY: () => S, pK: () => h, zj: () => g });
+var s = n(477900),
+    l = n(582128),
+    r = n(503698),
+    a = n.n(r),
+    c = n(661531),
+    u = n(534514),
+    i = n(939249),
+    m = n(267286),
+    d = n(105292),
+    o = n(862649);
 function S(e) {
-    let { url: n } = e;
-    return null == n ? null : (0, s.jsx)("img", { src: n, alt: "", className: o.bU });
+    let { url: t } = e;
+    return null == t ? null : (0, s.jsx)("img", { src: t, alt: "", className: o.bU });
 }
 function f() {
     return (0, s.jsx)("div", { className: o.MM, "data-testid": "discord-web-video-player-end-screen" });
 }
 function g(e) {
-    let { orientation: n, children: t } = e;
-    return (0, s.jsx)("div", { className: a()(o.Pb, { [o.II]: "portrait" === n }), children: t });
+    let { orientation: t, children: n } = e;
+    return (0, s.jsx)("div", { className: a()(o.Pb, { [o.II]: "portrait" === t }), children: n });
 }
 function x(e) {
-    let { url: n, orientation: t, ref: l } = e;
-    return null == n
+    let { url: t, orientation: n, ref: l } = e;
+    return null == t
         ? null
         : (0, s.jsx)("img", {
               ref: l,
-              src: n,
+              src: t,
               alt: d.intl.string(m.default.E527vj),
-              className: a()(o.C, { [o.TW]: "portrait" === t }),
+              className: a()(o.C, { [o.TW]: "portrait" === n }),
           });
 }
 function h(e) {
-    let { url: n, ref: t } = e;
-    return null == n
+    let { url: t, ref: n } = e;
+    return null == t
         ? null
-        : (0, s.jsx)("img", { ref: t, src: n, alt: d.intl.string(m.default.E527vj), className: o.xc });
+        : (0, s.jsx)("img", { ref: n, src: t, alt: d.intl.string(m.default.E527vj), className: o.xc });
 }
 function j(e) {
-    let { title: n, subtitle: t, ctaBtnLabel: l, onCTAClick: r, orientation: c, ctaIcon: u } = e;
+    let { title: t, subtitle: n, ctaBtnLabel: l, onCTAClick: r, orientation: c, ctaIcon: u } = e;
     return (0, s.jsxs)("div", {
         className: a()(o.pP, { [o.iC]: "portrait" === c }),
-        children: [(0, s.jsx)(v, { title: n, subtitle: t }), (0, s.jsx)(b, { label: l, icon: u, onClick: r })],
+        children: [(0, s.jsx)(v, { title: t, subtitle: n }), (0, s.jsx)(b, { label: l, icon: u, onClick: r })],
     });
 }
 function v(e) {
-    let { title: n, subtitle: t } = e;
+    let { title: t, subtitle: n } = e;
     return (0, s.jsxs)("div", {
         className: o.PH,
         children: [
-            (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.m5, children: n }),
-            (0, s.jsx)(u.D, { variant: "heading-sm/normal", className: o.s$, children: t }),
+            (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.m5, children: t }),
+            (0, s.jsx)(u.D, { variant: "heading-sm/medium", className: o.s$, children: n }),
         ],
     });
 }
 function b(e) {
-    let { label: n, icon: t, onClick: r, className: m } = e,
+    let { label: t, icon: n, onClick: r, className: m } = e,
         [d, S] = l.useState(!1);
     function f() {
         S(!0);
@@ -71,13 +71,13 @@ function b(e) {
         onBlur: g,
         onClick: r,
         children: [
-            (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.ce, children: n }),
-            null != t && (0, s.jsx)(t, { size: "md", color: d ? c.A.colors.WHITE : "#B5BAC1", className: o.J5 }),
+            (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.ce, children: t }),
+            null != n && (0, s.jsx)(n, { size: "md", color: d ? c.A.colors.WHITE : "#B5BAC1", className: o.J5 }),
         ],
     });
 }
 function M(e) {
-    let { title: n, subtitle: t, icon: r, onClick: c, className: m, divider: d } = e,
+    let { title: t, subtitle: n, icon: r, onClick: c, className: m, divider: d } = e,
         [S, f] = l.useState(!1);
     function g() {
         f(!0);
@@ -98,8 +98,8 @@ function M(e) {
                 (0, s.jsxs)("div", {
                     className: o.XU,
                     children: [
-                        (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.Zr, children: n }),
-                        (0, s.jsx)(u.D, { variant: "heading-sm/normal", className: o.Hk, children: t }),
+                        (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.Zr, children: t }),
+                        (0, s.jsx)(u.D, { variant: "heading-sm/medium", className: o.Hk, children: n }),
                     ],
                 }),
                 d,

@@ -251,7 +251,7 @@ function F(e) {
                               f.E,
                               {
                                   className: B.Vu,
-                                  variant: "text-xs/bold",
+                                  variant: "text-xs/semibold",
                                   color: "text-default",
                                   children:
                                       s.length > 0

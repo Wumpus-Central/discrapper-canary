@@ -1,36 +1,36 @@
-e.d(t, { default: () => Q });
-var n = e(477900),
-    a = e(582128),
-    s = e(131937),
-    l = e(935462),
-    r = e(430690),
-    c = e(985481),
-    o = e(503698),
-    d = e.n(o),
-    x = e(17928),
-    m = e(297264),
-    g = e(834730),
-    p = e(144228),
-    N = e(103557),
-    u = e(825484),
-    h = e(821609),
-    j = e(73153),
-    A = e(235986),
-    E = e(207913),
-    _ = e(393033),
-    C = e(239093),
-    I = e(105292),
-    S = e(502616),
-    k = e(936986);
+t.d(e, { default: () => Q });
+var n = t(477900),
+    a = t(582128),
+    s = t(131937),
+    l = t(935462),
+    r = t(430690),
+    c = t(985481),
+    o = t(503698),
+    d = t.n(o),
+    x = t(17928),
+    m = t(534514),
+    g = t(834730),
+    p = t(144228),
+    N = t(103557),
+    u = t(825484),
+    h = t(821609),
+    j = t(73153),
+    A = t(235986),
+    E = t(207913),
+    _ = t(393033),
+    C = t(239093),
+    I = t(105292),
+    S = t(502616),
+    k = t(936986);
 function v(i) {
-    let { className: t, isDsaEligible: e = !1, onClose: s, onNext: r, onBack: o } = i,
+    let { className: e, isDsaEligible: t = !1, onClose: s, onNext: r, onBack: o } = i,
         v = (0, c.y5)(),
         L = (0, x.bG)([E.A], () => E.A.getFreeTextAppealReason()),
         [b, P] = a.useState(""),
         [T, f] = a.useState(!1);
     a.useEffect(() => {
         (P(L ?? ""), f(v === C.Iv.SOMETHING_ELSE));
-    }, [L, v, e]);
+    }, [L, v, t]);
     let G = C.Qv.map((i) => ({ value: i, name: (0, _.l0)(i) }));
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -56,7 +56,7 @@ function v(i) {
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: d()(S.j, t),
+                className: d()(S.j, e),
                 scrollbarGutter: !1,
                 children: [
                     (0, n.jsx)(p.z, {
@@ -73,7 +73,7 @@ function v(i) {
                                 j.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal: i }));
                         },
                     }),
-                    e &&
+                    t &&
                         T &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
@@ -126,12 +126,12 @@ function v(i) {
         ],
     });
 }
-var L = e(28863),
-    b = e(308645),
-    P = e(652215),
-    T = e(949902);
+var L = t(28863),
+    b = t(308645),
+    P = t(652215),
+    T = t(949902);
 function f(i) {
-    let { className: t, isDsaEligible: e, onClose: s, onNext: r, onBack: o } = i,
+    let { className: e, isDsaEligible: t, onClose: s, onNext: r, onBack: o } = i,
         d = (0, x.bG)([E.A], () => E.A.getAppealClassificationId()),
         { classification: p } = (0, c.LJ)(d ?? P.dJq),
         C = (0, _.eu)(p?.description),
@@ -175,14 +175,14 @@ function f(i) {
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: t,
+                className: e,
                 scrollbarGutter: !1,
                 children: [
                     (0, n.jsx)("ul", {
                         className: T.qI,
                         children: [(0, _.l0)(v), f]
                             .filter((i) => i.length > 0)
-                            .map((i, t) =>
+                            .map((i, e) =>
                                 (0, n.jsx)(
                                     "li",
                                     {
@@ -193,24 +193,24 @@ function f(i) {
                                             children: i,
                                         }),
                                     },
-                                    t,
+                                    e,
                                 ),
                             ),
                     }),
-                    e &&
+                    t &&
                         (0, n.jsx)("div", {
                             className: T.DE,
                             children: (0, n.jsx)(L.Anchor, {
                                 onClick: () => U((i) => !i),
                                 children: (0, n.jsx)(m.D, {
-                                    variant: "heading-md/normal",
+                                    variant: "heading-md/medium",
                                     color: "text-link",
                                     children: f.length > 0 ? I.intl.string(I.t.tnE3bZ) : I.intl.string(I.t.uoQFIp),
                                 }),
                             }),
                         }),
                     G &&
-                        e &&
+                        t &&
                         (0, n.jsx)("div", { className: T.Kf, children: (0, n.jsx)(N.f, { value: f, onChange: M }) }),
                     (0, n.jsx)("div", {
                         className: k.kU,
@@ -260,41 +260,41 @@ function f(i) {
         ],
     });
 }
-var G = e(26095),
-    U = e(331322),
-    D = e(174459),
-    y = e(335891);
+var G = t(26095),
+    U = t(331322),
+    D = t(174459),
+    y = t(335891);
 function M() {
     let i = (0, x.bG)([E.A], () => E.A.getAppealClassificationId()),
-        t = (0, c.LJ)(i ?? P.dJq),
-        e = (0, y.K)(),
+        e = (0, c.LJ)(i ?? P.dJq),
+        t = (0, y.K)(),
         n = (0, x.bG)([E.A], () => E.A.getIsDsaEligible());
     return a.useCallback(
         (a) => {
             D.default.track(P.HAw.SAFETY_HUB_ACTION, {
                 action: a,
-                account_standing: e.state,
+                account_standing: t.state,
                 classification_ids: null != i ? [Number(i)] : null,
                 source: C.XN.AppealIngestion,
                 is_dsa_eligible: n,
-                violation_type: t.violationType,
+                violation_type: e.violationType,
             });
         },
-        [e.state, i, t, n],
+        [t.state, i, e, n],
     );
 }
-var O = e(975807),
-    B = e(632738);
+var O = t(975807),
+    B = t(632738);
 function F(i) {
-    let { url: t, text: e, onClick: s } = i,
+    let { url: e, text: t, onClick: s } = i,
         l = a.useCallback(() => {
-            (s?.(), (0, O.A)(t));
-        }, [s, t]);
-    return (0, n.jsx)(B.PQ, { variant: "clickable", title: e, onButtonPress: l });
+            (s?.(), (0, O.A)(e));
+        }, [s, e]);
+    return (0, n.jsx)(B.PQ, { variant: "clickable", title: t, onButtonPress: l });
 }
-var R = e(399839);
+var R = t(399839);
 function H(i) {
-    let { className: t, onNext: e, onClose: a } = i,
+    let { className: e, onNext: t, onClose: a } = i,
         s = M();
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -324,11 +324,11 @@ function H(i) {
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: d()(R.jE, t),
+                className: d()(R.jE, e),
                 scrollbarGutter: !1,
                 children: [
                     (0, n.jsx)(m.D, {
-                        variant: "heading-md/bold",
+                        variant: "heading-md/semibold",
                         color: "text-strong",
                         className: R.f9,
                         children: I.intl.string(I.t["9BRc1N"]),
@@ -353,17 +353,17 @@ function H(i) {
             }),
             (0, n.jsx)(l.jl, {
                 "data-migration-pending": !0,
-                children: (0, n.jsx)(h.$, { variant: "primary", text: I.intl.string(I.t.i4jeWR), onClick: e }),
+                children: (0, n.jsx)(h.$, { variant: "primary", text: I.intl.string(I.t.i4jeWR), onClick: t }),
             }),
         ],
     });
 }
-var Y = e(739010),
-    $ = e(607739);
+var Y = t(739010),
+    $ = t(607739);
 function V(i) {
     let {
-            classification: t,
-            isDsaEligible: e = !1,
+            classification: e,
+            isDsaEligible: t = !1,
             isSpam: a = !1,
             isCoppa: s = !1,
             isDeveloperClassification: r = !1,
@@ -373,11 +373,11 @@ function V(i) {
             onNext: p,
         } = i,
         N = M(),
-        u = t?.explainer_link ?? "",
-        j = null != t && null != t.flagged_content && t.flagged_content.length > 0,
-        E = (0, _.eu)(t?.description),
+        u = e?.explainer_link ?? "",
+        j = null != e && null != e.flagged_content && e.flagged_content.length > 0,
+        E = (0, _.eu)(e?.description),
         S = !a && !s && !r && (null == c || c === Y.Il.IN_APP),
-        v = null != t && ((0, _._g)(t) || j);
+        v = null != e && ((0, _._g)(e) || j);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(l.rQ, {
@@ -405,11 +405,11 @@ function V(i) {
                 className: d()(k.jE, !v && k.bQ, o),
                 scrollbarGutter: !1,
                 children: [
-                    v && (0, n.jsx)($.U, { flaggedContent: t.flagged_content ?? [] }),
+                    v && (0, n.jsx)($.U, { flaggedContent: e.flagged_content ?? [] }),
                     (0, n.jsx)(g.E, {
                         className: k.l8,
                         color: "text-default",
-                        variant: "text-xs/bold",
+                        variant: "text-xs/semibold",
                         children: I.intl.string(I.t.xsdcxh),
                     }),
                     (0, n.jsx)("div", {
@@ -448,7 +448,7 @@ function V(i) {
                         ],
                     }),
                     S &&
-                        e &&
+                        t &&
                         (0, n.jsx)(g.E, {
                             className: k.C2,
                             variant: "text-xs/normal",
@@ -464,11 +464,11 @@ function V(i) {
         ],
     });
 }
-var q = e(543870);
+var q = t(543870);
 function Q(i) {
-    let { classificationId: t, transitionState: e, initialSlide: o = C.yN.SPEED_BUMP, onClose: d } = i,
+    let { classificationId: e, transitionState: t, initialSlide: o = C.yN.SPEED_BUMP, onClose: d } = i,
         [x, m] = a.useState(o),
-        { classification: g, isDsaEligible: p } = (0, c.LJ)(t ?? P.dJq),
+        { classification: g, isDsaEligible: p } = (0, c.LJ)(e ?? P.dJq),
         N = g?.is_spam || !1,
         u = g?.is_coppa || !1,
         h = g?.is_developer_classification || !1,
@@ -489,7 +489,7 @@ function Q(i) {
         }, [x, A]);
     return (0, n.jsx)(l.EO, {
         "data-migration-pending": !0,
-        transitionState: e,
+        transitionState: t,
         disableTrack: !0,
         size: l.rI.DYNAMIC,
         parentComponent: "AppealIngestionModal",

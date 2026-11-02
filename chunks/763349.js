@@ -54,7 +54,7 @@ var B = n(858899),
     X = n(279208),
     Y = n(237309),
     Q = n(957565),
-    J = n(297264),
+    J = n(534514),
     ee = n(625903),
     et = n(689175),
     en = n(559647),
@@ -1381,7 +1381,7 @@ function t7(e) {
 }
 function t8(e) {
     let { letter: t } = e;
-    return (0, l.jsx)(D.E, { variant: "text-sm/bold", children: t });
+    return (0, l.jsx)(D.E, { variant: "text-sm/semibold", children: t });
 }
 var t4 = n(214947),
     t2 = n(283973),

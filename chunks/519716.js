@@ -3,7 +3,7 @@ var r = a(477900);
 a(582128);
 var i = a(862482),
     n = a(834730),
-    s = a(297264),
+    s = a(534514),
     l = a(77468),
     o = a(573648),
     c = a(114716),
@@ -42,7 +42,7 @@ let p = (0, c.C)(function (e) {
             children: [
                 (0, r.jsx)(w.Jq, { className: u.ry, platform: c }),
                 (0, r.jsx)(s.D, {
-                    variant: "text-lg/bold",
+                    variant: "text-lg/semibold",
                     className: u.wx,
                     children: m.intl.format(m.t.Pw4vee, { provider: c.name }),
                 }),

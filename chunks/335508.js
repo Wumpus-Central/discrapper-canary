@@ -87,7 +87,7 @@ function G(t) {
                     className: _.CR,
                     children: [
                         (0, n.jsx)(c.E, {
-                            variant: "text-md/bold",
+                            variant: "text-md/semibold",
                             color: "text-strong",
                             className: _.J5,
                             children: e.name,
@@ -188,7 +188,7 @@ function $(t) {
                 children: T.intl.formatToPlainString(T.t.SSA2lu, { slotCount: a, guildCount: x ?? 0 }),
             }),
             (0, n.jsx)(c.E, {
-                variant: "text-xs/bold",
+                variant: "text-xs/semibold",
                 className: J.bV,
                 children: T.intl.format(T.t["5zQYEz"], { guildCount: x ?? 0 }),
             }),

@@ -3,7 +3,7 @@ var n = t(477900),
     s = t(582128),
     l = t(935462),
     a = t(331322),
-    r = t(297264),
+    r = t(534514),
     c = t(574532),
     o = t(281044),
     d = t(951305),
@@ -57,7 +57,7 @@ function Z(i) {
             (0, n.jsxs)("div", {
                 className: K.hy,
                 children: [
-                    (0, n.jsx)(r.D, { variant: "heading-lg/bold", children: e }),
+                    (0, n.jsx)(r.D, { variant: "heading-lg/semibold", children: e }),
                     null != t && (0, n.jsx)(L.E, { variant: "text-sm/medium", children: t }),
                 ],
             }),

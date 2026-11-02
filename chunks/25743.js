@@ -5,7 +5,7 @@ var a = s(503698),
     r = s.n(a),
     i = s(17928),
     l = s(935462),
-    o = s(297264),
+    o = s(534514),
     c = s(315629),
     u = s(62010),
     d = s(883645),
@@ -58,8 +58,8 @@ let N = function (e) {
 var S = s(573359),
     I = s(724651),
     T = s(732280),
-    f = s(795269),
-    C = s(221549);
+    C = s(795269),
+    f = s(221549);
 let x = function (e) {
     let { discountAmount: t } = e,
         s = (0, T.V)(),
@@ -69,7 +69,7 @@ let x = function (e) {
         void 0 !== t
             ? (r = L.intl.formatToPlainString(L.t.iiLbvu, { percent: t }))
             : a && (r = L.intl.string(L.t.gtNqJQ)),
-        (0, n.jsx)("div", { className: C.f, children: (0, n.jsx)(f.R, { text: r }) })
+        (0, n.jsx)("div", { className: f.f, children: (0, n.jsx)(C.R, { text: r }) })
     );
 };
 var g = s(202541),
@@ -85,7 +85,7 @@ function M(e) {
     if (t)
         return (0, n.jsx)("div", {
             className: y.r9,
-            children: (0, n.jsx)(o.D, { variant: "heading-md/bold", children: s }),
+            children: (0, n.jsx)(o.D, { variant: "heading-md/semibold", children: s }),
         });
     let i = r.length > 1;
     return (0, n.jsxs)("div", {
@@ -119,9 +119,9 @@ let w = function (e) {
             isPremiumGroupPurchase: N = !1,
             forceBrandRefreshHeader: T = !1,
         } = e,
-        f = p === g.PremiumTypes.TIER_2,
-        C = (0, I.O)(),
-        O = C?.discount?.amount,
+        C = p === g.PremiumTypes.TIER_2,
+        f = (0, I.O)(),
+        O = f?.discount?.amount,
         { startedPaymentFlowWithPaymentSources: D, isInOneStepSubscriptionCheckout: w } = (0, m.t4)((e) => ({
             startedPaymentFlowWithPaymentSources: e.startedPaymentFlowWithPaymentSources,
             isInOneStepSubscriptionCheckout: e.getIsInOneStepSubscriptionCheckout({ isTrial: _ }),
@@ -144,8 +144,8 @@ let w = function (e) {
         V = k?.sectionHeaderText?.() ?? k?.label,
         H = (null == B || B !== E.pn.PLAN_SELECT) && null != V && null != B,
         W = w && H && B === E.pn.REVIEW,
-        Y = f ? "nitro-pink" : "nitro-green",
-        z = N ? (0, j.DP)() : f ? L.intl.string(L.t.lG6a5x) : L.intl.string(L.t["t9uG/o"]),
+        Y = C ? "nitro-pink" : "nitro-green",
+        z = N ? (0, j.DP)() : C ? L.intl.string(L.t.lG6a5x) : L.intl.string(L.t["t9uG/o"]),
         K = y.kL,
         X = r()(y.N1, R.headerGradient);
     return U
@@ -157,7 +157,7 @@ let w = function (e) {
                       color: Y,
                       className: r()(X, { [y.s1]: !H }),
                       children: [
-                          (0, n.jsx)(b, { isTier2: f }),
+                          (0, n.jsx)(b, { isTier2: C }),
                           !t &&
                               (0, n.jsx)(l.s_, {
                                   "data-migration-pending": !0,
@@ -165,7 +165,7 @@ let w = function (e) {
                                   onClick: a,
                                   className: y.Ep,
                               }),
-                          (0, n.jsx)("img", { src: f ? v : P, alt: "", className: W ? y.i_ : y.kX }),
+                          (0, n.jsx)("img", { src: C ? v : P, alt: "", className: W ? y.i_ : y.kX }),
                           (0, n.jsxs)("div", {
                               className: y.FS,
                               children: [
@@ -174,12 +174,7 @@ let w = function (e) {
                                           className: y.$N,
                                           children: (0, n.jsx)(u.E, { type: "beta", variant: "expressive" }),
                                       }),
-                                  (0, n.jsx)(o.D, {
-                                      variant: "nitro-sm",
-                                      color: "text-strong",
-                                      className: y.cf,
-                                      children: z,
-                                  }),
+                                  (0, n.jsx)(o.D, { variant: "nitro-sm", color: "text-strong", children: z }),
                               ],
                           }),
                       ],

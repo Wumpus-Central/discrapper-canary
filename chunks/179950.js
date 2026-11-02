@@ -1,11 +1,11 @@
 l.d(e, { default: () => v });
 var a = l(477900),
     s = l(582128),
-    n = l(224640),
-    i = l(683071),
+    i = l(224640),
+    n = l(683071),
     r = l(430993),
     d = l(789645),
-    c = l(297264),
+    c = l(534514),
     o = l(834730),
     u = l(331322),
     h = l(150934),
@@ -38,11 +38,11 @@ let v = function (t) {
         K = w ? b.intl.format(p.default.PlrZal, { username: A }) : b.intl.format(p.default.XyRW4c, { username: A }),
         O = w ? b.intl.string(p.default.PGQBnk) : b.intl.string(p.default.eiABQz),
         Q = w ? b.intl.string(p.default["0ki7+P"]) : b.intl.string(p.default.sCbKs4);
-    return (0, a.jsxs)(n.d, {
+    return (0, a.jsxs)(i.d, {
         transitionState: v,
         onClose: y,
         children: [
-            F && (0, a.jsx)(i.w, { type: "critical", message: b.intl.string(p.default.krIDdy), role: "alert" }),
+            F && (0, a.jsx)(n.w, { type: "critical", message: b.intl.string(p.default.krIDdy), role: "alert" }),
             (0, a.jsxs)(r.c, {
                 children: [
                     (0, a.jsxs)("div", {
@@ -57,7 +57,7 @@ let v = function (t) {
                                 className: C.R_,
                                 children: [
                                     (0, a.jsx)(c.D, {
-                                        variant: "text-lg/bold",
+                                        variant: "text-lg/semibold",
                                         children: b.intl.format(p.default.o0JXuK, { username: A }),
                                     }),
                                     (0, a.jsx)(o.E, { variant: "text-sm/normal", color: "text-muted", children: z }),
@@ -71,7 +71,7 @@ let v = function (t) {
                             (0, a.jsxs)(u.B, {
                                 gap: 16,
                                 children: [
-                                    B && (0, a.jsx)(i.w, { type: "warning", message: G, role: "none" }),
+                                    B && (0, a.jsx)(n.w, { type: "warning", message: G, role: "none" }),
                                     (0, a.jsx)(o.E, { variant: "text-sm/normal", color: "text-default", children: K }),
                                 ],
                             }),

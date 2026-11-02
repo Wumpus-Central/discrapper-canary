@@ -1,31 +1,31 @@
 (t.r(s), t.d(s, { default: () => h }));
-var r = t(477900);
+var e = t(477900);
 t(582128);
-var e = t(331322),
-    i = t(297264),
-    n = t(834730),
-    d = t(478646),
+var i = t(331322),
+    d = t(534514),
+    r = t(834730),
+    n = t(478646),
     l = t(105292),
     c = t(911556);
 function h() {
-    return (0, r.jsx)("div", {
+    return (0, e.jsx)("div", {
         className: c.iE,
-        children: (0, r.jsxs)(e.B, {
+        children: (0, e.jsxs)(i.B, {
             className: c.FS,
             gap: 16,
             padding: 32,
             children: [
-                (0, r.jsx)(i.D, {
-                    variant: "heading-xxl/normal",
+                (0, e.jsx)(d.D, {
+                    variant: "heading-xxl/medium",
                     color: "text-strong",
                     className: c.R_,
-                    children: l.intl.string(d.default["VAK+h9"]),
+                    children: l.intl.string(n.default["VAK+h9"]),
                 }),
-                (0, r.jsx)(n.E, {
+                (0, e.jsx)(r.E, {
                     variant: "text-lg/normal",
                     color: "text-muted",
                     className: c.Qq,
-                    children: l.intl.string(d.default.dcpdhC),
+                    children: l.intl.string(n.default.dcpdhC),
                 }),
             ],
         }),

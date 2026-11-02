@@ -1,6 +1,6 @@
 (t.d(s, { Wr: () => ea, Ay: () => eo, Kc: () => ec }), t(321073));
-var n,
-    i = t(477900),
+var i,
+    n = t(477900),
     l = t(582128),
     r = t(503698),
     a = t.n(r),
@@ -32,8 +32,8 @@ var n,
     D = t(85448),
     y = t(556525),
     M = t(402216),
-    V = t(268218),
-    G = t(609425),
+    G = t(268218),
+    V = t(609425),
     P = t(73392),
     U = t(769015);
 let K = (0, t(945810).mj)({
@@ -50,16 +50,16 @@ var F = t(450149),
     Z = t(775602),
     B = t(21161),
     W =
-        (((n = {})[(n.OFFERED = 0)] = "OFFERED"),
-        (n[(n.ACCEPTED = 1)] = "ACCEPTED"),
-        (n[(n.RUNNING = 2)] = "RUNNING"),
-        (n[(n.COMPLETED = 3)] = "COMPLETED"),
-        (n[(n.FAILED = 4)] = "FAILED"),
-        (n[(n.CANCELLED = 5)] = "CANCELLED"),
-        n),
-    X = t(818888);
-function Y(e) {
-    let { userId: s, wrapperClassName: t, children: n } = e,
+        (((i = {})[(i.OFFERED = 0)] = "OFFERED"),
+        (i[(i.ACCEPTED = 1)] = "ACCEPTED"),
+        (i[(i.RUNNING = 2)] = "RUNNING"),
+        (i[(i.COMPLETED = 3)] = "COMPLETED"),
+        (i[(i.FAILED = 4)] = "FAILED"),
+        (i[(i.CANCELLED = 5)] = "CANCELLED"),
+        i),
+    Y = t(818888);
+function $(e) {
+    let { userId: s, wrapperClassName: t, children: i } = e,
         r = (0, m.bG)([z.A], () => z.A.getProgressForUserId(s), [s]),
         a = (0, m.bG)(
             [z.A],
@@ -107,45 +107,45 @@ function Y(e) {
         let e = Date.now();
         e - g.current < 4e3 || ((g.current = e), f());
     }, [j, f, c]);
-    return (0, i.jsx)("div", {
+    return (0, n.jsx)("div", {
         className: t,
         onMouseEnter: L,
-        children: (0, i.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
             ref: E,
-            className: X.R,
-            children: [(0, i.jsx)("div", { className: X.h, style: C }), n],
+            className: Y.R,
+            children: [(0, n.jsx)("div", { className: Y.h, style: C }), i],
         }),
     });
 }
-function $(e) {
-    let { userId: s, wrapperClassName: t, children: n } = e,
+function q(e) {
+    let { userId: s, wrapperClassName: t, children: i } = e,
         l = (0, w.Uk)("VoiceDareAvatarRing"),
         r = (0, m.bG)([z.A], () => z.A.hasVoiceDareForUserId(s), [s]);
     return l && r
-        ? (0, i.jsx)(Y, { userId: s, wrapperClassName: t, children: n })
-        : (0, i.jsx)("div", { className: t, children: n });
+        ? (0, n.jsx)($, { userId: s, wrapperClassName: t, children: i })
+        : (0, n.jsx)("div", { className: t, children: i });
 }
-var q = t(790381),
+var X = t(790381),
     Q = t(266080),
     ee = t(427262),
     es = t(652215),
     et = t(806931),
-    en = t(544105),
-    ei = t(105292),
+    ei = t(544105),
+    en = t(105292),
     el = t(254849);
-let er = (0, V.Fe)({
+let er = (0, G.Fe)({
     createPromise: () => Promise.all([t.e("910349"), t.e("528966")]).then(t.bind(t, 217356)),
     webpackId: 217356,
 });
 function ea(e) {
-    let { children: s, collapsed: t = !1, className: n } = e;
-    return (0, i.jsx)("div", { className: a()(n, el.p_, t ? el.GT : el.m3), role: "group", children: s });
+    let { children: s, collapsed: t = !1, className: i } = e;
+    return (0, n.jsx)("div", { className: a()(i, el.p_, t ? el.GT : el.m3), role: "group", children: s });
 }
 function ec(e) {
     let {
             className: s,
             mute: t,
-            localMute: n,
+            localMute: i,
             localVideoDisabled: l,
             serverMute: r,
             deaf: c,
@@ -156,8 +156,8 @@ function ec(e) {
             disabled: v,
             isWatching: D,
             ringing: y,
-            iconClassName: V,
-            embeddedApplication: G,
+            iconClassName: G,
+            embeddedApplication: V,
             otherClientSessionType: P,
             voicePlatform: U,
             application: w,
@@ -167,20 +167,20 @@ function ec(e) {
             user: Z,
             disconnected: B,
             isHovered: W,
-            soundboardMuted: X,
+            soundboardMuted: Y,
         } = e,
-        Y = C || v,
-        { enabled: $ } = K.useConfig({ guildId: H ?? "", location: "VoiceUserIcons" }),
+        $ = C || v,
+        { enabled: q } = K.useConfig({ guildId: H ?? "", location: "VoiceUserIcons" }),
         ee = (0, _.UK)(J),
-        { previewUrl: es } = (0, F.A)(H, J, $ && b && !Y && !ee ? Z.id : void 0),
+        { previewUrl: es } = (0, F.A)(H, J, q && b && !$ && !ee ? Z.id : void 0),
         er = null != es && "" !== es.trim();
-    if (Y) return null;
+    if ($) return null;
     let ea = [],
         ec = (function (e) {
             let {
                     iconClassName: s,
                     mute: t,
-                    localMute: n,
+                    localMute: i,
                     serverMute: l,
                     deaf: r,
                     serverDeaf: c,
@@ -190,11 +190,11 @@ function ec(e) {
             if (
                 (o &&
                     d.push(
-                        (0, i.jsx)(
+                        (0, n.jsx)(
                             x.m,
                             {
-                                text: ei.intl.string(ei.t["9bJYWN"]),
-                                children: (0, i.jsx)(f.N, { className: a()(el.Kk, s), color: "currentColor" }),
+                                text: en.intl.string(en.t["9bJYWN"]),
+                                children: (0, n.jsx)(f.N, { className: a()(el.Kk, s), color: "currentColor" }),
                             },
                             "soundboard-mute",
                         ),
@@ -202,17 +202,17 @@ function ec(e) {
                 t)
             ) {
                 let e;
-                e = l || n ? L.O : O.z;
-                let t = (0, i.jsx)(e, { className: a()(el.Kk, s, { [el.DU]: l }), color: "currentColor" });
+                e = l || i ? L.O : O.z;
+                let t = (0, n.jsx)(e, { className: a()(el.Kk, s, { [el.DU]: l }), color: "currentColor" });
                 d.push(
-                    (0, i.jsx)(
+                    (0, n.jsx)(
                         x.m,
                         {
-                            text: n
-                                ? ei.intl.string(ei.t.Q8Uzof)
+                            text: i
+                                ? en.intl.string(en.t.Q8Uzof)
                                 : l
-                                  ? ei.intl.string(ei.t.uLddbQ)
-                                  : ei.intl.string(ei.t.tjtv3P),
+                                  ? en.intl.string(en.t.uLddbQ)
+                                  : en.intl.string(en.t.tjtv3P),
                             children: t,
                         },
                         "mute",
@@ -221,38 +221,38 @@ function ec(e) {
             }
             if (c || r) {
                 let e = c ? R.T : T.c,
-                    t = (0, i.jsx)(e, { className: a()(el.Kk, s, { [el.DU]: c }), color: "currentColor" });
+                    t = (0, n.jsx)(e, { className: a()(el.Kk, s, { [el.DU]: c }), color: "currentColor" });
                 d.push(
-                    (0, i.jsx)(
+                    (0, n.jsx)(
                         x.m,
-                        { text: c ? ei.intl.string(ei.t.btxSdB) : ei.intl.string(ei.t.NjmiOL), children: t },
+                        { text: c ? en.intl.string(en.t.btxSdB) : en.intl.string(en.t.NjmiOL), children: t },
                         "deaf",
                     ),
                 );
             }
             return d;
-        })({ iconClassName: V, mute: t, localMute: n, serverMute: r, deaf: c, serverDeaf: m, soundboardMuted: X });
+        })({ iconClassName: G, mute: t, localMute: i, serverMute: r, deaf: c, serverDeaf: m, soundboardMuted: Y });
     (p &&
         (l
             ? ea.push(
-                  (0, i.jsx)(
+                  (0, n.jsx)(
                       x.m,
                       {
-                          text: ei.intl.string(ei.t["PXMZ/+"]),
-                          children: (0, i.jsx)(A.O, { size: "md", color: "currentColor", className: a()(el.Kk, V) }),
+                          text: en.intl.string(en.t["PXMZ/+"]),
+                          children: (0, n.jsx)(A.O, { size: "md", color: "currentColor", className: a()(el.Kk, G) }),
                       },
                       "video",
                   ),
               )
             : ea.push(
-                  (0, i.jsx)(
+                  (0, n.jsx)(
                       x.m,
                       {
-                          text: ei.intl.string(ei.t.FlNoSV),
-                          children: (0, i.jsx)(h.VideoIcon, {
+                          text: en.intl.string(en.t.FlNoSV),
+                          children: (0, n.jsx)(h.VideoIcon, {
                               size: "md",
                               color: "currentColor",
-                              className: a()(el.Kk, V),
+                              className: a()(el.Kk, G),
                           }),
                       },
                       "video",
@@ -260,45 +260,45 @@ function ec(e) {
               )),
         B &&
             ea.push(
-                (0, i.jsx)(
+                (0, n.jsx)(
                     x.m,
                     {
-                        text: ei.intl.string(ei.t.HFwRpk),
-                        children: (0, i.jsx)(g.E, {
-                            className: a()(el.Kk, V),
+                        text: en.intl.string(en.t.HFwRpk),
+                        children: (0, n.jsx)(g.E, {
+                            className: a()(el.Kk, G),
                             color: N.A.colors.STATUS_WARNING_BACKGROUND,
                         }),
                     },
                     "disconnected",
                 ),
             ),
-        null != G &&
+        null != V &&
             ea.push(
-                (0, i.jsx)(
+                (0, n.jsx)(
                     x.m,
                     {
-                        text: (0, S.A)(G.name),
-                        children: (0, i.jsx)(E.k, { size: "md", color: "currentColor", className: a()(el.Kk, V) }),
+                        text: (0, S.A)(V.name),
+                        children: (0, n.jsx)(E.k, { size: "md", color: "currentColor", className: a()(el.Kk, G) }),
                     },
                     "activity",
                 ),
             ),
-        P === en.f$.XBOX || U === et.J7.XBOX
-            ? ea.push((0, i.jsx)(Q.A, { className: a()(el.Kk, V) }, "xbox"))
-            : P === en.f$.PLAYSTATION || U === et.J7.PLAYSTATION
-              ? ea.push((0, i.jsx)(q.A, { className: a()(el.Kk, V) }, "playstation"))
+        P === ei.f$.XBOX || U === et.J7.XBOX
+            ? ea.push((0, n.jsx)(Q.A, { className: a()(el.Kk, G) }, "xbox"))
+            : P === ei.f$.PLAYSTATION || U === et.J7.PLAYSTATION
+              ? ea.push((0, n.jsx)(X.A, { className: a()(el.Kk, G) }, "playstation"))
               : U === et.J7.QUEST &&
-                ea.push((0, i.jsx)(o.G, { size: "xs", color: "currentColor", className: a()(el.Kk, V) }, "quest")),
+                ea.push((0, n.jsx)(o.G, { size: "xs", color: "currentColor", className: a()(el.Kk, G) }, "quest")),
         D &&
             ea.push(
-                (0, i.jsx)(
+                (0, n.jsx)(
                     x.m,
                     {
-                        text: ei.intl.string(ei.t["JH1SJ+"]),
-                        children: (0, i.jsx)(j.EyeIcon, {
+                        text: en.intl.string(en.t["JH1SJ+"]),
+                        children: (0, n.jsx)(j.EyeIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: a()(el.Kk, V),
+                            className: a()(el.Kk, G),
                         }),
                     },
                     "watch",
@@ -307,14 +307,14 @@ function ec(e) {
     let eo = null != w && !w.isEmbedded,
         eu =
             eo && !y
-                ? (0, i.jsx)(
+                ? (0, n.jsx)(
                       "div",
                       {
                           className: el.RL,
-                          children: (0, i.jsx)(ed, {
+                          children: (0, n.jsx)(ed, {
                               application: w,
                               game: z,
-                              iconClassName: V,
+                              iconClassName: G,
                               guildId: H,
                               channelId: J,
                               userId: Z.id,
@@ -323,24 +323,24 @@ function ec(e) {
                       `${Z.id}-game`,
                   )
                 : null;
-    return ($ && null != eu && ea.push(eu),
-    b && !er && ea.push((0, i.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL }, "stream")),
+    return (q && null != eu && ea.push(eu),
+    b && !er && ea.push((0, n.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL }, "stream")),
     y &&
         null != J &&
         W &&
         ea.push(
-            (0, i.jsx)(
+            (0, n.jsx)(
                 x.m,
                 {
-                    text: ei.intl.string(ei.t.ygslb0),
-                    children: (0, i.jsx)(I.D, {
+                    text: en.intl.string(en.t.ygslb0),
+                    children: (0, n.jsx)(I.D, {
                         onClick: (e) => {
                             (e.stopPropagation(), k.A.stopRinging(J, [Z.id]));
                         },
-                        children: (0, i.jsx)(d.z, {
+                        children: (0, n.jsx)(d.z, {
                             size: "sm",
                             color: N.A.colors.ICON_FEEDBACK_CRITICAL,
-                            className: a()(el.Kk, V),
+                            className: a()(el.Kk, G),
                         }),
                     }),
                 },
@@ -348,23 +348,23 @@ function ec(e) {
             ),
         ),
     0 !== ea.length || 0 !== ec.length || eo || y || er)
-        ? (0, i.jsxs)("div", {
+        ? (0, n.jsxs)("div", {
               className: a()(el.Pt, s),
               children: [
-                  (0, i.jsxs)("div", { className: el.RL, children: [ec, ea] }),
-                  !$ && eu,
-                  $ &&
+                  (0, n.jsxs)("div", { className: el.RL, children: [ec, ea] }),
+                  !q && eu,
+                  q &&
                       er &&
-                      (0, i.jsx)(x.m, {
-                          text: ei.intl.string(ei.t.dI3q4h),
+                      (0, n.jsx)(x.m, {
+                          text: en.intl.string(en.t.dI3q4h),
                           ariaHidden: !0,
-                          children: (0, i.jsxs)("div", {
+                          children: (0, n.jsxs)("div", {
                               className: el.Um,
                               children: [
-                                  (0, i.jsx)("img", { src: es, alt: ei.intl.string(ei.t.cxSpOM), className: el.Rh }),
-                                  (0, i.jsx)("div", {
+                                  (0, n.jsx)("img", { src: es, alt: en.intl.string(en.t.cxSpOM), className: el.Rh }),
+                                  (0, n.jsx)("div", {
                                       className: el.yo,
-                                      children: (0, i.jsx)(u.k, {
+                                      children: (0, n.jsx)(u.k, {
                                           height: 10,
                                           width: 10,
                                           size: "custom",
@@ -381,7 +381,7 @@ function ec(e) {
 let eo = function (e) {
     let s,
         t,
-        n,
+        i,
         r,
         {
             avatarContainerClass: c = el.H,
@@ -407,7 +407,7 @@ let eo = function (e) {
             mute: _,
             localMute: b,
             serverMute: M,
-            deaf: V,
+            deaf: G,
             serverDeaf: U,
             guildId: K,
             nick: F,
@@ -416,14 +416,14 @@ let eo = function (e) {
             className: Z,
             overlap: B,
             "aria-label": W,
-            ringing: X,
-            connecting: Y = !1,
-            user: q,
+            ringing: Y,
+            connecting: $ = !1,
+            user: X,
             soundboardMuted: Q,
         } = N,
-        et = (0, G.A)({ userId: q.id, guildId: K }),
-        en = (0, P.a)({ displayNameStyles: et }),
-        ea = (0, v.A)(q.id),
+        et = (0, V.A)({ userId: X.id, guildId: K }),
+        ei = (0, P.a)({ displayNameStyles: et }),
+        ea = (0, v.A)(X.id),
         eo = (0, y.v)({
             voiceStatus: (0, C.n$)(T, k),
             voiceDb: ea,
@@ -432,28 +432,28 @@ let eo = function (e) {
         [ed, eu] = l.useState(!1),
         em = (() => {
             if (null != W) return W;
-            let e = F ?? q.username,
+            let e = F ?? X.username,
                 s = null;
-            return (Y
-                ? (s = ei.intl.string(ei.t["7LkwqE"]))
+            return ($
+                ? (s = en.intl.string(en.t["7LkwqE"]))
                 : U
-                  ? (s = ei.intl.string(ei.t.btxSdB))
-                  : V
-                    ? (s = ei.intl.string(ei.t.NjmiOL))
+                  ? (s = en.intl.string(en.t.btxSdB))
+                  : G
+                    ? (s = en.intl.string(en.t.NjmiOL))
                     : b
-                      ? (s = ei.intl.string(ei.t.Q8Uzof))
+                      ? (s = en.intl.string(en.t.Q8Uzof))
                       : M
-                        ? (s = ei.intl.string(ei.t.uLddbQ))
+                        ? (s = en.intl.string(en.t.uLddbQ))
                         : _
-                          ? (s = ei.intl.string(ei.t.tjtv3P))
-                          : Q && (s = ei.intl.string(ei.t["9bJYWN"])),
+                          ? (s = en.intl.string(en.t.tjtv3P))
+                          : Q && (s = en.intl.string(en.t["9bJYWN"])),
             null != s)
-                ? ei.intl.formatToPlainString(ei.t["1+MVBP"], { userName: e, status: s })
+                ? en.intl.formatToPlainString(en.t["1+MVBP"], { userName: e, status: s })
                 : e;
         })(),
-        ex = (0, m.bG)([z.A], () => z.A.getProgressForUserId(q.id), [q.id]),
+        ex = (0, m.bG)([z.A], () => z.A.getProgressForUserId(X.id), [X.id]),
         eA = (0, w.Uk)("VoiceUser") && null != ex;
-    return (0, i.jsx)(p.s, {
+    return (0, n.jsx)(p.s, {
         ref: g,
         className: a()(Z, {
             [el.q7]: !0,
@@ -463,22 +463,22 @@ let eo = function (e) {
             [el.L9]: d === es.OSZ.SMALL,
             [el.p8]: d === es.OSZ.LARGE,
             [el.r9]: !u && A,
-            [el.jI]: Y,
+            [el.jI]: $,
         }),
         onClick: function (e) {
-            E?.(e, q);
+            E?.(e, X);
         },
         onDoubleClick: function (e) {
-            I?.(e, q);
+            I?.(e, X);
         },
         onContextMenu: function (e) {
-            f?.(e, q);
+            f?.(e, X);
         },
         onMouseLeave: function (e) {
-            (L?.(e, q), eu(!1));
+            (L?.(e, X), eu(!1));
         },
         onMouseDown: function (e) {
-            O?.(e, q);
+            O?.(e, X);
         },
         onMouseEnter: function () {
             eu(!0);
@@ -486,60 +486,60 @@ let eo = function (e) {
         onKeyDown: j,
         "aria-label": em,
         focusProps: { offset: { right: 4 } },
-        children: (0, i.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
             className: a()(el.Qs, { [el.zq]: J }),
             children: [
                 R && !S
-                    ? (0, i.jsx)(x.m, {
-                          text: ei.intl.string(ei.t.BVK71i),
-                          children: (0, i.jsx)("div", { className: a()(el.G, { [el.g4]: !_ && !M && T }) }),
+                    ? (0, n.jsx)(x.m, {
+                          text: en.intl.string(en.t.BVK71i),
+                          children: (0, n.jsx)("div", { className: a()(el.G, { [el.g4]: !_ && !M && T }) }),
                       })
                     : null,
-                ((s = a()(el.my, { [el.Jb]: d === es.OSZ.LARGE, [el.dT]: d === es.OSZ.SMALL, [el.DF]: X })),
-                (t = { backgroundImage: `url(${q.getAvatarURL(K, d === es.OSZ.LARGE ? 38 : 24)})`, ...eo }),
-                X
-                    ? (0, i.jsx)(D.Ay, {
+                ((s = a()(el.my, { [el.Jb]: d === es.OSZ.LARGE, [el.dT]: d === es.OSZ.SMALL, [el.DF]: Y })),
+                (t = { backgroundImage: `url(${X.getAvatarURL(K, d === es.OSZ.LARGE ? 38 : 24)})`, ...eo }),
+                Y
+                    ? (0, n.jsx)(D.Ay, {
                           size: d === es.OSZ.LARGE ? C._3.SIZE_40 : C._3.SIZE_24,
                           ringing: !0,
-                          src: q.getAvatarURL(K, d === es.OSZ.LARGE ? 40 : 24),
+                          src: X.getAvatarURL(K, d === es.OSZ.LARGE ? 40 : 24),
                           className: a()(c, s),
                       })
                     : eA
-                      ? (0, i.jsx)($, {
-                            userId: q.id,
+                      ? (0, n.jsx)(q, {
+                            userId: X.id,
                             wrapperClassName: c,
-                            children: (0, i.jsx)("div", { className: s, style: t }),
+                            children: (0, n.jsx)("div", { className: s, style: t }),
                         })
-                      : (0, i.jsx)("div", { className: a()(c, s), style: t })),
-                ((n = (0, i.jsxs)("div", {
-                    className: a()(o, el.Xh, en, { [el.Pi]: !_ && !M && T, [el.DF]: X }),
+                      : (0, n.jsx)("div", { className: a()(c, s), style: t })),
+                ((i = (0, n.jsxs)("div", {
+                    className: a()(o, el.oF, ei, { [el.Pi]: !_ && !M && T, [el.DF]: Y }),
                     children: [
-                        F ?? ee.Ay.getName(q),
+                        F ?? ee.Ay.getName(X),
                         H
-                            ? (0, i.jsxs)("span", {
+                            ? (0, n.jsxs)("span", {
                                   className: el.IW,
-                                  children: ["\xa0", ei.intl.string(ei.t["pFO/Ph"])],
+                                  children: ["\xa0", en.intl.string(en.t["pFO/Ph"])],
                               })
                             : "",
                     ],
                 })),
                 (r = {
-                    primaryGuild: q.primaryGuild,
-                    userId: q.id,
+                    primaryGuild: X.primaryGuild,
+                    userId: X.id,
                     contextGuildId: K,
                     isOverlay: h,
                     disableTooltip: !0,
                     className: a()(el.fc, h && el.zW),
                     profileViewedAnalytics: { source: h ? es.JJy.OVERLAY : es.ThZ.VOICE_PANEL },
                 }),
-                !S || h ? (0, i.jsx)(er, { ...r, children: n }) : null),
-                (0, i.jsx)(ec, { disabled: A, ...N, isHovered: ed }),
+                !S || h ? (0, n.jsx)(er, { ...r, children: i }) : null),
+                (0, n.jsx)(ec, { disabled: A, ...N, isHovered: ed }),
             ],
         }),
     });
 };
 function ed(e) {
-    let { application: s, game: t, iconClassName: n, guildId: r, channelId: o, userId: d } = e,
+    let { application: s, game: t, iconClassName: i, guildId: r, channelId: o, userId: d } = e,
         [u, m] = l.useState(!1),
         A = (0, c.K)((e) => m(e));
     return (
@@ -551,12 +551,12 @@ function ed(e) {
                     user_id: d,
                 });
         }, [s.id, o, r, d, u]),
-        (0, i.jsx)(x.m, {
-            text: ei.intl.formatToPlainString(ei.t.Sq9xJ7, { game: s.name }),
-            "aria-label": ei.intl.formatToPlainString(ei.t.Sq9xJ7, { game: s.name }),
-            children: (0, i.jsx)(U.A, {
+        (0, n.jsx)(x.m, {
+            text: en.intl.formatToPlainString(en.t.Sq9xJ7, { game: s.name }),
+            "aria-label": en.intl.formatToPlainString(en.t.Sq9xJ7, { game: s.name }),
+            children: (0, n.jsx)(U.A, {
                 ref: A,
-                className: a()(el.Kk, el.n8, n),
+                className: a()(el.Kk, el.Gt, i),
                 game: t ?? s,
                 size: U.M.XSMALL,
                 onMouseEnter: function () {

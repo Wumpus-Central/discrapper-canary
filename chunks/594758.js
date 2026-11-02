@@ -745,7 +745,7 @@ var e5 = n(683071),
     tl = n(834040),
     ti = n(499373),
     tr = n(320448),
-    ta = n(297264),
+    ta = n(534514),
     ts = n(104510),
     to = n(866665),
     tu = n(695366),
@@ -1359,7 +1359,7 @@ function tJ(e) {
                     (0, r.jsx)("div", { className: e9()(tZ.El, { [e1.S]: t }), children: s }),
                 ],
             }),
-            (0, r.jsxs)("div", { className: tZ.pw, children: [C, p] }),
+            (0, r.jsxs)("div", { className: tZ.IT, children: [C, p] }),
             (0, r.jsxs)("div", {
                 className: tZ.fh,
                 children: [
@@ -2588,7 +2588,7 @@ function ld(e) {
                                 priceAmount: n,
                                 priceCurrency: l,
                                 discount: S,
-                                variant: "text-md/bold",
+                                variant: "text-md/semibold",
                             }),
                         ],
                     }),
@@ -3380,7 +3380,7 @@ function iA(e) {
                   (0, r.jsxs)("div", {
                       className: ig.tZ,
                       children: [
-                          (0, r.jsx)(ta.D, { variant: "heading-md/extrabold", children: E.name }),
+                          (0, r.jsx)(ta.D, { variant: "heading-md/semibold", children: E.name }),
                           (0, r.jsx)(g.E, {
                               variant: "text-sm/normal",
                               children: a ? H.intl.string(H.t["6cfuDj"]) : H.intl.string(H.t.QQsaCc),
@@ -4240,7 +4240,7 @@ let iq = function (e) {
                       children: (0, r.jsx)(iB.eu, { src: l, "aria-label": n.username, size: n9._3.SIZE_32, ...i }),
                   }),
                   (0, r.jsx)(g.E, {
-                      variant: "text-xs/bold",
+                      variant: "text-xs/semibold",
                       className: iZ.U_,
                       children: H.intl.format(H.t.oxhCOl, { userName: o }),
                   }),
@@ -4795,7 +4795,7 @@ function rx(e) {
             (0, r.jsx)("img", { src: rI, alt: "", width: 300, height: 126 }),
             (0, r.jsx)(ta.D, {
                 className: rg.i1,
-                variant: "heading-xl/extrabold",
+                variant: "heading-xl/semibold",
                 color: "text-strong",
                 children: H.intl.format(H.t.wLFT6z, { tier: t }),
             }),
@@ -4841,7 +4841,7 @@ function rO(e) {
     return (0, r.jsxs)("div", {
         className: rR.RP,
         children: [
-            (0, r.jsx)(ta.D, { className: rR.RS, variant: "heading-lg/extrabold", children: l }),
+            (0, r.jsx)(ta.D, { className: rR.RS, variant: "heading-lg/semibold", children: l }),
             null != i
                 ? (0, r.jsx)(g.E, { className: rR.sT, variant: "text-sm/normal", color: "text-default", children: i })
                 : null,
@@ -4875,7 +4875,7 @@ function rM(e) {
         children: [
             (0, r.jsx)(ta.D, {
                 className: rR.RS,
-                variant: "heading-lg/extrabold",
+                variant: "heading-lg/semibold",
                 children: H.intl.format(H.t.wLFT6z, { tier: n }),
             }),
             (0, r.jsx)(g.E, {
@@ -5370,7 +5370,7 @@ function r2(e) {
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(ta.D, {
-                                variant: "heading-xl/bold",
+                                variant: "heading-xl/semibold",
                                 className: rJ.DD,
                                 children: t.inboundHeaderText,
                             }),
@@ -5899,7 +5899,7 @@ function au(e) {
             (0, r.jsxs)("div", {
                 className: ao.EL,
                 children: [
-                    (0, r.jsx)(ta.D, { variant: "heading-xxl/bold", className: ao.RS, children: "Success!" }),
+                    (0, r.jsx)(ta.D, { variant: "heading-xxl/semibold", className: ao.RS, children: "Success!" }),
                     (0, r.jsx)(g.E, { variant: "text-md/normal", children: u }),
                     (0, r.jsx)("div", { className: ao.yF }),
                     (0, r.jsx)(e$.$, { onClick: t, text: H.intl.string(H.t.cpT0Cq), fullWidth: !0 }),

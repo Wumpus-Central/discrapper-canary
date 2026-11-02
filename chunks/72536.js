@@ -4,7 +4,7 @@ e.exports = {
     Sh: "paymentBannerIcon_e335a7",
     Cy: "paymentBannerText_e335a7",
     Il: "renewalMutationNotice_e335a7",
-    fj: "subscriptionRows_e335a7",
+    yG: "subscriptionRows_e335a7",
     HZ: "dupSubscriptionRow_e335a7",
     Gf: "sectionTitle_e335a7",
     yV: "sectionDescription_e335a7",

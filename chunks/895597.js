@@ -1,4 +1,4 @@
-(n.d(l, { ix: () => e8, Ay: () => e5, tO: () => e3 }), n(321073), n(938796));
+(n.d(l, { ix: () => e8, Ay: () => e4, tO: () => e3 }), n(321073), n(938796));
 var i = n(477900),
     t = n(582128),
     s = n(503698),
@@ -296,7 +296,7 @@ function ea(e) {
                     children: [
                         (0, i.jsx)(W.A, { className: en.f7, size: 16, color: o.colorString }),
                         (0, i.jsx)(S.E, {
-                            variant: "text-xs/bold",
+                            variant: "text-xs/semibold",
                             color: "text-strong",
                             className: en.S3,
                             children: o.name,
@@ -311,7 +311,7 @@ var er = n(870136),
     ec = n(506803),
     ed = n(351001),
     eu = n(305866),
-    eh = n(297264),
+    eh = n(534514),
     em = n(821609),
     ex = n(964486),
     eg = n(188645),
@@ -635,7 +635,7 @@ let e7 = t.memo(function (e) {
         ),
         y = t.useRef(null),
         _ = (0, c.bG)([eL.A], () => eL.A.getGuild(a)),
-        S = t.useMemo(() => e4(r, g, o, _), [r, g, o, _]),
+        S = t.useMemo(() => e5(r, g, o, _), [r, g, o, _]),
         M = t.useMemo(
             () =>
                 null == o
@@ -793,10 +793,10 @@ function e8(e) {
         ],
     });
 }
-function e4(e, l, n, i) {
+function e5(e, l, n, i) {
     return (!e || l) && null != n && null != i ? 1 : (!e || l) && null != n ? 2 : 0;
 }
-let e5 = t.memo(function (e) {
+let e4 = t.memo(function (e) {
     let {
             message: l,
             repliedMessage: n,
@@ -964,7 +964,7 @@ let e5 = t.memo(function (e) {
             () => (0, e0.k)({ message: l, channel: I, user: l?.author, compact: s, isRepliedMessage: !1 }),
             [l, I, s],
         ),
-        O = (0, c.bG)([eL.A], () => e4(s, T, j, eL.A.getGuild(e.guildId)), [s, T, j, e.guildId]),
+        O = (0, c.bG)([eL.A], () => e5(s, T, j, eL.A.getGuild(e.guildId)), [s, T, j, e.guildId]),
         k = (0, eI.gj)(e.guildId, l.author.id),
         G = (0, ey.Sc)(),
         P = t.useMemo(() => {

@@ -8,7 +8,7 @@ var l,
     u = n(331322),
     c = n(462887),
     d = n(834730),
-    m = n(297264),
+    m = n(534514),
     p = n(315629),
     C = n(736653),
     h = n(287809),
@@ -100,7 +100,7 @@ let Z = new B.A("PremiumGroupPrice.tsx"),
                 (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsx)(d.E, {
-                            variant: "heading-xxl/extrabold",
+                            variant: "heading-xxl/semibold",
                             color: a ? "text-strong" : "text-overlay-light",
                             tag: "span",
                             children: t,

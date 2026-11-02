@@ -89,7 +89,7 @@ function b(e) {
                           "aria-hidden": !0,
                       })
                     : null,
-                (0, i.jsx)(m.E, { className: O.J5, variant: "text-sm/bold", children: s.name }),
+                (0, i.jsx)(m.E, { className: O.J5, variant: "text-sm/semibold", children: s.name }),
             ],
         });
     }

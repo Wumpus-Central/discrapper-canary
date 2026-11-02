@@ -7,7 +7,7 @@ var r = n(477900),
     i = n(331322),
     c = n(834730),
     u = n(406810),
-    d = n(297264),
+    d = n(534514),
     p = n(866665),
     m = n(408278),
     g = n(885574),
@@ -184,7 +184,7 @@ function z(e) {
                 onClick: x,
                 children: [
                     null != v &&
-                        (0, r.jsx)(c.E, { variant: "text-md/bold", color: "text-strong", children: (0, C.U)(v) }),
+                        (0, r.jsx)(c.E, { variant: "text-md/semibold", color: "text-strong", children: (0, C.U)(v) }),
                     null != p && (0, r.jsx)(S, { icon: u.ClockIcon, text: p }),
                     (0, r.jsx)(M, {
                         promotionRewardStatus: t.rewardStatus,
@@ -247,7 +247,7 @@ function Z(e) {
                         align: "start",
                         children: [
                             (0, r.jsx)(d.D, {
-                                variant: "heading-lg/bold",
+                                variant: "heading-lg/semibold",
                                 color: "text-strong",
                                 children: (0, C.U)(x),
                             }),

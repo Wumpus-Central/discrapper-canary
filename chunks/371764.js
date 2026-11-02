@@ -3,10 +3,10 @@ var i = n(477900);
 n(582128);
 var l = n(131937),
     o = n(877624),
-    a = n(308588),
-    s = n(670474),
+    s = n(308588),
+    a = n(670474),
     r = n(821609),
-    c = n(297264),
+    c = n(534514),
     d = n(834730),
     p = n(28863),
     u = n(212245),
@@ -25,7 +25,7 @@ function A(t) {
         properties: { component_type: o.C.MARKETING_PAGE_BANNER, component_id: e, promotion_id: n },
     });
     let v = (0, h.h)({
-            buttonAction: A.button?.buttonAction ?? a.d.OPEN_TIER_2_PAYMENT_MODAL,
+            buttonAction: A.button?.buttonAction ?? s.d.OPEN_TIER_2_PAYMENT_MODAL,
             deeplinkSection: A.button?.deeplinkSection,
             applicationId: A.button?.navigableStorefrontApplicationId?.value,
             analyticsLocations: j,
@@ -66,7 +66,7 @@ function A(t) {
                 (0, i.jsx)("div", {
                     className: g.UD,
                     children: (0, i.jsx)(r.$, {
-                        variant: A.buttonVariant === s.F.PRIMARY ? "primary" : "expressive",
+                        variant: A.buttonVariant === a.F.PRIMARY ? "primary" : "expressive",
                         size: "md",
                         onClick: v,
                         text: A.button.copy,

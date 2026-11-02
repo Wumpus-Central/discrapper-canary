@@ -1085,7 +1085,7 @@ function tw(e) {
                                                         (e.stopPropagation(), (0, tA.vz)(o.id, !c));
                                                     },
                                                     children: (0, l.jsxs)(eB.E, {
-                                                        variant: "text-sm/bold",
+                                                        variant: "text-sm/semibold",
                                                         color: c ? "text-link" : "text-muted",
                                                         className: tj.Z4,
                                                         children: [
@@ -1269,7 +1269,11 @@ function tQ(e) {
     return (0, l.jsxs)("div", {
         className: t$.M,
         children: [
-            (0, l.jsx)(eB.E, { variant: "text-xs/bold", color: "text-strong", children: k.intl.string(k.t["4VDCG0"]) }),
+            (0, l.jsx)(eB.E, {
+                variant: "text-xs/semibold",
+                color: "text-strong",
+                children: k.intl.string(k.t["4VDCG0"]),
+            }),
             t
                 ? (0, l.jsx)(eB.E, { variant: "text-xs/medium", className: t$.z, children: k.intl.string(k.t.qNorwt) })
                 : (0, l.jsx)(eB.E, {

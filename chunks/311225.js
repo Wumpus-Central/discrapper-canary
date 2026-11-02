@@ -4,7 +4,7 @@ e.exports = {
     iE: "wrapper_cf09d8",
     _X: "wrapperAudio_cf09d8 wrapper_cf09d8",
     CX: "wrapperControlsHidden_cf09d8 wrapper_cf09d8",
-    bQ: "wrapperPaused_cf09d8 wrapper_cf09d8",
+    ub: "wrapperPaused_cf09d8 wrapper_cf09d8",
     sw: "wrapperPlaying_cf09d8 wrapper_cf09d8",
     mE: "wrapperMediaMosaic_cf09d8",
     mr: "newMosaicStyle_cf09d8",

@@ -14,13 +14,13 @@ var r = n(477900),
     p = n(561769),
     g = n(57020),
     x = n(105292),
-    A = n(178287);
-function m(e) {
+    m = n(178287);
+function A(e) {
     let { product: t, prioritizedCurrency: n } = e,
         o = (0, s.bG)([l.default], () => l.default.getCurrentUser()),
         f = u.Ay.canUseCollectibles(o),
         p = (0, d.xM)(o),
-        m = null != p,
+        A = null != p,
         { isDisabled: _ } = (0, c.I)(t.skuId),
         { isPurchased: h, isPartiallyOwnedBundle: E } = (0, I.h)(t),
         C = (0, d.G0)(t),
@@ -29,9 +29,9 @@ function m(e) {
             checkoutEligiblePrices: k,
             hasSufficientOrbs: R,
             shouldCheckoutWithOrbs: y,
-        } = (0, g.F)({ product: t, hasShopDiscount: m, prioritizedCurrency: n }),
+        } = (0, g.F)({ product: t, hasShopDiscount: A, prioritizedCurrency: n }),
         j = k[0]?.currency,
-        T = i.useMemo(() => (0, d.fT)(t, m, j), [t, m, j]);
+        T = i.useMemo(() => (0, d.fT)(t, A, j), [t, A, j]);
     return _
         ? (0, r.jsx)(a.E, {
               variant: "text-md/medium",
@@ -55,14 +55,14 @@ function m(e) {
               })
             : b
               ? (0, r.jsx)(a.E, {
-                    variant: "text-md/bold",
+                    variant: "text-md/semibold",
                     color: "text-strong",
                     lineClamp: 1,
                     children: x.intl.string(x.t.nBtvYB),
                 })
               : C
                 ? (0, r.jsx)(a.E, {
-                      variant: "text-md/bold",
+                      variant: "text-md/semibold",
                       color: "text-strong",
                       lineClamp: 1,
                       children: x.intl.string(x.t.rt69oo),
@@ -73,11 +73,11 @@ function m(e) {
                         priceAmount: k[0].amount,
                         priceCurrency: k[0].currency,
                         discount: T,
-                        discountIconConfig: m
+                        discountIconConfig: A
                             ? { displayMode: "default", source: p ?? d.D0.NITRO, size: "sm" }
                             : void 0,
-                        className: y && !R ? A.c : void 0,
-                        variant: "text-md/bold",
+                        className: y && !R ? m.c : void 0,
+                        variant: "text-md/semibold",
                     });
 }
 let _ = function (e) {
@@ -86,5 +86,5 @@ let _ = function (e) {
         s = (0, o.Q)(i);
     if (null == i) return null;
     let a = (0, f.rb)(i, s);
-    return (0, r.jsx)(m, { product: a, prioritizedCurrency: n });
+    return (0, r.jsx)(A, { product: a, prioritizedCurrency: n });
 };

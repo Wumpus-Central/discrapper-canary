@@ -6,7 +6,7 @@ var i = s(477900),
     l = s(862482),
     c = s(97808),
     d = s(778712),
-    o = s(297264),
+    o = s(534514),
     I = s(834730),
     A = s(789645),
     N = s(156954),
@@ -61,7 +61,7 @@ function L(e) {
                             children: [
                                 (0, i.jsxs)("div", {
                                     children: [
-                                        (0, i.jsx)(o.D, { variant: "heading-sm/bold", children: x }),
+                                        (0, i.jsx)(o.D, { variant: "heading-sm/semibold", children: x }),
                                         (0, i.jsx)(I.E, {
                                             variant: "text-xs/medium",
                                             color: "interactive-text-default",

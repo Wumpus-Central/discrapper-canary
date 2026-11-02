@@ -52,7 +52,7 @@ var F = n(834981),
     G = n(778712),
     w = n(939249),
     V = n(548411),
-    z = n(297264),
+    z = n(534514),
     H = n(10005),
     B = n(153739),
     Y = n(284009),
@@ -634,7 +634,7 @@ function te(e) {
                           ? (0, l.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: e7.u1 })
                           : (0, l.jsx)(m.E, {
                                 className: e7.UX,
-                                variant: "text-sm/bold",
+                                variant: "text-sm/semibold",
                                 children: et.intl.format(ee.default["7dMmJY"], {
                                     pageSize: Math.max(1, Math.min(c - N.length, D.PH)),
                                 }),
@@ -1290,7 +1290,7 @@ let t9 = function (e) {
             (0, l.jsxs)("div", {
                 children: [
                     (0, l.jsx)(z.D, {
-                        variant: "heading-md/bold",
+                        variant: "heading-md/semibold",
                         className: t2.wx,
                         children: (0, l.jsx)(ed.F, { children: i }),
                     }),
@@ -2026,7 +2026,7 @@ function n4(e) {
             }),
             (0, l.jsxs)("div", {
                 children: [
-                    (0, l.jsx)(z.D, { variant: "heading-sm/bold", children: (0, l.jsx)(ed.F, { children: t }) }),
+                    (0, l.jsx)(z.D, { variant: "heading-sm/semibold", children: (0, l.jsx)(ed.F, { children: t }) }),
                     (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-muted", children: n }),
                 ],
             }),

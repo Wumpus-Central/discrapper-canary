@@ -1,6 +1,6 @@
 n.d(t, { A: () => d });
 var i = n(477900),
-    l = n(297264),
+    l = n(534514),
     a = n(821609),
     s = n(367513),
     r = n(715989),
@@ -16,7 +16,7 @@ function d(e) {
                 className: c.Qs,
                 children: [
                     (0, i.jsx)(l.D, {
-                        variant: "heading-lg/normal",
+                        variant: "heading-lg/medium",
                         children: n ? o.intl.string(o.t.KIConm) : o.intl.format(o.t.ilLVLr, {}),
                     }),
                     !n &&

@@ -109,16 +109,10 @@ screen and (max-width:485px) {
     }
 }
 
-html:not(.mana-type-consolidation) .nitroText_b66356 {
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 27px
-}
-
 .betaBadgeContainer_b66356 {
     bottom: calc(100% + 8px);
     inset-inline-start: 0;
     position: absolute
 }
 
-/*# sourceMappingURL=153302.89074680635898f4.css.map*/
+/*# sourceMappingURL=153302.6765c16e89b58716.css.map*/

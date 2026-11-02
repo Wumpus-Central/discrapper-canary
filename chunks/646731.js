@@ -296,7 +296,7 @@ function eo(e) {
                                       children: X.intl.string(K.default.xOP5OP),
                                   }),
                                   (0, n.jsx)(j.E, {
-                                      variant: "experimental/body-xs/normal",
+                                      variant: "body-xs/normal",
                                       color: "text-subtle",
                                       children: X.intl.string(K.default.XW2CuY),
                                   }),
@@ -479,7 +479,7 @@ function eS(e) {
                     (0, n.jsxs)("div", {
                         children: [
                             (0, n.jsx)(j.E, {
-                                variant: "text-md/bold",
+                                variant: "text-md/semibold",
                                 color: "text-default",
                                 className: ey.L8,
                                 children: t,

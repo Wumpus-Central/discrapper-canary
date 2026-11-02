@@ -3,7 +3,7 @@ var n = a(477900);
 a(582128);
 var l = a(189213),
     i = a(834730),
-    s = a(297264),
+    s = a(534514),
     r = a(559474),
     o = a(505965);
 let d = "shop-assets-preview-instructions-modal",
@@ -19,7 +19,7 @@ function u(e) {
             className: o.jE,
             children: [
                 (0, n.jsx)(i.E, {
-                    variant: "text-md/bold",
+                    variant: "text-md/semibold",
                     children: "This tool allows you to upload and preview assets in the app.",
                 }),
                 (0, n.jsx)(i.E, {
@@ -30,13 +30,13 @@ function u(e) {
                     variant: "text-md/normal",
                     children: [
                         "Easiest option: drop the whole drop package. This is a folder containing the named subfolders for each asset grouping (",
-                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "collection" }),
+                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/semibold", children: "collection" }),
                         ",",
                         " ",
-                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "avatar_decorations" }),
+                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/semibold", children: "avatar_decorations" }),
                         ",",
                         " ",
-                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "frames" }),
+                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/semibold", children: "frames" }),
                         ").",
                     ],
                 }),
@@ -51,7 +51,7 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Avatar Decorations" }),
+                        (0, n.jsx)(s.D, { variant: "heading-lg/semibold", children: "Avatar Decorations" }),
                         (0, n.jsxs)(i.E, {
                             variant: "text-md/normal",
                             children: [
@@ -59,7 +59,7 @@ function u(e) {
                                 " ",
                                 (0, n.jsx)(i.E, {
                                     tag: "span",
-                                    variant: "text-md/bold",
+                                    variant: "text-md/semibold",
                                     children: "avatar_decorations",
                                 }),
                                 " ",
@@ -73,7 +73,7 @@ function u(e) {
                                 " ",
                                 (0, n.jsx)(i.E, {
                                     tag: "span",
-                                    variant: "text-md/bold",
+                                    variant: "text-md/semibold",
                                     children: "Avatar Decoration",
                                 }),
                                 " ",
@@ -85,13 +85,13 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Profile Frames" }),
+                        (0, n.jsx)(s.D, { variant: "heading-lg/semibold", children: "Profile Frames" }),
                         (0, n.jsxs)(i.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Drop a",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "frames" }),
+                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/semibold", children: "frames" }),
                                 " ",
                                 "folder which contains subfolders for each Profile Frame.",
                             ],
@@ -101,11 +101,11 @@ function u(e) {
                             children: [
                                 "Each Profile Frame subfolder should contain these folders:",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "foreground" }),
+                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/semibold", children: "foreground" }),
                                 " ",
                                 "and",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "background" }),
+                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/semibold", children: "background" }),
                                 ".",
                             ],
                         }),
@@ -118,7 +118,11 @@ function u(e) {
                             children: [
                                 "Then, select from the",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "Profile Frame" }),
+                                (0, n.jsx)(i.E, {
+                                    tag: "span",
+                                    variant: "text-md/semibold",
+                                    children: "Profile Frame",
+                                }),
                                 " ",
                                 "dropdown to preview everywhere that already has a Profile Frame.",
                             ],
@@ -128,14 +132,14 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Profile Effects" }),
+                        (0, n.jsx)(s.D, { variant: "heading-lg/semibold", children: "Profile Effects" }),
                         (0, n.jsx)(i.E, {
                             variant: "text-md/normal",
                             children: "First draft your Profile Effect in the Profile Effect Editor tool, found here:",
                         }),
                         (0, n.jsx)(i.E, {
                             className: o.Ou,
-                            variant: "text-md/bold",
+                            variant: "text-md/semibold",
                             children: "DevTools > Collectibles Preview > Profile Effects",
                         }),
                         (0, n.jsxs)(i.E, {
@@ -143,7 +147,11 @@ function u(e) {
                             children: [
                                 "Then, in this devtools",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "Profile Effect" }),
+                                (0, n.jsx)(i.E, {
+                                    tag: "span",
+                                    variant: "text-md/semibold",
+                                    children: "Profile Effect",
+                                }),
                                 " ",
                                 "dropdown, select from your drafts to preview everywhere that already has a Profile Effect.",
                             ],
@@ -153,14 +161,14 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Nameplates" }),
+                        (0, n.jsx)(s.D, { variant: "heading-lg/semibold", children: "Nameplates" }),
                         (0, n.jsx)(i.E, {
                             variant: "text-md/normal",
                             children: "Nameplate previews live elsewhere! Find the tool at:",
                         }),
                         (0, n.jsx)(i.E, {
                             className: o.Ou,
-                            variant: "text-md/bold",
+                            variant: "text-md/semibold",
                             children: "DevTools > Collectibles Preview > Nameplates",
                         }),
                     ],
@@ -168,20 +176,20 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Collection Assets" }),
+                        (0, n.jsx)(s.D, { variant: "heading-lg/semibold", children: "Collection Assets" }),
                         (0, n.jsxs)(i.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Put these in a",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "collection" }),
+                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/semibold", children: "collection" }),
                                 " ",
                                 "folder, or drop the files directly. The tool will recognize them by filename.",
                             ],
                         }),
                         (0, n.jsx)(s.D, {
                             className: o.J2,
-                            variant: "heading-md/bold",
+                            variant: "heading-md/semibold",
                             children: "Valid Upload Types",
                         }),
                         (0, n.jsxs)("ul", {
@@ -191,7 +199,11 @@ function u(e) {
                                 (0, n.jsx)("li", { children: "A folder containing image or video files" }),
                             ],
                         }),
-                        (0, n.jsx)(s.D, { className: o.J2, variant: "heading-md/bold", children: "Valid File Names" }),
+                        (0, n.jsx)(s.D, {
+                            className: o.J2,
+                            variant: "heading-md/semibold",
+                            children: "Valid File Names",
+                        }),
                         (0, n.jsx)("ul", {
                             className: o.SS,
                             children: Array.from(r.Li).map((e) => (0, n.jsx)("li", { children: e }, e)),

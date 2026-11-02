@@ -1,11 +1,10 @@
-i.d(e, { v: () => s });
+i.d(e, { v: () => d });
 var l = i(477900),
     a = i(503698),
     g = i.n(a),
-    t = i(85463),
-    h = i(834730),
-    n = i(727960);
-let d = {
+    t = i(834730),
+    h = i(727960);
+let n = {
     blurpleLight: "blurple-light",
     blurpleDark: "blurple-dark",
     greenLight: "green-light",
@@ -18,17 +17,16 @@ let d = {
     grayMedium: "gray-medium",
     grayDark: "gray-dark",
 };
-function s(r) {
-    let { text: e, variant: i = "grayLight", icon: a, iconColor: s } = r,
-        u = d[i],
-        c = (0, t.N)(),
+function d(r) {
+    let { text: e, variant: i = "grayLight", icon: a, iconColor: d } = r,
+        s = n[i],
         o =
             null != a
-                ? (0, l.jsx)(a, { color: s ?? "currentColor", size: "xxs", "aria-hidden": !0, className: n.icon })
+                ? (0, l.jsx)(a, { color: d ?? "currentColor", size: "xxs", "aria-hidden": !0, className: h.icon })
                 : null;
-    return (0, l.jsxs)(h.E, {
-        variant: c,
-        className: g()(n.chip, n[u], { [n["with-icon"]]: null != a }),
+    return (0, l.jsxs)(t.E, {
+        variant: "body-xs/semibold",
+        className: g()(h.chip, h[s], { [h["with-icon"]]: null != a }),
         children: [o, e],
     });
 }

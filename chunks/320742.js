@@ -1,16 +1,16 @@
 s.d(e, { default: () => T });
 var l = s(477900),
     n = s(582128),
-    a = s(503698),
-    i = s.n(a),
+    i = s(503698),
+    a = s.n(i),
     r = s(284009),
     o = s.n(r),
     c = s(224640),
     d = s(417098),
     u = s(885574),
     x = s(430993),
-    f = s(834730),
-    m = s(939249),
+    m = s(834730),
+    f = s(939249),
     h = s(696208),
     C = s(964486),
     p = s(414121),
@@ -26,7 +26,7 @@ var l = s(477900),
     b = s(221851);
 let T = function (t) {
     let { transitionState: e, onClose: s } = t,
-        a = (0, j.A)(),
+        i = (0, j.A)(),
         [r, T] = n.useState(!1),
         { getLinkCode: z, isGetLinkCodeLoading: I } = (0, g.A)({}),
         _ = (0, v.VE)(),
@@ -44,7 +44,7 @@ let T = function (t) {
                     s();
                 }, A.nz));
     }
-    (o()(!a, "FamilyCenterQRCodeModal should only be rendered for teens."),
+    (o()(!i, "FamilyCenterQRCodeModal should only be rendered for teens."),
         (0, C.Ay)(() => {
             z();
         }),
@@ -66,13 +66,13 @@ let T = function (t) {
             }),
             (0, l.jsxs)(x.c, {
                 children: [
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(m.E, {
                         className: b.QB,
-                        variant: "text-lg/bold",
+                        variant: "text-lg/semibold",
                         color: "text-strong",
                         children: y.intl.string(k.default.AVTZaN),
                     }),
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(m.E, {
                         className: b.SX,
                         variant: "text-sm/normal",
                         color: "text-default",
@@ -82,8 +82,8 @@ let T = function (t) {
                     }),
                     (0, l.jsx)("div", {
                         className: R.Ac,
-                        children: (0, l.jsx)(m.D, {
-                            className: i()(R.u3, { [R.RK]: S }),
+                        children: (0, l.jsx)(f.D, {
+                            className: a()(R.u3, { [R.RK]: S }),
                             onClick: Q,
                             children: (0, l.jsx)(p.Lx, {
                                 size: 272,
@@ -93,7 +93,7 @@ let T = function (t) {
                             }),
                         }),
                     }),
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(m.E, {
                         className: R.z_,
                         variant: "text-xs/semibold",
                         color: "text-default",

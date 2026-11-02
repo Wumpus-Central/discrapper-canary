@@ -755,7 +755,7 @@ function e5(e) {
         : null;
 }
 var e4 = n(778492),
-    e9 = n(297264),
+    e9 = n(534514),
     e6 = n(285796),
     e8 = n(857182),
     e7 = n(506774),
@@ -833,7 +833,7 @@ let tc = function (e) {
                       children: [
                           (0, s.jsx)(e4.k, { size: "xs", color: "currentColor", className: td.Kk }),
                           (0, s.jsx)(e9.D, {
-                              variant: "heading-sm/normal",
+                              variant: "heading-sm/medium",
                               className: td.dS,
                               children: K.intl.string(K.t.hasZoU),
                           }),
@@ -3801,7 +3801,7 @@ function rY(e) {
                                   children: [
                                       (0, s.jsx)(rB.A, { user: a, guildId: n }),
                                       (0, s.jsx)(e9.D, {
-                                          variant: "heading-lg/bold",
+                                          variant: "heading-lg/semibold",
                                           children: K.intl.string(K.t.b33pLD),
                                       }),
                                       (0, s.jsx)(A.E, {

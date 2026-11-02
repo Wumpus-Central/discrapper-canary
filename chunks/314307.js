@@ -9,7 +9,7 @@ var i = n(503698),
     c = n(770880),
     d = n(276293),
     u = n(661531),
-    h = n(297264),
+    h = n(534514),
     m = n(834730),
     g = n(375901),
     p = n(652215),
@@ -31,7 +31,7 @@ function C(e) {
     return (0, l.jsx)(h.D, {
         "aria-hidden": "true",
         className: s()(n, A.wx),
-        variant: "heading-xxl/extrabold",
+        variant: "heading-xxl/semibold",
         children: t,
     });
 }

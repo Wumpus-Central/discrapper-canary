@@ -13,16 +13,10 @@
 
 .text__13cf1 {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: var(--font-weight-semibold);
-    letter-spacing: .02em;
-    line-height: 16px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .text__13cf1 {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    letter-spacing: .02em;
+    line-height: 16px;
     text-transform: none
 }
 
@@ -46,4 +40,4 @@
     margin-inline-start: auto
 }
 
-/*# sourceMappingURL=358404.1a2af23d1c292b3f.css.map*/
+/*# sourceMappingURL=358404.00e23cafbbe63fc2.css.map*/

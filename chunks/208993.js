@@ -2,7 +2,7 @@ n.d(t, { A: () => x });
 var r = n(477900);
 n(582128);
 var s = n(935462),
-    i = n(297264),
+    i = n(534514),
     a = n(834730),
     l = n(283900),
     c = n(475833),
@@ -31,7 +31,10 @@ function h(e) {
                 (0, r.jsx)(l.A, { currentUser: n, otherUser: s, children: t }),
                 (0, r.jsxs)("div", {
                     className: u.R_,
-                    children: [(0, r.jsx)(i.D, { variant: "text-lg/bold", children: a }), (0, r.jsx)(c.A, { user: s })],
+                    children: [
+                        (0, r.jsx)(i.D, { variant: "text-lg/semibold", children: a }),
+                        (0, r.jsx)(c.A, { user: s }),
+                    ],
                 }),
             ],
         });

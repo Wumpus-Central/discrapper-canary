@@ -4,7 +4,7 @@ var s = i(477900),
     l = i(70283),
     n = i(17928),
     a = i(189213),
-    c = i(297264),
+    c = i(534514),
     d = i(834730),
     o = i(597770),
     u = i(793574),
@@ -109,7 +109,7 @@ function S(e) {
             (0, s.jsxs)("div", {
                 className: I.TA,
                 children: [
-                    (0, s.jsx)(c.D, { variant: "heading-xxl/bold", children: i }),
+                    (0, s.jsx)(c.D, { variant: "heading-xxl/semibold", children: i }),
                     (0, s.jsx)(d.E, { variant: "text-sm/normal", color: "text-subtle", className: I.h_, children: l }),
                 ],
             }),
@@ -128,7 +128,7 @@ function B(e) {
                 className: I.Mr,
                 children: [
                     (0, s.jsx)(c.D, {
-                        variant: "heading-xxl/bold",
+                        variant: "heading-xxl/semibold",
                         children: M.intl.format(p.default.k8MmO8, { tierName: r.name ?? "" }),
                     }),
                     (0, s.jsx)(w, { progress: t, currentTier: i, newTier: r, className: I.$c }),

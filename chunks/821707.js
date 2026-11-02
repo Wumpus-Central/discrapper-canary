@@ -12,7 +12,12 @@ function u(t) {
         className: o()(l.kL, { [l.LV]: i }),
         children: [
             (0, r.jsx)(s.t, { size: "xs", color: "currentColor" }),
-            (0, r.jsx)(a.E, { variant: "text-md/bold", color: "currentColor", lineClamp: i ? void 0 : 1, children: e }),
+            (0, r.jsx)(a.E, {
+                variant: "text-md/semibold",
+                color: "currentColor",
+                lineClamp: i ? void 0 : 1,
+                children: e,
+            }),
             null != n &&
                 (0, r.jsx)(a.E, {
                     className: l.of,

@@ -1,25 +1,25 @@
-e.d(a, { A: () => b });
-var l = e(477900),
-    i = e(582128),
-    t = e(17928),
-    c = e(554146),
-    d = e(815021),
-    n = e(297264),
-    r = e(834730),
-    m = e(62010),
-    o = e(821609),
-    x = e(224640),
-    u = e(501419),
-    h = e(174459),
-    j = e(832163),
-    v = e(44724),
-    N = e(652215),
-    p = e(49999),
-    A = e(489438);
+a.d(e, { A: () => b });
+var l = a(477900),
+    i = a(582128),
+    t = a(17928),
+    c = a(554146),
+    d = a(815021),
+    n = a(534514),
+    r = a(834730),
+    m = a(62010),
+    o = a(821609),
+    x = a(224640),
+    u = a(501419),
+    h = a(174459),
+    j = a(832163),
+    v = a(44724),
+    N = a(652215),
+    p = a(49999),
+    A = a(489438);
 function b(s) {
     let {
-            version: a,
-            logo: e,
+            version: e,
+            logo: a,
             backgroundImage: b,
             titles: k,
             subtitle: D,
@@ -32,8 +32,8 @@ function b(s) {
         y = (0, t.bG)([j.A], () => j.A.getGuildIdFromApplicationId(E ?? void 0));
     i.useEffect(() => {
         (h.default.track(N.HAw.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal", application_id: E }),
-            (0, u.$l)(c.M.GAME_SHOP_ANNOUNCEMENT_MODAL, a, { dismissAction: p.i.AUTO_DISMISS }));
-    }, [E, a]);
+            (0, u.$l)(c.M.GAME_SHOP_ANNOUNCEMENT_MODAL, e, { dismissAction: p.i.AUTO_DISMISS }));
+    }, [E, e]);
     let L = i.useCallback(() => {
             null != y && (0, v.X)({ guildId: y });
         }, [y]),
@@ -55,12 +55,12 @@ function b(s) {
                 (0, l.jsxs)("div", {
                     className: A.ZK,
                     children: [
-                        (0, l.jsx)("img", { src: e, alt: "", className: A.wm }),
-                        k.map((s, a) =>
+                        (0, l.jsx)("img", { src: a, alt: "", className: A.wm }),
+                        k.map((s, e) =>
                             (0, l.jsx)(
                                 n.D,
                                 { variant: "display-md", color: "text-strong", className: A.DD, children: s },
-                                a,
+                                e,
                             ),
                         ),
                         (0, l.jsx)(r.E, {
@@ -73,7 +73,7 @@ function b(s) {
                 }),
                 (0, l.jsx)("div", {
                     className: A.qT,
-                    children: g.map((s, a) =>
+                    children: g.map((s, e) =>
                         (0, l.jsxs)(
                             "div",
                             {
@@ -97,7 +97,7 @@ function b(s) {
                                         className: A.kh,
                                         children: [
                                             (0, l.jsx)(n.D, {
-                                                variant: "heading-md/bold",
+                                                variant: "heading-md/semibold",
                                                 color: "text-strong",
                                                 children: s.title,
                                             }),
@@ -110,7 +110,7 @@ function b(s) {
                                     }),
                                 ],
                             },
-                            a,
+                            e,
                         ),
                     ),
                 }),

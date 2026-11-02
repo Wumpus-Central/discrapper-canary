@@ -12,7 +12,7 @@ var i = n(477900),
     E = n(862482),
     A = n(403581),
     h = n(834730),
-    f = n(297264),
+    f = n(534514),
     I = n(939249),
     p = n(789645),
     m = n(736653),
@@ -109,7 +109,7 @@ function F(e) {
     let t = (0, y.V)()?.subscriptionTrial,
         n = t?.skuId ?? b.pe.TIER_2;
     return (0, i.jsx)(h.E, {
-        variant: "text-xs/bold",
+        variant: "text-xs/semibold",
         className: s()(U.A6, e.className, { [U.kU]: n === b.pe.TIER_0, [U.y_]: n === b.pe.TIER_2 }),
         color: "none",
         children: (0, O.tS)({ intervalType: t?.interval, intervalCount: t?.intervalCount }),
@@ -206,7 +206,7 @@ function j(e) {
                         children: [
                             (0, i.jsx)("img", { className: U.Tn, src: w, alt: M.intl.string(M.t.do7AoM) }),
                             (0, i.jsx)(f.D, {
-                                variant: "heading-xl/bold",
+                                variant: "heading-xl/semibold",
                                 color: "text-strong",
                                 children: M.intl.string(M.t.HEm04J),
                             }),
@@ -239,7 +239,7 @@ function j(e) {
                             children: [
                                 (0, i.jsx)("img", { className: U.Tn, src: w, alt: M.intl.string(M.t.do7AoM) }),
                                 (0, i.jsx)(f.D, {
-                                    variant: "heading-xl/bold",
+                                    variant: "heading-xl/semibold",
                                     color: "text-strong",
                                     children: M.intl.string(M.t.jJG1pl),
                                 }),
@@ -273,7 +273,7 @@ function j(e) {
                         children: [
                             (0, i.jsx)("img", { alt: "", className: U.Tn, src: D }),
                             (0, i.jsx)(f.D, {
-                                variant: "heading-xl/bold",
+                                variant: "heading-xl/semibold",
                                 color: "text-strong",
                                 children: M.intl.string(M.t["1SsvhY"]),
                             }),
@@ -331,7 +331,7 @@ function j(e) {
                 (0, i.jsxs)("div", {
                     className: U.hQ,
                     children: [
-                        (0, i.jsx)(f.D, { variant: "heading-xl/bold", color: "text-strong", children: t }),
+                        (0, i.jsx)(f.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
                         (0, i.jsx)(h.E, { variant: "text-md/normal", children: r }),
                         (0, i.jsx)(x, { trialOffer: A, discountOffer: N, children: v }),
                     ],
@@ -341,7 +341,7 @@ function j(e) {
             return (0, i.jsxs)("div", {
                 className: U.hQ,
                 children: [
-                    (0, i.jsx)(f.D, { variant: "heading-xl/bold", color: "text-strong", children: t }),
+                    (0, i.jsx)(f.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
                     null != r && (0, i.jsx)(h.E, { variant: "text-md/normal", children: r }),
                     (0, i.jsx)(x, {
                         trialOffer: A,
@@ -378,9 +378,9 @@ function j(e) {
             return (0, i.jsxs)("div", {
                 className: s()(U.iW, { [U.WP]: !C }),
                 children: [
-                    (0, i.jsx)(h.E, { variant: "text-lg/bold", color: "text-feedback-critical", children: r }),
+                    (0, i.jsx)(h.E, { variant: "text-lg/semibold", color: "text-feedback-critical", children: r }),
                     (0, i.jsx)(f.D, {
-                        variant: "heading-lg/extrabold",
+                        variant: "heading-lg/semibold",
                         color: "text-strong",
                         className: U.Ed,
                         children: M.intl.string(M.t.ZvHg3N),

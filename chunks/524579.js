@@ -29,7 +29,7 @@ var l,
     L = n(939249),
     b = n(346055),
     R = n(821609),
-    O = n(297264),
+    O = n(534514),
     M = n(155718),
     k = n(775602),
     U = n(721768),
@@ -770,7 +770,7 @@ function eQ(e) {
                                                         n.e("906723"),
                                                         n.e("262841"),
                                                         n.e("753589"),
-                                                        n.e("881379"),
+                                                        n.e("142489"),
                                                         n.e("521574"),
                                                         n.e("209729"),
                                                         n.e("800311"),
@@ -946,7 +946,7 @@ function e1(e) {
                             children: (0, r.jsx)(O.D, {
                                 ref: m,
                                 className: eJ.n,
-                                variant: "heading-lg/extrabold",
+                                variant: "heading-lg/semibold",
                                 children: l,
                             }),
                         }),
@@ -1257,7 +1257,7 @@ function tP(e) {
     return (0, r.jsxs)("div", {
         className: tI.gn,
         children: [
-            (0, r.jsx)(O.D, { variant: "heading-xl/extrabold", lineClamp: 1, children: n }),
+            (0, r.jsx)(O.D, { variant: "heading-xl/semibold", lineClamp: 1, children: n }),
             l
                 ? (0, r.jsx)("div", {
                       className: tI.s3,

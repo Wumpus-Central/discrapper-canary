@@ -40,7 +40,7 @@ var w = n(212407),
     F = n.n(M),
     G = n(834730),
     U = n(939249),
-    H = n(297264),
+    H = n(534514),
     z = n(14702),
     V = n(818296),
     X = n(288106),
@@ -265,7 +265,7 @@ function ef(e) {
                 (0, s.jsxs)("div", {
                     className: eh.sn,
                     children: [
-                        (0, s.jsx)(H.D, { ref: h, variant: "heading-xl/bold", className: eh.R_, children: n }),
+                        (0, s.jsx)(H.D, { ref: h, variant: "heading-xl/semibold", className: eh.R_, children: n }),
                         (0, s.jsx)(G.E, { variant: "text-sm/normal", children: u }),
                         (0, s.jsx)(eE, { skuId: o.skuId }),
                         null !== m && (0, s.jsx)(G.E, { variant: "text-xs/normal", className: eh.H$, children: m }),
@@ -634,7 +634,13 @@ let eQ = {
                 (0, s.jsxs)("div", {
                     className: Q.Qf,
                     children: [
-                        (0, s.jsx)(H.D, { ref: E, variant: "heading-xl/bold", className: Q.R_, title: n, children: n }),
+                        (0, s.jsx)(H.D, {
+                            ref: E,
+                            variant: "heading-xl/semibold",
+                            className: Q.R_,
+                            title: n,
+                            children: n,
+                        }),
                         (0, s.jsx)(G.E, { variant: "text-sm/medium", color: "text-default", children: x }),
                         (0, s.jsxs)("div", {
                             className: Q.hZ,

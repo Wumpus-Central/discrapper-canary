@@ -10,7 +10,7 @@ var s = n(477900),
     o = n(628284),
     m = n(939249);
 if (221552 == n.j) var x = n(276293);
-if (221552 == n.j) var h = n(297264);
+if (221552 == n.j) var h = n(534514);
 if (221552 == n.j) var g = n(622629);
 var j = n(47167),
     A = n(713654),
@@ -115,7 +115,7 @@ function D(e) {
               className: k.kL,
               children: [
                   (0, s.jsx)(h.D, {
-                      variant: "heading-lg/bold",
+                      variant: "heading-lg/semibold",
                       color: "text-strong",
                       children: _.intl.string(_.t.LhlgY9),
                   }),

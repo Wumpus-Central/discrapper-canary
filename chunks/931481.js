@@ -41,7 +41,7 @@ function I(t) {
                   (0, n.jsx)(a.E, {
                       className: r ? void 0 : x.R,
                       "aria-label": r ? s : "",
-                      variant: "redesign/message-preview/normal",
+                      variant: "redesign/message-preview/medium",
                       children: s,
                   }),
               ],

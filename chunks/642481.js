@@ -1,4 +1,4 @@
-n.d(t, { A: () => x, j: () => h });
+n.d(t, { A: () => h, j: () => E });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -7,37 +7,31 @@ var a = n(477900),
     o = n(208756),
     d = n(798618),
     c = n(916845),
-    u = n(297264),
+    u = n(534514),
     f = n(834730),
     m = n(353795),
-    g = n(37537),
-    p = n(239027);
-function E(e) {
-    let { title: t, body: n } = e,
-        l = (0, g.c)("PremiumPopoverHeader");
+    g = n(239027);
+function p(e) {
+    let { title: t, body: n } = e;
     return (0, a.jsxs)("div", {
-        className: p.header,
+        className: g.header,
         children: [
-            (0, a.jsx)(u.D, {
-                variant: l ? "nitro-sm" : "heading-md/semibold",
-                className: l ? p.titleRefresh : p.title,
-                children: t,
-            }),
+            (0, a.jsx)(u.D, { variant: "nitro-sm", className: g.titleRefresh, children: t }),
             (0, a.jsx)("div", {
-                className: p.headerBody,
+                className: g.headerBody,
                 children: (0, a.jsx)(f.E, { variant: "text-sm/normal", color: "none", children: n }),
             }),
         ],
     });
 }
-function h(e) {
+function E(e) {
     let {
             title: t,
             body: n,
             graphic: r,
             size: u = "md",
             actions: f,
-            gradientColor: g,
+            gradientColor: E,
             onRequestClose: h,
             position: x,
             caretConfig: b,
@@ -66,7 +60,7 @@ function h(e) {
         M = l.useCallback((e) => {
             y(e);
         }, []),
-        O = N ? p.caretHoverable : void 0,
+        O = N ? g.caretHoverable : void 0,
         P = {
             targetElementRef: I.targetElementRef,
             shouldShow: I.shouldShow,
@@ -74,7 +68,7 @@ function h(e) {
             position: T,
             caretConfig: C,
             onRequestClose: S,
-            gradientColor: g,
+            gradientColor: E,
             onPositionChange: M,
             onNudgeChange: j,
             scrollBehavior: A,
@@ -91,20 +85,20 @@ function h(e) {
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
-                _ && (0, a.jsx)(c.q, { onClick: D, variant: null != g ? "color-mix" : void 0 }),
+                _ && (0, a.jsx)(c.q, { onClick: D, variant: null != E ? "color-mix" : void 0 }),
                 null != r &&
                     (0, a.jsx)("div", {
-                        className: s()(p.graphic, { [p[`graphic--${u}`]]: null != u }),
+                        className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(m.v, {
                             ...r,
                             aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(E, { title: t, body: n }),
-                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: p.actionBar }) : null,
+                (0, a.jsx)(p, { title: t, body: n }),
+                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: g.actionBar }) : null,
                 null != C && (0, a.jsx)(d.F, { className: O }),
             ],
         }),
     });
 }
-let x = h;
+let h = E;

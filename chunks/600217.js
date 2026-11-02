@@ -21,7 +21,7 @@ var i,
     _ = n(17928),
     I = n(652215),
     N = n(346055),
-    C = n(297264),
+    C = n(534514),
     b = n(364522),
     y = n(97808),
     v = n(778712),
@@ -1382,7 +1382,7 @@ function iT(e) {
                         className: ix.if,
                         children: [
                             (0, p.jsx)(C.D, {
-                                variant: "heading-lg/extrabold",
+                                variant: "heading-lg/semibold",
                                 color: "text-strong",
                                 children: V.intl.string(V.t["6jI0hd"]),
                             }),
@@ -1422,7 +1422,7 @@ function iT(e) {
                         (0, p.jsx)("div", {
                             className: ix.if,
                             children: (0, p.jsx)(n4.E, {
-                                variant: "text-md/bold",
+                                variant: "text-md/semibold",
                                 color: "text-default",
                                 children: V.intl.string(V.t.GFyMg1),
                             }),
@@ -4751,7 +4751,7 @@ function ob(e) {
                         gap: d ? 12 : 8,
                         children: [
                             (0, p.jsx)(C.D, {
-                                variant: d ? "heading-lg/bold" : "heading-xl/bold",
+                                variant: d ? "heading-lg/semibold" : "heading-xl/semibold",
                                 color: "text-strong",
                                 children: n,
                             }),
@@ -7358,7 +7358,7 @@ function cP(e) {
                 className: cD.AX,
                 children: [
                     (0, p.jsxs)("div", {
-                        className: cD.Pg,
+                        className: cD.gE,
                         children: [
                             (0, p.jsxs)("div", {
                                 className: cD.At,
@@ -7760,7 +7760,7 @@ let cQ = (0, h.zZ)(S.X.REDEEM_GIFT_CATEGORY, {
         buildLayout: () => [c$],
     });
 var c1 = n(659758),
-    c2 = n(129134),
+    c2 = n(409172),
     c3 = n(877624),
     c4 = n(269115),
     c5 = n(462887),
@@ -8353,7 +8353,7 @@ let gv = function () {
                     className: gN.Ns,
                     children: [
                         (0, p.jsx)(C.D, {
-                            variant: "heading-xl/extrabold",
+                            variant: "heading-xl/semibold",
                             className: gN.R0,
                             children: (function (e) {
                                 let { hasSentAll: t } = e;
@@ -8457,7 +8457,7 @@ function gk(e) {
                           ],
                       }),
                 (0, p.jsx)(C.D, {
-                    variant: "heading-md/normal",
+                    variant: "heading-md/medium",
                     color: "text-overlay-light",
                     className: gM.KB,
                     children: (function () {
@@ -8526,7 +8526,7 @@ function gw() {
                                         colorOptions: gL.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                     }),
                                     (0, p.jsx)(C.D, {
-                                        variant: "heading-md/normal",
+                                        variant: "heading-md/medium",
                                         color: "text-overlay-light",
                                         className: gM.sQ,
                                         children: V.intl.format(V.t.sK7fGl, {
@@ -8553,7 +8553,7 @@ function gw() {
                                                 : gL.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                         }),
                                         (0, p.jsx)(C.D, {
-                                            variant: "heading-md/normal",
+                                            variant: "heading-md/medium",
                                             color: "text-overlay-light",
                                             className: gM.KB,
                                             children: V.intl.format(V.t["/SfHwl"], { weeks: 1 }),
@@ -8648,7 +8648,7 @@ function gF() {
                 children: [
                     (0, p.jsx)(C.D, {
                         className: gM.Vz,
-                        variant: "heading-xl/extrabold",
+                        variant: "heading-xl/semibold",
                         children: V.intl.string(V.t["3KomGa"]),
                     }),
                     (0, p.jsx)(n4.E, {
@@ -8781,7 +8781,7 @@ function g3() {
             (0, p.jsxs)("div", {
                 className: g1.pq,
                 children: [
-                    (0, p.jsx)(n4.E, { variant: "text-lg/bold", children: V.intl.string(V.t.ZHNSYf) }),
+                    (0, p.jsx)(n4.E, { variant: "text-lg/semibold", children: V.intl.string(V.t.ZHNSYf) }),
                     (0, p.jsx)(n4.E, {
                         variant: "text-sm/medium",
                         color: "text-muted",
@@ -9483,7 +9483,7 @@ function mN() {
     return (0, p.jsxs)("div", {
         className: mI.iE,
         children: [
-            (0, p.jsx)(C.D, { variant: "heading-xl/normal", children: V.intl.string(V.t.IzKs3o) }),
+            (0, p.jsx)(C.D, { variant: "heading-xl/medium", children: V.intl.string(V.t.IzKs3o) }),
             (0, p.jsx)("div", {
                 className: mI.kR,
                 children: m_.s.map((e, t) => {
@@ -9518,7 +9518,7 @@ function mv() {
     return (0, p.jsxs)("div", {
         className: my.iE,
         children: [
-            (0, p.jsx)(C.D, { variant: "heading-xl/normal", children: V.intl.string(V.t.HPJ6Nj) }),
+            (0, p.jsx)(C.D, { variant: "heading-xl/medium", children: V.intl.string(V.t.HPJ6Nj) }),
             (0, p.jsx)("ul", {
                 className: my.p_,
                 children: mb.m.map((l, s) => {
@@ -9584,7 +9584,7 @@ function mR() {
                         children: [
                             (0, p.jsx)("img", { alt: "", className: mL.F8, src: "/assets/263e4cc9043cab70.svg" }),
                             (0, p.jsx)(C.D, {
-                                variant: "heading-xl/normal",
+                                variant: "heading-xl/medium",
                                 children: V.intl.string(mO.default.hjvcLO),
                             }),
                         ],
@@ -10178,7 +10178,7 @@ function Ad(e) {
     let { onClickManageSubscription: t, count: n } = e;
     return (0, p.jsxs)("div", {
         children: [
-            (0, p.jsx)(C.D, { variant: "heading-md/bold", children: V.intl.string(V.t["KzCF/6"]) }),
+            (0, p.jsx)(C.D, { variant: "heading-md/semibold", children: V.intl.string(V.t["KzCF/6"]) }),
             (0, p.jsx)(Ao.h, { size: 4 }),
             (0, p.jsx)(n4.E, { variant: "text-md/normal", className: Au.yV, children: V.intl.string(V.t["3D7qCu"]) }),
             (0, p.jsx)(Ao.h, { size: 24 }),
@@ -10654,7 +10654,7 @@ function AX(e) {
     let { onClickManageSubscription: t, count: n } = e;
     return (0, p.jsxs)("div", {
         children: [
-            (0, p.jsx)(C.D, { variant: "heading-md/bold", children: V.intl.string(V.t["48ywCu"]) }),
+            (0, p.jsx)(C.D, { variant: "heading-md/semibold", children: V.intl.string(V.t["48ywCu"]) }),
             (0, p.jsx)(Ao.h, { size: 4 }),
             (0, p.jsx)(n4.E, { variant: "text-md/normal", className: Az.yV, children: V.intl.string(V.t.VWxmSo) }),
             (0, p.jsx)(Ao.h, { size: 24 }),
@@ -11217,7 +11217,7 @@ function Ep(e) {
                                   (0, p.jsx)(AJ._, { src: a.href, imageClassName: ET.rW, width: 48, height: 48 }),
                               (0, p.jsxs)("div", {
                                   children: [
-                                      (0, p.jsx)(C.D, { variant: "heading-md/bold", children: n.summary }),
+                                      (0, p.jsx)(C.D, { variant: "heading-md/semibold", children: n.summary }),
                                       (0, p.jsx)(n4.E, { variant: "text-md/medium", children: u }),
                                   ],
                               }),
@@ -11283,7 +11283,7 @@ function EI(e) {
                                 className: E_.p4,
                                 children: [
                                     (0, p.jsxs)(C.D, {
-                                        variant: "heading-md/normal",
+                                        variant: "heading-md/medium",
                                         className: E_.N4,
                                         children: [(0, p.jsx)(d, { size: "xs", color: "currentColor" }), " ", c],
                                     }),
@@ -11902,7 +11902,7 @@ let EW = function () {
                                       (0, p.jsxs)("section", {
                                           children: [
                                               (0, p.jsx)(C.D, {
-                                                  variant: "heading-md/bold",
+                                                  variant: "heading-md/semibold",
                                                   className: EF.HL,
                                                   children: V.intl.string(V.t.Obre8v),
                                               }),
@@ -16736,7 +16736,7 @@ function pY() {
         className: pX.p$,
         children: [
             (0, p.jsx)("img", { src: "/assets/b3b15f93f9f43174.svg", alt: "", className: pX.Sl }),
-            (0, p.jsx)(C.D, { className: pX.h8, variant: "heading-lg/extrabold", children: V.intl.string(V.t.Z1OZCV) }),
+            (0, p.jsx)(C.D, { className: pX.h8, variant: "heading-lg/semibold", children: V.intl.string(V.t.Z1OZCV) }),
             (0, p.jsx)(n4.E, { className: pX.h8, variant: "text-md/normal", children: V.intl.string(V.t.ZSt4Tt) }),
             (0, p.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
@@ -17773,7 +17773,7 @@ let fJ = function () {
                     className: fQ.Em,
                     children: [
                         (0, p.jsx)(C.D, {
-                            variant: "heading-lg/extrabold",
+                            variant: "heading-lg/semibold",
                             color: c ? "text-overlay-dark" : "currentColor",
                             className: fQ.DD,
                             children: o,
@@ -17849,7 +17849,7 @@ function _s(e) {
                     (0, p.jsx)("img", { alt: "", "aria-hidden": !0, src: r, className: _l.L_ }),
                     (0, p.jsx)(n4.E, {
                         className: _l._e,
-                        variant: "text-sm/bold",
+                        variant: "text-sm/semibold",
                         color: "text-overlay-light",
                         children: s,
                     }),
@@ -18015,7 +18015,7 @@ function _S(e) {
                                   (0, p.jsxs)("div", {
                                       children: [
                                           (0, p.jsx)(C.D, {
-                                              variant: "heading-xl/extrabold",
+                                              variant: "heading-xl/semibold",
                                               children: V.intl.string(V.t["2zGdAW"]),
                                           }),
                                           (0, p.jsx)(n4.E, {
@@ -18573,7 +18573,7 @@ let _W = { [eL.Eq.USER_PROFILE]: "main_profile_tab", [eL.Eq.GUILD]: "guild_profi
                     children: (0, p.jsxs)(uB.F, {
                         component: (0, p.jsx)(lm.A, {
                             children: (0, p.jsx)(C.D, {
-                                variant: "heading-xl/normal",
+                                variant: "heading-xl/medium",
                                 children: V.intl.string(V.t["vi7f+q"]),
                             }),
                         }),

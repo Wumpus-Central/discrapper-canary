@@ -8,15 +8,15 @@ var n = s(477900),
     c = s(807393),
     d = s(174459),
     u = s(308645),
-    N = s(335891),
-    m = s(17928),
+    m = s(335891),
+    N = s(17928),
     E = s(207913),
     h = s(259960),
     I = s(257110),
     g = s(435558),
     x = s(993077),
     A = s(778712),
-    _ = s(297264),
+    _ = s(534514),
     D = s(834730),
     f = s(287809),
     j = s(739010),
@@ -40,8 +40,8 @@ function S(t) {
 var p = s(105292),
     P = s(312646);
 function L() {
-    let t = (0, N.K)(),
-        e = (0, m.bG)([f.default], () => f.default.getCurrentUser()),
+    let t = (0, m.K)(),
+        e = (0, N.bG)([f.default], () => f.default.getCurrentUser()),
         [s, r] = i.useState(36),
         a = i.useRef({
             [j.PN.ALL_GOOD]: null,
@@ -75,12 +75,12 @@ function L() {
                         children: [
                             (0, n.jsx)(_.D, {
                                 color: "text-strong",
-                                variant: "heading-lg/normal",
+                                variant: "heading-lg/medium",
                                 children: p.intl.format(c, {
                                     hook: (t) =>
                                         (0, n.jsx)(D.E, {
                                             style: { color: u.css },
-                                            variant: "heading-lg/bold",
+                                            variant: "heading-lg/semibold",
                                             tag: "span",
                                             children: t,
                                         }),
@@ -208,7 +208,7 @@ function $() {
                     (0, n.jsx)(w.A, { className: F.uf }),
                 ],
             }),
-            (0, n.jsx)(_.D, { variant: "heading-md/bold", className: F.q6, children: p.intl.string(p.t.reLFaV) }),
+            (0, n.jsx)(_.D, { variant: "heading-md/semibold", className: F.q6, children: p.intl.string(p.t.reLFaV) }),
             (0, n.jsx)(D.E, { variant: "text-xs/normal", className: F.WO, children: p.intl.string(p.t.ERdH1o) }),
         ],
     });
@@ -224,7 +224,7 @@ function Z(t) {
     return (0, n.jsx)(D.E, { variant: "text-xs/normal", className: F.vE, children: (0, Y._W)(e) });
 }
 function q() {
-    return (0, n.jsx)(D.E, { variant: "text-xs/bold", className: F.Ad, children: p.intl.string(p.t.QKMRC4) });
+    return (0, n.jsx)(D.E, { variant: "text-xs/semibold", className: F.Ad, children: p.intl.string(p.t.QKMRC4) });
 }
 function J(t) {
     let { classification: e } = t,
@@ -234,7 +234,7 @@ function J(t) {
         c = i.useMemo(() => {
             let t = {
                 description: a,
-                descriptionHook: (t) => (0, n.jsx)(D.E, { tag: "span", variant: "heading-lg/bold", children: t }),
+                descriptionHook: (t) => (0, n.jsx)(D.E, { tag: "span", variant: "heading-lg/semibold", children: t }),
             };
             return (0, Y._g)(e)
                 ? e?.guild_metadata?.member_type === j.Z9.OWNER
@@ -302,7 +302,7 @@ function J(t) {
                 className: F.iQ,
                 children: [
                     o ? (0, n.jsx)(q, {}) : (0, n.jsx)(Z, { timestamp: l }),
-                    (0, n.jsx)(_.D, { variant: "heading-lg/normal", children: c }),
+                    (0, n.jsx)(_.D, { variant: "heading-lg/medium", children: c }),
                 ],
             }),
         },
@@ -313,8 +313,8 @@ function tt(t) {
     let { status: e, classifications: s } = t,
         [r, a] = i.useState(!1),
         [l, o] = i.useState(3),
-        c = (0, N.K)(),
-        u = (0, m.bG)([E.A], () => E.A.getIsDsaEligible()),
+        c = (0, m.K)(),
+        u = (0, N.bG)([E.A], () => E.A.getIsDsaEligible()),
         h = i.useMemo(() => s.slice(0, l), [s, l]);
     i.useEffect(() => {
         r &&
@@ -372,8 +372,8 @@ var ts = s(296922);
 function tn() {
     let t = (0, I.A)(),
         e = (0, h.v)(),
-        s = (0, N.K)(),
-        g = (0, m.bG)([E.A], () => E.A.getFetchError());
+        s = (0, m.K)(),
+        g = (0, N.bG)([E.A], () => E.A.getFetchError());
     (0, o.Ay)(() => {
         u.Yn();
     });

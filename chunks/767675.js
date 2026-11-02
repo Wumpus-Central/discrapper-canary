@@ -8,7 +8,7 @@ var s = r(435558),
     o = r(17928),
     d = r(97808),
     u = r(778712),
-    c = r(297264),
+    c = r(534514),
     m = r(233545),
     p = r(83257),
     h = r(361739),
@@ -1029,7 +1029,7 @@ function eT() {
                         element: () =>
                             (0, n.jsx)(c.D, {
                                 className: $.HA,
-                                variant: "heading-md/normal",
+                                variant: "heading-md/medium",
                                 children: o === eB.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
                             }),
                     },

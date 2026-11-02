@@ -1,18 +1,17 @@
-n.d(t, { E: () => u, U: () => c });
+n.d(t, { E: () => c, U: () => d });
 var i = n(477900),
     r = n(503698),
     a = n.n(r),
-    s = n(85463),
-    l = n(432816),
-    o = n(834730),
-    d = n(963434);
-function c(e) {
+    s = n(432816),
+    l = n(834730),
+    o = n(963434);
+function d(e) {
     return "string" == typeof e || e.hasOwnProperty("text") ? { type: e, variant: "primary" } : e;
 }
-function u(e) {
+function c(e) {
     let { type: t, variant: n = "secondary", icon: r } = e,
-        { i18n: c } = (0, l.G9)(),
-        u = (function (e, t) {
+        { i18n: d } = (0, s.G9)(),
+        c = (function (e, t) {
             switch (e) {
                 case "new":
                     return t.NEW;
@@ -25,14 +24,13 @@ function u(e) {
                 default:
                     return e.text;
             }
-        })(t, c),
-        _ = (0, s.N)();
-    return (0, i.jsxs)(o.E, {
-        variant: _,
-        className: a()(d.badge, d[n]),
+        })(t, d);
+    return (0, i.jsxs)(l.E, {
+        variant: "body-xs/semibold",
+        className: a()(o.badge, o[n]),
         children: [
             null != r && (0, i.jsx)(r, { size: "xxs", color: "currentColor" }),
-            (0, i.jsx)("span", { className: d.label, children: u }),
+            (0, i.jsx)("span", { className: o.label, children: c }),
         ],
     });
 }

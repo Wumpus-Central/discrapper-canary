@@ -25,7 +25,7 @@ var c = n(778492),
     u = n(276293),
     E = n(56059),
     I = n(834730),
-    N = n(297264),
+    N = n(534514),
     S = n(933832),
     m = n(821609),
     g = n(404778),
@@ -51,7 +51,7 @@ function C(t) {
                 color: "text-default",
                 children: x.intl.format(l, {
                     testimonialHook: (t, e) =>
-                        (0, i.jsx)(I.E, { tag: "span", variant: "text-sm/bold", color: a, children: t }, e),
+                        (0, i.jsx)(I.E, { tag: "span", variant: "text-sm/semibold", color: a, children: t }, e),
                 }),
             }),
             (0, i.jsxs)("div", {
@@ -88,7 +88,7 @@ function j(t) {
                 className: L.nI,
                 children: (0, i.jsx)(D.F, { items: [o], renderItem: c, getItemKey: (t) => t.adminTitle }),
             }),
-            (0, i.jsx)(I.E, { variant: "text-lg/bold", className: L.wV, "aria-hidden": !0, children: "\u201C" }),
+            (0, i.jsx)(I.E, { variant: "text-lg/semibold", className: L.wV, "aria-hidden": !0, children: "\u201C" }),
             (0, i.jsxs)("div", {
                 className: L.Jv,
                 children: [

@@ -7,7 +7,7 @@ var i = s(477900),
     r = s(597770),
     d = s(500060),
     o = s(224640),
-    u = s(297264),
+    u = s(534514),
     x = s(834730),
     m = s(885574),
     f = s(408278),
@@ -120,7 +120,7 @@ function X(t) {
                                     className: z.gY,
                                     children: [
                                         (0, i.jsx)(u.D, {
-                                            variant: "heading-xl/bold",
+                                            variant: "heading-xl/semibold",
                                             color: "text-strong",
                                             children: y.intl.string(P.default.ukvxpp),
                                         }),

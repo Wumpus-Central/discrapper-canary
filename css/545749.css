@@ -33,13 +33,6 @@
     width: 620px
 }
 
-html:not(.mana-type-consolidation) .headerText__3e32a {
-    font-size: 32px;
-    font-weight: 900;
-    letter-spacing: -.64px;
-    line-height: 100%
-}
-
 .closeButtonContainer__3e32a {
     color: var(--interactive-text-default);
     cursor: pointer;
@@ -189,4 +182,4 @@ html:not(.mana-type-consolidation) .headerText__3e32a {
     margin-top: var(--space-24)
 }
 
-/*# sourceMappingURL=545749.04193e0f3210d5d4.css.map*/
+/*# sourceMappingURL=545749.66a108ad5afc4530.css.map*/

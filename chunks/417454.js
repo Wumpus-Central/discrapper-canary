@@ -66,7 +66,7 @@ function K(e) {
                         className: F.LP,
                     }),
                     (0, n.jsx)(b.E, {
-                        variant: "text-xs/bold",
+                        variant: "text-xs/semibold",
                         color: "none",
                         className: F.VT,
                         id: t,

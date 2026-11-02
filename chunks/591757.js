@@ -5,7 +5,7 @@ var r = n(477900),
     s = n(189213),
     a = n(62010),
     i = n(683071),
-    c = n(297264),
+    c = n(534514),
     o = n(661531),
     f = n(289873),
     m = n(834730),
@@ -226,7 +226,7 @@ function z(e) {
                             className: O.wx,
                             children: [
                                 (0, r.jsx)(c.D, {
-                                    variant: "text-sm/bold",
+                                    variant: "text-sm/semibold",
                                     color: "text-strong",
                                     children: _.intl.string(_.t["/WPGnF"]),
                                 }),

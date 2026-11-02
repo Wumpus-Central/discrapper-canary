@@ -10,7 +10,7 @@ var n = l(477900),
     d = l(192308),
     m = l(521489),
     f = l(231723),
-    h = l(297264),
+    h = l(534514),
     x = l(62010),
     g = l(403581),
     p = l(834730),
@@ -514,7 +514,7 @@ function e5(e) {
                         (0, n.jsx)("div", {
                             className: e0.Ad,
                             children: (0, n.jsx)(p.E, {
-                                variant: "text-xs/bold",
+                                variant: "text-xs/semibold",
                                 color: "text-overlay-light",
                                 children: ec.intl.string(ec.t.y2b7CA),
                             }),

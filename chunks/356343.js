@@ -87,7 +87,7 @@ function a(e) {
                         className: s.iz,
                         "aria-hidden": "true",
                         children: (0, C.jsx)(c.E, {
-                            variant: "text-xs/bold",
+                            variant: "text-xs/semibold",
                             color: "none",
                             children: i.intl.string(i.t["3UB9ad"]),
                         }),

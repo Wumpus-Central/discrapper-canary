@@ -157,7 +157,7 @@ let er = (e) => {
                 "aria-selected": i,
                 onClick: M,
                 style: f,
-                children: [m, (0, n.jsx)(p.E, { variant: "text-sm/bold", style: S, children: s })],
+                children: [m, (0, n.jsx)(p.E, { variant: "text-sm/semibold", style: S, children: s })],
             }),
         });
     });

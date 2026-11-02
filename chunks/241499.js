@@ -12,8 +12,8 @@ var n = t(477900),
     h = t(408278),
     p = t(285796),
     g = t(772838),
-    f = t(297264),
-    m = t(355622),
+    m = t(534514),
+    f = t(355622),
     v = t(408018),
     C = t(845207),
     b = t(734057),
@@ -33,7 +33,7 @@ function A(e) {
             onChange: u,
             onKeyDown: r,
             onClear: c,
-            onRuleReorder: f,
+            onRuleReorder: m,
             isDropHovered: b,
             focused: j,
             onFocus: k,
@@ -48,7 +48,7 @@ function A(e) {
             type: T,
             item: { rule: l, index: s },
             end: (e, l) => {
-                null == e || l.didDrop() || f(e.rule, null, !0);
+                null == e || l.didDrop() || m(e.rule, null, !0);
             },
         }),
         [, P] = (0, d.H)({
@@ -60,10 +60,10 @@ function A(e) {
                 if (null == n || null == i) return;
                 let a = (n.bottom - n.top) / 2,
                     u = i.y - n.top;
-                (t < s && u < a) || (t > s && u > a) || f(e.rule, s, !1);
+                (t < s && u < a) || (t > s && u > a) || m(e.rule, s, !1);
             },
             drop: (e) => {
-                f(e.rule, s, !0);
+                m(e.rule, s, !0);
             },
         });
     if (
@@ -95,7 +95,7 @@ function A(e) {
                     onMouseDown: () => k(s),
                     children: (0, n.jsx)(C.Ay, {
                         innerClassName: E.oQ,
-                        type: m.oU.RULES_INPUT,
+                        type: f.oU.RULES_INPUT,
                         textValue: _,
                         richValue: w,
                         channel: t,
@@ -142,14 +142,14 @@ function S(e) {
         d = (0, c.bG)([b.A], () => (null != u ? b.A.getChannel(u) : null)),
         x = (0, c.bG)([j.Ay], () => j.Ay.getDefaultChannel(s.id)),
         [h, p] = i.useState(null),
-        [g, m] = i.useState(null),
+        [g, f] = i.useState(null),
         v = i.useCallback(
             (e) => {
                 if (!a && l.length !== D.yN)
                     if (null != e && "" === l[l.length - 1].value) {
                         let n = [...l];
-                        ((n[l.length - 1] = { ...n[l.length - 1], value: e }), t(n), m(n.length - 1));
-                    } else (t([...l, { id: r()(), value: e ?? "" }]), m(l.length));
+                        ((n[l.length - 1] = { ...n[l.length - 1], value: e }), t(n), f(n.length - 1));
+                    } else (t([...l, { id: r()(), value: e ?? "" }]), f(l.length));
             },
             [a, l, t],
         ),
@@ -227,7 +227,7 @@ function S(e) {
                             onRuleReorder: S,
                             isDropHovered: i === h,
                             focused: i === g,
-                            onFocus: m,
+                            onFocus: f,
                             previewEnabled: o ?? !0,
                             isDragEnabled: !a && l.length > 1,
                             disabled: a,
@@ -237,8 +237,8 @@ function S(e) {
                 ),
             }),
             !I && (0, n.jsx)(k.d, { text: y.intl.string(y.t.Cq5JuR), onClick: C, disabled: a }),
-            (0, n.jsx)(f.D, {
-                variant: "text-xs/bold",
+            (0, n.jsx)(m.D, {
+                variant: "text-xs/semibold",
                 color: "text-muted",
                 className: E.V7,
                 children: y.intl.string(y.t.XHWj8W),

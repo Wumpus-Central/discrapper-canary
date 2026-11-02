@@ -175,10 +175,6 @@
 .header_c3fe25 {
     border-bottom: 1px solid hsla(0, 0%, 100%, .06);
     padding-bottom: 8px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .header_c3fe25 {
     text-transform: none
 }
 
@@ -337,4 +333,4 @@
     color: var(--hypesquad-house-3)
 }
 
-/*# sourceMappingURL=906470.5e7e94b25b0491ac.css.map*/
+/*# sourceMappingURL=906470.a05e079b9b45df80.css.map*/

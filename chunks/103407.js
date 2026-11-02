@@ -30,7 +30,7 @@ var b = n(503698),
     R = n(815021),
     C = n(935462),
     D = n(62010),
-    k = n(297264),
+    k = n(534514),
     P = n(834730),
     j = n(315629),
     S = n(73153),
@@ -62,7 +62,7 @@ function Q(e) {
             (0, r.jsxs)("div", {
                 className: I()(z.Zz, { [z.tF]: l }),
                 children: [
-                    (0, r.jsx)(k.D, { variant: "heading-md/bold", className: z.Hf, children: t }),
+                    (0, r.jsx)(k.D, { variant: "heading-md/semibold", className: z.Hf, children: t }),
                     (0, r.jsxs)(P.E, { variant: "text-md/medium", color: "text-subtle", children: [n, a?.()] }),
                 ],
             }),

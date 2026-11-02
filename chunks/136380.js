@@ -12,7 +12,7 @@ e.exports = {
     Lq: "loading_f5f9ed",
     yF: "divider_f5f9ed",
     AX: "promotionCard_f5f9ed",
-    Pg: "mainPromotionCardContainer_f5f9ed",
+    gE: "mainPromotionCardContainer_f5f9ed",
     At: "promotionCardLeftContainer_f5f9ed",
     $G: "promotionIcon_f5f9ed",
     IJ: "promotionIconImage_f5f9ed",

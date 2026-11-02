@@ -11,6 +11,5 @@ e.exports = {
     FS: "textContainer_b66356",
     go: "headerTextWrapper_b66356",
     r9: "oneStepCheckoutTextWrapper_b66356",
-    cf: "nitroText_b66356",
     $N: "betaBadgeContainer_b66356",
 };

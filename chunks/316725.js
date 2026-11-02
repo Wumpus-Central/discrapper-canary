@@ -127,7 +127,7 @@ function W(e) {
             iconSize: l,
             gradientColor: s,
             ...o,
-            children: null != a && (0, n.jsx)(u.E, { variant: "text-sm/bold", color: "currentColor", children: a }),
+            children: null != a && (0, n.jsx)(u.E, { variant: "text-sm/semibold", color: "currentColor", children: a }),
         });
     }
     return null != d && "object" == typeof d

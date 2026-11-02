@@ -7,9 +7,9 @@ var l = t(503698),
     s = t(462887),
     c = t(289873),
     u = t(834730),
-    o = t(297264),
-    d = t(736653),
-    m = t(97352),
+    o = t(534514),
+    m = t(736653),
+    d = t(97352),
     p = t(24482),
     x = t(202541),
     h = t(658859);
@@ -24,17 +24,17 @@ let A = function (e) {
             isApplicationHome: E,
             enablePremiumBrandRefresh: f,
         } = e,
-        g = (0, a.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
-        R = (0, s.q)((0, d.Ay)());
+        g = (0, a.bG)([d.A], () => d.A.isLoadedForSKUs([r])),
+        R = (0, s.q)((0, m.Ay)());
     if (!g) return (0, n.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: h.xB });
-    let _ = m.A.getForSkuAndInterval((0, p.mH)(r), t),
+    let _ = d.A.getForSkuAndInterval((0, p.mH)(r), t),
         j = null != _ ? (0, p.sS)(_, I, !1, A) : null;
     if (f) {
         let e = t === x.WT.YEAR;
         return (0, n.jsxs)("div", {
             children: [
                 (0, n.jsx)(u.E, {
-                    variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
+                    variant: e ? "heading-md/semibold" : "heading-xxl/semibold",
                     color: e ? "text-muted" : R ? "text-strong" : "text-overlay-light",
                     tag: "span",
                     children: (0, n.jsx)("span", { children: j }),

@@ -6,7 +6,7 @@ var e = n(477900),
     a = n(97808),
     c = n(778712),
     o = n(428678),
-    d = n(297264),
+    d = n(534514),
     u = n(834730),
     x = n(192308),
     m = n(640238),
@@ -61,7 +61,7 @@ function S(t) {
                     (0, e.jsxs)("div", {
                         children: [
                             (0, e.jsx)(d.D, {
-                                variant: "heading-xl/bold",
+                                variant: "heading-xl/semibold",
                                 color: "text-strong",
                                 children: j.intl.format(j.t.CIbzHR, { username: T.Ay.getName(I, E, i) }),
                             }),

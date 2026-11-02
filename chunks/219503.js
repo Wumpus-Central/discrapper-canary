@@ -6,7 +6,7 @@ var l,
     s = n(231723),
     o = n(289873),
     u = n(331322),
-    d = n(297264),
+    d = n(534514),
     c = n(834730),
     m = n(821609),
     h = n(964486),
@@ -373,7 +373,7 @@ let eT = {
                 className: e_.kL,
                 children: [
                     (0, a.jsx)(d.D, {
-                        variant: "heading-lg/bold",
+                        variant: "heading-lg/semibold",
                         className: e_.DD,
                         children: N.intl.string(y.default.v52itt),
                     }),

@@ -3,7 +3,7 @@ var i = e(477900);
 e(582128);
 var d = e(503698),
     c = e.n(d),
-    l = e(297264),
+    l = e(534514),
     n = e(834730),
     r = e(903919);
 function t(s) {
@@ -13,7 +13,7 @@ function t(s) {
         children: [
             (0, i.jsx)("div", {
                 className: r.oO,
-                children: (0, i.jsx)(l.D, { variant: "heading-lg/bold", className: r.TK, children: d }),
+                children: (0, i.jsx)(l.D, { variant: "heading-lg/semibold", className: r.TK, children: d }),
             }),
             (0, i.jsx)("ul", {
                 className: r.T6,

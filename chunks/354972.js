@@ -28,7 +28,7 @@ function I(e) {
                 (0, l.jsxs)("div", {
                     className: E.Ry,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: f.intl.string(f.t.Hl2Ige) }),
+                        (0, l.jsx)(o.E, { variant: "text-md/semibold", children: f.intl.string(f.t.Hl2Ige) }),
                         (0, l.jsx)(o.E, { variant: "text-sm/normal", children: f.intl.string(f.t.stGFA3) }),
                     ],
                 }),

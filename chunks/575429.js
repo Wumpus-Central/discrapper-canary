@@ -4,15 +4,15 @@ var a = r(477900),
     n = r(132500),
     s = r(607399),
     l = r(821609),
-    c = r(297264),
+    c = r(534514),
     u = r(834730),
     d = r(289873),
     o = r(174459),
     h = r(723702);
 (r(323874), r(14289), r(35956));
 var f = r(17928),
-    _ = r(157559),
-    m = r(308528),
+    m = r(157559),
+    _ = r(308528),
     p = r(452295),
     I = r(793574),
     A = r(688810),
@@ -36,7 +36,7 @@ function k(t) {
             let t = new URL(location.href);
             (async () => {
                 try {
-                    await m.A.openPrivateChannel({ recipientIds: l });
+                    await _.A.openPrivateChannel({ recipientIds: l });
                     let e = t.searchParams.get("referrer_id") ?? void 0,
                         { customId: r } = await (0, P.d9)(
                             n,
@@ -56,7 +56,7 @@ function k(t) {
         }, [a, n, l, c]),
         i.useEffect(() => {
             let t = setTimeout(() => {
-                null == l && _.A.show({ title: g.intl.string(g.t.PtobXW), body: g.intl.string(g.t["IOy+I5"]) });
+                null == l && m.A.show({ title: g.intl.string(g.t.PtobXW), body: g.intl.string(g.t["IOy+I5"]) });
             }, 5e3);
             return () => {
                 clearTimeout(t);
@@ -70,14 +70,14 @@ var C = r(652215),
     w = r(168071);
 function D(t) {
     let { applicationId: e } = t.match.params,
-        [f, _] = i.useState(!1),
-        m = i.useRef(!1),
+        [f, m] = i.useState(!1),
+        _ = i.useRef(!1),
         [p, I] = i.useState(null),
         A = !h.isPlatformEmbedded && !s.Fr && !f,
         E = i.useMemo(() => (0, n.A)(), []);
     return (i.useEffect(() => {
         A &&
-            !0 !== m.current &&
+            !0 !== _.current &&
             (Promise.resolve()
                 .then(r.bind(r, 129014))
                 .then((t) => {
@@ -107,22 +107,22 @@ function D(t) {
                         })
                         .then(() => r.disconnect());
                 }),
-            (m.current = !0));
+            (_.current = !0));
     }, [e, A, E]),
     A && !1 !== p)
         ? !0 === p
             ? (0, a.jsxs)("div", {
                   className: w.k,
                   children: [
-                      (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: g.intl.string(g.t.csrAMJ) }),
+                      (0, a.jsx)(c.D, { variant: "heading-xxl/semibold", children: g.intl.string(g.t.csrAMJ) }),
                       (0, a.jsx)(u.E, { variant: "text-xs/semibold", children: g.intl.string(g.t["m1+IBn"]) }),
-                      (0, a.jsx)(l.$, { variant: "primary", text: g.intl.string(g.t.fIv16B), onClick: () => _(!0) }),
+                      (0, a.jsx)(l.$, { variant: "primary", text: g.intl.string(g.t.fIv16B), onClick: () => m(!0) }),
                   ],
               })
             : (0, a.jsxs)("div", {
                   className: w.k,
                   children: [
-                      (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: g.intl.string(g.t["Z+hCVU"]) }),
+                      (0, a.jsx)(c.D, { variant: "heading-xxl/semibold", children: g.intl.string(g.t["Z+hCVU"]) }),
                       (0, a.jsx)(d.y, {}),
                   ],
               })

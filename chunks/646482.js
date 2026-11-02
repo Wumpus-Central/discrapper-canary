@@ -27,7 +27,7 @@ var C = t(837381),
     v = t(312138),
     N = t(475825),
     S = t(177953),
-    R = t(297264),
+    R = t(534514),
     O = t(414798),
     M = t(775602),
     L = t(793574),
@@ -196,7 +196,7 @@ let eu = er.Ay.getEnableHardwareAcceleration(),
                   children: [
                       (0, l.jsx)("div", { className: ed.yF }),
                       (0, l.jsxs)(_.E, {
-                          variant: "text-xs/bold",
+                          variant: "text-xs/semibold",
                           color: "text-default",
                           className: ed.Uz,
                           children: [
@@ -372,7 +372,7 @@ function eg(e) {
         children: [
             (0, l.jsx)(_.E, {
                 className: ed.ks,
-                variant: "text-xs/bold",
+                variant: "text-xs/semibold",
                 color: "interactive-text-default",
                 children: z.intl.string(z.t["9Oq93m"]),
             }),
@@ -3972,7 +3972,7 @@ function aa(e) {
                                         children: [
                                             (0, l.jsx)(ai.A, { user: n }),
                                             (0, l.jsx)(R.D, {
-                                                variant: "heading-lg/bold",
+                                                variant: "heading-lg/semibold",
                                                 children: z.intl.string(z.t.b33pLD),
                                             }),
                                             (0, l.jsx)(_.E, {
@@ -4374,7 +4374,7 @@ function od(e) {
                       className: a()(ol.fi, { [ol.sp]: e }),
                       children: (0, l.jsx)(_.E, {
                           className: a()(ol.p7, { [ol.SW]: h.length >= 10, [ol.ot]: h.length >= 12 }),
-                          variant: "text-xs/bold",
+                          variant: "text-xs/semibold",
                           lineClamp: 1,
                           children: h,
                       }),
@@ -6156,7 +6156,7 @@ function cI(e) {
                     }),
                     (0, l.jsx)(dN.h, { size: 8, horizontal: !0 }),
                     (0, l.jsx)(R.D, {
-                        variant: "heading-sm/normal",
+                        variant: "heading-sm/medium",
                         className: a()(cu.Xn, cu.zA),
                         children: z.intl.format(t, {
                             user0: rL.Ay.getName(o, n?.id, g[0]),

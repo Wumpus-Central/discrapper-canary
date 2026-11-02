@@ -29,7 +29,7 @@ var i = n(477900),
     p = n(462887),
     m = n(289873),
     T = n(834730),
-    g = n(297264),
+    g = n(534514),
     S = n(885574),
     N = n(933832),
     C = n(708988),
@@ -238,7 +238,7 @@ function eL(e) {
         : (0, i.jsxs)("div", {
               className: eR.b9,
               children: [
-                  null != t ? (0, i.jsx)(g.D, { variant: "heading-sm/normal", className: eR.a9, children: t }) : null,
+                  null != t ? (0, i.jsx)(g.D, { variant: "heading-sm/medium", className: eR.a9, children: t }) : null,
                   a.map((e, t) => {
                       let { icon: n, text: r } = e;
                       return (0, i.jsx)(ey, { icon: n, text: r }, t);
@@ -318,7 +318,7 @@ function eU(e) {
         className: s()(eP.Wu, d ? eP.bc : void 0),
         children: [
             (0, i.jsx)(g.D, {
-                variant: "heading-sm/normal",
+                variant: "heading-sm/medium",
                 className: eP.a9,
                 children: en.intl.format(A, { application: t?.name ?? "" }),
             }),
@@ -455,13 +455,17 @@ function eQ(e) {
                                   color: "text-default",
                                   children: en.intl.string(en.t.uT1CPa),
                               }),
-                              (0, i.jsx)(g.D, { variant: "heading-xxl/bold", color: "text-strong", children: n.name }),
+                              (0, i.jsx)(g.D, {
+                                  variant: "heading-xxl/semibold",
+                                  color: "text-strong",
+                                  children: n.name,
+                              }),
                           ],
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsxs)(T.E, {
-                                  variant: "text-lg/bold",
+                                  variant: "text-lg/semibold",
                                   color: "text-strong",
                                   children: [
                                       n.name,
@@ -1232,7 +1236,7 @@ function te(e) {
               ? {
                     label: en.intl.string(en.t.j2d6Km),
                     header: (0, i.jsx)(T.E, {
-                        variant: "text-lg/bold",
+                        variant: "text-lg/semibold",
                         color: "text-strong",
                         children: en.intl.string(en.t.j2d6Km),
                     }),

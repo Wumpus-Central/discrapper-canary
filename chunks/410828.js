@@ -3,7 +3,7 @@ var i = n(477900);
 n(582128);
 var l = n(17928),
     a = n(661531),
-    s = n(297264),
+    s = n(534514),
     r = n(831544),
     o = n(834730),
     c = n(177953),
@@ -48,7 +48,7 @@ function R(e) {
                         (0, i.jsx)(A.A, {}),
                         (0, i.jsx)(s.D, {
                             className: T.uQ,
-                            variant: "heading-lg/normal",
+                            variant: "heading-lg/medium",
                             children: S.intl.string(b.default["P63Z/o"]),
                         }),
                     ],

@@ -8,7 +8,7 @@ var i = s(477900),
     d = s(873298),
     E = s(821609),
     o = s(462887),
-    u = s(297264),
+    u = s(534514),
     m = s(939249),
     T = s(285796),
     _ = s(707554),
@@ -123,7 +123,7 @@ function ea() {
             children: [
                 (0, i.jsx)(y.A, { className: er.PC, size: "md" }),
                 (0, i.jsx)(u.D, {
-                    variant: "heading-md/bold",
+                    variant: "heading-md/semibold",
                     color: "text-overlay-light",
                     children: Q.intl.string(Q.t.POSLGY),
                 }),
@@ -144,7 +144,7 @@ function el(e) {
                 },
                 children: (0, i.jsx)(T.a, { size: "md", color: "currentColor", className: er.P0 }),
             }),
-            (0, i.jsx)(u.D, { variant: "heading-lg/extrabold", children: Q.intl.string(Q.t["xSR+a/"]) }),
+            (0, i.jsx)(u.D, { variant: "heading-lg/semibold", children: Q.intl.string(Q.t["xSR+a/"]) }),
         ],
     });
 }

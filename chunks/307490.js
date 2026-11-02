@@ -15,7 +15,7 @@ var l = n(477900),
     s = n(17928),
     o = n(785007),
     u = n(331322),
-    c = n(297264),
+    c = n(534514),
     d = n(834730),
     m = n(726656),
     p = n(463376),
@@ -445,7 +445,7 @@ function eo(e) {
               ? (u = U.intl.format(U.t.NkR7BU, { price: o }))
               : i === j.WT.MONTH && a > 1 && (u = U.intl.format(U.t.CNAGg4, { price: o, intervalCount: a })),
         (0, l.jsx)("div", {
-            className: q()(es.zz, r),
+            className: q()(es.SW, r),
             "data-testid": `PricePerInterval-${n}`,
             children: null == i || s ? (0, l.jsx)("strong", { children: o }) : u,
         })

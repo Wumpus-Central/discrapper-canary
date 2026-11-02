@@ -17,7 +17,7 @@ var o = t(503698),
     j = t(364522),
     _ = t(289873),
     m = t(821609),
-    L = t(297264),
+    L = t(534514),
     g = t(834730),
     y = t(144165),
     v = t(803306),
@@ -89,7 +89,7 @@ function I(e) {
                 className: Z.DD,
                 children: [
                     (0, i.jsx)(W, { className: Z.oc }),
-                    (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.Lm2nFc) }),
+                    (0, i.jsx)(L.D, { variant: "heading-xl/semibold", children: M.intl.string(M.t.Lm2nFc) }),
                 ],
             }),
             (0, i.jsx)(g.E, { className: Z.h_, variant: "text-md/medium", color: "text-default", children: l }),
@@ -101,7 +101,7 @@ function b() {
         children: [
             (0, i.jsx)("div", {
                 className: Z.DD,
-                children: (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t["PFp+aJ"]) }),
+                children: (0, i.jsx)(L.D, { variant: "heading-xl/semibold", children: M.intl.string(M.t["PFp+aJ"]) }),
             }),
             (0, i.jsx)(g.E, {
                 className: Z.h_,
@@ -128,7 +128,10 @@ function H(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: Z.DD,
-                        children: (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.a9HOKg) }),
+                        children: (0, i.jsx)(L.D, {
+                            variant: "heading-xl/semibold",
+                            children: M.intl.string(M.t.a9HOKg),
+                        }),
                     }),
                     (0, i.jsx)(g.E, {
                         className: Z.h_,
@@ -185,7 +188,10 @@ function z(e) {
                             className: Z.DD,
                             children: [
                                 (0, i.jsx)(W, { className: Z.oc }),
-                                (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.SY9tyI) }),
+                                (0, i.jsx)(L.D, {
+                                    variant: "heading-xl/semibold",
+                                    children: M.intl.string(M.t.SY9tyI),
+                                }),
                             ],
                         }),
                         (0, i.jsx)(g.E, {
@@ -926,7 +932,7 @@ let er = function (e) {
                         children: (0, i.jsx)(J.P, { size: "custom", width: 20, height: 20 }),
                     }),
                     (0, i.jsx)(C ? et : es, { className: el.nr }),
-                    (0, i.jsx)(L.D, { variant: "heading-lg/bold", className: el.R_, children: o }),
+                    (0, i.jsx)(L.D, { variant: "heading-lg/semibold", className: el.R_, children: o }),
                     (0, i.jsx)("div", { className: el.wj, children: a }),
                     (0, i.jsx)(g.E, {
                         variant: "text-md/medium",

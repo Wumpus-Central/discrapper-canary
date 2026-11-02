@@ -9,7 +9,6 @@ a.exports = {
     Fw: "nitroCard_c19a92",
     Ux: "cardContent_c19a92",
     MY: "cardHeader_c19a92",
-    JJ: "cardTitle_c19a92",
     ck: "cardTitleRefresh_c19a92",
     yF: "divider_c19a92",
     qS: "trialDivider_c19a92",

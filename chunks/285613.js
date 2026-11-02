@@ -1,5 +1,4 @@
 e.exports = {
-    Nd: "logoHeader_f1578d",
     kL: "container_f1578d",
     wx: "header_f1578d",
     wS: "contentGrid_f1578d",

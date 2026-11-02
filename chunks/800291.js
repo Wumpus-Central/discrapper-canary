@@ -837,25 +837,25 @@ class t1 extends s.PureComponent {
         });
     }
 }
-var t4 = n(205616);
-let t5 = function (t) {
+var t5 = n(205616);
+let t4 = function (t) {
     let { title: e, className: n, color: i, animate: s, getHistoricalTotalBytes: r } = t;
     return (0, l.jsx)(t$.A, {
         getHistoricalTotalBytes: r,
         children: function (t, r, a) {
             var o;
             return (0, l.jsx)("div", {
-                className: u()(t4.dm, n),
+                className: u()(t5.dm, n),
                 children: (0, l.jsxs)($.A, {
                     align: $.A.Align.CENTER,
                     children: [
                         (0, l.jsxs)($.A, {
-                            className: t4.Qq,
+                            className: t5.Qq,
                             direction: $.A.Direction.VERTICAL,
                             children: [
-                                (0, l.jsx)("div", { className: t4.DD, children: e }),
+                                (0, l.jsx)("div", { className: t5.DD, children: e }),
                                 (0, l.jsx)("div", {
-                                    className: t4.TS,
+                                    className: t5.TS,
                                     children:
                                         (o = (t[t.length - 1] / r) * 1e3) > 1e3
                                             ? L.intl.formatToPlainString(L.t["WU+gTX"], { size: Math.round(o / 1e3) })
@@ -864,11 +864,11 @@ let t5 = function (t) {
                             ],
                         }),
                         (0, l.jsx)("div", {
-                            className: t4.MQ,
+                            className: t5.MQ,
                             children: (0, l.jsx)(t1, {
                                 data: t,
                                 maxValue: Math.max(Math.max.apply(null, t), 1e3),
-                                className: t4.CD,
+                                className: t5.CD,
                                 updateInterval: r,
                                 color: i,
                                 numUpdatesToShow: a,
@@ -885,11 +885,11 @@ let t5 = function (t) {
     });
 };
 var t2 = n(307304);
-function t6(t) {
+function t3(t) {
     let { className: e, children: n, onContextMenu: i, item: s } = t;
     return (0, l.jsx)("div", { className: e, onContextMenu: (t) => i(t, s), children: n });
 }
-let t3 = [t_.A.unsafe_rawColors.BLUE_345.css, t_.A.colors.INTERACTIVE_TEXT_DEFAULT.css];
+let t6 = [t_.A.unsafe_rawColors.BLUE_345.css, t_.A.colors.INTERACTIVE_TEXT_DEFAULT.css];
 function t7(t) {
     let { tooltip: e, onClick: n, icon: i } = t;
     return (0, l.jsx)(z.m, {
@@ -1006,7 +1006,7 @@ class en extends s.PureComponent {
         return (0, l.jsxs)($.A, {
             direction: $.A.Direction.VERTICAL,
             children: [
-                (0, l.jsx)(tO, { percents: e, size: tO.Sizes.SMALL, foregroundColors: t3, animate: this.isFocused }),
+                (0, l.jsx)(tO, { percents: e, size: tO.Sizes.SMALL, foregroundColors: t6, animate: this.isFocused }),
                 (0, l.jsx)(tE.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
@@ -1249,14 +1249,14 @@ class eo extends s.PureComponent {
                       (0, l.jsxs)("div", {
                           className: t2.U1,
                           children: [
-                              (0, l.jsx)(t5, {
+                              (0, l.jsx)(t4, {
                                   className: u()(t2.e4, t2.Eg),
                                   title: L.intl.string(L.t.ytoXKr),
                                   getHistoricalTotalBytes: tY.A.getHistoricalTotalBytesDownloaded,
                                   color: t_.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
                                   animate: i,
                               }),
-                              (0, l.jsx)(t5, {
+                              (0, l.jsx)(t4, {
                                   className: u()(t2.e4, t2.pn),
                                   title: L.intl.string(L.t.SjohhI),
                                   getHistoricalTotalBytes: tY.A.getHistoricalTotalBytesWritten,
@@ -1271,7 +1271,7 @@ class eo extends s.PureComponent {
                           data: t,
                           className: t2.tp,
                           rowClassName: t2.nM,
-                          rowComponent: t6,
+                          rowComponent: t3,
                           cellProps: { paused: e, isFocused: i, theme: s },
                           rowProps: {
                               onContextMenu: (t, e) => {
@@ -1383,7 +1383,7 @@ class ep extends s.PureComponent {
 }
 var eA = n(665260),
     em = n(939249),
-    eg = n(297264),
+    eg = n(534514),
     ex = n(331322),
     ef = n(193249),
     ey = n(404778),

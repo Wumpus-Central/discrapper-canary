@@ -30,7 +30,7 @@ var i,
     L = n(17928),
     G = n(834730),
     D = n(821609),
-    O = n(297264),
+    O = n(534514),
     M = n(289873),
     k = n(769015),
     U = n(311043),
@@ -62,7 +62,7 @@ function W() {
             (0, p.jsxs)("div", {
                 className: z.wx,
                 children: [
-                    (0, p.jsx)(O.D, { variant: "heading-lg/bold", children: V.intl.string(H.default.SwOlOR) }),
+                    (0, p.jsx)(O.D, { variant: "heading-lg/semibold", children: V.intl.string(H.default.SwOlOR) }),
                     (0, p.jsx)(y.A, {}),
                 ],
             }),
@@ -77,7 +77,7 @@ function W() {
                       className: z.j9,
                       children: [
                           (0, p.jsx)(G.E, {
-                              variant: "text-md/bold",
+                              variant: "text-md/semibold",
                               color: "text-strong",
                               children: V.intl.string(H.default.FzPkj2),
                           }),
@@ -1107,7 +1107,7 @@ function tV(e) {
                 className: tH.A1,
                 children: (0, p.jsx)("div", {
                     className: tH.xR,
-                    children: (0, p.jsx)(G.E, { className: tH.qZ, variant: "text-sm/bold", children: t }),
+                    children: (0, p.jsx)(G.E, { className: tH.qZ, variant: "text-sm/semibold", children: t }),
                 }),
             }),
             (0, p.jsxs)("div", {
@@ -8514,7 +8514,7 @@ function o1() {
                     }),
                     (0, p.jsx)(iZ.h, { size: 8 }),
                     (0, p.jsx)(O.D, {
-                        variant: "heading-md/bold",
+                        variant: "heading-md/semibold",
                         className: o0(e),
                         children: V.intl.string(V.t.LdjJG5),
                     }),
@@ -8603,7 +8603,7 @@ function o6() {
                     (0, p.jsxs)(O.D, {
                         className: o0(e),
                         style: { fontSize: "50px", lineHeight: "52px" },
-                        variant: "heading-xxl/extrabold",
+                        variant: "heading-xxl/semibold",
                         children: [ls.Xn, "%"],
                     }),
                     (0, p.jsx)(G.E, {
@@ -13667,12 +13667,12 @@ function mG(e) {
                 className: mL.wx,
                 children: [
                     (0, p.jsx)(G.E, {
-                        variant: "text-xs/bold",
+                        variant: "text-xs/semibold",
                         color: "text-brand",
                         children: V.intl.format(V.t.kvroKO, { count: m }),
                     }),
                     (0, p.jsx)(G.E, {
-                        variant: "text-xs/bold",
+                        variant: "text-xs/semibold",
                         color: "text-muted",
                         children: V.intl.format(V.t["0MjxJ5"], { count: u }),
                     }),
@@ -13740,7 +13740,7 @@ function mO(e) {
         "aria-labelledby": s,
         children: [
             (0, p.jsx)(my.A, {
-                children: (0, p.jsx)(O.D, { variant: "heading-md/normal", id: s, children: V.intl.string(V.t.kew925) }),
+                children: (0, p.jsx)(O.D, { variant: "heading-md/medium", id: s, children: V.intl.string(V.t.kew925) }),
             }),
             (0, p.jsx)("div", { className: mD.wx, children: (0, p.jsx)(mG, { guildId: t.id, scrollToQuestions: n }) }),
             (0, p.jsxs)("div", {
@@ -14293,7 +14293,7 @@ function m1(e) {
                     : (0, p.jsxs)(p.Fragment, {
                           children: [
                               (0, p.jsx)("div", { className: m0.yF }),
-                              (0, p.jsx)(O.D, { variant: "heading-md/bold", children: V.intl.string(V.t.tjrGcb) }),
+                              (0, p.jsx)(O.D, { variant: "heading-md/semibold", children: V.intl.string(V.t.tjrGcb) }),
                               (0, p.jsx)(G.E, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
@@ -14345,7 +14345,7 @@ function m2(e) {
                                     : (0, p.jsxs)("div", {
                                           children: [
                                               (0, p.jsx)(O.D, {
-                                                  variant: "heading-md/bold",
+                                                  variant: "heading-md/semibold",
                                                   children: V.intl.string(V.t["24Qm4M"]),
                                               }),
                                               (0, p.jsx)(G.E, {
@@ -14611,7 +14611,7 @@ function m9(e) {
                             }),
                             (0, p.jsx)(O.D, {
                                 className: m3.wx,
-                                variant: "heading-lg/extrabold",
+                                variant: "heading-lg/semibold",
                                 children: V.intl.string(V.t["4GSygh"]),
                             }),
                             (0, p.jsx)(G.E, {
@@ -14640,7 +14640,7 @@ function m9(e) {
                                         (0, p.jsx)("div", { className: m3.FZ }),
                                         (0, p.jsx)(O.D, {
                                             className: m3.RH,
-                                            variant: "heading-lg/extrabold",
+                                            variant: "heading-lg/semibold",
                                             children: V.intl.string(V.t.g2RnpV),
                                         }),
                                         (0, p.jsx)(G.E, {
@@ -15026,7 +15026,7 @@ let gE = function (e) {
                           children: [
                               (0, p.jsx)(O.D, {
                                   className: gn.wx,
-                                  variant: "heading-lg/extrabold",
+                                  variant: "heading-lg/semibold",
                                   children: V.intl.string(V.t.BBj1nY),
                               }),
                               (0, p.jsx)(gc.A, {
@@ -15072,7 +15072,7 @@ let gE = function (e) {
                           children: [
                               (0, p.jsx)(O.D, {
                                   className: gn.wx,
-                                  variant: "heading-lg/extrabold",
+                                  variant: "heading-lg/semibold",
                                   children: V.intl.string(V.t.BBj1nY),
                               }),
                               (0, p.jsx)(gc.A, {
@@ -15473,7 +15473,7 @@ function gT(e) {
                 children: [
                     (0, p.jsx)(O.D, {
                         className: gn.wx,
-                        variant: "heading-lg/extrabold",
+                        variant: "heading-lg/semibold",
                         children: V.intl.string(V.t.tbUZVr),
                     }),
                     (0, p.jsx)("div", {
@@ -15488,7 +15488,7 @@ function gT(e) {
                     (0, p.jsx)("div", { className: gn.DY }),
                     (0, p.jsx)(O.D, {
                         className: gn.wx,
-                        variant: "heading-lg/extrabold",
+                        variant: "heading-lg/semibold",
                         children: V.intl.string(V.t["roY/wu"]),
                     }),
                     (0, p.jsx)("div", {
@@ -15504,7 +15504,7 @@ function gT(e) {
                     (0, p.jsx)("div", { className: gn.DY }),
                     (0, p.jsx)(O.D, {
                         className: gn.wx,
-                        variant: "heading-lg/extrabold",
+                        variant: "heading-lg/semibold",
                         children: V.intl.string(V.t.hEjHyH),
                     }),
                     (0, p.jsxs)("div", {
@@ -15740,7 +15740,7 @@ function gO(e) {
                 (0, p.jsxs)("div", {
                     className: gD.G6,
                     children: [
-                        (0, p.jsx)(O.D, { variant: "heading-lg/bold", children: V.intl.string(V.t.Cl8F8H) }),
+                        (0, p.jsx)(O.D, { variant: "heading-lg/semibold", children: V.intl.string(V.t.Cl8F8H) }),
                         (0, p.jsx)(G.E, {
                             variant: "text-sm/medium",
                             color: "text-strong",
@@ -16351,7 +16351,7 @@ function g3(e) {
             (0, p.jsxs)("div", {
                 className: gD.G6,
                 children: [
-                    (0, p.jsx)(O.D, { variant: "heading-lg/bold", children: V.intl.string(V.t.Cl8F8H) }),
+                    (0, p.jsx)(O.D, { variant: "heading-lg/semibold", children: V.intl.string(V.t.Cl8F8H) }),
                     (0, p.jsx)(G.E, {
                         variant: "text-sm/medium",
                         color: "text-strong",
@@ -16542,7 +16542,7 @@ function g4(e) {
         children: [
             (0, p.jsx)(O.D, {
                 className: m0.wx,
-                variant: "heading-lg/extrabold",
+                variant: "heading-lg/semibold",
                 children: s ? V.intl.string(V.t.AGjtFv) : V.intl.string(V.t.dqCzoT),
             }),
             (0, p.jsx)(G.E, {
@@ -17162,7 +17162,7 @@ function xy(e) {
                 (0, p.jsxs)("td", {
                     className: xT.C4,
                     children: [
-                        (0, p.jsx)(G.E, { variant: "text-md/bold", "aria-hidden": "true", children: t }),
+                        (0, p.jsx)(G.E, { variant: "text-md/semibold", "aria-hidden": "true", children: t }),
                         (0, p.jsx)("div", {
                             className: xT.bM,
                             children: (0, p.jsx)(G.E, { variant: "text-md/normal", children: n }),
@@ -17252,7 +17252,7 @@ function xR(e) {
                 (0, p.jsxs)("td", {
                     className: xT.C4,
                     children: [
-                        (0, p.jsx)(G.E, { variant: "text-md/bold", "aria-hidden": "true", children: t }),
+                        (0, p.jsx)(G.E, { variant: "text-md/semibold", "aria-hidden": "true", children: t }),
                         (0, p.jsx)("div", {
                             className: xT.bM,
                             children: (0, p.jsx)(G.E, { variant: "text-md/normal", children: A }),
@@ -19577,7 +19577,7 @@ function El(e) {
                     (0, p.jsx)(G.E, {
                         className: Ei.Pf,
                         color: "none",
-                        variant: "text-md/bold",
+                        variant: "text-md/semibold",
                         children: V.intl.string(V.t.yiaoNr),
                     }),
                     (0, p.jsxs)(G.E, {
@@ -21743,7 +21743,7 @@ function fo(e) {
                           (0, p.jsx)($.c, { className: ft.yF }),
                           (0, p.jsx)(O.D, {
                               className: ft.jA,
-                              variant: "heading-md/bold",
+                              variant: "heading-md/semibold",
                               color: "text-strong",
                               children: (0, p.jsx)(fs, { guildId: t.id, currentTier: o, availableSounds: d }),
                           }),
@@ -22792,7 +22792,7 @@ function Nt(e) {
                                                                       className: fP.uL,
                                                                       children: [
                                                                           (0, p.jsxs)("div", {
-                                                                              className: fP.hY,
+                                                                              className: fP.Aj,
                                                                               children: [
                                                                                   e.title,
                                                                                   e.isNew
@@ -25344,7 +25344,7 @@ function AT(e) {
     return (0, p.jsxs)(p.Fragment, {
         children: [
             (0, p.jsx)(O.D, {
-                variant: "text-xs/bold",
+                variant: "text-xs/semibold",
                 color: "text-muted",
                 className: Av.DD,
                 children: V.intl.format(V.t["sm+75n"], { currentCount: i.length, maxCount: A_.OK }),
@@ -25401,7 +25401,7 @@ function Ab(e) {
     return (0, p.jsxs)(p.Fragment, {
         children: [
             (0, p.jsx)(O.D, {
-                variant: "text-xs/bold",
+                variant: "text-xs/semibold",
                 color: "text-muted",
                 className: Av.hD,
                 children: V.intl.string(V.t.ID04cA),
@@ -25925,7 +25925,7 @@ function AK(e) {
                             inert: !t,
                             children: [
                                 (0, p.jsx)(O.D, {
-                                    variant: "text-xs/bold",
+                                    variant: "text-xs/semibold",
                                     color: "text-muted",
                                     className: AW.lo,
                                     children: V.intl.string(V.t.XcAzbo),
@@ -25942,7 +25942,7 @@ var AX = n(716610),
 function AJ() {
     return (0, p.jsx)(G.E, {
         tag: "span",
-        variant: "text-xs/bold",
+        variant: "text-xs/semibold",
         color: "text-feedback-critical",
         className: Aq.mw,
         children: "*",
@@ -25988,7 +25988,7 @@ function AZ(e) {
                     (0, p.jsxs)("div", {
                         children: [
                             (0, p.jsx)(O.D, {
-                                variant: "text-xs/bold",
+                                variant: "text-xs/semibold",
                                 color: "text-muted",
                                 className: Aq.uI,
                                 children: V.intl.string(V.t.JaecVH),
@@ -26029,7 +26029,7 @@ function AZ(e) {
                     (0, p.jsxs)("div", {
                         children: [
                             (0, p.jsxs)(O.D, {
-                                variant: "text-xs/bold",
+                                variant: "text-xs/semibold",
                                 color: "text-muted",
                                 className: Aq.uI,
                                 children: [V.intl.string(V.t["1Ts7QP"]), n ? (0, p.jsx)(AJ, {}) : null],
@@ -26079,7 +26079,7 @@ function AQ(e) {
             (0, p.jsxs)("div", {
                 children: [
                     (0, p.jsxs)(O.D, {
-                        variant: "text-xs/bold",
+                        variant: "text-xs/semibold",
                         color: "text-muted",
                         className: Aq.uI,
                         children: [V.intl.string(V.t.Rv9Anz), i ? (0, p.jsx)(AJ, {}) : null],
@@ -26098,7 +26098,7 @@ function AQ(e) {
             (0, p.jsxs)("div", {
                 children: [
                     (0, p.jsx)(O.D, {
-                        variant: "text-xs/bold",
+                        variant: "text-xs/semibold",
                         color: "text-muted",
                         className: Aq.uI,
                         children: V.intl.string(V.t.oOPlPA),
@@ -26188,7 +26188,7 @@ function A$(e) {
                 ? (0, p.jsxs)("div", {
                       children: [
                           (0, p.jsx)(O.D, {
-                              variant: "text-xs/bold",
+                              variant: "text-xs/semibold",
                               color: "text-muted",
                               className: Aq.uI,
                               children: V.intl.string(V.t.sF28Ou),

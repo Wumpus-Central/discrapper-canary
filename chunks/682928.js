@@ -10,15 +10,15 @@ let i = "media.discordapp.net",
     c = /^\/attachments\/\d+\/\d+\/[^/]+$/,
     d = /\.gif$/i,
     p = /^(\d{1,5})x(\d{1,5})$/;
-function g(e) {
+function m(e) {
     try {
         return new URL(e);
     } catch {
         return null;
     }
 }
-function m(e) {
-    let t = g(e);
+function g(e) {
+    let t = m(e);
     return (
         null != t && "https:" === t.protocol && ("cdn.discordapp.com" === t.host || t.host === i) && c.test(t.pathname)
     );
@@ -41,7 +41,7 @@ function A(e) {
         c = x.kt.useSetting(),
         [h, f] = s.useState(!1),
         [R, k] = s.useState(!1),
-        b = m(r),
+        b = g(r),
         A = b
             ? r
             : (function (e) {
@@ -68,9 +68,9 @@ function A(e) {
                   { width: Math.max(1, Math.round(C.width * t)), height: Math.max(1, Math.round(C.height * t)) })
                 : null,
         w =
-            b && !c && null != (a = g(A)) && d.test(a.pathname)
+            b && !c && null != (a = m(A)) && d.test(a.pathname)
                 ? (function (e) {
-                      if (!m(e)) return null;
+                      if (!g(e)) return null;
                       let t = new URL(e);
                       return ((t.host = i), t.searchParams.set("format", "webp"), t.toString());
                   })(A)
@@ -190,7 +190,7 @@ let S = (function () {
                     {
                         level: t.level,
                         className: r()(
-                            O["heading-md/bold"],
+                            O["heading-md/semibold"],
                             ...(null == (a = t.className) ? [] : a.split(" ").map((t) => e[t])),
                         ),
                         children: n(t.content, s),
@@ -201,7 +201,11 @@ let S = (function () {
         }),
         heading: {
             react: (e, t, n) =>
-                (0, l.jsx)(G, { level: e.level, className: O["heading-md/bold"], children: t(e.content, n) }, n.key),
+                (0, l.jsx)(
+                    G,
+                    { level: e.level, className: O["heading-md/semibold"], children: t(e.content, n) },
+                    n.key,
+                ),
         },
         image: {
             react: (e, t, n) =>

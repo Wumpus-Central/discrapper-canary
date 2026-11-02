@@ -3,7 +3,7 @@ var i = n(477900),
     s = n(582128),
     r = n(17928);
 if (588245 != n.j) var l = n(785007);
-if (588245 != n.j) var a = n(297264);
+if (588245 != n.j) var a = n(534514);
 if (588245 != n.j) var c = n(331322);
 var o = n(73153),
     u = n(915089),
@@ -16,8 +16,8 @@ var o = n(73153),
     p = n(866665),
     A = n(939249),
     v = n(194261),
-    b = n(653523),
-    y = n(350972),
+    y = n(653523),
+    b = n(350972),
     S = n(677056),
     j = n(174197),
     I = n(652215),
@@ -36,7 +36,7 @@ function C(e) {
             disabled: d = !1,
         } = e,
         [m, h] = s.useState((0, j.gG)(t).name),
-        x = t === y.Ic.PIRATE;
+        x = t === b.Ic.PIRATE;
     return (0, i.jsx)(p.m, {
         text: m,
         onTooltipShow: () =>
@@ -64,7 +64,7 @@ function C(e) {
                     onClick: a ? I.tEg : () => l?.(t),
                     children: o,
                 }),
-                a && (0, i.jsx)(b.H$, {}),
+                a && (0, i.jsx)(y.H$, {}),
                 u &&
                     (0, i.jsx)("div", {
                         className: E.RK,
@@ -140,7 +140,7 @@ function w(e) {
                                         children: [
                                             (0, i.jsx)(a.D, {
                                                 className: P.Qw,
-                                                variant: "heading-xl/normal",
+                                                variant: "heading-xl/medium",
                                                 color: "text-strong",
                                                 children: N.intl.string(N.t.NThqTw),
                                             }),

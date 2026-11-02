@@ -362,7 +362,7 @@ let ez = i.memo(function (e) {
             },
             [N, X, Y, C.id, eu, ec, e2],
         ),
-        { submit: e8, handleSubmit: e5 } = (0, eO.Zx)(e7, x, ey, ev, C.id),
+        { submit: e5, handleSubmit: e8 } = (0, eO.Zx)(e7, x, ey, ev, C.id),
         { autocompleteRef: e6, handleMaybeShowAutocomplete: e9, handleHideAutocomplete: te } = (0, eO.v7)(),
         tt = i.useCallback(() => ev?.current?.hide(), []),
         { editorHeight: tn, handleResize: tl } = (0, eO.ck)(y),
@@ -388,7 +388,7 @@ let ez = i.memo(function (e) {
         { expressionPickerView: to, shouldHideExpressionPicker: tc, handleOuterClick: td } = (0, eO.MD)(x, ey, C.id),
         { handleAutocompleteVisibilityChange: tu } = (0, eO.uW)(x, C.id),
         th = (0, eO.NO)(ey),
-        tm = (0, eO.Vu)(e8, x, ey),
+        tm = (0, eO.Vu)(e5, x, ey),
         tg = (0, eO.C)({ editorRef: ey, disabled: eR, textValue: c, channelId: C.id, chatInputType: x, submit: e7 });
     (0, e_.R)(e3, C.guild_id, C.id);
     let [tp, tA] = i.useState(!1),
@@ -509,7 +509,7 @@ let ez = i.memo(function (e) {
                                                         onBlur: _,
                                                         onFocus: v,
                                                         onKeyDown: b,
-                                                        onSubmit: e8,
+                                                        onSubmit: e5,
                                                         onTab: ti,
                                                         onEnter: ts,
                                                         onSpace: ta,
@@ -552,7 +552,7 @@ let ez = i.memo(function (e) {
                                             type: U.oU.CREATE_ANNOUNCEMENT_POST,
                                             disabled: eR,
                                             channel: C,
-                                            handleSubmit: e5,
+                                            handleSubmit: e8,
                                             isEmpty: 0 === c.trim().length,
                                             showAllButtons: !0,
                                             expressionButtonsHidden: !1,
@@ -579,7 +579,7 @@ let ez = i.memo(function (e) {
                                                 (0, l.jsx)(z.$, {
                                                     ...e,
                                                     onClick: () => {
-                                                        e8(c);
+                                                        e5(c);
                                                     },
                                                     disabled: 0 === c.length && 0 === X.length,
                                                     size: "sm",
@@ -631,7 +631,7 @@ let ez = i.memo(function (e) {
                             expressionPickerView: to,
                             type: x,
                             editorRef: ey,
-                            onSendMessage: e8,
+                            onSendMessage: e5,
                             onSendSticker: () => {},
                             onVisibilityChange: tu,
                             editorHeight: tn,
@@ -830,8 +830,8 @@ var e2 = n(319365),
     e3 = n(151271),
     e4 = n(407278),
     e7 = n(81400),
-    e8 = n(353182),
-    e5 = n(727875);
+    e5 = n(353182),
+    e8 = n(727875);
 function e6(e) {
     let {
         bannerIcon: t,
@@ -843,22 +843,22 @@ function e6(e) {
         children: c,
     } = e;
     return (0, l.jsxs)("div", {
-        className: a()(e5.Ew, o),
+        className: a()(e8.Ew, o),
         children: [
             (0, l.jsxs)("div", {
-                className: a()(e5.lt, s),
+                className: a()(e8.lt, s),
                 children: [
-                    null != t && ("string" == typeof t ? (0, l.jsx)("img", { src: t, alt: "", className: e5.q3 }) : t),
+                    null != t && ("string" == typeof t ? (0, l.jsx)("img", { src: t, alt: "", className: e8.q3 }) : t),
                     (0, l.jsxs)("div", {
-                        className: e5._M,
+                        className: e8._M,
                         children: [
-                            (0, l.jsx)("div", { className: a()(e5.U_, r), children: n }),
-                            null != i && (0, l.jsx)("div", { className: e5.mi, children: i }),
+                            (0, l.jsx)("div", { className: a()(e8.U_, r), children: n }),
+                            null != i && (0, l.jsx)("div", { className: e8.mi, children: i }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: e5.uu, children: c }),
+            (0, l.jsx)("div", { className: e8.uu, children: c }),
         ],
     });
 }
@@ -874,7 +874,7 @@ function ta(e) {
         n = (0, e9.A)({ scrollPosition: ti._F.GUILD_TAG });
     return (0, l.jsx)("div", {
         children: (0, l.jsx)(e6, {
-            bannerIcon: (0, l.jsx)(e8._, { size: "lg", color: "currentColor", className: ts.q3 }),
+            bannerIcon: (0, l.jsx)(e5._, { size: "lg", color: "currentColor", className: ts.q3 }),
             bannerHeader: eH.intl.format(eH.t.GgMwjk, { guildName: t?.name ?? "" }),
             bannerSubtext: eH.intl.string(eH.t.ONjwD5),
             textStyles: ts.cI,
@@ -896,7 +896,7 @@ function tr(e) {
         r = s ? eH.intl.string(eH.t["/PGQf0"]) : eH.intl.string(eH.t.WikgZ1);
     return (0, l.jsx)("div", {
         children: (0, l.jsx)(e6, {
-            bannerIcon: (0, l.jsx)(e8._, { size: "lg", color: "currentColor", className: ts.q3 }),
+            bannerIcon: (0, l.jsx)(e5._, { size: "lg", color: "currentColor", className: ts.q3 }),
             bannerHeader: eH.intl.format(eH.t.kcYdTq, { guildName: t?.name ?? "" }),
             bannerSubtext: a,
             textStyles: ts.cI,
@@ -936,7 +936,7 @@ var tc = n(316031),
     tm = n(496431),
     tg = n(592713),
     tp = n(264388),
-    tA = n(297264),
+    tA = n(534514),
     tf = n(542290);
 function tC(e) {
     let { onClose: t, guildName: n } = e;
@@ -1098,7 +1098,11 @@ let tZ = i.memo(function (e) {
             (0, l.jsx)(F.animated.div, {
                 className: tJ.Gi,
                 style: d,
-                children: (0, l.jsx)(W.E, { className: tJ.fX, variant: "text-sm/bold", children: (0, t$.RL)(a.combo) }),
+                children: (0, l.jsx)(W.E, {
+                    className: tJ.fX,
+                    variant: "text-sm/semibold",
+                    children: (0, t$.RL)(a.combo),
+                }),
             })
         );
     }),
@@ -1107,7 +1111,7 @@ let tZ = i.memo(function (e) {
             { color: s, square: r, flair: o } = i.useMemo(() => (0, t$.HN)(n), [n]);
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(W.E, { className: tJ.iR, variant: "text-sm/bold", children: t }),
+                (0, l.jsx)(W.E, { className: tJ.iR, variant: "text-sm/semibold", children: t }),
                 (0, l.jsxs)("div", {
                     className: tJ._Z,
                     style: { color: s },
@@ -1115,7 +1119,7 @@ let tZ = i.memo(function (e) {
                         (0, l.jsx)(W.E, {
                             className: tJ.On,
                             style: { color: s },
-                            variant: "text-sm/bold",
+                            variant: "text-sm/semibold",
                             children: eH.intl.format(eH.t["6bgVlq"], { multiplier: n }),
                         }),
                         r &&
@@ -1141,7 +1145,7 @@ let tZ = i.memo(function (e) {
                         1 === n &&
                             (0, l.jsx)(W.E, {
                                 className: tJ.uN,
-                                variant: "text-sm/bold",
+                                variant: "text-sm/semibold",
                                 children: eH.intl.string(eH.t.b5Cpof),
                             }),
                     ],
@@ -1210,14 +1214,14 @@ let t4 = function (e, t) {
     return null != e && e.hasFlag(ew.nhx.QUARANTINED) && n && !l;
 };
 var t7 = n(831502);
-let t8 = function () {
+let t5 = function () {
     return (0, l.jsx)(e6, {
         bannerIcon: (0, l.jsx)(t1.M, { alt: "", width: 80, height: 40 }),
         bannerHeader: eH.intl.string(eH.t.EouHwv),
         bannerSubtext: eH.intl.format(eH.t.PThBel, { appealLink: t7.q }),
     });
 };
-var t5 = n(118517),
+var t8 = n(118517),
     t6 = n(853145),
     t9 = n(226698),
     ne = n(291185),
@@ -1572,7 +1576,7 @@ class nK extends i.PureComponent {
                 null != o && (I.flags = (0, u.UI)(I.flags ?? 0, ew.pr7.IS_COMPONENTS_V2)),
                 a)
             )
-                return (x.A.sendMessage(h.id, E, void 0, I), (0, t5.Jx)(h.id), { shouldClear: !1, shouldRefocus: !0 });
+                return (x.A.sendMessage(h.id, E, void 0, I), (0, t8.Jx)(h.id), { shouldClear: !1, shouldRefocus: !0 });
             function y() {
                 ("" !== t &&
                     "" === eC.A.getDraft(h.id, eC.C.ChannelMessage) &&
@@ -1599,7 +1603,7 @@ class nK extends i.PureComponent {
                     throw ((null != I.scheduledTimestamp || !1 === I.eagerDispatch) && y(), e);
                 }),
                 this.setState((0, w.N3)()),
-                (0, t5.Jx)(h.id),
+                (0, t8.Jx)(h.id),
                 (0, nl.x5)(h.id, g.drafts.type),
                 { shouldClear: !0, shouldRefocus: !0 }
             );
@@ -1798,7 +1802,7 @@ class nV extends i.PureComponent {
             : this.props.restrictedPreview && t.type === ew.rbe.DM
               ? (0, l.jsx)(nL, { channel: t })
               : t.type === ew.rbe.DM && n
-                ? (0, l.jsx)(t8, {})
+                ? (0, l.jsx)(t5, {})
                 : t.isModeratorReportChannel() && t.isArchivedThread()
                   ? (0, l.jsx)(nn, { channelId: t.id })
                   : null != s && (0, tc.n)(s) && null != i && !nr.A.can(ew.xBc.ADMINISTRATOR, i)

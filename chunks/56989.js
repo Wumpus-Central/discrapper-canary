@@ -503,7 +503,7 @@ function eD(e) {
 var ek = n(154672),
     ew = n(331322),
     eG = n(289873),
-    eP = n(297264),
+    eP = n(534514),
     eU = n(47084);
 function eB(e) {
     let { title: t, subtitle: n, buttonText: i, image: l, onButtonClick: s, loading: r } = e;
@@ -3910,7 +3910,7 @@ function lH(e) {
     return (0, d.jsxs)("div", {
         children: [
             (0, d.jsx)(eP.D, {
-                variant: "heading-md/normal",
+                variant: "heading-md/medium",
                 color: "text-muted",
                 className: lM.CT,
                 children: X.intl.string(X.t.Eabu1z),

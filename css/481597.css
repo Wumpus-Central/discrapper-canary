@@ -108,12 +108,8 @@
     margin-top: 1px;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-transform: uppercase;
+    text-transform: none;
     white-space: nowrap
-}
-
-.mana-type-consolidation .note__71961 {
-    text-transform: none
 }
 
 .username__71961 {
@@ -123,17 +119,11 @@
 
 .header__71961 {
     color: var(--interactive-text-default);
-    font-size: 12px;
-    font-weight: var(--font-weight-semibold);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     letter-spacing: .025em;
     line-height: 30px;
     margin-top: 4px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .header__71961 {
-    font-size: 14px;
-    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -172,4 +162,4 @@
     outline-offset: -2px
 }
 
-/*# sourceMappingURL=481597.e8e416d2ed38fc8e.css.map*/
+/*# sourceMappingURL=481597.e796cf8d6f74513a.css.map*/

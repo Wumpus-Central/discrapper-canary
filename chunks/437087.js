@@ -43,7 +43,7 @@ var i,
     W = n(315710),
     Y = n(404778),
     K = n(331322),
-    $ = n(297264),
+    $ = n(534514),
     z = n(265872),
     X = n(827827),
     q = n(481045),
@@ -1196,7 +1196,7 @@ function nb(e) {
             applicationId: e.id,
             name: e.name,
             glyphSize: (0, eC.w)(32).glyphSize,
-            className: l()(ny.n8, ny.Ps),
+            className: l()(ny.Gt, ny.Ps),
         });
 }
 function nP(e) {
@@ -1480,7 +1480,7 @@ function nx(e) {
         : null != a && (t = B.BVt.CHANNEL(B.ME, a.id));
     let I = (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(ej.A, { className: ny.n8, game: n, size: ej.M.SMALL, ref: u, unknownGameIconFallback: nb(n) }),
+            (0, r.jsx)(ej.A, { className: ny.Gt, game: n, size: ej.M.SMALL, ref: u, unknownGameIconFallback: nb(n) }),
             (0, r.jsx)(ed, {
                 popoutTargetRef: _,
                 isForceShowSharingPopout: o,
@@ -1515,7 +1515,7 @@ function nk(e) {
         o = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(ej.A, {
-                    className: ny.n8,
+                    className: ny.Gt,
                     game: n,
                     size: ej.M.SMALL,
                     ref: i,

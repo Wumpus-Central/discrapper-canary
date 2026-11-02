@@ -35,7 +35,7 @@ function a(n) {
                         }),
                     (0, l.jsxs)("div", {
                         children: [
-                            (0, l.jsx)(s.E, { variant: "heading-xl/bold", tag: "div", children: e }),
+                            (0, l.jsx)(s.E, { variant: "heading-xl/semibold", tag: "div", children: e }),
                             null != i &&
                                 (0, l.jsxs)(s.E, { variant: "text-sm/normal", children: ["\u201C", i, "\u201D"] }),
                         ],
@@ -122,7 +122,7 @@ function h(n) {
 }
 var x = i(885996),
     g = i(17928),
-    b = i(297264),
+    b = i(534514),
     v = i(192308),
     I = i(775602),
     j = i(793574),

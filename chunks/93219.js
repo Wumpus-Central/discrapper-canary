@@ -1,8 +1,8 @@
 _.exports = {
-    MA: "text-md/bold__257af",
+    Mz: "text-md/semibold__257af",
     p_: "combo__257af",
     iR: "comboValue__257af",
-    _Z: "comboNameplate__257af text-md/bold__257af",
+    _Z: "comboNameplate__257af text-md/semibold__257af",
     On: "comboMultiplier__257af",
     QA: "comboSquare__257af",
     kb: "left__257af",

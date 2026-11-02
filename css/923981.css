@@ -34,13 +34,9 @@
 }
 
 .labelSubtitle__27da5 {
-    min-width: 48px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .labelSubtitle__27da5 {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    min-width: 48px;
     text-transform: none
 }
 
@@ -282,4 +278,4 @@
     opacity: .5
 }
 
-/*# sourceMappingURL=923981.646617fb066912a2.css.map*/
+/*# sourceMappingURL=923981.cea5fca770641d1c.css.map*/

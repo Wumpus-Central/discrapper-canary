@@ -7,7 +7,7 @@ var i = l(477900),
     c = l(939249),
     o = l(834730),
     u = l(320448),
-    d = l(297264),
+    d = l(534514),
     m = l(900797),
     x = l(661531),
     h = l(847374),
@@ -118,7 +118,7 @@ function T(e) {
     return (0, i.jsxs)("div", {
         className: b.gn,
         children: [
-            (0, i.jsx)(d.D, { variant: "heading-xl/extrabold", lineClamp: 1, children: l }),
+            (0, i.jsx)(d.D, { variant: "heading-xl/semibold", lineClamp: 1, children: l }),
             s
                 ? (0, i.jsx)("div", {
                       className: b.s3,

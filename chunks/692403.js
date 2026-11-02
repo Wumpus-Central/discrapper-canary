@@ -67,7 +67,7 @@ function ee(e) {
                 ? (0, r.jsx)(Q.E, {
                       className: q.P,
                       "aria-hidden": !0,
-                      variant: "text-xxs/bold",
+                      variant: "text-xxs/semibold",
                       color: "interactive-text-default",
                       children: n,
                   })
@@ -76,7 +76,7 @@ function ee(e) {
     });
 }
 var et = n(554146),
-    en = n(297264),
+    en = n(534514),
     er = n(352255),
     ei = n(782603),
     el = n(428689),

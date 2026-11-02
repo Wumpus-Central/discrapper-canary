@@ -7,12 +7,12 @@ var l = n(503698),
 let r = { delay: 300, position: "top" };
 function o(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)("div", { className: s()(a.jCT, n), children: t });
+    return (0, i.jsx)("div", { className: s()(a.jC, n), children: t });
 }
 function d(e) {
     let { className: t } = e;
     return (0, i.jsx)(o, {
         className: t,
-        children: (0, i.jsx)("div", { className: a.wHG, children: (0, i.jsx)("div", { className: a.j3g }) }),
+        children: (0, i.jsx)("div", { className: a.wH, children: (0, i.jsx)("div", { className: a.j3 }) }),
     });
 }

@@ -1755,12 +1755,12 @@ function iu(e) {
         },
     });
 }
-var ih = n(297264),
+var ih = n(534514),
     im = n(5373),
     ig = n(65995),
     iA = n(195702);
 function ip(e, t) {
-    return (0, r.jsx)(e2.E, { variant: "text-xs/bold", color: "text-default", children: e }, t);
+    return (0, r.jsx)(e2.E, { variant: "text-xs/semibold", color: "text-default", children: e }, t);
 }
 let iC = a.memo(function (e) {
     let { guild: t } = e,
@@ -1795,7 +1795,7 @@ let iC = a.memo(function (e) {
                               className: iA.A1,
                               children: [
                                   (0, r.jsx)(ih.D, {
-                                      variant: "heading-sm/bold",
+                                      variant: "heading-sm/semibold",
                                       children: er.intl.string(er.t.SnrR3x),
                                   }),
                                   (0, r.jsxs)("div", {
@@ -2498,7 +2498,7 @@ function lD(e) {
                     ? (0, r.jsx)(lL.A, { game: n[1].application, className: lU.wK })
                     : (0, r.jsx)(e2.E, {
                           className: lU.ju,
-                          variant: "text-xs/bold",
+                          variant: "text-xs/semibold",
                           color: "interactive-text-active",
                           children: `+${e}`,
                       }),

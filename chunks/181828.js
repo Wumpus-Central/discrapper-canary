@@ -1,8 +1,8 @@
 (s.r(t), s.d(t, { safetyPlaygroundConfig: () => c }));
 var r = s(477900),
     a = s(582128),
-    n = s(297264),
-    i = s(834730),
+    i = s(534514),
+    n = s(834730),
     d = s(821609),
     o = s(570962);
 let c = {
@@ -35,12 +35,12 @@ let c = {
                                                         height: 120,
                                                     },
                                                 }),
-                                                (0, r.jsx)(n.D, {
-                                                    variant: "heading-lg/bold",
+                                                (0, r.jsx)(i.D, {
+                                                    variant: "heading-lg/semibold",
                                                     color: "text-strong",
                                                     children: "Extremely Mature Game",
                                                 }),
-                                                (0, r.jsx)(i.E, {
+                                                (0, r.jsx)(n.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-default",
                                                     children:

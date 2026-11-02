@@ -22,7 +22,7 @@ var s = l(477900),
     C = l(750943),
     p = l(821609),
     E = l(192308),
-    _ = l(297264),
+    _ = l(534514),
     y = l(900002),
     G = l(736653),
     D = l(548118),
@@ -93,7 +93,7 @@ let B = i.memo(function (e) {
                         (0, s.jsxs)("div", {
                             className: T.Bv,
                             children: [
-                                (0, s.jsx)(_.D, { className: T.Bv, variant: "heading-xxl/bold", children: t.name }),
+                                (0, s.jsx)(_.D, { className: T.Bv, variant: "heading-xxl/semibold", children: t.name }),
                                 (0, s.jsx)(M.A, {
                                     size: 24,
                                     guild: t,
@@ -238,7 +238,7 @@ let em = i.memo(function (e) {
                       children: [
                           (0, s.jsx)(_.D, {
                               className: eu.cx,
-                              variant: "heading-md/bold",
+                              variant: "heading-md/semibold",
                               color: "text-strong",
                               children: k.intl.string(k.t.xwY4La),
                           }),
@@ -350,7 +350,7 @@ function eG(e) {
                 children: [
                     (0, s.jsx)(en.E, {
                         className: eE.DD,
-                        variant: "text-md/bold",
+                        variant: "text-md/semibold",
                         color: "text-strong",
                         children: n.title,
                     }),
@@ -400,7 +400,7 @@ function eD(e) {
                   className: eE.do,
                   children: [
                       (0, s.jsx)(_.D, {
-                          variant: "heading-xl/bold",
+                          variant: "heading-xl/semibold",
                           color: "text-strong",
                           children: k.intl.string(k.t.owvC9U),
                       }),
@@ -424,7 +424,7 @@ function eD(e) {
               className: eE.kL,
               children: [
                   (0, s.jsx)(_.D, {
-                      variant: "heading-lg/bold",
+                      variant: "heading-lg/semibold",
                       color: "text-strong",
                       children: k.intl.string(k.t.xwY4La),
                   }),

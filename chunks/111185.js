@@ -26,7 +26,7 @@ var l = i(477900),
     D = i(661531),
     U = i(862482),
     O = i(111159),
-    G = i(297264),
+    G = i(534514),
     S = i(86182),
     b = i(955437),
     k = i(201505),
@@ -134,13 +134,13 @@ function $(e) {
         onClick: s,
         children: [
             (0, l.jsx)(G.D, {
-                variant: "heading-xl/bold",
+                variant: "heading-xl/semibold",
                 color: "text-overlay-light",
                 className: J.DD,
                 children: P.intl.string(P.t.Deps41),
             }),
             (0, l.jsx)(G.D, {
-                variant: "heading-lg/bold",
+                variant: "heading-lg/semibold",
                 color: "text-overlay-light",
                 className: o()(J.DD, J.VA),
                 children: P.intl.string(P.t.xv5g7B),
@@ -301,7 +301,7 @@ function ea(e) {
                             separator: !1,
                             children: [
                                 (0, l.jsx)(G.D, {
-                                    variant: "heading-xl/bold",
+                                    variant: "heading-xl/semibold",
                                     color: "text-strong",
                                     className: Y.DD,
                                     children: P.intl.string(P.t.riOUtB),

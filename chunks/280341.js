@@ -780,7 +780,7 @@ let eU = s.Ay.connectStores([m.A, R.A], () => ({
     braintreeEmail: R.A.braintreeEmail,
     paypalClient: m.A.getPayPalClient(),
 }))(eD);
-var eG = n(297264),
+var eG = n(534514),
     eF = n(834730),
     eB = n(351665);
 class eH extends a.PureComponent {
@@ -806,7 +806,7 @@ class eH extends a.PureComponent {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(eG.D, {
-                                  variant: e.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
+                                  variant: e.length < 25 ? "heading-xl/semibold" : "heading-lg/semibold",
                                   className: eB.y,
                                   children: H.intl.format(H.t.DowIre, { venmoUsername: e }),
                               }),
@@ -1040,7 +1040,7 @@ function ti(e) {
         (0, r.jsxs)("div", {
             className: tl.rf,
             children: [
-                (0, r.jsx)(eG.D, { variant: "heading-xl/bold", children: H.intl.string(H.t.C4HYfy) }),
+                (0, r.jsx)(eG.D, { variant: "heading-xl/semibold", children: H.intl.string(H.t.C4HYfy) }),
                 (0, r.jsx)(eF.E, { variant: "text-md/normal", className: tl.h_, children: H.intl.string(H.t.xfG7Jp) }),
             ],
         })
@@ -1082,7 +1082,7 @@ function ts(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(eG.D, {
-                              variant: i.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
+                              variant: i.length < 25 ? "heading-xl/semibold" : "heading-lg/semibold",
                               className: ta.y,
                               children: H.intl.format(H.t["ze/1yE"], { cashtag: i }),
                           }),

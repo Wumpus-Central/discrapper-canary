@@ -46,7 +46,7 @@ let A = new E(s.h, {
     },
     STREAM_PREVIEW_FETCH_FAIL: function (e) {
         let { streamKey: t, retryAfter: n } = e;
-        ((d[t] = { url: null, expires: Date.now() + (null != n ? n : 1e4 * c[t]) }), u.delete(t));
+        ((d[t] = { url: d[t]?.url ?? null, expires: Date.now() + (null != n ? n : 1e4 * c[t]) }), u.delete(t));
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;

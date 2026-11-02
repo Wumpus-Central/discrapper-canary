@@ -92,15 +92,11 @@
 
 .title__33d12 {
     color: var(--text-muted);
-    text-align: center;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .title__33d12 {
     text-transform: none
 }
 
-.text__33d12 {
+.text__33d12,
+.title__33d12 {
     text-align: center
 }
 
@@ -438,4 +434,4 @@
     margin-top: 5px
 }
 
-/*# sourceMappingURL=403382.4e8b5a6257853d42.css.map*/
+/*# sourceMappingURL=403382.3f3dc7a499d0e65d.css.map*/

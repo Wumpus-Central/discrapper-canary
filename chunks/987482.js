@@ -18,7 +18,7 @@ var l = n(477900),
     v = n(980707),
     y = n(477782),
     K = n(265872),
-    b = n(297264),
+    b = n(534514),
     A = n(834730),
     N = n(315982),
     k = n(280450),
@@ -189,7 +189,7 @@ function P(t) {
                                     className: E.Fp,
                                     children: [
                                         (0, l.jsx)(b.D, {
-                                            variant: "heading-md/normal",
+                                            variant: "heading-md/medium",
                                             color: "text-subtle",
                                             className: E.wx,
                                             children: D.intl.string(D.t["0KK0bP"]),
@@ -228,7 +228,7 @@ function P(t) {
                                 children: [
                                     !c.Fr &&
                                         (0, l.jsx)(b.D, {
-                                            variant: "heading-md/normal",
+                                            variant: "heading-md/medium",
                                             color: "text-subtle",
                                             className: E.wx,
                                             children: D.intl.string(D.t.RdSNWa),

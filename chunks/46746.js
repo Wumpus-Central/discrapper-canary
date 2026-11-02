@@ -6,7 +6,7 @@ var s = n(477900),
     i = n(97893),
     c = n(364522),
     o = n(62010),
-    u = n(297264),
+    u = n(534514),
     d = n(834730),
     m = n(65593),
     f = n(458518),
@@ -857,7 +857,12 @@ let eq = {
                     className: ez.si,
                     children: [
                         (0, s.jsx)(eU.TrophyIcon, { size: "xxs", color: z.A.colors.ICON_FEEDBACK_WARNING }),
-                        (0, s.jsx)(d.E, { variant: "text-xs/bold", color: "none", className: ez.o9, children: 128 }),
+                        (0, s.jsx)(d.E, {
+                            variant: "text-xs/semibold",
+                            color: "none",
+                            className: ez.o9,
+                            children: 128,
+                        }),
                     ],
                 }),
                 (0, s.jsxs)("div", {
@@ -894,7 +899,7 @@ let eq = {
                                     children: [
                                         (0, s.jsx)(eG, { className: ez.iE }),
                                         (0, s.jsx)(d.E, {
-                                            variant: "text-xs/bold",
+                                            variant: "text-xs/semibold",
                                             color: "none",
                                             className: ez.AO,
                                             children: I.intl.string(S.default.VlgiLf),

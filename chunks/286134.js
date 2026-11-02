@@ -1,32 +1,30 @@
-s.d(e, { Ay: () => R, Qo: () => d, oY: () => c });
+s.d(t, { Ay: () => c, Qo: () => d, oY: () => A });
 var l = s(477900);
 s(582128);
 var a = s(503698),
     i = s.n(a),
     r = s(661531),
-    n = s(85463),
     o = s(834730),
-    A = s(857722);
-let c = { LARGE: "large", SMALL: "small" },
-    d = { ROUND: A.LI, ROUND_LEFT: A.kI, ROUND_RIGHT: A.pT, SQUARE: "" };
-function R(t) {
+    n = s(857722);
+let A = { LARGE: "large", SMALL: "small" },
+    d = { ROUND: n.LI, ROUND_LEFT: n.kI, ROUND_RIGHT: n.pT, SQUARE: "" };
+function c(e) {
     let {
-            text: e,
-            color: s = r.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            disableColor: a = !1,
-            size: R = c.LARGE,
-            shape: u = d.ROUND,
-            className: N,
-            style: y,
-            ...p
-        } = t,
-        O = (0, n.N)();
+        text: t,
+        color: s = r.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+        disableColor: a = !1,
+        size: c = A.LARGE,
+        shape: R = d.ROUND,
+        className: u,
+        style: y,
+        ...N
+    } = e;
     return (0, l.jsx)(o.E, {
-        variant: O,
+        variant: "body-xs/semibold",
         color: "none",
-        className: i()(N, A.Io, u, A.qS, { [A.as]: R === c.LARGE }),
+        className: i()(u, n.Io, R, n.qS, { [n.as]: c === A.LARGE }),
         style: { backgroundColor: a ? void 0 : s, ...y },
-        ...p,
-        children: e,
+        ...N,
+        children: t,
     });
 }

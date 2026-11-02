@@ -16,7 +16,7 @@ class u extends n.PureComponent {
             style: l,
             children: [
                 (0, i.jsxs)(a.E, {
-                    variant: "text-sm/bold",
+                    variant: "text-sm/semibold",
                     tag: "div",
                     color: "text-feedback-positive",
                     className: d.AD,

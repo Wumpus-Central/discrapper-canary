@@ -9,7 +9,7 @@ var s,
     u = n(815021),
     d = n(821609),
     m = n(834730),
-    h = n(297264),
+    h = n(534514),
     x = n(205513),
     g = n(926321),
     f = n(908803),
@@ -617,7 +617,7 @@ function eR() {
     return (0, l.jsxs)("div", {
         className: ey.N1,
         children: [
-            (0, l.jsx)(m.E, { variant: "text-md/bold", children: eu.intl.string(ec.default.AsmU85) }),
+            (0, l.jsx)(m.E, { variant: "text-md/semibold", children: eu.intl.string(ec.default.AsmU85) }),
             (0, l.jsx)(y.A, { size: "refresh_sm", color: "strong" }),
             (0, l.jsx)(eO, {}),
         ],
@@ -640,10 +640,7 @@ function eJ(e) {
             (0, l.jsxs)("div", {
                 className: ey.dI,
                 children: [
-                    (0, l.jsx)(h.D, {
-                        variant: "heading-lg/extrabold",
-                        children: eu.intl.string(ec.default["23QUzv"]),
-                    }),
+                    (0, l.jsx)(h.D, { variant: "heading-lg/semibold", children: eu.intl.string(ec.default["23QUzv"]) }),
                     (0, l.jsx)(eO, { markAsDismissed: t }),
                 ],
             }),

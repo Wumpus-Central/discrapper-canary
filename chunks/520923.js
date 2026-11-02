@@ -10,8 +10,8 @@ var a = n(477900),
     u = n(815021),
     m = n(140735),
     p = n(695366),
-    x = n(738188),
-    v = n(885574),
+    v = n(738188),
+    x = n(885574),
     y = n(983851),
     h = n(428689),
     g = n(451394),
@@ -55,9 +55,9 @@ function N(e) {
                           case "critical":
                               return (0, a.jsx)(p.E, { ...s });
                           case "warning":
-                              return (0, a.jsx)(x.WarningIcon, { ...s });
+                              return (0, a.jsx)(v.WarningIcon, { ...s });
                           case "info":
-                              return (0, a.jsx)(v.CircleInformationIcon, { ...s });
+                              return (0, a.jsx)(x.CircleInformationIcon, { ...s });
                           case "connected":
                               switch (e.leadingAccessory) {
                                   case "voice":
@@ -111,7 +111,7 @@ function N(e) {
                                       ? (0, a.jsx)("span", { className: f.iconContainer, children: L })
                                       : null,
                                 (0, a.jsxs)(A.E, {
-                                    variant: "experimental/body-sm/normal",
+                                    variant: "body-sm/normal",
                                     color: "none",
                                     className: f.message,
                                     children: [
@@ -123,7 +123,7 @@ function N(e) {
                                                     ? null
                                                     : (0, a.jsx)(A.E, {
                                                           tag: "strong",
-                                                          variant: "experimental/body-sm/semibold",
+                                                          variant: "body-sm/semibold",
                                                           color: "none",
                                                           className: f.title,
                                                           children: n,

@@ -29,7 +29,7 @@ function S(e) {
                 (0, l.jsxs)("div", {
                     className: f.__invalid_customGiftHeaderText,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: h.intl.string(h.t.aThJz8) }),
+                        (0, l.jsx)(o.E, { variant: "text-md/semibold", children: h.intl.string(h.t.aThJz8) }),
                         (0, l.jsx)(o.E, { variant: "text-sm/normal", children: h.intl.string(h.t.stGFA3) }),
                     ],
                 }),

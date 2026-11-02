@@ -3,7 +3,7 @@ var n = e(477900),
     l = e(582128),
     r = e(17928),
     a = e(189213),
-    c = e(297264),
+    c = e(534514),
     i = e(661531),
     o = e(834730),
     d = e(728557),
@@ -32,7 +32,7 @@ let j = function (t) {
                             className: k.wx,
                             children: [
                                 (0, n.jsx)(c.D, {
-                                    variant: "text-sm/bold",
+                                    variant: "text-sm/semibold",
                                     color: "text-strong",
                                     children: g.intl.string(g.t.cgBTyO),
                                 }),

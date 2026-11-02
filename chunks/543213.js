@@ -8,8 +8,8 @@ var i = t(503698),
     c = t(462887),
     u = t(834730),
     o = t(144165),
-    d = t(140735),
-    m = t(707554),
+    m = t(140735),
+    d = t(707554),
     p = t(736653),
     x = t(793574),
     h = t(688810),
@@ -69,7 +69,7 @@ function W(e) {
         children: [
             r &&
                 (0, l.jsx)(u.E, {
-                    variant: "text-sm/bold",
+                    variant: "text-sm/semibold",
                     className: F.tier2ApplicationHomeSubheader,
                     children: H.intl.string(G.default.ItfIa5),
                 }),
@@ -144,7 +144,7 @@ function z(e) {
                 children: [
                     (0, l.jsxs)("div", {
                         children: [
-                            (0, l.jsx)(d.A, { children: (0, l.jsx)(m.H, { children: H.intl.string(H.t["t9uG/o"]) }) }),
+                            (0, l.jsx)(m.A, { children: (0, l.jsx)(d.H, { children: H.intl.string(H.t["t9uG/o"]) }) }),
                             (0, l.jsx)(g.A, { className: a()(k.DD, k.ZD) }),
                             (0, l.jsx)(b.A, {
                                 isGift: c,
@@ -153,7 +153,7 @@ function z(e) {
                                 offerTierMatchesCard: A === D.pe.TIER_0,
                                 showYearlyPrice: n,
                                 priceOptions: u,
-                                headingVariant: "heading-md/normal",
+                                headingVariant: "heading-md/medium",
                                 headingColor: "text-overlay-light",
                             }),
                         ],
@@ -182,9 +182,9 @@ function J(e) {
             enablePremiumBrandRefresh: i = !1,
             isApplicationHome: c = !1,
             firstFeatureItemClassName: o,
-            textVariant: d,
+            textVariant: m,
         } = e,
-        m = (0, s.bG)([T.default], () => T.default.locale),
+        d = (0, s.bG)([T.default], () => T.default.locale),
         p = (0, v.b)(),
         x = !i && t && !n && p.length > 0,
         h = 3 === r || (0 === r && i && c),
@@ -208,7 +208,7 @@ function J(e) {
         children: [
             h &&
                 (0, l.jsx)(u.E, {
-                    variant: "text-sm/bold",
+                    variant: "text-sm/semibold",
                     className: i ? F.tier2ApplicationHomeSubheader : k.RQ,
                     children: H.intl.string(H.t.AozD3Q),
                 }),
@@ -218,9 +218,9 @@ function J(e) {
                     V,
                     {
                         Icon: n,
-                        text: s(m),
+                        text: s(d),
                         className: a()(3 === r ? k.dT : k.HW, 0 === t ? o : void 0),
-                        textVariant: d ?? (3 === r ? "text-sm/normal" : void 0),
+                        textVariant: m ?? (3 === r ? "text-sm/normal" : void 0),
                         isApplicationHome: c,
                         enablePremiumBrandRefresh: i,
                     },
@@ -291,7 +291,7 @@ function Q(e) {
                 children: [
                     (0, l.jsxs)("div", {
                         children: [
-                            (0, l.jsx)(d.A, { children: (0, l.jsx)(m.H, { children: H.intl.string(H.t.lG6a5x) }) }),
+                            (0, l.jsx)(m.A, { children: (0, l.jsx)(d.H, { children: H.intl.string(H.t.lG6a5x) }) }),
                             (0, l.jsx)(f.A, { className: a()(k.DD, k.$l) }),
                             (0, l.jsx)(b.A, {
                                 isGift: x,
@@ -300,7 +300,7 @@ function Q(e) {
                                 offerTierMatchesCard: U === D.pe.TIER_2 || (0, P.U9)(F, D.pe.TIER_2),
                                 showYearlyPrice: n,
                                 priceOptions: A,
-                                headingVariant: "heading-md/normal",
+                                headingVariant: "heading-md/medium",
                                 headingColor: "text-overlay-light",
                             }),
                         ],

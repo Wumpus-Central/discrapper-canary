@@ -204,7 +204,7 @@ function B(r) {
             (0, o.jsxs)("div", {
                 className: V.Rf,
                 children: [
-                    (0, o.jsx)(f.E, { color: "interactive-text-active", variant: "text-xs/bold", children: i }),
+                    (0, o.jsx)(f.E, { color: "interactive-text-active", variant: "text-xs/semibold", children: i }),
                     null != s ? (0, o.jsx)(f.E, { color: "text-muted", variant: "text-xs/medium", children: s }) : null,
                     null != l ? (0, o.jsx)(f.E, { color: "text-muted", variant: "text-xs/medium", children: l }) : null,
                 ],

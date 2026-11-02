@@ -1,7 +1,7 @@
 e.d(i, { A: () => L });
 var n = e(477900),
     s = e(582128),
-    r = e(297264),
+    r = e(534514),
     A = e(834730),
     a = e(821609),
     o = e(975807),
@@ -29,7 +29,7 @@ function L(t) {
                     className: E.rf,
                     children: [
                         (0, n.jsx)(r.D, {
-                            variant: "heading-lg/bold",
+                            variant: "heading-lg/semibold",
                             color: "text-strong",
                             children: _.intl.string(_.t["kw8/Ec"]),
                         }),

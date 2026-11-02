@@ -1,11 +1,11 @@
-(n.d(t, { A: () => t5 }), n(321073));
+(n.d(t, { A: () => t7 }), n(321073));
 var i,
     l = n(477900),
     s = n(582128),
     a = n(435558),
     r = n.n(a),
     o = n(17928),
-    c = n(297264),
+    c = n(534514),
     d = n(40474),
     u = n(282956),
     m = n(968309),
@@ -1003,11 +1003,11 @@ function e8(e) {
         ],
     });
 }
-var e7 = n(573648);
+var e5 = n(573648);
 (n(323874), n(14289), n(35956));
-var e5 = n(536637),
-    e6 = n.n(e5),
-    e4 = n(788373),
+var e7 = n(536637),
+    e4 = n.n(e7),
+    e6 = n(788373),
     e9 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1044,9 +1044,9 @@ function td(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e4.F.KICK) {
+                if (b || i.expire_behavior !== e6.F.KICK) {
                     let e =
-                        i.expire_behavior === e4.F.REMOVE_ROLE
+                        i.expire_behavior === e6.F.REMOVE_ROLE
                             ? $.intl.string($.t["6kpw4i"])
                             : $.intl.string($.t.fQUQIJ);
                     (0, eR.A)({
@@ -1075,7 +1075,7 @@ function td(e) {
             syncLabel: w,
             subscribersText: R,
         } = s.useMemo(() => {
-            let e = e7.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
+            let e = e5.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
             switch (i.type) {
                 case te.s.YOUTUBE:
                     return {
@@ -1104,13 +1104,13 @@ function td(e) {
         { roleLink: P, syncDescriptionText: D } = s.useMemo(() => {
             let e;
             e = null != _ ? (0, l.jsx)(ts.Anchor, { onClick: v, children: _.name }) : $.intl.string($.t.PoWNfe);
-            let t = e7.A.get(i.type);
+            let t = e5.A.get(i.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
                     i.revoked && null != t
                         ? $.intl.formatToPlainString($.t.G16Wji, { user: i.user, platformName: t.name })
-                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e6()(i.synced_at).calendar() }),
+                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e4()(i.synced_at).calendar() }),
             };
         }, [_, v, i.revoked, i.synced_at, i.type, i.user]),
         G = (0, o.bG)([eS.A], () => eS.A.getSortedRoles(n.id)),
@@ -1290,12 +1290,12 @@ function td(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e4.F.REMOVE_ROLE.toString(),
+                                                value: e6.F.REMOVE_ROLE.toString(),
                                                 label: $.intl.string($.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e4.F.KICK.toString(),
+                                                value: e6.F.KICK.toString(),
                                                 label: $.intl.string($.t.fQUQIJ),
                                             },
                                         ],
@@ -1335,7 +1335,7 @@ function td(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e4.F.KICK &&
+                        a.expire_behavior === e6.F.KICK &&
                         (0, l.jsx)(I.E, {
                             className: to.Ce,
                             color: "text-feedback-critical",
@@ -1435,7 +1435,7 @@ function tm(e) {
             errors: d,
             canNavigate: m,
         } = e,
-        g = e7.A.get(a),
+        g = e5.A.get(a),
         h = s.useCallback(
             async (e) => {
                 m() && (await M.A.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
@@ -1995,7 +1995,7 @@ function t0(e) {
                     (0, l.jsx)(tG, { alt: "", ariaHidden: !0, height: 140, className: tJ.QT }),
                     (0, l.jsx)(c.D, {
                         color: "text-default",
-                        variant: "heading-xl/bold",
+                        variant: "heading-xl/semibold",
                         children: $.intl.string($.t.nQQeFM),
                     }),
                     (0, l.jsx)(I.E, {
@@ -2082,7 +2082,7 @@ function t0(e) {
         ),
         ea &&
             ev.push(
-                ((j = e7.A.get(eU.fg2.TWITCH)),
+                ((j = e5.A.get(eU.fg2.TWITCH)),
                 en > 0
                     ? ((f = (0, l.jsx)(tU.u, { size: "xs" })),
                       (x = $.intl.formatToPlainString($.t.FFpnT8, { count: el })),
@@ -2108,7 +2108,7 @@ function t0(e) {
             ),
         er &&
             ev.push(
-                ((L = e7.A.get(eU.fg2.YOUTUBE)),
+                ((L = e5.A.get(eU.fg2.YOUTUBE)),
                 ei > 0
                     ? ((O = (0, l.jsx)(tU.u, { size: "xs" })),
                       (v = $.intl.formatToPlainString($.t.b2g5vC, { count: es })),
@@ -2267,7 +2267,7 @@ function t3(e) {
 }
 n(46121);
 var t8 = n(494192);
-function t7(e, t) {
+function t5(e, t) {
     switch (e) {
         case eU.wLn.APPLICATION:
             return t?.application.name ?? "";
@@ -2287,7 +2287,7 @@ function t7(e, t) {
             return "";
     }
 }
-let t5 = s.memo(function (e) {
+let t7 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,
@@ -2499,10 +2499,10 @@ let t5 = s.memo(function (e) {
                 className: t8.jD,
                 children:
                     t === eU.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eU.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t5(eU.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eU.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, D[R]) })),
+                              breadcrumbs: [eU.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t5(e, D[R]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && W(parseInt(e.id));
                               },

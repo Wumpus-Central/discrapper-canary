@@ -57,19 +57,14 @@
 }
 
 .memberListHeader_d6b206 {
-    color: var(--text-default);
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: 12px;
-    margin-top: 8px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .memberListHeader_d6b206 {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    margin-bottom: 12px;
+    margin-top: 8px;
     text-transform: none
 }
 
+.memberListHeader_d6b206,
 .memberListItemText_d6b206 {
     color: var(--text-default)
 }
@@ -380,4 +375,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=454313.3b974427c4048e5b.css.map*/
+/*# sourceMappingURL=454313.2ee1a4c1a78db320.css.map*/

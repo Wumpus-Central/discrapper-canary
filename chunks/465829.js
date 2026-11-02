@@ -17,7 +17,7 @@ var l = n(503698),
     h = n(518477),
     x = n(105292),
     b = n(956495);
-let A = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
+let A = { sm: "heading-lg/semibold", lg: "heading-xl/semibold" };
 function _(e) {
     let {
             user: t,

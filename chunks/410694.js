@@ -83,7 +83,7 @@ function N(e) {
             (0, c.jsxs)("div", {
                 className: h.wx,
                 children: [
-                    (0, c.jsx)(a.E, { variant: "text-md/bold", color: "none", children: "Stats for Nerds" }),
+                    (0, c.jsx)(a.E, { variant: "text-md/semibold", color: "none", children: "Stats for Nerds" }),
                     (0, c.jsxs)("div", {
                         className: h.Pz,
                         children: [

@@ -8,7 +8,7 @@ var r = n(477900),
     c = n(651162),
     u = n(17928),
     d = n(62010),
-    p = n(297264),
+    p = n(534514),
     m = n(331322),
     g = n(834730),
     h = n(821609),
@@ -209,7 +209,7 @@ let F = (e) => {
                                                                 }),
                                                             null != eu.title &&
                                                                 (0, r.jsx)(p.D, {
-                                                                    variant: "heading-xxl/bold",
+                                                                    variant: "heading-xxl/semibold",
                                                                     className: ex ? G.DD : void 0,
                                                                     color: "text-strong",
                                                                     children: eu.title,

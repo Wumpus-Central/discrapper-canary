@@ -94,7 +94,7 @@ function g(t) {
                     x.E,
                     {
                         className: o()(v.g2, { [v.$2]: e }),
-                        variant: "text-sm/bold",
+                        variant: "text-sm/semibold",
                         color: "currentColor",
                         children: t,
                     },
@@ -104,7 +104,7 @@ function g(t) {
         });
     }
     function l() {
-        return (0, s.jsx)(x.E, { className: v.At, variant: "text-lg/bold", children: ":" });
+        return (0, s.jsx)(x.E, { className: v.At, variant: "text-lg/semibold", children: ":" });
     }
     return (0, s.jsxs)("div", {
         className: v.kz,

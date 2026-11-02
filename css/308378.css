@@ -354,15 +354,9 @@
 
 .subsectionLabel_edf95e {
     color: var(--text-muted);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .05em;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .subsectionLabel_edf95e {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    letter-spacing: .05em;
     text-transform: none
 }
 
@@ -439,4 +433,4 @@
     color: var(--text-feedback-critical)
 }
 
-/*# sourceMappingURL=308378.8331594428965221.css.map*/
+/*# sourceMappingURL=308378.c7eda7e512884db6.css.map*/

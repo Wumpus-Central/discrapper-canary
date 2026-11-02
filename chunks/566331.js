@@ -5,7 +5,7 @@ var r = n(503698),
     l = n.n(r),
     s = n(17928),
     a = n(43990),
-    o = n(297264),
+    o = n(534514),
     u = n(821609),
     c = n(401843),
     d = n(964486),
@@ -39,7 +39,7 @@ function p(e) {
                             children: [
                                 (0, i.jsx)(o.D, {
                                     color: "none",
-                                    variant: "small" === p ? "heading-md/normal" : "heading-lg/normal",
+                                    variant: "small" === p ? "heading-md/medium" : "heading-lg/medium",
                                     className: A.header,
                                     children: f.intl.formatToMarkdownString(f.t.Kb4Ukp, {}),
                                 }),

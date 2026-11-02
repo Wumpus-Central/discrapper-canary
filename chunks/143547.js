@@ -9,8 +9,8 @@ var e = n(477900),
     d = n(97808),
     u = n(778712),
     x = n(952270),
-    E = n(297264),
-    m = n(834730),
+    m = n(534514),
+    E = n(834730),
     I = n(192308),
     N = n(49229),
     g = n(754302),
@@ -75,12 +75,12 @@ function O(t) {
                             }),
                             (0, e.jsxs)("div", {
                                 children: [
-                                    (0, e.jsx)(E.D, {
-                                        variant: "heading-xl/bold",
+                                    (0, e.jsx)(m.D, {
+                                        variant: "heading-xl/semibold",
                                         color: "text-strong",
                                         children: R.intl.format(R.t["WrQD/Y"], { username: j.Ay.getName(a, c, i) }),
                                     }),
-                                    (0, e.jsx)(m.E, {
+                                    (0, e.jsx)(E.E, {
                                         variant: "text-md/medium",
                                         color: "text-default",
                                         children: R.intl.string(R.t.JKL1u1),
@@ -126,7 +126,7 @@ function O(t) {
                                     },
                                 }),
                             }),
-                            (0, e.jsx)(m.E, {
+                            (0, e.jsx)(E.E, {
                                 variant: "text-sm/medium",
                                 className: C.FV,
                                 children: R.intl.format(R.t.Hjvqr6, {

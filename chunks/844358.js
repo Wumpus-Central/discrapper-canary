@@ -1,33 +1,33 @@
-(r.r(t), r.d(t, { default: () => j }));
-var s = r(477900),
-    n = r(582128),
-    i = r(132500),
-    a = r(607399),
-    l = r(821609),
-    d = r(297264),
-    c = r(834730),
-    u = r(289873),
-    h = r(642277),
-    x = r(723702),
-    o = r(652215),
-    f = r(613057),
-    m = r(105292),
-    p = r(168071);
+(s.r(t), s.d(t, { default: () => j }));
+var r = s(477900),
+    i = s(582128),
+    n = s(132500),
+    a = s(607399),
+    l = s(821609),
+    d = s(534514),
+    c = s(834730),
+    u = s(289873),
+    h = s(642277),
+    x = s(723702),
+    o = s(652215),
+    f = s(613057),
+    m = s(105292),
+    p = s(168071);
 function j(e) {
     let { applicationId: t } = e,
-        [j, v] = n.useState(null),
-        [b, k] = n.useState(!1),
-        g = n.useRef(!1),
+        [j, v] = i.useState(null),
+        [b, k] = i.useState(!1),
+        g = i.useRef(!1),
         E = !x.isPlatformEmbedded && !a.Fr,
-        I = n.useMemo(() => (0, i.A)(), []);
+        I = i.useMemo(() => (0, n.A)(), []);
     if (
-        (n.useEffect(() => {
+        (i.useEffect(() => {
             E && !0 !== g.current
                 ? (Promise.resolve()
-                      .then(r.bind(r, 129014))
+                      .then(s.bind(s, 129014))
                       .then((e) => {
-                          let { default: r } = e;
-                          r.request(o.e$_.DEEP_LINK, {
+                          let { default: s } = e;
+                          s.request(o.e$_.DEEP_LINK, {
                               type: f.XK.ACTIVITIES,
                               params: { applicationId: t, url: location.href, attemptId: I },
                           })
@@ -38,31 +38,31 @@ function j(e) {
                               .catch(() => {
                                   (v(!1), k(!0));
                               })
-                              .then(() => r.disconnect());
+                              .then(() => s.disconnect());
                       }),
                   (g.current = !0))
                 : E || k(!0);
         }, [t, E, I]),
         b)
     )
-        return (0, s.jsx)(h.A, {});
+        return (0, r.jsx)(h.A, {});
     if (E && !1 !== j)
         if (!0 === j)
-            return (0, s.jsxs)("div", {
+            return (0, r.jsxs)("div", {
                 className: p.k,
                 children: [
-                    (0, s.jsx)(d.D, { variant: "heading-xxl/bold", children: m.intl.string(m.t.csrAMJ) }),
-                    (0, s.jsx)(c.E, { variant: "text-xs/semibold", children: m.intl.string(m.t["m1+IBn"]) }),
-                    (0, s.jsx)(l.$, { variant: "primary", text: m.intl.string(m.t.fIv16B), onClick: () => k(!0) }),
+                    (0, r.jsx)(d.D, { variant: "heading-xxl/semibold", children: m.intl.string(m.t.csrAMJ) }),
+                    (0, r.jsx)(c.E, { variant: "text-xs/semibold", children: m.intl.string(m.t["m1+IBn"]) }),
+                    (0, r.jsx)(l.$, { variant: "primary", text: m.intl.string(m.t.fIv16B), onClick: () => k(!0) }),
                 ],
             });
         else
-            return (0, s.jsxs)("div", {
+            return (0, r.jsxs)("div", {
                 className: p.k,
                 children: [
-                    (0, s.jsx)(d.D, { variant: "heading-xxl/bold", children: m.intl.string(m.t["Z+hCVU"]) }),
-                    (0, s.jsx)(u.y, {}),
+                    (0, r.jsx)(d.D, { variant: "heading-xxl/semibold", children: m.intl.string(m.t["Z+hCVU"]) }),
+                    (0, r.jsx)(u.y, {}),
                 ],
             });
-    return (0, s.jsx)(h.A, {});
+    return (0, r.jsx)(h.A, {});
 }

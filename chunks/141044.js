@@ -42,7 +42,7 @@ function f(e) {
     return e.split(/[\s,]+/).filter((e) => "" !== e);
 }
 var b = a(278416),
-    y = a(297264),
+    y = a(534514),
     S = a(173127),
     C = a(703086);
 let E = {
@@ -328,7 +328,10 @@ let I = {
                                     }),
                                     (0, n.jsx)("div", {
                                         className: C.Qs,
-                                        children: (0, n.jsx)(y.D, { variant: "heading-lg/bold", children: E[e] ?? e }),
+                                        children: (0, n.jsx)(y.D, {
+                                            variant: "heading-lg/semibold",
+                                            children: E[e] ?? e,
+                                        }),
                                     }),
                                 ],
                             });

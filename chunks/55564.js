@@ -4,7 +4,7 @@ var e = c(477900),
     i = c(935399),
     r = c(554146),
     n = c(815021),
-    d = c(297264),
+    d = c(534514),
     l = c(834730),
     o = c(821609),
     m = c(224640),
@@ -100,7 +100,7 @@ function p(s) {
                                             className: j.Mo,
                                             children: [
                                                 (0, e.jsx)(d.D, {
-                                                    variant: "heading-md/bold",
+                                                    variant: "heading-md/semibold",
                                                     color: "text-strong",
                                                     children: f.intl.string(f.t.zOtryQ),
                                                 }),
@@ -125,7 +125,7 @@ function p(s) {
                                             className: j.Mo,
                                             children: [
                                                 (0, e.jsx)(d.D, {
-                                                    variant: "heading-md/bold",
+                                                    variant: "heading-md/semibold",
                                                     color: "text-strong",
                                                     children: f.intl.string(f.t.Ky01Mq),
                                                 }),

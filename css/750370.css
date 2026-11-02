@@ -136,14 +136,10 @@
 
 .confirmationSectionLabel__4dd8e {
     font-family: var(--font-primary);
-    letter-spacing: .02em;
-    margin-bottom: 8px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .confirmationSectionLabel__4dd8e {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    letter-spacing: .02em;
+    margin-bottom: 8px;
     text-transform: none
 }
 
@@ -173,4 +169,4 @@
     margin-bottom: 2px
 }
 
-/*# sourceMappingURL=750370.7550acc1df0a8905.css.map*/
+/*# sourceMappingURL=750370.723a389c013dd3c7.css.map*/

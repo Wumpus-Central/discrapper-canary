@@ -1,13 +1,13 @@
 t.d(n, { A: () => F });
-var a = t(477900),
-    i = t(582128),
+var i = t(477900),
+    a = t(582128),
     l = t(503698),
     s = t.n(l),
     r = t(435558),
     c = t.n(r),
     d = t(66455),
     o = t(935462),
-    u = t(297264),
+    u = t(534514),
     h = t(834730),
     m = t(452027),
     g = t(103557),
@@ -49,14 +49,14 @@ function F(e) {
             freeformDescription: H,
         } = e,
         K = (0, O.Ay)(F),
-        [U, Z] = i.useState(!1),
-        [Q, V] = i.useState(I),
-        [X, J] = i.useState(null),
-        [W, Y] = i.useState(c().shuffle(F)),
-        [ee, en] = i.useState(""),
+        [U, Z] = a.useState(!1),
+        [Q, V] = a.useState(I),
+        [X, J] = a.useState(null),
+        [W, Y] = a.useState(c().shuffle(F)),
+        [ee, en] = a.useState(""),
         et = (0, E.GV)(),
-        ea = (0, d.A)(Q),
-        ei = (0, d.A)(U),
+        ei = (0, d.A)(Q),
+        ea = (0, d.A)(U),
         el = (0, d.A)(X),
         es = (0, d.A)(w),
         er = (0, d.A)(ee),
@@ -67,7 +67,7 @@ function F(e) {
             : Q !== C.P0.GOOD && null == X
               ? (ec = "PROBLEM")
               : null != X && _.includes(X.value) && (ec = "FREEFORM"),
-        i.useEffect(() => {
+        a.useEffect(() => {
             c().isEqual(K, F) || Y((0, v.ed)(F, B));
         }, [F, K, B]),
         (0, A.Ay)(
@@ -75,15 +75,15 @@ function F(e) {
                 N.default.track(L.HAw.OPEN_MODAL, { type: n, source: "Feedback Modal" }),
                 () => {
                     es.current({
-                        rating: ea.current,
+                        rating: ei.current,
                         problem: el.current,
-                        dontShowAgain: ei.current,
+                        dontShowAgain: ea.current,
                         feedback: er.current,
                     });
                 }
             ),
         ),
-        (0, a.jsxs)(o.EO, {
+        (0, i.jsxs)(o.EO, {
             "data-migration-pending": !0,
             impression: z,
             transitionState: y,
@@ -91,19 +91,19 @@ function F(e) {
             "aria-labelledby": et,
             parentComponent: "FeedbackModal",
             children: [
-                (0, a.jsxs)(o.rQ, {
+                (0, i.jsxs)(o.rQ, {
                     "data-migration-pending": !0,
                     separator: !1,
                     className: S.N1,
                     children: [
-                        (0, a.jsx)(u.D, { id: et, variant: "heading-xl/extrabold", color: "none", children: t }),
-                        (0, a.jsx)(h.E, { variant: "text-md/normal", color: "none", className: S.sB, children: l }),
+                        (0, i.jsx)(u.D, { id: et, variant: "heading-xl/semibold", color: "none", children: t }),
+                        (0, i.jsx)(h.E, { variant: "text-md/normal", color: "none", className: S.sB, children: l }),
                     ],
                 }),
                 ("RATING" === ec || ("PROBLEM" === ec && null == T)) &&
-                    (0, a.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: s()(S.OS, S.Ko),
-                        children: (0, a.jsx)(f.A, {
+                        children: (0, i.jsx)(f.A, {
                             ratingOptions: D,
                             emojiKind: P,
                             textLabels: T,
@@ -114,12 +114,12 @@ function F(e) {
                         }),
                     }),
                 "PROBLEM" === ec &&
-                    (0, a.jsx)(o.$m, {
+                    (0, i.jsx)(o.$m, {
                         "data-migration-pending": !0,
                         className: s()({ [S._3]: null == T }),
-                        children: (0, a.jsx)(m.D, {
+                        children: (0, i.jsx)(m.D, {
                             label: r,
-                            children: (0, a.jsx)(b.A, {
+                            children: (0, i.jsx)(b.A, {
                                 options: W,
                                 onClick: function (e) {
                                     (J(e), _.includes(e.value) || $());
@@ -132,10 +132,10 @@ function F(e) {
                         }),
                     }),
                 "FREEFORM" === ec &&
-                    (0, a.jsx)(o.$m, {
+                    (0, i.jsx)(o.$m, {
                         "data-migration-pending": !0,
                         className: S.__invalid_content,
-                        children: (0, a.jsx)(g.f, {
+                        children: (0, i.jsx)(g.f, {
                             label: H?.(X) ?? M.intl.string(M.t.h95hcn),
                             helperText: q
                                 ? void 0
@@ -147,11 +147,11 @@ function F(e) {
                     }),
                 "RATING" === ec &&
                     !G &&
-                    (0, a.jsx)(o.jl, {
+                    (0, i.jsx)(o.jl, {
                         "data-migration-pending": !0,
                         className: S.qr,
                         direction: j.A.Direction.HORIZONTAL,
-                        children: (0, a.jsx)(p.S, {
+                        children: (0, i.jsx)(p.S, {
                             checked: U,
                             onChange: () => Z(!U),
                             label: M.intl.string(M.t["5E9SB9"]),
@@ -159,14 +159,14 @@ function F(e) {
                         }),
                     }),
                 ("FREEFORM" === ec || ("PROBLEM" === ec && null != T)) &&
-                    (0, a.jsx)(o.jl, {
+                    (0, i.jsx)(o.jl, {
                         "data-migration-pending": !0,
                         className: S.qr,
                         direction: j.A.Direction.HORIZONTAL,
-                        children: (0, a.jsxs)(x.e, {
+                        children: (0, i.jsxs)(x.e, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, a.jsx)(R.$, {
+                                (0, i.jsx)(R.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: M.intl.string(M.t["13/7kX"]),
@@ -174,7 +174,7 @@ function F(e) {
                                         "FREEFORM" === ec ? (J(null), en("")) : V(null);
                                     },
                                 }),
-                                (0, a.jsx)(R.$, {
+                                (0, i.jsx)(R.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: M.intl.string(M.t.geKm7t),

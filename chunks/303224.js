@@ -93,7 +93,7 @@ var M = n(794782),
     Y = n(116085),
     Q = n(144228),
     W = n(331322),
-    K = n(297264),
+    K = n(534514),
     $ = n(47167),
     Z = n(28863),
     J = n(683071),
@@ -916,10 +916,10 @@ var e0 = n(789645),
     e7 = n(21599),
     e2 = n(279208),
     e4 = n(747007),
-    e9 = n(489673),
-    e8 = n(958590),
-    e3 = n(174459),
-    e5 = n(957565),
+    e3 = n(489673),
+    e5 = n(958590),
+    e8 = n(174459),
+    e9 = n(957565),
     e6 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
@@ -929,10 +929,10 @@ function tn(e) {
         a = (0, s.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
         o = (0, s.bG)(
-            [e8.A],
+            [e5.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e8.A.getInvite(e);
+                return null == e ? null : e5.A.getInvite(e);
             },
             [d, r],
         );
@@ -952,7 +952,7 @@ function tn(e) {
                 "aria-label": eo.intl.string(eo.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e9.A, {
+            (0, i.jsx)(e3.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
                     children: (0, i.jsx)(e1.CalendarIcon, {
@@ -984,9 +984,9 @@ function tn(e) {
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e5.C)(e);
+                            (0, e9.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,

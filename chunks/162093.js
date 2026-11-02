@@ -4,7 +4,7 @@ var l = i(477900),
     s = i(503698),
     r = i.n(s),
     a = i(17928),
-    c = i(297264),
+    c = i(534514),
     o = i(696986),
     u = i(866665),
     d = i(707554),
@@ -254,7 +254,7 @@ function tN(t) {
         children: [
             (0, l.jsx)(c.D, {
                 className: tA.RS,
-                variant: "heading-lg/extrabold",
+                variant: "heading-lg/semibold",
                 children: W.intl.format(W.t.I5dYFs, { serverName: r?.name, tierName: i.name }),
             }),
             !o.isEmpty() &&
@@ -425,7 +425,7 @@ function tT(t) {
               className: tS.uO,
               children: [
                   (0, l.jsx)(c.D, {
-                      variant: "text-xs/bold",
+                      variant: "text-xs/semibold",
                       color: "text-default",
                       className: tS.bV,
                       id: h,
@@ -461,7 +461,7 @@ function tk(t) {
               className: tS.uO,
               children: [
                   (0, l.jsx)(c.D, {
-                      variant: "text-xs/bold",
+                      variant: "text-xs/semibold",
                       color: "text-default",
                       className: tS.bV,
                       children: W.intl.format(W.t.NAnXEo, { count: r.length }),
@@ -506,7 +506,7 @@ function ty(t) {
                   null != s &&
                       (0, l.jsxs)(d.F, {
                           component: (0, l.jsx)(c.D, {
-                              variant: "text-xs/bold",
+                              variant: "text-xs/semibold",
                               color: "text-default",
                               className: tS.bV,
                               children: W.intl.string(W.t.FJZmYx),

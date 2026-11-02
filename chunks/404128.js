@@ -5,7 +5,7 @@ var d = l(503698),
     n = l.n(d),
     s = l(17928),
     t = l(935462),
-    r = l(297264),
+    r = l(534514),
     c = l(834730),
     g = l(866665),
     o = l(821609),
@@ -52,7 +52,7 @@ function b(i) {
                                         className: v.N1,
                                         children: [
                                             (0, e.jsx)(r.D, {
-                                                variant: "heading-lg/bold",
+                                                variant: "heading-lg/semibold",
                                                 children: f.intl.string(N.default.OvKPi0),
                                             }),
                                             (0, e.jsx)(c.E, {

@@ -8,7 +8,7 @@ var n,
     c = l(651162),
     u = l(554146),
     d = l(689175),
-    m = l(297264),
+    m = l(534514),
     g = l(821609),
     h = l(501419),
     x = l(196736),
@@ -61,7 +61,7 @@ function H(e) {
                               O.E,
                               {
                                   color: "none",
-                                  variant: "md" === l ? "heading-lg/extrabold" : "heading-xxl/extrabold",
+                                  variant: "md" === l ? "heading-lg/semibold" : "heading-xxl/semibold",
                                   className: B.eC,
                                   "aria-hidden": !0,
                                   tag: "div",
@@ -73,7 +73,7 @@ function H(e) {
                               O.E,
                               {
                                   color: "text-overlay-light",
-                                  variant: "md" === l ? "heading-md/bold" : "heading-xl/bold",
+                                  variant: "md" === l ? "heading-md/semibold" : "heading-xl/semibold",
                                   className: B.ai,
                                   "aria-hidden": !0,
                                   tag: "div",
@@ -762,7 +762,7 @@ function eH(e) {
                                                   children: [
                                                       (0, i.jsx)(m.D, {
                                                           className: eP.R_,
-                                                          variant: "heading-xl/bold",
+                                                          variant: "heading-xl/semibold",
                                                           color: "text-strong",
                                                           children: P.intl.string(eD.default["34GMP9"]),
                                                       }),
@@ -813,7 +813,11 @@ function eq(e) {
                           null != n &&
                               (0, i.jsx)("img", { className: eJ.rm, src: n, alt: l.name, style: s?.toDesktopStyles() }),
                           null != l.title &&
-                              (0, i.jsx)(m.D, { variant: "heading-xxl/bold", color: "text-strong", children: l.title }),
+                              (0, i.jsx)(m.D, {
+                                  variant: "heading-xxl/semibold",
+                                  color: "text-strong",
+                                  children: l.title,
+                              }),
                           null != l.summary &&
                               "" !== l.summary &&
                               (0, i.jsx)(eF.B, {
@@ -951,7 +955,7 @@ let e1 = function (e) {
                     children: [
                         null != t.endTime ? (0, i.jsx)(H, { endDate: t.endTime, size: "lg" }) : null,
                         (0, i.jsx)(m.D, {
-                            variant: "heading-xxl/bold",
+                            variant: "heading-xxl/semibold",
                             className: e0.DD,
                             color: "text-strong",
                             style: { ...a },
@@ -1410,7 +1414,7 @@ let tA = function (e) {
                                 (0, i.jsx)(m.D, {
                                     style: { color: t.bannerTextColor ?? "var(--text-strong)" },
                                     className: C ? K.O2 : void 0,
-                                    variant: "heading-xl/bold",
+                                    variant: "heading-xl/semibold",
                                     children: t.title,
                                 }),
                                 (0, i.jsx)(O.E, {

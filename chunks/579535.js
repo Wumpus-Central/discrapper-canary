@@ -38,7 +38,7 @@ e.exports = {
     d_: "perk_a36dee",
     kf: "perkIcon_a36dee",
     uL: "perkText_a36dee",
-    hY: "perkTitle_a36dee",
+    Aj: "perkTitle_a36dee",
     jV: "perkDescription_a36dee",
     my: "avatar_a36dee",
     Ad: "newBadge_a36dee",

@@ -20,7 +20,7 @@ function d(e) {
                 autoFocus: null == u && o,
                 children: [
                     (0, n.jsx)("img", { className: r.Kk, alt: "", src: t }),
-                    (0, n.jsx)(l.E, { className: r.Qq, variant: "text-md/bold", children: s }),
+                    (0, n.jsx)(l.E, { className: r.Qq, variant: "text-md/semibold", children: s }),
                     (0, n.jsx)("img", { className: r.UE, alt: "", src: c }),
                 ],
             }),

@@ -13,14 +13,10 @@
 
 .header_d529e9 {
     color: var(--interactive-text-default);
-    padding: var(--custom-channel-call-participants-popout-padding-value);
-    padding-bottom: 9px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .header_d529e9 {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    padding: var(--custom-channel-call-participants-popout-padding-value);
+    padding-bottom: 9px;
     text-transform: none
 }
 
@@ -255,4 +251,4 @@
     width: 28px
 }
 
-/*# sourceMappingURL=249727.09b0b023789a0981.css.map*/
+/*# sourceMappingURL=249727.26edc488bc11f4c1.css.map*/

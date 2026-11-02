@@ -1,58 +1,55 @@
-n.d(r, { EG: () => u, Gu: () => d, fk: () => O, hV: () => h, o6: () => N });
-var a = n(477900);
+n.d(r, { EG: () => t, Gu: () => d, fk: () => h, hV: () => N, o6: () => u });
+var l = n(477900);
 n(582128);
-var l = n(503698),
-    c = n.n(l),
-    e = n(661531),
-    s = n(85463),
-    t = n(834730),
+var s = n(503698),
+    e = n.n(s),
+    a = n(661531),
+    c = n(834730),
     i = n(306091);
-let u = { ROUND: i.rS, ROUND_LEFT: i.Q2, ROUND_RIGHT: i.Hg, SQUARE: "" };
-function N(o) {
+let t = { ROUND: i.rS, ROUND_LEFT: i.Q2, ROUND_RIGHT: i.Hg, SQUARE: "" };
+function u(o) {
     return o < 10 ? 16 : o < 100 ? 22 : 30;
 }
 function d(o) {
     return o < 1e3 ? `${o}` : `${Math.min(Math.floor(o / 1e3), 9)}k+`;
 }
-function h(o) {
+function N(o) {
     let {
-            count: r,
-            color: n = e.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            disableColor: l = !1,
-            shape: h = u.ROUND,
-            className: O,
-            style: D,
-            renderBadgeCount: k = d,
-            ...A
-        } = o,
-        C = (0, s.N)();
-    return (0, a.jsx)(t.E, {
-        variant: C,
+        count: r,
+        color: n = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+        disableColor: s = !1,
+        shape: N = t.ROUND,
+        className: h,
+        style: O,
+        renderBadgeCount: b = d,
+        ...D
+    } = o;
+    return (0, l.jsx)(c.E, {
+        variant: "body-xs/semibold",
         color: "none",
-        className: c()(O, i.Do, h),
-        style: { backgroundColor: l ? void 0 : n, width: N(r), ...D },
-        ...A,
-        children: k(r),
+        className: e()(h, i.Do, N),
+        style: { backgroundColor: s ? void 0 : n, width: u(r), ...O },
+        ...D,
+        children: b(r),
     });
 }
-function O(o) {
+function h(o) {
     let {
-            icon: r,
-            className: n,
-            color: l = e.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            shape: N = u.ROUND,
-            disableColor: d = !1,
-            style: h,
-            "aria-label": O,
-        } = o,
-        D = (0, s.N)();
-    return (0, a.jsx)(t.E, {
-        variant: D,
+        icon: r,
+        className: n,
+        color: s = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+        shape: u = t.ROUND,
+        disableColor: d = !1,
+        style: N,
+        "aria-label": h,
+    } = o;
+    return (0, l.jsx)(c.E, {
+        variant: "body-xs/semibold",
         color: "none",
-        className: c()(n, i.u3, N),
-        style: { backgroundColor: d ? void 0 : l, ...h },
-        role: null != O ? "img" : void 0,
-        "aria-label": O,
-        children: (0, a.jsx)(r, { className: i.Kk, color: "currentColor" }),
+        className: e()(n, i.u3, u),
+        style: { backgroundColor: d ? void 0 : s, ...N },
+        role: null != h ? "img" : void 0,
+        "aria-label": h,
+        children: (0, l.jsx)(r, { className: i.Kk, color: "currentColor" }),
     });
 }

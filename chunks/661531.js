@@ -8413,9 +8413,9 @@ let { Themes: c } = d.zv,
                 CHANNEL_LIST_TITLE_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "redesign/heading-18/bold";
+                        if (0 === t.length) return "redesign/heading-18/semibold";
                         for (let e of t) if ("mobile-visual-refresh" === e) return "heading-lg/semibold";
-                        return "redesign/heading-18/bold";
+                        return "redesign/heading-18/semibold";
                     },
                 },
                 CHANNEL_NAME_CHANNEL_BORDER_WIDTH: {
@@ -8932,9 +8932,9 @@ let { Themes: c } = d.zv,
                 HEADER_TITLE_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "heading-md/bold";
+                        if (0 === t.length) return "heading-md/semibold";
                         for (let e of t) if ("mobile-visual-refresh" === e) return "heading-lg/semibold";
-                        return "heading-md/bold";
+                        return "heading-md/semibold";
                     },
                 },
                 INPUT_FIELD_BORDER_WIDTH: {

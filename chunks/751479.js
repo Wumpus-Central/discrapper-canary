@@ -8,7 +8,7 @@ var s = n(477900),
     o = n(815021),
     d = n(707554),
     h = n(163328),
-    u = n(297264),
+    u = n(534514),
     g = n(683438),
     x = n(576705),
     m = n(472456),
@@ -143,7 +143,7 @@ function R(e) {
 }
 function z(e) {
     let { text: t } = e;
-    return (0, s.jsx)(b.E, { color: "text-default", variant: "text-xs/bold", className: C.bV, children: t });
+    return (0, s.jsx)(b.E, { color: "text-default", variant: "text-xs/semibold", className: C.bV, children: t });
 }
 var D = n(747926),
     O = n(37411),

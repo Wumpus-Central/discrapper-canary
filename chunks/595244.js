@@ -11,7 +11,7 @@ var i = n(477900),
     c = n(383072),
     u = n(815390),
     _ = n(289873),
-    E = n(297264),
+    E = n(534514),
     A = n(834730),
     h = n(573435),
     f = n(726249),
@@ -38,7 +38,7 @@ function b(e) {
             children: [
                 o ? (0, i.jsx)(_.y, {}) : null,
                 null != a ? a : (0, i.jsx)("div", { className: s()(v.wx, r) }),
-                (0, i.jsx)(E.D, { variant: "heading-lg/bold", className: v.Qq, children: t }),
+                (0, i.jsx)(E.D, { variant: "heading-lg/semibold", className: v.Qq, children: t }),
                 null != n ? n : null,
                 l
                     ? (0, i.jsx)(A.E, {

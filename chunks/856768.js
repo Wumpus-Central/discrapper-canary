@@ -43,7 +43,7 @@ function b(e) {
                     color: (0, c.r)(C.A.unsafe_rawColors.PRIMARY_500).hex(),
                 }),
                 (0, n.jsx)(u.E, {
-                    variant: "heading-md/bold",
+                    variant: "heading-md/semibold",
                     color: "text-default",
                     children: M.intl.format(M.t.TstoSZ, { count: D.size }),
                 }),

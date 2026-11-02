@@ -21,7 +21,7 @@ var l = n(477900),
     _ = n(607399),
     T = n(821609),
     y = n(331322),
-    N = n(297264),
+    N = n(534514),
     j = n(834730),
     I = n(700525),
     S = n(975571),
@@ -72,7 +72,7 @@ class w extends i.PureComponent {
                                     justify: "center",
                                     children: [
                                         (0, l.jsx)(N.D, {
-                                            variant: "heading-xl/normal",
+                                            variant: "heading-xl/medium",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
                                         (0, l.jsx)(j.E, {

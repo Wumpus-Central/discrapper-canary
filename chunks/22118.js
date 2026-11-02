@@ -6,7 +6,7 @@ var s = i(477900),
     r = i(17928),
     c = i(462887),
     o = i(862482),
-    d = i(297264),
+    d = i(534514),
     u = i(736653),
     m = i(793574),
     x = i(688810),
@@ -76,7 +76,7 @@ function U(e) {
                 align: "center",
                 className: O.wx,
                 children: [
-                    (0, s.jsx)(d.D, { variant: "nitro-sm", className: O.Ss, children: (0, y.DP)() }),
+                    (0, s.jsx)(d.D, { variant: "nitro-sm", children: (0, y.DP)() }),
                     (0, s.jsx)(T.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
@@ -98,7 +98,7 @@ var L = i(194509),
     Y = i(652215),
     X = i(872859),
     K = i(45526);
-function J(e) {
+function Z(e) {
     let { text: t, badge: i, variant: n } = e;
     return (0, s.jsxs)(C.E, {
         color: "text-default",
@@ -106,7 +106,7 @@ function J(e) {
         children: [t, " ", i],
     });
 }
-function Z(e) {
+function J(e) {
     let { text: t, variant: i } = e;
     return (0, s.jsx)(C.E, { color: "text-strong", variant: null != i ? i : "text-md/semibold", children: t });
 }
@@ -136,7 +136,7 @@ function Q() {
         className: K.Wm,
         children: (0, s.jsx)(d.D, {
             className: K.uC,
-            variant: "heading-deprecated-12/extrabold",
+            variant: "heading-deprecated-12/semibold",
             children: D.intl.string(D.t["o/oRJB"]),
         }),
     });
@@ -226,43 +226,43 @@ let ei = function (e) {
             ((t = (0, g.A)().fractionalState),
             (i = {
                 0: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["09yRK3"]) }),
-                    column1: (0, s.jsx)(Z, { text: N.Ay.formatPriceString(ed, z.WT.MONTH) }),
-                    column2: (0, s.jsx)(Z, { text: er ? eo : N.Ay.formatPriceString(eu, z.WT.MONTH) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["09yRK3"]) }),
+                    column1: (0, s.jsx)(J, { text: N.Ay.formatPriceString(ed, z.WT.MONTH) }),
+                    column2: (0, s.jsx)(J, { text: er ? eo : N.Ay.formatPriceString(eu, z.WT.MONTH) }),
                     withBottomBorder: !0,
                 },
                 1: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.vaDeDV) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.vaDeDV) }),
                     column1: (0, s.jsx)(q, { includes: !0 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 2: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.DmfiwT) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.DmfiwT) }),
                     column1: (0, s.jsx)(q, { includes: !0 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 3: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.OuItFi) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.OuItFi) }),
                     column1: (0, s.jsx)(q, { includes: !0 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 4: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["9kRJS8"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["9kRJS8"]) }),
                     column1: (0, s.jsx)(q, { includes: !0 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 5: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["ufhQC+"]) }),
-                    column1: (0, s.jsx)(Z, { text: (0, N.EJ)(z.PremiumTypes.TIER_0) }),
-                    column2: (0, s.jsx)(Z, { text: (0, N.EJ)(z.PremiumTypes.TIER_2) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["ufhQC+"]) }),
+                    column1: (0, s.jsx)(J, { text: (0, N.EJ)(z.PremiumTypes.TIER_0) }),
+                    column2: (0, s.jsx)(J, { text: (0, N.EJ)(z.PremiumTypes.TIER_2) }),
                 },
                 6: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.VwxlMw) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.VwxlMw) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
-                    column2: (0, s.jsx)(Z, { text: D.intl.string(D.t.XdN6KU) }),
+                    column2: (0, s.jsx)(J, { text: D.intl.string(D.t.XdN6KU) }),
                 },
                 7: {
-                    label: (0, s.jsx)(J, {
+                    label: (0, s.jsx)(Z, {
                         text: D.intl.formatToPlainString(D.t.nyhDpw, {
                             numBoosts: z.M4,
                             percentageOff: (0, W.l9)(V.default.locale, z.oX / 100),
@@ -272,63 +272,63 @@ let ei = function (e) {
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 8: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.tFbcuM) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.tFbcuM) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 9: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(X.default["86GtGH"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(X.default["86GtGH"]) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 10: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["aR/zTk"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["aR/zTk"]) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 11: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.IzrZHz) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.IzrZHz) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 12: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["HwNg/Z"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["HwNg/Z"]) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 13: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["y+HHL9"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["y+HHL9"]) }),
                     column1: (0, s.jsx)(q, { includes: !0 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 14: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.qQxxVc) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.qQxxVc) }),
                     column1: (0, s.jsx)(q, { includes: !0 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 15: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.xi0NBE) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.xi0NBE) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                     withBottomBorder: !0,
                 },
                 16: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t.MfsUHm) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t.MfsUHm) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 22: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["A+0H1f"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["A+0H1f"]) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 17: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["il8+nC"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["il8+nC"]) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                 },
                 18: {
-                    label: (0, s.jsx)(J, { text: D.intl.formatToPlainString(D.t["8crdzJ"], { maxChars: Y.CS1 }) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.formatToPlainString(D.t["8crdzJ"], { maxChars: Y.CS1 }) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                     withBottomBorder: !0,
@@ -364,13 +364,13 @@ let ei = function (e) {
                     withBottomBorder: !1,
                 },
                 23: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["93xPy3"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["93xPy3"]) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                     withBottomBorder: !0,
                 },
                 24: {
-                    label: (0, s.jsx)(J, { text: D.intl.string(D.t["5BJqNF"]) }),
+                    label: (0, s.jsx)(Z, { text: D.intl.string(D.t["5BJqNF"]) }),
                     column1: (0, s.jsx)(q, { includes: !1 }),
                     column2: (0, s.jsx)(q, { includes: !0 }),
                     withBottomBorder: !1,
@@ -404,7 +404,7 @@ let ei = function (e) {
     let ex = {
         label: (0, s.jsx)(d.D, {
             className: K.__invalid_textColor,
-            variant: "heading-lg/extrabold",
+            variant: "heading-lg/semibold",
             children: D.intl.string(D.t.ED4UVD),
         }),
         column1: (0, s.jsx)($, { premiumType: z.PremiumTypes.TIER_0, isPremiumGroup: H }),
@@ -485,7 +485,7 @@ let ei = function (e) {
             children: [
                 (0, s.jsx)(d.D, {
                     className: l()(K.Qw, K.__invalid_textColor),
-                    variant: "heading-xxl/extrabold",
+                    variant: "heading-xxl/semibold",
                     children: R ?? D.intl.string(D.t.FIbMh9),
                 }),
                 H && (0, s.jsx)(U, { premiumGroupRole: B.premiumGroupRole, className: K.vg }),

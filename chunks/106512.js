@@ -2,8 +2,8 @@ n.d(e, { m: () => j });
 var i = n(477900),
     l = n(582128),
     o = n(503698),
-    a = n.n(o),
-    s = n(297264),
+    s = n.n(o),
+    a = n(534514),
     r = n(834730),
     c = n(331322),
     d = n(821609),
@@ -28,18 +28,18 @@ function j(t) {
         y = (0, h.x)(N, v),
         T = null != n.textColor && "" !== n.textColor ? { color: n.textColor } : void 0;
     return (0, i.jsxs)("div", {
-        className: a()(A.WR, e),
+        className: s()(A.WR, e),
         style: y,
         children: [
             null != o && (0, i.jsx)("img", { alt: "", className: A.TB, "aria-hidden": !0, src: o }),
             (0, i.jsxs)("div", {
                 className: A.QT,
                 children: [
-                    (0, i.jsx)(s.D, {
+                    (0, i.jsx)(a.D, {
                         className: A.u_,
                         style: T,
                         color: "text-strong",
-                        variant: "heading-lg/extrabold",
+                        variant: "heading-lg/semibold",
                         children: n.header,
                     }),
                     (0, i.jsx)(r.E, { style: T, color: "text-muted", variant: "text-sm/medium", children: n.body }),

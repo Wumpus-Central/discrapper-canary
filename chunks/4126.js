@@ -3,7 +3,7 @@ var l = n(477900);
 n(582128);
 var i = n(503698),
     r = n.n(i),
-    a = n(297264),
+    a = n(534514),
     s = n(138869),
     o = n(834730),
     u = n(788026),
@@ -91,7 +91,7 @@ function f(e) {
 }
 function E(e) {
     let { children: t, className: n, id: i, ...s } = e;
-    return (0, l.jsx)(a.D, { className: r()(h.wx, n), variant: "heading-xl/extrabold", id: i, ...s, children: t });
+    return (0, l.jsx)(a.D, { className: r()(h.wx, n), variant: "heading-xl/semibold", id: i, ...s, children: t });
 }
 function S() {
     return (0, l.jsx)("hr", { className: h.yF });
@@ -102,8 +102,8 @@ function g(e) {
         className: t,
         ...r,
         children: [
-            (0, l.jsx)(a.D, { variant: "heading-md/bold", color: "text-strong", children: n }),
-            (0, l.jsx)(a.D, { variant: "heading-sm/normal", color: "text-default", children: i }),
+            (0, l.jsx)(a.D, { variant: "heading-md/semibold", color: "text-strong", children: n }),
+            (0, l.jsx)(a.D, { variant: "heading-sm/medium", color: "text-default", children: i }),
         ],
     });
 }

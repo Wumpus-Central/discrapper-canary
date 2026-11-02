@@ -10,7 +10,7 @@ var i = n(477900),
     d = n(689175),
     m = n(331322),
     p = n(834730),
-    g = n(297264),
+    g = n(534514),
     f = n(821609),
     x = n(509434);
 if (/^(221552|391875)$/.test(n.j)) var h = n(141628);
@@ -145,13 +145,13 @@ function ev(e) {
                                                 children: s,
                                             }),
                                         (0, i.jsx)(p.E, {
-                                            variant: "text-md/bold",
+                                            variant: "text-md/semibold",
                                             color: "text-overlay-light",
                                             lineClamp: 1,
                                             children: r,
                                         }),
                                         (0, i.jsxs)(p.E, {
-                                            variant: "text-md/bold",
+                                            variant: "text-md/semibold",
                                             color: "text-feedback-positive",
                                             lineClamp: 1,
                                             children: ["(", a, ")"],
@@ -168,7 +168,7 @@ function ev(e) {
                         priceComponent: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p.E, {
-                                    variant: "text-md/bold",
+                                    variant: "text-md/semibold",
                                     color: "text-overlay-light",
                                     lineClamp: 1,
                                     children: s,

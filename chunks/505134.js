@@ -1,26 +1,26 @@
 t.d(e, { B: () => p });
-var r = t(477900),
-    n = t(582128),
+var n = t(477900),
+    r = t(582128),
     s = t(17928),
-    l = t(935462),
-    i = t(297264),
+    i = t(935462),
+    l = t(534514),
     c = t(834730),
     o = t(821609),
     d = t(235986),
     m = t(30370),
-    x = t(936525),
-    u = t(844768);
+    u = t(936525),
+    x = t(844768);
 let N = function (a) {
-    let { label: e, subLabel: t, icon: n } = a;
-    return (0, r.jsxs)("div", {
-        className: u.Lw,
+    let { label: e, subLabel: t, icon: r } = a;
+    return (0, n.jsxs)("div", {
+        className: x.Lw,
         children: [
-            (0, r.jsx)("div", { className: u.j3, children: (0, r.jsx)(n, { size: "md", color: "currentColor" }) }),
-            (0, r.jsxs)("div", {
-                className: u.ET,
+            (0, n.jsx)("div", { className: x.j3, children: (0, n.jsx)(r, { size: "md", color: "currentColor" }) }),
+            (0, n.jsxs)("div", {
+                className: x.ET,
                 children: [
-                    (0, r.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", children: e }),
-                    null != t && (0, r.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", children: t }),
+                    (0, n.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", children: e }),
+                    null != t && (0, n.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", children: t }),
                 ],
             }),
         ],
@@ -43,38 +43,38 @@ function p(a) {
             let a = m.A.getAccount(null, e);
             return a?.twoWayLink === !1;
         });
-    return (0, r.jsxs)(x.A, {
+    return (0, n.jsxs)(u.A, {
         children: [
-            (0, r.jsxs)(l.rQ, {
+            (0, n.jsxs)(i.rQ, {
                 "data-migration-pending": !0,
                 direction: d.A.Direction.VERTICAL,
-                className: u.wx,
+                className: x.wx,
                 separator: !1,
                 children: [
-                    (0, r.jsxs)("div", { className: u.bm, children: [j, " "] }),
-                    (0, r.jsx)(i.D, {
-                        className: u.DD,
-                        variant: "heading-xl/extrabold",
+                    (0, n.jsxs)("div", { className: x.bm, children: [j, " "] }),
+                    (0, n.jsx)(l.D, {
+                        className: x.DD,
+                        variant: "heading-xl/semibold",
                         children: k && null != C ? C : g,
                     }),
-                    (0, r.jsx)(l.s_, { "data-migration-pending": !0, className: u.b, onClick: p }),
+                    (0, n.jsx)(i.s_, { "data-migration-pending": !0, className: x.b, onClick: p }),
                 ],
             }),
-            (0, r.jsxs)(l.$m, {
+            (0, n.jsxs)(i.$m, {
                 "data-migration-pending": !0,
-                className: u.rf,
+                className: x.rf,
                 children: [
-                    (0, r.jsx)(c.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: b }),
-                    (0, r.jsx)("div", {
-                        className: u.Mh,
+                    (0, n.jsx)(c.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: b }),
+                    (0, n.jsx)("div", {
+                        className: x.Mh,
                         children: E.map((a, e) => {
-                            let { label: t, subLabel: s, icon: l } = a;
-                            return (0, r.jsxs)(
-                                n.Fragment,
+                            let { label: t, subLabel: s, icon: i } = a;
+                            return (0, n.jsxs)(
+                                r.Fragment,
                                 {
                                     children: [
-                                        (0, r.jsx)(N, { label: t, subLabel: s, icon: l }, t),
-                                        e !== E.length - 1 && (0, r.jsx)("div", { className: u.Cs }),
+                                        (0, n.jsx)(N, { label: t, subLabel: s, icon: i }, t),
+                                        e !== E.length - 1 && (0, n.jsx)("div", { className: x.Cs }),
                                     ],
                                 },
                                 t,
@@ -82,7 +82,7 @@ function p(a) {
                         }),
                     }),
                     null != v
-                        ? (0, r.jsx)(c.E, {
+                        ? (0, n.jsx)(c.E, {
                               tag: "p",
                               variant: "text-sm/normal",
                               color: "text-default",
@@ -91,13 +91,13 @@ function p(a) {
                         : null,
                 ],
             }),
-            (0, r.jsx)(l.jl, {
+            (0, n.jsx)(i.jl, {
                 "data-migration-pending": !0,
-                className: u.qr,
-                children: (0, r.jsx)("div", {
+                className: x.qr,
+                children: (0, n.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: u.wC,
-                    children: (0, r.jsx)(o.$, { variant: "primary", text: h.intl.string(h.t["3PatSz"]), onClick: t }),
+                    className: x.wC,
+                    children: (0, n.jsx)(o.$, { variant: "primary", text: h.intl.string(h.t["3PatSz"]), onClick: t }),
                 }),
             }),
         ],

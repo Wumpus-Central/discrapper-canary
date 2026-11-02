@@ -4,7 +4,7 @@ var n = s(477900),
     a = s(503698),
     l = s.n(a),
     r = s(821609),
-    o = s(297264),
+    o = s(534514),
     c = s(834730),
     u = s(507395),
     d = s(144779),
@@ -61,7 +61,7 @@ function v(e) {
                     className: f.hQ,
                     children: [
                         (0, n.jsx)(o.D, {
-                            variant: "lg" === d ? "heading-xl/bold" : "heading-lg/bold",
+                            variant: "lg" === d ? "heading-xl/semibold" : "heading-lg/semibold",
                             color: "text-strong",
                             children: g.intl.string(g.t.vnP31W),
                         }),

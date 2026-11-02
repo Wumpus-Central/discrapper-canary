@@ -5,10 +5,10 @@ var e = n(477900),
     r = n(935462),
     a = n(97808),
     d = n(778712),
-    c = n(297264),
+    c = n(534514),
     o = n(834730),
-    x = n(825484),
-    m = n(821609),
+    m = n(825484),
+    x = n(821609),
     u = n(376092),
     j = n(260509),
     h = n(317525),
@@ -42,7 +42,7 @@ function C(s) {
                 className: b.TK,
                 children: [
                     (0, e.jsx)(c.D, {
-                        variant: "heading-lg/extrabold",
+                        variant: "heading-lg/semibold",
                         color: "text-strong",
                         children: E.intl.string(E.t.MatO7M),
                     }),
@@ -135,11 +135,11 @@ function k(s) {
     return (0, e.jsx)(r.jl, {
         className: b.qr,
         "data-migration-pending": !0,
-        children: (0, e.jsxs)(x.e, {
+        children: (0, e.jsxs)(m.e, {
             fullWidth: !0,
             children: [
-                (0, e.jsx)(m.$, { variant: "secondary", text: E.intl.string(E.t.gWQZvr), onClick: n }),
-                (0, e.jsx)(m.$, { text: E.intl.string(E.t.iOSdAW), onClick: i }),
+                (0, e.jsx)(x.$, { variant: "secondary", text: E.intl.string(E.t.gWQZvr), onClick: n }),
+                (0, e.jsx)(x.$, { text: E.intl.string(E.t.iOSdAW), onClick: i }),
             ],
         }),
     });

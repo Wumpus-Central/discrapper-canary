@@ -280,7 +280,7 @@ var Q = e(702841),
     it = e(939249),
     ie = e(285796),
     is = e(597770),
-    il = e(297264),
+    il = e(534514),
     ir = e(775602),
     id = e(289397),
     ia = e(440293),
@@ -428,7 +428,7 @@ function ip(i) {
     return (0, s.jsxs)("div", {
         className: ij.kL,
         children: [
-            (0, s.jsx)(il.D, { variant: "heading-sm/bold", className: ij.wx, children: k.intl.string(k.t.GF433I) }),
+            (0, s.jsx)(il.D, { variant: "heading-sm/semibold", className: ij.wx, children: k.intl.string(k.t.GF433I) }),
             (0, s.jsx)(c.h, { size: 12 }),
             (0, s.jsxs)("div", {
                 className: ij.uW,

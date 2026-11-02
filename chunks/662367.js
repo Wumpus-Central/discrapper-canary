@@ -3,13 +3,13 @@ var i = n(477900);
 n(582128);
 var l = n(131937),
     o = n(877624),
-    a = n(17928),
-    s = n(462887),
+    s = n(17928),
+    a = n(462887),
     r = n(315629),
     c = n(331322),
     d = n(834730),
     p = n(404778),
-    u = n(297264),
+    u = n(534514),
     m = n(28863),
     x = n(821609),
     h = n(212245),
@@ -29,13 +29,13 @@ function L(t) {
     let { component: e, endDate: n } = t,
         { analyticsLocations: L } = (0, g.Ay)(),
         f = (0, h.p)(),
-        M = (0, s.M)((0, b.Ay)());
+        M = (0, a.M)((0, b.Ay)());
     (0, A.A)({
         type: l.ImpressionTypes.VIEW,
         name: l.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: o.C.BILLING_SETTINGS_BANNER, component_id: e.id, promotion_id: e.promotionId },
     });
-    let k = (0, a.bG)([I.A], () => I.A.getPromotionByTypeAndId(C.pt.MARKETING_MOMENT, e.promotionId)?.endDate),
+    let k = (0, s.bG)([I.A], () => I.A.getPromotionByTypeAndId(C.pt.MARKETING_MOMENT, e.promotionId)?.endDate),
         H = e.properties.properties,
         R = "billingSettingsBanner" === H.oneofKind ? H.billingSettingsBanner : null,
         S = (0, T.a)(R?.body ?? ""),

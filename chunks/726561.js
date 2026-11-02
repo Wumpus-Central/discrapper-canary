@@ -9,8 +9,8 @@ var l,
     o = e(289873),
     u = e(277984),
     g = e(9113),
-    x = e(726249),
-    m = e(683271),
+    m = e(726249),
+    x = e(683271),
     j = e(936555),
     h = e(465932),
     _ = e(403010),
@@ -29,7 +29,7 @@ var l,
     O = e(456540),
     R = e(217530),
     B = e(162093),
-    k = e(297264),
+    k = e(534514),
     C = e(834730),
     F = e(548118),
     U = e(253932),
@@ -122,7 +122,7 @@ function V(i) {
                 children: [
                     (0, t.jsx)("img", { src: "/assets/6b450d698584e501.svg", alt: "", className: K.W9 }),
                     (0, t.jsx)(k.D, {
-                        variant: "heading-xl/extrabold",
+                        variant: "heading-xl/semibold",
                         className: K.mW,
                         children: "guild_not_eligible" === s ? w.intl.string(w.t.atZQVZ) : w.intl.string(w.t.gAdWBl),
                     }),
@@ -174,7 +174,7 @@ function ie(i) {
         S = (0, I.X)(),
         { shouldHideGuildPurchaseEntryPoints: f, restrictionsLoading: G } = (0, h.MH)(s),
         O = null == e || !S || T || G;
-    ((0, x.HU)({ subsection: w.intl.string(w.t["KzCF/6"]), location: e?.name }),
+    ((0, m.HU)({ subsection: w.intl.string(w.t["KzCF/6"]), location: e?.name }),
         (0, g.A)(r.Fr ? "role-subscriptions-overview" : void 0));
     let R = l && (null == e || !(E || b) || (f && !G));
     if (
@@ -182,7 +182,7 @@ function ie(i) {
             u.hP();
         }, []),
         n.useEffect(() => {
-            R && !r.Fr && (0, m.B)(s, ii.VV.ROLE_SUBSCRIPTIONS);
+            R && !r.Fr && (0, x.B)(s, ii.VV.ROLE_SUBSCRIPTIONS);
         }, [s, R]),
         r.Fr && R)
     ) {

@@ -10011,7 +10011,7 @@
     --mobile-channel-header-icon-size: md;
     --mobile-channel-item-radius: 12px;
     --mobile-channel-list-subtitle-text-style: text-xs/medium;
-    --mobile-channel-list-title-text-style: redesign/heading-18/bold;
+    --mobile-channel-list-title-text-style: redesign/heading-18/semibold;
     --mobile-channel-name-channel-border-width: 1px;
     --mobile-channel-name-channel-icon-radius: 12px;
     --mobile-channel-safe-area-bottom-background: background-base-lower;
@@ -10083,7 +10083,7 @@
     --mobile-guild-folder-preview-icon-margin: 6px;
     --mobile-guild-folder-preview-opacity: 0.4px;
     --mobile-guild-item-selected-border-radius: 16px;
-    --mobile-header-title-text-style: heading-md/bold;
+    --mobile-header-title-text-style: heading-md/semibold;
     --mobile-input-field-border-width: 0px;
     --mobile-input-field-padding-vertical-sm-ios: 8px;
     --mobile-input-field-radius-lg: 16px;
@@ -10378,4 +10378,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.eb6d16548afdb328.css.map*/
+/*# sourceMappingURL=952007.ca48d3754707e459.css.map*/

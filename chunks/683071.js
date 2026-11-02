@@ -32,8 +32,8 @@ function S(e) {
         children: (0, i.jsx)("div", { className: T.enterExitClip, children: n }),
     });
 }
-let N = "experimental/body-sm/semibold",
-    C = "experimental/body-sm/normal";
+let N = "body-sm/semibold",
+    C = "body-sm/normal";
 function O(e) {
     let { type: t, title: n, message: a, messageList: p, onDismiss: O, action: R, role: L, hidden: y } = e,
         { i18n: D } = (0, I.G9)(),

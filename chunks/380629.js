@@ -898,7 +898,7 @@ class eu extends i.PureComponent {
                 renderOverlayContent: h,
             } = this.props,
             { fullscreen: d, hideControls: c, playing: p } = this.state,
-            f = B.bQ;
+            f = B.ub;
         if ((t === es.AUDIO ? (f = B._X) : c ? (f = B.CX) : p && (f = B.sw), i && t === es.VIDEO)) {
             let t = this.getWidth();
             return (0, a.jsxs)("div", {

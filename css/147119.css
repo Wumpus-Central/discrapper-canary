@@ -130,17 +130,13 @@
 
 .optionalHeader__920ab {
     color: var(--text-muted);
-    padding-inline-start: 8px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .optionalHeader__920ab {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
-.optionalCount__920ab {
+.optionalCount__920ab,
+.optionalHeader__920ab {
     padding-inline-start: 8px
 }
 
@@ -244,4 +240,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=147119.09e27d8b1815aaeb.css.map*/
+/*# sourceMappingURL=147119.cf655ba287886cc7.css.map*/

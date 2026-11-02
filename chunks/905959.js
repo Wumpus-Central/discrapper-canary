@@ -18,7 +18,7 @@ var l,
     j = n(604525),
     b = n(663417),
     y = n(70688),
-    k = n(297264),
+    k = n(534514),
     w = n(534890),
     S = n(646270),
     N = n(31300),
@@ -2013,7 +2013,7 @@ function nZ(e) {
                         children: [
                             (0, a.jsx)(nW, { status: n }),
                             (0, a.jsx)(o.E, {
-                                variant: "experimental/body-sm/medium",
+                                variant: "body-sm/medium",
                                 color: "in_progress" === n || "pending" === n ? "text-default" : "text-subtle",
                                 tag: "span",
                                 className: nH.iV,
@@ -2039,7 +2039,7 @@ function nZ(e) {
                       children: [
                           (0, a.jsx)(nW, { status: "pending" }),
                           (0, a.jsx)(o.E, {
-                              variant: "experimental/body-sm/medium",
+                              variant: "body-sm/medium",
                               color: "text-muted",
                               tag: "span",
                               className: nH.iV,

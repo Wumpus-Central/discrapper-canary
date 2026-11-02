@@ -16,7 +16,7 @@ var i = n(477900),
     A = n(866665),
     f = n(885574),
     b = n(192308),
-    j = n(297264),
+    j = n(534514),
     N = n(821609),
     E = n(695366),
     C = n(404778),
@@ -111,7 +111,7 @@ function et(e) {
         className: ee.o,
         children: [
             (0, i.jsx)(j.D, {
-                variant: "text-xs/bold",
+                variant: "text-xs/semibold",
                 color: "text-muted",
                 className: ee.U,
                 children: t ? H.intl.string(H.t.DjWsya) : H.intl.string(H.t.AmwmLg),

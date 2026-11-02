@@ -95,14 +95,10 @@
 }
 
 .optionHeader_c04f35 {
-    margin-bottom: 8px;
-    margin-top: 16px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .optionHeader_c04f35 {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
+    margin-bottom: 8px;
+    margin-top: 16px;
     text-transform: none
 }
 
@@ -135,13 +131,8 @@
 
 .title_b0f4cc {
     color: var(--interactive-text-default);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 8px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .title_b0f4cc {
     font-weight: var(--font-weight-semibold);
+    margin-bottom: 8px;
     text-transform: none
 }
 
@@ -415,4 +406,4 @@
     display: none
 }
 
-/*# sourceMappingURL=533651.76bef7a267c80213.css.map*/
+/*# sourceMappingURL=533651.6d5f7e75926cd0f2.css.map*/

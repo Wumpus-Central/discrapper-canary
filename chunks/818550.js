@@ -3,7 +3,7 @@ var i = d(477900),
     t = d(582128),
     a = d(17928),
     l = d(305866),
-    r = d(297264),
+    r = d(534514),
     n = d(834730),
     c = d(331322),
     h = d(793574),
@@ -16,9 +16,9 @@ var i = d(477900),
     P = d(999291),
     x = d(249790),
     j = d(946356),
-    I = d(254828),
-    _ = d(783123),
-    m = d(518477),
+    m = d(254828),
+    I = d(783123),
+    _ = d(518477),
     p = d(996988),
     N = d(105292),
     L = d(483558);
@@ -41,7 +41,7 @@ function k(e) {
         B = (0, f.pb)({ layout: "POPOUT", userId: s.id, guildId: d, channelId: v, messageId: R, roleId: b }),
         G = t.useRef(null),
         U = (0, P.Ay)(s.id, d);
-    ((0, O.A)(W, U, m.R7.POPOUT),
+    ((0, O.A)(W, U, _.R7.POPOUT),
         t.useEffect(() => {
             k?.(G?.current);
         }, [G, k]));
@@ -80,7 +80,7 @@ function k(e) {
                                         children: [
                                             (0, i.jsx)(x.A, { user: s, guildId: d }),
                                             (0, i.jsx)(r.D, {
-                                                variant: "heading-lg/bold",
+                                                variant: "heading-lg/semibold",
                                                 children: N.intl.string(N.t.b33pLD),
                                             }),
                                             (0, i.jsx)(n.E, {
@@ -94,13 +94,13 @@ function k(e) {
                                     (0, i.jsxs)(c.B, {
                                         align: "center",
                                         children: [
-                                            (0, i.jsx)(_.A, {
+                                            (0, i.jsx)(I.A, {
                                                 isBlocked: F,
                                                 onClick: () => {
                                                     (D(), (0, E.Wn)({ action: S, analyticsLocations: W, ...B }));
                                                 },
                                             }),
-                                            (0, i.jsx)(I.A, {
+                                            (0, i.jsx)(m.A, {
                                                 userId: s.id,
                                                 onClick: () => {
                                                     (D(),

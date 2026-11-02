@@ -14,7 +14,7 @@ e.exports = {
     ny: "refreshPlanLabel_adfd79",
     El: "refreshPlanPrice_adfd79",
     Vk: "refreshDiscountCallout_adfd79",
-    pw: "refreshCallouts_adfd79",
+    IT: "refreshCallouts_adfd79",
     D0: "refreshDiscountCalloutIconWrapper_adfd79",
     ue: "refreshDiscountCalloutIcon_adfd79",
     yP: "refreshDiscountCalloutText_adfd79",

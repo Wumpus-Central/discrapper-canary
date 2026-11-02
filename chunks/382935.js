@@ -9,12 +9,12 @@ var i = l(477900),
     u = l(150934),
     c = l(452027),
     m = l(103557),
-    h = l(297264),
+    h = l(534514),
     f = l(834730),
     g = l(821609),
     p = l(964486),
-    x = l(475743),
-    j = l(235986),
+    j = l(475743),
+    x = l(235986),
     v = l(915089),
     C = l(124480),
     b = l(975571),
@@ -50,7 +50,7 @@ function N(e) {
             impression: H,
             transitionState: P,
         } = e,
-        B = (0, x.Ay)($),
+        B = (0, j.Ay)($),
         [G, U] = t.useState(S($));
     t.useEffect(() => {
         o().isEqual(B, $) || U(S($));
@@ -86,7 +86,7 @@ function N(e) {
                           (0, i.jsx)(d.jl, {
                               "data-migration-pending": !0,
                               className: O.qr,
-                              direction: j.A.Direction.HORIZONTAL,
+                              direction: x.A.Direction.HORIZONTAL,
                               children: (0, i.jsx)(u.S, {
                                   checked: z,
                                   onChange: () => F(!z),
@@ -155,7 +155,7 @@ function N(e) {
                     separator: !1,
                     className: O.N1,
                     children: [
-                        (0, i.jsx)(h.D, { id: w, variant: "heading-xl/extrabold", color: "none", children: D }),
+                        (0, i.jsx)(h.D, { id: w, variant: "heading-xl/semibold", color: "none", children: D }),
                         (0, i.jsx)(f.E, { variant: "text-md/normal", color: "none", className: O.sB, children: E }),
                     ],
                 }),
@@ -164,7 +164,7 @@ function N(e) {
                     (0, i.jsxs)(d.jl, {
                         "data-migration-pending": !0,
                         className: O.qr,
-                        direction: j.A.Direction.HORIZONTAL,
+                        direction: x.A.Direction.HORIZONTAL,
                         children: [
                             (0, i.jsx)(g.$, {
                                 variant: "secondary",

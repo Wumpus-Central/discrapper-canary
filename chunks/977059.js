@@ -42,7 +42,7 @@ var U = n(248284),
     w = n(952270),
     k = n(365199),
     L = n(315710),
-    H = n(297264),
+    H = n(534514),
     V = n(821609),
     $ = n(442433),
     F = n(450232),
@@ -561,7 +561,7 @@ let eD = function (e) {
         assetComponent: (0, a.jsx)("img", { src: l, alt: "" }),
         tooltipWordmarkComponent: (0, a.jsx)(eC.A, { width: 56, className: eS.R }),
         children: [
-            (0, a.jsx)(H.D, { variant: "heading-xl/extrabold", children: Z.intl.string(n.nameUnformatted) }),
+            (0, a.jsx)(H.D, { variant: "heading-xl/semibold", children: Z.intl.string(n.nameUnformatted) }),
             (0, a.jsx)(x.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
@@ -624,13 +624,13 @@ function e$(e) {
     return (0, a.jsxs)(ey, {
         assetComponent: (0, a.jsx)(eL.A, { className: eH.jc }),
         tooltipWordmarkComponent: (0, a.jsx)(H.D, {
-            variant: "heading-md/extrabold",
+            variant: "heading-md/semibold",
             className: eH.RK,
             children: Z.intl.string(Z.t.ElYQFS),
         }),
         children: [
             (0, a.jsx)(H.D, {
-                variant: "heading-xl/extrabold",
+                variant: "heading-xl/semibold",
                 className: t ? void 0 : eH.Qn,
                 children: Z.intl.string(Z.t.lTHkqd),
             }),

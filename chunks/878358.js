@@ -1,8 +1,8 @@
 a.d(t, { A: () => H });
 var r = a(477900),
-    i = a(582128),
-    s = a(503698),
-    c = a.n(s),
+    s = a(582128),
+    i = a(503698),
+    c = a.n(i),
     n = a(661531),
     d = a(109112),
     l = a(834730),
@@ -66,19 +66,19 @@ function k(e) {
 }
 function P(e) {
     let { stats: t } = e,
-        { topGuild: a, topGuildAcronymCharacter: s, topEmoji: c, topGame: d } = t,
-        l = i.useMemo(
+        { topGuild: a, topGuildAcronymCharacter: i, topEmoji: c, topGame: d } = t,
+        l = s.useMemo(
             () => (null != a ? N.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
             [a],
         ),
-        o = i.useMemo(
+        o = s.useMemo(
             () =>
                 d?.applicationImageId != null
                     ? N.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
                     : void 0,
             [d],
         ),
-        p = i.useMemo(() => (null != l ? (0, r.jsx)(y, { src: l }) : (0, r.jsx)(D, { character: s })), [l, s]);
+        p = s.useMemo(() => (null != l ? (0, r.jsx)(y, { src: l }) : (0, r.jsx)(D, { character: i })), [l, i]);
     return (0, r.jsxs)("ul", {
         className: O.M1,
         children: [
@@ -123,7 +123,7 @@ function G(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.E, {
-                variant: "experimental/display-xs",
+                variant: "display-xs",
                 color: "text-overlay-dark",
                 className: O.K8,
                 children: T.intl.string(R.default["CdU/PF"]),
@@ -155,10 +155,10 @@ function U(e) {
 }
 function H(e) {
     let { checkpointData: t, onFooterClick: a } = e,
-        { character: s, stats: n, cardColorPalette: d } = t,
-        l = null != s && null != n,
+        { character: i, stats: n, cardColorPalette: d } = t,
+        l = null != i && null != n,
         u = (0, g.FX)("Checkpoint2026CardDisplayComponent"),
-        h = i.useMemo(() => (null != n ? (0, A.R8)(n) : null), [n]);
+        h = s.useMemo(() => (null != n ? (0, A.R8)(n) : null), [n]);
     return (0, r.jsxs)(w.A, {
         cardColorPalette: d,
         size: S.W.SM,
@@ -167,11 +167,11 @@ function H(e) {
         children: [
             (0, r.jsx)(o.A, { children: T.intl.string(C.default.Og2R9d) }),
             (0, r.jsx)(I.A, {}),
-            (0, r.jsx)(j.A, { variant: null != s ? "full" : "short", className: O.Ss }),
-            null != s && null != h
+            (0, r.jsx)(j.A, { variant: null != i ? "full" : "short", className: O.Ss }),
+            null != i && null != h
                 ? (0, r.jsx)(E.A, { powerLevel: h.powerLevel, powerLevelUnits: h.powerLevelUnits })
                 : null,
-            null != s ? (0, r.jsx)(v.A, { character: s }) : null,
+            null != i ? (0, r.jsx)(v.A, { character: i }) : null,
             null != h ? (0, r.jsx)(P, { stats: h }) : null,
             (0, r.jsx)(U, { isCheckpointEnabled: u, onClick: a }),
         ],

@@ -53,7 +53,7 @@ function v(e) {
                         className: j.WG,
                         children: [
                             null != P && (0, n.jsx)(h.A, { game: P, className: j.lK }),
-                            (0, n.jsx)(r.E, { variant: "text-xs/bold", color: "currentColor", children: L }),
+                            (0, n.jsx)(r.E, { variant: "text-xs/semibold", color: "currentColor", children: L }),
                         ],
                     }),
                 null != p

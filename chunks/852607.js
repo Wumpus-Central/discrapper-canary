@@ -12,7 +12,7 @@ function c() {
     });
 }
 var d = n(830382),
-    m = n(297264),
+    m = n(534514),
     p = n(834730),
     C = n(28863),
     h = n(696208),
@@ -25,7 +25,7 @@ function S(e) {
         children: (0, l.jsxs)("div", {
             className: E.a,
             children: [
-                (0, l.jsx)(m.D, { variant: "heading-xl/bold", children: f.intl.string(f.t.Q03WWV) }),
+                (0, l.jsx)(m.D, { variant: "heading-xl/semibold", children: f.intl.string(f.t.Q03WWV) }),
                 (0, l.jsxs)("p", {
                     children: [
                         (0, l.jsx)(p.E, { variant: "text-md/normal", children: f.intl.string(f.t.BxPxhI) }),

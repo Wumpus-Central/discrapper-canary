@@ -6,7 +6,7 @@ var n = i(503698),
     a = i(933832),
     l = i(789645),
     o = i(834730),
-    c = i(297264),
+    c = i(534514),
     d = i(116891),
     u = i(652215),
     m = i(202541),
@@ -129,7 +129,7 @@ function _(e) {
             : (0, s.jsx)(l.P, { size: "md", color: "currentColor", className: T.i3 })
         : (0, s.jsx)(o.E, {
               color: i ? "text-strong" : "text-muted",
-              variant: i ? "text-md/bold" : "text-md/medium",
+              variant: i ? "text-md/semibold" : "text-md/medium",
               children: t,
           });
 }
@@ -154,7 +154,7 @@ function p(e) {
               children: (0, s.jsx)(o.E, {
                   className: T.uQ,
                   color: "text-overlay-light",
-                  variant: "text-xs/bold",
+                  variant: "text-xs/semibold",
                   children: t === u.TVA.TIER_3 ? g.intl.string(g.t.d849Up) : g.intl.string(g.t.dZeX1z),
               }),
           });

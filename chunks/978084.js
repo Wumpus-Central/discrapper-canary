@@ -4,11 +4,11 @@ var t = a(477900),
     l = a(776310),
     n = a(224640),
     r = a(815021),
-    c = a(297264),
+    c = a(534514),
     d = a(834730),
     u = a(821609),
-    o = a(524246),
-    m = a(349085),
+    m = a(524246),
+    o = a(349085),
     x = a(135570),
     h = a(105292),
     j = a(759204);
@@ -22,7 +22,7 @@ function v(s) {
             renewalDate: f,
             ...C
         } = s,
-        p = (0, m.A)(e, "cover"),
+        p = (0, o.A)(e, "cover"),
         b = i.useRef(null),
         [k] = i.useState(() => new l.OH()),
         [y, w] = i.useState(null),
@@ -38,7 +38,7 @@ function v(s) {
         contentOutsideContainer: (0, t.jsxs)(t.Fragment, {
             children: [
                 (0, t.jsx)(l.Fk, { ref: w, className: j.Lb, environment: k }),
-                (0, t.jsx)(o.A, { confettiTarget: b.current, confettiCanvas: y }),
+                (0, t.jsx)(m.A, { confettiTarget: b.current, confettiCanvas: y }),
             ],
         }),
         children: (0, t.jsxs)("div", {
@@ -72,7 +72,7 @@ function v(s) {
                         (0, t.jsxs)("div", {
                             className: j.Z,
                             children: [
-                                (0, t.jsx)(c.D, { variant: "heading-lg/bold", color: "text-strong", children: F }),
+                                (0, t.jsx)(c.D, { variant: "heading-lg/semibold", color: "text-strong", children: F }),
                                 (0, t.jsx)(d.E, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",

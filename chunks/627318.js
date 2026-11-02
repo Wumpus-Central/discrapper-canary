@@ -1,9 +1,9 @@
-(a.r(t), a.d(t, { default: () => ei }));
+(a.r(t), a.d(t, { default: () => en }));
 var s,
     l = a(477900),
     r = a(582128),
-    n = a(492462),
-    i = a(806163),
+    i = a(492462),
+    n = a(806163),
     c = a(702841),
     d = a(830215),
     o = a(269815),
@@ -64,8 +64,8 @@ async function k(e, t, a) {
     } catch (e) {}
 }
 function P(e) {
-    let { data: t, onDenied: a, onError: s, onSuccess: n } = e,
-        i = r.useCallback(
+    let { data: t, onDenied: a, onError: s, onSuccess: i } = e,
+        n = r.useCallback(
             async (e, t) => {
                 if (!t) {
                     try {
@@ -76,20 +76,20 @@ function P(e) {
                 }
                 if (null == e.twoWayLinkCode)
                     try {
-                        (await (0, D.IN)(e.userCode, "granted"), n(e));
+                        (await (0, D.IN)(e.userCode, "granted"), i(e));
                     } catch (t) {
                         s(e);
                     }
                 else
                     try {
-                        (await T(e.clientId, e.twoWayLinkCode, e.userCode), n(e));
+                        (await T(e.clientId, e.twoWayLinkCode, e.userCode), i(e));
                     } catch (t) {
                         s(e);
                     }
             },
-            [a, s, n],
+            [a, s, i],
         ),
-        c = r.useCallback((e) => i(t, e), [t, i]);
+        c = r.useCallback((e) => n(t, e), [t, n]);
     return (0, l.jsx)(C.$, {
         removeChildWrapper: !0,
         children: (0, l.jsx)(b.OAuth2AuthorizeModal, {
@@ -102,7 +102,7 @@ function P(e) {
         }),
     });
 }
-var L = a(297264),
+var L = a(534514),
     S = a(834730),
     O = a(821609),
     G = a(105292),
@@ -117,7 +117,7 @@ function W(e) {
             (0, l.jsxs)("div", {
                 className: z.gx,
                 children: [
-                    (0, l.jsx)(L.D, { variant: "heading-xl/extrabold", children: G.intl.string(G.t["3dgwPD"]) }),
+                    (0, l.jsx)(L.D, { variant: "heading-xl/semibold", children: G.intl.string(G.t["3dgwPD"]) }),
                     (0, l.jsx)(S.E, {
                         variant: "text-md/normal",
                         color: "text-default",
@@ -189,7 +189,7 @@ function M(e) {
                                               children: G.intl.string(G.t.llDCid),
                                           }),
                                           (0, l.jsx)(L.D, {
-                                              variant: "heading-xxl/normal",
+                                              variant: "heading-xxl/medium",
                                               color: "text-default",
                                               children: G.intl.string(G.t.JfHzXG),
                                           }),
@@ -223,7 +223,7 @@ function M(e) {
                                               children: G.intl.string(G.t["Eu8rJ/"]),
                                           }),
                                           (0, l.jsx)(L.D, {
-                                              variant: "heading-xxl/normal",
+                                              variant: "heading-xxl/medium",
                                               color: "text-default",
                                               children: G.intl.string(G.t.BkEMJ1),
                                           }),
@@ -242,12 +242,12 @@ function M(e) {
                                               className: V.WX,
                                               children: [
                                                   (0, l.jsx)(L.D, {
-                                                      variant: "heading-xxl/normal",
+                                                      variant: "heading-xxl/medium",
                                                       color: "text-default",
                                                       children: G.intl.string(G.t.RyDxBX),
                                                   }),
                                                   (0, l.jsx)(L.D, {
-                                                      variant: "heading-xxl/bold",
+                                                      variant: "heading-xxl/semibold",
                                                       color: "text-strong",
                                                       className: V.H$,
                                                       children: t.match(/.{1,4}/g)?.join(" "),
@@ -268,31 +268,27 @@ var J = a(647053);
 function q(e) {
     let { onComplete: t, data: a } = e,
         s = (0, r.useId)(),
-        n = null,
         i = null,
+        n = null,
         c = a.scopes.some((e) => (0, J.RM)(e));
     return (
         a.clientId === f.i.PLAYSTATION_APPLICATION_ID || a.clientId === f.i.PLAYSTATION_STAGING_APPLICATION_ID
-            ? (n =
+            ? (i =
                   "https://cdn.discordapp.com/assets/content/c155b6ac1aeaf22db13c1195d742154bbf6bc02b787c5cfeeadc7b580501eb2f.png")
             : c &&
-              (n =
+              (i =
                   "https://cdn.discordapp.com/assets/content/03d8faedfa507d8254fc77917112a8485a813c78b276b4fe19391e0b2f62a119.png"),
-        null != a.twoWayLinkCode ? (i = G.intl.string(G.t.QhATl2)) : c && (i = G.intl.string(G.t.vBPvK3)),
+        null != a.twoWayLinkCode ? (n = G.intl.string(G.t.QhATl2)) : c && (n = G.intl.string(G.t.vBPvK3)),
         (0, l.jsxs)("div", {
             className: z.Qs,
             children: [
-                null != n ? (0, l.jsx)("img", { src: n, className: z.xX, alt: "", "aria-labelledby": s }) : null,
+                null != i ? (0, l.jsx)("img", { src: i, className: z.xX, alt: "", "aria-labelledby": s }) : null,
                 (0, l.jsxs)("div", {
                     className: z.gx,
                     children: [
-                        (0, l.jsx)(L.D, {
-                            variant: "heading-xl/extrabold",
-                            id: s,
-                            children: G.intl.string(G.t.qDtJmD),
-                        }),
-                        null != i
-                            ? (0, l.jsx)(S.E, { variant: "text-md/normal", color: "text-default", children: i })
+                        (0, l.jsx)(L.D, { variant: "heading-xl/semibold", id: s, children: G.intl.string(G.t.qDtJmD) }),
+                        null != n
+                            ? (0, l.jsx)(S.E, { variant: "text-md/normal", color: "text-default", children: n })
                             : null,
                     ],
                 }),
@@ -312,17 +308,17 @@ var K = a(331322),
 function ea(e) {
     let { onUserCodeAccepted: t, usePrefilledCode: a } = e,
         [s, c] = r.useState(() => {
-            let { user_code: e } = n.parse(window.location.search);
+            let { user_code: e } = i.parse(window.location.search);
             return a ? (e ?? "") : "";
         }),
-        d = (0, i.zy)(),
+        d = (0, n.zy)(),
         {
             manualSubmit: o,
             error: u,
             submitting: h,
         } = (function (e, t, a) {
             let [s, l] = r.useState(!1),
-                [n, i] = r.useState(null),
+                [i, n] = r.useState(null),
                 c = r.useCallback(async () => {
                     try {
                         l(!0);
@@ -336,7 +332,7 @@ function ea(e) {
                             }));
                     } catch (e) {
                         var s;
-                        (i(
+                        (n(
                             429 === (s = e?.status)
                                 ? G.intl.string(G.t.BPmZvj)
                                 : 404 === s || 400 === s
@@ -349,9 +345,9 @@ function ea(e) {
                 }, [e, t, a]);
             return (
                 r.useEffect(() => {
-                    e.length === ee.USER_CODE_LENGTH ? c() : i(null);
+                    e.length === ee.USER_CODE_LENGTH ? c() : n(null);
                 }, [e, c]),
-                { manualSubmit: c, error: n, submitting: s }
+                { manualSubmit: c, error: i, submitting: s }
             );
         })(
             s,
@@ -367,7 +363,7 @@ function ea(e) {
                 className: et.gx,
                 children: [
                     (0, l.jsx)(L.D, {
-                        variant: "heading-xl/extrabold",
+                        variant: "heading-xl/semibold",
                         className: et.Qq,
                         children: G.intl.string(G.t.KYPNUv),
                     }),
@@ -410,10 +406,10 @@ let el = a(843020);
 function er() {
     let e,
         t,
-        a = (0, i.zy)(),
+        a = (0, n.zy)(),
         [s, u] = r.useState(() => {
             if (a.pathname === j.BVt.ACTIVATE_HANDOFF) {
-                let { user_code: e } = n.parse(window.location.search);
+                let { user_code: e } = i.parse(window.location.search);
                 return { type: "handoff", code: e };
             }
             return { type: "user-code-input", usePrefilledCode: !0 };
@@ -484,7 +480,7 @@ function er() {
         ],
     });
 }
-let en = (0, u.C)(er),
-    ei = function () {
-        return (0, i.zy)().pathname !== j.BVt.ACTIVATE_HANDOFF ? (0, l.jsx)(en, {}) : (0, l.jsx)(er, {});
+let ei = (0, u.C)(er),
+    en = function () {
+        return (0, n.zy)().pathname !== j.BVt.ACTIVATE_HANDOFF ? (0, l.jsx)(ei, {}) : (0, l.jsx)(er, {});
     };

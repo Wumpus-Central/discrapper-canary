@@ -136,24 +136,21 @@
 }
 
 .tipTitle_a2f514 {
-    color: var(--text-strong);
+    color: var(--text-subtle);
+    font-weight: var(--font-weight-medium);
     margin-bottom: 8px;
-    max-width: 300px;
-    text-transform: uppercase
+    text-transform: none
 }
 
-.mana-type-consolidation .tipTitle_a2f514 {
-    color: var(--text-subtle);
+.tip_a2f514,
+.tipTitle_a2f514 {
     font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    text-transform: none
+    max-width: 300px
 }
 
 .tip_a2f514 {
     color: var(--text-default);
-    font-size: 16px;
-    line-height: 20px;
-    max-width: 300px
+    line-height: 20px
 }
 
 .keybind_a2f514 {
@@ -172,11 +169,7 @@
     font-style: italic;
     line-height: 20px;
     margin-bottom: 10px;
-    text-transform: uppercase
-}
-
-.mana-type-consolidation .title_a2f514 {
     text-transform: none
 }
 
-/*# sourceMappingURL=868544.6a8646a97a00940c.css.map*/
+/*# sourceMappingURL=868544.a3ff22496625a51e.css.map*/
