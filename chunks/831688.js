@@ -143,7 +143,7 @@ var W = n(10392),
     eo = n(236285),
     ea = n(770335),
     er = n(490035),
-    es = n(433716),
+    es = n(11184),
     ec = n(624793),
     eu = n(731383),
     ed = n(450707),
@@ -251,7 +251,7 @@ function eI(e) {
     return C
         ? null
         : k && u && E === ec.rV.PACK && null != I
-          ? (0, i.jsx)(es.A, { pack: I, isNitroTier2: _, onClose: o })
+          ? (0, i.jsx)(es.A, { pack: I, isNitroTier2: _, surface: "reaction_emoji_popout", onClose: o })
           : (0, i.jsxs)("div", {
                 children: [
                     k

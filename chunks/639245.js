@@ -22,7 +22,7 @@ var i = n(477900),
     A = n(573435),
     E = n(836039),
     C = n(490035),
-    S = n(433716),
+    S = n(11184),
     y = n(702841),
     O = n(71393),
     T = n(236285),
@@ -37,8 +37,8 @@ var i = n(477900),
     w = n(985242),
     U = n(87719),
     z = n(465794),
-    J = n(976860),
-    V = n(309010),
+    V = n(976860),
+    J = n(309010),
     K = n(967198),
     B = n(287809),
     H = n(174459),
@@ -46,8 +46,8 @@ var i = n(477900),
     W = n(449054),
     X = n(24482),
     q = n(450707),
-    Z = n(773669),
-    $ = n(105292),
+    $ = n(773669),
+    Z = n(105292),
     Y = n(188645),
     Q = n(746080),
     ee = n(202541),
@@ -60,8 +60,8 @@ function en(e) {
     (0, _.i)({ emojiId: a.emojiId, currentGuildId: K.A.getGuildId() });
     let r =
             ((n = t = a.name),
-            (l = (0, o.bG)([Z.default], () => Z.default.locale.startsWith("en-"))),
-            (s = ":pizza:" === n && l ? $.intl.formatToPlainString($.t["1knDPI"], { emojiName: n }) : n),
+            (l = (0, o.bG)([$.default], () => $.default.locale.startsWith("en-"))),
+            (s = ":pizza:" === n && l ? Z.intl.formatToPlainString(Z.t["1knDPI"], { emojiName: n }) : n),
             ":pizza:" === t ? s : t),
         d = r !== a.name;
     return (0, i.jsx)(u.l, {
@@ -84,7 +84,7 @@ function en(e) {
                             (0, i.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 className: et.t,
-                                children: $.intl.string($.t.sXdH8c),
+                                children: Z.intl.string(Z.t.sXdH8c),
                             }),
                         ],
                     }),
@@ -105,7 +105,7 @@ let ei = (e) => {
         j = F.Ay.getGuildIconURL({ id: o, icon: u, size: 32, canAnimate: !0 }),
         g = (l = l ?? !0) || n.isDiscoverable();
     function p() {
-        n.isDiscoverable() ? (r(), (0, W.Z2)(o, {})) : l && (r(), (0, J.pX)(L.BVt.CHANNEL(o, V.Ay.getChannelId(o))));
+        n.isDiscoverable() ? (r(), (0, W.Z2)(o, {})) : l && (r(), (0, V.pX)(L.BVt.CHANNEL(o, J.Ay.getChannelId(o))));
     }
     let N = n.isDiscoverable() && null != n.presenceCount;
     return (0, i.jsxs)(v.A, {
@@ -158,7 +158,7 @@ let ei = (e) => {
                                       (0, i.jsx)(c.E, {
                                           variant: "text-xs/normal",
                                           color: "text-default",
-                                          children: $.intl.format($.t["LC+S+m"], { membersOnline: n.presenceCount }),
+                                          children: Z.intl.format(Z.t["LC+S+m"], { membersOnline: n.presenceCount }),
                                       }),
                                       (0, i.jsx)("div", { className: et.zk }),
                                       t
@@ -168,20 +168,20 @@ let ei = (e) => {
                                                 children: (0, i.jsx)(c.E, {
                                                     variant: "text-xs/normal",
                                                     color: "text-link",
-                                                    children: $.intl.string($.t.riu2R5),
+                                                    children: Z.intl.string(Z.t.riu2R5),
                                                 }),
                                             })
                                           : (0, i.jsx)(c.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
-                                                children: $.intl.string($.t.inyJqO),
+                                                children: Z.intl.string(Z.t.inyJqO),
                                             }),
                                   ],
                               }))
                             : (0, i.jsx)(c.E, {
                                   variant: "text-xs/normal",
                                   color: "text-default",
-                                  children: $.intl.string($.t.H29mx4),
+                                  children: Z.intl.string(Z.t.H29mx4),
                               }),
                     }),
                 ],
@@ -293,13 +293,13 @@ function es(e) {
             nonce: G,
         } = e,
         R = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
-        J = (0, C.H)("message_emoji_details"),
-        V = (0, o.bG)([K.A], () => K.A.getGuildId()),
+        V = (0, C.H)("message_emoji_details"),
+        J = (0, o.bG)([K.A], () => K.A.getGuildId()),
         F = X.Ay.isPremium(R),
-        W = null != V && (V === g?.id || V === A?.id),
-        Z = null != A,
+        W = null != J && (J === g?.id || J === A?.id),
+        $ = null != A,
         en = g?.isDiscoverable() ?? !1;
-    k && ((F = !0), (en = !0), (Z = !1), (W = !1));
+    k && ((F = !0), (en = !0), ($ = !1), (W = !1));
     let el = {
             page: null != (0, o.bG)([K.A], () => K.A.getGuildId()) ? L.liQ.GUILD_CHANNEL : L.liQ.DM_CHANNEL,
             section: L.JJy.EMOJI_UPSELL_POPOUT,
@@ -314,10 +314,10 @@ function es(e) {
                     ? { isRoleSubscriptionEmoji: !1, isUnusableRoleSubscriptionEmoji: !1, userIsRoleSubscriber: !1 }
                     : {
                           isRoleSubscriptionEmoji: M.kT(T),
-                          isUnusableRoleSubscriptionEmoji: M.JN(T, V ?? void 0),
+                          isUnusableRoleSubscriptionEmoji: M.JN(T, J ?? void 0),
                           userIsRoleSubscriber: D.A.getUserSubscriptionRoles(T.guildId).size > 0,
                       },
-            [T, V],
+            [T, J],
         ),
         ed = !!er && (0, E.tE)(T?.guildId),
         { analyticsLocations: eu } = (0, b.Ay)(f.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
@@ -334,7 +334,7 @@ function es(e) {
             sourceType: d,
             expressionSourceApplication: u,
             isPremium: F,
-            hasJoinedEmojiSourceGuild: Z,
+            hasJoinedEmojiSourceGuild: $,
             isRoleSubscriptionEmoji: es,
             isUnusableRoleSubscriptionEmoji: er,
             userIsRoleSubscriber: eo,
@@ -350,8 +350,8 @@ function es(e) {
                     (0, U.e)());
             },
         }),
-        ex = Z && er && !ed && ((F && es) || !F),
-        eh = J && d === P.rV.PACK && null != x,
+        ex = $ && er && !ed && ((F && es) || !F),
+        eh = V && d === P.rV.PACK && null != x,
         ej = em.emojiDescription,
         eg = (0, _.i)({
             emojiId: s.emojiId,
@@ -364,20 +364,20 @@ function es(e) {
         ep = em.type === q.u.JOIN_GUILD,
         eN = em.type === q.u.GET_PREMIUM,
         [ef, eb] = l.useState(!1),
-        eI = en || (Z && !W) || null != g;
+        eI = en || ($ && !W) || null != g;
     return (0, i.jsxs)(Y.Uq, {
         className: a()(et.Bm, et.Os, { [et.x1]: eh }),
         children: [
             (function () {
                 async function e() {
-                    if (k || null == g || Z) return;
+                    if (k || null == g || $) return;
                     y();
                     let e = g.id;
                     try {
                         (await p.A.joinGuild(e), p.A.transitionToGuildSync(e));
                     } catch {}
                 }
-                let t = !Z && en;
+                let t = !$ && en;
                 return (0, i.jsxs)("div", {
                     className: et.gH,
                     children: [
@@ -440,7 +440,7 @@ function es(e) {
                               : void 0,
                         ex &&
                             (0, i.jsx)(w.A, {
-                                text: eo ? $.intl.string($.t.yma8Vp) : $.intl.string($.t.nN2DIo),
+                                text: eo ? Z.intl.string(Z.t.yma8Vp) : Z.intl.string(Z.t.nN2DIo),
                                 size: "sm",
                                 fullWidth: !0,
                                 onClick: function () {
@@ -460,9 +460,15 @@ function es(e) {
                     ],
                 });
             })(),
-            eh && (0, i.jsx)(S.A, { pack: x, isNitroTier2: X.Ay.isPremium(R, ee.PremiumTypes.TIER_2), onClose: y }),
+            eh &&
+                (0, i.jsx)(S.A, {
+                    pack: x,
+                    isNitroTier2: X.Ay.isPremium(R, ee.PremiumTypes.TIER_2),
+                    surface: "message_emoji_popout",
+                    onClose: y,
+                }),
             eI &&
-                ((n = null != g && !Z && en && (g?.emojis?.length ?? 0) > 1),
+                ((n = null != g && !$ && en && (g?.emojis?.length ?? 0) > 1),
                 (0, i.jsxs)("div", {
                     className: et.tl,
                     children: [
@@ -470,18 +476,18 @@ function es(e) {
                             className: et.YW,
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: Z ? $.intl.string($.t.ohTzZH) : $.intl.string($.t["eLfh+a"]),
+                            children: $ ? Z.intl.string(Z.t.ohTzZH) : Z.intl.string(Z.t["eLfh+a"]),
                         }),
                         (0, i.jsx)(ei, {
                             expressionSourceGuild: g ?? P.GO.createFromGuildRecord(A),
-                            hasJoinedExpressionSourceGuild: Z,
+                            hasJoinedExpressionSourceGuild: $,
                             isDisplayingJoinGuildButtonInPopout: ep,
                             closePopout: y,
                         }),
                         n &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    ((t = $.intl.string($.t.pnsAS2)),
+                                    ((t = Z.intl.string(Z.t.pnsAS2)),
                                     (0, i.jsx)(m.D, {
                                         onClick: function () {
                                             n &&
@@ -516,7 +522,7 @@ function es(e) {
                                             expressionSourceGuild: g,
                                             popoutData: em,
                                             onClose: y,
-                                            hasJoinedEmojiSourceGuild: Z,
+                                            hasJoinedEmojiSourceGuild: $,
                                             isDisplayingButtonInTopSection: ep || eN,
                                         }),
                                 ],
