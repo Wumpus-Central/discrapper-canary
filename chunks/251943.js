@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "660636";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "660645";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 660636, Version Hash: adb5e4b93ede1fa95151fd2a1348048d19b15ab4`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 660645, Version Hash: afa1e9c9db441aa96d1259067223b7cf48256d4b`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26172,7 +26172,7 @@ let ym = "isHideDevBanner",
                     className: tf()(yp.Wz, yp.mr),
                     children: [
                         (0, b.jsx)(yI, { className: yp.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "660636" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "660645" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -40623,17 +40623,12 @@ class wV extends nI.A {
                 for (let e of (n.set(t.id, t), t.marketingComponents))
                     e.componentType === oT.C.ANNOUNCEMENT_MODAL && i.push(e);
             }
-        let r = eF.default.getCurrentUser();
-        function a(e) {
-            return null != r && e.isIncludedInRollout(r.id, t);
-        }
-        let s = (0, wk.A)(i, t, a),
-            l = i.length;
-        for (; null != s && l > 0;) {
-            if ((l--, this.maybeOpenServerDriveAnnouncementModal(s, !1, n.get(s.promotionId)))) return;
-            ((i = i.filter((e) => e.id !== s?.id)), (s = (0, wk.A)(i, t, a)));
-        }
-        ((0, Rv.al)(), (0, Rv.QM)());
+        let r = eF.default.getCurrentUser(),
+            a = (0, wk.A)(i, t, function (e) {
+                return null != r && e.isIncludedInRollout(r.id, t);
+            });
+        (null != a && this.maybeOpenServerDriveAnnouncementModal(a, !1, n.get(a.promotionId))) ||
+            ((0, Rv.al)(), (0, Rv.QM)());
     };
     handleActivePromotionsFetchSuccess = (e) => {
         let { promotions: t } = e;

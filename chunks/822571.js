@@ -5,6 +5,7 @@ var i = n(181370),
     s = n(315069),
     l = n(927813),
     o = n(767589);
+n(852218);
 class d extends s.A {
     id;
     componentType;
@@ -15,6 +16,7 @@ class d extends s.A {
     effectiveStartDate;
     effectiveEndDate;
     promotionEndDate;
+    promotionPriority;
     static createFromServer(e, t) {
         let n = null != e.start_date ? new Date(e.start_date) : null,
             i = null != e.end_date ? new Date(e.end_date) : null,
@@ -30,6 +32,7 @@ class d extends s.A {
             effectiveStartDate: n ?? r,
             effectiveEndDate: i ?? s,
             promotionEndDate: s,
+            promotionPriority: t?.priority ?? 101,
         });
     }
     constructor(e) {
@@ -42,7 +45,8 @@ class d extends s.A {
             (this.endDate = e.endDate),
             (this.effectiveStartDate = e.effectiveStartDate),
             (this.effectiveEndDate = e.effectiveEndDate),
-            (this.promotionEndDate = e.promotionEndDate));
+            (this.promotionEndDate = e.promotionEndDate),
+            (this.promotionPriority = e.promotionPriority));
     }
     getFormatVariableValues(e) {
         var t, n;

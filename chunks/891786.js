@@ -1,4 +1,5 @@
 function i(e, t) {
+    if (e.promotionPriority !== t.promotionPriority) return e.promotionPriority - t.promotionPriority;
     let n = e.effectiveStartDate?.getTime() ?? -1 / 0,
         i = t.effectiveStartDate?.getTime() ?? -1 / 0;
     if (n !== i) return i - n;

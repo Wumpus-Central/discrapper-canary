@@ -29,10 +29,12 @@ class l extends r.A {
     bogoRewardEnabled;
     boostBogoMaxCredits;
     promotionKey;
+    priority;
     static createFromServer(e) {
         let t = new Date(e.start_date),
             n = new Date(e.end_date),
-            i = e.metadata?.premium_promotion?.reward_config?.boost_bogo;
+            i = e.metadata?.premium_promotion?.reward_config?.boost_bogo,
+            r = e.priority ?? 101;
         return new l({
             id: e.id,
             trialId: e.trial_id,
@@ -56,13 +58,14 @@ class l extends r.A {
             promotionType: e.promotion_type,
             partnerId: e.partner_id ?? null,
             marketingComponents: (e.marketing_components ?? []).map((e) =>
-                a.A.createFromServer(e, { startDate: t, endDate: n }),
+                a.A.createFromServer(e, { startDate: t, endDate: n, priority: r }),
             ),
             rewardSkuIds:
                 e.metadata?.premium_promotion?.reward_sku_ids ?? e.metadata?.gift_promotion?.reward_sku_ids ?? [],
             bogoRewardEnabled: e.metadata?.premium_promotion?.reward_config?.bogo?.enabled === !0,
             boostBogoMaxCredits: i?.enabled === !0 ? (i.max_credits_per_user ?? null) : null,
             promotionKey: e.promotion_key ?? "",
+            priority: r,
         });
     }
     constructor(e) {
@@ -91,7 +94,8 @@ class l extends r.A {
             (this.rewardSkuIds = e.rewardSkuIds),
             (this.bogoRewardEnabled = e.bogoRewardEnabled ?? !1),
             (this.boostBogoMaxCredits = e.boostBogoMaxCredits ?? null),
-            (this.promotionKey = e.promotionKey));
+            (this.promotionKey = e.promotionKey),
+            (this.priority = e.priority ?? 101));
     }
     get isBogo() {
         return this.promotionType === s.pt.BOGO;
