@@ -99,7 +99,7 @@ var z = t(898523),
     et = t(199023);
 function es(e) {
     let { applicationId: l, backgroundImageAssetId: t, isHero: n = !1 } = e,
-        a = null != t ? (0, el.YE)(l, t, 1024, N.pV) : null;
+        a = null != t ? (0, el.YE)(l, t, 2048, N.pV) : null;
     return (0, s.jsx)("div", {
         className: i()(et._Q, { [et.gv]: n }),
         children:
