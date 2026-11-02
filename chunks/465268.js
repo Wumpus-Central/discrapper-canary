@@ -48,15 +48,15 @@ var a = l(477900),
     Y = l(477155),
     Z = l(939249),
     Q = l(417270),
-    q = l(696016),
-    J = l(185973),
+    J = l(696016),
+    q = l(185973),
     ee = l(105292),
     et = l(301187),
     el = l(367454);
 let ea = [
-    { preset: q.yz.ORIGINAL, icon: W.k, label: J.default.CujCES },
-    { preset: q.yz.PORTRAIT_9_16, icon: V.u, label: J.default["34PW6m"] },
-    { preset: q.yz.LANDSCAPE_16_9, icon: K.U, label: J.default.ywAdnD },
+    { preset: J.yz.ORIGINAL, icon: W.k, label: q.default.CujCES },
+    { preset: J.yz.PORTRAIT_9_16, icon: V.u, label: q.default["34PW6m"] },
+    { preset: J.yz.LANDSCAPE_16_9, icon: K.U, label: q.default.ywAdnD },
 ];
 function en() {
     let { cropPreset: e, setCropPreset: t, setActiveTool: l } = (0, H.T)();
@@ -70,7 +70,7 @@ function en() {
                     variant: "secondary",
                     icon: Y.r,
                     iconPosition: "start",
-                    text: ee.intl.string(J.default["7yBrfD"]),
+                    text: ee.intl.string(q.default["7yBrfD"]),
                     onClick: () => l(B.Y.NONE),
                 }),
             }),
@@ -80,7 +80,7 @@ function en() {
                     (0, a.jsx)(r.E, {
                         variant: "text-md/semibold",
                         color: "text-default",
-                        children: ee.intl.string(J.default["1TOrU3"]),
+                        children: ee.intl.string(q.default["1TOrU3"]),
                     }),
                     (0, a.jsxs)("div", {
                         className: el.Ln,
@@ -88,7 +88,7 @@ function en() {
                             (0, a.jsx)(r.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-subtle",
-                                children: ee.intl.string(J.default.r15Wrn),
+                                children: ee.intl.string(q.default.r15Wrn),
                             }),
                             (0, a.jsx)("div", {
                                 className: el.si,
@@ -124,8 +124,8 @@ function en() {
                     variant: "secondary",
                     icon: Q.RetryIcon,
                     iconPosition: "start",
-                    text: ee.intl.string(J.default.XdZS9I),
-                    onClick: () => t(q.yz.ORIGINAL),
+                    text: ee.intl.string(q.default.XdZS9I),
+                    onClick: () => t(J.yz.ORIGINAL),
                 }),
             }),
         ],
@@ -146,7 +146,7 @@ function ec(e) {
             autoFocus: !0,
             value: o,
             placeholder: u,
-            minLength: q.U_,
+            minLength: J.U_,
             maxLength: 200,
             onChange: (e) => c("" === e ? void 0 : e),
             onBlur: () => m(!1),
@@ -170,17 +170,17 @@ var eu = l(317097),
     ef = l(393688),
     eh = l(839578);
 let ep = [
-        { value: q.Hz.NONE, label: J.default.IqUUKg },
-        { value: q.Hz.SMALL, label: J.default.VearyN },
-        { value: q.Hz.MEDIUM, label: J.default.AJsDsD },
-        { value: q.Hz.LARGE, label: J.default.k5w7Jy },
+        { value: J.Hz.NONE, label: q.default.IqUUKg },
+        { value: J.Hz.SMALL, label: q.default.VearyN },
+        { value: J.Hz.MEDIUM, label: q.default.AJsDsD },
+        { value: J.Hz.LARGE, label: q.default.k5w7Jy },
     ],
     ex = [0, 0xffffff, 0xfe6e0d, 5793266, 0xff4cd2];
 function ev(e) {
     let { track: t } = e,
         { updateImageTrackData: l, pickAndReplaceImage: n, setSelectedTrackId: i, removeTrack: s } = (0, em.fn)(),
-        o = t.data.shadow ?? q.xy,
-        c = t.data.shadowColor ?? q.pk;
+        o = t.data.shadow ?? J.xy,
+        c = t.data.shadowColor ?? J.pk;
     return (0, a.jsxs)("div", {
         className: et.XV,
         children: [
@@ -191,7 +191,7 @@ function ev(e) {
                     variant: "secondary",
                     icon: Y.r,
                     iconPosition: "start",
-                    text: ee.intl.string(J.default["7yBrfD"]),
+                    text: ee.intl.string(q.default["7yBrfD"]),
                     onClick: () => i(null),
                 }),
             }),
@@ -203,7 +203,7 @@ function ev(e) {
                         children: (0, a.jsx)(r.E, {
                             variant: "text-md/semibold",
                             color: "text-default",
-                            children: ee.intl.string(J.default.S0ODmT),
+                            children: ee.intl.string(q.default.S0ODmT),
                         }),
                     }),
                     (0, a.jsxs)("div", {
@@ -226,7 +226,7 @@ function ev(e) {
                                 icon: N.X,
                                 iconPosition: "start",
                                 fullWidth: !0,
-                                text: ee.intl.string(J.default.wR5R9w),
+                                text: ee.intl.string(q.default.wR5R9w),
                                 onClick: () => n(t.id),
                             }),
                         ],
@@ -237,7 +237,7 @@ function ev(e) {
                             (0, a.jsx)(r.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-subtle",
-                                children: ee.intl.string(J.default["/v2zZ+"]),
+                                children: ee.intl.string(q.default["/v2zZ+"]),
                             }),
                             (0, a.jsx)("div", {
                                 className: ef.p,
@@ -261,17 +261,17 @@ function ev(e) {
                             }),
                         ],
                     }),
-                    o !== q.Hz.NONE &&
+                    o !== J.Hz.NONE &&
                         (0, a.jsxs)("div", {
                             className: eh.zo,
                             children: [
                                 (0, a.jsx)(r.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-subtle",
-                                    children: ee.intl.string(J.default.P5dSl0),
+                                    children: ee.intl.string(q.default.P5dSl0),
                                 }),
                                 (0, a.jsx)(ed.default, {
-                                    defaultColor: (0, eu.LX)(q.pk),
+                                    defaultColor: (0, eu.LX)(J.pk),
                                     colors: ex,
                                     className: eh.Ei,
                                     colorContainerClassName: eh.oP,
@@ -291,7 +291,7 @@ function ev(e) {
                     icon: p.TrashIcon,
                     iconPosition: "start",
                     fullWidth: !0,
-                    text: ee.intl.string(J.default.ytiENm),
+                    text: ee.intl.string(q.default.ytiENm),
                     onClick: () => s(t.id),
                 }),
             }),
@@ -299,178 +299,189 @@ function ev(e) {
     });
 }
 let eg = [
-        { value: 0.04, label: J.default.zYVcjp },
-        { value: 0.06, label: J.default.LGX80j },
-        { value: 0.09, label: J.default.sa6Q0q },
+        { value: 0.04, label: q.default.zYVcjp },
+        { value: 0.06, label: q.default.LGX80j },
+        { value: 0.09, label: q.default.sa6Q0q },
     ],
     eb = [
-        { value: q.UY.NONE, label: J.default["tYuPp+"] },
-        { value: q.UY.SMALL, label: J.default["42Skzz"] },
-        { value: q.UY.MEDIUM, label: J.default["Ujlm+F"] },
-        { value: q.UY.LARGE, label: J.default.lT4Cq2 },
+        { value: J.UY.NONE, label: q.default["tYuPp+"] },
+        { value: J.UY.SMALL, label: q.default["42Skzz"] },
+        { value: J.UY.MEDIUM, label: q.default["Ujlm+F"] },
+        { value: J.UY.LARGE, label: q.default.lT4Cq2 },
     ],
     ej = [0xfe6e0d, 0xffe047, 3534206, 5793266, 0xff4cd2];
 function ey(e) {
     let { track: t } = e,
-        { updateTextTrackData: l, setSelectedTrackId: n, removeTrack: i } = (0, em.fn)();
-    return (0, a.jsxs)("div", {
-        className: et.XV,
-        children: [
-            (0, a.jsx)("div", {
-                className: el.CD,
-                children: (0, a.jsx)(j.$, {
-                    size: "sm",
-                    variant: "secondary",
-                    icon: Y.r,
-                    iconPosition: "start",
-                    text: ee.intl.string(J.default["7yBrfD"]),
-                    onClick: () => n(null),
+        { updateTextTrackData: l, setSelectedTrackId: i, removeTrack: s, textTrackIdToFocus: o } = (0, em.fn)(),
+        c = n.useRef(null);
+    return (
+        n.useEffect(() => {
+            o === t.id && (c.current?.focus(), c.current?.select());
+        }, [o, t.id]),
+        (0, a.jsxs)("div", {
+            className: et.XV,
+            children: [
+                (0, a.jsx)("div", {
+                    className: el.CD,
+                    children: (0, a.jsx)(j.$, {
+                        size: "sm",
+                        variant: "secondary",
+                        icon: Y.r,
+                        iconPosition: "start",
+                        text: ee.intl.string(q.default["7yBrfD"]),
+                        onClick: () => i(null),
+                    }),
                 }),
-            }),
-            (0, a.jsxs)(b.Ip, {
-                className: el.hX,
-                children: [
-                    (0, a.jsx)("div", {
-                        className: eh.r5,
-                        children: (0, a.jsx)(r.E, {
-                            variant: "text-md/semibold",
-                            color: "text-default",
-                            children: ee.intl.string(J.default.GtvDbf),
+                (0, a.jsxs)(b.Ip, {
+                    className: el.hX,
+                    children: [
+                        (0, a.jsx)("div", {
+                            className: eh.r5,
+                            children: (0, a.jsx)(r.E, {
+                                variant: "text-md/semibold",
+                                color: "text-default",
+                                children: ee.intl.string(q.default.GtvDbf),
+                            }),
                         }),
-                    }),
-                    (0, a.jsxs)("div", {
-                        className: el.Ln,
-                        children: [
-                            (0, a.jsx)(r.E, {
-                                variant: "text-sm/semibold",
-                                color: "text-subtle",
-                                children: ee.intl.string(J.default["R/JN4b"]),
-                            }),
-                            (0, a.jsx)(ei.k, {
-                                value: t.data.text,
-                                onChange: (e) => l(t.id, (t) => ({ ...t, text: e })),
-                            }),
-                        ],
-                    }),
-                    (0, a.jsxs)("div", {
-                        className: el.Ln,
-                        children: [
-                            (0, a.jsx)(r.E, {
-                                variant: "text-sm/semibold",
-                                color: "text-subtle",
-                                children: ee.intl.string(J.default["4eAE08"]),
-                            }),
-                            (0, a.jsx)("div", {
-                                className: el.si,
-                                children: eg.map((e) => {
-                                    let { value: n, label: i } = e,
-                                        s = t.data.style.fontSize === n;
-                                    return (0, a.jsx)(
-                                        Z.D,
-                                        {
-                                            "aria-pressed": s,
-                                            className: F()(el.is, s && el.j5),
-                                            onClick: () =>
-                                                l(t.id, (e) => ({ ...e, style: { ...e.style, fontSize: n } })),
-                                            children: (0, a.jsx)(r.E, {
-                                                variant: "text-sm/medium",
-                                                children: ee.intl.string(i),
-                                            }),
-                                        },
-                                        n,
-                                    );
+                        (0, a.jsxs)("div", {
+                            className: el.Ln,
+                            children: [
+                                (0, a.jsx)(r.E, {
+                                    variant: "text-sm/semibold",
+                                    color: "text-subtle",
+                                    children: ee.intl.string(q.default["R/JN4b"]),
                                 }),
-                            }),
-                        ],
-                    }),
-                    (0, a.jsxs)("div", {
-                        className: eh.zo,
-                        children: [
-                            (0, a.jsx)(r.E, {
-                                variant: "text-sm/semibold",
-                                color: "text-subtle",
-                                children: ee.intl.string(J.default["9oleCI"]),
-                            }),
-                            (0, a.jsx)(ed.default, {
-                                defaultColor: 0xffffff,
-                                colors: ej,
-                                className: eh.Ei,
-                                colorContainerClassName: eh.oP,
-                                value: (0, eu.LX)(t.data.style.color),
-                                onChange: (e) =>
-                                    l(t.id, (t) => ({ ...t, style: { ...t.style, color: (0, eu.Hl)(e) } })),
-                                allowBlackCustomColor: !0,
-                            }),
-                        ],
-                    }),
-                    (0, a.jsxs)("div", {
-                        className: el.Ln,
-                        children: [
-                            (0, a.jsx)(r.E, {
-                                variant: "text-sm/semibold",
-                                color: "text-subtle",
-                                children: ee.intl.string(J.default.huZ6Mm),
-                            }),
-                            (0, a.jsx)("div", {
-                                className: el.si,
-                                children: eb.map((e) => {
-                                    let { value: n, label: i } = e,
-                                        s = t.data.style.strokeWidth === n;
-                                    return (0, a.jsx)(
-                                        Z.D,
-                                        {
-                                            "aria-pressed": s,
-                                            className: F()(el.is, s && el.j5),
-                                            onClick: () =>
-                                                l(t.id, (e) => ({ ...e, style: { ...e.style, strokeWidth: n } })),
-                                            children: (0, a.jsx)(r.E, {
-                                                variant: "text-sm/medium",
-                                                children: ee.intl.string(i),
-                                            }),
-                                        },
-                                        n,
-                                    );
+                                (0, a.jsx)(ei.k, {
+                                    inputRef: c,
+                                    "aria-label": ee.intl.string(q.default["R/JN4b"]),
+                                    value: t.data.text,
+                                    onChange: (e) => l(t.id, (t) => ({ ...t, text: e })),
                                 }),
-                            }),
-                        ],
-                    }),
-                    t.data.style.strokeWidth !== q.UY.NONE &&
+                            ],
+                        }),
+                        (0, a.jsxs)("div", {
+                            className: el.Ln,
+                            children: [
+                                (0, a.jsx)(r.E, {
+                                    variant: "text-sm/semibold",
+                                    color: "text-subtle",
+                                    children: ee.intl.string(q.default["4eAE08"]),
+                                }),
+                                (0, a.jsx)("div", {
+                                    className: el.si,
+                                    children: eg.map((e) => {
+                                        let { value: n, label: i } = e,
+                                            s = t.data.style.fontSize === n;
+                                        return (0, a.jsx)(
+                                            Z.D,
+                                            {
+                                                "aria-pressed": s,
+                                                className: F()(el.is, s && el.j5),
+                                                onClick: () =>
+                                                    l(t.id, (e) => ({ ...e, style: { ...e.style, fontSize: n } })),
+                                                children: (0, a.jsx)(r.E, {
+                                                    variant: "text-sm/medium",
+                                                    children: ee.intl.string(i),
+                                                }),
+                                            },
+                                            n,
+                                        );
+                                    }),
+                                }),
+                            ],
+                        }),
                         (0, a.jsxs)("div", {
                             className: eh.zo,
                             children: [
                                 (0, a.jsx)(r.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-subtle",
-                                    children: ee.intl.string(J.default.iQZQyA),
+                                    children: ee.intl.string(q.default["9oleCI"]),
                                 }),
                                 (0, a.jsx)(ed.default, {
-                                    defaultColor: 0,
+                                    defaultColor: 0xffffff,
                                     colors: ej,
                                     className: eh.Ei,
                                     colorContainerClassName: eh.oP,
-                                    value: (0, eu.LX)(t.data.style.strokeColor),
+                                    value: (0, eu.LX)(t.data.style.color),
                                     onChange: (e) =>
-                                        l(t.id, (t) => ({ ...t, style: { ...t.style, strokeColor: (0, eu.Hl)(e) } })),
+                                        l(t.id, (t) => ({ ...t, style: { ...t.style, color: (0, eu.Hl)(e) } })),
                                     allowBlackCustomColor: !0,
                                 }),
                             ],
                         }),
-                ],
-            }),
-            (0, a.jsx)("div", {
-                className: et.G3,
-                children: (0, a.jsx)(j.$, {
-                    size: "md",
-                    variant: "secondary",
-                    icon: p.TrashIcon,
-                    iconPosition: "start",
-                    fullWidth: !0,
-                    text: ee.intl.string(J.default.LYpz7y),
-                    onClick: () => i(t.id),
+                        (0, a.jsxs)("div", {
+                            className: el.Ln,
+                            children: [
+                                (0, a.jsx)(r.E, {
+                                    variant: "text-sm/semibold",
+                                    color: "text-subtle",
+                                    children: ee.intl.string(q.default.huZ6Mm),
+                                }),
+                                (0, a.jsx)("div", {
+                                    className: el.si,
+                                    children: eb.map((e) => {
+                                        let { value: n, label: i } = e,
+                                            s = t.data.style.strokeWidth === n;
+                                        return (0, a.jsx)(
+                                            Z.D,
+                                            {
+                                                "aria-pressed": s,
+                                                className: F()(el.is, s && el.j5),
+                                                onClick: () =>
+                                                    l(t.id, (e) => ({ ...e, style: { ...e.style, strokeWidth: n } })),
+                                                children: (0, a.jsx)(r.E, {
+                                                    variant: "text-sm/medium",
+                                                    children: ee.intl.string(i),
+                                                }),
+                                            },
+                                            n,
+                                        );
+                                    }),
+                                }),
+                            ],
+                        }),
+                        t.data.style.strokeWidth !== J.UY.NONE &&
+                            (0, a.jsxs)("div", {
+                                className: eh.zo,
+                                children: [
+                                    (0, a.jsx)(r.E, {
+                                        variant: "text-sm/semibold",
+                                        color: "text-subtle",
+                                        children: ee.intl.string(q.default.iQZQyA),
+                                    }),
+                                    (0, a.jsx)(ed.default, {
+                                        defaultColor: 0,
+                                        colors: ej,
+                                        className: eh.Ei,
+                                        colorContainerClassName: eh.oP,
+                                        value: (0, eu.LX)(t.data.style.strokeColor),
+                                        onChange: (e) =>
+                                            l(t.id, (t) => ({
+                                                ...t,
+                                                style: { ...t.style, strokeColor: (0, eu.Hl)(e) },
+                                            })),
+                                        allowBlackCustomColor: !0,
+                                    }),
+                                ],
+                            }),
+                    ],
                 }),
-            }),
-        ],
-    });
+                (0, a.jsx)("div", {
+                    className: et.G3,
+                    children: (0, a.jsx)(j.$, {
+                        size: "md",
+                        variant: "secondary",
+                        icon: p.TrashIcon,
+                        iconPosition: "start",
+                        fullWidth: !0,
+                        text: ee.intl.string(q.default.LYpz7y),
+                        onClick: () => s(t.id),
+                    }),
+                }),
+            ],
+        })
+    );
 }
 let eC = P.I.difference(new Set([P.C.EXPORT_TO_SOUNDBOARD, P.C.FAVORITE, P.C.DELETE, P.C.MAIN_ACTION, P.C.EDIT]));
 function eN(e) {
@@ -507,9 +518,9 @@ function ew(e) {
         i = l.find((e) => e.id === n);
     if (null != i)
         switch (i.type) {
-            case q.Me.TEXT:
+            case J.Me.TEXT:
                 return (0, a.jsx)(ey, { track: i });
-            case q.Me.IMAGE:
+            case J.Me.IMAGE:
                 return (0, a.jsx)(ev, { track: i });
         }
     switch (t) {
@@ -539,16 +550,16 @@ function eE(e) {
         { analyticsLocations: es } = (0, T.Ay)(R.A.CLIPS_EDITOR),
         { addTextTrack: eo, pickAndAddImageTrack: eu, setSelectedTrackId: ed } = (0, em.fn)(),
         { isCropEnabled: ef, isTextTrackEnabled: eh, isImageTrackEnabled: ep } = (0, em.As)(),
-        ex = ea.type === q.nQ.SCREENSHOT,
-        ev = ea.type === q.nQ.VOICE_CLIP,
+        ex = ea.type === J.nQ.SCREENSHOT,
+        ev = ea.type === J.nQ.VOICE_CLIP,
         eg = (0, I.h)(ea.applicationId),
         eb = (0, i.bG)([S.Ay], () => S.Ay.isClipExporting(ea.id)),
         { onShareClick: ej } = (0, G.A)(t),
         { picker: ey } = n.useContext(_.$),
         ew = (0, z.$)(ey?.action),
         eE = (0, i.bG)([D.A], () => D.A.isDeveloper),
-        ek = n.useMemo(() => er.filter((e) => e.trackName.includes(q.gC.VOICE)).length, [er]),
-        eA = n.useMemo(() => er.filter((e) => e.trackName.includes(q.gC.SOUNDBOARD)).length, [er]),
+        ek = n.useMemo(() => er.filter((e) => e.trackName.includes(J.gC.VOICE)).length, [er]),
+        eA = n.useMemo(() => er.filter((e) => e.trackName.includes(J.gC.SOUNDBOARD)).length, [er]),
         eL = eg?.name ?? ea.applicationName ?? ee.intl.string(ee.t.GnQui9);
     async function eR() {
         await (0, $.n)(X(), { channelId: t, analyticsLocations: es });
@@ -569,14 +580,14 @@ function eE(e) {
                             (0, a.jsx)(m.m, {
                                 position: "bottom",
                                 text: ea.isFavorite
-                                    ? ee.intl.string(J.default.IZsalP)
-                                    : ee.intl.string(J.default.ihBfyA),
+                                    ? ee.intl.string(q.default.IZsalP)
+                                    : ee.intl.string(q.default.ihBfyA),
                                 children: (0, a.jsx)(s.K, {
                                     onClick: () => (0, O.XK)(ea),
                                     variant: "icon-only",
                                     "aria-label": ea.isFavorite
-                                        ? ee.intl.string(J.default.IZsalP)
-                                        : ee.intl.string(J.default.ihBfyA),
+                                        ? ee.intl.string(q.default.IZsalP)
+                                        : ee.intl.string(q.default.ihBfyA),
                                     icon: ea.isFavorite ? f.StarIcon : h.y,
                                 }),
                             }),
@@ -679,7 +690,7 @@ function eE(e) {
                             (0, a.jsx)(r.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-subtle",
-                                children: ee.intl.string(J.default.JrcRaE),
+                                children: ee.intl.string(q.default.JrcRaE),
                             }),
                             (0, a.jsxs)("div", {
                                 className: el.L0,
@@ -709,7 +720,7 @@ function eE(e) {
                                 (0, a.jsx)(r.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-subtle",
-                                    children: ee.intl.string(J.default.FmXxW6),
+                                    children: ee.intl.string(q.default.FmXxW6),
                                 }),
                                 ef &&
                                     (0, a.jsx)(j.$, {
@@ -717,7 +728,7 @@ function eE(e) {
                                         icon: y.K,
                                         iconPosition: "start",
                                         fullWidth: !0,
-                                        text: ee.intl.string(J.default.RiEyiS),
+                                        text: ee.intl.string(q.default.RiEyiS),
                                         onClick: () => {
                                             (ed(null), ei(B.Y.CROP));
                                         },
@@ -728,7 +739,7 @@ function eE(e) {
                                         icon: C.x,
                                         iconPosition: "start",
                                         fullWidth: !0,
-                                        text: ee.intl.string(J.default.zSN9vp),
+                                        text: ee.intl.string(q.default.zSN9vp),
                                         onClick: eo,
                                     }),
                                 ep &&
@@ -737,7 +748,7 @@ function eE(e) {
                                         icon: N.X,
                                         iconPosition: "start",
                                         fullWidth: !0,
-                                        text: ee.intl.string(J.default.iFo3gj),
+                                        text: ee.intl.string(q.default.iFo3gj),
                                         onClick: eu,
                                     }),
                             ],
@@ -749,7 +760,7 @@ function eE(e) {
                                 (0, a.jsx)(r.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-subtle",
-                                    children: ee.intl.string(J.default.KRnA2D),
+                                    children: ee.intl.string(q.default.KRnA2D),
                                 }),
                                 (0, a.jsxs)("div", {
                                     className: el.VZ,
@@ -765,7 +776,7 @@ function eE(e) {
                                         }),
                                         (0, a.jsx)(eN, {
                                             icon: (0, a.jsx)(E.MicrophoneIcon, { size: "sm", color: "currentColor" }),
-                                            label: ee.intl.string(J.default.ai9fWO),
+                                            label: ee.intl.string(q.default.ai9fWO),
                                             count: ek,
                                             enabled: F,
                                             disabled: 0 === ek,
@@ -773,7 +784,7 @@ function eE(e) {
                                         }),
                                         (0, a.jsx)(eN, {
                                             icon: (0, a.jsx)(k.J, { size: "sm", color: "currentColor" }),
-                                            label: ee.intl.string(J.default["/VVQKJ"]),
+                                            label: ee.intl.string(q.default["/VVQKJ"]),
                                             enabled: Y,
                                             disabled: 0 === eA,
                                             onToggle: Z,
@@ -812,7 +823,7 @@ function eE(e) {
                                       icon: A.PlusLargeIcon,
                                       iconPosition: "start",
                                       onClick: eR,
-                                      text: ee.intl.string(J.default.HH4Tjj),
+                                      text: ee.intl.string(q.default.HH4Tjj),
                                   }),
                                   (0, a.jsx)(j.$, {
                                       loading: eb,

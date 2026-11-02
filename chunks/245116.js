@@ -100,50 +100,53 @@ function v(e) {
         } = (0, p.T)(),
         { enabled: v } = r.useConfig({ location: "ClipsEditorContextProvider" }),
         [b, j] = n.useState(null),
-        y = n.useCallback(
+        [y, C] = n.useState(null),
+        N = n.useCallback(
             (e) => {
-                (i(h.Y.NONE), j(e));
+                (i(h.Y.NONE), j(e), C(null));
             },
             [i],
         ),
-        C = n.useCallback(() => {
-            j(o());
+        w = n.useCallback(() => {
+            let e = o();
+            (j(e), C(e));
         }, [o]),
-        N = n.useCallback(async () => {
+        E = n.useCallback(async () => {
             let e = await g();
             null != e && j(c(e));
         }, [c]),
-        w = n.useCallback(
+        k = n.useCallback(
             async (e) => {
                 let t = await g();
                 null != t && f(e, (e) => ({ ...e, ...t }));
             },
             [f],
         ),
-        E = n.useCallback(
+        A = n.useCallback(
             (e) => {
                 (u(e), j((t) => (t === e ? null : t)));
             },
             [u],
         ),
-        k = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: v }), [l, !0, v]),
-        A = n.useMemo(
+        L = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: v }), [l, !0, v]),
+        R = n.useMemo(
             () => ({
                 tracks: s,
                 selectedTrackId: b,
-                setSelectedTrackId: y,
-                addTextTrack: C,
-                pickAndAddImageTrack: N,
-                pickAndReplaceImage: w,
-                removeTrack: E,
+                textTrackIdToFocus: y,
+                setSelectedTrackId: N,
+                addTextTrack: w,
+                pickAndAddImageTrack: E,
+                pickAndReplaceImage: k,
+                removeTrack: A,
                 updateTrackRange: d,
                 updateTextTrackData: m,
                 updateImageTrackData: f,
-                editorFeatures: k,
+                editorFeatures: L,
             }),
-            [s, b, y, C, N, w, E, d, m, f, k],
+            [s, b, y, N, w, E, k, A, d, m, f, L],
         );
-    return (0, a.jsx)(x.Provider, { value: A, children: t });
+    return (0, a.jsx)(x.Provider, { value: R, children: t });
 }
 async function g() {
     try {
