@@ -1,5 +1,5 @@
 let i, r;
-n.d(t, { A: () => T });
+n.d(t, { A: () => m });
 var a = n(73153),
     s = n(274593),
     l = n(626584),
@@ -21,7 +21,7 @@ function I(e) {
 function p(e, t) {
     "" !== e && I(e);
 }
-let T = {
+let m = {
     init(e) {
         let { userToken: t, userId: n, installPaths: a, platform: s, stateCallback: l, errorCallback: d } = e;
         null == r &&
@@ -37,7 +37,7 @@ let T = {
                     )
                   : Promise.reject(Error("not desktop client"))
             ).then((e) => {
-                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "660235" },
+                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "660236" },
                     u = o.default.getCurrentUser();
                 null != u && ((i.user_id = u.id), (i.user_name = u.tag), null != u.email && (i.email = u.email));
                 let _ = {

@@ -33,8 +33,8 @@ function p() {
         (f = []),
         null != I && (clearTimeout(I), (I = null)));
 }
-var T = n(777334),
-    m = n(211753),
+var m = n(777334),
+    T = n(211753),
     g = n(41984),
     S = n(158390),
     N = n(296027),
@@ -337,7 +337,7 @@ function ea(e, t) {
                             }
                     });
                 } catch (e) {
-                    (Q.error("tryUploadDiscordHookCrashes", e), (0, T.pj)(e, g.Ue.Hook));
+                    (Q.error("tryUploadDiscordHookCrashes", e), (0, m.pj)(e, g.Ue.Hook));
                 }
             })()),
         $.delete(e),
@@ -356,11 +356,11 @@ async function es(e) {
             e.createHostProcess(t, eh, eA);
         } else (e.destroyHostProcess(), eu((0, U.getPID)()));
     } catch (t) {
-        (Q.error("reconcileHostProcess", t), (0, T.pj)(t, g.Ue.Hook), eu((0, U.getPID)()));
+        (Q.error("reconcileHostProcess", t), (0, m.pj)(t, g.Ue.Hook), eu((0, U.getPID)()));
         try {
             e.destroyHostProcess();
         } catch (e) {
-            (Q.error("reconcileHostProcess: destroyHostProcess", e), (0, T.pj)(e, g.Ue.Hook));
+            (Q.error("reconcileHostProcess: destroyHostProcess", e), (0, m.pj)(e, g.Ue.Hook));
         }
     }
 }
@@ -404,7 +404,7 @@ async function eo(e) {
             (en = "detach.reconcileHostProcess"),
             await es(t));
     } catch (t) {
-        ((0, T.pj)(t, g.Ue.Hook), Q.error(`Error during overlay detachment for pid ${e}:`, t), ea(e, null));
+        ((0, m.pj)(t, g.Ue.Hook), Q.error(`Error during overlay detachment for pid ${e}:`, t), ea(e, null));
     }
 }
 async function ed(e) {
@@ -421,7 +421,7 @@ async function ed(e) {
         try {
             (await t.deconstructor(), Y.delete(e));
         } catch (n) {
-            ((0, T.pj)(n, g.Ue.Hook), Q.error(`Failed to deconstruct tracked game ${e}`, n), (k[e] = t), Y.add(e));
+            ((0, m.pj)(n, g.Ue.Hook), Q.error(`Failed to deconstruct tracked game ${e}`, n), (k[e] = t), Y.add(e));
         }
     }
     let n = !1;
@@ -607,7 +607,7 @@ function ep(e) {
                       }, 1e3)));
     }
 }
-async function eT(e, t) {
+async function em(e, t) {
     let n = await (0, w.R)();
     if (null == n) return void Q.error("setInputLocked: overlay module failed loaded");
     let i = t ?? W;
@@ -616,15 +616,15 @@ async function eT(e, t) {
     try {
         null != i && i !== U.DEV_PID && n.sendCommand(i, { message: "intercept_input", intercept: !e });
     } catch (e) {
-        ((0, T.pj)(e, g.Ue.Hook), Q.error("Error during input lock", e));
+        ((0, m.pj)(e, g.Ue.Hook), Q.error("Error during input lock", e));
     }
 }
-function em(e, t) {
-    e ? setTimeout(() => eT(e, t), 200) : eT(e, t);
+function eT(e, t) {
+    e ? setTimeout(() => em(e, t), 200) : em(e, t);
 }
 let eg = null;
 function eS() {
-    A.A.hasLoadedExperiments && !F && ((F = !0), eE(m.x.legacyEnabled));
+    A.A.hasLoadedExperiments && !F && ((F = !0), eE(T.x.legacyEnabled));
 }
 class eN extends a.Ay.Store {
     static displayName = "OverlayBridgeStore";
@@ -731,24 +731,24 @@ let eC = new eN(
                           if ((t ? $.delete(n) : $.add(n), Z.clear(), null != eg && (clearTimeout(eg), (eg = null), t)))
                               return;
                           t
-                              ? em(t, n)
+                              ? eT(t, n)
                               : (eg = setTimeout(() => {
-                                    (em(t, n), (eg = null));
+                                    (eT(t, n), (eg = null));
                                 }, 100));
                       }
                   },
                   OVERLAY_ACTIVATE_REGION: function (e) {
                       let { region: t } = e;
-                      (Z.add(t), em(!1, W));
+                      (Z.add(t), eT(!1, W));
                   },
                   OVERLAY_DEACTIVATE_ALL_REGIONS: function () {
-                      (Z.clear(), em(!0, W));
+                      (Z.clear(), eT(!0, W));
                   },
                   RPC_SERVER_READY: function (e) {
                       let { port: t } = e;
                       K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "46f3b2160590176a5a1aa1fe8ea20ce483a5719e"),
+                      (n.append("build_id", "67f02596f4d1446e639385408e812eddfa16aa1d"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", K),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
@@ -764,7 +764,7 @@ let eC = new eN(
                               error_description: n instanceof Error ? n.stack : void 0,
                           }),
                           Q.verbose(`OverlayBridgeStore: handleOverlayCrashed: ${t}`),
-                          (0, T.St)(i, g.Ue.Hook));
+                          (0, m.St)(i, g.Ue.Hook));
                   },
                   OVERLAY_UPDATE_OVERLAY_METHOD: function (e) {
                       (Q.verbose("Updating OverlayMethod", {

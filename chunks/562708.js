@@ -17,8 +17,8 @@ let i, r, a, s, l, o, d, c, u;
         AnalyticsActionHandlers: () => K,
         NetworkActionNames: () => J.D3,
         ImpressionTypes: () => Q.z,
-        getSuperProperties: () => em,
-        extendSuperProperties: () => eT,
+        getSuperProperties: () => eT,
+        extendSuperProperties: () => em,
     }));
 var _ = n(812729),
     E = n.n(_),
@@ -35,8 +35,8 @@ function I(e) {
 (n(142703), n(667532), n(321073));
 var p = n(132500);
 n(423034);
-var T = n(80703),
-    m = n(17928),
+var m = n(80703),
+    T = n(17928),
     g = n(636537),
     S = n(187207),
     N = n(941426),
@@ -267,7 +267,7 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             c = (function (e) {
                                 if (null != r) return r;
                                 let t = e.fingerprint ?? a();
-                                return null != t ? (0, T.d)(t) : null;
+                                return null != t ? (0, m.d)(t) : null;
                             })(d);
                         if ((null != c && (d.properties.client_uuid = Y.generate(c)), $.push(d), $.length > 1e4)) {
                             let e = $.length - 1e4;
@@ -282,7 +282,7 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 let { analyticsToken: t, userId: n } = e;
                 return (null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1);
             }));
-        class Z extends m.Ay.Store {
+        class Z extends T.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
                 null != d && this.waitFor(...d);
@@ -504,21 +504,21 @@ if (null == a)
     } catch (e) {
         a = {};
     }
-function eT(e) {
+function em(e) {
     s = I((a = { ...a, ...e }));
 }
-function em() {
+function eT() {
     return a;
 }
 function eg() {
     return s;
 }
-eT(
+em(
     ((l = {}),
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("660235", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("660236", 10))) || (l.client_build_number = d),
     null == (c = eu?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

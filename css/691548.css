@@ -150,6 +150,7 @@
     border-image: url(/assets/91c1c10faf324dd3.svg) 15 fill/15px;
     border-style: solid;
     border-width: 0;
+    contain: inline-size;
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
@@ -244,8 +245,8 @@
 
 .picker__0b3ea {
     gap: var(--space-32);
-    max-width: 424px;
-    width: 100%
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .options__0b3ea,
@@ -261,7 +262,8 @@
 
 .grid__0b3ea {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 72px)
+    grid-template-columns: repeat(auto-fill, 72px);
+    max-width: clamp(248px, min(48.7vw - 15.4vh, 40vw) - var(--space-16), 424px)
 }
 
 .screen__348db {
@@ -444,4 +446,4 @@
     gap: var(--space-32)
 }
 
-/*# sourceMappingURL=691548.1ce541d202881b1b.css.map*/
+/*# sourceMappingURL=691548.36d935e35e107581.css.map*/

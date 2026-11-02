@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(321073));
+(n.d(t, { A: () => T }), n(321073));
 var i = n(636537),
     r = n(506774),
     a = n(73153),
@@ -15,7 +15,7 @@ let E = +d.A.Millis.HOUR,
     f = r.w.get("lastNonRequiredUpdateShown", Date.now()),
     I = ["win", "osx"],
     p = new o.A("AutoUpdateManager");
-class T extends s.A {
+class m extends s.A {
     _checkInterval = null;
     _callbacks = [];
     _bootstrapper = null;
@@ -119,7 +119,7 @@ class T extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "46f3b2160590176a5a1aa1fe8ea20ce483a5719e" === e.body.hash)
+                    if (null == e.body || "67f02596f4d1446e639385408e812eddfa16aa1d" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? A : h;
@@ -148,4 +148,4 @@ class T extends s.A {
             this._emitCallbacks());
     };
 }
-let m = new T();
+let T = new m();

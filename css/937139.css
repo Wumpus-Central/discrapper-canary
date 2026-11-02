@@ -1334,6 +1334,21 @@
     transition: transform .12s ease-out
 }
 
+.stage_be7585 {
+    height: 100%;
+    opacity: 0
+}
+
+.visible_be7585 {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.rive_be7585 {
+    height: 100%;
+    width: 100%
+}
+
 .container__6b0e6 {
     background-color: var(--black);
     height: 100%;
@@ -1359,4 +1374,4 @@
     top: var(--space-32)
 }
 
-/*# sourceMappingURL=257472.895948a157379985.css.map*/
+/*# sourceMappingURL=937139.ea81b11e3f36fe38.css.map*/
