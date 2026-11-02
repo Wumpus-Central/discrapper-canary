@@ -116,7 +116,7 @@ function N(e, t) {
         (0, u.fA)(e.wearable).forEach((i) => {
             let r = e[i],
                 a = u.qM[i][r]?.layer;
-            null != a && "" !== a && n.push(`${a}?height=${t}&width=${t}`);
+            null != a && "" !== a && n.push(`${a}?height=${t}&width=${t}&format=webp`);
         }),
         n
     );
