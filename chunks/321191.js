@@ -514,8 +514,11 @@ class eu extends h.A {
         let n = b.get(e);
         return n?.wishlistSettings?.[t] ?? null;
     }
+    getProfileReadState(e) {
+        return b.get(e)?.profileReadState;
+    }
     getProfileReadStateSectionAckedAt(e, t) {
-        return b.get(e)?.profileReadState?.[t] ?? null;
+        return this.getProfileReadState(e)?.[t] ?? null;
     }
     loadCache = () => {
         let e = this.readSnapshot(eu.LATEST_SNAPSHOT_VERSION);

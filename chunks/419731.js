@@ -33,5 +33,7 @@ function o(e, t) {
     return n;
 }
 function d(e, t) {
-    return null == t || l(e, t);
+    if (null == t) return !1;
+    let n = t[i.o.WISHLIST];
+    return null == n || l(e, n);
 }
