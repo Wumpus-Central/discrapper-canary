@@ -88,22 +88,26 @@ var R = n(931664),
     $ = n(765036);
 function Q(e) {
     let { targetElementRef: t, type: n, channelId: r } = e,
-        s = (0, H.H)("DefaultEmojisPopover"),
-        a = (0, K.RQ)((e) => null != e.activeView),
-        [o, u] = (0, G.kn)(s && !a ? [F.M.DEFAULT_EMOJIS_POPOVER] : []),
-        c = o === F.M.DEFAULT_EMOJIS_POPOVER,
-        d = i.useCallback(() => {
-            (u(z.i.TAKE_ACTION), (0, K.bf)(q.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
-        }, [u, n, r]),
-        h = i.useCallback(() => {
-            u(z.i.USER_DISMISS);
-        }, [u]);
-    return c
+        a = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        u = (0, H.H)("DefaultEmojisPopover"),
+        c = (0, K.RQ)((e) => null != e.activeView),
+        [d, h] = (0, G.kn)(u && !c ? [F.M.DEFAULT_EMOJIS_POPOVER] : []),
+        m = d === F.M.DEFAULT_EMOJIS_POPOVER,
+        f = i.useCallback(() => {
+            (h(z.i.TAKE_ACTION), (0, K.bf)(q.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
+        }, [h, n, r]),
+        p = i.useCallback(() => {
+            h(z.i.USER_DISMISS);
+        }, [h]);
+    return m
         ? (0, l.jsx)(B.A, {
               targetElementRef: t,
               graphic: {
                   type: "image",
-                  src: "https://cdn.discordapp.com/assets/content/5981958b8cc17387911929588ea3d63ce0b2d5469feb0d0b304482312f877a82.svg",
+                  src: a
+                      ? "https://cdn.discordapp.com/assets/content/5981958b8cc17387911929588ea3d63ce0b2d5469feb0d0b304482312f877a82.svg"
+                      : "https://cdn.discordapp.com/assets/content/31005fc3700808e96f5863cc2e9396930e592fdffcd85e1ec942d10c8b3fc2c9.webp",
+                  aspectRatio: "6/4",
               },
               badge: { type: "beta", variant: "expressive" },
               position: "top",
@@ -112,8 +116,8 @@ function Q(e) {
               title: T.intl.string($.default["6mcVBm"]),
               body: T.intl.string($.default.RhpNnh),
               gradientColor: "nitro-pink",
-              onRequestClose: h,
-              actions: [{ text: T.intl.string($.default.HtUpwy), onClick: d }],
+              onRequestClose: p,
+              actions: [{ text: T.intl.string($.default.HtUpwy), onClick: f }],
           })
         : null;
 }
