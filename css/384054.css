@@ -1,8 +1,8 @@
 .badge__28a97 {
     align-items: center;
-    background-color: var(--opacity-black-68);
+    background-color: var(--background-base-low);
     border-radius: 11px;
-    color: var(--text-overlay-light);
+    color: var(--interactive-text-default);
     display: flex;
     flex: 0 0 auto;
     gap: var(--space-4);
@@ -26,7 +26,7 @@
 
 .interactive__28a97:focus-visible,
 .interactive__28a97:hover {
-    background-color: var(--opacity-black-80)
+    color: var(--interactive-text-hover)
 }
 
 .dimensionlessImage_a22bfd {
@@ -48,4 +48,4 @@
     border-radius: 0
 }
 
-/*# sourceMappingURL=384054.d8dc1b0603849aaf.css.map*/
+/*# sourceMappingURL=384054.32a933bb2a5fbe06.css.map*/
