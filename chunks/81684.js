@@ -1636,11 +1636,10 @@ function t9(e) {
         u = null == t || a || o || d,
         { analyticsLocations: c } = (0, tf.Ay)();
     function h(e) {
-        null != s &&
-            ((0, $.YX)(ej.uss.QUICK_ACTIONS, { type: $.Z5.SOUNDBOARD, value: $.IP.SETTINGS_OPENED }),
+        ((0, $.YX)(ej.uss.QUICK_ACTIONS, { type: $.Z5.SOUNDBOARD, value: $.IP.SETTINGS_OPENED }),
             (0, g.L3)(e, async () => {
                 let { default: e } = await n.e("811562").then(n.bind(n, 666801));
-                return (t) => (0, l.jsx)(e, { sourceAnalyticsLocations: c, guildId: s, ...t });
+                return (t) => (0, l.jsx)(e, { sourceAnalyticsLocations: c, guildId: s ?? void 0, ...t });
             }));
     }
     let {

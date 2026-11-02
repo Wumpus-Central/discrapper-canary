@@ -68,17 +68,16 @@ function R(e) {
                 : P.intl.string(P.t["6EJvHt"]);
     }
     function eu(e) {
-        null != w &&
-            (0, c.L3)(e, async () => {
-                let { default: e } = await t.e("811562").then(t.bind(t, 666801));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        guildId: w,
-                        sourceAnalyticsLocations: J,
-                        ...n,
-                        onInteraction: (0, A.s)("SoundboardContextMenu", G),
-                    });
-            });
+        (0, c.L3)(e, async () => {
+            let { default: e } = await t.e("811562").then(t.bind(t, 666801));
+            return (n) =>
+                (0, i.jsx)(e, {
+                    guildId: w ?? void 0,
+                    sourceAnalyticsLocations: J,
+                    ...n,
+                    onInteraction: (0, A.s)("SoundboardContextMenu", G),
+                });
+        });
     }
     function ed() {
         (U(), null != L && ea(), Z && et(), D?.(O.P.SOUNDBOARD));

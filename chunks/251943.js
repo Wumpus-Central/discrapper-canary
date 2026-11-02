@@ -1160,7 +1160,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "660810";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "660821";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1509,7 +1509,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 660810, Version Hash: c79de1b5c8ee8cf8d1cd4f01294928bdd29ff4c8`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 660821, Version Hash: d93a06d7b3d4f25c5b1e20e807b68a1d77895138`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26176,7 +26176,7 @@ let ym = "isHideDevBanner",
                     className: tf()(yp.Wz, yp.mr),
                     children: [
                         (0, b.jsx)(yI, { className: yp.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "660810" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "660821" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -27218,17 +27218,16 @@ function va(e) {
             d || c(!0);
         }, [d]);
     function P(e) {
-        null != u &&
-            (0, Em.L3)(e, async () => {
-                let { default: e } = await n.e("811562").then(n.bind(n, 666801));
-                return (t) =>
-                    (0, b.jsx)(e, {
-                        guildId: u,
-                        sourceAnalyticsLocations: h,
-                        ...t,
-                        onInteraction: (0, DB.s)("SoundboardContextMenu", np.A.RTC_PANEL),
-                    });
-            });
+        (0, Em.L3)(e, async () => {
+            let { default: e } = await n.e("811562").then(n.bind(n, 666801));
+            return (t) =>
+                (0, b.jsx)(e, {
+                    guildId: u ?? void 0,
+                    sourceAnalyticsLocations: h,
+                    ...t,
+                    onInteraction: (0, DB.s)("SoundboardContextMenu", np.A.RTC_PANEL),
+                });
+        });
     }
     let {
         Component: M,
