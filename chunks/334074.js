@@ -52,7 +52,7 @@ function u(e) {
             cooldownConfig: u,
         } = e,
         h = (0, i.yK)([r.A], () => s.map((e) => r.A.getGameUpsellDismissal(e.id, d))),
-        [f, g] = (0, t.useState)(() => new Set());
+        [f, S] = (0, t.useState)(() => new Set());
     (0, t.useEffect)(() => {
         let e = s.map((e, s) => {
                 var l;
@@ -74,7 +74,7 @@ function u(e) {
         return (
             !(function s() {
                 let t = Date.now();
-                g(
+                S(
                     new Set(
                         e
                             .filter((e) => {
@@ -98,15 +98,15 @@ function u(e) {
             () => clearTimeout(l)
         );
     }, [s, h, u]);
-    let S = l ? [] : s.filter((e) => f.has(e.id)).map((e) => e.id),
-        [w, M] = (0, a.Wl)(S.length > 0 ? d : null, { cooldownDurationMs: u.globalCooldownMs }, p, c),
-        C = w === d ? S : [],
-        D = s.map((e) => e.id).join(","),
-        A = C.join(",");
+    let g = l ? [] : s.filter((e) => f.has(e.id)).map((e) => e.id),
+        [w, M] = (0, a.Wl)(g.length > 0 ? d : null, { cooldownDurationMs: u.globalCooldownMs }, p, c),
+        C = w === d ? g : [],
+        A = s.map((e) => e.id).join(","),
+        D = C.join(",");
     return (
         (0, t.useEffect)(() => {
-            let e = D.length > 0 ? D.split(",") : [],
-                s = new Set(A.length > 0 ? A.split(",") : []),
+            let e = A.length > 0 ? A.split(",") : [],
+                s = new Set(D.length > 0 ? D.split(",") : []),
                 t = w !== d,
                 i = {};
             for (let a of e)
@@ -124,7 +124,7 @@ function u(e) {
                 disabled: l,
                 excludedReasons: i,
             });
-        }, [D, A, d, l, f, w]),
+        }, [A, D, d, l, f, w]),
         {
             eligibleToShow: C,
             markAsDismissed: function (e, s) {

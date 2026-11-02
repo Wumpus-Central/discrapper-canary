@@ -1,4 +1,4 @@
-n.d(t, { gG: () => b, j_: () => w, EG: () => j, HJ: () => k, AV: () => S, KK: () => N, ZL: () => y });
+n.d(t, { gG: () => b, j_: () => w, EG: () => j, HJ: () => k, AV: () => S, KK: () => A, ZL: () => y });
 var l = n(582128),
     r = n(158390),
     a = n(73153),
@@ -216,7 +216,7 @@ function S(e, t) {
         n
     );
 }
-function N(e, t, n) {
+function A(e, t, n) {
     let { fps: r, onFrame: a, enabled: i = !0, width: s = 0 } = n,
         u = l.useCallback(
             (n) => {

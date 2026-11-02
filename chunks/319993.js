@@ -43,7 +43,7 @@ var M = n(105292),
     w = n(202541),
     U = n(652215),
     z = n(653131);
-function J(e) {
+function V(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: i } = e,
         a = s.useCallback(async () => {
             if ((n(), null != t))
@@ -72,7 +72,7 @@ function J(e) {
             })
           : null;
 }
-function V(e) {
+function J(e) {
     let t,
         n,
         i,
@@ -145,7 +145,7 @@ function V(e) {
             }),
         w = y === D.JOIN_GUILD,
         U = !j && C,
-        V = s.useMemo(
+        J = s.useMemo(
             () => (p ? O.GO.createFromGuildRecord(g) : null != N ? O.GO.createFromDiscoverableGuild(N) : void 0),
             [g, p, N],
         );
@@ -169,7 +169,7 @@ function V(e) {
                                   (0, l.jsx)(u.E, { variant: "text-sm/normal", children: G }),
                               ],
                           }),
-                          null != V &&
+                          null != J &&
                               (0, l.jsxs)("div", {
                                   className: z.Qe,
                                   children: [
@@ -182,13 +182,13 @@ function V(e) {
                                       (0, l.jsx)("div", {
                                           className: z.Ff,
                                           children: (0, l.jsx)(T.G7, {
-                                              expressionSourceGuild: V,
+                                              expressionSourceGuild: J,
                                               hasJoinedExpressionSourceGuild: p,
                                               isDisplayingJoinGuildButtonInPopout: w,
                                               closePopout: c,
                                           }),
                                       }),
-                                      (0, l.jsx)(J, { buttonType: y, discoverableGuildId: N?.id, closePopout: c }),
+                                      (0, l.jsx)(V, { buttonType: y, discoverableGuildId: N?.id, closePopout: c }),
                                   ],
                               }),
                       ],
@@ -354,7 +354,7 @@ function X(e) {
             }),
             (0, l.jsx)(W, {
                 setTooltipShowing: i,
-                renderPopout: (e) => (0, l.jsx)(V, { sound: t, channel: n, renderSoundButton: s, ...e }),
+                renderPopout: (e) => (0, l.jsx)(J, { sound: t, channel: n, renderSoundButton: s, ...e }),
                 tooltipText: M.intl.string(M.t["KVbJU/"]),
                 position: "right",
                 children: (0, l.jsx)(N.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),

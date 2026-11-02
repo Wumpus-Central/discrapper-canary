@@ -18,16 +18,16 @@ var i,
     p = t(105292),
     E = t(441386);
 let j = ["embedded_cover"],
-    v = { tension: 800, friction: 24 };
-var I =
-    (((i = I || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+    I = { tension: 800, friction: 24 };
+var v =
+    (((i = v || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function N(e) {
-    let { context: n, activityItem: t, onClick: i, aspectRatio: a = 0, animatedDivClass: I, commandOrigin: N } = e,
+    let { context: n, activityItem: t, onClick: i, aspectRatio: a = 0, animatedDivClass: v, commandOrigin: N } = e,
         {
-            onActivityItemSelected: T,
-            imageBackground: _,
+            onActivityItemSelected: _,
+            imageBackground: T,
             activityAction: b,
             labelType: S,
         } = (0, g.Ay)({
@@ -40,13 +40,13 @@ function N(e) {
             commandOrigin: N,
         }),
         [y, O] = s.useState(!1),
-        R = s.useCallback(() => {
+        P = s.useCallback(() => {
             O(!0);
         }, [O]),
-        L = s.useCallback(() => {
+        R = s.useCallback(() => {
             O(!1);
         }, [O]),
-        D = s.useMemo(
+        L = s.useMemo(
             () =>
                 (0, l.jsx)("div", {
                     className: E.Gz,
@@ -54,7 +54,7 @@ function N(e) {
                 }),
             [S],
         ),
-        M = s.useMemo(() => {
+        D = s.useMemo(() => {
             switch (b) {
                 case g.o6.JOIN:
                     return (0, l.jsx)("div", {
@@ -86,14 +86,14 @@ function N(e) {
             }
         }, [b]);
     return (0, l.jsx)(d.D, {
-        onClick: T,
-        onFocus: R,
-        onBlur: L,
-        onMouseEnter: R,
-        onMouseLeave: L,
+        onClick: _,
+        onFocus: P,
+        onBlur: R,
+        onMouseEnter: P,
+        onMouseLeave: R,
         className: E.XA,
         children: (0, l.jsx)(A.c, {
-            config: v,
+            config: I,
             from: { value: 0 },
             to: { value: +!!y },
             children: (e) => {
@@ -107,17 +107,17 @@ function N(e) {
                             children: (i) =>
                                 (0, l.jsxs)(o.animated.div, {
                                     ref: i,
-                                    className: r()(e, E.LM, I, { [E.$g]: 0 === a, [E.J3]: 1 === a }),
+                                    className: r()(e, E.LM, v, { [E.$g]: 0 === a, [E.J3]: 1 === a }),
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, l.jsx)(x.A, {
-                                            imageBackground: _,
+                                            imageBackground: T,
                                             applicationName: t.application.name,
                                             imageClassName: E.jj,
                                             imageNotFoundClassName: E.v_,
                                         }),
+                                        L,
                                         D,
-                                        M,
                                     ],
                                 }),
                         }),
@@ -126,4 +126,4 @@ function N(e) {
         }),
     });
 }
-N.AspectRatio = I;
+N.AspectRatio = v;

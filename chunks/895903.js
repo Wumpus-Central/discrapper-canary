@@ -18,23 +18,23 @@ var i = t(477900),
     p = t(576705),
     E = t(233993),
     j = t(19844),
-    v = t(505543),
-    I = t(105292),
+    I = t(505543),
+    v = t(105292),
     N = t(269341);
-function T(e) {
+function _(e) {
     let { onClick: n, className: t } = e,
         l = c.MicrophoneIcon;
     return (0, i.jsx)(h.A, {
         iconContainerClassName: a()({ [N.q8]: !1 }),
         icon: (0, i.jsx)(l, { size: "custom", color: "currentColor", className: N.Pz, height: 20, width: 20 }),
         color: o.A.unsafe_rawColors.PRIMARY_700.css,
-        title: I.intl.string(I.t["jMLfp/"]),
-        description: I.intl.string(I.t["Vd/rEX"]),
+        title: v.intl.string(v.t["jMLfp/"]),
+        description: v.intl.string(v.t["Vd/rEX"]),
         onClick: n,
         className: t,
     });
 }
-function _(e) {
+function T(e) {
     let { channel: n } = e,
         { participants: t, usersInSummary: l } = (0, j.A)(n.id);
     return (0, i.jsxs)("div", {
@@ -46,11 +46,11 @@ function _(e) {
                 color: "text-default",
                 children: (function (e) {
                     if (0 === e.length) return "";
-                    if (1 === e.length) return I.intl.formatToPlainString(I.t["5ULgaQ"], { first: e[0].userNick });
+                    if (1 === e.length) return v.intl.formatToPlainString(v.t["5ULgaQ"], { first: e[0].userNick });
                     if (2 === e.length)
-                        return I.intl.formatToPlainString(I.t.BHK0Op, { first: e[0].userNick, second: e[1].userNick });
+                        return v.intl.formatToPlainString(v.t.BHK0Op, { first: e[0].userNick, second: e[1].userNick });
                     let n = e.length - 2;
-                    return I.intl.formatToPlainString(I.t.T3MT4n, {
+                    return v.intl.formatToPlainString(v.t.T3MT4n, {
                         first: e[0].userNick,
                         second: e[1].userNick,
                         numOthers: n,
@@ -65,7 +65,7 @@ function b(e) {
         s = (0, r.bG)([p.A], () => p.A.can(E.QY, n), [n]),
         o = n.guild_id,
         { canCreateGuildEvent: c } = (0, C.nr)(n),
-        A = (0, v.A)(n.id),
+        A = (0, I.A)(n.id),
         h = l.useRef(null);
     return (0, i.jsxs)("div", {
         className: N.kL,
@@ -81,21 +81,21 @@ function b(e) {
                             (0, i.jsx)(d.D, {
                                 className: N.__invalid_title,
                                 variant: "heading-xxl/medium",
-                                children: I.intl.string(I.t.QGnDLs),
+                                children: v.intl.string(v.t.QGnDLs),
                             }),
                             (0, i.jsx)(u.E, {
                                 tag: "div",
                                 className: N.VA,
                                 variant: "heading-lg/medium",
-                                children: I.intl.string(I.t.djfK36),
+                                children: v.intl.string(v.t.djfK36),
                             }),
                         ],
                     }),
                     A ? null : (0, i.jsx)(g.A, { channelId: n.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(x.A, { className: N.fN, channel: n }) : null,
                     c ? (0, i.jsx)(m.A, { className: N.fN, guildId: o }) : null,
-                    s ? (0, i.jsx)(T, { className: a()({ [N.fN]: !0 }), onClick: t }) : null,
-                    (0, i.jsx)(_, { channel: n }),
+                    s ? (0, i.jsx)(_, { className: a()({ [N.fN]: !0 }), onClick: t }) : null,
+                    (0, i.jsx)(T, { channel: n }),
                 ],
             }),
         ],

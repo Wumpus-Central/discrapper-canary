@@ -28,8 +28,8 @@ var i = n(477900),
     _ = n(43189),
     R = n(480890),
     O = n(812771),
-    L = n(58736),
-    P = n(267102),
+    P = n(58736),
+    L = n(267102),
     M = n(342296),
     w = n(280450),
     U = n(696451),
@@ -52,9 +52,9 @@ let Z = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
         { user: C, userNick: j, blocked: y, ignored: I, rtsState: N } = t,
         E = l.useRef(null),
-        _ = (0, P.Us)(),
+        _ = (0, L.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
-        L = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
+        P = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
         D = N === z.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
     function V(e) {
         ((0, T.x)({
@@ -145,7 +145,7 @@ let Z = l.memo(function (e) {
                             }),
                             y ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
                             I ? (0, i.jsx)(x.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
-                            L ? (0, i.jsx)(g._, { size: "xs", color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK }) : null,
+                            P ? (0, i.jsx)(g._, { size: "xs", color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK }) : null,
                         ],
                     }),
                     o ? (0, i.jsx)(W.s6, { channel: a, userId: C.id, awaitingUserAck: D }) : null,
@@ -181,7 +181,7 @@ function Q(e) {
             );
         }, [m, v]),
         T = [p.length, Math.max(1, S.length)],
-        R = (0, i.jsx)(L.Ay.Icon, {
+        R = (0, i.jsx)(P.Ay.Icon, {
             icon: C.P,
             tooltip: X.intl.string(X.t.cpT0Cq),
             onClick: () => N.A.updateStageAudienceSidebarOpen(s.id, !1),
@@ -194,12 +194,12 @@ function Q(e) {
         children: (0, i.jsxs)("div", {
             className: q.kL,
             children: [
-                (0, i.jsxs)(L.Ay, {
+                (0, i.jsxs)(P.Ay, {
                     toolbar: R,
                     "aria-label": X.intl.string(X.t.suRApw),
                     children: [
-                        (0, i.jsx)(L.Ay.ChannelIcon, { icon: j.n, "aria-label": X.intl.string(X.t.suRApw) }),
-                        (0, i.jsx)(L.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
+                        (0, i.jsx)(P.Ay.ChannelIcon, { icon: j.n, "aria-label": X.intl.string(X.t.suRApw) }),
+                        (0, i.jsx)(P.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
                     ],
                 }),
                 h || u

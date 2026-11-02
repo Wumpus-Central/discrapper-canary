@@ -66,7 +66,7 @@ function b(e) {
         b = l.useId(),
         S = l.useRef(null),
         T = (0, r.bG)([C.A], () => C.A.theme),
-        { isHovered: _, setIsHovered: R, onMouseEnter: O, onMouseLeave: L } = (0, g.A)(100, 100);
+        { isHovered: _, setIsHovered: R, onMouseEnter: O, onMouseLeave: P } = (0, g.A)(100, 100);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.Y, {
@@ -91,9 +91,9 @@ function b(e) {
                                           className: h,
                                           "aria-label": I.intl.formatToPlainString(y.default.hZobvN, { username: t }),
                                           onMouseEnter: O,
-                                          onMouseLeave: L,
+                                          onMouseLeave: P,
                                           onFocus: O,
-                                          onBlur: L,
+                                          onBlur: P,
                                           onClick: () => {
                                               ((0, j.k)(e.stream), a());
                                           },
@@ -115,9 +115,9 @@ function b(e) {
                     (0, i.jsx)("div", {
                         ref: S,
                         onMouseEnter: O,
-                        onMouseLeave: L,
+                        onMouseLeave: P,
                         onFocus: O,
-                        onBlur: L,
+                        onBlur: P,
                         ...e,
                         children: l.cloneElement(p, { "aria-describedby": b }),
                     }),

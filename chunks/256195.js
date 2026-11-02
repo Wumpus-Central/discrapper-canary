@@ -13,47 +13,47 @@ var r = n(503698),
     h = n(280450),
     g = n(200749),
     f = n(105292),
-    A = n(604889);
-let p = n(913516);
+    p = n(604889);
+let A = n(913516);
 function E(e) {
     let { participant: t, width: n, noArt: r = !1, selected: E = !1 } = e,
-        C = n < 195,
-        b = (0, s.bG)([m.A, h.default], () =>
+        b = n < 195,
+        C = (0, s.bG)([m.A, h.default], () =>
             m.A.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
                 return t !== h.default.getId();
             }),
         );
     return (0, i.jsx)("div", {
-        className: l()(A.Qs, A.FY),
+        className: l()(p.Qs, p.FY),
         children: (0, i.jsx)(g.A, {
-            className: A.FP,
-            artURL: p,
+            className: p.FP,
+            artURL: A,
             noArt: r,
             selected: E,
             size: (0, g.J)(n),
-            header: C ? null : f.intl.string(f.t.epU4Ec),
+            header: b ? null : f.intl.string(f.t.epU4Ec),
             description: E
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: l()(A.t2, { [A.y8]: !C }),
+                      className: l()(p.t2, { [p.y8]: !b }),
                       children: [
                           (0, i.jsx)("div", {
-                              className: A.lO,
+                              className: p.lO,
                               children: (0, i.jsx)(a.$, {
                                   variant: "secondary",
-                                  size: C ? "sm" : "md",
+                                  size: b ? "sm" : "md",
                                   text: n < 175 ? f.intl.string(f.t.I6JG46) : f.intl.string(f.t["7Xq/nV"]),
                               }),
                           }),
-                          b
+                          C
                               ? (0, i.jsx)("div", {
-                                    className: l()(A.lO, A.EU),
+                                    className: l()(p.lO, p.EU),
                                     children: (0, i.jsx)(o.m, {
                                         text: f.intl.string(f.t.wCrzut),
                                         children: (0, i.jsx)(u.K, {
                                             variant: "secondary",
-                                            size: C ? "sm" : "md",
+                                            size: b ? "sm" : "md",
                                             icon: c.v,
                                             "aria-label": f.intl.string(f.t.wCrzut),
                                             onClick: (e) => {

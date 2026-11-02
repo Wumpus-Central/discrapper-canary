@@ -112,7 +112,7 @@ function S(e) {
             [n],
         ),
         O = (0, m.g)(R.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
-        L = n.map((e) => {
+        P = n.map((e) => {
             if (e.type !== j.lp.USER) return null;
             let { user: t, speaking: n, ringing: a, playingSoundboard: s } = e,
                 o = (0, f.Nd)(e.voiceState, T),
@@ -154,5 +154,5 @@ function S(e) {
                 t.id,
             );
         });
-    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(I.zr, a), children: L });
+    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(I.zr, a), children: P });
 }

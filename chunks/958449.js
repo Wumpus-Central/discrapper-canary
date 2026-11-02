@@ -30,16 +30,16 @@ function c(e) {
           : c
             ? o.intl.string(o.t.fjBNo1)
             : o.intl.string(o.t.uQn9B8);
-    let { Component: E, events: j, play: v } = (0, s.c)(u ? "disable" : "enable"),
-        I = A ? a.i : E;
+    let { Component: E, events: j, play: I } = (0, s.c)(u ? "disable" : "enable"),
+        v = A ? a.i : E;
     return (
-        l.useEffect(() => () => v(), [u, v]),
+        l.useEffect(() => () => I(), [u, I]),
         (0, i.jsx)(p, {
             buttonRef: C,
             isTrayButton: !0,
             label: t,
             disabled: !c,
-            iconComponent: I,
+            iconComponent: v,
             isActive: u,
             color: (x ? (n = "premiumGradient") : u && (n = "green"), n),
             onMouseEnter: (e) => {

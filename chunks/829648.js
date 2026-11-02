@@ -1,4 +1,4 @@
-l.d(a, { A: () => h });
+l.d(a, { A: () => m });
 var n = l(477900),
     t = l(582128),
     i = l(866665),
@@ -6,27 +6,27 @@ var n = l(477900),
     s = l(97808),
     d = l(778712),
     o = l(342296),
-    c = l(427262),
-    u = l(447177);
-function h(e) {
-    let { user: a, guildId: l, layerContext: h } = e,
-        x = t.useRef(null),
-        p = (0, c.$3)(a);
+    u = l(427262),
+    c = l(447177);
+function m(e) {
+    let { user: a, guildId: l, layerContext: m } = e,
+        h = t.useRef(null),
+        p = (0, u.$3)(a);
     return (0, n.jsx)(o.A, {
-        targetElementRef: x,
+        targetElementRef: h,
         shouldPreload: !0,
         user: a,
         guildId: l,
         position: "bottom",
-        layerContext: h,
+        layerContext: m,
         children: (e) =>
             (0, n.jsx)(i.m, {
                 text: p,
                 ariaHidden: !0,
                 children: (0, n.jsx)(r.D, {
                     ...e,
-                    innerRef: x,
-                    className: u.RB,
+                    innerRef: h,
+                    className: c.RB,
                     onClick: (a) => {
                         (e.onClick(a), a.stopPropagation());
                     },

@@ -33,8 +33,8 @@ function E(e) {
             totalNumberOfParticipants: R,
             popoutType: O,
         } = e,
-        L = (0, A.Us)() === N.BRT.POPOUT,
-        P = (0, r.bG)([g.A], () => g.A.getGuild(S.guild_id), [S.guild_id]),
+        P = (0, A.Us)() === N.BRT.POPOUT,
+        L = (0, r.bG)([g.A], () => g.A.getGuild(S.guild_id), [S.guild_id]),
         { dismissedActivityEntryPointTileChannel: M } = (0, I.P)(),
         w = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(S.id), [S]),
         U = (0, x.vp)(S.id, t),
@@ -50,8 +50,8 @@ function E(e) {
                 I.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [S.id, M]);
-    let V = (0, r.bG)([C.A], () => S.isPrivate() || (0, m.K)(C.A, P, S), [P, S]),
-        G = P?.afkChannelId === S.id,
+    let V = (0, r.bG)([C.A], () => S.isPrivate() || (0, m.K)(C.A, L, S), [L, S]),
+        G = L?.afkChannelId === S.id,
         k = S.userLimit <= 0 || S.userLimit > 1,
         B = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(S.id).length <= 0),
         F = (0, p.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
@@ -85,16 +85,16 @@ function E(e) {
         [],
     );
     let Y = B && !z;
-    null != P &&
+    null != L &&
         !G &&
         !S.isGuildStageVoice() &&
         (w >= 2 && Y && !F && !H
             ? W.push((e) =>
                   (0, i.jsx)(j.y, {
                       channel: S,
-                      guild: P,
+                      guild: L,
                       width: e,
-                      inPopout: L,
+                      inPopout: P,
                       handleClose: D,
                       userParticipantCount: w,
                   }),
@@ -105,9 +105,9 @@ function E(e) {
               W.push((e) =>
                   (0, i.jsx)(j.y, {
                       channel: S,
-                      guild: P,
+                      guild: L,
                       width: e,
-                      inPopout: L,
+                      inPopout: P,
                       handleClose: D,
                       userParticipantCount: w,
                       activitiesEnabled: Y,

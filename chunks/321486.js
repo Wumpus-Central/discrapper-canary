@@ -28,8 +28,8 @@ var i = n(477900),
     _ = n(105292),
     R = n(814402);
 let O = 10 * j.A.Millis.SECOND,
-    L = { tension: 220, friction: 30, clamp: !0 },
-    P = { x: "100%" },
+    P = { tension: 220, friction: 30, clamp: !0 },
+    L = { x: "100%" },
     M = { x: "0%" },
     w = { x: "-100%" };
 function U(e) {
@@ -79,10 +79,10 @@ function U(e) {
         el = (0, c.p)(H, {
             keys: () => `${D.sequence}:${(0, x._z)(H)}`,
             initial: M,
-            from: P,
+            from: L,
             enter: M,
             leave: w,
-            config: L,
+            config: P,
         });
     function ea() {
         k(!0);

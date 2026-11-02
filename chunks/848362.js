@@ -1,4 +1,4 @@
-n.d(t, { A: () => b, T: () => C });
+n.d(t, { A: () => C, T: () => b });
 var i = n(477900),
     r = n(582128),
     l = n(17928),
@@ -12,10 +12,10 @@ var i = n(477900),
     h = n(338771),
     g = n(616356),
     f = n(287809),
-    A = n(562153),
-    p = n(652215),
+    p = n(562153),
+    A = n(652215),
     E = n(105292);
-function C(e, t, n) {
+function b(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
         s = (0, l.bG)([g.A], () => (null != i ? g.A.getActiveStreamForStreamKey(i) : null), [i]),
         a = (0, l.cf)([f.default], () => n.reduce((e, t) => ((e[t.ownerId] = f.default.getUser(t.ownerId)), e), {}), [
@@ -26,10 +26,10 @@ function C(e, t, n) {
         let i = n.filter((e) => e.ownerId !== t?.id);
         return 1 === i.length && i[0].ownerId === s?.ownerId
             ? []
-            : i.map((t) => ({ stream: t, username: A.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
+            : i.map((t) => ({ stream: t, username: p.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
     }, [a, n, e, s, t?.id]);
 }
-function b(e) {
+function C(e) {
     let {
             channel: t,
             currentUser: n,
@@ -38,34 +38,34 @@ function b(e) {
             showReportOption: c = !1,
             handleGoLive: g,
             onClose: f,
-            onSelect: A,
-            appContext: b = p.BRT.APP,
+            onSelect: p,
+            appContext: C = A.BRT.APP,
             disableChangeWindows: v = !1,
-            onInteraction: T,
+            onInteraction: y,
         } = e,
-        _ = r.find((e) => e.ownerId === n?.id) ?? null,
-        I = C(t, n, r),
-        y = (0, d.A)(_, b),
-        S = (0, m.E)({
+        T = r.find((e) => e.ownerId === n?.id) ?? null,
+        x = b(t, n, r),
+        _ = (0, d.A)(T, C),
+        I = (0, m.E)({
             disableChangeWindows: v,
-            stream: _,
+            stream: T,
             showReportOption: c,
             handleGoLive: g,
             minimal: !0,
-            appContext: b,
+            appContext: C,
         });
     return (0, i.jsx)(u.A, {
-        section: p.JJy.CONTEXT_MENU,
+        section: A.JJy.CONTEXT_MENU,
         children: (0, i.jsxs)(s.W, {
             "data-menu-migrated": !0,
-            onSelect: A,
+            onSelect: p,
             navId: "manage-streams",
             onClose: f,
-            onInteraction: T,
-            "aria-label": null != _ ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
+            onInteraction: y,
+            "aria-label": null != T ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
             children: [
                 (0, i.jsx)(a.rX, {
-                    children: I.map((e) => {
+                    children: x.map((e) => {
                         let { stream: t, username: n } = e;
                         return (0, i.jsx)(
                             a.Dr,
@@ -80,8 +80,8 @@ function b(e) {
                         );
                     }),
                 }),
-                l ? null : S,
-                l ? null : (0, i.jsx)(a.rX, { children: y }),
+                l ? null : I,
+                l ? null : (0, i.jsx)(a.rX, { children: _ }),
             ],
         }),
     });

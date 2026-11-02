@@ -25,17 +25,17 @@ function m(e) {
         p = l?.getGuildId(),
         E = l?.id,
         j = (0, a.bG)([u.A], () => (null != p ? u.A.getGuild(p) : null), [p]),
-        v = (0, a.bG)([o.Ay], () => o.Ay.getActiveEventByChannel(E), [E]);
+        I = (0, a.bG)([o.Ay], () => o.Ay.getActiveEventByChannel(E), [E]);
     if (!(null != j && null != l && d.A.can(A.xBc.CREATE_INSTANT_INVITE, l))) return null;
-    let I = h.intl.string(h.t.VINpSK);
+    let v = h.intl.string(h.t.VINpSK);
     return (
-        null != n ? (I = h.intl.string(h.t["6VQaqd"])) : null != t && (I = h.intl.string(h.t["OzOM/q"])),
+        null != n ? (v = h.intl.string(h.t["6VQaqd"])) : null != t && (v = h.intl.string(h.t["OzOM/q"])),
         (0, i.jsx)("div", {
             className: C,
             children: (0, i.jsx)(r.$, {
                 size: f,
                 variant: "secondary",
-                text: I,
+                text: v,
                 onClick: () => {
                     (s()(null != j, "guild cannot be null"),
                         s()(null != l, "channel cannot be null"),
@@ -47,7 +47,7 @@ function m(e) {
                             appContext: g,
                             exitFullScreen: m,
                             analyticsLocation: x,
-                            guildScheduledEvent: v,
+                            guildScheduledEvent: I,
                             source: A.PE1.STAGE_CHANNEL,
                         }));
                 },

@@ -1,4 +1,4 @@
-t.d(n, { A: () => I });
+t.d(n, { A: () => v });
 var i = t(477900),
     l = t(582128),
     s = t(17928),
@@ -18,23 +18,23 @@ var i = t(477900),
     p = t(110618),
     E = t(743115),
     j = t(105292),
-    v = t(853325);
-let I = function (e) {
-    let { participants: n, channel: t, hasConnectPermission: I } = e,
+    I = t(853325);
+let v = function (e) {
+    let { participants: n, channel: t, hasConnectPermission: v } = e,
         N = (0, m.H)(t.guild_id),
-        T = l.useCallback(() => {
+        _ = l.useCallback(() => {
             N ? (0, h.Ze)(t.guild_id, () => c.default.selectVoiceChannel(t.id)) : c.default.selectVoiceChannel(t.id);
         }, [t.id, t.guild_id, N]),
-        _ = n.filter((e) => e.type === f.wY.VOICE),
+        T = n.filter((e) => e.type === f.wY.VOICE),
         b = (0, A.Ay)(t),
-        S = 4 === _.length ? 2 : 3,
-        y = (0, s.yK)([u.A], () => _.map((e) => u.A.getParticipant(t.id, e.id)).filter(C.Vq), [t.id, _]);
+        S = 4 === T.length ? 2 : 3,
+        y = (0, s.yK)([u.A], () => T.map((e) => u.A.getParticipant(t.id, e.id)).filter(C.Vq), [t.id, T]);
     return (0, i.jsxs)("div", {
-        className: v.kL,
+        className: I.kL,
         children: [
             (0, i.jsx)(x.A, {}),
             (0, i.jsx)("div", {
-                className: v.os,
+                className: I.os,
                 style: { maxWidth: 168 * S },
                 children: y
                     .slice(0, 5)
@@ -44,7 +44,7 @@ let I = function (e) {
                             {
                                 participant: e,
                                 channel: t,
-                                className: v.Vs,
+                                className: I.Vs,
                                 inCall: !0,
                                 noVideoRender: !0,
                                 popoutType: d.N.NO_POPOUT,
@@ -54,26 +54,26 @@ let I = function (e) {
                         ),
                     ),
             }),
-            (0, i.jsx)(a.D, { className: v.HA, variant: "heading-xxl/medium", children: b }),
+            (0, i.jsx)(a.D, { className: I.HA, variant: "heading-xxl/medium", children: b }),
             (0, i.jsx)("div", {
-                className: v.Nu,
+                className: I.Nu,
                 children: (0, i.jsx)(r.E, {
                     tag: "div",
                     color: "text-default",
                     variant: "heading-lg/medium",
-                    children: (0, p.DO)(t, _),
+                    children: (0, p.DO)(t, T),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: v.UD,
+                className: I.UD,
                 children: [
                     (0, i.jsx)("div", {
-                        className: v.PD,
+                        className: I.PD,
                         children: (0, i.jsx)(o.$, {
                             variant: "overlay-primary",
-                            text: I ? j.intl.string(j.t["7vb2cc"]) : j.intl.string(j.t.TVBCKZ),
-                            onClick: T,
-                            disabled: !I,
+                            text: v ? j.intl.string(j.t["7vb2cc"]) : j.intl.string(j.t.TVBCKZ),
+                            onClick: _,
+                            disabled: !v,
                         }),
                     }),
                     (0, i.jsx)(E.l, { channel: t }),

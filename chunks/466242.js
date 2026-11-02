@@ -14,11 +14,11 @@ function u(e, t) {
     let { enableNoFill: n } = i.useConfig({ location: t }),
         u = (0, s.bG)([a.A], () => a.A.getNoFillForPlacement(e), [e]),
         c = (0, s.bG)([r.A], () => null != r.A.questEnrollmentBlockedUntil),
-        [d, m] = l.useState(null);
+        [d, p] = l.useState(null);
     return (
         l.useEffect(() => {
             if (null == u) return;
-            let e = setTimeout(() => m(u.decisionId), Math.max(u.fetchedAt + u.ttlMillis - Date.now(), 0));
+            let e = setTimeout(() => p(u.decisionId), Math.max(u.fetchedAt + u.ttlMillis - Date.now(), 0));
             return () => clearTimeout(e);
         }, [u]),
         n && null != u && u.decisionId !== d && (0, o.s)() && !c ? u : null

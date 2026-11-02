@@ -1,4 +1,4 @@
-_.exports = {
+a.exports = {
     Nr: "card__44861",
     Tp: "background__44861",
     Iv: "cover__44861",

@@ -29,21 +29,21 @@ var i = n(477900),
 function R(e) {
     let { channelId: t, note: n, roomWidth: a } = e,
         [R, O] = (0, l.useState)(!1),
-        L = (0, l.useRef)(null),
-        P = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
+        P = (0, l.useRef)(null),
+        L = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
         M = (0, r.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
         w = (0, r.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t, [t]),
-        U = (0, j.tx)(M, t, P),
+        U = (0, j.tx)(M, t, L),
         D = (0, E.Sb)({
             position: n.position,
             targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
         });
-    return null == P || null == M
+    return null == L || null == M
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(d.D, {
-                      innerRef: L,
+                      innerRef: P,
                       role: "listitem",
                       "aria-label": S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
                       className: _.kL,
@@ -60,7 +60,7 @@ function R(e) {
                           O(!1);
                       },
                       closeOnClickOutside: !0,
-                      targetElementRef: L,
+                      targetElementRef: P,
                       children: [
                           (0, i.jsxs)("div", {
                               className: _.oO,
@@ -73,7 +73,7 @@ function R(e) {
                                               children: [
                                                   (0, i.jsx)(u.eu, {
                                                       "aria-label": U,
-                                                      src: P.getAvatarURL(M, 24),
+                                                      src: L.getAvatarURL(M, 24),
                                                       size: h._3.SIZE_24,
                                                       className: _.my,
                                                   }),

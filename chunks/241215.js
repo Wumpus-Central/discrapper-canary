@@ -26,8 +26,8 @@ var i = n(477900),
     S = n(527133);
 let T = function (e) {
     let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: O } = e,
-        L = (0, m.Us)(),
-        P = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
+        P = (0, m.Us)(),
+        L = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
         M = (0, s.bG)([x.A], () => x.A.getChannel(t)),
         w = (0, s.bG)([g.A], () => g.A.getGuild(M?.getGuildId())),
         U = (0, s.bG)([j.Ay], () => null != M && j.Ay.getVoiceChannelId() === M.id),
@@ -39,13 +39,13 @@ let T = function (e) {
             layout: B,
             participantsOpen: F,
         } = (0, s.cf)([d.A], () => {
-            let e = null != M ? d.A.getLayout(M.id, L) : E.DUB.NORMAL;
+            let e = null != M ? d.A.getLayout(M.id, P) : E.DUB.NORMAL;
             return {
                 participants: d.A.getParticipants(t),
                 filteredParticipants: d.A.getFilteredParticipants(t),
                 participantsVersion: d.A.getParticipantsVersion(t),
                 mode: d.A.getMode(t),
-                layout: L === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
+                layout: P === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
                 participantsOpen: d.A.getParticipantsOpen(t),
             };
         }),
@@ -80,7 +80,7 @@ let T = function (e) {
                   participants: D,
                   filteredParticipants: V,
                   participantsVersion: G,
-                  selectedParticipant: U && k === E._Of.VIDEO ? P : null,
+                  selectedParticipant: U && k === E._Of.VIDEO ? L : null,
                   layout: B,
                   idle: R,
                   mode: k,
@@ -95,7 +95,7 @@ let T = function (e) {
                                   ).length
                           )
                               return void (0, c.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
-                          P?.id === e.id ? o.A.selectParticipant(M.id, null) : o.A.selectParticipant(M.id, e.id);
+                          L?.id === e.id ? o.A.selectParticipant(M.id, null) : o.A.selectParticipant(M.id, e.id);
                       }
                   },
                   onContextMenuParticipant: function (e, n, i, l) {
@@ -105,7 +105,7 @@ let T = function (e) {
                           minimalContextMenu: i,
                           entrypoint: l,
                           channelId: t,
-                          appContext: L,
+                          appContext: P,
                           location: "GuildRoomVideoOverlay",
                       });
                   },

@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => P });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -28,11 +28,11 @@ var i = n(477900),
     _ = n(618922),
     R = n(105292),
     O = n(923932);
-function L(e) {
+function P(e) {
     let { channelId: t, popoutType: n, idle: a } = e,
-        L = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
+        P = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
         {
-            background: P,
+            background: L,
             backgroundBlurred: M,
             seats: w,
             aspectRatio: U,
@@ -41,7 +41,7 @@ function L(e) {
             notePad: G,
             screen: k,
             getName: B,
-        } = T.iX[L],
+        } = T.iX[P],
         { width: F = 0, height: z = 0, ref: H } = (0, c.Ay)(),
         W = F / z > U,
         Y = W ? z * U : F,
@@ -71,7 +71,7 @@ function L(e) {
         (0, i.jsxs)("div", {
             className: O.kL,
             style: {
-                backgroundImage: `url(${$ ? M : P})`,
+                backgroundImage: `url(${$ ? M : L})`,
                 backgroundSize: W ? `auto ${100 * K}%` : `${100 * K}% auto`,
             },
             ref: H,

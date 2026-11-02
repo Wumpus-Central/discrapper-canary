@@ -28,8 +28,8 @@ var i = n(477900),
     _ = n(772475),
     R = n(936520),
     O = n(708416),
-    L = n(488947),
-    P = n(170011),
+    P = n(488947),
+    L = n(170011),
     M = n(241606),
     w = n(309010),
     U = n(485296),
@@ -102,7 +102,7 @@ function W(e) {
         }),
         et = J && !t.isGuildStageVoice(),
         en = (0, r.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === X),
-        ei = (0, L.F)(a),
+        ei = (0, P.F)(a),
         el = (0, O.kM)(t) && ei,
         ea = (0, O.Fh)(t, s) && ei,
         es = (0, O.EJ)(t, s) && ei,
@@ -206,7 +206,7 @@ function W(e) {
             eo.push(
                 (0, i.jsx)(M.A, { channel: t, returnsToRoom: et && W, className: z.x6 }, "voice-channel-app-toggle"),
             ),
-        es && eo.push((0, i.jsx)(P.A, { channelId: t.id, className: z.x6 }, "voice-channel-app-close")),
+        es && eo.push((0, i.jsx)(L.A, { channelId: t.id, className: z.x6 }, "voice-channel-app-close")),
         er && eo.push((0, i.jsx)(S.V, { channelId: t.id, className: z.x6, disabled: o }, "chat-spacer")),
         (0, i.jsx)(A.f5, { value: K, children: eo })
     );

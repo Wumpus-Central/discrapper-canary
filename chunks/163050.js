@@ -18,8 +18,8 @@ var n = s(477900),
     A = s(280450),
     y = s(625494),
     x = s(652215),
-    I = s(105292),
-    w = s(498206),
+    w = s(105292),
+    I = s(498206),
     C = s(221851);
 l.Ay.initialize();
 class v extends r.PureComponent {
@@ -48,7 +48,7 @@ class v extends r.PureComponent {
         let { location: t, source: s, resetToken: n } = this.props,
             { password: r, error: a } = this.state;
         if ((e.preventDefault(), 0 === r.length)) {
-            (this.setState({ error: I.intl.string(I.t.R98xD5) }), y._.dispatch(x.jej.WAVE_EMPHASIZE));
+            (this.setState({ error: w.intl.string(w.t.R98xD5) }), y._.dispatch(x.jej.WAVE_EMPHASIZE));
             return;
         }
         null != a && this.setState({ error: null });
@@ -137,12 +137,12 @@ class v extends r.PureComponent {
             className: l,
             children: [
                 (0, n.jsx)("img", { alt: "", src: null == d ? s(79418) : s(579656), className: C.SX }),
-                (0, n.jsx)(m.hE, { children: I.intl.string(I.t["1LV6Kq"]) }),
+                (0, n.jsx)(m.hE, { children: w.intl.string(w.t["1LV6Kq"]) }),
                 (0, n.jsxs)(m.eB, {
                     className: C.QX,
                     children: [
                         (0, n.jsx)(m.pd, {
-                            label: I.intl.string(I.t["8dM4FO"]),
+                            label: w.intl.string(w.t["8dM4FO"]),
                             className: C.SX,
                             name: "password",
                             value: e,
@@ -156,10 +156,10 @@ class v extends r.PureComponent {
                             direction: "vertical",
                             fullWidth: !0,
                             children: [
-                                (0, n.jsx)(c.$, { text: I.intl.string(I.t["FRep5/"]), type: "submit", loading: a }),
+                                (0, n.jsx)(c.$, { text: w.intl.string(w.t["FRep5/"]), type: "submit", loading: a }),
                                 r &&
                                     (0, n.jsx)(c.$, {
-                                        text: I.intl.string(I.t["ETE/oC"]),
+                                        text: w.intl.string(w.t["ETE/oC"]),
                                         variant: "secondary",
                                         onClick: this.handleGoToLogin,
                                         loading: a,
@@ -195,10 +195,10 @@ class v extends r.PureComponent {
         return (0, n.jsxs)(m.Ay, {
             theme: e,
             className: t,
-            contentClassName: w.oe,
+            contentClassName: I.oe,
             children: [
-                (0, n.jsx)(m.hE, { className: C.C2, children: I.intl.string(I.t.WAUOoK) }),
-                (0, n.jsx)(c.$, { text: I.intl.string(I.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
+                (0, n.jsx)(m.hE, { className: C.C2, children: w.intl.string(w.t.WAUOoK) }),
+                (0, n.jsx)(c.$, { text: w.intl.string(w.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
             ],
         });
     }

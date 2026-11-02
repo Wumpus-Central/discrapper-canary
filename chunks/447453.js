@@ -1,4 +1,4 @@
-l.d(s, { S: () => g });
+l.d(s, { S: () => S });
 var t = l(477900),
     i = l(582128),
     a = l(503698),
@@ -12,7 +12,7 @@ var t = l(477900),
     u = l(425763),
     h = l(105292),
     f = l(707615);
-function g(e) {
+function S(e) {
     let { className: s } = e,
         l = [
             { keybinds: ["Spacebar", "Enter"], name: h.intl.string(h.t["cs/HVH"]) },
@@ -20,9 +20,9 @@ function g(e) {
             { keybinds: ["ESC"], name: h.intl.string(h.t["1ioMJQ"]) },
         ],
         a = (0, p.bG)([c.Ay], () => c.Ay.useReducedMotion),
-        g = (0, u.VU)();
+        S = (0, u.VU)();
     return (0, r.p)(
-        g,
+        S,
         {
             enter: { from: { opacity: 0, y: 80 * !a }, to: { opacity: 1, y: 0 } },
             leave: { opacity: 0, y: 80 * !a },

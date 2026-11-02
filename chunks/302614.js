@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => x });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
@@ -12,11 +12,11 @@ var i = n(477900),
     h = n(869146),
     g = n(532294),
     f = n(723702),
-    A = n(41984),
-    p = n(127242),
+    p = n(41984),
+    A = n(127242),
     E = n(545807),
-    C = n(392164),
-    b = n(85290);
+    b = n(392164),
+    C = n(85290);
 function v(e, t) {
     return {
         name: e,
@@ -26,7 +26,7 @@ function v(e, t) {
         bottom: Math.ceil(t.bottom),
     };
 }
-class T {
+class y {
     resizeObserver;
     mutationObserver;
     zones = new Map();
@@ -41,7 +41,7 @@ class T {
             null == this.mutationObserver)
         ) {
             this.mutationObserver = new MutationObserver(this.handleMutations);
-            let e = h.A.getWindow(C.f);
+            let e = h.A.getWindow(b.f);
             null != e && this.mutationObserver.observe(e?.document.body, { subtree: !0, attributes: !0 });
         }
         let t = this.zones.get(e);
@@ -77,7 +77,7 @@ class T {
     );
     updateZones() {
         if (!f.isPlatformEmbedded) return;
-        let e = h.A.getWindow(C.f);
+        let e = h.A.getWindow(b.f);
         null != e &&
             m.A.setClickZones(
                 Array.from(this.zones.values()).map((t) => {
@@ -101,11 +101,11 @@ class T {
             this.updateZones());
     }
 }
-let _ = r.createContext(new T((0, E.b)()));
-function I(e) {
+let T = r.createContext(new y((0, E.b)()));
+function x(e) {
     let { observe: t = !0, className: n, style: l, children: a } = e,
-        o = r.useContext(_),
-        u = (0, c.bG)([p.A], () => p.A.hasRenderDebugMode(A.x7.ClickZones)),
+        o = r.useContext(T),
+        u = (0, c.bG)([A.A], () => A.A.hasRenderDebugMode(p.x7.ClickZones)),
         d = (0, c.bG)([g.default], () => g.default.disableClickableRegions),
         [{ refHandler: m, setObserve: h }] = r.useState(() => {
             let e = null;
@@ -122,6 +122,6 @@ function I(e) {
         r.useLayoutEffect(() => {
             d ? h(!1) : h(t);
         }, [t, h, d]),
-        (0, i.jsx)("div", { ref: m, style: l, className: s()(n, b.v, u && b.p), "data-click-zone": !0, children: a })
+        (0, i.jsx)("div", { ref: m, style: l, className: s()(n, C.v, u && C.p), "data-click-zone": !0, children: a })
     );
 }

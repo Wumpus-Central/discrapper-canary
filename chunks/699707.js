@@ -33,8 +33,8 @@ function S(e) {
             filteredParticipants: _,
             popoutType: R,
             inCall: O,
-            channel: L,
-            selectedParticipant: P,
+            channel: P,
+            selectedParticipant: L,
             showParticipants: M = !0,
             className: w,
             width: U,
@@ -48,16 +48,16 @@ function S(e) {
         H = (0, d.Ay)(F),
         [W, Y] = l.useState(!0),
         [$, K] = l.useState(!1),
-        X = P.type === I.lp.ACTIVITY,
-        q = (0, u.A)(X ? P.applicationId : void 0),
-        Z = !X && null != P.streamId,
+        X = L.type === I.lp.ACTIVITY,
+        q = (0, u.A)(X ? L.applicationId : void 0),
+        Z = !X && null != L.streamId,
         Q = D <= 2 * b + 144,
         J = M && !Q,
         ee = (0, d.Ay)(J),
         et = V === y.DUB.MINIMUM || V === y.DUB.NORMAL,
         en = !Q && (!et || X),
         ei = (0, f.A)(en, 100),
-        el = ((0, d.Ay)(P.id) ?? P.id) !== P.id,
+        el = ((0, d.Ay)(L.id) ?? L.id) !== L.id,
         ea = 0;
     ((X || J) && (ea += 72), X && !J && (en ? (ea += 48) : (ea += 8)), J && (ea += 0.5 * b + 8));
     let es = l.useMemo(
@@ -100,7 +100,7 @@ function S(e) {
         ),
         ex = (0, o.z)({ value: t, config: { ...r.config.stiff, clamp: !0 } }, ep),
         eg = (0, c.p)(
-            P,
+            L,
             {
                 keys: (e) => e?.id,
                 config: { ...r.config.stiff, clamp: !0 },
@@ -114,7 +114,7 @@ function S(e) {
         eC = l.useCallback((e) => {
             (z(e), Y(!1));
         }, []),
-        ej = J ? [] : (0, C.Cf)(T, P, B),
+        ej = J ? [] : (0, C.Cf)(T, L, B),
         { visibleParticipants: ey, participantTileWidth: eI } = (0, j.i4)(U, _);
     return (0, i.jsxs)("div", {
         className: s()(v.zr, N.tR, w),
@@ -144,7 +144,7 @@ function S(e) {
                                                       children: (0, i.jsx)(x.Ay, {
                                                           focused: !0,
                                                           noBorder: eo >= U || er >= D,
-                                                          channel: L,
+                                                          channel: P,
                                                           className: N.JS,
                                                           videoComponent: k,
                                                           width: U,
@@ -169,7 +169,7 @@ function S(e) {
                                       className: s()(v.$l, { [v.N7]: G }),
                                       style: { bottom: ex.value },
                                       children: (0, i.jsx)(h.A, {
-                                          channelId: L.id,
+                                          channelId: P.id,
                                           isParticipantsOpen: M,
                                           isVertical: !0,
                                       }),
@@ -185,13 +185,13 @@ function S(e) {
                             visibility: em.value.to((e) => (0 === e ? "hidden" : "visible")),
                         },
                         children: (0, i.jsx)(j.Ay, {
-                            channel: L,
+                            channel: P,
                             onClick: n,
                             onContextMenu: a,
                             onDoubleClick: S,
                             participants: ey,
                             participantTileWidth: eI,
-                            selectedParticipantId: P.id,
+                            selectedParticipantId: L.id,
                             inCall: O,
                             popoutType: R,
                             paused: $ || !M,
@@ -204,7 +204,7 @@ function S(e) {
                       onContextMenuParticipant: a,
                       width: U,
                       height: D,
-                      channel: L,
+                      channel: P,
                       participants: ej,
                       onSelectParticipant: n,
                   })

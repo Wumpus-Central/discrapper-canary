@@ -30,16 +30,16 @@ function S(e) {
         _ = (0, r.bG)([j.Ay], () => j.Ay.getVoiceChannelId() === t),
         R = (0, r.bG)([g.Ay], () => (0, p.A)(g.Ay)),
         O = (0, r.bG)([x.A, C.A], () => null != S && (0, h.vz)(S, x.A, C.A, !0)),
-        { analyticsLocations: L } = (0, u.Ay)(d.A.GUILD_ROOM),
-        { Component: P } = (0, o.c)("enable"),
+        { analyticsLocations: P } = (0, u.Ay)(d.A.GUILD_ROOM),
+        { Component: L } = (0, o.c)("enable"),
         M = (0, r.bG)([g.Ay], () => g.Ay.supports(N.O5.VIDEO)),
         w = l.useRef(null),
         U = l.useCallback(() => {
             if (null != T) {
                 if (!R) return void (0, m.A)();
-                ((0, A.A)(T, t, L), (0, y.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
+                ((0, A.A)(T, t, P), (0, y.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
             }
-        }, [T, R, t, L]);
+        }, [T, R, t, P]);
     return null != S && null != T && O && _ && M
         ? (0, i.jsxs)(c.D, {
               "aria-label": v.intl.string(v.t.fjBNo1),
@@ -54,7 +54,7 @@ function S(e) {
                       children: (0, i.jsx)("div", {
                           className: E.zq,
                           ref: w,
-                          children: (0, i.jsx)(P, {
+                          children: (0, i.jsx)(L, {
                               className: b.Kk,
                               color: "currentColor",
                               size: "custom",

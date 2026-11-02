@@ -18,8 +18,8 @@ var n = s(477900),
     A = s.n(f),
     y = s(96337),
     x = s(404778),
-    I = s(683438),
-    w = s(305866),
+    w = s(683438),
+    I = s(305866),
     C = s(317097),
     v = s(559106),
     _ = s(933832),
@@ -93,7 +93,7 @@ function G(e) {
 class D extends r.PureComponent {
     static defaultProps = { autoFocus: !0 };
     render() {
-        return (0, n.jsx)(I.I, { ...this.props, size: "sm" });
+        return (0, n.jsx)(w.I, { ...this.props, size: "sm" });
     }
 }
 class F extends r.PureComponent {
@@ -103,7 +103,7 @@ class F extends r.PureComponent {
     static Empty = G;
     render() {
         let { className: e, children: t } = this.props;
-        return (0, n.jsx)(w.l, { className: i()(O.qE, e), "aria-label": this.props["aria-label"], children: t });
+        return (0, n.jsx)(I.l, { className: i()(O.qE, e), "aria-label": this.props["aria-label"], children: t });
     }
 }
 var M = s(364522),
@@ -247,8 +247,8 @@ function q(e) {
             maxLength: A,
             spellCheck: y,
             autoComplete: x,
-            autoCapitalize: I,
-            autoCorrect: w,
+            autoCapitalize: w,
+            autoCorrect: I,
             onChange: C,
             inputClassName: v,
         } = e,
@@ -280,8 +280,8 @@ function q(e) {
                             C(e, t);
                         },
                         autoComplete: x,
-                        autoCapitalize: I,
-                        autoCorrect: w,
+                        autoCapitalize: w,
+                        autoCorrect: I,
                         autoFocus: f,
                         maxLength: A,
                         spellCheck: y,

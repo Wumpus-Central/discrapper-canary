@@ -69,8 +69,8 @@ let I = {
 var M = (((i = {}).Empty = "empty"), (i.VerificationCode = "verification_code"), i),
     O = n(627575),
     w = n(17928),
-    L = n(155718),
-    P = n(379257),
+    P = n(155718),
+    L = n(379257),
     k = n(287809),
     D = n(430993),
     U = n(503698),
@@ -132,7 +132,7 @@ function ea() {
         className: ei.Q,
         children: N.intl.format(y.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                P.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
+                L.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -406,8 +406,8 @@ let eT = {
                         text: "Consectetur adipiscing",
                         variant: "primary",
                         onClick: function () {
-                            n?.ageVerificationStatus === L.Tk.UNVERIFIED
-                                ? P.A.showAgeVerificationGetStartedModal({
+                            n?.ageVerificationStatus === P.Tk.UNVERIFIED
+                                ? L.A.showAgeVerificationGetStartedModal({
                                       entryPoint: f.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: M.Empty }),
                                   })
@@ -486,14 +486,14 @@ let eT = {
                         (0, K.P0)({ text: N.intl.string(y.default["+QRSxc"]), variant: "critical" });
                     }
                 }, [o]),
-                [L, P] = r.useState(_);
-            _ && !L && P(!0);
+                [P, L] = r.useState(_);
+            _ && !P && L(!0);
             let [U, F] = r.useState(!1),
                 G = r.useCallback(() => {
                     (F(!1), p());
                 }, [p]);
             (0, et.A)(G);
-            let V = !L || U,
+            let V = !P || U,
                 H = V
                     ? N.intl.format(y.default["6GaRTu"], { link: eC })
                     : N.intl.format(y.default["Ke+kz5"], { pendingCount: T, link: eC });
@@ -534,7 +534,7 @@ let eT = {
                     (0, a.jsx)($.H, {
                         actionsFullWidth: !0,
                         actions:
-                            L && !U
+                            P && !U
                                 ? [
                                       {
                                           text: N.intl.string(y.default["RD76/V"]),
@@ -729,7 +729,7 @@ let eO = function (e) {
                 v(!1);
             }
         }, [n]),
-        L = r.useCallback(
+        P = r.useCallback(
             async (e) => {
                 if (null !== l) {
                     R(!0);
@@ -749,24 +749,24 @@ let eO = function (e) {
     (0, h.Ay)(() => {
         w();
     });
-    let P = r.useMemo(() => l?.task_type === j.AGE_VERIFICATION, [l]),
+    let L = r.useMemo(() => l?.task_type === j.AGE_VERIFICATION, [l]),
         k = null != l && null === x && b.has(l.task_type);
     return (0, a.jsxs)("div", {
         className: eb.Tp,
         children: [
             (0, a.jsx)("img", { className: eb.xX, src: eR, alt: "" }),
-            P
+            L
                 ? (0, a.jsx)(p.default, {
                       transitionState: t ?? s.ip.ENTERED,
                       entryPoint: f.q1.SAFETY_FLOWS,
                       onClose: ex.tE,
                       onComplete: async () => {
-                          await L({ type: M.Empty });
+                          await P({ type: M.Empty });
                       },
                       dismissable: !1,
                   })
                 : k && null != l
-                  ? (0, a.jsx)(eM, { task: l, handleSubmit: L, disabled: T, transitionState: t ?? s.ip.ENTERED })
+                  ? (0, a.jsx)(eM, { task: l, handleSubmit: P, disabled: T, transitionState: t ?? s.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eb.nA,
                         children: A
@@ -827,7 +827,7 @@ let eO = function (e) {
                                               }),
                                           null === x &&
                                               null != l &&
-                                              (0, a.jsx)(eM, { task: l, handleSubmit: L, disabled: T }),
+                                              (0, a.jsx)(eM, { task: l, handleSubmit: P, disabled: T }),
                                       ],
                                   }),
                               }),

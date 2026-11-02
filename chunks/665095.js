@@ -132,8 +132,8 @@ class w extends i.PureComponent {
         t?.(e);
     };
 }
-var L = n(87404),
-    P = n(53516);
+var P = n(87404),
+    L = n(53516);
 function k() {
     let { action: e, theme: t } = (0, r.cf)([v.A, A.A], () => ({ action: v.A.getAction(), theme: A.A.theme })),
         E = x.A.getVerificationTypes(e),
@@ -148,7 +148,7 @@ function k() {
                     );
                     return (t) => (0, l.jsx)(e, { ...t });
                 },
-                { modalKey: L.H1, Layer: p.Ay },
+                { modalKey: P.H1, Layer: p.Ay },
             ));
     }
     return (
@@ -184,7 +184,7 @@ function k() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: L.Pr, Layer: p.Ay, onCloseCallback: y },
+                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: y },
                 );
         }, [E, T]),
         (0, l.jsx)(w, {
@@ -218,7 +218,7 @@ function k() {
                               return (t) =>
                                   (0, l.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: P.V, Layer: p.Ay },
+                          { modalKey: L.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {

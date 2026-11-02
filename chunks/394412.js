@@ -20,13 +20,13 @@ function p(e) {
     let { channelId: n, showDismiss: p = !0 } = e,
         E = (0, l.bG)([c.A], () => c.A.getChannel(n), [n]),
         j = (0, m.RO)(n),
-        v = null != (0, m.Qs)(n),
-        { canManageGuildEvent: I } = (0, o.nr)(E),
+        I = null != (0, m.Qs)(n),
+        { canManageGuildEvent: v } = (0, o.nr)(E),
         N = (0, l.bG)([u.A], () => j.filter((e) => !u.A.isEventDismissed(e.id)), [j]),
-        T = (0, l.cf)([A.Ay], () => N.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, g.G3)(n))), e), {}), [
+        _ = (0, l.cf)([A.Ay], () => N.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, g.G3)(n))), e), {}), [
             N,
         ]);
-    return N.length < 1 || v
+    return N.length < 1 || I
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: N.map((e) =>
@@ -40,12 +40,12 @@ function p(e) {
                               width: 20,
                           }),
                           color: s.A.unsafe_rawColors.GREEN_360.css,
-                          title: C.intl.formatToPlainString(I(e) ? C.t["1vGXqM"] : C.t.xMJyla, { eventName: e.name }),
+                          title: C.intl.formatToPlainString(v(e) ? C.t["1vGXqM"] : C.t.xMJyla, { eventName: e.name }),
                           description: C.intl.formatToPlainString(C.t.PTebCR, {
                               startTime: (0, g.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              I(e)
+                              v(e)
                                   ? (0, a.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
                                             t.e("884841"),
@@ -67,7 +67,7 @@ function p(e) {
                                     return ((n = e.id), void (0, h.Nt)(n));
                                 }
                               : void 0,
-                          userCount: T[e.id],
+                          userCount: _[e.id],
                           className: f.f,
                       },
                       e.id,

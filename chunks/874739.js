@@ -33,8 +33,8 @@ let j = (0, s.A)((e) => {
         showParticipants: _ = !0,
         width: R,
         height: O,
-        idle: L,
-        mode: P,
+        idle: P,
+        mode: L,
         popoutType: M,
         awaitingRemoteSessionInfo: w,
         callContainerDimensions: U,
@@ -50,7 +50,7 @@ let j = (0, s.A)((e) => {
     if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: O });
     if (E?.isGuildVocalOrThread() && !T)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
-    if (((n = T ? n : t), P === x._Of.VOICE))
+    if (((n = T ? n : t), L === x._Of.VOICE))
         return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
@@ -83,7 +83,7 @@ let j = (0, s.A)((e) => {
         participants: t,
         popoutType: M,
         className: S,
-        idle: L,
+        idle: P,
         height: O,
         width: R,
         layout: y,

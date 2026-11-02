@@ -1,4 +1,4 @@
-n.d(t, { Fn: () => h, Gt: () => g, Ru: () => p });
+n.d(t, { Fn: () => h, Gt: () => g, Ru: () => A });
 var i = n(582128),
     r = n(717421),
     l = n(232554),
@@ -90,16 +90,16 @@ let g = i.createContext(new h(!0));
 function f(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let A = { mass: 0.8, friction: 25, tension: 320 };
-function p(e, t, n) {
+let p = { mass: 0.8, friction: 25, tension: 320 };
+function A(e, t, n) {
     let [s, h] = (0, r.z)(
             () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
             void 0,
             [],
         ),
-        p = i.useRef(h),
+        A = i.useRef(h),
         E = i.useContext(g),
-        C = i.useMemo(() => {
+        b = i.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
@@ -115,7 +115,7 @@ function p(e, t, n) {
                                   n,
                               );
                           }
-                          let { current: g } = p,
+                          let { current: g } = A,
                               E = {
                                   opacity: i && h > 4 ? 0 : i ? Math.min(1 - h / 4, 1) : 1,
                                   scale: i ? Math.min(1 - h / 4, 1) : 1,
@@ -134,7 +134,7 @@ function p(e, t, n) {
                                         height: i ? r : l,
                                     },
                               to: E,
-                              config: A,
+                              config: p,
                           }),
                               (t = !0));
                       });
@@ -145,17 +145,17 @@ function p(e, t, n) {
             if (t === l.wL.YEETED) {
                 let t = E.getLayoutSpecs(e);
                 if (null == t) return void n();
-                (p.current({
+                (A.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
                         transform: f(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
                     },
-                    config: A,
+                    config: p,
                 }),
                     setTimeout(n, 300));
             }
         }, [t, n, e, E]),
-        { ref: C, springs: s }
+        { ref: b, springs: s }
     );
 }

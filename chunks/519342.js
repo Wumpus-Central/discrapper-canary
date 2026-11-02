@@ -28,8 +28,8 @@ var i = n(477900),
     _ = n(209932),
     R = n(326567),
     O = n(51082),
-    L = n(541157),
-    P = n(616356),
+    P = n(541157),
+    L = n(616356),
     M = n(734057),
     w = n(309010),
     U = n(287809),
@@ -114,11 +114,11 @@ function es(e) {
         { isMenuOpen: eo, setMenuOpen: ec } = l.useContext(W.t),
         ed = !!er && eo,
         eu = (0, d.bG)([M.A], () => M.A.getChannel(n)?.guild_id),
-        eh = (0, L.Nd)(
+        eh = (0, P.Nd)(
             (0, d.bG)([D.A], () => D.A.getVoiceState(eu, t)),
-            (0, L.oN)(),
+            (0, P.oN)(),
         ),
-        ep = (0, d.bG)([P.A], () => P.A.getStreamForUser(t, eu)),
+        ep = (0, d.bG)([L.A], () => L.A.getStreamForUser(t, eu)),
         em = (0, C.A)({ userId: t }),
         eA = (0, d.bG)([_.A], () => _.A.isUserPlayingSounds(t)),
         ef = (0, d.bG)([V.A], () => V.A.isFocused()),
@@ -163,25 +163,25 @@ function es(e) {
             null != eu && (0, B.EB)({ guildId: eu, channelId: n, interactionType: "hovered" });
         }, [eu, n]),
         eO = (er && $) || eS,
-        eL = $ ? K.x.find((e) => e.id === E) : null,
-        eP =
+        eP = $ ? K.x.find((e) => e.id === E) : null,
+        eL =
             null != ej
-                ? en.intl.formatToPlainString(eL?.userLabel ?? et.default["4bL+KW"], {
+                ? en.intl.formatToPlainString(eP?.userLabel ?? et.default["4bL+KW"], {
                       username: ex,
                       seatLabel: ej.getLabel(),
                   })
                 : ex,
         eM = eh?.isVoiceDeafened()
-            ? en.intl.formatToPlainString(en.t["9hDjai"], { username: eP })
+            ? en.intl.formatToPlainString(en.t["9hDjai"], { username: eL })
             : eh?.isVoiceMuted()
-              ? en.intl.formatToPlainString(en.t.Hd1oVG, { username: eP })
-              : eP,
+              ? en.intl.formatToPlainString(en.t.Hd1oVG, { username: eL })
+              : eL,
         ew = (0, Y.Sb)({ position: { x: a, y: u }, targetLabel: eM }),
         eU = null != ew;
     if (null == es || null == eu) return null;
     let eD = (0, m.Kj)(H),
         eV = eD.status + 2 * eD.offset,
-        eG = eL?.src,
+        eG = eP?.src,
         ek = (0, S.kr)(Math.ceil(b * ee.Xq) * (0, S.mZ)()),
         eB = null != eG ? `${eG}?width=${ek}&height=${ek}` : null,
         eF = (0, m.n$)(em, eA),
@@ -196,7 +196,7 @@ function es(e) {
                   ringing: !1,
                   className: ej?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
-                  avatarClassName: s()(ei.Cy, eL?.avatarClassName),
+                  avatarClassName: s()(ei.Cy, eP?.avatarClassName),
                   renderIcon:
                       null != ep
                           ? () =>
@@ -225,7 +225,7 @@ function es(e) {
                   ringing: !1,
                   className: ej?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
-                  avatarClassName: eL?.avatarClassName,
+                  avatarClassName: eP?.avatarClassName,
                   renderIcon:
                       null != ep
                           ? () =>

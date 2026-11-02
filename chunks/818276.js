@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -8,17 +8,17 @@ var l = n(477900),
     u = n(568329),
     c = n(241762),
     d = n(331940);
-let m = function (e) {
-    let { children: t, layoutVariant: n, backgroundImage: a, onMouseEnter: m, onMouseLeave: p } = e,
-        { expansionSpring: x, collapsedContentRef: h } = s.useContext(u.PW),
-        { isExpanded: f } = (0, c.H)();
+let p = function (e) {
+    let { children: t, layoutVariant: n, backgroundImage: a, onMouseEnter: p, onMouseLeave: m } = e,
+        { expansionSpring: x, collapsedContentRef: f } = s.useContext(u.PW),
+        { isExpanded: h } = (0, c.H)();
     return (0, l.jsx)(i.animated.div, {
-        ref: h,
-        "aria-hidden": f,
-        className: r()(d.hR, { [d.Ag]: f, [d.MN]: "inset" === n }),
+        ref: f,
+        "aria-hidden": h,
+        className: r()(d.hR, { [d.Ag]: h, [d.MN]: "inset" === n }),
         style: { opacity: (0, o.a)(x.to({ range: [0, 1], output: [1, 0] })), backgroundImage: a },
-        onMouseEnter: m,
-        onMouseLeave: p,
+        onMouseEnter: p,
+        onMouseLeave: m,
         children: (0, l.jsx)("div", { className: d.o8, children: t }),
     });
 };

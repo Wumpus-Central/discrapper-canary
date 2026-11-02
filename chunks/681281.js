@@ -28,8 +28,8 @@ var i = n(477900),
     _ = n(920639),
     R = n(558076),
     O = n(360729),
-    L = n(508654),
-    P = n(974930),
+    P = n(508654),
+    L = n(974930),
     M = n(961314),
     w = n(58736),
     U = n(742589),
@@ -67,8 +67,8 @@ function en(e) {
 function ei(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
-        s = (0, L.Qs)(a.id),
-        r = null != s ? (0, P.G3)(s) : null,
+        s = (0, P.Qs)(a.id),
+        r = null != s ? (0, L.G3)(s) : null,
         o = null != s;
     if (l?.type === Z.lp.ACTIVITY)
         null != n &&
@@ -120,9 +120,9 @@ function el(e) {
             exitFullScreen: v,
             guildRoomVisible: b,
         } = e,
-        L = (0, r.bG)([$.A], () => $.A.getSelectedParticipant(t.id), [t.id]),
-        { enabled: P } = (0, O.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
-        M = P && !t.isGuildStageVoice(),
+        P = (0, r.bG)([$.A], () => $.A.getSelectedParticipant(t.id), [t.id]),
+        { enabled: L } = (0, O.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
+        M = L && !t.isGuildStageVoice(),
         D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
         H = (0, W.kM)(t) && (0, Y.F)(o),
         en = M && !b && !H,
@@ -131,7 +131,7 @@ function el(e) {
         es = (0, F.nd)(t),
         er = en ? Q.intl.string(J.default.f7g0DK) : b ? `${el} \xb7 ${Q.intl.string(J.default.wRLmM0)}` : (es ?? el),
         eo = en ? d.Z : (0, I.gU)(t),
-        [ec] = (0, C.A)(L?.type === Z.lp.ACTIVITY ? [L.applicationId] : []),
+        [ec] = (0, C.A)(P?.type === Z.lp.ACTIVITY ? [P.applicationId] : []),
         ed = Q.intl.string(Q.t.BVZqJl);
     ea
         ? (ed = Q.intl.string(Q.t.EErMzA))
@@ -243,7 +243,7 @@ function el(e) {
                           })
                         : null,
                     (0, i.jsx)(V.i$, { channel: t, guild: a }),
-                    (0, i.jsx)(ei, { focusedApplication: ec, focusedParticipant: L, channel: t }),
+                    (0, i.jsx)(ei, { focusedApplication: ec, focusedParticipant: P, channel: t }),
                 ],
             }),
             ea && (0, i.jsx)(z.A, { channel: t }),

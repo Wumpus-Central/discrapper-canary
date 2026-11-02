@@ -32,8 +32,8 @@ let R = {
         2: { src: b.A, alt: N.default.uUhyVw, heightPx: 490 },
     },
     O = 30 * m.A.Millis.MINUTE,
-    L = m.A.Millis.HOUR;
-function P(e) {
+    P = m.A.Millis.HOUR;
+function L(e) {
     let t = (function (e) {
         if (null != e) return null != e.updatedAt ? e.updatedAt.getTime() : A.default.extractTimestamp(e.objectId);
     })(e);
@@ -41,13 +41,13 @@ function P(e) {
     let n = Date.now() - t;
     return n < O
         ? { stage: 0, timeUntilNextStage: O - n }
-        : n < L
-          ? { stage: 1, timeUntilNextStage: L - n }
+        : n < P
+          ? { stage: 1, timeUntilNextStage: P - n }
           : { stage: 2, timeUntilNextStage: null };
 }
 function M(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: o, disabled: h, plantWidth: p } = e,
-        [m, A] = l.useState(P(a).stage),
+        [m, A] = l.useState(L(a).stage),
         [C, y] = l.useState(null),
         N = l.useRef([]),
         b = l.useCallback(
@@ -79,11 +79,11 @@ function M(e) {
             "respect-motion-settings",
         ),
         T = l.useCallback(() => {
-            let { stage: e } = P(a);
+            let { stage: e } = L(a);
             b(e);
         }, [a, b]);
     l.useEffect(() => {
-        let { stage: e, timeUntilNextStage: t } = P(a),
+        let { stage: e, timeUntilNextStage: t } = L(a),
             n = null != a && m > e;
         if (n && null != C) return;
         let i = setTimeout(() => T(), n || null == t ? 0 : t);
@@ -98,15 +98,15 @@ function M(e) {
                 (0, f.Xh)(t, n, a.objectId, { object_type: j.N.PLANT }).catch((e) => (0, g.b)()),
                 (0, x.Ql)({ guildId: t, channelId: n, interactionType: "plant_watered" }));
         }, [a, t, n, m]),
-        L = (0, I.Sb)({ position: { x: o.x, y: 100 - o.y }, targetLabel: v.intl.string(R[m].alt) });
+        P = (0, I.Sb)({ position: { x: o.x, y: 100 - o.y }, targetLabel: v.intl.string(R[m].alt) });
     return (0, i.jsxs)(d.D, {
         className: s()(E.CV, E.AA, h && E.r9),
         style: { left: `${o.x}%`, bottom: `${o.y}%`, width: `${p}px` },
         onClick: h ? void 0 : O,
-        "aria-disabled": h && null == L,
+        "aria-disabled": h && null == P,
         role: "listitem",
         "aria-label": v.intl.string(R[m].alt),
-        ...L,
+        ...P,
         children: [
             S((e, t) => {
                 let n,

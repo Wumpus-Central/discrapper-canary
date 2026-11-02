@@ -43,18 +43,18 @@ function o(e) {
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
         S = null == f ? 0 : Math.round(f * Math.min(w, 2)),
-        N = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: S }),
-        A = (0, i.AV)(t, n),
-        C = r.useRef(A);
+        A = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: S }),
+        N = (0, i.AV)(t, n),
+        C = r.useRef(N);
     (r.useEffect(() => {
-        if (C.current === A) return;
-        ((C.current = A), (x.current = null), b(!1));
+        if (C.current === N) return;
+        ((C.current = N), (x.current = null), b(!1));
         let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-    }, [A]),
+    }, [N]),
         r.useEffect(() => {
-            g?.(N, j);
-        }, [N, j, g]),
+            g?.(A, j);
+        }, [A, j, g]),
         r.useEffect(() => {
             c && p.current?.focus();
         }, [c]));

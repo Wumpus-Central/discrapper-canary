@@ -46,10 +46,10 @@ var z = n(105292),
     Z = n(894625);
 let K = { tag: "span", variant: "text-md/normal", color: "text-default" },
     X = { className: a()("mention", Z.lE) };
-function W(e) {
+function Y(e) {
     return (0, i.jsx)(k.E, { ...K, color: "text-strong", children: e });
 }
-let Y = s.memo(function (e) {
+let W = s.memo(function (e) {
     var t;
     let n,
         l,
@@ -178,7 +178,7 @@ let Y = s.memo(function (e) {
                                 break;
                             }
                             case U.n4.ATTACHMENT:
-                                n = W(z.intl.string(z.t.nONJVc));
+                                n = Y(z.intl.string(z.t.nONJVc));
                                 break;
                             default: {
                                 let e = u?.choices?.find((e) => e.value === l.value);
@@ -186,7 +186,7 @@ let Y = s.memo(function (e) {
                             }
                         }
                     return (
-                        null == n && (n = W(x?.toString())),
+                        null == n && (n = Y(x?.toString())),
                         [
                             (0, i.jsxs)(
                                 s.Fragment,
@@ -355,7 +355,7 @@ function es(e) {
         D = s.useMemo(
             () => (e) => (
                 o()(null != l, "ExecutedCommand: channel cannot be null"),
-                (0, i.jsx)(Y, { ...e, channel: l, messageId: n.id, interactionData: n.interactionData })
+                (0, i.jsx)(W, { ...e, channel: l, messageId: n.id, interactionData: n.interactionData })
             ),
             [l, n.id, n.interactionData],
         ),
