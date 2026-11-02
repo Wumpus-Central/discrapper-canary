@@ -1,16 +1,16 @@
-n.d(t, { Ay: () => o, lB: () => c, o3: () => d });
+n.d(t, { A: () => d, o: () => c });
 var i = n(976860),
     r = n(89310),
-    a = n(735769),
-    s = n(751841),
-    l = n(652215);
-function o(e, t) {
-    let n = (0, s.hU)(void 0 === e ? a.A.getProjectId() : e);
-    null == t ? (0, i.pX)(n) : (0, i.pX)(n, { state: { conjureEntryPoint: t } });
-}
-function d() {
-    ((0, r.f)(), o(null));
+    a = n(260498),
+    s = n(313537),
+    l = n(735769),
+    o = n(751841);
+function d(e, t) {
+    let n,
+        r = void 0 === e ? (null == (n = l.A.getProjectId()) || null != (0, s.fL)(a.Ay.getProject(n)) ? null : n) : e,
+        d = null == r ? (0, o.hU)(null) : (0, s.z$)(r);
+    null == t ? (0, i.pX)(d) : (0, i.pX)(d, { state: { conjureEntryPoint: t } });
 }
 function c() {
-    (0, i.pX)(a.A.getReturnRoute() ?? l.BVt.ME);
+    ((0, r.f)(), d(null));
 }

@@ -1,86 +1,31 @@
-.glowMask__122f0 {
-    border-radius: var(--custom-conjure-glow-radius, var(--radius-sm));
-    inset: 0;
-    opacity: 0;
-    overflow: hidden;
-    pointer-events: none;
-    position: absolute;
-    transition: opacity .3s ease-in-out
-}
-
-.glowMask__122f0[data-thinking] {
-    opacity: 1;
-    transition: opacity 1s ease-in-out
-}
-
-.glowMask__122f0 {
-    --custom-conjure-glow-extent: 100%
-}
-
-@media (prefers-reduced-motion:reduce) {
-
-    .glowMask__122f0,
-    .glowMask__122f0[data-thinking] {
-        transition: none
-    }
-}
-
-.reduce-motion .glowMask__122f0,
-.reduce-motion .glowMask__122f0[data-thinking] {
-    transition: none
-}
-
-.iconBase__933a1 {
-    cursor: pointer;
-    line-height: 0;
-    position: relative
-}
-
-.mentionsBadge__933a1 {
-    pointer-events: none
-}
-
-.dynamicGraphicContainer__47887 {
+.smallCardItem__02912 {
     border-radius: var(--radius-sm);
-    height: 100%
-}
-
-.dynamicGraphicForegroundImage__47887 {
-    height: 100%
-}
-
-.wrapper_fce7ca {
-    isolation: isolate;
+    flex-shrink: 0;
     overflow: hidden;
-    position: relative
+    width: 246px
 }
 
-.shine_fce7ca {
-    background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 25%, hsla(0, 0%, 100%, .7) 50%, hsla(0, 0%, 100%, 0) 75%);
-    height: var(--custom-shine-dimensions);
-    inset-inline-end: calc(100% + var(--custom-shine-rotated-dimensions-delta));
-    opacity: .2;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    transform-origin: 50%;
-    width: var(--custom-shine-dimensions);
-    z-index: 3
+.row_a54042 {
+    display: flex;
+    gap: var(--space-md);
+    overflow: hidden;
+    width: 100%
 }
 
-.overflowHidden__5d64c {
-    overflow: hidden
+.row_a54042>:nth-child(2) {
+    --custom-game-profile-skeleton-animation-delay: 150ms
 }
 
-.gradient__5d64c {
-    background-image: linear-gradient(90deg, #394aff, #e901d9);
-    border-radius: var(--radius-sm);
-    bottom: 1px;
-    inset-inline: 0;
-    opacity: .16;
-    pointer-events: none;
-    position: absolute;
-    top: 1px
+.row_a54042>:nth-child(3) {
+    --custom-game-profile-skeleton-animation-delay: 300ms
+}
+
+.row_a54042>:nth-child(4) {
+    --custom-game-profile-skeleton-animation-delay: 450ms
+}
+
+.gap16_a54042 {
+    gap: var(--space-16)
 }
 
 .sticky__2fc34 {
@@ -1230,4 +1175,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=c5158bb3bebcde5e.css.map*/
+/*# sourceMappingURL=26ac5ef209018e9c.css.map*/

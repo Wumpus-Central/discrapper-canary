@@ -92,4 +92,15 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=16e36988a0c46680.css.map*/
+.notice_b3d623 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+/*# sourceMappingURL=319a1fdde04b304b.css.map*/

@@ -1,4 +1,4 @@
-(u.r(t), u.d(t, { default: () => h }));
+(u.r(t), u.d(t, { default: () => o }));
 var l = u(477900),
     n = u(582128),
     s = u(17928),
@@ -6,14 +6,14 @@ var l = u(477900),
     c = u(696451),
     d = u(71393),
     i = u(576705),
-    a = u(46746),
-    f = u(751841),
-    p = u(371169),
+    a = u(944996),
+    f = u(371169),
+    p = u(313537),
     A = u(652215);
-function h(e) {
+function o(e) {
     let { guildId: t, projectId: u } = e,
-        h = (0, s.yK)([c.Ay], () => c.Ay.getSelfMember(t)?.roles ?? [], [t]),
-        o = (0, s.bG)(
+        o = (0, s.yK)([c.Ay], () => c.Ay.getSelfMember(t)?.roles ?? [], [t]),
+        h = (0, s.bG)(
             [d.A, i.A],
             () => {
                 let e = d.A.getGuild(t);
@@ -24,13 +24,13 @@ function h(e) {
         b = u ?? null;
     return (
         n.useEffect(() => {
-            (0, p.listProjects)(t);
-        }, [t, h, o]),
+            (0, f.listProjects)(t);
+        }, [t, o, h]),
         n.useEffect(() => {
-            (0, p.dm)(t, null);
+            (0, f.dm)(t, null);
         }, [t, b]),
         n.useEffect(() => {
-            null != b && (0, r.bG)({ pathname: (0, f.hU)(b), state: { conjureEntryPoint: "deep_link" } });
+            null != b && (0, r.bG)({ pathname: (0, p.z$)(b), state: { conjureEntryPoint: "deep_link" } });
         }, [b]),
         (0, l.jsx)(a.A, { guildId: t })
     );

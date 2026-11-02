@@ -3,6 +3,7 @@ var i,
     r,
     a =
         (((i = {}).CONJURE = "conjuring"),
+        (i.CONJURE_PROJECT = "conjure"),
         (i.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
         (i.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
         (i.GAME_SHOP = "game-shop"),

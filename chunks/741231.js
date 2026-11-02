@@ -39,6 +39,7 @@ async function U(e) {
     if ((0, M.jq)(n))
         switch (n) {
             case M.VV.CONJURE:
+            case M.VV.CONJURE_PROJECT:
                 return null != i && (0, u.N)(i, "isAccessibleChannelOrThreadPath");
             case M.VV.ROLE_SUBSCRIPTIONS:
                 return (0, p.l8)(t, r);

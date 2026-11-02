@@ -1,4 +1,4 @@
-n.d(t, { eW: () => O, em: () => N, oi: () => C, wN: () => S });
+n.d(t, { eW: () => R, hP: () => O, oi: () => C, wN: () => N });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -16,14 +16,12 @@ var r = n(503698),
     f = n(428689),
     I = n(983851),
     p = n(323384),
-    m = n(513461),
-    T = n(791606),
-    g = n(260727);
-function S(e, t, n) {
+    m = n(152367),
+    T = n(513461),
+    g = n(791606),
+    S = n(260727);
+function N(e, t, n) {
     return (0, i.jsx)(u.hV, { count: e, color: t, "aria-hidden": n });
-}
-function N() {
-    return (0, i.jsx)(u.fk, { icon: (0, _.k)(T.A), disableColor: !0, className: g.yk });
 }
 function C(e) {
     let t,
@@ -45,29 +43,39 @@ function C(e) {
         if (!o) return null;
         t = p.k;
     }
-    return R({ icon: t, isCurrentUserConnected: a });
+    return L({ icon: t, isCurrentUserConnected: a });
 }
 function O(e) {
+    let { unavailable: t, conjureWorking: n, mediaState: r } = e;
+    return t
+        ? (0, i.jsx)(u.fk, { icon: (0, _.k)(g.A), disableColor: !0, className: S.yk })
+        : n
+          ? L({ icon: m.D, className: S.lE })
+          : null != r
+            ? C(r)
+            : void 0;
+}
+function R(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
-                case m.B5.SUBMITTED:
+                case T.B5.SUBMITTED:
                     return [void 0, l.ClockIcon];
-                case m.B5.REJECTED:
+                case T.B5.REJECTED:
                     return [s.A.unsafe_rawColors.RED_400.css, o.P];
-                case m.B5.APPROVED:
+                case T.B5.APPROVED:
                     return [s.A.unsafe_rawColors.GREEN_360.css, d.CheckmarkLargeIcon];
                 default:
                     return [void 0, c.PencilIcon];
             }
         })(t);
-    return R({ icon: i, color: n });
+    return L({ icon: i, color: n });
 }
-function R(e) {
-    let { icon: t, color: n, isCurrentUserConnected: r } = e;
+function L(e) {
+    let { icon: t, color: n, isCurrentUserConnected: r, className: s } = e;
     return (0, i.jsx)(u.fk, {
         icon: t,
-        className: a()(g.bG, { [g.gB]: r }),
+        className: a()(S.bG, s, { [S.gB]: r }),
         ...(null == n ? { disableColor: !0 } : { color: n }),
     });
 }

@@ -1,23 +1,21 @@
-_.d(t, { RO: () => i, fZ: () => n, g7: () => R, jQ: () => c, mE: () => h, v8: () => S, wd: () => s });
-var p = _(73153);
-function c(E) {
-    p.h.dispatch({ type: "CONJURE_PAGES_VISIT", projectId: E });
+a.d(e, { RO: () => c, fZ: () => o, g7: () => p, jQ: () => n, mE: () => r, wd: () => l });
+var i = a(73153);
+function n(t) {
+    let { inServer: e = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    i.h.dispatch({ type: "CONJURE_PAGES_VISIT", projectId: t, inServer: e });
 }
-function h() {
-    p.h.dispatch({ type: "CONJURE_PAGES_LEAVE" });
+function r() {
+    i.h.dispatch({ type: "CONJURE_PAGES_LEAVE" });
 }
-function i(E) {
-    p.h.dispatch({ type: "CONJURE_PAGES_PIN_SET", pinned: E });
+function c(t) {
+    i.h.dispatch({ type: "CONJURE_PAGES_PIN_SET", pinned: t });
 }
-function n(E) {
-    p.h.dispatch({ type: "CONJURE_PAGES_HOME_PROMPT_SAVE", prompt: E });
+function o(t) {
+    i.h.dispatch({ type: "CONJURE_PAGES_HOME_PROMPT_SAVE", prompt: t });
 }
-function s(E, t) {
-    p.h.dispatch({ type: "CONJURE_PAGES_SCROLL_SAVE", key: E, scrollTop: t });
+function l(t, e) {
+    i.h.dispatch({ type: "CONJURE_PAGES_SCROLL_SAVE", key: t, scrollTop: e });
 }
-function R(E, t) {
-    p.h.dispatch({ type: "CONJURE_PAGES_PROJECT_VIEW_SAVE", projectId: E, view: t });
-}
-function S(E) {
-    p.h.dispatch({ type: "CONJURE_PAGES_RETURN_ROUTE_SAVE", route: E });
+function p(t, e) {
+    i.h.dispatch({ type: "CONJURE_PAGES_PROJECT_VIEW_SAVE", projectId: t, view: e });
 }

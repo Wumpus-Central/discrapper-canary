@@ -3,5 +3,6 @@ e.exports = {
     yk: "unavailableBadge__650eb",
     bG: "iconBadge__650eb",
     gB: "isCurrentUserConnected__650eb",
+    lE: "conjureIconBadge__650eb",
     Uq: "tutorialContainer__650eb",
 };

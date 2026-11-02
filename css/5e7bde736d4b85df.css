@@ -1,0 +1,55 @@
+.container__5b40b {
+    position: relative
+}
+
+.spine__5b40b {
+    color: var(--spine-default);
+    top: 8px
+}
+
+.spine__5b40b,
+.spineBorder__5b40b {
+    inset-inline-start: 22px;
+    position: absolute
+}
+
+.spineBorder__5b40b {
+    background: var(--spine-default);
+    border-radius: 2px;
+    bottom: 24px;
+    top: 10px;
+    width: 2px
+}
+
+.spineWithGuildIcon__5b40b {
+    inset-inline-start: 32px
+}
+
+.spineBorderWithGuildIcon__5b40b {
+    inset-inline-start: 32px
+}
+
+.spine__5b40b,
+.spineBorder__5b40b {
+    inset-inline-start: var(--channels-spine-offset-left);
+    top: 0
+}
+
+.invertedSpine__5b40b {
+    top: var(--channels-spine-inverted-offset-top)
+}
+
+.row_e688e7 .unread_e688e7 {
+    inset-inline-start: 1px
+}
+
+.spinner_e688e7 {
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.spinnerPath_e688e7 {
+    stroke: var(--icon-strong)
+}
+
+/*# sourceMappingURL=5e7bde736d4b85df.css.map*/

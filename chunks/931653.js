@@ -54,7 +54,7 @@ async function N(e, t, l) {
     let n = await e.confirm(t, l);
     return null == n
         ? null
-        : (n.ok ? (0, G.Ay)(n.projectId, "remix") : (0, T.P0)({ text: n.message, variant: "critical" }), n);
+        : (n.ok ? (0, G.A)(n.projectId, "remix") : (0, T.P0)({ text: n.message, variant: "critical" }), n);
 }
 function O(e) {
     let { project: t, currentGuildId: l, transitionState: g, onClose: A } = e,

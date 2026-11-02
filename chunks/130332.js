@@ -63,7 +63,7 @@ function m(l, n) {
                                 icon: o.PencilIcon,
                                 leadingAccessory: { type: "icon", icon: o.PencilIcon },
                                 label: P.intl.string(G.default.jMMrDM),
-                                action: () => (0, f.Ay)(D.id, "app_channel"),
+                                action: () => (0, f.A)(D.id, "app_channel"),
                             },
                             "edit",
                         )

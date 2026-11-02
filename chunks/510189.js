@@ -22,7 +22,7 @@ var l = n(477900),
     b = n(441935),
     N = n(741907),
     P = n(260498);
-function y(e) {
+function w(e) {
     let t = (0, N.Ay)(),
         n = (0, j.bG)([P.Ay], () => P.Ay.getOwnedProjectsFetchState()),
         l = e.trim().toLocaleLowerCase(),
@@ -37,7 +37,7 @@ function y(e) {
               ? { kind: "loading" }
               : { kind: "empty" };
 }
-var w = n(821609),
+var y = n(821609),
     I = n(289873),
     S = n(371169),
     D = n(186340),
@@ -52,7 +52,7 @@ function _(e) {
             renderProjectActions: r,
             onProjectContextMenu: a,
         } = e,
-        i = y(n);
+        i = w(n);
     return "projects" === i.kind
         ? (0, l.jsx)(D.A, {
               projects: i.projects,
@@ -77,7 +77,7 @@ function _(e) {
                           color: "text-muted",
                           children: E.intl.string(L.default.DJAPMO),
                       }),
-                      (0, l.jsx)(w.$, {
+                      (0, l.jsx)(y.$, {
                           variant: "secondary",
                           size: "sm",
                           text: E.intl.string(L.default["WFJ/vb"]),
@@ -105,7 +105,7 @@ function K(e) {
         o = (0, N.$x)(),
         d = a.trim().toLocaleLowerCase(),
         P = s.useMemo(() => o.filter((e) => e.name.toLocaleLowerCase().includes(d)), [o, d]),
-        w = "empty" === y(a).kind && 0 === o.length,
+        y = "empty" === w(a).kind && 0 === o.length,
         I = s.useCallback((e) => r(e.id, "project_list"), [r]),
         S = s.useCallback(
             (e) => {
@@ -229,14 +229,14 @@ function K(e) {
                         : null,
                 ],
             }),
-            w ? (0, l.jsx)(J.A, {}) : null,
+            y ? (0, l.jsx)(J.A, {}) : null,
         ],
     });
 }
 function O() {
     let e = (0, r.W5)({ path: c._g, exact: !0 }),
         t = (0, i.rX)("ConjureAppSidebar");
-    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: t, onNavigate: o.Ay });
+    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: t, onNavigate: o.A });
 }
 function V() {
     return (0, a.TW)("ConjureAppSidebar") ? (0, l.jsx)(O, {}) : null;

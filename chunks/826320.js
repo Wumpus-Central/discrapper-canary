@@ -2,7 +2,7 @@ n.d(t, { A: () => ee });
 var i = n(477900),
     l = n(582128),
     s = n(38021),
-    r = n(760401),
+    r = n(124056),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -116,21 +116,21 @@ var I = n(834730),
     v = n(534890),
     R = n(331322),
     y = n(534514),
-    T = n(17839),
-    M = n(760658),
+    M = n(17839),
+    T = n(760658),
     L = n(105292),
     U = n(27948);
 function D() {
     let e = l.useCallback(() => {
-        (0, T.A)({ source: "favorites_empty_sidebar" });
+        (0, M.A)({ source: "favorites_empty_sidebar" });
     }, []);
     return (0, i.jsx)(I.E, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: L.intl.format(M.default.LyZZLX, { onClick: e }),
+        children: L.intl.format(T.default.LyZZLX, { onClick: e }),
     });
 }
-function O() {
+function P() {
     return (0, i.jsxs)("div", {
         className: U.v0,
         "aria-hidden": "true",
@@ -159,7 +159,7 @@ function O() {
         ],
     });
 }
-function P() {
+function O() {
     let e = (0, o.fj)();
     return (0, i.jsxs)(R.B, {
         gap: 8,
@@ -170,13 +170,13 @@ function P() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(y.D, { variant: "heading-md/semibold", children: L.intl.string(M.default["1n0TGE"]) }),
+                    (0, i.jsx)(y.D, { variant: "heading-md/semibold", children: L.intl.string(T.default["1n0TGE"]) }),
                     (0, i.jsx)(D, {}),
                 ],
             }),
             e
                 ? null
-                : (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { className: U.yF }), (0, i.jsx)(O, {})] }),
+                : (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { className: U.yF }), (0, i.jsx)(P, {})] }),
         ],
     });
 }
@@ -191,10 +191,10 @@ var w = n(866665),
     W = n(994500),
     Y = n(287809),
     X = n(427262),
-    q = n(16236);
-async function J(e) {
+    J = n(16236);
+async function q(e) {
     let t = await (0, K.pk)(e);
-    null != t && (await (0, q.nR)({ channelIds: [t], categoryName: L.intl.string(L.t.OGiMXJ), source: "suggestions" }));
+    null != t && (await (0, J.nR)({ channelIds: [t], categoryName: L.intl.string(L.t.OGiMXJ), source: "suggestions" }));
 }
 var Z = n(487470);
 function $(e) {
@@ -211,14 +211,14 @@ function $(e) {
                           (0, i.jsxs)("div", {
                               className: Z.wx,
                               children: [
-                                  (0, i.jsx)(F.A, { className: Z.TK, children: L.intl.string(M.default.oHWnLy) }),
+                                  (0, i.jsx)(F.A, { className: Z.TK, children: L.intl.string(T.default.oHWnLy) }),
                                   (0, i.jsx)(w.m, {
                                       text: L.intl.string(L.t.WAI6xu),
                                       children: (0, i.jsx)(V.D, {
                                           className: Z.r,
                                           onClick: l,
                                           role: "button",
-                                          "aria-label": L.intl.string(M.default.F3dWTe),
+                                          "aria-label": L.intl.string(T.default.F3dWTe),
                                           children: (0, i.jsx)(H.P, {
                                               size: "xs",
                                               color: "currentColor",
@@ -240,13 +240,13 @@ function $(e) {
                                               variant: "secondary",
                                               size: "sm",
                                               text: L.intl.string(L.t.OYkgVk),
-                                              "aria-label": L.intl.formatToPlainString(M.default.Hevebj, {
+                                              "aria-label": L.intl.formatToPlainString(T.default.Hevebj, {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? X.Ay.getName(e.record)
                                                           : (0, B.m1)(e.record, Y.default, W.A),
                                               }),
-                                              onClick: () => J((0, K.hY)(e)),
+                                              onClick: () => q((0, K.hY)(e)),
                                           }),
                                           "aria-posinset": t + 1,
                                           "aria-setsize": n.length,
@@ -269,7 +269,7 @@ function ee(e) {
         children: [
             (0, i.jsx)(S, {}),
             n
-                ? (0, i.jsxs)("div", { className: Q.XG, children: [(0, i.jsx)($, {}), (0, i.jsx)(P, {})] })
+                ? (0, i.jsxs)("div", { className: Q.XG, children: [(0, i.jsx)($, {}), (0, i.jsx)(O, {})] })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)("div", { className: Z._I, children: (0, i.jsx)($, { withDivider: !l }) }),

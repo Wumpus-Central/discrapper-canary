@@ -5,9 +5,6 @@ e.exports = {
     fR: "ditherThinking_ab7e6e",
     $Z: "conjureDitherMaskRipple_ab7e6e",
     DX: "ditherCanvas_ab7e6e",
-    L$: "ditherRight_ab7e6e",
-    TN: "conjureDitherMaskRippleRight_ab7e6e",
-    l4: "ditherCanvasRight_ab7e6e",
     f1: "ditherIntro_ab7e6e",
     gV: "conjureDitherIntroSlide_ab7e6e",
 };

@@ -31,7 +31,7 @@ function S(e) {
         children: [
             (0, t.jsxs)(C.rX, {
                 children: [
-                    (0, t.jsx)(C.Dr, { id: "new-project", label: N.intl.string(k.default["34+ZcS"]), action: j.o3 }),
+                    (0, t.jsx)(C.Dr, { id: "new-project", label: N.intl.string(k.default["34+ZcS"]), action: j.o }),
                     (0, t.jsx)(C.Dr, { id: "import", label: N.intl.string(k.default.tx8Azx), disabled: l, action: n }),
                 ],
             }),
@@ -47,10 +47,10 @@ var w = l(837381),
     I = l(812993),
     _ = l(289873),
     v = l(602853),
-    y = l(661531),
-    E = l(862328),
-    D = l(67811),
-    M = l(941971),
+    E = l(661531),
+    D = l(862328),
+    M = l(67811),
+    y = l(941971),
     z = l(900848),
     L = l(550591),
     R = l(522265),
@@ -65,7 +65,7 @@ let P = { width: (0, I.o6)(0) },
             [a, d] = i.useState(!1),
             s = (0, w.Vd)(`conjure-${l}`, 2),
             o = (0, B.yX)(l),
-            { url: u, glyphSize: c } = (0, R.A)(n, (0, v.r)(y.A.modules.guildbar.AVATAR_SIZE)),
+            { url: u, glyphSize: c } = (0, R.A)(n, (0, v.r)(E.A.modules.guildbar.AVATAR_SIZE)),
             p = [
                 n.name,
                 "working" === o
@@ -76,15 +76,15 @@ let P = { width: (0, I.o6)(0) },
             ]
                 .filter((e) => null != e)
                 .join(", "),
-            h = i.useCallback(() => (0, j.Ay)(l), [l]);
+            h = i.useCallback(() => (0, j.A)(l), [l]);
         return (0, t.jsxs)(z.c, {
             children: [
-                (0, t.jsx)(M.A, { overlay: !0, hovered: a, selected: !1 }),
+                (0, t.jsx)(y.A, { overlay: !0, hovered: a, selected: !1 }),
                 (0, t.jsx)(L.A, {
                     hideOnClick: !0,
                     text: n.name,
                     selected: !1,
-                    children: (0, t.jsx)(E.Q, {
+                    children: (0, t.jsx)(D.Q, {
                         selected: !0,
                         lowerBadge: (function (e) {
                             switch (e) {
@@ -105,7 +105,7 @@ let P = { width: (0, I.o6)(0) },
                             }
                         })(o),
                         lowerBadgeSize: "unread" === o ? F : P,
-                        children: (0, t.jsx)(D.j, {
+                        children: (0, t.jsx)(M.j, {
                             ...s,
                             ariaLabel: p,
                             icon: u,
@@ -133,10 +133,10 @@ let P = { width: (0, I.o6)(0) },
     });
 var X = l(652215);
 function G() {
-    (0, j.Ay)(null);
+    (0, j.A)(null);
 }
 function O(e) {
-    (0, j.Ay)(e, "create");
+    (0, j.A)(e, "create");
 }
 function q(e) {
     let { projects: n } = e,

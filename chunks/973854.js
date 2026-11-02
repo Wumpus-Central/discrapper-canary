@@ -7,6 +7,7 @@ function l(e) {
     let { channelId: t } = e;
     switch (t) {
         case s.VV.CONJURE:
+        case s.VV.CONJURE_PROJECT:
         case s.VV.CHANNEL_BROWSER:
         case s.VV.GUILD_HOME:
         case s.VV.GUILD_SHOP:

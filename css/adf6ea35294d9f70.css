@@ -55,6 +55,22 @@
     margin-inline-end: var(--space-12)
 }
 
+.backButton__2688e {
+    color: var(--interactive-icon-default);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-end: var(--space-16)
+}
+
+.backButton__2688e:hover {
+    color: var(--interactive-icon-hover)
+}
+
+.backButton__2688e:active {
+    color: var(--interactive-icon-active)
+}
+
 .projectIconButton__2688e {
     border-radius: calc(var(--space-20)/4);
     cursor: pointer;
@@ -90,4 +106,4 @@
     --background-gradient-lowest: var(--background-gradient-chat)
 }
 
-/*# sourceMappingURL=75a420813d8e6611.css.map*/
+/*# sourceMappingURL=adf6ea35294d9f70.css.map*/

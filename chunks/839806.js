@@ -6,8 +6,6 @@ e.exports = {
     dG: "conjureGlowDrift__8e816",
     dW: "glowImageThinking__8e816",
     Wm: "conjureGlowThinkingMaskRipple__8e816",
-    WR: "glowRight__8e816",
-    DO: "conjureGlowThinkingPulseRight__8e816",
     BE: "glowLayerIntro__8e816",
     b_: "conjureGlowIntroGrow__8e816",
     Ac: "conjureGlowIntroFade__8e816",

@@ -1,66 +1,90 @@
-n.d(t, { A: () => x });
-var s = n(477900);
+n.d(t, { A: () => g });
+var r = n(477900);
 n(582128);
-var l = n(152367),
-    r = n(661531),
-    a = n(866665),
-    i = n(939249),
+var l = n(866665),
+    a = n(939249),
+    i = n(548411),
+    s = n(152367),
+    o = n(661531),
     c = n(834730),
-    o = n(742589),
-    u = n(465006),
-    d = n(845079),
+    u = n(742589),
+    d = n(465006),
+    f = n(845079),
     m = n(809526),
-    f = n(105292),
+    p = n(105292),
     h = n(631417);
-function x(e) {
-    let { title: t, actions: n, breadcrumb: x, project: g, onOpenProjectSettings: p, transparent: v = !1 } = e,
-        j = f.intl.string(m.default.FzfmQ8),
-        N = (0, u.Ay)(g ?? null);
-    return (0, s.jsx)(o.A, {
+function g(e) {
+    let {
+            title: t,
+            actions: n,
+            breadcrumb: g,
+            project: x,
+            onOpenProjectSettings: j,
+            transparent: b = !1,
+            onBack: v,
+            hideShareTarget: y = !1,
+        } = e,
+        w = p.intl.string(m.default.FzfmQ8),
+        C = p.intl.string(m.default["/Tl7an"]),
+        N = (0, d.Ay)(y ? null : (x ?? null));
+    return (0, r.jsx)(u.A, {
         hideSearch: !0,
-        transparent: v,
+        transparent: b,
         toolbar: n,
         className: h.wx,
         "aria-label": t,
-        children: (0, s.jsxs)("div", {
+        children: (0, r.jsxs)("div", {
             className: h.QF,
             children: [
-                null == g
-                    ? (0, s.jsx)(l.D, {
-                          size: "custom",
-                          width: 20,
-                          height: 20,
-                          color: r.A.colors.ICON_STRONG,
-                          className: h.Kk,
-                      })
-                    : null,
-                null != x
-                    ? (0, s.jsxs)(s.Fragment, {
-                          children: [
-                              (0, s.jsx)(o.A.Title, { onClick: x.onClick, children: x.title }),
-                              (0, s.jsx)(o.A.Caret, {}),
-                          ],
-                      })
-                    : null,
-                null != g && null != p
-                    ? (0, s.jsx)(a.m, {
+                null != v
+                    ? (0, r.jsx)(l.m, {
                           asContainer: !0,
-                          text: j,
+                          text: C,
                           position: "bottom",
-                          children: (0, s.jsx)(i.D, {
-                              className: h.FF,
-                              onClick: p,
-                              "aria-label": j,
-                              children: (0, s.jsx)(d.A, { project: g, size: "header" }),
+                          children: (0, r.jsx)(a.D, {
+                              className: h.Gv,
+                              onClick: v,
+                              "aria-label": C,
+                              children: (0, r.jsx)(i.Z, { size: "refresh_sm", color: "currentColor" }),
                           }),
                       })
                     : null,
-                (0, s.jsx)(o.A.Title, { className: h.Qw, wrapperClassName: h.DD, children: t }),
-                null != N
-                    ? (0, s.jsxs)(s.Fragment, {
+                null == x
+                    ? (0, r.jsx)(s.D, {
+                          size: "custom",
+                          width: 20,
+                          height: 20,
+                          color: o.A.colors.ICON_STRONG,
+                          className: h.Kk,
+                      })
+                    : null,
+                null != g
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, s.jsx)(o.A.Divider, { className: h.uN }),
-                              (0, s.jsx)(c.E, {
+                              (0, r.jsx)(u.A.Title, { onClick: g.onClick, children: g.title }),
+                              (0, r.jsx)(u.A.Caret, {}),
+                          ],
+                      })
+                    : null,
+                null != x && null != j
+                    ? (0, r.jsx)(l.m, {
+                          asContainer: !0,
+                          text: w,
+                          position: "bottom",
+                          children: (0, r.jsx)(a.D, {
+                              className: h.FF,
+                              onClick: j,
+                              "aria-label": w,
+                              children: (0, r.jsx)(f.A, { project: x, size: "header" }),
+                          }),
+                      })
+                    : null,
+                (0, r.jsx)(u.A.Title, { className: h.Qw, wrapperClassName: h.DD, children: t }),
+                null != N
+                    ? (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)(u.A.Divider, { className: h.uN }),
+                              (0, r.jsx)(c.E, {
                                   tag: "span",
                                   variant: "text-sm/medium",
                                   color: "text-muted",

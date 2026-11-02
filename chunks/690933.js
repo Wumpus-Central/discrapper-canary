@@ -20,8 +20,8 @@ var r = n(477900),
     j = n(545691),
     k = n(317608),
     L = n(271982),
-    y = n(548118),
-    E = n(956790),
+    E = n(548118),
+    y = n(956790),
     I = n(699426),
     A = n(71393),
     w = n(186111),
@@ -71,7 +71,7 @@ var z = n(118591),
 function V(e) {
     if (!(0, S.Q5)(e.surface)) return void (0, F.returnToConjureFrameSurface)(e);
     let t = M.Ay.findProjectByApplicationId(e.applicationId);
-    null != t && (0, N.Ay)(t.id);
+    null != t && (0, N.A)(t.id);
 }
 function W(e) {
     let { width: t, height: n } = e;
@@ -127,7 +127,7 @@ function Z(e) {
         children: (0, r.jsxs)("div", {
             className: $.KE,
             children: [
-                null != s ? (0, r.jsx)(y.Ay, { guild: s, size: y.Ay.Sizes.MINI, className: $.$f }) : null,
+                null != s ? (0, r.jsx)(E.Ay, { guild: s, size: E.Ay.Sizes.MINI, className: $.$f }) : null,
                 (0, r.jsx)(d.E, {
                     variant: "text-sm/medium",
                     color: "text-strong",
@@ -265,7 +265,7 @@ function en(e) {
         L = l.useCallback((e, t) => {
             p((n) => new Map(n).set(e, t));
         }, []),
-        y = l.useCallback((e, t) => {
+        E = l.useCallback((e, t) => {
             x((n) => (n.get(e) === t ? n : new Map(n).set(e, t)));
         }, []),
         A = (function () {
@@ -407,7 +407,7 @@ function en(e) {
                             l > 0 && F.set(t, n + l + 8);
                             let o = t === U.CUs.TOP_LEFT || t === U.CUs.TOP_RIGHT;
                             return (0, r.jsx)(
-                                E.S8,
+                                y.S8,
                                 {
                                     id: e,
                                     className: s()($.x, { [$.yo]: A.isToolbarShown(e), [$.HJ]: A.isSnapping(e) }),
@@ -416,12 +416,12 @@ function en(e) {
                                     appContext: u,
                                     maxX: a,
                                     maxY: i,
-                                    edgeOffsetTop: E.X8.top + (o ? n : 0),
-                                    edgeOffsetBottom: E.X8.bottom + (o ? 0 : n),
-                                    edgeOffsetLeft: E.X8.left,
-                                    edgeOffsetRight: E.X8.right,
+                                    edgeOffsetTop: y.X8.top + (o ? n : 0),
+                                    edgeOffsetBottom: y.X8.bottom + (o ? 0 : n),
+                                    edgeOffsetLeft: y.X8.left,
+                                    edgeOffsetRight: y.X8.right,
                                     onMove: L,
-                                    onHeightChange: y,
+                                    onHeightChange: E,
                                     onDragStart: S,
                                     onDragEnd: T,
                                     onDragRelease: A.handleDragRelease,

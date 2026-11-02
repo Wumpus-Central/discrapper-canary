@@ -258,7 +258,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
         (s.release_channel = l.split("-")[0]),
-    isNaN((I = parseInt("660433", 10))) || (s.client_build_number = I),
+    isNaN((I = parseInt("660447", 10))) || (s.client_build_number = I),
     null == (a = H?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
@@ -991,6 +991,7 @@ let eL = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
     ep = new Set(
         Object.values(
             (((p = {}).CONJURE = "conjuring"),
+            (p.CONJURE_PROJECT = "conjure"),
             (p.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
             (p.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
             (p.GAME_SHOP = "game-shop"),
