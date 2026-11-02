@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => T });
 var i = n(477900),
     l = n(17928),
     s = n(419477),
@@ -15,22 +15,23 @@ var u = n(456060),
     p = n(616356),
     A = n(763827),
     x = n(762644),
-    f = n(51685),
-    I = n(105292);
-function E(e) {
+    f = n(768349),
+    I = n(51685),
+    E = n(105292);
+function v(e) {
     let { currentUserId: t, message: n, channel: s, analyticsLocations: o } = e,
         d = (0, l.bG)([p.A], () => p.A.getCurrentUserActiveStream()),
         c = (0, l.bG)([A.A], () => A.A.getChannelId()),
-        E = (0, x.A)(n.id),
-        { analyticsLocations: v } = (0, a.Ay)(o, r.A.REQUEST_TO_STREAM_INVITE_EMBED),
-        C = I.intl.string(f.default["5+172e"]),
-        _ = !1;
+        v = (0, x.A)(n.id),
+        { analyticsLocations: C } = (0, a.Ay)(o, r.A.REQUEST_TO_STREAM_INVITE_EMBED),
+        _ = E.intl.string(I.default["5+172e"]),
+        j = !1;
     return (
-        E
-            ? ((C = I.intl.string(f.default.u4QmWl)), (_ = !0))
+        v
+            ? ((_ = E.intl.string(I.default.u4QmWl)), (j = !0))
             : null != d
-              ? ((C = I.intl.string(f.default.P0wwmM)), (_ = !0))
-              : c !== s.id && ((C = I.intl.string(f.default.qRXats)), (_ = !0)),
+              ? ((_ = E.intl.string(I.default.P0wwmM)), (j = !0))
+              : c !== s.id && ((_ = E.intl.string(I.default.qRXats)), (j = !0)),
         (0, i.jsx)(m.h, {
             title: (0, u.uk)(n, s, t),
             actions:
@@ -38,38 +39,47 @@ function E(e) {
                     ? []
                     : [
                           {
-                              label: C,
+                              label: _,
                               trackingArea: h.kY.STREAM,
-                              disabled: _,
+                              disabled: j,
                               onClick: () => {
-                                  (0, g.A)(s.guild_id, s.id, v);
+                                  (0, g.A)(s.guild_id, s.id, C);
                               },
                               variant: "active",
                           },
                       ],
+            trackingConfig: {
+                id: "0",
+                linkType: f.J.REQUEST_TO_STREAM,
+                guildId: s.guild_id,
+                channelId: s.id,
+                messageId: n.id,
+                isDeadEnd: v,
+                analyticsLocations: C,
+            },
         })
     );
 }
-var v = n(395671),
-    C = n(666176),
-    _ = n(280450),
-    j = n(652215),
-    N = n(272984);
-let y = function (e) {
+var C = n(395671),
+    _ = n(666176),
+    j = n(280450),
+    N = n(652215),
+    y = n(272984);
+let T = function (e) {
     let { channel: t, message: n, hideParty: u, hideInviteEmbedBanner: m } = e,
         { analyticsLocations: h } = (0, a.Ay)(r.A.INVITE_EMBED),
         g =
             null != n.application
-                ? v.Ay.createFromServer(n.application)
-                : null != n.activity && null != n.activity.party_id && (0, N.pH)(n.activity.party_id)
-                  ? C.HT
+                ? C.Ay.createFromServer(n.application)
+                : null != n.activity && null != n.activity.party_id && (0, y.pH)(n.activity.party_id)
+                  ? _.HT
                   : void 0,
         { data: p } = (0, o.YY)(n.application?.id),
         A = p ?? g,
-        x = (0, l.bG)([_.default], () => _.default.getId()),
+        x = (0, l.bG)([j.default], () => j.default.getId()),
         { enabled: f } = c.A.useConfig({ guildId: t.guild_id, location: "MessageActivityInvite" });
-    return n.activity?.type === j.xL.STREAM_REQUEST && null == A && f
-        ? (0, i.jsx)(E, { channel: t, message: n, analyticsLocations: h, currentUserId: x })
+    return n.activity?.type === N.xL.STREAM_REQUEST && null == A && f
+        ? (0, i.jsx)(v, { channel: t, message: n, analyticsLocations: h, currentUserId: x })
         : null == A
           ? null
           : (0, i.jsx)(d.c, {
