@@ -49,22 +49,19 @@ class d extends s.A {
             (this.promotionPriority = e.promotionPriority));
     }
     getFormatVariableValues(e) {
-        var t, n;
-        let i,
-            { includeYear: r = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return null == this.promotionEndDate
-            ? {}
-            : {
-                  days_left:
-                      ((t = this.promotionEndDate),
-                      (n = new Date()),
-                      (i = t.getTime() - n.getTime()) > 0 ? Math.ceil(i / l.A.Millis.DAY) : 0),
-                  promotion_end_date: this.promotionEndDate.toLocaleDateString(e, {
-                      month: "long",
-                      day: "numeric",
-                      year: r ? "numeric" : void 0,
-                  }),
-              };
+        var t;
+        let n;
+        if (null == this.promotionEndDate) return {};
+        let i = new Date();
+        return {
+            days_left:
+                ((t = this.promotionEndDate), (n = t.getTime() - i.getTime()) > 0 ? Math.ceil(n / l.A.Millis.DAY) : 0),
+            promotion_end_date: this.promotionEndDate.toLocaleDateString(e, {
+                month: "long",
+                day: "numeric",
+                year: this.promotionEndDate.getFullYear() === i.getFullYear() ? void 0 : "numeric",
+            }),
+        };
     }
     get isTimed() {
         return null != this.startDate || null != this.endDate;
