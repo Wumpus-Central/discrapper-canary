@@ -146,19 +146,4 @@ function R(e, t) {
     r.V.AURA,
     u.default["+9TbTS"],
     r.V.SHOES,
-    u.default.sTG4TS,
-    !(function (e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        [
-            [i, i],
-            [e - i - n, i],
-            [e - i, i + n],
-            [e - i, t - i],
-            [i, t - i],
-        ]
-            .map((e) => {
-                let [t, n] = e;
-                return `${t},${n}`;
-            })
-            .join(" ");
-    })(c.Ei, c.VG, 16, 1));
+    u.default.sTG4TS);
