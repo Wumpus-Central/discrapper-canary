@@ -26,7 +26,7 @@ var i = n(503698),
 function w(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
         i = (0, p.h)(t),
-        { gameRecord: r } = (0, x.A)(t),
+        { gameRecord: r } = (0, x.Ay)(t),
         s = (0, g.A)({ applicationId: t, location: "ClipEmbed", source: f.GameProfileSources.ClipEmbed }),
         u = r?.name ?? i?.name;
     if (null == u) return null;

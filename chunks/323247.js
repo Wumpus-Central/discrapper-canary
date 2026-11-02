@@ -28,7 +28,7 @@ function A() {
     if (!E()) return;
     let e = d.A.getCurrentClientVoiceChannelId(null);
     null != e &&
-        (r.A.sendBotMessage(e, _.intl.formatToPlainString(_.t.XYof5G, { number: 3 })),
+        (r.A.sendBotMessage(e, _.intl.formatToPlainString(_.t.XYof5G, { number: 3 }), "call_idle_disconnect"),
         a.default.selectVoiceChannel(null));
 }
 class h extends s.A {

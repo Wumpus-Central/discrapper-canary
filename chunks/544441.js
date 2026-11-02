@@ -28,7 +28,7 @@ let d = {
     A = [a.D.XBOX_GAME_PASS, a.D.STEAM],
     f = [];
 function g(t) {
-    let { gameRecord: e } = (0, i.A)(t);
+    let { gameRecord: e } = (0, i.Ay)(t);
     return (0, l.useMemo)(() => {
         if (null == e) return f;
         let t = new Set(A),

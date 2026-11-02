@@ -65,7 +65,7 @@ let D = l.memo((e) => {
         K = (0, m.A)(null != B ? [B.applicationId] : []),
         Y = (0, c.A)(f, s.guild_id)[0],
         q = (0, A.YY)(Y?.application_id).data ?? void 0,
-        { gameRecord: $ } = (0, g.A)(Y?.application_id),
+        { gameRecord: $ } = (0, g.Ay)(Y?.application_id),
         [H, W] = (0, r.yK)(
             [y.A],
             () => [y.A.getStreamForUser(f, s.getGuildId()), y.A.getActiveStreamForUser(f, s.getGuildId())],

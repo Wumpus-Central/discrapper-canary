@@ -16,7 +16,7 @@ function u(e) {
         ...E,
         isTrayButton: !1,
         onClick: function () {
-            ((0, l.X)(A, l.O.LEAVE_ACTIVITY),
+            ((0, l.XJ)(A, l.OP.LEAVE_ACTIVITY),
                 null != u ? (0, o.r)(u) : (0, a.d)({ location: t, applicationId: n, showFeedback: !0 }));
         },
         iconComponent: r.DoorExitIcon,

@@ -158,7 +158,7 @@ function b(e) {
         i = (0, d.bG)([x.A], () => (null != t.applicationId ? x.A.getApplication(t.applicationId) : null), [
             t.applicationId,
         ]),
-        { gameRecord: a } = (0, h.A)(t.applicationId),
+        { gameRecord: a } = (0, h.Ay)(t.applicationId),
         { assets: n, isGame: s, isEmbedded: r } = t;
     if (null == n || (null == n.large_image && null == n.small_image))
         return r && null != t.embeddedIconUrl

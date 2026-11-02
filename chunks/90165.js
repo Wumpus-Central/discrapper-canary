@@ -1,16 +1,20 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(73153),
     a = n(652215);
 let s = {},
-    l = null;
-class o extends i.Ay.Store {
+    l = null,
+    o = !1;
+class d extends i.Ay.Store {
     static displayName = "LibraryApplicationStatisticsStore";
     get applicationStatistics() {
         return s;
     }
     get lastFetched() {
         return l;
+    }
+    get hasFetchFailed() {
+        return o;
     }
     getGameDuration(e) {
         let t = s[e];
@@ -54,13 +58,17 @@ class o extends i.Ay.Store {
         return n;
     }
 }
-let d = new o(r.h, {
+let c = new d(r.h, {
     USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
         let { statistics: t } = e;
         (t.forEach((e) => {
             s[e.application_id] = e;
         }),
-            (l = Date.now()));
+            (l = Date.now()),
+            (o = !1));
+    },
+    USER_ACTIVITY_STATISTICS_FETCH_FAIL: function () {
+        o = !0;
     },
     ACTIVITY_UPDATE_START: function (e) {
         let { duration: t, applicationId: n, distributor: i } = e,
@@ -74,6 +82,6 @@ let d = new o(r.h, {
             (s[n] = { application_id: n, total_duration: o, last_played_at: l, total_discord_sku_duration: d }));
     },
     LOGOUT: function () {
-        ((s = {}), (l = null));
+        ((s = {}), (l = null), (o = !1));
     },
 });

@@ -521,7 +521,7 @@ let tw = function (e) {
               disabled: a || !o,
               tooltipText: l,
               onClick: () => {
-                  ((0, tP.l0)(), (0, eT.X)(n, eT.O.CLIP));
+                  ((0, tP.l0)(), (0, eT.XJ)(n, eT.OP.CLIP));
               },
               onContextMenu: tU,
               icon: tR.x,
@@ -645,7 +645,7 @@ let t3 = a.memo(function (e) {
                     game_id: _?.id ?? null,
                     application_id: p.application_id,
                 }),
-                (0, eT.X)(y, eT.O.INVITE),
+                (0, eT.XJ)(y, eT.OP.INVITE),
                 k.default.track(B.HAw.OPEN_MODAL, {
                     type: "Send Join Invite",
                     application_id: p.application_id,
@@ -655,13 +655,13 @@ let t3 = a.memo(function (e) {
         }, [p, g, y, _]),
         K = a.useCallback(
             (e, t) => () => {
-                ((0, eT.X)(y, eT.O.LEAVE_ACTIVITY), (0, tS.d)({ location: t, applicationId: e, showFeedback: !0 }));
+                ((0, eT.XJ)(y, eT.OP.LEAVE_ACTIVITY), (0, tS.d)({ location: t, applicationId: e, showFeedback: !0 }));
             },
             [y],
         ),
         $ = a.useCallback(
             (e) => () => {
-                ((0, eT.X)(y, eT.O.LEAVE_ACTIVITY), (0, tG.r)(e));
+                ((0, eT.XJ)(y, eT.OP.LEAVE_ACTIVITY), (0, tG.r)(e));
             },
             [y],
         ),
@@ -781,14 +781,14 @@ let t3 = a.memo(function (e) {
                 o
                     ? ((e = !1),
                       (t = () => {
-                          (z(), (0, eT.X)(y, eT.O.STREAM, !1));
+                          (z(), (0, eT.XJ)(y, eT.OP.STREAM, !1));
                       }),
                       (n = tA.G),
                       (a = Q.intl.string(Q.t.S5anIc)))
                     : u
                       ? ((e = !1),
                         (t = () => {
-                            (q ? Z() : X(), (0, eT.X)(y, eT.O.STREAM, !0));
+                            (q ? Z() : X(), (0, eT.XJ)(y, eT.OP.STREAM, !0));
                         }),
                         (n = th.F),
                         (a =
@@ -1119,7 +1119,7 @@ function nS(e) {
             popoutTargetRef: f,
             isCurrentlyRunningGame: I,
         } = e,
-        { gameRecord: p } = (0, nt.A)(d?.id),
+        { gameRecord: p } = (0, nt.Ay)(d?.id),
         m =
             ((t = p),
             (n = d),
@@ -1330,7 +1330,7 @@ function nU(e) {
                             game_id: n?.id ?? null,
                             application_id: t.application_id,
                         }),
-                        (0, eT.X)(s, eT.O.INVITE),
+                        (0, eT.XJ)(s, eT.OP.INVITE),
                         k.default.track(B.HAw.OPEN_MODAL, {
                             type: "Send Join Invite",
                             application_id: t.application_id,

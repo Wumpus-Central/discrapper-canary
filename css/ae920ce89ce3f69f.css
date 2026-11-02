@@ -11,10 +11,42 @@
     width: 168px
 }
 
+.clickable_a3aa72 {
+    cursor: pointer
+}
+
 .cover_a3aa72 {
     aspect-ratio: 3/4;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-low)
+    box-shadow: var(--shadow-low);
+    overflow: hidden;
+    position: relative
+}
+
+.clickable_a3aa72:hover .cover_a3aa72 {
+    box-shadow: var(--shadow-high)
+}
+
+.coverArt_a3aa72 {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%
+}
+
+.full-motion .coverArt_a3aa72 {
+    transition: transform .6s cubic-bezier(.16, 1, .3, 1)
+}
+
+.full-motion .clickable_a3aa72:hover .coverArt_a3aa72 {
+    transform: scale(1.06)
+}
+
+.coverSkeleton_a3aa72 {
+    border-radius: inherit;
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
 }
 
 .name_a3aa72 {
@@ -320,4 +352,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=81e4852edc483284.css.map*/
+/*# sourceMappingURL=ae920ce89ce3f69f.css.map*/

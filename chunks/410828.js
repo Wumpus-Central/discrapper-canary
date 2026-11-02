@@ -1,4 +1,4 @@
-n.d(t, { Pb: () => P, Ti: () => O, di: () => M, nM: () => R, nd: () => L });
+n.d(t, { Pb: () => L, Ti: () => O, di: () => M, nM: () => R, nd: () => P });
 var i = n(477900);
 n(582128);
 var l = n(17928),
@@ -61,10 +61,10 @@ function O(e) {
         { isOnStartStageScreen: l } = (0, I.Ay)();
     return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(v.A, { channel: t, isOnStartStageScreen: l }) });
 }
-function L(e) {
+function P(e) {
     return (0, l.bG)([y.A], () => (e.isGuildStageVoice() ? y.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);
 }
-function P(e) {
+function L(e) {
     let { channel: t } = e,
         n = (0, g.uy)(t.id),
         l = (0, g.zy)(t.id, C.ip.AUDIENCE);
@@ -121,7 +121,7 @@ function M(e) {
                 });
             },
             onClick: () => {
-                ((0, m.X)(a, m.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR, !s), d.A.updateStageAudienceSidebarOpen(t.id, !s));
+                ((0, m.XJ)(a, m.OP.OPEN_REQUEST_TO_SPEAK_SIDEBAR, !s), d.A.updateStageAudienceSidebarOpen(t.id, !s));
             },
         })
     );

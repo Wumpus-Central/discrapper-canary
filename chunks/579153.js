@@ -39,7 +39,7 @@ let g = function (e) {
                 ref: x,
                 isTrayButton: !0,
                 onClick: (e) => {
-                    ((0, c.X)(g, c.O.MORE), t(e));
+                    ((0, c.XJ)(g, c.OP.MORE), t(e));
                 },
                 label: m.intl.string(m.t.PdRCRg),
                 iconComponent: a.MoreHorizontalIcon,

@@ -50,8 +50,8 @@ var j = n(730852),
     Y = n(198052),
     B = n(85448),
     J = n(329072),
-    X = n(384059),
-    Z = n(480890),
+    Z = n(384059),
+    X = n(480890),
     q = n(806931),
     Q = n(652215),
     ee = n(650583),
@@ -103,7 +103,7 @@ function eo(e) {
                 label: en.intl.string(en.t.WAI6xu),
                 className: el.hP,
                 onClick: () => {
-                    ((0, X.X)(d, X.O.DISCONNECT),
+                    ((0, Z.lO)(d, Z.OP.DISCONNECT, n.id),
                         F.default.track(Q.HAw.RING_CALL_DECLINED, {
                             location: d,
                             guild_id: n.guild_id,
@@ -119,7 +119,7 @@ function eo(e) {
                         let { closePopout: i } = e;
                         return (0, t.jsx)(J.A, {
                             onClose: i,
-                            onInteraction: (0, Z.s)("VideoDeviceMenu", d, { entrypoint: q.GK.CARET }),
+                            onInteraction: (0, X.s)("VideoDeviceMenu", d, { entrypoint: q.GK.CARET }),
                         });
                     },
                     position: "top",
@@ -142,7 +142,7 @@ function eo(e) {
                             popoutOpen: a,
                             onCameraUnavailable: P.A,
                             onChange: () => {
-                                ((0, X.X)(d, X.O.JOIN_VIDEO_CALL),
+                                ((0, Z.lO)(d, Z.OP.JOIN_VIDEO_CALL, n.id),
                                     F.default.track(Q.HAw.RING_CALL_ACCEPTED, {
                                         location: d,
                                         guild_id: n.guild_id,

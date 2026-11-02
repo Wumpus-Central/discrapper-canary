@@ -1,4 +1,4 @@
-t.d(n, { A: () => L });
+t.d(n, { A: () => R });
 var i = t(477900),
     l = t(582128),
     s = t(17928),
@@ -18,20 +18,20 @@ var i = t(477900),
     p = t(987933),
     E = t(714736),
     j = t(829834),
-    v = t(662080),
-    I = t(754388),
+    I = t(662080),
+    v = t(754388),
     N = t(173660),
-    T = t(665252),
-    _ = t(999926),
+    _ = t(665252),
+    T = t(999926),
     b = t(607567),
     S = t(246356),
     y = t(204651);
 t(980504);
 var O = t(376086),
-    R = t(105292);
-function L(e) {
-    let { channel: n, themeable: L, whichPopoutIsOpen: D, setWhichPopoutIsOpen: M, idle: G } = e,
-        { parentAnalyticsLocation: P } = (0, u.Ay)(),
+    P = t(105292);
+function R(e) {
+    let { channel: n, themeable: R, whichPopoutIsOpen: L, setWhichPopoutIsOpen: D, idle: M } = e,
+        { parentAnalyticsLocation: G } = (0, u.Ay)(),
         {
             Component: k,
             play: U,
@@ -39,13 +39,13 @@ function L(e) {
         } = (0, r.E)(),
         w = n.getGuildId(),
         { mute: H, suppress: Y } = (0, N.A)(n),
-        z = (0, s.bG)([_.Ay], () => _.Ay.isDeaf()),
+        z = (0, s.bG)([T.Ay], () => T.Ay.isDeaf()),
         K = H || Y || z,
         F = (0, C.VE)({ isSoundboardButtonDisabled: K }),
         [X, q] = (0, h.DP)(F),
-        { analyticsLocations: Q } = (0, u.Ay)(),
-        W = (0, g.N)(w, "ActionBarSoundboardButton") && !K,
-        J = l.useCallback((e) => (0, i.jsx)(j.A, { showDot: W, children: (0, i.jsx)(k, { ...e }) }), [k, W]),
+        { analyticsLocations: J } = (0, u.Ay)(),
+        Q = (0, g.N)(w, "ActionBarSoundboardButton") && !K,
+        W = l.useCallback((e) => (0, i.jsx)(j.A, { showDot: Q, children: (0, i.jsx)(k, { ...e }) }), [k, Q]),
         { showQuickAccess: $ } = (0, x.j)("ActionBarSoundboardButton"),
         [Z, ee] = l.useState($),
         en = l.useCallback(
@@ -57,15 +57,15 @@ function L(e) {
         et = l.useCallback(() => en(!1), [en]),
         { enabled: ei } = (0, E.W)(w ?? "0", "ActionBarSoundboardButton"),
         { isHovered: el, setIsHovered: es, onMouseEnter: ea, onMouseLeave: er } = (0, m.A)(200, 300),
-        eo = l.useMemo(() => (el && (D === O.P.SOUNDBOARD || null == D)) || D === O.P.SOUNDBOARD, [el, D]);
+        eo = l.useMemo(() => (el && (L === O.P.SOUNDBOARD || null == L)) || L === O.P.SOUNDBOARD, [el, L]);
     function ec() {
         return H
-            ? R.intl.string(R.t["Ox4/zU"])
+            ? P.intl.string(P.t["Ox4/zU"])
             : Y
-              ? R.intl.string(R.t["+YBKYI"])
+              ? P.intl.string(P.t["+YBKYI"])
               : z
-                ? R.intl.string(R.t.X1lQli)
-                : R.intl.string(R.t["6EJvHt"]);
+                ? P.intl.string(P.t.X1lQli)
+                : P.intl.string(P.t["6EJvHt"]);
     }
     function eu(e) {
         null != w &&
@@ -74,24 +74,24 @@ function L(e) {
                 return (n) =>
                     (0, i.jsx)(e, {
                         guildId: w,
-                        sourceAnalyticsLocations: Q,
+                        sourceAnalyticsLocations: J,
                         ...n,
-                        onInteraction: (0, A.s)("SoundboardContextMenu", P),
+                        onInteraction: (0, A.s)("SoundboardContextMenu", G),
                     });
             });
     }
     function ed() {
-        (U(), null != D && ea(), Z && et(), M?.(O.P.SOUNDBOARD));
+        (U(), null != L && ea(), Z && et(), D?.(O.P.SOUNDBOARD));
     }
     function eA() {
-        ((0, d.X)(P, d.O.SOUNDBOARD), D === O.P.SOUNDBOARD ? (M?.(void 0), er()) : ed());
+        ((0, d.XJ)(G, d.OP.SOUNDBOARD), L === O.P.SOUNDBOARD ? (D?.(void 0), er()) : ed());
     }
     l.useEffect(() => {
         eo || Z || en(!0);
     }, [eo, Z, en]);
     let eh = l.useCallback(() => {
-            null == D && M?.(O.P.SOUNDBOARD);
-        }, [D, M]),
+            null == L && D?.(O.P.SOUNDBOARD);
+        }, [L, D]),
         em = l.useRef(null),
         { usersInChannel: eg } = (0, s.cf)([b.Ay], () => ({ usersInChannel: b.Ay.countVoiceStatesForChannel(n.id) }), [
             n,
@@ -99,11 +99,11 @@ function L(e) {
         [ex, eC] = l.useState(!1);
     return (
         l.useEffect(() => {
-            let e = eg >= 2 && !K && null == D;
-            if (G || !e) return void eC(!1);
+            let e = eg >= 2 && !K && null == L;
+            if (M || !e) return void eC(!1);
             let n = setTimeout(() => eC(!0), 300);
             return () => clearTimeout(n);
-        }, [G, K, eg, D]),
+        }, [M, K, eg, L]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Y, {
@@ -115,7 +115,7 @@ function L(e) {
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        (es(!1), M?.(void 0));
+                        (es(!1), D?.(void 0));
                     },
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
@@ -127,7 +127,7 @@ function L(e) {
                                       onMouseLeave: er,
                                       onMouseDown: eh,
                                       children: Z
-                                          ? (0, i.jsx)(v.A, {
+                                          ? (0, i.jsx)(I.A, {
                                                 channel: n,
                                                 guildId: w,
                                                 openFullPicker: et,
@@ -135,7 +135,7 @@ function L(e) {
                                                 analyticsSource: "action bar button",
                                                 showEchoes: ei,
                                             })
-                                          : (0, i.jsx)(I.A, {
+                                          : (0, i.jsx)(v.A, {
                                                 guildId: w,
                                                 channel: n,
                                                 onClose: t,
@@ -152,10 +152,10 @@ function L(e) {
                         (0, i.jsx)(y.l, {
                             ref: em,
                             isTrayButton: !0,
-                            themeable: L,
+                            themeable: R,
                             label: ec(),
-                            "aria-label": W ? R.intl.string(R.t.D923q4) : ec(),
-                            iconComponent: J,
+                            "aria-label": Q ? P.intl.string(P.t.D923q4) : ec(),
+                            iconComponent: W,
                             disabled: K,
                             onContextMenu: eu,
                             onClick: eA,
@@ -163,13 +163,13 @@ function L(e) {
                                 (V(), "focus" !== e.type && ea());
                             },
                             onMouseLeave: () => {
-                                null == D && (er(), B());
+                                null == L && (er(), B());
                             },
-                            isActive: el || D === O.P.SOUNDBOARD,
-                            color: el || D === O.P.SOUNDBOARD ? "primaryDark" : void 0,
+                            isActive: el || L === O.P.SOUNDBOARD,
+                            color: el || L === O.P.SOUNDBOARD ? "primaryDark" : void 0,
                         }),
                 }),
-                !eo && null != w && ei ? (0, i.jsx)(T.A, { guildId: w, channelId: n.id }) : null,
+                !eo && null != w && ei ? (0, i.jsx)(_.A, { guildId: w, channelId: n.id }) : null,
                 ex &&
                     (0, i.jsx)(p.A, { targetElementRef: em, openSoundboardPicker: ed, shouldShowSoundboardPicker: eo }),
             ],

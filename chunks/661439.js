@@ -16,6 +16,6 @@ async function m() {
             });
             i.h.dispatch({ type: "USER_ACTIVITY_STATISTICS_FETCH_SUCCESS", statistics: e.body });
         } catch (e) {
-            return e;
+            return (i.h.dispatch({ type: "USER_ACTIVITY_STATISTICS_FETCH_FAIL" }), e);
         }
 }

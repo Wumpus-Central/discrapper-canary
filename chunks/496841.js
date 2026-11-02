@@ -1,7 +1,7 @@
 t.d(e, { A: () => p });
 var i = t(477900),
-    s = t(582128),
-    l = t(978940),
+    l = t(582128),
+    s = t(978940),
     a = t(730852),
     o = t(688810),
     c = t(384059),
@@ -16,13 +16,13 @@ function p(n) {
         { parentAnalyticsLocation: h } = (0, o.Ay)(),
         j = t ? d.l : d.A,
         k = e.isManaged() || !e.isPrivate() ? b.intl.string(b.t.S0W8Z5) : b.intl.string(b.t["0D/6Rz"]),
-        L = s.useCallback(() => {
-            (p?.(), (0, c.X)(h, c.O.JOIN_CALL));
+        L = l.useCallback(() => {
+            (p?.(), (0, c.lO)(h, c.OP.JOIN_CALL, e.id));
             let n = u.A.isEnabled() ? u.A.getTabForChannel(e.id) : null;
             (null != n && (0, r.ZD)(n.id, !0), a.default.selectVoiceChannel(e.id));
         }, [e.id, p, h]);
     return (
-        s.useEffect(
+        l.useEffect(
             () => (
                 C._.subscribe(A.jej.CALL_ACCEPT, L),
                 () => {
@@ -31,6 +31,6 @@ function p(n) {
             ),
             [L],
         ),
-        (0, i.jsx)(j, { ..._, iconComponent: l._, label: k, onClick: L, isTrayButton: !1 })
+        (0, i.jsx)(j, { ..._, iconComponent: s._, label: k, onClick: L, isTrayButton: !1 })
     );
 }

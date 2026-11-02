@@ -80,7 +80,7 @@ function x(e) {
                                         children: (0, i.jsx)(f.D, {
                                             className: s()(v.xr, { [v.YJ]: d }),
                                             onClick: (e) => {
-                                                ((0, p.X)(A.A.RTC_PANEL, p.O.CONNECTION_STATUS), l(e));
+                                                ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), l(e));
                                             },
                                             children: (0, i.jsx)(R, { quality: t, largePing: d }),
                                         }),
@@ -94,7 +94,7 @@ function x(e) {
                                                   accessory: C,
                                                   children: (0, i.jsx)(f.D, {
                                                       onClick: (e) => {
-                                                          ((0, p.X)(A.A.RTC_PANEL, p.O.CONNECTION_STATUS), l(e));
+                                                          ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), l(e));
                                                       },
                                                       children: (0, i.jsx)(N, {
                                                           text: w,

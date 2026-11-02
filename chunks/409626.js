@@ -111,6 +111,7 @@ var i,
         (a.VoiceChannelGames = "voice_channel_games"),
         (a.Frame = "frame"),
         (a.GuildSpacePopularGames = "guild_space_popular_games"),
+        (a.GlobalDiscoveryGamesBecauseYouPlayed = "global_discovery_games_because_you_played"),
         a),
     h = (((s = {}).FullProfile = "full_profile"), (s.MiniProfile = "mini_profile"), s);
 function f() {

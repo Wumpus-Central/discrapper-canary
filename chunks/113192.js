@@ -160,7 +160,7 @@ function N(e) {
                                   className: g.BD,
                                   popoutOpen: !1,
                                   onOpenPopout: function () {
-                                      ((0, d.X)(v, d.O.POPOUT, !0), (0, s.A)({ onConfirm: () => (0, I.A)(t.id) }));
+                                      ((0, d.XJ)(v, d.OP.POPOUT, !0), (0, s.A)({ onConfirm: () => (0, I.A)(t.id) }));
                                   },
                                   onClosePopout: T.FXj,
                               }),

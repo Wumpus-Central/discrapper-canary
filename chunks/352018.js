@@ -72,7 +72,7 @@ function R(e) {
                     label: S.intl.string(S.t.tmiYpF),
                     iconComponent: b,
                     onClick: (t) => {
-                        ((null != R || null != s) && (0, d.X)(R ?? s, d.O.STREAM_SETTINGS), e?.onClick(t));
+                        ((null != R || null != s) && (0, d.XJ)(R ?? s, d.OP.STREAM_SETTINGS), e?.onClick(t));
                     },
                     ...u,
                 }),

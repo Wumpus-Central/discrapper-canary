@@ -23,27 +23,27 @@ function A(e) {
         { parentAnalyticsLocation: p } = (0, r.Ay)(),
         E = n || t || A,
         j = h ? u.l : u.A,
-        v = (0, o.A)(n, t, A, m),
-        { events: I, play: N, Component: T } = (0, s.L)(E ? "unmute" : "mute"),
-        _ = t || A ? a.O : T;
+        I = (0, o.A)(n, t, A, m),
+        { events: v, play: N, Component: _ } = (0, s.L)(E ? "unmute" : "mute"),
+        T = t || A ? a.O : _;
     return (
         l.useEffect(() => () => N(), [N, E]),
         (0, i.jsx)(j, {
             ...f,
-            iconComponent: _,
+            iconComponent: T,
             isTrayButton: !0,
             caretColor: E ? "red" : "primaryDark",
             caretAriaLabel: d.intl.string(d.t["+ybWO4"]),
             color: E ? "red" : void 0,
-            label: v,
+            label: I,
             onMouseEnter: (e) => {
-                (g?.(e), I.onMouseEnter());
+                (g?.(e), v.onMouseEnter());
             },
             onMouseLeave: (e) => {
-                (x?.(e), I.onMouseLeave());
+                (x?.(e), v.onMouseLeave());
             },
             onClick: (e) => {
-                (C?.(e), (0, c.X)(p, c.O.MIC, n));
+                (C?.(e), (0, c.XJ)(p, c.OP.MIC, n));
             },
         })
     );

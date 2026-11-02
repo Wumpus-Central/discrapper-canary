@@ -39,7 +39,7 @@ function g(e) {
                 (e > 0 && E && r.default.toggleLocalMute(g, x), r.default.setLocalVolume(g, (0, d.w)(e), x));
             },
             onToggleMute: () => {
-                (null != f && (0, o.X)(f, o.O.VOLUME, E), r.default.toggleLocalMute(g, x));
+                (null != f && (0, o.XJ)(f, o.OP.VOLUME, E), r.default.toggleLocalMute(g, x));
             },
         }),
     });

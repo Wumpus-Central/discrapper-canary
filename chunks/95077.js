@@ -1257,7 +1257,7 @@ var tI = n(769015),
     tw = n(308766);
 function tT(e) {
     let { gameId: t, userId: n, className: l } = e,
-        { gameRecord: a } = (0, tC.A)(t),
+        { gameRecord: a } = (0, tC.Ay)(t),
         s = !(0, tb.X)("WidgetClipGameIcon"),
         r = (0, tN.A)(s),
         d = (0, tv.A)({

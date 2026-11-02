@@ -21,8 +21,8 @@ var i = t(477900),
     C = t(866665),
     T = t(43990),
     g = t(834730),
-    b = t(265872),
-    P = t(666860),
+    P = t(265872),
+    b = t(666860),
     N = t(717048),
     O = t(567249),
     k = t(253932),
@@ -40,7 +40,7 @@ function M(e) {
         iconComponent: E.MoreHorizontalIcon,
         tooltipPosition: "bottom",
         onClick: (e) => {
-            ((0, L.X)(l, L.O.MORE), n(e));
+            ((0, L.XJ)(l, L.OP.MORE), n(e));
         },
         ...t,
     });
@@ -58,9 +58,9 @@ var S = t(423562),
     H = t(475815),
     $ = t(795816),
     q = t(104171),
-    X = t(47294),
-    Z = t(652934),
-    J = t(728033),
+    J = t(47294),
+    X = t(652934),
+    Z = t(728033),
     Q = t(652215),
     ee = t(16961),
     en = t(52464);
@@ -138,7 +138,7 @@ function ei(e) {
         U = (0, ee.G)(),
         {
             rootNode: $,
-            popoutWindow: Z,
+            popoutWindow: X,
             toggleFullScreen: ei,
         } = (function () {
             let e,
@@ -245,21 +245,21 @@ function ei(e) {
                                                   popoutOpen: !0,
                                                   onOpenPopout: () => {},
                                                   onClosePopout: () => {
-                                                      ((0, P.zV)(Q.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
-                                                          (0, X.A)({ onConfirm: u }));
+                                                      ((0, b.zV)(Q.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
+                                                          (0, J.A)({ onConfirm: u }));
                                                   },
                                               })
                                             : null,
-                                        (0, i.jsx)(S.A, { node: $, guestWindow: Z, onClick: ei }),
+                                        (0, i.jsx)(S.A, { node: $, guestWindow: X, onClick: ei }),
                                         (0, i.jsx)(
-                                            b.Y,
+                                            P.Y,
                                             {
                                                 targetElementRef: el,
                                                 position: "bottom",
                                                 renderPopout: (e) => {
                                                     let { closePopout: n } = e;
                                                     return (0, i.jsx)(_.A, {
-                                                        children: (0, i.jsx)(J.default, {
+                                                        children: (0, i.jsx)(Z.default, {
                                                             application: a,
                                                             channelId: s,
                                                             onClose: n,
@@ -291,7 +291,7 @@ function el(e) {
     let { application: n, channelId: t } = e,
         a = (0, l.bG)([A.Ay], () => A.Ay.getSelfEmbeddedActivities().get(n.id)),
         s = o.useCallback(async () => {
-            (await (0, $.od)(n.id, t ?? null), (0, Z.G)());
+            (await (0, $.od)(n.id, t ?? null), (0, X.G)());
         }, [n.id, t]);
     return (0, i.jsx)(ei, {
         application: n,

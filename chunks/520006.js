@@ -90,7 +90,7 @@ function S(e) {
     null != G && O)
         ? (0, i.jsx)(p.A, {
               onClick: function () {
-                  null != G && (null != M && (0, E.X)(M, E.O.INVITE), u.qf(G, !1, P));
+                  null != G && (null != M && (0, E.XJ)(M, E.OP.INVITE), u.qf(G, !1, P));
               },
               iconComponent: x,
               label: k,
@@ -105,7 +105,7 @@ function S(e) {
                 onClick: () => {
                     (a()(null != w, "guild cannot be null"),
                         a()(null != r, "channel cannot be null"),
-                        null != M && (0, E.X)(M, E.O.INVITE),
+                        null != M && (0, E.XJ)(M, E.OP.INVITE),
                         g({
                             guild: w,
                             channel: r,

@@ -66,7 +66,7 @@ function B(e) {
         j = (0, m.A)(t),
         { parentAnalyticsLocation: W } = (0, u.Ay)();
     function Y(e) {
-        ((0, A.X)(W, A.O.CAMERA, e), c.default.setVideoEnabled(e));
+        ((0, A.XJ)(W, A.OP.CAMERA, e), c.default.setVideoEnabled(e));
     }
     return (0, i.jsxs)("div", {
         className: k._v,
@@ -127,7 +127,7 @@ function B(e) {
                                       className: x.BD,
                                       popoutOpen: !1,
                                       onOpenPopout: function () {
-                                          ((0, A.X)(W, A.O.POPOUT, !0),
+                                          ((0, A.XJ)(W, A.OP.POPOUT, !0),
                                               null != t &&
                                                   (0, P.A)({
                                                       onConfirm: () =>

@@ -118,12 +118,12 @@ class ec extends r.PureComponent {
     handleStopStream = () => {
         let { participantOnScreen: e } = this.props;
         (s()((0, el.Ay)(e), "cannot stop stream for non streamer"),
-            (0, N.X)(I.A.VIDEO_PIP, N.O.STREAM, !1),
+            (0, N.XJ)(I.A.VIDEO_PIP, N.OP.STREAM, !1),
             (0, v.A)(e.stream));
     };
     handleOpenPopout = () => {
         let { channel: e } = this.props;
-        ((0, N.X)(I.A.VIDEO_PIP, N.O.POPOUT, !0), P.openChannelCallPopout(e));
+        ((0, N.XJ)(I.A.VIDEO_PIP, N.OP.POPOUT, !0), P.openChannelCallPopout(e));
     };
     renderBottomLeftControls = () => {
         let { canSeeParticipantName: e } = this.viewProperties;
@@ -148,7 +148,7 @@ class ec extends r.PureComponent {
         });
     };
     renderDisconnectButton = () =>
-        (0, i.jsx)(F.A, { className: eo.iq, onClick: () => (0, N.X)(I.A.VIDEO_PIP, N.O.DISCONNECT) });
+        (0, i.jsx)(F.A, { className: eo.iq, onClick: () => (0, N.XJ)(I.A.VIDEO_PIP, N.OP.DISCONNECT) });
     renderStopStreamButton = () => {
         let { isSelf: e } = this.viewProperties;
         return (0, i.jsx)(V.A, { isSelfStream: e, className: eo.iq, onClick: this.handleStopStream });

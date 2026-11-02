@@ -28,8 +28,8 @@ var i = n(477900),
     _ = n(47294),
     R = n(793574),
     O = n(666860),
-    L = n(688810),
-    P = n(139286),
+    P = n(688810),
+    L = n(139286),
     M = n(587895),
     w = n(235986),
     U = n(47899),
@@ -82,8 +82,8 @@ var i = n(477900),
     e_ = n(174459),
     eR = n(147036),
     eO = n(625494),
-    eL = n(723702),
-    eP = n(19575),
+    eP = n(723702),
+    eL = n(19575),
     eM = n(475815),
     ew = n(218394),
     eU = n(198052),
@@ -138,7 +138,7 @@ function eQ(e) {
                           direction: h,
                           className: eK.jZ,
                           onClick: () => {
-                              ((0, ez.X)(R.A.VOICE_CONTROL_TRAY, ez.O.CHAT, p), r());
+                              ((0, ez.XJ)(R.A.VOICE_CONTROL_TRAY, ez.OP.CHAT, p), r());
                           },
                       }),
                   })
@@ -169,7 +169,7 @@ class eJ extends l.PureComponent {
     componentWillUnmount() {
         (this._videoBackgroundTooltipTimeout.stop(),
             this.currentDocument.removeEventListener(eM.Wb, this.handleFullScreenChange),
-            (this.inPopout && (0, eL.isMac)()) || this.maybeLeaveFullScreen());
+            (this.inPopout && (0, eP.isMac)()) || this.maybeLeaveFullScreen());
     }
     componentDidUpdate(e) {
         let {
@@ -194,10 +194,10 @@ class eJ extends l.PureComponent {
             e.inCall && !n && this.inPopout && this.handleClosePopout());
     }
     get nativePopoutSupported() {
-        return eL.isPlatformEmbedded && eP.Ay.supportsFeature(eY.BYE.POPOUT_WINDOWS);
+        return eP.isPlatformEmbedded && eL.Ay.supportsFeature(eY.BYE.POPOUT_WINDOWS);
     }
     get popoutSupported() {
-        return !eL.isPlatformEmbedded || this.nativePopoutSupported;
+        return !eP.isPlatformEmbedded || this.nativePopoutSupported;
     }
     get popoutOpen() {
         let { popoutWindow: e } = this.props;
@@ -275,7 +275,7 @@ class eJ extends l.PureComponent {
         this.props.layout === eY.DUB.FULL_SCREEN && this.handleFullScreen();
     };
     trackCallTileContextMenuImpression = (e, t) => {
-        (0, P.x)({
+        (0, L.x)({
             type: c.ImpressionTypes.MENU,
             name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
@@ -527,7 +527,7 @@ class eJ extends l.PureComponent {
         null == t || (0, E.f)() ? n() : (0, _.A)({ onConfirm: n });
     };
     handleStayOnTop = (e) => {
-        ((0, ez.X)(R.A.VOICE_CONTROL_TRAY, ez.O.STAY_ON_TOP, e), Y.setAlwaysOnTop(eY.MLl.CHANNEL_CALL_POPOUT, e));
+        ((0, ez.XJ)(R.A.VOICE_CONTROL_TRAY, ez.OP.STAY_ON_TOP, e), Y.setAlwaysOnTop(eY.MLl.CHANNEL_CALL_POPOUT, e));
     };
     handleClosePopout = () => {
         Y.close(eY.MLl.CHANNEL_CALL_POPOUT);
@@ -602,10 +602,10 @@ class eJ extends l.PureComponent {
                           popoutOpen: this.popoutOpen,
                           className: eK.iq,
                           onOpenPopout: () => {
-                              ((0, ez.X)(R.A.VOICE_CONTROL_TRAY, ez.O.POPOUT, !0), this.handleOpenPopout());
+                              ((0, ez.XJ)(R.A.VOICE_CONTROL_TRAY, ez.OP.POPOUT, !0), this.handleOpenPopout());
                           },
                           onClosePopout: () => {
-                              ((0, ez.X)(R.A.VOICE_CONTROL_TRAY, ez.O.POPOUT, !1), this.handleClosePopout());
+                              ((0, ez.XJ)(R.A.VOICE_CONTROL_TRAY, ez.OP.POPOUT, !1), this.handleClosePopout());
                           },
                       })
                     : null,
@@ -616,9 +616,9 @@ class eJ extends l.PureComponent {
                           guestWindow: e,
                           className: eK.iq,
                           onClick: () => {
-                              ((0, ez.X)(
+                              ((0, ez.XJ)(
                                   R.A.VOICE_CONTROL_TRAY,
-                                  ez.O.FULL_SCREEN,
+                                  ez.OP.FULL_SCREEN,
                                   this.props.layout !== eY.DUB.FULL_SCREEN,
                               ),
                                   this.handleFullScreen());
@@ -857,7 +857,7 @@ let e0 = function (e) {
             participants: S,
             filteredParticipants: _,
             participantsVersion: O,
-            mode: P,
+            mode: L,
             layout: M,
             participantsOpen: w,
             chatOpen: G,
@@ -919,7 +919,7 @@ let e0 = function (e) {
     }, [ea, es]);
     let er = (0, d.bG)([T.Ay], () => T.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]),
         eo = (0, U.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
-        { analyticsLocations: ec } = (0, L.Ay)(R.A.CHANNEL_CALL),
+        { analyticsLocations: ec } = (0, P.Ay)(R.A.CHANNEL_CALL),
         ed = T.Ay.getEmbeddedActivitiesForChannel(t.id),
         { enabled: eu } = (0, z.mf)({ guildId: t.guild_id, location: "ChannelCall" }),
         eh = (0, d.bG)([F.A], () => F.A.isVisible(t.id)),
@@ -932,7 +932,7 @@ let e0 = function (e) {
         eg = (0, ef.kM)(t),
         eC = (0, ex.F)(g) && eg ? eA : null,
         { theme: eN } = (0, A.wR)();
-    return (0, i.jsx)(L.f5, {
+    return (0, i.jsx)(P.f5, {
         value: ec,
         children: (0, i.jsx)(I.A, {
             page: eY.liQ.CHANNEL_CALL,
@@ -949,7 +949,7 @@ let e0 = function (e) {
                             popoutWindow: q,
                             popoutWindowAlwaysOnTop: Z,
                             selectedStream: Y,
-                            mode: P,
+                            mode: L,
                             inCall: j,
                             participants: S,
                             filteredParticipants: _,
