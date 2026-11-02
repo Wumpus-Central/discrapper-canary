@@ -92,7 +92,7 @@ let T = {
 var j = n(652215);
 let U = 221552 == n.j ? e.createContext(null) : null;
 function R(l, t) {
-    return "user" === l.install_scope ? null : (l.guild_id ?? t);
+    return "guild" === l.install_scope ? (l.guild_id ?? t) : null;
 }
 function k(l) {
     if ((0, A.Fl)(l)) return !1;
@@ -389,7 +389,7 @@ function W(l, t) {
             },
             [l, a],
         );
-    if (null == a || !h || null == V || (!g && !A)) return null;
+    if (null == a || !h || null == V || null == w || (!g && !A)) return null;
     let ll = null == _ ? V.label : M.intl.string(y.default.qru9M5);
     return {
         ...V,

@@ -1,27 +1,17 @@
-n.d(t, { C: () => d });
-var i = n(477900),
-    l = n(582128),
-    s = n(969602),
-    r = n(490035),
-    a = n(934499),
-    o = n(307731);
-function d(e) {
-    let { channel: t, closePopout: n, analyticsOverride: d, onSelectEmoji: c, messageId: u } = e,
-        [m, h] = l.useState(!1),
-        g = (0, r.H)("reaction_picker");
-    l.useEffect(() => {
-        g && (0, a.Fp)();
-    }, [g]);
-    let p = g && m;
-    return (0, i.jsx)(s.A, {
+n.d(t, { C: () => r });
+var i = n(477900);
+n(582128);
+var l = n(969602),
+    s = n(307731);
+function r(e) {
+    let { channel: t, closePopout: n, analyticsOverride: r, onSelectEmoji: a, messageId: o } = e;
+    return (0, i.jsx)(l.A, {
         closePopout: n,
         channel: t,
-        onSelectEmoji: c,
-        pickerIntention: o.EmojiIntention.REACTION,
+        onSelectEmoji: a,
+        pickerIntention: s.EmojiIntention.REACTION,
         showAddEmojiButton: null == t || null != t.guild_id,
-        analyticsOverride: d,
-        messageId: u,
-        isViewingEmojiPacks: p,
-        onViewEmojiPacksChange: g ? h : void 0,
+        analyticsOverride: r,
+        messageId: o,
     });
 }

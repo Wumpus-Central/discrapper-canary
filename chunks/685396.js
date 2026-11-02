@@ -1,11 +1,12 @@
-n.d(t, { F: () => c, K: () => u });
+n.d(t, { F: () => _, K: () => E });
 var i = n(582128),
     r = n(350835),
     a = n(17928),
     s = n(236285),
     l = n(7584),
-    o = n(253932);
-function d(e, t) {
+    o = n(182159),
+    d = n(253932);
+function c(e, t) {
     let n = null;
     if (null != t) n = { id: t.id, name: t.name, animated: t.animated };
     else if (null != e.emojiName && "" !== e.emojiName) {
@@ -24,13 +25,17 @@ function d(e, t) {
         metadata: { label: a },
     };
 }
-function c(e) {
-    let { emojiId: t } = e;
-    return d(e, null != t && "0" !== t ? s.Ay.getUsableCustomEmojiById(t) : null);
+function u(e) {
+    if (null == e || "0" === e) return null;
+    let t = o.A.getEmoji(e);
+    return s.Ay.getUsableCustomEmojiById(e) ?? (null != t && o.A.isPackEmojiUsable(t) ? t : null);
 }
-function u() {
-    let e = o.G2.useSetting(),
+function _(e) {
+    return c(e, u(e.emojiId));
+}
+function E() {
+    let e = d.G2.useSetting(),
         t = e?.emojiId,
-        n = (0, a.bG)([s.Ay], () => (null != t && "0" !== t ? s.Ay.getUsableCustomEmojiById(t) : null), [t]);
-    return (0, i.useMemo)(() => (null != e ? d(e, n) : null), [e, n]);
+        n = (0, a.bG)([s.Ay, o.A], () => u(t), [t]);
+    return (0, i.useMemo)(() => (null != e ? c(e, n) : null), [e, n]);
 }

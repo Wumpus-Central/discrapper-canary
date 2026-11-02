@@ -58,7 +58,7 @@ function I(e, t) {
         .filter((e) => (0, d.us)(e) === t);
 }
 function p(e) {
-    if ("user" === e.install_scope || null == e.guild_id || null == l.A.getGuild(e.guild_id)) return null;
+    if ("guild" !== e.install_scope || null == e.guild_id || null == l.A.getGuild(e.guild_id)) return null;
     let t = A(e, e.guild_id);
     return !0 === t || I(e.guild_id, e.application_id).length > 0
         ? "in_server"
