@@ -17,7 +17,7 @@ var c = n(186111),
     h = n(201805),
     S = n(617986),
     _ = n(628088),
-    A = n(430046),
+    A = n(992229),
     j = n(503698),
     g = n.n(j),
     T = n(941143),
@@ -1004,10 +1004,10 @@ var e$ = n(889137),
     e2 = n(291749),
     e3 = n(576761),
     e7 = n(117634),
-    e6 = n(976019),
-    e8 = n(442734),
-    e5 = n(114046),
-    e9 = n(695366),
+    e8 = n(976019),
+    e6 = n(442734),
+    e9 = n(114046),
+    e5 = n(695366),
     e4 = n(507395),
     te = n(144779),
     tt = n(30370),
@@ -1093,7 +1093,7 @@ function tx(e) {
                     ? function () {
                           return (0, s.jsx)(s.Fragment, {
                               children: u.map((e, n) => {
-                                  if (e.type === e5._.EXPIRED_CREDENTIAL) {
+                                  if (e.type === e9._.EXPIRED_CREDENTIAL) {
                                       let r = tt.A.getAccount(e.connected_account_id, e.connected_account_type),
                                           i = (0, es.IG)(e),
                                           a = (0, es.$J)(e);
@@ -1139,7 +1139,7 @@ function tx(e) {
             (0, s.jsxs)("div", {
                 className: tc.oK,
                 children: [
-                    (0, s.jsx)(e9.E, {
+                    (0, s.jsx)(e5.E, {
                         size: "custom",
                         color: "currentColor",
                         className: 0 === u.length ? tc.pH : tc.JA,
@@ -1223,7 +1223,7 @@ function tE(e) {
             (0, s.jsxs)("div", {
                 className: tm.wx,
                 children: [
-                    (0, s.jsx)(e9.E, {
+                    (0, s.jsx)(e5.E, {
                         size: "custom",
                         color: "currentColor",
                         className: tm.Kk,
@@ -1385,7 +1385,7 @@ function tR(e) {
                                     className: tj.zf,
                                     children: [
                                         (0, s.jsx)(eA.E, { className: tj.h_, variant: "text-xs/normal", children: R }),
-                                        N && (0, s.jsx)(e8.e, { questId: l.id, orbMultiplierEligibility: y }),
+                                        N && (0, s.jsx)(e6.e, { questId: l.id, orbMultiplierEligibility: y }),
                                     ],
                                 }),
                             ],
@@ -1452,7 +1452,7 @@ function tR(e) {
 function tQ(e) {
     let { quest: t } = e,
         { hasAlreadyLinked: n, onClickGameTitle: i } = r.useContext(H.SH);
-    return !0 !== n ? null : (0, s.jsx)(e6.A, { quest: t, hasAlreadyLinked: n, onClickGameTitle: i });
+    return !0 !== n ? null : (0, s.jsx)(e8.A, { quest: t, hasAlreadyLinked: n, onClickGameTitle: i });
 }
 function tv(e) {
     let { activeScreen: t, selectPlatform: n } = e,

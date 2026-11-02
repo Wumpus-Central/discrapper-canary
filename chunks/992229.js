@@ -1,4 +1,4 @@
-n.d(t, { A: () => ei });
+n.d(t, { A: () => eu });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -8,32 +8,32 @@ var l = n(477900),
     u = n(939249),
     c = n(43990),
     d = n(834730),
-    m = n(290136),
-    p = n(661531),
+    p = n(290136),
+    m = n(661531),
     x = n(365199),
-    h = n(738822),
-    f = n(291749),
+    f = n(738822),
+    h = n(291749),
     C = n(590202),
     v = n(971649),
     N = n(620954),
-    g = n(557637),
-    y = n(398025),
+    y = n(557637),
+    g = n(398025),
     j = n(617986),
     A = n(139210),
     E = n(568329),
     _ = n(980707),
     T = n(477782),
     R = n(743368),
-    Q = n(265872),
-    B = n(442433),
-    b = n(507395),
+    b = n(265872),
+    Q = n(442433),
+    B = n(507395),
     S = n(144779),
     I = n(494280),
     M = n(845890),
     U = n(963713),
     w = n(818348),
-    F = n(105292);
-function P(e) {
+    P = n(105292);
+function F(e) {
     let { onSelect: t, onClose: n } = e,
         s = (0, U.o5)(),
         a = (0, U.Q8)(s),
@@ -43,10 +43,10 @@ function P(e) {
         "data-menu-migrated": !0,
         variant: "fixed",
         onSelect: function () {
-            null != t ? t() : (0, B.Z_)();
+            null != t ? t() : (0, Q.Z_)();
         },
         navId: "quest-bar-bounty",
-        "aria-label": F.intl.string(F.t.ogxXGq),
+        "aria-label": P.intl.string(P.t.ogxXGq),
         onClose: n ?? w.tE,
         children: [
             (0, l.jsx)(
@@ -59,10 +59,10 @@ function P(e) {
                             (0, N._Q)(
                                 { adContentId: s.id, adCreativeType: o.p.BOUNTY, cta: s.cta },
                                 {
-                                    content: h.uF.QUEST_BAR_V2,
+                                    content: f.uF.QUEST_BAR_V2,
                                     ctaContent: C.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
                                     impressionId: r(),
-                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                                 },
                             );
                         },
@@ -78,29 +78,29 @@ function P(e) {
                     children: [
                         (0, l.jsx)(T.Dr, {
                             id: "display-disclosure",
-                            label: F.intl.string(F.t.GcsZKJ),
+                            label: P.intl.string(P.t.GcsZKJ),
                             action: function () {
                                 (0, j.Zc)(a, {
-                                    content: h.uF.QUEST_BAR_V2,
+                                    content: f.uF.QUEST_BAR_V2,
                                     ctaContent: C.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
                                     impressionId: r(),
-                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                                 });
                             },
                         }),
                         (0, l.jsx)(T.Dr, {
                             id: "hide-entrypoint",
-                            label: F.intl.string(F.t.NN79E9),
+                            label: P.intl.string(P.t.NN79E9),
                             action: function () {
-                                ((0, b.r)({
+                                ((0, B.r)({
                                     type: S.F.CLICK_INTERNAL,
                                     ...i,
                                     questContentCTA: C.Cy.CONTEXT_MENU_HIDE_CONTENT,
-                                    surfaceId: h.uF.QUEST_BAR_V2,
-                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                                    surfaceId: f.uF.QUEST_BAR_V2,
+                                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                                     impressionId: r(),
                                 }),
-                                    (0, M.Xo)(i, h.uF.QUEST_BAR_V2));
+                                    (0, M.Xo)(i, f.uF.QUEST_BAR_V2));
                             },
                         }),
                     ],
@@ -117,33 +117,33 @@ function O(e) {
         u = (0, v.wW)(),
         c = s.useRef(null),
         d = s.useCallback(() => {
-            ((0, b.r)({
+            ((0, B.r)({
                 type: S.F.CLICK_INTERNAL,
                 ...(0, I.Yh)(o),
                 questContentCTA: C.Cy.OPEN_CONTEXT_MENU,
-                surfaceId: h.uF.QUEST_BAR_V2,
-                sourceQuestContent: h.uF.QUEST_BAR_V2,
+                surfaceId: f.uF.QUEST_BAR_V2,
+                sourceQuestContent: f.uF.QUEST_BAR_V2,
                 impressionId: u(),
             }),
                 null != n && n());
         }, [o, u, n]);
-    return (0, l.jsx)(Q.Y, {
+    return (0, l.jsx)(b.Y, {
         targetElementRef: c,
         onRequestOpen: d,
         onRequestClose: a,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(P, { onSelect: r, onClose: t });
+            return (0, l.jsx)(F, { onSelect: r, onClose: t });
         },
-        animation: Q.Y.Animation.NONE,
+        animation: b.Y.Animation.NONE,
         children: (e) => (0, l.jsx)("div", { ref: c, children: t(e) }),
     });
 }
 var V = n(241762);
 n(272111);
 var k = n(652215),
-    L = n(886030);
-function D() {
+    D = n(886030);
+function L() {
     let e = (0, U.o5)(),
         t = (0, U.Q8)(e),
         n = (0, v.wW)(),
@@ -152,64 +152,64 @@ function D() {
             onCtxMenuOpen: _,
             onCtxMenuClose: T,
             onCtxMenuSelect: R,
-            isExpanded: Q,
-            isExpansionAnimationComplete: B,
-            collapsedHeight: b,
+            isExpanded: b,
+            isExpansionAnimationComplete: Q,
+            collapsedHeight: B,
         } = (0, V.H)(),
         { productIcon: S } = e,
         I = s.useCallback(() => {
             (0, j.Zc)(t, {
-                content: h.uF.QUEST_BAR_V2,
+                content: f.uF.QUEST_BAR_V2,
                 ctaContent: C.Cy.OPEN_DISCLOSURE,
-                sourceQuestContent: h.uF.QUEST_BAR_V2,
+                sourceQuestContent: f.uF.QUEST_BAR_V2,
             });
         }, [t]),
         M = s.useCallback(() => {
             (0, N._Q)(
                 { adContentId: e.id, adCreativeType: o.p.BOUNTY, cta: e.cta },
                 {
-                    content: h.uF.QUEST_BAR_HEADER,
+                    content: f.uF.QUEST_BAR_HEADER,
                     ctaContent: C.Cy.OPEN_GAME_LINK,
                     impressionId: n(),
-                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                 },
             );
         }, [e.cta, e.id, n]);
     return (0, l.jsxs)(A.A, {
-        className: L.bU,
+        className: D.bU,
         children: [
-            (0, l.jsx)(A.h, { className: L.Tu }),
+            (0, l.jsx)(A.h, { className: D.Tu }),
             (0, l.jsxs)(i.animated.div, {
-                className: L.W2,
+                className: D.W2,
                 style: {
-                    transform: a.to({ range: [0, 1], output: [b / 2 - 24 - 6, 0] }).to((e) => `translateY(${e}px)`),
+                    transform: a.to({ range: [0, 1], output: [B / 2 - 24 - 6, 0] }).to((e) => `translateY(${e}px)`),
                 },
                 children: [
                     null != S &&
                         (0, l.jsx)(u.D, {
                             onClick: M,
-                            className: r()(L.iY, L.vk, { [L.wm]: Q && B }),
+                            className: r()(D.iY, D.vk, { [D.wm]: b && Q }),
                             children: (0, l.jsx)(i.animated.div, {
-                                className: L.U$,
+                                className: D.U$,
                                 style: {
                                     transform: a.to({ range: [0, 1], output: [1, 0.75] }).to((e) => `scale(${e})`),
                                 },
-                                children: (0, l.jsx)(g._M, {
+                                children: (0, l.jsx)(y._M, {
                                     id: "QuestBarBounty_productIcon",
                                     children: (t) =>
                                         (0, l.jsx)("img", {
                                             ref: t,
-                                            src: (0, f.lR)({ assetUrl: S, width: 32, height: 32 }),
+                                            src: (0, h.lR)({ assetUrl: S, width: 32, height: 32 }),
                                             alt: e.advertiserName,
                                             width: 32,
                                             height: 32,
-                                            className: L.Q1,
+                                            className: D.Q1,
                                         }),
                                 }),
                             }),
                         }),
                     (0, l.jsxs)("div", {
-                        className: L.cA,
+                        className: D.cA,
                         children: [
                             (0, l.jsx)(c.N, {
                                 theme: k.NJ8.DARK,
@@ -217,8 +217,8 @@ function D() {
                                 children: (t) =>
                                     (0, l.jsx)(i.animated.div, {
                                         "aria-hidden": !0,
-                                        className: r()(t, L.it),
-                                        style: { opacity: (0, y.a)(a.to({ range: [0, 1], output: [1, 0] })) },
+                                        className: r()(t, D.it),
+                                        style: { opacity: (0, g.a)(a.to({ range: [0, 1], output: [1, 0] })) },
                                         children: (0, l.jsx)(d.E, {
                                             variant: "text-sm/medium",
                                             color: "text-strong",
@@ -228,17 +228,17 @@ function D() {
                                     }),
                             }),
                             (0, l.jsx)(A.h, {
-                                className: L.OO,
+                                className: D.OO,
                                 children: (0, l.jsxs)(u.D, {
-                                    className: r()(L.y8, L.RK),
+                                    className: r()(D.y8, D.RK),
                                     onClick: I,
                                     children: [
                                         (0, l.jsx)(d.E, {
                                             color: "text-overlay-light",
                                             variant: "text-xs/normal",
-                                            children: F.intl.string(F.t.o6FLcF),
+                                            children: P.intl.string(P.t.o6FLcF),
                                         }),
-                                        (0, l.jsx)(m.CircleQuestionIcon, { color: p.A.colors.WHITE, className: L.P$ }),
+                                        (0, l.jsx)(p.CircleQuestionIcon, { color: m.A.colors.WHITE, className: D.P$ }),
                                     ],
                                 }),
                             }),
@@ -247,7 +247,7 @@ function D() {
                 ],
             }),
             (0, l.jsx)(A.h, {
-                className: L.jd,
+                className: D.jd,
                 children: (0, l.jsx)(O, {
                     onOpen: _,
                     onClose: T,
@@ -255,12 +255,12 @@ function D() {
                     children: (e) =>
                         (0, l.jsx)(u.D, {
                             ...e,
-                            className: r()(L.oz, L.rb),
-                            "aria-label": F.intl.string(F.t.DEoVWZ),
+                            className: r()(D.oz, D.rb),
+                            "aria-label": P.intl.string(P.t.DEoVWZ),
                             children: (0, l.jsx)(x.MoreHorizontalIcon, {
                                 size: "md",
                                 color: "currentColor",
-                                className: r()(L.Bx, L.ON),
+                                className: r()(D.Bx, D.ON),
                             }),
                         }),
                 }),
@@ -272,45 +272,59 @@ var W = n(17928),
     Y = n(133825),
     q = n(534514),
     H = n(821609),
-    X = n(775602),
-    G = n(546121),
-    K = n(792620),
+    G = n(775602),
+    K = n(546121),
+    X = n(792620),
     $ = n(192308),
     z = n(415441),
-    Z = n(783569),
-    J = n(333949),
-    ee = n(53440),
-    et = n(427483),
-    en = n(337611);
-let el = { url: et.A, mimetype: "video/webm", isAnimated: !0 },
-    es = { url: en.A, mimetype: "image/webp", isAnimated: !1 };
-function ea() {
+    Z = n(419403);
+function J(e) {
+    let { isAnimated: t, className: n } = e,
+        s = (0, W.bG)([G.Ay], () => G.Ay.useReducedMotion);
+    return (0, l.jsx)("img", {
+        className: r()(Z.Q, n),
+        src:
+            t && !s
+                ? "https://cdn.discordapp.com/assets/content/64e328defbecc228c5ed250346b964b80c3fcdc293982496962fc482f917864c.webp"
+                : "https://cdn.discordapp.com/assets/content/25e4c0e14022dd904f8f6d86d209f40ed0ca5d8df56f01b81296f40871336fdc.png",
+        alt: "",
+        "aria-hidden": !0,
+    });
+}
+var ee = n(783569),
+    et = n(333949),
+    en = n(53440),
+    el = n(427483),
+    es = n(337611);
+let ea = { url: el.A, mimetype: "video/webm", isAnimated: !0 },
+    er = { url: es.A, mimetype: "image/webp", isAnimated: !1 };
+function ei() {
     let e = (0, U.o5)(),
-        { imagePreview: t, videoPreview: a, productName: u, videoDurationSeconds: c } = e,
-        { isExpanded: m, isExpansionAnimationComplete: p } = (0, V.H)(),
-        { expansionSpring: x } = s.useContext(E.PW),
-        N = (0, v.wW)(),
-        j = (0, W.bG)([X.Ay], () => X.Ay.useReducedMotion),
-        [A, _] = s.useState(!1),
-        T = s.useRef(null);
+        { imagePreview: t, videoPreview: a, productName: u, videoDurationSeconds: p } = e,
+        { isExpanded: m, isExpansionAnimationComplete: x, collapsedHeight: N } = (0, V.H)(),
+        { expansionSpring: j } = s.useContext(E.PW),
+        A = (0, v.wW)(),
+        _ = (0, W.bG)([G.Ay], () => G.Ay.useReducedMotion),
+        [T, R] = s.useState(!1),
+        b = s.useRef(null);
     s.useEffect(() => {
-        m && T.current?.pause();
+        m && b.current?.pause();
     }, [m]);
-    let R = s.useMemo(() => (null == a ? null : { url: a, mimetype: (0, f.vm)(a), isAnimated: !0 }), [a]),
-        Q = !j || A,
-        B = s.useMemo(() => {
-            let e = c ?? 0;
-            return e <= 0 ? F.intl.string(F.t.kfks9Y) : (0, G.AF)((0, K.X3)({ progressSeconds: 0, targetSeconds: e }));
-        }, [c]),
-        I = s.useCallback(() => {
-            ((0, b.r)({
+    let Q = s.useMemo(() => (null == a ? null : { url: a, mimetype: (0, h.vm)(a), isAnimated: !0 }), [a]),
+        I = !_ || T,
+        M = s.useMemo(() => {
+            let e = p ?? 0;
+            return e <= 0 ? P.intl.string(P.t.kfks9Y) : (0, K.AF)((0, X.X3)({ progressSeconds: 0, targetSeconds: e }));
+        }, [p]),
+        w = s.useCallback(() => {
+            ((0, B.r)({
                 type: S.F.CLICK_INTERNAL,
                 adCreativeType: o.p.BOUNTY,
                 adCreativeId: e.id,
                 questContentCTA: C.Cy.START_BOUNTY,
-                surfaceId: h.uF.QUEST_BAR_V2,
-                sourceQuestContent: h.uF.QUEST_BAR_V2,
-                impressionId: N(),
+                surfaceId: f.uF.QUEST_BAR_V2,
+                sourceQuestContent: f.uF.QUEST_BAR_V2,
+                impressionId: A(),
             }),
                 (function (e) {
                     let { bounty: t, sourceQuestContent: s } = e,
@@ -332,110 +346,124 @@ function ea() {
                         },
                         { modalKey: "BOUNTY_VIDEO_MODAL" },
                     );
-                })({ bounty: e, sourceQuestContent: h.uF.QUEST_BAR_V2 }));
-        }, [e, N]),
-        M = m && p,
-        w = !m || p;
+                })({ bounty: e, sourceQuestContent: f.uF.QUEST_BAR_V2 }));
+        }, [e, A]),
+        F = m && x,
+        O = !m || x;
     return (0, l.jsxs)("div", {
-        className: ee.rf,
+        className: en.rf,
         onMouseEnter: () => {
-            j && !A && _(!0);
+            _ && !T && R(!0);
         },
         onMouseLeave: () => {
-            j && A && _(!1);
+            _ && T && R(!1);
         },
         children: [
             (0, l.jsxs)("div", {
-                className: ee.xX,
+                className: en.xX,
                 children: [
                     (0, l.jsxs)(i.animated.div, {
-                        className: ee.Tj,
-                        style: { opacity: (0, y.a)(x.to({ range: [0, 1], output: [0, 1] })) },
+                        className: en.Tj,
+                        style: { opacity: (0, g.a)(j.to({ range: [0, 1], output: [0, 1] })) },
                         children: [
                             null != t &&
-                                (0, l.jsx)(g._M, {
+                                (0, l.jsx)(y._M, {
                                     id: "QuestBarBounty_previewImage",
-                                    children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: ee.$_ }),
+                                    children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: en.$_ }),
                                 }),
-                            null != R &&
-                                (0, l.jsx)(g._M, {
+                            null != Q &&
+                                (0, l.jsx)(y._M, {
                                     id: "QuestBarBounty_previewVideo",
                                     children: (e) =>
-                                        (0, l.jsx)(J.X, {
+                                        (0, l.jsx)(et.X, {
                                             ref: e,
-                                            isHovered: A,
-                                            asset: R,
+                                            isHovered: T,
+                                            asset: Q,
                                             poster: t,
-                                            className: r()(ee.$_, null != t && ee.Ki, { [ee.mv]: Q || null == t }),
+                                            className: r()(en.$_, null != t && en.Ki, { [en.mv]: I || null == t }),
                                         }),
                                 }),
                         ],
                     }),
                     (0, l.jsx)(i.animated.div, {
-                        className: ee.ch,
-                        style: { opacity: (0, y.a)(x.to({ range: [0, 1], output: [1, 0] })) },
+                        className: en.PY,
+                        style: { top: N, opacity: (0, g.a)(j.to({ range: [0, 1], output: [1, 0] })) },
+                        children: (0, l.jsx)(J, { isAnimated: !F }),
+                    }),
+                    (0, l.jsx)(i.animated.div, {
+                        className: en.ch,
+                        style: { opacity: (0, g.a)(j.to({ range: [0, 1], output: [1, 0] })) },
                         children: (0, l.jsx)(Y.a, {
-                            ref: T,
+                            ref: b,
                             autoplay: !m,
                             stateMachine: "State Machine 1",
                             fit: "contain",
-                            className: ee.QF,
+                            className: en.QF,
                         }),
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: ee.tV }),
-            (0, l.jsx)(Z.T, {
-                children: (0, l.jsxs)("div", {
-                    className: ee.Qs,
-                    children: [
-                        (0, l.jsx)("div", {
-                            className: ee.Qq,
-                            children: (0, l.jsx)(z.N, {
-                                showVideo: M,
-                                imageAsset: {
-                                    asset: es,
-                                    assetId: "QuestBarBounty_rewardTileStatic",
-                                    alt: F.intl.string(F.t.UMclVN),
-                                    className: ee.Ag,
-                                },
-                                videoAsset: {
-                                    asset: el,
-                                    assetId: "QuestBarBounty_rewardTileAnimated",
-                                    className: ee.Ag,
-                                },
-                                imageSize: { width: 64, height: 64 },
-                            }),
-                        }),
+            (0, l.jsx)("div", { className: en.tV }),
+            (m || !x) && (0, l.jsx)(J, { className: en.dq, isAnimated: !0 }),
+            (0, l.jsx)(ee.T, {
+                children: (0, l.jsx)(c.N, {
+                    theme: k.NJ8.DARK,
+                    disableAdaptiveTheme: !0,
+                    children: (e) =>
                         (0, l.jsxs)("div", {
-                            className: ee.C,
+                            className: r()(e, en.Qs),
                             children: [
-                                (0, l.jsx)(q.D, {
-                                    color: "text-strong",
-                                    variant: "heading-md/medium",
-                                    lineClamp: 2,
-                                    children: u ?? "",
+                                (0, l.jsx)("div", {
+                                    className: en.Qq,
+                                    children: (0, l.jsx)(z.N, {
+                                        showVideo: F,
+                                        imageAsset: {
+                                            asset: er,
+                                            assetId: "QuestBarBounty_rewardTileStatic",
+                                            alt: P.intl.string(P.t.UMclVN),
+                                            className: en.Ag,
+                                        },
+                                        videoAsset: {
+                                            asset: ea,
+                                            assetId: "QuestBarBounty_rewardTileAnimated",
+                                            className: en.Ag,
+                                        },
+                                        imageSize: { width: 64, height: 64 },
+                                    }),
                                 }),
-                                (0, l.jsx)(d.E, { variant: "text-xs/normal", children: F.intl.string(F.t["1uzE2S"]) }),
+                                (0, l.jsxs)("div", {
+                                    className: en.C,
+                                    children: [
+                                        (0, l.jsx)(q.D, {
+                                            color: "text-strong",
+                                            variant: "heading-md/medium",
+                                            lineClamp: 2,
+                                            children: u ?? "",
+                                        }),
+                                        (0, l.jsx)(d.E, {
+                                            variant: "text-xs/normal",
+                                            children: P.intl.string(P.t["1uzE2S"]),
+                                        }),
+                                    ],
+                                }),
+                                (0, l.jsx)("div", {
+                                    className: r()({ [en._o]: !O }),
+                                    children: (0, l.jsx)(H.$, {
+                                        variant: "primary",
+                                        size: "md",
+                                        fullWidth: !0,
+                                        text: M,
+                                        onClick: w,
+                                    }),
+                                }),
                             ],
                         }),
-                        (0, l.jsx)("div", {
-                            className: r()({ [ee._o]: !w }),
-                            children: (0, l.jsx)(H.$, {
-                                variant: "primary",
-                                size: "md",
-                                fullWidth: !0,
-                                text: B,
-                                onClick: I,
-                            }),
-                        }),
-                    ],
                 }),
             }),
         ],
     });
 }
-var er = n(742860);
-function ei() {
-    return (0, l.jsx)(er.A, { layoutVariant: "inset", header: (0, l.jsx)(D, {}), children: (0, l.jsx)(ea, {}) });
+var eo = n(742860);
+function eu() {
+    return (0, l.jsx)(eo.A, { layoutVariant: "inset", header: (0, l.jsx)(L, {}), children: (0, l.jsx)(ei, {}) });
 }

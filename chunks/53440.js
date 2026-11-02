@@ -7,6 +7,8 @@ _.exports = {
     $_: "media__8b1f1",
     Ki: "video__8b1f1",
     mv: "videoVisible__8b1f1",
+    PY: "collapsedSmoke__8b1f1",
+    dq: "expandedSmoke__8b1f1",
     tV: "legibilityGradient__8b1f1",
     Qs: "content__8b1f1",
     Qq: "rewardTile__8b1f1",
