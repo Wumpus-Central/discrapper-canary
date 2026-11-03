@@ -43,6 +43,7 @@ var o =
     (r.ACCOUNT_STANDING = "account-standing"),
     (r.MOBILE_NATIVE_UPDATE = "mobile-native-update"),
     (r.SHOP = "shop"),
+    (r.SOCIAL_LAYER_STOREFRONT = "social-layer-storefront"),
     (r.MOBILE_WEB_REDIRECT_CHECKOUT = "mobile-web-redirect-checkout"),
     (r.AUTHORIZED_APPS = "authorized-apps"),
     (r.DAVE_PROTOCOL_VERIFICATION = "dave-protocol-verification"),

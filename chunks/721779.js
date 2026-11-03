@@ -44,7 +44,8 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
     L = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     y = /^\/activities\/([0-9-]+)\/?$/,
     D = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    v = /^(?:\/game-shop\/([0-9]+)|\/channels\/([0-9]+)\/game-shop\/(?:[0-9]+))(?:\/([0-9]+)(?:\/([^\/]+))?)?\/?$/,
+    v =
+        /^(?:\/game-shop\/([0-9]+)(?:\/([0-9]+)(?:\/[^/]+)?)?|\/channels\/([0-9]+)\/game-shop(?:\/([0-9]+)(?:\/([0-9]+)(?:\/[^/]+)?)?)?)\/?$/,
     b = /^\/channels\/([0-9]+)\/shop$/,
     P = /^\/quests\/([0-9-]+)\/?$/,
     M = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/,
@@ -200,11 +201,17 @@ function et(e) {
             null != F && r(E.I.GUILD_PRODUCT, `${F[1]}-${F[2]}`);
             let B = h?.match(b);
             null != B && r(E.I.SERVER_SHOP, B[1]);
-            let V = h?.match(v);
+            let V = (function (e) {
+                let { allowUnpagedChannelPath: t = !1 } =
+                        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                    n = e?.match(v);
+                return null != n && (t || null == n[3] || null != n[4])
+                    ? { guildId: n[1] ?? n[3], skuId: n[2] ?? n[5] }
+                    : null;
+            })(h);
             if (null != V) {
-                let e = V[1] ?? V[2],
-                    t = en(V[3], null != f ? (0, i.parse)(f) : null);
-                t.length > 0 && r(E.I.SOCIAL_LAYER_STOREFRONT, (0, c.m5)(t, e));
+                let e = en(V.skuId, null != f ? (0, i.parse)(f) : null);
+                e.length > 0 && r(E.I.SOCIAL_LAYER_STOREFRONT, (0, c.m5)(e, V.guildId));
             }
             let H = ei(o);
             null != H && r(E.I.QUESTS_EMBED, H);
