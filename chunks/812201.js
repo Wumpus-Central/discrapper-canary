@@ -34,8 +34,8 @@ var c = n(186111),
     I = n(775602),
     O = n(272111),
     q = n(621466),
-    L = n(192308),
-    k = n(590202),
+    k = n(192308),
+    L = n(590202),
     P = n(652215),
     M = n(190107),
     w = n(920690);
@@ -198,7 +198,7 @@ function D(e) {
                     [a, s],
                 ),
                 R = r.useCallback(() => {
-                    T();
+                    I.Ay.keyboardModeEnabled && T();
                 }, [T]),
                 y = r.useCallback(
                     (e) => {
@@ -218,7 +218,7 @@ function D(e) {
                             event: P.HAw.QUEST_HOVER,
                             properties: {
                                 content_id: d.uF.QUEST_BAR,
-                                content_name: (0, k.jO)(d.uF.QUEST_BAR),
+                                content_name: (0, L.jO)(d.uF.QUEST_BAR),
                                 impression_id: c.current?.getId(),
                             },
                             shouldExtendSession: !0,
@@ -234,7 +234,7 @@ function D(e) {
                             event: P.HAw.QUEST_HOVER_OFF,
                             properties: {
                                 content_id: d.uF.QUEST_BAR,
-                                content_name: (0, k.jO)(d.uF.QUEST_BAR),
+                                content_name: (0, L.jO)(d.uF.QUEST_BAR),
                                 impression_id: c.current?.getId(),
                             },
                             sourceQuestContent: d.uF.QUEST_BAR_V2,
@@ -251,7 +251,7 @@ function D(e) {
                 r.useLayoutEffect(() => {
                     l && u && !C.current && o(!1);
                 }, [l, u, o]));
-            let N = (0, L.useHasAnyModalOpen)();
+            let N = (0, k.useHasAnyModalOpen)();
             return (
                 r.useEffect(() => {
                     N && C.current && v();
@@ -496,13 +496,13 @@ function eC(e) {
                     ((0, m.Y5)({
                         questId: t.id,
                         questContent: d.uF.QUEST_BAR_V2,
-                        questContentCTA: k.Cy.QUEST_ACCESS_SUSPENDED,
+                        questContentCTA: L.Cy.QUEST_ACCESS_SUSPENDED,
                         sourceQuestContent: n,
                     }),
                         (0, S.FS)());
                     return;
                 }
-                let e = t.userStatus?.enrolledAt == null ? k.Cy.ACCEPT_QUEST : k.Cy.WATCH_VIDEO;
+                let e = t.userStatus?.enrolledAt == null ? L.Cy.ACCEPT_QUEST : L.Cy.WATCH_VIDEO;
                 (0, S.d5)({
                     quest: t,
                     questContent: d.uF.QUEST_BAR_V2,
@@ -526,7 +526,7 @@ function em(e) {
         onClick: () =>
             (0, es.pu)(t, {
                 content: d.uF.QUEST_BAR_V2,
-                ctaContent: k.Cy.OPEN_GAME_LINK,
+                ctaContent: L.Cy.OPEN_GAME_LINK,
                 impressionId: r(),
                 sourceQuestContent: n,
             }),
@@ -543,7 +543,7 @@ function eE(e) {
                 { quest: t },
                 {
                     content: d.uF.QUEST_BAR_V2,
-                    ctaContent: k.Cy.CONNECT_CONSOLE,
+                    ctaContent: L.Cy.CONNECT_CONSOLE,
                     impressionId: r(),
                     sourceQuestContent: n,
                 },
@@ -823,8 +823,8 @@ var eV = n(742860),
     eI = n(290136),
     eO = n(661531),
     eq = n(57718),
-    eL = n(139210),
-    ek = n(393824);
+    ek = n(139210),
+    eL = n(393824);
 let eP = function (e) {
     let { isFullyExpanded: t, partnerBranding: n } = e,
         i = {
@@ -851,7 +851,7 @@ let eP = function (e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(T.animated.div, {
-                className: ek.tE,
+                className: eL.tE,
                 style: {
                     transform: (0, T.to)(
                         [
@@ -874,7 +874,7 @@ let eP = function (e) {
                 }),
             }),
             (0, s.jsxs)(T.animated.div, {
-                className: g()(ek.pm, { [ek.nd]: i }),
+                className: g()(eL.pm, { [eL.nd]: i }),
                 style: {
                     transform: (0, T.to)(
                         [u.to({ range: [0, 1], output: [0, -48] }), u.to({ range: [0, 1], output: [0, c] })],
@@ -882,9 +882,9 @@ let eP = function (e) {
                     ),
                 },
                 children: [
-                    (0, s.jsx)("div", { className: g()({ [ek.Iu]: !i }), children: n }),
+                    (0, s.jsx)("div", { className: g()({ [eL.Iu]: !i }), children: n }),
                     (0, s.jsx)(T.animated.div, {
-                        className: g()(ek.ol, { [ek.yZ]: i }),
+                        className: g()(eL.ol, { [eL.yZ]: i }),
                         style: { opacity: (0, z.a)(u.to({ range: [0, 1], output: [i ? 1 : 0.7, 0] })) },
                         children: (0, s.jsx)(eA.E, {
                             color: "text-overlay-light",
@@ -915,14 +915,14 @@ function eD() {
         C = r.useCallback(() => {
             (0, S.Zc)(x, {
                 content: d.uF.QUEST_BAR_V2,
-                ctaContent: k.Cy.OPEN_DISCLOSURE,
+                ctaContent: L.Cy.OPEN_DISCLOSURE,
                 sourceQuestContent: d.uF.QUEST_BAR_V2,
             });
         }, [x]),
         m = r.useCallback(() => {
             (0, es.pu)(n, {
                 content: d.uF.QUEST_BAR_HEADER,
-                ctaContent: k.Cy.OPEN_GAME_LINK,
+                ctaContent: L.Cy.OPEN_GAME_LINK,
                 impressionId: e(),
                 sourceQuestContent: d.uF.QUEST_BAR_V2,
             });
@@ -942,12 +942,12 @@ function eD() {
                 },
             }),
         });
-    return (0, s.jsxs)(eL.A, {
+    return (0, s.jsxs)(ek.A, {
         className: eM.Ht,
         children: [
-            (0, s.jsx)(eL.h, { className: eM.Tu }),
+            (0, s.jsx)(ek.h, { className: eM.Tu }),
             (0, s.jsx)(eP, { isFullyExpanded: E, partnerBranding: p }),
-            (0, s.jsxs)(eL.h, {
+            (0, s.jsxs)(ek.h, {
                 className: eM.P0,
                 children: [
                     (0, s.jsxs)(ey.D, {
@@ -1026,7 +1026,7 @@ function ta(e) {
                 type: te.F.CLICK_INTERNAL,
                 adCreativeType: i.p.QUEST,
                 adCreativeId: n.id,
-                questContentCTA: k.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
+                questContentCTA: L.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
                 surfaceId: d.uF.QUEST_BAR_V2,
                 sourceQuestContent: r,
                 impressionId: o(),
@@ -1069,7 +1069,7 @@ function tx(e) {
                     type: te.F.CLICK_INTERNAL,
                     adCreativeType: i.p.QUEST,
                     adCreativeId: t.id,
-                    questContentCTA: k.Cy.DEFIBRILLATOR,
+                    questContentCTA: L.Cy.DEFIBRILLATOR,
                     surfaceId: d.uF.QUEST_BAR_V2,
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                     impressionId: l(),
@@ -1107,7 +1107,7 @@ function tx(e) {
                                                           { quest: t, platformType: o },
                                                           {
                                                               content: d.uF.QUEST_BAR,
-                                                              ctaContent: k.Cy.DEFIBRILLATOR_RECONNECT_CONSOLE,
+                                                              ctaContent: L.Cy.DEFIBRILLATOR_RECONNECT_CONSOLE,
                                                               impressionId: l(),
                                                               sourceQuestContent: d.uF.QUEST_BAR_V2,
                                                           },
@@ -1509,7 +1509,7 @@ function tN(e) {
                 ((0, m.Y5)({
                     questId: n.id,
                     questContent: d.uF.QUEST_BAR_V2,
-                    questContentCTA: k.Cy.QUEST_ACCESS_SUSPENDED,
+                    questContentCTA: L.Cy.QUEST_ACCESS_SUSPENDED,
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                 }),
                     (0, S.FS)());
@@ -1519,7 +1519,7 @@ function tN(e) {
                 quest: n,
                 questContent: d.uF.QUEST_BAR_V2,
                 sourceQuestContent: d.uF.QUEST_BAR_V2,
-                sourceQuestContentCTA: k.Cy.QUEST_BAR_VIDEO_QUEST_PREVIEW,
+                sourceQuestContentCTA: L.Cy.QUEST_BAR_VIDEO_QUEST_PREVIEW,
             });
         }, [n, l]);
     return (0, s.jsxs)(B.T, {
@@ -1616,7 +1616,7 @@ function tV() {
         { launchInGameActivity: o } = (0, x.zW)(e),
         a = (0, er.vA)(e),
         l = r.useCallback(async () => {
-            let t = a ? k.Cy.START_QUEST : k.Cy.ACCEPT_QUEST;
+            let t = a ? L.Cy.START_QUEST : L.Cy.ACCEPT_QUEST;
             (await tb(e, d.uF.QUEST_BAR_V2, t, d.uF.QUEST_BAR_V2), a && o());
         }, [e, o, a]);
     return e.userStatus?.enrolledAt != null
@@ -1681,8 +1681,8 @@ function tO() {
     });
 }
 var tq = n(731738),
-    tL = n(807393),
-    tk = n(260364);
+    tk = n(807393),
+    tL = n(260364);
 function tP(e) {
     let {
         adCreativeId: t,
@@ -1700,12 +1700,12 @@ function tP(e) {
     (r.useEffect(() => {
         o &&
             (s("asset_loading_error"),
-            tL.A.increment({
+            tk.A.increment({
                 name: tq.K.QUEST_CONTENT_RENDERING_FAILURE,
                 tags: [
                     `ad_creative_id:${t}`,
                     `ad_creative_type:${i.p[n]}`,
-                    `quest_content:${(0, k.jO)(d.uF.QUEST_BAR)}`,
+                    `quest_content:${(0, L.jO)(d.uF.QUEST_BAR)}`,
                     "reason:asset_loading_error",
                 ],
             }));
@@ -1717,7 +1717,7 @@ function tP(e) {
             l || !u || c || s(x);
         }, [l, u, c, x, s]),
         r.useEffect(() => {
-            ((!C || m) && tk.A.clearTracking(), l && u && !c && !o && a && tk.A.stopTracking(t));
+            ((!C || m) && tL.A.clearTracking(), l && u && !c && !o && a && tL.A.stopTracking(t));
         }, [C, m, l, u, c, o, a, t]));
 }
 function tM(e) {
