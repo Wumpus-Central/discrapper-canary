@@ -2,7 +2,7 @@ n.d(t, { A: () => ee });
 var i = n(477900),
     l = n(582128),
     s = n(38021),
-    r = n(124056),
+    r = n(375320),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -112,8 +112,8 @@ let S = l.memo(function () {
 var I = n(834730),
     b = n(276293),
     j = n(661531),
-    G = n(983851),
-    v = n(534890),
+    v = n(983851),
+    G = n(534890),
     R = n(331322),
     y = n(534514),
     M = n(17839),
@@ -145,14 +145,14 @@ function P() {
             (0, i.jsxs)("div", {
                 className: U._f,
                 children: [
-                    (0, i.jsx)(G.H, { size: "xs", color: j.A.colors.ICON_MUTED }),
+                    (0, i.jsx)(v.H, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, i.jsx)("div", { className: U.VG }),
                 ],
             }),
             (0, i.jsxs)("div", {
                 className: U._f,
                 children: [
-                    (0, i.jsx)(v.ChatIcon, { size: "xs", color: j.A.colors.ICON_MUTED }),
+                    (0, i.jsx)(G.ChatIcon, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, i.jsx)("div", { className: U.D_ }),
                 ],
             }),
