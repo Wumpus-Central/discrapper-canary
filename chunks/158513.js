@@ -1,4 +1,5 @@
 e.exports = (() => {
+    "use strict";
     var e,
         t,
         r,
@@ -514,6 +515,7 @@ e.exports = (() => {
                                                     },
                                                 })).getParameter(l.MAX_RENDERBUFFER_SIZE),
                                                 l.getParameter(l.MAX_TEXTURE_SIZE),
+                                                4096,
                                             )),
                                             s(
                                                 (e = l.createProgram()),
@@ -551,7 +553,8 @@ e.exports = (() => {
                                     o = null,
                                     a = 0,
                                     s = 0,
-                                    u = !1;
+                                    u = !1,
+                                    c = "";
                                 (e(),
                                     (this.ad = function () {
                                         return (e(), n);
@@ -579,48 +582,69 @@ e.exports = (() => {
                                               i)
                                             : null;
                                     }));
-                                let c = new l(8),
-                                    f = new l(8),
-                                    d = new l(10),
-                                    p = new l(10);
-                                ((this.Lc = function (r, n, l, u, h) {
+                                let f = new l(8),
+                                    d = new l(8),
+                                    p = new l(10),
+                                    h = new l(10);
+                                ((this.Lc = function (r, n, l, u, m) {
                                     if (e()) {
-                                        var m = c.push(r),
-                                            v = f.push(n);
+                                        var v = f.push(r),
+                                            y = d.push(n);
                                         if (t.canvas) {
-                                            for (var y of ((t.canvas.width != m || t.canvas.height != v) &&
-                                                ((t.canvas.width = m), (t.canvas.height = v)),
-                                            t.viewport(0, v - n, r, n),
+                                            if (
+                                                (t.canvas.width != v || t.canvas.height != y) &&
+                                                ((t.canvas.width = v),
+                                                (t.canvas.height = y),
+                                                t.drawingBufferWidth < v || t.drawingBufferHeight < y)
+                                            ) {
+                                                let e =
+                                                    v +
+                                                    "x" +
+                                                    y +
+                                                    " requested, " +
+                                                    t.drawingBufferWidth +
+                                                    "x" +
+                                                    t.drawingBufferHeight +
+                                                    " allocated";
+                                                c !== e &&
+                                                    ((c = e),
+                                                    console.warn(
+                                                        "[Rive] The image mesh drawing buffer is smaller than requested (" +
+                                                            e +
+                                                            "). Image meshes may not render.",
+                                                    ));
+                                            }
+                                            for (var g of (t.viewport(0, y - n, r, n),
                                             t.disable(t.SCISSOR_TEST),
                                             t.clearColor(0, 0, 0, 0),
                                             t.clear(t.COLOR_BUFFER_BIT),
                                             t.enable(t.SCISSOR_TEST),
                                             l.sort((e, t) => t.tc - e.tc),
-                                            (m = d.push(u)),
-                                            a != m && (t.bufferData(t.ARRAY_BUFFER, 8 * m, t.DYNAMIC_DRAW), (a = m)),
-                                            (m = 0),
+                                            (v = p.push(u)),
+                                            a != v && (t.bufferData(t.ARRAY_BUFFER, 8 * v, t.DYNAMIC_DRAW), (a = v)),
+                                            (v = 0),
                                             l))
-                                                (t.bufferSubData(t.ARRAY_BUFFER, m, y.Tb), (m += 4 * y.Tb.length));
-                                            for (var g of (console.assert(m == 4 * u), l))
-                                                (t.bufferSubData(t.ARRAY_BUFFER, m, g.xc), (m += 4 * g.xc.length));
-                                            for (var b of (console.assert(m == 8 * u),
-                                            (m = p.push(h)),
-                                            s != m &&
-                                                (t.bufferData(t.ELEMENT_ARRAY_BUFFER, 2 * m, t.DYNAMIC_DRAW), (s = m)),
-                                            (y = 0),
+                                                (t.bufferSubData(t.ARRAY_BUFFER, v, g.Tb), (v += 4 * g.Tb.length));
+                                            for (var b of (console.assert(v == 4 * u), l))
+                                                (t.bufferSubData(t.ARRAY_BUFFER, v, b.xc), (v += 4 * b.xc.length));
+                                            for (var w of (console.assert(v == 8 * u),
+                                            (v = h.push(m)),
+                                            s != v &&
+                                                (t.bufferData(t.ELEMENT_ARRAY_BUFFER, 2 * v, t.DYNAMIC_DRAW), (s = v)),
+                                            (g = 0),
                                             l))
-                                                (t.bufferSubData(t.ELEMENT_ARRAY_BUFFER, y, b.indices),
-                                                    (y += 2 * b.indices.length));
-                                            for (let e of (console.assert(y == 2 * h),
-                                            (b = 0),
-                                            (g = !0),
-                                            (m = y = 0),
+                                                (t.bufferSubData(t.ELEMENT_ARRAY_BUFFER, g, w.indices),
+                                                    (g += 2 * w.indices.length));
+                                            for (let e of (console.assert(g == 2 * m),
+                                            (w = 0),
+                                            (b = !0),
+                                            (v = g = 0),
                                             l)) {
-                                                (e.image.Ib != b &&
-                                                    (t.bindTexture(t.TEXTURE_2D, e.image.Hb || null), (b = e.image.Ib)),
+                                                (e.image.Ib != w &&
+                                                    (t.bindTexture(t.TEXTURE_2D, e.image.Hb || null), (w = e.image.Ib)),
                                                     e.ed
-                                                        ? (t.scissor(e.Yb, v - e.Zb - e.fc, e.od, e.fc), (g = !0))
-                                                        : g && (t.scissor(0, v - n, r, n), (g = !1)),
+                                                        ? (t.scissor(e.Yb, y - e.Zb - e.fc, e.od, e.fc), (b = !0))
+                                                        : b && (t.scissor(0, y - n, r, n), (b = !1)),
                                                     (l = 2 / r));
                                                 let a = -2 / n;
                                                 (t.uniform4f(
@@ -635,13 +659,13 @@ e.exports = (() => {
                                                         e.ib[4] * l * e.Ab + l * (e.Yb - e.bd * e.Ab) - 1,
                                                         e.ib[5] * a * e.Bb + a * (e.Zb - e.cd * e.Bb) + 1,
                                                     ),
-                                                    t.vertexAttribPointer(0, 2, t.FLOAT, !1, 0, m),
-                                                    t.vertexAttribPointer(1, 2, t.FLOAT, !1, 0, m + 4 * u),
-                                                    t.drawElements(t.TRIANGLES, e.indices.length, t.UNSIGNED_SHORT, y),
-                                                    (m += 4 * e.Tb.length),
-                                                    (y += 2 * e.indices.length));
+                                                    t.vertexAttribPointer(0, 2, t.FLOAT, !1, 0, v),
+                                                    t.vertexAttribPointer(1, 2, t.FLOAT, !1, 0, v + 4 * u),
+                                                    t.drawElements(t.TRIANGLES, e.indices.length, t.UNSIGNED_SHORT, g),
+                                                    (v += 4 * e.Tb.length),
+                                                    (g += 2 * e.indices.length));
                                             }
-                                            (console.assert(m == 4 * u), console.assert(y == 2 * h));
+                                            (console.assert(v == 4 * u), console.assert(g == 2 * m));
                                         }
                                     }
                                 }),
