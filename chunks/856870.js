@@ -867,8 +867,8 @@ function e8(e) {
 n(600253);
 var e5 = n(314531);
 n(926675);
-var e3 = n(305866),
-    e7 = n(123181),
+var e7 = n(305866),
+    e3 = n(123181),
     e4 = n(229087),
     e9 = n(753437),
     e6 = n(382701),
@@ -993,7 +993,7 @@ function tt(e) {
                               (0, i.jsx)(e4.A, { tag: e, className: te.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
-                  u && (0, i.jsx)(e7.A, { tags: d, onTagsChange: R, onOpen: y, onClose: S, variant: "filled", ref: I }),
+                  u && (0, i.jsx)(e3.A, { tags: d, onTagsChange: R, onOpen: y, onClose: S, variant: "filled", ref: I }),
               ],
           })
         : null;
@@ -1015,7 +1015,7 @@ function tn(e) {
               onRequestOpen: () => a(!0),
               onRequestClose: () => a(!1),
               renderPopout: () =>
-                  (0, i.jsx)(e3.l, {
+                  (0, i.jsx)(e7.l, {
                       className: te.Kt,
                       "aria-label": d,
                       returnRef: t,
@@ -1652,7 +1652,7 @@ var tH = n(896170),
     tY = n(321108),
     tB = n(106191),
     tz = n(404277),
-    tq = n(383329),
+    tq = n(885087),
     tJ = n(373842),
     tQ = n(67710);
 function t$(e) {
@@ -1770,7 +1770,7 @@ function tZ(e) {
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(e3.l, {
+            return (0, i.jsx)(e7.l, {
                 className: tQ.C2,
                 "aria-label": v.intl.string(v.t.uqw8wK),
                 children: (0, i.jsxs)(tK.iS, {
@@ -1856,20 +1856,20 @@ function t5(e) {
         r = o.useMemo(() => ({ expanded: a, setExpanded: s }), [a]);
     return (0, i.jsx)(t8.Provider, { value: r, children: n });
 }
-function t3() {
+function t7() {
     let e = o.useContext(t8);
     if (null == e)
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
 }
-var t7 = n(67438);
+var t3 = n(67438);
 function t4(e) {
     let { widget: t } = e,
         n = (0, j.cv)(t.type),
         l = 1 === n,
         a = l ? v.intl.string(v.t["3FdPBT"]) : v.intl.format(v.t.W8K2GH, { maxGames: n });
     return (0, i.jsxs)("div", {
-        className: l ? t7.O : t7.k,
+        className: l ? t3.O : t3.k,
         children: [
             l && (0, i.jsx)(t1, { widget: t, widgetType: t.type }),
             (0, i.jsx)(g.E, { variant: "text-xs/normal", color: "text-subtle", children: a }),
@@ -1923,7 +1923,7 @@ function na(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, nn.r)(),
         r = s(t),
-        { expanded: d, setExpanded: o } = t3(),
+        { expanded: d, setExpanded: o } = t7(),
         c = d ? a : a.slice(0, 2),
         u = a.length > 2,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2090,7 +2090,7 @@ function nI(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, nn.r)(),
         r = s(t),
-        { expanded: d, setExpanded: o } = t3(),
+        { expanded: d, setExpanded: o } = t7(),
         c = d ? a : a.slice(0, 8),
         u = a.length > 8,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2185,7 +2185,7 @@ function nA(e) {
 function nN(e) {
     let { userId: t, widgetType: n, ...l } = e,
         { games: a, onAddGame: s } = (0, tJ.S)(n),
-        { setExpanded: r } = t3(),
+        { setExpanded: r } = t7(),
         { trackUserProfileEditAction: d } = (0, eW.NJ)(),
         c = o.useCallback(
             (e) => {
@@ -2225,7 +2225,7 @@ function nT(e) {
 }
 function nw(e) {
     let { widget: t, user: n, allowEditing: l, disableInteraction: a, ...s } = e,
-        { setExpanded: r } = t3(),
+        { setExpanded: r } = t7(),
         { shouldShowSuggestions: d, handleDismissSuggestions: c } = (function (e) {
             let [t, n] = o.useState(!1),
                 i = eK(e.type),

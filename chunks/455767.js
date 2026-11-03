@@ -1153,7 +1153,7 @@ async function eY() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "661212";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "661234";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
     let s = eH?.processUtils?.getLastCrash;
@@ -1499,7 +1499,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 661212, Version Hash: c4d35083a4b5f3dc172692756815e2ff4983193f`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 661234, Version Hash: 54673e7d491fec699e92376628cc08b9be515d7a`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -5539,7 +5539,7 @@ let ss = (0, ri.Fe)({
                 n.e("645830"),
                 n.e("733771"),
                 n.e("946039"),
-                n.e("741786"),
+                n.e("351156"),
                 n.e("995602"),
                 n.e("218413"),
                 n.e("815275"),
@@ -11914,7 +11914,7 @@ let ET =
                             n.e("645830"),
                             n.e("479971"),
                             n.e("810262"),
-                            n.e("741786"),
+                            n.e("351156"),
                             n.e("995602"),
                             n.e("346313"),
                             n.e("463726"),
@@ -26124,7 +26124,7 @@ let yh = "isHideDevBanner",
                     className: t_()(yA.Wz, yA.mr),
                     children: [
                         (0, b.jsx)(yE, { className: yA.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "661212" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "661234" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -36803,7 +36803,7 @@ let Md = (0, ri.Fe)({
                 n.e("645830"),
                 n.e("479971"),
                 n.e("810262"),
-                n.e("741786"),
+                n.e("351156"),
                 n.e("995602"),
                 n.e("346313"),
                 n.e("463726"),
@@ -55147,8 +55147,8 @@ let Yy = (0, t$.Fe)({
             n.e("293998"),
             n.e("946039"),
             n.e("324240"),
+            n.e("351156"),
             n.e("933281"),
-            n.e("741786"),
             n.e("995602"),
             n.e("843019"),
             n.e("218413"),
