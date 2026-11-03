@@ -266,8 +266,8 @@
     box-shadow: var(--shadow-high);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 16px
+    gap: var(--space-10);
+    padding: var(--space-16)
 }
 
 .countdown__33561 {
@@ -450,4 +450,4 @@
     width: 246px
 }
 
-/*# sourceMappingURL=de4abfc515935248.css.map*/
+/*# sourceMappingURL=9814c480522d7531.css.map*/

@@ -344,7 +344,7 @@
     height: auto;
     min-height: 223px;
     padding-block: 19px 16px;
-    row-gap: 16px
+    row-gap: var(--space-16)
 }
 
 .heroHeaderContainer__08415.collectionSaleHeroHeader__08415.responsive__08415 {
@@ -849,4 +849,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=70600d7aa18ee585.css.map*/
+/*# sourceMappingURL=35474fe4529688d9.css.map*/
