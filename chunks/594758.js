@@ -6517,35 +6517,44 @@ function sa(e) {
                             let {
                                     skuId: t,
                                     loadId: n,
-                                    onCheckoutSuccess: l,
-                                    onSignFailure: i,
-                                    order: r,
-                                    onSetIsSubmitting: a,
+                                    useOrdersAPI: l,
+                                    onCheckoutSuccess: i,
+                                    onSignFailure: r,
+                                    order: a,
+                                    onSetIsSubmitting: s,
                                 } = e,
                                 {
-                                    redeemVirtualCurrency: s,
-                                    isSubmitting: o,
-                                    error: u,
+                                    redeemVirtualCurrency: o,
+                                    isSubmitting: u,
+                                    error: d,
                                 } = (0, aQ.Q)({
                                     skuId: t,
                                     loadId: n,
-                                    order: r,
-                                    onSignFailure: i,
-                                    onSetIsSubmitting: a,
+                                    useOrdersAPI: l,
+                                    order: a,
+                                    onSignFailure: r,
+                                    onSetIsSubmitting: s,
                                 });
                             return {
                                 onRedeemVirtualCurrency: (0, c.useCallback)(
                                     (e) => {
-                                        s(t, n, (n) => {
-                                            (l?.({ entitlements: n, skuId: t }), e(n));
+                                        o(t, n, (n) => {
+                                            (i?.({ entitlements: n, skuId: t }), e(n));
                                         });
                                     },
-                                    [t, n, s, l],
+                                    [t, n, o, i],
                                 ),
-                                isRedeeming: o,
-                                orbRedemptionError: u,
+                                isRedeeming: u,
+                                orbRedemptionError: d,
                             };
-                        })({ skuId: l, loadId: f, order: C, onSignFailure: h, onSetIsSubmitting: u ? y : void 0 });
+                        })({
+                            skuId: l,
+                            loadId: f,
+                            useOrdersAPI: u,
+                            order: C,
+                            onSignFailure: h,
+                            onSetIsSubmitting: u ? y : void 0,
+                        });
                     (0, c.useEffect)(() => {
                         g(P ?? null);
                     }, [P, g]);

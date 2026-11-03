@@ -12657,10 +12657,11 @@ var d8 = a(488428),
     cs = a(75678),
     cr = a(216678),
     co = a(194509),
-    cd = a(478996),
-    cc = a(37402),
-    cu = a(397093);
-function cm(e) {
+    cd = a(211287),
+    cc = a(478996),
+    cu = a(37402),
+    cm = a(397093);
+function ch(e) {
     let { selectedGuildForGuildSub: t } = e,
         a = (0, ca.uk)(t?.id)[0];
     return null != t && null != a
@@ -12671,7 +12672,7 @@ function cm(e) {
           })
         : null;
 }
-let ch = function () {
+let cp = function () {
     let [e, t] = o.useState(tM.pe.TIER_2),
         [a, n] = o.useState(null),
         l = (0, d.yK)([nC.A], () => nC.A.getGuildsArray()),
@@ -12685,16 +12686,17 @@ let ch = function () {
         { analyticsLocations: N } = (0, nx.Ay)(tA.A.PAYMENT_FLOW_TEST_PAGE),
         [A, k] = o.useState(""),
         [D, I] = o.useState(eu.dJq),
-        { balance: T, isFetching: R, error: O } = (0, cd.W0)(),
-        { isSubmitting: w, responseMessage: M, redeemVirtualCurrency: L } = (0, cd.Qr)(),
-        [P, U] = o.useState(eu.dJq),
-        [G, B] = o.useState(""),
-        [F, $] = o.useState(eu.dJq),
-        [V, W] = o.useState(eu.dJq);
+        { balance: T, isFetching: R, error: O } = (0, cc.W0)(),
+        { enabled: w } = cd.A.useConfig({ location: "orb_checkout_modal" }),
+        { isSubmitting: M, responseMessage: L, redeemVirtualCurrency: P } = (0, cc.Qr)({ useOrdersAPI: w }),
+        [U, G] = o.useState(eu.dJq),
+        [B, F] = o.useState(""),
+        [$, V] = o.useState(eu.dJq),
+        [W, z] = o.useState(eu.dJq);
     return (0, r.jsx)(nx.f5, {
         value: N,
         children: (0, r.jsx)(x.Ip, {
-            className: cu.XG,
+            className: cm.XG,
             children: (0, r.jsxs)(tq.B, {
                 direction: "vertical",
                 gap: 24,
@@ -12865,11 +12867,11 @@ let ch = function () {
                                     }),
                                     R
                                         ? (0, r.jsx)("div", {
-                                              className: cu.wG,
+                                              className: cm.wG,
                                               children: (0, r.jsx)(to.y, { type: to.t.SPINNING_CIRCLE }),
                                           })
                                         : (0, r.jsxs)("div", {
-                                              className: cu.dB,
+                                              className: cm.dB,
                                               children: [
                                                   null !== O &&
                                                       (0, r.jsxs)(g.E, {
@@ -12879,9 +12881,9 @@ let ch = function () {
                                                               O.message,
                                                           ],
                                                       }),
-                                                  (0, r.jsx)(cc.Gy, {
+                                                  (0, r.jsx)(cu.Gy, {
                                                       balance: T ?? 0,
-                                                      balanceWidgetMode: cc.k7.SELECTED,
+                                                      balanceWidgetMode: cu.k7.SELECTED,
                                                   }),
                                               ],
                                           }),
@@ -12890,16 +12892,16 @@ let ch = function () {
                             (0, r.jsx)(j.k, {
                                 label: "SKU ID",
                                 placeholder: "SKU ID",
-                                value: P,
-                                onChange: (e) => U(e),
+                                value: U,
+                                onChange: (e) => G(e),
                             }),
                             (0, r.jsx)(p.$, {
                                 variant: "primary",
                                 text: "Redeem Virtual Currency for SKU",
-                                loading: w,
-                                onClick: () => L(P, (0, eO.A)()),
+                                loading: M,
+                                onClick: () => P(U, (0, eO.A)()),
                             }),
-                            null != M && (0, r.jsx)(g.E, { variant: "body-sm/normal", children: M }),
+                            null != L && (0, r.jsx)(g.E, { variant: "body-sm/normal", children: L }),
                         ],
                     }),
                     (0, r.jsx)(f.c, {}),
@@ -12916,7 +12918,7 @@ let ch = function () {
                             }),
                             (0, r.jsx)(ct.H, {
                                 guildId: S?.id,
-                                children: (0, r.jsx)(cm, { selectedGuildForGuildSub: S }),
+                                children: (0, r.jsx)(ch, { selectedGuildForGuildSub: S }),
                             }),
                         ],
                     }),
@@ -12972,23 +12974,23 @@ let ch = function () {
                                         label: "Application Id",
                                         hideLabel: !0,
                                         placeholder: "Application Id",
-                                        value: G,
-                                        onChange: B,
+                                        value: B,
+                                        onChange: F,
                                     }),
                                     (0, r.jsx)(j.k, {
                                         label: "SKU ID",
                                         hideLabel: !0,
                                         placeholder: "SKU ID",
-                                        value: F,
-                                        onChange: (e) => $(e),
+                                        value: $,
+                                        onChange: (e) => V(e),
                                     }),
                                     (0, r.jsx)(p.$, {
                                         variant: "primary",
                                         text: "Open Premium Apps Payment Modal for SKU",
                                         onClick: () =>
                                             (0, cr.q)({
-                                                applicationId: G,
-                                                skuId: F,
+                                                applicationId: B,
+                                                skuId: $,
                                                 analyticsLocations: N,
                                                 checkoutFlow: d9.CL.PREMIUM_APPS_OTP_CHECKOUT,
                                             }),
@@ -13006,13 +13008,13 @@ let ch = function () {
                             (0, r.jsx)(j.k, {
                                 label: "Collectibles Payment Modal Test",
                                 placeholder: "SKU ID",
-                                value: V,
-                                onChange: (e) => W(e),
+                                value: W,
+                                onChange: (e) => z(e),
                             }),
                             (0, r.jsx)(p.$, {
                                 variant: "primary",
                                 text: "Open Collectibles Payment Modal for SKU",
-                                onClick: () => (0, ci.A)({ skuId: V, analyticsLocations: N }),
+                                onClick: () => (0, ci.A)({ skuId: W, analyticsLocations: N }),
                             }),
                         ],
                     }),
@@ -13051,13 +13053,12 @@ let ch = function () {
         }),
     });
 };
-var cp = a(219887),
-    cg = a(459357),
-    cx = a(650314),
-    cv = a(500380),
-    cb = a(102609),
-    cj = a(710195),
-    cf = a(211287),
+var cg = a(219887),
+    cx = a(459357),
+    cv = a(650314),
+    cb = a(500380),
+    cj = a(102609),
+    cf = a(710195),
     cy = a(295405),
     cE = a(548185);
 let cC = [
@@ -13930,7 +13931,7 @@ function cD() {
                                             leading: (0, r.jsx)("img", {
                                                 alt: "",
                                                 className: cE.bI,
-                                                src: (0, cv.t)(t),
+                                                src: (0, cb.t)(t),
                                             }),
                                         };
                                     }),
@@ -14045,14 +14046,14 @@ let cI = [
     ];
 function cw(e) {
     let { experimentName: t, options: a = cI } = e,
-        n = (0, tN.bG)([cj.A, nQ.default], () => {
+        n = (0, tN.bG)([cf.A, nQ.default], () => {
             let e = nQ.default.getId(),
-                a = cj.A.getAssignment("user", e, t);
+                a = cf.A.getAssignment("user", e, t);
             return a?.isOverride === !0 ? String(a.variantId) : "none";
         }),
         l = o.useCallback(
             (e) => {
-                (0, cb.t$)(cb.l5.APEX, t, "none" === e ? null : Number(e));
+                (0, cj.t$)(cj.l5.APEX, t, "none" === e ? null : Number(e));
             },
             [t],
         );
@@ -14063,9 +14064,9 @@ function cM() {
         direction: "vertical",
         gap: 8,
         children: [
-            (0, r.jsx)(cw, { experimentName: cg.A.definition.name, options: cT }),
-            (0, r.jsx)(cw, { experimentName: cf.A.definition.name, options: cR }),
-            (0, r.jsx)(cw, { experimentName: cx.I.definition.name, options: cO }),
+            (0, r.jsx)(cw, { experimentName: cx.A.definition.name, options: cT }),
+            (0, r.jsx)(cw, { experimentName: cd.A.definition.name, options: cR }),
+            (0, r.jsx)(cw, { experimentName: cv.I.definition.name, options: cO }),
         ],
     });
 }
@@ -14167,8 +14168,8 @@ function cG(e) {
     return (0, r.jsxs)("div", {
         className: i$.bd,
         children: [
-            (0, r.jsx)(cp.A, { locale: "en-US", paymentSource: t, showLabels: !0, showPaymentSourceIcon: !0 }, t.id),
-            (0, r.jsx)("img", { alt: t.country, className: cE.bI, src: (0, cv.t)(t.country) }),
+            (0, r.jsx)(cg.A, { locale: "en-US", paymentSource: t, showLabels: !0, showPaymentSourceIcon: !0 }, t.id),
+            (0, r.jsx)("img", { alt: t.country, className: cE.bI, src: (0, cb.t)(t.country) }),
             t.isDefault
                 ? (0, r.jsx)(g.E, { variant: "body-sm/medium", children: "(Default)" })
                 : (0, r.jsx)(p.$, { variant: "secondary", size: "sm", text: "Set as Default", onClick: a }),
@@ -21466,7 +21467,7 @@ function x3() {
                     name: "Payment Flow Modals",
                     group: np.fu.BILLING,
                     tags: ["gifts", "nitro", "boost", "sku", "collectibles"],
-                    render: () => (0, r.jsx)(ch, {}),
+                    render: () => (0, r.jsx)(cp, {}),
                 }),
                 e.push({
                     id: "shop_collectibles",
