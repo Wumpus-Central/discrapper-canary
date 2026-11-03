@@ -23,10 +23,10 @@ class f extends a.Ay.Store {
 }
 let m = new f(s.h, {
     LOGOUT: function () {
-        return (u.clear(), d.cancel(), i.w.remove(o), !1);
+        return (u.clear(), d.cancel(), i.w.remove(o), !0);
     },
     CONJURE_COMPOSER_DRAFT_SET: function (e) {
         let { projectId: t, draft: n } = e;
-        return (u.set(t, n), d(), "" === n && d.flush(), !1);
+        return (u.set(t, n), d(), "" === n && d.flush(), !0);
     },
 });
