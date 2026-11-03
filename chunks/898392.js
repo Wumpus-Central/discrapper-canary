@@ -10059,7 +10059,7 @@ let oy = {
     },
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("487834"),
+            a.e("752924"),
             a.e("807432"),
             a.e("601495"),
             a.e("807265"),

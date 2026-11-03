@@ -1278,7 +1278,7 @@ let nx = r.memo(function (e) {
           });
 });
 var nS = n(13673),
-    ny = n(895597),
+    ny = n(418767),
     nI = n(606049),
     nb = n(10364);
 let n_ = r.memo(function (e) {
@@ -1318,7 +1318,6 @@ let n_ = r.memo(function (e) {
             onContextMenu: g,
             onPopoutRequestClose: f,
             roleIcon: m,
-            enableScheduledBadge: !0,
         });
     }),
     nj = r.memo(nI.A);

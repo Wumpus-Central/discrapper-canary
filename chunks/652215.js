@@ -1004,7 +1004,6 @@ var na =
         (D[(D.HIDDEN_SUSPENDED_USER = 131072)] = "HIDDEN_SUSPENDED_USER"),
         (D[(D.IS_FIRST_BOOSTER = 262144)] = "IS_FIRST_BOOSTER"),
         (D[(D.IS_GUILD_OFFICIAL = 524288)] = "IS_GUILD_OFFICIAL"),
-        (D[(D.IS_SCHEDULED = 1048576)] = "IS_SCHEDULED"),
         D),
     ns =
         (((b = {})[(b.IS_CLIP = 1)] = "IS_CLIP"),
