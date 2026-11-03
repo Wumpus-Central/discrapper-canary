@@ -10439,10 +10439,31 @@ function o1(e) {
     let { activity: t, id: n } = e,
         l = (0, tU.j)(),
         { text: r, revealing: s } = oa(t?.text ?? "", { streaming: l && null != t && "end" !== t.phase }),
-        u = i.useRef(null);
+        u = i.useRef(null),
+        c = i.useRef(!0),
+        d = i.useRef(0),
+        f = i.useCallback(() => {
+            let e = u.current,
+                t = e?.getScrollerNode();
+            if (null != e && null != t) {
+                var n, l, r;
+                ((n = c.current),
+                    (l = e.getDistanceFromBottom()),
+                    (r = t.scrollTop < d.current),
+                    (c.current = l < 1 || (!r && (n || l < 16))),
+                    (d.current = t.scrollTop));
+            }
+        }, []);
     return (
         i.useLayoutEffect(() => {
-            u.current?.scrollToBottom();
+            if (!c.current) return;
+            let e = u.current;
+            e?.scrollToBottom({
+                callback: () => {
+                    let t = e.getScrollerNode();
+                    null != t && (d.current = t.scrollTop);
+                },
+            });
         }, [r]),
         (0, a.jsx)("div", {
             id: n,
@@ -10451,6 +10472,7 @@ function o1(e) {
             "data-conjure-thinking-panel": !0,
             children: (0, a.jsx)(tO.Ch, {
                 ref: u,
+                onScroll: f,
                 className: o0.Dq,
                 "data-conjure-thinking-reasoning": !0,
                 children: (0, a.jsx)("div", {
