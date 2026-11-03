@@ -1,14 +1,14 @@
-a.d(t, { S: () => s, g: () => n });
-var r,
-    s =
+a.d(t, { S: () => i, g: () => c });
+var s,
+    i =
         588245 != a.j
-            ? (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
-              (r[(r.NO_PERSONAL_DATA = 1)] = "NO_PERSONAL_DATA"),
-              (r[(r.ZERO_DATA = 2)] = "ZERO_DATA"),
-              r)
+            ? (((s = {})[(s.DEFAULT = 0)] = "DEFAULT"),
+              (s[(s.NO_PERSONAL_DATA = 1)] = "NO_PERSONAL_DATA"),
+              (s[(s.ZERO_DATA = 2)] = "ZERO_DATA"),
+              s)
             : null;
-let i = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
-    c = {
+let r = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
+    n = {
         voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 },
         messages: { numMessagesSent: 0, numMessagesSentPercentile: 0 },
         guilds: { guilds: [] },
@@ -24,13 +24,13 @@ let i = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }
         users: [],
         power: { powerLevel: 0, powerLevelPercentile: 0 },
     };
-function n(e) {
+function c(e) {
     switch (e) {
         case 0:
-            return i;
+            return r;
         case 1:
             return null;
         case 2:
-            return c;
+            return n;
     }
 }

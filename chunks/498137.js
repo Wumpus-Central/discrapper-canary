@@ -1,15 +1,15 @@
 a.d(t, { A: () => o });
-var r = a(477900),
-    s = a(582128),
-    i = a(503698),
-    c = a.n(i),
-    n = a(627369),
+var s = a(477900),
+    i = a(582128),
+    r = a(503698),
+    n = a.n(r),
+    c = a(627369),
     d = a(343053),
     l = a(610771);
 function o(e) {
-    let { cardColorPalette: t, size: a, className: i, style: o, children: u } = e,
-        h = s.useMemo(() => {
-            let e = (0, n.j)(t);
+    let { cardColorPalette: t, size: a, className: r, style: o, children: u } = e,
+        h = i.useMemo(() => {
+            let e = (0, c.j)(t);
             return {
                 "--custom-checkpoint-card-primary": e.primaryBackgroundColor,
                 "--custom-checkpoint-card-secondary": e.secondaryBackgroundColor,
@@ -17,9 +17,9 @@ function o(e) {
                 ...o,
             };
         }, [t, o]),
-        f = s.useMemo(() => ({ size: a }), [a]);
-    return (0, r.jsx)(d.I.Provider, {
+        f = i.useMemo(() => ({ size: a }), [a]);
+    return (0, s.jsx)(d.I.Provider, {
         value: f,
-        children: (0, r.jsx)("div", { className: c()(l.container, l[a], i), style: h, children: u }),
+        children: (0, s.jsx)("div", { className: n()(l.container, l[a], r), style: h, children: u }),
     });
 }

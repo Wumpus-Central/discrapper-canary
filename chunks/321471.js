@@ -19,10 +19,10 @@ let o = function (e) {
             ref: f,
             ...g
         } = e,
-        C = r.useId(),
         j = r.useId(),
-        v = x ?? C,
-        N = null != p ? j : void 0,
+        C = r.useId(),
+        v = x ?? j,
+        N = null != p ? C : void 0,
         [A, I] = r.useState(void 0),
         [y, E] = r.useState(void 0),
         S = void 0 !== y;

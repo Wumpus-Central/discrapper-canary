@@ -1,27 +1,27 @@
 a.d(t, { A: () => v, T: () => o });
-var r,
-    s = a(127639),
-    i = a(17928),
-    c = a(73153),
-    n = a(287809),
+var s,
+    i = a(127639),
+    r = a(17928),
+    n = a(73153),
+    c = a(287809),
     d = a(474090),
     l = a(817379),
     o =
-        (((r = {})[(r.INIT = 0)] = "INIT"),
-        (r[(r.FETCHING = 1)] = "FETCHING"),
-        (r[(r.SUCCESS = 2)] = "SUCCESS"),
-        (r[(r.ERROR = 3)] = "ERROR"),
-        r);
+        (((s = {})[(s.INIT = 0)] = "INIT"),
+        (s[(s.FETCHING = 1)] = "FETCHING"),
+        (s[(s.SUCCESS = 2)] = "SUCCESS"),
+        (s[(s.ERROR = 3)] = "ERROR"),
+        s);
 let u = { isMuted: !1, progress: null },
     h = {},
     f = { ...u },
-    b = null,
     _ = null,
+    b = null,
     p = null,
     x = 0,
     m = null,
     g = !1;
-class A extends i.Ay.PersistedStore {
+class A extends r.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
     static migrations = [(e) => ({ ...e, progress: null })];
@@ -29,16 +29,16 @@ class A extends i.Ay.PersistedStore {
         return f;
     }
     initialize(e) {
-        (this.waitFor(n.default), null != e && (f = { ...f, ...e }));
+        (this.waitFor(c.default), null != e && (f = { ...f, ...e }));
     }
     get isMuted() {
         return f.isMuted;
     }
     get stats() {
-        return b;
+        return _;
     }
     get globalStats() {
-        return _;
+        return b;
     }
     get character() {
         return p;
@@ -59,7 +59,7 @@ class A extends i.Ay.PersistedStore {
         return m ?? p ?? h;
     }
 }
-let v = new A(c.h, {
+let v = new A(n.h, {
     CHECKPOINT_TOGGLE_MUTE: function () {
         f.isMuted = !f.isMuted;
     },
@@ -67,17 +67,17 @@ let v = new A(c.h, {
         x = 1;
     },
     CHECKPOINT_FETCH_SUCCESS: function (e) {
-        ((b = e.stats),
-            (_ = e.globalStats),
+        ((_ = e.stats),
+            (b = e.globalStats),
             (p = e.character),
             (x = 2),
             null == p && null != f.progress
                 ? ((m = (function (e) {
-                      let t = (0, d.ki)(n.default.getCurrentUser()),
+                      let t = (0, d.ki)(c.default.getCurrentUser()),
                           a = {};
-                      for (let r of Object.values(s.V)) {
-                          let s = e[r];
-                          null == s || (0, l.tS)(r, s, { stats: b, hasNitro: t, savedCharacter: p }) || (a[r] = s);
+                      for (let s of Object.values(i.V)) {
+                          let i = e[s];
+                          null == i || (0, l.tS)(s, i, { stats: _, hasNitro: t, savedCharacter: p }) || (a[s] = i);
                       }
                       return a;
                   })(f.progress.selectedCharacterTraits)),
@@ -106,11 +106,11 @@ let v = new A(c.h, {
     CHECKPOINT_SAVE_PROGRESS: function (e) {
         let { stage: t } = e,
             a = m ?? p ?? h,
-            { progress: r } = f;
-        if (r?.stage === t && r.selectedCharacterTraits === a) return !1;
+            { progress: s } = f;
+        if (s?.stage === t && s.selectedCharacterTraits === a) return !1;
         f.progress = { stage: t, selectedCharacterTraits: a };
     },
     LOGOUT: function () {
-        ((f = { ...u }), (b = null), (_ = null), (p = null), (x = 0), (m = null), (g = !1));
+        ((f = { ...u }), (_ = null), (b = null), (p = null), (x = 0), (m = null), (g = !1));
     },
 });
