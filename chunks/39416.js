@@ -2,7 +2,6 @@ _.exports = {
     qe: "frameOutline__23c32",
     Pw: "ink__23c32",
     Ji: "canvas__23c32",
-    V$: "brush__23c32",
     r1: "selection__23c32",
     p$: "handle__23c32",
     ej: "railDock__23c32",
@@ -15,5 +14,4 @@ _.exports = {
     pr: "flyoutAnchor__23c32",
     PA: "sketchThumb__23c32",
     OY: "sketchBadge__23c32",
-    i5: "longPress__23c32",
 };

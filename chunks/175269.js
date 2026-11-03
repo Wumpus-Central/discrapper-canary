@@ -116,8 +116,7 @@ let z = (0, o.A)(
                                             action: () =>
                                                 (0, k.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        i.e("742258"),
-                                                        i.e("253335"),
+                                                        i.e("341432"),
                                                         i.e("916758"),
                                                         i.e("947802"),
                                                         i.e("387634"),
