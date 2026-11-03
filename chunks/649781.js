@@ -50,7 +50,7 @@ let F = (0, k.Fe)({
         Promise.all([
             n.e("163944"),
             n.e("916758"),
-            n.e("947802"),
+            n.e("356664"),
             n.e("540715"),
             n.e("741111"),
             n.e("11312"),
@@ -454,18 +454,18 @@ let e2 = "app-download-item",
 function e5() {
     return !1;
 }
-function e4(e) {
+function e6(e) {
     let t = el.default.getMutableGuildStates();
     return (
         (e === eO.sFm.SERVER_DISCOVERY_BADGE && !eJ.hasViewed(eO.sFm.SERVER_DISCOVERY_BADGE)) ||
         (e !== e2 && e !== e3 && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
-let e6 = (0, e1.L_)((e, t, n) => ["null", ...t, ...e, e3, eO.sFm.E3_SERVER_DISCOVERY_BADGE, e2]);
+let e4 = (0, e1.L_)((e, t, n) => ["null", ...t, ...e, e3, eO.sFm.E3_SERVER_DISCOVERY_BADGE, e2]);
 function e7(e) {
     let { ref: t, ...n } = e,
         r = (0, _.yK)([eH.Ay, eX.A, el.default], () =>
-            e6(eH.Ay.getGuildFolders(), eX.A.getUnreadPrivateChannelIds(), el.default.getStoreChangeSentinel()),
+            e4(eH.Ay.getGuildFolders(), eX.A.getUnreadPrivateChannelIds(), el.default.getStoreChangeSentinel()),
         ),
         a = (0, _.bG)([e0.A], () => e0.A.isFocused()),
         s = (0, _.bG)([ez.A], () => ez.A.getExpandedFolders());
@@ -476,7 +476,7 @@ function e7(e) {
         isUnread: e5,
         textUnread: eR.intl.string(eR.t.y2b7CA),
         textMention: eR.intl.string(eR.t.y2b7CA),
-        isMentioned: e4,
+        isMentioned: e6,
         animate: a,
         expandedFolders: s,
     });
@@ -1111,8 +1111,8 @@ var tQ = n(696292),
     t2 = n(837057),
     t3 = n(310419),
     t5 = n(488995),
-    t4 = n(324580),
-    t6 = n(190107);
+    t6 = n(324580),
+    t4 = n(190107);
 let t7 = function (e) {
     let { selected: t, onClick: n, questId: a, className: s, ref: l } = e,
         o = r.useCallback(() => {
@@ -1122,14 +1122,14 @@ let t7 = function (e) {
                 case t5.GlobalDiscoveryTab.QUESTS:
                     return (0, t2.transitionToGlobalDiscovery)({
                         tab: t5.GlobalDiscoveryTab.QUESTS,
-                        location: t6.rE.DISCOVERY_COMPASS,
+                        location: t4.rE.DISCOVERY_COMPASS,
                         questContent: tQ.u.DISCOVERY_COMPASS,
                         questId: a,
                     });
                 case t5.GlobalDiscoveryTab.SERVERS:
                     return (0, t2.transitionToGlobalDiscovery)({
                         tab: t5.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: t4.J8.GUILDS_BAR,
+                        entrypoint: t6.J8.GUILDS_BAR,
                     });
                 case t5.GlobalDiscoveryTab.APPS:
                     return (0, t2.transitionToGlobalDiscovery)({
@@ -1474,8 +1474,8 @@ var nQ = n(739822),
     n2 = n(876740),
     n3 = n(345942),
     n5 = n(676279),
-    n4 = n(866323),
-    n6 = n(548118),
+    n6 = n(866323),
+    n4 = n(548118),
     n7 = n(327580);
 function n8(e) {
     let { guild: t, show: n, active: r, onAnimationStart: a, onAnimationRest: l } = e,
@@ -1486,7 +1486,7 @@ function n8(e) {
     let c = (0, p.r)(h.A.unsafe_rawColors.BRAND_500).hex(),
         u = (0, p.r)(h.A.unsafe_rawColors.PRIMARY_630).hex();
     r && null == t.icon && ((o.backgroundColor = c), (d.backgroundColor = u));
-    let _ = (0, n4.p)(n, { from: o, enter: d, leave: o, config: { duration: 100 }, onStart: a, onRest: l });
+    let _ = (0, n6.p)(n, { from: o, enter: d, leave: o, config: { duration: 100 }, onStart: a, onRest: l });
     return (0, i.jsx)(i.Fragment, {
         children: _(
             (e, n, r) =>
@@ -1505,9 +1505,9 @@ function n8(e) {
                                     className: n7.qJ,
                                     children: (0, i.jsx)("div", {
                                         className: n7.jg,
-                                        children: (0, i.jsx)(n6.Ay, {
+                                        children: (0, i.jsx)(n4.Ay, {
                                             guild: t,
-                                            size: n6.Ay.Sizes.SMOL,
+                                            size: n4.Ay.Sizes.SMOL,
                                             className: n7.VL,
                                         }),
                                     }),
@@ -2347,7 +2347,7 @@ function ig(e, t) {
             n.e("444567"),
             n.e("229666"),
             n.e("92295"),
-            n.e("947802"),
+            n.e("356664"),
             n.e("695170"),
             n.e("449145"),
             n.e("309004"),

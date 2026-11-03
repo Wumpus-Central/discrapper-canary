@@ -44,7 +44,7 @@
     G6Q: () => nh,
     GaG: () => rk,
     Gg3: () => tF.Gg,
-    GuildFeatures: () => t6,
+    GuildFeatures: () => t4,
     H2B: () => aN,
     HAw: () => rC,
     Hf6: () => as,
@@ -101,7 +101,7 @@
     QCW: () => an,
     RCc: () => ip,
     RWi: () => rw,
-    R_U: () => r6,
+    R_U: () => r4,
     RoK: () => iO,
     Rsh: () => nM,
     Rv1: () => aH,
@@ -118,7 +118,7 @@
     TVA: () => ru,
     TZK: () => ii,
     T_y: () => iw,
-    TbF: () => n6,
+    TbF: () => n4,
     ThZ: () => iH,
     TpD: () => ri,
     U2_: () => tF.U2,
@@ -133,7 +133,7 @@
     VE5: () => n0,
     VFs: () => n9,
     VVm: () => tF.VV,
-    VX0: () => r4,
+    VX0: () => r6,
     W6J: () => tB.W6,
     WA1: () => n3,
     WMy: () => tB.WM,
@@ -146,7 +146,7 @@
     XL8: () => rI,
     XYD: () => aS,
     XYq: () => tB.XY,
-    XgB: () => n4,
+    XgB: () => n6,
     XlF: () => tF.Xl,
     XlH: () => tH,
     Xlh: () => iD,
@@ -202,7 +202,7 @@
     ewM: () => re,
     f34: () => rJ,
     f5z: () => nc,
-    fAW: () => t4,
+    fAW: () => t6,
     fHV: () => nX,
     fg2: () => i7,
     fic: () => aj,
@@ -305,7 +305,7 @@
     uJv: () => aW,
     uPF: () => aO,
     uaN: () => iS,
-    ugG: () => i6,
+    ugG: () => i4,
     ugJ: () => tB.ug,
     uje: () => ad,
     ump: () => rd,
@@ -328,7 +328,7 @@
     xfJ: () => tF.xf,
     yFH: () => nA,
     yKI: () => ae,
-    zOV: () => i4,
+    zOV: () => i6,
     zWA: () => tK,
     zgK: () => rM,
     zzC: () => n1,
@@ -444,8 +444,8 @@ var i,
     e2,
     e3,
     e5,
-    e4,
     e6,
+    e4,
     e7,
     e8,
     e9,
@@ -829,8 +829,8 @@ var i,
         (T.APP_NOT_OPENED = "APP_NOT_OPENED"),
         (T.ERROR = "ERROR"),
         T),
-    t4 = (((g = {}).OPENING = "OPENING"), (g.OPEN = "OPEN"), (g.OPEN_FAIL = "OPEN_FAIL"), g),
-    t6 =
+    t6 = (((g = {}).OPENING = "OPENING"), (g.OPEN = "OPEN"), (g.OPEN_FAIL = "OPEN_FAIL"), g),
+    t4 =
         (((S = {}).INVITE_SPLASH = "INVITE_SPLASH"),
         (S.VIP_REGIONS = "VIP_REGIONS"),
         (S.VANITY_URL = "VANITY_URL"),
@@ -2136,8 +2136,8 @@ let nG = 100,
         2 * tG.A.Seconds.HOUR,
         n3,
     ],
-    n4 = 10,
-    n6 = 0xa00000,
+    n6 = 10,
+    n4 = 0xa00000,
     n7 = 0x40000000,
     n8 = (e) => `||${e}||`,
     n9 = /^\|\|([\s\S]+?)\|\|/,
@@ -3587,13 +3587,13 @@ var iZ =
         (ep.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED = "PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED"),
         (ep.FRIENDS_SIDEBAR_RESIZED = "FRIENDS_SIDEBAR_RESIZED"),
         ep),
-    i4 =
+    i6 =
         (((em = {}).TOGGLE_REACTION_POPOUT = "TOGGLE_REACTION_POPOUT"),
         (em.ANIMATE_CHAT_AVATAR = "ANIMATE_CHAT_AVATAR"),
         (em.VOICE_MESSAGE_SEND = "VOICE_MESSAGE_SEND"),
         (em.CLIP_SEEK_VIDEO = "CLIP_SEEK_VIDEO"),
         em);
-let i6 = 50;
+let i4 = 50;
 var i7 =
     (((eT = {}).TWITCH = "twitch"),
     (eT.YOUTUBE = "youtube"),
@@ -5587,6 +5587,7 @@ var rN =
         (eP.CONJURE_TURN_RESULTED = "conjure_turn_resulted"),
         (eP.CONJURE_PUBLISH_ACTION_CLICKED = "conjure_publish_action_clicked"),
         (eP.CONJURE_ERRORED = "conjure_errored"),
+        (eP.CONJURE_RATING_VIEWED = "conjure_rating_viewed"),
         (eP.CONJURE_RATING_SUBMITTED = "conjure_rating_submitted"),
         (eP.CONJURE_RATING_FEEDBACK_SUBMITTED = "conjure_rating_feedback_submitted"),
         (eP.CONJURE_BUILDER_OPENED = "conjure_builder_opened"),
@@ -6269,7 +6270,7 @@ var r5 =
         (e0[(e0.PREMIUM = 16)] = "PREMIUM"),
         (e0[(e0.OVERLAY_V3_DISABLED = 32)] = "OVERLAY_V3_DISABLED"),
         e0),
-    r4 =
+    r6 =
         (((e1 = {}).DONE = "DONE"),
         (e1.PLANNING = "PLANNING"),
         (e1.PREPARING = "PREPARING"),
@@ -6278,7 +6279,7 @@ var r5 =
         (e1.CONFLICT = "CONFLICT"),
         (e1.ERROR = "ERROR"),
         e1),
-    r6 = (((e2 = {}).PULL = "PULL"), (e2.PUSH = "PUSH"), (e2.CONFLICT = "CONFLICT"), (e2.NONE = "NONE"), e2);
+    r4 = (((e2 = {}).PULL = "PULL"), (e2.PUSH = "PUSH"), (e2.CONFLICT = "CONFLICT"), (e2.NONE = "NONE"), e2);
 let r7 = Object.freeze({
     [tL.D.DISCORD]: "Discord",
     [tL.D.STEAM]: "Steam",
@@ -6313,13 +6314,13 @@ var r8 = (((e3 = {}).USAGE_STATISTICS = "usage_statistics"), (e3.PERSONALIZATION
         e5);
 let ae = 14;
 var at =
-    (((e4 = {}).OVERLAY = "OVERLAY"),
-    (e4.APP = "APP"),
-    (e4.POPOUT = "POPOUT"),
-    (e4.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"),
-    e4);
+    (((e6 = {}).OVERLAY = "OVERLAY"),
+    (e6.APP = "APP"),
+    (e6.POPOUT = "POPOUT"),
+    (e6.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"),
+    e6);
 let an = __OVERLAY__ ? "OVERLAY" : "APP";
-var ai = (((e6 = {}).COMPLETE = "complete"), (e6.TRANSITION = "transition"), e6),
+var ai = (((e4 = {}).COMPLETE = "complete"), (e4.TRANSITION = "transition"), e4),
     ar =
         (((e7 = {}).QUEUED = "queued"),
         (e7.PLANNING = "planning"),
