@@ -54,6 +54,7 @@ let r = {
         inlineRequire: () => n(187548).A,
     },
     ConjureBackgroundFramesManager: { actions: ["FRAME_LAUNCH_START"], inlineRequire: () => n(124500).A },
+    ConjureProjectReconnectManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(10341).A },
     ConjureTurnNotificationManager: {
         actions: ["CONJURE_TURN_NOTIFICATION", "CONJURE_TURN_SETTLED", "LOGOUT"],
         inlineRequire: () => n(464615).A,

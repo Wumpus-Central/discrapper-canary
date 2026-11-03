@@ -14,7 +14,7 @@ function E(e) {
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return d.Ay.isProjectDeleting(e) || (0, c.j)(a.A.settings, e)
         ? null
-        : l.A.isThinking(e) || u.A.getPublishStatus(e)?.publishing === !0
+        : l.A.isThinking(e) || d.Ay.isProjectRunning(e) || u.A.getPublishStatus(e)?.publishing === !0
           ? "working"
           : (0, o.tz)(e) || ((t = d.Ay.getProject(e)), t?.install_scope_setup != null && (0, d.PV)(t))
             ? "unread"
