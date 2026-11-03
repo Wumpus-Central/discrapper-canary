@@ -22,8 +22,8 @@ var o = i(682176),
     C = i(465856),
     v = i(44788),
     x = i(447991),
-    M = i(838541),
-    k = i(516653),
+    k = i(838541),
+    M = i(516653),
     T = i(105292);
 function E(e) {
     let t = e.item.originalItem;
@@ -68,7 +68,7 @@ function w(e) {
                         onSeekRequest: e.onSeekRequest,
                         onContextMenu: e.onContextMenu ?? void 0,
                         maxWidth: e.maxWidth,
-                        maxHeight: e.maxHeight ?? M.Rk,
+                        maxHeight: e.maxHeight ?? k.Rk,
                         showParticipants: e.isSingleMosaicItem,
                         allowFullScreen: e.allowFullScreen,
                         onPlay: e.onPlay ?? void 0,
@@ -78,7 +78,7 @@ function w(e) {
                     e.renderAdjacentContent?.(),
                 ],
             })
-          : (0, k.T)(e.naturalWidth, e.naturalHeight)
+          : (0, M.T)(e.naturalWidth, e.naturalHeight)
             ? (0, n.jsx)(b, { attachmentProps: e, posterUrl: a.toString() })
             : P(e, a.toString());
 }
@@ -116,9 +116,9 @@ function b(e) {
             A = !0 === t.isSingleMosaicItem,
             y = "portrait" === S,
             I = null != o.description && "" !== o.description ? o.description : T.intl.string(T.t.FlNoSV),
-            { width: C, height: k } =
-                ((e = t.maxWidth ?? M.k6),
-                (a = t.maxHeight ?? M.Rk),
+            { width: C, height: M } =
+                ((e = t.maxWidth ?? k.k6),
+                (a = t.maxHeight ?? k.Rk),
                 (d = e >= 240 && a >= 180),
                 (0, _.Uj)({
                     width: t.width ?? 0,
@@ -132,13 +132,13 @@ function b(e) {
             w =
                 ((p = t.width ?? 0),
                 (g = t.height ?? 0),
-                p <= 0 || g <= 0 || C <= 0 || k <= 0
+                p <= 0 || g <= 0 || C <= 0 || M <= 0
                     ? i
                     : (0, s.AE)({
                           src: i,
                           width: p,
                           height: g,
-                          ratio: (0, _.U8)({ width: p, height: g, maxWidth: C, maxHeight: k }),
+                          ratio: (0, _.U8)({ width: p, height: g, maxWidth: C, maxHeight: M }),
                       })),
             P = (0, v.Ir)({
                 alt: o.description,
@@ -153,7 +153,7 @@ function b(e) {
                     className: t.className ?? void 0,
                     style: {
                         width: C,
-                        height: k,
+                        height: M,
                         position: "relative",
                         display: "flex",
                         "--custom-top-start-overlay-top": P,
@@ -168,6 +168,7 @@ function b(e) {
                             fileSizeBytes: o.size,
                             mimeType: t.mimeType?.join("/"),
                             initialActive: !1,
+                            preloadOnHover: null == t.onClick,
                             playable: t.playable,
                             autoplay: t.autoPlay,
                             initialVolume: (0, f.v1)(),
