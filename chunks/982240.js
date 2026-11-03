@@ -115,6 +115,13 @@ let p = new I(l.h, {
         }),
             h.set(t, i));
     },
+    BADGE_ACK_SUCCESS: function (e) {
+        let { userId: t, badgeId: n } = e,
+            i = h.peek(t),
+            r = i?.badges.get(n);
+        if (null == i || r?.has_updates !== !0) return !1;
+        i.badges.set(n, { ...r, has_updates: !1, previous_acked_tier: null });
+    },
     USER_PROFILE_FETCH_SUCCESS: function (e) {
         let { userProfile: t } = e,
             n = t.user.id,
