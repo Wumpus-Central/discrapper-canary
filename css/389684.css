@@ -258,6 +258,7 @@
 
 .spaceBetweenTiles_fa73d7 {
     box-sizing: border-box;
+    flex-shrink: 0;
     padding-inline: 4px
 }
 
@@ -372,4 +373,4 @@
     margin-bottom: 12px
 }
 
-/*# sourceMappingURL=389684.e75b21c448337cf1.css.map*/
+/*# sourceMappingURL=389684.5bf6a3ed49f54c45.css.map*/
