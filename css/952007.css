@@ -157,6 +157,24 @@
     --bg-gradient-under-the-sea-3-hsl: 175.385 calc(var(--saturation-factor, 1)*10.924%) 46.667%;
     --black-500: hsl(var(--black-500-hsl)/1);
     --black-500-hsl: 0 calc(var(--saturation-factor, 1)*0%) 0%;
+    --brand-gradient-blurple: hsl(var(--brand-gradient-blurple-hsl)/1);
+    --brand-gradient-blurple-hsl: 234.935 calc(var(--saturation-factor, 1)*85.556%) 64.706%;
+    --brand-gradient-blurple-dark: hsl(var(--brand-gradient-blurple-dark-hsl)/1);
+    --brand-gradient-blurple-dark-hsl: 241.739 calc(var(--saturation-factor, 1)*60%) 22.549%;
+    --brand-gradient-blurple-light: hsl(var(--brand-gradient-blurple-light-hsl)/1);
+    --brand-gradient-blurple-light-hsl: 234.194 calc(var(--saturation-factor, 1)*100%) 93.922%;
+    --brand-gradient-green: hsl(var(--brand-gradient-green-hsl)/1);
+    --brand-gradient-green-hsl: 143.804 calc(var(--saturation-factor, 1)*83.636%) 56.863%;
+    --brand-gradient-green-dark: hsl(var(--brand-gradient-green-dark-hsl)/1);
+    --brand-gradient-green-dark-hsl: 166.829 calc(var(--saturation-factor, 1)*100%) 8.039%;
+    --brand-gradient-green-light: hsl(var(--brand-gradient-green-light-hsl)/1);
+    --brand-gradient-green-light-hsl: 162.545 calc(var(--saturation-factor, 1)*100%) 89.216%;
+    --brand-gradient-pink: hsl(var(--brand-gradient-pink-hsl)/1);
+    --brand-gradient-pink-hsl: 315.084 calc(var(--saturation-factor, 1)*100%) 64.902%;
+    --brand-gradient-pink-dark: hsl(var(--brand-gradient-pink-dark-hsl)/1);
+    --brand-gradient-pink-dark-hsl: 328.8 calc(var(--saturation-factor, 1)*28.736%) 17.059%;
+    --brand-gradient-pink-light: hsl(var(--brand-gradient-pink-light-hsl)/1);
+    --brand-gradient-pink-light-hsl: 288.889 calc(var(--saturation-factor, 1)*100%) 89.412%;
     --checkpoint-emojis-gradient-end: hsl(var(--checkpoint-emojis-gradient-end-hsl)/1);
     --checkpoint-emojis-gradient-end-hsl: 283.2 calc(var(--saturation-factor, 1)*53.191%) 9.216%;
     --checkpoint-emojis-gradient-start: hsl(var(--checkpoint-emojis-gradient-start-hsl)/1);
@@ -10378,4 +10396,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.70811ac59e539589.css.map*/
+/*# sourceMappingURL=952007.c7bf9ac68d963455.css.map*/

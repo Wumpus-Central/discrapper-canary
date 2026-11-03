@@ -381,7 +381,7 @@ function Y(e) {
               ? (0, i.jsx)(F, { entry: a, ...s })
               : null;
 }
-var D = s(269587);
+var D = s(113469);
 function $(e) {
     let { user: a, entry: s, className: c, onClose: o, hideContextMenu: d = !1, appContext: x } = e,
         { analyticsLocations: m } = (0, l.Ay)(n.A.USER_PROFILE_RECENT_ACTIVITY_CARD);
