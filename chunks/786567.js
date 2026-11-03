@@ -366,6 +366,7 @@ function ee(e) {
                     duration_ms: Date.now() - eA,
                     gift_card_balance: eF,
                     gift_card_currency: eB,
+                    is_split_with_gift_card: et?.isSplitWithGiftCard,
                     virtual_currency_balance: eH,
                 }));
         }, [el, en, ea, n, eA, et, eF, eB, eH]),
@@ -381,10 +382,11 @@ function ee(e) {
                         duration_ms: Date.now() - eA,
                         gift_card_balance: eF,
                         gift_card_currency: eB,
+                        is_split_with_gift_card: et?.isSplitWithGiftCard,
                         virtual_currency_balance: eH,
                     }));
             },
-            [el, ea, n, eA, eG, eF, eB, eH],
+            [el, ea, n, eA, eG, eF, eB, et, eH],
         ),
         { signOrder: eX, reportError: e0 } = (0, p.f)({
             order: ef,

@@ -181,6 +181,10 @@ class l extends s {
     getAmountDue() {
         return this.total - this.getWalletAmount();
     }
+    get isSplitWithGiftCard() {
+        let e = this.getWalletAmount();
+        return e > 0 && e < this.total;
+    }
     findInvoiceItemByPlanId(e) {
         return this.invoiceItems.find((t) => t.subscriptionPlanId === e) ?? null;
     }
