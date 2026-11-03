@@ -946,9 +946,6 @@ function eq(e) {
     eV(["CONJURING_PROJECT_CREATE_PROGRESS"], (e) => {
         eW({ type: "CONJURE_PROJECT_CREATE_PROGRESS", nonce: e.nonce, projectId: e.project_id, wsTicket: e.ws_ticket });
     }),
-    eV(["CONJURING_PROJECT_UPDATE"], (e) => {
-        eW({ type: "CONJURE_PROJECT_RUNNING_UPDATE", projectId: e.project_id, running: !0 === e.running });
-    }),
     eV(["CONJURING_TURN_SETTLED"], (e) => {
         eW({
             type: "CONJURE_TURN_SETTLED",

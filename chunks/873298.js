@@ -4578,11 +4578,10 @@ class tQ extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureProjectSettings", [
             { no: 1, name: "muted", kind: "scalar", T: 8 },
-            { no: 2, name: "sidebar_dismissed_at", kind: "scalar", T: 4 },
         ]);
     }
     create(e) {
-        let t = { muted: !1, sidebarDismissedAt: "0" };
+        let t = { muted: !1 };
         return (
             globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
@@ -4594,26 +4593,19 @@ class tQ extends b.G {
             a = e.pos + t;
         for (; e.pos < a;) {
             let [t, i] = e.tag();
-            switch (t) {
-                case 1:
-                    r.muted = e.bool();
-                    break;
-                case 2:
-                    r.sidebarDismissedAt = e.uint64().toString();
-                    break;
-                default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
-                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                    let s = e.skip(i);
-                    !1 !== a && (!0 === a ? y.f$.onRead : a)(this.typeName, r, t, i, s);
+            if (1 === t) r.muted = e.bool();
+            else {
+                let a = n.readUnknownField;
+                if ("throw" === a)
+                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                let s = e.skip(i);
+                !1 !== a && (!0 === a ? y.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (!1 !== e.muted && t.tag(1, y.O0.Varint).bool(e.muted),
-            "0" !== e.sidebarDismissedAt && t.tag(2, y.O0.Varint).uint64(e.sidebarDismissedAt));
+        !1 !== e.muted && t.tag(1, y.O0.Varint).bool(e.muted);
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
