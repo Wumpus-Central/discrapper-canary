@@ -761,6 +761,8 @@ class j extends N.A {
                                                     decryptInvalidNonceCount: a.decryptInvalidNonceCount,
                                                     audioReceiverDelayMs: d?.audioReceiverDelayMs,
                                                     audioReceiverPacketCount: d?.audioReceiverPacketCount,
+                                                    voiceQuality: a.voiceQuality,
+                                                    voiceQualityMos: a.voiceQuality?.mosMean,
                                                     ...(null != d
                                                         ? w({
                                                               audioJitterBuffer: d.audioJitterBuffer,

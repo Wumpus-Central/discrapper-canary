@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => eM }));
+(r.r(t), r.d(t, { default: () => eT }));
 var n = r(477900),
     a = r(582128),
     i = r(979186);
@@ -23,8 +23,8 @@ var s = r(435558),
     v = r(994500),
     x = r(287809),
     C = r(427262),
-    R = r(289873),
-    S = r(331322),
+    S = r(289873),
+    R = r(331322),
     j = r(503698),
     P = r.n(j),
     N = r(23339),
@@ -32,21 +32,21 @@ var s = r(435558),
     I = r(761508),
     B = r(684339),
     w = r(51092),
-    T = r(999926);
+    M = r(999926);
 (r(134528), r(947204));
-var M = r(796873),
-    G = r.n(M),
+var T = r(796873),
+    G = r.n(T),
     L = r(229659),
     U = r(661531),
     q = r(707554),
     O = r(404778),
     W = r(603349),
     $ = r(378885);
-let H = ["firCount", "nackCount"];
-class V extends a.PureComponent {
+let V = ["firCount", "nackCount"];
+class H extends a.PureComponent {
     renderValueIcon() {
         let { label: e } = this.props;
-        return H.includes(e) ? (0, n.jsx)(W.A, { color: U.A.unsafe_rawColors.YELLOW_300.css, className: $.nm }) : null;
+        return V.includes(e) ? (0, n.jsx)(W.A, { color: U.A.unsafe_rawColors.YELLOW_300.css, className: $.nm }) : null;
     }
     render() {
         let { children: e, className: t, valueRendered: r, section: a, label: i, renderGraph: s } = this.props;
@@ -210,19 +210,20 @@ let K = {
     videoEntropy: "Video Entropy",
     videohookBackend: "Videohook Backend",
     videohookFrames: "Videohook Frames",
+    voiceQualityMos: "Voice Quality (mean DNSMOS)",
     x11Frames: "X11 Frames",
     pipewireFrames: "Pipewire Frames",
 };
 function z(e) {
     return `${(e / 1e3).toFixed(2)} Kbps`;
 }
-function J(e) {
+function Q(e) {
     return G().filesize(e);
 }
-function _(e) {
+function J(e) {
     return e;
 }
-function Q(e) {
+function _(e) {
     return `${e} ms`;
 }
 function X(e) {
@@ -294,6 +295,7 @@ let er = {
         videoJitterDelay: !0,
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0,
+        voiceQuality: !0,
     },
     en = {
         accelerateRate: X,
@@ -302,28 +304,28 @@ let er = {
             return e <= 0 ? "-\u221E dB" : `${Z(e).toFixed(2)} dB`;
         },
         availableOutgoingBitrate: z,
-        averageDecodeTime: Q,
-        averageEncodeTime: Q,
+        averageDecodeTime: _,
+        averageEncodeTime: _,
         bandwidthLimitedFrameRate: Y,
         bandwidthLimitedResolution: Y,
         bitrate: z,
         bitrateTarget: z,
-        bytesReceived: J,
-        bytesSent: J,
-        capturedFramesMean: Q,
-        capturedFramesStdev: Q,
+        bytesReceived: Q,
+        bytesSent: Q,
+        capturedFramesMean: _,
+        capturedFramesStdev: _,
         codec: function (e) {
             let { id: t, name: r } = e;
             return ((r = (r = "" === r ? "unknown" : r) ?? "unknown"), `${r[0].toUpperCase()}${r.slice(1)} (${t})`);
         },
         cpuLimitedResolution: Y,
-        currentDelay: Q,
+        currentDelay: _,
         currentSampleRate: function (e) {
             return e % 100 == 0 ? `${e / 1e3} kHz` : `${e} Hz`;
         },
-        decoderImplementationName: _,
-        delayEstimate: Q,
-        encoderImplementationName: _,
+        decoderImplementationName: J,
+        delayEstimate: _,
+        encoderImplementationName: J,
         encoderQualityPsnr: function (e) {
             return `${Math.max(e, 0).toFixed(2)} dB`;
         },
@@ -331,17 +333,17 @@ let er = {
         encoderReady: Y,
         encodeUsage: X,
         expandRate: X,
-        filter: _,
+        filter: J,
         fractionLost: X,
         inboundBitrateEstimate: z,
-        jitter: Q,
-        jitterBuffer: Q,
-        jitterBufferPreferred: Q,
-        keyFrameInterval: Q,
-        minPlayoutDelay: Q,
+        jitter: _,
+        jitterBuffer: _,
+        jitterBufferPreferred: _,
+        keyFrameInterval: _,
+        minPlayoutDelay: _,
         outboundBitrateEstimate: z,
-        pacerDelay: Q,
-        ping: Q,
+        pacerDelay: _,
+        ping: _,
         powerEfficientDecoder: Y,
         powerEfficientEncoder: Y,
         preemptiveExpandRate: X,
@@ -349,7 +351,7 @@ let er = {
         receiverBitrateEstimate: z,
         relativePlayoutDelay: ee,
         relativeReceptionDelay: ee,
-        renderDelay: Q,
+        renderDelay: _,
         resolution: (e) => {
             let { width: t, height: r } = e;
             return `${t}x${r}`;
@@ -362,15 +364,16 @@ let er = {
             return e > 0 ? `Version ${e}` : "Disabled";
         },
         speechExpandRate: X,
-        targetDelay: Q,
-        totalFramesDuration: Q,
-        totalFreezesDuration: Q,
-        totalPausesDuration: Q,
+        targetDelay: _,
+        totalFramesDuration: _,
+        totalFreezesDuration: _,
+        totalPausesDuration: _,
         videoEntropy: et,
         videohookBackend: function (e) {
             let t = ["N/A", "Direct3D 9", "Direct3D 10", "Direct3D 11", "Direct3D 12", "OpenGL", "Vulkan"];
             return e < t.length ? t[e] : "Unknown";
         },
+        voiceQualityMos: et,
     },
     ea = {
         audioLevel: function (e) {
@@ -400,7 +403,7 @@ function el(e) {
                   ? (0, n.jsx)(es, { converter: s, value: r, width: 300, height: 100 })
                   : void 0),
         o = Array.isArray(r) ? r.at(-1)?.value : r;
-    return (0, n.jsx)(V, { label: t, valueRendered: i(o), section: a, renderGraph: l, children: K[t] ?? t });
+    return (0, n.jsx)(H, { label: t, valueRendered: i(o), section: a, renderGraph: l, children: K[t] ?? t });
 }
 var eo = r(731854),
     ed = r(221851);
@@ -428,7 +431,7 @@ function ep(e) {
         F = (0, o.bG)([b.A], () => (u ? b.A.getGuildId() : null)),
         g = (0, o.bG)([x.default], () => (u && null != s ? x.default.getUser(s) : null)),
         A = (0, o.bG)([D.Ay], () => (u && null != F && null != s ? D.Ay.getNick(F, s) : null));
-    if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
+    if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
     let v = d;
     u && null != g && (v = `${d} \u{2014} ${A ?? C.Ay.getName(g)}`);
     let j = t.map((e, t) => {
@@ -450,8 +453,8 @@ function ep(e) {
                 t.toString(),
             );
         }),
-        M = Math.min(parseInt(h, 10), t.length - 1),
-        G = t[M],
+        T = Math.min(parseInt(h, 10), t.length - 1),
+        G = t[T],
         L = (function (e, t, r, a) {
             let i,
                 s = [];
@@ -489,7 +492,7 @@ function ep(e) {
                                       className: P()($.tN, ed.C2),
                                       children: (0, n.jsx)(w.A, {
                                           streamId: i,
-                                          videoComponent: T.Ay.getMediaEngine().Video,
+                                          videoComponent: M.Ay.getMediaEngine().Video,
                                           paused: !1,
                                           videoSpinnerContext: B.u.REPLAY_VIDEO_STREAM,
                                           userId: r,
@@ -525,7 +528,7 @@ function ep(e) {
                     }),
                 }),
             });
-    return (0, n.jsxs)(S.B, {
+    return (0, n.jsxs)(R.B, {
         gap: 16,
         children: [
             (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: v }),
@@ -545,11 +548,11 @@ function ep(e) {
 var eh = r(105292);
 function ey(e) {
     let { camera: t } = e;
-    if (null == t) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
+    if (null == t) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
     let r = l().map(t, (e, t) => {
         if (!(er[t] || void 0 === e)) return (0, n.jsx)(el, { label: t, value: e }, t);
     });
-    return (0, n.jsxs)(S.B, {
+    return (0, n.jsxs)(R.B, {
         children: [(0, n.jsx)(c.D, { variant: "heading-sm/medium", children: eh.intl.string(eh.t["2AGBWH"]) }), ec(r)],
     });
 }
@@ -594,7 +597,7 @@ function eg(e, t) {
 }
 function eA(e) {
     let { clips: t } = e;
-    if (null == t) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
+    if (null == t) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
     let r = (function (e) {
         let t = [];
         for (let r of eg(e, eF)) {
@@ -619,7 +622,7 @@ function eA(e) {
                     "framerate",
                 ),
             ),
-        (0, n.jsxs)(S.B, {
+        (0, n.jsxs)(R.B, {
             children: [
                 (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: eh.intl.string(eh.t.MKrFKE) }),
                 ec(r),
@@ -723,8 +726,8 @@ class eC extends a.PureComponent {
     render() {
         let { screenshare: e } = this.props;
         return null == e
-            ? (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE })
-            : (0, n.jsxs)(S.B, {
+            ? (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE })
+            : (0, n.jsxs)(R.B, {
                   children: [
                       (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: eh.intl.string(eh.t["gWbr/U"]) }),
                       ec(
@@ -740,7 +743,7 @@ class eC extends a.PureComponent {
                                   null != s && void 0 !== l
                                       ? r.push(
                                             (0, n.jsx)(
-                                                V,
+                                                H,
                                                 {
                                                     label: a,
                                                     valueRendered: `${i} (${l})`,
@@ -764,15 +767,15 @@ class eC extends a.PureComponent {
               });
     }
 }
-var eR = r(967198),
-    eS = r(728557),
+var eS = r(967198),
+    eR = r(728557),
     ej = r(351906),
     eP = r(562153),
     eN = r(917592);
 class ek extends a.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: a } = this.props;
-        if (null == e) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
+        if (null == e) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
         let i = { ...e, hostname: a },
             s = l().map(i, (e, t) => {
                 if ("receiverReports" !== t && !er[t] && (!r || "localAddress" !== t))
@@ -790,7 +793,7 @@ class ek extends a.PureComponent {
         let d = Array.from(o, (e) => {
                 let [t, r] = e,
                     n = x.default.getUser(t);
-                var a = eP.Ay.getNickname(eR.A.getGuildId(), void 0, n);
+                var a = eP.Ay.getNickname(eS.A.getGuildId(), void 0, n);
                 return (null == a && (a = null != n ? n.username : t), { id: t, displayName: a, ...r });
             }),
             u = l().sortBy(d, (e) => e.displayName),
@@ -843,10 +846,10 @@ class ek extends a.PureComponent {
                                 "rtt",
                             ),
                         ),
-                    (0, n.jsx)(V, { label: r, valueRendered: l, children: r }, t)
+                    (0, n.jsx)(H, { label: r, valueRendered: l, children: r }, t)
                 );
             });
-        return (0, n.jsxs)(S.B, {
+        return (0, n.jsxs)(R.B, {
             className: $._8,
             children: [
                 (0, n.jsx)(c.D, {
@@ -860,12 +863,12 @@ class ek extends a.PureComponent {
         });
     }
 }
-let eI = o.Ay.connectStores([E.Ay, b.A, ej.A, eS.A], (e) => {
+let eI = o.Ay.connectStores([E.Ay, b.A, ej.A, eR.A], (e) => {
     let { context: t, index: r } = e,
         n = E.Ay.getAllStats(t)[r],
         a =
             t === eo.x.STREAM
-                ? Object.values(eS.A.getRTCConnections()).find(
+                ? Object.values(eR.A.getRTCConnections()).find(
                       (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
                   )?.hostname
                 : b.A.getHostname();
@@ -962,7 +965,7 @@ function ew(e, t, r, a, i) {
     }
     return s;
 }
-function eT() {
+function eM() {
     let { defaultStats: e, streamStats: t } = (0, o.bG)(
             [E.Ay],
             () => ({ defaultStats: E.Ay.getAllStats(eo.x.DEFAULT), streamStats: E.Ay.getAllStats(eo.x.STREAM) }),
@@ -1061,12 +1064,12 @@ function eT() {
         (0, n.jsx)(p.A, { theme: l, sidebarTheme: d, section: u, onSetSection: m.c4, sections: f })
     );
 }
-function eM(e) {
+function eT(e) {
     let { windowKey: t } = e;
     return (0, n.jsx)(i.A, {
         withTitleBar: !0,
         windowKey: t,
         title: eh.intl.string(eh.t["5I/1fl"]),
-        children: (0, n.jsx)(eT, {}),
+        children: (0, n.jsx)(eM, {}),
     });
 }
