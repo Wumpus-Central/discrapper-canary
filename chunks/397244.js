@@ -1,9 +1,9 @@
-n.d(l, { A: () => i });
+n.d(l, { A: () => a });
 var t = n(350835),
     s = n(818348);
-function i(e) {
-    let { activities: l, status: n, applicationStream: i, voiceChannel: a } = e;
+function a(e) {
+    let { activities: l, status: n, applicationStream: a, voiceChannel: i } = e;
     if (n === s.cl.OFFLINE || n === s.cl.INVISIBLE) return !1;
     let r = l?.filter((e) => e.type !== t.$.HANG_STATUS);
-    return null != i || null != a || (r?.length ?? 0) > 0;
+    return null != a || null != i || (r?.length ?? 0) > 0;
 }

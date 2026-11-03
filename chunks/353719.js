@@ -54,18 +54,18 @@ function a(e, t) {
         s && (n.push(s), (s = ""));
         var w = null != p && null != d && d !== p,
             v = "+" === _ || "*" === _,
-            x = "?" === _ || "*" === _,
-            M = r[2] || l,
+            M = "?" === _ || "*" === _,
+            x = r[2] || l,
             C = m || b;
         n.push({
             name: g || a++,
             prefix: p || "",
-            delimiter: M,
-            optional: x,
+            delimiter: x,
+            optional: M,
             repeat: v,
             partial: w,
             asterisk: !!y,
-            pattern: C ? C.replace(/([=!:$\/()])/g, "\\$1") : y ? ".*" : "[^" + c(M) + "]+?",
+            pattern: C ? C.replace(/([=!:$\/()])/g, "\\$1") : y ? ".*" : "[^" + c(x) + "]+?",
         });
     }
     return (i < e.length && (s += e.substr(i)), s && n.push(s), n);

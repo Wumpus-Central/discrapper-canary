@@ -1,5 +1,5 @@
-a.d(t, { $M: () => g, W$: () => s, rQ: () => o });
-var s = [
+r.d(t, { $M: () => i, W$: () => n, rQ: () => a });
+var n = [
         "black",
         "red",
         "green",
@@ -17,9 +17,9 @@ var s = [
         "brightCyan",
         "brightWhite",
     ],
-    r = { 1: "bold", 2: "dim", 3: "italic", 4: "underline", 7: "reverse", 8: "hidden", 9: "strikethrough" },
-    n = /\x1B\[([0-?]*)([ -/]*)([@-~])/g;
-function i(e) {
+    l = { 1: "bold", 2: "dim", 3: "italic", 4: "underline", 7: "reverse", 8: "hidden", 9: "strikethrough" },
+    o = /\x1B\[([0-?]*)([ -/]*)([@-~])/g;
+function u(e) {
     let t = e.shift();
     if ("2" === t) {
         let t = e.splice(0, 3).map((e) => Number.parseInt(e));
@@ -31,103 +31,103 @@ function i(e) {
         if (t) return { type: "table", index: Number(t) };
     }
 }
-function g(e) {
-    let t, a, g;
+function i(e) {
+    let t, r, i;
     return ((t = null),
-    (a = null),
-    (g = new Set()),
+    (r = null),
+    (i = new Set()),
     {
         parse(e) {
-            let p = [],
-                o = 0;
+            let s = [],
+                a = 0;
             do {
-                let l = (function (e, t) {
-                        n.lastIndex = t;
-                        let a = n.exec(e);
-                        if (a) {
-                            let [, e, t, s] = a;
+                let p = (function (e, t) {
+                        o.lastIndex = t;
+                        let r = o.exec(e);
+                        if (r) {
+                            let [, e, t, n] = r;
                             return {
-                                sequence: "m" !== s || t || /^[<=>?]/.test(e) ? [] : e.split(";"),
-                                startPosition: a.index,
-                                position: a.index + a[0].length,
+                                sequence: "m" !== n || t || /^[<=>?]/.test(e) ? [] : e.split(";"),
+                                startPosition: r.index,
+                                position: r.index + r[0].length,
                             };
                         }
                         return { position: e.length };
-                    })(e, o),
-                    c = l.sequence ? e.substring(o, l.startPosition) : e.substring(o);
+                    })(e, a),
+                    f = p.sequence ? e.substring(a, p.startPosition) : e.substring(a);
                 if (
-                    (c.length > 0 &&
-                        p.push({ value: c, position: o, foreground: t, background: a, decorations: new Set(g) }),
-                    l.sequence)
+                    (f.length > 0 &&
+                        s.push({ value: f, position: a, foreground: t, background: r, decorations: new Set(i) }),
+                    p.sequence)
                 ) {
                     let e = (function (e) {
                         let t = [];
                         for (; e.length > 0;) {
-                            let a = e.shift();
-                            if (!a) continue;
-                            let n = Number.parseInt(a);
-                            if (!Number.isNaN(n))
-                                if (0 === n) t.push({ type: "resetAll" });
-                                else if (n <= 9) r[n] && t.push({ type: "setDecoration", value: r[n] });
-                                else if (n <= 29) {
-                                    let e = r[n - 20];
+                            let r = e.shift();
+                            if (!r) continue;
+                            let o = Number.parseInt(r);
+                            if (!Number.isNaN(o))
+                                if (0 === o) t.push({ type: "resetAll" });
+                                else if (o <= 9) l[o] && t.push({ type: "setDecoration", value: l[o] });
+                                else if (o <= 29) {
+                                    let e = l[o - 20];
                                     e &&
                                         (t.push({ type: "resetDecoration", value: e }),
                                         "dim" === e && t.push({ type: "resetDecoration", value: "bold" }));
-                                } else if (n <= 37)
-                                    t.push({ type: "setForegroundColor", value: { type: "named", name: s[n - 30] } });
-                                else if (38 === n) {
-                                    let a = i(e);
-                                    a && t.push({ type: "setForegroundColor", value: a });
-                                } else if (39 === n) t.push({ type: "resetForegroundColor" });
-                                else if (n <= 47)
-                                    t.push({ type: "setBackgroundColor", value: { type: "named", name: s[n - 40] } });
-                                else if (48 === n) {
-                                    let a = i(e);
-                                    a && t.push({ type: "setBackgroundColor", value: a });
+                                } else if (o <= 37)
+                                    t.push({ type: "setForegroundColor", value: { type: "named", name: n[o - 30] } });
+                                else if (38 === o) {
+                                    let r = u(e);
+                                    r && t.push({ type: "setForegroundColor", value: r });
+                                } else if (39 === o) t.push({ type: "resetForegroundColor" });
+                                else if (o <= 47)
+                                    t.push({ type: "setBackgroundColor", value: { type: "named", name: n[o - 40] } });
+                                else if (48 === o) {
+                                    let r = u(e);
+                                    r && t.push({ type: "setBackgroundColor", value: r });
                                 } else
-                                    49 === n
+                                    49 === o
                                         ? t.push({ type: "resetBackgroundColor" })
-                                        : 53 === n
+                                        : 53 === o
                                           ? t.push({ type: "setDecoration", value: "overline" })
-                                          : 55 === n
+                                          : 55 === o
                                             ? t.push({ type: "resetDecoration", value: "overline" })
-                                            : n >= 90 && n <= 97
+                                            : o >= 90 && o <= 97
                                               ? t.push({
                                                     type: "setForegroundColor",
-                                                    value: { type: "named", name: s[n - 90 + 8] },
+                                                    value: { type: "named", name: n[o - 90 + 8] },
                                                 })
-                                              : n >= 100 &&
-                                                n <= 107 &&
+                                              : o >= 100 &&
+                                                o <= 107 &&
                                                 t.push({
                                                     type: "setBackgroundColor",
-                                                    value: { type: "named", name: s[n - 100 + 8] },
+                                                    value: { type: "named", name: n[o - 100 + 8] },
                                                 });
                         }
                         return t;
-                    })(l.sequence);
-                    for (let s of e)
-                        "resetAll" === s.type
-                            ? ((t = null), (a = null), g.clear())
-                            : "resetForegroundColor" === s.type
+                    })(p.sequence);
+                    for (let n of e)
+                        "resetAll" === n.type
+                            ? ((t = null), (r = null), i.clear())
+                            : "resetForegroundColor" === n.type
                               ? (t = null)
-                              : "resetBackgroundColor" === s.type
-                                ? (a = null)
-                                : "resetDecoration" === s.type && g.delete(s.value);
-                    for (let s of e)
-                        "setForegroundColor" === s.type
-                            ? (t = s.value)
-                            : "setBackgroundColor" === s.type
-                              ? (a = s.value)
-                              : "setDecoration" === s.type && g.add(s.value);
+                              : "resetBackgroundColor" === n.type
+                                ? (r = null)
+                                : "resetDecoration" === n.type && i.delete(n.value);
+                    for (let n of e)
+                        "setForegroundColor" === n.type
+                            ? (t = n.value)
+                            : "setBackgroundColor" === n.type
+                              ? (r = n.value)
+                              : "setDecoration" === n.type && i.add(n.value);
                 }
-                o = l.position;
-            } while (o < e.length);
-            return p;
+                a = p.position;
+            } while (a < e.length);
+            return s;
         },
     }).parse(e);
 }
-var p = {
+var s = {
     black: "#000000",
     red: "#bb0000",
     green: "#00bb00",
@@ -145,33 +145,33 @@ var p = {
     brightCyan: "#55ffff",
     brightWhite: "#ffffff",
 };
-function o(e = p) {
+function a(e = s) {
     let t;
-    function a(e) {
+    function r(e) {
         return `#${e.map((e) => Math.max(0, Math.min(e, 255)).toString(16).padStart(2, "0")).join("")}`;
     }
     return {
-        value: function (r) {
-            switch (r.type) {
+        value: function (l) {
+            switch (l.type) {
                 case "named":
-                    return e[r.name];
+                    return e[l.name];
                 case "rgb":
-                    return a(r.rgb);
+                    return r(l.rgb);
                 case "table":
-                    var n;
+                    var o;
                     return (
-                        (n = r.index),
+                        (o = l.index),
                         (function () {
                             if (t) return t;
                             t = [];
-                            for (let a = 0; a < s.length; a++) t.push(e[s[a]]);
-                            let r = [0, 95, 135, 175, 215, 255];
+                            for (let r = 0; r < n.length; r++) t.push(e[n[r]]);
+                            let l = [0, 95, 135, 175, 215, 255];
                             for (let e = 0; e < 6; e++)
-                                for (let s = 0; s < 6; s++) for (let n = 0; n < 6; n++) t.push(a([r[e], r[s], r[n]]));
-                            let n = 8;
-                            for (let e = 0; e < 24; e++, n += 10) t.push(a([n, n, n]));
+                                for (let n = 0; n < 6; n++) for (let o = 0; o < 6; o++) t.push(r([l[e], l[n], l[o]]));
+                            let o = 8;
+                            for (let e = 0; e < 24; e++, o += 10) t.push(r([o, o, o]));
                             return t;
-                        })()[n]
+                        })()[o]
                     );
             }
         },

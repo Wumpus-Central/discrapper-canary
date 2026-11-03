@@ -24,11 +24,11 @@ function c(e) {
         o(this, "dispose", e.dispose),
         this.reset());
 }
-function _(e, i, s, t) {
+function l(e, i, s, t) {
     var r = s.value;
     (w(e, r) && ($(e, s), o(e, "allowStale") || (r = void 0)), r && i.call(t, r.value, r.key, e));
 }
-function l(e, i, s) {
+function _(e, i, s) {
     var t = o(e, "cache").get(i);
     if (t) {
         var r = t.value;
@@ -129,14 +129,14 @@ function v(e, i, s, t, r) {
         i = i || this;
         for (var s = o(this, "lruList").tail; null !== s;) {
             var t = s.prev;
-            (_(this, e, s, i), (s = t));
+            (l(this, e, s, i), (s = t));
         }
     }),
     (c.prototype.forEach = function (e, i) {
         i = i || this;
         for (var s = o(this, "lruList").head; null !== s;) {
             var t = s.next;
-            (_(this, e, s, i), (s = t));
+            (l(this, e, s, i), (s = t));
         }
     }),
     (c.prototype.keys = function () {
@@ -234,10 +234,10 @@ function v(e, i, s, t, r) {
         return !(!o(this, "cache").has(e) || w(this, o(this, "cache").get(e).value));
     }),
     (c.prototype.get = function (e) {
-        return l(this, e, !0);
+        return _(this, e, !0);
     }),
     (c.prototype.peek = function (e) {
-        return l(this, e, !1);
+        return _(this, e, !1);
     }),
     (c.prototype.pop = function () {
         var e = o(this, "lruList").tail;
@@ -261,6 +261,6 @@ function v(e, i, s, t, r) {
     (c.prototype.prune = function () {
         var e = this;
         o(this, "cache").forEach(function (i, s) {
-            l(e, s, !1);
+            _(e, s, !1);
         });
     }));

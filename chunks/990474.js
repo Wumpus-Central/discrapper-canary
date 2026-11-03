@@ -17,16 +17,16 @@ var l = t(477900),
     f = t(309010),
     A = t(625494),
     y = t(652215),
-    k = t(73510);
+    I = t(73510);
 t(827669);
-var I = t(105292);
+var k = t(105292);
 function C(e, n, t, l, a) {
     null != e &&
         ("" !== g.A.getDraft(e, g.C.ChannelMessage)
             ? (0, r.A)({
-                  title: I.intl.string(I.t.pe26Cj),
-                  subtitle: I.intl.string(I.t["+awCIy"]),
-                  confirmText: I.intl.string(I.t.VkKicb),
+                  title: k.intl.string(k.t.pe26Cj),
+                  subtitle: k.intl.string(k.t["+awCIy"]),
+                  confirmText: k.intl.string(k.t.VkKicb),
                   onConfirm: () => i(),
                   onCloseCallback: () => {
                       A._.dispatch(y.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
@@ -64,14 +64,14 @@ function E(e) {
         })),
         g = void 0 !== s ? { type: "channel", channel: s } : { type: "contextless" },
         { command: A } = u.D3(g, n.commandKey ?? ""),
-        I = p.D_.useSetting(),
+        k = p.D_.useSetting(),
         E = a.useMemo(() => {
-            if (null == A || null == s || A.untranslatedName !== n.commandName || I) return !1;
+            if (null == A || null == s || A.untranslatedName !== n.commandName || k) return !1;
             let e = s.isPrivate();
             if ((0, h.UJ)(s) || (!e && !o)) return !1;
-            let t = A?.applicationId === k.Ik.BUILT_IN;
+            let t = A?.applicationId === I.Ik.BUILT_IN;
             return !!e || !!t || !!c;
-        }, [s, A, o, c, n.commandName, I]),
+        }, [s, A, o, c, n.commandName, k]),
         v = a.useCallback(
             (e) => {
                 (e?.stopPropagation(),

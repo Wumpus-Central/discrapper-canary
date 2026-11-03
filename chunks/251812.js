@@ -1,16 +1,16 @@
-t.d(n, { K: () => i });
-var l = t(518782),
-    a = t(880098),
-    r = t(105292);
+n.d(t, { K: () => i });
+var l = n(518782),
+    r = n(880098),
+    a = n(105292);
 function i(e) {
     switch (e) {
         case l.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED:
-            return { name: r.intl.string(a.default["8aHNu0"]), question: r.intl.string(a.default["A+HRrQ"]) };
+            return { name: a.intl.string(r.default["8aHNu0"]), question: a.intl.string(r.default["A+HRrQ"]) };
         case l.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
-            return { name: r.intl.string(a.default.ZwDYuP), question: r.intl.string(a.default["9FItmd"]) };
+            return { name: a.intl.string(r.default.ZwDYuP), question: a.intl.string(r.default["9FItmd"]) };
         case l.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
-            return { name: r.intl.string(a.default.JeFo7p), question: r.intl.string(a.default.GXDPol) };
+            return { name: a.intl.string(r.default.JeFo7p), question: a.intl.string(r.default.GXDPol) };
         default:
-            return { name: r.intl.string(a.default.btBTIw), question: r.intl.string(a.default.H8RhX0) };
+            return { name: a.intl.string(r.default.btBTIw), question: a.intl.string(r.default.H8RhX0) };
     }
 }

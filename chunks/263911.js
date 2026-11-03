@@ -1,8 +1,8 @@
-n.d(e, { I: () => a });
-var r = n(477900),
-    o = n(62010),
-    i = n(111159),
-    s = n(105292);
-function a() {
-    return (0, r.jsx)(o.E, { type: { text: s.intl.string(s.t.RiDMFz) }, variant: "primary", icon: i.p });
+n.d(e, { I: () => s });
+var i = n(477900),
+    r = n(62010),
+    o = n(111159),
+    _ = n(105292);
+function s() {
+    return (0, i.jsx)(r.E, { type: { text: _.intl.string(_.t.RiDMFz) }, variant: "primary", icon: o.p });
 }

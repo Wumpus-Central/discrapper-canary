@@ -1,14 +1,14 @@
 r.d(t, {
-    B6: () => S,
+    B6: () => R,
     Ix: () => b,
-    W5: () => j,
+    W5: () => P,
     W6: () => I,
     XZ: () => m,
     dO: () => E,
-    g: () => T,
-    qh: () => R,
-    rd: () => x,
-    zy: () => k,
+    g: () => k,
+    qh: () => S,
+    rd: () => M,
+    zy: () => T,
 });
 var n = r(750573),
     o = r(582128),
@@ -213,7 +213,7 @@ function v(e, t) {
               })(e)(t, { pretty: !0 })
     );
 }
-function x(e) {
+function M(e) {
     var t = e.computedMatch,
         r = e.to,
         n = e.push,
@@ -244,9 +244,9 @@ function x(e) {
               });
     });
 }
-var M = {},
+var x = {},
     C = 0;
-function S(e, t) {
+function R(e, t) {
     (void 0 === t && (t = {}), ("string" == typeof t || Array.isArray(t)) && (t = { path: t }));
     var r = t,
         n = r.path,
@@ -261,7 +261,7 @@ function S(e, t) {
         if (t) return t;
         var n = (function (e, t) {
                 var r = "" + t.end + t.strict + t.sensitive,
-                    n = M[r] || (M[r] = {});
+                    n = x[r] || (x[r] = {});
                 if (n[e]) return n[e];
                 var o = [],
                     a = { regexp: h()(e, o, t), keys: o };
@@ -286,7 +286,7 @@ function S(e, t) {
               };
     }, null);
 }
-var R = (function (e) {
+var S = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -298,7 +298,7 @@ var R = (function (e) {
                 t || (0, c.A)(!1);
                 var r,
                     n = e.props.location || t.location,
-                    a = e.props.computedMatch ? e.props.computedMatch : e.props.path ? S(n.pathname, e.props) : t.match,
+                    a = e.props.computedMatch ? e.props.computedMatch : e.props.path ? R(n.pathname, e.props) : t.match,
                     i = (0, l.A)({}, t, { location: n, match: a }),
                     s = e.props,
                     u = s.children,
@@ -348,7 +348,7 @@ var E = (function (e) {
                             if (null == n && o.isValidElement(e)) {
                                 r = e;
                                 var i = e.props.path || e.props.from;
-                                n = i ? S(a.pathname, (0, l.A)({}, e.props, { path: i })) : t.match;
+                                n = i ? R(a.pathname, (0, l.A)({}, e.props, { path: i })) : t.match;
                             }
                         }),
                         n ? o.cloneElement(r, { location: a, computedMatch: n }) : null
@@ -362,15 +362,15 @@ var E = (function (e) {
 function I() {
     return A(g);
 }
-function k() {
+function T() {
     return A(m).location;
 }
-function T() {
+function k() {
     var e = A(m).match;
     return e ? e.params : {};
 }
-function j(e) {
-    var t = k(),
+function P(e) {
+    var t = T(),
         r = A(m).match;
-    return e ? S(t.pathname, e) : r;
+    return e ? R(t.pathname, e) : r;
 }

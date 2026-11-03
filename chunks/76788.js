@@ -1,5 +1,5 @@
-n.d(t, { A: () => l });
-var i = n(335033);
-let s = window.GLOBAL_ENV.PUBLIC_PATH;
-(null != s && s.endsWith("/") && (s = s.substring(0, s.length - 1)), (i.OGVLoader.base = s));
-let l = i;
+t.d(n, { A: () => l });
+var s = t(335033);
+let i = window.GLOBAL_ENV.PUBLIC_PATH;
+(null != i && i.endsWith("/") && (i = i.substring(0, i.length - 1)), (s.OGVLoader.base = i));
+let l = s;

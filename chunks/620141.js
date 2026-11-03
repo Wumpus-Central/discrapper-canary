@@ -1,7 +1,7 @@
-(n.d(l, { A: () => i }), n(582128));
-var t = n(702841),
-    s = n(3137);
+(s.d(l, { A: () => i }), s(582128));
+var t = s(702841),
+    n = s(3137);
 function i(e) {
-    let { children: l, confettiLocation: n } = e;
-    return (0, t.bG)([s.A], () => s.A.isEnabled({ confettiLocation: n })) ? l : null;
+    let { children: l, confettiLocation: s } = e;
+    return (0, t.bG)([n.A], () => n.A.isEnabled({ confettiLocation: s })) ? l : null;
 }

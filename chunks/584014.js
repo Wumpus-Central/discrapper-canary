@@ -1,60 +1,60 @@
-n.d(t, { A: () => d });
-var i = n(582128),
-    s = n(964486),
-    l = n(946261),
-    a = n(536184),
-    r = n(523006),
-    o = n(257645);
+t.d(n, { A: () => d });
+var s = t(582128),
+    i = t(964486),
+    l = t(946261),
+    a = t(536184),
+    r = t(523006),
+    o = t(257645);
 function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { audioRef: n } = i.useContext(r.A),
-        d = i.useRef(null),
-        [u, c] = i.useState(() => null != t.soundId && n.current?.dataset.soundId === t.soundId && !n.current.paused);
-    (0, s.Ay)(() => {
-        let { current: e } = n;
-        null != e && null != t.soundId && u && e.addEventListener("pause", () => c(!1), { once: !0 });
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { audioRef: t } = s.useContext(r.A),
+        d = s.useRef(null),
+        [c, u] = s.useState(() => null != n.soundId && t.current?.dataset.soundId === n.soundId && !t.current.paused);
+    (0, i.Ay)(() => {
+        let { current: e } = t;
+        null != e && null != n.soundId && c && e.addEventListener("pause", () => u(!1), { once: !0 });
     });
-    let m = i.useCallback(async () => {
+    let m = s.useCallback(async () => {
         if (null == e) {
             d.current = null;
             return;
         }
         if (null != d.current && d.current.src === e) return;
-        let t = new (await (0, a.A)(e))();
-        ((t.src = e), (d.current = t));
+        let n = new (await (0, a.A)(e))();
+        ((n.src = e), (d.current = n));
     }, [d, e]);
     return (
-        i.useEffect(() => {
+        s.useEffect(() => {
             m();
         }, [m]),
         {
-            isPlaying: u,
-            playSound: i.useCallback(
+            isPlaying: c,
+            playSound: s.useCallback(
                 async function () {
-                    let { volume: e, outputChannel: i = o.a.DEFAULT } =
+                    let { volume: e, outputChannel: s = o.a.DEFAULT } =
                         arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    (await m(), n.current?.pause());
-                    let { current: s } = d;
+                    (await m(), t.current?.pause());
+                    let { current: i } = d;
                     return (
-                        null != s &&
-                        ((n.current = s),
-                        (s.currentTime = 0),
-                        (s.volume = e ?? 1),
-                        (s.dataset.soundId = t.soundId),
-                        i === o.a.VOICE && s.setSinkId?.(l.voiceSinkId),
-                        s.play(),
-                        (s.onplay = () => c(!0)),
-                        (s.onpause = () => c(!1)),
-                        (s.onended = () => c(!1)),
+                        null != i &&
+                        ((t.current = i),
+                        (i.currentTime = 0),
+                        (i.volume = e ?? 1),
+                        (i.dataset.soundId = n.soundId),
+                        s === o.a.VOICE && i.setSinkId?.(l.voiceSinkId),
+                        i.play(),
+                        (i.onplay = () => u(!0)),
+                        (i.onpause = () => u(!1)),
+                        (i.onended = () => u(!1)),
                         !0)
                     );
                 },
-                [n, t.soundId, m],
+                [t, n.soundId, m],
             ),
-            stopSound: i.useCallback(() => {
-                let { current: e } = n;
-                null == e || ((null == t.soundId || e.dataset.soundId === t.soundId) && (e.pause(), c(!1)));
-            }, [n, t.soundId]),
+            stopSound: s.useCallback(() => {
+                let { current: e } = t;
+                null == e || ((null == n.soundId || e.dataset.soundId === n.soundId) && (e.pause(), u(!1)));
+            }, [t, n.soundId]),
         }
     );
 }

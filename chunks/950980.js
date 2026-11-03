@@ -17,8 +17,8 @@ var l = t(477900),
     f = t(271478),
     A = t(386976),
     y = t(257433),
-    k = t(32523),
-    I = t(688151),
+    I = t(32523),
+    k = t(688151),
     C = t(263748);
 function E(e) {
     let { url: n } = e,
@@ -35,7 +35,7 @@ function v(e) {
     let { url: n } = e,
         t = (0, g.OL)(n),
         r = (0, g.Kb)(n),
-        { experiments: s, overridesInfo: o } = (0, k.hI)(),
+        { experiments: s, overridesInfo: o } = (0, I.hI)(),
         { experiments: x, overridesInfo: v } = (0, A.op)(),
         N = a.useMemo(() => (null == t ? null : null != s[t] ? s[t] : x[t]), [s, x, t]),
         b = a.useMemo(() => {
@@ -52,11 +52,11 @@ function v(e) {
         });
     if (null == t || null == N) return null;
     let w = (0, g.hp)(N).find((e) => e.value === r),
-        T = null != w ? I.Ps.EXPERIMENT_TREATMENT : I.Ps.EXPERIMENT,
-        O = null != b && null != w && b.variantId === w.value,
-        P = (0, l.jsx)(E, { url: n }),
+        T = null != w ? k.Ps.EXPERIMENT_TREATMENT : k.Ps.EXPERIMENT,
+        P = null != b && null != w && b.variantId === w.value,
+        O = (0, l.jsx)(E, { url: n }),
         R = null;
-    return (T === I.Ps.EXPERIMENT_TREATMENT && null != w
+    return (T === k.Ps.EXPERIMENT_TREATMENT && null != w
         ? (R = (0, l.jsx)(c.E, { variant: "body-xs/normal", color: "text-muted", children: w.label }))
         : null != M &&
           (R = (0, l.jsxs)(c.E, { variant: "body-xs/normal", color: "text-muted", children: ["Server Config: ", _] })),
@@ -86,7 +86,7 @@ function v(e) {
                                           }),
                                       ],
                                   }),
-                                  P,
+                                  O,
                               ],
                           }),
                       }),
@@ -94,12 +94,12 @@ function v(e) {
                   null != w
                       ? (0, l.jsx)(m.$, {
                             fullWidth: !0,
-                            variant: O ? "critical-primary" : "primary",
-                            text: O ? `Clear Treatment ${w.value}` : `Apply Treatment ${w.value}`,
+                            variant: P ? "critical-primary" : "primary",
+                            text: P ? `Clear Treatment ${w.value}` : `Apply Treatment ${w.value}`,
                             onClick: function () {
                                 null == t ||
                                     null == N ||
-                                    (null != w && (O ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, w.value)));
+                                    (null != w && (P ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, w.value)));
                             },
                         })
                       : (0, l.jsx)("div", {

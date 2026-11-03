@@ -1,23 +1,23 @@
-n.d(t, { C1: () => u, Or: () => c, YR: () => o });
+n.d(t, { C1: () => u, Or: () => o, YR: () => c });
 var i = n(477900),
     s = n(196765),
     r = n(17928),
     l = n(111162),
     a = n(779016);
-let o = 64,
-    c = (0, s.v)((e) => ({
+let c = 64,
+    o = (0, s.v)((e) => ({
         horizontalSpacing: 4,
         verticalSpacing: 4,
         setHorizontalSpacing: (t) => {
-            e({ horizontalSpacing: Math.round(Math.min(Math.max(t, 0), o)) });
+            e({ horizontalSpacing: Math.round(Math.min(Math.max(t, 0), c)) });
         },
         setVerticalSpacing: (t) => {
-            e({ verticalSpacing: Math.round(Math.min(Math.max(t, 0), o)) });
+            e({ verticalSpacing: Math.round(Math.min(Math.max(t, 0), c)) });
         },
     }));
 function u() {
     let e = (0, r.bG)([l.default], () => l.default.layoutDebuggingEnabled),
-        { horizontalSpacing: t, verticalSpacing: n } = c();
+        { horizontalSpacing: t, verticalSpacing: n } = o();
     if (e) {
         let e = { "--custom-grid-horizontal-spacing": `${t}px`, "--custom-grid-vertical-spacing": `${n}px` };
         return (0, i.jsx)("div", {

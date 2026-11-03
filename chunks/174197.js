@@ -1,4 +1,4 @@
-n.d(t, { gG: () => c, v8: () => o, N8: () => l });
+n.d(t, { gG: () => o, v8: () => c, N8: () => l });
 var i,
     s = n(350972),
     r = n(105292),
@@ -11,7 +11,7 @@ function a() {
         isPremium: !1,
     };
 }
-function o() {
+function c() {
     return [
         a(),
         {
@@ -133,7 +133,7 @@ function o() {
         },
     ];
 }
-function c(e) {
-    let t = o().find((t) => t.id === e);
+function o(e) {
+    let t = c().find((t) => t.id === e);
     return null != t ? t : a();
 }

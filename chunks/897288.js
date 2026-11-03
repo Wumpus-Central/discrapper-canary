@@ -15,16 +15,16 @@ var i = n(477900),
 function g(t) {
     let { guild: e, roles: n, className: s } = t,
         g = r.useMemo(() => `invite-roles-${(0, l.A)()}`, []),
-        M = (0, o.Ay)({ id: g, isEnabled: !0, scrollToStart: m.js$, scrollToEnd: m.js$, wrap: !0 }),
-        p = r.useMemo(
+        I = (0, o.Ay)({ id: g, isEnabled: !0, scrollToStart: m.js$, scrollToEnd: m.js$, wrap: !0 }),
+        M = r.useMemo(
             () => (null == e || null == n || 0 === n.length ? [] : [...n].sort(E.d6).map((t) => (0, E.ZW)(e.id, t))),
             [e, n],
         );
-    if (null == e || 0 === p.length) return null;
-    let I = p.length,
-        h = f.intl.formatToPlainString(f.t.PCs0oo, { numRoles: I });
+    if (null == e || 0 === M.length) return null;
+    let p = M.length,
+        N = f.intl.formatToPlainString(f.t.PCs0oo, { numRoles: p });
     return (0, i.jsx)(c.hD, {
-        navigator: M,
+        navigator: I,
         children: (0, i.jsx)(c.PR, {
             children: (t) => {
                 let { ref: n, ...r } = t;
@@ -39,10 +39,10 @@ function g(t) {
                         }),
                         (0, i.jsx)("div", {
                             className: A.Ei,
-                            "aria-label": h,
+                            "aria-label": N,
                             ref: n,
                             ...r,
-                            children: p.map((t) =>
+                            children: M.map((t) =>
                                 (0, i.jsx)(
                                     d.b_,
                                     {
