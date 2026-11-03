@@ -1,5 +1,14 @@
-s.exports = {
+e.exports = {
     ON: "searchBar__824d3",
+    up: "searchBarInput__824d3",
+    pQ: "animatedPlaceholder__824d3",
+    I5: "animatedPlaceholderOption__824d3",
+    lm: "placeholderOptionFade__824d3",
+    vZ: "animatedPlaceholderOptionResumed__824d3",
+    $s: "placeholderOptionFadeOut__824d3",
+    e_: "animatedPlaceholderShine__824d3",
+    SZ: "placeholderOptionShine__824d3",
+    Eo: "animatedPlaceholderFocused__824d3",
     qc: "searchIcon__824d3",
     Nz: "searchFloating__824d3",
     Gn: "suggestions__824d3",
