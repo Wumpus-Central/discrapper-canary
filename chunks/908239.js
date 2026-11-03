@@ -3589,10 +3589,10 @@ var rh = n(406704),
     rI = n(456874),
     rE = n(707539),
     rv = n(80682),
-    rC = n(521981),
-    r_ = n(448368),
-    rj = n(943220),
-    ry = n(838541);
+    rC = n(448368),
+    r_ = n(943220),
+    rj = n(838541);
+let ry = { formatInline: !0, allowLinks: !0, allowGameMentions: !0 };
 function rN(e) {
     let { message: t, channel: n } = e,
         { isBlocked: i, isIgnored: l } = (0, u.cf)(
@@ -3602,22 +3602,17 @@ function rN(e) {
         ),
         a = r.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
     (0, rv.Eq)(a, "ThreadMessageAccessoryMessage");
-    let o = r.useMemo(
-            () =>
-                null != t.content && "" !== t.content
-                    ? (0, rC.Ay)(t, { formatInline: !0, allowLinks: !0, allowGameMentions: !0 }).content
-                    : null,
-            [t],
-        ),
-        d = (0, sH.IL)(n);
+    let { content: o } = (0, n8.A)(t, ry),
+        d = null != t.content && "" !== t.content ? o : null,
+        c = (0, sH.IL)(n);
     return (0, s.jsxs)("div", {
         className: l9.up,
         children: [
             (0, s.jsx)("img", { alt: "", src: t.author.getAvatarURL(n.guild_id, 16), className: l9.FJ }),
-            (0, s.jsx)(rj.A, { message: t, channel: n, compact: !0 }),
+            (0, s.jsx)(r_.A, { message: t, channel: n, compact: !0 }),
             (0, s.jsx)("div", {
                 className: l9.Au,
-                children: d
+                children: c
                     ? (0, s.jsx)("span", { className: l9.dp, children: K.intl.string(K.t["5uaI/7"]) })
                     : (function (e, t, n, i) {
                           let {
@@ -3625,15 +3620,15 @@ function rN(e) {
                               renderedContent: r,
                               leadingIcon: a,
                               trailingIcon: o,
-                          } = (0, r_.o)(e, t, n, i, l9.tP, {
+                          } = (0, rC.o)(e, t, n, i, l9.tP, {
                               trailingIconClass: l9._v,
                               leadingIconClass: l9.a5,
-                              iconSize: ry.eJ,
+                              iconSize: rj.eJ,
                           });
                           return (0, s.jsxs)(s.Fragment, {
                               children: [a, r ?? (0, s.jsx)("span", { className: l9.dp, children: l }), o],
                           });
-                      })(t, o, i, l),
+                      })(t, d, i, l),
             }),
         ],
     });

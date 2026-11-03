@@ -318,23 +318,23 @@ function e8(e) {
         ],
     });
 }
-var e2 = n(131937),
-    e5 = n(702841),
-    e7 = n(139286),
+var e7 = n(131937),
+    e2 = n(702841),
+    e5 = n(139286),
     e4 = n(468689),
     e9 = n(105292),
     te = n(330766);
 function tt(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e5.bG)([P.A, em.default], () => {
+        l = (0, e2.bG)([P.A, em.default], () => {
             let e = em.default.getCurrentUser(),
                 n = P.A.getGuild(t);
             return null != n && (0, eE.bM)(n, e);
         });
     return (
-        (0, e7.A)({
-            type: e2.ImpressionTypes.POPOUT,
-            name: e2.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
+        (0, e5.A)({
+            type: e7.ImpressionTypes.POPOUT,
+            name: e7.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
         }),
         (0, s.jsx)(u.A, {
@@ -786,9 +786,9 @@ var tQ = n(503698),
     t3 = n(597601),
     t6 = n(451394),
     t8 = n(104171),
-    t2 = n(47167),
-    t5 = n(713654),
-    t7 = n(976860),
+    t7 = n(47167),
+    t2 = n(713654),
+    t5 = n(976860),
     t4 = n(747376),
     t9 = n(110618),
     ne = n(280450),
@@ -871,7 +871,7 @@ let nE = l.memo(function (e) {
 });
 function nm(e) {
     let { guildEvent: t, channel: n } = e,
-        i = (0, t2.Ay)(n),
+        i = (0, t7.Ay)(n),
         l = (0, r.yK)(
             [R.Ay],
             () =>
@@ -881,7 +881,7 @@ function nm(e) {
                 }),
             [n],
         ),
-        a = (0, t5.gU)(n);
+        a = (0, t2.gU)(n);
     return (0, s.jsx)(nE, {
         onClickCloseIcon: () => (0, na.iF)({ eventId: t?.id }),
         heading: e9.intl.string(e9.t["X2K3/4"]),
@@ -916,8 +916,8 @@ function nI(e) {
         i = (0, nu.oF)(t),
         a = null != i ? (0, no.y)(i, !0) : null,
         r = (0, nu.WN)(t),
-        o = (0, t2.Ay)(r),
-        d = (0, t5.gU)(r),
+        o = (0, t7.Ay)(r),
+        d = (0, t2.gU)(r),
         { startTime: u, endTime: c } = (0, nd.Ay)(t),
         { startDateTimeString: A, upcomingEvent: h, diffMinutes: E } = (0, nc.CC)(u.toISOString(), c?.toISOString()),
         m = h
@@ -1050,14 +1050,14 @@ function nN(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t4.av)(t), (0, t7.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t4.av)(t), (0, t5.uh)(t.getGuildId(), t.id));
             },
         }),
     });
 }
 function np(e) {
     let { stageInstance: t, channel: n } = e,
-        i = (0, t2.Ay)(n),
+        i = (0, t7.Ay)(n),
         l = (0, r.yK)([N.A], () => [...new Set(N.A.getMutableParticipants(n.id, p.ip.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
@@ -1472,9 +1472,9 @@ let n3 = new n1(m.h),
         { type: j.n5X.QUICKSWITCHER, store: nY.A, dismissibleContentType: o.M.CHANNEL_NOTICE_QUICKSWITCHER },
         { type: j.n5X.GAME_CLAIM, dismissibleContentType: o.M.GAME_CLAIM_COACHMARK },
     ],
-    n2 = n8.map((e) => e.store).filter(ni.Vq),
-    n5 = new Set([o.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, o.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n7(e) {
+    n7 = n8.map((e) => e.store).filter(ni.Vq),
+    n2 = new Set([o.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, o.M.CHANNEL_NOTICE_GUILD_BANNER]);
+function n5(e) {
     e.stopPropagation();
 }
 let n4 = [];
@@ -1506,14 +1506,14 @@ function n9(e) {
         [g, I] = (0, Z.ww)(m, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
         _ = (0, r.yK)(
-            n2,
+            n7,
             () =>
                 C
                     ? []
                     : n8
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(A, h) && !n5.has(t);
+                              return !0 === n?.channelNoticePredicate(A, h) && !n2.has(t);
                           })
                           .map((e) => e.dismissibleContentType)
                           .filter(tc.Jq),
@@ -1548,7 +1548,7 @@ function n9(e) {
                     return null;
             }
         })();
-    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n7, children: R });
+    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n5, children: R });
 }
 let ie = function (e) {
     let { guild: t } = e;
@@ -1678,10 +1678,7 @@ class id extends l.PureComponent {
                     n.e("860350"),
                     n.e("774550"),
                     n.e("923981"),
-                    n.e("839460"),
-                    n.e("706073"),
-                    n.e("227512"),
-                    n.e("262564"),
+                    n.e("317446"),
                     n.e("71866"),
                     n.e("891473"),
                     n.e("101105"),
@@ -1913,9 +1910,7 @@ class id extends l.PureComponent {
                     n.e("910167"),
                     n.e("70379"),
                     n.e("417333"),
-                    n.e("508848"),
                     n.e("905581"),
-                    n.e("95018"),
                     n.e("62052"),
                     n.e("122218"),
                     n.e("834552"),
@@ -1977,13 +1972,10 @@ class id extends l.PureComponent {
                     n.e("492762"),
                     n.e("140402"),
                     n.e("391763"),
-                    n.e("362422"),
                     n.e("28102"),
                     n.e("497516"),
-                    n.e("617249"),
                     n.e("393766"),
                     n.e("21921"),
-                    n.e("853149"),
                     n.e("844780"),
                     n.e("811310"),
                     n.e("571210"),
@@ -2115,7 +2107,6 @@ class id extends l.PureComponent {
                     n.e("36227"),
                     n.e("104202"),
                     n.e("850488"),
-                    n.e("143151"),
                     n.e("444567"),
                     n.e("229666"),
                     n.e("92295"),
@@ -2679,15 +2670,15 @@ function iu(e) {
         eq && e8.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
         e$ && e8.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         ep && e8.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
-    let e2 = (0, q.uW)([
+    let e7 = (0, q.uW)([
             ...e8,
             o.M.GUILD_HEADER_COACHMARK,
             o.M.GAME_SERVER_NEW_GAMES_COACHMARK,
             o.M.BOOST_TO_UNLOCK_COACHMARK,
             o.M.EXPIRING_POWERUP_COACHMARK,
         ]),
-        e5 = (0, eL.Dq)(O) && !e2,
-        e7 = (function (e) {
+        e2 = (0, eL.Dq)(O) && !e7,
+        e5 = (function (e) {
             let t = (0, es.c)(ei.C.GUILD_HEADER_COACHMARK),
                 n =
                     null != t && "guildHeaderCoachmark" === t.properties.properties.oneofKind
@@ -2706,34 +2697,34 @@ function iu(e) {
                 coachmark: n,
                 markAsDismissed: l,
             };
-        })(e5 ? null : L),
-        [e4, e9] = (0, Z.kn)(e5 ? [] : e8, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
-        [te, tt] = (0, eD.vB)(eQ && !1 === eK && !(0, $.ai)(L) && !e5, el.m.GUILD_HEADER_TOOLTIPS),
+        })(e2 ? null : L),
+        [e4, e9] = (0, Z.kn)(e2 ? [] : e8, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [te, tt] = (0, eD.vB)(eQ && !1 === eK && !(0, $.ai)(L) && !e2, el.m.GUILD_HEADER_TOOLTIPS),
         [tn, ti] = (0, Z.D8)(
-            e1 && !e5 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
+            e1 && !e2 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,
             { cooldownDurationMs: eb.bW, numTimesToRecur: 5 },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         [ts, tl] = (0, Z.D8)(
-            e6 && !e5 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            e6 && !e2 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
             L,
             { cooldownDurationMs: eb.mD },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         ta = l.useMemo(
             () =>
-                e7.shouldShow && null != e7.coachmark
+                e5.shouldShow && null != e5.coachmark
                     ? {
                           contentType: o.M.GUILD_HEADER_COACHMARK,
                           data: {
                               marketingComponent: {
-                                  componentId: e7.componentId,
-                                  promotionId: e7.promotionId,
-                                  coachmark: e7.coachmark,
+                                  componentId: e5.componentId,
+                                  promotionId: e5.promotionId,
+                                  coachmark: e5.coachmark,
                               },
                           },
-                          markAsDismissed: e7.markAsDismissed,
+                          markAsDismissed: e5.markAsDismissed,
                       }
                     : null != e4
                       ? { contentType: e4, data: null, markAsDismissed: e9 }
@@ -2745,11 +2736,11 @@ function iu(e) {
                             ? { contentType: ts, data: { featuredExpiringPowerup: e3 }, markAsDismissed: tl }
                             : null,
             [
-                e7.shouldShow,
-                e7.coachmark,
-                e7.componentId,
-                e7.promotionId,
-                e7.markAsDismissed,
+                e5.shouldShow,
+                e5.coachmark,
+                e5.componentId,
+                e5.promotionId,
+                e5.markAsDismissed,
                 e4,
                 te,
                 tn,
@@ -2778,11 +2769,11 @@ function iu(e) {
         hasChannelNotice: null != V || X,
         anyLayerOpen: K || F || W,
         showGuildHeaderTutorial: z,
-        showPriorityHeaderNotice: e5,
+        showPriorityHeaderNotice: e2,
         showGuildTemplateDirtyTooltip: eg,
         showNewUnreadsBar: e_,
         isHeaderPopoutOpen: eC,
-        isGuildHeaderDismissibleTooltipShown: e2,
+        isGuildHeaderDismissibleTooltipShown: e7,
         headerAnalyticsLocations: k,
         shouldRenderBurstCoachmark: !eN,
         guildHeaderContentDescriptor: ta,

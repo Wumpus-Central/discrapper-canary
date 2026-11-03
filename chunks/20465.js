@@ -1,4 +1,4 @@
-s.d(t, { A: () => G, R: () => R });
+s.d(t, { A: () => I, R: () => R });
 var n = s(477900),
     l = s(582128),
     a = s(503698),
@@ -11,10 +11,10 @@ var n = s(477900),
     A = s(43990),
     E = s(73153),
     h = s(386467),
-    f = s(521981),
-    m = s(763754),
-    g = s(448368),
-    S = s(516287),
+    f = s(763754),
+    m = s(448368),
+    g = s(516287),
+    S = s(164375),
     p = s(378058),
     C = s(148355),
     T = s(232835),
@@ -26,15 +26,16 @@ var n = s(477900),
     k = s(652215),
     N = s(838541),
     x = s(538347);
-let R = 10 * v.A.Millis.SECOND;
-function j(e) {
+let R = 10 * v.A.Millis.SECOND,
+    j = { allowGameMentions: !0 };
+function G(e) {
     let { message: t, onToastClick: s } = e,
         { isBlocked: a, isIgnored: u } = (0, c.cf)(
             [y.A],
             () => ({ isBlocked: y.A.isBlockedForMessage(t), isIgnored: y.A.isIgnoredForMessage(t) }),
             [t],
         ),
-        i = (0, m.X4)(t),
+        i = (0, f.X4)(t),
         d = l.useContext(h.A),
         [A, E] = l.useState(!1),
         T = l.useCallback(
@@ -43,19 +44,20 @@ function j(e) {
             },
             [t, s],
         ),
-        v = (0, _.uJ)(t.content) ? null : (0, f.Ay)(t, { allowGameMentions: !0 }).content,
+        { content: v } = (0, S.A)(t, j),
+        M = (0, _.uJ)(t.content) ? null : v,
         {
-            contentPlaceholder: M,
-            renderedContent: k,
-            trailingIcon: R,
-            leadingIcon: j,
-        } = (0, g.o)(t, v, a, u, x.BK, { trailingIconClass: x.sl, leadingIconClass: x.aG, iconSize: N.eJ }),
-        G = (0, p.o6)(t),
-        I =
-            G.length > 0
-                ? G.map((e) => (0, n.jsx)(C.A, { className: x.yI, size: 128, sticker: e, isInteracting: A }, e.id))
+            contentPlaceholder: k,
+            renderedContent: R,
+            trailingIcon: G,
+            leadingIcon: I,
+        } = (0, m.o)(t, M, a, u, x.BK, { trailingIconClass: x.sl, leadingIconClass: x.aG, iconSize: N.eJ }),
+        L = (0, p.o6)(t),
+        J =
+            L.length > 0
+                ? L.map((e) => (0, n.jsx)(C.A, { className: x.yI, size: 128, sticker: e, isInteracting: A }, e.id))
                 : null;
-    return (0, n.jsx)(S.x, {
+    return (0, n.jsx)(g.x, {
         value: A,
         children: (0, n.jsxs)(o.D, {
             className: x.oR,
@@ -70,9 +72,9 @@ function j(e) {
                 (0, n.jsxs)("div", {
                     className: r()(x.kn, { [x.mK]: t.mentioned }),
                     children: [
-                        null != I ? null : j,
-                        k ?? I ?? (0, n.jsx)("span", { children: M }),
-                        null != I ? null : R,
+                        null != J ? null : I,
+                        R ?? J ?? (0, n.jsx)("span", { children: k }),
+                        null != J ? null : G,
                     ],
                 }),
                 (0, n.jsx)("img", {
@@ -87,7 +89,7 @@ function j(e) {
         }),
     });
 }
-function G(e) {
+function I(e) {
     let { channelId: t, className: s, onToastClick: a } = e,
         [o, h] = l.useState(!1),
         { toastsHidden: f, toastMessages: m } = (function (e) {
@@ -189,7 +191,7 @@ function G(e) {
                         ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
                         className: x.T_,
                         style: e,
-                        children: (0, n.jsx)(j, { message: t.message, onToastClick: a }),
+                        children: (0, n.jsx)(G, { message: t.message, onToastClick: a }),
                     }),
                 ),
             }),

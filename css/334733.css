@@ -48,4 +48,12 @@
     scrollbar-width: none
 }
 
-/*# sourceMappingURL=870f6c1bfe43e3a9.css.map*/
+.errorMessage_a23fe0 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: 4px;
+    display: flex;
+    padding: 8px
+}
+
+/*# sourceMappingURL=334733.e517fec5347f6623.css.map*/
