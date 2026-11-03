@@ -364,6 +364,10 @@ function K(e) {
                             PRESS_DELETE_TO_REMOVE_TAG: W.intl.string(j.default["/Y7vRd"]),
                             PERCENT_COMPLETE: (e) => W.intl.formatToPlainString(j.default["2L/ygS"], { percent: e }),
                             TEXT_INPUT_CLEAR: W.intl.string(W.t.VkKicb),
+                            TEXT_INPUT_VIEW_PASSWORD: W.intl.string(W.t.nFzpM5),
+                            TEXT_INPUT_HIDE_PASSWORD: W.intl.string(W.t.Nusip4),
+                            TEXT_INPUT_PASSWORD_VISIBLE: W.intl.string(W.t.agstwg),
+                            TEXT_INPUT_PASSWORD_HIDDEN: W.intl.string(W.t.SHvAer),
                             CHARACTER_COUNT_LIMIT_REACHED: W.intl.string(W.t.c2Jqed),
                             CHARACTER_COUNT_A11Y_LABEL: (e) =>
                                 W.intl.formatToPlainString(W.t.fR1cof, { remainingCharacters: e }),

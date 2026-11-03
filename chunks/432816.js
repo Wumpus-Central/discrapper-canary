@@ -61,6 +61,10 @@ let s = {
             PRESS_DELETE_TO_REMOVE_TAG: "Press Delete to remove tag",
             PERCENT_COMPLETE: (e) => `${e} percent complete`,
             TEXT_INPUT_CLEAR: "Clear",
+            TEXT_INPUT_VIEW_PASSWORD: "View Password",
+            TEXT_INPUT_HIDE_PASSWORD: "Hide Password",
+            TEXT_INPUT_PASSWORD_VISIBLE: "Password is visible.",
+            TEXT_INPUT_PASSWORD_HIDDEN: "Password is hidden.",
             CHARACTER_COUNT_LIMIT_REACHED: "Character limit reached",
             CHARACTER_COUNT_A11Y_LABEL: (e) =>
                 `Character count, ${e} ${1 === e ? "character" : "characters"} remaining`,
