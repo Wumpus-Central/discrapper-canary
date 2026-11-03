@@ -107,11 +107,11 @@ function T(e) {
             }),
             i = null != e ? e[o] : null,
             s = null != i && null != r ? r : null,
-            c = null != i && i.amount > 0 ? i.amount : null;
+            c = null != i && i.amount > 0 ? i.amount : null,
+            E = o === A.QK.GIFT ? h.FBC.GIFT : h.FBC.BASE,
+            f = a?.prices[E]?.[A.v8.NORMAL];
         return {
-            normalPrice:
-                (null != i ? a?.prices[h.FBC.BASE]?.[A.v8.NORMAL]?.find((e) => e.currency !== h.Yri.DISCORD_ORB) : r) ??
-                null,
+            normalPrice: (null != i ? f?.find((e) => e.currency !== h.Yri.DISCORD_ORB) : r) ?? null,
             discountedPrice: s,
             discountPercent: c,
             userPrice: r ?? null,

@@ -626,6 +626,54 @@
     opacity: 1
 }
 
+.container__8677f {
+    align-items: center;
+    color: var(--text-feedback-positive);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.strikethrough__8677f {
+    align-self: end;
+    text-decoration: line-through
+}
+
+.wrap__8677f {
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.wrap__8677f>svg {
+    flex-shrink: 0
+}
+
+.fiatPriceDisplay_f7b36e {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.originalPrice_f7b36e {
+    color: var(--text-muted);
+    text-decoration: line-through
+}
+
+.discountBadge_f7b36e {
+    color: var(--text-feedback-positive)
+}
+
+@media (max-width:600px) {
+    .fiatPriceDisplay_f7b36e {
+        flex-wrap: wrap;
+        max-width: 100%;
+        min-width: 0
+    }
+}
+
 .stepBody__7b8d0 {
     display: flex;
     flex-direction: row;
@@ -755,4 +803,4 @@
     padding-top: 16px
 }
 
-/*# sourceMappingURL=355502.9e905c131e1f9a41.css.map*/
+/*# sourceMappingURL=699250.34d5bb117f5332a8.css.map*/
