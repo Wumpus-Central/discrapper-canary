@@ -459,11 +459,11 @@ function e4() {
                 (K.A.isBlockedOrIgnored(e.data.user_id) ? (eL[e.id] = !0) : (eG[e.id] = ef(e))));
     });
 }
-function e7(e) {
+function e8(e) {
     let t, n, i, a, s;
     if ((ew.length > 0 && ((ex = ew), (ew = []), (eN = [])), ej++, null != e)) ((eB = e.newUnread), (eK = e.newRead));
     else {
-        let [e, t] = e8(ex);
+        let [e, t] = e7(ex);
         ((eB = e), (eK = t));
     }
     ((function () {
@@ -558,7 +558,7 @@ function e7(e) {
         eh([...eB, ...eK], 0, q.w5, eG),
         (eq = !1));
 }
-function e8(e) {
+function e7(e) {
     let t = [],
         n = [],
         i = [];
@@ -630,7 +630,7 @@ function tr(e) {
         (a > ez || !eY) && e.type === q.Mm.MESSAGE && e.data.channel_id === t ? n.push(e) : i.push(e);
     });
     let a = eF,
-        [s, r] = e8(ew);
+        [s, r] = e7(ew);
     if (((eN = te(s, t)), (eF = eY ? a && eN.length >= q.$P : a && e5(i, ew)), 0 === n.length && a === eF)) return !1;
     0 !== n.length && ((eB = i), (eK = [...eK, ...n]));
 }
@@ -790,7 +790,7 @@ let tl = new td(A.h, {
         },
         LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
             let { messageItem: t, customStatusItem: n } = e;
-            if (null != n) return ((eH = n), null != eC && ((ew = ew.length > 0 ? ew : [...ex]), e4(), e7()), !0);
+            if (null != n) return ((eH = n), null != eC && ((ew = ew.length > 0 ? ew : [...ex]), e4(), e8()), !0);
             if (null != t) {
                 let e = {
                     id: t.message.id,
@@ -808,9 +808,9 @@ let tl = new td(A.h, {
                     (eG[t.message.id] = { ...e, message: (0, N.rh)(t.message) }),
                     null == eC && null == eb)
                 ) {
-                    let [t, n] = e8((ex = [e, ...ex]));
+                    let [t, n] = e7((ex = [e, ...ex]));
                     ((eB = t), (eK = n));
-                } else ((ew = [e, ...ew]), e7());
+                } else ((ew = [e, ...ew]), e8());
                 return !0;
             }
             return !1;
@@ -848,9 +848,9 @@ let tl = new td(A.h, {
                     })),
                 e4(),
                 (eb = { load_id: i, load_time_millis: Date.now() - a, feed_item_ids: ew.map((e) => e.id) }));
-            let [d, l] = e8(ew);
+            let [d, l] = e7(ew);
             if (((eN = te(d)), !eY || 0 === ej || s))
-                ((ej = 0), !e$ && e5(d, ew) ? ((eF = !0), (eU = !0)) : (eF = !1), e7({ newUnread: d, newRead: l }));
+                ((ej = 0), !e$ && e5(d, ew) ? ((eF = !0), (eU = !0)) : (eF = !1), e8({ newUnread: d, newRead: l }));
             else {
                 ej > 0 && (eH = null);
                 let e = eN.length > q.$P;
@@ -943,7 +943,7 @@ let tl = new td(A.h, {
         },
         RELOAD_ICYMI: function () {
             if (0 === ew.length) return !1;
-            (e7(), (eF = !1));
+            (e8(), (eF = !1));
         },
         ICYMI_TAB_OPENED: function () {
             ((eY = !0), (eD = Date.now()), eU && ((eU = !1), (eF = !1)), eP < 5 && eP++);
@@ -1549,7 +1549,7 @@ var tV = n(837381),
     tP = n(763754),
     tB = n(491182),
     tK = n(860227),
-    tz = n(164375),
+    tz = n(538355),
     tJ = n(699352),
     tW = n(715628),
     tX = n(752636),
@@ -1903,8 +1903,8 @@ function t4(e) {
               }),
           });
 }
-var t7 = n(301690);
-function t8(e) {
+var t8 = n(301690);
+function t7(e) {
     let { item: t } = e,
         n = s.useCallback(
             (e) => {
@@ -1933,11 +1933,11 @@ function t8(e) {
             [t],
         );
     return (0, a.jsxs)(tE.D, {
-        className: t7.k,
+        className: t8.k,
         onClick: n,
         children: [
             (0, a.jsx)(t4, { item: t }),
-            (0, a.jsx)("div", { className: t7.o, children: (0, a.jsx)(t3, { item: t }) }),
+            (0, a.jsx)("div", { className: t8.o, children: (0, a.jsx)(t3, { item: t }) }),
         ],
     });
 }
@@ -2320,7 +2320,7 @@ let nt = function (e) {
                           )
                         : (0, a.jsx)(
                               "div",
-                              { ref: (t) => M(e.id, t), "data-item-id": e.id, children: (0, a.jsx)(t8, { item: e }) },
+                              { ref: (t) => M(e.id, t), "data-item-id": e.id, children: (0, a.jsx)(t7, { item: e }) },
                               e.id,
                           ),
             [M],

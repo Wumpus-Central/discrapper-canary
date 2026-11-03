@@ -8,14 +8,9 @@ var l = t(730852),
     c = t(696451),
     u = t(71393),
     d = t(449054),
-    m = t(935208);
-let h = (0, t(945810).mj)({
-    name: "2026-02-voice-channel-link-click",
-    kind: "user",
-    defaultConfig: { navigateOnly: !1 },
-    variations: { 1: { navigateOnly: !0 } },
-});
-var p = t(652215),
+    m = t(935208),
+    h = t(923257),
+    p = t(652215),
     x = t(575279);
 async function g(e, n, t, g) {
     if (null == n) return;
@@ -34,7 +29,7 @@ async function g(e, n, t, g) {
     }
     let j = o.A.getChannel(n);
     if (null != j && null == t && j.isGuildVocal() && (0, r.nc)(j)) {
-        let { navigateOnly: e } = h.getConfig({ location: "channel_mention" });
+        let { navigateOnly: e } = h.h.getConfig({ location: "channel_mention" });
         if (!e) return void l.default.selectVoiceChannel(j.id);
     }
     let f = new URLSearchParams();

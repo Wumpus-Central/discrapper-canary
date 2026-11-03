@@ -1,4 +1,4 @@
-(i.r(e), i.d(e, { default: () => eT }), i(321073), i(667532));
+(i.r(e), i.d(e, { default: () => eL }), i(321073), i(667532));
 var n = i(284009),
     l = i.n(n),
     a = i(132500),
@@ -160,33 +160,35 @@ function tR(t, e, i, n, l) {
     };
 }
 var tk = i(941971),
-    tU = i(521981),
-    tM = i(976860),
-    tV = i(400492),
-    tj = i(625494),
-    tP = i(723702),
-    tw = i(19575),
-    tK = i(366032),
-    tG = i(148494),
-    tF = i(964486),
-    tY = i(480870),
-    tH = i(355622),
-    tJ = i(408018),
-    tB = i(845207),
-    t$ = i(451909),
-    tz = i(135621),
-    tX = i(381941),
-    tW = i(158602);
-function tq(t) {
+    tU = i(997141),
+    tM = i(39672),
+    tV = i(884129),
+    tj = i(976860),
+    tP = i(400492),
+    tw = i(625494),
+    tK = i(723702),
+    tG = i(19575),
+    tF = i(366032),
+    tY = i(148494),
+    tH = i(964486),
+    tJ = i(480870),
+    tB = i(355622),
+    t$ = i(408018),
+    tz = i(845207),
+    tX = i(451909),
+    tW = i(135621),
+    tq = i(381941),
+    tQ = i(158602);
+function tZ(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
-        a = (0, tz.A)(),
-        { placeholder: r, accessibilityLabel: s } = (0, tY.A)({ channel: n }),
-        [o, c] = X.useState(() => (0, tJ.N3)()),
+        a = (0, tW.A)(),
+        { placeholder: r, accessibilityLabel: s } = (0, tJ.A)({ channel: n }),
+        [o, c] = X.useState(() => (0, t$.N3)()),
         { textValue: d, richValue: A } = o,
         [f, y] = X.useState(!1),
         p = X.useCallback(() => y(!0), []),
         m = X.useCallback(() => y(!1), []);
-    (0, tF.Ay)(() => {
+    (0, tH.Ay)(() => {
         (0, th.ack)(
             n.id,
             {
@@ -211,7 +213,7 @@ function tq(t) {
         E = X.useCallback(
             () => (
                 d.length > a ||
-                    (tG.A.sendMessage(n.id, t$.Ay.parse(n, d), !1, { location: tX.Hx.OVERLAY }),
+                    (tY.A.sendMessage(n.id, tX.Ay.parse(n, d), !1, { location: tq.Hx.OVERLAY }),
                     u.A.setInputLocked(!0, w.A.getTargetPID()),
                     u.A.updateNotificationStatus(e, $.yFH.DISMISSED),
                     l?.(d)),
@@ -220,16 +222,16 @@ function tq(t) {
             [d, a, n, e, l],
         );
     return (0, z.jsx)("div", {
-        className: tW.k,
-        children: (0, z.jsx)(tB.Ay, {
-            innerClassName: tW.T,
+        className: tQ.k,
+        children: (0, z.jsx)(tz.Ay, {
+            innerClassName: tQ.T,
             onChange: g,
             placeholder: r,
             accessibilityLabel: s,
             channel: n,
             textValue: d,
             richValue: A,
-            type: tH.oU.OVERLAY_INLINE_REPLY,
+            type: tB.oU.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
             onBlur: m,
             onFocus: p,
@@ -241,87 +243,95 @@ function tq(t) {
         }),
     });
 }
-var tQ = i(119191),
-    tZ = i(254821);
-function t0(t) {
-    t && (0, tV.Ak)(k.cH, k.pD, void 0, void 0, { trackNotificationFailure: !0 });
+var t0 = i(119191),
+    t1 = i(254821);
+function t2(t) {
+    t && (0, tP.Ak)(k.cH, k.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
-var t1 = i(554146),
-    t2 = i(298990),
-    t9 = i(429913),
-    t3 = i(263577),
-    t5 = i(826673),
-    t8 = i(999926),
-    t7 = i(308726),
-    t4 = i(818023),
-    t6 = i(731854),
-    et = i(709946),
-    ee = i(302933);
-function ei(t) {
+let t9 = { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 };
+function t3(t) {
+    let { message: e } = t,
+        i = (0, tV.ld)(t9, "textChatNotification"),
+        n = (0, tU.j)({ excluded: tU.Z }),
+        l = (0, tM.N)(e.content, { enabled: i, syntax: n });
+    return (0, z.jsx)(tV.Ay, { message: e, options: t9, parsed: l });
+}
+var t5 = i(554146),
+    t8 = i(298990),
+    t7 = i(429913),
+    t4 = i(263577),
+    t6 = i(826673),
+    et = i(999926),
+    ee = i(308726),
+    ei = i(818023),
+    en = i(731854),
+    el = i(709946),
+    ea = i(302933);
+function er(t) {
     let { game: e } = t,
-        i = (0, t9.h)(e.id);
-    return null == i ? null : (0, z.jsx)(t3.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
+        i = (0, t7.h)(e.id);
+    return null == i ? null : (0, z.jsx)(t4.V, { src: i.getIconURL(ei.iu.LARGE), size: 40 });
 }
-let en = 5 * U.A.Millis.SECOND,
-    el = 8 * U.A.Millis.SECOND,
-    ea = 30 * U.A.Millis.SECOND,
-    er = 30 * U.A.Millis.SECOND,
-    es = Object.freeze({
+let es = 5 * U.A.Millis.SECOND,
+    eo = 8 * U.A.Millis.SECOND,
+    eu = 30 * U.A.Millis.SECOND,
+    ec = 30 * U.A.Millis.SECOND,
+    ed = Object.freeze({
         timestamp: 0,
         priority: K.In.NORMAL,
-        duration: en,
+        duration: es,
         expirationExternallyManaged: !1,
         type: K.zb.GENERIC,
     }),
-    eo = [],
-    eu = !1,
-    ec = [],
-    ed = {};
-function eA(t, e, i) {
-    (null == ed[t] && (ed[t] = {}), (ed[t][e] = i));
+    eA = [],
+    ef = !1,
+    ey = [],
+    ep = {};
+function em(t, e, i) {
+    (null == ep[t] && (ep[t] = {}), (ep[t][e] = i));
 }
-let ef = 30 * U.A.Millis.MINUTE,
-    ey = 2 * U.A.Millis.MINUTE;
-function ep() {
-    if (eu && null == eo.find((t) => t.status === $.yFH.FOCUSED))
-        for (let t of ((eu = !1), (eo = [...eo, ...ec]), (ec = []), eo.length > 40 && (eo.length = 40), eo))
+let eg = 30 * U.A.Millis.MINUTE,
+    eI = 2 * U.A.Millis.MINUTE;
+function eE() {
+    if (ef && null == eA.find((t) => t.status === $.yFH.FOCUSED))
+        for (let t of ((ef = !1), (eA = [...eA, ...ey]), (ey = []), eA.length > 40 && (eA.length = 40), eA))
             t.timer.start();
 }
-function em() {
+function e_() {
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3;
-    eo.filter((t) => t.type === K.zb.TEXT && t.status === $.yFH.TIMED_OUT)
+    eA.filter((t) => t.type === K.zb.TEXT && t.status === $.yFH.TIMED_OUT)
         .sort((t, e) => e.timestamp - t.timestamp)
         .forEach((e, i) => {
-            (i >= t || e.timestamp < Date.now() - ea) && eI(e.id, $.yFH.DISMISSED);
+            (i >= t || e.timestamp < Date.now() - eu) && eN(e.id, $.yFH.DISMISSED);
         });
 }
-function eg() {
+function eS() {
     let t = new Set();
-    eo.filter((t) => null != t.uniqueKey)
+    eA.filter((t) => null != t.uniqueKey)
         .sort((t, e) => e.timestamp - t.timestamp)
         .forEach((e) => {
-            null != e.uniqueKey && (t.has(e.uniqueKey) ? eI(e.id, $.yFH.DISMISSED) : t.add(e.uniqueKey));
+            null != e.uniqueKey && (t.has(e.uniqueKey) ? eN(e.id, $.yFH.DISMISSED) : t.add(e.uniqueKey));
         });
 }
-function eI(t) {
+function eN(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : $.yFH.DISMISSED;
     if (null == t) return !1;
-    let i = eo.findIndex((e) => e.id === t);
+    let i = eA.findIndex((e) => e.id === t);
     if (-1 === i) return !1;
-    let n = eo[i];
-    if ((n.timer.stop(), (eo = [...eo]), e === $.yFH.FOCUSED)) {
-        let [t] = eo.splice(i, 1);
-        ((t = { ...t, status: e }), eo.unshift(t), (eu = !0));
+    let n = eA[i];
+    if ((n.timer.stop(), (eA = [...eA]), e === $.yFH.FOCUSED)) {
+        let [t] = eA.splice(i, 1);
+        ((t = { ...t, status: e }), eA.unshift(t), (ef = !0));
         return;
     }
-    (e === $.yFH.DISMISSED ? eo.splice(i, 1) : (eo[i] = { ...n, status: e }), ep());
+    (e === $.yFH.DISMISSED ? eA.splice(i, 1) : (eA[i] = { ...n, status: e }), eE());
 }
-function eE(t) {
-    let e = eo.find((e) => e.type === K.zb.INCOMING_CALL && e.channelId === t);
+function eC(t) {
+    let e = eA.find((e) => e.type === K.zb.INCOMING_CALL && e.channelId === t);
     return null != e ? e.id : null;
 }
-function e_(t, e) {
-    let i = { ...es, timestamp: Date.now(), ...e },
+function eh(t, e) {
+    let i = { ...ed, timestamp: Date.now(), ...e },
         n = (0, a.A)(),
         l = !1,
         r = {
@@ -335,7 +345,7 @@ function e_(t, e) {
                     start() {
                         let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e,
                             a = l ? $.yFH.TIMED_OUT : $.yFH.DISMISSED;
-                        -1 === n && (n = setTimeout(() => u.A.updateNotificationStatus(t, a), null != i ? i : en));
+                        -1 === n && (n = setTimeout(() => u.A.updateNotificationStatus(t, a), null != i ? i : es));
                     },
                     stop() {
                         (clearTimeout(n), (n = -1));
@@ -350,35 +360,35 @@ function e_(t, e) {
             },
             ...i,
         },
-        s = eu ? ec : [...eo],
+        s = ef ? ey : [...eA],
         o = s.findIndex((t) => t.priority <= i.priority);
     if ((-1 === o ? s.push(r) : s.splice(o, 0, r), s.length > 40)) {
         let t = s.pop();
-        eu || t.timer.stop();
+        ef || t.timer.stop();
     }
-    return (eu || ((eo = s), r.timer.start()), n);
+    return (ef || ((eA = s), r.timer.start()), n);
 }
-function eS(t, e, i, n, l) {
+function eT(t, e, i, n, l) {
     return (
         null != n &&
-        (e_(n, {
+        (eh(n, {
             priority: K.In.URGENT,
             expirationExternallyManaged: !0,
             channelId: t.id,
-            duration: er,
+            duration: ec,
             uniqueKey: `activity-${e}-${i.id}-${t.id}-${l ?? "none"}`,
         }),
-        eg(),
+        eS(),
         !0)
     );
 }
-function eN() {
+function ev() {
     if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return !1;
     let t = C.A.usersPlaying,
         e = new Set(),
         i = (function () {
             let t = [];
-            for (let e in ed) t.push(...Object.keys(ed[e]).map((t) => t));
+            for (let e in ep) t.push(...Object.keys(ep[e]).map((t) => t));
             return t;
         })(),
         n = !1;
@@ -400,7 +410,7 @@ function eN() {
                     null == s ||
                     !(
                         null != (i = s.timestamps?.start != null ? s.timestamps.start : s.created_at) &&
-                        Date.now() - i < ey
+                        Date.now() - i < eI
                     )
                 )
                     return !1;
@@ -415,7 +425,7 @@ function eN() {
                 return (
                     (!m || (!!o && !d)) &&
                     (!!(R.A.hasApplicationStatistic(a) || f.Ay.isGameSeen(a)) || !m) &&
-                    (null == (n = ed[a]?.[t]?.lastSentTimestamp) || Date.now() - n > ef
+                    (null == (n = ep[a]?.[t]?.lastSentTimestamp) || Date.now() - n > eg
                         ? (null !=
                               (l = (function (t, e, i) {
                                   if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return null;
@@ -506,10 +516,10 @@ function eN() {
                                       },
                                   };
                               })(t, a, s)) &&
-                              (eA(a, t, { userId: t, gameId: a, lastSentTimestamp: Date.now() }),
-                              e_(l, { type: K.zb.GENERIC, priority: K.In.NORMAL })),
+                              (em(a, t, { userId: t, gameId: a, lastSentTimestamp: Date.now() }),
+                              eh(l, { type: K.zb.GENERIC, priority: K.In.NORMAL })),
                           !0)
-                        : (eA(a, t, { userId: t, gameId: a, lastSentTimestamp: Date.now() }), !1))
+                        : (em(a, t, { userId: t, gameId: a, lastSentTimestamp: Date.now() }), !1))
                 );
             })(i, l)),
             e.add(i));
@@ -526,24 +536,24 @@ function eN() {
             })(t) &&
             !a
         ) {
-            for (let e in ed) {
-                let i = ed[e][t];
+            for (let e in ep) {
+                let i = ep[e][t];
                 null != i && (i.lastSentTimestamp = null);
             }
             n = !0;
         }
     return n;
 }
-function eC(t) {
+function eO(t) {
     let { channelId: e, ongoingRings: i } = t,
-        n = eE(e);
-    if (!Object.keys(i).includes(E.default.getId())) return eI(n);
+        n = eC(e);
+    if (!Object.keys(i).includes(E.default.getId())) return eN(n);
     if (null != n) return !1;
     let l = _.A.getChannel(e);
     if (null == l || !l.isRingable() || b.A.getStatus() === $.clD.DND || g.NO.getSetting()) return !1;
-    let a = eo.find((t) => t.type === K.zb.TEXT && t.channelId === e && t.messageType === $.lAJ.CALL);
-    (null != a && eI(a.id),
-        e_(
+    let a = eA.find((t) => t.type === K.zb.TEXT && t.channelId === e && t.messageType === $.lAJ.CALL);
+    (null != a && eN(a.id),
+        eh(
             (function (t) {
                 let e = (0, td.m1)(t, x.default, v.A),
                     i = J.intl.string(J.t.ssrVzG),
@@ -590,7 +600,7 @@ function eC(t) {
             { priority: K.In.HIGH, expirationExternallyManaged: !0, type: K.zb.INCOMING_CALL, channelId: l.id },
         ));
 }
-class eh extends s.Ay.Store {
+class eb extends s.Ay.Store {
     static displayName = "OverlayNotificationsStore";
     initialize() {
         (this.waitFor(
@@ -617,35 +627,35 @@ class eh extends s.Ay.Store {
             x.default,
             D.A,
         ),
-            this.syncWith([C.A], eN));
+            this.syncWith([C.A], ev));
     }
     getNotifications() {
-        return eo;
+        return eA;
     }
     hasNotificationForChannel(t) {
-        return eo.some((e) => e.channelId === t);
+        return eA.some((e) => e.channelId === t);
     }
     getMostRecentNotificationChannelId() {
-        let t = [...eo].sort((t, e) => e.timestamp - t.timestamp).find((t) => null != t.channelId);
+        let t = [...eA].sort((t, e) => e.timestamp - t.timestamp).find((t) => null != t.channelId);
         return t?.channelId ?? null;
     }
     getNotificationsForChannel(t, e) {
-        return eo.filter((i) => i.channelId === t && i.type === e);
+        return eA.filter((i) => i.channelId === t && i.type === e);
     }
 }
-let eT = new eh(o.h, {
+let eL = new eb(o.h, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (t) {
         let { notificationId: e, status: i } = t;
-        eI(e, i);
+        eN(e, i);
     },
     OVERLAY_MOUNTED: function (t) {
         let { nudges: e } = t;
-        em(0);
+        e_(0);
         let n = w.A.getFocusedPID() ?? -1;
         if (j.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (P.A.isNotificationDisabled(H.KS.WelcomeNudge)) return null;
-            t8.Ay.supports(t6.O5.VIDEO) ||
+            et.Ay.supports(en.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== H.Jr.GO_LIVE_VOICE && t.type !== H.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, Y.Y9)(H.KS.WelcomeNudge, {
                     notif_type: H.KS.WelcomeNudge,
@@ -662,7 +672,7 @@ let eT = new eh(o.h, {
                                 (l("unlock"),
                                     u.A.updateNotificationStatus(i),
                                     u.A.setInputLocked(!1, w.A.getTargetPID()),
-                                    (0, t2.qf)(e, !1, $.BRT.POPOUT));
+                                    (0, t8.qf)(e, !1, $.BRT.POPOUT));
                             }));
                         break;
                     }
@@ -694,56 +704,56 @@ let eT = new eh(o.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, z.jsx)(t7.ru, {
+                                (0, z.jsx)(ee.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: ee.kL,
+                                    className: ea.kL,
                                 })));
                 }
-            let r = (0, t5.k8)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t6.k8)(t5.M.OVERLAY_OOP_WELCOME_NUX),
                 s = J.intl.string(J.t.KWDIrh);
             return {
                 icon:
                     null != t
-                        ? (0, z.jsx)(ei, { game: t })
-                        : (0, z.jsx)("img", { src: i(513653), className: et.Kk, alt: "" }),
+                        ? (0, z.jsx)(er, { game: t })
+                        : (0, z.jsx)("img", { src: i(513653), className: el.Kk, alt: "" }),
                 title: s,
                 hint: function () {
-                    return (0, tQ.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
+                    return (0, t0.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t6.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         u.A.setInputLocked(!1, w.A.getTargetPID()),
-                        r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t6.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t6.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, G.qv)(), e);
-        null != l && e_(l, { priority: K.In.URGENT, type: K.zb.NUDGE, duration: el });
+        null != l && eh(l, { priority: K.In.URGENT, type: K.zb.NUDGE, duration: eo });
     },
     OVERLAY_SET_INPUT_LOCKED: function (t) {
         let { locked: e } = t;
         if (e) {
-            for (let t of eo) t.status === $.yFH.FOCUSED && eI(t.id, $.yFH.ACTIVE);
+            for (let t of eA) t.status === $.yFH.FOCUSED && eN(t.id, $.yFH.ACTIVE);
             return !0;
         }
-        for (let t of (em(), eo))
+        for (let t of (e_(), eA))
             t.type === K.zb.NUDGE
-                ? eI(t.id, $.yFH.DISMISSED)
+                ? eN(t.id, $.yFH.DISMISSED)
                 : t.status !== $.yFH.ACTIVE ||
                   t.expirationExternallyManaged ||
                   (t.timer.stop(), t.timer.start(t.expirationExternallyManaged));
-        if (eo.length > 0)
-            return eI(
-                eo.filter((t) => t.type === K.zb.TEXT).sort((t, e) => e.timestamp - t.timestamp)[0]?.id,
+        if (eA.length > 0)
+            return eN(
+                eA.filter((t) => t.type === K.zb.TEXT).sort((t, e) => e.timestamp - t.timestamp)[0]?.id,
                 $.yFH.FOCUSED,
             );
     },
@@ -759,7 +769,7 @@ let eT = new eh(o.h, {
                 if ((l()(null != e.activity, "received null message activity"), i.id === E.default.getId())) return !1;
                 if (e.activity.type === $.xL.STREAM_REQUEST && null == e.application) {
                     let { enabled: n } = m.A.getConfig({ guildId: t.guild_id, location: "OverlayNotificationsStore" });
-                    return !!n && eS(t, e.activity.type, i, tR(t, e.id, i, null, null), null);
+                    return !!n && eT(t, e.activity.type, i, tR(t, e.id, i, null, null), null);
                 }
                 let d = (0, G.qv)();
                 if (null == d || null == d.id) return !1;
@@ -888,7 +898,7 @@ let eT = new eh(o.h, {
                     case $.xL.STREAM_REQUEST:
                         o = tR(t, e.id, i, d, r);
                 }
-                return eS(t, e.activity.type, i, o, s);
+                return eT(t, e.activity.type, i, o, s);
             })(n, i, a);
             if (!1 !== t) return t;
         }
@@ -896,7 +906,7 @@ let eT = new eh(o.h, {
         let r = !N.A.isSoundDisabled(k.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, V.NI)("textChatNotification");
-                if (P.A.isNotificationDisabled(H.KS.TextChat)) return (t0(!0), null);
+                if (P.A.isNotificationDisabled(H.KS.TextChat)) return (t2(!0), null);
                 let { icon: a, title: r, body: s } = (0, p.TB)(t, e, i),
                     { trackView: o, trackClick: c } = (0, Y.Y9)(H.KS.TextChat, {
                         notif_type: H.KS.TextChat,
@@ -910,25 +920,21 @@ let eT = new eh(o.h, {
                 return {
                     icon: a,
                     title: r,
-                    body:
-                        e.content.length > 0
-                            ? (0, tU.Ay)(e, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 })
-                                  .content
-                            : s,
+                    body: e.content.length > 0 ? (0, z.jsx)(t3, { message: e }) : s,
                     unreadAccessory: (t) => (l ? (0, z.jsx)(tk.A, { unread: !0, hovered: t }) : null),
                     hint: (t, e) =>
-                        t || !e || (!l && (0, tK.$)())
+                        t || !e || (!l && (0, tF.$)())
                             ? null
-                            : (0, tQ.sI)((0, Y.Jn)(), l ? tZ.default.VMcw8s : J.t.ykjOAJ),
+                            : (0, t0.sI)((0, Y.Jn)(), l ? t1.default.VMcw8s : J.t.ykjOAJ),
                     maxBodyLines: 2,
                     renderFooter: (i, n, a) =>
-                        l || (0, tK.$)()
+                        l || (0, tF.$)()
                             ? null
                             : i && !a
-                              ? (0, z.jsx)(tq, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
+                              ? (0, z.jsx)(tZ, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
                               : null,
                     onNotificationShow: () => {
-                        (t0(n), o());
+                        (t2(n), o());
                     },
                     onNotificationClick: (i, n) => {
                         let a = w.A.getTargetPID();
@@ -958,16 +964,16 @@ let eT = new eh(o.h, {
                             }),
                                 t_.A.isInputLocked(a) ? (c("unlock"), u.A.setInputLocked(!1, a)) : c("jump"),
                                 requestAnimationFrame(() => {
-                                    tj._.dispatchToLastSubscribed($.jej.TEXTAREA_FOCUS, { channelId: t.id });
+                                    tw._.dispatchToLastSubscribed($.jej.TEXTAREA_FOCUS, { channelId: t.id });
                                 }),
                                 u.A.updateNotificationStatus(n, $.yFH.DISMISSED));
                             return;
                         }
-                        t_.A.isInputLocked(a) && !(0, tK.$)()
+                        t_.A.isInputLocked(a) && !(0, tF.$)()
                             ? (c("unlock"), u.A.setInputLocked(!1, a))
                             : (c("jump"),
-                              (0, tM.pX)($.BVt.CHANNEL(t.guild_id, t.id, e.id)),
-                              tP.isPlatformEmbedded && tw.Ay.focus());
+                              (0, tj.pX)($.BVt.CHANNEL(t.guild_id, t.id, e.id)),
+                              tK.isPlatformEmbedded && tG.Ay.focus());
                     },
                     onDismissClick: () => {
                         c("dismiss");
@@ -975,7 +981,7 @@ let eT = new eh(o.h, {
                 };
             })(n, S.A.getMessage(e, i.id) ?? (0, y.rh)(i), a, r);
         if (null == s) return !1;
-        (e_(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), em());
+        (eh(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), e_());
     },
     CHANNEL_SELECT: function (t) {
         let e,
@@ -983,17 +989,17 @@ let eT = new eh(o.h, {
             { channelId: n } = t;
         return (
             null != n &&
-            ((e = eo.length),
-            (i = (eo = eo.filter((t) => t.type !== K.zb.TEXT || t.channelId !== n)).length !== e) && ep(),
+            ((e = eA.length),
+            (i = (eA = eA.filter((t) => t.type !== K.zb.TEXT || t.channelId !== n)).length !== e) && eE(),
             i)
         );
     },
     MESSAGE_ACK: function () {},
-    CALL_CREATE: eC,
-    CALL_UPDATE: eC,
+    CALL_CREATE: eO,
+    CALL_UPDATE: eO,
     CALL_DELETE: function (t) {
         let { channelId: e } = t;
-        eI(eE(e));
+        eN(eC(e));
     },
     ACTIVITY_USER_ACTION: function (t) {
         let e,
@@ -1029,19 +1035,19 @@ let eT = new eh(o.h, {
                         },
                     };
                 })(n, a)),
-            null != e && void e_(e, { priority: K.In.URGENT, type: K.zb.GENERIC }))
+            null != e && void eh(e, { priority: K.In.URGENT, type: K.zb.GENERIC }))
         );
     },
     CLIPS_SAVE_CLIP_START: function (t) {
         switch (t.clipMethod) {
             case "manual":
-                e_(ts(J.intl.string(J.t.NBMK9m)));
+                eh(ts(J.intl.string(J.t.NBMK9m)));
                 break;
             case "auto":
                 var e;
                 null != t.signal &&
                     tl() &&
-                    e_(
+                    eh(
                         ((e = t.signal),
                         {
                             ...ti(H.KS.ClipsDebugAutoSignal),
@@ -1074,7 +1080,7 @@ let eT = new eh(o.h, {
         if (tl()) {
             var e;
             let i;
-            e_(
+            eh(
                 ((i = (e = t.clip).type === te.nQ.SCREENSHOT ? "screenshot" : "clip"),
                 {
                     ...ti(H.KS.ClipsDebugSaveSuccess),
@@ -1088,10 +1094,10 @@ let eT = new eh(o.h, {
         if ("manual" === t.clipMethod) {
             var e, i;
             let n;
-            (e_(ts(J.intl.string(J.t["1ZbZuh"]))),
+            (eh(ts(J.intl.string(J.t["1ZbZuh"]))),
                 tl() &&
                     null != t.errorMessage &&
-                    e_(
+                    eh(
                         ((e = t.errorMessage),
                         (i = t.errorAt),
                         (n = (() => {
@@ -1105,7 +1111,7 @@ let eT = new eh(o.h, {
         if ("manual" === t.clipMethod && tl()) {
             var e, i;
             let n;
-            e_(
+            eh(
                 ((e = t.reason),
                 (i = t.sourceChecks),
                 (n = (() => {
@@ -1143,7 +1149,7 @@ let eT = new eh(o.h, {
     CLIPS_SAVE_CLIP_TIMEOUT: function (t) {
         if ("manual" === t.clipMethod && tl()) {
             var e;
-            e_(
+            eh(
                 ((e = t.elapsedMs),
                 {
                     ...ti(H.KS.ClipsDebugSaveTimeout),
@@ -1179,7 +1185,7 @@ let eT = new eh(o.h, {
                       maxBodyLines: 8,
                   };
         null != i &&
-            (e_(i, { uniqueKey: `clips-debug-features-${t.sourceId}`, duration: 10 * U.A.Millis.SECOND }), eg());
+            (eh(i, { uniqueKey: `clips-debug-features-${t.sourceId}`, duration: 10 * U.A.Millis.SECOND }), eS());
     },
     STREAM_START: function (t) {
         let e = (function () {
@@ -1205,6 +1211,6 @@ let eT = new eh(o.h, {
                 },
             };
         })();
-        null != e && e_(e);
+        null != e && eh(e);
     },
 });

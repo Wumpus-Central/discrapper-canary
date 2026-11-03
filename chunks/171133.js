@@ -245,14 +245,14 @@ var eL = n(707539),
     eY = n(346055),
     e$ = n(863439),
     e0 = n(448368),
-    e7 = n(164375),
-    e9 = n(302031),
-    e3 = n(253932),
+    e7 = n(538355),
+    e3 = n(302031),
+    e9 = n(253932),
     e1 = n(576705),
     e8 = n(652215),
-    e6 = n(838541),
-    e4 = n(282573),
-    e5 = n(165648);
+    e5 = n(838541),
+    e6 = n(282573),
+    e4 = n(165648);
 let e2 = { formatInline: !0, noStyleAndInteraction: !0 },
     te = s.memo(function (e) {
         let { channel: t } = e,
@@ -266,13 +266,13 @@ let e2 = { formatInline: !0, noStyleAndInteraction: !0 },
                 [i],
             ),
             d = (0, o.bG)([e1.A], () => e1.A.can(e8.xBc.MANAGE_MESSAGES, t)),
-            u = e3.gs.useSetting(),
+            u = e9.gs.useSetting(),
             { content: h } = (0, e7.A)(i ?? null, e2),
             g = i?.content != null && "" !== i.content ? h : null,
             A = null;
         if (s)
             A = (0, l.jsx)(m.E, {
-                className: e4.G4,
+                className: e6.G4,
                 variant: "body-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t.BZHld2),
@@ -280,49 +280,49 @@ let e2 = { formatInline: !0, noStyleAndInteraction: !0 },
         else if (n)
             if (null != i && r)
                 A = (0, l.jsx)(m.E, {
-                    className: e4.G4,
+                    className: e6.G4,
                     variant: "body-sm/normal",
                     color: "text-muted",
                     children: F.intl.string(F.t["WPe+xL"]),
                 });
             else if (null != i && c)
                 A = (0, l.jsx)(m.E, {
-                    className: e4.G4,
+                    className: e6.G4,
                     variant: "body-sm/normal",
                     color: "text-muted",
                     children: F.intl.string(F.t.uxrh1O),
                 });
             else if (null != i) {
-                let { contentPlaceholder: e, renderedContent: t } = (0, e0.o)(i, g, r, c, a()(e4.BK, e5.tZ), {
-                    leadingIconClass: e4.AF,
-                    trailingIconClass: e4.AF,
-                    iconSize: e6.eJ,
+                let { contentPlaceholder: e, renderedContent: t } = (0, e0.o)(i, g, r, c, a()(e6.BK, e4.tZ), {
+                    leadingIconClass: e6.AF,
+                    trailingIconClass: e6.AF,
+                    iconSize: e5.eJ,
                 });
                 A =
                     null != t
                         ? (0, l.jsx)(m.E, {
                               variant: "body-sm/normal",
                               color: "text-muted",
-                              className: e4.BK,
+                              className: e6.BK,
                               children: t,
                           })
                         : (0, l.jsx)(m.E, {
                               tag: "span",
                               variant: "body-sm/normal",
                               color: "text-muted",
-                              className: e4.G4,
+                              className: e6.G4,
                               children: e,
                           });
             } else
                 A = (0, l.jsx)(m.E, {
-                    className: e4.G4,
+                    className: e6.G4,
                     variant: "body-sm/normal",
                     color: "text-muted",
                     children: F.intl.string(F.t["0KfDxM"]),
                 });
         else A = null;
         let E = (0, e$.A)(u, d);
-        return (0, l.jsx)(e9.Bs.Provider, { value: E, children: (0, l.jsx)(eY.M, { className: e4.JY, children: A }) });
+        return (0, l.jsx)(e3.Bs.Provider, { value: E, children: (0, l.jsx)(eY.M, { className: e6.JY, children: A }) });
     });
 var tt = n(599036);
 function tn(e) {

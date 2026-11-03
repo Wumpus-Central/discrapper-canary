@@ -17,7 +17,7 @@ var l = t(477900),
     f = t(534890),
     A = t(105292),
     y = t(879386);
-let k = function () {
+let I = function () {
     return (0, l.jsx)(f.ChatIcon, {
         size: "md",
         color: "currentColor",
@@ -25,7 +25,7 @@ let k = function () {
         "aria-label": A.intl.string(A.t.BAB0yK),
     });
 };
-var I = t(112107),
+var k = t(112107),
     C = t(930101),
     E = t(302031),
     v = t(441136),
@@ -33,12 +33,12 @@ var I = t(112107),
     b = t(957565),
     S = t(143145),
     M = t(392605),
-    _ = t(785562),
+    _ = t(678473),
     L = t(192308),
     w = t(588975),
     T = t(442433),
-    O = t(975807),
-    P = t(235393),
+    P = t(975807),
+    O = t(235393),
     R = t(679164),
     U = t(652215),
     D = t(24686),
@@ -170,7 +170,7 @@ let eu = {
     },
     soundboard: {
         react: (e, n, t) =>
-            (0, l.jsx)(I.Ay, {
+            (0, l.jsx)(k.Ay, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -234,7 +234,7 @@ let eu = {
         },
     },
     channel: { react: (e, n, t) => (0, l.jsx)(p.A, { iconType: e.iconType, children: (0, S.tj)(e, n, t) }, t.key) },
-    message: { react: (e, n, t) => (0, l.jsx)(k, {}, t.key) },
+    message: { react: (e, n, t) => (0, l.jsx)(I, {}, t.key) },
     subtext: {
         react: (e, n, t) => {
             let l = (0, s.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
@@ -360,9 +360,9 @@ function ed(e) {
                         : async (t) => {
                               let l = await R.AN(n.attachmentUrl);
                               (e.shouldStopPropagation && t?.stopPropagation(),
-                                  P.A.trackLinkClicked(l),
+                                  O.A.trackLinkClicked(l),
                                   e.shouldCloseDefaultModals && (0, L.closeAllModals)(),
-                                  (0, O.A)(l));
+                                  (0, P.A)(l));
                           },
                     o = i.noStyleAndInteraction
                         ? U.tEg
