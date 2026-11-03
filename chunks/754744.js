@@ -1520,8 +1520,8 @@ function tk(e) {
 }
 var tb = n(689175),
     tj = n(964486),
-    ty = n(738768),
-    tv = n(457699),
+    ty = n(457699),
+    tv = n(146849),
     tX = n(320095),
     tB = n(521981),
     tV = n(187654),
@@ -1640,41 +1640,37 @@ function tK(e) {
             [n, t, _, d],
         ),
         [C, f] = i.useState(!1),
-        x = (0, u.bG)(
-            [tv.A],
-            () => {
-                if (null == A.result) return [];
-                let e = (0, ty.wG)("");
-                return A.result.messages
-                    .map((e) => {
-                        let [t] = e;
-                        return (0, tX.rh)(t);
-                    })
-                    .map((t) => {
-                        let n = tv.A.getMessage(t.id, t.channel_id),
-                            l = new tw.Ay(t);
-                        return (
-                            null != n && (l = l.merge({ attachments: n.attachments, embeds: n.embeds })),
-                            (l = l.set(
-                                "customRenderedContent",
-                                (0, tB.Ay)(l, { postProcessor: e, allowHeading: !0, allowList: !0 }),
-                            ))
-                        );
-                    });
-            },
-            [A.result],
+        x = (0, tv.I2)({ location: "UserModMessageHistoryPanel" }).enabled,
+        p = (0, u.bG)(
+            [ty.A],
+            () =>
+                null == A.result
+                    ? []
+                    : A.result.messages
+                          .map((e) => {
+                              let [t] = e;
+                              return (0, tX.rh)(t);
+                          })
+                          .map((e) => {
+                              let t = ty.A.getMessage(e.id, e.channel_id),
+                                  n = new tw.Ay(e);
+                              return (null != t && (n = n.merge({ attachments: t.attachments, embeds: t.embeds })), x)
+                                  ? n
+                                  : n.set("customRenderedContent", (0, tB.Ay)(n, { allowHeading: !0, allowList: !0 }));
+                          }),
+            [A.result, x],
         ),
-        { blockCount: p, ignoreCount: F } = (0, u.cf)([J.A], () => {
+        { blockCount: F, ignoreCount: P } = (0, u.cf)([J.A], () => {
             let e = 0,
                 t = 0;
             return (
-                x.forEach((n) => {
+                p.forEach((n) => {
                     J.A.isBlockedForMessage(n) ? e++ : J.A.isIgnoredForMessage(n) && t++;
                 }),
                 { blockCount: e, ignoreCount: t }
             );
         }),
-        P = i.useMemo(
+        b = i.useMemo(
             () =>
                 null == A.result
                     ? {
@@ -1701,7 +1697,7 @@ function tK(e) {
                       },
             [A.result, g, C, I],
         );
-    return null == S || null == P
+    return null == S || null == b
         ? null
         : (0, a.jsxs)("div", {
               className: E()(y.kL, r),
@@ -1712,13 +1708,13 @@ function tK(e) {
                       ref: o,
                       onScroll: R,
                       children:
-                          !P.isSearching && I > 0
+                          !b.isSearching && I > 0
                               ? (0, a.jsx)(tV.A, {
-                                    messages: x,
-                                    search: P,
+                                    messages: p,
+                                    search: b,
                                     renderEmbeds: !0,
-                                    blockCount: p,
-                                    ignoreCount: F,
+                                    blockCount: F,
+                                    ignoreCount: P,
                                     scrollTo: m,
                                     onPageChange: L,
                                     onBlockedResultsClick: f,

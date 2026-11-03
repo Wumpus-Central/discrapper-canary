@@ -411,7 +411,7 @@ function e6(e) {
     })(e.data.item);
     return !!t.ok && ((eG[e.id] = { ...e, card: t.card }), !0);
 }
-function e9(e, t, n, i) {
+function e2(e, t, n, i) {
     let a = e.filter((e) => e.type !== n);
     return (
         t.forEach((e, t) => {
@@ -420,7 +420,7 @@ function e9(e, t, n, i) {
         a
     );
 }
-function e2() {
+function e9() {
     if (
         ((eB = eB.filter((e) => e.type !== q.Mm.RECOMMENDED_GUILDS)),
         (eK = eK.filter((e) => e.type !== q.Mm.RECOMMENDED_GUILDS)),
@@ -459,11 +459,11 @@ function e4() {
                 (K.A.isBlockedOrIgnored(e.data.user_id) ? (eL[e.id] = !0) : (eG[e.id] = ef(e))));
     });
 }
-function e8(e) {
+function e7(e) {
     let t, n, i, a, s;
     if ((ew.length > 0 && ((ex = ew), (ew = []), (eN = [])), ej++, null != e)) ((eB = e.newUnread), (eK = e.newRead));
     else {
-        let [e, t] = e7(ex);
+        let [e, t] = e8(ex);
         ((eB = e), (eK = t));
     }
     ((function () {
@@ -504,8 +504,8 @@ function e8(e) {
         (t.forEach((e) => {
             ((ek[e.id] = e), null != es.getReadTimestamp(e.id) ? i.push(e) : n.push(e));
         }),
-            (eB = e9(eB, n, q.Mm.GUILD_EVENT, 7)),
-            (eK = e9(eK, i, q.Mm.GUILD_EVENT, 7)));
+            (eB = e2(eB, n, q.Mm.GUILD_EVENT, 7)),
+            (eK = e2(eK, i, q.Mm.GUILD_EVENT, 7)));
     })(),
         (t = new Set()),
         (n = {}),
@@ -539,9 +539,9 @@ function e8(e) {
             };
             (t.add(e.content.id), (ek[s.id] = s), null != es.getReadTimestamp(s.id) ? a.push(s) : i.push(s));
         }),
-        (eB = e9(eB, i, q.Mm.ACTIVITY, 5)),
-        (eK = e9(eK, a, q.Mm.ACTIVITY, 5)),
-        e2(),
+        (eB = e2(eB, i, q.Mm.ACTIVITY, 5)),
+        (eK = e2(eK, a, q.Mm.ACTIVITY, 5)),
+        e9(),
         null != eb.load_id &&
             eC !== eb.load_id &&
             (eT({
@@ -558,7 +558,7 @@ function e8(e) {
         eh([...eB, ...eK], 0, q.w5, eG),
         (eq = !1));
 }
-function e7(e) {
+function e8(e) {
     let t = [],
         n = [],
         i = [];
@@ -630,7 +630,7 @@ function tr(e) {
         (a > ez || !eY) && e.type === q.Mm.MESSAGE && e.data.channel_id === t ? n.push(e) : i.push(e);
     });
     let a = eF,
-        [s, r] = e7(ew);
+        [s, r] = e8(ew);
     if (((eN = te(s, t)), (eF = eY ? a && eN.length >= q.$P : a && e5(i, ew)), 0 === n.length && a === eF)) return !1;
     0 !== n.length && ((eB = i), (eK = [...eK, ...n]));
 }
@@ -790,7 +790,7 @@ let tl = new td(A.h, {
         },
         LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
             let { messageItem: t, customStatusItem: n } = e;
-            if (null != n) return ((eH = n), null != eC && ((ew = ew.length > 0 ? ew : [...ex]), e4(), e8()), !0);
+            if (null != n) return ((eH = n), null != eC && ((ew = ew.length > 0 ? ew : [...ex]), e4(), e7()), !0);
             if (null != t) {
                 let e = {
                     id: t.message.id,
@@ -808,9 +808,9 @@ let tl = new td(A.h, {
                     (eG[t.message.id] = { ...e, message: (0, N.rh)(t.message) }),
                     null == eC && null == eb)
                 ) {
-                    let [t, n] = e7((ex = [e, ...ex]));
+                    let [t, n] = e8((ex = [e, ...ex]));
                     ((eB = t), (eK = n));
-                } else ((ew = [e, ...ew]), e8());
+                } else ((ew = [e, ...ew]), e7());
                 return !0;
             }
             return !1;
@@ -848,9 +848,9 @@ let tl = new td(A.h, {
                     })),
                 e4(),
                 (eb = { load_id: i, load_time_millis: Date.now() - a, feed_item_ids: ew.map((e) => e.id) }));
-            let [d, l] = e7(ew);
+            let [d, l] = e8(ew);
             if (((eN = te(d)), !eY || 0 === ej || s))
-                ((ej = 0), !e$ && e5(d, ew) ? ((eF = !0), (eU = !0)) : (eF = !1), e8({ newUnread: d, newRead: l }));
+                ((ej = 0), !e$ && e5(d, ew) ? ((eF = !0), (eU = !0)) : (eF = !1), e7({ newUnread: d, newRead: l }));
             else {
                 ej > 0 && (eH = null);
                 let e = eN.length > q.$P;
@@ -931,7 +931,7 @@ let tl = new td(A.h, {
         },
         LOAD_ICYMI_RECOMMENDED_GUILDS: function (e) {
             let { guilds: t } = e;
-            ((eJ = t.map((e) => (0, X.jE)(e.guild))), e2());
+            ((eJ = t.map((e) => (0, X.jE)(e.guild))), e9());
         },
         ICYMI_CUSTOM_SCORES_UPDATED: function (e) {
             let { channelScores: t, guildId: n, guildScore: i } = e;
@@ -943,7 +943,7 @@ let tl = new td(A.h, {
         },
         RELOAD_ICYMI: function () {
             if (0 === ew.length) return !1;
-            (e8(), (eF = !1));
+            (e7(), (eF = !1));
         },
         ICYMI_TAB_OPENED: function () {
             ((eY = !0), (eD = Date.now()), eU && ((eU = !1), (eF = !1)), eP < 5 && eP++);
@@ -1549,7 +1549,7 @@ var tV = n(837381),
     tP = n(763754),
     tB = n(491182),
     tK = n(860227),
-    tz = n(941308),
+    tz = n(164375),
     tJ = n(699352),
     tW = n(715628),
     tX = n(752636),
@@ -1702,8 +1702,8 @@ function t3(e) {
     }
 }
 var t6 = n(548118),
-    t9 = n(995273),
-    t2 = n(668499);
+    t2 = n(995273),
+    t9 = n(668499);
 function t4(e) {
     let { item: t } = e,
         n = s.useMemo(() => {
@@ -1756,9 +1756,9 @@ function t4(e) {
     return "unknown" === n
         ? null
         : (0, a.jsx)("div", {
-              className: t2.kL,
+              className: t9.kL,
               children: (0, a.jsxs)("div", {
-                  className: t2.wx,
+                  className: t9.wx,
                   children: [
                       (function () {
                           if ("guild" === n && null != _)
@@ -1774,38 +1774,38 @@ function t4(e) {
                               });
                           if ("user" === n && null != g) {
                               let e = g.getAvatarURL(void 0, 50);
-                              return (0, a.jsx)("img", { src: e, alt: g.username, className: t2.my });
+                              return (0, a.jsx)("img", { src: e, alt: g.username, className: t9.my });
                           }
                           return null;
                       })(),
                       (0, a.jsxs)("div", {
-                          className: t2.Se,
+                          className: t9.Se,
                           children: [
                               (0, a.jsx)("div", {
-                                  className: t2.$,
+                                  className: t9.$,
                                   children: (0, a.jsxs)("div", {
-                                      className: t2.gH,
+                                      className: t9.gH,
                                       children: [
                                           "guild" === n && null != _
                                               ? (0, a.jsx)(tS.E, {
                                                     variant: "body-md/semibold",
                                                     color: "text-strong",
-                                                    className: t2.DD,
+                                                    className: t9.DD,
                                                     children: _.name,
                                                 })
                                               : "user" === n && null != g
                                                 ? (0, a.jsx)(tS.E, {
                                                       variant: "body-md/semibold",
                                                       color: "text-strong",
-                                                      className: t2.DD,
+                                                      className: t9.DD,
                                                       children: g.username,
                                                   })
                                                 : null,
                                           (0, a.jsx)(tS.E, {
                                               variant: "body-xs/normal",
                                               color: "text-muted",
-                                              className: t2.vE,
-                                              children: (0, t9.jb)(l),
+                                              className: t9.vE,
+                                              children: (0, t2.jb)(l),
                                           }),
                                       ],
                                   }),
@@ -1837,46 +1837,46 @@ function t4(e) {
                                   })();
                                   if ("user" === n)
                                       return (0, a.jsx)("div", {
-                                          className: t2.VA,
+                                          className: t9.VA,
                                           children: (0, a.jsx)(tS.E, {
                                               variant: "body-sm/medium",
                                               color: "text-subtle",
                                               tag: "span",
-                                              className: t2.o4,
+                                              className: t9.o4,
                                               children: e,
                                           }),
                                       });
                                   if (null != c && null != e) {
                                       let t = (0, tG.gU)(c, _);
                                       return (0, a.jsxs)("div", {
-                                          className: t2.VA,
+                                          className: t9.VA,
                                           children: [
                                               (0, a.jsx)(tS.E, {
                                                   variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
-                                                  className: t2.o4,
+                                                  className: t9.o4,
                                                   children: e,
                                               }),
                                               (0, a.jsx)(tS.E, {
                                                   variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
-                                                  className: t2.o4,
+                                                  className: t9.o4,
                                                   children: eu.intl.string(eu.t.CHUAYk),
                                               }),
                                               (0, a.jsxs)(tS.E, {
                                                   variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
-                                                  className: t2.o4,
+                                                  className: t9.o4,
                                                   children: [
                                                       null != t &&
                                                           (0, a.jsx)(t, {
                                                               size: "custom",
                                                               width: 16,
                                                               height: 16,
-                                                              className: t2.p,
+                                                              className: t9.p,
                                                           }),
                                                       u,
                                                   ],
@@ -1886,12 +1886,12 @@ function t4(e) {
                                   }
                                   return null != e
                                       ? (0, a.jsx)("div", {
-                                            className: t2.VA,
+                                            className: t9.VA,
                                             children: (0, a.jsx)(tS.E, {
                                                 variant: "body-sm/medium",
                                                 color: "text-subtle",
                                                 tag: "span",
-                                                className: t2.o4,
+                                                className: t9.o4,
                                                 children: e,
                                             }),
                                         })
@@ -1903,8 +1903,8 @@ function t4(e) {
               }),
           });
 }
-var t8 = n(301690);
-function t7(e) {
+var t7 = n(301690);
+function t8(e) {
     let { item: t } = e,
         n = s.useCallback(
             (e) => {
@@ -1933,11 +1933,11 @@ function t7(e) {
             [t],
         );
     return (0, a.jsxs)(tE.D, {
-        className: t8.k,
+        className: t7.k,
         onClick: n,
         children: [
             (0, a.jsx)(t4, { item: t }),
-            (0, a.jsx)("div", { className: t8.o, children: (0, a.jsx)(t3, { item: t }) }),
+            (0, a.jsx)("div", { className: t7.o, children: (0, a.jsx)(t3, { item: t }) }),
         ],
     });
 }
@@ -2320,7 +2320,7 @@ let nt = function (e) {
                           )
                         : (0, a.jsx)(
                               "div",
-                              { ref: (t) => M(e.id, t), "data-item-id": e.id, children: (0, a.jsx)(t7, { item: e }) },
+                              { ref: (t) => M(e.id, t), "data-item-id": e.id, children: (0, a.jsx)(t8, { item: e }) },
                               e.id,
                           ),
             [M],
