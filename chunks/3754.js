@@ -1155,7 +1155,7 @@ async function eY() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "661354";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "661356";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
     let s = eH?.processUtils?.getLastCrash;
@@ -1501,7 +1501,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 661354, Version Hash: 3d3b5aa841510e949c674f408923cfb481a3a08e`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 661356, Version Hash: e9fda58cb346555cdd56d26b3ee46f1d058061ef`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -11984,7 +11984,7 @@ let ET =
                             n.e("995210"),
                             n.e("649019"),
                             n.e("852694"),
-                            n.e("991984"),
+                            n.e("921946"),
                             n.e("317699"),
                             n.e("257032"),
                             n.e("952831"),
@@ -26194,7 +26194,7 @@ let yI = "isHideDevBanner",
                     className: t_()(yf.Wz, yf.mr),
                     children: [
                         (0, b.jsx)(yh, { className: yf.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "661354" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "661356" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -36939,7 +36939,7 @@ let Mu = (0, ri.Fe)({
                 n.e("995210"),
                 n.e("649019"),
                 n.e("852694"),
-                n.e("991984"),
+                n.e("921946"),
                 n.e("952831"),
                 n.e("677602"),
                 n.e("588860"),

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => k }), n(376728));
+(n.d(t, { A: () => F }), n(376728));
 var i,
     r,
     a,
@@ -16,53 +16,46 @@ var i,
     n(733110));
 var l = n(17928),
     o = n(73153),
-    d = (((i = {}).RESOLVING = "RESOLVING"), (i.RESOLVED = "RESOLVED"), (i.ERROR = "ERROR"), i),
-    c =
+    d = n(951217),
+    c = (((i = {}).RESOLVING = "RESOLVING"), (i.RESOLVED = "RESOLVED"), (i.ERROR = "ERROR"), i),
+    u =
         (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (r[(r.SINGLE = 1)] = "SINGLE"),
         (r[(r.MULTI = 2)] = "MULTI"),
         r),
-    u = (((a = {})[(a.JOINED = 1)] = "JOINED"), (a[(a.FAILED = 2)] = "FAILED"), a);
-let _ = new Map();
-class E extends l.Ay.Store {
+    _ = (((a = {})[(a.JOINED = 1)] = "JOINED"), (a[(a.FAILED = 2)] = "FAILED"), a);
+let E = new Map();
+class A extends l.Ay.Store {
     static displayName = "GameOrganizationInviteStore";
     getInvite(e) {
-        return _.get(e) ?? null;
+        return E.get(e) ?? null;
     }
     getInvites() {
-        return _;
+        return E;
     }
 }
-let A = new E(o.h, {
+let h = new A(o.h, {
     GAME_ORGANIZATION_INVITE_RESOLVE: function (e) {
         let { code: t } = e;
-        if (_.get(t)?.state === d.RESOLVED) return !1;
-        (_ = new Map(_)).set(t, { code: t, state: d.RESOLVING });
+        if (E.get(t)?.state === c.RESOLVED) return !1;
+        (E = new Map(E)).set(t, { code: t, state: c.RESOLVING });
     },
     GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS: function (e) {
         let { code: t, invite: n } = e;
-        (_ = new Map(_)).set(
+        (E = new Map(E)).set(
             t,
             (function (e) {
                 let { game_organization: t, application: n, application_config: i, guild: r } = e;
                 return {
                     code: e.code,
-                    state: d.RESOLVED,
+                    state: c.RESOLVED,
                     inviterId: e.inviter_id,
                     accepted: e.accepted,
                     guildId: e.guild.id,
-                    organization: {
-                        id: t.game_organization_id,
-                        name: t.name,
-                        description: t.description,
-                        iconUrl: t.icon_url,
-                        applicationId: t.application_id,
-                        memberCount: t.member_count,
-                        maxMembers: t.max_members,
-                    },
+                    organization: (0, d.p)(t),
                     application: { id: n.id, name: n.name, iconUrl: n.icon_url },
                     displayNoun: i?.display_noun ?? null,
-                    characterMode: i?.character_mode ?? c.SINGLE,
+                    characterMode: i?.character_mode ?? u.SINGLE,
                     linkedGuild: {
                         id: r.id,
                         name: r.name,
@@ -76,29 +69,29 @@ let A = new E(o.h, {
     },
     GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE: function (e) {
         let { code: t, error: n } = e;
-        if (_.get(t)?.state === d.RESOLVED) return !1;
-        (_ = new Map(_)).set(t, { code: t, state: d.ERROR, error: n });
+        if (E.get(t)?.state === c.RESOLVED) return !1;
+        (E = new Map(E)).set(t, { code: t, state: c.ERROR, error: n });
     },
     GAME_ORGANIZATION_INVITE_ACCEPT_SUCCESS: function (e) {
         let { code: t } = e,
-            n = _.get(t);
-        if (n?.state !== d.RESOLVED) return !1;
-        (_ = new Map(_)).set(t, { ...n, accepted: !0 });
+            n = E.get(t);
+        if (n?.state !== c.RESOLVED) return !1;
+        (E = new Map(E)).set(t, { ...n, accepted: !0 });
     },
 });
-var h = n(927813),
-    f = n(636537),
-    I = n(181658),
-    p = n(652215);
-let m = {
+var f = n(927813),
+    I = n(636537),
+    p = n(181658),
+    m = n(652215);
+let T = {
     async resolveGameOrganizationInvite(e) {
-        if (o.h.isDispatching()) return (await Promise.resolve(), m.resolveGameOrganizationInvite(e));
+        if (o.h.isDispatching()) return (await Promise.resolve(), T.resolveGameOrganizationInvite(e));
         o.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_RESOLVE", code: e });
         try {
-            let { body: t } = await f.Bo.get({ url: p.Rsh.GAME_ORGANIZATION_INVITE(e), rejectWithError: !0 });
+            let { body: t } = await I.Bo.get({ url: m.Rsh.GAME_ORGANIZATION_INVITE(e), rejectWithError: !0 });
             o.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS", code: e, invite: t });
         } catch (n) {
-            let t = new I.A(n);
+            let t = new p.A(n);
             throw (
                 o.h.dispatch({
                     type: "GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE",
@@ -110,15 +103,15 @@ let m = {
         }
     },
     async fetchInvitableGameOrganizations(e) {
-        let { body: t } = await f.Bo.get({
-            url: p.Rsh.GAME_ORGANIZATIONS_INVITABLE,
+        let { body: t } = await I.Bo.get({
+            url: m.Rsh.GAME_ORGANIZATIONS_INVITABLE,
             query: { guild_ids: e },
             rejectWithError: !0,
         });
         o.h.dispatch({ type: "INVITABLE_GAME_ORGANIZATIONS_FETCH_SUCCESS", guildIds: e, gameOrganizations: t });
     },
     async fetchCharacterEligibility(e) {
-        let { body: t } = await f.Bo.get({ url: p.Rsh.GAME_ORGANIZATION_INVITE_CHARACTERS(e), rejectWithError: !0 });
+        let { body: t } = await I.Bo.get({ url: m.Rsh.GAME_ORGANIZATION_INVITE_CHARACTERS(e), rejectWithError: !0 });
         o.h.dispatch({
             type: "GAME_ORGANIZATION_CHARACTER_ELIGIBILITY_FETCH_SUCCESS",
             code: e,
@@ -127,25 +120,25 @@ let m = {
     },
     async acceptGameOrganizationInvite(e, t) {
         try {
-            let { body: n } = await f.Bo.post({
-                url: p.Rsh.GAME_ORGANIZATION_INVITE_JOIN(e),
+            let { body: n } = await I.Bo.post({
+                url: m.Rsh.GAME_ORGANIZATION_INVITE_JOIN(e),
                 body: { character_id: t },
                 rejectWithError: !0,
             });
             return (
-                n.game_organization_join_status === u.JOINED &&
+                n.game_organization_join_status === _.JOINED &&
                     o.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_ACCEPT_SUCCESS", code: e }),
                 n
             );
         } catch (e) {
-            throw new I.A(e);
+            throw new p.A(e);
         }
     },
 };
-((0, l.UT)(A, {
-    getQueryId: p.fic.GAME_ORGANIZATION_INVITE,
-    staleAfter: 5 * h.A.Seconds.MINUTE,
-    failureStaleAfter: 5 * h.A.Seconds.MINUTE,
+((0, l.UT)(h, {
+    getQueryId: m.fic.GAME_ORGANIZATION_INVITE,
+    staleAfter: 5 * f.A.Seconds.MINUTE,
+    failureStaleAfter: 5 * f.A.Seconds.MINUTE,
     retryConfig: {
         retryableErrors: function (e) {
             let t = e.status;
@@ -153,76 +146,76 @@ let m = {
         },
     },
     get: (e) => {
-        let t = A.getInvite(e);
-        return t?.state === d.RESOLVED ? t : null;
+        let t = h.getInvite(e);
+        return t?.state === c.RESOLVED ? t : null;
     },
     load: async (e) => {
-        await m.resolveGameOrganizationInvite(e);
+        await T.resolveGameOrganizationInvite(e);
     },
 }),
     n(993748));
-var T = n(292572),
-    g = n(122906),
-    S = n(128391),
-    N = n(167189),
-    C = n(254160),
-    O = n(67480),
-    R = n(733391),
-    L = n(637893),
-    y = n(227327);
-let D = new Set();
-function v(e, t) {
-    D.has(e) ||
-        (D.add(e),
-        (0, C.f)(async () => {
+var g = n(292572),
+    S = n(122906),
+    N = n(128391),
+    C = n(167189),
+    O = n(254160),
+    R = n(67480),
+    L = n(733391),
+    y = n(637893),
+    D = n(227327);
+let v = new Set();
+function b(e, t) {
+    v.has(e) ||
+        (v.add(e),
+        (0, O.f)(async () => {
             try {
                 await t();
             } finally {
-                D.delete(e);
+                v.delete(e);
             }
         }));
 }
-var b = n(168543),
-    P = n(903209),
-    M = n(734057);
+var P = n(168543),
+    M = n(903209),
+    U = n(734057);
 n(299091);
-var U = n(721779);
-function w(e, t) {
-    let n = (0, U.Ay)(e);
+var w = n(721779);
+function G(e, t) {
+    let n = (0, w.Ay)(e);
     null != n &&
         0 !== n.length &&
         n.forEach((e) => {
             let { type: n, code: i } = e;
             switch (n) {
-                case N.I.INVITE:
+                case C.I.INVITE:
                     break;
-                case N.I.TEMPLATE:
-                    (0, C.f)(async () => {
-                        null == g.A.getGuildTemplate(i) && (await T.A.resolveGuildTemplate(i));
+                case C.I.TEMPLATE:
+                    (0, O.f)(async () => {
+                        null == S.A.getGuildTemplate(i) && (await g.A.resolveGuildTemplate(i));
                     });
                     break;
-                case N.I.BUILD_OVERRIDE:
-                case N.I.MANUAL_BUILD_OVERRIDE:
-                case N.I.EVENT:
-                case N.I.CHANNEL_LINK:
-                case N.I.ACTIVITY_BOOKMARK:
-                case N.I.EMBEDDED_ACTIVITY_INVITE:
-                case N.I.GUILD_PRODUCT:
-                case N.I.SERVER_SHOP:
-                case N.I.QUESTS_EMBED:
-                case N.I.APP_DIRECTORY_STOREFRONT:
-                case N.I.APP_DIRECTORY_STOREFRONT_SKU:
-                case N.I.APP_OAUTH2_LINK:
-                case N.I.COLLECTIBLES_SHOP:
-                case N.I.EXPERIMENT:
-                case N.I.GAME_PROFILE:
-                case N.I.GAME_SERVER_SHARE:
+                case C.I.BUILD_OVERRIDE:
+                case C.I.MANUAL_BUILD_OVERRIDE:
+                case C.I.EVENT:
+                case C.I.CHANNEL_LINK:
+                case C.I.ACTIVITY_BOOKMARK:
+                case C.I.EMBEDDED_ACTIVITY_INVITE:
+                case C.I.GUILD_PRODUCT:
+                case C.I.SERVER_SHOP:
+                case C.I.QUESTS_EMBED:
+                case C.I.APP_DIRECTORY_STOREFRONT:
+                case C.I.APP_DIRECTORY_STOREFRONT_SKU:
+                case C.I.APP_OAUTH2_LINK:
+                case C.I.COLLECTIBLES_SHOP:
+                case C.I.EXPERIMENT:
+                case C.I.GAME_PROFILE:
+                case C.I.GAME_SERVER_SHARE:
                     break;
-                case N.I.USER_PROFILE:
-                    if ((0, b.l)("MessageCodedLinkManager")) {
-                        let e = null == t ? null : M.A.getChannel(t);
-                        (0, C.f)(async () => {
-                            await (0, P.A)(i, void 0, {
+                case C.I.USER_PROFILE:
+                    if ((0, P.l)("MessageCodedLinkManager")) {
+                        let e = null == t ? null : U.A.getChannel(t);
+                        (0, O.f)(async () => {
+                            await (0, M.A)(i, void 0, {
                                 guildId: e?.guild_id ?? void 0,
                                 withMutualGuilds: !0,
                                 withMutualFriends: !0,
@@ -230,57 +223,57 @@ function w(e, t) {
                         });
                     }
                     break;
-                case N.I.GAME_ORGANIZATION_INVITE:
+                case C.I.GAME_ORGANIZATION_INVITE:
                     break;
-                case N.I.SOCIAL_LAYER_STOREFRONT:
-                case N.I.SOCIAL_LAYER_STOREFRONT_APP:
+                case C.I.SOCIAL_LAYER_STOREFRONT:
+                case C.I.SOCIAL_LAYER_STOREFRONT_APP:
                     !(function (e, t) {
-                        let n = (0, y.rg)(t);
+                        let n = (0, D.rg)(t);
                         if (null == n) return;
                         let i =
-                            e === N.I.SOCIAL_LAYER_STOREFRONT_APP
+                            e === C.I.SOCIAL_LAYER_STOREFRONT_APP
                                 ? { type: "application", applicationId: n.scopeId }
                                 : { type: "guild", guildId: n.scopeId };
                         if (n.skuIds.length > 1) {
-                            if (!(0, L.x)("resolveStorefrontCodedLink")) return;
-                            v(`${e}:${n.scopeId}`, async () => {
+                            if (!(0, y.x)("resolveStorefrontCodedLink")) return;
+                            b(`${e}:${n.scopeId}`, async () => {
                                 "application" === i.type
-                                    ? await (0, R.ap)(i.applicationId, { eager: !1 })
-                                    : await (0, R.Rw)(i.guildId, { eager: !1 });
+                                    ? await (0, L.ap)(i.applicationId, { eager: !1 })
+                                    : await (0, L.Rw)(i.guildId, { eager: !1 });
                             });
                             return;
                         }
                         let [r] = n.skuIds;
-                        null != O.A.get(r) ||
-                            O.A.isFetching(r) ||
-                            O.A.didFetchingSkuFail(r) ||
+                        null != R.A.get(r) ||
+                            R.A.isFetching(r) ||
+                            R.A.didFetchingSkuFail(r) ||
                             (o.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
-                            v((0, y.m5)([r], n.scopeId), async () => {
+                            b((0, D.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
-                                    ? await (0, R.Pp)(i.applicationId, r, e)
-                                    : await (0, R.qf)(i.guildId, r, e);
+                                    ? await (0, L.Pp)(i.applicationId, r, e)
+                                    : await (0, L.qf)(i.guildId, r, e);
                             }));
                     })(n, i);
                     break;
-                case N.I.APP_DIRECTORY_PROFILE:
+                case C.I.APP_DIRECTORY_PROFILE:
                     break;
                 default:
                     throw Error(`Unknown coded link type: ${n}`);
             }
         });
 }
-function G(e) {
-    (w(e.content ?? null, e.channel_id),
+function x(e) {
+    (G(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
-            return w(n.content, e.channel_id);
+            return G(n.content, e.channel_id);
         }));
 }
 n(818348);
-class x extends s.A {
+class k extends s.A {
     constructor() {
-        (super(), (0, S.A)(this, G));
+        (super(), (0, N.A)(this, x));
     }
 }
-let k = new x();
+let F = new k();

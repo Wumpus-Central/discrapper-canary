@@ -280,4 +280,8 @@ let N = new S(r.h, {
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: m,
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: m,
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: m,
+    GAME_ORGANIZATION_FETCH_SUCCESS: function (e) {
+        let { application: t } = e;
+        h(t);
+    },
 });
