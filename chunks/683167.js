@@ -101,7 +101,7 @@ function P(e) {
     let t = l.useContext(o.Ay),
         n = m.SI.useSetting(),
         i = (0, c.I2)({ location: "useEditor" }).enabled,
-        p = (0, u.j)({ formatInline: !1 }),
+        p = (0, u.j)(),
         g = i ? p : null,
         [x] = l.useState(() => {
             let l = (0, r.ie)();
