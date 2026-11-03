@@ -6101,12 +6101,8 @@ function ds(e) {
                                         : V.intl.formatToPlainString(V.t.owlOWc, { dateLimit: n });
                                 default:
                                     return e.eligible
-                                        ? V.intl.format(V.t["1LDI4J"], {
-                                              dateLimit: n,
-                                              playtimeLimit: 2,
-                                              supportURL: t,
-                                          })
-                                        : V.intl.formatToPlainString(V.t.s4Kk0C, { dateLimit: n, playtimeLimit: 2 });
+                                        ? V.intl.format(V.t["8uEuEe"], { dateLimit: n, supportURL: t })
+                                        : V.intl.formatToPlainString(V.t.dt2jVC, { dateLimit: n });
                             }
                         })(t, i),
                     }),
