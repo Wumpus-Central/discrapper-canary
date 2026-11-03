@@ -1,4 +1,4 @@
-r.d(t, { Bf: () => h, Ce: () => _, J$: () => E });
+r.d(t, { Bf: () => h, Ce: () => _, J$: () => E, sn: () => R });
 var n = r(636537),
     l = r(73153),
     a = r(913122),
@@ -37,26 +37,28 @@ async function E(e) {
         onRedeemStart: i,
         onRedeemSucceed: _,
         onRedeemFail: E,
-        shouldRefetchBalance: R = !0,
+        shouldRefetchBalance: C = !0,
     } = e;
     (l.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: t }), i?.());
     try {
         let e = c.A.get(t),
-            a = e?.applicationId,
-            i = null != a && (0, d.Fs)(a),
-            E = { checkout_session_id: r };
-        i && (E.test_mode = !0);
-        let C = (await n.Bo.post({ url: o.Rsh.VIRTUAL_CURRENCY_SKU_REDEEM(t), body: E, rejectWithError: !1 })).body;
-        if (null == C || !Array.isArray(C)) {
+            l = e?.applicationId,
+            a = null != l && (0, d.Fs)(l),
+            i = { checkout_session_id: r };
+        a && (i.test_mode = !0);
+        let E = (await n.Bo.post({ url: o.Rsh.VIRTUAL_CURRENCY_SKU_REDEEM(t), body: i, rejectWithError: !1 })).body;
+        if (null == E || !Array.isArray(E)) {
             let e = "Could not read entitlements from Virtual Currency redemption response. Response: ",
-                t = Error(e, C);
-            throw (u.error(e, C), s.A.captureException(t, { tags: { app_context: "virtual_currency" } }), t);
+                t = Error(e, E);
+            throw (u.error(e, E), s.A.captureException(t, { tags: { app_context: "virtual_currency" } }), t);
         }
-        return (
-            l.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: t, entitlements: C }), R && h(), _?.(C), C
-        );
+        return (R({ skuId: t, entitlements: E }), C && h(), _?.(E), E);
     } catch (r) {
         let e = r instanceof a.Ey ? r : new a.Ey(r);
-        (l.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: t, error: e }), R && h(), E?.(e));
+        (l.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: t, error: e }), C && h(), E?.(e));
     }
+}
+function R(e) {
+    let { skuId: t, entitlements: r } = e;
+    l.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: t, entitlements: r });
 }

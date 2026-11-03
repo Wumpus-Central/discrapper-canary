@@ -32,9 +32,9 @@ function s(e) {
                 let n = await y({ loadId: t, errorExtra: { skuId: e, loadId: t } });
                 if ("signed" !== n.type) return void T(!1);
                 try {
-                    let e = await (0, l.Vw)(n.order.id);
-                    if (0 === e.length) throw new l.j2();
-                    (o(e), r?.(e));
+                    let t = await (0, l.Vw)(n.order.id);
+                    if (0 === t.length) throw new l.j2();
+                    (o(t), (0, i.sn)({ skuId: e, entitlements: t }), r?.(t));
                 } catch (r) {
                     g(r, { skuId: e, loadId: t, orderId: n.order.id });
                 } finally {
