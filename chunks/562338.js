@@ -4404,8 +4404,8 @@ async function ig(e) {
 }
 var iA = a(168862);
 function iv(e) {
-    let { stage: t } = e,
-        a = (0, p.bG)([sV.A], () => {
+    let { stage: t, isHidden: a } = e,
+        s = (0, p.bG)([sV.A], () => {
             var e, t;
             let a,
                 s = sV.A.windowSize();
@@ -4416,11 +4416,11 @@ function iv(e) {
                 ii.find((e) => e >= a) ?? ir
             );
         }),
-        [s, r] = h.useState(a);
-    a > s && r(a);
-    let n = (0, p.bG)([l.A], () => l.A.selectedCharacterTraits),
-        c = (0, p.bG)([P.Ay], () => P.Ay.useReducedMotion),
-        d = h.useMemo(
+        [r, n] = h.useState(s);
+    s > r && n(s);
+    let c = (0, p.bG)([l.A], () => l.A.selectedCharacterTraits),
+        d = (0, p.bG)([P.Ay], () => P.Ay.useReducedMotion),
+        o = h.useMemo(
             () =>
                 (function (e) {
                     let { stage: t, traits: a, layout: s, mobileLift: i = 0, textureScale: r } = e,
@@ -4447,12 +4447,12 @@ function iv(e) {
                             ..._,
                         }
                     );
-                })({ stage: t, traits: n, layout: "Desktop", textureScale: s }),
-            [t, n, s],
+                })({ stage: t, traits: c, layout: "Desktop", textureScale: r }),
+            [t, c, r],
         ),
-        [o, u] = h.useState(null),
-        f = o ?? d,
-        b = (function (e) {
+        [u, f] = h.useState(null),
+        b = u ?? o,
+        x = (function (e) {
             let { visibleDataBinding: t, requestedDataBinding: a, textureScale: s } = e,
                 i = (function (e) {
                     let { visibleTextureNames: t, requestedTextureNames: a } = e,
@@ -4483,11 +4483,11 @@ function iv(e) {
                     e
                 );
             }, [i, s]);
-        })({ visibleDataBinding: f, requestedDataBinding: d, textureScale: s }),
+        })({ visibleDataBinding: b, requestedDataBinding: o, textureScale: r }),
         {
-            assetLoader: x,
-            onLoad: m,
-            textureManager: g,
+            assetLoader: m,
+            onLoad: g,
+            textureManager: A,
         } = (function () {
             let e = h.useRef(new Map()),
                 [t, a] = h.useState(null),
@@ -4509,7 +4509,15 @@ function iv(e) {
                     [t],
                 ),
             };
-        })();
+        })(),
+        w = h.useRef(null),
+        I = h.useRef(a);
+    h.useEffect(() => {
+        ((I.current = a), a ? w.current?.pause() : w.current?.play());
+    }, [a]);
+    let E = h.useCallback(() => {
+        (g(), I.current && w.current?.pause());
+    }, [g]);
     (function (e) {
         let { textureManager: t, referencedAssets: a, initialReferencedAssets: s } = e,
             i = h.useRef(new Map()),
@@ -4538,24 +4546,25 @@ function iv(e) {
             }, [t, a]),
             r === a
         );
-    })({ textureManager: g, referencedAssets: b }) &&
-        o !== d &&
-        u(d);
-    let A = h.useMemo(() => ({ ...f, reducedMotion: c }), [f, c]);
+    })({ textureManager: A, referencedAssets: x }) &&
+        u !== o &&
+        f(o);
+    let j = h.useMemo(() => ({ ...b, reducedMotion: d }), [b, d]);
     return (0, i.jsx)("div", {
         role: "img",
-        "aria-label": (0, sz.O)(n),
-        className: _()(iA.dw, { [iA.RK]: null != o }),
+        "aria-label": (0, sz.O)(c),
+        className: _()(iA.dw, { [iA.RK]: null != u }),
         children: (0, i.jsx)(sB.W, {
             artboard: "AB_Master",
             stateMachine: "SM_Master",
             fit: "layout",
             alignment: "center",
-            assetLoader: x,
-            onLoad: m,
-            listenOnDocumentBody: !c,
+            ref: w,
+            assetLoader: m,
+            onLoad: E,
+            listenOnDocumentBody: !d,
             withReducedMotion: "play",
-            dataBinding: A,
+            dataBinding: j,
             className: iA.lW,
         }),
     });
@@ -4667,7 +4676,10 @@ function iI(e) {
                 "aria-label": es.intl.string(e1.default["CdU/PF"]),
                 children: [
                     (0, i.jsx)(H, { isVisible: E }),
-                    (0, i.jsx)("div", { className: _()(iw.qd, { [iw.R]: E }), children: (0, i.jsx)(iv, { stage: w }) }),
+                    (0, i.jsx)("div", {
+                        className: _()(iw.qd, { [iw.R]: E }),
+                        children: (0, i.jsx)(iv, { stage: w, isHidden: E }),
+                    }),
                     (0, v.Rq)(c) && (0, i.jsx)("div", { className: iw.qd, children: (0, i.jsx)(e8, { route: c }) }),
                     j &&
                         (0, i.jsx)("div", {
