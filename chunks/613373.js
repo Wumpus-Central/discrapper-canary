@@ -1,51 +1,40 @@
 n.d(t, {
-    nY: () => i.nY,
-    OH: () => i.OH,
-    zZ: () => l.A,
-    DQ: () => c.A,
-    uI: () => r.Ay,
-    lx: () => i.lx,
-    Yr: () => S,
-    KP: () => i.KP,
-    C1: () => h.A,
-    pK: () => i.pK,
-    _4: () => o,
-    O7: () => x.O7,
-    xx: () => a.xx,
-    P8: () => f.A,
-    A7: () => x.A7,
+    nY: () => a.nY,
+    OH: () => a.OH,
+    lx: () => a.lx,
+    Yr: () => m,
+    KP: () => a.KP,
+    pK: () => a.pK,
+    _4: () => i,
+    xx: () => l.xx,
+    P8: () => d.A,
+    B8: () => l.B8,
     Ft: () => s.default,
-    Kb: () => i.Kb,
-    KI: () => d,
-    rB: () => j.rB,
-    B8: () => a.B8,
-    zj: () => i.zj,
-    bq: () => x.bq,
-    Ce: () => g.C,
+    Kb: () => a.Kb,
+    KI: () => u,
+    rB: () => S.rB,
+    zj: () => a.zj,
+    bq: () => o.bq,
 });
-var s = n(266546);
-n(530567);
-var l = n(671897),
-    r = n(275664),
-    a = n(565164);
-n(408121);
-var c = n(931853);
-(n(246047), n(91034), n(710434), n(634156));
-var u = n(876230),
-    i = n(831056),
-    m = n(582128);
-let d = 4e3,
-    o = 2e3;
-function S(e) {
+var s = n(944597);
+(n(530567), n(671897), n(275664));
+var l = n(565164);
+(n(408121), n(931853), n(246047), n(91034), n(710434), n(634156));
+var r = n(876230),
+    a = n(831056),
+    c = n(582128);
+let u = 4e3,
+    i = 2e3;
+function m(e) {
     let { getCurrentVideoTime: t, onAnalytics: n, emitIntervalMs: s, minSegmentDurationMs: l } = e,
-        [r, a] = m.useState(null),
-        [c, i] = m.useState(!1),
-        [d, o] = m.useState(!1),
-        [S, f] = m.useState(!1),
-        g = (0, m.useRef)(null),
-        x = (0, m.useRef)(Date.now()),
-        h = (0, m.useRef)(!1),
-        j = (0, m.useCallback)(
+        [a, u] = c.useState(null),
+        [i, m] = c.useState(!1),
+        [d, o] = c.useState(!1),
+        [S, f] = c.useState(!1),
+        g = (0, c.useRef)(null),
+        x = (0, c.useRef)(Date.now()),
+        h = (0, c.useRef)(!1),
+        v = (0, c.useCallback)(
             (e) => {
                 e.segmentEndSec < e.segmentStartSec ||
                     n({
@@ -59,80 +48,80 @@ function S(e) {
             },
             [n],
         ),
-        v = (0, m.useCallback)(() => {
+        j = (0, c.useCallback)(() => {
             let e = t();
             if (null != e && d && S) {
                 let t = Date.now();
-                (a({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }), (h.current = !0));
+                (u({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }), (h.current = !0));
             }
         }, [t, d, S]),
-        b = (0, m.useCallback)(() => {
+        b = (0, c.useCallback)(() => {
             let e = t();
-            if (null == e || null == r) return;
+            if (null == e || null == a) return;
             let n = Date.now();
             n - x.current < s ||
-                e - r.segmentStartSec < l / 1e3 ||
-                (j({ ...r, endTimeMs: n, segmentEndSec: e }),
-                a({ startTimeMs: n, endTimeMs: n, segmentStartSec: e, segmentEndSec: e }),
+                e - a.segmentStartSec < l / 1e3 ||
+                (v({ ...a, endTimeMs: n, segmentEndSec: e }),
+                u({ startTimeMs: n, endTimeMs: n, segmentStartSec: e, segmentEndSec: e }),
                 (x.current = n));
-        }, [r, j, s, l, t]);
-    ((0, m.useEffect)(() => {
-        (d && S) || (a(null), (h.current = !1));
+        }, [a, v, s, l, t]);
+    ((0, c.useEffect)(() => {
+        (d && S) || (u(null), (h.current = !1));
     }, [d, S]),
-        (0, m.useEffect)(() => {
-            if (c && d && S)
-                (h.current || v(),
+        (0, c.useEffect)(() => {
+            if (i && d && S)
+                (h.current || j(),
                     (g.current = window.setInterval(() => {
                         b();
                     }, 200)));
             else {
                 let e = t();
-                if (null != r && null != e) {
+                if (null != a && null != e) {
                     let t = Date.now();
-                    e - r.segmentStartSec > 0.2 && j({ ...r, endTimeMs: t, segmentEndSec: e });
+                    e - a.segmentStartSec > 0.2 && v({ ...a, endTimeMs: t, segmentEndSec: e });
                 }
-                (a(null), (h.current = !1), null != g.current && (clearInterval(g.current), (g.current = null)));
+                (u(null), (h.current = !1), null != g.current && (clearInterval(g.current), (g.current = null)));
             }
             return () => {
                 null != g.current && (clearInterval(g.current), (g.current = null));
             };
-        }, [c, d, S, r, b, j, v, t]));
-    let M = (0, m.useCallback)(() => {
+        }, [i, d, S, a, b, v, j, t]));
+    let M = (0, c.useCallback)(() => {
             let e = t();
-            if (null != r && null != e) {
+            if (null != a && null != e) {
                 let t = Date.now();
-                (e - r.segmentStartSec > 0.2 && j({ ...r, endTimeMs: t, segmentEndSec: e }), a(null), (h.current = !1));
+                (e - a.segmentStartSec > 0.2 && v({ ...a, endTimeMs: t, segmentEndSec: e }), u(null), (h.current = !1));
             }
-        }, [r, j, t]),
-        C = (0, m.useRef)(M);
-    C.current = M;
-    let N = (0, m.useCallback)((e, t) => {
+        }, [a, v, t]),
+        N = (0, c.useRef)(M);
+    N.current = M;
+    let k = (0, c.useCallback)((e, t) => {
             switch (e) {
-                case u.Q6.PLAYING:
-                    i(!0);
+                case r.Q6.PLAYING:
+                    m(!0);
                     break;
-                case u.Q6.PAUSED:
-                case u.Q6.ENDED:
-                    (C.current(), i(!1));
+                case r.Q6.PAUSED:
+                case r.Q6.ENDED:
+                    (N.current(), m(!1));
             }
         }, []),
-        k = (0, m.useCallback)((e) => {
+        p = (0, c.useCallback)((e) => {
             o(!0);
         }, []);
     return {
-        handlePlayerStateChange: N,
-        handleLoadEnd: k,
-        handleFirstFrame: (0, m.useCallback)((e) => {
+        handlePlayerStateChange: k,
+        handleLoadEnd: p,
+        handleFirstFrame: (0, c.useCallback)((e) => {
             f(!0);
         }, []),
-        handleSeek: (0, m.useCallback)(() => {
-            C.current();
+        handleSeek: (0, c.useCallback)(() => {
+            N.current();
         }, []),
     };
 }
-var f = n(23590),
-    g = n(984212),
-    x = n(739416),
-    h = n(920228),
-    j = n(61491);
+var d = n(23590);
+n(984212);
+var o = n(739416);
+n(920228);
+var S = n(61491);
 n(645577);

@@ -701,45 +701,39 @@
     width: 24px
 }
 
-.floatingShareButtonContainer_b824c5 {
-    gap: 8px;
-    inset-inline-end: 16px;
-    top: 16px
-}
-
-.floatingShareButtonContainer_b824c5,
 .topStartOverlay_b824c5 {
     align-items: center;
-    display: flex;
-    position: absolute
-}
-
-.topStartOverlay_b824c5 {
     gap: var(--space-4);
     inset-inline-start: 8px;
-    pointer-events: none;
     top: var(--custom-top-start-overlay-top, 8px)
+}
+
+.overlayContainer_b824c5,
+.topStartOverlay_b824c5 {
+    display: flex;
+    pointer-events: none;
+    position: absolute
 }
 
 .overlayContainer_b824c5 {
     align-items: flex-start;
     bottom: 0;
-    display: flex;
     inset-inline-end: 0;
-    justify-content: flex-end;
-    pointer-events: none
-}
-
-.endScreenOverlay_b824c5,
-.overlayContainer_b824c5 {
     inset-inline-start: 0;
-    position: absolute;
+    justify-content: flex-end;
     top: 0
 }
 
 .endScreenOverlay_b824c5 {
-    background: rgba(25, 26, 28, .75);
+    background: rgba(25, 26, 28, .75)
+}
+
+.endScreenImageBackground_b824c5,
+.endScreenOverlay_b824c5 {
     height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
     width: 100%
 }
 
@@ -753,12 +747,7 @@
 .endScreenContainer_b824c5,
 .endScreenImageBackground_b824c5 {
     animation-duration: .5s;
-    animation-name: animate-fade-in_b824c5;
-    height: 100%;
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0;
-    width: 100%
+    animation-name: animate-fade-in_b824c5
 }
 
 .endScreenContainer_b824c5 {
@@ -766,8 +755,13 @@
     box-sizing: border-box;
     display: flex;
     gap: 32px;
+    height: 100%;
+    inset-inline-start: 0;
     justify-content: center;
-    padding: 10px 10px 60px
+    padding: 10px 10px 60px;
+    position: absolute;
+    top: 0;
+    width: 100%
 }
 
 .endScreenContainerPortrait_b824c5 {
@@ -877,4 +871,4 @@
     }
 }
 
-/*# sourceMappingURL=245420.7d79dcda942adaae.css.map*/
+/*# sourceMappingURL=245420.3657bf1f57f32ecd.css.map*/

@@ -25,10 +25,10 @@ var n = i(477900),
     y = i(324973);
 let f = (0, p.qT)({
     createPromise: () =>
-        Promise.all([i.e("216870"), i.e("508699"), i.e("398793"), i.e("256616"), i.e("133179"), i.e("334127")]).then(
-            i.bind(i, 266546),
+        Promise.all([i.e("216870"), i.e("508699"), i.e("398793"), i.e("256616"), i.e("133179"), i.e("275702")]).then(
+            i.bind(i, 944597),
         ),
-    webpackId: 266546,
+    webpackId: 944597,
     name: "DiscordVideoPlayer",
     renderLoader: () => (0, n.jsx)("div", { className: y.Lq }),
 });

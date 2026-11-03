@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { videoQuestCollection: () => et, playgroundConfig: () => ea }));
+(a.r(t), a.d(t, { videoQuestCollection: () => J, playgroundConfig: () => X }));
 var l = a(782134),
     o = a(477900),
     i = a(582128),
@@ -21,9 +21,9 @@ let s = {
                 embed: m,
                 fillContainer: h,
                 showTextContent: x,
-                showParticipants: g,
+                showParticipants: b,
             } = e,
-            b = i.useMemo(
+            g = i.useMemo(
                 () => ({
                     id: "playground-clip",
                     url: t,
@@ -41,7 +41,7 @@ let s = {
         return (0, o.jsx)("div", {
             style: h ? { width: "100%", height: "500px" } : { display: "flex", justifyContent: "center" },
             children: (0, o.jsx)(n.A, {
-                attachment: b,
+                attachment: g,
                 src: t,
                 posterUrl: a,
                 active: d,
@@ -54,7 +54,7 @@ let s = {
                 maxWidth: 0 === r ? void 0 : r,
                 maxHeight: 0 === s ? void 0 : s,
                 showTextContent: x,
-                showParticipants: g,
+                showParticipants: b,
             }),
         });
     },
@@ -79,7 +79,7 @@ let s = {
     },
 };
 var d = a(231723),
-    u = a(266546),
+    u = a(944597),
     p = a(3451),
     c = a(53774);
 let m = {
@@ -108,8 +108,8 @@ let m = {
 };
 var h = a(29477),
     x = a(831544),
-    g = a(717421),
-    b = a(834730),
+    b = a(717421),
+    g = a(834730),
     f = a(831056);
 let y = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
 function v(e) {
@@ -145,8 +145,8 @@ function S(e) {
             initialActive: c,
             autoHideVolumeSlider: m,
             numExtraButtons: h,
-            sizing: g,
-            persistPlayhead: b,
+            sizing: b,
+            persistPlayhead: g,
             hideFullScreenBtn: f,
         } = e,
         [S, V] = i.useState(0),
@@ -185,7 +185,7 @@ function S(e) {
             }),
             (0, o.jsx)("div", {
                 style:
-                    "video" === g
+                    "video" === b
                         ? {
                               width: "landscape" === t ? "640px" : "360px",
                               height: "landscape" === t ? "360px" : "640px",
@@ -213,7 +213,7 @@ function S(e) {
                         orientation: t,
                         maxSeekableTimeSec: l > 0 ? l : void 0,
                         autoHideVolumeSlider: m,
-                        persistPlayhead: b,
+                        persistPlayhead: g,
                         parentTransitionState: d.ip.ENTERED,
                         onProgressUpdate: () => {},
                         onEnded: () => {},
@@ -285,7 +285,7 @@ let V = {
         },
     },
     w = { tension: 500, friction: 30, clamp: !0 },
-    P = {
+    C = {
         name: "Timeline Indicators",
         id: "timeline-indicators-generic",
         component: function (e) {
@@ -294,7 +294,7 @@ let V = {
                     let [t, a] = i.useState(null),
                         [l, n] = i.useState(null),
                         r = i.useRef(null),
-                        [{ expansion: s }, d] = (0, g.z)(() => ({
+                        [{ expansion: s }, d] = (0, b.z)(() => ({
                             expansion: 0,
                             config: w,
                             onRest: () => {
@@ -334,7 +334,7 @@ let V = {
                                             cursor: "pointer",
                                             zIndex: 1,
                                         },
-                                        children: (0, o.jsx)(b.E, {
+                                        children: (0, o.jsx)(g.E, {
                                             variant: "text-xs/semibold",
                                             color: "text-overlay-light",
                                             children: "R",
@@ -377,19 +377,17 @@ let V = {
             indicatorTimeSec: { label: "Indicator Time (sec)", type: "number", defaultValue: 15 },
         },
     };
-var C = a(405670),
-    _ = a(441512),
-    L = a(412703),
-    R = a(440703),
-    U = a(267548),
-    k = a(668824),
+var P = a(405670),
+    _ = a(862529),
+    R = a(412703),
+    k = a(440703),
+    L = a(267548),
+    U = a(668824),
     j = a(738822),
     I = a(657792),
-    D = a(55759),
-    O = a(795068),
-    M = a(190107),
-    F = a(652215);
-function z(e) {
+    D = a(795068),
+    O = a(652215);
+function M(e) {
     let {
         url: t,
         width: a = 640,
@@ -399,18 +397,18 @@ function z(e) {
         transcript: n,
     } = e;
     return {
-        type: L.n.WATCH_VIDEO,
+        type: R.n.WATCH_VIDEO,
         target: o,
         assets: { video: { url: t, width: a, height: l, transcript: n } },
         messages: { videoTitle: i },
     };
 }
-function B() {
+function F() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: a = null, enrolledAt: l = null, claimedAt: o = null } = e;
     return {
         userId: "123",
-        questId: Q,
+        questId: z,
         enrolledAt: l,
         completedAt: a,
         claimedAt: o,
@@ -421,13 +419,13 @@ function B() {
         progress: {},
     };
 }
-let Q = `playground-video-quest-${Date.now()}`;
-function W(e) {
+let z = `playground-video-quest-${Date.now()}`;
+function B(e) {
     return {
-        id: Q,
+        id: z,
         preview: !0,
         config: {
-            id: Q,
+            id: z,
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
@@ -438,7 +436,7 @@ function W(e) {
                 rewards: [
                     {
                         skuId: "",
-                        type: R.l.VIRTUAL_CURRENCY,
+                        type: k.l.VIRTUAL_CURRENCY,
                         orbQuantity: 200,
                         messages: {
                             name: "Test Reward",
@@ -459,23 +457,23 @@ function W(e) {
                 gameTile: "",
                 logotype: "",
             },
-            taskConfigV2: { joinOperator: k.K.AND, tasks: { [L.n.WATCH_VIDEO]: e } },
+            taskConfigV2: { joinOperator: U.K.AND, tasks: { [R.n.WATCH_VIDEO]: e } },
             features: [],
-            sharePolicy: U.i.SHAREABLE_EVERYWHERE,
+            sharePolicy: L.i.SHAREABLE_EVERYWHERE,
             ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
         },
-        userStatus: B({ enrolledAt: new Date().toISOString() }),
+        userStatus: F({ enrolledAt: new Date().toISOString() }),
         targetedContent: [j.uF.QUEST_HOME_DESKTOP],
     };
 }
 function H(e) {
-    let { quest: t, children: a, isFullscreenEnabled: l = !1, setIsFullscreenEnabled: n = F.tEg } = e,
+    let { quest: t, children: a, isFullscreenEnabled: l = !1, setIsFullscreenEnabled: n = O.tEg } = e,
         r = i.useMemo(
             () => ({
                 quest: t,
                 sourceQuestContent: j.uF.INTERNAL_PREVIEW_TOOL,
                 videoSessionId: "playground-session",
-                onClose: F.tEg,
+                onClose: O.tEg,
                 isFullscreenEnabled: l,
                 setIsFullscreenEnabled: n,
                 maxProgressSec: 0,
@@ -489,94 +487,28 @@ function H(e) {
         questContent: j.uF.VIDEO_MODAL,
         sourceQuestContent: j.uF.INTERNAL_PREVIEW_TOOL,
         children: (e, t) =>
-            (0, o.jsx)(O.l.Provider, { value: s, children: (0, o.jsx)(O.a.Provider, { value: r, children: a }) }),
+            (0, o.jsx)(D.l.Provider, { value: s, children: (0, o.jsx)(D.a.Provider, { value: r, children: a }) }),
     });
 }
-function q(e) {
-    let { orientation: t, autoplay: a, questCompleted: l, fullEpisode: n, targetTimeSec: r, videoUrl: s } = e,
-        u = "portrait" === t,
-        [p, c] = i.useState(!1),
-        m = z({
-            url: s,
-            width: u ? 360 : 640,
-            height: u ? 640 : 360,
-            target: r,
-            videoTitle: u ? "Test Portrait Video" : "Test Landscape Video",
-            transcript: "transcript.txt",
-        }),
-        h = W(m),
-        x = i.useRef(!1);
-    (x.current || ((x.current = !0), C.Kr.getState().clearState()),
-        n && (h.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]));
-    let g = l
-        ? {
-              ...h,
-              userStatus: B({
-                  enrolledAt: h.userStatus?.enrolledAt ?? null,
-                  completedAt: h.userStatus?.enrolledAt ?? null,
-                  streamProgressSeconds: m.target,
-              }),
-          }
-        : h;
-    return (0, o.jsx)("div", {
-        style: {
-            display: "flex",
-            flexDirection: "column",
-            width: u ? "400px" : "100%",
-            maxWidth: u ? void 0 : "800px",
-            height: u ? "700px" : "500px",
-            backgroundColor: "#1e1f22",
-            borderRadius: "8px",
-            overflow: "hidden",
-            "--custom-footer-horizontal-padding": "20px",
-        },
-        children: (0, o.jsx)(H, {
-            quest: g,
-            isFullscreenEnabled: p,
-            setIsFullscreenEnabled: c,
-            children: (0, o.jsx)(D.A, {
-                targetTimeSec: m.target,
-                parentTransitionState: d.ip.ENTERED,
-                onOptimisticProgressUpdate: F.tEg,
-                autoplay: a,
-                autoFocus: !1,
-                openedAtMs: 0,
-                orientation: t,
-                videoUrlOverride: s,
-            }),
-        }),
-    });
-}
-let N = {
-        orientation: {
-            label: "Orientation",
-            type: "select",
-            options: [
-                { label: "Landscape", value: "landscape" },
-                { label: "Portrait", value: "portrait" },
-            ],
-            defaultValue: "landscape",
-        },
-        questCompleted: { label: "Quest Completed", type: "boolean", defaultValue: !1 },
-        fullEpisode: { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
-        targetTimeSec: { label: "Target Time (sec)", type: "number", defaultValue: 15 },
-        videoUrl: { label: "Video URL", type: "text", defaultValue: r.kz },
+let Q = {
+    orientation: {
+        label: "Orientation",
+        type: "select",
+        options: [
+            { label: "Landscape", value: "landscape" },
+            { label: "Portrait", value: "portrait" },
+        ],
+        defaultValue: "landscape",
     },
-    $ = {
-        name: "Landscape",
-        id: "landscape-video",
-        component: q,
-        controls: { ...N, orientation: { ...N.orientation, defaultValue: "landscape" } },
-    },
-    K = {
-        name: "Portrait",
-        id: "portrait-video",
-        component: q,
-        controls: { ...N, orientation: { ...N.orientation, defaultValue: "portrait" } },
-    },
-    Y =
+    questCompleted: { label: "Quest Completed", type: "boolean", defaultValue: !1 },
+    fullEpisode: { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
+    targetTimeSec: { label: "Target Time (sec)", type: "number", defaultValue: 15 },
+    videoUrl: { label: "Video URL", type: "text", defaultValue: r.kz },
+};
+var W = a(190107);
+let q =
         'Quest completion is server-driven. In the playground, crossing the reward indicator won\'t flip to the completed state \u2014 toggle "Quest Completed" to preview that UI.',
-    G = {
+    $ = {
         marginTop: "12px",
         padding: "8px 12px",
         fontSize: "12px",
@@ -585,7 +517,7 @@ let N = {
         border: "1px solid var(--border-subtle)",
         borderRadius: "6px",
     };
-function J(e, t) {
+function N(e, t) {
     return "video" === e
         ? { width: t ? "360px" : "640px", height: t ? "640px" : "360px", margin: "0 auto" }
         : {
@@ -599,7 +531,7 @@ function J(e, t) {
               overflow: "hidden",
           };
 }
-function X(e) {
+function K(e) {
     let {
             orientation: t,
             autoplay: a,
@@ -610,7 +542,7 @@ function X(e) {
             sizing: u,
         } = e,
         p = "portrait" === t,
-        c = z({
+        c = M({
             url: s,
             width: p ? 360 : 640,
             height: p ? 640 : 360,
@@ -618,9 +550,9 @@ function X(e) {
             videoTitle: p ? "Test Portrait Video" : "Test Landscape Video",
             transcript: "transcript.txt",
         }),
-        m = W(c),
+        m = B(c),
         h = i.useRef(!1);
-    (h.current || ((h.current = !0), C.Kr.getState().clearState()),
+    (h.current || ((h.current = !0), P.Kr.getState().clearState()),
         i.useEffect(() => {
             let e = document.querySelector('[data-testid="discord-web-video-player-video"]');
             if (null != e)
@@ -634,11 +566,11 @@ function X(e) {
                 null != e && (e.currentTime = 0);
             }
         }, []),
-        n && (m.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]));
+        n && (m.config.features = [W.Li.FULL_EPISODE_VIDEO_QUEST]));
     let x = l
         ? {
               ...m,
-              userStatus: B({
+              userStatus: F({
                   enrolledAt: m.userStatus?.enrolledAt ?? null,
                   completedAt: m.userStatus?.enrolledAt ?? null,
                   streamProgressSeconds: c.target,
@@ -648,13 +580,13 @@ function X(e) {
     return (0, o.jsxs)("div", {
         children: [
             (0, o.jsx)("div", {
-                style: J(u, p),
+                style: N(u, p),
                 children: (0, o.jsx)(H, {
                     quest: x,
                     children: (0, o.jsx)(_.A, {
                         targetTimeSec: c.target,
                         parentTransitionState: d.ip.ENTERED,
-                        onOptimisticProgressUpdate: F.tEg,
+                        onOptimisticProgressUpdate: O.tEg,
                         autoplay: a,
                         autoFocus: !1,
                         openedAtMs: 0,
@@ -663,12 +595,12 @@ function X(e) {
                     }),
                 }),
             }),
-            n && !l && (0, o.jsx)("div", { style: G, children: Y }),
+            n && !l && (0, o.jsx)("div", { style: $, children: q }),
         ],
     });
 }
-let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
-    ee = {
+let Y = { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
+    G = {
         label: "Container sizing",
         type: "select",
         options: [
@@ -677,11 +609,11 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
         ],
         defaultValue: "modal",
     },
-    et = {
+    J = {
         id: "video-quest",
         name: "Video Player",
         groups: [
-            { title: "Discord Video Player (Generic)", stories: [E, T, A, P] },
+            { title: "Discord Video Player (Generic)", stories: [E, T, A, C] },
             {
                 title: "Discord Multi Video Player (Experimental)",
                 stories: [
@@ -700,9 +632,9 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                     clipADurationSec: m,
                                     clipBStartSec: h,
                                     clipBDurationSec: x,
-                                    suppressSourceSelection: g,
+                                    suppressSourceSelection: b,
                                 } = e,
-                                b = i.useMemo(
+                                g = i.useMemo(
                                     () => ({
                                         id: "original",
                                         url: l,
@@ -750,16 +682,16 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                         parentTransitionState: d.ip.ENTERED,
                                         orientation: t,
                                         autoplay: a,
-                                        src: b.url,
-                                        poster: b.poster,
+                                        src: g.url,
+                                        poster: g.poster,
                                         renderVideo: (e) =>
                                             (0, o.jsx)(c.A, {
                                                 ...e,
                                                 isGridView: y,
                                                 setIsGridView: v,
-                                                original: b,
+                                                original: g,
                                                 subSources: f,
-                                                suppressSourceSelection: g,
+                                                suppressSourceSelection: b,
                                             }),
                                     },
                                     `${l}-${n}`,
@@ -777,35 +709,35 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                     {
                         name: "Landscape",
                         id: "landscape-video-composed",
-                        component: X,
+                        component: K,
                         controls: {
-                            ...N,
-                            orientation: { ...N.orientation, defaultValue: "landscape" },
-                            fullEpisode: Z,
-                            sizing: ee,
+                            ...Q,
+                            orientation: { ...Q.orientation, defaultValue: "landscape" },
+                            fullEpisode: Y,
+                            sizing: G,
                         },
                     },
                     {
                         name: "Portrait",
                         id: "portrait-video-composed",
-                        component: X,
+                        component: K,
                         controls: {
-                            ...N,
-                            orientation: { ...N.orientation, defaultValue: "portrait" },
-                            fullEpisode: Z,
-                            sizing: ee,
+                            ...Q,
+                            orientation: { ...Q.orientation, defaultValue: "portrait" },
+                            fullEpisode: Y,
+                            sizing: G,
                         },
                     },
                     {
                         name: "Landscape \u2014 Autoplay",
                         id: "landscape-video-composed-autoplay",
-                        component: X,
+                        component: K,
                         controls: {
-                            ...N,
-                            orientation: { ...N.orientation, defaultValue: "landscape" },
+                            ...Q,
+                            orientation: { ...Q.orientation, defaultValue: "landscape" },
                             autoplay: { label: "Autoplay", type: "boolean", defaultValue: !0 },
-                            fullEpisode: Z,
-                            sizing: ee,
+                            fullEpisode: Y,
+                            sizing: G,
                         },
                     },
                     {
@@ -822,7 +754,7 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                     sizing: s,
                                 } = e,
                                 u = "portrait" === t,
-                                p = z({
+                                p = M({
                                     url: r,
                                     width: u ? 360 : 640,
                                     height: u ? 640 : 360,
@@ -830,12 +762,12 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                     videoTitle: u ? "Test Portrait Video" : "Test Landscape Video",
                                     transcript: "transcript.txt",
                                 }),
-                                c = W(p);
-                            i && (c.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]);
+                                c = B(p);
+                            i && (c.config.features = [W.Li.FULL_EPISODE_VIDEO_QUEST]);
                             let m = l
                                 ? {
                                       ...c,
-                                      userStatus: B({
+                                      userStatus: F({
                                           enrolledAt: c.userStatus?.enrolledAt ?? null,
                                           completedAt: c.userStatus?.enrolledAt ?? null,
                                           streamProgressSeconds: p.target,
@@ -845,13 +777,13 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                             return (0, o.jsxs)("div", {
                                 children: [
                                     (0, o.jsx)("div", {
-                                        style: J(s, !1),
+                                        style: N(s, !1),
                                         children: (0, o.jsx)(H, {
                                             quest: m,
                                             children: (0, o.jsx)(_.A, {
                                                 targetTimeSec: p.target,
                                                 parentTransitionState: d.ip.ENTERED,
-                                                onOptimisticProgressUpdate: F.tEg,
+                                                onOptimisticProgressUpdate: O.tEg,
                                                 autoplay: a,
                                                 autoFocus: !1,
                                                 openedAtMs: 0,
@@ -860,22 +792,21 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                             }),
                                         }),
                                     }),
-                                    i && !l && (0, o.jsx)("div", { style: G, children: Y }),
+                                    i && !l && (0, o.jsx)("div", { style: $, children: q }),
                                 ],
                             });
                         },
                         controls: {
-                            ...N,
-                            orientation: { ...N.orientation, defaultValue: "landscape" },
-                            fullEpisode: Z,
-                            sizing: ee,
+                            ...Q,
+                            orientation: { ...Q.orientation, defaultValue: "landscape" },
+                            fullEpisode: Y,
+                            sizing: G,
                         },
                     },
                 ],
             },
-            { title: "Legacy Quest Player", stories: [$, K] },
         ],
         tags: ["Video Player", "Quests"],
         IconComponent: l.PlayIcon,
     },
-    ea = { playgroundBaseUrl: "video-quest", collections: [et] };
+    X = { playgroundBaseUrl: "video-quest", collections: [J] };

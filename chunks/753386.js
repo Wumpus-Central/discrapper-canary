@@ -33,9 +33,8 @@ function T(e) {
     return Number.isFinite(e) && e > 0;
 }
 function _(e) {
-    let { questId: t, sourceQuestContent: n, videoSessionId: u } = e;
-    i.Ay.getState().setTranscriptEnabled(!1);
-    let s = i.Ay.getState().getVideoProgress(t);
+    let { questId: t, sourceQuestContent: n, videoSessionId: u } = e,
+        s = i.Ay.getState().getVideoProgress(t);
     if (null == s) return;
     let a = l.A.getQuest(t);
     null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && f(a, s.maxTimestampSec);

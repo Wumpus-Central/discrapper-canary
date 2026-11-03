@@ -1,18 +1,17 @@
 n.d(t, {
     lk: () => I,
-    NN: () => S,
-    n6: () => C,
+    NN: () => p,
     OO: () => f,
     Ig: () => T,
-    aD: () => p,
+    aD: () => C,
     Se: () => A,
     uK: () => d,
-    Ay: () => v,
-    Ds: () => g,
-    LV: () => N,
-    Mk: () => m,
+    Ay: () => N,
+    Ds: () => m,
+    LV: () => g,
+    Mk: () => O,
     sy: () => E,
-    d: () => O,
+    d: () => S,
 });
 var r,
     u,
@@ -75,36 +74,30 @@ function I(e) {
     };
 }
 let C = (0, s.mj)({
-        name: "2026-04-composed-quest-player",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    p = (0, s.mj)({
-        name: "2026-05-quest-home-tile-redesign",
-        kind: "user",
-        defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-        variations: {
-            0: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-            1: { useNewLayoutWithSearch: !0, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-            2: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !0 },
-            3: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !1, ctaOnHover: !0 },
-            4: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !1 },
-        },
-    });
+    name: "2026-05-quest-home-tile-redesign",
+    kind: "user",
+    defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+    variations: {
+        0: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+        1: { useNewLayoutWithSearch: !0, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+        2: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !0 },
+        3: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !1, ctaOnHover: !0 },
+        4: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !1 },
+    },
+});
 (0, s.mj)({
     name: "2026-05-bounty-stale-refresh-quest-home",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let S = (0, s.mj)({
+let p = (0, s.mj)({
     name: "2026-09-mobile-quest-home-sort-priority",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var O =
+var S =
     588245 != n.j
         ? (((l = {})[(l.CONTROL = 0)] = "CONTROL"),
           (l[(l.NEW_LAYOUT_WITH_SEARCH = 1)] = "NEW_LAYOUT_WITH_SEARCH"),
@@ -113,7 +106,7 @@ var O =
           (l[(l.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 4)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
           l)
         : null;
-let m = (0, s.mj)({
+let O = (0, s.mj)({
     name: "2026-06-quest-home-layout-visual-tweaks",
     kind: "user",
     defaultConfig: { enabled: !1, variant: 0 },
@@ -131,14 +124,14 @@ let m = (0, s.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var g =
+var m =
     (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
     (i[(i.ALL_TIERS = 1)] = "ALL_TIERS"),
     (i[(i.TIER_1_VISUALS = 2)] = "TIER_1_VISUALS"),
     (i[(i.TIER_2_VISUALS = 3)] = "TIER_2_VISUALS"),
     (i[(i.TIER_3_VISUALS = 4)] = "TIER_3_VISUALS"),
     i);
-let N = (0, s.mj)({
+let g = (0, s.mj)({
     name: "2026-09-new-orb-reward-visuals",
     kind: "user",
     defaultConfig: { variant: 0 },
@@ -150,7 +143,7 @@ let N = (0, s.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let v = (0, s.mj)({
+let N = (0, s.mj)({
     name: "2026-10-clickable-hero-banner",
     kind: "user",
     defaultConfig: { enabled: !1 },

@@ -1040,8 +1040,8 @@ function e2() {
     return (0, s.jsx)(f.E, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" });
 }
 let e3 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
-    e6 = eZ(),
-    e8 = {
+    e8 = eZ(),
+    e6 = {
         name: "Collectibles Review Step",
         id: "collectibles-checkout-review-step",
         component: function (e) {
@@ -1079,7 +1079,7 @@ let e3 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
                   });
         },
         controls: {
-            skuId: { label: "SKU ID", type: "select", options: e6.options, defaultValue: e6.defaultValue },
+            skuId: { label: "SKU ID", type: "select", options: e8.options, defaultValue: e8.defaultValue },
             ...e3,
         },
     },
@@ -1153,7 +1153,7 @@ var e9 = l(993077),
     e7 = l(939249),
     e5 = l(658675),
     te = l(478531),
-    tt = l(266546),
+    tt = l(944597),
     tl = l(994500),
     ta = l(287809),
     tn = l(403362),
@@ -2255,11 +2255,11 @@ let t2 = [
             body: "Show off your style with a custom nameplate, available with Nitro.",
         },
     },
-    t6 = [
+    t8 = [
         { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
         { id: "at_limit", label: "At Limit (100 guilds)", value: M.qlD },
     ],
-    t8 = [
+    t6 = [
         { id: "avatar", label: "Avatar", value: t1.HL.AVATAR },
         { id: "banner", label: "Banner", value: t1.HL.BANNER },
     ];
@@ -3277,8 +3277,8 @@ let l3 = {
     ],
 };
 l(321073);
-var l6 = l(96337),
-    l8 = l(997101),
+var l8 = l(96337),
+    l6 = l(997101),
     l4 = l(597770),
     l9 = l(278416),
     l7 = l(169797),
@@ -3477,7 +3477,7 @@ let at = {
         },
     },
     aa = { "nitro-wheel": r.t, gift: l4.GiftIcon, orbs: i.C },
-    an = l6.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    an = l8.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
     ai = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
@@ -3537,7 +3537,7 @@ let at = {
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: l8.d.US, options: an },
+            countryCode: { label: "Country Code", type: "select", defaultValue: l6.d.US, options: an },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -3801,7 +3801,7 @@ let at = {
                     return (0, s.jsx)(l5.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: l8.d.US, options: an },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: l6.d.US, options: an },
                 },
             },
             {
@@ -3820,7 +3820,7 @@ let at = {
                     relocationCountry: {
                         label: "Relocation Country",
                         type: "select",
-                        defaultValue: l8.d.US,
+                        defaultValue: l6.d.US,
                         options: an,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
@@ -3961,7 +3961,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Checkout Review Step", stories: [e8, e4] },
+            { title: "Checkout Review Step", stories: [e6, e4] },
             {
                 title: "Miscellaneous",
                 stories: [
@@ -4341,7 +4341,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                             placeholder: "Select state",
                                             onSelectionChange: (e) => t(e),
                                             value: e,
-                                            options: t6,
+                                            options: t8,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -4380,7 +4380,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                             placeholder: "Select type",
                                             onSelectionChange: (e) => t(e),
                                             value: e,
-                                            options: t8,
+                                            options: t6,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),

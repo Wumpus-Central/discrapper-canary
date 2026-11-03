@@ -19,8 +19,6 @@ let _ = (0, s.h)()(
             (e, t) => ({
                 volume: 0.3,
                 muted: !1,
-                transcriptEnabled: !1,
-                captionEnabled: !1,
                 videoProgress: {},
                 transcript: null,
                 setVolume: (t) => {
@@ -39,12 +37,6 @@ let _ = (0, s.h)()(
                             },
                         }),
                     );
-                },
-                setTranscriptEnabled: (t) => {
-                    (0, l.r)(() => e({ transcriptEnabled: t }));
-                },
-                setCaptionEnabled: (t) => {
-                    (0, l.r)(() => e({ captionEnabled: t }));
                 },
                 getVideoProgress: (e) => t().videoProgress[e],
                 getVideoProgressState: (e) => {
