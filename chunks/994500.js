@@ -242,6 +242,14 @@ let w = new U(r.h, {
         for (let e of d.keys()) d.get(e) === o.eA$.PENDING_INCOMING && (P(e), E.delete(e), h.delete(e), delete p[e]);
         (L(), M());
     },
+    RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
+        let { userId: t } = e;
+        (y(t), d.get(t) === o.eA$.PENDING_INCOMING && h.add(t), L(), M());
+    },
+    RELATIONSHIP_UNIGNORE_USER_SUCCESS: function (e) {
+        let { userId: t } = e;
+        (D(t), h.delete(t), L(), M());
+    },
     UPDATE_STRANGER_STATUS: function (e) {
         p[e.userId] = { expiry: Date.now() + 3e5, isStranger: e.isStranger };
     },

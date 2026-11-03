@@ -1252,7 +1252,10 @@ function eq(e) {
         });
     }),
     eV(["RELATIONSHIP_REMOVE"], (e) => {
-        eW({ type: "RELATIONSHIP_REMOVE", relationship: e });
+        eW({
+            type: "RELATIONSHIP_REMOVE",
+            relationship: { ...e, id: e.id, type: e.type, userIgnored: e.user_ignored || !1 },
+        });
     }),
     eV(["RELATIONSHIP_UPDATE"], (e) => {
         eW({

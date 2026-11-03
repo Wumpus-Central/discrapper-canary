@@ -161,9 +161,9 @@ let C = {
         ignoreUser: (e, t, n) =>
             r.Bo.put({ url: I.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, r.fT)() })
                 .then(() => {
-                    (d.A.showIgnoreSuccessToast(e, n),
-                        a.O.announce((0, c.$)(m.OB.IGNORE_SUCCESS, e, n)),
-                        s.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() }));
+                    (s.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() }),
+                        d.A.showIgnoreSuccessToast(e, n),
+                        a.O.announce((0, c.$)(m.OB.IGNORE_SUCCESS, e, n)));
                 })
                 .catch(() => {
                     (d.A.showFailedToast(), a.O.announce(T.intl.string(T.t.n6Jo3E)));
@@ -171,7 +171,9 @@ let C = {
         unignoreUser: (e, t, n) =>
             r.Bo.del({ url: I.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, r.fT)() })
                 .then(() => {
-                    (d.A.showUnignoreSuccessToast(e, n), a.O.announce((0, c.$)(m.OB.UNIGNORE_SUCCESS, e, n)));
+                    (s.h.dispatch({ type: "RELATIONSHIP_UNIGNORE_USER_SUCCESS", userId: e }),
+                        d.A.showUnignoreSuccessToast(e, n),
+                        a.O.announce((0, c.$)(m.OB.UNIGNORE_SUCCESS, e, n)));
                 })
                 .catch(() => {
                     (d.A.showFailedToast(), a.O.announce(T.intl.string(T.t.n6Jo3E)));
