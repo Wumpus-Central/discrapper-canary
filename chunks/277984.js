@@ -115,10 +115,12 @@ function R(e, t) {
                 failure_sub_code: e.decline_code,
                 payment_source_type: e.payment_method?.type,
             };
-        ((i = a),
-            "card_error" === e.type &&
-                (_.default.track(N.HAw.PAYMENT_SOURCE_CREATION_FAILED, { ...a, stacktrace: Error().stack }), (o = !1)),
-            (n = new l.Ey(t)));
+        switch (((i = a), e.type)) {
+            case "card_error":
+            case "validation_error":
+                (_.default.track(N.HAw.PAYMENT_SOURCE_CREATION_FAILED, { ...a, stacktrace: Error().stack }), (o = !1));
+        }
+        n = new l.Ey(t);
     } else
         ((i = {
             failure_message: (n = e instanceof l.Ey ? e : new l.Ey("string" == typeof e ? r : e)).message,
