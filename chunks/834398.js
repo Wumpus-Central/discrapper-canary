@@ -2388,7 +2388,6 @@ class nJ extends i.PureComponent {
                       description: ez.intl.format(ez.t.feJW1z, {
                           helpdeskArticle: eU.A.getArticleURL(eF.MVz.CONVERSATION_SUMMARIES),
                       }),
-                      badge: "beta",
                       onChange: this.handleChannelSummariesToggled,
                       checked:
                           !e.hasFlag(nP.lx.SUMMARIES_DISABLED) &&

@@ -24931,7 +24931,6 @@ function As(e) {
         }),
         children: (0, p.jsx)(eI.d, {
             label: ec.intl.string(ec.t.vmEDQs),
-            badge: "beta",
             checked: t.has(X.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
             onChange: i,
             disabled: !n,
