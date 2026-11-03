@@ -5,19 +5,19 @@ var r = n(582128),
     a = n(24482),
     o = n(440938),
     i = n(590180),
-    c = n(993408),
-    u = n(331884),
+    u = n(993408),
+    c = n(331884),
     d = n(652215);
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         p = (0, o.uM)(),
         m = (0, l.bG)([i.A], () => i.A.getProduct(e)),
-        g = (0, u.o)(),
+        g = (0, c.o)(),
         h = a.Ay.canUseShopDiscounts(g),
         E = r.useRef(null),
-        C = r.useCallback(() => {
-            let r = null != m ? (0, c.Br)(m, h, !1) : null,
-                l = null != m ? (0, c.c7)(m, h, !1) : void 0;
+        f = r.useCallback(() => {
+            let r = null != m ? (0, u.Br)(m, h, !1) : null,
+                l = null != m ? (0, u.c7)(m, h, !1) : void 0;
             s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: p?.sessionId,
                 sku_id: e,
@@ -32,16 +32,16 @@ function p(e, t) {
                 category_position: p?.categoryPosition,
             });
         }, [p?.sessionId, p?.categoryPosition, p?.pageCategory, p?.pageSection, p?.tilePosition, h, t, m, e, n]),
-        f = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 e
                     ? null === E.current &&
                       (E.current = setTimeout(() => {
-                          (C(), (E.current = null));
+                          (f(), (E.current = null));
                       }, 1e3))
                     : null !== E.current && (clearTimeout(E.current), (E.current = null));
             },
-            [C],
+            [f],
         );
     return (
         r.useEffect(
@@ -50,6 +50,6 @@ function p(e, t) {
             },
             [e],
         ),
-        { handleCardVisibilityChange: f }
+        { handleCardVisibilityChange: C }
     );
 }

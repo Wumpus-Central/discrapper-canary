@@ -1,1 +1,1 @@
-e.exports = s.p + "a735562399d11010.scm";
+e.exports = a.p + "a735562399d11010.scm";

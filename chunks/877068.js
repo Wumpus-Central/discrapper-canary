@@ -1,4 +1,4 @@
-e.exports = {
+c.exports = {
     Nr: "card__17b8c",
     kL: "container__17b8c",
     JE: "containerHeader__17b8c",

@@ -10,10 +10,10 @@ var r = a(477900),
     u = a(831544),
     h = a(534890),
     f = a(664121),
-    _ = a(460905),
-    b = a(687966),
-    p = a(554830),
-    x = a(939249),
+    b = a(460905),
+    _ = a(687966),
+    x = a(554830),
+    p = a(939249),
     m = a(788026),
     g = a(142617),
     A = a(819648),
@@ -78,7 +78,7 @@ function P(e) {
                     : void 0,
             [d],
         ),
-        p = s.useMemo(() => (null != l ? (0, r.jsx)(y, { src: l }) : (0, r.jsx)(D, { character: i })), [l, i]);
+        x = s.useMemo(() => (null != l ? (0, r.jsx)(y, { src: l }) : (0, r.jsx)(D, { character: i })), [l, i]);
     return (0, r.jsxs)("ul", {
         className: O.M1,
         children: [
@@ -90,13 +90,13 @@ function P(e) {
                 icon: (0, r.jsx)(h.ChatIcon, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.messages,
             }),
-            null != t.topGuildName ? (0, r.jsx)(k, { icon: p, stat: t.topGuildName }) : null,
+            null != t.topGuildName ? (0, r.jsx)(k, { icon: x, stat: t.topGuildName }) : null,
             (0, r.jsx)(k, {
                 icon: (0, r.jsx)(f.R, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.topGuildDaysInteracted,
             }),
             (0, r.jsx)(k, {
-                icon: (0, r.jsx)(_.n, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+                icon: (0, r.jsx)(b.n, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.reactions,
             }),
             null != t.topEmojiName && null != c
@@ -106,7 +106,7 @@ function P(e) {
                   })
                 : null,
             (0, r.jsx)(k, {
-                icon: (0, r.jsx)(b.GameControllerIcon, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+                icon: (0, r.jsx)(_.GameControllerIcon, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.daysPlayed,
             }),
             null != t.topGameName
@@ -132,7 +132,7 @@ function G(e) {
                 ? (0, r.jsx)("div", {
                       className: O.wC,
                       "aria-hidden": !0,
-                      children: (0, r.jsx)(p.K, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
+                      children: (0, r.jsx)(x.K, { color: n.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
                   })
                 : null,
         ],
@@ -141,7 +141,7 @@ function G(e) {
 function U(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
-        ? (0, r.jsx)(x.D, {
+        ? (0, r.jsx)(p.D, {
               className: c()(O.qr, O.vk),
               onClick: a,
               "aria-label": T.intl.string(R.default.r8GEbK),

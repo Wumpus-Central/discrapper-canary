@@ -1,4 +1,4 @@
-n.d(t, { w: () => r });
+t.d(n, { w: () => r });
 let r = Object.freeze({
     CUSTOM_EMOJI: 1,
     COLON_EMOJI: 2,

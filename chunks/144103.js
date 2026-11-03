@@ -1,4 +1,4 @@
-a.d(t, { A: () => _ });
+a.d(t, { A: () => b });
 var r = a(477900),
     s = a(503698),
     i = a.n(s),
@@ -14,7 +14,7 @@ let f = [
     ...Array(l.w0 - 2).fill("/assets/03323a9f08bfe4db.svg"),
     "/assets/c2b958e9d50d3db3.svg",
 ];
-function _(e) {
+function b(e) {
     let { powerLevel: t, powerLevelUnits: a } = e,
         { size: s } = (0, d.Z)();
     return (0, r.jsxs)(r.Fragment, {

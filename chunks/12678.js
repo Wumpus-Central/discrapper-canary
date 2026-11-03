@@ -1,12 +1,12 @@
-n.d(t, { N0: () => C, lC: () => h, uS: () => E });
+n.d(t, { N0: () => f, lC: () => h, uS: () => E });
 var r = n(582128),
     l = n(17928),
     s = n(793574),
     a = n(688810),
     o = n(10392),
     i = n(82498),
-    c = n(174459),
-    u = n(24482),
+    u = n(174459),
+    c = n(24482),
     d = n(870216),
     p = n(758836),
     m = n(652215),
@@ -47,25 +47,25 @@ function h(e) {
 }
 function E(e, t, n, l) {
     let { sourceButton: s, enabled: a = !0 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        { analyticsLocations: o, analyticsSource: i, currentTabLocation: u, newestAnalyticsLocation: d } = h(t);
+        { analyticsLocations: o, analyticsSource: i, currentTabLocation: c, newestAnalyticsLocation: d } = h(t);
     r.useEffect(() => {
-        if (!a || l !== p.Pf.VISIBLE || d !== u) return;
+        if (!a || l !== p.Pf.VISIBLE || d !== c) return;
         let r = t === p.G2.CATALOG ? s : i;
-        c.default.track(m.HAw.COLLECTIBLES_SHOP_VIEWED, {
+        u.default.track(m.HAw.COLLECTIBLES_SHOP_VIEWED, {
             location_stack: o,
             source: r,
             page_session_id: e,
             page_type: t === p.G2.CATALOG ? "full" : t,
             category: t === p.G2.HOME ? void 0 : n,
         });
-    }, [o, e, t, n, u, l, s, i, d, a]);
+    }, [o, e, t, n, c, l, s, i, d, a]);
 }
-function C(e, t) {
+function f(e, t) {
     let { analyticsLocations: n } = h(e);
     r.useEffect(() => {
         null == t ||
-            u.Ay.canUseCollectibles(t) ||
-            (c.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, { type: g.e.COLLECTIBLES_SHOP, location_stack: n }),
+            c.Ay.canUseCollectibles(t) ||
+            (u.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, { type: g.e.COLLECTIBLES_SHOP, location_stack: n }),
             (0, o.sq)(m.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, i.uq)(g.e.COLLECTIBLES_SHOP)));
     }, [n, t]);
 }

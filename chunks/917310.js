@@ -1,50 +1,50 @@
 let r;
-n.d(t, {
+t.d(n, {
     qg: () => l,
     IS: () => d,
-    Ts: () => s,
+    Ts: () => b,
     tJ: () =>
-        function* e(t) {
-            for (let n of t)
-                switch ((yield n, n.type)) {
+        function* e(n) {
+            for (let t of n)
+                switch ((yield t, t.type)) {
                     case "paragraph":
                     case "strikethrough":
                     case "underline":
                     case "italic":
                     case "bold":
                     case "quote":
-                        yield* e(n.value);
+                        yield* e(t.value);
                         break;
                     case "spoiler":
                     case "heading":
                     case "small":
-                        yield* e(n.value.content);
+                        yield* e(t.value.content);
                         break;
                     case "list":
-                        for (let t of n.value.items) yield* e(t.content);
+                        for (let n of t.value.items) yield* e(n.content);
                         break;
                     case "link":
-                        n.text && (yield* e(n.text));
+                        t.text && (yield* e(t.text));
                 }
         },
 });
-var _ = n(882498),
-    i = n(451076),
-    o = n(971673);
-async function c() {
+var _ = t(882498),
+    i = t(451076),
+    o = t(971673);
+async function a() {
     return (r || (r = await (0, _.i)()), r);
 }
-async function a() {
+async function c() {
     var e;
-    return ((e = await c()), (0, o.Ay)({ module_or_path: e }));
+    return ((e = await a()), (0, o.Ay)({ module_or_path: e }));
 }
-n(849324);
+t(849324);
 let u = !1,
     f = null;
-function s() {
+function b() {
     return u
         ? Promise.resolve()
-        : (f ??= a().then(
+        : (f ??= c().then(
               () => {
                   u = !0;
               },
@@ -53,7 +53,7 @@ function s() {
               },
           ));
 }
-function b() {
+function s() {
     if (u) return;
     let e = (r || (r = (0, i.J)()), r);
     if (!e)
@@ -62,9 +62,9 @@ function b() {
         );
     ((0, o.QR)({ module: e }), (u = !0));
 }
-function l(e, t) {
-    return (b(), (0, o.qg)(e, t));
+function l(e, n) {
+    return (s(), (0, o.qg)(e, n));
 }
-function d(e, t) {
-    return (b(), (0, o.IS)(e, t));
+function d(e, n) {
+    return (s(), (0, o.IS)(e, n));
 }

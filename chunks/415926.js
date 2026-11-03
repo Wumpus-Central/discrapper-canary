@@ -5,8 +5,8 @@ var r = n(582128),
     a = n(440938),
     o = n(12678),
     i = n(652215),
-    c = n(650583);
-let u = new Set([c.N$.ArrowUp, c.N$.ArrowDown, c.N$.PageUp, c.N$.PageDown, c.N$.Home, c.N$.End, c.N$.Tab]);
+    u = n(650583);
+let c = new Set([u.N$.ArrowUp, u.N$.ArrowDown, u.N$.PageUp, u.N$.PageDown, u.N$.Home, u.N$.End, u.N$.Tab]);
 function d(e, t, n, r) {
     let { scrollTop: l = 0, scrollOffset: a = 0, scrollHeight: o = 0, scrollWidth: i = 0 } = r;
     if (o > 0) {
@@ -24,16 +24,16 @@ function d(e, t, n, r) {
 function p(e, t) {
     let n,
         s,
-        c,
+        u,
         p,
         { analyticsSource: m } = (0, o.lC)(t),
         g = (0, l.I)(d, 5e3, [], { trailing: !0 }),
         h = (0, a.uM)(),
         E = h?.sessionId,
-        C =
+        f =
             ((n = r.useRef(0)),
             (s = r.useRef(!1)),
-            (c = r.useRef(!1)),
+            (u = r.useRef(!1)),
             (p = r.useRef(0)),
             r.useEffect(() => {
                 let t = e.current?.getScrollerNode();
@@ -55,7 +55,7 @@ function p(e, t) {
                                 window.removeEventListener("pointerup", i),
                                 window.removeEventListener("pointercancel", i),
                                 (s.current = !1),
-                                (c.current = !1));
+                                (u.current = !1));
                         }
                     );
                 function r() {
@@ -65,22 +65,22 @@ function p(e, t) {
                     s.current = !1;
                 }
                 function a(e) {
-                    u.has(e.key) && r();
+                    c.has(e.key) && r();
                 }
                 function o(e) {
-                    e.target === t && ((c.current = !0), (p.current = Date.now()), r());
+                    e.target === t && ((u.current = !0), (p.current = Date.now()), r());
                 }
                 function i() {
-                    c.current && ((c.current = !1), r());
+                    u.current && ((u.current = !1), r());
                 }
             }, [e]),
             r.useCallback(
-                () => (c.current && Date.now() - p.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
+                () => (u.current && Date.now() - p.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
                 [],
             ));
     return {
         handleScroll: r.useCallback(() => {
-            if (C() && null != e.current) {
+            if (f() && null != e.current) {
                 let t = e.current.getScrollerNode();
                 null != t &&
                     g(i.HAw.COLLECTIBLES_SHOP_SCROLLED, null != E ? E : "", m, {
@@ -90,6 +90,6 @@ function p(e, t) {
                         scrollWidth: t.scrollWidth,
                     });
             }
-        }, [g, m, E, e, C]),
+        }, [g, m, E, e, f]),
     };
 }
