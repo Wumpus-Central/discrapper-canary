@@ -17121,24 +17121,26 @@ function h$() {
         try {
             var e;
             let t =
-                ((e = hU),
-                {
-                    overrideDeniedVideoCodecs: hG(e, hw),
-                    overrideDeniedVideoEncoders: hG(e, hM),
-                    captureOverrides: hL
-                        .filter((t) => {
-                            let [a, , n] = t;
-                            return "whenFalse" === n ? !e[a] : !!e[a];
-                        })
-                        .map((e) => {
-                            let [, t] = e;
-                            return t;
-                        })
-                        .join(","),
-                });
-            S.Ay.getMediaEngine().eachConnection((e) => {
+                    ((e = hU),
+                    {
+                        overrideDeniedVideoCodecs: hG(e, hw),
+                        overrideDeniedVideoEncoders: hG(e, hM),
+                        captureOverrides: hL
+                            .filter((t) => {
+                                let [a, , n] = t;
+                                return "whenFalse" === n ? !e[a] : !!e[a];
+                            })
+                            .map((e) => {
+                                let [, t] = e;
+                                return t;
+                            })
+                            .join(","),
+                    }),
+                a = S.Ay.getMediaEngine();
+            (a.eachConnection((e) => {
                 e.setAudioVideoOverridesTransport(t);
-            });
+            }),
+                a.setClipsCaptureOverrides(t.captureOverrides));
         } catch {}
 }
 class hV extends d.Ay.DeviceSettingsStore {

@@ -2332,6 +2332,9 @@ class er extends d.A {
     setClipsRecordingEnabled(e) {
         (0, v.lE)().setClipsRecordingEnabled?.(e);
     }
+    setClipsCaptureOverrides(e) {
+        (0, v.lE)().applyClipsSettings?.({ captureOverrides: e });
+    }
     setClipBufferLength(e) {
         (0, v.lE)().setClipBufferLength?.(e);
     }

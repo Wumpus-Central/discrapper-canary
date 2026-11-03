@@ -3431,6 +3431,7 @@ class ts extends p.A {
     }
     setClipsV3MLEnabled(e) {}
     setClipsRecordingEnabled(e) {}
+    setClipsCaptureOverrides(e) {}
     setClipsUIActive(e) {}
     setClipBufferLength(e) {}
     getSystemSteadyClockNowMs() {
