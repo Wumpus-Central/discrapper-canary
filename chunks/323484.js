@@ -26,7 +26,7 @@ function u(e, t, n) {
             return o.intl.formatToPlainString(o.t.tRaBfY, { username: E });
         case l.OB.REPORT_SUCCESS:
             return o.intl.formatToPlainString(o.t.FOptFU, { username: E });
-        case l.OB.TIGGER_PAWTECT_ERROR:
+        case l.OB.AGE_VERIFICATION_ERROR:
             return o.intl.string(o.t.c6kn6F);
         case l.OB.AGE_VERIFICATION_FAE_FAILED:
             return o.intl.string(d.default["9F2y52"]);
@@ -34,7 +34,7 @@ function u(e, t, n) {
             return o.intl.string(d.default["40UKek"]);
         case l.OB.AGE_VERIFICATION_UNDERAGE:
             return o.intl.string(d.default.XBGt7g);
-        case l.OB.TIGGER_PAWTECT_VERIFIED:
+        case l.OB.AGE_VERIFICATION_VERIFIED:
             return o.intl.string(o.t["7nKAXx"]);
         case l.OB.GENERIC_ERROR:
             return o.intl.string(o.t.zBpoc7);

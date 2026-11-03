@@ -46,7 +46,7 @@ async function T() {
                 (0, s.qn)() && m();
             });
         } catch {
-            a.A.showFailedToast(u.OB.TIGGER_PAWTECT_ERROR);
+            a.A.showFailedToast(u.OB.AGE_VERIFICATION_ERROR);
         } finally {
             h = !1;
         }

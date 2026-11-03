@@ -25,7 +25,7 @@ function S(e) {
     let a = r?.embeds?.[0]?.fields?.find((e) => e.rawName === f.uN.CONTENT_TYPE);
     (a?.rawValue === f.Wv.MANUAL_REVIEW_SUBMITTED && (0, p.xf)(),
         a?.rawValue === f.Wv.ERROR
-            ? (d.A.showFailedToast(T.OB.TIGGER_PAWTECT_ERROR), (0, h.Vh)(h.oQ.ERROR))
+            ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_ERROR), (0, h.Vh)(h.oQ.ERROR))
             : a?.rawValue === f.Wv.FAE_FAILED
               ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_FAE_FAILED), (0, h.Vh)(h.oQ.FAE_FAILED))
               : a?.rawValue === f.Wv.ID_FAILED
@@ -33,9 +33,9 @@ function S(e) {
                 : a?.rawValue === f.Wv.UNDERAGE
                   ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_UNDERAGE), (0, h.Vh)(h.oQ.UNDERAGE))
                   : a?.rawValue === f.Wv.VERIFIED_ADULT
-                    ? (d.A.showSuccessToast(T.OB.TIGGER_PAWTECT_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_ADULT))
+                    ? (d.A.showSuccessToast(T.OB.AGE_VERIFICATION_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_ADULT))
                     : a?.rawValue === f.Wv.VERIFIED_TEEN &&
-                      (d.A.showSuccessToast(T.OB.TIGGER_PAWTECT_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_TEEN)));
+                      (d.A.showSuccessToast(T.OB.AGE_VERIFICATION_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_TEEN)));
 }
 function N(e) {
     r.A.fetchMessages({ channelId: e, limit: m.EMb });
